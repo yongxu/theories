@@ -11,19 +11,19 @@
 ## Laws
 
 1. A formation g's policy goes through its couplings when, wherever the two flows have been alike through g's couplings up to a step, its take from and give to every condition coupled into g are alike in the two flows; the rest is fixed when every other formation's exchange on the conditions coupled into g is alike at every step; with the same formations present, the two give exchange following what couples in. (`Becoming.Flow.PolicyThrough`, `Becoming.Flow.OthersFixed`, `Becoming.Flow.ExchangeFollows`, `Becoming.Flow.exchangeFollows_of_policy`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For every policy through the couplings with the rest fixed, the same formations present and balance at each step on what couples into g, the starts differing only in a stock coupled into g by threshold only, d higher in the second web: where the first web supports g at every step, the stock stands d higher and the webs are alike through g's couplings at every step. (`Becoming.Flow.policy_keeps_difference`, `Becoming.Flow.BalancesOn`, `Becoming.Web.CoupledInto`, `Becoming.Web.AlikeThrough`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Under the same policy, rest, presence and balance, where the second web starts at least as high on what couples into g and alike on what couples into g by level, and a difference on a condition coupled into g has changed by a step, the first web did not support g at every earlier step. (`Becoming.Flow.policy_uses_after_failure`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. The web with stock c raised by d at every step, all else as it is, stands at least as high, supports whatever the web supports and stands alike elsewhere; it is dependent where the web is, and a flow balancing on a family balances there on it. (`Becoming.Web.raise`, `Becoming.Web.le_raise`, `Becoming.Web.Supported`, `Becoming.Web.Supported.raise`, `Becoming.Web.raise_other`, `Becoming.Web.Dependent`, `Becoming.Web.Dependent.raise`, `Becoming.Flow.BalancesOn.raise`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. At every step at which the web supports g, the web with a stock coupled into g by threshold only raised is alike through g's couplings; with the stock coupled in by level, every positive raise shows at every step. (`Becoming.Web.alikeThrough_raise`, `Becoming.Web.observed_raise_couples`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Where c couples into g by threshold only and c is the only requirement of g that may be unmet up to a horizon u, some raise of c (in the proof, by the sum of the needs up to u) is alike through g's couplings at every step at which the web supports g and supports g at every step up to u: before the break, how far off it is does not couple in. (`Becoming.Web.needUpTo`, `Becoming.Web.need_le_needUpTo`, `Becoming.Web.break_not_bounded`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In SupportDrawn the lower web fails the formation at the third step, and a raise is alike through its couplings at every step at which the lower web supports it, supports it at the third step and keeps the flow balanced. (`Becoming.SupportDrawn.break_uncoupled`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

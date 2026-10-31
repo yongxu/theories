@@ -11,9 +11,9 @@
 ## Laws
 
 1. A law with noise is the relation of exchange opening what some noise value gives; along every realization its course is a run, and the world read off it a world read off a relation of exchange. (`Becoming.NoisyLaw`, `Becoming.NoisyLaw.course_runs`, `Becoming.NoisyLaw.readOffExchange`, `Becoming.NoisyLaw.realize`, `Becoming.NoisyLaw.relation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Balance holds in expectation over any distribution of the noise with integrable amounts; a condition ending at a random step rests along every realization while its expected level falls at every step. (`Becoming.Representation.RandomEnd.expected`, `Becoming.Representation.RandomEnd.level`, `Becoming.Representation.RandomEnd.rest_not_in_expectation`, `Becoming.Representation.RandomEnd.rests`, `Becoming.Representation.RandomEnd.summable_weighted`, `Becoming.Representation.RandomEnd.weight`, `Becoming.Representation.expected_balance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

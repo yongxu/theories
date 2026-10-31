@@ -11,15 +11,15 @@
 ## Laws
 
 1. Two formations lie in one loop where each can affect the other's continuation at some remove: an equivalence, so loops partition the formations; being in a formation's reach is that formation being in one's influence closure. (`Becoming.Flow.InOneLoop`, `Becoming.Flow.InOneLoop.refl`, `Becoming.Flow.InOneLoop.symm`, `Becoming.Flow.InOneLoop.trans`, `Becoming.Flow.withinReach_iff_influence`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. A formation's acts return where whatever it can affect can affect it: exactly where everything it reaches lies in its loop, and exactly where its loop is closed under affecting; returning is a property of the loop. (`Becoming.Flow.ReachReturns`, `Becoming.Flow.reachReturns_iff_loop`, `Becoming.Flow.reachReturns_iff_closed`, `Becoming.Flow.ReachReturns.of_loop`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Where acts return, everything acted on lies within the coupling closure, what can be represented, for every coupling by level; with coupling by threshold only, acts return exactly where everything acted on can be represented. (`Becoming.Flow.ReachReturns.represented`, `Becoming.Flow.reachReturns_iff_represented`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Loops only merge as exchange grows, while returning is not monotone: where one formation acts on another that does not act back, the first's acts do not return and the second's do; closing the link makes one loop whose acts return. (`Becoming.Flow.InOneLoop.mono`, `Becoming.Line.open_not_returns`, `Becoming.Line.open_b_returns`, `Becoming.Line.closed_one_loop`, `Becoming.Line.closed_returns`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. With finitely many formations listed and reach decided, every formation's reach holds a formation whose acts return. (`Becoming.Flow.exists_reachReturns`, `Becoming.Flow.holdsCount_pos`, `Becoming.Flow.holdsCount_lt`, `Becoming.Flow.search`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

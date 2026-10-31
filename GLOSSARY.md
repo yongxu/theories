@@ -21,7 +21,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | model; the World model | a carrier, a relation read as condition and the classes used; the World is the model with flows, webs, natural-number amounts and discrete steps | [01 §8](theories/becoming/chapters/01-ROOT.md#models) |
 | occurrence model | the grammar model a World determines: its occurrences, a relatum at a step, with the class of being at the same step, conservation's step, activity, standing and presence as partial identities, and five relations within a step, beside the names' step | [01 §8.6](theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways) |
 | the moves' relations (`moveRel`) | a process read in the grammar: one relation per move, relating `s` to `t` where the move takes `s` to `t`; their union is the steps, and the model with the move inside reads them on configurations with moves | [01 §8.1](theories/becoming/chapters/01-ROOT.md#r-processes-represented-both-ways) |
-| view | process, frame and world are views of one unfolding | [01 §9](theories/becoming/chapters/01-ROOT.md#laws-on-every-model) |
+| view | process, frame and world, each a model of the grammar, read as views of one unfolding (08's thesis, argued, not proved) | [01 §9](theories/becoming/chapters/01-ROOT.md#laws-on-every-model) |
 
 ## The map
 
@@ -58,7 +58,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number; read de se, that it lies within what the center continues with along a relation |  [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | center | a formation as a standpoint | [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | widening | at every step admitting every formation the other admits, and at some step one more | [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |
-| the continuation condition (`Unrestricted`) | for anything, its continuation into the future has significance; stated, not asserted; it fixes scope | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
+| the continuation condition (`Unrestricted`) | from every standpoint, for anything, its continuation into the future has significance; stated, not asserted; it fixes scope | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
 | C | the widening comparison: widening what can form is better; it alone orders | [07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
 | the step of invariance | the condition's content beyond the self's presupposition | [07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
 | living significance | what the condition yields: the significance of what lives on | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
@@ -73,3 +73,5 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | the pure core; the periphery | the Lean package importing only the prelude, every declaration with an empty axiom report; everything else, its axioms reported | [08 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
 | calibration | where a law needs an omniscience principle, and what the need says about the unfolding | [08 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
 | hypotheses | a law's own local premises (finite, listed, decided, …), written into its statement | [08 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
+| law (律, *lǜ*) | a statement holding of every relation, carrier or model its hypotheses admit, read off what it holds of and not set over it; with content only through its hypotheses. `Law` is the spine's name for a determined step, one relation (`next x = y`), not a rule its configurations obey; a science's law is named with its science | [08 §10](theories/becoming/chapters/08-METHOD.md#law) |
+| shared law (共律, *gònglǜ*) | a law that many central results share and are proved through, stated once at the lowest layer that holds it: closure, balance, finite runs, lumping, order. It ranks no law and rules nothing; formerly "master law" (主律), a name kept only in keys | [08 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |

@@ -11,13 +11,13 @@
 ## Laws
 
 1. A selected matching of a frame, a bijection of its in-positions with its out-positions given as data, forces equal counts by pigeonhole with no decidability, each out-position having exactly one in-position sent to it. A flow over a web has one at every step and condition exactly where it balances, the converse by position with no choice; by it a standing unit goes on standing or is taken. (`Becoming.UnitMatchings.FrameMatch`, `Becoming.UnitMatchings.FrameMatch.le`, `Becoming.UnitMatchings.FrameMatch.eq`, `Becoming.UnitMatchings.FrameMatch.predecessor_unique`, `Becoming.UnitMatchings.FrameMatchings`, `Becoming.UnitMatchings.frameMatchings_iff_balances`, `Becoming.UnitMatchings.FrameMatchings.next`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where a one-to-one pairing's first block on one side outnumbers the other side's first block, a member of the other side's rest is related to one of that block. In a balanced flow, where a family without repetition rises past a containing family's inflow, every pairing of some present formation's exchange relates a unit given the risen family to another input; with beyond source-minimal, to one taken from the rest. (`Becoming.UnitMatchings.crossing_edge`, `Becoming.UnitMatchings.rise_crossing_weak`, `Becoming.UnitMatchings.rise_crossing_strong`)
-   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 3. At a formation, with beyond's units numbering the source-minimal count, every pairing of what it takes from a family and beyond's units with what it gives the family and the units ending there has exactly as many endings as it takes beyond what it gives; with leaving outputs kept, leaving and endings together number that. (`Becoming.UnitMatchings.endings_count`, `Becoming.UnitMatchings.leaving_and_endings_count`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. On a family a present formation dissipates on, the source-minimal count is zero, and where it takes, the residual count is positive; a present formation taking from a family exactly what it gives it, and something, does not dissipate on it. (`Becoming.UnitMatchings.source_minimal_zero_of_dissipates`, `Becoming.UnitMatchings.residual_pos_of_dissipates`, `Becoming.UnitMatchings.lossless_not_dissipative`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

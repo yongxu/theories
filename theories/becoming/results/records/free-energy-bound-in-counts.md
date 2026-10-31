@@ -11,37 +11,37 @@
 ## Laws
 
 1. Arithmetic in counts proved without the prelude's propositional extensionality: powers of a product, a count to its own power positive, strict cancellation, a power of nothing, strict powers (mul_pow_eq and five more). (`Becoming.FreeEnergyCounting.mul_pow_eq`, `Becoming.FreeEnergyCounting.self_pow_pos`, `Becoming.FreeEnergyCounting.lt_cancel_mul_left`, `Becoming.FreeEnergyCounting.lt_cancel_mul_right`, `Becoming.FreeEnergyCounting.base_zero_of_pow_zero`, `Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Rearrangement in counts: pairing the larger with the larger gives at least as much, strictly where both pairs are apart, and two powers rearranged (rearrange, rearrange_strict, powers_rearrange, powers_rearrange_strict). (`Becoming.FreeEnergyCounting.rearrange`, `Becoming.FreeEnergyCounting.rearrange_strict`, `Becoming.FreeEnergyCounting.powers_rearrange`, `Becoming.FreeEnergyCounting.powers_rearrange_strict`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A Bernoulli-type inequality: (k + 1) * x * y ^ k ≤ x ^ (k + 1) + k * y ^ (k + 1), strict for distinct x and y and positive k (bernoulli, bernoulli_strict and three identities). (`Becoming.FreeEnergyCounting.bernoulli`, `Becoming.FreeEnergyCounting.bernoulli_strict`, `Becoming.FreeEnergyCounting.bernoulli_split`, `Becoming.FreeEnergyCounting.bernoulli_regroup`, `Becoming.FreeEnergyCounting.bernoulli_close`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. One more term joins a mean: (k + 1) ^ (k + 1) * S ^ k * y ≤ k ^ k * (S + y) ^ (k + 1), strict where k * y ≠ S and k is positive (mean_step, mean_step_strict and three identities). (`Becoming.FreeEnergyCounting.mean_step`, `Becoming.FreeEnergyCounting.mean_step_strict`, `Becoming.FreeEnergyCounting.mean_step_identity`, `Becoming.FreeEnergyCounting.mean_step_lhs`, `Becoming.FreeEnergyCounting.mean_step_rhs`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Two values in counts: (n + m) ^ (n + m) * (x ^ n * y ^ m) ≤ (n * x + m * y) ^ (n + m), strict for positive n, distinct x and y and at least one y (mean_two, mean_two_strict, mean_two_sum, mean_two_ident). (`Becoming.FreeEnergyCounting.mean_two`, `Becoming.FreeEnergyCounting.mean_two_strict`, `Becoming.FreeEnergyCounting.mean_two_sum`, `Becoming.FreeEnergyCounting.mean_two_ident`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Two parts: (n + m) ^ (n + m) * (a ^ n * b ^ m) ≤ (a + b) ^ (n + m) * (n ^ n * m ^ m), strict for positive counts unless a * m = b * n, reached only where n * b = a * m (two_parts and four more). (`Becoming.FreeEnergyCounting.two_parts`, `Becoming.FreeEnergyCounting.two_parts_strict`, `Becoming.FreeEnergyCounting.proportional_of_two_parts_eq`, `Becoming.FreeEnergyCounting.two_parts_lhs`, `Becoming.FreeEnergyCounting.two_parts_rhs`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. The bound: for natural counts n and weights a over any listed hypotheses, N ^ N * ∏ a ^ n ≤ A ^ N * ∏ n ^ n, with no support condition (powerProduct, bound and five more). (`Becoming.FreeEnergyCounting.powerProduct`, `Becoming.FreeEnergyCounting.powerProduct_self_pos`, `Becoming.FreeEnergyCounting.zero_of_total_zero`, `Becoming.FreeEnergyCounting.cons_left`, `Becoming.FreeEnergyCounting.cons_mid`, `Becoming.FreeEnergyCounting.cons_right`, `Becoming.FreeEnergyCounting.bound`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Equality exactly in proportion: the bound holds with equality exactly where n h * A = a h * N at every listed hypothesis, and is strict elsewhere (bound_eq_iff, bound_lt_of_not_proportional and four more). (`Becoming.FreeEnergyCounting.powerProduct_scaled`, `Becoming.FreeEnergyCounting.bound_eq_of_proportional`, `Becoming.FreeEnergyCounting.proportional_cons`, `Becoming.FreeEnergyCounting.proportional_of_bound_eq`, `Becoming.FreeEnergyCounting.bound_eq_iff`, `Becoming.FreeEnergyCounting.bound_lt_of_not_proportional`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. The degenerate cases: every weight nothing puts every count belief at the bound; with every count nothing both sides are one (zero_weights_reach, no_counts_reach). (`Becoming.FreeEnergyCounting.zero_weights_reach`, `Becoming.FreeEnergyCounting.no_counts_reach`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. In a core generative model the total of the joint weights is the record's weight, and the count beliefs at the bound are exactly those in proportion to the joint weights, the joint weights themselves among them (joint, record_total, bound_given_record, given_record_eq_iff, posterior_counts_reach). (`Becoming.FreeEnergyCounting.joint`, `Becoming.FreeEnergyCounting.record_total`, `Becoming.FreeEnergyCounting.bound_given_record`, `Becoming.FreeEnergyCounting.given_record_eq_iff`, `Becoming.FreeEnergyCounting.posterior_counts_reach`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 11. Where the record weighs nothing every count belief is at the bound, both sides nothing, with no share given the record to be in proportion to (nothing_record_reach_all). (`Becoming.FreeEnergyCounting.nothing_record_reach_all`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 12. With the hypotheses listed once, the count beliefs at the bound are exactly those whose every count over the total is the same ratio as the hypothesis's share given the record (given_record_eq_iff_share). (`Becoming.FreeEnergyCounting.given_record_eq_iff_share`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 13. Away from proportion the bound is strict and scaled counts reach it: a belief all on one of two hypotheses of weight one has 1 < 2; two counts on each, 4 ^ 4 = 2 ^ 4 * 2 ^ 2 * 2 ^ 2 (Witness.even and four more). (`Becoming.FreeEnergyCounting.Witness.even`, `Becoming.FreeEnergyCounting.Witness.first`, `Becoming.FreeEnergyCounting.Witness.strict_off_proportion`, `Becoming.FreeEnergyCounting.Witness.twoEach`, `Becoming.FreeEnergyCounting.Witness.scaled_reach`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 14. Off the support the bound still holds: a belief all on a hypothesis of joint weight nothing makes the left side nothing (Witness.secondOnly, Witness.off_support). (`Becoming.FreeEnergyCounting.Witness.secondOnly`, `Becoming.FreeEnergyCounting.Witness.off_support`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 15. At one total the bound may be unreached: against weights one and two every count belief of total two is strictly below it (Witness.oneTwo, Witness.split2, Witness.total_two_unreached). (`Becoming.FreeEnergyCounting.Witness.oneTwo`, `Becoming.FreeEnergyCounting.Witness.split2`, `Becoming.FreeEnergyCounting.Witness.total_two_unreached`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 16. A record weighing nothing puts every count belief at the bound, and a hypothesis listed twice breaks the join to the share: count 1 over 3 at the bound, share 2 over 3 (Witness.unitPrior and three more). (`Becoming.FreeEnergyCounting.Witness.unitPrior`, `Becoming.FreeEnergyCounting.Witness.unitLik`, `Becoming.FreeEnergyCounting.Witness.nothing_record_reach`, `Becoming.FreeEnergyCounting.Witness.duplicate_share`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

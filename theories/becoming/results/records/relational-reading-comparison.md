@@ -11,17 +11,17 @@
 ## Laws
 
 1. For every family of courses, a course that renews every condition extends another under the relational (whole-run) reading exactly when it is active at every event the other includes and at some event the other withholds; where every formation is active at every step of it, exactly when the other withholds some event. (`Becoming.Ranking.renewed_extends_iff`, `Becoming.Ranking.renewed_active_extends_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Read relationally, so that the active events of formations not consuming conditions of the relations they participate in are the generative grounds, living significance includes exactly those events and is silent on a consumer's events. (`RenewalComparison.g0_relational`, `Becoming.ActiveReading.livingSignificance_wholeRun_iff`, `GenerativeComparison.G0`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
 3. For every law of the relational-renewal family in which the focal formation draws beyond renewal from some step on, the same unfolding without that formation renews every condition and is a generative extension of the unfolding with it, an instance of that law; this holds for a dependent (malignant) and an independent (winning) focal formation alike. (`Becoming.SupportGated.overdraw_extension`, `Becoming.Ranking.whole_run_extends`, `RenewalComparison.overdraw_relational_extension`, `GenerativeComparison.GenerativeExtension`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 3 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 3 of its declarations are not in the spine run and not measured, so this holds of the others only.
 4. So the comparison principle C ranks the unfolding without the overdrawing formation strictly higher, and no asymmetric comparison satisfying C prefers the overdraw. (`RenewalComparison.overdraw_comparison_ranks`, `Becoming.Ranking.whole_run_ranks`, `RenewalComparison.malignant_comparison`, `Becoming.ActiveReading.malignant_readings`, `GenerativeComparison.ComparisonPrinciple`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 3 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 3 of its declarations are not in the spine run and not measured, so this holds of the others only.
 5. Read event by event, the two unfoldings are incomparable by extension, and an irreflexive, transitive comparison satisfying C prefers the overdraw. (`RenewalComparison.overdraw_broad_incomparable`, `Becoming.ActiveReading.overdraw_unranked`, `RenewalComparison.broad_comparison_admits_overdraw`, `Becoming.ActiveReading.overdraw_admits_occurrence`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
 6. Sharing is a generative extension of winning by consumption under both readings, an instance of the same law and, under the event-by-event reading, of the law of extension for a reading exact on the extending course. (`Becoming.SupportGated.contest_extensions`, `Becoming.ActiveReading.contest_readings`, `RenewalComparison.contest_comparison`, `Becoming.Ranking.extendsUnder_iff_of_exact`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
 
 <a id="conditions--条件"></a>
 ## Conditions

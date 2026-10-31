@@ -11,17 +11,17 @@
 ## Laws
 
 1. One step of a deviation about a rest, the return multiplier times the deviation plus noise independent of it, has variance a² Var Y + Var E and covariance a Var Y with the deviation now. (`Becoming.SlowingDown.step`, `Becoming.SlowingDown.memLp_step`, `Becoming.SlowingDown.variance_step`, `Becoming.SlowingDown.covariance_step`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Where the variance stays the same across the step and a² < 1, it is Var E / (1 − a²), and the lag-1 autocorrelation is the multiplier itself. (`Becoming.SlowingDown.stationaryVariance`, `Becoming.SlowingDown.stationary_variance`, `Becoming.SlowingDown.lag1`, `Becoming.SlowingDown.stationary_lag1`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The stationary variance rises strictly with the multiplier on [0, 1) and tends to infinity as the multiplier rises to one. (`Becoming.SlowingDown.stationaryVariance_strictMonoOn`, `Becoming.SlowingDown.stationaryVariance_tendsto`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. At a fold, x + h (m − x²) with rest √m, the multiplier is 1 − 2h√m; it rises to one as the margin m goes to zero, the variance rises strictly as the margin shrinks and without bound, and m = ((1 − a) / (2h))². (`Becoming.SlowingDown.foldStep`, `Becoming.SlowingDown.foldStep_rest`, `Becoming.SlowingDown.foldMultiplier`, `Becoming.SlowingDown.foldStep_hasDerivAt`, `Becoming.SlowingDown.foldMultiplier_tendsto`, `Becoming.SlowingDown.fold_variance_strictAntiOn`, `Becoming.SlowingDown.fold_variance_tendsto`, `Becoming.SlowingDown.fold_margin_read`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. Under logistic renewal with a proportional draw, rest K (1 − q / r), the multiplier is 1 − h (r − q) = 1 − h r x* / K, so the stock slows in proportion to its own level, the level is read back as K (1 − a) / (h r), and as the draw rises to the renewal rate the variance rises strictly and without bound. (`Becoming.SlowingDown.drawnStep`, `Becoming.SlowingDown.drawnRest`, `Becoming.SlowingDown.drawnStep_rest`, `Becoming.SlowingDown.drawnMultiplier`, `Becoming.SlowingDown.drawnStep_hasDerivAt`, `Becoming.SlowingDown.drawn_multiplier_level`, `Becoming.SlowingDown.drawn_level_read`, `Becoming.SlowingDown.drawnMultiplier_tendsto`, `Becoming.SlowingDown.drawn_variance_strictMonoOn`, `Becoming.SlowingDown.drawn_variance_tendsto`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. A dependent's need enters neither statistic: every reading of the margin to it from the multiplier is wrong for some need, and with the need measured the margin is read exactly (by construction). (`Becoming.SlowingDown.need_not_read`, `Becoming.SlowingDown.need_margin_read`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

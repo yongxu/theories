@@ -11,15 +11,15 @@
 ## Laws
 
 1. A gate is a decided mark on moves. The ungated steps preserve a property p where it holding before a step gives it after, and reflect p where it holding after gives it before. Keeping a quantity is preserving every value of it, and equally reflecting every value; a property is preserved (reflected) along every ungated course exactly when every ungated step preserves (reflects) it. (`Becoming.Gated.PreservedBy`, `Becoming.Gated.ReflectedBy`, `Becoming.Gated.keptBy_iff_preserved`, `Becoming.Gated.keptBy_iff_reflected`, `Becoming.Gated.preserved_along`, `Becoming.Gated.preserved_along_iff`, `Becoming.Gated.reflected_along`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Leaving passes the gate: where the ungated steps preserve p, a course from where p holds to where it fails contains a gated move; the earlier law for a kept quantity is its case p := (q equals its starting value). (`Becoming.Gated.leaving_passes_gate`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Every origin passes the gate: where the ungated steps reflect p, a course ending where p holds started where it held, or splits into a prefix, a gated step after which p holds, and the rest. Nothing about p is decided: the gate itself is. (`Becoming.Gated.origin`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. With the gate a proposition rather than decided, the origin law holds wherever every gate holds or fails; asked of every process it is exactly double-negation elimination (witness: one move from false to true, p holding at true, the gate Q). (`Becoming.Gated.origin_of_decides`, `Becoming.Gated.origin_of_propositions_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Instance (periphery, own checker): in LivingOrganization, with the recipes entering the pool as the gate, every other step reflects pool presence, so trace_pool_origin follows from origin, which adds that the pool is present right after the entry step; where every admitted recipe is closed there is no gate, and reflected_along keeps an empty pool empty. (`Becoming.LivingOrganizationCorrespondence.entryDecidable`, `Becoming.LivingOrganizationCorrespondence.entryGate`, `Becoming.LivingOrganizationCorrespondence.presence_reflected`, `Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core`, `Becoming.LivingOrganizationCorrespondence.entry_then_present`, `Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

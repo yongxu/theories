@@ -11,26 +11,26 @@
 ## Laws
 
 1. Along a relation, a boundary of a formation's self is a region holding it that is closed under the relation: the closure is the least and the whole the greatest, every boundary holds the closure, a smaller relation has more boundaries, and where everything lies within the closure the whole is the only boundary. (`Becoming.ClosedUnder`, `Becoming.WithinClosure`, `Becoming.Boundary`, `Becoming.Boundary.closure`, `Becoming.Boundary.whole`, `Becoming.Boundary.holds`, `Becoming.Boundary.of_larger`, `Becoming.Boundary.only_whole`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.WithinClosure` itself; closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.WithinClosure` itself; closure; its declarations reach the grammar.
 2. A claim about the drawn region is super-true when it holds of every admissible boundary, sub-true when it holds of some, and boundary-invariant when, holding of one, it holds of every other; where some boundary is admissible super-truth is invariant sub-truth, and invariance is determinacy: sub-true, the claim is super-true. (`Becoming.SuperTrue`, `Becoming.SubTrue`, `Becoming.BoundaryInvariant`, `Becoming.superTrue_iff`, `Becoming.boundaryInvariant_iff_determinate`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. What lies within the self however its boundary is drawn is the closure, and everything lies within it as drawn somewhere; wherever the whole is admissible, “everything within the self has a property” is super-true exactly when everything has it, and, along a relation, sub-true exactly when everything within the closure has it. (`Becoming.superTrue_member_iff`, `Becoming.subTrue_member`, `Becoming.superTrue_all_iff`, `Becoming.subTrue_all_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. The presupposition: from standpoint p, the continuation of everything within the drawn region has significance at every step. Super-true, it is significance over the union of the admissible boundaries, the continuation condition at p wherever the whole is admissible, whatever the relation, and super-true at every standpoint it is exactly the continuation condition. (`Becoming.SignificantWithin`, `Becoming.superTrue_significantWithin_iff_union`, `Becoming.superTrue_significantWithin_iff`, `Becoming.Unrestricted`, `Becoming.unrestricted_iff_superTrue`, `Becoming.superTrue_level_free`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 5. Sub-true along a relation, it is significance over the closure; sub-truth along a larger relation gives it along a smaller one, along the total relation it is the continuation condition at p, and along the empty relation the significance of the center's own continuation. (`Becoming.subTrue_significantWithin_iff`, `Becoming.subTrue_of_larger`, `Becoming.subTrue_total_iff`, `Becoming.subTrue_empty_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 6. Route (b)'s significance, bounded by each center's closure, is exactly the significance of what lies within the self however its boundary is drawn, and the least significance that makes every presupposition sub-true; so of one presupposition, “however the boundary is drawn” at narrow scope gives route (b) and at wide scope the continuation condition. (`Becoming.bounded`, `Becoming.bounded_closure_iff`, `Becoming.bounded_closure_least`, `Becoming.presupposition_scopes`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.presupposition_scopes` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.presupposition_scopes` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.presupposition_scopes`, by the rule:* connected (it reaches `Becoming.«所闭之自反»` and `Becoming.«所闭之闭»` among its reasons; not declared a case of one).
 7. The order: sub-truth along the total relation gives it along sharing a condition, which gives it along affecting and along being affected, being affected giving it along feeding, and any relation along the empty one. (`Becoming.Flow.Shares`, `Becoming.Flow.Affects`, `Becoming.Flow.AffectedBy`, `Becoming.Flow.FedFrom`, `Becoming.Flow.presupposition_order`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 8. In a balanced flow, sub-true at the center along a relation holding affecting, the presupposition compares every part whose members lie within the center's closure as the continuation condition does, with neither invariance nor super-truth (a corollary of comparison-within-reach); along affecting, every part within the reach closure. (`Becoming.Flow.Balances.comparison_within_reach`, `Becoming.Flow.reaches_within_closed`, `Becoming.closedUnder_withinClosure`, `Becoming.Flow.Balances.presupposed_comparison`, `Becoming.Flow.Balances.presupposed_reach_comparison`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 9. In Clearing sub-truth depends on the relation: significance bounded by each feeding closure makes the clearer's presupposition sub-true along feeding and not along sharing a condition. (`Becoming.Flow.WithinFeeding`, `Becoming.Clearing.dweller_beyond`, `Becoming.Clearing.levels_differ`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 10. In Clearing, the clearer's own presupposition, sub-true along sharing a condition or super-true, gives from its own standpoint that its part loses the dweller and does not retain what has significance, while drawn at the feeding closure it is met by a significance under which the part retains. (`Becoming.Clearing.system_counts_dweller`, `Becoming.Clearing.clearerPart`, `Becoming.Clearing.admitted_without`, `Becoming.Clearing.unsupported_with`, `Becoming.Web.Retains.not_added`, `Becoming.Web.Retains.of_fewer`, `Becoming.Clearing.own_presupposition`)
-    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

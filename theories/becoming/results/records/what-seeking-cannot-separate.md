@@ -11,23 +11,23 @@
 ## Laws
 
 1. Two hypotheses a likelihood ties: its weights agree on them at every value of the record, so every record weighs alike under them (Tied, tied_mass). (`Becoming.LumpedSeeking.Tied`, `Becoming.LumpedSeeking.tied_mass`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Given a record weighing something under a tied pair listed once, the share of one given it is at most the other's exactly where its prior weight is; where the record weighs nothing in the whole, the first's prior weight is nothing and both sides hold (single_le_evidence, posterior_le_iff_prior). (`Becoming.LumpedSeeking.single_le_evidence`, `Becoming.LumpedSeeking.posterior_le_iff_prior`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The shares of a tied pair given any record stand as the prior weights do; where the prior weighs the false one strictly above the true one, every record weighing something under them leaves it above (posterior_ratio_kept, order_kept). (`Becoming.LumpedSeeking.posterior_ratio_kept`, `Becoming.LumpedSeeking.order_kept`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A course of seeking weighs, at each step, the weight of choosing the experiment, read from the course so far, times the outcome's weight under it; a pair tied under every experiment is tied over every course (seekWeight, seek_tied). (`Becoming.LumpedSeeking.seekWeight`, `Becoming.LumpedSeeking.seek_tied`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Where every experiment ties the true hypothesis and the false one and the prior weighs the false one strictly above, every record of courses of seeking weighing something under them leaves it above, whatever the policy of choice (seeking_keeps_order). (`Becoming.LumpedSeeking.seeking_keeps_order`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. The witness: three coins, biased toward heads (true), fair and biased toward tails, with prior weights 5, 6 and 7; a model reading only whether two tosses agree ties the biases, its weights totalling sixteen under each (Agree.Bias and eight more). (`Becoming.LumpedSeeking.Agree.Bias`, `Becoming.LumpedSeeking.Agree.hypotheses`, `Becoming.LumpedSeeking.Agree.distinct`, `Becoming.LumpedSeeking.Agree.prior`, `Becoming.LumpedSeeking.Agree.outcomes`, `Becoming.LumpedSeeking.Agree.twoHeads`, `Becoming.LumpedSeeking.Agree.agreeing`, `Becoming.LumpedSeeking.Agree.ties`, `Becoming.LumpedSeeking.Agree.totals`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Given two heads, the true coin comes above the fair one, the wrong order the model separates turning, while the tails-biased one stays above the true one (Agree.turns_fair, Agree.keeps_tails). (`Becoming.LumpedSeeking.Agree.turns_fair`, `Becoming.LumpedSeeking.Agree.keeps_tails`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. With only the experiment reading agreement, a course of two heads keeps the tails-biased coin above the true one (Agree.agreeCourse, Agree.seeking_keeps_tails). (`Becoming.LumpedSeeking.Agree.agreeCourse`, `Becoming.LumpedSeeking.Agree.seeking_keeps_tails`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. With two experiments, reading both tosses or only whether they agree, and a policy choosing the first, the same outcome turns that order (Agree.readBoth, Agree.experiment, Agree.pickReading, Agree.readCourse, Agree.seeking_turns_tails). (`Becoming.LumpedSeeking.Agree.readBoth`, `Becoming.LumpedSeeking.Agree.experiment`, `Becoming.LumpedSeeking.Agree.pickReading`, `Becoming.LumpedSeeking.Agree.readCourse`, `Becoming.LumpedSeeking.Agree.seeking_turns_tails`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

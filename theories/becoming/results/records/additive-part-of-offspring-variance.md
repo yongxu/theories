@@ -11,15 +11,15 @@
 ## Laws
 
 1. Cauchy-Schwarz, counted: over any finite list the square of the total of products is at most the product of the totals of the squares. (`Becoming.Reproduction.twice_le_of_le`, `Becoming.Reproduction.twice_le`, `Becoming.Reproduction.square_mul`, `Becoming.Reproduction.cross_mul`, `Becoming.Reproduction.bound_sq`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Over ordered pairs, how far apart the weights are times how far apart the amounts are totals twice the concordance with the discordance. (`Becoming.Reproduction.pairsOf`, `Becoming.Reproduction.total_bind`, `Becoming.Reproduction.total_pairsOf`, `Becoming.Reproduction.dist`, `Becoming.Reproduction.dist_mul`, `Becoming.Reproduction.total_dist`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The additive part is at most the whole: the concordance with the discordance of offspring number with any carried amount, squared, is at most the squared differences of offspring numbers over pairs times those of the amount, and so is the covariance either way; all of it where the amount is offspring number itself. (`Becoming.Reproduction.twice_mul`, `Becoming.Reproduction.additive_le`, `Becoming.Reproduction.covariance_sq_le`, `Becoming.Reproduction.additive_self`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Over generations with exact transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is at most that product. (`Becoming.Reproduction.sub_le_of_le_add`, `Becoming.Reproduction.Generations.response_sq_le`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Witness: offspring numbers one, two, three, the middle member alone carrying an amount: concordance and discordance one each, no covariance, while offspring number and the amount both vary. (`Becoming.Reproduction.Unrelated.amount`, `Becoming.Reproduction.Unrelated.unrelated`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

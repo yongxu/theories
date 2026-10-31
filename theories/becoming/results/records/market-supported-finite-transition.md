@@ -11,23 +11,23 @@
 ## Laws
 
 1. For a law of change with admissible disturbances and a guard, a start lasts 0 steps where it is within the guard, and n + 1 steps where, besides, every admissible disturbance takes it to one lasting n. A ladder is a family of levels within the guard in which every admissible step from level k + 1 lands at level k; a start lasts n steps exactly when some ladder holds it at level n. (`Becoming.Lasting.Lasts`, `Becoming.Lasting.Ladder`, `Becoming.Lasting.lasts_iff_ladder`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A family is necessary when the guard gives level 0 and a configuration within the guard whose admissible successors all lie at level k is at level k + 1; a start lasts n steps exactly when every necessary family holds it at level n, and a family that is both a ladder and necessary is exactly lasting. (`Becoming.Lasting.Necessary`, `Becoming.Lasting.lasts_iff_necessary`, `Becoming.Lasting.lasts_iff_of_exact`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Given one admissible disturbance, lasting n steps is staying within the guard for the first n steps of every admissible history; with no premise, what no course leaves is what lasts every horizon; and with the guard decided, from within it a guarded history agrees with the history at n exactly when the history stays within the guard up to n. (`Becoming.Lasting.lasts_iff_histories`, `Becoming.Lasting.kernel_iff_lasts`, `Becoming.Lasting.guarded_upto_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. On courses: a start lasts n steps exactly when every course of at most n admissible disturbances from it stays within the guard, so every such course stays within the guard exactly when some ladder holds the start at level n, and exactly when every necessary family does. (`Becoming.Courses.lasts_iff_courses`, `Becoming.Courses.lasts_of_courses`, `Becoming.Courses.courses_iff_ladder`, `Becoming.Courses.courses_iff_necessary`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In the market model with the correction strength chosen at each step, for extra support consumption κ ≥ 0, the physical pairs whose stock is at least the cover K for n more steps, with K(0) = 5 and K(n + 1) = (10/9)(K(n) + 1 + κ), form a ladder for the essential floor under every correction schedule and every disturbance whose shock is at most κ; K(n) = (15 + 10κ)(10/9)^n − 10(1 + κ). (`Becoming.MarketInstances.covered`, `Becoming.MarketInstances.cover_ladder`, `RegimeTransition.cover_formula`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. At the worst share, which renews nothing, the cover is exact: the stock alone lasts n steps at or above 5 exactly when it is at least the cover for n steps. From a physical start whose stock covers N steps the pulse runs within the essential floor for its first N steps, for every correction strength; the β = 0 pulse prefix is a case. (`Becoming.MarketInstances.worstSupport`, `Becoming.MarketInstances.cover_exact`, `Becoming.MarketInstances.supported_prefix_instance`, `Becoming.MarketInstances.pulse_prefix_instance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. Every physical state with positive renewal share lands under the β = 0 rescue within finitely many steps, the case β = 0 of the landing side; no single pulse duration lands every positive share, and a share of zero never lands. (`RegimeTransition.positive_seed_finite_landing`, `Becoming.MarketInstances.rescue_landing_instance`, `RegimeTransition.no_uniform_pulse_duration`, `RegimeTransition.zero_seed_never_lands`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. For κ ≥ 0 and a physical state with positive share there is N such that, from every initial stock at least the cover for N steps, the guarded β = 0 pulse with consumption κ agrees with the operating history for its first N steps, the state at N is safe for the original parameters (β = 1/2), and from it the original guarded history with no shock never fails. (`RegimeTransition.supported_finite_transition`, `RegimeTransition.landing_supplies_safety`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. Support at the floor need not suffice: a physical state with share 1/100 and stock 5 stops at the first guarded pulse step even with no extra consumption. (`RegimeTransition.too_late_even_without_extra_cost`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. With being in x's lump decided, where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x. (`Becoming.Learning.free_lumped`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin reading through the lumping, agreeing with it on every reading and taking that value at x. (`Becoming.Learning.twin_selected`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Example, why the exact form takes a list: with one occasion, a constant lumping and two act values, the occasion read exactly where P holds, the readings fix the act exactly where ¬¬P, where the exact form would say P. (`Becoming.Learning.determines_iff_not_not`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where acts read a state formed from what couples in, acts that differ at two occasions come from states that differ, and states that differ from couplings that differ. (`Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.coupling_apart_of_state_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content (Learning.Shift's pattern); for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has a selected twin answering otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there. (`Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Witness, the converses fail: a read and an unread occasion differ while their content acts agree; with the state the occasion and the act its content, states differ and acts agree, and with the coupling the occasion and the state its content, couplings differ and states agree. (`Becoming.Learning.Cue.apart_with_content_alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

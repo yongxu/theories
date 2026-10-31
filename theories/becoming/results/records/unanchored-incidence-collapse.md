@@ -11,15 +11,15 @@
 ## Laws
 
 1. For joinings of fragments of any types, read through roles (fragments and occurrences related only by which fragment holds which role in which occurrence): where every fragment of each holds every role in some occurrence, every fragment of the one is alike to every fragment of the other, and alike configurations pass the same branching tests. (`Becoming.Joining.roleFrame`, `Becoming.Joining.RoleTotal`, `Becoming.Joining.RoleTotal.alike`, `Becoming.Alike.sameBranchingTests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where every fragment of a joining holds every role and some fragment cannot join itself, the map onto the joining of one fragment with itself is open, so every fragment passes the branching tests of roles the one fragment passes, and it does not lift pairs; giving every fragment one code identifies exactly the fragments alike in their roles, while the one fragment joins itself. (`Becoming.Joining.OpenMap`, `Becoming.Joining.PairLifting`, `Becoming.Joining.SelfJoinable`, `Becoming.Joining.coarse`, `Becoming.Joining.OpenMap.sameBranchingTests`, `Becoming.Joining.RoleTotal.open_not_pairLifting`, `Becoming.Joining.RoleTotal.collapse`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A joining has local units where every fragment has a neutral fragment joining before it into it and one after it into it, no finiteness assumed. With local units every fragment holds every role, so read through roles every fragment passes the tests of the one fragment, the map onto it is open, and one code reads every test of roles exactly; as for any joining, it gives fragments passing the same tests one code. (`Becoming.Joining.HasUnits`, `Becoming.Joining.HasUnits.roleTotal`, `Becoming.Joining.HasUnits.collapse`, `Becoming.Joining.collapsed_exact`, `Becoming.Joining.collapsed_reduced`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Every traced fragment of every process has local units, the fragments staying at its start and at its finish, so read through roles every traced fragment passes the tests of the one fragment. (`Becoming.Fragment.has_units`, `Becoming.Fragment.traces_collapse`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. For the process that moves once, from false to true, the traced passage cannot join itself, finishing where it does not start; read through roles it passes the tests of the one fragment, which joins itself; the map of its traced fragments onto the one fragment is open and does not lift pairs; and the fragments staying at its two ends pass the same tests of roles while the probes of ends tell them apart. (`Becoming.Fragment.passage_not_self_joint`, `Becoming.Fragment.once_roles_hide_failure`, `Becoming.Fragment.once_self_apart`, `Becoming.Fragment.once_open_not_pairLifting`, `Becoming.Fragment.once_roles_hide_ends`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

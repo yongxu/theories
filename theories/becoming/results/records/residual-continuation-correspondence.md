@@ -11,25 +11,25 @@
 ## Laws
 
 1. For any frame and recipe (nothing, a move, a test where the course stands, one recipe after another, or a choice of two), one advance takes a move, passes a test, drops a finished first part, advances a sequence's first part or takes one side of a choice. Carrying a recipe out part of the way, a course of advances, leaves a recipe remaining at a configuration, and is a course of the frame's own moves. (`Becoming.Recipe.Advance`, `Becoming.Recipe.unfolding`, `Becoming.Recipe.Leaves`, `Becoming.Recipe.Leaves.trace`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Resuming what remains from where a partial course stands completes the recipe, and a recipe leads from s to t exactly where carrying it out from s can leave nothing remaining at t. (`Becoming.Recipe.Leaves.resume`, `Becoming.Recipe.leads_iff_leaves`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A partial course, moves of the frame inserted from where it stands, and a resumption of what remains from where those moves led join into one course of the frame through their actual boundaries; the inserted moves are not thereby part of the recipe. (`Becoming.Recipe.Leaves.inserted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A partial course from a configuration is matched from any alike configuration of another frame, leaving the same recipe and ending alike, with no premise; from a configuration passing the same branching tests it is matched, ending where the same tests pass, given excluded middle as a hypothesis and the outcomes of the second frame's moves listed. (`Becoming.Recipe.Leaves.alike`, `Becoming.Recipe.Leaves.same_of_em`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Configurations passing the same branching tests answer every recipe question alike: a recipe leads from one to where a test holds exactly where it does from the other, with no premise and no finiteness. (`Becoming.SameBranchingTests.leads_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A description of what remains together with where the course stands, exact for resumption (equal codes resume to the same tests), gives different codes to two such configurations that resume differently. (`Becoming.Recipe.Resumes`, `Becoming.Recipe.Resumes.codes_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In Midway, from safe, the recipe that begins and then finishes where finishing can be taken reaches done, while the recipe testing at the start whether finishing can be taken does not. (`Becoming.Midway.adaptive`, `Becoming.Midway.earlyCheck`, `Becoming.Midway.testing_before_formation_changes_results`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. In Midway, carrying out the choice of begin then finish, or begin alone, from safe can stand at ready with finish remaining or with nothing remaining; with finish remaining the course can reach where finish cannot be taken, with nothing remaining it cannot, so every description exact for resumption codes the two apart. (`Becoming.Midway.pending`, `Becoming.Midway.same_start_distinct_remainders`, `Becoming.Midway.remainder_changes_continuation`, `Becoming.Midway.remainder_codes_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. In Midway, finish inserted at ready reaches done, from where the finish still remaining cannot be taken, so an inserted move can disable what remains; ready and done do not pass the same branching tests. (`Becoming.Midway.inserted_can_disable_resumption`, `Becoming.Midway.inserted_changes_tests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. The earlier witnesses on the periphery's granularity unfolding: testing before formation changes the result; one start leaves the residuals finish and nothing at one reached position, and every exact presentation of the paused answers codes them apart; and an inserted finish can disable the pending finish. (`Generative.ExplanatoryResumptionCases.testing_before_formation_changes_results`, `Generative.ExplanatoryResumptionCases.same_start_reaches_distinct_residuals`, `Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program`, `Generative.ExplanatoryResumptionCases.inserted_activity_can_disable_resumption`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
