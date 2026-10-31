@@ -3,7 +3,8 @@
 module paragraph, its README rows and its place in the checker's core list):
 
   python3 -B <dir>/integrate_u4.py record RECEIPT STUDY   the record one-root-to-its-edge, bound to the core run's
-                                                          receipt; 08 §7's home section; regions.json's two entries
+                                                          receipt; 08 §7's home section; 08 §3's receipt sentence,
+                                                          every count read from the receipt; regions.json's two entries
   python3 -B <dir>/integrate_u4.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's log:
                                                           the leaf's roots with their reasons; others printed
   python3 -B <dir>/integrate_u4.py check                  after master_laws.py: the data reads this record, nothing is
@@ -33,8 +34,51 @@ APART = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-f
 ANCHOR = '\n<a id="known-results"></a>\n## 8. Known results\n'
 
 
+# 08 §3's sentence naming the core receipt and its counts (RR2's reland_rr2.py pattern): RootForms joins the core, so
+# the landing's own receipt replaces the earlier one.
+SENTENCE = re.compile(
+    r"At core receipt \[`[0-9TZ.]+`\]\([^)]*\) \(Lean 4\.29\.1\), the closure held \d+ modules \(\d+ foundation, "
+    r"\d+ core, \d+ in the instance and application ring\) and [\d,]+ theorems; the \d+ core modules held [\d,]+ of "
+    r"them; [\d,]+ declarations were audited; \d+ generated `injEq` lemmas depend on `propext`; \d+ superseded "
+    r"modules were kept out of the run\.")
+
+
+def receipt_sentence(receipt):
+    r = json.loads((ROOT / receipt).read_text(encoding='utf-8'))
+    assert r['status'] == 'passed'
+    mods = {m['module']: m for m in r['modules']}
+    assert 'Becoming.RootForms' in mods and not any(mods['Becoming.RootForms']['axiom_dependencies'].values())
+    stamp = Path(receipt).parent.name
+    layers = {}
+    for m in r['modules']:
+        count = layers.setdefault(m['layer'], [0, 0])
+        count[0] += 1
+        count[1] += m['theorems']
+    assert set(layers) <= {'foundation', 'core', 'instance', 'application'}, set(layers)
+    modules = sum(v[0] for v in layers.values())
+    theorems = sum(v[1] for v in layers.values())
+    assert modules == len(r['core_closure']), (modules, len(r['core_closure']))
+    ring = layers.get('instance', [0, 0])[0] + layers.get('application', [0, 0])[0]
+    declarations = sum(len(m['declarations']) for m in r['modules'])
+    injeq = sum(1 for name, axioms in r['generated_axiom_dependencies'].items()
+                if name.endswith('.injEq') and axioms == ['propext'])
+    assert injeq == len(r['generated_axiom_dependencies']), 'a generated dependency other than injEq on propext'
+    link = '../../../' + receipt
+    counts = (f"At core receipt [`{stamp}`]({link}) (Lean 4.29.1), the closure held {modules} modules "
+              f"({layers['foundation'][0]} foundation, {layers['core'][0]} core, {ring} in the instance and application "
+              f"ring) and {theorems:,} theorems; the {layers['core'][0]} core modules held {layers['core'][1]:,} of them; "
+              f"{declarations:,} declarations were audited; {injeq} generated `injEq` lemmas depend on `propext`; "
+              f"{len(r['superseded_modules'])} superseded modules were kept out of the run.")
+    text = CHAPTER.read_text(encoding='utf-8')
+    text, k = SENTENCE.subn(lambda m: counts, text)
+    assert k == 1, k
+    CHAPTER.write_text(text, encoding='utf-8')
+    print('08 §3:', counts[:160], '…')
+
+
 def record(receipt, study):
     r, c = mr.record(receipt, study)
+    receipt_sentence(receipt)
     assert c['unplaced'] == 0, c
     (ROOT / mr.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     text = CHAPTER.read_text(encoding='utf-8')
