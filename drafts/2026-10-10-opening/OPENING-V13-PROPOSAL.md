@@ -16,7 +16,7 @@ An audit of the body against AGENTS, the glossary, chapter 7 (§1, §3, §4.1 to
 - two whose wording is older but whose notes already correct them (D1, D2);
 - a few points of style (F).
 
-The first screen states the scope of the ethics ("stated as life's way: no verdict binding every possible mind is claimed"), so A1 and A2 are the edits it needs alongside. The rest can wait, or be declined, without touching the screen.
+The first screen states the scope of the ethics ("Thesis T8 argues this ethics as life's way, claiming no verdict binding every possible mind"), so A1 and A2 are the edits it needs alongside. The rest can wait, or be declined, without touching the screen.
 
 ## A. The scope of the ethics
 

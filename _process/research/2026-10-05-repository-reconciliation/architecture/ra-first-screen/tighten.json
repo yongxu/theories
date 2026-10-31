@@ -1,0 +1,354 @@
+{
+ "about": "README's first screen, the tightening pass the coordinator asked for (31 October 2026): toward the 150-word screen and with no person or AI named on it. Three independent drafts (fewest words, a newcomer reading cold, exactness against the account), two judges (a cold reader, the account), then one agent that synthesized the best and tried to refute it clause by clause. Opus agents, run 2026-10-31. The landed block is the synthesis: 172 words on the screen by a render through navigation.first_screen, 22 over.",
+ "against": "3fbfdc45b",
+ "drafts": [
+  {
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/draft-fewest.md",
+   "block": "*{{time:screen}} to read.*\n\n**An account** of how anything, evaluation included, arises, lasts, changes and ends within one relational unfolding, not assumed good.\n\n**Its ethics** rests on [two unasserted premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (anything's continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone ranks. [Thesis T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues it as life's way, not as binding every possible mind.\n\n**Start with** [the one page](../../theories/becoming/ONE-PAGE.md) ({{time:theories/becoming/ONE-PAGE.md}}), [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md) ({{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}) or [the opening](../../README.md#truth-exists), a first-person conviction ({{time:opening}}), with [notes](../../README.md#notes).\n\n**Recorded Lean receipts** credit {{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](../../theories/becoming/chapters/08-METHOD.md#theses) passed some tests frozen before scoring, failed others. No outside review yet.",
+   "words": 162,
+   "cuts": [
+    "Time line: dropped 'AI-written;'. The brief requires this, since front pages name no AI. The line keeps '*{{time:screen}} to read.*' exactly.",
+    "Point 1: dropped the 'What it is.' label (−3). The bold lead 'An account' now carries the point, and its sentence says what the theory is.",
+    "Point 1: 'comes to be, lasts, changes and passes away' became 'arises, lasts, changes and ends' (−3). These are the same four phases (generation, maintenance, transformation, ending) in plainer words, and they no longer repeat the opening's own wording.",
+    "Point 1: 'life and evaluation included' became 'evaluation included' (−2). Life is already inside 'anything' and is named again in 'life's way'. Evaluation is the surprising inclusion, so it stays.",
+    "Point 1: 'without assuming that becoming is good' became 'not assumed good', attached to 'one relational unfolding' (−3). This matches AGENTS: the whole unfolding, not assumed good.",
+    "Ethics: 'two premises, neither asserted' became 'two unasserted premises' (−1). The meaning is the same and the link to #scope-and-order is kept.",
+    "Ethics: 'and the premises' warrant is open' became 'their warrant open', placed beside the premises it qualifies (−3). It is the same claim.",
+    "Ethics: '(for anything, its continuation has significance)' became '(anything's continuation has significance)' (−2). It still says 'anything' and 'has significance', and the role 'fixes scope, whose losses count' is unchanged.",
+    "Ethics: 'C (widening what can form is better) alone gives order' became '... alone ranks' (−1). This is 07's own wording ('the condition fixes scope and orders nothing; C alone ranks') and AGENTS' ('What ranks lies in calling widening better (C) alone').",
+    "Ethics: 'Thesis T8 argues it as life's way: no verdict binding every possible mind is claimed' became 'Thesis T8 argues it as life's way, not as binding every possible mind' (−3). 'Argues' and 'Thesis' keep the standing (argued, not established). 'Not as binding' withholds the universal claim without asserting its denial, the same as T8's 'No verdict binding every possible mind is claimed'.",
+    "Start: 'Where to start.' became 'Start with', and the times went into parentheses, which do not count (−1). All four links stay.",
+    "Start: dropped 'below' (−1). The link #truth-exists already jumps within the page.",
+    "Start: 'a conviction in the first person' became 'a first-person conviction' (−3). 'Conviction' is kept because it gives the opening's standing.",
+    "Start: dropped {{time:notes}} (−3), which the brief permits. The #notes link stays as 'with notes'.",
+    "Tested: dropped the 'What is tested.' label (−3). The bold lead 'Recorded Lean receipts' and the word 'tests' carry the point.",
+    "Tested: 'N of M registered results are credited by a recorded Lean receipt, which shows that a result's Lean statement follows from its premises, not that they hold' became 'Recorded Lean receipts credit N of M registered results, showing each Lean statement follows from its premises, not that they hold' (−3). 'Credit' keeps FS1's status-count sense, and 'Lean statement ... not that they hold' keeps FS2. Both count fields stay as written.",
+    "Tested: 'The empirical theses face tests frozen before scoring: some passed, some failed' became 'Empirical theses passed some tests frozen before scoring, failed others' (−1). 'Frozen before scoring' is kept as FS8's accepted fix.",
+    "Tested: 'Every review so far is by AI' became 'No outside review yet.' (−3). It says no outside review has happened and names no person and no AI."
+   ],
+   "risks": [
+    "The real render may count 163, not 162. The count tool fills {{time:screen}} as '2 minutes', but at this length the render's fixed point gives '1–2 minutes', which is three words. I checked with navigation.reading_time.",
+    "'Alone ranks' states C's role (order) as a verb. If the role word 'order' must appear on the screen, as in 'Scope and order' and AGENTS' 'C for order', go back to 'alone gives order' (+1).",
+    "'Not as binding every possible mind' drops the word 'claimed'. If the coordinator wants the claim made explicit, use 'claiming no verdict binding every possible mind' (+1).",
+    "'Two unasserted premises' could read less plainly to a newcomer than 'two premises, neither asserted' (+1).",
+    "Active voice: 'Recorded Lean receipts credit N of M'. It is still a status count, but a reader might take the 31 left over as having no receipt, as with the earlier passive 'credited by'.",
+    "'Frozen before scoring' is FS8's accepted fix. If the brief means a fuller gloss for newcomers, 'tests whose predictions were fixed before scoring' costs about +3.",
+    "Dropping 'below' and the notes time saves words. A newcomer may then not realise the opening is on this page or that the notes run 78–101 minutes.",
+    "'It' in 'Thesis T8 argues it' refers back to the ethics across a long sentence. The current block has the same structure.",
+    "'Passed some tests frozen before scoring, failed others' runs two clauses together without 'and', which may read as clipped.",
+    "Point 1 no longer says 'life'. It says 'anything, evaluation included', and the ethics says 'life's way'.",
+    "Further cuts are possible, but each loses something real. Dropping 'evaluation included' saves 2, dropping 'Thesis' saves 1, and a subtitle form without 'An account of' saves 3. Together they reach about 156. I kept all three because the standing ('Thesis'), the bridge to the ethics ('evaluation') and the sentence's subject are worth their words."
+   ],
+   "key": "fewest"
+  },
+  {
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/draft-newcomer.md",
+   "block": "*{{time:screen}} to read.*\n\n**What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, without assuming that becoming is good.\n\n**Its ethics** rests on [two premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. [Thesis T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues it as life's way, claiming no verdict binding every possible mind; the premises' warrant is open.\n\n**Where to start.** [The one page](../../theories/becoming/ONE-PAGE.md), {{time:theories/becoming/ONE-PAGE.md}}; [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md), {{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}; [the first-person opening](../../README.md#truth-exists) below, {{time:opening}}, and [its notes](../../README.md#notes).\n\n**What is tested.** {{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md) are credited by a recorded Lean receipt, a machine check that the Lean statement follows from its premises, not that they hold. [The empirical theses](../../theories/becoming/chapters/08-METHOD.md#theses) face tests scored by rules fixed in advance: some passed, some failed. No outside review yet.",
+   "words": 190,
+   "cuts": [
+    "Time line: 'AI-written; ' dropped (front pages name no person and no AI); '*{{time:screen}} to read.*' kept as required. With the shorter block the render may now print '1–2 minutes'. That value is a field, so nothing is copied.",
+    "What it is: 'life and evaluation included' cut (4 words). The ethics paragraph that follows already shows evaluation is inside the account, and the one page gives the full list. 'without assuming that becoming is good' is kept, with 'that' left in so a newcomer does not misread 'assuming becoming' as a phrase on its own.",
+    "Ethics: 'and no verdict binding every possible mind is claimed' recast as 'claiming no verdict binding every possible mind' (T8 is the subject). The claim and its scope are the same as in T8's own text. 'and the premises' warrant is open' became '; the premises' warrant is open'. Both premises, their parentheses, the roles (scope, whose losses count; C alone gives order), 'neither asserted' and 'Thesis T8 argues it as life's way' are unchanged, so FS5 and the FS4 verdict hold.",
+    "Where to start: 'a conviction in the first person' (6 words) shortened to the link text 'the first-person opening' (counted as one extra word). It still tells a newcomer that the opening is a personal voice, set apart from the account, without naming anyone. {{time:notes}} dropped as allowed; the 'its notes' link to #notes stays.",
+    "What is tested: 'which shows that a result's Lean statement follows from its premises, not that they hold' became 'a machine check that the Lean statement follows from its premises, not that they hold'. This explains 'Lean receipt' to a reader who has never heard of Lean, keeps 'credited by a recorded Lean receipt' (FS1, a status count) and keeps 'follows from its premises, not that they hold' (FS2).",
+    "'face tests frozen before scoring' became 'face tests scored by rules fixed in advance'. This is the plain-words gloss FS8 asked for, and it matches 08 §9 ('A frozen rule fixes how a verdict is scored before the data'). 'some passed, some failed' is kept.",
+    "'Every review so far is by AI.' replaced by 'No outside review yet.' This states that no outside review has happened without naming who reviewed, and fits the one page's 'No human has yet reviewed it'.",
+    "All eight link paths are byte-identical to the current file (checked by grep). Every field stays exactly as written. Neither 'AI' nor any name appears in the block (checked by grep). Result: 190 screen words against 205 now, block 154 against 169."
+   ],
+   "risks": [
+    "The block is still 40 words over the 150 budget. Almost all of the rest is never-cut text: the ethics paragraph (51 words) and the tested paragraph (49) are close to their floors. Removing the run-in labels 'What it is.', 'Where to start.' and 'What is tested.' would save 9 more words, but I kept them because a newcomer scanning the screen needs them. Amendment 1 lets the layer keep the never-cut items and record the excess.",
+    "'a machine check that the Lean statement follows…' puts the receipt in apposition with the check it records. Strictly, a receipt is the record of a Lean check. If a reviewer reads that as overclaiming, 'the record of a machine check that…' costs 3 more words.",
+    "'No outside review yet.' is shorter than the coordinator's example ('every review so far is internal; none outside yet') and does not say outright that internal reviews exist. It does keep the never-cut fact that no outside review has happened. If 'internal' must appear, use 'Every review so far is internal.' (+2 words).",
+    "'scored by rules fixed in advance' leaves 'in advance' unexplained (of the data). It is plainer than 'before the data' and one word shorter, and I judged a newcomer reads it correctly.",
+    "'the first-person opening' describes the opening's body. Its notes are not first-person, but they are named separately ('its notes'), so I left it."
+   ],
+   "key": "newcomer"
+  },
+  {
+   "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/draft-precision.md",
+   "block": "*{{time:screen}} to read.*\n\n**An account** of how anything comes to be, lasts, changes and passes away within one relational unfolding, not assumed good.\n\n**Its ethics** rests on [two premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted, their warrant open: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. [Thesis T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues it as life's way, claiming no verdict binding every possible mind.\n\n**Start with** [the one page](../../theories/becoming/ONE-PAGE.md), {{time:theories/becoming/ONE-PAGE.md}}, then [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md), {{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}; [the opening](../../README.md#truth-exists) below is a first-person conviction, {{time:opening}}, with [its notes](../../README.md#notes).\n\n**{{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md)** are credited by a recorded Lean receipt, showing their Lean statements follow from their premises, not that these hold. [The empirical theses](../../theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. Every review so far is internal.",
+   "words": 178,
+   "cuts": [
+    "Time line: dropped the 'AI-written;' label, since front pages name no person and no AI. The line is now exactly '*{{time:screen}} to read.*'.",
+    "'**What it is.** An account' became '**An account**'. Only a label goes (3 words): the bolded start keeps the point visible and no claim changes.",
+    "Cut 'life and evaluation included' (4 words). 'Anything' already includes life and evaluation (AGENTS: they unfold through the relations the unfolding forms), and the next paragraph, 'Its ethics', puts evaluation inside the theory. The content is the same; only the emphasis goes.",
+    "'without assuming that becoming is good' became 'not assumed good', attached to 'one relational unfolding'. This is AGENTS's own phrase (Scope: 'the whole unfolding, generation, ... disappearance, not assumed good'), equally strong, 3 words shorter.",
+    "'and the premises' warrant is open' became 'their warrant open', placed beside 'neither asserted'. The claim is the same: 07 'What this chapter does not show' (that the condition, C or the step is warranted) and AGENTS (warrant open; a reason for C open apart).",
+    "'no verdict binding every possible mind is claimed' became 'claiming no verdict binding every possible mind', with T8 as the subject. 07 §8 T8 says it in those words ('No verdict binding every possible mind is claimed'), so it is not stronger. 'Thesis T8 argues' stays, which keeps FS5 (standing argued).",
+    "'**Where to start.**' became '**Start with** ... then ...'. The label goes, and 'then' gives the order AGENTS's Start here gives (one page, then overview) where the old list gave none. The word count is the same as the old list's separators.",
+    "'a conviction in the first person' became 'a first-person conviction'. The opening's standing is unchanged and the wording is 3 words shorter.",
+    "Dropped {{time:notes}}; the [its notes](../../README.md#notes) link stays, as the task allows. A figure goes, not a claim.",
+    "'**What is tested.**' became a bolded count, '**{{count:recorded-checked}} of [...registered results]**'. Only a label goes. Calling the Lean receipts 'tested' would also blur what 08 §9 keeps apart ('proved under named premises' against 'supported by frozen tests'), and the bolded count avoids that. FS1's 'credited by a recorded Lean receipt' (a status count) is kept word for word.",
+    "'which shows that a result's Lean statement follows from its premises, not that they hold' became 'showing their Lean statements follow from their premises, not that these hold'. It is the same claim as FS2's accepted fix, in the plural to agree with 'results', with 'these' fixing the reference to the premises.",
+    "'Every review so far is by AI.' became 'Every review so far is internal.' This keeps the frame of 08 §11 ('Every review so far is by AI ... No human review is claimed') without naming who reviewed, and it implies that no outside review has happened yet. I chose it over the shorter 'No outside review yet' (4 words), which would drop the fact that reviews exist and so say less than 08.",
+    "Kept unchanged: the condition's gloss in the glossary's words, 'fixes scope, whose losses count', 'C (widening what can form is better) alone gives order' (GLOSSARY: 'it alone orders'; FS4 refuted), 'registered' (the denominator is every record), and 'tests frozen before scoring: some passed, some failed' (FS8; the one page's own gloss is 'predictions fixed before they are scored'). Every field is as written, and all eight links keep the current file's paths."
+   ],
+   "risks": [
+    "The screen is still 28 words over 150. Stated exactly, the never-cut items alone come to about 135 block words (ethics about 49, the receipt and tests about 37, the start links with times about 25, plus what the theory is and the time line), so the whole screen bottoms out near 175. Under amendment 1 the excess is recorded, and the study section should give this render's figure (178, 28 over), not the old one.",
+    "'not assumed good', placed after 'one relational unfolding', could be read as qualifying 'an account'. 'without assuming that becoming is good' cannot be misread that way and costs 3 more words.",
+    "Without 'life and evaluation included', the screen no longer says outright that evaluation forms within the unfolding (the nondual point of 07 §1). If the coordinator counts that as part of 'what the theory is', put it back (+4).",
+    "'then' sets a reading order: one page, then overview. AGENTS's Start here gives that order, but if the two are meant as alternative ways in, use 'or' (same count).",
+    "With the labels 'What it is.', 'Where to start.' and 'What is tested.' replaced by bolded sentence starts, the four points are less obviously labelled. If labels are required, restoring them costs about 7 words.",
+    "'internal' means carried out within the work. That holds for the AI reviews 08 §11 counts. If any past review came from a party outside the work, it would need checking against the review ledger.",
+    "Checked read-only: navigation.first_screen fills every field in the draft without error, and the render test's required phrase 'two premises' is still there. The draft has not been placed in _process/navigation/README-FIRST-SCREEN.md and has not been rendered there."
+   ],
+   "key": "precision"
+  }
+ ],
+ "judged": [
+  {
+   "per_draft": [
+    {
+     "key": "fewest",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "T8's withheld claim is paraphrased as 'not as binding every possible mind'. A cold reader can take this as a denial (the ethics does not bind every mind) rather than T8's 'No verdict binding every possible mind is claimed', which withholds the claim. Right under the opening's 'basis of all ethics, for all beings, in all universes', a denial reads as the screen contradicting the opening. 'Claiming no verdict binding every possible mind' fixes it for +1 word.",
+      "C's role is given as 'alone ranks', so the role's own name, order, never appears. The account names the pair scope and order (07 §4 table, AGENTS, GLOSSARY). 'Alone gives order' (+1) keeps the parallel with 'fixes scope', and a newcomer is not left asking what C ranks.",
+      "'Empirical theses passed some tests frozen before scoring, failed others' can be parsed as 'of the tests that were frozen, some passed', which suggests only some tests were frozen. 'Face tests frozen before scoring: some passed, some failed' (+1) avoids that.",
+      "The condition's gloss '(anything's continuation has significance)' loses the explicit quantifier of the glossary's 'for anything, its continuation has significance'. The meaning holds but is less exact (+2 to restore).",
+      "'Two unasserted premises' is a little stiffer than 'neither asserted'. Nothing is lost."
+     ],
+     "overclaims_or_errors": [
+      "'Not assumed good' at the end of the first sentence has an ambiguous attachment (the unfolding, or the account?). The intended reading is the likelier one. The same issue is in precision."
+     ],
+     "names_present": false,
+     "clarity": 4,
+     "verdict": "Best basis. At 162 words (12 over) it is the only draft whose excess is roughly what the never-cut items take, which amendment 1 permits. None of newcomer's nine label words, and none of precision's 'below'/'then'/'is', are never-cut. A cold reader takes away the essentials: a general process account that includes evaluation; an ethics resting on two premises, neither asserted, with their roles; where to start, with times; 476 of 507 credited by Lean receipts, which show the Lean statements follow from their premises and not that the premises hold; mixed test results; no outside review. Unlike the other two drafts it keeps 'evaluation included'. That is the signal that values take shape inside the account (ONE-PAGE: 'how life, evolution, knowing and evaluation take shape inside it'), so the ethics is not a separate add-on. All eight links and seven fields match the current file, and no person or AI is named. Three wording risks remain (T8's paraphrase, 'alone ranks', 'passed some tests ... failed others'), and fixing them costs +3 words, 165 in all. A version with those three fixes is at /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/judge-graft-min.md (165). Adding the glossary's condition gloss as well gives /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/judge-graft-min2.md (167). The drafts drop 'AI-written' as the brief requires. Amendment 1's 'AI label on a reading' is not affected, because the block presents no reading."
+    },
+    {
+     "key": "newcomer",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "Over budget at 190 words (40 over). The three labels 'What it is.', 'Where to start.' and 'What is tested.' (9 words) and the list separators are not never-cut, so amendment 1 does not cover the excess.",
+      "'The first-person opening' drops 'conviction'. The reader learns it is a personal voice but not its standing. The SCREEN review's check relied on 'a conviction in the first person' being on the screen.",
+      "'Life and evaluation included' is cut. The ethics paragraph does not show that evaluation forms inside the account; it shows only that the account has an ethics.",
+      "'Tests scored by rules fixed in advance' is the clearest gloss for an outsider and matches 08 §9 ('A frozen rule fixes how a verdict is scored before the data'). It drops the term 'frozen' that the layer below uses, which is acceptable."
+     ],
+     "overclaims_or_errors": [
+      "The label 'What is tested.' covers the Lean receipts. 08 §9 keeps 'proved under named premises' apart from 'supported by frozen tests', so the label blurs the two kinds of standing. This is inherited from the current block."
+     ],
+     "names_present": false,
+     "clarity": 5,
+     "verdict": "The easiest draft for an outsider to read and the closest to the current wording. Both premises appear verbatim with their roles, 'claiming no verdict binding every possible mind' is faithful to T8, 'a machine check' explains the receipt, and the tests and review are said plainly. But it saves only 15 words and keeps 9 label words that are not never-cut, so it fails the budget without amendment 1's justification. It also weakens the opening's standing marker. Take its phrases, not its shape."
+    },
+    {
+     "key": "precision",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "'Every review so far is internal' says no outside review has happened only by implication. The brief asks for it to be said. 'Internal' may also suggest that a person on the project reviewed it, whereas 08 §11 says 'No human review is claimed' and ONE-PAGE says 'No human has yet reviewed it'. 'No outside review yet' is explicit and does not suggest this.",
+      "'Life and evaluation included' is cut. The precision note's claim that 'anything' already covers it is true, but the emphasis is what tells a newcomer that values are inside the account.",
+      "At 178 words (28 over), 'below', 'then' and 'is a first-person conviction' cost words that are not never-cut."
+     ],
+     "overclaims_or_errors": [
+      "Bolding '476 of 507 registered results' at the head of the paragraph puts the bare figure where a skimmer reads it as proved results, before the qualifier 'credited by a recorded Lean receipt'. That is the misreading FS1 warned against, though the next words correct it.",
+      "'Not assumed good' has the same ambiguous attachment as in fewest."
+     ],
+     "names_present": false,
+     "clarity": 4,
+     "verdict": "The most exact draft in its ethics. Both premises appear verbatim with their roles; 'neither asserted, their warrant open' and 'claiming no verdict binding every possible mind' follow T8; 'then' gives AGENTS' start order; 'not that these hold' settles what 'these' refers to. Its point that a receipt is not a test (08 §9) is sound. It is 16 words heavier than fewest for little gain to a newcomer, and its review sentence is weaker than the never-cut item asks. Use it as the source of exact phrases to put into fewest."
+    }
+   ],
+   "best": "fewest",
+   "graft": [
+    "'argues it as life's way, claiming no verdict binding every possible mind' (newcomer, precision) in place of 'argues it as life's way, not as binding every possible mind' (+1; withholds the claim rather than denying it, as T8 does)",
+    "'C (widening what can form is better) alone gives order' (newcomer, precision, current) in place of '... alone ranks' (+1; names the role 'order' beside 'fixes scope')",
+    "'face tests frozen before scoring: some passed, some failed' (precision, current) in place of 'passed some tests frozen before scoring, failed others' (+1; no reading that only some tests were frozen)",
+    "optional, +2: '(for anything, its continuation has significance)' (newcomer, precision; the glossary's quantifier) in place of '(anything's continuation has significance)'",
+    "optional, +1: 'two premises, neither asserted, their warrant open' (precision) in place of 'two unasserted premises, their warrant open'",
+    "optional, +1: 'then [the overview]' (precision), giving the order of AGENTS' 'Start here'",
+    "optional, +2 to +3: 'a machine check' (newcomer), glossing 'Lean receipt' for a reader who does not know Lean"
+   ]
+  },
+  {
+   "per_draft": [
+    {
+     "key": "fewest",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "The condition's gloss changed from the definition's 'for anything, its continuation has significance' (07 §3, GLOSSARY) to 'anything's continuation has significance'. It keeps the content but loses the explicit 'for anything', which is the quantifier that does the scoping.",
+      "C's role is now the verb 'alone ranks', so the role's name 'order' is gone and the scope/order pair is no longer named as a pair. AGENTS says to name both roles, the condition for scope and C for order. The wording is 07's own ('C alone ranks'), so this is minor.",
+      "'Thesis T8 argues it as life's way, not as binding every possible mind' holds back the universal claim less clearly than T8's 'No verdict binding every possible mind is claimed'. It can be read as asserting that the ethics does not bind every mind. 07 Open says the argument so far does 'not show that none exists'.",
+      "'passed some tests frozen before scoring, failed others' can be read as saying only some of the tests were frozen. The current 'face tests frozen before scoring: some passed, some failed' is plainer.",
+      "'Start with A, B or the opening' sets the three side by side as alternatives and drops 'below', which costs little."
+     ],
+     "overclaims_or_errors": [
+      "'arises, lasts, changes and ends' are not 'the same four phases in plainer words' in this account's vocabulary. 08 §10 and 01 §8.6 define arising (生起) as activity starting, which is narrower than coming to be. GLOSSARY says generation 'never means arising'. The opening itself keeps 'coming to be' apart from 'arising'.",
+      "Two of its stated justifications are wrong, though the block is not affected. Parenthesised times do count: visible_prose strips only link targets, comments, anchors and sup, and the −1 came from 'Where to start.' becoming 'Start with'. And the rule forbids restating the opening in other words, so avoiding the opening's own wording for point 1 is not a reason to reword it.",
+      "The tool's count is one short. With this block the screen renders '1–2 minutes' (three words), not '2 minutes', so the real screen is 163 words, not 162."
+     ],
+     "names_present": false,
+     "clarity": 3,
+     "verdict": "It is closest to the budget (163 words as rendered) and keeps every never-cut item and all eight links and fields. It gets there with several small losses of exactness: 'arises' in a sense the account reserves for activity starting, the condition's gloss off the definition's wording, 'alone ranks' without the word 'order', and a less exact T8 sentence. Usable only with those clauses restored. Its 'two unasserted premises', 'with notes', 'No outside review yet' and the active receipts sentence are good grafts."
+    },
+    {
+     "key": "newcomer",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "The opening's standing is dropped. 'a conviction in the first person' became 'the first-person opening', which gives the voice but not the standing. A newcomer could take the opening's 'offered as the basis of all ethics, for all beings, in all universes' as the account's claim, against T8's 'No verdict binding every possible mind is claimed'.",
+      "'frozen' is replaced by 'scored by rules fixed in advance'. This is accurate to 08 §9 ('A frozen rule fixes how a verdict is scored before the data'), but it drops the term the linked section and every thesis row use, and 'in advance' does not say of what (the data).",
+      "It keeps the three labels 'What it is.', 'Where to start.' and 'What is tested.' (9 words), which are not never-cut, while 41 words over budget. Amendment 1 allows excess only for never-cut items."
+     ],
+     "overclaims_or_errors": [
+      "'a recorded Lean receipt, a machine check that the Lean statement follows': a receipt is the record of a check that ran, not the check itself. Some periphery receipts are stale (RV21c), so the present-tense 'a machine check' says slightly more than 'recorded'. Minor.",
+      "The real count is 191, not 190: the screen renders '1–2 minutes'."
+     ],
+     "names_present": false,
+     "clarity": 4,
+     "verdict": "It is the clearest for a newcomer: the labels make the four points visible, and both the receipt and the frozen tests are explained in plain words. Every never-cut item is there and every T8 and premise clause matches 07. But at 191 words it cuts least, keeps cuttable labels while over budget, and loses 'conviction', the opening's standing. Not the base. Its plain glosses are an option only if the words can be spared."
+    },
+    {
+     "key": "precision",
+     "keeps_never_cut": true,
+     "missing_or_weakened": [
+      "'Every review so far is internal' is true and implies none outside. But a newcomer can read 'internal review' as review by an in-house human team, and the account says no human review is claimed (08 §11) and 'No human has yet reviewed it' (ONE-PAGE). 'No outside review yet' meets the never-cut item without that reading and is 2 words shorter.",
+      "'within one relational unfolding, not assumed good' leaves it slightly open what is not assumed good. AGENTS's sense (the unfolding) is the nearest reading, so this is minor."
+     ],
+     "overclaims_or_errors": [
+      "The real count is 179, not 178: the screen renders '1–2 minutes'.",
+      "'showing their Lean statements follow from their premises, not that these hold' is correct (FS2), but 'showing' has no explicit subject, and 'their' then 'these' is slightly clumsy."
+     ],
+     "names_present": false,
+     "clarity": 4,
+     "verdict": "The best of the three on the account. Every never-cut item is there in the account's own terms: the condition's defined gloss; 'fixes scope, whose losses count'; 'C … alone gives order'; 'neither asserted, their warrant open'; T8 'argues … claiming no verdict binding every possible mind'; 'credited by a recorded Lean receipt' (FS1); 'Lean statements … not that these hold' (FS2); 'frozen before scoring' (FS8). It keeps 'first-person conviction' and adds 'then', which matches AGENTS's reading order. It has no overclaim. Take it as the base, with fewest's shorter phrases and 'No outside review yet' in place of 'internal'."
+    }
+   ],
+   "best": "precision",
+   "graft": [
+    "From fewest: '[two unasserted premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open:' in place of 'two premises, neither asserted, their warrant open' (−1 word, same claim).",
+    "From fewest/newcomer: 'No outside review yet.' in place of 'Every review so far is internal.' (−2). It meets the never-cut item, names no reviewer, and avoids reading 'internal' as an in-house human review, which 08 §11 and ONE-PAGE rule out.",
+    "From fewest: 'with [notes](../../README.md#notes)' in place of 'with [its notes](...)' (−1).",
+    "From fewest, optional: '**Recorded Lean receipts** credit {{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md), showing each Lean statement follows from its premises, not that they hold.' (−3). 'Credit' keeps FS1's status-count sense and the rest keeps FS2.",
+    "Precision with these four grafts is written to /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/judge-merged.md. count_block.py gives 171 words; the real render is 172, since the screen time renders as '1–2 minutes'. All eight links, all fields and every never-cut item are kept, and no AI or name appears.",
+    "Do not graft fewest's 'arises … ends' (08 §10 reserves arising for activity starting), 'anything's continuation', 'alone ranks' or 'not as binding every possible mind'. Do not graft newcomer's 'the first-person opening', which drops 'conviction', the opening's standing."
+   ]
+  }
+ ],
+ "final": {
+  "file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/tighten/final.md",
+  "block": "*{{time:screen}} to read.*\n\n**An account** of how anything, evaluation included, comes to be, lasts, changes and passes away within one relational unfolding, not assumed good.\n\n**Its ethics** rests on [two unasserted premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. [Thesis T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.\n\n**Start with** [the one page](../../theories/becoming/ONE-PAGE.md) ({{time:theories/becoming/ONE-PAGE.md}}), [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md) ({{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}) or [the opening](../../README.md#truth-exists), a first-person conviction ({{time:opening}}), with [notes](../../README.md#notes).\n\n**Recorded Lean receipts** credit {{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](../../theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No outside review yet.",
+  "words": 172,
+  "from": "The base is judge 1's graft of fewest (judge-graft-min2). On judge 2's points it is close to judge-merged, but uses fewest's shorter start. What each judge asked for:\n- Taken from both judges: \"claiming no verdict binding every possible mind\" (T8's own wording; it holds the claim back rather than denying it), \"C ... alone gives order\" (the role named next to \"fixes scope\"), \"face tests frozen before scoring: some passed, some failed\", the glossary's gloss \"(for anything, its continuation has significance)\", \"No outside review yet.\" (not \"internal\", which suggests an in-house human review that 08 §11 and ONE-PAGE rule out), and \"Recorded Lean receipts credit N of M ..., showing each Lean statement follows from its premises, not that they hold\" (FS1 status count, FS2).\n- From judge 2: \"two unasserted premises, their warrant open\" and \"with [notes]\".\n- Judge 2's error fixed: graft-min2 kept fewest's \"arises ... ends\", but arising is activity starting (08 §10; GLOSSARY says generation \"never means arising\"). It is back to \"comes to be, lasts, changes and passes away\", the wording of the one page and of the current file.\n- Kept from judge 1: \"evaluation included\". Judge 2 raised no objection. AGENTS (\"life, evolution and evaluation unfold through the relations it forms\") and ONE-PAGE both say it.\n- Kept \"a first-person conviction\" (both judges), so the opening's \"basis of all ethics, for all beings, in all universes\" reads as the opening's own stance, not the account's claim.\n- Not taken: precision's bolded count and \"then ... below is\" (+2 words); the start stays \"A (t), B (t) or the opening\".\n- New in the attack: \"argues it\" became \"argues this ethics\" (+1). After \"C ... alone gives order\", \"it\" could be read as C, which would make T8 argue for C, while T8 lists \"a reason for C\" as open.\n\nChecks:\n- All eight link paths match the current file byte for byte (diff). They resolve from _process/navigation/: the files exist, and so do the anchors 07 #scope-and-order (line 210), 07 #theses (642), 08 #theses (519), README's \"## Truth exists\" and \"### Notes\".\n- Every field is spelled exactly as written. {{time:notes}} is dropped, as the brief allows, and its link stays.\n- A grep finds no AI, AI-written, by AI, Ren or Claude.\n- Count: 172 words, from a read-only render with the real navigation.first_screen and the records (the current block gives 205). count_block.py says 171, because it fills the screen time as \"2 minutes\" while the render fills \"1–2 minutes\".",
+  "findings": [
+   {
+    "clause": "An account of how anything ... arises, lasts, changes and ends (fewest; kept in judge 1's graft-min and graft-min2)",
+    "problem": "'Arises' is the account's word for activity starting (08 §10; 01 §8.6). GLOSSARY says generation 'never means arising', and the opening keeps coming to be apart from arising. The four phases are the wrong words.",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "Thesis T8 argues it as life's way, not as binding every possible mind (fewest)",
+    "problem": "This can be read as denying that the ethics binds every mind. T8 and 07's 'What this chapter does not show' hold the claim back ('No verdict binding every possible mind is claimed'), and 07 Open says the argument does 'not show that none exists'. Replaced with 'claiming no verdict binding every possible mind'.",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "Thesis T8 argues it as life's way (current file and every draft)",
+    "problem": "Right after 'C (widening what can form is better) alone gives order', 'it' can be read as C. T8 would then seem to argue for C, while T8 lists 'a reason for C' as open (07 §8; AGENTS: 'a reason for C is open apart'). Now 'argues this ethics', +1 word.",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "C (widening what can form is better) alone ranks (fewest)",
+    "problem": "The name of C's role, order, disappears, so the pair scope and order is not named as AGENTS asks ('name both wherever the ethics is summarized'). Restored as 'alone gives order' (GLOSSARY: 'it alone orders'; FS4 was refuted).",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "the continuation condition (anything's continuation has significance) (fewest)",
+    "problem": "This drops 'for anything', the quantifier that sets the scope in the definition (07 §3, GLOSSARY). Restored to 'for anything, its continuation has significance'.",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "Empirical theses passed some tests frozen before scoring, failed others (fewest)",
+    "problem": "This can be parsed as 'only some tests were frozen'. Restored to 'face tests frozen before scoring: some passed, some failed' (FS8's accepted fix).",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "Every review so far is internal (precision)",
+    "problem": "This says only by implication that no outside review has happened, which the never-cut item asks to be said. 'Internal' can also be read as review by an in-house human team, but 08 §11 says 'No human review is claimed' and ONE-PAGE 'No human has yet reviewed it'. Replaced with 'No outside review yet.'",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "**476 of 507 registered results** are credited ... (precision)",
+    "problem": "The bolded bare figure at the head of the paragraph reads to a skimmer as proved results before the qualifier arrives, the misreading FS1 warned against. The bold now falls on 'Recorded Lean receipts'.",
+    "severity": "style",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "the first-person opening (newcomer)",
+    "problem": "This drops 'conviction', the opening's standing. That leaves the opening's 'basis of all ethics, for all beings, in all universes' readable as the account's claim, against T8. Kept as 'a first-person conviction'.",
+    "severity": "minor",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "count_block.py's figure (all drafts and judge files)",
+    "problem": "The tool fills {{time:screen}} as '2 minutes', but the render iterates to its fixed point and prints '1–2 minutes' (three words) for any block this short. Every reported count is one short: the final is 172 by a read-only render through navigation.first_screen with the real records, and the tool says 171. The landing's study section should record 172, 22 over (FS9's lesson).",
+    "severity": "minor",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "fewest's rationale: parenthesised times 'do not count'",
+    "problem": "This is wrong. visible_prose strips only link targets, comments, anchors and sup, so the times count either way. The −1 came from the label change. The final does not rely on the claim.",
+    "severity": "style",
+    "fixed_in_final": true
+   },
+   {
+    "clause": "the whole screen: 172 words against a budget of 150",
+    "problem": "It is 22 over. Most of the excess is never-cut items: both premises with their roles, warrant open, T8's standing and what is not claimed, what a receipt shows, frozen tests, the review, four link labels, nine words of times. Six words are discretionary: 'evaluation included' (2), 'a first-person conviction' (3), 'this ethics' (1). The last two protect standings, which amendment 1 never cuts. 'Evaluation included' is point 1's content, as AGENTS and ONE-PAGE define it, and can go for 170 if the coordinator rules it out. The excess is to be recorded, per amendment 1.",
+    "severity": "minor",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "[the opening](../../README.md#truth-exists) ... [notes](../../README.md#notes)",
+    "problem": "This is a render problem that predates this change and lies outside the block. README carries duplicate ids. 'truth-exists' and 'notes' are live heading slugs (lines 21 and 77), and are also written again as explicit anchors in the collapsed 'Historical section links' block (lines 462 and 342) that point to the historical copy. navigation.preserved_anchors writes an anchor for every old anchor, including ones the page still defines; each note-* anchor is doubled the same way. On GitHub the heading comes first, so the screen's links land right. A viewer that gives headings no ids would send them to the historical stubs. The fix belongs in preserved_anchors (skip anchors the page defines), not in the block.",
+    "severity": "minor",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "Recorded Lean receipts credit N ..., showing each Lean statement follows from its premises",
+    "problem": "These are possible overreadings, not errors. RV21c records 25 of 29 periphery receipts as stale, with dependency hashes changed since they were recorded. Periphery statements also follow from their premises together with Lean's classical axioms as reported. 'Recorded' scopes the claim, and the wording is the never-cut item and FS2's accepted fix, so it stays. The qualification belongs one layer down.",
+    "severity": "style",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "face tests frozen before scoring: some passed, some failed",
+    "problem": "Amendment 1's never-cut list includes 'a frozen rule's caveat': a frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct (08 §9, LA2). The screen reports passes without that caveat. It calls no verdict support, the brief's never-cut list for this block does not include the caveat, and the caveat is one link down at 08 #theses, so it is left as is. Also, 'before scoring' is weaker than 08 §9's 'before the data', though implied by it. 'Frozen before the data' would be exact at +1. FS8's wording is kept to avoid a regression.",
+    "severity": "minor",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "Its ethics rests on two unasserted premises",
+    "problem": "Checked, and no change is needed. Choices also need the practical commitments (07 §5; the opening's [^ethics]: 'Judgment between conflicting continuations still needs the disclosed practical premises'), so 'two premises' could be read as complete. AGENTS's own summary is 'the ethics rests on two premises with two roles'. Practical judgment sits below the screen.",
+    "severity": "style",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "An account of how anything, evaluation included, comes to be ...",
+    "problem": "Checked, and kept. 07 §1 has standards forming within the unfolding while significance is 'the one evaluative parameter supplied', and the opening's [^own] says how recognition and motivation form is not yet begun. So 'evaluation included' could be read as claiming evaluation is derived. It matches AGENTS and ONE-PAGE ('how ... evaluation take shape inside it'), and the next paragraph says the ethics rests on premises.",
+    "severity": "style",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "within one relational unfolding, not assumed good",
+    "problem": "The attachment is ambiguous. Both natural readings, the unfolding and how anything becomes, are the account's (AGENTS: 'the whole unfolding ... not assumed good'). Only the reading 'the account is not assumed good' is wrong, and it is implausible. Left unchanged.",
+    "severity": "style",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "or [the opening], a first-person conviction (...), with [notes]",
+    "problem": "{{time:notes}} is dropped, as the brief allows. The notes take 78–101 minutes, about four times the opening, and the screen no longer warns of that; restoring it costs 3 words. 'Conviction' also understates the proved sentences the opening holds, which its notes label one by one. It names the stance of the whole, as the current file did.",
+    "severity": "style",
+    "fixed_in_final": false
+   },
+   {
+    "clause": "final.md (block only)",
+    "problem": "final.md holds only the block. When it lands, the file's leading comment must be kept: the render strips it, and it is not shown, so the no-names rule does not reach it. Its sentence that the screen is over budget by what its never-cut items take still holds at 172.",
+    "severity": "style",
+    "fixed_in_final": false
+   }
+  ]
+ }
+}

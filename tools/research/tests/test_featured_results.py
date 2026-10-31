@@ -250,7 +250,7 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
-        screen, lead = 'An account of how anything comes to be', 'The account below says what is proved'
+        screen, lead = 'of how anything, evaluation included, comes to be', 'The account below says what is proved'
         self.assertLess(root.index('> Ongoing work.'), root.index(screen))
         self.assertLess(root.index(screen), root.index('## Truth exists'))
         self.assertLess(root.index('Opening body.'), root.index(lead))  # the lead follows the opening
@@ -326,10 +326,13 @@ class FirstScreenTests(unittest.TestCase):
         screen = navigation.first_screen(records, navigation.readme_opening())
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
-        self.assertIn('two premises', screen)
+        self.assertIn('fixes scope', screen)  # both premises with their roles
+        self.assertIn('alone gives order', screen)
+        self.assertNotRegex(screen, r'\b(AI|Ren|Claude)\b')  # a front page names no person and no AI
         lead = navigation.markdown_file('readme_lead', 'README.md')
         self.assertNotIn('is an account of', lead)
         self.assertNotIn('two premises', lead)
+        self.assertNotIn('fixes scope', lead)
 
 
 if __name__ == '__main__':
