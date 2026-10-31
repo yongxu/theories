@@ -1286,7 +1286,10 @@ NOT_GENERATED = [M + n for n in (
     'comm._unsafe_rec', 'Tone._unsafe_rec', 'Tone.low._unsafe_rec', 'comm._arg_pusher', 'comm.fun_cases', 'Tone.induct',
     'half.below_1', 'half.brecOn_1', 'half.rec_1', 'Onward.mk.rec_1', 'half._sizeOf_2_eq', 'half.induct_', 'half.congr_eq_',
     'Reach.brecOn_1.go', 'comm.congr_eq_1', 'Tone.congr_eq_1', 'Tone.mutual_induct', 'comm.mutual_induct_unfolding',
-    'Tone.induct_unfolding', 'comm.fun_cases_unfolding')] + [E + n for n in (
+    'Tone.induct_unfolding', 'comm.fun_cases_unfolding', 'comm.splitter', 'Tone._aux_1', 'comm._default', 'next.injEq',
+    'Tone.sizeOf_spec', 'Tone._flat_ctor', 'next._sizeOf_inst', 'Onward.mk.binductionOn', 'comm.recOn',
+    'Tone.low.noConfusionType', 'next.ctorIdx', 'Tone.low.toCtorIdx', 'comm.ofNat_ctorIdx', 'next.ctorElim',
+    'Onward.mk.ctorElimType')] + [E + n for n in (
     'op.eq_1', 'op.eq_def', 'Rp.brecOn.go', 'Rp.brecOn.eq', 'Cfg.elim', 'Foo.inj', 'seven.eq_1', 'loop.eq_1', 'loop._sunfold',
     'seven._arg_pusher', 'seven.induct', 'op.eq_unfold', 'Nest._sizeOf_2_eqx', 'Nest.brecOn_1.other', 'Nest.below_1a')] + [
     'match_1', '_private.Becoming.Leaf.0.Becoming.Model.next.inj']

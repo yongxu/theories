@@ -329,6 +329,9 @@ class FirstScreenTests(unittest.TestCase):
         self.assertIn('fixes scope', screen)  # both premises with their roles
         self.assertIn('alone gives order', screen)
         self.assertNotRegex(screen, r'\b(AI|Ren|Claude)\b')  # a front page names no person and no AI
+        # and so does everything above the opening as README renders it: the title, the navigation and status lines
+        above = (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0]
+        self.assertNotRegex(re.sub(r'<!--.*?-->', '', above, flags=re.S), r'\b(AI|Ren|Claude)\b')
         lead = navigation.markdown_file('readme_lead', 'README.md')
         self.assertNotIn('is an account of', lead)
         self.assertNotIn('two premises', lead)

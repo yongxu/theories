@@ -8,8 +8,8 @@ The design (the audit, two drafts, two cold readers), the review and the tighten
 
 ```text
 Result(s): no new result; a generated first screen for README, a proposal to OPENING, OPENING's leading comment,
-       one AI-side line before its notes, and three AI-written notes changed ([^ethics] and [^good-evil] in label and
-       one sentence each, [^transitions] in one label).
+       one AI-side line before its notes, and five AI-written notes changed ([^ethics] and [^good-evil] in label and
+       one sentence each, [^transitions] in one label, [^axiom] and [^own] brought to the current account).
 Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), placed by navigation.first_screen between
        the status line and the opening. Four points:
        - what it is;
@@ -41,6 +41,14 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        a question the ethics does not wait on), and [^good-evil] reads good and evil as
        a reading for life (AI-side, as the current account has it), its first sentence saying what holds with no axiom:
        the four cases exclude one another, and that a part falls under one is classical (record four-cases-of-a-part).
+       So that the line before the notes is true of every note, the two the audit found older are brought to the
+       current account: [^axiom] gives §4.6's path (under P1 to P4 one's concern reaches everything downstream of what
+       one conditions, P2 and P4 its crux, what it does not reach the step's), names P2 and P4 among what is open,
+       says no warrant binding every possible mind is claimed and the ethics does not wait on one, states the
+       zero-axiom target as open (08 §12) where it said the attempt "has not yet begun", and says no human has
+       reviewed the condition's results yet where it said "not yet independently reviewed"; [^own] grounds
+       self-significance in P1, the self's presupposition, which the condition contains and gives at every
+       standpoint (07 §4.1, §4.6), where it grounded it in the condition.
        (5) drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
        the opening after the first screen and names the proposal.
        (6) a link into the page it is placed in stays on the page (navigation.adapt_links), so the screen's links to
@@ -53,8 +61,8 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        lines and any rewrite before the first heading (the leading comment); the three no note links
        (confined-rise-within-a-whole, what-position-reads, what-the-dynamics-leave-open) bind every rewritten line.
        The three were read again and re-pointed after each later change ([^good-evil]'s first sentence, then
-       [^transitions]'s label, then the line before the notes with the comment's second change), and the five after
-       the comment's second change, in the same line. Each reads a note left as it
+       [^transitions]'s label, then the line before the notes with the comment's second change, then [^axiom] and
+       [^own]), and the five after the comment's second change, in the same line. Each reads a note left as it
        was ([^collective], [^aligned] and [^race], [^no-law], [^present], the meta-attractor's), or [^transitions],
        changed only in its label, or, for what-the-dynamics-leave-open, the sentences of [^ethics] on what reads only
        the dynamics, which are unchanged; no live text keeps the replaced phrases.
@@ -71,8 +79,9 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        the rule that front pages name no person or AI; the label stays in the record confined-rise-within-a-whole, and
        the note now matches the other notes' plain "a reading". What the label tells on OPENING, that the notes'
        voice is not the first-person body's, the line before the notes now says once, naming no one (the
-       coordinator's condition for the departure). Tests check that the screen names no one and that the line stands
-       once, last before the notes.
+       coordinator's condition for the departure). Tests check that the screen's block and everything above the opening
+       as README renders it (title, navigation and status lines) name no one, and that the line stands once, last
+       before the notes.
        (10) tests: test_featured_results.py, 19 to 25: FirstScreenTests (the fields and the screen's fixed point,
        refusals, counting as the budgets do, links kept on the page, the repository's screen keeping both roles and
        naming no one, the repository's notes told from the body) and the placement test (status, screen, opening, lead, results, one copy, no field left);
@@ -116,6 +125,9 @@ Evidence:
        - a check of every factual claim in this section and MV's against the branch (416b0af81), each finding then
          given to a skeptic: of this section's 17 findings, 16 confirmed and taken, 1 refuted (of both, 32, 29 and 3)
          ([reports/landing-sections-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-sections-check.json));
+       - a second check, of every claim this section gained or changed after the first and of what those changes
+         made false, each draft's findings then given to a skeptic: of this section's 6 findings, 3 confirmed and
+         taken, 3 refuted (of both, 13, 7 and 6) ([reports/landing-delta-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-delta-check.json));
        - after the landing's render, research check --strict-fresh, links and the suite (SUITE tests, 2 skipped)
          pass in a clean worktree.
 Boundary:

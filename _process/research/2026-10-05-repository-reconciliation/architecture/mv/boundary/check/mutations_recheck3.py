@@ -35,8 +35,8 @@ which = sys.argv[2]
 if which == 'all':  # each mutation in a fresh process, one line each
     import subprocess
     for k in list(LEAN) + list(PY):
-        print(subprocess.run([sys.executable, '-B', __file__, str(SP), k], capture_output=True, text=True).stdout.strip()
-              or f'{k}: did not run', flush=True)
+        r = subprocess.run([sys.executable, '-B', __file__, str(SP), k], capture_output=True, text=True)
+        print(r.stdout.strip() or f'{k}: did not run: ' + (r.stderr.strip().splitlines() or ['no output'])[-1], flush=True)
     sys.exit()
 if which in LEAN:
     a, b = LEAN[which]

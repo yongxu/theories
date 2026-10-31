@@ -23,7 +23,8 @@ Delta: (1) by kind (RECHECK3-LEAN-1 to 4):
        reads, and the defaults the rule leaves out.
        (4) the tests (RC3-RULES-2): a stub module of the verifiers' cases; the two copies held together on
        THEOREM-CONNECTIVITY-DUMP.lean's constants of the stubs; D2 through Nat.fold.eq_def; sixteen mutations of the
-       two copies, each caught (boundary/check/mutations_recheck3.py, its output beside it); 61 tests (57 at §472).
+       two copies, each caught (boundary/check/mutations_recheck3.py, rerun on the rule and tests as they stand, its
+       output beside it); 61 tests (57 at §472).
        (5) the fourth re-check (R4-1 to R4-4):
        - the name before a hygienic definition's equation lemma (halve.«_@».M._hyg.3.eq_1) is read as the dump prints
          a name with macro scopes, unescaped, in Terms.aux and outside;
@@ -35,19 +36,27 @@ Delta: (1) by kind (RECHECK3-LEAN-1 to 4):
          not run; §3.6 states the input and the order as the code has them;
        - tests: a nested type with a recovery through its equation lemma (must pass), a macro's definition by
          well-founded recursion with D2 through its lemma, functional induction realized, the dump's names after the
-         macro scopes sent to the check, cases added to existing tests (61 tests still); 142 names
-         (70 generated, 72 not: _unsafe_rec, _arg_pusher and each new pattern under a kind it must not attach to;
-         135 at the fixes, and the landing's check of this section added a matcher's congr_eq_1 among those generated
-         and six names under a theorem or an inductive type among those not: congr_eq_1, mutual_induct and its
-         unfolding, induct_unfolding, fun_cases_unfolding); sixteen mutations of the new parts, each caught
-         (boundary/check/mutations_recheck4.py, its output beside it).
+         macro scopes sent to the check, cases added to existing tests (61 tests still); 157 names
+         (70 generated, 87 not: _unsafe_rec, _arg_pusher and each new pattern under a kind it must not attach to;
+         135 at the fixes, and the landing's checks of this section added a matcher's congr_eq_1 among those
+         generated, and among those not six names under a theorem or an inductive type (congr_eq_1 under each,
+         mutual_induct, mutual_induct_unfolding, induct_unfolding, fun_cases_unfolding) and fifteen of the older
+         patterns that had none (splitter, _aux_N, _default, injEq, sizeOf_spec, _flat_ctor, _sizeOf_inst,
+         binductionOn, recOn, noConfusionType, ctorIdx, toCtorIdx, ofNat_ctorIdx, ctorElim, ctorElimType), so that
+         every alternative of every pattern has a name under a kind it must not attach to); sixteen mutations of the new parts, each caught,
+         each widening an attachment of the new names alone (boundary/check/mutations_recheck4.py, rerun on the rule
+         and tests as they stand, its output beside it; the landing's check of this section found that one named a
+         widening it did not make and three widened a whole group, so that older negatives caught them, and they
+         were made targeted).
 Premises: none added.
 Evidence:
        - on the current dump none of the shapes occurs (no opaque, no hygienic name, no _arg_pusher, no Init
          auxiliary realized in a package module, no lifted proof under an inductive type), so no figure, walk or reach
-         changes; master_laws.py rerun on the branch's base receipt (20261030T232750.486801Z) and, in the landing
-         rehearsals merged with main, on RF-M.3's (20261031T013649.265381Z), HE2's (20261031T054654.692180Z) and
-         RR2's (20261031T085229.010243Z) changes only the hashed inputs (boundary.py and boundary_check.lean);
+         changes; master_laws.py rerun on the receipt of the branch's first base, 1aa84fd59
+         (20261030T232750.486801Z), in the landing rehearsals merged with main on RF-M.3's (20261031T013649.265381Z)
+         and HE2's (20261031T054654.692180Z), and on the branch merged with main (f52d9d34e) on RR2's
+         (20261031T085229.010243Z) changes only the hashed inputs (boundary.py and boundary_check.lean): git diff
+         main shows only those two hashes;
        - the cases of boundary/check/controls-run.log on U4's build (31: its 21 controls, U4's two rows and U4's
          controls adapted among them, and 10 name-test queries), rerun after each re-check's fixes: output
          byte-identical;
@@ -66,6 +75,9 @@ Evidence:
        - a check of every factual claim in this section and README's against the branch (416b0af81), each finding
          then given to a skeptic: of this section's 15 findings, 13 confirmed and taken, 2 refuted
          ([reports/landing-sections-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-sections-check.json));
+       - a second check, of every claim this section gained or changed after the first and of what those changes
+         made false, each draft's findings then given to a skeptic: of this section's 7 findings, 4 confirmed and
+         taken, 3 refuted (of both, 13, 7 and 6) ([reports/landing-delta-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-delta-check.json));
        - after the landing's render, research check --strict-fresh, links and the suite (SUITE tests, 2 skipped) pass
          in a clean worktree.
 Boundary:
