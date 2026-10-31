@@ -89,10 +89,10 @@ cells is decidable wherever cells are compared or listings filtered.
   valuation and its model the holding formation's, no rule through the map stands higher than its
   answer (`own_least`), and a revaluation lowers it exactly where it decides some listed cell
   against the current valuation's strict weighted preference (`revalued_lowers_iff`); after a
-  revaluation, the revised answer has no residual by the revised valuation (`outcome_least`), which
-  endorses no revaluation, and no order of attained worth across valuations follows
-  (`no_order_across`). With its model the holding formation's, revaluing to the reference gains
-  exactly the current answer's residual (`revaluing_gain`), so holding for some replacement
+  revaluation, with that shared model, the revised answer has no residual by the revised valuation
+  (`outcome_least`), which endorses no revaluation, and no order of attained worth across valuations
+  follows (`no_order_across`). With its model the holding formation's, revaluing to the reference
+  gains exactly the current answer's residual (`revaluing_gain`), so holding for some replacement
   valuation's answer, any pair of value functions, stands strictly higher by the reference exactly
   where that residual is positive (`revaluing_gains_iff`). For any model of the reading formation
   such a gain needs a positive residual (`residual_pos_of_gains`); with the models apart, a positive
@@ -124,8 +124,8 @@ cells is decidable wherever cells are compared or listings filtered.
   course gives one input at two worlds, from one state of each formation the courses are alike
   (`inputs_alike_before`), so they are alike wherever no demonstration is emitted
   (`undemonstrated_alike`) or none tells the worlds apart (`inputs_alike`), and, wherever none is
-  emitted or none tells the listed worlds apart, holding for the answer is worth one committed move
-  (`undemonstrated_worth`, `answer_constant`).
+  emitted or none tells apart the worlds the holding formation lists, holding for the answer is
+  worth one committed move (`undemonstrated_worth`, `answer_constant`).
 * **The four cases and two routes** (`TwoWorlds`). Two worlds, weights 1 and 2, valuation states
   agreeing with the reference, raised and reversed. As updates of one state: from both worlds listed
   and agreeing, the answer stops, is turned by being shown and left by a revaluation
@@ -249,11 +249,11 @@ before any amount forgone. Their Theorem 1 is the rational, informative case, an
 places the incentive to defer in uncertainty about the other's preferences and in its effectiveness
 at acting on them. Their human observes the utility; here the reading formation senses the candidate
 world only through what is shown. `answer_constant` takes one state of each formation at every
-world, nothing shown telling the listed worlds apart, and `undemonstrated_worth` one where no
-demonstration is emitted, at worlds a demonstration would tell apart: the answer is then constant,
-and holding for it gives no strict advantage over the better committed move, whether or not the move
-it gives is the better one. An informative answer can give a strict advantage, under
-`HeldForReading`'s threshold.
+world, nothing shown telling apart the worlds the holding formation lists, and
+`undemonstrated_worth` one where no demonstration is emitted, at worlds a demonstration would tell
+apart: the answer is then constant, and holding for it gives no strict advantage over the better
+committed move, whether or not the move it gives is the better one. An informative answer can give a
+strict advantage, under `HeldForReading`'s threshold.
 
 `TwoWorlds.not_lumped` is related to induced preference shifts (Carroll, Dragan, Russell and
 Hadfield-Menell 2022), who compare predicted shifts with supplied safe shifts: the witness
@@ -1022,7 +1022,8 @@ theorem revalued_lowers_iff (m : Model C) (g l g' l' : C → Nat) (π : C → K)
     exact (lt_iff_pos rfl).trans (residual_pos_iff m g l π zs (answer m g' l' π)))
 
 /-- **By the valuation after a revaluation, its answer has no residual** (item 12): with the
-reference the revised valuation, the revised answer has none through the same map. -/
+reference the revised valuation and the reading formation's model the holding formation's, the
+revised answer has none through the same map. -/
 theorem outcome_least (m : Model C) (g' l' : C → Nat) (π : C → K) (zs : List K) :
     residual m g' l' π zs (answer m g' l' π) = 0 :=
   answer_least_of_net m g' l' g' l' π zs fun c _ _ => Nat.add_comm (g' c) (l' c)

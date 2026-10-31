@@ -346,9 +346,8 @@ rI = build(
       '示一世界之所显，则其列滤为所显同者之诸世界，权与值不变，其答即经所示之映射于此世界之格之答；其所缺经所示而分，最少所缺不逾经单格者；持之形成之模型即读之形成示前之模型且净相合，则为之而持永不低于示前。',
       lv('total_filter_shows', 'within_shown', 'answer_shown', 'shown_split', 'shown_least_le', 'shown_never_lowers')),
      ("Where the acts taken give two worlds one input, from one state of each formation their internal, sensory, answer and holding "
-      "courses agree, so where no demonstration tells the worlds apart or none is emitted; so holding for the answer, "
-      "at listed worlds all showing one value or with no demonstration emitted, is worth one committed move.",
-      '所行之行予二世界同入处，自二形成各同一之态，其内、感、答与持之历程皆同；示不能辨二世界或未发示处亦然；故于所示皆同之列世界，或未发示时，为答而持值一所守之行。',
+      "courses agree, so where no demonstration tells the worlds apart or none is emitted; so holding for the answer, where the worlds the holding formation lists all show one value or no demonstration is emitted, is worth one committed move.",
+      '所行之行予二世界同入处，自二形成各同一之态，其内、感、答与持之历程皆同；示不能辨二世界或未发示处亦然；故于持之形成所列之诸世界所示皆同处，或未发示时，为答而持值一所守之行。',
       lv('input_eq_of_reveal_eq', 'inputs_alike_before', 'inputs_alike', 'input_eq_of_ne_demonstrate',
          'undemonstrated_alike', 'undemonstrated_worth', 'answer_constant')),
      ("Witnesses of four cases: two worlds, weights 1 and 2; valuation states agreeing with the reference, raised and "
@@ -462,14 +461,13 @@ rI = build(
      'zh': '持之形成于告、改值与持之间多步之谋，及其于读之形成之学；读之形成依所示而滤以外之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则；人之审查。'},
     {'en': "In counts: informed_le is, for this decision, the deterministic-refinement, fixed-decision direction of "
            "Blackwell's (1953) comparison; with a shared model, SplitsKeep is the counterpart, along the cells of the "
-           "listing's partitions, of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and "
-           "Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs; coarse equilibrium communication "
+           "listing's partitions, of Bayesian persuasion's convexity condition for full disclosure (Kamenica and Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs; coarse equilibrium communication "
            "(Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of "
            "current-reward-function evaluation's preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2): on a shared "
            "model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no path-specific objective (Farquhar et al. 2022); answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell "
            "et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not "
            "containments.",
-     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
+     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之或有之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
     ['a reading informed and revalued', '受告与改值之读', 'informing and revaluing a reading formation',
      '告读之形成与改其值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
      'Becoming.ListingValuation.refining_never_lowers_iff'],

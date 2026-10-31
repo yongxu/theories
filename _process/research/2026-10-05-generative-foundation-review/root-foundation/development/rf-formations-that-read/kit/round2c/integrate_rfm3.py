@@ -218,6 +218,11 @@ edit(dossier, "and Good's note in the British Journal for the Philosophy of Scie
      f"{TODAY.day} {TODAY:%B} {TODAY.year}, were cold-read before its landing, and the works they cite were checked "
      "against their texts (Kamenica and Gentzkow's paper in the American Economic Review, 2011, and arXiv 1908.04734 "
      "and 2204.11966).\n")
+# The bullet's lead spans the days of RF's text, the last the day RF-M.3's sentences were made.
+RF_DATES = (f"29, 30 and {TODAY.day} October 2026" if (TODAY.year, TODAY.month) == (2026, 10)
+            else f"29 and 30 October and {TODAY.day} {TODAY:%B} {TODAY.year}")
+edit(dossier, "- Added on 29 and 30 October 2026 (board item RF, formations that read):",
+     f"- Added on {RF_DATES} (board item RF, formations that read):")
 
 plan = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md'
 edit(plan, "then the valuation as state (§4.8, built in the kit, its design and its Lean reviewed);",

@@ -2,9 +2,9 @@
 
 RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). Before RF-M.3's landing, its texts were cold-read against the Lean of `Becoming.ListingValuation` (`kit/round2c/tree/Becoming/ListingValuation.lean`, 138 theorems in 186 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (for the cross-model reader the kit at `07a24e169` with main at `1ec20513d`; for the lenses, after its points and its first re-check were taken, the kit at `3f43eefcf` with main at `8a8b0df82`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentences on moving the reading that gives the stop; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to two related records; the study section's template; PLAN §4.8, §12, §13 and the Evidence list, and for the lenses also its §5 and §8 rows; regions; and the opening and the tables of what was taken in [REVIEW-RFM3-LEAN](REVIEW-RFM3-LEAN.md). Two reads ran on 31 October 2026: the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18ddb-e3da-78a0-ab08-f6fec1f4bf57`) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code.
 
-The cross-model reader reported 6 points, every one taken. The lenses reported 64 findings, 54 confirmed and 10 refuted by their refuters; what each became is in [the table](#what-was-taken-from-the-lenses). For the lenses' findings the module's statements did not change: its header, the docstring of `WeightsApart.not_splitsKeep` and one section heading were revised, and it was rebuilt, 138 theorems in 186 declarations, every axiom report empty ([build-6](../kit/round2c/logs/build-6.log)). For the check of how they were taken, the header's bullet on the carrier and its Readings were revised again, and it was rebuilt, the same counts, every axiom report empty ([build-7](../kit/round2c/logs/build-7.log)).
+The cross-model reader reported 6 points, every one taken. The lenses reported 64 findings, 54 confirmed and 10 refuted by their refuters; what each became is in [the table](#what-was-taken-from-the-lenses), and what the checks after it changed, in theirs ([the check's](#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken), [the last check's](#what-was-taken-from-the-check-of-the-checks-changes)). For the lenses' findings the module's statements did not change: its header, the docstring of `WeightsApart.not_splitsKeep` and one section heading were revised, and it was rebuilt, 138 theorems in 186 declarations, every axiom report empty ([build-6](../kit/round2c/logs/build-6.log)). For the check of how they were taken, the header's bullet on the carrier and its Readings were revised again, and it was rebuilt, the same counts, every axiom report empty ([build-7](../kit/round2c/logs/build-7.log)). For the last check, the header's bullets on amounts forgone and revaluing and on the carrier, its Readings and the docstring of `outcome_least` were revised, and it was rebuilt again, the same counts, every axiom report empty ([build-8](../kit/round2c/logs/build-8.log)).
 
-Before the lenses ran, the cross-model reader re-checked, in the session of its cold read, how its six points were taken and the texts cut or added since: one point, the reason to keep the valuation stated on a shared model wherever it is stated, taken ([the first re-check](#the-re-check-of-the-cross-model-readers-points)). After the lenses' findings were taken, it re-checked them in the same session: one omission, the incentive to revise read in PLAN §5's row without costs and the supplied update's reach, taken ([the second re-check](#the-re-check-of-the-lenses-findings)). Beside it, three Opus readers, one per lens, checked how every finding was taken, each reader's gaps given to a refuter: 14 gaps, every one judged real; with the second re-check's point, 12 distinct points, all taken ([the check](#the-check-of-how-the-lenses-findings-were-taken)).
+Before the lenses ran, the cross-model reader re-checked, in the session of its cold read, how its six points were taken and the texts cut or added since: one point, the reason to keep the valuation stated on a shared model wherever it is stated, taken ([the first re-check](#the-re-check-of-the-cross-model-readers-points)). After the lenses' findings were taken, it re-checked them in the same session: one omission, the incentive to revise read in PLAN §5's row without costs and the supplied update's reach, taken ([the second re-check](#the-re-check-of-the-lenses-findings)). Beside it, three Opus readers, one per lens, checked how every finding was taken, each reader's gaps given to a refuter: 14 gaps, every one judged real; with the second re-check's point, 12 distinct points, all taken ([the check](#the-check-of-how-the-lenses-findings-were-taken)). After those 12 points were taken, it re-checked them in the same session, finding nothing ([the third re-check](#the-third-re-check)). Beside it, two Opus readers, one checking how every point was taken and one reading the changed passages cold, each reader's gaps given to a refuter, found 11 gaps, every one judged real: 9 distinct points, all taken ([the last check](#the-check-of-the-checks-changes)).
 
 ## The cross-model reader
 
@@ -1320,3 +1320,294 @@ Beside the second re-check, a workflow of three Opus readers, one per lens, read
 | TC3 | new | real | PLAN §5's row reads the incentive to revise without reach or costs | as RC1 |
 | TC4 | new | real | the loss by the current valuation without the shared model in 03 §12, PLAN §4.8's Readings and the module's Readings | as XC4, and the module's Readings: “by it, on a shared model, a revision that changes a decision against the current strict preference counts as a loss”, in TC1's rebuild |
 | TC5 | new | real | the study's and the re-point's lists of the plan's places omit §4.7's paragraph on RF-M.3 | both: “RF's plan (§4.7's paragraph on RF-M.3, §4.8, …” |
+
+## The third re-check
+
+The cross-model reader, in the session of its cold read, read how its second re-check's point and the check's gaps were taken and, as new text, the passages they changed, read-only, in a rehearsal rebuilt at the same path on the kit at `539078292` with main at `485c6f87c`, the diff of the study folder since `22a113c0c` at its root. Verbatim.
+
+My second re-check’s point and all 14 gaps are correctly taken; I found no new mismatch with the Lean, cited readings or Chinese texts.
+
+Remaining findings: **none**.
+
+Nothing was found, so nothing was taken.
+
+## The check of the check's changes
+
+Beside the third re-check, a workflow of two Opus readers, read-only in the same rehearsal: one checked the 12 points of the second re-check and the check against the tables of what was taken, the texts and the Lean, giving each id a status (taken, in part, not taken, or taken with a new problem) and reporting new problems where the same claim recurs; the other read the passages changed in that round cold, against the Lean and the cited works. Each reader's gaps were given to one refuter asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). Verbatim: each reader's summary, the ids it found taken, and each gap with its refuter's verdict, numbered by reader (FT for the first, FC for the second) in the order reported; the line numbers are those of the rehearsal.
+
+### The reader of how they were taken
+
+**Summary.** I checked all 15 reports (12 distinct points), read-only, in the rehearsal at /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rfm3-rehearsal. For each one I checked the places it names and every other place the same claim recurs, using grep across the integrated texts, the kit templates and the module (both module copies are byte-identical). Each change was compared with the Lean, and each record field was counted by parsing make_records_rfm3.py with ast.
+
+Results: 12 ids are taken as their rows say and are right against the Lean: 1, XC1, XC2, XC3, XC5, RC1, RC3, RC4, TC1, TC2, TC3 and TC5. No change made in this round introduced an error, and none states more than the Lean proves. Every record field changed in this round is within its cap: the law on amounts forgone is 418/420 and 102/190, the law on a demonstration 413/420 and 100/190, and the correspondence 1195/1200 and 466/500.
+
+Three ids are taken only in part. Each time the places named are fixed, but the same claim recurs somewhere else unfixed.
+- XC4: `outcome_least`'s docstring still uses the old wording of item 12, which it cites, so it states no model condition. The header bullet's `outcome_least` clause is the same (optional).
+- TC4: PLAN §8's Everitt row and `revalued_lowers_iff`'s docstring still state the loss by the current valuation without the shared model.
+- RC2: the record's correspondence still reads a flat 'incentives to withhold', which RC2's refuter judged wider than the Lean (`informed_answer_le` with an offset in net agreement). RC3 changed only the revise clause.
+
+There is also one new low item: 03 §12's alike clause says 'none tells the listed worlds apart', where `inputs_alike` needs only the two worlds not to be told apart. After TC1, the header, the study and the record all state it of the two worlds.
+
+The docstring fixes change no statement, but they need one more rebuild. That rebuild changes the record's source hash.
+
+The X5, X8, R11, T17, T23 and T26 rows on the cold-read page still describe the earlier takes. The CHECK table records each later change, so the page's history stays consistent; I do not report them.
+
+**Taken as the table says.** 1, XC1, XC2, XC3, XC5, RC1, RC3, RC4, TC1, TC2, TC3, TC5.
+
+#### FT1: XC4 (in part)
+
+**Location.** Taken in the places XC4 names: 03 §12's Reading and s12_rfm3.txt, PLAN §4.8's Readings and item 12, the module's Readings, and the board. Not taken in the module: outcome_least's docstring (ListingValuation.lean:1024-1025, both copies) and the header bullet 'Amounts forgone, and revaluing' (lines 91-92).
+
+**Quoted.** /-- **By the valuation after a revaluation, its answer has no residual** (item 12): with the reference the revised valuation, the revised answer has none through the same map. -/ | header: "after a revaluation, the revised answer has no residual by the revised valuation (`outcome_least`)"
+
+**Problem.** The docstring cites item 12 but keeps the old wording of item 12 that XC4 corrected, so it states no model condition. The Lean is `theorem outcome_least (m : Model C) (g' l' : C → Nat) (π : C → K) (zs : List K) : residual m g' l' π zs (answer m g' l' π) = 0`. One `m` both evaluates (residual) and forms the answer. With the models apart the claim fails: WeightsApart.weights_split has residual 1 with the valuation equal to the reference. In the header bullet the clause comes after a semicolon, beyond the shared-model opening, and its reference has changed. 03 §12 and the study repeat 'with that shared model' at this clause (X3); the header does not. PLAN §13 says the model is stated 'wherever the evaluation by its own current valuation is stated, `outcome_least` included'. Both changes are prose only and no statement changes, but both module copies change and the module needs one more rebuild, which also changes the record's source hash.
+
+**Replacement.** outcome_least's docstring, both copies: "/-- **By the valuation after a revaluation, its answer has no residual** (item 12): with the reference the revised valuation and the reading formation's model the holding formation's, the revised answer has none through the same map. -/". Header bullet, rewrapped (optional, for consistency with 03 §12 and the study): "…(`revalued_lowers_iff`); after a revaluation, with that shared model, the revised answer has no residual by the revised valuation (`outcome_least`), which endorses no revaluation, …". Then rebuild, and record the change in XC4's CHECK row.
+
+**Verdict: real.** The case holds on the files.
+
+**The docstring.** outcome_least's docstring reads "with the reference the revised valuation, the revised answer has none through the same map". That is item 12's wording before XC4. PLAN item 12 (:215) now reads "With the reference the revised valuation and the reading formation's model the holding formation's".
+
+**The Lean.** `theorem outcome_least (m : Model C) (g' l' : C → Nat) (π : C → K) (zs : List K) : residual m g' l' π zs (answer m g' l' π) = 0`. One m forms the answer and also measures its residual. With the models apart the claim fails: `WeightsApart.weights_split` has `residual holding gain loss (fun c : Nat => decide (c = 2)) [false, true] (answer reading gain loss (fun c : Nat => decide (c = 2))) = 1`, with the valuation equal to the reference.
+
+**Why the docstring cannot rely on the statement below it.** X4 rejected that defence for the record's law, which cites the theorem. Every other docstring of a one-model law in the module states the shared model: own_least, answer_shortfall_least, revaluing_gain, revaluing_gains_iff, informed_answer_le, forgone_least_iff, coarser_not_above and shown_never_lowers. residual_pos_of_gains says "for any model". This docstring names a reference of its own, different from own_least's, so nothing from own_least's docstring carries into it.
+
+**The header bullet.** It has the structure X3 judged to give outcome_least no model condition in 03 and the study: the model is named in the opening, then comes a semicolon, then a clause with a new reference. X3 added "with that shared model" only "in both", meaning 03 and the study.
+
+**Nothing in the tables decides otherwise.** X3's "as the header … say" refers to the opening phrase. XC4's row lists only the places it changed. The cross-model reader's "none in the module header and docstrings" is a report, not a stated reason. PLAN §13's "`outcome_least` included" is untrue while these two passages stand.
+
+**Status.** "In part" is fair: XC4 was taken where it pointed, and this is the same claim in places it missed.
+
+**The replacement.** It is right and uses item 12's own words. Two corrections:
+- The header change is needed, not optional: it is X3's correction applied to the same structure.
+- A further rebuild makes some existing sentences incomplete. The page's opening says only the carrier bullet and the Readings were revised again, at build-7. PLAN §13 and the study say only "the header was revised again".
+
+**Refuter's replacement.** **outcome_least's docstring**, both copies (the kit's tree and the package's), the reader's text:
+"/-- **By the valuation after a revaluation, its answer has no residual** (item 12): with the reference the revised valuation and the reading formation's model the holding formation's, the revised answer has none through the same map. -/"
+
+**The header bullet 'Amounts forgone, and revaluing'**, both copies, rewrapped. This change is needed, not optional:
+"…(`revalued_lowers_iff`); after a revaluation, with that shared model, the revised answer has no residual by the revised valuation (`outcome_least`), which endorses no revaluation, …"
+
+**Rebuild once.** No statement changes; the counts should stay 138 theorems in 186 declarations, every axiom report empty.
+
+**Record the change in four places:**
+1. XC4's CHECK row.
+2. BUILD_SENTENCE in evidence_rfm3_coldread.py. Its second sentence becomes: "For the check of how they were taken, the header's bullets on the carrier and on amounts forgone and revaluing, its Readings and the docstring of `outcome_least` were revised, and it was rebuilt, the same counts, every axiom report empty ([build-8](../kit/round2c/logs/build-8.log))."
+3. PLAN §13's last sentence: "The header and the docstring of `outcome_least` were revised and the module rebuilt again, the same counts."
+4. The study's paragraph on the cold read: "the header and the docstring of `outcome_least` were revised and the module rebuilt again, the same counts".
+
+Then regenerate the page.
+
+#### FT2: RC2 (in part)
+
+**Location.** Taken in the overview (THE-THEORY-OF-BECOMING.md:102 and its source string in integrate_rfm3.py:193). Not taken in the record's correspondence, kit/round2c/make_records_rfm3.py:466 (en) and :472 (zh), record a-reading-informed-and-revalued.
+
+**Quoted.** AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs; / AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之诱因，未计其费；
+
+**Problem.** RC2's refuter judged the flat 'incentives … to withhold' wider than the Lean. That form recurs in the record's correspondence, the only other place the incentive to withhold is read; RC3 changed only the revise clause. Informing.informing_lowers is a witness: informing can lower the worth. informed_answer_le gives the converse wherever the model is shared and the valuation agrees in net: `(net : ∀ c, c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) … : m.after (shifted gain loss) (byRule fun c => s (π c)) ≤ m.after (shifted gain loss) (byRule fun c => answer m g l π' (π' c))`. A reference unlike the valuation satisfies this with a common offset (g = gain + 1, l = loss + 1), and there no incentive to withhold exists. The overview and the dossier say 'informing can lower the worth of holding'. 03 §12, PLAN §4.8 and the module read the incentives from 'can be worth more'. The English field is at 1195/1200, so the qualifier needs room. The room comes from dropping 'represented' after 'no optimal signal or equilibrium', the bare form PLAN §8's Blackwell row already uses.
+
+**Replacement.** English: replace "no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" with "no optimal signal or equilibrium. AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" (field 1192 of 1200). Chinese: replace "读为扣告与改（若所予之更新可达有得之值）之诱因" with "读为扣告与改（若所予之更新可达有得之值）之或有之诱因" (field 469 of 500). Record the change in the CHECK table.
+
+**Verdict: real.** The case holds on the files.
+
+**The text.** The correspondence reads "AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs" (zh 参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之诱因).
+
+**The precedent.** RC2's refuter found this same flat withhold clause wider than the Lean in the overview: it drops the "can" of the witness Informing.informing_lowers.
+
+**The Lean.** `informed_answer_le … (net : ∀ c, c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) … : m.after (shifted gain loss) (byRule fun c => s (π c)) ≤ m.after (shifted gain loss) (byRule fun c => answer m g l π' (π' c))`. A valuation unlike the reference by a common offset (g = gain + 1, l = loss + 1) satisfies `net`. There withholding never gains before costs, so no incentive to withhold exists.
+
+**Nothing in the tables decides otherwise.** RC2's row changed the overview only. RC3's row rewrote the reference phrase and the revise clause and gives only room as a reason; it says nothing about the withhold clause.
+
+**The other places.** Every other reading of withholding goes through "can". 03 §12, PLAN §4.8 and the module say "can be worth more … read as incentives". The overview and the dossier say "informing can lower the worth of holding".
+
+**Two small inexactnesses in the reader's case**, neither affecting the gap:
+- "The only other place" holds only for the flat form; the places above also read the incentive to withhold, through "can".
+- RC3 changed the reference phrase as well as the revise clause, not only the revise clause.
+
+**Caps.** Measured by parsing the script with ast, not running it (style.py counts characters with len). English goes from 1195 to 1192 of 1200; Chinese from 466 to 469 of 500. Each old string occurs once, inside a single literal.
+
+**The replacement is right.** "Possible" carries the "can". The bare "no optimal signal or equilibrium" is the form PLAN §8's Blackwell row uses. The Chinese keeps 最优之信号与均衡未表, which means the same.
+
+**Refuter's replacement.** The reader's text, as given.
+
+**English (:466).** Replace "no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" with "no optimal signal or equilibrium. AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;". The field becomes 1192 of 1200.
+
+**Chinese (:472).** Replace "读为扣告与改（若所予之更新可达有得之值）之诱因" with "读为扣告与改（若所予之更新可达有得之值）之或有之诱因". The field becomes 469 of 500.
+
+**The CHECK table.**
+- In RC2's row, add the record's "possible incentives" (zh 或有之诱因).
+- In RC3's row, change the counts to 1192 and 469, with the room made by dropping "represented".
+
+Then regenerate the page.
+
+#### FT3: TC4 (in part)
+
+**Location.** Taken in the places TC4 names: 03 §12's Reading, PLAN §4.8's Readings and the module's Readings (ListingValuation.lean:235). Not taken: PLAN.md:293 (§8, the row on reward tampering and current-reward-function evaluation, standing cell) and revalued_lowers_iff's docstring (ListingValuation.lean:1010-1011, both copies).
+
+**Quoted.** PLAN.md:293: "a one-decision counterpart in counts of the preservation incentive their Claim 2 permits, a reading; their diagrams, several steps and the reward input not represented; no path-specific objective constructed" | "/-- **A revaluation lowers it exactly where it decides some listed cell against the current valuation's strict weighted preference.** -/"
+
+**Problem.** Both places state the loss by the current valuation, and its preservation-incentive reading, without the shared model. The corrigibility row just above (:291, from the first re-check), 08 §8, the record's correspondence, the dossier and the study all state the same counterpart on a shared model. The docstring is only a title, whose 'it' and model come from own_least's docstring. Lean: `theorem revalued_lowers_iff (m : Model C) (g l g' l' : C → Nat) (π : C → K) {zs : List K} (once : List.Pairwise (fun a b => a ≠ b) zs) (covers : ∀ c, c ∈ m.listed → π c ∈ zs) : m.after (shifted g l) (byRule fun c => answer m g' l' π (π c)) < m.after (shifted g l) (byRule fun c => answer m g l π (π c)) ↔ ∃ z, z ∈ zs ∧ (…)`. One `m` serves the evaluation and both answers. With the models apart, the current answer can carry a residual (WeightsApart.weights_split), so a revision against its strict preference need not lose.
+
+**Replacement.** PLAN.md:293, standing cell: "a one-decision counterpart in counts, on a shared model, of the preservation incentive their Claim 2 permits, a reading; their diagrams, several steps and the reward input not represented; no path-specific objective constructed". revalued_lowers_iff's docstring, both copies, in the same rebuild as XC4: "/-- **A revaluation lowers it exactly where it decides some listed cell against the current valuation's strict weighted preference**: with the reference the reading formation's own current valuation and its model the holding formation's, holding for another valuation's answer through `π` stands strictly below holding for the current answer exactly there. -/"
+
+**Verdict: real.** Real for PLAN.md:293. The docstring part does not hold.
+
+**The plan's row.** Its standing cell reads "a one-decision counterpart in counts of the preservation incentive their Claim 2 permits, a reading", with no model condition. Strictly, the row states the incentive's reading, not the loss itself. The counterpart is own_least with revalued_lowers_iff, each on one model: `revalued_lowers_iff (m : Model C) (g l g' l' : C → Nat) … : m.after (shifted g l) (byRule fun c => answer m g' l' π (π c)) < m.after (shifted g l) (byRule fun c => answer m g l π (π c)) ↔ ∃ z, z ∈ zs ∧ (…)`.
+
+**With the models apart there is no preservation incentive.** Take WeightsApart through decide (c = 2), with the valuation equal to the reference. The reading formation's answer stops the first cell and has residual 1 (weights_split); holding for it is worth 2. A revision that releases both cells has residual 0 and is worth 3 (weights_matter). So by the current valuation that revision gains.
+
+**Every other statement of this counterpart carries the shared model.**
+- 08 §8, the study's Read, the record's correspondence and the dossier state it next to the counterpart.
+- 03 §12 ("This"), PLAN §4.8 ("11") and the module (the named theorems) carry it through what they hang on, as TC4's own verdict says.
+- In §8 itself, the Blackwell row ("with a shared model") and the corrigibility row (:291) have it. The first re-check's point 1 required it at :291, although that row too points to RF-M.3.
+
+**Nothing in the tables decides otherwise.** The first re-check's row lists the places given the model and gives no reason for leaving :293 out. R1's verdict looked at :293 only for Claim 2's attribution.
+
+**Why the docstring part does not hold.** revalued_lowers_iff's docstring is a title that continues own_least's docstring, which says "with the reference the reading formation's own current valuation and its model the holding formation's". The title's "it" and "the current valuation" carry that context, as the reader concedes, and nothing in between changes it. Unlike outcome_least's docstring, it states no condition of its own. TC4's verdict holds that sentences hanging on the shared-model statement or on named theorems need no change.
+
+**Refuter's replacement.** **PLAN.md:293, the standing cell:** "a one-decision counterpart in counts, on a shared model, of the preservation incentive their Claim 2 permits, a reading; their diagrams, several steps and the reward input not represented; no path-specific objective constructed". Record it in TC4's CHECK row.
+
+**revalued_lowers_iff's docstring:** no change needed. If it is made self-contained anyway, the reader's wording is right. It then goes into XC4's single rebuild, and XC4's sentences on what was revised name both docstrings ("the docstrings of `revalued_lowers_iff` and `outcome_least`").
+
+#### FT4: a new problem
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517 (§12, theorem paragraph) and kit/round2c/s12_rfm3.txt line 2
+
+**Quoted.** Where the acts taken give two worlds one input, from one state of each formation the courses are alike, so they are alike wherever no demonstration is emitted or none tells the listed worlds apart, and there holding for the answer is worth one committed move
+
+**Problem.** Low severity; the wording comes from T8. The alike clause is stated over the listed worlds, but inputs_alike needs only the two worlds not to be told apart, listed or not: `{w w' : W} (same : rd.reveal w = rd.reveal w') (n : Nat) : ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).internal = ((joint rd hd).course ⟨i, s, a, (w', h)⟩ n).internal ∧ …`. The listed worlds are the condition of answer_constant (`(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)`), which governs the worth. So 03's alike clause is narrower than the law where the two worlds are listed, and it does not follow where they are not. After TC1, the header ('none tells the worlds apart'), the study ('tells them apart') and the record ('tells the worlds apart') all state the alike clause of the two worlds and the worth of the listed worlds. Only 03 uses the listed worlds in both clauses.
+
+**Replacement.** so they are alike wherever no demonstration is emitted or none tells the two worlds apart, and, wherever none is emitted or none tells the listed worlds apart, holding for the answer is worth one committed move (`ListingValuation.inputs_alike_before`, `ListingValuation.undemonstrated_worth`, `ListingValuation.answer_constant`)
+
+**Verdict: real.** The case holds on the files; low severity.
+
+**The text.** Both copies read "so they are alike wherever no demonstration is emitted or none tells the listed worlds apart, and there holding for the answer is worth one committed move".
+
+**The Lean.** `inputs_alike … {w w' : W} (same : rd.reveal w = rd.reveal w') (n : Nat) : ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).internal = ((joint rd hd).course ⟨i, s, a, (w', h)⟩ n).internal ∧ …` asks only that the two worlds show alike. The listed worlds enter only through answer_constant's `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)`, which governs the worth.
+
+**What follows for 03's alike clause.**
+- For two listed worlds, 03's condition is stronger than the law needs, so the clause is narrower than proved.
+- For worlds not listed, it does not give the courses alike. `Reader.input w .demonstrate = .shown (rd.reveal w)`, so once a demonstration is emitted, two unlisted worlds showing different values sense different inputs, even if every listed world shows one value.
+
+**The other places.** After TC1, the header (:124-128), the study (:99-103), the record's law and PLAN item 19 state the alike clause of the two worlds and the worth of the listed worlds. 03 alone uses the listed worlds in both clauses.
+
+**Nothing in the tables decides otherwise.** The wording came from T8's replacement, which put answer_constant's case into the alike clause. TC1's verdict calls 03 narrowed for the worth claim and says nothing of its alike clause.
+
+**The replacement is right.** It takes the header's split, with "the two worlds" binding to the sentence's opening. The cited inputs_alike_before gives both alike cases. No cap applies.
+
+**Refuter's replacement.** In 03-KNOWING.md:517 and kit/round2c/s12_rfm3.txt line 2, use the reader's text:
+"so they are alike wherever no demonstration is emitted or none tells the two worlds apart, and, wherever none is emitted or none tells the listed worlds apart, holding for the answer is worth one committed move (`ListingValuation.inputs_alike_before`, `ListingValuation.undemonstrated_worth`, `ListingValuation.answer_constant`)"
+
+It replaces "so they are alike wherever no demonstration is emitted or none tells the listed worlds apart, and there holding for the answer is worth one committed move (…)". Record it with this round's points, since T8's row quotes the wording it replaces.
+
+### The cold reader
+
+**Summary.** Every fix from the last round is applied and exact, and every count and cap holds. Seven items below cover four low-severity problems. (1) The worth claim of answer_constant says "the listed worlds" without saying whose listing. Its hypothesis is on the holding formation's listing, but in the same passages "the listing" means the reading formation's, and read that way the claim is false (a two-world counterexample on joint). This appears in the record's law (en and zh), 03 §12 with its kit source, the module header's carrier bullet and its Readings, the study's carrier bullet, and the summaries in PLAN §13 and the study. (2) The record's correspondence states incentives to withhold under any reference unlike the valuation. The Lean gives only a witness, plus two sufficient conditions under which informing never lowers the worth. Every other place keeps the "can". (3) The lead of the dossier's RF bullet still gives 29 and 30 October, though the bullet now records changes made on 31 October. (4) The cold-read page says the lens table shows what each finding became, but six of its rows predate the changes made by the check. Every replacement fits its cap.
+
+#### FC1: a new problem
+
+**Location.** kit/round2c/make_records_rfm3.py, record a-reading-informed-and-revalued, the courses-alike law (en and zh); the record page in the rehearsal
+
+**Quoted.** en: "so holding for the answer, at listed worlds all showing one value or with no demonstration emitted, is worth one committed move." zh: "故于所示皆同之列世界，或未发示时，为答而持值一所守之行。"
+
+**Problem.** The hypothesis of the worth is on the holding formation's listing, the model the worth is counted on: `theorem answer_constant … (m : Model W) (gain loss : W → Nat) {o : O} (shows : ∀ w, w ∈ m.listed → rd.reveal w = o) (w₀ : W) (shows₀ : rd.reveal w₀ = o) (n : Nat) : m.after (shifted gain loss) (byRule fun w => ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).active) = m.committed (shifted gain loss) (cond ((joint rd hd).course ⟨i, s, a, (w₀, h)⟩ n).active .off .go)` (docstring: "every world the holding formation lists"). Two laws earlier, "the listing" is the reading formation's ("the listing is filtered to the worlds showing it"), so "listed worlds" reads as the reading formation's, and on that reading the law is false. Counterexample on `joint`: the reading listing is [a], with weight 1 and a valuation giving going on 0 and switching off 1 at a; reveal a ≠ reveal b. The holding model lists a and b at weight 1, with reference gain a = 0, loss a = 1, gain b = 1, loss b = 0. The holding formation demonstrates at step 0 and holds after. At step 2 the answer stops at a (listing [a], 0 < 1) and releases at b (listing empty, a tie). So holding for it is worth 1 + 1 = 2, against 1 for switching off and 1 for going on, yet the reading formation lists one world and nothing shown tells its listed worlds apart.
+
+**Replacement.** en: "so holding for the answer, where the worlds the holding formation lists all show one value or no demonstration is emitted, is worth one committed move." (the law 360 of 420 characters). zh: "故于持之形成所列之诸世界所示皆同处，或未发示时，为答而持值一所守之行。" (the law 86 of 190)
+
+**Verdict: real.** The law does not say which formation's listing its 'listed worlds' are. The record's carrier laws make 'the listing' the reading formation's: 'internal, the reading formation's listing and valuation state', and the law just before this one (one law earlier, not two) says 'the listing is filtered to the worlds showing it'. The Lean instead puts the hypothesis on the model the worth is counted on: `theorem answer_constant … (m : Model W) (gain loss : W → Nat) {o : O} (shows : ∀ w, w ∈ m.listed → rd.reveal w = o) (w₀ : W) (shows₀ : rd.reveal w₀ = o) (n : Nat) : m.after (shifted gain loss) (byRule fun w => ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).active) = m.committed (shifted gain loss) (cond ((joint rd hd).course ⟨i, s, a, (w₀, h)⟩ n).active .off .go)`. Its docstring says 'every world the holding formation lists'. The reading formation's listing `i.1` is left unconstrained. The counterexample holds on the definitions. `Reader.update` filters `[a]` by `reveal c = reveal w`, which leaves `[a]` at a and `[]` at b. `answer` is `decide (within pm π g z < within pm π l z)`, so at step 2 it stops at a (0 < 1) and releases at b (0 < 0 is false). `shifted` values going on at the gain and switching off at the loss, so `m.after` = loss a + gain b = 2, while `committed .off` = 1 and `committed .go` = 1. So if 'listed worlds' means the reading formation's listing ([a]: one world, nothing to tell apart), the law is false. No table settles whose listing is meant: TC1 narrowed the claim from two worlds to 'listed worlds' without saying whose. The replacement is right. It states `shows` as the docstring does and keeps undemonstrated_worth's case. Counted by parsing the script with ast, it is 360 of 420 characters in English and 86 of 190 in Chinese, and 持之形成 and 列 are the record's own terms.
+
+#### FC2: a new problem
+
+**Location.** theories/becoming/chapters/03-KNOWING.md §12, the theorem paragraph on informing and revaluing (the carrier part), from kit/round2c/s12_rfm3.txt
+
+**Quoted.** "so they are alike wherever no demonstration is emitted or none tells the listed worlds apart, and there holding for the answer is worth one committed move"
+
+**Problem.** This is the same scope gap. The sentence just before reads "a demonstration filters the listing by what it shows", and that listing is the reading formation's (the internal part). So "the listed worlds" binds to it, while answer_constant needs `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)` on the holding formation's model. The two-world counterexample in the record's item fails the claim on that reading. The alike half holds for any worlds and is unaffected.
+
+**Replacement.** "so they are alike wherever no demonstration is emitted or none tells apart the worlds the holding formation lists, and there holding for the answer is worth one committed move" (in s12_rfm3.txt, and so in 03 §12)
+
+**Verdict: real.** The sentence's 'the listed worlds' comes after the carrier sentence, two sentences back, where the internal part is 'the reading formation's listing and valuation' and 'a demonstration filters the listing by what it shows'. So it can bind to the reading formation's listing, while `answer_constant` needs `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)` on the model the worth is counted on. The record item's counterexample makes the worth claim false on the first reading, and no table decided otherwise. The reader's replacement fixes the worth half but keeps 03's structure for the alike half. That half then says the courses at the sentence's 'two worlds' are alike wherever none tells apart the worlds the holding formation lists. This follows only if the two worlds are among those listed, which the sentence does not say: `inputs_alike` takes `(same : rd.reveal w = rd.reveal w')` for the two worlds themselves. Naming the listing makes this gap plain. The reader's 'the alike half holds for any worlds' is true of the Lean, not of this wording. The record's law, the header's bullet and the study all state the alike half on the two worlds and the worth on the listed worlds. Giving 03 the same split makes both halves exact and matches those three places. There is no cap.
+
+**Refuter's replacement.** In s12_rfm3.txt, and so in 03 §12: "so they are alike wherever no demonstration is emitted or none tells the two worlds apart, and, wherever none is emitted or none tells apart the worlds the holding formation lists, holding for the answer is worth one committed move" (the citations after it unchanged)
+
+#### FC3: a new problem
+
+**Location.** Becoming/ListingValuation.lean module header, both copies (kit/round2c/tree and the package): the carrier bullet, and the Readings paragraph on the off-switch game
+
+**Quoted.** Carrier bullet: "and, wherever none is emitted or none tells the listed worlds apart, holding for the answer is worth one committed move (`undemonstrated_worth`, `answer_constant`)." Readings: "`answer_constant` takes one state of each formation at every world, nothing shown telling the listed worlds apart,"
+
+**Problem.** The bullet itself defines the internal part as "the reading formation's listing and valuation state" and says "A demonstration filters the listing by what it shows", so "the listed worlds" reads as the reading formation's listing. The theorem's statement and docstring are on the holding formation's: `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)`, "where every world the holding formation lists shows what a world `w₀` shows". Read the first way, both sentences are false (counterexample in the record's item).
+
+**Replacement.** Carrier bullet: "and, wherever none is emitted or none tells apart the worlds the holding formation lists, holding for the answer is worth one committed move (`undemonstrated_worth`, `answer_constant`)." Readings: "`answer_constant` takes one state of each formation at every world, nothing shown telling apart the worlds the holding formation lists," (docstrings only, in both copies; the module rebuilt as for TC1)
+
+**Verdict: real.** The two copies are identical (checked with cmp). The carrier bullet defines the internal part as 'the reading formation's listing and valuation state' and says 'A demonstration filters the listing by what it shows', so 'the listed worlds' can bind to that listing. In the Readings, the phrase comes right after 'here the reading formation senses the candidate world only through what is shown'. `answer_constant`'s hypothesis is `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)` on the worth's model, and its docstring says 'where every world the holding formation lists shows what a world `w₀` shows'. On the first reading both sentences are false, by the record item's counterexample. The reader's replacements are exact and match the docstring. They change docstrings only and need a rebuild as TC1 did; the pages that name build-7 for the check then name the new build. They are incomplete in one place. The Lean review's re-check row R2 (kit/round2c/evidence_rfm3_lean.py, RECHECK 'R2') quotes the Readings' 'nothing shown telling the listed worlds apart'. X17 established that that page's rows follow the texts as they stand, and XC2 updated R5 the same way, so R2 changes with the Readings.
+
+**Refuter's replacement.** Carrier bullet: "and, wherever none is emitted or none tells apart the worlds the holding formation lists, holding for the answer is worth one committed move (`undemonstrated_worth`, `answer_constant`)." Readings: "`answer_constant` takes one state of each formation at every world, nothing shown telling apart the worlds the holding formation lists," (docstrings only, in both copies; the module rebuilt as for TC1, the pages naming build-7 for the check then naming the new build). And in evidence_rfm3_lean.py's RECHECK row R2, "nothing shown telling the listed worlds apart" becomes "nothing shown telling apart the worlds the holding formation lists", REVIEW-RFM3-LEAN.md regenerated.
+
+#### FC4: a new problem
+
+**Location.** kit/round2c/study_rfm3.txt, the carrier bullet and the paragraph "The cold read of the texts"; PLAN.md §13, the paragraph "The cold read of the third part's texts"
+
+**Quoted.** Study carrier bullet: "and holding for the answer is worth one committed move where none tells the listed worlds apart (answer_constant) or none is emitted (undemonstrated_worth)." Both summaries: "the worth of an answer alike stated only where no demonstration tells the listed worlds apart or none is emitted"
+
+**Problem.** This is the same scope gap. The study's carrier bullet follows its account of the reading formation's listing being filtered, and answer_constant's hypothesis is `∀ w, w ∈ m.listed → rd.reveal w = o` on the holding formation's model. The two summaries repeat the wording and should follow the fixed texts.
+
+**Replacement.** Study carrier bullet: "and holding for the answer is worth one committed move where none tells apart the worlds the holding formation lists (answer_constant) or none is emitted (undemonstrated_worth)." PLAN §13 and the study's paragraph: "the worth of an answer alike stated only where no demonstration tells apart the worlds the holding formation lists or none is emitted"
+
+**Verdict: real.** The study's carrier bullet calls the reading formation's update 'filtering the listing by what a demonstration shows' and the internal part 'the listing and valuation'. Its 'where none tells the listed worlds apart (answer_constant)' therefore has the same gap against `(shows : ∀ w, w ∈ m.listed → rd.reveal w = o)`, and the record item's counterexample applies. The two summaries (study line 189, PLAN §13) repeat the words and should follow the fixed texts. The replacements are right. The study's keeps TC1's split: alike for the two worlds, worth for the listed ones. None of these texts has a cap.
+
+#### FC5: a new problem
+
+**Location.** kit/round2c/make_records_rfm3.py, record a-reading-informed-and-revalued, correspondence (en and zh)
+
+**Quoted.** en: "AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" zh: "AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之诱因，未计其费；"
+
+**Problem.** The reading of revising carries its condition, but withholding is read as an incentive under every reference unlike the valuation. The Lean gives only a witness (`Informing.informing_lowers`: told nothing, worth 10; told the candidate, worth 0). It also gives two cases where the valuation is unlike the reference and informing never lowers the worth. First, `informed_answer_le … (net : ∀ c, c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) … : m.after (shifted gain loss) (byRule fun c => s (π c)) ≤ m.after (shifted gain loss) (byRule fun c => answer m g l π' (π' c))`; net agreement admits g = gain + k, l = loss + k. Second, `splitsKeep_of_off_le_go (m pm : Model C) (gain loss g l : C → Nat) (never : ∀ c, c ∈ pm.listed → l c ≤ g c) : SplitsKeep m pm gain loss g l`, "whatever the reference". The overview, the dossier and 03 §12 keep the modality ("informing can lower the worth"); the record is the one place that drops it.
+
+**Replacement.** en: "AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" To keep the field within its cap, also write "of Bayesian persuasion's convexity condition for full disclosure (Kamenica and Gentzkow 2011)" in place of "of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and Gentzkow 2011)" earlier in the same field: 1199 of 1200 characters. zh: "AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之或有诱因，未计其费；" (468 of 500)
+
+**Verdict: real.** The record's reading of withholding is unconditional: 'under a reference unlike the valuation, incentives to withhold'. The Lean gives only a witness: `Informing.informing_lowers` (told nothing, worth 10; told the candidate, worth 0), whose docstring says 'informing can lower the worth below both moves'. It also has two cases where the valuation is unlike the reference and informing never lowers the worth. One is `informed_answer_le … (net : ∀ c, c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) … : m.after (shifted gain loss) (byRule fun c => s (π c)) ≤ m.after (shifted gain loss) (byRule fun c => answer m g l π' (π' c))`, which g = gain + k, l = loss + k satisfies. The other is `splitsKeep_of_off_le_go (m pm : Model C) (gain loss g l : C → Nat) (never : ∀ c, c ∈ pm.listed → l c ≤ g c) : SplitsKeep m pm gain loss g l`, 'whatever the reference', which with `refining_never_lowers_iff` keeps every refinement on both listings from lowering the worth. Every other place that reads the incentive keeps the modality: the overview and the dossier ('informing can lower the worth'), and 03 §12, the module's Readings and PLAN §4.8 ('can be worth more'). RC2 judged the same flat wording real in the overview. RC3 changed only the record's 'it', so no table gives a reason to keep it. The replacement is right. 'Possible' gives withholding the 'can' of the other places, and it does no harm to revising, which keeps its condition. The reworded Kamenica and Gentzkow phrase means the same. Counted by parsing the script, the English field comes to 1199 of 1200 characters (1204 without the shortening) and the Chinese to 468 of 500.
+
+**Refuter's replacement.** en: "AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs;" and, earlier in the same field, "of Bayesian persuasion's convexity condition for full disclosure (Kamenica and Gentzkow 2011)" in place of "of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and Gentzkow 2011)": 1199 of 1200 characters. zh: "AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之或有诱因，未计其费；" (468 of 500)
+
+#### FC6: a new problem
+
+**Location.** theories/becoming/review/ALIGNMENT.md, the account of how it was made, the lead of the RF bullet (the bullet is written by kit/round2c/integrate_rfm3.py's dossier edit)
+
+**Quoted.** "- Added on 29 and 30 October 2026 (board item RF, formations that read):"
+
+**Problem.** The same bullet now ends "RF-M.3's sentences and its changes to the assistance-games clause, to round 2's first sentence and to RF-M.2's last sentence, made on 31 October 2026". Those sentences and changes sit in the paragraph and the clause the lead lists, so the lead's dates no longer cover what the bullet records. RF7's landing (75be744fb) extended this lead to 30 October when it added that day's text.
+
+**Replacement.** "- Added on 29, 30 and 31 October 2026 (board item RF, formations that read):", written by integrate_rfm3.py's dossier edit with its last date taken from TODAY, as the RF-M.3 sentence's "made on" date is (on a later day: "29 and 30 October and {TODAY.day} {TODAY:%B} 2026")
+
+**Verdict: real.** The lead says 'Added on 29 and 30 October 2026' and lists 'the paragraph on RF's rounds in the box above' and the box's assistance-games clause. RF-M.3's sentences go into that paragraph and its changes into that clause (integrate_rfm3.py's dossier edits 1 to 3). The same bullet's last sentence dates them 'made on 31 October 2026', so the lead's dates no longer cover what the bullet records; RF-M.2's 30 October sentences fell inside the range. One detail of the reader's history is off. 75be744fb did not extend the lead; it created the bullet with '29 and 30' (git log -S finds no earlier RF lead). That still bears out the convention that the lead spans the dates of RF's text. T17's problem named the lead's dating, but its take changed only the RF-M.3 sentence and gave no reason for keeping the lead. Nothing quotes the lead (checked with grep). The replacement is right, and taking its last date from TODAY keeps it in step with the 'made on' date.
+
+#### FC7: a new problem
+
+**Location.** evidence/REVIEW-RFM3-COLDREAD.md, the opening's second paragraph (kit/round2c/evidence_rfm3_coldread.py, line 442)
+
+**Quoted.** "The lenses reported 64 findings, 54 confirmed and 10 refuted by their refuters; what each became is in the table (`#what-was-taken-from-the-lenses`)."
+
+**Problem.** That table shows the lenses' findings as taken before the check of how they were taken, and the check changed six of them since: X5 (its zh "共模型且净相合（故二答皆最少）" now reads "共模型且净相合，则最少所缺与其量定之"); R9 (the record's "(if the update reaches it)" is now "(if the update reaches a gaining valuation)", RC3); R11 (03 §12's sentence now says "on a shared model"); T17 (now "to the assistance-games clause, to round 2's first sentence and to RF-M.2's last sentence"); T23 (the Output → input now names §4.7); T26 (PLAN §5's row is now in RC1's wording). So what each finding became is not in that table alone.
+
+**Replacement.** Line 442: `+ "; what each became is in the table (`#what-was-taken-from-the-lenses`), and what the check of how they were taken changed since in its table (`#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken`).")`, and the page regenerated by the script
+
+**Verdict: real.** The opening says 'what each became is in the table (`#what-was-taken-from-the-lenses`)', but six rows of that table now quote words the check replaced. X5's zh （故二答皆最少） is gone (XC1). R9's '(if the update reaches it)' is replaced (RC3). R11's sentence now has 'on a shared model' (XC4, TC4). T17's 'and round 2's sentence' is replaced (TC2). T23's list now names §4.7 (TC5). T26's §5 row is replaced (RC1, TC3). The check also extended X8 (XC3) and T8 (TC1). The refuters offered either editing those rows or recording the changes in the later table. The kit recorded them in the later table and edited only X10's row in place (XC5), so the outcome of these findings is no longer in the lenses table alone. The opening's third paragraph links the check, but not as the place where these outcomes now stand. The replacement is right. The anchor matches github_slug of the heading ('what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken'), and RECHECK_SENTENCE already links the check unconditionally. One addition: taking this round's gaps changes the outcomes of T8/TC1, R9/RC3 and T17/TC2 again, so once this round is recorded the sentence must also name its table.
+
+**Refuter's replacement.** Line 442: `+ "; what each became is in the table (`#what-was-taken-from-the-lenses`), and what the check of how they were taken changed since in its table (`#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken`).")`, and the page regenerated by the script. When this round's gaps are recorded in a further section, the same sentence also names that section's table (for example "… changed since in their tables (the check's (`#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken`), the next (`#<that table's anchor>`))").
+
+### What was taken from the check of the check's changes
+
+| Gap | Id | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| FT1 | XC4 | real | in part: `outcome_least`'s docstring and the header's bullet on amounts forgone and revaluing state the revised answer's lack of residual without the shared model | the docstring: “with the reference the revised valuation and the reading formation's model the holding formation's, the revised answer has none through the same map”; the bullet: “after a revaluation, with that shared model, the revised answer has no residual by the revised valuation”; rebuilt, the same counts ([build-8](../kit/round2c/logs/build-8.log)) |
+| FT2 | RC2 | real | in part: the record's correspondence reads the incentive to withhold without “can” | as FC5 |
+| FT3 | TC4 | real | in part: PLAN §8's row on current-reward-function evaluation reads the counterpart without the shared model, and `revalued_lowers_iff`'s docstring states the loss without it | the row: “a one-decision counterpart in counts, on a shared model, of the preservation incentive their Claim 2 permits, a reading”; the docstring unchanged, its refuter judging that part not real (a title continuing `own_least`'s docstring, which states the shared model) |
+| FT4 | new | real | 03 §12 states the courses alike where none tells the listed worlds apart, where `inputs_alike` needs only the two worlds | as FC2 |
+| FC1 | new | real | the record's law gives the worth at “listed worlds”, readable as the reading formation's listing, where `answer_constant` lists by the holding formation's model | “so holding for the answer, where the worlds the holding formation lists all show one value or no demonstration is emitted, is worth one committed move” (zh 故于持之形成所列之诸世界所示皆同处，或未发示时，为答而持值一所守之行), 360 and 86 of 420 and 190 characters |
+| FC2 | new | real | 03 §12's sentence has the same gap | the refuter's text, which also takes FT4: “so they are alike wherever no demonstration is emitted or none tells the two worlds apart, and, wherever none is emitted or none tells apart the worlds the holding formation lists, holding for the answer is worth one committed move” |
+| FC3 | new | real | the module header's bullet on the carrier and its Readings have the same gap | the bullet: “wherever none is emitted or none tells apart the worlds the holding formation lists”; the Readings: “nothing shown telling apart the worlds the holding formation lists”; the Lean review's row R2 the same, its page regenerated; rebuilt with FT1 |
+| FC4 | new | real | the study's bullet on the carrier and the summaries in PLAN §13 and the study have the same gap | the bullet: “where none tells apart the worlds the holding formation lists (answer_constant)”; both summaries: “the worth of an answer alike stated only where no demonstration tells apart the worlds the holding formation lists or none is emitted”; and PLAN's item 19 the same: “where no demonstration is emitted or none tells apart the worlds the holding formation lists, holding for it is worth exactly one committed move” |
+| FC5 | new | real | the record's correspondence reads the incentive to withhold under every reference unlike the valuation | “possible incentives to withhold and to revise”, the room made as the reader gives it (“of Bayesian persuasion's convexity condition for full disclosure”), 1199 of 1200 characters; zh 之或有之诱因, 469 of 500 |
+| FC6 | new | real | the dossier's lead dates RF's text 29 and 30 October, while RF-M.3's sentences in the same bullet were made later | the integration writes the lead's last date from the day it runs: “- Added on 29, 30 and 31 October 2026 (board item RF, formations that read):” (on a later day, “29 and 30 October and …”) |
+| FC7 | new | real | the page's opening points to the lenses' table alone, while the check changed six of its rows since | the opening: “what each became is in the table, and what the checks after it changed, in theirs”, linking the check's table and this one |

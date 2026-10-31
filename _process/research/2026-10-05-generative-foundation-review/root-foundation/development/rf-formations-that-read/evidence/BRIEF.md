@@ -1189,3 +1189,65 @@ Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 
 The gaps (JSON):
 <the gaps, each with its id, status, location, quoted text, problem and replacement>
 ```
+
+Its third re-check, of how the second re-check's point and the check's gaps were taken (the same session continued, `cx -r`, read-only, in a rehearsal rebuilt at the same path on the kit at `539078292` with main at `485c6f87c`, the diff of the study folder since `22a113c0c` at its root as `rfm3-check-delta.diff`):
+
+```text
+You re-check, read-only, how RF-M.3's texts took your second re-check's point and the check beside it. Your working directory is again <a rehearsal of main with RF-M.3 integrated>, rebuilt at the same path: main at 485c6f87c (LA4's formal part, fm-cond1 and MA4c landed since) merged with the kit at 539078292, with the kit's integration applied (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). The diff of the kit's study folder since the commit your second re-check read (22a113c0c) is at the checkout's root as rfm3-check-delta.diff, the generated cold-read page and the brief left out; the integrated texts are in place.
+
+Beside your second re-check, three Opus readers, one per lens, checked how every lens finding was taken, each reader's gaps given to a refuter: 14 gaps, every one judged real; with your point, 12 distinct points. Each gap, its verdict and what was taken are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md, the section "The check of how the lenses' findings were taken" and its table; your point's row is in the table after your second re-check.
+
+Check, against the Lean (Becoming/ListingValuation.lean in the package folder: only its header changed, the bullet on the carrier and the Readings paragraph, its statements unchanged, rebuilt at 138 theorems in 186 declarations with every axiom report empty) and against the cited works as your cold read and the reviews read them:
+1. that your point and each gap were taken as those tables say, in every place they name, and that each change is right: no new error, and no claim wider or narrower than the Lean;
+2. as text new since your second re-check: PLAN §5's row on preference shaping, §4.8's item 12 and Readings, and §13's paragraph "The cold read of the third part's texts"; 03 §12's Reading; the overview's paragraph on informing and revaluing; the dossier's entry on how it was made; the root module's L1 bullet and the checker's scope sentence; the module header's bullet on the carrier and its Readings; the study template's bullet on the carrier, its Output → input and its paragraph "The cold read of the texts"; the record's law on a demonstration, its Chinese law on amounts forgone and its correspondence, English and Chinese, in kit/round2c/make_records_rfm3.py; the board's landing text in kit/round2c/board_rfm3.py and the re-point's reason in kit/round2c/repoint_rfm3.py; the cold-read page's opening, its new section and tables, and the Lean review page's row R5.
+
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a replacement for a record field must fit its cap in tools/research/style.py (ITEM_CAPS_V2: 420 characters in English and 190 in Chinese per law item; correspondence 1200 and 500; next_delta 400 and 180). Say plainly if there is nothing. Do not edit any file.
+```
+
+Beside it, the check of the check's changes (a workflow of two Opus readers, read-only, in the same rehearsal; each reader's gaps given to one refuter). The context given to both readers and both refuters, in place of `<context>` below:
+
+```text
+The checkout is <a rehearsal of main with RF-M.3 integrated>: the theory repository's main merged with RF-M.3's kit (commit 539078292), the kit's integration applied, nothing committed. Do not edit, create or delete any file, commit, render, run make or build Lean; reading files and read-only shell commands (cat, sed -n, grep, git diff, git show) are fine. Paths below are relative to the checkout.
+
+Where things are:
+- The Lean, the authority for what is proved: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean (its statements unchanged in this round; its header's bullet on the carrier and its Readings paragraph revised).
+- _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md: the cold read of RF-M.3's texts and its re-checks. Its last sections, "The re-check of the lenses' findings" and "The check of how the lenses' findings were taken", give the latest 15 reports (one from the cross-model reader, 14 from three Opus readers, every one judged real by a refuter), 12 distinct points, and the tables of what was taken for each.
+- rfm3-check-delta.diff at the checkout's root: the diff of the study folder for this round (the kit's templates and scripts, the plan, the Lean review's page; the cold-read page and the brief left out). `git diff` shows the integration against the merged head.
+- The integrated texts: theories/becoming/THE-THEORY-OF-BECOMING.md (the overview), theories/becoming/chapters/03-KNOWING.md §12, 07-SIGNIFICANCE.md §7, 08-METHOD.md §8, theories/becoming/review/ALIGNMENT.md (the dossier), the package's Becoming.lean (the root module's L1 bullet) and check_becoming.py (the scope sentence), the package's README.md and README.zh.md, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md.
+- The kit's templates, written at the landing: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt (the study's section), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py (the new record a-reading-informed-and-revalued in English and Chinese, and AMEND), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/board_rfm3.py (the board's landing text), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/repoint_rfm3.py (the re-point's reason), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md (the Lean review's page, its row R5).
+
+Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 characters in English and 190 in Chinese; correspondence 1200 and 500; next_delta 400 and 180. A replacement for a record field must fit its cap.
+```
+
+The reader of how the last round was taken:
+
+```text
+You check, read-only, how RF-M.3's texts took the last round of review: 12 distinct points (the cross-model reader's second re-check, point 1; and the Opus check's gaps XC1 to XC5, RC1 to RC4 and TC1 to TC5), each with what was taken in the tables at the end of the cold-read page.
+
+<context>
+
+For each point: read it and its row; then check, in every place it names and wherever else the same claim recurs across these texts, that it was taken as the row says, and that the change is right against the Lean: no new error, no claim wider or narrower than the Lean proves, consistent across places, and within the record caps. Report every point with its status (taken, in_part, not_taken, or problem: taken but the change introduced an error); for each not fully right, the location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese). Where a claim's scope is at issue, quote the Lean statement. Do not report style preferences that do not change what a sentence says.
+```
+
+The cold reader of the changed passages:
+
+```text
+You read cold, adversarially and read-only, the passages of RF-M.3's texts changed in its last round of review, as text in its place: is each exact against the Lean (hypotheses: the reading formation's model the holding formation's or not; net agreement; cells listed once each and covering; which listed worlds are told apart; what is a reading and what is proved), does it read well and agree with the sentences around it and with the other places that summarize the same claim, and are its citations right?
+
+<context>
+
+The passages: PLAN §5's row on preference shaping, §4.8's item 12 and its Readings, and §13's paragraph "The cold read of the third part's texts"; 03 §12's Reading after the theorem on informing and revaluing; the overview's paragraph on informing and revaluing ("What another's reading answers can be moved…"); the dossier's entry on how it was made (its sentence on RF-M.3); the root module's L1 bullet on ListingValuation and the checker's scope sentence on it; the module header's bullet on the carrier and its Readings paragraph (the one on own_least and revalued_lowers_iff); the study template's bullet on the carrier, its Output → input and its paragraph "The cold read of the texts"; the record's law on a demonstration, its Chinese law on amounts forgone and its correspondence, English and Chinese; the board's landing text (board_rfm3.py) and the re-point's reason (repoint_rfm3.py); the cold-read page's opening paragraphs and its section "The check of how the lenses' findings were taken" with its table; the Lean review page's row R5. rfm3-check-delta.diff shows what changed in the kit's files; the integrated texts show the rest in place.
+
+Report only real problems, each with the id "new", the location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a summary line first. Quote the Lean statement where a claim's scope is at issue. Do not report style preferences that do not change what a sentence says. Say plainly in the summary if there is nothing.
+```
+
+The refuter of each reader's gaps (with `<reader>` “of how the last round of review was taken” for the first and “reading the changed passages cold” for the second):
+
+```text
+A reader (<reader>) reported the gaps below in RF-M.3's texts. Try to refute each one. Is it real: does the text as it stands say what the reader claims, and does the Lean (quote the statement) make it wrong, or the claim wider or narrower than proved, or does it disagree with the other places that state the same claim? Was it decided otherwise for a stated reason in the cold-read page's tables? If real, is the replacement right, within its cap, and consistent with the other places? Correct it where it is not. Default to real=false where the reader's case does not hold on the files.
+
+<context>
+
+The gaps (JSON):
+<the gaps, each with its id, status, location, quoted text, problem and replacement>
+```

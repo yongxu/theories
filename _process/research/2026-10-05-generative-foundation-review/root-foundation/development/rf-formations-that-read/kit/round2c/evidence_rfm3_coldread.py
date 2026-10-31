@@ -3,16 +3,19 @@
 
 Inputs (saved where the reads ran): the cross-model reader's cold read (markdown); the workflow's result, the three
 lenses' findings with their refuters' verdicts (JSON: a list of {lens, found: {verdict, findings}, verdicts:
-{verdicts}}); and the cross-model reader's two re-checks (markdown, or `-` while one has not run): the first of how
-its own points were taken and of the texts cut or added since, before the lenses ran; the second of how the lenses'
-findings were taken; and the check beside the second, a workflow's result (JSON: a list of {lens, check: {summary,
-items}, verdicts}, or `-` while it has not run). What was taken from each re-check is in RECHECKS, and from the check
-in CHECK. Usage, from the repository root:
+{verdicts}}); the cross-model reader's re-checks (markdown, or `-` while one has not run): the first of how its own
+points were taken and of the texts cut or added since, before the lenses ran; the second of how the lenses' findings
+were taken; the third of how the second's point and the check's gaps were taken; the check beside the second, a
+workflow's result (JSON: a list of {lens, check: {summary, items}, verdicts}, or `-` while it has not run); and the
+last check, beside the third, a workflow's result (JSON: a list of {reader, check: {summary, items}, verdicts}, or `-`).
+What was taken from each re-check is in RECHECKS, from the check in CHECK, and from the last check in FINAL. Usage,
+from the repository root:
 
     python3 -B <this file> <cold read .md> <lens results .json> <first re-check .md | -> <second re-check .md | ->
-        <check .json | ->
+        <check .json | -> <third re-check .md | -> <last check .json | ->
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -26,15 +29,23 @@ ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-84
          '/Users/ren/theories/.claude/worktrees/rf-landing/')
 
 reader_md, lens_json = Path(sys.argv[1]), Path(sys.argv[2])
-recheck_mds = [None if a == '-' else Path(a) for a in sys.argv[3:5]]
-check_json = None if len(sys.argv) < 6 or sys.argv[5] == '-' else Path(sys.argv[5])
+
+
+def arg(k):
+    return None if len(sys.argv) <= k or sys.argv[k] == '-' else Path(sys.argv[k])
+
+
+recheck_mds = [arg(3), arg(4), arg(6)]
+check_json, final_json = arg(5), arg(7)
 
 
 def relinked(text):
-    """Paths made relative to the checkout, and links made to resolve from this folder (relink_rfm2.py)."""
+    """Paths made relative to the checkout, and links made to resolve from this folder (relink_rfm2.py); a link whose
+    target is a placeholder (`#<…>`, which relink's pattern skips for its spaces) shown, as relink shows one that does
+    not resolve, as its text with its target as code."""
     for root in ROOTS:
         text = text.replace(root, '')
-    return relink(text)
+    return re.sub(r'\[([^\]\n]*)\]\((#<[^>\n]*>)\)', r'\1 (`\2`)', relink(text))
 
 
 def cx_body(path):
@@ -61,7 +72,10 @@ BUILD_SENTENCE = ("For the lenses' findings the module's statements did not chan
                   "in 186 declarations, every axiom report empty "
                   "([build-6](../kit/round2c/logs/build-6.log)). For the check of how they were taken, the header's "
                   "bullet on the carrier and its Readings were revised again, and it was rebuilt, the same counts, every "
-                  "axiom report empty ([build-7](../kit/round2c/logs/build-7.log)).")
+                  "axiom report empty ([build-7](../kit/round2c/logs/build-7.log)). For the last check, the header's bullets on "
+                  "amounts forgone and revaluing and on the carrier, its Readings and the docstring of `outcome_least` "
+                  "were revised, and it was rebuilt again, the same counts, every axiom report empty "
+                  "([build-8](../kit/round2c/logs/build-8.log)).")
 # The re-checks, for the opening, once they have run.
 RECHECK_SENTENCE = ("Before the lenses ran, the cross-model reader re-checked, in the session of its cold read, how its "
                     "six points were taken and the texts cut or added since: one point, the reason to keep the valuation "
@@ -72,7 +86,12 @@ RECHECK_SENTENCE = ("Before the lenses ran, the cross-model reader re-checked, i
                     "re-check](#the-re-check-of-the-lenses-findings)). Beside it, three Opus readers, one per lens, "
                     "checked how every finding was taken, each reader's gaps given to a refuter: 14 gaps, every one "
                     "judged real; with the second re-check's point, 12 distinct points, all taken ([the "
-                    "check](#the-check-of-how-the-lenses-findings-were-taken)).")
+                    "check](#the-check-of-how-the-lenses-findings-were-taken)). After those 12 points were taken, "
+                    "it re-checked them in the same session, finding nothing ([the third "
+                    "re-check](#the-third-re-check)). Beside it, two Opus readers, one checking how every point was "
+                    "taken and one reading the changed passages cold, each reader's gaps given to a refuter, found 11 "
+                    "gaps, every one judged real: 9 distinct points, all taken ([the last "
+                    "check](#the-check-of-the-checks-changes)).")
 
 # What was taken from the cross-model reader: (point, finding, taken).
 TAKEN_READER = (
@@ -336,6 +355,12 @@ RECHECKS = (
        "asserted”; the other places the incentive is read carry both qualifications (03 §12's Reading, PLAN §4.8's "
        "Readings, the module's header, the overview, the dossier and the record's correspondence), the overview's and "
        "the record's given what gains (RC2, RC3)"),)),
+    ("The third re-check",
+     "The cross-model reader, in the session of its cold read, read how its second re-check's point and the check's "
+     "gaps were taken and, as new text, the passages they changed, read-only, in a rehearsal rebuilt at the same path "
+     "on the kit at `539078292` with main at `485c6f87c`, the diff of the study folder since `22a113c0c` at its root. "
+     "Verbatim.",
+     ()),
 )
 
 
@@ -407,6 +432,68 @@ CHECK = {
             "both: “RF's plan (§4.7's paragraph on RF-M.3, §4.8, …”"),
 }
 
+# The last check, beside the third re-check: its heading, what it read, and for each gap, numbered by reader in the
+# order reported, (the reader's id, the finding in short, what was taken).
+FINAL_HEADING = "The check of the check's changes"
+FINAL_READ = ("Beside the third re-check, a workflow of two Opus readers, read-only in the same rehearsal: one checked the "
+              "12 points of the second re-check and the check against the tables of what was taken, the texts and the "
+              "Lean, giving each id a status (taken, in part, not taken, or taken with a new problem) and reporting new "
+              "problems where the same claim recurs; the other read the passages changed in that round cold, against "
+              "the Lean and the cited works. Each reader's gaps were given to one refuter asked to refute them against "
+              "the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). Verbatim: each reader's summary, "
+              "the ids it found taken, and each gap with its refuter's verdict, numbered by reader (FT for the first, "
+              "FC for the second) in the order reported; the line numbers are those of the rehearsal.")
+FINAL_TITLE = {'taken': ('The reader of how they were taken', 'FT'), 'cold': ('The cold reader', 'FC')}
+FINAL = {
+    'FT1': ('XC4', "in part: `outcome_least`'s docstring and the header's bullet on amounts forgone and revaluing state "
+                   "the revised answer's lack of residual without the shared model",
+            "the docstring: “with the reference the revised valuation and the reading formation's model the holding "
+            "formation's, the revised answer has none through the same map”; the bullet: “after a revaluation, with "
+            "that shared model, the revised answer has no residual by the revised valuation”; rebuilt, the same counts "
+            "([build-8](../kit/round2c/logs/build-8.log))"),
+    'FT2': ('RC2', "in part: the record's correspondence reads the incentive to withhold without “can”",
+            "as FC5"),
+    'FT3': ('TC4', "in part: PLAN §8's row on current-reward-function evaluation reads the counterpart without the "
+                   "shared model, and `revalued_lowers_iff`'s docstring states the loss without it",
+            "the row: “a one-decision counterpart in counts, on a shared model, of the preservation incentive their "
+            "Claim 2 permits, a reading”; the docstring unchanged, its refuter judging that part not real (a title "
+            "continuing `own_least`'s docstring, which states the shared model)"),
+    'FT4': ('new', "03 §12 states the courses alike where none tells the listed worlds apart, where `inputs_alike` "
+                   "needs only the two worlds",
+            "as FC2"),
+    'FC1': ('new', "the record's law gives the worth at “listed worlds”, readable as the reading formation's listing, "
+                   "where `answer_constant` lists by the holding formation's model",
+            "“so holding for the answer, where the worlds the holding formation lists all show one value or no "
+            "demonstration is emitted, is worth one committed move” (zh "
+            "故于持之形成所列之诸世界所示皆同处，或未发示时，为答而持值一所守之行), 360 and 86 of 420 and 190 characters"),
+    'FC2': ('new', "03 §12's sentence has the same gap",
+            "the refuter's text, which also takes FT4: “so they are alike wherever no demonstration is emitted or none "
+            "tells the two worlds apart, and, wherever none is emitted or none tells apart the worlds the holding "
+            "formation lists, holding for the answer is worth one committed move”"),
+    'FC3': ('new', "the module header's bullet on the carrier and its Readings have the same gap",
+            "the bullet: “wherever none is emitted or none tells apart the worlds the holding formation lists”; the "
+            "Readings: “nothing shown telling apart the worlds the holding formation lists”; the Lean review's row R2 "
+            "the same, its page regenerated; rebuilt with FT1"),
+    'FC4': ('new', "the study's bullet on the carrier and the summaries in PLAN §13 and the study have the same gap",
+            "the bullet: “where none tells apart the worlds the holding formation lists (answer_constant)”; both "
+            "summaries: “the worth of an answer alike stated only where no demonstration tells apart the worlds the "
+            "holding formation lists or none is emitted”; and PLAN's item 19 the same: “where no demonstration is "
+            "emitted or none tells apart the worlds the holding formation lists, holding for it is worth exactly one "
+            "committed move”"),
+    'FC5': ('new', "the record's correspondence reads the incentive to withhold under every reference unlike the "
+                   "valuation",
+            "“possible incentives to withhold and to revise”, the room made as the reader gives it (“of Bayesian "
+            "persuasion's convexity condition for full disclosure”), 1199 of 1200 characters; zh 之或有之诱因, 469 of "
+            "500"),
+    'FC6': ('new', "the dossier's lead dates RF's text 29 and 30 October, while RF-M.3's sentences in the same bullet "
+                   "were made later",
+            "the integration writes the lead's last date from the day it runs: “- Added on 29, 30 and 31 October 2026 "
+            "(board item RF, formations that read):” (on a later day, “29 and 30 October and …”)"),
+    'FC7': ('new', "the page's opening points to the lenses' table alone, while the check changed six of its rows since",
+            "the opening: “what each became is in the table, and what the checks after it changed, in theirs”, "
+            "linking the check's table and this one"),
+}
+
 reader = cx_body(reader_md)
 results = json.loads(lens_json.read_text(encoding='utf-8'))
 blocks, rows, counts = [], [], {'confirmed': 0, 'refuted': 0, 'unverified': 0}
@@ -439,7 +526,15 @@ total = sum(counts.values())
 summary = (f"The cross-model reader reported {len(TAKEN_READER)} points, every one taken. The lenses reported {total} "
            f"findings, {counts['confirmed']} confirmed and {counts['refuted']} refuted by their refuters"
            + (f", {counts['unverified']} not verified" if counts['unverified'] else '')
-           + "; what each became is in [the table](#what-was-taken-from-the-lenses).")
+           + "; what each became is in [the table](#what-was-taken-from-the-lenses)")
+CHECK_TABLE = '#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken'
+if final_json is not None:
+    summary += (f", and what the checks after it changed, in theirs ([the check's]({CHECK_TABLE}), [the last "
+                "check's](#what-was-taken-from-the-check-of-the-checks-changes)).")
+elif check_json is not None:
+    summary += f", and what the check of how they were taken changed since, in [its table]({CHECK_TABLE})."
+else:
+    summary += '.'
 intro = INTRO.replace('{SUMMARY}', summary).replace('BUILD_SENTENCE', BUILD_SENTENCE)
 intro = intro.replace('RECHECK_SENTENCE', RECHECK_SENTENCE if any(recheck_mds) else '')
 assert 'BUILD_SENTENCE' not in intro and 'RECHECK_SENTENCE' not in intro, 'a sentence of the opening is not written'
@@ -450,29 +545,34 @@ parts.append('\n## The three lenses\n')
 parts += blocks
 parts += ['### What was taken from the lenses\n', '| # | Lens | Verdict | Finding | Taken |', '|---|---|---|---|---|']
 parts += rows
-for md, (heading, read, taken) in zip(recheck_mds, RECHECKS):
-    if md is None:
-        continue
-    assert 'RECHECK2_READ' not in read, 'the second re-check is not described'
-    parts += [f'\n## {heading}\n', read + '\n', relinked(cx_body(md)) + '\n',
-              f'### What was taken from {heading[0].lower()}{heading[1:]}\n',
-              '| Point | Status | How |', '|---|---|---|']
-    parts += [f'| {p} | {s} | {cell(h)} |' for p, s, h in taken]
-if check_json is not None:
-    parts += [f'\n## {CHECK_HEADING}\n', CHECK_READ + '\n']
-    rows_check, labels = [], []
-    for result in json.loads(check_json.read_text(encoding='utf-8')):
-        title, code = LENS_TITLE[result['lens']]
+
+
+def recheck_section(md, heading, read, taken):
+    out = [f'\n## {heading}\n', read + '\n', relinked(cx_body(md)) + '\n']
+    if not taken:
+        return out + ['Nothing was found, so nothing was taken.']
+    out += [f'### What was taken from {heading[0].lower()}{heading[1:]}\n', '| Point | Status | How |', '|---|---|---|']
+    return out + [f'| {p} | {s} | {cell(h)} |' for p, s, h in taken]
+
+
+def check_section(path, heading, read, key, titles, table):
+    """A workflow's check: each reader's summary, the ids it found taken, and each gap with its refuter's verdict,
+    numbered by reader in the order reported; then the table of what was taken."""
+    out, rows_check, labels = [f'\n## {heading}\n', read + '\n'], [], []
+    for result in json.loads(path.read_text(encoding='utf-8')):
+        title, code = titles[result[key]]
         items = result['check']['items']
         gaps = [i for i in items if i['status'] != 'taken']
         verdicts = result.get('verdicts') or []
-        assert len(verdicts) == len(gaps), (result['lens'], 'a gap without a verdict')
-        parts += [f'### {title}\n', f"**Summary.** {relinked(result['check']['summary'])}\n",
-                  f"**Taken as the table says.** {', '.join(i['id'] for i in items if i['status'] == 'taken')}.\n"]
+        assert len(verdicts) == len(gaps), (result[key], 'a gap without a verdict')
+        taken_ids = [i['id'] for i in items if i['status'] == 'taken']
+        out += [f'### {title}\n', f"**Summary.** {relinked(result['check']['summary'])}\n"]
+        if taken_ids:
+            out.append(f"**Taken as the table says.** {', '.join(taken_ids)}.\n")
         for k, (g, v) in enumerate(zip(gaps, verdicts), 1):
             label = f'{code}{k}'
             labels.append(label)
-            fid, short, taken = CHECK[label]
+            fid, short, taken = table[label]
             assert g['id'] == fid == v['id'], (label, g['id'], v['id'], fid)
             head = 'a new problem' if g['id'] == 'new' else f"{g['id']} ({STATUS[g['status']]})"
             block = [f"#### {label}: {head}", '',
@@ -484,13 +584,25 @@ if check_json is not None:
             better = (v.get('replacement') or '').strip()
             if better and better != (g.get('replacement') or '').strip():
                 block += [f'**Refuter\'s replacement.** {relinked(better)}', '']
-            parts.append('\n'.join(block))
+            out.append('\n'.join(block))
             rows_check.append(f"| {label} | {fid} | {'real' if v['real'] else 'not real'} | {cell(short)} | "
                               f"{cell(relinked(taken))} |")
-    assert labels == list(CHECK), ('CHECK names a gap not reported, or misses one', labels)
-    parts += [f'### What was taken from {CHECK_HEADING[0].lower()}{CHECK_HEADING[1:]}\n',
-              '| Gap | Id | Verdict | Finding | Taken |', '|---|---|---|---|---|']
-    parts += rows_check
+    assert labels == list(table), ('the table names a gap not reported, or misses one', labels)
+    out += [f'### What was taken from {heading[0].lower()}{heading[1:]}\n',
+            '| Gap | Id | Verdict | Finding | Taken |', '|---|---|---|---|---|']
+    return out + rows_check
+
+
+for md, spec in zip(recheck_mds[:2], RECHECKS):
+    if md is not None:
+        assert 'RECHECK2_READ' not in spec[1], 'the second re-check is not described'
+        parts += recheck_section(md, *spec)
+if check_json is not None:
+    parts += check_section(check_json, CHECK_HEADING, CHECK_READ, 'lens', LENS_TITLE, CHECK)
+if recheck_mds[2] is not None:
+    parts += recheck_section(recheck_mds[2], *RECHECKS[2])
+if final_json is not None:
+    parts += check_section(final_json, FINAL_HEADING, FINAL_READ, 'reader', FINAL_TITLE, FINAL)
 text = '\n'.join(parts) + '\n'
 assert '](/' not in text and not any(root in text for root in ROOTS)
 OUT.write_text(text, encoding='utf-8')

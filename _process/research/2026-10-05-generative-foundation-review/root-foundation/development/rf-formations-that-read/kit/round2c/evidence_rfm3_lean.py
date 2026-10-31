@@ -160,8 +160,7 @@ RECHECK = (
                     "order of the holding formation's two scheduled acts, the answers apart at step 2 and one "
                     "configuration from step 3 on. Where two courses differ only in the world, the docstrings and the "
                     "header say 'from one state of each formation'; the record's laws, 03 §12's paragraph and the study likewise."),
-    ('R2', 'taken', "The Readings: `answer_constant` takes one state of each formation at every world, nothing shown "
-                    "telling the listed worlds apart; the answer is then constant and holding for it gives no strict "
+    ('R2', 'taken', "The Readings: `answer_constant` takes one state of each formation at every world, nothing shown telling apart the worlds the holding formation lists; the answer is then constant and holding for it gives no strict "
                     "advantage over the better committed move, whether or not the move it gives is the better one; "
                     "'effectiveness failing' is gone, there and in 03 §12's reading."),
     ('R3', 'taken', "The header and `revaluing_gains_iff`'s docstring: reachability under the supplied update is not "
