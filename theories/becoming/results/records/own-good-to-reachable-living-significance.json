@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-28T12:42:00+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "zh": "立场的自身意义，加上其意义随附于剖面（不受限单调性的形式部分）、沿小步的容差、以及每个可及的活的发生都由这样的小步连到自身的一个，推出立场索引、在其所及者上的生生之意义。",
     "en": "A standpoint's self-significance, with its significance supervening on profiles (the formal part of unrestricted monotonicity), tolerance along small steps, and each reachable living occurrence linked by them to an own one, gives standpoint-indexed living significance on what it reaches."
@@ -242,8 +242,8 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "推进但未完成：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
-        "en": "Advances without completing it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
+        "zh": "关涉但未回答：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
+        "en": "Bears on it without answering it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
       }
     },
     {
@@ -566,6 +566,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept; the claim split into seven laws, each read against its declarations in Becoming.ProfileReach, Becoming.Metaethics, Becoming.ValuationFrames and Becoming.Extension; the limitations and the claim's closing sentence to seven does-not-show items and the standard boundary significance-related-not-asserted, \"positive significance\" read as significance with no valence, as ProfileReach states sig; the three counterexamples taken from the review's probes, which no declaration in the references witnesses, moved to does-not-show items; the fourth counterexample narrowed to what persistence_rival_escapes_self_transcendence proves, its claims about every standpoint and the weighted order kept in the correspondence, which states them; the hypotheses, correspondence and other counterexamples kept; twelve declarations added to their files' references; no premise, status or source hash changed. Every earlier sentence is mapped in [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, the counterexamples, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为七条规律，各条对照其在 Becoming.ProfileReach、Becoming.Metaethics、Becoming.ValuationFrames 与 Becoming.Extension 中的声明核读；限制与主张的末句分入七条“未表明”与通用边界 significance-related-not-asserted，“正面意义”读作不带价值方向的意义，与 ProfileReach 对 sig 的说明一致；取自审查探针、引用中无声明见证的三条反例改为“未表明”；第四条反例收窄到 persistence_rival_escapes_self_transcendence 所证，其中关于每个立场与加权序的说法保留在已写明它们的对应中；前提、对应与其余反例保留；十二个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项、反例，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",
+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"
     }
   ],
   "text_versions": [

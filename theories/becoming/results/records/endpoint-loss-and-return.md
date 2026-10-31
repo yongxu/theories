@@ -33,7 +33,7 @@
 - Physical irreversibility does not follow: the laws are of a represented process, and their correspondence to physics is a separate obligation.
 - **Counterexample:** One occurring step admits both reversible and non-returning declared laws; a constant observation hides non-return. These are weak-description controls, not refutations of a fully specified constitutive account. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

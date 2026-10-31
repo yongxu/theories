@@ -356,6 +356,30 @@
    "page": "theories/becoming/results/records/a-code-formed-between-formations.md"
   },
   {
+   "id": "record:a-code-held-as-counts",
+   "type": "result",
+   "record": "a-code-held-as-counts",
+   "title": "A code held as counts, learned from what is heard",
+   "title_zh": "以计数持之码，由所闻而学",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-code-held-as-counts.md"
+  },
+  {
+   "id": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "result",
+   "record": "a-commuting-learner-drives-no-unread-choice",
+   "title": "A commuting learner drives no choice whose values nothing it reads tells apart",
+   "title_zh": "交换之学习者不驱动其所读皆不分二值之选择",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md"
+  },
+  {
    "id": "record:a-coupling-saturated-by-what-it-has-carried",
    "type": "result",
    "record": "a-coupling-saturated-by-what-it-has-carried",
@@ -2696,6 +2720,18 @@
    "page": "theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md"
   },
   {
+   "id": "record:identical-cells-under-noise",
+   "type": "result",
+   "record": "identical-cells-under-noise",
+   "title": "Identical cells under noise",
+   "title_zh": "噪声下之同一细胞",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/identical-cells-under-noise.md"
+  },
+  {
    "id": "record:identification-where-bounded",
    "type": "result",
    "record": "identification-where-bounded",
@@ -2910,6 +2946,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md"
+  },
+  {
+   "id": "record:keeping-widening-is-generation-losing-nothing",
+   "type": "result",
+   "record": "keeping-widening-is-generation-losing-nothing",
+   "title": "Keeping widening is generation that loses nothing",
+   "title_zh": "持续扩大即不失之生成",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.md"
   },
   {
    "id": "record:laws-at-coarser-steps",
@@ -5264,6 +5312,18 @@
    "page": "theories/becoming/results/records/the-step-index-from-own-courses.md"
   },
   {
+   "id": "record:the-test-season-meets-the-optimum-laws",
+   "type": "result",
+   "record": "the-test-season-meets-the-optimum-laws",
+   "title": "LA4's test season meets the optimum laws",
+   "title_zh": "LA4 之检验季合于最优之律",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-test-season-meets-the-optimum-laws.md"
+  },
+  {
    "id": "record:the-updater-line",
    "type": "result",
    "record": "the-updater-line",
@@ -5519,8 +5579,8 @@
    "id": "record:universal-practical-warrant",
    "type": "result",
    "record": "universal-practical-warrant",
-   "title": "Stronger universal practical warrant target",
-   "title_zh": "普遍实践根据的更强目标",
+   "title": "Whether a universal practical warrant exists",
+   "title_zh": "是否存在普遍的实践根据",
    "status": "open",
    "kind": "target",
    "region": "significance",
@@ -5900,6 +5960,18 @@
    "page": "theories/becoming/results/records/what-finitely-many-labels-fix.md"
   },
   {
+   "id": "record:what-holding-for-a-reading-is-worth",
+   "type": "result",
+   "record": "what-holding-for-a-reading-is-worth",
+   "title": "What holding an act for a reading is worth",
+   "title_zh": "为读而持其行之值",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/what-holding-for-a-reading-is-worth.md"
+  },
+  {
    "id": "record:what-keeping-widening-needs",
    "type": "result",
    "record": "what-keeping-widening-needs",
@@ -6066,6 +6138,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/when-complying-when-read-is-best.md"
+  },
+  {
+   "id": "record:when-no-route-stands-above-a-revision",
+   "type": "result",
+   "record": "when-no-route-stands-above-a-revision",
+   "title": "When no route of keeping a law stands above a revision of it",
+   "title_zh": "守律之途何时皆不居其律之修订之上",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/when-no-route-stands-above-a-revision.md"
   },
   {
    "id": "record:when-the-runs-of-a-process-settle",
@@ -6394,6 +6478,17 @@
    "theorems": 27,
    "region": "map",
    "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.MapRegions",
+   "type": "module",
+   "name": "Becoming.MapRegions",
+   "level": "L1",
+   "theorems": 39,
+   "region": "map",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -7993,11 +8088,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RevisionRoutes",
+   "type": "module",
+   "name": "Becoming.RevisionRoutes",
+   "level": "L1",
+   "theorems": 29,
+   "region": "significance",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": false
+  },
+  {
    "id": "module:Becoming.ReadStages",
    "type": "module",
    "name": "Becoming.ReadStages",
    "level": "L1",
-   "theorems": 52,
+   "theorems": 57,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -8220,6 +8326,17 @@
    "theorems": 17,
    "region": "map",
    "base": "frame",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WeightedCommuting",
+   "type": "module",
+   "name": "Becoming.WeightedCommuting",
+   "level": "L1",
+   "theorems": 18,
+   "region": "collective",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -9005,6 +9122,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.CountedCodes",
+   "type": "module",
+   "name": "Becoming.CountedCodes",
+   "level": "L1",
+   "theorems": 34,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.ExchangePremises",
    "type": "module",
    "name": "Becoming.ExchangePremises",
@@ -9298,6 +9426,17 @@
    "theorems": 248,
    "region": "significance",
    "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WideningOnTheMap",
+   "type": "module",
+   "name": "Becoming.WideningOnTheMap",
+   "level": "L2",
+   "theorems": 43,
+   "region": "significance",
+   "base": "general",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -9852,6 +9991,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.OptimumSeason",
+   "type": "module",
+   "name": "Becoming.OptimumSeason",
+   "level": "L1",
+   "theorems": 63,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.SetPointOptimum",
    "type": "module",
    "name": "Becoming.SetPointOptimum",
@@ -10044,6 +10194,17 @@
    "name": "Becoming.ReadingLoop",
    "level": "L1",
    "theorems": 51,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.HeldForReading",
+   "type": "module",
+   "name": "Becoming.HeldForReading",
+   "level": "L1",
+   "theorems": 90,
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
@@ -29084,6 +29245,12 @@
    "anchor": "r-a-prediction-read-by-what-it-predicts"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-holding-for-a-reading-is-worth"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -29552,6 +29719,18 @@
    "anchor": "r-optima-rebuild-a-depleted-base"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-the-test-season-meets-the-optimum-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-commuting-learner-drives-no-unread-choice"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -29606,6 +29785,12 @@
    "anchor": "r-imposing-a-code-breaks-the-symmetry"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-code-held-as-counts"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -29616,6 +29801,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-identical-cells-under-a-descent-treating-them-alike"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-identical-cells-under-noise"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
@@ -29892,6 +30083,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-where-the-possible-grows"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-keeping-widening-is-generation-losing-nothing"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
@@ -30210,6 +30407,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-alignment-direction-under-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-when-no-route-stands-above-a-revision"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
@@ -30923,6 +31126,16 @@
   {
    "from": "module:Becoming.Countdown",
    "to": "module:Becoming.Assurance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CountedCodes",
+   "to": "module:Becoming.FreeEnergyCounting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CountedCodes",
+   "to": "module:Becoming.SharedCodes",
    "type": "imports"
   },
   {
@@ -31688,6 +31901,16 @@
   {
    "from": "module:Becoming.Handoff",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldForReading",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldForReading",
+   "to": "module:Becoming.ShownOrder",
    "type": "imports"
   },
   {
@@ -32466,6 +32689,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.MapRegions",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.MatchedCourses",
    "to": "module:Becoming.LossMatching",
    "type": "imports"
@@ -32703,6 +32931,11 @@
   {
    "from": "module:Becoming.Optimum",
    "to": "module:Becoming.Frontier",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OptimumSeason",
+   "to": "module:Becoming.Optimum",
    "type": "imports"
   },
   {
@@ -33068,6 +33301,11 @@
   {
    "from": "module:Becoming.ReadInTime",
    "to": "module:Becoming.DrawnShaping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadStages",
+   "to": "module:Becoming.RevisionRoutes",
    "type": "imports"
   },
   {
@@ -34116,6 +34354,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.WeightedCommuting",
+   "to": "module:Becoming.Commuting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.WeightedTraces",
    "to": "module:Becoming.Weighted",
    "type": "imports"
@@ -34148,6 +34391,16 @@
   {
    "from": "module:Becoming.Wholes",
    "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WideningOnTheMap",
+   "to": "module:Becoming.HeldPossible",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WideningOnTheMap",
+   "to": "module:Becoming.KeepingWidening",
    "type": "imports"
   },
   {
@@ -34279,6 +34532,61 @@
    "from": "record:a-code-formed-between-formations",
    "to": "record:what-finitely-many-labels-fix",
    "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "module:Becoming.CountedCodes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:a-code-formed-between-formations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:capture-by-counted-choices",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:identical-cells-under-noise",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:imposing-a-code-breaks-the-symmetry",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "module:Becoming.WeightedCommuting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:the-test-season-meets-the-optimum-laws",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:what-a-commuting-law-keeps-apart",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-coupling-saturated-by-what-it-has-carried",
@@ -35224,6 +35532,11 @@
    "from": "record:acts-alike-from-a-model-or-from-an-order",
    "to": "record:what-choices-show-of-an-order",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "related"
   },
   {
    "from": "record:adaptive-closure-cannot-resolve",
@@ -36264,6 +36577,11 @@
    "from": "record:capture-by-counted-choices",
    "to": "module:Becoming.Selection",
    "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:a-code-held-as-counts",
+   "type": "related"
   },
   {
    "from": "record:capture-by-counted-choices",
@@ -41392,6 +41710,11 @@
   },
   {
    "from": "record:generation-and-degeneration-at-two-grains",
+   "to": "module:Becoming.MapRegions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:generation-and-degeneration-at-two-grains",
    "to": "record:continuation-relative-to-a-class",
    "type": "formal-reuse"
   },
@@ -42627,6 +42950,11 @@
   },
   {
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:identical-cells-under-noise",
+   "type": "related"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:risk-minimization-on-a-shared-renewal",
    "type": "related"
   },
@@ -42634,6 +42962,21 @@
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:what-a-commuting-law-keeps-apart",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "related"
   },
   {
    "from": "record:identification-where-bounded",
@@ -43409,6 +43752,41 @@
    "from": "record:keeping-forgoes-the-renewal-at-the-need",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "module:Becoming.WideningOnTheMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-keeping-widening-needs",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:where-the-possible-grows",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:where-the-possible-grows",
+   "type": "related"
   },
   {
    "from": "record:laws-at-coarser-steps",
@@ -52311,6 +52689,21 @@
    "type": "related"
   },
   {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "module:Becoming.OptimumSeason",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "related"
+  },
+  {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-updater-line",
    "to": "record:correction-is-not-calibration",
    "type": "related"
@@ -53356,6 +53749,11 @@
    "type": "related"
   },
   {
+   "from": "record:universal-practical-warrant",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "related"
+  },
+  {
    "from": "record:valuing-what-is-left-at-any-worth",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
@@ -53749,6 +54147,11 @@
    "from": "record:what-a-course-chosen-through-its-model-does-not-test",
    "to": "record:the-markov-blanket-as-a-coupling-structure",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "related"
   },
   {
    "from": "record:what-a-course-chosen-through-its-model-does-not-test",
@@ -54662,6 +55065,11 @@
   },
   {
    "from": "record:what-choices-show-of-an-order",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "related"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
    "to": "record:what-readings-fix-of-the-unread",
    "type": "related"
   },
@@ -54759,6 +55167,66 @@
    "from": "record:what-finitely-many-labels-fix",
    "to": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "related"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.Dissipation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.HeldForReading",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.Keeping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.ShownOrder",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:acts-alike-from-a-model-or-from-an-order",
+   "type": "related"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:what-choices-show-of-an-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "formal-reuse"
   },
   {
    "from": "record:what-keeping-widening-needs",
@@ -55272,6 +55740,11 @@
   },
   {
    "from": "record:when-complying-when-read-is-best",
+   "to": "module:Becoming.RevisionRoutes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-complying-when-read-is-best",
    "to": "module:Becoming.Unread",
    "type": "proved-in"
   },
@@ -55289,6 +55762,31 @@
    "from": "record:when-complying-when-read-is-best",
    "to": "record:what-readings-fix-of-the-unread",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:when-complying-when-read-is-best",
+   "to": "record:when-no-route-stands-above-a-revision",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "module:Becoming.RevisionRoutes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:becoming-spine-instances",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:reserved-shutdown-during-recovery",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:when-complying-when-read-is-best",
+   "type": "related"
   },
   {
    "from": "record:when-the-runs-of-a-process-settle",
@@ -58316,6 +58814,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
    "to": "record:what-readings-fix-of-the-unread",
    "type": "states"
@@ -58571,6 +59074,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+   "to": "record:a-code-held-as-counts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
+   "to": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
    "to": "record:a-pool-read-by-its-majority",
    "type": "states"
@@ -58648,6 +59161,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-a-descent-treating-them-alike",
    "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "to": "record:identical-cells-under-noise",
    "type": "states"
   },
   {
@@ -58813,6 +59331,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
    "to": "record:the-rest-outruns-the-renewal",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws",
+   "to": "record:the-test-season-meets-the-optimum-laws",
    "type": "states"
   },
   {
@@ -59086,6 +59609,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing",
+   "to": "record:keeping-widening-is-generation-losing-nothing",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-living-significance-on-held-lives",
    "to": "record:living-significance-on-held-lives",
    "type": "states"
@@ -59313,6 +59841,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+   "to": "record:when-no-route-stands-above-a-revision",
    "type": "states"
   },
   {

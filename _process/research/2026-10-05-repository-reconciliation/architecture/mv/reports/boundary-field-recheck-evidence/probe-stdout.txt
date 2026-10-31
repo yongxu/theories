@@ -1,0 +1,80 @@
+{
+ "run": "core run 20261030T131028.245732Z; main 4ac8cf27e",
+ "constants": 50973,
+ "root_constants": 2260,
+ "located_in_grammar_or_prelude_but_off_the_root": 64,
+ "off_root_examples": [
+  "Belief.rate_changes_on_step",
+  "Belief.rate_read_in_regularity",
+  "ClosedCapture.Beyond.closed_line",
+  "ClosedCapture.Beyond.open_line_ends",
+  "ClosedCapture.constant_iff_unread",
+  "ClosedCapture.lock_line",
+  "ClosedCapture.lockedAlike",
+  "ClosedCapture.lockedAlike_class",
+  "ClosedCapture.loss_alters",
+  "ClosedCapture.loss_ends_line",
+  "ClosedCapture.orbit_paced",
+  "ClosedCapture.turn_fast"
+ ],
+ "theorems_with_a_grammar_name": 412,
+ "grammar_laws": 391,
+ "grammar_named_left_out": {
+  "names a closed value": 13,
+  "names no grammar term other than «际»": 8
+ },
+ "left_out_examples": {
+  "names a closed value": [
+   "«两火以薪定理»",
+   "«两火同火不足以定理»",
+   "«火之见证不择类»",
+   "«火薪相须»",
+   "«以核为判据则火无续»",
+   "Map.«生守相杂»"
+  ],
+  "names no grammar term other than «际»": [
+   "«从缘生非文法之理»",
+   "«离觉则皆不觉»",
+   "«非真则假»",
+   "«非假则真»",
+   "«是不俱当»",
+   "«必或不当当且仅当弱排中»"
+  ]
+ },
+ "forwarders_of_grammar_laws": [
+  "Amounts.fallsStop_of_ends -> «尽则不或屡»",
+  "Flow.WithinFeeding.refl -> «所闭之自反»",
+  "Flow.WithinFeeding.trans -> «所闭之传递»",
+  "Flow.WithinFeedingAcross.refl -> «所闭之自反»",
+  "Flow.WithinFeedingAcross.trans -> «所闭之传递»",
+  "Flow.closedAcross_within -> «所闭之闭»",
+  "Flow.fedClosed_within -> «所闭之闭»",
+  "WithinClosure.not_rel -> «所闭之界»",
+  "WithinClosure.of_rel -> «缘在所闭»",
+  "WithinClosure.refl -> «所闭之自反»",
+  "WithinClosure.trans -> «所闭之传递»",
+  "closedUnder_withinClosure -> «所闭之闭»",
+  "closure_iff_certified -> «所闭之证»",
+  "not_within_of_closed -> «闭而外则不所闭»"
+ ],
+ "central_declarations": 118,
+ "rows_passing_the_name_test": [],
+ "grammar_rows": 44,
+ "grammar_rows_reaching_a_grammar_law": 43,
+ "grammar_rows_reaching_none": [
+  "Web.Whole.family_excess_ends"
+ ],
+ "rows_that_are_forwarders": [],
+ "balance_in_statement": {
+  "grammar": 12,
+  "other": 19
+ }
+}
+Flow.beyond_gives_nothing {"law": "«所闭之界»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«所闭之界»"], "bridges_needed": ["eq_zero_of_not_pos"], "bridges_u4_names": ["eq_zero_of_not_pos"], "needed_not_named": [], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Flow.withinSystem_of_withinInfluence {"law": "«所闭之单调»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«所闭之单调»"], "bridges_needed": ["Flow.shares_of_affectedBy", "WithinClosure.mono"], "bridges_u4_names": ["shares_of_affectedBy"], "needed_not_named": ["WithinClosure.mono"], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Law.drawn_iff_not_returns {"law": "«定后有后则入当且仅当不返»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«定后有后则入当且仅当不返»"], "bridges_needed": ["Branching.law_reach_iff", "Branching.law_trace_iff", "Branching.law_trace_of", "Branching.units_length", "Law.absorbing_iff_closed", "Law.drawn_iff_drawnIn", "Law.next_fixed", "Law.next_total", "Law.orbit_add", "Law.orbit_shift", "Law.reaches_iff_orbit", "Law.reaches_of_orbit", "Law.returns_iff", "Law.returns_iff_reaches"], "bridges_u4_names": ["drawn_iff_drawnIn", "absorbing_iff_closed", "reaches_iff_orbit", "returns_iff_reaches"], "needed_not_named": ["Branching.law_reach_iff", "Branching.law_trace_iff", "Branching.law_trace_of", "Branching.units_length", "Law.next_fixed", "Law.next_total", "Law.orbit_add", "Law.orbit_shift", "Law.reaches_of_orbit", "Law.returns_iff"], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Law.lossless_iff_returns {"law": "«有限遍后定后则定前当且仅当皆返»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«有限遍后定后则定前当且仅当皆返»"], "bridges_needed": ["Branching.law_reach_iff", "Branching.law_trace_iff", "Branching.law_trace_of", "Branching.units_length", "Law.lossless_iff", "Law.lossless_iff_fixedBefore", "Law.next_fixed", "Law.next_total", "Law.orbit_add", "Law.orbit_shift", "Law.reaches_iff_orbit", "Law.reaches_of_orbit", "Law.returns_iff", "Law.returns_iff_reaches"], "bridges_u4_names": ["lossless_iff_fixedBefore", "returns_iff_reaches"], "needed_not_named": ["Branching.law_reach_iff", "Branching.law_trace_iff", "Branching.law_trace_of", "Branching.units_length", "Law.lossless_iff", "Law.next_fixed", "Law.next_total", "Law.orbit_add", "Law.orbit_shift", "Law.reaches_iff_orbit", "Law.reaches_of_orbit", "Law.returns_iff"], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Learning.goAlike_iff_lumped {"law": "«像定后当且仅当同行»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«像定后当且仅当同行»", "«同行之逐点»"], "bridges_needed": ["Learning.lumped_iff_fixed_image", "goAlikeUnder_iff_alike"], "bridges_u4_names": ["goAlikeUnder_iff_alike", "lumped_iff_fixed_image"], "needed_not_named": [], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Tolerance.answers_restores_iff {"law": "«承之迭»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«承之迭»", "«迭之末步»"], "bridges_needed": ["Tolerance.KeepsInclusion.course", "Tolerance.KeepsInclusionInto.course", "Tolerance.answers_keeps", "Tolerance.worst_start", "Withholding.Chain.last", "Withholding.Chain.last_of_eq", "Withholding.Chain.zero_eq", "Withholding.answers_closed", "Withholding.chain_iff_steps"], "bridges_u4_names": ["chain_iff_steps"], "needed_not_named": ["Tolerance.KeepsInclusion.course", "Tolerance.KeepsInclusionInto.course", "Tolerance.answers_keeps", "Tolerance.worst_start", "Withholding.Chain.last", "Withholding.Chain.last_of_eq", "Withholding.Chain.zero_eq", "Withholding.answers_closed"], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+Withholding.withholding_spreads {"law": "«存承之迭»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«存承之迭»", "«迭之末步»"], "bridges_needed": ["Withholding.Chain.last", "Withholding.Chain.last_of_eq", "Withholding.Chain.zero_eq", "Withholding.chain_iff_steps", "Withholding.waitsAll_closed", "Withholding.within_iff_withinSteps"], "bridges_u4_names": ["within_iff_withinSteps", "chain_iff_steps"], "needed_not_named": ["Withholding.Chain.last", "Withholding.Chain.last_of_eq", "Withholding.Chain.zero_eq", "Withholding.waitsAll_closed"], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}
+WithinMoves.after_course {"law": "«迭内之接»", "law_is_grammar_law": true, "law_reached": true, "laws_used": ["«迭内之接»"], "bridges_needed": ["trace_iff_steps", "trace_steps", "withinMoves_iff_withinSteps"], "bridges_u4_names": ["trace_steps", "trace_iff_steps", "withinMoves_iff_withinSteps"], "needed_not_named": [], "named_not_needed": [], "root_theorems_named": [], "counting_laws_reached": []}

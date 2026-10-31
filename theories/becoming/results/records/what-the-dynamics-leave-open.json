@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T10:39:27+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
-    "en": "No statement that reads only the dynamics excludes a rival or, given a standpoint and a formation, entails the continuation condition. A rival is exactly a point lacking significance; a premise excludes every rival exactly where no point lacks significance, the condition where each point is decided.",
-    "zh": "只读动力之陈述不排除任何对手，有立场与形成处亦不推出延续之条件。对手恰是某处缺意义；一前提排除一切对手恰当其推出无处缺意义，每处意义已定处即为条件。"
+    "en": "No satisfiable statement reading only the dynamics excludes a rival or, with a standpoint and a formation, entails the continuation condition. A rival is exactly a point lacking significance; a premise excludes every rival exactly where no point lacks it, the condition where each point is decided.",
+    "zh": "可满足而只读动力之陈述不排除任何对手，有立场与形成处亦不推出延续之条件。对手恰是某处缺意义；一前提排除一切对手恰当其推出无处缺意义，每处意义已定处即为条件。"
   },
   "laws": [
     {
@@ -171,6 +171,20 @@
     {
       "en": "22 October 2026: added (SD1), for README note [^ethics], which had stated outside Lean that a rival is consistent with every law of the dynamics; study section 347.",
       "zh": "2026年10月22日：新增（SD1），为 README 注 [^ethics]，该注原于 Lean 之外陈述对手与动力之一切律相容；研究第 347 节。"
+    },
+    {
+      "en": "30 October 2026: the statement made exact, with no change to what is proved: a satisfiable statement, as the home section and ReadsOnlyDynamics.not_entails have it, since an unsatisfiable one entails the condition vacuously; the earlier bytes are in text_versions.",
+      "zh": "2026年10月30日：陈述改为确切，所证无改变：为可满足之陈述，如本节与 ReadsOnlyDynamics.not_entails 所述，因不可满足者空洞地推出条件；先前字节见 text_versions。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/dc1cc614c5286568/what-the-dynamics-leave-open.json",
+      "sha256": "dc1cc614c52865689958103bf9371ef27c06563fd51ffa2b41385c21165e2e31",
+      "note": {
+        "en": "Exact record bytes before its statement was made exact (30 October 2026).",
+        "zh": "陈述改为确切之前的记录原始字节（2026年10月30日）。"
+      }
     }
   ]
 }

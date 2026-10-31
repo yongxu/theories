@@ -8,7 +8,7 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "zh": "生生之意义加公开的实践承诺与实际对应，形成保留、转化、实际交接、有限结束及有界责任的一般候选。",
     "en": "Living significance with the explicit practical commitments and actual correspondence supplies a general candidate for preservation, transformation, actual transfer, finite ending and bounded responsibility."
@@ -93,8 +93,8 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "无公理目标独立保留，不是本成果的未完成条件。",
-        "en": "The independent axiom-free target remains open and is not an unmet completion gate for this result."
+        "zh": "是否存在对一切可能心智都有约束力的根据，此问题保持开放，不是本成果的未完成条件。",
+        "en": "The question of a warrant binding every possible mind stays open and is not an unmet completion gate for this result."
       }
     },
     {
@@ -543,6 +543,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the first hypothesis names living significance in current terms as a premise, a condition stated and not asserted, which under the continuation condition is a theorem adding no premise beyond that condition, instead of the retired G0 interface and 'another axiom'; the alias for the retired label is kept for search. The claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设按现行术语称生生之意义为前提，即陈述而不断言的条件，在延续条件之下是定理，不在该条件之外另增前提，不再用退役的 G0 接口与“另一条公理”；退役标签的别名保留以便检索。主张不变。"
+    },
+    {
+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",
+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"
     }
   ],
   "text_versions": [

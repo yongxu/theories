@@ -31,7 +31,7 @@ Living significance with the explicit practical commitments supports preservatio
 - It does not supply a complete mixed ranking.
 - **Counterexample:** The strength of the priority of basic conditions is an additional revisable commitment; crossed basic losses may remain incomparable, with no universal utility score. [source](../../history/PRACTICAL-JUDGMENT.md)
 
-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="progress--已接通"></a>
 ## Progress
@@ -71,7 +71,7 @@ Roles arise through shared living and formed dependence; causation, benefit and 
   - Output: Focal persistence after substitution while the sustainer permanently loses support under the supplied support-gated law.
   - Input: Whether replacement covers living relations previously supported together, rather than only the focal formation.
   - Preserved conditions: Retains positive needs, threshold order, supported start and persistent overdraw; alternative supply is given and its cost unmodelled, with no ethical ranking. [Substitution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Substitution.lean)
-- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). The independent axiom-free target remains open and is not an unmet completion gate for this result.
+- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). The question of a warrant binding every possible mind stays open and is not an unmet completion gate for this result.
 - related, not a proved adapter: [protection-priority-excludes-uniform-aggregation](protection-priority-excludes-uniform-aggregation.md). Reuses this result's Better and no_protection_trade_by_count, adding, in one constructed situation, J2's independence from C, the excluded natural-number score class and an agreeing bounded score; this argument is unchanged.
 - related, not a proved adapter: [becoming-spine-instances](becoming-spine-instances.md). The spine states J1/J2 on configurations as BetterAt, by definition Better; Robust is the core's CommonResponse.
 
@@ -136,6 +136,7 @@ Aliases: `Practical judgment G0/J1–J4`, `Becoming.Judgment.better_iff_betterAt
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: FrontierFrames.excluded (now Requirement.Frontier.excluded); FrontierFrames.means (now Requirement.Required.means); FrontierFrames.performed (now Requirement.Required.performed). Proof bindings (Decidedness.lean, Frontier.lean, FrontierFrames.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Decidedness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Frontier.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; FrontierFrames.lean, takes as its final section AcceptanceFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and PracticalJudgment) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Decidedness, Becoming.Frontier, Becoming.FrontierFrames, Becoming.FrontierWorlds, Becoming.Inquiry and Becoming.Lexical). The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the first hypothesis names living significance in current terms as a premise, a condition stated and not asserted, which under the continuation condition is a theorem adding no premise beyond that condition, instead of the retired G0 interface and 'another axiom'; the alias for the retired label is kept for search. The claim is unchanged.
+- 30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](practical-judgment-under-living-significance.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -146,4 +147,4 @@ Aliases: `Practical judgment G0/J1–J4`, `Becoming.Judgment.better_iff_betterAt
 
 </details>
 
-Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

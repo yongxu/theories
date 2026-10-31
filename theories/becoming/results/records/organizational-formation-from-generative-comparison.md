@@ -31,7 +31,7 @@
 - It does not derive complete institutional authority.
 - **Counterexample:** Overbuilding actually depletes the living basis; identical construction reports fail to classify it. Faithful retained-amount information repairs this local omission. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalOrganization.lean)
 
-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="progress--已接通"></a>
 ## Progress

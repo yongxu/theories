@@ -146,7 +146,8 @@ Aliases: `What can be born next against what continues`, `次可生者与相续`
 
 - 28 October 2026: added (UE13), what can be born next against what continues: sequential growth a process holding the past, on whose every course from a causal set what can be born next keeps widening; the stems reverse the inclusion of precedence, labelled or up to relabelling, so widening adds no continuation; read on what continues the order reverses and no strict order contains both; finding the pair a widening loses is excluded middle; most comparisons need the empty start; no configuration renews without end; a finer class on links; kinds of birth not so ordered; after a review and a re-check; study section 431.
 - 28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.
+- 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the Chinese of laws 22 and 23 and of the dependency detail listing the grammar's names writes «生生» (renewal without end), as the English and the theorems state, where it wrote 生生不息; nothing the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-27T20:05:52+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

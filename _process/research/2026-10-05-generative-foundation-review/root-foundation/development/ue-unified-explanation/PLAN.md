@@ -69,7 +69,7 @@ In the account's terms, the theory explains reality as one unfolding where four 
   - the optimum laws (row 20, which row 19's drain is);
   - weakly, the order of what can form (row 5).
 
-  Beyond those rows, so does Price, Fisher and Hamilton joined to the flow, now one of the two evolution rows the audit added to 08 §8's table. Every third part joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory's own, and each forbidden statement is already known in a neighbouring field: critical depensation, the Malthusian bound, bioeconomic overharvesting, pinwheel scheduling. So the theory reaches farther than each framework alone, and not farther than the sciences taken together. That fixes what the objective can claim. Its contribution so far is the joining itself, one account with its premises in one place. Reaching farther than the sciences together needs results no neighbouring field states. The candidates:
+  Beyond those rows, so does Price, Fisher and Hamilton joined to the flow, now one of the two evolution rows the audit added to 08 §8's table. Every third part joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory's own, and each forbidden statement is already known in a neighbouring field: critical depensation, the Malthusian bound, bioeconomic overharvesting, pinwheel scheduling. So the theory reaches farther than the few frameworks that lack conservation, renewal over time or a threshold, by joining them to its premises, is level with or behind the rest, and does not reach farther than the sciences taken together (the verdict as the twenty-first review corrected it: "each framework alone" held for four or five of the rows read). That fixes what the objective can claim. Its contribution so far is the joining itself, one account with its premises in one place. Reaching farther than the sciences together needs results no neighbouring field states. The candidates:
   - the second-order direction of 生生 (UE4);
   - the audit's ranked unproved third parts: the pace of selection bounded by the inflow, a counting bound on surviving expected joint excess, what lies beyond falling along improvement;
   - frozen tests that could fail.
@@ -119,7 +119,7 @@ The overview's open list names what a full explanation must face ([§10](../../.
 
 ## 8. Owners
 
-- UE (coordination) is held by the session that wrote this plan, which also drafted and landed UE0, UE1, UE2, UE1b, UE4, UE5, UE7, UE9, UE10, UE11, UE12, UE13, UE14, UE15, UE16, UE17, UE18, UE19, UE20, UE21, UE22 and UE23, and holds UE8.
+- UE (coordination) is held by the session that wrote this plan, which also drafted and landed UE0, UE1, UE2, UE1b, UE4, UE5, UE7, UE9, UE10, UE11, UE12, UE13, UE14, UE15, UE16, UE17, UE18, UE19, UE20, UE21, UE22, UE23, UE24 and UE25, and holds UE8.
 - UE6, the search for results no neighbouring field states, is held by another session (Unification and coherence progress); UE7 is kept disjoint from it.
 - Item 8 is unclaimed; claim it on the board. UE3 is not planned (§4, item 4).
 

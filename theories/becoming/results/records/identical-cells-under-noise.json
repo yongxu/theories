@@ -1,0 +1,422 @@
+{
+  "schema_version": 2,
+  "id": "identical-cells-under-noise",
+  "title": {
+    "en": "Identical cells under noise",
+    "zh": "噪声下之同一细胞"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-30T16:10:59+00:00",
+  "statement": {
+    "en": "Under the core's descent with an exchangeable field and noise of one law at every cell, over finite states, an exchangeable start stays exchangeable at every step: every cell has the law of every other, and where noise and start are laws each assignment of distinct states has weight at most 1/m!.",
+    "zh": "于场可交换、每一细胞噪声同律之核心下降，状态有限，可交换之起点于每一步给出可交换之律：每一细胞之律即其余每一细胞之律，噪声与起点皆为律时，每一相异状态之指派权重至多 1/m!。"
+  },
+  "laws": [
+    {
+      "en": "Over finitely many cells and states, weights on configurations move in discrete steps by kernels, one per step. A kernel commuting with a rearrangement of the cells keeps weights it leaves unchanged unchanged, so under kernels commuting with every rearrangement an exchangeable start stays exchangeable at every step; nonnegative kernels with rows of total one keep a law a law (weightsAt_exchangeable and eleven more).",
+      "zh": "有限多细胞、每一细胞有限多状态之构型上之权重，于离散之步中由核（每步一核）移动：与细胞之一重排可交换之核，保其所不变之权重不变，故于与每一重排可交换之诸核下，可交换之起点于每一步给出可交换之律；非负且每行总和为一之核保律为律（weightsAt_exchangeable 等十二项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.rearrange",
+        "Becoming.CellsUnderNoise.Invariant",
+        "Becoming.CellsUnderNoise.Exchangeable",
+        "Becoming.CellsUnderNoise.KernelCommutes",
+        "Becoming.CellsUnderNoise.step",
+        "Becoming.CellsUnderNoise.weightsAt",
+        "Becoming.CellsUnderNoise.step_invariant",
+        "Becoming.CellsUnderNoise.weightsAt_invariant",
+        "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+        "Becoming.CellsUnderNoise.step_nonneg",
+        "Becoming.CellsUnderNoise.step_total",
+        "Becoming.CellsUnderNoise.weightsAt_law"
+      ]
+    },
+    {
+      "en": "Identical cells at the start: the law of all cells in one state, and the law of the cells independent, each of one law, are exchangeable laws; the law of one configuration is unchanged by a rearrangement exactly where the configuration is, so it is exchangeable only with all its cells alike (pointMass_exchangeable_alike and seven more).",
+      "zh": "起点之同一细胞：诸细胞同处一状态之律，与诸细胞独立、各依同一律之律，皆为可交换之律；一构型之律恰于该构型为一重排所不变处为其所不变，故唯其细胞皆相同时可交换（pointMass_exchangeable_alike 等八项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.pointMass",
+        "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+        "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+        "Becoming.CellsUnderNoise.alike_fixed",
+        "Becoming.CellsUnderNoise.alike_exchangeable",
+        "Becoming.CellsUnderNoise.independent_exchangeable",
+        "Becoming.CellsUnderNoise.independent_law",
+        "Becoming.CellsUnderNoise.pointMass_law"
+      ]
+    },
+    {
+      "en": "What an exchangeable law leaves undecided: every cell has the law of every other, and where the law is nonnegative with total one, each assignment of distinct states to the cells has weight at most one over the number of orderings of the cells (marginal_eq, distinct_le).",
+      "zh": "可交换之律所未定者：每一细胞之律即其余每一细胞之律；律非负且总和为一时，诸细胞之每一相异状态之指派其权重至多为细胞诸排序之数之倒数（marginal_eq、distinct_le）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.marginal",
+        "Becoming.CellsUnderNoise.marginal_eq",
+        "Becoming.CellsUnderNoise.distinct_le"
+      ]
+    },
+    {
+      "en": "Stationary laws come in rearranged sets under a kernel commuting with every rearrangement, so a unique stationary law is exchangeable; the Gibbs weights exp(-κF) normalized, for any real κ, of a free energy no rearrangement changes are exchangeable, no kernel being shown to keep them (unique_stationary_exchangeable and three more).",
+      "zh": "于与每一重排可交换之核下，平稳之律成重排之集，故唯一之平稳律可交换；无重排能改之自由能之 Gibbs 权重 exp(-κF) 归一（κ 为任一实数）可交换，然未示何核保之（unique_stationary_exchangeable 等四项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.Stationary",
+        "Becoming.CellsUnderNoise.stationary_rearranged",
+        "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+        "Becoming.CellsUnderNoise.gibbs_exchangeable"
+      ]
+    },
+    {
+      "en": "A rule with noise of one law at every cell, each cell going independently from the state the rule gives it: where the rule commutes with a rearrangement so does the rule with noise; with no noise the law of one configuration follows the rule's run (noisy_commutes, weightsAt_noiseless and three more).",
+      "zh": "规则加每一细胞同一律之噪声，每一细胞自规则所予之状态独立而行：规则与一重排可交换处，加噪声之规则亦然；无噪声时一构型之律随规则之运行（noisy_commutes、weightsAt_noiseless 等五项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.noisy",
+        "Becoming.CellsUnderNoise.noisy_commutes",
+        "Becoming.CellsUnderNoise.noiseless",
+        "Becoming.CellsUnderNoise.step_noiseless",
+        "Becoming.CellsUnderNoise.weightsAt_noiseless"
+      ]
+    },
+    {
+      "en": "The join to the core: the core's descent, read cell by cell on a configuration read as a list, has the core's run as its run, so with no noise the law weighs one exactly the configuration the core's run reaches; two cells alike at the start stay alike whatever the field (noiseless_run, cellwise_alike and three more).",
+      "zh": "与核心相接：核心之下降于读作列之构型上逐细胞而读，其运行即核心之运行，故无噪声时律恰予核心之运行所达之构型以权重一；起点相同之二细胞无论场如何皆保持相同（noiseless_run、cellwise_alike 等五项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.cellwise",
+        "Becoming.CellsUnderNoise.ofFn_cellwise",
+        "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+        "Becoming.CellsUnderNoise.cellwise_alike",
+        "Becoming.CellsUnderNoise.noiseless_run"
+      ]
+    },
+    {
+      "en": "Exchanging neighbouring cells is rearranging by a transposition, and these generate every rearrangement; so with an exchangeable field the core's descent commutes with every rearrangement and its run from a rearranged start is the rearranged run, and a free energy symmetric in the core's sense and its Gibbs weights are unchanged by every rearrangement (ofFn_rearranged, run_rearranged and four more).",
+      "zh": "交换相邻细胞即依一对换重排，而诸对换生成每一重排；故场可交换时核心之下降与每一重排可交换，其自重排之起点之运行即重排之运行；依核心之义对称之自由能及其 Gibbs 权重为每一重排所不变（ofFn_rearranged、run_rearranged 等六项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.ofFn_swap",
+        "Becoming.CellsUnderNoise.ofFn_rearranged",
+        "Becoming.CellsUnderNoise.cellwise_commutes",
+        "Becoming.CellsUnderNoise.run_rearranged",
+        "Becoming.CellsUnderNoise.symmetric_rearranged",
+        "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable"
+      ]
+    },
+    {
+      "en": "The core's descent with noise of one law at every cell, each cell going independently from its own state and the field it senses, commutes with every rearrangement where the field is exchangeable: from an exchangeable start the weights are exchangeable at every step, and where noise and start are laws each assignment of distinct states to the m cells has weight at most 1/m! (noisyDescent_distinct_le and eight more).",
+      "zh": "核心之下降加每一细胞同一律之噪声，每一细胞依其自身状态与其所感之场独立而行：场可交换时与每一重排可交换，故自可交换之起点，权重于每一步皆可交换；噪声与起点皆为律时，m 个细胞之每一相异状态之指派权重至多 1/m!（noisyDescent_distinct_le 等九项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.noisyDescent",
+        "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+        "Becoming.CellsUnderNoise.noisyDescent_commutes",
+        "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+        "Becoming.CellsUnderNoise.noisyDescent_rows",
+        "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+        "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+        "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+        "Becoming.CellsUnderNoise.noisyDescent_from_independent"
+      ]
+    },
+    {
+      "en": "In finitely many states independent noise can part identical cells but never with certainty: from all cells in one state, under the descent with noise that is a law, some configuration of all cells alike has positive weight at every step; with a fair coin of its own for each of two cells, they part after one step with weight one quarter (alike_positive, Witness.independentNoise_parts).",
+      "zh": "于有限多状态，独立之噪声能分开同一细胞，然从不必然：自诸细胞同处一状态，于噪声为律之下降，每一步皆有某一诸细胞相同之构型具正权重；二细胞各有其公平之硬币时，一步之后以四分之一之权重分开（alike_positive、Witness.independentNoise_parts）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.alike_positive",
+        "Becoming.CellsUnderNoise.Witness.independentNoise_parts"
+      ]
+    },
+    {
+      "en": "A kernel taking every configuration of two cells to either parted one at one half commutes with the exchange and parts alike cells with certainty; it is the fair mixture of two rules assigning the places by the cells' numbers, neither commuting with the exchange, and no noise of one law at every cell; its only stationary law is that half and half (Witness.toParted_eq_mixture and seventeen more).",
+      "zh": "令二细胞之每一构型以各一半之权重至二分开构型之一之核，与交换二细胞可交换，且必然分开相同之细胞；其为二规则之公平混合，每一规则依细胞之编号指派位置，皆不与交换可交换；且非每一细胞同一律之噪声；其唯一平稳律即此各半（Witness.toParted_eq_mixture 等十八项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.Witness.Two",
+        "Becoming.CellsUnderNoise.Witness.sum_two",
+        "Becoming.CellsUnderNoise.Witness.partedUniform",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+        "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+        "Becoming.CellsUnderNoise.Witness.toParted",
+        "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+        "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+        "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+        "Becoming.CellsUnderNoise.Witness.toParted_once",
+        "Becoming.CellsUnderNoise.Witness.alike_none",
+        "Becoming.CellsUnderNoise.Witness.each_half",
+        "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+        "Becoming.CellsUnderNoise.Witness.assign",
+        "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+        "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture"
+      ]
+    },
+    {
+      "en": "A field reading the state of the first cell reads no cell's number, yet reads the places through the list's order and is not exchangeable; with each cell flipping by it and no noise, from the parted half and half it gives cell 0 off and cell 1 on weight one and the two cells different laws (Witness.firstCell_assigns and three more).",
+      "zh": "读第一细胞之状态之场不读细胞之编号，然经列之次序读位置，且不可交换；每一细胞依之翻转、无噪声，自分开之各半起，予细胞 0 关、细胞 1 开以权重一，二细胞之律相异（Witness.firstCell_assigns 等四项）。",
+      "declarations": [
+        "Becoming.CellsUnderNoise.Witness.firstCell",
+        "Becoming.CellsUnderNoise.Witness.flipBy",
+        "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+        "Becoming.CellsUnderNoise.Witness.firstCell_assigns"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker; the core laws it reads have empty axiom reports, and cellwise, ofFn_cellwise, ofFn_iterate_cellwise and cellwise_alike use no Classical.choice.",
+      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告；其所读之核心之律公理报告皆空，cellwise、ofFn_cellwise、ofFn_iterate_cellwise 与 cellwise_alike 不用 Classical.choice。"
+    },
+    {
+      "en": "Modelling choices: finitely many cells and states; real weights on configurations; a kernel a function of two configurations, with no measurability; discrete synchronous steps, the kernel allowed to change from step to step; the noise independent across cells and of one law, reading a cell's own state and the field it senses; the rearrangements all permutations of the cells.",
+      "zh": "建模之选：有限多细胞与状态；构型上之实数权重；核为二构型之函数，无可测性；离散同步之步，核可逐步而变；噪声于诸细胞间独立且同律，读细胞自身状态与其所感之场；重排为细胞之全部置换。"
+    },
+    {
+      "en": "Exchangeability at every step needs a field exchangeable in the core's sense and an exchangeable start; the bound 1/m! needs in addition noise that is nonnegative with weights from each state and field totalling one, and a start that is a law.",
+      "zh": "每一步之可交换需场依核心之义可交换及可交换之起点；1/m! 之界另需噪声非负且自每一状态与场之权重总和为一，及起点为律。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Densities, continuous states or time, or Langevin flows: with a density exact alikeness has probability zero after one step, while here alike configurations keep weight.",
+      "zh": "密度、连续之状态或时间，或 Langevin 流：有密度时一步之后恰相同之概率为零，而此处相同之构型保有权重。",
+      "kind": "scope"
+    },
+    {
+      "en": "Whether a realization parts, or which place a given cell reaches.",
+      "zh": "一实现是否分开，或某一细胞达于何位。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which asymmetry actually differentiates cells.",
+      "zh": "何种不对称实际分化细胞。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a given kernel has a stationary law, a unique one, or one approached at any rate, or that any kernel keeps the Gibbs weights.",
+      "zh": "某一核有平稳律、唯一之平稳律或以某速率趋近之平稳律，或任一核保 Gibbs 权重。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the 2015 paper's simulation fails: its scheme has the law's form, and no theorem here models it.",
+      "zh": "2015 年论文之模拟失败：其方案合此律之形式，而此处无定理为之建模。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which configuration, differentiated or not, is better.",
+      "zh": "何构型（分化与否）更好。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "detail": {
+        "en": "A field reading the state of the first cell reads no cell's number, yet, not being exchangeable, from the parted half and half, an exchangeable start, with no noise it gives one assignment weight one and the two cells different laws (Witness.firstCell_assigns).",
+        "zh": "读第一细胞之状态之场不读细胞之编号，然以其不可交换，自可交换之起点分开之各半，无噪声，予一指派以权重一，二细胞之律相异（Witness.firstCell_assigns）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "detail": {
+        "en": "A kernel commuting with exchanging two cells parts two alike cells with certainty: it is the fair mixture of two rules assigning the places by the cells' numbers, and no noise of one law at every cell (Witness.alike_none, Witness.toParted_eq_mixture, Witness.toParted_not_noisyDescent).",
+        "zh": "与交换二细胞可交换之核必然分开二相同之细胞：其为依细胞之编号指派位置之二规则之公平混合，且非每一细胞同一律之噪声（Witness.alike_none、Witness.toParted_eq_mixture、Witness.toParted_not_noisyDescent）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T160959.698859Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; not reviewed by a person.",
+    "zh": "外围检查器 check_cells_under_noise.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261030T160959.698859Z）：CellsUnderNoise 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块（含 FreeEnergyGuarantees）皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE24）及复查（RECHECK-UE24），见研究第 468 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "Densities and continuous time, a Langevin form of the law; a kernel keeping the Gibbs weights, as under detailed balance; a frozen run of the 2015 scheme recording the weight of each assignment of places; the law in the pure core; review by a person.",
+    "zh": "密度与连续时间，此律之 Langevin 形式；保 Gibbs 权重之核，如于细致平衡之下；2015 年方案之冻结运行，记录每一位置指派之权重；纯核心中之此律；人之审查。"
+  },
+  "correspondence": {
+    "en": "Curie's principle (Curie 1894; Chalmers 1970, British Journal for the Philosophy of Science 21) in its form for indeterministic laws, a symmetric cause giving a symmetric distribution of effects (Ismael 1997, Synthese 110; Castellani and Ismael 2016, Philosophy of Science 83); spontaneous symmetry breaking, a symmetry the law keeps broken only in realizations (Earman 2004); no deterministic rule treating anonymous processors alike singles one out (Angluin 1980), while independent coins, one for each, break the symmetry with probability one, never with certainty within bounded steps (Itai and Rodeh 1990). Against Friston, Levin, Sengupta and Pezzulo (2015): their scheme, initial expectations independent and of one law, a signal symmetric in the cells and small independent noise, has the law's form, and the paper never claims which cell takes which place, so the law forbids nothing of it. Exchangeable laws staying exchangeable is classical; new are the join to the core's descent, its field, update and run, and the reading. Graded in UE24's NOTE.",
+    "zh": "Curie 原理（Curie 1894；Chalmers 1970，British Journal for the Philosophy of Science 21）之非决定论形式：对称之因给出效应之对称分布（Ismael 1997，Synthese 110；Castellani、Ismael 2016，Philosophy of Science 83）；自发对称破缺：律所保之对称只于实现中破（Earman 2004）；无确定之规则能于同等相待之匿名处理器中择出其一（Angluin 1980），而各有一独立之硬币则以概率一破对称，然于有界之步内从不必然（Itai、Rodeh 1990）。针对 Friston、Levin、Sengupta、Pezzulo（2015）：其方案（初始期望独立同律、信号于诸细胞对称、小而独立之噪声）合此律之形式，且论文从未称何细胞得何位，故此律不禁其任何陈述。可交换之律保持可交换为经典；新者为与核心之下降（其场、更新与运行）相接及其读法。分级见 UE24 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+  "aliases": [
+    "Identical cells under noise",
+    "噪声下之同一细胞",
+    "exchangeable law",
+    "Curie's principle with noise",
+    "symmetric distribution of effects",
+    "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+    "Becoming.CellsUnderNoise.noisyDescent_distinct_le"
+  ],
+  "dependencies": [
+    {
+      "id": "identical-cells-under-a-descent-treating-them-alike",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "exchangeAt, descent, Exchangeable, Symmetric and Law.run: the core's descent on identical cells, its exchange of neighbouring cells and its run, read with noise over the reals.",
+        "zh": "exchangeAt、descent、Exchangeable、Symmetric 与 Law.run：核心之同一细胞之下降、其相邻细胞之交换及其运行，于实数上加噪声而读。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "selection-through-a-model-of-the-options",
+      "detail": {
+        "en": "Selection through a model of the options: a choice reading the options only through a full tie singles out none; independent noise at each cell parts identical cells with positive weight, never with certainty (alike_positive, Witness.independentNoise_parts).",
+        "zh": "经选项之模型之选择：唯经全并读选项之选择不择出任一；每一细胞独立之噪声以正权重分开同一细胞，然从不必然（alike_positive、Witness.independentNoise_parts）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.CellsUnderNoise.Exchangeable",
+        "Becoming.CellsUnderNoise.Invariant",
+        "Becoming.CellsUnderNoise.KernelCommutes",
+        "Becoming.CellsUnderNoise.Stationary",
+        "Becoming.CellsUnderNoise.Witness.Two",
+        "Becoming.CellsUnderNoise.Witness.alike_none",
+        "Becoming.CellsUnderNoise.Witness.assign",
+        "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+        "Becoming.CellsUnderNoise.Witness.each_half",
+        "Becoming.CellsUnderNoise.Witness.firstCell",
+        "Becoming.CellsUnderNoise.Witness.firstCell_assigns",
+        "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+        "Becoming.CellsUnderNoise.Witness.flipBy",
+        "Becoming.CellsUnderNoise.Witness.independentNoise_parts",
+        "Becoming.CellsUnderNoise.Witness.partedUniform",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+        "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+        "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+        "Becoming.CellsUnderNoise.Witness.sum_two",
+        "Becoming.CellsUnderNoise.Witness.toParted",
+        "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+        "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture",
+        "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+        "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+        "Becoming.CellsUnderNoise.Witness.toParted_once",
+        "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+        "Becoming.CellsUnderNoise.alike_exchangeable",
+        "Becoming.CellsUnderNoise.alike_fixed",
+        "Becoming.CellsUnderNoise.alike_positive",
+        "Becoming.CellsUnderNoise.cellwise",
+        "Becoming.CellsUnderNoise.cellwise_alike",
+        "Becoming.CellsUnderNoise.cellwise_commutes",
+        "Becoming.CellsUnderNoise.distinct_le",
+        "Becoming.CellsUnderNoise.gibbs_exchangeable",
+        "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable",
+        "Becoming.CellsUnderNoise.independent_exchangeable",
+        "Becoming.CellsUnderNoise.independent_law",
+        "Becoming.CellsUnderNoise.marginal",
+        "Becoming.CellsUnderNoise.marginal_eq",
+        "Becoming.CellsUnderNoise.noiseless",
+        "Becoming.CellsUnderNoise.noiseless_run",
+        "Becoming.CellsUnderNoise.noisy",
+        "Becoming.CellsUnderNoise.noisyDescent",
+        "Becoming.CellsUnderNoise.noisyDescent_commutes",
+        "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+        "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+        "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+        "Becoming.CellsUnderNoise.noisyDescent_from_independent",
+        "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+        "Becoming.CellsUnderNoise.noisyDescent_rows",
+        "Becoming.CellsUnderNoise.noisy_commutes",
+        "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+        "Becoming.CellsUnderNoise.ofFn_cellwise",
+        "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+        "Becoming.CellsUnderNoise.ofFn_rearranged",
+        "Becoming.CellsUnderNoise.ofFn_swap",
+        "Becoming.CellsUnderNoise.pointMass",
+        "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+        "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+        "Becoming.CellsUnderNoise.pointMass_law",
+        "Becoming.CellsUnderNoise.rearrange",
+        "Becoming.CellsUnderNoise.run_rearranged",
+        "Becoming.CellsUnderNoise.stationary_rearranged",
+        "Becoming.CellsUnderNoise.step",
+        "Becoming.CellsUnderNoise.step_invariant",
+        "Becoming.CellsUnderNoise.step_noiseless",
+        "Becoming.CellsUnderNoise.step_nonneg",
+        "Becoming.CellsUnderNoise.step_total",
+        "Becoming.CellsUnderNoise.symmetric_rearranged",
+        "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+        "Becoming.CellsUnderNoise.weightsAt",
+        "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+        "Becoming.CellsUnderNoise.weightsAt_invariant",
+        "Becoming.CellsUnderNoise.weightsAt_law",
+        "Becoming.CellsUnderNoise.weightsAt_noiseless"
+      ],
+      "sha256": "7d34111181f8b8a4d8458e67137a3b3c22926db46d3bc79e7c307e0992d9902d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "role": "proof",
+      "sha256": "6a4890e5c985b4e2f20738d82dd829ab643f4c8a14a604ed2133463b0ba3eff5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261030T160959.698859Z/verification.json",
+      "role": "receipt",
+      "sha256": "5103a4c3fb6553d3ebe37055cf3ce11a79782c7f58191190ed048eb13ac71cd9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd80d7c5b7c5a15a864d0e3ca5f214c7936fcb65f7eac830b7696118f1723787"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_cells_under_noise.py",
+      "role": "integration",
+      "sha256": "b906f3b1511725b507ff5351db6e4405d53cd67daee43eb1e11fc2741dd3e9b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "17d821b1eda5031d5875439d1e31f935d4cd631da68d0972826b318a5603f1c5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/NOTE.md",
+      "role": "integration",
+      "sha256": "0aefa81ace0b8f3919c8b837f348413bf5d07a6cfb52b27aa0907bd802906b57"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/REVIEW-UE24.md",
+      "role": "integration",
+      "sha256": "4891d0dd40220acf5b23d5a923c282af5c0b2d6d29448ee54fcdecefcf305d78"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/RECHECK-UE24.md",
+      "role": "integration",
+      "sha256": "4eb28967c84d6eeb6682f991082d3107da2d50577268ebc6c59b6f14dc4dea0a"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "cd378089030fd50971e459ccca8c7aa92dd1c07214efb13441ad58c0860d29d5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyGuarantees",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261030T160959.698859Z/verification.json",
+      "sha256_pointer": "/source_sha256/CellsUnderNoise",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (UE24), identical cells under noise in the periphery: kernels commuting with every rearrangement keep an exchangeable law exchangeable, deciding nothing of which cell takes which place; the join to the core's descent, its every rearrangement and its run; witnesses on two cells, independent noise parting them with positive weight, a kernel parting them with certainty that reads the cells' numbers, and a field reading the first cell; after a review and its recheck; study section 468.",
+      "zh": "2026年10月30日：新增（UE24），外围之噪声下之同一细胞：与每一重排可交换之核保可交换之律可交换，于何细胞得何位一无所定；与核心之下降、其每一重排及其运行相接；二细胞之见证：独立之噪声以正权重分开之，依细胞编号之核必然分开之，及读第一细胞之场；经审查及复查；研究第 468 节。"
+    }
+  ]
+}

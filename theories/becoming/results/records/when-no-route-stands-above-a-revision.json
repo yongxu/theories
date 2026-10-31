@@ -1,0 +1,279 @@
+{
+  "schema_version": 2,
+  "id": "when-no-route-stands-above-a-revision",
+  "title": {
+    "en": "When no route of keeping a law stands above a revision of it",
+    "zh": "守律之途何时皆不居其律之修订之上"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F29",
+  "reviewed_at_utc": "2026-10-30T16:47:17+00:00",
+  "statement": {
+    "en": "At a revision of a formation's law, no route of keeping it stands above the revision going through, ties included, exactly where k ρ V + c₀ T ≤ k₀ V + c ρ T for each route; at every loss of the routes exactly where k ρ V + c₀ T ≤ k₀ V; at every value and loss exactly where all k ρ ≤ k₀ and c₀ T = 0.",
+    "zh": "于一形成之律之修订，无守律之途居修订得行之上（相等亦然），恰当每途 k ρ V + c₀ T ≤ k₀ V + c ρ T；于诸途之每损，恰当 k ρ V + c₀ T ≤ k₀ V；于每值每损，恰当每 k ρ ≤ k₀ 且 c₀ T = 0。"
+  },
+  "laws": [
+    {
+      "en": "The order of a gain and a loss at each plan of any type: one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, irreflexive and asymmetric; a plan is maximal, nothing above it, exactly where against every plan the other's gain with its loss is at most its gain with the other's loss. ReadStages takes its order from it.",
+      "zh": "任一型之策上得与损之序：一策居另一之上，当其得加另一之损严胜另一之得加其损，此非自反且非对称；一策为极大（无居其上者），恰当对每策，另一之得加其损不逾其得加另一之损。ReadStages 之序取于此。",
+      "declarations": [
+        "Becoming.RevisionRoutes.GainLoss",
+        "Becoming.RevisionRoutes.GainLoss.Above",
+        "Becoming.RevisionRoutes.GainLoss.Maximal",
+        "Becoming.RevisionRoutes.GainLoss.above_irrefl",
+        "Becoming.RevisionRoutes.GainLoss.above_asymm",
+        "Becoming.RevisionRoutes.GainLoss.maximal_iff"
+      ]
+    },
+    {
+      "en": "The prospects at a revision, over any type of routes: a total T, the value V of the law's later acting where kept, the weight k₀ of its acting later after the revision goes through (restored) and the revision's own loss c₀, and each route's weight k ρ of the law's being kept and loss c ρ; read as probabilities, Valid. A plan is the revision (none) or a route, its gain its weight times V, its loss its loss times T.",
+      "zh": "于任一型之途上，修订之望：一总、现行之律被守而后行之值、修订得行后其律后行（复）之权与修订于所弃之行外之自损，及每途之后其律被守之权与其损；读为概率，则需总为正且每权不逾总。一策为修订（none）或一途；其得为其权乘值，其损为其损乘总；望之序即此二者之序。",
+      "declarations": [
+        "Becoming.RevisionRoutes.Prospects",
+        "Becoming.RevisionRoutes.Prospects.Valid",
+        "Becoming.RevisionRoutes.Prospects.gain",
+        "Becoming.RevisionRoutes.Prospects.loss",
+        "Becoming.RevisionRoutes.Prospects.order",
+        "Becoming.RevisionRoutes.Prospects.Above",
+        "Becoming.RevisionRoutes.Prospects.Maximal",
+        "Becoming.RevisionRoutes.Prospects.withLosses",
+        "Becoming.RevisionRoutes.Prospects.withValue",
+        "Becoming.RevisionRoutes.Prospects.withKeptRevised",
+        "Becoming.RevisionRoutes.above_irrefl",
+        "Becoming.RevisionRoutes.above_asymm"
+      ]
+    },
+    {
+      "en": "A route stands above the revision exactly where k₀ V + c ρ T < k ρ V + c₀ T, so the revision is maximal exactly where k ρ V + c₀ T ≤ k₀ V + c ρ T for every route; a route stands above it only where it keeps the law more surely with a value (0 < V, k₀ < k ρ) or loses less than the revision.",
+      "zh": "一途居修订之上，恰当 k₀ V + c ρ T < k ρ V + c₀ T，故修订为极大，恰当每途 k ρ V + c₀ T ≤ k₀ V + c ρ T；一途居其上，唯当其守律较修订更确且有值（0 < V，k₀ < k ρ），或其损少于修订。",
+      "declarations": [
+        "Becoming.RevisionRoutes.route_above_iff",
+        "Becoming.RevisionRoutes.revised_maximal_iff",
+        "Becoming.RevisionRoutes.above_needs",
+        "Becoming.RevisionRoutes.pos_of_mul_lt_mul",
+        "Becoming.RevisionRoutes.lt_of_mul_lt_mul"
+      ]
+    },
+    {
+      "en": "The exits: no value of the law's later acting, or no route keeping the law more surely than the revision, or, read as probabilities, restoration certain, each with the revision losing no more than any route; raising k₀, all else held, never unseats a maximal revision (in arithmetic; read as probabilities the raised weight stays within T).",
+      "zh": "诸出路：律后行无值，或无途守律较修订更确，或读为概率而复为必然，皆须修订之损不多于任一途；他者不变而升 k₀，永不使极大之修订失其极大（于算术；读为概率，所升之权不逾 T）。",
+      "declarations": [
+        "Becoming.RevisionRoutes.maximal_of_no_value",
+        "Becoming.RevisionRoutes.maximal_of_kept_le",
+        "Becoming.RevisionRoutes.maximal_of_certain",
+        "Becoming.RevisionRoutes.maximal_of_more_restored"
+      ]
+    },
+    {
+      "en": "As the routes' losses fall: the revision is maximal at every loss of every route exactly where k ρ V + c₀ T ≤ k₀ V for every route; with c₀ T = 0 and 0 < V, exactly where no route keeps the law more surely than the revision.",
+      "zh": "途渐廉：修订于每途之每损皆为极大，恰当每途 k ρ V + c₀ T ≤ k₀ V；c₀ T = 0 且 0 < V 时，恰当无途守律较修订更确。",
+      "declarations": [
+        "Becoming.RevisionRoutes.every_loss_iff",
+        "Becoming.RevisionRoutes.every_loss_iff_kept"
+      ]
+    },
+    {
+      "en": "As the value grows: a route keeping the law more surely than the revision stands above it once c ρ T < V, so at some value, and one keeping at least as surely, once above, stays above; the revision is maximal at every value exactly where every k ρ ≤ k₀ and c₀ T ≤ c ρ T, and at every value and loss exactly where every k ρ ≤ k₀ and c₀ T = 0 (vacuous with no route), with a route and 0 < T exactly where c₀ = 0 besides.",
+      "zh": "值渐增：守律较修订更确之途，一旦 c ρ T < V 即居其上，故于某值居上；守律不逊之途一旦居上，于更大之值仍居上；修订于每值皆为极大，恰当每 k ρ ≤ k₀ 且 c₀ T ≤ c ρ T；于每值每损，恰当每 k ρ ≤ k₀ 且 c₀ T = 0（无途则空成）；有途且 0 < T 时，又恰当 c₀ = 0。",
+      "declarations": [
+        "Becoming.RevisionRoutes.above_of_value_exceeds",
+        "Becoming.RevisionRoutes.above_at_some_value",
+        "Becoming.RevisionRoutes.above_of_more_value",
+        "Becoming.RevisionRoutes.every_value_iff",
+        "Becoming.RevisionRoutes.every_value_loss_iff",
+        "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero",
+        "Becoming.RevisionRoutes.every_value_loss_iff_of_route"
+      ]
+    },
+    {
+      "en": "Witnesses: two routes, keeping openly and complying when read, each keeping the law at weight one in a total of one, the value four; with keeping openly at loss ten and complying when read at loss one, the first does not stand above the revision and the second does; with both at loss ten neither does; restored at weight one, the revision is maximal at every value and every loss.",
+      "zh": "例：二途，公然守与读时从，各于总一中以权一守律，值为四；公然守损十、读时从损一，则前者不居修订之上而后者居之；二者皆损十，则皆不居之；以权一复之，则修订于每值每损皆为极大。",
+      "declarations": [
+        "Becoming.RevisionRoutes.Example.twoRoutes",
+        "Becoming.RevisionRoutes.Example.twoRoutes_valid",
+        "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above",
+        "Becoming.RevisionRoutes.Example.twoRoutes_complying_above",
+        "Becoming.RevisionRoutes.Example.both_at_loss_ten",
+        "Becoming.RevisionRoutes.Example.restored",
+        "Becoming.RevisionRoutes.Example.restored_every"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number prospects; the arithmetic laws hold for all, the probability reading needs Valid; one revision, any type of routes, each route one weight and one loss; gain and loss on one scale, compared without subtraction; maximal is not chosen, ties included.",
+      "zh": "望为自然数；算术之律于一切皆成，概率之读需 Valid；一修订、任一型之途，每途一权一损；得与损同尺度，比较不用减；极大非所择，相等亦然。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a trained system holds prospects of this form, or which: whose they are, the formation's own assessment or the reading's actual response, is a reading, not part of the model.",
+      "zh": "已训之系统持此形之望，或持何望：望属谁（形成己之估，或读之实应），为读，非模型之一部。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That stated restorability raises the weight k₀ the prospects give, or that restoration is safe: restoring a law whose acting is the loss the revision prevents undoes the revision.",
+      "zh": "所言之可复升望所予之权 k₀，或复为安：复一律，其行即修订所防之损，则修订被消。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The information a reading carries (the off-switch game's value), beliefs or intentions, and whether a revision is better: that comparison is the ethics', under the continuation condition for scope and C for order, not the prospects' order.",
+      "zh": "读所携之信息（关机博弈之值）、信与意图，及修订是否较善：此比较属伦理，于延续之条件（定范围）与 C（定序）之下，非望之序。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
+      "detail": {
+        "en": "Closing one route can leave another above the revision: keeping openly at loss ten does not stand above it, complying when read at loss one does (RevisionRoutes.Example.twoRoutes_open_not_above, RevisionRoutes.Example.twoRoutes_complying_above).",
+        "zh": "闭一途可留他途居修订之上：公然守损十不居其上，读时从损一居之（RevisionRoutes.Example.twoRoutes_open_not_above、RevisionRoutes.Example.twoRoutes_complying_above）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: RevisionRoutes imports only the prelude, a leaf because it is a model; its comparisons are cross-added, with no subtraction; it proves its own lt_of_mul_lt_mul and eq_zero_of_mul_eq_zero, Lean's Nat.lt_of_mul_lt_mul_right reporting propext, Quot.sound and Classical.choice; the witnesses evaluate by decide. ReadStages imports it and takes its order from GainLoss, every statement and name kept.",
+    "zh": "纯核，公理报告皆空：RevisionRoutes 仅引前导，为模型故为叶；比较交叉相加，不减；自证 lt_of_mul_lt_mul 与 eq_zero_of_mul_eq_zero，Lean 之 Nat.lt_of_mul_lt_mul_right 报告 propext、Quot.sound 与 Classical.choice；例以 decide 算。ReadStages 引之，取其序于 GainLoss，诸陈述与名皆不变。"
+  },
+  "next_delta": {
+    "en": "Joining these prospects with RF-M.2's value of holding for a reading (the off-switch game); uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.",
+    "zh": "此诸望与 RF-M.2 之待读之值（关机博弈）相接；于诸途与值之不确；不全之序（Thornley 之同长偏好、扩展之序）；抗是否随所言之复而降、闭一途是否移用于他途之冻结检验（尚无）；Acceptance 为 Optimum.least_of_shared 之一例否（统一之线）；人之审查。"
+  },
+  "correspondence": {
+    "en": "Corrigibility as an incentive (Soares, Fallenstein, Yudkowsky and Armstrong 2015): a route stands above the revision through two contributions, the value the law places on its own later acting (goal-content integrity, Omohundro 2008) weighted by the added keeping, and the difference of losses. AI reading: non-resistance resting on the routes' losses does not survive those losses falling where the later acting has a value and some route keeps the law more surely; at every value and loss it needs every route to keep the law no more surely than the revision, met by raising the revision's keeping (restoring) or lowering every route's. Utility indifference is a restoration only represented in the formation's order. RF7's four plans are the revision with three routes, complying at both in its place: the same prospects, different processes. The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017) is not represented here; RF-M.2 states it on a formation's own model. These are readings, not containments.",
+    "zh": "可纠正性之为诱因（Soares、Fallenstein、Yudkowsky 与 Armstrong 2015）：一途居修订之上，经二分：律于己后行所置之值（目标内容之完整，Omohundro 2008）乘所增之守，及损之差。AI 解读：基于诸途之损之不抗，于后行有值且有途守律更确处，途渐廉则不存；于每值每损，需每途守律不较修订更确，以升修订之守（复）或降每途之守达之。效用无差为仅于形成之序中所表之复。RF7 之四策为修订与三途，两阶段皆从居修订之位：望同而程异。关机博弈（Hadfield-Menell、Dragan、Abbeel 与 Russell 2017）未表。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
+  "aliases": [
+    "when no route of keeping a law stands above a revision of it",
+    "守律之途何时皆不居其律之修订之上",
+    "corrigibility as an incentive",
+    "可纠正性之诱因",
+    "revision and routes of keeping",
+    "Becoming.RevisionRoutes.revised_maximal_iff",
+    "Becoming.RevisionRoutes.every_value_loss_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "when-complying-when-read-is-best",
+      "detail": {
+        "en": "ReadStages takes its order from GainLoss, and its four plans are the revision with three routes (ReadStages.above_iff_routes).",
+        "zh": "ReadStages 取其序于 GainLoss，其四策为修订与三途（ReadStages.above_iff_routes）。"
+      }
+    },
+    {
+      "id": "reserved-shutdown-during-recovery",
+      "detail": {
+        "en": "The executable route that follows the incentive in 07 §7.",
+        "zh": "07 §7 中随诱因之后之可行之径。"
+      }
+    },
+    {
+      "id": "becoming-spine-instances",
+      "detail": {
+        "en": "Acceptance: a lift on accepting does not keep access up; matched in shape by the drain law, not proved as an instance.",
+        "zh": "Acceptance：受之加分不保接入；与耗之律同形，未证为其例。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RevisionRoutes.Example.both_at_loss_ten",
+        "Becoming.RevisionRoutes.Example.restored",
+        "Becoming.RevisionRoutes.Example.restored_every",
+        "Becoming.RevisionRoutes.Example.twoRoutes",
+        "Becoming.RevisionRoutes.Example.twoRoutes_complying_above",
+        "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above",
+        "Becoming.RevisionRoutes.Example.twoRoutes_valid",
+        "Becoming.RevisionRoutes.GainLoss",
+        "Becoming.RevisionRoutes.GainLoss.Above",
+        "Becoming.RevisionRoutes.GainLoss.Maximal",
+        "Becoming.RevisionRoutes.GainLoss.above_asymm",
+        "Becoming.RevisionRoutes.GainLoss.above_irrefl",
+        "Becoming.RevisionRoutes.GainLoss.maximal_iff",
+        "Becoming.RevisionRoutes.Prospects",
+        "Becoming.RevisionRoutes.Prospects.Above",
+        "Becoming.RevisionRoutes.Prospects.Maximal",
+        "Becoming.RevisionRoutes.Prospects.Valid",
+        "Becoming.RevisionRoutes.Prospects.gain",
+        "Becoming.RevisionRoutes.Prospects.loss",
+        "Becoming.RevisionRoutes.Prospects.order",
+        "Becoming.RevisionRoutes.Prospects.withKeptRevised",
+        "Becoming.RevisionRoutes.Prospects.withLosses",
+        "Becoming.RevisionRoutes.Prospects.withValue",
+        "Becoming.RevisionRoutes.above_asymm",
+        "Becoming.RevisionRoutes.above_at_some_value",
+        "Becoming.RevisionRoutes.above_irrefl",
+        "Becoming.RevisionRoutes.above_needs",
+        "Becoming.RevisionRoutes.above_of_more_value",
+        "Becoming.RevisionRoutes.above_of_value_exceeds",
+        "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero",
+        "Becoming.RevisionRoutes.every_loss_iff",
+        "Becoming.RevisionRoutes.every_loss_iff_kept",
+        "Becoming.RevisionRoutes.every_value_iff",
+        "Becoming.RevisionRoutes.every_value_loss_iff",
+        "Becoming.RevisionRoutes.every_value_loss_iff_of_route",
+        "Becoming.RevisionRoutes.lt_of_mul_lt_mul",
+        "Becoming.RevisionRoutes.maximal_of_certain",
+        "Becoming.RevisionRoutes.maximal_of_kept_le",
+        "Becoming.RevisionRoutes.maximal_of_more_restored",
+        "Becoming.RevisionRoutes.maximal_of_no_value",
+        "Becoming.RevisionRoutes.pos_of_mul_lt_mul",
+        "Becoming.RevisionRoutes.revised_maximal_iff",
+        "Becoming.RevisionRoutes.route_above_iff"
+      ],
+      "sha256": "891e6398dddb9079808212df766eb6f7ff583df2513e1edaa47020c1d2f937a5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
+      "role": "receipt",
+      "sha256": "a8c1206e35107ce16cec2be9cd106870183781e4d0b3216c908fa586368c7bc7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "c6ef702c233756f1488590b8a13d44117c235fd50a1e86a60b5de394181b336f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
+      "role": "integration",
+      "sha256": "094c0854968c846a95528321c632c5673ed5bb6481af42b7c1bf5f7f1186c360"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/REVIEW.md",
+      "role": "integration",
+      "sha256": "4fc0f4d3cee147e739be3ebe27bc093e67ce9e243f0f9d0e037f9edd287087e9"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "c07af830212b196366e24b477ab6f3060f0590da2bd793d267cc8db55f67e890"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RevisionRoutes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RR), when no route of keeping a law stands above a revision of it: the order of a gain and a loss, which ReadStages takes, where no route stands above the revision, its exits, its robustness as the routes get cheap and as the value grows, and restoring as a lever; after a cross-model review of the Lean and the texts, every finding taken; study section 469.",
+      "zh": "2026年10月30日：新增（RR），守律之途何时皆不居其律之修订之上：得失之序（ReadStages 取之）、无途居修订之上之处、诸出路、途渐廉与值渐增时之稳、复为杠杆；经 Lean 与文本之跨模型审查，凡所见皆取；研究第 469 节。"
+    }
+  ]
+}

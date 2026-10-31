@@ -1,0 +1,32 @@
+Becoming/HeldForReading.lean:1305:27: error: Type mismatch
+  Eq.trans (after_byReading (model hs) gainOf lossOf).left
+has type
+  (model hs).committed (shifted gainOf lossOf) Move.go + offExcess (model hs) gainOf lossOf = ?m.44 →
+    (model hs).after (shifted gainOf lossOf) (byReading gainOf lossOf) = ?m.44
+but is expected to have type
+  (model hs).after (shifted gainOf lossOf) (byReading gainOf lossOf) =
+    (model hs).committed (shifted gainOf lossOf) Move.go
+Becoming/HeldForReading.lean:1304:2: error: Alternative `false` has not been provided
+Becoming/HeldForReading.lean:1306:6: error: unexpected token '('; expected command
+Becoming/HeldForReading.lean:1324:29: error: Type mismatch
+  Eq.trans (after_byReading (model hs) gainOf lossOf).right
+has type
+  (model hs).committed (shifted gainOf lossOf) Move.off + goExcess (model hs) gainOf lossOf = ?m.97 →
+    (model hs).after (shifted gainOf lossOf) (byReading gainOf lossOf) = ?m.97
+but is expected to have type
+  (model hs).after (shifted gainOf lossOf) (byReading gainOf lossOf) =
+    (model hs).committed (shifted gainOf lossOf) Move.off
+Becoming/HeldForReading.lean:1323:4: error: Alternative `false` has not been provided
+Becoming/HeldForReading.lean:1325:8: error: unexpected token '('; expected command
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.HeldForReading"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.HeldForReading"
+}

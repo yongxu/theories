@@ -1,0 +1,93 @@
+Becoming/HeldForReading.lean:47:21: error: Type mismatch
+  q
+has type
+  ¬Q c
+but is expected to have type
+  ¬Q d
+Becoming/HeldForReading.lean:151:91: error: unsolved goals
+C : Type
+r : C → Bool
+c : C
+vetoes : r c = true
+⊢ (bif true then Move.off else Move.go) = Move.off
+Becoming/HeldForReading.lean:154:92: error: unsolved goals
+C : Type
+r : C → Bool
+c : C
+passes : r c = false
+⊢ (bif false then Move.off else Move.go) = Move.go
+Becoming/HeldForReading.lean:177:38: error: Application type mismatch: The argument
+  lt
+has type
+  gain c < loss c
+but is expected to have type
+  shifted gain loss c a < shifted gain loss c head✝
+in the application
+  Nat.le_of_lt lt
+Becoming/HeldForReading.lean:185:52: error: Application type mismatch: The argument
+  lt
+has type
+  ¬gain c < loss c
+but is expected to have type
+  ¬shifted gain loss c x✝ < shifted gain loss c a
+in the application
+  Nat.ge_of_not_lt lt
+Becoming/HeldForReading.lean:337:52: error: unsolved goals
+α : Type u
+C : Type
+above : C → α → α → Bool
+x y : α
+c : C
+h : above c y x = true
+⊢ (bif true then Pick.second else Pick.first) = Pick.second
+Becoming/HeldForReading.lean:343:17: error: Type mismatch
+  cond_le_one ?m.293
+has type
+  (bif ?m.293 then 1 else 0) ≤ 1
+but is expected to have type
+  pairValue above x y c a ≤ bif true then 1 else 0
+Becoming/HeldForReading.lean:344:27: error: Type mismatch
+  Nat.le_refl ?m.294
+has type
+  ?m.294 ≤ ?m.294
+but is expected to have type
+  pairValue above x y c a ≤ bif true then 1 else 0
+Becoming/HeldForReading.lean:347:51: error: unsolved goals
+α : Type u
+C : Type
+above : C → α → α → Bool
+x y : α
+c : C
+h : above c y x = false
+⊢ (bif false then Pick.second else Pick.first) = Pick.first
+Becoming/HeldForReading.lean:353:6: error: 'show' tactic failed, pattern
+  (bif above c y x then 1 else 0) ≤ ?m.587
+is not definitionally equal to target
+  pairValue above x y c a ≤ pairValue above x y c x✝
+Becoming/HeldForReading.lean:381:51: error: unsolved goals
+α : Type u
+O : Type v
+C : Type
+m : Model C
+ch : ChoiceOccasions α O
+above : C → α → α → Bool
+orders : ∀ (c : C), c ∈ m.listed → StrictAccording ch above c
+x y : α
+reach : «及» ch.Shown x y
+c : C
+mem : c ∈ m.listed
+x✝ : 0 < m.weight c
+xy : above c x y = true
+⊢ (bif false then Pick.second else Pick.first) = Pick.first
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.HeldForReading"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.HeldForReading"
+}

@@ -1,0 +1,310 @@
+{
+  "schema_version": 2,
+  "id": "keeping-widening-is-generation-losing-nothing",
+  "title": {
+    "en": "Keeping widening is generation that loses nothing",
+    "zh": "持续扩大即不失之生成"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-30T15:39:22+00:00",
+  "statement": {
+    "en": "On a course's moments, keeping widening is generation under the one that loses nothing, both ways under premises of deciding, so loss is what parts them; with nothing lost in the coarse place it is 全生成, a representation. The premises are exactly weak excluded middle forward and excluded middle back.",
+    "zh": "于进程诸时刻，持续扩大即一之下不失之生成，于判定之前提下双向成立，故失即分二者者；以不失居粗处读之即全生成，为一表示。其前提恰为正向之弱排中与逆向之排中。"
+  },
+  "laws": [
+    {
+      "en": "The two places on a course's moments. Read along the next step with what is held at each moment as a chain of predicates, nothing lost is a preorder in the coarse place, whose line goes on exactly while nothing held is lost; a symmetric relation there could not tell loss from gain. The same possible is a class finer than it, and a line under it begins exactly where a step changes what is held.",
+      "zh": "进程诸时刻上之两处。沿下一步读、各时刻所持为谓词之链，不失为居粗处之预序，其线恰于所持无所失时而延；对称之关系居此不能分失与得。同可能为细于它之类，其下之线恰起于一步改变所持之处。",
+      "declarations": [
+        "Becoming.Steps.includes",
+        "Becoming.Steps.same",
+        "Becoming.Steps.KeepsWideningFrom",
+        "Becoming.Steps.same_class",
+        "Becoming.Steps.same_includes",
+        "Becoming.Steps.includes_refl",
+        "Becoming.Steps.includes_trans",
+        "Becoming.Steps.begins_iff",
+        "Becoming.Steps.reached_le",
+        "Becoming.Steps.reaches_of_buqiong",
+        "Becoming.Steps.buqiong_includes_iff",
+        "Becoming.Steps.includesFrom_iff"
+      ]
+    },
+    {
+      "en": "The representation, both ways. Nothing lost is keeping widening's own inclusion half. Where each holding is refuted or unrefuted, keeping widening from a moment gives 全生成 at (nothing lost, the same possible), the step located with its point; where something new is found after each step after which not all held was held before, the converse holds; with neither, 全生成 gives nothing lost and such a step after each step.",
+      "zh": "双向之表示。不失即持续扩大自身之含纳一半。各所持或被驳或未被驳处，自一时刻之持续扩大给出其处于（不失，同可能）之全生成，其步连同其点可定位；凡一步之后所持非皆先前所持处其新者可得，则反之亦然；二者皆无时，全生成给出不失及每步之后有此一步。",
+      "declarations": [
+        "Becoming.Steps.change_located",
+        "Becoming.Steps.generation_of_keepsWidening",
+        "Becoming.Steps.includes_not_back_of_generation",
+        "Becoming.Steps.keepsWidening_of_generation",
+        "Becoming.Steps.generation_iff_keepsWidening",
+        "Becoming.Steps.new_in_list_or_none",
+        "Becoming.Steps.found_of_listed",
+        "Becoming.Steps.keepsWideningFrom_iff_shift",
+        "Becoming.Steps.keepsWidening_iff_from_zero",
+        "Becoming.Steps.generation_of_reachingKeepsWidening"
+      ]
+    },
+    {
+      "en": "The join, parted by exactly loss. With both classes fixed apart, 全生成 at (nothing lost, the same possible) is 全生成 at (the one, the same possible) with nothing lost; so under the two premises keeping widening is generation under the one that loses nothing. A possible holding one point at each moment, lost at the next, is 全生成 under the one and keeps widening from none; one gaining a point at each step has both.",
+      "zh": "恰以失而分之接。二类皆独立于扩大而定，于（不失，同可能）之全生成即于（一，同可能）之全生成加不失；故于二前提下，持续扩大即一之下不失之生成。各时刻持一点而于下一时刻失之之可能，于一之下全生成而自无一时刻起持续扩大；每步得一点者二者兼有。",
+      "declarations": [
+        "Becoming.Steps.generation_includes_iff",
+        "Becoming.Steps.keepsWidening_iff_generation_losing_nothing",
+        "Becoming.Steps.moving",
+        "Becoming.Steps.Moving.generation",
+        "Becoming.Steps.Moving.not_generation_includes",
+        "Becoming.Steps.Moving.not_keepsWidening",
+        "Becoming.Steps.growing",
+        "Becoming.Steps.Growing.keepsWidening",
+        "Becoming.Steps.Growing.generation"
+      ]
+    },
+    {
+      "en": "What each premise says about the course. Generation is known by refutation, widening by exhibition. For every chain the forward direction is exactly weak excluded middle: the step generation names tells a proposition refuted or not. The converse is exactly excluded middle, and even on decided chains exhibiting the new point is Markov's principle, an unbounded search. Calibrations of the logic.",
+      "zh": "各前提于进程所言。生成以驳而知，扩大以示而知。对每一链，正向恰为弱排中：生成所指之步告一命题被驳与否。逆向恰为排中；即于可判定之链，示其新点亦为 Markov 原理，即无界之搜寻。逻辑之校准。",
+      "declarations": [
+        "Becoming.Steps.forward_iff_wem",
+        "Becoming.Steps.wem_of_generation_of_keepsWidening",
+        "Becoming.Steps.twice",
+        "Becoming.Steps.le_twice",
+        "Becoming.Steps.arriving",
+        "Becoming.Steps.Arriving.includes",
+        "Becoming.Steps.Arriving.early",
+        "Becoming.Steps.Arriving.late",
+        "Becoming.Steps.Arriving.keepsWidening",
+        "Becoming.Steps.Arriving.tells",
+        "Becoming.Steps.back_iff_em",
+        "Becoming.Steps.dne_of_keepsWidening_of_generation",
+        "Becoming.Steps.found_of_em",
+        "Becoming.Steps.dawning",
+        "Becoming.Steps.Dawning.generation",
+        "Becoming.Steps.marked",
+        "Becoming.Steps.markov_of_keepsWidening_of_generation"
+      ]
+    },
+    {
+      "en": "On the World, by name. Along each formation continuing itself, the World's keeping widening is the chain's, read on what the levels admit, from the landed chain law and the shift; so under the premises on admission it is 全生成 of the course's moments at (nothing lost, the same possible), both ways, while on the occurrences each formation admitted is 全守 from nothing lost alone: two carriers, not two grains of one.",
+      "zh": "于世界上按名。沿每一构成自续，世界之持续扩大即诸水平所纳之链之持续扩大（由已落之链律与平移）；故于纳之前提下，它即进程诸时刻于（不失，同可能）之全生成，双向成立；而于诸事之上，所纳之每一构成仅由不失即全守：二载体，非一载体之两粒度。",
+      "declarations": [
+        "Becoming.Web.keepsWidening_itself_iff",
+        "Becoming.Web.generation_of_keepsWidening_byName",
+        "Becoming.Web.keepsWidening_byName_iff_generation",
+        "Becoming.Web.kept_by_name_and_generation_on_moments"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Discrete moments read along the next step; what is held at a moment a predicate. The forward direction needs each holding refuted or unrefuted at each moment, weak excluded middle on what is held; the converse needs something new found after each step after which not all held was held before, which a listing of each moment's holding with deciding gives. The World law reads continuation by name.",
+      "zh": "离散之时刻沿下一步读；一时刻之所持为一谓词。正向需各时刻之各所持或被驳或未被驳，即所持上之弱排中；逆向需凡一步之后所持非皆先前所持处其新者可得，各时刻所持可列而可判定时即然。世界之律按名读延续。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That keeping widening along a continuation other than by name is generation on the moments: only chains and the World by name.",
+      "zh": "按名以外之延续上之持续扩大为诸时刻之生成：只及链与按名之世界。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That generation under the one is widening: a possible that moves changes at every step and loses all it held.",
+      "zh": "一之下之生成即扩大：移动之可能每步皆变而失其所持。",
+      "kind": "non-implication",
+      "witness": "Becoming.Steps.Moving.not_keepsWidening"
+    },
+    {
+      "en": "That the iff at (nothing lost, the same possible) joins two notions fixed apart: nothing lost is keeping widening's own inclusion half.",
+      "zh": "于（不失，同可能）之等价接合二独立之概念：不失即持续扩大自身之含纳一半。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That widening or generation is better: calling widening better is C's, and the comparison of two courses stays open.",
+      "zh": "扩大或生成为更好：称扩大为更好属 C，二进程之比较仍待。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+      "detail": {
+        "en": "A possible holding one point at each moment and losing it at the next is 全生成 at (the one, the same possible) at every moment, is 全生成 at (nothing lost, the same possible) at none, and keeps widening from none (Steps.Moving.generation, Steps.Moving.not_generation_includes, Steps.Moving.not_keepsWidening).",
+        "zh": "各时刻持一点而于下一时刻失之之可能，于（一，同可能）每一时刻皆全生成，于（不失，同可能）无一时刻全生成，且自无一时刻起持续扩大（Steps.Moving.generation、Steps.Moving.not_generation_includes、Steps.Moving.not_keepsWidening）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261030T152859.871907Z): Becoming.WideningOnTheMap, a core leaf, 43 theorems in 52 declarations, every one with an empty axiom report, all cited here. Built in a session; an independent read-only review by a separate AI agent, REVIEW-GW126-LEAN (study section of GW1, GW2 and GW6); not reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261030T152859.871907Z）：核心叶 Becoming.WideningOnTheMap 之 52 项声明（43 项定理），公理报告皆空，本记录全引。另一 AI 代理作独立只读审查 REVIEW-GW126-LEAN；未经人审。"
+  },
+  "next_delta": {
+    "en": "Keeping widening along a continuation other than by name read on the moments, with what is kept read along the continuation; the comparison of two courses; review by a person.",
+    "zh": "按名以外之延续上之持续扩大读于诸时刻，所守沿延续读之；二进程之比较；人之审查。"
+  },
+  "correspondence": {
+    "en": "None claimed beyond the theory's own notions: the map's two grains (generation-and-degeneration-at-two-grains) and 07's keeping widening. Read informally, a possible that grows while nothing of it is lost is close to an adjacent possible that keeps expanding (Kauffman 2000); no statement of that literature is restated here.",
+    "zh": "除本理论自有之概念外不称对应：图谱之两粒度（generation-and-degeneration-at-two-grains）与 07 之持续扩大。非正式读之，所失无而增长之可能近于不断扩张之邻近可能（Kauffman 2000）；此处不重述该文献之任何陈述。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+  "aliases": [
+    "keeping widening is generation that loses nothing",
+    "持续扩大即不失之生成",
+    "widening and generation joined both ways",
+    "扩大与生成双向相接",
+    "generation under the one that loses nothing",
+    "一之下不失之生成",
+    "Becoming.Steps.generation_iff_keepsWidening",
+    "Becoming.Steps.keepsWidening_iff_generation_losing_nothing"
+  ],
+  "dependencies": [
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«全生成», «传» and «所及»: generation read at a fine and a coarse class.",
+        "zh": "«全生成»、«传» 与 «所及»：以细类与粗类读之生成。"
+      }
+    },
+    {
+      "id": "where-the-possible-grows",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Steps.generation_iff_begins: 全生成 under the one on the line of moments is a beginning after every moment.",
+        "zh": "Steps.generation_iff_begins：时刻之线上一之下之全生成即每一时刻之后皆有所起。"
+      }
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reaching.KeepsWidening and Web.keepsWidening_iff_chain: keeping widening as a chain of predicates, and by name as the chain shifted.",
+        "zh": "Reaching.KeepsWidening 与 Web.keepsWidening_iff_chain：以谓词之链读之持续扩大，按名即平移之链。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.kept_of_includes_by_name: by name, on the occurrences, nothing lost gives 全守 and no occurrence is 全生成.",
+        "zh": "Web.kept_of_includes_by_name：按名，于诸事之上，不失给出全守，无一事全生成。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "where-the-possible-grows",
+      "detail": {
+        "en": "Its law on the map, 全生成 at (the one, what is held) where the held possible keeps widening, runs one way; at (the one, the same possible) the reason is that the one does not count loss, and its held class is a further fine class, whose converse fails on Oscillating.",
+        "zh": "其图谱上之律（持守时之可能持续扩大处于（一，所持守者）全生成）只一向；于（一，同可能），其故在一不计失；其所持之类更为细类，其逆于 Oscillating 失效。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "detail": {
+        "en": "What keeping widening needs along a reading of formations, and the kind relay on which it and 全生成 hold together; here the join is exact on the moments.",
+        "zh": "沿构成之读法持续扩大所需，及其与全生成并立之种类接力；此处于诸时刻之接为确切。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Steps.Arriving.early",
+        "Becoming.Steps.Arriving.includes",
+        "Becoming.Steps.Arriving.keepsWidening",
+        "Becoming.Steps.Arriving.late",
+        "Becoming.Steps.Arriving.tells",
+        "Becoming.Steps.Dawning.generation",
+        "Becoming.Steps.Growing.generation",
+        "Becoming.Steps.Growing.keepsWidening",
+        "Becoming.Steps.KeepsWideningFrom",
+        "Becoming.Steps.Moving.generation",
+        "Becoming.Steps.Moving.not_generation_includes",
+        "Becoming.Steps.Moving.not_keepsWidening",
+        "Becoming.Steps.arriving",
+        "Becoming.Steps.back_iff_em",
+        "Becoming.Steps.begins_iff",
+        "Becoming.Steps.buqiong_includes_iff",
+        "Becoming.Steps.change_located",
+        "Becoming.Steps.dawning",
+        "Becoming.Steps.dne_of_keepsWidening_of_generation",
+        "Becoming.Steps.forward_iff_wem",
+        "Becoming.Steps.found_of_em",
+        "Becoming.Steps.found_of_listed",
+        "Becoming.Steps.generation_iff_keepsWidening",
+        "Becoming.Steps.generation_includes_iff",
+        "Becoming.Steps.generation_of_keepsWidening",
+        "Becoming.Steps.generation_of_reachingKeepsWidening",
+        "Becoming.Steps.growing",
+        "Becoming.Steps.includes",
+        "Becoming.Steps.includesFrom_iff",
+        "Becoming.Steps.includes_not_back_of_generation",
+        "Becoming.Steps.includes_refl",
+        "Becoming.Steps.includes_trans",
+        "Becoming.Steps.keepsWideningFrom_iff_shift",
+        "Becoming.Steps.keepsWidening_iff_from_zero",
+        "Becoming.Steps.keepsWidening_iff_generation_losing_nothing",
+        "Becoming.Steps.keepsWidening_of_generation",
+        "Becoming.Steps.le_twice",
+        "Becoming.Steps.marked",
+        "Becoming.Steps.markov_of_keepsWidening_of_generation",
+        "Becoming.Steps.moving",
+        "Becoming.Steps.new_in_list_or_none",
+        "Becoming.Steps.reached_le",
+        "Becoming.Steps.reaches_of_buqiong",
+        "Becoming.Steps.same",
+        "Becoming.Steps.same_class",
+        "Becoming.Steps.same_includes",
+        "Becoming.Steps.twice",
+        "Becoming.Steps.wem_of_generation_of_keepsWidening",
+        "Becoming.Web.generation_of_keepsWidening_byName",
+        "Becoming.Web.keepsWidening_byName_iff_generation",
+        "Becoming.Web.keepsWidening_itself_iff",
+        "Becoming.Web.kept_by_name_and_generation_on_moments"
+      ],
+      "sha256": "20c076de6b81e630bca8e9f5019ab3f9612f3d48d953150a05a2cc10d933d1fd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd80d7c5b7c5a15a864d0e3ca5f214c7936fcb65f7eac830b7696118f1723787"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
+      "role": "integration",
+      "sha256": "11d6903c36d635a640a40e38262dd106315490df0d3b8fca3fa2ececa675dbd3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md",
+      "role": "integration",
+      "sha256": "2a416c2898f9647bd0b6b9d73eabf784149557524d85b042921aa394582ccd8f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WideningOnTheMap",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026, board item GW (study section 467): added (GW6), keeping widening read on the map: generation under the one that loses nothing, both ways under premises of deciding, so exactly loss parts the two; the representation at (nothing lost, the same possible); the premises calibrated as weak excluded middle and excluded middle; by name, kept on the occurrences while the moments generate; in Becoming.WideningOnTheMap, a core leaf.",
+      "zh": "2026年10月30日，工作板条目 GW（研究第 467 节）：新增（GW6），持续扩大读于图谱：于判定之前提下即一之下不失之生成，双向成立，故恰以失分二者；于（不失，同可能）之表示；前提校准为弱排中与排中；按名，于诸事上被守而诸时刻生成；于 Becoming.WideningOnTheMap（核心叶）。"
+    }
+  ]
+}
