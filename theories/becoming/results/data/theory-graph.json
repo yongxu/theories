@@ -588,7 +588,7 @@
    "type": "result",
    "record": "a-regularity-kept-and-changed",
    "title": "A regularity kept and left along its own line",
-   "title_zh": "理之守与离",
+   "title_zh": "规律之守与离",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
@@ -5796,7 +5796,7 @@
    "type": "result",
    "record": "what-a-line-holds-and-a-regularity-takes-in",
    "title": "What a line must hold, and what a regularity takes in",
-   "title_zh": "线所必含，与理之所纳",
+   "title_zh": "线所必含，与规律之所纳",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -6454,7 +6454,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 39,
+   "theorems": 42,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6498,7 +6498,7 @@
    "type": "module",
    "name": "Becoming.MapRegions",
    "level": "L1",
-   "theorems": 39,
+   "theorems": 36,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6509,7 +6509,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 138,
+   "theorems": 175,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7238,7 +7238,7 @@
    "theorems": 88,
    "region": "knowing",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7997,7 +7997,7 @@
    "theorems": 29,
    "region": "knowing",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10032,7 +10032,7 @@
    "theorems": 51,
    "region": "collective",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -45639,7 +45639,17 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Response",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Retaining",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.SelectionPool",
    "type": "proved-in"
   },
   {

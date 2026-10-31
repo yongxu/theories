@@ -555,24 +555,23 @@ theorem ExchangeLaw.Through.anticipated {law : ExchangeLaw F C} {W : Web F C}
 
 /-- **A closure read through another's steps is the pool's.** Where every step of `rel'` is a step
 of `rel`, or a step of `rel` from `a` taken at `o`, what lies within `o`'s closure under `rel'`
-lies within the closure of `o` and `a` under `rel`. -/
+lies within the closure of `o` and `a` under `rel`: the grammar's `«借步之所闭在二所闭»`, the pool
+of `o` and `a` read as their two closures. -/
 theorem WithinClosure.of_reads {rel rel' : F → F → Prop} {o a g : F}
     (split : ∀ g h, rel' g h → rel g h ∨ (g = o ∧ rel a h))
     (within : WithinClosure rel' o g) : WithinClosureOf rel (fun x => x = o ∨ x = a) g :=
-  within _ (fun g h inside related => match split g h related with
-      | .inl step => closedUnder_withinClosureOf g h inside step
-      | .inr ⟨_, step⟩ => closedUnder_withinClosureOf a h
-          (WithinClosureOf.of_member (.inr rfl) (WithinClosure.refl a)) step)
-    (WithinClosureOf.of_member (.inl rfl) (WithinClosure.refl o))
+  match «借步之所闭在二所闭» split within with
+  | .inl inside => ⟨o, .inl rfl, inside⟩
+  | .inr inside => ⟨a, .inr rfl, inside⟩
 
 /-- Conversely, where `rel'` holds `rel` and `o` reaches `a` under it, the closure of `o` and `a`
-under `rel` lies within `o`'s under `rel'`. -/
+under `rel` lies within `o`'s under `rel'`: the grammar's `«二所闭在借步之所闭»`. -/
 theorem WithinClosureOf.to_reads {rel rel' : F → F → Prop} {o a g : F}
     (larger : ∀ g h, rel g h → rel' g h) (reaches : WithinClosure rel' o a)
     (within : WithinClosureOf rel (fun x => x = o ∨ x = a) g) : WithinClosure rel' o g :=
-  match within with
-  | ⟨_, .inl same, inside⟩ => same ▸ WithinClosure.mono larger inside
-  | ⟨_, .inr same, inside⟩ => reaches.trans (same ▸ WithinClosure.mono larger inside)
+  «二所闭在借步之所闭» larger reaches (match within with
+    | ⟨_, .inl same, inside⟩ => .inl (same ▸ inside)
+    | ⟨_, .inr same, inside⟩ => .inr (same ▸ inside))
 
 namespace Flow
 

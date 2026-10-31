@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/he2-item1/checks/tree-main",
+  "modules": 27,
+  "ran": [],
+  "reused": 28,
+  "unclean": [],
+  "audits": {
+    "Becoming.Sampling": {
+      "theorems": 88,
+      "declarations": 117,
+      "with_axioms": {}
+    }
+  }
+}

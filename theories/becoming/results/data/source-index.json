@@ -528,6 +528,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/review/REVIEW-HE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md",
@@ -5012,7 +5013,6 @@
     "theories/becoming/chapters/01-ROOT.md": {
       "title": "The root: continuation relative to a class",
       "local_links": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/CoreAndLi.lean",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/NOTE.md",
@@ -5265,7 +5265,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T013649.265381Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

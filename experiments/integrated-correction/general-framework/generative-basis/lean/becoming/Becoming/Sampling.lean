@@ -163,24 +163,25 @@ theorem sample_standingCensus {stand : Nat → List C} (census : W.StandingCensu
 end Web
 
 /-- What fails at one step and holds at a later one arose across some step between them,
-where the property is decided. -/
+where the property is decided. Along the successor from `T` to `t`, the property's not arising
+is transitive, and it does arise from `T` to `t`, so a step where it arises lies on the line
+(`«两端分则中有标»`), its place read back as order (`Map.step_reached_le`). -/
 theorem arises_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
-    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1)
-  | _, .refl, absent, held => absurd held absent
-  | m + 1, .step le, absent, held => match (inferInstance : Decidable (p m)) with
-    | .isTrue pm => match arises_within le absent pm with
-      | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, Nat.lt_succ_of_lt below, no, yes⟩
-    | .isFalse npm => ⟨m, le, Nat.lt_succ_self m, npm, held⟩
+    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1) :=
+  fun le absent held => match Map.step_reaches_of_le le with
+  | .inl same => absurd held (same ▸ absent)
+  | .inr line =>
+    match «两端分则中有标» (K := fun x y => ¬ (¬ p x ∧ p y)) (fun _ _ _ => (Decidable.em _).symm)
+      (fun k₁ k₂ ⟨no, yes⟩ => k₂ ⟨fun m => k₁ ⟨no, m⟩, yes⟩) line (fun k => k ⟨absent, held⟩) with
+    | ⟨u, _, ⟨next, _⟩, ⟨no, yes⟩, from_, to⟩ => ⟨u, Map.step_reached_le from_,
+      show u + 1 ≤ _ from next ▸ Map.step_reached_le to, no, next ▸ yes⟩
 
 /-- What holds at one step and fails at a later one ceased across some step between them,
-where the property is decided. -/
+where the property is decided: its failing arose there (`arises_within`). -/
 theorem ceases_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
-    ∀ {t : Nat}, T ≤ t → p T → ¬ p t → ∃ u, T ≤ u ∧ u < t ∧ p u ∧ ¬ p (u + 1)
-  | _, .refl, held, gone => absurd held gone
-  | m + 1, .step le, held, gone => match (inferInstance : Decidable (p m)) with
-    | .isTrue pm => ⟨m, le, Nat.lt_succ_self m, pm, gone⟩
-    | .isFalse npm => match ceases_within le held npm with
-      | ⟨u, from_, below, yes, no⟩ => ⟨u, from_, Nat.lt_succ_of_lt below, yes, no⟩
+    ∀ {t : Nat}, T ≤ t → p T → ¬ p t → ∃ u, T ≤ u ∧ u < t ∧ p u ∧ ¬ p (u + 1) :=
+  fun le held gone => match arises_within (p := fun n => ¬ p n) le (fun no => no held) gone with
+  | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, below, Decidable.of_not_not no, yes⟩
 
 namespace Web
 

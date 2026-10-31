@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/he2-item1/checks/tree-weakening",
+  "modules": 30,
+  "ran": [],
+  "reused": 31,
+  "unclean": [],
+  "audits": {
+    "Becoming.PatternPassing": {
+      "theorems": 33,
+      "declarations": 46,
+      "with_axioms": {}
+    }
+  }
+}

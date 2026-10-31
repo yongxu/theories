@@ -120,13 +120,10 @@ alike under it. -/
 theorem begins_iff {E : «际» Nat} {t : Nat} : «生» next E (t + 1) ↔ ¬ E t (t + 1) :=
   ⟨fun begins alike => begins (hasPred_iff.mpr alike), fun apart h => apart (hasPred_iff.mp h)⟩
 
-/-- What a line along the moments reaches is later. -/
+/-- What a line along the moments reaches is later: GrammarMap's law of the successor
+(`Map.step_reached_le`), read at `next`, which is the same relation. -/
 theorem reached_le {L : «际» Nat} {x y : Nat} (reached : «所及» next L x y) : x ≤ y :=
-  match reached with
-  | .inl at_ => Nat.le_of_eq at_
-  | .inr line => match reach_later line with
-    | ⟨n, at_⟩ => Eq.subst (motive := fun z => x ≤ z) at_.symm
-        (Nat.le_succ_of_le (Nat.le_add_right x n))
+  Map.step_reached_le reached
 
 /-- Where the line from `N` never ends, it reaches every later moment. -/
 theorem reaches_of_buqiong {L : «际» Nat} {N y : Nat} (endless : «不穷» next L N) (le : N ≤ y) :

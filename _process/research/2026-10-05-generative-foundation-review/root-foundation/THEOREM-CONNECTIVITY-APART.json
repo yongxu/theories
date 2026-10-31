@@ -2842,11 +2842,6 @@
    "category": "general-structure",
    "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
   },
-  "Becoming.«核为类»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "the core of a class is a class; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«位根»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -3187,7 +3182,7 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«从缘生非文法之理»": {
+  "Becoming.«从缘生非文法之律»": {
    "module": "Becoming.GrammarCandidates",
    "category": "model-witness",
    "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
@@ -3487,7 +3482,7 @@
    "category": "general-structure",
    "reason": "the last step of a line that ends leaves the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
   },
-  "Becoming.«有亡之线两端理异»": {
+  "Becoming.«有亡之线两端核异»": {
    "module": "Becoming.GrammarRegularity",
    "category": "general-structure",
    "reason": "the ends of a line that ends lie apart in the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
@@ -6156,6 +6151,56 @@
    "module": "Becoming.ListingValuation",
    "category": "general-structure",
    "reason": "ListingValuation.updates_commute: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.GrammarLaws.count_eq_countP": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "GrammarLaws.count_eq_countP: a list lemma: the grammar's count is Lean's List.countP, proved with no axiom where Init's countP lemmas report propext (HE2 item 2)"
+  },
+  "Becoming.«一对而静不对之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«一对而静不对之例»: a fact about one constructed relation: equal count pairs under the one and not under sameness, so the class in «类之对当且仅当类类等数» does work (HE2 item 2)"
+  },
+  "Becoming.«前者在前则所列生者生»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«前者在前则所列生者生»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«后者在后则所列亡者亡»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«后者在后则所列亡者亡»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«定后定前则前并生对后并亡»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«定后定前则前并生对后并亡»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«对则双闭域守数»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«对则双闭域守数»: the count kept on a region closed both ways: a law of pairings under every relation on any carrier (U4's lever 1, HE2 item 2); the base reads balance in numbers and its consumers stay arithmetic, so nothing on the base uses it"
+  },
+  "Becoming.«对而单闭域不守数之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«对而单闭域不守数之例»: a fact about one constructed relation: a region closed one way where a pairing does not keep the count, so «对则双闭域守数» needs both ways (HE2 item 2)"
+  },
+  "Becoming.«续之对则类类等数»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«续之对则类类等数»: what a pairing under continuation adds to equal count, relative to a class decided by a test: a law of pairings under every relation on any carrier (U4's lever 1, HE2 item 2); the base reads balance in numbers and its consumers stay arithmetic, so nothing on the base uses it"
+  },
+  "Becoming.«后不定则核可不同行»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«后不定则核可不同行»: a fact about one constructed relation: one occurrence stepping to two, where the identity's core does not go alike, so off a fixed successor the core need not be a 理 (HE2 item 6)"
+  },
+  "Becoming.«定后遍后则核为其内最粗同行之类»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«定后遍后则核为其内最粗同行之类»: with a fixed successor that every occurrence has, a class's core is the coarsest class inside it that the step goes alike across, 01 §4's 理 of the class: a law of every relation and class on any carrier (HE2 item 6); nothing on the base uses it"
   }
  },
  "instances": {
