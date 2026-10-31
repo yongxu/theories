@@ -1,6 +1,6 @@
 # Reading budgets: each layer sized for a person
 
-*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `095de350e`, after BD landed, the worked example's on that main and on branch `aj4-human` merged with it. About ten minutes to read.*
+*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `095de350e`, after BD landed, and README's first screen at `d00f1724d`, where it landed; the worked example's on that main and on branch `aj4-human` merged with it. About ten minutes to read.*
 
 ## Why
 
@@ -24,7 +24,7 @@ Its last sentence is new.
 
 | Layer | On main today | Budget | What brings it within | Who |
 |---|---|---|---|---|
-| README's first screen (generated) | 36 words, no time; then the opening, in the first person (18.9 to 24.6 minutes), and its notes | A screen naming each layer with its time | A generated block before the opening, times computed at render, the opening untouched: RA's block, ready on MV's branch, lands with MV's follow-up ([below](#the-readmes-first-screen)) | RA's line |
+| README's first screen (generated) | 172 words (1.3 to 1.7 minutes), 22 over a screen, stating "1–2 minutes": what the theory is, its ethics' two premises by role, where to start with the times of the one page, the overview and the opening, filled at render, and what is tested; then the opening, in the first person (19.1 to 24.8 minutes), and its notes | A screen naming each layer with its time | Landed with MV's follow-up ([below](#the-readmes-first-screen)); the excess is the measure's warning, for RA's line to weigh | RA's line |
 | The opening's notes (AI-written, read one at a time) | 24 notes, 10,354 words; 15 over 300, the largest 1,094 | Three minutes each | Standing and link kept, detail to the section cited | the coordinator routes |
 | One page (and Chinese) | 2,154 words, one block (16.6 to 21.6 minutes), no time stated; Chinese 14.0 to 18.2 minutes | Ten minutes | What it claims, the ethics' two premises with their roles, where the evidence is, what is not done | OU's owner |
 | Overview (and Chinese) | 13,659 words (105.3 to 136.8 minutes), §7 alone 2,608, no time stated; Chinese 86.8 to 112.8 minutes | An hour | Half of each section, detail to the chapters it links; §10, what is not shown, whole | OU's owner |
@@ -37,11 +37,7 @@ Whole dossiers: classical texts 64 to 83 minutes, Buddhist thought 67 to 88, log
 <a id="the-readmes-first-screen"></a>
 ## The README's first screen
 
-Proposed navigation for the template (AI-written; links relative to this page):
-
-> **Reading paths.** In ten minutes: [one page](../../../../../../theories/becoming/ONE-PAGE.md) ([中文](../../../../../../theories/becoming/ONE-PAGE.zh.md)). In an hour: [the overview](../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md)). To review one part: [the review packet](../../../../../../theories/becoming/review/README.md), where each dossier gives its time. The opening below, in the first person, takes about twenty minutes; its notes, for looking up, say how far each sentence is proved.
-
-Until the layers are within budget, the template states their measured times.
+Landed on 31 October 2026 with MV's follow-up (`d00f1724d`, the root foundation's study §478): [README-FIRST-SCREEN.md](../../../../../navigation/README-FIRST-SCREEN.md), four points before the opening with links down, every figure and time filled at render by the same count as this kit's measure, the opening's first-person body untouched. It replaced the navigation block this page proposed, which is in this page's history at `23f735855`.
 
 ## Never cut, cut first
 
