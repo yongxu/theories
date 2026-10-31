@@ -177,8 +177,8 @@
       "id": "not-going-out-of-a-region",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«所经必同» is proved from «定则内至外之线有出步»: the line's step going out of the region lands in the set.",
-        "zh": "«所经必同» 由 «定则内至外之线有出步» 证得：线出域之步落于该集。"
+        "en": "«所经必同» is proved from «定则内至外之线有出步»: a step going out of the region, given by it, lands in the set.",
+        "zh": "«所经必同» 由 «定则内至外之线有出步» 证得：其所给出域之一步落于该集。"
       }
     }
   ],
@@ -352,7 +352,7 @@
       "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：仅措辞，title (zh)：写作理之规律（此为有常之类）改为规律，如包 README 之格今所写；旧题仍在别名中；所述之义皆不变。"
     },
     {
-      "en": "31 October 2026, board item BD2: «所经必同»'s direct proof by induction on the line replaced by a derivation from the step going out of a region on a line («定则内至外之线有出步», Becoming.GrammarCrossing), the step's end being the member of the set; the dependency added. No statement, premise, law or declaration changed.",
+      "en": "31 October 2026, board item BD2: «所经必同»'s direct proof by induction on the line replaced by a derivation from a step going out of a region on a line («定则内至外之线有出步», Becoming.GrammarCrossing), that step's end being the member of the set; the dependency added. No statement, premise, law or declaration changed.",
       "zh": "2026年10月31日，工作板条目 BD2：«所经必同» 之直接证明（于线上归纳）改为由线上出域之步（«定则内至外之线有出步»，Becoming.GrammarCrossing）推得，步之终即该集之员；增此依赖。陈述、前提、规律与声明皆未变。"
     }
   ]

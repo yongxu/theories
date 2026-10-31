@@ -5,8 +5,9 @@ that are BD2's, each with a category and a reason; stop on any other root, which
 * GrammarCrossing's laws hold of every relation and region on any carrier: the base states its cut through
   Flow.cut_iff_notGoingOut and the crossing law through it (Becoming.ConveyanceBoundaries), and nothing on the base uses
   the others yet (general structure).
-* «不出皆闭当且仅当排中» is the exact logical principle that not going out being closedness needs (calibration).
-* «闭而有入» is a fact about one constructed model (model witness).
+* «不出皆闭当且仅当排中» is the exact logical principle a stated law of the grammar needs (calibration in the
+  register's sense: a lemma of the item that needs it, membership being any proposition).
+* «闭而有入之例» is a fact about one constructed model (model witness).
 
 Textual edits, the rest of the file byte for byte (register_rr2.py's pattern).
 usage (from the checkout root): python3 -B register_bd2.py CONNECTIVITY_LOG"""
@@ -26,22 +27,22 @@ GENERAL = ('a law of every relation and region on any carrier; the base states i
            '(Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)')
 REASONS = {
     'Becoming.«不出皆闭当且仅当排中»': ('calibration',
-                                 'That every region nothing goes out of is closed, for every relation and region, is '
-                                 'exactly excluded middle: not going out gives only what is not outside, and inside '
-                                 'where membership is settled (BD2)'),
-    'Becoming.«闭而有入»': ('model-witness',
-                         'a closed region come into along a relation that is not symmetric, on two occurrences: a '
-                         'witness of Becoming.GrammarCrossing (BD2)'),
-    'Becoming.«所闭不出»': ('general-structure', "an occurrence's closure is not gone out of, the closure law's «所闭之界» "
-                                            'read as «不出»: ' + GENERAL),
+                                 'the exact logical principle a stated law of the grammar needs (excluded middle): '
+                                 'that every region nothing goes out of is closed, membership being any proposition; '
+                                 'a lemma of the item that needs it, «不外者内则不出当且仅当闭» (BD2)'),
+    'Becoming.«闭而有入之例»': ('model-witness',
+                           'a closed region come into along a relation that is not symmetric, on two occurrences: a '
+                           'witness of Becoming.GrammarCrossing (BD2)'),
+    'Becoming.«所闭不出»': ('general-structure', "an occurrence's closure is not gone out of, the closure law «所闭之界» "
+                                            'read through «不出» and proved as it: ' + GENERAL),
     'Becoming.«逆之不出当且仅当外者不出»': ('general-structure',
                                     'nothing comes into a region exactly where nothing goes out of what lies outside '
                                     'it: ' + GENERAL),
     'Becoming.«对称则不出当且仅当逆不出»': ('general-structure',
                                     'along a symmetric relation nothing goes out exactly where nothing comes in: '
                                     + GENERAL),
-    'Becoming.«内至外之线则出»': ('general-structure',
-                              'a line from inside a region to outside goes out of it, with no decision: ' + GENERAL),
+    'Becoming.«内至外之线则非不出»': ('general-structure',
+                                'a region a line leaves is not one nothing goes out of, with no decision: ' + GENERAL),
     'Becoming.«内至外之线有出步»': ('general-structure',
                                'where each step keeps to the region or goes out of it, a line from inside to outside '
                                'has a step going out, placed on it: ' + GENERAL),

@@ -53,7 +53,7 @@ REASON = ("BD2: Becoming.GrammarCrossing and Becoming.ConveyanceBoundaries joine
           "the step going out with its statement unchanged (the root module's imports and bullets, the checker's core "
           "list and scope, the package README rows EN and ZH, the Chinese Boundaries row and the checker's Boundaries "
           "scope brought to the continuation condition); 01 §9.9 (the theorem paragraph, BD's reading citing it); "
-          "04 §1 (the sixth law's sentence); 07 §4.6 (the line record's home sentence); 08's counts; the glossary's "
+          "04 §1 (the sixth and seventh laws' sentences); 07 §4.6 (the line record's home sentence); 08's counts; the glossary's "
           "boundary row; regions.json; the study and BD's note §6 and review; the connectivity; read before re-pointing")
 
 

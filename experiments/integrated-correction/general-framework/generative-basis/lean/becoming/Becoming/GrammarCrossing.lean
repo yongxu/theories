@@ -6,35 +6,37 @@ import Becoming.GrammarLaws
 A region is delimited from the rest by what it holds, and a relation crosses that delimitation where
 it bears a member to something outside (the root chapter's reading of boundaries, 01 §9.9). The
 grammar states the closed region (`«闭»`): whatever a member bears the relation to is a member. This
-module states, for every carrier, relation and region, that nothing in the region goes out of it
-(`«不出»`), how that differs from being closed, how going out and coming in are related, and where on
-a line a crossing lies. It adds one definition and changes no definition of an earlier module.
+module states not going out (`«不出»`) for every carrier, relation and region, how it differs from
+being closed, how going out and coming in are related, and where on a line a crossing lies. It adds
+one definition and changes no definition of an earlier module.
 
 | name | reading |
 |---|---|
 | `«不出»` | nothing in a region goes out of it along a relation: no member bears it to something outside |
 
 * **Closed, and not gone out of.** A closed region is not gone out of (`«闭则不出»`), an occurrence's
-  closure among them (`«所闭不出»`: the closure law's `«所闭之界»`, by definition). Not going out of
-  a region is exactly the closedness of what is not outside it (`«不出当且仅当不外者闭»`): its members
-  bear the relation only to what cannot be outside. No decision is used. Where whatever is not outside
-  the region lies in it, its membership settled, the two coincide (`«不外者内则不出当且仅当闭»`). That
-  they coincide for every relation and region is exactly excluded middle (`«不出皆闭当且仅当排中»`): what
-  a member of a region nothing goes out of bears the relation to is not outside it, and is shown inside
-  only where membership there is settled.
+  closure among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`). Not going out
+  of a region is exactly the closedness of what is not outside it (`«不出当且仅当不外者闭»`): its
+  members bear the relation only to what is not outside. No decision is used. Where membership is
+  stable, whatever is not outside the region lying in it, the two coincide
+  (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is exactly excluded
+  middle (`«不出皆闭当且仅当排中»`), a lemma of the logic, not a calibration: the need comes from
+  membership being any proposition, not from the relation.
 * **Going out and coming in.** Nothing comes into a region along a relation, nothing outside bearing it
   to a member, where the region is not gone out of along the converse (`«逆»`), and that is exactly
   that nothing outside the region goes out of what lies outside it (`«逆之不出当且仅当外者不出»`), with
   no decision. Along a symmetric relation nothing goes out of a region exactly where nothing comes in
-  (`«对称则不出当且仅当逆不出»`); along one that is not, a closed region can be come into (`«闭而有入»`).
+  (`«对称则不出当且仅当逆不出»`); some relation that is not symmetric has a closed region come into
+  (`«闭而有入之例»`).
 * **The crossing on a line.** A line (相续) under any class from a member to something outside means
-  something in the region bears the relation to something outside it (`«内至外之线则出»`), with no
-  decision. Where every step of continuation from a member keeps to the region or goes out of it, the
-  line has a step going out, from a member to something outside, given with its place on the line:
-  reached from the start, and reaching the end (`«内至外之线有出步»`). It is `«两端分则中有标»` with
-  keeping to the region, which is transitive, as what the line's ends fail. Where membership is decided
-  every step is of one of the two kinds (`«定则内至外之线有出步»`); a line leaving a region only into a
-  set passes a member of the set this way (`«所经必同»`, `Becoming.GrammarPath`).
+  the region is not one nothing goes out of (`«内至外之线则非不出»`), with no decision; it names no
+  step going out. Where every step of continuation keeps to the region, its end a member wherever its
+  start is, or goes out of it, from a member to something outside, the line has a step going out,
+  given with its place on the line: reached from the start, and reaching the end (`«内至外之线有出步»`).
+  It is `«两端分则中有标»` with keeping to the region, which is transitive, as what the line's ends
+  fail. Where membership is decided every step is of one of the two kinds (`«定则内至外之线有出步»`); a
+  line under a class leaving a decided region only into a set passes a member of the set this way
+  (`«所经必同»`, `Becoming.GrammarPath`).
 
 The World's cut is this module's `«不出»` at a valuation's relation, by definition, and 04 §1's law of
 crossing is read on 07 §4.1's boundaries in `Becoming.ConveyanceBoundaries`. What is not shown: a
@@ -61,9 +63,9 @@ theorem «闭则不出» {R : «际» α} {P : α → Prop} (closed : «闭» R 
   fun x y inside outside related => outside (closed x y inside related)
 
 /-- **An occurrence's closure is not gone out of**, as every closed region: nothing within it bears the
-relation to what lies beyond it, which is the closure law's `«所闭之界»` by definition. -/
+relation to what lies beyond it. It is the closure law `«所闭之界»` read through `«不出»`. -/
 theorem «所闭不出» (R : «际» α) (x : α) : «不出» R («所闭» R x) :=
-  «闭则不出» («所闭之闭» R x)
+  fun _ _ within beyond => «所闭之界» within beyond
 
 /-- **Not going out of a region is the closedness of what is not outside it.** Nothing in `P` bears
 `R` to something outside `P` exactly where the region of what is not outside `P` is closed under `R`.
@@ -74,15 +76,16 @@ theorem «不出当且仅当不外者闭» {R : «际» α} {P : α → Prop} :
       notOutside fun inside => none x y inside outside related,
    fun closed x y inside outside related => closed x y (fun out => out inside) related outside⟩
 
-/-- **Where membership is settled, not going out is being closed.** Where whatever is not outside `P`
+/-- **Where membership is stable, not going out is being closed.** Where whatever is not outside `P`
 lies in `P`, nothing in `P` going out of it along `R` is `P`'s being closed under `R`. -/
-theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Prop} (settled : ∀ y, ¬ ¬ P y → P y) :
+theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Prop} (stable : ∀ y, ¬ ¬ P y → P y) :
     «不出» R P ↔ «闭» R P :=
-  ⟨fun none x y inside related => settled y fun outside => none x y inside outside related,
+  ⟨fun none x y inside related => stable y fun outside => none x y inside outside related,
    «闭则不出»⟩
 
-/-- **That not going out is always being closed is exactly excluded middle.** For every relation and
-region, a region nothing goes out of is closed exactly where every proposition is decided. -/
+/-- **That not going out is always being closed is exactly excluded middle.** That every region nothing
+goes out of, along every relation on every carrier in `Type`, is closed is exactly excluded middle. It
+is a lemma of the logic, not a calibration: the need comes from membership being any proposition. -/
 theorem «不出皆闭当且仅当排中» :
     (∀ (α : Type) (R : «际» α) (P : α → Prop), «不出» R P → «闭» R P) ↔ ∀ Q : Prop, Q ∨ ¬ Q := by
   constructor
@@ -122,12 +125,14 @@ theorem «对称则不出当且仅当逆不出» {R : «际» α} {P : α → Pr
   ⟨fun none x y inside outside related => none x y inside outside (symm y x related),
    fun none x y inside outside related => none x y inside outside (symm x y related)⟩
 
-/-- **A closed region can be come into.** Along a relation that is not symmetric, a region closed
-under it can have something outside bearing the relation to a member: on two occurrences, the
-relation from the first to the second, and the region of the second. -/
-theorem «闭而有入» : ∃ (R : «际» Bool) (P : Bool → Prop), «闭» R P ∧ ¬ «不出» («逆» R) P :=
+/-- **A closed region come into: a witness.** A region closed under a relation can have something
+outside bearing the relation to a member: on two occurrences, the relation from the first to the
+second, and the region of the second. Such a relation is not symmetric (`«闭则不出»`,
+`«对称则不出当且仅当逆不出»`). -/
+theorem «闭而有入之例» :
+    ∃ (R : «际» Bool) (P : Bool → Prop), «闭» R P ∧ ∃ x y, ¬ P x ∧ P y ∧ R x y :=
   ⟨fun x y => x = false ∧ y = true, fun b => b = true, fun _ _ _ related => related.2,
-   fun none => none true false rfl Bool.false_ne_true ⟨rfl, rfl⟩⟩
+   false, true, Bool.false_ne_true, rfl, ⟨rfl, rfl⟩⟩
 
 end ComingIn
 
@@ -137,19 +142,21 @@ section Lines
 
 variable {α : Type u}
 
-/-- **A line from inside a region to outside goes out of it.** Where a line (相续) under `E` runs from
-a member of `P` to something outside `P`, something in `P` bears `R` to something outside: `P` is not
-`«不出»` along `R`. No decision is used. -/
-theorem «内至外之线则出» {R E : «际» α} {P : α → Prop} {x y : α} (line : «相续» R E x y)
+/-- **A region a line leaves is not one nothing goes out of.** Where a line (相续) under `E` runs from
+a member of `P` to something outside `P`, `P` is not `«不出»` along `R`. No decision is used, and no
+step going out is named: `«内至外之线有出步»` names one where every step keeps to `P` or goes out of
+it. -/
+theorem «内至外之线则非不出» {R E : «际» α} {P : α → Prop} {x y : α} (line : «相续» R E x y)
     (inside : P x) (outside : ¬ P y) : ¬ «不出» R P :=
   fun none => «闭之及» («不出当且仅当不外者闭».mp none) (fun out => out inside)
     («相续含于及» R E x y line) outside
 
 /-- **A line from inside to outside has a step going out, placed on the line.** Where every step of
-continuation under `E` either keeps to `P`, from a member to a member, or goes out of it, a line under
-`E` from a member of `P` to something outside `P` has a step from a member to something outside, given
-with its place on the line: reached from the start, and reaching the end. It is `«两端分则中有标»`
-with keeping to `P`, which is transitive, as what the line's ends fail. -/
+continuation under `E` either keeps to `P`, its end a member wherever its start is, or goes out of it,
+from a member to something outside, a line under `E` from a member of `P` to something outside `P` has
+a step from a member to something outside, given with its place on the line: reached from the start,
+and reaching the end. It is `«两端分则中有标»` with keeping to `P`, which is transitive, as what the
+line's ends fail. -/
 theorem «内至外之线有出步» {R E : «际» α} {P : α → Prop}
     (split : ∀ u v, «续» R E u v → (P u → P v) ∨ (P u ∧ ¬ P v)) {x y : α} (line : «相续» R E x y)
     (inside : P x) (outside : ¬ P y) :

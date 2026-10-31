@@ -7,12 +7,15 @@ import Becoming.GrammarCrossing
 `Flow.Cut` (`Becoming.Standpoints`) is a region of a valuation's events that no formed relation
 leaves; a boundary of a self along a relation (`Boundary`, `Becoming.Boundaries`) is a region holding
 it and closed under the relation. This module reads the first on the root and joins the two. It adds
-no definition and changes none.
+no definition and changes none: the cut keeps its definition in `Becoming.Standpoints`, one with
+`«不出»` by `Iff.rfl`, and this module, the World's case of the crossing laws, is a leaf.
 
 * **The World's cut is not going out.** A cut is the grammar's `«不出»` at the valuation's relation, by
   definition (`Flow.cut_iff_notGoingOut`). So a region closed under the relation is a cut
-  (`Flow.cut_of_closedUnder`), and a cut is closed where membership is settled
+  (`Flow.cut_of_closedUnder`), and a cut is closed where membership is stable
   (`Flow.closedUnder_of_cut`), by `«闭则不出»` and `«不外者内则不出当且仅当闭»` (`Becoming.GrammarCrossing`).
+  Conveyance's relation is symmetric (`Flow.conveyance_symm`), so along it nothing goes out of a region
+  exactly where nothing comes in (`Flow.cut_iff_not_come_into`, by `«对称则不出当且仅当逆不出»`).
 * **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
   read with one kind of relatum, with no repetition, decided equality and enclosure around the family
   from some step on, where something takes from the family at arbitrarily late steps, conveyance
@@ -46,10 +49,10 @@ theorem cut_of_closedUnder {V : Valuation Pos Q} {region : Q → Prop}
     (closed : ClosedUnder V.related region) : Cut V region :=
   cut_iff_notGoingOut.mpr («闭则不出» (closedUnder_iff_closed.mp closed))
 
-/-- A cut is closed under the valuation's relation where membership is settled. -/
+/-- A cut is closed under the valuation's relation where membership is stable. -/
 theorem closedUnder_of_cut {V : Valuation Pos Q} {region : Q → Prop}
-    (settled : ∀ e, ¬ ¬ region e → region e) (cut : Cut V region) : ClosedUnder V.related region :=
-  closedUnder_iff_closed.mpr ((«不外者内则不出当且仅当闭» settled).mp (cut_iff_notGoingOut.mp cut))
+    (stable : ∀ e, ¬ ¬ region e → region e) (cut : Cut V region) : ClosedUnder V.related region :=
+  closedUnder_iff_closed.mpr ((«不外者内则不出当且仅当闭» stable).mp (cut_iff_notGoingOut.mp cut))
 
 end Cuts
 
@@ -57,10 +60,23 @@ section Crossing
 
 variable {X Pos : Type} {L : Flow X X} {W : Web X X} {own sig : Pos → X × Nat → Prop}
 
+/-- **Conveyance's relation is symmetric**: two events at a common step are related where something is
+conveyed between their relata, whichever way. -/
+theorem conveyance_symm :
+    «则» (L.conveyance W own sig).related («逆» (L.conveyance W own sig).related) :=
+  fun e e' related => show (L.conveyance W own sig).related e' e from
+    ⟨related.1.symm, Eq.subst (motive := fun s => L.Conveys s e'.1 e.1 ∨ L.Conveys s e.1 e'.1)
+      related.1 related.2.symm⟩
+
+/-- **Along conveyance nothing goes out of a region exactly where nothing comes in.** -/
+theorem cut_iff_not_come_into {region : X × Nat → Prop} :
+    Cut (L.conveyance W own sig) region ↔ «不出» («逆» (L.conveyance W own sig).related) region :=
+  «对称则不出当且仅当逆不出» conveyance_symm
+
 /-- **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
 read with one kind of relatum, with no repetition, decided equality and enclosure around the family
 from some step on, where something takes from the family at arbitrarily late steps, the region of the
-family's events is closed under conveyance for no event: it is no boundary of any event's self along
+family's events is not closed under conveyance, so it is a boundary of no event's self along
 conveyance (07 §4.1). -/
 theorem region_no_boundary [DecidableEq X] (balances : L.Balances W) (dissipative : L.Dissipative)
     {ds : List X} (distinct : Distinct ds) {T₀ : Nat} (around : ∀ t, T₀ ≤ t → L.Around ds t)
