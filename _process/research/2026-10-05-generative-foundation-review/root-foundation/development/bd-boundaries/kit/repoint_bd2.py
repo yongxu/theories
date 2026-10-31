@@ -34,17 +34,20 @@ OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{P
 MINE = set(LEAN) | set(OTHER)
 OWN = {'not-going-out-of-a-region', 'conveyance-crosses-the-boundary', 'what-a-line-holds-and-a-regularity-takes-in'}
 BOUND = OWN | {'constancy-read-at-a-members-class', 'what-leaves-a-class-follows-its-line'}
-# the sections BD2's texts change, as research.py check names them (a heading, or an anchor a record cites), compared
-# without their leading #s
+# the sections BD2's texts change, as research.py check names them (a heading at either level, or an anchor a record
+# cites), compared without their leading #s
 EXPECTED = {
     'theories/becoming/chapters/01-ROOT.md': {'9.9 Wholes, parts and closures', '99-wholes-parts-and-closures',
                                               'wholes-and-closures', 'boundaries', 'r-not-going-out-of-a-region',
-                                              '9. Ways of reading the root', '9-ways-of-reading-the-root'},
+                                              '9. Laws on every model, each with its hypotheses',
+                                              '9-laws-on-every-model-each-with-its-hypotheses'},
     'theories/becoming/chapters/04-LIFE.md': {'1. Life as a condition of life', '1-life-as-condition-of-life',
                                               '1-life-as-a-condition-of-life', 'life-as-condition',
                                               'r-conveyance-crosses-the-boundary'},
     'theories/becoming/chapters/07-SIGNIFICANCE.md': {'4.6 The future without the step: one path',
                                                      '46-the-future-without-the-step-one-path', 'future-path',
+                                                     '4. Scope and order: two premises, two roles',
+                                                     '4-scope-and-order-two-premises-two-roles',
                                                      'r-what-a-line-holds-and-a-regularity-takes-in'},
     'theories/becoming/chapters/08-METHOD.md': {'3. The pure core and the periphery', '3-the-pure-core-and-the-periphery',
                                                 'pure-core-and-periphery'},
