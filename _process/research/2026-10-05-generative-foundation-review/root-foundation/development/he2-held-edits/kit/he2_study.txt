@@ -6,11 +6,11 @@ HE (§455) showed that edits held for a rebuild land best together, on purpose, 
 Result(s): records master-laws-on-the-grammar, continuation-relative-to-a-class,
        generation-and-degeneration-at-two-grains, laws-at-coarser-steps, a-regularity-kept-and-changed,
        candidate-theorems-of-the-corpus, reach-past-ones-own-end and what-a-line-holds-and-a-regularity-takes-in
-       changed, one HE2 history note each; {REPOINTED} records pinning the changed sources re-pointed, {REPOINTED_HE2}
-       of these eight among them, and nothing the other {REPOINTED_OTHER} say changed; no new record.
+       changed, one HE2 history note each; {REPOINTED} records pinning the changed sources re-pointed,
+       {REPOINTED_HE2} of these eight among them, and nothing the other {REPOINTED_OTHER} say changed; no new record.
 Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则中有标» asks only that the relation it keeps
-       be transitive (split, then trans, in place of a class: transitivity is all its proof uses). PatternPassing's two uses
-       pass the carrier class's trans. Sampling's arises_within reads the law along the successor, the relation being a
+       be transitive (split, then trans, in place of a class: transitivity is all its proof uses). PatternPassing's
+       two uses pass the carrier class's trans. Sampling's arises_within reads the law along the successor, the relation being a
        property's not arising, and ceases_within is arises_within at the negation; Sampling's four coarse-step
        theorems now reach the grammar law. continuation-relative-to-a-class and its home section, 01 §3, say the law
        for a transitive relation, as PatternPassing's gloss does, and laws-at-coarser-steps names Sampling's binding at
@@ -45,8 +45,8 @@ Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则�
        continuation-relative-to-a-class's counts of Grammar, stale since OU6.
        GrammarLaws has {GT} theorems in {GD} declarations; the run holds {MODULES} modules.
 Supplied premises / correspondence: none.
-Evidence: core receipt {RECEIPT}, every axiom report empty; the run ran {RAN} of its {KEYS} Lean module steps and reused
-       {REUSED} from earlier runs on the same sources. Before it, outside the repository: items 2–7 with item 1's
+Evidence: core receipt {RECEIPT}, every axiom report empty; the run ran {RAN} of its {KEYS} Lean module
+       steps and reused {REUSED} from earlier runs on the same sources. Before it, outside the repository: items 2–7 with item 1's
        weakening (the near-full rebuild, 1,378 module steps run of 1,439), all seven (54 run), all seven from the
        items' final tips (1,350 run of 1,443), after the review's fixes (22 run), and with Grammar's and Sampling's
        docstrings saying transitive (1,382 run). The signature audit (he2_signatures.py), run before the landing
@@ -64,6 +64,6 @@ Evidence: core receipt {RECEIPT}, every axiom report empty; the run ran {RAN} of
 Boundary: one statement changes, and only by weakening its hypotheses: the earlier form is the new law at a class's
        trans. The rest add laws, move them whole, rename them, or re-prove a proof as an application.
 Output → input: the eight records; 01 §3 (item 1); 01 §4, §5 and §7, 06 §四, 07 §2, §4 and §8, the glossary and two
-       review pages (items 6 and 7); 08's counts; GrammarLaws', GrammarMap's and the root module's docs and the README rows;
-       the apart register; the master-law view.
+       review pages (items 6 and 7); 08's counts; GrammarLaws', GrammarMap's and the root module's docs and the README
+       rows; the apart register; the master-law view.
 ```
