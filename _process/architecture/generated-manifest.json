@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "0767eead58e12f9c26cbba118168785904787d31631dacd83ac9dec332ce211c",
+    "README.md": "f93d26881cf43bfadfd2db03bd4bca44493bfad69a1a18d5bd6754f1845ef6ee",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "5d93b01e9ecbc01c588363daf8590f309d444889b9718dbe5e92f34801051a2f",
     "GOALS.md": "4ae2f22d0234e5ab5a8ff63c5a8a9ccac8d1ae713d9e6610e6d2638267b67f2c",
@@ -244,7 +244,7 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "e180d1a0933197b473a8716a686748588207d4d470892c23e3b73ba26484009a",
     "theories/becoming/results/records/worlds-are-runs.md": "f3dce1a7e7a5e899f0b27c0f68356110e098d624e4113ed29d051ae76bf09b8c",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "4fa1452be6f61f104b7ae67ec60bbfdb6539c7dd677fbbd90c24c9051c766bb1",
+    "_process/research/README.md": "2a5a5c617122ff4e988878e79a2ca6d528558c22daa581932a9a129bcb391df1",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "0082c9ec811eb730534680c02440b8e5e560753f12b1fd03c29d4170084755aa",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "4c10139d32ad7830e8e2912459dec6399b6cc8c202e2a05d0fa72be3f4dbe0a5",
@@ -253,7 +253,7 @@
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
     "theories/becoming/results/data/lean-index.json": "6855fae3d7cff106c3e3a9054a902b315c2d329078e269112ff351664d3cb252",
-    "theories/becoming/results/data/source-index.json": "2dbe1017037761bd95875e27098b8c83b367499dce63b252b96faf6467994d29",
+    "theories/becoming/results/data/source-index.json": "1f2d5d932238419dc1d92e5a290cce6e28090e4e4139896bf7152e10de03b706",
     "theories/becoming/results/LEAN-INDEX.md": "9a74725445eff256f3c00ae2497b3ba4afeaa69288a0a0ae067d3f0569deebb0",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "d01a8970793eaeee41be7fe0445de415318a30363166eaefad65a7021ba344d1",
     "theories/becoming/results/lean-declarations/becoming-core.md": "c6bc2da27306afbac9e5afce4080a1d985fe04e5ddb54f56a455189846bb2fb6",

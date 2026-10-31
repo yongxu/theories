@@ -1262,6 +1262,7 @@ M, E = 'Becoming.Model.', 'Becoming.Edge.'
 GENERATED = [M + n for n in (  # each under a declaration of the kind Lean generates it for, in the stubs
     'half._proof_1', 'half._unsafe_rec', 'half._sunfold', 'half.eq_def', 'half.eq_1', 'comm.elim._proof_1_1', 'three._proof_1',
     'instDecidableEqTone._proof_2', 'rel_total.match_1_1', 'rel_total.match_1_1.eq_1', 'rel_total.match_1_1.splitter',
+    'rel_total.match_1_1.congr_eq_1',
     'next.proof_2', 'next._aux_3', 'Onward.f._default', 'Onward._sizeOf_1', 'Onward._sizeOf_inst', 'Onward.casesOn',
     'Onward.ctorIdx', 'Onward.noConfusion', 'Onward.noConfusionType', 'Onward.rec', 'Onward.recOn', 'Onward.mk._flat_ctor',
     'Onward.mk.inj', 'Onward.mk.injEq', 'Onward.mk.noConfusion', 'Onward.mk.sizeOf_spec', 'Tone.ctorElim', 'Tone.ctorElimType',
@@ -1284,7 +1285,8 @@ NOT_GENERATED = [M + n for n in (
     'next.noConfusion', 'Onward.noConfusion2', 'next._aux_x', 'Onward._sizeOf_x', 'Onward._sizeOf_', 'Onward.mk.brecOn',
     'comm._unsafe_rec', 'Tone._unsafe_rec', 'Tone.low._unsafe_rec', 'comm._arg_pusher', 'comm.fun_cases', 'Tone.induct',
     'half.below_1', 'half.brecOn_1', 'half.rec_1', 'Onward.mk.rec_1', 'half._sizeOf_2_eq', 'half.induct_', 'half.congr_eq_',
-    'Reach.brecOn_1.go')] + [E + n for n in (
+    'Reach.brecOn_1.go', 'comm.congr_eq_1', 'Tone.congr_eq_1', 'Tone.mutual_induct', 'comm.mutual_induct_unfolding',
+    'Tone.induct_unfolding', 'comm.fun_cases_unfolding')] + [E + n for n in (
     'op.eq_1', 'op.eq_def', 'Rp.brecOn.go', 'Rp.brecOn.eq', 'Cfg.elim', 'Foo.inj', 'seven.eq_1', 'loop.eq_1', 'loop._sunfold',
     'seven._arg_pusher', 'seven.induct', 'op.eq_unfold', 'Nest._sizeOf_2_eqx', 'Nest.brecOn_1.other', 'Nest.below_1a')] + [
     'match_1', '_private.Becoming.Leaf.0.Becoming.Model.next.inj']

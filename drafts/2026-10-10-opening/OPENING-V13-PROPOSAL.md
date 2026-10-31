@@ -100,6 +100,7 @@ The notes are AI-written and follow the current theory, so these change without 
 - **Changed with the first screen:**
   - `[^ethics]` opened "Open: this is the claim the work sets out to prove", but since 30 October the work no longer sets out to prove a verdict binding every possible mind. It now opens "Open, and offered for life: …".
   - `[^good-evil]`'s opening label now reads the good-and-evil naming as a reading for life, and its first sentence says what holds with no axiom: the four cases exclude one another, and that a part falls under one is classical (record four-cases-of-a-part).
+  - `[^transitions]` read cancer as a confined rise "(the AI's reading)"; it now says "(a reading)", as the other notes do, since front pages name no person or AI. The record confined-rise-within-a-whole keeps the label.
 - **To change with this proposal or the notes' next pass** (the opening's notes are cut to their budgets under WHAT-REMAINS item 6, amendment 4):
   - `[^axiom]` does not mention §4.6's path, P2 or P4, or that the ethics does not wait on a universal warrant.
   - `[^own]` grounds what living beings act on in the condition, where the current account grounds it in P1, the self's presupposition, which the condition contains.

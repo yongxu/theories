@@ -1,0 +1,408 @@
+{
+ "about": "A check of every factual claim in the two study-section drafts of MV's follow-up and README's first screen (mv/landing-kit/section-mv-followup.txt, section-readme-first-screen.txt) against the branch mv-land at 416b0af81, by one checker per draft; each finding then given to a skeptic told to refute it. A finding the skeptic confirms (real) was taken into the drafts, BOUNDARY-FIELD, the screen or the tests; a refuted one was left, with the skeptic's reason.",
+ "run": "wf_527ac3cb-517",
+ "agents": 4,
+ "totals": {
+  "findings": 32,
+  "confirmed_and_taken": 29,
+  "refuted": 3
+ },
+ "sections": [
+  {
+   "draft": "mv",
+   "claims_checked": 46,
+   "findings": [
+    {
+     "claim": "Evidence: \"after the fixes, the dumps of core receipts 20261030T232750.486801Z, 20261031T013649.265381Z and 20261031T054654.692180Z and of U4's build give the same auxiliaries, walks, forwarders, laws and root constants under the rule before and after them, and outside is empty (... reports/boundary-rule-compare.json, by boundary/check/compare_rule.py)\"",
+     "problem": "The cited report and script cover two of the four dumps. Nothing on the branch backs 232750 or U4's build.",
+     "evidence": "reports/boundary-rule-compare.json has exactly two runs: core_receipt 20261031T013649.265381Z and 20261031T054654.692180Z. compare_rule.py reads only the latest core receipt's dump (ml.load_measure(), ml.CORE), so it cannot run on U4's build. The only statement about 232750 and U4's build is BOUNDARY-FIELD §9's fourth-re-check paragraph; no output is kept (the scratch has only fwcmp4/boundary_prev.py, no result).",
+     "fix": "\"after the fixes, the dumps of core receipts 20261031T013649.265381Z (RF-M.3's) and 20261031T054654.692180Z (HE2's) give the same ... and outside is empty ([reports/boundary-rule-compare.json], by boundary/check/compare_rule.py); at the fixes the same comparison on core 20261030T232750.486801Z and on U4's build gave the same, with no output kept.\" Alternatively, keep those two runs in the report.",
+     "severity": "unsupported",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. reports/boundary-rule-compare.json has exactly two runs, both old=26977f25a: core_receipt 20261031T013649.265381Z (52,346 constants) and 20261031T054654.692180Z (52,419). The section's figures match those two. compare_rule.py reads ml.load_measure() and ml.CORE, the checkout's latest core receipt, so it cannot cover U4's build as written. The only claim about 232750 and U4's build is in BOUNDARY-FIELD §9's fourth re-check paragraph, and no output for it exists on the branch. The scratch fwcmp4/ holds only boundary_prev.py, which is 26977f25a's boundary.py (sha e352cc16...), and no result."
+     },
+     "taken": true
+    },
+    {
+     "claim": "\"A fourth re-check ... found the eight taken and four more, all confirmed, none a regression and none on the current dump\"",
+     "problem": "The report calls only R4-1 and R4-2 not regressions. R4-4 is §3.6 text that 26977f25a's own reorder left stale. R4-3 is a gap in the negatives that 26977f25a's §8 text claims.",
+     "evidence": "recheck4.json R4-1: \"It is not a regression (1aa84fd59 gives the same)\". R4-2: \"It is not a regression (1aa84fd59 and 652ee90ac give the same)\". R4-4: \"§3.6 still describes the old order ... Since the reorder\" and \"The commit's diff of BOUNDARY-FIELD.md leaves §3.6 untouched\". The lens (p10): \"The only change: when every derived entry fails D1 to D5, the Lean check now runs (see R4-4)\". R4-3 concerns §8's sentence written in 26977f25a.",
+     "fix": "\"... four more, all confirmed: R4-1 and R4-2 are not regressions (1aa84fd59 gives the same) and are latent; R4-3 is a gap in the follow-up's own negatives, and R4-4 is §3.6 text its reorder left behind; none occurs on the current dump.\"",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. In recheck4.json only R4-1 (\"It is not a regression (1aa84fd59 gives the same False)\") and R4-2 (\"1aa84fd59 and 652ee90ac give the same\") are called not regressions. R4-3 concerns §8's sentence about negatives, which first appears at 26977f25a; at 1aa84fd59 there is no \"must not attach\" text. R4-4 is §3.6 text that 26977f25a's reorder left stale (\"Since the reorder\", \"The commit's diff of BOUNDARY-FIELD.md leaves §3.6 untouched\"), and the lens lists it under \"What the fixes break\" (p10). No behaviour regressed, but the report does not support \"none a regression\" for R4-3 and R4-4. BOUNDARY-FIELD §9 makes the same claim (\"None of the four is a regression\")."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"the fourth re-check reproduced each of its findings on Lean 4.29.1\"",
+     "problem": "R4-4 was not reproduced on Lean. Its verifier ran report() of both commits with a recording stub in place of the Lean check.",
+     "evidence": "recheck4.json R4-4 verdict: \"It runs report() of 1aa84fd59 and of 26977f25a on the test's CONSTANTS, with a recording Lean stub, once running and once not running.\" The report's own `about` says only \"which reproduced each\", not on Lean 4.29.1. BOUNDARY-FIELD §9 repeats the overstatement.",
+     "fix": "\"the fourth re-check's verifier reproduced each of its findings: R4-1 to R4-3 on Lean 4.29.1, R4-4 on report() with a stubbed check\". Change §9 the same way.",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed for R4-4. Its verdict says the verifier \"runs report() of 1aa84fd59 and of 26977f25a on the test's CONSTANTS, with a recording Lean stub\" (the lens's p10 also shows toolchain 'T'), so it was not reproduced on Lean. R4-1 and R4-2 were reproduced with Lean probes. R4-3's harness ran every test class, TheLeanCheck included, so Lean ran for it. The report's `about` says only \"which reproduced each\"; the words \"on Lean 4.29.1\" in its about describe the lens. BOUNDARY-FIELD §9 repeats the overstatement."
+     },
+     "taken": true
+    },
+    {
+     "claim": "\"each followed by an adversarial verifier that reproduced every finding on Lean 4.29.1\" (the third re-check)",
+     "problem": "One finding was confirmed with one of its sub-claims refuted.",
+     "evidence": "recheck3.json RC3-RULES-2 verdict: \"Reproduced, except one sub-claim ... The refuted sub-claim: Python's private reading is covered, by TheTerms.test_auxiliaries_by_attachment, not by the cross test.\" All eight verdicts are real: true.",
+     "fix": "\"... each followed by an adversarial verifier that confirmed all eight on Lean 4.29.1 (one sub-claim of RC3-RULES-2 refuted)\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed, minor. All eight verdicts have real: true, but RC3-RULES-2's verdict begins \"Reproduced, except one sub-claim\" and refutes the sub-claim about Python's private reading, which TheTerms.test_auxiliaries_by_attachment covers. RC3-RULES-3 was \"Confirmed by reading and by the stub run\". So \"reproduced every finding\" leaves out a stated qualification. The report's own `about` and §9 use the same wording."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"U4's 31 controls rerun on U4's build: output byte-identical\"",
+     "problem": "The 31 are not all controls, and not all are U4's. They are the 31 cases of controls-run.log: rows 17 and 5, the controls, and 10 name-test queries. Of the controls, nine are U4's (adapted) and twelve are MV's.",
+     "evidence": "boundary/check/controls-run.log has 31 'ok' lines, ten of them 'admitted ...' name-test queries. BOUNDARY-FIELD §0: \"Its 21 controls and 10 name-test queries come out as expected\". §3.2: \"They are U4's nine, adapted, and twelve more\". §472: \"U4's controls and the name-test queries come out as expected\". The byte-identity itself holds: scratch mut4/controls.log and controls2.log equal the committed log.",
+     "fix": "\"the controls on U4's build (controls-run.log's 31 cases: rows 17 and 5, the controls and 10 name-test queries) rerun after each re-check's fixes: output byte-identical\". The same wording in BOUNDARY-FIELD §9's two paragraphs.",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed as to what the 31 are. boundary/check/controls-run.log has 31 'ok' lines: 21 cases (rows 17 and 5 and the controls) and 10 'admitted ...' name-test queries. BOUNDARY-FIELD §0 says \"Its 21 controls and 10 name-test queries\", and §3.2 says the controls are \"U4's nine, adapted, and twelve more\". U4's own log on u4-edge has nine controls and eight name queries, so the 31 are neither all controls nor all U4's. The byte-identity holds: scratch mut4/controls.log and controls2.log equal the committed controls-run.log, which is unchanged from main."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"master_laws.py rerun on core receipts 20261031T013649.265381Z (RF-M.3's) and 20261031T054654.692180Z (HE2's) changes only the hashed inputs (boundary.py and boundary_check.lean)\"",
+     "problem": "The branch's own rerun is on a third receipt, which the section does not name. The reruns on RF-M.3's and HE2's receipts happened only in clean-worktree rehearsals, and no output is kept.",
+     "evidence": "On mv-land, theories/becoming/results/data/master-laws.json has core_receipt 20261030T232750.486801Z (the branch's base 1aa84fd59; becoming-verification.json utc is the same). `git diff main...mv-land` changes only the boundary.py and boundary_check.lean hashes, and they match the current files' sha256. The HE2 rerun appears only in scratch ml9.log, whose counts equal main's master-laws.json.",
+     "fix": "\"master_laws.py rerun on core 20261030T232750.486801Z (the branch's base) changes only the hashed inputs (boundary.py and boundary_check.lean); in the landing rehearsals, merged with main, reruns on RF-M.3's (20261031T013649.265381Z) and HE2's (20261031T054654.692180Z) receipts give the same figures\". Or keep those outputs.",
+     "severity": "unsupported",
+     "verdict": {
+      "real": false,
+      "reason": "Refuted in substance. The branch's own master-laws.json is at its base receipt 20261030T232750.486801Z. But the claim describes the landing merge, and the rehearsal shows it. In the clean rehearsal worktree mv-render (9053047be: mv-land at 863662705 merged with main at 9491cae33), master-laws.json is at HE2's receipt 20261031T054654.692180Z, and `git diff 9491cae33` shows only the boundary.py and boundary_check.lean hashes changed. Their values (9f70cc2b..., d1867fd5...) equal the current files' sha256. Scratch ml7.log (receipt 20261031T013649.265381Z) and ml9.log (HE2's, with counts equal to main's master-laws.json) are the RF-M.3 and HE2 reruns. The claim is true of what lands. Only where the reruns were done is unstated."
+     },
+     "taken": false
+    },
+    {
+     "claim": "\"sixteen mutations of the two copies, each caught\" (Delta 4) and \"sixteen mutations of the new parts, each caught\" (Delta 5); \"each as Lean 4.29.1 makes it on a probe\"",
+     "problem": "No driver, probe or output for these is on the branch, so the section asserts results the branch cannot reproduce.",
+     "evidence": "The drivers exist only in the session scratch (mut3/drive.py: 8 Lean and 8 Python mutations; mut4/drive.py: 7 Lean and 9 Python), with no log of their CAUGHT/MISSED lines. The probes behind \"on a probe\" are in scratch probe-r4/ (out3.txt shows congr_eq_N, eq_unfold, fun_cases, mutual_induct). The stub module realizes all of these names except congr_eq_N.",
+     "fix": "Keep the two drivers and their outputs beside compare_rule.py (e.g. boundary/check/) and cite them. Otherwise say \"by drivers not kept\".",
+     "severity": "unsupported",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. No mutation driver, probe or output is tracked on the branch (git ls-files of the MV folder holds no such file, and test_boundary.py has none). The drivers exist only in the session scratch: mut3/drive.py (8 Lean, 8 Python) and mut4/drive.py (7 Lean, 9 Python), so the counts of sixteen match, but no CAUGHT/MISSED output was kept anywhere. The probes are only in scratch probe-r4/ (out3.txt shows e.g. Probe.len.match_1.congr_eq_2, half.eq_unfold, fun_cases, ev.mutual_induct). On the branch, the stub module's GENERATED realizes every new name on Lean 4.29.1 (half.induct ... evW.mutual_induct_unfolding, Nest._sizeOf_2_eq, below_1, brecOn_1 with go and eq, rec_1) except congr_eq_N, which no generated stub name has."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"the verifiers' reproductions now pass (relC, relW, relO, relA, relE, relB) or fail (op.eq_1, Rp.brecOn.go, Cfg.elim) as §3.2 says\"",
+     "problem": "What passes and fails are the stub module's adapted cases, not the verifiers' probes. §3.2 does not say these fail, nor that a macro's declaration passes; that comes from §3.0's attachment table and §8's list of controls.",
+     "evidence": "The cases are test_boundary.py's Edge stub, TheLeanCheck entries 18–23 (pass) and 24–27 (fail with op.eq_1, Rp.brecOn.go, op.eq_1, Cfg.elim). The verifiers' own probes were VA/VB/VC/VD in scratch (relC_at, relF_at ...). §9: \"Their probe modules are carried, adapted, by the stub module\". §3.2 mentions defaults and ack.eq_1 but not opaque, Prop brecOn or macro cases.",
+     "fix": "\"the stub module's versions of the verifiers' cases pass (relC, relW, relO, relA, relE, relB) or fail (op.eq_1, Rp.brecOn.go, Cfg.elim) as §3.0 and §3.2 say (TheLeanCheck, entries 18 to 27)\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. The cases are the stub module's adapted versions: TheLeanCheck entries 18–23 (edge('relC'...'relB')) pass, and entries 24–27 fail with op.eq_1, Rp.brecOn.go, op.eq_1 and Cfg.elim (test_lifted_proofs_equation_lemmas_and_hygienic_names). The verifiers' own probes were VA–VD (relC_at, relW_at, relF_at ...) in scratch, and §9 says they are \"carried, adapted, by the stub module\". §3.2 test 9 states only the defaults and ack.eq_1 (relC, relW, relA). The constructor's optional argument, mutual definitions, the macro's name, the opaque's eq_1, the Prop brecOn's go and elim under a structure come from §3.0."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Boundary: \"outside lists theorems whose immediate owner, or brecOn's owner, the dump lacks\"",
+     "problem": "This is broader than the code. outside lists only theorems named as an auxiliary.",
+     "evidence": "boundary.outside: a theorem is listed only if its last component fullmatches an AUX pattern and printed(c[:-1]) is not in C (nor its private user name), or if it is go/eq under a brecOn(_N) whose owner printed(c[:-2]) is unknown. A theorem like Foo.bar under a missing Foo is not listed.",
+     "fix": "\"outside lists theorems named as an auxiliary (a last component of AUX, or go/eq under a brecOn or brecOn_N) whose owner the dump lacks, read as printed and by a private name's user name\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed by code and by a probe. boundary.outside lists a theorem only if its last component fullmatches an AUX pattern and printed(c[:-1]) is unknown (also by its private user name), or if it is go/eq under a brecOn(_N) whose owner printed(c[:-2]) is unknown. Run on {Becoming.Space.bar (thm), Becoming.Space.inj (thm), Becoming.Space.brecOn.eq (thm), Becoming.Space.brecOn (def)}, it returned {Becoming.Space.inj, Becoming.Space.brecOn.eq}. Space.bar under the missing Space is not listed."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Delta (2): \"the kinds the dump lacks (RC3-RULES-1): Lean realizes an equation lemma of an Init definition in the package module that unfolds it (Nat.fold.eq_def)\"",
+     "problem": "The section leaves out the other case outside covers, an _arg_pusher under Init's PSigma.casesOn or PSum.casesOn. RECHECK3-LEAN-2's fix depends on that kind being supplied on boundary.py's side.",
+     "evidence": "test_the_pattern_of_generated_auxiliaries asserts outside(stub dump) == {Nat.fold.eq_def, _private.Becoming.Edge.0.PSigma.casesOn._arg_pusher, _private.Becoming.Edge.0.PSum.casesOn._arg_pusher}. §3.0: \"and an _arg_pusher under Init's PSigma.casesOn\". §9's RECHECK3-LEAN-2 row: \"PSigma.casesOn's kind supplied from the Lean check on the generator's side\".",
+     "fix": "\"... (Nat.fold.eq_def), and an _arg_pusher under Init's PSigma.casesOn or PSum.casesOn in a package module's private names\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed (missing). test_the_pattern_of_generated_auxiliaries asserts that outside(stub dump) == {Nat.fold.eq_def, _private.Becoming.Edge.0.PSigma.casesOn._arg_pusher, _private.Becoming.Edge.0.PSum.casesOn._arg_pusher}. §3.0's 'Kinds the dump lacks' names the _arg_pusher under Init's PSigma.casesOn. §9's RECHECK3-LEAN-2 row says it is taken with \"PSigma.casesOn's kind supplied from the Lean check on the generator's side\", so the fix of LEAN-2 depends on this mechanism."
+     },
+     "taken": true
+    },
+    {
+     "claim": "\"The design is BOUNDARY-FIELD §3.0, §3.2 test 9, §8 and §9.\"",
+     "problem": "The branch also changes §3.6, which Delta (5) itself cites (R4-4), as well as §3.2's \"On U4's forms\" paragraph and the status line.",
+     "evidence": "git diff main...mv-land on BOUNDARY-FIELD.md: §3.6 \"The input\" and \"When it cannot run\" are rewritten; \"On U4's forms\" now says \"rerun four times\"; the status says \"its fixes re-checked four times\".",
+     "fix": "\"The design is BOUNDARY-FIELD §3.0, §3.2 (test 9 and U4's forms), §3.6, §8 and §9.\"",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed (missing). git diff main...mv-land on BOUNDARY-FIELD.md also rewrites: §3.6 'The input' and 'When it cannot run', which Delta (5) itself cites for R4-4; §3.2's 'On U4's forms' paragraph (\"rerun four times\"); and the status line (\"re-checked four times\"). Commit f3de580e6's message lists \"§3.0, §3.2 test 9, §3.6, §8 and §9\"."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Delta (5) tests: \"...; sixteen mutations of the new parts, each caught; 61 tests.\"",
+     "problem": "The fourth's fixes added no test method. The four new tests, 57 to 61, came with the third's fixes, yet (4) gives no count and (5) reads as if the fourth brought the count to 61.",
+     "evidence": "Test methods: 57 at §472 (and 1aa84fd59), 61 at 26977f25a (new: test_the_names_the_dump_cannot_settle, test_an_auxiliary_of_a_declaration_the_dump_lacks, test_the_lean_checks_kinds_for_d2, test_lifted_proofs_equation_lemmas_and_hygienic_names), 61 at f3de580e6 and the tip. `python3 -B -m unittest tools.research.tests.test_boundary` ran 61, OK (skipped=1).",
+     "fix": "In (4): \"...; 61 tests (57 at §472)\". In (5): \"the cases added to existing tests (61 still)\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. test_boundary.py has 57 test methods on main and at 1aa84fd59, and 61 at 26977f25a. The four new ones (test_the_names_the_dump_cannot_settle, test_an_auxiliary_of_a_declaration_the_dump_lacks, test_the_lean_checks_kinds_for_d2, test_lifted_proofs_equation_lemmas_and_hygienic_names) came with the third re-check's fixes. f3de580e6 and HEAD still have 61. `python3 -B -m unittest tools.research.tests.test_boundary` ran 61 tests, OK (skipped=1). The figure is true of the branch, but placed under (5) it reads as if the fourth's fixes reached it."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"research check --strict-fresh, links and the suite (304 tests) pass in a clean worktree\"",
+     "problem": "The branch holds no record of these checks. The last complete rehearsal failed the link check, and the rehearsal on the tip had not finished.",
+     "evidence": "Discovery counts 304 tests (`unittest discover -s tools/research/tests -p 'test_*.py'`). Scratch rehearse9.status: \"cmp 0, strict 0, links 2, test 0\". l9.log shows 6 broken links in the kit's .md drafts. Links passed after 863662705 (l10.log), but 416b0af81 came later. rehearse11 (cs11.log) was still running at the time of this check.",
+     "fix": "Keep the sentence only once the rehearsal on the tip (or the landing merge) passes all three. Otherwise say \"pass in a clean worktree at 863662705 (links) and before it (check, suite)\".",
+     "severity": "unsupported",
+     "verdict": {
+      "real": false,
+      "reason": "Refuted at the time of this check. The finding's basis is out of date. Rehearsal 11, in the clean worktree mv-render (9053047be: mv-land at 863662705 merged with main), finished with status \"render 0, strict 0, links 0, test 0\". l11/cs11 passed and t11.log says \"Ran 304 tests ... OK (skipped=2)\". Discovery on the branch also counts 304. The only later commit, 416b0af81, changes just the .txt draft and the JSON report in the MV folder, which neither the link check (Markdown only) nor the suite reads. Main has since moved (39bd9ac9c, d3a502880), so the landing merge still needs its usual rerun. That is procedure, not an error in the sentence."
+     },
+     "taken": false
+    },
+    {
+     "claim": "The design the section cites (BOUNDARY-FIELD §8, §9 R4-3 row): \"each new pattern under a kind it must not attach to, among the names not generated\"; §8 \"the code gets an independent review and three re-checks\"",
+     "problem": "Both points are overstated or stale in the file the section points readers to. Several new patterns have no wrong-kind negative, the Lean copy's congr_eq_N has no positive, and §8 still counts three re-checks.",
+     "evidence": "NOT_GENERATED (66) has wrong-kind cases for induct, fun_cases, eq_unfold, _sizeOf_N_eq, brecOn_N, below_N and rec_N. It has none for mutual_induct, mutual_induct_unfolding, induct_unfolding, fun_cases_unfolding or congr_eq_N; congr_eq_N has only the near miss half.congr_eq_. No congr_eq_N is among the 69 generated, so only Python's TheTerms tests it. The status line says \"re-checked four times\" and §9 has four re-check tables.",
+     "fix": "Narrow the R4-3 row to the patterns that have negatives, or add negatives for the others and a congr_eq_N case to the stub. In §8: \"an independent review and four re-checks; the third's and fourth's findings land after the field, as MV's follow-up\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed. §8 line 497 still says \"three re-checks ... The third re-check's findings land after the field\", while the status line says \"re-checked four times\" and §9 has four re-check tables. Among the 66 NOT_GENERATED names, the new patterns with wrong-kind negatives are induct (Tone.induct, seven.induct), fun_cases (comm.fun_cases), eq_unfold (op.eq_unfold), _sizeOf_N_eq, below_N, brecOn_N and rec_N (half.*, Onward.mk.rec_1). congr_eq_N has none, only the near miss half.congr_eq_. No congr_eq_N is among the 69 GENERATED either, so the Lean copy's congr_eq_ branch has no positive (only Python's TheTerms has X.match_1.congr_eq_1). By R4-3's own standard (negatives apart from the group), induct_unfolding, mutual_induct, mutual_induct_unfolding and fun_cases_unfolding also lack their own negatives in the Lean list, though Python reads them through the induct and fun_cases alternations."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Output -> input: \"U4's boundary record (Becoming.RootForms) is checked by this rule.\"",
+     "problem": "Becoming.RootForms is U4's leaf on u4-edge, not the record. The record is the schema-2 record that will carry the field.",
+     "evidence": "u4-edge holds Becoming/RootForms.lean (291 lines; no opaque, macro, inductive, structure or well-founded definition, so \"none of the new shapes\" holds). The Evidence bullet itself says \"U4's RootForms leaf (u4-edge)\".",
+     "fix": "\"U4's boundary record, built on its leaf Becoming.RootForms (u4-edge), is checked by this rule.\"",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "Confirmed, minor. On u4-edge, Becoming.RootForms is the Lean leaf (experiments/.../Becoming/RootForms.lean, 291 lines, with no opaque, macro, inductive, structure or well-founded definition). The record is a separate draft (record-draft.json, made by make_record_u4.py, described in DESIGN-BOUNDARY.md as \"U4, the boundary record\"). The section's own Evidence bullet calls RootForms \"U4's RootForms leaf (u4-edge)\"."
+     },
+     "taken": true
+    }
+   ]
+  },
+  {
+   "draft": "readme",
+   "claims_checked": 62,
+   "findings": [
+    {
+     "claim": "Evidence: \"research check --strict-fresh, links and the suite (304 tests) pass in a clean worktree\"",
+     "problem": "At the branch tip (416b0af81, clean worktree) the strict check fails. The links check passes, and the suite discovers 304 tests.",
+     "evidence": "`python3 -B tools/research/research.py check --strict-fresh` exits 1 with: 'generated index differs from what render would write (--strict-fresh); run make research-render: _process/research/README.md'. The committed index has `2026-10-05-repository-reconciliation/` at 327 and `architecture/ (309)`; indexes.render() writes 328 and 310. 328 files are tracked there (outside history) since 03b19583f added ra-first-screen/tighten.json, but README's count has stayed at 327 since that commit. Non-strict check: no other error. `research.py links`: 0 broken. Unittest discovery: 304 tests.",
+     "fix": "Re-render (the research index) and rerun before landing, then state it, e.g. \"after the landing's render, research check --strict-fresh, links and the suite (304 tests) pass in a clean worktree\". Until then: \"links and the suite pass; --strict-fresh fails on _process/research/README.md (327 for 328 files; tighten.json was added after the render)\".",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced at 416b0af81 in the clean mv-land worktree. `research.py check --strict-fresh` exits 1 with one error: 'generated index differs from what render would write (--strict-fresh); run make research-render: _process/research/README.md'. There is no source drift and no other error. Rendered in memory, indexes.render() writes 328 / `architecture/ (310)`. The committed index says 327 / 309. `git ls-files` counts 328 and 310 outside history. The cause: 03b19583f added ra-first-screen/tighten.json and also touched the index, so the index was rendered before tighten.json was added. `research.py links` passes with an empty broken list. The suite runs 304 tests, OK with 2 skipped, in 984 s."
+     },
+     "taken": true
+    },
+    {
+     "claim": "The screen's \"No outside review yet\", and the evidence line choosing it over \"internal\", \"which would suggest a human review the account says has not happened\"",
+     "problem": "The repository's own live record names an outside review. As worded, the screen says something a live record contradicts. What the account says has not happened is a human review.",
+     "evidence": "theories/becoming/results/records/least-loss-rest.md:71 and .json: \"The outside review of 19 October 2026 (R20) and an outside reader named the rest laws' dependence on whole-number amounts\". BECOMING-SIGNIFICANCE-REVIEW.md:6: \"On 19 October an outside reviewer (a friend's GPT model) concluded...\". 08 §11 (08-METHOD.md:589): \"Every review so far is by AI ... No human review is claimed\". Overview :239: \"No review so far has been by a human reader\". tighten.json's precision draft warned: \"If any past review came from a party outside the work, it would need checking against the review ledger\". That check is not recorded.",
+     "fix": "Have the screen say \"No human review yet.\" (it names no person and no AI, and matches 08 §11 and the overview), and say so in (9) and the evidence line. Otherwise, the section should state the R20 outside review and why \"outside\" still holds.",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "The live record theories/becoming/results/records/least-loss-rest.md:71 (and .json :252, :818) says \"The outside review of 19 October 2026 (R20)\". BECOMING-SIGNIFICANCE-REVIEW.md:6 says \"an outside reviewer (a friend's GPT model)\". So the account does record an outside review, and the screen contradicts it. What the account says has not happened is a human review: 08-METHOD.md:589 \"No human review is claimed\", ONE-PAGE.md:5 \"No human has yet reviewed it\", overview :239 \"No review so far has been by a human reader\". design.json's two cold readers also put the missing item as \"no human review\". tighten.json drafts/2/risks/5 asked for a check against the ledger, and none is recorded. The ledger REVIEWS.md does not list R20 as outside."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(7) \"Each reads a note left as it was ([^collective], [^aligned], [^transitions], [^no-law], [^present], the meta-attractor's)\"",
+     "problem": "[^transitions] was changed on this branch: (9) took \"(the AI's reading)\" out of its cancer sentence and added \"(a reading)\". The list also leaves out [^race], which links relative-position-is-zero-sum as well as [^aligned].",
+     "evidence": "OPENING.md:99 on main: \"Cancer is read (the AI's reading) as a confined rise\". On the branch: \"Cancer is read as a confined rise (a reading)\" (03b19583f). OPENING.md:96 [^aligned] and :98 [^race] both link records/relative-position-is-zero-sum.md. confined-rise-within-a-whole reads [^transitions].",
+     "fix": "\"Each reads a note left as it was ([^collective], [^aligned], [^race], [^no-law], [^present], the meta-attractor's), or one changed only in a label ([^transitions], whose cancer sentence now says 'a reading', (9)), or, for what-the-dynamics-leave-open, the sentences of [^ethics] on what reads only the dynamics, which are unchanged\".",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "03b19583f changed [^transitions]: on main OPENING.md:99 reads \"Cancer is read (the AI's reading) as a confined rise\", and on the branch \"Cancer is read as a confined rise (a reading)\". (9) of the same section says so, and the rebinds line itself says the three were re-read after it. On [^race]: relative-position-is-zero-sum is linked from [^aligned] (:96) and [^race] (:98). Its correspondence says \"the notes [^aligned] and [^race] cite this record\", so the check reads both lines. [^race] is unchanged."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(7) \"the eight records citing OPENING.md as a whole file ... After the review's change to [^good-evil], the three binding the whole file ... were read again\"",
+     "problem": "The wording says first that all eight cite the whole file, then that only three bind it. The difference is in how the source check locates them, and it shows in the hashes the records now carry.",
+     "evidence": "All eight cite theories/becoming/OPENING.md with no anchor. Five are linked from a note (closed-capture and readers-drawn-from-the-selected from [^meta]; mutual-dependence-and-its-pace from [^present]; relative-position-is-zero-sum from [^aligned] and [^race]; whole-drawing-beyond-renewal-ends from [^collective]), so registry.scoped_drift reads only those lines. They still carry e66aba46… (OPENING at 54203ad1c/247558c7c). The other three are linked from no note, and any rewritten line binds them. They carry e43f213c…, the current file.",
+     "fix": "\"the eight records citing OPENING.md without an anchor ... Five are linked from a note, so the check reads only those lines, and they keep the hash of 54203ad1c; the three no note links (confined-rise-within-a-whole, what-position-reads, what-the-dynamics-leave-open) bind the whole file and were re-pointed to the current hash after each later change\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "No sentence here is false, but the section does not say why only three bind the file. A reader comparing hashes finds two values. All eight reference theories/becoming/OPENING.md with no anchor. registry.scoped_drift counts a change only on lines that link the record when the source links it, and counts any rewritten line when it does not. Five are linked from notes: closed-capture and readers-drawn-from-the-selected from [^meta] :88, mutual-dependence-and-its-pace from [^present] :94, relative-position-is-zero-sum from :96 and :98, whole-drawing-beyond-renewal-ends from [^collective] :102. They still carry e66aba46…, which is OPENING at 54203ad1c and 247558c7c, re-pointed in 247558c7c. The other three are linked from no note. They went e66aba46 → e0d7e9d2 (3fbfdc45b) → e43f213c (03b19583f, the current file). The strict check shows no source drift."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Result(s): \"a generated first screen for README, a proposal to OPENING, and two note labels\"",
+     "problem": "Three notes changed, and two of them changed beyond their labels.",
+     "evidence": "git diff main...mv-land -- theories/becoming/OPENING.md: [^ethics] label and its T8 sentence; [^good-evil] label and its first sentence after the label (\"the cases ... exclude one another, and classically it falls under one\"); [^transitions] label \"(a reading)\".",
+     "fix": "\"... a proposal to OPENING, and three AI-written notes changed ([^ethics] and [^good-evil] in label and one sentence each, [^transitions] in one label)\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "`git diff main...mv-land -- theories/becoming/OPENING.md` changes the leading comment and three notes. [^ethics]: its label, plus its T8 sentence (a clause moved into the label, a clause and link added). [^good-evil]: its label plus its first sentence (\"With no axiom the cases of a part … exclude one another, and classically it falls under one\"). [^transitions]: \"(the AI's reading)\" becomes \"(a reading)\". So three notes changed, two of them beyond their labels."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(4) on [^ethics]: only that it \"now opens 'Open, and offered for life: no verdict binding every possible mind is claimed'\"",
+     "problem": "The section leaves out that [^ethics] also gained a sentence and a link.",
+     "evidence": "In 54203ad1c the clause \"and the theory claims no verdict binding every possible mind\" moved into the label. A new sentence was added: \"T8 states the direction as life's ([T8](...)), and whether a stronger, universal warrant exists stays [open](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant), a question the ethics does not wait on.\" (OPENING.md:73; the anchor is at 07-SIGNIFICANCE.md:694).",
+     "fix": "Add to (4): \"its sentence on T8 now adds that whether a stronger, universal warrant exists stays open (07's open question universal-practical-warrant), a question the ethics does not wait on; the clause on no verdict binding every possible mind moved into the label\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "On main, OPENING.md:73 reads \"That all ethics rests on this ground is not proved, and the theory claims no verdict binding every possible mind: T8 states the direction as life's ([T8](…#theses)).\" On the branch it reads \"…is not proved: T8 states the direction as life's ([T8](…#theses)), and whether a stronger, universal warrant exists stays [open](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant), a question the ethics does not wait on.\" The anchor exists at 07-SIGNIFICANCE.md:694. The section mentions none of this."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(3) \"the lead after the opening drops what the screen now says (what the theory is, the two premises), so README keeps one text of each\"",
+     "problem": "The lead was changed in two more ways that the section does not mention.",
+     "evidence": "README-LEAD.md diff. It drops \"The opening above states a conviction in the first person, each sentence's standing given in its note\". Its pure-core sentence is rescoped (FS6, 3fbfdc45b) from \"Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports: a constructive discipline\" to \"Its laws are checked in Lean, most on a pure core whose source declarations have empty axiom reports, the rest in the periphery with their axioms reported. On the core this is a constructive discipline...\". Its leading comment now says what moved to the screen.",
+     "fix": "Add: \"and its sentence on the opening's standing (now the screen's 'a first-person conviction'); its Lean sentence now says most laws are on the pure core and the rest in the periphery with their axioms reported (FS6)\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "The README-LEAD.md diff makes three more changes. It drops \"The opening above states a conviction in the first person, each sentence's standing given in its note\". It rescopes the Lean sentence (FS6, 3fbfdc45b) from \"Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports: a constructive discipline\" to \"Its laws are checked in Lean, most on a pure core …, the rest in the periphery with their axioms reported. On the core this is a constructive discipline…\". Its leading comment now says what moved to the screen."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(1) \"A missing file, an unknown field or status, or an opening without notes is an error\"; and \"where to start, with each layer's reading time\"",
+     "problem": "An opening without notes is an error only where the screen has a {{time:notes}} (or {{time:opening}}) field, and the screen has no {{time:notes}}. The notes are linked with no time.",
+     "evidence": "navigation.first_screen raises 'which the opening does not have' only inside fill() for arg in ('opening','notes') with empty text. README-FIRST-SCREEN.md uses {{time:screen}}, the two PATH fields, {{time:opening}}, {{count:recorded-checked}} and {{count:registered}}, not {{time:notes}}. tighten.json final: \"{{time:notes}} is dropped ... The notes take 78–101 minutes ... the screen no longer warns of that\".",
+     "fix": "\"A missing file, an unknown or malformed field or status, or a time field for an opening part that is absent is an error\"; and \"where to start, with the reading times of the one page, the overview and the opening (the notes, 78–101 minutes, are linked untimed)\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "In navigation.first_screen, the 'which the opening does not have' error is raised only inside fill(), for a {{time:opening}} or {{time:notes}} field whose text is empty. README-FIRST-SCREEN.md has no {{time:notes}}; tighten.json final says it was dropped. So with this screen, an opening without notes is no error. fill() also refuses malformed fields and pages the render writes. The screen times the one page (17–22 min), the overview (104–135) and the opening (19–25). It does not time the chapters or the evidence, which are the lead's other two layers, and the notes link has no time."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(5) lists only drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md",
+     "problem": "The branch also changes drafts/2026-10-10-opening/README.md. Its new paragraph misstates the proposal's B.",
+     "evidence": "drafts/2026-10-10-opening/README.md (branch): the proposal brings the body to \"the least loss where an exchange cannot be undone\". OPENING-V13-PROPOSAL.md §B proposes \"destroys at least some fixed amount of available work\" and says \"'Cannot be undone' is not proposed\" (changed after OP-B1). The README's first paragraph also now says the opening is placed after the first screen.",
+     "fix": "Mention the drafts README in (5), and correct its paragraph to \"the least loss where each taking exchange destroys at least a fixed amount of available work\" before landing.",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "The branch also changes drafts/2026-10-10-opening/README.md. Its first paragraph now says the opening is placed after the first screen. Its new last paragraph says the proposal brings the body to \"the least loss where an exchange cannot be undone\". But the proposal's §B proposes \"destroys at least some fixed amount of available work\" and says \"'Cannot be undone' is not proposed\" (changed after OP-B1). Related: the proposal's \"On the AI side … Changed with the first screen\" lists [^ethics] and [^good-evil] but not [^transitions]'s relabel."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: the audit found \"Two wordings are older, but their notes correct them (no axiom, reactions as nets)\"",
+     "problem": "That is the proposal's count after the review, not the audit's. The audit kept in design.json found more such sentences, the optimizer sentence among them.",
+     "evidence": "design.json audit.summary: \"Four sentences are older but their notes correct them\" (no axiom, reactions, the optimizer sentence, the closing question). audit.older has three items with severity 'wording older but corrected by its note' (items 4, 5, 6: no axiom, the nets, the optimizer). After OP-E1 the optimizer edit moved to the proposal's \"E. Considered and not proposed\", leaving D1 and D2.",
+     "fix": "\"Three wordings are older but their notes correct them (no axiom, reactions as nets, the optimizer's room); after the review the optimizer edit is considered and not proposed, leaving two (D1, D2)\".",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "design.json audit.summary says \"Four sentences are older but their notes correct them\": no axiom, reactions as theorems, the optimizer sentence, and the closing question (corrected \"only in part\"). Its audit.older list marks three as 'wording older but corrected by its note' (items 5–7: no axiom, the nets, the optimizer). Two (D1, D2) is the current proposal's count, after OP-E1 moved the optimizer edit into \"E. Considered and not proposed\"."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"three found major were judged minor: B's 'cannot be undone', E's split clause and C2's 'in full'\"; refuted \"OP-C3\"",
+     "problem": "These are the labels of the reviewed version (247558c7c), not the current proposal's, and the section does not say so.",
+     "evidence": "At 247558c7c: C2 = paragraph 7 \"in full\", C3 = paragraph 10, E = \"The optimizer\". In the current proposal, C2 is the paragraph-10 edit (the old C3), and E is \"Considered and not proposed\", which now holds both the optimizer and \"in full\".",
+     "fix": "Add \"(labels of the reviewed version, 247558c7c; the old C2 and E now stand under E, considered and not proposed, and the old C3 is C2)\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "review.json records commit 247558c7c. In that version of the proposal, C2 is paragraph 7's \"in full\", C3 is paragraph 10, and §E is \"The optimizer\". In the current proposal, C2 is the old C3 (paragraph 10), and §E is \"Considered and not proposed\", which holds the optimizer, \"in full\" and \"counted amounts\". The original severities are confirmed: OP-B1, OP-E1 and OP-C2 were major and judged minor."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"36 findings, 29 confirmed and taken ..., 7 refuted\"",
+     "problem": "The proposal lens's verifier also reported one finding the lens missed. It was taken, and it is the [^good-evil] change that (4) and (7) describe.",
+     "evidence": "review.json lenses[PROPOSAL].verify.missed has one entry: [^good-evil] \"still says 'With no axiom, a part ... widens ..., narrows it, keeps it the same, or is mixed'\"; fix \"With no axiom the four cases exclude one another, and classically a part falls under one\". This now stands in OPENING.md:77.",
+     "fix": "Add: \"and one the proposal's verifier found that its lens missed ([^good-evil]'s 'with no axiom', taken)\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "The counts match review.json: CODE 10/10, SCREEN 7 of 9, PROPOSAL 12 of 17, with refuted FS3, FS4, OP-A1a, OP-A1b, OP-A3, OP-C3 and OP-NAME. But lenses[PROPOSAL].verify.missed holds one more finding: [^good-evil] still said \"With no axiom, a part … widens …, narrows it, keeps it the same, or is mixed\", with the fix \"With no axiom the four cases exclude one another, and classically a part falls under one\". That fix is now OPENING.md:77, the change (4) describes."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"the screen is 172 words ..., 22 over the budget, the excess what may not be cut (amendment 1: the two premises with their roles, each claim's standing, what is not claimed, what a receipt shows, the tests frozen before scoring, the links down)\"",
+     "problem": "This states the excess more strongly than the reports do, and attributes to amendment 1 items its list does not hold.",
+     "evidence": "WHAT-REMAINS amendment 1 lists: a deciding hypothesis, the two premises with their roles, a failure as it fell, a frozen rule's caveat, a post hoc label, an AI label on a reading, what is not claimed, each claim's standing, and the empty axiom report's meaning where cited. It does not list what a receipt shows, frozen tests or links down. tighten.json final: \"Six words are discretionary: 'evaluation included' (2), 'a first-person conviction' (3), 'this ethics' (1)\"; 'evaluation included' \"can go for 170\". The frozen rule's caveat, which amendment 1 does list, is left one link down.",
+     "fix": "\"172 words, 22 over the budget, the excess mostly what the brief's never-cut list takes (the two premises with their roles, standings, what is not claimed, what a receipt shows, the tests frozen before scoring, the links down; amendment 1 keeps never-cut items), with two discretionary words ('evaluation included') kept as point 1's content\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "172 words and 1–2 minutes are confirmed by an in-memory render through navigation.first_screen, identical to the committed README. But amendment 1 (WHAT-REMAINS :388–390) lists a deciding hypothesis, the two premises with their roles, a failure as it fell, a frozen rule's caveat, a post hoc label, an AI label on a reading, what is not claimed, each claim's standing, and the meaning of an empty axiom report where one is cited. It does not list what a receipt shows, frozen tests or links down. Those come from the block's brief (tighten.json final.findings[14]: \"the brief's never-cut list for this block\"). tighten.json final.findings[11] says \"Most of the excess is never-cut items … Six words are discretionary\", and 'evaluation included' \"can go for 170\". Amendment 1's frozen rule's caveat is left one link down. The screen file's comment makes the same attribution."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(9) \"[^transitions] reads cancer as a confined rise as 'a reading', no longer 'the AI's reading', whose provenance the record keeps\"",
+     "problem": "Removing that label takes an AI label off a reading in a budgeted layer. Amendment 1 and AGENTS both require that label to stay, and the section does not say how the two are reconciled.",
+     "evidence": "WHAT-REMAINS amendment 1 never-cut list: \"an AI label on a reading\". AGENTS: \"Every reading keeps its AI label.\" The record confined-rise-within-a-whole keeps \"Readings (the AI's): ConfinedRise as cancer ...\".",
+     "fix": "Add: \"this drops a never-cut item of amendment 1 (an AI label on a reading) from the note at the coordinator's no-names ruling; the label stays in the record\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "AGENTS says \"Every reading keeps its AI label\". Amendment 1's never-cut list includes \"an AI label on a reading\", and each opening note is a budgeted layer. The change removes the only AI label on a reading in the rendered README; main README :109 was the one instance. The ground for removing it is Ren's front-page no-names rule (front pages name no AI; deeper records keep provenance), and the record confined-rise-within-a-whole keeps \"Readings (the AI's)\". The section gives the second half of that reconciliation but does not name the rule it departs from. The other notes already label readings plainly (\"A reading.\")."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Tests: the section names only the suite's count",
+     "problem": "The branch's test changes are not described.",
+     "evidence": "tools/research/tests/test_featured_results.py goes from 19 to 24 tests. test_root_places_the_opening_before_the_summary becomes test_root_places_the_first_screen_before_the_opening (order, one copy, no '{{'). A new FirstScreenTests class adds five tests: fields filled, the fixed point at 192/193 words, refused fields and files, counting as the budgets do, links kept on the page, and the repository's screen (both roles, no AI/Ren/Claude, the lead not repeating). test_navigation_validation_reports_missing_opening now requires the error once. validate_goals now reports a missing opening once, not again for the screen. The module passes (24 OK).",
+     "fix": "Add a Delta item: \"tests: test_featured_results.py's FirstScreenTests (five tests: fields, fixed point, refusals, counting, links on the page, the repository's screen naming no one and keeping both roles) and the placement test; validate_goals reports a missing opening once\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "tools/research/tests/test_featured_results.py goes from 19 to 24 tests and passes (24 OK). test_root_places_the_opening_before_the_summary becomes test_root_places_the_first_screen_before_the_opening (order status → screen → opening → lead → established, one copy, no '{{'). The new FirstScreenTests has five tests: fields filled, including the fixed point at 192/193 words; refusals of unknown, malformed and missing fields, generated pages and absent notes; counting as the budgets do; links into the page staying on it; and the repository's screen (both roles, no AI/Ren/Claude, the lead not repeating). test_navigation_validation_reports_missing_opening now requires the error exactly once, because validate_goals skips first_screen when the opening fails."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Boundary (as written)",
+     "problem": "The tightening pass found README's duplicate anchors and left them. The screen's two in-page links depend on them, and the Boundary does not mention it.",
+     "evidence": "tighten.json final: \"README carries duplicate ids. 'truth-exists' and 'notes' are live heading slugs ... also written again as explicit anchors in the collapsed 'Historical section links' block ... The fix belongs in preserved_anchors\". README.md: '## Truth exists' :21 and '<a id=\"truth-exists\"></a>' :462; '### Notes' :77 and '<a id=\"notes\"></a>' :342.",
+     "fix": "Add to Boundary: \"README carries duplicate ids truth-exists and notes (the historical-anchor block); the screen's links land on the headings, which come first; the fix belongs in navigation.preserved_anchors\".",
+     "severity": "missing",
+     "verdict": {
+      "real": true,
+      "reason": "README.md has '## Truth exists' at :21 and '<a id=\"truth-exists\"></a>' at :462, and '### Notes' at :77 and '<a id=\"notes\"></a>' at :342. This predates the branch: main has them at 9/450 and 65/330. tighten.json final.findings[12] found the duplicates and left them, with the fix put in navigation.preserved_anchors. The screen's two in-page links, which (6) describes, land right only because the headings come first."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Evidence: \"its nine fixes are in the block ..., and six points are left with reasons\"",
+     "problem": "The nine fixes check out. \"Six\" does not match the report.",
+     "evidence": "tighten.json final.findings has 20 entries. Of the 10 with fixed_in_final true, 9 are in the block, and one (the 'do not count' rationale) is a corrected claim. 10 are not fixed: the count tool's figure, the budget, the duplicate anchors, receipts, the frozen caveat, 'two unasserted premises', 'evaluation included', 'not assumed good', the notes' time, and final.md's comment.",
+     "fix": "\"its other points are left with reasons (ten, among them that the frozen rule's caveat stays one link down at 08's theses and that the count tool reads one word short)\", or name the six meant.",
+     "severity": "unsupported",
+     "verdict": {
+      "real": false,
+      "reason": "Refuted as a wrong figure. tighten.json final.findings has 20 entries, 10 with fixed_in_final true: 9 are in the block, and one (#10) corrects a rationale. Of the 10 not fixed, exactly six are points on the block's own wording left with reasons: #13 receipts, #14 the frozen rule's caveat (the one the section names), #15 'two unasserted premises', #16 'evaluation included', #17 'not assumed good', #18 the notes' time. The other four are not about the block's wording. #9 is the count tool's figure, and the section records the render's 172. #11 is the budget, which the section records. #12 is the duplicate anchors outside the block (see the Boundary verdict). #19 is final.md's comment, which is kept. So 'six' fits the report."
+     },
+     "taken": false
+    }
+   ]
+  }
+ ]
+}

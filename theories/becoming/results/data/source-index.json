@@ -2053,7 +2053,10 @@
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/certificate-idiom.lean",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check-equivalences.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/compare_rule.py",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/controls-run.log",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/mutations_recheck3.py",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/mutations_recheck4.py",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/run_controls.py",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/e2e-report.json",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/probe.json",
@@ -2065,6 +2068,7 @@
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck2.json",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck3.json",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck4.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json",
         "tools/research/boundary.py",
         "tools/research/boundary_check.lean",
         "tools/research/tests/test_boundary.py"
