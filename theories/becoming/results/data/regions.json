@@ -191,6 +191,11 @@
    "base": "frame",
    "note": "reviewed-scoped; AlignmentDirection conditional on warranted correspondence"
   },
+  "amounts-by-unit-matchings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "UnitMatchings U1b: amounts, the root's second sort, by their interface: balance represented by selected frame matchings, both ways; the crossing laws at a rise; the residual counts and dissipation; not derived, the residual units accounting"
+  },
   "any-number-of-drawers-in-turn": {
    "region": "retire",
    "base": "general",
@@ -4252,6 +4257,11 @@
    "region": "root",
    "base": "old-base",
    "note": "P69 one unfolding: labelled process and frame as readings of a world"
+  },
+  "Becoming.UnitMatchings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "U1b: the interface of amounts by selected unit matchings (01 §8.6): FrameMatch, frameMatchings_iff_balances, crossing_edge, rise_crossing_weak/strong, endings_count"
   },
   "Becoming.Units": {
    "region": "life",

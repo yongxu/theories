@@ -1,11 +1,11 @@
 {
- "commit": "e371adf9084718634fd746067540f2478fc85d4d",
+ "commit": "8d46add6f03b9fa092aeb6144aad385a2745266d",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261031T085229.010243Z",
+ "core_receipt_at_commit": "20261031T125855.282103Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 364,
- "constants": 52551,
- "spine_theorems": 17773,
+ "tracked_modules": 365,
+ "constants": 52652,
+ "spine_theorems": 17789,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 1098,
   "statement on Process/Frame/Run/Trace": 3562,
-  "statement on World/Flow/Web": 4259,
+  "statement on World/Flow/Web": 4271,
   "statement on the base only through a law of its own module": 276,
   "proof through a base family": 216,
-  "used by a theorem on the base": 5810,
+  "used by a theorem on the base": 5818,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 2223,
-  "apart: prelude-only statement": 170
+  "apart: own vocabulary": 2221,
+  "apart: prelude-only statement": 168
  },
- "apart": 2393,
- "apart_general_structure_by_design": 1004,
- "apart_otherwise": 1389,
+ "apart": 2389,
+ "apart_general_structure_by_design": 999,
+ "apart_otherwise": 1390,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 123,
   "of them on the base": 81,
@@ -80,8 +80,8 @@
  "apart_roots": 1259,
  "apart_roots_by_category": {
   "model-witness": 568,
-  "support": 139,
-  "general-structure": 504,
+  "support": 140,
+  "general-structure": 503,
   "calibration": 22,
   "restates": 14,
   "logical-strength": 12
@@ -199,10 +199,6 @@
    66,
    66
   ],
-  "Becoming.GrammarLaws": [
-   65,
-   175
-  ],
   "Becoming.OptimumSeason": [
    63,
    63
@@ -210,6 +206,10 @@
   "Becoming.Reproduction": [
    62,
    114
+  ],
+  "Becoming.GrammarLaws": [
+   60,
+   175
   ],
   "Becoming.ReadStages": [
    57,
@@ -775,6 +775,10 @@
    1,
    56
   ],
+  "Becoming.UnitMatchings": [
+   1,
+   16
+  ],
   "Becoming.Contacts": [
    1,
    23
@@ -838,19 +842,19 @@
  },
  "rings": {
   "core": {
-   "modules": 347,
-   "theorems": 17001,
-   "apart": 2298,
+   "modules": 348,
+   "theorems": 17017,
+   "apart": 2294,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3342,
-    "statement on World/Flow/Web": 4234,
+    "statement on World/Flow/Web": 4246,
     "statement on the base only through a law of its own module": 230,
     "proof through a base family": 205,
-    "used by a theorem on the base": 5449,
+    "used by a theorem on the base": 5457,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 2129,
-    "apart: prelude-only statement": 169
+    "apart: own vocabulary": 2127,
+    "apart: prelude-only statement": 167
    }
   },
   "instances": {
@@ -970,7 +974,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 83,
   "statement on Process/Frame/Run/Trace": 173,
-  "statement on World/Flow/Web": 136,
+  "statement on World/Flow/Web": 137,
   "statement on the base only through a law of its own module": 6,
   "proof through a base family": 5,
   "used by a theorem on the base": 13,
@@ -2475,7 +2479,7 @@
   "Becoming.GrammarLaws.skipAt_lt": "used by a theorem on the base",
   "Becoming.GrammarLaws.split_at_head": "used by a theorem on the base",
   "Becoming.GrammarLaws.revisits_within": "used by a theorem on the base",
-  "Becoming.GrammarLaws.split_append": "apart: prelude-only statement",
+  "Becoming.GrammarLaws.split_append": "used by a theorem on the base",
   "Becoming.GrammarLaws.replicate_add_append": "used by a theorem on the base",
   "Becoming.GrammarLaws.replicate_succ_append": "used by a theorem on the base",
   "Becoming.GrammarLaws.reverseAux_append": "used by a theorem on the base",
@@ -2490,7 +2494,7 @@
   "Becoming.GrammarLaws.any_remove": "apart: prelude-only statement",
   "Becoming.GrammarLaws.any_true_of_mem": "apart: prelude-only statement",
   "Becoming.GrammarLaws.any_false_of": "apart: prelude-only statement",
-  "Becoming.GrammarLaws.mem_middle": "apart: prelude-only statement",
+  "Becoming.GrammarLaws.mem_middle": "used by a theorem on the base",
   "Becoming.GrammarLaws.mem_of_removed": "apart: prelude-only statement",
   "Becoming.GrammarLaws.distinct_removed": "apart: own vocabulary",
   "Becoming.GrammarLaws.not_eq_true_iff": "apart: prelude-only statement",
@@ -2499,12 +2503,12 @@
   "Becoming.«一之对»": "used by a theorem on the base",
   "Becoming.«对之单调»": "apart: own vocabulary",
   "Becoming.«对之自反»": "apart: own vocabulary",
-  "Becoming.«对之左插»": "apart: own vocabulary",
-  "Becoming.«对之逆»": "apart: own vocabulary",
+  "Becoming.«对之左插»": "used by a theorem on the base",
+  "Becoming.«对之逆»": "used by a theorem on the base",
   "Becoming.«对则守数»": "used by a theorem on the base",
   "Becoming.«守数当且仅当可对»": "used by a theorem on the base",
   "Becoming.«等长而不对之例»": "apart: own vocabulary",
-  "Becoming.«对之取»": "apart: own vocabulary",
+  "Becoming.«对之取»": "used by a theorem on the base",
   "Becoming.«对之接»": "apart: own vocabulary",
   "Becoming.«对之传»": "apart: own vocabulary",
   "Becoming.«对之并»": "used by a theorem on the base",
@@ -11840,6 +11844,22 @@
   "Becoming.Undecided.liar_both_sides": "statement on the base only through a law of its own module",
   "Becoming.Undecided.rotate_moves": "apart: own vocabulary",
   "Becoming.Undecided.incomplete": "apart: own vocabulary",
+  "Becoming.UnitMatchings.FrameMatch.le": "used by a theorem on the base",
+  "Becoming.UnitMatchings.FrameMatch.eq": "used by a theorem on the base",
+  "Becoming.UnitMatchings.FrameMatch.predecessor_unique": "apart: own vocabulary",
+  "Becoming.UnitMatchings.FrameMatchings.balances": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.frameMatchings_iff_balances": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.FrameMatchings.next": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.crossing_edge": "used by a theorem on the base",
+  "Becoming.UnitMatchings.length_takenUnits": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.length_givenUnits": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.rise_crossing_weak": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.rise_crossing_strong": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.endings_count": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.leaving_and_endings_count": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.source_minimal_zero_of_dissipates": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.residual_pos_of_dissipates": "statement on World/Flow/Web",
+  "Becoming.UnitMatchings.lossless_not_dissipative": "statement on World/Flow/Web",
   "Becoming.Branching.Juncture.reach": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Juncture.outcomes_differ": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Juncture.possiblyDrawn": "statement on Process/Frame/Run/Trace",
