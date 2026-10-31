@@ -2164,7 +2164,7 @@
   "type-formation-gives-no-dynamics": {
    "region": "method",
    "base": "general",
-   "note": "ProductTower, GeneratedPaths: product tower keeps the seed's boundary; reach least closure"
+   "note": "ProductTower, GeneratedPaths: product tower keeps the seed's size bounds; reach least closure"
   },
   "typicality-by-counting": {
    "region": "knowing",
