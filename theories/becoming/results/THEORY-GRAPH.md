@@ -2,14 +2,14 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3144 nodes, 5966 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3148 nodes, 5983 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 31 | 84 | 71 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 85 | 72 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 75 | 0 |
 | Knowing and testing | 0 | 107 | 84 | 0 |
-| Life and evolution | 0 | 42 | 17 | 0 |
+| Life and evolution | 0 | 42 | 18 | 0 |
 | Collectives and selection | 0 | 66 | 21 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 80 | 60 | 0 |
@@ -51,7 +51,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (84):
+Results (85):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -92,6 +92,7 @@ Results (84):
 - [Losses of the sum over histories](records/losses-of-the-sum-over-histories.md) (recorded-checked)
 - [Necessary response is the weakest sound reading of requirement](records/requirement-is-the-weakest-sound-reading.md) (recorded-checked)
 - [Normal forms of named exchanges need exactly decided apartness on the stretch](records/normal-forms-need-decided-apartness.md) (recorded-checked)
+- [Not going out of a region](records/not-going-out-of-a-region.md) (recorded-checked)
 - [One unfolding, read in context](records/unity-of-readings.md) (recorded-checked)
 - [Only the order of change shows](records/only-the-order-of-change-shows.md) (recorded-checked)
 - [Place/transition nets on the spine](records/place-transition-nets-on-the-spine.md) (recorded-checked)
@@ -138,7 +139,7 @@ Results (84):
 - [Where a run goes on](records/where-a-run-goes-on.md) (recorded-checked)
 - [Which links a closure needs](records/which-links-a-closure-needs.md) (recorded-checked)
 
-Modules (71, 19 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarLaws`, `GrammarRegularity`, `GrammarTransport`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `ModelStatements`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presence`, `Presentations`, `ProcessRepresentation`, `Reading`, `Readings`, `Regions`, `Renewal`, `ReorderingGrowth`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `UnitMatchings`, `World`, `WorldRepresentation`
+Modules (72, 20 stated on the grammar): `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarCrossing`, `GrammarLaws`, `GrammarRegularity`, `GrammarTransport`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `ModelStatements`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presence`, `Presentations`, `ProcessRepresentation`, `Reading`, `Readings`, `Regions`, `Renewal`, `ReorderingGrowth`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `UnitMatchings`, `World`, `WorldRepresentation`
 
 
 ## The map: generation, keeping, degeneration, orders
@@ -402,7 +403,7 @@ Results (42):
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionTerm`, `Transmission`, `Units`
+Modules (18, 2 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
@@ -638,4 +639,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-303 of 362 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+303 of 364 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

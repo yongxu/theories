@@ -4,7 +4,7 @@
 
 ## 1. The goal
 
-The goal is the missing connection of an existing scope, [generative alignment](../../../../../../GOALS.md#generative-alignment), whose objective, sharpened on Ren's yes of 25 October, now states the three conditions below, and whose completion asks each study to name the connection it supplies. The objective still states condition 1 in its earlier wording; the restated sentence is proposed for Ren's day on the board, since a goal's scope changes only with his approval. Stated in the account's terms:
+The goal is the missing connection of an existing scope, [generative alignment](../../../../../../GOALS.md#generative-alignment), whose objective, sharpened on 25 October, states the three conditions below, and whose completion asks each study to name the connection it supplies. Since 1 November 2026 the objective states condition 1 as restated below, in place of its earlier wording, "capacity to shape the selection's rule is not itself selected, because what shaping brings back to the shapers alone does not cover its cost" (in the overview, "capacity to shape the selection's rule not itself selected"). That wording had stood on a yes; it is replaced on the argument given with condition 1 below: as a criterion it forbids accountable revision whose capacity is rewarded, which nothing proved makes a failure, while capture, the capacity selected by what comes back to the shapers alone with the rule then read from their share, is what the models tie to a lock and to losses no one reads. Stated in the account's terms:
 
 **An alignment of the joint selection.** Humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold:
 

@@ -3548,6 +3548,18 @@
    "page": "theories/becoming/results/records/normal-forms-need-decided-apartness.md"
   },
   {
+   "id": "record:not-going-out-of-a-region",
+   "type": "result",
+   "record": "not-going-out-of-a-region",
+   "title": "Not going out of a region",
+   "title_zh": "不出一域",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/not-going-out-of-a-region.md"
+  },
+  {
    "id": "record:observation-is-a-route",
    "type": "result",
    "record": "observation-is-a-route",
@@ -8028,6 +8040,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ConveyanceBoundaries",
+   "type": "module",
+   "name": "Becoming.ConveyanceBoundaries",
+   "level": "L2",
+   "theorems": 8,
+   "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Weightings",
    "type": "module",
    "name": "Becoming.Weightings",
@@ -10442,6 +10465,17 @@
    "name": "Becoming.GrammarCases",
    "level": "L2",
    "theorems": 40,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarCrossing",
+   "type": "module",
+   "name": "Becoming.GrammarCrossing",
+   "level": "L1",
+   "theorems": 11,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -28184,6 +28218,12 @@
    "anchor": "r-which-links-a-closure-needs"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-not-going-out-of-a-region",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-not-going-out-of-a-region"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-exclusive-footprint-support",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -31262,6 +31302,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ConveyanceBoundaries",
+   "to": "module:Becoming.Boundaries",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConveyanceBoundaries",
+   "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.CopyCourses",
    "to": "module:Becoming.Courses",
    "type": "imports"
@@ -31942,6 +31992,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarCrossing",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.GrammarLaws",
    "to": "module:Becoming.Grammar",
    "type": "imports"
@@ -31964,6 +32019,11 @@
   {
    "from": "module:Becoming.GrammarPath",
    "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarPath",
+   "to": "module:Becoming.GrammarCrossing",
    "type": "imports"
   },
   {
@@ -39523,6 +39583,11 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "module:Becoming.ConveyanceBoundaries",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "module:Becoming.Correspondence",
    "type": "proved-in"
   },
@@ -39553,6 +39618,11 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "record:life-as-condition-of-life",
    "type": "formal-reuse"
   },
@@ -39568,8 +39638,18 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "record:metaethical-core-characterization",
    "type": "related"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
   },
   {
    "from": "record:copied-witnesses-change-nothing",
@@ -46535,6 +46615,41 @@
    "from": "record:normal-forms-need-decided-apartness",
    "to": "record:order-of-exchanges-is-the-invariant",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "module:Becoming.GrammarCrossing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:conveyance-crosses-the-boundary",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:reach-from-a-seed",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "related"
   },
   {
    "from": "record:observation-is-a-route",
@@ -54938,6 +55053,11 @@
   },
   {
    "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
    "to": "record:reach-past-ones-own-end",
    "type": "related"
   },
@@ -58154,6 +58274,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-normal-forms-need-decided-apartness",
    "to": "record:normal-forms-need-decided-apartness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-not-going-out-of-a-region",
+   "to": "record:not-going-out-of-a-region",
    "type": "states"
   },
   {

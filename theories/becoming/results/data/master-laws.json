@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T183655.254131Z",
- "core_sources_sha256": "2587a4751fbb173cc50535bc21e0126169a75efaa86657428742c02863d95243",
+ "core_receipt": "20261031T202201.956842Z",
+ "core_sources_sha256": "70ed569cbf0b10d0fb0839ec0c71a77a9bc2edcc910a8ff0b6cde43468a2c2b7",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,17 +58,17 @@
   ]
  },
  "counts": {
-  "laws": 3975,
+  "laws": 3981,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 770,
+  "grammar": 776,
   "balance, represented": 646,
   "anchor, not reached": 134,
   "no master law": 2025,
   "vocabulary_only": 69,
-  "closure": 483,
-  "balance": 817,
-  "return": 252,
+  "closure": 485,
+  "balance": 818,
+  "return": 253,
   "lumping": 83,
   "order": 80
  },
@@ -11789,6 +11789,34 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Flow.region_no_boundary",
+     "Becoming.Flow.closures_not_within_region",
+     "Becoming.Clearing.resource_no_boundary"
+    ],
+    "master_laws": [
+     "closure",
+     "balance",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Flow.cut_iff_notGoingOut",
+     "Becoming.Flow.cut_of_closedUnder",
+     "Becoming.Flow.closedUnder_of_cut",
+     "Becoming.Flow.conveyance_symm",
+     "Becoming.Flow.cut_iff_notComingIn"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "copied-witnesses-change-nothing": [
@@ -31832,6 +31860,53 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   }
+  ],
+  "not-going-out-of-a-region": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«不出»",
+     "Becoming.«闭则不出»",
+     "Becoming.«所闭不出»",
+     "Becoming.«不出当且仅当不外者闭»",
+     "Becoming.«不外者内则不出当且仅当闭»"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«逆之不出当且仅当外者不出»",
+     "Becoming.«对称则不出当且仅当逆不出»",
+     "Becoming.«闭而有入之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«内至外之线则非不出»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.«内至外之线有出步»",
+     "Becoming.«定则内至外之线有出步»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "observation-is-a-route": [
@@ -60967,7 +61042,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "fd5789ae0cefcf098c15e3129422cf5a2044c26d8c03870bcf58fabea2f4479a",
+   "modules_sha256": "74aa347352d0c6e2151ffb5b950d4632e606078b61c24cbb6822fa5f54b26563",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },

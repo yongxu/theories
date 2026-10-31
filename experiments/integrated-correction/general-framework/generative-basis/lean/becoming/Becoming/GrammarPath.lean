@@ -1,5 +1,6 @@
 import Becoming.Grammar
 import Becoming.GrammarMap
+import Becoming.GrammarCrossing
 
 /-!
 # What a line under a class must hold, and what a regularity takes in (所经必同, 常闭则后皆续)
@@ -12,7 +13,8 @@ states them for every carrier, relation and class.
 * **What a line must pass, its class must hold (所经必同).** Where a region (a decided predicate `P`)
   is left under a class only into a set `C` (every step under the class from inside `P` to outside
   lands in `C`), a line under the class from inside the region to outside holds a member of `C`
-  alike to its start, and reaches it (`«所经必同»`). So where no member of `C` is alike to the start,
+  alike to its start, and reaches it (`«所经必同»`): the line's step going out of the region, placed
+  on the line (`«定则内至外之线有出步»`, `Becoming.GrammarCrossing`), lands in `C`. So where no member of `C` is alike to the start,
   nothing outside the region is reached under that class (`«所经不同则不及»`). Read with a family as
   the region and its conditions as `C`: a class under which a line runs out of its family through
   its conditions must hold one of them, the one it passes. `SharedCondition.affecting_member_outside`
@@ -106,8 +108,9 @@ states them for every carrier, relation and class.
   member's line or not, which is more than the reach asks.
 
 Every declaration has an empty axiom report. The decided predicate in `«所经必同»` is what lets the
-proof ask, of each occurrence on the line, whether it is still inside the region; no classical
-principle is used.
+proof ask, of each occurrence on the line, whether it is still inside the region: it decides every
+step of the line as keeping to the region or going out of it (`«定则内至外之线有出步»`); no
+classical principle is used.
 -/
 
 namespace Becoming
@@ -125,26 +128,22 @@ theorem «所经必同» {R E : «际» α} (hE : «类» E) {P : α → Bool} {
     (exits : ∀ u v, P u = true → «续» R E u v → P v = false → C v) {x y : α}
     (inside : P x = true) (outside : P y = false) (reached : «所及» R E x y) :
     ∃ c, C c ∧ E x c ∧ «所及» R E x c := by
-  have key : ∀ u w, «相续» R E u w → P u = true → P w = false → ∃ c, C c ∧ «所及» R E u c := by
-    intro u w line
-    induction line with
-    | one c =>
-      intro pu pw
-      exact ⟨_, exits _ _ pu c pw, .inr (.one c)⟩
-    | @more a b _ c _ ih =>
-      intro pa pw
-      cases pb : P b with
-      | false => exact ⟨b, exits a b pa c pb, .inr (.one c)⟩
-      | true =>
-        match ih pb pw with
-        | ⟨d, hd, .inl e⟩ => exact ⟨d, hd, .inr (e ▸ .one c)⟩
-        | ⟨d, hd, .inr rest⟩ => exact ⟨d, hd, .inr (.more c rest)⟩
   match reached with
   | .inl e => exact absurd (e ▸ inside) (by rw [outside]; exact Bool.false_ne_true)
   | .inr line =>
-    match key x y line inside outside with
-    | ⟨c, hc, .inl e⟩ => exact ⟨c, hc, e ▸ hE.refl x, .inl e⟩
-    | ⟨c, hc, .inr l⟩ => exact ⟨c, hc, «线内同类» hE l, .inr l⟩
+    have decided : ∀ a, P a = true ∨ ¬ P a = true := fun a =>
+      Bool.casesOn (motive := fun b => b = true ∨ ¬ b = true) (P a) (.inr Bool.false_ne_true)
+        (.inl rfl)
+    have off : ∀ b : Bool, ¬ b = true → b = false := fun b =>
+      Bool.casesOn (motive := fun b => ¬ b = true → b = false) b (fun _ => rfl)
+        (fun no => absurd rfl no)
+    match «定则内至外之线有出步» (P := fun a => P a = true) decided line inside
+        (show ¬ P y = true from fun held => Bool.false_ne_true (outside ▸ held)) with
+    | ⟨u, v, step, ⟨member, out⟩, before, _⟩ =>
+      have onLine : «相续» R E x v := match before with
+        | .inl same => by subst same; exact .one step
+        | .inr toU => «及之传递» toU (.one step)
+      exact ⟨v, exits u v member step (off (P v) out), «线内同类» hE onLine, .inr onLine⟩
 
 /-- **Where the class holds nothing the line must pass, nothing beyond is reached.** -/
 theorem «所经不同则不及» {R E : «际» α} (hE : «类» E) {P : α → Bool} {C : α → Prop}

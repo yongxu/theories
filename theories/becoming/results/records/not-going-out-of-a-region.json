@@ -1,0 +1,241 @@
+{
+  "schema_version": 2,
+  "id": "not-going-out-of-a-region",
+  "title": {
+    "en": "Not going out of a region",
+    "zh": "不出一域"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T12:15:00+00:00",
+  "statement": {
+    "en": "Nothing in a region goes out of it along a relation exactly where what is not outside is closed under it; a closed region is not gone out of, and the two are one where membership is stable. Where each step keeps to the region or leaves it, a line from inside to outside has a step out, placed on it.",
+    "zh": "一域沿一关系不出，恰是不外于域者在此关系下闭；闭之域不出，凡不外者皆内处二者为一。每步或守于域或出之，则自内至外之线上有一出步，定其所在。"
+  },
+  "laws": [
+    {
+      "en": "Nothing in a region goes out of it along a relation where no member bears the relation to something outside. A closed region is not gone out of, an occurrence's closure among them, the closure law read through not going out; not going out is exactly the closedness of what is not outside the region, with no decision; and where membership is stable, whatever is not outside lying inside, not going out is being closed.",
+      "zh": "一域沿一关系不出，谓无一员以此关系及于域外者。闭之域不出，一发生之所闭亦然，即闭包之律经不出读之；不出恰是不外于域者之闭，不用判定；凡不外者皆内处，不出即闭。",
+      "declarations": [
+        "Becoming.«不出»",
+        "Becoming.«闭则不出»",
+        "Becoming.«所闭不出»",
+        "Becoming.«不出当且仅当不外者闭»",
+        "Becoming.«不外者内则不出当且仅当闭»"
+      ]
+    },
+    {
+      "en": "Nothing comes into a region along a relation, nothing outside bearing it to a member, exactly where nothing goes out of what lies outside the region, with no decision. Along a symmetric relation nothing goes out of a region exactly where nothing comes in; some relation that is not symmetric has a closed region something outside comes into.",
+      "zh": "无物沿一关系入一域（无域外者以之及于员），恰是域外者不出，不用判定。关系对称时，不出恰是不入；且有不对称之关系，沿之闭域有域外者入之。",
+      "declarations": [
+        "Becoming.«逆之不出当且仅当外者不出»",
+        "Becoming.«对称则不出当且仅当逆不出»",
+        "Becoming.«闭而有入之例»"
+      ]
+    },
+    {
+      "en": "A line of continuation under any class from a member of a region to something outside it makes it false that nothing in the region goes out of it, with no decision; it names no step going out.",
+      "zh": "任一类下自域之一员至域外者之续线，则此域非不出，不用判定；未指何步出之。",
+      "declarations": [
+        "Becoming.«内至外之线则非不出»"
+      ]
+    },
+    {
+      "en": "Where every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside, a line from a member to something outside has a step going out, reached from the start and reaching the end: the mark law, with keeping to the region as what the ends fail. Where membership is decided every step is of one kind or the other.",
+      "zh": "每步续或守于域（始为员则终亦为员）或自员出至域外，则自员至域外之线上有一出步，自始可及，可及其终：即两端分则中有标之律，以守于域为两端所不合者。属与否已判定处，每步皆为二者之一。",
+      "declarations": [
+        "Becoming.«内至外之线有出步»",
+        "Becoming.«定则内至外之线有出步»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom: every cited declaration has an empty axiom report, in core modules held to the core's conditions (Lean's prelude only).",
+      "zh": "不加公理：所引每项声明的公理报告皆空，所在模块属核心，守核心之条件（仅用 Lean 前奏）。"
+    },
+    {
+      "en": "Any carrier, any relation and any region given by a Prop-valued predicate; a line is a finite chain of steps of continuation (相续) under any class, the relation met with the class.",
+      "zh": "任意载体、任意关系，及以取 Prop 值之谓词给出之任意域；线是任一类下有限步之续（相续），续即关系与类之合。"
+    },
+    {
+      "en": "«不外者内则不出当且仅当闭» takes as a hypothesis that membership is stable, whatever is not outside the region lying in it; «内至外之线有出步» that every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside; «定则内至外之线有出步» that membership is decided; «对称则不出当且仅当逆不出» that the relation is symmetric.",
+      "zh": "«不外者内则不出当且仅当闭» 以凡不外者皆内为假设；«内至外之线有出步» 以每步续或守于域（始为员则终亦为员）或自员出至域外为假设；«定则内至外之线有出步» 以属与否已判定为假设；«对称则不出当且仅当逆不出» 以关系对称为假设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a region nothing goes out of is closed: where membership is not stable, what a member bears the relation to is only not outside. Its holding for every carrier in Type, relation and region is excluded middle, a lemma of «不外者内则不出当且仅当闭».",
+      "zh": "不出之域闭：非凡不外者皆内时，员所及者只是不外于域；于 Type 之每一载体、关系与域皆闭恰为排中，是 «不外者内则不出当且仅当闭» 之引理。",
+      "kind": "non-implication",
+      "witness": "Becoming.«不出皆闭当且仅当排中»"
+    },
+    {
+      "en": "That a closed region is not come into: along some relation that is not symmetric, something outside bears it to a member of a closed region.",
+      "zh": "闭之域无物可入：有不对称之关系，沿之有域外者及于闭域之员。",
+      "kind": "non-implication",
+      "witness": "Becoming.«闭而有入之例»"
+    },
+    {
+      "en": "Where on a line a step going out lies, or that one exists, when the steps are not split into keeping and going out: then only that the region is not one nothing goes out of.",
+      "zh": "步不分守与出时，线上之出步在何处，或有无：此时只得此域非不出。",
+      "kind": "scope"
+    },
+    {
+      "en": "A graded boundary, or which relation a self's boundary is drawn along: the laws hold for any region and relation and choose neither.",
+      "zh": "有等级之边界，或自身之边界沿何关系划：诸律于任意域与关系成立，二者皆不择。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
+      "detail": {
+        "en": "The witness of «不出皆闭当且仅当排中»: two occurrences, the relation from the first to the second, and the region of the first or a proposition S. Where ¬¬S is given nothing goes out of the region, and its being closed gives S.",
+        "zh": "«不出皆闭当且仅当排中» 之见证：二发生，自前者至后者之关系，与「为前者或命题 S 成立」之域。已给 ¬¬S 时此域不出，而其闭即得 S。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
+      "detail": {
+        "en": "A closed region come into («闭而有入之例»): the same relation, the region of the second occurrence; it is closed, the first, outside it, bears the relation to the second, and the second does not bear it to the first, so the relation is not symmetric.",
+        "zh": "可入之闭域（«闭而有入之例»）：同一关系，后一发生之域；此域闭，在外之前者以此关系及于后者，而后者不及于前者，故此关系不对称。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261031T202201.956842Z): Becoming.GrammarCrossing, 12 declarations (11 theorems), in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261031T202201.956842Z）：Becoming.GrammarCrossing 12 项声明（11 条定理），属核心，公理报告皆空，本记录全引。为本记录对照 Lean 审读，并经一独立 AI 读者审读，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "State a graded boundary on the grammar: nested regions along one relation, the steps by which one line goes out of each, and how they lie along it.",
+    "zh": "在文法上陈述有等级之边界：沿一关系之相套诸域，一线出每一域之步，及其在线上之次第。"
+  },
+  "correspondence": {
+    "en": "In graph terms a region nothing goes out of has no edge leaving it, and a closed region holds every successor of its members. Classically the two are one; constructively the first is the closedness of the region's double negation, they coincide on stable regions, and that they coincide on all is excluded middle. A line from inside to outside crossing a leaving edge is a discrete intermediate value property, the mark law read on a region. Where membership is not stable, not going out leaves open where what a member bears the relation to lies: the logic's gap between a proposition and its double negation, not a fact of relations (the AI's reading).",
+    "zh": "以图论言，不出之域无出边，闭之域含其员之每一后继。经典逻辑中二者为一；构造地，前者即域之双重否定之闭，二者于稳定之域上合一，于一切域上合一恰为排中。自内至外之线越一出边，是离散之介值性质，即两端分则中有标之律读于一域。非凡不外者皆内处，不出未定员所及者在何处：此是命题与其双重否定之间的逻辑缺口，非关系之事实（AI 的读法）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
+  "aliases": [
+    "not going out of a region",
+    "不出一域",
+    "不出",
+    "nothing comes in where nothing goes out of the outside",
+    "Becoming.«不出»",
+    "Becoming.«不出当且仅当不外者闭»",
+    "Becoming.«不出皆闭当且仅当排中»",
+    "Becoming.«内至外之线有出步»"
+  ],
+  "dependencies": [
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«闭», «所闭», «闭之及» and «所闭之界» from the closure law, «所闭不出» being «所闭之界» read through «不出».",
+        "zh": "«闭»、«所闭»、«闭之及» 与 «所闭之界» 出自闭包之律；«所闭不出» 即经 «不出» 所读之 «所闭之界»。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«续», «相续», «及», «逆», «则», «相续含于及» and the mark law «两端分则中有标».",
+        "zh": "«续»、«相续»、«及»、«逆»、«则»、«相续含于及» 与两端分则中有标之律 «两端分则中有标»。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "conveyance-crosses-the-boundary",
+      "detail": {
+        "en": "Its cut is not going out at a valuation's relation, by definition, with closed regions cuts, stable cuts closed and conveyance's relation symmetric (its seventh law); its sixth law reads the crossing on a self's boundaries.",
+        "zh": "其切口依定义即一赋值之关系下之不出，闭域是切口，凡不外者皆内之切口闭，输送之关系对称（其第七律）；其第六律把穿越读于自身之边界。"
+      }
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "detail": {
+        "en": "Its «所经必同» is proved from «定则内至外之线有出步»: a step going out of the region lands in the set.",
+        "zh": "其 «所经必同» 由 «定则内至外之线有出步» 证得：出域之一步落于该集。"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "detail": {
+        "en": "The closures under a relation are the least boundaries along it, each not gone out of.",
+        "zh": "一关系下之诸所闭是沿之之最小边界，皆不出。"
+      }
+    },
+    {
+      "id": "reach-from-a-seed",
+      "detail": {
+        "en": "A like gap of double negation: refuting every separation refutes only being unreached, as not going out gives only what is not outside.",
+        "zh": "双重否定之同类缺口：否证每种分开只否证不可及，犹不出只得不外于域者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
+      "role": "proof",
+      "sha256": "5dcb69c0e35669e3183a2e124e94f8f066a9f4eeecc7b93a185aa0d3428e87cb",
+      "declarations": [
+        "Becoming.«不出»",
+        "Becoming.«闭则不出»",
+        "Becoming.«所闭不出»",
+        "Becoming.«不出当且仅当不外者闭»",
+        "Becoming.«不外者内则不出当且仅当闭»",
+        "Becoming.«不出皆闭当且仅当排中»",
+        "Becoming.«逆之不出当且仅当外者不出»",
+        "Becoming.«对称则不出当且仅当逆不出»",
+        "Becoming.«闭而有入之例»",
+        "Becoming.«内至外之线则非不出»",
+        "Becoming.«内至外之线有出步»",
+        "Becoming.«定则内至外之线有出步»"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/bd-boundaries/NOTE.md",
+      "role": "integration",
+      "sha256": "5289d3d00340c431cd44ae541e2b3a2fb227fcb55bd52c2430eb393a5ec3f146"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "0d57149056795b5edeaa14946f0be060c2246547b652ccd1c302cfbcdc2486c5"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-31-close-the-formal-gap.md",
+      "role": "provenance",
+      "sha256": "43c4a8b1428c312d1cbe0ff13708a3a5a1b72e2d0c3bfca4ed19f3655742dec6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "role": "receipt",
+      "sha256": "40ef6bb6514661fbb3ed7b705b45d28871fe14f6a9c1c5162c385ac7ff506117",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarCrossing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "31 October 2026, board item BD2: created. The formal gap BD's reading of boundaries left (the World's cut defined apart from the grammar's closed region) closed by the grammar's not going out (Becoming.GrammarCrossing): its laws against the closed region, going out and coming in, and the step going out on a line, with the excluded-middle lemma as a witness of what it does not show; the World's cut read as it by definition in conveyance-crosses-the-boundary's seventh law; «所经必同» proved from the step going out. Home 01 §9.9.",
+      "zh": "2026年10月31日，工作板条目 BD2：创建。BD 之边界读法所留之形式缺口（世界的切口与文法之闭域分别定义）以文法之不出（Becoming.GrammarCrossing）补之：其对闭域之诸律、出与入，及线上之出步，以排中之引理为其所不示者之见证；世界的切口依定义读作不出，见 conveyance-crosses-the-boundary 第七律；«所经必同» 由出步证得。归于 01 §9.9。"
+    }
+  ]
+}
