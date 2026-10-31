@@ -423,6 +423,20 @@ def statements_at_model_across(records):
             for d, ids in sorted(where.items()) if len(ids) > 1]
 
 
+def boundary_errors(r):
+    """The boundary field (architecture/mv/BOUNDARY-FIELD.md §2). Its rules are in tools/research/boundary.py, which the
+    generator applies too; only the check reads whether each review names the item's names."""
+    from tools.research import boundary
+    return boundary.field_errors(r, _review_text)
+
+
+def boundary_across(records):
+    """One record at most carries the boundary field."""
+    from tools.research import boundary
+    ids = sorted(str(r.get('id')) for r in boundary.carriers(records))
+    return ['the boundary field is carried by more than one record: ' + ', '.join(ids)] if len(ids) > 1 else []
+
+
 def validate_v2_fields(r, settings=None):
     """Structure of the schema-2 fields; readability rules come from style.lint."""
     settings = config() if settings is None else settings
@@ -451,6 +465,7 @@ def validate_v2_fields(r, settings=None):
         if unknown:
             errors.append('law names undeclared references: ' + ', '.join(map(str, unknown)))
     errors += statements_at_model_errors(r)
+    errors += boundary_errors(r)
     for item in r.get('does_not_show', []):
         if not isinstance(item.get('kind'), str) or item['kind'] not in NOT_SHOWN:
             errors.append(f'does_not_show kind must be one of {", ".join(sorted(NOT_SHOWN))}')
@@ -661,6 +676,184 @@ def at_model_notes(r, i, law, result_link, base):
     return lines
 
 
+def _names(names):
+    return _listed(['`' + n + '`' for n in names])
+
+
+def _rule_reason(row, label, e):
+    """Why U4's rule gives `label` to a row (BOUNDARY-FIELD.md §5), with e the row's entry where it has one."""
+    b = row['balance']
+    models = sorted({m for x in row['at_model'] for m in x['models']} & {'occurrence', 'process'})
+    case = 'not verified as a case of one' if e.get('standing') == 'derived' else 'not declared a case of one'
+    return {'balance in its statement': f'{_names(b["anchor_in_statement"])} in its statement' if b['anchor_in_statement']
+            else 'balance written out in its statement',
+            'connected': (f'it reaches {_names(row["grammar_laws_reached"])} among its reasons' if row['grammar_laws_reached']
+                          else 'the measure has it reaching the grammar') + '; ' + case,
+            'at a represented model': f"F5's verified items at the {_listed(models)} model" + ('s' if len(models) > 1 else ''),
+            'own carrier': "F5's verified items on its own carrier only",
+            'unplaced': ('no standing verified' if e else 'no standing declared') + ", and none of the rule's tests holds"}.get(label, label)
+
+
+def standing_line(d, row, record, result_link, base):
+    """The line for central declaration d under a law that names it (BOUNDARY-FIELD.md §5): one sentence for its
+    standing, as the data placed it from the boundary record (declared in `record`) or by U4's rule."""
+    e = row.get('entry') or {}
+    declared = f'declared in {result_link(record)}'
+    if row['placed'] == 'checked entry' and e['standing'] == 'derived':
+        rep = e.get('report', {})
+        text = f'*Standing of `{d}`:* derived, a case of {_names(e["law"])}'
+        if rep.get('forwarder'):
+            text += f' (it forwards to `{rep["forwarder"]["law"]}`, of kind {rep["forwarder"]["kind"]})'
+        if e.get('bridges'):
+            text += f' through {_names(e["bridges"])}'
+        if e.get('support'):
+            text += f', with the support {_names(e["support"])}'
+        if rep.get('laws_used_also'):
+            text += f', using also {_names(rep["laws_used_also"])}'
+        checked = 'the closed set checked against the Lean' + (', the bridges checked as equivalences' if e.get('bridges') else '')
+        text += f' ({declared}; {checked}; the case read in {link(e["review"], base)}).'
+        if rep.get('root_theorems_named'):
+            text += f' Root theorems its proofs name: {_names(rep["root_theorems_named"])} (Init not shown).'
+        return text
+    if row['placed'] == 'checked entry':
+        hyps = [h['hypothesis'] for h in e['hypotheses']]
+        one = len(hyps) == 1
+        text = (f'*Standing of `{d}`:* under a stated hypothesis, the root form `{e["form"]}` at its model, with '
+                f'{"hypothesis" if one else "hypotheses"} {_names(hyps)}, {"with its" if one else "each with its"} countermodel and fit')
+        if e.get('bridges'):
+            text += f', through the bridges {_names(e["bridges"])}'
+        return text + (f' ({declared}; checked in Lean: the form, its countermodels, the certificate and the discharge condition; '
+                       f"the hypotheses read as the row's relational content in {link(e['review'], base)}).")
+    if row['placed'] == 'reading':
+        text = f'*Standing of `{d}`:* {e["standing"]}, a reading: {en(e["basis"]).strip().rstrip(".")} ({link(e["review"], base)})'
+        if row['rule'] == e['standing']:
+            text += '; the rule gives the same'
+        else:
+            why = "none of the rule's tests holds" if row['rule'] == 'unplaced' else _rule_reason(row, row['rule'], {})
+            text += f'; the rule gives {row["rule"]} ({why})'
+        if e.get('relational_part'):
+            text += f'; its relational part: `{e["relational_part"]}`'
+        return text + '.'
+    why = _rule_reason(row, row['label'], e)
+    if e:
+        why += f'; the declared standing, {e.get("standing")}, is unverified: ' + '; '.join(e.get('failed', []))
+    return f'*Standing of `{d}`, by the rule:* {row["label"]} ({why}).'
+
+
+def boundary_section(r, base):
+    """The boundary record's section (BOUNDARY-FIELD.md §5): the central declarations by group and label, headed by the
+    counts and the premises of the ethics, while the data read the field this record carries."""
+    from tools.research import boundary
+    b = r.get('_boundary')
+    if not b:
+        return []
+    lines = [heading('##', 'Standings on the edge'), '']
+    if b['not_matched']:
+        what = [d for d in b['not_matched'] if d != 'the field']
+        cause = ('the record around this field (its status, schema, reviews or laws) or the field\'s own keys changed '
+                 'since the data read it, so no entry of the field is matched' if 'the field' in b['not_matched']
+                 else 'the data read another version of this field')
+        return lines + [f'*Not matched:* {cause} (' + _listed(what[:5]) + (' and others' if len(what) > 5 else '')
+                        + '); rerun `python3 -B tools/research/master_laws.py`, then make research-render.', '']
+    c, parts = b['counts'], []
+    for group, labels in boundary.GROUPS.items():
+        inner = ', '.join(f'{label} {c[label]}' for label in labels if c[label])
+        parts.append(f'{group} {b["groups"][group]}' + (f' ({inner})' if inner and len(labels) > 1 else ''))
+    lines += [f'**Counts** of the {sum(b["groups"].values())} central declarations: ' + '; '.join(parts) + '.', '']
+    for p in b['premises_of_the_ethics']:
+        absent = en(p['absent']).strip().rstrip('.') if isinstance(p.get('absent'), dict) else ''
+        what = {'not entailed': f'not entailed by any statement reading only the dynamics, by `{p.get("not_entailed")}` '
+                                '(computed: a theorem whose type names the definition; its statement read in the review)',
+                'not shown': 'no theorem shows it unentailed by the dynamics' + (': ' + absent if absent else ''),
+                'unverified': 'unverified: ' + '; '.join(map(str, p.get('failed', [])))}.get(p.get('result'), p.get('result'))
+        name = en(p['name']) if isinstance(p.get('name'), dict) else p.get('name')
+        lines += [f'- **For {p.get("role")}**, {name}: `{p.get("premise")}`; {what}.']
+    for group, labels in boundary.GROUPS.items():
+        rows = sorted(((d, x) for d, x in b['rows'].items() if x['label'] in labels), key=lambda dx: (labels.index(dx[1]['label']), dx[0]))
+        if not rows:
+            continue
+        lines += ['', heading('###', group[0].upper() + group[1:]), '']
+        for d, x in rows:
+            e = x.get('entry') or {}
+            if x['placed'] == 'checked entry' and e['standing'] == 'derived':
+                more = f': a case of {_names(e["law"])}' + (f'; bridges {_names(e["bridges"])}' if e.get('bridges') else '') \
+                       + (f'; support {_names(e["support"])}' if e.get('support') else '')
+            elif x['placed'] == 'checked entry':
+                more = (f': the form `{e["form"]}`; ' + '; '.join(f'`{h["hypothesis"]}` (countermodel `{h["countermodel"]}`, fit `{h["fit"]}`)'
+                                                                for h in e['hypotheses'])
+                        + f'; recovery `{e["recovery"]}`; certificate `{e["certificate"]}`'
+                        + (f'; bridges {_names(e["bridges"])}' if e.get('bridges') else ''))
+            else:
+                more = ''
+            how = {'checked entry': 'a checked entry',
+                   'reading': 'a reading; the rule gives ' + ('the same' if x['rule'] == x['label'] else x['rule']),
+                   'the rule': 'by the rule' + (f'; the declared standing, {e.get("standing")}, is unverified' if e else '')}[x['placed']]
+            lines += [f'- `{d}`: {x["label"]} ({how}){more}.']
+    return lines + ['']
+
+
+def _grouped(field):
+    """A boundary field's standings by declaration, as written."""
+    out = {}
+    standings = field.get('standings') if isinstance(field, dict) else None
+    for x in standings if isinstance(standings, list) else []:
+        d = x.get('declaration') if isinstance(x, dict) else None
+        out.setdefault(d if isinstance(d, str) else '(an entry without a declaration)', []).append(x)
+    return out
+
+
+def rows_of(b):
+    """The rows of the data's boundary report, {} where it has none of the right shape."""
+    rows = b.get('rows') if isinstance(b, dict) else None
+    return {d: x for d, x in rows.items() if isinstance(x, dict)} if isinstance(rows, dict) else {}
+
+
+def boundary_matching(records, data):
+    """(matched, not matched) between the boundary field the data read and the one a record carries now: the central
+    declarations whose entry, or its absence, is the one the data read; and the declarations whose entry differs, with
+    premises_of_the_ethics where the premises differ. Where the record around the field changed since the data read it,
+    'the field' comes first, every declaration the field names, in either version, differs, and premises_of_the_ethics
+    closes the list, since Q1's verdicts may differ too. Where the data read another record, none matches."""
+    from tools.research import boundary
+    b = data.get('boundary') if isinstance(data, dict) else None
+    carrying = boundary.carriers(records)
+    now = carrying[0] if len(carrying) == 1 else None
+    if isinstance(b, dict) and 'error' in b:
+        return set(), []  # the status shows the error instead
+    if not isinstance(b, dict):
+        return set(), sorted({d for r in carrying for d in _grouped(r['boundary'])} | ({'premises_of_the_ethics'} if carrying else set()))
+    if now is None or now.get('id') != b.get('record'):
+        return set(), sorted({*_grouped(b.get('declared')), *(d for r in carrying for d in _grouped(r['boundary'])), 'premises_of_the_ethics'})
+    read, declared = _grouped(b.get('declared')), _grouped(now['boundary'])
+    keys = lambda f: sorted(map(str, f)) if isinstance(f, dict) else None
+    if b.get('context') != boundary.context(now) or keys(b.get('declared')) != keys(now['boundary']):
+        # the record around the field, or the field's own keys, changed: every verdict of the field may differ, while
+        # a row the field names in neither version keeps the rule's, which reads only its statement and F5's items
+        named = {*read, *declared}
+        return ({d for d in rows_of(b) if d not in named},
+                ['the field', *sorted(named), 'premises_of_the_ethics'])
+    differ = {d for d in {*read, *declared} if read.get(d) != declared.get(d)}
+    premises = lambda f: f.get('premises_of_the_ethics') if isinstance(f, dict) else None
+    return ({d for d in rows_of(b) if d not in differ},
+            sorted(differ) + (['premises_of_the_ethics'] if premises(b.get('declared')) != premises(now['boundary']) else []))
+
+
+def boundary_status(records, data):
+    """The status's four lists for the boundary field (BOUNDARY-FIELD.md §3.6), and its error where two records carry it."""
+    b = data.get('boundary') if isinstance(data.get('boundary'), dict) else {}
+    if 'error' in b:
+        return {'boundary_error': f'{b["error"]}: ' + ', '.join(map(str, b.get('records', []))), 'boundary_unverified': [],
+                'boundary_premises_unverified': [], 'boundary_unplaced': [], 'boundary_not_matched': []}
+    unverified = [(f'{x["declaration"]} ({x.get("standing")})' if isinstance(x.get('declaration'), str) else f'standing {x.get("item")}')
+                  + ': ' + '; '.join(x.get('failed', [])) for x in b.get('unverified', [])]
+    return {'boundary_unverified': unverified or ['the field: ' + m for m in b.get('field_failures', [])],
+            'boundary_premises_unverified': [(p['role'] if isinstance(p.get('role'), str) else f'premise {p.get("item")}')
+                                             + f': {p.get("premise")} (' + '; '.join(p.get('failed', [])) + ')'
+                                             for p in b.get('premises_of_the_ethics', []) if p.get('result') == 'unverified'],
+            'boundary_unplaced': sorted(d for d, x in rows_of(b).items() if x.get('label') == 'unplaced'),
+            'boundary_not_matched': boundary_matching(records, data)[1]}
+
+
 def master_laws_status(records):
     """How far data/master-laws.json still matches: laws whose declarations changed or that it has not read, whether
     the core sources it was computed on are still the latest receipt's, and whether the measure, its coverage, the
@@ -680,11 +873,13 @@ def master_laws_status(records):
     receipt = json.loads((ROOT / CORE_RECEIPT).read_text()) if (ROOT / CORE_RECEIPT).is_file() else {}
     same = receipt.get('status') == 'passed' and data.get('core_sources_sha256') == hashlib.sha256(json.dumps(receipt.get('source_sha256', {}), sort_keys=True).encode()).hexdigest()
     changed = sorted(p for p, h in data.get('inputs_sha256', {}).items() if not (ROOT / p).is_file() or digest(ROOT / p) != h)
+    edge = boundary_status(records, data)
     return {'measured_against': data.get('core_receipt'), 'latest_core_receipt': receipt.get('utc'),
             'core_sources_current': same, 'inputs_changed': changed, 'from_dump': data.get('from_dump', False),
-            'current': same and not changed and not unmatched and not data.get('from_dump', False),
+            'current': same and not changed and not unmatched and not data.get('from_dump', False)
+            and not edge['boundary_not_matched'] and 'boundary_error' not in edge,
             'laws_not_matched': len(unmatched), 'first_not_matched': unmatched[:10],
-            'statements_at_model_unverified': unverified,
+            'statements_at_model_unverified': unverified, **edge,
             'refresh': 'python3 -B tools/research/master_laws.py, then make research-render'}
 
 
@@ -715,6 +910,7 @@ def validate(records):
     errors += validate_standard_boundaries(settings)
     errors += law_family_errors(records)
     errors += statements_at_model_across(records)
+    errors += boundary_across(records)
     for r in records:
         ident = r.get('id', '<missing>')
         def fail(message):
@@ -748,7 +944,7 @@ def validate(records):
         else:
             if 'statement' in r and not pair(r['statement']):
                 fail('statement, when present, requires nonempty English or Chinese')
-            later = [key for key in V2_LISTS if key in r]
+            later = [key for key in (*V2_LISTS, 'boundary') if key in r]
             if later:
                 fail('schema-2 fields need schema_version 2: ' + ', '.join(later))
         for finding in style.lint(r):
@@ -997,9 +1193,13 @@ def render_record_v2(r):
             names = ', '.join('`' + d + '`' for d in law.get('declarations', []))
             lines += [f'{i}. ' + en(law) + (f' ({names})' if names else '')]
             note = master_law_note(r, i, law)
-            for line in ([note] if note else []) + at_model_notes(r, i, law, result_link, base):
+            standings = r.get('_standings', {})
+            edge = [standing_line(d, standings['rows'][d], standings['record'], result_link, base)
+                    for d in dict.fromkeys(law.get('declarations', [])) if d in standings.get('rows', {})]
+            for line in ([note] if note else []) + at_model_notes(r, i, law, result_link, base) + edge:
                 lines += [' ' * len(f'{i}. ') + '- ' + line]  # a child of item i: as wide as its marker
         lines += ['']
+    lines += boundary_section(r, base)
     lines += [heading('##', 'Conditions', 'Conditions / 条件'), '']
     lines += ['- ' + en(x) for x in r['hypotheses']]
     if r.get('not_required'):
@@ -1108,6 +1308,39 @@ def record_path(record):
     return ROOT / record.get('_record_path', str((RECORDS / (record['id'] + '.json')).relative_to(ROOT)))
 
 
+def attach_standings(records, measured, matched_at_model):
+    """The boundary field on the pages: a central declaration's standing line shows under the laws naming it while its
+    entry, or its absence, is what the data read; a line whose label, or the rule's label beside a reading, U4's rule
+    draws from F5's items, while each F5 law it cites is matched too. The record carrying the field gets the data's report for its section, or, where the data read another
+    version of the field or none, the declarations not matched."""
+    from tools.research import boundary
+    b = measured.get('boundary')
+    if isinstance(b, dict) and 'error' in b:
+        return  # two records carry the field: the check refuses it and nothing renders
+    shown, not_matched = boundary_matching(records, measured)
+    if not isinstance(b, dict) or not isinstance(b.get('rows'), dict):
+        for r in boundary.carriers(records):
+            r['_boundary'] = {'not_matched': not_matched}
+        return
+    def cites(row):
+        return row['placed'] == 'checked entry' or not {row['label'], row.get('rule')} & {'at a represented model', 'own carrier'} \
+            or all(f'{x["record"]}:{x["law"]}' in matched_at_model for x in row['at_model'])
+    rows_b = rows_of(b)
+    for r in records:
+        rows = {d: rows_b[d] for d in sorted(law_names(r) & shown) if d in rows_b and cites(rows_b[d])}
+        if rows:
+            r['_standings'] = {'record': b['record'], 'rows': rows}
+        if 'boundary' in r:
+            r['_boundary'] = {**b, 'not_matched': not_matched} if r.get('id') == b.get('record') else {'not_matched': not_matched}
+
+
+def law_names(r):
+    """The declarations a record's laws name."""
+    laws = r.get('laws') if isinstance(r.get('laws'), list) else []
+    return {d for law in laws if isinstance(law, dict) and isinstance(law.get('declarations'), list)
+            for d in law['declarations'] if isinstance(d, str)}
+
+
 def load_records():
     config = json.loads((ROOT / '_process/research-config.json').read_text())
     records, errors = [], []
@@ -1151,6 +1384,7 @@ def load_records():
     for r in records:
         if '_master_laws' in r:
             r['_master_laws']['matched_at_model'] = sorted(matched)  # a list: records are dumped as JSON elsewhere
+    attach_standings(records, measured, matched)
     return sorted(records, key=lambda r: r['id']), errors
 
 
@@ -1158,9 +1392,26 @@ def affected_ids(records, changed):
     shared = standard_boundaries_path() in changed  # its text renders on every citing page
     families = LAW_FAMILIES in changed  # its text renders on every member's page
     measured = MASTER_LAWS in changed  # it renders under the laws of every record it reads
+    # A change to the boundary record changes the standing lines under every law naming a central declaration.
+    from tools.research import boundary
+    data = master_laws()
+    b = data.get('boundary') if isinstance(data.get('boundary'), dict) else {}
+    holders = {b.get('record')} | {r['id'] for r in boundary.carriers(records)}
+    paths = {str(record_path(r).relative_to(ROOT)) for r in records if r['id'] in holders}
+    if isinstance(b.get('record'), str):
+        paths.add(str((RECORDS / (b['record'] + '.json')).relative_to(ROOT)))  # the data's record, though it is gone
+    edge = set()
+    if paths & changed:
+        edge = {c['declaration'] for entries in (data.get('records') or {}).values() for e in entries for c in e.get('central', [])}
+        edge |= set(rows_of(b))
+    # A change to an F5 carrier shows or hides the lines that cite its laws.
+    touched = {r['id'] for r in records if str(record_path(r).relative_to(ROOT)) in changed}
+    edge |= {d for d, x in rows_of(b).items() if isinstance(x.get('at_model'), list)
+             and any(isinstance(i, dict) and i.get('record') in touched for i in x['at_model'])}
     selected = {r['id'] for r in records if str(record_path(r).relative_to(ROOT)) in changed or any(x['path'] in changed for x in r['references'])
                 or any(v.get('path') in changed for v in r.get('text_versions', []) if isinstance(v, dict))
-                or (shared and r.get('standard_boundaries')) or (families and r.get('_law_family')) or (measured and r.get('laws'))}
+                or (shared and r.get('standard_boundaries')) or (families and r.get('_law_family'))
+                or (measured and (r.get('laws') or r['id'] in holders)) or (edge and any(d in edge for d in law_names(r)))}
     # A changed record's producers list it under "Used by" on their pages.
     selected |= {e['id'] for r in records if r['id'] in selected for e in r['dependencies']}
     while True:

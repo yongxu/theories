@@ -83,7 +83,7 @@ Canonical source: [HeldForReading.lean](../../../../experiments/integrated-corre
 <a id="next--下一步"></a>
 ## Next
 
-A principal's valuation as state the helper's acts can move, its carrier to be designed first (RF-M's next case); the reading formation's own state and learning; noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.
+The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -99,6 +99,9 @@ In counts: the worth of a reading telling the candidate is the perfect-informati
 - **formal-reuse**: [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md). ReadingLoop.Loop and Loop.rests_of_unrefuted: the reading loop of the witness and its law of resting on candidates its course never refutes.
 - **formal-reuse**: [when-to-inquire-and-when-to-respond](when-to-inquire-and-when-to-respond.md). Viability.ChoiceOver: choice over the cells of a map, as over the readings there; cell_policy_iff is the weighted form of its condition of one move good at every configuration giving a reading.
 - related, not a proved adapter: [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md). Informing within the law: a held act answered by the reading of the true sign, which refutes the candidates predicting otherwise; the reading formation's own state is not represented.
+- related, not a proved adapter: [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md). The reading formation's own listing and valuation as state: holding for its answer through a map falls short by the least shortfall and a residual; a finer map never raises the first, revaluing moves the second alone, in one blanketed law.
+
+**Used by:** [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -127,6 +130,7 @@ Aliases: `what holding an act for a reading is worth`, `为读而持其行之值
 ### History
 
 - 30 October 2026: added (RF round 2), what holding an act for a reading is worth: the worth of a reading in counts with its gap identity, holding for a reading that stops or releases, any rule of stopping and its shortfall, the threshold of what holding forgoes, a reading that tells only a cell, the conditional join with the shown reach, and a witness on the reading loop whose choice is the worth law's; the design reviewed by a cross-model reader before the Lean, the Lean by the same reader and through three lenses and then re-checked, the texts cold-read, what was taken, deferred or handed over listed in the review evidence; study section 466.
+- 31 October 2026, board item RF, RF-M.3 (study section 473): related to a-reading-informed-and-revalued, where the reading formation's listing and valuation are state; the next step keeps its learning beyond filtering by what it is shown and the holding formation's planning; no statement or declaration changed.
 
 </details>
 

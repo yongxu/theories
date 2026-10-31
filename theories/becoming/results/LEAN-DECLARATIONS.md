@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 347 | 16,830 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 348 | 16,968 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -23,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
 | [Generative core and relational structure](lean-declarations/core.md) | 143 | 2,186 |
-| [Other formal studies](lean-declarations/other.md) | 29 | 873 |
+| [Other formal studies](lean-declarations/other.md) | 30 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
 ## Find by name
@@ -543,6 +543,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ListedWebs.lean](lean-declarations/becoming-core.md#module-aea2194ee2b8) | Becoming pure core |
 | [Listing.lean](lean-declarations/becoming-core.md#module-2e6ce31fc904) | Becoming pure core |
 | [ListingRefutations.lean](lean-declarations/becoming-core.md#module-486a3b3f0c33) | Becoming pure core |
+| [ListingValuation.lean](lean-declarations/becoming-core.md#module-2ba33fe366ae) | Becoming pure core |
 | [LivingAllocation.lean](lean-declarations/ethics.md#module-ffc7d48f4c9c) | Normative grounding and generative direction |
 | [LivingExpansion.lean](lean-declarations/ethics.md#module-707a08ce1476) | Normative grounding and generative direction |
 | [LivingOrganization.lean](lean-declarations/ethics.md#module-a48e0f306c41) | Normative grounding and generative direction |
@@ -990,3 +991,4 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Witnesses.lean](lean-declarations/becoming-core.md#module-a2a40d448b25) | Becoming pure core |
 | [World.lean](lean-declarations/becoming-core.md#module-7d8b73829c63) | Becoming pure core |
 | [WorldRepresentation.lean](lean-declarations/becoming-core.md#module-9ee3e643d082) | Becoming pure core |
+| [boundary_check.lean](lean-declarations/other.md#module-9c753b6e9d67) | Other formal studies |

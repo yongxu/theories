@@ -1,6 +1,6 @@
 # Reading budgets: each layer sized for a person
 
-*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `1ec20513d`, and on branch `aj4-human` for the alignment dossier's edition. About ten minutes to read.*
+*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `1ec20513d`; the worked example's on main at `618246b4b`, after RF-M.3 landed, and on branch `aj4-human` merged with it. About ten minutes to read.*
 
 ## Why
 
@@ -65,9 +65,9 @@ Until the layers are within budget, the template states their measured times.
 
 | | On main | New edition |
 |---|---|---|
-| Whole | 13,467 words, 104 to 135 minutes | 13,369 words, 103 to 134 ("about two hours") |
-| Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,100 words with the title (8.5 to 11 minutes), then the tests, 358 words (2.8 to 3.6) |
-| An hour's path | none | Those ten minutes, the tests and seven items, 5,331 words, 41 to 53.3 minutes |
+| Whole | 13,777 words, 106.0 to 137.8 minutes | 13,709 words, 105.5 to 137.1 ("about two hours") |
+| Before the first item | 3,390 words, 26.1 to 33.9 minutes | The dossier in ten minutes, 1,100 words with the title (8.5 to 11 minutes), then the tests, 358 words (2.8 to 3.6) |
+| An hour's path | none | Those ten minutes, the tests and seven items, 5,357 words, 41.2 to 53.6 minutes |
 | A separate "one page" | 5,503 words, called ten minutes | Retired to the kit's history |
 
 Provenance moved whole to [the kit's README](README.md#the-edition-of-31-october-2026-sized-for-a-person), and the box on reading and revision became item A-20. A machine checked every quotation, link and Lean name: no faults. An independent reader then found 42 problems, 16 of them errors, mostly hypotheses the cut had dropped, all taken ([the kit](README.md#the-fourth-pass-taken)). Hypotheses are never cut, so the tests and the questions for the whole left the front, which stays within ten minutes.

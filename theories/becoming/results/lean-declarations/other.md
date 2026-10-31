@@ -1933,3 +1933,55 @@ Definitions and types:
 
 </details>
 
+<a id="module-9c753b6e9d67"></a>
+
+<details>
+<summary>boundary_check.lean — 34 explicit declarations</summary>
+
+[Source](../../../../tools/research/boundary_check.lean) · [Study](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md)
+
+`tools/research/boundary_check.lean`
+
+Imports: `Lean`
+
+No explicit theorem/lemma scanned; this may be an import, audit or definition module.
+
+Definitions and types:
+
+- `structure` [BoundaryCheck.Hyp](../../../../tools/research/boundary_check.lean#L97) (L97)
+- `structure` [BoundaryCheck.Entry](../../../../tools/research/boundary_check.lean#L102) (L102)
+- `def` [BoundaryCheck.moduleOf](../../../../tools/research/boundary_check.lean#L111) (L111)
+- `def` [BoundaryCheck.grammarModule](../../../../tools/research/boundary_check.lean#L118) (L118)
+- `def` [BoundaryCheck.rootModule](../../../../tools/research/boundary_check.lean#L120) (L120)
+- `def` [BoundaryCheck.packaged](../../../../tools/research/boundary_check.lean#L125) (L125)
+- `def` [BoundaryCheck.namesOf](../../../../tools/research/boundary_check.lean#L131) (L131)
+- `def` [BoundaryCheck.termNames](../../../../tools/research/boundary_check.lean#L139) (L139)
+- `def` [BoundaryCheck.valueNames](../../../../tools/research/boundary_check.lean#L163) (L163)
+- `def` [BoundaryCheck.digits](../../../../tools/research/boundary_check.lean#L169) (L169)
+- `def` [BoundaryCheck.numerals](../../../../tools/research/boundary_check.lean#L172) (L172)
+- `def` [BoundaryCheck.kindOf](../../../../tools/research/boundary_check.lean#L179) (L179)
+- `def` [BoundaryCheck.attaches](../../../../tools/research/boundary_check.lean#L191) (L191)
+- `def` [BoundaryCheck.generated](../../../../tools/research/boundary_check.lean#L208) (L208)
+- `def` [BoundaryCheck.abstracted](../../../../tools/research/boundary_check.lean#L217) (L217)
+- `def` [BoundaryCheck.prefixes](../../../../tools/research/boundary_check.lean#L223) (L223)
+- `def` [BoundaryCheck.closureOf](../../../../tools/research/boundary_check.lean#L228) (L228)
+- `def` [BoundaryCheck.closure](../../../../tools/research/boundary_check.lean#L242) (L242)
+- `def` [BoundaryCheck.admitted](../../../../tools/research/boundary_check.lean#L245) (L245)
+- `def` [BoundaryCheck.amounts](../../../../tools/research/boundary_check.lean#L253) (L253)
+- `def` [BoundaryCheck.isTheorem](../../../../tools/research/boundary_check.lean#L255) (L255)
+- `def` [BoundaryCheck.isDefinition](../../../../tools/research/boundary_check.lean#L260) (L260)
+- `def` [BoundaryCheck.closedValue](../../../../tools/research/boundary_check.lean#L267) (L267)
+- `def` [BoundaryCheck.grammarTerm](../../../../tools/research/boundary_check.lean#L274) (L274)
+- `def` [BoundaryCheck.isProof](../../../../tools/research/boundary_check.lean#L279) (L279)
+- `def` [BoundaryCheck.isDefOrOpaque](../../../../tools/research/boundary_check.lean#L287) (L287)
+- `def` [BoundaryCheck.theoremsUsed](../../../../tools/research/boundary_check.lean#L299) (L299)
+- `def` [BoundaryCheck.body](../../../../tools/research/boundary_check.lean#L320) (L320)
+- `def` [BoundaryCheck.appliesWith](../../../../tools/research/boundary_check.lean#L326) (L326)
+- `def` [BoundaryCheck.show_](../../../../tools/research/boundary_check.lean#L329) (L329)
+- `def` [BoundaryCheck.isEquivalence](../../../../tools/research/boundary_check.lean#L333) (L333)
+- `def` [BoundaryCheck.checkEntry](../../../../tools/research/boundary_check.lean#L342) (L342)
+- `def` [BoundaryCheck.nameField](../../../../tools/research/boundary_check.lean#L493) (L493)
+- `def` [BoundaryCheck.parseEntry](../../../../tools/research/boundary_check.lean#L498) (L498)
+
+</details>
+

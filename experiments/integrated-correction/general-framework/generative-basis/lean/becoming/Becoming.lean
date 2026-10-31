@@ -343,6 +343,7 @@ import Becoming.Narrowing
 import Becoming.NarrowingRuns
 import Becoming.ReadingLoop
 import Becoming.HeldForReading
+import Becoming.ListingValuation
 import Becoming.SecuredContent
 import Becoming.ProfileReach
 import Becoming.RenewalBound
@@ -2885,7 +2886,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   formation holding exactly where holding for the reading gains over both moves on its own model
   (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
   the start, rests at once and never senses the stop (`HeldForReading.SignLoop.rests_unread`,
-  `HeldForReading.SignLoop.never_senses_stop`). A leaf (board item RF).
+  `HeldForReading.SignLoop.never_senses_stop`). Imported by `Becoming.ListingValuation` (board item RF).
+* `Becoming.ListingValuation` (L1): the valuation as state, informing and revaluing, in
+  natural-number counts. A reading formation's answer through a map, by its own model and valuation,
+  stops a cell exactly where the weighted value of going on is below that of switching off
+  (`ListingValuation.answer`); by a reference on the holding formation's model, over cells listed
+  once each and covering, any rule through the map falls short by the least shortfall through it
+  plus a residual (`ListingValuation.shortfall_split`), nothing exactly where no listed cell is
+  decided against its strict weighted preference (`ListingValuation.residual_zero_iff`); a rule with
+  no residual through a finer map falls short by at most any rule through a coarser one
+  (`ListingValuation.informed_le`), and over every refinement factoring on both formations'
+  listings, holding for the answer never stands lower through the finer map exactly where splits
+  keep the worth (`ListingValuation.refining_never_lowers_iff`); revaluing changes only the residual
+  (`ListingValuation.revalued_split`); on one blanketed law carrying the reading formation's listing
+  and valuation (`ListingValuation.joint`), state and answer change only through what is sensed
+  (`ListingValuation.through_sensed`), and, from different starts, a route shown and a route
+  presented can answer alike and end in one state while the valuation changed on one alone
+  (`ListingValuation.TwoWorlds.not_lumped`). A leaf (board item RF).
 * `Becoming.SecuredContent` (L2): secured new content with open future form: one response
   can secure new living content in each admitted continuation without one fixed content in all;
   a finite signed integral certifies it where each positive occurrence means such content; with
