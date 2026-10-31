@@ -16,7 +16,7 @@ import json
 import re
 import sys
 import textwrap
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path.cwd()
@@ -68,7 +68,7 @@ def amend_record(n):
     for x in refs:  # the statement's chapter changes below; its hash is refreshed after the home paragraph
         if x['path'] == 'theories/becoming/chapters/08-METHOD.md':
             x['sha256'] = None
-    day = datetime.now(timezone.utc)
+    day = datetime.now().astimezone()  # the local date, as the note, the review and DESIGN-BOUNDARY §8 give it
     line = {'en': f'{day.day} {day:%B %Y}, board item U4b (study section {n}): SelectionLevels.rises_exact_iff_levels '
                   'moved from amounts to counting. Its statement says nothing of the dynamics and holds for every '
                   'carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, '
@@ -126,7 +126,7 @@ Board item U4b, the decision the [deep unification review](development/du-deep-u
 ```text
 Result(s): one-root-to-its-edge (row 13's standing; the bases of rows 7, 8 and 14; the counts in its home section, 08 §7).
 Delta:
-{wrap("The line, by what a statement says of the dynamics: a row is counting when it says nothing of the dynamics beyond the arbitrary predicate of a counting law and holds for every carrier, listing, map and parameter it quantifies over; hypotheses equating or ordering values of those maps are counting too. A row using the dynamics, as a hypothesis (the gate, K3's premises, and descent in the flow), in its conclusion (carried_iff_rising) or through a run's states (the RegimeMargin rows), stands above counting; amounts is its distance when it also compares or constrains numbers the grammar has no terms for, an arbitrary trait's values included.")}
+{wrap("The line, by what a statement says of the dynamics: a row is counting when it says nothing of the dynamics beyond the arbitrary predicate of a counting law and holds for every carrier, listing, map and parameter it quantifies over; hypotheses equating or ordering values of those maps are counting too. A row using the dynamics, as a hypothesis (for example the gate, K3's premises, and descent in the flow), in its conclusion (for example carried_iff_rising) or through a run's states (a law's run in the RegimeMargin rows, an exchange law's levels in responses_le_missBound), stands above counting; amounts is its distance when it also compares or constrains numbers the grammar has no terms for, an arbitrary trait's values included.")}
 {wrap("counting_test.py walks each counting and amounts row's statement (never a proof) on a core run's constants, against a stated list of the dynamics' carriers (lever 2's model constants among them) and their natural-number fields; a name test by namespace, it supports the readings and gives the same partition on all 25 rows, three rows decided by a reading it names.")}
 {wrap("SelectionLevels.rises_exact_iff_levels (row 13) moves from amounts to counting: its hypotheses are listed, equal and exact, and it reaches nothing of the dynamics. Rows 7, 8 and 14 stay at amounts, using the gate and descent as hypotheses, their bases rewritten: they had said trait comparisons constrain amounts, the reason the line rejects as a distance from counting; of their hypotheses on the trait, unlowered, exact and moved are counting, while top and inactive tie the trait to the dynamics. CensusWebs.keep_pace stays counting, the dynamics only as its predicate; the two RegimeMargin rows stay at amounts by reading, a law's run reaching 0 exactly where its start is below H + y.")}
 {wrap("Counts: 7 counting and 18 at amounts (were 6 and 19); 10 derived, 1 under a stated hypothesis, 100 at a distance, none unplaced. Of the 18 evolution rows, 1 is under a stated hypothesis, 4 are counting, 1 at a represented model, 5 with balance in their statements and 7 at amounts.")}
@@ -134,8 +134,8 @@ Supplied premises / correspondence: none; DYNAMICS and AMOUNT are the theory's v
        the script, not measured. The first boundary review's finding B1 (no hypothesis of a root form constrains an
        amount) stands for standing 2; it no longer draws the distance from counting.
 Evidence: the test's output on main's core receipt `20261031T152525.956467Z`, in the note; master_laws.py reads the
-       amended record, nothing unverified or unplaced (U4's check gates the landing); an independent review and its
-       re-check, every finding taken. No Lean changes and no core run.
+       amended record, nothing unverified or unplaced (U4's check gates the landing); an independent review, its
+       re-check and a third look, every finding taken. No Lean changes and no core run.
 Standing: a reading made exact, with a computed test where the vocabulary allows one.
 Boundary:
   - That counting rows are derived: they stay below the grammar.
