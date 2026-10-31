@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "type-formation-gives-no-dynamics",
   "title": {
-    "en": "Type formation keeps the seed's boundary and gives no dynamics",
-    "zh": "类型构造保持种子之界而不给出动力学"
+    "en": "Type formation keeps the seed's size bounds and gives no dynamics",
+    "zh": "类型构造保持种子之大小界限而不给出动力学"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -197,6 +197,10 @@
     {
       "en": "27 October 2026: added (DF2), the binary-product tower keeping the seed's emptiness, inhabitation and having at most one element, and reachability as the least reflexive-transitive relation containing the steps; from DEFECTS-FOUND (triage row 285); study section 426.",
       "zh": "2026年10月27日：新增（DF2），二元积之塔保持种子之空、非空与至多一元，可达为含诸步的最小自反传递关系；出自 DEFECTS-FOUND（分诊第 285 行）；研究第 426 节。"
+    },
+    {
+      "en": "31 October 2026: the title worded (BD): \"the seed's boundary\" meant the seed's size bounds, its being empty, inhabited or of at most one element, and the glossary gives \"boundary\" one sense, the delimitation of a region; it now reads \"the seed's size bounds\". The claim, its laws and its declarations are unchanged.",
+      "zh": "2026年10月31日：标题措辞（BD）：“种子之界”原指种子之大小界限，即其空、非空或至多一元；词汇表给“边界”一义，即区域之划定；今作“种子之大小界限”。所述之义、诸律与所引声明不变。"
     }
   ]
 }
