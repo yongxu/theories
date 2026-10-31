@@ -1,6 +1,6 @@
 # HE2's item 1: «两端分则中有标» on transitivity, and Sampling's search read from it
 
-*AI-written kit, 31 October 2026, by OU3f's owner, for whoever lands HE2's rebuild (the board's HE2 row, item 1; WHAT-REMAINS, "After OU3f", item 2). Checked outside the package; nothing here is package Lean yet. Base: main `2f4a5bd96`; the five modules it reads are unchanged on main through `18b8b014c`. Revised the same day for item 5's names: item 5 moves MapRegions' three reach laws into GrammarMap whole and adds no name, so edit 3 reads `Map.step_reaches_of_le`. Revised again the same day for HE2's review (four lenses, then a skeptic), adding three things: the texts part, PatternPassing's gloss of the law, and a correction. The texts part covers 01 §3, the home section of the record whose law 10 HE2's records step widens, and LOGIC.md's L-04, at its owner's word. The correction: this kit said no chapter states the law's hypothesis, but 01 §3 does. Revised a third time for the word of OU's owner, who also owns the review packet: L-04 is taken at HE2's landing, with three further steps rehearsed, and 01 §3 says "a transitive relation", as law 10 does as approved.*
+*AI-written kit, 31 October 2026, by OU3f's owner, for whoever lands HE2's rebuild (the board's HE2 row, item 1; WHAT-REMAINS, "After OU3f", item 2). Checked outside the package; nothing here is package Lean yet. Base: main `2f4a5bd96`; the five modules it reads are unchanged on main through `18b8b014c`. Revised the same day for item 5's names: item 5 moves MapRegions' three reach laws into GrammarMap whole and adds no name, so edit 3 reads `Map.step_reaches_of_le`. Revised again the same day for HE2's review (four lenses, then a skeptic), adding three things: the texts part, PatternPassing's gloss of the law, and a correction. The texts part covers 01 §3, the home section of the record whose law 10 HE2's records step widens, and LOGIC.md's L-04, at its owner's word. The correction: this kit said no chapter states the law's hypothesis, but 01 §3 does. Revised a third time for the word of OU's owner, who also owns the review packet: L-04 is taken at HE2's landing, with three further steps rehearsed, and 01 §3 says "a transitive relation", as law 10 does as approved. Revised a fourth time at the lander's request: the Lean docstrings say "transitive" too, with statements and proofs byte-identical.*
 
 «两端分则中有标» was stated with `K` a class, though its proof uses only transitivity. Asking only for transitivity admits a relation that is not a class: that a property does not arise from one end of a line to the other. On the successor line, that relation turns Sampling's search for the step where a decided property arises into an application of the law.
 
@@ -8,7 +8,7 @@
 
 1. **Grammar, «两端分则中有标».**
    - **Hypotheses:** `split`, then `trans : ∀ {a b c}, K a b → K b c → K a c`, in place of `hK : «类» K` before `split`. The proof changes in one place, `hK.trans k k'` → `trans k k'`.
-   - **Docstring:** it now says "a transitive relation", and that `K` need only compose, as a class does and as a property's not arising does. It names no module, so it reads true with or without edit 3. "Compose" here is the word OU's owner replaced in the prose (below, "Two words held").
+   - **Docstring:** it now says "a transitive relation", and that `K` need only be transitive, as a class is and as a property's not arising is. It names no module, so it reads true with or without edit 3.
    - **Why `split` now comes first.** With `trans` first, a caller passing a projection such as `(carrierClass_class V).trans` gets `K` solved as a constant function. The projection's points are created inside the binder that the expected type's implicit `∀` opens, so the higher-order pattern takes the constant solution. `split`'s type fixes `K` from its bound variables. The first scratch build failed this way; the reordered law builds.
 2. **PatternPassing.**
    - In `ByPassing.passes_within` and `ByPassing.ends_within`, statements unchanged:
@@ -21,6 +21,7 @@
      - The split is excluded middle on whether the property arises across a step, the one use of the given decidability.
      - The line from `T` to `t` comes from `Map.step_reaches_of_le`, and the places the law returns go back to order by `Map.step_reached_le`, the two reach laws item 5 moves from MapRegions into GrammarMap.
    - **`ceases_within`:** `arises_within` at the property's negation (its failing arises), the given decidability turning `¬¬ p u` into `p u`.
+   - **`arises_within`'s docstring** says so: the property's not arising is transitive, and it does arise from `T` to `t`.
 
 ## The texts
 
@@ -52,6 +53,7 @@ The prose that states the law changes with it. This happens in HE2's texts step,
 - Each edit is found by the text it replaces and must occur as often as stated; nothing is written unless every edit applies, and an edit already applied is reported and left.
 - `--check` writes nothing.
 - Edit 3 reads item 5's two laws, so the script refuses it until GrammarMap has them. `--weakening-only` applies edits 1 and 2 alone.
+- A tree this kit was applied to at `9b64f8ec1` or earlier is brought to the current docstrings. Those tips wrote "compose" in the two docstrings that now say "transitive"; the statements and proofs are the same.
 - The whole change as two diffs, each applying to main's files and giving the rehearsed ones:
   - [kit/he2-item1.diff](kit/he2-item1.diff): the three modules;
   - [kit/he2-item1-texts.diff](kit/he2-item1-texts.diff): 01 §3 and L-04.
@@ -70,7 +72,7 @@ Rerun with [checks/run_checks.sh](checks/run_checks.sh), from the worktree root,
 | Genuine ([checks/HE2Item1Reach.lean.txt](checks/HE2Item1Reach.lean.txt); [main](checks/reach-main.txt), [tree](checks/reach-new.txt)) | On main, both proofs search by their own recursion (`Nat.le.brecOn`) and use no grammar law. In the tree, neither recurses: `arises_within` uses «两端分则中有标», `Map.step_reaches_of_le` and `Map.step_reached_le`; `ceases_within` uses `arises_within`. The law is applied once; nothing is applied and undone. Sampling's four coarse-step theorems (`Web.sample_arises`, `sample_ceases`, `sample_unceasing`, `sample_ceasing`) reach «两端分则中有标» in the tree, and none does on main. |
 | The weakening alone ([checks/scratch-weakening.log](checks/scratch-weakening.log)) | Edits 1 and 2 with nothing of item 5: PatternPassing builds over the weakened law, with Sampling's earlier proofs untouched. Every axiom report empty. |
 | Length ([checks/measure.py](checks/measure.py), [output](checks/measure.out)) | See the table below. |
-| The gloss | PatternPassing's module docstring after the edit, parsed by Lean on its own: no error, 50 lines as before, no comment opened inside it. The rows above ran before the gloss was added. The gloss changes no declaration, and HE2's rehearsal builds it. |
+| The docstrings | The rows above ran before the gloss and the two docstrings' "transitive" were written, so these were checked on their own. Each edited docstring was parsed by Lean in a file of its own with no error: PatternPassing's module docstring (50 lines as before, no comment opened inside it), and Grammar's at the law and Sampling's at `arises_within`, each on a dummy declaration. Against the kit's output at `9b64f8ec1`, only those docstrings' lines differ, with no line added or removed, so every statement and proof is byte for byte the same and on the same line. The measure of the proofs is unchanged. HE2's rehearsal builds them. |
 | The texts | Applied to copies of main's 01-ROOT.md and LOGIC.md at `18b8b014c`: each edit applies once, and a second run reports each as applied and writes nothing. L-04's block is the source's statement up to `:=`, on main before the edits and in the tree after them. |
 | The diffs | Each applies to main's files and gives the rehearsed files byte for byte. |
 
@@ -137,11 +139,11 @@ So "no longer" holds for the pair in lines and characters, but not in symbols (9
     - LOGIC.md's question 11 and its table of names;
     - the generated indexes (lean-index.json, master-laws.json, becoming-core.md);
     - the board's HE2 row and WHAT-REMAINS, which describe this item.
-- **Two words held.** Two docstrings this kit writes still use "compose" for transitivity, the word OU's owner replaced in the prose:
-  - Grammar's, at the law. Its title already says "a transitive relation", but its last sentence reads "`K` need only compose, as a class does (by its `trans`) and as a property's not arising from one end to the other does". The proposal is "`K` need only be transitive, as a class is (by its `trans`) and as a property's not arising from one end to the other is".
-  - Sampling's, at `arises_within`: "the property's not arising composes". The proposal is "the property's not arising is transitive".
+- **Two words, no longer held.** Through `9b64f8ec1`, two docstrings this kit writes used "compose" for transitivity, the word OU's owner replaced in the prose:
+  - Grammar's, at the law: "`K` need only compose, as a class does … does";
+  - Sampling's, at `arises_within`: "the property's not arising composes".
 
-  Changing Grammar.lean's bytes reruns Grammar's whole cone, and HE2's rebuild restarted at `5f0672b31` without the change. So the proposal goes in only if that run restarts for another reason, at the lander's choice. Otherwise it is held for the next near-full rebuild and listed on that rebuild's row, not left to memory. Either way it changes no statement.
+  The first held them, since changing Grammar.lean reruns Grammar's whole cone. Now both say "transitive", at the lander's request. HE2's rehearsal runs again anyway on main with RF-M.3, a near-full run takes about five minutes there, and so the docstrings agree with law 10 and 01 §3 at the head. No statement or proof changes, and nothing is held for a later rebuild.
 - **The master-laws view** (master_laws.py, rerun on the receipt as after every core landing).
   - Expected: laws-at-coarser-steps law 8 moves from "no master law" to the grammar. Its declarations `Web.sample_arises`, `Web.sample_ceases`, `Web.sample_unceasing` and `Web.sample_ceasing` now reach «两端分则中有标» through `arises_within` and `ceases_within` (the genuineness check reads each), and nothing outside Sampling uses those two or the coarse-step theorems.
   - The central measure (COVERAGE) does not move: none of these declarations is central.

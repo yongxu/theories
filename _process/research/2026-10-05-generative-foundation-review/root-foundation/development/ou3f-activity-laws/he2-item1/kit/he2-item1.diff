@@ -1,5 +1,5 @@
 diff --git a/Becoming/Grammar.lean b/Becoming/Grammar.lean
-index 4f9abfdfd..1fa530fb8 100644
+index 4f9abfdfd..9ba57cf7a 100644
 --- a/Becoming/Grammar.lean
 +++ b/Becoming/Grammar.lean
 @@ -662,11 +662,12 @@ section Lines
@@ -15,9 +15,9 @@ index 4f9abfdfd..1fa530fb8 100644
 +/-- **A line whose ends a transitive relation tells apart has a marked step.** Where every step of
 +continuation under `E` either keeps `K` or carries the mark `P`, a line (相续) under `E` from `x` to
 +`y` with `K` failing from `x` to `y` has a step carrying the mark, given with its place on the line:
-+reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only
-+compose, as a class does (by its `trans`) and as a property's not arising from one end to the other
-+does. -/
++reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only be
++transitive, as a class is (by its `trans`) and as a property's not arising from one end to the other
++is. -/
 +theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
 +    (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
      ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y) := by
@@ -59,7 +59,7 @@ index a91e0ed61..f11de29a7 100644
          | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, _⟩ =>
            have reached : V.activityClass (T + m, b) u := match from_ with
 diff --git a/Becoming/Sampling.lean b/Becoming/Sampling.lean
-index e0e024d5d..8fc978150 100644
+index e0e024d5d..3326a1bd6 100644
 --- a/Becoming/Sampling.lean
 +++ b/Becoming/Sampling.lean
 @@ -164,22 +164,23 @@ end Web
@@ -67,7 +67,7 @@ index e0e024d5d..8fc978150 100644
  /-- What fails at one step and holds at a later one arose across some step between them,
 -where the property is decided. -/
 +where the property is decided. Along the successor from `T` to `t`, the property's not arising
-+composes, and it does arise from `T` to `t`, so a step where it arises lies on the line
++is transitive, and it does arise from `T` to `t`, so a step where it arises lies on the line
 +(`«两端分则中有标»`), its place read back as order (`Map.step_reached_le`). -/
  theorem arises_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
 -    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1)

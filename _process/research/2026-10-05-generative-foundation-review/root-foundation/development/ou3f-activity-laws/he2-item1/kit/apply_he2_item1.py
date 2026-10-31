@@ -38,9 +38,9 @@ GRAMMAR_NEW = '''\
 /-- **A line whose ends a transitive relation tells apart has a marked step.** Where every step of
 continuation under `E` either keeps `K` or carries the mark `P`, a line (相续) under `E` from `x` to
 `y` with `K` failing from `x` to `y` has a step carrying the mark, given with its place on the line:
-reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only
-compose, as a class does (by its `trans`) and as a property's not arising from one end to the other
-does. -/
+reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only be
+transitive, as a class is (by its `trans`) and as a property's not arising from one end to the other
+is. -/
 theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
     (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
 '''
@@ -85,7 +85,7 @@ theorem ceases_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
 SAMPLING_NEW = '''\
 /-- What fails at one step and holds at a later one arose across some step between them,
 where the property is decided. Along the successor from `T` to `t`, the property's not arising
-composes, and it does arise from `T` to `t`, so a step where it arises lies on the line
+is transitive, and it does arise from `T` to `t`, so a step where it arises lies on the line
 (`«两端分则中有标»`), its place read back as order (`Map.step_reached_le`). -/
 theorem arises_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
     ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1) :=
@@ -105,13 +105,30 @@ theorem ceases_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
   | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, below, Decidable.of_not_not no, yes⟩
 '''
 
-# (module, old, new, how often old occurs before the edit)
+# The two docstrings as this kit wrote them through 9b64f8ec1, saying "compose" for transitivity: a tree that
+# kit was applied to is brought to the current text, the statements and proofs being the same.
+DOC_EARLIER = {
+    'Grammar': ("`K` need only\ncompose, as a class does (by its `trans`) and as a property's not arising from one end to "
+                "the other\ndoes. -/", "`K` need only be\ntransitive, as a class is (by its `trans`) and as a property's not "
+                "arising from one end to the other\nis. -/"),
+    'Sampling': ("not arising\ncomposes, and it does arise", "not arising\nis transitive, and it does arise"),
+}
+
+
+def earlier(module, new):
+    """The text an earlier tip of this kit wrote in place of `new`."""
+    was, now = DOC_EARLIER[module]
+    assert new.count(now) == 1, module
+    return new.replace(now, was)
+
+
+# (module, old, new, how often old occurs before the edit, what an earlier tip of this kit wrote instead of new)
 EDITS = [
-    ('Grammar', GRAMMAR_OLD, GRAMMAR_NEW, 1),
-    ('Grammar', GRAMMAR_STEP_OLD, GRAMMAR_STEP_NEW, 1),
-    ('PatternPassing', PASSING_OLD, PASSING_NEW, 2),
-    ('PatternPassing', GLOSS_OLD, GLOSS_NEW, 1),
-    ('Sampling', SAMPLING_OLD, SAMPLING_NEW, 1),
+    ('Grammar', GRAMMAR_OLD, GRAMMAR_NEW, 1, earlier('Grammar', GRAMMAR_NEW)),
+    ('Grammar', GRAMMAR_STEP_OLD, GRAMMAR_STEP_NEW, 1, None),
+    ('PatternPassing', PASSING_OLD, PASSING_NEW, 2, None),
+    ('PatternPassing', GLOSS_OLD, GLOSS_NEW, 1, None),
+    ('Sampling', SAMPLING_OLD, SAMPLING_NEW, 1, earlier('Sampling', SAMPLING_NEW)),
 ]
 # Item 5's laws that Sampling's edit reads, as GrammarMap states them once item 5 has moved them from MapRegions.
 ITEM5 = (r'^theorem step_reached_le \{L : «际» Nat\} : ∀ \{x y : Nat\}, «所及» step L x y → x ≤ y',
@@ -182,13 +199,18 @@ def main():
     texts = {m: (becoming / f'{m}.lean').read_text(encoding='utf-8') for m in ('Grammar', 'PatternPassing', 'Sampling')}
     grammar_map = (becoming / 'GrammarMap.lean').read_text(encoding='utf-8')
     failed, changed = [], set()
-    for module, old, new, times in EDITS:
+    for module, old, new, times, was in EDITS:
         if weakening_only and module == 'Sampling':
             print('Sampling: left as it is (--weakening-only)')
             continue
         text = texts[module]
         first = old.splitlines()[0][:70]
-        if text.count(old) == times:
+        if was is not None and text.count(old) == 0 and text.count(new) == 0 and text.count(was) == times:
+            texts[module] = text.replace(was, new)
+            changed.add(module)
+            print(f'{module}: {"would bring" if check else "brought"} this kit\'s earlier docstring to the current one: '
+                  f'{first!r}')
+        elif text.count(old) == times:
             if module == 'Sampling' and not all(re.search(p, grammar_map, re.M) for p in ITEM5):
                 failed.append(f'{module}: GrammarMap lacks item 5\'s Map.step_reaches_of_le or Map.step_reached_le; '
                               'apply item 5 first')
