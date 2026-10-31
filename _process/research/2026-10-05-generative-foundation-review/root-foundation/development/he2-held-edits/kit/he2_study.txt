@@ -6,8 +6,8 @@ HE (§455) showed that edits held for a rebuild land best together, on purpose, 
 Result(s): records master-laws-on-the-grammar, continuation-relative-to-a-class,
        generation-and-degeneration-at-two-grains, laws-at-coarser-steps, a-regularity-kept-and-changed,
        candidate-theorems-of-the-corpus, reach-past-ones-own-end and what-a-line-holds-and-a-regularity-takes-in
-       changed, one HE2 history note each; {REPOINTED} records pinning the changed sources re-pointed, these eight
-       among them, and nothing the other {REPOINTED_OTHER} say changed; no new record.
+       changed, one HE2 history note each; {REPOINTED} records pinning the changed sources re-pointed, {REPOINTED_HE2}
+       of these eight among them, and nothing the other {REPOINTED_OTHER} say changed; no new record.
 Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则中有标» asks only that the relation it keeps
        be transitive (split, then trans, in place of a class: transitivity is all its proof uses). PatternPassing's two uses
        pass the carrier class's trans. Sampling's arises_within reads the law along the successor, the relation being a
@@ -23,7 +23,10 @@ Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则�
        (5) item 5 (OU's owner, ou3b-master-laws-on-the-grammar/he2-item5): the successor's three reach laws
        (Map.step_reached_le, Map.step_reaches, Map.step_reaches_of_le) move whole from MapRegions into GrammarMap, and
        WideningOnTheMap's Steps.reached_le and HeldPossible's local pair become one application each. GrammarMap's
-       sentence that how the strong forms stand to the regions "is not stated" points to the leaves that state it.
+       sentence on the strong forms now says that how «全生成» and «全守» stand to «生成» and «守» is stated in modules
+       that import it, and that how «有终» stands to «退化» is not stated. The package's catalogues name the reach laws
+       in GrammarMap, and MapRegions' entry in the root module, which an earlier landing had put inside GrammarMap's,
+       follows it.
        (6) item 6 (the lander, RV21 item 13's owner; rv21-one-sense, NOTE §8): four laws on a class's core and
        going alike join GrammarLaws («定后则类之核同行», «遍后则其内同行之类含于核»,
        «定后遍后则核为其内最粗同行之类» and the witness «后不定则核可不同行»).

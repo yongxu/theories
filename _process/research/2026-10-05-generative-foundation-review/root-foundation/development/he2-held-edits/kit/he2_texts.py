@@ -5,7 +5,7 @@ usage (from the checkout root of the landing worktree, after the checker, the re
   python3 -B <kit>/he2_texts.py RECEIPT N REPOINT_LOG SIGNATURES_LOG CONNECTIVITY_LOG [--check]
 REPOINT_LOG is repoint.py's JSON output; SIGNATURES_LOG is he2_signatures.py's output on RECEIPT, saved before the
 landing commit, which must end in its OK line; CONNECTIVITY_LOG is THEOREM-CONNECTIVITY.py --check's output after the
-register parts, which must report nothing. The study section's counts are read from these, from the checker's summary
+register parts, its report with nothing wrong. The study section's counts are read from these, from the checker's summary
 (becoming-verification.json, which must be RECEIPT's run) and from the kits; every sentence it fills is asserted."""
 import importlib.util
 import json
@@ -75,18 +75,23 @@ fill = {'{N}': str(N), '{RECEIPT}': RECEIPT, '{MODULES}': str(modules),
         '{MOVED}': str(len(audit['moved'])), '{BY_RENAME_S}': str(len(audit['changed_by_the_renames_only'])),
         '{BY_RENAME_D}': str(len(audit['definitions_rewritten_by_the_renames_only']))}
 assert len(audit['changed']) == 1, audit['changed']
-# The re-point: the records HE2 changed (an HE2 history note) are among those it re-pointed; the others say what they said.
+# The re-point: the records HE2 changed carry an HE2 history note; those whose sources changed are re-pointed too, and
+# the other re-pointed records say what they said.
 repointed = set(json.loads(REPOINT.read_text(encoding='utf-8'))['by_record'])
 recs = ROOT / 'theories/becoming/results/records'
 written = {p.stem for p in recs.glob('*.json')
            if any(f'board item HE2' in h.get('en', '') for h in json.loads(p.read_text(encoding='utf-8'))['history'])}
-assert len(written) == 8 and written <= repointed, ('HE2 records not re-pointed', sorted(written - repointed))
-fill['{REPOINTED}'], fill['{REPOINTED_OTHER}'] = str(len(repointed)), str(len(repointed - written))
+assert len(written) == 8, sorted(written)
+fill.update({'{REPOINTED}': str(len(repointed)), '{REPOINTED_HE2}': str(len(written & repointed)),
+             '{REPOINTED_OTHER}': str(len(repointed - written))})
 fill.update({'{RAN}': f"{len(ran):,}", '{KEYS}': f"{len(steps['keys']):,}", '{REUSED}': f"{len(steps['reused']):,}"})
-# The connectivity check after the register parts: nothing reported.
+# The connectivity check after the register parts: it prints its report and, only where something is wrong, a line
+# naming it; here the report alone, with nothing unclassified, stale or naming what the run lacks.
 conn = CONNLOG.read_text(encoding='utf-8')
-assert ('apart roots without a reason in THEOREM-CONNECTIVITY-APART.json: []; register entries no longer apart roots: []; '
-        'instances naming a law or base constant the run lacks: []') in conn, 'the connectivity check reports something'
+assert 'apart roots without a reason' not in conn, 'the connectivity check reports something'
+conn = json.loads(conn)
+assert (conn['apart_roots_unclassified'] == [] and conn['register_entries_not_apart_roots'] == []
+        and conn['recorded_instances']['register entries naming what the run lacks'] == []), 'connectivity'
 section = (HERE / 'he2_study.txt').read_text(encoding='utf-8')
 for key, value in fill.items():
     section = section.replace(key, value)
