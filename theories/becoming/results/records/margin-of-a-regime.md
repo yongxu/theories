@@ -19,7 +19,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Giving lowered by the regime raises the need beyond what removal alone gives: under the same draw, the least level meeting it under lowered giving is no lower, and higher exactly where the lowered giving falls short of the draw at the old least level. MQ2 measured giving falling with the draw on real yeast. (`Becoming.RegimeMargin.lowered_raises`, `Becoming.RegimeMargin.lowered_raises_strictly`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-5. Draws add, harms do not. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit. (`Becoming.RegimeMargin.SubadditiveAbove`, `Becoming.RegimeMargin.harms_superadditive`)
+5. Draws add, and their rises at the point are superadditive up to one. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit. (`Becoming.RegimeMargin.SubadditiveAbove`, `Becoming.RegimeMargin.harms_superadditive`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. The time to break lies in a band: the level stays at or above b at every step n with b + H n <= x; where giving is at most Y and Y <= H <= b, it falls below b within any n with x < b + (H - Y) n. (`Becoming.RegimeMargin.AtMost`, `Becoming.RegimeMargin.step_ge`, `Becoming.RegimeMargin.orbit_ge`, `Becoming.RegimeMargin.not_before`, `Becoming.RegimeMargin.step_falls_by`, `Becoming.RegimeMargin.falls_or_bound`, `Becoming.RegimeMargin.falls_within`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -119,6 +119,7 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 - 21 October 2026: MQ6 (study section 314), a frozen test on yeast driven past its fold: the level is the state at a constant draw and carries across experiments, and the regime margin forecasts the level away from the break, but the breaks came early; the scope and the next step are revised.
 - 23 October 2026, EC6 (study section 375): RegimeMargin.Adjusted.orbit_bound is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
+- 1 November 2026, board item ND: law 5's lead sentence reworded as its home section 02 §5 now reads, "harms" being an evaluative word no law of the map uses; what the law states is unchanged, and its declaration RegimeMargin.harms_superadditive is renamed rises_superadditive at part 2.
 
 </details>
 

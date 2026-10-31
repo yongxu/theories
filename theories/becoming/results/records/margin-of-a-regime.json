@@ -61,8 +61,8 @@
       ]
     },
     {
-      "en": "Draws add, harms do not. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit.",
-      "zh": "汲取相加，损害不然。联合汲取下的所给在需求之上次可加且不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
+      "en": "Draws add, and their rises at the point are superadditive up to one. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit.",
+      "zh": "汲取相加，其于该点之升高为超可加，至多差一。联合汲取下的所给在需求之上次可加且不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
       "declarations": [
         "Becoming.RegimeMargin.SubadditiveAbove",
         "Becoming.RegimeMargin.harms_superadditive"
@@ -436,6 +436,10 @@
     {
       "en": "23 October 2026, EC6 (study section 375): RegimeMargin.Adjusted.orbit_bound is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
       "zh": "2026年10月23日，EC6（研究第 375 节）：RegimeMargin.Adjusted.orbit_bound 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
+    },
+    {
+      "en": "1 November 2026, board item ND: law 5's lead sentence reworded as its home section 02 §5 now reads, \"harms\" being an evaluative word no law of the map uses; what the law states is unchanged, and its declaration RegimeMargin.harms_superadditive is renamed rises_superadditive at part 2.",
+      "zh": "2026年11月1日，工作板条目 ND：第五律之首句依其本节 02 §5 之新文改写；“损害”为评价之词，图中无律用之。律所言不变；其声明 RegimeMargin.harms_superadditive 于第二部分更名为 rises_superadditive。"
     }
   ]
 }
