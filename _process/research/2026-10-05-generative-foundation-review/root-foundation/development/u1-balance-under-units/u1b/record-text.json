@@ -1,0 +1,121 @@
+{
+  "about": "U1b's record, the prose fields written by OU's owner (AI-written, 31 October 2026). The landing script adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with declarations, proof_bindings bound to the landing's core receipt, history) and the counts read from the receipt.",
+  "id": "amounts-by-unit-matchings",
+  "title": {
+    "en": "Amounts, the root's second sort: balance represented by selected unit matchings, not derived",
+    "zh": "数量为根之第二类：平衡由所选之单位配对表示，非推出"
+  },
+  "statement": {
+    "en": "A flow balances exactly where every frame of every step has a selected one-to-one matching of its units, each unit after the step continuing exactly one before it. At a formation's exchange, crossing and residual counts hold for every pairing. Balance is so represented, not derived.",
+    "zh": "流恰于每步之每框皆有所选之单位一一配对处平衡，步后每单位恰续步前之一。于形成之交换，越界与余数之律于每一配对皆成。平衡如此得表示，非自展开推出。"
+  },
+  "laws": [
+    {
+      "en": "A selected matching of a frame, a bijection of its in-positions with its out-positions given as data, forces equal counts by pigeonhole with no decidability; each out-position has an in-position sent to it, and only one. A flow over a web has such a matching at every step and condition exactly where it balances, the converse pairing by position with no choice; by it a standing unit goes on standing or is taken, which of the two being the matching's.",
+      "zh": "框之所选配对，以其入位与出位之双射为所予之资料，依鸽笼而迫等数，无需可判定；每出位皆有一入位送至，且唯一。网上之流恰于其平衡处于每步每条件皆有此配对，逆向依位而配，无需选择；依之，站立之单位或续立或被取，二者孰是在于配对。",
+      "declarations": [
+        "Becoming.UnitMatchings.FrameMatch",
+        "Becoming.UnitMatchings.FrameMatch.le",
+        "Becoming.UnitMatchings.FrameMatch.eq",
+        "Becoming.UnitMatchings.FrameMatch.predecessor_unique",
+        "Becoming.UnitMatchings.FrameMatchings",
+        "Becoming.UnitMatchings.frameMatchings_iff_balances",
+        "Becoming.UnitMatchings.FrameMatchings.next"
+      ]
+    },
+    {
+      "en": "In a one-to-one pairing whose first block on one side is longer than the first block on the other, some member of the other side's rest is related to a member of that block. In a balanced flow, where a family listed without repetition rises past the inflow of a family containing it, one formation taking part is such that every pairing of its exchange relates a unit it gives the risen family to another input; with beyond's inputs source-minimal, to one taken from the rest of the containing family.",
+      "zh": "于一一配对，一侧首段长于他侧首段者，他侧其余之某员与此段之某员相关。于平衡之流，无重复所列之族涨过含之之族之入流者，参与之一形成使其交换之每一配对，皆以其予涨族之一单位关乎另一入者；外来之入取最少者，则关乎取自含族其余者之一。",
+      "declarations": [
+        "Becoming.UnitMatchings.crossing_edge",
+        "Becoming.UnitMatchings.rise_crossing_weak",
+        "Becoming.UnitMatchings.rise_crossing_strong"
+      ]
+    },
+    {
+      "en": "At a formation, with beyond's units numbering the source-minimal count, every pairing of what it takes from a family and beyond's units with what it gives the family and the units ending there has exactly as many endings as it takes beyond what it gives; with leaving outputs kept, leaving and endings together number that.",
+      "zh": "于一形成，外来单位之数取最少者，其取自族者与外来单位，配以其予族者与终于此之单位，每一配对之终数恰为所取多于所予者；留出之出亦计，则出与终合计为此数。",
+      "declarations": [
+        "Becoming.UnitMatchings.endings_count",
+        "Becoming.UnitMatchings.leaving_and_endings_count"
+      ]
+    },
+    {
+      "en": "On a family a present formation dissipates on, the source-minimal count is zero, and where it takes, the residual count is positive; a present formation taking from a family exactly what it gives it, and something, does not dissipate on it.",
+      "zh": "于在场之形成耗散于其上之族，最少外来之数为零，其有所取则余数为正；在场之形成取于族者恰等其予之者且有所取，则不耗散于其上。",
+      "declarations": [
+        "Becoming.UnitMatchings.source_minimal_zero_of_dissipates",
+        "Becoming.UnitMatchings.residual_pos_of_dissipates",
+        "Becoming.UnitMatchings.lossless_not_dissipative"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number amounts in one unit commensurable across conditions; discrete steps; positions as numbers below a count; a family as a list of conditions, a repeated condition repeating its labels; formations counted with their multiplicity among those present.",
+      "zh": "自然数之数量，一单位于诸条件间可通约；离散之步；位为小于其数之数；族为条件之列，重出之条件重其标；形成以其在场之重数计。"
+    },
+    {
+      "en": "The beyond, leaving and ending lists are any lists of exchange occurrences; a pairing under a relation uses its steps one to one and does not make the relation functional.",
+      "zh": "外来、留出与终之列为任何交换出现之列；依关系之配对一一用其步，不使该关系为函数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That balance is derived from the unfolding: every number-stated consumer of the matchings would be a round trip, and none is rerouted through them.",
+      "zh": "平衡自展开推出：配对之每一以数陈述之用者皆为往返，无一经之改道。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That residual units are actual boundary traffic: once a formation's actual exchange outside the family is kept, their identification with actual losses fails.",
+      "zh": "余之单位为实际之边界往来：形成于族外之实际交换一经保留，其与实际损失之等同即不成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the frame matchings and the exchange pairings are one structure: no labelled exchange pairing is shown to exist for a World's formations or attached to the frames, and a frame matching is not bridged to the grammar's pairing on labelled lists.",
+      "zh": "框之配对与交换之配对为一结构：未示世界之形成有带标之交换配对存在或接于框，框之配对亦未桥接于带标列上文法之配对。",
+      "kind": "scope"
+    },
+    {
+      "en": "Line laws across steps: unique origin over many steps, the stretch law for selected matchings, residence. Which unit goes where is the matching's; lines are not World data.",
+      "zh": "跨步之线律：多步之唯一来源、所选配对之程律、驻留。何单位往何处在于配对；线非世界之资料。",
+      "kind": "scope"
+    },
+    {
+      "en": "That unit continuation projects onto the World's conservation, or that renaming, re-pairing and forgetting exhaust the matchings over one World: these are the design's conclusions, not theorems here.",
+      "zh": "单位之续投于世界之守恒，或改名、重配与忘却穷尽一世界上之配对：此为设计之结论，非此处之定理。",
+      "kind": "scope"
+    }
+  ],
+  "validation_scope_draft": {
+    "en": "Pure core, every axiom report empty: UnitMatchings imports GrammarLaws, Flow, SelectionReach and Undecided, a leaf nothing imports. Modelling choices as in its hypotheses. The census form of balance and the stretch law are the package's own (Flow.balances_iff_units, «对之程», «程守数当且仅当可对») and are cited, not restated.",
+    "zh": "纯核，公理报告皆空：UnitMatchings 引 GrammarLaws、Flow、SelectionReach 与 Undecided，为无引之者之叶。建模之选见其假设。平衡之普查形与程律为本包自有（Flow.balances_iff_units、«对之程»、«程守数当且仅当可对»），引之而不重述。"
+  },
+  "next_delta": {
+    "en": "A labelled exchange pairing for a World's formations attached to the frames; a bridge from a frame matching to the grammar's pairing; review by a person.",
+    "zh": "世界之形成之带标交换配对接于框；自框之配对至文法之配对之桥；人之审查。"
+  },
+  "correspondence": {
+    "en": "That a bijection of finite sets forces equal size is the pigeonhole principle, here constructive through the grammar's revisiting law. Reading conservation as matched units is standard in accounting for conserved quantities; here the matching is selected, not given by the dynamics, and the residual units are bookkeeping. Graded in U1's DESIGN.md.",
+    "zh": "有限集之双射迫等大，为鸽笼原理，此处经文法之重访律而构造。以配对之单位读守恒，为守恒量之计算所常用；此处配对为所选，非动力所予，余之单位为簿记。分级见 U1 之 DESIGN.md。"
+  },
+  "home": "01 §8.6, after the-world-represented-both-ways",
+  "dependencies_draft": [
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail_en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, split_append and total_congr."
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "relation": "formal-reuse",
+      "detail_en": "Flow.Balances.rise_draws_beyond_inflow gives the formation of both crossing laws."
+    }
+  ],
+  "related_draft": [
+    {
+      "id": "the-world-represented-both-ways",
+      "detail_en": "The World is represented in the grammar both ways and its amounts are not; this record states what amounts have instead: an interface by selected unit matchings."
+    }
+  ]
+}
