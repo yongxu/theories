@@ -1,0 +1,53 @@
+## {N}. The held edits, in one near-full rebuild (HE2)
+
+HE (§455) showed that edits held for a rebuild land best together, on purpose, after a rehearsal. HE2 does that for seven edits. The board's HE2 row listed them after HE, each written and checked outside the package by its owner. Most of them change GrammarLaws or the grammar's modules, which almost every module imports, so each one alone would rebuild most of the package. One lander gathered the owners' kits and applied them in one pass ([design](development/he2-held-edits/DESIGN.md)).
+
+```text
+Result(s): records master-laws-on-the-grammar, continuation-relative-to-a-class,
+       generation-and-degeneration-at-two-grains, a-regularity-kept-and-changed, candidate-theorems-of-the-corpus and
+       reach-past-ones-own-end changed, one HE2 history note each; {REPOINTED} records pinning the changed sources
+       re-pointed, nothing they say changed; no new record.
+Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则中有标» asks only that the relation it keeps
+       compose (split, then trans, in place of a class: transitivity is all its proof uses). PatternPassing's two uses
+       pass the carrier class's trans. Sampling's arises_within reads the law along the successor, the relation being a
+       property's not arising, and ceases_within is arises_within at the negation; Sampling's four coarse-step
+       theorems now reach the grammar law. continuation-relative-to-a-class says the law for a relation that composes.
+       (2)–(4) items 2 to 4 (U4's taker, u4-one-root-to-its-edge/he2-items-2-to-4): U4's lever 1 joins GrammarLaws. That
+       is counting on a region («计»); the count kept on a region a pairing does not cross, and on one closed both ways;
+       the count law of a class; what a pairing under continuation adds to equal count; the census of a step; two
+       witnesses; and the list lemmas they use. With them come «所闭之逆» and the two laws of a closure through
+       borrowed steps, which Response's WithinClosure.converse and SelectionPool's WithinClosure.of_reads and
+       WithinClosureOf.to_reads are now proved as. In all, {I24} declarations.
+       (5) item 5 (OU's owner, ou3b-master-laws-on-the-grammar/he2-item5): the successor's three reach laws
+       (Map.step_reached_le, Map.step_reaches, Map.step_reaches_of_le) move whole from MapRegions into GrammarMap, and
+       WideningOnTheMap's Steps.reached_le and HeldPossible's local pair become one application each. GrammarMap's
+       sentence that how the strong forms stand to the regions "is not stated" points to the leaves that state it.
+       (6) item 6 (rv21-one-sense, NOTE §8): four laws on a class's core and going alike join GrammarLaws
+       («定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类» and the witness «后不定则核可不同行»).
+       They are the composition 01 §4 states under "The core and 理". The master-laws record's clause "a class going
+       alike lies in its core" now carries the successor everywhere that «类同行遍后则含于核» takes.
+       (7) item 7, the same kit: seven names that wrote 理 for the core, or for a law of the grammar, are renamed with
+       no alias (守理则不穷, 守理之线不亡, 亡前理变, 有亡之线两端理异, 足以定理, 合有常则足以定理 to 核; 从缘生非文法之理 to 之律).
+       Off a class or a fixed successor the core need not be a 理, and the grammar's laws are not a model's 理. Prose
+       that wrote 理 for a line's regularity writes 规律 or 核. The flame names are kept, since on both flame models the
+       core is a 理.
+       GrammarLaws has {GT} theorems in {GD} declarations; the run holds {MODULES} modules.
+Supplied premises / correspondence: none.
+Evidence: core receipt {RECEIPT}, every axiom report empty. Before it came two pre-rehearsals outside the
+       repository: items 2–7 with item 1's weakening (the near-full rebuild, 1,379 Lean steps run), then all seven (55
+       steps, the rest reused). A rehearsal on main followed, and the landing run reused its steps. The signature audit (he2_signatures.py) reads each expectation from the item's own kit:
+       - {T_BEFORE} theorem statements before, {T_AFTER} after;
+       - {RENAMED} names renamed ({RENAMED_T} theorems, {RENAMED_D} definition), each new statement the old one renamed;
+       - {ADDED} declarations added to GrammarLaws ({ADDED_T} theorems, {ADDED_D} definitions);
+       - {MOVED} moved from MapRegions to GrammarMap;
+       - one changed, «两端分则中有标»'s hypotheses;
+       - {BY_RENAME_S} statements and {BY_RENAME_D} definitions changed by the renames only;
+       - nothing else in the thirteen changed modules.
+       The connectivity check is clean after the register parts: two roots re-keyed, «核为类»'s entry dropped (item 6's
+       laws use it), and the new roots registered with reasons.
+Boundary: one statement changes, and only by weakening its hypotheses: the earlier form is the new law at a class's
+       trans. The rest add laws, move them whole, rename them, or re-prove a proof as an application.
+Output → input: the six records; 01 §4 and §7, 07's gloss of 生生, the glossary and two review pages (items 6 and 7);
+       08's counts; GrammarLaws', GrammarMap's and the root module's docs and the README rows; the apart register; the
+       master-law view.
+```

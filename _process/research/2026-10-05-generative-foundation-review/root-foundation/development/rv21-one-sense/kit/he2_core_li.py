@@ -247,6 +247,9 @@ ML_REFS = [(HERE + 'NOTE.md', 'integration'), (HERE + 'review/REVIEW-HE2-KIT.md'
 # The apart register: the two renamed roots re-keyed, their reasons kept; item 6's laws registered where the measure
 # lists them as roots without a reason.
 APART_REKEY = ['有亡之线两端理异', '从缘生非文法之理']
+# Entries that item 6's laws make no longer roots: «定后则类之核同行» uses «核为类», so the entry goes, where the measure
+# reports it stale; the new roots carry the reasons.
+APART_DROP = ['核为类']
 APART_NEW = {
     N_FIX: ('general-structure', "with a fixed successor a class's core is a class inside it that the step goes alike "
             "across: a law of every relation and class on any carrier (HE2 item 6) joining lumping to the core; "
@@ -385,12 +388,16 @@ def at(o, path):
     return o, path[-1]
 
 
+HELD = {}  # record id -> its HE2 history note, filled by records(); read by the lander's he2_records.py
+
+
 def records(apply, study=None, notes=True):
     olds = {full(o) for o in RENAMES}
     bare = {'«' + o + '»': '«' + n + '»' for o, n in RENAMES.items()}
     out = {}
     found = []
-    held = {}  # rid -> history note, written or printed
+    held = HELD  # rid -> history note, written or printed
+    held.clear()
     for path in sorted((ROOT / REC).glob('*.json')):
         rid = path.stem
         raw = path.read_text(encoding='utf-8')
@@ -442,6 +449,7 @@ def records(apply, study=None, notes=True):
             if apply and notes:
                 r['history'].append(held[rid])
         out[rid] = (raw, r, changed)
+    assert ML not in out, 'the master-laws record holds a renamed name: fold its renames into the part below'
     raw = read(REC + ML + '.json')
     r = json.loads(raw)
     laws = [law for law in r['laws'] if ML_AFTER in law['declarations']]
@@ -526,7 +534,16 @@ def register(apply, log_path=None):
         t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
     json.loads(t)
     others = [n for n in unclassified if n not in mine and n not in {full(RENAMES[o]) for o in APART_REKEY}]
-    others += [n for n in stale if n not in {full(o) for o in APART_REKEY}]
+    for o in APART_DROP:
+        key = json.dumps(full(o), ensure_ascii=False) + ': {'
+        if full(o) in stale:
+            entry = re.search(r'\n  ' + re.escape(key) + r'\n(   .*\n)+?  \},?(?=\n)', t)
+            assert entry and t.count(key) == 1, (APART, o)
+            LOG.append((APART, 'roots (entry dropped, no longer a root)', full(o), '(gone)'))
+            t = t[:entry.start()] + t[entry.end():] if entry.group().endswith(',') else None
+            assert t is not None, (APART, o, 'last entry of its block')
+    json.loads(t)
+    others += [n for n in stale if n not in {full(o) for o in APART_REKEY + APART_DROP}]
     if others:
         print('roots and entries not this kit\'s, for their owners:', ', '.join(others))
     if apply and t != read(APART):
