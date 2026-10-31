@@ -5180,6 +5180,30 @@
    "page": "theories/becoming/results/records/tests-fix-likeness-where-determined.md"
   },
   {
+   "id": "record:the-blanket-at-a-steady-state",
+   "type": "result",
+   "record": "the-blanket-at-a-steady-state",
+   "title": "The blanket at a steady state: conditional independence and what holds it",
+   "title_zh": "稳态之毯：条件独立及其所以成立",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-blanket-at-a-steady-state.md"
+  },
+  {
+   "id": "record:the-blanket-in-a-linear-steady-state",
+   "type": "result",
+   "record": "the-blanket-in-a-linear-steady-state",
+   "title": "The blanket in a linear steady state: the coupling form and the statistical form",
+   "title_zh": "线性稳态之毯：耦合之形与统计之形",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/the-blanket-in-a-linear-steady-state.md"
+  },
+  {
    "id": "record:the-boundary-of-enough-under-undetermined-laws",
    "type": "result",
    "record": "the-boundary-of-enough-under-undetermined-laws",
@@ -7660,6 +7684,17 @@
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.BlanketWeights",
+   "type": "module",
+   "name": "Becoming.BlanketWeights",
+   "level": "L1",
+   "theorems": 46,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -28755,6 +28790,18 @@
    "anchor": "r-the-markov-blanket-as-a-coupling-structure"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-blanket-at-a-steady-state"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-in-a-linear-steady-state",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-blanket-in-a-linear-steady-state"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -30847,6 +30894,16 @@
   {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketWeights",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketWeights",
+   "to": "module:Becoming.Flow",
    "type": "imports"
   },
   {
@@ -52540,6 +52597,51 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "module:Becoming.BlanketWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:the-blanket-in-a-linear-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:what-the-existence-claim-forbids",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-boundary-of-enough-under-undetermined-laws",
    "to": "module:Becoming.Enough",
    "type": "proved-in"
@@ -52718,6 +52820,16 @@
    "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "record:selection-through-couplings",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:the-blanket-in-a-linear-steady-state",
+   "type": "related"
   },
   {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
@@ -59087,6 +59199,16 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-tests-fix-likeness-where-determined",
    "to": "record:tests-fix-likeness-where-determined",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-in-a-linear-steady-state",
+   "to": "record:the-blanket-in-a-linear-steady-state",
    "type": "states"
   },
   {

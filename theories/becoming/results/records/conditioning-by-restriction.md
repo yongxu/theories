@@ -76,7 +76,7 @@ Read a share as a probability, a number of situations of a kind (weights-count-s
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: a tied pair keeps its prior order given every record, a corollary of posterior_single and posterior_le_iff, and over every course of seeking.
 - related, not a proved adapter: [free-energy-bound-in-counts](free-energy-bound-in-counts.md). The free-energy bound in counts: conditioning reached by the bound in counts, through posterior_single, with the hypotheses listed once.
 
-**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bound-in-counts](free-energy-bound-in-counts.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md) · [what-seeking-cannot-separate](what-seeking-cannot-separate.md) · [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md)
+**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bound-in-counts](free-energy-bound-in-counts.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [what-seeking-cannot-separate](what-seeking-cannot-separate.md) · [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md)
 
 <a id="sources--来源"></a>
 ### Sources

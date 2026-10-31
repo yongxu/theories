@@ -119,7 +119,7 @@ Closure is the reflexive-transitive closure of a relation read as the least clos
 - **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Weighting.IncludesOn, ExceedsOn, WidensOn and MixedOn, read as the grammar's over the listed items.
 - related, not a proved adapter: [balance-from-conservation-along-a-relation](balance-from-conservation-along-a-relation.md). Transfers along a relation balance a step exactly where the total is conserved on every family it closes: where a derivation of balance under a relation other than the one would begin.
 
-**Used by:** [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md) · [amounts-by-unit-matchings](amounts-by-unit-matchings.md) · [one-root-to-its-edge](one-root-to-its-edge.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [where-the-possible-grows](where-the-possible-grows.md)
+**Used by:** [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md) · [amounts-by-unit-matchings](amounts-by-unit-matchings.md) · [one-root-to-its-edge](one-root-to-its-edge.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources

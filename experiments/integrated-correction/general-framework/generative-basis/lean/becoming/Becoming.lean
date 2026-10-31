@@ -107,6 +107,7 @@ import Becoming.Presence
 import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
+import Becoming.BlanketWeights
 import Becoming.LumpedSeeking
 import Becoming.FreeEnergyCounting
 import Becoming.ModelStatements
@@ -1667,6 +1668,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   conditioning on it (`Blanket.point_is_restrict`), under which it is of least surprisal
   (`Blanket.least_surprisal`); a listed outcome is forbidden exactly where its weight is nothing
   (`Blanket.forbids_iff`). A leaf importing `Becoming.ConditionalWeights` (board item UE18).
+* `Becoming.BlanketWeights` (L1): the free-energy principle's statistical blanket, conditional
+  independence given the blanket at a steady state, and what holds it. On natural weights of internal,
+  blanket and external states, independence given the blanket on the theory's conditioning
+  (`BlanketWeights.IndependentGiven`) is the cross form on the listed states, the converse on listings
+  listing each state once (`BlanketWeights.independentGiven_of_crossFormOn`,
+  `BlanketWeights.crossFormOn_of_independentGiven`),
+  `ConditionalWeights.restrict_independent` its case at one blanket state
+  (`BlanketWeights.restrict_independent_case`). Where the internal moves are in detailed balance with a
+  positive weighting, within one closure (`«所闭»`) of moves present at every external state, each such
+  move's rate ratio reading no external state, the weighting is in cross form
+  (`BlanketWeights.crossForm_of_detailedBalance`), Kelly's proof at the internal site, no steady state
+  assumed. Witnesses: a lag relay whose steady weights are not independent given the blanket
+  (`BlanketWeights.LagRelay.not_independentGiven`), a turning chain circulating with them independent
+  (`BlanketWeights.Turning.independentGiven`), moves reading the external state
+  (`BlanketWeights.MovesReadExternal.not_crossForm`), a synchronous kernel whose factors read, by its
+  construction, what the blanketed law lets them read, independent when exact and not with a miss (`BlanketWeights.SynchronousCopy.exact_independentGiven`,
+  `BlanketWeights.SynchronousCopy.noisy_not_independentGiven`), and a blanketed run's occupation
+  weighting (`BlanketWeights.Cycle.not_crossForm`). A leaf importing `Becoming.Blanket` and
+  `Becoming.Flow` (board item UE26); the linear case is the periphery's `LinearBlankets`.
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
