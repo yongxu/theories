@@ -40,16 +40,17 @@ Premises: none added.
 Evidence:
        - on the current dump none of the shapes occurs (no opaque, no hygienic name, no _arg_pusher, no Init
          auxiliary realized in a package module, no lifted proof under an inductive type), so no figure, walk or reach
-         changes; master_laws.py rerun on core receipt 20261031T013649.265381Z (RF-M.3's) changes only the hashed inputs
-         (boundary.py and boundary_check.lean);
+         changes; master_laws.py rerun on core receipts 20261031T013649.265381Z (RF-M.3's) and 20261031T054654.692180Z
+         (HE2's) changes only the hashed inputs (boundary.py and boundary_check.lean);
        - U4's 31 controls rerun on U4's build: output byte-identical;
        - the end-to-end report on GW's run: every row the same, only the check's hash differs;
        - the verifiers' reproductions now pass (relC, relW, relO, relA, relE, relB) or fail (op.eq_1, Rp.brecOn.go,
          Cfg.elim) as §3.2 says;
        - the fourth re-check reproduced each of its findings on Lean 4.29.1; after the fixes, the dumps of core receipts
-         20261030T232750.486801Z and 20261031T013649.265381Z and of U4's build give the same auxiliaries, walks,
-         forwarders, laws and root constants under the rule before and after them, and outside is empty (on RF-M.3's,
-         52,346 constants: 26,351 auxiliaries, 2,258 root constants, 406 grammar laws, 14 forwarders, 20,120 walks; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
+         20261030T232750.486801Z, 20261031T013649.265381Z and 20261031T054654.692180Z and of U4's build give the same
+         auxiliaries, walks, forwarders, laws and root constants under the rule before and after them, and outside is
+         empty (on RF-M.3's, 52,346 constants: 26,351 auxiliaries, 2,258 root constants, 406 grammar laws, 14
+         forwarders, 20,120 walks; on HE2's, 52,419: 26,383, 2,346, 430, 15 and 20,157; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
          by boundary/check/compare_rule.py); U4's controls and the end-to-end report again as above; U4's RootForms
          leaf (u4-edge) has none of the new shapes;
        - research check --strict-fresh, links and the suite (304 tests) pass in a clean worktree.

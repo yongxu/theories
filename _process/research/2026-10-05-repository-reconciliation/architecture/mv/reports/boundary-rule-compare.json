@@ -1,34 +1,73 @@
 {
- "old": "26977f25a",
- "core_receipt": "20261031T013649.265381Z",
- "constants": 52346,
- "aux": {
-  "same": true,
-  "count": 26351
- },
- "root": {
-  "same": true,
-  "count": 2258
- },
- "laws": {
-  "same": true,
-  "count": 406
- },
- "forwarders": {
-  "same": true,
-  "count": 14
- },
- "walks": {
-  "same": true,
-  "count": 20120
- },
- "outside": [],
- "hygienic": [],
- "kinds": [
-  "ctor",
-  "def",
-  "ind",
-  "rec",
-  "thm"
+ "about": "The attachment rule before the fourth re-check's fixes (26977f25a's tools/research/boundary.py) against the current one, each run by boundary/check/compare_rule.py on the latest core receipt's dump at the time: RF-M.3's, then HE2's.",
+ "runs": [
+  {
+   "old": "26977f25a",
+   "core_receipt": "20261031T013649.265381Z",
+   "constants": 52346,
+   "aux": {
+    "same": true,
+    "count": 26351
+   },
+   "root": {
+    "same": true,
+    "count": 2258
+   },
+   "laws": {
+    "same": true,
+    "count": 406
+   },
+   "forwarders": {
+    "same": true,
+    "count": 14
+   },
+   "walks": {
+    "same": true,
+    "count": 20120
+   },
+   "outside": [],
+   "hygienic": [],
+   "kinds": [
+    "ctor",
+    "def",
+    "ind",
+    "rec",
+    "thm"
+   ]
+  },
+  {
+   "old": "26977f25a",
+   "core_receipt": "20261031T054654.692180Z",
+   "constants": 52419,
+   "aux": {
+    "same": true,
+    "count": 26383
+   },
+   "root": {
+    "same": true,
+    "count": 2346
+   },
+   "laws": {
+    "same": true,
+    "count": 430
+   },
+   "forwarders": {
+    "same": true,
+    "count": 15
+   },
+   "walks": {
+    "same": true,
+    "count": 20157
+   },
+   "outside": [],
+   "hygienic": [],
+   "kinds": [
+    "ctor",
+    "def",
+    "ind",
+    "rec",
+    "thm"
+   ]
+  }
  ]
 }
