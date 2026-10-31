@@ -333,8 +333,8 @@
     "zh": "纯核，公理报告皆空：引 ShownOrder，为 ChoiceOccasions.reach_within；引 ReadingLoop，为 Loop 与 Loop.rests_of_unrefuted，并经之引 Viability.ChoiceOver；诸总用 Flow、Population 与 Dissipation 之引理及前导之消去与减法引理，比较以 Nat.decLt 与 Nat.decLe 判之，不用 omega 与 simp；例之步以 rfl 算。"
   },
   "next_delta": {
-    "en": "A principal's valuation as state the helper's acts can move, its carrier to be designed first (RF-M's next case); the reading formation's own state and learning; noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.",
-    "zh": "受助者之值为助者之行可移之态，先设其载体（RF-M 之下一情形）；读之形成己之态与学；有噪之读与连续之信于外围；持是否随模型之二余之冻结检验；人之审查。"
+    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.",
+    "zh": "读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；有噪之读与连续之信于外围；持是否随模型之二余之冻结检验；人之审查。"
   },
   "correspondence": {
     "en": "In counts: the worth of a reading telling the candidate is the perfect-information case of Good's (1967) argument, his Lemma's dominating row its equality boundary; holding for it is the off-switch game's waiting with a rational human (Hadfield-Menell et al. 2017): its Theorem 1 for a belief of finite support; waiting's two differences T E[U⁺] and T E[(−U)⁺], T the total weight, are T times its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed; for a rule that is a function of the candidate, T times its Equation 1's terms are balances; a finer partition never raising the least shortfall is, for this decision, Blackwell's (1953) partition case. AI reading: openness less shortfall is the incentive the off-switch paper's Remark 1 places qualitatively, its Theorem 2, Δ = σ²E[π̇H] − |µ|Pr(C), the Gaussian form, decomposed otherwise; its game has no cost of waiting, what holding forgoes relaxing Good's proviso. SignLoop is nearest to Carey's (2018) conflating model, whose predictions look perfectly accurate on its encoded observations and which may ignore shutdown: related by a misspecified model never refuted, not formalizing the conflation. Readings, not containments.",
@@ -383,6 +383,13 @@
       "detail": {
         "en": "Informing within the law: a held act answered by the reading of the true sign, which refutes the candidates predicting otherwise; the reading formation's own state is not represented.",
         "zh": "律内之告：所持之行以真号之读答之，驳预之异者之候选；读之形成己之态未表。"
+      }
+    },
+    {
+      "id": "a-reading-informed-and-revalued",
+      "detail": {
+        "en": "The reading formation's own listing and valuation as state: holding for its answer through a map falls short by the least shortfall and a residual; a finer map never raises the first, revaluing moves the second alone, in one blanketed law.",
+        "zh": "读之形成己之列与值为态：为其经映射之答而持，所缺为最少所缺加余缺；映射愈细前者不增，改值唯移后者，于一毯化之律。"
       }
     }
   ],
@@ -562,7 +569,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "3ff802b10fd7cab1210c6d559d4ad243977211b1f97547c91fd48ff07ebc3287"
+      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
@@ -598,6 +605,10 @@
     {
       "en": "30 October 2026: added (RF round 2), what holding an act for a reading is worth: the worth of a reading in counts with its gap identity, holding for a reading that stops or releases, any rule of stopping and its shortfall, the threshold of what holding forgoes, a reading that tells only a cell, the conditional join with the shown reach, and a witness on the reading loop whose choice is the worth law's; the design reviewed by a cross-model reader before the Lean, the Lean by the same reader and through three lenses and then re-checked, the texts cold-read, what was taken, deferred or handed over listed in the review evidence; study section 466.",
       "zh": "2026年10月30日：新增（RF 第二轮），为读而持其行之值：读之值之计及其缺之恒等、为止或放之读而持、任一止之规则及其所缺、持之所舍之界、唯辨其格之读、与所示之及之有条件之接、读环上之例（其择即值之律之择）；设计于 Lean 之前经跨模型之审，Lean 经同一审者与三视角之审并复查，文本经冷读，所取、所缓与所交者列于审查之证据；研究第 466 节。"
+    },
+    {
+      "en": "31 October 2026, board item RF, RF-M.3 (study section 473): related to a-reading-informed-and-revalued, where the reading formation's listing and valuation are state; the next step keeps its learning beyond filtering by what it is shown and the holding formation's planning; no statement or declaration changed.",
+      "zh": "2026年10月31日，工作板条目 RF，RF-M.3（研究第 473 节）：与 a-reading-informed-and-revalued 相关联，读之形成之列与值于彼为态；下一步留其依所示而滤以外之学与持之形成之谋；无一陈述或声明改变。"
     }
   ]
 }

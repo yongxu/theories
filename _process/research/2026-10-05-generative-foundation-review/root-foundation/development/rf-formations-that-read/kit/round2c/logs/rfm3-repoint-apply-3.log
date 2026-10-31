@@ -1,0 +1,81 @@
+re-pointing 10 pairs in 10 records:
+   a-prediction-read-by-what-it-predicts _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   a-reading-kept-by-its-update _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   a-revision-that-opens-a-correction _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   acts-alike-from-a-model-or-from-an-order _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   readers-reading-readers _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   what-a-course-chosen-through-its-model-does-not-test _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   what-choices-show-of-an-order _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   what-holding-for-a-reading-is-worth _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   what-readings-fix-of-the-unread _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+   when-complying-when-read-is-best _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws', '## 5. A shared obstruction pattern (readings, on existing laws)', '## 8. The literature: contained, restated or owed', '## Evidence']
+left to their owners: []
+{
+ "records": 10,
+ "apply": true,
+ "by_record": {
+  "a-prediction-read-by-what-it-predicts": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "a-reading-kept-by-its-update": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "a-revision-that-opens-a-correction": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "acts-alike-from-a-model-or-from-an-order": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "readers-reading-readers": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-a-course-chosen-through-its-model-does-not-test": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-choices-show-of-an-order": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-holding-for-a-reading-is-worth": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-readings-fix-of-the-unread": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "when-complying-when-read-is-best": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
+ 
+repoint (texts): 10 records written

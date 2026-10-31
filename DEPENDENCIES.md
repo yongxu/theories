@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-506 registered results: 475 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1168 curated edges join 433 results to the results they draw on.
+507 registered results: 476 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1171 curated edges join 434 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -29,6 +29,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-prediction-read-by-what-it-predicts][] ← <a id="a-prediction-read-by-what-it-predicts--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][]
 - [a-race-for-position-draws-everything][] ← <a id="a-race-for-position-draws-everything--drawers-in-turn"></a>[drawers-in-turn][]
 - [a-reading-against-the-share-does-not-ratchet][] ← <a id="a-reading-against-the-share-does-not-ratchet--capture-through-the-rule"></a>[capture-through-the-rule][]
+- [a-reading-informed-and-revalued][] ← <a id="a-reading-informed-and-revalued--what-holding-for-a-reading-is-worth"></a>[what-holding-for-a-reading-is-worth][] · <a id="a-reading-informed-and-revalued--the-markov-blanket-as-a-coupling-structure"></a>[the-markov-blanket-as-a-coupling-structure][] · <a id="a-reading-informed-and-revalued--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [a-reading-kept-by-its-update][] ← <a id="a-reading-kept-by-its-update--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="a-reading-kept-by-its-update--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][]
 - [a-regularity-kept-and-changed][] ← <a id="a-regularity-kept-and-changed--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="a-regularity-kept-and-changed--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [a-revision-that-opens-a-correction][] ← <a id="a-revision-that-opens-a-correction--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][] · <a id="a-revision-that-opens-a-correction--selection-under-registration-revision"></a>[selection-under-registration-revision][]
@@ -463,6 +464,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-prediction-read-by-what-it-predicts]: theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md
 [a-race-for-position-draws-everything]: theories/becoming/results/records/a-race-for-position-draws-everything.md
 [a-reading-against-the-share-does-not-ratchet]: theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md
+[a-reading-informed-and-revalued]: theories/becoming/results/records/a-reading-informed-and-revalued.md
 [a-reading-kept-by-its-update]: theories/becoming/results/records/a-reading-kept-by-its-update.md
 [a-regularity-kept-and-changed]: theories/becoming/results/records/a-regularity-kept-and-changed.md
 [a-revision-that-opens-a-correction]: theories/becoming/results/records/a-revision-that-opens-a-correction.md
