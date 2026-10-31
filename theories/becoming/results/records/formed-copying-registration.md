@@ -54,7 +54,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying, Courses and Gated (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z, 20261028T085101.429997Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingRegistration by its folder's check (copying-registration-verification/, Lean 4.29.1: 33 new theorems, 54 new audits, 484 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The original paper is reread as the comparator, with no new empirical reanalysis.
+Core: Becoming.Copying, Courses and Gated (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z, 20261028T085101.429997Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingRegistration by its folder's check (copying-registration-verification/, Lean 4.29.1: 33 new theorems, 54 new audits, 484 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The original paper is reread as the comparator, with no new empirical reanalysis.
 
 Canonical source: [CopyingRegistration.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean)
 
@@ -109,6 +109,7 @@ Roles differentiate through docking, reading, transfers and retention in common 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | proof | [Gated.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean) | `Becoming.Gated.KeptBy`, `Becoming.Gated.kept_along_iff`, `Becoming.Gated.change_passes_gate` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
 
 Aliases: `CopyingRegistration.registered_inheritance`, `Becoming.Copying.reading_iff`, `Becoming.CopyingInstances.operate_copies_iff`, `Becoming.CopyingInstances.path_shaped_along`, `Becoming.CopyingInstances.registered_copy_iff`, `Becoming.Courses.reading_completes_iff`, `Becoming.Courses.copy_grows`
 

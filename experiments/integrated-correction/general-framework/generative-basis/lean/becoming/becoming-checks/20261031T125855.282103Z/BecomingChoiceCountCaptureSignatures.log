@@ -1,0 +1,298 @@
+@Becoming.ChoiceCountCapture.selectsThrough : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} {value : Nat → (C → Nat) → O},
+  W.ValuesThrough obs g value →
+    ∀ (update : B → O → B) (start : B) (choice : B → Prop) (t : Nat),
+      W.SelectsThrough obs g t fun l =>
+        choice
+          (Becoming.ChoiceCountCapture.foldAfter update start
+            (Becoming.Learning.prefixOf (Becoming.Web.courseThrough value l) (t + 1)))
+@Becoming.ChoiceCountCapture.chosen_alike : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g : F} {value : Nat → (C → Nat) → O},
+  W.ValuesThrough obs g value →
+    ∀ (update : B → O → B) (start : B) (choice : B → Prop) {t : Nat} {l l' : Nat → C → Nat},
+      W.AlikeThroughUpTo obs g l l' t →
+        (choice
+            (Becoming.ChoiceCountCapture.foldAfter update start
+              (Becoming.Learning.prefixOf (Becoming.Web.courseThrough value l) (t + 1))) ↔
+          choice
+            (Becoming.ChoiceCountCapture.foldAfter update start
+              (Becoming.Learning.prefixOf (Becoming.Web.courseThrough value l') (t + 1))))
+@Becoming.ChoiceCountCapture.unchosen_beyond_coupling : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {g : F} {value : Nat → (C → Nat) → O} {L : Becoming.Flow F C} {part : F → Bool}
+  {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          L.WithinCoupling W obs f g →
+            W.ValuesThrough obs g value →
+              ∀ (update : B → O → B) (start : B) (choice : B → Prop) (t : Nat),
+                choice
+                    (Becoming.ChoiceCountCapture.foldAfter update start
+                      (Becoming.Learning.prefixOf (Becoming.Web.courseThrough value W.level) (t + 1))) ↔
+                  choice
+                    (Becoming.ChoiceCountCapture.foldAfter update start
+                      (Becoming.Learning.prefixOf (Becoming.Web.courseThrough value l) (t + 1)))
+@Becoming.ChoiceCountCapture.memberFolds_alike : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {group : F → Prop} {value : F → Nat → (C → Nat) → O},
+  (∀ (g : F), group g → W.ValuesThrough obs g (value g)) →
+    ∀ (update : B → O → B) (start : B) {t : Nat} {l l' : Nat → C → Nat},
+      W.AlikeThroughAll obs group l l' t →
+        ∀ (members : List F),
+          (∀ (g : F), g ∈ members → group g) →
+            Becoming.ChoiceCountCapture.memberFolds value update start members t l =
+              Becoming.ChoiceCountCapture.memberFolds value update start members t l'
+@Becoming.ChoiceCountCapture.pooled_selectsThrough : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {group : F → Prop} {members : List F},
+  (∀ (g : F), g ∈ members → group g) →
+    ∀ {value : F → Nat → (C → Nat) → O},
+      (∀ (g : F), group g → W.ValuesThrough obs g (value g)) →
+        ∀ (update : B → O → B) (start : B) (choice : List B → Prop) (t : Nat),
+          W.SelectsThroughAll obs group t fun l =>
+            choice (Becoming.ChoiceCountCapture.memberFolds value update start members t l)
+@Becoming.ChoiceCountCapture.pooled_unchosen_beyond : ∀ {F C O : Type} {B : Type u_1} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {L : Becoming.Flow F C} {part : F → Bool} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {group : F → Prop},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinPoolCoupling W obs group g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinPoolCoupling W obs group h) →
+          ∀ {pool : F → Prop},
+            (∀ (g : F), pool g → L.WithinPoolCoupling W obs group g) →
+              ∀ {members : List F},
+                (∀ (g : F), g ∈ members → pool g) →
+                  ∀ {value : F → Nat → (C → Nat) → O},
+                    (∀ (g : F), pool g → W.ValuesThrough obs g (value g)) →
+                      ∀ (update : B → O → B) (start : B) (choice : List B → Prop) (t : Nat),
+                        choice (Becoming.ChoiceCountCapture.memberFolds value update start members t W.level) ↔
+                          choice (Becoming.ChoiceCountCapture.memberFolds value update start members t l)
+@Becoming.ChoiceCountCapture.choose_favoured : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  g.favours → Becoming.ChoiceCountCapture.choose x g = { carrier := x.carrier + 1, other := x.other, other_pos := ⋯ }
+@Becoming.ChoiceCountCapture.choose_unfavoured : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  ¬g.favours → Becoming.ChoiceCountCapture.choose x g = { carrier := x.carrier, other := x.other + 1, other_pos := ⋯ }
+Becoming.ChoiceCountCapture.choose_raises : Becoming.RuleCapture.Raises Becoming.RuleCapture.CarrierCounts.order
+  Becoming.RuleCapture.CarrierCounts.favours Becoming.ChoiceCountCapture.choose
+@Becoming.ChoiceCountCapture.choose_rises_strictly : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  g.favours →
+    x.carrier * (Becoming.ChoiceCountCapture.choose x g).other <
+      (Becoming.ChoiceCountCapture.choose x g).carrier * x.other
+Becoming.ChoiceCountCapture.choose_lowers : Becoming.RuleCapture.Raises
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order) (fun g => g.carrier < g.other)
+  Becoming.ChoiceCountCapture.choose
+@Becoming.ChoiceCountCapture.weighted_reads : ∀ {κc κo : Nat} {pos : 0 < κo},
+  Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+    (Becoming.ChoiceCountCapture.weighted κc κo pos)
+@Becoming.ChoiceCountCapture.weighted_favours_iff : ∀ {κc κo : Nat} {pos : 0 < κo}
+  {x g : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.ChoiceCountCapture.weighted κc κo pos x g).favours ↔ κo * x.other ≤ κc * x.carrier
+@Becoming.ChoiceCountCapture.start_locked : ∀ {κc κo : Nat} {pos : 0 < κo} {x : Becoming.RuleCapture.CarrierCounts},
+  κo * x.other ≤ κc * x.carrier →
+    Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.ChoiceCountCapture.weighted κc κo pos) (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x)
+@Becoming.ChoiceCountCapture.counted_locks : ∀ {κc κo : Nat} {pos : 0 < κo} {x : Becoming.RuleCapture.CarrierCounts},
+  κo * x.other ≤ κc * x.carrier →
+    ∀ (reads : Nat → Bool) (t : Nat),
+      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+          (Becoming.ChoiceCountCapture.weighted κc κo pos)
+          (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos) reads
+            (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t) ∧
+        Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).fst ∧
+          Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).snd
+@Becoming.ChoiceCountCapture.counted_chooses : ∀ {κc κo : Nat} {pos : 0 < κo} {x : Becoming.RuleCapture.CarrierCounts},
+  κo * x.other ≤ κc * x.carrier →
+    ∀ (reads : Nat → Bool) (t : Nat),
+      (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos) reads
+            (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).fst =
+        {
+          carrier :=
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                    reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.carrier +
+              1,
+          other :=
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                  reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.other,
+          other_pos := ⋯ }
+@Becoming.ChoiceCountCapture.lower_strict : ∀ {g g' : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order).le g g' →
+    g.carrier < g.other → g'.carrier < g'.other
+@Becoming.ChoiceCountCapture.counted_locks_down : ∀ {κc κo : Nat} {pos : 0 < κo}
+  {x : Becoming.RuleCapture.CarrierCounts},
+  κc * x.carrier < κo * x.other →
+    ∀ (reads : Nat → Bool) (t : Nat),
+      (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos) reads
+                (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd.carrier <
+          (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos) reads
+                (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd.other ∧
+        (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order).le
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).fst ∧
+          (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order).le
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).snd
+@Becoming.ChoiceCountCapture.counted_chooses_down : ∀ {κc κo : Nat} {pos : 0 < κo}
+  {x : Becoming.RuleCapture.CarrierCounts},
+  κc * x.carrier < κo * x.other →
+    ∀ (reads : Nat → Bool) (t : Nat),
+      (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos) reads
+            (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) (t + 1)).fst =
+        {
+          carrier :=
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                  reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.carrier,
+          other :=
+            (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                    reads (x, Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.other +
+              1,
+          other_pos := ⋯ }
+@Becoming.ChoiceCountCapture.posterior_count_falls : ∀ {κc κo s : Nat} {pos : 0 < κo}
+  (x : Becoming.RuleCapture.CarrierCounts),
+  0 < x.carrier →
+    κc < κo →
+      (x.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)).carrier * x.other <
+        x.carrier * (x.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)).other
+@Becoming.ChoiceCountCapture.posterior_course_falls : ∀ {κc κo s : Nat} {pos : 0 < κo}
+  {x : Becoming.RuleCapture.CarrierCounts},
+  0 < s →
+    0 < x.carrier →
+      κc < κo →
+        ∀ (n : Nat),
+          (Becoming.Law.orbit (fun y => y.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)) x (n + 1)).carrier *
+              (Becoming.Law.orbit (fun y => y.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)) x n).other <
+            (Becoming.Law.orbit (fun y => y.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)) x n).carrier *
+              (Becoming.Law.orbit (fun y => y.select (Becoming.ChoiceCountCapture.byScore κc κo s pos)) x (n + 1)).other
+@Becoming.ChoiceCountCapture.counted_outlives_loss : ∀ {κc κo : Nat} {pos : 0 < κo}
+  {fB : Becoming.RuleCapture.CarrierCounts × Nat → Becoming.RuleCapture.CarrierCounts → Nat},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts} {b : Nat},
+      κo * x.other ≤ κc * x.carrier →
+        ∀ (reads : Nat → Bool) (t : Nat),
+          b + t ≤
+              (Becoming.Pace.paced (Becoming.ClosedCapture.join Becoming.ChoiceCountCapture.choose fB)
+                    (Becoming.ClosedCapture.joinRead (Becoming.ChoiceCountCapture.weighted κc κo pos)) reads
+                    ((x, b), Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.snd ∧
+            Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                Becoming.RuleCapture.CarrierCounts.favours (Becoming.ChoiceCountCapture.weighted κc κo pos)
+                ((Becoming.Pace.paced (Becoming.ClosedCapture.join Becoming.ChoiceCountCapture.choose fB)
+                        (Becoming.ClosedCapture.joinRead (Becoming.ChoiceCountCapture.weighted κc κo pos)) reads
+                        ((x, b), Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.fst,
+                  (Becoming.Pace.paced (Becoming.ClosedCapture.join Becoming.ChoiceCountCapture.choose fB)
+                      (Becoming.ClosedCapture.joinRead (Becoming.ChoiceCountCapture.weighted κc κo pos)) reads
+                      ((x, b), Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd) ∧
+              Becoming.RuleCapture.CarrierCounts.order.le x
+                  (Becoming.Pace.paced (Becoming.ClosedCapture.join Becoming.ChoiceCountCapture.choose fB)
+                        (Becoming.ClosedCapture.joinRead (Becoming.ChoiceCountCapture.weighted κc κo pos)) reads
+                        ((x, b), Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).fst.fst ∧
+                Becoming.RuleCapture.CarrierCounts.order.le (Becoming.ChoiceCountCapture.weighted κc κo pos x x)
+                  (Becoming.Pace.paced (Becoming.ClosedCapture.join Becoming.ChoiceCountCapture.choose fB)
+                      (Becoming.ClosedCapture.joinRead (Becoming.ChoiceCountCapture.weighted κc κo pos)) reads
+                      ((x, b), Becoming.ChoiceCountCapture.weighted κc κo pos x x) t).snd
+Becoming.ChoiceCountCapture.Witness.two_pos : 0 < 2
+Becoming.ChoiceCountCapture.Witness.four_pos : 0 < 4
+Becoming.ChoiceCountCapture.Witness.counted_beats_score : ∀ (reads : Nat → Bool) (t : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.counts,
+            Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+              Becoming.ChoiceCountCapture.Witness.counts Becoming.ChoiceCountCapture.Witness.counts)
+          (t + 1)).fst.carrier =
+    (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+            (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+            (Becoming.ChoiceCountCapture.Witness.counts,
+              Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+                Becoming.ChoiceCountCapture.Witness.counts Becoming.ChoiceCountCapture.Witness.counts)
+            t).fst.carrier +
+      1
+Becoming.ChoiceCountCapture.Witness.score_decides : ∀ (reads : Nat → Bool) (t : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.even,
+            Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+              Becoming.ChoiceCountCapture.Witness.even Becoming.ChoiceCountCapture.Witness.even)
+          t).snd.carrier <
+    (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.even,
+            Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+              Becoming.ChoiceCountCapture.Witness.even Becoming.ChoiceCountCapture.Witness.even)
+          t).snd.other
+Becoming.ChoiceCountCapture.Witness.moved_locks_down : ∀ (reads : Nat → Bool) (t : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.moved,
+            Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+              Becoming.ChoiceCountCapture.Witness.moved Becoming.ChoiceCountCapture.Witness.moved)
+          t).snd.carrier <
+    (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.moved,
+            Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos
+              Becoming.ChoiceCountCapture.Witness.moved Becoming.ChoiceCountCapture.Witness.moved)
+          t).snd.other
+Becoming.ChoiceCountCapture.Witness.posterior_share_falls : (Becoming.ChoiceCountCapture.Witness.counts.select
+        (Becoming.ChoiceCountCapture.byScore 1 2 1 Becoming.ChoiceCountCapture.Witness.two_pos)).carrier *
+    Becoming.ChoiceCountCapture.Witness.counts.other <
+  Becoming.ChoiceCountCapture.Witness.counts.carrier *
+    (Becoming.ChoiceCountCapture.Witness.counts.select
+        (Becoming.ChoiceCountCapture.byScore 1 2 1 Becoming.ChoiceCountCapture.Witness.two_pos)).other
+Becoming.ChoiceCountCapture.Witness.after_one_still_first : (Becoming.ChoiceCountCapture.weighted 1 2
+    Becoming.ChoiceCountCapture.Witness.two_pos
+    (Becoming.ChoiceCountCapture.Witness.counts.select
+      (Becoming.ChoiceCountCapture.byScore 1 2 1 Becoming.ChoiceCountCapture.Witness.two_pos))
+    Becoming.ChoiceCountCapture.Witness.counts).favours
+Becoming.ChoiceCountCapture.Witness.after_two_turns : ¬(Becoming.ChoiceCountCapture.weighted 1 2
+      Becoming.ChoiceCountCapture.Witness.two_pos
+      ((Becoming.ChoiceCountCapture.Witness.counts.select
+            (Becoming.ChoiceCountCapture.byScore 1 2 1 Becoming.ChoiceCountCapture.Witness.two_pos)).select
+        (Becoming.ChoiceCountCapture.byScore 1 2 1 Becoming.ChoiceCountCapture.Witness.two_pos))
+      Becoming.ChoiceCountCapture.Witness.counts).favours
+Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down : Becoming.RuleCapture.Locked
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order) (fun g => g.carrier < g.other)
+  (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos)
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+    (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) (fun x => true)
+    (Becoming.ChoiceCountCapture.Witness.counts, Becoming.ChoiceCountCapture.Witness.Stale.stale) 5)
+Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_never_first : ∀ (k : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) (fun x => true)
+          (Becoming.ChoiceCountCapture.Witness.counts, Becoming.ChoiceCountCapture.Witness.Stale.stale)
+          (5 + k)).snd.carrier <
+    (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 2 Becoming.ChoiceCountCapture.Witness.two_pos) (fun x => true)
+          (Becoming.ChoiceCountCapture.Witness.counts, Becoming.ChoiceCountCapture.Witness.Stale.stale)
+          (5 + k)).snd.other
+Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up : Becoming.RuleCapture.Locked
+  Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+  (Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos)
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+    (Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos)
+    Becoming.ChoiceCountCapture.Witness.Stale.late
+    (Becoming.ChoiceCountCapture.Witness.counts, Becoming.ChoiceCountCapture.Witness.counts) 2)
+Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_keeps_first : ∀ (k : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+        (Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos)
+        Becoming.ChoiceCountCapture.Witness.Stale.late
+        (Becoming.ChoiceCountCapture.Witness.counts, Becoming.ChoiceCountCapture.Witness.counts) (2 + k)).snd.favours
+Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down : ∀ (reads : Nat → Bool) (t : Nat),
+  (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.counts,
+            Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos
+              Becoming.ChoiceCountCapture.Witness.counts Becoming.ChoiceCountCapture.Witness.counts)
+          t).snd.carrier <
+    (Becoming.Pace.paced Becoming.ChoiceCountCapture.choose
+          (Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos) reads
+          (Becoming.ChoiceCountCapture.Witness.counts,
+            Becoming.ChoiceCountCapture.weighted 1 4 Becoming.ChoiceCountCapture.Witness.four_pos
+              Becoming.ChoiceCountCapture.Witness.counts Becoming.ChoiceCountCapture.Witness.counts)
+          t).snd.other

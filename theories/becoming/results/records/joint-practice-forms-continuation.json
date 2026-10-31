@@ -135,7 +135,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked, periphery only: JointPracticeContinuation by its folder's check (joint-practice-continuation-verification/, Lean 4.29.1: 22 new theorems, 51 new audits, 132 in the three-module closure) and MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z, Lean 4.29.1), reporting at most propext, Quot.sound and Classical.choice for the cited declarations, some none. The author's counterreview and readings of primary abstracts are separate; no independent review.",
+    "en": "Machine-checked, periphery only: JointPracticeContinuation by its folder's check (joint-practice-continuation-verification/, Lean 4.29.1: 22 new theorems, 51 new audits, 132 in the three-module closure) and MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z, Lean 4.29.1), reporting at most propext, Quot.sound and Classical.choice for the cited declarations, some none. The author's counterreview and readings of primary abstracts are separate; no independent review.",
     "zh": "机器检查，只有外围：JointPracticeContinuation 由目录检查（joint-practice-continuation-verification/，4.29.1，新定理22、审计51、三模块闭包132），MachineInstances 由实例检查器（machine-instances-checks/，4.29.1），所引声明至多 propext、Quot.sound、Classical.choice，有的为空。作者反审与原始摘要阅读另列；无独立审查。"
   },
   "next_delta": {
@@ -278,6 +278,12 @@
       "role": "receipt",
       "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+      "role": "receipt",
+      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -290,7 +296,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
       "sha256_pointer": "/source_sha256/MachineInstances",
       "success_pointer": "/status",
       "success_value": "passed"

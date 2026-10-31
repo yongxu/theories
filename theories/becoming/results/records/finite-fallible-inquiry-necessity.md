@@ -73,7 +73,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked, periphery. The current bytes of ScientificInquiryNecessity are bound to receipt 20261008T135418.446592Z (check_scientific_inquiry_necessity.py), those of the bridge Becoming.FallibleInquiry to receipt 20261020T161546.707477Z (check_fallible_inquiry.py), both Lean 4.29.1. The cited declarations use at most propext and Quot.sound, some none; the pure core imports neither module. No empirical experiment or independent review.
+Machine-checked, periphery. The current bytes of ScientificInquiryNecessity are bound to receipt 20261008T135418.446592Z (check_scientific_inquiry_necessity.py), those of the bridge Becoming.FallibleInquiry to receipt 20261031T130828.999853Z (check_fallible_inquiry.py), both Lean 4.29.1. The cited declarations use at most propext and Quot.sound, some none; the pure core imports neither module. No empirical experiment or independent review.
 
 Canonical source: [ScientificInquiryNecessity.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean)
 
@@ -129,6 +129,7 @@ The varying part, coupling and response differentiate within one unfolding. The 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json) | — |
 
 Aliases: `Generative.ScientificInquiryNecessity.fallible_inquiry_bound`, `Generative.ScientificInquiryNecessity.distributional_coverage_bound`, `Generative.ScientificInquiryNecessity.adaptive_service_excludes_blindness`, `Becoming.FallibleInquiry.answer_alike_beyond_response`, `Becoming.FallibleInquiry.different_answers_not_beyond`, `Becoming.FallibleInquiry.answer_alike_beyond_law`, `Becoming.FallibleInquiry.coverage_le_errors_add_reach`, `Becoming.FallibleInquiry.error_bounds_require_reach`, `Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors`, `Becoming.FallibleInquiry.alike_with_common_imbalance`, `Becoming.FallibleInquiry.answer_alike_with_common_imbalance`
 

@@ -1,0 +1,5 @@
+'Generative.WisdomFallibleJudgment.uniform_failure_weight' depends on axioms: [propext]
+'Generative.WisdomFallibleJudgment.bounded_risk_without_uniform_completion' depends on axioms: [propext]
+'Generative.WisdomFallibleJudgment.biased_bound_fails' depends on axioms: [propext]
+'Generative.WisdomFallibleJudgment.matching_realizations_with_different_certificates' depends on axioms: [propext]
+'Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate' depends on axioms: [propext]

@@ -1,0 +1,16 @@
+import LearningCorrespondence
+#check @Becoming.LearningCorrespondence.acquire_exact
+#check @Becoming.LearningCorrespondence.agree_at
+#check @Becoming.LearningCorrespondence.uniform_determines
+#check @Becoming.LearningCorrespondence.nonuniform_not_determined
+#check @Becoming.LearningCorrespondence.develop_orbit
+#check @Becoming.LearningCorrespondence.hebbian_determined
+#check @Becoming.LearningCorrespondence.hebbian_activity_law_iff
+#check @Becoming.LearningCorrespondence.weights_matter
+#check @Becoming.LearningCorrespondence.hebbian_no_activity_law
+#check @Becoming.LearningCorrespondence.updating_determined
+#check @Becoming.LearningCorrespondence.updating_network_law_iff
+#check @Becoming.LearningCorrespondence.responsive_kept
+#check @Becoming.LearningCorrespondence.responsive_learns
+#check @Becoming.LearningCorrespondence.route_matters
+#check @Becoming.LearningCorrespondence.updating_no_network_law

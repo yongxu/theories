@@ -410,6 +410,12 @@
       "role": "receipt",
       "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z/verification.json",
+      "role": "receipt",
+      "sha256": "ab943bec16788565335e9162d85e41f612b0093af21faafe4eff0748e0f761f2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -422,14 +428,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranchingCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261020T162012.952848Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z/verification.json",
       "sha256_pointer": "/source_sha256/FiniteBranchingCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranching.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261020T162012.952848Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z/verification.json",
       "sha256_pointer": "/source_sha256/FiniteBranching",
       "success_pointer": "/status",
       "success_value": "passed"

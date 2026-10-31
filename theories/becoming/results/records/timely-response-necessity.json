@@ -150,8 +150,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked. The current bytes of the core module Becoming.TimedResponse are bound to the consolidated core checker's receipt becoming-checks/20261019T160413.543456Z (check_becoming.py, Lean 4.29.1), every cited declaration with an empty axiom report; those of the periphery bridge Becoming.FallibleInquiry to fallible-inquiry-checks/20261020T161546.707477Z (check_fallible_inquiry.py, Lean 4.29.1), where the three cited theorems use propext and Quot.sound. No empirical experiment or independent review.",
-    "zh": "核心 Becoming.TimedResponse 当前字节绑定 becoming-checks/20261019T160413.543456Z（check_becoming.py），所引声明不用公理；外围 Becoming.FallibleInquiry 绑定 fallible-inquiry-checks/20261020T161546.707477Z（check_fallible_inquiry.py），所引三条定理用 propext、Quot.sound；均为 Lean 4.29.1；无经验实验或独立审查。"
+    "en": "Machine-checked. The current bytes of the core module Becoming.TimedResponse are bound to the consolidated core checker's receipt becoming-checks/20261019T160413.543456Z (check_becoming.py, Lean 4.29.1), every cited declaration with an empty axiom report; those of the periphery bridge Becoming.FallibleInquiry to fallible-inquiry-checks/20261031T130828.999853Z (check_fallible_inquiry.py, Lean 4.29.1), where the three cited theorems use propext and Quot.sound. No empirical experiment or independent review.",
+    "zh": "核心 Becoming.TimedResponse 当前字节绑定 becoming-checks/20261019T160413.543456Z（check_becoming.py），所引声明不用公理；外围 Becoming.FallibleInquiry 绑定 fallible-inquiry-checks/20261031T130828.999853Z（check_fallible_inquiry.py），所引三条定理用 propext、Quot.sound；均为 Lean 4.29.1；无经验实验或独立审查。"
   },
   "next_delta": {
     "en": "Fix an actual task's initial evidence, command assignment and delivery and execution conditions, and test whether pairing its courses is warranted, so that the deadline bound applies to it.",
@@ -370,6 +370,12 @@
       "role": "receipt",
       "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json",
+      "role": "receipt",
+      "sha256": "65df2d39e6fd1bc697e7f03e939c098dab5e6ba37a08dbe2b4a977e6e4229e0c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -382,7 +388,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FallibleInquiry",
       "success_pointer": "/status",
       "success_value": "passed"

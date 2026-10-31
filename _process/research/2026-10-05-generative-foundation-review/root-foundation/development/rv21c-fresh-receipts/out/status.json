@@ -1,0 +1,394 @@
+{
+  "fallible-inquiry-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T130828.999853Z",
+    "retained_run": "fallible-inquiry-checks/20261031T130828.999853Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161546.707477Z",
+    "seconds": 346,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 31, \"declaration_audits\": 37, \"axioms\": [\"Quot.sound\", \"propext\"], \"inherited_modules\": 41, \"lean_steps_run\": 5, \"lean_steps_reused\": 40, \"lean\": \"elan which lean\", \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-verification.json\"}\n"
+  },
+  "correction-inquiry-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T131415.384434Z",
+    "retained_run": "correction-inquiry-checks/20261031T131415.384434Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161757.201244Z",
+    "seconds": 237,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 7, \"declaration_audits\": 8, \"axioms\": [], \"inherited_modules\": 367, \"lean_steps_run\": 371, \"lean_steps_reused\": 0, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-verification.json\"}\n"
+  },
+  "machine-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T131812.213702Z",
+    "retained_run": "machine-instances-checks/20261031T131812.213702Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161859.257200Z",
+    "seconds": 35,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 103, \"declaration_audits\": 124, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 73, \"lean_steps_run\": 29, \"lean_steps_reused\": 48, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-verification.json\"}\n"
+  },
+  "learning-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T131847.549129Z",
+    "retained_run": "learning-correspondence-checks/20261031T131847.549129Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161905.961078Z",
+    "seconds": 63,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 15, \"declaration_audits\": 19, \"nonempty_audits\": {\"Becoming.LearningCorrespondence.develop_orbit\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_determined\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_activity_law_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.weights_matter\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_no_activity_law\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_determined\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_network_law_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.responsive_kept\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.responsive_learns\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.route_matters\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_no_network_law\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 46, \"lean_steps_run\": 9, \"lean_steps_reused\": 41, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json\"}\n"
+  },
+  "copying-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T131950.855717Z",
+    "retained_run": "copying-instances-checks/20261031T131950.855717Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161910.956874Z",
+    "seconds": 56,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 86, \"declaration_audits\": 98, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 23, \"lean_steps_run\": 14, \"lean_steps_reused\": 13, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-verification.json\"}\n"
+  },
+  "retrodiction-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132046.721958Z",
+    "retained_run": "retrodiction-instances-checks/20261031T132046.721958Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261031T132046.721958Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161914.501944Z",
+    "seconds": 17,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 21, \"declaration_audits\": 27, \"axioms\": [\"Quot.sound\", \"propext\"], \"inherited_modules\": 15, \"lean_steps_run\": 5, \"lean_steps_reused\": 14, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-verification.json\"}\n"
+  },
+  "market-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132103.724349Z",
+    "retained_run": "market-instances-checks/20261031T132103.724349Z",
+    "new_folders": [
+      "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161917.735916Z",
+    "seconds": 42,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 45, \"declaration_audits\": 53, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 46, \"lean_steps_run\": 10, \"lean_steps_reused\": 40, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/market-generativity/formal/market-instances-verification.json\"}\n"
+  },
+  "protocol-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132145.271099Z",
+    "retained_run": "protocol-instances-checks/20261031T132145.271099Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161923.157515Z",
+    "seconds": 38,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 19, \"declaration_audits\": 31, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 22, \"lean_steps_run\": 15, \"lean_steps_reused\": 11, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-verification.json\"}\n"
+  },
+  "versioned-task-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132223.713396Z",
+    "retained_run": "versioned-task-instances-checks/20261031T132223.713396Z",
+    "new_folders": [
+      "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161926.448088Z",
+    "seconds": 404,
+    "passed": true,
+    "tail": ", \"Becoming.VersionedTaskInstances.valid_pending\": [\"propext\"], \"Becoming.VersionedTaskInstances.head_completes\": [\"propext\"], \"Becoming.VersionedTaskInstances.valid_head_instance\": [\"propext\"], \"Becoming.VersionedTaskInstances.head_pending_before\": [\"propext\"], \"Becoming.VersionedTaskInstances.retarget_pending\": [\"propext\"], \"Becoming.VersionedTaskInstances.revised_head_instance\": [\"propext\"], \"Becoming.VersionedTaskInstances.review_course_covered_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.enact_isSome_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_completes_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_of_completed\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_eq\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_isSome_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.harmful_continuation_instance\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.relevant_risk_eq\": [\"propext\"], \"Becoming.VersionedTaskInstances.enact_losses\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_losses\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_adds_loss_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.covered_review_instance\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.reviews\": [\"propext\"], \"Becoming.VersionedTaskInstances.clears\": [\"propext\"], \"Becoming.VersionedTaskInstances.losses_kept\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.losses_kept_along\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 30, \"lean_steps_run\": 11, \"lean_steps_reused\": 23, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/market-generativity/meta-attractor/versioned-task-instances-verification.json\"}\n"
+  },
+  "shared-stock-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132907.790736Z",
+    "retained_run": "shared-stock-instances-checks/20261031T132907.790736Z",
+    "new_folders": [
+      "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261031T132907.790736Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161930.665727Z",
+    "seconds": 16,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 5, \"nonempty_audits\": {}, \"inherited_modules\": 31, \"lean_steps_run\": 5, \"lean_steps_reused\": 30, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/market-generativity/meta-attractor/shared-stock-instances-verification.json\"}\n"
+  },
+  "continuation-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T132923.838546Z",
+    "retained_run": "continuation-correspondence-checks/20261031T132923.838546Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161935.181496Z",
+    "seconds": 81,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 13, \"declaration_audits\": 17, \"nonempty_audits\": {\"Becoming.ContinuationCorrespondence.classicalChoice\": [\"Classical.choice\"], \"Becoming.ContinuationCorrespondence.viable_iff_plan_by_core\": [\"Classical.choice\"], \"Becoming.ContinuationCorrespondence.toPlan_zip\": [\"propext\", \"Quot.sound\"], \"Becoming.ContinuationCorrespondence.compatible_iff\": [\"propext\"], \"Becoming.ContinuationCorrespondence.joint_plan_composition_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.ContinuationCorrespondence.compatibility_necessary_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 13, \"lean_steps_run\": 6, \"lean_steps_reused\": 11, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-verification.json\"}\n"
+  },
+  "transmission-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133044.516133Z",
+    "retained_run": "transmission-correspondence-checks/20261031T133044.516133Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261031T133044.516133Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161938.520043Z",
+    "seconds": 324,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 12, \"declaration_audits\": 20, \"nonempty_audits\": {\"Becoming.TransmissionCorrespondence.pool\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.lineage_released_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.process\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.material_balanced\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.support_balanced\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.course_conserves\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.procedure\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.successors\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.faithful_procedure\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.family_unchanged\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.faithful_selects\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.historyOut\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.history_selects\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 38, \"lean_steps_run\": 7, \"lean_steps_reused\": 35, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-verification.json\"}\n"
+  },
+  "preparation-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133608.754102Z",
+    "retained_run": "preparation-correspondence-checks/20261031T133608.754102Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161943.503298Z",
+    "seconds": 99,
+    "passed": true,
+    "tail": "eq_remove\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.route_some_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.preparation_empties_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.preparation_leaves\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.component_is_closure\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.certificate_exact_split_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.cut_separates\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.returns_differ\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.adjacent_iff_links\": [\"propext\"], \"Becoming.PreparationCorrespondence.connected_iff_links\": [\"propext\"], \"Becoming.PreparationCorrespondence.divide_attached\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.develop_attached\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.cut_attached\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.bond_cut_separates\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.every_grown_bond_separates\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.reinforced_cut_unchanged\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 54, \"lean_steps_run\": 10, \"lean_steps_reused\": 48, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-verification.json\"}\n"
+  },
+  "judging-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133748.088094Z",
+    "retained_run": "judging-correspondence-checks/20261031T133748.088094Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161948.968917Z",
+    "seconds": 23,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 7, \"nonempty_audits\": {\"Becoming.JudgingCorrespondence.endpoint\": [\"propext\"], \"Becoming.JudgingCorrespondence.certificate\": [\"propext\"], \"Becoming.JudgingCorrespondence.mem_realizations\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.judges_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.endpoint_judge_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 50, \"lean_steps_run\": 9, \"lean_steps_reused\": 45, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-verification.json\"}\n"
+  },
+  "renewing-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133811.050699Z",
+    "retained_run": "renewing-correspondence-checks/20261031T133811.050699Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261031T133811.050699Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161953.940017Z",
+    "seconds": 25,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 10, \"declaration_audits\": 13, \"nonempty_audits\": {\"Becoming.RenewingCorrespondence.remaining_falls\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.forms_while_held\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.moves_length\": [\"propext\"], \"Becoming.RenewingCorrespondence.moves_succ\": [\"propext\"], \"Becoming.RenewingCorrespondence.total_append\": [\"propext\"], \"Becoming.RenewingCorrespondence.total_moves\": [\"propext\"], \"Becoming.RenewingCorrespondence.path_trace\": [\"propext\"], \"Becoming.RenewingCorrespondence.beyond_current_bounded_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.beyond_current_ceases_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.shared_formation_ends_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 18, \"lean_steps_run\": 6, \"lean_steps_reused\": 16, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-verification.json\"}\n"
+  },
+  "substitution-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133836.069337Z",
+    "retained_run": "substitution-correspondence-checks/20261031T133836.069337Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T161957.579185Z",
+    "seconds": 23,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 10, \"nonempty_audits\": {\"Becoming.SubstitutionCorrespondence.through\": [\"Quot.sound\"], \"Becoming.SubstitutionCorrespondence.supplies\": [\"Quot.sound\"], \"Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core\": [\"Quot.sound\"]}, \"inherited_modules\": 47, \"lean_steps_run\": 6, \"lean_steps_reused\": 45, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-verification.json\"}\n"
+  },
+  "organization-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133859.385075Z",
+    "retained_run": "organization-correspondence-checks/20261031T133859.385075Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261031T133859.385075Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261025T185035.252368Z",
+    "seconds": 16,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 3, \"declaration_audits\": 3, \"nonempty_audits\": {\"Becoming.OrganizationCorrespondence.formation_required_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.OrganizationCorrespondence.coordination_is_required_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 28, \"lean_steps_run\": 5, \"lean_steps_reused\": 27, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-verification.json\"}\n"
+  },
+  "living-organization-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133915.555151Z",
+    "retained_run": "living-organization-correspondence-checks/20261031T133915.555151Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261031T133915.555151Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T162006.335470Z",
+    "seconds": 10,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 6, \"nonempty_audits\": {\"Becoming.LivingOrganizationCorrespondence.presence_reflected\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.entry_then_present\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 8, \"lean_steps_run\": 5, \"lean_steps_reused\": 7, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-verification.json\"}\n"
+  },
+  "prefix-safety-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133925.659050Z",
+    "retained_run": "prefix-safety-correspondence-checks/20261031T133925.659050Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261031T133925.659050Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T162009.405485Z",
+    "seconds": 10,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 9, \"declaration_audits\": 9, \"nonempty_audits\": {\"Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.markov_classical\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 19, \"lean_steps_run\": 5, \"lean_steps_reused\": 18, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-verification.json\"}\n"
+  },
+  "finite-branching-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133936.018674Z",
+    "retained_run": "finite-branching-correspondence-checks/20261031T133936.018674Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T162012.952848Z",
+    "seconds": 16,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 9, \"declaration_audits\": 10, \"nonempty_audits\": {\"Becoming.FiniteBranchingCorrespondence.either_classical\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 41, \"lean_steps_run\": 5, \"lean_steps_reused\": 40, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-verification.json\"}\n"
+  },
+  "selection-relabel-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T133952.181485Z",
+    "retained_run": "selection-relabel-correspondence-checks/20261031T133952.181485Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261031T133952.181485Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T162018.010437Z",
+    "seconds": 11,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 13, \"declaration_audits\": 72, \"nonempty_audits\": {}, \"inherited_modules\": 37, \"lean_steps_run\": 6, \"lean_steps_reused\": 35, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-verification.json\"}\n"
+  },
+  "ideals-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134003.600817Z",
+    "retained_run": "ideals-correspondence-checks/20261031T134003.600817Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261031T134003.600817Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261020T162022.465111Z",
+    "seconds": 19,
+    "passed": true,
+    "tail": "[\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.history_listIdeal\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.settles_of_bounded\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.decided_classical\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.ideal_classification_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.historyPrefix_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.history_order_iff_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.historyIdeal_injective_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.refutable_of_wordIdeal\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.trace_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.finiteOnly_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.recurrence_ideal_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.represented_ideal_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.history_admitted_iff_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 40, \"lean_steps_run\": 7, \"lean_steps_reused\": 37, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-verification.json\"}\n"
+  },
+  "entropy-production-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134022.206464Z",
+    "retained_run": "entropy-production-checks/20261031T134022.206464Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261031T134022.206464Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261027T042508.827829Z",
+    "seconds": 34,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 44, \"declaration_audits\": 74, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 29, \"lean_steps_run\": 4, \"lean_steps_reused\": 29, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-verification.json\"}\n"
+  },
+  "cells-under-noise-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134056.109386Z",
+    "retained_run": "cells-under-noise-checks/20261031T134056.109386Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261030T160959.698859Z",
+    "seconds": 34,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 57, \"declaration_audits\": 76, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 90, \"lean_steps_run\": 4, \"lean_steps_reused\": 90, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-verification.json\"}\n"
+  },
+  "expected-free-energy-reals-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134130.030892Z",
+    "retained_run": "expected-free-energy-reals-checks/20261031T134130.030892Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261030T101649.229011Z",
+    "seconds": 34,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 49, \"declaration_audits\": 68, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 59, \"lean_steps_run\": 5, \"lean_steps_reused\": 58, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-verification.json\"}\n"
+  },
+  "free-energy-reals-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134204.303683Z",
+    "retained_run": "free-energy-reals-checks/20261031T134204.303683Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261030T043328.214810Z",
+    "seconds": 27,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 70, \"declaration_audits\": 76, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 57, \"lean_steps_run\": 3, \"lean_steps_reused\": 58, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-verification.json\"}\n"
+  },
+  "regime-reals-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134231.224593Z",
+    "retained_run": "regime-reals-checks/20261031T134231.224593Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261021T102713.696033Z",
+    "seconds": 31,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 14, \"declaration_audits\": 17, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 65, \"lean_steps_run\": 4, \"lean_steps_reused\": 65, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-verification.json\"}\n"
+  },
+  "representation-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261031T134302.467521Z",
+    "retained_run": "representation-checks/20261031T134302.467521Z",
+    "new_folders": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z"
+    ],
+    "empty_new_folders": [],
+    "previous_utc": "20261022T151119.678274Z",
+    "seconds": 32,
+    "passed": true,
+    "tail": "{\"status\": \"passed\", \"theorems\": 47, \"declaration_audits\": 62, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 41, \"lean_steps_run\": 4, \"lean_steps_reused\": 41, \"receipt\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json\"}\n"
+  }
+}

@@ -1,0 +1,26 @@
+import Becoming.Clearing
+#print axioms Becoming.Clearing.Formation
+#print axioms Becoming.Clearing.Place
+#print axioms Becoming.Clearing.cleared
+#print axioms Becoming.Clearing.habitatLevel
+#print axioms Becoming.Clearing.dwellerLive
+#print axioms Becoming.Clearing.flow
+#print axioms Becoming.Clearing.web
+#print axioms Becoming.Clearing.balances
+#print axioms Becoming.Clearing.dependent
+#print axioms Becoming.Clearing.dissipative
+#print axioms Becoming.Clearing.fed
+#print axioms Becoming.Clearing.undermines_within_renewal
+#print axioms Becoming.Clearing.fedBy_source
+#print axioms Becoming.Clearing.clearerPart
+#print axioms Becoming.Clearing.alongDependence
+#print axioms Becoming.Clearing.withheldLevel
+#print axioms Becoming.Clearing.withheld
+#print axioms Becoming.Clearing.admitted_without
+#print axioms Becoming.Clearing.unsupported_with
+#print axioms Becoming.Clearing.narrows
+#print axioms Becoming.Clearing.loses_beyond
+#print axioms Becoming.Clearing.renewing_over_resource
+#print axioms Becoming.Clearing.admitted_all_without
+#print axioms Becoming.Clearing.dependenceRegion
+#print axioms Becoming.Clearing.centers_disagree

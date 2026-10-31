@@ -1,0 +1,14 @@
+import SelectionRelabelCorrespondence
+#check @Becoming.SelectionRelabelCorrespondence.transpose_eq_swap
+#check @Becoming.SelectionRelabelCorrespondence.treatsAlike_iff
+#check @Becoming.SelectionRelabelCorrespondence.lotteryAlike_iff
+#check @Becoming.SelectionRelabelCorrespondence.alone_iff
+#check @Becoming.SelectionRelabelCorrespondence.tied_not_served_by_core
+#check @Becoming.SelectionRelabelCorrespondence.first_lt
+#check @Becoming.SelectionRelabelCorrespondence.all_tied_forces_withholding_by_core
+#check @Becoming.SelectionRelabelCorrespondence.servable_iff_untied_by_core
+#check @Becoming.SelectionRelabelCorrespondence.tied_equal_weight_by_core
+#check @Becoming.SelectionRelabelCorrespondence.full_tie_equal_weights_by_core
+#check @Becoming.SelectionRelabelCorrespondence.uniform_alike_by_core
+#check @Becoming.SelectionRelabelCorrespondence.pointMass_one
+#check @Becoming.SelectionRelabelCorrespondence.point_mass_not_alike_at_tie_by_core

@@ -1,0 +1,107 @@
+'Becoming.IdealsCorrespondence.order' does not depend on any axioms
+'Becoming.IdealsCorrespondence.toCore' does not depend on any axioms
+'Becoming.IdealsCorrespondence.ofCore' does not depend on any axioms
+'Becoming.IdealsCorrespondence.coreClass' does not depend on any axioms
+'Becoming.IdealsCorrespondence.ofCore_toCore' does not depend on any axioms
+'Becoming.IdealsCorrespondence.toCore_ofCore' does not depend on any axioms
+'Becoming.IdealsCorrespondence.toCore_principal' does not depend on any axioms
+'Becoming.IdealsCorrespondence.le_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.lowerBasis_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.admits_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.content_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.finiteRefutable_iff_refutable' does not depend on any axioms
+'Becoming.IdealsCorrespondence.scottHull_iff_hull' does not depend on any axioms
+'Becoming.IdealsCorrespondence.respects_iff_avoids' does not depend on any axioms
+'Becoming.IdealsCorrespondence.avoidingBasis_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.directedFamily_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.familyUnion_same' does not depend on any axioms
+'Becoming.IdealsCorrespondence.scottClosed_iff_closed' does not depend on any axioms
+'Becoming.IdealsCorrespondence.closed_of_finiteRefutable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.refutable_scottClosed_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.scottClosed_refutable_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.finiteRefutable_iff_scottClosed_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.IdealsCorrespondence.scottClosed_iff_lower_basis_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.finiteRefutable_iff_lower_basis_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.IdealsCorrespondence.lower_basis_unique_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.basis_eq_content_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.permitted_eq_content_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.admits_refutable_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.hull_least_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.hull_preserves_content_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.hull_unique_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.respects_iff_admits_avoiding_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.respects_scottClosed_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.respects_unique_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.refutable_eq_admits_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.hull_joint_content_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.empty_finiteRefutable_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.empty_scottClosed_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.admits_empty_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.lowerPoset_order' does not depend on any axioms
+'Becoming.IdealsCorrespondence.lift_admits_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.lift_order_iff_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.lift_restrict_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.restrict_lift_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.empty_lower_no_ideal_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.directed_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.toComplete' does not depend on any axioms
+'Becoming.IdealsCorrespondence.monotone_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.compact_iff' does not depend on any axioms
+'Becoming.IdealsCorrespondence.extend_eq' does not depend on any axioms
+'Becoming.IdealsCorrespondence.extend_principal_by_core' does not depend on any axioms
+'Becoming.IdealsCorrespondence.idealDirected_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.extend_continuous_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.extend_unique_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.unique_continuous_extension_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.idealCompact_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.compact_iff_principal_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.basisRole_compactBasis' does not depend on any axioms
+'Becoming.IdealsCorrespondence.isoEquivalence' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.unique_basis_representation_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.positive_reading_membership_by_core' depends on axioms: [propext]
+'Becoming.IdealsCorrespondence.positive_readings_separate_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.toList' does not depend on any axioms
+'Becoming.IdealsCorrespondence.ofList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.toList_length' depends on axioms: [propext]
+'Becoming.IdealsCorrespondence.toList_ofList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.getElem_toList' depends on axioms: [propext]
+'Becoming.IdealsCorrespondence.prefix_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.ofList_toList_prefix' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.prefix_ofList_toList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.ofList_prefix_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.le_toList_of_prefix' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.prefix_of_le_toList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.prefix_ofList_of_le' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.le_of_prefix_ofList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.letter_eq_getElem' does not depend on any axioms
+'Becoming.IdealsCorrespondence.initial_toList_iff' depends on axioms: [propext]
+'Becoming.IdealsCorrespondence.listIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.wordIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.listIdeal_mem_toList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.wordIdeal_mem_ofList' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.le_iff_listIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.ofHistory' does not depend on any axioms
+'Becoming.IdealsCorrespondence.principal_listIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.trace_listIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.history_listIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.settles_of_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.decided_classical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.ideal_classification_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.IdealsCorrespondence.historyPrefix_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.history_order_iff_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.historyIdeal_injective_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.refutable_of_wordIdeal' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.trace_wordIdeal_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.finiteOnly_not_refutable_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.recurrence_ideal_not_refutable_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.represented_ideal_not_refutable_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix' depends on axioms: [propext, Quot.sound]
+'Becoming.IdealsCorrespondence.history_admitted_iff_by_core' depends on axioms: [propext, Quot.sound]

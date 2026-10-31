@@ -1,0 +1,191 @@
+Becoming.Dephasing.preparation_from_blank : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.hControl (Becoming.Dephasing.blankControl v) = Becoming.Dephasing.prepare v
+Becoming.Dephasing.xz_anticommute : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.zGate (Becoming.Dephasing.xGate v) =
+    Becoming.Dephasing.negVec (Becoming.Dephasing.xGate (Becoming.Dephasing.zGate v))
+Becoming.Dephasing.x_preserves_norm : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.norm (Becoming.Dephasing.xGate v) = Becoming.Dephasing.norm v
+Becoming.Dephasing.z_preserves_norm : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.norm (Becoming.Dephasing.zGate v) = Becoming.Dephasing.norm v
+Becoming.Dephasing.prepared_density : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.controlDensity (Becoming.Dephasing.prepare v) =
+    { zz := Becoming.Dephasing.norm v, zo := Becoming.Dephasing.norm v, oz := Becoming.Dephasing.norm v,
+      oo := Becoming.Dephasing.norm v }
+Becoming.Dephasing.switched_density : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.controlDensity
+      (Becoming.Dephasing.switched Becoming.Dephasing.xGate Becoming.Dephasing.zGate (Becoming.Dephasing.prepare v)) =
+    { zz := Becoming.Dephasing.norm v, zo := -Becoming.Dephasing.norm v, oz := -Becoming.Dephasing.norm v,
+      oo := Becoming.Dephasing.norm v }
+Becoming.Dephasing.dephase_preserves_diagonal : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.diagonal (Becoming.Dephasing.dephase m) = Becoming.Dephasing.diagonal m
+Becoming.Dephasing.dephase_preserves_mass : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.mass (Becoming.Dephasing.dephase m) = Becoming.Dephasing.mass m
+Becoming.Dephasing.response_mass_conserved : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.plusMass m + Becoming.Dephasing.minusMass m = 2 * Becoming.Dephasing.mass m
+Becoming.Dephasing.dephase_response : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.response (Becoming.Dephasing.dephase m) =
+    (Becoming.Dephasing.mass m, Becoming.Dephasing.mass m, 2 * Becoming.Dephasing.mass m)
+Becoming.Dephasing.prepared_matrix : Becoming.Dephasing.prepared = { zz := 1, zo := 1, oz := 1, oo := 1 }
+Becoming.Dephasing.coherent_matrix : Becoming.Dephasing.coherent = { zz := 1, zo := -1, oz := -1, oo := 1 }
+Becoming.Dephasing.degraded_matrix : Becoming.Dephasing.degraded = { zz := 1, zo := 0, oz := 0, oo := 1 }
+Becoming.Dephasing.branch_weights_unchanged : Becoming.Dephasing.diagonal Becoming.Dephasing.prepared = (1, 1) ∧
+  Becoming.Dephasing.diagonal Becoming.Dephasing.coherent = (1, 1) ∧
+    Becoming.Dephasing.diagonal Becoming.Dephasing.degraded = (1, 1)
+Becoming.Dephasing.prepared_response : Becoming.Dephasing.response Becoming.Dephasing.prepared = (4, 0, 4)
+Becoming.Dephasing.coherent_response : Becoming.Dephasing.response Becoming.Dephasing.coherent = (0, 4, 4)
+Becoming.Dephasing.degraded_response : Becoming.Dephasing.response Becoming.Dephasing.degraded = (2, 2, 4)
+Becoming.Dephasing.no_diagonal_response_decoder : ¬∃ decode,
+    decode (Becoming.Dephasing.diagonal Becoming.Dephasing.coherent) =
+        Becoming.Dephasing.plusMass Becoming.Dephasing.coherent ∧
+      decode (Becoming.Dephasing.diagonal Becoming.Dephasing.degraded) =
+        Becoming.Dephasing.plusMass Becoming.Dephasing.degraded
+Becoming.Dephasing.dephase_merges_preparations : Becoming.Dephasing.dephase Becoming.Dephasing.prepared =
+  Becoming.Dephasing.dephase Becoming.Dephasing.coherent
+Becoming.Dephasing.no_uniform_dephase_inverse : ¬∃ restore,
+    restore (Becoming.Dephasing.dephase Becoming.Dephasing.prepared) = Becoming.Dephasing.prepared ∧
+      restore (Becoming.Dephasing.dephase Becoming.Dephasing.coherent) = Becoming.Dephasing.coherent
+Becoming.Dephasing.retained_response_exact : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.decodePlus (Becoming.Dephasing.retained m) = Becoming.Dephasing.plusMass m
+Becoming.Dephasing.dephase_keeps_response_iff : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.plusMass (Becoming.Dephasing.dephase m) = Becoming.Dephasing.plusMass m ↔ m.zo + m.oz = 0
+Becoming.Dephasing.recordBranch_involution : ∀ (v : Becoming.Dephasing.Joint),
+  Becoming.Dephasing.recordBranch (Becoming.Dephasing.recordBranch v) = v
+Becoming.Dephasing.recording_reduces_to_dephase : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.controlDensity (Becoming.Dephasing.recordBranch (Becoming.Dephasing.withBlank v)) =
+    Becoming.Dephasing.dephase (Becoming.Dephasing.controlDensity (Becoming.Dephasing.withBlank v))
+Becoming.Dephasing.joint_reversal_restores_control : ∀ (v : Becoming.Dephasing.Vec),
+  Becoming.Dephasing.controlDensity
+      (Becoming.Dephasing.recordBranch (Becoming.Dephasing.recordBranch (Becoming.Dephasing.withBlank v))) =
+    Becoming.Dephasing.controlDensity (Becoming.Dephasing.withBlank v)
+Becoming.Dephasing.prepared_control_embedding : Becoming.Dephasing.controlDensity
+    (Becoming.Dephasing.withBlank { zero := 1, one := 1 }) =
+  Becoming.Dephasing.prepared
+Becoming.Dephasing.coherent_control_embedding : Becoming.Dephasing.controlDensity
+    (Becoming.Dephasing.withBlank { zero := -1, one := 1 }) =
+  Becoming.Dephasing.coherent
+@Becoming.Dephasing.operations_trace_iff : ∀ {S : Type} {s t : S} {gs : List (S → S)},
+  Generative.Trace (Becoming.Dephasing.operations S) s gs t ↔ t = List.foldl (fun x g => g x) s gs
+@Becoming.Dephasing.orders_negate : ∀ {v w w' : Becoming.Dephasing.Vec},
+  Generative.Trace (Becoming.Dephasing.operations Becoming.Dephasing.Vec) v
+      [Becoming.Dephasing.xGate, Becoming.Dephasing.zGate] w →
+    Generative.Trace (Becoming.Dephasing.operations Becoming.Dephasing.Vec) v
+        [Becoming.Dephasing.zGate, Becoming.Dephasing.xGate] w' →
+      w = Becoming.Dephasing.negVec w'
+@Becoming.Dephasing.hadamard_prepares : ∀ {v : Becoming.Dephasing.Vec} {t : Becoming.Dephasing.Joint},
+  Generative.Trace (Becoming.Dephasing.operations Becoming.Dephasing.Joint) (Becoming.Dephasing.blankControl v)
+      [Becoming.Dephasing.hControl] t →
+    t = Becoming.Dephasing.prepare v ∧
+      Becoming.Dephasing.controlDensity t =
+        { zz := Becoming.Dephasing.norm v, zo := Becoming.Dephasing.norm v, oz := Becoming.Dephasing.norm v,
+          oo := Becoming.Dephasing.norm v }
+@Becoming.Dephasing.switched_course : ∀ {v : Becoming.Dephasing.Vec} {t : Becoming.Dephasing.Joint},
+  Generative.Trace (Becoming.Dephasing.operations Becoming.Dephasing.Joint) (Becoming.Dephasing.blankControl v)
+      [Becoming.Dephasing.hControl, Becoming.Dephasing.switched Becoming.Dephasing.xGate Becoming.Dephasing.zGate] t →
+    Becoming.Dephasing.controlDensity t =
+      { zz := Becoming.Dephasing.norm v, zo := -Becoming.Dephasing.norm v, oz := -Becoming.Dephasing.norm v,
+        oo := Becoming.Dephasing.norm v }
+Becoming.Dephasing.x_norm_invariant : ∀ (w : Int),
+  Becoming.Invariant (Becoming.Law.process Becoming.Dephasing.xGate) fun v => Becoming.Dephasing.norm v = w
+Becoming.Dephasing.z_norm_invariant : ∀ (w : Int),
+  Becoming.Invariant (Becoming.Law.process Becoming.Dephasing.zGate) fun v => Becoming.Dephasing.norm v = w
+Becoming.Dephasing.x_norm_along : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.xGate)) (n : Nat),
+  Becoming.Dephasing.norm (r.state n) = Becoming.Dephasing.norm (r.state 0)
+Becoming.Dephasing.z_norm_along : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.zGate)) (n : Nat),
+  Becoming.Dephasing.norm (r.state n) = Becoming.Dephasing.norm (r.state 0)
+Becoming.Dephasing.dephase_dephase : ∀ (m : Becoming.Dephasing.Matrix),
+  Becoming.Dephasing.dephase (Becoming.Dephasing.dephase m) = Becoming.Dephasing.dephase m
+Becoming.Dephasing.run_settles : ∀ (m : Becoming.Dephasing.Matrix) (n : Nat),
+  (Becoming.Law.run Becoming.Dephasing.dephase m).state (n + 1) = Becoming.Dephasing.dephase m
+Becoming.Dephasing.settles : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  r.state (n + 1) = Becoming.Dephasing.dephase (r.state 0)
+Becoming.Dephasing.diagonal_invariant : ∀ (d : Int × Int),
+  Becoming.Invariant (Becoming.Law.process Becoming.Dephasing.dephase) fun m => Becoming.Dephasing.diagonal m = d
+Becoming.Dephasing.mass_invariant : ∀ (w : Int),
+  Becoming.Invariant (Becoming.Law.process Becoming.Dephasing.dephase) fun m => Becoming.Dephasing.mass m = w
+Becoming.Dephasing.diagonal_along : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  Becoming.Dephasing.diagonal (r.state n) = Becoming.Dephasing.diagonal (r.state 0)
+Becoming.Dephasing.mass_along : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  Becoming.Dephasing.mass (r.state n) = Becoming.Dephasing.mass (r.state 0)
+Becoming.Dephasing.prepared_run_diagonal : ∀ (n : Nat),
+  Becoming.Dephasing.diagonal ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state n) =
+    (1, 1)
+Becoming.Dephasing.coherent_run_diagonal : ∀ (n : Nat),
+  Becoming.Dephasing.diagonal ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state n) =
+    (1, 1)
+Becoming.Dephasing.response_settles : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  Becoming.Dephasing.response (r.state (n + 1)) =
+    (Becoming.Dephasing.mass (r.state 0), Becoming.Dephasing.mass (r.state 0), 2 * Becoming.Dephasing.mass (r.state 0))
+Becoming.Dephasing.plus_kept_iff : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  Becoming.Dephasing.plusMass (r.state (n + 1)) = Becoming.Dephasing.plusMass (r.state 0) ↔
+    (r.state 0).zo + (r.state 0).oz = 0
+Becoming.Dephasing.plus_minus_along : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.dephase)) (n : Nat),
+  Becoming.Dephasing.plusMass (r.state n) + Becoming.Dephasing.minusMass (r.state n) =
+    2 * Becoming.Dephasing.mass (r.state 0)
+Becoming.Dephasing.prepared_ne_coherent : Becoming.Dephasing.prepared ≠ Becoming.Dephasing.coherent
+Becoming.Dephasing.merges : Becoming.Law.Merges Becoming.Dephasing.dephase
+Becoming.Dephasing.process_merges : Becoming.Branching.Merges (Becoming.Law.process Becoming.Dephasing.dephase)
+Becoming.Dephasing.not_lossless : ¬Becoming.Branching.Lossless (Becoming.Law.process Becoming.Dephasing.dephase)
+Becoming.Dephasing.runs_meet : ∀ (n : Nat),
+  (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state (n + 1) =
+    (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1)
+Becoming.Dephasing.no_restore_along : ∀ (n : Nat),
+  ¬∃ restore,
+      restore ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state (n + 1)) =
+          (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state 0 ∧
+        restore ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1)) =
+          (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state 0
+Becoming.Dephasing.prepared_run : (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state 0 =
+    { zz := 1, zo := 1, oz := 1, oo := 1 } ∧
+  ∀ (n : Nat),
+    (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state (n + 1) =
+      { zz := 1, zo := 0, oz := 0, oo := 1 }
+Becoming.Dephasing.coherent_run : (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state 0 =
+    { zz := 1, zo := -1, oz := -1, oo := 1 } ∧
+  ∀ (n : Nat),
+    (Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1) =
+      { zz := 1, zo := 0, oz := 0, oo := 1 }
+Becoming.Dephasing.prepared_run_response : Becoming.Dephasing.response
+      ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state 0) =
+    (4, 0, 4) ∧
+  ∀ (n : Nat),
+    Becoming.Dephasing.response
+        ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.prepared).state (n + 1)) =
+      (2, 2, 4)
+Becoming.Dephasing.coherent_run_response : Becoming.Dephasing.response
+      ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state 0) =
+    (0, 4, 4) ∧
+  ∀ (n : Nat),
+    Becoming.Dephasing.response
+        ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1)) =
+      (2, 2, 4)
+Becoming.Dephasing.no_diagonal_decoder_along : ∀ (n : Nat),
+  ¬∃ decode,
+      decode
+            (Becoming.Dephasing.diagonal
+              ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state 0)) =
+          Becoming.Dephasing.plusMass
+            ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state 0) ∧
+        decode
+            (Becoming.Dephasing.diagonal
+              ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1))) =
+          Becoming.Dephasing.plusMass
+            ((Becoming.Law.run Becoming.Dephasing.dephase Becoming.Dephasing.coherent).state (n + 1))
+Becoming.Dephasing.returns : ∀ (j : Becoming.Dephasing.Joint),
+  Becoming.Branching.Returns (Becoming.Law.process Becoming.Dephasing.recordBranch) j
+@Becoming.Dephasing.recording_dephases : ∀ {v : Becoming.Dephasing.Vec}
+  (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.recordBranch)),
+  r.state 0 = Becoming.Dephasing.withBlank v →
+    Becoming.Dephasing.controlDensity (r.state 1) =
+      Becoming.Dephasing.dephase (Becoming.Dephasing.controlDensity (r.state 0))
+@Becoming.Dephasing.control_returns : ∀ {v : Becoming.Dephasing.Vec}
+  (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.recordBranch)),
+  r.state 0 = Becoming.Dephasing.withBlank v →
+    Becoming.Dephasing.controlDensity (r.state 2) = Becoming.Dephasing.controlDensity (r.state 0)
+Becoming.Dephasing.prepared_reading : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.recordBranch)),
+  r.state 0 = Becoming.Dephasing.withBlank { zero := 1, one := 1 } →
+    Becoming.Dephasing.controlDensity (r.state 0) = Becoming.Dephasing.prepared ∧
+      Becoming.Dephasing.controlDensity (r.state 2) = Becoming.Dephasing.prepared
+Becoming.Dephasing.coherent_reading : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Dephasing.recordBranch)),
+  r.state 0 = Becoming.Dephasing.withBlank { zero := -1, one := 1 } →
+    Becoming.Dephasing.controlDensity (r.state 0) = Becoming.Dephasing.coherent ∧
+      Becoming.Dephasing.controlDensity (r.state 2) = Becoming.Dephasing.coherent

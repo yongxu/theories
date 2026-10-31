@@ -50,7 +50,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked with Lean 4.29.1: the core modules Becoming.CrossSituational and Becoming.Courses by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited core declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z) and EncounterChoice by its check (encounter-choice-verification.json: 22 new theorems, 46 declaration audits), reporting at most propext and Quot.sound. Author counterreview and two primary developmental comparisons; no new experiment or independent review.
+Machine-checked with Lean 4.29.1: the core modules Becoming.CrossSituational and Becoming.Courses by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited core declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z) and EncounterChoice by its check (encounter-choice-verification.json: 22 new theorems, 46 declaration audits), reporting at most propext and Quot.sound. Author counterreview and two primary developmental comparisons; no new experiment or independent review.
 
 Canonical source: [EncounterChoice.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean)
 
@@ -102,6 +102,7 @@ Choice reads retained access, bindings and attempted locations rather than actua
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`, `Becoming.MachineInstances.acquired_interprets_every`, `Becoming.CrossSituational.candidates_append`, `Becoming.MachineInstances.naming_narrows`, `Becoming.Courses.run_candidates_append`, `Becoming.Courses.run_narrows`, `Becoming.Courses.run_stays_iff`
 

@@ -1,0 +1,5 @@
+import SubstitutionCorrespondence
+#check @Becoming.SubstitutionCorrespondence.through
+#check @Becoming.SubstitutionCorrespondence.direct
+#check @Becoming.SubstitutionCorrespondence.supplies
+#check @Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core

@@ -1,0 +1,14 @@
+'ContinuationAdequacy.actual_in_post' does not depend on any axioms
+'ContinuationAdequacy.post_mono' does not depend on any axioms
+'ContinuationAdequacy.viable_mono' does not depend on any axioms
+'ContinuationAdequacy.viable_now' does not depend on any axioms
+'ContinuationAdequacy.viable_shorter' does not depend on any axioms
+'ContinuationAdequacy.viable_empty' does not depend on any axioms
+'ContinuationAdequacy.viable_iff_plan' depends on axioms: [propext, Classical.choice]
+'ContinuationAdequacy.viable_successor' does not depend on any axioms
+'ContinuationAdequacy.maintained_class' does not depend on any axioms
+'ContinuationAdequacy.shared_first_step' depends on axioms: [propext, Quot.sound]
+'ContinuationAdequacy.blind_second_step_fails' depends on axioms: [propext, Quot.sound]
+'ContinuationAdequacy.sensing_repairs_two_steps' depends on axioms: [propext, Quot.sound]
+'ContinuationAdequacy.settling_repairs_blind_two_steps' depends on axioms: [propext, Quot.sound]
+'ContinuationAdequacy.observation_refinement' does not depend on any axioms

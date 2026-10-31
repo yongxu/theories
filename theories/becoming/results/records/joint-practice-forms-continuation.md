@@ -46,7 +46,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked, periphery only: JointPracticeContinuation by its folder's check (joint-practice-continuation-verification/, Lean 4.29.1: 22 new theorems, 51 new audits, 132 in the three-module closure) and MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z, Lean 4.29.1), reporting at most propext, Quot.sound and Classical.choice for the cited declarations, some none. The author's counterreview and readings of primary abstracts are separate; no independent review.
+Machine-checked, periphery only: JointPracticeContinuation by its folder's check (joint-practice-continuation-verification/, Lean 4.29.1: 22 new theorems, 51 new audits, 132 in the three-module closure) and MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z, Lean 4.29.1), reporting at most propext, Quot.sound and Classical.choice for the cited declarations, some none. The author's counterreview and readings of primary abstracts are separate; no independent review.
 
 Canonical source: [MachineInstances.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean)
 
@@ -85,6 +85,7 @@ Attempt, response, revision, testing and recognition differentiate within one st
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `JointPracticeContinuation.complete_history_is_one_trace`, `JointPracticeContinuation.retry_produces_existing_review`, `Becoming.MachineInstances.practice_trace_iff_run`, `Becoming.MachineInstances.methods_kept`, `Becoming.MachineInstances.methods_inherited`, `Becoming.MachineInstances.practice_rule_kept`, `Becoming.MachineInstances.practice_rule_inherited`, `Becoming.MachineInstances.complete_history_instance`, `Becoming.MachineInstances.round_iff`
 

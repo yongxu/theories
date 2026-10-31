@@ -1,0 +1,161 @@
+@Becoming.Stock.total_append : ∀ {A : Type} (q : A → Nat) (xs ys : List A),
+  Becoming.total (xs ++ ys) q = Becoming.total xs q + Becoming.total ys q
+@Becoming.Stock.trace_balance : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ {s t : S} {as : List A},
+      Generative.Trace P s as t → σ t + Becoming.total as draw = σ s + Becoming.total as replenish
+@Becoming.Stock.balanced_iff : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish ↔
+    ∀ (s : S) (as : List A) (t : S),
+      Generative.Trace P s as t → σ t + Becoming.total as draw = σ s + Becoming.total as replenish
+@Becoming.Stock.Balanced.within : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish → ∀ {s t : S} {a : A}, P.step s a t → draw a ≤ σ s + replenish a
+@Becoming.Stock.refill : ∀ {n d : Nat} (r : Nat), d ≤ n → n - d + r + d = n + r
+@Becoming.Stock.process_next : ∀ {A : Type} {draw replenish : A → Nat} {n m : Nat} {a : A},
+  (Becoming.Stock.process draw replenish).step n a m → m = n - draw a + replenish a
+@Becoming.Stock.process_step : ∀ {A : Type} {draw replenish : A → Nat} {n : Nat} {a : A},
+  draw a ≤ n → (Becoming.Stock.process draw replenish).step n a (n - draw a + replenish a)
+@Becoming.Stock.process_balanced : ∀ {A : Type} (draw replenish : A → Nat),
+  Becoming.Stock.Balanced (Becoming.Stock.process draw replenish) (fun n => n) draw replenish
+@Becoming.Stock.feasible_iff_covered : ∀ {A : Type} {draw replenish : A → Nat} (as : List A) (n : Nat),
+  Generative.Feasible (Becoming.Stock.process draw replenish) n as ↔ Becoming.Stock.Covered draw replenish n as
+@Becoming.Stock.draw_turn : ∀ {n d r : Nat} (R : Nat), d ≤ n → d + (n - d + r + R) = n + (r + R)
+@Becoming.Stock.nil_ne_split : ∀ {A : Type} (u : List A) (a : A) (v : List A), [] ≠ u ++ a :: v
+@Becoming.Stock.covered_iff_prefix : ∀ {A : Type} {draw replenish : A → Nat} (as : List A) (n : Nat),
+  Becoming.Stock.Covered draw replenish n as ↔
+    ∀ (u : List A) (a : A) (v : List A),
+      as = u ++ a :: v → Becoming.total u draw + draw a ≤ n + Becoming.total u replenish
+@Becoming.Stock.process_map_iff : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish ∧ Becoming.Stock.DrawsHeld P σ draw ↔
+    ∀ (s : S) (a : A) (t : S), P.step s a t → (Becoming.Stock.process draw replenish).step (σ s) a (σ t)
+@Becoming.Stock.covered_of_trace : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    Becoming.Stock.DrawsHeld P σ draw →
+      ∀ {s t : S} {as : List A}, Generative.Trace P s as t → Becoming.Stock.Covered draw replenish (σ s) as
+@Becoming.Stock.product_feasible_iff : ∀ {A : Type} {S' : Type u_1} {R : Generative.Process S' A}
+  {draw replenish : A → Nat} {n : Nat} {x : S'} {as : List A},
+  Generative.Feasible (Generative.productProcess (Becoming.Stock.process draw replenish) R) (n, x) as ↔
+    Becoming.Stock.Covered draw replenish n as ∧ Generative.Feasible R x as
+@Becoming.Stock.Covered.mono : ∀ {A : Type} {draw replenish : A → Nat} {as : List A} {n m : Nat},
+  n ≤ m → Becoming.Stock.Covered draw replenish n as → Becoming.Stock.Covered draw replenish m as
+@Becoming.Stock.covered_append : ∀ {A : Type} {draw replenish : A → Nat} {xs ys : List A} {n : Nat},
+  Becoming.Stock.Covered draw replenish n (xs ++ ys) ↔
+    Becoming.Stock.Covered draw replenish n xs ∧
+      Becoming.Stock.Covered draw replenish (Becoming.Stock.after draw replenish n xs) ys
+@Becoming.Stock.after_append : ∀ {A : Type} {draw replenish : A → Nat} (xs ys : List A) (n : Nat),
+  Becoming.Stock.after draw replenish n (xs ++ ys) =
+    Becoming.Stock.after draw replenish (Becoming.Stock.after draw replenish n xs) ys
+@Becoming.Stock.after_balance : ∀ {A : Type} {draw replenish : A → Nat} {as : List A} {n : Nat},
+  Becoming.Stock.Covered draw replenish n as →
+    Becoming.Stock.after draw replenish n as + Becoming.total as draw = n + Becoming.total as replenish
+@Becoming.Stock.le_after_of_net : ∀ {A : Type} {draw replenish : A → Nat} {as : List A} {n : Nat},
+  Becoming.Stock.Covered draw replenish n as →
+    Becoming.total as draw ≤ Becoming.total as replenish → n ≤ Becoming.Stock.after draw replenish n as
+@Becoming.Stock.total_cycles : ∀ {A : Type} (q : A → Nat) {w : Nat → List A} {D : Nat},
+  (∀ (k : Nat), Becoming.total (w k) q = D) → ∀ (k : Nat), Becoming.total (Becoming.Stock.cycles w k) q = k * D
+@Becoming.Stock.cycles_need : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ {s : S} {w : Nat → List A} {D R : Nat},
+      (∀ (k : Nat), Becoming.total (w k) draw = D) →
+        (∀ (k : Nat), Becoming.total (w k) replenish = R) →
+          (∀ (k : Nat), Generative.Feasible P s (Becoming.Stock.cycles w k)) → D ≤ R
+@Becoming.Stock.repeat_needs : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ {s : S} {w : List A},
+      (∀ (k : Nat), Generative.Feasible P s (Becoming.Stock.repeatCourse w k)) →
+        Becoming.total w draw ≤ Becoming.total w replenish
+@Becoming.Stock.cycles_covered : ∀ {A : Type} {draw replenish : A → Nat} {w : Nat → List A} {n : Nat},
+  (∀ (k : Nat), Becoming.Stock.Covered draw replenish n (w k)) →
+    (∀ (k : Nat), Becoming.total (w k) draw ≤ Becoming.total (w k) replenish) →
+      ∀ (k : Nat),
+        Becoming.Stock.Covered draw replenish n (Becoming.Stock.cycles w k) ∧
+          n ≤ Becoming.Stock.after draw replenish n (Becoming.Stock.cycles w k)
+@Becoming.Stock.repeat_covered_iff : ∀ {A : Type} {draw replenish : A → Nat} {w : List A} {n : Nat},
+  (∀ (k : Nat), Becoming.Stock.Covered draw replenish n (Becoming.Stock.repeatCourse w k)) ↔
+    Becoming.Stock.Covered draw replenish n w ∧ Becoming.total w draw ≤ Becoming.total w replenish
+@Becoming.Stock.trace_repeat : ∀ {A : Type} {S' : Type u_1} {R : Generative.Process S' A} {x : S'} {w : List A},
+  Generative.Trace R x w x → ∀ (k : Nat), Generative.Trace R x (Becoming.Stock.repeatCourse w k) x
+@Becoming.Stock.product_repeat_iff : ∀ {A : Type} {S' : Type u_1} {R : Generative.Process S' A}
+  {draw replenish : A → Nat} {x : S'} {w : List A} {n : Nat},
+  Generative.Trace R x w x →
+    ((∀ (k : Nat),
+        Generative.Feasible (Generative.productProcess (Becoming.Stock.process draw replenish) R) (n, x)
+          (Becoming.Stock.repeatCourse w k)) ↔
+      Becoming.Stock.Covered draw replenish n w ∧ Becoming.total w draw ≤ Becoming.total w replenish)
+Becoming.Stock.search : ∀ (g : Nat → Nat) (N L : Nat),
+  (∃ n, N ≤ n ∧ n < N + L ∧ 0 < g n) ∨ ∀ (n : Nat), N ≤ n → n < N + L → g n = 0
+@Becoming.Stock.flat_of_none : ∀ {x d g : Nat → Nat},
+  (∀ (n : Nat), x (n + 1) + d n = x n + g n) →
+    ∀ {N j : Nat}, (∀ (n : Nat), N ≤ n → n < N + (j + 1) → g n = 0) → ∀ (i : Nat), i ≤ j → x (N + i) ≤ x N
+@Becoming.Stock.replenishes_of_draws : ∀ {x d g : Nat → Nat},
+  (∀ (n : Nat), x (n + 1) + d n = x n + g n) → (∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < d n) → ∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < g n
+@Becoming.Stock.room_balanced : ∀ {x d g : Nat → Nat},
+  (∀ (n : Nat), x (n + 1) + d n = x n + g n) →
+    ∀ {B : Nat}, (∀ (n : Nat), x n ≤ B) → ∀ (n : Nat), B - x (n + 1) + g n = B - x n + d n
+@Becoming.Stock.draws_of_replenishes : ∀ {x d g : Nat → Nat},
+  (∀ (n : Nat), x (n + 1) + d n = x n + g n) →
+    ∀ {B : Nat}, (∀ (n : Nat), x n ≤ B) → (∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < g n) → ∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < d n
+@Becoming.Run.replenishes_of_draws : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ (r : Becoming.Run P),
+      (∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < draw (r.act n)) → ∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < replenish (r.act n)
+@Becoming.Run.draws_iff_replenishes : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ (r : Becoming.Run P) {B : Nat},
+      (∀ (n : Nat), σ (r.state n) ≤ B) →
+        ((∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < draw (r.act n)) ↔ ∀ (N : Nat), ∃ n, N ≤ n ∧ 0 < replenish (r.act n))
+@Becoming.Run.stockFlow_balances_iff : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} (r : Becoming.Run P)
+  (σ : S → Nat) (draw replenish : A → Nat),
+  (r.stockFlow draw replenish).Balances (r.stockWeb σ) ↔
+    ∀ (n : Nat), σ (r.state (n + 1)) + draw (r.act n) = σ (r.state n) + replenish (r.act n)
+@Becoming.Run.stockFlow_balances : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    ∀ (r : Becoming.Run P), (r.stockFlow draw replenish).Balances (r.stockWeb σ)
+@Becoming.Stock.carried_iff : ∀ {A : Type} {S' : Type u_1} {R : Generative.Process S' A} {draw replenish : A → Nat}
+  (r : Becoming.Run R) (n : Nat),
+  (∃ q, (q.state 0).fst = n ∧ (∀ (k : Nat), (q.state k).snd = r.state k) ∧ ∀ (k : Nat), q.act k = r.act k) ↔
+    ∀ (k : Nat), draw (r.act k) ≤ Becoming.Stock.along draw replenish n r.act k
+Becoming.Stock.accumulating_never_draws : (∀ (N : Nat),
+    ∃ n, N ≤ n ∧ 0 < (fun x => 1) (Becoming.Stock.accumulating.act n)) ∧
+  ∀ (n : Nat), ¬0 < (fun x => 0) (Becoming.Stock.accumulating.act n)
+@Becoming.Stock.trace_falls : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat} {draw : A → Nat},
+  Becoming.Stock.FallsBy P σ draw →
+    ∀ {s t : S} {as : List A}, Generative.Trace P s as t → σ t + Becoming.total as draw ≤ σ s
+@Becoming.Stock.falls_iff : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat} {draw : A → Nat},
+  Becoming.Stock.FallsBy P σ draw ↔
+    ∀ (s : S) (as : List A) (t : S), Generative.Trace P s as t → σ t + Becoming.total as draw ≤ σ s
+@Becoming.Stock.trace_exhausts : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw : A → Nat},
+  Becoming.Stock.FallsBy P σ draw →
+    (∀ (s : S) (a : A) (t : S), P.step s a t → 0 < σ s → 0 < draw a) →
+      ∀ {s t : S} {as : List A}, Generative.Trace P s as t → σ t = 0 ∨ σ t + as.length ≤ σ s
+@Becoming.Stock.zero_of_add_le : ∀ {a : Nat} (n : Nat), a + n ≤ n → a = 0
+@Becoming.Stock.exhausted_within : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw : A → Nat},
+  Becoming.Stock.FallsBy P σ draw →
+    (∀ (s : S) (a : A) (t : S), P.step s a t → 0 < σ s → 0 < draw a) →
+      ∀ {s t : S} {as : List A}, Generative.Trace P s as t → σ s ≤ as.length → σ t = 0
+@Becoming.Stock.draws_nothing_from_empty : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw : A → Nat}, Becoming.Stock.FallsBy P σ draw → ∀ {s t : S} {a : A}, P.step s a t → σ s = 0 → draw a = 0
+@Becoming.StockTraces.feasible_iff_prefix : ∀ {A : Type} {draw replenish : A → Nat} (as : List A) (n : Nat),
+  Generative.Feasible (Becoming.Stock.process draw replenish) n as ↔
+    ∀ (u : List A) (a : A) (v : List A),
+      as = u ++ a :: v → Becoming.total u draw + draw a ≤ n + Becoming.total u replenish
+@Becoming.StockTraces.trace_prefix : ∀ {S : Type u_1} {A : Type} {P : Generative.Process S A} {σ : S → Nat}
+  {draw replenish : A → Nat},
+  Becoming.Stock.Balanced P σ draw replenish →
+    Becoming.Stock.DrawsHeld P σ draw →
+      ∀ {s t : S} {as : List A},
+        Generative.Trace P s as t →
+          ∀ (u : List A) (a : A) (v : List A),
+            as = u ++ a :: v → Becoming.total u draw + draw a ≤ σ s + Becoming.total u replenish

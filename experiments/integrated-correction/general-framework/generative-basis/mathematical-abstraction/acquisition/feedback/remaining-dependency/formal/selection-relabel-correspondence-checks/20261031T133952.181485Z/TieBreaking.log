@@ -1,0 +1,12 @@
+TieBreaking.lean:63:46: warning: unused variable `noWithhold`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'TieBreaking.Chances' does not depend on any axioms
+'TieBreaking.LotteryAlike' does not depend on any axioms
+'TieBreaking.tied_equal_weight' does not depend on any axioms
+'TieBreaking.full_tie_equal_weights' does not depend on any axioms
+'TieBreaking.full_tie_open_uniform' does not depend on any axioms
+'TieBreaking.uniform' does not depend on any axioms
+'TieBreaking.uniform_alike' does not depend on any axioms
+'TieBreaking.pointMass' does not depend on any axioms
+'TieBreaking.point_mass_not_alike_at_tie' does not depend on any axioms

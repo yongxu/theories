@@ -1,0 +1,6 @@
+'CompletionLifting.reach_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionLifting.finite_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionLifting.unbounded_child' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionLifting.infinite_from_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionLifting.finite_initial_lifting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionLifting.labelled_lifting' depends on axioms: [propext, Classical.choice, Quot.sound]

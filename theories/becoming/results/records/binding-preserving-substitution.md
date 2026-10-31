@@ -46,7 +46,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core, by check_becoming.py (Lean 4.29.1): Readout bound to becoming-checks/20261019T185632.962707Z and Courses to 20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery: InferentialSubstitution and InferentialGrounds to inferential-substitution-checks/20261008T181823.552825Z (check_inferential_substitution.py, Lean 4.29.1; 13 of 19 audits empty, 6 only Quot.sound); SubstitutionCorrespondence to substitution-correspondence-checks/20261020T161957.579185Z (check_substitution_correspondence.py, Lean 4.30.0-rc2; three cited use Quot.sound). Author counter-review only.
+Core, by check_becoming.py (Lean 4.29.1): Readout bound to becoming-checks/20261019T185632.962707Z and Courses to 20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery: InferentialSubstitution and InferentialGrounds to inferential-substitution-checks/20261008T181823.552825Z (check_inferential_substitution.py, Lean 4.29.1; 13 of 19 audits empty, 6 only Quot.sound); SubstitutionCorrespondence to substitution-correspondence-checks/20261031T133836.069337Z (check_substitution_correspondence.py, Lean 4.30.0-rc2; three cited use Quot.sound). Author counter-review only.
 
 Canonical source: [InferentialSubstitution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean)
 
@@ -99,6 +99,7 @@ Introduction, position, use and substitution are analytical roles within one der
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json) | — |
 
 Aliases: `Generative.InferentialSubstitution.all_terms_agree_iff_positions`, `Becoming.Readout.agree_iff_parts`, `Becoming.Readout.supplied_agree_iff_parts`
 
