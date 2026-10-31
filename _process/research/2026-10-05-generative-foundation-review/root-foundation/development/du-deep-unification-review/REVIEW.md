@@ -217,3 +217,7 @@ The other citations in this note are the skeptics'. They checked the reviewers' 
 J1–J4 were checked. Like L, they are listed among the normative hypotheses but have no premise-card item with witnesses (COVERAGE.json `premises.items`); `Frontier` and `Required` are definitions in `Becoming.Frontier`. Their witnesses are left for the review of this leaf: the premise card should say whether a "met and failed" witness is meaningful for each, since J1–J4 combine a retention order with a choice rule.
 
 Order, per the coordinator (31 October 2026): the leaf goes in the core round by readiness, after UE26 and BD2, beside EL and UE27, and before OU7. The rehearsal on main starts on the coordinator's word. Each text change needs the word of its file's owner before the slot.
+
+Text routing, per the coordinator (31 October 2026):
+- **OU's owner** (the integrator of the unification line) is asked for 08 §7's two figures (a live inconsistency, fixed with DU), COVERAGE's significance row and premise witnesses, the new WHAT-REMAINS section, and 04's standings.
+- **The one crux for §4.6** is kept apart from DU's other texts. Replacing "P2 and P4" with one crux changes the ethics' summary: it is a change of standing, not a wording fix. It must first be argued in a record and a review, then carried to every text naming P2 and P4. For the instructions file it goes to Ren only as a proposal. The leaf and the other fixes do not wait on it.
