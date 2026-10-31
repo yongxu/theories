@@ -1,6 +1,6 @@
 # OU7 part B: two models for testing (验) on the net of the possible
 
-Board item OU7 (claimed as OU5), part B: plan §八 step 5, "验之模型例（恒温器与热平衡，在可能之网中）" ([plan](../../one-unfolding-root/PLAN.md)). Design for OU's owner, who decides what goes into Lean. The scratch Lean is in [`scratch/`](scratch/), outside the package; it changes no package file. Both modules build with `scratch_build.py` with no warning, and every axiom report is empty, transitively through `RegimeMargin` and `HeldPossible`, so no piece needs the periphery ([log](scratch-build.log)). §7 lists what each module proves. OU's owner approved the «» names with three notes, each taken (§8). One independent review read the design, and the same reader re-checked the revision; its 18 findings, the re-check's points and how each was taken are in §9, and both reports are kept verbatim in [review/FINDINGS.md](review/FINDINGS.md). AI-written.
+Board item OU7 (claimed as OU5), part B: plan §八 step 5, "验之模型例（恒温器与热平衡，在可能之网中）" ([plan](../../one-unfolding-root/PLAN.md)). Design for OU's owner, who decides what goes into Lean. The scratch Lean is in [`scratch/`](scratch/), outside the package; it changes no package file. Both modules build with `scratch_build.py` with no warning, and every axiom report is empty, transitively through `RegimeMargin` and `HeldPossible`, so no piece needs the periphery ([log](scratch-build.log)). §7 lists what each module proves. OU's owner approved the «» names with three notes, each taken, and after the review renamed two of them (§8). One independent review read the design, and the same reader re-checked the revision; its 18 findings, the re-check's points and how each was taken are in §9, and both reports are kept verbatim in [review/FINDINGS.md](review/FINDINGS.md). AI-written.
 
 ## The ten-minute part
 
@@ -148,7 +148,7 @@ On the joint nets, with the rooms tagged by `c`, at every margin `m` unless a co
    - an unheated room open at level `j` is told from every warm occurrence of a heated room at stage `j` (`empties`): its window line empties it in `j` draws.
 
    In `RegimeMargin`'s terms the draw empties what stands above the surroundings in as many steps as it stood: the window's run is cold from the step of the margin on (`Unheated.window_cold`, by `RegimeMargin.stays_ended`). The stage count belongs to the class's threshold (choice 7 in §2): in general a finer class separates no later, and nothing more.
-4. **The two thermostats are one class under warm or not.** For `1 ≤ m`, `1 ≤ c` and `1 ≤ c'`, `«核» (joint m) jointAlike (c, start m) (c', start m)`. The witness pairs warm occurrences of heated rooms; it is constant because every successor in a heated room is warm.
+4. **Two rooms with a heater are one class under warm or not.** For `1 ≤ m`, `1 ≤ c` and `1 ≤ c'`, `«核» (joint m) jointAlike (c, start m) (c', start m)`. The witness pairs warm occurrences of heated rooms; it is constant because every successor in a heated room is warm.
 
 **The toy, derived.** `«恒温与平衡»` separates its rooms at the first stage of warm or not, because its balanced room "may cool" in one step. That is the rule at a margin of one draw. Read the toy's rooms as the rule's occurrences (`toy`): the balanced room is the unheated room at its set level, the held room is the matched thermostat there, the cold room is the unheated room once its window has opened, and the kept room is the matched thermostat once its window has opened. Then (`toy_branches`):
 - each branch the toy stipulates, with the window or shut, is a step of the rule;
@@ -195,10 +195,10 @@ Each row is a landed law, the place on the models where its condition Z holds, a
 
 `scratch/Becoming/RoomNet.lean`: 120 declarations, 94 of them theorems. It imports only `GrammarTesting`, `GrammarLaws`, `GrammarReadings` and `MapRegions`.
 1. **The nets and classes**, at every set level `m`: `Occurrence`, `surroundings`, `exchange`, `heater`, `next`, `shut`, `net`, `openNet`, `sameLevel`, `warm`, `alike`, `start`, and the joint carrier `Tagged` with `joint`, `jointShut`, `jointLevel`, `jointAlike`. The steps used throughout: `rest_step`, `shut_rest_step`, `opens`, `net_open`, `net_shut`, `shut_start`, `cools`, `cold_step`, with `next_rest`, `next_zero`, `warms_open`, `exchange_ge`, `next_pos`, `heated_warm`, `warm_of_pos` and `warm_of_level`.
-2. **The regions in §3.** At a margin of three: `«平衡守而有终»`, `«开窗则平衡新而尽»` and `Unheated.rows`; `«恒温生守相杂»`, `Overshooting.generation_strong`, `Overshooting.rows`, `Overshooting.renewing_steps`, `Overshooting.not_keepsAfter_open` and `Overshooting.single_line_tested`. At every positive margin: `«给如所取则全守»` and `Matched.rows`. At every margin: `shut_rests` and `cold_rests`.
+2. **The regions in §3.** At a margin of three: `«平衡守而有终»`, `«开窗则平衡新而尽»` and `Unheated.rows`; `«给过所取则生守相杂»`, `Overshooting.generation_strong`, `Overshooting.rows`, `Overshooting.renewing_steps`, `Overshooting.not_keepsAfter_open` and `Overshooting.single_line_tested`. At every positive margin: `«给如所取则全守»` and `Matched.rows`. At every margin: `shut_rests` and `cold_rests`.
 3. **The core and stage facts in §4.**
    - For every `m`, `c` and `c'`: `«不开窗则同核»` and `shut_one_class_alike`.
-   - For `1 ≤ m` and every heated `c` (`1 ≤ c`): `«开窗则一层可分»` and `«二恒温以温不可分»`.
+   - For `1 ≤ m` and every heated `c` (`1 ≤ c`): `«开窗则一层可分»` and `«有给之室以温不可分»`.
    - For every margin `n + 1` and `1 ≤ c`: `«开窗以温层如其余乃分»`, by `lasts` and `empties`, with `unheated_step`.
    - At a margin of three, `c = 1, 2`: `heaters_told_apart`.
 4. **The constancy law, its corollary and its converse** (§5): `«温有常当且仅当有给»`, `alike_in_core_iff` and `heated_unended` for `1 ≤ m`; `«温不穷当且仅当有给»` for `2 ≤ m`, with `cold_after` and `cools_to`; `unended_at_one`; `joint_converse` for `1 ≤ m` and `1 ≤ c`.
@@ -220,7 +220,7 @@ Each row is a landed law, the place on the models where its condition Z holds, a
 - `RegimeMargin`: `step`, `Short`, `Meets`, `Keeps`, `stays_ended`, `holds`, `Alternation.giving`.
 - `HeldPossible`: `Reaching.heldMoves`, `Reaching.Possible`, `Reaching.PossibleHeld`, `Reaching.reach_heldMoves_iff`, `Reaching.possibleHeld_iff_line`, `Reaching.KeepsWidening`, `Run.not_keepsWidening_of_returns`, `Run.generation_of_held_changes`, `Steps.generation_iff_begins`; with `Arising`'s `Steps.hasPred_iff`.
 
-**Not done** (each is a candidate for OU's owner to decide on):
+**Not done.** OU's owner decided that each goes, as it stands, into the record's next step and the home section's open lines:
 - **A World instance.** The room as a `Flow` would have conditions (the room's heat, the surroundings' heat, the heater's supply) and formations (walls, heater), with balance by conservation. 02 §8's laws would then apply formally: `Flow.settles_from` for the shut room, and `Flow.not_at_of_beyond` for the overshooting thermostat with the window open, where at its set level the joint exchange gives 1 across a gap of 0, so it does not rest there. `Regulation.course` and `courseFlow` are the route.
 - **A heater that reads late.** 02 §8's late thermostat as a World flow is `Regulation.relay` (`relay_runs`, `relay_threshold`, a threshold past which it oscillates). On the rooms, a heater reading `ℓ` steps late would let the window lower the level by `ℓ + 1` before it answers (`late_spread`, §6.3).
 - **Gusts.**
@@ -233,31 +233,33 @@ Each row is a landed law, the place on the models where its condition Z holds, a
 
 ## 8. Names
 
-OU's owner approved the ten names proposed, with three notes, each taken:
+OU's owner approved the ten names proposed, with three notes, each taken, and after the review renamed two of them (below):
 1. **The toy stays.** `«恒温与平衡»` stays in `GrammarTesting` with its scope, and `GrammarCases` cites it. The rule's nets derive it rather than replace it: `toy_branches` is the instance theorem (the toy's branches are the rule's at a margin of one draw), and `toy_verdict` derives its verdict at stage 1 (§4). `GrammarTesting`'s header bullet gains a clause pointing to the derived model at landing; that edit is OU's owner's.
-2. **`«恒温生守相杂»`** is a model case of `Map.«生守相杂»` (生成 and 守 at the fork's root), and a stronger one, since 全生成. Its docstring says so.
+2. **`«给过所取则生守相杂»`** (proposed as `«恒温生守相杂»`) is a model case of `Map.«生守相杂»` (生成 and 守 at the fork's root), and a stronger one, since 全生成. Its docstring says so.
 3. **The stage law holds at every margin**, so `«开窗以温三层乃分»` becomes `«开窗以温层如其余乃分»`: the stage is the margin, in the window's draws of one.
 
-Following the core's model names (`«恒温与平衡»`, `«薪尽火传»`, `«蜡烛之合»`). «闭» is avoided for "shut", since the core uses it for closure. All ten «» names sit in the namespace `Rooms`, each naming its model (平衡, 给如所取, 恒温); the rows and helpers sit in `Rooms.Unheated`, `Rooms.Matched` and `Rooms.Overshooting`.
+Following the core's model names (`«恒温与平衡»`, `«薪尽火传»`, `«蜡烛之合»`). «闭» is avoided for "shut", since the core uses it for closure. All ten «» names sit in the namespace `Rooms`, each naming its model or its condition (平衡, 给如所取, 给过所取, 有给, 开窗); the rows and helpers sit in `Rooms.Unheated`, `Rooms.Matched` and `Rooms.Overshooting`.
 
 | name | statement |
 |---|---|
 | `«不开窗则同核»` | while no window opens, every room at its set level is one core class at the level class, whatever its heater, at every margin (§4.1) |
 | `«开窗则一层可分»` | with the window in the net, the first stage of the level class tells the unheated room from every heated one, at every positive margin (§4.2) |
 | `«开窗以温层如其余乃分»` | under warm or not, at a margin of `n + 1` draws, stage `n + 1` tells them apart and stage `n` does not (§4.3) |
-| `«二恒温以温不可分»` | two heated rooms are one core class under warm or not, at every positive margin (§4.4) |
+| `«有给之室以温不可分»` | two rooms with a heater are one core class under warm or not, at every positive margin (§4.4) |
 | `«温有常当且仅当有给»` | warmth is a constant class under the net exactly where the heater gives, at every positive margin (§5) |
 | `«温不穷当且仅当有给»` | from a margin of two on, no line of warmth from the set level ends exactly where the heater gives (§5) |
-| `«恒温生守相杂»` | the overshooting thermostat at its set level, shut: 生成 and 守, a model case of `Map.«生守相杂»`; 全生成 is `Overshooting.generation_strong` (§3) |
+| `«给过所取则生守相杂»` | where the heater gives more than the window takes, the room at its set level, shut, is 生成 and 守: the overshooting thermostat at a margin of three, a model case of `Map.«生守相杂»`; 全生成 is `Overshooting.generation_strong` (§3) |
 | `«给如所取则全守»` | the matched thermostat: 全守 before and after the window opens, at every positive margin (§3) |
 | `«平衡守而有终»` | the unheated room at its set level, shut: 守, 有终 and 新而有终, neither 生成 nor 退化 (§3) |
 | `«开窗则平衡新而尽»` | after the window opens, the unheated room degenerates while renewing (§3) |
 
-**For OU's owner to decide, from the review** (finding 9; not applied):
-- `«恒温生守相杂»` states for the overshooting thermostat what the matched one lacks (it is 全守), while 恒温 names both heated rooms. The review proposes `«给过所取则生守相杂»`, parallel to `«给如所取则全守»`.
-- `«二恒温以温不可分»` is kept here: both heated rooms are thermostats (a heater reading the level against the set level), and the law holds for any two. The review's alternative, `«有给之室以温不可分»`, says the same without 恒温.
+Everything else takes English names in the namespace `Rooms`, as the map's witnesses do (`Map.Once.keeping`). The review's English renames are taken: `At` became `Occurrence` (the package's other `Occurrence` types sit in `Joining` and `SecuredContent`), `outside` became `surroundings` (the glossary's "outside" is another sense), the namespace `Thermostat` became `Overshooting`, and the matched thermostat's open occurrence is `Matched.kept m`. `lasts`, `empties`, `cools_to`, `unheated_step` and the step lemmas are helpers.
 
-Everything else takes English names in the namespace `Rooms`, as the map's witnesses do (`Map.Once.keeping`). The review's English renames are taken: `At` became `Occurrence` (the package's other `Occurrence` types sit in `Joining` and `SecuredContent`), `outside` became `surroundings` (the glossary's "outside" is another sense), the namespace `Thermostat` became `Overshooting`, and the matched thermostat's open occurrence is `Matched.kept m`. Of the English names, `toy_branches`, `toy_verdict`, `unended_at_one`, `joint_converse`, `alike_in_core_iff`, `shut_rests`, `cold_rests`, `before_window_moves` and `before_pos` state results a reader may want named in the core's vocabulary; OU's owner may give them «» names before landing. `lasts`, `empties`, `cools_to`, `unheated_step` and the step lemmas are helpers.
+**Decided by OU's owner after the review** (finding 9):
+- `«恒温生守相杂»` became `«给过所取则生守相杂»`. 恒温 names both heated rooms, but only the overshooting one is 生守相杂, while the matched one is 全守. The new name is exact and pairs with `«给如所取则全守»`.
+- `«二恒温以温不可分»` became `«有给之室以温不可分»`. 有给 is already this item's word for `1 ≤ c` (`«温有常当且仅当有给»`), so the name says exactly which rooms the law is about.
+- The English names that state results stay English in `Rooms`, as helpers and bridges do: `toy_branches`, `toy_verdict`, `unended_at_one`, `joint_converse`, `alike_in_core_iff`, `shut_rests`, `cold_rests`, `heated_unended`, `before_window_moves`, `before_pos`, `Matched.no_generation_at_moments` and `Unheated.no_generation_at_moments`. A row of the home section that needs one cites it by that name.
+- `RoomNet` and `RoomRuns` stay two modules. The first reads the grammar only, and the second is the bridge to `RegimeMargin` and `HeldPossible`; their imports state their different bases, which one module would hide.
 
 ## 9. Review
 
@@ -273,7 +275,7 @@ One independent AI review read the design, both scratch modules and the package 
 | 6 (medium) | "fails as worded" on the shut net treats "cannot be tested here" as "false"; the overshooting heater's coupling shows on the shut net below the set level | §6.1 now says that from the set level the shut net cannot test the guess, with the coupling below it; §6.2, equilibrium's own level-reading exchange, is named the real objection |
 | 7 (medium) | modelling choices the laws depend on were not stated; `Flow.settles` needs balance everywhere | §2's "Modelling choices" names nine, each with the laws that rest on it; §6.2 cites `Flow.settles_from` |
 | 8 (medium) | "what is new" missed `RegimeMargin.Alternation`, `Map.Short`, `«核之单调»`, `«类有常当且仅当含于核»` and the relay; every new theorem is about one family | the overshooting course is proved to be `Alternation`'s run shifted by two (`Overshooting.heater_shifted`, `in_phase`, `alternation_shifted`); `shut_one_class_alike` (by `«核之单调»`) and `alike_in_core_iff` (by `«类有常当且仅当含于核»`) are proved; "what is new" cites the existing witnesses and says every law is about this family; §1 and §7 cite the relay, `course` and `courseFlow` |
-| 9 (medium) | `«二恒温以温不可分»` calls `c = 1` a thermostat while the design's thermostat was `c = 2`; `c = 1` was called a control; `«给如所取则全守»` and `«恒温生守相杂»` read as laws; placement mixed; `outside` | the heated rooms are the matched and the overshooting thermostat throughout; the proposed «» renames are left to OU's owner (§8); all ten «» names now sit at `Rooms`; `outside` became `surroundings` and `At` became `Occurrence`; `«给如所取则全守»` is now proved at every positive margin |
+| 9 (medium) | `«二恒温以温不可分»` calls `c = 1` a thermostat while the design's thermostat was `c = 2`; `c = 1` was called a control; `«给如所取则全守»` and `«恒温生守相杂»` read as laws; placement mixed; `outside` | the heated rooms are the matched and the overshooting thermostat throughout; OU's owner then took both proposed «» renames, `«给过所取则生守相杂»` and `«有给之室以温不可分»` (§8); all ten «» names now sit at `Rooms`; `outside` became `surroundings` and `At` became `Occurrence`; `«给如所取则全守»` is now proved at every positive margin |
 | 10 (low–medium) | the lists of laws used were wrong; the `«有终则粗不有常»` row had no "Z fails" entry | `«有终则粗不有常»` is now used (`Unheated.rows`), and `ends_beyond_giving` is listed as existing, not used; §7's list is taken from the modules' code; the row's "Z fails" entry is the heated rooms |
 | 11 (low–medium) | non-widening was claimed for every course; two readings of 全生成 were joined; `KeepingWidening` "none of its premises hold" | non-widening is claimed for the window courses only, each at the margins proved (§1, §3, §5, §7); §3 keeps the net's 全生成 and the run's apart, with no bridge claimed; §1 says "does not apply" |
 | 12 (low) | "the coarser the class, the deeper the stage" generalizes one threshold; a non sequitur on why the unheated room is not 生成 | "here", tied to the threshold, with the general fact that a finer class separates no later; the reason given is `Unheated.not_generates`'s |
@@ -288,7 +290,7 @@ One independent AI review read the design, both scratch modules and the package 
 
 | re-check point | how taken |
 |---|---|
-| 9, 11, 15 and 18 partly taken: the two «» renames left to OU's owner, which is fine if stated; non-widening still said of every window course in §1's two rows and §5's last; "no landed text changes" while §8 plans a clause in `GrammarTesting`'s header; the `Run.generation_of_held_changes` row gave no Y where Z fails | 9: stated in §8, unchanged; 11: each place names the margins proved; 15: row 15 names the clause; 18: Y fails there, proved (`Matched.no_generation_at_moments`, `Unheated.no_generation_at_moments`, by `Steps.generation_iff_begins`) |
+| 9, 11, 15 and 18 partly taken: the two «» renames left to OU's owner, which is fine if stated; non-widening still said of every window course in §1's two rows and §5's last; "no landed text changes" while §8 plans a clause in `GrammarTesting`'s header; the `Run.generation_of_held_changes` row gave no Y where Z fails | 9: OU's owner then took both renames (§8); 11: each place names the margins proved; 15: row 15 names the clause; 18: Y fails there, proved (`Matched.no_generation_at_moments`, `Unheated.no_generation_at_moments`, by `Steps.generation_iff_begins`) |
 | new 1: "the level class is the finest the rooms share" is false, since equality on the occurrence with the tag ignored is finer | "of the two classes used here, the finer" (§2) |
 | new 2: the shut net's separation below the set level was said at every margin; it holds below `m - 1`, so from a margin of two on, and the steps to 2, 3 and 4 are at a margin of three | scoped so in the ten-minute part and §4.1, with the margin given in §6.1 and the gust paragraph |
 | new 3: docstrings claiming more than their statements: `shut_rests` (the one region also needs `«给如所取则全守»`), `alternation_shifted` (only the band of `holds_one_way` follows from the shift), `alike_in_core_iff` (it needs a positive set level); "above two" and "above 1" where the statements hold from two and at 1 | each docstring says what its statement proves, and §7 says "from two on"; `RoomNet`'s module doc and the ten-minute part now scope the window's tests to a positive margin, which `«开窗则一层可分»` needs |
