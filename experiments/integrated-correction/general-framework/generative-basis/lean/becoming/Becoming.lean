@@ -3050,6 +3050,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
   a sequence of classes, no order between them assumed, reads generation at every order
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
+  branch of renewing into (`«生生即延»`, `«息即尽»`). Along the successor (`Map.step`) a line reaches
+  exactly the later numbers (`Map.step_reached_le`, `Map.step_reaches_of_le`), stated here below every
+  module that reads such a line. Imported by `Becoming.GrammarLaws`,
+  `Becoming.GrammarScope`, `Becoming.GrammarPath`, `Becoming.MapInstances` and `Becoming.MapRegions`.
 * `Becoming.MapRegions` (L1): the map's regions, laws of `Becoming.GrammarMap` kept in a leaf, since
   most of the package depends on it. A carrying renewal begins no line of the pattern (`«传则粗不生»`), and a beginning of a
   part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal
@@ -3065,8 +3069,6 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   WLPO (`Map.«后守之定则LPO»`, `Map.«生成之定则WLPO»`), and placing every sequence in one of them gives
   LPO (`Map.«生成后守之定则LPO»`): to tell whether a line keeps from some point on is to decide
   whether it stops renewing. Near-definitional. A leaf (board item GW).
-  branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarLaws`,
-  `Becoming.GrammarScope`, `Becoming.GrammarPath`, `Becoming.MapInstances` and `Becoming.MapRegions`.
 * `Becoming.MapInstances` (L1): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
@@ -3105,12 +3107,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
   `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`, `Becoming.PatternPassing` and
   `Becoming.Persistence` that keep a region along the steps by their own induction being its cases
-  (board items OU3f, HE). Balance: a perfect pairing of finite lists under a
+  (board items OU3f, HE). Under the converse the closure is the closure read backward
+  (`«所闭之逆»`); a closure through borrowed steps, each a step of the relation or one from `a`
+  taken at `o`, lies within `o`'s or `a`'s closure (`«借步之所闭在二所闭»`), and the two lie within
+  `o`'s closure under a larger relation where `a` lies within it (`«二所闭在借步之所闭»`; board item
+  HE2). Balance: a perfect pairing of finite lists under a
   relation (`«对»`) conserves count (`«对之长»`) and under the one is exactly equal count
   (`«一之对»`); pairings compose, join, gather over a family and carry over a stretch under the
   closure (`«对之接»`, `«对之并»`, `«对之族»`, `«对之程»`), and the count law at a step and over a
   stretch is exactly a pairing of units (`«守数当且仅当可对»`, `«程守数当且仅当可对»`): an exact
-  cardinality representation, near-definitional, the pairing supplied. Finite runs: drawn in is
+  cardinality representation, near-definitional, the pairing supplied. Counting a region's units
+  (`«计»`, the region read as a test), a pairing keeps the count on every region the relation does
+  not cross (`«对则不越域守数»`), and under a class decided by a test it is exactly equal count in
+  every class (`«类之对当且仅当类类等数»`); the census of a step pairs the units before with those
+  arising to the units after with those ceasing, each pair a continuation or the same unit
+  (`«定后定前则前并生对后并亡»`; board item HE2). Finite runs: drawn in is
   reaching something that does not reach back (`«入当且仅当有不返»`); with the successor fixed at
   what it reaches, an occurrence reaching itself is not drawn (`«定后于则返者不入»`); along a line
   a list holds, merging nothing at its places, the start reaches itself (`«线有限不并则返»`, by
@@ -3140,13 +3151,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
   (`«像定后当且仅当同行»`); a map preserves a relation exactly where its image lies within the
-  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening
+  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. With a fixed
+  successor a class's core goes alike (`«定后则类之核同行»`); with a successor everywhere a class going alike
+  inside a relation lies in its core (`«遍后则其内同行之类含于核»`), so with both the core is the coarsest
+  class inside the class that goes alike (`«定后遍后则核为其内最粗同行之类»`), and off a fixed successor it
+  need not go alike (`«后不定则核可不同行»`; board item HE2). Order: widening
   of relations is irreflexive, one-way and transitive and
   excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
   strict part of a transitive relation containing it is transitive, and irreflexive where the first
   is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map
   and the prelude only, and `Becoming.Frame` imports it, so every model lies above it: closure is
-  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`, and so is the step back of a
+  proved from it in `Becoming.Frame`, `Becoming.GrammarScope`, `Becoming.Response` and
+  `Becoming.SelectionPool`, and so is the step back of a
   returning configuration in `Becoming.Junctures`; finite runs in `Becoming.Recurrence`,
   `Becoming.Attraction` and `Becoming.Amounts`, and the lasso of a world a list holds in
   `Becoming.Learning`; lumping, bridged in
@@ -4142,8 +4158,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   eventual agreement have no counterpart in the grammar.
 * `Becoming.GrammarRegularity` (L1): the regularity of a line, kept and left, and rules that change
   themselves, in the grammar (board item GS1). From a step continuing under the core, every
-  occurrence its line under the core reaches has a successor under the core (`«守理则不穷»`); a step
-  into an end leaves the core, for every relation (`«亡前理变»`), and so does the last step of every
+  occurrence its line under the core reaches has a successor under the core (`«守核则不穷»`); a step
+  into an end leaves the core, for every relation (`«亡前核变»`), and so does the last step of every
   line that ends (`«有亡之线末步离核»`). A move of a process is a relation (`moveRel`); the state of a
   process changing its own rule has a class constant under every move exactly where the rule makes
   no difference to it (`adaptive_constant_iff`). In closed capture the class of share, rule and step

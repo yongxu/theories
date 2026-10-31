@@ -398,23 +398,14 @@ theorem Run.begins_of_heldKeepsWidening (r : Run P)
 /-- **On a course's moments, 全生成 under the one is a beginning after every moment**: read along
 the steps (`Steps.next`) with the one (`«一»`) as the coarse class and any relation `E` as the fine,
 a moment `N` is 全生成 exactly where, after every moment from `N` on, a line under `E` begins. The
-line under the one never ends and reaches every later moment (`Steps.reached_of_buqiong`), and a
-step of it is a carrying renewal exactly where its end begins under `E`. -/
+line under the one never ends and reaches exactly the later moments (`Map.step_reaches_of_le`,
+`Map.step_reached_le`), and a step of it is a carrying renewal exactly where its end begins under `E`. -/
 theorem Steps.generation_iff_begins {E : «际» Nat} {N : Nat} :
     «全生成» Steps.next «一» E N ↔ ∀ y, N ≤ y → ∃ n, y ≤ n ∧ «生» Steps.next E (n + 1) :=
   have endless : ∀ x, «不穷» Steps.next «一» x := fun _ => Steps.buqiong_iff.mpr fun _ => trivial
-  have reach_to : ∀ {x y : Nat}, x ≤ y → «所及» Steps.next «一» x y := fun {x _} le =>
-    match Nat.eq_or_lt_of_le le with
-    | .inl same => .inl same
-    | .inr lt => match le_dest lt with
-      | ⟨m, at_⟩ => .inr (Eq.subst (motive := fun z => «相续» Steps.next «一» x z)
-          ((Nat.add_right_comm x 1 m).symm.trans at_.symm) (Steps.reached_of_buqiong (endless x) m))
-  have reached_le : ∀ {x y : Nat}, «所及» Steps.next «一» x y → x ≤ y := fun {x _} reached =>
-    match reached with
-    | .inl same => Nat.le_of_eq same
-    | .inr line => match Steps.reach_later line with
-      | ⟨n, at_⟩ => Eq.subst (motive := fun z => x ≤ z) at_.symm
-          (Nat.le_succ_of_le (Nat.le_add_right x n))
+  -- GrammarMap's reach laws of the successor, read at `Steps.next`, the same relation
+  have reach_to : ∀ {x y : Nat}, x ≤ y → «所及» Steps.next «一» x y := Map.step_reaches_of_le
+  have reached_le : ∀ {x y : Nat}, «所及» Steps.next «一» x y → x ≤ y := Map.step_reached_le
   ⟨fun ⟨_, ahead⟩ y later => match ahead y (reach_to later) with
      | ⟨z, _, toZ, ⟨⟨next, _⟩, begins⟩⟩ =>
        ⟨z, reached_le toZ, Eq.subst (motive := fun x => «生» Steps.next E x) next begins⟩,

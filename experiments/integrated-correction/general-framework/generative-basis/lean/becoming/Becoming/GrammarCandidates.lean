@@ -313,7 +313,7 @@ theorem «无为无别相» (R E : «际» α) (x : α) :
 /-- **Not everything comes from conditions, and self-conditioning is allowed (一切物皆從眾緣生,
 ZL-07-285).** The grammar admits an occurrence with no condition and an occurrence that is its own
 condition: both are conditions on a model, not laws. -/
-theorem «从缘生非文法之理» :
+theorem «从缘生非文法之律» :
     (∃ (β : Type) (R : «际» β) (x : β), ∀ w, ¬ R w x) ∧ (∃ (β : Type) (R : «际» β) (x : β), R x x) :=
   ⟨⟨Unit, fun _ _ => False, (), fun _ h => h⟩, ⟨Unit, «一», (), trivial⟩⟩
 

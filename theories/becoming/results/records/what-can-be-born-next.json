@@ -720,7 +720,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
       "role": "proof",
-      "sha256": "f57ebdbef4b57062d23671a94d0f4873217e55655862939c60d2f45bd74f1aa0"
+      "sha256": "9efd2732d6aed37c9251b23d5928bd46e52742cd6e52bf1c04ec8b606b8d1f40"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
@@ -730,7 +730,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
+      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",

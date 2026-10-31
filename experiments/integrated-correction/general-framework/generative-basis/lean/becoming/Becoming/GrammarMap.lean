@@ -200,8 +200,12 @@ lines that end while it goes on. So the regions are read on branches: the patter
 branch (`«延»`, coinductive) or ends on every branch (`«尽»`, inductive). The forms above that read
 the whole coarse line are stronger and weaker than these: `«全生成»` and `«全守»` ask every point
 reached to go on (`«不穷»`), which gives `«延»` (`«不穷则延»`), and `«有终»` asks an end at one point
-reached, where `«尽»` asks one on every branch. How they stand to the regions below (`«生成»`, `«守»`,
-`«退化»`) is not stated: `«全守»` allows a carrying renewal before its point, which `«守»` forbids. -/
+reached, where `«尽»` asks one on every branch. How `«全生成»` and `«全守»` stand to `«生成»` and
+`«守»` is stated in modules that import this one: strong generation gives generation (`«全生成则生成»`,
+`Becoming.KeepingWidening`), and strong keeping gives keeping from some point on (`«全守则后守»`,
+`Becoming.MapRegions`) but not strict keeping, since `«全守»` allows a carrying renewal before its point,
+which `«守»` forbids (`Map.Once.keeping`, `Map.Once.not_keeps`); how `«有终»` stands to `«退化»` is not
+stated. -/
 
 /-- A line under `L` continued by a continuation is a line. -/
 theorem «相续之续» {R L : «际» α} {x z w : α} (h : «相续» R L x z) (c : «续» R L z w) : «相续» R L x w :=
@@ -352,6 +356,35 @@ def step : «际» Nat := fun m n => n = m + 1
 theorem step_irrefl : ∀ n, ¬ step n n
   | 0, h => Nat.noConfusion h
   | n + 1, h => step_irrefl n (Nat.succ.inj h)
+
+/-! The reach laws of the successor, stated once here, below every module that reads a line along it
+(`MapRegions`, `WideningOnTheMap`'s `Steps.reached_le`, `HeldPossible`, and `Sampling`'s `arises_within`
+after HE2's item 1). -/
+
+/-- What a line along the steps reaches is later. -/
+theorem step_reached_le {L : «际» Nat} : ∀ {x y : Nat}, «所及» step L x y → x ≤ y := by
+  intro x y h
+  match h with
+  | .inl e => exact Nat.le_of_eq e
+  | .inr l =>
+    have later : ∀ {a b : Nat}, «相续» step L a b → a + 1 ≤ b := by
+      intro a b l
+      induction l with
+      | one c => exact Nat.le_of_eq c.1.symm
+      | more c _ ih => exact c.1 ▸ Nat.le_of_succ_le ih
+    exact Nat.le_of_succ_le (later l)
+
+/-- Under the one, the steps from the first reach every step. -/
+theorem step_reaches : ∀ n, «所及» step «一» 0 n
+  | 0 => .inl rfl
+  | n + 1 => «所及之传递» (step_reaches n) (.inr (.one ⟨rfl, trivial⟩))
+
+/-- Under the one, the steps reach every later step. -/
+theorem step_reaches_of_le : ∀ {z n : Nat}, z ≤ n → «所及» step «一» z n := by
+  intro z n le
+  induction le with
+  | refl => exact .inl rfl
+  | step _ ih => exact «所及之传递» ih (.inr (.one ⟨rfl, trivial⟩))
 
 /-- 全生成 is inhabited: the endless chain, under the one, renews at every step. -/
 theorem Endless.generation : «全生成» step «一» «静» 0 := by

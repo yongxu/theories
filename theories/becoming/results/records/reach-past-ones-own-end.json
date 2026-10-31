@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T22:05:14+00:00",
+  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
     "en": "On a line under a class, what continues past the end of a finer line lies within the line's continuing; a class's core continues something exactly where some line under it goes on without end.",
     "zh": "一类下之线上，凡过较细之线之终而续者，皆在此线之续中；一类之核有续，恰当其下有一线不尽。"
@@ -115,8 +115,8 @@
       "id": "a-regularity-kept-and-changed",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«守理则不穷», «相续之始有后».",
-        "zh": "«守理则不穷»、«相续之始有后»。"
+        "en": "«守核则不穷», «相续之始有后».",
+        "zh": "«守核则不穷»、«相续之始有后»。"
       }
     },
     {
@@ -174,7 +174,7 @@
         "Becoming.«核有续当且仅当有不穷»",
         "Becoming.«过亡而续»"
       ],
-      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
+      "sha256": "44c11fcbfb993b7b8b8c10d3e9d11647a1b554a7d8b66791281d4cfa7640b8fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
@@ -189,7 +189,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "cdc54fc98edd5c9c04ac24578f16bde719a11d8961d7ace8e173b06bf697d31b"
+      "sha256": "de61474df84ef52d221c9cac8d53a82d00dea64cfcbce912bff8e62ddecf8085"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
@@ -208,12 +208,18 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -227,6 +233,10 @@
     {
       "en": "25 October 2026: LineOfDescent.Endless.member_line proved by «线内同类» (GS6, board rule 9), its statement unchanged; the dependency detail names the law; study section 404.",
       "zh": "2026年10月25日：LineOfDescent.Endless.member_line 由 «线内同类» 证得（GS6，看板第九条），陈述不变；依赖之说明列此律；研究第 404 节。"
+    },
+    {
+      "en": "31 October 2026, board item HE2, items 6 and 7 (study section 474): the core's name «守理则不穷» renamed to «守核则不穷», with no alias kept, since off a class or a fixed successor the core need not be a 理; no statement's content changes.",
+      "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：核之名 «守理则不穷» 改为 «守核则不穷»，不留别名，因离类或离定后之步，核未必为理；所述之义皆不变。"
     }
   ]
 }

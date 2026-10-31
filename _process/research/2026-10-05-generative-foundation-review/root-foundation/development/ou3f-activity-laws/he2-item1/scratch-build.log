@@ -1,0 +1,57 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/he2-item1/tree",
+  "modules": 33,
+  "ran": [
+    "Becoming.GrammarMap",
+    "Becoming.GrammarLaws",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
+    "Becoming.Frame",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Arising",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Population",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Evolution",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.Recurrence",
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Premises",
+    "Becoming.Sampling",
+    "Becoming.Identity",
+    "Becoming.Continuation",
+    "Becoming.Decidedness",
+    "Becoming.Wholes",
+    "Becoming.PatternPassing",
+    "Becoming.HE2Item1Check",
+    "BecomingSamplingAxiomAudit",
+    "BecomingPatternPassingAxiomAudit",
+    "BecomingHE2Item1CheckAxiomAudit"
+  ],
+  "reused": 4,
+  "unclean": [],
+  "audits": {
+    "Becoming.Sampling": {
+      "theorems": 88,
+      "declarations": 117,
+      "with_axioms": {}
+    },
+    "Becoming.PatternPassing": {
+      "theorems": 33,
+      "declarations": 46,
+      "with_axioms": {}
+    },
+    "Becoming.HE2Item1Check": {
+      "theorems": 3,
+      "declarations": 3,
+      "with_axioms": {}
+    }
+  }
+}

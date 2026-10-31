@@ -3,23 +3,23 @@
   "id": "a-regularity-kept-and-changed",
   "title": {
     "en": "A regularity kept and left along its own line",
-    "zh": "理之守与离"
+    "zh": "规律之守与离"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T19:47:47+00:00",
+  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
     "en": "From a step under a relation's core, every occurrence its line under the core reaches is continued under it, so a kept regularity can always be kept; a line ends only by a step that leaves the core, its last step leaving it, found with no decision.",
-    "zh": "自关系之核下之一步起，其核下之续所及者皆于核下有后，故所守之理总可再守；一线之终，必由离核之一步，其末步即离核，无须判定而得。"
+    "zh": "自关系之核下之一步起，其核下之续所及者皆于核下有后，故所守之规律总可再守；一线之终，必由离核之一步，其末步即离核，无须判定而得。"
   },
   "laws": [
     {
       "en": "From a step continuing under the core of a relation, every occurrence its line under the core reaches has a successor under the core; a line along which the core is kept leaves its last occurrence continued under the class; the first occurrence of a line is continued, and its last is reached by a step from the first or from an occurrence the line reaches.",
       "zh": "自核下之一步起，其核下之续所及者皆于核下有后；守核之线，其末于类下仍有后；一线之始有后，其末由一步而至，此步出自其始或其所及者。",
       "declarations": [
-        "Becoming.«守理之线不亡»",
-        "Becoming.«守理则不穷»",
+        "Becoming.«守核之线不亡»",
+        "Becoming.«守核则不穷»",
         "Becoming.«相续之始有后»",
         "Becoming.«相续之末步»"
       ]
@@ -28,8 +28,8 @@
       "en": "For every relation E, a step into an end under E leaves the core, and so does the last step of every line under E that ends; where E is a class, the two ends of such a line lie in different classes of the core.",
       "zh": "对一切关系 E：于 E 下入亡之一步离核，凡于 E 下终之线之末步亦然；E 为类时，此线两端在核之不同类中。",
       "declarations": [
-        "Becoming.«亡前理变»",
-        "Becoming.«有亡之线两端理异»",
+        "Becoming.«亡前核变»",
+        "Becoming.«有亡之线两端核异»",
         "Becoming.«有亡之线末步离核»"
       ]
     },
@@ -61,7 +61,7 @@
     },
     {
       "en": "Which class carries an actual pattern's regularity, or that a line ending is a loss.",
-      "zh": "实有之样式之理在何类，或一线之终为损。",
+      "zh": "实有之样式之规律在何类，或一线之终为损。",
       "kind": "correspondence"
     }
   ],
@@ -82,8 +82,8 @@
     "zh": "诸一般之律经其主同意后移入 Becoming.Grammar；沿线核之然否已定时，述首离核之步；可能之网之读法下，所行之途可离核而另一途守之。"
   },
   "correspondence": {
-    "en": "The source texts' \"a regularity can be temporarily self-maintaining without being eternal\" read in the grammar, one-history reading: what goes on for a while and then ends is a class that does not hold by itself, and its core always admits continuation; the core is the plan's 理 of the class.",
-    "zh": "来源二篇之「理可暂自持而非永恒」于文法中读（一史之读法）：暂行而终者，是不自持之类；其核总容续；核即计划所言类之理。"
+    "en": "The source texts' \"a regularity can be temporarily self-maintaining without being eternal\" read in the grammar, one-history reading: what goes on for a while and then ends is a class that does not hold by itself, and its core always admits continuation; the core is the plan's 理 of the class, a 理 in the glossary's sense where the successor is fixed.",
+    "zh": "来源二篇之「理可暂自持而非永恒」于文法中读（一史之读法）：暂行而终者，是不自持之类；其核总容续；核即计划所言类之理，步之后定处即词汇表所言之理。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
   "aliases": [
@@ -125,15 +125,15 @@
       "declarations": [
         "Becoming.Law.unending_alike",
         "Becoming.Law.unending_iff_steps",
-        "Becoming.«亡前理变»",
-        "Becoming.«守理之线不亡»",
-        "Becoming.«守理则不穷»",
-        "Becoming.«有亡之线两端理异»",
+        "Becoming.«亡前核变»",
+        "Becoming.«守核之线不亡»",
+        "Becoming.«守核则不穷»",
+        "Becoming.«有亡之线两端核异»",
         "Becoming.«有亡之线末步离核»",
         "Becoming.«相续之始有后»",
         "Becoming.«相续之末步»"
       ],
-      "sha256": "b24f3482898c95886d483c1eeb868ccb7412459eafa24d0dce70646a3884d79f"
+      "sha256": "ef1c1a74433469f0d7fbe5dfcc2fed54ddecbeaf935ccb684afe481b306041bd"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T194024.593238Z/verification.json",
@@ -148,19 +148,25 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+      "sha256": "4c7dbcf28a27d9eca65159aea9e62c7897c79631af2d5f0d8843e6502d27484d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -170,6 +176,10 @@
     {
       "en": "24 October 2026: added (GS1), from the review of the root against its two source texts; study section 390.",
       "zh": "2026年10月24日：新增（GS1），出自根与其二篇来源之对照审查；研究第 390 节。"
+    },
+    {
+      "en": "31 October 2026, board item HE2, items 6 and 7 (study section 474): the core's names «守理则不穷», «守理之线不亡», «亡前理变», «有亡之线两端理异» renamed to «守核则不穷», «守核之线不亡», «亡前核变», «有亡之线两端核异», with no alias kept, since off a class or a fixed successor the core need not be a 理; wording only in title (zh), statement (zh), correspondence (en), correspondence (zh), does-not-show item 3 (zh): 理 written for a line's regularity, the core, becomes 规律 or 核, and the correspondence says where the core is a 理; no statement's content changes.",
+      "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：核之名 «守理则不穷»、«守理之线不亡»、«亡前理变»、«有亡之线两端理异» 改为 «守核则不穷»、«守核之线不亡»、«亡前核变»、«有亡之线两端核异»，不留别名，因离类或离定后之步，核未必为理；仅措辞，title (zh)、statement (zh)、correspondence (en)、correspondence (zh)、does-not-show item 3 (zh)：写作理之一线之规律（核）改为规律或核，对应处言核于何处为理；所述之义皆不变。"
     }
   ]
 }

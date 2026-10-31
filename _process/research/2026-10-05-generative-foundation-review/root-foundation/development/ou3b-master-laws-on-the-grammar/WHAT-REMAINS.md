@@ -413,6 +413,18 @@ Item 13 (生生 and 理 each in one sense, `b4cec4c71`) proposed two Lean change
 - **The names that write 理 for a core are renamed toward 核.** By the naming rule, a rename after landing needs a name that states a wrong meaning. These do: where `E` is not a class, or the successor is not fixed, the core is not a 理 in the one sense item 13 adopted. «从缘生非文法之理» uses 理 for law, and becomes «从缘生非文法之律». No aliases are kept: a name that states a wrong meaning does not stay live beside the right one. The records citing the old names are rebound, and the residue sentence leaves 01 §4, the glossary row and 06.
 - **Item 13's wording in my two records** (continuation-relative-to-a-class and generation-and-degeneration-at-two-grains) writes the grammar's 生生 as «生生». Each change carries a history note, and nothing either record states changed. Taken as landed.
 
+## HE2 landed: the edits held for a near-full rebuild (31 October 2026)
+
+HE2 landed in one near-full rebuild (`467f075ec`, study §474), with every axiom report empty. Its seven items, each from its owner's kit, all merged by HE2's lander:
+
+1. **«两端分则中有标» asks only transitivity**, in place of a class, and `Sampling.arises_within` and `ceases_within` are derived from it: "After OU3f" item 2 above is done. Its two consumers in PatternPassing pass their class's transitivity, and Sampling's four coarse-step theorems now reach the law, where none did. The pair came out one line and 19 characters shorter but 17 symbols longer. OU took all three edits, since what the row's length condition guarded against is a longer wrapper, and these are cases of the law.
+2. **U4 lever 1's count, class and census laws are in GrammarLaws**: «计», «对则不越域守数» (renamed from lever 1's «对则闭域守数», whose «闭» is closure one way, and a region closed forward only does not keep the count: «对而单闭域不守数之例»), «类之对当且仅当类类等数», «续之对则类类等数», and the census of a step («定后定前则前并生对后并亡», «前者在前则所列生者生», «后者在后则所列亡者亡»).
+3. and 4. **«所闭之逆»** and the two laws of a closure through borrowed steps are in GrammarLaws, with `WithinClosure.converse`, `of_reads` and `to_reads` (Response, SelectionPool) one application each.
+5. **The successor's reach laws are stated once, in GrammarMap** (MapRegions' three moved whole, no name added), and GrammarMap's "is not stated" sentence says what modules above it state and that how «有终» stands to «退化» is not stated. The catalogues were repaired: MapRegions' bullet in `Becoming.lean` had been inserted inside GrammarMap's.
+6. and 7. **The core and 理** are composed in GrammarLaws, and the names that wrote 理 for a core say 核.
+
+**What it changes on the release gate.** Nothing is counted anew here: the measure stays at 44, 16, 7 and 51. Item 3 of the gate still waits for U4's boundary record (U4's leaf and record, to be rehearsed on HE2's head), and for U1's seven interface laws in the package.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

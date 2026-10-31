@@ -54,7 +54,7 @@ PW §4-§5: the self as a line, and whether a living line's core is wider than i
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). «守理则不穷», «相续之始有后».
+- **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). «守核则不穷», «相续之始有后».
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «有常», «核», «类有常当且仅当含于核», «一为类», «线内同类».
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «所及», «相续之续».
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The condition on the root, of which this is the question of the class.
@@ -73,6 +73,7 @@ PW §4-§5: the self as a line, and whether a living line's core is wider than i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 
 Aliases: `Past one's own end`, `过己之亡`, `Becoming.«过亡而续»`
 
@@ -81,7 +82,8 @@ Aliases: `Past one's own end`, `过己之亡`, `Becoming.«过亡而续»`
 
 - 24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.
 - 25 October 2026: LineOfDescent.Endless.member_line proved by «线内同类» (GS6, board rule 9), its statement unchanged; the dependency detail names the law; study section 404.
+- 31 October 2026, board item HE2, items 6 and 7 (study section 474): the core's name «守理则不穷» renamed to «守核则不穷», with no alias kept, since off a class or a fixed successor the core need not be a 理; no statement's content changes.
 
 </details>
 
-Documentary review UTC: `2026-10-23T22:05:14+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-31T05:47:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
