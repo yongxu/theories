@@ -77,13 +77,13 @@ U4b's final wording, from U4's owner on 1 November 2026 (kit `development/u4-one
 SJ's design is on branch `sj-claim` at `134f92a08`. It maps the edge by input and proposes SJ1, a leaf of judgement from a reading.
 - **Lean.** `Becoming.PremiseWitnesses` and `Becoming.UnreadStandings` state nothing SJ1 restates. SJ1 is about readings and requirements (`Licensed`, judgement through `E`), and DU's leaves are about premise standings, self-concern against C, and amounts not read off the root. They do not overlap.
 - **The map's rows should cite DU's new declarations once DU lands.**
-  - "Value": `ReadsNoOrder.not_entails` (C not entailed), `LiftModel.met_and_failed` (L met and failed), and `Web.comparison_of_increasingInOwn` (where the de se condition holds, C asks nothing beyond self-concern).
-  - "Chance and amounts": `World.standing_not_read_up_to_unit` (no reading of the occurrence model's eleven relations gives the standings, even up to a unit).
+  - "Value": `ReadsNoOrder.not_entails` (C not entailed), `LiftModel.met_and_failed` (L met and failed), and `Web.extension_ranked_of_increasingInOwn` (where the de se condition holds and admission is decided, every self-concerned order ranks an extension between two level paths whose admissions are listed; one way only, and only for courses whose admissions end, `Web.admits_nothing_from_of_listed`). The earlier `Web.comparison_of_increasingInOwn` is withdrawn: its hypothesis cannot hold once there is a formation (`Web.not_listsAdmitted_every`), so it was vacuous (REVIEW-LEAF-2, third look).
+  - "Chance and amounts": `World.standing_not_read` (for k > 1, no reading of the occurrence model's selected relations returns a positive standing both in a world and in it counted in a unit k times finer) and `World.standing_not_read_up_to_unit` (no single reading gives every world's standings up to a positive ratio; the refuting worlds are still worlds, and worlds with exchange are open). The relations are WorldRepresentation's stated selection with falling and the order of standings, which read amounts only through sign, comparison in one unit and conservation's equation, not the root.
   - "Which relation": `«续无外随网»` and `«逆缘续无外随网»` (the condition's root form varies with the net and the direction).
 - **The hunks DU edits:**
   - 08 §7: the connectivity paragraph's labels; the edge paragraph's C / `«续无外»` sentence (through `make_record_u4.py`'s `home()`); and a new home section, `premises-met-and-failed`, placed after "Standings on the edge". If SJ's map also goes there, it goes after DU's section, or OU's owner orders the two.
   - 07: one new home section, `self-concern-and-c-under-the-condition`, at scope and order.
-  - 01 §8.6: one new home section, `standings-not-read-off-the-root`, after `amounts-by-unit-matchings`.
+  - 01 §8.6: one new home section, `standings-not-read-off-the-occurrence-model`, after `amounts-by-unit-matchings`.
   - 04: Bases and Open.
   - DU does not edit 08 §5 or 01 §7.
 

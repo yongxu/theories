@@ -1,6 +1,6 @@
 # The leaf's second review, and what was taken
 
-Two independent AI skeptics read the revised leaf (`tree/Becoming/PremiseWitnesses.lean`, 22 declarations, 1 November 2026). Together they gave nine findings: seven major and two minor. Several overlap: 1 with 9, 2 with 7, and 3 with 8. All nine are taken, three of them in part. The leaf now has 31 declarations: 29 theorems and 2 definitions. Every axiom report is empty.
+Two independent AI skeptics read the revised leaf (`tree/Becoming/PremiseWitnesses.lean`, 22 declarations, 1 November 2026). Together they gave nine findings: seven major and two minor. Several overlap: 1 with 9, 2 with 7, and 3 with 8. All nine are taken, three of them in part. The leaf now has 31 declarations: 29 theorems and 2 definitions. Every axiom report is empty. A third look revised the link to C and the direction's summary; see "Third look (1 November 2026)" at the end (37 declarations, 35 theorems).
 
 Build: `python3 -B scratch_build.py <du-deep-unification-review/tree> Becoming.PremiseWitnesses` gives `"unclean": []` (no error or warning), `"theorems": 29`, `"declarations": 31` and `"with_axioms": {}`. It reused 114 modules and ran the leaf and its audit.
 
@@ -14,12 +14,12 @@ Build: `python3 -B scratch_build.py <du-deep-unification-review/tree> Becoming.P
      - `LineOfDescent.Endless.converse_outside`: the condition fails from every center.
      - `«逆缘续无外随网»`: the pair.
      - `increasingInOwn_with_net_converse`: self-concern and being increasing in admission coincide on the first net and part on the second.
-   - The module now says that the condition varies with the direction as well as with the net and the class. The endless line meets it along 缘 and fails it along the converse.
+   - The module now says that the condition varies with the direction as well as with the net and the class. The endless line meets it along 缘 from its first birth, and along the converse from no center. (Revised at the third look, finding 4: the earlier wording compared one center along 缘 with every center along the converse.)
    - The failure on two family lines along the converse is not stated. It follows as the failure along 缘 does, since every step keeps the family, and it adds nothing to the pair.
 
 2. **The step from `Weighting.Increasing` to C is not proved** (major). The leaf cited `Web.paths_extension_iff_widens`, which concerns `Web.Widens`, not `WidensOn` on a listing. The bridge on listings, `Web.widens_iff_every_weighting` / `Web.widens_iff_every_of_class`, needs `DecidesAdmission` and `ListsAdmitted` and lives on `Nat × F`. *Taken, by proving the bridge one way.*
    - `Web.extension_ranked_of_increasing`: with admission decided and what both level paths admit listed, an order increasing in admission ranks every extension with every claim counted as living.
-   - `Web.comparison_of_increasingInOwn`: assume the de se condition holds, the marking on `F` is lifted to items by `fun i => own i.2`, admission is decided, and every level path's admissions are listed. Then every order increasing in that own continuation, read through admission, meets C (`Comparison W.paths (fun _ => True) …`). Its docstring says that the listing hypothesis asks that only finitely many (step, formation) pairs can be admitted, and that the first theorem needs it only of the two paths compared.
+   - *Revised at the third look (finding 1 there).* This revision proved `Web.comparison_of_increasingInOwn`, a `Comparison` on all of a web's level paths under the hypothesis that every level path's admissions are listed. That hypothesis holds of no web with a formation, and with none there is no extension, so the theorem was vacuous; its gloss ("only finitely many pairs can be admitted") was wrong. It is replaced by the pairwise `Web.extension_ranked_of_increasingInOwn`: with the de se condition, the marking lifted to items by `fun i => own i.2`, and admission decided, an order increasing in that own continuation ranks every extension between two level paths whose admissions are listed. The link to C holds between listed paths only, and listed paths are paths whose admissions end.
    - The other half is not proved on webs: self-concern failing C where the condition fails. Its witness courses (`fun y => !own y` and `fun _ => false`) would need level paths that admit them, and a web need not have them. The module doc says so: that half is proved on listings only.
 
 3. **The join to the root uses no property of `«所及»` or `«续无外»`** (major). *Taken.*
@@ -103,6 +103,7 @@ theorem Web.extension_ranked_of_increasing {W : Web F C}
     (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
     (extension : Extension W.paths (fun _ => True) l' l) : O (admitted l') (admitted l)
 
+-- Replaced at the third look by Web.extension_ranked_of_increasingInOwn (vacuous: see there).
 theorem Web.comparison_of_increasingInOwn {W : Web F C} {Pos} {rel : F → F → Prop}
     {center : Pos → F} (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center))
     {p : Pos} {own : F → Bool} (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
@@ -153,5 +154,71 @@ Wherever DU's texts summarize this leaf, they should say the following:
 
 - Self-concern and being increasing in admission coincide where the condition on the root holds, read in the marking's direction.
 - The join is near-definitional.
-- The condition varies with the net, the class and the direction. The endless line meets it along 缘 and fails it along the converse.
-- The link to C is proved one way only: on level paths, with admission decided and listed.
+- The condition varies with the net, the class and the direction. The endless line meets it along 缘 from its first birth, and along the converse from no center. *(Revised at the third look.)*
+- The link to C is proved one way only, and only between two level paths whose admissions are listed, with admission decided: such paths admit nothing from some step on, so the link covers courses whose admissions end. C on all of a web's level paths does not follow this way. *(Revised at the third look.)*
+
+## Third look (1 November 2026)
+
+A fresh AI skeptic read the leaf as revised above (31 declarations). It gave four findings: one blocking, two major and one minor. All four hold and all four are taken. Of the blocking finding's options, (a) and (c) are taken together; (b), a frame of the listed level paths, is not, since the pairwise statement says the same without a new definition. Of the second finding's options, the docstring note is taken; the alternative, a bridge at a finite horizon, is not, since the note states the restriction exactly and the horizon version would be a further result, not a correction.
+
+1. **`Web.comparison_of_increasingInOwn` is vacuous on every web** (blocking). Its hypothesis `listed : ∀ l, W.ListsAdmitted items l` holds of no web with a formation: the level path set at a formation's needs admits it at any step, so every (step, formation) pair would be listed, and none is listed beyond the bound of the listed steps. With no formation there is no extension. The docstring's gloss, that the hypothesis "asks that only finitely many (step, formation) pairs can be admitted", was false. The skeptic checked this in a scratch probe. *Taken, options (a) and (c).*
+   - The theorem is replaced by `Web.extension_ranked_of_increasingInOwn`, which is pairwise. With admission decided and what `l` and `l'` admit listed, an extension from `l'` to `l` is ranked by every order increasing in the own continuation. The proof is `Web.extension_ranked_of_increasing` composed with `Weighting.increasingInOwn_iff_increasing`.
+   - The vacuity is proved in the leaf:
+     - `Web.admits_need`: the levels set at a formation's needs admit it.
+     - `Web.not_listsAdmitted_every`: once there is a formation, no list holds what every level path admits. It uses `Web.lt_stepBound` of `Becoming.EventualWideningInstances`, which the leaf now imports.
+     - `Web.no_extension_of_listsAdmitted_every`: where every level path's admissions are listed, no level path extends another, for every reading of `living`.
+   - The module header, the bullet (now "To C between listed level paths, one way"), the section heading, the closing reading and disposition 2 above now say that the link to C holds between listed paths only, and that C on all of a web's level paths does not follow this way.
+
+2. **Listing confines the result to courses whose admissions end, unstated** (major). `ListsAdmitted items l` puts every admitted step below the bound of the listed steps. *Taken.*
+   - New: `Web.admits_nothing_from_of_listed`. A level path whose admissions are listed admits nothing from `Web.stepBound items` on.
+   - The docstrings of both rankings and the bullet now say that listing holds only where a path admits nothing from some step on (citing that law and `Web.not_eventually_of_listed`). So the link covers courses whose admissions end, never one that admits something at every step.
+
+3. **The closing reading equated being increasing in admission with what C asks** (major). *Taken.*
+   - The closing reading now says that being increasing in admission (`Weighting.Increasing`) ranks every extension between two level paths whose admissions are listed (`Web.extension_ranked_of_increasing`). It no longer calls it "the order C asks".
+   - The final clause now reads: where the de se condition holds and admission is decided, self-concern ranks every extension between two listed level paths, paths whose admissions end. The clause "self-concern meets C" is dropped.
+   - The closing reading also says that the converse is not proved: C on level paths does not make an order increasing in admission on a listing, since a course on a listing need not be what any level path admits.
+
+4. **"Meets the condition along 缘 and fails it along the converse" compared one center with every center** (minor). *Taken, with the optional witness.*
+   - New:
+     - `LineOfDescent.Endless.line_member_le`: along 缘 a line never reaches an earlier member.
+     - `LineOfDescent.Endless.later_outside`: along 缘 the condition fails from every occurrence of a later member (`0 < c.1`).
+   - The bullet "The direction" now reads: the endless line meets the condition along 缘 from its first birth, and along the converse from no center; along 缘 it fails from every later member's occurrences too.
+   - The docstrings of `converse_outside` and `increasingInOwn_with_net_converse` say the same.
+
+Placement at the modules' next change: the three laws on what a listing holds go to `Becoming.EventualWideningInstances` after `Web.not_eventually_of_listed`, since `Web.stepBound` lives there. The two rankings go to `Becoming.Weightings` after `Web.widens_iff_every_of_class`, and the two witnesses on the line of descent go beside `LineOfDescent` in `Becoming.GrammarScope`. `Web.admits_need` needs only `Becoming.Admission`, but it is placed with the laws it serves.
+
+Build: `python3 -B scratch_build.py <du-deep-unification-review/tree> Becoming.PremiseWitnesses` gives `"unclean": []`, `"theorems": 35`, `"declarations": 37` and `"with_axioms": {}` (120 modules: 119 reused, the leaf and its audit run; output in `tree-build.json`). Counts: one theorem dropped (`Web.comparison_of_increasingInOwn`) and seven added (`Web.admits_need`, `Web.admits_nothing_from_of_listed`, `Web.not_listsAdmitted_every`, `Web.no_extension_of_listsAdmitted_every`, `Web.extension_ranked_of_increasingInOwn`, `LineOfDescent.Endless.line_member_le`, `LineOfDescent.Endless.later_outside`), so 29 − 1 + 7 = 35 theorems and 2 definitions.
+
+New statements:
+
+```lean
+theorem Web.admits_need (W : Web F C) (t : Nat) (f : F) : W.Admits (fun c => W.need t f c) t f
+
+theorem Web.admits_nothing_from_of_listed {items : List (Nat × F)} {l : Nat → C → Nat}
+    (listed : W.ListsAdmitted items l) {t : Nat} (from_ : Web.stepBound items ≤ t) (f : F) :
+    ¬ W.Admits (l t) t f
+
+theorem Web.not_listsAdmitted_every (W : Web F C) (f : F) {items : List (Nat × F)} :
+    ¬ ∀ l, W.ListsAdmitted items l
+
+theorem Web.no_extension_of_listsAdmitted_every {items : List (Nat × F)}
+    (listed : ∀ l, W.ListsAdmitted items l) {living : F × Nat → Prop} {l l' : Nat → C → Nat} :
+    ¬ Extension W.paths living l' l
+
+theorem Web.extension_ranked_of_increasingInOwn {Pos : Type} {rel : F → F → Prop}
+    {center : Pos → F} (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center))
+    {p : Pos} {own : F → Bool} (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
+    {admitted : (Nat → C → Nat) → Nat × F → Bool} (decides : W.DecidesAdmission admitted)
+    {items : List (Nat × F)} {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
+    (concerned : Weighting.IncreasingInOwn items (fun i => own i.2) O)
+    {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
+    (extension : Extension W.paths (fun _ => True) l' l) : O (admitted l') (admitted l)
+
+theorem LineOfDescent.Endless.line_member_le {E : «际» Occ} {c x : Occ}
+    (line : «相续» step E c x) : c.1 ≤ x.1
+
+theorem LineOfDescent.Endless.later_outside (c : Occ) (later : 0 < c.1) :
+    ¬ «续无外» step «一» (fun (_ : Unit) => c)
+```
+
+For the texts: wherever DU's texts summarize this leaf, the two revised lines under "What changes for the texts" above hold. The link to C runs one way, between two listed level paths, which are courses whose admissions end. The endless line meets the condition along 缘 from its first birth only.

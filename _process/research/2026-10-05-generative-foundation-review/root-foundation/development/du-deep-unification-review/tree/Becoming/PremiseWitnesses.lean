@@ -1,5 +1,6 @@
 import Becoming.GrammarCases
 import Becoming.Lifting
+import Becoming.EventualWideningInstances
 
 /-!
 # Premises met and failed: the condition on the root, C and L
@@ -8,7 +9,8 @@ Board item DU. The ethics asserts no premise; each premise it names is a hypothe
 conditionals. This module completes, for three of them, what the premise card asks: a model
 meeting it and one failing it, or a theorem that no statement of a stated kind entails it. Most
 of the models already exist; this module states the pairs. It adds one law of widening, joins
-self-concern to the condition on the root, and joins it, one way, to C on a web's level paths.
+self-concern to the condition on the root, and joins it, one way, to C between a web's level paths
+whose admissions are listed.
 
 * **The condition on the root varies with the net.** At the one, the endless line of descent meets
   `«续无外»` at its first birth (`LineOfDescent.Endless.descent_no_outside`), and two family lines
@@ -49,17 +51,25 @@ self-concern to the condition on the root, and joins it, one way, to C on a web'
   (`Weighting.increasingInOwn_iff_increasing_iff_unrestricted`). The join is near-definitional: it
   locates where self-concern and being increasing in admission coincide, and proves no property of
   reach.
-* **To C on level paths, one way.** Where admission is decided and what two level paths admit is
-  listed, as (step, formation) items, an order increasing in admission ranks the second above the
-  first whenever the second extends the first with every claim counted as living
+* **To C between listed level paths, one way.** Where admission is decided and what two level
+  paths admit is listed, as (step, formation) items, an order increasing in admission ranks the
+  second above the first whenever the second extends the first with every claim counted as living
   (`Web.extension_ranked_of_increasing`, through `Web.paths_extension_iff_widens` and
   `Web.widens_iff_every_weighting`). So where the continuation condition held de se along a
-  relation on formations holds, with the item `(t, f)` marked by the marking of `f`, and what every
-  level path admits is listed, every order increasing in that own continuation, read on level paths
-  through the decided admission, meets C (`Comparison`) with every claim counted as living
-  (`Web.comparison_of_increasingInOwn`). The other half, self-concern failing C where the condition
-  fails, is proved on listings only: on a web, the courses of the witness need level paths
-  admitting them.
+  relation on formations holds, with the item `(t, f)` marked by the marking of `f`, an order
+  increasing in that own continuation, read on level paths through the decided admission, ranks
+  every extension between two such listed paths, as C (`Comparison`) asks there
+  (`Web.extension_ranked_of_increasingInOwn`). Listing confines the link twice. A level path's
+  admissions are listed only where it admits nothing from some step on
+  (`Web.admits_nothing_from_of_listed`; so it eventually widens nothing,
+  `Web.not_eventually_of_listed`): the link covers courses whose admissions end, never one that
+  admits something at every step. And once there is a formation, no list holds what every level
+  path admits, since the levels set at a formation's needs admit it at any step
+  (`Web.admits_need`, `Web.not_listsAdmitted_every`); where every level path's admissions are
+  listed, no level path extends another (`Web.no_extension_of_listsAdmitted_every`). So C on all of
+  a web's level paths does not follow this way: the link holds between listed paths only. The other
+  half, self-concern failing to rank an extension where the condition fails, is proved on listings
+  only: on a web, the courses of the witness need level paths admitting them.
 * **The direction.** The marking runs from the center along `R`, as `ownClosure` draws the own
   continuation. With `R` read as 缘, as in the models of `Becoming.GrammarScope` and
   `Becoming.GrammarCases`, it marks what the center conditions; along `«逆» R`, the direction of the
@@ -71,22 +81,29 @@ self-concern to the condition on the root, and joins it, one way, to C on a web'
   endless line fails from every center, since a line along the converse never reaches a later
   member (`LineOfDescent.Endless.converse_outside`); self-concern and being increasing in admission
   coincide on the first and part on the second (`increasingInOwn_with_net_converse`). So the
-  endless line meets the condition along 缘 and fails it along the converse.
+  endless line meets the condition along 缘 from its first birth, and along the converse from no
+  center; along 缘 it fails from every later member's occurrences too, since 缘 never lowers the
+  member (`LineOfDescent.Endless.later_outside`).
 
 This does not derive C, and does not equate C with self-concern. It shows that self-concern and
-being increasing in admission, the order C asks on a web's level paths, coincide on every listing
-exactly where the condition on the root holds for the marking's direction, and part where it fails;
-and that, where the de se condition holds and admission is decided and listed, self-concern meets
-C. Self-concern and the condition on the root both remain hypotheses, and the condition is
-contingent: it varies with the net, the class and the direction.
+being increasing in admission (`Weighting.Increasing`), which ranks every extension between two
+level paths whose admissions are listed (`Web.extension_ranked_of_increasing`), coincide on every
+listing exactly where the condition on the root holds for the marking's direction, and part where
+it fails; and that, where the de se condition holds and admission is decided, self-concern ranks
+every extension between two level paths whose admissions are listed, paths whose admissions end.
+Nothing here proves the converse, that C on level paths makes an order increasing in admission on a
+listing: a course on a listing need not be what any level path admits. Self-concern and the
+condition on the root both remain hypotheses, and the condition is contingent: it varies with the
+net, the class and the direction.
 
 No definition of an earlier module changes. A leaf: its witnesses belong beside the models they
-use (the converse ones beside `LineOfDescent` in `Becoming.GrammarScope`), its laws of widening and
-of self-concern in `Becoming.Weightings`, after `Weighting.widensOn_of_widensBy`,
+use (those on the line of descent beside `LineOfDescent` in `Becoming.GrammarScope`), its laws of
+widening and of self-concern in `Becoming.Weightings`, after `Weighting.widensOn_of_widensBy`,
 `Weighting.widens_iff_every_increasing` and `Weighting.widensOwn_iff_every_increasingInOwn`, its
-two laws on level paths there after `Web.widens_iff_every_of_class`, and its joins to the root in
-`Becoming.GrammarScope`, after `ownClosure_unrestricted_iff_noOutside`, where they move at those
-modules' next change.
+two rankings of extensions there after `Web.widens_iff_every_of_class`, its laws of what a listing
+holds in `Becoming.EventualWideningInstances`, after `Web.not_eventually_of_listed`, and its joins
+to the root in `Becoming.GrammarScope`, after `ownClosure_unrestricted_iff_noOutside`, where they
+move at those modules' next change.
 -/
 
 namespace Becoming
@@ -398,11 +415,43 @@ end DeSe
 
 end Weighting
 
-/-! ## To C on a web's level paths, one way -/
+/-! ## To C between a web's listed level paths, one way -/
 
 section Paths
 
 variable {F C : Type} {W : Web F C}
+
+/-- **Every step and formation is admitted by some level path**: the levels set at the formation's
+needs at that step admit it there. -/
+theorem Web.admits_need (W : Web F C) (t : Nat) (f : F) :
+    W.Admits (fun c => W.need t f c) t f :=
+  fun _ _ => Nat.le_refl _
+
+/-- **A level path whose admissions are listed admits nothing from the step beyond every listed
+step on** (`Web.stepBound`). So listing what a level path admits confines it to a course whose
+admissions end; by `Web.not_eventually_of_listed` it eventually widens nothing. -/
+theorem Web.admits_nothing_from_of_listed {items : List (Nat × F)} {l : Nat → C → Nat}
+    (listed : W.ListsAdmitted items l) {t : Nat} (from_ : Web.stepBound items ≤ t) (f : F) :
+    ¬ W.Admits (l t) t f :=
+  fun admits => Nat.lt_irrefl t (Nat.lt_of_lt_of_le (Web.lt_stepBound (listed t f admits)) from_)
+
+/-- **Once there is a formation, no list holds what every level path admits**: by `Web.admits_need`
+every (step, formation) pair would be listed, and none is listed at the step beyond every listed
+step (`Web.lt_stepBound`). -/
+theorem Web.not_listsAdmitted_every (W : Web F C) (f : F) {items : List (Nat × F)} :
+    ¬ ∀ l, W.ListsAdmitted items l :=
+  fun listed => Nat.lt_irrefl _ (Web.lt_stepBound
+    (listed (fun _ c => W.need (Web.stepBound items) f c) (Web.stepBound items) f
+      (W.admits_need (Web.stepBound items) f)))
+
+/-- **Where every level path's admissions are listed, no level path extends another**: an extension
+realizes a claim, a (formation, step) pair, so there is a formation, and then the listing fails
+(`Web.not_listsAdmitted_every`). So no C on all of a web's level paths follows from a listing of
+what every level path admits: a statement with that hypothesis holds only vacuously. -/
+theorem Web.no_extension_of_listsAdmitted_every {items : List (Nat × F)}
+    (listed : ∀ l, W.ListsAdmitted items l) {living : F × Nat → Prop} {l l' : Nat → C → Nat} :
+    ¬ Extension W.paths living l' l :=
+  fun ⟨_, e, _⟩ => W.not_listsAdmitted_every e.1 listed
 
 /-- **An order increasing in admission ranks every extension between listed level paths.** Let
 admission be decided (`admitted l (t, f)` is true exactly when `l` admits `f` at `t`), and let what
@@ -410,7 +459,9 @@ admission be decided (`admitted l (t, f)` is true exactly when `l` admits `f` at
 (`Extension W.paths (fun _ => True) l' l`), every order on courses over `items` increasing in
 admission ranks what `l` admits above what `l'` admits: the extension is a widening
 (`Web.paths_extension_iff_widens`), and on the listed items it is a widening of what is admitted
-(`Web.widens_iff_every_weighting`, `Weighting.widens_iff_every_positive`). -/
+(`Web.widens_iff_every_weighting`, `Weighting.widens_iff_every_positive`). Listing what a level path
+admits holds only where it admits nothing from some step on (`Web.admits_nothing_from_of_listed`),
+so the result covers courses whose admissions end. -/
 theorem Web.extension_ranked_of_increasing {admitted : (Nat → C → Nat) → Nat × F → Bool}
     (decides : W.DecidesAdmission admitted) {items : List (Nat × F)}
     {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop} (increasing : Weighting.Increasing items O)
@@ -420,28 +471,30 @@ theorem Web.extension_ranked_of_increasing {admitted : (Nat → C → Nat) → N
     (((Web.widens_iff_every_weighting decides listed listed').trans
       Weighting.widens_iff_every_positive.symm).mp (W.paths_extension_iff_widens.mp extension))
 
-/-- **Where the continuation condition held de se holds, self-concern meets C on level paths.** Let
-`Unrestricted (selfAscribed (ownClosure rel) center)` hold for a relation `rel` on the web's
-formations, let `own` mark whatever formation lies within `p`'s center's closure along `rel`, and
-mark each (step, formation) item by the marking of its formation. Let admission be decided, and let
-`items` list what every level path admits. Then every order increasing in that own continuation on
-`items`, read on level paths through the decided admission (`l` better than `l'` when the order
-ranks what `l` admits above what `l'` admits), meets C (`Comparison`) on the web's level paths with
-every claim counted as living. The hypothesis that every level path's admissions are listed asks
-that only finitely many (step, formation) pairs can be admitted; `Web.extension_ranked_of_increasing`
-needs it only of the two paths compared. -/
-theorem Web.comparison_of_increasingInOwn {Pos : Type} {rel : F → F → Prop} {center : Pos → F}
-    (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center)) {p : Pos} {own : F → Bool}
-    (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
+/-- **Where the continuation condition held de se holds, self-concern ranks every extension between
+listed level paths.** Let `Unrestricted (selfAscribed (ownClosure rel) center)` hold for a relation
+`rel` on the web's formations, let `own` mark whatever formation lies within `p`'s center's closure
+along `rel`, and mark each (step, formation) item by the marking of its formation. Let admission be
+decided, and let what `l'` and `l` admit be listed in `items`. If `l` extends `l'` with every claim
+counted as living, every order increasing in that own continuation on `items` ranks what `l` admits
+above what `l'` admits: the order is increasing in admission
+(`Weighting.increasingInOwn_iff_increasing`), and `Web.extension_ranked_of_increasing` applies. This
+is C between two listed level paths only. The listing is asked of the two paths compared, not of
+every level path: that would hold of no web with a formation (`Web.not_listsAdmitted_every`), and
+it leaves no extension (`Web.no_extension_of_listsAdmitted_every`). Listed paths are paths whose
+admissions end (`Web.admits_nothing_from_of_listed`). -/
+theorem Web.extension_ranked_of_increasingInOwn {Pos : Type} {rel : F → F → Prop}
+    {center : Pos → F} (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center))
+    {p : Pos} {own : F → Bool} (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
     {admitted : (Nat → C → Nat) → Nat × F → Bool} (decides : W.DecidesAdmission admitted)
-    {items : List (Nat × F)} (listed : ∀ l, W.ListsAdmitted items l)
-    {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
-    (concerned : Weighting.IncreasingInOwn items (fun i => own i.2) O) :
-    Comparison W.paths (fun _ => True) fun l' l => O (admitted l') (admitted l) :=
-  fun l' l extension => Web.extension_ranked_of_increasing decides
+    {items : List (Nat × F)} {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
+    (concerned : Weighting.IncreasingInOwn items (fun i => own i.2) O)
+    {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
+    (extension : Extension W.paths (fun _ => True) l' l) : O (admitted l') (admitted l) :=
+  Web.extension_ranked_of_increasing decides
     ((Weighting.increasingInOwn_iff_increasing fun i _ =>
       marks i.2 (ownClosure_unrestricted_iff.mp unrestricted p i.2)).mp concerned)
-    (listed l) (listed l') extension
+    listed listed' extension
 
 end Paths
 
@@ -519,9 +572,23 @@ theorem converse_later_outside (c : Occ) : ¬ «所及» («逆» step) «一» 
     | .inl e => Nat.succ_ne_self c.1 (congrArg Prod.fst e).symm
     | .inr line => Nat.not_succ_le_self c.1 (converse_line_le line)
 
+/-- Along 缘, a line under any relation `E` never reaches an earlier member. -/
+theorem line_member_le {E : «际» Occ} {c x : Occ} (line : «相续» step E c x) : c.1 ≤ x.1 := by
+  induction line with
+  | one h => exact step_member_le h.1
+  | more h _ ih => exact Nat.le_trans (step_member_le h.1) ih
+
+/-- **Along 缘, endless descent fails the condition on the root at the one from every occurrence of a
+later member**: the line from it never returns to the first birth. It meets it from the first birth
+(`descent_no_outside`). -/
+theorem later_outside (c : Occ) (later : 0 < c.1) : ¬ «续无外» step «一» (fun (_ : Unit) => c) :=
+  fun none => match none () (0, false) with
+    | .inl e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le later (Nat.le_of_eq (congrArg Prod.fst e)))
+    | .inr line => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le later (line_member_le line))
+
 /-- **Along the converse of 缘, endless descent fails the condition on the root at the one, from every
 center**: a line along the converse runs back to earlier members and never reaches the next member's
-birth. Along 缘 it meets it at the first birth (`descent_no_outside`). -/
+birth. Along 缘 it meets it at the first birth only (`descent_no_outside`, `later_outside`). -/
 theorem converse_outside (c : Occ) : ¬ «续无外» («逆» step) «一» (fun (_ : Unit) => c) :=
   fun none => converse_later_outside c (none () (c.1 + 1, false))
 
@@ -574,8 +641,8 @@ from the last occurrence reaches, being increasing in that own continuation is b
 admission, on every listing and for every order. In endless descent, for every center `c` and every
 marking that marks only what the line under the one along the converse from `c` reaches, on every
 listing holding the next member's birth `(c.1 + 1, false)`, some order increasing in that own
-continuation is not increasing in admission. The endless line coincides along 缘
-(`increasingInOwn_with_net`) and parts along its converse. -/
+continuation is not increasing in admission. The endless line coincides along 缘 from its first
+birth (`increasingInOwn_with_net`), and parts along its converse from every center. -/
 theorem increasingInOwn_with_net_converse :
     (∀ own : LineOfDescent.Last.Occ → Bool,
       (∀ x, «所及» («逆» LineOfDescent.Last.step) «一» (true, true) x → own x = true) →

@@ -104,3 +104,94 @@ statement.
 - The closing steps of `oneTwo_not_scaled` (refuting `4 = 1 * 2`) and of
   `standing_not_read_up_to_unit` (refuting `4 = 2`) use `by decide` on closed `Nat` equalities. Their
   reports are empty.
+
+## Third look (1 November 2026)
+
+A fresh skeptic read the revised module and the commit `75bf578d6` that recorded it. It made five
+findings. All are taken except the rename, which is deferred to landing. After this revision, the
+build (`scratch_build.py … Becoming.UnitsApart`, output in `scratch/units-build.json`) reports
+**32 theorems in 40 declarations**, `"unclean": []` and `"with_axioms": {}`, so every axiom report is
+empty. The three declarations added since the second pass are all theorems: `assoc_mul`,
+`left_comm_mul` and `ratio_apart`.
+
+### 1. Major: the selection is a choice, and the results nearly hold by construction. Taken.
+
+The finding holds. `WorldRepresentation`'s module doc and the hypotheses of the record
+`the-world-represented-both-ways` say that the ten relations are a selection, and that a
+re-identification also carries a standing's value. Every selected relation reads amounts only through
+sign, through `need ≤ level`, or through conservation's homogeneous linear equation. The two relations
+this module adds, falling and `standingOrder`, are also comparisons. So `atFinerUnit_agree` follows
+from the shape of the selection.
+
+- The module doc now has a second paragraph. It says that the ten relations are a stated selection,
+  and cites the module doc and the record's hypotheses. It says that a selection that read a
+  standing's value would read the count, and that one that read the difference of two standings would
+  in general not agree at a finer unit. It states the reason the results hold: every relation reads
+  amounts only through sign, comparison in one unit, and conservation's homogeneous linear equation.
+  It ends: "They are results about this selection, with falling and the order of standings added, not
+  about every relation a World carries."
+- "What this covers" no longer says "a relation selected later". It names what is not covered: any
+  relation that reads a value or a difference of amounts. The examples are the partial identity
+  "standing is `n`", which every re-identification carries, and "`x` stands one more than `y`" within
+  a step. It says where each fails at `k ≠ 1`, and that the relations "standing is `n`", for every `n`,
+  read the count exactly. It says that neither statement is proved here. This third look did not add
+  them as theorems, because the point is about the scope of the selection and does not need its own
+  result.
+- The `ModelRelations` docstring now ends: "This is a selection, not every relation a World carries:
+  a re-identification also carries a standing's value, which none of these reads."
+- **For the parent (wording of claim and landing texts).** The message of `75bf578d6` cannot be
+  changed. It says "amounts not read off the root's model relations", which names the root and
+  overclaims. Every claim text, record or study section should instead say "not read off
+  `WorldRepresentation`'s selected relations, with falling and the order of standings". It should
+  never say "the root's model relations". The skeptic notes that the module doc already made no claim
+  to close the amounts gap: worlds with exchange stay open, as in DU `REVIEW.md` §3.
+
+### 2. Minor: "up to a unit" covered one direction only. Taken, by the ratio form.
+
+`World.standing_not_read_up_to_unit` is now the symmetric form, proved with an empty report. No `Ψ`
+that keeps pointwise agreement has, for every world, positive whole factors `p` and `q` with `q` times
+every standing equal to `p` times what `Ψ` reads. The factors are chosen world by world. With `q = k`
+and `p = 1` this is a reading in a unit `k` times finer, and with `q = 1` and `p = k` one in a unit
+`k` times coarser. The docstring says this.
+
+The witness is the same pair of still worlds (1, 2 and 1, 4). The arithmetic is the new lemma
+`ratio_apart`: from `q·1 = p·a`, `q·2 = p·b`, `q'·1 = p'·a` and `q'·4 = p'·b`, with `0 < p` and
+`0 < q'`, it derives `p·q'·2 = p·q'·4` and cancels by `Nat.eq_of_mul_eq_mul_left`. The skeptic's probe
+used `rw` and `omega`, which brought in `propext` and `Quot.sound`. Here the regrouping goes through
+`assoc_mul` and `left_comm_mul`. Their counterparts in `Init`, `Nat.mul_assoc` and `Nat.mul_left_comm`,
+report `propext`, so they are reproved structurally. The closing `2 ≠ 4` is `by decide`, and its
+report is empty.
+
+The new form does not contain the old one word for word. In the old form, `k = 0` was allowed in a
+world whose standings are all 0. Both forms refute every reading in a positive unit, in either
+direction, so the old form is not kept beside the new one. Section 1 above describes the old form,
+which is now replaced.
+
+### 3. Minor: the "So …" sentence read as holding world by world. Taken.
+
+Bullet 4 now reads: "So no single reading of the model returns the standings of every world even up
+to a unit, …". It then says: "The worlds that refute it are still worlds on two relata; a reading
+that returns the standings up to a unit on every world with exchange, or on any class without these
+two worlds, is not ruled out." The theorem's docstring has the same qualification. Claim texts should
+qualify it the same way: one reading for every world, refuted by still worlds on two relata. The
+statement that does hold world by world is the exact count, `standing_not_read`, at every occurrence
+of positive standing.
+
+### 4. Minor: `atFinerUnit` is a unit only for `0 < k`. Taken.
+
+The docstring now says: "For `0 < k` this is the world counted in a unit `k` times finer; at `k = 0`
+every amount is 0, which is no unit, and at `k = 1` it is `w` counted again." Bullet 1 of the module
+doc says the same.
+
+### 5. Minor: the module name. Deferred to landing, with the reason.
+
+The finding holds: "UnitsApart" does not say what the module states, and it suggests standings one
+unit apart. It is not done here, for two reasons. First, this task may edit only `UnitsApart.lean`
+and this `REVIEW.md`, and a rename moves the path. Second, the build command, `units-build.json` and
+the parent's DU texts all name `Becoming.UnitsApart`, so renaming one of them alone would leave
+references stale. **For the parent:** at landing, rename the path and the module in one move, to
+`Becoming.UnreadStandings` (proposed in section 5 above) or `Becoming.StandingsUnread`. Update every
+reference in the same commit, including the namespace `Becoming.UnitsApart` of the helper lemmas. The
+other names were confirmed exact by the skeptic: `atFinerUnit*`, `standingOrder`, `stillAt`,
+`stillAt_relabel_agree`, `oneTwo_not_scaled`, `standing_not_read` and `factor_of_one`. The new
+`ratio_apart`, `assoc_mul` and `left_comm_mul` state what they prove.

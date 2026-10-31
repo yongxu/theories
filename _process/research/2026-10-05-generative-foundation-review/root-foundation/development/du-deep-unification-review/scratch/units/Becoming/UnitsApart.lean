@@ -13,8 +13,19 @@ property of the web and the signs of exchange is balance. This module states two
 leaves in the standings: the unit, in every world, and, in still worlds, every relabelling that
 keeps sign and order. It does not say what the model fixes in worlds with exchange.
 
-* **A finer unit.** `World.atFinerUnit k w` counts every amount of `w` (every standing, need, take
-  and give) in a unit `k` times finer, and keeps every relatum, name, activity, requirement, drawing
+The ten relations are a stated selection (`Becoming.WorldRepresentation`'s module doc, and the
+hypotheses of the record `the-world-represented-both-ways`): a re-identification also carries a
+standing's value, a selection that read it would read the count, and one that read the difference of
+two standings would in general not agree at a finer unit. Every relation here reads amounts only
+through sign, through the comparison of two amounts counted in one unit (a need against a standing;
+and, in the two relations this module adds, falling and the order of standings), and through
+conservation's equation, which is homogeneous and linear. The results below hold because of that.
+They are results about this selection, with falling and the order of standings added, not about
+every relation a World carries.
+
+* **A finer unit.** For `0 < k`, `World.atFinerUnit k w` counts every amount of `w` (every
+  standing, need, take and give) in a unit `k` times finer (at `k = 0` every amount is 0, which is
+  no unit, and at `k = 1` it is `w`), and keeps every relatum, name, activity, requirement, drawing
   and presence list. Its standings are `k` times `w`'s (`atFinerUnit_level`), and what is taken and
   given are `k` times `w`'s (`atFinerUnit_taken`, `atFinerUnit_given`, through `total_scaled`).
 * **The relations of the model are the same at a finer unit, in every world.** For `0 < k`,
@@ -39,10 +50,14 @@ keeps sign and order. It does not say what the model fixes in worlds with exchan
   (`σ a ≤ σ b ↔ a ≤ b`) keeps every model relation (`stillAt_relabel_agree`); squaring is one
   (`stillAt_squared_agree`). The worlds on two relata with standings 1 and 2 and with standings 1
   and 4 agree on every model relation while their standings are not one common factor apart
-  (`oneTwo_not_scaled`). So no reading of the model returns the standings even up to a unit
-  (`standing_not_read_up_to_unit`), and the freedom the model leaves is more than the unit. Whether
-  conservation's equation, in worlds with exchange, fixes standings up to a unit, or to what else,
-  is not stated here.
+  (`oneTwo_not_scaled`). So no single reading of the model returns the standings of every world even
+  up to a unit, that is, with positive whole factors `p` and `q`, chosen world by world, such that
+  `q` times every standing is `p` times what is read; this covers a reading in a finer unit and one
+  in a coarser unit (`standing_not_read_up_to_unit`). The worlds that refute it are still worlds on
+  two relata; a reading that returns the standings up to a unit on every world with exchange, or on
+  any class without these two worlds, is not ruled out. The freedom the model leaves is more than
+  the unit. Whether conservation's equation, in worlds with exchange, fixes standings up to a unit,
+  or to what else, is not stated here.
 * **Balance does not need the unit.** A world at a finer unit balances exactly where it does
   (`atFinerUnit_balanced_iff`). So one thing the model leaves free, the unit, is not what balance
   reads; what it reads beyond the web and the signs of exchange is conservation (F1′), which is
@@ -51,14 +66,18 @@ keeps sign and order. It does not say what the model fixes in worlds with exchan
 **What this covers, and what it does not.** Every reading here is a reading of this occurrence model
 with its selection: the relations of `World.ModelRelations`, the names' step and the same-step
 class, and the grammar terms `Becoming.GrammarTransport`'s keeping theorems build from them, each
-applied through `atFinerUnit_carried`. A reading of the amounts that is not one of these relations,
-for example "this standing is one", "this need is even", or a relation selected later, is not
-covered; the results are about this model, not about the grammar root or another model of it. A unit
-that changes from step to step is `Becoming.Resolution`'s, not this module's. Nothing here gives a
-root in which unit occurrences and their residence are fixed by relations independent of the counts,
-nor a law about World data that the counts do not give: on a carrier whose occurrences are the
-units, counts are lengths of supplied lists, and U1 found balance there to be a bijection of
-supplied units.
+applied through `atFinerUnit_carried`. Not covered is any relation that reads a value or a
+difference of amounts, such as the partial identity "standing is `n`", which every re-identification
+carries, or "`x` stands one more than `y`" within a step. Such a relation in general does not agree
+at a finer unit (at `k ≠ 1`, "standing is `n`" fails at an occurrence standing at `n` with `0 < n`,
+and "one more than" at two standings one apart), so `atFinerUnit_agree` fails for a selection that
+adds it, and the relations "standing is `n`", for every `n`, read the count exactly (neither is
+stated as a theorem here). The results are about this selection of this model, not about the grammar
+root, every relation a World carries, or another model of it. A unit that changes from step to step
+is `Becoming.Resolution`'s, not this module's. Nothing here gives a root in which unit occurrences
+and their residence are fixed by relations independent of the counts, nor a law about World data
+that the counts do not give: on a carrier whose occurrences are the units, counts are lengths of
+supplied lists, and U1 found balance there to be a bijection of supplied units.
 
 **Modelling choices.** Natural-number amounts; one common factor `k` for every amount of a world at
 every step; discrete steps; the occurrence model and its selection as `Becoming.WorldRepresentation`
@@ -137,6 +156,19 @@ theorem le_squared (a b : Nat) : a * a ≤ b * b ↔ a ≤ b :=
     | .inr ab => ab,
    fun ab => Nat.mul_le_mul ab ab⟩
 
+/-- Products of amounts regroup. This is `Nat.mul_assoc`, whose report in `Init` lists `propext`,
+proved here with an empty report. -/
+theorem assoc_mul (a b : Nat) : ∀ c, a * b * c = a * (b * c)
+  | 0 => (Nat.mul_zero (a * b)).trans
+      ((congrArg (a * ·) (Nat.mul_zero b)).trans (Nat.mul_zero a)).symm
+  | c + 1 => (Nat.mul_succ (a * b) c).trans ((congrArg (· + a * b) (assoc_mul a b c)).trans
+      ((Nat.left_distrib a (b * c) b).symm.trans (congrArg (a * ·) (Nat.mul_succ b c).symm)))
+
+/-- Two factors exchange in front of a third. This is `Nat.mul_left_comm`, whose report in `Init`
+lists `propext`, proved here with an empty report. -/
+theorem left_comm_mul (a b c : Nat) : a * (b * c) = b * (a * c) :=
+  (assoc_mul a b c).symm.trans ((congrArg (· * c) (Nat.mul_comm a b)).trans (assoc_mul b a c))
+
 /-- Where `k * p` is one, `k` is one. -/
 theorem factor_of_one : ∀ {k p : Nat}, 1 = k * p → k = 1
   | 0, p, one => absurd (one.trans (Nat.zero_mul p)) (fun h => Nat.noConfusion h)
@@ -154,7 +186,9 @@ namespace World
 open UnitsApart
 
 /-- **A world counted in a unit `k` times finer**: every standing, need, take and give is `k` times
-`w`'s; the relata, activity, requirements, drawing and presence lists are `w`'s. -/
+`w`'s; the relata, activity, requirements, drawing and presence lists are `w`'s. For `0 < k` this is
+the world counted in a unit `k` times finer; at `k = 0` every amount is 0, which is no unit, and at
+`k = 1` it is `w` counted again. -/
 def atFinerUnit (k : Nat) (w : World) : World :=
   World.of w.Relatum
     ⟨w.flow.present, fun t f c => k * w.flow.take t f c, fun t f c => k * w.flow.give t f c⟩
@@ -197,11 +231,12 @@ theorem atFinerUnit_balanced_iff (pos : 0 < k) : (w.atFinerUnit k).Balanced ↔ 
 def standingOrder (w : World) : «际» (Nat × w.Relatum) :=
   fun x y => w.web.level x.1 x.2 ≤ w.web.level y.1 y.2
 
-/-- **The relations of the occurrence model.** Nine of the ten relations
+/-- **The relations of the occurrence model, as selected.** Nine of the ten relations
 `Becoming.WorldRepresentation` selects: conservation's step; activity, standing and presence as
 partial identities; and requiring, drawing, a need met, giving and taking within a step. The tenth,
 the same-step class, is one term for every world and is left out. To these are added falling, as a
-partial identity, and the order of standings. -/
+partial identity, and the order of standings. This is a selection, not every relation a World
+carries: a re-identification also carries a standing's value, which none of these reads. -/
 structure ModelRelations (R : Type) where
   conservation : «际» (Nat × R)
   active : «际» (Nat × R)
@@ -396,25 +431,43 @@ theorem oneTwo_not_scaled :
     have one : k = 1 := factor_of_one (scaled 0 false)
     absurd ((scaled 0 true).trans (congrArg (· * 2) one)) (by decide)⟩
 
-/-- **No reading of the model gives the standings even up to a unit.** No `Ψ` that reads a number at
-each occurrence from a world's model relations, the same wherever two readings agree pointwise,
-has, for every world, a factor `k` with every standing `k` times what `Ψ` reads. -/
+/-- Two pairs of standings 1, 2 and 1, 4, each read up to positive factors, cannot be read alike.
+Where `q * 1 = p * a`, `q * 2 = p * b`, `q' * 1 = p' * a` and `q' * 4 = p' * b`, with `0 < p` and
+`0 < q'`, there is a contradiction. -/
+theorem ratio_apart {p q p' q' a b : Nat} (pp : 0 < p) (qq' : 0 < q')
+    (a1 : q * 1 = p * a) (b1 : q * 2 = p * b) (a2 : q' * 1 = p' * a) (b2 : q' * 4 = p' * b) :
+    False :=
+  have hq : q = p * a := (Nat.mul_one q).symm.trans a1
+  have hq' : q' = p' * a := (Nat.mul_one q').symm.trans a2
+  have left : p' * (q * 2) = p * q' * 2 :=
+    (assoc_mul p' q 2).symm.trans (congrArg (· * 2)
+      ((congrArg (p' * ·) hq).trans ((left_comm_mul p' p a).trans (congrArg (p * ·) hq'.symm))))
+  have mid : p' * (q * 2) = p * (q' * 4) :=
+    (congrArg (p' * ·) b1).trans ((left_comm_mul p' p b).trans (congrArg (p * ·) b2.symm))
+  have two_four : p * q' * 2 = p * q' * 4 :=
+    left.symm.trans (mid.trans (assoc_mul p q' 4).symm)
+  absurd (Nat.eq_of_mul_eq_mul_left (Nat.mul_pos pp qq') two_four) (by decide)
+
+/-- **No single reading of the model gives the standings of every world even up to a unit.** No `Ψ`
+that reads a number at each occurrence from a world's model relations, the same wherever two
+readings agree pointwise, has, for every world, positive whole factors `p` and `q` with `q` times
+every standing equal to `p` times what `Ψ` reads. The factors are chosen world by world;
+`q = k`, `p = 1` is a reading in a unit `k` times finer than the count's, and `q = 1`, `p = k` one
+in a unit `k` times coarser. The worlds that refute it are the still worlds on two relata with
+standings 1, 2 and 1, 4; a reading up to a unit on a class of worlds without them is not ruled
+out. -/
 theorem standing_not_read_up_to_unit :
     ¬ ∃ Ψ : (R : Type) → ModelRelations R → Nat × R → Nat,
       (∀ R (a b : ModelRelations R), a.Agree b → ∀ x, Ψ R a x = Ψ R b x) ∧
-      ∀ w : World, ∃ k : Nat, ∀ x : Nat × w.Relatum,
-        w.web.level x.1 x.2 = k * Ψ w.Relatum w.modelRelations x :=
-  fun ⟨Ψ, keeps, reads⟩ =>
+      ∀ w : World, ∃ p q : Nat, 0 < p ∧ 0 < q ∧ ∀ x : Nat × w.Relatum,
+        q * w.web.level x.1 x.2 = p * Ψ w.Relatum w.modelRelations x :=
+  fun ⟨_, keeps, reads⟩ =>
     match reads (stillAt Bool oneTwo), reads (stillAt Bool fun t x => oneTwo t x * oneTwo t x) with
-    | ⟨k, first⟩, ⟨k', second⟩ =>
-      have one : k = 1 := factor_of_one (first (0, false))
-      have one' : k' = 1 := factor_of_one (second (0, false))
-      have same := keeps Bool _ _ (stillAt_squared_agree oneTwo) (0, true)
-      have two : 2 = Ψ Bool (stillAt Bool oneTwo).modelRelations (0, true) :=
-        (first (0, true)).trans ((congrArg (· * _) one).trans (Nat.one_mul _))
-      have four : 4 = Ψ Bool (stillAt Bool oneTwo).modelRelations (0, true) :=
-        (second (0, true)).trans ((congrArg (· * _) one').trans ((Nat.one_mul _).trans same))
-      absurd (four.trans two.symm) (by decide)
+    | ⟨_, _, pp, _, first⟩, ⟨p', _, _, qq', second⟩ =>
+      have same := keeps Bool _ _ (stillAt_squared_agree oneTwo)
+      ratio_apart pp qq' (first (0, false)) (first (0, true))
+        ((second (0, false)).trans (congrArg (p' * ·) (same (0, false))))
+        ((second (0, true)).trans (congrArg (p' * ·) (same (0, true))))
 
 end World
 
