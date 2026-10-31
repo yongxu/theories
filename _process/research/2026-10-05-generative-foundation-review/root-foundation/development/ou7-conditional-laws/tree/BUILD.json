@@ -1,0 +1,35 @@
+{
+  "tree": "development/ou7-conditional-laws/tree with kit/patches applied to fresh copies of main's Grammar.lean and GrammarReadings.lean (built from the session scratchpad copy; the patched modules' steps were reused from the first build of the same bytes)",
+  "base": "main 248122055 (Becoming/Grammar.lean cd2010958b77, Becoming/GrammarReadings.lean 0db54ab469b3, unchanged since a85edc40c)",
+  "modules": 9,
+  "ran": [
+    "Becoming.GrammarConditionals",
+    "Becoming.GrammarConditionalsChecks",
+    "BecomingGrammarConditionalsAxiomAudit",
+    "BecomingGrammarConditionalsChecksAxiomAudit"
+  ],
+  "reused": 9,
+  "unclean": [],
+  "audits": {
+    "Becoming.Grammar": {
+      "theorems": 72,
+      "declarations": 120,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarReadings": {
+      "theorems": 13,
+      "declarations": 18,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarConditionals": {
+      "theorems": 40,
+      "declarations": 41,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarConditionalsChecks": {
+      "theorems": 17,
+      "declarations": 17,
+      "with_axioms": {}
+    }
+  }
+}

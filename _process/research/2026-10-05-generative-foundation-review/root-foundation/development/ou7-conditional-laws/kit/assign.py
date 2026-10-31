@@ -1,4 +1,4 @@
-"""OU5 part A: the 219 units classed 丙一, each placed in the family of laws it states.
+"""OU7 part A: the 219 units classed 丙一, each placed in the family of laws it states.
 
 usage: python3 -B assign.py DATA_DIR   (reads DATA_DIR/units.tsv, writes DATA_DIR/groups.tsv)
 

@@ -2,16 +2,18 @@ import Becoming.GrammarCandidates
 import Becoming.GrammarLaws
 
 /-!
-# The corpus's conditional laws in the grammar (丙一之律) — OU5 design scratch
+# The corpus's conditional laws in the grammar (丙一之律) — OU7 scratch
 
-Board item OU5, part A (`development/ou5-conditional-laws/DESIGN.md`). The units classed 丙一 are
-placed in families of laws; this file proves, outside the package, the laws and witnesses the design
-proposes. Each docstring says what kind of law it is: one unfolding of the definitions, a corollary of
-existing laws, or a derivation of its own. A general law's name states its statement in the grammar's
-words. Which unit states which law is an AI reconstruction (`data/groups.tsv`), so a law's reading
-stands in its docstring, marked [AI reading], and not in its name; the classical text decides
-nothing, and Lean checks only the derivation. The checks the design cites are in the scratch module
-`GrammarConditionalsChecks`.
+Board item OU7 (OU plan §八 step 5), part A (`development/ou7-conditional-laws/DESIGN.md`). The units
+classed 丙一 are placed in families of laws. This file proves, outside the package, what the design
+proposes for the core leaf: the new laws, the definitional lemmas that a family's "Y 当且仅当 Z" needs
+in order to be stated exactly, and a counterexample where Z fails for each family whose package
+declarations give none. It builds on the two patches in `kit/patches/`, which put the general laws
+below, in Grammar (`«生于逆核下不变»`) and in GrammarReadings (`«两向有常有前则通»`); it does not restate
+them. Each docstring says what kind of law it is. A general law's name states its statement in the
+grammar's words. Which unit states which law is an AI reconstruction (`data/groups.tsv`), so a law's
+reading stands in its docstring, marked [AI reading], and not in its name; the classical text
+decides nothing, and Lean checks only the derivation.
 -/
 
 namespace Becoming
@@ -24,42 +26,15 @@ variable {α : Type u}
 
 /-! ## Ending, alteration and passing through (design G01, G06) -/
 
-/-- **What ends under a class and continues under another alters (亡而续于他类则异).** It continues
-under the second, and the first tells its two ends apart. One unfolding of `«异»` and `«亡»`: the
-mirror, on the side of what comes after, of `«生于细而续于粗则异»`. Read for 「易窮則變」 (XCX-02-008)
-[AI reading], with 窮 read as ending under a class and 變 as alteration. -/
-theorem «亡而续于他类则异» {R E F : «际» α} {x y : α} (ends : «亡» R E x) (continues : «续» R F x y) :
-    «异» R F E x y :=
-  ⟨continues, fun same => ends ⟨y, continues.1, same⟩⟩
-
 /-- **What ends under a class alters exactly where it has a successor (亡者异当且仅当有后).** For what
-ends under `E`, altering into a continuation under `F` is having a successor under `F`: one unfolding
-of the definitions, with `«亡而续于他类则异»`. Where it has none it does not alter (`«亡而息之例»`). -/
+ends under `E`, altering into a continuation under `F` (`«异» R F E`: `F` continues, `E` tells the two
+apart) is having a successor under `F`. One unfolding of `«异»` and `«亡»`; its "则" half, that what
+ends under `E` and continues under `F` alters, is the mirror of `«生于细而续于粗则异»`. Read for
+「易窮則變」 (XCX-02-008) [AI reading], with 窮 read as ending under a class and 變 as alteration.
+Where nothing follows, it does not alter (`«亡而息之例»`). -/
 theorem «亡者异当且仅当有后» {R E F : «际» α} {x : α} (ends : «亡» R E x) :
     (∃ y, «异» R F E x y) ↔ «有后» R F x :=
-  ⟨fun ⟨y, c, _⟩ => ⟨y, c⟩, fun ⟨y, c⟩ => ⟨y, «亡而续于他类则异» ends c⟩⟩
-
-/-- **Under a class constant both ways, what has a predecessor passes through (两向有常有前则通).**
-Where a class is constant under 缘 and under its converse, an occurrence with a predecessor under it
-passes through: going never ends and coming never ends. A corollary: constancy gives the successor
-(`«有常则续不尽»`), so a predecessor suffices where `«两向有常则通»` takes abiding. The condition is
-sufficient, not necessary. Read for 「寂然不動，感而遂通天下之故」 (XCS-10-006) [AI reading], with 感
-read as a predecessor reaching it under the class. -/
-theorem «两向有常有前则通» {R E : «际» α} (hE : «类» E) (hc : «有常» R E) (hc' : «有常» («逆» R) E)
-    {x : α} (affected : «有前» R E x) : «通» R E x :=
-  «两向有常则通» hE hc hc' ⟨affected, «有常则续不尽» hc affected⟩
-
-/-- **What ends and continues under a class constant both ways alters, passes through and never ends
-(亡而续于两向有常之类则异通不穷).** A conjunction, not an order: the ending gives the alteration (one
-unfolding of the definitions), the two-way constancy gives passing through to anything with a
-predecessor under `F`, altered or not, and never ending is half of passing through by definition. So
-on 變 read as one alteration, 變 does not enter 通. Tested for 「易窮則變，變則通，通則久」
-(XCX-02-008) [AI reading]. -/
-theorem «亡而续于两向有常之类则异通不穷» {R E F : «际» α} (hF : «类» F) (hc : «有常» R F)
-    (hc' : «有常» («逆» R) F) {x y : α} (ends : «亡» R E x) (continues : «续» R F x y) :
-    «异» R F E x y ∧ «通» R F y ∧ «不穷» R F y :=
-  have passes := «两向有常有前则通» hF hc hc' ⟨x, continues⟩
-  ⟨«亡而续于他类则异» ends continues, passes, passes.1⟩
+  ⟨fun ⟨y, c, _⟩ => ⟨y, c⟩, fun ⟨y, c⟩ => ⟨y, c, fun same => ends ⟨y, c.1, same⟩⟩⟩
 
 /-- **Ending and ceasing, without alteration (亡而息之例).** One occurrence with nothing after it ends
 under every class, ceases (`«息»`: it renews into nothing), and does not alter. -/
@@ -76,14 +51,56 @@ theorem «两向有常而无前不通之例» :
   ⟨fun _ _ => False, «一», fun _ _ ⟨_, _, r⟩ => r.elim, fun _ _ ⟨_, _, r⟩ => r.elim,
    fun ⟨_, r, _⟩ => r, fun ⟨go, _⟩ => match go () (.inl rfl) with | ⟨_, r, _⟩ => r⟩
 
+/-- **Not constant, and still ending, altering and passing through (不有常而通之例).** Day and night
+beside a lone occurrence, under the one: the one is not constant (the lone occurrence has no
+successor while the others do), yet `some false` ends under identity, alters into `some true`
+(`«异» R «一» «静»`), and `some true` passes through. So two-way constancy is sufficient for passing
+through (`«两向有常有前则通»`), not necessary. -/
+theorem «不有常而通之例» :
+    ∃ (R : «际» (Option Bool)), ¬ «有常» R «一» ∧ «亡» R «静» (some false) ∧
+      «异» R «一» «静» (some false) (some true) ∧ «通» R «一» (some true) := by
+  let R : «际» (Option Bool) := fun a b => ∃ x, a = some x ∧ b = some (!x)
+  have fwd : ∀ c : Bool, R (some c) (some (!c)) := fun c => ⟨c, rfl, rfl⟩
+  have bwd : ∀ c : Bool, «逆» R (some c) (some (!c)) := fun c =>
+    ⟨!c, rfl, Eq.subst (motive := fun b => some c = some b) (Bool.not_not c).symm rfl⟩
+  have onPair : ∀ {S : «际» (Option Bool)}, (∀ a b, S a b → ∃ c, b = some c) →
+      ∀ {a b : Option Bool}, «相续» S «一» a b → ∃ c, b = some c := by
+    intro S hS a b l
+    induction l with
+    | one c' => exact hS _ _ c'.1
+    | more _ _ ih => exact ih
+  have rTo : ∀ a b, R a b → ∃ c, b = some c := fun _ _ ⟨x, _, hb⟩ => ⟨!x, hb⟩
+  have rFrom : ∀ a b, «逆» R a b → ∃ c, b = some c := fun _ _ ⟨x, ha, _⟩ => ⟨x, ha⟩
+  refine ⟨R, fun hc => ?_, fun ⟨y, ⟨x, hx, hy⟩, e⟩ => ?_, ⟨⟨fwd false, trivial⟩, fun e => ?_⟩, ?_, ?_⟩
+  · match («有常之逐点» R «一»).mp hc (some false) none trivial (some true) (fwd false) with
+    | ⟨_, ⟨_, h, _⟩, _⟩ => exact nomatch h
+  · have hx' : x = false := (Option.some.inj hx).symm
+    have e' : some false = some (!x) := e.trans hy
+    exact Bool.noConfusion ((Option.some.inj e').trans (congrArg (fun b => !b) hx'))
+  · exact Bool.noConfusion (Option.some.inj e)
+  · intro y reach
+    match reach with
+    | .inl e => exact ⟨some false, Eq.subst (motive := fun w => R w (some false)) e (fwd true), trivial⟩
+    | .inr l => match onPair rTo l with
+      | ⟨c, e⟩ =>
+        exact ⟨some (!c), Eq.subst (motive := fun w => R w (some (!c))) e.symm (fwd c), trivial⟩
+  · intro y reach
+    match reach with
+    | .inl e =>
+      exact ⟨some false, Eq.subst (motive := fun w => «逆» R w (some false)) e (bwd true), trivial⟩
+    | .inr l => match onPair rFrom l with
+      | ⟨c, e⟩ =>
+        exact ⟨some (!c), Eq.subst (motive := fun w => «逆» R w (some (!c))) e.symm (bwd c), trivial⟩
+
 /-! ## Generation where every step is parted (design G02) -/
 
 /-- **Where everything has a successor and every step is parted, everything is 全生成
 (皆有后而步皆分则全生成).** Where everything is continued under a coarse class `L` and the fine class `E`
 parts every step of 缘, the coarse line from anything never ends and a carrying renewal lies ahead of
-each of its points. A short derivation from the definition of `«全生成»`; sufficient, not necessary.
-Read for 「日往則月來，月往則日來，日月相推而明生焉」 (XCX-04-004) and 「寒暑相推而歲成焉」 (XCX-04-005)
-[AI reading], with 相推 read as each step passing from one phase to the other. -/
+each of its points. A short derivation from the definition of `«全生成»`; sufficient, and the
+converse is not claimed. Read for 「日往則月來，月往則日來，日月相推而明生焉」 (XCX-04-004) and
+「寒暑相推而歲成焉」 (XCX-04-005) [AI reading], with 相推 read as each step passing from one phase to
+the other. -/
 theorem «皆有后而步皆分则全生成» {R L E : «际» α} (onward : ∀ y, «有后» R L y)
     (leaves : ∀ a b, R a b → ¬ E a b) (x : α) : «全生成» R L E x :=
   ⟨fun y _ => onward y, fun y _ => match onward y with
@@ -94,6 +111,18 @@ the one and identity, every occurrence is 全生成. A model instance. -/
 theorem «昼夜全生成» (x : Bool) : «全生成» (fun a b : Bool => b = !a) «一» «静» x :=
   «皆有后而步皆分则全生成» (R := fun a b : Bool => b = !a) (L := «一») (E := «静»)
     (fun y => ⟨!y, rfl, trivial⟩) (fun a b r e => by cases e; cases a <;> exact Bool.noConfusion r) x
+
+/-- **Something ends, and it is not 全生成 (有亡而不全生成之例).** The short line: `true` has no
+successor, so not everything is continued, and the line from `false` reaches an end, so it is not
+全生成. -/
+theorem «有亡而不全生成之例» : «亡» Map.short «一» true ∧ ¬ «全生成» Map.short «一» «静» false :=
+  ⟨Map.short_end, fun g => «全生成有终不并» ⟨g, Map.Short.degeneration⟩⟩
+
+/-- **A step not parted, and not 全生成 (步不分而不全生成之例).** The still occurrence: its step keeps
+the class, so not every step is parted, and it keeps (全守), so it is not 全生成. -/
+theorem «步不分而不全生成之例» :
+    Map.still () () ∧ «一» () () ∧ ¬ «全生成» Map.still «一» «一» () :=
+  ⟨trivial, trivial, fun g => «全生成全守不并» ⟨g, Map.Still.keeping⟩⟩
 
 end Change
 
@@ -200,13 +229,13 @@ section Distinction
 
 variable {α : Type u}
 
-/-! ## Alteration and the relation that parts it (design G05, G07) -/
+/-! ## Alteration and the relation that parts it (design G05, G07, G17, G20) -/
 
 /-- **No alteration exactly where nothing parts a continuation (无异当且仅当不分续).** Nothing alters
-from `E` under `F` exactly where `F` tells apart the two ends of no continuation under `E` (up to
-double negation). One unfolding of `«异»`, pure logic, for any `F`, a class or not. Where `F` holds
-everywhere, nothing alters (`«平等无异»`). Read for 「乾坤毀，則无以見易；易不可見，則乾坤或幾乎息矣」
-(XCS-12-012) [AI reading], with 乾坤 read as the two classes of one distinction. -/
+from `E` under `F` (no `«异» R E F`) exactly where `F` tells apart the two ends of no continuation
+under `E` (up to double negation). One unfolding of `«异»`, pure logic, for any `F`, a class or not.
+Where `F` holds everywhere, nothing alters (`«平等无异»`). Read for 「乾坤毀，則无以見易；易不可見，
+則乾坤或幾乎息矣」 (XCS-12-012) [AI reading], with 乾坤 read as the two classes of one distinction. -/
 theorem «无异当且仅当不分续» {R E F : «际» α} :
     (∀ x y, ¬ «异» R E F x y) ↔ ∀ x y, «续» R E x y → ¬¬ F x y :=
   ⟨fun none x y c apart => none x y ⟨c, apart⟩, fun kept x y ⟨c, apart⟩ => kept x y c apart⟩
@@ -273,12 +302,106 @@ theorem «不依之例» :
   ⟨fun _ _ => False, fun _ => False, fun _ => True,
    fun dep => match dep () trivial with | ⟨_, r, _⟩ => r, fun ⟨_, p⟩ => p, ⟨(), trivial⟩⟩
 
-/-- **In a net without cycles nothing is co-present (无环则无俱有).** A corollary: one transitivity
-step of reach. -/
+/-- **In a net without cycles nothing is co-present (无环则无俱有).** Where nothing reaches itself, no
+two occurrences condition each other and none is co-present: G10's net where the Z of `«相由则俱有»`
+fails and its Y fails, for every net without cycles. A corollary: one transitivity step of reach. -/
 theorem «无环则无俱有» {R : «际» α} (acyclic : «无环» R) {x y : α} : ¬ «俱有» R x y :=
   fun ⟨a, b⟩ => acyclic x («及之传递» a b)
 
 end Dependence
+
+/-! ## Abiding, ending and constancy (design G08, G11, G13, G14, G16) -/
+
+section Positions
+
+/-- **A beginning and an ending at once (生亡并之例).** One occurrence with no relation begins and ends
+under the one: it has no condition and no result. Without a condition it does not abide
+(`«生住不并»`), and without a result it ends (斷, read as ending under the one). Read against
+「若無因而有萬物者，是則為常」 (ZL-01-099) [AI reading]: false as read, whether 常 is read as abiding
+under every class or as never ending. -/
+theorem «生亡并之例» : ∃ (R : «际» Unit), «生» R «一» () ∧ «亡» R «一» () :=
+  ⟨fun _ _ => False, fun ⟨_, r, _⟩ => r, fun ⟨_, r, _⟩ => r⟩
+
+/-- **Ending under identity and abiding under the one (亡于静而住于一之例).** Counting, at one: it has a
+condition and a result and is not its own condition, so it ends under identity and abides under the
+one (`«四相俱时»`). Read against 「若無常即墮斷邊」 (ZL-21-113) [AI reading], with 無常 as not abiding
+under identity and 斷 as ending under the one: false as read. -/
+theorem «亡于静而住于一之例» :
+    ∃ (R : «际» Nat) (x : Nat), «亡» R «静» x ∧ «住» R «一» x :=
+  match «四相俱时» (R := fun m n : Nat => n = m + 1) (x := 0) (y := 1) (z := 2)
+      (fun h => Nat.noConfusion (Nat.succ.inj h)) rfl rfl with
+  | ⟨_, ends, abides, _⟩ => ⟨fun m n => n = m + 1, 1, ends, abides⟩
+
+/-- **Without a condition it does not abide, while another goes on (无缘不住而他有后之例).** Zero
+conditions one, and two has no condition: two abides under no class, and zero has a successor. Read
+against 「若離業有果報，則有斷常」 (ZL-17-051) [AI reading], with the result as two and a deed as zero:
+the result is not 常 and the deed is not 斷, so false as read. -/
+theorem «无缘不住而他有后之例» :
+    ∃ (R : «际» Nat), (∀ x, ¬ R x 2) ∧ (∀ E, ¬ «住» R E 2) ∧ «有后» R «一» 0 :=
+  have none : ∀ x : Nat, ¬ (x = 0 ∧ (2 : Nat) = 1) := fun _ ⟨_, h⟩ => Nat.noConfusion (Nat.succ.inj h)
+  ⟨fun a b => a = 0 ∧ b = 1, none, fun _ ⟨⟨x, r, _⟩, _⟩ => none x r, ⟨1, ⟨rfl, rfl⟩, trivial⟩⟩
+
+/-- **Its own condition, it begins under no class (自缘而不生之例).** One occurrence that is its own
+condition: under every class it abides (`«自缘则常»`), so it begins under none (`«生住不并»`). Read
+against 「若決定有去、有去者，應有初發」 (ZL-02-070) [AI reading], with own position read as own
+condition: false as read. -/
+theorem «自缘而不生之例» : ∃ (R : «际» Unit), R () () ∧ ∀ E, «类» E → ¬ «生» R E () :=
+  ⟨«一», trivial, fun _ hE begins => «生住不并» ⟨begins, «自缘则常» trivial hE⟩⟩
+
+/-- **With a predecessor, not constant, and ending (有前不有常而亡之例).** The short line: `true` has a
+predecessor under the one, the one is not constant on the line (`«有亡之续则不有常»`), and `true`
+ends. -/
+theorem «有前不有常而亡之例» :
+    «有前» Map.short «一» true ∧ ¬ «有常» Map.short «一» ∧ «亡» Map.short «一» true :=
+  ⟨⟨false, ⟨rfl, rfl⟩, trivial⟩, «有亡之续则不有常» ⟨⟨rfl, rfl⟩, trivial⟩ Map.short_end, Map.short_end⟩
+
+/-- **Not constant, and never ending (不有常而不穷之例).** Counting up beside a lone occurrence, under
+the one: the one is not constant, yet the line from one never ends. Read against 「不爾，便無恒相持用」
+(CWS-P6+P7+P8-020) [AI reading], the converse of G11's law: false as read. So constancy is
+sufficient for a line that never ends (`«有常则往不穷»`), not necessary. -/
+theorem «不有常而不穷之例» :
+    ∃ (R : «际» (Option Nat)), ¬ «有常» R «一» ∧ «有前» R «一» (some 1) ∧ «不穷» R «一» (some 1) := by
+  let R : «际» (Option Nat) := fun a b => ∃ m, a = some m ∧ b = some (m + 1)
+  have fwd : ∀ m : Nat, R (some m) (some (m + 1)) := fun m => ⟨m, rfl, rfl⟩
+  have onLine : ∀ {a b : Option Nat}, «相续» R «一» a b → ∃ c, b = some c := by
+    intro a b l
+    induction l with
+    | one c' => match c'.1 with | ⟨m, _, hb⟩ => exact ⟨m + 1, hb⟩
+    | more _ _ ih => exact ih
+  refine ⟨R, fun hc => ?_, ⟨some 0, fwd 0, trivial⟩, fun y reach => ?_⟩
+  · match («有常之逐点» R «一»).mp hc (some 0) none trivial (some 1) (fwd 0) with
+    | ⟨_, ⟨_, h, _⟩, _⟩ => exact nomatch h
+  · match reach with
+    | .inl e => exact ⟨some 2, Eq.subst (motive := fun w => R w (some 2)) e (fwd 1), trivial⟩
+    | .inr l => match onLine l with
+      | ⟨c, e⟩ =>
+        exact ⟨some (c + 1), Eq.subst (motive := fun w => R w (some (c + 1))) e.symm (fwd c), trivial⟩
+
+end Positions
+
+/-! ## Marks, conditions together, images (design G18, G19, G22) -/
+
+section Marks
+
+/-- **No mark, and its complement no mark (无相而非亦无相之例).** What holds everywhere has no mark
+(`«遍而无相»`), and its complement, holding nowhere, has none either: where the mark fails, its
+complement's fails too (`«有相则非亦有相»`). -/
+theorem «无相而非亦无相之例» : ∃ (P : Unit → Prop), ¬ «有相» P ∧ ¬ «有相» (fun x => ¬ P x) :=
+  ⟨fun _ => True, «遍而无相» (fun _ => trivial), fun ⟨⟨_, np⟩, _⟩ => np trivial⟩
+
+/-- **Nothing conditions and nothing is conditioned (无能无所之例).** The empty net: where nothing
+precedes, nothing follows (`«能所相待»`). -/
+theorem «无能无所之例» : ∃ (R : «际» Unit), (¬ ∃ x, «能» R x) ∧ ¬ ∃ y, «所» R y :=
+  ⟨fun _ _ => False, fun ⟨_, _, r⟩ => r, fun ⟨_, _, r⟩ => r⟩
+
+/-- **The image does not keep (像不保之例).** A balance that reverses: the image of "heavier than"
+under reversal is not within "hangs lower than" (`«保之像»`). -/
+theorem «像不保之例» : ¬ «则» («像» (fun b : Bool => !b) (fun a b => a = true ∧ b = false))
+    (fun p q => p = true ∧ q = false) :=
+  fun within => match within false true ⟨true, false, rfl, ⟨rfl, rfl⟩, rfl⟩ with
+    | ⟨h, _⟩ => Bool.noConfusion h
+
+end Marks
 
 /-! ## Ends and beginnings along the core (design G11, G15) -/
 
@@ -309,8 +432,9 @@ theorem «类内有常则线相随» {R E S : «际» α} (hE : «类» E) (hSE 
 /-- **What the core puts together never ends alike (核同则同不穷).** For a class `E`, what the core
 puts with an occurrence whose line under `E` never ends has a line under `E` that never ends, as
 `«亡于核下不变»` keeps ending along the core. At the converse net it keeps beginninglessness along the
-core of the converse net. A derivation of its own. Read for 「如來藏無有後際，諸佛所得涅槃與之相應則無後際」
-(QXL-JS-326) [AI reading], with 相應 read as lying in one class of the core. -/
+core of the converse net, as `«生于逆核下不变»` keeps beginning there. A derivation of its own. Read for
+「如來藏無有後際，諸佛所得涅槃與之相應則無後際」 (QXL-JS-326) [AI reading], with 相應 read as lying in
+one class of the core. -/
 theorem «核同则同不穷» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «核» R E y y')
     (endless : «不穷» R E y) : «不穷» R E y' :=
   match hk with
@@ -323,19 +447,6 @@ theorem «核同则同不穷» {R E : «际» α} (hE : «类» E) {y y' : α} (
     | ⟨z, onY, s⟩ => match endless z onY with
       | ⟨w, r, e⟩ => match («有常之逐点» R S).mp hc z z' (hs _ _ s) w r with
         | ⟨w', r', s'⟩ => ⟨w', r', hE.trans (hE.trans (hSE _ _ s) e) (hSE _ _ s')⟩
-
-/-- **A beginning is kept along the core of the converse net (生于逆核下不变).** For a class `E`, what
-the core of the converse net puts with an occurrence that begins under `E` begins under `E`. The mirror
-of `«亡于核下不变»`; no forward constancy is needed, so it holds wherever `«生于位核下不变»` does, whose
-proof uses only the converse constancy, and on pairs the two-way core does not join. A corollary of
-the definitions, like `«亡于核下不变»`. -/
-theorem «生于逆核下不变» {R E : «际» α} (hE : «类» E) {y y' : α}
-    (hk : «核» («逆» R) E y y') (hy : «生» R E y) : «生» R E y' :=
-  fun ⟨w', hr, he⟩ => match hk with
-    | ⟨S, hSE, hs, hc, hyy⟩ =>
-      match («有常之逐点» («逆» R) S).mp hc y' y (hs y y' hyy) w' hr with
-      | ⟨w, hrw, hww⟩ =>
-        hy ⟨w, hrw, hE.trans (hE.trans (hE.symm (hSE w' w hww)) he) (hE.symm (hSE y y' hyy))⟩
 
 /-- **A beginning is not kept along the core of the forward net (生于核下可变之例).** Three
 occurrences, the third conditioning the second: the first and the second have no successor, so the
@@ -355,6 +466,47 @@ theorem «生于核下可变之例» :
     ⟨S, fun _ _ _ => trivial, fun _ _ ⟨a, b⟩ => ⟨b, a⟩, hc, ⟨.inl rfl, .inr rfl⟩⟩,
     fun ⟨_, r, _⟩ => absurd r.2 (fun e => by cases e),
     fun begins => begins ⟨some true, ⟨rfl, rfl⟩, trivial⟩⟩
+
+/-- **Never ending beside ending, apart under the core (不穷与亡不同核之例).** A loop beside a lone
+occurrence: the line from the loop never ends, the lone occurrence ends, and the core does not put
+them together, since ending is kept along the core (`«亡于核下不变»`). -/
+theorem «不穷与亡不同核之例» :
+    ∃ (R : «际» (Option Unit)), «不穷» R «一» (some ()) ∧ «亡» R «一» none ∧
+      ¬ «核» R «一» (some ()) none := by
+  let R : «际» (Option Unit) := fun a b => a = some () ∧ b = some ()
+  have lands : ∀ {a b : Option Unit}, «相续» R «一» a b → b = some () := by
+    intro a b l
+    induction l with
+    | one c => exact c.1.2
+    | more _ _ ih => exact ih
+  have ends : «亡» R «一» none := fun ⟨_, r, _⟩ => nomatch r.1
+  refine ⟨R, fun y on => ?_, ends, fun hk => ?_⟩
+  · have hy : y = some () := match on with
+      | .inl e => e.symm
+      | .inr l => lands l
+    exact ⟨some (), ⟨hy, rfl⟩, trivial⟩
+  · match hk with
+    | ⟨S, hSE, hs, hc, h⟩ =>
+      exact «亡于核下不变» ⟨fun _ => trivial, fun _ => trivial, fun _ _ => trivial⟩
+        ⟨S, hSE, hs, hc, hs _ _ h⟩ ends ⟨some (), ⟨rfl, rfl⟩, trivial⟩
+
+/-- **The core of the converse net is not within the core (逆核不含于核之例).** Three occurrences: `0`
+and `1` have no condition, `0` conditions `2`, and `1` conditions nothing. The core of the converse
+net puts `0` and `1` together; the core does not, nor therefore the two-way core (`«位核含于核»`). So
+`«生于逆核下不变»` reaches pairs that `«生于位核下不变»` does not. -/
+theorem «逆核不含于核之例» :
+    ∃ (R : «际» Nat), «核» («逆» R) «一» 0 1 ∧ ¬ «核» R «一» 0 1 := by
+  let R : «际» Nat := fun a b => a = 0 ∧ b = 2
+  refine ⟨R, ⟨fun u v => (u = 0 ∨ u = 1) ∧ (v = 0 ∨ v = 1), fun _ _ _ => trivial,
+    fun _ _ ⟨a, b⟩ => ⟨b, a⟩, ?_, ⟨.inl rfl, .inr rfl⟩⟩, ?_⟩
+  · apply («有常之逐点» («逆» R) _).mpr
+    intro u u' ⟨hu, _⟩ v r
+    match hu with
+    | .inl h => exact absurd (h.symm.trans r.2) (fun e => Nat.noConfusion e)
+    | .inr h => exact absurd (h.symm.trans r.2) (fun e => Nat.noConfusion (Nat.succ.inj e))
+  · intro ⟨S, _, hs, hc, s01⟩
+    match («有常之逐点» R S).mp hc 0 1 s01 2 ⟨rfl, rfl⟩ with
+    | ⟨_, ⟨h, _⟩, _⟩ => exact Nat.noConfusion h
 
 /-- **Without a beginning and still ending (无始而有终之例).** Counting down to zero: going back from
 zero never ends, and zero ends. Read for 「染法從無始已來熏習不斷，乃至得佛後則有斷」 (QXL-JS-238)
