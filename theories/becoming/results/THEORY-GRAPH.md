@@ -603,7 +603,7 @@ Results (19):
 - [Self-reference does not certify itself](records/self-reference-does-not-certify-itself.md) (recorded-checked)
 - [The last change of a run](records/the-last-change-of-a-run.md) (recorded-checked)
 - [Theory of Becoming: full foundational target](records/theory-of-becoming-foundation.md) (open)
-- [Type formation keeps the seed's boundary and gives no dynamics](records/type-formation-gives-no-dynamics.md) (recorded-checked)
+- [Type formation keeps the seed's size bounds and gives no dynamics](records/type-formation-gives-no-dynamics.md) (recorded-checked)
 - [What a law of the whole and no part takes](records/what-a-law-of-the-whole-and-no-part-takes.md) (recorded-checked)
 - [What a summary keeps](records/what-a-summary-keeps.md) (recorded-checked)
 - [What discrete steps and whole amounts represent](records/what-discrete-steps-and-whole-amounts-represent.md) (recorded-checked)
