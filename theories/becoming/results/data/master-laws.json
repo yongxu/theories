@@ -60117,33 +60117,33 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, exact and moved are counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
      "standing": "amounts",
      "basis": {
-      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening, read at the model off giving and level only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each offspring's value its parent's, is counting, while inactive makes the members of groups lower in the trait inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate's premise that only active relata give (K3) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
-     "standing": "amounts",
+     "standing": "counting",
      "basis": {
-      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+      "en": "Price's partition over listed generations with exact transmission of an arbitrary trait map: its statement reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of SelectionLevels.levels_sized equates each group's length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.Reproduction.Flow.number_within_take",
@@ -60312,7 +60312,8 @@
    "reviews": [
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY-SECOND.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
    ],
    "laws": [
     "Becoming.RootForms.GivenTo",
@@ -60362,11 +60363,11 @@
   "counts": {
    "derived": 10,
    "under a stated hypothesis": 1,
-   "counting": 6,
+   "counting": 7,
    "connected": 22,
    "witnessed at its model": 0,
    "balance in its statement": 32,
-   "amounts": 19,
+   "amounts": 18,
    "at a represented model": 16,
    "own carrier": 7,
    "at its model": 2,
@@ -60375,8 +60376,8 @@
   },
   "groups": {
    "on the edge": 11,
-   "below the grammar": 6,
-   "distances": 101,
+   "below the grammar": 7,
+   "distances": 100,
    "unplaced": 0
   },
   "derived_by_forwarder": [],
@@ -60397,7 +60398,7 @@
     "reaching the grammar": 0,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
-    "the rest": 6
+    "the rest": 7
    },
    "connected": {
     "reaching the grammar": 22,
@@ -60421,7 +60422,7 @@
     "reaching the grammar": 0,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
-    "the rest": 19
+    "the rest": 18
    },
    "at a represented model": {
     "reaching the grammar": 0,
@@ -61432,9 +61433,9 @@
      "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
      "standing": "amounts",
      "basis": {
-      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening, read at the model off giving and level only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each offspring's value its parent's, is counting, while inactive makes the members of groups lower in the trait inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate's premise that only active relata give (K3) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62096,7 +62097,7 @@
     }
    },
    "Becoming.SelectionLevels.rises_exact_iff_levels": {
-    "label": "amounts",
+    "label": "counting",
     "placed": "reading",
     "rule": "unplaced",
     "f5": "the rest",
@@ -62109,11 +62110,11 @@
     },
     "entry": {
      "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
-     "standing": "amounts",
+     "standing": "counting",
      "basis": {
-      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+      "en": "Price's partition over listed generations with exact transmission of an arbitrary trait map: its statement reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of SelectionLevels.levels_sized equates each group's length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62133,9 +62134,9 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, exact and moved are counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62155,9 +62156,9 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
