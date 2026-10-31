@@ -47,7 +47,7 @@ print('passed', d['utc'], 'module steps run', len(ran), 'reused', len(s['reused'
 EOF
   ;;
 post)
-  N=${2:?N, the study's next section}
+  N=${2:?the next study section N}
   ID=$(python3 -c "import json; print(json.load(open('$PKG/becoming-verification.json'))['utc'])")
   python3 - $PKG/becoming-checks/$ID/verification.json <<'EOF' || fail "axiom reports"
 import json, sys
