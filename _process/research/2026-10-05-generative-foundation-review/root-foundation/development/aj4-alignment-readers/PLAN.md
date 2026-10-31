@@ -1,6 +1,6 @@
 # AJ4: the account for alignment readers (plan)
 
-24 October 2026. AI-authored plan for step 5 of [AJ's plan](../aj-joint-selection/PLAN.md), the account for alignment readers, raised to one of the work's top objectives ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md)). A first draft of the page is [beside it](DRAFT-ONE-PAGE.md).
+24 October 2026. AI-authored plan for step 5 of [AJ's plan](../aj-joint-selection/PLAN.md), the account for alignment readers, raised to one of the work's top objectives ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md)). A first draft of the page is [beside it](history/DRAFT-ONE-PAGE.md).
 
 ## 1. The objective, represented
 
@@ -59,7 +59,7 @@ The draft was revised for them on 24 October. The changes:
 
 ## 4. Deliverables
 
-1. **The page.** One page, readable in ten minutes: the claim, the results with their conditions and standing, the readings for alignment, what is not claimed, the tests, how to check, the closest work. Its draft is in this folder.
+1. **The page.** One page, readable in ten minutes: the claim, the results with their conditions and standing, the readings for alignment, what is not claimed, the tests, how to check, the closest work. Its draft is in this folder. On 31 October 2026 the page became the dossier's opening section, [the dossier in ten minutes](../../../../../../theories/becoming/review/ALIGNMENT.md#the-dossier-in-ten-minutes), and the draft, grown to 5,503 words, moved to [history](history/DRAFT-ONE-PAGE.md) ([the edition of 31 October 2026](README.md#the-edition-of-31-october-2026-sized-for-a-person)).
 2. **The dossier.** A dossier for alignment researchers in the review packet's format, readable in half a day. Each item quotes its record exactly, gives the reading for alignment, its known weaknesses and neutral questions, and ends in the response form. Adding it to the packet changes the packet's scope, so it is Ren's choice.
 3. **A citation check.** Each work cited is read against its source before anything is sent.
 
