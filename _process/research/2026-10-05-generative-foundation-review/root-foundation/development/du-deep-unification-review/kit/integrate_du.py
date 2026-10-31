@@ -544,8 +544,9 @@ U4_NEW_SENTENCE = (
     "            'root. Its root form at the own-closure reading, `«续无外»`, varies with the net: the endless line of '\n"
     "            'descent meets it, and two family lines with no condition between them fail it (`«续无外随网»`, and '\n"
     "            '`«族无外随网»` in families), so no law that holds of every net settles it. Where the condition held de se '\n"
-    "            'holds and admission is decided, C asks nothing beyond self-concern between two level paths whose '\n"
-    "            'admissions are listed, paths whose admissions end (`Web.extension_ranked_of_increasingInOwn`); '\n"
+    "            'holds and admission is decided, a self-concerned order ranks every extension between two level paths whose '\n"
+    "            'admissions are listed, as C asks there, one way and only for paths whose admissions end '\n"
+    "            '(`Web.extension_ranked_of_increasingInOwn`); '\n"
     "            'elsewhere C alone orders ([premises](#r-premises-met-and-failed)). `master_laws.py` checks on the core '\n"
     "            'run what the Lean can '\n")
 # the same sentence as 08 shows it, for the strip check below
@@ -725,11 +726,11 @@ def edge_history():
     en = (f"{today.day} {today:%B %Y}, board item DU: the home section's sentence on the ethics' two premises now names "
           "ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), "
           "«续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, "
-          "where C asks nothing "
-          "beyond self-concern; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one "
+          "where self-concern gives what C asks, one way, "
+          "between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one "
           "declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.")
     zh = (f"{today.year}年{today.month}月{today.day}日，工作板条目 DU：家节言伦理二前提之句，今名 ReadsNoOrder.not_entails"
-          "（不读次序之陈述唯于其不成处蕴含 C，直接可得）、«续无外随网»（条件之根形随网而变）与 Web.extension_ranked_of_increasingInOwn（C 不求自关切之外者之处）；"
+          "（不读次序之陈述唯于其不成处蕴含 C，直接可得）、«续无外随网»（条件之根形随网而变）与 Web.extension_ranked_of_increasingInOwn（自关切单向给出 C 于二所列且接纳有终之层径间之所求处）；"
           "Web.paths_comparison_widens 离 COVERAGE 之意义行，故家节少计一在其自身载体上之声明。所立与前提之条目不变。")
     # dated on the day of the landing; found again on a rerun, on any day, by the text after the date
     if any(h.get('en', '').endswith(en.split(', ', 1)[1]) for h in r['history']):
@@ -1144,7 +1145,11 @@ Delta:
     (Web.extension_ranked_of_increasing, Web.extension_ranked_of_increasingInOwn). Listed paths admit nothing from
     some step on (Web.admits_nothing_from_of_listed); once there is a formation no list holds every level path's
     admissions (Web.not_listsAdmitted_every), so that form would be vacuous (Web.no_extension_of_listsAdmitted_every):
-    the third look replaced it by the pairwise one.
+    the third look replaced it by the pairwise one. Failed candidate, kept on record: Web.comparison_of_increasingInOwn,
+    stated before the third look and never landed, said that where the de se condition holds every self-concerned
+    order meets C (Comparison) on all of a web's level paths, given that every level path's admissions are listed;
+    that hypothesis cannot hold once there is a formation (Web.not_listsAdmitted_every), so the statement held only
+    vacuously (REVIEW-LEAF-2, third look). Web.extension_ranked_of_increasingInOwn replaced it.
   - The World's occurrence model, nine of its ten selected relations with falling and the order of standings added,
     agrees at a unit k times finer, 0 < k (World.atFinerUnit_agree, carried by the identity correspondence), where the
     world balances exactly as before (atFinerUnit_balanced_iff); so for k ≠ 1 no reading of it returns a positive
@@ -1169,7 +1174,8 @@ Evidence: core receipt `{stamp}`; Becoming.PremiseWitnesses ({pw['theorems']} th
        boundary report is merged main's less the row COVERAGE dropped.
 Standing: witnesses and near-definitional joins, labelled so; the one-item law and the pairwise ranking are small
        proofs. What they add is the premises' standings: each premise named is met and failed, or not entailed, and
-       where C asks nothing beyond self-concern is located, not assumed. The units leaf is a boundary of the
+       where self-concern gives what C asks, one way and between level paths whose
+       admissions are listed and end, is located, not assumed. The units leaf is a boundary of the
        World's representation, not a law of becoming.
 Boundary:
   - That any premise is warranted, or C derived; C on all of a web's level paths from self-concern.

@@ -154,7 +154,7 @@
         "zh": "条件之下之自关切与 C"
       },
       "statement": {
-        "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: read as a center's reach, where the condition on the root holds; held de se, where the continuation condition does. There, admission decided, self-concern ranks listed extensions.",
+        "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: as a center's reach, where the root's condition holds; held de se, where the continuation condition does. There, admission decided, it ranks extensions between listed paths, one way.",
         "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合：于自中心之所及，即根上之条件成立处；于自承，即延续条件成立处。彼成立且接纳可判定处，自关切把二所列层径间之每一扩展皆排定。"
       },
       "laws": [
@@ -215,8 +215,8 @@
           "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
         },
         {
-          "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. C still alone orders in general; this result locates where C asks nothing beyond self-concern, between two listed level paths where the de se condition holds and admission is decided.",
-          "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。一般而言仍唯 C 定序；此结果指出 C 不求自关切之外者之处：于自承之条件成立、接纳可判定之处，二所列层径之间。"
+          "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. C still alone orders in general; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
+          "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。一般而言仍唯 C 定序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
         }
       ],
       "does_not_show": [
@@ -256,8 +256,8 @@
         "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
       },
       "correspondence": {
-        "en": "Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so C there asks no more than self-concern. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
-        "zh": "自关切为于自身延续所标者上递增之次序；于接纳上递增为帕累托式之单调，单向给出 C 于所列层径间之所求。自身延续标出一切处，二者相合，故 C 于彼处不求多于自关切。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+        "en": "Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so there self-concern gives what C asks between listed level paths, one way; on all of a web's level paths it gives nothing this way. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+        "zh": "自关切为于自身延续所标者上递增之次序；于接纳上递增为帕累托式之单调，单向给出 C 于所列层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切单向给出 C 于所列层径间之所求；于网之全部层径上，此路不给出任何东西。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
       },
       "dependencies_draft": [
         {

@@ -10,9 +10,9 @@ An order is self-concerned, increasing in its own continuation (`Weighting.Incre
 
 A finite listing, two-valued admission and an order not assumed complete or transitive; on a web, admission decided by a supplied reading and what both paths admit listed ([record](../results/records/self-concern-and-c-under-the-condition.md); [`Becoming.PremiseWitnesses`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean)).
 
-This result locates where C asks nothing beyond self-concern: where the continuation condition held de se holds, admission is decided, and the two courses compared are level paths whose admissions are listed. It does not derive C. In general C alone orders, and self-concern and the condition both remain hypotheses; the condition varies with the net, the class and the direction. The ethics rests on its two premises with two roles, the continuation condition for scope and C for order.
+This result locates where self-concern gives what C asks, one way: where the continuation condition held de se holds, admission is decided, and the two courses compared are level paths whose admissions are listed, so that both admit nothing from some step on. It does not derive C. In general C alone orders, and self-concern and the condition both remain hypotheses; the condition varies with the net, the class and the direction. The ethics rests on its two premises with two roles, the continuation condition for scope and C for order.
 
 **What is not shown:**
-- C on all of a web's level paths from self-concern: the link holds between listed paths, courses whose admissions end;
+- C on all of a web's level paths from self-concern: the link holds between listed paths, courses whose admissions end, and a form asking every level path's admissions listed holds only vacuously (`Web.not_listsAdmitted_every`);
 - the converse, that C on level paths makes an order increasing in admission on a listing: a course on a listing need not be what any level path admits;
 - that self-concern fails to rank an extension on a web where the condition fails, which is proved on listings only.

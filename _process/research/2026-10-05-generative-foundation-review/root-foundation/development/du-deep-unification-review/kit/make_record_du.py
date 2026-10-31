@@ -143,7 +143,7 @@ ALIASES = {
         'Becoming.«续无外随网»', 'Becoming.«族无外随网»', 'Becoming.«逆缘续无外随网»', 'Becoming.ReadsNoOrder.not_entails',
         'Becoming.LiftModel.met_and_failed', 'Becoming.Weighting.widensOn_iff_reach'],
     'self-concern-and-c-under-the-condition': [
-        'where C asks nothing beyond self-concern', 'C 不求自关切之外者之处',
+        'self-concern gives what C asks between listed level paths, one way', '自关切于所列层径间单向给出 C 之所求',
         'Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside',
         'Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted',
         'Becoming.Web.extension_ranked_of_increasingInOwn', 'Becoming.increasingInOwn_with_net'],
