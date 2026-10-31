@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """HE2: 08's core counts at HE2's receipt, and the study section (he2_study.txt, its placeholders filled from the
 receipt and from the arguments). Items 6 and 7's own texts part (he2_core_li.py --apply texts) runs before this.
-usage (from the checkout root of the landing worktree, after the checker and the records):
-  python3 -B <kit>/he2_texts.py RECEIPT N REPOINTED SIGNATURES_LOG [--check]
-REPOINTED is the number of records the re-point touched, read from its log; SIGNATURES_LOG is he2_signatures.py's
-output on RECEIPT, which must end in its OK line. The study section's counts are read from it and from the kits."""
+usage (from the checkout root of the landing worktree, after the checker, the records, the register and the re-point):
+  python3 -B <kit>/he2_texts.py RECEIPT N REPOINT_LOG SIGNATURES_LOG CONNECTIVITY_LOG [--check]
+REPOINT_LOG is repoint.py's JSON output; SIGNATURES_LOG is he2_signatures.py's output on RECEIPT, saved before the
+landing commit, which must end in its OK line; CONNECTIVITY_LOG is THEOREM-CONNECTIVITY.py --check's output after the
+register parts, which must report nothing. The study section's counts are read from these, from the checker's summary
+(becoming-verification.json, which must be RECEIPT's run) and from the kits; every sentence it fills is asserted."""
 import importlib.util
 import json
 import re
@@ -13,7 +15,8 @@ from pathlib import Path
 
 ROOT = Path.cwd()
 HERE = Path(__file__).resolve().parent
-RECEIPT, N, REPOINTED, SIGLOG = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), Path(sys.argv[4])
+RECEIPT, N = sys.argv[1], int(sys.argv[2])
+REPOINT, SIGLOG, CONNLOG = Path(sys.argv[3]), Path(sys.argv[4]), Path(sys.argv[5])
 CHECK = '--check' in sys.argv
 PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 CH = ROOT / 'theories/becoming/chapters'
@@ -21,6 +24,11 @@ STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-f
 
 R = json.loads((ROOT / PKG / 'becoming-checks' / RECEIPT / 'verification.json').read_text())
 assert R['status'] == 'passed'
+RUN = json.loads((ROOT / PKG / 'becoming-verification.json').read_text())
+assert RUN['utc'] == RECEIPT and RUN['status'] == 'passed', ('the checker summary is not this run', RUN['utc'])
+steps = RUN['lean_steps']  # the module steps; `ran` also holds the toolchain's version step, which has no key
+ran = [s for s in steps['ran'] if s in steps['keys']]
+assert set(ran) | set(steps['reused']) == set(steps['keys']) and not set(ran) & set(steps['reused'])
 layers = {}
 for module in R['modules']:
     count = layers.setdefault(module['layer'], [0, 0])
@@ -59,7 +67,7 @@ k24 = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(k24)
 renamed_t, renamed_d = len(audit['gone']), len(audit['definitions_gone'])
 added_t, added_d = len(audit['added']) - renamed_t, len(audit['definitions_added']) - renamed_d
-fill = {'{N}': str(N), '{RECEIPT}': RECEIPT, '{MODULES}': str(modules), '{REPOINTED}': str(REPOINTED),
+fill = {'{N}': str(N), '{RECEIPT}': RECEIPT, '{MODULES}': str(modules),
         '{GT}': str(mods['Becoming.GrammarLaws']['theorems']), '{GD}': str(len(mods['Becoming.GrammarLaws']['declarations'])),
         '{I24}': str(len(k24.NEW)), '{T_BEFORE}': str(audit['declarations_old']), '{T_AFTER}': str(audit['declarations_new']),
         '{RENAMED}': str(renamed_t + renamed_d), '{RENAMED_T}': str(renamed_t), '{RENAMED_D}': str(renamed_d),
@@ -67,6 +75,18 @@ fill = {'{N}': str(N), '{RECEIPT}': RECEIPT, '{MODULES}': str(modules), '{REPOIN
         '{MOVED}': str(len(audit['moved'])), '{BY_RENAME_S}': str(len(audit['changed_by_the_renames_only'])),
         '{BY_RENAME_D}': str(len(audit['definitions_rewritten_by_the_renames_only']))}
 assert len(audit['changed']) == 1, audit['changed']
+# The re-point: the records HE2 changed (an HE2 history note) are among those it re-pointed; the others say what they said.
+repointed = set(json.loads(REPOINT.read_text(encoding='utf-8'))['by_record'])
+recs = ROOT / 'theories/becoming/results/records'
+written = {p.stem for p in recs.glob('*.json')
+           if any(f'board item HE2' in h.get('en', '') for h in json.loads(p.read_text(encoding='utf-8'))['history'])}
+assert len(written) == 8 and written <= repointed, ('HE2 records not re-pointed', sorted(written - repointed))
+fill['{REPOINTED}'], fill['{REPOINTED_OTHER}'] = str(len(repointed)), str(len(repointed - written))
+fill.update({'{RAN}': f"{len(ran):,}", '{KEYS}': f"{len(steps['keys']):,}", '{REUSED}': f"{len(steps['reused']):,}"})
+# The connectivity check after the register parts: nothing reported.
+conn = CONNLOG.read_text(encoding='utf-8')
+assert ('apart roots without a reason in THEOREM-CONNECTIVITY-APART.json: []; register entries no longer apart roots: []; '
+        'instances naming a law or base constant the run lacks: []') in conn, 'the connectivity check reports something'
 section = (HERE / 'he2_study.txt').read_text(encoding='utf-8')
 for key, value in fill.items():
     section = section.replace(key, value)

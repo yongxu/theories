@@ -93,6 +93,27 @@ LEAN_PLAIN = [
     (PKG + 'README.zh.md', '| 理之守与离，及自改其则者', '| 规律之守与离，及自改其则者'),
     (PKG + 'README.zh.md', '可能之网中步不在「完与否」之理中', '可能之网中步不在「完与否」之规律中'),
     (PKG + 'README.zh.md', '一类下之线所必含者，与一理所纳者', '一类下之线所必含者，与一规律所纳者'),
+    # Item 6's laws in the package's catalogues of GrammarLaws: the root module's list, both READMEs' rows and the
+    # checker's scope, which every receipt carries (before the run, since the receipt pins these bytes).
+    (PKG + 'Becoming.lean',
+     "  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening\n",
+     "  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. With a fixed\n"
+     "  successor a class's core goes alike (`«定后则类之核同行»`); with a successor everywhere a class going alike\n"
+     "  inside a relation lies in its core (`«遍后则其内同行之类含于核»`), so with both the core is the coarsest\n"
+     "  class inside the class that goes alike (`«定后遍后则核为其内最粗同行之类»`), and off a fixed successor it\n"
+     "  need not go alike (`«后不定则核可不同行»`; board item HE2). Order: widening\n"),
+    (PKG + 'README.md', "a map preserving a relation exactly where its image lies within the other (`«保之像»`);",
+     "a map preserving a relation exactly where its image lies within the other (`«保之像»`); with a fixed successor a "
+     "class's core going alike, and with a successor everywhere too the coarsest class inside the class that does "
+     "(`«定后则类之核同行»`, `«定后遍后则核为其内最粗同行之类»`), off a fixed successor not always (`«后不定则核可不同行»`);"),
+    (PKG + 'README.zh.md', "映射保一关系恰当其像在另一关系之内（`«保之像»`）；",
+     "映射保一关系恰当其像在另一关系之内（`«保之像»`）；定后则类之核同行，兼遍后则核为类内最粗之同行之类（`«定后则类之核同行»`、"
+     "`«定后遍后则核为其内最粗同行之类»`），后不定则未必（`«后不定则核可不同行»`）；"),
+    (PKG + 'check_becoming.py',
+     '    "under the map goes alike, and a map preserves a relation exactly where its image lies within the other; "\n',
+     '    "under the map goes alike, and a map preserves a relation exactly where its image lies within the other; "\n'
+     '    "with a fixed successor a class\'s core goes alike, and with a successor everywhere too it is the coarsest "\n'
+     '    "class inside the class that goes alike, which off a fixed successor the core need not; "\n'),
 ]
 
 LAWS_AFTER = "  («类有常当且仅当含于核» R hE).mp («同行遍后则有常» alike total)\n"
@@ -230,10 +251,19 @@ WORDING = [  # (record, field path, current, proposed)
      "the core is the plan's 理 of the class, a 理 in the glossary's sense where the successor is fixed."),
     ('a-regularity-kept-and-changed', ('correspondence', 'zh'), '核即计划所言类之理。',
      '核即计划所言类之理，步之后定处即词汇表所言之理。'),
+    ('a-regularity-kept-and-changed', ('does_not_show', 2, 'zh'), '实有之样式之理在何类', '实有之样式之规律在何类'),
+    ('what-a-line-holds-and-a-regularity-takes-in', ('title', 'zh'), '线所必含，与理之所纳', '线所必含，与规律之所纳'),
     ('continuation-relative-to-a-class', ('statement', 'zh'), '一条线之理是其类之核', '一条线自身之规律是其类之核'),
     ('continuation-relative-to-a-class', ('laws', 3, 'zh'), '其理在其类之核', '其自身之规律在其类之核'),
     ('continuation-relative-to-a-class', ('laws', 10, 'zh'), '则另一类足以定此类之理', '则另一类足以定此类之核'),
 ]
+# A record whose 理 meant a regularity other than the core: its rewording gives its own reason.
+WORDING_REASON = {
+    'what-a-line-holds-and-a-regularity-takes-in': (
+        "理 written for a regularity, there a constant class, becomes 规律, as the package README's cell now writes; "
+        "the old title stays among the aliases",
+        '写作理之规律（此为有常之类）改为规律，如包 README 之格今所写；旧题仍在别名中'),
+}
 ML = 'master-laws-on-the-grammar'
 ML_AFTER = 'Becoming.«类同行遍后则含于核»'
 ML_EN_OLD = "A class going alike lies in its core,"
@@ -339,7 +369,7 @@ def stamp_day():
     return f"{d.day} {d:%B %Y}", f"{d.year}年{d.month}月{d.day}日"
 
 
-def note(study, renamed, worded):
+def note(study, renamed, worded, rid=None):
     """The history note of one record: the renames it holds, with their reasons, and its rewordings."""
     day_en, day_zh = stamp_day()
     core = [o for o in RENAMES if o in renamed and o != LAW_NAME]
@@ -354,7 +384,10 @@ def note(study, renamed, worded):
         en.append(f'«{LAW_NAME}» renamed to «{RENAMES[LAW_NAME]}», with no alias kept: its 理 meant a law of the '
                   'grammar, and the two conditions it names are conditions on a model')
         zh.append(f'«{LAW_NAME}» 改为 «{RENAMES[LAW_NAME]}»，不留别名：其理意为文法之律，所言二者是对模型之条件')
-    if worded:
+    if worded and rid in WORDING_REASON:
+        en.append('wording only in ' + ', '.join(worded) + ': ' + WORDING_REASON[rid][0])
+        zh.append('仅措辞，' + '、'.join(worded) + '：' + WORDING_REASON[rid][1])
+    elif worded:
         corr = any(w.startswith('correspondence') for w in worded)
         en.append('wording only in ' + ', '.join(worded) + ': 理 written for a line\'s regularity, the core, becomes '
                   '规律 or 核' + (', and the correspondence says where the core is a 理' if corr else ''))
@@ -401,7 +434,8 @@ def records(apply, study=None, notes=True):
     for path in sorted((ROOT / REC).glob('*.json')):
         rid = path.stem
         raw = path.read_text(encoding='utf-8')
-        if rid not in RENAMED_RECORDS and not any('«' + o + '»' in raw for o in RENAMES):
+        if (rid not in RENAMED_RECORDS and rid not in WORDING_REASON
+                and not any('«' + o + '»' in raw for o in RENAMES)):
             continue
         r = json.loads(raw)
         renamed = set()
@@ -439,13 +473,14 @@ def records(apply, study=None, notes=True):
                 o[k] = o[k].replace(old, new)
                 worded.append('.'.join(map(str, field)))
             LOG.append((rid, '.'.join(map(str, field)), old, new))
-        applied = not renamed and not worded and any(full(n) in raw or '«' + n + '»' in raw for n in RENAMES.values())
+        applied = not renamed and not worded and (rid in WORDING_REASON or any(full(n) in raw or '«' + n + '»' in raw
+                                                                            for n in RENAMES.values()))
         assert renamed or worded or applied, rid
         if renamed and rid not in RENAMED_RECORDS:
             found.append(rid)
         changed = bool(renamed or worded)
         if changed:
-            held[rid] = note(study, renamed, worded)
+            held[rid] = note(study, renamed, worded, rid)
             if apply and notes:
                 r['history'].append(held[rid])
         out[rid] = (raw, r, changed)
