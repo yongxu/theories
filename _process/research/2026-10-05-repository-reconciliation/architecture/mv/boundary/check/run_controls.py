@@ -7,7 +7,8 @@ compiles BoundaryCheckControls.lean (beside it) against that build into WORK (de
 check on row 17, row 5 and the controls, and exits non-zero unless each case fails exactly as expected
 (controls-run.log is its output on 31 October 2026, after the discharge condition counted a package's
 definitions of propositions as proofs and test 3's message named the hypotheses; the same output again after the walk
-read term positions only and went through generated auxiliaries)."""
+read term positions only and went through generated auxiliaries, after they were told by attachment, and after the
+third and the fourth re-checks' fixes)."""
 import copy, json, os, subprocess, sys, tempfile
 from pathlib import Path
 

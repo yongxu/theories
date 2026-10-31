@@ -1,0 +1,251 @@
+@Becoming.Strict.le_self : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ (s : Nat), s ≤ σ s
+@Becoming.Strict.lt : ∀ {σ : Nat → Nat}, Becoming.Strict σ → ∀ {a b : Nat}, a < b → σ a < σ b
+@Becoming.Strict.comp : ∀ {σ τ : Nat → Nat}, Becoming.Strict σ → Becoming.Strict τ → Becoming.Strict fun s => σ (τ s)
+@Becoming.mem_span : ∀ {σ : Nat → Nat},
+  Becoming.Strict σ → ∀ {s j : Nat}, j ∈ Becoming.span σ s → σ s ≤ j ∧ j < σ (s + 1)
+@Becoming.span_mem : ∀ {σ : Nat → Nat},
+  Becoming.Strict σ → ∀ {s j : Nat}, σ s ≤ j → j < σ (s + 1) → j ∈ Becoming.span σ s
+@Becoming.last_of_span : ∀ {σ : Nat → Nat},
+  Becoming.Strict σ → ∀ (s : Nat), ∃ j, j ∈ Becoming.span σ s ∧ j + 1 = σ (s + 1)
+@Becoming.Web.sample_sample : ∀ {F C : Type} {W : Becoming.Web F C} (σ τ : Nat → Nat),
+  (W.sample σ).sample τ = W.sample fun s => σ (τ s)
+@Becoming.Web.sample_dependent : ∀ {F C : Type} {W : Becoming.Web F C} (σ : Nat → Nat),
+  W.Dependent → (W.sample σ).Dependent
+Becoming.Web.sample_embodied : ∀ (σ : Nat → Nat) {X : Type} {W : Becoming.Web X X} {x : X},
+  W.Embodied x → (W.sample σ).Embodied x
+@Becoming.Web.sample_census : ∀ {F C : Type} {W : Becoming.Web F C} (σ : Nat → Nat) {alive : Nat → List F},
+  W.Census alive → (W.sample σ).Census fun s => alive (σ s)
+@Becoming.Web.sample_standingCensus : ∀ {F C : Type} {W : Becoming.Web F C} (σ : Nat → Nat) {stand : Nat → List C},
+  W.StandingCensus stand → (W.sample σ).StandingCensus fun s => stand (σ s)
+@Becoming.arises_within : ∀ {p : Nat → Prop} [(n : Nat) → Decidable (p n)] {T t : Nat},
+  T ≤ t → ¬p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬p u ∧ p (u + 1)
+@Becoming.ceases_within : ∀ {p : Nat → Prop} [(n : Nat) → Decidable (p n)] {T t : Nat},
+  T ≤ t → p T → ¬p t → ∃ u, T ≤ u ∧ u < t ∧ p u ∧ ¬p (u + 1)
+@Becoming.Web.sample_arises : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat}
+  [(t : Nat) → (x : F) → Decidable (W.active t x)],
+  Becoming.Strict σ → ∀ {s : Nat} {x : F}, (W.sample σ).Arises s x → ∃ t, σ s ≤ t ∧ t < σ (s + 1) ∧ W.Arises t x
+@Becoming.Web.sample_ceases : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat}
+  [(t : Nat) → (x : F) → Decidable (W.active t x)],
+  Becoming.Strict σ → ∀ {s : Nat} {x : F}, (W.sample σ).Ceases s x → ∃ t, σ s ≤ t ∧ t < σ (s + 1) ∧ W.Ceases t x
+@Becoming.Web.sample_unceasing : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat}
+  [(t : Nat) → (x : F) → Decidable (W.active t x)], Becoming.Strict σ → (W.sample σ).Unceasing → W.Unceasing
+@Becoming.Web.sample_ceasing : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat}
+  [(t : Nat) → (x : F) → Decidable (W.active t x)],
+  Becoming.Strict σ → (∀ (N : Nat), ∃ s x, N ≤ s ∧ (W.sample σ).Ceases s x) → ∀ (N : Nat), ∃ t x, N ≤ t ∧ W.Ceases t x
+Becoming.Strobe.twice_strict : Becoming.Strict Becoming.Strobe.twice
+Becoming.Strobe.flick_even : ∀ (s : Nat), Becoming.Strobe.flick (Becoming.Strobe.twice s) = false
+Becoming.Strobe.flick_odd : ∀ (s : Nat), Becoming.Strobe.flick (Becoming.Strobe.twice s + 1) = true
+Becoming.Strobe.fine_arises : ∀ (s : Nat), Becoming.Strobe.web.Arises (Becoming.Strobe.twice s) ()
+Becoming.Strobe.fine_ceases : ∀ (s : Nat), Becoming.Strobe.web.Ceases (Becoming.Strobe.twice s + 1) ()
+Becoming.Strobe.coarse_quiet : ∀ (s : Nat), ¬(Becoming.Strobe.web.sample Becoming.Strobe.twice).active s ()
+Becoming.Strobe.converse_fails : Becoming.Strobe.web.Unceasing ∧
+  (∀ (N : Nat), ∃ t x, N ≤ t ∧ Becoming.Strobe.web.Ceases t x) ∧
+    ¬(Becoming.Strobe.web.sample Becoming.Strobe.twice).Unceasing ∧
+      ¬∀ (N : Nat), ∃ s x, N ≤ s ∧ (Becoming.Strobe.web.sample Becoming.Strobe.twice).Ceases s x
+@Becoming.gateBy_of : ∀ {p : Prop}, p → ∀ (d : Decidable p) (x : Nat), Becoming.gateBy d x = x
+@Becoming.gateBy_of_not : ∀ {p : Prop}, ¬p → ∀ (d : Decidable p) (x : Nat), Becoming.gateBy d x = 0
+@Becoming.gateBy_zero : ∀ {p : Prop} {x : Nat}, (p → x = 0) → ∀ (d : Decidable p), Becoming.gateBy d x = 0
+@Becoming.gate_mem : ∀ {α : Type} [inst : DecidableEq α] {a : α} {l : List α},
+  a ∈ l → ∀ (x : Nat), Becoming.gate a l x = x
+@Becoming.mem_of_gateBy_pos : ∀ {p : Prop} {x : Nat} (d : Decidable p), 0 < Becoming.gateBy d x → p
+@Becoming.mem_of_gate_pos : ∀ {α : Type} [inst : DecidableEq α] {a : α} {l : List α} {x : Nat},
+  0 < Becoming.gate a l x → a ∈ l
+@Becoming.total_gateBy : ∀ {p : Prop} {β : Type} (d : Decidable p) (cs : List β) (q : β → Nat),
+  (Becoming.total cs fun c => Becoming.gateBy d (q c)) = Becoming.gateBy d (Becoming.total cs q)
+@Becoming.total_gate : ∀ {α : Type} [inst : DecidableEq α] {U P : List α},
+  Becoming.Distinct U →
+    Becoming.Distinct P →
+      (∀ (a : α), a ∈ P → a ∈ U) →
+        ∀ (q : α → Nat), (Becoming.total U fun a => Becoming.gate a P (q a)) = Becoming.total P q
+@Becoming.mem_insertNew : ∀ {α : Type} {a x : α} {l : List α} (d : Decidable (a ∈ l)),
+  x ∈ Becoming.insertNew a l d → x = a ∨ x ∈ l
+@Becoming.mem_adjoin : ∀ {α : Type} [inst : DecidableEq α] {l : List α} {x : α} (ds : List α),
+  x ∈ Becoming.adjoin ds l → x ∈ ds ∨ x ∈ l
+@Becoming.Flow.unionPresent_spec : ∀ {F C : Type} [inst : DecidableEq F] (L : Becoming.Flow F C) (js : List Nat),
+  Becoming.Distinct (L.unionPresent js) ∧
+    (∀ (j : Nat), j ∈ js → ∀ (f : F), f ∈ L.present j → f ∈ L.unionPresent js) ∧
+      ∀ (f : F), f ∈ L.unionPresent js → ∃ j, j ∈ js ∧ f ∈ L.present j
+@Becoming.Flow.sample_once : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat),
+  (L.sample σ).Once
+@Becoming.Flow.sample_taken_on : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {s : Nat},
+  (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+    ∀ (c : C), (L.sample σ).taken s c = Becoming.total (Becoming.span σ s) fun j => L.taken j c
+@Becoming.Flow.sample_given_on : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {s : Nat},
+  (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+    ∀ (c : C), (L.sample σ).given s c = Becoming.total (Becoming.span σ s) fun j => L.given j c
+@Becoming.Flow.sample_taken : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat),
+  L.Once → ∀ (s : Nat) (c : C), (L.sample σ).taken s c = Becoming.total (Becoming.span σ s) fun j => L.taken j c
+@Becoming.Flow.sample_given : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat),
+  L.Once → ∀ (s : Nat) (c : C), (L.sample σ).given s c = Becoming.total (Becoming.span σ s) fun j => L.given j c
+@Becoming.Flow.BalancesOn.sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {cs : List C} {s : Nat},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W cs j) → (L.sample σ).BalancesOn (W.sample σ) cs s
+@Becoming.Flow.sample_balances : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C}, Becoming.Strict σ → L.Once → L.Balances W → (L.sample σ).Balances (W.sample σ)
+Becoming.Flow.sign_add_le : ∀ (a b : Nat), Becoming.sign (a + b) ≤ Becoming.sign a + Becoming.sign b
+@Becoming.Flow.total_dissipates : ∀ {γ : Type} {g k : γ → Nat} (I : List γ),
+  (∀ (j : γ), j ∈ I → g j + Becoming.sign (k j) ≤ k j) →
+    Becoming.total I g + Becoming.sign (Becoming.total I k) ≤ Becoming.total I k
+@Becoming.Flow.gateBy_dissipates : ∀ {p : Prop} {g k : Nat},
+  (p → g + Becoming.sign k ≤ k) →
+    ∀ (d : Decidable p), Becoming.gateBy d g + Becoming.sign (Becoming.gateBy d k) ≤ Becoming.gateBy d k
+@Becoming.Flow.eq_zero_of_le_zero : ∀ {n : Nat}, n ≤ 0 → n = 0
+@Becoming.Flow.pos_of_gated : ∀ {F : Type} [inst : DecidableEq F] {P : Nat → List F} {q : Nat → Nat} {f : F}
+  {I : List Nat}, (0 < Becoming.total I fun j => Becoming.gate f (P j) (q j)) → ∃ j, j ∈ I ∧ f ∈ P j ∧ 0 < q j
+@Becoming.Flow.sample_closed : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {cs : List C} {s : Nat}, (L.sample σ).ClosedAt cs s → ∀ (j : Nat), j ∈ Becoming.span σ s → L.ClosedAt cs j
+@Becoming.Flow.sample_closedAt_iff : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {cs : List C} {s : Nat}, (L.sample σ).ClosedAt cs s ↔ ∀ (j : Nat), j ∈ Becoming.span σ s → L.ClosedAt cs j
+@Becoming.Flow.sample_take_total : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  (cs : List C) (s : Nat) (f : F),
+  Becoming.total cs ((L.sample σ).take s f) =
+    Becoming.total (Becoming.span σ s) fun j => Becoming.gate f (L.present j) (Becoming.total cs (L.take j f))
+@Becoming.Flow.sample_give_total : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  (cs : List C) (s : Nat) (f : F),
+  Becoming.total cs ((L.sample σ).give s f) =
+    Becoming.total (Becoming.span σ s) fun j => Becoming.gate f (L.present j) (Becoming.total cs (L.give j f))
+@Becoming.Flow.DissipatesOn.sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {cs : List C} {s : Nat}, (∀ (j : Nat), j ∈ Becoming.span σ s → L.DissipatesOn cs j) → (L.sample σ).DissipatesOn cs s
+@Becoming.Flow.sample_dissipative : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat),
+  L.Dissipative → (L.sample σ).Dissipative
+@Becoming.Flow.RunsDownOn.sample : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {es : List C} {s : Nat},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      Becoming.Distinct es →
+        (∀ (c : C), 0 < W.level (σ s) c → c ∈ es) →
+          (∀ (c : C), 0 < W.level (σ (s + 1)) c → c ∈ es) →
+            (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W es j) →
+              (∀ (j : Nat), j ∈ Becoming.span σ s → L.DissipatesOn es j) → (L.sample σ).RunsDownOn (W.sample σ) es s
+@Becoming.Flow.RunsDownOn.sample_of_fine : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {es : List C} {s : Nat},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      (∀ (j : Nat), j ∈ Becoming.span σ s → L.RunsDownOn W es j) → (L.sample σ).RunsDownOn (W.sample σ) es s
+@Becoming.Flow.sample_changes_iff : ∀ {F C : Type} [DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {es : List C} {s : Nat},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      Becoming.Distinct es →
+        (∀ (c : C), 0 < W.level (σ s) c → c ∈ es) →
+          (∀ (c : C), 0 < W.level (σ (s + 1)) c → c ∈ es) →
+            (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W es j) →
+              (∀ (j : Nat), j ∈ Becoming.span σ s → L.DissipatesOn es j) →
+                ((∃ c, (W.sample σ).Rises s c ∨ (W.sample σ).Falls s c) ↔ W.stock es (σ (s + 1)) < W.stock es (σ s))
+@Becoming.Flow.sample_comesToStand_iff : ∀ {F C : Type} [DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {cs : List C} {s : Nat} {c : C},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W cs j) →
+        c ∈ cs →
+          ((W.sample σ).ComesToStand s c ↔
+            W.level (σ s) c = 0 ∧
+              (Becoming.total (Becoming.span σ s) fun j => L.taken j c) <
+                Becoming.total (Becoming.span σ s) fun j => L.given j c)
+@Becoming.Flow.sample_ceasesToStand_iff : ∀ {F C : Type} [DecidableEq F] {L : Becoming.Flow F C} (σ : Nat → Nat)
+  {W : Becoming.Web F C} {cs : List C} {s : Nat} {c : C},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → Becoming.Distinct (L.present j)) →
+      (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W cs j) →
+        c ∈ cs →
+          ((W.sample σ).CeasesToStand s c ↔
+            0 < W.level (σ s) c ∧
+              (Becoming.total (Becoming.span σ s) fun j => L.taken j c) =
+                W.level (σ s) c + Becoming.total (Becoming.span σ s) fun j => L.given j c)
+@Becoming.Web.held_of_unit : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat},
+  (∀ (s : Nat), σ (s + 1) = σ s + 1) → W.Held σ ∧ W.DrawingHeld σ
+@Becoming.Web.held_of_constant : ∀ {F C : Type} {W : Becoming.Web F C} {σ : Nat → Nat},
+  (∀ (s j : Nat) (x : F), σ s ≤ j → j < σ (s + 1) → (W.active j x ↔ W.active (σ s) x)) → W.Held σ
+@Becoming.Flow.sample_acting_on : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {σ : Nat → Nat} {s : Nat} {f : F} {c : C},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → f ∈ L.present j → 0 < L.give j f c → W.active j f) →
+      (∀ (j : Nat), σ s ≤ j → j < σ (s + 1) → W.active j f → W.active (σ s) f) →
+        0 < (L.sample σ).give s f c → (W.sample σ).active s f
+@Becoming.Flow.sample_taking_on : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {σ : Nat → Nat} {s : Nat} {f : F} {c : C},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → f ∈ L.present j → 0 < L.take j f c → W.active j f ∧ W.draws j f c) →
+      (∀ (j : Nat), σ s ≤ j → j < σ (s + 1) → W.active j f → W.active (σ s) f) →
+        (∀ (j : Nat), σ s ≤ j → j < σ (s + 1) → W.draws j f c → W.draws (σ s) f c) →
+          0 < (L.sample σ).take s f c → (W.sample σ).active s f ∧ (W.sample σ).draws s f c
+@Becoming.Flow.sample_acting : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {σ : Nat → Nat}, Becoming.Strict σ → W.Held σ → L.Acting W → (L.sample σ).Acting (W.sample σ)
+@Becoming.Flow.sample_taking : ∀ {F C : Type} [inst : DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {σ : Nat → Nat}, Becoming.Strict σ → W.Held σ → W.DrawingHeld σ → L.Taking W → (L.sample σ).Taking (W.sample σ)
+@Becoming.World.sample_dependent : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  w.Dependent → (w.sample σ).Dependent
+@Becoming.World.sample_balanced : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  Becoming.Strict σ → w.flow.Once → w.Balanced → (w.sample σ).Balanced
+@Becoming.World.sample_dissipative : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  w.Dissipative → (w.sample σ).Dissipative
+@Becoming.World.sample_embodied : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  w.Embodied → (w.sample σ).Embodied
+@Becoming.World.sample_counted : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  w.Counted → (w.sample σ).Counted
+@Becoming.World.sample_finite : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  w.Finite → (w.sample σ).Finite
+@Becoming.World.sample_survives : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  Becoming.Strict σ →
+    w.flow.Once →
+      (w.Dependent → (w.sample σ).Dependent) ∧
+        (w.Balanced → (w.sample σ).Balanced) ∧
+          (w.Dissipative → (w.sample σ).Dissipative) ∧
+            (w.Embodied → (w.sample σ).Embodied) ∧ (w.Counted → (w.sample σ).Counted)
+@Becoming.World.sample_rests_unrefuted : ∀ {w : Becoming.World} [inst : DecidableEq w.Relatum] {σ : Nat → Nat},
+  Becoming.Strict σ → w.Finite → w.flow.Once → w.Balanced → w.Dissipative → w.Embodied → ¬¬∃ N, (w.sample σ).RestsFrom N
+@Becoming.Strobe.on_of_bit : ∀ {b : Bool}, 0 < Becoming.Strobe.bit b → b = true
+Becoming.Strobe.alive_listed : ∀ (b : Bool),
+  Becoming.Distinct (Becoming.Strobe.alive b) ∧ ∀ (a : Unit), b = true ↔ a ∈ Becoming.Strobe.alive b
+Becoming.Strobe.once : Becoming.Strobe.world.flow.Once
+Becoming.Strobe.fine : Becoming.Strobe.world.Dependent ∧
+  Becoming.Strobe.world.Balanced ∧
+    Becoming.Strobe.world.Counted ∧ Becoming.Strobe.world.Acting ∧ Becoming.Strobe.world.Taking
+Becoming.Strobe.coarse_gives : ∀ (s : Nat),
+  () ∈ (Becoming.Strobe.world.sample Becoming.Strobe.twice).flow.present s ∧
+    0 < (Becoming.Strobe.world.sample Becoming.Strobe.twice).flow.give s () () ∧
+      0 < (Becoming.Strobe.world.sample Becoming.Strobe.twice).flow.take s () ()
+Becoming.Strobe.acting_taking_step_relative : ¬(Becoming.Strobe.world.sample Becoming.Strobe.twice).Acting ∧
+  ¬(Becoming.Strobe.world.sample Becoming.Strobe.twice).Taking
+@Becoming.Delay.no_descent : ∀ {t : Nat} {x g : Bool}, ¬Becoming.Delay.flow.DescendsAt Becoming.Delay.web t x g
+Becoming.Delay.fine_transmitting : Becoming.Delay.world.Transmitting
+Becoming.Delay.coarse_descends : (Becoming.Delay.world.sample Becoming.Strobe.twice).flow.DescendsAt
+  (Becoming.Delay.world.sample Becoming.Strobe.twice).web 0 false true
+Becoming.Delay.transmitting_step_relative : Becoming.Delay.world.Transmitting ∧
+  ¬(Becoming.Delay.world.sample Becoming.Strobe.twice).Transmitting
+Becoming.Cancelling.coarse_not_fine : (Becoming.Cancelling.flow.sample Becoming.Strobe.twice).BalancesOn
+    (Becoming.Cancelling.web.sample Becoming.Strobe.twice) [()] 0 ∧
+  ¬Becoming.Cancelling.flow.BalancesOn Becoming.Cancelling.web [()] 0 ∧
+    ¬Becoming.Cancelling.flow.BalancesOn Becoming.Cancelling.web [()] 1
+Becoming.Averaging.coarse_not_fine : (Becoming.Averaging.flow.sample Becoming.Strobe.twice).DissipatesOn [()] 0 ∧
+  ¬Becoming.Averaging.flow.DissipatesOn [()] 0
+@Becoming.ExchangeFlows.selected_le_uniform : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {c : X} {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          (∀ (p : X), p ∈ ps → W.requires t p c) →
+            ∀ {k : Nat},
+              (∀ (p : X), (kids p).length = k) →
+                (k * Becoming.total ps fun p => W.need t p c) ≤ k * (ps.length * W.level t c)
+@Becoming.ExchangeFlows.selection_within_uniform : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {c : X} {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          (∀ (p : X), p ∈ ps → W.requires t p c) →
+            ∀ {k : Nat},
+              (∀ (p : X), (kids p).length = k) →
+                ∀ (b : X → Nat),
+                  Becoming.offspring ps kids b + Becoming.lowered ps kids (fun p => W.need t p c) b ≤
+                    k * (ps.length * W.level t c) + Becoming.raised ps kids (fun p => W.need t p c) b
+@Becoming.ExchangeFlows.sample_take_absent : ∀ {F C : Type} [inst : DecidableEq F] (L : Becoming.Flow F C)
+  (σ : Nat → Nat) {s : Nat} {f : F},
+  (∀ (j : Nat), j ∈ Becoming.span σ s → ¬f ∈ L.present j) → ∀ (c : C), (L.sample σ).take s f c = 0
+@Becoming.ExchangeFlows.sample_give_absent : ∀ {F C : Type} [inst : DecidableEq F] (L : Becoming.Flow F C)
+  (σ : Nat → Nat) {s : Nat} {f : F},
+  (∀ (j : Nat), j ∈ Becoming.span σ s → ¬f ∈ L.present j) → ∀ (c : C), (L.sample σ).give s f c = 0

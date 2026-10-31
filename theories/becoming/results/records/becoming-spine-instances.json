@@ -297,8 +297,8 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Machine-checked: the cited core modules and InquirySufficiency are bound to core receipts under becoming-checks (Lean 4.29.1), every cited core declaration with an empty axiom report; CorrectionInquiry, CorrectionBoundary and ObservationChange to periphery receipt correction-inquiry-checks/20261020T161757.201244Z (Lean 4.30.0-rc2, Mathlib ea11ccc0), CorrectionInquiry's declarations with empty axiom reports. The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes, with empty axiom reports. Author's review only.",
-    "zh": "实查：所引核心模块绑定 becoming-checks 下的核心回执（Lean 4.29.1），所引核心声明公理报告全空；CorrectionInquiry 及其所读的两个模块绑定外围回执 20261020T161757.201244Z（Lean 4.30.0-rc2，Mathlib），CorrectionInquiry 的声明公理报告为空。退役的 Bridge 与 SeedReachProcesses 未绑定，核心回执 20261018T235724.886433Z 末次实查其当前字节，公理报告为空。仅作者自审。"
+    "en": "Machine-checked: the cited core modules and InquirySufficiency are bound to core receipts under becoming-checks (Lean 4.29.1), every cited core declaration with an empty axiom report; CorrectionInquiry, CorrectionBoundary and ObservationChange to periphery receipt correction-inquiry-checks/20261031T131415.384434Z (Lean 4.30.0-rc2, Mathlib ea11ccc0), CorrectionInquiry's declarations with empty axiom reports. The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes, with empty axiom reports. Author's review only.",
+    "zh": "实查：所引核心模块绑定 becoming-checks 下的核心回执（Lean 4.29.1），所引核心声明公理报告全空；CorrectionInquiry 及其所读的两个模块绑定外围回执 20261031T131415.384434Z（Lean 4.30.0-rc2，Mathlib），CorrectionInquiry 的声明公理报告为空。退役的 Bridge 与 SeedReachProcesses 未绑定，核心回执 20261018T235724.886433Z 末次实查其当前字节，公理报告为空。仅作者自审。"
   },
   "next_delta": {
     "en": "Compare lifting rules stronger than the conservative one (some outcome better, expectation, risk): which of the lifted laws of comparison, reason and survival each keeps, and what each commits to.",
@@ -943,6 +943,12 @@
       "role": "receipt",
       "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json",
+      "role": "receipt",
+      "sha256": "efe529e23c5954b0a71ce9e0f10658b1a0377f6bf81d7b3a02b896f003bb2a29",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -976,21 +982,21 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json",
       "sha256_pointer": "/source_sha256/CorrectionInquiry",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionBoundary.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json",
       "sha256_pointer": "/source_sha256/CorrectionBoundary",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json",
       "sha256_pointer": "/source_sha256/ObservationChange",
       "success_pointer": "/status",
       "success_value": "passed"

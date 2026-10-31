@@ -1,0 +1,10 @@
+import PrefixSafetyCorrespondence
+#check @Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree
+#check @Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable
+#check @Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres
+#check @Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core
+#check @Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core
+#check @Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core
+#check @Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core
+#check @Becoming.PrefixSafetyCorrespondence.markov_classical
+#check @Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core

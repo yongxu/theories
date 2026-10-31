@@ -1,0 +1,96 @@
+@Becoming.MoveOutcomeProcesses.completes_one_iff : ∀ {S A : Type} {P : Generative.Process S A} {s : S} {a : A}
+  {goal : S → Prop},
+  Generative.InquirySufficiency.Completes P (fun x x_1 x_2 => True) goal s [a] ↔
+    Generative.Enabled P s a ∧ ∀ (o : S), P.step s a o → goal o
+@Becoming.MoveOutcomeProcesses.ensures_iff : ∀ {S A : Type} {P : Generative.Process S A} {s : S} {goal : S → Prop},
+  Becoming.MoveOutcomeProcesses.Ensures P s goal ↔ ∃ a, Generative.Enabled P s a ∧ ∀ (o : S), P.step s a o → goal o
+@Becoming.MoveOutcomeProcesses.covers_iff_moves : ∀ {S A B : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S},
+  Becoming.MoveOutcomeProcesses.Covers P s Q t ↔
+    ∀ (a : A), Generative.Enabled P s a → ∃ b, Generative.Enabled Q t b ∧ ∀ (o : S), Q.step t b o → P.step s a o
+@Becoming.MoveOutcomeProcesses.Covers.ensures : ∀ {S A B : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S},
+  Becoming.MoveOutcomeProcesses.Covers P s Q t →
+    ∀ {goal : S → Prop}, Becoming.MoveOutcomeProcesses.Ensures P s goal → Becoming.MoveOutcomeProcesses.Ensures Q t goal
+@Becoming.MoveOutcomeProcesses.covers_iff : ∀ {S A B : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S},
+  Becoming.MoveOutcomeProcesses.Covers P s Q t ↔
+    ∀ (goal : S → Prop), Becoming.MoveOutcomeProcesses.Ensures P s goal → Becoming.MoveOutcomeProcesses.Ensures Q t goal
+@Becoming.MoveOutcomeProcesses.covers_refl : ∀ {S A : Type} (P : Generative.Process S A) (s : S),
+  Becoming.MoveOutcomeProcesses.Covers P s P s
+@Becoming.MoveOutcomeProcesses.covers_trans : ∀ {S A B C : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S} {R : Generative.Process S C} {u : S},
+  Becoming.MoveOutcomeProcesses.Covers P s Q t →
+    Becoming.MoveOutcomeProcesses.Covers Q t R u → Becoming.MoveOutcomeProcesses.Covers P s R u
+@Becoming.MoveOutcomeProcesses.completes_mono : ∀ {S A : Type} {P : Generative.Process S A} {s : S} {a : A}
+  {g h : S → Prop},
+  Generative.InquirySufficiency.Completes P (fun x x_1 x_2 => True) g s [a] →
+    (∀ (o : S), g o → h o) → Generative.InquirySufficiency.Completes P (fun x x_1 x_2 => True) h s [a]
+@Becoming.MoveOutcomeProcesses.not_ensures_false : ∀ {S A : Type} (P : Generative.Process S A) (s : S),
+  ¬Becoming.MoveOutcomeProcesses.Ensures P s fun x => False
+@Becoming.MoveOutcomeProcesses.ensures_true_iff : ∀ {S A : Type} (P : Generative.Process S A) (s : S),
+  (Becoming.MoveOutcomeProcesses.Ensures P s fun x => True) ↔ ∃ a, Generative.Enabled P s a
+@Becoming.MoveOutcomeProcesses.common_goal : ∀ {S A B : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S},
+  (∃ a, Generative.Enabled P s a) →
+    Becoming.MoveOutcomeProcesses.Covers P s Q t →
+      ∃ goal, Becoming.MoveOutcomeProcesses.Ensures P s goal ∧ Becoming.MoveOutcomeProcesses.Ensures Q t goal
+@Becoming.MoveOutcomeProcesses.no_strict_gain_everywhere : ∀ {S A B : Type} (P : Generative.Process S A) (s : S)
+  (Q : Generative.Process S B) (t : S),
+  ¬∀ (goal : S → Prop), Becoming.MoveOutcomeProcesses.Ensures Q t goal ∧ ¬Becoming.MoveOutcomeProcesses.Ensures P s goal
+@Becoming.MoveOutcomeProcesses.covers_along : ∀ {S : Type} {L : Nat → Type} (P : (n : Nat) → Generative.Process S (L n))
+  (s : Nat → S),
+  (∀ (n : Nat), Becoming.MoveOutcomeProcesses.Covers (P n) (s n) (P (n + 1)) (s (n + 1))) →
+    ∀ (n : Nat), Becoming.MoveOutcomeProcesses.Covers (P 0) (s 0) (P n) (s n)
+@Becoming.MoveOutcomeProcesses.not_covers_iff : ∀ {S A B : Type} {P : Generative.Process S A} {s : S}
+  {Q : Generative.Process S B} {t : S},
+  ¬Becoming.MoveOutcomeProcesses.Covers P s Q t ↔
+    ¬∀ (goal : S → Prop),
+        Becoming.MoveOutcomeProcesses.Ensures P s goal → Becoming.MoveOutcomeProcesses.Ensures Q t goal
+@Becoming.MoveOutcomeProcesses.lost_goal_of_not_covers_of_dne : ∀ {S A B : Type},
+  (∀ (p : Prop), ¬¬p → p) →
+    ∀ {P : Generative.Process S A} {s : S} {Q : Generative.Process S B} {t : S},
+      ¬Becoming.MoveOutcomeProcesses.Covers P s Q t →
+        ∃ goal, Becoming.MoveOutcomeProcesses.Ensures P s goal ∧ ¬Becoming.MoveOutcomeProcesses.Ensures Q t goal
+@Becoming.MoveOutcomeProcesses.summary_ensures_iff : ∀ {S A T : Type} (f : S → T) {P : Generative.Process S A} {s : S}
+  {goal : T → Prop},
+  (∃ a, Generative.Enabled P s a ∧ ∀ (p : T), (∃ o, P.step s a o ∧ f o = p) → goal p) ↔
+    Becoming.MoveOutcomeProcesses.Ensures P s fun o => goal (f o)
+@Becoming.MoveOutcomeProcesses.common_completes : ∀ {S A R : Type} {P : Generative.Process S A}
+  {safe : S → A → S → Prop} {goal : S → Prop} {response : R → List A} {belief : S → Prop} {r : R} {s : S},
+  Generative.InquirySufficiency.CommonResponse P safe goal response belief r →
+    belief s → Generative.InquirySufficiency.Completes P safe goal s (response r)
+Becoming.MoveOutcomeProcesses.toFalse_ensures_false : ∀ (s : Bool),
+  Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.toFalse s fun o => o = false
+Becoming.MoveOutcomeProcesses.setting_ensures_each : ∀ (s b : Bool),
+  Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.setting s fun o => o = b
+Becoming.MoveOutcomeProcesses.toFalse_not_true : ∀ (s : Bool), ¬∃ a, Becoming.MoveOutcomeProcesses.toFalse.step s a true
+Becoming.MoveOutcomeProcesses.setting_covers_toFalse : ∀ (s : Bool),
+  Becoming.MoveOutcomeProcesses.Covers Becoming.MoveOutcomeProcesses.toFalse s Becoming.MoveOutcomeProcesses.setting s
+Becoming.MoveOutcomeProcesses.free_wider_not_covering : ∀ (s : Bool),
+  (∀ (o : Bool),
+      (∃ a, Becoming.MoveOutcomeProcesses.toFalse.step s a o) → ∃ a, Becoming.MoveOutcomeProcesses.free.step s a o) ∧
+    ((∃ a, Becoming.MoveOutcomeProcesses.free.step s a true) ∧
+        ¬∃ a, Becoming.MoveOutcomeProcesses.toFalse.step s a true) ∧
+      ¬Becoming.MoveOutcomeProcesses.Covers Becoming.MoveOutcomeProcesses.toFalse s Becoming.MoveOutcomeProcesses.free s
+Becoming.MoveOutcomeProcesses.law_covers_free_and_loses : ∀ (s : Bool),
+  Becoming.MoveOutcomeProcesses.Covers Becoming.MoveOutcomeProcesses.free s Becoming.MoveOutcomeProcesses.toFalse s ∧
+    (∃ a, Becoming.MoveOutcomeProcesses.free.step s a true) ∧ ¬∃ a, Becoming.MoveOutcomeProcesses.toFalse.step s a true
+Becoming.MoveOutcomeProcesses.setting_covers_and_gains : ∀ (s : Bool),
+  Becoming.MoveOutcomeProcesses.Covers Becoming.MoveOutcomeProcesses.toFalse s Becoming.MoveOutcomeProcesses.setting s ∧
+    (Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.setting s fun o => o = true) ∧
+      ¬Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.toFalse s fun o => o = true
+Becoming.MoveOutcomeProcesses.setting_covers_and_opens : ∀ (s : Bool),
+  Becoming.MoveOutcomeProcesses.Covers Becoming.MoveOutcomeProcesses.toFalse s Becoming.MoveOutcomeProcesses.setting s ∧
+    (¬∃ a, Becoming.MoveOutcomeProcesses.toFalse.step s a true) ∧
+      ¬¬∃ a, Becoming.MoveOutcomeProcesses.setting.step s a true
+Becoming.MoveOutcomeProcesses.setting_separate_not_joint : ∀ (s : Bool),
+  (Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.setting s fun o => o = false) ∧
+    (Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.setting s fun o => o = true) ∧
+      ¬Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.setting s fun o => o = false ∧ o = true
+Becoming.MoveOutcomeProcesses.halted_ensures_nothing : ∀ (s : Bool),
+  (∀ (o : Bool), Becoming.MoveOutcomeProcesses.halted.step s () o → o = false) ∧
+    ¬Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.halted s fun o => o = false
+Becoming.MoveOutcomeProcesses.summary_hides_loss : ∀ (s : Bool),
+  (Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.free s fun o => (fun x => false) o = false) ∧
+    ¬Becoming.MoveOutcomeProcesses.Ensures Becoming.MoveOutcomeProcesses.free s fun o => o = false

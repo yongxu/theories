@@ -45,7 +45,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.
+Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261031T131812.213702Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.
 
 Canonical source: [GoalFormationRevision.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean)
 
@@ -82,6 +82,7 @@ Distinguishes goal formation, changed attainment criteria and action; the two-pr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation`, `Becoming.MachineInstances.cycles_iff`, `Becoming.MachineInstances.operateMany_learning`, `Becoming.MachineInstances.completed_isSome_iff`, `Becoming.MachineInstances.revision_continues`, `Becoming.MachineInstances.harmful_instance`, `Becoming.MachineInstances.harmful_bounds`, `Becoming.MachineInstances.better_iff`
 

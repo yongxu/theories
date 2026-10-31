@@ -3572,6 +3572,18 @@
    "page": "theories/becoming/results/records/one-reader-several-conditions.md"
   },
   {
+   "id": "record:one-root-to-its-edge",
+   "type": "result",
+   "record": "one-root-to-its-edge",
+   "title": "One root to its edge: where each central declaration stands",
+   "title_zh": "一根至其边：各中心声明之所立",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/one-root-to-its-edge.md"
+  },
+  {
    "id": "record:one-search-one-line",
    "type": "result",
    "record": "one-search-one-line",
@@ -7196,6 +7208,17 @@
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RootForms",
+   "type": "module",
+   "name": "Becoming.RootForms",
+   "level": "L1",
+   "theorems": 30,
+   "region": "method",
+   "base": "grammar",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -30623,6 +30646,12 @@
    "anchor": "r-self-reference-does-not-certify-itself"
   },
   {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-root-to-its-edge"
+  },
+  {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
    "type": "section",
    "chapter": "theories/becoming/chapters/08-METHOD.md",
@@ -33779,6 +33808,21 @@
   {
    "from": "module:Becoming.Roles",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.GroupEnding",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.Transmission",
    "type": "imports"
   },
   {
@@ -46524,6 +46568,26 @@
   {
    "from": "record:one-reader-several-conditions",
    "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "module:Becoming.RootForms",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:selection-among-groups-by-ending",
+   "type": "related"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:transmission-is-inheritance-and-need",
    "type": "related"
   },
   {
@@ -60139,6 +60203,11 @@
   {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-move-covering",
    "to": "record:one-move-covering",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+   "to": "record:one-root-to-its-edge",
    "type": "states"
   },
   {

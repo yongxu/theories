@@ -1,0 +1,6 @@
+import Becoming.SignificanceStatements
+#check @Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance
+#check @Becoming.SignificanceStatements.paths_extension_iff_grammar
+#check @Becoming.SignificanceStatements.paths_comparison_grammar
+#check @Becoming.SignificanceStatements.widens_iff_retains_adds_root
+#check @Becoming.SignificanceStatements.paths_one_object_root

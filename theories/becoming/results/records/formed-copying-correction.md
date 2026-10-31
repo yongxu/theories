@@ -47,7 +47,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingCorrection by its folder's check (copying-correction-verification/, Lean 4.29.1: 27 new theorems, 45 new audits, 529 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. Two original papers are read at the recorded scope with key-page inspection, with no new empirical reanalysis.
+Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingCorrection by its folder's check (copying-correction-verification/, Lean 4.29.1: 27 new theorems, 45 new audits, 529 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. Two original papers are read at the recorded scope with key-page inspection, with no new empirical reanalysis.
 
 Canonical source: [CopyingCorrection.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingCorrection.lean)
 
@@ -98,6 +98,7 @@ Materials and connections retained from one copying history form the editing rel
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
 
 Aliases: `CopyingCorrection.formed_route_edits_actual_product`, `Becoming.Copying.inspect_le_iff`, `Becoming.CopyingInstances.inspect_le_iff_instance`, `Becoming.Courses.inspection_le_iff`, `Becoming.Courses.inspection_course_le`
 

@@ -370,6 +370,12 @@
       "role": "receipt",
       "sha256": "6cd7899c19eca6682bff8e1b5648a4d449f8df927e27b83596fe6d3ed0f71297",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json",
+      "role": "receipt",
+      "sha256": "48b0e547b5b533490bb88598649d04effbd3b6eca1fee3e84e0361d8599dbc03",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -396,7 +402,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json",
       "sha256_pointer": "/source_sha256/ProtocolInstances",
       "success_pointer": "/status",
       "success_value": "passed"

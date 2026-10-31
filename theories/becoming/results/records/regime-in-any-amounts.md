@@ -16,6 +16,7 @@
    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. From the first step on, a step that neither raises nor lowers both climbs (the level up strictly, the recent giving down strictly toward the draw from above) or sinks (the mirror, from below), whatever the adjustment, and the next such step is of the same kind. (`Becoming.RegimeMargin.Drawn.Climbs`, `Becoming.RegimeMargin.Drawn.Sinks`, `Becoming.RegimeMargin.Drawn.given_le_level`, `Becoming.RegimeMargin.Drawn.level_up_iff`, `Becoming.RegimeMargin.Drawn.level_down_iff`, `Becoming.RegimeMargin.Drawn.level_of_low`, `Becoming.RegimeMargin.Drawn.climbs_or_sinks`, `Becoming.RegimeMargin.Drawn.climbs_next`, `Becoming.RegimeMargin.Drawn.sinks_next`, `Becoming.RegimeMargin.Drawn.run_shape`)
    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Drawn.run_shape` as following from a master law (by reaching the grammar).
+   - *Standing of `Becoming.RegimeMargin.Drawn.run_shape`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 4. A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal. (`Becoming.RegimeMargin.Drawn.Band`, `Becoming.RegimeMargin.Drawn.run_within`, `Becoming.RegimeMargin.Drawn.rest_iff`, `Becoming.RegimeMargin.Drawn.still_iff`)
    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. Over the non-negative reals, amounts with a draw, every run of a rising adjustment from a state within a band converges: its level and recent giving are each monotone from some step on and bounded. (`Becoming.RegimeMargin.Drawn.reals`, `Becoming.RegimeMargin.Drawn.reals_step`, `Becoming.RegimeMargin.Drawn.tendsto_of_rising`, `Becoming.RegimeMargin.Drawn.tendsto_of_falling`, `Becoming.RegimeMargin.Drawn.converges`)
@@ -45,7 +46,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261021T102713.696033Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.
+Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134231.224593Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.
 
 Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
@@ -105,6 +106,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json) | — |
 
 Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`, `runs of the regime over the reals`, `任何量中的体制`, `Becoming.RegimeMargin.Drawn.run_shape`, `Becoming.RegimeMargin.Drawn.converges`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`
 

@@ -116,8 +116,8 @@
     "no-ethical-premise-core-axiom-free"
   ],
   "validation_scope": {
-    "en": "Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261020T161948.968917Z (Lean 4.30.0-rc2; at most propext and Quot.sound).",
-    "zh": "核心：Readout、Courses 绑定合并核心检查器回执 20261019T185632.962707Z、20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围：WisdomFallibleJudgment 回执（Lean 4.29.1）五条定理只用 propext；JudgingCorrespondence 回执 20261020T161948.968917Z（Lean 4.30.0-rc2）至多用 propext、Quot.sound。"
+    "en": "Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261031T133748.088094Z (Lean 4.30.0-rc2; at most propext and Quot.sound).",
+    "zh": "核心：Readout、Courses 绑定合并核心检查器回执 20261019T185632.962707Z、20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围：WisdomFallibleJudgment 回执（Lean 4.29.1）五条定理只用 propext；JudgingCorrespondence 回执 20261031T133748.088094Z（Lean 4.30.0-rc2）至多用 propext、Quot.sound。"
   },
   "next_delta": {
     "en": "Examine the content of wise judgment beyond risk bounds, and the whole of its substantive commitments.",
@@ -309,6 +309,12 @@
       "role": "receipt",
       "sha256": "607378deb93c36bfe7f52eed034ce23126a4984f0b62400c20a6a54955a17d3d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json",
+      "role": "receipt",
+      "sha256": "67353c0f55d2b6ac22f6b4dc0532e0d28e1faf6c10dc5b42b163a88ee96c50c5",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -328,7 +334,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json",
       "sha256_pointer": "/source_sha256/JudgingCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

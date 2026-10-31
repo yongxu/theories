@@ -1,0 +1,72 @@
+'CompletionWarrant.PrefixSafety.samePrefix_refl' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.samePrefix_symm' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.samePrefix_trans' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.samePrefix_mono' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.prefixOpen_empty' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.prefixOpen_univ' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.prefixOpen_union' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.prefixOpen_inter' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.cylinder_open' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.finiteRefutable_iff_closed' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.subset_prefixClosure' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.prefixClosure_mono' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.finiteRefutable_iff_prefixClosure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.prefixClosure_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.prefixClosure_least' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.prefixClosure_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.topologicalClosure_iff_prefixClosure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.boundary_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.allTrue_recurs' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.allFalse_not_recurs' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.allFalse_not_eventuallyTrue' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.trueTail_prefix' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.trueTail_recurs' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.trueTail_eventuallyTrue' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.recurrence_closure_all' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.terminationEvent_closure_all' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.recurrence_not_finiteRefutable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.recurrence_not_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.terminationEvent_not_finiteRefutable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.unary_finite_not_infinity' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.unary_finite_directed' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.unary_finite_supremum_infinity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.unary_finite_not_directedClosed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.unary_finite_not_finiteRefutable' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.bool_ne_neg' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.diagonal_not_represented' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.represented_closure_all' does not depend on any axioms
+'CompletionWarrant.PrefixSafety.represented_not_finiteRefutable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.programOutput_iff_represented' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.some_trace_not_programOutput' depends on axioms: [propext]
+'CompletionWarrant.PrefixSafety.bitCode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.bitDecode_bitCode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.PrefixSafety.finitePrograms_miss_some_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.programRealization_implies_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.finitePrograms_not_finiteRefutable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.emitLiteral_matches_prefix' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.PrefixSafety.literalOutput_realizes_prefixes' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.PrefixSafety.literalOutput_not_finiteRefutable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.PrefixSafety.contains_literals_realizes_prefixes' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.PrefixSafety.deadEnd_boundary_empty' depends on axioms: [propext, Quot.sound]

@@ -57,7 +57,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked with Lean 4.29.1: the core modules Becoming.Segmentation, Becoming.Courses and Becoming.LearnedGrouping by the consolidated core checker (becoming-checks/20261013T221720.428753Z, 20261020T051144.879480Z and 20261018T204907.920360Z bind their current bytes), every cited declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext and Quot.sound. The earlier AcquiredSegmentation check (23 theorems, 51 audits) is provenance.
+Machine-checked with Lean 4.29.1: the core modules Becoming.Segmentation, Becoming.Courses and Becoming.LearnedGrouping by the consolidated core checker (becoming-checks/20261013T221720.428753Z, 20261020T051144.879480Z and 20261018T204907.920360Z bind their current bytes), every cited declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z), reporting at most propext and Quot.sound. The earlier AcquiredSegmentation check (23 theorems, 51 audits) is provenance.
 
 Canonical source: [LearnedGrouping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean)
 
@@ -108,6 +108,7 @@ The relation is a grouping criterion derived from observed transitions in a log;
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `Generative.AcquiredSegmentation.ideal_grouping_recovers_words`, `Becoming.Segmentation.chunks_eq_iff`, `Becoming.Segmentation.chunks_unique`, `Becoming.Segmentation.join_chunks`, `Becoming.Segmentation.encode_iff`, `Becoming.Segmentation.bond_unique`, `Becoming.Segmentation.no_record_groups`, `Becoming.Instances.chunks_eq`, `Becoming.Instances.encode_eq`, `Becoming.Instances.two_word_iff`, `Becoming.Instances.ideal_two_word`, `Becoming.MachineInstances.bond_eq`, `Becoming.MachineInstances.bond_functional`, `Becoming.MachineInstances.experienced_parses_every`, `Becoming.Courses.course_words_iff`, `Becoming.Courses.course_chunks_iff`, `Becoming.Courses.no_run_record_groups`
 

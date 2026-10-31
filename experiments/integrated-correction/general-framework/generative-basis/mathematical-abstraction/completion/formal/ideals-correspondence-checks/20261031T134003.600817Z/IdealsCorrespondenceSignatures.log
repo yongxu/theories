@@ -1,0 +1,331 @@
+@Becoming.IdealsCorrespondence.ofCore_toCore : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I : CompletionWarrant.Ideal P), Becoming.IdealsCorrespondence.ofCore (Becoming.IdealsCorrespondence.toCore I) = I
+@Becoming.IdealsCorrespondence.toCore_ofCore : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I : Becoming.Ideals.Ideal (Becoming.IdealsCorrespondence.order P)),
+  Becoming.IdealsCorrespondence.toCore (Becoming.IdealsCorrespondence.ofCore I) = I
+@Becoming.IdealsCorrespondence.toCore_principal : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (p : α),
+  Becoming.IdealsCorrespondence.toCore (CompletionWarrant.principal P p) =
+    Becoming.Ideals.principal (Becoming.IdealsCorrespondence.order P) p
+@Becoming.IdealsCorrespondence.le_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {I J : CompletionWarrant.Ideal P},
+  I.LE J ↔ (Becoming.IdealsCorrespondence.toCore I).LE (Becoming.IdealsCorrespondence.toCore J)
+@Becoming.IdealsCorrespondence.lowerBasis_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {Q : α → Prop},
+  CompletionWarrant.LowerBasis P Q ↔ Becoming.Ideals.Lower (Becoming.IdealsCorrespondence.order P) Q
+@Becoming.IdealsCorrespondence.admits_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {Q : α → Prop}
+  {I : CompletionWarrant.Ideal P},
+  CompletionWarrant.Admits P Q I ↔
+    Becoming.Ideals.Within (Becoming.IdealsCorrespondence.order P) Q (Becoming.IdealsCorrespondence.toCore I)
+@Becoming.IdealsCorrespondence.content_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {C : CompletionWarrant.Ideal P → Prop} {p : α},
+  CompletionWarrant.Content P C p ↔ Becoming.Ideals.Content (Becoming.IdealsCorrespondence.coreClass C) p
+@Becoming.IdealsCorrespondence.finiteRefutable_iff_refutable : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {C : CompletionWarrant.Ideal P → Prop},
+  CompletionWarrant.FiniteRefutable P C ↔ Becoming.Ideals.Refutable (Becoming.IdealsCorrespondence.coreClass C)
+@Becoming.IdealsCorrespondence.scottHull_iff_hull : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {C : CompletionWarrant.Ideal P → Prop} {I : CompletionWarrant.Ideal P},
+  CompletionWarrant.ScottHull P C I ↔
+    Becoming.Ideals.Hull (Becoming.IdealsCorrespondence.coreClass C) (Becoming.IdealsCorrespondence.toCore I)
+@Becoming.IdealsCorrespondence.respects_iff_avoids : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {F : α → Prop}
+  {I : CompletionWarrant.Ideal P},
+  CompletionWarrant.Respects P F I ↔ Becoming.Ideals.Avoids F (Becoming.IdealsCorrespondence.toCore I)
+@Becoming.IdealsCorrespondence.avoidingBasis_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {F : α → Prop}
+  {p : α}, CompletionWarrant.AvoidingBasis P F p ↔ ∀ (b : α), F b → ¬(Becoming.IdealsCorrespondence.order P).le b p
+@Becoming.IdealsCorrespondence.directedFamily_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {D : CompletionWarrant.Ideal P → Prop},
+  CompletionWarrant.DirectedFamily P D ↔
+    Becoming.Ideals.Directed (Becoming.Ideals.idealOrder (Becoming.IdealsCorrespondence.order P))
+      (Becoming.IdealsCorrespondence.coreClass D)
+@Becoming.IdealsCorrespondence.familyUnion_same : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (D : CompletionWarrant.Ideal P → Prop) (hd : CompletionWarrant.DirectedFamily P D),
+  (Becoming.IdealsCorrespondence.toCore (CompletionWarrant.familyUnion P D hd)).Same
+    (Becoming.Ideals.union (Becoming.IdealsCorrespondence.coreClass D) ⋯)
+@Becoming.IdealsCorrespondence.scottClosed_iff_closed : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {C : CompletionWarrant.Ideal P → Prop},
+  CompletionWarrant.ScottClosed P C ↔ Becoming.Ideals.ScottClosed (Becoming.IdealsCorrespondence.coreClass C)
+@Becoming.IdealsCorrespondence.closed_of_finiteRefutable : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {C : CompletionWarrant.Ideal P → Prop},
+  CompletionWarrant.FiniteRefutable P C → Becoming.Ideals.ScottClosed (Becoming.IdealsCorrespondence.coreClass C)
+@Becoming.IdealsCorrespondence.refutable_scottClosed_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop), CompletionWarrant.FiniteRefutable P C → CompletionWarrant.ScottClosed P C
+@Becoming.IdealsCorrespondence.scottClosed_refutable_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop), CompletionWarrant.ScottClosed P C → CompletionWarrant.FiniteRefutable P C
+@Becoming.IdealsCorrespondence.finiteRefutable_iff_scottClosed_by_core : ∀ {α : Type u_1}
+  {P : CompletionWarrant.Poset α} (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.FiniteRefutable P C ↔ CompletionWarrant.ScottClosed P C
+@Becoming.IdealsCorrespondence.scottClosed_iff_lower_basis_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.ScottClosed P C ↔
+    ∃ Q, CompletionWarrant.LowerBasis P Q ∧ ∀ (I : CompletionWarrant.Ideal P), C I ↔ CompletionWarrant.Admits P Q I
+@Becoming.IdealsCorrespondence.finiteRefutable_iff_lower_basis_by_core : ∀ {α : Type u_1}
+  {P : CompletionWarrant.Poset α} (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.FiniteRefutable P C ↔
+    ∃ Q, CompletionWarrant.LowerBasis P Q ∧ ∀ (I : CompletionWarrant.Ideal P), C I ↔ CompletionWarrant.Admits P Q I
+@Becoming.IdealsCorrespondence.lower_basis_unique_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop) (Q R : α → Prop),
+  CompletionWarrant.LowerBasis P Q →
+    CompletionWarrant.LowerBasis P R →
+      (∀ (I : CompletionWarrant.Ideal P), C I ↔ CompletionWarrant.Admits P Q I) →
+        (∀ (I : CompletionWarrant.Ideal P), C I ↔ CompletionWarrant.Admits P R I) → Q = R
+@Becoming.IdealsCorrespondence.basis_eq_content_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop) (Q : α → Prop),
+  CompletionWarrant.LowerBasis P Q →
+    (∀ (I : CompletionWarrant.Ideal P), C I ↔ CompletionWarrant.Admits P Q I) → Q = CompletionWarrant.Content P C
+@Becoming.IdealsCorrespondence.permitted_eq_content_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.ScottClosed P C → CompletionWarrant.Permitted P C = CompletionWarrant.Content P C
+@Becoming.IdealsCorrespondence.admits_refutable_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (Q : α → Prop), CompletionWarrant.FiniteRefutable P (CompletionWarrant.Admits P Q)
+@Becoming.IdealsCorrespondence.hull_least_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C E : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.ScottClosed P E →
+    (∀ (I : CompletionWarrant.Ideal P), C I → E I) →
+      ∀ (I : CompletionWarrant.Ideal P), CompletionWarrant.ScottHull P C I → E I
+@Becoming.IdealsCorrespondence.hull_preserves_content_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.Content P (CompletionWarrant.ScottHull P C) = CompletionWarrant.Content P C
+@Becoming.IdealsCorrespondence.hull_unique_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C H : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.ScottClosed P H →
+    (∀ (I : CompletionWarrant.Ideal P), C I → H I) →
+      (∀ (E : CompletionWarrant.Ideal P → Prop),
+          CompletionWarrant.ScottClosed P E →
+            (∀ (I : CompletionWarrant.Ideal P), C I → E I) → ∀ (I : CompletionWarrant.Ideal P), H I → E I) →
+        H = CompletionWarrant.ScottHull P C
+@Becoming.IdealsCorrespondence.respects_iff_admits_avoiding_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (F : α → Prop) (I : CompletionWarrant.Ideal P),
+  CompletionWarrant.Respects P F I ↔ CompletionWarrant.Admits P (CompletionWarrant.AvoidingBasis P F) I
+@Becoming.IdealsCorrespondence.respects_scottClosed_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (F : α → Prop), CompletionWarrant.ScottClosed P (CompletionWarrant.Respects P F)
+@Becoming.IdealsCorrespondence.respects_unique_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (F : α → Prop)
+  (C : CompletionWarrant.Ideal P → Prop),
+  CompletionWarrant.FiniteRefutable P C →
+    (∀ (p : α), C (CompletionWarrant.principal P p) ↔ CompletionWarrant.AvoidingBasis P F p) →
+      C = CompletionWarrant.Respects P F
+@Becoming.IdealsCorrespondence.refutable_eq_admits_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop) (Q : α → Prop),
+  CompletionWarrant.FiniteRefutable P C →
+    (∀ (p : α), C (CompletionWarrant.principal P p) ↔ Q p) → C = CompletionWarrant.Admits P Q
+@Becoming.IdealsCorrespondence.hull_joint_content_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (C : CompletionWarrant.Ideal P → Prop) (I : CompletionWarrant.Ideal P),
+  CompletionWarrant.ScottHull P C I → ∀ {p q : α}, I.mem p → I.mem q → ∃ J, C J ∧ ∃ r, J.mem r ∧ P.le p r ∧ P.le q r
+@Becoming.IdealsCorrespondence.empty_finiteRefutable_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α},
+  CompletionWarrant.FiniteRefutable P fun x => False
+@Becoming.IdealsCorrespondence.empty_scottClosed_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α},
+  CompletionWarrant.ScottClosed P fun x => False
+@Becoming.IdealsCorrespondence.admits_empty_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I : CompletionWarrant.Ideal P), ¬CompletionWarrant.Admits P (fun x => False) I
+@Becoming.IdealsCorrespondence.lowerPoset_order : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (Q : α → Prop),
+  Becoming.IdealsCorrespondence.order (CompletionWarrant.lowerPoset P Q) =
+    (Becoming.IdealsCorrespondence.order P).restrict Q
+@Becoming.IdealsCorrespondence.lift_admits_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (Q : α → Prop)
+  (hq : CompletionWarrant.LowerBasis P Q) (J : CompletionWarrant.Ideal (CompletionWarrant.lowerPoset P Q)),
+  CompletionWarrant.Admits P Q (CompletionWarrant.liftIdeal P Q ⋯ J)
+@Becoming.IdealsCorrespondence.lift_order_iff_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (Q : α → Prop)
+  (hq : CompletionWarrant.LowerBasis P Q) (J K : CompletionWarrant.Ideal (CompletionWarrant.lowerPoset P Q)),
+  (CompletionWarrant.liftIdeal P Q ⋯ J).LE (CompletionWarrant.liftIdeal P Q ⋯ K) ↔ J.LE K
+@Becoming.IdealsCorrespondence.lift_restrict_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (Q : α → Prop)
+  (hq : CompletionWarrant.LowerBasis P Q) (I : CompletionWarrant.Ideal P) (hi : CompletionWarrant.Admits P Q I),
+  CompletionWarrant.liftIdeal P Q ⋯ (CompletionWarrant.restrictIdeal P Q I hi) = I
+@Becoming.IdealsCorrespondence.restrict_lift_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α} (Q : α → Prop)
+  (hq : CompletionWarrant.LowerBasis P Q) (J : CompletionWarrant.Ideal (CompletionWarrant.lowerPoset P Q)),
+  CompletionWarrant.restrictIdeal P Q (CompletionWarrant.liftIdeal P Q ⋯ J) ⋯ = J
+@Becoming.IdealsCorrespondence.empty_lower_no_ideal_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (J : CompletionWarrant.Ideal (CompletionWarrant.lowerPoset P fun x => False)), False
+@Becoming.IdealsCorrespondence.directed_iff : ∀ {β : Type u_1} {Q : CompletionWarrant.Poset β} {S : β → Prop},
+  CompletionRole.Directed Q S ↔ Becoming.Ideals.Directed (Becoming.IdealsCorrespondence.order Q) S
+@Becoming.IdealsCorrespondence.monotone_iff : ∀ {α : Type u_1} {β : Type u_2} {P : CompletionWarrant.Poset α}
+  {Q : CompletionWarrant.Poset β} {f : α → β},
+  CompletionRole.Monotone P Q f ↔
+    Becoming.Ideals.Monotone (Becoming.IdealsCorrespondence.order P) (Becoming.IdealsCorrespondence.order Q) f
+@Becoming.IdealsCorrespondence.compact_iff : ∀ {β : Type u_1} {Q : CompletionWarrant.Poset β}
+  {D : CompletionRole.Dcpo Q} {k : β},
+  CompletionRole.Compact D k ↔ Becoming.Ideals.Compact (Becoming.IdealsCorrespondence.toComplete D) k
+@Becoming.IdealsCorrespondence.extend_eq : ∀ {α : Type u_1} {β : Type u_2} {P : CompletionWarrant.Poset α}
+  {Q : CompletionWarrant.Poset β} (D : CompletionRole.Dcpo Q) (f : α → β) (hf : CompletionRole.Monotone P Q f)
+  (I : CompletionWarrant.Ideal P),
+  CompletionRole.extend D f hf I =
+    Becoming.Ideals.extend (Becoming.IdealsCorrespondence.toComplete D) f hf (Becoming.IdealsCorrespondence.toCore I)
+@Becoming.IdealsCorrespondence.extend_principal_by_core : ∀ {α : Type u_1} {β : Type u_2}
+  {P : CompletionWarrant.Poset α} {Q : CompletionWarrant.Poset β} (D : CompletionRole.Dcpo Q) (f : α → β)
+  (hf : CompletionRole.Monotone P Q f) (p : α), CompletionRole.extend D f hf (CompletionWarrant.principal P p) = f p
+@Becoming.IdealsCorrespondence.idealDirected_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  {S : CompletionWarrant.Ideal P → Prop},
+  CompletionRole.Directed (CompletionRole.idealPoset P) S ↔
+    Becoming.Ideals.Directed (Becoming.Ideals.idealOrder (Becoming.IdealsCorrespondence.order P))
+      (Becoming.IdealsCorrespondence.coreClass S)
+@Becoming.IdealsCorrespondence.extend_continuous_by_core : ∀ {α : Type u_1} {β : Type u_2}
+  {P : CompletionWarrant.Poset α} {Q : CompletionWarrant.Poset β} (D : CompletionRole.Dcpo Q) (f : α → β)
+  (hf : CompletionRole.Monotone P Q f),
+  CompletionRole.Continuous (CompletionRole.idealDcpo P) D (CompletionRole.extend D f hf)
+@Becoming.IdealsCorrespondence.extend_unique_by_core : ∀ {α : Type u_1} {β : Type u_2} {P : CompletionWarrant.Poset α}
+  {Q : CompletionWarrant.Poset β} (D : CompletionRole.Dcpo Q) (f : α → β) (hf : CompletionRole.Monotone P Q f)
+  (g : CompletionWarrant.Ideal P → β),
+  CompletionRole.Continuous (CompletionRole.idealDcpo P) D g →
+    (∀ (p : α), g (CompletionWarrant.principal P p) = f p) →
+      ∀ (I : CompletionWarrant.Ideal P), g I = CompletionRole.extend D f hf I
+@Becoming.IdealsCorrespondence.unique_continuous_extension_by_core : ∀ {α : Type u_1} {β : Type u_2}
+  {P : CompletionWarrant.Poset α} {Q : CompletionWarrant.Poset β} (D : CompletionRole.Dcpo Q) (f : α → β),
+  CompletionRole.Monotone P Q f →
+    ∃ g,
+      CompletionRole.Continuous (CompletionRole.idealDcpo P) D g ∧
+        (∀ (p : α), g (CompletionWarrant.principal P p) = f p) ∧
+          ∀ (h : CompletionWarrant.Ideal P → β),
+            CompletionRole.Continuous (CompletionRole.idealDcpo P) D h →
+              (∀ (p : α), h (CompletionWarrant.principal P p) = f p) → ∀ (I : CompletionWarrant.Ideal P), h I = g I
+@Becoming.IdealsCorrespondence.idealCompact_iff : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I : CompletionWarrant.Ideal P),
+  CompletionRole.Compact (CompletionRole.idealDcpo P) I ↔
+    Becoming.Ideals.Compact (Becoming.Ideals.idealComplete (Becoming.IdealsCorrespondence.order P))
+      (Becoming.IdealsCorrespondence.toCore I)
+@Becoming.IdealsCorrespondence.compact_iff_principal_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I : CompletionWarrant.Ideal P),
+  CompletionRole.Compact (CompletionRole.idealDcpo P) I ↔ ∃ p, I = CompletionWarrant.principal P p
+@Becoming.IdealsCorrespondence.basisRole_compactBasis : ∀ {α : Type u_1} {β : Type u_2} {P : CompletionWarrant.Poset α}
+  {Q : CompletionWarrant.Poset β} {D : CompletionRole.Dcpo Q} {e : α → β},
+  CompletionRole.BasisRole P Q D e →
+    Becoming.Ideals.CompactBasis (Becoming.IdealsCorrespondence.order P) (Becoming.IdealsCorrespondence.toComplete D) e
+@Becoming.IdealsCorrespondence.unique_basis_representation_by_core : ∀ {α : Type u_1} {β : Type u_2}
+  {P : CompletionWarrant.Poset α} {Q : CompletionWarrant.Poset β} {D : CompletionRole.Dcpo Q} {e : α → β},
+  CompletionRole.BasisRole P Q D e →
+    ∃ F,
+      (∀ (p : α), F.forward (CompletionWarrant.principal P p) = e p) ∧
+        ∀ (G : CompletionRole.OrderIso (CompletionRole.idealPoset P) Q),
+          (∀ (p : α), G.forward (CompletionWarrant.principal P p) = e p) →
+            (∀ (I : CompletionWarrant.Ideal P), G.forward I = F.forward I) ∧ ∀ (x : β), G.backward x = F.backward x
+@Becoming.IdealsCorrespondence.positive_reading_membership_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (p : α) (I : CompletionWarrant.Ideal P),
+  CompletionRole.extend CompletionRole.truthDcpo (fun q => P.le p q) ⋯ I ↔ I.mem p
+@Becoming.IdealsCorrespondence.positive_readings_separate_by_core : ∀ {α : Type u_1} {P : CompletionWarrant.Poset α}
+  (I J : CompletionWarrant.Ideal P),
+  (∀ (p : α),
+      CompletionRole.extend CompletionRole.truthDcpo (fun q => P.le p q) ⋯ I ↔
+        CompletionRole.extend CompletionRole.truthDcpo (fun q => P.le p q) ⋯ J) →
+    I = J
+@Becoming.IdealsCorrespondence.toList_length : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A),
+  (Becoming.IdealsCorrespondence.toList w).length = w.length
+@Becoming.IdealsCorrespondence.toList_ofList : ∀ {A : Type u_1} (l : List A),
+  Becoming.IdealsCorrespondence.toList (Becoming.IdealsCorrespondence.ofList l) = l
+@Becoming.IdealsCorrespondence.getElem_toList : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A) (i : Nat)
+  (h : i < (Becoming.IdealsCorrespondence.toList w).length) (h' : i < w.length),
+  (Becoming.IdealsCorrespondence.toList w)[i] = w.letter ⟨i, h'⟩
+@Becoming.IdealsCorrespondence.prefix_iff : ∀ {A : Type u_1} {v w : CompletionWarrant.HistoryIdeals.Word A},
+  CompletionWarrant.HistoryIdeals.Prefix v w ↔
+    (Becoming.HistoryIdeals.prefixOrder A).le (Becoming.IdealsCorrespondence.toList v)
+      (Becoming.IdealsCorrespondence.toList w)
+@Becoming.IdealsCorrespondence.ofList_toList_prefix : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A),
+  CompletionWarrant.HistoryIdeals.Prefix (Becoming.IdealsCorrespondence.ofList (Becoming.IdealsCorrespondence.toList w))
+    w
+@Becoming.IdealsCorrespondence.prefix_ofList_toList : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A),
+  CompletionWarrant.HistoryIdeals.Prefix w
+    (Becoming.IdealsCorrespondence.ofList (Becoming.IdealsCorrespondence.toList w))
+@Becoming.IdealsCorrespondence.ofList_prefix_iff : ∀ {A : Type u_1} {l l' : List A},
+  CompletionWarrant.HistoryIdeals.Prefix (Becoming.IdealsCorrespondence.ofList l)
+      (Becoming.IdealsCorrespondence.ofList l') ↔
+    (Becoming.HistoryIdeals.prefixOrder A).le l l'
+@Becoming.IdealsCorrespondence.le_toList_of_prefix : ∀ {A : Type u_1} {l : List A}
+  {w : CompletionWarrant.HistoryIdeals.Word A},
+  CompletionWarrant.HistoryIdeals.Prefix (Becoming.IdealsCorrespondence.ofList l) w →
+    (Becoming.HistoryIdeals.prefixOrder A).le l (Becoming.IdealsCorrespondence.toList w)
+@Becoming.IdealsCorrespondence.prefix_of_le_toList : ∀ {A : Type u_1} {l : List A}
+  {w : CompletionWarrant.HistoryIdeals.Word A},
+  (Becoming.HistoryIdeals.prefixOrder A).le l (Becoming.IdealsCorrespondence.toList w) →
+    CompletionWarrant.HistoryIdeals.Prefix (Becoming.IdealsCorrespondence.ofList l) w
+@Becoming.IdealsCorrespondence.prefix_ofList_of_le : ∀ {A : Type u_1} {w : CompletionWarrant.HistoryIdeals.Word A}
+  {l : List A},
+  (Becoming.HistoryIdeals.prefixOrder A).le (Becoming.IdealsCorrespondence.toList w) l →
+    CompletionWarrant.HistoryIdeals.Prefix w (Becoming.IdealsCorrespondence.ofList l)
+@Becoming.IdealsCorrespondence.le_of_prefix_ofList : ∀ {A : Type u_1} {w : CompletionWarrant.HistoryIdeals.Word A}
+  {l : List A},
+  CompletionWarrant.HistoryIdeals.Prefix w (Becoming.IdealsCorrespondence.ofList l) →
+    (Becoming.HistoryIdeals.prefixOrder A).le (Becoming.IdealsCorrespondence.toList w) l
+@Becoming.IdealsCorrespondence.letter_eq_getElem : ∀ {A : Type u_1} (l : List A) (n : Nat) (h : n < l.length),
+  Becoming.HistoryIdeals.letter l n h = l[n]
+@Becoming.IdealsCorrespondence.initial_toList_iff : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A)
+  (a : Nat → A),
+  Becoming.HistoryIdeals.Initial (Becoming.IdealsCorrespondence.toList w) a ↔
+    CompletionWarrant.HistoryIdeals.PrefixTrace w a
+@Becoming.IdealsCorrespondence.listIdeal_mem_toList : ∀ {A : Type u_1}
+  {I : CompletionWarrant.Ideal CompletionWarrant.HistoryIdeals.wordPoset} {w : CompletionWarrant.HistoryIdeals.Word A},
+  (Becoming.IdealsCorrespondence.listIdeal I).mem (Becoming.IdealsCorrespondence.toList w) ↔ I.mem w
+@Becoming.IdealsCorrespondence.wordIdeal_mem_ofList : ∀ {A : Type u_1}
+  {J : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)} {l : List A},
+  (Becoming.IdealsCorrespondence.wordIdeal J).mem (Becoming.IdealsCorrespondence.ofList l) ↔ J.mem l
+@Becoming.IdealsCorrespondence.le_iff_listIdeal : ∀ {A : Type u_1}
+  {I J : CompletionWarrant.Ideal CompletionWarrant.HistoryIdeals.wordPoset},
+  I.LE J ↔ (Becoming.IdealsCorrespondence.listIdeal I).LE (Becoming.IdealsCorrespondence.listIdeal J)
+@Becoming.IdealsCorrespondence.principal_listIdeal : ∀ {A : Type u_1} (w : CompletionWarrant.HistoryIdeals.Word A),
+  (Becoming.IdealsCorrespondence.listIdeal
+        (CompletionWarrant.principal CompletionWarrant.HistoryIdeals.wordPoset w)).Same
+    (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) (Becoming.IdealsCorrespondence.toList w))
+@Becoming.IdealsCorrespondence.trace_listIdeal : ∀ {A : Type u_1} (a : Nat → A),
+  (Becoming.IdealsCorrespondence.listIdeal (CompletionWarrant.HistoryIdeals.traceIdeal a)).Same
+    (Becoming.HistoryIdeals.traceIdeal a)
+@Becoming.IdealsCorrespondence.history_listIdeal : ∀ {A : Type u_1} (h : CompletionWarrant.HistoryIdeals.History A),
+  (Becoming.IdealsCorrespondence.listIdeal (CompletionWarrant.HistoryIdeals.historyIdeal h)).Same
+    (Becoming.HistoryIdeals.historyIdeal (Becoming.IdealsCorrespondence.ofHistory h))
+@Becoming.IdealsCorrespondence.settles_of_bounded : ∀ {A : Type u_1}
+  (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)) (n : Nat),
+  (∀ (w : List A), I.mem w → w.length ≤ n) → Becoming.HistoryIdeals.HasLongest I
+@Becoming.IdealsCorrespondence.decided_classical : ∀ {A : Type u_1}
+  (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)),
+  Becoming.HistoryIdeals.HasLongest I ∨ ∃ pick, (∀ (n : Nat), I.mem (pick n)) ∧ ∀ (n : Nat), n < (pick n).length
+@Becoming.IdealsCorrespondence.ideal_classification_by_core : ∀ {A : Type u_1}
+  (I : CompletionWarrant.Ideal CompletionWarrant.HistoryIdeals.wordPoset),
+  (∃ w, I = CompletionWarrant.principal CompletionWarrant.HistoryIdeals.wordPoset w) ∨
+    ∃ a, I = CompletionWarrant.HistoryIdeals.traceIdeal a
+@Becoming.IdealsCorrespondence.historyPrefix_iff : ∀ {A : Type u_1} (h k : CompletionWarrant.HistoryIdeals.History A),
+  Becoming.HistoryIdeals.HistoryPrefix (Becoming.IdealsCorrespondence.ofHistory h)
+      (Becoming.IdealsCorrespondence.ofHistory k) ↔
+    CompletionWarrant.HistoryIdeals.HistoryPrefix h k
+@Becoming.IdealsCorrespondence.history_order_iff_by_core : ∀ {A : Type u_1}
+  (h k : CompletionWarrant.HistoryIdeals.History A),
+  (CompletionWarrant.HistoryIdeals.historyIdeal h).LE (CompletionWarrant.HistoryIdeals.historyIdeal k) ↔
+    CompletionWarrant.HistoryIdeals.HistoryPrefix h k
+@Becoming.IdealsCorrespondence.historyIdeal_injective_by_core : ∀ {A : Type u_1}
+  {h k : CompletionWarrant.HistoryIdeals.History A},
+  CompletionWarrant.HistoryIdeals.historyIdeal h = CompletionWarrant.HistoryIdeals.historyIdeal k → h = k
+@Becoming.IdealsCorrespondence.refutable_of_wordIdeal : ∀ {A : Type u_1}
+  {C : CompletionWarrant.Ideal CompletionWarrant.HistoryIdeals.wordPoset → Prop}
+  {C' : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A) → Prop},
+  (∀ (J : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)),
+      C (Becoming.IdealsCorrespondence.wordIdeal J) ↔ C' J) →
+    CompletionWarrant.FiniteRefutable CompletionWarrant.HistoryIdeals.wordPoset C → Becoming.Ideals.Refutable C'
+@Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff : ∀ {A : Type u_1}
+  (J : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)),
+  CompletionWarrant.HistoryIdeals.FiniteOnly (Becoming.IdealsCorrespondence.wordIdeal J) ↔
+    ∃ l, J.Same (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) l)
+@Becoming.IdealsCorrespondence.trace_wordIdeal_iff : ∀ {A : Type u_1}
+  (J : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)) (a : Nat → A),
+  Becoming.IdealsCorrespondence.wordIdeal J = CompletionWarrant.HistoryIdeals.traceIdeal a ↔
+    J.Same (Becoming.HistoryIdeals.traceIdeal a)
+@Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff : ∀ {A : Type u_1} (K : (Nat → A) → Prop)
+  (J : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)),
+  CompletionWarrant.HistoryIdeals.PropertyClass K (Becoming.IdealsCorrespondence.wordIdeal J) ↔
+    Becoming.HistoryIdeals.FiniteOr K J
+@Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core : ∀ {A : Type u_1} (K : (Nat → A) → Prop)
+  (a : Nat → A),
+  ¬K a →
+    ¬CompletionWarrant.FiniteRefutable CompletionWarrant.HistoryIdeals.wordPoset
+        (CompletionWarrant.HistoryIdeals.PropertyClass K)
+@Becoming.IdealsCorrespondence.finiteOnly_not_refutable_by_core : ∀ {A : Type u_1} (a : Nat → A),
+  ¬CompletionWarrant.FiniteRefutable CompletionWarrant.HistoryIdeals.wordPoset
+      CompletionWarrant.HistoryIdeals.FiniteOnly
+Becoming.IdealsCorrespondence.recurrence_ideal_not_refutable_by_core : ¬CompletionWarrant.FiniteRefutable
+    CompletionWarrant.HistoryIdeals.wordPoset
+    (CompletionWarrant.HistoryIdeals.PropertyClass CompletionWarrant.PrefixSafety.Recurs)
+Becoming.IdealsCorrespondence.represented_ideal_not_refutable_by_core : ∀ (E : Nat → Option (Nat → Bool)),
+  ¬CompletionWarrant.FiniteRefutable CompletionWarrant.HistoryIdeals.wordPoset
+      (CompletionWarrant.HistoryIdeals.PropertyClass (CompletionWarrant.PrefixSafety.Represented E))
+@Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord : ∀ {A : Type u_1} (a : Nat → A) (n : Nat),
+  CompletionWarrant.HistoryIdeals.Prefix (CompletionWarrant.HistoryIdeals.tracePrefix a n)
+    (Becoming.IdealsCorrespondence.ofList (Becoming.HistoryIdeals.initialWord a n))
+@Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix : ∀ {A : Type u_1} (a : Nat → A) (n : Nat),
+  CompletionWarrant.HistoryIdeals.Prefix (Becoming.IdealsCorrespondence.ofList (Becoming.HistoryIdeals.initialWord a n))
+    (CompletionWarrant.HistoryIdeals.tracePrefix a n)
+@Becoming.IdealsCorrespondence.history_admitted_iff_by_core : ∀ {A : Type u_1}
+  (H : CompletionWarrant.HistoryIdeals.Word A → Prop),
+  CompletionWarrant.LowerBasis CompletionWarrant.HistoryIdeals.wordPoset H →
+    ∀ (h : CompletionWarrant.HistoryIdeals.History A),
+      CompletionWarrant.Admits CompletionWarrant.HistoryIdeals.wordPoset H
+          (CompletionWarrant.HistoryIdeals.historyIdeal h) ↔
+        CompletionWarrant.HistoryIdeals.Admitted H h

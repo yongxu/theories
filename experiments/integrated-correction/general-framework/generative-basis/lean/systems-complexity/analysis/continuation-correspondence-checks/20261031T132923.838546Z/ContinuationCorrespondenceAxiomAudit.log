@@ -1,0 +1,17 @@
+'Becoming.ContinuationCorrespondence.processOf' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.successor' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.post_eq_seen' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.usable_iff' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.viable_iff_keptFor' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.toPlan' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.ofPlan' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.works_iff_keeps' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.keeps_iff_works' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.works_exists_iff' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.classicalChoice' depends on axioms: [Classical.choice]
+'Becoming.ContinuationCorrespondence.viable_iff_plan_by_core' depends on axioms: [Classical.choice]
+'Becoming.ContinuationCorrespondence.viable_iff_plan_listed' does not depend on any axioms
+'Becoming.ContinuationCorrespondence.toPlan_zip' depends on axioms: [propext, Quot.sound]
+'Becoming.ContinuationCorrespondence.compatible_iff' depends on axioms: [propext]
+'Becoming.ContinuationCorrespondence.joint_plan_composition_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.ContinuationCorrespondence.compatibility_necessary_by_core' depends on axioms: [propext, Quot.sound]

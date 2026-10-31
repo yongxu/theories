@@ -1,0 +1,31 @@
+'Becoming.ProtocolInstances.mediated' depends on axioms: [propext]
+'Becoming.ProtocolInstances.mediated_history_cons' depends on axioms: [propext]
+'Becoming.ProtocolInstances.mediated_history_iff' depends on axioms: [propext]
+'Becoming.ProtocolInstances.coverage_along' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.mediated_history_instance' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.recoverable' depends on axioms: [propext]
+'Becoming.ProtocolInstances.recoverable_history_cons' depends on axioms: [propext]
+'Becoming.ProtocolInstances.recoverable_history_iff' depends on axioms: [propext]
+'Becoming.ProtocolInstances.safety_along' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.interrupted_history_instance' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.busy' does not depend on any axioms
+'Becoming.ProtocolInstances.done' does not depend on any axioms
+'Becoming.ProtocolInstances.work' does not depend on any axioms
+'Becoming.ProtocolInstances.fuel' does not depend on any axioms
+'Becoming.ProtocolInstances.unitState' does not depend on any axioms
+'Becoming.ProtocolInstances.afterUnit' does not depend on any axioms
+'Becoming.ProtocolInstances.advanced' depends on axioms: [propext]
+'Becoming.ProtocolInstances.unit_drawn' depends on axioms: [propext]
+'Becoming.ProtocolInstances.stalls_unsupported' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.counts' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.resumeSteps_eq' depends on axioms: [propext]
+'Becoming.ProtocolInstances.publishes_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ProtocolInstances.pending_until_published' depends on axioms: [propext, Quot.sound]
+'Becoming.ProtocolInstances.valid' depends on axioms: [propext]
+'Becoming.ProtocolInstances.exit' does not depend on any axioms
+'Becoming.ProtocolInstances.margin' does not depend on any axioms
+'Becoming.ProtocolInstances.reserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ProtocolInstances.run_eq' depends on axioms: [propext]
+'Becoming.ProtocolInstances.schedule_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ProtocolInstances.schedule_stops' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ProtocolInstances.supported_schedule_instance' depends on axioms: [propext, Classical.choice, Quot.sound]

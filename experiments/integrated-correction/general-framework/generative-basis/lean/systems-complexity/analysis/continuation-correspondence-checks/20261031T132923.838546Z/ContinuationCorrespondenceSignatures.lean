@@ -1,0 +1,14 @@
+import ContinuationCorrespondence
+#check @Becoming.ContinuationCorrespondence.post_eq_seen
+#check @Becoming.ContinuationCorrespondence.usable_iff
+#check @Becoming.ContinuationCorrespondence.viable_iff_keptFor
+#check @Becoming.ContinuationCorrespondence.works_iff_keeps
+#check @Becoming.ContinuationCorrespondence.keeps_iff_works
+#check @Becoming.ContinuationCorrespondence.works_exists_iff
+#check @Becoming.ContinuationCorrespondence.classicalChoice
+#check @Becoming.ContinuationCorrespondence.viable_iff_plan_by_core
+#check @Becoming.ContinuationCorrespondence.viable_iff_plan_listed
+#check @Becoming.ContinuationCorrespondence.toPlan_zip
+#check @Becoming.ContinuationCorrespondence.compatible_iff
+#check @Becoming.ContinuationCorrespondence.joint_plan_composition_by_core
+#check @Becoming.ContinuationCorrespondence.compatibility_necessary_by_core

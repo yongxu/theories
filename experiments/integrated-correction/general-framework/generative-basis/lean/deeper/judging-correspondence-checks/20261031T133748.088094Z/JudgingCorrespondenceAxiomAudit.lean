@@ -1,0 +1,8 @@
+import JudgingCorrespondence
+#print axioms Becoming.JudgingCorrespondence.realizations
+#print axioms Becoming.JudgingCorrespondence.endpoint
+#print axioms Becoming.JudgingCorrespondence.certificate
+#print axioms Becoming.JudgingCorrespondence.mem_realizations
+#print axioms Becoming.JudgingCorrespondence.judges_iff
+#print axioms Becoming.JudgingCorrespondence.endpoint_judge_iff
+#print axioms Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core

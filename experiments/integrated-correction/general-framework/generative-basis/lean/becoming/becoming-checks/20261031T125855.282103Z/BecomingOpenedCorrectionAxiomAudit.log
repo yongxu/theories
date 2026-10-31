@@ -1,0 +1,16 @@
+'Becoming.OpenedCorrection.Correctable' does not depend on any axioms
+'Becoming.OpenedCorrection.correctable_iff' does not depend on any axioms
+'Becoming.OpenedCorrection.OpensAlong' does not depend on any axioms
+'Becoming.OpenedCorrection.finer_keeps' does not depend on any axioms
+'Becoming.OpenedCorrection.coarser_opens_nothing' does not depend on any axioms
+'Becoming.OpenedCorrection.widened_correctable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.acceptable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.executable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.unlinked_uncorrectable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.linked_correctable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.starved_uncorrectable' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.opens' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.rebuilt_starved' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.opens_after_replenishing' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.opens_by_support' does not depend on any axioms
+'Becoming.OpenedCorrection.Linked.widened_unlinked' does not depend on any axioms

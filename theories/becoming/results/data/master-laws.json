@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T085229.010243Z",
- "core_sources_sha256": "9886b80dd9d34a9aa6231f200662521294add400f733e83af3722ab9dfb05b0b",
+ "core_receipt": "20261031T125855.282103Z",
+ "core_sources_sha256": "7e5e149ff08de9244de2acd3dda48e2d6dcce3421e9d29cf3741120782cd5a47",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -9,8 +9,8 @@
   "theories/becoming/results/completion/COVERAGE.json": "0dc05776e9e19df1f4846623890bc421a44b6b422e87f3bf8ce738596afa8a49",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/boundary.py": "e6cccd46c3ebc706fea5976cb2b4375f2c80d0f0158450e6c951708f7dc9726d",
-  "tools/research/boundary_check.lean": "b4d3a1133ea6990c642db099072b4a45592ae29f70792f85005e4032d37cfcdd",
+  "tools/research/boundary.py": "9f70cc2b6fe743972cedee811f4db39673f9ab51fe80dd43ab8d535a086a38d4",
+  "tools/research/boundary_check.lean": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
   "tools/research/master_laws.py": "95e8ec09142c59b3d45d19e6ac8ca8e63104e80c5d9e222d10cc67c2d4058997"
  },
  "names": {
@@ -88,16 +88,16 @@
   "order": 3
  },
  "counts_at_boundary_record": {
-  "laws": 0,
+  "laws": 2,
   "no_declarations": 0,
   "outside": 0,
-  "grammar": 0,
+  "grammar": 2,
   "balance, represented": 0,
   "anchor, not reached": 0,
   "no master law": 0,
-  "vocabulary_only": 0,
+  "vocabulary_only": 2,
   "closure": 0,
-  "balance": 0,
+  "balance": 1,
   "return": 0,
   "lumping": 0,
   "order": 0
@@ -32029,6 +32029,70 @@
     "dependence": "balance, represented"
    }
   ],
+  "one-root-to-its-edge": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.RootForms.everywhere",
+     "Becoming.RootForms.nowhere",
+     "Becoming.RootForms.allRelated",
+     "Becoming.RootForms.noneRelated",
+     "Becoming.RootForms.oneListed",
+     "Becoming.RootForms.oneOffspring",
+     "Becoming.RootForms.GivesFrom",
+     "Becoming.RootForms.ListedWithin",
+     "Becoming.RootForms.Outside",
+     "Becoming.RootForms.length_zero_of_none",
+     "Becoming.RootForms.outside_leaves_no_offspring",
+     "Becoming.RootForms.gives_from_everywhere",
+     "Becoming.RootForms.gives_from_vacuous",
+     "Becoming.RootForms.listed_within_all",
+     "Becoming.RootForms.outside_nowhere",
+     "Becoming.RootForms.one_offspring",
+     "Becoming.RootForms.outside_leaves_no_offspring.needs_gate",
+     "Becoming.RootForms.outside_leaves_no_offspring.gate_needed",
+     "Becoming.RootForms.outside_leaves_no_offspring.needs_descent",
+     "Becoming.RootForms.outside_leaves_no_offspring.descent_needed",
+     "Becoming.RootForms.outside_leaves_no_offspring.needs_outside",
+     "Becoming.RootForms.outside_leaves_no_offspring.outside_needed",
+     "Becoming.RootForms.all_end_at_model",
+     "Becoming.RootForms.all_end_certified"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.RootForms.GivenTo",
+     "Becoming.RootForms.Inherits",
+     "Becoming.RootForms.UndependedFrom",
+     "Becoming.RootForms.descent_forms_no_dependence",
+     "Becoming.RootForms.given_everywhere",
+     "Becoming.RootForms.inherits_vacuous",
+     "Becoming.RootForms.inherits_everywhere",
+     "Becoming.RootForms.undepended_vacuous",
+     "Becoming.RootForms.undepended_nowhere",
+     "Becoming.RootForms.some_depends",
+     "Becoming.RootForms.descent_forms_no_dependence.needs_given",
+     "Becoming.RootForms.descent_forms_no_dependence.given_needed",
+     "Becoming.RootForms.descent_forms_no_dependence.needs_inherits",
+     "Becoming.RootForms.descent_forms_no_dependence.inherits_needed",
+     "Becoming.RootForms.descent_forms_no_dependence.needs_undepended",
+     "Becoming.RootForms.descent_forms_no_dependence.undepended_needed",
+     "Becoming.RootForms.no_new_dependence_at_model",
+     "Becoming.RootForms.no_new_dependence_certified"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   }
+  ],
   "one-search-one-line": [
    {
     "law": 1,
@@ -59680,5 +59744,3353 @@
     "dependence": "balance, represented"
    }
   ]
+ },
+ "boundary": {
+  "record": "one-root-to-its-edge",
+  "declared": {
+   "standings": [
+    {
+     "declaration": "Becoming.Flow.beyond_gives_nothing",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it. WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required condition; the support, eq_zero_of_not_pos, is Flow's lemma that a natural number not above nothing is nothing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之界»"
+     ],
+     "support": [
+      "Becoming.eq_zero_of_not_pos"
+     ]
+    },
+    {
+     "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion. WithinClosure.mono is listed as support only because the dump's forwarder test does not recognize a law applied past its «则» conclusion (BOUNDARY-FIELD §3.0); it leaves the support when the test does."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之单调»"
+     ],
+     "support": [
+      "Becoming.Flow.shares_of_affectedBy",
+      "Becoming.WithinClosure.mono"
+     ]
+    },
+    {
+     "declaration": "Becoming.Law.drawn_iff_not_returns",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «定后有后则入当且仅当不返» at the relation of the law's next configuration, its successor fixed and total. The bridges read the model's drawn, absorbing, orbit and return as the grammar's «入», closed region («闭», Law.absorbing_iff_closed), «及» and return, the orbit by recursion; the support is the orbit's arithmetic of steps, the trace's length and the successor's being fixed and total."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«定后有后则入当且仅当不返»"
+     ],
+     "bridges": [
+      "Becoming.Branching.law_reach_iff",
+      "Becoming.Branching.law_trace_iff",
+      "Becoming.Law.absorbing_iff_closed",
+      "Becoming.Law.drawn_iff_drawnIn",
+      "Becoming.Law.reaches_iff_orbit",
+      "Becoming.Law.returns_iff",
+      "Becoming.Law.returns_iff_reaches"
+     ],
+     "support": [
+      "Becoming.Branching.law_trace_of",
+      "Becoming.Branching.units_length",
+      "Becoming.Law.next_fixed",
+      "Becoming.Law.next_total",
+      "Becoming.Law.orbit_add",
+      "Becoming.Law.orbit_shift",
+      "Becoming.Law.reaches_of_orbit"
+     ]
+    },
+    {
+     "declaration": "Becoming.Law.lossless_iff_returns",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «有限遍后定后则定前当且仅当皆返» at the law's next configuration over the listed ones: lossless is the predecessor fixed (two bridges), the other five bridges are among those of Law.drawn_iff_not_returns, and the support is its support."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«有限遍后定后则定前当且仅当皆返»"
+     ],
+     "bridges": [
+      "Becoming.Branching.law_reach_iff",
+      "Becoming.Branching.law_trace_iff",
+      "Becoming.Law.lossless_iff",
+      "Becoming.Law.lossless_iff_fixedBefore",
+      "Becoming.Law.reaches_iff_orbit",
+      "Becoming.Law.returns_iff",
+      "Becoming.Law.returns_iff_reaches"
+     ],
+     "support": [
+      "Becoming.Branching.law_trace_of",
+      "Becoming.Branching.units_length",
+      "Becoming.Law.next_fixed",
+      "Becoming.Law.next_total",
+      "Becoming.Law.orbit_add",
+      "Becoming.Law.orbit_shift",
+      "Becoming.Law.reaches_of_orbit"
+     ]
+    },
+    {
+     "declaration": "Becoming.Learning.goAlike_iff_lumped",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «像定后当且仅当同行» at the law's step along the projection, with «同行之逐点»: going alike under the projection is the grammar's «同行», and lumped is a fixed successor of the image, both unfoldings."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«像定后当且仅当同行»"
+     ],
+     "bridges": [
+      "Becoming.Learning.lumped_iff_fixed_image",
+      "Becoming.goAlikeUnder_iff_alike"
+     ]
+    },
+    {
+     "declaration": "Becoming.Tolerance.answers_restores_iff",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «承之迭» at the relation up: answering is «承» of up by definition, the model's chain is «迭» by recursion through «迭之末步», and the worst start reduces every start to total withholding, the answering step keeping inclusion (Tolerance.answers_keeps); the support keeps inclusion along a course and takes the chain's last step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«承之迭»"
+     ],
+     "bridges": [
+      "Becoming.Tolerance.worst_start",
+      "Becoming.Withholding.answers_closed",
+      "Becoming.Withholding.chain_iff_steps"
+     ],
+     "support": [
+      "Becoming.Tolerance.KeepsInclusion.course",
+      "Becoming.Tolerance.KeepsInclusionInto.course",
+      "Becoming.Tolerance.answers_keeps",
+      "Becoming.Withholding.Chain.last",
+      "Becoming.Withholding.Chain.last_of_eq",
+      "Becoming.Withholding.Chain.zero_eq"
+     ]
+    },
+    {
+     "declaration": "Becoming.Withholding.withholding_spreads",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «存承之迭» at up: waiting on all meets the law's round by unfolding (Withholding.waitsAll_closed), and within n steps is the grammar's, through the chain read as «迭» by recursion; the support takes the chain's last step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«存承之迭»"
+     ],
+     "bridges": [
+      "Becoming.Withholding.chain_iff_steps",
+      "Becoming.Withholding.waitsAll_closed",
+      "Becoming.Withholding.within_iff_withinSteps"
+     ],
+     "support": [
+      "Becoming.Withholding.Chain.last",
+      "Becoming.Withholding.Chain.last_of_eq",
+      "Becoming.Withholding.Chain.zero_eq"
+     ]
+    },
+    {
+     "declaration": "Becoming.WithinMoves.after_course",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «迭内之接» at the moves' steps: a trace and being within moves are the grammar's steps (two bridges), and that a trace gives steps is support."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«迭内之接»"
+     ],
+     "bridges": [
+      "Becoming.trace_iff_steps",
+      "Becoming.withinMoves_iff_withinSteps"
+     ],
+     "support": [
+      "Becoming.trace_steps"
+     ]
+    },
+    {
+     "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之逆», both ways: mutual dependence is every formation within every other's influence closure, being within reach is that closure read backward, and WithinClosure.converse, through which the row is proved, is the law at the frame (HE2, item 3)."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之逆»"
+     ]
+    },
+    {
+     "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «借步之所闭在二所闭» one way and «二所闭在借步之所闭» the other: the coupling closure of o reading a's couplings is the closure through borrowed steps. Flow.CoupledFrom.of_reads splits a step of it into a step of the pool or one from a taken at o, which meets the first law's hypothesis; the row's hypothesis that a acts on a condition coupled into it puts a within o's closure, which meets the second's. WithinClosureOf.to_reads is the second law with the pool's two-member closure read as a disjunction, its inclusion met inline by the pool's couplings lying within the reader's, and its reach by WithinClosure.of_rel (HE2, item 4)."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«借步之所闭在二所闭»",
+      "Becoming.«二所闭在借步之所闭»"
+     ],
+     "support": [
+      "Becoming.Flow.withinCoupling_reads",
+      "Becoming.WithinClosure.of_reads",
+      "Becoming.Flow.CoupledFrom.of_reads",
+      "Becoming.WithinClosureOf.to_reads"
+     ]
+    },
+    {
+     "declaration": "Becoming.GroupEnding.Flow.all_end",
+     "standing": "under a stated hypothesis",
+     "basis": {
+      "en": "The row is the root form at one step: giving is a member present at the step giving a positive amount, the region is activity at the step, and the listing is the generation with its offspring lists. That only active formations give (K3's premise \"only active relata give\") meets the first hypothesis, and that descent is giving meets the second, each by definitions alone; the next generation's size is the length of the offspring lists' join, by the family's definition. Beyond the form's hypotheses at the one step, the row carries the gate and descent at every step, and descent's third part, that each offspring comes to stand, which the recovery does not use; neither places the row. Lever 2's witnesses at the model show that the model does not meet each hypothesis automatically."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "form": "Becoming.RootForms.outside_leaves_no_offspring",
+     "hypotheses": [
+      {
+       "hypothesis": "Becoming.RootForms.GivesFrom",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_gate",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.gate_needed"
+      },
+      {
+       "hypothesis": "Becoming.RootForms.ListedWithin",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_descent",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.descent_needed"
+      },
+      {
+       "hypothesis": "Becoming.RootForms.Outside",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_outside",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.outside_needed"
+      }
+     ],
+     "recovery": "Becoming.RootForms.all_end_at_model",
+     "certificate": "Becoming.RootForms.all_end_certified"
+    },
+    {
+     "declaration": "Becoming.Flow.no_new_dependence",
+     "standing": "balance in its statement",
+     "basis": {
+      "en": "Its statement writes balance out, an equation of the level with what is taken and given, so the rule places it here. Its relational part is the root form RootForms.descent_forms_no_dependence: the row is that form at its one relatum, certified by rfl. But the row meets the form's first hypothesis, that what comes to stand is given to, only through Flow.descends_of_comes, which is amount reasoning (balance and a rise from nothing give a positive giving), so its recovery fails the discharge condition and the row keeps its distance."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "relational_part": "Becoming.RootForms.descent_forms_no_dependence"
+    },
+    {
+     "declaration": "Becoming.CensusWebs.keep_pace",
+     "standing": "counting",
+     "basis": {
+      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Drift.falls_back",
+     "standing": "counting",
+     "basis": {
+      "en": "Courses of n binary draws, weighted, counted; reading the courses as drift is the model's hypothesis, not part of the statement."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Listed.coming_of_ceasing",
+     "standing": "counting",
+     "basis": {
+      "en": "For any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the statement unfolds to the prelude's Distinct and Init and names no amount."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.RelativePosition.rise_needs_fall",
+     "standing": "counting",
+     "basis": {
+      "en": "A rise and a fall counted over a list, by the commutativity of addition."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.SelectionLevels.levels_sized",
+     "standing": "counting",
+     "basis": {
+      "en": "Price's partition into selection within and among groups of any sizes: an identity of counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.SelectionTerm.covariation",
+     "standing": "counting",
+     "basis": {
+      "en": "Price's covariance: an identity of counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Flow.new_beyond_every",
+     "standing": "amounts",
+     "basis": {
+      "en": "Endless novelty concludes that a family is given more than it takes, by the rest or across its boundary, an imbalance of amounts; balance enters only the proof."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Flow.selected_le",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the parents' needs, weighted by their offspring, with the level, at one step of descent."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Flow.selection_within",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the offspring's totals with the lowered and raised terms, at one step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Flow.transmitted_supported",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion bounds a descendant's need by the level plus δ, and the hypothesis that transmission stays within δ (TransmitsWithin) constrains amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+     "standing": "amounts",
+     "basis": {
+      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Reproduction.Flow.number_within_take",
+     "standing": "amounts",
+     "basis": {
+      "en": "Dissipation on a family and an injection from births to given units bound a count within a take, an amount; dissipation is kept as a premise of the account."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.RegimeMargin.ends_iff_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "A run of natural-number levels ends exactly below H + y: a comparison of amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "As RegimeMargin.ends_iff_below, with recent giving adjusted: a comparison of amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima end the condition drawn first, in natural-number levels and weighted sums."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.frontier_breaks_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "A coupling below what keeping forgoes, in natural-number worths and draws, breaks a dependence."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.frontier_broken",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima of orders on natural-number levels and what is drawn break a dependence."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.frontier_exhausts",
+     "standing": "amounts",
+     "basis": {
+      "en": "A weighting falling faster than levels rise leaves the level at nothing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.frontier_keeps_stepwise",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima keep a level stepwise, in natural-number levels and draws with a per-step coupling w."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.frontier_rebuilds",
+     "standing": "amounts",
+     "basis": {
+      "en": "A level rising faster than the weighting falls is rebuilt, in natural-number levels and weights."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.responses_le_missBound",
+     "standing": "amounts",
+     "basis": {
+      "en": "A bound of propagation on amounts, a law of its model."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.carried_iff_rising",
+     "standing": "amounts",
+     "basis": {
+      "en": "An exchange law carries exactly where the reading rises: the statement compares responses (r x ≤ r (x + 1) below N, the levels bounded by N), and the support is inside the existential, not kept. A law of its model, placed by its amounts, as responses_le_missBound is."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Direction.extension_iff_widens",
+     "standing": "at its model",
+     "basis": {
+      "en": "C's extension on the moves' frame, proved as Web.paths_extension_iff_widens (another central row, on its own carrier) read at that frame; a law of that model."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.PartForms.goAlike",
+     "standing": "at its model",
+     "basis": {
+      "en": "A law of its model, the part carrying a law of its own; the image law only reads it."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.paths_one_object",
+     "standing": "free significance",
+     "basis": {
+      "en": "It keeps significance free, as chapter 7 intends; its root form, SignificanceStatements.paths_one_object_root, holds at the own-closure reading only (U3) and states less than the row."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.Web.widens_iff_retains_adds",
+     "standing": "free significance",
+     "basis": {
+      "en": "It takes the condition as a hypothesis with significance free, as chapter 7 intends; its root form, SignificanceStatements.widens_iff_retains_adds_root, holds at the own-closure reading only (U3) and states less than the row."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "declaration": "Becoming.unrestricted_iff_livingSignificance",
+     "standing": "free significance",
+     "basis": {
+      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    }
+   ],
+   "premises_of_the_ethics": [
+    {
+     "role": "scope",
+     "name": {
+      "en": "the continuation condition",
+      "zh": "延续之条件"
+     },
+     "premise": "Becoming.Unrestricted",
+     "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
+     "basis": {
+      "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. Its warrant is open, and no warrant binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    },
+    {
+     "role": "order",
+     "name": {
+      "en": "C, calling widening better",
+      "zh": "C，谓扩大为更好"
+     },
+     "premise": "Becoming.Comparison",
+     "not_entailed": null,
+     "absent": {
+      "en": "No theorem shows that no statement reading only the dynamics entails Comparison with \"better\" free; Comparison leaves \"better\" free as Unrestricted leaves significance free."
+     },
+     "basis": {
+      "en": "What ranks lies in C alone: the condition by itself orders nothing. A reason for C is open apart from the condition."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    }
+   ]
+  },
+  "context": {
+   "schema_version": 2,
+   "status": "recorded-checked",
+   "reviews": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY-SECOND.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+   ],
+   "laws": [
+    "Becoming.RootForms.GivenTo",
+    "Becoming.RootForms.GivesFrom",
+    "Becoming.RootForms.Inherits",
+    "Becoming.RootForms.ListedWithin",
+    "Becoming.RootForms.Outside",
+    "Becoming.RootForms.UndependedFrom",
+    "Becoming.RootForms.allRelated",
+    "Becoming.RootForms.all_end_at_model",
+    "Becoming.RootForms.all_end_certified",
+    "Becoming.RootForms.descent_forms_no_dependence",
+    "Becoming.RootForms.descent_forms_no_dependence.given_needed",
+    "Becoming.RootForms.descent_forms_no_dependence.inherits_needed",
+    "Becoming.RootForms.descent_forms_no_dependence.needs_given",
+    "Becoming.RootForms.descent_forms_no_dependence.needs_inherits",
+    "Becoming.RootForms.descent_forms_no_dependence.needs_undepended",
+    "Becoming.RootForms.descent_forms_no_dependence.undepended_needed",
+    "Becoming.RootForms.everywhere",
+    "Becoming.RootForms.given_everywhere",
+    "Becoming.RootForms.gives_from_everywhere",
+    "Becoming.RootForms.gives_from_vacuous",
+    "Becoming.RootForms.inherits_everywhere",
+    "Becoming.RootForms.inherits_vacuous",
+    "Becoming.RootForms.length_zero_of_none",
+    "Becoming.RootForms.listed_within_all",
+    "Becoming.RootForms.no_new_dependence_at_model",
+    "Becoming.RootForms.no_new_dependence_certified",
+    "Becoming.RootForms.noneRelated",
+    "Becoming.RootForms.nowhere",
+    "Becoming.RootForms.oneListed",
+    "Becoming.RootForms.oneOffspring",
+    "Becoming.RootForms.one_offspring",
+    "Becoming.RootForms.outside_leaves_no_offspring",
+    "Becoming.RootForms.outside_leaves_no_offspring.descent_needed",
+    "Becoming.RootForms.outside_leaves_no_offspring.gate_needed",
+    "Becoming.RootForms.outside_leaves_no_offspring.needs_descent",
+    "Becoming.RootForms.outside_leaves_no_offspring.needs_gate",
+    "Becoming.RootForms.outside_leaves_no_offspring.needs_outside",
+    "Becoming.RootForms.outside_leaves_no_offspring.outside_needed",
+    "Becoming.RootForms.outside_nowhere",
+    "Becoming.RootForms.some_depends",
+    "Becoming.RootForms.undepended_nowhere",
+    "Becoming.RootForms.undepended_vacuous"
+   ]
+  },
+  "counts": {
+   "derived": 10,
+   "under a stated hypothesis": 1,
+   "counting": 6,
+   "connected": 22,
+   "witnessed at its model": 0,
+   "balance in its statement": 32,
+   "amounts": 19,
+   "at a represented model": 16,
+   "own carrier": 7,
+   "at its model": 2,
+   "free significance": 3,
+   "unplaced": 0
+  },
+  "groups": {
+   "on the edge": 11,
+   "below the grammar": 6,
+   "distances": 101,
+   "unplaced": 0
+  },
+  "derived_by_forwarder": [],
+  "against_f5": {
+   "derived": {
+    "reaching the grammar": 10,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 0
+   },
+   "under a stated hypothesis": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 1
+   },
+   "counting": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 6
+   },
+   "connected": {
+    "reaching the grammar": 22,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 0
+   },
+   "witnessed at its model": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 0
+   },
+   "balance in its statement": {
+    "reaching the grammar": 12,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 20
+   },
+   "amounts": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 19
+   },
+   "at a represented model": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 16,
+    "stated on its own carrier only": 0,
+    "the rest": 0
+   },
+   "own carrier": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 7,
+    "the rest": 0
+   },
+   "at its model": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 2
+   },
+   "free significance": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 3
+   },
+   "unplaced": {
+    "reaching the grammar": 0,
+    "stated at a represented model": 0,
+    "stated on its own carrier only": 0,
+    "the rest": 0
+   }
+  },
+  "premises_of_the_ethics": [
+   {
+    "item": 1,
+    "role": "scope",
+    "name": {
+     "en": "the continuation condition",
+     "zh": "延续之条件"
+    },
+    "premise": "Becoming.Unrestricted",
+    "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
+    "result": "not entailed"
+   },
+   {
+    "item": 2,
+    "role": "order",
+    "name": {
+     "en": "C, calling widening better",
+     "zh": "C，谓扩大为更好"
+    },
+    "premise": "Becoming.Comparison",
+    "not_entailed": null,
+    "absent": {
+     "en": "No theorem shows that no statement reading only the dynamics entails Comparison with \"better\" free; Comparison leaves \"better\" free as Unrestricted leaves significance free."
+    },
+    "result": "not shown"
+   }
+  ],
+  "lean_check": {
+   "toolchain": "leanprover/lean4:v4.29.1",
+   "modules_sha256": "9f5701b911db891016190ebc86d81ca547ceaa18ec7d05d7e980ede3960b5c11",
+   "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
+   "ran": true
+  },
+  "unverified": [],
+  "rows": {
+   "Becoming.Amounts.rests": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Branching.loss_passes_juncture": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«及当且仅当一步而所闭»",
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«所闭当且仅当同一或及»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.CensusWebs.keep_pace": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.CensusWebs.keep_pace",
+     "standing": "counting",
+     "basis": {
+      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.ClosedCapture.lock_outlives_loss": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Dependence.Overdetermined.only_together": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "joint-difference-making",
+      "law": 13,
+      "declaration": "Becoming.ModelStatements.only_together_reading",
+      "models": [
+       "process"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Dependence.differenceOnlyTogether_iff": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "joint-difference-making",
+      "law": 14,
+      "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+      "models": [
+       "process"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Direction.extension_iff_widens": {
+    "label": "at its model",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Direction.extension_iff_widens",
+     "standing": "at its model",
+     "basis": {
+      "en": "C's extension on the moves' frame, proved as Web.paths_extension_iff_widens (another central row, on its own carrier) read at that frame; a law of that model."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Direction.widening_selected_by_pool": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Drift.falls_back": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Drift.falls_back",
+     "standing": "counting",
+     "basis": {
+      "en": "Courses of n binary draws, weighted, counted; reading the courses as drift is the model's hypothesis, not part of the statement."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.ExchangeLaw.response_not_fixed_by_coupling": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "what-a-pools-acts-respond-to",
+      "law": 12,
+      "declaration": "Becoming.ModelStatements.response_not_fixed_reading",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.Balances.comparison_within_response": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.Balances.consumption_ends_with_feeders": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.Balances.renewedBy": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.Balances.retains_iff_within_margin": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.Balances.widens_iff_others_within": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.Dissipative.opens": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.More.replenishment_unbounded": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.act_selected_by_pool": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.act_unselected": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.beyond_gives_nothing": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之界»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.beyond_gives_nothing",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it. WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required condition; the support, eq_zero_of_not_pos, is Flow's lemma that a natural number not above nothing is nothing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之界»"
+     ],
+     "support": [
+      "Becoming.eq_zero_of_not_pos"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Flow.change_recurs_iff": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.continuing_excludes": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.descent_reaches": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "living-on-and-descent",
+      "law": 11,
+      "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.mutuallyDependent_iff_reach": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之逆»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之逆», both ways: mutual dependence is every formation within every other's influence closure, being within reach is that closure read backward, and WithinClosure.converse, through which the row is proved, is the law at the frame (HE2, item 3)."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之逆»"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Flow.new_beyond_every": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.Balances"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.new_beyond_every",
+     "standing": "amounts",
+     "basis": {
+      "en": "Endless novelty concludes that a family is given more than it takes, by the rest or across its boundary, an imbalance of amounts; balance enters only the proof."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Flow.no_new_dependence": {
+    "label": "balance in its statement",
+    "placed": "reading",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": true,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.no_new_dependence",
+     "standing": "balance in its statement",
+     "basis": {
+      "en": "Its statement writes balance out, an equation of the level with what is taken and given, so the rule places it here. Its relational part is the root form RootForms.descent_forms_no_dependence: the row is that form at its one relatum, certified by rfl. But the row meets the form's first hypothesis, that what comes to stand is given to, only through Flow.descends_of_comes, which is amount reasoning (balance and a rise from nothing give a positive giving), so its recovery fails the discharge condition and the row keeps its distance."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "relational_part": "Becoming.RootForms.descent_forms_no_dependence",
+     "verified": true
+    }
+   },
+   "Becoming.Flow.outrun_below": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.restores": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": true,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.selected_le": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.selected_le",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the parents' needs, weighted by their offspring, with the level, at one step of descent."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Flow.selection_within": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.selection_within",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the offspring's totals with the lowered and raised terms, at one step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Flow.transmitted_supported": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.transmitted_supported",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion bounds a descendant's need by the level plus δ, and the hypothesis that transmission stays within δ (TransmitsWithin) constrains amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Flow.unexcluded_beyond_coupling": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.unselected_beyond_coupling": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.unselected_beyond_pool": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Flow.uptake_needs_replenishment": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Flow.withinCoupling_reads_iff": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«二所闭在借步之所闭»",
+     "Becoming.«借步之所闭在二所闭»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «借步之所闭在二所闭» one way and «二所闭在借步之所闭» the other: the coupling closure of o reading a's couplings is the closure through borrowed steps. Flow.CoupledFrom.of_reads splits a step of it into a step of the pool or one from a taken at o, which meets the first law's hypothesis; the row's hypothesis that a acts on a condition coupled into it puts a within o's closure, which meets the second's. WithinClosureOf.to_reads is the second law with the pool's two-member closure read as a disjunction, its inclusion met inline by the pool's couplings lying within the reader's, and its reach by WithinClosure.of_rel (HE2, item 4)."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«借步之所闭在二所闭»",
+      "Becoming.«二所闭在借步之所闭»"
+     ],
+     "support": [
+      "Becoming.Flow.withinCoupling_reads",
+      "Becoming.WithinClosure.of_reads",
+      "Becoming.Flow.CoupledFrom.of_reads",
+      "Becoming.WithinClosureOf.to_reads"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [
+       "Becoming.«缘在所闭»"
+      ],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Flow.withinSystem_of_withinInfluence": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之单调»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion. WithinClosure.mono is listed as support only because the dump's forwarder test does not recognize a law applied past its «则» conclusion (BOUNDARY-FIELD §3.0); it leaves the support when the test does."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«所闭之单调»"
+     ],
+     "support": [
+      "Becoming.Flow.shares_of_affectedBy",
+      "Becoming.WithinClosure.mono"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.GroupEnding.Flow.all_end": {
+    "label": "under a stated hypothesis",
+    "placed": "checked entry",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.GroupEnding.Flow.all_end",
+     "standing": "under a stated hypothesis",
+     "basis": {
+      "en": "The row is the root form at one step: giving is a member present at the step giving a positive amount, the region is activity at the step, and the listing is the generation with its offspring lists. That only active formations give (K3's premise \"only active relata give\") meets the first hypothesis, and that descent is giving meets the second, each by definitions alone; the next generation's size is the length of the offspring lists' join, by the family's definition. Beyond the form's hypotheses at the one step, the row carries the gate and descent at every step, and descent's third part, that each offspring comes to stand, which the recovery does not use; neither places the row. Lever 2's witnesses at the model show that the model does not meet each hypothesis automatically."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "form": "Becoming.RootForms.outside_leaves_no_offspring",
+     "hypotheses": [
+      {
+       "hypothesis": "Becoming.RootForms.GivesFrom",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_gate",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.gate_needed"
+      },
+      {
+       "hypothesis": "Becoming.RootForms.ListedWithin",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_descent",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.descent_needed"
+      },
+      {
+       "hypothesis": "Becoming.RootForms.Outside",
+       "countermodel": "Becoming.RootForms.outside_leaves_no_offspring.needs_outside",
+       "fit": "Becoming.RootForms.outside_leaves_no_offspring.outside_needed"
+      }
+     ],
+     "recovery": "Becoming.RootForms.all_end_at_model",
+     "certificate": "Becoming.RootForms.all_end_certified",
+     "verified": true,
+     "report": {
+      "statement_names": [
+       "Becoming.«际»",
+       "List",
+       "Becoming.RootForms.GivesFrom",
+       "Becoming.RootForms.ListedWithin",
+       "Becoming.RootForms.Outside",
+       "Eq",
+       "Nat",
+       "List.length",
+       "List.flatMap",
+       "OfNat.ofNat",
+       "instOfNatNat"
+      ],
+      "hypothesis_names": {
+       "Becoming.RootForms.Outside": [
+        "List",
+        "Membership.mem",
+        "List.instMembership",
+        "Not"
+       ],
+       "Becoming.RootForms.ListedWithin": [
+        "List",
+        "Becoming.«际»",
+        "Becoming.«则»",
+        "And",
+        "Membership.mem",
+        "List.instMembership"
+       ],
+       "Becoming.RootForms.GivesFrom": [
+        "Becoming.«际»",
+        "Becoming.«则»",
+        "Becoming.«而»",
+        "And",
+        "Eq"
+       ]
+      },
+      "facts": {
+       "Becoming.RootForms.outside_leaves_no_offspring.outside_needed": [
+        "Becoming.RootForms.one_offspring",
+        "Becoming.RootForms.gives_from_everywhere",
+        "Becoming.RootForms.listed_within_all"
+       ],
+       "Becoming.RootForms.outside_leaves_no_offspring.gate_needed": [
+        "Becoming.RootForms.one_offspring",
+        "Becoming.RootForms.listed_within_all",
+        "Becoming.RootForms.outside_nowhere"
+       ],
+       "Becoming.RootForms.outside_leaves_no_offspring.descent_needed": [
+        "Becoming.RootForms.one_offspring",
+        "Becoming.RootForms.gives_from_vacuous",
+        "Becoming.RootForms.outside_nowhere"
+       ]
+      },
+      "recovery_uses": [
+       "Becoming.RootForms.outside_leaves_no_offspring",
+       "And.left",
+       "And.right"
+      ]
+     }
+    }
+   },
+   "Becoming.GroupEnding.Flow.coupled_end_together": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.GroupEnding.Flow.family_childless": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.GroupEnding.Flow.rises_iff_inactive": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Ideals.verifiableBy_iff_interior": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "what-a-finite-stretch-verifies",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Law.drawn_iff_not_returns": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«定后有后则入当且仅当不返»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Law.drawn_iff_not_returns",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «定后有后则入当且仅当不返» at the relation of the law's next configuration, its successor fixed and total. The bridges read the model's drawn, absorbing, orbit and return as the grammar's «入», closed region («闭», Law.absorbing_iff_closed), «及» and return, the orbit by recursion; the support is the orbit's arithmetic of steps, the trace's length and the successor's being fixed and total."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«定后有后则入当且仅当不返»"
+     ],
+     "bridges": [
+      "Becoming.Branching.law_reach_iff",
+      "Becoming.Branching.law_trace_iff",
+      "Becoming.Law.absorbing_iff_closed",
+      "Becoming.Law.drawn_iff_drawnIn",
+      "Becoming.Law.reaches_iff_orbit",
+      "Becoming.Law.returns_iff",
+      "Becoming.Law.returns_iff_reaches"
+     ],
+     "support": [
+      "Becoming.Branching.law_trace_of",
+      "Becoming.Branching.units_length",
+      "Becoming.Law.next_fixed",
+      "Becoming.Law.next_total",
+      "Becoming.Law.orbit_add",
+      "Becoming.Law.orbit_shift",
+      "Becoming.Law.reaches_of_orbit"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Law.lossless_iff_returns": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Law.lossless_iff_returns",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «有限遍后定后则定前当且仅当皆返» at the law's next configuration over the listed ones: lossless is the predecessor fixed (two bridges), the other five bridges are among those of Law.drawn_iff_not_returns, and the support is its support."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«有限遍后定后则定前当且仅当皆返»"
+     ],
+     "bridges": [
+      "Becoming.Branching.law_reach_iff",
+      "Becoming.Branching.law_trace_iff",
+      "Becoming.Law.lossless_iff",
+      "Becoming.Law.lossless_iff_fixedBefore",
+      "Becoming.Law.reaches_iff_orbit",
+      "Becoming.Law.returns_iff",
+      "Becoming.Law.returns_iff_reaches"
+     ],
+     "support": [
+      "Becoming.Branching.law_trace_of",
+      "Becoming.Branching.units_length",
+      "Becoming.Law.next_fixed",
+      "Becoming.Law.next_total",
+      "Becoming.Law.orbit_add",
+      "Becoming.Law.orbit_shift",
+      "Becoming.Law.reaches_of_orbit"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Learnable.learnable_iff": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«迭之定»",
+     "Becoming.«迭之接»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.LearnableRuns.learnable_iff_tracks": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«迭之定»",
+     "Becoming.«迭之接»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Learning.Training.unselected_beyond_data": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "generalization-through-lumping",
+      "law": 13,
+      "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Learning.goAlike_iff_lumped": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«像定后当且仅当同行»",
+     "Becoming.«同行之逐点»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Learning.goAlike_iff_lumped",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «像定后当且仅当同行» at the law's step along the projection, with «同行之逐点»: going alike under the projection is the grammar's «同行», and lumped is a fixed successor of the image, both unfoldings."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«像定后当且仅当同行»"
+     ],
+     "bridges": [
+      "Becoming.Learning.lumped_iff_fixed_image",
+      "Becoming.goAlikeUnder_iff_alike"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [
+       "Becoming.«同行之逐点»"
+      ],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Limit.identifies_iff_tracks": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "learning-through-a-map-is-tracking-in-the-limit",
+      "law": 6,
+      "declaration": "Becoming.ModelStatements.identifies_iff_reading",
+      "models": [
+       "process"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Listed.coming_of_ceasing": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Listed.coming_of_ceasing",
+     "standing": "counting",
+     "basis": {
+      "en": "For any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the statement unfolds to the prelude's Distinct and Init and names no amount."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Optimum.mutual_beyond": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesBetween"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Optimum.optimum_beyond": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesBetween"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Pace.rule_until_reading": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.PartForms.goAlike": {
+    "label": "at its model",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.PartForms.goAlike",
+     "standing": "at its model",
+     "basis": {
+      "en": "A law of its model, the part carrying a law of its own; the image law only reads it."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.RegimeMargin.Adjusted.comes_to_rest": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»",
+     "Becoming.«迭之周»",
+     "Becoming.«迭之定»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    }
+   },
+   "Becoming.RegimeMargin.Adjusted.ends_iff_below": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "As RegimeMargin.ends_iff_below, with recent giving adjusted: a comparison of amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.RegimeMargin.Adjusted.falls_iff_below": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»",
+     "Becoming.«迭之周»",
+     "Becoming.«迭之定»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    }
+   },
+   "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.RegimeMargin.Coupled.threshold_falls": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    }
+   },
+   "Becoming.RegimeMargin.Drawn.run_shape": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.RegimeMargin.ends_iff_below": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.RegimeMargin.ends_iff_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "A run of natural-number levels ends exactly below H + y: a comparison of amounts."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.RelativePosition.rise_needs_fall": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.RelativePosition.rise_needs_fall",
+     "standing": "counting",
+     "basis": {
+      "en": "A rise and a fall counted over a list, by the commutativity of addition."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Renewable.no_exact_finite_reading": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "becoming-finite-horizon",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.finite_reading_not_exact",
+      "models": [
+       "process",
+       "occurrence"
+      ]
+     },
+     {
+      "record": "becoming-finite-horizon",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.renewing_not_closed",
+      "models": [
+       "process",
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Reproduction.Flow.closed_lineage_lowered": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Reproduction.Flow.lineage_ends": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesOn"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Reproduction.Flow.number_within_take": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Reproduction.Flow.number_within_take",
+     "standing": "amounts",
+     "basis": {
+      "en": "Dissipation on a family and an injection from births to given units bound a count within a take, an amount; dissipation is kept as a premise of the account."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.RuleCapture.favouring_locks": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.RuleCapture.uniform_locks": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Run.not_fixes_of_untaken": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "experiment-needs-return",
+      "law": 9,
+      "declaration": "Becoming.ModelStatements.not_fixes_reading",
+      "models": [
+       "process"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.SelectionLevels.levels_sized": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.SelectionLevels.levels_sized",
+     "standing": "counting",
+     "basis": {
+      "en": "Price's partition into selection within and among groups of any sizes: an identity of counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.SelectionLevels.rises_exact_iff_levels": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+     "standing": "amounts",
+     "basis": {
+      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.SelectionTerm.Flow.support_moved_rises": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.SelectionTerm.Flow.support_not_lower": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+     "standing": "amounts",
+     "basis": {
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.SelectionTerm.covariation": {
+    "label": "counting",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.SelectionTerm.covariation",
+     "standing": "counting",
+     "basis": {
+      "en": "Price's covariance: an identity of counting."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.SharedCodes.run_agrees_every_start_iff": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "a-code-formed-between-formations",
+      "law": 11,
+      "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+      "models": [
+       "process",
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Tolerance.answers_restores_iff": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«承之迭»",
+     "Becoming.«迭之末步»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Tolerance.answers_restores_iff",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «承之迭» at the relation up: answering is «承» of up by definition, the model's chain is «迭» by recursion through «迭之末步», and the worst start reduces every start to total withholding, the answering step keeping inclusion (Tolerance.answers_keeps); the support keeps inclusion along a course and takes the chain's last step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«承之迭»"
+     ],
+     "bridges": [
+      "Becoming.Tolerance.worst_start",
+      "Becoming.Withholding.answers_closed",
+      "Becoming.Withholding.chain_iff_steps"
+     ],
+     "support": [
+      "Becoming.Tolerance.KeepsInclusion.course",
+      "Becoming.Tolerance.KeepsInclusionInto.course",
+      "Becoming.Tolerance.answers_keeps",
+      "Becoming.Withholding.Chain.last",
+      "Becoming.Withholding.Chain.last_of_eq",
+      "Becoming.Withholding.Chain.zero_eq"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [
+       "Becoming.«迭之末步»"
+      ],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.Valuation.significant_iff": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«所闭之自反»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Valuation.significant_iff_held": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "living-significance-on-held-lives",
+      "law": 10,
+      "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Viability.kernel_and_iff": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "conditions-kept-together",
+      "law": 5,
+      "declaration": "Becoming.ModelStatements.kernel_and_reading",
+      "models": [
+       "process"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.Carries.active_not_recurring": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.Embodied.replenishes": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Web.Next.frontier_ends_drawn_first": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima end the condition drawn first, in natural-number levels and weighted sums."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.Unceasing.activeRenewer_recurs": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.Unceasing.rises": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.Whole.family_excess_ends": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«线则所闭»",
+     "Becoming.«闭含所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.Web.course_lost_iff": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.BalancesBetween"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    }
+   },
+   "Becoming.Web.frontier_breaks_below": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.frontier_breaks_below",
+     "standing": "amounts",
+     "basis": {
+      "en": "A coupling below what keeping forgoes, in natural-number worths and draws, breaks a dependence."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.frontier_broken": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.frontier_broken",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima of orders on natural-number levels and what is drawn break a dependence."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.frontier_exhausts": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.frontier_exhausts",
+     "standing": "amounts",
+     "basis": {
+      "en": "A weighting falling faster than levels rise leaves the level at nothing."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.frontier_keeps_stepwise": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.frontier_keeps_stepwise",
+     "standing": "amounts",
+     "basis": {
+      "en": "Optima keep a level stepwise, in natural-number levels and draws with a per-step coupling w."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.frontier_rebuilds": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.balance_over_stretch_on"
+     ]
+    },
+    "entry": {
+     "declaration": "Becoming.Web.frontier_rebuilds",
+     "standing": "amounts",
+     "basis": {
+      "en": "A level rising faster than the weighting falls is rebuilt, in natural-number levels and weights."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.living_on_reaches": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "living-on-and-descent",
+      "law": 10,
+      "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.optimum_broken_iff": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "what-an-optimum-does-beyond-what-couples-in",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+      "models": [
+       "own",
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.paths_comparison_widens": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "comparison-by-widening",
+      "law": 10,
+      "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.paths_extension_iff_widens": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "comparison-by-widening",
+      "law": 9,
+      "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.paths_one_object": {
+    "label": "free significance",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Web.paths_one_object",
+     "standing": "free significance",
+     "basis": {
+      "en": "It keeps significance free, as chapter 7 intends; its root form, SignificanceStatements.paths_one_object_root, holds at the own-closure reading only (U3) and states less than the row."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Web.renewingAt_iff_over_all": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "represented-boundary-against-dependence",
+      "law": 6,
+      "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.roles_alive": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "life-as-condition-of-life",
+      "law": 16,
+      "declaration": "Becoming.ModelStatements.roles_alive_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.roles_dependent": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "life-as-condition-of-life",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.roles_supported": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "life-as-condition-of-life",
+      "law": 14,
+      "declaration": "Becoming.ModelStatements.roles_supported_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.selfValuation_significant_iff": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之自反»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.significance_undetermined": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "continuation-condition-yields-living-significance",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+      "models": [
+       "own",
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.transmits_at_iff": {
+    "label": "at a represented model",
+    "placed": "the rule",
+    "rule": "at a represented model",
+    "f5": "stated at a represented model",
+    "at_model": [
+     {
+      "record": "transmission-is-inheritance-and-need",
+      "law": 16,
+      "declaration": "Becoming.ModelStatements.transmits_at_reading",
+      "models": [
+       "occurrence"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Web.widens_iff_retains_adds": {
+    "label": "free significance",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Web.widens_iff_retains_adds",
+     "standing": "free significance",
+     "basis": {
+      "en": "It takes the condition as a hypothesis with significance free, as chapter 7 intends; its root form, SignificanceStatements.widens_iff_retains_adds_root, holds at the own-closure reading only (U3) and states less than the row."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.Weighting.widens_iff_every_positive": {
+    "label": "own carrier",
+    "placed": "the rule",
+    "rule": "own carrier",
+    "f5": "stated on its own carrier only",
+    "at_model": [
+     {
+      "record": "widening-as-what-every-weighting-ranks",
+      "law": 10,
+      "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+      "models": [
+       "own"
+      ]
+     }
+    ],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.Withholding.withholding_spreads": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«存承之迭»",
+     "Becoming.«迭之末步»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.Withholding.withholding_spreads",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «存承之迭» at up: waiting on all meets the law's round by unfolding (Withholding.waitsAll_closed), and within n steps is the grammar's, through the chain read as «迭» by recursion; the support takes the chain's last step."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«存承之迭»"
+     ],
+     "bridges": [
+      "Becoming.Withholding.chain_iff_steps",
+      "Becoming.Withholding.waitsAll_closed",
+      "Becoming.Withholding.within_iff_withinSteps"
+     ],
+     "support": [
+      "Becoming.Withholding.Chain.last",
+      "Becoming.Withholding.Chain.last_of_eq",
+      "Becoming.Withholding.Chain.zero_eq"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [
+       "Becoming.«迭之末步»"
+      ],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.WithinMoves.after_course": {
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«迭内之接»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.WithinMoves.after_course",
+     "standing": "derived",
+     "basis": {
+      "en": "A case of «迭内之接» at the moves' steps: a trace and being within moves are the grammar's steps (two bridges), and that a trace gives steps is support."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "law": [
+      "Becoming.«迭内之接»"
+     ],
+     "bridges": [
+      "Becoming.trace_iff_steps",
+      "Becoming.withinMoves_iff_withinSteps"
+     ],
+     "support": [
+      "Becoming.trace_steps"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [],
+      "root_theorems_named": [],
+      "forwarder": null
+     }
+    }
+   },
+   "Becoming.World.balanced_reidentify_iff": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.World.comes_to_rest_unrefuted": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«尽则不或屡»"
+    ],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.act_courses_unselected": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之传递»",
+     "Becoming.«缘在所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": [
+      "Becoming.Flow.Balances",
+      "Becoming.Flow.BalancesOn"
+     ]
+    }
+   },
+   "Becoming.apart_only_downstream": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.carried_iff_rising": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.carried_iff_rising",
+     "standing": "amounts",
+     "basis": {
+      "en": "An exchange law carries exactly where the reading rises: the statement compares responses (r x ≤ r (x + 1) below N, the levels bounded by N), and the support is inside the existential, not kept. A law of its model, placed by its amounts, as responses_le_missBound is."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.counterfactual_is_course": {
+    "label": "balance in its statement",
+    "placed": "the rule",
+    "rule": "balance in its statement",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [
+      "Becoming.Flow.Balances"
+     ],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.forced_iff_center": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之自反»",
+     "Becoming.«所闭之闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.onLoop_of_closing": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«及之传递»",
+     "Becoming.«及当且仅当一步而所闭»",
+     "Becoming.«所闭当且仅当同一或及»",
+     "Becoming.«线则所闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.presupposition_scopes": {
+    "label": "connected",
+    "placed": "the rule",
+    "rule": "connected",
+    "f5": "reaching the grammar",
+    "at_model": [],
+    "grammar_laws_reached": [
+     "Becoming.«所闭之自反»",
+     "Becoming.«所闭之闭»"
+    ],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    }
+   },
+   "Becoming.responses_le_missBound": {
+    "label": "amounts",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.responses_le_missBound",
+     "standing": "amounts",
+     "basis": {
+      "en": "A bound of propagation on amounts, a law of its model."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   },
+   "Becoming.unrestricted_iff_livingSignificance": {
+    "label": "free significance",
+    "placed": "reading",
+    "rule": "unplaced",
+    "f5": "the rest",
+    "at_model": [],
+    "grammar_laws_reached": [],
+    "balance": {
+     "anchor_in_statement": [],
+     "written_out": false,
+     "proof_only": []
+    },
+    "entry": {
+     "declaration": "Becoming.unrestricted_iff_livingSignificance",
+     "standing": "free significance",
+     "basis": {
+      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+     },
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "verified": true
+    }
+   }
+  }
  }
 }

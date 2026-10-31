@@ -62,7 +62,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T043328.214810Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.
+Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.
 
 Canonical source: [FreeEnergyReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean)
 
@@ -108,6 +108,7 @@ Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951)
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md) | — |
 | integration | [REVIEW-UE22.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/REVIEW-UE22.md) | — |
 | integration | [RECHECK-UE22.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json) | — |
 
 Aliases: `Variational free energy bounds surprisal`, `变分自由能为惊异之界`, `variational free energy`, `the free-energy bound`, `Gibbs inequality`, `perception as conditioning`, `Becoming.FreeEnergy.surprisal_le_freeEnergy`, `Becoming.FreeEnergy.minimizes_iff_givenShare`, `Becoming.FreeEnergy.gap_counts`
 

@@ -1,0 +1,9 @@
+import Becoming.ActivationCapacity
+#print axioms Becoming.ActivationCapacity.both
+#print axioms Becoming.ActivationCapacity.joint_iff
+#print axioms Becoming.ActivationCapacity.coupled_within_one
+#print axioms Becoming.ActivationCapacity.initial_not_within_one
+#print axioms Becoming.ActivationCapacity.preparation_changes_capacity
+#print axioms Becoming.ActivationCapacity.released_not_joint
+#print axioms Becoming.ActivationCapacity.release_loses_joint
+#print axioms Becoming.ActivationCapacity.prepared_can_end_one_sided

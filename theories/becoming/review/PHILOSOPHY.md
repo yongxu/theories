@@ -38,7 +38,7 @@ What the path does not reach, such as present beings beyond every closure, needs
 3. Is invariance across drawings the right form of the contested step, and is the de se case against it at its strongest ([P-08](#p-08) to [P-11](#p-11))?
 4. What known work goes uncredited, and what first objection is missing ([P-27](#p-27))?
 
-**How long.** This section takes ten minutes. With an hour, read [P-04](#p-04), [P-05](#p-05), [P-07](#p-07), [P-10](#p-10), [P-11](#p-11) and [P-20](#p-20). The whole takes about two hours, a reply on every item a day or more; any item can be answered alone, on the [response form](#response-form).
+**How long.** This section takes ten minutes. With an hour, read [P-04](#p-04), [P-05](#p-05), [P-07](#p-07), [P-10](#p-10), [P-11](#p-11) and [P-20](#p-20). The whole takes 100 to 135 minutes, a reply on every item a day or more; any item can be answered alone, on the [response form](#response-form).
 
 <a id="the-items"></a>
 ## The items

@@ -55,7 +55,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core, by check_becoming.py (Lean 4.29.1): Becoming.CrossSituational and Becoming.Courses bound to becoming-checks/20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery, Lean 4.29.1: MachineInstances bound to machine-instances-checks/20261020T161859.257200Z (check_machine_instances.py), RetrospectiveBinding and SourceReliance to inquiry-root/retrospective-binding-verification.json (check_retrospective_binding.py); cited periphery declarations use at most propext and Quot.sound, inherited modules Classical.choice. Primary-source comparison and author counter-review.
+Core, by check_becoming.py (Lean 4.29.1): Becoming.CrossSituational and Becoming.Courses bound to becoming-checks/20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery, Lean 4.29.1: MachineInstances bound to machine-instances-checks/20261031T131812.213702Z (check_machine_instances.py), RetrospectiveBinding and SourceReliance to inquiry-root/retrospective-binding-verification.json (check_retrospective_binding.py); cited periphery declarations use at most propext and Quot.sound, inherited modules Classical.choice. Primary-source comparison and author counter-review.
 
 Canonical source: [RetrospectiveBinding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean)
 
@@ -110,6 +110,7 @@ Record contents persist while their current evidential role can change. bindingV
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `Generative.RetrospectiveBinding.retrospective_evidence_enters_compositional_use`, `Becoming.MachineInstances.retrospective_interprets_every`, `Becoming.CrossSituational.resolves_explained_iff`, `Becoming.MachineInstances.retrospective_resolves_iff`, `Becoming.Courses.run_resolves_explained_iff`
 

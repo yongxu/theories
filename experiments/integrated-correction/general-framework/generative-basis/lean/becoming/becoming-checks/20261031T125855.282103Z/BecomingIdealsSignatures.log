@@ -1,0 +1,301 @@
+@Becoming.Ideals.Preorder.Equiv.refl : ∀ {α : Type u_1} (P : Becoming.Ideals.Preorder α) (a : α), P.Equiv a a
+@Becoming.Ideals.Preorder.Equiv.symm : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {a b : α},
+  P.Equiv a b → P.Equiv b a
+@Becoming.Ideals.Preorder.Equiv.trans : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {a b c : α},
+  P.Equiv a b → P.Equiv b c → P.Equiv a c
+@Becoming.Ideals.Ideal.LE.refl : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (I : Becoming.Ideals.Ideal P), I.LE I
+@Becoming.Ideals.Ideal.LE.trans : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J K : Becoming.Ideals.Ideal P},
+  I.LE J → J.LE K → I.LE K
+@Becoming.Ideals.Ideal.Same.refl : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (I : Becoming.Ideals.Ideal P),
+  I.Same I
+@Becoming.Ideals.Ideal.Same.symm : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J : Becoming.Ideals.Ideal P},
+  I.Same J → J.Same I
+@Becoming.Ideals.Ideal.Same.trans : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J K : Becoming.Ideals.Ideal P},
+  I.Same J → J.Same K → I.Same K
+@Becoming.Ideals.Ideal.Same.le : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J : Becoming.Ideals.Ideal P},
+  I.Same J → I.LE J
+@Becoming.Ideals.Ideal.Same.ge : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J : Becoming.Ideals.Ideal P},
+  I.Same J → J.LE I
+@Becoming.Ideals.Ideal.same_of_le : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I J : Becoming.Ideals.Ideal P},
+  I.LE J → J.LE I → I.Same J
+@Becoming.Ideals.idealOrder_equiv_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {I J : Becoming.Ideals.Ideal P}, (Becoming.Ideals.idealOrder P).Equiv I J ↔ I.Same J
+@Becoming.Ideals.principal_le_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {p : α}
+  {I : Becoming.Ideals.Ideal P}, (Becoming.Ideals.principal P p).LE I ↔ I.mem p
+@Becoming.Ideals.Ideal.directed_mem : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.Directed P I.mem
+@Becoming.Ideals.le_union : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (D : Becoming.Ideals.Ideal P → Prop)
+  (hd : Becoming.Ideals.Directed (Becoming.Ideals.idealOrder P) D) {I : Becoming.Ideals.Ideal P},
+  D I → I.LE (Becoming.Ideals.union D hd)
+@Becoming.Ideals.union_le : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (D : Becoming.Ideals.Ideal P → Prop)
+  (hd : Becoming.Ideals.Directed (Becoming.Ideals.idealOrder P) D) (J : Becoming.Ideals.Ideal P),
+  (∀ (I : Becoming.Ideals.Ideal P), D I → I.LE J) → (Becoming.Ideals.union D hd).LE J
+@Becoming.Ideals.principalFamily_directed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.Directed (Becoming.Ideals.idealOrder P) (Becoming.Ideals.principalFamily I)
+@Becoming.Ideals.union_principalFamily : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (I : Becoming.Ideals.Ideal P), (Becoming.Ideals.union (Becoming.Ideals.principalFamily I) ⋯).Same I
+@Becoming.Ideals.AdheresBy.of : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X}, K x → Becoming.Ideals.AdheresBy ι K x
+@Becoming.Ideals.AdheresBy.mono : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K L : X → Prop} {x : X},
+  (∀ (y : X), K y → L y) → Becoming.Ideals.AdheresBy ι K x → Becoming.Ideals.AdheresBy ι L x
+@Becoming.Ideals.AdheresBy.adheres : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.AdheresBy ι (Becoming.Ideals.AdheresBy ι K) x → Becoming.Ideals.AdheresBy ι K x
+@Becoming.Ideals.RefutableBy.not_not : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.RefutableBy ι K → Becoming.Ideals.AdheresBy ι K x → ¬¬K x
+@Becoming.Ideals.RefutableBy.adheres_least : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K L : X → Prop} {x : X},
+  Becoming.Ideals.RefutableBy ι L → (∀ (y : X), K y → L y) → Becoming.Ideals.AdheresBy ι K x → ¬¬L x
+@Becoming.Ideals.RefutableBy.adheres_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.RefutableBy ι K → (∀ (y : X), ¬¬K y → K y) → (Becoming.Ideals.AdheresBy ι K x ↔ K x)
+@Becoming.Ideals.not_refutableBy_of_adheres : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.AdheresBy ι K x → ¬K x → ¬Becoming.Ideals.RefutableBy ι K
+@Becoming.Ideals.AdheresBy.closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {p : α},
+  (¬∃ y, K y ∧ (ι y).mem p) → ∀ (x : X), (ι x).mem p → ¬Becoming.Ideals.AdheresBy ι K x
+@Becoming.Ideals.refutableBy_adheres_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.RefutableBy ι (Becoming.Ideals.AdheresBy ι K) ↔
+    ∀ (x : X), ¬Becoming.Ideals.AdheresBy ι K x → ∃ p, (ι x).mem p ∧ ¬∃ y, K y ∧ (ι y).mem p
+@Becoming.Ideals.RefutableBy.congr : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K L : X → Prop},
+  (∀ (x : X), K x ↔ L x) → (Becoming.Ideals.RefutableBy ι K ↔ Becoming.Ideals.RefutableBy ι L)
+@Becoming.Ideals.ScottClosed.same : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C → ∀ {I J : Becoming.Ideals.Ideal P}, C I → I.Same J → C J
+@Becoming.Ideals.ScottClosed.principal_of_mem : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C →
+    ∀ {I : Becoming.Ideals.Ideal P}, C I → ∀ {p : α}, I.mem p → C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.closed_of_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C E : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C → (∀ (I : Becoming.Ideals.Ideal P), C I ↔ E I) → Becoming.Ideals.ScottClosed E
+@Becoming.Ideals.within_closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (Q : α → Prop),
+  Becoming.Ideals.ScottClosed (Becoming.Ideals.Within P Q)
+@Becoming.Ideals.within_principal_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop},
+  Becoming.Ideals.Lower P Q → ∀ {p : α}, Becoming.Ideals.Within P Q (Becoming.Ideals.principal P p) ↔ Q p
+@Becoming.Ideals.closed_iff_within_principal : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C →
+    ∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P (fun p => C (Becoming.Ideals.principal P p)) I
+@Becoming.Ideals.principal_lower : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C → Becoming.Ideals.Lower P fun p => C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.closed_iff_lower : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (C : Becoming.Ideals.Ideal P → Prop),
+  Becoming.Ideals.ScottClosed C ↔
+    ∃ Q, Becoming.Ideals.Lower P Q ∧ ∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P Q I
+@Becoming.Ideals.lower_unique : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C : Becoming.Ideals.Ideal P → Prop}
+  {Q : α → Prop},
+  Becoming.Ideals.Lower P Q →
+    (∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P Q I) →
+      ∀ (p : α), Q p ↔ C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.lower_unique_of_two : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop} {Q R : α → Prop},
+  Becoming.Ideals.Lower P Q →
+    Becoming.Ideals.Lower P R →
+      (∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P Q I) →
+        (∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P R I) → ∀ (p : α), Q p ↔ R p
+@Becoming.Ideals.principal_iff_content : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C → ∀ (p : α), C (Becoming.Ideals.principal P p) ↔ Becoming.Ideals.Content C p
+@Becoming.Ideals.lower_iff_content : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop} {Q : α → Prop},
+  Becoming.Ideals.Lower P Q →
+    (∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Within P Q I) → ∀ (p : α), Q p ↔ Becoming.Ideals.Content C p
+@Becoming.Ideals.content_lower : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (C : Becoming.Ideals.Ideal P → Prop),
+  Becoming.Ideals.Lower P (Becoming.Ideals.Content C)
+@Becoming.Ideals.Refutable.lower_not_not : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Refutable C → ∀ {I J : Becoming.Ideals.Ideal P}, C I → J.LE I → ¬¬C J
+@Becoming.Ideals.Refutable.unions_not_not : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Refutable C →
+    ∀ (D : Becoming.Ideals.Ideal P → Prop) (hd : Becoming.Ideals.Directed (Becoming.Ideals.idealOrder P) D),
+      (∀ (I : Becoming.Ideals.Ideal P), D I → C I) → ¬¬C (Becoming.Ideals.union D hd)
+@Becoming.Ideals.Refutable.closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Refutable C → (∀ (I : Becoming.Ideals.Ideal P), ¬¬C I → C I) → Becoming.Ideals.ScottClosed C
+@Becoming.Ideals.ScottClosed.refutable_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C →
+    (Becoming.Ideals.Refutable C ↔
+      ∀ (I : Becoming.Ideals.Ideal P), ¬C I → ∃ p, I.mem p ∧ ¬C (Becoming.Ideals.principal P p))
+@Becoming.Ideals.within_refutable_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop},
+  Becoming.Ideals.Lower P Q →
+    (Becoming.Ideals.Refutable (Becoming.Ideals.Within P Q) ↔
+      ∀ (I : Becoming.Ideals.Ideal P), ¬Becoming.Ideals.Within P Q I → ∃ p, I.mem p ∧ ¬Q p)
+@Becoming.Ideals.within_false : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {I : Becoming.Ideals.Ideal P},
+  ¬Becoming.Ideals.Within P (fun x => False) I
+@Becoming.Ideals.false_refutable : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α},
+  Becoming.Ideals.Refutable fun x => False
+@Becoming.Ideals.false_closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α},
+  Becoming.Ideals.ScottClosed fun x => False
+@Becoming.Ideals.content_false : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (p : α),
+  ¬Becoming.Ideals.Content (fun x => False) p
+@Becoming.Ideals.hull_iff_within_content : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop} {I : Becoming.Ideals.Ideal P},
+  Becoming.Ideals.Hull C I ↔ Becoming.Ideals.Within P (Becoming.Ideals.Content C) I
+@Becoming.Ideals.hull_closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (C : Becoming.Ideals.Ideal P → Prop),
+  Becoming.Ideals.ScottClosed (Becoming.Ideals.Hull C)
+@Becoming.Ideals.hull_least : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C E : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed E →
+    (∀ (I : Becoming.Ideals.Ideal P), C I → E I) → ∀ {I : Becoming.Ideals.Ideal P}, Becoming.Ideals.Hull C I → E I
+@Becoming.Ideals.hull_content : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (C : Becoming.Ideals.Ideal P → Prop)
+  (p : α), Becoming.Ideals.Content (Becoming.Ideals.Hull C) p ↔ Becoming.Ideals.Content C p
+@Becoming.Ideals.hull_unique : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C H : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed H →
+    (∀ (I : Becoming.Ideals.Ideal P), C I → H I) →
+      (∀ (E : Becoming.Ideals.Ideal P → Prop),
+          Becoming.Ideals.ScottClosed E →
+            (∀ (I : Becoming.Ideals.Ideal P), C I → E I) → ∀ (I : Becoming.Ideals.Ideal P), H I → E I) →
+        ∀ (I : Becoming.Ideals.Ideal P), H I ↔ Becoming.Ideals.Hull C I
+@Becoming.Ideals.ScottClosed.hull_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C → ∀ (I : Becoming.Ideals.Ideal P), Becoming.Ideals.Hull C I ↔ C I
+@Becoming.Ideals.hull_joint : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C : Becoming.Ideals.Ideal P → Prop}
+  {I : Becoming.Ideals.Ideal P},
+  Becoming.Ideals.Hull C I → ∀ {p q : α}, I.mem p → I.mem q → ∃ J, C J ∧ ∃ r, J.mem r ∧ P.le p r ∧ P.le q r
+@Becoming.Ideals.avoids_iff_within : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (F : α → Prop)
+  (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.Avoids F I ↔ Becoming.Ideals.Within P (fun p => ∀ (b : α), F b → ¬P.le b p) I
+@Becoming.Ideals.avoids_closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (F : α → Prop),
+  Becoming.Ideals.ScottClosed (Becoming.Ideals.Avoids F)
+@Becoming.Ideals.avoids_principal_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (F : α → Prop) (p : α),
+  Becoming.Ideals.Avoids F (Becoming.Ideals.principal P p) ↔ ∀ (b : α), F b → ¬P.le b p
+@Becoming.Ideals.avoids_unique : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.ScottClosed C →
+    ∀ {F : α → Prop},
+      (∀ (p : α), C (Becoming.Ideals.principal P p) ↔ ∀ (b : α), F b → ¬P.le b p) →
+        ∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Avoids F I
+@Becoming.Ideals.avoids_refutable_of_found : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {F : α → Prop},
+  (∀ (I : Becoming.Ideals.Ideal P), ¬Becoming.Ideals.Avoids F I → ∃ b, F b ∧ I.mem b) →
+    Becoming.Ideals.Refutable (Becoming.Ideals.Avoids F)
+Becoming.Ideals.refutable_closed_iff : (∀ (α : Type) (P : Becoming.Ideals.Preorder α)
+    (C : Becoming.Ideals.Ideal P → Prop), Becoming.Ideals.Refutable C → Becoming.Ideals.ScottClosed C) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+Becoming.Ideals.closed_refutable_iff : (∀ (α : Type) (P : Becoming.Ideals.Preorder α)
+    (C : Becoming.Ideals.Ideal P → Prop), Becoming.Ideals.ScottClosed C → Becoming.Ideals.Refutable C) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+@Becoming.Ideals.lift_within : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop}
+  (hq : Becoming.Ideals.Lower P Q) (J : Becoming.Ideals.Ideal (P.restrict Q)),
+  Becoming.Ideals.Within P Q (Becoming.Ideals.Ideal.lift ⋯ J)
+@Becoming.Ideals.lift_restrict : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop}
+  (hq : Becoming.Ideals.Lower P Q) (I : Becoming.Ideals.Ideal P) (h : Becoming.Ideals.Within P Q I),
+  (Becoming.Ideals.Ideal.lift ⋯ (I.restrict h)).Same I
+@Becoming.Ideals.restrict_lift : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop}
+  (hq : Becoming.Ideals.Lower P Q) (J : Becoming.Ideals.Ideal (P.restrict Q)),
+  ((Becoming.Ideals.Ideal.lift ⋯ J).restrict ⋯).Same J
+@Becoming.Ideals.lift_le_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {Q : α → Prop}
+  (hq : Becoming.Ideals.Lower P Q) (J K : Becoming.Ideals.Ideal (P.restrict Q)),
+  (Becoming.Ideals.Ideal.lift ⋯ J).LE (Becoming.Ideals.Ideal.lift ⋯ K) ↔ J.LE K
+@Becoming.Ideals.restrict_false_none : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (J : Becoming.Ideals.Ideal (P.restrict fun x => False)), False
+@Becoming.Ideals.image_directed : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {f : α → β},
+  Becoming.Ideals.Monotone P Q f →
+    ∀ {S : α → Prop}, Becoming.Ideals.Directed P S → Becoming.Ideals.Directed Q (Becoming.Ideals.Image f S)
+@Becoming.Ideals.sup_congr : ∀ {β : Type u_1} {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q)
+  {S T : β → Prop} (hS : Becoming.Ideals.Directed Q S) (hT : Becoming.Ideals.Directed Q T),
+  (∀ (a : β), S a ↔ T a) → Q.Equiv (D.sup S hS) (D.sup T hT)
+@Becoming.Ideals.sup_mono : ∀ {β : Type u_1} {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q)
+  {S T : β → Prop} (hS : Becoming.Ideals.Directed Q S) (hT : Becoming.Ideals.Directed Q T),
+  (∀ (a : β), S a → T a) → Q.le (D.sup S hS) (D.sup T hT)
+@Becoming.Ideals.principal_compact : ∀ {α : Type u_1} (P : Becoming.Ideals.Preorder α) (p : α),
+  Becoming.Ideals.Compact (Becoming.Ideals.idealComplete P) (Becoming.Ideals.principal P p)
+@Becoming.Ideals.compact_iff_principal : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.Compact (Becoming.Ideals.idealComplete P) I ↔ ∃ p, I.Same (Becoming.Ideals.principal P p)
+@Becoming.Ideals.extend_upper : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f) (I : Becoming.Ideals.Ideal P) (p : α),
+  I.mem p → Q.le (f p) (Becoming.Ideals.extend D f hf I)
+@Becoming.Ideals.extend_least : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f) (I : Becoming.Ideals.Ideal P) (b : β),
+  (∀ (p : α), I.mem p → Q.le (f p) b) → Q.le (Becoming.Ideals.extend D f hf I) b
+@Becoming.Ideals.extend_monotone : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f),
+  Becoming.Ideals.Monotone (Becoming.Ideals.idealOrder P) Q (Becoming.Ideals.extend D f hf)
+@Becoming.Ideals.extend_principal : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f) (p : α),
+  Q.Equiv (Becoming.Ideals.extend D f hf (Becoming.Ideals.principal P p)) (f p)
+@Becoming.Ideals.extend_continuous : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f),
+  Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete P) D (Becoming.Ideals.extend D f hf)
+@Becoming.Ideals.extend_unique : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β)
+  (hf : Becoming.Ideals.Monotone P Q f) (g : Becoming.Ideals.Ideal P → β),
+  Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete P) D g →
+    (∀ (p : α), Q.Equiv (g (Becoming.Ideals.principal P p)) (f p)) →
+      ∀ (I : Becoming.Ideals.Ideal P), Q.Equiv (g I) (Becoming.Ideals.extend D f hf I)
+@Becoming.Ideals.unique_continuous_extension : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) (f : α → β),
+  Becoming.Ideals.Monotone P Q f →
+    ∃ g,
+      Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete P) D g ∧
+        (∀ (p : α), Q.Equiv (g (Becoming.Ideals.principal P p)) (f p)) ∧
+          ∀ (h : Becoming.Ideals.Ideal P → β),
+            Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete P) D h →
+              (∀ (p : α), Q.Equiv (h (Becoming.Ideals.principal P p)) (f p)) →
+                ∀ (I : Becoming.Ideals.Ideal P), Q.Equiv (h I) (g I)
+@Becoming.Ideals.CompactBasis.monotone : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β},
+  Becoming.Ideals.CompactBasis P D e → Becoming.Ideals.Monotone P Q e
+@Becoming.Ideals.CompactBasis.below_monotone : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e), Becoming.Ideals.Monotone Q (Becoming.Ideals.idealOrder P) R.below
+@Becoming.Ideals.CompactBasis.below_extend : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e) (I : Becoming.Ideals.Ideal P),
+  (R.below (Becoming.Ideals.extend D e ⋯ I)).Same I
+@Becoming.Ideals.CompactBasis.extend_below : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e) (x : β), Q.Equiv (Becoming.Ideals.extend D e ⋯ (R.below x)) x
+@Becoming.Ideals.OrderEquivalence.continuous : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete P) (E : Becoming.Ideals.DirectedComplete Q)
+  (F : Becoming.Ideals.OrderEquivalence P Q), Becoming.Ideals.Continuous D E F.forward
+@Becoming.Ideals.CompactBasis.equivalence_principal : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e) (p : α),
+  Q.Equiv (R.equivalence.forward (Becoming.Ideals.principal P p)) (e p)
+@Becoming.Ideals.CompactBasis.equivalence_unique : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e) (F : Becoming.Ideals.OrderEquivalence (Becoming.Ideals.idealOrder P) Q),
+  (∀ (p : α), Q.Equiv (F.forward (Becoming.Ideals.principal P p)) (e p)) →
+    ∀ (I : Becoming.Ideals.Ideal P), Q.Equiv (F.forward I) (R.equivalence.forward I)
+@Becoming.Ideals.CompactBasis.equivalence_backward_unique : ∀ {α : Type u_1} {β : Type u_2}
+  {P : Becoming.Ideals.Preorder α} {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β}
+  (R : Becoming.Ideals.CompactBasis P D e) (F : Becoming.Ideals.OrderEquivalence (Becoming.Ideals.idealOrder P) Q),
+  (∀ (p : α), Q.Equiv (F.forward (Becoming.Ideals.principal P p)) (e p)) →
+    ∀ (y : β), (F.backward y).Same (R.equivalence.backward y)
+@Becoming.Ideals.principal_basis : ∀ {α : Type u_1} (P : Becoming.Ideals.Preorder α),
+  Becoming.Ideals.CompactBasis P (Becoming.Ideals.idealComplete P) (Becoming.Ideals.principal P)
+@Becoming.Ideals.unique_basis_representation : ∀ {α : Type u_1} {β : Type u_2} {P : Becoming.Ideals.Preorder α}
+  {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q} {e : α → β},
+  Becoming.Ideals.CompactBasis P D e →
+    ∃ F,
+      (∀ (p : α), Q.Equiv (F.forward (Becoming.Ideals.principal P p)) (e p)) ∧
+        ∀ (G : Becoming.Ideals.OrderEquivalence (Becoming.Ideals.idealOrder P) Q),
+          (∀ (p : α), Q.Equiv (G.forward (Becoming.Ideals.principal P p)) (e p)) →
+            (∀ (I : Becoming.Ideals.Ideal P), Q.Equiv (G.forward I) (F.forward I)) ∧
+              ∀ (y : β), (G.backward y).Same (F.backward y)
+@Becoming.Ideals.above_monotone : ∀ {α : Type u_1} (P : Becoming.Ideals.Preorder α) (p : α),
+  Becoming.Ideals.Monotone P Becoming.Ideals.implication (Becoming.Ideals.above P p)
+@Becoming.Ideals.extend_above_iff : ∀ {α : Type u_1} (P : Becoming.Ideals.Preorder α) (p : α)
+  (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.extend Becoming.Ideals.implicationComplete (Becoming.Ideals.above P p) ⋯ I ↔ I.mem p
+@Becoming.Ideals.above_readings_separate : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (I J : Becoming.Ideals.Ideal P),
+  (∀ (p : α),
+      Becoming.Ideals.extend Becoming.Ideals.implicationComplete (Becoming.Ideals.above P p) ⋯ I ↔
+        Becoming.Ideals.extend Becoming.Ideals.implicationComplete (Becoming.Ideals.above P p) ⋯ J) →
+    I.Same J
