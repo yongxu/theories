@@ -3,8 +3,8 @@
 # merged in, the checker writing its run into the repository, the receipt and study section filled in, the
 # connectivity and shared laws, the citing records re-pointed, the board's landed clause, and one commit of every
 # changed path. The fast-forward is ff_bd3.sh's.
-# usage: land_bd3.sh WORKTREE ASIDE   (ASIDE a folder outside the repository, for logs; BD3_ORDER, if set, the
-#        coordinator's order sentence for the landed clause, verbatim)
+# usage: BD3_ORDER="…" land_bd3.sh WORKTREE ASIDE   (ASIDE a folder outside the repository, for logs; BD3_ORDER the
+#        coordinator's order sentence for the landed clause, sent with its word, verbatim; required)
 set -u
 W=$1; ASIDE=$2
 K=$(cd "$(dirname "$0")" && pwd)
@@ -15,6 +15,7 @@ B=_process/BECOMING-WORKBOARD.md
 cd "$W" || exit 1
 step() { echo "== $1: exit $2"; [ "$2" = 0 ] || exit "$2"; }
 [ "$(git branch --show-current)" = bd3-regions ]; step branch $?
+[ -n "${BD3_ORDER:-}" ] && ! printf %s "$BD3_ORDER" | grep -q BD3; step coordinator-order $?
 [ -z "$(git status --porcelain --untracked-files=no)" ]; step clean $?
 git show main:$B | grep -m1 '^- \*\*Queue:\*\*' | grep -q '^- \*\*Queue:\*\* BD3 at the head of the queue (landing now'; step head-claim $?
 mkdir -p "$ASIDE"

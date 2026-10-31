@@ -33,7 +33,9 @@ make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-poin
 python3 -B "$K/repoint_bd3.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_bd3.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
 python3 -B "$K/board_bd3.py" head > "$ASIDE/board-head.log" 2>&1; step board-head $?
-python3 -B "$K/board_bd3.py" landed "$ID" "$N" > "$ASIDE/board.log" 2>&1; step board-landed $?
+# the coordinator sends the order sentence with its word; the rehearsal writes a placeholder in its place
+BD3_ORDER="${BD3_ORDER:-the order the coordinator sends with its word (rehearsal placeholder)}" \
+  python3 -B "$K/board_bd3.py" landed "$ID" "$N" > "$ASIDE/board.log" 2>&1; step board-landed $?
 make research-render > "$ASIDE/render2.log" 2>&1; step render $?
 for t in research-check-strict research-links research-test; do make $t > "$ASIDE/$t.log" 2>&1; step $t $?; done
 git status --porcelain --untracked-files=all > "$ASIDE/paths.txt"

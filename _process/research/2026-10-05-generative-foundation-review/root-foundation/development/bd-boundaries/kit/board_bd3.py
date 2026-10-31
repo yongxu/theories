@@ -3,9 +3,10 @@
 
 head: put BD3's clause at the head of the Queue line, behind no other "landing now" clause; the coordinator's order
       sentence is kept as it stands.
-landed RECEIPT N: replace BD3's head clause with the landed one, followed by the coordinator's order with BD3 taken out
-      (BD3_ORDER, if set, gives the coordinator's sentence instead), and move BD3's row to the history file (titled
-      done, its status the landing, its links rebased there), after the last landed row.
+landed RECEIPT N: replace BD3's head clause with the landed one, followed by the coordinator's order sentence, given
+      verbatim in BD3_ORDER (required: the coordinator sends it with its word, computed from what is still queued),
+      and move BD3's row to the history file (titled done, its status the landing, its links rebased there), after
+      the last landed row.
 usage (from the checkout root): python3 -B board_bd3.py head | landed RECEIPT N"""
 import datetime
 import os
@@ -56,26 +57,10 @@ def landed(receipt, n):
               "reading, every finding taken; the connectivity register's new apart roots each with a reason; BD3's "
               "row in the history file; render, strict check, links and tests pass). ")
     rest = line[len('- **Queue:** ' + HEAD):]
-    order = re.search(r"Then, in the coordinator's order: ([^;]*(?:;[^;]*)*?); ask the coordinator for a slot\.", rest)
-    steps = order.group(1) if order else ''
-    kept = []
-    for part in steps.split(' → '):
-        if part.strip() in ('BD3', 'BD3, by readiness'):
-            continue
-        suffix = ', by readiness' if part.endswith(', by readiness') else ''
-        part = part[:len(part) - len(suffix)]
-        part = re.sub(r', BD3(?=,)', '', part)       # X, BD3, Y      -> X, Y
-        part = re.sub(r', BD3 and ', ' and ', part)  # X, BD3 and Y   -> X and Y
-        if re.search(r' and BD3\b', part):            # X, Y and BD3   -> X and Y
-            part = re.sub(r' and BD3\b', '', part)
-            if ' and ' not in part and ', ' in part:
-                head_, _, last = part.rpartition(', ')
-                part = f'{head_} and {last}'
-        part = re.sub(r'^BD3(, | and )', '', part)   # BD3, Y / BD3 and Y -> Y
-        kept.append(part + (suffix if (' and ' in part or ', ' in part) else ''))
-    steps = ' → '.join(kept)
-    steps = os.environ.get('BD3_ORDER', '').strip() or steps
-    assert steps and 'BD3' not in steps, steps
+    # the coordinator computes the order from what is still queued when it gives the word, and sends it verbatim
+    steps = os.environ.get('BD3_ORDER', '').strip()
+    assert steps, "BD3_ORDER, the coordinator's order sentence sent with its word, is required"
+    assert 'BD3' not in steps, steps
     print('landed: order after BD3:', steps)
     clause += f"Then, in the coordinator's order: {steps}; ask the coordinator for a slot. "
     lines[i] = '- **Queue:** ' + clause + rest
