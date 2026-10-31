@@ -27,8 +27,11 @@ its failures, and what the review reads: the names F's statement and each hypoth
 theorems the recovery uses. For each of `names`, it gives whether the name test admits it (`admitted`), and for each of
 `equivalences`, whether it is a theorem stating an equivalence (`equivalence`, as test 9 reads it): the derived rows'
 bridges are checked there. For each of `generated`, it gives whether the walk takes it for a generated auxiliary
-(`generated`), and the kind of it and of each name before it (`kinds`, `""` for none), so that the tests can hold this
-file's copy of boundary.py's rule to it on the same kinds. Malformed input is an error; a failed test never is.
+(`generated`), and the kind of it and of each name before it (`kinds`, `""` for none, `opaque` apart from `def`, as the
+dump writes them). boundary.py takes from these the kinds of names the dump lacks (a declaration of `Init`, whose
+equation lemma Lean realizes in the package module that needs it), and the tests hold this file's copy of boundary.py's
+rule to it on the dump's kinds. A hygienic name cannot be listed, since `String.toName` does not read macro scopes.
+Malformed input is an error; a failed test never is.
 
 **The name test.** A constant is admitted when:
 - it is of `Init` (module `Init` or `Init.*`); `Lean.*` and `Std.*` are not admitted; or
@@ -73,12 +76,12 @@ file's copy of boundary.py's rule to it on the same kinds. Malformed input is an
      package's proofs inside every definition of the package they reach, so a fact held in a definition, or
      carried by a model's data, counts. An auxiliary Lean generated (BOUNDARY-FIELD §3.0: a name Lean gives such an
      auxiliary, under a declaration of the kind Lean gives it for, such as the `_proof_N` of a termination proof, a
-     `decide` or a derived instance) is walked through, never collected; but another declaration's lifted proof
-     (`_proof_N`) that the recovery names itself is collected, being a fact. Constructors and `rfl` are not proofs,
-     and `Init`'s proofs inside a definition are not counted, so an `Init` proof carried by a model's data is left
-     to the review. Every other proof counts, so a recovery through a package proof that carries no fact (a
-     package lemma in a termination proof, a package instance of a class of propositions) fails: the check fails
-     closed.
+     `decide`, a derived instance or a structure's default) is walked through, not collected; but another
+     declaration's lifted proof (`_proof_N`) that the recovery names itself is collected, being a fact. Constructors
+     and `rfl` are not proofs, and `Init`'s proofs inside a definition are not counted, so an `Init` proof carried by
+     a model's data is left to the review. Every other proof counts, so a recovery through a package proof that
+     carries no fact (a package lemma in a termination proof, a package instance of a class of propositions) fails:
+     the check fails closed.
    - Each bridge the recovery uses is an equivalence: under its binders, an `Iff`, or an `Eq` between
      propositions, predicates or relations (an `Eq` at a type of values, `size = 0`, is not one).
    - The bridges are a closed set: each bridge's proof uses no theorem but admitted ones, other bridges and
@@ -173,13 +176,13 @@ def numerals (l : List Char) : Bool :=
   l.head?.any Char.isDigit && l.getLast?.any Char.isDigit && l.all (fun c => c.isDigit || c == '_') &&
     !(l.zip l.tail).any (fun p => p.1 == '_' && p.2 == '_')
 
-/-- A constant's kind, as the dump writes it (`opaque` read as `def`); a private name the environment lacks is read by
-its user name (Lean makes an equation lemma or a matcher of another module's declaration private to the module that
-needs it). -/
+/-- A constant's kind, as the dump writes it; a private name the environment lacks is read by its user name (Lean makes
+an equation lemma or a matcher of another module's declaration private to the module that needs it). -/
 def kindOf (env : Environment) (c : Name) : String :=
   let c := if env.contains c then c else (privateToUserName? c).getD c
   match env.find? c with
-  | some (.defnInfo _) | some (.opaqueInfo _) => "def"
+  | some (.defnInfo _) => "def"
+  | some (.opaqueInfo _) => "opaque"
   | some (.thmInfo _) => "thm"
   | some (.ctorInfo _) => "ctor"
   | some (.inductInfo _) => "ind"
@@ -192,9 +195,11 @@ def attaches (s k : String) : Bool :=
   let l := s.toList
   let after (p : String) : Option (List Char) := if p.toList.isPrefixOf l then some (l.drop p.length) else none
   let numbered (p : String) : Bool := (after p).any digits
-  if ["_proof_", "proof_", "match_"].any (fun p => (after p).any numerals) then k == "def" || k == "thm"
+  if ["_proof_", "proof_"].any (fun p => (after p).any numerals) then ["def", "opaque", "thm", "ind"].contains k
+  else if (after "match_").any numerals then ["def", "opaque", "thm"].contains k
+  else if s == "_unsafe_rec" then k == "def" || k == "opaque"
   else if numbered "eq_" || numbered "_aux_" ||
-      ["eq_def", "splitter", "_unsafe_rec", "_sunfold", "_default"].contains s then k == "def"
+      ["eq_def", "splitter", "_sunfold", "_default", "_arg_pusher"].contains s then k == "def"
   else if ["inj", "injEq", "sizeOf_spec", "elim", "_flat_ctor"].contains s then k == "ctor"
   else if s == "noConfusion" then k == "ctor" || k == "ind"
   else if numbered "_sizeOf_" || ["_sizeOf_inst", "brecOn", "below", "binductionOn", "casesOn", "recOn", "rec",
@@ -203,18 +208,25 @@ def attaches (s k : String) : Bool :=
   else false
 
 /-- A generated auxiliary (§3.0): its last component attaches to the kind of the declaration before it, or it is a
-constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` (`go`, `eq`). So `match_1.eq_1`
-is generated, and a theorem written by hand as `next.inj` on a definition `next` is not. -/
-partial def generated (env : Environment) : Name → Bool
-  | c@(.str p s) =>
-    !p.isAnonymous && (attaches s (kindOf env p) || generated env p &&
-      ((kindOf env c == "ctor" && kindOf env p == "ind") ||
-       (match p with | .str _ "brecOn" => s == "go" || s == "eq" | _ => false)))
+constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` that is a definition (`go`,
+`eq`). So `match_1.eq_1` is generated, and a theorem written by hand as `next.inj` on a definition `next` is not. A
+hygienic name is read without its macro scopes, and the name before it with them (a declaration a macro makes,
+`aux._proof_1._@.M._hyg.3` under `aux._@.M._hyg.3`). -/
+partial def generated (env : Environment) (n : Name) : Bool :=
+  let v := extractMacroScopes n
+  let sc (m : Name) : Name := if n.hasMacroScopes then { v with name := m }.review else m
+  match v.name with
+  | .str p s =>
+    let p' := sc p
+    !p.isAnonymous && (attaches s (kindOf env p') || generated env p' &&
+      ((kindOf env n == "ctor" && kindOf env p' == "ind") ||
+       (match p with | .str _ "brecOn" => kindOf env p' == "def" && (s == "go" || s == "eq") | _ => false)))
   | _ => false
 
 /-- An abstracted proof, `_proof_N` or `proof_N` (`_proof_1_1`): Lean's name for a proof it lifts out of a
-declaration. -/
-def abstracted : Name → Bool
+declaration, read without macro scopes. -/
+def abstracted (n : Name) : Bool :=
+  match (extractMacroScopes n).name with
   | .str _ s => let l := s.toList
       ["_proof_", "proof_"].any fun p => p.toList.isPrefixOf l && numerals (l.drop p.length)
   | _ => false
