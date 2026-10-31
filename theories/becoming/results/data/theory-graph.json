@@ -8051,6 +8051,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.BalanceRegions",
+   "type": "module",
+   "name": "Becoming.BalanceRegions",
+   "level": "L1",
+   "theorems": 6,
+   "region": "root",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Weightings",
    "type": "module",
    "name": "Becoming.Weightings",
@@ -30932,6 +30943,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.BalanceRegions",
+   "to": "module:Becoming.Continuity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BalanceRegions",
+   "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
    "type": "imports"
@@ -36223,6 +36244,11 @@
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",
+   "to": "module:Becoming.BalanceRegions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
    "to": "module:Becoming.Continuity",
    "type": "proved-in"
   },
@@ -36230,6 +36256,16 @@
    "from": "record:balance-from-conservation-along-a-relation",
    "to": "record:balance-from-the-first-law",
    "type": "interpretive"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",

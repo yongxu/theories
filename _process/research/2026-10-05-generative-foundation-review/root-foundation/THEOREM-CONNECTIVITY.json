@@ -1,11 +1,11 @@
 {
- "commit": "8a7faa4c816af0eefdf4e7afa7a1d65fbfe98053",
+ "commit": "e724b9484af70b091f0a65a10d13d73617811e06",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261031T183655.254131Z",
+ "core_receipt_at_commit": "20261031T202201.956842Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 368,
- "constants": 52798,
- "spine_theorems": 17854,
+ "tracked_modules": 369,
+ "constants": 52806,
+ "spine_theorems": 17860,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 1098,
   "statement on Process/Frame/Run/Trace": 3562,
-  "statement on World/Flow/Web": 4276,
+  "statement on World/Flow/Web": 4277,
   "statement on the base only through a law of its own module": 276,
   "proof through a base family": 216,
-  "used by a theorem on the base": 5823,
+  "used by a theorem on the base": 5828,
   "instance on the base recorded": 159,
   "apart: own vocabulary": 2272,
   "apart: prelude-only statement": 172
@@ -76,12 +76,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1289,
- "apart_roots": 1289,
+ "apart_used_by_nothing": 1291,
+ "apart_roots": 1291,
  "apart_roots_by_category": {
   "model-witness": 589,
   "support": 139,
-  "general-structure": 512,
+  "general-structure": 514,
   "calibration": 23,
   "restates": 14,
   "logical-strength": 12
@@ -208,7 +208,7 @@
    114
   ],
   "Becoming.GrammarLaws": [
-   60,
+   59,
    175
   ],
   "Becoming.ReadStages": [
@@ -431,10 +431,6 @@
    9,
    25
   ],
-  "Becoming.GrammarCrossing": [
-   9,
-   11
-  ],
   "Becoming.Openness": [
    8,
    78
@@ -446,6 +442,10 @@
   "Becoming.SecuredContent": [
    8,
    30
+  ],
+  "Becoming.GrammarCrossing": [
+   8,
+   11
   ],
   "Becoming.GuardHorizon": [
    8,
@@ -719,6 +719,10 @@
    2,
    46
   ],
+  "Becoming.BalanceRegions": [
+   2,
+   6
+  ],
   "Becoming.Propagation": [
    2,
    75
@@ -854,16 +858,16 @@
  },
  "rings": {
   "core": {
-   "modules": 351,
-   "theorems": 17082,
+   "modules": 352,
+   "theorems": 17088,
    "apart": 2349,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3342,
-    "statement on World/Flow/Web": 4251,
+    "statement on World/Flow/Web": 4252,
     "statement on the base only through a law of its own module": 230,
     "proof through a base family": 205,
-    "used by a theorem on the base": 5462,
+    "used by a theorem on the base": 5467,
     "instance on the base recorded": 159,
     "apart: own vocabulary": 2178,
     "apart: prelude-only statement": 171
@@ -2540,7 +2544,7 @@
   "Becoming.GrammarLaws.split_of_count_pos": "apart: own vocabulary",
   "Becoming.GrammarLaws.count_go": "apart: own vocabulary",
   "Becoming.GrammarLaws.count_eq_countP": "apart: own vocabulary",
-  "Becoming.GrammarLaws.uncrossed_of_closed": "apart: own vocabulary",
+  "Becoming.GrammarLaws.uncrossed_of_closed": "used by a theorem on the base",
   "Becoming.«对则不越域守数»": "apart: own vocabulary",
   "Becoming.«对则双闭域守数»": "apart: own vocabulary",
   "Becoming.«对而单闭域不守数之例»": "apart: own vocabulary",
@@ -14511,6 +14515,12 @@
   "Becoming.Flow.region_no_boundary": "statement on World/Flow/Web",
   "Becoming.Flow.closures_not_within_region": "statement on World/Flow/Web",
   "Becoming.Clearing.resource_no_boundary": "statement on World/Flow/Web",
+  "Becoming.Continuity.adjacentListed_symm": "used by a theorem on the base",
+  "Becoming.Continuity.closes_iff_closed": "used by a theorem on the base",
+  "Becoming.Continuity.closes_iff_notGoingOut": "used by a theorem on the base",
+  "Becoming.Continuity.closes_iff_notComingIn": "apart: own vocabulary",
+  "Becoming.Continuity.balancing_iff_notGoingOut": "apart: own vocabulary",
+  "Becoming.Continuity.balancesOn_iff_notGoingOut": "statement on World/Flow/Web",
   "Becoming.Weighting.includesOn_iff": "apart: own vocabulary",
   "Becoming.Weighting.exceedsOn_iff": "apart: own vocabulary",
   "Becoming.Weighting.widensOn_iff": "apart: own vocabulary",
@@ -19055,7 +19065,7 @@
   "Becoming.«闭则不出»": "used by a theorem on the base",
   "Becoming.«所闭不出»": "apart: own vocabulary",
   "Becoming.«不出当且仅当不外者闭»": "apart: own vocabulary",
-  "Becoming.«不外者内则不出当且仅当闭»": "apart: own vocabulary",
+  "Becoming.«不外者内则不出当且仅当闭»": "used by a theorem on the base",
   "Becoming.«不出皆闭当且仅当排中»": "apart: own vocabulary",
   "Becoming.«逆之不出当且仅当外者不出»": "apart: own vocabulary",
   "Becoming.«对称则不出当且仅当逆不出»": "used by a theorem on the base",
