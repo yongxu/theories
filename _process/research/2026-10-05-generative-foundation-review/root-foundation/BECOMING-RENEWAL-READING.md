@@ -22906,7 +22906,7 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        class, which 07 says P2 does not ask; [^own] stating self-significance outright, which the account does not
        assert; the line before the notes, until those two were fixed), 6 refuted
        ([reports/opening-notes-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/opening-notes-check.json)).
-       (5) drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
+       (5) drafts/2026-10-10-opening/history/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
        the opening after the first screen and names the proposal.
        (6) a link into the page it is placed in stays on the page (navigation.adapt_links), so the screen's links to
        the opening and its notes are written to README.md's anchors, which the link check reads, and render as bare
