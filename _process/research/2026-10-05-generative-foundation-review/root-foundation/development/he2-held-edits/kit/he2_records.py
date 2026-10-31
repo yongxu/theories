@@ -230,8 +230,8 @@ def ml_scope(r):
                 "and HE one each, three with a second pass; no person's review.")
     vs['zh'] = (f"Lean 4.29.1（回执 {RECEIPT_ID}）：GrammarLaws {d} 项声明中 {t} 条定理；十四模型 40 项表示桥接声明；"
                 "另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。"
-                "改动模块陈述如前，唯 OU3b 二关系律及任一宇宙、HE2 改名与一律设宽。只读 AI 审查，所见皆采：OU3b、OU3f 各三，HE2 二，"
-                "余各一，三次复审；未经人审。")
+                "改动模块陈述如前，唯 OU3b 二关系律推至任一宇宙、HE2 改名与一律之设放宽。只读 AI 审查，所见皆采：OU3b、OU3f 各三，HE2 二，"
+                "余各一，三项经复审；未经人审。")
     assert len(vs['en']) <= 600 and len(vs['zh']) <= 260, (ML, len(vs['en']), len(vs['zh']))
     add_ref(r, HERE + 'DESIGN.md', 'integration')
     add_ref(r, REVIEW, 'review')
