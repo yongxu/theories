@@ -64,3 +64,10 @@ U4b (claimed `753460b81`) moves `SelectionLevels.rises_exact_iff_levels` from am
 - In 08 §7 it changes only the edge paragraph's three count phrases. DU's edits there are the labels in the connectivity paragraph and the C / `«续无外»` sentence, so the two do not collide.
 - DU's landing edits `home()` in `development/u4-one-root-to-its-edge/make_record_u4.py` to carry the C / `«续无外»` sentence, so that the generator keeps matching 08. The sentence names declarations that exist only once the leaf lands.
 - At DU's landing, 04's figures are read from the record as it then stands. After U4b they are 1 / 4 / 1 / 5 / 7.
+
+U4b's final wording, from U4's owner on 1 November 2026 (kit `development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md` on branch `u4b` at `79a6d4edb`). Its review, re-check and third look are taken, and it waits for a documents slot.
+- **The line.** Counting and amounts are separated by what a statement says of the dynamics. A law of counting says nothing of them beyond a counting law's arbitrary predicate. Amounts is the distance for a statement that uses the dynamics and constrains numbers the grammar has no terms for, an arbitrary trait's values included.
+- **Rows 7, 8 and 14 stay at amounts,** with rewritten bases. Their hypotheses on the trait's values keep them off standing 2: `top` and `inactive` tie the trait to the dynamics.
+- **Record:** 7 counting, 18 amounts, 100 at a distance, 0 unplaced.
+- **Evolution's 18 rows:** 1 under a stated hypothesis, 4 counting, 1 at a represented model, 5 with balance, 7 at amounts (rows 1–3, 7, 8, 14 and `Reproduction.Flow.number_within_take`). These are the figures for (d).
+- **`home()` is untouched by U4b.** U4b replaces three figures in 08 §7's paragraph by targeted replacement, so DU's sentence lands before or after it.
