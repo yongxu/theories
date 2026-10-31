@@ -19,7 +19,7 @@ Severity is the skeptic's. Pending items are with their owners, who keep their o
 | lean F2 | partly | should-fix | the audit compared statements as printed, and printing drops binder types, universes and implicit arguments | taken: every statement is also compared as written in the source, comments blanked and renames applied |
 | lean F3 | partly | minor | the audit's gaps: the root module, instances and variables, item 1's statement checked by name only, definitions read with no hash check | taken: root module code compared after renames, every command compared, item 1's statement checked against its kit's head with the conclusion unchanged, sources checked against the receipt |
 | lean F4 | confirmed | should-fix | GrammarMap's doc says how «有终» stands to «退化» is stated in leaves; it is not stated, and the modules are not leaves | taken by OU's owner (he2-item5 `d54f52264`): the sentence says how 全生成 and 全守 stand to 生成 and 守 in modules that import this one, and that how 有终 stands to 退化 is not stated |
-| lean F5 | confirmed | should-fix | 01 §3 (home of continuation-relative-to-a-class) still states «两端分则中有标» for a class; item 1's KIT says no chapter states it; LOGIC.md L-04 quotes the old signature | taken by item 1's owner (`ou3f-laws` `5f0672b31`): 01 §3 through the kit's texts part, before the re-point; the KIT's sentence corrected; PatternPassing's gloss as a fifth Lean edit; L-04 scripted, run on its owner's word |
+| lean F5 | confirmed | should-fix | 01 §3 (home of continuation-relative-to-a-class) still states «两端分则中有标» for a class; item 1's KIT says no chapter states it; LOGIC.md L-04 quotes the old signature | taken by item 1's owner (`ou3f-laws` `ac9276674`): 01 §3 through the kit's texts part, before the re-point, saying "a transitive relation" as law 10 does; the KIT's sentence corrected; PatternPassing's gloss as a fifth Lean edit; L-04 run at the landing on its owner's word; Grammar's and Sampling's docstrings say transitive where they said compose |
 | lean F6 | confirmed | minor | the audit's docstring says every expectation is read from the items' kits, but items 1 and 5 are fixed in it | taken: the docstring says which are fixed and why |
 | lean F7 | partly | minor | HeldPossible's doc still cites a law its proof no longer uses | taken by OU's owner (`d54f52264`): it cites the two laws the proof uses |
 | lean F8 | confirmed | minor | GrammarMap's list of the reach laws' readers omits Sampling | taken by OU's owner (`d54f52264`) |
@@ -54,3 +54,15 @@ Severity is the skeptic's. Pending items are with their owners, who keep their o
 ## Not taken
 
 Only what the skeptic refuted: kit F1, kit F2 (a) and (b), the stamp in kit F13, and aliases in re-point F10. A refuted part needs no change.
+
+## The owners' word
+
+Each owner decides its own item's wording and its own records' text. The lander asked each one before writing. Their answers came as messages between the working sessions on 31 October. They are AI sessions, not persons.
+
+- **OU's owner** decides the grammar's additions and names, and owns item 5 and continuation-relative-to-a-class.
+  - It approved the master-laws-on-the-grammar edits as written: the validation scope in English (593 characters) and in Chinese with three corrections that bring it to the English sense (258 characters); does_not_show[4]; the counting hypothesis; the "The landing:" clause; and the counts (Grammar 70 in 118, MapInstances 27). No reviewed_at_utc stamp, since only a scope changes.
+  - It approved the GrammarPath record's Chinese title, with the old title kept in its aliases.
+  - It approved continuation-relative-to-a-class's law 10, with one word changed in the English: "a transitive relation" for "a relation that composes". The hypothesis is transitivity, and "composes" in the package means the composition of relations.
+  - «二所闭在借步之所闭» keeps its name.
+- **As LOGIC's owner** (the review packet's dossier), the same session asked for L-04 to be run at the landing (`--texts --logic`), its Meaning as written. In the same texts step, LOGIC's reader edition is rebuilt, the dossier check reports 0 problems, and LOGIC's front is recounted, unchanged at 1,094 words. 01 §3 says "a transitive relation `K` (a class is one)" before HE2 lands. 01 has no Chinese edition, so 「传递之关系」 is written only in the record's Chinese.
+- **Item 1's owner** brought 01 §3, L-04, PatternPassing's gloss and Grammar's and Sampling's docstrings to "transitive" (`ac9276674`), so no word is held for a later rebuild. Items 2–4's owner took the review's findings and OU's wording.

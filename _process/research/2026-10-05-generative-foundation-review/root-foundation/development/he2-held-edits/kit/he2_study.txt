@@ -47,9 +47,10 @@ Delta: (1) item 1 (OU3f's owner, ou3f-activity-laws/he2-item1): «两端分则�
 Supplied premises / correspondence: none.
 Evidence: core receipt {RECEIPT}, every axiom report empty; the run ran {RAN} of its {KEYS} Lean module steps and reused
        {REUSED} from earlier runs on the same sources. Before it, outside the repository: items 2–7 with item 1's
-       weakening (the near-full rebuild, 1,378 module steps run of 1,439), all seven (54 run), and all seven from the
-       items' final tips (1,350 run of 1,443). The signature audit (he2_signatures.py), run before the landing commit, reads each
-       expectation from the item's own kit. In the thirteen changed modules:
+       weakening (the near-full rebuild, 1,378 module steps run of 1,439), all seven (54 run), all seven from the
+       items' final tips (1,350 run of 1,443), after the review's fixes (22 run), and with Grammar's and Sampling's
+       docstrings saying transitive (1,382 run). The signature audit (he2_signatures.py), run before the landing
+       commit, reads each expectation from the item's own kit. In the thirteen changed modules:
        - {T_BEFORE} theorem statements before, {T_AFTER} after;
        - {RENAMED} names renamed ({RENAMED_T} theorems, {RENAMED_D} definition), each new statement the old one renamed;
        - {ADDED} declarations added to GrammarLaws ({ADDED_T} theorems, {ADDED_D} definitions);
