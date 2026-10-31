@@ -1,0 +1,128 @@
+Becoming.RetrodictionInstances.acquire_eq : ∀ (h : Generative.HistoricalBinding.History) (rev : Bool)
+  (ps : List Generative.HistoricalBinding.Instruction),
+  List.map Becoming.RetrodictionInstances.toRecord (Generative.HistoricalBinding.acquire h rev ps) =
+    Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded h ps
+Becoming.RetrodictionInstances.fits_iff : ∀ (g : Generative.HistoricalBinding.History)
+  (obs : List Generative.HistoricalBinding.Observation),
+  Generative.HistoricalBinding.fits g obs = true ↔
+    Becoming.Retrodiction.Fits Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded g
+      (List.map Becoming.RetrodictionInstances.toRecord obs)
+Becoming.RetrodictionInstances.mem_learn_iff : ∀ (family : List Generative.HistoricalBinding.History)
+  (h g : Generative.HistoricalBinding.History) (rev : Bool) (ps : List Generative.HistoricalBinding.Instruction),
+  g ∈ Generative.HistoricalBinding.learn family (Generative.HistoricalBinding.acquire h rev ps) ↔
+    g ∈ family ∧
+      Becoming.Retrodiction.Fits Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded g
+        (Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded
+          h ps)
+Becoming.RetrodictionInstances.actual_history_retained_from_law : ∀ (h : Generative.HistoricalBinding.History)
+  (family : List Generative.HistoricalBinding.History) (rev : Bool)
+  (ps : List Generative.HistoricalBinding.Instruction),
+  h ∈ family → h ∈ Generative.HistoricalBinding.learn family (Generative.HistoricalBinding.acquire h rev ps)
+Becoming.RetrodictionInstances.packet_read_iff : ∀ (family : List Generative.HistoricalBinding.History)
+  (faults : List Generative.SourceReliance.Faults) (d : Generative.HistoricalBinding.Moment)
+  (h : Generative.HistoricalBinding.History) (s : Bool × Generative.SourceReliance.Faults) (rev : Bool)
+  (ps : List Generative.HistoricalBinding.Instruction),
+  (∀ (g : Generative.HistoricalBinding.History) (t : Bool × Generative.SourceReliance.Faults),
+      g ∈ Generative.HistoricalBinding.learn family (Generative.HistoricalBinding.acquire h rev ps) →
+        t.snd ∈ faults →
+          Becoming.RetrodictionInstances.packetReports (Generative.HistoricalBinding.routeAt g d) t =
+              Becoming.RetrodictionInstances.packetReports (Generative.HistoricalBinding.routeAt h d) s →
+            t.fst = s.fst) ↔
+    ∀ (g : Generative.HistoricalBinding.History) (t : Bool × Generative.SourceReliance.Faults),
+      g ∈ family →
+        t.snd ∈ faults →
+          Becoming.RetrodictionInstances.packetReports (Generative.HistoricalBinding.routeAt g d) t =
+              Becoming.RetrodictionInstances.packetReports (Generative.HistoricalBinding.routeAt h d) s →
+            t.fst ≠ s.fst →
+              Becoming.Retrodiction.Separated Generative.HistoricalBinding.routeAt
+                Becoming.RetrodictionInstances.emitRecorded g h ps
+Becoming.RetrodictionInstances.shares_read_iff : ∀ (family : List Generative.HistoricalBinding.History)
+  (d : Generative.HistoricalBinding.Moment) (h : Generative.HistoricalBinding.History) (rev : Bool)
+  (ps : List Generative.HistoricalBinding.Instruction),
+  (∀ (g : Generative.HistoricalBinding.History),
+      g ∈ Generative.HistoricalBinding.learn family (Generative.HistoricalBinding.acquire h rev ps) →
+        (Generative.HistoricalBinding.routeAt g d).sharesDisturbance =
+          (Generative.HistoricalBinding.routeAt h d).sharesDisturbance) ↔
+    ∀ (g : Generative.HistoricalBinding.History),
+      g ∈ family →
+        (Generative.HistoricalBinding.routeAt g d).sharesDisturbance ≠
+            (Generative.HistoricalBinding.routeAt h d).sharesDisturbance →
+          Becoming.Retrodiction.Separated Generative.HistoricalBinding.routeAt
+            Becoming.RetrodictionInstances.emitRecorded g h ps
+Becoming.RetrodictionInstances.common_probe_reveals : ∀ (r : Generative.SourceReliance.Route),
+  Generative.SourceReliance.emit r Generative.SourceReliance.commonProbe = (r.sharesDisturbance, r.sharesDisturbance)
+Becoming.RetrodictionInstances.step_le : ∀ (x y : Generative.SourceReliance.Route),
+  (if x.sharesDisturbance = y.sharesDisturbance then 0 else 1) ≤ if x = y then 0 else 1
+Becoming.RetrodictionInstances.course_changes_le : ∀ (h : Generative.HistoricalBinding.History),
+  Becoming.Retrodiction.changes (Becoming.RetrodictionInstances.sharesCourse h) 0 3 ≤
+    Generative.HistoricalBinding.changes h
+@Becoming.RetrodictionInstances.changes_of_envelope : ∀ {h : Generative.HistoricalBinding.History},
+  h ∈ Generative.HistoricalBinding.envelope 1 → Generative.HistoricalBinding.changes h ≤ 1
+@Becoming.RetrodictionInstances.naming_bracketed : ∀ {h : Generative.HistoricalBinding.History},
+  h ∈ Generative.HistoricalBinding.envelope 1 →
+    h.prior.sharesDisturbance = h.following.sharesDisturbance → h.naming.sharesDisturbance = h.prior.sharesDisturbance
+Becoming.RetrodictionInstances.controls_settle_naming : ∀ (h g : Generative.HistoricalBinding.History) (rev : Bool),
+  h ∈ Generative.HistoricalBinding.envelope 1 →
+    g ∈
+        Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+          (Generative.HistoricalBinding.acquire h rev Generative.HistoricalBinding.controls) →
+      h.prior.sharesDisturbance = h.following.sharesDisturbance →
+        g.naming.sharesDisturbance = h.naming.sharesDisturbance
+Becoming.RetrodictionInstances.deterioration_settled : ∀ (g : Generative.HistoricalBinding.History),
+  g ∈
+      Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+        (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.deterioration false
+          Generative.HistoricalBinding.controls) →
+    g.naming.sharesDisturbance = Generative.HistoricalBinding.deterioration.naming.sharesDisturbance
+Becoming.RetrodictionInstances.improvement_settled : ∀ (g : Generative.HistoricalBinding.History),
+  g ∈
+      Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+        (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.improvement false
+          Generative.HistoricalBinding.controls) →
+    g.naming.sharesDisturbance = Generative.HistoricalBinding.improvement.naming.sharesDisturbance
+@Becoming.RetrodictionInstances.not_separated_of_same : ∀ {g h : Generative.HistoricalBinding.History}
+  {ps : List Generative.HistoricalBinding.Instruction},
+  Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded g ps =
+      Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded h
+        ps →
+    ¬Becoming.Retrodiction.Separated Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded g
+        h ps
+@Becoming.RetrodictionInstances.same_records : ∀ {g h : Generative.HistoricalBinding.History}
+  {ps : List Generative.HistoricalBinding.Instruction},
+  Generative.HistoricalBinding.acquire g false ps = Generative.HistoricalBinding.acquire h false ps →
+    Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded g
+        ps =
+      Becoming.Retrodiction.acquire Generative.HistoricalBinding.routeAt Becoming.RetrodictionInstances.emitRecorded h
+        ps
+Becoming.RetrodictionInstances.late_control_reading_fails : ¬∀ (g : Generative.HistoricalBinding.History),
+    g ∈
+        Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+          (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.improvement false
+            Generative.HistoricalBinding.lateControl) →
+      g.naming.sharesDisturbance = Generative.HistoricalBinding.improvement.naming.sharesDisturbance
+Becoming.RetrodictionInstances.split_controls_reading_fails : ¬∀ (g : Generative.HistoricalBinding.History),
+    g ∈
+        Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+          (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.improvement false
+            Generative.HistoricalBinding.splitControls) →
+      g.naming.sharesDisturbance = Generative.HistoricalBinding.improvement.naming.sharesDisturbance
+Becoming.RetrodictionInstances.excursion_course : ∀ (i : Nat),
+  i ≤ 3 →
+    Becoming.RetrodictionInstances.sharesCourse Generative.HistoricalBinding.concealedExcursion i =
+      Becoming.Retrodiction.excursion false true 0 i
+Becoming.RetrodictionInstances.excursion_agreed_wrong : ¬Generative.HistoricalBinding.concealedExcursion ∈
+      Generative.HistoricalBinding.envelope 1 ∧
+  (∀ (g : Generative.HistoricalBinding.History),
+      g ∈
+          Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 1)
+            (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.concealedExcursion false
+              Generative.HistoricalBinding.controls) →
+        g.naming.sharesDisturbance = Generative.HistoricalBinding.constantSecure.naming.sharesDisturbance) ∧
+    Generative.HistoricalBinding.concealedExcursion.naming.sharesDisturbance ≠
+      Generative.HistoricalBinding.constantSecure.naming.sharesDisturbance
+Becoming.RetrodictionInstances.excursion_reading_fails : ¬∀ (g : Generative.HistoricalBinding.History),
+    g ∈
+        Generative.HistoricalBinding.learn (Generative.HistoricalBinding.envelope 2)
+          (Generative.HistoricalBinding.acquire Generative.HistoricalBinding.constantSecure false
+            Generative.HistoricalBinding.controls) →
+      g.naming.sharesDisturbance = Generative.HistoricalBinding.constantSecure.naming.sharesDisturbance

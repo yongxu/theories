@@ -1,0 +1,7 @@
+import LivingOrganizationCorrespondence
+#print axioms Becoming.LivingOrganizationCorrespondence.entryDecidable
+#print axioms Becoming.LivingOrganizationCorrespondence.entryGate
+#print axioms Becoming.LivingOrganizationCorrespondence.presence_reflected
+#print axioms Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core
+#print axioms Becoming.LivingOrganizationCorrespondence.entry_then_present
+#print axioms Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core

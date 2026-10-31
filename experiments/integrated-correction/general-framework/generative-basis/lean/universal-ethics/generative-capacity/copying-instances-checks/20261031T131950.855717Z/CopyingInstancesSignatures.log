@@ -1,0 +1,401 @@
+Becoming.CopyingInstances.mem_iff_pos : ∀ (x : Bool) (l : List Bool), x ∈ l ↔ 0 < Becoming.Copying.countOf x l
+Becoming.CopyingInstances.erase_eq : ∀ (x : Bool) (l : List Bool), l.erase x = Becoming.Copying.remove x l
+@Becoming.CopyingInstances.nth_eq : ∀ {β : Type} (l : List β) (i : Nat), Becoming.Copying.nth l i = l[i]?
+@Becoming.CopyingInstances.setAt_eq : ∀ {β : Type} (l : List β) (i : Nat) (x : β),
+  Becoming.Copying.setAt l i x = l.set i x
+@Becoming.CopyingInstances.final_eq : ∀ {β : Type} (l : List β), Becoming.Copying.final l = l.getLast?
+Becoming.CopyingInstances.supplies_prefix : ∀ (w tail : List Bool), Becoming.Copying.Supplies w (w ++ tail)
+Becoming.CopyingInstances.draw_eq : ∀ (law : StructuralCopying.Law),
+  StructuralCopying.charge law = Becoming.Copying.pairDraw 1 law.equal law.unequal
+Becoming.CopyingInstances.use_eq : ∀ (law : StructuralCopying.Law) (p : Option Bool) (w : List Bool),
+  StructuralCopying.cost law p w = Becoming.Copying.use (StructuralCopying.charge law) p w
+Becoming.CopyingInstances.use_pair_eq : ∀ (law : StructuralCopying.Law) (p : Option Bool) (w : List Bool),
+  StructuralCopying.cost law p w = Becoming.Copying.use (Becoming.Copying.pairDraw 1 law.equal law.unequal) p w
+Becoming.CopyingInstances.view_tick : ∀ (law : StructuralCopying.Law) (w : StructuralCopying.CopyState),
+  Becoming.CopyingInstances.view (StructuralCopying.tick law w) =
+    Becoming.Copying.tick (StructuralCopying.charge law) (Becoming.CopyingInstances.view w)
+Becoming.CopyingInstances.view_steps : ∀ (law : StructuralCopying.Law) (n : Nat) (w : StructuralCopying.CopyState),
+  Becoming.CopyingInstances.view (StructuralCopying.steps law n w) =
+    Becoming.Copying.steps (StructuralCopying.charge law) n (Becoming.CopyingInstances.view w)
+Becoming.CopyingInstances.view_copy : ∀ (law : StructuralCopying.Law) (parent : RecurrentAssembly.Strand),
+  parent.bonds = RecurrentAssembly.path parent.cells.length →
+    parent.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        Becoming.CopyingInstances.view (StructuralCopying.copy law parent r) =
+          Becoming.Copying.steps (StructuralCopying.charge law) parent.cells.length
+            { previous := none, pending := parent.cells, built := [], pool := r.pool, free := r.free, used := r.spent }
+Becoming.CopyingInstances.copy_cells_iff : ∀ (law : StructuralCopying.Law) (parent : RecurrentAssembly.Strand),
+  parent.bonds = RecurrentAssembly.path parent.cells.length →
+    parent.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        (StructuralCopying.copy law parent r).built.cells = parent.cells ↔
+          Becoming.Copying.Supplies parent.cells r.pool ∧ StructuralCopying.cost law none parent.cells ≤ r.free
+Becoming.CopyingInstances.copy_tracks : ∀ (law : StructuralCopying.Law) (parent : RecurrentAssembly.Strand),
+  parent.bonds = RecurrentAssembly.path parent.cells.length →
+    parent.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        (StructuralCopying.copy law parent r).built.cells ++ (StructuralCopying.copy law parent r).pending =
+          parent.cells
+Becoming.CopyingInstances.reproduce_iff : ∀ (law : StructuralCopying.Law) (parent : RecurrentAssembly.Strand),
+  parent.bonds = RecurrentAssembly.path parent.cells.length →
+    parent.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        (StructuralCopying.reproduce law parent r).fst = true ↔
+          Becoming.Copying.Supplies parent.cells r.pool ∧ StructuralCopying.cost law none parent.cells + 1 ≤ r.free
+Becoming.CopyingInstances.template_pool_reproduce_iff : ∀ (law : StructuralCopying.Law)
+  (parent : RecurrentAssembly.Strand),
+  parent.bonds = RecurrentAssembly.path parent.cells.length →
+    parent.cells ≠ [] →
+      ∀ (tail : List Bool) (free used : Nat),
+        (StructuralCopying.reproduce law parent { pool := parent.cells ++ tail, free := free, spent := used }).fst =
+            true ↔
+          StructuralCopying.cost law none parent.cells + 1 ≤ free
+Becoming.CopyingInstances.release_view : ∀ (w : StructuralCopying.CopyState),
+  (w.pending = [] → w.built.cells ≠ []) →
+    (StructuralCopying.release w).fst = Becoming.Copying.released 1 (Becoming.CopyingInstances.view w) ∧
+      (StructuralCopying.release w).snd.supply =
+        { pool := w.supply.pool,
+          free :=
+            bif Becoming.Copying.released 1 (Becoming.CopyingInstances.view w) then w.supply.free - 1
+            else w.supply.free,
+          spent :=
+            bif Becoming.Copying.released 1 (Becoming.CopyingInstances.view w) then w.supply.spent + 1
+            else w.supply.spent }
+Becoming.CopyingInstances.batch_view : ∀ (law : StructuralCopying.Law) (ps : List RecurrentAssembly.Strand)
+  (r : RecurrentAssembly.Supply),
+  (∀ (p : RecurrentAssembly.Strand), p ∈ ps → p.bonds = RecurrentAssembly.path p.cells.length ∧ p.cells ≠ []) →
+    List.map Prod.fst (StructuralCopying.batch law ps r).fst =
+        (Becoming.Copying.batch (StructuralCopying.charge law) 1 (List.map RecurrentAssembly.Strand.cells ps) r.pool
+            r.free r.spent).fst ∧
+      (StructuralCopying.batch law ps r).snd =
+        {
+          pool :=
+            (Becoming.Copying.batch (StructuralCopying.charge law) 1 (List.map RecurrentAssembly.Strand.cells ps) r.pool
+                  r.free r.spent).snd.fst,
+          free :=
+            (Becoming.Copying.batch (StructuralCopying.charge law) 1 (List.map RecurrentAssembly.Strand.cells ps) r.pool
+                    r.free r.spent).snd.snd.fst,
+          spent :=
+            (Becoming.Copying.batch (StructuralCopying.charge law) 1 (List.map RecurrentAssembly.Strand.cells ps) r.pool
+                    r.free r.spent).snd.snd.snd }
+Becoming.CopyingInstances.batch_all_released_iff : ∀ (law : StructuralCopying.Law) (ps : List RecurrentAssembly.Strand)
+  (r : RecurrentAssembly.Supply),
+  (∀ (p : RecurrentAssembly.Strand), p ∈ ps → p.bonds = RecurrentAssembly.path p.cells.length ∧ p.cells ≠ []) →
+    (Becoming.Copying.Every (List.map Prod.fst (StructuralCopying.batch law ps r).fst) ↔
+      Becoming.Copying.Supplies (Becoming.Copying.joinAll (List.map RecurrentAssembly.Strand.cells ps)) r.pool ∧
+        Becoming.Copying.totalOf (fun w => StructuralCopying.cost law none w + 1)
+            (List.map RecurrentAssembly.Strand.cells ps) ≤
+          r.free)
+Becoming.CopyingInstances.batch_all_released_swap : ∀ (law : StructuralCopying.Law)
+  (pre post : List RecurrentAssembly.Strand) (p q : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (∀ (s : RecurrentAssembly.Strand),
+      s ∈ pre ++ p :: q :: post → s.bonds = RecurrentAssembly.path s.cells.length ∧ s.cells ≠ []) →
+    (Becoming.Copying.Every (List.map Prod.fst (StructuralCopying.batch law (pre ++ p :: q :: post) r).fst) ↔
+      Becoming.Copying.Every (List.map Prod.fst (StructuralCopying.batch law (pre ++ q :: p :: post) r).fst))
+Becoming.CopyingInstances.local_ranking_from_law : ∀ (law : StructuralCopying.Law),
+  StructuralCopying.cost law none StructuralCopying.alternating.cells <
+      StructuralCopying.cost law none StructuralCopying.clustered.cells ↔
+    law.unequal < law.equal
+Becoming.CopyingInstances.third_structure_from_law : ∀ (law : StructuralCopying.Law),
+  2 * (StructuralCopying.cost law none StructuralCopying.mixed.cells + 1) =
+    StructuralCopying.cost law none StructuralCopying.alternating.cells + 1 +
+      (StructuralCopying.cost law none StructuralCopying.clustered.cells + 1)
+@Becoming.CopyingInstances.strand_eq : ∀ {s p : RecurrentAssembly.Strand}, s.cells = p.cells → s.bonds = p.bonds → s = p
+Becoming.CopyingInstances.reproduce_built_eq : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand)
+  (r : RecurrentAssembly.Supply),
+  (StructuralCopying.reproduce law p r).snd.built = (StructuralCopying.copy law p r).built
+Becoming.CopyingInstances.reproduce_built : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        (StructuralCopying.reproduce law p r).fst = true → (StructuralCopying.reproduce law p r).snd.built = p
+Becoming.CopyingInstances.copy_used_le : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        (StructuralCopying.copy law p r).supply.spent ≤ r.spent + StructuralCopying.cost law none p.cells
+Becoming.CopyingInstances.reproduce_strand_used : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (r : RecurrentAssembly.Supply),
+        ((StructuralCopying.reproduce law p r).fst = true →
+            (StructuralCopying.reproduce law p r).snd.supply.spent =
+              r.spent + (StructuralCopying.cost law none p.cells + 1)) ∧
+          ((StructuralCopying.reproduce law p r).fst = false →
+            (StructuralCopying.reproduce law p r).snd.supply.spent ≤ r.spent + StructuralCopying.cost law none p.cells)
+Becoming.CopyingInstances.all_released_iff_batch : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (n : Nat) (r : RecurrentAssembly.Supply),
+        Becoming.CopyingInstances.AllReleased law n p r ↔
+          Becoming.Copying.Every (List.map Prod.fst (StructuralCopying.batch law (List.replicate n p) r).fst)
+Becoming.CopyingInstances.lineage_released_iff : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (n : Nat) (r : RecurrentAssembly.Supply),
+        Becoming.CopyingInstances.AllReleased law n p r ↔
+          (∀ (a : Bool), n * Becoming.Copying.countOf a p.cells ≤ Becoming.Copying.countOf a r.pool) ∧
+            n * (StructuralCopying.cost law none p.cells + 1) ≤ r.free
+Becoming.CopyingInstances.lineage_of_released : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (n : Nat) (r : RecurrentAssembly.Supply),
+        Becoming.CopyingInstances.AllReleased law n p r →
+          (StructuralCopying.descendants law n p r).fst = List.replicate (n + 1) p ∧
+            (StructuralCopying.descendants law n p r).snd.spent =
+              r.spent + n * (StructuralCopying.cost law none p.cells + 1)
+Becoming.CopyingInstances.lineage_used_iff : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (n : Nat) (r : RecurrentAssembly.Supply),
+        (StructuralCopying.descendants law n p r).snd.spent =
+            r.spent + n * (StructuralCopying.cost law none p.cells + 1) ↔
+          Becoming.CopyingInstances.AllReleased law n p r
+Becoming.CopyingInstances.repeatedFeed_eq : ∀ (w : List Bool) (n : Nat),
+  StructuralCopying.repeatedFeed w n = Becoming.Copying.joinAll (List.replicate n w)
+Becoming.CopyingInstances.finite_lineage_instance : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    p.cells ≠ [] →
+      ∀ (n : Nat) (tail : List Bool) (free used : Nat),
+        Becoming.CopyingInstances.AllReleased law n p
+          { pool := StructuralCopying.repeatedFeed p.cells n ++ tail,
+            free := free + n * (StructuralCopying.cost law none p.cells + 1), spent := used }
+Becoming.CopyingInstances.strands_do_not_show_release : (StructuralCopying.descendants StructuralCopying.alternatingEasy
+        1 StructuralCopying.alternating { pool := StructuralCopying.feed, free := 4, spent := 0 }).fst =
+    List.replicate 2 StructuralCopying.alternating ∧
+  ¬Becoming.CopyingInstances.AllReleased StructuralCopying.alternatingEasy 1 StructuralCopying.alternating
+      { pool := StructuralCopying.feed, free := 4, spent := 0 }
+Becoming.CopyingInstances.length_alternatingFrom : ∀ (b : Bool) (n : Nat),
+  (Becoming.CopyingInstances.alternatingFrom b n).length = n
+Becoming.CopyingInstances.use_unit : ∀ (p : Option Bool) (w : List Bool),
+  Becoming.Copying.use Becoming.CopyingInstances.unit p w = w.length
+Becoming.CopyingInstances.grow_fixed : ∀ (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  RecurrentAssembly.attach s r = (s, r) → ∀ (n : Nat), RecurrentAssembly.grow n s r = (s, r)
+Becoming.CopyingInstances.grow_view : ∀ (n : Nat) (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply)
+  (prev : Option Bool),
+  s.cells.length + n ≤ 8 →
+    Becoming.CopyingInstances.ofGrow (RecurrentAssembly.grow n s r) =
+      Becoming.CopyingInstances.ofScan
+        (Becoming.Copying.steps Becoming.CopyingInstances.unit n
+          { previous := prev, pending := Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n,
+            built := s.cells, pool := r.pool, free := r.free, used := r.spent })
+Becoming.CopyingInstances.grow_iff : ∀ (n : Nat) (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  s.cells.length + n ≤ 8 →
+    ((RecurrentAssembly.grow n s r).fst.cells =
+        s.cells ++ Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n ↔
+      Becoming.Copying.Supplies (Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n) r.pool ∧
+        n ≤ r.free)
+Becoming.CopyingInstances.mature_forms_iff : ∀ (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.grow 8 { cells := [], bonds := [] } r).fst.cells = RecurrentAssembly.mature.cells ↔
+    Becoming.Copying.Supplies RecurrentAssembly.mature.cells r.pool ∧ 8 ≤ r.free
+Becoming.CopyingInstances.attach_path_shaped : ∀ (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  s.bonds = RecurrentAssembly.path s.cells.length →
+    (RecurrentAssembly.attach s r).fst.bonds = RecurrentAssembly.path (RecurrentAssembly.attach s r).fst.cells.length
+Becoming.CopyingInstances.grow_path_shaped : ∀ (n : Nat) (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  s.bonds = RecurrentAssembly.path s.cells.length →
+    (RecurrentAssembly.grow n s r).fst.bonds = RecurrentAssembly.path (RecurrentAssembly.grow n s r).fst.cells.length
+Becoming.CopyingInstances.grow_strand_iff : ∀ (n : Nat) (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  s.cells.length + n ≤ 8 →
+    s.bonds = RecurrentAssembly.path s.cells.length →
+      ((RecurrentAssembly.grow n s r).fst =
+          { cells := s.cells ++ Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n,
+            bonds :=
+              RecurrentAssembly.path
+                (s.cells ++ Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n).length } ↔
+        Becoming.Copying.Supplies (Becoming.CopyingInstances.alternatingFrom (RecurrentAssembly.wanted s) n) r.pool ∧
+          n ≤ r.free)
+Becoming.CopyingInstances.mature_strand_iff : ∀ (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.grow 8 { cells := [], bonds := [] } r).fst = RecurrentAssembly.mature ↔
+    Becoming.Copying.Supplies RecurrentAssembly.mature.cells r.pool ∧ 8 ≤ r.free
+Becoming.CopyingInstances.required_eq : ∀ (n k : Nat), Becoming.Copying.required n k = RecurrentAssembly.required n k
+Becoming.CopyingInstances.attach_used : ∀ (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.attach s r).snd.spent + s.cells.length = r.spent + (RecurrentAssembly.attach s r).fst.cells.length
+Becoming.CopyingInstances.grow_used : ∀ (n : Nat) (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.grow n s r).snd.spent + s.cells.length = r.spent + (RecurrentAssembly.grow n s r).fst.cells.length
+Becoming.CopyingInstances.reproduce_used : ∀ (s : RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.reproduce s r).snd.spent + s.cells.length + 1 =
+    r.spent + RecurrentAssembly.size (RecurrentAssembly.reproduce s r).fst +
+      (RecurrentAssembly.reproduce s r).fst.length
+Becoming.CopyingInstances.generation_used : ∀ (ss : List RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.generation ss r).snd.spent + RecurrentAssembly.size ss + ss.length =
+    r.spent + RecurrentAssembly.size (RecurrentAssembly.generation ss r).fst +
+      (RecurrentAssembly.generation ss r).fst.length
+Becoming.CopyingInstances.rounds_used : ∀ (n : Nat) (ss : List RecurrentAssembly.Strand) (r : RecurrentAssembly.Supply),
+  (RecurrentAssembly.rounds n ss r).snd.spent + RecurrentAssembly.size ss + ss.length =
+    r.spent + RecurrentAssembly.size (RecurrentAssembly.rounds n ss r).fst +
+      (RecurrentAssembly.rounds n ss r).fst.length
+Becoming.CopyingInstances.rounds_mature_iff : ∀ (n k : Nat) (tail : List Bool) (free used : Nat),
+  (RecurrentAssembly.rounds n (List.replicate k RecurrentAssembly.mature)
+          { pool := RecurrentAssembly.blocks (RecurrentAssembly.required n k) ++ tail, free := free,
+            spent := used }).fst =
+      List.replicate (k * 2 ^ n) RecurrentAssembly.mature ↔
+    9 * RecurrentAssembly.required n k ≤ free
+Becoming.CopyingInstances.rounds_follow_doubling : ∀ (n k : Nat) (tail : List Bool) (free used : Nat),
+  (RecurrentAssembly.rounds n (List.replicate k RecurrentAssembly.mature)
+          { pool := RecurrentAssembly.blocks (RecurrentAssembly.required n k) ++ tail, free := free,
+            spent := used }).fst =
+      List.replicate (k * 2 ^ n) RecurrentAssembly.mature ↔
+    ∃ t, Generative.Trace (Becoming.Copying.doubling 9) (k, free) (Becoming.Copying.rounds n) t
+Becoming.CopyingInstances.tick_template : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State),
+  (CopyingRegistration.tick law s).template = s.template
+Becoming.CopyingInstances.readAt_tick : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State),
+  CopyingRegistration.readAt (CopyingRegistration.tick law s) = CopyingRegistration.readAt s
+Becoming.CopyingInstances.tick_work_view : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State),
+  Becoming.CopyingInstances.view (CopyingRegistration.tick law s).work =
+    Becoming.Copying.readTick (StructuralCopying.charge law) (CopyingRegistration.readAt s)
+      (Becoming.CopyingInstances.view s.work)
+Becoming.CopyingInstances.operate_view : ∀ (law : StructuralCopying.Law) (n : Nat) (s : CopyingRegistration.State),
+  Becoming.CopyingInstances.view (CopyingRegistration.operate law n s).work =
+    Becoming.Copying.readSteps (StructuralCopying.charge law) (CopyingRegistration.readAt s) n
+      (Becoming.CopyingInstances.view s.work)
+Becoming.CopyingInstances.operate_copies_iff : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State)
+  (word : List Bool),
+  s.work.pending.length = word.length →
+    ((CopyingRegistration.operate law word.length s).work.built.cells = s.work.built.cells ++ word ↔
+      Becoming.Copying.Reads (CopyingRegistration.readAt s) s.work.built.cells.length word ∧
+        Becoming.Copying.Supplies word s.work.supply.pool ∧
+          StructuralCopying.cost law s.work.previous word ≤ s.work.supply.free)
+Becoming.CopyingInstances.reads_of_getElem : ∀ (read : Nat → Option Bool) (word : List Bool) (k : Nat),
+  (∀ (i : Nat), i < word.length → read (k + i) = word[i]?) → Becoming.Copying.Reads read k word
+Becoming.CopyingInstances.registered_copy_cells : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand)
+  (tail : List Bool) (free used : Nat) (contacts : List (Nat × Nat)) (spare : Nat),
+  CopyingRegistration.Registered
+      { template := p,
+        work :=
+          StructuralCopying.start p
+            { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells, spent := used },
+        contacts := contacts, spare := spare } →
+    (CopyingRegistration.operate law p.cells.length
+              { template := p,
+                work :=
+                  StructuralCopying.start p
+                    { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells, spent := used },
+                contacts := contacts, spare := spare }).work.built.cells =
+      p.cells
+Becoming.CopyingInstances.product_extends : ∀ (law : StructuralCopying.Law),
+  Becoming.Copying.Extends (CopyingRegistration.process law) fun s => s.work.built.cells
+Becoming.CopyingInstances.product_extends_along : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State)
+  (plan : List CopyingRegistration.Event) (t : CopyingRegistration.State),
+  Generative.Trace (CopyingRegistration.process law) s plan t → ∃ tail, t.work.built.cells = s.work.built.cells ++ tail
+Becoming.CopyingInstances.product_gated : ∀ (law : StructuralCopying.Law),
+  Becoming.Gated.KeptBy (CopyingRegistration.process law) Becoming.CopyingInstances.copyGate fun s => s.work.built
+Becoming.CopyingInstances.contact_course_keeps_product : ∀ (law : StructuralCopying.Law)
+  {s t : CopyingRegistration.State} {plan : List CopyingRegistration.Event},
+  Generative.Trace (CopyingRegistration.process law) s plan t →
+    (∀ (e : CopyingRegistration.Event), e ∈ plan → Becoming.CopyingInstances.copyGate e = false) →
+      t.work.built = s.work.built
+Becoming.CopyingInstances.product_change_passes_copy : ∀ (law : StructuralCopying.Law) {s t : CopyingRegistration.State}
+  {plan : List CopyingRegistration.Event},
+  Generative.Trace (CopyingRegistration.process law) s plan t →
+    t.work.built ≠ s.work.built → ∃ e, e ∈ plan ∧ Becoming.CopyingInstances.copyGate e = true
+Becoming.CopyingInstances.totals_kept : ∀ (law : StructuralCopying.Law),
+  Becoming.Gated.KeptBy (CopyingRegistration.process law) (fun x => false) Becoming.CopyingInstances.totals
+Becoming.CopyingInstances.totals_along : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State)
+  (plan : List CopyingRegistration.Event) (t : CopyingRegistration.State),
+  Generative.Trace (CopyingRegistration.process law) s plan t →
+    Becoming.CopyingInstances.totals t = Becoming.CopyingInstances.totals s
+Becoming.CopyingInstances.extend_path : ∀ (s : RecurrentAssembly.Strand) (x : Bool),
+  s.bonds = RecurrentAssembly.path s.cells.length →
+    (StructuralCopying.extend s x).bonds = RecurrentAssembly.path (StructuralCopying.extend s x).cells.length
+Becoming.CopyingInstances.tick_path_shaped : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State),
+  Becoming.CopyingInstances.PathShaped s → Becoming.CopyingInstances.PathShaped (CopyingRegistration.tick law s)
+Becoming.CopyingInstances.path_shaped_along : ∀ (law : StructuralCopying.Law) (s t : CopyingRegistration.State),
+  Becoming.Reach (CopyingRegistration.process law) s t →
+    Becoming.CopyingInstances.PathShaped s → Becoming.CopyingInstances.PathShaped t
+Becoming.CopyingInstances.operate_path_shaped : ∀ (law : StructuralCopying.Law) (n : Nat)
+  (s : CopyingRegistration.State),
+  Becoming.CopyingInstances.PathShaped s → Becoming.CopyingInstances.PathShaped (CopyingRegistration.operate law n s)
+Becoming.CopyingInstances.operate_strand_iff : ∀ (law : StructuralCopying.Law) (s : CopyingRegistration.State)
+  (word : List Bool),
+  s.work.pending.length = word.length →
+    Becoming.CopyingInstances.PathShaped s →
+      ((CopyingRegistration.operate law word.length s).work.built =
+          { cells := s.work.built.cells ++ word, bonds := RecurrentAssembly.path (s.work.built.cells ++ word).length } ↔
+        Becoming.Copying.Reads (CopyingRegistration.readAt s) s.work.built.cells.length word ∧
+          Becoming.Copying.Supplies word s.work.supply.pool ∧
+            StructuralCopying.cost law s.work.previous word ≤ s.work.supply.free)
+Becoming.CopyingInstances.registered_copy_iff : ∀ (law : StructuralCopying.Law) (p : RecurrentAssembly.Strand)
+  (tail : List Bool) (free used : Nat) (contacts : List (Nat × Nat)) (spare : Nat),
+  CopyingRegistration.Registered
+      { template := p,
+        work :=
+          StructuralCopying.start p
+            { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells, spent := used },
+        contacts := contacts, spare := spare } →
+    ((CopyingRegistration.operate law p.cells.length
+              { template := p,
+                work :=
+                  StructuralCopying.start p
+                    { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells, spent := used },
+                contacts := contacts, spare := spare }).work.built =
+        p ↔
+      p.bonds = RecurrentAssembly.path p.cells.length)
+Becoming.CopyingInstances.registered_inheritance_instance : ∀ (law : StructuralCopying.Law)
+  (p : RecurrentAssembly.Strand),
+  p.bonds = RecurrentAssembly.path p.cells.length →
+    ∀ (tail : List Bool) (free used : Nat) (contacts : List (Nat × Nat)) (spare : Nat),
+      CopyingRegistration.Registered
+          { template := p,
+            work :=
+              StructuralCopying.start p
+                { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells, spent := used },
+            contacts := contacts, spare := spare } →
+        (CopyingRegistration.operate law p.cells.length
+                { template := p,
+                  work :=
+                    StructuralCopying.start p
+                      { pool := p.cells ++ tail, free := free + StructuralCopying.cost law none p.cells,
+                        spent := used },
+                  contacts := contacts, spare := spare }).work.built =
+          p
+Becoming.CopyingInstances.defects_eq : ∀ (t b : List Bool), CopyingCorrection.defects t b = Becoming.Copying.defects t b
+Becoming.CopyingInstances.exchange_view : ∀ (i : Nat) (x : Bool) (w : StructuralCopying.CopyState),
+  Becoming.CopyingInstances.view (CopyingCorrection.exchange i x w) =
+    Becoming.Copying.exchange 1 i x (Becoming.CopyingInstances.view w)
+Becoming.CopyingInstances.inspect_view : ∀ (i : Nat) (s : CopyingCorrection.State),
+  Becoming.CopyingInstances.view (CopyingCorrection.inspect i s).assembly.work =
+    Becoming.Copying.inspect 1 1 (CopyingCorrection.reference s) i (Becoming.CopyingInstances.view s.assembly.work)
+Becoming.CopyingInstances.inspect_keeps_reference : ∀ (i : Nat) (s : CopyingCorrection.State),
+  CopyingCorrection.reference (CopyingCorrection.inspect i s) = CopyingCorrection.reference s
+Becoming.CopyingInstances.scan_template : ∀ (is : List Nat) (s : CopyingCorrection.State),
+  (CopyingCorrection.scan is s).assembly.template = s.assembly.template
+Becoming.CopyingInstances.scan_view : ∀ (is : List Nat) (s : CopyingCorrection.State),
+  Becoming.CopyingInstances.view (CopyingCorrection.scan is s).assembly.work =
+    Becoming.Copying.scanSites 1 1 (CopyingCorrection.reference s) is (Becoming.CopyingInstances.view s.assembly.work)
+Becoming.CopyingInstances.inspect_le_iff_instance : ∀ (s : CopyingCorrection.State) (i : Nat),
+  (∀ (w : StructuralCopying.CopyState),
+      CopyingCorrection.defects s.assembly.template.cells
+          (CopyingCorrection.inspect i (Becoming.CopyingInstances.withWork s w)).assembly.work.built.cells ≤
+        CopyingCorrection.defects s.assembly.template.cells w.built.cells) ↔
+    Becoming.Copying.FaithfulAt (CopyingCorrection.reference s) s.assembly.template.cells i
+Becoming.CopyingInstances.scan_le_from_law : ∀ (is : List Nat) (s : CopyingCorrection.State),
+  (∀ (i : Nat), i ∈ is → Becoming.Copying.FaithfulAt (CopyingCorrection.reference s) s.assembly.template.cells i) →
+    CopyingCorrection.defects (CopyingCorrection.scan is s).assembly.template.cells
+        (CopyingCorrection.scan is s).assembly.work.built.cells ≤
+      CopyingCorrection.defects s.assembly.template.cells s.assembly.work.built.cells
+Becoming.CopyingInstances.faithfulAt_of_faithful : ∀ (s : CopyingCorrection.State),
+  CopyingCorrection.Faithful s →
+    ∀ (i : Nat), Becoming.Copying.FaithfulAt (CopyingCorrection.reference s) s.assembly.template.cells i
+Becoming.CopyingInstances.scan_faithful_instance : ∀ (s : CopyingCorrection.State) (is : List Nat),
+  CopyingCorrection.Faithful s →
+    CopyingCorrection.defects (CopyingCorrection.scan is s).assembly.template.cells
+        (CopyingCorrection.scan is s).assembly.work.built.cells ≤
+      CopyingCorrection.defects s.assembly.template.cells s.assembly.work.built.cells
+Becoming.CopyingInstances.matches_reference_from_law : ∀ (s : CopyingCorrection.State) (i : Nat) (x old : Bool),
+  CopyingCorrection.reference s i = some x →
+    s.assembly.work.built.cells[i]? = some old →
+      old ≠ x →
+        ((CopyingCorrection.inspect i s).assembly.work.built.cells[i]? = some x ↔
+          2 ≤ s.assembly.work.supply.free ∧ x ∈ s.assembly.work.supply.pool)
+Becoming.CopyingInstances.product_is_template_iff : ∀ (t b : List Bool),
+  b.length = t.length → (CopyingCorrection.defects t b = 0 ↔ b = t)
+Becoming.CopyingInstances.wrong_reference_unfaithful : have good :=
+  {
+    assembly :=
+      CopyingRegistration.run StructuralCopying.alternatingEasy CopyingRegistration.copying
+        (CopyingRegistration.prepared 15),
+    routes := [] };
+have s :=
+  CopyingCorrection.run StructuralCopying.alternatingEasy
+    [CopyingCorrection.Event.assembly (CopyingRegistration.Event.lose 1), CopyingCorrection.Event.connect 1 0] good;
+¬Becoming.Copying.FaithfulAt (CopyingCorrection.reference s) s.assembly.template.cells 1

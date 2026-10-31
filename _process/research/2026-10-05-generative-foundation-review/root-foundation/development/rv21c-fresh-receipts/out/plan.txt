@@ -1,0 +1,31 @@
+fallible-inquiry-verification                      records  3  stale bound runs 1
+correction-inquiry-verification                    records  1  stale bound runs 1
+machine-instances-verification                     records  8  stale bound runs 1
+learning-correspondence-verification               records  2  stale bound runs 1
+copying-instances-verification                     records  4  stale bound runs 1
+retrodiction-instances-verification                records  1  stale bound runs 1
+market-instances-verification                      records  4  stale bound runs 1
+protocol-instances-verification                    records  3  stale bound runs 1
+versioned-task-instances-verification              records  3  stale bound runs 1
+shared-stock-instances-verification                records  1  stale bound runs 1
+continuation-correspondence-verification           records  2  stale bound runs 1
+transmission-correspondence-verification           records  1  stale bound runs 1
+preparation-correspondence-verification            records  2  stale bound runs 1
+judging-correspondence-verification                records  1  stale bound runs 1
+renewing-correspondence-verification               records  1  stale bound runs 1
+substitution-correspondence-verification           records  1  stale bound runs 1
+organization-correspondence-verification           records  1  stale bound runs 1
+living-organization-correspondence-verification    records  1  stale bound runs 1
+prefix-safety-correspondence-verification          records  1  stale bound runs 1
+finite-branching-correspondence-verification       records  1  stale bound runs 1
+selection-relabel-correspondence-verification      records  1  stale bound runs 1
+ideals-correspondence-verification                 records  1  stale bound runs 1
+entropy-production-verification                    records  2  stale bound runs 1
+cells-under-noise-verification                     records  1  stale bound runs 1
+expected-free-energy-reals-verification            records  1  stale bound runs 1
+free-energy-reals-verification                     records  2  stale bound runs 1
+regime-reals-verification                          records  1  stale bound runs 1
+representation-verification                        records  2  stale bound runs 1
+OLDER LAYOUT experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json: stale ['experiments/shared-renewal-capability/regulation/retention/formation/formal/FormedSelection.lean'] unrecorded 0 of 5 unresolved imports [] (with a live file: []) compared True (records ['same-carrier-need-not-fix-the-response'])
+OLDER LAYOUT experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json: stale ['experiments/shared-renewal-capability/regulation/retention/formation/formal/FormedSelection.lean'] unrecorded 0 of 4 unresolved imports [] (with a live file: []) compared True (records ['a-selected-template-need-not-raise-structure'])
+PERIPHERY TO RERUN 28; records 52; older-layout receipts 60, stale 2, not compared 0; earlier unretained reuse {'core': {'occurrences': 1442, 'distinct_keys': 1442}, 'periphery': {'occurrences': 1249, 'distinct_keys': 632, 'receipts': 28}}

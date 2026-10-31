@@ -1,0 +1,72 @@
+@Becoming.Segmentation.join_glue : ∀ {α : Type u_1} (r : α → α → Bool) (x : α) (L : List (List α)),
+  Becoming.Segmentation.join (Becoming.Segmentation.glue r x L) = x :: Becoming.Segmentation.join L
+@Becoming.Segmentation.join_chunks : ∀ {α : Type u_1} (r : α → α → Bool) (xs : List α),
+  Becoming.Segmentation.join (Becoming.Segmentation.chunks r xs) = xs
+@Becoming.Segmentation.grouped_glue : ∀ {α : Type u_1} (r : α → α → Bool) (x : α) (L : List (List α)),
+  Becoming.Segmentation.Grouped r L → Becoming.Segmentation.Grouped r (Becoming.Segmentation.glue r x L)
+@Becoming.Segmentation.grouped_chunks : ∀ {α : Type u_1} (r : α → α → Bool) (xs : List α),
+  Becoming.Segmentation.Grouped r (Becoming.Segmentation.chunks r xs)
+@Becoming.Segmentation.chunks_group : ∀ {α : Type u_1} (r : α → α → Bool) {rest : List (List α)},
+  Becoming.Segmentation.Grouped r rest →
+    Becoming.Segmentation.chunks r (Becoming.Segmentation.join rest) = rest →
+      ∀ (x : α) (xs : List α),
+        Becoming.Segmentation.LinkedFrom r x xs →
+          Becoming.Segmentation.Opens r (Becoming.Segmentation.lastOf x xs) rest →
+            Becoming.Segmentation.chunks r (x :: xs ++ Becoming.Segmentation.join rest) = (x :: xs) :: rest
+@Becoming.Segmentation.chunks_of_grouped : ∀ {α : Type u_1} (r : α → α → Bool) (L : List (List α)),
+  Becoming.Segmentation.Grouped r L → Becoming.Segmentation.chunks r (Becoming.Segmentation.join L) = L
+@Becoming.Segmentation.chunks_eq_iff : ∀ {α : Type u_1} (r : α → α → Bool) (L : List (List α)),
+  Becoming.Segmentation.chunks r (Becoming.Segmentation.join L) = L ↔ Becoming.Segmentation.Grouped r L
+@Becoming.Segmentation.chunks_unique : ∀ {α : Type u_1} (r : α → α → Bool) {L : List (List α)} {xs : List α},
+  Becoming.Segmentation.Grouped r L → Becoming.Segmentation.join L = xs → Becoming.Segmentation.chunks r xs = L
+@Becoming.Segmentation.grouped_words : ∀ {α : Type u_1} {W : Type u_2} (r : α → α → Bool) {word : W → List α}
+  {first : W → α} {rest : W → List α},
+  Becoming.Segmentation.Spelled word first rest →
+    (∀ (w : W), Becoming.Segmentation.LinkedFrom r (first w) (rest w)) →
+      (∀ (w v : W), r (Becoming.Segmentation.lastOf (first w) (rest w)) (first v) = false) →
+        ∀ (ws : List W), Becoming.Segmentation.Grouped r (List.map word ws)
+@Becoming.Segmentation.encode_iff : ∀ {α : Type u_1} {W : Type u_2} (r : α → α → Bool) {word : W → List α}
+  {first : W → α} {rest : W → List α},
+  Becoming.Segmentation.Spelled word first rest →
+    ((∀ (ws : List W), Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws) = List.map word ws) ↔
+      (∀ (w : W), Becoming.Segmentation.LinkedFrom r (first w) (rest w)) ∧
+        ∀ (w v : W), r (Becoming.Segmentation.lastOf (first w) (rest w)) (first v) = false)
+@Becoming.Segmentation.countIf_disjoint : ∀ {β : Type u_1} (p q s : β → Bool),
+  (∀ (b : β), p b = true → q b = true → False) →
+    (∀ (b : β), p b = true → s b = true) →
+      (∀ (b : β), q b = true → s b = true) →
+        ∀ (l : List β),
+          Becoming.Segmentation.countIf p l + Becoming.Segmentation.countIf q l ≤ Becoming.Segmentation.countIf s l
+@Becoming.Segmentation.transitions_le : ∀ {α : Type u_1} [inst : DecidableEq α] (log : List (Option α)) {x y z : α},
+  y ≠ z →
+    Becoming.Segmentation.transitions log x y + Becoming.Segmentation.transitions log x z ≤
+      Becoming.Segmentation.departures log x
+@Becoming.Segmentation.lt_of_twice : ∀ {a b d : Nat}, d < 2 * a → a + b ≤ d → b < a
+@Becoming.Segmentation.bond_unique : ∀ {α : Type u_1} [inst : DecidableEq α] (log : List (Option α)) {x y z : α},
+  Becoming.Segmentation.bond log x y = true → Becoming.Segmentation.bond log x z = true → y = z
+@Becoming.Segmentation.no_record_groups : ∀ {α : Type u_1} {W : Type u_2} [inst : DecidableEq α] {word : W → List α}
+  {first : W → α} {rest : W → List α},
+  Becoming.Segmentation.Spelled word first rest →
+    ∀ {x y z : α},
+      y ≠ z →
+        (∀ (log : List (Option α)),
+            (∀ (w : W), Becoming.Segmentation.LinkedFrom (Becoming.Segmentation.bond log) (first w) (rest w)) →
+              Becoming.Segmentation.bond log x y = true) →
+          (∀ (log : List (Option α)),
+              (∀ (w : W), Becoming.Segmentation.LinkedFrom (Becoming.Segmentation.bond log) (first w) (rest w)) →
+                Becoming.Segmentation.bond log x z = true) →
+            ∀ (log : List (Option α)),
+              ¬∀ (ws : List W),
+                  Becoming.Segmentation.chunks (Becoming.Segmentation.bond log) (Becoming.Segmentation.encode word ws) =
+                    List.map word ws
+@Becoming.Segmentation.readAll_map_iff : ∀ {α : Type u_1} {W : Type u_2} {M : Type u_3} (res : List α → Option M)
+  (word : W → List α) (meaning : W → M) (ws : List W),
+  Becoming.Segmentation.readAll res (List.map word ws) = some (List.map meaning ws) ↔
+    ∀ (w : W), w ∈ ws → res (word w) = some (meaning w)
+@Becoming.Segmentation.reads_every_iff : ∀ {α : Type u_1} {W : Type u_2} {M : Type u_3} (r : α → α → Bool)
+  (word : W → List α) (res : List α → Option M) (meaning : W → M),
+  (∀ (ws : List W), Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws) = List.map word ws) →
+    ((∀ (ws : List W),
+        Becoming.Segmentation.readAll res (Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws)) =
+          some (List.map meaning ws)) ↔
+      ∀ (w : W), res (word w) = some (meaning w))

@@ -1,0 +1,1098 @@
+{
+ "core": {
+  "utc": "20261031T125855.282103Z",
+  "modules": 364,
+  "steps": 1455,
+  "source_commit": {
+   "main": "7396ceddb4a3e4a2482632f2fbe58d21e778a189",
+   "copied": []
+  },
+  "size": {
+   "files": 2184,
+   "bytes": 14107976,
+   "largest": [
+    [
+     "verification.json",
+     4796505
+    ],
+    [
+     "BecomingOptimumSignatures.log",
+     244060
+    ],
+    [
+     "BecomingWeightingsSignatures.log",
+     137439
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "fallible-inquiry-verification": {
+  "utc": "20261031T130828.999853Z",
+  "previous_utc": "20261020T161546.707477Z",
+  "modules": 42,
+  "steps": 44,
+  "ran": 5,
+  "reused": 40,
+  "reused_from": {
+   "core": 40
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 346,
+  "source_commit": {
+   "main": "3f6afc9a4174aa46327cc3b44b1a35d9a9b166b1",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 597545,
+   "largest": [
+    [
+     "verification.json",
+     563828
+    ],
+    [
+     "Becoming.FallibleInquirySignatures.log",
+     25928
+    ],
+    [
+     "Becoming.FallibleInquiryAxiomAudit.log",
+     3278
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "correction-inquiry-verification": {
+  "utc": "20261031T131415.384434Z",
+  "previous_utc": "20261020T161757.201244Z",
+  "modules": 368,
+  "steps": 370,
+  "ran": 371,
+  "reused": 0,
+  "reused_from": {},
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 237,
+  "source_commit": {
+   "main": "3f6afc9a4174aa46327cc3b44b1a35d9a9b166b1",
+   "copied": []
+  },
+  "size": {
+   "files": 374,
+   "bytes": 4657109,
+   "largest": [
+    [
+     "verification.json",
+     4650644
+    ],
+    [
+     "CorrectionInquirySignatures.log",
+     2484
+    ],
+    [
+     "InquirySufficiency.log",
+     1555
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "machine-instances-verification": {
+  "utc": "20261031T131812.213702Z",
+  "previous_utc": "20261020T161859.257200Z",
+  "modules": 74,
+  "steps": 76,
+  "ran": 29,
+  "reused": 48,
+  "reused_from": {
+   "core": 48
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 35,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 32,
+   "bytes": 1334536,
+   "largest": [
+    [
+     "verification.json",
+     1267443
+    ],
+    [
+     "MachineInstancesSignatures.log",
+     39397
+    ],
+    [
+     "MachineInstancesAxiomAudit.log",
+     9921
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "learning-correspondence-verification": {
+  "utc": "20261031T131847.549129Z",
+  "previous_utc": "20261020T161905.961078Z",
+  "modules": 47,
+  "steps": 49,
+  "ran": 9,
+  "reused": 41,
+  "reused_from": {
+   "correction-inquiry-verification": 41
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 63,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 12,
+   "bytes": 650889,
+   "largest": [
+    [
+     "verification.json",
+     642776
+    ],
+    [
+     "LearningCorrespondenceSignatures.log",
+     3958
+    ],
+    [
+     "LearningCorrespondenceAxiomAudit.log",
+     1911
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "copying-instances-verification": {
+  "utc": "20261031T131950.855717Z",
+  "previous_utc": "20261020T161910.956874Z",
+  "modules": 24,
+  "steps": 26,
+  "ran": 14,
+  "reused": 13,
+  "reused_from": {
+   "core": 13
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 56,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 17,
+   "bytes": 379133,
+   "largest": [
+    [
+     "verification.json",
+     331474
+    ],
+    [
+     "CopyingInstancesSignatures.log",
+     29757
+    ],
+    [
+     "CopyingInstancesAxiomAudit.log",
+     7926
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "retrodiction-instances-verification": {
+  "utc": "20261031T132046.721958Z",
+  "previous_utc": "20261020T161914.501944Z",
+  "modules": 16,
+  "steps": 18,
+  "ran": 5,
+  "reused": 14,
+  "reused_from": {
+   "core": 2,
+   "machine-instances-verification": 12
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 17,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 262015,
+   "largest": [
+    [
+     "verification.json",
+     246711
+    ],
+    [
+     "RetrodictionInstancesSignatures.log",
+     9893
+    ],
+    [
+     "RetrodictionInstancesAxiomAudit.log",
+     2339
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "market-instances-verification": {
+  "utc": "20261031T132103.724349Z",
+  "previous_utc": "20261020T161917.735916Z",
+  "modules": 47,
+  "steps": 49,
+  "ran": 10,
+  "reused": 40,
+  "reused_from": {
+   "core": 40
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 42,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 13,
+   "bytes": 673902,
+   "largest": [
+    [
+     "verification.json",
+     641577
+    ],
+    [
+     "MarketInstancesSignatures.log",
+     17494
+    ],
+    [
+     "MarketInstancesAxiomAudit.log",
+     5432
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "protocol-instances-verification": {
+  "utc": "20261031T132145.271099Z",
+  "previous_utc": "20261020T161923.157515Z",
+  "modules": 23,
+  "steps": 25,
+  "ran": 15,
+  "reused": 11,
+  "reused_from": {
+   "core": 11
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "mathlib_revision": null,
+  "seconds": 38,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 18,
+   "bytes": 480263,
+   "largest": [
+    [
+     "verification.json",
+     469233
+    ],
+    [
+     "ProtocolInstancesSignatures.log",
+     5705
+    ],
+    [
+     "ProtocolInstancesAxiomAudit.log",
+     2467
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "versioned-task-instances-verification": {
+  "utc": "20261031T132223.713396Z",
+  "previous_utc": "20261020T161926.448088Z",
+  "modules": 31,
+  "steps": 33,
+  "ran": 11,
+  "reused": 23,
+  "reused_from": {
+   "correction-inquiry-verification": 22,
+   "learning-correspondence-verification": 1
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 404,
+  "source_commit": {
+   "main": "cc019caaa359f4fc09e9d3910a851d0fe0c5d712",
+   "copied": []
+  },
+  "size": {
+   "files": 14,
+   "bytes": 637929,
+   "largest": [
+    [
+     "verification.json",
+     621773
+    ],
+    [
+     "VersionedTaskInstancesSignatures.log",
+     10240
+    ],
+    [
+     "VersionedTaskInstancesAxiomAudit.log",
+     2601
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "shared-stock-instances-verification": {
+  "utc": "20261031T132907.790736Z",
+  "previous_utc": "20261020T161930.665727Z",
+  "modules": 32,
+  "steps": 34,
+  "ran": 5,
+  "reused": 30,
+  "reused_from": {
+   "correction-inquiry-verification": 30
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 16,
+  "source_commit": {
+   "main": "3ada8819f0be6e23e28cee9cebc4a493c070d716",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 512682,
+   "largest": [
+    [
+     "verification.json",
+     510757
+    ],
+    [
+     "SharedStockInstancesSignatures.log",
+     860
+    ],
+    [
+     "SharedStockInstancesAxiomAudit.log",
+     383
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "continuation-correspondence-verification": {
+  "utc": "20261031T132923.838546Z",
+  "previous_utc": "20261020T161935.181496Z",
+  "modules": 14,
+  "steps": 16,
+  "ran": 6,
+  "reused": 11,
+  "reused_from": {
+   "correction-inquiry-verification": 11
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 81,
+  "source_commit": {
+   "main": "3ada8819f0be6e23e28cee9cebc4a493c070d716",
+   "copied": []
+  },
+  "size": {
+   "files": 9,
+   "bytes": 266193,
+   "largest": [
+    [
+     "verification.json",
+     254321
+    ],
+    [
+     "ContinuationCorrespondenceSignatures.log",
+     5778
+    ],
+    [
+     "ContinuationCorrespondenceAxiomAudit.log",
+     1482
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "transmission-correspondence-verification": {
+  "utc": "20261031T133044.516133Z",
+  "previous_utc": "20261020T161938.520043Z",
+  "modules": 39,
+  "steps": 41,
+  "ran": 7,
+  "reused": 35,
+  "reused_from": {
+   "correction-inquiry-verification": 32,
+   "learning-correspondence-verification": 3
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 324,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 10,
+   "bytes": 525151,
+   "largest": [
+    [
+     "verification.json",
+     514086
+    ],
+    [
+     "TransmissionCorrespondenceSignatures.log",
+     6783
+    ],
+    [
+     "TransmissionCorrespondenceAxiomAudit.log",
+     2059
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "preparation-correspondence-verification": {
+  "utc": "20261031T133608.754102Z",
+  "previous_utc": "20261020T161943.503298Z",
+  "modules": 55,
+  "steps": 57,
+  "ran": 10,
+  "reused": 48,
+  "reused_from": {
+   "correction-inquiry-verification": 48
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 99,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 13,
+   "bytes": 813787,
+   "largest": [
+    [
+     "verification.json",
+     799666
+    ],
+    [
+     "PreparationCorrespondenceSignatures.log",
+     7897
+    ],
+    [
+     "PreparationCorrespondenceAxiomAudit.log",
+     2701
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "judging-correspondence-verification": {
+  "utc": "20261031T133748.088094Z",
+  "previous_utc": "20261020T161948.968917Z",
+  "modules": 51,
+  "steps": 53,
+  "ran": 9,
+  "reused": 45,
+  "reused_from": {
+   "correction-inquiry-verification": 45
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 23,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 12,
+   "bytes": 863161,
+   "largest": [
+    [
+     "verification.json",
+     855625
+    ],
+    [
+     "JudgingCorrespondenceSignatures.log",
+     2121
+    ],
+    [
+     "ContextualWisdom.log",
+     1027
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "renewing-correspondence-verification": {
+  "utc": "20261031T133811.050699Z",
+  "previous_utc": "20261020T161953.940017Z",
+  "modules": 19,
+  "steps": 21,
+  "ran": 6,
+  "reused": 16,
+  "reused_from": {
+   "correction-inquiry-verification": 16
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 25,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 9,
+   "bytes": 367618,
+   "largest": [
+    [
+     "verification.json",
+     361962
+    ],
+    [
+     "RenewingCorrespondenceSignatures.log",
+     3010
+    ],
+    [
+     "RenewingCorrespondenceAxiomAudit.log",
+     1088
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "substitution-correspondence-verification": {
+  "utc": "20261031T133836.069337Z",
+  "previous_utc": "20261020T161957.579185Z",
+  "modules": 48,
+  "steps": 50,
+  "ran": 6,
+  "reused": 45,
+  "reused_from": {
+   "correction-inquiry-verification": 45
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 23,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 9,
+   "bytes": 755042,
+   "largest": [
+    [
+     "verification.json",
+     749471
+    ],
+    [
+     "SubstitutionCorrespondenceSignatures.log",
+     2072
+    ],
+    [
+     "InferentialSubstitution.log",
+     851
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "organization-correspondence-verification": {
+  "utc": "20261031T133859.385075Z",
+  "previous_utc": "20261025T185035.252368Z",
+  "modules": 29,
+  "steps": 31,
+  "ran": 5,
+  "reused": 27,
+  "reused_from": {
+   "correction-inquiry-verification": 26,
+   "versioned-task-instances-verification": 1
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 16,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 490429,
+   "largest": [
+    [
+     "verification.json",
+     488393
+    ],
+    [
+     "OrganizationCorrespondenceSignatures.log",
+     1055
+    ],
+    [
+     "OrganizationCorrespondenceAxiomAudit.log",
+     351
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "living-organization-correspondence-verification": {
+  "utc": "20261031T133915.555151Z",
+  "previous_utc": "20261020T162006.335470Z",
+  "modules": 9,
+  "steps": 11,
+  "ran": 5,
+  "reused": 7,
+  "reused_from": {
+   "correction-inquiry-verification": 7
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 10,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 154042,
+   "largest": [
+    [
+     "verification.json",
+     149423
+    ],
+    [
+     "LivingOrganizationCorrespondenceSignatures.log",
+     3076
+    ],
+    [
+     "LivingOrganizationCorrespondenceAxiomAudit.log",
+     606
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "prefix-safety-correspondence-verification": {
+  "utc": "20261031T133925.659050Z",
+  "previous_utc": "20261020T162009.405485Z",
+  "modules": 20,
+  "steps": 22,
+  "ran": 5,
+  "reused": 18,
+  "reused_from": {
+   "correction-inquiry-verification": 18
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 10,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 365161,
+   "largest": [
+    [
+     "verification.json",
+     355382
+    ],
+    [
+     "PrefixSafety.log",
+     4939
+    ],
+    [
+     "PrefixSafetyCorrespondenceSignatures.log",
+     2301
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "finite-branching-correspondence-verification": {
+  "utc": "20261031T133936.018674Z",
+  "previous_utc": "20261020T162012.952848Z",
+  "modules": 42,
+  "steps": 44,
+  "ran": 5,
+  "reused": 40,
+  "reused_from": {
+   "correction-inquiry-verification": 40
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 16,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 623572,
+   "largest": [
+    [
+     "verification.json",
+     617698
+    ],
+    [
+     "FiniteBranchingCorrespondenceSignatures.log",
+     2627
+    ],
+    [
+     "FiniteBranchingCorrespondenceAxiomAudit.log",
+     1108
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "selection-relabel-correspondence-verification": {
+  "utc": "20261031T133952.181485Z",
+  "previous_utc": "20261020T162018.010437Z",
+  "modules": 38,
+  "steps": 40,
+  "ran": 6,
+  "reused": 35,
+  "reused_from": {
+   "correction-inquiry-verification": 35
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 11,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 9,
+   "bytes": 580039,
+   "largest": [
+    [
+     "verification.json",
+     564155
+    ],
+    [
+     "SelectionRelabelCorrespondenceAxiomAudit.log",
+     4783
+    ],
+    [
+     "SelectionRelabelCorrespondenceAxiomAudit.lean",
+     3525
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "ideals-correspondence-verification": {
+  "utc": "20261031T134003.600817Z",
+  "previous_utc": "20261020T162022.465111Z",
+  "modules": 41,
+  "steps": 43,
+  "ran": 7,
+  "reused": 37,
+  "reused_from": {
+   "correction-inquiry-verification": 36,
+   "prefix-safety-correspondence-verification": 1
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 19,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 10,
+   "bytes": 666798,
+   "largest": [
+    [
+     "verification.json",
+     606637
+    ],
+    [
+     "IdealsCorrespondenceSignatures.log",
+     27320
+    ],
+    [
+     "IdealsCorrespondenceAxiomAudit.log",
+     9492
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "entropy-production-verification": {
+  "utc": "20261031T134022.206464Z",
+  "previous_utc": "20261027T042508.827829Z",
+  "modules": 30,
+  "steps": 32,
+  "ran": 4,
+  "reused": 29,
+  "reused_from": {
+   "correction-inquiry-verification": 29
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 34,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 7,
+   "bytes": 521948,
+   "largest": [
+    [
+     "verification.json",
+     487580
+    ],
+    [
+     "EntropyProductionSignatures.log",
+     19489
+    ],
+    [
+     "EntropyProductionAxiomAudit.log",
+     7651
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "cells-under-noise-verification": {
+  "utc": "20261031T134056.109386Z",
+  "previous_utc": "20261030T160959.698859Z",
+  "modules": 91,
+  "steps": 93,
+  "ran": 4,
+  "reused": 90,
+  "reused_from": {
+   "correction-inquiry-verification": 90
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 34,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 7,
+   "bytes": 1323349,
+   "largest": [
+    [
+     "verification.json",
+     1287082
+    ],
+    [
+     "CellsUnderNoiseSignatures.log",
+     20897
+    ],
+    [
+     "CellsUnderNoiseAxiomAudit.log",
+     7701
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "expected-free-energy-reals-verification": {
+  "utc": "20261031T134130.030892Z",
+  "previous_utc": "20261030T101649.229011Z",
+  "modules": 60,
+  "steps": 62,
+  "ran": 5,
+  "reused": 58,
+  "reused_from": {
+   "correction-inquiry-verification": 58
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 34,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 8,
+   "bytes": 875318,
+   "largest": [
+    [
+     "verification.json",
+     831563
+    ],
+    [
+     "ExpectedFreeEnergyRealsSignatures.log",
+     29253
+    ],
+    [
+     "ExpectedFreeEnergyRealsAxiomAudit.log",
+     7299
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "free-energy-reals-verification": {
+  "utc": "20261031T134204.303683Z",
+  "previous_utc": "20261030T043328.214810Z",
+  "modules": 58,
+  "steps": 60,
+  "ran": 3,
+  "reused": 58,
+  "reused_from": {
+   "correction-inquiry-verification": 57,
+   "expected-free-energy-reals-verification": 1
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 27,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 6,
+   "bytes": 890236,
+   "largest": [
+    [
+     "verification.json",
+     838299
+    ],
+    [
+     "FreeEnergyRealsSignatures.log",
+     35987
+    ],
+    [
+     "FreeEnergyRealsAxiomAudit.log",
+     7813
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "regime-reals-verification": {
+  "utc": "20261031T134231.224593Z",
+  "previous_utc": "20261021T102713.696033Z",
+  "modules": 66,
+  "steps": 68,
+  "ran": 4,
+  "reused": 65,
+  "reused_from": {
+   "correction-inquiry-verification": 65
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 31,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 7,
+   "bytes": 947548,
+   "largest": [
+    [
+     "verification.json",
+     938738
+    ],
+    [
+     "RegimeRealsSignatures.log",
+     5226
+    ],
+    [
+     "RegimeRealsAxiomAudit.log",
+     1758
+    ]
+   ]
+  },
+  "problems": []
+ },
+ "representation-verification": {
+  "utc": "20261031T134302.467521Z",
+  "previous_utc": "20261022T151119.678274Z",
+  "modules": 42,
+  "steps": 44,
+  "ran": 4,
+  "reused": 41,
+  "reused_from": {
+   "correction-inquiry-verification": 41
+  },
+  "fresh": false,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "seconds": 32,
+  "source_commit": {
+   "main": "74e2c9a697019ade41ec38312db6b082a3487af0",
+   "copied": []
+  },
+  "size": {
+   "files": 7,
+   "bytes": 664206,
+   "largest": [
+    [
+     "verification.json",
+     641315
+    ],
+    [
+     "RepresentationSignatures.log",
+     10780
+    ],
+    [
+     "RepresentationAxiomAudit.log",
+     6264
+    ]
+   ]
+  },
+  "problems": []
+ }
+}

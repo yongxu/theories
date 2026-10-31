@@ -1,0 +1,13 @@
+'Becoming.RenewingCorrespondence.beyond' does not depend on any axioms
+'Becoming.RenewingCorrespondence.formedOf' does not depend on any axioms
+'Becoming.RenewingCorrespondence.remaining_falls' depends on axioms: [propext, Quot.sound]
+'Becoming.RenewingCorrespondence.forms_while_held' depends on axioms: [propext, Quot.sound]
+'Becoming.RenewingCorrespondence.moves' does not depend on any axioms
+'Becoming.RenewingCorrespondence.moves_length' depends on axioms: [propext]
+'Becoming.RenewingCorrespondence.moves_succ' depends on axioms: [propext]
+'Becoming.RenewingCorrespondence.total_append' depends on axioms: [propext]
+'Becoming.RenewingCorrespondence.total_moves' depends on axioms: [propext]
+'Becoming.RenewingCorrespondence.path_trace' depends on axioms: [propext]
+'Becoming.RenewingCorrespondence.beyond_current_bounded_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.RenewingCorrespondence.beyond_current_ceases_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.RenewingCorrespondence.shared_formation_ends_by_core' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,22 @@
+@Becoming.Contextual.world_active : ∀ {S K C V : Type} (X : Becoming.Contextual S K C V) {A : Type}
+  {P : Generative.Process S A} {r : Becoming.Run P} {t : Nat} {q : K × C × V},
+  (X.world P r).web.active t q ↔ X.within q.fst q.snd.fst ∧ X.shows (r.state t) q.fst q.snd.fst = q.snd.snd
+Becoming.sub_add_add_right : ∀ (n m k : Nat), n + k - (m + k) = n - m
+@Becoming.sub_eq_of_add_eq : ∀ {a b p q : Nat}, b + p = a + q → b - a = q - p
+@Becoming.add_eq_of_sub_eq : ∀ {a b p q : Nat}, b - a = q - p → a - b = p - q → b + p = a + q
+@Becoming.changes_agree_iff : ∀ {a b p q : Nat}, (b - a, a - b) = (q - p, p - q) ↔ b + p = a + q
+@Becoming.Flow.changeReadings_agree_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  (L.changeReadings W).Agree t ↔ ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c
+@Becoming.Flow.changeReadings_glue_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  (L.changeReadings W).Glues t ↔ ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c
+@Becoming.Flow.changeReadings_glue_everywhere_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (t : Nat), (L.changeReadings W).Glues t) ↔ L.Balances W
+@Becoming.Flow.changeReadings_free_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {A : Type}
+  (P : Generative.Process Nat A), (∃ Fr, Fr.P = P ∧ (L.changeReadings W).FitsFree Fr) ↔ L.Balances W
+@Becoming.Flow.changeReadings_glue_counting_rest : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (t : Nat), ((L.withImbalance W).changeReadings W.withRefinement).Glues t
+Becoming.World.unity : ∀ (w : Becoming.World),
+  (∃ r, ∀ (t : Nat) (x : w.Relatum), r.state t (some x) = w.web.level t x) ∧
+    (∀ (t : Nat), (w.withRest.flow.changeReadings w.withRest.web).Glues t) ∧
+      ((∀ (t : Nat), (w.flow.changeReadings w.web).Glues t) ↔ w.Balanced) ∧
+        (w.Balanced ↔ ∀ (t : Nat), ¬w.withRest.web.active t none)

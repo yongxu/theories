@@ -1,0 +1,5 @@
+import Becoming.SensitivityWebs
+#check @Becoming.SensitivityWebs.exchange_alike_of_insensitiveAt
+#check @Becoming.SensitivityWebs.exchange_alike_of_insensitive
+#check @Becoming.SensitivityWebs.wholeLaw_not_through
+#check @Becoming.SensitivityWebs.tailLaw_courseWorld_balanced_iff

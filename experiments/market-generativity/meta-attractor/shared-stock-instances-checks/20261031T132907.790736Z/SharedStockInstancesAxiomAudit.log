@@ -1,0 +1,5 @@
+'SharedStockInstances.firstDraws' does not depend on any axioms
+'SharedStockInstances.selectedTotal_eq_mass' does not depend on any axioms
+'SharedStockInstances.total_eq_mass' does not depend on any axioms
+'SharedStockInstances.every_selection_within_iff_total_within' does not depend on any axioms
+'SharedStockInstances.each_within_alone_not_together' does not depend on any axioms

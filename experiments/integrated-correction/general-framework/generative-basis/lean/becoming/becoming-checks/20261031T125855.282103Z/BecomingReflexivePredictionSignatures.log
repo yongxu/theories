@@ -1,0 +1,61 @@
+@Becoming.ReflexivePrediction.none_right_of_moves : ∀ {V : Type u_1} {r : V → V},
+  (∀ (v : V), r v ≠ v) → ∀ (p : V), ¬Becoming.ReflexivePrediction.Right r p
+@Becoming.ReflexivePrediction.no_predictor_right : ∀ {V : Type u_1} {admitted : (V → V) → Prop} {r : V → V},
+  admitted r →
+    (∀ (v : V), r v ≠ v) → ¬∃ predict, ∀ (r' : V → V), admitted r' → Becoming.ReflexivePrediction.Right r' (predict r')
+Becoming.ReflexivePrediction.not_moves : ∀ (b : Bool), (!b) ≠ b
+@Becoming.ReflexivePrediction.predictor_iff : ∀ {V : Type u_1} {admitted : (V → V) → Prop},
+  Becoming.Viability.ChoiceOver { r // admitted r } V →
+    ((∃ predict, ∀ (r : { r // admitted r }), Becoming.ReflexivePrediction.Right r.val (predict r)) ↔
+      ∀ (r : V → V), admitted r → ∃ p, Becoming.ReflexivePrediction.Right r p)
+@Becoming.ReflexivePrediction.rests_iff_right : ∀ {V : Type u_1} (r : V → V) (p : V) (n : Nat),
+  Becoming.Law.orbit r p (n + 1) = Becoming.Law.orbit r p n ↔
+    Becoming.ReflexivePrediction.Right r (Becoming.Law.orbit r p n)
+@Becoming.ReflexivePrediction.right_rests : ∀ {V : Type u_1} {r : V → V} {p : V},
+  Becoming.ReflexivePrediction.Right r p → ∀ (n : Nat), Becoming.Law.orbit r p n = p
+@Becoming.ReflexivePrediction.reached_rests : ∀ {V : Type u_1} {r : V → V} {p q : V},
+  r p = q → Becoming.ReflexivePrediction.Right r q → ∀ (n : Nat), Becoming.Law.orbit r p (n + 1) = q
+@Becoming.ReflexivePrediction.on_chain : ∀ {n : Nat} {r : Nat → Nat},
+  (∀ (v : Nat), v ≤ n → r v ≤ n) → ∀ (k : Nat), Becoming.Law.orbit r 0 k ≤ n
+@Becoming.ReflexivePrediction.rises : ∀ {n : Nat} {r : Nat → Nat},
+  (∀ (v : Nat), v ≤ n → r v ≤ n) →
+    (∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w) → ∀ (k : Nat), Becoming.Law.orbit r 0 k ≤ Becoming.Law.orbit r 0 (k + 1)
+@Becoming.ReflexivePrediction.below_right : ∀ {n : Nat} {r : Nat → Nat},
+  (∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w) →
+    ∀ {f : Nat}, f ≤ n → Becoming.ReflexivePrediction.Right r f → ∀ (k : Nat), Becoming.Law.orbit r 0 k ≤ f
+Becoming.ReflexivePrediction.stays_from : ∀ (r : Nat → Nat) {j : Nat},
+  Becoming.Law.orbit r 0 (j + 1) = Becoming.Law.orbit r 0 j →
+    ∀ (m : Nat), Becoming.Law.orbit r 0 (j + m) = Becoming.Law.orbit r 0 j
+@Becoming.ReflexivePrediction.again_or_risen : ∀ {n : Nat} {r : Nat → Nat},
+  (∀ (v : Nat), v ≤ n → r v ≤ n) →
+    (∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w) →
+      ∀ (k : Nat),
+        (∃ j, j < k ∧ Becoming.Law.orbit r 0 (j + 1) = Becoming.Law.orbit r 0 j) ∨ k ≤ Becoming.Law.orbit r 0 k
+@Becoming.ReflexivePrediction.bottom_rests : ∀ {n : Nat} {r : Nat → Nat},
+  (∀ (v : Nat), v ≤ n → r v ≤ n) →
+    (∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w) →
+      Becoming.ReflexivePrediction.Right r (Becoming.Law.orbit r 0 n) ∧
+        ∀ (f : Nat), f ≤ n → Becoming.ReflexivePrediction.Right r f → Becoming.Law.orbit r 0 n ≤ f
+Becoming.ReflexivePrediction.ThresholdResponse.within : ∀ (v : Nat),
+  v ≤ 2 → Becoming.ReflexivePrediction.ThresholdResponse.threshold v ≤ 2
+Becoming.ReflexivePrediction.ThresholdResponse.keeps : ∀ (v w : Nat),
+  v ≤ w →
+    w ≤ 2 →
+      Becoming.ReflexivePrediction.ThresholdResponse.threshold v ≤
+        Becoming.ReflexivePrediction.ThresholdResponse.threshold w
+Becoming.ReflexivePrediction.ThresholdResponse.both_right : Becoming.ReflexivePrediction.Right
+    Becoming.ReflexivePrediction.ThresholdResponse.threshold 0 ∧
+  Becoming.ReflexivePrediction.Right Becoming.ReflexivePrediction.ThresholdResponse.threshold 2
+Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start : ∀ (k : Nat),
+  Becoming.Law.orbit Becoming.ReflexivePrediction.ThresholdResponse.threshold 0 k = 0 ∧
+    Becoming.Law.orbit Becoming.ReflexivePrediction.ThresholdResponse.threshold 1 (k + 1) = 2
+Becoming.ReflexivePrediction.Negating.none_right : ∀ (p : Bool),
+  ¬Becoming.ReflexivePrediction.Right Becoming.ReflexivePrediction.Negating.negate p
+Becoming.ReflexivePrediction.Negating.alternates : ∀ (p : Bool) (k : Nat),
+  Becoming.Law.orbit Becoming.ReflexivePrediction.Negating.negate p (k + 1) ≠
+    Becoming.Law.orbit Becoming.ReflexivePrediction.Negating.negate p k
+Becoming.ReflexivePrediction.Reflecting.sub_antitone : ∀ (k : Nat) {v w : Nat}, v ≤ w → k - w ≤ k - v
+@Becoming.ReflexivePrediction.Reflecting.reverses : ∀ {v w : Nat},
+  v ≤ w → Becoming.ReflexivePrediction.Reflecting.reflect w ≤ Becoming.ReflexivePrediction.Reflecting.reflect v
+Becoming.ReflexivePrediction.Reflecting.middle_right : Becoming.ReflexivePrediction.Right
+  Becoming.ReflexivePrediction.Reflecting.reflect 1

@@ -1,0 +1,9 @@
+'Generative.Deeper.reach_refl' does not depend on any axioms
+'Generative.Deeper.reach_step' does not depend on any axioms
+'Generative.Deeper.reach_trans' does not depend on any axioms
+'Generative.Deeper.trace_evaluate' does not depend on any axioms
+'Generative.Deeper.reach_evaluate' does not depend on any axioms
+'Generative.Deeper.reach_least' does not depend on any axioms
+'Generative.Deeper.reach_is_least_closure' does not depend on any axioms
+'Generative.Deeper.least_closure_unique' does not depend on any axioms
+'Generative.Deeper.reach_without_steps_iff' does not depend on any axioms
