@@ -1,0 +1,14 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/568486ee-fafd-4bf5-b667-a3da885f62a8/scratchpad/tree",
+  "modules": 51,
+  "ran": [],
+  "reused": 52,
+  "unclean": [],
+  "audits": {
+    "Becoming.UnitMatchings": {
+      "theorems": 16,
+      "declarations": 24,
+      "with_axioms": {}
+    }
+  }
+}

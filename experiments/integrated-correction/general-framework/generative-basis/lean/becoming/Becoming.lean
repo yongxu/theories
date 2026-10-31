@@ -321,6 +321,7 @@ import Becoming.LastChange
 import Becoming.LimitVerification
 import Becoming.SelectionGap
 import Becoming.SelectionReach
+import Becoming.UnitMatchings
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
@@ -2587,6 +2588,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   that rests, leaves a sentence undecided: the gap reappears as undecidedness. The run of a
   monotone map from the undecided value rests from its first step, so the gap of
   `Diagonal.gap_unsaid` needs a map that is not monotone.
+* `Becoming.UnitMatchings` (L1): amounts, the root's second sort, by their interface: balance is
+  represented by selected matchings of units, not derived from the unfolding. A selected matching of
+  a frame (`UnitMatchings.FrameMatch`), a bijection of its in-positions with its out-positions given
+  as data, forces equal counts by pigeonhole through `GrammarLaws.revisits_within`, with no
+  decidability (`UnitMatchings.FrameMatch.eq`), and each out-position has one in-position sent to it
+  (`UnitMatchings.FrameMatch.predecessor_unique`); a flow over a web has one at every step and
+  condition exactly where it balances, the converse pairing by position with no choice
+  (`UnitMatchings.frameMatchings_iff_balances`). In a one-to-one pairing whose first block on one
+  side is longer than the first block on the other, some member of the other side's rest is related
+  to a member of that block (`UnitMatchings.crossing_edge`); so in a balanced flow, where a family
+  listed without repetition rises past the inflow of a family containing it, one formation taking
+  part relates, at every pairing of its exchange, a unit it gives the risen family to another input
+  (`UnitMatchings.rise_crossing_weak`), with beyond's inputs source-minimal to one taken from the
+  rest (`UnitMatchings.rise_crossing_strong`). At a formation, beyond's units source-minimal, every
+  pairing has as many endings as it takes beyond what it gives (`UnitMatchings.endings_count`); on a
+  family a present formation dissipates on, the source-minimal count is zero and, where it takes,
+  the residual count positive. The census form (`Flow.balances_iff_units`, `«对之程»`) is cited, not
+  restated; the residual units are accounting, not actual boundary traffic, and the frame matchings
+  are not joined to the exchange pairings.
 * `Becoming.Junctures` (L1): where a configuration can still be had again and where it is lost.
   A juncture for `s` has a step after which `s` can still be had and one after which it cannot.
   Every loss of a returning `s` passes a juncture on its course, up to double negation; where it
