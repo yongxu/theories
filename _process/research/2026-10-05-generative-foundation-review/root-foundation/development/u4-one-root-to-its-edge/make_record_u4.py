@@ -201,6 +201,10 @@ READINGS = [
     ('SelectionLevels.levels_sized', 'counting',
      'Price\'s partition into selection within and among groups of any sizes: an identity of counting.'),
     ('SelectionTerm.covariation', 'counting', 'Price\'s covariance: an identity of counting.'),
+    ('SelectionLevels.rises_exact_iff_levels', 'counting',
+     'Price\'s partition over listed generations with exact transmission of an arbitrary trait map: its statement '
+     'reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of '
+     'SelectionLevels.levels_sized equates each group\'s length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md).'),
     # amounts
     ('Flow.new_beyond_every', 'amounts',
      'Endless novelty concludes that a family is given more than it takes, by the rest or across its boundary, an '
@@ -214,16 +218,25 @@ READINGS = [
      GATE + 'the conclusion bounds a descendant\'s need by the level plus δ, and the hypothesis that transmission '
      'stays within δ (TransmitsWithin) constrains amounts.'),
     ('SelectionTerm.Flow.support_moved_rises', 'amounts',
-     GATE + 'the conclusion compares sums of amounts over generations.'),
+     GATE + 'the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the '
+     'trait, exact and moved are counting, while top orders the trait at the supported members and so ties its '
+     'values to the dynamics. It is not counting, since it uses the gate (K3\'s premises) and descent in the flow as hypotheses; its '
+     'hypotheses on the trait\'s values keep it off standing 2, as cancellation keeps lever 2\'s scratch '
+     'form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md).'),
     ('SelectionTerm.Flow.support_not_lower', 'amounts',
-     GATE + 'the conclusion compares sums of amounts over generations.'),
+     GATE + 'the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the '
+     'trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to '
+     'the dynamics. It is not counting, since it uses the gate (K3\'s premises) and descent in the flow as hypotheses; its '
+     'hypotheses on the trait\'s values keep it off standing 2, as cancellation keeps lever 2\'s scratch '
+     'form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md).'),
     ('GroupEnding.Flow.rises_iff_inactive', 'amounts',
-     'The gate and descent stand as two inclusions in lever 2\'s weakening; exact transmission at the step, each '
-     'offspring\'s amount its parent\'s, and inactivity compared on sums of the trait, constrain amounts; its list '
-     'facts are counting.'),
-    ('SelectionLevels.rises_exact_iff_levels', 'amounts',
-     'Exact transmission at the step, each offspring\'s amount its parent\'s, constrains amounts (the proof needs '
-     'only its cancellation, lever 2); its list facts are counting.'),
+     'The gate and descent stand as two inclusions in lever 2\'s weakening, read at the model off giving and level '
+     'only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each '
+     'offspring\'s value its parent\'s, is counting, while inactive makes the members of groups lower in the trait '
+     'inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate\'s premise that only active relata give (K3) '
+     'and descent in the flow as hypotheses; its hypotheses on the trait\'s values keep it off standing 2, as '
+     'cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, '
+     'COUNTING-AND-AMOUNTS.md).'),
     ('Reproduction.Flow.number_within_take', 'amounts',
      'Dissipation on a family and an injection from births to given units bound a count within a take, an amount; '
      'dissipation is kept as a premise of the account.'),
@@ -268,7 +281,12 @@ READINGS = [
      'level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a '
      'premise of the ethics, listed apart.'),
 ]
-STANDINGS += [reading(d, s, b) for d, s, b in READINGS]
+# U4b moved row 13 and rewrote the bases of rows 7, 8 and 14; its review read them (REVIEW-U4B.md).
+REVIEWED = {d: DEV + 'REVIEW-U4B.md' for d in ['SelectionLevels.rises_exact_iff_levels',
+                                              'SelectionTerm.Flow.support_not_lower',
+                                              'SelectionTerm.Flow.support_moved_rises',
+                                              'GroupEnding.Flow.rises_iff_inactive']}
+STANDINGS += [reading(d, s, b, **({'review': REVIEWED[d]} if d in REVIEWED else {})) for d, s, b in READINGS]
 assert len(STANDINGS) == len({e['declaration'] for e in STANDINGS}) == 42, len(STANDINGS)
 
 PREMISES = [
@@ -381,9 +399,12 @@ def record(receipt=None, study=None, reviewed=None):
     for path, role in [(REVIEW, 'review'), (DEV + 'REVIEW-U4-BOUNDARY.md', 'review'),
                        (DEV + 'REVIEW-U4-BOUNDARY-SECOND.md', 'review'), (DEV + 'DESIGN-BOUNDARY.md', 'integration'),
                        (DEV + 'LEVER-2-AUDIT.md', 'integration'), (DEV + 'CONNECTED-ROWS-READING.md', 'integration'),
-                       (MV + 'BOUNDARY-FIELD.md', 'integration'), ('theories/becoming/chapters/08-METHOD.md', 'statement')]:
+                       (MV + 'BOUNDARY-FIELD.md', 'integration'), ('theories/becoming/chapters/08-METHOD.md', 'statement'),
+                       (DEV + 'REVIEW-U4B.md', 'review'), (DEV + 'COUNTING-AND-AMOUNTS.md', 'integration'),
+                       (DEV + 'counting_test.py', 'integration')]:
         if (ROOT / path).is_file():
             refs.append({'path': path, 'role': role, 'sha256': digest(path), 'declarations': []})
+    kept = json.loads((ROOT / REC).read_text(encoding='utf-8'))['history'] if (ROOT / REC).is_file() else None
     now = reviewed or datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     day = datetime.fromisoformat(now)
     r = {
@@ -476,7 +497,8 @@ def record(receipt=None, study=None, reviewed=None):
         'references': refs,
         'proof_bindings': ([{'source': SOURCE, 'receipt': receipt, 'sha256_pointer': '/source_sha256/Becoming.RootForms',
                              'success_pointer': '/status', 'success_value': 'passed'}] if receipt else []),
-        'history': [{'en': f'{day.day} {day:%B %Y}, board item U4 (study section {study or "…"}): added, each central '
+        # A landed record keeps its history (U4's line of 31 October, U4b's after it); a rerun adds none.
+        'history': kept or [{'en': f'{day.day} {day:%B %Y}, board item U4 (study section {study or "…"}): added, each central '
                            'declaration\'s standing on the edge of one root, carried by MV\'s boundary field, with '
                            'Becoming.RootForms\' two root forms as its laws; reviewed independently before landing.',
                      'zh': f'{day.year}年{day.month}月{day.day}日，工作板条目 U4（研究第 {study or "…"} 节）：增，各中心声明'
