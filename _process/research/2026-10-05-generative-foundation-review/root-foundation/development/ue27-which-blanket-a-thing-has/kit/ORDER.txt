@@ -1,0 +1,1 @@
+Then, in the coordinator's order: core items, by readiness: EL's core Lean, DU, SJ's leaf, then OU7's rebuild with U4c's and ND's Lean stages, ND's record id and final renames after it; ask the coordinator for a slot.

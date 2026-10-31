@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 355 | 17,162 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 356 | 17,205 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -92,6 +92,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [BecomingCompatibility.lean](lean-declarations/core.md#module-55e216de65da) | Generative core and relational structure |
 | [BecomingReversibility.lean](lean-declarations/core.md#module-3104a5fd24d5) | Generative core and relational structure |
 | [Blanket.lean](lean-declarations/becoming-core.md#module-b6203a2812d5) | Becoming pure core |
+| [BlanketCouplings.lean](lean-declarations/becoming-core.md#module-bacb75708c65) | Becoming pure core |
 | [BlanketWeights.lean](lean-declarations/becoming-core.md#module-db27b554319e) | Becoming pure core |
 | [Boundaries.lean](lean-declarations/becoming-core.md#module-c3cdcfc6af74) | Becoming pure core |
 | [BoundaryModels.lean](lean-declarations/core.md#module-5ffb89fcbb01) | Generative core and relational structure |

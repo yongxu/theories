@@ -108,6 +108,7 @@ import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
 import Becoming.BlanketWeights
+import Becoming.BlanketCouplings
 import Becoming.LumpedSeeking
 import Becoming.FreeEnergyCounting
 import Becoming.ModelStatements
@@ -1690,6 +1691,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `BlanketWeights.SynchronousCopy.noisy_not_independentGiven`), and a blanketed run's occupation
   weighting (`BlanketWeights.Cycle.not_crossForm`). A leaf importing `Becoming.Blanket` and
   `Becoming.Flow` (board item UE26); the linear case is the periphery's `LinearBlankets`.
+* `Becoming.BlanketCouplings` (L1): which blanket a thing has, and a formation's couplings as its
+  blanket. Where a formation's couplings give the values of what couples into it, any model fed by them,
+  with any policy and any environment, is the agent of a blanketed law whose sensory course is the
+  formation's own course through its couplings (`BlanketCouplings.sensory_course`), two of its courses
+  from one start alike on the blanket before step n + 2 exactly where their level histories are alike
+  through the couplings up to n (`BlanketCouplings.blanket_iff_through`), and in the open loop every
+  reading of its internal course a selection through them (`BlanketCouplings.internal_selectsThrough`);
+  a construction, not a test, the threshold witness's join its case
+  (`BlanketCouplings.ThresholdCase.threshold_case`). The law a family shows is determined part by part
+  exactly where the family is consistent part by part (`BlanketCouplings.shownBy_blanketDetermined_iff`).
+  When a blanket's existence constrains, at three levels: with parts reading the course every family of
+  courses is the course family of a blanketed law (`BlanketCouplings.clocked_course`,
+  `BlanketCouplings.future_course`), the step alone not enough (`BlanketCouplings.clock_only_fails`); a
+  degenerate reading of the configuration gives every family, or exactly the families whose law is
+  determined, a law determined part by part (`BlanketCouplings.const_consistent`,
+  `BlanketCouplings.whole_iff`), any injective reading only those and not always
+  (`BlanketCouplings.injective_converse_fails`); a sparse partition fixed apart from the family, on a law
+  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`). A
+  leaf importing `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board item
+  UE27).
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each

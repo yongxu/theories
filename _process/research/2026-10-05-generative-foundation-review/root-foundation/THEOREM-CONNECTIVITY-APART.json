@@ -6471,6 +6471,31 @@
    "module": "Becoming.BalanceRegions",
    "category": "general-structure",
    "reason": "a family the relation closes is exactly a region not come into along that adjacency, by «对称则不出当且仅当逆不出»: for every Bool relation and list of relata on any type; the base reads balance on regions through balancesOn_iff_notGoingOut, and nothing on it uses this law (BD3)"
+  },
+  "Becoming.BlanketCouplings.ReadsExternal.internal_course": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "model-witness",
+   "reason": "BlanketCouplings.ReadsExternal.internal_course: a fact about one constructed model: a run, a pair of courses or the threshold witness's web (UE27)"
+  },
+  "Becoming.BlanketCouplings.clock_only_fails": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "model-witness",
+   "reason": "BlanketCouplings.clock_only_fails: a fact about one constructed model: a run, a pair of courses or the threshold witness's web (UE27)"
+  },
+  "Becoming.BlanketCouplings.const_consistent": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "general-structure",
+   "reason": "BlanketCouplings.const_consistent: a law of any web, formation, couplings, model, policy and environment, or of any family of courses and any reading into four parts (which blanket a thing has); the base supplies no blanketed reading of a formation yet (UE27)"
+  },
+  "Becoming.BlanketCouplings.future_course": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "general-structure",
+   "reason": "BlanketCouplings.future_course: a law of any web, formation, couplings, model, policy and environment, or of any family of courses and any reading into four parts (which blanket a thing has); the base supplies no blanketed reading of a formation yet (UE27)"
+  },
+  "Becoming.BlanketCouplings.injective_converse_fails": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "model-witness",
+   "reason": "BlanketCouplings.injective_converse_fails: a fact about one constructed model: a run, a pair of courses or the threshold witness's web (UE27)"
   }
  },
  "instances": {

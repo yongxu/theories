@@ -392,6 +392,18 @@
    "page": "theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md"
   },
   {
+   "id": "record:a-formations-couplings-as-its-blanket",
+   "type": "result",
+   "record": "a-formations-couplings-as-its-blanket",
+   "title": "A formation's couplings as its blanket, and when a blanket constrains",
+   "title_zh": "形成之耦合为其毯，及毯何时有所约束",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-formations-couplings-as-its-blanket.md"
+  },
+  {
    "id": "record:a-formations-own-course",
    "type": "result",
    "record": "a-formations-own-course",
@@ -7707,6 +7719,17 @@
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.BlanketCouplings",
+   "type": "module",
+   "name": "Becoming.BlanketCouplings",
+   "level": "L1",
+   "theorems": 43,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -28841,6 +28864,12 @@
    "anchor": "r-the-markov-blanket-as-a-coupling-structure"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-couplings-as-its-blanket",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-formations-couplings-as-its-blanket"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -30955,6 +30984,21 @@
   {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.Histories",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.IdentificationRuns",
    "type": "imports"
   },
   {
@@ -34926,6 +34970,41 @@
    "from": "record:a-coupling-saturated-by-what-it-has-carried",
    "to": "record:what-a-cut-loses",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "module:Becoming.BlanketCouplings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:a-formations-own-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:hexagram-arrangements-and-laws",
+   "type": "related"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:what-the-existence-claim-forbids",
+   "type": "related"
   },
   {
    "from": "record:a-formations-own-course",
@@ -52964,6 +53043,11 @@
   },
   {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:a-formations-couplings-as-its-blanket",
+   "type": "related"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "record:generalization-through-lumping",
    "type": "formal-reuse"
   },
@@ -58965,6 +59049,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-whole-persists-through-generation",
    "to": "record:whole-persists-through-generation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-couplings-as-its-blanket",
+   "to": "record:a-formations-couplings-as-its-blanket",
    "type": "states"
   },
   {
