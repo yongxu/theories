@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T05:45:26+00:00",
+  "reviewed_at_utc": "2026-10-31T07:31:19+00:00",
   "statement": {
     "en": "Read with a law's step as 缘 and a map's values as a class, 文同 is the core of the value class and so is likeness by bisimulation; the coarsest value-keeping class is the core; the states of a 文 are its core along the steps; the bounded laws and learnability are restated through the core.",
     "zh": "以法之步为缘、象之值同为类而读：经象文同即值之类之核，系辞中之同即此核，守值之最粗之类即核，文之二步为一状恰当它们在其沿步之核之一类中；有界之律与可知经核而述。"
@@ -105,8 +105,8 @@
       "kind": "scope"
     },
     {
-      "en": "The prefix (往), the bounds as numbers, the extrapolations and learnability's \"from some step on\" in the grammar's own terms: the grammar has no counting or lists, and these are stated beside the core.",
-      "zh": "以文法自身之名述往、界之数、知来与可知之「自某步起」：文法无计数与列表，这些在核旁陈述。",
+      "en": "The prefix (往), the bounds as numbers, the extrapolations and learnability's \"from some step on\" in the grammar's own terms: the grammar's lists and counting (`«对»`, `«计»`) are not joined to them, and these are stated beside the core.",
+      "zh": "以文法自身之名述往、界之数、知来与可知之「自某步起」：文法之列表与计数（«对»、«计»）未与之相连，这些在核旁陈述。",
       "kind": "scope"
     }
   ],
@@ -266,6 +266,10 @@
     {
       "en": "23 October 2026: added (WL3), the 文 line joined to the one-unfolding root; study section 374.",
       "zh": "2026年10月23日：新增（WL3），文之线接于一元之根；研究第 374 节。"
+    },
+    {
+      "en": "31 October 2026: does_not_show item 3 corrected after HE2 (study section 474): it said the grammar has no counting or lists; «对» pairs lists and HE2 put «计» and its laws in GrammarLaws, so it now says the grammar's lists and counting are not joined to these. The claim and its declarations are unchanged.",
+      "zh": "2026年10月31日：HE2（研究第 474 节）之后更正 does_not_show 第 3 条：原言文法无计数与列表；«对» 配列表，HE2 又将 «计» 及其律置于 GrammarLaws，故今言文法之列表与计数未与之相连。所述之义与所引声明不变。"
     }
   ]
 }

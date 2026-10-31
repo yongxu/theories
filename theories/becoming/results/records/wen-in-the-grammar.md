@@ -33,7 +33,7 @@
 
 - That 文同 is a continuation: it is the core; continuation under the value class is one step that keeps the value, and continuation under the core is a course constant from there.
 - Instances for classes that are not kernels of maps, for a relation that is not a function (the branching of a nondeterministic process), or for the two-valued class of Arising and Change, which compares by ↔ and would need propext to be a map's kernel.
-- The prefix (往), the bounds as numbers, the extrapolations and learnability's "from some step on" in the grammar's own terms: the grammar has no counting or lists, and these are stated beside the core.
+- The prefix (往), the bounds as numbers, the extrapolations and learnability's "from some step on" in the grammar's own terms: the grammar's lists and counting (`«对»`, `«计»`) are not joined to them, and these are stated beside the core.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -85,7 +85,8 @@ Aliases: `文 in the grammar of continuation`, `文入续之文法`, `Becoming.L
 ### History
 
 - 23 October 2026: added (WL3), the 文 line joined to the one-unfolding root; study section 374.
+- 31 October 2026: does_not_show item 3 corrected after HE2 (study section 474): it said the grammar has no counting or lists; «对» pairs lists and HE2 put «计» and its laws in GrammarLaws, so it now says the grammar's lists and counting are not joined to these. The claim and its declarations are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-23T05:45:26+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-31T07:31:19+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
