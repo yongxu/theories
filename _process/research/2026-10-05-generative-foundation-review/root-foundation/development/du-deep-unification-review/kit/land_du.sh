@@ -94,7 +94,9 @@ EOF
   # The boundary record's history note and make_record_u4.py change after master_laws.py read them: read again.
   python3 -B tools/research/master_laws.py > $LOG/mv2.log 2>&1 || fail "mv after the texts"
   python3 -B $K/integrate_du.py check > $LOG/ducheck2.log 2>&1 || fail "DU's check after the texts"
-  step "render (for the re-points)"; python3 -B tools/research/research.py render > $LOG/render-pre.log 2>&1 || fail "render"
+  # Render exits non-zero while records drift, which they do until the re-points; accept that only with no error.
+  step "render (for the re-points)"; python3 -B tools/research/research.py render > $LOG/render-pre.log 2>&1 || \
+    python3 -c "import json, sys; d = json.load(open(sys.argv[1])); assert d['errors'] == [], d['errors']; print('render: no error,', len(d.get('source_drift', [])), 'records drift until the re-points')" $LOG/render-pre.log || fail "render"
   step repoint; python3 -B $K/integrate_du.py repoint > $LOG/repoint-dry.log 2>&1 || fail "repoint (dry run)"
   cut -c1-240 $LOG/repoint-dry.log
   echo "== post done: receipt $ID, study section $N. Read each pair under 'read before --apply' in $LOG/repoint-dry.log"
