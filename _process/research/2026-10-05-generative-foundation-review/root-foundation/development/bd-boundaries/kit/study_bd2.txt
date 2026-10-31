@@ -50,7 +50,8 @@ Boundary:
   - «所闭之界» and «所闭不出» are one law, stated twice (unfolded in GrammarLaws, here through «不出»); the grammar's
     owner holds «不出»'s move into GrammarLaws for its near-full rebuild after RV21c, when the restatement goes
     and, as it agreed, it defines Flow.Cut in Standpoints as «不出» with no new import, cut_iff_notGoingOut
-    going too; no master-law figure moves (conveyance's second law already reaches the grammar).
+    staying as Iff.rfl; one law then reaches the grammar, conveyance's fifth, through vocabulary alone, and no
+    master law's count or central reach moves.
   - A stronger line law, asking only that every step from a member land decidedly inside or outside, holds by
     induction from the start; the mark law as stated asks the split of every step.
 Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the reading citing it); 04 §1 (the cut as not
