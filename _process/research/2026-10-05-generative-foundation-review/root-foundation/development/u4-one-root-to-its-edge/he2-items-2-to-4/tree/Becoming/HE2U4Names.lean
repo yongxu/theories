@@ -172,6 +172,7 @@ import Becoming.JointKeeping
 import Becoming.Undecided
 import Becoming.Junctures
 import Becoming.Commuting
+import Becoming.WeightedCommuting
 import Becoming.HexagramCommuting
 import Becoming.Tolerance
 import Becoming.Revision
@@ -243,6 +244,7 @@ import Becoming.Novelty
 import Becoming.Reading
 import Becoming.PlaceTransitionNets
 import Becoming.SharedCodes
+import Becoming.CountedCodes
 import Becoming.ExchangePremises
 import Becoming.OverExchange
 import Becoming.Readings
@@ -321,6 +323,7 @@ import Becoming.SelectionReach
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
+import Becoming.OptimumSeason
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
@@ -395,8 +398,9 @@ theorem «借步之所闭在二所闭» {R R' : «际» α} {o a g : α}
     (.inl («所闭之自反» R o))
 
 /-- **Two closures lie within the closure through borrowed steps.** Where `R` lies within `R'` and
-`o` reaches `a` under `R'`, what lies within `o`'s or `a`'s closure under `R` lies within `o`'s under
-`R'`. -/
+`a` lies within `o`'s closure under `R'`, what lies within `o`'s or `a`'s closure under `R` lies
+within `o`'s under `R'`. It is the converse of `«借步之所闭在二所闭»` and holds for any `R'` containing
+`R`, borrowed steps being the case it is for. -/
 theorem «二所闭在借步之所闭» {R R' : «际» α} {o a g : α} (larger : «则» R R')
     (reaches : «所闭» R' o a) (within : «所闭» R o g ∨ «所闭» R a g) : «所闭» R' o g :=
   match within with
@@ -619,13 +623,13 @@ theorem GrammarLaws.uncrossed_of_closed {R : «际» α} {p : α → Bool}
 
 /-- **A pairing keeps the count on every region the relation does not cross.** Each pair lies both
 in the region or both outside it. -/
-theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (closed : ∀ x y, R x y → p x = p y)
+theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed : ∀ x y, R x y → p x = p y)
     {a b : List α} (h : «对» R a b) : «计» p a = «计» p b := by
   induction h with
   | nil => rfl
   | @cons x y a b₁ b₂ r _ ih =>
     show cond (p x) 1 0 + «计» p a = «计» p (b₁ ++ y :: b₂)
-    rw [GrammarLaws.count_insert, closed x y r, ih]
+    rw [GrammarLaws.count_insert, uncrossed x y r, ih]
 
 /-- **A pairing keeps the count on every region closed both ways**: closed under the relation and
 under its converse. Closed one way is not enough (`«对而单闭域不守数之例»`). -/
@@ -694,8 +698,9 @@ theorem «类之对当且仅当类类等数» (cls : «类» E) (dec : ∀ x y, 
 
 end CountOfClass
 
-/-- **What a pairing under continuation adds to equal count.** Continuation relative to a class lies
-within the class, so a pairing under it keeps the count in every class. -/
+/-- **What a pairing under continuation adds to equal count.** Where `E` is a class decided by the
+test `e`, continuation relative to it lies within it, so a pairing under continuation keeps the
+count by `e` in every class. -/
 theorem «续之对则类类等数» {R E : «际» α} {e : α → α → Bool} (cls : «类» E)
     (dec : ∀ x y, E x y ↔ e x y = true) {a b : List α} (h : «对» («续» R E) a b) (z : α) :
     «计» (e z) a = «计» (e z) b :=

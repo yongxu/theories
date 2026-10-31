@@ -13,10 +13,13 @@ byte for byte what was checked (bar the kit's namespace `HE2U4`, which the targe
 
 From the checkout root:
   python3 -B he2_u4.py --check                 every part's current text is found as expected; writes nothing
-  python3 -B he2_u4.py --apply lean            GrammarLaws, Response and SelectionPool (before the checker run)
-  python3 -B he2_u4.py --apply lean --to DIR   the same three files written below DIR at their package paths, for
+  python3 -B he2_u4.py --apply lean            GrammarLaws, Response and SelectionPool, and the catalogues naming the
+                                               laws: Becoming.lean, both READMEs, the checker's SCOPE (before the
+                                               checker run)
+  python3 -B he2_u4.py --apply lean --to DIR   the same seven files written below DIR at their package paths, for
                                                an outside build of GrammarLaws (KIT.md, "The check")
-  python3 -B he2_u4.py --apply records N       the master-laws record, after the checker run; N is HE2's section
+  python3 -B he2_u4.py --apply records N       the master-laws record, after the checker run, whose receipt binds
+                                               Response and SelectionPool as law 18's sources; N is HE2's section
   python3 -B he2_u4.py --apply records N --no-notes   the same, printing the history clause instead of writing it
   python3 -B he2_u4.py --apply register LOG    the apart register, from THEOREM-CONNECTIVITY.py --check's log
   python3 -B he2_u4.py --list                  every edit: file or record, field, old and new
@@ -25,6 +28,7 @@ From the checkout root:
 Each part checks all of its edits before it writes any file, and a part already applied checks as applied. Every
 edit works by text, not by line, so the parts apply before or after HE2's other items in one pass: item 6 edits
 GrammarLaws' lumping and its bullet, item 1 Grammar.lean, item 5 GrammarMap, item 7 names none of these."""
+import hashlib
 import json
 import re
 import sys
@@ -58,6 +62,10 @@ def full(name):
     return 'Becoming.' + name
 
 
+def digest(path):
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+
+
 # The Lean blocks, from the checked file.
 KIT = read(HERE + 'tree/Becoming/HE2U4Laws.lean')
 
@@ -82,7 +90,7 @@ CENSUS_NAMES = re.findall(r'^(?:theorem|def) (\S+)', CENSUS, re.M)
 LIST_LEMMAS = ['GrammarLaws.' + n for n in HELPER_NAMES] + [n for n in BALANCE_NAMES + CENSUS_NAMES
                                                             if n.startswith('GrammarLaws.')]
 BALANCE_LAWS = [n for n in BALANCE_NAMES + CENSUS_NAMES if not n.startswith('GrammarLaws.')] + \
-    ['GrammarLaws.arising', 'GrammarLaws.ceasing']
+    ['GrammarLaws.arising', 'GrammarLaws.ceasing', 'GrammarLaws.census_pairs', 'GrammarLaws.pair_of_class_counts']
 LIST_LEMMAS = [n for n in LIST_LEMMAS if n not in BALANCE_LAWS]
 NEW = CLOSURE_LAWS + LIST_LEMMAS + BALANCE_LAWS
 assert len(NEW) == len(set(NEW)) == 37, (len(NEW), NEW)
@@ -114,7 +122,7 @@ DOC = [
      "  closure (`«所闭之证»`). A closure through borrowed steps, every step of `R'` a step of `R` or a step\n"
      "  of `R` from `a` taken at `o`, lies within `o`'s or `a`'s closure under `R`\n"
      "  (`«借步之所闭在二所闭»`), and the two lie within `o`'s closure under `R'` where `R'` holds `R` and\n"
-     "  `o` reaches `a` under it (`«二所闭在借步之所闭»`); Response's `WithinClosure.converse` and\n"
+     "  `a` lies within `o`'s closure under it (`«二所闭在借步之所闭»`); Response's `WithinClosure.converse` and\n"
      "  SelectionPool's `WithinClosure.of_reads` and `WithinClosureOf.to_reads` are proved as these. A region"),
     ('Balance: item 2',
      "  natural-number balance, near-definitional under the one: the pairing is supplied, not derived from\n"
@@ -130,9 +138,10 @@ DOC = [
      "  (`«续之对则类类等数»`). The census of a step (its own section, after the runs, whose fixed\n"
      "  successor and predecessor it reads): units listed once before and after a step, under a\n"
      "  continuation fixing successors and predecessors, pair those before with those arising to those\n"
-     "  after with those ceasing (`«定后定前则前并生对后并亡»`), and where every predecessor of a unit\n"
-     "  after stands before and every successor of a unit before stands after, arising and ceasing are\n"
-     "  exactly beginning (`«生»`) and ending (`«亡»`) (`«前者在前则所列生者生»`, `«后者在后则所列亡者亡»`).\n"
+     "  after with those ceasing, each pair a continuation or the same unit\n"
+     "  (`«定后定前则前并生对后并亡»`), and where every predecessor of a unit after stands before and every\n"
+     "  successor of a unit before stands after, arising and ceasing are exactly beginning (`«生»`) and\n"
+     "  ending (`«亡»`) (`«前者在前则所列生者生»`, `«后者在后则所列亡者亡»`).\n"
      "  The listing and the test are supplied, as the pairing is.\n"),
     ('What is not shown: a pairing under continuation, now stated',
      "these); the n-step lines law for lines of different lengths; that a pairing under continuation\n"
@@ -197,6 +206,65 @@ MODELS = [
      "    | ⟨_, .inr same, inside⟩ => .inr (same ▸ inside))\n"),
 ]
 
+# The package's catalogues, anchored at the closure and balance clauses (item 6's sit after «保之像», item 5's in
+# the GrammarMap entries): Becoming.lean's GrammarLaws bullet, both READMEs' GrammarLaws rows, the checker's SCOPE.
+ROOT_LEAN, README, README_ZH, CHECKER = (PKG + 'Becoming.lean', PKG + 'README.md', PKG + 'README.zh.md',
+                                         PKG + 'check_becoming.py')
+CATALOGUE = [
+    (ROOT_LEAN, 'GrammarLaws bullet: closure',
+     "  (board items OU3f, HE). Balance: a perfect pairing of finite lists under a\n",
+     "  (board items OU3f, HE). Under the converse the closure is the closure read backward\n"
+     "  (`«所闭之逆»`); a closure through borrowed steps, each a step of the relation or one from `a`\n"
+     "  taken at `o`, lies within `o`'s or `a`'s closure (`«借步之所闭在二所闭»`), and the two lie within\n"
+     "  `o`'s closure under a larger relation where `a` lies within it (`«二所闭在借步之所闭»`; board item\n"
+     "  HE2). Balance: a perfect pairing of finite lists under a\n"),
+    (ROOT_LEAN, 'GrammarLaws bullet: balance',
+     "  cardinality representation, near-definitional, the pairing supplied. Finite runs: drawn in is\n",
+     "  cardinality representation, near-definitional, the pairing supplied. Counting a region's units\n"
+     "  (`«计»`, the region read as a test), a pairing keeps the count on every region the relation does\n"
+     "  not cross (`«对则不越域守数»`), and under a class decided by a test it is exactly equal count in\n"
+     "  every class (`«类之对当且仅当类类等数»`); the census of a step pairs the units before with those\n"
+     "  arising to the units after with those ceasing, each pair a continuation or the same unit\n"
+     "  (`«定后定前则前并生对后并亡»`; board item HE2). Finite runs: drawn in is\n"),
+    (ROOT_LEAN, 'GrammarLaws bullet: where closure is proved from it',
+     "  proved from it in `Becoming.Frame` and `Becoming.GrammarScope`, and so is the step back of a\n",
+     "  proved from it in `Becoming.Frame`, `Becoming.GrammarScope`, `Becoming.Response` and\n"
+     "  `Becoming.SelectionPool`, and so is the step back of a\n"),
+    (README, 'GrammarLaws row: closure',
+     "a region every step keeps holding from where it holds on (`kept_onward`);",
+     "a region every step keeps holding from where it holds on (`kept_onward`), the closure under the "
+     "converse being the closure read backward (`«所闭之逆»`), a closure through borrowed steps lying within `o`'s "
+     "or `a`'s closure, and the two within `o`'s under a larger relation where `a` lies within it "
+     "(`«借步之所闭在二所闭»`, `«二所闭在借步之所闭»`);"),
+    (README, 'GrammarLaws row: balance',
+     "(`«守数当且仅当可对»`, `«程守数当且仅当可对»`), near-definitional;",
+     "(`«守数当且仅当可对»`, `«程守数当且仅当可对»`), near-definitional; counting a region (`«计»`), a pairing "
+     "keeps the count on every region the relation does not cross (`«对则不越域守数»`) and, under a class decided "
+     "by a test, is exactly equal count in every class (`«类之对当且仅当类类等数»`), and the census of a step pairs "
+     "the units before with those arising to the units after with those ceasing (`«定后定前则前并生对后并亡»`);"),
+    (README_ZH, 'GrammarLaws 行：闭包',
+     "每步皆守之域自其所守处以后皆守（`kept_onward`）；",
+     "每步皆守之域自其所守处以后皆守（`kept_onward`），逆关系下之闭包为闭包之逆读（`«所闭之逆»`），借步之闭包在 "
+     "`o` 或 `a` 之闭包内，而 `a` 在 `o` 于一较大关系下之闭包内时，二者亦在其内（`«借步之所闭在二所闭»`、"
+     "`«二所闭在借步之所闭»`）；"),
+    (README_ZH, 'GrammarLaws 行：平衡',
+     "（`«守数当且仅当可对»`、`«程守数当且仅当可对»`），近乎定义；",
+     "（`«守数当且仅当可对»`、`«程守数当且仅当可对»`），近乎定义；计一域之数（`«计»`），配对守其关系所不越之每一域"
+     "之数（`«对则不越域守数»`），在由一判别所定之类下恰是每一类中等数（`«类之对当且仅当类类等数»`），一步之清点使"
+     "前者并所生者与后者并所亡者配对（`«定后定前则前并生对后并亡»`）；"),
+    (CHECKER, 'SCOPE: closure',
+     '    "on; perfect pairings of finite lists under a relation conserve count, are exactly "\n',
+     '    "on, the closure under the converse is the closure read backward, a closure through borrowed steps lies "\n'
+     '    "within o\'s or a\'s closure, and the two lie within o\'s under a larger relation where a lies within it; "\n'
+     '    "perfect pairings of finite lists under a relation conserve count, are exactly "\n'),
+    (CHECKER, 'SCOPE: balance',
+     '    "the count law at a step and over a stretch is exactly a pairing of units, near-definitional; an occurrence is "\n',
+     '    "the count law at a step and over a stretch is exactly a pairing of units, near-definitional; counting a "\n'
+     '    "region, a pairing keeps the count on every region the relation does not cross and under a class decided by "\n'
+     '    "a test is exactly equal count in every class, and the census of a step pairs the units before with those "\n'
+     '    "arising to the units after with those ceasing; an occurrence is "\n'),
+]
+
 
 def replace_once(text, old, new, where):
     """Replace `old` by `new` where `old` occurs once; where it is already applied, leave it."""
@@ -220,7 +288,7 @@ def lean(apply, to=None):
         LOG.append((GL, 'doc: ' + label, old, new))
         gl = replace_once(gl, old, new, (GL, label))
     out = {GL: gl}
-    for path, label, old, new in MODELS:
+    for path, label, old, new in MODELS + CATALOGUE:
         text = out.get(path, read(path))
         LOG.append((path, label, old, new))
         out[path] = replace_once(text, old, new, (path, label))
@@ -235,10 +303,10 @@ ML_EDITS = {  # law index: (the clause it follows, en, zh, declarations added)
     0: ("and a region is x's closure exactly where it holds x, is closed and lies within it.",
         " Under the converse it is the closure read backward; a closure through borrowed steps (each step of R′ a "
         "step of R, or a step of R from a taken at o) lies within o's or a's closure under R, and where R′ holds R "
-        "and o reaches a under it, the two lie within o's closure under R′.",
+        "and a lies within o's closure under R′, the two lie within o's closure under R′.",
         "一域恰在含 x、封闭且在闭包内时为 x 之闭包。",
         "逆关系下之闭包即闭包之逆读；借步之闭包（R′ 之每一步或为 R 之步，或为在 o 处所取、自 a 起之 R 之步）在 o 或 a 于 R 下之"
-        "闭包内，而 R′ 含 R 且 o 于其下及 a 时，二者在 o 于 R′ 下之闭包内。",
+        "闭包内，而 R′ 含 R 且 a 在 o 于 R′ 下之闭包内时，二者在 o 于 R′ 下之闭包内。",
         CLOSURE_LAWS),
     2: ("a value put in front of a sequence, and totals that agree pointwise.",
         None,
@@ -252,14 +320,14 @@ ML_EDITS = {  # law index: (the clause it follows, en, zh, declarations added)
         "the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation "
         "relative to such a class keeps the count in every class. The census of a step: units listed once before "
         "and after it, under a continuation fixing successors and predecessors, pair those before with those "
-        "arising to those after with those ceasing, and where the predecessors of the units after stand before and "
-        "the successors of the units before stand after, arising and ceasing are beginning and ending. The listing "
-        "and the test are supplied, as the pairing is.",
+        "arising to those after with those ceasing, each pair a continuation or the same unit, and where the "
+        "predecessors of the units after stand before and the successors of the units before stand after, arising "
+        "and ceasing are beginning and ending. The listing and the test are supplied, as the pairing is.",
         "近乎定义。",
         "计一域之单位（域读作一判别，此为建模之择），配对守其关系所不越之每一域之数，故守对关系及其逆皆封闭之每一域之数，"
         "单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），"
         "故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并"
-        "所亡者一一配对；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。列表与判别皆为所给，如配对然。",
+        "所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。列表与判别皆为所给，如配对然。",
         BALANCE_LAWS),
 }
 ML_LIST_EN = ("a value put in front of a sequence, and totals that agree pointwise.",
@@ -267,6 +335,28 @@ ML_LIST_EN = ("a value put in front of a sequence, and totals that agree pointwi
               "the census of a step and the count laws need.")
 ML_LIST_ZH = ("置于序列之前的一值、逐点相同之总和。",
               "置于序列之前的一值、逐点相同之总和，及步之清点与计数之律所需之筛、查与计。")
+
+# The models' laws proved from these (laws.18): the three model lemmas items 3 and 4 re-prove, with their modules
+# as proof sources bound to the core run that built them (repoint.py's form for the receipt reference).
+MODELS_LAW = 18
+MODEL_LEMMAS = {RESPONSE: ['WithinClosure.converse'], POOL: ['WithinClosure.of_reads', 'WithinClosureOf.to_reads']}
+CHECKS = PKG + 'becoming-checks/'
+
+
+def module(path):
+    return 'Becoming.' + Path(path).stem
+
+
+def receipt_for(paths):
+    """The newest passed core run whose source hashes are these files' current bytes, or None."""
+    for run in sorted((ROOT / CHECKS).iterdir(), reverse=True):
+        p = run / 'verification.json'
+        if p.is_file():
+            data = json.loads(p.read_text(encoding='utf-8'))
+            if data.get('status') == 'passed' and all(data.get('source_sha256', {}).get(module(q)) == digest(q)
+                                                      for q in paths):
+                return CHECKS + run.name + '/verification.json'
+    return None
 
 
 def stamp_day():
@@ -282,13 +372,15 @@ def ml_note(study):
                   "WithinClosureOf.to_reads are now proved as; balance at one step gains counting on a region («计»), "
                   "the count kept where the relation does not cross, the count law of a class, what a pairing under "
                   "continuation adds to equal count and the census of a step, with two witnesses (U4's lever 1, "
-                  "checked outside the package before); the list lemmas gain the helpers these use. No other law "
-                  "changes.",
+                  "checked outside the package before); the list lemmas gain the helpers these use; the models' laws "
+                  "proved from these gain the three model lemmas, with Response.lean and SelectionPool.lean as proof "
+                  "sources. No other law changes.",
             'zh': f"{day_zh}，工作板条目 HE2 之第 2 至 4 项（研究第 {study} 节）：闭包之律增入 «所闭之逆» 及借步之闭包二律"
                   "（«借步之所闭在二所闭»、«二所闭在借步之所闭»），Response 之 WithinClosure.converse 与 SelectionPool 之 "
                   "WithinClosure.of_reads、WithinClosureOf.to_reads 今即由之证出；一步之平衡增入计一域之数（«计»）、"
                   "关系所不越之域守数、类之数律、续下配对于等数之所增与一步之清点，并二见证（U4 之第一杠杆，此前在包外核验）；"
-                  "列表引理增入其所用之辅助。其余之律不变。"}
+                  "列表引理增入其所用之辅助；由此证出之诸模型之律增入此三模型引理，以 Response.lean 与 SelectionPool.lean "
+                  "为证明来源。其余之律不变。"}
 
 
 def records(apply, study=None, notes=True):
@@ -317,12 +409,38 @@ def records(apply, study=None, notes=True):
             assert not any(full(n) in law['declarations'] for n in names), (ML, i)
             law['declarations'] += [full(n) for n in names]
     LOG.append((ML, 'references (GrammarLaws.lean)', '(new)', f'{len(NEW)} declarations'))
-    if not done:
+    law = r['laws'][MODELS_LAW]
+    assert law['en'].startswith("The models' laws of closure"), (ML, MODELS_LAW)
+    lemmas = [full(n) for names in MODEL_LEMMAS.values() for n in names]
+    paths = {ref['path'] for ref in r['references']}
+    LOG.append((ML, f'laws.{MODELS_LAW} (declarations)', '(new)', ', '.join(lemmas)))
+    for path, names in MODEL_LEMMAS.items():
+        LOG.append((ML, f'references ({Path(path).name}, proof, bound to the core run)', '(new)',
+                    ', '.join(full(n) for n in names)))
+    if done:
+        assert all(n in law['declarations'] for n in lemmas) and set(MODEL_LEMMAS) <= paths, (ML, MODELS_LAW)
+    else:
+        assert not any(n in law['declarations'] for n in lemmas) and not set(MODEL_LEMMAS) & paths, (ML, MODELS_LAW)
         was_sorted = gl[0]['declarations'] == sorted(gl[0]['declarations'])
         gl[0]['declarations'] += [full(n) for n in NEW]
         if was_sorted:
             gl[0]['declarations'].sort()
+        was_sorted = law['declarations'] == sorted(law['declarations'])
+        law['declarations'] += lemmas
+        if was_sorted:
+            law['declarations'].sort()
         if apply:
+            receipt = receipt_for(list(MODEL_LEMMAS))
+            assert receipt, 'no passed core run binds the edited Response and SelectionPool: run the checker first'
+            last = max(i for i, ref in enumerate(r['references']) if ref['role'] == 'proof')
+            r['references'][last + 1:last + 1] = [
+                {'path': path, 'role': 'proof', 'declarations': [full(n) for n in names], 'sha256': digest(path)}
+                for path, names in MODEL_LEMMAS.items()]
+            if receipt not in paths:
+                r['references'].append({'path': receipt, 'role': 'receipt', 'sha256': digest(receipt),
+                                        'declarations': []})
+            r['proof_bindings'] += [{'source': path, 'receipt': receipt, 'sha256_pointer': '/source_sha256/' + module(path),
+                                     'success_pointer': '/status', 'success_value': 'passed'} for path in MODEL_LEMMAS]
             note = ml_note(study)
             if notes:
                 r['history'].append(note)
