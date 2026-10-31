@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "modules": 6,
+  "new_audited_declarations": 68,
+  "record": "/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-fa/experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json"
+}

@@ -77,6 +77,7 @@ The root chapter's open item on self-changing conditions, narrowed: a rule chang
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 
 Aliases: `Rules that change themselves, read in the grammar`, `自改其则者于文法中读`, `Becoming.ClosedCapture.lock_line`
 

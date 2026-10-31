@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
     "en": "Of the first batch's 59 candidate theorems of the grammar, 38 hold for every carrier and relation, 15 hold only under a premise, 3 fail, 2 were misclassified and 1 is not expressible; the premises most often needed are double-negation stability and that nothing is its own condition.",
     "zh": "第一批 59 个文法之候选定理中，38 个对每个载体与关系成立，15 个只在前提下成立，3 个不成立，2 个归类有误，1 个不可表达；最常需要的前提是双重否定之稳定与无物自缘。"
@@ -152,7 +152,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "8909769afb0351d4d635b7c05380b5b9fe9a65d2bc1030c881690b8004898e35",
+      "sha256": "31937ba8e22025e79e505cfa9d6d8fb54d4952ead1cf91f2ae294f1666f1c3b6",
       "declarations": [
         "Becoming.«三法相因待»",
         "Becoming.«不可致诘而有常则混而为一»",
@@ -163,7 +163,7 @@
         "Becoming.«二际可偏举»",
         "Becoming.«互»",
         "Becoming.«互之对称»",
-        "Becoming.«从缘生非文法之理»",
+        "Becoming.«从缘生非文法之律»",
         "Becoming.«他依于自»",
         "Becoming.«住因于续»",
         "Becoming.«作业»",
@@ -255,12 +255,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou2-candidates/outcomes.tsv",
       "role": "statement",
       "sha256": "e348c3ec117daffb85ab39fcb5fe27694a0550f0eea4325db10108d3c0dec429"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -274,6 +280,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement gives all five outcomes of the batch (2 misclassified and 1 not expressible added); the fifth law names the symmetry of the class read that its converse takes; the Lean is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述给出该批的全部五种结果（增列 2 个归类有误、1 个不可表达）；第五条定律写明其逆所需的所读之类之对称；Lean 不变。"
+    },
+    {
+      "en": "31 October 2026, board item HE2, items 6 and 7 (study section 474): «从缘生非文法之理» renamed to «从缘生非文法之律», with no alias kept: its 理 meant a law of the grammar, and the two conditions it names are conditions on a model; no statement's content changes.",
+      "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：«从缘生非文法之理» 改为 «从缘生非文法之律»，不留别名：其理意为文法之律，所言二者是对模型之条件；所述之义皆不变。"
     }
   ]
 }

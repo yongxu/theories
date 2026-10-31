@@ -50,7 +50,7 @@ Canonical source: [RevisionRoutes.lean](../../../../experiments/integrated-corre
 <a id="next--下一步"></a>
 ## Next
 
-Joining these prospects with RF-M.2's value of holding for a reading (the off-switch game); uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.
+Uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,7 @@ Corrigibility as an incentive (Soares, Fallenstein, Yudkowsky and Armstrong 2015
 - related, not a proved adapter: [when-complying-when-read-is-best](when-complying-when-read-is-best.md). ReadStages takes its order from GainLoss, and its four plans are the revision with three routes (ReadStages.above_iff_routes).
 - related, not a proved adapter: [reserved-shutdown-during-recovery](reserved-shutdown-during-recovery.md). The executable route that follows the incentive in 07 §7.
 - related, not a proved adapter: [becoming-spine-instances](becoming-spine-instances.md). Acceptance: a lift on accepting does not keep access up; matched in shape by the drain law, not proved as an instance.
+- related, not a proved adapter: [when-holding-for-a-reading-stands-above-a-route](when-holding-for-a-reading-stands-above-a-route.md). Its revision and routes are plans on one candidate there, ordered by each one's loss with the value of the weight it leaves unkept, and joined with holding for a reading (RevisionPlans.routes_above_iff).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -85,6 +86,7 @@ Aliases: `when no route of keeping a law stands above a revision of it`, `守律
 ### History
 
 - 30 October 2026: added (RR), when no route of keeping a law stands above a revision of it: the order of a gain and a loss, which ReadStages takes, where no route stands above the revision, its exits, its robustness as the routes get cheap and as the value grows, and restoring as a lever; after a cross-model review of the Lean and the texts, every finding taken; study section 469.
+- 31 October 2026: joined with RF-M.2's value of holding for a reading on one order (RR2), the join gone from its next step; its statements and names unchanged.
 
 </details>
 

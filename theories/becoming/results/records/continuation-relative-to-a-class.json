@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
+  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
     "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the World model's arising, ceasing, lineage and passing are its instances.",
-    "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核；World 模型之生起、终止、世系与传是其实例。"
+    "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线自身之规律是其类之核；World 模型之生起、终止、世系与传是其实例。"
   },
   "laws": [
     {
@@ -53,7 +53,7 @@
     },
     {
       "en": "A class constant under 缘 (E˘;R ⊆ R;E˘) never lets a continuation end: whatever continues something is continued, symmetric class or not. So a class under which some line ends is not constant, and a line that ends has its own regularity in its class's core, not in the class.",
-      "zh": "对缘有常之类（E˘;R ⊆ R;E˘），其续永不终了：凡续某事者，自身亦被续，类对称与否皆然。故有线终了之类不有常，一条终了之线，其理在其类之核，不在其类。",
+      "zh": "对缘有常之类（E˘;R ⊆ R;E˘），其续永不终了：凡续某事者，自身亦被续，类对称与否皆然。故有线终了之类不有常，一条终了之线，其自身之规律在其类之核，不在其类。",
       "declarations": [
         "Becoming.«有常»",
         "Becoming.«有常之逐点»",
@@ -135,8 +135,8 @@
       ]
     },
     {
-      "en": "Lines: a line under a class stays within it; a beginning under a finer class continued under a coarser one is an alteration; what begins under a coarser class begins under the finer; and where every step keeps a class or carries a mark, a line whose ends the class tells apart has a marked step.",
-      "zh": "线：类下之线不出其类；在细类下生而在粗类下续者为异；在粗类下生者在细类下亦生；凡每一步或保一类或带一标者，其两端为此类所分之线，必有带标之一步。",
+      "en": "Lines: a line under a class stays within it; a beginning under a finer class continued under a coarser one is an alteration; what begins under a coarser class begins under the finer; and where every step keeps a transitive relation (a class is one) or carries a mark, a line whose ends the relation tells apart has a marked step.",
+      "zh": "线：类下之线不出其类；在细类下生而在粗类下续者为异；在粗类下生者在细类下亦生；凡每一步或保一传递之关系（类即其一）或带一标者，其两端为此关系所分之线，必有带标之一步。",
       "declarations": [
         "Becoming.«线内同类»",
         "Becoming.«生于细而续于粗则异»",
@@ -146,7 +146,7 @@
     },
     {
       "en": "Holding, mutual need and leaning-on through constancy apply only to lines that do not end; through the core they apply to all: a class suffices for another's regularity where what is alike under both is alike under the other's core. The constancy forms imply the core forms, mutual need through constancy is symmetric and nothing needs itself, a class is constant exactly where it lies in its core, and the core is monotone in the class. In the flame of three moments and its ash, \"flame or not\" and \"the same fuel left\" need each other through the core, and every class that with \"flame or not\" tells its four occurrences apart suffices for its regularity, so the witness singles out neither fuel nor a direction; in two flames side by side the fuel left suffices for the regularity of \"flame or not\" while the joint class relates two distinct occurrences (the two flames at one moment), and sameness of flame does not suffice.",
-      "zh": "以有常言之自持、相须、因于，只适用于不终了之线；以核言之，则适用于一切：两类俱同者在其一之核下亦同，则另一类足以定此类之理。以有常者蕴涵以核者；相须对称，无物自相须；一个类恰在含于其核时有常；核随类单调。三刻之火及其灰中，“火与否”与“余薪同”以核相须，凡与“火与否”合而能分开此四事之类皆足以定火之理，故此见证既不挑出薪，也不定方向；两火并燃之中，余薪同足以定“火与否”之理，而二类之合关联两个不同之事（同刻之两火）；同火则不足。",
+      "zh": "以有常言之自持、相须、因于，只适用于不终了之线；以核言之，则适用于一切：两类俱同者在其一之核下亦同，则另一类足以定此类之核。以有常者蕴涵以核者；相须对称，无物自相须；一个类恰在含于其核时有常；核随类单调。三刻之火及其灰中，“火与否”与“余薪同”以核相须，凡与“火与否”合而能分开此四事之类皆足以定火之理，故此见证既不挑出薪，也不定方向；两火并燃之中，余薪同足以定“火与否”之理，而二类之合关联两个不同之事（同刻之两火）；同火则不足。",
       "declarations": [
         "Becoming.«自持»",
         "Becoming.«相须»",
@@ -156,10 +156,10 @@
         "Becoming.«无自相须»",
         "Becoming.«核之单调»",
         "Becoming.«类有常当且仅当含于核»",
-        "Becoming.«足以定理»",
+        "Becoming.«足以定核»",
         "Becoming.«因于核»",
         "Becoming.«相须核»",
-        "Becoming.«合有常则足以定理»",
+        "Becoming.«合有常则足以定核»",
         "Becoming.«因于则因于核»",
         "Becoming.«相须则相须核»",
         "Becoming.Flame.fuel",
@@ -278,8 +278,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the World model's counting, amounts, recurrence and renaming laws are instances: the grammar states no counting and no map of carriers, so only their premises are connected.",
-      "zh": "World 模型的计数、量、复现与改名之律是实例：文法不陈述计数，也无载者之映射，故只连其前提。",
+      "en": "That the World model's counting, amounts, recurrence and renaming laws are instances: the grammar's counting on a region is not connected to the World model's, and the grammar states no map of carriers, so only their premises are connected.",
+      "zh": "World 模型的计数、量、复现与改名之律是实例：文法之域上计数未与 World 模型者相连，文法亦无载者之映射，故只连其前提。",
       "kind": "scope"
     }
   ],
@@ -305,8 +305,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 68 theorems in 116 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，116 个声明中 68 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 70 theorems in 118 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，118 个声明中 70 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Lift the master laws onto the grammar with their owner, and the theorems that read activity only; state the counting of lines; and give generation and degeneration the content that continuation and renewal alone do not carry.",
@@ -395,7 +395,7 @@
     "Becoming.«住于细则住于粗»",
     "Becoming.«住亡不并»",
     "Becoming.«分叉»",
-    "Becoming.«合有常则足以定理»",
+    "Becoming.«合有常则足以定核»",
     "Becoming.«同族»",
     "Becoming.«同族为类»",
     "Becoming.«四相之定当且仅当排中»",
@@ -454,7 +454,7 @@
     "Becoming.«自不复生则息»",
     "Becoming.«自持»",
     "Becoming.«蜡烛之合»",
-    "Becoming.«足以定理»",
+    "Becoming.«足以定核»",
     "Becoming.«闭合当且仅当有常»",
     "Becoming.«静有常»"
   ],
@@ -486,7 +486,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940",
+      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba",
       "declarations": [
         "Becoming.Flame",
         "Becoming.Flame.alike",
@@ -537,7 +537,7 @@
         "Becoming.«及之传递»",
         "Becoming.«及之单调»",
         "Becoming.«合»",
-        "Becoming.«合有常则足以定理»",
+        "Becoming.«合有常则足以定核»",
         "Becoming.«同族»",
         "Becoming.«同族为类»",
         "Becoming.«四相之定当且仅当排中»",
@@ -599,7 +599,7 @@
         "Becoming.«自持»",
         "Becoming.«蜡烛之合»",
         "Becoming.«谓»",
-        "Becoming.«足以定理»",
+        "Becoming.«足以定核»",
         "Becoming.«逆»",
         "Becoming.«闭合当且仅当有常»",
         "Becoming.«际»",
@@ -671,7 +671,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
       "role": "proof",
-      "sha256": "83a965c7cb00e455d9f7ffabde6936934af58f084c974d1916c2a98d725167b9",
+      "sha256": "7b2322a0249ebfa1c75b298907ffe6f2948217ec42625a4d6a71428a770e9b9d",
       "declarations": [
         "Becoming.PatternRelay.fire_shape",
         "Becoming.Web.byPassing_iff_hasPred",
@@ -752,12 +752,18 @@
       "role": "receipt",
       "sha256": "8f8496373eb5c8786fd47fcb0fe630abb6237c47c9e6f13a4040812e0e3e2329",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Grammar",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -792,7 +798,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -832,6 +838,10 @@
     {
       "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the theorem's name written «生生不息» in law 12, in English and Chinese, and the grammar's word «生生» in the Chinese of laws 8 and 12 and of the third item it does not show; nothing the record states changed.",
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 12 之定理名写作 «生生不息»，中英文皆然；律 8、12 与所不表明之第三项之中文中，文法之词写作 «生生»；记录所述无改变。"
+    },
+    {
+      "en": "31 October 2026, board item HE2 (study section 474). Item 1: «两端分则中有标» asks only that the relation it keeps be transitive (its hypotheses split, then trans, in place of a class), so law 10, in English and Chinese, now reads a transitive relation, a class being one; its declarations are unchanged. Items 6 and 7: the core's names «足以定理», «合有常则足以定理» renamed to «足以定核», «合有常则足以定核», with no alias kept, since off a class or a fixed successor the core need not be a 理; wording only in statement (zh), law 4 (zh), law 11 (zh): 理 written for a line's regularity, the core, becomes 规律 or 核; these renames and rewordings change no statement's content. The landing: does-not-show item 5's reason no longer says the grammar states no counting, since GrammarLaws counts on a region; Grammar's counts in the validation scope corrected to the receipt (stale since OU6).",
+      "zh": "2026年10月31日，工作板条目 HE2（研究第 474 节）。第 1 项：«两端分则中有标» 只求所保之关系传递（其设先分后传，以代类），故第 10 律之英文与中文今言保一传递之关系，类即其一；所引声明不变。第 6、7 项：核之名 «足以定理»、«合有常则足以定理» 改为 «足以定核»、«合有常则足以定核»，不留别名，因离类或离定后之步，核未必为理；仅措辞，statement (zh)、law 4 (zh)、law 11 (zh)：写作理之一线之规律（核）改为规律或核；此诸改名与措辞皆不改所述之义。落地：不示之第 5 项之理由不再言文法不陈述计数，因 GrammarLaws 于域上计数；验证范围中 Grammar 之数依回执更正（自 OU6 以来未更）。"
     }
   ]
 }

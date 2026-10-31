@@ -3,7 +3,7 @@ import Becoming.ClosedCapture
 import Becoming.Mechanism
 
 /-!
-# The regularity of a line, kept and changed, and rules that change themselves (理之守与变)
+# The regularity of a line, kept and changed, and rules that change themselves (规律之守与变)
 
 `Becoming.Grammar` states continuation relative to a class for every carrier and relation, and the
 core `«核» R E`, the greatest symmetric relation inside `E` that is constant under `R` (`«根»`): what
@@ -15,21 +15,21 @@ where along a line the core is left.
 
 | name | reading |
 |---|---|
-| `«守理则不穷»` | a regularity kept for one step can always be kept |
-| `«守理之线不亡»` | a line along which the core is kept leaves its last occurrence continued under the class |
-| `«亡前理变»` | a step into an end leaves the core |
+| `«守核则不穷»` | a regularity kept for one step can always be kept |
+| `«守核之线不亡»` | a line along which the core is kept leaves its last occurrence continued under the class |
+| `«亡前核变»` | a step into an end leaves the core |
 | `«有亡之线末步离核»` | the last step of a line into an end leaves the core |
-| `«有亡之线两端理异»` | the two ends of a line under a class that ends lie in different classes of the core |
+| `«有亡之线两端核异»` | the two ends of a line under a class that ends lie in different classes of the core |
 | `moveRel` | a move of a process read as 缘: `s` conditions `t` by the move `a` |
 
 * **Kept and left.** From a step continuing under the core, every occurrence its line under the core
-  reaches has a successor under the core (`«守理则不穷»`): the core is constant, so
+  reaches has a successor under the core (`«守核则不穷»`): the core is constant, so
   `«有常则续不尽»` holds of it. Along a determined law the next step keeps it; in a branching net a
   successor under `E` can leave it. A step into an end under `E` leaves the core, for every relation
-  `E` (`«亡前理变»`), and so does the last step of every line under `E` that ends
+  `E` (`«亡前核变»`), and so does the last step of every line under `E` that ends
   (`«有亡之线末步离核»`): a line ends only by a step that leaves its class's core. Where `E` is a
   class the two ends of such a line lie in different classes of the core
-  (`«有亡之线两端理异»`). So what goes on for a while and then ends is a class that does not hold by
+  (`«有亡之线两端核异»`). So what goes on for a while and then ends is a class that does not hold by
   itself (`«有常»`), and its line passes from one class of the core to another before it ends; the
   core itself always admits continuation. Where along a longer line the line first leaves its
   start's class of the core is placed by `«两端分则中有标»` where the core is decided at each step.
@@ -80,10 +80,10 @@ section General
 
 variable {α : Type u}
 
-/-- **A regularity kept for one step can always be kept (守理则不穷).** From a step continuing under
+/-- **A regularity kept for one step can always be kept (守核则不穷).** From a step continuing under
 the core of `E`, every occurrence its line under the core reaches has a successor under the core:
 the core is constant (`«根»`), so `«有常则续不尽»` holds of it. -/
-theorem «守理则不穷» {R E : «际» α} {x y : α} (kept : «续» R («核» R E) x y) :
+theorem «守核则不穷» {R E : «际» α} {x y : α} (kept : «续» R («核» R E) x y) :
     «不穷» R («核» R E) y := by
   intro z reach
   match reach with
@@ -108,16 +108,16 @@ theorem «相续之末步» {R E : «际» α} {x y : α} (line : «相续» R E
     | ⟨w, last, .inr rest⟩ => exact ⟨w, last, .inr (.more c rest)⟩
 
 /-- **A line along which the core is kept leaves its last occurrence continued under the class.** -/
-theorem «守理之线不亡» {R E : «际» α} {x y : α} (line : «相续» R («核» R E) x y) : «有后» R E y :=
+theorem «守核之线不亡» {R E : «际» α} {x y : α} (line : «相续» R («核» R E) x y) : «有后» R E y :=
   match «有常则相续不尽» («根» R E).2.1 line with
   | ⟨z, c⟩ => ⟨z, «粗化» R («根» R E).1 y z c⟩
 
-/-- **A step into an end leaves the core (亡前理变).** Where `y` continues `x` under `E` and ends
+/-- **A step into an end leaves the core (亡前核变).** Where `y` continues `x` under `E` and ends
 there, the core of `E` tells `x` and `y` apart: the step continues under `E` and leaves its core.
-For every relation `E`: a step under the core would leave `y` continued (`«守理之线不亡»`). -/
-theorem «亡前理变» {R E : «际» α} {x y : α} (c : «续» R E x y) (ends : «亡» R E y) :
+For every relation `E`: a step under the core would leave `y` continued (`«守核之线不亡»`). -/
+theorem «亡前核变» {R E : «际» α} {x y : α} (c : «续» R E x y) (ends : «亡» R E y) :
     «异» R E («核» R E) x y :=
-  ⟨c, fun k => ends («守理之线不亡» (.one ⟨c.1, k⟩))⟩
+  ⟨c, fun k => ends («守核之线不亡» (.one ⟨c.1, k⟩))⟩
 
 /-- **The last step of a line into an end leaves the core.** A line under `E` from `x` to an end `y`
 reaches `y` by a step that continues under `E` and leaves its core, from `x` or from an occurrence
@@ -125,11 +125,11 @@ the line reaches. -/
 theorem «有亡之线末步离核» {R E : «际» α} {x y : α} (line : «相续» R E x y) (ends : «亡» R E y) :
     ∃ w, «异» R E («核» R E) w y ∧ (x = w ∨ «相续» R E x w) :=
   match «相续之末步» line with
-  | ⟨w, last, reach⟩ => ⟨w, «亡前理变» last ends, reach⟩
+  | ⟨w, last, reach⟩ => ⟨w, «亡前核变» last ends, reach⟩
 
 /-- **The two ends of a line that ends lie in different classes of the core.** Where `E` is a class,
 a line under `E` from `x` to an end `y` has `x` and `y` apart in the core. -/
-theorem «有亡之线两端理异» {R E : «际» α} (hE : «类» E) {x y : α} (line : «相续» R E x y)
+theorem «有亡之线两端核异» {R E : «际» α} (hE : «类» E) {x y : α} (line : «相续» R E x y)
     (ends : «亡» R E y) : ¬ «核» R E x y :=
   fun k => «亡于核下不变» hE ((«根» R E).2.2.1 x y k) ends («相续之始有后» line)
 

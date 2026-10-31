@@ -560,6 +560,18 @@
    "page": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md"
   },
   {
+   "id": "record:a-reading-informed-and-revalued",
+   "type": "result",
+   "record": "a-reading-informed-and-revalued",
+   "title": "A reading informed and revalued",
+   "title_zh": "受告与改值之读",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-reading-informed-and-revalued.md"
+  },
+  {
    "id": "record:a-reading-kept-by-its-update",
    "type": "result",
    "record": "a-reading-kept-by-its-update",
@@ -576,7 +588,7 @@
    "type": "result",
    "record": "a-regularity-kept-and-changed",
    "title": "A regularity kept and left along its own line",
-   "title_zh": "理之守与离",
+   "title_zh": "规律之守与离",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
@@ -5784,7 +5796,7 @@
    "type": "result",
    "record": "what-a-line-holds-and-a-regularity-takes-in",
    "title": "What a line must hold, and what a regularity takes in",
-   "title_zh": "线所必含，与理之所纳",
+   "title_zh": "线所必含，与规律之所纳",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -6140,6 +6152,18 @@
    "page": "theories/becoming/results/records/when-complying-when-read-is-best.md"
   },
   {
+   "id": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "result",
+   "record": "when-holding-for-a-reading-stands-above-a-route",
+   "title": "When holding for a reading stands above a route of keeping",
+   "title_zh": "为读而持何时居守律之途之上",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.md"
+  },
+  {
    "id": "record:when-no-route-stands-above-a-revision",
    "type": "result",
    "record": "when-no-route-stands-above-a-revision",
@@ -6442,7 +6466,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 39,
+   "theorems": 42,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6486,7 +6510,7 @@
    "type": "module",
    "name": "Becoming.MapRegions",
    "level": "L1",
-   "theorems": 39,
+   "theorems": 36,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6497,7 +6521,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 138,
+   "theorems": 175,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7226,7 +7250,7 @@
    "theorems": 88,
    "region": "knowing",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7985,7 +8009,7 @@
    "theorems": 29,
    "region": "knowing",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10020,7 +10044,7 @@
    "theorems": 51,
    "region": "collective",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10200,14 +10224,36 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RevisionPlans",
+   "type": "module",
+   "name": "Becoming.RevisionPlans",
+   "level": "L1",
+   "theorems": 33,
+   "region": "significance",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.HeldForReading",
    "type": "module",
    "name": "Becoming.HeldForReading",
    "level": "L1",
-   "theorems": 90,
+   "theorems": 97,
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ListingValuation",
+   "type": "module",
+   "name": "Becoming.ListingValuation",
+   "level": "L1",
+   "theorems": 138,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -29251,6 +29297,12 @@
    "anchor": "r-what-holding-for-a-reading-is-worth"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-reading-informed-and-revalued"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -30413,6 +30465,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-when-no-route-stands-above-a-revision"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-holding-for-a-reading-stands-above-a-route",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-when-holding-for-a-reading-stands-above-a-route"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
@@ -31910,6 +31968,11 @@
   },
   {
    "from": "module:Becoming.HeldForReading",
+   "to": "module:Becoming.RevisionPlans",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldForReading",
    "to": "module:Becoming.ShownOrder",
    "type": "imports"
   },
@@ -32611,6 +32674,11 @@
   {
    "from": "module:Becoming.ListingRefutations",
    "to": "module:Becoming.Standpoints",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ListingValuation",
+   "to": "module:Becoming.HeldForReading",
    "type": "imports"
   },
   {
@@ -33686,6 +33754,21 @@
   {
    "from": "module:Becoming.Revision",
    "to": "module:Becoming.Stock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.Dissipation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.Flow",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.RevisionRoutes",
    "type": "imports"
   },
   {
@@ -35109,6 +35192,81 @@
    "type": "related"
   },
   {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Dissipation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.HeldForReading",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.ListingValuation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Narrowing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "module:Becoming.Recurrence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:acts-alike-from-a-model-or-from-an-order",
+   "type": "related"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:generalization-through-lumping",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "related"
+  },
+  {
    "from": "record:a-reading-kept-by-its-update",
    "to": "module:Becoming.GuardHorizon",
    "type": "proved-in"
@@ -35522,6 +35680,11 @@
    "from": "record:acts-alike-from-a-model-or-from-an-order",
    "to": "module:Becoming.ReadingLoop",
    "type": "proved-in"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "record:a-reading-informed-and-revalued",
+   "type": "related"
   },
   {
    "from": "record:acts-alike-from-a-model-or-from-an-order",
@@ -45530,7 +45693,17 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Response",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Retaining",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.SelectionPool",
    "type": "proved-in"
   },
   {
@@ -55205,8 +55378,18 @@
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.RevisionPlans",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
    "to": "module:Becoming.ShownOrder",
    "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:a-reading-informed-and-revalued",
+   "type": "related"
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
@@ -55222,6 +55405,11 @@
    "from": "record:what-holding-for-a-reading-is-worth",
    "to": "record:what-choices-show-of-an-order",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "related"
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
@@ -55769,6 +55957,31 @@
    "type": "related"
   },
   {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "module:Becoming.HeldForReading",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "module:Becoming.RevisionPlans",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:a-reading-informed-and-revalued",
+   "type": "related"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "related"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:when-no-route-stands-above-a-revision",
+   "type": "related"
+  },
+  {
    "from": "record:when-no-route-stands-above-a-revision",
    "to": "module:Becoming.RevisionRoutes",
    "type": "proved-in"
@@ -55786,6 +55999,11 @@
   {
    "from": "record:when-no-route-stands-above-a-revision",
    "to": "record:when-complying-when-read-is-best",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
    "type": "related"
   },
   {
@@ -58359,6 +58577,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+   "to": "record:a-reading-informed-and-revalued",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
    "to": "record:a-reading-kept-by-its-update",
    "type": "states"
@@ -59841,6 +60064,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
    "type": "states"
   },
   {

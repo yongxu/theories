@@ -7,7 +7,7 @@
 'FormedSelection.trace_energy_ledger' depends on axioms: [propext, Quot.sound]
 'FormedSelection.step_common_ledger' depends on axioms: [propext, Quot.sound]
 'FormedSelection.trace_common_ledger' depends on axioms: [propext, Quot.sound]
-'FormedSelection.copy_increment_le_spent' depends on axioms: [propext]
+'FormedSelection.copy_increment_le_spent' does not depend on any axioms
 'FormedSelection.copy_tally_le_spent' depends on axioms: [propext, Quot.sound]
 'FormedSelection.trace_copy_budget' depends on axioms: [propext, Quot.sound]
 'FormedSelection.exact_step_rank_drop' depends on axioms: [propext, Quot.sound]
@@ -33,11 +33,11 @@
 'FormedSelection.owned_support_trace' depends on axioms: [propext]
 'FormedSelection.owned_support_forbids_h_local_copy' depends on axioms: [propext]
 'FormedSelection.no_h_local_copies_without_resident_wear' depends on axioms: [propext]
-'FormedSelection.paid_formation_to_copy' depends on axioms: [propext]
-'FormedSelection.witness_accounting' depends on axioms: [propext]
-'FormedSelection.repair_enables_capture' depends on axioms: [propext]
-'FormedSelection.capture_enables_copy' depends on axioms: [propext]
+'FormedSelection.paid_formation_to_copy' does not depend on any axioms
+'FormedSelection.witness_accounting' does not depend on any axioms
+'FormedSelection.repair_enables_capture' does not depend on any axioms
+'FormedSelection.capture_enables_copy' does not depend on any axioms
 'FormedSelection.initial_owned_support' depends on axioms: [propext]
 'FormedSelection.no_h_local_copies_from_absence_without_resident_wear' depends on axioms: [propext]
-'FormedSelection.repaired_site_can_pass_to_alternative' depends on axioms: [propext]
-'FormedSelection.inheritance_accounting' depends on axioms: [propext]
+'FormedSelection.repaired_site_can_pass_to_alternative' does not depend on any axioms
+'FormedSelection.inheritance_accounting' does not depend on any axioms

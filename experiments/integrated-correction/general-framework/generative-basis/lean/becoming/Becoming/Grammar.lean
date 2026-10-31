@@ -314,7 +314,7 @@ theorem «蜡烛之合» {R E : «际» α} {a c b : α} (ha : R a b) (hc : R c 
 
 end Continuation
 
-/-! ## Constancy (有常) and the core (核): whether a line has its own 理 -/
+/-! ## Constancy (有常) and the core (核): whether a line has its own regularity -/
 
 section Constancy
 
@@ -578,22 +578,22 @@ theorem «类有常当且仅当含于核» (R : «际» α) {E : «际» α} (hE
      match («根» R E).2.1 x z ⟨y, hin y x hyx, hr⟩ with
      | ⟨w, hxw, hzw⟩ => ⟨w, hxw, («根» R E).1 z w hzw⟩⟩
 
-/-- `E₂` suffices for the regularity of `E₁` (足以定理): what is alike under both is alike under
+/-- `E₂` suffices for the regularity of `E₁` (足以定核): what is alike under both is alike under
 `E₁`'s core, so `E₁` together with `E₂` fixes the course of a line under `E₁`. This applies to
 lines that end, where `E₁` itself is not constant. -/
-def «足以定理» (R E₁ E₂ : «际» α) : Prop := «则» («合» E₁ E₂) («核» R E₁)
+def «足以定核» (R E₁ E₂ : «际» α) : Prop := «则» («合» E₁ E₂) («核» R E₁)
 
 /-- `E₁`'s regularity lies in `E₂` (因于核): `E₂` suffices for it and `E₁` alone does not. -/
-def «因于核» (R E₁ E₂ : «际» α) : Prop := «足以定理» R E₁ E₂ ∧ ¬ «有常» R E₁
+def «因于核» (R E₁ E₂ : «际» α) : Prop := «足以定核» R E₁ E₂ ∧ ¬ «有常» R E₁
 
 /-- Mutual need (相须核): each suffices for the other's regularity, neither is constant alone. -/
 def «相须核» (R E₁ E₂ : «际» α) : Prop :=
-  «足以定理» R E₁ E₂ ∧ «足以定理» R E₂ E₁ ∧ ¬ «有常» R E₁ ∧ ¬ «有常» R E₂
+  «足以定核» R E₁ E₂ ∧ «足以定核» R E₂ E₁ ∧ ¬ «有常» R E₁ ∧ ¬ «有常» R E₂
 
 /-- Where the joint class is a class and constant, either class suffices for the other's
 regularity. -/
-theorem «合有常则足以定理» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
-    (hc : «有常» R («合» E₁ E₂)) : «足以定理» R E₁ E₂ ∧ «足以定理» R E₂ E₁ := by
+theorem «合有常则足以定核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
+    (hc : «有常» R («合» E₁ E₂)) : «足以定核» R E₁ E₂ ∧ «足以定核» R E₂ E₁ := by
   have hj : «类» («合» E₁ E₂) :=
     ⟨fun x => ⟨h₁.refl x, h₂.refl x⟩, fun ⟨a, b⟩ => ⟨h₁.symm a, h₂.symm b⟩,
      fun ⟨a, b⟩ ⟨c, d⟩ => ⟨h₁.trans a c, h₂.trans b d⟩⟩
@@ -604,12 +604,12 @@ theorem «合有常则足以定理» (R : «际» α) {E₁ E₂ : «际» α} (
 /-- Leaning on (因于), as defined through constancy, is leaning on through the core. -/
 theorem «因于则因于核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
     (h : «因于» R E₁ E₂) : «因于核» R E₁ E₂ :=
-  ⟨(«合有常则足以定理» R h₁ h₂ h.1).1, h.2.2⟩
+  ⟨(«合有常则足以定核» R h₁ h₂ h.1).1, h.2.2⟩
 
 /-- Mutual need (相须), as defined through constancy, is mutual need through the core. -/
 theorem «相须则相须核» (R : «际» α) {E₁ E₂ : «际» α} (h₁ : «类» E₁) (h₂ : «类» E₂)
     (h : «相须» R E₁ E₂) : «相须核» R E₁ E₂ :=
-  have hs := «合有常则足以定理» R h₁ h₂ h.1
+  have hs := «合有常则足以定核» R h₁ h₂ h.1
   ⟨hs.1, hs.2, h.2.1, h.2.2⟩
 
 /-- Renewing into (复生至): `x` conditions an occurrence that begins a line under `E`, and the line
@@ -661,13 +661,14 @@ section Lines
 
 variable {α : Type u}
 
-/-- **A line whose ends a class tells apart has a marked step.** Where every step of continuation
-under `E` either keeps the class `K` or carries the mark `P`, a line (相续) under `E` from `x` to
-`y` with `K` telling `x` and `y` apart has a step carrying the mark, given with its place on the
-line: reached from `x`, and reaching `y`. Stated for every carrier and every relation; only
-transitivity of `K` is used. -/
-theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
-    (split : ∀ x y, «续» R E x y → K x y ∨ P x y) {x y : α} (line : «相续» R E x y) :
+/-- **A line whose ends a transitive relation tells apart has a marked step.** Where every step of
+continuation under `E` either keeps `K` or carries the mark `P`, a line (相续) under `E` from `x` to
+`y` with `K` failing from `x` to `y` has a step carrying the mark, given with its place on the line:
+reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only be
+transitive, as a class is (by its `trans`) and as a property's not arising from one end to the other
+is. -/
+theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
+    (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
     ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y) := by
   induction line with
   | one c =>
@@ -679,7 +680,7 @@ theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
     intro apart
     match split _ _ c with
     | .inl k =>
-      match ih (fun k' => apart (hK.trans k k')) with
+      match ih (fun k' => apart (trans k k')) with
       | ⟨u, v, cuv, p, .inl same, after⟩ =>
         exact ⟨u, v, cuv, p, .inr (Eq.subst (motive := fun w => «相续» R E _ w) same (.one c)), after⟩
       | ⟨u, v, cuv, p, .inr reached, after⟩ =>
@@ -818,7 +819,7 @@ not", tells the four moments apart suffices for the flame's regularity, fuel or 
 witness shows that the core of "flame or not" is not its criterion of continuation and that a finer
 description fixes the course; it does not show which description that is. -/
 theorem «火之见证不择类» {E₂ : «际» Flame} (apart : «则» («合» Flame.alike E₂) «静») :
-    «足以定理» Flame.step Flame.alike E₂ := fun x y h => by
+    «足以定核» Flame.step Flame.alike E₂ := fun x y h => by
   have e : x = y := apart x y h
   subst e
   exact ⟨«静», fun a b q => by cases q; exact rfl, fun a b q => q.symm, «静有常» _, rfl⟩
@@ -847,7 +848,7 @@ two flames side by side, "flame or not" together with "the same fuel left" relat
 at one moment, which are two occurrences; still what is alike under both lies in the core of "flame
 or not": the fuel left fixes the course. -/
 theorem «两火以薪定理» :
-    «足以定理» TwoFlames.step TwoFlames.alike TwoFlames.sameFuel ∧
+    «足以定核» TwoFlames.step TwoFlames.alike TwoFlames.sameFuel ∧
       «合» TwoFlames.alike TwoFlames.sameFuel (true, Flame.f₀) (false, Flame.f₀) ∧
       (true, Flame.f₀) ≠ ((false, Flame.f₀) : TwoFlames) := by
   refine ⟨fun x y h => ?_, ⟨rfl, rfl⟩, fun e => Bool.noConfusion (congrArg Prod.fst e)⟩
@@ -860,7 +861,7 @@ theorem «两火以薪定理» :
 /-- **Sameness of flame does not suffice (两火同火不足以定理).** "Flame or not" together with "the same
 flame" relates a flame's first two moments, whose futures differ by how long is left: what is
 alike under both need not lie in the core of "flame or not". -/
-theorem «两火同火不足以定理» : ¬ «足以定理» TwoFlames.step TwoFlames.alike TwoFlames.sameFlame := by
+theorem «两火同火不足以定理» : ¬ «足以定核» TwoFlames.step TwoFlames.alike TwoFlames.sameFlame := by
   intro h
   match h (true, Flame.f₀) (true, Flame.f₁) ⟨rfl, rfl⟩ with
   | ⟨S, hSE, hs, hc, hS⟩ =>

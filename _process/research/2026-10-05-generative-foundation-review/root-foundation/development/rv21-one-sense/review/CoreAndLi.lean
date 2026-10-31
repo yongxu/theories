@@ -1,7 +1,8 @@
 /-
 Item 13 of the twenty-first review: the composition 01 §4's paragraph "The core and 理" states, checked
 against the package's own declarations (Becoming.Grammar, Becoming.GrammarLaws), outside the package.
-Not a package declaration: proposed to the grammar's owner for `Becoming.GrammarLaws`.
+Not a package declaration: proposed to the grammar's owner for `Becoming.GrammarLaws`, where HE2's item 6
+states it as «定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类» and «后不定则核可不同行».
 -/
 import Becoming.GrammarLaws
 

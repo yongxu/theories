@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree",
+  "modules": 66,
+  "ran": [],
+  "reused": 67,
+  "unclean": [],
+  "audits": {
+    "Becoming.ListingValuation": {
+      "theorems": 129,
+      "declarations": 177,
+      "with_axioms": {}
+    }
+  }
+}

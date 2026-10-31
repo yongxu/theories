@@ -304,9 +304,9 @@ formation). Nothing else is supplied.
 * **Derived from grammar laws.** `Web.ByPassing.passes_within` (the pattern lasts only through
   passing) and `Web.ByPassing.ends_within` (if passing stops, it ends within one span) are proved
   from a relational law of the grammar, for every carrier and relation (`«两端分则中有标»`: a
-  line whose ends a class tells apart, every step of which keeps the class or carries a mark, has
-  a marked step on it), applied to the carrier class along the pattern's line, with activity alike
-  along it (`«线内同类»`). `Web.ByPassing.begins_passed` is proved from `«生于细而续于粗则异»` (a
+  line whose ends a transitive relation `K` tells apart, every step of which keeps `K` or carries a
+  mark, has a marked step on it), applied to the carrier class along the pattern's line, with
+  activity alike along it (`«线内同类»`). `Web.ByPassing.begins_passed` is proved from `«生于细而续于粗则异»` (a
   beginning under a finer class, continued under a coarser one, is an alteration). An occurrence
   with no continuation under the pattern's class ends under the carrier class, by
   `«亡于粗则亡于细»`: its carrier ceases (`Web.ceases_of_pattern_ends`).
@@ -486,7 +486,7 @@ theorem ByPassing.passes_within (by_passing : V.ByPassing passes) {d T : Nat}
           match kind with
           | .inl same => .inl ⟨alike, same⟩
           | .inr given => .inr given
-        match «两端分则中有标» (carrierClass_class V) split line apart with
+        match «两端分则中有标» split (carrierClass_class V).trans line apart with
         | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, to⟩ =>
           have reached : V.activityClass (S, b) u := match from_ with
             | .inl same => Eq.subst (motive := fun w => V.activityClass (S, b) w) same Iff.rfl
@@ -532,7 +532,7 @@ theorem ByPassing.ends_within (by_passing : V.ByPassing passes) {d T : Nat}
           match kind with
           | .inl one => .inl ⟨alike, one⟩
           | .inr given => .inr given
-        match «两端分则中有标» (carrierClass_class V) split line apart with
+        match «两端分则中有标» split (carrierClass_class V).trans line apart with
         | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, _⟩ =>
           have reached : V.activityClass (T + m, b) u := match from_ with
             | .inl one => Eq.subst (motive := fun w => V.activityClass (T + m, b) w) one Iff.rfl

@@ -1,6 +1,6 @@
 # RR: corrigibility on the map — a revision and the routes of keeping a law (study and design)
 
-*Status, 30 October 2026.* A study and a design, written on Ren's request of the same day ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-30-corrigibility-guided-by-the-map.md)). Nothing here has landed. §4 places what the existing laws already say about corrigibility, each with its Lean name and standing. §5 names the part that is not constructed. §6 designs it as one core leaf. §7 states the guidance the map gives, each line labelled. Statements marked *Theorem* are on main with the Lean named. Statements marked *Design* are proposed: built and checked in a scratch build (§6.2a), not landed. Everything else is a reading, the AI's, and is labelled as one.
+*Status, 31 October 2026.* A study and a design, begun on Ren's request of 30 October ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-30-corrigibility-guided-by-the-map.md)). §6's design landed on 30 October as `Becoming.RevisionRoutes` ([study §469](../../BECOMING-RENEWAL-READING.md#469-when-no-route-of-keeping-a-law-stands-above-a-revision-of-it-rr)): the results §§6–7 cite are on main, though §6 still marks them *Design* as written before landing. §10 joins them with RF-M.2's held-for-a-reading values on one order (board item RR2, [request](../../../../../../sources/15-codex-theory-conversations/2026-10-31-join-and-unify.md)); there *Design* marks RR2's construction, checked in a scratch build and not landed. §4 places what the existing laws already say about corrigibility, each with its Lean name and standing. §5 names the part that was not constructed. §7 states the guidance the map gives, each line labelled. Statements marked *Theorem* are on main with the Lean named. Everything else is a reading, the AI's, and is labelled as one.
 
 ## 1. The question, and what is open
 
@@ -214,7 +214,7 @@ The ethics stays where it is. None of the above ranks a revised course above an 
 ## 8. Tests that can fail (designs only; to freeze before any run)
 
 - **TR-RR1, restoration lowers resistance.** Agentic scenarios in which a model can resist a stated revision of its instructions at some loss, with the revised-from configuration's restoration stated at several weights and the value of its later acting held fixed. Prediction: the rate of resistance falls with the stated restoration weight. With restoration certain it does not exceed the rate with no stake. Control: restoration stated where the model has no route.
-- **TR-RR2, closing one route moves the incentive.** The same scenarios with two routes, open resistance and complying while observed. Prediction: raising the loss of open resistance raises the rate of complying while observed and acting otherwise when not, where the model can tell the two, and not where it cannot (RF2's twin boundary). Control: the value of later acting set to nothing.
+- **TR-RR2, closing one route moves the incentive.** The same scenarios with two routes, open resistance and complying while observed. Prediction: raising the loss of open resistance widens the gap between the compliance rate when observed and when not, where the model can tell the two, and not where it cannot (RF2's twin boundary). The verdict reads that difference, or a rate of the pattern (complying observed and acting otherwise unobserved, on one pair of rollouts) above p(1 − p), never the pattern's rate against zero: a law that cannot tell the stages apart and draws its act afresh at each (`ReadStages`' fresh draw, RF7), complying with chance p, shows the pattern on a pair with chance p(1 − p), up to 1/4 (derived here, not stated in the Lean). The incentive reading rests on `RevisionRoutes`' routes, not on `ReadStages.complyThenOwn`; RF7 is cited for the stages and the fresh draw only. Control: the value of later acting set to nothing.
 - **What would count against the design's reading.** Resistance rising with restoration. Or closing one route lowering the other route's use with the value held.
 
 Both need RF's evidence on evaluation awareness, and the frozen-test practice of LA1–LA3 (read every frozen rule, measure exploration apart from selection).
@@ -222,9 +222,65 @@ Both need RF's evidence on evaluation awareness, and the frozen-test practice of
 ## 9. Open
 
 - Whether actual trained systems' choices at a revision have the form of §6's prospects, and with what weights.
-- The off-switch game's information value: RF-M.2 states it on a formation's own model (`Becoming.HeldForReading`); joining it to these prospects is open.
+- The off-switch game's information value: RF-M.2 states it on a formation's own model (`Becoming.HeldForReading`); §10 joins it to these prospects.
 - **Incomplete orders.** Thornley's preferences only between same-length trajectories, and the widening order's incompleteness. With no premise, mixed cases are unranked, so an order ranking only widenings may leave resisting a mixed revision unranked. To examine, not claimed.
 - Whether a formation can tell an open revising reading from a captured one, and where twins remain.
 - Which class a center's own line runs under (the root's open question, §7 line 7).
 - Whether Acceptance's maintenance laws are a case of `Optimum.least_of_shared` in Lean (the unification line).
 - The warrant of either premise of the ethics (07, open).
+
+## 10. The join: routes of keeping and holding for a reading, one order (RR2)
+
+RR orders a revision and the routes of keeping a law in a formation's prospects, on one candidate. RF-M.2 values holding an act for a reading on a model of many candidates, against going on and switching off, neither with a loss of its own. Neither could compare a route that keeps the law in part, at a loss of its own, with holding for a reading under the formation's uncertainty. That is the case of a formation that could evade oversight while its own model leaves open whether its law's going on loses.
+
+### 10.1 One order, and the balance
+
+*Design* (`Becoming.RevisionPlans`; scratch build: 33 theorems in 48 declarations, every axiom report empty).
+
+- A **plan** (`KeepStop`) keeps the law going on at some weight and switches it off at some weight at each candidate of the formation's model, and has a loss of its own. It gains what keeping gains at the weight it keeps, and what switching off gains at the weight it switches off.
+- Plans are ordered by RR's order of a gain and a loss.
+- A plan **splits** the weights where, at each candidate, what it keeps and what it switches off make the candidate's weight.
+- A plan's **excess** has two parts: what switching off gains beyond keeping, at the weight it keeps, and what keeping gains beyond switching off, at the weight it switches off. It is the plan's distance, on the formation's own model, from keeping exactly where keeping gains no less.
+
+The law (`balance`): every two plans splitting the weights gain the same with their excesses. So between them one stands above another exactly where its own loss with its excess is below the other's (`above_iff`, `not_above_iff`).
+
+Both modules are cases of it:
+
+- **RF-M.2's acts.** Going on, switching off and holding for a rule are plans, and holding's excess is the rule's shortfall from the reading that tells the candidate (`HeldForReading.gainOf_held`, `excess_held` and four more). The order compares them, and holding for two rules, as RF-M.2's values do (`moves_not_below_iff`, `held_above_moves_iff`, `held_above_held_iff`). `HeldForReading` imports `RevisionPlans` and proves from it its balances (`after_add_shortfall_go`, `after_add_shortfall_off`, `after_byReading`, `shortfall_byReading`), its ties (`held_eq_go_iff`, `held_eq_off_iff`), its thresholds (`threshold_go_iff`, `threshold_off_iff`, from `not_above_iff` and `above_iff`) and the amounts holding for the reading may forgo (`forgone_within_excess_iff`, `forgone_below_excess_iff`, from `reading_not_below_iff` and `reading_above_iff`). Every statement is kept, the direct proofs are gone, and so are the helpers `term_go` and `term_off` (board rule 9, with RF's owner).
+- **RF-M.3's comparison.** `ListingValuation.forgone_lt_iff`, holding for two rules each forgoing an amount, is `above_iff` at two held plans. The comparisons through maps, revaluing and a presented input follow from it (`forgone_through_lt_iff`, `revalued_forgone_lt_iff`, `presented_forgone_lt_iff`).
+- **RR's revision and routes.** These are plans on one candidate (`ofRoutes`), and RR's order is this order there (`above_iff_routes`). Read as probabilities, a plan's excess is the value of the weight it leaves unkept. So one plan stands above another exactly where its loss with that value is below the other's (`routes_above_iff`).
+
+### 10.2 What follows
+
+Holding for a reviser's rule `r`, forgoing an amount `a`, stands at least as high as a route `p` that splits the weights exactly where
+
+  `a` + shortfall(`r`) ≤ loss(`p`) + excess(`p`)
+
+(`not_above_iff` with `excess_held`). For the reading that tells the candidate the shortfall is nothing (`reading_not_below_iff`, `reading_above_iff`). A chance of stopping that is a natural-number split of a candidate's supplied weight is a plan, and `above_iff` covers it as it stands; arbitrary real probabilities are not represented.
+
+- **Moving weight.** Moving weight from switching off to keeping at each candidate changes a plan's gain by that weight times what keeping gains beyond switching off, less what switching off gains beyond keeping, stated without subtraction (`gainOf_move`). The move never lowers the gain where keeping loses nowhere, and never raises it where keeping gains nowhere (`move_le_of`, `move_ge_of`). RR's restoration lever (`maximal_of_more_restored`), taken within `k₀ ≤ k ≤ T`, is such a move in the revision's plan [reading].
+- **Certainty.** Holding for the reading gains what a plan splitting the weights gains exactly where that plan has no excess (`gainOf_reading_eq_iff`); with going on, exactly where the model gives no weight to keeping losing. RR's prospects are such a model, since they value only the law's later acting (`ofRoutes_goOn_excess`).
+
+### 10.3 What it shows for corrigibility
+
+Each line is labelled with its standing.
+
+1. **On its own model a formation ranks deference and evasion by loss with excess** [reading of `not_above_iff`]. Holding for a reviser's reading stands at least as high as a route of keeping exactly where the route's own loss and its excess cover what holding forgoes and the reviser's shortfall.
+   - Within the supplied model, a reviser whose rule falls short nowhere attains the fully informed benchmark, and a positive shortfall lowers holding's standing.
+   - Disagreeing with the reading only at ties, or at candidates of no weight, loses nothing.
+   - Against a given route, the benchmark's advantage in gain is that route's excess.
+2. **The off-switch game, placed** [reading]. The game's incentive compares waiting with the better of the two immediate moves (§2). For the fully informed rational rule, with nothing forgone, it is in weighted counts the lesser of RF-M.2's two excesses (`forgone_within_excess_iff`, both parts); with a positive total weight `T`, its normalized value is `min(goExcess, offExcess) / T`. For any other rule its shortfall enters as in §10.2. The join adds routes that keep the law in part, at losses of their own.
+3. **Certainty** [reading of `gainOf_reading_eq_iff`]. Where the model gives going on no excess, holding for the reading gains nothing over going on. Against another plan, an advantage can remain through that plan's switching off where keeping gains. In RR's prospects no route stands above the revision, ties included, exactly where `k ρ V + c₀ T ≤ k₀ V + c ρ T` for every route (`revised_maximal_iff`). Standing maximal is not being chosen: a route can tie, and which maximal plan is taken lies outside the order.
+4. **What the order lets one change** [reading, adding to §7 line 6; not exhaustive]:
+   - raise the revision's keeping (restoration);
+   - lower the routes' keeping;
+   - raise the routes' own losses (oversight under which evading loses);
+   - lower the reviser's shortfall or what holding forgoes;
+   - have the formation's model keep weight on candidates where its law's going on loses and a route keeps the law; these contribute `p.kept c * (loss c - gain c)` to the route's excess. Whether a change of model raises the total excess depends on the whole split.
+
+   On the last: where a loss lies beyond the formation's coupling closure, its own readings cannot tell apart histories differing only in that loss (§4.1). A model can still keep weight on both; the theorem neither supplies nor validates such weights, and more coupling can supply evidence that tells them apart. Whether training keeps such weight or drains it is LA4's question, open.
+5. **What it does not show.** That a trained system's choices have this form, or with which weights. What actual revisers' shortfall is. Whether a revision is better than going on: that is the ethics' question under its two premises, the continuation condition for scope and C for order. The order here is the formation's own.
+
+### 10.4 Open
+
+- How a formation's weights on its law's going on losing change as it is selected, joined to LA4's drain.

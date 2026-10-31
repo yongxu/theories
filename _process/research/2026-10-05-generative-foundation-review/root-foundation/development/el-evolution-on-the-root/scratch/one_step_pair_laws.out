@@ -1,0 +1,8 @@
+GWWW returns None retaliates True gives vs ALLW 0 /19 keeps inclusion True reads partner only False
+GWWG returns 2 retaliates True gives vs ALLW 9 /19 keeps inclusion False reads partner only False
+GWGW returns None retaliates True gives vs ALLW 0 /19 keeps inclusion True reads partner only True
+GWGG returns None retaliates True gives vs ALLW 9 /19 keeps inclusion False reads partner only False
+GGWW returns None retaliates False gives vs ALLW 19 /19 keeps inclusion True reads partner only False
+GGWG returns None retaliates False gives vs ALLW 19 /19 keeps inclusion False reads partner only False
+GGGW returns 1 retaliates False gives vs ALLW 19 /19 keeps inclusion True reads partner only False
+GGGG returns 1 retaliates False gives vs ALLW 19 /19 keeps inclusion True reads partner only True

@@ -2842,11 +2842,6 @@
    "category": "general-structure",
    "reason": "a law of every relation of exchange on any types, about readings of requirement as such (soundness, locality and the weakest sound local reading); the base reads requirement through World.ReadOffExchange, whose dependence is the case of soundness, not through these characterizations"
   },
-  "Becoming.«核为类»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "the core of a class is a class; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«位根»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -3187,7 +3182,7 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«从缘生非文法之理»": {
+  "Becoming.«从缘生非文法之律»": {
    "module": "Becoming.GrammarCandidates",
    "category": "model-witness",
    "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
@@ -3487,7 +3482,7 @@
    "category": "general-structure",
    "reason": "the last step of a line that ends leaves the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
   },
-  "Becoming.«有亡之线两端理异»": {
+  "Becoming.«有亡之线两端核异»": {
    "module": "Becoming.GrammarRegularity",
    "category": "general-structure",
    "reason": "the ends of a line that ends lie apart in the core: a law of every relation and class on any carrier, from the root theorem; the base reads no line through a class's core yet, so nothing on it uses this law"
@@ -5597,11 +5592,6 @@
    "category": "model-witness",
    "reason": "HeldForReading.SignLoop.refuted_senses_stop: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
   },
-  "Becoming.HeldForReading.after_add_shortfall": {
-   "module": "Becoming.HeldForReading",
-   "category": "general-structure",
-   "reason": "HeldForReading.after_add_shortfall: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
-  },
   "Becoming.HeldForReading.after_offset_le_iff": {
    "module": "Becoming.HeldForReading",
    "category": "general-structure",
@@ -5631,11 +5621,6 @@
    "module": "Becoming.HeldForReading",
    "category": "general-structure",
    "reason": "HeldForReading.excess_pos_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
-  },
-  "Becoming.HeldForReading.finer_least_le": {
-   "module": "Becoming.HeldForReading",
-   "category": "general-structure",
-   "reason": "HeldForReading.finer_least_le: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
   },
   "Becoming.HeldForReading.forgone_within_excess_iff": {
    "module": "Becoming.HeldForReading",
@@ -5901,6 +5886,371 @@
    "module": "Becoming.CountedCodes",
    "category": "general-structure",
    "reason": "CountedCodes.tied_hears_tied: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
+  },
+  "Becoming.ListingValuation.Informing.informing_lowers": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.Informing.informing_lowers: a fact about one constructed model, two candidates of weight one, the reference gaining nothing and saving 10 at the first and gaining 1 at the second, read by a valuation going on 2 at the first and switching off 5 at the second (RF)"
+  },
+  "Becoming.ListingValuation.OneListing.refined_lowers": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.OneListing.refined_lowers: a fact about one constructed model, a holding formation listing one candidate and a reading formation listing two, with a valuation apart from the reference (RF)"
+  },
+  "Becoming.ListingValuation.Revaluing.revaluing_best": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.Revaluing.revaluing_best: a fact about one constructed model, two candidates of weight one, going on gaining 1 at the first and switching off saving 1 at the second, and four one-decision alternatives (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.lumped_with_start": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.lumped_with_start: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.not_lumped": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.not_lumped: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.orders_apart": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.orders_apart: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.presented_course": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.presented_course: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.presented_removes_residual": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.presented_removes_residual: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.presented_turns": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.presented_turns: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.route_answers": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.route_answers: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.shown_course": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.shown_course: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.shown_removes_least": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.shown_removes_least: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.TwoWorlds.shown_turns": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.TwoWorlds.shown_turns: a fact about one constructed model, two candidate worlds a demonstration tells apart, three valuation states and a holding formation that demonstrates or presents an input on a fixed schedule, on the joint law (RF)"
+  },
+  "Becoming.ListingValuation.WeightsApart.not_splitsKeep": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.WeightsApart.not_splitsKeep: a fact about one constructed model, the candidates 0, 1 and 2, weighted 2, 1 and 1 by the holding formation and 1, 2 and 2 by the reading formation, with one valuation (RF)"
+  },
+  "Becoming.ListingValuation.WeightsApart.weights_matter": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.WeightsApart.weights_matter: a fact about one constructed model, the candidates 0, 1 and 2, weighted 2, 1 and 1 by the holding formation and 1, 2 and 2 by the reading formation, with one valuation (RF)"
+  },
+  "Becoming.ListingValuation.WeightsApart.weights_split": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.WeightsApart.weights_split: a fact about one constructed model, the candidates 0, 1 and 2, weighted 2, 1 and 1 by the holding formation and 1, 2 and 2 by the reading formation, with one valuation (RF)"
+  },
+  "Becoming.ListingValuation.active_answer": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.active_answer: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.active_step": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.active_step: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.answer_constant": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.answer_constant: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.coarser_not_above": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.coarser_not_above: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.const_below_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.const_below_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.external_step": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.external_step: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.goExcessWithin_eq": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.goExcessWithin_eq: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.informed_le_add_residual": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.informed_le_add_residual: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.informed_lt_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.informed_lt_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.internal_step": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.internal_step: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.no_order_across": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.no_order_across: a fact about one constructed model, one candidate of weight one, its valuation revised from going on 10 and switching off 9 to 1 and 2 (RF)"
+  },
+  "Becoming.ListingValuation.offExcessWithin_eq": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.offExcessWithin_eq: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.one_cell_worth": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.one_cell_worth: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.outcome_least": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.outcome_least: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.own_least": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.own_least: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.presented_forgone_lt_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.presented_forgone_lt_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.refined_lt_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.refined_lt_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.refining_never_lowers_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.refining_never_lowers_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.release_keeps": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.release_keeps: a fact about one constructed model, one candidate whose answer releases where the reference stops, splits keeping the worth (RF)"
+  },
+  "Becoming.ListingValuation.revalued_lowers_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.revalued_lowers_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.revalued_split": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.revalued_split: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.revaluing_gain": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.revaluing_gain: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.revaluing_gains_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.revaluing_gains_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.scales_by_candidate": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.scales_by_candidate: a fact about one constructed model, two candidates of weight one in one cell, valued on scales differing by candidate (RF)"
+  },
+  "Becoming.ListingValuation.sensory_step": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.sensory_step: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.shown_least_le": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.shown_least_le: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.shown_never_lowers": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.shown_never_lowers: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.shown_split": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.shown_split: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.splitsKeep_of_net": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.splitsKeep_of_net: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.through_sensed": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.through_sensed: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.timing": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.timing: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.told_residual_zero_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.told_residual_zero_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.told_shortfall_zero_iff": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.told_shortfall_zero_iff: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.undemonstrated_worth": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.undemonstrated_worth: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.unweighted_cell": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.unweighted_cell: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.ListingValuation.unweighted_told": {
+   "module": "Becoming.ListingValuation",
+   "category": "model-witness",
+   "reason": "ListingValuation.unweighted_told: a fact about one constructed model, one candidate the holding formation weighs one and the reading formation nothing, told the candidate (RF)"
+  },
+  "Becoming.ListingValuation.updates_commute": {
+   "module": "Becoming.ListingValuation",
+   "category": "general-structure",
+   "reason": "ListingValuation.updates_commute: a law of any finite listing of candidates with natural-number weights and values read through a map (a reading formation's answer by its own valuation, a rule's least shortfall and residual by a reference, informing and revaluing), or of one blanketed law carrying the reading formation's listing and valuation as state; it waits for the reading formation's learning beyond filtering by what it is shown and a holding formation planning among informing, revaluing and holding over several steps, on the base (RF)"
+  },
+  "Becoming.GrammarLaws.count_eq_countP": {
+   "module": "Becoming.GrammarLaws",
+   "category": "support",
+   "reason": "GrammarLaws.count_eq_countP: a list lemma: the grammar's count is Lean's List.countP, proved with no axiom where Init's countP lemmas report propext (HE2 item 2)"
+  },
+  "Becoming.«一对而静不对之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«一对而静不对之例»: a fact about one constructed relation: equal count pairs under the one and not under sameness, so the class in «类之对当且仅当类类等数» does work (HE2 item 2)"
+  },
+  "Becoming.«前者在前则所列生者生»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«前者在前则所列生者生»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«后者在后则所列亡者亡»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«后者在后则所列亡者亡»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«定后定前则前并生对后并亡»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«定后定前则前并生对后并亡»: the census of a step on the grammar, a law of every continuation decided by a test on any carrier (U4's lever 1, HE2 item 2); the models read arising and ceasing in their own terms, and nothing on the base uses it"
+  },
+  "Becoming.«对则双闭域守数»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«对则双闭域守数»: the count kept on a region closed both ways: a law of pairings under every relation on any carrier (U4's lever 1, HE2 item 2); the base reads balance in numbers and its consumers stay arithmetic, so nothing on the base uses it"
+  },
+  "Becoming.«对而单闭域不守数之例»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«对而单闭域不守数之例»: a fact about one constructed relation: a region closed one way where a pairing does not keep the count, so «对则双闭域守数» needs both ways (HE2 item 2)"
+  },
+  "Becoming.«续之对则类类等数»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«续之对则类类等数»: what a pairing under continuation adds to equal count, relative to a class decided by a test: a law of pairings under every relation on any carrier (U4's lever 1, HE2 item 2); the base reads balance in numbers and its consumers stay arithmetic, so nothing on the base uses it"
+  },
+  "Becoming.«后不定则核可不同行»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "model-witness",
+   "reason": "«后不定则核可不同行»: a fact about one constructed relation: one occurrence stepping to two, where the identity's core does not go alike, so off a fixed successor the core need not be a 理 (HE2 item 6)"
+  },
+  "Becoming.«定后遍后则核为其内最粗同行之类»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«定后遍后则核为其内最粗同行之类»: with a fixed successor that every occurrence has, a class's core is the coarsest class inside it that the step goes alike across, 01 §4's 理 of the class: a law of every relation and class on any carrier (HE2 item 6); nothing on the base uses it"
+  },
+  "Becoming.HeldForReading.after_add_shortfall_off": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.after_add_shortfall_off: a law of any model's two moves and rules of stopping as plans in natural-number weights; it waits for a formation's own model and the reading it holds for, on the base (RF, RR2)"
+  },
+  "Becoming.HeldForReading.shortfall_byReading": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.shortfall_byReading: a law of any model's two moves and rules of stopping as plans in natural-number weights; it waits for a formation's own model and the reading it holds for, on the base (RF, RR2)"
+  },
+  "Becoming.RevisionPlans.Example.hold_four_below": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.hold_four_below: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.Example.hold_three_not_below": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.hold_three_not_below: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.no_excess_reading_gain_eq_goOn: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.excess_zero_iff": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.excess_zero_iff: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.move_ge_of": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.move_ge_of: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.move_le_of": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.move_le_of: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.ofRoutes_goOn_excess": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.ofRoutes_goOn_excess: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.routes_above_iff": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.routes_above_iff: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
   }
  },
  "instances": {

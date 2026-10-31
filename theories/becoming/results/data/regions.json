@@ -91,6 +91,11 @@
    "base": "general",
    "note": "RuleCapture: no ratchet when rule read against share"
   },
+  "a-reading-informed-and-revalued": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ListingValuation RF-M.3: the valuation as state; any rule's shortfall split; informing and revaluing in one law"
+  },
   "a-reading-kept-by-its-update": {
    "region": "knowing",
    "base": "general",
@@ -2416,6 +2421,11 @@
    "base": "general",
    "note": "ReadStages RF7: when complying when read and acting by its own law when not is best, in two stages; the exits; drawing afresh"
   },
+  "when-holding-for-a-reading-stands-above-a-route": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR2: when holding for a reading stands above a route of keeping (07 §7); the routes and the off-switch game on one order"
+  },
   "when-no-route-stands-above-a-revision": {
    "region": "significance",
    "base": "general",
@@ -3478,6 +3488,11 @@
    "base": "old-base",
    "note": "refutation laws without Distinct or DecidableEq"
   },
+  "Becoming.ListingValuation": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF-M.3 a reading informed and revalued (03 §12)"
+  },
   "Becoming.LocalUnits": {
    "region": "root",
    "base": "frame",
@@ -3917,6 +3932,11 @@
    "region": "knowing",
    "base": "frame",
    "note": "registration history selects"
+  },
+  "Becoming.RevisionPlans": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR2: plans at a revision; the balance HeldForReading takes"
   },
   "Becoming.RevisionRoutes": {
    "region": "significance",
