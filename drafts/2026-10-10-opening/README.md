@@ -1,6 +1,6 @@
 # The opening: drafts
 
-The opening of the work is [theories/becoming/OPENING.md](../../theories/becoming/OPENING.md), which `make research-render` places at the top of the README. Ren's original wording is in [the source record](../../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md).
+The opening of the work is [theories/becoming/OPENING.md](../../theories/becoming/OPENING.md), which `make research-render` places in the README after its first screen ([README-FIRST-SCREEN.md](../../_process/navigation/README-FIRST-SCREEN.md)). Ren's original wording is in [the source record](../../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md).
 
 The drafts that led to it (the first draft, versions 2 to 12, the v6, v7 and v8 proposals, the notes on what each version changed, and the review) are in [history](history/INDEX.md), byte for byte (receipts `_process/architecture/moves/K1.json`, `opening-v7.json`, `opening-v8.json`, `opening-v9.json`, `opening-v10.json`, `opening-v11.json` and `opening-v12.json`). They sit one level deeper than when they were written, so their relative links resolve through the [manifest](history/MANIFEST.json); `OPENING-V6.md` was written for the opening's own place in `theories/becoming/`.
 
@@ -15,3 +15,5 @@ Version 10 was applied the same day ([source](../../sources/15-codex-theory-conv
 Version 11 was applied on 22 October 2026 ([source](../../sources/15-codex-theory-conversations/2026-10-22-opening-v11.md)). Version 10's far-sight clause stated a law of optima as what an optimizer does; "at its optimum" now scopes it, and the note says the path toward the optimum need not be monotone. Nothing else in the body changed. The frozen copy is [OPENING-V11.md](history/OPENING-V11.md).
 
 Version 12 was applied on 22 October 2026 ([source](../../sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md)). The sentence on the three theories says that none of them is a law, each failing in a world the laws admit, and states what position reads: read against the others, it bounds what all draw only from below, so no winning certifies that anything lasts (board item NL1, record what-position-reads). Nothing else in the body changed. The frozen copy is [OPENING-V12.md](history/OPENING-V12.md).
+
+[OPENING-V13-PROPOSAL.md](OPENING-V13-PROPOSAL.md) (31 October 2026, not applied) proposes bringing the body to the current account: the ethics stated for life, the least loss where an exchange cannot be undone, how far the law takes the step, and the older wordings the notes already correct. It goes alongside README's first screen, which states those terms before the opening.

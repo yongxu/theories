@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from tools.research import navigation, registry
 
-LEAD = '_process/navigation/README-LEAD.md'
+FIRST_SCREEN, LEAD = '_process/navigation/README-FIRST-SCREEN.md', '_process/navigation/README-LEAD.md'
 REPOSITORY = '_process/navigation/REPOSITORY.md'
 
 
@@ -239,19 +239,79 @@ class OpeningTests(unittest.TestCase):
             errors = navigation.validate_goals([])
         self.assertTrue(any('missing file: missing-opening.md' in error for error in errors))
 
-    def test_root_places_the_opening_before_the_summary(self):
-        config = {'readme_featured_results': ['first'], 'readme_lead': LEAD}
+    def test_root_places_the_first_screen_before_the_opening(self):
+        config = {'readme_featured_results': ['first'], 'readme_first_screen': FIRST_SCREEN, 'readme_lead': LEAD,
+                  'readme_status': 'Ongoing work.'}
         def read(path):
             return config if path == navigation.CONFIG else {'documents': {}}
         with patch.object(navigation, 'read', side_effect=read), patch.object(navigation, 'goals', return_value=[]), \
-                patch.object(navigation, 'readme_opening', return_value='## Truth exists\n\nOpening body.'):
+                patch.object(navigation, 'readme_opening', return_value='## Truth exists\n\nOpening body.\n\n### Notes\n\n1. A note.'):
             views = navigation.render_views([result('first')])
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
-        self.assertLess(root.index('[Home]'), root.index('## Truth exists'))
-        self.assertLess(root.index('Opening body.'), root.index('The Theory of Becoming is an account of'))
-        self.assertLess(root.index('The Theory of Becoming is an account of'), root.index('## What is established'))
+        self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
+        screen, lead = 'An account of how anything comes to be', 'The account below says what is proved'
+        self.assertLess(root.index('> Ongoing work.'), root.index(screen))
+        self.assertLess(root.index(screen), root.index('## Truth exists'))
+        self.assertLess(root.index('Opening body.'), root.index(lead))  # the lead follows the opening
+        self.assertLess(root.index(lead), root.index('## What is established'))
+        self.assertEqual(root.count(screen), 1)
+        self.assertNotIn('{{', root)
         self.assertNotIn('Opening body.', views['_process/BRIEF.md'])
+
+
+class FirstScreenTests(unittest.TestCase):
+    """README's first screen: the readme_first_screen file with its fields filled at render (navigation.first_screen)."""
+    OPENING = '## Truth exists\n\n' + 'word ' * 260 + '\n\n### Notes\n\n1. ' + 'note ' * 1300
+
+    def screen(self, text, records=(), opening=None, above=''):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'theories').mkdir()
+            (root / 'theories/PAGE.md').write_text('page ' * 2154)
+            (root / 'LEAD.md').write_text('<!-- For editors. -->\n' + text)
+            return navigation.first_screen(list(records), self.OPENING if opening is None else opening,
+                                           {'readme_first_screen': 'LEAD.md'}, root, above)
+
+    def test_fields_are_filled_from_the_data(self):
+        records = [result('a', 'recorded-checked'), result('b', 'recorded-checked'), result('c', 'open')]
+        self.assertEqual(self.screen('{{count:registered}} results, {{count:recorded-checked}} with a receipt, {{count:open}} open.', records),
+                         '3 results, 2 with a receipt, 1 open.')
+        self.assertEqual(self.screen('[The page](theories/PAGE.md) ({{time:theories/PAGE.md}}).'),
+                         '[The page](theories/PAGE.md) (17–22 minutes).')
+        self.assertEqual(self.screen('The opening ({{time:opening}}), its notes ({{time:notes}}).'),
+                         'The opening (2–3 minutes), its notes (10–13 minutes).')
+        self.assertEqual(self.screen('This screen: {{time:screen}}.'), 'This screen: a minute.')
+        self.assertEqual(self.screen('{{time:screen}}. ' + 'word ' * 300), '2–3 minutes. ' + ('word ' * 300).strip())
+        # the whole screen is timed: the title, navigation and status above the file count
+        self.assertEqual(self.screen('{{time:screen}}. ' + 'word ' * 100, above='# Title\n\n' + 'nav ' * 100), '2 minutes. ' + ('word ' * 100).strip())
+
+    def test_unknown_fields_and_missing_files_are_refused(self):
+        for text, message in [('{{size:x}}', 'unknown field'), ('{{count:accepted}}', 'unknown status'),
+                              ('{{time:theories/MISSING.md}}', 'missing file'), ('{{time:../outside.md}}', 'missing file')]:
+            with self.subTest(text=text):
+                with self.assertRaisesRegex(ValueError, message):
+                    self.screen(text)
+        with self.assertRaisesRegex(ValueError, 'does not have'):
+            self.screen('{{time:notes}}', opening='## Truth exists\n\nNo notes.')
+
+    def test_reading_time_counts_visible_prose_as_the_budgets_do(self):
+        self.assertEqual(navigation.prose_counts('Two words <!-- hidden --> [a link](far/away.md) 中文'), (4, 2))
+        self.assertEqual(navigation.prose_counts('```\ncode is not read\n```\nread'), (1, 0))
+        self.assertEqual(navigation.reading_time('word ' * 1100), '8–11 minutes')  # ten minutes' budget
+        self.assertEqual(navigation.reading_time('字' * 520), '2–3 minutes')  # a character counts half a word
+
+    def test_the_repository_first_screen_fills(self):
+        # the real first screen: every field filled, no heading (the opening's ends the screen), and nothing of it
+        # said again in the lead after the opening
+        records = registry.load_records()[0]
+        screen = navigation.first_screen(records, navigation.readme_opening())
+        self.assertNotIn('{{', screen)
+        self.assertNotIn('\n#', '\n' + screen)
+        self.assertIn('two premises', screen)
+        lead = navigation.markdown_file('readme_lead', 'README.md')
+        self.assertNotIn('is an account of', lead)
+        self.assertNotIn('two premises', lead)
 
 
 if __name__ == '__main__':
