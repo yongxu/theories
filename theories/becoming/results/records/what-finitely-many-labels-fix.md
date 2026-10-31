@@ -11,13 +11,13 @@
 ## Laws
 
 1. A table of labelled names: a name is a finite future through the map, latest first, and a label a value of the feature; the extrapolation given a table unrolls the extrapolation by elimination over the lasso candidates and proposes the label of the first entry whose name the proposed future begins with. (`Becoming.Learning.prefix_map`, `Becoming.Identification.firstFit_mem`, `Becoming.Identification.firstFit_map`, `Becoming.Learnable.Begins`, `Becoming.Learnable.decBegins`, `Becoming.Learnable.byTable`, `Becoming.Learnable.entryOf`, `Becoming.Learnable.tableOf`, `Becoming.length_map`, `Becoming.Learnable.mem_map_of`, `Becoming.Learnable.tableOf_length`, `Becoming.Learnable.entryOf_name_length`, `Becoming.Learnable.tableOf_names`, `Becoming.Learnable.begins_entryOf`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. In a world a list of N holds, where configurations with the same future through the map have features agreeing from some step on, the extrapolation given the table of the N configurations as many steps on as the list is long, each named by its first N - 1 values through the map and labelled with its feature, rests in accord with the feature along every orbit and every run, from the bound of the extrapolation given nothing on; so a feature is learnable exactly where the extrapolation given some table of at most N labelled names of N - 1 values learns it. (`Becoming.Learnable.table_predicts`, `Becoming.Learnable.learnable_iff_table`, `Becoming.LearnableRuns.table_predicts`, `Becoming.LearnableRuns.learnable_iff_table`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 3. Every value the feature takes from the step an extrapolation given a table rests on is a label of an entry of the table; where the law leaves every configuration unchanged, every value the feature takes is. (`Becoming.Learnable.label_of_predicts`, `Becoming.Learnable.labels_of_still`, `Becoming.LearnableRuns.labels_of_still`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where the map also carries the feature, every feature is learned by the extrapolation given nothing in a world a list holds, from the bound on, along every orbit and every run, and unrolled it proposes the feature at every step ahead: the labels before the bound fix every later one. (`Becoming.Learnable.predicts_with_labels`, `Becoming.Learnable.ahead_with_labels`, `Becoming.LearnableRuns.predicts_with_labels`, `Becoming.LearnableRuns.ahead_with_labels`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

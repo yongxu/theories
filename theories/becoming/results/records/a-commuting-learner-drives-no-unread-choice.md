@@ -11,15 +11,15 @@
 ## Laws
 
 1. A weighted law goes from each configuration to finitely many successors, each with a weight of any type, no law of whose arithmetic is used. Where every weighted total over the successors of σ x is the total over those of x carried by σ, the expectation of any observable n steps on from σ x is that of the observable read through σ from x. (`Becoming.Weighted.total`, `Becoming.Weighted.total_congr`, `Becoming.Weighted.expect`, `Becoming.Weighted.Commutes`, `Becoming.Weighted.Commutes.carried`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. From a configuration σ fixes, or from starting weights σ leaves unchanged, every observable's expectation equals its image's at every step; a deterministic law commuting with σ is a case. (`Becoming.Weighted.Commutes.fixed_expect`, `Becoming.Weighted.Unchanged`, `Becoming.Weighted.Commutes.start_expect`, `Becoming.Weighted.law`, `Becoming.Weighted.law_commutes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A law drawing one of finitely many samples, with a weight read off the configuration, and moving by an update, commutes with σ where a map of the samples permutes them, a sample's weight at σ x is its image's weight at x, and the update at σ x is σ of the update at x from the image sample. (`Becoming.Weighted.over`, `Becoming.Weighted.total_map`, `Becoming.Weighted.over_congr`, `Becoming.Weighted.Commutes.of_samples`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Reinforcing, drawing a value in proportion to its count and adding one to it, commutes with exchanging the two values: from equal counts the expected counts stay equal at every step, yet a run drawing one value at every one of any number of steps has positive weight. (`Becoming.Weighted.swap`, `Becoming.Weighted.Reinforcing.law`, `Becoming.Weighted.Reinforcing.commutes`, `Becoming.Weighted.Reinforcing.expect_equal`, `Becoming.Weighted.Reinforcing.oneSidedRun`, `Becoming.Weighted.Reinforcing.oneSidedWeight`, `Becoming.Weighted.Reinforcing.oneSidedRun_eq`, `Becoming.Weighted.Reinforcing.oneSidedWeight_pos`, `Becoming.Weighted.Reinforcing.oneSided`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Pooling, adding one to both values, commutes with the exchange; from counts of three and one, the share of the less-drawn value rises at every step and stays below one half. (`Becoming.Weighted.Pooling.step`, `Becoming.Weighted.Pooling.commutes`, `Becoming.Weighted.Pooling.run_counts`, `Becoming.Weighted.Pooling.share_rises`, `Becoming.Weighted.Pooling.share_below_half`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,15 +11,15 @@
 ## Laws
 
 1. Exactness, the summary traces from a configuration's image being exactly the images of its traces, endpoints included, is equivalently agreement of projected one-step possibilities: the summary steps from the image are exactly the images of the configuration's steps. Preservation and lifting keep what is enabled and the feasibility of every finite word, and for a one-to-one map traces correspond end to end. (`Generative.Trace`, `Generative.projected_trace_iff`, `Generative.local_exact_iff_trace_exact`, `Generative.enabled_projection_iff`, `Generative.feasible_projection_iff`, `Generative.trace_faithful_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where a summary keeps the feasibility of every finite word from every configuration, two configurations of which one can perform some word and the other cannot have different summaries. (`Generative.Feasible`, `Generative.feasible_difference_implies_projection_difference`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. In the access model (a route, the occupancy of supports, and steps that redirect, take and release within a permitted set), every summary from which some reader reads off the feasibility of every word separates occupancy throughout the permitted set; with every support permitted and the route fixed, every such encoding of occupancy is one to one. (`Generative.ReconfigurableSupportLogic.Configuration`, `Generative.ReconfigurableSupportLogic.process`, `Generative.ReconfigurableSupportLogic.OccupancyAgrees`, `Generative.ReconfigurableSupportLogic.exact_reader_separates`, `Generative.ReconfigurableSupportLogic.unrestricted_reader_injective`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Every prefix-closed language admitting the empty word is exactly the words feasible from the empty history under the law that extends a history by one move where the extension is admitted. The feasible words of every process from a configuration form such a language, so every process's language is realized by its histories, with no finite-memory premise. (`Becoming.HistoryLanguages.PrefixClosed`, `Becoming.HistoryLanguages.law`, `Becoming.HistoryLanguages.feasible_iff`, `Becoming.HistoryLanguages.feasible_prefixClosed`, `Becoming.HistoryLanguages.feasible_nil`, `Becoming.HistoryLanguages.realizes_feasible`, `Generative.Deeper.history_feasible_iff`, `Generative.Deeper.process_language_exact_history_realization`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; 2 of its declarations are not in the spine run and not measured, so this holds of the others only.
 5. Witness: the language of courses of at most one move is the language of no process on a single configuration, while its histories realize it. (`Becoming.HistoryLanguages.Bounded.lang`, `Becoming.HistoryLanguages.Bounded.no_one_point_law`, `Becoming.HistoryLanguages.Bounded.history_realizes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

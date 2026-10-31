@@ -11,25 +11,25 @@
 ## Laws
 
 1. Let the unit split into split t + 1 finer units across the step from t. Counted as one more formation, never active and requiring and drawing on nothing, the refinement gives each condition split t times its level and takes nothing: what is taken from a condition is what the flow takes, and what is given is that amount with what the flow gives. (`Becoming.Flow.withRefinement`, `Becoming.Web.withRefinement`, `Becoming.Flow.withRefinement_taken`, `Becoming.Flow.withRefinement_given`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Balance at the refining unit, where across the step from t each level is counted split t + 1 times in the finer unit, holds exactly where the flow with the refinement counted balances in the spine's sense. (`Becoming.Flow.balancesAt_iff_withRefinement`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. With the refinement counted, a flow dissipates on a family at a step exactly where its own formations do and the refinement gives the family's stock nothing; and across a step enclosed with the refinement counted, at which every closed family without repetition is dissipated on, the refinement gives no condition anything. (`Becoming.Flow.withRefinement_dissipatesOn_iff`, `Becoming.Flow.refinement_gives_nothing`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In a world with a census of activity and embodied relata, balanced at the refining unit and, with the refinement counted, dissipative at every step and enclosed at every step from T on, that the world rests from some step on cannot be refuted, so neither arising nor ceasing recurs. (`Becoming.World.rests_unrefuted_refinement_counted`, `Becoming.World.not_recurring_of_rests_unrefuted`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 5. In a world with a census of activity and embodied relata, balanced at the refining unit and, with the refinement counted, dissipative at every step, where arising recurs no step begins a stretch in which every step is enclosed with the refinement counted. (`Becoming.World.arising_opens_refinement_counted`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 6. Without counting the refinement: in a world with a census of activity and embodied relata, balanced at the refining unit and dissipative, with every step from T on enclosed and the refinement giving no relatum anything from T on, that the world rests from some step on cannot be refuted, so neither arising nor ceasing recurs: the world read from T on is one to which the fixed-unit rest theorem applies. (`Becoming.World.after`, `Becoming.World.rests_unrefuted_without_refinement`, `Becoming.World.rests_unrefuted_enclosed`, `Becoming.World.not_recurring_of_rests_unrefuted`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 7. In a world with a census of activity and embodied relata, balanced at the refining unit and dissipative, where arising recurs no step begins a stretch in which every step is enclosed and the refinement gives no relatum anything. (`Becoming.World.arising_needs_refinement`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 8. For a flow balanced at the refining unit and dissipative, over a family without repetition closed at every step from T on, where from T on the refinement gives the family's stock nothing, taking from the family does not recur. (`Becoming.Flow.taking_needs_refinement`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. For a reserve read in a refining unit, which across each unsupported step does not rise and falls where the formation is active, counted in the finer unit: with the formation's activity decided, unsupported from T on and the refinement giving the reserve nothing from T on, the formation is active at most its reserve at T times over any number of steps from T. (`Becoming.Web.CarriesIn.lasts_unrefined`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. Witnesses: counted as a formation, the refinement of Emission, Alternation and Circulation at a halving unit, and of Asymptote at any unit that splits at arbitrarily late steps, is such that no step begins a stretch in which it gives nothing; nor does any step begin a stretch in which it gives Dwindle's reserve nothing. (`Becoming.refinement_feeds_witnesses`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,21 +11,21 @@
 ## Laws
 
 1. For every process, a plan that completes runs to some endpoint, and every run of it is safe and ends in the goal. (`Becoming.Assurance.runs_of_completes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For a determined process, where a move from a configuration has at most one successor, a plan completes exactly when it runs and every run of it is safe and ends in the goal. (`Becoming.Determined`, `Becoming.Assurance.completes_of_runs`, `Becoming.Assurance.completes_iff_of_determined`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. With no safety condition, a plan of a determined process completes exactly when it runs and every endpoint meets the goal. (`Becoming.Assurance.free`, `Becoming.Assurance.completes_iff_runs`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In a process where one move from 0 reaches 1 or 2, from 1 reaches 3 and from 2 nothing, the plan of two moves from 0 runs and every endpoint is 3, yet the plan does not complete with goal 3 and no safety condition; the process is not determined. (`Becoming.Assurance.Branch.process`, `Becoming.Assurance.Branch.runs_not_completes`, `Becoming.Assurance.Branch.not_determined`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A law of change read as a process is determined, and with no safety condition a plan completes exactly when the goal holds where the law takes the configuration; for one move, exactly when it holds at the successor. (`Becoming.Assurance.ofMap`, `Becoming.Assurance.ofMap_determined`, `Becoming.Assurance.completes_ofMap_iff`, `Becoming.Assurance.completes_ofMap_single`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A partial law read as a process is determined, and its traces are exactly the courses its run completes; with no safety condition a plan completes exactly when its run ends in the goal. (`Becoming.Assurance.ofPartial`, `Becoming.Assurance.ofPartial_determined`, `Becoming.Assurance.runPartial`, `Becoming.Assurance.trace_ofPartial_iff`, `Becoming.Assurance.completes_ofPartial_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In the three-route process, a law of change whose configuration is a mode of three with an arrival flag and whose route arrives exactly when it differs from the mode, one route from an unreached configuration completes into arrival, with no safety condition, exactly when it differs from the mode. (`Becoming.AssurancePlans.Routes.advance`, `Becoming.AssurancePlans.Routes.process`, `Becoming.AssurancePlans.Routes.Reached`, `Becoming.AssurancePlans.Routes.completes_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Under the law that moves a count up or down by one, the response that adds at or below one and removes above, followed for any number of moves from a count in the band from one to two, completes into the band, with no safety condition. (`Becoming.AssurancePlans.Regulation.update`, `Becoming.AssurancePlans.Regulation.process`, `Becoming.AssurancePlans.Regulation.Band`, `Becoming.AssurancePlans.Regulation.respond`, `Becoming.AssurancePlans.Regulation.kept_along`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

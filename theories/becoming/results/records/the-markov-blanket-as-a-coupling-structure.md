@@ -11,21 +11,21 @@
 ## Laws
 
 1. A blanketed law has four parts of one law, told apart by which part reads which: the internal and active parts read the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts; its step moves all four, its course is the orbit (Blanketed, Parts, step, course, congr3). (`Becoming.Blanket.Blanketed`, `Becoming.Blanket.Parts`, `Becoming.Blanket.Blanketed.step`, `Becoming.Blanket.Blanketed.course`, `Becoming.Blanket.congr3`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The agent is driven by its sensory course: from one internal and one active state, courses alike on the sensory part have one internal and one active course; the world is driven by the active course (agent_through_sensory, world_through_active). (`Becoming.Blanket.Blanketed.agent_through_sensory`, `Becoming.Blanket.Blanketed.world_through_active`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Each side's course is fixed by its start and the blanket's course, and every reading of the internal course is a selection through the blanket: the deterministic case of the time-unrolled blanket (BlanketAlike, internal_through_blanket, external_through_blanket, reads_through_blanket). (`Becoming.Blanket.Blanketed.BlanketAlike`, `Becoming.Blanket.Blanketed.internal_through_blanket`, `Becoming.Blanket.Blanketed.external_through_blanket`, `Becoming.Blanket.Blanketed.reads_through_blanket`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where the sensory part reads the external part only through a map, two courses from one agent and sensory start whose external parts are alike through it have one internal, sensory and active course: generalization through a lumping on every blanketed law (through_reading). (`Becoming.Blanket.Blanketed.through_reading`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A reading through the blanket separates at most what the blanket tells apart: an internal part reading nothing has one course while the blankets differ (Deaf.law, Deaf.lumps). (`Becoming.Blanket.Deaf.law`, `Becoming.Blanket.Deaf.lumps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. The threshold witness: the internal part whether the system goes on, the sensory part reading the supply only by threshold, the supply draining by one; the blankets agree before step four, at step four the sensory parts differ while the internal parts agree, at step five one has ended, and the ended course rests (law and eight more). (`Becoming.Blanket.ThresholdDrain.law`, `Becoming.Blanket.ThresholdDrain.short`, `Becoming.Blanket.ThresholdDrain.long`, `Becoming.Blanket.ThresholdDrain.reads_threshold`, `Becoming.Blanket.ThresholdDrain.alike_before_four`, `Becoming.Blanket.ThresholdDrain.sensed_at_break`, `Becoming.Blanket.ThresholdDrain.ended`, `Becoming.Blanket.ThresholdDrain.ended_rests`, `Becoming.Blanket.ThresholdDrain.short_rests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. The witness's blanket is the World's coupling by threshold: its sensory part is the World's admission at need one, and its courses are blanket-alike before step n + 2 exactly where the supply histories are alike through the formation's couplings up to n (web and five more). (`Becoming.Blanket.ThresholdDrain.web`, `Becoming.Blanket.ThresholdDrain.sensory_is_admission`, `Becoming.Blanket.ThresholdDrain.external_course`, `Becoming.Blanket.ThresholdDrain.sensory_succ`, `Becoming.Blanket.ThresholdDrain.bool_eq_of_iff`, `Becoming.Blanket.ThresholdDrain.blanket_iff_through`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. With any model updated by any rule and any policy, from a supply of three and every supply of four or more, every reading of the internal course up to step four is alike, the sensory parts differing first at step four, while at step five the first has ended (modelLaw and five more). (`Becoming.Blanket.ThresholdDrain.modelLaw`, `Becoming.Blanket.ThresholdDrain.start`, `Becoming.Blanket.ThresholdDrain.sensed_alike`, `Becoming.Blanket.ThresholdDrain.blanket_alike`, `Becoming.Blanket.ThresholdDrain.any_model`, `Becoming.Blanket.ThresholdDrain.sensory_apart_at_four`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

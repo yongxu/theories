@@ -11,17 +11,17 @@
 ## Laws
 
 1. A bundle of claims is jointly realizable in a region of a frame where one configuration of the region realizes all of it. Every configuration of one region having one in another that realizes all it realizes is equivalent to every bundle jointly realizable in the first being jointly realizable in the second. (`Becoming.Jointly`, `Becoming.CarriesProfiles`, `Becoming.PreservesBundles`, `Becoming.carries_iff_preserves`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Under an activation law where, from one initial configuration, a retained coupling permits activating the left, the right or both together and a released one only one side, the two-step histories that retain and those that release realize the same claims, and only the retaining ones realize both claims together. (`Becoming.Activation.Step`, `Becoming.Activation.law`, `Becoming.Activation.TwoSteps`, `Becoming.Activation.retained`, `Becoming.Activation.released`, `Becoming.Activation.same_marginals_lose_bundle`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Read as configurations of a frame whose claims are bundles, a regime realizing a bundle where some of its histories realizes it jointly, and with a bundle living where it holds every claim: retaining extends releasing, every released profile being carried by some retained history and the full bundle gained. (`Becoming.Regimes.Regime`, `Becoming.Regimes.histories`, `Becoming.Regimes.frame`, `Becoming.Regimes.living`, `Becoming.Regimes.allBundle`, `Becoming.Regimes.released_carried`, `Becoming.Regimes.extension`, `Becoming.Extension`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. The two regimes agree on every marginal possibility, while only retaining realizes the full bundle, so the joint descriptions of the two regimes differ. (`Becoming.Regimes.marginal`, `Becoming.Regimes.marginals_agree`, `Becoming.Regimes.joint_separates`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A comparison read off a description and comparing no description with itself, if it satisfies C, gives every extension a description different from its base. So for any summary of the regimes that identical marginals make identical and any irreflexive comparison of summaries, comparing the regimes by their summaries does not satisfy C. (`Becoming.Comparison`, `Becoming.Comparison.separates`, `Becoming.Regimes.no_comparison_through_marginals`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A retained history realizes the left claim and not the right, while the retained regime realizes the full bundle as a joint possibility. (`Becoming.Activation.retainedLeft`, `Becoming.Regimes.possibility_not_realization`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. A formation is renewing when every condition it depends on or draws on keeps supporting each formation that depends on that condition, and consuming when it draws on a condition some dependent formation permanently loses. Over arbitrary unfoldings the classes are exclusive and not exhaustive, and unrenewed drawdown admits finitely many active steps. (`RelationalRenewal.renewing_not_consuming`, `RelationalRenewal.fluctuating_neither`, `RelationalRenewal.unrenewed_drawdown_finite`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Loss of renewal for good is a law of every balanced flow: where whatever gives to a condition depends on it at a need of at least a bound, and activity needs support, a level below the bound stays below it, and every formation depending on the condition at such a need is inactive from then on. (`Becoming.Flow.stays_below_at`, `Becoming.Flow.ends_below_at`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. When the condition is renewed by a formation that depends on it, the support-gated family is such a flow once the focal formation contributes no more than it draws. (`Becoming.SupportGated.flow`, `Becoming.SupportGated.web`, `Becoming.SupportGated.balances`, `Becoming.SupportGated.givers_supported`, `Becoming.SupportGated.below_for_good`, `Becoming.SupportGated.ends_for_good`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Drawing beyond renewal brings the level below the renewer's need, after which the renewal ends for good: a dependent focal formation then ends itself with bounded formation, while an independent one can persist and form without bound. (`Becoming.SupportGated.overdraw_ends`, `RelationalRenewal.Law.no_return_below_support`, `RelationalRenewal.Law.dependent_overdraw_ends_itself`, `RelationalRenewal.Law.independent_overdraw_persists`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Forming new organization at every active step does not decide the class, nor does the focal formation's own activity and formation over the whole unfolding. (`RelationalRenewal.Law.formation_does_not_decide`, `RelationalRenewal.Law.own_trajectory_does_not_decide`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Joint drawing can consume when each party alone is within renewal: two drawers taking together more than the renewal end the renewal and themselves for good, and escalation that begins within renewal can consume. (`Becoming.SupportGated.jointly_ends`, `RelationalRenewal.Law.jointly_consuming`, `RelationalRenewal.Law.escalation_consumes`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

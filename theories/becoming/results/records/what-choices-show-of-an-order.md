@@ -11,25 +11,25 @@
 ## Laws
 
 1. Occasions of choosing: at each, what is open and what is chosen; the choices show x above y where at some occasion x is chosen while y, another, is open; a relation accords where what is chosen stands above every other open alternative, accords weakly where nothing open stands above it; what is chosen being open is named apart. (`Becoming.ChoiceOccasions`, `Becoming.ChoiceOccasions.Shown`, `Becoming.ChoiceOccasions.Accords`, `Becoming.ChoiceOccasions.AccordsWeakly`, `Becoming.ChoiceOccasions.PicksOpen`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 2. Every transitive relation according with the choices contains the reach of the shown relation, the least transitive relation holding what is shown; the shown relation and its reach accord. (`Becoming.ChoiceOccasions.reach_within`, `Becoming.ChoiceOccasions.shown_accords`, `Becoming.ChoiceOccasions.reach_accords`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 3. Some irreflexive transitive relation accords with the choices exactly where nothing reaches itself in the shown relation, the shown reach then being one (by «及之传递»; the grammar states the same as «无环则及为序»). (`Becoming.ChoiceOccasions.accorded_iff_noCycle`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. With no cycle shown, x stands above y in every strict order according with the choices exactly where x reaches y in the shown relation: the positive comparisons shared are the shown reach; x stands above every other alternative of a menu in every such order exactly where it reaches each, which says nothing of x being open there. (`Becoming.ChoiceOccasions.above_in_every_iff_reach`, `Becoming.ChoiceOccasions.top_in_every_iff_reach`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 5. A narrower class of strict orders according with the choices makes every comparison that every strict according order makes: restricting the orders a reader allows can only add comparisons. (`Becoming.ChoiceOccasions.above_in_class_of_every`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 6. Reach with one pair added is reach without it, or a path through the pair: from the pair's first member or what reaches it, to its second member or what it reaches; adding a pair leaves no cycle exactly where there was none and the second member neither is nor reaches the first. (`Becoming.ChoiceOccasions.withPair`, `Becoming.ChoiceOccasions.reach_withPair`, `Becoming.ChoiceOccasions.reach_withPair_iff`, `Becoming.ChoiceOccasions.noCycle_withPair`, `Becoming.ChoiceOccasions.noCycle_withPair_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 7. Beyond the shown reach no comparison is forced: with no cycle shown, x ≠ y and y not reaching x, some strict order according with the choices puts x above y; where neither reaches the other, orders rank the two both ways. (`Becoming.ChoiceOccasions.above_in_some_of_unreached`, `Becoming.ChoiceOccasions.both_ways_of_unreached`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 8. Choices required only to be maximal force no positive comparison: the empty relation is a strict order according weakly with every choice; such choices still exclude an open alternative standing above the chosen. (`Becoming.ChoiceOccasions.weakly_forces_no_comparison`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 9. Witness: one occasion, the first and the second open, the first chosen, a third never met; what is shown runs from the first to the second, with no cycle; every according relation puts the first above the second, and strict orders according with the choice put the first above the third and others the third above the first. (`Becoming.ChoiceOccasions.Untried.Alt`, `Becoming.ChoiceOccasions.Untried.occasions`, `Becoming.ChoiceOccasions.Untried.first_ne_second`, `Becoming.ChoiceOccasions.Untried.first_ne_third`, `Becoming.ChoiceOccasions.Untried.shown_from_first`, `Becoming.ChoiceOccasions.Untried.shown_to_second`, `Becoming.ChoiceOccasions.Untried.reach_first_second`, `Becoming.ChoiceOccasions.Untried.noCycle`, `Becoming.ChoiceOccasions.Untried.met_fixed`, `Becoming.ChoiceOccasions.Untried.untried_free`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 10. Witness, one search with two orders: the search takes the first listed alternative standing above every distinct listed one, or none; run with either of two strict orders according with the choice, it chooses the first from the menu met, and from the first and the third the first under one order and the third under the other. (`Becoming.ChoiceOccasions.Untried.aboveFirst`, `Becoming.ChoiceOccasions.Untried.aboveThird`, `Becoming.ChoiceOccasions.Untried.noTrue`, `Becoming.ChoiceOccasions.Untried.same`, `Becoming.ChoiceOccasions.Untried.search`, `Becoming.ChoiceOccasions.Untried.aboveFirst_strict`, `Becoming.ChoiceOccasions.Untried.aboveThird_strict`, `Becoming.ChoiceOccasions.Untried.both_accord`, `Becoming.ChoiceOccasions.Untried.same_search_met`, `Becoming.ChoiceOccasions.Untried.same_search_after`)
-    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 
 <a id="conditions--条件"></a>
 ## Conditions

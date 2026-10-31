@@ -11,7 +11,7 @@
 ## Laws
 
 1. Imposing a code keeps every exchange of formations; where a renaming moves the form the code gives some sense, imposing does not keep that renaming. (`Becoming.SharedCodes.impose_keeps_exchange`, `Becoming.SharedCodes.impose_privileges_forms`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

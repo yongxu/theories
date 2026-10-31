@@ -11,32 +11,32 @@
 ## Laws
 
 1. Responsive reach: for two flows, two webs, a coupling by level (obs) and a part (a decided family of formations), a formation lies within the part's responsive reach when it lies within some member's closure under the relation ‘a exchanges, in one of the two flows, with a condition coupled into b’; every member lies within it, and what lies beyond is outside the part. (`Becoming.Flow.WithinResponse`, `Becoming.Flow.CoupledFromEither`, `Becoming.WithinClosure`, `Becoming.Flow.member_within_response`, `Becoming.Flow.outside_part_of_beyond_response`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.WithinClosure` itself; closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.WithinClosure` itself; closure; its declarations reach the grammar.
 2. The closure under a converse is the converse of the closure, so a formation lies within the responsive reach exactly when some member lies within its coupling closure drawn through both flows; with one flow, exactly when some member lies within its coupling closure. (`Becoming.WithinClosure.converse`, `Becoming.Flow.withinResponse_iff_coupling`, `Becoming.Flow.WithinCoupling`, `Becoming.Flow.withinResponse_self_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. What the part reaches and each member's reach closure lie within the responsive reach; with coupling by threshold only and one flow, a formation lies within it exactly when it lies within some member's reach closure; the reach closure is the converse of the influence closure. (`Becoming.Flow.withinResponse_of_reaches`, `Becoming.Flow.withinResponse_of_withinReach`, `Becoming.thresholdOnly`, `Becoming.Flow.withinResponse_thresholdOnly_iff`, `Becoming.WithinClosure.converse`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. The rest responds through its couplings when each formation outside the part, wherever the levels of the two webs have been alike through its couplings, under the first web, up to step t, takes from and gives to every condition alike in the two flows at step t; with the rest fixed (the second flow withholding the part) this holds whatever couples in. (`Becoming.Flow.RespondsThroughCoupling`, `Becoming.Web.AlikeThroughUpTo`, `Becoming.Flow.respondsThroughCoupling_withhold`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. The formations beyond the responsive reach form a region closed in both flows under being affected through what couples in, directly from the definition of the closure. (`Becoming.Flow.beyond_response_closed`, `Becoming.Flow.CoupledFrom`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 6. Confinement: where the two flows have the same formations present at every step, balance at each step on every condition coupled into a formation beyond the reach and start alike there, and the rest responds through its couplings, the flows are alike through every formation beyond the responsive reach at every step, and it exchanges alike with every condition (an instance of likeness within a closed region). (`Becoming.Flow.BalancesOn`, `Becoming.Flow.alike_beyond_response`, `Becoming.Flow.alike_within_closed`, `Becoming.Flow.exchange_alike_beyond_response`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; closure and balance; its declarations reach the grammar.
 7. Under the same conditions, the totals the two flows take from and give to each condition coupled into such a formation are alike at every step, and the difference between the flows reaches it before no step. (`Becoming.Flow.totals_alike_beyond_response`, `Becoming.Flow.not_differs_beyond_response`, `Becoming.Flow.DiffersBefore`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 8. Where both flows balance, share the formations present, start alike and the rest responds through its couplings, for any significance covering from p every formation not beyond the responsive reach, the levels of the first web retain what has significance along those of the second exactly when they include them, and the reverse, and neither adds a continuation with significance exactly when neither exceeds the other. (`Becoming.Flow.Balances.comparison_within_response`, `Becoming.Flow.Balances.comparison_within_difference`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.Balances.comparison_within_response` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.Balances.comparison_within_response` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.Flow.Balances.comparison_within_response`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 9. The cover is double-negated because the difference shows only that a formation it reaches is not beyond the reach; where membership is decidable, covering the responsive reach suffices. (`Becoming.Flow.Balances.comparison_within_response_of_decidable`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 10. Witness, the trophic cascade: between the flow with the wolves and the flow in which the deer respond, the premise holds with coupling by threshold only, and the forest lies within the wolves' responsive reach, which their part does not reach. (`Becoming.Trophic.responds_through_coupling`, `Becoming.Trophic.forest_within_response`)
-    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 11. There the responsive reach is exactly the wolves, the deer and the forest; for any significance covering these three from p at every step, the two level paths retain along each other exactly as they include each other, and since each exceeds the other, neither retains. (`Becoming.Trophic.within_response_iff`, `Becoming.Trophic.responsiveReach_closed`, `Becoming.Trophic.far_unaffected`, `Becoming.Trophic.den_untouched`, `Becoming.Trophic.responsive_comparison`)
-    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 12. Witness, an escalation loop: two formations each require their own condition, which couples into it by level; in the flow with the act the first takes from the second's condition at step 0 and the second responds at step 1 by taking from the first's, while in the other flow nothing is taken; both flows balance, activity needs support, they start alike and the second responds through its couplings. (`Becoming.Loop.escalation`, `Becoming.Loop.quiet`, `Becoming.Loop.balances`, `Becoming.Loop.quiet_balances`, `Becoming.Loop.dependent`, `Becoming.Loop.quiet_dependent`, `Becoming.Loop.responds`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 13. There the first's own exchange with its condition is the same in both flows, yet with the act the first is unsupported at step 2 and without it supported; with the rest fixed the first's part does not reach the first, while the difference between the flows reaches it before step 2. (`Becoming.Loop.returns`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

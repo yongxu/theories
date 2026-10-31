@@ -11,17 +11,17 @@
 ## Laws
 
 1. Midway is a frame of six configurations and three moves, with no claims: enter takes origin to risky or safe, begin takes risky to ready or blocked and safe to ready, and finish takes ready to done; risky and safe are both reached from origin by enter. (`Becoming.Midway.Step`, `Becoming.Midway.frame`, `Becoming.Midway.shared_origin`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Read in blocks of the completed course, begin then finish, and in blocks of its nonempty prefixes, begin and begin then finish, risky and safe are alike, and so pass the same branching tests of those blocks. (`Becoming.Midway.completed`, `Becoming.Midway.prefixes`, `Becoming.Midway.same_completed_tests`, `Becoming.Midway.same_prefix_tests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. From risky, begin can lead to where finish cannot be taken, and from safe it cannot; every description whose equal codes pass the same branching tests of the frame gives risky and safe different codes. (`Becoming.Midway.lost`, `Becoming.Midway.internal_loss`, `Becoming.Midway.codes_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. No branching test of the prefix blocks holds exactly where begin can lead to where finish cannot be taken; tests richer than those of the prefix blocks are not excluded. (`Becoming.Midway.no_prefix_reading`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Read in blocks of the suffixes exposed where the course stands, finish and begin, the test that begin can lead to where finish cannot be taken holds at risky and fails at safe. (`Becoming.Midway.resumable`, `Becoming.Midway.resumption_recovers_loss`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A description giving one code to configurations that pass the same tests of the prefix blocks has no reading of its codes that answers every branching test of the frame exactly. (`Becoming.Midway.reduced_prefix_cannot_extend`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

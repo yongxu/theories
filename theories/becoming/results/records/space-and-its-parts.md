@@ -11,44 +11,44 @@
 ## Laws
 
 1. A world is its relata, read with one kind, with the flow among them and their web; the space is every world. The two-kind reading of any flow and web is a world, and arising and ceasing read the same there. (`Becoming.World`, `Becoming.World.ofRoles`, `Becoming.Web.roles_unceasing`, `Becoming.World.ceasingRecurs_ofRoles`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The laws of Becoming.Change and the arithmetic identity of Becoming.Evolution (the counting form of Price's equation) are stated of every web and every amount with no premise about the unfolding, so they hold throughout the space.
 3. Read of parts: arising recurring (some relatum arising at arbitrarily late steps) and ceasing recurring (some relatum ceasing at arbitrarily late steps) hold together exactly in every finite world whose activity is decided. (`Becoming.World.ArisingRecurs`, `Becoming.World.CeasingRecurs`, `Becoming.World.arising_iff_ceasing`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Decidedness is this law's own condition, not a commitment of the representation: asked of every finite world without it, the law is equivalent to excluded middle, stated in the pure core with no choice. The need comes from activity being a proposition (World.undecided sets an arbitrary one at a step), so this is a lemma of the decided law and says nothing further about change. (`Becoming.World.law_iff_em`, `Becoming.World.law_decides`, `Becoming.World.law_of_em`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. With infinitely many relata either can recur without the other (from Accretion and Attrition), and that these worlds are infinite follows from the law. (`Becoming.World.separate`, `Becoming.World.accretion`, `Becoming.World.attrition`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Activity needing support, balance, only active relata giving, only active relata taking and only what they draw on, dissipation, embodiment and a reserve carrying activity are each met by some worlds and not by others: they are premises, not laws. (`Becoming.World.contingent`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 7. Among finite worlds, arising recurring or not occurs both with every event living, not undermining in the stepwise reading, and with some event not living, and with activity decided so does ceasing recurring or not; so neither arising nor ceasing decides whether events are living. (`Becoming.World.Living`, `Becoming.World.living_crosses`, `Becoming.World.living_crosses_ceasing`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. Its witnesses: two sides handing one standing back and forth (shuttle), the same sides with a grazer drawing down a pool another relatum depends on (grazing), mutualists active throughout (mutualism), and a parent drawing a pool down (drawdown). (`Becoming.World.shuttle_world`, `Becoming.World.grazing_world`, `Becoming.World.mutualism_world`, `Becoming.World.drawdown_world`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. grazing's verdict lies outside the verdict about drawing on a self-bearing relatum at its own ending, but the browser it undermines is not active after that step. (`Becoming.World.grazing_not_self`, `Becoming.World.grazing_browser_ends`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. Where activity needs support, a dependence left below its need and persisting at no lower need belongs to a formation not active after the step; where that formation was active this is its ending, and where it was dormant nothing ends: in seedbank an event is not living while nothing in the world ever ceases. (`Becoming.Web.Dependent.inactive_below`, `Becoming.Web.Dependent.ceases_below`, `Becoming.World.seedbank`, `Becoming.World.seedbank_world`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. The same activity while each side draws on its own standing (selfDrawing) also has an event that is not living, but only on the stepwise reading's verdict about drawing on a self-bearing embodied relatum at its ending, a theorem of that reading which no comparison uses. (`Becoming.World.selfDrawing_world`, `Becoming.World.SelfDrawing.undermines`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 12. In a finite, balanced, dissipative world in which whatever arises is embodied, that the world rests from some step on cannot be refuted, so neither arising nor ceasing recurs, with no decision procedure; the two halves join at a common step. (`Becoming.World.RestsFrom`, `Becoming.World.rests_unrefuted`, `Becoming.World.not_recurring_of_rests_unrefuted`, `Becoming.World.rests_unrefuted_iff`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 13. Each premise of rest is needed: a world burning fresh fuel keeps arising with infinitely many relata (throughput); two sides handing a standing keep arising without dissipation (shuttle); the holder taking its own unit and giving nothing keeps arising without balance, with non-vacuous dissipation, the family of both sides closed and taken from at every step (leaking). (`Becoming.World.rests_needs`, `Becoming.World.throughput_world`, `Becoming.World.leaking_world`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 14. A relatum whose activity is not its standing keeps arising without embodiment (flicker), taking part in no exchange from some step on, as any such witness must, since taking does not recur in a finite, balanced, dissipative world. (`Becoming.World.rests_needs`, `Becoming.World.flicker_world`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 15. This result states the reading of activity, arising recurring and ceasing recurring, which coincide in finite worlds; read as relations, renewing and consuming formations do not overlap. (`Becoming.Web.RenewingIn`, `Becoming.Web.ConsumingIn`, `Becoming.Web.renewing_not_consuming`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 16. Rest needs no decision procedure. For an amount that does not rise from some step on, that its falls stop from some step on cannot be refuted: it is not the case that after every step from then on a later fall stays unrefuted; the two forms are equivalent, and that it stays the same from some step on cannot be refuted. (`Becoming.falls_stop_unrefuted`, `Becoming.still_le`, `Becoming.unrefuted_falls_exceed`, `Becoming.stop_unrefuted_iff`, `Becoming.amount_still_unrefuted`)
-    - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 17. In a family balanced and dissipated on from some step on, that the arising of the embodied members stops from some step on cannot be refuted: it is not the case that after every step from then on a later arising of one of them stays unrefuted. (`Becoming.Web.embodiedArising_stops_unrefuted`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 18. With a list covering what is active from some step on, ceasing recurring leaves a later arising unrefuted after every step (through the covering law of laws-of-one-step), which the unrefuted stopping refutes; so World.rests_unrefuted_covering and World.rests_unrefuted need no decided activity, their statements stronger. (`Becoming.World.arising_unrefuted_covering`, `Becoming.Covers.not_not_coming_from`, `Becoming.World.rests_unrefuted_covering`, `Becoming.World.rests_unrefuted`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 19. The law and rest hold of every world in a local form: one list covering the active relata from some step on (no finiteness of the world), rest also asking the family to be balanced and dissipated on from that step, with no closure and no premise on other families or steps; World.arising_iff_ceasing and World.rests_unrefuted are their corollaries. (`Becoming.World.arising_iff_ceasing_covering`, `Becoming.World.rests_unrefuted_covering`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 20. Leaving a dependence below its need holds of every world in a local form, using only that the formation is supported after the step where it is active then; Web.Dependent.inactive_below and Web.Dependent.ceases_below are its corollaries. (`Becoming.Web.inactive_below_at`, `Becoming.Web.ceases_below_at`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

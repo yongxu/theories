@@ -586,13 +586,13 @@ def _listed(names):
 
 
 # What the measure's category of a central declaration says it follows from, and a declaration's own dependence.
-FOLLOWS = {'master law': 'a master law', 'balance, represented': 'balance, which the grammar represents',
+FOLLOWS = {'master law': 'a shared law', 'balance, represented': 'balance, which the grammar represents',
            'premise of the account': 'a premise of the account', 'counting identity': 'a counting identity',
            'law of its model': 'a law of its model', 'single application': 'a single application',
-           'definitional or representational': 'its definitions', 'derivation pending': 'a master law, its derivation pending',
+           'definitional or representational': 'its definitions', 'derivation pending': 'a shared law, its derivation pending',
            'no reason given': 'nothing named'}
 ALONE = {'grammar': 'reaching the grammar', 'balance, represented': 'on balance, not reaching the grammar',
-         'anchor, not reached': 'on an anchor, not reaching the grammar', 'no master law': "on no master law's anchor"}
+         'anchor, not reached': 'on an anchor, not reaching the grammar', 'no master law': "on no shared law's anchor"}
 MARKER = re.compile(r"\s*\([A-Z]{2,4}\d+[a-z]?(?:'s review)?\)")  # a work item in the measure's reason, kept off the page
 
 
@@ -602,16 +602,16 @@ def master_law_note(r, i, law):
     e = m['laws'].get(i) if m else None
     if not e or e.get('declarations') != law.get('declarations', []) or not e['declarations']:
         return ''
-    label = '*Master laws, by Lean dependency:* '
+    label = '*Shared laws, by Lean dependency:* '
     if 'dependence' not in e:
         return label + 'not measured: none of its declarations is in the spine run the measure reads.'
     names = [m['names'].get(k, k) for k in e['master_laws']]
-    held = (_listed(names) if names else "no master law's anchor") + '; its declarations'
+    held = (_listed(names) if names else "no shared law's anchor") + '; its declarations'
     reach = "reach the grammar's vocabulary only" if e.get('grammar_vocabulary_only') else 'reach the grammar'
     text = {'grammar': f'{held} {reach}',
             'balance, represented': f'{held} do not reach the grammar, which represents balance and cannot state it without amounts',
             'anchor, not reached': f'{held} do not reach the grammar',
-            'no master law': "no master law's anchor among the constants its declarations use"}.get(e['dependence'], f'{held}: {e["dependence"]}')
+            'no master law': "no shared law's anchor among the constants its declarations use"}.get(e['dependence'], f'{held}: {e["dependence"]}')
     if e.get('defines'):
         a = _listed(['`' + x + '`' for x in e['defines']])
         text = (f'its declarations include the anchor {a} itself; ' if len(e['defines']) == 1
@@ -628,7 +628,7 @@ def master_law_note(r, i, law):
             why = 'no reason given'
         own = c.get('master_laws')
         if c.get('dependence') and (c['dependence'] != e['dependence'] or (own is not None and own != e['master_laws'])):
-            on = _listed([m['names'].get(k, k) for k in own]) if own else "no master law's anchor"
+            on = _listed([m['names'].get(k, k) for k in own]) if own else "no shared law's anchor"
             alone = f' (taken alone: {on}; ' + ('reaching' if c['dependence'] == 'grammar' else 'not reaching') + ' the grammar)'
         else:
             alone = ''
