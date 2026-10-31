@@ -4,7 +4,8 @@
 #   LOG=DIR zsh he2_land.sh prepare    restore the applied Lean files, merge main, scan for old names
 #   LOG=DIR zsh he2_land.sh apply      every item's Lean part in the design's order, then every kit's check
 #   LOG=DIR zsh he2_land.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
-#   LOG=DIR zsh he2_land.sh post N     audit, records, register, texts, re-point, 08 and the study, MV, render, checks
+#   LOG=DIR zsh he2_land.sh post [N]   audit, records, register, texts, re-point, 08 and the study, MV, render, checks;
+#                                      N is the study's next free section, read after main is merged (a given N must match)
 # LOG holds every log (outside the repository). Each stage stops at the first failure and says where.
 set -u
 LOG=${LOG:?}; mkdir -p $LOG
@@ -47,7 +48,9 @@ print('passed', d['utc'], 'module steps run', len(ran), 'reused', len(s['reused'
 EOF
   ;;
 post)
-  N=${2:?the next study section N}
+  N=$(python3 -c "import re; t = open('$RF/BECOMING-RENEWAL-READING.md', encoding='utf-8').read(); print(max(int(x) for x in re.findall(r'^## (\d+)\. ', t, re.M)) + 1)") || fail "the study's next section"
+  [ -z "${2:-}" ] || [ "$2" = "$N" ] || fail "N given as $2, but the study's next free section is $N"
+  echo "study section $N"
   ID=$(python3 -c "import json; print(json.load(open('$PKG/becoming-verification.json'))['utc'])")
   python3 - $PKG/becoming-checks/$ID/verification.json <<'EOF' || fail "axiom reports"
 import json, sys
@@ -98,5 +101,5 @@ EOF
   grep -E "^Ran |^OK" $LOG/tests.log
   step dossiers; python3 -B $D/review-packet/check_dossiers.py > $LOG/dossiers.log 2>&1 || fail dossiers; tail -1 $LOG/dossiers.log
   echo "== post done: receipt $ID, study section $N" ;;
-*) echo "stage: prepare | apply | run | post N"; exit 2 ;;
+*) echo "stage: prepare | apply | run | post [N]"; exit 2 ;;
 esac

@@ -33,7 +33,7 @@ The landing worktree is on `he2-land`, which holds the three item branches and t
    - the three reach laws moved from MapRegions to GrammarMap;
    - only `«两端分则中有标»` changed;
    - kept-name statements and definitions differ only by the renames; no command removed, none added outside GrammarLaws.
-6. **Records**, all in `kit/he2_records.py RECEIPT N` (`--check` first; it checks every record before it writes one, snapshots every record and restores them if anything fails):
+6. **Records**, all in `kit/he2_records.py RECEIPT N` (N is the study's next free section, read after main is merged, since other landings take sections first; `--check` first; it checks every record before it writes one, snapshots every record and restores them if anything fails):
    - items 2–4's records part, then items 6–7's, each without its notes;
    - item 1's widening of continuation-relative-to-a-class `laws[9]`, en and zh, as its owner gave it, and that record's Grammar counts (stale since OU6);
    - item 5's move in generation-and-degeneration-at-two-grains: the three reach laws cited from the GrammarMap reference, not the MapRegions one, and the validation scope's counts; the hashes are the re-point's;
