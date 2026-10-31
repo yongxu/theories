@@ -11,8 +11,8 @@
     "zh": "以窗验室：可能之网上的调节与平衡"
   },
   "statement": {
-    "en": "One rule makes the nets of an unheated room and two thermostats. While no window opens, every room at its set level is one core class; with the window in the net, warm or not first tells the unheated room from a heated one at the stage equal to the margin, and the map places each room in a region.",
-    "zh": "一则生成无给之室与二恒温器之网。不开窗时，诸室于其设定水平同属一核类；窗入网后，以温与否，至层数等于余量之层，始分无给之室与有给之室；图各置诸室于一域。"
+    "en": "One rule makes the nets of an unheated room and two thermostats. While no window opens, every room at its set level is one core class; with the window in the net and a margin m ≥ 1, warm or not first tells the unheated room from a heated one at stage m, and the map gives each room a region.",
+    "zh": "一则生成无给之室与二恒温器之网。不开窗时，诸室于其设定水平同属一核类；窗入网而余量 m ≥ 1 时，以温与否，至第 m 层始分无给之室与有给之室；图各置诸室于一域。"
   },
   "laws": [
     {
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "en": "With the window open the rule is the regime's step, a draw of one then the heater's giving, and the window's branch the regime's run. The unheated room is cold from its margin's step on; the matched thermostat holds its set level; at a margin of three the overshooting one alternates 3 and 4, the regime's alternation shifted by two, though its holding law does not apply. None of these courses keeps widening.",
-      "zh": "开窗时，此则即体制之步：汲取一份，然后热源之所给；窗自设定水平之枝即体制之进程。无给之室自其余量之步起皆冷，给如所取之恒温器守其设定水平；余量为三时，给过所取者于 3 与 4 间交替，即体制交替之例移二，虽体制之守律不适用于它。此诸进程无一持续扩大。",
+      "en": "With the window open the rule is the regime's step, a draw of one then the heater's giving, and the window's branch its run. The unheated room is cold from its margin's step on; at a positive margin the matched thermostat holds its set level; at a margin of three the overshooting one alternates 3 and 4, the regime's alternation shifted by two, though the holding law fails for it. None of these courses keeps widening.",
+      "zh": "开窗时，此则即体制之步：汲取一份，然后热源之所给；窗自设定水平之枝即体制之进程。无给之室自其余量之步起皆冷，于正余量给如所取之恒温器守其设定水平；余量为三时，给过所取者于 3 与 4 间交替，即体制交替之例移二，虽体制之守律不适用于它。此诸进程无一持续扩大。",
       "declarations": [
         "Becoming.Rooms.next_open",
         "Becoming.Rooms.window_line",
@@ -91,8 +91,8 @@
       ]
     },
     {
-      "en": "On its moments the overshooting course at a margin of three is 全生成 at the level, which changes every step; no moment of the matched or the unheated course is. A room's coarse line is its possible with warmth held; at a positive margin, all a heated room makes possible from a warm occurrence is possible with warmth held, while at a margin of three the unheated room's cold occurrence is possible, not with warmth held.",
-      "zh": "就其时刻读之，余量为三时给过所取者之进程于水平下全生成，水平每步皆变；给如所取者与无给之室之进程无一时刻如是。室之粗线即其持温之可能：于正余量，自温之出现，有给之室所可能者皆持温而可能；余量为三时，无给之室之冷之出现可能，而非持温而可能。",
+      "en": "On its moments the overshooting course at a margin of three is 全生成 at the level; no moment of the unheated course is, nor of the matched one at a positive margin. A room's coarse line is its possible with warmth held; at a positive margin all a heated room makes possible from a warm occurrence is possible with warmth held, and at a margin of three the unheated room's cold occurrence is possible, not with warmth held.",
+      "zh": "就其时刻读之，余量为三时给过所取者之进程于水平下全生成；无给之室之进程无一时刻如是，于正余量给如所取者之进程亦然。室之粗线即其持温之可能：于正余量，自温之出现，有给之室所可能者皆持温而可能；余量为三时，无给之室之冷之出现可能，而非持温而可能。",
       "declarations": [
         "Becoming.Rooms.Overshooting.generation_at_moments",
         "Becoming.Rooms.Matched.no_generation_at_moments",
@@ -140,13 +140,13 @@
       "kind": "correspondence"
     },
     {
-      "en": "That regulation has a region of its own: the matched thermostat's regulated keeping is 全守, as rest is, and the overshooting one's is 全生成.",
-      "zh": "调节自有其域：给如所取之恒温器之受调之守为全守，与静止同；给过所取者为全生成。",
+      "en": "That regulation has a region of its own: at a positive margin the matched thermostat's regulated keeping is 全守, as rest is, and at a margin of three the overshooting one's is 全生成.",
+      "zh": "调节自有其域：于正余量，给如所取之恒温器之受调之守为全守，与静止同；余量为三时，给过所取者为全生成。",
       "kind": "non-implication"
     },
     {
-      "en": "That a heated room holds a level the window cannot move: read before the exchange, the window moves both thermostats' levels.",
-      "zh": "有给之室守一窗所不能移之水平：交换前读，窗移二恒温器之水平。",
+      "en": "That a heated room holds a level the window cannot move: read before the exchange, at a margin of three the window moves both thermostats' levels.",
+      "zh": "有给之室守一窗所不能移之水平：交换前读，余量为三时窗移二恒温器之水平。",
       "kind": "non-implication",
       "witness": "Becoming.Rooms.before_window_moves"
     },
@@ -171,7 +171,7 @@
       "kind": "scope"
     }
   ],
-  "standard_boundaries": ["discrete-steps", "no-ethical-premise", "formal-not-empirical", "names-provisional"],
+  "standard_boundaries": ["discrete-steps", "no-ethical-premise", "no-evaluation", "formal-not-empirical", "names-provisional", "omission-not-refutation"],
   "correspondence": {
     "en": "Thermal equilibrium with the surroundings and on-off thermostatic regulation (negative feedback) are standard; here they are rules of one family compared by their nets. The exchange of one unit a step toward the surroundings is a saturated discrete cooling, not Newton's proportional law. The stages are the approximants of bisimilarity (Hennessy and Milner 1985), and the window is an experiment in the sense of testing equivalence (De Nicola and Hennessy 1984): a disturbance within the net shows what the shut net cannot tell apart, as in control, where a regulated and a passive steady state give the same output until a disturbance is applied. The overshooting thermostat's cycle is the limit cycle of an over-compensating on-off controller.",
     "zh": "与环境之热平衡、开关式恒温调节（负反馈）为常见之例；此处二者为一族之则，以其网相比。每步向环境移一单位之交换为饱和之离散冷却，非牛顿之比例律。诸层即互模拟之逼近（Hennessy 与 Milner 1985），窗即检验等价意义上之实验（De Nicola 与 Hennessy 1984）：网内之扰动显出闭网所不分者；控制中亦然，受调之稳态与被动之稳态于施扰之前输出相同。给过所取之恒温器之循环，即过度补偿之开关控制器之极限环。"
@@ -208,8 +208,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean",
       "detail": {
-        "en": "Where the level stops changing, no moment of the course is 全生成: the matched and the unheated window courses (Matched.no_generation_at_moments, Unheated.no_generation_at_moments).",
-        "zh": "水平不再变处，进程无一时刻全生成：给如所取者与无给之室之窗之进程（Matched.no_generation_at_moments、Unheated.no_generation_at_moments）。"
+        "en": "Where the level stops changing, no moment of the course is 全生成: the unheated window course, and the matched one at a positive margin (Matched.no_generation_at_moments, Unheated.no_generation_at_moments).",
+        "zh": "水平不再变处，进程无一时刻全生成：无给之室之窗之进程，及于正余量给如所取者之窗之进程（Matched.no_generation_at_moments、Unheated.no_generation_at_moments）。"
       }
     }
   ],
@@ -218,8 +218,8 @@
     "zh": "以世界之流为诸室之实例，室与环境之热为守恒之条件，使调节之律形式地适用；次及迟读之热源、阵风、各余量下之域与冷之出现、«恒温与平衡» 前半于其自身之关系，与 Hennessy–Milner 之向。"
   },
   "validation_scope": {
-    "en": "Checked by the core checker from the prelude: Becoming.RoomNet and Becoming.RoomRuns, every declaration with an empty axiom report (counts and receipt filled at landing). One independent AI review read the design and both modules, and the same reader re-checked the revision; heated_unended, the two theorems on moments where the level stops changing, and the renames after it were not reviewed again. The variants of the modelling choices are checked by hand.",
-    "zh": "由核心检查器从前奏检查：Becoming.RoomNet 与 Becoming.RoomRuns，每一声明之公理报告皆空（数目与收据于落地时填入）。一次独立之 AI 审查读设计与二模块，同一读者复核其修订；heated_unended、水平不再变处之二时刻定理及其后之改名未再审。建模之选之变体以手检。"
+    "en": "Checked by the core checker from the prelude: Becoming.RoomNet and Becoming.RoomRuns, every declaration with an empty axiom report (counts and receipt filled at landing). One independent AI review read the design and both modules, and the same reader re-checked the revision; heated_unended, the two theorems on moments where the level stops changing, and the renames and module docs written after it were not reviewed again. The variants of the modelling choices are checked by hand.",
+    "zh": "由核心检查器从前奏检查：Becoming.RoomNet 与 Becoming.RoomRuns，每一声明之公理报告皆空（数目与收据于落地时填入）。一次独立之 AI 审查读设计与二模块，同一读者复核其修订；heated_unended、水平不再变处之二时刻定理及其后之改名与模块文档未再审。建模之选之变体以手检。"
   },
   "dependencies": [
     {
@@ -315,7 +315,7 @@
       },
       "interface": {
         "output": {"en": "Reaching.reach_heldMoves_iff, Reaching.Possible, Reaching.PossibleHeld, Run.not_keepsWidening_of_returns, Run.generation_of_held_changes, Steps.generation_iff_begins.", "zh": "Reaching.reach_heldMoves_iff、Reaching.Possible、Reaching.PossibleHeld、Run.not_keepsWidening_of_returns、Run.generation_of_held_changes、Steps.generation_iff_begins。"},
-        "input": {"en": "A coarse line as the possible with warmth held; no window course keeps widening; the moments of each course.", "zh": "粗线即持温之可能；窗之进程无一持续扩大；每一进程之时刻。"},
+        "input": {"en": "A coarse line as the possible with warmth held; none of the three rooms' window courses keeping widening; the moments of each course.", "zh": "粗线即持温之可能；三室之窗之进程无一持续扩大；每一进程之时刻。"},
         "conditions": {"en": "A room read as a process whose act opens the window.", "zh": "室作过程读，其所为即开窗。"},
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean"
       }

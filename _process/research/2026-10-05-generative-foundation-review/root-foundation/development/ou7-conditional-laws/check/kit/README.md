@@ -2,6 +2,8 @@
 
 AI-written, 31 October 2026, for the one OU7 kit that joins part A (its design on fork 1's branch `ou5-design`) and part B ([the design](../DESIGN.md), [its review and re-check](../review/FINDINGS.md)). Part B adds two leaves, one record and its home section, and one clause in `GrammarTesting`'s header. OU's owner decides what lands and when. Nothing here runs in the package until the owner gives the word; the core run is the near-full rebuild, last in the core round, after RV21c.
 
+The landing scripts are part A's kit's (`kit/` beside `check/`). `make_record_ou7b.py` builds this record from `record-text.json`. `integrate_ou7.py` places the leaves, the bullets, the rows, the home section, the regions entries, the register entries and the study lines from the files here; it writes the scope sentences and the Chinese rows itself. Its `dry_run.py` passed every stage with these files on 1 November, on main at 753460b81, with no finding on either record.
+
 ## What OU's owner decided (31 October)
 
 - The names: ten `«»` names, two renamed after the review (`«给过所取则生守相杂»`, `«有给之室以温不可分»`). The English names stay English in `Rooms`.
