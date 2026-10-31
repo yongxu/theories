@@ -71,7 +71,7 @@ Stock accounting over an open system: a stock rises by at most what flows in and
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Its gainless laws are the case of no inflow here, and are now derived from these.
 - related, not a proved adapter: [least-loss-from-entropy-production](least-loss-from-entropy-production.md). There a physical reading of balance and dissipation; here the accounting where the whole gains from outside.
 
-**Used by:** [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md)
+**Used by:** [amounts-by-unit-matchings](amounts-by-unit-matchings.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md)
 
 <a id="sources--来源"></a>
 ### Sources
