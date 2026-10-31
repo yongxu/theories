@@ -222,16 +222,16 @@ def ml_scope(r):
     vs = r['validation_scope']
     assert (vs['en'], vs['zh']) == ML_VS_OLD, 'the master-laws scope changed since the kit was written: re-read it'
     t, d = theorems('GrammarLaws'), len(names('GrammarLaws'))
-    vs['en'] = (f"Checked by the Lean 4.29.1 checker (receipt {RECEIPT_ID}): Becoming.GrammarLaws, {t} theorems in {d} "
-                "declarations, 40 representation and bridge declarations in 14 model modules, the derivations of OU3c, "
-                "OU3e and OU3f in 14 more and of HE in Mechanism, every axiom report empty, all cited; changed modules' "
-                "statements print as before but for two relation laws at any universe (OU3b), HE2's renames and one law "
-                "widened. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e and HE, two "
-                "of HE2, three of OU3f, three with a second pass; not reviewed by a person.")
-    vs['zh'] = (f"Lean 4.29.1 检查器查（回执 {RECEIPT_ID}）：Becoming.GrammarLaws，{d} 项声明中 {t} 条定理，十四模型模块 40 "
-                "项表示桥接声明，另十四模块 OU3c、OU3e、OU3f 及 Mechanism 之 HE 推导，公理报告皆空，皆引；改动模块陈述所印如前，唯 "
-                "OU3b 二关系律及任一宇宙、HE2 改名与一律设宽。只读 AI 审查，所见皆采：OU3b 三次，OU3c 至 OU3e 与 HE 各一次，HE2 "
-                "二次，OU3f 三次，三次复审；未经人审。")
+    vs['en'] = (f"Lean 4.29.1 core run (receipt {RECEIPT_ID}): Becoming.GrammarLaws, {t} theorems in {d} declarations; 40 "
+                "representation and bridge declarations in 14 models; the derivations of OU3c, OU3e and OU3f in 14 more, "
+                "of HE in Mechanism and of HE2 in Response and SelectionPool; every axiom report empty, all cited. Changed "
+                "modules' statements as before but for OU3b's two relation laws at any universe, HE2's renames and one "
+                "law widened. Read-only AI reviews, every finding taken: OU3b and OU3f three each, HE2 two, OU3c to OU3e "
+                "and HE one each, three with a second pass; no person's review.")
+    vs['zh'] = (f"Lean 4.29.1（回执 {RECEIPT_ID}）：GrammarLaws {d} 项声明中 {t} 条定理；十四模型 40 项表示桥接声明；"
+                "另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。"
+                "改动模块陈述如前，唯 OU3b 二关系律及任一宇宙、HE2 改名与一律设宽。只读 AI 审查，所见皆采：OU3b、OU3f 各三，HE2 二，"
+                "余各一，三次复审；未经人审。")
     assert len(vs['en']) <= 600 and len(vs['zh']) <= 260, (ML, len(vs['en']), len(vs['zh']))
     add_ref(r, HERE + 'DESIGN.md', 'integration')
     add_ref(r, REVIEW, 'review')
