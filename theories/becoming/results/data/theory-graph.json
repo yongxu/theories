@@ -5531,8 +5531,8 @@
    "id": "record:type-formation-gives-no-dynamics",
    "type": "result",
    "record": "type-formation-gives-no-dynamics",
-   "title": "Type formation keeps the seed's boundary and gives no dynamics",
-   "title_zh": "类型构造保持种子之界而不给出动力学",
+   "title": "Type formation keeps the seed's size bounds and gives no dynamics",
+   "title_zh": "类型构造保持种子之大小界限而不给出动力学",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "method",
@@ -6150,6 +6150,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/when-complying-when-read-is-best.md"
+  },
+  {
+   "id": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "result",
+   "record": "when-holding-for-a-reading-stands-above-a-route",
+   "title": "When holding for a reading stands above a route of keeping",
+   "title_zh": "为读而持何时居守律之途之上",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.md"
   },
   {
    "id": "record:when-no-route-stands-above-a-revision",
@@ -10212,11 +10224,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RevisionPlans",
+   "type": "module",
+   "name": "Becoming.RevisionPlans",
+   "level": "L1",
+   "theorems": 33,
+   "region": "significance",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.HeldForReading",
    "type": "module",
    "name": "Becoming.HeldForReading",
    "level": "L1",
-   "theorems": 90,
+   "theorems": 97,
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
@@ -30444,6 +30467,12 @@
    "anchor": "r-when-no-route-stands-above-a-revision"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-holding-for-a-reading-stands-above-a-route",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-when-holding-for-a-reading-stands-above-a-route"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -31935,6 +31964,11 @@
   {
    "from": "module:Becoming.HeldForReading",
    "to": "module:Becoming.ReadingLoop",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.HeldForReading",
+   "to": "module:Becoming.RevisionPlans",
    "type": "imports"
   },
   {
@@ -33723,6 +33757,21 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.Dissipation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.Flow",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionPlans",
+   "to": "module:Becoming.RevisionRoutes",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Roles",
    "to": "module:Becoming.Locality",
    "type": "imports"
@@ -35211,6 +35260,11 @@
    "from": "record:a-reading-informed-and-revalued",
    "to": "record:what-holding-for-a-reading-is-worth",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-informed-and-revalued",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "related"
   },
   {
    "from": "record:a-reading-kept-by-its-update",
@@ -55324,6 +55378,11 @@
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "module:Becoming.RevisionPlans",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
    "to": "module:Becoming.ShownOrder",
    "type": "proved-in"
   },
@@ -55346,6 +55405,11 @@
    "from": "record:what-holding-for-a-reading-is-worth",
    "to": "record:what-choices-show-of-an-order",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-holding-for-a-reading-is-worth",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
+   "type": "related"
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
@@ -55893,6 +55957,31 @@
    "type": "related"
   },
   {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "module:Becoming.HeldForReading",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "module:Becoming.RevisionPlans",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:a-reading-informed-and-revalued",
+   "type": "related"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:what-holding-for-a-reading-is-worth",
+   "type": "related"
+  },
+  {
+   "from": "record:when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:when-no-route-stands-above-a-revision",
+   "type": "related"
+  },
+  {
    "from": "record:when-no-route-stands-above-a-revision",
    "to": "module:Becoming.RevisionRoutes",
    "type": "proved-in"
@@ -55910,6 +55999,11 @@
   {
    "from": "record:when-no-route-stands-above-a-revision",
    "to": "record:when-complying-when-read-is-best",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
    "type": "related"
   },
   {
@@ -59970,6 +60064,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-holding-for-a-reading-stands-above-a-route",
+   "to": "record:when-holding-for-a-reading-stands-above-a-route",
    "type": "states"
   },
   {

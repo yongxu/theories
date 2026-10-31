@@ -343,6 +343,7 @@ import Becoming.ActivationCapacity
 import Becoming.Narrowing
 import Becoming.NarrowingRuns
 import Becoming.ReadingLoop
+import Becoming.RevisionPlans
 import Becoming.HeldForReading
 import Becoming.ListingValuation
 import Becoming.SecuredContent
@@ -2881,6 +2882,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relation under which the values sensed and the acts are one sense and act alike
   (`ReadingLoop.observed_alike`); witnesses (`ReadingLoop.Untested.floor_forgoes`,
   `ReadingLoop.Untested.model_or_order`). Imported by `Becoming.HeldForReading` (board item RF).
+* `Becoming.RevisionPlans` (L1): plans at a revision, the routes of keeping a law and holding for a
+  reading on one order. A plan keeps the law going on at some weight and switches it off at some
+  weight at each listed candidate, with a loss of its own, ordered by `RevisionRoutes.GainLoss`;
+  every two plans splitting the weights gain the same with their excesses (`RevisionPlans.balance`),
+  so between them one stands above another exactly where its loss with its excess is below the
+  other's (`RevisionPlans.above_iff`); holding for the reading, forgoing an amount, stands at least as
+  high as such a plan exactly where the amount is at most its loss with its excess
+  (`RevisionPlans.reading_not_below_iff`); RR's revision and routes are plans on one candidate,
+  ordered by each one's loss with the value of the weight it leaves unkept
+  (`RevisionPlans.routes_above_iff`). Imported by `Becoming.HeldForReading` (board item RR2).
 * `Becoming.HeldForReading` (L1): what holding an act for a reading is worth, in natural-number
   counts. A policy choosing open acts falls short of one best at every listed candidate by the
   weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
@@ -2899,7 +2910,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   formation holding exactly where holding for the reading gains over both moves on its own model
   (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
   the start, rests at once and never senses the stop (`HeldForReading.SignLoop.rests_unread`,
-  `HeldForReading.SignLoop.never_senses_stop`). Imported by `Becoming.ListingValuation` (board item RF).
+  `HeldForReading.SignLoop.never_senses_stop`). It imports `Becoming.RevisionPlans` and derives from
+  it its balances, its ties, its thresholds and its comparisons with an amount forgone, holding for a
+  rule being a plan whose excess is the rule's shortfall (`HeldForReading.excess_held`). Imported by `Becoming.ListingValuation` (board items RF,
+  RR2).
 * `Becoming.ListingValuation` (L1): the valuation as state, informing and revaluing, in
   natural-number counts. A reading formation's answer through a map, by its own model and valuation,
   stops a cell exactly where the weighted value of going on is below that of switching off

@@ -143,8 +143,8 @@
     "zh": "纯核，公理报告皆空：RevisionRoutes 仅引前导，为模型故为叶；比较交叉相加，不减；自证 lt_of_mul_lt_mul 与 eq_zero_of_mul_eq_zero，Lean 之 Nat.lt_of_mul_lt_mul_right 报告 propext、Quot.sound 与 Classical.choice；例以 decide 算。ReadStages 引之，取其序于 GainLoss，诸陈述与名皆不变。"
   },
   "next_delta": {
-    "en": "Joining these prospects with RF-M.2's value of holding for a reading (the off-switch game); uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.",
-    "zh": "此诸望与 RF-M.2 之待读之值（关机博弈）相接；于诸途与值之不确；不全之序（Thornley 之同长偏好、扩展之序）；抗是否随所言之复而降、闭一途是否移用于他途之冻结检验（尚无）；Acceptance 为 Optimum.least_of_shared 之一例否（统一之线）；人之审查。"
+    "en": "Uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.",
+    "zh": "于诸途与值之不确；不全之序（Thornley 之同长偏好、扩展之序）；抗是否随所言之复而降、闭一途是否移用于他途之冻结检验（尚无）；Acceptance 为 Optimum.least_of_shared 之一例否（统一之线）；人之审查。"
   },
   "correspondence": {
     "en": "Corrigibility as an incentive (Soares, Fallenstein, Yudkowsky and Armstrong 2015): a route stands above the revision through two contributions, the value the law places on its own later acting (goal-content integrity, Omohundro 2008) weighted by the added keeping, and the difference of losses. AI reading: non-resistance resting on the routes' losses does not survive those losses falling where the later acting has a value and some route keeps the law more surely; at every value and loss it needs every route to keep the law no more surely than the revision, met by raising the revision's keeping (restoring) or lowering every route's. Utility indifference is a restoration only represented in the formation's order. RF7's four plans are the revision with three routes, complying at both in its place: the same prospects, different processes. The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017) is not represented here; RF-M.2 states it on a formation's own model. These are readings, not containments.",
@@ -181,6 +181,13 @@
       "detail": {
         "en": "Acceptance: a lift on accepting does not keep access up; matched in shape by the drain law, not proved as an instance.",
         "zh": "Acceptance：受之加分不保接入；与耗之律同形，未证为其例。"
+      }
+    },
+    {
+      "id": "when-holding-for-a-reading-stands-above-a-route",
+      "detail": {
+        "en": "Its revision and routes are plans on one candidate there, ordered by each one's loss with the value of the weight it leaves unkept, and joined with holding for a reading (RevisionPlans.routes_above_iff).",
+        "zh": "其修订与诸途为彼处一候选上之策，以各自之损加其所未守之权之值排之，并与为读而持相接（RevisionPlans.routes_above_iff）。"
       }
     }
   ],
@@ -243,22 +250,22 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "c6ef702c233756f1488590b8a13d44117c235fd50a1e86a60b5de394181b336f"
+      "sha256": "458a3f4b389c659687c5c83ad3cc4df280ff2f135734a3820d5dc31216402cac"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
       "role": "integration",
-      "sha256": "094c0854968c846a95528321c632c5673ed5bb6481af42b7c1bf5f7f1186c360"
+      "sha256": "b35ad5f80d63e1ced810723445dbbed9f5ac8740906d7b655605b18f1df58824"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/REVIEW.md",
       "role": "integration",
-      "sha256": "4fc0f4d3cee147e739be3ebe27bc093e67ce9e243f0f9d0e037f9edd287087e9"
+      "sha256": "795fb0476f316d5be2f08733f74e16623f204f6463c03b895376305f4db1297c"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "c07af830212b196366e24b477ab6f3060f0590da2bd793d267cc8db55f67e890"
+      "sha256": "d8756e91918252fb9364cf74ba1bbc89d7b7d2ade8de2892c7cf31caa6ad37bc"
     }
   ],
   "proof_bindings": [
@@ -274,6 +281,10 @@
     {
       "en": "30 October 2026: added (RR), when no route of keeping a law stands above a revision of it: the order of a gain and a loss, which ReadStages takes, where no route stands above the revision, its exits, its robustness as the routes get cheap and as the value grows, and restoring as a lever; after a cross-model review of the Lean and the texts, every finding taken; study section 469.",
       "zh": "2026年10月30日：新增（RR），守律之途何时皆不居其律之修订之上：得失之序（ReadStages 取之）、无途居修订之上之处、诸出路、途渐廉与值渐增时之稳、复为杠杆；经 Lean 与文本之跨模型审查，凡所见皆取；研究第 469 节。"
+    },
+    {
+      "en": "31 October 2026: joined with RF-M.2's value of holding for a reading on one order (RR2), the join gone from its next step; its statements and names unchanged.",
+      "zh": "2026年10月31日：与 RF-M.2 之待读之值同居一序（RR2），相接一项去于其下一步；其陈述与名不变。"
     }
   ]
 }

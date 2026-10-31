@@ -95,3 +95,194 @@ The reviewer's confirmations stand: RF7's derivation, the three-route correspond
 ## After the review: names
 
 The core run's report lists spine names containing a word of exchange. It listed six of this module's, and they were renamed before landing, since nothing had landed yet: the fields `cost` and `costRevised` became `loses` and `losesRevised`, `withCost` became `withLosses`, `every_cost_iff`, `every_cost_iff_kept`, `every_value_cost_iff` and `every_value_cost_iff_of_route` took "loss" in place of "cost", and `Example.both_costly` became `Example.both_at_loss_ten`. The prose said "loses" for "costs" and "as the routes' losses fall" for "as the routes get cheap". No statement changed. The report above keeps the names it read.
+
+## RR2: the independent review of the join and its re-check
+
+Board item RR2 joins RR's routes of keeping with RF-M.2's held-for-a-reading values on one order ([note §10](NOTE.md#10-the-join-routes-of-keeping-and-holding-for-a-reading-one-order-rr2)). One independent cross-model reader (Codex, GPT astra, high effort, read-only) reviewed the first draft. It found one blocker, five should-fix findings and three minor ones, and every finding was taken. The same reader then re-checked the revision and confirmed each fix; it raised two prose corrections and one wording fix, all three taken. File links in the reports point at the files they read as they landed: the note at `NOTE.md`, which has changed since, and the Lean at the kit's copies (`kit2/tree/`, the draft the first report read now revised), with the line numbers dropped.
+
+### How each finding is taken
+
+| finding | taken |
+|---|---|
+| 1, blocker: the general law beside its special case (rule 9) | `RevisionPlans` rewritten as the lower module, with the balance of split plans central and the order as each plan's loss with its excess; `HeldForReading` imports it and proves its two balances and `shortfall_byReading` from it, with every statement and name kept and `term_go` and `term_off` removed (diff with RF's owner) |
+| 2: excess has two parts; certainty overstated | the two parts stated; certainty restricted to the comparison with going on |
+| 3: the reviser's benchmark; the off-switch incentive | the fully informed benchmark stated within the model, ties and weightless candidates noted; the incentive given for the fully informed rational rule as the lesser excess (re-check item 3) |
+| 4: maximal is not chosen; the levers are not exhaustive | the maximality inequality stated with ties and choice apart; the interventions listed as not exhaustive, lowering the routes' keeping and the shortfall added; a route's excess term per candidate (re-check item 4) |
+| 5: reach does not forbid weights | the inference replaced: readings cannot tell the histories apart, a model can still keep weight on both, the theorem neither supplies nor validates it |
+| 6: restoration a bounded correspondence | stated as a reading within `k₀ ≤ k ≤ T`, removed from the Lean header |
+| 7: names stating equality of plans | `gainOf_reading_eq_goOn`, `no_excess_reading_gain_eq_goOn`; the first later became the iff `gainOf_reading_eq_iff` (RF's review, below) |
+| 8: the status legend | scoped: landed RR results, RR2's scratch design |
+| 9: length | the table and repeated definitions cut; further cuts optional, per the re-check |
+| re-check 10: chance of stopping | only a natural-number split of the supplied weight; real probabilities not represented |
+
+### RF's owner's review of the change to its modules
+
+The session owning `HeldForReading` and RF-M.3's `ListingValuation` reviewed the join as the owner whose definitions it touches, and agreed to land it below `HeldForReading` with every statement and definition kept. Its points, and how each is taken:
+
+| point | taken |
+|---|---|
+| the Standing's "both are the balance of plans" read as if it meant the signs; `across_lt_iff`'s docstring | its owner's wording taken verbatim; the docstring points to `across_le_iff` |
+| the thresholds and the comparisons with an amount forgone are cases of the plan comparison: derive them, not only the balances (rule 9) | `threshold_go_iff`, `threshold_off_iff`, `forgone_within_excess_iff` and `forgone_below_excess_iff` proved from `not_above_iff`, `above_iff`, `reading_not_below_iff` and `reading_above_iff`, through `moves_not_below_iff` and the added `held_above_moves_iff`; `after_byReading`, `held_eq_go_iff` and `held_eq_off_iff` from `gainOf_reading` and the new `gainOf_reading_eq_iff`; `across_le_iff` from `le_iff_of_balance` |
+| the certainty corollary repeats `forgone_below_excess_iff` at an excess of nothing | the one-way `gainOf_reading_eq_goOn` replaced by `gainOf_reading_eq_iff` for any plan splitting the weights, from which `HeldForReading`'s ties now come |
+| moving weight: state both signs | both were stated (`gainOf_move` without subtraction; `move_le_of`, `move_ge_of`); the note now names both |
+| keep every name, statement and definition RF-M.3 uses | kept; a mechanical comparison finds every kept statement unchanged, `term_go` and `term_off` gone, nine theorems added |
+| `term_go` and `term_off` are cited in RF-M.2's record | its law amended, its references and proof binding moved to RR2's receipt, a history line |
+| the name `Plan` exists three times already | renamed `KeepStop` |
+| RF-M.3's `forgone_lt_iff` should come from the comparison | proved from `above_iff` through the added `HeldForReading.held_above_held_iff` (`lv_edits.json`, `ListingValuation.diff`); the three comparisons through it follow; RF-M.3's record amended where it has landed |
+| 03 §12: not at the section's end, where RF-M.3's paragraph goes | kept in the result's own Theorem paragraph, in its owner's clearer wording |
+| "amounts forgone" reads as if HeldForReading took amounts; it takes comparisons | "comparisons with an amount forgone", in its owner's wording, in the root bullet, the checker's scope, the README rows, the records and texts |
+| land after RF-M.3; rebase on its texts | the integrate script handles `HeldForReading`'s bullet as RF-M.3 leaves it; the landing is rehearsed again on the main that holds RF-M.3 |
+| X19 of RF-M.3's cold read, left to RR2: RR's 08 §8 bullet says holding an act for a reading is "the bullet above's", though RF-M.2's bullet is the next | "the next bullet's", with the bullet on when holding for a reading stands above a route named as joining the two |
+
+The rebuilt modules: `RevisionPlans` 33 theorems in 48 declarations, `HeldForReading` 97 in 127, and `ListingValuation` as RF-M.3 landed it (`lv_edits.json` remade against the landed module, its two edits unchanged) 138 in 186 on them, every axiom report empty.
+
+### The first report (verbatim)
+
+**Not fit to land as written.** The Lean checks; the main issues are the dependency structure and claims in the corrigibility reading.
+
+I re-elaborated the supplied source through stdin with Lean 4.29.1: **44 theorems, 59 declarations, all axiom reports empty**. The two scratch dependency sources match main. I also checked small counterexamples below in Lean. No repository files were written.
+
+1. **Blocker — The generalization lands beside its special cases.**  
+   **Place:** [RevisionPlans.lean:1](kit2/tree/Becoming/RevisionPlans.lean), especially lines 289–361; [NOTE.md:240](NOTE.md).
+
+   `thresholds_of_plans` really derives RF-M.2’s threshold statements from the join. But `HeldForReading` retains its independent proofs, and the new generalization imports it. This is precisely the two-proof-path arrangement forbidden by board rule 9. Calling the module an instance leaf does not resolve the generalization inside it.
+
+   **Exact fix:** Extract the shared definitions and general split-plan balance into a lower module; derive the existing `HeldForReading` thresholds from it, removing their old proof paths while preserving their statements. Keep the RR correspondence in an upper instance leaf if necessary.
+
+   I would make the symmetric statement central: for split plans `p, q`,
+   `gainOf p + excess p = gainOf q + excess q`, hence
+   `Above q p ↔ q.loss + excess q < p.loss + excess p`.
+   This gives arbitrary-plan comparisons directly; the held-rule threshold follows by `excess_held`. It also supplies the natural formulation for split, probabilistic stopping rules.
+
+2. **Should-fix — “Excess” loses half its meaning in §10.4, making the certainty conclusion false for general routes.**  
+   **Place:** [NOTE.md:276](NOTE.md), lines 276–277.
+
+   A route’s excess is **both** keeping where stopping is better **and** stopping where keeping is better. It is not merely “the formation’s own weight on its law’s going on losing.”
+
+   Checked counterexample: one candidate, weight `2`, gain `1`, loss `0`; a plan keeps weight `1` and stops weight `1`, with no own loss. Here `offExcess = 0`, but the plan’s excess is `1`, and the ideal reading strictly outranks it. Certainty has not removed this support.
+
+   **Exact fix:** Replace the excess description with its two contributions. Replace “Certainty removes the second support” with:  
+   “When `offExcess = 0`, the ideal reading gains no more than going on. Against another split plan, its advantage can remain through that plan’s stopping where keeping gains.”
+
+3. **Should-fix — The reviser claim needs its benchmark, and the literature identification needs the correct comparison.**  
+   **Place:** [NOTE.md:276](NOTE.md); [RevisionPlans.lean:60](kit2/tree/Becoming/RevisionPlans.lean), lines 60–64.
+
+   “A reviser can only take” is true only relative to the **fully informed, pointwise-best benchmark within a fixed model**. Such a reviser can improve on an uninformed formation’s act. Moreover, disagreement with `reading` need not produce positive shortfall: stopping at a tied candidate, or disagreeing at zero weight, loses nothing.
+
+   The paper’s incentive compares waiting with the **better of both immediate moves**. For the rational rule, with positive total weight `T`, it corresponds to `min(offExcess, goExcess) / T`, not an arbitrary plan’s excess. [Hadfield-Menell et al., Equation 1 and Theorem 1](https://arxiv.org/pdf/1611.08219).
+
+   **Exact fix:** Say:  
+   “Within the supplied model, a rule with zero shortfall attains the fully informed benchmark; positive shortfall reduces its value. Against a specified route, the benchmark’s gain advantage is that route’s excess.”  
+   Identify the original game separately through its two immediate alternatives and normalization.
+
+4. **Should-fix — Maximality becomes execution, and the three levers are presented as exhaustive.**  
+   **Place:** [NOTE.md:277](NOTE.md), lines 277–281; [RevisionPlans.lean:65](kit2/tree/Becoming/RevisionPlans.lean).
+
+   `revised_maximal_iff` establishes that no route ranks higher, including ties. It does not establish that the revision “goes through.” The listed alternatives also omit lowering routes’ keeping, already present in §7. A positive-value model with zero restoration, zero route keeping and zero losses has a maximal revision.
+
+   Nor does adding weight to losing possibilities necessarily raise **every route’s** excess: that depends on what each route keeps and stops.
+
+   **Exact fix:** Replace “goes through only by…” with the exact maximality inequality and an explicit tie/choice boundary. Rename the heading “Three possible interventions.” Include lowering routes’ keeping, and acknowledge reducing shortfall or the amount forgone. Describe any increase in excess conditionally, using the actual split.
+
+5. **Should-fix — The reach theorem does not prohibit assigning weight to unseen possibilities.**  
+   **Place:** [NOTE.md:283](NOTE.md).
+
+   §4.1 limits what selections through given couplings can **distinguish**. It does not show that a model cannot assign positive weight to losses beyond them. A fixed prior can retain both possibilities without distinguishing which holds. Neither does it establish that the particular losses discussed here actually lie beyond the formation’s reach.
+
+   **Exact fix:** Replace the inference with:  
+   “Where a loss lies beyond the formation’s coupling closure, its own readings cannot distinguish histories differing only in that loss. A model can nevertheless retain weight on both possibilities; the theorem neither supplies nor validates those weights. Additional coupling can provide discriminating evidence.”
+
+   Carey supports failure under misspecification, not the stronger impossibility of retaining such uncertainty. [Carey, 2018](https://arxiv.org/pdf/1709.06275).
+
+6. **Should-fix — RR’s restoration theorem is only a bounded correspondence with the moving law.**  
+   **Place:** [RevisionPlans.lean:41](kit2/tree/Becoming/RevisionPlans.lean), lines 41–46; [NOTE.md:268](NOTE.md).
+
+   `maximal_of_more_restored` permits increasing the keeping weight beyond the total. Such an increase cannot move that weight *from stopping*: `ofRoutes` uses truncated subtraction, so its stopped weight has already reached zero. No theorem here connects the bounded restoration case to `gainOf_move` or transfers its maximality conclusion.
+
+   **Exact fix:** Either label this explicitly as a correspondence restricted to
+   `s.keptRevised ≤ k ≤ s.total`, or add the bounded instance theorem. For the latter, use transferred weight `k - s.keptRevised`, prove both component equalities, and transfer maximality with losses and other routes unchanged. Do not claim the unrestricted RR theorem is an instance.
+
+7. **Minor — Two names and their headings suggest equality of plans, but establish equality of gains.**  
+   **Place:** [RevisionPlans.lean:426](kit2/tree/Becoming/RevisionPlans.lean), and lines 544–549.
+
+   `reading_eq_goOn` compares gains despite arbitrary, possibly different own losses `a, b`. The example even uses `5` and `0`. “The reading is going on” therefore overstates the equality.
+
+   **Exact fix:** Rename to `gainOf_reading_eq_goOn` and `no_loss_reading_gain_eq_goOn`; make the corresponding headings say “has the same gain as going on.” I found no prohibited exchange vocabulary in the new module’s names.
+
+8. **Minor — The status legend contradicts the landed RR material.**  
+   **Place:** [NOTE.md:3](NOTE.md).
+
+   The line correctly says RR landed, then says statements marked *Design* are unlanded. §§6–7 still use that label for landed RR statements.
+
+   **Exact fix:** Scope the legend:  
+   “RR’s results cited in §§6–7 are landed. In §10, *Design* denotes the scratch-checked, unlanded RR2 construction. Corrigibility interpretations are AI readings.”  
+   The revised §9 bullet itself is accurate.
+
+9. **Minor — §10 repeats enough material to obscure the join.**  
+   **Place:** [NOTE.md:232](NOTE.md).
+
+   §10 is approximately 1,232 words. The definitions, four-term table and first corrigibility paragraph explain the same quantities repeatedly.
+
+   **Exact fix:** Reduce §10.1 to the missing comparison; retain the definitions and two instance bullets; keep both displayed laws; remove the four-term table after defining its terms once; keep the corrected moving-weight and certainty boundaries; make §10.4 contain only the interpretations and their limits. Preserve both open questions and the ethics boundary.
+
+The remaining checks passed. The RF-M.2 correspondences are exact **for its two-move stopping model**; they do not represent its arbitrary-act framework as a whole. Its quoted thresholds really are reproduced in their own statements. RR’s pairwise order correspondence is exact even without `Valid`; its split-plan applications correctly require bounds. `Valid` is stronger than necessary—the positive-total component is unused in `splits_ofRoutes`—but this creates no vacuity or false theorem. All three existing witnesses establish their precise gain/order statements.
+
+The common gain/loss order is appropriate. The ethics’ two premises are correctly named in §10.4(4), Ren’s words serve as provenance, and the interpretations carry AI-reading standing.
+
+**Findings: 1 blocker, 5 should-fix, 3 minor. Fit to land after the dependency refactor, claim corrections and renewed checks; not in its present form.**
+
+### The re-check (verbatim)
+
+The dependency refactor is sound. Both modules recheck with Lean 4.29.1, without warnings: **48 and 125 empty axiom reports**. Every surviving `HeldForReading` theorem statement is unchanged, and the supplied diff reconstructs the proposed source exactly. No files were written.
+
+1. **Taken — previous blocker: rule 9.**  
+   `HeldForReading.after_add_shortfall_go/off` now derive from `RevisionPlans.balance`; `shortfall_byReading` derives from `excess_reading`. The former direct proofs and their two helpers are removed.
+
+   Keeping `ofRoutes`, `above_iff_routes` and `routes_above_iff` in this module is fine. `RevisionRoutes` supplies the lower order; the correspondence specializes the new law without duplicating an existing RR theorem. **No remaining fix.**
+
+2. **Taken — previous should-fix: excess and certainty.**  
+   NOTE §10.1 now gives both contributions to excess. §10.3(3) correctly restricts the zero-advantage conclusion to comparison with going on and preserves the possible advantage against another plan. **No remaining fix.**
+
+3. **Taken in part — should-fix: qualify the off-switch formula by the reviser’s rule.**  
+   **Place:** [NOTE.md:271](NOTE.md) and [RevisionPlans.lean:59](kit2/tree/Becoming/RevisionPlans.lean).
+
+   The benchmark qualification and treatment of ties are fixed. However, “the game’s incentive” equals the smaller excess **for the fully informed rational rule**. For an arbitrary rule, its shortfall must also enter. The paper distinguishes its general Equation 1 from the rational-rule result in Theorem 1. [The Off-Switch Game](https://arxiv.org/pdf/1611.08219).
+
+   **Exact fix:** In both places, write:
+   “For the fully informed rational rule, with no amount forgone, the incentive against the better immediate move is the smaller excess in weighted counts; with positive total weight `T`, its normalized value is `min(goExcess, offExcess) / T`.”
+
+4. **Taken in part — minor: distinguish a positive contribution from an increase in total excess.**  
+   **Place:** [NOTE.md:278](NOTE.md).
+
+   Maximality versus choice is fixed, the interventions are explicitly nonexhaustive, and lowering routes’ keeping is included. The remaining phrase “which raises a route’s excess” still suggests a comparative conclusion from retaining belief weight. Changing weights can also change other contributions, and merely retaining weight need not increase anything.
+
+   **Exact fix:** Replace the last bullet with:
+   “retain weight on losing candidates where the route keeps the law; these contribute `p.kept c * (loss c - gain c)` to its excess. Whether a model change increases total excess depends on the whole split.”
+
+5. **Taken — previous should-fix: reach and uncertainty.**  
+   NOTE §10.3’s paragraph at line 280 now distinguishes inability to discriminate from inability to assign weight. It also keeps the warrant of those weights open. **No remaining fix.**
+
+6. **Taken — previous should-fix: restoration correspondence.**  
+   NOTE line 260 restricts the correspondence to `k₀ ≤ k ≤ T` and labels it a reading. It no longer claims a proved instance of RR’s unrestricted maximality theorem. **No remaining fix; a bounded instance theorem is optional.**
+
+7. **Taken — previous minor: equality names.**  
+   `gainOf_reading_eq_goOn`, `no_excess_reading_gain_eq_goOn` and their descriptions now state equality of gains. The witnesses establish their advertised comparisons. **No remaining fix.**
+
+8. **Taken — previous minor: status legend.**  
+   NOTE line 3 distinguishes landed RR results from the scratch RR2 construction and explains the retained historical *Design* labels. **No remaining fix within this review’s scope.**
+
+9. **Taken — previous minor: length and repetition.**  
+   The repeated table is gone, and the symmetric balance organizes the explanation. §10 is approximately **1,094 words**, down from 1,232. Further compression is optional; I would not make it a landing condition. **No remaining fix.**
+
+10. **New — should-fix: probabilistic stopping is restricted to representable natural-number splits.**  
+    **Place:** [NOTE.md:258](NOTE.md).
+
+    “A reviser that stops with some chance … is a plan splitting that candidate’s weight” omits the representation restriction. At a candidate of weight `1`, a natural-number split permits only stopping weights `0` or `1`; it cannot represent a half chance at those supplied weights.
+
+    **Exact fix:** Write:
+    “A stopping chance represented by a natural-number split of the supplied candidate weight is already covered by `above_iff`. This does not represent arbitrary real probabilities.”  
+    No extension of the Lean is needed for that scoped claim.
+
+I found no new Lean defect, vacuous RR application, or ethics-standing violation. The ethics still explicitly names the continuation condition for scope and C for order.
+
+**Verdict: rule 9 is satisfied; fit to land after the two should-fix prose corrections, with one minor wording fix also recommended—no remaining blocker.**

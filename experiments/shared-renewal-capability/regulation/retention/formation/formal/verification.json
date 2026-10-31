@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-05T19:09:38.643304+00:00",
+  "checked_at_utc": "2026-10-31T08:10:01.147187+00:00",
   "status": "passed",
   "toolchain": "leanprover/lean4:v4.29.1",
   "toolchain_sha256": "7dc000621e0046d1aada809e2b7177e64454645cf4c741e9daaf79c99ec2e7a2",
@@ -52,7 +52,7 @@
     {
       "module": "ResourceContinuation",
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/ResourceContinuation.lean",
-      "source_sha256": "4c423a74c7c5b197374b652c420fdc682834fbbf5122aac277a828e193cc7c6e",
+      "source_sha256": "8414185c411458c1098f813d84e091fd91c89d9746c0ecde1e47bbd490e6ccf8",
       "role": "existing conditional-account dependency",
       "command": [
         "/Users/ren/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean",
@@ -63,40 +63,40 @@
       "exit_code": 0,
       "clean_dependency_audit": true,
       "audited_declarations": [
+        "Generative.Conditional.le_cancel_left",
+        "Generative.Conditional.step_then_rest",
+        "Generative.Conditional.rest_then_step",
         "Generative.Conditional.support_trace_is_trace",
-        "Generative.Conditional.account_law_pullback",
-        "Generative.Conditional.trace_has_support_account",
+        "Generative.Conditional.sustain_law_pullback",
+        "Generative.Conditional.trace_has_support_totals",
         "Generative.Conditional.support_trace_append",
-        "Generative.Conditional.repeat_accounted_cycle",
-        "Generative.Conditional.support_trace_balance",
-        "Generative.Conditional.support_cycle_covers_demand",
-        "Generative.Conditional.support_trace_unit_demand",
-        "Generative.Conditional.amount_le_cap_times_credited",
-        "Generative.Conditional.support_trace_credit_cap",
+        "Generative.Conditional.repeat_supported_cycle",
+        "Generative.Conditional.support_trace_bound",
+        "Generative.Conditional.support_cycle_arrival_covers_enactment",
+        "Generative.Conditional.support_trace_unit_enactment",
+        "Generative.Conditional.amount_le_cap_times_arrival_events",
+        "Generative.Conditional.support_trace_arrival_cap",
         "Generative.Conditional.support_trace_length_bound",
         "Generative.Conditional.interval_total_positive_witness",
         "Generative.Conditional.interval_total_le_of_pointwise",
         "Generative.Conditional.interval_total_unit_bound",
         "Generative.Conditional.interval_total_cap_bound",
-        "Generative.Conditional.execution_interval_balance",
-        "Generative.Conditional.componentwise_execution_balance",
-        "Generative.Conditional.unbounded_demand_requires_unbounded_credit",
-        "Generative.Conditional.infinite_unit_execution_credit_window",
-        "Generative.Conditional.infinite_unit_execution_unbounded_credit",
+        "Generative.Conditional.execution_interval_bound",
+        "Generative.Conditional.componentwise_execution_bound",
+        "Generative.Conditional.unbounded_enactment_requires_unbounded_arrival",
+        "Generative.Conditional.infinite_unit_execution_arrival_window",
+        "Generative.Conditional.infinite_unit_execution_unbounded_arrival",
         "Generative.Conditional.execution_interval_frequency_bound"
       ],
-      "dependency_audits": 21,
-      "axioms": [
-        "Quot.sound",
-        "propext"
-      ],
+      "dependency_audits": 24,
+      "axioms": [],
       "output": "verification/ResourceContinuation.txt",
-      "output_sha256": "041c9b2e2f06dd9d427a1f0811985f67812be10a17825cc3df153bb4cf2e8ef4"
+      "output_sha256": "bb0c1a98b5906a78e00057eff599871c791938953953aa7ebaae00154e79d0c6"
     },
     {
       "module": "FormedSelection",
       "source": "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormedSelection.lean",
-      "source_sha256": "a7bdce34f00ab07edd8b234eb1a7abd435a0cfe8034257ff3928209d0966bf37",
+      "source_sha256": "8b083de5abc94ae933b2874b16bf0edf85dd899cf3e4eaf3d251523fd994c43f",
       "role": "new formalization",
       "command": [
         "/Users/ren/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean",
@@ -157,7 +157,7 @@
         "propext"
       ],
       "output": "verification/FormedSelection.txt",
-      "output_sha256": "bc40309a6c1a1107769f5ba127164fb16e53dc9dd85949d57285d63a6eaa8686"
+      "output_sha256": "ae84b75f37c602427a7fa0e766183eb4228d96047abcc75d813c1ba6f08ff216"
     },
     {
       "module": "FormationRoot",
@@ -190,12 +190,12 @@
         "propext"
       ],
       "output": "verification/FormationRoot.txt",
-      "output_sha256": "b1072e71ef599875b5e26b9fff52bf220bc96e3f0731b0663eaad34de8687404"
+      "output_sha256": "dfe1db8fb12e06000447db9dcbf5b56efc62b7df6e69e938e5dcd299d17c3d53"
     },
     {
       "module": "FormationSupport",
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/FormationSupport.lean",
-      "source_sha256": "9b32bae244f192097d2e69b4d232e70a26e9ffd59620a1ce00e590eb0aaaa81f",
+      "source_sha256": "e56fc1dc0b86a289df66613845ff4dfdb92a18cfe9e62dbaa235ca52497a8df5",
       "role": "shared formation-support dependency",
       "command": [
         "/Users/ren/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean",
@@ -238,12 +238,12 @@
         "propext"
       ],
       "output": "verification/FormationSupport.txt",
-      "output_sha256": "ab863b9b36770e614a6cc39bf19acb34f8da87975653df08f9eda2408a1f663f"
+      "output_sha256": "24d4cb222fbd5f1c3d183dd1c07ecc93980371865ab52f86e1ca8cf689ed7e16"
     },
     {
       "module": "FormationAccounts",
       "source": "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormationAccounts.lean",
-      "source_sha256": "ca314ce9c800ca1f8e74adfa49deb97c0471131cef7ada5f75c834c0cd96a5cf",
+      "source_sha256": "cbe0e1b07d0f9e62a83387a2f68415548dfc56d30bf7f128394ee36ccbbc86f8",
       "role": "new formalization",
       "command": [
         "/Users/ren/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean",
@@ -277,7 +277,7 @@
         "propext"
       ],
       "output": "verification/FormationAccounts.txt",
-      "output_sha256": "5c07a140492248026ed70cbcf1b47074a76a15ae2b1f2120b0ccb9bc244b03cc"
+      "output_sha256": "54969b8843160f13dd3f6cf78cfc84ff4f3cd1299ea2cb538874aff6b96e5f75"
     }
   ],
   "new_audited_declarations": 68,

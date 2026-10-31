@@ -591,6 +591,13 @@
         "en": "Informing and revaluing within one law: a demonstration filtering the reading formation's listing and an input presented revising its valuation, beside courses alike from an unresolved model and a reversed ranking, informing there represented by a changed start.",
         "zh": "一律之内之告与改值：示滤读之形成之列，呈一入改其值，与彼处未分之模型与反转之排序之同历程相并，彼处之告以改其始表之。"
       }
+    },
+    {
+      "id": "when-holding-for-a-reading-stands-above-a-route",
+      "detail": {
+        "en": "Its comparison of two rules held for, each forgoing an amount (ListingValuation.forgone_lt_iff), is the order of plans at two rules held for (RevisionPlans.above_iff, HeldForReading.held_above_held_iff).",
+        "zh": "其比二规则之持，各舍一量（ListingValuation.forgone_lt_iff），即为二规则而持之策之序（RevisionPlans.above_iff、HeldForReading.held_above_held_iff）。"
+      }
     }
   ],
   "references": [
@@ -785,12 +792,12 @@
         "Becoming.ListingValuation.worth_split_released",
         "Becoming.ListingValuation.worth_split_stopped"
       ],
-      "sha256": "1ffffb2327d8326b1b3e930902d39b26b7be160402da7a0e2250d72c08a6f20d"
+      "sha256": "f0978daed6bf2b914601c9d6906d0b02c9cd9da04742ec9da3511e330d601968"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
       "role": "proof",
-      "sha256": "3e7c19b113e61dc3ae6493ef564d571fc216dc1bc588a0c6b2b64f44b25eb94b"
+      "sha256": "b65a7a559a6a860e57919307038056e593680d0c377c166801facb1718325f12"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
@@ -833,14 +840,14 @@
       "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T013649.265381Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
       "role": "receipt",
-      "sha256": "43a84858f0237921c4df45559ce707db8f60423491fc245193a7013511b832fc"
+      "sha256": "a8b80ab825922541ca460b13e3d86e552d4528c55537ef969af3521f9d1f0dc3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "7bee6aaa24d1f76acfdaf6fa8a3a64e0048764bdde560a3eff2c86b9f04e532d"
+      "sha256": "458a3f4b389c659687c5c83ad3cc4df280ff2f135734a3820d5dc31216402cac"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -870,13 +877,13 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "99aacc67db28f2c4e27a672de89a8d6888ba9ed96c0239d4af49b84e33b0a91c"
+      "sha256": "346f0dc88dc74517f1676fe503e860d5d99193021920a097b4a3a3271c321b6d"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T013649.265381Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ListingValuation",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -886,6 +893,10 @@
     {
       "en": "31 October 2026: added (RF round 2), a reading informed and revalued: the answer of a formation reading by its own model and valuation through a map; any rule's shortfall split into the least shortfall and a residual, with exact criteria; informing and the criterion over every refinement, with its sufficient conditions and counterexamples; amounts forgone, read as withholding against informing; revaluing; and one blanketed law carrying the reading formation's listing and valuation, with witnesses of four cases, two orders and two routes; the design reviewed by a cross-model reader before the Lean (its first draft kept beside the review), the Lean by the same reader and through three lenses, the texts cold-read, what was taken listed in the review evidence; study section 473.",
       "zh": "2026年10月31日：新增（RF 第二轮），受告与改值之读：读之形成依己之模型与值经映射之答；任一规则之所缺分为最少所缺与余缺，并其确判；告与于每一细分之判，并其充分条件与反例；舍量，读为扣告与告；改值；及承读之形成之列与值之一毯化之律，并四情、二序与二途之例；设计于 Lean 之前经跨模型之审（其初稿存于审查之旁），Lean 经同一审者与三视角之审，文本经冷读，所取者列于审查之证据；研究第 473 节。"
+    },
+    {
+      "en": "31 October 2026: forgone_lt_iff, and with it forgone_through_lt_iff, revalued_forgone_lt_iff and presented_forgone_lt_iff, proved from the order of plans (rule 9, RR2's landing); no statement or name changed.",
+      "zh": "2026年10月31日：forgone_lt_iff，并经之 forgone_through_lt_iff、revalued_forgone_lt_iff 与 presented_forgone_lt_iff，由策之序证之（规则九，RR2 之落地）；无一陈述或名改变。"
     }
   ]
 }
