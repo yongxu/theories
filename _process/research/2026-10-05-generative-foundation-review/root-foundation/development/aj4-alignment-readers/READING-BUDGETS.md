@@ -1,6 +1,6 @@
 # Reading budgets: each layer sized for a person
 
-*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `1ec20513d`; the worked example's on main at `1721c70ef`, after RR2 landed, and on branch `aj4-human` merged with it. About ten minutes to read.*
+*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `095de350e`, after BD landed, the worked example's on that main and on branch `aj4-human` merged with it. About ten minutes to read.*
 
 ## Why
 
@@ -24,15 +24,15 @@ Its last sentence is new.
 
 | Layer | On main today | Budget | What brings it within | Who |
 |---|---|---|---|---|
-| README's first screen (generated) | 36 words, no time; then the opening, in the first person (19 to 25 minutes), and its notes | A screen naming each layer with its time | A generated block ([below](#the-readmes-first-screen)), times computed at render; the opening untouched | RA's line |
+| README's first screen (generated) | 36 words, no time; then the opening, in the first person (18.9 to 24.6 minutes), and its notes | A screen naming each layer with its time | A generated block before the opening, times computed at render, the opening untouched: RA's block, ready on MV's branch, lands with MV's follow-up ([below](#the-readmes-first-screen)) | RA's line |
 | The opening's notes (AI-written, read one at a time) | 24 notes, 10,354 words; 15 over 300, the largest 1,094 | Three minutes each | Standing and link kept, detail to the section cited | the coordinator routes |
-| One page (and Chinese) | 2,143 words, one block (16.5 to 21.5 minutes); Chinese 14 to 18 minutes | Ten minutes | What it claims, the ethics' two premises with their roles, where the evidence is, what is not done | the coordinator routes |
-| Overview (and Chinese) | 13,429 words (103.5 to 134.5 minutes), §7 alone 2,604; Chinese 86 to 112 minutes | An hour | Half of each section, detail to the chapters it links; §10, what is not shown, whole | the coordinator routes |
-| Packet cover (and Chinese) | 862 words (7 to 9 minutes), within; it gives each dossier's time and hour's path | Ten minutes | Its own time at its top | RP's owner |
-| Each dossier's front, to its first item or the end of its labelled ten minutes | Within: classical texts, Buddhist thought, philosophy (8 to 11 minutes). Over: logic (13.5 to 17.5), alignment on main (24 to 31) | Ten minutes, with the whole's time and an hour's path | Logic: a third of its front moved later. Alignment: [below](#the-worked-example-the-alignment-dossier) | each dossier's owner |
-| Failure-mode map (a study AJ4 cites) | 8,792 words; its table (§2, 574 words) comes after 1,150 words | Its first part within ten minutes; each row readable alone | A ten-minute section first, on its holder's branch | the map's holder |
+| One page (and Chinese) | 2,154 words, one block (16.6 to 21.6 minutes), no time stated; Chinese 14.0 to 18.2 minutes | Ten minutes | What it claims, the ethics' two premises with their roles, where the evidence is, what is not done | OU's owner |
+| Overview (and Chinese) | 13,659 words (105.3 to 136.8 minutes), §7 alone 2,608, no time stated; Chinese 86.8 to 112.8 minutes | An hour | Half of each section, detail to the chapters it links; §10, what is not shown, whole | OU's owner |
+| Packet cover (and Chinese) | 862 words (6.9 to 9.0 minutes), within, its own time not stated; it gives each dossier's time and hour's path | Ten minutes | Its own time at its top | RP's owner |
+| Each dossier's front, to its first item or the end of its labelled ten minutes | Within: classical texts (7.8 to 10.1 minutes), Buddhist thought (8.2 to 10.7, its time stated in its third paragraph, past its first 300 characters), logic (8.4 to 11.0). Philosophy: 1,114 words (8.6 to 11.2), 14 over, the excess what may not be cut (amendment 1). Over: alignment on main, 3,481 words (26.8 to 34.8) | Ten minutes, with the whole's time and an hour's path | Logic: done. Buddhist thought: its time in its first paragraph. Alignment: the new edition, 1,100 words ([below](#the-worked-example-the-alignment-dossier)) | each dossier's owner |
+| Failure-mode map (a study AJ4 cites, not for release) | 13,392 words; its first part, titled "in ten minutes", 1,539 words (11.8 to 15.4 minutes), its header stating twelve to fifteen | Its first part within ten minutes; each row readable alone | 439 words to a later section, or the excess recorded where it may not be cut, and a title giving its time | the map's holder |
 
-Whole dossiers: classical texts 64 to 83 minutes, Buddhist thought 67 to 88, logic 89 to 115 (its four hours include 251 lines of Lean), philosophy 94 to 122, alignment 102 to 132 in the new edition. The cover's times are these or longer. Chapters, records and studies have no budget.
+Whole dossiers: classical texts 64 to 83 minutes, Buddhist thought 67 to 88, logic 90 to 116 (its four hours include 251 lines of Lean), philosophy 102 to 133, alignment 108 to 141 in the new edition. The cover's times are these or longer, except "about two hours" for philosophy and alignment, whose slowest readings are 133 and 141 minutes. Chapters, records and studies have no budget.
 
 <a id="the-readmes-first-screen"></a>
 ## The README's first screen
