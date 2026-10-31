@@ -14,7 +14,7 @@
 
 **Start with** [the one page](theories/becoming/ONE-PAGE.md) (17–22 minutes), [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (105–137 minutes) or [the opening](#truth-exists), a first-person conviction (19–25 minutes), with [notes](#notes).
 
-**Recorded Lean receipts** credit 477 of [508 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
+**Recorded Lean receipts** credit 478 of [509 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 
 ---
 

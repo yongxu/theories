@@ -75,7 +75,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
         "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.WorldRepresentation", "Becoming.ProcessRepresentation", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
-        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
+        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.RootForms", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
         "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.SelectionPace", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
@@ -1219,6 +1219,13 @@ SCOPE = (
     "groups uniform in an amount and exact transmission, where at each step the lineages founded "
     "lower are not active nothing is discordant and the mean never falls below where it started, "
     "rising wherever a higher lineage leaves offspring beside a lower one. "
+    "RootForms: rows stated on the grammar under named hypotheses, each needed by a countermodel over one point "
+    "with its fit; where giving lies within giving from a region and listed descent within giving, a listing wholly "
+    "outside the region has no listed offspring, and GroupEnding's all_end is that form at one step, each hypothesis "
+    "met by definitions alone, certified by rfl; where what comes to stand is given to, dependence is inherited "
+    "along descent and nothing descended from depends before a step, nothing coming to stand depends after it: the "
+    "relational part of Flow's no_new_dependence, whose balance meets the first hypothesis only through amount "
+    "reasoning. "
     "Founding: where a family of conditions ran into excess under the coupled gate every member of a "
     "later generation of descent is the offspring of a member not depending on the family, and a "
     "lineage confined to the family has no member after its end, whatever selection within had "

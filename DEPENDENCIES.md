@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-508 registered results: 477 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1171 curated edges join 434 results to the results they draw on.
+509 registered results: 478 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1172 curated edges join 435 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -237,6 +237,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [normal-forms-need-decided-apartness][] ← <a id="normal-forms-need-decided-apartness--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][]
 - [observation-is-a-route][] ← <a id="observation-is-a-route--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="observation-is-a-route--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="observation-is-a-route--how-loops-form"></a>[how-loops-form][] · <a id="observation-is-a-route--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="observation-is-a-route--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [one-reader-several-conditions][] ← <a id="one-reader-several-conditions--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="one-reader-several-conditions--two-sided-regulation-and-late-reading"></a>[two-sided-regulation-and-late-reading][]
+- [one-root-to-its-edge][] ← <a id="one-root-to-its-edge--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][]
 - [one-search-one-line][] ← <a id="one-search-one-line--fixed-places-and-sole-lines"></a>[fixed-places-and-sole-lines][]
 - [one-step-missing-laws][] ← <a id="one-step-missing-laws--laws-of-one-step-complete"></a>[laws-of-one-step-complete][]
 - [only-the-order-of-change-shows][] ← <a id="only-the-order-of-change-shows--laws-at-coarser-steps"></a>[laws-at-coarser-steps][]
@@ -697,6 +698,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [normal-forms-need-decided-apartness]: theories/becoming/results/records/normal-forms-need-decided-apartness.md
 [observation-is-a-route]: theories/becoming/results/records/observation-is-a-route.md
 [one-reader-several-conditions]: theories/becoming/results/records/one-reader-several-conditions.md
+[one-root-to-its-edge]: theories/becoming/results/records/one-root-to-its-edge.md
 [one-search-one-line]: theories/becoming/results/records/one-search-one-line.md
 [one-step-missing-laws]: theories/becoming/results/records/one-step-missing-laws.md
 [only-the-order-of-change-shows]: theories/becoming/results/records/only-the-order-of-change-shows.md
