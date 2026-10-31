@@ -6461,6 +6461,16 @@
    "module": "Becoming.GrammarCrossing",
    "category": "model-witness",
    "reason": "a closed region come into along a relation that is not symmetric, on two occurrences: a witness of Becoming.GrammarCrossing (BD2)"
+  },
+  "Becoming.Continuity.balancing_iff_notGoingOut": {
+   "module": "Becoming.BalanceRegions",
+   "category": "general-structure",
+   "reason": "relata listed without repetition and equality decided, transfers balancing a step exist exactly where the total is conserved on every region not gone out of along adjacency among the listed relata, for any levels and every Bool relation on any type; the base's case on webs, balancesOn_iff_notGoingOut, goes through balancesOn_iff_conserved, so nothing on the base uses this law (BD3)"
+  },
+  "Becoming.Continuity.closes_iff_notComingIn": {
+   "module": "Becoming.BalanceRegions",
+   "category": "general-structure",
+   "reason": "a family the relation closes is exactly a region not come into along that adjacency, by «对称则不出当且仅当逆不出»: for every Bool relation and list of relata on any type; the base reads balance on regions through balancesOn_iff_notGoingOut, and nothing on it uses this law (BD3)"
   }
  },
  "instances": {

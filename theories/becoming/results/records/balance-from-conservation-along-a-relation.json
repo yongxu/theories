@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T18:00:00+00:00",
+  "reviewed_at_utc": "2026-10-31T22:16:00+00:00",
   "statement": {
     "en": "Over finitely many relata, transfers between related relata that balance a step exist exactly where the total is conserved on every family the relation closes, and a law reading only related relata that conserves its total gives that conservation.",
     "zh": "在有限多个关系项上，只在相关关系项之间移动、使一步平衡的转移，恰在总量于关系封闭的每个家族上守恒时存在；只读相关关系项、守恒总量的规律给出这一守恒。"
@@ -89,6 +89,19 @@
         "Becoming.Continuity.Teleport.no_transfers_apart",
         "Becoming.Continuity.Teleport.balanced_together"
       ]
+    },
+    {
+      "en": "On the grammar, adjacency among the listed relata is symmetric, and a family the relation closes, membership a test, is exactly a region not gone out of along that adjacency, not come into, and closed under it. So, relata listed without repetition and equality decided, transfers along the relation balancing a step exist exactly where the total is conserved on every such region; on a web, at every step likewise.",
+      "zh": "在文法上：列出关系项之间的相邻对称；关系封闭的家族（属为一检验）恰是沿此相邻不出的域，亦恰是沿之不入的域与在其下闭的域。故在不重复列出、相等可判定的关系项上，沿关系使一步平衡的转移，恰在总量于每个这样的域上守恒时存在；网在每一步亦然。",
+      "declarations": [
+        "Becoming.Continuity.adjacentListed",
+        "Becoming.Continuity.adjacentListed_symm",
+        "Becoming.Continuity.closes_iff_closed",
+        "Becoming.Continuity.closes_iff_notGoingOut",
+        "Becoming.Continuity.closes_iff_notComingIn",
+        "Becoming.Continuity.balancing_iff_notGoingOut",
+        "Becoming.Continuity.balancesOn_iff_notGoingOut"
+      ]
     }
   ],
   "hypotheses": [
@@ -127,6 +140,11 @@
       "en": "Infinitely many relata, or a relation that is not decided.",
       "zh": "无限多个关系项，或不可判定的关系。",
       "kind": "scope"
+    },
+    {
+      "en": "That conservation on each closure under the listed adjacency (the «所闭» form) is enough: a region not gone out of is the union of its members' closures, but no closure is decided as a test here, nor a total summed over closures.",
+      "zh": "在所列相邻下每个闭包（«所闭» 形式）上守恒即足：不出之域是其成员闭包之并，但此处未把闭包判定为检验，也未在闭包上求总量之和。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [
@@ -144,8 +162,8 @@
     "no-ethical-premise"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, each with an empty axiom report. No independent review.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理，公理报告均为空。没有独立审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, and Becoming.BalanceRegions (the seventh law) at receipt 20261031T225858.600119Z, 7 declarations (6 theorems), each with an empty axiom report. No independent review of Becoming.Continuity; Becoming.BalanceRegions and the seventh law read by an independent AI reader, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions（第七律），回执 20261031T225858.600119Z，7 个声明中 6 条定理；公理报告均为空。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 与第七律经一独立 AI 读者审读，所见皆采纳。"
   },
   "next_delta": {
     "en": "A flux chosen local, depending only on the levels near each related pair, for laws that read within a bounded neighbourhood, as for cellular automata on lattices; and transfers within what stands on their source where the law moves units, as particle displacements do.",
@@ -195,7 +213,14 @@
     "Becoming.Continuity.within",
     "Becoming.Continuity.within_add",
     "Becoming.Continuity.within_received",
-    "Becoming.Continuity.within_sent"
+    "Becoming.Continuity.within_sent",
+    "Becoming.Continuity.adjacentListed",
+    "Becoming.Continuity.adjacentListed_symm",
+    "Becoming.Continuity.closes_iff_closed",
+    "Becoming.Continuity.closes_iff_notGoingOut",
+    "Becoming.Continuity.closes_iff_notComingIn",
+    "Becoming.Continuity.balancing_iff_notGoingOut",
+    "Becoming.Continuity.balancesOn_iff_notGoingOut"
   ],
   "dependencies": [
     {
@@ -204,6 +229,22 @@
       "detail": {
         "en": "FL1 reads balance as thermodynamics' first law with locality, stating locality as one transfer per exchange and store; here the transfers are derived from conservation on every closed family, and locality is a property of the law.",
         "zh": "FL1 把平衡读作带局部性的热力学第一定律，把局部性陈述为每对交换与储存一个转移；这里转移由每个封闭家族上的守恒推出，局部性是规律的性质。"
+      }
+    },
+    {
+      "id": "not-going-out-of-a-region",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«不出» from Becoming.GrammarCrossing and its laws «不外者内则不出当且仅当闭» and «对称则不出当且仅当逆不出»: a family the relation closes is read as a region not gone out of along adjacency among the listed relata and not come into; the seventh law rests on them.",
+        "zh": "复用 Becoming.GrammarCrossing 的 «不出» 及其律 «不外者内则不出当且仅当闭»、«对称则不出当且仅当逆不出»：关系封闭的家族读作沿列出关系项之间的相邻不出且不入的域；第七律以之为据。"
+      }
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GrammarLaws.uncrossed_of_closed: a region closed under a relation and under its converse is one the relation crosses neither way; closes_iff_closed reads Continuity's closed family through it, the adjacency being symmetric.",
+        "zh": "复用 GrammarLaws.uncrossed_of_closed：在关系及其逆下皆闭之域，关系两向皆不越；closes_iff_closed 借之读 Continuity 之封闭家族，相邻对称。"
       }
     }
   ],
@@ -303,6 +344,26 @@
         "Becoming.Flow.taken",
         "Becoming.Flow.given"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
+      "role": "proof",
+      "sha256": "cc33480fece6eba885d95f1109da463c0582d1f788a98844ef5dbbede8c40501",
+      "declarations": [
+        "Becoming.Continuity.adjacentListed",
+        "Becoming.Continuity.adjacentListed_symm",
+        "Becoming.Continuity.closes_iff_closed",
+        "Becoming.Continuity.closes_iff_notGoingOut",
+        "Becoming.Continuity.closes_iff_notComingIn",
+        "Becoming.Continuity.balancing_iff_notGoingOut",
+        "Becoming.Continuity.balancesOn_iff_notGoingOut"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T225858.600119Z/verification.json",
+      "role": "receipt",
+      "sha256": "d68a9f3d148d91b05457ec36826b4ee730f3719420b926cdef98ed7c873bfe82",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -310,6 +371,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T124646.497747Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Continuity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T225858.600119Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BalanceRegions",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -322,6 +390,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): Thermodynamics' first law named in full in the correspondence and a dependency, apart from the spine's first law.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：对应与一项依赖中的热力学第一定律写出全名，与脊柱的第一律分开。"
+    },
+    {
+      "en": "1 November 2026, board item BD3: a seventh law reads the record on the grammar's «不出» (Becoming.BalanceRegions): a family the relation closes is exactly a region not gone out of along adjacency among the listed relata, not come into, and closed under it, proved through the grammar's laws, so transfers balancing a step exist exactly where the total is conserved on every such region; dependencies on not-going-out-of-a-region and master-laws-on-the-grammar; one item on what is not shown, the «所闭» form. No earlier statement, law or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 BD3：第七律于文法之 «不出» 上读本记录（Becoming.BalanceRegions）：关系所封闭之家族恰是沿所列关系项间之相邻不出之域，亦恰是不入之域与在其下闭之域，皆由文法之律证得，故使一步平衡之转移恰在总量于每一此域上守恒时存在；增对 not-going-out-of-a-region 与 master-laws-on-the-grammar 之依赖；所不示者增一项，即 «所闭» 形式。先前之陈述、规律与声明皆未变。"
     }
   ]
 }

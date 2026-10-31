@@ -67,7 +67,7 @@ In graph terms a region nothing goes out of has no edge leaving it, and a closed
 - related, not a proved adapter: [levels-of-closure](levels-of-closure.md). The closures under a relation are the least boundaries along it, each not gone out of.
 - related, not a proved adapter: [reach-from-a-seed](reach-from-a-seed.md). A like gap of double negation: refuting every separation refutes only being unreached, as not going out gives only what is not outside.
 
-**Used by:** [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md) · [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md)
+**Used by:** [balance-from-conservation-along-a-relation](balance-from-conservation-along-a-relation.md) · [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md) · [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md)
 
 <a id="sources--来源"></a>
 ### Sources

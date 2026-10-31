@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 354 | 17,156 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 355 | 17,162 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -86,6 +86,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Audit.lean](lean-declarations/valuation.md#module-037c0640f9e2) | Valuation development and liangzhi |
 | [Audit.lean](lean-declarations/valuation.md#module-6b4c32dcec82) | Valuation development and liangzhi |
 | [AxiomFree.lean](lean-declarations/valuation.md#module-697097c023d4) | Valuation development and liangzhi |
+| [BalanceRegions.lean](lean-declarations/becoming-core.md#module-cf7d19ecd88a) | Becoming pure core |
 | [BasicRiskSharing.lean](lean-declarations/ethics.md#module-e98555289c3e) | Normative grounding and generative direction |
 | [Becoming.lean](lean-declarations/becoming-core.md#module-cbce862e630a) | Becoming pure core |
 | [BecomingCompatibility.lean](lean-declarations/core.md#module-55e216de65da) | Generative core and relational structure |

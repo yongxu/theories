@@ -139,6 +139,7 @@ import Becoming.SeedReach
 import Becoming.ScopedReach
 import Becoming.Boundaries
 import Becoming.ConveyanceBoundaries
+import Becoming.BalanceRegions
 import Becoming.Weightings
 import Becoming.Relevance
 import Becoming.Testing
@@ -2748,6 +2749,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Flow.closures_not_within_region`); in the clearing the resource's region is no boundary along
   conveyance nor along living on (`Clearing.resource_no_boundary`). A leaf, the World's case of the
   crossing laws; the cut keeps its definition in `Becoming.Standpoints`.
+* `Becoming.BalanceRegions` (L1): balance region by region, `Becoming.Continuity` read on the root
+  (board item BD3). Adjacency among the listed relata is a symmetric relation of the grammar
+  (`Continuity.adjacentListed`, `Continuity.adjacentListed_symm`); a family the relation closes,
+  membership a test, is exactly a region closed under that adjacency, one not gone out of along it
+  and one not come into (`Continuity.closes_iff_closed`, `Continuity.closes_iff_notGoingOut`,
+  `Continuity.closes_iff_notComingIn`), proved through `GrammarLaws.uncrossed_of_closed`,
+  `«不外者内则不出当且仅当闭»` and `«对称则不出当且仅当逆不出»`. So, over relata listed without repetition, equality
+  decided, transfers along the relation that balance a step exist exactly where the total is
+  conserved on every region not gone out of along that adjacency
+  (`Continuity.balancing_iff_notGoingOut`), and on a web at every step likewise
+  (`Continuity.balancesOn_iff_notGoingOut`). A leaf; balance from conservation on each closure under
+  the adjacency (the `«所闭»` form) is not shown.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
