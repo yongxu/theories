@@ -334,6 +334,16 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('two premises', lead)
         self.assertNotIn('fixes scope', lead)
 
+    def test_the_repository_notes_are_told_from_the_body(self):
+        # the opening's notes say once, just before them and naming no one, that they are written apart from its
+        # first-person text: what an AI label on a reading would otherwise tell
+        opening = navigation.readme_opening()
+        body = opening.partition('\n### Notes\n')[0]
+        last = body.rstrip().rsplit('\n\n', 1)[-1]
+        self.assertIn('written apart from the first-person text', last)
+        self.assertEqual(opening.count('written apart from'), 1)
+        self.assertNotRegex(last, r'\b(AI|Ren|Claude)\b')
+
 
 if __name__ == '__main__':
     unittest.main()

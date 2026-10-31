@@ -8,8 +8,8 @@ The design (the audit, two drafts, two cold readers), the review and the tighten
 
 ```text
 Result(s): no new result; a generated first screen for README, a proposal to OPENING, OPENING's leading comment,
-       and three AI-written notes changed ([^ethics] and [^good-evil] in label and one sentence each, [^transitions] in
-       one label).
+       one AI-side line before its notes, and three AI-written notes changed ([^ethics] and [^good-evil] in label and
+       one sentence each, [^transitions] in one label).
 Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), placed by navigation.first_screen between
        the status line and the opening. Four points:
        - what it is;
@@ -32,7 +32,10 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        (3) the lead after the opening drops what the screen now says (what the theory is, the two premises, the
        opening's standing), so README keeps one text of each; its Lean sentence now says most laws are checked on the
        pure core and the rest in the periphery with their axioms reported (FS6); its comment says what moved.
-       (4) OPENING: the body unchanged. Its leading comment says where it is placed; [^ethics] now opens "Open, and
+       (4) OPENING: the first-person body unchanged. Its leading comment says where it is placed and that the
+       first-person text changes only with Ren; after the date line, one AI-side line says "The notes below are written
+       apart from the first-person text above and follow the current account" (in README, just above the notes);
+       [^ethics] now opens "Open, and
        offered for life: no verdict binding every possible mind is claimed" (the clause moved from its T8 sentence,
        which now adds that whether a stronger, universal warrant exists stays open, 07's universal-practical-warrant,
        a question the ethics does not wait on), and [^good-evil] reads good and evil as
@@ -46,10 +49,12 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        (7) the eight records citing OPENING.md without an anchor (closed-capture, confined-rise-within-a-whole,
        mutual-dependence-and-its-pace, readers-drawn-from-the-selected, relative-position-is-zero-sum,
        what-position-reads, what-the-dynamics-leave-open, whole-drawing-beyond-renewal-ends) were read against the
-       change and re-pointed, one line of rebinds.jsonl. Five are linked from a note, so the source check reads only
-       those lines; the three no note links (confined-rise-within-a-whole, what-position-reads,
-       what-the-dynamics-leave-open) bind the whole file and were read again and re-pointed after each later change
-       ([^good-evil]'s first sentence, then [^transitions]'s label), in the same line. Each reads a note left as it
+       change and re-pointed, one line of rebinds.jsonl. Five are linked from a note, so the source check reads their
+       lines and any rewrite before the first heading (the leading comment); the three no note links
+       (confined-rise-within-a-whole, what-position-reads, what-the-dynamics-leave-open) bind every rewritten line.
+       The three were read again and re-pointed after each later change ([^good-evil]'s first sentence, then
+       [^transitions]'s label, then the line before the notes with the comment's second change), and the five after
+       the comment's second change, in the same line. Each reads a note left as it
        was ([^collective], [^aligned] and [^race], [^no-law], [^present], the meta-attractor's), or [^transitions],
        changed only in its label, or, for what-the-dynamics-leave-open, the sentences of [^ethics] on what reads only
        the dynamics, which are unchanged; no live text keeps the replaced phrases.
@@ -64,10 +69,13 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        cancer as a confined rise as "a reading", no longer "the AI's reading": this departs, on the front page only,
        from AGENTS's "every reading keeps its AI label" and amendment 1's never-cut "an AI label on a reading", under
        the rule that front pages name no person or AI; the label stays in the record confined-rise-within-a-whole, and
-       the note now matches the other notes' plain "a reading". A test checks that the screen names no one.
-       (10) tests: test_featured_results.py, 19 to 24: FirstScreenTests (the fields and the screen's fixed point,
+       the note now matches the other notes' plain "a reading". What the label tells on OPENING, that the notes'
+       voice is not the first-person body's, the line before the notes now says once, naming no one (the
+       coordinator's condition for the departure). Tests check that the screen names no one and that the line stands
+       once, last before the notes.
+       (10) tests: test_featured_results.py, 19 to 25: FirstScreenTests (the fields and the screen's fixed point,
        refusals, counting as the budgets do, links kept on the page, the repository's screen keeping both roles and
-       naming no one) and the placement test (status, screen, opening, lead, results, one copy, no field left);
+       naming no one, the repository's notes told from the body) and the placement test (status, screen, opening, lead, results, one copy, no field left);
        validate_goals reports a missing opening once (CODE-9).
 Premises: none added.
 Evidence:

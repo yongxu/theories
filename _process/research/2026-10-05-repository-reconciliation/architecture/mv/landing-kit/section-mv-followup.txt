@@ -46,8 +46,8 @@ Evidence:
        - on the current dump none of the shapes occurs (no opaque, no hygienic name, no _arg_pusher, no Init
          auxiliary realized in a package module, no lifted proof under an inductive type), so no figure, walk or reach
          changes; master_laws.py rerun on the branch's base receipt (20261030T232750.486801Z) and, in the landing
-         rehearsals merged with main, on RF-M.3's (20261031T013649.265381Z) and HE2's (20261031T054654.692180Z)
-         changes only the hashed inputs (boundary.py and boundary_check.lean);
+         rehearsals merged with main, on RF-M.3's (20261031T013649.265381Z), HE2's (20261031T054654.692180Z) and
+         RR2's (20261031T085229.010243Z) changes only the hashed inputs (boundary.py and boundary_check.lean);
        - the cases of boundary/check/controls-run.log on U4's build (31: its 21 controls, U4's two rows and U4's
          controls adapted among them, and 10 name-test queries), rerun after each re-check's fixes: output
          byte-identical;
@@ -56,9 +56,10 @@ Evidence:
          Rp.brecOn.go, Cfg.elim) as §3.0 and §3.2 say (TheLeanCheck, entries 18 to 27);
        - the fourth re-check's verifier reproduced each of its findings, R4-1 to R4-3 on Lean 4.29.1 and R4-4 on
          report() with a stubbed Lean check; after the fixes, the dumps of core receipts 20261031T013649.265381Z
-         (RF-M.3's) and 20261031T054654.692180Z (HE2's) give the same auxiliaries, walks, forwarders, laws and root
+         (RF-M.3's), 20261031T054654.692180Z (HE2's) and 20261031T085229.010243Z (RR2's) give the same auxiliaries, walks, forwarders, laws and root
          constants under the rule before and after them, and outside is empty (on RF-M.3's, 52,346 constants: 26,351 auxiliaries, 2,258 root constants, 406 grammar laws, 14
-         forwarders, 20,120 walks; on HE2's, 52,419: 26,383, 2,346, 430, 15 and 20,157; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
+         forwarders, 20,120 walks; on HE2's, 52,419: 26,383, 2,346, 430, 15 and 20,157; on RR2's, 52,501: 26,406,
+         2,346, 430, 15 and 20,200; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
          by boundary/check/compare_rule.py); at the fixes the same comparison on core 20261030T232750.486801Z's dump
          and on U4's build gave the same, with no output kept; U4's controls and the end-to-end report again as above;
          U4's leaf Becoming.RootForms (u4-edge) has none of the new shapes;
