@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2221,
-    "distinct_byte_contents": 1758,
-    "byte_identical_duplicate_groups": 191,
+    "lean_paths": 2231,
+    "distinct_byte_contents": 1767,
+    "byte_identical_duplicate_groups": 192,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1239,
+      "development-attempt": 1249,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 943
@@ -3876,6 +3876,102 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cg2-outrun/tree/Becoming/Exclusion.lean",
       "sha256": "32089a7c18c570fc4a3b9e1b972162829b058f82b0a19d5b1240055bc2f8cd3d",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/amounts-and-world/Attrib.lean",
+      "sha256": "30bbda560afbd278900de76d7da57604e18c3e3f2000d04c30bda36e5be2e72e",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/architecture-skeptic/Sk.lean",
+      "sha256": "b357aa0a85165b8a862149141e85613515582d3aca45b2b932c78ba59ecd9698",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/architecture/Arch.lean",
+      "sha256": "e5933fb481c9e20f2a8aad52bd86212c372b1497ee5d5fd0c36e101c6b7a951d",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/continuation-condition/Check.lean",
+      "sha256": "5a619af6d4e0661bdf27e8ee01cc1c977da14d49e02dd028713626cf12c906b7",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/evolution/EvoSketch.lean",
+      "sha256": "c47ba744db5c49f7434f63db7c6e8cbeae12307db191b367cd1b40546abd0931",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C-skeptic/NotTrans.lean",
+      "sha256": "7c1f40352aabea09cdd8a4cc61d28277e9fbd79631491b43b338668cedf27abb",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C-skeptic/P2.lean",
+      "sha256": "e1f06ecec663c5f667f2e158327a3f1a3288ffe5c0402587d43857d041c4133a",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C-skeptic/Pareto.lean",
+      "sha256": "61bc685f939e34cfc7a5ba984211585805273a303e8104c4799235fc1c3a219d",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C/P2.lean",
+      "sha256": "e1f06ecec663c5f667f2e158327a3f1a3288ffe5c0402587d43857d041c4133a",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C/Pareto.lean",
+      "sha256": "5ee32a11bbf1511777ab196d9826a10b9c9dd1d25db11aee59557f7cdba2fb4d",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -12390,6 +12486,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md",
@@ -127972,6 +128069,73 @@
       },
       "print_axioms_commands": 41
     },
+    "30bbda560afbd278900de76d7da57604e18c3e3f2000d04c30bda36e5be2e72e": {
+      "byte_size": 4041,
+      "line_count": 87,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "total",
+          "qualified_name_hint": "AmountsScratch.total",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "attributed",
+          "qualified_name_hint": "AmountsScratch.attributed",
+          "line": 11
+        },
+        {
+          "kind": "theorem",
+          "name": "total_add",
+          "qualified_name_hint": "AmountsScratch.total_add",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "total_ind_absent",
+          "qualified_name_hint": "AmountsScratch.total_ind_absent",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "total_ind_unique",
+          "qualified_name_hint": "AmountsScratch.total_ind_unique",
+          "line": 27
+        },
+        {
+          "kind": "theorem",
+          "name": "given_eq_arrivals",
+          "qualified_name_hint": "AmountsScratch.given_eq_arrivals",
+          "line": 44
+        },
+        {
+          "kind": "theorem",
+          "name": "enclosure_needed",
+          "qualified_name_hint": "AmountsScratch.enclosure_needed",
+          "line": 74
+        },
+        {
+          "kind": "theorem",
+          "name": "double_counting",
+          "qualified_name_hint": "AmountsScratch.double_counting",
+          "line": 80
+        }
+      ],
+      "declaration_counts": {
+        "def": 2,
+        "theorem": 6
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
+    },
     "30bcc293221bad98b29cc98fa577f02ac5306a1c866baf8ae6530f6d940e5e1f": {
       "byte_size": 503,
       "line_count": 12,
@@ -205584,6 +205748,122 @@
       },
       "print_axioms_commands": 0
     },
+    "5a619af6d4e0661bdf27e8ee01cc1c977da14d49e02dd028713626cf12c906b7": {
+      "byte_size": 4587,
+      "line_count": 94,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "inductive",
+          "name": "Reach",
+          "qualified_name_hint": "Reach",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "Cont",
+          "qualified_name_hint": "Cont",
+          "line": 9
+        },
+        {
+          "kind": "inductive",
+          "name": "Fam",
+          "qualified_name_hint": "Fam",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "Whole",
+          "qualified_name_hint": "Whole",
+          "line": 17
+        },
+        {
+          "kind": "def",
+          "name": "Joined",
+          "qualified_name_hint": "Joined",
+          "line": 18
+        },
+        {
+          "kind": "def",
+          "name": "ConstToEnd",
+          "qualified_name_hint": "ConstToEnd",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "HoldsEffects",
+          "qualified_name_hint": "HoldsEffects",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "joined_step",
+          "qualified_name_hint": "joined_step",
+          "line": 26
+        },
+        {
+          "kind": "theorem",
+          "name": "joined_constToEnd",
+          "qualified_name_hint": "joined_constToEnd",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "joined_const_at",
+          "qualified_name_hint": "joined_const_at",
+          "line": 38
+        },
+        {
+          "kind": "theorem",
+          "name": "joined_holdsEffects",
+          "qualified_name_hint": "joined_holdsEffects",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "famNoOutside_iff_joined",
+          "qualified_name_hint": "famNoOutside_iff_joined",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "idle",
+          "qualified_name_hint": "idle",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "scope_agree",
+          "qualified_name_hint": "scope_agree",
+          "line": 61
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_snoc",
+          "qualified_name_hint": "reach_snoc",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "locality",
+          "qualified_name_hint": "locality",
+          "line": 74
+        }
+      ],
+      "declaration_counts": {
+        "def": 5,
+        "inductive": 2,
+        "theorem": 9
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 7
+    },
     "5a8a2765ca5ede5dbf66071c18c80e960fd270009ba42ff30b02312b870ffa8b": {
       "byte_size": 27994,
       "line_count": 506,
@@ -215708,6 +215988,73 @@
       },
       "print_axioms_commands": 30
     },
+    "5ee32a11bbf1511777ab196d9826a10b9c9dd1d25db11aee59557f7cdba2fb4d": {
+      "byte_size": 4470,
+      "line_count": 93,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "IncludesOn",
+          "qualified_name_hint": "Sketch.IncludesOn",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "ExceedsOn",
+          "qualified_name_hint": "Sketch.ExceedsOn",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "WidensOn",
+          "qualified_name_hint": "Sketch.WidensOn",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "WidensBy",
+          "qualified_name_hint": "Sketch.WidensBy",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "IncreasingAt",
+          "qualified_name_hint": "Sketch.IncreasingAt",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "Increasing",
+          "qualified_name_hint": "Sketch.Increasing",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "exceeds_or_not",
+          "qualified_name_hint": "Sketch.exceeds_or_not",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "increasing_of_increasingAt",
+          "qualified_name_hint": "Sketch.increasing_of_increasingAt",
+          "line": 40
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "5f41f38f86aee8ca6fda29b7eabd4d3b220f07ec4ef314b12fbbf99c2ad6b9c4": {
       "byte_size": 50253,
       "line_count": 763,
@@ -222708,6 +223055,73 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "61bc685f939e34cfc7a5ba984211585805273a303e8104c4799235fc1c3a219d": {
+      "byte_size": 4519,
+      "line_count": 95,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "IncludesOn",
+          "qualified_name_hint": "Sketch.IncludesOn",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "ExceedsOn",
+          "qualified_name_hint": "Sketch.ExceedsOn",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "WidensOn",
+          "qualified_name_hint": "Sketch.WidensOn",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "WidensBy",
+          "qualified_name_hint": "Sketch.WidensBy",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "IncreasingAt",
+          "qualified_name_hint": "Sketch.IncreasingAt",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "Increasing",
+          "qualified_name_hint": "Sketch.Increasing",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "exceeds_or_not",
+          "qualified_name_hint": "Sketch.exceeds_or_not",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "increasing_of_increasingAt",
+          "qualified_name_hint": "Sketch.increasing_of_increasingAt",
+          "line": 40
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
     },
     "61d1986d89fbd54b5a272961af8f9af7660fa3883fe12c820ffee7a283137013": {
       "byte_size": 607,
@@ -272973,6 +273387,85 @@
         "unsafe": []
       },
       "print_axioms_commands": 10
+    },
+    "7c1f40352aabea09cdd8a4cc61d28277e9fbd79631491b43b338668cedf27abb": {
+      "byte_size": 1712,
+      "line_count": 28,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "IncludesOn",
+          "qualified_name_hint": "Skeptic.IncludesOn",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "ExceedsOn",
+          "qualified_name_hint": "Skeptic.ExceedsOn",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "WidensOn",
+          "qualified_name_hint": "Skeptic.WidensOn",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "Increasing",
+          "qualified_name_hint": "Skeptic.Increasing",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "items",
+          "qualified_name_hint": "Skeptic.items",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "one",
+          "qualified_name_hint": "Skeptic.one",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "R",
+          "qualified_name_hint": "Skeptic.R",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "increasing",
+          "qualified_name_hint": "Skeptic.increasing",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "not_widens",
+          "qualified_name_hint": "Skeptic.not_widens",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "not_transitive",
+          "qualified_name_hint": "Skeptic.not_transitive",
+          "line": 19
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
     },
     "7c31783da4f9f8dbffcdf1c33a9951871c8eae9526a9397c1909677f50f36c06": {
       "byte_size": 36811,
@@ -383205,6 +383698,75 @@
       },
       "print_axioms_commands": 11
     },
+    "b357aa0a85165b8a862149141e85613515582d3aca45b2b932c78ba59ecd9698": {
+      "byte_size": 1440,
+      "line_count": 25,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "Rel",
+          "qualified_name_hint": "Rel",
+          "line": 2
+        },
+        {
+          "kind": "inductive",
+          "name": "Reach",
+          "qualified_name_hint": "Reach",
+          "line": 3
+        },
+        {
+          "kind": "def",
+          "name": "Cont",
+          "qualified_name_hint": "Cont",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "Within",
+          "qualified_name_hint": "Within",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "NoOutside",
+          "qualified_name_hint": "NoOutside",
+          "line": 8
+        },
+        {
+          "kind": "theorem",
+          "name": "noOutside_holds",
+          "qualified_name_hint": "noOutside_holds",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "noOutside_fails",
+          "qualified_name_hint": "noOutside_fails",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "unanimity_is_ext",
+          "qualified_name_hint": "unanimity_is_ext",
+          "line": 19
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 3,
+        "inductive": 1,
+        "theorem": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
+    },
     "b36ea4f3949ccb1354fdb4e5bb5bc6a46ee50f097f96e0996526b977cb1c8d12": {
       "byte_size": 12344,
       "line_count": 253,
@@ -421993,6 +422555,165 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "c47ba744db5c49f7434f63db7c6e8cbeae12307db191b367cd1b40546abd0931": {
+      "byte_size": 4193,
+      "line_count": 84,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "Sketch.«际»",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "«而»",
+          "qualified_name_hint": "Sketch.«而»",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Sketch.«则»",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "«合»",
+          "qualified_name_hint": "Sketch.«合»",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "«一»",
+          "qualified_name_hint": "Sketch.«一»",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "«续»",
+          "qualified_name_hint": "Sketch.«续»",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "«有后»",
+          "qualified_name_hint": "Sketch.«有后»",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "«亡»",
+          "qualified_name_hint": "Sketch.«亡»",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "«闭»",
+          "qualified_name_hint": "Sketch.«闭»",
+          "line": 13
+        },
+        {
+          "kind": "inductive",
+          "name": "«尽»",
+          "qualified_name_hint": "Sketch.«尽»",
+          "line": 14
+        },
+        {
+          "kind": "def",
+          "name": "«延»",
+          "qualified_name_hint": "Sketch.«延»",
+          "line": 16
+        },
+        {
+          "kind": "def",
+          "name": "Gate",
+          "qualified_name_hint": "Sketch.Gate",
+          "line": 22
+        },
+        {
+          "kind": "theorem",
+          "name": "«门则亡»",
+          "qualified_name_hint": "Sketch.«门则亡»",
+          "line": 25
+        },
+        {
+          "kind": "theorem",
+          "name": "«门则尽»",
+          "qualified_name_hint": "Sketch.«门则尽»",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "«降则尽»",
+          "qualified_name_hint": "Sketch.«降则尽»",
+          "line": 37
+        },
+        {
+          "kind": "theorem",
+          "name": "«延尽不并»",
+          "qualified_name_hint": "Sketch.«延尽不并»",
+          "line": 49
+        },
+        {
+          "kind": "def",
+          "name": "excess",
+          "qualified_name_hint": "Sketch.excess",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "excess_shift",
+          "qualified_name_hint": "Sketch.excess_shift",
+          "line": 61
+        },
+        {
+          "kind": "def",
+          "name": "goes",
+          "qualified_name_hint": "Sketch.goes",
+          "line": 68
+        },
+        {
+          "kind": "def",
+          "name": "stops",
+          "qualified_name_hint": "Sketch.stops",
+          "line": 69
+        },
+        {
+          "kind": "theorem",
+          "name": "goes_on",
+          "qualified_name_hint": "Sketch.goes_on",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "stops_ends",
+          "qualified_name_hint": "Sketch.stops_ends",
+          "line": 73
+        },
+        {
+          "kind": "theorem",
+          "name": "shares_do_not_decide",
+          "qualified_name_hint": "Sketch.shares_do_not_decide",
+          "line": 75
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 13,
+        "inductive": 1,
+        "theorem": 8
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
     },
     "c47d3e43731cd4ec39045b7548ce395f41773cb11cbbb8c66920026bc95106cc": {
       "byte_size": 13231,
@@ -478365,6 +479086,73 @@
       },
       "print_axioms_commands": 0
     },
+    "e1f06ecec663c5f667f2e158327a3f1a3288ffe5c0402587d43857d041c4133a": {
+      "byte_size": 4518,
+      "line_count": 94,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "IncludesOn",
+          "qualified_name_hint": "Sketch.IncludesOn",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "ExceedsOn",
+          "qualified_name_hint": "Sketch.ExceedsOn",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "WidensOn",
+          "qualified_name_hint": "Sketch.WidensOn",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "WidensBy",
+          "qualified_name_hint": "Sketch.WidensBy",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "IncreasingAt",
+          "qualified_name_hint": "Sketch.IncreasingAt",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "Increasing",
+          "qualified_name_hint": "Sketch.Increasing",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "exceeds_or_not",
+          "qualified_name_hint": "Sketch.exceeds_or_not",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "increasing_of_increasingAt",
+          "qualified_name_hint": "Sketch.increasing_of_increasingAt",
+          "line": 40
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
+    },
     "e1f475c25fd877b0ccf8006a5eb06ceb909ad00150fd9ace8b55cc3dad5d3cd0": {
       "byte_size": 21663,
       "line_count": 371,
@@ -485167,6 +485955,68 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "e5933fb481c9e20f2a8aad52bd86212c372b1497ee5d5fd0c36e101c6b7a951d": {
+      "byte_size": 2229,
+      "line_count": 42,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Fr",
+          "qualified_name_hint": "Fr",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "Ext",
+          "qualified_name_hint": "Ext",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "Cmp",
+          "qualified_name_hint": "Cmp",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "cmp_independent",
+          "qualified_name_hint": "cmp_independent",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "cmp_of_unanimity",
+          "qualified_name_hint": "cmp_of_unanimity",
+          "line": 22
+        },
+        {
+          "kind": "theorem",
+          "name": "cmp_iff_contains_unanimity",
+          "qualified_name_hint": "cmp_iff_contains_unanimity",
+          "line": 27
+        },
+        {
+          "kind": "theorem",
+          "name": "valid_forbids_nothing",
+          "qualified_name_hint": "valid_forbids_nothing",
+          "line": 35
+        }
+      ],
+      "declaration_counts": {
+        "def": 2,
+        "structure": 1,
+        "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
     },
     "e5a22639f61ddca75b88eca04c105ecb83870953fee0e51c850bab1f1fc529e2": {
       "byte_size": 46500,
@@ -534248,6 +535098,10 @@
     "df7386a8440ec8227adfbadc14cb82695933c5be7c3dd5de03bb7f0879ccf964": [
       "sources/20-codex-theory-sessions-2026-10-05/full-picture-conjecture/work/cross-session-completeness/packaged-reproduction/source-snapshots/FullGUTFrontier.lean",
       "sources/20-codex-theory-sessions-2026-10-05/full-picture-conjecture/work/cross-session-completeness/source-snapshots/FullGUTFrontier.lean"
+    ],
+    "e1f06ecec663c5f667f2e158327a3f1a3288ffe5c0402587d43857d041c4133a": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C-skeptic/P2.lean",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/order-C/P2.lean"
     ],
     "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8": [
       "_process/history/worktree-salvage-2026-10-18/jolly-pike-140c94/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261011T170859.998618Z/GenerativeCore.lean",
