@@ -2061,6 +2061,7 @@
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck.json",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-review.json",
         "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck2.json",
         "tools/research/boundary.py",
         "tools/research/boundary_check.lean",
         "tools/research/tests/test_boundary.py"

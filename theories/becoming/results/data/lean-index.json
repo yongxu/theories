@@ -30,7 +30,7 @@
       "working-source": 939
     },
     "working_named_theorem_lemma_occurrences": 29165,
-    "working_explicit_named_declaration_occurrences": 42757,
+    "working_explicit_named_declaration_occurrences": 42761,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 347,
@@ -24812,7 +24812,7 @@
     },
     {
       "path": "tools/research/boundary_check.lean",
-      "sha256": "fb0cae07472e46b1fd6d6b7730038307a68b7aeacb01ee7613eaca9f93b41568",
+      "sha256": "b4d3a1133ea6990c642db099072b4a45592ae29f70792f85005e4032d37cfcdd",
       "role": "working-source",
       "group": "other",
       "package_readme": null,
@@ -381400,6 +381400,231 @@
       },
       "print_axioms_commands": 4
     },
+    "b4d3a1133ea6990c642db099072b4a45592ae29f70792f85005e4032d37cfcdd": {
+      "byte_size": 28760,
+      "line_count": 532,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Hyp",
+          "qualified_name_hint": "BoundaryCheck.Hyp",
+          "line": 97
+        },
+        {
+          "kind": "structure",
+          "name": "Entry",
+          "qualified_name_hint": "BoundaryCheck.Entry",
+          "line": 102
+        },
+        {
+          "kind": "def",
+          "name": "moduleOf",
+          "qualified_name_hint": "BoundaryCheck.moduleOf",
+          "line": 111
+        },
+        {
+          "kind": "def",
+          "name": "grammarModule",
+          "qualified_name_hint": "BoundaryCheck.grammarModule",
+          "line": 118
+        },
+        {
+          "kind": "def",
+          "name": "rootModule",
+          "qualified_name_hint": "BoundaryCheck.rootModule",
+          "line": 120
+        },
+        {
+          "kind": "def",
+          "name": "packaged",
+          "qualified_name_hint": "BoundaryCheck.packaged",
+          "line": 125
+        },
+        {
+          "kind": "def",
+          "name": "namesOf",
+          "qualified_name_hint": "BoundaryCheck.namesOf",
+          "line": 131
+        },
+        {
+          "kind": "def",
+          "name": "termNames",
+          "qualified_name_hint": "BoundaryCheck.termNames",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "valueNames",
+          "qualified_name_hint": "BoundaryCheck.valueNames",
+          "line": 163
+        },
+        {
+          "kind": "def",
+          "name": "digits",
+          "qualified_name_hint": "BoundaryCheck.digits",
+          "line": 169
+        },
+        {
+          "kind": "def",
+          "name": "numerals",
+          "qualified_name_hint": "BoundaryCheck.numerals",
+          "line": 172
+        },
+        {
+          "kind": "def",
+          "name": "kindOf",
+          "qualified_name_hint": "BoundaryCheck.kindOf",
+          "line": 179
+        },
+        {
+          "kind": "def",
+          "name": "attaches",
+          "qualified_name_hint": "BoundaryCheck.attaches",
+          "line": 191
+        },
+        {
+          "kind": "def",
+          "name": "generated",
+          "qualified_name_hint": "BoundaryCheck.generated",
+          "line": 208
+        },
+        {
+          "kind": "def",
+          "name": "abstracted",
+          "qualified_name_hint": "BoundaryCheck.abstracted",
+          "line": 217
+        },
+        {
+          "kind": "def",
+          "name": "prefixes",
+          "qualified_name_hint": "BoundaryCheck.prefixes",
+          "line": 223
+        },
+        {
+          "kind": "def",
+          "name": "closureOf",
+          "qualified_name_hint": "BoundaryCheck.closureOf",
+          "line": 228
+        },
+        {
+          "kind": "def",
+          "name": "closure",
+          "qualified_name_hint": "BoundaryCheck.closure",
+          "line": 242
+        },
+        {
+          "kind": "def",
+          "name": "admitted",
+          "qualified_name_hint": "BoundaryCheck.admitted",
+          "line": 245
+        },
+        {
+          "kind": "def",
+          "name": "amounts",
+          "qualified_name_hint": "BoundaryCheck.amounts",
+          "line": 253
+        },
+        {
+          "kind": "def",
+          "name": "isTheorem",
+          "qualified_name_hint": "BoundaryCheck.isTheorem",
+          "line": 255
+        },
+        {
+          "kind": "def",
+          "name": "isDefinition",
+          "qualified_name_hint": "BoundaryCheck.isDefinition",
+          "line": 260
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "BoundaryCheck.closedValue",
+          "line": 267
+        },
+        {
+          "kind": "def",
+          "name": "grammarTerm",
+          "qualified_name_hint": "BoundaryCheck.grammarTerm",
+          "line": 274
+        },
+        {
+          "kind": "def",
+          "name": "isProof",
+          "qualified_name_hint": "BoundaryCheck.isProof",
+          "line": 279
+        },
+        {
+          "kind": "def",
+          "name": "isDefOrOpaque",
+          "qualified_name_hint": "BoundaryCheck.isDefOrOpaque",
+          "line": 287
+        },
+        {
+          "kind": "def",
+          "name": "theoremsUsed",
+          "qualified_name_hint": "BoundaryCheck.theoremsUsed",
+          "line": 299
+        },
+        {
+          "kind": "def",
+          "name": "body",
+          "qualified_name_hint": "BoundaryCheck.body",
+          "line": 320
+        },
+        {
+          "kind": "def",
+          "name": "appliesWith",
+          "qualified_name_hint": "BoundaryCheck.appliesWith",
+          "line": 326
+        },
+        {
+          "kind": "def",
+          "name": "show_",
+          "qualified_name_hint": "BoundaryCheck.show_",
+          "line": 329
+        },
+        {
+          "kind": "def",
+          "name": "isEquivalence",
+          "qualified_name_hint": "BoundaryCheck.isEquivalence",
+          "line": 333
+        },
+        {
+          "kind": "def",
+          "name": "checkEntry",
+          "qualified_name_hint": "BoundaryCheck.checkEntry",
+          "line": 342
+        },
+        {
+          "kind": "def",
+          "name": "nameField",
+          "qualified_name_hint": "BoundaryCheck.nameField",
+          "line": 493
+        },
+        {
+          "kind": "def",
+          "name": "parseEntry",
+          "qualified_name_hint": "BoundaryCheck.parseEntry",
+          "line": 498
+        }
+      ],
+      "declaration_counts": {
+        "def": 32,
+        "structure": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "b4f549702c32067558255f616c9bb9103ad043c147a37bef2df89425311407f8": {
       "byte_size": 18188,
       "line_count": 411,
@@ -515322,207 +515547,6 @@
       ],
       "declarations": [],
       "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "fb0cae07472e46b1fd6d6b7730038307a68b7aeacb01ee7613eaca9f93b41568": {
-      "byte_size": 26030,
-      "line_count": 488,
-      "imports": [
-        "Lean"
-      ],
-      "declarations": [
-        {
-          "kind": "structure",
-          "name": "Hyp",
-          "qualified_name_hint": "BoundaryCheck.Hyp",
-          "line": 93
-        },
-        {
-          "kind": "structure",
-          "name": "Entry",
-          "qualified_name_hint": "BoundaryCheck.Entry",
-          "line": 98
-        },
-        {
-          "kind": "def",
-          "name": "moduleOf",
-          "qualified_name_hint": "BoundaryCheck.moduleOf",
-          "line": 107
-        },
-        {
-          "kind": "def",
-          "name": "grammarModule",
-          "qualified_name_hint": "BoundaryCheck.grammarModule",
-          "line": 114
-        },
-        {
-          "kind": "def",
-          "name": "rootModule",
-          "qualified_name_hint": "BoundaryCheck.rootModule",
-          "line": 116
-        },
-        {
-          "kind": "def",
-          "name": "packaged",
-          "qualified_name_hint": "BoundaryCheck.packaged",
-          "line": 121
-        },
-        {
-          "kind": "def",
-          "name": "namesOf",
-          "qualified_name_hint": "BoundaryCheck.namesOf",
-          "line": 127
-        },
-        {
-          "kind": "def",
-          "name": "termNames",
-          "qualified_name_hint": "BoundaryCheck.termNames",
-          "line": 135
-        },
-        {
-          "kind": "def",
-          "name": "valueNames",
-          "qualified_name_hint": "BoundaryCheck.valueNames",
-          "line": 159
-        },
-        {
-          "kind": "def",
-          "name": "digits",
-          "qualified_name_hint": "BoundaryCheck.digits",
-          "line": 165
-        },
-        {
-          "kind": "def",
-          "name": "auxComponent",
-          "qualified_name_hint": "BoundaryCheck.auxComponent",
-          "line": 168
-        },
-        {
-          "kind": "def",
-          "name": "generated",
-          "qualified_name_hint": "BoundaryCheck.generated",
-          "line": 181
-        },
-        {
-          "kind": "def",
-          "name": "closureOf",
-          "qualified_name_hint": "BoundaryCheck.closureOf",
-          "line": 187
-        },
-        {
-          "kind": "def",
-          "name": "closure",
-          "qualified_name_hint": "BoundaryCheck.closure",
-          "line": 201
-        },
-        {
-          "kind": "def",
-          "name": "admitted",
-          "qualified_name_hint": "BoundaryCheck.admitted",
-          "line": 204
-        },
-        {
-          "kind": "def",
-          "name": "amounts",
-          "qualified_name_hint": "BoundaryCheck.amounts",
-          "line": 212
-        },
-        {
-          "kind": "def",
-          "name": "isTheorem",
-          "qualified_name_hint": "BoundaryCheck.isTheorem",
-          "line": 214
-        },
-        {
-          "kind": "def",
-          "name": "isDefinition",
-          "qualified_name_hint": "BoundaryCheck.isDefinition",
-          "line": 219
-        },
-        {
-          "kind": "def",
-          "name": "closedValue",
-          "qualified_name_hint": "BoundaryCheck.closedValue",
-          "line": 226
-        },
-        {
-          "kind": "def",
-          "name": "grammarTerm",
-          "qualified_name_hint": "BoundaryCheck.grammarTerm",
-          "line": 233
-        },
-        {
-          "kind": "def",
-          "name": "isProof",
-          "qualified_name_hint": "BoundaryCheck.isProof",
-          "line": 238
-        },
-        {
-          "kind": "def",
-          "name": "isDefOrOpaque",
-          "qualified_name_hint": "BoundaryCheck.isDefOrOpaque",
-          "line": 246
-        },
-        {
-          "kind": "def",
-          "name": "theoremsUsed",
-          "qualified_name_hint": "BoundaryCheck.theoremsUsed",
-          "line": 257
-        },
-        {
-          "kind": "def",
-          "name": "body",
-          "qualified_name_hint": "BoundaryCheck.body",
-          "line": 278
-        },
-        {
-          "kind": "def",
-          "name": "appliesWith",
-          "qualified_name_hint": "BoundaryCheck.appliesWith",
-          "line": 284
-        },
-        {
-          "kind": "def",
-          "name": "show_",
-          "qualified_name_hint": "BoundaryCheck.show_",
-          "line": 287
-        },
-        {
-          "kind": "def",
-          "name": "isEquivalence",
-          "qualified_name_hint": "BoundaryCheck.isEquivalence",
-          "line": 291
-        },
-        {
-          "kind": "def",
-          "name": "checkEntry",
-          "qualified_name_hint": "BoundaryCheck.checkEntry",
-          "line": 300
-        },
-        {
-          "kind": "def",
-          "name": "nameField",
-          "qualified_name_hint": "BoundaryCheck.nameField",
-          "line": 451
-        },
-        {
-          "kind": "def",
-          "name": "parseEntry",
-          "qualified_name_hint": "BoundaryCheck.parseEntry",
-          "line": 456
-        }
-      ],
-      "declaration_counts": {
-        "def": 28,
-        "structure": 2
-      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
