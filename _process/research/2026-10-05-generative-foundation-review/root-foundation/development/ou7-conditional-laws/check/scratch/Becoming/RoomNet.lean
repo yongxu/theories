@@ -6,8 +6,8 @@ import Becoming.MapRegions
 /-!
 # Rooms on the net of the possible: testing (验) by a window
 
-Scratch module for board item OU7, part B (`ou7-conditional-laws/check/DESIGN.md`). One rule makes
-the nets of a family of rooms. A room has a level, in whole units of heat. Its surroundings are at
+One rule makes the nets of a family of rooms: the one-unfolding plan's model examples of 验
+(`PLAN.md` §八, step 5). A room has a level, in whole units of heat. Its surroundings are at
 its set level `m` while its window is shut and at `0` once it opens; each step the level moves one
 unit toward the surroundings' level, and a heater, reading the level left, gives `c` where that is
 below the set level. So `m` is the room's margin, counted in the open window's draws of one. The
@@ -41,6 +41,9 @@ heater (`joint`): rules compared, not occurrences of one unfolding.
   draw within the step. Read before it, the window moves a heated room's level
   (`before_window_moves`); read either way, from a margin of two on, every step of a heated room
   lands warm (`next_pos`, `before_pos`).
+
+The design, its review and re-check, and the hand checks are in the root's development folder,
+`ou7-conditional-laws/check/`.
 
 Every declaration has an empty axiom report.
 -/

@@ -5,24 +5,24 @@ import Becoming.HeldPossible
 /-!
 # The rooms' window courses as runs, and their possible with warmth held
 
-Scratch module for board item OU7, part B, joining `Becoming.RoomNet` to the spine. With the window
-open, the rooms' rule is `RegimeMargin`'s step, a draw of one and then the heater's giving of what
-is left (`next_open`), so the window's branch from the set level is the regime's run from it
-(`window_line`), and its laws apply as they stand: the unheated room is cold from the step of its
-margin on (`Unheated.window_cold`, by `RegimeMargin.stays_ended`), the stage at which warm or not
-first tells it from a heated room (`«开窗以温层如其余乃分»`); the matched thermostat stays at its
-set level (`Matched.window_held`, by `RegimeMargin.holds`). At a margin of three the overshooting
-thermostat's course alternates `3, 4` (`Overshooting.alternates`), `RegimeMargin.Alternation`'s run
-shifted by two (`Overshooting.alternation_shifted`): it returns, so nothing read off it keeps
-widening (`Run.not_keepsWidening_of_returns`), and it changes at every step, so every moment is
-全生成 at the level of the run (`Run.generation_of_held_changes`), a reading on the run's moments
-apart from the net's 全生成 in `Becoming.RoomNet`. Where the level stops changing, as on the
-matched thermostat's course and the unheated room's, no moment is 全生成
+Joins `Becoming.RoomNet` to the spine. With the window open, the rooms' rule is `RegimeMargin`'s
+step, a draw of one and then the heater's giving of what is left (`next_open`), so the window's
+branch from the set level is the regime's run from it (`window_line`), and its laws apply as they
+stand: the unheated room is cold from the step of its margin on (`Unheated.window_cold`, by
+`RegimeMargin.stays_ended`), the stage at which warm or not first tells it from a heated room
+(`«开窗以温层如其余乃分»`); the matched thermostat stays at its set level (`Matched.window_held`,
+by `RegimeMargin.holds`). At a margin of three the overshooting thermostat's course alternates
+`3, 4` (`Overshooting.alternates`), `RegimeMargin.Alternation`'s run shifted by two
+(`Overshooting.alternation_shifted`): it returns, so nothing read off it keeps widening
+(`Run.not_keepsWidening_of_returns`), and it changes at every step, so every moment is 全生成 at
+the level of the run (`Run.generation_of_held_changes`), a reading on the run's moments apart from
+the net's 全生成 in `Becoming.RoomNet`. Where the level stops changing, as on the matched
+thermostat's course and the unheated room's, no moment is 全生成
 (`Matched.no_generation_at_moments`, `Unheated.no_generation_at_moments`, by
 `Steps.generation_iff_begins`). Read as a process whose act opens the window, a room's coarse line
-is its possible with warmth held (`line_iff_held`); a heated
-room's possible from a warm occurrence is all possible with warmth held (`heated_possible_held`), and
-the unheated room's cold occurrence is possible but not with warmth held (`Unheated.cold_not_held`).
+is its possible with warmth held (`line_iff_held`); a heated room's possible from a warm occurrence
+is all possible with warmth held (`heated_possible_held`), and the unheated room's cold occurrence
+is possible but not with warmth held (`Unheated.cold_not_held`).
 
 Every declaration has an empty axiom report.
 -/
