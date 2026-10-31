@@ -1,0 +1,5 @@
+Grammar: replaced (1x) '/-- **A line whose ends a class tells apart has a marked step.** Where'
+Grammar: replaced (1x) "      match ih (fun k' => apart (hK.trans k k')) with"
+PatternPassing: replaced (2x) '«两端分则中有标» (carrierClass_class V) split line apart with'
+Sampling: left as it is (--weakening-only)
+item 1: wrote Grammar, PatternPassing
