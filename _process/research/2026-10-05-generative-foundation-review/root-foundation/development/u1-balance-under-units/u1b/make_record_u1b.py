@@ -51,7 +51,7 @@ for law in TEXT['laws']:
 
 # The drafted fields' zh, in the register of record-text.json's own zh (AI-written, 31 October 2026).
 DEPENDENCY_ZH = {
-    'master-laws-on-the-grammar': '«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、split_append 与 total_congr。',
+    'master-laws-on-the-grammar': '«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。',
     'a-rise-past-the-inflow-is-drawn-from-beyond': 'Flow.Balances.rise_draws_beyond_inflow 予二越界之律以其形成。',
 }
 RELATED_ZH = {

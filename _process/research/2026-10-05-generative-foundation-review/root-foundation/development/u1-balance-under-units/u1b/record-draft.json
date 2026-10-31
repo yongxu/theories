@@ -8,14 +8,14 @@
   "kind": "theorem",
   "status": "open",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T13:35:01+00:00",
+  "reviewed_at_utc": "2026-10-31T13:41:42+00:00",
   "statement": {
     "en": "A flow balances exactly where every frame of every step has a selected one-to-one matching of its units, each unit after the step continuing exactly one before it. At a formation's exchange, crossing and residual counts hold for every pairing. Balance is so represented, not derived.",
     "zh": "流恰于每步之每框皆有所选之单位一一配对处平衡，步后每单位恰续步前之一。于形成之交换，越界与余数之律于每一配对皆成。平衡如此得表示，非自展开推出。"
   },
   "laws": [
     {
-      "en": "A selected matching of a frame, a bijection of its in-positions with its out-positions given as data, forces equal counts by pigeonhole with no decidability; each out-position has an in-position sent to it, and only one. A flow over a web has such a matching at every step and condition exactly where it balances, the converse pairing by position with no choice; by it a standing unit goes on standing or is taken, which of the two being the matching's.",
+      "en": "A selected matching of a frame, a bijection of its in-positions with its out-positions given as data, forces equal counts by pigeonhole with no decidability, each out-position having exactly one in-position sent to it. A flow over a web has one at every step and condition exactly where it balances, the converse by position with no choice; by it a standing unit goes on standing or is taken.",
       "zh": "框之所选配对，以其入位与出位之双射为所予之资料，依鸽笼而迫等数，无需可判定；每出位皆有一入位送至，且唯一。网上之流恰于其平衡处于每步每条件皆有此配对，逆向依位而配，无需选择；依之，站立之单位或续立或被取，二者孰是在于配对。",
       "declarations": [
         "Becoming.UnitMatchings.FrameMatch",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "en": "In a one-to-one pairing whose first block on one side is longer than the first block on the other, some member of the other side's rest is related to a member of that block. In a balanced flow, where a family listed without repetition rises past the inflow of a family containing it, one formation taking part is such that every pairing of its exchange relates a unit it gives the risen family to another input; with beyond's inputs source-minimal, to one taken from the rest of the containing family.",
+      "en": "Where a one-to-one pairing's first block on one side outnumbers the other side's first block, a member of the other side's rest is related to one of that block. In a balanced flow, where a family without repetition rises past a containing family's inflow, every pairing of some present formation's exchange relates a unit given the risen family to another input; with beyond source-minimal, to one taken from the rest.",
       "zh": "于一一配对，一侧首段长于他侧首段者，他侧其余之某员与此段之某员相关。于平衡之流，无重复所列之族涨过含之之族之入流者，参与之一形成使其交换之每一配对，皆以其予涨族之一单位关乎另一入者；外来之入取最少者，则关乎取自含族其余者之一。",
       "declarations": [
         "Becoming.UnitMatchings.crossing_edge",
@@ -76,7 +76,7 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the frame matchings and the exchange pairings are one structure: no labelled exchange pairing is shown to exist for a World's formations or attached to the frames, and a frame matching is not bridged to the grammar's pairing on labelled lists.",
+      "en": "That the frame matchings and the exchange pairings are one structure: no labelled exchange pairing is shown to exist for a World's formations or attached to the frames, nor a frame matching bridged to the grammar's pairing.",
       "zh": "框之配对与交换之配对为一结构：未示世界之形成有带标之交换配对存在或接于框，框之配对亦未桥接于带标列上文法之配对。",
       "kind": "scope"
     },
@@ -127,8 +127,8 @@
       "id": "master-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, split_append and total_congr.",
-        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、split_append 与 total_congr。"
+        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
+        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
       }
     },
     {
@@ -184,7 +184,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/u1b/REVIEW-U1B.md",
       "role": "review",
-      "sha256": "c3d2b24873b5e323c66153b9976a5dcfc4ce2a34383e1e334aba1773481b6134",
+      "sha256": "64895bcca49b40f3a4942cb5db0137b01b4c242cd9108ae400275a620054787b",
       "declarations": []
     },
     {

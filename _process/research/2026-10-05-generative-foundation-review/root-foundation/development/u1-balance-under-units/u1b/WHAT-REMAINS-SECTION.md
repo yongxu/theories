@@ -8,3 +8,4 @@ U1b landed (study §N, core receipt `RECEIPT`, every axiom report empty). U1's l
 
 - **The release gate's item 3 is met.** U4's boundary record placed all 118 distinct central declarations, none unplaced, so each of the 51 has its standing and reason written. With U1's interface now in the package and not only in scratch, the item's last part is met too. No row changes category, since no central declaration belongs to the leaf. The measure stays at 44, 16, 7 and 51.
 - **What reached GitHub.** A working version went out to GitHub at `d00f1724d` on 31 October 2026. The gate still stands for the final version. Later landings, U1b included, reach GitHub only when someone pushes again.
+- **The gate after U1b.** Items 1, 2 and 3 are met. Still open: item 4, plan §八 step 5 (OU5, in design, its core Lean after RV21c); item 5, the fresh core receipt (RV21c, running); item 6, the front pages, whose pass comes after item 4. Item 7, the freeze, comes last.
