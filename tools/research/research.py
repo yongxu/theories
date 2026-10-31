@@ -38,8 +38,10 @@ def input_snapshot():
     """Bind a render to the exact metadata/source inventory it began reading."""
     config = navigation.read(navigation.CONFIG)
     paths = {navigation.CONFIG, navigation.HISTORY, ROOT / registry.MASTER_LAWS, ROOT / registry.LAW_FAMILIES}  # both render on record pages
-    if isinstance(config.get('readme_opening'), str):
-        paths.add(ROOT / config['readme_opening'])
+    for key in ('readme_first_screen', 'readme_opening', 'readme_lead', 'readme_repository'):
+        if isinstance(config.get(key), str):
+            paths.add(ROOT / config[key])
+    paths.update(navigation.timed_paths(config))  # README's first screen times them
     if registry.standard_boundaries_path(config):
         paths.add(ROOT / registry.standard_boundaries_path(config))
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
