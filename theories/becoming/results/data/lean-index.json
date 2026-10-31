@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2243,
-    "distinct_byte_contents": 1777,
+    "lean_paths": 2245,
+    "distinct_byte_contents": 1779,
     "byte_identical_duplicate_groups": 194,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1257,
+      "development-attempt": 1259,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 947
@@ -6533,6 +6533,24 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg9-rebuilding/tree/Becoming/Optimum.lean",
       "sha256": "148dd31aca08bfd836e241f865d61ac7842ada8619ad64b9bfc878f8d0098b52",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/scratch/review-1/Law5.lean",
+      "sha256": "3f9519f2ed8ff3d9eaa62dd62e1d6006c4362604fe02a7d2cf93844218f200a2",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/scratch/review-1/SJ1Check.lean",
+      "sha256": "7247c141384e3ff25ec762eee698cfb6d05644277696953cc513a6b5cf0fa39c",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -158725,6 +158743,152 @@
       },
       "print_axioms_commands": 0
     },
+    "3f9519f2ed8ff3d9eaa62dd62e1d6006c4362604fe02a7d2cf93844218f200a2": {
+      "byte_size": 5715,
+      "line_count": 104,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "Rel",
+          "qualified_name_hint": "Rel",
+          "line": 2
+        },
+        {
+          "kind": "def",
+          "name": "comp",
+          "qualified_name_hint": "comp",
+          "line": 3
+        },
+        {
+          "kind": "def",
+          "name": "conv",
+          "qualified_name_hint": "conv",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "incl",
+          "qualified_name_hint": "incl",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "eqR",
+          "qualified_name_hint": "eqR",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "fixedSucc",
+          "qualified_name_hint": "fixedSucc",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "goesAlike",
+          "qualified_name_hint": "goesAlike",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "image",
+          "qualified_name_hint": "image",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "ChoiceOver",
+          "qualified_name_hint": "ChoiceOver",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "UniformPolicy",
+          "qualified_name_hint": "UniformPolicy",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "FiberFeasible",
+          "qualified_name_hint": "FiberFeasible",
+          "line": 15
+        },
+        {
+          "kind": "def",
+          "name": "Licensed",
+          "qualified_name_hint": "Licensed",
+          "line": 18
+        },
+        {
+          "kind": "def",
+          "name": "Law2",
+          "qualified_name_hint": "Law2",
+          "line": 20
+        },
+        {
+          "kind": "def",
+          "name": "Judgement",
+          "qualified_name_hint": "Judgement",
+          "line": 21
+        },
+        {
+          "kind": "theorem",
+          "name": "law3_as_worded_fails",
+          "qualified_name_hint": "law3_as_worded_fails",
+          "line": 26
+        },
+        {
+          "kind": "theorem",
+          "name": "law2_not_fiberFeasible",
+          "qualified_name_hint": "law2_not_fiberFeasible",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "carrierRel",
+          "qualified_name_hint": "carrierRel",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "readMap",
+          "qualified_name_hint": "readMap",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "law5_sum",
+          "qualified_name_hint": "law5_sum",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "law5_needs_total",
+          "qualified_name_hint": "law5_needs_total",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "one_carrier_spurious",
+          "qualified_name_hint": "one_carrier_spurious",
+          "line": 92
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 15,
+        "theorem": 5
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 5
+    },
     "3fbeef77b2a8d9de09d0eca9353a14501af671008a541eebce3550bac44624e9": {
       "byte_size": 50256,
       "line_count": 952,
@@ -255610,6 +255774,285 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "7247c141384e3ff25ec762eee698cfb6d05644277696953cc513a6b5cf0fa39c": {
+      "byte_size": 10065,
+      "line_count": 200,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "«际»",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "«逆»",
+          "qualified_name_hint": "«逆»",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "«承»",
+          "qualified_name_hint": "«承»",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "«闭»",
+          "qualified_name_hint": "«闭»",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "«所闭»",
+          "qualified_name_hint": "«所闭»",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "ChoiceOver",
+          "qualified_name_hint": "ChoiceOver",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "Licensed",
+          "qualified_name_hint": "Licensed",
+          "line": 16
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_eq_cheng",
+          "qualified_name_hint": "licensed_eq_cheng",
+          "line": 19
+        },
+        {
+          "kind": "def",
+          "name": "GoesAlike",
+          "qualified_name_hint": "GoesAlike",
+          "line": 22
+        },
+        {
+          "kind": "theorem",
+          "name": "goesAlike_iff_closed",
+          "qualified_name_hint": "goesAlike_iff_closed",
+          "line": 24
+        },
+        {
+          "kind": "def",
+          "name": "Judgement",
+          "qualified_name_hint": "Judgement",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_sub",
+          "qualified_name_hint": "licensed_sub",
+          "line": 32
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_alike",
+          "qualified_name_hint": "licensed_alike",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_largest",
+          "qualified_name_hint": "licensed_largest",
+          "line": 39
+        },
+        {
+          "kind": "theorem",
+          "name": "refl_of_sub",
+          "qualified_name_hint": "refl_of_sub",
+          "line": 44
+        },
+        {
+          "kind": "theorem",
+          "name": "trans_of_alike",
+          "qualified_name_hint": "trans_of_alike",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_of_judgement",
+          "qualified_name_hint": "licensed_of_judgement",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "judgement_iff",
+          "qualified_name_hint": "judgement_iff",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "judgement_iff_closure",
+          "qualified_name_hint": "judgement_iff_closure",
+          "line": 65
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "NoRefl.E",
+          "line": 78
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "NoRefl.G",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_each",
+          "qualified_name_hint": "NoRefl.licensed_each",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "no_judgement",
+          "qualified_name_hint": "NoRefl.no_judgement",
+          "line": 81
+        },
+        {
+          "kind": "abbrev",
+          "name": "E",
+          "qualified_name_hint": "NoTrans.E",
+          "line": 87
+        },
+        {
+          "kind": "abbrev",
+          "name": "G",
+          "qualified_name_hint": "NoTrans.G",
+          "line": 88
+        },
+        {
+          "kind": "def",
+          "name": "w",
+          "qualified_name_hint": "NoTrans.w",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "wGood",
+          "qualified_name_hint": "NoTrans.wGood",
+          "line": 90
+        },
+        {
+          "kind": "theorem",
+          "name": "licensed_each",
+          "qualified_name_hint": "NoTrans.licensed_each",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "no_judgement",
+          "qualified_name_hint": "NoTrans.no_judgement",
+          "line": 92
+        },
+        {
+          "kind": "def",
+          "name": "Rule",
+          "qualified_name_hint": "Rule",
+          "line": 108
+        },
+        {
+          "kind": "def",
+          "name": "Ker",
+          "qualified_name_hint": "Ker",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_of_surjective",
+          "qualified_name_hint": "rule_of_surjective",
+          "line": 112
+        },
+        {
+          "kind": "theorem",
+          "name": "law3_as_written_fails",
+          "qualified_name_hint": "law3_as_written_fails",
+          "line": 122
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_gives_ip",
+          "qualified_name_hint": "rule_gives_ip",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "calibration_fiber",
+          "qualified_name_hint": "calibration_fiber",
+          "line": 142
+        },
+        {
+          "kind": "theorem",
+          "name": "calibration_surjective",
+          "qualified_name_hint": "calibration_surjective",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "finer_licenses",
+          "qualified_name_hint": "finer_licenses",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "identity_licenses",
+          "qualified_name_hint": "identity_licenses",
+          "line": 165
+        },
+        {
+          "kind": "inductive",
+          "name": "Point",
+          "qualified_name_hint": "Pairwise.Point",
+          "line": 171
+        },
+        {
+          "kind": "abbrev",
+          "name": "good",
+          "qualified_name_hint": "Pairwise.good",
+          "line": 172
+        },
+        {
+          "kind": "abbrev",
+          "name": "E",
+          "qualified_name_hint": "Pairwise.E",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "pairs",
+          "qualified_name_hint": "Pairwise.pairs",
+          "line": 174
+        },
+        {
+          "kind": "theorem",
+          "name": "no_judgement",
+          "qualified_name_hint": "Pairwise.no_judgement",
+          "line": 177
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 5,
+        "def": 13,
+        "inductive": 1,
+        "theorem": 24
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 12
     },
     "7247ca05597f2f916fb409213d3814d48ad9a7037fb95017146d106273d58553": {
       "byte_size": 5597,
