@@ -4,7 +4,7 @@ with its import in Becoming.lean after SelectionReach, its L1 note after Undecid
 the checker's core list after Undecided, with its scope sentence):
 
   python3 -B <dir>/integrate_u1b.py record RECEIPT STUDY   08 §3's receipt sentence, every count read from the receipt;
-                                                           01 §8.6's home section (home-01-section-8-6.md, inserted
+                                                           01 §8.6's home section (home-01-section-8-6.txt, inserted
                                                            after the World's representation); regions.json's two
                                                            entries; then the record amounts-by-unit-matchings, bound to
                                                            the receipt and hashing the chapter with its home in place
@@ -40,7 +40,7 @@ MASTER = 'theories/becoming/results/data/master-laws.json'
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 APART = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json'
 STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md'
-SECTION = (HERE / 'home-01-section-8-6.md').read_text(encoding='utf-8')
+SECTION = (HERE / 'home-01-section-8-6.txt').read_text(encoding='utf-8')
 ANCHOR = '\n<a id="r-amounts-by-unit-matchings"></a>\n'
 # The World's representation and its "What is not shown" list end §8.6; the section goes right after them.
 AFTER = '<a id="r-the-world-represented-both-ways"></a>\n'
