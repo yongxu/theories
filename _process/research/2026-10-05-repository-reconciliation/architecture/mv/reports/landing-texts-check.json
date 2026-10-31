@@ -1,5 +1,5 @@
 {
- "about": "A check of the three texts MV's follow-up and README's first screen write at landing (the board's Queue-line landed entry, RA's row clause and the history-file row), read by two independent AI checkers (facts and figures; wording and conventions) against the branch at dd3d5ea7b, each checker's findings then given to a skeptic who tried to refute them (workflow wf_328d63a1-598). The texts checked were those of the landing kit's land.py and ra-row-clause.txt before these fixes.",
+ "about": "A check of the three texts MV's follow-up and README's first screen write at landing (the board's Queue-line landed entry, RA's row clause and the history-file row), read by two independent AI checkers (facts and figures; wording and conventions) against the branch at dd3d5ea7b, each checker's findings then given to a skeptic who tried to refute them (workflow wf_328d63a1-598). The texts checked were those of the landing kit's land.py and ra-row-clause.txt before these fixes. At landing the kit moved to _process/history/2026-10-05-repository-reconciliation/architecture/mv/landing-kit/ (receipt _process/architecture/moves/MV-RA-first-screen-kit.json); the findings quote its paths as they were when checked.",
  "checked_at": "dd3d5ea7b",
  "lenses": [
   {
