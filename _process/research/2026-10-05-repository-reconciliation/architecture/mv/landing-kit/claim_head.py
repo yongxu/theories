@@ -6,9 +6,10 @@ import os, subprocess, sys, tempfile
 REPO, BOARD = '/Users/ren/theories', '_process/BECOMING-WORKBOARD.md'
 CLAUSE = ("MV's follow-up and the README's first screen at the head of the queue (landing now: the attachment rule's third "
           "and fourth re-checks in both copies, no Lean in the package, no record statement and no core run; README's first "
-          "screen before the opening, the opening's body unchanged, its notes [^ethics], [^good-evil] and [^transitions] "
-          "brought to the current account and to front pages naming no one, the v13 proposal for Ren; three records "
-          "re-pointed; two study sections; then render, strict check, links and tests, then the fast-forward); ")
+          "screen before the opening, the opening's first-person body unchanged, one line before its notes saying they are "
+          "written apart from it, its notes [^ethics], [^good-evil] and [^transitions] brought to the current account and "
+          "to front pages naming no one, the v13 proposal for Ren; eight records re-pointed; two study sections; then "
+          "render, strict check, links and tests, then the fast-forward); ")
 def git(*a, **k):
     return subprocess.run(['git', '-C', REPO, *a], check=True, capture_output=True, text=True, **k).stdout
 main = git('rev-parse', 'main').strip()
