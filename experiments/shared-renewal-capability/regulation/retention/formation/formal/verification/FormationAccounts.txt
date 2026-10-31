@@ -10,6 +10,6 @@
 'FormedSelection.Accounts.root_exhausted_accounts' depends on axioms: [propext, Classical.choice, Quot.sound]
 'FormedSelection.Accounts.root_append_account' depends on axioms: [propext]
 'FormedSelection.Accounts.root_shared_boundary_budget' depends on axioms: [propext, Quot.sound]
-'FormedSelection.Accounts.zero_fuel_cost_damage' depends on axioms: [propext]
+'FormedSelection.Accounts.zero_fuel_cost_damage' does not depend on any axioms
 'FormedSelection.Accounts.fuel_demand_is_not_unit' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Accounts.mixed_witness_account' depends on axioms: [propext]

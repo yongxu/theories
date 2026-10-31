@@ -112,10 +112,23 @@
         "Becoming.HeldForReading.offExcess",
         "Becoming.HeldForReading.shortfall",
         "Becoming.HeldForReading.held_term",
-        "Becoming.HeldForReading.term_go",
-        "Becoming.HeldForReading.term_off",
         "Becoming.HeldForReading.after_add_shortfall_go",
         "Becoming.HeldForReading.after_add_shortfall_off"
+      ]
+    },
+    {
+      "en": "Going on, switching off and holding for a rule are plans of the order of plans at a revision (RevisionPlans), their gains the moves' and the rule's values and holding's excess the rule's shortfall; that order compares them, and holding for two rules, as their values do, and the balances, ties, thresholds and comparisons with an amount forgone above are its laws (RevisionPlans.balance, above_iff).",
+      "zh": "续、止与为规则而持，为修订之策之序（RevisionPlans）中之策，其得即二行与规则之值，持之余即规则之所缺；此序比之，及为二规则而持，皆如其值；上之衡、等、阈与舍一量之比皆其律（RevisionPlans.balance、above_iff）。",
+      "declarations": [
+        "Becoming.HeldForReading.gainOf_goOn",
+        "Becoming.HeldForReading.gainOf_off",
+        "Becoming.HeldForReading.gainOf_held",
+        "Becoming.HeldForReading.excess_goOn",
+        "Becoming.HeldForReading.excess_off",
+        "Becoming.HeldForReading.excess_held",
+        "Becoming.HeldForReading.moves_not_below_iff",
+        "Becoming.HeldForReading.held_above_moves_iff",
+        "Becoming.HeldForReading.held_above_held_iff"
       ]
     },
     {
@@ -391,6 +404,13 @@
         "en": "The reading formation's own listing and valuation as state: holding for its answer through a map falls short by the least shortfall and a residual; a finer map never raises the first, revaluing moves the second alone, in one blanketed law.",
         "zh": "读之形成己之列与值为态：为其经映射之答而持，所缺为最少所缺加余缺；映射愈细前者不增，改值唯移后者，于一毯化之律。"
       }
+    },
+    {
+      "id": "when-holding-for-a-reading-stands-above-a-route",
+      "detail": {
+        "en": "Its balances, ties, thresholds and comparisons with an amount forgone are proved from that record's order of plans, holding for a rule a plan whose excess is the rule's shortfall (HeldForReading.excess_held).",
+        "zh": "其衡、等、阈与舍一量之比由彼记录之策之序证之，为规则而持为一策，其余即规则之所缺（HeldForReading.excess_held）。"
+      }
     }
   ],
   "references": [
@@ -470,6 +490,9 @@
         "Becoming.HeldForReading.cond_least_eq_zero_iff",
         "Becoming.HeldForReading.cond_least_le",
         "Becoming.HeldForReading.cond_split",
+        "Becoming.HeldForReading.excess_goOn",
+        "Becoming.HeldForReading.excess_held",
+        "Becoming.HeldForReading.excess_off",
         "Becoming.HeldForReading.excess_pos_iff",
         "Becoming.HeldForReading.finer_least_le",
         "Becoming.HeldForReading.first_below_iff",
@@ -477,10 +500,15 @@
         "Becoming.HeldForReading.forall_pair",
         "Becoming.HeldForReading.forgone_below_excess_iff",
         "Becoming.HeldForReading.forgone_within_excess_iff",
+        "Becoming.HeldForReading.gainOf_goOn",
+        "Becoming.HeldForReading.gainOf_held",
+        "Becoming.HeldForReading.gainOf_off",
         "Becoming.HeldForReading.goExcess",
         "Becoming.HeldForReading.goExcessWithin",
         "Becoming.HeldForReading.go_below_iff",
         "Becoming.HeldForReading.go_open",
+        "Becoming.HeldForReading.held_above_held_iff",
+        "Becoming.HeldForReading.held_above_moves_iff",
         "Becoming.HeldForReading.held_eq_go_iff",
         "Becoming.HeldForReading.held_eq_off_iff",
         "Becoming.HeldForReading.held_gains_iff",
@@ -488,6 +516,7 @@
         "Becoming.HeldForReading.leastThrough",
         "Becoming.HeldForReading.least_through",
         "Becoming.HeldForReading.least_zero_iff",
+        "Becoming.HeldForReading.moves_not_below_iff",
         "Becoming.HeldForReading.offExcess",
         "Becoming.HeldForReading.offExcessWithin",
         "Becoming.HeldForReading.offPart",
@@ -510,8 +539,6 @@
         "Becoming.HeldForReading.shortfall",
         "Becoming.HeldForReading.shortfall_byReading",
         "Becoming.HeldForReading.shortfall_through",
-        "Becoming.HeldForReading.term_go",
-        "Becoming.HeldForReading.term_off",
         "Becoming.HeldForReading.threshold_go_iff",
         "Becoming.HeldForReading.threshold_off_iff",
         "Becoming.HeldForReading.through_threshold_iff",
@@ -519,7 +546,12 @@
         "Becoming.HeldForReading.total_cond_both",
         "Becoming.HeldForReading.total_single"
       ],
-      "sha256": "3e7c19b113e61dc3ae6493ef564d571fc216dc1bc588a0c6b2b64f44b25eb94b"
+      "sha256": "b65a7a559a6a860e57919307038056e593680d0c377c166801facb1718325f12"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+      "role": "proof",
+      "sha256": "d91503881fa51f661cf301d68c66dd9635baeec53d4147656de015be84d73e2c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
@@ -557,14 +589,14 @@
       "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T134037.582088Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
       "role": "receipt",
-      "sha256": "a8e62c95cb97a47ccd10e87e4d548b9a372af007d0785fe823aa39b08c25c51e"
+      "sha256": "a8b80ab825922541ca460b13e3d86e552d4528c55537ef969af3521f9d1f0dc3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "196dcf32dc7474b0bb6d8bebc80ff6347dfd99f0fe220a683fddc4a1a42a46da"
+      "sha256": "458a3f4b389c659687c5c83ad3cc4df280ff2f135734a3820d5dc31216402cac"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -589,13 +621,13 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "8bf3bec0042cbf6a376dee691fd6b8f851578eb9355275e320bb49990eaaa9f5"
+      "sha256": "346f0dc88dc74517f1676fe503e860d5d99193021920a097b4a3a3271c321b6d"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T134037.582088Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HeldForReading",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -609,6 +641,10 @@
     {
       "en": "31 October 2026, board item RF, RF-M.3 (study section 473): related to a-reading-informed-and-revalued, where the reading formation's listing and valuation are state; the next step keeps its learning beyond filtering by what it is shown and the holding formation's planning; no statement or declaration changed.",
       "zh": "2026年10月31日，工作板条目 RF，RF-M.3（研究第 473 节）：与 a-reading-informed-and-revalued 相关联，读之形成之列与值于彼为态；下一步留其依所示而滤以外之学与持之形成之谋；无一陈述或声明改变。"
+    },
+    {
+      "en": "31 October 2026: its balances, after_byReading, shortfall_byReading, held_eq_go_iff, held_eq_off_iff, the thresholds, the comparisons with an amount forgone and across_le_iff proved from RevisionPlans (rule 9, RR2's landing), term_go and term_off gone, every other statement and name unchanged; going on, switching off and holding for a rule stated as plans, with held_above_moves_iff and held_above_held_iff.",
+      "zh": "2026年10月31日：其衡、after_byReading、shortfall_byReading、held_eq_go_iff、held_eq_off_iff、阈、舍一量之比与 across_le_iff 由 RevisionPlans 证之（规则九，RR2 之落地），term_go 与 term_off 去之，余之陈述与名不变；续、止与为规则而持述为策，并 held_above_moves_iff 与 held_above_held_iff。"
     }
   ]
 }

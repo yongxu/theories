@@ -1,0 +1,17 @@
+n=20; each cell: (R, K) of the row's formation against the column's
+no error:
+  sparer     (20, 0)   (20, 0)   (20, 0)   (20, 0)   (20, 0)   (0, 0)    (10, 0)  
+  answers    (20, 0)   (20, 0)   (20, 0)   (20, 0)   (20, 0)   (0, 19)   (10, 10) 
+  window2    (20, 0)   (20, 0)   (20, 0)   (20, 0)   (20, 0)   (0, 18)   (10, 0)  
+  wsls       (20, 0)   (20, 0)   (20, 0)   (20, 0)   (20, 0)   (0, 10)   (10, 10) 
+  grim       (20, 0)   (20, 0)   (20, 0)   (20, 0)   (20, 0)   (0, 19)   (10, 19) 
+  withholder (20, 20)  (1, 20)   (2, 20)   (10, 20)  (1, 20)   (0, 20)   (10, 20) 
+  alternator (20, 10)  (10, 10)  (20, 10)  (10, 10)  (1, 10)   (0, 10)   (10, 10) 
+one error by the row's formation at step 5, partner of the same law:
+  sparer     ((20, 1), (19, 0))
+  answers    ((13, 8), (12, 7))
+  window2    ((20, 1), (19, 0))
+  wsls       ((19, 2), (18, 1))
+  grim       ((6, 15), (5, 14))
+  withholder ((0, 20), (0, 20))
+  alternator ((10, 11), (9, 10))

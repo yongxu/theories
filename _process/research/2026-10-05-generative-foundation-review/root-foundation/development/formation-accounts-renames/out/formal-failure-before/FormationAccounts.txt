@@ -1,0 +1,53 @@
+FormationAccounts.lean:79:4: error: Function expected at
+  AccountLaw
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (rootProcess material)
+
+Hint: The identifier `AccountLaw` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+FormationAccounts.lean:81:43: error(lean.unknownIdentifier): Unknown identifier `material`
+FormationAccounts.lean:82:43: error(lean.unknownIdentifier): Unknown identifier `material`
+FormationAccounts.lean:83:43: error(lean.unknownIdentifier): Unknown identifier `material`
+FormationAccounts.lean:85:10: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case common
+x✝ : Sort u_1
+AccountLaw : x✝
+⊢ sorry
+FormationAccounts.lean:89:8: warning: declaration uses `sorry`
+FormationAccounts.lean:149:23: error: Function expected at
+  credited
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (creditWeight boundary a)
+
+Hint: The identifier `credited` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+FormationAccounts.lean:150:24: error: Function expected at
+  credited
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (creditWeight boundary a)
+
+Hint: The identifier `credited` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+FormationAccounts.lean:160:2: error(lean.unknownIdentifier): Unknown identifier `support_trace_balance`
+'FormedSelection.Accounts.spending_split' depends on axioms: [propext]
+'FormedSelection.Accounts.tally_spending_split' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.step_account_exact' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.identified_account_laws' does not depend on any axioms
+'FormedSelection.Accounts.root_account_balance' depends on axioms: [propext, sorryAx]
+'FormedSelection.Accounts.root_account_exact' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.root_open_closed_consistency' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.root_reaction_loss_budget' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.root_common_budget' depends on axioms: [propext, sorryAx]
+'FormedSelection.Accounts.root_exhausted_accounts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FormedSelection.Accounts.root_append_account' depends on axioms: [propext, sorryAx]
+'FormedSelection.Accounts.root_shared_boundary_budget' depends on axioms: [sorryAx]
+'FormedSelection.Accounts.zero_fuel_cost_damage' does not depend on any axioms
+'FormedSelection.Accounts.fuel_demand_is_not_unit' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Accounts.mixed_witness_account' depends on axioms: [propext]

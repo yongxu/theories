@@ -1,21 +1,24 @@
+'Generative.Conditional.le_cancel_left' does not depend on any axioms
+'Generative.Conditional.step_then_rest' does not depend on any axioms
+'Generative.Conditional.rest_then_step' does not depend on any axioms
 'Generative.Conditional.support_trace_is_trace' does not depend on any axioms
-'Generative.Conditional.account_law_pullback' does not depend on any axioms
-'Generative.Conditional.trace_has_support_account' does not depend on any axioms
+'Generative.Conditional.sustain_law_pullback' does not depend on any axioms
+'Generative.Conditional.trace_has_support_totals' does not depend on any axioms
 'Generative.Conditional.support_trace_append' does not depend on any axioms
-'Generative.Conditional.repeat_accounted_cycle' does not depend on any axioms
-'Generative.Conditional.support_trace_balance' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.support_cycle_covers_demand' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.support_trace_unit_demand' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.amount_le_cap_times_credited' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.support_trace_credit_cap' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.support_trace_length_bound' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.interval_total_positive_witness' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.interval_total_le_of_pointwise' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.interval_total_unit_bound' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.interval_total_cap_bound' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.execution_interval_balance' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.componentwise_execution_balance' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.unbounded_demand_requires_unbounded_credit' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.infinite_unit_execution_credit_window' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.infinite_unit_execution_unbounded_credit' depends on axioms: [propext, Quot.sound]
-'Generative.Conditional.execution_interval_frequency_bound' depends on axioms: [propext, Quot.sound]
+'Generative.Conditional.repeat_supported_cycle' does not depend on any axioms
+'Generative.Conditional.support_trace_bound' does not depend on any axioms
+'Generative.Conditional.support_cycle_arrival_covers_enactment' does not depend on any axioms
+'Generative.Conditional.support_trace_unit_enactment' does not depend on any axioms
+'Generative.Conditional.amount_le_cap_times_arrival_events' does not depend on any axioms
+'Generative.Conditional.support_trace_arrival_cap' does not depend on any axioms
+'Generative.Conditional.support_trace_length_bound' does not depend on any axioms
+'Generative.Conditional.interval_total_positive_witness' does not depend on any axioms
+'Generative.Conditional.interval_total_le_of_pointwise' does not depend on any axioms
+'Generative.Conditional.interval_total_unit_bound' does not depend on any axioms
+'Generative.Conditional.interval_total_cap_bound' does not depend on any axioms
+'Generative.Conditional.execution_interval_bound' does not depend on any axioms
+'Generative.Conditional.componentwise_execution_bound' does not depend on any axioms
+'Generative.Conditional.unbounded_enactment_requires_unbounded_arrival' does not depend on any axioms
+'Generative.Conditional.infinite_unit_execution_arrival_window' does not depend on any axioms
+'Generative.Conditional.infinite_unit_execution_unbounded_arrival' does not depend on any axioms
+'Generative.Conditional.execution_interval_frequency_bound' does not depend on any axioms
