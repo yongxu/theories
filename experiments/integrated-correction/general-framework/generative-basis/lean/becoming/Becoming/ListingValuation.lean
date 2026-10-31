@@ -852,16 +852,17 @@ theorem informed_lt_iff {K L : Type} [DecidableEq K] [DecidableEq L] (m : Model 
 /-- **Two rules, amounts forgone, compare as their shortfalls with the amounts** (item 7, read as
 withholding against informing). Holding for one rule, forgoing `k`, stands above holding for another,
 forgoing `k'`, exactly where the first's shortfall and `k` together fall below the second's and `k'`
-(the amounts counted as in `threshold_go_iff`, in the units of the weighted totals). -/
+(the amounts counted as in `threshold_go_iff`, in the units of the weighted totals): the order of
+plans at two rules held for (`RevisionPlans.above_iff`, `HeldForReading.held_above_held_iff`). -/
 theorem forgone_lt_iff (m : Model C) (gain loss : C → Nat) (r r' : C → Bool) (k k' : Nat) :
     m.after (shifted gain loss) (byRule r') + k < m.after (shifted gain loss) (byRule r) + k' ↔
       shortfall m gain loss r + k < shortfall m gain loss r' + k' :=
-  across_lt_iff (G := m.after (shifted gain loss) (byRule r'))
-    (H := m.after (shifted gain loss) (byRule r) + k') (S := shortfall m gain loss r)
-    (N := shortfall m gain loss r' + k') (k := k)
-    ((Nat.add_right_comm _ _ _).trans ((congrArg (· + k')
-      ((after_add_shortfall m gain loss r).trans (after_add_shortfall m gain loss r').symm)).trans
-        (Nat.add_assoc _ _ _)))
+  (held_above_held_iff m gain loss r r' k k').symm.trans
+    ((RevisionPlans.above_iff m.listed m.weight gain loss (RevisionPlans.splits_held m.listed m.weight r' k')
+      (RevisionPlans.splits_held m.listed m.weight r k)).trans (by
+        show k + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r k) <
+          k' + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r' k') ↔ _
+        rw [excess_held, excess_held, Nat.add_comm k, Nat.add_comm k']))
 
 /-- **Through maps, the threshold in the split's terms**: holding for a rule through one map,
 forgoing `k`, stands above holding for a rule through another, forgoing `k'`, exactly where the least

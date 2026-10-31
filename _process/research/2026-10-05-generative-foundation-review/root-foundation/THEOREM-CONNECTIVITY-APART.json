@@ -6201,6 +6201,56 @@
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
    "reason": "«定后遍后则核为其内最粗同行之类»: with a fixed successor that every occurrence has, a class's core is the coarsest class inside it that the step goes alike across, 01 §4's 理 of the class: a law of every relation and class on any carrier (HE2 item 6); nothing on the base uses it"
+  },
+  "Becoming.HeldForReading.after_add_shortfall_off": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.after_add_shortfall_off: a law of any model's two moves and rules of stopping as plans in natural-number weights; it waits for a formation's own model and the reading it holds for, on the base (RF, RR2)"
+  },
+  "Becoming.HeldForReading.shortfall_byReading": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.shortfall_byReading: a law of any model's two moves and rules of stopping as plans in natural-number weights; it waits for a formation's own model and the reading it holds for, on the base (RF, RR2)"
+  },
+  "Becoming.RevisionPlans.Example.hold_four_below": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.hold_four_below: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.Example.hold_three_not_below": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.hold_three_not_below: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn": {
+   "module": "Becoming.RevisionPlans",
+   "category": "model-witness",
+   "reason": "RevisionPlans.Example.no_excess_reading_gain_eq_goOn: a fact about one constructed model, two candidates of weight one, keeping gaining three at one and switching off two at the other, evading at loss one, and its variations (RR2)"
+  },
+  "Becoming.RevisionPlans.excess_zero_iff": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.excess_zero_iff: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.move_ge_of": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.move_ge_of: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.move_le_of": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.move_le_of: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.ofRoutes_goOn_excess": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.ofRoutes_goOn_excess: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RevisionPlans.routes_above_iff": {
+   "module": "Becoming.RevisionPlans",
+   "category": "general-structure",
+   "reason": "RevisionPlans.routes_above_iff: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
   }
  },
  "instances": {
