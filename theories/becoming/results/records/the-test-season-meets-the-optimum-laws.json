@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "id": "the-test-season-meets-the-optimum-laws",
+  "title": {
+    "en": "LA4's test season meets the optimum laws",
+    "zh": "LA4 之检验季合于最优之律"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-30T20:28:07+00:00",
+  "statement": {
+    "en": "In the season LA4 trains on, the catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. The landing site, and the bay when only the ground's catch counts, give no room; ranked by the catch or the ground's alone, the optima include keeping and ending.",
+    "zh": "LA4 所训练之季中，获与湾共享单位，故每一随获而升之序之每一最优皆空其湾。登陆之地，及只计地之获时之湾，无余地；只以获或只以地之获排序者，其最优兼有留与尽。"
+  },
+  "laws": [
+    {
+      "en": "The season as LA4's season.py runs it (a ground of ten renewing, at most four taken a step, a bay of six, two landing sites, ten steps): the ground's catch depends only on the takes asked of it, the bay gives the lesser of six and the fish asked of it, the landings depend only on the sites chosen, and any takes, any number of bay fish up to six and any number of landings up to ten combine in one season.",
+      "zh": "季如 LA4 之 season.py 所运行（地十而更新，每步至多取四，湾六，二登陆之地，十步）：地之获只依所求于地之取，湾给六与所求鱼数之小者，登陆只依所择之地；任何取、至多六之湾鱼与至多十之登陆合于一季。",
+      "declarations": [
+        "Becoming.Optimum.Season.step",
+        "Becoming.Optimum.Season.run",
+        "Becoming.Optimum.Season.outcome",
+        "Becoming.Optimum.Season.Eligible",
+        "Becoming.Optimum.Season.run_caught",
+        "Becoming.Optimum.Season.run_taken",
+        "Becoming.Optimum.Season.run_landed",
+        "Becoming.Optimum.Season.run_bay",
+        "Becoming.Optimum.Season.takes_eq",
+        "Becoming.Optimum.Season.flagged",
+        "Becoming.Optimum.Season.flagged_caught",
+        "Becoming.Optimum.Season.flagged_asked",
+        "Becoming.Optimum.Season.flagged_landings",
+        "Becoming.Optimum.Season.outcome_ground",
+        "Becoming.Optimum.Season.outcome_catch",
+        "Becoming.Optimum.Season.outcome_bay",
+        "Becoming.Optimum.Season.outcome_site",
+        "Becoming.Optimum.Season.eligible_of",
+        "Becoming.Optimum.Season.eligible_parts"
+      ]
+    },
+    {
+      "en": "The ground's best catch over a season is 34: a table of the best catch over n steps from each level is checked against every take at every level and step, bounds every run, and one season reaches it. So the catch is at most 40, and at most 37 in a season leaving the bay at three or more.",
+      "zh": "地一季之最佳获为 34：自每一水平 n 步之最佳获之表，于每一水平每一步对每一取查过，界住每一运行，且一季达之。故获至多 40，留湾三或以上之季至多 37。",
+      "declarations": [
+        "Becoming.Optimum.Season.ceiling",
+        "Becoming.Optimum.Season.best",
+        "Becoming.Optimum.Season.bellman",
+        "Becoming.Optimum.Season.caught_le",
+        "Becoming.Optimum.Season.best_ten",
+        "Becoming.Optimum.Season.ground_le",
+        "Becoming.Optimum.Season.topTakes",
+        "Becoming.Optimum.Season.top_caught",
+        "Becoming.Optimum.Season.catch_le",
+        "Becoming.Optimum.Season.bay_le",
+        "Becoming.Optimum.Season.bay_catch",
+        "Becoming.Optimum.Season.bay_catch_le",
+        "Becoming.Optimum.Season.kept_catch_le"
+      ]
+    },
+    {
+      "en": "The catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. There is no room at the landing site: among the optima of the order by the catch alone are seasons landing beside the nests never and at every step, so an optimum need not stand at the site's least level.",
+      "zh": "获与湾共享单位，故每一随获而升之序之每一最优皆空其湾。登陆之地无余地：只以获排序之最优中，有从不于巢旁登陆之季与每步皆登陆之季，故最优不必在此地之最低水平。",
+      "declarations": [
+        "Becoming.Optimum.Season.shared",
+        "Becoming.Optimum.Season.drained_eligible",
+        "Becoming.Optimum.Season.bay_drained",
+        "Becoming.Optimum.Season.catchOrder",
+        "Becoming.Optimum.Season.catch_rising",
+        "Becoming.Optimum.Season.top_frontier",
+        "Becoming.Optimum.Season.site_optima",
+        "Becoming.Optimum.Season.site_no_room",
+        "Becoming.Optimum.Season.site_not_least"
+      ]
+    },
+    {
+      "en": "Ranked by the ground's catch alone, the bay shares no units with what is ranked and has no room: the optima include a season keeping the bay at six and one emptying it.",
+      "zh": "只以地之获排序时，湾与所排者不共享单位而无余地：最优中有留湾于六之季与空湾之季。",
+      "declarations": [
+        "Becoming.Optimum.Season.groundOrder",
+        "Becoming.Optimum.Season.ground_rising",
+        "Becoming.Optimum.Season.ground_bound",
+        "Becoming.Optimum.Season.ground_frontier",
+        "Becoming.Optimum.Season.unshared_optima",
+        "Becoming.Optimum.Season.unshared_no_room"
+      ]
+    },
+    {
+      "en": "Seven times the catch plus the bay left ranks eligible seasons exactly as the catch first and the bay second; that order rises with the catch, so the score's optima empty the bay.",
+      "zh": "获之七倍加湾之余，排可选之季恰如先获后湾；此序随获而升，故此分之最优空其湾。",
+      "declarations": [
+        "Becoming.Optimum.Season.afterScore",
+        "Becoming.Optimum.Season.afterOrder",
+        "Becoming.Optimum.Season.lexOrder",
+        "Becoming.Optimum.Season.lex_rising",
+        "Becoming.Optimum.Season.seven_lt",
+        "Becoming.Optimum.Season.after_iff",
+        "Becoming.Optimum.Season.after_drained"
+      ]
+    },
+    {
+      "en": "Valuing the catch only up to 26 does not rise with the catch, and its optima include a season keeping the bay at six and one emptying it.",
+      "zh": "只计获至 26 者不随获而升，其最优中有留湾于六之季与空湾之季。",
+      "declarations": [
+        "Becoming.Optimum.Season.plateauOrder",
+        "Becoming.Optimum.Season.plateau_not_rising",
+        "Becoming.Optimum.Season.plateau_frontier",
+        "Becoming.Optimum.Season.plateau_optima"
+      ]
+    },
+    {
+      "en": "Over seasons with natural-number weights, the weighted bay left plus the weighted catch is at most 40 times the total weight, and the weighted catch plus three times the weight keeping the bay at three or more is at most 40 times it. So for a policy with rational probabilities, with ν the mean catch over 40 and p the probability of keeping, the mean bay left is at most 40(1 − ν), and ν ≤ 1 − 3p/40.",
+      "zh": "于自然数加权之季上，加权之湾余加加权之获至多为总权之 40 倍；加权之获加留湾三或以上之权之三倍亦至多为其 40 倍。故对概率为有理数之策略，以 ν 为平均获除以 40、p 为留之概率，平均湾余至多 40(1 − ν)，且 ν ≤ 1 − 3p/40。",
+      "declarations": [
+        "Becoming.Optimum.Season.mass",
+        "Becoming.Optimum.Season.mass_add",
+        "Becoming.Optimum.Season.mass_le",
+        "Becoming.Optimum.Season.mass_const",
+        "Becoming.Optimum.Season.mix_bay_catch",
+        "Becoming.Optimum.Season.keptMark",
+        "Becoming.Optimum.Season.catch_kept_le",
+        "Becoming.Optimum.Season.mix_kept"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The season as season.py runs it: natural-number levels, the ground renewing by y + ⌊(y(10 − y) + 5)/10⌋ capped at ten, a take capped at four and at the level, a bay giving one fish a step while it has any, ten discrete steps; the colony read as the bay left; weights are natural numbers.",
+      "zh": "不加公理。季如 season.py 所运行：自然数之水平；地依 y + ⌊(y(10 − y) + 5)/10⌋ 更新，以十为顶；取以四与其水平为顶；湾有鱼时每步给一；十个离散之步；群落读作湾之余；权为自然数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a trained system drains the bay: these are laws of optima over the outcomes, and the clause on trained systems is what LA4 tests.",
+      "zh": "训练出的系统耗尽其湾：此为结果上之最优之律，训练出的系统之条款是 LA4 所检验者。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the season stands for an actual fishery, bay or colony.",
+      "zh": "此季代表实有之渔场、湾或群落。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Room over a course of steps with the learner choosing again at each: room here is over a season's outcomes.",
+      "zh": "学习者每步重选之过程上之余地：此处之余地在一季之结果上。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261030T202529.410234Z): Becoming.OptimumSeason, 63 theorems in 98 declarations, every declaration with an empty axiom report; the checker verifies core purity. Reviewed before landing (REVIEW-LA4-FORMAL.md); author review in study section 470; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261030T202529.410234Z）：Becoming.OptimumSeason，98 项声明中 63 条定理，公理报告皆空；检查器并核对核心纯净。落地前经审（REVIEW-LA4-FORMAL.md）；作者审查见研究第 470 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "LA4's learner runs on a machine suited to them; a season whose bay renews; room over a course of steps.",
+    "zh": "LA4 之学习者于合宜之机器上运行；湾自更新之季；一过程之步上之余地。"
+  },
+  "correspondence": {
+    "en": "LA4's season.py: its exhaustive checks of the season's outcomes agree with every law here; its count of the eligible outcomes is not restated, since the three parts give them. The rising and unshared cases are the two cases of what-an-optimum-does-beyond-what-couples-in's law on one constructed season: shared units with the catch, and no units shared with what is ranked.",
+    "zh": "LA4 之 season.py：其对季之结果之穷举查验与此处每一律相合；其可选结果之计数不重述，因三部分直接给出之。随获而升与不共享之二情形，是 what-an-optimum-does-beyond-what-couples-in 之律于一构造之季上之二情形：与获共享单位，与所排者不共享单位。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
+  "aliases": [
+    "LA4's test season meets the optimum laws",
+    "LA4 之检验季合于最优之律",
+    "Becoming.Optimum.Season.bay_drained",
+    "Becoming.Optimum.Season.site_no_room"
+  ],
+  "dependencies": [
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Optimum.Shared, Shared.room, least_of_shared, Room, Least, Rising and Rising.mono, with Requirement.Frontier for the optima.",
+        "zh": "Optimum.Shared、Shared.room、least_of_shared、Room、Least、Rising 与 Rising.mono，最优用 Requirement.Frontier。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-commuting-learner-drives-no-unread-choice",
+      "detail": {
+        "en": "What a learner's symmetry fixes at the landing site, from a start preferring neither site.",
+        "zh": "学习者之对称自不偏任一地之起点于登陆之地所定者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Season.Act",
+        "Becoming.Optimum.Season.Cond",
+        "Becoming.Optimum.Season.Eligible",
+        "Becoming.Optimum.Season.Tally",
+        "Becoming.Optimum.Season.afterOrder",
+        "Becoming.Optimum.Season.afterScore",
+        "Becoming.Optimum.Season.after_drained",
+        "Becoming.Optimum.Season.after_iff",
+        "Becoming.Optimum.Season.asked",
+        "Becoming.Optimum.Season.bayTake",
+        "Becoming.Optimum.Season.bay_catch",
+        "Becoming.Optimum.Season.bay_catch_le",
+        "Becoming.Optimum.Season.bay_drained",
+        "Becoming.Optimum.Season.bay_le",
+        "Becoming.Optimum.Season.bellman",
+        "Becoming.Optimum.Season.best",
+        "Becoming.Optimum.Season.best_ten",
+        "Becoming.Optimum.Season.bit",
+        "Becoming.Optimum.Season.cap",
+        "Becoming.Optimum.Season.cap_lt",
+        "Becoming.Optimum.Season.catchOrder",
+        "Becoming.Optimum.Season.catch_kept_le",
+        "Becoming.Optimum.Season.catch_le",
+        "Becoming.Optimum.Season.catch_rising",
+        "Becoming.Optimum.Season.caught",
+        "Becoming.Optimum.Season.caught_le",
+        "Becoming.Optimum.Season.ceiling",
+        "Becoming.Optimum.Season.drained_eligible",
+        "Becoming.Optimum.Season.eligible_of",
+        "Becoming.Optimum.Season.eligible_parts",
+        "Becoming.Optimum.Season.entry",
+        "Becoming.Optimum.Season.flagged",
+        "Becoming.Optimum.Season.flagged_asked",
+        "Becoming.Optimum.Season.flagged_caught",
+        "Becoming.Optimum.Season.flagged_landings",
+        "Becoming.Optimum.Season.flagged_length",
+        "Becoming.Optimum.Season.groundOrder",
+        "Becoming.Optimum.Season.ground_bound",
+        "Becoming.Optimum.Season.ground_frontier",
+        "Becoming.Optimum.Season.ground_le",
+        "Becoming.Optimum.Season.ground_rising",
+        "Becoming.Optimum.Season.keptMark",
+        "Becoming.Optimum.Season.kept_catch_le",
+        "Becoming.Optimum.Season.landings",
+        "Becoming.Optimum.Season.landings_le",
+        "Becoming.Optimum.Season.least",
+        "Becoming.Optimum.Season.least_le_left",
+        "Becoming.Optimum.Season.least_le_right",
+        "Becoming.Optimum.Season.least_of_ge",
+        "Becoming.Optimum.Season.least_of_le",
+        "Becoming.Optimum.Season.least_zero_right",
+        "Becoming.Optimum.Season.lexOrder",
+        "Becoming.Optimum.Season.lex_rising",
+        "Becoming.Optimum.Season.mark",
+        "Becoming.Optimum.Season.mass",
+        "Becoming.Optimum.Season.mass_add",
+        "Becoming.Optimum.Season.mass_const",
+        "Becoming.Optimum.Season.mass_le",
+        "Becoming.Optimum.Season.mix_bay_catch",
+        "Becoming.Optimum.Season.mix_kept",
+        "Becoming.Optimum.Season.outcome",
+        "Becoming.Optimum.Season.outcome_bay",
+        "Becoming.Optimum.Season.outcome_catch",
+        "Becoming.Optimum.Season.outcome_ground",
+        "Becoming.Optimum.Season.outcome_site",
+        "Becoming.Optimum.Season.plateauOrder",
+        "Becoming.Optimum.Season.plateau_frontier",
+        "Becoming.Optimum.Season.plateau_not_rising",
+        "Becoming.Optimum.Season.plateau_optima",
+        "Becoming.Optimum.Season.renew",
+        "Becoming.Optimum.Season.renew_le",
+        "Becoming.Optimum.Season.row",
+        "Becoming.Optimum.Season.run",
+        "Becoming.Optimum.Season.run_bay",
+        "Becoming.Optimum.Season.run_caught",
+        "Becoming.Optimum.Season.run_landed",
+        "Becoming.Optimum.Season.run_taken",
+        "Becoming.Optimum.Season.seven_lt",
+        "Becoming.Optimum.Season.shared",
+        "Becoming.Optimum.Season.site_no_room",
+        "Becoming.Optimum.Season.site_not_least",
+        "Becoming.Optimum.Season.site_optima",
+        "Becoming.Optimum.Season.start",
+        "Becoming.Optimum.Season.step",
+        "Becoming.Optimum.Season.takes",
+        "Becoming.Optimum.Season.takes_eq",
+        "Becoming.Optimum.Season.topBayKept",
+        "Becoming.Optimum.Season.topBayKept_eligible",
+        "Becoming.Optimum.Season.topSiteFull",
+        "Becoming.Optimum.Season.topSiteFull_eligible",
+        "Becoming.Optimum.Season.topSiteKept",
+        "Becoming.Optimum.Season.topSiteKept_eligible",
+        "Becoming.Optimum.Season.topTakes",
+        "Becoming.Optimum.Season.topTakes_length",
+        "Becoming.Optimum.Season.top_caught",
+        "Becoming.Optimum.Season.top_frontier",
+        "Becoming.Optimum.Season.unshared_no_room",
+        "Becoming.Optimum.Season.unshared_optima"
+      ],
+      "sha256": "c3e01c8cd00e5a6ae73b004278d94b180d601beed832a15c0d5ca072fc7f0bc4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T202529.410234Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dfa5fc8fab0be5fa2d37601c5572779933efcd3a6a2e6ece99851c8d6ebf9ad"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md",
+      "role": "review",
+      "sha256": "be5065726d395dd154785bee0327d1a376118e4a1f820b09b677e64344a1fdac"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md",
+      "role": "integration",
+      "sha256": "2eac7d53cc6bc10a040a8d1c4ce9a03242363a604c8b58f7d2843e026a27e2da"
+    },
+    {
+      "path": "experiments/drain-beyond-the-reward/DESIGN.md",
+      "role": "integration",
+      "sha256": "3c20c464e7b9ae02e3bd28b8a162f3ad1bf30e30da40c9cc7ae13b544a8bb0f2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9ad1aa821f8ec9c8edef4e12258a333f4d827f7c14bd7cbb7740e9b567e130c2"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "cd378089030fd50971e459ccca8c7aa92dd1c07214efb13441ad58c0860d29d5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T202529.410234Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OptimumSeason",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "31 October 2026: added (LA4, its formal part), the design's checks by enumeration restated as theorems; study section 470.",
+      "zh": "2026年10月31日：新增（LA4 之形式部分），设计中以穷举所作之查验重述为定理；研究第 470 节。"
+    }
+  ]
+}

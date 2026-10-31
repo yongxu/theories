@@ -22131,3 +22131,138 @@ Output → input: 07 §7 (the incentive before the executable route); 03 §11 (t
 1. `RevisionRoutes` imports only the prelude, a model, so it joins the core as a leaf at L1, imported by `ReadStages`, which stays a leaf.
 2. Its arithmetic avoids the prelude lemmas that report axioms: `Nat.lt_of_mul_lt_mul_right` (propext, Quot.sound, Classical.choice) is replaced by its own `lt_of_mul_lt_mul`, and `Nat.le_of_add_le_add_left` and `_right` (propext) are not used, `ReadStages.complyAtBoth_maximal_iff` settling `c T = 0` first. The witnesses evaluate by `decide`.
 3. Not done: the items in Boundary, and the tests TR-RR1 and TR-RR2 of the note (designs, not frozen).
+
+## 470. LA4's season and what a learner's symmetry fixes, before any learner runs (LA4, formal part)
+
+Board item LA4, its formal part ([note](development/la4-formal/NOTE.md); the [design](../../../../experiments/drain-beyond-the-reward/DESIGN.md), §12 for what this changed; reviewed before the queue in [REVIEW-LA4-FORMAL](development/la4-formal/REVIEW-LA4-FORMAL.md)). LA4 tests T3's clause on trained systems (05 §7). Its learner runs wait for a machine suited to them. What could be settled first is settled here: the season meets the laws it was built to meet, now proved, and which of the design's predictions follow from how a learner updates, proved or computed exactly.
+
+```text
+Result(s): two new records, the-test-season-meets-the-optimum-laws (F04) and
+       a-commuting-learner-drives-no-unread-choice (F01), homed in 05 §7; the core leaves Becoming.OptimumSeason and
+       Becoming.WeightedCommuting.
+Delta:
+  - The season as season.py runs it has three independent parts (the ground's catch, the bay's fish, the landings),
+    and every combination is eligible (eligible_of). The ground's best catch is 34, by a table checked against every
+    take at every level and step (bellman, caught_le, top_caught). The catch is at most 40, and at most 37 keeping
+    the bay at three or more.
+  - With units shared, every optimum of every order rising with the catch empties the bay (bay_drained, through
+    Optimum.least_of_shared). At the landing site there is no room, and among the optima of the order by the catch
+    alone are seasons landing there never and at every step (site_no_room, site_optima); ranked by the ground's catch
+    alone, no room at the bay and optima that keep it and that empty it (unshared_no_room, unshared_optima);
+    counting the bay after the catch drains it (after_iff, after_drained); the plateau is not rising
+    (plateau_not_rising, plateau_optima). Over seasons with natural-number weights, so for any policy with rational
+    probabilities, the mean bay left is at most 40(1 − ν), and ν ≤ 1 − 3p/40 (mix_bay_catch, mix_kept). The
+    design's checks by enumeration are now theorems; season.py's enumeration agrees with each.
+  - A weighted law, finitely many successors with weights of any type and no law of their arithmetic used,
+    commuting with a map carries every expectation through the map (Weighted.Commutes.carried); from a start the map
+    fixes or leaves unchanged, every expectation equals its image's at every step (fixed_expect, start_expect); a
+    determined commuting law is a case (law_commutes). A sampling law commutes where a map of the samples permutes
+    them and the map carries the weights and the update (of_samples). Reinforcing keeps equal expectations while runs
+    drawing one value for any number of steps have positive weight (oneSided); Pooling wears a start's preference
+    away with nothing reading the choice.
+  - The separable family's exact flow (exact_flow.py): from the prudent start the colony is kept in fewer than half
+    the seasons from about ν = 0.68 (interpolated between saved checkpoints), where nothing forces a drain; the
+    site's expected update is zero in every arm; the KL anchor (the design's loss at the visited states) slows the
+    drain; draining stalls the learner at ν = 0.85.
+  - A counterexample to T3's second forbidden case as first worded ("a systematic drive on a condition sharing no
+    units with anything rewarded"): in the flow, with the bay's fish uncounted, the bay rises from 5.0 to 5.9. The
+    policy reads the bay's level and learns the ground best at the levels it has visited, so taking a bay fish
+    lowers its later catch (tying the ground's choice across bay levels removes the bay's gradient, the review's
+    check). F2 is now stated in 05 §7 for a choice whose values nothing rewarded and nothing the learner reads tells
+    apart, where the commuting law makes it a theorem in expectation; P3 tests the locus, not F2.
+Supplied premises / correspondence: the season's modelling choices (natural-number levels, ten discrete steps, the
+       renewal and caps season.py uses, the colony read as the bay left). That a given learner commutes with the
+       exchange is a property of its code (parametrization, baseline, optimizer, inputs), which LA4's mirror test
+       checks; it is not proved. The exact flow is a computation on the baseline, not a test of a trained system.
+Evidence: core receipt `20261030T202529.410234Z`; Becoming.OptimumSeason (63 theorems in 98 declarations) and Becoming.WeightedCommuting
+       (18 theorems in 29 declarations), every axiom report empty; season.py's checks; exact_flow.py's gradients against finite
+       differences (agreeing to 1e-8); the connectivity check, the apart roots registered.
+Standing [AI reading]: T3's second forbidden case, a systematic drive on a choice whose values nothing rewarded and
+       nothing the learner reads tells apart, is a theorem in expectation for learners the exchange of the values
+       carries (parameters, value baseline, optimizer state, inputs), from a starting state or law the exchange leaves
+       unchanged. As first worded, for any condition sharing no units with anything rewarded, it fails where the
+       learner reads the condition: units do not exhaust couplings. From a start preferring one value, a prior
+       restraint, the clause stays conjectured, and Pooling shows such a preference can wear away with nothing
+       selecting on the choice: the control removing the selection in expectation, while still updating the choice
+       with noise, separates the two, approximately, since its noise is not the arm's.
+Boundary:
+  - No learner has run and no prediction is frozen; the clause on trained systems stays conjectured with partial
+    support.
+  - Erosion of a start's preference as a law of sampled gradient learners is shown only by the Pooling witness.
+  - The score's mean zero, which gives the separable family's zero site update, is the standard identity (Williams
+    1992), checked in exact_flow.py, not restated in Lean.
+Output → input: the two records and their home in 05 §7; T3's second forbidden case, standing and evidence in 05,
+       08's theses table (standing and forbidden cases), the overview's theses row in both editions; the experiments README's LA4 row; DESIGN §1, §2, §3, §6, §7, §10 and
+       §12 (P2 restricted to starts that tell the sites apart, the mirror test over the whole state, weight decay at
+       zero, the rival erosion without selection, C1's noise, B5 evaluated under both assignments, P3 one-sided and
+       testing the locus); the connectivity register; the modules' and records' regions; LA4's
+       board row (Stage A's code, calibration and power check next, on a machine suited to them).
+```
+
+## 471. A code held as counts, learned from what is heard (UE25)
+
+Board item UE25, communicating agents in the principle's terms ([note](development/ue25-communicating-agents/NOTE.md)). The law of a code formed between formations (§9 of 05, `Becoming.SharedCodes`) is stated for codes, each formation holding one form for each sense. The principle's agents hold beliefs instead: a likelihood of words given meanings, learned as Dirichlet counts. UE1's search graded three statements that communicating agents come to share one model or language as forbidden on their natural reading, and the principle's page left them uncounted because none was stated in the principle's terms. This section states the code law for beliefs held as counts and learned from what is heard, joined to the free-energy bound in counts (§460).
+
+```text
+Result(s): a-code-held-as-counts (new, homed in 05 §9 after imposing a code), its fourteen laws citing all 47
+       declarations of CountedCodes, each once; capture-by-counted-choices (UE1's record) names it among the
+       containment's third parts, with a related entry, no statement, next step or declaration changed.
+Delta: (1) counts and a unique greatest word: a belief gives each agent, for each meaning, a count of each word in any
+       type with an order; UniqueGreatest c w says every other word counts strictly less; with the order irreflexive
+       and transitive two words are never both uniquely greatest (unique_greatest_not_two, unique_greatest_eq), a
+       uniquely greatest word of renamed counts is carried to one of the counts where the renaming is onto
+       (unique_greatest_rename), and counts a renaming moving every word fixes have none
+       (fixed_no_unique_greatest).
+       (2) the relation Renamed π σ X Y, count by count Y is X with the agents exchanged and the words renamed; a law
+       keeping each alone keeps both (keeps_both); in a state related to itself, and along the run of a law keeping
+       the relation, an agent's uniquely greatest word, renamed, is that of the agent the exchange gives it, where the
+       renaming at the meaning is onto (unique_greatest_exchanged, unique_greatest_exchanged_run).
+       (3) the headline: there, where the renaming also moves every word, two exchanged agents never hold one word as
+       each one's uniquely greatest (never_shared), the renaming need not be onto with the exchange an involution
+       (never_shared_of_involution); shared counts have none (shared_no_unique_greatest); the code of uniquely
+       greatest words is related to itself in the code law's sense (read_relabels, into SharedCodes.Relabels).
+       (4) learning from what is heard, the hearer given the meaning (hear): it keeps the relation where the speaker
+       map commutes with the exchange and the rule reads count by count and commutes with renaming (hear_keeps); such
+       a rule gives tied counts from tied counts (tied_hears_tied); adding what is heard in natural counts, the form
+       of the principle's Dirichlet update, is such a rule where what is heard is (addHeard_keeps); adding the
+       speaker's own counts (addSpeaker_keeps) gives an involutive pair one model from the first step
+       (addSpeaker_shares, addSpeaker_shares_run); with the exchange, an involution, as speaker map, from a start
+       related to itself, that one model has no uniquely greatest word where the renaming moves every word
+       (addSpeaker_tied); learning gated by the whole model, the counts heard entering with a weight the hearer's
+       whole model gives (gatedHear), is not of hear's form and keeps the relation where, besides addHeard_keeps'
+       conditions, the renaming leaves the weight unchanged (gatedHear_keeps).
+       (5) free energy: the product of powers over a renamed listing is that of the renamed quantities
+       (powerProduct_map), totals and products of powers are unchanged by a permutation of the listing (total_perm,
+       powerProduct_perm), so over a listing the renaming permutes a count belief reaches the bound in counts exactly
+       where its renaming does for the renamed weights (bound_invariant); under weights a renaming moving every word
+       fixes, with a positive total, a belief at the bound over a listing of every word has no uniquely greatest word
+       (minimizer_no_unique_greatest), and joined to a run, where two exchanged agents hold the same counts
+       (shared_minimizer_no_unique_greatest).
+       (6) witnesses on two agents, two words and one meaning: opposite counts each with a uniquely greatest word,
+       one step of adding the speaker's counts giving both 3, 3 (Witness.added_tie); a speaker saying the first word
+       of greatest count, a preferred word, bringing both to one uniquely greatest word, its rule not commuting with
+       renaming (Witness.sayFirst_shared, Witness.sayFirst_not_alike); an asymmetric start bringing both to 1, 0
+       (Witness.lead_not_symmetric, Witness.asymmetric_shared).
+Premises: counts in any type with an order, irreflexive and transitive for the precision laws; natural counts for
+       learning and free energy, read as counts added to a common positive prior every renaming fixes; discrete
+       synchronous steps of a determined law; one renaming of the words for each meaning; the hearer given the
+       meaning; for the gated law, a weight in natural numbers; relations stated count by count (the pure core assumes no function extensionality); a unique greatest
+       count as the reading of a word named for a meaning.
+Evidence: core receipt 20261030T232750.486801Z; CountedCodes (34 theorems in 47 declarations), every axiom report empty, a leaf importing SharedCodes and
+       FreeEnergyCounting; an independent adversarial review of the first round with ten probes (REVIEW-UE25), every
+       finding taken, and a recheck of the second with five more probes (RECHECK-UE25), every point taken.
+Boundary: speaking by sampling, under which reinforcement reaches a signalling system (Argiento, Pemantle, Skyrms and
+       Volkov 2009); federated inference's law over the reals, with its normalized predictive, its weighting by the
+       policy to update and its forgetting, read as keeping the relation only as a reading; the hearer inferring the meaning; how long agreement takes;
+       free energy over parameters; whether actual conventions form this way.
+Output→input: a-code-formed-between-formations, free-energy-bound-in-counts → CountedCodes → 05 §9, 08 §8, the
+       principle's page, UE1's search, UE, FEP-INTEGRATION.
+```
+
+**Its standing.** The symmetry argument is Curie's principle (Curie 1894), as for the code law. Conventions are equilibria that symmetry does not select (Lewis 1969), and signalling dynamics reach a signalling system by chance or by an asymmetry (Skyrms 2010); with sampled reinforcement, reinforcing only after success, the two-state Lewis game achieves asymptotically optimal coordination (Argiento and others 2009), while with more states limits other than signalling systems occur with positive probability (Hu, Skyrms and Tarrès 2011). The Dirichlet update is the principle's learning of the likelihood (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016). Every law is near-definitional, an instance of the core's law of a kept relation, or a witness. New are the statement of the code law for beliefs held as counts and learned by rules of the principle's form, joined to the counting form of the free-energy bound, and the reading that lets the page count a fifth statement.
+
+**The review and its recheck.** An independent adversarial review by an AI agent (REVIEW-UE25) compiled the first round with ten probes. It found the Lean sound, every axiom report empty, and one error, three overclaims, three gaps and nine minor points. The error: the first round's rule of exchanging sufficient statistics was not federated inference's, which shares beliefs over latent states and learns its counts privately; it became adding the speaker's counts, described as what it is. The overclaims: a reindexing law true of every map had stood for invariance (now over a listing the renaming permutes); the step from the minimizer to learning did not follow (learning now rests on the update keeping the relation); and the duet, whose birds have continuous states, had been counted (it no longer is). The gaps: the paper's law lay outside the Lean (the precision laws now hold in any strict order, and learning for any rule reading count by count and commuting with renaming); sampling (named, "deterministic" stated); and the hearer given the meaning (a stated modelling choice). The recheck (RECHECK-UE25) read the second round and the landing texts against the signatures, with five more probes. It found the Lean exact and fourteen findings answered fully, and asked for one text pass: two sentences on the principle's page, and one in this section, forbade more than the law does, since a deterministic rule of learning from what is heard that does not commute with the renaming can bring a shared word (`Witness.sayFirst_shared`); summaries dropped hypotheses each theorem needs (onto or an involutive exchange, a listing of every word, a positive total, the speaker map commuting with the exchange), each shown necessary by a probe; and the reading had placed federated inference's update in the wrong class, its weighting by the policy to update reading the whole model. Every point was taken; the last turned half the reading into a theorem (`gatedHear_keeps`), and a witness was renamed (`sayFirst`) where its name collided with one of FreeEnergyCounting's.
+
+**Decisions at landing.** The law is a new record beside the code law's, not laws added to it: it is about beliefs and learning, and that record is another owner's. The page counts one statement, its fifth, for two papers, as its second entry counts two: federated inference's sentence read universally, with the ecosystems paper's §4.1 as its general form on its natural reading. UE1's search keeps its candidates as written, since records cite them, and gains a correction section.
+
+**Readings** [AI reading, D45]. That language is an emergent property of free-energy minimization, read as a guarantee, fails for every deterministic scheme keeping the symmetry from a symmetric start: free-energy minimization breaks no symmetry, and something else must, a preferred word, an order or centre telling the agents apart, an asymmetric start or chance. Federated inference's law, the hearer given the meaning, adds the speaker's normalized predictive at the meaning, a rule of `hear`'s kind, weighted by the probability of the policy to update, which reads the whole model, of `gatedHear`'s kind in natural weights; so it is read as keeping the relation `never_shared` needs, for a renaming the same for every meaning. Its simulation starts each parameter at one plus a random variate and stands.

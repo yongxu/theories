@@ -6,6 +6,16 @@
    "base": "general",
    "note": "SharedCodes: hearing-only code change keeps agreement; 约定俗成"
   },
+  "a-code-held-as-counts": {
+   "region": "collective",
+   "base": "general",
+   "note": "CountedCodes UE25: the code law for beliefs held as counts; under a law keeping the exchange of agents with a renaming of the words, two exchanged agents never share a uniquely greatest word where the renaming moves every word; learning from what is heard keeps the symmetry; the free-energy bound in counts is unchanged by a renaming permuting the words"
+  },
+  "a-commuting-learner-drives-no-unread-choice": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4; a weighted law commuting with a map keeps expectations"
+  },
   "a-coupling-saturated-by-what-it-has-carried": {
    "region": "map",
    "base": "frame",
@@ -2061,6 +2071,11 @@
    "base": "old-base",
    "note": "R1 Interleavings"
   },
+  "the-test-season-meets-the-optimum-laws": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4's season; the optimum laws met"
+  },
   "the-updater-line": {
    "region": "life",
    "base": "periphery",
@@ -2782,6 +2797,11 @@
    "region": "map",
    "base": "frame",
    "note": "counted work, kept properties, reserved exit"
+  },
+  "Becoming.CountedCodes": {
+   "region": "collective",
+   "base": "general",
+   "note": "UE25 the code law for beliefs held as counts (05 §9)"
   },
   "Becoming.Counterfactual": {
    "region": "knowing",
@@ -3578,6 +3598,11 @@
    "base": "old-base",
    "note": "SG1-SG17 optima at least level beyond; 506 thms (UE1b: one law of the exchange)"
   },
+  "Becoming.OptimumSeason": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the season season.py runs, the optimum laws it meets (record the-test-season-meets-the-optimum-laws)"
+  },
   "Becoming.OrderNormal": {
    "region": "root",
    "base": "old-base",
@@ -4232,6 +4257,11 @@
    "region": "knowing",
    "base": "general",
    "note": "P82 weighted histories, sum over courses = stepwise transfer"
+  },
+  "Becoming.WeightedCommuting": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the weighted commuting law and the sampling learner (record a-commuting-learner-drives-no-unread-choice)"
   },
   "Becoming.WeightedTraces": {
    "region": "knowing",
