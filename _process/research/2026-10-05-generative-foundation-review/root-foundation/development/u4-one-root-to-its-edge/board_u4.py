@@ -4,7 +4,7 @@
   python3 -B <dir>/board_u4.py head                     the head clause, before the Queue line's first clause
   python3 -B <dir>/board_u4.py landed RECEIPT N ORDER   the landed clause in place of the head clause, the order
                                                         sentence after it (ORDER: a file holding the coordinator's
-                                                        sentence), the earlier order sentence removed, and U4's row
+                                                        sentence), earlier clauses kept as they are, and U4's row
 
 Each edit asserts that it applies exactly once.
 """
@@ -73,9 +73,7 @@ def landed(receipt, n, order):
         f"independent review, 22 findings, every one taken; rehearsed three times, the last two under MV's follow-up "
         f"rule; render, strict check, links (0 broken), the record's lint and the 305 tests pass in the landing worktree). ")
     rest = rows[i][len(QUEUE + HEAD):]
-    old = ORDER.findall(rest)
-    assert len(old) == 1, len(old)
-    rest = rest.replace(old[0], '', 1)
+    assert ORDER.match(rest) is None and rest.startswith("MV's follow-up and the README's first screen landed")
     rows[i] = QUEUE + clause + order + ' ' + rest
     u = [j for j, x in enumerate(rows) if x.startswith('| **U4: one root to its edge**')]
     assert len(u) == 1, u
@@ -85,7 +83,8 @@ def landed(receipt, n, order):
             f"next step (a root form for the census rows, a theorem that no statement reading only the dynamics "
             f"entails C, the root reading of significance for the three rows keeping it free).")
     assert 'Leaf and boundary record landed' not in rows[u[0]]
-    cells[-2] = cells[-2].rstrip() + note
+    assert cells[2].startswith('claimed 30 October 2026'), cells[2][:60]  # item | owner | status | paths | depends
+    cells[2] = cells[2].rstrip().rstrip('.') + '.' + note
     rows[u[0]] = ' | '.join(cells)
     BOARD.write_text('\n'.join(rows), encoding='utf-8')
     print('landed clause written:', clause[:160], '…')
