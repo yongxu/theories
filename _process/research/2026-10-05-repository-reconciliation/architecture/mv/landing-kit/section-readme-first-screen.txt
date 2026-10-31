@@ -43,12 +43,17 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        the four cases exclude one another, and that a part falls under one is classical (record four-cases-of-a-part).
        So that the line before the notes is true of every note, the two the audit found older are brought to the
        current account: [^axiom] gives §4.6's path (under P1 to P4 one's concern reaches everything downstream of what
-       one conditions, P2 and P4 its crux, what it does not reach the step's), names P2 and P4 among what is open,
+       one conditions, P2, one's line a regularity of its own, and P4 its crux, what it does not reach the step's), names P2 and P4 among what is open,
        says no warrant binding every possible mind is claimed and the ethics does not wait on one, states the
        zero-axiom target as open (08 §12) where it said the attempt "has not yet begun", and says no human has
-       reviewed the condition's results yet where it said "not yet independently reviewed"; [^own] grounds
-       self-significance in P1, the self's presupposition, which the condition contains and gives at every
-       standpoint (07 §4.1, §4.6), where it grounded it in the condition.
+       reviewed the condition's results yet where it said "not yet independently reviewed"; [^own] states P1, the
+       self's presupposition, as stated and not asserted, which the condition contains (07 §4.1, §4.6), and
+       self-significance as what the condition gives on the readings its theorem takes, where it gave
+       self-significance under the condition alone. A check of the two notes against 07, 08, AGENTS and the glossary,
+       its findings then given to a skeptic, found 9: 3 confirmed and taken (P2 glossed as constancy over the whole
+       class, which 07 says P2 does not ask; [^own] stating self-significance outright, which the account does not
+       assert; the line before the notes, until those two were fixed), 6 refuted
+       ([reports/opening-notes-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/opening-notes-check.json)).
        (5) drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
        the opening after the first screen and names the proposal.
        (6) a link into the page it is placed in stays on the page (navigation.adapt_links), so the screen's links to
