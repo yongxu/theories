@@ -67,6 +67,7 @@ import Becoming.SelectionTerm
 import Becoming.Reproduction
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.RootForms
 import Becoming.Founding
 import Becoming.Drift
 import Becoming.Space
@@ -903,6 +904,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   wherever a lineage founded higher leaves offspring beside a lower one with members. Witnesses:
   selection within the keeping group outweighed, and outweighing; mixed groups regrouped by
   descent falling back, and lineages keeping what ending selected.
+* `Becoming.RootForms` (L1): rows stated on the grammar under named hypotheses. A root form's
+  statement names only grammar terms and its own hypotheses, each a definition naming no model and
+  no amount, and each shown needed by a countermodel over one point with its fit; a recovery at the
+  row's own type proves the row through the form, tied to it by an `rfl` certificate. Where giving
+  lies within giving from a region and listed descent within giving, a listing wholly outside the
+  region has no listed offspring (`RootForms.outside_leaves_no_offspring`), and
+  `GroupEnding.Flow.all_end` is that form at one step, each hypothesis met by definitions alone
+  (`RootForms.all_end_at_model`). Where what comes to stand is given to, dependence is inherited
+  along descent and nothing descended from depends before the step, nothing coming to stand
+  depends after it (`RootForms.descent_forms_no_dependence`): the relational part of
+  `Flow.no_new_dependence`, whose balance meets "given to" only through amount reasoning
+  (`RootForms.no_new_dependence_at_model`). The boundary record places these rows by them.
 * `Becoming.Founding` (L1): selection within a whole, a lineage confined to it, and what a
   founding carries. Where a family of conditions ran into excess under the coupled gate, every
   member of a later generation of descent is the offspring of a member that did not depend on
