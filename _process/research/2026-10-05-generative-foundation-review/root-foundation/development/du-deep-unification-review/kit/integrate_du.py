@@ -851,13 +851,13 @@ LANDED_PREFIX = '## DU landed: premises met and failed'
 
 
 def what_remains(fig, n04, receipt_id, study, f5_before):
-    """TEXTS (c): the unit-grain section (OU's owner's, WHAT-REMAINS-SECTION.md's first part), and DU's landed section
+    """TEXTS (c): the unit-grain section (OU's owner's, WHAT-REMAINS-SECTION.txt's first part), and DU's landed section
     (its second part, a template whose figures are filled from the landing's measure, data and receipt)."""
     text = WHAT_REMAINS.read_text(encoding='utf-8')
     before = WHAT_REMAINS_BEFORE
     assert text.count(before) == 1
-    parts = (HERE / 'WHAT-REMAINS-SECTION.md').read_text(encoding='utf-8').split('\n---\n')
-    assert len(parts) == 3, 'WHAT-REMAINS-SECTION.md: a header and two sections, each after a line ---'
+    parts = (HERE / 'WHAT-REMAINS-SECTION.txt').read_text(encoding='utf-8').split('\n---\n')
+    assert len(parts) == 3, 'WHAT-REMAINS-SECTION.txt: a header and two sections, each after a line ---'
     unit, landed = parts[1].strip('\n'), parts[2].strip('\n')
     f5, dep = fig['f5'], fig['dep']
     values = {

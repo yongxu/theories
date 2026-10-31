@@ -37,20 +37,24 @@ One-to-one continuation of units is balance at the unit grain, not atomism. Bala
 
 Standings read from the boundary record `one-root-to-its-edge` on `852985f8a` (taken by OU's owner): 1 under a stated hypothesis, 3 counting, 1 at a represented model, **5** with balance in the statement and **8** at amounts. The split "6 and 7" in the review's attack and in OU's owner's note does not match the record, which places `Flow.no_new_dependence`, `Reproduction.Flow.lineage_ends`, `Reproduction.Flow.closed_lineage_lowered`, `GroupEnding.Flow.family_childless` and `GroupEnding.Flow.coupled_end_together` with balance in the statement, and the other eight at amounts. The figures are checked against the record again at the landing.
 
-§Bases: replace "None is yet lifted onto the grammar; only the law of passing is read on it, in part ([below](#r-a-pattern-lasts-through-passing))." with:
+§Bases: replace ``None is yet lifted onto the grammar; only the law of passing is read on it, in part ([below](#r-a-pattern-lasts-through-passing)).`` with:
 
-> Of the chapter's 18 central declarations, the [boundary record](../results/records/one-root-to-its-edge.md) places:
-> - one on the root under a stated hypothesis: `GroupEnding.Flow.all_end`, as `RootForms.outside_leaves_no_offspring`, each hypothesis needed;
-> - three as counting, below the grammar: Price's covariance, the levels partition and the drift bound;
-> - one at a represented model: `Web.transmits_at_iff`;
-> - five with balance in their statements;
-> - eight at amounts.
->
-> The law of passing is read on the grammar, in part ([below](#r-a-pattern-lasts-through-passing)). None of the 18 is proved from the root's laws alone. Each is proved from the World premises it takes as hypotheses (balance, only active relata give, activity needing support, dissipation, bounded transmission, in 08's premise card's wording), and no one of those premises follows from the others (`World.independent`, `World.none_follows`).
+```markdown
+Of the chapter's 18 central declarations, the [boundary record](../results/records/one-root-to-its-edge.md) places:
+- one on the root under a stated hypothesis: `GroupEnding.Flow.all_end`, as `RootForms.outside_leaves_no_offspring`, each hypothesis needed;
+- three as counting, below the grammar: Price's covariance, the levels partition and the drift bound;
+- one at a represented model: `Web.transmits_at_iff`;
+- five with balance in their statements;
+- eight at amounts.
 
-Open: replace "Lifting these laws onto the grammar ([08](08-METHOD.md))." with:
+The law of passing is read on the grammar, in part ([below](#r-a-pattern-lasts-through-passing)). None of the 18 is proved from the root's laws alone. Each is proved from the World premises it takes as hypotheses (balance, only active relata give, activity needing support, dissipation, bounded transmission, in 08's premise card's wording), and no one of those premises follows from the others (`World.independent`, `World.none_follows`).
+```
 
-> Moving a row past its standing in the boundary record: a row at amounts or with balance in its statement moves only through a root form whose hypotheses its model meets by definitions alone, as `GroupEnding.Flow.all_end` does ([08 §7](08-METHOD.md#r-one-root-to-its-edge)). The World premises stay hypotheses.
+Open: replace ``Lifting these laws onto the grammar ([08](08-METHOD.md)).`` with:
+
+```markdown
+Moving a row past its standing in the boundary record: a row at amounts or with balance in its statement moves only through a root form whose hypotheses its model meets by definitions alone, as `GroupEnding.Flow.all_end` does ([08 §7](08-METHOD.md#r-one-root-to-its-edge)). The World premises stay hypotheses.
+```
 
 ## Also touched by the leaf (the record's owner)
 
@@ -93,12 +97,12 @@ ONE-PAGE line 35, the overview's lines 115 and 164, and the same three lines of 
 
 - **ONE-PAGE.md, line 35 (OU's owner's word, 1 November):** "the condition is a law of the root: nothing lies outside every center's line under the one of that relation (`«续无外»`), and along a net" becomes "the condition is a statement on the root, met by some nets and failed by others: nothing lies outside every center's line under the one of that relation (`«续无外»`); along a net".
 - **ONE-PAGE.md, line 23 (OU's owner's word, from ND's cold read; the same change, so the page changes once):** "the *continuation condition*, that for anything, its continuation has significance." becomes "the *continuation condition*, that from every standpoint, for anything, its continuation into the future has significance." This is 07 §3's definition and ND's glossary row word for word. Without "from every standpoint" the short form reads as intrinsic value. If ND's glossary row lands first, line 23 matches the row as it then stands on main.
-- **THE-THEORY-OF-BECOMING.md, line 115:** "it holds exactly where every center's closure along that relation is the whole, and so is a law of the root: nothing lies outside every center's line under the one of that relation (`«续无外»`)." becomes "it holds exactly where every center's closure along that relation is the whole, and is a statement on the root: nothing lies outside every center's line under the one of that relation (`«续无外»`). It is true or false once the net, its class and the centers are given, and some nets meet it while others fail it ([premises met and failed](chapters/08-METHOD.md#r-premises-met-and-failed))."
+- **THE-THEORY-OF-BECOMING.md, line 115:** "it holds exactly where every center's closure along that relation is the whole, and so is a law of the root: nothing lies outside every center's line under the one of that relation (`«续无外»`)." becomes `` it holds exactly where every center's closure along that relation is the whole, and is a statement on the root: nothing lies outside every center's line under the one of that relation (`«续无外»`). It is true or false once the net, its class and the centers are given, and some nets meet it while others fail it ([premises met and failed](chapters/08-METHOD.md#r-premises-met-and-failed)). ``
 - **THE-THEORY-OF-BECOMING.md, line 164:** "Held de se along a relation, the condition is a law of the root:" becomes "Held de se along a relation, the condition is a statement on the root, met by some nets and failed by others:".
 - **ONE-PAGE.zh.md, line 35 (OU's owner's word):** "延续条件就是根的一条律：" becomes "延续条件是根上的一个陈述，有的网满足它，有的不满足：". The rest of the line is unchanged.
 - **ONE-PAGE.zh.md, line 23 (OU's owner's word):** "*延续条件*，即对任何东西，其延续都有意义。" becomes "*延续条件*，即从每一个立场看，对任何东西，其延续到未来都有意义。"
 - **Reading time, checked on main `3d1528b36` with the edits applied to copies:** the English page grows by 13 words. On READING-BUDGETS' basis of 1,102 words, that gives 1,115 words, 8.6 to 11.2 minutes at 100 to 130 words a minute. The Chinese page grows from 1,858 to 1,880 characters, 7.6 to 9.9 minutes. "About ten minutes" holds on both pages. The English page now runs 15 words over the 1,100-word budget, which it already exceeded by 2. Recount at the landing.
-- **THE-THEORY-OF-BECOMING.zh.md, line 115:** the clause "就是根的一条律" (or its wording there, read at the landing) becomes "是根上的一个陈述", followed by "它在网、其类与诸中心给定后或真或假，有的网满足它，有的不满足（[满足与不满足的前提](chapters/08-METHOD.md#r-premises-met-and-failed)）。"
+- **THE-THEORY-OF-BECOMING.zh.md, line 115:** the clause "就是根的一条律" (or its wording there, read at the landing) becomes "是根上的一个陈述", followed by `` 它在网、其类与诸中心给定后或真或假，有的网满足它，有的不满足（[满足与不满足的前提](chapters/08-METHOD.md#r-premises-met-and-failed)）。 ``
 - **THE-THEORY-OF-BECOMING.zh.md, line 164:** "该条件就是根的一条律：" becomes "该条件是根上的一个陈述，有的网满足它，有的不满足：".
 
 The link to `r-premises-met-and-failed` exists once R1's home section lands in 08 §7. The front pages are being cut by OU's owner, so line numbers and wording are re-read at the landing, and the replacements are applied only to the sentence as it then stands. These edits land in DU's landing on the front-page owner's word, given 1 November 2026 for all six lines with the wording above, so each page changes once. The kit applies them after R1's home section is in 08 §7, because line 115's link `r-premises-met-and-failed` resolves only once that section exists, and research-links runs after both. At the landing, READING-BUDGETS' one-page row records the recounted figures, not the estimate here; the owner accepts a count of about 1,115 words.
