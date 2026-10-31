@@ -110,8 +110,8 @@
     "zh": "纯核，公理报告皆空：Cascade 引 Learning 唯为 Training.Through；诸行以成员之数递归而建。"
   },
   "next_delta": {
-    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test predicting when sequential choosers stop reading their own signals; review by a person.",
-    "zh": "概率之形，公示之据重于每一私讯时之级联；预测依次之择者何时不复读其私讯之检验；人之审查。"
+    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise, a named probabilistic model's timing judged apart (the plan's TR3); review by a person.",
+    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于何处合此前提之检验，具名之概率模型之时机另判（计划之 TR3）；人之审查。"
   },
   "correspondence": {
     "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.",
@@ -220,6 +220,10 @@
     {
       "en": "29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool's acts carry no more than the couplings of the members before it; a member carrying its coupling; copying; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
       "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池之行所载不逾其前诸员之耦合；载其耦合之员；相仿；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR3，至多能驳依次之择者于所至之历合此前提之桥，不驳此律；无一陈述或声明改变。"
     }
   ]
 }
