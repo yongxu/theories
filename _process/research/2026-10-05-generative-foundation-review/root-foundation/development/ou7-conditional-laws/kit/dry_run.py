@@ -9,7 +9,9 @@ stage twice. It then takes the post stage's own steps against a synthetic receip
   - register, after a refused log, then once more;
   - study, twice.
 Last, OU7's two records and those six go through the registry's own validation and the lint. Nothing in the
-repository is written.
+repository is written. Each stage in the kit's stages/ rides along as the landing takes it (a SKIP file or OU7_STAGES
+leaves one out): the tree holds the files its patches change, the synthetic receipt its declarations, and the records
+its patches change are re-pointed and validated with the rest.
 
   python3 -B <kit>/dry_run.py OUT [MAIN]     OUT: a new folder outside the repository; MAIN: the commit, by default
                                              refs/heads/main
@@ -72,9 +74,19 @@ paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
           'tools/research', '_process/architecture/rebinds.jsonl']
-# Every file the records the kit changes reference or keep a text version in, so that they validate in the tree as in
-# the checkout.
-for rid in GENERALIZED + WORDS + OWNER + CUT:
+# Each stage's patches: the files they change that MAIN holds, and the records among them.
+STAGE_DIRS = sorted(d for d in (REPO / KIT / 'stages').iterdir() if d.is_dir()) if (REPO / KIT / 'stages').is_dir() else []
+touched = sorted({m.group(1) for d in STAGE_DIRS for x in sorted(d.glob('*.patch'))
+                  for m in re.finditer(r'^diff --git a/(\S+) b/', x.read_text(encoding='utf-8'), re.M)})
+held = set(run('git', 'ls-tree', '-r', '--name-only', MAIN, '--', *touched, cwd=REPO).stdout.split()) if touched else set()
+paths += [x for x in touched if x in held and not any(x == q or x.startswith(q + '/') for q in paths)]
+STAGE_RECORDS = tuple(Path(x).stem for x in touched
+                      if x.startswith('theories/becoming/results/records/') and x.endswith('.json'))
+STAGE_LEAN = [x for x in touched if x.startswith(PKG + 'Becoming/') and x.endswith('.lean')]
+# Every file the records the kit and the stages change reference or keep a text version in, so that they validate in
+# the tree as in the checkout.
+for rid in GENERALIZED + WORDS + OWNER + CUT + tuple(r for r in STAGE_RECORDS
+                                                    if f'theories/becoming/results/records/{r}.json' in held):
     rec = json.loads(run('git', 'show', f'{MAIN}:theories/becoming/results/records/{rid}.json', cwd=REPO).stdout)
     paths += [x['path'] for x in rec['references'] + rec.get('text_versions', []) if x['path'] not in paths]
 TREE.mkdir(parents=True)
@@ -118,10 +130,11 @@ def synthetic_receipt():
     r = json.loads((TREE / PKG / f'becoming-checks/{latest}/verification.json').read_text(encoding='utf-8'))
     r['utc'], r['status'], r['retained_run'] = STAMP, 'passed', f'becoming-checks/{STAMP}'
     by = {m['module']: m for m in r['modules']}
-    for module in ('Becoming.Grammar', 'Becoming.GrammarReadings', 'Becoming.GrammarTesting', 'Becoming.GrammarLaws',
-                   'Becoming.MapRegions', 'Becoming.GrammarCrossing', 'Becoming.Standpoints',
-                   'Becoming.ConveyanceBoundaries'):
-        r['source_sha256'][module] = hashlib.sha256((TREE / PKG / f'Becoming/{module[9:]}.lean').read_bytes()).hexdigest()
+    # Every package source the patches and the stages changed, at its new hash.
+    for path in run('git', 'diff', '--name-only', 'HEAD', '--', PKG + 'Becoming/').stdout.split():
+        if path.endswith('.lean'):
+            module = 'Becoming.' + path[len(PKG + 'Becoming/'):-len('.lean')].replace('/', '.')
+            r['source_sha256'][module] = hashlib.sha256((TREE / path).read_bytes()).hexdigest()
     for module in mr.BELOW:     # exactly the declarations the patches add, as the audit checks
         for name in sorted((mr.PATCHED & mr.BELOW_NAMES[module]) - {d['name'] for d in by[module]['declarations']}):
             by[module]['declarations'].append({'kind': 'theorem', 'name': name})
@@ -141,6 +154,37 @@ def synthetic_receipt():
         by['Becoming.GrammarLaws']['declarations'].append({'kind': 'theorem', 'name': name})
         by['Becoming.GrammarLaws']['axiom_dependencies'][name] = []
         by['Becoming.GrammarLaws']['theorems'] += 1
+    # Each stage in place: what its EXPECTED.json adds (a theorem or not, read from the source), moves and renames,
+    # each found in the receipt by its name or, for a name the audit keys without its namespace, by its last part. A
+    # module a stage adds is not modelled here.
+    def find(module, name):
+        return next((d for d in by[module]['declarations'] if d['name'] == name), None) or \
+            next((d for d in by[module]['declarations'] if d['name'].endswith('.' + name.split('.')[-1])), None)
+    for stage, data in kit.stage_data():
+        for module, names in data.get('added', {}).items():
+            whole = kit.statements((TREE / kit.source_of(module)).read_text(encoding='utf-8'))[1]
+            for name in names:
+                if name in data.get('moved', {}) or find(module, name):
+                    continue
+                theorem = whole.get(name, '').startswith('theorem ')
+                by[module]['declarations'].append({'kind': 'theorem' if theorem else 'def', 'name': name})
+                by[module]['axiom_dependencies'][name] = []
+                by[module]['theorems'] += theorem
+        for name, (source, target) in data.get('moved', {}).items():
+            entry = find(source, name)
+            assert entry, (stage.name, 'moves a declaration the receipt does not hold', name, source)
+            by[source]['declarations'].remove(entry)
+            by[target]['declarations'].append(entry)
+            by[target]['axiom_dependencies'][entry['name']] = by[source]['axiom_dependencies'].pop(entry['name'], [])
+            if entry['kind'] == 'theorem':
+                by[source]['theorems'] -= 1
+                by[target]['theorems'] += 1
+        for old, new in data.get('renamed', {}).items():
+            for module in by.values():
+                entry = next((d for d in module['declarations'] if d['name'] == old), None)
+                if entry:
+                    entry['name'] = new
+                    module['axiom_dependencies'][new] = module['axiom_dependencies'].pop(old, [])
     leaves = [(mr.MODULE, mr.SOURCE, mr.LEAF, mr.THEOREMS, 'core', 'core_modules')] + \
              [(m, p, mb.LEAVES[m], mb.THEOREMS[m], 'instance', 'instance_modules') for m, p in mb.MODULES.items()]
     for module, path, names, theorems, layer, listed in leaves:
@@ -179,9 +223,11 @@ show('record, a second time', second, 6)
 lean = [mr.BELOW[m] for m in ('Becoming.Grammar', 'Becoming.GrammarReadings')] + \
        [PKG + f'Becoming/{n}.lean' for n in ('MapRegions', 'GrammarLaws', 'GrammarCrossing', 'Standpoints',
                                             'ConveyanceBoundaries')]
+lean += [x for x in STAGE_LEAN if x not in lean and (TREE / x).exists()]
+STAGE_IDS = tuple(r for r in STAGE_RECORDS if (TREE / f'theories/becoming/results/records/{r}.json').exists())
 show('re-point of the six records the record stage changed or whose sources the patches changed', run(
     'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--ids', *GENERALIZED, *WORDS, *OWNER,
-    *CUT, '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean,
+    *CUT, *STAGE_IDS, '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean,
     '--apply'), 8)
 
 APART = RF + 'THEOREM-CONNECTIVITY-APART.json'
@@ -207,7 +253,8 @@ refused = run(*integrate, 'register', log('conn-refused.log', short + witnesses,
 assert refused.returncode and 'part B\'s roots differ' in refused.stderr, refused.stderr[-800:]
 assert not run('git', 'status', '--porcelain', '--', APART).stdout, 'a refused log changed the register'
 show('register refuses a log missing a predicted root of part B, the register untouched', refused, 2)
-listed = sorted(part_b['roots']) + witnesses + sorted(kit.OWNER_ROOTS) + ['Becoming.SomeoneElse.root']
+listed = sorted(part_b['roots']) + witnesses + sorted(kit.OWNER_ROOTS) + sorted(kit.stage_roots()[0]) + \
+    ['Becoming.SomeoneElse.root']
 show('register', run(*integrate, 'register', log('conn.log', listed, used)), 6)
 show('register, a second time', run(*integrate, 'register', log('conn-again.log', [], [])), 6)
 
@@ -230,6 +277,6 @@ validate = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".")
             'print(len(mine), "findings on the", len(ids), "records;", len(findings) - len(mine), "elsewhere (this tree holds "'
             '"only the files the kit touches)")')
 show('the records through the registry and the lint', run('python3', '-B', '-c', validate, mr.RID, mb.RID,
-                                                          *GENERALIZED, *WORDS, *OWNER, *CUT), 40)
+                                                          *GENERALIZED, *WORDS, *OWNER, *CUT, *STAGE_IDS), 40)
 show('what the dry run changed in the tree', run('git', 'status', '--short'), 40)
 print('dry run done:', TREE)

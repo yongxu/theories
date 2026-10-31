@@ -8,7 +8,9 @@
 #                                      them; no leaf yet in the package; every anchor of the joins and the two home
 #                                      sections found once (integrate_ou7.py anchors, nothing written)
 #   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, MapRegions, OU plan and GrammarTesting patches,
-#                                      then patches/owner/ in name order; the three leaves and their joins; the audit
+#                                      then patches/owner/ in name order; the three leaves and their joins; then each
+#                                      stage in stages/ (a SKIP file or OU7_STAGES leaves one out; one whose series does
+#                                      not apply is dropped, and OU7 lands without it); the audit, the stages' merged in
 #   LOG=DIR zsh land_ou7.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
 #   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions; the two
 #                                      general laws in 01 §4, 06 §三 and their two records; one record's words; OU7's
@@ -17,6 +19,8 @@
 #                                      re-point of the records whose sources the patches changed; render, checks,
 #                                      links, lint, tests
 # LOG holds every log (outside the repository). Each stage stops at the first failure and says where. No stage commits.
+# The re-point is one pass for the kit and every stage in place, its reason the kit's and theirs (integrate_ou7.py
+# reason N); the receipt line, the study section and the commit name only the stages in place.
 set -u
 LOG=${LOG:?}; mkdir -p $LOG
 PKG=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
@@ -37,10 +41,13 @@ prepare)
   for f in GrammarConditionals RoomNet RoomRuns; do
     [ ! -e $PKG/Becoming/$f.lean ] || fail "the package already has a $f.lean"
   done
-  step anchors; python3 -B $K/integrate_ou7.py anchors > $LOG/anchors.log 2>&1 || fail anchors; tail -1 $LOG/anchors.log ;;
+  step anchors; python3 -B $K/integrate_ou7.py anchors > $LOG/anchors.log 2>&1 || fail anchors; tail -1 $LOG/anchors.log
+  step stages; python3 -B $K/integrate_ou7.py stages > $LOG/stages.log 2>&1 || fail stages; head -1 $LOG/stages.log
+  echo "each stage's series is checked at apply, after the joins it is made against" ;;
 apply)
   step apply; python3 -B $K/integrate_ou7.py apply > $LOG/apply.log 2>&1 || fail apply; cat $LOG/apply.log
   step audit; python3 -B $K/integrate_ou7.py audit > $LOG/audit.log 2>&1 || fail audit; tail -3 $LOG/audit.log
+  python3 -B $K/integrate_ou7.py stages | tail -1
   git diff --stat | tail -1 ;;
 run)
   step checker
@@ -72,6 +79,7 @@ print('receipt', sys.argv[1].split('/')[-2], len(v['modules']), 'modules, every 
       len(m['Becoming.Grammar']['declarations']), 'and GrammarReadings', len(m['Becoming.GrammarReadings']['declarations']),
       'declarations')
 EOF
+  python3 -B $K/integrate_ou7.py stages | tail -1
   step record; python3 -B $K/integrate_ou7.py record $V $N > $LOG/record.log 2>&1 || fail record; cut -c1-200 $LOG/record.log
   step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
   python3 -B $K/integrate_ou7.py check > $LOG/ou7check.log 2>&1 || fail "OU7's check"; cut -c1-200 $LOG/ou7check.log
@@ -82,9 +90,10 @@ EOF
   python3 -B $M --check > $LOG/conn.log 2>&1 || fail "connectivity check"
   step study; python3 -B $K/integrate_ou7.py study $N $V > $LOG/study.log 2>&1 || fail study; cat $LOG/study.log
   # The records pinning a source the patches changed (Grammar, GrammarReadings, GrammarTesting, MapRegions, the OU
-  # plan, and whatever the owner's patches change): read with each source before this stage, then re-pointed as
-  # bookkeeping, the Lean files' proof bindings rebound to this receipt. What the record stage changed in three of
-  # them has its history notes already. Owner patches add their own reason to repoint_reason.txt.
+  # plan, and whatever the owner's patches and the stages change): read with each source before this stage, then
+  # re-pointed as bookkeeping in one pass, the Lean files' proof bindings rebound to this receipt. What the record
+  # stage changed has its history notes already. Owner patches add their reason to repoint_reason.txt, and each stage
+  # its own in its directory.
   step repoint; python3 -B tools/research/research.py check > $LOG/rc.log 2>&1
   python3 - $LOG/rc.log $LOG/drift.json <<'EOF' || fail drift
 import sys, json
@@ -94,7 +103,7 @@ print('errors', len(d.get('errors', [])), 'drift', len(d.get('source_drift', [])
       sorted({x['id'] for x in d.get('source_drift', [])}))
 EOF
   LEAN=(${(f)"$(git diff --name-only HEAD -- $PKG/Becoming | grep '\.lean$')"})
-  python3 -B tools/research/repoint.py --reason "$(sed "s/{N}/$N/" $K/repoint_reason.txt)" --drift-json $LOG/drift.json \
+  python3 -B tools/research/repoint.py --reason "$(python3 -B $K/integrate_ou7.py reason $N)" --drift-json $LOG/drift.json \
     --receipt $V --lean "${LEAN[@]}" --apply > $LOG/repoint.log 2>&1 || fail repoint
   head -3 $LOG/repoint.log
   step render; python3 -B tools/research/research.py render > $LOG/render.log 2>&1 || fail render

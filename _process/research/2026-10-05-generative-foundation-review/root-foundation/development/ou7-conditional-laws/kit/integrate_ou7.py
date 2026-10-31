@@ -24,7 +24,8 @@ closed both ways, so the two count laws read as one (01 §7 and master-laws-on-t
                                                            and scope sentences (GrammarReadings' naming the general
                                                            law), the README rows EN and ZH, the Lean catalogue's
                                                            description of the ring; what the notes, rows and scope
-                                                           sentences say of the modules the owner's patches change
+                                                           sentences say of the modules the owner's patches change;
+                                                           then each stage's series, in name order
   python3 -B <dir>/integrate_ou7.py audit                  every Lean source the patches changed, against HEAD with
                                                            comments blanked: Grammar and GrammarReadings gain exactly
                                                            their three laws, none removed, every other statement kept,
@@ -58,13 +59,23 @@ closed both ways, so the two count laws read as one (01 §7 and master-laws-on-t
   python3 -B <dir>/integrate_ou7.py check                  after master_laws.py: the data is the landing run's, reads
                                                            both records' laws as they stand, and U4's boundary report
                                                            and the central figures are unchanged from the merged main
-  python3 -B <dir>/integrate_ou7.py study N RECEIPT        the study's section N (the next free one), from the receipt
+  python3 -B <dir>/integrate_ou7.py study N RECEIPT        the study's section N (the next free one), from the receipt,
+                                                           a paragraph for each stage in place
+  python3 -B <dir>/integrate_ou7.py stages                 the stages selected and the stages in place
+  python3 -B <dir>/integrate_ou7.py reason N               the one re-point pass's reason: the kit's, then each stage's
+
+Stages: extra patch sets riding in the same rebuild, each its owner's, in stages/NN-name/ (a series of *.patch made
+against the tree after the kit's patches and joins, applied by `apply` after the joins; EXPECTED.json for the audit
+and the register; repoint_reason.txt; study.md). A SKIP file or OU7_STAGES leaves a stage out, and a stage whose series
+does not apply is dropped: OU7 lands without it (R10).
 
 Run from the checkout root of the landing worktree, in the order land_ou7.sh gives. Each edit asserts that it applies
 exactly once, or that it is already applied, so a stage can be rerun after main moves.
 """
+import functools
 import importlib.util
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -342,6 +353,90 @@ def apply_patches():
             sys.exit(f'{p.name} neither applies nor is in place: main moved under it; rebase the patch and rerun')
 
 
+# --------------------------------------------------------------------------------------------------------- stages
+
+# Extra patch sets that ride in the same rebuild, each its owner's (U4c's census laws, ND's renames): a directory
+# stages/NN-name/ holding a series of *.patch files, made against the tree after the kit's patches and joins and the
+# stages before it, applied in name order. A stage may also hold EXPECTED.json (merged into the audit's and the
+# register's, below), repoint_reason.txt (joined to the kit's, for the one re-point pass) and study.md (its paragraph
+# in the study section). A SKIP file in it skips it, and OU7_STAGES, when set, names the stages taken ('none' takes
+# none). A stage whose series does not apply is dropped, and OU7 lands without it (R10). Every later step reads only
+# the stages in place.
+STAGES = HERE / 'stages'
+STAGE_KEYS = {'added', 'cases', 'moved', 'redefined', 'restated', 'renamed', 'roots', 'now_used'}
+
+
+def selected_stages():
+    found = sorted(d for d in STAGES.iterdir() if d.is_dir()) if STAGES.is_dir() else []
+    wanted = os.environ.get('OU7_STAGES')
+    if wanted is not None:
+        names = set(wanted.replace(',', ' ').split()) - {'none'}
+        unknown = names - {d.name for d in found}
+        if unknown:
+            sys.exit(f'OU7_STAGES names no stage: {sorted(unknown)}')
+        found = [d for d in found if d.name in names]
+    return [d for d in found if not (d / 'SKIP').exists()]
+
+
+def series(stage):
+    return [str(x) for x in sorted(stage.glob('*.patch'))]
+
+
+def applied_stages():
+    """The selected stages whose series are in place, found from the last back: a stage is in place when its series
+    reverses on the tree as it stands, once every later stage in place has been reversed first."""
+    later, out = [], []
+    for stage in reversed(selected_stages()):
+        trial = later + series(stage)[::-1]
+        if series(stage) and git('apply', '--reverse', '--check', *trial, check=False).returncode == 0:
+            later, out = trial, [stage] + out
+    return out
+
+
+def apply_stages():
+    stages, applied = selected_stages(), applied_stages()
+    last = max((stages.index(s) for s in applied), default=-1)
+    for i, stage in enumerate(stages):
+        patches = series(stage)
+        if stage in applied:
+            print(f'stage {stage.name}: already in place')
+        elif not patches:
+            print(f'stage {stage.name}: no patch')
+        elif i < last:
+            print(f'stage {stage.name}: DROPPED, not in place while a later stage is; OU7 lands without it (R10)')
+        elif git('apply', '--check', *patches, check=False).returncode == 0:
+            git('apply', *patches)
+            print(f'stage {stage.name} ({len(patches)} patches): applied')
+        else:
+            print(f'stage {stage.name}: DROPPED, its series does not apply to the tree after the kit and the stages '
+                  'before it; OU7 lands without it (R10)')
+
+
+def stage_data():
+    """Each applied stage with its EXPECTED.json (or nothing), its keys checked, in order."""
+    out = []
+    for stage in applied_stages():
+        path = stage / 'EXPECTED.json'
+        data = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+        assert set(data) <= STAGE_KEYS, (stage.name, 'EXPECTED.json: unknown keys', sorted(set(data) - STAGE_KEYS))
+        out.append((stage, data))
+    return out
+
+
+def show_stages():
+    print('stages selected:', ' '.join(s.name for s in selected_stages()) or 'none')
+    print('stages in place:', ' '.join(s.name for s in applied_stages()) or 'none')
+
+
+def reason(n):
+    """The one re-point pass's reason: the kit's, then each applied stage's repoint_reason.txt, {N} the study
+    section."""
+    texts = [(HERE / 'repoint_reason.txt').read_text(encoding='utf-8').strip()]
+    texts += [(s / 'repoint_reason.txt').read_text(encoding='utf-8').strip() for s in applied_stages()
+              if (s / 'repoint_reason.txt').exists()]
+    return ' '.join(texts).replace('{N}', str(n))
+
+
 def leaves():
     """The three leaves: each kit copy (part B's in its scratch tree) and its place in the package."""
     return [(HERE / 'Becoming/GrammarConditionals.lean', LEAF)] + \
@@ -447,6 +542,7 @@ def join():
 def apply():
     apply_patches()
     join()
+    apply_stages()
 
 
 def anchors():
@@ -509,21 +605,47 @@ def source_of(module):
     return mr.PKG + 'Becoming/' + module[len('Becoming.'):].replace('.', '/') + '.lean'
 
 
+def expectations():
+    """The audit's expectations: the kit's EXPECTED, MOVED and REDEFINED, with each applied stage's EXPECTED.json
+    merged in. A stage's keys, every name as the audit keys it ('Becoming.' and the name as written in its source):
+    added {module: [names]}, naming every module whose code the stage changes, with the names it adds (possibly none);
+    cases {module: {name: the proof that makes it a case}}; moved {name: [from module, to module]}; redefined {name:
+    [old body, new body, the definition it unfolds with, {bound name: argument}]}; restated {name: why its statement
+    changes}; renamed {old: new}, the statement kept but for the name."""
+    expected = {m: (set(added), dict(cases)) for m, (added, cases) in EXPECTED.items()}
+    moved, redefined, restated, renamed = dict(MOVED), dict(REDEFINED), {}, {}
+    for stage, data in stage_data():
+        for module, names in data.get('added', {}).items():
+            expected.setdefault(module, (set(), {}))[0].update(names)
+        for module, cases in data.get('cases', {}).items():
+            expected.setdefault(module, (set(), {}))[1].update(cases)
+        for name, (source, target) in data.get('moved', {}).items():
+            moved[name] = (source, target)
+            expected.setdefault(source, (set(), {}))
+            expected.setdefault(target, (set(), {}))[0].add(name)
+        redefined.update({n: tuple(entry) for n, entry in data.get('redefined', {}).items()})
+        restated.update(data.get('restated', {}))
+        renamed.update(data.get('renamed', {}))
+    return expected, moved, redefined, restated, renamed
+
+
 def unfold(body, names):
     """A definition's body read at given arguments: each of its bound names replaced."""
     return re.sub(r"(?<![\w'.])(" + '|'.join(map(re.escape, names)) + r")(?![\w'.])", lambda m: names[m.group(1)], body)
 
 
 def audit():
-    """The Lean sources the patches changed, against HEAD. Those whose code a patch changes are held to EXPECTED (the
-    kit's Grammar and GrammarReadings, the owner's GrammarLaws, GrammarCrossing and Standpoints): their declarations
-    added and removed, MOVED's moved with nothing changed, every other statement kept, no definition's body changed but
-    REDEFINED's, which must unfold to its old body. Every other changed source (GrammarTesting's header clause,
+    """The Lean sources the patches changed, against HEAD. Those whose code a patch changes are held to the
+    expectations (the kit's Grammar and GrammarReadings, the owner's GrammarLaws, GrammarCrossing and Standpoints, and
+    each applied stage's): their declarations added and removed, the moved ones with nothing changed, the renamed ones
+    changed only in name, every other statement kept but those a stage restates, no definition's body changed but a
+    redefined one, which must unfold to its old body. Every other changed source (GrammarTesting's header clause,
     MapRegions' doc, the owner's GrammarLaws header and ConveyanceBoundaries' doc) keeps its code, comments blanked."""
     problems = []
+    expected_all, moved, redefined, restated, renamed = expectations()
     changed = [p for p in git('diff', '--name-only', 'HEAD', '--', mr.PKG + 'Becoming/').stdout.split()
                if p.endswith('.lean')]
-    expected = {source_of(m): m for m in EXPECTED}
+    expected = {source_of(m): m for m in expected_all}
     seen = {}       # module: its statements and whole declarations, before and after
     for path in sorted(set(changed) | set(expected)):
         if path not in changed:
@@ -538,20 +660,27 @@ def audit():
                   else 'CHANGED IN ITS CODE')
             continue
         module = expected[path]
-        added, cases = EXPECTED[module]
+        added, cases = expected_all[module]
         before, whole_before = statements(before_text)
         after, whole = statements(after_text)
         seen[module] = (before, after, whole_before, whole)
-        if set(after) - set(before) != added:
+        renames = {old: new for old, new in renamed.items() if old in before}
+        if set(after) - set(before) != added | set(renames.values()):
             problems.append((module, 'added', sorted(set(after) - set(before))))
-        if set(before) - set(after) != {n for n, (source, _) in MOVED.items() if source == module}:
+        if set(before) - set(after) != {n for n, (source, _) in moved.items() if source == module} | set(renames):
             problems.append((module, 'removed', sorted(set(before) - set(after))))
+        for old, new in renames.items():
+            if after.get(new) != before[old].replace(old[len('Becoming.'):], new[len('Becoming.'):], 1):
+                problems.append((module, 'renamed, not in name only', old, new))
         kept = [n for n in before if n in after]
-        restated = [n for n in kept if before[n] != after[n]]
-        if restated:
-            problems.append((module, 'statements changed', restated))
+        heads = [n for n in kept if before[n] != after[n]]
+        if [n for n in heads if n not in restated]:
+            problems.append((module, 'statements changed', [n for n in heads if n not in restated]))
+        for n in heads:
+            if n in restated:
+                print(module, 'restated, as its stage says:', n, '-', restated[n])
         rewritten = [n for n in kept if not whole_before[n].startswith('theorem ') and whole_before[n] != whole[n]
-                     and n not in REDEFINED]
+                     and n not in redefined and n not in restated]
         if rewritten:
             problems.append((module, 'definitions changed', rewritten))
         for name, proof in cases.items():
@@ -559,14 +688,14 @@ def audit():
                 problems.append((module, 'not proved as a case', name))
         print(module, len(before), '->', len(after), 'declarations; added', sorted(set(after) - set(before)),
               'removed', sorted(set(before) - set(after)))
-    for name, (source, target) in MOVED.items():
+    for name, (source, target) in moved.items():
         if source not in seen or target not in seen:
             problems.append(('moved, but a module is unchanged', name, source, target))
             continue
         old, new = seen[source][2].get(name, ''), seen[target][3].get(name, '')
         if seen[source][0].get(name) != seen[target][1].get(name) or (not old.startswith('theorem ') and old != new):
             problems.append(('moved, not unchanged', name))
-    for name, (old, new, by, names) in REDEFINED.items():
+    for name, (old, new, by, names) in redefined.items():
         bodies = [(s[2][name].split(':=', 1)[1].strip(), s[3][name].split(':=', 1)[1].strip())
                   for s in seen.values() if name in s[2] and name in s[3]]
         unfolded = [unfold(s[3][by].split(':=', 1)[1].strip(), names) for s in seen.values() if by in s[3]]
@@ -586,7 +715,7 @@ def audit():
           'and «所闭不出» into GrammarLaws unchanged, prove «所闭之界» as the latter\'s case, add the two readings of a '
           'region not crossed, and write Flow.Cut as what unfolds to its old body; every other statement is kept and '
           'every other changed source keeps its code; the leaves import what their notes say; the plan line is '
-          'replaced')
+          'replaced; stages in place:', ' '.join(s.name for s in applied_stages()) or 'none')
 
 
 # ---------------------------------------------------------------------------------------------------------- record
@@ -941,14 +1070,20 @@ def owner_records(receipt, study):
     stamp = Path(receipt).parent.name
     day = datetime.now(timezone.utc).replace(microsecond=0)
     laws_source, crossing_source = source_of('Becoming.GrammarLaws'), source_of('Becoming.GrammarCrossing')
-    after, whole = statements((ROOT / laws_source).read_text(encoding='utf-8'))
     held = {d['name'] for d in mods['Becoming.GrammarLaws']['declarations']}
     named = set(MOVED) | set(NOT_CROSSED)
     assert named <= held, ('the receipt\'s GrammarLaws lacks', named - held)
-    theorem = {n: whole[n].startswith('theorem ') for n in list(MOVED) + NOT_CROSSED}
-    # What each module's count changes by: GrammarLaws gains the moved and the new, GrammarCrossing loses the moved.
-    delta = {MASTER_REC: (sum(theorem.values()), len(theorem)),
-             CROSSING_REC: (-sum(theorem[n] for n in MOVED), -len(MOVED))}
+
+    def counted(text):
+        whole = statements(text)[1]
+        return sum(w.startswith('theorem ') for w in whole.values()), len(whole)
+    # What each module's count changes by, read from its source against HEAD: GrammarLaws gains the moved and the new,
+    # GrammarCrossing loses the moved, and either changes by what an applied stage adds, moves or renames there.
+    delta = {}
+    for rid in (MASTER_REC, CROSSING_REC):
+        path = source_of(COUNTS[rid][0])
+        (t1, d1), (t0, d0) = counted((ROOT / path).read_text(encoding='utf-8')), counted(git('show', 'HEAD:' + path).stdout)
+        delta[rid] = (t1 - t0, d1 - d0)
     paths = {rid: ROOT / f'theories/becoming/results/records/{rid}.json' for rid in (MASTER_REC, CROSSING_REC)}
     recs = {rid: json.loads(path.read_text(encoding='utf-8')) for rid, path in paths.items()}
     owner_texts(recs[MASTER_REC], recs[CROSSING_REC])
@@ -1104,13 +1239,26 @@ OWNER_ROOTS = {
 OWNER_NOW_USED = ['Becoming.«所闭不出»']
 
 
+@functools.lru_cache(maxsize=None)
+def stage_roots():
+    """The applied stages' register entries, from their EXPECTED.json: roots {name: [module, category, reason]}, and
+    now_used, the register roots their code now uses."""
+    roots, used = {}, set()
+    for stage, data in stage_data():
+        roots.update({n: tuple(entry) for n, entry in data.get('roots', {}).items()})
+        used.update(data.get('now_used', []))
+    return roots, frozenset(used)
+
+
 def ours(name):
-    return name in mr.LEAF or name in mr.PATCHED or name in mb.NAMES or name in OWNER_ROOTS
+    return name in mr.LEAF or name in mr.PATCHED or name in mb.NAMES or name in OWNER_ROOTS or name in stage_roots()[0]
 
 
 def module_of(name):
     if name in OWNER_ROOTS:
         return 'Becoming.GrammarLaws'
+    if name in stage_roots()[0]:
+        return stage_roots()[0][name][0]
     if name in mr.LEAF:
         return mr.MODULE
     for m in mb.MODULES:
@@ -1148,6 +1296,7 @@ def reasons():
     for name, (category, why) in APART_B['roots'].items():
         out[name] = (category, why)
     out.update(OWNER_ROOTS)
+    out.update({n: (category, why) for n, (_, category, why) in stage_roots()[0].items()})
     return out
 
 
@@ -1166,7 +1315,7 @@ def leaf_uses():
     """The register roots OU7's code names and the owner's patches now use (the entries the register step expects to
     drop)."""
     roots = json.loads(APART.read_text(encoding='utf-8'))['roots']
-    return used_by_ou7(roots) | {n for n in OWNER_NOW_USED if n in roots}
+    return used_by_ou7(roots) | {n for n in set(OWNER_NOW_USED) | stage_roots()[1] if n in roots}
 
 
 def listed_in(log, label):
@@ -1213,7 +1362,7 @@ def register(log_path):
     # their code names, and OWNER_NOW_USED, may go this way; any other stops for its owner's reading. Part B's six must
     # be among them.
     gone = listed_in(log, 'register entries no longer apart roots')
-    unexpected = [g for g in gone if g not in used_by_ou7(gone) and g not in OWNER_NOW_USED]
+    unexpected = [g for g in gone if g not in used_by_ou7(gone) and g not in OWNER_NOW_USED and g not in stage_roots()[1]]
     assert not unexpected, ('register entries no longer apart roots that OU7 does not use', unexpected)
     dropped = [g for g in gone if g in d['roots']]
     kept = [n for n in APART_B['now_used'] if n in d['roots'] and n not in dropped]
@@ -1391,6 +1540,9 @@ Output → input: 06 §四's home section, its thesis, §三's 通 (its table ro
 
 {part_b_block(stamp, mb.receipt_modules(receipt))}
 """
+    for stage in applied_stages():
+        said = (stage / 'study.md').read_text(encoding='utf-8').strip() if (stage / 'study.md').exists() else ''
+        section += f"\n**Stage {stage.name}**, in the same core run. {said or 'Its records say what it holds.'}\n"
     STUDY.write_text(text.rstrip('\n') + '\n\n' + section, encoding='utf-8')
     print('study §', n, 'written')
 
@@ -1412,5 +1564,9 @@ if __name__ == '__main__':
         check()
     elif sys.argv[1] == 'study':
         study(sys.argv[2], sys.argv[3])
+    elif sys.argv[1] == 'stages':
+        show_stages()
+    elif sys.argv[1] == 'reason':
+        print(reason(sys.argv[2]))
     else:
         sys.exit(__doc__)

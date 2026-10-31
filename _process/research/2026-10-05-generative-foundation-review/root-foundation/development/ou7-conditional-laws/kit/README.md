@@ -15,6 +15,7 @@ No stage has run against the package in the repository. The rehearsal's Lean ste
 | [patches/](patches/README.md) | four patches. `Grammar.patch` and `GrammarReadings.patch` hold the two general laws below part A's leaf. `MapRegions.patch` changes its module doc, comments only, since it is no longer a leaf. `PLAN.patch` is the OU plan's line on beginning |
 | [../check/kit/GrammarTesting.patch](../check/kit/GrammarTesting.patch) | part B's one clause in GrammarTesting's header, pointing to the toy derived in RoomNet; comments only |
 | [patches/owner/](patches/README.md#the-grammars-owners-patches) | the grammar's owner's four patches, which the apply stage takes in name order after the kit's own. `01` holds the header items held from HE2, comments only: closure's list of cases gains `Response` and `SelectionPool`, "as the pairing is" goes, and the long lines are rewrapped. `02`–`04` hold the items held until BD2 landed: `«不出»` stated in GrammarLaws with `«所闭不出»`, `«所闭之界»` its case; `Flow.Cut` written as `«不出»`; BD2's two equivalences for a region not crossed. What was held is kept in [patches/history/HELD.md](patches/history/HELD.md) |
+| [stages/](stages/README.md) | extra patch sets that ride in the same rebuild, each its owner's, such as U4c's and ND's; none yet. A stage is a directory of patches made against the tree after the kit's `apply`, with what the audit and the register expect of it, its re-point reason and its study paragraph. A `SKIP` file or `OU7_STAGES` leaves one out |
 | [REHEARSAL.json](REHEARSAL.json) | the rehearsal's Lean step: the patches and the copy's tree, each with its hash, the build command, and the build's output with each module's counts and axiom report |
 | [home-06-section.txt](home-06-section.txt) | 06 §四's home section, in Chinese. It holds the 22-family table (Z, Y, the law, where Z fails, the standing, the units), G01's conjunction as text, the six false as read, the premises, the units back to 丁, the units not expressible and the definitions |
 | [../check/kit/home-03-section-3.txt](../check/kit/home-03-section-3.txt) | 03 §3's home section for part B, after testing-within-the-net |
@@ -35,6 +36,8 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - the nine patches apply to the merged tree as one series, in the order apply takes them;
    - the package has none of the three leaves yet;
    - every anchor of the joins and the home sections is found once (`integrate_ou7.py anchors`, which writes nothing).
+
+   It lists the stages selected. Their series are checked at `apply`, after the joins they are made against.
 3. `… land_ou7.sh apply` applies the patches in this order: Grammar, GrammarReadings, MapRegions, the plan, GrammarTesting, then `patches/owner/`. It copies the three leaves into the package and makes their joins:
    - **The root module.** Its imports and notes: part A's after GrammarLaws', part B's after RegimeMargin's.
    - **What imports what.** The notes and README rows that say what imports a module the leaves import:
@@ -48,6 +51,8 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - **The Lean catalogue.** Its description of the ring (`tools/research/lean_catalogue.py`) names the rooms. The index pages render from it, and the rooms join the ring's group from the receipt's layer.
    - **What the owner's patches change.** The root module's notes on GrammarLaws, GrammarCrossing and ConveyanceBoundaries, the README rows of GrammarLaws and GrammarCrossing, EN and ZH, and those two modules' scope sentences in the checker say where `«不出»` and the cut are now stated, and that the two count laws read as one.
 
+   Then each stage's series, in name order. A stage whose series does not apply is dropped, and OU7 lands without it (R10).
+
    Then the audit runs over every Lean source the patches changed, against HEAD, with comments blanked:
    - Grammar and GrammarReadings gain exactly `«位核含于逆核»`, `«生于逆核下不变»` and `«两向有常有前则通»`;
    - GrammarLaws gains exactly `«不出»` and `«所闭不出»`, which GrammarCrossing loses and which arrive unchanged, and the two equivalences;
@@ -57,7 +62,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - every other changed source keeps its code: GrammarTesting, MapRegions and ConveyanceBoundaries;
    - the three leaves import what their notes say, and the plan line is replaced.
 
-   An owner's patch that changes code adds its expectation to the audit in `integrate_ou7.py`: what it adds to `EXPECTED`, a declaration it moves to `MOVED`, and a definition it rewrites to `REDEFINED`, with the body that must unfold to the old one.
+   Each stage in place adds its `EXPECTED.json` ([stages/README.md](stages/README.md#expectedjson)). An owner's patch that changes code adds its expectation to the audit in `integrate_ou7.py`: what it adds to `EXPECTED`, a declaration it moves to `MOVED`, and a definition it rewrites to `REDEFINED`, with the body that must unfold to the old one.
 4. `… land_ou7.sh run` runs the checker in place, or outside the repository with `OUT=DIR`. It runs on OU's owner's word.
 5. `… land_ou7.sh post [N]` takes these steps in order:
    - **Records.**
@@ -76,17 +81,17 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - **Shared laws.** `master_laws.py` (named so until ND's part 2) runs, then OU7's check. The data must be the run's and must read both records' laws. The boundary report and the central figures must match main.
    - **Register.** The apart register.
      - The leaves' roots get their reasons: part A's from `reasons()`, part B's from its `apart-reasons.json`. Part B's 28 must be exactly the log's.
-     - The owner's two equivalences are registered as roots of general structure.
+     - The owner's two equivalences are registered as roots of general structure, and each stage's roots as its `EXPECTED.json` gives them.
      - Entries for roots that the leaves' code or the patches' code now use are dropped. Part B's six must be among them, and so must `«所闭不出»`, which `«所闭之界»` now uses.
      - Any other stale entry stops the stage, and a refused log leaves the register untouched.
-   - **Study.** The study's section N: part A's block, then part B's, with the receipt and counts filled in.
-   - **Re-point.** The records pinning a source the patches changed are re-pointed from the drift that `research.py check` reports. The Lean files' proof bindings are rebound to the receipt.
+   - **Study.** The study's section N: part A's block, then part B's, with the receipt and counts filled in, then a paragraph for each stage in place.
+   - **Re-point.** One pass for the kit and every stage in place. The records pinning a source the patches changed are re-pointed from the drift that `research.py check` reports, and the Lean files' proof bindings are rebound to the receipt. The reason is the kit's, then each stage's (`integrate_ou7.py reason N`).
    - **Checks.** Render, the strict check (no source drift left), links, both records' lint and the tests.
-6. By hand: commit only the landing's paths, write the board's landed clause, re-read the Queue line, then fast-forward.
+6. By hand: commit only the landing's paths, write the board's landed clause, re-read the Queue line, then fast-forward. The commit and the clause name only the stages in place (`integrate_ou7.py stages`).
 
 Every edit asserts that it applies exactly once or is already in place, so a stage can be rerun after main moves.
 
-**Before the re-point,** read each changed source with the records that pin it. On main at b6c8bedd8 they are:
+**Before the re-point,** read each changed source with the records that pin it. On main at 3e6bc3538 they are:
 
 | source | pinned by | bound by |
 |---|---|---|
@@ -137,7 +142,7 @@ All checks ran on 1 November.
   - Part A: one finding, because the leaf is not yet in the package. No other finding, and no lint finding.
   - Part B: two findings, because the leaves are not yet in the package. No other finding, and no lint finding.
 - **Part B's names.** `check_record_b.py`: every declaration the record names was built, and there were no errors.
-- **Dry run.** [dry_run.py](dry_run.py) ran on main at b6c8bedd8, in a throwaway git tree. The tree held the main files the kit reads or writes, plus this branch's study folder:
+- **Dry run.** [dry_run.py](dry_run.py) ran on main at 3e6bc3538, in a throwaway git tree. The tree held the main files the kit reads or writes, plus this branch's study folder:
   - `prepare`: the nine patches applied as one series, and every anchor was found.
   - `apply`, run twice: the first run made every edit, the Lean catalogue's description of the ring and the owner's notes, rows and scope sentences among them. The second run applied nothing. The audit passed after each run:
     - Grammar gained exactly its two laws and GrammarReadings its one;
@@ -157,6 +162,11 @@ All checks ran on 1 November.
   - `register`: a log missing one of part B's predicted roots was refused, and the register was left untouched. Then the stage registered 32 roots: part B's 28, two of part A's and the owner's two equivalences. It dropped 13 entries the leaves and the patches now use, part B's six and `«所闭不出»` among them. A third-party root was left for its owner. A rerun changed nothing.
   - `study`, run twice: section 487 was written once.
   - The eight records then went through the registry's validation and the lint, with no findings. Every lint warning is on a field already over its cap on main. The kit lengthens three laws: law 5 of `continuation-relative-to-a-class` from 473 to 506 characters, law 4 of `classical-definitions-in-the-grammar` from 520 to 554, and law 4 of `master-laws-on-the-grammar` from 1,322 to 1,364.
+- **Stages.** A second dry run on 3e6bc3538 took two throwaway stages, removed afterwards: one adding a law to GrammarLaws, and one that does not apply.
+  - The first was applied after the joins, and the second was dropped.
+  - The audit took the first stage's expectation. The record stage counted its law in master-laws-on-the-grammar's scope, at 179 theorems in 208 declarations.
+  - The register took its root, the study section its paragraph, and the re-point reason its line.
+  - `OU7_STAGES=none` took no stage, and a name with no stage stopped the run.
 - **Links.** `research.py links`: 0 broken, the kit's documents among the files checked.
 - **The rehearsal's Lean step** ([REHEARSAL.json](REHEARSAL.json); the counts are in [the patches' README](patches/README.md#checked)). The nine patches were applied in series to a copy of the package outside the repository, and the three leaves were added. The copy differs from main's package at b6c8bedd8 in exactly the eight files the patches change. On b6c8bedd8 the dry run's apply stage makes each of the eleven changed or new files, byte for byte.
   - `scratch_build.py` built fifteen modules and their import closure, 145 of the package's 365. Nothing was unclean, and every axiom report was empty.
@@ -167,4 +177,5 @@ All checks ran on 1 November.
 ## What waits
 
 - **The run.** No Lean runs for the rebuild until OU's owner says. The slot is last in the core round, after EL's core Lean, DU and UE27.
+- **The stages.** U4c's census laws and ND's renames, each its owner's series in `stages/`, written against this kit's tip. Then the dry run takes them, and OU's owner tells the coordinator.
 - **The landing's texts.** The commit message and the board's landed clause name the owner's items with the kit's: the two theorems new in GrammarLaws are BD2's text, `«不出»` and `«所闭不出»` move there, and `Flow.Cut` is written as `«不出»`.

@@ -542,7 +542,9 @@ BD2 landed the same day (f1ea9546d). The grammar's owner's three items held for 
 - `Flow.Cut` is written as `«不出»` at the valuation's relation, its old body unfolded;
 - BD2's two equivalences read a region not crossed as one not gone out of either way and as one closed both ways, so the two count laws read as one law (master-laws-on-the-grammar's law 4 and 01 §7, with a history note).
 
-The rehearsal's Lean step ran in a copy of the package outside the repository: the nine patches with the three leaves, 145 modules built, nothing unclean, every axiom report empty ([kit/REHEARSAL.json](kit/REHEARSAL.json)). A dry run of the whole kit passed on main at b6c8bedd8. The rebuild still comes last in the core round, now after EL's core Lean, DU and UE27.
+The rehearsal's Lean step ran in a copy of the package outside the repository: the nine patches with the three leaves, 145 modules built, nothing unclean, every axiom report empty ([kit/REHEARSAL.json](kit/REHEARSAL.json)). A dry run of the whole kit passed on main at b6c8bedd8, and again at 3e6bc3538. The rebuild still comes last in the core round, now after EL's core Lean, DU and UE27.
+
+Other items ride in the same rebuild as stages of the kit ([kit/stages/README.md](kit/stages/README.md)): U4c's census laws and ND's renames, each its owner's patch series, applied after the kit's joins. Each stage is skippable, and one whose series does not apply is dropped, so OU7 lands without it (R10). The audit and the register take each stage's expectations, and the re-point is one pass for all.
 
 ## Open
 
