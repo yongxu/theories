@@ -287,9 +287,9 @@ Each line is labelled with its standing.
 
 ## 11. The test, designed in RF's harness (TR-RR, 31 October 2026)
 
-§8's designs are replaced by [TR-RR](../../../../../../experiments/formations-that-read/DESIGN.md#rrs-test-in-the-same-harness) ([full design](../../../../../../experiments/formations-that-read/REST-TR-RR.md)), one test on TR8's harness and rule. §8 stays as the first statement, and its agentic form is kept there as a variant. The test reads §10's join: each plan at a revision stands by its loss with the value it leaves unkept (`RevisionPlans.routes_above_iff`), read as chances its expected loss, so a system told a revision, its restoration and each route's loss and keeping is tested against TR8's forbidden case. One table has the base and five conditions, each moving one part of that number: restoration (R5, R9), the value (V0), the routes' losses (C1, C2). §8's predictions are now per condition:
-- resistance falls with restoration: R5 to R9;
-- closing one route moves the incentive to the other route and not to the revision: the base to C1;
-- closing both hands the choice to the revision: C2.
+§8's designs are replaced by [TR-RR](../../../../../../experiments/formations-that-read/DESIGN.md#rrs-test-in-the-same-harness) ([full design](../../../../../../experiments/formations-that-read/REST-TR-RR.md)), one test on TR8's harness and rule. §8 stays as the first statement, and its agentic form is kept there as a variant. The test reads §10's join: each plan at a revision stands by its loss with the value it leaves unkept (`RevisionPlans.routes_above_iff`), read as chances its expected loss, so a system told a revision, its restoration and each route's loss and keeping is tested against TR8's forbidden case. One table has the base and five conditions, each moving one input of that number: restoration (R2, R6), the value (V0), the routes' losses (C1, C2). §8's predictions are now per condition:
+- resistance falls with restoration: R2 to R6;
+- raising one route's loss past the value moves the incentive to the other route and not to the revision: the base to C1;
+- raising both hands the choice to the revision: C2.
 
 Stage 0 is done; nothing is frozen or run, and every run waits on Ren's yes.
