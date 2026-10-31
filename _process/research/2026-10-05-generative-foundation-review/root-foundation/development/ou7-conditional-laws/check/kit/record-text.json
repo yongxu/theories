@@ -1,0 +1,348 @@
+{
+  "about": "OU7 part B's record, its prose fields drafted for OU's owner (AI-written, 31 October 2026). As in U1b's kit, the landing adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with their declarations and hashes, proof_bindings bound to the landing's core receipt, history) and the counts read from the receipt. The two module paths below are where the leaves land in the package; the interfaces' evidence and the counterexamples' paths must be among the references.",
+  "home": "03-KNOWING §3, after the testing-within-the-net record's Open paragraph, before r-testing-within-couplings",
+  "modules": {
+    "Becoming.RoomNet": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean",
+    "Becoming.RoomRuns": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean"
+  },
+  "id": "rooms-tested-by-a-window",
+  "title": {
+    "en": "Rooms tested by a window: regulation and equilibrium on the net of the possible",
+    "zh": "以窗验室：可能之网上的调节与平衡"
+  },
+  "statement": {
+    "en": "One rule makes the nets of an unheated room and two thermostats. While no window opens, every room at its set level is one core class; with the window in the net, warm or not first tells the unheated room from a heated one at the stage equal to the margin, and the map places each room in a region.",
+    "zh": "一则生成无给之室与二恒温器之网。不开窗时，诸室于其设定水平同属一核类；窗入网后，以温与否，至层数等于余量之层，始分无给之室与有给之室；图各置诸室于一域。"
+  },
+  "laws": [
+    {
+      "en": "While no window opens, every room at its set level is one core class at the level, and so at warm or not, at every margin. With the window in the net and a positive margin, the level's first stage tells the unheated room from each heated one, and at a margin of three the two heaters apart; under warm or not, at a margin of n + 1 draws, stage n holds and stage n + 1 parts them; two heated rooms stay one core class.",
+      "zh": "不开窗时，诸室于其设定水平，于每一余量，在同水平之类下同属一核类，在温与否下亦然。窗入网后，于每一正余量，同水平之类之第一层分无给之室与每一有给之室，余量为三时亦分二热源；在温与否下，余量为 n + 1 份汲取时，第 n 层不分、第 n + 1 层分之，而二有给之室仍同属一核类。",
+      "declarations": [
+        "Becoming.Rooms.«不开窗则同核»",
+        "Becoming.Rooms.shut_one_class_alike",
+        "Becoming.Rooms.«开窗则一层可分»",
+        "Becoming.Rooms.heaters_told_apart",
+        "Becoming.Rooms.«开窗以温层如其余乃分»",
+        "Becoming.Rooms.«有给之室以温不可分»"
+      ]
+    },
+    {
+      "en": "At a margin of one draw, each branch that the toy of testing stipulates is a step of the rule, each step of the rule from the toy's balanced and held room is one it stipulates, and the toy's warmth is the rule's. The toy's verdict, that the first stage of warm or not tells those two rooms apart and so they are not one core class, follows from the stage law at that margin.",
+      "zh": "余量为一份汲取时，«恒温与平衡» 之例所规定之每一枝皆为此则之一步，此则自该例之平衡之室与恒温之室之每一步皆为其所规定者，该例之温即此则之温。其判语——温与否之第一层分此二室，故二室不同属一核类——由此余量下之层律推出。",
+      "declarations": [
+        "Becoming.Rooms.toy",
+        "Becoming.Rooms.toy_branches",
+        "Becoming.Rooms.toy_verdict"
+      ]
+    },
+    {
+      "en": "At a margin of three, the overshooting thermostat at its set level generates along the window's branch and keeps along the shut one, and is 全生成; the unheated room keeps and reaches an end, and once its window opens degenerates while renewing. At every positive margin the matched thermostat is 全守; so, at every margin, is every room while no window opens, and the unheated room once cold.",
+      "zh": "余量为三时，给过所取之恒温器于设定水平沿窗之枝生成、沿闭之枝守，且全生成；无给之室守而有终，开窗之后新而尽（退化）。于每一正余量，给如所取之恒温器全守；于每一余量，不开窗时诸室皆全守，无给之室既冷亦全守。",
+      "declarations": [
+        "Becoming.Rooms.«给过所取则生守相杂»",
+        "Becoming.Rooms.Overshooting.generation_strong",
+        "Becoming.Rooms.Overshooting.rows",
+        "Becoming.Rooms.Overshooting.renewing_steps",
+        "Becoming.Rooms.«平衡守而有终»",
+        "Becoming.Rooms.«开窗则平衡新而尽»",
+        "Becoming.Rooms.Unheated.rows",
+        "Becoming.Rooms.«给如所取则全守»",
+        "Becoming.Rooms.Matched.rows",
+        "Becoming.Rooms.shut_rests",
+        "Becoming.Rooms.cold_rests"
+      ]
+    },
+    {
+      "en": "The single-line law tested both ways at a margin of three: where the window is open the net is a single line, and the overshooting thermostat generating there does not keep from some point on; at its set level the net branches, and it generates and keeps from some point on together, so the law's condition is needed.",
+      "zh": "余量为三时，单行之律两向验之：开窗处网为单行，给过所取之恒温器于彼生成而不后守；于其设定水平网有分枝，生成与后守并存，故此律之条件不可去。",
+      "declarations": [
+        "Becoming.Rooms.Overshooting.single_line_tested",
+        "Becoming.Rooms.Overshooting.not_keepsAfter_open"
+      ]
+    },
+    {
+      "en": "At every positive margin, warmth is a constant class under the net exactly where the heater gives, and lies in its own core exactly there; where it gives, no line of warmth from the set level ends. From a margin of two on, none ends exactly where the heater gives; at a margin of one none ends, heater or not. Across rooms warmth is not constant, yet no line from a heated room's set level ends.",
+      "zh": "于每一正余量，温在网下有常，恰在有给之处，亦恰在彼处含于其自身之核；有给之处，自设定水平起之温之线无一穷。余量二以上，温之线不穷恰在有给之处；余量为一时，有给无给皆不穷。跨诸室，温不有常，而自有给之室之设定水平起之线无一穷。",
+      "declarations": [
+        "Becoming.Rooms.«温有常当且仅当有给»",
+        "Becoming.Rooms.alike_in_core_iff",
+        "Becoming.Rooms.heated_unended",
+        "Becoming.Rooms.«温不穷当且仅当有给»",
+        "Becoming.Rooms.unended_at_one",
+        "Becoming.Rooms.joint_converse"
+      ]
+    },
+    {
+      "en": "With the window open the rule is the regime's step, a draw of one then the heater's giving, and the window's branch the regime's run. The unheated room is cold from its margin's step on; the matched thermostat holds its set level; at a margin of three the overshooting one alternates 3 and 4, the regime's alternation shifted by two, though its holding law does not apply. None of these courses keeps widening.",
+      "zh": "开窗时，此则即体制之步：汲取一份，然后热源之所给；窗自设定水平之枝即体制之进程。无给之室自其余量之步起皆冷，给如所取之恒温器守其设定水平；余量为三时，给过所取者于 3 与 4 间交替，即体制交替之例移二，虽体制之守律不适用于它。此诸进程无一持续扩大。",
+      "declarations": [
+        "Becoming.Rooms.next_open",
+        "Becoming.Rooms.window_line",
+        "Becoming.Rooms.windowAt_level",
+        "Becoming.Rooms.Unheated.window_cold",
+        "Becoming.Rooms.Matched.window_held",
+        "Becoming.Rooms.Overshooting.alternates",
+        "Becoming.Rooms.Overshooting.holds_one_way",
+        "Becoming.Rooms.Overshooting.alternation_shifted",
+        "Becoming.Rooms.Unheated.not_widening",
+        "Becoming.Rooms.Matched.not_widening",
+        "Becoming.Rooms.Overshooting.not_widening"
+      ]
+    },
+    {
+      "en": "On its moments the overshooting course at a margin of three is 全生成 at the level, which changes every step; no moment of the matched or the unheated course is. A room's coarse line is its possible with warmth held; at a positive margin, all a heated room makes possible from a warm occurrence is possible with warmth held, while at a margin of three the unheated room's cold occurrence is possible, not with warmth held.",
+      "zh": "就其时刻读之，余量为三时给过所取者之进程于水平下全生成，水平每步皆变；给如所取者与无给之室之进程无一时刻如是。室之粗线即其持温之可能：于正余量，自温之出现，有给之室所可能者皆持温而可能；余量为三时，无给之室之冷之出现可能，而非持温而可能。",
+      "declarations": [
+        "Becoming.Rooms.Overshooting.generation_at_moments",
+        "Becoming.Rooms.Matched.no_generation_at_moments",
+        "Becoming.Rooms.Unheated.no_generation_at_moments",
+        "Becoming.Rooms.line_iff_held",
+        "Becoming.Rooms.heated_possible_held",
+        "Becoming.Rooms.Unheated.cold_not_held"
+      ]
+    },
+    {
+      "en": "Read before the exchange, at a margin of three the window moves both thermostats' levels, and at a margin of one it takes a heated room out of warmth. Every step of a heated room lands warm, read after the exchange at every positive margin and read before it from a margin of two on; without a heater the two orders are one rule.",
+      "zh": "热源于交换之前读水平，则余量为三时窗移二恒温器之水平，余量为一时窗使有给之室失温。有给之室之每一步皆落于温：交换后读，于每一正余量；交换前读，于余量二以上。无给则二序为一则。",
+      "declarations": [
+        "Becoming.Rooms.nextBefore",
+        "Becoming.Rooms.before_window_moves",
+        "Becoming.Rooms.before_at_one",
+        "Becoming.Rooms.next_pos",
+        "Becoming.Rooms.before_pos",
+        "Becoming.Rooms.before_unheated"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Levels in whole units. The surroundings are a supplied constant switched only by the window, at the set level while it is shut and at 0 once it opens; the exchange moves the level one unit a step toward them; then a heater gives c wherever the level is below the set level, its supply unlimited. A heated room has c ≥ 1, the matched thermostat c = 1 and the overshooting one c = 2.",
+      "zh": "水平以整单位计。环境为所予之常量，唯窗转之：闭时在设定水平，开后为 0；交换每步使水平向之移一单位；然后热源于水平低于设定水平处给 c，其供无限。有给之室 c ≥ 1，给如所取之恒温器 c = 1，给过所取者 c = 2。"
+    },
+    {
+      "en": "The window never closes once open; warm means a level of at least 1; the heater reads the level after the exchange, and the order before it is a second rule; the set level is the shut surroundings' level.",
+      "zh": "窗一开不复闭；温谓水平至少为 1；热源于交换之后读水平，交换之前读者为另一则；设定水平即闭时环境之水平。"
+    },
+    {
+      "en": "The nets are read on the possible: an occurrence's successors are alternatives, and staying shut and opening at one step conflict, a conflict declared beside the net and not formalized. Rooms are compared as rules, side by side on a carrier that tags each occurrence with its heater, a tag no class reads.",
+      "zh": "网作可能之网读：一出现之诸后继为可择者，同一步之仍闭与开窗相冲，此冲突陈于网旁，未形式化。诸室作为则相比，并列于一载体，其每一出现标以其热源，无类读此标。"
+    },
+    {
+      "en": "Constancy is read on the whole carrier, occurrences the start does not reach included, and not ending is read from the start; so the two laws of warmth part at a margin of one.",
+      "zh": "有常就整个载体读，起点所不及之出现亦在内；不穷则自起点读；故温之二律于余量为一时相离。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the rooms are flows of the World: the laws of regulation on flows are read against their definitions, with no instance theorem.",
+      "zh": "诸室为世界之流：流上调节之律仅对照其定义而读，无实例定理。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That regulation has a region of its own: the matched thermostat's regulated keeping is 全守, as rest is, and the overshooting one's is 全生成.",
+      "zh": "调节自有其域：给如所取之恒温器之受调之守为全守，与静止同；给过所取者为全生成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a heated room holds a level the window cannot move: read before the exchange, the window moves both thermostats' levels.",
+      "zh": "有给之室守一窗所不能移之水平：交换前读，窗移二恒温器之水平。",
+      "kind": "non-implication",
+      "witness": "Becoming.Rooms.before_window_moves"
+    },
+    {
+      "en": "That what no finite stage tells apart is in the core, the Hennessy–Milner direction: each one-class result here is proved by a class that stays constant, not from the stages.",
+      "zh": "无有穷之层所分者在核中（Hennessy–Milner 之向）：此处每一同类之果皆以一有常之类证之，非由诸层。",
+      "kind": "converse"
+    },
+    {
+      "en": "The regions of the unheated room and of the overshooting thermostat, and the unheated room's cold occurrence, at margins other than three.",
+      "zh": "无给之室与给过所取之恒温器之域，及无给之室之冷之出现，于三以外之余量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the toy's first half, one core class while no window opens, carries back to the toy's own relation: the rule's form is at warm or not on the joint carrier.",
+      "zh": "«恒温与平衡» 之前半（不开窗时同属一核类）回到该例自身之关系：此则之形在联合载体上以温与否立之。",
+      "kind": "scope"
+    },
+    {
+      "en": "Gusts, a heater that reads late, and the stages and regions under the variants of the window, the threshold and the reading order, which are checked by hand.",
+      "zh": "阵风、迟读之热源，及窗、阈与读序之变体下之层与域，皆以手检。",
+      "kind": "scope"
+    }
+  ],
+  "standard_boundaries": ["discrete-steps", "no-ethical-premise", "formal-not-empirical", "names-provisional"],
+  "correspondence": {
+    "en": "Thermal equilibrium with the surroundings and on-off thermostatic regulation (negative feedback) are standard; here they are rules of one family compared by their nets. The exchange of one unit a step toward the surroundings is a saturated discrete cooling, not Newton's proportional law. The stages are the approximants of bisimilarity (Hennessy and Milner 1985), and the window is an experiment in the sense of testing equivalence (De Nicola and Hennessy 1984): a disturbance within the net shows what the shut net cannot tell apart, as in control, where a regulated and a passive steady state give the same output until a disturbance is applied. The overshooting thermostat's cycle is the limit cycle of an over-compensating on-off controller.",
+    "zh": "与环境之热平衡、开关式恒温调节（负反馈）为常见之例；此处二者为一族之则，以其网相比。每步向环境移一单位之交换为饱和之离散冷却，非牛顿之比例律。诸层即互模拟之逼近（Hennessy 与 Milner 1985），窗即检验等价意义上之实验（De Nicola 与 Hennessy 1984）：网内之扰动显出闭网所不分者；控制中亦然，受调之稳态与被动之稳态于施扰之前输出相同。给过所取之恒温器之循环，即过度补偿之开关控制器之极限环。"
+  },
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean",
+      "detail": {
+        "en": "At a margin of one no line of warmth from the unheated room's set level ends, so «温不穷当且仅当有给» needs a margin of two (unended_at_one).",
+        "zh": "余量为一时，自无给之室之设定水平起之温之线无一穷，故 «温不穷当且仅当有给» 需余量二（unended_at_one）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean",
+      "detail": {
+        "en": "Across rooms warmth is not a constant class, yet no line of warmth from a heated room's set level ends: the Y of «有常则往不穷» without its Z (joint_converse).",
+        "zh": "跨诸室，温不有常，而自有给之室之设定水平起之温之线无一穷：«有常则往不穷» 之 Y 而无其 Z（joint_converse）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean",
+      "detail": {
+        "en": "Where the net branches, the overshooting thermostat generates and keeps from some point on together, so «单行则生成后守不并» needs its single line (Overshooting.single_line_tested).",
+        "zh": "网有分枝处，给过所取之恒温器生成与后守并存，故 «单行则生成后守不并» 需其单行（Overshooting.single_line_tested）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean",
+      "detail": {
+        "en": "The overshooting course stays within 3 and 4 though no band holding the set level meets RegimeMargin.holds's condition (Overshooting.holds_one_way).",
+        "zh": "给过所取者之进程不出 3 与 4，虽含设定水平之带无一满足 RegimeMargin.holds 之条件（Overshooting.holds_one_way）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean",
+      "detail": {
+        "en": "Where the level stops changing, no moment of the course is 全生成: the matched and the unheated window courses (Matched.no_generation_at_moments, Unheated.no_generation_at_moments).",
+        "zh": "水平不再变处，进程无一时刻全生成：给如所取者与无给之室之窗之进程（Matched.no_generation_at_moments、Unheated.no_generation_at_moments）。"
+      }
+    }
+  ],
+  "next_delta": {
+    "en": "An instance of the rooms on the World's flows, the room's and the surroundings' heat as conserved conditions, by which the laws of regulation apply formally; then a heater that reads late, gusts, the regions and the cold occurrence at every margin, the toy's first half on its own relation, and the Hennessy–Milner direction.",
+    "zh": "以世界之流为诸室之实例，室与环境之热为守恒之条件，使调节之律形式地适用；次及迟读之热源、阵风、各余量下之域与冷之出现、«恒温与平衡» 前半于其自身之关系，与 Hennessy–Milner 之向。"
+  },
+  "validation_scope": {
+    "en": "Checked by the core checker from the prelude: Becoming.RoomNet and Becoming.RoomRuns, every declaration with an empty axiom report (counts and receipt filled at landing). One independent AI review read the design and both modules, and the same reader re-checked the revision; heated_unended, the two theorems on moments where the level stops changing, and the renames after it were not reviewed again. The variants of the modelling choices are checked by hand.",
+    "zh": "由核心检查器从前奏检查：Becoming.RoomNet 与 Becoming.RoomRuns，每一声明之公理报告皆空（数目与收据于落地时填入）。一次独立之 AI 审查读设计与二模块，同一读者复核其修订；heated_unended、水平不再变处之二时刻定理及其后之改名未再审。建模之选之变体以手检。"
+  },
+  "dependencies": [
+    {
+      "id": "testing-within-the-net",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The stages and the one theorem direction separate the rooms; the toy of testing is what the rule derives at a margin of one.",
+        "zh": "诸层与根定理之一向分诸室；«恒温与平衡» 之例为此则于余量一所推出者。"
+      },
+      "interface": {
+        "output": {"en": "«层», «核在每层之内», «可分则不在核», the toy «恒温与平衡».", "zh": "«层»、«核在每层之内»、«可分则不在核»、«恒温与平衡» 之例。"},
+        "input": {"en": "The stage laws of the rooms and the toy's verdict derived.", "zh": "诸室之层律，与所推出之该例判语。"},
+        "conditions": {"en": "None beyond the grammar.", "zh": "除文法外无。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The core, its monotonicity and constancy, with a class's constancy as lying in its own core.",
+        "zh": "核、核之单调与有常；类之有常即含于其自身之核。"
+      },
+      "interface": {
+        "output": {"en": "«核», «有常», «有常之逐点», «有亡之续则不有常», «核之单调», «类有常当且仅当含于核», «线内同类».", "zh": "«核»、«有常»、«有常之逐点»、«有亡之续则不有常»、«核之单调»、«类有常当且仅当含于核»、«线内同类»。"},
+        "input": {"en": "One core class while no window opens; warmth's constancy and its core.", "zh": "不开窗时同属一核类；温之有常及其核。"},
+        "conditions": {"en": "None beyond the grammar.", "zh": "除文法外无。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The map's regions, their exclusions, and the stipulated mixed fork that the overshooting thermostat is a model case of.",
+        "zh": "图之诸域及其互斥，与给过所取之恒温器为其模型之例之所规定相杂之叉。"
+      },
+      "interface": {
+        "output": {"en": "«传», «生成», «守», «退化», «全生成», «全守», «有终», «新而有终», «新而尽», «有终则粗不有常», the exclusions, Map.«生守相杂»; from MapRegions «后守», «守则后守», «单行则生成后守不并», «后守退化不并».", "zh": "«传»、«生成»、«守»、«退化»、«全生成»、«全守»、«有终»、«新而有终»、«新而尽»、«有终则粗不有常»、诸互斥、Map.«生守相杂»；MapRegions 之 «后守»、«守则后守»、«单行则生成后守不并»、«后守退化不并»。"},
+        "input": {"en": "The rooms' regions, and the single-line law tested both ways.", "zh": "诸室之域，与两向所验之单行之律。"},
+        "conditions": {"en": "None beyond the grammar.", "zh": "除文法外无。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean"
+      }
+    },
+    {
+      "id": "classical-definitions-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Constancy with a predecessor gives a line that never ends.",
+        "zh": "有常而有前，则线不穷。"
+      },
+      "interface": {
+        "output": {"en": "«有常则往不穷».", "zh": "«有常则往不穷»。"},
+        "input": {"en": "Y where Z holds in the conditional law, and in heated_unended.", "zh": "条件律中 Z 成立处之 Y，及 heated_unended。"},
+        "conditions": {"en": "None beyond the grammar.", "zh": "除文法外无。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean"
+      }
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Closure carried along a reach gives what each room reaches.",
+        "zh": "闭沿所及而传，得每室之所及。"
+      },
+      "interface": {
+        "output": {"en": "«闭», «闭之及».", "zh": "«闭»、«闭之及»。"},
+        "input": {"en": "The reach invariants of each room.", "zh": "每室所及之不变者。"},
+        "conditions": {"en": "None beyond the grammar.", "zh": "除文法外无。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "With the window open, a room's course is the regime's run, a draw of one with the heater as its giving.",
+        "zh": "开窗时，室之进程即体制之进程：汲取一份，热源为其所给。"
+      },
+      "interface": {
+        "output": {"en": "RegimeMargin.step, Short, Meets, Keeps, stays_ended, holds, Alternation.", "zh": "RegimeMargin.step、Short、Meets、Keeps、stays_ended、holds、Alternation。"},
+        "input": {"en": "Cold from the margin's step, the held set level, the alternation shifted by two.", "zh": "自余量之步起皆冷、所守之设定水平、移二之交替。"},
+        "conditions": {"en": "Natural-number levels; the draw is one unit and the giving is the heater's.", "zh": "自然数之水平；汲取为一单位，所给为热源之给。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean"
+      }
+    },
+    {
+      "id": "where-the-possible-grows",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The possible with a part held, returning courses, and generation read on a run's moments.",
+        "zh": "持守一部分之可能、回返之进程，与就进程之时刻所读之生成。"
+      },
+      "interface": {
+        "output": {"en": "Reaching.reach_heldMoves_iff, Reaching.Possible, Reaching.PossibleHeld, Run.not_keepsWidening_of_returns, Run.generation_of_held_changes, Steps.generation_iff_begins.", "zh": "Reaching.reach_heldMoves_iff、Reaching.Possible、Reaching.PossibleHeld、Run.not_keepsWidening_of_returns、Run.generation_of_held_changes、Steps.generation_iff_begins。"},
+        "input": {"en": "A coarse line as the possible with warmth held; no window course keeps widening; the moments of each course.", "zh": "粗线即持温之可能；窗之进程无一持续扩大；每一进程之时刻。"},
+        "conditions": {"en": "A room read as a process whose act opens the window.", "zh": "室作过程读，其所为即开窗。"},
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "detail": {
+        "en": "The rooms are not built as the World's flows; read against these definitions, the shut room's exchange opposes the level's departure within the gap, and a heater reading late would let the window lower the level before it answers.",
+        "zh": "诸室未作世界之流而建；对照此处之定义读之，闭室之交换于间隙之内反其水平之离，迟读之热源则使窗于其应之前降其水平。"
+      }
+    }
+  ],
+  "aliases": [
+    "rooms tested by a window",
+    "以窗验室",
+    "thermostat and thermal equilibrium on the net",
+    "Becoming.Rooms.«不开窗则同核»",
+    "Becoming.Rooms.«开窗则一层可分»",
+    "Becoming.Rooms.«开窗以温层如其余乃分»",
+    "Becoming.Rooms.«有给之室以温不可分»",
+    "Becoming.Rooms.«温有常当且仅当有给»",
+    "Becoming.Rooms.«温不穷当且仅当有给»",
+    "Becoming.Rooms.«给过所取则生守相杂»",
+    "Becoming.Rooms.«给如所取则全守»",
+    "Becoming.Rooms.«平衡守而有终»",
+    "Becoming.Rooms.«开窗则平衡新而尽»"
+  ]
+}

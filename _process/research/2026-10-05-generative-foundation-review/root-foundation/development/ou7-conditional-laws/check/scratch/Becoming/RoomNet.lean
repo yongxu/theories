@@ -6,8 +6,8 @@ import Becoming.MapRegions
 /-!
 # Rooms on the net of the possible: testing (验) by a window
 
-Scratch module for board item OU7, part B (`ou7-conditional-laws/check/DESIGN.md`). One rule makes
-the nets of a family of rooms. A room has a level, in whole units of heat. Its surroundings are at
+One rule makes the nets of a family of rooms: the one-unfolding plan's model examples of 验
+(`PLAN.md` §八, step 5). A room has a level, in whole units of heat. Its surroundings are at
 its set level `m` while its window is shut and at `0` once it opens; each step the level moves one
 unit toward the surroundings' level, and a heater, reading the level left, gives `c` where that is
 below the set level. So `m` is the room's margin, counted in the open window's draws of one. The
@@ -20,7 +20,7 @@ heater (`joint`): rules compared, not occurrences of one unfolding.
 
 * **Regions**, at a margin of three unless stated (at warm or not, and the level class): the
   overshooting thermostat at its set level is 全生成 and 守, a model case of the mixed region
-  (`«恒温生守相杂»`); the unheated room keeps and reaches an end, and after the window opens
+  (`«给过所取则生守相杂»`); the unheated room keeps and reaches an end, and after the window opens
   degenerates while renewing (`«平衡守而有终»`, `«开窗则平衡新而尽»`); at every positive margin the
   matched thermostat is 全守 (`«给如所取则全守»`), and so is every room while no window opens
   (`shut_rests`).
@@ -28,7 +28,7 @@ heater (`joint`): rules compared, not occurrences of one unfolding.
   at the level class (`«不开窗则同核»`). With it, at every positive margin, the first stage of the
   level tells the unheated room from every heated one (`«开窗则一层可分»`), and warm or not first
   tells them apart at the stage of the margin (`«开窗以温层如其余乃分»`); warm or not does not tell
-  two heated rooms apart (`«二恒温以温不可分»`).
+  two heated rooms apart (`«有给之室以温不可分»`).
 * **A conditional law.** Warmth is a constant class under the net exactly where the heater gives
   (`«温有常当且仅当有给»`), and from a margin of two draws on no line of warmth from the set level
   ends exactly there (`«温不穷当且仅当有给»`, by `«有常则往不穷»`); at a margin of one none ends,
@@ -41,6 +41,9 @@ heater (`joint`): rules compared, not occurrences of one unfolding.
   draw within the step. Read before it, the window moves a heated room's level
   (`before_window_moves`); read either way, from a margin of two on, every step of a heated room
   lands warm (`next_pos`, `before_pos`).
+
+The design, its review and re-check, and the hand checks are in the root's development folder,
+`ou7-conditional-laws/check/`.
 
 Every declaration has an empty axiom report.
 -/
@@ -545,14 +548,15 @@ theorem rows :
 
 end Overshooting
 
-/-- **The overshooting thermostat at its set level generates and keeps (恒温生守相杂)**, at a margin
-of three: along the window's branch the heater renews the level at every step, and along the shut
-branch it rests. A model case of `Map.«生守相杂»`, where a stipulated fork's root generates along
-its chain and keeps along its still occurrence: here the fork is the rule's, the window's branch is
-the chain and the shut branch the still occurrence, read at warm or not and the level rather than
-at the one and equality. It is stronger: at its set level the overshooting thermostat is 全生成,
-a renewal ahead of every occurrence it reaches (`Overshooting.generation_strong`). -/
-theorem «恒温生守相杂» :
+/-- **Where the heater gives more than the window takes, the room at its set level generates and
+keeps (给过所取则生守相杂)**: the overshooting thermostat, at a margin of three. Along the window's
+branch the heater renews the level at every step, and along the shut branch it rests. A model case
+of `Map.«生守相杂»`, where a stipulated fork's root generates along its chain and keeps along its
+still occurrence: here the fork is the rule's, the window's branch is the chain and the shut branch
+the still occurrence, read at warm or not and the level rather than at the one and equality. It is
+stronger: at its set level the overshooting thermostat is 全生成, a renewal ahead of every
+occurrence it reaches (`Overshooting.generation_strong`). -/
+theorem «给过所取则生守相杂» :
     «生成» (net 3 2) alike sameLevel (start 3) ∧ «守» (net 3 2) alike sameLevel (start 3) :=
   ⟨Overshooting.generates (.inl rfl), Overshooting.keeps⟩
 
@@ -784,9 +788,9 @@ theorem «开窗以温层如其余乃分» {n c : Nat} (hc : 1 ≤ c) :
         exact empties (Nat.succ_le_succ (Nat.zero_le n)) hc n
           (heated_warm (Nat.succ_le_succ (Nat.zero_le n)) hc r) stage⟩
 
-/-- **Warm or not does not tell two heated rooms apart (二恒温以温不可分)**, at every positive set
-level. -/
-theorem «二恒温以温不可分» {m c c' : Nat} (hm : 1 ≤ m) (hc : 1 ≤ c) (hc' : 1 ≤ c') :
+/-- **Warm or not does not tell two rooms with a heater apart (有给之室以温不可分)**, at every
+positive set level. -/
+theorem «有给之室以温不可分» {m c c' : Nat} (hm : 1 ≤ m) (hc : 1 ≤ c) (hc' : 1 ≤ c') :
     «核» (joint m) jointAlike (c, start m) (c', start m) :=
   ⟨fun x y => 1 ≤ x.1 ∧ 1 ≤ y.1 ∧ warm x.2 = true ∧ warm y.2 = true,
    fun _ _ ⟨_, _, wx, wy⟩ => wx.trans wy.symm,

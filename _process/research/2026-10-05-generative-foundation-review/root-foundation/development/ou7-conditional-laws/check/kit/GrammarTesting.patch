@@ -1,0 +1,16 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean
+index 3cb42ce..6c5afe7 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean
+@@ -16,7 +16,10 @@ The core of a class (`«核»`) is approximated by stages (`«层»`): stage `0`
+ * **A wider net tells apart what a narrower one does not** (`«恒温与平衡»`): a room in balance with its
+   surroundings and a room held by a thermostat are in one core class while no window opens; with the
+   window's opening in the net, a first stage tells them apart. The window is part of the net read,
+-  not an act from outside it. As 《荀子·正名》 has it, 「验之所缘以同异」.
++  not an act from outside it. The toy's branches are stipulated; `Becoming.RoomNet` derives them
++  from one rule of rooms at a margin of one draw (`Rooms.toy_branches`, `Rooms.toy_verdict`), and at
++  a margin of `n + 1` draws warm or not first tells the rooms apart at stage `n + 1`. As 《荀子·正名》
++  has it, 「验之所缘以同异」.
+ 
+ Every declaration has an empty axiom report.
+ -/
