@@ -1351,6 +1351,11 @@
    "base": "general",
    "note": "ReadingSchedule; reciprocal windows sum ≤1"
   },
+  "one-root-to-its-edge": {
+   "region": "method",
+   "base": "grammar",
+   "note": "U4: each central declaration's standing on the edge of one root (MV's boundary field); RootForms, row 17's root form and row 5's relational part"
+  },
   "one-search-one-line": {
    "region": "classical",
    "base": "general",
@@ -3962,6 +3967,11 @@
    "region": "root",
    "base": "old-base",
    "note": "formations and conditions as roles of one relatum; two-kind embeds"
+  },
+  "Becoming.RootForms": {
+   "region": "method",
+   "base": "grammar",
+   "note": "U4: rows stated on the grammar under named hypotheses, each with a countermodel and a fit; outside_leaves_no_offspring (GroupEnding.Flow.all_end), descent_forms_no_dependence"
   },
   "Becoming.RouteFormation": {
    "region": "knowing",

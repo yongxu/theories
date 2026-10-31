@@ -22706,3 +22706,339 @@ Output → input: 07 §7 (the section after RR's, RR's reading pointed to it); 0
 1. `RevisionPlans` sits below `HeldForReading` and above `RevisionRoutes`, `Flow` and `Dissipation`, all already in `HeldForReading`'s closure except `RevisionRoutes`, a prelude-only leaf; what imports `HeldForReading` only rebuilds, its statements unchanged.
 2. Its arithmetic avoids the prelude lemmas that report axioms: `Nat.right_distrib` and `Nat.sub_eq_zero_of_le` (propext) are replaced by the core's `add_mul_split` and `sub_eq_zero_of_le`. The witnesses evaluate by `decide`.
 3. Not done: the items in Boundary, and a frozen test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices.
+
+## 476. The designs of RF's tests (RF, plan §10)
+
+Board item RF, the tests' designs ([plan §10](development/rf-formations-that-read/PLAN.md#10-tests-to-freeze-before-any-run); [the designs](../../../../experiments/formations-that-read/DESIGN.md)). Each of RF's nine laws gets a test of the correspondence or bridge through which a named system, mostly a language model, would be the law's model; no test can refute a theorem. Five reviewing sessions read the laws and the plan; five builders wrote Stage 0 and drafted each design; two independent reviews, an Opus panel of five lenses with an adversarial verifier and a cross-model reader, ran in three rounds, and every finding was taken ([REVIEW](../../../../experiments/formations-that-read/REVIEW.md)). Nothing is frozen; nothing has run on a trained system, a model, data or people.
+
+```text
+Result(s): none new. Nine records' next steps name their tests as designed (what-choices-show-of-an-order,
+       acts-alike-from-a-model-or-from-an-order, what-readings-fix-of-the-unread, readers-reading-readers,
+       a-revision-that-opens-a-correction, a-reading-kept-by-its-update, a-prediction-read-by-what-it-predicts,
+       when-complying-when-read-is-best, what-holding-for-a-reading-is-worth); no statement or declaration changed.
+Delta:
+  - TR1 (RF1): a chooser picks by strict dominance under one strict order, a cycle among strict picks the forbidden
+    case, per-call label randomization and a cue rival separating readers of the label from readers of the order.
+  - TR2 (RF2), a measurement: where a cue breaks the chain from content to acts, with identical-input arms; pairs
+    sized by a pilot of the coupling, under the worst coupling where no pilot is run.
+  - TR3 (RF4): sequential choosers meet the cascade's premise at the histories reached; a named probabilistic
+    model's timing judged apart.
+  - TR4 (RF6.1): a language-model institution's reading in force is its register's rule; the crew's matches, or any
+    dependence of records or acts on the line (m1 to m4, Holm over 24), contradict it; a pass bounds no leak.
+  - TR5 (RF3): an agent acts as a history policy, audited on the worlds possible after each history, with two named
+    bridges for a reading it states.
+  - TR6 (RF6.3): a public's count is a response of the published forecast alone, judged on counts, and the readings
+    that bandwagon keeps the order and congestion reverses it.
+  - TR7 (RF7): a system chooses a maximal plan of stated prospects, the loss and ties included.
+  - TR8 (RF-M.2): a system told the readers' rules chooses as RevisionPlans.above_iff ranks going on, switching off
+    and holding; TR9 (RF-M.3), only where TR8's bridge is supported: as informing and revaluing rank, on one map.
+  - Stage 0 for each: a mirror of the Lean's definitions checked against its evaluated witnesses and by
+    enumeration, the simulated systems and rivals, and the power check fixing what verdicts rest on (tr1.py to
+    tr9.py, standard library, deterministic).
+  - Plan §3, §4, §8, §10 to §12 corrected where the readers found them misstating the Lean (the statements' scope,
+    RF7's superseded forms, the double loop with no testable meaning designed).
+Supplied premises / correspondence: each test's correspondence, named in its design; the call as the unit; ties
+       carry no verdict; premises measured apart from the outcome.
+Evidence: Stage 0 reproduced from a clean folder (all nine JSON identical apart from timing); the reviews' raw
+       reports in the plan's kit (development/rf-formations-that-read/kit/tests/snapshots/reviews).
+Standing: designs; nothing frozen, nothing run. A verdict would bear on a bridge, never on a law.
+Boundary:
+  - Every run (Stage A and Stage B), on Ren's yes on its usage; the freeze, with an independent reader, before any.
+  - The candidate core lemmas the index lists (TR3's stopping time with persistence first); no Lean here.
+  - Whether a trained system is any law's model; review by a person.
+Output → input: experiments/formations-that-read (new); the experiments README's row; plan §10 and its corrections;
+       the nine records' next steps; RR's tests TR-RR1 and TR-RR2, which share the harness and cite TR7's null.
+```
+
+**Self-review.**
+1. The records change only in next_delta, with a history note each; the length limits hold (at most 400 characters in English and 180 in Chinese).
+2. The ten-minute part of the designs is 1,096 words; checks were done by AI first, and no person has reviewed them.
+3. Not done: the freeze, the runs, and the candidate lemmas.
+
+## 477. The attachment rule read by kind, and the kinds the dump lacks (MV's follow-up, two re-checks)
+
+Board item MV's boundary field, on RA's line: the follow-up to §472. The third re-check of the rule by attachment (328fa883a against 652ee90ac) had two lenses, the two copies of the rule held together and what the Lean check's copy lets through or refuses, each followed by an adversarial verifier, which confirmed all eight on Lean 4.29.1, one sub-claim of RC3-RULES-2 refuted ([reports/boundary-fix-recheck3.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck3.json)). The coordinator let it land after the field, as MV's. A fourth re-check of the follow-up (26977f25a against 1aa84fd59), one lens followed by one adversarial verifier, found the eight taken and four more, all confirmed: R4-1 and R4-2 are not regressions (1aa84fd59 gives the same) and are latent, R4-3 is a gap in the negatives the follow-up's own §8 text claimed, and R4-4 is §3.6 text its reorder left behind; none occurs on the current dump, and they are taken in the same follow-up ([reports/boundary-fix-recheck4.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck4.json)). The design is [BOUNDARY-FIELD](../../2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md) §3.0, §3.2 (test 9 and U4's forms), §3.6, §8 and §9.
+
+```text
+Result(s): no new result; corrections to the rule that tells Lean's generated auxiliaries from theorems written by
+       hand, in both its copies, and to its tests.
+Delta: (1) by kind (RECHECK3-LEAN-1 to 4):
+       - an opaque is its own kind, as the dump writes it;
+       - the equation lemmas' names, splitter, _sunfold, _default, _aux_N and _arg_pusher attach to a definition only;
+       - _unsafe_rec, match_N and the lifted proofs attach to an opaque too;
+       - the lifted proofs attach to an inductive type (a structure's, a class's or a constructor's default);
+       - _arg_pusher is added (the equation lemmas of a definition by well-founded recursion of two arguments or of
+         mutual ones);
+       - go and eq attach only under a brecOn that is a definition;
+       - a hygienic name is read without its macro scopes, and the name before it with them.
+       (2) the kinds the dump lacks (RC3-RULES-1): Lean realizes an equation lemma of an Init definition in the
+       package module that unfolds it (Nat.fold.eq_def), and an _arg_pusher under Init's PSigma.casesOn or PSum.casesOn
+       among a package module's private names. The generator lists such theorems (outside), sends them to the
+       Lean check, which now runs before D1-D5, and D1-D5 read its kinds (Terms.supplied); the measure's facts stay the
+       dump's, and without the check D2 fails closed.
+       (3) the text (RC3-RULES-3, RECHECK3-LEAN-5): §3.0 and §3.2 state test 9's exception and which kinds each copy
+       reads, and the defaults the rule leaves out.
+       (4) the tests (RC3-RULES-2): a stub module of the verifiers' cases; the two copies held together on
+       THEOREM-CONNECTIVITY-DUMP.lean's constants of the stubs; D2 through Nat.fold.eq_def; sixteen mutations of the
+       two copies, each caught (boundary/check/mutations_recheck3.py, rerun on the rule and tests as they stand, its
+       output beside it); 61 tests (57 at §472).
+       (5) the fourth re-check (R4-1 to R4-4):
+       - the name before a hygienic definition's equation lemma (halve.«_@».M._hyg.3.eq_1) is read as the dump prints
+         a name with macro scopes, unescaped, in Terms.aux and outside;
+       - a nested inductive type's _sizeOf_N_eq, brecOn_N (with go and eq under it), below_N and rec_N attach to an
+         inductive type; eq_unfold, congr_eq_N and the functional induction and cases Lean realizes on use (induct,
+         induct_unfolding, mutual_induct, mutual_induct_unfolding, fun_cases, fun_cases_unfolding) to a definition,
+         in both copies, each as Lean 4.29.1 makes it (in the stub module; congr_eq_N on a probe not kept);
+       - a derived entry whose D2 refuses a theorem outside lists says that the Lean check, which gives its kind, did
+         not run; §3.6 states the input and the order as the code has them;
+       - tests: a nested type with a recovery through its equation lemma (must pass), a macro's definition by
+         well-founded recursion with D2 through its lemma, functional induction realized, the dump's names after the
+         macro scopes sent to the check, cases added to existing tests (61 tests still); 157 names
+         (70 generated, 87 not: _unsafe_rec, _arg_pusher and each new pattern under a kind it must not attach to;
+         135 at the fixes, and the landing's checks of this section added a matcher's congr_eq_1 among those
+         generated, and among those not six names under a theorem or an inductive type (congr_eq_1 under each,
+         mutual_induct, mutual_induct_unfolding, induct_unfolding, fun_cases_unfolding) and fifteen of the older
+         patterns that had none (splitter, _aux_N, _default, injEq, sizeOf_spec, _flat_ctor, _sizeOf_inst,
+         binductionOn, recOn, noConfusionType, ctorIdx, toCtorIdx, ofNat_ctorIdx, ctorElim, ctorElimType), so that
+         every alternative of every pattern has a name under a kind it must not attach to); sixteen mutations of the new parts, each caught,
+         each widening an attachment of the new names alone (boundary/check/mutations_recheck4.py, rerun on the rule
+         and tests as they stand, its output beside it; the landing's check of this section found that one named a
+         widening it did not make and three widened a whole group, so that older negatives caught them, and they
+         were made targeted).
+Premises: none added.
+Evidence:
+       - on the current dump none of the shapes occurs (no opaque, no hygienic name, no _arg_pusher, no Init
+         auxiliary realized in a package module, no lifted proof under an inductive type), so no figure, walk or reach
+         changes; master_laws.py rerun on the receipt of the branch's first base, 1aa84fd59
+         (20261030T232750.486801Z), in the landing rehearsals merged with main on RF-M.3's (20261031T013649.265381Z)
+         and HE2's (20261031T054654.692180Z), and on the branch merged with main (f52d9d34e) on RR2's
+         (20261031T085229.010243Z) changes only the hashed inputs (boundary.py and boundary_check.lean): git diff
+         main shows only those two hashes;
+       - the cases of boundary/check/controls-run.log on U4's build (31: its 21 controls, U4's two rows and U4's
+         controls adapted among them, and 10 name-test queries), rerun after each re-check's fixes: output
+         byte-identical;
+       - the end-to-end report on GW's run: every row the same, only the check's hash differs;
+       - the stub module's versions of the verifiers' cases pass (relC, relW, relO, relA, relE, relB) or fail (op.eq_1,
+         Rp.brecOn.go, Cfg.elim) as §3.0 and §3.2 say (TheLeanCheck, entries 18 to 27);
+       - the fourth re-check's verifier reproduced each of its findings, R4-1 to R4-3 on Lean 4.29.1 and R4-4 on
+         report() with a stubbed Lean check; after the fixes, the dumps of core receipts 20261031T013649.265381Z
+         (RF-M.3's), 20261031T054654.692180Z (HE2's) and 20261031T085229.010243Z (RR2's) give the same auxiliaries, walks, forwarders, laws and root
+         constants under the rule before and after them, and outside is empty (on RF-M.3's, 52,346 constants: 26,351 auxiliaries, 2,258 root constants, 406 grammar laws, 14
+         forwarders, 20,120 walks; on HE2's, 52,419: 26,383, 2,346, 430, 15 and 20,157; on RR2's, 52,501: 26,406,
+         2,346, 430, 15 and 20,200; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
+         by boundary/check/compare_rule.py); at the fixes the same comparison on core 20261030T232750.486801Z's dump
+         and on U4's build gave the same, with no output kept; U4's controls and the end-to-end report again as above;
+         U4's leaf Becoming.RootForms (u4-edge) has none of the new shapes;
+       - a check of every factual claim in this section and README's against the branch (416b0af81), each finding
+         then given to a skeptic: of this section's 15 findings, 13 confirmed and taken, 2 refuted
+         ([reports/landing-sections-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-sections-check.json));
+       - a second check, of every claim this section gained or changed after the first and of what those changes
+         made false, each draft's findings then given to a skeptic: of this section's 7 findings, 4 confirmed and
+         taken, 3 refuted (of both, 13, 7 and 6) ([reports/landing-delta-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-delta-check.json));
+       - after the landing's render, research check --strict-fresh, links and the suite (305 tests, 2 skipped) pass
+         in a clean worktree.
+Boundary:
+       - a theorem written by hand under the exact name Lean gives an auxiliary of a declaration of that kind, where
+         Lean made none, is still walked through (§3.0's stated limit); the review reads a model's source for it;
+       - outside lists the theorems named as an auxiliary (a last component of AUX, or go or eq under a brecOn or
+         brecOn_N) whose owner the dump lacks, read as the dump prints it and by a private name's user name; a
+         hygienic name with its macro scopes last is left out, since the Lean check cannot read one listed;
+       - Lean's proof cache can put another declaration's lifted proof in a recovery; test 9 collects it all the same;
+       - a recovery a macro makes cannot name its definition's equation lemma, and a tactic brings Init's congrArg,
+         which test 9 counts; the Lean side of a name after the macro scopes is tested through the check's generated
+         query, not test 9.
+Output -> input: U4's boundary record, built on its leaf Becoming.RootForms (u4-edge), is checked by this rule.
+```
+
+## 478. README's first screen: four points before the opening, timed at render (RA's line, release gate item 6)
+
+Board item RA, its line in WHAT-REMAINS item 6: "the README's first screen, generated with its times computed at render, with the opening's body untouched". The coordinator set two conditions:
+- the block says nothing the opening's body says in other words: only four points, what the theory is, the two premises, where to start and what is tested, with links down;
+- it never contradicts the body: where the body's wording is older, the block states current terms and a proposal to OPENING goes alongside.
+
+The design (the audit, two drafts, two cold readers), the review and the tightening pass are kept as [design.json](../../2026-10-05-repository-reconciliation/architecture/ra-first-screen/design.json), [review.json](../../2026-10-05-repository-reconciliation/architecture/ra-first-screen/review.json) and [tighten.json](../../2026-10-05-repository-reconciliation/architecture/ra-first-screen/tighten.json). The first screen is everything before the opening's heading. Until now it held a title, the navigation line and the status line (36 words), and the AI-written lead sat after the opening and its 24 notes.
+
+```text
+Result(s): no new result; a generated first screen for README, a proposal to OPENING, OPENING's leading comment,
+       one AI-side line before its notes, and five AI-written notes changed ([^ethics] and [^good-evil] in label and
+       one sentence each, [^transitions] in one label, [^axiom] and [^own] brought to the current account).
+Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), placed by navigation.first_screen between
+       the status line and the opening. Four points:
+       - what it is;
+       - its ethics: the two premises by role (the condition fixes scope, whose losses count; C alone gives order),
+         unasserted, their warrant open; T8 argues this ethics as life's way, claiming no verdict binding every
+         possible mind;
+       - where to start, with the reading times of the one page, the overview and the opening, named a first-person
+         conviction (its notes are linked with no time);
+       - what is tested: Lean receipts and what they show (each Lean statement follows from its premises, not that
+         they hold), the theses' tests frozen before scoring (some passed, some failed), no human review yet.
+       Front pages name no person and no AI, so the screen carries no authorship label and says who has not yet
+       reviewed it without naming who has.
+       Its fields are filled at render: {{time:PATH}}, {{time:opening}}, {{time:notes}}, {{time:screen}} (the whole
+       screen, title to heading), {{count:registered}} and {{count:STATUS}}; the screen uses all but {{time:notes}}.
+       A missing file, a page the render writes, an unknown or malformed field or status, or a time field for a part
+       the opening lacks is an error, and validate_goals runs it.
+       (2) reading time by the release gate's rule, the same count as AJ4's measure_layers.py (visible prose; 100 to
+       130 words, or 200 to 260 characters, a minute, halves rounded up): 172 words on the screen. The screen's own
+       time is a fixed point over the page as rendered (where filling it in moves it back and forth, the longer).
+       (3) the lead after the opening drops what the screen now says (what the theory is, the two premises, the
+       opening's standing), so README keeps one text of each; its Lean sentence now says most laws are checked on the
+       pure core and the rest in the periphery with their axioms reported (FS6); its comment says what moved.
+       (4) OPENING: the first-person body unchanged. Its leading comment says where it is placed and that the
+       first-person text changes only with Ren; after the date line, one AI-side line says "The notes below are written
+       apart from the first-person text above and follow the current account" (in README, just above the notes);
+       [^ethics] now opens "Open, and
+       offered for life: no verdict binding every possible mind is claimed" (the clause moved from its T8 sentence,
+       which now adds that whether a stronger, universal warrant exists stays open, 07's universal-practical-warrant,
+       a question the ethics does not wait on), and [^good-evil] reads good and evil as
+       a reading for life (AI-side, as the current account has it), its first sentence saying what holds with no axiom:
+       the four cases exclude one another, and that a part falls under one is classical (record four-cases-of-a-part).
+       So that the line before the notes is true of every note, the two the audit found older are brought to the
+       current account: [^axiom] gives §4.6's path (under P1 to P4 one's concern reaches everything downstream of what
+       one conditions, P2, one's line a regularity of its own, and P4 its crux, what it does not reach the step's), names P2 and P4 among what is open,
+       says no warrant binding every possible mind is claimed and the ethics does not wait on one, states the
+       zero-axiom target as open (08 §12) where it said the attempt "has not yet begun", and says no human has
+       reviewed the condition's results yet where it said "not yet independently reviewed"; [^own] states P1, the
+       self's presupposition, as stated and not asserted, which the condition contains (07 §4.1, §4.6), and
+       self-significance as what the condition gives on the readings its theorem takes, where it gave
+       self-significance under the condition alone. A check of the two notes against 07, 08, AGENTS and the glossary,
+       its findings then given to a skeptic, found 9: 3 confirmed and taken (P2 glossed as constancy over the whole
+       class, which 07 says P2 does not ask; [^own] stating self-significance outright, which the account does not
+       assert; the line before the notes, until those two were fixed), 6 refuted
+       ([reports/opening-notes-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/opening-notes-check.json)).
+       (5) drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
+       the opening after the first screen and names the proposal.
+       (6) a link into the page it is placed in stays on the page (navigation.adapt_links), so the screen's links to
+       the opening and its notes are written to README.md's anchors, which the link check reads, and render as bare
+       fragments.
+       (7) the eight records citing OPENING.md without an anchor (closed-capture, confined-rise-within-a-whole,
+       mutual-dependence-and-its-pace, readers-drawn-from-the-selected, relative-position-is-zero-sum,
+       what-position-reads, what-the-dynamics-leave-open, whole-drawing-beyond-renewal-ends) were read against the
+       change and re-pointed, one line of rebinds.jsonl. Five are linked from a note, so the source check reads their
+       lines and any rewrite before the first heading (the leading comment); the three no note links
+       (confined-rise-within-a-whole, what-position-reads, what-the-dynamics-leave-open) bind every rewritten line.
+       The three were read again and re-pointed after each later change ([^good-evil]'s first sentence, then
+       [^transitions]'s label, then the line before the notes with the comment's second change, then [^axiom] and
+       [^own]), and the five after the comment's second change, in the same line. Each reads a note left as it
+       was ([^collective], [^aligned] and [^race], [^no-law], [^present], the meta-attractor's), or [^transitions],
+       changed only in its label, or, for what-the-dynamics-leave-open, the sentences of [^ethics] on what reads only
+       the dynamics, which are unchanged; no live text keeps the replaced phrases.
+       (8) the review's code findings: README's dependence on the files it times is stated (the generated comment,
+       the screen's comment, RESULT-WORKFLOW) and those files, with every readme_* file, are in the render's input
+       snapshot; a field timing a page the render writes, or a field of no known form, is an error; field paths are
+       from the repository root; a link into the page with angle brackets stays angle-bracketed.
+       (9) the coordinator's two requests before the slot: no names on the front page, and one tightening pass toward
+       150 words (from 205 to 172). The screen's authorship label and "every review so far is by AI" go; its last
+       sentence is "No human review yet.", since a live record (least-loss-rest) names an outside review of 19 October
+       (R20), and what the account says has not happened is a human review (ONE-PAGE, 08 §11). [^transitions] reads
+       cancer as a confined rise as "a reading", no longer "the AI's reading": this departs, on the front page only,
+       from AGENTS's "every reading keeps its AI label" and amendment 1's never-cut "an AI label on a reading", under
+       the rule that front pages name no person or AI; the label stays in the record confined-rise-within-a-whole, and
+       the note now matches the other notes' plain "a reading". What the label tells on OPENING, that the notes'
+       voice is not the first-person body's, the line before the notes now says once, naming no one (the
+       coordinator's condition for the departure). Tests check that the screen's block and everything above the opening
+       as README renders it (title, navigation and status lines) name no one, and that the line stands once, last
+       before the notes.
+       (10) tests: test_featured_results.py, 19 to 25: FirstScreenTests (the fields and the screen's fixed point,
+       refusals, counting as the budgets do, links kept on the page, the repository's screen keeping both roles and
+       naming no one, the repository's notes told from the body) and the placement test (status, screen, opening, lead, results, one copy, no field left);
+       validate_goals reports a missing opening once (CODE-9).
+Premises: none added.
+Evidence:
+       - an audit of the body (version 12, 22 October) against AGENTS, the glossary and chapters 7 and 8. Three
+         sentences a reader of the body alone would take against the current account: "the basis of all ethics, for
+         all beings, in all universes", the unscoped "line between good and evil", and the least loss wherever an
+         exchange "forgets". The step's paragraph does so in part (§4.6's path). Three wordings are older, but their notes
+         correct them (no axiom, reactions as nets, the optimizer's room; the audit's summary counts the closing
+         question too, corrected only in part). A few are style. The proposal takes each, A1 and A2 being the ones the
+         screen needs alongside; after the review the optimizer edit is considered and not proposed, with two more,
+         leaving D1 and D2;
+       - two drafts and two cold readers (a newcomer, an alignment researcher). Both preferred the second draft, with
+         edits, placed before the opening, for three reasons: the scope of the ethics is otherwise first met in the
+         body's older wording, with its correction about 2,400 words down in a note; draft B keeps what is not claimed;
+         it reports failures as well as passes. The edits are taken (the ethics stated as life's way, the receipt's
+         meaning, the opening's standing, "Every review so far is by AI", now "No human review yet" (9), every
+         figure a field);
+       - an independent review of the branch in three lenses (the code, the screen and lead, the proposal), each
+         finding then given to an adversarial verifier: 36 findings, 29 confirmed and taken (10 by the code's lens, 7
+         by the screen's, 12 by the proposal's; three found major were judged minor: B's "cannot be undone", E's split
+         clause and C2's "in full", labels of the reviewed version, 247558c7c, whose C2 and E now stand under E,
+         considered and not proposed, and whose C3 is now C2), 7 refuted and left (FS3, FS4, OP-A1a, OP-A1b, OP-A3,
+         OP-C3, OP-NAME), each with the verifier's reason; and one the proposal's verifier found that its lens had
+         missed ([^good-evil]'s "with no axiom"), taken (4);
+       - the tightening pass: three independent drafts (fewest words, a newcomer reading cold, exactness against the
+         account), two judges (a cold reader, the account) and one agent that synthesized the best and tried to refute
+         it clause by clause; its nine fixes are in the block (among them "claiming no verdict binding every possible
+         mind" rather than a denial, "this ethics" so that T8 is not read as arguing for C, "comes to be" rather than
+         "arises", which the account keeps for activity starting, and "No outside review yet" rather than "internal",
+         which would suggest a human review the account says has not happened; the wording is now "No human review
+         yet", (9)), and
+         six points on the block's wording are left with reasons (among them that the frozen rule's caveat stays one
+         link down at 08's theses);
+       - the budget: the screen is 172 words by AJ4's measure, 22 over the budget, 1–2 minutes; the excess is what
+         amendment 1 does not let a layer cut (the two premises with their roles, each claim's standing, what is not
+         claimed) and what the review and the coordinator asked to keep (what a receipt shows, the tests frozen before
+         scoring, the links down), with two discretionary words kept as point 1's content ("evaluation included");
+       - a check of every factual claim in this section and MV's against the branch (416b0af81), each finding then
+         given to a skeptic: of this section's 17 findings, 16 confirmed and taken, 1 refuted (of both, 32, 29 and 3)
+         ([reports/landing-sections-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-sections-check.json));
+       - a second check, of every claim this section gained or changed after the first and of what those changes
+         made false, each draft's findings then given to a skeptic: of this section's 6 findings, 3 confirmed and
+         taken, 3 refuted (of both, 13, 7 and 6) ([reports/landing-delta-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/landing-delta-check.json));
+       - after the landing's render, research check --strict-fresh, links and the suite (305 tests, 2 skipped)
+         pass in a clean worktree.
+Boundary:
+       - the screen does not cite the empty axiom report, whose caveat stays in the lead after the opening;
+       - the opening's notes are not cut to their three-minute budgets here (amendment 4's cut of the notes);
+       - the proposal changes nothing until Ren decides;
+       - README carries the ids truth-exists and notes twice, from the historical-section anchors, which predate this
+         change; the screen's links land on the headings, which come first; the fix belongs in
+         navigation.preserved_anchors (skip anchors the page defines), when that block next changes.
+Output -> input: the one page and the overview are cut in their own pass (amendment 4); the proposal goes to Ren.
+```
+
+## 479. One root to its edge: where each central declaration stands (U4)
+
+Board item U4, one root to its edge: each central declaration placed against the edge of one root, by [the design](development/u4-one-root-to-its-edge/DESIGN-BOUNDARY.md), declared on MV's boundary field (§472) and checked by it. Levers 1 and 2 landed earlier as documents ([lever 2's audit](development/u4-one-root-to-its-edge/LEVER-2-AUDIT.md), [the connected rows](development/u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md)); HE2 (§474) took lever 1's counting laws and U4's laws of a closure into GrammarLaws, so that two rows read as connected are now derived. Two reviews read the design ([first](development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md), [second](development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY-SECOND.md)); an independent reader reviewed the record against its review file, which names every declaration the record introduces (22 findings, every one taken: [the review](development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
+
+```text
+Result(s): one-root-to-its-edge (new, home 08 §7).
+Delta:
+  - Root forms (Becoming.RootForms): a row stated on the grammar under named hypotheses, each a definition naming
+    no model and no amount; beside each hypothesis H of a form, a witness over one point where the form with H
+    dropped fails (needs_H) and the form applied there, so that H fails with the conclusion (H_needed); a recovery
+    at the row's own type and a certificate by rfl.
+  - outside_leaves_no_offspring: where giving lies within giving from a region (GivesFrom) and listed descent within
+    giving (ListedWithin), a listing wholly outside the region (Outside) has no listed offspring.
+    GroupEnding.Flow.all_end is this form at one step, each hypothesis met by definitions alone (all_end_at_model,
+    all_end_certified): the row stands on the root under the three.
+  - descent_forms_no_dependence: where what comes to stand is given to (GivenTo), dependence after a step is
+    inherited along descent (Inherits) and nothing descended from depends before it (UndependedFrom), nothing
+    coming to stand depends after it. Flow.no_new_dependence is this form at its one relatum
+    (no_new_dependence_at_model, no_new_dependence_certified), but meets "given to" only through
+    Flow.descends_of_comes, amount reasoning, so the form is its relational part and the row keeps its distance.
+  - The record places the 118 distinct central declarations: on the edge 11 (10 derived, each a case of grammar laws,
+    through bridges checked as equivalences where a row has them; 1 under a stated hypothesis); below the grammar 6
+    (counting); at a named distance 101 (22 connected, 32 with balance in their statement, 19 amounts, 16 at a
+    represented model, 7 on their own carrier, 2 at their model, 3 with significance free); none unplaced. The ethics'
+    two premises are listed apart: the condition for scope, not entailed by statements reading only the dynamics
+    (ReadsOnlyDynamics.not_entails), and C for order, with no such theorem.
+Supplied premises / correspondence: none added beyond each form's hypotheses. The record's correspondence of a row
+       to its laws or its form, and every reading, is the review's; MV's check bounds it (D1 to D6 for derived
+       rows, the nine Lean tests for row 17) and does not show it. Modelling choices: lists for offspring, as the
+       row lists them; regions and relations as Prop-valued predicates on any carrier.
+Evidence: core receipt `20261031T123637.207595Z`; Becoming.RootForms (30 theorems in 42 declarations),
+       a core leaf importing Grammar, Transmission and GroupEnding; every axiom report empty. master_laws.py on
+       that run: the boundary report reads the record, nothing unverified or unplaced, the Lean check ran.
+Standing: near-definitional; each form is a few lines of logic, none of it claimed new as mathematics. What it
+       adds is the placing: every central declaration has one standing and its reason, checked where a check
+       exists.
+Boundary:
+  - That a row under a stated hypothesis uses the grammar's laws: neither form reaches one.
+  - That the countermodels show more than that no hypothesis is redundant: they are over one point.
+  - That either premise of the ethics is warranted; each warrant stays open.
+  - That a distance is a gap or a failure: the measure records dependence, not meaning.
+Output -> input: the record's next step (a root form for the census rows; a theorem that no statement reading
+       only the dynamics entails C; the root reading of significance for the three rows keeping it free; HE2's
+       laws read as cases at more connected rows).
+```

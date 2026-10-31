@@ -6251,6 +6251,66 @@
    "module": "Becoming.RevisionPlans",
    "category": "general-structure",
    "reason": "RevisionPlans.routes_above_iff: a law of any plans keeping a law going on and switching it off at a listing's candidates in natural-number weights (when holding for a reading stands above a route of keeping); it waits for a formation's own model and a reading's revision of its law, on the base (RR2)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.given_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.given_needed: a fact about one constructed model over one point: the hypothesis (given) fails there, by RootForms.descent_forms_no_dependence (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.inherits_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.inherits_needed: a fact about one constructed model over one point: the hypothesis (inherits) fails there, by RootForms.descent_forms_no_dependence (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.needs_given": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.needs_given: a fact about one constructed model over one point: dropping the hypothesis (given), the conclusion of RootForms.descent_forms_no_dependence fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.needs_inherits": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.needs_inherits: a fact about one constructed model over one point: dropping the hypothesis (inherits), the conclusion of RootForms.descent_forms_no_dependence fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.needs_undepended": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.needs_undepended: a fact about one constructed model over one point: dropping the hypothesis (undepended), the conclusion of RootForms.descent_forms_no_dependence fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.descent_forms_no_dependence.undepended_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.descent_forms_no_dependence.undepended_needed: a fact about one constructed model over one point: the hypothesis (undepended) fails there, by RootForms.descent_forms_no_dependence (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.descent_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.descent_needed: a fact about one constructed model over one point: the hypothesis (descent) fails there, by RootForms.outside_leaves_no_offspring (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.gate_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.gate_needed: a fact about one constructed model over one point: the hypothesis (gate) fails there, by RootForms.outside_leaves_no_offspring (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.needs_descent": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.needs_descent: a fact about one constructed model over one point: dropping the hypothesis (descent), the conclusion of RootForms.outside_leaves_no_offspring fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.needs_gate": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.needs_gate: a fact about one constructed model over one point: dropping the hypothesis (gate), the conclusion of RootForms.outside_leaves_no_offspring fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.needs_outside": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.needs_outside: a fact about one constructed model over one point: dropping the hypothesis (outside), the conclusion of RootForms.outside_leaves_no_offspring fails (U4's countermodel, cited by the boundary record)"
+  },
+  "Becoming.RootForms.outside_leaves_no_offspring.outside_needed": {
+   "module": "Becoming.RootForms",
+   "category": "model-witness",
+   "reason": "RootForms.outside_leaves_no_offspring.outside_needed: a fact about one constructed model over one point: the hypothesis (outside) fails there, by RootForms.outside_leaves_no_offspring (U4's fit, cited by the boundary record)"
   }
  },
  "instances": {

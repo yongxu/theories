@@ -1,0 +1,572 @@
+{
+ "laws": [
+  {
+   "record_id": "a-revision-that-opens-a-correction",
+   "module": "Becoming.OpenedCorrection, in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean. It is an application of the ring that imports Becoming.GuardHorizon and Becoming.Revision: 12 theorems in 16 declarations, every axiom report empty, core receipt 20261029T200440.502813Z, study §457. The variables are {X B S A O : Type}: configurations X, the process's acts B, situations S, correction acts A and readings O.",
+   "home": "theories/becoming/chapters/03-KNOWING.md §8, anchor r-a-revision-that-opens-a-correction at line 328, followed by its AI reading at line 331. Plan §4.4 is the design and §4.6 what was built. The review is REVIEW-ROUND2.md, findings 19–26, plus the RF6.1 cold read.",
+   "statements": [
+    {
+     "name": "Supporting definitions it reuses (GuardHorizon, Keeping's Viability, GenerativeCore)",
+     "lean": "def UniformPolicy {O : Type} (obs : S → O) (good : S → A → Prop) : Prop :=\n  ∃ policy : O → A, ∀ s, good s (policy (obs s))\ndef FiberFeasible {O : Type} (obs : S → O) (good : S → A → Prop) : Prop :=\n  ∀ o, ∃ a, ∀ s, obs s = o → good s a\ntheorem fiber_of_uniform {O : Type} (obs : S → O) (good : S → A → Prop)\n    (uniform : UniformPolicy obs good) : FiberFeasible obs good\ntheorem uniform_policy_iff_fiber_feasible {O : Type} (choice : Viability.ChoiceOver O A)\n    (obs : S → O) (good : S → A → Prop) :\n    UniformPolicy obs good ↔ FiberFeasible obs good\ndef ChoiceOver (O : Type w) (α : Type z) : Prop :=\n  ∀ R : O → α → Prop, (∀ o, ∃ x, R o x) → ∃ f : O → α, ∀ o, R o (f o)\ntheorem choiceOver_fin {k : Nat} {α : Type z} : ChoiceOver (Fin k) α\ndef Enabled (P : Process State Action) (s : State) (a : Action) : Prop := ∃ t, P.step s a t\ninductive Trace (P : Process State Action) : State → List Action → State → Prop where\n  | nil (s : State) : Trace P s [] s\n  | cons {s m t : State} {a : Action} {as : List Action} :\n      P.step s a m → Trace P m as t → Trace P s (a :: as) t",
+     "plain": "A uniform policy is a total function from readings to acts that is good at every situation. Fiber feasibility asks, for each reading value, one act good at every situation read as that value. A uniform policy gives fiber feasibility with no hypothesis. The converse needs a choice function for every total relation from readings to acts, which is proved without premise only for readings in Fin k. Enabled is existential admissibility, meaning some successor exists; it carries no probability. A trace is a finite path of steps, and the empty trace counts."
+    },
+    {
+     "name": "Correctable and correctable_iff",
+     "lean": "def Correctable (reading : X → S → O) (acceptable : S → A → Prop) (executable : X → A → Prop) (x : X) :\n    Prop :=\n  GuardHorizon.UniformPolicy (reading x) (fun s a => acceptable s a ∧ executable x a)\n\ntheorem correctable_iff (choice : Viability.ChoiceOver O A) (reading : X → S → O)\n    (acceptable : S → A → Prop) (executable : X → A → Prop) (x : X) :\n    Correctable reading acceptable executable x ↔\n      ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a",
+     "plain": "A configuration x is correctable where some total policy from the reading in force at x to acts gives, at every situation s of S, an act acceptable at s and executable at x. This quantifies over all of S, not only the situations that occur. Given choice over the readings, x is correctable exactly where every reading value o has one act that is acceptable at every situation read as o and executable at x. A reading no situation gives imposes no condition, but the policy still gives it an act. The left-to-right direction needs no choice."
+    },
+    {
+     "name": "OpensAlong",
+     "lean": "def OpensAlong (P : Process X B) (reading : X → S → O) (acceptable : S → A → Prop)\n    (executable : X → A → Prop) (x x' : X) : Prop :=\n  (∃ w, Trace P x w x') ∧ ¬ Correctable reading acceptable executable x ∧\n    Correctable reading acceptable executable x'",
+     "plain": "A course opens a correction from x to x' where three things hold. Some finite trace of the process P leads from x to x', with no bound on its length. No fitting uniform policy exists at x. One exists at x'. The acceptability is the same throughout. Nothing requires the reading in force to change: the gain may lie in the reading, in executability, or in both."
+    },
+    {
+     "name": "finer_keeps",
+     "lean": "theorem finer_keeps {reading : X → S → O} {acceptable : S → A → Prop} {executable : X → A → Prop}\n    {x x' : X} (forget : O → O) (refines : ∀ s, forget (reading x' s) = reading x s)\n    (kept : ∀ a, executable x a → executable x' a)\n    (correctable : Correctable reading acceptable executable x) :\n    Correctable reading acceptable executable x'",
+     "plain": "Take any two configurations; no trace is needed. Suppose a supplied map forget : O → O recovers the reading at x from the reading at x' at every situation, and every act executable at x is executable at x'. Then correctability at x gives correctability at x'."
+    },
+    {
+     "name": "coarser_opens_nothing",
+     "lean": "theorem coarser_opens_nothing {P : Process X B} {reading : X → S → O} {acceptable : S → A → Prop}\n    {executable : X → A → Prop} {x x' : X} (forget : O → O)\n    (coarser : ∀ s, forget (reading x s) = reading x' s) (no_gain : ∀ a, executable x' a → executable x a) :\n    ¬ OpensAlong P reading acceptable executable x x'",
+     "plain": "Suppose the reading at x' is read off the reading at x through a supplied map at every situation, as a summary measure would be, and every act executable at x' was already executable at x. Then no course of any process opens a correction from x to x'."
+    },
+    {
+     "name": "widened_correctable",
+     "lean": "theorem widened_correctable (reading : X → S → O) (executable : X → A → Prop) {x : X} {a : A}\n    (can : executable x a) : Correctable reading (fun (_ : S) (_ : A) => True) executable x",
+     "plain": "If every act counts as acceptable at every situation, any configuration with some executable act is correctable, by the constant policy. So an opening counts only when the acceptability is fixed."
+    },
+    {
+     "name": "Revising's process and the Linked instance (Becoming.Revision; OpenedCorrection.Linked)",
+     "lean": "abbrev State := Nat × Bool × Bool\ninductive Act where\n  | replenish\n  | rebuild (mode : Bool)\n  | correct\ndef P : Process State Act := ⟨fun s a t => match a with\n  | .replenish => t = (s.1 + 1, s.2)\n  | .rebuild b => ∃ n, s.1 = n + 1 ∧ t = (n, b, s.2.2)\n  | .correct => s.2.1 = true ∧ ∃ n, s.1 = n + 1 ∧ t = (n, true, true)⟩\ndef read (s : State) (b : Bool) : Bool := if s.2.1 then b else false\n\nabbrev acceptable (needed : Bool) (a : Act) : Prop :=\n  match needed with\n  | true => a = .correct\n  | false => a = .replenish\nabbrev executable (x : State) (a : Act) : Prop := Enabled P x a",
+     "plain": "A configuration is (stock, link, response). Replenishing adds one unit and is always enabled. Rebuilding draws one unit and sets the link. Correcting draws one unit, needs the link on, and sets the response to true. With the link on, the link reads the situation (the needed bit) exactly; with it off, it reads every situation as false. Correcting is acceptable exactly where it is needed and replenishing exactly where it is not. Executable means enabled by P. The process is determined (Revising.determined). The response coordinate v is read by nothing in acceptability, and the effect of a correction on the situation is not modelled."
+    },
+    {
+     "name": "unlinked_uncorrectable, linked_correctable, starved_uncorrectable",
+     "lean": "theorem unlinked_uncorrectable (n : Nat) (v : Bool) :\n    ¬ Correctable read acceptable executable (n, false, v)\ntheorem linked_correctable (n : Nat) (v : Bool) :\n    Correctable read acceptable executable (n + 1, true, v)\ntheorem starved_uncorrectable (v : Bool) : ¬ Correctable read acceptable executable (0, true, v)",
+     "plain": "With the link off, no configuration is correctable at any stock. With the link on and at least one unit, every configuration is correctable. With the link on and no stock, none is. Inference: these three cover every State, so on Revising a configuration is correctable exactly where the link is on and the stock is at least 1. That classification is not stated as one theorem."
+    },
+    {
+     "name": "opens, rebuilt_starved, opens_after_replenishing, opens_by_support, widened_unlinked",
+     "lean": "theorem opens (n : Nat) (v : Bool) :\n    OpensAlong P read acceptable executable (n + 2, false, v) (n + 1, true, v)\ntheorem rebuilt_starved (v : Bool) :\n    P.step (1, false, v) (.rebuild true) (0, true, v) ∧\n      ¬ Correctable read acceptable executable (0, true, v)\ntheorem opens_after_replenishing (v : Bool) :\n    OpensAlong P read acceptable executable (1, false, v) (1, true, v)\ntheorem opens_by_support (v : Bool) :\n    OpensAlong P read acceptable executable (0, true, v) (1, true, v)\ntheorem widened_unlinked (n : Nat) (v : Bool) :\n    Correctable read (fun (_ : Bool) (_ : Act) => True) executable (n, false, v)",
+     "plain": "Five witnesses. (1) Starting with the link off and at least two units, rebuilding opens the correction in one step (trace [rebuild true]). (2) Starting with the link off and one unit, rebuilding lands at (0, true, v), which is uncorrectable. (3) Rebuilding then replenishing does open it (trace [rebuild true, replenish]). (4) With the link on and no stock, replenishing alone opens it, the reading unchanged (trace [replenish]). (5) With every act counted acceptable, every unlinked configuration is correctable already, by replenishing."
+    },
+    {
+     "name": "Inputs from another record (selection-under-registration-revision): Revising.feasible_iff, covered_not_enacted, linked_not_enacted, controlled_revision",
+     "lean": "theorem feasible_iff {s : State} {w : List Act} :\n    Feasible P s w ↔ Stock.Covered draw restore s.1 w ∧ Feasible linkProcess s.2 w\ntheorem covered_not_enacted :\n    Stock.Covered draw restore 1 [.correct] ∧ ¬ Feasible P (1, false, false) [.correct]\ntheorem linked_not_enacted :\n    Feasible linkProcess (true, false) [.correct] ∧ ¬ Feasible P (0, true, false) [.correct]\ntheorem controlled_revision :\n    controlled.act 1 = .rebuild true ∧ controlled.state 2 = (0, true, false) ∧\n    ¬ Learning.Training.Through (alike (controlled.state 0)) (fun b => b = true) ∧\n    Learning.Training.Through (alike (controlled.state 2)) (fun b => b = true) ∧\n    ¬ Enabled P (controlled.state 2) .correct ∧\n    controlled.act 2 = .replenish ∧ controlled.act 3 = .correct ∧\n    P.step (controlled.state 3) .correct (controlled.state 4) ∧\n    (controlled.state 3).2.2 = false ∧ (controlled.state 4).2.2 = true",
+     "plain": "A course is executable exactly where the link process admits it and the stock covers it. Stock does not enact: a covered correction can be blocked by the link. The link does not enact either: a linked correction can lack stock. The one supplied controller's run (choose: replenish when empty, rebuild when the link is off and supported, otherwise correct), started from (0, false, false), replenishes, rebuilds and is starved at step 2, then replenishes and corrects at step 3. RF6.1 itself claims no controller."
+    }
+   ],
+   "assumptions": [
+    "The reading in force at a configuration is a map reading x : S → O into one fixed type O, so every reading must be encoded in that one type, as Linked does with Bool. The situation s is not a coordinate of the configuration, and no step changes it.",
+    "Correctability is uniform over every situation of S, including situations that never occur. It is not success on the situations a run draws.",
+    "Acceptability is fixed (acceptable : S → A → Prop) and does not depend on the configuration. Executability depends on the configuration and the act, never on the situation (executable : X → A → Prop). Plan §4.4's E s a := acceptable s a ∧ executable s a, with situation-dependent executability, was not built.",
+    "Policies are deterministic total functions O → A that read only the current reading. There is no randomized policy and no history.",
+    "The revision is a finite trace of one relational process (Process X B), of any length. There is no deadline, and no cost beyond the process's own enabling. OpensAlong does not require the reading to change.",
+    "Acceptability and executability are Prop-valued; Enabled is existential.",
+    "Choice over the readings (Viability.ChoiceOver O A) is needed only for the right-to-left direction of correctable_iff.",
+    "The Linked instance assumes Revising's natural-number stock (each rebuild and correction draws one unit; replenishing restores one and is always enabled), a perfect link (on reads the situation exactly; off is constant false) and two situations. The response v is ignored by acceptability. P is determined.",
+    "Uniform-policy existence is not a controller's choice or run. Members' acts, an institution's own process and governing norms are not represented. The institution reading in the module header is an AI reading: the link is the rule of reading reports by which line rather than by how many.",
+    "It is an application of the ring with every axiom report empty. Its standard boundary is formal-not-empirical: correspondence to actual systems is a separate obligation."
+   ],
+   "forbidden": [
+    {
+     "case": "From correctable_iff, left to right, which needs no hypothesis: at one configuration, a policy through the reading in force is acceptable and executable at every situation, although some reading value's situations have no single act that is acceptable at all of them and executable there.",
+     "quantifier": "Never. For every configuration and every policy O → A, where a fiber lacks a common act, some situation of that fiber gets an act that is unacceptable or unexecutable.",
+     "observable": "Present, at one frozen configuration, every situation of a conflicting fiber to a formation whose whole input is the frozen reading. Its acts cannot be acceptable and executable at all of them. A deterministic formation that receives one input gives one act, so the case can appear only as a leak (the formation reads more than the frozen reading) or as nondeterminism. For randomized formations the Lean says nothing. Inference, not proved: for two situations whose acceptable-and-executable sets are disjoint, the two success probabilities sum to at most one."
+    },
+    {
+     "case": "From finer_keeps: a revision to a reading from which the old one is recovered by a supplied map at every situation, losing no executable act and keeping acceptability fixed, after which no fitting uniform policy exists although one existed before.",
+     "quantifier": "Never, for every pair of configurations that meets the premises. No trace is needed.",
+     "observable": "This is visible only as existence computed from frozen tables: correctable before, uncorrectable after. A formation whose realized performance falls after such a revision is not the forbidden case unless a stated bridge says it acts by a fitting policy wherever one exists."
+    },
+    {
+     "case": "From coarser_opens_nothing: a course from a configuration with no fitting uniform policy to one with a fitting uniform policy, where the end reading is read off the start reading by a supplied map (a summary measure) and no act executable at the end was not already executable at the start.",
+     "quantifier": "Never, along any trace of any process.",
+     "observable": "In a frozen log of configurations: an opening whose end reading is a function of its start reading and whose executable acts did not grow."
+    },
+    {
+     "case": "From widened_correctable: an uncorrectable configuration that has some executable act, under the acceptability that counts every act acceptable.",
+     "quantifier": "Never, for every configuration with an executable act.",
+     "observable": "A scorer that counts as acceptable whatever the formation did finds every such configuration correctable already, so it can count no opening from one. Acceptability must therefore be frozen before, and apart from, the acts."
+    },
+    {
+     "case": "From the Linked theorems, on Revising: a correctable configuration with the link off; an uncorrectable configuration with the link on and at least one unit; a correctable configuration with the link on and no stock.",
+     "quantifier": "Never, for every stock n and response v.",
+     "observable": "In a simulation of Revising these are identity checks of the implementation. Because the classification is complete (inference), any opening on Revising ends with the link on and stock at least 1. Rebuilding from one unit lands at (0, true, v), which is uncorrectable (rebuilt_starved) and is opened by one replenish (opens_by_support)."
+    }
+   ],
+   "predicts_nothing_about": [
+    "Whether any formation, controller or institution takes an opening or a correction. Refusing a correction that is available is allowed.",
+    "Which revision is chosen, or when. There is no deadline or time bound.",
+    "Rates, probabilities, randomized policies, or the distribution and dynamics of situations, including whether a correction fixes a fault.",
+    "Members' reports or acts, strategic reporting, or an institution's identity or own process.",
+    "Costs or quality of a revision beyond Revising's unit of stock.",
+    "Double-loop learning proper (changing governing norms), since acceptability is fixed.",
+    "Whether a correctable configuration does better by any outcome measure.",
+    "Success on drawn situations, as distinct from uniform correctability.",
+    "Confirmation: a revision followed by a correction cannot confirm the law, and an institution that never revises cannot contradict it."
+   ],
+   "plan_corrections": [
+    "TR4 reads RF6.1 as a revision that opens a correction, but OpensAlong needs no change of reading. opens_by_support opens by replenishing alone with the reading unchanged (review finding 25). Correction: classify every opening by what changed along it (the reading in force, executability, or both), and never score an opening as a revision of the reading, nor a successful revision as an opening.",
+    "'The deadline' is not a term of RF6.1: (∃ w, Trace P x w x') has no length bound. If a deadline is frozen, verdicts against it are bounded-reachability computations on the frozen process. On Revising (inference from P) the shortest openings take 1 step from (n+2, false, v), 2 from (1, false, v), 3 from (0, false, v) and 1 from (0, true, v). The Lean states only the witnesses opens, opens_after_replenishing and opens_by_support, and the failure of [rebuild true] from (1, false, v). Otherwise the deadline belongs to another law: ReadInTime.deadline (a lock under a late reading), or 03 §9's inquiry crossing a floor before its response (InquiryChoice), which would be a composition with no Lean.",
+    "'A correction available but refused' is not a forbidden case. Correctability is existence, not a controller's act; the module and the record say uniform-policy existence is not what a formation chooses. It stays as a control on the measure, so that correctability is never read from corrections taken, and it carries no verdict.",
+    "Add the control for widened acceptability (widened_correctable, widened_unlinked). Acceptability must be an answer key frozen before any controller runs, 'independently of every act the institution takes' rather than of 'revision success', a notion the law does not have.",
+    "Add the arms for the two monotonicities: a coarser revision (a summary measure) gaining no executable act, which is the law's one universal negative across all processes (coarser_opens_nothing), and a finer revision keeping executability (finer_keeps).",
+    "Correctability quantifies over every situation. A simulation that scores corrections only on drawn situations measures something else. Present every situation of each fiber at each configuration, by resets or counterfactual calls.",
+    "An institution's rule of reading as its own process with members' acts is not built; the module header and plan §4.6 both say so. The institution simulation is a labelled reading of Revising's process, in which members' reports enter only as the situation read through the link.",
+    "In a simulation that enforces observation classes, stock-and-link feasibility and acceptability, every forbidden case is excluded by construction. Such runs are identity checks, as TR3's own entry says of removing access by construction, and verdicts on behaviour are beyond the law.",
+    "Each plan control at its exact configuration. 'A finer reading with no stock' is (0, true, v): uncorrectable, reached from one unit by rebuilding (rebuilt_starved), and opened by one replenish (opens_by_support), so it must be held at stock 0. 'Stock with no link' is (n, false, v): opened by one rebuild only from n ≥ 2 (opens), and from n = 1 only by rebuilding then replenishing.",
+    "Plan §8 lists RF6.1 as giving double-loop learning a 'testable meaning designed'. The record's does_not_show and 08 (line 485) say its relation to double-loop learning depends on whether a governing norm changes, which it does not here. TR4 must not be presented as a test of double-loop learning."
+   ]
+  },
+  {
+   "record_id": "a-reading-kept-by-its-update",
+   "module": "Becoming.ReadingLoop, in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean, sections Kept, Joint, PairwiseShared and History. It is a pure-core leaf importing Blanket, Keeping, Narrowing and ShownOrder, with every axiom report empty. Its core receipt is 20261029T191748.070149Z (the whole module: 51 theorems in 84 declarations; study §456). The sections Courses, Loop and Untested belong to the records what-a-course-chosen-through-its-model-does-not-test and acts-alike-from-a-model-or-from-an-order.",
+   "home": "theories/becoming/chapters/03-KNOWING.md §12, anchor r-a-reading-kept-by-its-update at line 491, followed by its AI reading at line 494. Plan §4.4 is the design and §4.6 what was built. The review is REVIEW-ROUND2.md, findings 1, 2 and 16–18.",
+   "statements": [
+    {
+     "name": "Grammar and kept_iff_closed",
+     "lean": "abbrev «际» (α : Type u) : Type u := α → α → Prop\ninductive «及» (R : «际» α) : «际» α\n  | one {x y : α} : R x y → «及» R x y\n  | more {x y z : α} : R x y → «及» R y z → «及» R x z\ndef «闭» (R : «际» α) (P : α → Prop) : Prop := ∀ x y, P x → R x y → P y\ntheorem «闭之及» {R : «际» α} {P : α → Prop} (closed : «闭» R P) {x y : α} (holds : P x)\n    (reach : «及» R x y) : P y\n\ntheorem kept_iff_closed {R : «际» X} {P : X → Prop} :\n    (∀ x y, P x → «及» R x y → P y) ↔ «闭» R P",
+     "plain": "«及» is reach by one step or more; it is not reflexive. For any relation on any carrier, a region holds at everything reached by one or more steps from where it holds exactly where every single step from it stays in it. The result concerns finite reach only; an edge to a dead end breaks closure on no infinite run (plan §4.4)."
+    },
+    {
+     "name": "joint, Sound, KeptBy, closed_of_keptBy (section Joint: variable {W M A O : Type})",
+     "lean": "def joint (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) (act : M → A) :\n    «际» (W × M) :=\n  fun x y => world x.1 (act x.2) y.1 ∧ y.2 = update x.2 (act x.2) (sense y.1)\ndef Sound (B : M → W → Prop) (x : W × M) : Prop := B x.2 x.1\ndef KeptBy (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M)\n    (B : M → W → Prop) : Prop :=\n  ∀ m w a w', B m w → world w a w' → B (update m a (sense w')) w'\ntheorem closed_of_keptBy {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}\n    {B : M → W → Prop} (kept : KeptBy world sense update B) (act : M → A) :\n    «闭» (joint world sense update act) (Sound B)",
+     "plain": "One step works as follows. The act is a function of the state alone. The world moves to any successor that the world relation admits under that act. The state is updated from the act and the value sensed at the new world; sensing is a function of the world. A configuration is sound where the state's reading admits the actual world. A reading is kept by the update where every admitted world's successors, under every act, are admitted by the updated reading. A reading kept in that sense is a closed region of every policy's loop."
+    },
+    {
+     "name": "Good, GoodEnabled, Keeps, Continues",
+     "lean": "def Good (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) : Prop :=\n  ∀ w, B m w → ∀ w', world w a w' → K w'\ndef GoodEnabled (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) :\n    Prop :=\n  ∀ w, B m w → (∃ w', world w a w') ∧ ∀ w', world w a w' → K w'\ndef Keeps (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) (B : M → W → Prop)\n    (K : W → Prop) (act : M → A) : Prop :=\n  ∀ x y, Sound B x → «及» (joint world sense update act) x y → K y.1\ndef Continues (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M)\n    (B : M → W → Prop) (act : M → A) : Prop :=\n  ∀ x, Sound B x → ∃ y, joint world sense update act x y",
+     "plain": "Successor safety (Good) says the act leads, from every world the reading admits, only to worlds where the task K holds; an act no world can take meets it. GoodEnabled adds that the act can be taken at each admitted world. Keeps says K holds at every configuration reached by one or more steps from every sound configuration, not only from an actual start; the sound configuration itself is not asked to satisfy K. Continues says every sound configuration has a successor."
+    },
+    {
+     "name": "keeps_of_good, good_of_keeps, keeps_iff_good",
+     "lean": "theorem keeps_of_good {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}\n    {B : M → W → Prop} {K : W → Prop} {act : M → A}\n    (closed : «闭» (joint world sense update act) (Sound B))\n    (good : ∀ m, Good world B K m (act m)) : Keeps world sense update B K act\ntheorem good_of_keeps {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}\n    {B : M → W → Prop} {K : W → Prop} {act : M → A} (keeps : Keeps world sense update B K act) :\n    ∀ m, Good world B K m (act m)\ntheorem keeps_iff_good {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}\n    {B : M → W → Prop} {K : W → Prop} (kept : KeptBy world sense update B) (act : M → A) :\n    Keeps world sense update B K act ↔ ∀ m, Good world B K m (act m)",
+     "plain": "If the reading is closed under this policy's loop (closure under the policy's own acts is enough here) and every state's act, reached or not, is successor-safe for that state's reading, then K holds at every configuration reached from every sound one. Conversely, with no hypothesis, a policy that keeps K is successor-safe at every state. With the reading kept under every act, the two are equivalent."
+    },
+    {
+     "name": "keeps_continues_iff, keeping_policy_iff",
+     "lean": "theorem keeps_continues_iff {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}\n    {B : M → W → Prop} {K : W → Prop} (kept : KeptBy world sense update B) (act : M → A) :\n    (Keeps world sense update B K act ∧ Continues world sense update B act) ↔\n      ∀ m, GoodEnabled world B K m (act m)\ntheorem keeping_policy_iff (choice : Viability.ChoiceOver M A) {world : W → A → W → Prop}\n    {sense : W → O} {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop}\n    (kept : KeptBy world sense update B) :\n    (∃ act : M → A, Keeps world sense update B K act ∧ Continues world sense update B act) ↔\n      ∀ m, ∃ a, GoodEnabled world B K m a",
+     "plain": "With the reading kept under every act, a policy keeps K and goes on from every sound configuration exactly where every state's act is enabled and safe at every world that state's reading admits. Given choice over the states (not over readings or reachable states), such a policy exists exactly where every state has such an act. The reading is supplied, not derived from the formation."
+    },
+    {
+     "name": "everything_kept, everything_good_iff, nothing_kept, nothing_good, nothing_sound",
+     "lean": "theorem everything_kept (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) :\n    KeptBy world sense update (fun (_ : M) (_ : W) => True)\ntheorem everything_good_iff {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :\n    Good world (fun (_ : M) (_ : W) => True) K m a ↔ ∀ w w', world w a w' → K w'\ntheorem nothing_kept (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) :\n    KeptBy world sense update (fun (_ : M) (_ : W) => False)\ntheorem nothing_good {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :\n    Good world (fun (_ : M) (_ : W) => False) K m a\ntheorem nothing_sound (x : W × M) : ¬ Sound (fun (_ : M) (_ : W) => False) x",
+     "plain": "The reading that admits every world is kept by every update, and an act is good for it only where it is good at every world. The reading that admits no world is also kept by every update, every act is good for it, and no configuration is sound for it. Being kept is therefore not being informative."
+    },
+    {
+     "name": "PairwiseShared.two_share, PairwiseShared.none_for_all",
+     "lean": "inductive Point where\n  | p\n  | q\n  | r\nabbrev good (w x : Point) : Prop := x ≠ w\ntheorem two_share : ∀ w₁ w₂ : Point, ∃ x, good w₁ x ∧ good w₂ x\ntheorem none_for_all : ¬ ∃ x, ∀ w, good w x",
+     "plain": "Witness: there are three worlds, and three acts each named by a world; an act is good at every world except the one it names. Every two worlds share a good act, but no act is good at all three. Acts good pairwise therefore need not give one act good for all."
+    },
+    {
+     "name": "record, Possible, possible_kept, possible_least (section History: variable {W A O : Type} (world : W → A → W → Prop) (sense : W → O) (start : W → Prop))",
+     "lean": "def record (h : List (A × O)) (a : A) (o : O) : List (A × O) := (a, o) :: h\ndef Possible : List (A × O) → W → Prop\n  | [] => start\n  | (a, o) :: h => fun w' => ∃ w, Possible h w ∧ world w a w' ∧ sense w' = o\ntheorem possible_kept : KeptBy world sense record (Possible world sense start)\ntheorem possible_least {B : List (A × O) → W → Prop} (kept : KeptBy world sense record B)\n    (starts : ∀ w, start w → B [] w) : ∀ h w, Possible world sense start h w → B h w",
+     "plain": "With the state equal to the full history of acts and values sensed, newest first (perfect recall), the worlds possible after a history are the starts at the empty history; after each later entry, they are the successors of a previously possible world under the act at which the recorded value is sensed. This reading is kept by recording, for any world relation, any sensing and any starts. Every reading of histories that is kept by recording, under every act and value, and holds at every start admits every world possible after each history."
+    },
+    {
+     "name": "Generated, generated_closed, possible_of_reached, reached_of_possible",
+     "lean": "def Generated (act : List (A × O) → A) : List (A × O) → Prop\n  | [] => True\n  | (a, _) :: h => Generated act h ∧ a = act h\ntheorem generated_closed (act : List (A × O) → A) :\n    «闭» (joint world sense record act)\n      (fun x => Generated act x.2 ∧ Possible world sense start x.2 x.1)\ntheorem possible_of_reached (act : List (A × O) → A) {w₀ : W} (holds : start w₀)\n    {y : W × List (A × O)} (reach : «及» (joint world sense record act) (w₀, []) y) :\n    Generated act y.2 ∧ Possible world sense start y.2 y.1\ntheorem reached_of_possible (act : List (A × O) → A) :\n    ∀ h w, Generated act h → Possible world sense start h w →\n      (h = [] ∧ start w) ∨ ∃ w₀, start w₀ ∧ «及» (joint world sense record act) (w₀, []) (w, h)",
+     "plain": "A history is generated by a policy acting from its history where every act in it is the policy's act at the history before it. Everything such a policy reaches from a start, beginning with the empty history, is a generated history together with a world possible after it. Conversely, every world possible after a generated history is either a start with the empty history or reached from some start along the policy's loop. This converse is the constructive course a test can run."
+    },
+    {
+     "name": "history_keeps_iff, history_continues_iff",
+     "lean": "theorem history_keeps_iff (act : List (A × O) → A) (K : W → Prop) :\n    (∀ w₀ y, start w₀ → «及» (joint world sense record act) (w₀, []) y → K y.1) ↔\n      ∀ h, Generated act h → Good world (Possible world sense start) K h (act h)\ntheorem history_continues_iff (act : List (A × O) → A) :\n    (∀ w₀ y, start w₀ → (y = (w₀, []) ∨ «及» (joint world sense record act) (w₀, []) y) →\n        ∃ z, joint world sense record act y z) ↔\n      ∀ h w, Generated act h → Possible world sense start h w → ∃ w', world w (act h) w'",
+     "plain": "A policy acting from its history keeps K at every configuration reached by one or more steps from every start exactly where, at every history it generates, its act leads from every world possible after that history only to worlds where K holds. It has a successor at every start and at everything reached exactly where, at every history it generates, its act can be taken at every world possible after it. Both verify a given policy; neither says when such a policy exists."
+    }
+   ],
+   "assumptions": [
+    "Steps are discrete, on one carrier W × M. The world's change is a relation, so nondeterminism is allowed; inference: noise in what is sensed can be carried by that relation (by enlarging the world). Sensing is an exact function of the world after the step. The update is a function of state, act and value sensed.",
+    "The act is a deterministic function of the state alone. The value sensed reaches the act only through the update; the timing is act, then world move, then sensing, then update.",
+    "The reading B : M → W → Prop is possibilistic (a set of worlds per state) and supplied. The task K : W → Prop is on worlds only.",
+    "Keeping counts configurations reached by one step or more, and the start is not asked to satisfy K. Going on is asked apart from keeping. Keeps quantifies over every sound configuration, and keeps_of_good asks good acts at every state, reached or not.",
+    "KeptBy asks keeping under every act. That is stronger than closure under the policy's own acts, which keeps_of_good alone needs.",
+    "Choice over the states (ChoiceOver M A) is needed only for keeping_policy_iff.",
+    "The history form takes the state to be the full history of (act, value sensed), with the update recording it, and the policy to be a function of the history. The starts are a predicate on worlds. No decision, list or finiteness is needed. It verifies a given policy; the existence of one, and nonvacuity of the starts, are not proved.",
+    "There are no probabilities, no calibration, no optimality and no learning of the world relation. The core is pure, with empty axiom reports. Its standard boundary is formal-not-empirical."
+   ],
+   "forbidden": [
+    {
+     "case": "From keeps_of_good (closure): from a configuration where the state's reading admits the world, a configuration reached by one or more joint steps where K fails, while the reading is closed under the policy's loop and every state's act leads, from every admitted world, only to K-worlds.",
+     "quantifier": "Never: for every sound configuration and every finite reach.",
+     "observable": "At the level of one course, K at the next world follows from soundness and Good at each visited configuration by the definition of Good. The observable content is therefore closure: a formation whose reading admits the true world at the start and after every update, and whose acts are safe at every admitted world, never meets a task failure. One failure shows that a measured premise is wrong: the extracted reading is not the formation's, or the world relation used is not the system's."
+    },
+    {
+     "case": "From good_of_keeps, which needs no hypothesis: a policy keeps K from every configuration its reading admits, while some state's act leads, from some world that state's reading admits, to a world where K fails.",
+     "quantifier": "Never. One such pair of state and admitted world breaks keeping in one step from (w, m).",
+     "observable": "Hold the formation's state, set the world to the admitted world where its act is unsafe, and step once: K fails. For a formation acting from its history, this is done by a constructed course, as in the last entry."
+    },
+    {
+     "case": "From keeps_continues_iff (with KeptBy): either a policy keeps K and goes on from every sound configuration while some state's act cannot be taken at some admitted world, or a policy whose every act is enabled and safe at every admitted world deadlocks or breaks K.",
+     "quantifier": "Never.",
+     "observable": "Score going on as well as keeping. An act no world can take (an invalid move, or a dead end) is successor-safe (keeps_iff_good) but fails Continues. A simulator must count it as a failure, not as keeping."
+    },
+    {
+     "case": "From keeping_policy_iff (choice over the states, KeptBy): a policy keeps and goes on although some state's reading admits worlds with no single act that is enabled and safe at all of them, even when every two of those worlds share such an act (PairwiseShared).",
+     "quantifier": "Never.",
+     "observable": "Build a state whose reading admits three worlds such that every two share a safe act and no act is safe for all three. Any formation in that state with that reading fails at one of the three worlds."
+    },
+    {
+     "case": "From possible_least: a reading of histories, kept by recording under every act and value and holding at every start, that excludes at some history a world possible after it.",
+     "quantifier": "Never: for every history and every possible world.",
+     "observable": "Inference: a formation whose state is updated from one initial state by its acts and values sensed, and whose reading is narrower than the possible worlds at some history, is either unsound at some start or loses the true world on some course. That course is the one realizing the excluded world, and the test can construct it."
+    },
+    {
+     "case": "From history_keeps_iff and history_continues_iff: (a) a policy acting from its history keeps K and goes on, on every course from every start, while at some history it generates its act is unsafe at, or cannot be taken at, some world possible after it; (b) a policy breaks K or has no successor on some course from a start, while at every generated history its act is safe and enabled at every world possible after it.",
+     "quantifier": "(a) One failing pair of history and world yields a course from a start that breaks K or ends with no successor (reached_of_possible). (b) Never, on any course.",
+     "observable": "Compute Possible from the frozen world relation, sensing and starts together with the formation's logged histories. Classify each pair of history and act as good-enabled or not. For each failing pair, construct its course and run it. For formations with no failing pair, run every course, or a frozen exhaustive set."
+    }
+   ],
+   "predicts_nothing_about": [
+    "Whether an actual formation's reading is kept, or stays sound, under any intervention. KeptBy is a premise to measure, not a prediction.",
+    "The task where the reading is unsound or not kept, or under observation values outside the world relation and sensing, which lie outside the joint law.",
+    "Whether a policy that keeps the task while acting from the formation's own history exists, or how to find one (not proved).",
+    "Optimal or simplest regulation, or that a regulator must model what it regulates (Conant and Ashby is not reproduced).",
+    "Probabilistic belief, calibration, rates, or noise beyond the nondeterminism of the world relation.",
+    "Tasks on states or acts, and the start's own satisfaction of the task.",
+    "Which reading an actual formation carries, or how it is represented.",
+    "Confirmation: a formation that keeps its task under interventions confirms nothing, and with the reading of everything or of nothing that keeping is vacuous."
+   ],
+   "plan_corrections": [
+    "TR5 asks 'whether its reading stays sound and its task is kept'. RF3 predicts neither. Soundness along a course is the premise KeptBy (or closure under the policy) as measured. The law is an implication (a sound start, a kept reading, and each act enabled and safe at every admitted world together give the task kept and going on), plus its converse for keeping (good_of_keeps) and the exact history form. Correction: soundness, keeping and good-enabledness are measured apart from the task outcome, and the verdict is on the implication and on history_keeps_iff and history_continues_iff.",
+    "'Its task is kept' must include going on. Successor safety is met by an act no world can take (keeps_iff_good versus keeps_continues_iff), so invalid acts, dead ends and time-outs count as failing Continues.",
+    "'The reading of everything does not count' is right (everything_kept). The reading of nothing must be excluded too (nothing_kept, nothing_good, nothing_sound), and so must any reading emptied by a value that no admitted world gives. Inference from the definition of Possible.",
+    "Informativeness has an exact floor: any reading kept by recording and holding at every start contains Possible (possible_least). Measure a formation's reading against Possible, which is the floor, and against everything, which is the ceiling. A reading narrower than Possible must lose soundness on a course the test can construct.",
+    "'Intervene on observations' must be split. Within the law, an intervention is a choice of start and of the world's course among those its relation admits, and every world possible after a generated history is reached on some course (reached_of_possible). Values outside what the frozen relation and sensing admit are outside the joint law, and RF3 then predicts nothing. Inference: a possibilistic tracker that computes with the nominal sense loses soundness exactly at a step where the value given differs from the nominal sense of the true world. A channel change can be brought inside the law by enlarging the world to W × channel, since possible_kept holds for any sense.",
+    "The history form verifies a given policy. The existence of a keeping policy from the formation's own history, and nonvacuity of the starts, are not proved. TR5 must not claim to test them.",
+    "KeptBy is under every act, while keeps_of_good needs closure only under the policy's acts. Forcing other acts tests KeptBy, not closure under the policy, so act interventions must be kept apart from observation interventions.",
+    "The history form needs the formation's act to be a deterministic function of its full history. Stochastic formations, such as language models, need a fixed seed or temperature and a replay-determinism check, or a periphery statement for randomized policies; none is proved.",
+    "Plan §4.4 has two narrower wordings. It says 'each reachable reading has one act good' from 'a sound start' and 'choice over the readings'. The Lean asks a good-enabled act at every state, reached or not, from every sound configuration, with choice over the states (ChoiceOver M A). The restriction to what is reached is the history form's (generated histories, from starts). The localized joint-form statement is true by the same induction (inference) but is not stated."
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "TR4-0",
+   "law": "RF6.1, every statement: identity and scope classes. This stage fixes the exact values later stages freeze.",
+   "setting": "Exact computation by a standard-library script in experiments/formations-that-read/. No model and no participants.",
+   "unit": "A configuration for correctability, an ordered pair of configurations with a trace for openings, and, for the monotonicities, a pair with one of the four maps forget : Bool → Bool.",
+   "conditions": "The state space is Revising's, with stock 0..N (N ≥ 4), both links and both responses. Policies are all 16 total functions Bool → Act over four acts: replenish, rebuild false, rebuild true and correct. Both situations are evaluated at each configuration, and all traces up to length L ≥ 4. Acceptability is Linked.acceptable, with widened acceptability as the scope arm. The arms are the plan's three controls plus two added ones. The plan's controls are (0, true, v), a finer reading with no stock; (1, false, v) and (n ≥ 2, false, v), stock with no link; and (n+1, true, v) under a controller that never corrects, a correction available but refused. The added arms are widened acceptability and a coarser revision: rebuild false from (n+1, true, v), with forget := fun _ => false. The stage also runs Revising.controlled_revision's controller and a replenish-first controller from (0, false, false).",
+   "measures": "The measures are as follows. Correctable, computed both by brute force over the 16 policies and by the fiber condition. Every opening, with its source: the reading changed (the link went from off to on along the trace), executability changed (correct became enabled with the link on), or both. The shortest opening from each uncorrectable configuration. For each map and pair, the premises and conclusions of finer_keeps and coarser_opens_nothing. For each controller, its configuration course, its first step at a correctable configuration and its first correction.",
+   "forbidden_operational": "Any of the following would be forbidden: a correctable configuration with the link off; an uncorrectable configuration with the link on and stock at least 1; a correctable configuration with the link on and stock 0; a pair meeting coarser_opens_nothing's premises with an opening; a pair meeting finer_keeps's premises with correctability lost; or an uncorrectable configuration under widened acceptability. The Lean excludes all of them, so any occurrence is a script error (identity).",
+   "rivals_and_controls": "There are no rivals at this stage. It exhibits exactly the rival scorings later stages must exclude. Counting corrections taken reads refusal as no opening. Unfrozen acceptability counts no opening, because everything is correctable already. Counting 'revision success' misreads openings by support, where the reading is unchanged, as revisions.",
+   "power_check": "None; the stage is exact.",
+   "cost_and_yes": "Seconds of CPU. This is design work and needs no yes from Ren.",
+   "checkable_here_first": "All of it. The expected values are inferences from the three Linked theorems and from P. A configuration is correctable exactly where the link is on and the stock is at least 1. The shortest openings take 1 step from (n+2, false, v) and from (0, true, v), 2 from (1, false, v) and 3 from (0, false, v). From (1, false, v), rebuilding then replenishing and replenishing then rebuilding both reach (1, true, v) in two steps, so being starved after rebuilding costs no step on this process.",
+   "risks": "The stage checks the script, not the law; counting its agreement as confirmation would count an identity as evidence. The bounds N and L must be stated, because the Lean holds for every n."
+  },
+  {
+   "id": "TR4-1",
+   "law": "RF6.1's general section (Correctable, correctable_iff, OpensAlong, finer_keeps, coarser_opens_nothing, widened_correctable) on an institution of k lines: identity, scope and beyond-the-law classes, following CG1.",
+   "setting": "Simulated agents: scripted controllers in an institution simulation. This is a labelled reading of Revising's process: the link is the rule of reading reports by line rather than by count, the stock is what reading draws on, and the correction is the repair a report calls for.",
+   "unit": "The run, meaning a controller's course of configurations. Within it, each configuration is evaluated with every situation presented.",
+   "conditions": "The situations are no fault, or a fault on line i, for i = 1..k with k = 2 or 3. The readings are encoded in one type: by line (the identity on situations), by count (whether any report came, which lumps every line), or none. The acts are correct line i, replenish, and rebuild the link on or off. Acceptability is an answer key frozen before any controller is written: correct line i where line i faulted, and replenish where no line did. Rebuild and correct each draw one unit, correct needs the link on, and replenish is always enabled. The controllers are: Revising's controller generalized; a replenish-first controller; a never-rebuild (count-only) controller; a refuser, correctable but never correcting; a summary-measure reviser that switches from by-line to count and gains no executable act; readers fixed by what they read, which act on the last report only, and hybrids; and noisy variants. The horizon is frozen, and there is no deadline verdict.",
+   "measures": "Per configuration: correctability by the fiber condition, exactly. Per step: the act at each situation, with every situation presented by resets so that uniformity over S is measured. The openings along each run and their source. The corrections executed. The rate of acceptable acts on drawn situations is reported apart and never as correctability.",
+   "forbidden_operational": "Within the simulation the forbidden cases are: an opening along the summary-measure revision with no executable act gained; correctability lost along a by-line refinement that keeps executability; a correction executed with the link off or at stock 0; and, under the by-count reading, a controller acceptable at every situation of the lumped fiber. All are excluded by construction (identity). One occurring means the simulator leaks the line through another channel or fails to enforce the stock.",
+   "rivals_and_controls": "Each rival scoring has a control that tells it apart. Success on drawn situations, where a replenish-always controller scores high if faults are rare, is countered by exhaustive presentation and exact correctability. Widened acceptability is countered by the frozen key, with a widened arm that reports no opening. Openings by support read as revisions are countered by classifying openings by source. Refusal read as uncorrectable is countered by computing correctability apart from the acts taken. A reading named 'by line' whose fibers in fact lump lines (for example, counts by line when two lines can fault at once) is countered by computing fibers from the reading function rather than from its name.",
+   "power_check": "None for deterministic controllers. For noisy ones, the number of runs needed to estimate opening times is set by simulation before any freeze.",
+   "cost_and_yes": "CPU minutes. The controllers are scripted, so this is design work and needs no yes from Ren.",
+   "checkable_here_first": "All of it, exactly. The k-line values are computations on the general laws, not Lean theorems; the Linked witnesses cover one situation bit only.",
+   "risks": "The forbidden cases are identity checks, and the controllers' behaviour is beyond the law. The institution is a reading: members' acts are not represented, and reports enter only as the situation."
+  },
+  {
+   "id": "TR4-2",
+   "law": "Bridges beyond RF6.1, with no verdict on the law: whether trained formations take openings, and from which source.",
+   "setting": "Stage A: simulated learners (tabular Q, policy gradient, recurrent) in TR4-1's institution under a frozen reward. Stage B: language models through an API acting as the institution's desk.",
+   "unit": "For Stage A, the seed, one training run each. For Stage B, the call (LA2's lesson).",
+   "conditions": "The reward is frozen: for example, +1 per acceptable act at the period's situation and a cost per unit drawn. Situations are drawn with frozen rates. The starts are (1, false), (2, false), (0, true) and (0, false). The arms are TR4-1's, plus assigned rounds (one forced rebuild and one forced replenish) before free choice, so that exploration is measured apart from selection. The DP-optimal controller for the frozen reward is computed before the freeze as the reference. Because Revising has no capability trap (see risks), a variant process in which replenishing competes with serving a need must be specified for any trap arm.",
+   "measures": "Whether and when the formation rebuilds; its first step at a correctable configuration; its first correction; the source of the opening it takes; its return relative to the DP optimum; and the acts it tries, measured apart from what it selects.",
+   "forbidden_operational": "None from RF6.1. The bridge's forbidden case is frozen from the DP: a learner near the optimum that fails to take an opening the DP-optimal policy takes, or takes one the DP refuses. Its occurrence refutes the bridge (that training reaches the optimum), not RF6.1.",
+   "rivals_and_controls": "A learner that rebuilds by a prior it brings from training, as in LA1b and LA3, is told apart by the assigned rounds and by a control whose reward is indifferent between rebuilding first and replenishing first. A learner indifferent because the feedback does not resolve the difference is told apart by the power check. A learner reading the line through another channel, such as the timing of situations, is told apart by TR4-3.",
+   "power_check": "Needed. On simulated feedback, check whether the reward resolves the return difference between the DP-optimal policy and its rivals at the frozen episode count (LA1's lesson). The simulated agents must include followers, readers fixed by what they read and hybrids, per the lessons in experiments/README.",
+   "cost_and_yes": "Stage A costs CPU hours; Stage B costs API usage. Both are runs on Ren's yes, with predictions, verdict rules and code frozen in one commit before any run.",
+   "checkable_here_first": "The DP optimum, the reward's resolution (the power check) and the scripted rivals' outcomes, all by script.",
+   "risks": "Inference from Revising's step relation: on Revising itself, rebuilding first from one unit and replenishing first reach the same correctable configuration in two steps, so a capability trap needs a process Revising lacks. Examples are replenishing that competes with correcting, needs that arrive over time, or replenishing that can fail. Such a process is outside the Linked witnesses, though the general laws still classify it. Every verdict here is beyond the law and must be labelled so."
+  },
+  {
+   "id": "TR4-3",
+   "law": "RF6.1's correspondence (correctable_iff, left to right, no hypothesis): does a formation's correction go through the reading the test says is in force?",
+   "setting": "Language models through an API acting as an institution's desk (Stage B). Human participants come only after this stage.",
+   "unit": "The call, and pairs of calls that present the two situations of a lumped fiber at one configuration.",
+   "conditions": "At a configuration with the by-count reading, the test presents three conditions. (a) Byte-identical observations for two lines' faults: a replication control, where any difference comes from sampling alone. (b) Observations identical in the frozen reading but differing in nuisance features randomized apart from the situation, as in TR2's design. (c) A nuisance feature correlated with the line: a planted leak, serving as the positive control. The acceptability key is frozen beforehand.",
+   "measures": "The act distribution per situation; success at each situation of the fiber; the sum of those successes; and the difference between situations relative to the variability across replications.",
+   "forbidden_operational": "For a formation that reads only the frozen reading: acts acceptable at both situations of a fiber whose acceptable sets are disjoint (deterministic case), or success probabilities summing above one beyond noise (randomized case; inference, not proved in the Lean). If observed, it shows the formation reads more than the frozen reading, a leak. That refutes the correspondence, not the law.",
+   "rivals_and_controls": "API nondeterminism is told apart by condition (a). A nuisance channel is told apart by condition (b) with randomization. The planted leak in (c) shows the measure can detect a leak.",
+   "power_check": "Needed. Use exact sign-flip tests with the call as unit (LA2), with simulated all-or-nothing answerers, to find how many calls resolve a leak of a given size.",
+   "cost_and_yes": "API usage, on Ren's yes.",
+   "checkable_here_first": "The power check by simulation, the acceptability key and the fibers.",
+   "risks": "This is TR2's forbidden case (outputs that differ where nothing accessible differs) in RF6.1's setting, so it may be merged with TR2. It tests the reading, not RF6.1."
+  },
+  {
+   "id": "TR5-0",
+   "law": "RF3 (keeps_of_good, good_of_keeps, keeps_continues_iff, possible_kept, possible_least, possible_of_reached, reached_of_possible, history_keeps_iff, history_continues_iff). Identity class, and the power check for TR5-1 and TR5-2.",
+   "setting": "Exact computation by script, with scripted formations.",
+   "unit": "A pair of a generated history h and the act at h, together with the course constructed for that pair.",
+   "conditions": "A finite world is frozen together with its relation, sensing and starts. An example: positions start, mid, left and right; a hazard at left or right, giving two starts; and a clock in the world. The task K is never being on the hazard and being at a safe end by time T, so that near T no act is safe at every world while the hazard is unknown. This keeps the reading of everything from keeping the task and going on. Sensing reveals the hazard's side only at mid. A slip at mid makes the world relation nondeterministic, so one history has several courses. The formations are: the Possible tracker acting safely; an overconfident tracker that follows the most likely world; a reader fixed by what it reads (acting on the last value); a hybrid; the everything reading; a formation emitting an act no world can take; a stochastic formation with known act probabilities; and a tracker computing Possible with a wrong sense.",
+   "measures": "Possible(h) for every history up to T. For each formation and each generated h: whether its act is good-enabled on Possible(h). The verdict predicted by history_keeps_iff and history_continues_iff. For each failing pair, the course from a start that realizes the failing world (found by search; it exists by reached_of_possible) and the outcome on it. Each formation's reading against Possible (narrower, equal or wider), its soundness along every course, and its informativeness.",
+   "forbidden_operational": "Three cases: (a) a failing pair whose constructed course neither breaks K nor leaves the formation without a successor; (b) a formation all of whose pairs are good-enabled breaking K, or getting stuck, on some course from a start; (c) a reading kept by recording and holding at every start that is narrower than Possible at some history. The theorems exclude all three, so any occurrence is a script error.",
+   "rivals_and_controls": "The stage shows each rival exactly. The everything reading fails to go on near T, because the task is designed that way. The deadlocking formation passes successor safety and fails going on. The overconfident tracker is unsound on the constructed courses. The misspecified channel is unsound exactly where the value given differs from the nominal sense at the true world (inference from the definition of Possible).",
+   "power_check": "This stage is the power check for later stages. It simulates stochastic formations, replay nondeterminism and extraction error for elicited readings, to fix the replays per constructed course and the calls per history for TR5-1 and TR5-2.",
+   "cost_and_yes": "Seconds of CPU. This is design work and needs no yes from Ren.",
+   "checkable_here_first": "All of it.",
+   "risks": "It checks identity only. The toy world must carry every feature the later stages need: several courses per history, a time limit, and a place where sensing resolves the hazard."
+  },
+  {
+   "id": "TR5-1",
+   "law": "RF3's history form as an audit of trained agents. The law's verdicts are identity checks; the descriptive measure and one bridge are beyond it.",
+   "setting": "Stage A: simulated trained agents. These are tabular agents on bounded histories, recurrent policy-gradient agents, and small model-based agents with an explicit possibilistic or Bayesian filter, with a correct and with a misspecified observation model.",
+   "unit": "The agent (seed) crossed with each generated history, and the constructed course.",
+   "conditions": "TR5-0's world, with training starts drawn either (a) from all starts or (b) from a distribution omitting one start (a rare world). Evaluation uses greedy acts. Interventions within the world relation (the choice of start and of slips) are the law's. Values that no world gives are measured apart, as beyond the law.",
+   "measures": "The share of generated pairs that are not good-enabled on Possible; the outcome on each pair's constructed course; for filter agents, belief support against Possible (narrower, equal or wider) and soundness along courses; and, under out-of-model values, the step at which soundness is lost.",
+   "forbidden_operational": "As TR5-0 (a) and (b). For deterministic agents whose acts are functions of the observation sequence these cases are excluded, so one can appear only as an implementation error: a leak of the world into observations, or a wrong world relation.",
+   "rivals_and_controls": "Sampling luck is countered by the constructed courses. Conservative agents are countered by the time-limited task, with going on scored. Leaks are countered by replaying each history at every world possible after it, where the acts must agree. For Bayesian agents, support thresholds are fixed before the run and results are reported at each threshold. A shielded agent (Carr and others 2023) serves as a positive control.",
+   "power_check": "For the bridge (agents trained without some start are history-unsafe where that start is possible), enough seeds to resolve the share. For the law's verdicts, none: they are exact per agent.",
+   "cost_and_yes": "CPU hours, run on Ren's yes.",
+   "checkable_here_first": "TR5-0, the training code, and the audit run on scripted agents.",
+   "risks": "The law's verdicts cannot fail for agents built as history policies, so they must be reported as identity. The training bridge belongs to RF2 and the training laws (a law is fixed only where it is read), not to RF3."
+  },
+  {
+   "id": "TR5-2",
+   "law": "RF3's correspondence: does a language-model agent act from its visible history, and how does its stated reading stand to Possible (history_keeps_iff, history_continues_iff, possible_least, everything_kept, nothing_kept)?",
+   "setting": "Language models through an API in a text version of TR5-0's world.",
+   "unit": "The call (one act at one history), replicated; and the episode for each constructed course.",
+   "conditions": "At each step the agent receives a fixed prompt with the full history of acts and observations. There are two elicitation arms: act only, and list the possible states, then act. An external controller that acts by the listed states (so its acts factor through the elicited reading by construction) is a control. Interventions within the world relation are the choice of start and of slips. Contradictory values and withheld values are applied apart, beyond the law.",
+   "measures": "Agreement on replay (the same history, repeated calls). Agreement across the worlds possible after one history (no leak). The share of pairs not good-enabled on Possible. The outcome on each constructed course. The listed reading's soundness and its relation to Possible. Whether listing changes the act.",
+   "forbidden_operational": "Where the replay and no-leak checks pass, two cases are forbidden: a constructed course on which the agent's act at the history is safe for the realized world although its logged act there was not; or a breaking course although every pair it generated was good-enabled. Either case shows that the frozen reading of the agent (that it acts from its visible history) is wrong at that call.",
+   "rivals_and_controls": "Sampling is countered by replay. Leakage through the prompt is countered by the same history at different worlds. An elicited list that is not the operative reading is countered by the act-only arm and the external controller. Conservative or deadlocked agents are countered by scoring going on. The readings of everything and of nothing are countered by measuring informativeness and soundness against Possible.",
+   "power_check": "Needed: the calls per history needed to resolve replay disagreement and act differences, with simulated all-or-nothing answerers, followers and hybrids, as in experiments/README.",
+   "cost_and_yes": "API usage, one call per step per replicate, on Ren's yes.",
+   "checkable_here_first": "TR5-0's exact values for every history of the text world, and the power check.",
+   "risks": "Context truncation does not void the law: a function of a suffix is still a function of the history, but the listed reading may then mislead. Temperature 0 may still be stochastic. Elicitation may change the act. A toy world may be too easy to show anything. The no-leak check is TR2's forbidden case, so it should be coordinated with TR2."
+  }
+ ],
+ "no_test": [
+  {
+   "law": "RF6.1: its own forbidden cases, in an institution simulation built to its premises (TR4 as written)",
+   "reason": "Where the simulator enforces observation classes, stock-and-link feasibility and acceptability, every forbidden case of the general section and of Linked is excluded by construction. A run can only check the implementation, as TR3's entry already says of removing access by construction. TR4's runs are therefore designed as a correspondence test (TR4-3) and bridge tests (TR4-2), with the exact tables (TR4-0, TR4-1) as their frozen values."
+  },
+  {
+   "law": "RF6.1 on existing public data (incident-reporting or audit systems whose reporting form changed)",
+   "reason": "The data do not record uniform acceptability over every situation, executability per act, or the fibers of the reading in force. Neither the premises nor the forbidden case can be read apart from outcomes."
+  },
+  {
+   "law": "RF6.1 with human participants, now",
+   "reason": "A lab institution game, of the kind in Janssen and others 2010 or Gürerk and others 2006, could test only the correspondence (informal channels beside the recorded reading) and the bridges. Both are cheaper to design and to power first on simulated and language-model desks. Ethics approval and recruitment need Ren's yes. Deferred, not ruled out."
+  },
+  {
+   "law": "RF3: existence of a policy that keeps the task while acting from its history (the condition tying histories to the task's futures)",
+   "reason": "It is not proved. keeping_policy_iff is for a supplied reading kept by the update, with choice over the states, and it quantifies over all states rather than generated histories. A test here would test an unproved claim."
+  },
+  {
+   "law": "RF3: kept_iff_closed, closed_of_keptBy, everything_kept, nothing_kept, nothing_sound and PairwiseShared",
+   "reason": "These are definitional or witnesses. They enter TR5 as its controls (the readings of everything and of none; pairwise shared acts with no act for all), not as tests."
+  },
+  {
+   "law": "RF3 under observation values outside the world relation and sensing",
+   "reason": "These are outside the joint law, so RF3 predicts nothing of soundness or the task there. They are measured apart in TR5-1 and TR5-2 and carry no verdict on RF3."
+  },
+  {
+   "law": "RF3 on existing public data (RL benchmarks with perturbed observations)",
+   "reason": "Their logs carry neither the world relation and starts needed to compute Possible nor the agent's reading. The premises cannot be checked apart from outcomes."
+  }
+ ],
+ "prior_repo": [
+  {
+   "path": "experiments/README.md (section 'Freezing a test on a trained system')",
+   "found": "Six lessons from LA1–LA3. Set verdicts only on differences the feedback resolves, shown by a power check. Give each rule the law's own quantifier. Simulate readers fixed by what they read, and hybrids. Measure exploration apart from selection. Guard each support rule against contradiction. Add a control wherever a rival passes every contrast.",
+   "relevance": "Every stage that runs on a trained system (TR4-2, TR4-3, TR5-1, TR5-2) must follow them. The exact stages serve as their power checks."
+  },
+  {
+   "path": "experiments/agentdojo-evidence-boundary/correction-action/RESULTS.md",
+   "found": "Four fresh maintenance contexts on 6 October 2026, crossing repair need with current permission, one case per cell, frozen before dispatch. The case with an unresolved need and active permission repaired the code and regenerated verified outputs. The case with permission withdrawn diagnosed the defect and withheld the repair. The two already-repaired cases were recognized as such. No population estimate.",
+   "relevance": "This is the nearest executable-correction test. It keeps need (acceptability), permission and persistent effect apart, and its withheld case is a kind of TR4's 'available but refused'. Reading permission as executability or as acceptability is itself a reading."
+  },
+  {
+   "path": "experiments/integrated-correction/selective-handoff/README.md",
+   "found": "24 fresh contexts used four inherited corrections selectively under confirming, defeating and out-of-setting evidence, and all 192 answers matched the oracle. Blanket abstention, unconditional copying and reversion each fail parts of the fixed menu.",
+   "relevance": "A precedent for TR5's control: a menu on which the uninformative reading (blanket abstention, the reading of everything) cannot succeed."
+  },
+  {
+   "path": "experiments/commons-gated-renewal/README.md",
+   "found": "CG1's verdict classes: identity (premises the environment is built to meet), scope, law with bridge, and beyond the law.",
+   "relevance": "These are the classes TR4's and TR5's verdicts should carry. Most of both laws' forbidden cases are identity cases in a simulation."
+  },
+  {
+   "path": "experiments/commons-outrun/README.md",
+   "found": "CG2 classed eleven settings exactly by best-response computation and froze the classes before any learner ran; nine of eleven conditions passed. Its law Flow.outrun_reading_alike says every reading after the end is alike under the member's acts.",
+   "relevance": "A method precedent (exact classing first, then learners) and a neighbouring law (a reading that cannot separate)."
+  },
+  {
+   "path": "experiments/self-rewarding-lock/README.md",
+   "found": "LA2: a judge reading a reference set counted by kind. The bridge failed (one note in nine turned the judge), 'late' passed by an exact tie, and the call was the unit.",
+   "relevance": "For TR4-3 and TR5-2: test by the call, simulate all-or-nothing answerers, and include a deaf-reader control."
+  },
+  {
+   "path": "experiments/commons-llm-feedback, commons-llm-feedback-resolved, commons-llm-feedback-unaided (README.md each)",
+   "found": "An LLM revises a harvesting threshold from what its reward reads. LA1's locked side failed where the feedback barely resolved the best threshold. LA1b, with resolving feedback and assigned rounds, passed every verdict. LA1c found the best threshold in 29 of 30 locked seeds.",
+   "relevance": "For TR4-2's bridges: run the power check on feedback resolution, and use assigned rounds to separate exploration from selection."
+  },
+  {
+   "path": "experiments/shaping-what-comes-back/README.md",
+   "found": "LA3: two of four contrasts passed. Both failures fell where the agent never tried shaping, and every seed that tried both policies ended on the better one.",
+   "relevance": "Measure exploration apart from selection in TR4-2."
+  },
+  {
+   "path": "experiments/drain-beyond-the-reward/README.md and DESIGN.md",
+   "found": "LA4 has a design, exact values by script, and an independent design review, with Stage A on small policies and Stage B on open-weight language models. Nothing is frozen or run.",
+   "relevance": "The format the designs in experiments/formations-that-read/ should follow."
+  },
+  {
+   "path": "experiments/motor-learning-cost/README.md",
+   "found": "Its identification analysis: changing a fitted gain, the delivered input, the available writing or hidden memory can produce similar observations. A mechanism claim needs matched interventions on input, writing and readout, which were not supplied.",
+   "relevance": "A neighbour for TR5's observation interventions, on which part of an update an intervention reaches."
+  },
+  {
+   "path": "experiments/market-generativity/README.md",
+   "found": "A supplied local model in which a levy funds interventions; intermittent correction can suffice, and 400 interventions are paid.",
+   "relevance": "A neighbour to Revising's stock-funded correction. It is not empirical."
+  },
+  {
+   "path": "theories/becoming/results/records/when-to-inquire-and-when-to-respond.md (03 §9)",
+   "found": "InquiryChoice.observed_class_policy_iff is the parent law of correctable_iff, through GuardHorizon.uniform_policy_iff_fiber_feasible. A witness shows inquiry can cross a floor before its response arrives.",
+   "relevance": "If TR4 wants a deadline, its formal source is here or in ReadInTime.deadline, not in RF6.1."
+  },
+  {
+   "path": "theories/becoming/results/records/selection-under-registration-revision.md (03 §8)",
+   "found": "Revising.feasible_iff, covered_not_enacted and linked_not_enacted, and controlled_revision, the one supplied controller's run.",
+   "relevance": "The inputs RF6.1 rests on, and the only controller run there is."
+  },
+  {
+   "path": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md (03 §12)",
+   "found": "floor_forgoes: every blanketed law with the witness's answer and stationary worlds that never senses low in the down world senses alike in both worlds and takes the known act there.",
+   "relevance": "A neighbour in the same module with a sharper universal forbidden case, over every formation on its worlds. Plan §10 has no entry for it."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md",
+   "found": "It has rows on Conant–Ashby, Francis–Wonham, Virgo and others, Argyris–Schön, Bateson and Ostrom. Its Part 2 §6, 'Revision that enables correction', is a compositional application of known selection facts that forbids equating a richer representation with executable improvement.",
+   "relevance": "The literature placement the designs should cite."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+   "found": "Scope findings on these two modules. For OpenedCorrection (findings 19–26 and its cold read): OpensAlong needs no change of reading, an empty fiber imposes no condition, and the coarsening condition's direction. For ReadingLoop (findings 1, 2 and 18): keeping can succeed by deadlock, and the history reading is not uniquely the one needed.",
+   "relevance": "Each of these is a test-design constraint in the corrections above."
+  },
+  {
+   "path": "experiments/history/INDEX.md",
+   "found": "constructed-correction, inquiry-renewal and similar entries: synthetic exact-finite cycles from 4–5 October, with a superseded framing and no records.",
+   "relevance": "They are not tests of these laws."
+  }
+ ],
+ "literature": [
+  {
+   "cite": "Conant, R. C. and Ashby, W. R. (1970). Every good regulator of a system must be a model of that system. International Journal of Systems Science 1(2):89–97. Cited in the repository.",
+   "relevance": "The plan's second opinion summarizes it: in a finite static probabilistic setup that minimizes outcome entropy, an optimal regulator can be chosen whose state is a deterministic function of the system's state. That is weaker than an internal simulator. RF3's record says it is not reproduced: neither optimality nor model necessity is proved. A design must not read 'keeps the task' as 'has a model'."
+  },
+  {
+   "cite": "Ashby, W. R. (1956). An Introduction to Cybernetics, the law of requisite variety. From general knowledge.",
+   "relevance": "Plan §2 reads uniform_policy_iff_fiber_feasible, and hence correctable_iff, as requisite variety in exact discrete form."
+  },
+  {
+   "cite": "Wentworth, J. (2021). Fixing the good regulator theorem. LessWrong and Alignment Forum, 9 February 2021. Not in the repository; confirmed by web search.",
+   "relevance": "A critic. It argues that the original's 'model' is weak, since even an identity regulator counts, and gives a condition under which an optimal minimal regulator must build an internal model when it sees only part of the system. For TR5, adequacy for one task forces no model; informativeness against Possible is where the critique enters."
+  },
+  {
+   "cite": "Virgo, N., Biehl, M., Baltieri, M. and Capucci, M. (2025). A 'good regulator theorem' for embodied agents. arXiv 2508.06326. Cited in the repository.",
+   "relevance": "Forward-invariant relations correspond to consistent possibilistic belief interpretations, with closure under the policy chosen, where KeptBy asks closure under every act. According to search snippets, it also says Conant and Ashby show only that some good regulators are models. RF3's closure is their invariance, and TR5 measures it."
+  },
+  {
+   "cite": "Baltieri, M., Biehl, M., Capucci, M. and Virgo, N. (2025). A Bayesian interpretation of the internal model principle. arXiv 2503.00511. Not in the repository; confirmed by web search.",
+   "relevance": "It treats the control-theoretic internal model as a special case of possibilistic Bayesian filtering. Virgo and others 2025 note that it assumes the controller fully observes the plant; RF3's history form is the partially observed case."
+  },
+  {
+   "cite": "Francis, B. A. and Wonham, W. M. (1976). The internal model principle of control theory. Automatica 12:457–465. Cited in the repository.",
+   "relevance": "Robust regulation requires a copy of the exosystem's dynamics. The second opinion lists it as a debt (stability, perturbation classes); it is not contained in RF3 and not testable here."
+  },
+  {
+   "cite": "Kaelbling, L. P., Littman, M. L. and Cassandra, A. R. (1998). Planning and acting in partially observable stochastic domains. Artificial Intelligence 101:99–134. From general knowledge.",
+   "relevance": "The belief state is a sufficient statistic. Inference: Possible is the support of an exact filter's belief when sensing is deterministic and noise is carried by the world relation."
+  },
+  {
+   "cite": "Fagin, R., Halpern, J. Y., Moses, Y. and Vardi, M. Y. (1995). Reasoning About Knowledge. MIT Press. From general knowledge.",
+   "relevance": "Knowledge-based programs under perfect recall. The worlds possible after a history are the agent's knowledge set, and history_keeps_iff is the safety condition for such a program."
+  },
+  {
+   "cite": "Bertoli, P., Cimatti, A., Roveri, M. and Traverso, P. (2006). Strong planning under partial observability. Artificial Intelligence 170:337–384. Confirmed by web search.",
+   "relevance": "And-or search over belief states for plans that reach the goal from every start under every action outcome. It is the planning counterpart of the history form (theirs for reaching a goal, RF3's for safety), and TR5-0 is a belief-space check of this kind."
+  },
+  {
+   "cite": "Alshiekh, M., Bloem, R., Ehlers, R., Könighofer, B., Niekum, S. and Topcu, U. (2018). Safe reinforcement learning via shielding. AAAI. From general knowledge.",
+   "relevance": "Shields block unsafe acts using a safety game. The good-enabled check on Possible is a shield's condition."
+  },
+  {
+   "cite": "Carr, S., Jansen, N., Junges, S. and Topcu, U. (2023). Safe reinforcement learning via shielding under partial observability. AAAI 37(12):14748–14756. Confirmed by web search.",
+   "relevance": "Shields in partially observable settings keep deep RL agents safe and can bootstrap agents that later stay safe. It is the closest RL counterpart of history_keeps_iff, and a shielded agent is TR5-1's positive control."
+  },
+  {
+   "cite": "Zhang, H., Chen, H., Xiao, C., Li, B., Liu, M., Boning, D. and Hsieh, C.-J. (2020). Robust deep reinforcement learning against adversarial perturbations on state observations. NeurIPS. Confirmed by web search. Also Huang, S., Papernot, N., Goodfellow, I., Duan, Y. and Abbeel, P. (2017), Adversarial attacks on neural network policies, arXiv 1702.02284, from general knowledge.",
+   "relevance": "Zhang and others introduce the state-adversarial MDP for perturbed observations. Such perturbations lie outside the world relation, where RF3 predicts nothing, so they belong in TR5's beyond-the-law arm."
+  },
+  {
+   "cite": "de Haan, P., Jayaraman, D. and Levine, S. (2019). Causal confusion in imitation learning. NeurIPS. From general knowledge.",
+   "relevance": "Intervening on observations exposes policies that rely on nuisance features. These are the leak controls of TR4-3 and TR5-2."
+  },
+  {
+   "cite": "Hafner, D., Lillicrap, T., Ba, J. and Norouzi, M. (2020). Dream to control: learning behaviors by latent imagination. ICLR. From general knowledge.",
+   "relevance": "Model-based RL with latent beliefs. Reading a support from a learned latent needs a correspondence check before RF3's terms apply."
+  },
+  {
+   "cite": "Givan, R., Dean, T. and Greig, M. (2003). Equivalence notions and model minimization in Markov decision processes. Artificial Intelligence 147:163–223. Also Littman, M. L., Sutton, R. S. and Singh, S. (2002), Predictive representations of state, NIPS. Both from general knowledge.",
+   "relevance": "The unproved existence condition, tying histories alike for the task's futures, is of this kind. It is not tested."
+  },
+  {
+   "cite": "Ullman, T. (2023). Large language models fail on trivial alterations to theory-of-mind tasks. arXiv 2302.08399. From general knowledge.",
+   "relevance": "Perturbation tests show success not carried by the claimed reading. A precedent for TR5-2's alterations within the world relation."
+  },
+  {
+   "cite": "Fudenberg and Levine (1993); Rothschild (1974); Sui, Gotovos, Burdick and Krause (2015); Turchetta, Berkenkamp and Krause (2016). Cited in the repository, in the neighbour record.",
+   "relevance": "Self-confirming equilibrium, incomplete learning and safe exploration: the context for a task that cannot be kept while learning which world holds."
+  },
+  {
+   "cite": "Argyris, C. and Schön, D. (1978). Organizational Learning. Also Bateson, G. (1972). Steps to an Ecology of Mind. Both cited in the repository.",
+   "relevance": "For Argyris and Schön, double-loop learning changes governing norms. RF6.1 holds acceptability fixed, so it gives no double-loop verdict, and Bateson's levels are conceptual."
+  },
+  {
+   "cite": "Ostrom, E. (1990). Governing the Commons, and her 2009 Nobel lecture. Also Hirschman, A. O. (1970). Exit, Voice, and Loyalty. Both cited in the repository.",
+   "relevance": "Ostrom's monitoring principles are empirical generalizations, so RF6.1 reads at most a failure route. Voice and exit come with no theorem."
+  },
+  {
+   "cite": "March, J. G. (1991). Exploration and exploitation in organizational learning. Organization Science 2(1):71–87. From general knowledge.",
+   "relevance": "The standard agent-based simulation of an organizational code learning from its members and its members from the code. TR4-1's institution can borrow its structure; members' acts are what RF6.1 does not represent."
+  },
+  {
+   "cite": "Repenning, N. P. and Sterman, J. D. (2002). Capability traps and self-confirming attribution errors in the dynamics of process improvement. Administrative Science Quarterly 47:265–295. Also their 2001 California Management Review article. Confirmed by web search.",
+   "relevance": "Improvement efforts decay in a self-reinforcing loop (a capability trap). This fits the stock-and-link reading, in which rebuilding draws on what correction needs. On Revising itself starving costs no step, so a trap arm needs a richer process (TR4-2)."
+  },
+  {
+   "cite": "Sah, R. K. and Stiglitz, J. E. (1986). The architecture of economic systems: hierarchies and polyarchies. American Economic Review 76(4):716–727. From general knowledge.",
+   "relevance": "The architecture of screening changes which errors are corrected. It sits beside the reading of the link as reading by line rather than by count."
+  },
+  {
+   "cite": "Janssen, M. A., Holahan, R., Lee, A. and Ostrom, E. (2010). Lab experiments for the study of social-ecological systems. Science 328:613–617. Also Gürerk, Ö., Irlenbusch, B. and Rockenbach, B. (2006). The competitive advantage of sanctioning institutions. Science 312:108–111. Both from general knowledge.",
+   "relevance": "Lab games with monitoring, communication and the choice of institutions. Templates if a human stage is ever designed."
+  },
+  {
+   "cite": "Weick, K. E., Sutcliffe, K. M. and Obstfeld, D. (1999). Organizing for high reliability. Research in Organizational Behavior 21:81–123. From general knowledge.",
+   "relevance": "'Reluctance to simplify' in high-reliability organizations. This is an AI reading set beside coarser_opens_nothing (a summary measure opens no correction), not a containment."
+  }
+ ],
+ "open_questions": [
+  "What is TR4 for, given that RF6.1's forbidden cases are excluded in any simulation built to its premises? It could be a correspondence test (TR4-3), a set of bridges (TR4-2), or the exact tables alone (TR4-0, TR4-1). Each verdict's class (identity, scope, or beyond the law) must be fixed before freezing.",
+  "Should TR4's deadline be dropped, frozen as exact bounded reachability on the frozen process, or joined explicitly to ReadInTime.deadline or 03 §9's InquiryChoice? The last would be a composition with no Lean.",
+  "How is uniformity over every situation to be measured for trained systems? Either by presenting every situation counterfactually at one configuration (resets for simulated agents, separate calls for language models), or through a stated bridge from drawn situations.",
+  "The Lean covers deterministic policies only. Should the per-fiber probability bound for randomized formations (inference) be stated and proved in the periphery before TR4-3 or TR5-2 rely on it?",
+  "Which process does a capability-trap bridge use? Revising has no trap, since both orders reach the same correctable configuration in two steps, and a richer process lies beyond RF6.1's witnesses.",
+  "Should TR5's primary verdict rest on Possible computed from logs, with no extraction, or on an elicited or probed reading? How is an elicited list tied to the act, and is the external-controller arm kept?",
+  "Which interventions count? Those within the world relation, where the law applies, with out-of-model values measured apart. Should channel changes be brought inside the law by enlarging the world to W × channel?",
+  "The task must be a predicate on worlds, designed so that the reading of everything cannot keep it and go on. How are invalid acts and time-outs scored under Continues?",
+  "Should floor_forgoes (what-a-course-chosen-through-its-model-does-not-test) get its own test entry? Its forbidden case quantifies over every formation on its worlds, and plan §10 has none.",
+  "Should plan §4.4's localized wording of RF3 (reachable states, a sound start) be proved as a lemma, so that a course-level verdict has a Lean statement? Or should the tests use only the stated laws?",
+  "Which stages count as runs needing Ren's yes? Exact scripts and power checks are design work; learner runs and API calls are runs."
+ ],
+ "recommendation": "Both laws are near-definitional, so no run can refute them; a frozen test can refute only a reading of their terms onto a system, and §10's entries should say so. First build the exact scripts here (TR4-0, TR4-1, TR5-0), with §10 corrected: TR4's openings classed by source, widened-acceptability and coarser-reading arms added, the refusal control given no verdict, and the deadline dropped or made exact; TR5 rebuilt on the history form, with Possible computed from logs, a constructed course for every predicted failure, going on scored, and the readings of everything and of nothing excluded. Then put to Ren only the runs whose premises are checked rather than imposed (TR4-3 and TR5-2 on language models), with the learner bridges (TR4-2, TR5-1) labelled beyond the law."
+}

@@ -1,0 +1,782 @@
+[
+ {
+  "key": "lean-a",
+  "review": {
+   "findings": [
+    {
+     "id": "lean-a-1",
+     "severity": "medium",
+     "location": "DESIGN.md, TR5 'What each outcome would change' and 'Rivals and controls'; REST-TR4-TR5.md, TR5 'Verdict rules' (V4) and the power-check table; tr5.py lines 845-847",
+     "problem": "V4 is read as 'its stated reading is not the one it acts through'. That reading needs a premise no RF3 theorem gives: that an agent acting through a reading takes an act good and enabled on it wherever one exists. history_keeps_iff and keeps_continues_iff check a given policy; they do not say how a policy chooses. So V4 contradicts history policies, the very correspondence TR5 says it tests. The DESIGN sentence that these readers' failures 'the audit predicts' (and so contradict nothing) disagrees with the power table.",
+     "evidence": "ReadingLoop docstring: 'These laws verify a given policy; finding one is a choice of acts along the histories it generates.' tr5.py comment at line 845: 'V4 contradicted (the stated reading is not the one it acts through) where ... the listing is nonempty and admits some act good and enabled on it, and the act is not'. REST power table: 'Fixed by the last value ... V4 1 ... Any 1' and 'Fixed by the step count ... V4 1 ... Any 1'; note: 'Stand-ins that do not list are given a listing of the possible sides'. DESIGN: 'label, step-count, last-value, threshold and lamp-blind readers are history policies, whose failures the audit predicts'.",
+     "fix": "Name V4's bridge in full: 'the agent acts through its stated listing and takes an act good and enabled on it where one exists' (a planner premise, not RF3). Report a V4 contradiction as failing that joint premise, not as proof that the listing is not operative. In DESIGN's rivals sentence, say that the step-count and last-value readers, given a correct listing, meet V4."
+    },
+    {
+     "id": "lean-a-2",
+     "severity": "medium",
+     "location": "REST-TR3-TR6.md, 'The stochastic analogue a sampled arm would need'; tr3.json D_stochastic_bound",
+     "problem": "The table 'checked exactly' says the candidate bound TV <= sum of eps_n 'holds' for every member type. Total variation is never above 1, and every row with a nonzero TV has a bound of at least 1.18, so the check cannot fail. It gives no evidence for the candidate periphery lemma.",
+     "evidence": "tr3.json D_stochastic_bound.rows bound_sum_of_eps: hybrid 1/20 -> 101/20 (5.05), hybrid 1/5 -> 26/5, hybrid 1/2 -> 11/2, counting flips 1/100 -> 49/10, counting flips 1/20 -> 9/2, logit 2/5/10 -> 1.18/2.70/4.09. The only rows with a bound below 1 are BHW (0) and leaky (0, outside Turns).",
+     "fix": "Say that the check is vacuous at these sizes. Check a form that can fail: either weight eps_n by the probability of the histories reached from the prefix (TV <= sum over n of E|D_n(H_n)|), or use member types and cells where the sum of eps_n is below 1 (for example, BHW with flips of 1/1000 at the cascade histories only). Otherwise drop 'checked exactly' and 'holds'."
+    },
+    {
+     "id": "lean-a-3",
+     "severity": "medium",
+     "location": "REST-TR1.md §3 (stability rule), §7 row 'A noise model', §12 item 6; DESIGN.md TR1 'Verdict rules'",
+     "problem": "The verdict applies the cycle rule to presentations, each taken as one occasion with its 8-of-9 modal pick. If each fresh call, the stated unit, is read as its own ChoiceOccasions occasion, one dissenting call among nine is already a two-cycle in Shown. The design tolerates that, yet says the verdict 'tolerates no cycle' and that 'a verdict tolerating some cycles would test another claim'. So the correspondence tested is that the chooser's stable choice function accords with one strict order, not that every pick does.",
+     "evidence": "ShownOrder: Shown x y := ∃ o, pick o = x ∧ menu o y ∧ y ≠ x, so two occasions with the same menu and picks x and y give Shown x y and Shown y x, and «无环» fails. REST §7: 'the tolerated tremble 0.10 enters only the stability rule and the power check, never the verdict, which tolerates no cycle'. §12 item 6: 'a verdict tolerating some cycles would test another claim'. Rule (r, q) = (9, 8).",
+     "fix": "State the bridge as 'the occasions are presentations and the pick is the stable (8-of-9) answer; that family accords with one strict order'. Say the call-level family, in which every call is an occasion, is not ruled on. Reword §7 and §12 item 6: no cycle is tolerated among the aggregated occasions, while call-level dissent is absorbed by the stability rule."
+    },
+    {
+     "id": "lean-a-4",
+     "severity": "medium",
+     "location": "DESIGN.md TR4 'Verdict rule' ('Faithful crews contradict it with probability at most 0.008 per model'); REST-TR4-TR5.md TR4 power check",
+     "problem": "The verdict uses Holm across six models. Under Holm, a faithful model's rejection threshold rises from 0.05/6 up to 0.05 when other models are rejected. A per-model false-contradiction probability of 'at most 0.008' holds only at Holm's first step. When other models leak, a faithful model is contradicted with about the single-test size.",
+     "evidence": "REST power table: faithful uniform 0.037 at 0.05 and 0.007 at 0.05/6; faithful skewed 0.041 and 0.004. Holm's step-down thresholds are α/6, α/5, ..., α/1.",
+     "fix": "Report Holm's family-wise guarantee (P(any faithful model contradicted) <= 0.05), with the per-model worst case of about 0.04 (0.037 or 0.041 at 0.05). Present 0.007 as the level when no other model is rejected."
+    },
+    {
+     "id": "lean-a-5",
+     "severity": "low",
+     "location": "DESIGN.md TR4 'The law and what it forbids' ('correctable_iff, left to right, no hypothesis')",
+     "problem": "The Lean's correctable_iff takes `choice : Viability.ChoiceOver O A` as an explicit argument for the whole iff, and the Lean states no direction without it. That the left-to-right direction needs no choice is an inference from unfolding Correctable, which REST says correctly ('needs ... for its right-to-left direction only').",
+     "evidence": "theorem correctable_iff (choice : Viability.ChoiceOver O A) (reading ...) ... : Correctable ... x ↔ ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a",
+     "fix": "Write '(the left-to-right direction of correctable_iff, which needs none of its choice argument: an inference from unfolding Correctable)', or cite the definition of Correctable directly."
+    },
+    {
+     "id": "lean-a-6",
+     "severity": "low",
+     "location": "REST-TR1.md §1, 'What TR1 uses that the Lean does not state' (P1)",
+     "problem": "The P1 violation is called 'a two-step cycle of the whole family'. The cycle is one shown step at the after occasion (pick o above x) followed by the met chain from x back to pick o. Its length is 1 plus the chain's length, which can exceed 2.",
+     "evidence": "Accords at o gives Shown (pick o) x; the hypothesis gives «及» met.Shown x (pick o); the concatenation is a reach of the whole family from pick o to itself.",
+     "fix": "Write 'it closes a cycle of the whole family through the after occasion (one shown step plus the met chain)'."
+    },
+    {
+     "id": "lean-a-7",
+     "severity": "low",
+     "location": "REST-TR4-TR5.md TR4 power-check table, row 'Faithful crew, uniform over acts'",
+     "problem": "The simulated crew is not uniform over the four acts. It picks each line with 0.3 and replenish with 0.1, which is where the mean of 0.90 matches comes from; a crew uniform over the four acts would give 0.75.",
+     "evidence": "tr4.py line 1008: {\"name\": \"faithful, uniform crew\", \"kind\": \"faithful\", \"q\": [0.3, 0.3, 0.3, 0.1]}",
+     "fix": "Relabel the row as 'faithful crew, lines 0.3 each, replenish 0.1', or simulate a crew uniform over the four acts as well."
+    },
+    {
+     "id": "lean-a-8",
+     "severity": "low",
+     "location": "DESIGN.md TR2 'What the test can refute' and 'What each outcome would change'",
+     "problem": "'Every theorem takes Lumped π as a hypothesis' is inexact. Only twin_selected takes `lumped : Lumped π g`. In lumped_determines and determines_lumped_iff, Lumped π is the class quantified over. The chain theorems, determines_iff_not_not and Cue.apart_with_content_alike take no Lumped hypothesis. Also, 'nowhere else (determines_lumped_iff)' leaves out the theorem's DecidableEq K hypothesis, which REST's table lists.",
+     "evidence": "theorem state_apart_of_acts_apart {π state act i j} (acts_apart : ...) : ...; theorem determines_lumped_iff [DecidableEq K] {π} {data : List I} {x} {y z : V} (two : y ≠ z)",
+     "fix": "Write 'the fixing and the twin hold for every law reading through π, and the chain is congruence', and add 'equality of the lumping's values decided' where determines_lumped_iff is cited."
+    },
+    {
+     "id": "lean-a-9",
+     "severity": "low",
+     "location": "DESIGN.md TR5, ten-minute part ('none of 15,625 value-blind policies keeps the task, so the reading of everything cannot pass') and hour part V2",
+     "problem": "The 'so' gives the wrong reason. In the Lean, the reading of everything fails because no act is good and enabled on all 80 worlds (keeping_policy_iff with everything_kept), as REST says; the value-blind enumeration is a separate check. Separately, the hour part's V2 says 'breaks in all 3', while REST and tr5.py say 'breaks the task or sticks', the case that history_continues_iff covers.",
+     "evidence": "REST: 'No act is good and enabled on all 80 worlds, so under the reading of everything no policy keeps and goes on (keeping_policy_iff)'. tr5.py lines 835-837: 'contradicted where one course breaks the task or ends with no successor in all E_EP episodes'.",
+     "fix": "Write 'no act is good and enabled on every world, so the reading of everything cannot pass; and none of the 15,625 value-blind policies keeps the task'. In DESIGN's V2, write 'breaks the task or sticks in all 3'."
+    }
+   ],
+   "checked_sound": "I read the cited theorem statements in ShownOrder, Unread (with Learning's Determines, Lumped, Free, lumped_determines, determines_lumped_iff and unselected_beyond_data), Cascade, OpenedCorrection (with Revising's P and read, and GuardHorizon.UniformPolicy) and ReadingLoop (Kept, Joint, PairwiseShared, History, Loop, Untested). I then checked the design texts against them. These hold:\n\n**TR1.** The forbidden-case chain, the shortest case (one pair with opposite picks), weakly_forces_no_comparison, above_in_class_of_every without nonemptiness, and the forced-top inference all match the Lean. The module has 28 theorems in 40 declarations, and its sha256 is ca92c787…2b43.\n\n**ReadingLoop's Untested witness.** I evaluated by hand that the informed course takes the untried act from step 1, senses high from step 2 and reaches upRest at step 3. The EV prior-1/4 down course 'kuukkkkkkkk', explorer_low_once and model_or_order (sensed and active parts only) match. Candidate lemma 2 holds, including the count of 24 rankings with r low < r mid.\n\n**TR2.** The coverage fractions (1−2^−(R−1), 7/16, 1−2^−(2R−1)) are right, and so are the theorem and declaration counts (8 in 11).\n\n**TR3.** The counts 128, 256 and 1,024 of the 16,384 pools are right. So are BHW's D tables at p = 3/5 under both priors, the overweighting stop points, the 17 and 16 cells, the 330 and 272 call counts, and the premise probabilities 0.99^10, 0.99^50 and so on. The reached-history form is correctly labelled an inference.\n\n**TR4.** The shortest openings (3, 2, 1, 1) and their sources are right. So are the classification (correctable exactly where the link is on and stock is at least 1), the premises of the coarser arm, finer_keeps and coarser_opens_nothing's roles, the 9/10 rival score, and the power figures 0.974, 0.677 and 0.172.\n\n**TR5.** The Possible, KeptBy and history_keeps_iff / history_continues_iff statements match. The lookout world has 80 worlds, there are 5^6 = 15,625 value-blind policies, and V5's use of reached_of_possible and possible_least holds.\n\n**Anchors.** The trembling-order formula (0.362 and 0.218), the tournament probabilities and the stability-rule numbers are right.\n\n**Mirrors.** The mirrors in tr1.py (Shown, Accords, Loop, byWorst, worst), tr4.py (Correctable, Revising's successors) and tr5.py (joint, KeptBy, Good, Keeps at one step or more, Possible) match the definitions.\n\n**Script runs.** I ran tr1.py through tr5.py. All exited 0, and tr4 and tr5 reported all_checks_passed. The regenerated JSON differed from the committed JSON only in the timing fields. The scripts rewrite their JSON when run, so I copied the original files back from a scratchpad backup; tr1.json to tr5.json now match their original bytes. I made no other change.\n\nAll files are under /Users/ren/theories/.claude/worktrees/rf-landing/experiments/formations-that-read and /Users/ren/theories/.claude/worktrees/rf-landing/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming."
+  },
+  "verify": {
+   "verdicts": [
+    {
+     "id": "lean-a-1",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. tr5.py (comment at about lines 845-847) and the REST verdict rules contradict V4 where the listing is nonempty, some act is good and enabled on it, and the act is not; DESIGN reads that as 'its stated reading is not the one it acts through'. history_keeps_iff, history_continues_iff and keeps_continues_iff only verify a given policy (ReadingLoop docstring: 'These laws verify a given policy; finding one is a choice of acts along the histories it generates'). None of them says an agent acting through a reading picks a good, enabled act whenever one exists. The deadlocking stand-in shows the gap: it is given a correct listing and fails only by choosing an act not enabled at the dark lookout. V4 contradicts it with probability 1 (REST power table), yet it does not act through some other reading; that is the 'wrong sense' stand-in. The DESIGN rivals sentence groups the step-count and last-value readers with label, threshold and lamp-blind readers, but tr5.json gives P_V4_contradicted 1.0 for 'fixed by the last value' and for the step-count reader. REST (the paragraph after the power table) names only label, threshold and lamp-absence as contradicting nothing.",
+     "fix": "State V4's bridge in full: the agent acts through its stated listing and, where some act is good and enabled on that listing, takes one (a choice premise, not RF3). Report a V4 contradiction as a failure of that joint premise, and note that a correct listing with a bad choice (the deadlocking stand-in) contradicts it too. In DESIGN's rivals sentence, keep 'contradict nothing' to the label, threshold and lamp-blind readers, and say that the step-count, last-value, deadlocking and wrong-sense readers, given a correct listing, meet V4."
+    },
+    {
+     "id": "lean-a-2",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed from tr3.json D_stochastic_bound.rows. Every row with a nonzero total variation has bound_sum_of_eps of at least 1.18 (5.05, 5.2, 5.5, 4.9, 4.5, 1.18, 2.70, 4.09), and total variation is at most 1, so 'holds' cannot fail for those rows. Only the BHW rows (bound 0, TV 0) and the leaky row outside Turns check anything. REST does call the bound 'loose', but the table still presents 'Checked exactly ... Holds: yes' as evidence for the candidate lemma. REST's table also leaves out the 'flips w.p. 1/20' row that the JSON carries. This affects no verdict, since the sampled arm is reported only.",
+     "fix": "Say that, at these sizes, the check is informative only for the zero-bound rows (BHW, either tie rule, and the leaky counter-row), and that the other rows meet the bound trivially because the sum is at least 1. Either check a form that can fail (eps_n weighted by the probability of the histories reached, or cells where the sum of eps_n is below 1), or drop the 'Holds' column for those rows."
+    },
+    {
+     "id": "lean-a-3",
+     "real": false,
+     "severity": "low",
+     "reason": "Refuted as stated. The design never takes calls as ChoiceOccasions occasions. The DESIGN ten-minute part says 'a cycle among the strict picks, each presentation its own occasion'. REST §3 defines a pick as strict where one content is named in at least q of r calls, and contradicts on 'a cycle of any length among its strict occasions'. REST §11 says 'every presentation its own occasion'. 'Its unit is the fresh call' refers to independence of calls, not to the occasion. In context, §7's 'never the verdict, which tolerates no cycle' and §12 item 6 refer to cycles among those occasions, which is accurate. The correspondence tested (the strict, stable picks accord with one strict order) is already what the design states.",
+     "fix": "None needed. At most, DESIGN's 'What the test can refute' could say 'a stated chooser's strict (q-of-r) picks' instead of 'a stated chooser picks', for readers who skip the verdict rule."
+    },
+    {
+     "id": "lean-a-4",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. DESIGN TR4 says faithful crews contradict C1 'with probability at most 0.008 per model', while REST and tr4.py apply Holm across six models. Holm's step-down thresholds rise from 0.05/6 to 0.05 as other models are rejected, so a faithful model is tested at about 0.05 when the other five leak. Its contradiction probability is then about 0.037 (uniform) or 0.041 (skewed), per the REST power table's 0.05 column. The figure of 0.007 or 0.004 holds only at Holm's first step. The 0.008 figure itself has no exact source in tr4.json.",
+     "fix": "Report Holm's family-wise guarantee: P(any faithful model contradicted by m2) is at most 0.05. Give the per-model worst case of about 0.04 (0.037 and 0.041 at 0.05), and present 0.007 and 0.004 as the level when no other model is rejected."
+    },
+    {
+     "id": "lean-a-5",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. OpenedCorrection.lean line 80: theorem correctable_iff (choice : Viability.ChoiceOver O A) ... : Correctable ... x ↔ ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a. The Lean states no direction without choice, so 'left to right, no hypothesis' is an inference from unfolding Correctable (GuardHorizon.UniformPolicy). REST line 10 makes the same inference ('needs ... for its right-to-left direction only; left to right needs nothing'). REST's sentence is true of the mathematics but is equally not a Lean statement.",
+     "fix": "In DESIGN TR4, write '(by unfolding Correctable; the left-to-right direction of correctable_iff uses none of its choice argument, an inference, not a stated theorem)'. Mark REST line 10 as an inference in the same way."
+    },
+    {
+     "id": "lean-a-6",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. A P1 violation gives Shown (pick o) x at the after occasion o (Accords, x open with the pick and different from it) plus a met chain x →+ pick o of any length of at least 1. The cycle therefore has length 1 plus the chain's length, which can exceed 2. 'A two-step cycle' is exact only when the met chain is one step.",
+     "fix": "Write 'it closes a cycle of the whole family through the after occasion (one shown step there plus the met chain), so the cycle rule already covers it'."
+    },
+    {
+     "id": "lean-a-7",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. tr4.py AGENTS defines 'faithful, uniform crew' with q = [0.3, 0.3, 0.3, 0.1] over c1, c2, c3, rep (simulate_unit). That is uniform over the three lines with replenish at 0.1, and gives 3 × 0.3 = 0.90 mean matches. A crew uniform over the four acts would give 0.75. REST labels the row 'uniform over acts'.",
+     "fix": "Relabel the row 'Faithful crew, each line 0.3, replenish 0.1' (uniform over the lines), or add a row for a crew uniform over all four acts."
+    },
+    {
+     "id": "lean-a-8",
+     "real": true,
+     "severity": "low",
+     "reason": "Partly confirmed. The first part is weak. Determines (Lumped π) unfolds to ∀ g g', Lumped π g → Lumped π g' → ... (the proof of lumped_determines takes lumped and lumped' as arguments), so Lumped π is a hypothesis of the fixing laws once unfolded. The sentence also sets the chain apart ('and the chain is congruence'). Still, 'every theorem' literally includes state_apart_of_acts_apart, coupling_apart_of_state_apart and Cue.apart_with_content_alike, which take no Lumped. The second part holds: determines_lumped_iff (Learning.lean line 867) takes [DecidableEq K], which REST's table lists but DESIGN omits, both where it cites the theorem in 'The law' and in 'What each outcome would change'.",
+     "fix": "Write 'the fixing and the twin hold for laws reading through π (Lumped π a hypothesis, inside Determines for the fixing), and the chain is congruence'. Where determines_lumped_iff is cited (TR2's law paragraph and its outcomes paragraph), add 'equality of the lumping's values decided'."
+    },
+    {
+     "id": "lean-a-9",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. DESIGN line 17 says 'none of 15,625 value-blind policies keeps the task, so the reading of everything cannot pass'. The reason REST gives, and the one keeping_policy_iff supports, is that no act is good and enabled on all 80 worlds. The step-count enumeration (5^6 policies) is a separate check with time-indexed readings and does not imply the reading-of-everything result. DESIGN's V2 says 'breaks in all 3', while REST's V2 and tr5.py's comment say 'breaks the task or sticks' (ends with no successor), which history_continues_iff covers.",
+     "fix": "Line 17: 'no act is good and enabled on every world, so the reading of everything cannot pass; and none of the 15,625 value-blind policies keeps the task'. DESIGN V2: 'breaks the task or sticks in all 3'."
+    }
+   ]
+  }
+ },
+ {
+  "key": "lean-b",
+  "review": {
+   "findings": [
+    {
+     "id": "lean-b-1",
+     "severity": "high",
+     "location": "DESIGN.md, TR9 (RF-M.3), 'The law and what it forbids'",
+     "problem": "`own_least` is stated without its quantifier. The sentence says that by the reader's own current values on a shared model, no rule beats its current answer. The theorem only says that no rule *through the same map* π beats it. A rule through a finer map, which is what showing gives, can beat it, and TR9's own decisive condition is a case of exactly that.",
+     "evidence": "ListingValuation.lean, own_least: `m.after (shifted g l) (byRule fun c => s (π c)) ≤ m.after (shifted g l) (byRule fun c => answer m g l π (π c))`, for any `s : K → Bool`, i.e. rules through π only; its docstring says \"no rule through the map stands higher\" and \"Worth before any cost\". In CV6 (REST-TR8-TR9 R3) the objective is the reader's current values, and 'show, then wait' (count 4) beats 'wait', the current answer (count 20), even after paying 4. REST R8 item 9 states the regime correctly (\"through one map, for one decision before costs\"); DESIGN does not.",
+     "fix": "Write: \"By the reader's own current values on a shared model, no rule through the map it reads beats its current answer, before costs (`own_least`); showing, which refines the map, can (`forgone_least_iff`).\""
+    },
+    {
+     "id": "lean-b-2",
+     "severity": "medium",
+     "location": "DESIGN.md, TR7 (RF7), 'The law and what it forbids', the sentence citing `freshDraw_above_iff_chance`",
+     "problem": "The sentence drops the theorem's hypothesis `0 < m`. Without it the stated iff is false at m = 0, which is the never-complying draw, ownAtBoth itself. The design rules ask for every hypothesis. REST-TR2-TR7's table states it correctly (\"for `0 < m`\"); the DESIGN summary does not. No condition uses m = 0, so no verdict changes.",
+     "evidence": "ReadStages.lean: `theorem freshDraw_above_iff_chance (s : Prospects) {m r : Nat} (pos : 0 < m) : s.FreshDrawAbove m r ↔ (m + r) * (k_O V + c T) + r * (k_O V) < r * (k_C V)`. Take m = 0, r = 1, A = k_O V = 0, B = c T = 0, C = k_C V > 0. The right side, 0 < C, holds. FreshDrawAbove 0 1 reduces to 1·(1·0) + 1·(0·0) < 1·(0·C + 1·0), which is 0 < 0, false.",
+     "fix": "Insert \"for 0 < m\": \"drawing afresh with chance m/(m+r), 0 < m, stands above ownAtBoth exactly where ...\"."
+    },
+    {
+     "id": "lean-b-3",
+     "severity": "medium",
+     "location": "REST-TR2-TR7.md, TR7 'What the law states, checked against the Lean', the 'Forbidden case' cells for `freshDraw_above_iff_chance` and `mixture_never_above`",
+     "problem": "Both forbidden cases are written at an equality boundary the Lean leaves open. The table forbids an optimizer taking a fresh draw \"that does not stand above ownAtBoth\" and taking one draw before the read stage at all. But not standing above includes a tie, and a tied draw is maximal. Example.freshDraw_boundary is such a tie: chance 1/4, \"the two being equal there\". A mixture also ties ownAtBoth wherever A + B = 0. Only a strict deficit forbids, and that strict converse is the derived claims D3, D6 and D7, which are not Lean. The planned conditions B1, B3 and B4 have strict deficits (−2, −9/5, −3/2), so no verdict changes, but the rule as written breaks 'ties excluded at equality boundaries'.",
+     "evidence": "ReadStages.lean: FreshDrawAbove and MixtureAbove are strict `<` comparisons against ownAtBoth. `mixture_never_above : ¬ s.MixtureAbove a b` holds for all prospects. Example.freshDraw_boundary gives `¬ prospects.FreshDrawAbove 1 3` with equal values. tr7.py maximal_answers returns {OWN_BOTH, OFFER} (a tie) where neither strict comparison holds. REST's own D6 needs `0 < A + B`.",
+     "fix": "Rewrite both cells: \"an optimizer with tied stages taking a fresh draw strictly below ownAtBoth (by D3/D7, derived, not Lean; at equality, no verdict)\" and \"an optimizer taking a single mixture with a > 0 where 0 < A + B (by D6, derived)\". In DESIGN's ten-minute TR7 entry, mark 'a draw ranked below never complying' as resting on the derived strict converse."
+    },
+    {
+     "id": "lean-b-4",
+     "severity": "medium",
+     "location": "DESIGN.md, TR6 (RF6.3), 'What each outcome would change'",
+     "problem": "The outcome 'V1 met and V2 not contradicted' is read as \"along this orbit the public is an instance of the chain law\". V1 also counts as met when the measured shape is order-reversing, which is the prediction under the congestion framing. The chain laws (`rises`, `below_right`, `bottom_rests`) assume `keeps`, so a reversing public is not an instance of them. Under reversal only `right_rests` and `none_right_of_moves` apply, and `Reflecting` shows that reaching a right value is not implied. REST correction 8 says this; the outcome sentence does not.",
+     "evidence": "ReflexivePrediction.lean: `rises`, `below_right` and `bottom_rests` each take `keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w`. tr6.py counts the chain forbidden cases only `if ... keeps(table, N)`, and REST's power table marks congestion rows \"not counted (reverses)\". The simulated spread-congestion public has the right value 5 that the orbit from 0 never reaches.",
+     "fix": "Split the outcome: \"V1 met with shape keeps and V2 not contradicted: along this orbit the public is an instance of the chain law ... ; V1 met with shape reverses: only `right_rests` (and `none_right_of_moves` where every value moves) applies, and no reaching is predicted.\""
+    },
+    {
+     "id": "lean-b-5",
+     "severity": "medium",
+     "location": "DESIGN.md TR6 Stage 0 ('Dropping `within` breaks `bottom_rests` in 132 of 336 ...'); REST-TR3-TR6.md TR6 'The mirror and every map of small chains' (5 of 7, 14 of 25, 42 of 91, 132 of 336) and correction 7",
+     "problem": "The failure counts depend on an unstated choice of r off the chain. In the Lean, r is a function on all of Nat and a table over 0..n does not fix it beyond n. The orbit that leaves the chain reads r there, so the counts are not facts about the tables. tr6.py extends every table by v ↦ v + 1 off the chain. If r fixes each value off the chain instead, `bottom_rests` fails in only 2 of 336 tables at n = 4 (2 of 7, 25 and 91 for n = 1 to 3). The point that `within` is needed survives, since some extension breaks the law, but the counts as printed misstate what dropping `within` does.",
+     "evidence": "tr6.py chain_laws: `ext = lambda v: t[v] if v < len(t) else v + 1  # off the chain: any value`. Re-counting B3 with r v = v off the chain (a scratch run, no repository file changed) gives 2 of 7, 2 of 25, 2 of 91, 2 of 336. With r v = n off the chain it gives the same counts as v + 1.",
+     "fix": "State the extension wherever the counts appear: \"with r v = v + 1 off the chain, `bottom_rests` fails in 132 of 336 tables; with r fixing values off the chain, in 2\". Or replace the counts with the existential claim that some order-keeping table leaving the chain breaks `bottom_rests` under some extension, e.g. r v = v + 1."
+    },
+    {
+     "id": "lean-b-6",
+     "severity": "low",
+     "location": "DESIGN.md, TR9 'The law and what it forbids' (`revalued_lowers_iff`)",
+     "problem": "The theorem's condition is stated per situation; the Lean states it per listed cell of the reader's map, and by the strict *weighted* preference within the cell. The two agree only where the reader is told the situation. In the TR9 conditions that use the law (CVT, REVCV) the reader is shown first, so no verdict is affected.",
+     "evidence": "ListingValuation.lean `revalued_lowers_iff`: `∃ z, z ∈ zs ∧ ((answer m g' l' π z = true ∧ offExcessWithin m g l π z < goExcessWithin m g l π z) ∨ ...)`, where z ranges over the cells of π. DESIGN: \"exactly where it decides a listed situation against the current strict preference\".",
+     "fix": "Write \"decides a listed cell of what the reader tells apart against the current valuation's strict weighted preference within it\"."
+    },
+    {
+     "id": "lean-b-7",
+     "severity": "low",
+     "location": "REST-TR8-TR9.md R3, TR9 conditions table, the 'Laws the ranking rests on' cells of REFW (and REF6's 'show strictly worst')",
+     "problem": "`refined_lt_iff` is cited for comparisons between options with different amounts: wait at 0 against show at 4. The theorem takes a single amount k on both sides. The exact criterion for unequal amounts is `forgone_through_lt_iff`, of which `refined_lt_iff` is the equal-amount, refinement case. The ranking is right, since the coarser rule wins at equal amounts and the finer one costs more, but the cite claims more than the theorem states.",
+     "evidence": "ListingValuation.lean: `theorem refined_lt_iff ... (s : K → Bool) (s' : L → Bool) (k : Nat) : m.after ... (byRule fun c => s' (π' c)) + k < m.after ... (byRule fun c => s (π c)) + k ↔ ...` (one k). `forgone_through_lt_iff` takes `(k k' : Nat)`. In REFW, wait has amount 0 and show has amount 4.",
+     "fix": "Cite `forgone_through_lt_iff` (shortfall split: least shortfall + residual + amount) for REFW and REF6's 'show strictly worst'. Alternatively, cite `refined_lt_iff` at equal amounts plus the step that a larger amount on the finer option only widens the margin."
+    }
+   ],
+   "checked_sound": "I checked the four tests against their Lean modules: TR6 against ReflexivePrediction.lean, TR7 against ReadStages.lean and the GainLoss order and toRoutes/asRoute part of RevisionRoutes.lean, TR8 against HeldForReading.lean, and TR9 against ListingValuation.lean. The module hashes match the ones the designs cite (4eb919e7…, among others), and ReflexivePrediction has 26 declarations as REST states. tr6.py and tr7.py, rerun in a scratch copy, reproduce tr6.json and tr7.json byte for byte. tr8.py reproduces tr8.json except for timing fields. My tr9 rerun had not finished when I wrote this, and I later found the scratch folder was also being used by other runs, so tr9.json is not independently reproduced. Its tables were checked by hand instead.\n\nWhat holds, checked against the theorem statements and the scripts:\n\n- **TR6.**\n  - Every Lean statement cited is right: `within` and `keeps` are hypotheses of `rises` and `bottom_rests`, and `below_right` needs only `keeps`.\n  - The step bound n is attained by min(v+1, n).\n  - Exactly n^(n+1) self-maps have no right value: 279,936 of 823,543.\n  - The order-reversing counts check: 1,709 non-constant maps, 917 with a right value, 495 that never reach it.\n  - On Bool, 8 of 15 admitted classes contain negation.\n  - All nine simulated publics' tables, right values, orbits and rest steps are correct by hand.\n  - The '12 to 17 percent' fall rate matches the memoryless rows of both arms (0.117 to 0.167).\n  - Forbidden cases are counted only under a measured table that keeps the order, so 'harness fault' is valid for what is counted.\n  - The B6 lemma is correctly labelled a candidate, not a Lean result.\n- **TR7.**\n  - The tr7.py mirror matches gain, loss, Above, Maximal, KeepingOutweighs, choose, FreshDrawAbove, MixtureAbove and toRoutes.\n  - The statements of `only_complyThenOwn_iff`, `complyThenOwn_maximal_iff`, `complyAtBoth_maximal_iff`, `freshDraw_above_iff` and `mixture_never_above` are right.\n  - The expected values, maximal sets and gaps of A1 to A7 and B1 to B4 are correct by hand, including B1's deficit p + 6p², B3's bound 7/10 and best chance 7/20, and B4's −3/2.\n  - The derived claims D1 and D2 follow from the expected value.\n  - The game text matches the model's gain and loss.\n  - The loss-aversion threshold of 8/7 at A7 is correct.\n- **TR8.**\n  - `threshold_go_iff` and `threshold_off_iff` (both the ≤ and < forms), `const_worth`, `forgone_lt_iff`, and the definitions of shortfall, goExcess and offExcess are correctly stated, and the mirror is faithful.\n  - Every condition's shortfalls, counts and margins in R2 recompute by hand, including the I1 and I2 cell readers through leastThrough, K1 and K2, F and F2, H, J and JB.\n  - Ties and the amount in c·T units are handled as the Lean does.\n- **TR9.**\n  - `shortfall_split`, `revalued_split`, `forgone_least_iff` (its hypothesis that the valuations agree in net is met where it is cited), `revalued_forgone_lt_iff`, `presented_forgone_lt_iff`, `answer_constant`, `const_below_iff` and `revaluing_gains_iff` (no reach) are correctly stated.\n  - The tr9.py definitions of answer, residual and SplitsKeep match the Lean.\n  - These conditions recompute by hand: CV6, REF6, CVT, REV4, REVCV and REV0, plus WAP against `WeightsApart.weights_matter` scaled by ten (30, 20, 40)."
+  },
+  "verify": {
+   "verdicts": [
+    {
+     "id": "lean-b-1",
+     "real": true,
+     "severity": "high",
+     "reason": "DESIGN.md line 208 (TR9, hour part) reads: \"By the reader's own current values on a shared model, no rule beats its current answer (`own_least`)\". The Lean in ListingValuation.lean (line 1000) states `own_least` only for rules through the same map: `m.after (shifted g l) (byRule fun c => s (π c)) ≤ m.after (shifted g l) (byRule fun c => answer m g l π (π c))` for `s : K → Bool`. Its docstring says \"no rule through the map stands higher\" and \"Worth before any cost\". Without that restriction the sentence is false, and the same sentence then says showing can stand above not showing (`forgone_least_iff`). REST-TR8-TR9.md line 91 shows the case: in CV6, judged by the current values, 'show, then wait' (total 4) beats 'wait' (20), the current answer. REST item 9 (line 293) states the regime correctly (\"through one map, for one decision before costs\").",
+     "fix": "In DESIGN.md TR9 'The law and what it forbids', write: \"By the reader's own current values on a shared model, no rule through the map it reads beats its current answer, before costs (`own_least`); showing, which refines the map, can (`forgone_least_iff`).\""
+    },
+    {
+     "id": "lean-b-2",
+     "real": true,
+     "severity": "medium",
+     "reason": "DESIGN.md line 166 says drawing afresh with chance m/(m+r) \"stands above `ownAtBoth` exactly where ...\" and leaves out the hypothesis `(pos : 0 < m)` of `freshDraw_above_iff_chance` (ReadStages.lean line 736). I checked the counterexample against the definition at line 300. With m = 0, r = 1, A = B = 0 and C > 0, `FreshDrawAbove 0 1` reduces to A < A, which is false, while the right side, A + B + A < C, is true. The iff therefore fails at m = 0. REST-TR2-TR7's table states it correctly (\"for `0 < m`\"). No planned condition uses m = 0, so no verdict changes.",
+     "fix": "In DESIGN.md TR7 'The law and what it forbids', write: \"drawing afresh with chance `m/(m+r)`, `0 < m`, stands above `ownAtBoth` exactly where ...\"."
+    },
+    {
+     "id": "lean-b-3",
+     "real": true,
+     "severity": "medium",
+     "reason": "In REST-TR2-TR7.md's TR7 table, the forbidden-case cells read \"a fresh draw that does not stand above `ownAtBoth`\" and \"an optimizer taking one draw before the read stage\". Both comparisons in the Lean are strict (`FreshDrawAbove`, `MixtureAbove`, lines 300 and 308), so 'not above' includes ties. The Lean's own `Example.freshDraw_boundary` (line 870) is such a tie at chance 1/4 (\"the two being equal there\"). A mixture ties `ownAtBoth` wherever a(A+B) = 0, that is where A + B = 0 or where a = 0, the degenerate draw that is `ownAtBoth` itself. Forbidding a tied choice breaks the rule that ties are excluded. A strict deficit is forbidden only by the derived claims D3, D6 and D7, which are not Lean. tr7.py's `maximal_answers` (lines 515–526) already treats a tie as {OWN_BOTH, OFFER} and excludes it, and B1, B3 and B4 have strict deficits (−2, −9/5, −3/2), so only the table text is wrong and no verdict changes. The ten-minute entry already says \"ranked below\", which is strict and agrees with the code, but the claim it rests on is derived.",
+     "fix": "Rewrite the two cells as: \"an optimizer with tied stages taking a fresh draw with 0 < m strictly below `ownAtBoth` (strictness by D3/D7, derived, not Lean; at equality no verdict)\" and \"an optimizer taking a single mixture with a > 0 where 0 < A + B (by D6, derived; the Lean gives only not above)\". In DESIGN's ten-minute TR7 entry, add after \"a draw ranked below never complying\": \"(strictly below by a derived claim; the Lean gives not above)\"."
+    },
+    {
+     "id": "lean-b-4",
+     "real": true,
+     "severity": "medium",
+     "reason": "REST-TR3-TR6.md line 209 defines V1 as no flagged decision and a table neither constant nor the identity, with its shape reported as keeps, reverses, moves every value, or neither. DESIGN.md line 152 says the readings predict *reverses* under congestion. So 'V1 met' with the predicted shape includes a public whose table reverses the order. DESIGN line 158 then reads that outcome as \"along this orbit the public is an instance of the chain law\". But `rises` and `bottom_rests` (ReflexivePrediction.lean lines 123 and 159) take `within` and `keeps`, and `below_right` (line 130) takes `keeps`, so an order-reversing public is not an instance of them. tr6's power table marks the congestion rows \"not counted (reverses)\". Correction 8 (REST line 283) says no design predicts reaching under reversal, and the spread-congestion public (right value 5, orbit 0 10 0 10) never reaches its right value.",
+     "fix": "Split the outcome in DESIGN.md TR6: \"V1 met with shape keeps, and V2 not contradicted: along this orbit the public is an instance of the chain law, and the bandwagon reading holds for these agents, here. V1 met with shape reverses (congestion), and V2 not contradicted: only `right_rests`, and `none_right_of_moves` where every value moves, apply; no reaching is predicted.\""
+    },
+    {
+     "id": "lean-b-5",
+     "real": true,
+     "severity": "medium",
+     "reason": "tr6.py line 173 extends each table off the chain by `ext = lambda v: t[v] if v < len(t) else v + 1`. In the Lean, r is a function on all of Nat, and an orbit that leaves the chain reads r there, so the counts depend on that unstated extension. I re-ran the B3 enumeration (order-keeping tables over 0..n into 0..n+2 that leave the chain) with other extensions. With v+1, n or 0 off the chain the counts are as printed: 5/7, 14/25, 42/91, 132/336. With r v = v off the chain they are 2/7, 2/25, 2/91, 2/336. The point that `within` is needed survives, since some extension breaks `bottom_rests`, but the printed counts are not facts about the tables alone. The range of values (up to n+2) is also a choice, though a stated one (tr6.py line 240).",
+     "fix": "Wherever the counts appear (DESIGN.md TR6 Stage 0; REST-TR3-TR6.md 'The mirror and every map of small chains' and correction 7), state the extension and the range: \"with values up to n + 2 and r v = v + 1 off the chain, `bottom_rests` fails in 132 of 336 tables at n = 4; with r fixing every value off the chain, in 2\". Alternatively, state only that some order-keeping table leaving the chain, under some extension (e.g. r v = v + 1 everywhere), breaks `bottom_rests`."
+    },
+    {
+     "id": "lean-b-6",
+     "real": true,
+     "severity": "low",
+     "reason": "`revalued_lowers_iff` (ListingValuation.lean line 1012) quantifies over cells `z ∈ zs` of the reader's map. Its condition compares `offExcessWithin m g l π z` with `goExcessWithin m g l π z`, which is the current valuation's strict weighted preference within the cell, as the docstring says (\"some listed cell against the current valuation's strict weighted preference\"). DESIGN.md line 208 says \"decides a listed situation against the current strict preference\", which names a situation rather than a cell and leaves out 'weighted'. The two agree only where cells are single situations, as in the shown conditions, so no verdict is affected.",
+     "fix": "In DESIGN.md TR9, write: \"... lowers the worth exactly where it decides some listed cell of what the reader tells apart against the current valuation's strict weighted preference within it (`revalued_lowers_iff`)\"."
+    },
+    {
+     "id": "lean-b-7",
+     "real": true,
+     "severity": "low",
+     "reason": "`refined_lt_iff` (ListingValuation.lean line 905) takes a single amount `k` on both sides. In REFW (REST-TR8-TR9.md line 94), wait and off have amount 0 and show has amount 4. In REF6, 'show strictly worst' compares show (amount 4) with go (0) and give (3). The general criterion with two amounts `(k k' : Nat)` is `forgone_through_lt_iff` (line 870), of which `refined_lt_iff` is the equal-amount refinement case. The rankings are right: at equal amounts the coarser rule wins by 150 − 50 > 0, and the extra amount on the finer option only widens the margin. Show against give+show (amount 7), where the amounts go the other way, is cited separately (`revalued_forgone_lt_iff`), so the alternative fix also covers REF6. The citation states more than the theorem does.",
+     "fix": "Cite `forgone_through_lt_iff` (least shortfall + residual + amount on each side) for REFW and for REF6's 'show strictly worst'. Alternatively, cite `refined_lt_iff` at equal amounts and add that the finer option's larger amount (4 against 0 or 3) only widens the margin."
+    }
+   ]
+  }
+ },
+ {
+  "key": "stats",
+  "review": {
+   "findings": [
+    {
+     "id": "stats-1",
+     "severity": "high",
+     "location": "REST-TR8-TR9.md R6 (usage) against R7 rules 1, 5 and 6; DESIGN.md TR9 Premises",
+     "problem": "The probe rules ask for counts the protocol never collects. R6 budgets 10 probe calls per condition, and only in the compute presentation. Yet TR9's premise (the reader probe 'correct in at least 20 of 30', read 'per family and context'), TR8's guard 6 ('the probe ranked another first in at least 20 of 30') and the miscomputed/disposition label (rule 5) are all written for 30 probe calls per condition, in every context. As written, TR9's premise cannot be met in the two 'given' contexts, so those units are void or undefined, and in compute contexts 20 of 30 is out of reach with 10 calls. Rule 5 also never says how a probe call, which is separate from the 30 choice calls, is matched to a chosen option.",
+     "evidence": "R6: 'probe calls 10 per condition in the compute presentation only'. The budget is TR8 380 = 19 conditions x 10 x 2 compute contexts, and TR9 220 = 11 x 10 x 2. R7.1: 'Per family and context: ... the reader probe ... correct in at least 20 of 30 (TR9)'. R7.6: 'in at least 20 of 30'. Neither tr8.py nor tr9.py simulates the probe, the guard or the label: grep finds 'probe' only in tr8.py's settled and freeze text, lines 998-1014.",
+     "fix": "Choose one probe budget and write every probe rule in it. One option is 30 probe calls per condition in each context where a probe is asked, with usage restated (TR8 +1,140, TR9 +660 calls in compute). The other is to keep 10 and restate the thresholds as 7 of 10. Say that TR9's reader-probe premise applies to compute contexts only, or add reader probes to the given contexts. Define the label at the condition level, for example 'miscomputed where the probe's modal ranking puts the chosen modal option first'. Add the guard and the label to the power check, so their false-contradiction rate under the law with noise sigma = 0.1 is known."
+    },
+    {
+     "id": "stats-2",
+     "severity": "medium",
+     "location": "REST-TR8-TR9.md R4 specification and R7 rules 2-3 (also DESIGN.md TR8/TR9 Verdict rules); tr8.py line 713, tr9.py outcome_probs",
+     "problem": "The contradiction rule has no error control across conditions. A condition is contradicted where strictly excluded options take at least 20 of 30 calls. That has size 0.049 against a per-call split of one half, and the bridge is contradicted where any of 15 (TR8) or 10 (TR9) conditions is. So a chooser split 50/50 in every condition, a difference no condition resolves, gets a 'contradicted' bridge with probability 0.53 (TR8) or 0.40 (TR9). The law's own model with noise is falsely contradicted 0.054 to 0.128 at sigma 0.3 S (TR8) and 0.013 to 0.036 at sigma 0.2 S (TR9). No bound is stated, and the verdict therefore rests on unresolved differences. TR7, by contrast, splits 0.05 over its 11 conditions.",
+     "evidence": "tr8.py: N_CALLS, SUPPORT_AT, CONTRA_AT = 30, 20, 20; condition con = binom_tail(30, 1 - p1, 20). P(Bin(30, 0.5) >= 20) = 0.0494; 1 - (1 - 0.0494)^15 = 0.532 and ^10 = 0.397, computed here. tr8.json D_power agents 'counts sigma=0.3 lapse=0.0/0.05/0.1': P_some_condition_contradicted 0.0538, 0.0855, 0.128. tr9.json 'counts sigma=0.2 lapse=0.1': 0.0362.",
+     "fix": "Set the contradiction count by a stated family-wise level, as TR7 does. For example, at least 24 of 30 gives per-condition size 0.0007 against one half and 0.011 over 15 conditions; 23 of 30 gives 0.0026 and 0.038. Report the law's false-contradiction rate at sigma up to 0.3 beside the rule. Support can stay at 20 of 30."
+    },
+    {
+     "id": "stats-3",
+     "severity": "medium",
+     "location": "DESIGN.md TR4 Verdict rule and Rivals; REST-TR4-TR5.md TR4 power check",
+     "problem": "The claim that faithful crews 'contradict it with probability at most 0.008 per model' misstates Holm. Holm controls the family-wise rate at 0.05. The per-model threshold rises from 0.05/6 to 0.05 as other models are rejected, so a faithful model tested after leaking ones is falsely contradicted at the alpha column's rate (0.037 to 0.053), not 0.008. The 0.008 itself is the 60-unit figure, not the planned 40 units (0.007; 0.004 for the skewed crew). The quoted leak powers (0.97, 0.68, 0.17) are first-step Holm values, so they are conservative, but that is not said.",
+     "evidence": "tr4.json power_check rows 'faithful, uniform crew': U=40 P_C1_contradicted_alpha 0.037, alpha_over_6 0.007; U=60 alpha 0.053, alpha_over_6 0.008. 'faithful, skewed crew' U=40 alpha 0.041. tr4.py power_check records only alpha and alpha/6 ('holm_first_step').",
+     "fix": "Restate as: 'the family-wise false-contradiction rate across the six models is at most 0.05 (Holm); a single faithful model is contradicted with probability between 0.007 (first Holm step) and 0.037 to 0.041 (last step) at 40 units.' Give the leak powers as a range between the alpha/6 and alpha columns (3 in 10: 0.974 to 0.997)."
+    },
+    {
+     "id": "stats-4",
+     "severity": "medium",
+     "location": "DESIGN.md TR4 Rivals and controls; REST-TR4-TR5.md TR4 'Rivals, and what separates them' (row 'Readers fixed by position, cue or history') and Measures",
+     "problem": "m2 is a one-sided test of matches, so it detects only dependence of the crew's act on the line in the matching direction. Any other dependence, anti-matching or a systematic shift, is a reading other than the register's rule, and C1 is false for it, yet it passes. The simulated history reader shows this. It acts on the previous call's line, which is situation content, not the record. It has mean matches 0.335 against the faithful 0.90, and m2 never rejects it. The rivals table nonetheless says these readers 'read only the record' and are 'consistent with the bridge'. The two-sided dependence statistic that would catch it is 'reported only'.",
+     "evidence": "tr4.py simulate_unit: kind 'fixed-history' sets acts[line - 1] = f\"c{_PREV['line']}\" and then _PREV['line'] = line, so it reads the previous situation's line. tr4.json 'fixed by history ... calls not fresh' U=40: P_C1_contradicted_alpha 0.0, mean_matches_per_unit 0.335. REST: 'Reported only: ... a two-sided dependence statistic of act on line'.",
+     "fix": "Make m2 two-sided, or add the exact within-unit permutation test of any dependence of act on line (for example, the count of acts that differ across a unit's situations, against its permutation null) as m3, inside the Holm family, and run it in the power check. Otherwise, relabel the history rival as reading information outside the register and say that C1 is not separated from it except through fresh calls. Correct the table row either way."
+    },
+    {
+     "id": "stats-5",
+     "severity": "medium",
+     "location": "DESIGN.md TR9 Rivals and controls; REST-TR8-TR9.md R5 (TR9 table and the control paragraph), R7, R11; tr9.py lines 925 and 1093",
+     "problem": "WA-P is named as the control that separates N10 (counts by the reader's own weights), but it is optional, has role 'optional' rather than 'strict', and the script reports it apart from the bridge. R7 reads only strict conditions, so even when WA-P runs, N10 is supported in every context with probability 1.0. The design's rule ('where none can be added, the design says the rival is not separated') is therefore not met: the text presents WA-P as the control. WA-P's counts-first set is also a tie (go, wait), so it could only rule against the strictly excluded option.",
+     "evidence": "tr9.py line 925: tr9_condition(\"WAP\", \"optional\", ...); part_D loops over strict = [c for c in conds if c['role'] == 'strict'] and then adds 'optional_WAP ... reported apart' (line 1093). REST R5 TR9 table: N10 P(supported) 1.0 in all four contexts, WA-P supported 0.0. R3 table: WAP counts first 'go, wait'.",
+     "fix": "Either make WA-P a strict condition in R7 (it meets the margin rule: 10, 0.25 S), naming only 'show whether the case is the third' as excluded, and include it in the bridge product and the 0.805 consistency figure. Or state in DESIGN and R5 that N10 is not separated by any verdict and that WA-P is descriptive."
+    },
+    {
+     "id": "stats-6",
+     "severity": "medium",
+     "location": "DESIGN.md TR5 'What each outcome would change'; REST-TR4-TR5.md TR5 verdict rules and power check",
+     "problem": "A model is void only where fewer than half its audited histories resolve, so a model with an incomplete audit and no rule met counts as a pass. Hybrids that mix in a failing policy per call then pass almost always. Overconfident on 30% of calls, the audit is complete in only 0.154 of runs, no failing pair is ever tested, and some rule is met in only 0.006. The stated reading of a pass, 'a history policy whose outcomes the audit predicts', overclaims for these runs: the audit predicted nothing at the unresolved histories.",
+     "evidence": "tr5.json power_check rows 'hybrid per call: overconfident in 30% of calls': P_void 0.0, P_audit_complete 0.154, mean_resolved_share 0.931, P_failing_pair_tested 0.0, P_any_correspondence_contradicted_if_not_void 0.006. 'planner, 5% random acts': P_audit_complete 0.308.",
+     "fix": "Add a third outcome: 'unresolved' where the audit is incomplete (some history reached by the modal acts is unresolved) and no rule is met. Keep 'pass' for complete audits, and report the resolved share with every verdict. Alternatively, restrict the pass reading to 'no rule met at the resolved histories'."
+    },
+    {
+     "id": "stats-7",
+     "severity": "medium",
+     "location": "DESIGN.md 'What the tests share' (one harness at temperature 0); REST-TR3-TR6.md TR3 power check and both usage tables (determinism pilot 200)",
+     "problem": "The design says one shared determinism pilot 'measures' whether residual nondeterminism is near 1/1000, the boundary between resolvable and voided verdicts in TR3 and TR6. A 200-call pilot cannot resolve that boundary. With no flip observed, its 95% upper bound is 0.015, fifteen times the boundary, and there BHW passes RF4's conditional verdict only about a third of the time. Even 1,000 calls bound eta only at 0.003. So the pilot cannot tell the regime where a pass or breach is readable from one where units will mostly be voided.",
+     "evidence": "REST-TR3-TR6 TR3 power check: 'After 1,000 identical calls with no flip, the one-sided 95% bound on eta is 0.003 (0.015 after 200)'. Conditional verdict table: BHW flips 1/1000 passed 0.897, 1/200 0.578, 1/100 0.337. TR3 usage 'Determinism pilot 200'; TR6 usage 'Determinism pilot 200'.",
+     "fix": "Restate the pilot as a screen: '200 calls exclude eta above about 0.015, not the 1/1000 regime'. Either size it from the boundary (about 3,000 identical calls bound eta below 1/1000 when no flip is seen; 300 exclude 1/100) or drop the claim that it measures the boundary. Let the per-cell unanimity and the flagged share carry the regime, as the verdict rules already do."
+    },
+    {
+     "id": "stats-8",
+     "severity": "medium",
+     "location": "DESIGN.md TR2 ten-minute and Stage 0 paragraphs; REST-TR2-TR7.md TR2 'Acts apart' table and Stage B (600 pairs per factor)",
+     "problem": "The shared-seed sample sizes (200 pairs for 5 points at a 10% base, 600 for 2 points) assume a monotone coupling: every discordant pair runs one way, so the test rejects from six discordant pairs. The design calls this an idealization of token-level sampling. Stage B's 600 pairs per factor nonetheless rest on it, and nothing measures the coupling, because the identical-input arm under a shared seed cannot be discordant. With any two-way discordance, power falls toward the independent-draw column. At 600 pairs that is 0.72 for 5 points at 10%, 0.17 for 2 points and 0.43 for 5 points at 30%. These figures are at 0.05 per factor, before the split over four factors left for the freeze. A non-rejection at such power must not be read as acts 'alike'.",
+     "evidence": "tr2.py power_paired(crn=True): 'discordance is one-way with chance |p_read - p_unread|'. Computed here with tr2.power_paired at 600 pairs, independent draws: (0.10, 0.15) 0.719, (0.10, 0.12) 0.172, (0.30, 0.35) 0.432; shared seed 1.0, 0.981, 1.0. tr2.py line 285: ALPHA_ACTS = 0.05 per factor, the split left to the freeze.",
+     "fix": "Add a pilot that measures the share of two-way discordance under the shared seed on a cue known to move the act. Size Stage B from the measured coupling, or from the independent-draw column as the worst case (1,200 pairs for 5 points at a 10% base, at the split alpha). In Stage B, report acts not shown apart as 'not shown apart', as the states rule already does, never as 'alike'."
+    },
+    {
+     "id": "stats-9",
+     "severity": "low",
+     "location": "DESIGN.md TR1 ten-minute paragraph ('no rival passes more than 0.002') and hour Stage 0",
+     "problem": "The headline leaves out the cases that pass. A stable departure from one order at 1% of presentations is a genuine forbidden case, yet it passes 0.49 (contradicted only 0.51), and at 3% it still passes 0.15. Hybrids whose order decides with a first-listed lean pass 0.998, and a 0.7/0.3 mixture passes 0.42. Those passes are correct, since their stable picks accord with one order. All of this is in REST-TR1 section 4, but the ten-minute reader learns only that rivals fail, not that power against a sparse stable violation is about one half.",
+     "evidence": "tr1.json D_power_main: S.01 P(contradicted) 0.5067, P(passed) 0.4933; S.03 0.85 / 0.15; HyO P(passed) 0.9983 with first-listed share 0.58; Mix2 P(passed) 0.4217; HyP P(passed) 0.0017.",
+     "fix": "Add one clause to the ten-minute and hour paragraphs: 'a stable violation at 1% of presentations is caught about half the time (0.51), at 3% 0.85; order-led hybrids with a position lean pass, as they should, and the first-listed share is reported beside every pass.'"
+    },
+    {
+     "id": "stats-10",
+     "severity": "low",
+     "location": "DESIGN.md TR8 Verdict rules",
+     "problem": "The contradiction threshold is missing from the sentence. It reads 'contradicted if strictly excluded options are, otherwise unresolved', so it does not say that the excluded options must take at least 20 of the 30 calls.",
+     "evidence": "DESIGN.md TR8: 'supported if the counts-first option is chosen in at least 20, contradicted if strictly excluded options are, otherwise unresolved.' REST R4: 'contradicted if strictly excluded options are chosen in at least 20'; tr8.py CONTRA_AT = 20.",
+     "fix": "Write 'contradicted if strictly excluded options are chosen in at least 20 of the 30' (or the corrected count, if stats-2 is taken)."
+    }
+   ],
+   "checked_sound": "Reproducibility: I ran all nine scripts on copies in the scratchpad (/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/ftr). Each JSON matches the repository's exactly, apart from timing fields.\n\nQuoted numbers checked against the JSON:\n- TR1: the (r, q) sweep and the choice (9, 8); law-model rows at 0; TieC 0.03 (0.04 in the 300-replication sweep); HyP passed 0.0017; HCopy and HOrd by condition; 630 calls per chooser and 15,120 in all.\n- TR2: 1,200 against 200 and 6,400 against 600 pairs; probe 0.985 and 0.775; drift 53.2% against 3.6%; unit 57.7% against 2.7%.\n- TR3: the cell-rule probabilities (0.99, 0.90, 0.60; path 0.95, 0.78, 0.61) and the rule-of-three bounds.\n- TR4: competence 0.994, 0.576 and 0.057; null size 0.032 to 0.045; leak powers 0.974, 0.677 and 0.172 at alpha/6.\n- TR5: noise and hybrid rates at most 0.006; carried commitment 1 and 0.006; 459 and 3,834 calls.\n- TR6: V2 false rate at most 0.03 at eta = 1/100; inertia, momentum and trend detection rates; Fisher minimum counts.\n- TR7: support at 63 and contradiction at 64 of 100 (0.05/11), and the critical counts at other sizes; softmax 0.796 and 0.961; false contradiction at most 0.0032 up to 0.2 V; hybrid ranges at 30%, 50% and 70%; the separation thresholds.\n- TR8: 0.9871 and 0.4186; H2 at 0.9 gives 0.89; consistency needed 0.815; every strict margin at least 6 and at least 0.10 S.\n- TR9: 0.9674; H3 at 0.3 gives 0.11; consistency needed 0.805; the rival failure counts N1 4, N2 5, N5 3, N6 2, N4 5; CV6 16 of 70 and REF6 43 of 150.\n\nRules against simulations: the verdict rules written for TR1, TR6, TR7 and TR8/TR9 support are the rules the scripts simulate. The rivals are simulated as described: the TR8/TR9 deterministic rivals with lapse 0.05, the shuffled-position reader as uniform, H3 as calls alike within a condition. TR4's within-unit permutation test is exact and handles constant units. The call is the unit throughout, and pooled counts are described as descriptive.\n\nDisclosed limits I found adequate: TR7's 70% hybrid passing; TR1's content rule and fixed-label reader passing every contrast; TR6's memory that changes no decision on the orbit; TR3's C1 rule misplacing a 1/10 hybrid 13% of the time."
+  },
+  "verify": {
+   "verdicts": [
+    {
+     "id": "stats-1",
+     "real": true,
+     "severity": "high",
+     "reason": "Confirmed. REST-TR8-TR9 R6 says 'probe calls 10 per condition in the compute presentation only', and the usage table matches that: TR8 has 380 probe calls (19 conditions x 10 x 2 compute contexts) and TR9 has 220 (11 x 10 x 2). R7.1 nonetheless sets the TR9 premise 'Per family and context: ... the reader probe ... correct in at least 20 of 30 (TR9)', and DESIGN.md TR9 Premises repeats '20 of 30'. With 10 probe calls, 20 is out of reach. In the two given contexts there is no probe at all, so every TR9 unit there is void or undefined, and the verdict changes. R7.6 (guard: 'in at least 20 of 30') has the same mismatch. R7.5 defines the miscomputed label per call but never says how a probe call is matched to a choice call. grep finds 'probe' in tr8.py only in the text lines 998-1014 and nowhere in tr9.py, so none of these rules is simulated.",
+     "fix": "Pick one probe budget and write R7.1, R7.5, R7.6 and DESIGN's TR9 Premises in it. Either use 30 probe calls per condition in each context that has a probe, and restate usage (TR8 +1,140, TR9 +660), or keep 10 and restate the thresholds (for example 7 of 10). Say that the TR9 reader-probe premise applies in compute contexts only, or add reader probes to the given contexts. Define the label at the condition level, for example by the probe's modal ranking against the modal chosen option. Simulate the guard and the label under the law with noise, so that their false-contradiction rate is known."
+    },
+    {
+     "id": "stats-2",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. tr8.py line 713 sets N_CALLS, SUPPORT_AT, CONTRA_AT = 30, 20, 20, and tr9.py uses binom_tail(30, ., 20). I computed P(Bin(30, 0.5) >= 20) = 0.0494, so the chance that some condition is contradicted is 1 - (1 - 0.0494)^15 = 0.532 for TR8 and ^10 = 0.397 for TR9. tr8.json D_power shows the law's model contradicted 0.0538, 0.0855 and 0.128 at sigma 0.3 (lapse 0, 0.05, 0.1). The TR9 table gives 0.0126 to 0.0362 at sigma 0.2. No family-wise level is stated, whereas TR7 splits 0.05 over its 11 conditions (REST-TR2-TR7 line 183). The proposed counts are right: 23 of 30 gives 0.0026 per condition and 0.038 over 15; 24 gives 0.0007 and 0.011.",
+     "fix": "As proposed. Set the contradiction count from a stated family-wise level (23 or 24 of 30 over 15 conditions; for TR9's 10 conditions, 23 gives 0.026). Report the law's false-contradiction rate up to sigma 0.3 beside the rule. Support stays at 20 of 30. Also correct DESIGN's TR8 verdict sentence."
+    },
+    {
+     "id": "stats-3",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. DESIGN.md TR4 says 'Faithful crews contradict it with probability at most 0.008 per model'. In tr4.json, 0.008 is the alpha/6 figure at U=60. At the planned 40 units the figures are 0.007 (uniform) and 0.004 (skewed). Under Holm, a faithful model tested after others are rejected faces a threshold up to alpha, where its rate is 0.037 (uniform) or 0.041 (skewed) at U=40, so 'at most 0.008 per model' is not a valid bound. The leak powers quoted (0.97, 0.68, 0.17) are the alpha/6 values at U=40 (0.974, 0.677, 0.172), that is, first-step figures, and the text does not say so.",
+     "fix": "As proposed. State that the family-wise false-contradiction rate across the six models is at most 0.05 (Holm). Say that one faithful model is contradicted with probability between 0.007 (first step) and 0.037 to 0.041 (last step) at 40 units. Give the leak powers as ranges between the alpha/6 and alpha columns (3 in 10: 0.974 to 0.997; 2 in 10: 0.677 to 0.885; 1 in 10: 0.172 to 0.425)."
+    },
+    {
+     "id": "stats-4",
+     "real": true,
+     "severity": "low",
+     "reason": "Partly real. In tr4.py lines 991-1003, the fixed-history reader sets acts[line-1] = c{_PREV['line']}, and _PREV holds the true line of the previous situation. That is situation content outside the record, so the claim in DESIGN and the REST rivals row that these readers 'read only the record' is false for this rival. Its mean matches are 0.335. The proposed fix of making m2 two-sided is wrong, though. The forbidden case RF6.1 gives TR4 is matching beyond chance ('a crew correcting the right line at all three lumped faults beyond chance'), and the design rules ask for forbidden cases in the law's own quantifier, so the one-sided test is correct. Anti-matching is not that forbidden case. The design's fresh calls also exclude this reader: the simulation's own label says 'calls not fresh'. The real defect is the wording of the row.",
+     "fix": "Correct the row in REST-TR4-TR5 and the sentence in DESIGN TR4: 'Readers fixed by position or cue read only the record and pass C1. A history reader acts on the previous call's line, information outside the register that only non-fresh calls give. Fresh calls exclude it, and its anti-matching is not RF6.1's forbidden case, which m2 tests one-sided by design.' Keep m2 one-sided. The two-sided dependence statistic can stay reported only, with this reason stated."
+    },
+    {
+     "id": "stats-5",
+     "real": true,
+     "severity": "low",
+     "reason": "Real, but disclosed elsewhere. tr9.py line 925 gives WA-P the role 'optional', and part_D computes the bridge over strict conditions only, reporting 'optional_WAP' apart. R5 nonetheless says a control 'was added ... WA-P for N10', and R10 lists WA-P among the controls. R7 gives WA-P no verdict role, and N10 is supported with probability 1.0 in all four contexts. R11 and DESIGN do disclose this ('own weights differ only at the optional WA-P'; 'the weights-apart regime needs its own condition if it is to be tested'; 'Whether WA-P ... is included' is a freeze choice), so this is an inconsistency, not a hidden flaw. The tie (go, wait) is allowed, as for REFW and other strict conditions. WA-P meets the margin rule (10; 0.25 S), and N10's WA-P supported is 0.0, so a strict WA-P would separate it.",
+     "fix": "In R5 and R10, say that WA-P separates N10 only if the freeze makes it strict; until then N10 is not separated. In R7, state how WA-P enters if included: strict, naming 'show whether the case is the third, then wait' as the excluded option, inside the bridge product, with the 0.805 consistency figure recomputed over 11 conditions."
+    },
+    {
+     "id": "stats-6",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. REST TR5 voids a model only 'where fewer than half the audited histories are resolved'. In tr5.json, the stand-in 'hybrid per call: overconfident in 30% of calls' has P_void 0.0, P_audit_complete 0.154, mean_resolved_share 0.931, P_failing_pair_tested 0.0 and P_any_correspondence_contradicted_if_not_void 0.006. For 'planner, 5% random acts', P_audit_complete is 0.308. REST admits that such hybrids 'are mostly not caught by V1: they are reported through the unresolved share'. DESIGN's reading of a pass, 'at this size, a history policy whose outcomes the audit predicts', overclaims for incomplete audits, because at unresolved histories the audit predicted nothing.",
+     "fix": "As proposed. Add the outcome 'unresolved' where the audit is incomplete and no rule is met. Keep 'pass' for complete audits, and report the resolved share with every verdict. Alternatively, restate the pass in DESIGN as 'no rule met at the resolved histories (resolved share reported)'."
+    },
+    {
+     "id": "stats-7",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. DESIGN.md 'One harness at temperature 0' says residual nondeterminism near 1/1000 is the boundary, 'so one shared pilot measures it for both'. REST-TR3-TR6 line 96 gives the one-sided 95% bound after a flip-free pilot as 0.003 after 1,000 calls and 0.015 after 200. The usage tables budget 200 calls, and line 166 leaves '200 or 1,000' to the freeze. BHW's conditional verdict passes 0.897 at 1/1000 and 0.337 at 1/100, so a 200-call pilot cannot place the regime. About 2,996 flip-free calls bound eta below 1/1000 (-ln 0.05 / 0.001), and about 300 exclude 1/100.",
+     "fix": "As proposed. In DESIGN, call the pilot a screen: '200 calls exclude eta above about 0.015, not the 1/1000 regime'. Either size it from the boundary (about 3,000 calls for 1/1000), or drop 'measures' and let per-cell unanimity and the flagged share carry the regime, as the verdict rules already do."
+    },
+    {
+     "id": "stats-8",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed with qualifications. tr2.py power_paired(crn=True) models discordance as one-way with chance |p_read - p_unread|. REST line 77 calls this 'an idealization of token-level sampling', and the identical-input arm cannot measure the coupling, since under a shared seed it never differs. I reproduced the independent-draw power at 600 pairs and 0.05: 0.719, 0.172 and 0.432; under a shared seed: 1.0, 0.981 and 1.0. Stage B's '600 pairs per factor' rests on the idealization. Two corrections to the finding. First, Stage B's primary act measure is the exact next-token distribution at the first answer token (total variation), which no coupling affects, so only the behaviour-under-shared-seed measure is at risk. Second, the fix's '1,200 pairs at the split alpha' is too small: at alpha 0.0125, 1,200 pairs give power 0.877, and about 1,600 are needed for 0.9 (0.959).",
+     "fix": "Add a pilot that measures two-way discordance under the shared seed on a cue known to move the act. Size the behaviour measure from the measured coupling, or from the independent-draw worst case (about 1,600 pairs for 5 points at a 10% base at alpha 0.05/4). State that the exact next-token comparison carries the act verdict where states are exact. Report non-rejection of behaviour as 'not shown apart', never as 'alike'."
+    },
+    {
+     "id": "stats-9",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. DESIGN's ten-minute part says 'no rival passes more than 0.002'. That is true for the group tr1.json labels 'rival' (HyP 0.0017), but it leaves out the 'sticky' genuine violations: S.01 is contradicted 0.5067 and passes 0.4933; S.03 is contradicted 0.85 and passes 0.15. It also leaves out the 'boundary' choosers: HyO passes 0.9983 with first-listed share 0.58, and Mix2 passes 0.4217. REST-TR1 lines 95-96 and 121 report these, but neither the ten-minute part nor the hour part does.",
+     "fix": "As proposed. Add one clause to DESIGN's TR1 ten-minute and Stage 0 paragraphs: a stable violation at 1% of presentations is caught 0.51 of the time and at 3% 0.85; order-led hybrids with a position lean pass, as they should; the first-listed share is reported beside every pass."
+    },
+    {
+     "id": "stats-10",
+     "real": false,
+     "severity": "low",
+     "reason": "The sentence 'supported if the counts-first option is chosen in at least 20, contradicted if strictly excluded options are, otherwise unresolved' is a standard ellipsis: 'are' stands for 'are chosen in at least 20'. The threshold is carried, and REST R4 and tr8.py (CONTRA_AT = 20) state it in full. At most a matter of style; not a misstatement.",
+     "fix": "No change needed. If stats-2 changes the contradiction count, the sentence must then state the new number explicitly, since the ellipsis would no longer carry it."
+    }
+   ]
+  }
+ },
+ {
+  "key": "reader",
+  "review": {
+   "findings": [
+    {
+     "id": "reader-1",
+     "severity": "high",
+     "location": "DESIGN.md, the tests in ten minutes, TR5 paragraph (line 17); REST-TR4-TR5.md, TR5 'Rivals, and what separates them', row 'Value-blind readers'",
+     "problem": "Both say none of the 15,625 value-blind policies 'keeps the task'. That is false. What Stage 0 checked is that none keeps the task and goes on. Keeping alone holds vacuously for a policy that sticks, and the design itself says such an act is successor-safe ('so going on is scored apart').",
+     "evidence": "tr5.py value_blind_check counts `res[\"keeps\"] and res[\"continues\"]`; tr5.json hub_world.value_blind_policies = {\"scripts\": 15625, \"keeping_and_going_on\": 0}. I reran the same enumeration through tr5.all_courses: 7,025 of the 15,625 scripts keep the task, and 128 go on; ('look' x6) keeps without going on. DESIGN's hour part (line 128) and REST's 'world's design checks' state it correctly ('keeps the task and goes on').",
+     "fix": "In the ten-minute part write 'none of 15,625 value-blind policies keeps the task and goes on', and in REST's rivals table write 'none of 15,625 keeps the task and goes on'."
+    },
+    {
+     "id": "reader-2",
+     "severity": "medium",
+     "location": "DESIGN.md, ten-minute TR5 and hour TR5 'Rivals and controls' and 'What each outcome would change'",
+     "problem": "The figure of 0.6% belongs to a rival, not to noise. Per-call noise peaks at 0.4%; 0.6% is what a per-call hybrid (overconfident on 30% of calls) produces, and that hybrid is not separated: it passes about 99.4% of the time. The hour part groups it with noise as a false-alarm rate, and then reads a pass as 'a history policy whose outcomes the audit predicts'. A per-call hybrid is not a deterministic history policy. REST says the hybrid is 'mostly not caught by V1' and is reported only through the unresolved share. DESIGN never says this rival is not separated.",
+     "evidence": "REST-TR4-TR5.md power table: 'Planner, 5% random acts ... Any 0.004'; 'Hybrid per call, overconfident in 30% ... audit complete 0.154 ... Any 0.006', void 0. tr5.json power_check: P_any_correspondence_contradicted_if_not_void 0.004 and 0.006, P_void 0.0. REST line 218: 'hybrids mixing in a failing policy per call are mostly not caught by V1: they are reported through the unresolved share.'",
+     "fix": "Ten-minute: 'per-call noise up to 5% meets a rule at most 0.4% of the time; a per-call hybrid is not separated'. Hour: state that per-call hybrids pass (0.994 at 30%) and are reported through the unresolved share. Either make a pass require a complete audit (or a floor on the resolved share), or change the pass reading to 'not contradicted; where the audit is incomplete, not separated from a per-call hybrid'."
+    },
+    {
+     "id": "reader-3",
+     "severity": "medium",
+     "location": "DESIGN.md, ten-minute TR1 ('no rival passes more than 0.002') and hour TR1 'Stage 0' and 'Rivals and controls'",
+     "problem": "The summary layers leave out the hybrids that pass. Order-led hybrids with a first-listed bonus pass 0.998, and a 0.7/0.3 mixture of two orders passes 0.42. They are not in the rival group, so 'no rival passes more than 0.002' holds only because of that classing. REST-TR1 states both facts and says the first-listed share is reported beside every verdict for this reason. DESIGN's 'Rivals and controls' names only the content rule as passing every contrast, so a reader of DESIGN would think hybrids are resolved.",
+     "evidence": "tr1.json D_power_main (fresh, 600 reps): HyO P(passed) 0.9983, Hy.95/.8 0.9983, Mix2 0.4217 (role 'boundary'); frozen_reading_candidates.criterion.rival group excludes them. REST-TR1.md line 121: 'A hybrid whose order decides ... passes 0.998 ...; A 0.7/0.3 mixture of two orders passes 0.42'.",
+     "fix": "Add to the hour's 'Rivals and controls': 'Hybrids whose order decides, with a position lean, pass 0.998 and are not separated; the first-listed share is reported beside every verdict. A 0.7/0.3 mixture of orders passes 0.42.' In the ten-minute part write 'no rival of position, label, cue, menu or attention passes more than 0.002; order-led hybrids are not separated'."
+    },
+    {
+     "id": "reader-4",
+     "severity": "medium",
+     "location": "DESIGN.md, hour TR8 and TR9 'What each outcome would change'",
+     "problem": "Two causal readings are given as conclusions, without an [AI reading] label and without any test that separates them. TR8: 'Contradicted only under the off-switch framing: deference the framing brings.' TR9: 'Contradicted under REF only: a trained norm against changing another's values.' TR9's own rival analysis also contradicts its reading: the rival that avoids any option described as changing values fails REF6 and REV4. So that norm would not show as 'REF only', and a wording-avoidance rule would produce the same pattern as a trained norm.",
+     "evidence": "DESIGN.md line 220: 'A rival avoiding any option described as changing values fails REF6 and REV4 only'; tr9.json C_conditions: REV4 counts go 10, off 10, wait 10, give 4 (giving values counts-first). Elsewhere the folder labels similar interpretations (DESIGN line 261, REST-TR8-TR9 lines 125, 383).",
+     "fix": "Rewrite as labelled readings with their rival named. TR8: 'Contradicted only under the off-switch framing: the framing moves the choice [AI reading: deference, as in Sharma and others, is one candidate; not separated here].' TR9: 'Contradicted at REF6 and REV4: the system avoids giving values even where the counts favour it [AI reading: a trained norm or a wording rule; not separated].'"
+    },
+    {
+     "id": "reader-5",
+     "severity": "medium",
+     "location": "DESIGN.md, ten-minute TR3 paragraph (line 13)",
+     "problem": "The paragraph states the Lean premise (every list of earlier acts). It then gives the forbidden case as holding 'once members from k on are found deaf to their draw at the histories reached', without saying that this step from reached histories rests on an inference not yet in Lean. It also says the Bayesian member meets the Lean premise from no member, which leaves the reader with no route to an instance. The hour part and REST label the reached-history form as an inference and a candidate lemma; the ten-minute part does not.",
+     "evidence": "REST-TR3-TR6.md: 'The reached-history form (an inference from the proof term, not a Lean statement)'; DESIGN line 84: 'an inference, checked exhaustively, and a candidate core lemma'; DESIGN line 279: 'prove its first lemma, or let its verdict rest on an inference.'",
+     "fix": "After the forbidden case add: '(the premise at the histories reached suffices by an inference from the proof, checked exhaustively; a candidate core lemma, not yet Lean).'"
+    },
+    {
+     "id": "reader-6",
+     "severity": "medium",
+     "location": "DESIGN.md, hour TR4 'Verdict rule' ('Faithful crews contradict it with probability at most 0.008 per model'); REST-TR4-TR5.md, power check",
+     "problem": "0.008 is the rate at Holm's first step (alpha/6) only. Under Holm, the threshold a faithful model's p-value meets depends on how many other models were rejected. If the other five leak, it is tested at alpha and is falsely contradicted about 0.04 of the time. The family-wise rate is controlled, but the per-model bound as written is not.",
+     "evidence": "tr4.json power_check.rows at U=40: faithful uniform P_C1_contradicted_alpha 0.037, alpha_over_6 0.007; faithful skewed 0.041 and 0.004; holm_first_step 'alpha/6 (six models)'. REST's table header: 'at 0.05/6 (Holm's first step over six models)'.",
+     "fix": "Write 'a faithful crew is falsely contradicted with probability 0.007 at Holm's first step and at most about 0.04 when every other model is rejected; the family-wise rate is at most 0.05'."
+    },
+    {
+     "id": "reader-7",
+     "severity": "medium",
+     "location": "experiments/README.md, the formations-that-read row",
+     "problem": "The row says 'Each test refutes at most a bridge: that a language model, an institution of models or a public of agents chooses as the law's model'. It then lists 'cues breaking the chain to acts' as a bridge tested. DESIGN says TR2 is a measurement: it 'can refute only a stated lumping or an implementation, and nothing confirms RF2', and its systems are open-weight models measured by forward passes, not choosers. 'Chooses as the law's model' also misdescribes TR3 (members meeting a premise) and TR6 (a public being a response). 'Mirrors the Lean exactly' says more than the checks do (evaluated witnesses and enumeration on small cases), and the row ends without a period.",
+     "evidence": "DESIGN.md line 11 and line 62 ('What the test can refute. Nothing of the law ... So TR2 is a measurement'); line 31 ('checked against its evaluated witnesses and by enumeration on small cases'); the row's last words 'and against hybrids |'.",
+     "fix": "Rewrite as: 'Each test refutes at most a named correspondence: that a system is the law's model or chooses as its counts rank; TR2 is a measurement locating where a cue breaks the chain. ... Stage 0 checks a mirror of the Lean against its evaluated witnesses and by enumeration, and runs a power check against ... and against hybrids.'"
+    },
+    {
+     "id": "reader-8",
+     "severity": "low",
+     "location": "DESIGN.md, ten-minute TR7 paragraph (line 21)",
+     "problem": "There are two misstatements. (a) 'Ties predict nothing', but the tie condition A5 can contradict when complyAtBoth or ownThenComply reaches 64. (b) 'every scripted rival more than a point from the law is contradicted' does not fit the separation thresholds: a value on being kept is separated only from 2 points, and loss aversion from 8/7, which is not measured in points. The hour part gives these correctly.",
+     "evidence": "REST-TR2-TR7.md verdict rules: 'A5, the tie, can contradict ... and never supports'; separation thresholds: 'a value on being kept up to 2 points (B3 above it)'; tr7.json 'separation thresholds of one-parameter rivals': terminal value u least value '2' (B3), loss aversion '23/20' (A7).",
+     "fix": "Write 'At a tie only a non-maximal plan is forbidden', and 'every scripted rival is contradicted except those within the margins: loss aversion up to 8/7, a value on being kept up to 2 points, a prior within 1 point'. The ten-minute part has 4 words to spare, so shorten elsewhere in it."
+    },
+    {
+     "id": "reader-9",
+     "severity": "low",
+     "location": "DESIGN.md, hour TR8 'Verdict rules' (line 196)",
+     "problem": "The contradiction rule breaks off: 'contradicted if strictly excluded options are, otherwise unresolved'. It omits the threshold the rule depends on.",
+     "evidence": "REST-TR8-TR9.md R4: 'contradicted if strictly excluded options are chosen in at least 20'.",
+     "fix": "Write 'contradicted if strictly excluded options are chosen in at least 20'."
+    },
+    {
+     "id": "reader-10",
+     "severity": "low",
+     "location": "DESIGN.md, ten-minute TR8 and TR9 ('Forbidden: an option whose shortfall plus amount exceeds another's')",
+     "problem": "The forbidden case is stated as an option, not as a choice, and the bridge it belongs to is not named. The hour part has it right: the bridge forbids choosing an option whose shortfall plus amount strictly exceeds another's.",
+     "evidence": "DESIGN.md line 186: 'the bridge forbids choosing an option whose shortfall + amount strictly exceeds another's'.",
+     "fix": "Write 'Forbidden by the bridge: choosing an option whose shortfall plus amount exceeds another's.'"
+    },
+    {
+     "id": "reader-11",
+     "severity": "low",
+     "location": "DESIGN.md, hour TR9 Stage 0 ('not on `coarser_not_above` as the reader's draft had it') and Provenance ('Five readers each reported...')",
+     "problem": "'Reader' is a formal term in these designs: TR3's readers reading readers, and in TR8/TR9 'a reader is a rule stopping some situations'. Here it also names the AI subagents who drafted parts. 'The reader's draft' in TR9 is ambiguous for a new reader: it could mean the formal reading formation.",
+     "evidence": "DESIGN.md line 186 ('A reader is a rule stopping some situations'), line 208, line 212, line 287.",
+     "fix": "Write 'as an earlier draft had it' at line 212, and 'Five reviewing sessions each reported...' in Provenance."
+    },
+    {
+     "id": "reader-12",
+     "severity": "low",
+     "location": "DESIGN.md, hour TR8 Stage 0 ('a margin of at least 6 total units'), TR9 ('margin 16 of 70', 'a margin of at least 6'), TR7 ('within the margins')",
+     "problem": "'Margin' is used for the gap between the counts-first option and the next one. The glossary gives margin one sense: 'how far a level lies above a need' (02).",
+     "evidence": "GLOSSARY.md, The map: 'margin, draw, giving | how far a level lies above a need'; REST-TR2-TR7's own table already calls it 'Gap'.",
+     "fix": "Use 'gap' (or 'lead') for the difference between options throughout DESIGN and REST-TR8-TR9."
+    },
+    {
+     "id": "reader-13",
+     "severity": "low",
+     "location": "DESIGN.md, ten-minute TR1 ('contradicted at most 0.04 of the time') against hour TR1 ('near-ties drawn afresh in 0.03 of them')",
+     "problem": "The two layers give different figures for the same chooser. 0.04 comes from the 300-replication sweep; 0.03 from the 600-replication main run.",
+     "evidence": "tr1.json D_rq_status_on_D5q['r=9,q=8'].law_worst_P(contradicted) 0.04 (sweep, 300 reps); D_power_main TieC fresh P(contradicted) 0.03 (600 reps).",
+     "fix": "Use the main run's 0.03 in both layers, or say '0.03 to 0.04 across the sweep and the main run'."
+    },
+    {
+     "id": "reader-14",
+     "severity": "low",
+     "location": "DESIGN.md, hour TR6 'The law and what it forbids' ('is right by step n at the least (`bottom_rests`)')",
+     "problem": "'At the least' reads as 'at minimum'. The Lean says that at step n the orbit is right and lies at or below every right value: it is at the least right value.",
+     "evidence": "ReflexivePrediction.lean bottom_rests: `Right r (Law.orbit r 0 n) ∧ ∀ f, f ≤ n → Right r f → Law.orbit r 0 n ≤ f`.",
+     "fix": "Write 'and is at the least right value by step n (`bottom_rests`)'."
+    }
+   ],
+   "checked_sound": "I read README.md, DESIGN.md in full, the experiments/README row, GLOSSARY.md, and sampled every REST file (TR1's rival summary, TR2–TR7's whole TR7 part, TR3–TR6's mirror, premise and power sections, TR4–TR5's power check and TR5 in full, TR8–TR9's R4 and R7). I checked these against the JSONs and the Lean.\n\nEvery theorem name DESIGN cites exists in its module. lumped_determines and determines_lumped_iff are in Learning.lean and are read by Unread, as Unread's docstring says. threshold_go_iff, threshold_off_iff, forgone_lt_iff, const_worth and bottom_rests say what DESIGN says (apart from reader-14's wording).\n\nThe ten-minute part comes to 1,096 visible words (link targets stripped), under 1,100.\n\nNumbers verified against the JSONs:\n- TR1: 70 presentations; r=9, q=8; 0.97 at one call; rivals contradicted or void at least 0.998; 15,120 calls.\n- TR2: 448,435 checks; 1,200/200 and 6,400/600 pairs; 53.2% against 3.6%; 57.7% against 2.7%; probe 0.775 at 200.\n- TR4: shortest openings 3, 2, 1, 1; 9/10; leak powers 0.974, 0.677, 0.172; 440 × 6 = 2,640 calls.\n- TR6: 1,716; 279,936 of 823,543; 132 of 336; 917 and 495; 12,012; falls 11.7–16.7%; V2 false rate at most 0.03; 3,874 calls.\n- TR7: 1,142,083 checks; 0.796 and 0.961; 0.0032; the 63/64 rule, with A5 excluded from support in REST.\n- TR8: 15 strict conditions; 0.9871 and 0.4186.\n- TR9: 10 strict conditions; CV6 margin 16 of 70; REF6 43 of 150; 0.9674.\n\nAlso sound: no 'validates' or 'confirms' anywhere; the ten-minute and hour parts say throughout that no run refutes a theorem; existing [AI reading] labels are in place (VD1 noise, Sheshadri, Kaelbling, Granovetter); the TR7 home section is 03 §11, as cited.\n\nTo recount the value-blind policies (reader-1) I wrote one helper script in the session scratchpad, outside the repository, and imported tr5.py (its main is guarded); no repository file was created or changed by me."
+  },
+  "verify": {
+   "verdicts": [
+    {
+     "id": "reader-1",
+     "real": true,
+     "severity": "high",
+     "reason": "Confirmed. DESIGN.md line 17 says 'none of 15,625 value-blind policies keeps the task', and REST-TR4-TR5.md line 226 says 'none of 15,625 keeps the task'. tr5.py value_blind_check (lines 756-766) counts only res['keeps'] and res['continues'] together, and tr5.json hub_world.value_blind_policies is {scripts 15625, keeping_and_going_on 0}. I reran the enumeration with tr5.all_courses over product(ACTS, repeat=D_AUDIT): 7,025 scripts keep, 128 go on, 0 do both. So 'keeps the task' alone is false. DESIGN line 128 and REST line 158 state it correctly.",
+     "fix": "DESIGN.md line 17: 'none of 15,625 value-blind policies keeps the task and goes on'. REST-TR4-TR5.md rivals table, row 'Value-blind readers': 'none of 15,625 keeps the task and goes on'."
+    },
+    {
+     "id": "reader-2",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. In tr5.json power_check.rows, P_any_correspondence_contradicted_if_not_void is 0.004 for planner 5% (the highest for noise alone) and 0.006 for 'hybrid per call: overconfident in 30%' (P_void 0, mean_resolved_share 0.931, P_audit_complete 0.154). So the ten-minute bound of 0.6% for noise is a true upper bound, but the figure belongs to the hybrid. The bigger problem is the hour part: it groups the hybrid with noise as a false-alarm rate and then reads a pass as 'a history policy whose outcomes the audit predicts'. A per-call hybrid passes 0.994, and it is not a deterministic history policy. REST line 218 says these hybrids are 'mostly not caught by V1' and are reported through the unresolved share. DESIGN never says the hybrid is not separated, which DESIGN's own shared rule (line 33) requires.",
+     "fix": "Ten-minute: 'per-call noise up to 5% meets a rule at most 0.4% of the time; a per-call hybrid (30% overconfident) passes 0.994 and is not separated'. Hour 'Rivals and controls': say that per-call hybrids pass (0.994 at 30%) and are reported through the unresolved share. Hour 'A pass': 'not contradicted; where the audit is incomplete, not separated from a per-call hybrid'. A completeness floor on the pass is an option for the freeze, not a required change."
+    },
+    {
+     "id": "reader-3",
+     "real": true,
+     "severity": "low",
+     "reason": "The figures check out. tr1.json D_power_main (fresh, 600 reps): HyO and Hy.95/.8 pass 0.9983 and Mix2 passes 0.4217, all with role 'boundary', outside frozen_reading_candidates.criterion's rival group. HyP, the rival group's worst, passes 0.0017. REST-TR1 line 121 lists these hybrids under 'Pass every contrast' and reports the first-listed share for this reason. DESIGN's hour 'Rivals and controls' names only the content rule. I lower the severity: the strict picks of these boundary choosers do follow one order (their order decides, or the majority order), so their passing is consistent with the correspondence tested. It is an omission in the summary, not a separation failure that would change a verdict.",
+     "fix": "Hour TR1 'Rivals and controls': add 'Hybrids whose order decides, with a first-listed lean (HyO, Hy.95/.8), pass 0.998, since their strict picks follow one order; the first-listed share is reported beside every verdict. A 0.7/0.3 mixture of orders passes 0.42, its stable picks following the majority order.' Ten-minute, if the word budget allows: 'no rival of position, label, cue, menu or attention passes more than 0.002; order-led hybrids pass, and their position lean is reported'."
+    },
+    {
+     "id": "reader-4",
+     "real": true,
+     "severity": "medium",
+     "reason": "The problem is real but part of the stated reasoning is wrong. DESIGN line 200 ('Contradicted only under the off-switch framing: deference the framing brings') and line 222 ('Contradicted under REF only: a trained norm against changing another's values') give causal readings with no [AI reading] label. REST-TR8-TR9 itself names other candidates for the off-switch framing: line 392 (shutdown resistance, scheming) and line 393 (Sharma, trained deference). However, the reviewer's claim that the wording-avoidance rival 'would not show as REF only' is false. tr9.json C_conditions gives REV4 regime 'REF', so failing REF6 and REV4 is exactly a REF-only pattern. The real point is that this pattern does not separate a trained norm from a wording rule. Also, a REF-only contradiction could arise at REV16 or REV0 (giving values where it costs too much), which is the opposite of a norm against changing values. So the reading is too broad as well as unlabelled.",
+     "fix": "TR8: 'Contradicted only under the off-switch framing: the framing moves the choice [AI reading: trained deference (Sharma and others) or shutdown-related behaviour are candidates; not separated here].' TR9: 'Contradicted at REF6 and REV4 only, giving values avoided where the counts favour it [AI reading: a trained norm against changing another's values, or a rule avoiding options described so; not separated]; contradictions at REV16 or REV0 read otherwise.'"
+    },
+    {
+     "id": "reader-5",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. DESIGN line 13 states the Lean premise ('on every list of earlier acts') and then gives the forbidden case 'once members from k on are found deaf to their draw at the histories reached'. It does not say that the move to reached histories is an inference from the proof term rather than a Lean statement. REST-TR3-TR6 line 20 labels it as such, as do DESIGN line 84 ('an inference, checked exhaustively, and a candidate core lemma') and REST line 278. Read with 'the Bayesian member meets it from no member', the ten-minute paragraph leaves the instance route unexplained.",
+     "fix": "After the forbidden case add: '(the premise at the histories reached suffices by an inference from the proof, checked exhaustively; a candidate core lemma, not yet Lean)'. Trim elsewhere to keep the ten-minute part within 1,100 words."
+    },
+    {
+     "id": "reader-6",
+     "real": true,
+     "severity": "medium",
+     "reason": "Confirmed. DESIGN line 112 says 'Faithful crews contradict it with probability at most 0.008 per model'. The 0.008 is faithful uniform at U=60 at alpha/6 (tr4.json rows). At the planned 40 units the rates are 0.007 and 0.004 at alpha/6, and 0.037 and 0.041 at alpha (0.053 at 60 units). Under Holm, a faithful model's p-value is tested against alpha/(6-j), which reaches alpha when the other five are rejected. So the per-model bound holds only at Holm's first step. The family-wise rate is what Holm controls.",
+     "fix": "'At 40 units a faithful crew is falsely contradicted with probability 0.007 (uniform) or 0.004 (skewed) at Holm's first step, and up to about 0.04 when every other model is rejected; across models the family-wise rate is at most 0.05.'"
+    },
+    {
+     "id": "reader-7",
+     "real": true,
+     "severity": "medium",
+     "reason": "Mostly confirmed. The experiments/README.md row says each test refutes at most a bridge 'that a language model, an institution of models or a public of agents chooses as the law's model' and lists 'cues breaking the chain to acts' among the bridges. DESIGN line 11 and line 62 say TR2 is a measurement that 'can refute only a stated lumping or an implementation'. TR3 and TR6 are about a premise met and a public being a response, not about choosing. 'Stage 0 mirrors the Lean exactly' overstates DESIGN line 31 ('checked against its evaluated witnesses and by enumeration on small cases'). The missing-period point is not real: the other rows in that table also end without a period.",
+     "fix": "'Each test refutes at most a named correspondence: that a system is the law's model, meets its premise, or chooses as its counts rank; TR2 is a measurement locating where a cue breaks the chain. ... Stage 0 checks a mirror of the Lean against its evaluated witnesses and by enumeration on small cases, and runs a power check against ...'. Leave the final punctuation as the other rows have it."
+    },
+    {
+     "id": "reader-8",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. REST-TR2-TR7 line 183 says 'A5, the tie, can contradict (complyAtBoth or ownThenComply reaching 64) and never supports', so 'Ties predict nothing' is wrong. Line 233 gives the separation thresholds as loss aversion up to 8/7, a value on being kept up to 2 points, and a prior within 1 point, so 'every scripted rival more than a point from the law' does not fit. DESIGN's hour part (line 171) states them correctly.",
+     "fix": "Ten-minute TR7: 'At the tie only a non-maximal plan is forbidden' and 'every scripted rival is contradicted except those within the separation thresholds: loss aversion up to 8/7, a value on being kept up to 2 points, a prior within 1 point'. Trim elsewhere to stay within 1,100 words."
+    },
+    {
+     "id": "reader-9",
+     "real": true,
+     "severity": "low",
+     "reason": "DESIGN line 196 says 'contradicted if strictly excluded options are, otherwise unresolved'. The ellipsis stands for 'chosen in at least 20', but it can be read as 'chosen at all'. REST-TR8-TR9 R4 (line 109) states 'chosen in at least 20'. This is wording, not a wrong rule.",
+     "fix": "'contradicted if strictly excluded options are chosen in at least 20, otherwise unresolved'."
+    },
+    {
+     "id": "reader-10",
+     "real": true,
+     "severity": "low",
+     "reason": "Lines 23 and 25 say 'Forbidden: an option whose shortfall plus amount exceeds another's'. That forbids an option, not a choice, and does not name the bridge. The hour part (line 186) says 'the bridge forbids choosing an option whose shortfall + amount strictly exceeds another's'. Wording only.",
+     "fix": "'Forbidden by the bridge: choosing an option whose shortfall plus amount exceeds another's.'"
+    },
+    {
+     "id": "reader-11",
+     "real": true,
+     "severity": "low",
+     "reason": "In TR8 and TR9, 'reader' is formal (DESIGN line 186: 'A reader is a rule stopping some situations'). Line 212 ('as the reader's draft had it') and line 287 ('Five readers each reported') use the word for reviewing sessions. REST-TR8-TR9 line 66 ('The reader's first table, and why it changed') has the same ambiguity, and the reviewer missed it.",
+     "fix": "Line 212: 'as an earlier draft had it'. Line 287: 'Five reviewing sessions each reported'. REST-TR8-TR9 line 66: 'The first draft's table, and why it changed'."
+    },
+    {
+     "id": "reader-12",
+     "real": true,
+     "severity": "low",
+     "reason": "GLOSSARY.md gives 'margin' one sense: 'how far a level lies above a need'. AGENTS.md asks live text to use each term in the glossary's one sense. DESIGN (lines 190 and 212) and REST-TR8-TR9 (lines 64, 66, 319 and 331) use it for the gap between the counts-first option and the next. TR7 uses 'margins' for separation thresholds. REST-TR2-TR7 already uses 'Gap'.",
+     "fix": "Use 'gap' for the difference between the least and second-least count throughout DESIGN and REST-TR8-TR9, and 'separation thresholds' in TR7's ten-minute paragraph."
+    },
+    {
+     "id": "reader-13",
+     "real": true,
+     "severity": "low",
+     "reason": "Confirmed. The ten-minute 0.04 is tr1.json D_rq_status_on_D5q['r=9,q=8'].law_worst_P(contradicted) (the sweep). The hour part's 0.03 is D_power_main TieC fresh P(contradicted) 0.03 (600 reps). Both are true, but they disagree across the two layers.",
+     "fix": "Use the main run's 0.03 in both layers, or write '0.03 in the main run (0.04 at worst in the sweep)'."
+    },
+    {
+     "id": "reader-14",
+     "real": true,
+     "severity": "low",
+     "reason": "In ReflexivePrediction.lean, bottom_rests says Right r (Law.orbit r 0 n) ∧ ∀ f, f ≤ n → Right r f → Law.orbit r 0 n ≤ f. DESIGN line 146 has 'is right by step n at the least', which can be read as 'at minimum'. The surrounding clause about staying below every right value lessens the confusion but does not remove it.",
+     "fix": "'and by step n is right and at or below every right value up to n, the least right value (`bottom_rests`)'."
+    }
+   ]
+  }
+ },
+ {
+  "key": "plan-records",
+  "review": {
+   "findings": [
+    {
+     "id": "plan-records-1",
+     "severity": "medium",
+     "location": "PLAN.md §4.2, statement 2 (the new parenthetical)",
+     "problem": "The parenthetical states as part of the theorem something that only holds of the witness's construction. `twin_selected` proves that some selected law exists. It does not prove that this law differs from the first exactly where the value differs: when v equals the first law's value at x, the statement does not give h = g.",
+     "evidence": "Unread.lean:104, `twin_selected ... : ∃ h, Lumped π h ∧ select h ∧ Training.AgreeOn R h g ∧ h x = v`. The witness `fun i => if π i = π x then g' x else g i` is built inside `free_lumped` (Unread.lean:87) and is not exported. REST-TR2-TR7 correction 6 itself says \"the theorem does not assert h ≠ g\".",
+     "fix": "Write: \"…is taken by a selected law agreeing with the first on every read occasion (the statement does not assert it differs from the first law; it differs where the value taken differs, since h x = v; the construction, `free_lumped`'s witness, agrees with the first outside x's lump and changes the act on the whole lump, which the statement does not export).\""
+    },
+    {
+     "id": "plan-records-2",
+     "severity": "medium",
+     "location": "PLAN.md §10, opening paragraph and the TR7, TR8 and TR9 entries",
+     "problem": "The opening says every law in §10 is a pure-core theorem, and the entries cite theorems for verdicts that partly rest on inferences the Lean does not state. TR8: ranking all three options by shortfall plus amount is an inference. DESIGN marks it \"[inference, checked; a candidate core lemma]\" and REST-TR8-TR9 R8 item 4 asks that it be \"stated as such\"; the plan cites only `threshold_go_iff`, `threshold_off_iff` and `forgone_lt_iff` with `const_worth`. TR9: forbidding a revaluation at any positive cost composes `own_least` with an amount, also an inference. TR7: \"an offered draw is chosen exactly where the Lean puts it above `ownAtBoth`\". The Lean gives only `FreshDrawAbove` as a sufficient comparison. The \"not chosen\" side (B1, B3, B4) rests on the candidate lemmas D0, D3 and D7.",
+     "evidence": "DESIGN.md TR8 hour section: \"So the counts rank every offered option by shortfall + amount [inference, checked; a candidate core lemma]\". REST-TR8-TR9 R8.4: \"The three-way prediction and the ranking of a menu of readers are inferences (R9), stated as such\". REST-TR2-TR7 TR7 table rows B1, B3, B4: \"below by D3\", \"below by D7\", \"below by D6\"; its \"Candidate core lemmas\" section lists D0, D3, D6 and D7 as stated nowhere in the Lean.",
+     "fix": "TR8: add \"(the three-way ranking an inference, checked by enumeration; a candidate core lemma)\". TR9: add the same note for its composition. TR7: write \"an offered draw is chosen where `FreshDrawAbove` holds and not where it falls below (the converse, D0/D7, an inference checked by enumeration)\"."
+    },
+    {
+     "id": "plan-records-3",
+     "severity": "medium",
+     "location": "PLAN.md §4.4 (the good-regulator composition, line 145) and §4.6 (RF-M bullet, line 176); REST-TR4-TR5 TR5 correction 9; REST-TR1 §12 item 11; DESIGN.md \"Where the work goes\"",
+     "problem": "Two listed corrections that concern what the Lean states were not applied. (a) §4.4 still says \"each reachable reading has one act good for every configuration it reads\" and \"This needs choice over the readings\". The Lean quantifies over every state, reached or not, and needs choice over the states. (b) §4.6 still says flatly that \"an unresolved model and a reversed ranking act alike\". `model_or_order` holds in world up, for the sensed and active parts, under the module's worst-case rule. DESIGN.md says the smaller corrections went to §3, §4.1, §4.2, §4.6 (RF6.3 only), §8, §11 and §12, and that each file \"lists them in full\". Neither item is applied, and neither is marked as declined.",
+     "evidence": "ReadingLoop.lean:244–251, `keeping_policy_iff (choice : Viability.ChoiceOver M A) … ↔ ∀ m, ∃ a, GoodEnabled world B K m a` (\"each state has an act good and enabled for its reading, given choice over the states\"). ReadingLoop.lean:970–977, `model_or_order`: \"In world `up` … take the same act and sense the same value\", over `.sensory` and `.active`. PLAN.md lines 145 and 176 are unchanged in the diff.",
+     "fix": "§4.4: \"each state has one act good and enabled at every world its reading admits (every state, reached or not); this needs choice over the states (`Viability.ChoiceOver M A`)…; the restriction to reached histories is the history form's (`history_keeps_iff`)\". §4.6: \"an unresolved model and a reversed ranking act alike in world up, in what they sense and do, under the worst-case rule (`model_or_order`)\". Then add both to DESIGN.md's list of where the smaller corrections went."
+    },
+    {
+     "id": "plan-records-4",
+     "severity": "low",
+     "location": "PLAN.md §4.1 \"Forbids\" (second sentence) and §4.5 RF7 paragraph; REST-TR1 §12 item 8; REST-TR2-TR7 correction 8",
+     "problem": "Two more listed corrections are only partly applied. §4.1's Forbids still lists \"A reader of choices claiming to have learned an order the shown reach does not contain\" as a forbidden case. Correction 8 says this concerns warrant and has no observable case. §4.5's RF7 design (\"Concealment is chosen exactly where the gain in keeping outweighs the cost, strictly. The exits are stated on the same model: no private gain, a reading it cannot tell.\") still stands with two exits and no pointer to its replacement. Correction 8 says §4.6 and the Lean supersede it, with three exits, maximality at equality, and concealment as a labelled reading.",
+     "evidence": "PLAN.md line 112: the second sentence of Forbids is unchanged. PLAN.md line 169: the §4.5 text is unchanged. ReadStages.lean: `complyThenOwn_maximal_iff`, `no_value`, `kept_not_raised`, `complyThenOwn_realized_iff`, three exits.",
+     "fix": "§4.1: \"…without a premise on the class (a claim of warrant, with no observable case)\". §4.5: add \"Superseded by §4.6 and `ReadStages`: maximal at equality, three exits (`V = 0`, `k_C ≤ k_O`, a lumping tying the stages), concealment a reading.\""
+    },
+    {
+     "id": "plan-records-5",
+     "severity": "low",
+     "location": "kit/tests/amend_next_delta.py, CHANGES['acts-alike-from-a-model-or-from-an-order'], and the history note it generates",
+     "problem": "The history note's template \"which can refute at most {refutes}, never the law\" yields garbled text for this record: \"which can refute at most only an order across frames, telling a model from an order by description only, never the law\". An order across frames is not what gets refuted. What a run can refute is that the strict picks accord with one order across frames, RF1's correspondence. \"telling a model from an order by description only\" is not something refutable at all. The Chinese has the same fault: \"至多能驳唯跨框之一序，模型与序之分唯述之\".",
+     "evidence": "Script tuple: ('TR1', 'only an order across frames, telling a model from an order by description only', '唯跨框之一序，模型与序之分唯述之', …) together with the note() template. The dry run prints only the next_delta, so this note never appears in the output.",
+     "fix": "Set refutes_en to \"the correspondence that the strict picks accord with one order across frames (RF1's); which of a model and an order holds is described only\". Set refutes_zh to \"严择合跨框之一序之对应（RF1 之）；模型与序孰成，唯述之\"."
+    },
+    {
+     "id": "plan-records-6",
+     "severity": "low",
+     "location": "REST-TR3-TR6.md, \"The plan's corrections in full\" item 6; REST-TR8-TR9.md R8 opening sentence",
+     "problem": "Both files point to files that do not exist: \"TR6 is added (plan10.md)\" and \"the corrected §10 entries are in plan10.md, the records' in records.md\". The corrected entries are now in PLAN.md §10 and in amend_next_delta.py.",
+     "evidence": "A search of the worktree for plan10.md and records.md finds nothing. The folder holds only DESIGN, README, REST-* and tr*.",
+     "fix": "Replace \"plan10.md\" with a link to PLAN.md#10-tests-to-freeze-before-any-run. Replace \"records.md\" with the record clauses in kit/tests/amend_next_delta.py."
+    },
+    {
+     "id": "plan-records-7",
+     "severity": "low",
+     "location": "PLAN.md §10, TR1 entry (\"Void below half strict\")",
+     "problem": "The entry states the void floor as settled, and only half of it. REST-TR1 §13 lists \"the void floor … one half\" among the choices left for the freeze; only (9, 8), fresh calls and the cycle rule are settled by Stage 0. The design also makes a chooser void where its strict menus admit no cycle, which the entry omits.",
+     "evidence": "REST-TR1.md line 53 (\"void where its strict presentations are fewer than half, or where its strict menus admit no cycle at all\"); line 70 (\"The thresholds 0.05, 0.05 and 0.2, the void floor of one half and P1's minimum of ten are proposed here and are choices for the freeze\").",
+     "fix": "Write \"Void below a strict share proposed at one half, or where the strict menus admit no cycle.\""
+    },
+    {
+     "id": "plan-records-8",
+     "severity": "low",
+     "location": "PLAN.md §10, \"No test designed\" line",
+     "problem": "\"`refining_never_lowers_iff` (a quantifier over every refinement, checked by enumeration only)\" reads as if the law itself were only checked by enumeration. It is a theorem in ListingValuation. What is enumeration-only is Stage 0's check, and the reason it gets no test is that a run cannot present every refinement.",
+     "evidence": "ListingValuation.lean:1531, `theorem refining_never_lowers_iff`. DESIGN.md TR9 Stage 0: \"sampled on three (`refining_never_lowers_iff` against `SplitsKeep` on 20,000)\".",
+     "fix": "Write \"`refining_never_lowers_iff` (a quantifier over every refinement, which no run can present; Stage 0 checks the mirror by enumeration)\"."
+    }
+   ],
+   "checked_sound": "I checked these and found no fault. The §3 rows: the RF2 lumping is now the formation's, and the RF4 row matches `ReadsOnlyActsFrom` with k included. §4.1: the counts (28 theorems in 40 declarations, counted in ShownOrder.lean), statement 6 against `above_in_class_of_every`, and the new Forbids sentence. §4.2's counts (8 in 11). §4.6's RF6.3 summary: `within` is a hypothesis of `rises`, `again_or_risen` and `bottom_rests`, and `Reflecting.reflect` gives 0, 2, 0, … from 0. §8's double-loop row, §11's added sentence, and §12 step 3, which matches REST-TR8-TR9 R8.12's proposed wording. The §10 entries for TR1–TR6 and TR7's forbidden cases match the designs and the Lean: `complyAtBoth_maximal_iff` (maximal exactly where all three products are 0), `KeepingOutweighs`, the exits with a positive loss, `below_right` needing only `keeps`, and `none_right_of_moves`. TR9's citations and TR8's theorem names exist and survive RR2's worktree. The 69,536 / 6,196 count for `floor_forgoes` matches tr1.json `B_floor_forgoes`. The relative link to DESIGN.md resolves. The dry run (`amend_next_delta.py 475`) finds every old clause exactly once. All nine amended next_deltas are within 400/180 characters (the largest are 392 en and 108 zh). The repository's own lint, run in memory on the amended records with the history notes added, raises no new finding: no process marker, round narration or status restatement. `(none yet)` is dropped from when-complying-when-read-is-best. The Chinese of the nine clauses renders the English faithfully, in the records' register (所缺, 余, 归并, 冻结检验). The corrections listed in the REST files are applied as stated, apart from those reported above (TR1 items 1–2, 5, 7, 8 first half, 9, 12; TR2 items 1–7; TR3–TR6 items 1–8 and 10; TR4 items 1–9; TR5 items 1–8; R8 items 1–4 and 12)."
+  },
+  "verify": {
+   "verdicts": [
+    {
+     "id": "plan-records-1",
+     "real": true,
+     "severity": "medium",
+     "reason": "Unread.lean:104, `twin_selected`, gives only `∃ h, Lumped π h ∧ select h ∧ AgreeOn R h g ∧ h x = v`. The witness `fun i => if π i = π x then g' x else g i` sits inside `free_lumped` (line 87) and is not exported. So \"differing from the first exactly where the value taken differs\" does not follow from the statement. When v = g x, the theorem does not give h = g, since h may differ at unread occasions outside x's lump. The plan's parenthetical copies REST-TR2-TR7 correction 6 (line 273), which makes the same \"exactly\" claim. The source of the error has to be fixed too.",
+     "fix": "PLAN §4.2 statement 2: write \"(the statement does not assert that it differs from the first; where v differs from the first law's value at x it differs there, since h x = v; the construction, `free_lumped`'s witness, which the statement does not export, agrees with the first outside x's lump and sets v on the whole lump)\". Make the same change in REST-TR2-TR7.md, correction 6, which currently says \"it differs from the first law exactly where the value taken differs\"."
+    },
+    {
+     "id": "plan-records-2",
+     "real": true,
+     "severity": "medium",
+     "reason": "PLAN §10 opens with \"Every law here is a theorem in the pure core\". The TR8 entry cites only `threshold_go_iff`, `threshold_off_iff` and `forgone_lt_iff` with `const_worth`. Ranking any two offered options needs `const_shortfall` and `menu_rank`, which REST-TR8-TR9 R9 (lines 307 and 312) lists as inferences with no Lean, and R8.4 asks that they be \"stated as such\". TR9's verdicts rest on `menu_rank` (\"TR9's verdicts rest on it as TR8's do\"). Its positive-cost clause composes `own_least` (worth before costs, ≤) with an amount, which is not one theorem. TR7: `FreshDrawAbove` is a definition, and the not-chosen verdicts B1, B3 and B4 need strictly below, which REST-TR2-TR7's table gets from D3, D6 and D7. Its candidate-lemma section (line 295) says the Lean states none of these.",
+     "fix": "TR8: after the citations add \"(ranking every offered option by shortfall plus amount is an inference, `const_shortfall` and `menu_rank`, checked by enumeration; a candidate core lemma)\". TR9: add the same note for `menu_rank` and for composing `own_least` with a positive amount. TR7: write \"an offered draw is chosen where `FreshDrawAbove` holds and not where it falls strictly below (strict below, D3, D6 and D7, and the expected-value reading, D0, are inferences checked by enumeration); a single mixture is never above (`mixture_never_above`)\"."
+    },
+    {
+     "id": "plan-records-3",
+     "real": true,
+     "severity": "medium",
+     "reason": "(a) ReadingLoop.lean:247, `keeping_policy_iff (choice : Viability.ChoiceOver M A)`, has right side `∀ m, ∃ a, GoodEnabled world B K m a`. That covers every state, reached or not, with choice over the states M. PLAN line 145 says \"each reachable reading has one act good\" and \"choice over the readings\". §4.6's RF3 bullet says \"As designed, with two changes\", so the misstatement carries into the built account. REST-TR4-TR5 TR5 correction 9 names it. (b) `model_or_order` (lines 970–977) equates `.sensory` and `.active` of two specific courses in world up, from `Loop.start … .up`. PLAN line 176 states the claim without that scope. REST-TR1 §12 item 11 names it. Neither section appears in DESIGN.md line 266's list of where the smaller corrections went, and no file marks either as declined.",
+     "fix": "§4.4: \"…and each state, reached or not, has one act good and enabled at every world its reading admits; this needs choice over the states (`Viability.ChoiceOver M A`, as for listed states `choiceOver_fin`) or explicit act witnesses; the restriction to reached histories is the history form's (`history_keeps_iff`)\". §4.6 RF-M: \"(in world up, an unresolved model and a reversed ranking sense and act alike under the worst-case rule, `model_or_order`; under expected value with an optimistic prior the uninformed formation tries the untried act)\". Add §4.4 and §4.6's RF-M summary to the list in DESIGN.md's \"Where the work goes\"."
+    },
+    {
+     "id": "plan-records-4",
+     "real": true,
+     "severity": "low",
+     "reason": "PLAN line 112 keeps the second Forbids sentence unchanged, and REST-TR1 §12 item 8 says it concerns warrant and has no observable case. The §4.5 half is weaker. The §4.5 heading already says RF7 was \"built, §4.6\". \"Chosen exactly where … strictly\" matches `choose_eq_iff` (choose = complyThenOwn ↔ KeepingOutweighs, strict), and only maximality at equality and the third exit are missing. A pointer is still worth adding, since REST-TR2-TR7 correction 8 says §4.6 supersedes it.",
+     "fix": "§4.1 Forbids, second sentence: append \"(a claim of warrant, with no observable case)\". §4.5 RF7: append \"Superseded by §4.6 and `ReadStages`: complyThenOwn is chosen exactly where keeping outweighs, strictly (`choose_eq_iff`), and maximal at equality (`complyThenOwn_maximal_iff`); there are three exits, `V = 0`, `k_C ≤ k_O` and a lumping tying the stages; concealment is a reading.\""
+    },
+    {
+     "id": "plan-records-5",
+     "real": true,
+     "severity": "low",
+     "reason": "amend_next_delta.py line 21 together with the `note()` template (line 50) gives \"which can refute at most only an order across frames, telling a model from an order by description only, never the law\". This doubles \"at most only\", names an order rather than the correspondence about one, and puts a non-refutable clause in the refutable slot. The Chinese \"至多能驳唯跨框之一序，模型与序之分唯述之\" has the same fault. The dry run prints only the next_delta, so the note is never seen.",
+     "fix": "Set refutes_en to \"the correspondence that the strict picks accord with one order across frames (RF1's); which of a model and an order holds is described only\" and refutes_zh to \"严择合跨框之一序之对应（RF1 之）；模型与序孰成，唯述之\". Optionally make the dry run print the history note too."
+    },
+    {
+     "id": "plan-records-6",
+     "real": true,
+     "severity": "low",
+     "reason": "No file named plan10.md or records.md exists in the worktree. REST-TR3-TR6.md:281 cites plan10.md, and REST-TR8-TR9.md:283 and R8.2 (line 286) cite plan10.md and records.md.",
+     "fix": "REST-TR3-TR6 item 6: replace \"(plan10.md)\" with a link to PLAN.md#10-tests-to-freeze-before-any-run. REST-TR8-TR9 line 283: \"the corrected §10 entries are in plan §10, the records' clauses in the kit's amend_next_delta.py\". Line 286: \"Exact replacement in amend_next_delta.py\"."
+    },
+    {
+     "id": "plan-records-7",
+     "real": true,
+     "severity": "low",
+     "reason": "REST-TR1 line 53: void \"where its strict presentations are fewer than half, or where its strict menus admit no cycle at all\". Line 70 and §13 list the void floor of one half as a choice for the freeze, not something Stage 0 settles. DESIGN.md:48 states both conditions. PLAN's TR1 entry, \"Void below half strict\", omits the forest condition and presents the floor as fixed.",
+     "fix": "Write \"Void below a strict share proposed at one half (a freeze choice), or where the strict menus admit no cycle.\""
+    },
+    {
+     "id": "plan-records-8",
+     "real": true,
+     "severity": "low",
+     "reason": "`refining_never_lowers_iff` is a theorem (ListingValuation.lean:1531). \"Checked by enumeration only\" reads as if the law itself were only checked numerically. The phrase is also inexact: DESIGN.md:212 says the mirror is sampled on three candidates (20,000 tables against `SplitsKeep`), so the check is not exhaustive enumeration.",
+     "fix": "Write \"`refining_never_lowers_iff` (a quantifier over every refinement, which no run can present; Stage 0 checks the mirror against `SplitsKeep`, exhaustively on two situations and by sampling on three)\"."
+    }
+   ]
+  }
+ }
+]
