@@ -5365,6 +5365,117 @@ Definitions and types:
 
 </details>
 
+<a id="module-4cd0718b9ba1"></a>
+
+<details>
+<summary>LinearBlankets.lean — 92 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean`
+
+Imports: `Mathlib.LinearAlgebra.Matrix.NonsingularInverse`, `Mathlib.Tactic`, `Becoming.Blanket`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.LinearBlankets.helmholtz_of_lyapunov](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L115) | 115 |
+| [Becoming.LinearBlankets.lyapunov_of_helmholtz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L133) | 133 |
+| [Becoming.LinearBlankets.helmholtz_unique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L145) | 145 |
+| [Becoming.LinearBlankets.entry_symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L164) | 164 |
+| [Becoming.LinearBlankets.entry_anti](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L169) | 169 |
+| [Becoming.LinearBlankets.row_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L181) | 181 |
+| [Becoming.LinearBlankets.drift_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L195) | 195 |
+| [Becoming.LinearBlankets.zero_iff_solenoidal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L208) | 208 |
+| [Becoming.LinearBlankets.quad_antisymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L222) | 222 |
+| [Becoming.LinearBlankets.precision_zero_of_autonomous](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L236) | 236 |
+| [Becoming.LinearBlankets.unread_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L288) | 288 |
+| [Becoming.LinearBlankets.reverse_through_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L297) | 297 |
+| [Becoming.LinearBlankets.reads_nothing_of_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L314) | 314 |
+| [Becoming.LinearBlankets.LagRelay.transpose_B](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L344) | 344 |
+| [Becoming.LinearBlankets.LagRelay.lyapunov](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L347) | 347 |
+| [Becoming.LinearBlankets.LagRelay.inverse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L352) | 352 |
+| [Becoming.LinearBlankets.LagRelay.helmholtz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L356) | 356 |
+| [Becoming.LinearBlankets.LagRelay.sparse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L362) | 362 |
+| [Becoming.LinearBlankets.LagRelay.precision_nonzero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L365) | 365 |
+| [Becoming.LinearBlankets.LagRelay.circulates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L368) | 368 |
+| [Becoming.LinearBlankets.LagRelay.not_termwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L372) | 372 |
+| [Becoming.LinearBlankets.Circulating.helmholtz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L387) | 387 |
+| [Becoming.LinearBlankets.Circulating.antisymmetric](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L391) | 391 |
+| [Becoming.LinearBlankets.Circulating.circulates_and_precision_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L396) | 396 |
+| [Becoming.LinearBlankets.Circulating.not_termwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L402) | 402 |
+| [Becoming.LinearBlankets.Unsparse.helmholtz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L417) | 417 |
+| [Becoming.LinearBlankets.Unsparse.antisymmetric](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L421) | 421 |
+| [Becoming.LinearBlankets.Unsparse.precision_zero_and_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L425) | 425 |
+| [Becoming.LinearBlankets.mode_stationary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L439) | 439 |
+| [Becoming.LinearBlankets.mode_unread_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L445) | 445 |
+| [Becoming.LinearBlankets.euler_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L484) | 484 |
+| [Becoming.LinearBlankets.glue_split_of_ne_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L526) | 526 |
+| [Becoming.LinearBlankets.glue_split_of_ne_internal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L532) | 532 |
+| [Becoming.LinearBlankets.split_euler](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L538) | 538 |
+| [Becoming.LinearBlankets.split_euler_iterate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L555) | 555 |
+| [Becoming.LinearBlankets.euler_agent_through_sensory](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L565) | 565 |
+| [Becoming.LinearBlankets.em_agent_through_sensory](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L591) | 591 |
+| [Becoming.LinearBlankets.precision_zero_of_footnote13](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L619) | 619 |
+| [Becoming.LinearBlankets.em_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L633) | 633 |
+| [Becoming.LinearBlankets.precision_zero_of_drift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L672) | 672 |
+| [Becoming.LinearBlankets.em_keeps_four_part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L684) | 684 |
+| [Becoming.LinearBlankets.em_active_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L705) | 705 |
+| [Becoming.LinearBlankets.Autonomous.helmholtz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L741) | 741 |
+| [Becoming.LinearBlankets.Autonomous.antisymmetric](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L745) | 745 |
+| [Becoming.LinearBlankets.Autonomous.sparse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L748) | 748 |
+| [Becoming.LinearBlankets.Autonomous.autonomous](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L751) | 751 |
+| [Becoming.LinearBlankets.Autonomous.precision_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L757) | 757 |
+| [Becoming.LinearBlankets.Autonomous.circulates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L765) | 765 |
+| [Becoming.LinearBlankets.Autonomous.termwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L770) | 770 |
+| [Becoming.LinearBlankets.Autonomous.em_coupling_form](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L778) | 778 |
+| [Becoming.LinearBlankets.Autonomous.emS_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L801) | 801 |
+| [Becoming.LinearBlankets.Autonomous.emS_inverse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L805) | 805 |
+| [Becoming.LinearBlankets.Autonomous.em_loses_internal_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L813) | 813 |
+| [Becoming.LinearBlankets.Autonomous.still_sparse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L816) | 816 |
+| [Becoming.LinearBlankets.Autonomous.em_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L820) | 820 |
+| [Becoming.LinearBlankets.Autonomous.em_loses_active_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L825) | 825 |
+| [Becoming.LinearBlankets.ThreePart.symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L843) | 843 |
+| [Becoming.LinearBlankets.ThreePart.inverse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L846) | 846 |
+| [Becoming.LinearBlankets.ThreePart.inverse'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L850) | 850 |
+| [Becoming.LinearBlankets.ThreePart.steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L855) | 855 |
+| [Becoming.LinearBlankets.ThreePart.no_four_part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L863) | 863 |
+| [Becoming.LinearBlankets.ThreePart.em_loses_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L876) | 876 |
+
+Definitions and types:
+
+- `def` [Becoming.LinearBlankets.TermwiseUnread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L281) (L281)
+- `def` [Becoming.LinearBlankets.LagRelay.B](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L334) (L334)
+- `def` [Becoming.LinearBlankets.LagRelay.BT](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L335) (L335)
+- `def` [Becoming.LinearBlankets.LagRelay.S](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L337) (L337)
+- `def` [Becoming.LinearBlankets.LagRelay.P](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L339) (L339)
+- `def` [Becoming.LinearBlankets.LagRelay.Q](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L342) (L342)
+- `def` [Becoming.LinearBlankets.Circulating.P](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L381) (L381)
+- `def` [Becoming.LinearBlankets.Circulating.Q](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L383) (L383)
+- `def` [Becoming.LinearBlankets.Circulating.B](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L385) (L385)
+- `def` [Becoming.LinearBlankets.Unsparse.P](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L411) (L411)
+- `def` [Becoming.LinearBlankets.Unsparse.Q](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L413) (L413)
+- `def` [Becoming.LinearBlankets.Unsparse.B](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L415) (L415)
+- `def` [Becoming.LinearBlankets.mode](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L435) (L435)
+- `inductive` [Becoming.LinearBlankets.Part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L467) (L467)
+- `def` [Becoming.LinearBlankets.SparseCoupling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L475) (L475)
+- `def` [Becoming.LinearBlankets.euler](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L480) (L480)
+- `abbrev` [Becoming.LinearBlankets.Coords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L494) (L494)
+- `def` [Becoming.LinearBlankets.glue](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L497) (L497)
+- `def` [Becoming.LinearBlankets.split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L506) (L506)
+- `def` [Becoming.LinearBlankets.eulerLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L515) (L515)
+- `def` [Becoming.LinearBlankets.emRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L582) (L582)
+- `def` [Becoming.LinearBlankets.Autonomous.part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L728) (L728)
+- `def` [Becoming.LinearBlankets.Autonomous.P](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L731) (L731)
+- `def` [Becoming.LinearBlankets.Autonomous.Q](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L735) (L735)
+- `def` [Becoming.LinearBlankets.Autonomous.B](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L738) (L738)
+- `def` [Becoming.LinearBlankets.Autonomous.emA](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L786) (L786)
+- `def` [Becoming.LinearBlankets.Autonomous.emS](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L788) (L788)
+- `def` [Becoming.LinearBlankets.Autonomous.emM](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L794) (L794)
+- `def` [Becoming.LinearBlankets.ThreePart.P](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L838) (L838)
+- `def` [Becoming.LinearBlankets.ThreePart.S](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean#L840) (L840)
+
+</details>
+
 <a id="module-6b8e6a0d66ac"></a>
 
 <details>

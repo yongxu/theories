@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T152525.956467Z",
- "core_sources_sha256": "81a218fdccc677e00e3409a7d63e3cec738ee94da4e2ca3aaa3e175cd02803e4",
+ "core_receipt": "20261031T183655.254131Z",
+ "core_sources_sha256": "2587a4751fbb173cc50535bc21e0126169a75efaa86657428742c02863d95243",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,15 +58,15 @@
   ]
  },
  "counts": {
-  "laws": 3949,
+  "laws": 3975,
   "no_declarations": 9,
-  "outside": 377,
-  "grammar": 766,
+  "outside": 391,
+  "grammar": 770,
   "balance, represented": 646,
   "anchor, not reached": 134,
-  "no master law": 2017,
-  "vocabulary_only": 66,
-  "closure": 479,
+  "no master law": 2025,
+  "vocabulary_only": 69,
+  "closure": 483,
   "balance": 817,
   "return": 252,
   "lumping": 83,
@@ -46506,6 +46506,489 @@
     "dependence": "no master law"
    }
   ],
+  "the-blanket-at-a-steady-state": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.BlanketWeights.CrossForm",
+     "Becoming.BlanketWeights.DetailedBalance",
+     "Becoming.BlanketWeights.cross_of_move",
+     "Becoming.BlanketWeights.ratio_of_cross",
+     "Becoming.BlanketWeights.cross_trans",
+     "Becoming.BlanketWeights.pos_of_mul_eq"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.BlanketWeights.cross_of_closure",
+     "Becoming.BlanketWeights.crossForm_of_detailedBalance",
+     "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread",
+     "Becoming.BlanketWeights.ratio_of_crossForm"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.BlanketWeights.internalWeight",
+     "Becoming.BlanketWeights.externalWeight",
+     "Becoming.BlanketWeights.blanketWeight",
+     "Becoming.BlanketWeights.FactorsGiven",
+     "Becoming.BlanketWeights.CrossFormOn",
+     "Becoming.BlanketWeights.crossFormOn_of_crossForm",
+     "Becoming.BlanketWeights.crossForm_of_crossFormOn",
+     "Becoming.BlanketWeights.total_congr_mem",
+     "Becoming.BlanketWeights.total_mul_total",
+     "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
+     "Becoming.BlanketWeights.whole_zero_entry",
+     "Becoming.BlanketWeights.crossFormOn_of_factorsGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.BlanketWeights.atBlanket",
+     "Becoming.BlanketWeights.IndependentGiven",
+     "Becoming.BlanketWeights.mass_whole",
+     "Becoming.BlanketWeights.mass_atBlanket",
+     "Becoming.BlanketWeights.scaled_of_factorsGiven",
+     "Becoming.BlanketWeights.independentGiven_of_factorsGiven",
+     "Becoming.BlanketWeights.factorsGiven_of_independentGiven",
+     "Becoming.BlanketWeights.independentGiven_of_crossFormOn",
+     "Becoming.BlanketWeights.crossFormOn_of_independentGiven",
+     "Becoming.BlanketWeights.independentGiven_of_detailedBalance"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.BlanketWeights.crossForm_product",
+     "Becoming.BlanketWeights.restrict_independent_case"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.BlanketWeights.LagRelay.State",
+     "Becoming.BlanketWeights.LagRelay.rate",
+     "Becoming.BlanketWeights.LagRelay.fullRate",
+     "Becoming.BlanketWeights.LagRelay.weight",
+     "Becoming.BlanketWeights.LagRelay.w",
+     "Becoming.BlanketWeights.LagRelay.flips",
+     "Becoming.BlanketWeights.LagRelay.inflow",
+     "Becoming.BlanketWeights.LagRelay.outflow",
+     "Becoming.BlanketWeights.LagRelay.steady",
+     "Becoming.BlanketWeights.LagRelay.not_independentGiven",
+     "Becoming.BlanketWeights.LagRelay.circulates"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.BlanketWeights.Turning.Phase",
+     "Becoming.BlanketWeights.Turning.rate",
+     "Becoming.BlanketWeights.Turning.same",
+     "Becoming.BlanketWeights.Turning.State",
+     "Becoming.BlanketWeights.Turning.fullRate",
+     "Becoming.BlanketWeights.Turning.w",
+     "Becoming.BlanketWeights.Turning.states",
+     "Becoming.BlanketWeights.Turning.inflow",
+     "Becoming.BlanketWeights.Turning.outflow",
+     "Becoming.BlanketWeights.Turning.steady",
+     "Becoming.BlanketWeights.Turning.circulates",
+     "Becoming.BlanketWeights.Turning.independentGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.BlanketWeights.ReadsDirectly.rate",
+     "Becoming.BlanketWeights.ReadsDirectly.w",
+     "Becoming.BlanketWeights.ReadsDirectly.balanced",
+     "Becoming.BlanketWeights.ReadsDirectly.crossForm",
+     "Becoming.BlanketWeights.ReadsDirectly.reads_external"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.BlanketWeights.MovesReadExternal.rate",
+     "Becoming.BlanketWeights.MovesReadExternal.w",
+     "Becoming.BlanketWeights.MovesReadExternal.balanced",
+     "Becoming.BlanketWeights.MovesReadExternal.joined",
+     "Becoming.BlanketWeights.MovesReadExternal.ratio",
+     "Becoming.BlanketWeights.MovesReadExternal.not_crossForm"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.BlanketWeights.SynchronousCopy.externalStep",
+     "Becoming.BlanketWeights.SynchronousCopy.sensoryStep",
+     "Becoming.BlanketWeights.SynchronousCopy.internalStep",
+     "Becoming.BlanketWeights.SynchronousCopy.kernel",
+     "Becoming.BlanketWeights.SynchronousCopy.states",
+     "Becoming.BlanketWeights.SynchronousCopy.exactWeight",
+     "Becoming.BlanketWeights.SynchronousCopy.noisyWeight",
+     "Becoming.BlanketWeights.SynchronousCopy.exactW",
+     "Becoming.BlanketWeights.SynchronousCopy.noisyW",
+     "Becoming.BlanketWeights.SynchronousCopy.exact_steady",
+     "Becoming.BlanketWeights.SynchronousCopy.noisy_steady",
+     "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven",
+     "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.BlanketWeights.Cycle.law",
+     "Becoming.BlanketWeights.Cycle.start",
+     "Becoming.BlanketWeights.Cycle.run",
+     "Becoming.BlanketWeights.Cycle.w",
+     "Becoming.BlanketWeights.Cycle.periodic",
+     "Becoming.BlanketWeights.Cycle.not_crossForm"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.BlanketWeights.Uncovered.w",
+     "Becoming.BlanketWeights.Uncovered.crossFormOn",
+     "Becoming.BlanketWeights.Uncovered.not_crossForm"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "the-blanket-in-a-linear-steady-state": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+     "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+     "Becoming.LinearBlankets.helmholtz_unique",
+     "Becoming.LinearBlankets.entry_symm",
+     "Becoming.LinearBlankets.entry_anti"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+     "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+     "Becoming.LinearBlankets.helmholtz_unique",
+     "Becoming.LinearBlankets.entry_symm",
+     "Becoming.LinearBlankets.entry_anti"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LinearBlankets.row_zero_iff",
+     "Becoming.LinearBlankets.drift_zero_iff",
+     "Becoming.LinearBlankets.zero_iff_solenoidal"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.row_zero_iff",
+     "Becoming.LinearBlankets.drift_zero_iff",
+     "Becoming.LinearBlankets.zero_iff_solenoidal"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LinearBlankets.quad_antisymm",
+     "Becoming.LinearBlankets.precision_zero_of_autonomous",
+     "Becoming.LinearBlankets.precision_zero_of_footnote13"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.quad_antisymm",
+     "Becoming.LinearBlankets.precision_zero_of_autonomous",
+     "Becoming.LinearBlankets.precision_zero_of_footnote13"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.LinearBlankets.TermwiseUnread",
+     "Becoming.LinearBlankets.unread_zero",
+     "Becoming.LinearBlankets.reverse_through_third",
+     "Becoming.LinearBlankets.reads_nothing_of_unread"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.TermwiseUnread",
+     "Becoming.LinearBlankets.unread_zero",
+     "Becoming.LinearBlankets.reverse_through_third",
+     "Becoming.LinearBlankets.reads_nothing_of_unread"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.LinearBlankets.LagRelay.B",
+     "Becoming.LinearBlankets.LagRelay.BT",
+     "Becoming.LinearBlankets.LagRelay.S",
+     "Becoming.LinearBlankets.LagRelay.P",
+     "Becoming.LinearBlankets.LagRelay.Q",
+     "Becoming.LinearBlankets.LagRelay.transpose_B",
+     "Becoming.LinearBlankets.LagRelay.lyapunov",
+     "Becoming.LinearBlankets.LagRelay.inverse",
+     "Becoming.LinearBlankets.LagRelay.helmholtz",
+     "Becoming.LinearBlankets.LagRelay.sparse",
+     "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+     "Becoming.LinearBlankets.LagRelay.circulates",
+     "Becoming.LinearBlankets.LagRelay.not_termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.LagRelay.B",
+     "Becoming.LinearBlankets.LagRelay.BT",
+     "Becoming.LinearBlankets.LagRelay.S",
+     "Becoming.LinearBlankets.LagRelay.P",
+     "Becoming.LinearBlankets.LagRelay.Q",
+     "Becoming.LinearBlankets.LagRelay.transpose_B",
+     "Becoming.LinearBlankets.LagRelay.lyapunov",
+     "Becoming.LinearBlankets.LagRelay.inverse",
+     "Becoming.LinearBlankets.LagRelay.helmholtz",
+     "Becoming.LinearBlankets.LagRelay.sparse",
+     "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+     "Becoming.LinearBlankets.LagRelay.circulates",
+     "Becoming.LinearBlankets.LagRelay.not_termwise"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LinearBlankets.Circulating.P",
+     "Becoming.LinearBlankets.Circulating.Q",
+     "Becoming.LinearBlankets.Circulating.B",
+     "Becoming.LinearBlankets.Circulating.helmholtz",
+     "Becoming.LinearBlankets.Circulating.antisymmetric",
+     "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+     "Becoming.LinearBlankets.Circulating.not_termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Circulating.P",
+     "Becoming.LinearBlankets.Circulating.Q",
+     "Becoming.LinearBlankets.Circulating.B",
+     "Becoming.LinearBlankets.Circulating.helmholtz",
+     "Becoming.LinearBlankets.Circulating.antisymmetric",
+     "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+     "Becoming.LinearBlankets.Circulating.not_termwise"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.LinearBlankets.Unsparse.P",
+     "Becoming.LinearBlankets.Unsparse.Q",
+     "Becoming.LinearBlankets.Unsparse.B",
+     "Becoming.LinearBlankets.Unsparse.helmholtz",
+     "Becoming.LinearBlankets.Unsparse.antisymmetric",
+     "Becoming.LinearBlankets.Unsparse.precision_zero_and_read"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Unsparse.P",
+     "Becoming.LinearBlankets.Unsparse.Q",
+     "Becoming.LinearBlankets.Unsparse.B",
+     "Becoming.LinearBlankets.Unsparse.helmholtz",
+     "Becoming.LinearBlankets.Unsparse.antisymmetric",
+     "Becoming.LinearBlankets.Unsparse.precision_zero_and_read"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.LinearBlankets.mode",
+     "Becoming.LinearBlankets.mode_stationary",
+     "Becoming.LinearBlankets.mode_unread_iff"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.mode",
+     "Becoming.LinearBlankets.mode_stationary",
+     "Becoming.LinearBlankets.mode_unread_iff"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.LinearBlankets.Part",
+     "Becoming.LinearBlankets.SparseCoupling",
+     "Becoming.LinearBlankets.euler",
+     "Becoming.LinearBlankets.euler_congr",
+     "Becoming.LinearBlankets.Coords",
+     "Becoming.LinearBlankets.glue",
+     "Becoming.LinearBlankets.split",
+     "Becoming.LinearBlankets.eulerLaw",
+     "Becoming.LinearBlankets.glue_split_of_ne_external",
+     "Becoming.LinearBlankets.glue_split_of_ne_internal",
+     "Becoming.LinearBlankets.split_euler",
+     "Becoming.LinearBlankets.split_euler_iterate",
+     "Becoming.LinearBlankets.euler_agent_through_sensory"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Part",
+     "Becoming.LinearBlankets.SparseCoupling",
+     "Becoming.LinearBlankets.euler",
+     "Becoming.LinearBlankets.euler_congr",
+     "Becoming.LinearBlankets.Coords",
+     "Becoming.LinearBlankets.glue",
+     "Becoming.LinearBlankets.split",
+     "Becoming.LinearBlankets.eulerLaw",
+     "Becoming.LinearBlankets.glue_split_of_ne_external",
+     "Becoming.LinearBlankets.glue_split_of_ne_internal",
+     "Becoming.LinearBlankets.split_euler",
+     "Becoming.LinearBlankets.split_euler_iterate",
+     "Becoming.LinearBlankets.euler_agent_through_sensory"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.LinearBlankets.emRun",
+     "Becoming.LinearBlankets.em_agent_through_sensory"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.emRun",
+     "Becoming.LinearBlankets.em_agent_through_sensory"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.LinearBlankets.em_steady",
+     "Becoming.LinearBlankets.precision_zero_of_drift",
+     "Becoming.LinearBlankets.em_keeps_four_part",
+     "Becoming.LinearBlankets.em_active_external"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.em_steady",
+     "Becoming.LinearBlankets.precision_zero_of_drift",
+     "Becoming.LinearBlankets.em_keeps_four_part",
+     "Becoming.LinearBlankets.em_active_external"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.LinearBlankets.Autonomous.part",
+     "Becoming.LinearBlankets.Autonomous.P",
+     "Becoming.LinearBlankets.Autonomous.Q",
+     "Becoming.LinearBlankets.Autonomous.B",
+     "Becoming.LinearBlankets.Autonomous.helmholtz",
+     "Becoming.LinearBlankets.Autonomous.antisymmetric",
+     "Becoming.LinearBlankets.Autonomous.sparse",
+     "Becoming.LinearBlankets.Autonomous.autonomous",
+     "Becoming.LinearBlankets.Autonomous.precision_zero",
+     "Becoming.LinearBlankets.Autonomous.circulates",
+     "Becoming.LinearBlankets.Autonomous.termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Autonomous.part",
+     "Becoming.LinearBlankets.Autonomous.P",
+     "Becoming.LinearBlankets.Autonomous.Q",
+     "Becoming.LinearBlankets.Autonomous.B",
+     "Becoming.LinearBlankets.Autonomous.helmholtz",
+     "Becoming.LinearBlankets.Autonomous.antisymmetric",
+     "Becoming.LinearBlankets.Autonomous.sparse",
+     "Becoming.LinearBlankets.Autonomous.autonomous",
+     "Becoming.LinearBlankets.Autonomous.precision_zero",
+     "Becoming.LinearBlankets.Autonomous.circulates",
+     "Becoming.LinearBlankets.Autonomous.termwise"
+    ]
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+     "Becoming.LinearBlankets.Autonomous.emA",
+     "Becoming.LinearBlankets.Autonomous.emS",
+     "Becoming.LinearBlankets.Autonomous.emM",
+     "Becoming.LinearBlankets.Autonomous.emS_steady",
+     "Becoming.LinearBlankets.Autonomous.emS_inverse",
+     "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+     "Becoming.LinearBlankets.Autonomous.still_sparse",
+     "Becoming.LinearBlankets.Autonomous.em_keeps",
+     "Becoming.LinearBlankets.Autonomous.em_loses_active_external"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+     "Becoming.LinearBlankets.Autonomous.emA",
+     "Becoming.LinearBlankets.Autonomous.emS",
+     "Becoming.LinearBlankets.Autonomous.emM",
+     "Becoming.LinearBlankets.Autonomous.emS_steady",
+     "Becoming.LinearBlankets.Autonomous.emS_inverse",
+     "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+     "Becoming.LinearBlankets.Autonomous.still_sparse",
+     "Becoming.LinearBlankets.Autonomous.em_keeps",
+     "Becoming.LinearBlankets.Autonomous.em_loses_active_external"
+    ]
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.LinearBlankets.ThreePart.P",
+     "Becoming.LinearBlankets.ThreePart.S",
+     "Becoming.LinearBlankets.ThreePart.symm",
+     "Becoming.LinearBlankets.ThreePart.inverse",
+     "Becoming.LinearBlankets.ThreePart.inverse'",
+     "Becoming.LinearBlankets.ThreePart.steady",
+     "Becoming.LinearBlankets.ThreePart.no_four_part",
+     "Becoming.LinearBlankets.ThreePart.em_loses_zero"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.ThreePart.P",
+     "Becoming.LinearBlankets.ThreePart.S",
+     "Becoming.LinearBlankets.ThreePart.symm",
+     "Becoming.LinearBlankets.ThreePart.inverse",
+     "Becoming.LinearBlankets.ThreePart.inverse'",
+     "Becoming.LinearBlankets.ThreePart.steady",
+     "Becoming.LinearBlankets.ThreePart.no_four_part",
+     "Becoming.LinearBlankets.ThreePart.em_loses_zero"
+    ]
+   }
+  ],
   "the-boundary-of-enough-under-undetermined-laws": [
    {
     "law": 1,
@@ -60484,7 +60967,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "929b1afc3f1afa8de06504aff8d814b268e3f89c1d318f327f4ba2e45168a664",
+   "modules_sha256": "fd5789ae0cefcf098c15e3129422cf5a2044c26d8c03870bcf58fabea2f4479a",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },

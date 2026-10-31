@@ -71,8 +71,10 @@ The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, 
 - **formal-reuse**: [selection-through-couplings](selection-through-couplings.md). Web.AlikeThroughUpTo and Web.Admits: alike through a formation's couplings, and admission at a need.
 - **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped: a map read only through another.
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). The free-energy principle's blanket and existence claim, stated in the same module.
+- related, not a proved adapter: [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md). The blanket at a steady state: the statistical form, conditional independence given the blanket, which detailed balance of the internal moves gives with positive weights, moves present at every external state and rate ratios reading none; the coupling form holds on every run.
+- related, not a proved adapter: [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md). The linear case: the Euler step of a sparsely coupled drift as a blanketed law, with noise, and the synchronous scheme against the statistical form.
 
-**Used by:** [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
+**Used by:** [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +97,7 @@ Aliases: `The Markov blanket as a coupling structure`, `马尔可夫毯作为耦
 ### History
 
 - 29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.
+- 1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.
 
 </details>
 
