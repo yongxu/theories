@@ -1210,7 +1210,7 @@ def part_D_full(conds, agents, raw_p1, ctxs, probs_fn, first_of=lambda c: c["cou
                 f"or (TR9) the reader probe right in fewer than {READER_PROBE_AT} of {PROBE_CALLS}. "
                 f"Probe calls ({PROBE_CALLS} per condition) only where worths are computed: under the "
                 "law's model the probe ranks first as an independent call of the same noisy counts; a "
-                "rival's probe as its probe model (G1's probe computes R5's cost-blind counts). The guard "
+                "rival's probe as its probe model (G1's probe computes a cost-blind count: R5's in TR8, N8's in TR9). The guard "
                 "reports a bridge otherwise supported contradicted where a supported condition's probe "
                 f"ranks another option first in at least {GUARD_AT} of {PROBE_CALLS}; such a hit beside "
                 "an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, "

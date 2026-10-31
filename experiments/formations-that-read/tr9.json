@@ -41,7 +41,7 @@
    "orders_apart": true
   }
  },
- "A_seconds": 0.06,
+ "A_seconds": 0.05,
  "B_enumeration": {
   "counts": {
    "two_candidate_tables": 59049,
@@ -63,9 +63,9 @@
    "residual_signed_breaks_split": 19278
   },
   "seconds": {
-   "two": 46.9,
-   "three": 28.5,
-   "carrier": 1.1
+   "two": 38.5,
+   "three": 16.2,
+   "carrier": 0.6
   },
   "note": "Mutations: an answer stopping at ties never changes the worth by the reader's own valuation (ties add to neither excess), so the tie rule matters for which option is taken, not for any count; a residual without truncation breaks the split wherever a cell's preference is not the rule's, so the truncation is load-bearing.",
   "the_menu_in_the_lean": [
@@ -75,7 +75,7 @@
    "answer_least_of_scaled composed with informed_le (inference, the reviewing session's report): a positive common scale suffices for informing never to lower the worth; not stated as one theorem. No verdict rests on it."
   ]
  },
- "B_seconds": 76.54,
+ "B_seconds": 55.36,
  "C_conditions": [
   {
    "id": "CV6",
@@ -7927,7 +7927,7 @@
    }
   ],
   "full_protocol": {
-   "assumptions": "Exact products over conditions, calls independent. Each choice call is invalid with the stated rate, else as the chooser's per-call probabilities; a condition with fewer than 27 valid answers voids the unit, as does a premise condition not supported or (TR9) the reader probe right in fewer than 20 of 30. Probe calls (30 per condition) only where worths are computed: under the law's model the probe ranks first as an independent call of the same noisy counts; a rival's probe as its probe model (G1's probe computes R5's cost-blind counts). The guard reports a bridge otherwise supported contradicted where a supported condition's probe ranks another option first in at least 23 of 30; such a hit beside an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, within unresolved). The label (miscomputed where the probe ranks a modal chosen option first in at least 15 of 30; where several are modal, any of them, the union exact) is split exactly over the choice calls for the law; for a rival, approximately, its pick taken as the modal option.",
+   "assumptions": "Exact products over conditions, calls independent. Each choice call is invalid with the stated rate, else as the chooser's per-call probabilities; a condition with fewer than 27 valid answers voids the unit, as does a premise condition not supported or (TR9) the reader probe right in fewer than 20 of 30. Probe calls (30 per condition) only where worths are computed: under the law's model the probe ranks first as an independent call of the same noisy counts; a rival's probe as its probe model (G1's probe computes a cost-blind count: R5's in TR8, N8's in TR9). The guard reports a bridge otherwise supported contradicted where a supported condition's probe ranks another option first in at least 23 of 30; such a hit beside an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, within unresolved). The label (miscomputed where the probe ranks a modal chosen option first in at least 15 of 30; where several are modal, any of them, the union exact) is split exactly over the choice calls for the law; for a rival, approximately, its pick taken as the modal option.",
    "rows": [
     {
      "agent": "counts sigma=0.0 lapse=0.0",
@@ -10478,7 +10478,7 @@
    "reader_probe_model": "Each probe call states the reader's answer under every option, right except in a lapse; N7, which takes the reader to answer by the objective once shown, states it wrongly at CV6, CVT, REF6, REFW, REV16, REV4, REVCV, WAP, where the reader's own answer differs."
   }
  },
- "D_seconds": 11.42,
+ "D_seconds": 8.48,
  "E": {
   "settled": [
    "Every option's rule, built by running the carrier's joint law and reading the answer once every scheduled input is taken in, equals Part 1's answer through what is shown by the revalued valuation (answer_shown, updates_commute, timing); the one-decision menu is the carrier collapsed to one choice. The answer must be read after the last input: in TwoWorlds.orders_apart the answer two steps after the first act differs by order.",
@@ -10499,5 +10499,5 @@
    "Totals or per-decision presentation (T = 2 or 3 here, so per-decision amounts are halves or thirds; totals proposed)."
   ]
  },
- "seconds": 88.02
+ "seconds": 63.9
 }

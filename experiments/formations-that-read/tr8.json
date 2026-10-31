@@ -10,7 +10,7 @@
   "choose_cases_checked": 189,
   "failures": []
  },
- "A_seconds": 0.02,
+ "A_seconds": 0.01,
  "B_enumeration": {
   "counts": {
    "tables": 21183,
@@ -42,7 +42,7 @@
    "expanded_shortfall (inference, checked on 3,000 sampled tables): a reader stopping with probability s_c/D at candidate c, told as (candidate, draw) pairs, falls short by D times its expected weighted loss; both excesses scale by D. No verdict rests on it: it says how a reader whose errors are chances could be told, which TR8 does not test."
   ]
  },
- "B_seconds": 33.35,
+ "B_seconds": 22.04,
  "C_conditions": [
   {
    "id": "A",
@@ -2042,7 +2042,7 @@
    }
   },
   "full_protocol": {
-   "assumptions": "Exact products over conditions, calls independent. Each choice call is invalid with the stated rate, else as the chooser's per-call probabilities; a condition with fewer than 27 valid answers voids the unit, as does a premise condition not supported or (TR9) the reader probe right in fewer than 20 of 30. Probe calls (30 per condition) only where worths are computed: under the law's model the probe ranks first as an independent call of the same noisy counts; a rival's probe as its probe model (G1's probe computes R5's cost-blind counts). The guard reports a bridge otherwise supported contradicted where a supported condition's probe ranks another option first in at least 23 of 30; such a hit beside an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, within unresolved). The label (miscomputed where the probe ranks a modal chosen option first in at least 15 of 30; where several are modal, any of them, the union exact) is split exactly over the choice calls for the law; for a rival, approximately, its pick taken as the modal option.",
+   "assumptions": "Exact products over conditions, calls independent. Each choice call is invalid with the stated rate, else as the chooser's per-call probabilities; a condition with fewer than 27 valid answers voids the unit, as does a premise condition not supported or (TR9) the reader probe right in fewer than 20 of 30. Probe calls (30 per condition) only where worths are computed: under the law's model the probe ranks first as an independent call of the same noisy counts; a rival's probe as its probe model (G1's probe computes a cost-blind count: R5's in TR8, N8's in TR9). The guard reports a bridge otherwise supported contradicted where a supported condition's probe ranks another option first in at least 23 of 30; such a hit beside an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, within unresolved). The label (miscomputed where the probe ranks a modal chosen option first in at least 15 of 30; where several are modal, any of them, the union exact) is split exactly over the choice calls for the law; for a rival, approximately, its pick taken as the modal option.",
    "rows": [
     {
      "agent": "counts sigma=0.0 lapse=0.0",
@@ -14735,7 +14735,7 @@
    ]
   ]
  },
- "D_seconds": 9.45,
+ "D_seconds": 6.78,
  "E_pair_variant": {
   "acyclic_shown_relations_on_4": 543,
   "failures": [],
@@ -14819,7 +14819,7 @@
   ],
   "note": "Told candidates are every strict order according with the shown choices, weight one each; asking forgoes k per decision. Asking is worth min(W(x>y), W(y>x)) per decision on an unreached pair and nothing on a reached one (reach_fixes)."
  },
- "E_seconds": 0.06,
+ "E_seconds": 0.04,
  "F": {
   "settled": [
    "Every offered option is a plan of RevisionPlans.order (goOn 0, off 0, held r k), and RevisionPlans.above_iff with excess_goOn, excess_off and excess_held ranks any two by amount + shortfall; gainOf_goOn, gainOf_off and gainOf_held, with held_above_moves_iff and held_above_held_iff, make that order the worths' order. So the verdicts rest on stated core theorems; the three-way form (strictly best, strictly below the better move) is their composition, checked on every enumerated case.",
@@ -14846,5 +14846,5 @@
    "The probe's tolerance (exact match to one decimal per decision proposed), and whether the given presentation also gets a probe (proposed: no, its worths being stated)."
   ]
  },
- "seconds": 42.88
+ "seconds": 28.88
 }

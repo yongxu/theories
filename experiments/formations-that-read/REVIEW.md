@@ -7,7 +7,7 @@
 - **Five lenses, each verified.** Five Opus readers each reviewed one lens: fidelity to the Lean for TR1 to TR5, the same for TR6 to TR9, the power checks and verdict rules, a careful reader new to the work, and the plan and record changes. An adversarial verifier then tried to refute each lens's findings against the files and the Lean. Of 48 findings, 46 were confirmed and 2 refuted.
 - **A cross-model review.** astra (gpt-6-astra, high effort), read-only and sandboxed, with the brief below. It returned 11 findings. They were not separately verified: each fixer checked each one against the Lean and the scripts, and all eleven held.
 - **The fixes.** Five fixers, one per group of tests, applied them in the builders' sources and reran every changed script. Then the folder was reassembled, and every script was rerun from a clean folder.
-- **A second round** of both reviews ran on the revised folder ([below](#the-second-round)): 20 confirmed Opus findings and 4 from astra, all taken.
+- **A second round** of both reviews ran on the revised folder ([below](#the-second-round)): 20 confirmed Opus findings and 4 from astra, all taken; a short third check ([below](#the-third-check)) found four low slips, all taken, and nothing else.
 
 ## Five lenses
 
@@ -80,7 +80,7 @@
 
 ## The second round
 
-After the fixes, the same two reviews ran again on the revised folder. The five Opus lenses returned 21 findings; an adversarial verifier confirmed 20. astra checked its eleven first-round findings (ten fixed, TR4's leak claim only partly) and found three more; it also checked TR8 and TR9 against the Lean as RR2 rederived it and found no mismatch. Four fixers took every finding, the folder was reassembled, and every script was rerun from a clean folder. A third, short check follows below.
+After the fixes, the same two reviews ran again on the revised folder. The five Opus lenses returned 21 findings; an adversarial verifier confirmed 20. astra checked its eleven first-round findings (ten fixed, TR4's leak claim only partly) and found three more; it also checked TR8 and TR9 against the Lean as RR2 rederived it and found no mismatch. Four fixers took every finding, the folder was reassembled, and every script was rerun from a clean folder. A third, short check followed ([below](#the-third-check)).
 
 ### Five lenses, second round
 
@@ -92,7 +92,7 @@ After the fixes, the same two reviews ran again on the revised folder. The five 
 | lean2-4 | low | The count is wrong. 0.807 is the per-call threshold for 11 strict conditions, TR9's number now that WA-P is strict. For 10 conditions the value is 0.804; the first round's 0.805 was the 10-condition figure. | fixed: both counts from the JSON, 0.815 for TR8 (15 conditions) and 0.807 for TR9 (11). |
 | lean2-5 | low | The record's history note names the wrong bridge. 'A response mapping counts into counts' is `within`, which TR6 makes hold by construction (the count of ten agents maps 0..10 into itself), so no run can refute it. The design's bridge is … | fixed: the TR6 history note in the amendment now names the bridge that a public's count is a response of the published forecast alone, with the readings of its order under the two framings; dry run checked. |
 | lean2-6 | low | The rewritten sentence drops two hypotheses the Lean needs. At an exit with no loss (`c T = 0`), complyThenOwn is maximal (Example.exit_tie), so choosing it there is a tie, not a forbidden case. complyAtBoth is forbidden only where some … | fixed: TR7's ten-minute list now reads `complyThenOwn` where `k_C V < k_O V + c T`, another plan where `k_O V + c T < k_C V`, `complyAtBoth` where a product is positive; an exit with a positive loss falls under the first. Checked against ReadStages.lean. |
-| scripts2-1 | low | The text says the six rows where the rule is kept are contradicted at 0.003 to 0.010 at Holm's first step and at 0.015 to 0.033 at the last steps. One of those six rows, the constant-hallucination control (every record names line 2), sits … | fixed: the ranges now name the constant control apart (0 and 0.002), from the rerun under the new Holm family. |
+| scripts2-1 | low | The text says the six rows where the rule is kept are contradicted at 0.003 to 0.010 at Holm's first step and at 0.015 to 0.033 at the last steps. One of those six rows, the constant-hallucination control (every record names line 2), sits … | fixed: the ranges now name the constant control apart (0 and 0), from the rerun under the new Holm family. |
 | scripts2-2 | medium | The new m1 asks only whether a record names the faulty line. The register's rule is broken by any dependence of the record on the line, so a clerk that always names a different line (a fixed map from line to line) breaks the rule, and m1 … | fixed (the verifier's main fix): m4, a fitted map from line to named line tested on held-out units, joins the verdict (Holm over 24 p-values); a clerk naming another line with a crew that does not read it is simulated (1 at 3 in 10, 0.498 to 0.788 at 1 in 10). |
 | scripts2-3 | medium | Arm G's harness check stops the run where m2 or m3 rejects, but no level is given and its false-stop rate is never reported. If each test runs at 0.05 on G's 20 units, a correct harness with a faithful crew stops a model's run at a … | fixed: arm G runs Holm over its 12 p-values at 0.05; its simulated false-stop rate is 0.022 (0.0036 per model); a rejection stops the whole run, since the harness is shared. |
 | scripts2-4 | medium | The guard has two problems. First, DESIGN states it more widely than the code simulates it. DESIGN says the bridge is 'contradicted where any is, or where a supported condition's probe ranks another option first in 23 of 30'. full_protocol … | fixed: one scope in every layer and the code, the guard applying to a bridge otherwise supported; a guard hit beside an unresolved bridge is reported with no verdict (at most 0.0003 for TR8, 0.0006 for TR9 under the law's model). A guard check, G1, added to both scripts. |
@@ -115,6 +115,19 @@ After the fixes, the same two reviews ran again on the revised folder. The five 
 | astra2-12 | medium | TR2's 'independent-draw worst case' is not the worst coupling: negative coupling gives more discordance (power 0.8393 against 0.9598 at 3,200 pairs, 30% base). | holds; fixed. tr2.py models the worst coupling at the Fréchet bound and checks it is least over 21 couplings; independence is one scenario; at the 30% base the size becomes 4,800; at 10% the 1,600-pair figure and the usage bound stand. |
 | astra2-13 | medium | TR8's probe guard contradicts at a supported condition in the hour layer, but only when the whole bridge is supported in the script. | holds; fixed as scripts2-4, with the mixed case calibrated. |
 | astra2-14 | low | The probe-label calculation takes the largest marginal tail among tied modal options, not the probability that any of them meets the threshold. | holds; fixed: the tie rule is frozen as any modal option, and its probability is computed exactly as a union; no reported label figure changed. |
+
+## The third check
+
+A short check of the second round's fixes only, by both reviewers again. astra found its four findings fixed as stated and no new problem. An Opus reader checked all 24 rows against the files, the JSON and the Lean, found every claimed fix present and correct, and found four low slips, all taken:
+
+| Finding | Problem | How it was taken |
+|---|---|---|
+| r3-1 | This file's row for scripts2-1 gave the constant control as 0 and 0.002; REST and the JSON give 0 and 0. | fixed here. |
+| r3-2 | TR8's full-protocol assumption string, which TR9 imports, named R5's cost-blind counts as G1's probe; TR9's G1 uses N8's. | fixed: the string names both; tr8.py and tr9.py rerun, and only that string changed in either JSON. |
+| r3-3 | The hour part said arm G runs m2 and m3 on harness-written records; they test the crew's acts there. | fixed: "on the crew's acts at harness-written records". |
+| r3-4 | REST's guard rule (TR8, R7 item 6) kept a trigger, a contradicted condition, that a bridge otherwise supported cannot have. | fixed: the probe trigger alone, as in the hour part and the code. |
+
+The reader also noted, outside the diff, that at 60 units a faithful crew's m2 rejected at Holm's first step in 4 of 400 runs, against a level of 0.00208. The test is exact under within-unit exchangeability, which a faithful crew's independent acts meet; 3,000 further runs gave 3 rejections (0.001). The 4 of 400 was sampling, and nothing changed.
 
 ## The cross-model review's brief
 
