@@ -70,8 +70,8 @@ edit(checker, '''    "model, listing only that going on gains and going on from 
     "coarser one, and, over every refinement factoring on both listings, holding for the answer never stands lower "
     "through the finer map exactly where splits keep the worth; revaluing changes only the residual; on one blanketed "
     "law carrying the reading formation's listing and valuation, its state and answer change only through what it "
-    "senses, and, from different starts, a route shown and a route presented answer alike and end in one state while "
-    "the valuation changed on one alone. "
+    "senses, and, from different starts, a route shown and a route presented can answer alike and end in one state "
+    "while the valuation changed on one alone. "
     "NarrowingRuns: the answer is the greatest safe answer of the belief narrowed by After on the "''')
 
 root = PKG / 'Becoming.lean'
@@ -90,7 +90,7 @@ BULLET = """* `Becoming.ListingValuation` (L1): the valuation as state, informin
   (`ListingValuation.revalued_split`); on one blanketed law carrying the reading formation's listing
   and valuation (`ListingValuation.joint`), state and answer change only through what is sensed
   (`ListingValuation.through_sensed`), and, from different starts, a route shown and a route
-  presented answer alike and end in one state while the valuation changed on one alone
+  presented can answer alike and end in one state while the valuation changed on one alone
   (`ListingValuation.TwoWorlds.not_lumped`). A leaf (board item RF).
 """
 edit(root, "  `HeldForReading.SignLoop.never_senses_stop`). A leaf (board item RF).\n* `Becoming.SecuredContent`",
@@ -190,7 +190,7 @@ edit(overview, "that a model missing the true sign can rest without meeting the 
                "a reading is worth](chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).\n",
      "that a model missing the true sign can rest without meeting the stop [AI reading] ([what holding for "
      "a reading is worth](chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).\n\n"
-     "What another's reading answers can be moved by informing it and, apart, by revaluing it. Proved in natural-number counts: by a reference valuation, holding for a reading formation's answer through a map falls short by the least shortfall through the map plus a residual, positive exactly where the answer decides a listed cell against the reference's strict weighted preference; a finer map never raises the first but can raise the second by more than it lowers the first, a revaluation moves only the second, and from different starts a route informing it and one revaluing it can answer alike and end in one state. Read [AI reading]: under a reference it does not share, incentives, before costs, to withhold and, where the supplied update reaches such a valuation, to revise; evaluated "
+     "What another's reading answers can be moved by informing it and, apart, by revaluing it. Proved in natural-number counts: by a reference valuation, holding for a reading formation's answer through a map falls short by the least shortfall through the map plus a residual, positive exactly where the answer decides a listed cell against the reference's strict weighted preference; a finer map never raises the first but can raise the second by more than it lowers the first, a revaluation moves only the second, and from different starts a route informing it and one revaluing it can answer alike and end in one state. Read [AI reading]: under a reference it does not share, informing can lower the worth of holding and revaluing raise that worth, incentives, before costs, to withhold and, where the supplied update reaches such a valuation, to revise; evaluated "
      "by its own current valuation on a shared model, a reason to keep that valuation from any revision deciding a "
      "listed cell against its strict weighted preference ([a reading informed and "
      "revalued](chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)).\n")
@@ -214,7 +214,7 @@ edit(dossier, "The reading formation's own state, a noisy reading and continuous
      "its strict weighted preference, beside the preservation incentive of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2). From different starts a route informing and one revaluing can answer alike and end in one state, so the answers and the final state need not tell whether the valuation changed, and no criterion of legitimate change is supplied (Carroll, Dragan, "
      "Russell and Hadfield-Menell 2022).\n")
 edit(dossier, "and Good's note in the British Journal for the Philosophy of Science, 1967).\n",
-     "and Good's note in the British Journal for the Philosophy of Science, 1967). RF-M.3's sentences and its changes to the assistance-games clause and round 2's sentence, made on "
+     "and Good's note in the British Journal for the Philosophy of Science, 1967). RF-M.3's sentences and its changes to the assistance-games clause, to round 2's first sentence and to RF-M.2's last sentence, made on "
      f"{TODAY.day} {TODAY:%B} {TODAY.year}, were cold-read before its landing, and the works they cite were checked "
      "against their texts (Kamenica and Gentzkow's paper in the American Economic Review, 2011, and arXiv 1908.04734 "
      "and 2204.11966).\n")

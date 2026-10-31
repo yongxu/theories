@@ -284,7 +284,7 @@ rI = build(
       "another, exactly where its shortfall and amount together fall below the other's; through maps, in the split's "
       "terms; with a shared model and net agreement, the least shortfalls and the amounts decide, so through a refinement holding "
       "for the coarser answer, forgoing no less, never stands above holding for the finer.",
-      '舍量：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；共模型且净相合（故二答皆最少），则最少所缺与其量定之，故经细分，为较粗之答而持、所舍不少，永不高于为较细者而持。',
+      '舍量：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；共模型且净相合，则最少所缺与其量定之，故经细分，为较粗之答而持、所舍不少，永不高于为较细者而持。',
       lv('forgone_lt_iff', 'forgone_through_lt_iff', 'forgone_least_iff', 'coarser_not_above')),
      ("Forgoing one amount through a refinement, holding for the coarser rule stands above holding for the finer "
       "exactly where the finer rule's residual exceeds the coarser's by more than the least shortfall falls through the "
@@ -339,11 +339,11 @@ rI = build(
       "components.",
       '读之形成之态与答唯经其所感而变，为 Blanketed.agent_through_sensory 之一例；滤与改值作为更新可交换，各作用于异部。',
       lv('through_sensed', 'updates_commute')),
-     ("Shown a world, the listing is filtered to the worlds showing what it shows, weights and valuation unchanged, "
+     ("Shown what a world shows, the listing is filtered to the worlds showing it, weights and valuation unchanged, "
       "and the answer is the answer through what is shown at that world's cell; its shortfall splits through what is "
       "shown, the least shortfall at most that through one cell, and, with the holding formation's model the reading "
       "formation's before and net agreement, holding for it never stands lower than before.",
-      '示一世界，则其列滤为所示同者之诸世界，权与值不变，其答即经所示之映射于此世界之格之答；其所缺经所示而分，最少所缺不逾经单格者；持之形成之模型即读之形成示前之模型且净相合，则为之而持永不低于示前。',
+      '示一世界之所显，则其列滤为所显同者之诸世界，权与值不变，其答即经所示之映射于此世界之格之答；其所缺经所示而分，最少所缺不逾经单格者；持之形成之模型即读之形成示前之模型且净相合，则为之而持永不低于示前。',
       lv('total_filter_shows', 'within_shown', 'answer_shown', 'shown_split', 'shown_least_le', 'shown_never_lowers')),
      ("Where the acts taken give two worlds one input, from one state of each formation their internal, sensory, answer and holding "
       "courses agree, so where no demonstration tells the worlds apart or none is emitted; so holding for the answer, "
@@ -463,16 +463,13 @@ rI = build(
     {'en': "In counts: informed_le is, for this decision, the deterministic-refinement, fixed-decision direction of "
            "Blackwell's (1953) comparison; with a shared model, SplitsKeep is the counterpart, along the cells of the "
            "listing's partitions, of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and "
-           "Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference the valuation "
-           "differs from, incentives to withhold and to revise (if the update reaches it), before costs; coarse equilibrium communication "
+           "Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a gaining valuation), before costs; coarse equilibrium communication "
            "(Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of "
            "current-reward-function evaluation's preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2): on a shared "
-           "model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no "
-           "path-specific objective (Farquhar, Carey and "
-           "Everitt 2022); answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell "
+           "model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no path-specific objective (Farquhar et al. 2022); answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell "
            "et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not "
            "containments.",
-     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达）之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
+     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达有得之值）之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
     ['a reading informed and revalued', '受告与改值之读', 'informing and revaluing a reading formation',
      '告读之形成与改其值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
      'Becoming.ListingValuation.refining_never_lowers_iff'],

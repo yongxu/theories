@@ -5,9 +5,12 @@ Inputs (saved where the reads ran): the cross-model reader's cold read (markdown
 lenses' findings with their refuters' verdicts (JSON: a list of {lens, found: {verdict, findings}, verdicts:
 {verdicts}}); and the cross-model reader's two re-checks (markdown, or `-` while one has not run): the first of how
 its own points were taken and of the texts cut or added since, before the lenses ran; the second of how the lenses'
-findings were taken. What was taken from each re-check is in RECHECKS. Usage, from the repository root:
+findings were taken; and the check beside the second, a workflow's result (JSON: a list of {lens, check: {summary,
+items}, verdicts}, or `-` while it has not run). What was taken from each re-check is in RECHECKS, and from the check
+in CHECK. Usage, from the repository root:
 
     python3 -B <this file> <cold read .md> <lens results .json> <first re-check .md | -> <second re-check .md | ->
+        <check .json | ->
 """
 import json
 import sys
@@ -24,6 +27,7 @@ ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-84
 
 reader_md, lens_json = Path(sys.argv[1]), Path(sys.argv[2])
 recheck_mds = [None if a == '-' else Path(a) for a in sys.argv[3:5]]
+check_json = None if len(sys.argv) < 6 or sys.argv[5] == '-' else Path(sys.argv[5])
 
 
 def relinked(text):
@@ -55,12 +59,20 @@ RECHECK_SENTENCE
 BUILD_SENTENCE = ("For the lenses' findings the module's statements did not change: its header, the docstring of "
                   "`WeightsApart.not_splitsKeep` and one section heading were revised, and it was rebuilt, 138 theorems "
                   "in 186 declarations, every axiom report empty "
-                  "([build-6](../kit/round2c/logs/build-6.log)).")
+                  "([build-6](../kit/round2c/logs/build-6.log)). For the check of how they were taken, the header's "
+                  "bullet on the carrier and its Readings were revised again, and it was rebuilt, the same counts, every "
+                  "axiom report empty ([build-7](../kit/round2c/logs/build-7.log)).")
 # The re-checks, for the opening, once they have run.
 RECHECK_SENTENCE = ("Before the lenses ran, the cross-model reader re-checked, in the session of its cold read, how its "
                     "six points were taken and the texts cut or added since: one point, the reason to keep the valuation "
                     "stated on a shared model wherever it is stated, taken ([the first "
-                    "re-check](#the-re-check-of-the-cross-model-readers-points)).")
+                    "re-check](#the-re-check-of-the-cross-model-readers-points)). After the lenses' findings were taken, "
+                    "it re-checked them in the same session: one omission, the incentive to revise read in PLAN §5's row "
+                    "without costs and the supplied update's reach, taken ([the second "
+                    "re-check](#the-re-check-of-the-lenses-findings)). Beside it, three Opus readers, one per lens, "
+                    "checked how every finding was taken, each reader's gaps given to a refuter: 14 gaps, every one "
+                    "judged real; with the second re-check's point, 12 distinct points, all taken ([the "
+                    "check](#the-check-of-how-the-lenses-findings-were-taken)).")
 
 # What was taken from the cross-model reader: (point, finding, taken).
 TAKEN_READER = (
@@ -134,7 +146,7 @@ TAKEN_LENS = {
            "“From different starts a route informing and one revaluing can answer alike and end in one state, so the "
            "answers and the final state need not tell whether the valuation changed”, in 07's and the overview's terms"),
     'X10': ("the record's Chinese law on informing has a clause the English lacks",
-            "the clause dropped from the Chinese, the English being at its cap"),
+            "the clause dropped from the Chinese, the English, at 410 of its 420 characters, having no room for it"),
     'X11': ("the Chinese README row and alias parse as informing acting on the valuation",
             "告读之形成与改其值, in the row and in the alias"),
     'X12': ("the plan's cells {1, 2} and {3} count from one, where the candidates are 0, 1 and 2",
@@ -312,10 +324,88 @@ RECHECKS = (
        "valuation on a shared model no revaluation gains”) and the record's correspondence (“on a shared model, a "
        "reason to keep the valuation”, zh 共模型时), `own_least` and `revalued_lowers_iff` both evaluating on the "
        "holding formation's model; kit `6837be33a`, the record's caps passing"),)),
-    ("The re-check of what was taken from the lenses",
-     "RECHECK2_READ",
-     ()),
+    ("The re-check of the lenses' findings",
+     "The cross-model reader, in the session of its cold read, read how the lenses' findings were taken and, as new "
+     "text, the passages they changed, read-only, in a rehearsal rebuilt at the same path on the kit at `22a113c0c` with "
+     "main at `2f4a5bd96`, the diff of the study folder since `18001d918` at its root. Verbatim; its line numbers are "
+     "those of the version it read.",
+     (('1', 'taken',
+       "PLAN §5's row on preference shaping, in one wording with the check's RC1 and TC3: “its laws read as an "
+       "incentive, before costs, to revise under a reference the valuation does not share, only where the supplied "
+       "update reaches a valuation whose answer stands above the current one by that reference, which is not "
+       "asserted”; the other places the incentive is read carry both qualifications (03 §12's Reading, PLAN §4.8's "
+       "Readings, the module's header, the overview, the dossier and the record's correspondence), the overview's and "
+       "the record's given what gains (RC2, RC3)"),)),
 )
+
+
+# The check beside the second re-check: its heading, what it read, and for each gap, numbered by lens in the order
+# reported, (the reader's id, the finding in short, what was taken).
+CHECK_HEADING = "The check of how the lenses' findings were taken"
+CHECK_READ = ("Beside the second re-check, a workflow of three Opus readers, one per lens, read-only in the same rehearsal, "
+              "checked every finding of its lens against the table of what was taken, the texts and the Lean, giving each "
+              "id a status (taken, in part, not taken, or taken with a new problem), and reported new problems in the "
+              "passages the findings touch; each reader's gaps were given to one refuter asked to refute them against "
+              "the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). Verbatim: each reader's summary, "
+              "the ids it found taken, and each gap with its refuter's verdict, numbered by lens (XC, RC and TC) in the "
+              "order reported; the line numbers are those of the rehearsal.")
+LENS_TITLE = {'exactness': ('Exactness', 'XC'), 'readings': ('Readings', 'RC'), 'fit': ('Fit', 'TC')}
+STATUS = {'in_part': 'in part', 'not_taken': 'not taken', 'problem': 'taken, with a new problem', 'new': 'new'}
+CHECK = {
+    'XC1': ('X5', "the record's Chinese law on amounts forgone keeps “so both answers least”, which its English lacks",
+            "the Chinese law without （故二答皆最少）, so neither language states it, the English, at 418 of its 420 "
+            "characters, having no room for it"),
+    'XC2': ('X7', "the Lean review's re-check row R5 puts the told criterion's cells in the bullet on amounts forgone",
+            "R5's last clause: “and the bullet on when the answer is least names the told criterion's cells, covering "
+            "that listing”, the Lean review's page regenerated"),
+    'XC3': ('X8', "in part: the record's law on a demonstration still opens “Shown a world”",
+            "“Shown what a world shows, the listing is filtered to the worlds showing it” (zh "
+            "示一世界之所显，则其列滤为所显同者之诸世界), 413 and 100 of their 420 and 190 characters"),
+    'XC4': ('new', "03 §12's Reading, PLAN §4.8's Readings and its item 12 state the loss by the current valuation and the "
+                   "revised answer's lack of residual without the shared model",
+            "03 §12: “evaluated by the current valuation on a shared model, a revision deciding a listed cell against "
+            "its strict weighted preference counts as a loss”; PLAN §4.8's Readings: “by it, on a shared model, a "
+            "revision deciding …”; its item 12: “With the reference the revised valuation and the reading formation's "
+            "model the holding formation's, the revised answer has no residual through the same map”; the module's "
+            "Readings (TC4); and the board's landing text: “and, on a shared model, by the reading formation's own "
+            "current valuation no revaluation gains …”"),
+    'XC5': ('new', "the X10 row says the English law on informing is at its cap; it is at 410 of 420",
+            "the X10 row: “the English, at 410 of its 420 characters, having no room for it”"),
+    'RC1': ('R9', "in part: PLAN §5's row reads the incentive to revise without the supplied update's reach or costs",
+            "in one wording with the second re-check's point and TC3: “its laws read as an incentive, before costs, to "
+            "revise under a reference the valuation does not share, only where the supplied update reaches a valuation "
+            "whose answer stands above the current one by that reference, which is not asserted, and, by the reading "
+            "formation's current valuation on a shared model, a reason to keep the valuation from a revision …”"),
+    'RC2': ('new', "the overview's “such a valuation” has no antecedent, so binds to the reference",
+            "in the dossier's form: “under a reference it does not share, informing can lower the worth of holding "
+            "and revaluing raise that worth, incentives, before costs, to withhold and, where the supplied update "
+            "reaches such a valuation, to revise”"),
+    'RC3': ('new', "the record's “(if the update reaches it)” binds to the reference",
+            "“under a reference unlike the valuation, incentives to withhold and to revise (if the update reaches a "
+            "gaining valuation), before costs” (zh 若所予之更新可达有得之值), the room made by citing “Farquhar et al. "
+            "2022” as the field cites its other works: 1195 and 466 of 1200 and 500 characters"),
+    'RC4': ('new', "the root bullet and the checker's scope state the routes' witness without “can”",
+            "“a route shown and a route presented can answer alike and end in one state” in the root bullet, the "
+            "checker's scope (changed before the landing's core run, whose receipt records it) and the board's "
+            "landing text"),
+    'TC1': ('T8', "in part: the study and the header claim the worth wherever two worlds alone are not told apart",
+            "the study: “and holding for the answer is worth one committed move where none tells the listed worlds "
+            "apart (answer_constant) or none is emitted (undemonstrated_worth)”; the header: “and, wherever none is "
+            "emitted or none tells the listed worlds apart, holding for the answer is worth one committed move”, the "
+            "module rebuilt, 138 theorems in 186 declarations, every axiom report empty "
+            "([build-7](../kit/round2c/logs/build-7.log))"),
+    'TC2': ('T17', "in part: the dossier's account omits RF-M.3's change to RF-M.2's last sentence, and “round 2's "
+                   "sentence” names none",
+            "“RF-M.3's sentences and its changes to the assistance-games clause, to round 2's first sentence and to "
+            "RF-M.2's last sentence, made on …”"),
+    'TC3': ('new', "PLAN §5's row reads the incentive to revise without reach or costs", "as RC1"),
+    'TC4': ('new', "the loss by the current valuation without the shared model in 03 §12, PLAN §4.8's Readings and "
+                   "the module's Readings",
+            "as XC4, and the module's Readings: “by it, on a shared model, a revision that changes a decision against "
+            "the current strict preference counts as a loss”, in TC1's rebuild"),
+    'TC5': ('new', "the study's and the re-point's lists of the plan's places omit §4.7's paragraph on RF-M.3",
+            "both: “RF's plan (§4.7's paragraph on RF-M.3, §4.8, …”"),
+}
 
 reader = cx_body(reader_md)
 results = json.loads(lens_json.read_text(encoding='utf-8'))
@@ -368,6 +458,39 @@ for md, (heading, read, taken) in zip(recheck_mds, RECHECKS):
               f'### What was taken from {heading[0].lower()}{heading[1:]}\n',
               '| Point | Status | How |', '|---|---|---|']
     parts += [f'| {p} | {s} | {cell(h)} |' for p, s, h in taken]
+if check_json is not None:
+    parts += [f'\n## {CHECK_HEADING}\n', CHECK_READ + '\n']
+    rows_check, labels = [], []
+    for result in json.loads(check_json.read_text(encoding='utf-8')):
+        title, code = LENS_TITLE[result['lens']]
+        items = result['check']['items']
+        gaps = [i for i in items if i['status'] != 'taken']
+        verdicts = result.get('verdicts') or []
+        assert len(verdicts) == len(gaps), (result['lens'], 'a gap without a verdict')
+        parts += [f'### {title}\n', f"**Summary.** {relinked(result['check']['summary'])}\n",
+                  f"**Taken as the table says.** {', '.join(i['id'] for i in items if i['status'] == 'taken')}.\n"]
+        for k, (g, v) in enumerate(zip(gaps, verdicts), 1):
+            label = f'{code}{k}'
+            labels.append(label)
+            fid, short, taken = CHECK[label]
+            assert g['id'] == fid == v['id'], (label, g['id'], v['id'], fid)
+            head = 'a new problem' if g['id'] == 'new' else f"{g['id']} ({STATUS[g['status']]})"
+            block = [f"#### {label}: {head}", '',
+                     f"**Location.** {relinked(g.get('location', ''))}", '',
+                     f"**Quoted.** {relinked(g.get('quoted', ''))}", '',
+                     f"**Problem.** {relinked(g.get('problem', ''))}", '',
+                     f"**Replacement.** {relinked(g.get('replacement', ''))}", '',
+                     f"**Verdict: {'real' if v['real'] else 'not real'}.** {relinked(v['reason'])}", '']
+            better = (v.get('replacement') or '').strip()
+            if better and better != (g.get('replacement') or '').strip():
+                block += [f'**Refuter\'s replacement.** {relinked(better)}', '']
+            parts.append('\n'.join(block))
+            rows_check.append(f"| {label} | {fid} | {'real' if v['real'] else 'not real'} | {cell(short)} | "
+                              f"{cell(relinked(taken))} |")
+    assert labels == list(CHECK), ('CHECK names a gap not reported, or misses one', labels)
+    parts += [f'### What was taken from {CHECK_HEADING[0].lower()}{CHECK_HEADING[1:]}\n',
+              '| Gap | Id | Verdict | Finding | Taken |', '|---|---|---|---|---|']
+    parts += rows_check
 text = '\n'.join(parts) + '\n'
 assert '](/' not in text and not any(root in text for root in ROOTS)
 OUT.write_text(text, encoding='utf-8')

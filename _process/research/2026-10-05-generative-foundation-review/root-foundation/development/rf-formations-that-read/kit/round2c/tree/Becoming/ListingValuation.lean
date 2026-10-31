@@ -123,8 +123,9 @@ cells is decidable wherever cells are compared or listings filtered.
   for it never stands lower than before (`shown_never_lowers`). Where the act emitted along the
   course gives one input at two worlds, from one state of each formation the courses are alike
   (`inputs_alike_before`), so they are alike wherever no demonstration is emitted
-  (`undemonstrated_alike`) or none tells the worlds apart (`inputs_alike`), and there holding for
-  the answer is worth one committed move (`undemonstrated_worth`, `answer_constant`).
+  (`undemonstrated_alike`) or none tells the worlds apart (`inputs_alike`), and, wherever none is
+  emitted or none tells the listed worlds apart, holding for the answer is worth one committed move
+  (`undemonstrated_worth`, `answer_constant`).
 * **The four cases and two routes** (`TwoWorlds`). Two worlds, weights 1 and 2, valuation states
   agreeing with the reference, raised and reversed. As updates of one state: from both worlds listed
   and agreeing, the answer stops, is turned by being shown and left by a revaluation
@@ -230,15 +231,15 @@ against the current strict preference loses. Not represented: their causal influ
 their assumptions (reward functions conditionally uninformative about state transitions, private and
 state-based), the agent that ignores time inconsistency (their Claim 3), several steps, and the
 reward input. Evaluating by the current valuation is the frozen initial-preferences baseline that
-Carroll, Dragan, Russell and Hadfield-Menell (2022) call very crude: by it, a revision that changes
-a decision against the current strict preference counts as a loss, wanted or not; no criterion of a
-wanted revision is represented. No path-specific objective is constructed (Farquhar, Carey and
-Everitt 2022): their evaluation fixes the delicate state at its value under a baseline action, a
-nested counterfactual. In `own_least` only the evaluation is fixed; the answer held for is the
-revised valuation's, so the path from the valuation through the answer to the worth stays live, and
-`own_least` is not such an intervention. Under one, a revaluation would leave the worth unchanged,
-giving no reason to revise the valuation or to keep it, whereas `revalued_lowers_iff` gives a reason
-to keep it. `outcome_least` uses the actual changed valuation.
+Carroll, Dragan, Russell and Hadfield-Menell (2022) call very crude: by it, on a shared model, a
+revision that changes a decision against the current strict preference counts as a loss, wanted or
+not; no criterion of a wanted revision is represented. No path-specific objective is constructed
+(Farquhar, Carey and Everitt 2022): their evaluation fixes the delicate state at its value under a
+baseline action, a nested counterfactual. In `own_least` only the evaluation is fixed; the answer
+held for is the revised valuation's, so the path from the valuation through the answer to the worth
+stays live, and `own_least` is not such an intervention. Under one, a revaluation would leave the
+worth unchanged, giving no reason to revise the valuation or to keep it, whereas
+`revalued_lowers_iff` gives a reason to keep it. `outcome_least` uses the actual changed valuation.
 
 `answer_constant` and `undemonstrated_worth` join the off-switch reading (Hadfield-Menell, Dragan,
 Abbeel and Russell 2017). By their Equation 1, which holds for any policy of the human, a

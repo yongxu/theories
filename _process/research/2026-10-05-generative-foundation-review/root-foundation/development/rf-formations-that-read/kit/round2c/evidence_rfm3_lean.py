@@ -173,7 +173,7 @@ RECHECK = (
                     "uninformative about state transitions, private and state-based) are among what is not "
                     "represented."),
     ('R5', 'taken', "The header's informing bullet asks only for `π'`'s cells, listed once each and covering the "
-                    "holding formation's listing; the coarser map's cells are named only for the criterion over every refinement. Updated after the check of the delta (its point 1): the bullet also names the coarser map's cells, listed once each and covering, for `informed_lt_iff`; and after the cold read of the texts (its finding X7), the bullet on amounts forgone names both maps' cells, listed once each and covering the holding formation's listing, for `refined_lt_iff`, and the told criterion its cells covering that listing."),
+                    "holding formation's listing; the coarser map's cells are named only for the criterion over every refinement. Updated after the check of the delta (its point 1): the bullet also names the coarser map's cells, listed once each and covering, for `informed_lt_iff`; and after the cold read of the texts (its finding X7), the bullet on amounts forgone names both maps' cells, listed once each and covering the holding formation's listing, for `refined_lt_iff`, and the bullet on when the answer is least names the told criterion's cells, covering that listing."),
     ('R6', 'taken', "`forgone_least_iff`'s docstring: holding for the answer through `π`, forgoing `k`, stands above "
                     "holding for it through `π'`, forgoing `k'`, exactly where the least shortfall through `π` and "
                     "`k` fall below that through `π'` and `k'`, each map's cells listed once each and covering the "

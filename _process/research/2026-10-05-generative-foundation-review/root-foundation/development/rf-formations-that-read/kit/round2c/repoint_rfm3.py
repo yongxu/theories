@@ -61,7 +61,7 @@ REASON = ("RF round 2's RF-M.3: Becoming.ListingValuation joined to the core as 
           "a-reading-informed-and-revalued with its reading, a pointer in the acts-alike reading) and 03's Open; 07 §7's "
           "paragraph on executable change; 08's counts and §8's known results beyond the table; the overview's "
           "paragraph after holding for a reading; the alignment dossier's scope box and its account of how it was made; "
-          "RF's plan (§4.8, §5's and §8's rows, §12, §13's reviews and the Evidence list), which RF's records cite; the study; regions.json; "
+          "RF's plan (§4.7's paragraph on RF-M.3, §4.8, §5's and §8's rows, §12, §13's reviews and the Evidence list), which RF's records cite; the study; regions.json; "
           "the connectivity; the two records it amends (what-holding-for-a-reading-is-worth, "
           "acts-alike-from-a-model-or-from-an-order) gain a related link, their next step and a history line, no "
           "statement or declaration changed; read before re-pointing")
