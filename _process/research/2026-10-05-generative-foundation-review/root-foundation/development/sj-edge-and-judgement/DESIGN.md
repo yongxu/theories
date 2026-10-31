@@ -60,6 +60,8 @@ The edge keeps 08 §7's sense, where each central declaration stands against the
 
 Where no row of the record takes an input, the column says none rather than inventing a label.
 
+*Process (not chapter text): DU's owner answered on 1 November 2026 (du-claim be03a095f, `development/du-deep-unification-review/texts/TEXTS.md`, last section). DU and SJ1 share no Lean. Once DU lands, the rows cite its declarations: scope and order, `ReadsNoOrder.not_entails`, `LiftModel.met_and_failed`, `Web.comparison_of_increasingInOwn`; weights and amounts, `World.standing_not_read_up_to_unit`; what the root's other laws take (which relation), `«续无外随网»` and `«逆缘续无外随网»`. DU adds a home section, premises met and failed, after "Standings on the edge" in 08 §7, so the map goes after it unless OU's owner orders the two otherwise.*
+
 ## 4. SJ1: judgment from a reading, on the root (proposed Lean)
 
 **Basis** (the grammar's owner's choice). Situations are occurrences of the grammar's carrier `α`; a reading is a relation `E : «际» α`, and the requirement is a family of regions indexed by acts, `G a : α → Prop`, the act an index outside `«际»`. The family states the law with no encoding to undo; the one-carrier encoding is used only for law 5, where `«像定后当且仅当同行»` needs it, and stated there. This generalises ReadingLoop's form from a supplied invariant reading to any relation. No separate subject is given: the reading and the situations it reads are relations and occurrences of one carrier, and the split's omission is named (the reading's own formation is not represented here; RF's loop represents it).
@@ -96,7 +98,7 @@ Where no row of the record takes an input, the column says none rather than inve
 
 ## 5. Texts (homes from the grammar's owner)
 
-- 08 §7: §3's map as a short subsection after "Standings on the edge", one sentence keeping "edge" in U4's sense.
+- 08 §7: §3's map as a short subsection after "Standings on the edge" and after DU's section on premises met and failed, one sentence keeping "edge" in U4's sense; it lands after DU, rebased on DU's 08 §7 hunks.
 - 03 §12: SJ1's home section, beside ReadingLoop, HeldForReading and OpenedCorrection, with 03 §3's sentence and 03 §9's law as its readings.
 - 07 §5: one sentence saying where a requirement filled under the condition and C meets the law, and that the law says nothing of which requirement is better.
 - Records: SJ1's record. GuardHorizon's record names it. Keeping's and InquiryChoice's records gain one line each.
