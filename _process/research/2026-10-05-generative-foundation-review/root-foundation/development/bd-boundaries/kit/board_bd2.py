@@ -60,7 +60,9 @@ def landed(receipt, n):
               "glossary row, the root module's bullets, the checker's core list and scope and both package READMEs, "
               "the Chinese Boundaries row brought to the English and the checker's Boundaries scope to the "
               "continuation condition; an independent AI review and its re-check and the grammar owner's notes, every "
-              "finding taken; the records citing the changed sections re-pointed, nothing they say changed; BD2's row "
+              "finding taken; the connectivity register's new apart roots each with a reason, and Frame's "
+              "`closedUnder_iff_closed` no longer apart, the World's cut laws using it; the records citing the "
+              "changed sections re-pointed, nothing they say changed; BD2's row "
               "in the history file; render, strict check, links and tests pass). ")
     rest = line[len('- **Queue:** ' + HEAD):]
     order = re.search(r"Then, in the coordinator's order: ([^;]*(?:;[^;]*)*?); ask the coordinator for a slot\.", rest)

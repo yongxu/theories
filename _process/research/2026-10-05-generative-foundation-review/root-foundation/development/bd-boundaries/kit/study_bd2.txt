@@ -34,6 +34,8 @@ Delta:
     closure along conveyance within the family (region_no_boundary, closures_not_within_region); the clearing's
     resource region likewise, along conveyance and along living on (Clearing.resource_no_boundary).
   - GrammarPath: «所经必同» from «定则内至外之线有出步» and «线内同类», its direct induction gone (rule 9).
+  - Connectivity: Frame's closedUnder_iff_closed («闭» by definition) is no longer apart from the base, the World's
+    cut laws using it (its register entry removed); BD2's own apart roots are registered, each with a reason.
 Supplied premises / correspondence: none beyond each theorem's own hypotheses (stable or decided membership, the
        split of steps, symmetry, and region_not_a_cut's balance, dissipation, no repetition, decided equality,
        enclosure and recurring taking). Modelling choices: Prop-valued regions; lines as finite chains of
