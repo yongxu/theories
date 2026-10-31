@@ -1,0 +1,35 @@
+# Measure runs (AJ4's counting: visible prose only; a Chinese character counts half a word)
+
+## Before (live pages on main d3a502880)
+  2154 words      6 chars      2157 budget-words  16.6–21.6 min  theories/becoming/ONE-PAGE.md
+    36 words   3579 chars      1826 budget-words  14.0–18.3 min  theories/becoming/ONE-PAGE.zh.md
+ 13635 words     52 chars     13661 budget-words  105.1–136.6 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   276 words  21968 chars     11260 budget-words  86.6–112.6 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+## Drafts, pass 1 (before the independent read)
+  1098 words      4 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    45 words   1818 chars       954 budget-words  7.3–9.5 min  ONE-PAGE.zh.md.staged
+  5983 words     29 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   157 words  10359 chars      5336 budget-words  41.0–53.4 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+Overview passes (English): 6,499 → 6,248 → 6,142 → 6,057 → 6,023 → 5,992 → 5,977 → 5,983 words (T1's claim restored in full). One page: 1,386 → 1,233 → 1,175 → 1,147 → 1,110 → 1,101 → 1,103 → 1,098.
+
+## Drafts, pass 2 (the read's 21 findings and the restored open items taken, offset by cuts)
+  1095 words      6 chars      1098 budget-words  8.4–11.0 min  ONE-PAGE.md.staged
+    49 words   1839 chars       968 budget-words  7.4–9.7 min  ONE-PAGE.zh.md.staged
+  5980 words     31 chars      5996 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10369 chars      5356 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+Pass 2, overview (English): 5,983 → 6,158 (findings) → 6,043 → 5,986 → 5,980 words. One page: 1,098 → 1,159 (findings) → 1,116 → 1,103 → 1,095.
+
+## Drafts, pass 3 (OU's owner's wording of the de se clause, in both pages and editions; a stray full stop in overview §7)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1842 chars       970 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10380 chars      5362 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+## Drafts, pass 4 (the zh read's 22 findings taken; two full stops before link parentheses in the English overview)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1847 chars       972 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10389 chars      5366 budget-words  41.3–53.7 min  THE-THEORY-OF-BECOMING.zh.md.staged
