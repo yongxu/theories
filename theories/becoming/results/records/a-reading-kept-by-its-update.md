@@ -11,25 +11,25 @@
 ## Laws
 
 1. A region kept along every finite reach of a relation is a closed region of it, and conversely: one step is a reach, and a closed region holds what is reached (by «闭之及»). (`Becoming.ReadingLoop.kept_iff_closed`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. On one carrier of world and state, the world becomes what a relation admits under the act the state gives and the state is updated from that act and the value sensed; a reading of the world by the state kept by the update under every act is a closed region of every policy's loop. (`Becoming.ReadingLoop.joint`, `Becoming.ReadingLoop.Sound`, `Becoming.ReadingLoop.KeptBy`, `Becoming.ReadingLoop.closed_of_keptBy`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 3. Successor safety: an act leads, from every world a reading admits, only where the task holds, which an act no world can take meets; good and enabled adds that it can be taken at each; a policy keeps a task where it holds at every configuration reached from a sound one, and goes on where each sound one has a successor. (`Becoming.ReadingLoop.Good`, `Becoming.ReadingLoop.GoodEnabled`, `Becoming.ReadingLoop.Keeps`, `Becoming.ReadingLoop.Continues`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 4. Where the reading is a closed region of the policy's loop and each state's act is good for its reading, the task holds at every configuration reached from a sound one; a policy keeping the task is good for every state's reading, with no hypothesis; with the reading kept by the update, the two are equivalent. (`Becoming.ReadingLoop.keeps_of_good`, `Becoming.ReadingLoop.good_of_keeps`, `Becoming.ReadingLoop.keeps_iff_good`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 5. With the reading kept by the update, a policy keeps the task and goes on from every sound configuration exactly where its act is good and enabled for every state's reading; given choice over the states, such a policy exists exactly where each state has one such act. (`Becoming.ReadingLoop.keeps_continues_iff`, `Becoming.ReadingLoop.keeping_policy_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 6. The reading admitting every world is kept by every update, an act good for it only where good at every world; the reading admitting none is kept by every update, every act is good for it, and no configuration is sound for it: being kept is not being informative. (`Becoming.ReadingLoop.everything_kept`, `Becoming.ReadingLoop.everything_good_iff`, `Becoming.ReadingLoop.nothing_kept`, `Becoming.ReadingLoop.nothing_good`, `Becoming.ReadingLoop.nothing_sound`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Witness: three worlds and three acts, an act good at a world where it is not the act that world names; every two worlds share a good act and no act is good at all three, so acts good pairwise need not be one act good for all. (`Becoming.ReadingLoop.PairwiseShared.Point`, `Becoming.ReadingLoop.PairwiseShared.good`, `Becoming.ReadingLoop.PairwiseShared.two_share`, `Becoming.ReadingLoop.PairwiseShared.none_for_all`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. With the state the history of acts and values sensed, newest first, the worlds possible after a history are where a course from a start taking its acts and sensing its values could be; they are kept by recording, and are the least reading so kept that holds at every start. (`Becoming.ReadingLoop.record`, `Becoming.ReadingLoop.Possible`, `Becoming.ReadingLoop.possible_kept`, `Becoming.ReadingLoop.possible_least`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. A policy acting from its history generates the histories whose every act is the policy's at the history before it; what it reaches from a start is possible after a history it generates, and every world possible after such a history is a start or reached from one. (`Becoming.ReadingLoop.Generated`, `Becoming.ReadingLoop.generated_closed`, `Becoming.ReadingLoop.possible_of_reached`, `Becoming.ReadingLoop.reached_of_possible`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 10. A policy acting from its history keeps a task at every configuration reached from a start exactly where, at every history it generates, its act leads only where the task holds from every world possible after it; it goes on from every start and what it reaches exactly where its act can be taken at each such world. (`Becoming.ReadingLoop.history_keeps_iff`, `Becoming.ReadingLoop.history_continues_iff`)
-    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -59,7 +59,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test intervening on a formation's observations (the plan's TR5); review by a person.
+The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (the plan's TR5); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -94,6 +94,7 @@ Aliases: `a kept reading`, `所守之读`, `the worlds possible after a history`
 ### History
 
 - 30 October 2026: added (RF round 2), a reading kept by its update, with going on, and the reading its own history carries; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR5 in experiments/formations-that-read, which can refute at most the correspondence that an agent acts as a policy from its visible history, and two bridges for a reading it states, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

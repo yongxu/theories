@@ -11,7 +11,7 @@
 ## Laws
 
 1. A step conveying from a member of a family has a formation taking from the family; balanced and dissipated on across N such steps, the family's stock falls by at least N, and N is at most its stock at the start. (`Becoming.Flow.takers_pos_of_conveys`, `Becoming.Flow.conveyed_loses`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

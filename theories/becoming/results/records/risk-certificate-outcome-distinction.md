@@ -11,17 +11,17 @@
 ## Laws
 
 1. For a listed family of any type, a reduction to values compared decidedly, an observable and a default value of it: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value, and with the default where there is none. (`Becoming.Readout.LumpedOn`, `Becoming.Readout.Judges`, `Becoming.Readout.judges_iff_lumpedOn`, `Becoming.Readout.lumpedOn_of_judges`, `Becoming.Readout.firstJudge`, `Becoming.Readout.firstJudge_judges`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For any listed family, reduction and observable, no judge reading only the reduced value gives the observable at every member where the reduction merges two members the observable tells apart. (`Becoming.Readout.no_judge_of_merged`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. For every process, run, observable with a default value, and a reduction to values compared decidedly, a judge reading only the reduced run gives the observable at each of the first n dates exactly when it goes alike at every two of those dates the reduction merges; for values of any type, where the reduction merges two of those dates the observable tells apart, no judge does. (`Becoming.Courses.reducedRun`, `Becoming.Courses.run_judges_iff`, `Becoming.Courses.no_run_judge_of_merged`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In the three-route process where arrival fails exactly when the mode equals the route taken, with the equal-weight event laws [0, 1, 2] and [0, 0, 1, 2]: under the first, every route fails at exactly one of the three modes, within a one-third bound, yet fails at its own mode and so is not assured; under the second, route 0 fails at two of the four entries and the bound fails. (`Generative.WisdomFallibleJudgment.uniform_failure_weight`, `Generative.WisdomFallibleJudgment.bounded_risk_without_uniform_completion`, `Generative.WisdomFallibleJudgment.biased_bound_fails`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. Mode 1 belongs to both laws and route 0 arrives there, while the one-third bound for route 0 holds under the first law and fails under the second; so no judge reading only the endpoint that a mode reaches with route 0 classifies the bound for every mode of both laws. (`Generative.WisdomFallibleJudgment.matching_realizations_with_different_certificates`, `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Read on the core law, the admitted realizations of a list of event laws (each law with each of its modes) are a listed family, the endpoint a reduction and the bound an observable: the endpoint judge is the core's judge on that family, one exists exactly where realizations reaching one endpoint carry one bound, and the impossibility follows from the core law. (`Becoming.JudgingCorrespondence.realizations`, `Becoming.JudgingCorrespondence.endpoint`, `Becoming.JudgingCorrespondence.certificate`, `Becoming.JudgingCorrespondence.mem_realizations`, `Becoming.JudgingCorrespondence.judges_iff`, `Becoming.JudgingCorrespondence.endpoint_judge_iff`, `Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -43,7 +43,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261020T161948.968917Z (Lean 4.30.0-rc2; at most propext and Quot.sound).
+Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261031T133748.088094Z (Lean 4.30.0-rc2; at most propext and Quot.sound).
 
 Canonical source: [WisdomFallibleJudgment.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean)
 
@@ -94,6 +94,7 @@ Inherited assured_route_iff connects counted failures with failed arrival. A pro
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json) | — |
 
 Aliases: `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`, `Becoming.Readout.judges_iff_lumpedOn`, `Becoming.Readout.no_judge_of_merged`, `Becoming.Courses.run_judges_iff`, `Becoming.Courses.no_run_judge_of_merged`
 

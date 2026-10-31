@@ -1,0 +1,204 @@
+{
+ "swapped": {
+  "finite-fallible-inquiry-necessity": [
+   [
+    "fallible-inquiry-verification",
+    "20261020T161546.707477Z",
+    "20261031T130828.999853Z"
+   ]
+  ],
+  "timely-response-necessity": [
+   [
+    "fallible-inquiry-verification",
+    "20261020T161546.707477Z",
+    "20261031T130828.999853Z"
+   ]
+  ],
+  "becoming-spine-instances": [
+   [
+    "correction-inquiry-verification",
+    "20261020T161757.201244Z",
+    "20261031T131415.384434Z"
+   ]
+  ],
+  "enacted-scene-binding": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "encounter-selection-and-revision": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "formed-goal-revision-continuation": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "joint-practice-forms-continuation": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "retrospective-source-binding": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "transition-grouping-word-partition": [
+   [
+    "machine-instances-verification",
+    "20261020T161859.257200Z",
+    "20261031T131812.213702Z"
+   ]
+  ],
+  "formed-copying-correction": [
+   [
+    "copying-instances-verification",
+    "20261020T161910.956874Z",
+    "20261031T131950.855717Z"
+   ]
+  ],
+  "formed-copying-registration": [
+   [
+    "copying-instances-verification",
+    "20261020T161910.956874Z",
+    "20261031T131950.855717Z"
+   ]
+  ],
+  "inherited-structural-copying": [
+   [
+    "copying-instances-verification",
+    "20261020T161910.956874Z",
+    "20261031T131950.855717Z"
+   ]
+  ],
+  "recurrent-chain-assembly": [
+   [
+    "copying-instances-verification",
+    "20261020T161910.956874Z",
+    "20261031T131950.855717Z"
+   ]
+  ],
+  "acquired-revision-of-pending-task": [
+   [
+    "versioned-task-instances-verification",
+    "20261020T161926.448088Z",
+    "20261031T132223.713396Z"
+   ]
+  ],
+  "material-preparation-output": [
+   [
+    "preparation-correspondence-verification",
+    "20261020T161943.503298Z",
+    "20261031T133608.754102Z"
+   ]
+  ],
+  "risk-certificate-outcome-distinction": [
+   [
+    "judging-correspondence-verification",
+    "20261020T161948.968917Z",
+    "20261031T133748.088094Z"
+   ]
+  ],
+  "binding-preserving-substitution": [
+   [
+    "substitution-correspondence-verification",
+    "20261020T161957.579185Z",
+    "20261031T133836.069337Z"
+   ]
+  ],
+  "identical-cells-under-noise": [
+   [
+    "cells-under-noise-verification",
+    "20261030T160959.698859Z",
+    "20261031T134056.109386Z"
+   ]
+  ],
+  "expected-free-energy-and-its-terms": [
+   [
+    "expected-free-energy-reals-verification",
+    "20261030T101649.229011Z",
+    "20261031T134130.030892Z"
+   ]
+  ],
+  "free-energy-bounds-surprisal": [
+   [
+    "free-energy-reals-verification",
+    "20261030T043328.214810Z",
+    "20261031T134204.303683Z"
+   ]
+  ],
+  "regime-in-any-amounts": [
+   [
+    "regime-reals-verification",
+    "20261021T102713.696033Z",
+    "20261031T134231.224593Z"
+   ]
+  ],
+  "laws-with-noise": [
+   [
+    "representation-verification",
+    "20261022T151119.678274Z",
+    "20261031T134302.467521Z"
+   ]
+  ]
+ },
+ "left": {},
+ "earlier": {
+  "generalization-through-lumping": [
+   [
+    "learning-correspondence-verification",
+    "20261013T095759.980593Z"
+   ]
+  ],
+  "a-history-read-off-its-finite-stretches": [
+   [
+    "ideals-correspondence-verification",
+    "20261019T020352.033083Z"
+   ]
+  ],
+  "what-discrete-steps-and-whole-amounts-represent": [
+   [
+    "representation-verification",
+    "20261022T121131.390171Z"
+   ]
+  ]
+ },
+ "dated": {
+  "a-selected-template-need-not-raise-structure": [
+   [
+    "passed 7 October 2026",
+    "passed 31 October 2026"
+   ],
+   [
+    "2026年10月7日通过",
+    "2026年10月31日通过"
+   ]
+  ],
+  "same-carrier-need-not-fix-the-response": [
+   [
+    "passed 7 October 2026",
+    "passed 31 October 2026"
+   ],
+   [
+    "2026年10月7日通过",
+    "2026年10月31日通过"
+   ]
+  ]
+ },
+ "left_dated": {},
+ "dates_kept": {},
+ "dates_asked": true
+}

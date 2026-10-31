@@ -1,0 +1,29 @@
+@Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree : ∀ {A : Type u_1} {n : Nat}
+  {a b : CompletionWarrant.PrefixSafety.Trace A},
+  CompletionWarrant.PrefixSafety.SamePrefix n a b ↔
+    Becoming.Run.AgreeUpTo n (Becoming.Sequences.run a) (Becoming.Sequences.run b)
+@Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable : ∀ {A : Type u_1}
+  {K : CompletionWarrant.PrefixSafety.Property A},
+  CompletionWarrant.PrefixSafety.FiniteRefutable K ↔ Becoming.Refutable fun r => K r.act
+@Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres : ∀ {A : Type u_1}
+  {K : CompletionWarrant.PrefixSafety.Property A} {a : CompletionWarrant.PrefixSafety.Trace A},
+  CompletionWarrant.PrefixSafety.PrefixClosure K a ↔ Becoming.Adheres (fun r => K r.act) (Becoming.Sequences.run a)
+@Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core : ∀ {A : Type u_1}
+  {K : CompletionWarrant.PrefixSafety.Property A},
+  CompletionWarrant.PrefixSafety.FiniteRefutable K →
+    ∀ {a : CompletionWarrant.PrefixSafety.Trace A}, CompletionWarrant.PrefixSafety.PrefixClosure K a → K a
+@Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core : ∀ {A : Type u_1}
+  {K L : CompletionWarrant.PrefixSafety.Property A},
+  CompletionWarrant.PrefixSafety.FiniteRefutable L →
+    (∀ (a : CompletionWarrant.PrefixSafety.Trace A), K a → L a) →
+      ∀ {a : CompletionWarrant.PrefixSafety.Trace A}, CompletionWarrant.PrefixSafety.PrefixClosure K a → L a
+Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core : ¬CompletionWarrant.PrefixSafety.FiniteRefutable
+    CompletionWarrant.PrefixSafety.Recurs
+Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core : ¬CompletionWarrant.PrefixSafety.FiniteRefutable
+    CompletionWarrant.PrefixSafety.EventuallyTrue
+Becoming.PrefixSafetyCorrespondence.markov_classical : Becoming.Markov
+@Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core : ∀ {A : Type u_1}
+  (H : Nat → CompletionWarrant.PrefixSafety.Trace A → Prop),
+  (∀ (n : Nat) (a b : CompletionWarrant.PrefixSafety.Trace A),
+      CompletionWarrant.PrefixSafety.SamePrefix n a b → H n a → H n b) →
+    CompletionWarrant.PrefixSafety.FiniteRefutable (CompletionWarrant.PrefixSafety.AllPrefixesIn H)

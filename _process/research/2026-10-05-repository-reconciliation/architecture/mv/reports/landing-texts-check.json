@@ -1,0 +1,354 @@
+{
+ "about": "A check of the three texts MV's follow-up and README's first screen write at landing (the board's Queue-line landed entry, RA's row clause and the history-file row), read by two independent AI checkers (facts and figures; wording and conventions) against the branch at dd3d5ea7b, each checker's findings then given to a skeptic who tried to refute them (workflow wf_328d63a1-598). The texts checked were those of the landing kit's land.py and ra-row-clause.txt before these fixes. At landing the kit moved to _process/history/2026-10-05-repository-reconciliation/architecture/mv/landing-kit/ (receipt _process/architecture/moves/MV-RA-first-screen-kit.json); the findings quote its paths as they were when checked.",
+ "checked_at": "dd3d5ea7b",
+ "lenses": [
+  {
+   "lens": "facts",
+   "reported": [
+    {
+     "text": "history-row",
+     "quote": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3 and BD",
+     "problem": "The list of landings before this one leaves out RF's tests' designs. They landed after BD and before this landing, and mv-land merged them at dd3d5ea7b. The kit's own land.py, as fixed at f5f490f9c, already names them, so this text is the version from before that fix.",
+     "evidence": "git log main: 35892de89 BD landed 2026-10-31 18:03:58, then 669fc33e7 RF's tests' designs landed 19:01:39. dd3d5ea7b is 'Merge main (RF's tests' designs landed, 669fc33e7) into mv-land'. f5f490f9c: 'the history row names RF's tests' designs among the landings before it'. land.py line 77 reads 'fm-rf3, BD and RF's tests' designs'.",
+     "fix": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3, BD and RF's tests' designs",
+     "severity": "wrong"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "five notes brought to the current account",
+     "problem": "Only four of the five notes were brought to the current account. [^transitions] changed only in its label, from '(the AI's reading)' to 'a reading', and that was done under the rule that front pages name no one. The study section says this departs from AGENTS's 'every reading keeps its AI label', and its own Result(s) line keeps the five changes apart.",
+     "evidence": "section-readme-first-screen.txt, Result(s): 'five AI-written notes changed ([^ethics] and [^good-evil] in label and one sentence each, [^transitions] in one label, [^axiom] and [^own] brought to the current account)'. Same section, Delta (9): the label change 'departs ... from AGENTS's \"every reading keeps its AI label\" ... under the rule that front pages name no person or AI'. claim_head.py's CLAUSE: 'brought to the current account and to front pages naming no one'.",
+     "fix": "five notes changed, four brought to the current account and [^transitions]'s label to front pages naming no one",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "five notes brought to the current account",
+     "problem": "Same issue as the Queue entry. [^transitions] changed only in its label, under the front pages' no-names rule, which departs from AGENTS. It was not brought to the current account.",
+     "evidence": "section-readme-first-screen.txt, Result(s) and Delta (9), as for the Queue entry. git diff main -- theories/becoming/OPENING.md: [^transitions] changes only '(the AI's reading)' to '(a reading)'.",
+     "fix": "five notes changed ([^ethics], [^good-evil], [^axiom] and [^own] brought to the current account, [^transitions]'s label to front pages naming no one)",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "[^own] labelled a reading of P1",
+     "problem": "[^own]'s label did not change: it was '**A reading.**' before and still is. What changed is its content. It now states P1, the self's presupposition, as stated and not asserted, which the condition contains. It also gives self-significance only on the readings the condition's theorem takes, where before it gave self-significance under the condition alone.",
+     "evidence": "git diff main -- theories/becoming/OPENING.md: both the old and new [^own] start with '**A reading.**'. The new text reads 'the self's presupposition, P1 of §4.6, stated and not asserted. The continuation condition contains it ...'. section-readme-first-screen.txt Delta (4): '[^own] states P1 ... as stated and not asserted ... and self-significance as what the condition gives on the readings its theorem takes'.",
+     "fix": "[^own] to P1, the self's presupposition, stated and not asserted, and to self-significance on the readings the condition's theorem takes",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "hygienic names read as the dump prints them",
+     "problem": "The text says both copies of the rule read hygienic names 'as the dump prints them', but only boundary.py does. Its printed() reads the name before a lemma whose macro scopes come before its last component in the dump's printed form. boundary_check.lean never reads the dump: it takes Lean's Name apart with extractMacroScopes. What both copies actually share is that a hygienic name is read without its macro scopes, and the name before it with them.",
+     "evidence": "tools/research/boundary.py lines 296-300 (printed) and 377-380 (Terms.aux docstring: 'read under the name before it as the dump prints it'). tools/research/boundary_check.lean lines 215-222 ('generated': extractMacroScopes; 'read under the name before it, which carries them'). section-mv-followup.txt Delta (1): 'a hygienic name is read without its macro scopes, and the name before it with them'. Delta (5): the dump's printing is 'in Terms.aux and outside', both in boundary.py.",
+     "fix": "a hygienic name read without its macro scopes and the name before it with them (in boundary.py, as the dump prints it)",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The screen does not give a reading time for each layer. It times the one page, the overview and the opening only. The chapters layer is not named or timed, and the notes are linked with no time.",
+     "evidence": "README.md first screen: 'Start with the one page (17–22 minutes), the overview (105–137 minutes) or the opening, a first-person conviction (19–25 minutes), with notes.' section-readme-first-screen.txt Delta (1): 'where to start, with the reading times of the one page, the overview and the opening ... (its notes are linked with no time)'.",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "Same issue as the RA row clause. Only the one page, the overview and the opening are timed; no other layer is.",
+     "evidence": "README.md first screen ('the one page (17–22 minutes), the overview (105–137 minutes) or the opening ... (19–25 minutes), with notes'). section-readme-first-screen.txt Delta (1).",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "unclear"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "UE26, BD2, EL and OU5, by readiness, UE27 after UE26; ask the coordinator for a slot.",
+     "problem": "The board does not show this order. The board's current order sentence ends at 'UE26, BD2, EL and OU5, by readiness' and has no UE27. The only record of 'UE27 after UE26' is the kit's own note of what the coordinator said, though it agrees with UE27's row (no Lean until UE26 has landed). Since that note was written, main has moved: TR-RR was claimed on the board (a1b0f2197, 19:02), and it is not in this order.",
+     "evidence": "_process/BECOMING-WORKBOARD.md line 42 (branch and main): 'MV's follow-up and the README's first screen → U4's leaf and AJ4, by readiness → RV21c, fresh receipts, last of the round's core → UE26, BD2, EL and OU5, by readiness; ask the coordinator for a slot.' ra-row-clause.txt QUEUE note (commit 510528277, 19:00:08). Main board row 64 (UE27): 'by rule 7 no Lean until UE26 has landed'. git log main: a1b0f2197 'Board: TR-RR claimed', 19:02:39.",
+     "fix": "Re-read the Queue line at landing and pass the order as the coordinator gives it then, checking whether TR-RR enters it.",
+     "severity": "unclear"
+    }
+   ],
+   "kept_by_skeptic": [
+    {
+     "text": "history-row",
+     "quote": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3 and BD",
+     "problem": "The list of landings before this one leaves out RF's tests' designs. They landed on main after BD and before this landing, and mv-land merged them. The kit's land.py, as fixed at f5f490f9c, already names them, so the checked text is land.py's row from before that fix. Apart from this phrase, the checked row matches what land.py now writes.",
+     "evidence": "git log main: 35892de89 BD landed, then 669fc33e7 'RF's tests' designs landed' at 2026-10-31 19:01:39. mv-land: dd3d5ea7b 'Merge main (RF's tests' designs landed, 669fc33e7) into mv-land'. f5f490f9c changes land.py line 77 from 'fm-rf3 and BD)' to 'fm-rf3, BD and RF's tests' designs)'. I rebuilt land.py's row with N=477 and diffed it against the checked text: this is the only difference.",
+     "fix": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3, BD and RF's tests' designs",
+     "severity": "wrong"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "five notes brought to the current account",
+     "problem": "Only four of the five notes were brought to the current account. [^transitions] changed only its label: '(the AI's reading)' became '(a reading)' and moved after 'as a confined rise'. That change was made under the rule that front pages name no one. The study section says the change departs from AGENTS's 'every reading keeps its AI label', and its Result(s) line keeps it apart from the notes brought to the current account.",
+     "evidence": "git diff main -- theories/becoming/OPENING.md: [^transitions]'s only change is 'Cancer is read (the AI's reading) as a confined rise:' becoming 'Cancer is read as a confined rise (a reading):'. section-readme-first-screen.txt, Result(s): '[^transitions] in one label, [^axiom] and [^own] brought to the current account'. Delta (9): the change 'departs, on the front page only, from AGENTS's \"every reading keeps its AI label\" ... under the rule that front pages name no person or AI'. claim_head.py CLAUSE: 'brought to the current account and to front pages naming no one'.",
+     "fix": "five notes changed, four brought to the current account and [^transitions]'s label to front pages naming no one",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "five notes brought to the current account",
+     "problem": "The same issue as in the Queue entry. [^transitions] changed only its label, under the front pages' no-names rule, and the study section records that change as a departure from AGENTS. It was not brought to the current account.",
+     "evidence": "git diff main -- theories/becoming/OPENING.md ([^transitions]: '(the AI's reading)' became '(a reading)', nothing else changed). section-readme-first-screen.txt, Result(s) and Delta (9).",
+     "fix": "five notes changed ([^ethics], [^good-evil], [^axiom] and [^own] brought to the current account, [^transitions]'s label to front pages naming no one)",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "[^own] labelled a reading of P1",
+     "problem": "[^own]'s label did not change: it read '**A reading.**' before and still does. What changed is the content. The note now states P1, the self's presupposition, as stated and not asserted, and says the condition contains it. It now gives self-significance only on the readings the condition's theorem takes, where before it gave self-significance under the condition alone. It also now names the zero-axiom target as open, where it said 'not yet begun'. 'Labelled' tells the reader the change was a label.",
+     "evidence": "git diff main -- theories/becoming/OPENING.md: both versions start '[^own]: **A reading.**'. The new text reads 'Held de se, acting presupposes that one's own continuation has significance: the self's presupposition, P1 of §4.6, stated and not asserted. The continuation condition contains it (§4.1), and under the condition ... on every reading where a claim's significance is some formation's continuation at some step'. section-readme-first-screen.txt, Delta (4).",
+     "fix": "[^own] to P1, the self's presupposition, stated and not asserted, and to self-significance on the readings the condition's theorem takes",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "hygienic names read as the dump prints them",
+     "problem": "The row says 'Both copies of the attachment rule' read hygienic names 'as the dump prints them', but only boundary.py does that. Its printed() rebuilds the name before a lemma whose macro scopes come before its last component as the dump prints it, unescaped, and Terms.aux and outside() both use it. The rule's copy in boundary_check.lean (generated) never reads a printed string: it takes the Lean Name apart with extractMacroScopes and reads the name before it with the scopes restored. What both copies share is that a hygienic name is read without its macro scopes and the name before it with them.",
+     "evidence": "tools/research/boundary.py lines 297-306 (printed), 377-384 (Terms.aux docstring and code: 'read under the name before it as the dump prints it'), 319-329 (outside uses printed). tools/research/boundary_check.lean lines 215-226 (generated: 'let v := extractMacroScopes n', '{ v with name := m }.review'; docstring: 'read under the name before it, which carries them'). section-mv-followup.txt Delta (1): 'a hygienic name is read without its macro scopes, and the name before it with them'. Delta (5): the dump's printing is used 'in Terms.aux and outside', both in boundary.py.",
+     "fix": "a hygienic name read without its macro scopes and the name before it with them (in boundary.py, as the dump prints it)",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The 'where to start' point does not give each layer's reading time. It times three places to start: the one page, the overview and the opening. The opening's notes, a layer with its own budget (three minutes per note) under release gate item 6, are linked with no time. The other layers the budgets list, the cover and the dossier fronts, are not named.",
+     "evidence": "README.md first screen: 'Start with the one page (17–22 minutes), the overview (105–137 minutes) or the opening, a first-person conviction (19–25 minutes), with notes.' _process/navigation/README-FIRST-SCREEN.md has no time field on the notes link. section-readme-first-screen.txt Delta (1): 'where to start, with the reading times of the one page, the overview and the opening ... (its notes are linked with no time)'. WHAT-REMAINS 'The release gate's item 6' budgets: 'the one page, the cover and each dossier's front get ten minutes; the overview gets an hour; each of the opening's notes gets three minutes'.",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The same issue as in RA's row clause. Only the one page, the overview and the opening are timed. The notes, a layer with a budget, are linked with no time, and no other layer is named.",
+     "evidence": "README.md first screen ('the one page (17–22 minutes), the overview (105–137 minutes) or the opening ... (19–25 minutes), with notes'). section-readme-first-screen.txt Delta (1). WHAT-REMAINS item 6 budgets.",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "unclear"
+    }
+   ]
+  },
+  {
+   "lens": "wording",
+   "reported": [
+    {
+     "text": "history-row",
+     "quote": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3 and BD)",
+     "problem": "The row leaves out RF's tests' designs. That item landed just before this one (669fc33e7, study §476, merged into mv-land at dd3d5ea7b, and now at the head of the board's Queue line). The kit's land.py at HEAD was changed to name it, so the texts file is stale and does not match what land.py will write.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/landing-kit/land.py:77 writes \"fm-rf3, BD and RF's tests' designs)\"; commit f5f490f9c says \"the history row names RF's tests' designs among the landings before it\". Simulating land.py with N=477 gives the texts file's row except for the change ', fm-rf3, BD and RF's tests' designs' -> ', fm-rf3 and BD'. The board's Queue line opens with \"RF's tests' designs landed (... study §476 ...)\".",
+     "fix": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3, BD and RF's tests' designs)",
+     "severity": "wrong"
+    },
+    {
+     "text": "ra-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The screen gives reading times only for the one page, the overview and the opening, and links the notes with no time. The notes are a budgeted layer (three minutes each), the opening is not one of the four layers, and the chapters and evidence get no time. So 'each layer's reading time' says more than the screen does, and it disagrees with the study section.",
+     "evidence": "_process/navigation/README-FIRST-SCREEN.md:8 ('Start with the one page ({{time:...ONE-PAGE.md}}), the overview (...) or the opening ... ({{time:opening}}), with notes'); section-readme-first-screen.txt:19-20 ('the reading times of the one page, the overview and the opening ... (its notes are linked with no time)'); WHAT-REMAINS.md:387 (each of the opening's notes gets three minutes)",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "wrong"
+    },
+    {
+     "text": "history-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The same overclaim as in RA's clause. The screen times only the one page, the overview and the opening; the notes are linked with no time, and the chapters and evidence get none.",
+     "evidence": "_process/navigation/README-FIRST-SCREEN.md:8; section-readme-first-screen.txt:19-20 ('its notes are linked with no time')",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "wrong"
+    },
+    {
+     "text": "ra-row",
+     "quote": "[^own] labelled a reading of P1",
+     "problem": "[^own] was already labelled '**A reading.**' before the change and still is, so no label was added. What changed is its content. It now states P1, the self's presupposition, as stated and not asserted and contained in the condition. It gives self-significance only on the readings its theorem takes, and it calls the zero-axiom target open where it used to say 'not yet begun'. The study section describes it as 'brought to the current account', not relabelled.",
+     "evidence": "git show 669fc33e7:theories/becoming/OPENING.md line 84 '[^own]: **A reading.** Under the continuation condition...'; theories/becoming/OPENING.md:86 '[^own]: **A reading.** Held de se, ... P1 of §4.6, stated and not asserted ...'; section-readme-first-screen.txt:12 and (4) ('[^own] states P1 ... as stated and not asserted')",
+     "fix": "[^own] to P1, the self's presupposition, stated and not asserted, and the zero-axiom target as open",
+     "severity": "wrong"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "five notes brought to the current account and a proposal to the body for Ren",
+     "problem": "Only four of the five notes were brought to the current account: [^ethics] and [^good-evil] to the ethics as life's way, [^axiom] and [^own] to the open warrants and P1. [^transitions] changed only in its label, to follow the rule that front pages name no one. The study section calls this a departure from AGENTS's 'every reading keeps its AI label', so 'brought to the current account' misdescribes it. The head clause the entry replaces worded it 'brought to the current account and to front pages naming no one'.",
+     "evidence": "section-readme-first-screen.txt:11-12 ('five AI-written notes changed (... [^transitions] in one label, [^axiom] and [^own] brought to the current account)'); :82-84 ('this departs, on the front page only, from AGENTS's \"every reading keeps its AI label\"'); claim_head.py CLAUSE ('brought to the current account and to front pages naming no one')",
+     "fix": "five notes brought to the current account and to front pages naming no one, and a proposal to the body for Ren",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "five notes brought to the current account, and [a proposal to the body]",
+     "problem": "The same misdescription as in the Queue entry. [^transitions]'s change was only a label made plain to follow the front-page no-names rule, and the study section calls that a departure from AGENTS, not something brought to the current account.",
+     "evidence": "section-readme-first-screen.txt:11-12, :82-84; theories/becoming/OPENING.md [^transitions] ('Cancer is read as a confined rise (a reading)')",
+     "fix": "five notes brought to the current account and to front pages naming no one, and [a proposal to the body]",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "on the core dumps of RF-M.3, HE2 and RR2 every figure, walk and reach is the same under the rule before and after",
+     "problem": "Here (1) describes both re-checks together, so 'the rule before and after' reads as a measured comparison across the whole follow-up. The report on these three dumps does less. It compares only the rule before the fourth re-check's fixes (26977f25a) with the current rule. It lists auxiliaries, root constants, laws, forwarders and walks, and it reports no figure and no reach. On these dumps the third re-check's fixes are covered only by the argument that none of the new shapes occurs. The figures rest on master_laws.py reruns that left no report. The study section scopes the claim as 'before and after them', meaning the fourth re-check's fixes.",
+     "evidence": "mv/reports/boundary-rule-compare.json about: 'The attachment rule before the fourth re-check's fixes (26977f25a's ...) against the current one'; runs report only aux/root/laws/forwarders/walks 'same': true. mv/boundary/check/compare_rule.py docstring and default commit '26977f25a'. section-mv-followup.txt:69 ('under the rule before and after them') and :54 ('so no figure, walk or reach changes')",
+     "fix": "on the core dumps of RF-M.3, HE2 and RR2, where none of the new shapes occurs, no figure, walk or reach changes (the auxiliaries, walks, forwarders, laws and root constants the same before and after the fourth re-check's fixes, master_laws.py changing only its hashed inputs)",
+     "severity": "unsupported"
+    },
+    {
+     "text": "ra-row",
+     "quote": "found twelve gaps, all taken in MV's follow-up",
+     "problem": "Not all twelve findings are gaps in how the check tells Lean's generated proofs. RC3-RULES-3, RECHECK3-LEAN-5 and R4-4 are text-only nits (§3.0/§3.2 and §3.6 wording). RC3-RULES-2 and R4-3 concern the tests. The other two texts call them 'twelve findings' and 'eight findings and the fourth's four', so the three texts disagree.",
+     "evidence": "mv/reports/boundary-fix-recheck4.json (lens: 'RC3-RULES-3 and RECHECK3-LEAN-5 (text only) are taken'); R4-4 at line 55 (nit: §3.6 text); section-mv-followup.txt Delta (3) and (5) (R4-3 'a gap in the negatives ... §8 text claimed', R4-4 '§3.6 text its reorder left behind'); the Queue entry says 'twelve findings'",
+     "fix": "A third and a fourth re-check of how the check tells Lean's generated proofs had twelve findings, all taken in MV's follow-up",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "on the core dumps so far and U4's build no figure, walk or reach changes",
+     "problem": "'The core dumps so far' reads as every core dump made to date. Only these were checked: the dump of the branch base's receipt (20261030T232750.486801Z), those of RF-M.3, HE2 and RR2, and U4's build. The study section says 'on the current dump'.",
+     "evidence": "section-mv-followup.txt:53-58 and :66-72 (master_laws.py reruns and comparisons on 20261030T232750.486801Z, 20261031T013649.265381Z, 20261031T054654.692180Z, 20261031T085229.010243Z and U4's build); mv/reports/boundary-rule-compare.json runs (three receipts)",
+     "fix": "on the core dumps of the branch's base, RF-M.3, HE2 and RR2 and on U4's build no figure, walk or reach changes",
+     "severity": "unclear"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "157 names and 32 mutations each caught",
+     "problem": "'Each caught' fits the 32 mutations (16 + 16, each caught by a test). It does not fit the 157 names: these are test inputs, each read as generated (70) or not (87), not something caught.",
+     "evidence": "tools/research/tests/test_boundary.py:1262-1300 (GENERATED 70, NOT_GENERATED 87, counted by exec of the lists); mv/boundary/check/mutations-recheck3.log and mutations-recheck4.log (16 'CAUGHT' lines each)",
+     "fix": "157 names each read as generated or not, and 32 mutations each caught",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "157 names (70 generated, 87 not) and 32 mutations each caught",
+     "problem": "The same wording problem as in the Queue entry: the names are classified, and only the mutations are caught.",
+     "evidence": "tools/research/tests/test_boundary.py:1262-1300; mv/boundary/check/mutations-recheck3.log, mutations-recheck4.log",
+     "fix": "157 names (70 generated, 87 not) each read rightly, and 32 mutations each caught",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "the screen's two front-page requests",
+     "problem": "The two requests (no names on the front page, and a tightening pass) were the coordinator's, made before the slot, not the screen's. The same cell then names 'the coordinator's condition', which makes the wording read as though two sources were involved.",
+     "evidence": "section-readme-first-screen.txt:78-79 ('(9) the coordinator's two requests before the slot: no names on the front page, and one tightening pass toward 150 words (from 205 to 172)')",
+     "fix": "the coordinator's two front-page requests",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "hygienic names read as the dump prints them",
+     "problem": "This misstates the rule for the hygienic name itself. The rule reads a hygienic name without its macro scopes. What is read as the dump prints it (unescaped) is the name before a hygienic definition's equation lemma (R4-1).",
+     "evidence": "section-mv-followup.txt:16 ('a hygienic name is read without its macro scopes, and the name before it with them'); :29-30 ('the name before a hygienic definition's equation lemma ... is read as the dump prints a name with macro scopes, unescaped')",
+     "fix": "a hygienic name read without its macro scopes and the name before it as the dump prints it",
+     "severity": "unclear"
+    }
+   ],
+   "kept_by_skeptic": [
+    {
+     "text": "history-row",
+     "quote": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3 and BD)",
+     "problem": "The row leaves out RF's tests' designs. That item landed on main just before this one (669fc33e7, study §476), was merged into mv-land at dd3d5ea7b, and now heads the board's Queue line. The kit's land.py at HEAD was changed to name it, so the texts file is stale and does not match what land.py will write.",
+     "evidence": "landing-kit/land.py:76-77 writes \"after RR2, the front pages' correction, fm-rf3, BD and RF's tests' designs)\". Commit f5f490f9c says \"the history row names RF's tests' designs among the landings before it\". git log main lists 1721c70ef (RR2), 0ddf0b8b6, 545a4cee3 (fm-rf3), 35892de89 (BD) and 669fc33e7 (RF's tests' designs). The Queue line in _process/BECOMING-WORKBOARD.md:42 opens \"RF's tests' designs landed\".",
+     "fix": "on the coordinator's order, after RR2, the front pages' correction, fm-rf3, BD and RF's tests' designs)",
+     "severity": "wrong"
+    },
+    {
+     "text": "ra-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "The screen gives reading times only for the one page, the overview and the opening, and it links the notes with no time. The notes are a budgeted layer (three minutes each). The cover and the dossiers' fronts, also budgeted, get no time either. So 'each layer's reading time' says more than the screen does, and it disagrees with the study section.",
+     "evidence": "_process/navigation/README-FIRST-SCREEN.md:8 (time fields only for ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and the opening; 'with [notes](...)' has no time). Rendered README.md: '(17–22 minutes)', '(105–137 minutes)', '(19–25 minutes), with notes'. section-readme-first-screen.txt:19-20 says 'its notes are linked with no time'. WHAT-REMAINS.md, release gate item 6 budgets: 'each of the opening's notes gets three minutes'.",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "wrong"
+    },
+    {
+     "text": "history-row",
+     "quote": "where to start with each layer's reading time",
+     "problem": "This is the same overclaim as in RA's clause. The screen times only the one page, the overview and the opening. The notes are linked with no time, and the other budgeted layers get none.",
+     "evidence": "_process/navigation/README-FIRST-SCREEN.md:8; section-readme-first-screen.txt:19-20 ('its notes are linked with no time'); WHAT-REMAINS.md item 6 budgets (each of the opening's notes three minutes)",
+     "fix": "where to start, with the reading times of the one page, the overview and the opening",
+     "severity": "wrong"
+    },
+    {
+     "text": "ra-row",
+     "quote": "[^own] labelled a reading of P1",
+     "problem": "[^own] was already labelled '**A reading.**' before the change and still is, so no label was added. What changed is its content. It now states P1, the self's presupposition, as stated and not asserted and contained in the condition. It gives self-significance only on the readings its theorem takes, and it calls the zero-axiom target open where it used to say 'not yet begun'.",
+     "evidence": "git show 669fc33e7:theories/becoming/OPENING.md:84 reads '[^own]: **A reading.** Under the continuation condition, each standpoint's own living continuation has significance for it ... the attempt without axiom, not yet begun.' theories/becoming/OPENING.md:86 now reads '[^own]: **A reading.** Held de se, acting presupposes ... P1 of §4.6, stated and not asserted ... the zero-axiom target, which is open'. section-readme-first-screen.txt:12 calls [^own] 'brought to the current account', and :49-52 says '[^own] states P1 ... as stated and not asserted'.",
+     "fix": "[^own] to P1, the self's presupposition stated and not asserted, with the zero-axiom target open",
+     "severity": "wrong"
+    },
+    {
+     "text": "history-row",
+     "quote": "on the core dumps of RF-M.3, HE2 and RR2 every figure, walk and reach is the same under the rule before and after",
+     "problem": "Point (1) describes both re-checks, so 'the rule before and after' reads as a comparison measured across the whole follow-up. The figures and reach were measured that way: master_laws.py was rerun against main's output. On RR2's dump the committed master-laws.json differs from main's only in the two hashes, while the RF-M.3 and HE2 reruns kept no output. Walks were measured on these dumps only across the fourth re-check's fixes (26977f25a against the current rule). Across the third re-check's fixes, walks on these dumps rest on the argument that none of the new shapes occurs.",
+     "evidence": "mv/reports/boundary-rule-compare.json about: 'The attachment rule before the fourth re-check's fixes (26977f25a's ...) against the current one'. Its runs give aux/root/laws/forwarders/walks 'same': true. compare_rule.py defaults to commit 26977f25a. git diff main HEAD -- theories/becoming/results/data/master-laws.json (core_receipt 20261031T085229.010243Z) changes only the boundary.py and boundary_check.lean hashes. Commit 26977f25a: 'No shape occurs on the current dump, so no figure changes'. section-mv-followup.txt:53-59 and :66-69 ('under the rule before and after them', meaning the fourth re-check's fixes).",
+     "fix": "on the core dumps of RF-M.3, HE2 and RR2, where none of the new shapes occurs, no figure, walk or reach changes (master_laws.py changing only its hashed inputs, and the auxiliaries, walks, forwarders, laws and root constants the same before and after the fourth re-check's fixes)",
+     "severity": "unsupported"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "five notes brought to the current account and a proposal to the body for Ren",
+     "problem": "Only four of the five notes were brought to the current account. [^transitions] changed only in its label, from 'the AI's reading' to 'a reading', to follow the rule that front pages name no one. The study section calls that a departure from AGENTS's 'every reading keeps its AI label', not a move to the current account. The head clause this entry replaces worded it 'brought to the current account and to front pages naming no one'.",
+     "evidence": "section-readme-first-screen.txt:11-12 ('[^transitions] in one label, [^axiom] and [^own] brought to the current account') and :81-84 ('this departs, on the front page only, from AGENTS's \"every reading keeps its AI label\"'). The [^transitions] note at git show 669fc33e7:theories/becoming/OPENING.md:99 reads 'Cancer is read (the AI's reading)', and theories/becoming/OPENING.md:101 now reads 'Cancer is read as a confined rise (a reading)'. claim_head.py CLAUSE: 'brought to the current account and to front pages naming no one'.",
+     "fix": "five notes brought to the current account and to front pages naming no one, and a proposal to the body for Ren",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "five notes brought to the current account, and [a proposal to the body]",
+     "problem": "This misdescribes [^transitions] the same way the Queue entry does. Its only change was a label made plain to follow the front-page no-names rule, which the study section calls a departure from AGENTS.",
+     "evidence": "section-readme-first-screen.txt:11-12, :81-84; theories/becoming/OPENING.md:101 ('Cancer is read as a confined rise (a reading)') against 669fc33e7's '(the AI's reading)'",
+     "fix": "five notes brought to the current account and to front pages naming no one, and [a proposal to the body]",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "found twelve gaps, all taken in MV's follow-up",
+     "problem": "Not all twelve findings are gaps in how the check tells Lean's generated proofs. RC3-RULES-3, RECHECK3-LEAN-5 and R4-4 are text-only nits in BOUNDARY-FIELD's §3.0, §3.2 and §3.6 wording. RC3-RULES-2 and R4-3 concern the tests. The other two texts call them 'twelve findings' and 'the third re-check's eight findings and the fourth's four', so the three texts disagree.",
+     "evidence": "mv/reports/boundary-fix-recheck3.json: RC3-RULES-3 and RECHECK3-LEAN-5 are severity 'nit', file BOUNDARY-FIELD.md; RC3-RULES-2 is file test_boundary.py. mv/reports/boundary-fix-recheck4.json: R4-3 is a nit in test_boundary.py, R4-4 a nit in BOUNDARY-FIELD.md §3.6, and the lens says 'RC3-RULES-3 and RECHECK3-LEAN-5 (text only) are taken'. The Queue entry says 'twelve findings'.",
+     "fix": "A third and a fourth re-check of how the check tells Lean's generated proofs had twelve findings, all taken in MV's follow-up",
+     "severity": "unclear"
+    },
+    {
+     "text": "ra-row",
+     "quote": "on the core dumps so far and U4's build no figure, walk or reach changes",
+     "problem": "'The core dumps so far' reads as every core dump made to date. Only four were checked: the dump of the branch's first base (20261030T232750.486801Z) and those of RF-M.3, HE2 and RR2, along with U4's build. The study section says 'on the current dump' and names those receipts.",
+     "evidence": "section-mv-followup.txt:53-59 and :66-74 (master_laws.py reruns and comparisons on 20261030T232750.486801Z, 20261031T013649.265381Z, 20261031T054654.692180Z, 20261031T085229.010243Z and U4's build). mv/reports/boundary-rule-compare.json runs on three receipts only.",
+     "fix": "on the core dumps of the branch's first base, RF-M.3, HE2 and RR2 and on U4's build no figure, walk or reach changes",
+     "severity": "unclear"
+    },
+    {
+     "text": "queue-entry",
+     "quote": "157 names and 32 mutations each caught",
+     "problem": "'Each caught' fits the 32 mutations (16 + 16, each caught by a test). It does not fit the 157 names, which are test inputs each told as generated (70) or not (87). Nothing about them is caught.",
+     "evidence": "tools/research/tests/test_boundary.py: the GENERATED and NOT_GENERATED lists (70 and 87 when counted by exec of the lists). mv/boundary/check/mutations-recheck3.log and mutations-recheck4.log have 16 'CAUGHT' lines each.",
+     "fix": "157 names each told as generated or not, and 32 mutations each caught",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "157 names (70 generated, 87 not) and 32 mutations each caught",
+     "problem": "The wording problem is the same as in the Queue entry. The names are told as generated or not, and only the mutations are caught.",
+     "evidence": "tools/research/tests/test_boundary.py, the GENERATED (70) and NOT_GENERATED (87) lists; mv/boundary/check/mutations-recheck3.log and mutations-recheck4.log (16 'CAUGHT' lines each)",
+     "fix": "157 names (70 generated, 87 not) each told as the tests expect, and 32 mutations each caught",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "the screen's two front-page requests",
+     "problem": "The coordinator made the two requests (no names on the front page, and a tightening pass) before the slot. They did not come from the screen. The same cell then names 'the coordinator's condition', which makes the wording read as though two sources were involved.",
+     "evidence": "section-readme-first-screen.txt:78-79 ('(9) the coordinator's two requests before the slot: no names on the front page, and one tightening pass toward 150 words (from 205 to 172)'). Commit 03b19583f: 'README's first screen, the coordinator's two requests before the slot'.",
+     "fix": "the coordinator's two front-page requests",
+     "severity": "unclear"
+    },
+    {
+     "text": "history-row",
+     "quote": "hygienic names read as the dump prints them",
+     "problem": "This misstates the rule for the hygienic name itself, which is read without its macro scopes (RECHECK3-LEAN-3). What is read as the dump prints it (unescaped) is the name before an auxiliary that Lean puts after the macro scopes, as in a hygienic definition's equation lemma (R4-1).",
+     "evidence": "tools/research/boundary.py:378-379 ('A hygienic name is read without its macro scopes, and the name before it with them'). section-mv-followup.txt:16 and :29-30 ('the name before a hygienic definition's equation lemma (halve.«_@».M._hyg.3.eq_1) is read as the dump prints a name with macro scopes, unescaped'). BOUNDARY-FIELD.md §9 rows RECHECK3-LEAN-3 and R4-1.",
+     "fix": "a hygienic name read without its macro scopes, and the name before an auxiliary after the scopes as the dump prints it",
+     "severity": "unclear"
+    }
+   ]
+  }
+ ],
+ "disposition": {
+  "reported": 21,
+  "confirmed": 20,
+  "taken": "every confirmed finding, in land.py and ra-row-clause.txt (the history row naming RF's tests' designs was already taken at f5f490f9c)",
+  "refuted": "the facts lens's finding on the order sentence (TR-RR not in it): the skeptic did not keep it, and the order is the coordinator's, asked at the claim"
+ }
+}

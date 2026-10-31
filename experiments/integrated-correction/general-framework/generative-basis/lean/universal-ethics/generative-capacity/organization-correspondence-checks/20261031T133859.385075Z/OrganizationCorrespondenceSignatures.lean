@@ -1,0 +1,4 @@
+import OrganizationCorrespondence
+#check @Becoming.OrganizationCorrespondence.frontier_iff_undominated
+#check @Becoming.OrganizationCorrespondence.formation_required_by_core
+#check @Becoming.OrganizationCorrespondence.coordination_is_required_by_core

@@ -1,0 +1,499 @@
+{
+  "schema_version": 2,
+  "id": "the-blanket-in-a-linear-steady-state",
+  "title": {
+    "en": "The blanket in a linear steady state: the coupling form and the statistical form",
+    "zh": "线性稳态之毯：耦合之形与统计之形"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T18:39:50+00:00",
+  "statement": {
+    "en": "In the linear steady state the Helmholtz form is the Lyapunov equation and footnote 13's law gives the zero precision block; sparsely coupled Euler–Maruyama runs keep the coupling form pathwise, while their steady law can lose the four-part zero with circulation (a witness at h = 1/10).",
+    "zh": "于线性稳态，Helmholtz 之形即 Lyapunov 方程，脚注 13 之律予零精度之块；稀疏耦合之 Euler–Maruyama 运行逐路径保耦合之形，而其稳态之律于有环流时可失四部分之零（h = 1/10 之见证）。"
+  },
+  "laws": [
+    {
+      "en": "The Helmholtz form is the Lyapunov equation: with S symmetric and invertible, B S + S Bᵀ = 2D gives B = (D − Q)S⁻¹ with Q antisymmetric; with Q antisymmetric, D symmetric and Π symmetric and invertible, B = (D − Q)Π gives the Lyapunov equation for Π⁻¹; the parts are unique (helmholtz_of_lyapunov and four more).",
+      "zh": "Helmholtz 之形即 Lyapunov 方程：S 对称可逆时，B S + S Bᵀ = 2D 予 B = (D − Q)S⁻¹，Q 反对称；Q 反对称、D 对称、Π 对称可逆时，B = (D − Q)Π 予 Π⁻¹ 之 Lyapunov 方程；其部分唯一（helmholtz_of_lyapunov 等五项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+        "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+        "Becoming.LinearBlankets.helmholtz_unique",
+        "Becoming.LinearBlankets.entry_symm",
+        "Becoming.LinearBlankets.entry_anti"
+      ]
+    },
+    {
+      "en": "No circulation through a coordinate: with Π invertible, row i of QΠ vanishes exactly where row i of Q does; with diagonal positive noise and no solenoidal flow through i, the drift at i reads j exactly where Π i j ≠ 0; where it does not read j, Π i j ≠ 0 exactly where (QΠ) i j ≠ 0, Heins and Da Costa's eq. 13, scalar case (zero_iff_solenoidal and two more).",
+      "zh": "无经一坐标之环流：Π 可逆时，QΠ 之第 i 行恰于 Q 之第 i 行为零处为零；噪声对角为正且无螺线之流经 i 时，i 处之漂移读 j 恰当二者之精度之项不为零；i 处之漂移不读 j 时，二者之精度之项不为零恰当 (QΠ) i j 不为零，即 Heins 与 Da Costa 方程 13 之标量情形（zero_iff_solenoidal 等三项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.row_zero_iff",
+        "Becoming.LinearBlankets.drift_zero_iff",
+        "Becoming.LinearBlankets.zero_iff_solenoidal"
+      ]
+    },
+    {
+      "en": "Footnote 13 as a law: with diagonal positive noise, Q antisymmetric and vanishing between a set of coordinates and the rest, and no coordinate of the set reading j, Π is zero between the set and j, D − Q being positive on the set; in the four parts, the internal and active coordinates autonomous, sparse coupling gives them zero precision entries with the external ones (precision_zero_of_footnote13 and two more).",
+      "zh": "脚注 13 为律：噪声对角为正，Q 反对称且于一组坐标与其余之间为零，组中无坐标读 j，则组与 j 间精度之项皆为零，以 D − Q 于组上为正；于四部分，内部与主动坐标自主，稀疏耦合予其与外部坐标间精度之项为零（precision_zero_of_footnote13 等三项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.quad_antisymm",
+        "Becoming.LinearBlankets.precision_zero_of_autonomous",
+        "Becoming.LinearBlankets.precision_zero_of_footnote13"
+      ]
+    },
+    {
+      "en": "Term by term (the 2023 paper's eq. 9, linear case, with constant Q, noise and Hessian, the noise and Hessian diagonals positive): an absent influence has no Hessian and no solenoidal entry (eqs. 9–10), so the zero precision entry is one of its terms; the reverse influence runs only through solenoidal flow to third states; a state no other state reads reads no other state (reverse_through_third and three more).",
+      "zh": "逐项而言，于线性情形（2023 年论文之方程 9，螺线部分、噪声与 Hessian 皆常，噪声与 Hessian 之对角为正）：缺之影响无 Hessian 亦无螺线之项（论文方程 9–10），故零精度之项即定义之一项；反向之影响唯经螺线之流至第三态；无他态读之态不读他态（reverse_through_third 等四项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.TermwiseUnread",
+        "Becoming.LinearBlankets.unread_zero",
+        "Becoming.LinearBlankets.reverse_through_third",
+        "Becoming.LinearBlankets.reads_nothing_of_unread"
+      ]
+    },
+    {
+      "en": "Witness, a linear lag relay: internal coordinate 0 reads blanket coordinate 1, which reads external coordinate 2, noise one at each; sparse both ways as zero drift entries, it has Π 0 2 = 4/109 and it circulates through the internal coordinate; the internal drift's zero entry at the external coordinate is a cancellation, so it is not sparse term by term (LagRelay.precision_nonzero and twelve more).",
+      "zh": "见证（线性滞后之传递）：内部坐标 0 读毯坐标 1，1 读外部坐标 2，各噪声为一；以漂移之零项计两向皆稀疏，其 0 与 2 间精度之项为 4/109，且经内部坐标环流；内部漂移于外部坐标之零项为相消，故非逐项稀疏（LagRelay.precision_nonzero 等十三项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.LagRelay.B",
+        "Becoming.LinearBlankets.LagRelay.BT",
+        "Becoming.LinearBlankets.LagRelay.S",
+        "Becoming.LinearBlankets.LagRelay.P",
+        "Becoming.LinearBlankets.LagRelay.Q",
+        "Becoming.LinearBlankets.LagRelay.transpose_B",
+        "Becoming.LinearBlankets.LagRelay.lyapunov",
+        "Becoming.LinearBlankets.LagRelay.inverse",
+        "Becoming.LinearBlankets.LagRelay.helmholtz",
+        "Becoming.LinearBlankets.LagRelay.sparse",
+        "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+        "Becoming.LinearBlankets.LagRelay.circulates",
+        "Becoming.LinearBlankets.LagRelay.not_termwise"
+      ]
+    },
+    {
+      "en": "Witness, circulation keeping the zero: a steady state circulating through the internal coordinate, with solenoidal coupling to both other coordinates, sparse both ways as zero drift entries, keeps the zero precision entry between internal and external coordinates; its zero drift entry is a cancellation too (Circulating.circulates_and_precision_zero and six more).",
+      "zh": "见证（环流而保零）：经内部坐标环流、与另二坐标皆有螺线耦合之稳态，以漂移之零项计两向稀疏，保内部与外部坐标间之零精度；其漂移之零项亦为相消（Circulating.circulates_and_precision_zero 等七项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.Circulating.P",
+        "Becoming.LinearBlankets.Circulating.Q",
+        "Becoming.LinearBlankets.Circulating.B",
+        "Becoming.LinearBlankets.Circulating.helmholtz",
+        "Becoming.LinearBlankets.Circulating.antisymmetric",
+        "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+        "Becoming.LinearBlankets.Circulating.not_termwise"
+      ]
+    },
+    {
+      "en": "Witness, a zero precision entry while the internal drift reads the external coordinate (Da Costa, Friston, Heins and Pavliotis 2021, Remark 3.1) (Unsparse.precision_zero_and_read and five more).",
+      "zh": "见证：内部漂移读外部坐标而精度之项为零（Da Costa、Friston、Heins、Pavliotis 2021，注 3.1）（Unsparse.precision_zero_and_read 等六项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.Unsparse.P",
+        "Becoming.LinearBlankets.Unsparse.Q",
+        "Becoming.LinearBlankets.Unsparse.B",
+        "Becoming.LinearBlankets.Unsparse.helmholtz",
+        "Becoming.LinearBlankets.Unsparse.antisymmetric",
+        "Becoming.LinearBlankets.Unsparse.precision_zero_and_read"
+      ]
+    },
+    {
+      "en": "The internal mode given blanket and external states, the stationary point of the quadratic form in the internal coordinates, reads no external state exactly where the internal–external block of the precision is zero; a mode where the internal block is positive definite; elementary Gaussian conditioning (mode_unread_iff and two more).",
+      "zh": "予毯与外部态之内部众数，即内部坐标之二次形之驻点，恰于精度之内外块为零处不读外部态；内部块正定时为众数；初等之高斯条件化（mode_unread_iff 等三项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.mode",
+        "Becoming.LinearBlankets.mode_stationary",
+        "Becoming.LinearBlankets.mode_unread_iff"
+      ]
+    },
+    {
+      "en": "Joined to the core: under the principle's sparse coupling of a linear drift, internal and active coordinates reading no external one and sensory and external coordinates no internal one, the Euler step is a blanketed law part by part (Becoming.Blanket), so Euler runs from one internal and active state, alike on the sensory coordinates, are alike on the internal and active ones (split_euler and twelve more).",
+      "zh": "接于核心：于线性漂移之原理之稀疏耦合下（内部与主动坐标不读外部，感官与外部坐标不读内部），Euler 之步逐部分为毯化之律（Becoming.Blanket），故自同一内部与主动态、于感官坐标相同之 Euler 运行，于内部与主动坐标相同（split_euler 等十三项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.Part",
+        "Becoming.LinearBlankets.SparseCoupling",
+        "Becoming.LinearBlankets.euler",
+        "Becoming.LinearBlankets.euler_congr",
+        "Becoming.LinearBlankets.Coords",
+        "Becoming.LinearBlankets.glue",
+        "Becoming.LinearBlankets.split",
+        "Becoming.LinearBlankets.eulerLaw",
+        "Becoming.LinearBlankets.glue_split_of_ne_external",
+        "Becoming.LinearBlankets.glue_split_of_ne_internal",
+        "Becoming.LinearBlankets.split_euler",
+        "Becoming.LinearBlankets.split_euler_iterate",
+        "Becoming.LinearBlankets.euler_agent_through_sensory"
+      ]
+    },
+    {
+      "en": "With additive noise as each coordinate's own input, the agent's course is fixed by its start, its own noise course and the sensory course: two Euler–Maruyama runs with one noise course at the internal and active coordinates, alike on the sensory coordinates before t, are alike on the internal and active ones at t, pathwise, circulating or not (em_agent_through_sensory, emRun).",
+      "zh": "以加性噪声为每一坐标自身之输入，主体之历程由其起点、其自身噪声之历程与感官历程所定：内部与主动坐标噪声历程相同、t 前于感官坐标相同之二 Euler–Maruyama 运行，于 t 时内部与主动坐标相同，逐路径而言，环流与否皆然（em_agent_through_sensory、emRun）。",
+      "declarations": [
+        "Becoming.LinearBlankets.emRun",
+        "Becoming.LinearBlankets.em_agent_through_sensory"
+      ]
+    },
+    {
+      "en": "The synchronous scheme without circulation: for the drift −DΠx, D and Π symmetric, a matrix inverse to Π − (h/2)ΠDΠ is carried to itself by one step with noise 2hD, the known order-h bias; with D diagonal and positive and the four-part sparse coupling, its internal–external entries are zero and its active–external entries are −h/2 times a sum through the sensory coordinates (em_steady and three more).",
+      "zh": "无环流之同步之法：漂移 −DΠx，D 与 Π 对称，Π − (h/2)ΠDΠ 之逆为噪声 2hD 之一步所保，即已知之 h 阶偏差；D 对角为正且四部分稀疏耦合时，其内外之项为零，主动与外部之项为 −h/2 乘经感官坐标之和（em_steady 等四项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.em_steady",
+        "Becoming.LinearBlankets.precision_zero_of_drift",
+        "Becoming.LinearBlankets.em_keeps_four_part",
+        "Becoming.LinearBlankets.em_active_external"
+      ]
+    },
+    {
+      "en": "Witness, four parts circulating: external, sensory, active and internal coordinates, circulation between the internal and active and between the external and sensory ones, sparse term by term, footnote 13's condition met; Π is zero between the external coordinate and the internal and active ones, while the internal drift reads the sensory one only through circulation (Autonomous.precision_zero and ten more).",
+      "zh": "见证（四部分环流）：外部、感官、主动与内部坐标，内部与主动之间、外部与感官之间环流，逐项稀疏，满足脚注 13 之条件；外部坐标与内部、主动坐标间精度之项皆为零，而内部漂移唯经环流读感官坐标（Autonomous.precision_zero 等十一项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.Autonomous.part",
+        "Becoming.LinearBlankets.Autonomous.P",
+        "Becoming.LinearBlankets.Autonomous.Q",
+        "Becoming.LinearBlankets.Autonomous.B",
+        "Becoming.LinearBlankets.Autonomous.helmholtz",
+        "Becoming.LinearBlankets.Autonomous.antisymmetric",
+        "Becoming.LinearBlankets.Autonomous.sparse",
+        "Becoming.LinearBlankets.Autonomous.autonomous",
+        "Becoming.LinearBlankets.Autonomous.precision_zero",
+        "Becoming.LinearBlankets.Autonomous.circulates",
+        "Becoming.LinearBlankets.Autonomous.termwise"
+      ]
+    },
+    {
+      "en": "Witness, the synchronous scheme in the four parts: with circulation, at h = 1/10, the steady precision has internal–external entry −27800/984581, the flow's being zero, while the coupling form holds on the runs; without circulation, on the same precision, the internal–external zero stays and the active–external entry is −h/2 (Autonomous.em_loses_internal_external and nine more).",
+      "zh": "见证（四部分之同步之法）：有环流时，于 h = 1/10，稳态精度之内外之项为 −27800/984581（流之精度为零），而耦合之形于诸运行皆成；无环流时，于同一精度，内外之零保持，主动与外部之项为 −h/2（Autonomous.em_loses_internal_external 等十项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+        "Becoming.LinearBlankets.Autonomous.emA",
+        "Becoming.LinearBlankets.Autonomous.emS",
+        "Becoming.LinearBlankets.Autonomous.emM",
+        "Becoming.LinearBlankets.Autonomous.emS_steady",
+        "Becoming.LinearBlankets.Autonomous.emS_inverse",
+        "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+        "Becoming.LinearBlankets.Autonomous.still_sparse",
+        "Becoming.LinearBlankets.Autonomous.em_keeps",
+        "Becoming.LinearBlankets.Autonomous.em_loses_active_external"
+      ]
+    },
+    {
+      "en": "Witness, three parts: a chain whose middle coordinate reads and is read by both ends, sparsely coupled under no assignment to the four parts with its ends internal and external; without circulation the entry of Π − (h/2)Π² between its ends is −h/2 at every h, the steady precision for 0 < h < 2/(2 + √2), while the flow's is zero (ThreePart.em_loses_zero and seven more).",
+      "zh": "见证（三部分）：中间坐标读两端且为两端所读之链，无一对四部分、两端为内部与外部之指派使之稀疏耦合；无环流时 Π − (h/2)Π² 于两端间之项于每一 h 为 −h/2，于 0 < h < 2/(2 + √2) 为稳态精度，而流之精度为零（ThreePart.em_loses_zero 等八项）。",
+      "declarations": [
+        "Becoming.LinearBlankets.ThreePart.P",
+        "Becoming.LinearBlankets.ThreePart.S",
+        "Becoming.LinearBlankets.ThreePart.symm",
+        "Becoming.LinearBlankets.ThreePart.inverse",
+        "Becoming.LinearBlankets.ThreePart.inverse'",
+        "Becoming.LinearBlankets.ThreePart.steady",
+        "Becoming.LinearBlankets.ThreePart.no_four_part",
+        "Becoming.LinearBlankets.ThreePart.em_loses_zero"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker; the core module it reads, Becoming.Blanket, has empty axiom reports.",
+      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告；其所读之核心模块 Becoming.Blanket 公理报告皆空。"
+    },
+    {
+      "en": "Stated algebraically for finitely many coordinates; the correspondences stated, not proved: the Lyapunov equation as stationarity for B stable, a zero precision entry as conditional independence for a Gaussian, the steady current QΠx times the density, the discrete Lyapunov equation as the synchronous recursion's stationarity where its step has spectral radius below 1.",
+      "zh": "于有限多坐标以代数陈之；对应陈而未证：B 稳定时 Lyapunov 方程即平稳，高斯时零精度之项即条件独立，稳态之流即 QΠx 乘密度，步之谱半径小于 1 时离散 Lyapunov 方程即同步递推之平稳。"
+    },
+    {
+      "en": "For footnote 13's law: diagonal positive noise, Q antisymmetric and vanishing between the set and the rest, no coordinate of the set reading the coordinate. For the term-by-term laws: eq. 9 with constant Q, noise and Hessian, with positive diagonals.",
+      "zh": "脚注 13 之律：噪声对角为正，Q 反对称且于组与其余之间为零，组中无坐标读该坐标。逐项之律：Q、噪声与 Hessian 皆常之方程 9，对角为正。"
+    },
+    {
+      "en": "For the stochastic time-unrolled blanket, a correspondence: the agent's noise independent of the rest's and of the start, and the agent's start held fixed or independent of the world's.",
+      "zh": "随机之时间展开之毯（对应）：主体之噪声独立于其余之噪声与起点，主体之起点固定或独立于世界之起点。"
+    },
+    {
+      "en": "For the synchronous law: no circulation, B = DΠ with D and Π symmetric; for the four-part zero, D diagonal and positive and the principle's sparse coupling.",
+      "zh": "同步之律：无环流，B = DΠ，D 与 Π 对称；四部分之零需 D 对角为正且原理之稀疏耦合。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Nonlinear Langevin flows, non-Gaussian densities or the Fokker–Planck current.",
+      "zh": "非线性之 Langevin 流、非高斯之密度或 Fokker–Planck 之流。",
+      "kind": "scope"
+    },
+    {
+      "en": "The stochastic time-unrolled blanket as a theorem on path measures: its assumptions are stated.",
+      "zh": "随机之时间展开之毯作为路径测度之定理：其假设陈之而已。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the zero precision entry needs no solenoidal coupling: the circulating witness keeps it.",
+      "zh": "零精度之项需无螺线之耦合：环流之见证保之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the 2023 paper's continuous-time blanket fails: the loss with circulation is the synchronous scheme's.",
+      "zh": "2023 年论文之连续时间之毯失效：有环流之失属同步之法。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "How often cancellation occurs in high-dimensional random systems.",
+      "zh": "高维随机系统中相消之频率。",
+      "kind": "scope"
+    },
+    {
+      "en": "Whether Friston 2019 states the term-by-term corollaries' general form: it was not checked.",
+      "zh": "Friston 2019 是否陈逐项推论之一般形式：未核。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "detail": {
+        "en": "The linear lag relay, sparse both ways as zero drift entries, has precision entry 4/109 between its internal and external coordinates (LagRelay.precision_nonzero).",
+        "zh": "线性滞后之传递，以漂移之零项计两向稀疏，其内部与外部坐标间之精度之项为 4/109（LagRelay.precision_nonzero）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "detail": {
+        "en": "With circulation, at h = 1/10, the synchronous scheme's steady precision has a nonzero entry between the internal and external coordinates of a term-by-term sparse drift meeting footnote 13 (Autonomous.em_loses_internal_external).",
+        "zh": "有环流时，于 h = 1/10，满足脚注 13 之逐项稀疏漂移之同步之法之稳态精度，其内部与外部坐标间之项不为零（Autonomous.em_loses_internal_external）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "detail": {
+        "en": "A three-coordinate chain, not sparsely coupled with its ends internal and external, has synchronous entry −h/2 between its ends without circulation (ThreePart.em_loses_zero).",
+        "zh": "三坐标之链（两端为内部与外部时不稀疏耦合）无环流时两端间之同步之项为 −h/2（ThreePart.em_loses_zero）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.",
+    "zh": "外围检查器 check_linear_blankets.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T183915.457765Z）：LinearBlankets 诸声明，各仅依标准公理，闭包之核心模块皆合通过之回执。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "Nonlinear flows and densities; the stochastic time-unrolled blanket on path measures; the exact time-h map; how often cancellation occurs; Friston 2019 checked for the term-by-term corollaries; review by a person.",
+    "zh": "非线性之流与密度；路径测度上之随机之时间展开之毯；精确之时间 h 映射；相消之频率；核 Friston 2019 之逐项推论；人之审查。"
+  },
+  "correspondence": {
+    "en": "The Ornstein–Uhlenbeck steady state: the Lyapunov equation and the Helmholtz form (standard); a zero precision entry as Gaussian conditional independence (Lauritzen 1996); Heins and Da Costa 2022, eq. 13 (its scalar case) and eq. 14 (the normal form) with the condition under it, eq. 15; the 2023 paper's eq. 9 and footnotes 10 and 13 (Friston, Da Costa, Sajid, Heins, Ueltzhöffer, Pavliotis and Parr 2023); sparse coupling without the statistical blanket (Biehl, Pollock and Kanai 2021, Observation 1), of which the relay is a witness; a zero entry with the drift reading across (Da Costa, Friston, Heins and Pavliotis 2021, Remark 3.1); the Euler–Maruyama steady law's order-h bias (standard). AI reading: under the paper's own term-by-term definition the linear zero is definitional, and the losses are where sparse coupling is read as a zero drift entry and in the theory's synchronous steps. The readings are the AI's, in development/ue26-blankets-at-a-steady-state/DESIGN.md.",
+    "zh": "Ornstein–Uhlenbeck 之稳态：Lyapunov 方程与 Helmholtz 之形（标准）；零精度之项即高斯之条件独立（Lauritzen 1996）；Heins 与 Da Costa 2022 方程 13（其标量情形）与方程 14 之标准形及其下之条件方程 15；2023 年论文之方程 9 与脚注 10、13；稀疏耦合而无统计之毯（Biehl、Pollock、Kanai 2021，观察 1），传递为其见证；漂移读对侧而零项（Da Costa 等 2021，注 3.1）；Euler–Maruyama 稳态之律之 h 阶偏差（标准）。AI 之读：依论文自身之逐项定义，线性之零出于定义，其失在以漂移之零项读稀疏耦合处及理论之同步之步。读法皆 AI 之读，载于 DESIGN.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+  "aliases": [
+    "The blanket in a linear steady state",
+    "线性稳态之毯",
+    "Helmholtz decomposition",
+    "footnote 13",
+    "sparse coupling term by term",
+    "Euler–Maruyama steady law",
+    "Becoming.LinearBlankets.precision_zero_of_footnote13",
+    "Becoming.LinearBlankets.Autonomous.em_loses_internal_external"
+  ],
+  "dependencies": [
+    {
+      "id": "the-markov-blanket-as-a-coupling-structure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Blanket.Blanketed, Parts, step, course and agent_through_sensory: the Euler step of a sparsely coupled drift read as a blanketed law, and its runs as the law's courses.",
+        "zh": "Blanket.Blanketed、Parts、step、course 与 agent_through_sensory：稀疏耦合之漂移之 Euler 步读作毯化之律，其运行即律之历程。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-blanket-at-a-steady-state",
+      "detail": {
+        "en": "The statistical blanket in counts, in the pure core: row_zero_iff is the counterpart of detailed balance of the internal moves.",
+        "zh": "纯核中计数之统计之毯：row_zero_iff 即内部诸移之细致平衡之对应。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LinearBlankets.Autonomous.B",
+        "Becoming.LinearBlankets.Autonomous.P",
+        "Becoming.LinearBlankets.Autonomous.Q",
+        "Becoming.LinearBlankets.Autonomous.antisymmetric",
+        "Becoming.LinearBlankets.Autonomous.autonomous",
+        "Becoming.LinearBlankets.Autonomous.circulates",
+        "Becoming.LinearBlankets.Autonomous.emA",
+        "Becoming.LinearBlankets.Autonomous.emM",
+        "Becoming.LinearBlankets.Autonomous.emS",
+        "Becoming.LinearBlankets.Autonomous.emS_inverse",
+        "Becoming.LinearBlankets.Autonomous.emS_steady",
+        "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+        "Becoming.LinearBlankets.Autonomous.em_keeps",
+        "Becoming.LinearBlankets.Autonomous.em_loses_active_external",
+        "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+        "Becoming.LinearBlankets.Autonomous.helmholtz",
+        "Becoming.LinearBlankets.Autonomous.part",
+        "Becoming.LinearBlankets.Autonomous.precision_zero",
+        "Becoming.LinearBlankets.Autonomous.sparse",
+        "Becoming.LinearBlankets.Autonomous.still_sparse",
+        "Becoming.LinearBlankets.Autonomous.termwise",
+        "Becoming.LinearBlankets.Circulating.B",
+        "Becoming.LinearBlankets.Circulating.P",
+        "Becoming.LinearBlankets.Circulating.Q",
+        "Becoming.LinearBlankets.Circulating.antisymmetric",
+        "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+        "Becoming.LinearBlankets.Circulating.helmholtz",
+        "Becoming.LinearBlankets.Circulating.not_termwise",
+        "Becoming.LinearBlankets.Coords",
+        "Becoming.LinearBlankets.LagRelay.B",
+        "Becoming.LinearBlankets.LagRelay.BT",
+        "Becoming.LinearBlankets.LagRelay.P",
+        "Becoming.LinearBlankets.LagRelay.Q",
+        "Becoming.LinearBlankets.LagRelay.S",
+        "Becoming.LinearBlankets.LagRelay.circulates",
+        "Becoming.LinearBlankets.LagRelay.helmholtz",
+        "Becoming.LinearBlankets.LagRelay.inverse",
+        "Becoming.LinearBlankets.LagRelay.lyapunov",
+        "Becoming.LinearBlankets.LagRelay.not_termwise",
+        "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+        "Becoming.LinearBlankets.LagRelay.sparse",
+        "Becoming.LinearBlankets.LagRelay.transpose_B",
+        "Becoming.LinearBlankets.Part",
+        "Becoming.LinearBlankets.SparseCoupling",
+        "Becoming.LinearBlankets.TermwiseUnread",
+        "Becoming.LinearBlankets.ThreePart.P",
+        "Becoming.LinearBlankets.ThreePart.S",
+        "Becoming.LinearBlankets.ThreePart.em_loses_zero",
+        "Becoming.LinearBlankets.ThreePart.inverse",
+        "Becoming.LinearBlankets.ThreePart.inverse'",
+        "Becoming.LinearBlankets.ThreePart.no_four_part",
+        "Becoming.LinearBlankets.ThreePart.steady",
+        "Becoming.LinearBlankets.ThreePart.symm",
+        "Becoming.LinearBlankets.Unsparse.B",
+        "Becoming.LinearBlankets.Unsparse.P",
+        "Becoming.LinearBlankets.Unsparse.Q",
+        "Becoming.LinearBlankets.Unsparse.antisymmetric",
+        "Becoming.LinearBlankets.Unsparse.helmholtz",
+        "Becoming.LinearBlankets.Unsparse.precision_zero_and_read",
+        "Becoming.LinearBlankets.drift_zero_iff",
+        "Becoming.LinearBlankets.emRun",
+        "Becoming.LinearBlankets.em_active_external",
+        "Becoming.LinearBlankets.em_agent_through_sensory",
+        "Becoming.LinearBlankets.em_keeps_four_part",
+        "Becoming.LinearBlankets.em_steady",
+        "Becoming.LinearBlankets.entry_anti",
+        "Becoming.LinearBlankets.entry_symm",
+        "Becoming.LinearBlankets.euler",
+        "Becoming.LinearBlankets.eulerLaw",
+        "Becoming.LinearBlankets.euler_agent_through_sensory",
+        "Becoming.LinearBlankets.euler_congr",
+        "Becoming.LinearBlankets.glue",
+        "Becoming.LinearBlankets.glue_split_of_ne_external",
+        "Becoming.LinearBlankets.glue_split_of_ne_internal",
+        "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+        "Becoming.LinearBlankets.helmholtz_unique",
+        "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+        "Becoming.LinearBlankets.mode",
+        "Becoming.LinearBlankets.mode_stationary",
+        "Becoming.LinearBlankets.mode_unread_iff",
+        "Becoming.LinearBlankets.precision_zero_of_autonomous",
+        "Becoming.LinearBlankets.precision_zero_of_drift",
+        "Becoming.LinearBlankets.precision_zero_of_footnote13",
+        "Becoming.LinearBlankets.quad_antisymm",
+        "Becoming.LinearBlankets.reads_nothing_of_unread",
+        "Becoming.LinearBlankets.reverse_through_third",
+        "Becoming.LinearBlankets.row_zero_iff",
+        "Becoming.LinearBlankets.split",
+        "Becoming.LinearBlankets.split_euler",
+        "Becoming.LinearBlankets.split_euler_iterate",
+        "Becoming.LinearBlankets.unread_zero",
+        "Becoming.LinearBlankets.zero_iff_solenoidal"
+      ],
+      "sha256": "3bd9ed3d3a7a55cc92c1682939aefac1146656d1bf558d3c4f83eda942fc9a98"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/linear-blankets-checks/20261031T183915.457765Z/verification.json",
+      "role": "receipt",
+      "sha256": "b44abc9dab13dd22f5c6749e88f3848111181899a2a39fac3d6eb0198d93cab1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "role": "proof",
+      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
+      "role": "receipt",
+      "sha256": "6804eeb6c1f2c55b6e1cea1bcf732db5fc11379402cd52e86d0a39f8f238e321"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "25b917a6a85afb9c6b4d25a1bedca69ac1afb991cbfcbde79b5a748fa4858a7d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md",
+      "role": "integration",
+      "sha256": "a718291668b2ef827d5cbb7caa6fd819e8c59348bbc99cec7e6456b01e1bf43f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-DESIGN.md",
+      "role": "integration",
+      "sha256": "18caf3627b93576c85f9c4e902de825fd5aaa7b6fda5d5cc35ed425bf7e619d9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/LITERATURE-CHECK.md",
+      "role": "integration",
+      "sha256": "5bcd7c98f52dc0639c59c8c986f5896f48e015393baff05588d9b4870bc9838f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/RECHECK-UE26.md",
+      "role": "integration",
+      "sha256": "ee92ba84ae5cd30316f70c6c7fe8e7f6fb2dba179a54e84124ee7e142b87c41a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-LANDING.md",
+      "role": "integration",
+      "sha256": "cf89bf5c12302a61064605f3e832298f4d924216488d534e0fe564eb8b0a8671"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "79d9f42f3d270a4f87e56be1bfa9224f405ea0db8880a1d51297ff4e2e3436d0"
+    },
+    {
+      "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+      "role": "integration",
+      "sha256": "90a0d2d5fd118092f698d689cbd44bd01e9c98b278a005428ef1c5394e4fffa3"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Blanket",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/linear-blankets-checks/20261031T183915.457765Z/verification.json",
+      "sha256_pointer": "/source_sha256/LinearBlankets",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026: added (UE26), the blanket in a linear steady state in the periphery: the Helmholtz form as the Lyapunov equation; footnote 13 as a law for any set of coordinates; the term-by-term corollaries in the linear case; the Euler step joined to the blanketed law, with noise; the synchronous scheme keeping the four-part zero without circulation and, in a circulating witness, losing it; after a review, a literature check, a recheck and a review of the landing texts, every finding taken; study section 484.",
+      "zh": "2026年11月1日：新增（UE26），外围之线性稳态之毯：Helmholtz 之形即 Lyapunov 方程；脚注 13 为任一组坐标之律；线性情形之逐项推论；Euler 之步接于毯化之律（含噪声）；同步之法无环流时保四部分之零，于一环流之见证中失之；经审查、文献核对、复核与落地文本之审查，凡所见皆取；研究第 484 节。"
+    }
+  ]
+}

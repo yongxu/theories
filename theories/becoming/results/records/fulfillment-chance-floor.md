@@ -11,19 +11,19 @@
 ## Laws
 
 1. The mass of an event on a listed domain under a natural weighting of its entries is the total weight of the entries where it holds, an entry listed twice counting twice. Under every weighting mass follows inclusion on the domain, and it rises where an included event lacks an entry of positive weight that the other has. (`Becoming.mass`, `Becoming.IncludedOn`, `Becoming.mass_mono`, `Becoming.mass_lt_of_added`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. With equality of entries decided, every natural weighting keeps one event's mass at most another's exactly when the first is included in the second on the domain, the weightings counting one entry giving the converse. (`Becoming.dirac`, `Becoming.every_weighting_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. On a frame whose claims are read at listed configurations by Boolean events: where every listed configuration realizing the demand and the old support realizes the new support, under every natural weight the mass of demand met by old support is at most the new support's, and that at most the whole domain's. (`Becoming.Courses.claims_floor`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. On such a frame, with equality of configurations decided, one claim's mass is at most another's under every natural weight exactly when every listed configuration realizing the first realizes the second. (`Becoming.Courses.claims_every_weighting_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A due protection is the demand together with the old support that still works, and a new route fulfils it where it works at every listed entry where the protection was due. Then, with a positive total weight, the protection's mass is at most the route's, and the route's at most the total. (`Becoming.ChanceFloors.total`, `Becoming.ChanceFloors.target`, `Becoming.ChanceFloors.Fulfilled`, `Becoming.ChanceFloors.fulfillment_gives_chance_floor`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Repair, the due protection or a candidate, fulfils the protection and covers the candidate; a candidate working at a listed entry of positive weight where the protection was not due gives repair more mass than the protection. (`Becoming.ChanceFloors.repair`, `Becoming.ChanceFloors.repair_covers_target_and_candidate`, `Becoming.ChanceFloors.repair_adds_new_protection`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In a witness of two entries of weight one, a route with the same mass as the due protection, one of a total two, fails at the entry where the protection is due, and so does not fulfil it. (`Becoming.ChanceFloors.positive_chance_can_miss_due_protection`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,25 +11,25 @@
 ## Laws
 
 1. For every blanketed law, from one internal, sensory and active start, two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses. (`Becoming.ReadingLoop.sensed_alike_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Equality of values sensed decided: where, at each step before N, an answer of the second world to the first course's act and value differing from the first's breaks a task K, a formation keeping K at steps one through N in the second senses alike in both through N, and at every step where so at every step. (`Becoming.ReadingLoop.alike_within`, `Becoming.ReadingLoop.alike_of_kept`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A formation keeping candidate laws: each predicts the value sensed next from the value sensed and the act; the formation drops those the latest answer refutes and chooses its act from those kept; the loop is a blanketed law whose internal part holds the candidates kept and the last value sensed with its act. (`Becoming.ReadingLoop.Loop`, `Becoming.ReadingLoop.Loop.keep`, `Becoming.ReadingLoop.Loop.law`, `Becoming.ReadingLoop.Loop.start`, `Becoming.ReadingLoop.filter_all`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. At configuration n + 1 the candidates kept are exactly those listed that fit the answers to the acts of the steps before n, the answer sensed at n + 1 taken in at the next step; candidates of one listing predicting alike on those steps are kept alike. (`Becoming.ReadingLoop.Loop.kept_iff`, `Becoming.ReadingLoop.Loop.kept_alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A listed candidate predicting as the world answers wherever the world is in a region its moves keep is never dropped from a start in that region; the region where it is kept, agrees with the answer pending and the world is in that region is closed under the loop's step. (`Becoming.ReadingLoop.Loop.faithful_kept`, `Becoming.ReadingLoop.Loop.Fitting`, `Becoming.ReadingLoop.Loop.fitting_closed`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 6. Where the world answers the act chosen with the value sensed and stays, the formation chooses that act from the candidates listed, and every candidate listed predicts that answer, the formation rests at once, the same candidates, act and value at every step: a model its course never refutes. (`Becoming.ReadingLoop.Loop.rests_of_unrefuted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Witness: values low, middle and high; a known act answering the middle value in both worlds, an untried act answering high in one and low in the other; candidates the two worlds; choice by the worst case, the least rank the candidates kept predict, the untried act exactly where its worst ranks strictly above the known act's. (`Becoming.ReadingLoop.Untested.Value`, `Becoming.ReadingLoop.Untested.Act`, `Becoming.ReadingLoop.Untested.World`, `Becoming.ReadingLoop.Untested.reply`, `Becoming.ReadingLoop.Untested.rank`, `Becoming.ReadingLoop.Untested.lower`, `Becoming.ReadingLoop.Untested.lower_le_left`, `Becoming.ReadingLoop.Untested.lower_le_right`, `Becoming.ReadingLoop.Untested.lower_cases`, `Becoming.ReadingLoop.Untested.worst`, `Becoming.ReadingLoop.Untested.worst_le`, `Becoming.ReadingLoop.Untested.worst_attained`, `Becoming.ReadingLoop.Untested.byWorst`, `Becoming.ReadingLoop.Untested.byWorst_iff`, `Becoming.ReadingLoop.Untested.loop`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Started with both candidates listed, no answer pending, the middle value and the known act, the formation rests at once on the known act and the middle value in either world, alike in both, never sensing the high value of the first; the true candidate is kept in its own world from every listing holding it. (`Becoming.ReadingLoop.Untested.rest`, `Becoming.ReadingLoop.Untested.rests`, `Becoming.ReadingLoop.Untested.true_kept`, `Becoming.ReadingLoop.Untested.alike_in_both`, `Becoming.ReadingLoop.Untested.never_high`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. Started the same way but with the untried act, the formation separates the worlds: in the first it rests from step four on the true candidate, the untried act and high; in the second from step three on the true candidate and the known act, sensing the low value at step one and at no other step. (`Becoming.ReadingLoop.Untested.upRest`, `Becoming.ReadingLoop.Untested.downRest`, `Becoming.ReadingLoop.Untested.explorer_up`, `Becoming.ReadingLoop.Untested.explorer_down`, `Becoming.ReadingLoop.Untested.explorer_low_once`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. Every blanketed law with the witness's answer and stationary worlds, whatever its internal part, update and choice of act, from one internal, sensory and active start in both worlds, that never senses the low value in the second senses alike in both and takes the known act at every step there; where the shared start does not sense high, it never senses high in the first. (`Becoming.ReadingLoop.Untested.floor_forgoes`, `Becoming.ReadingLoop.Untested.floor_never_high`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -99,6 +99,7 @@ Aliases: `a model its course never refutes`, `其历程永不驳之模型`, `sel
 
 - 30 October 2026: added (RF round 2), what a course chosen through its model does not test: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
 - 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where the value of a reading in counts is stated; the next step keeps the value of a noisy reading in the periphery; no statement or declaration changed.
+- 31 October 2026, board item RF, the tests' designs (study section 476): PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

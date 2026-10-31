@@ -1,0 +1,43 @@
+'FormedSelection.population_type_sum' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_valid' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_valid' depends on axioms: [propext, Quot.sound]
+'FormedSelection.material_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_material_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_energy_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_energy_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_common_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_common_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.copy_increment_le_spent' does not depend on any axioms
+'FormedSelection.copy_tally_le_spent' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_copy_budget' depends on axioms: [propext, Quot.sound]
+'FormedSelection.exact_step_rank_drop' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_strict_rank' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_event_bound' depends on axioms: [propext, Quot.sound]
+'FormedSelection.no_infinite_event_path' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_paid_phase' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_paid_phase' depends on axioms: [propext, Quot.sound]
+'FormedSelection.repair_needs_three_initial_common_units' depends on axioms: [propext, Quot.sound]
+'FormedSelection.low_fuel_cannot_restore_site' depends on axioms: [propext, Quot.sound]
+'FormedSelection.step_paid_mixed_phase' depends on axioms: [propext, Quot.sound]
+'FormedSelection.trace_paid_mixed_phase' depends on axioms: [propext, Quot.sound]
+'FormedSelection.restored_site_and_alternative_need_four_initial_common_units' depends on axioms: [propext, Quot.sound]
+'FormedSelection.a_absence_step' depends on axioms: [propext]
+'FormedSelection.h_absence_step' depends on axioms: [propext]
+'FormedSelection.a_absence_trace' depends on axioms: [propext]
+'FormedSelection.h_absence_trace' depends on axioms: [propext]
+'FormedSelection.a_appearance_requires_formation' depends on axioms: [propext, Quot.sound]
+'FormedSelection.h_appearance_requires_formation' depends on axioms: [propext, Quot.sound]
+'FormedSelection.a_copy_has_template' depends on axioms: [propext]
+'FormedSelection.h_copy_has_template' depends on axioms: [propext]
+'FormedSelection.owned_support_step' depends on axioms: [propext]
+'FormedSelection.owned_support_trace' depends on axioms: [propext]
+'FormedSelection.owned_support_forbids_h_local_copy' depends on axioms: [propext]
+'FormedSelection.no_h_local_copies_without_resident_wear' depends on axioms: [propext]
+'FormedSelection.paid_formation_to_copy' does not depend on any axioms
+'FormedSelection.witness_accounting' does not depend on any axioms
+'FormedSelection.repair_enables_capture' does not depend on any axioms
+'FormedSelection.capture_enables_copy' does not depend on any axioms
+'FormedSelection.initial_owned_support' depends on axioms: [propext]
+'FormedSelection.no_h_local_copies_from_absence_without_resident_wear' depends on axioms: [propext]
+'FormedSelection.repaired_site_can_pass_to_alternative' does not depend on any axioms
+'FormedSelection.inheritance_accounting' does not depend on any axioms

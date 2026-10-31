@@ -11,15 +11,15 @@
 ## Laws
 
 1. Learning from a list of observations keeps exactly the listed rules fitting every observation; the actual rule is kept where it is listed and the observations are faithful to it; a dropped rule contradicts some observation; and revising twice by one observation is revising once. (`Becoming.Narrowing.learn`, `Becoming.Narrowing.mem_learn`, `Becoming.Narrowing.narrowed_iff_fits`, `Becoming.Narrowing.actual_retained`, `Becoming.Narrowing.counterevidence_of_dropped`, `Becoming.Narrowing.revise_revise`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The answer asserts b at a question exactly where the list is not empty and every rule on it gives b there; it is safe, asserting only each listed rule's value. On a nonempty list every safe answer that asserts agrees with it, it is greatest, asserting whatever any safe answer asserts, and a safe greatest answer equals it at every question. (`Becoming.Narrowing.answer`, `Becoming.Narrowing.Safe`, `Becoming.Narrowing.Maximal`, `Becoming.Narrowing.answer_iff`, `Becoming.Narrowing.answer_safe`, `Becoming.Narrowing.safe_definite_requires_agreement`, `Becoming.Narrowing.answer_maximal`, `Becoming.Narrowing.unique_maximal_safe`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Observations acquired from the actual rule are faithful to it, so where it is listed every asserted answer is its value. Re-encoding questions through a decoding transports answers, and transports learning where decoding inverts encoding; re-encoding the identity rule through negation gives a different answer at true. (`Becoming.Narrowing.acquired_evidence_faithful`, `Becoming.Narrowing.acquired_answers_correct`, `Becoming.Narrowing.answer_transport`, `Becoming.Narrowing.learning_transport`, `Becoming.Narrowing.wrong_reencoding_breaks_transfer`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. For rules on the two cases of a Boolean question, every rule agrees with one of four listed candidates, so learning from them by acquired observations answers only correctly; observing the identity rule, one observed case leaves the other unsettled, contrasting cases settle both, and the settled answer need not be the last report. (`Becoming.Narrowing.repertoire_complete`, `Becoming.Narrowing.full_repertoire_correct`, `Becoming.Narrowing.one_sample_leaves_other_case_unsettled`, `Becoming.Narrowing.contrasting_acquisition_settles_both`, `Becoming.Narrowing.learned_response_differs_from_last_report`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Witnesses: repeating one case leaves the other unsettled; a list lacking the actual rule can answer definitely and wrongly; and contradictory observations at one case leave the other unsettled. (`Becoming.Narrowing.repeated_same_case_does_not_settle_other`, `Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong`, `Becoming.Narrowing.inconsistent_evidence_yields_no_answer`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -1,0 +1,10 @@
+'Becoming.SubstitutionCorrespondence.Place' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.Consumer' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.part' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.read' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.use' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.through' depends on axioms: [Quot.sound]
+'Becoming.SubstitutionCorrespondence.direct' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.supplied' does not depend on any axioms
+'Becoming.SubstitutionCorrespondence.supplies' depends on axioms: [Quot.sound]
+'Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core' depends on axioms: [Quot.sound]

@@ -1,0 +1,38 @@
+Becoming.RenewingCorrespondence.remaining_falls : ∀ (law : RenewingFormation.WearLaw),
+  Becoming.Stock.FallsBy (Becoming.RenewingCorrespondence.beyond law) RenewingFormation.budget
+    Becoming.RenewingCorrespondence.formedOf
+Becoming.RenewingCorrespondence.forms_while_held : ∀ (law : RenewingFormation.WearLaw)
+  (s : RenewingFormation.Conditions) (a : Nat × Nat) (t : RenewingFormation.Conditions),
+  (Becoming.RenewingCorrespondence.beyond law).step s a t →
+    0 < RenewingFormation.budget s → 0 < Becoming.RenewingCorrespondence.formedOf a
+Becoming.RenewingCorrespondence.moves_length : ∀ (law : RenewingFormation.WearLaw) (c0 : RenewingFormation.Conditions)
+  (demand : Nat → Nat) (n : Nat), (Becoming.RenewingCorrespondence.moves law c0 demand n).length = n
+Becoming.RenewingCorrespondence.moves_succ : ∀ (law : RenewingFormation.WearLaw) (c0 : RenewingFormation.Conditions)
+  (demand : Nat → Nat) (n : Nat),
+  Becoming.RenewingCorrespondence.moves law c0 demand (n + 1) =
+    Becoming.RenewingCorrespondence.moves law c0 demand n ++ [(demand n, RenewingFormation.formed law c0 demand n)]
+@Becoming.RenewingCorrespondence.total_append : ∀ {α : Type} (xs ys : List α) (q : α → Nat),
+  Becoming.total (xs ++ ys) q = Becoming.total xs q + Becoming.total ys q
+Becoming.RenewingCorrespondence.total_moves : ∀ (law : RenewingFormation.WearLaw) (c0 : RenewingFormation.Conditions)
+  (demand : Nat → Nat) (n : Nat),
+  Becoming.total (Becoming.RenewingCorrespondence.moves law c0 demand n) Becoming.RenewingCorrespondence.formedOf =
+    RenewingFormation.cumulative law c0 demand n
+Becoming.RenewingCorrespondence.path_trace : ∀ (law : RenewingFormation.WearLaw) (c0 : RenewingFormation.Conditions)
+  (demand : Nat → Nat),
+  RenewingFormation.BeyondCurrent law c0 demand →
+    ∀ (n : Nat),
+      Generative.Trace (Becoming.RenewingCorrespondence.beyond law) c0
+        (Becoming.RenewingCorrespondence.moves law c0 demand n) (RenewingFormation.path law c0 demand n)
+Becoming.RenewingCorrespondence.beyond_current_bounded_by_core : ∀ (law : RenewingFormation.WearLaw)
+  (c0 : RenewingFormation.Conditions) (demand : Nat → Nat),
+  RenewingFormation.BeyondCurrent law c0 demand →
+    ∀ (n : Nat), RenewingFormation.cumulative law c0 demand n ≤ RenewingFormation.budget c0
+Becoming.RenewingCorrespondence.beyond_current_ceases_by_core : ∀ (law : RenewingFormation.WearLaw)
+  (c0 : RenewingFormation.Conditions) (demand : Nat → Nat),
+  RenewingFormation.BeyondCurrent law c0 demand →
+    ∀ (n : Nat), RenewingFormation.budget c0 ≤ n → RenewingFormation.formed law c0 demand n = 0
+Becoming.RenewingCorrespondence.shared_formation_ends_by_core : ∀ (law : RenewingFormation.WearLaw)
+  (c0 : RenewingFormation.Conditions) (pressure share : Nat → Nat),
+  RenewingFormation.BeyondCurrent law c0 pressure →
+    (∀ (n : Nat), share n ≤ RenewingFormation.formed law c0 pressure n) →
+      ∀ (n : Nat), RenewingFormation.budget c0 ≤ n → share n = 0

@@ -1,0 +1,13 @@
+'Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree' does not depend on any axioms
+'Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable' does not depend on any axioms
+'Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres' does not depend on any axioms
+'Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core' does not depend on any axioms
+'Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core' does not depend on any axioms
+'Becoming.PrefixSafetyCorrespondence.markov_classical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core' depends on axioms: [propext, Classical.choice, Quot.sound]

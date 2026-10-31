@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-508 registered results: 477 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1171 curated edges join 434 results to the results they draw on.
+513 registered results: 482 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1184 curated edges join 439 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -45,6 +45,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [additive-part-of-offspring-variance][] ← <a id="additive-part-of-offspring-variance--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="additive-part-of-offspring-variance--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [alignment-approaches-under-the-selection-laws][] ← <a id="alignment-approaches-under-the-selection-laws--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] *(application)* · <a id="alignment-approaches-under-the-selection-laws--reading-anothers-couplings-is-pooling"></a>[reading-anothers-couplings-is-pooling][] *(application)*
 - [alignment-direction-under-widening][] ← <a id="alignment-direction-under-widening--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(application)* · <a id="alignment-direction-under-widening--comparison-by-widening"></a>[comparison-by-widening][]
+- [amounts-by-unit-matchings][] ← <a id="amounts-by-unit-matchings--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="amounts-by-unit-matchings--a-rise-past-the-inflow-is-drawn-from-beyond"></a>[a-rise-past-the-inflow-is-drawn-from-beyond][]
 - [any-number-of-drawers-in-turn][] ← <a id="any-number-of-drawers-in-turn--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [arising-needs-change][] ← <a id="arising-needs-change--support-from-the-supported"></a>[support-from-the-supported][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
@@ -102,7 +103,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [continuing-self-fed-from-beyond][] ← <a id="continuing-self-fed-from-beyond--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="continuing-self-fed-from-beyond--generation-is-replenishment"></a>[generation-is-replenishment][] · <a id="continuing-self-fed-from-beyond--laws-of-one-step"></a>[laws-of-one-step][]
 - [continuous-time-as-tower][] ← <a id="continuous-time-as-tower--laws-at-coarser-steps"></a>[laws-at-coarser-steps][] · <a id="continuous-time-as-tower--laws-of-one-step"></a>[laws-of-one-step][]
 - [contraction-where-duplication-is-reachable][] ← <a id="contraction-where-duplication-is-reachable--type-formation-gives-no-dynamics"></a>[type-formation-gives-no-dynamics][]
-- [conveyance-crosses-the-boundary][] ← <a id="conveyance-crosses-the-boundary--continuing-self-fed-from-beyond"></a>[continuing-self-fed-from-beyond][] · <a id="conveyance-crosses-the-boundary--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="conveyance-crosses-the-boundary--living-on-and-descent"></a>[living-on-and-descent][] · <a id="conveyance-crosses-the-boundary--condition-correspondence-discipline"></a>[condition-correspondence-discipline][]
+- [conveyance-crosses-the-boundary][] ← <a id="conveyance-crosses-the-boundary--continuing-self-fed-from-beyond"></a>[continuing-self-fed-from-beyond][] · <a id="conveyance-crosses-the-boundary--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="conveyance-crosses-the-boundary--living-on-and-descent"></a>[living-on-and-descent][] · <a id="conveyance-crosses-the-boundary--condition-correspondence-discipline"></a>[condition-correspondence-discipline][] · <a id="conveyance-crosses-the-boundary--not-going-out-of-a-region"></a>[not-going-out-of-a-region][] · <a id="conveyance-crosses-the-boundary--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][]
 - [copied-witnesses-change-nothing][] ← <a id="copied-witnesses-change-nothing--fallible-witness-diagnosability"></a>[fallible-witness-diagnosability][]
 - [copying-b-fold][] ← <a id="copying-b-fold--recurrent-chain-assembly"></a>[recurrent-chain-assembly][]
 - [counterfactual-is-the-course][] ← <a id="counterfactual-is-the-course--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="counterfactual-is-the-course--testing-within-couplings"></a>[testing-within-couplings][] · <a id="counterfactual-is-the-course--causal-models-as-processes"></a>[causal-models-as-processes][] · <a id="counterfactual-is-the-course--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="counterfactual-is-the-course--laws-of-one-step"></a>[laws-of-one-step][] · <a id="counterfactual-is-the-course--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
@@ -235,8 +236,10 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [negation-change-and-stable-cases][] ← <a id="negation-change-and-stable-cases--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="negation-change-and-stable-cases--counts-exist-where-decided"></a>[counts-exist-where-decided][]
 - [no-finite-part-bears-taking][] ← <a id="no-finite-part-bears-taking--more-needs-renewers"></a>[more-needs-renewers][] · <a id="no-finite-part-bears-taking--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [normal-forms-need-decided-apartness][] ← <a id="normal-forms-need-decided-apartness--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][]
+- [not-going-out-of-a-region][] ← <a id="not-going-out-of-a-region--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="not-going-out-of-a-region--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [observation-is-a-route][] ← <a id="observation-is-a-route--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="observation-is-a-route--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="observation-is-a-route--how-loops-form"></a>[how-loops-form][] · <a id="observation-is-a-route--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="observation-is-a-route--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [one-reader-several-conditions][] ← <a id="one-reader-several-conditions--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="one-reader-several-conditions--two-sided-regulation-and-late-reading"></a>[two-sided-regulation-and-late-reading][]
+- [one-root-to-its-edge][] ← <a id="one-root-to-its-edge--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][]
 - [one-search-one-line][] ← <a id="one-search-one-line--fixed-places-and-sole-lines"></a>[fixed-places-and-sole-lines][]
 - [one-step-missing-laws][] ← <a id="one-step-missing-laws--laws-of-one-step-complete"></a>[laws-of-one-step-complete][]
 - [only-the-order-of-change-shows][] ← <a id="only-the-order-of-change-shows--laws-at-coarser-steps"></a>[laws-at-coarser-steps][]
@@ -355,6 +358,8 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [testing-within-couplings][] ← <a id="testing-within-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="testing-within-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="testing-within-couplings--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="testing-within-couplings--four-cases-of-a-part"></a>[four-cases-of-a-part][]
 - [testing-within-the-net][] ← <a id="testing-within-the-net--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [tests-fix-likeness-where-determined][] ← <a id="tests-fix-likeness-where-determined--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="tests-fix-likeness-where-determined--identification-where-bounded"></a>[identification-where-bounded][]
+- [the-blanket-at-a-steady-state][] ← <a id="the-blanket-at-a-steady-state--conditioning-by-restriction"></a>[conditioning-by-restriction][] · <a id="the-blanket-at-a-steady-state--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="the-blanket-at-a-steady-state--the-markov-blanket-as-a-coupling-structure"></a>[the-markov-blanket-as-a-coupling-structure][] · <a id="the-blanket-at-a-steady-state--what-the-existence-claim-forbids"></a>[what-the-existence-claim-forbids][]
+- [the-blanket-in-a-linear-steady-state][] ← <a id="the-blanket-in-a-linear-steady-state--the-markov-blanket-as-a-coupling-structure"></a>[the-markov-blanket-as-a-coupling-structure][]
 - [the-breeding-value][] ← <a id="the-breeding-value--additive-part-of-offspring-variance"></a>[additive-part-of-offspring-variance][]
 - [the-class-of-being-joined][] ← <a id="the-class-of-being-joined--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-class-of-being-joined--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [the-continuation-condition-on-the-root][] ← <a id="the-continuation-condition-on-the-root--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-continuation-condition-on-the-root--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
@@ -400,7 +405,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-a-finite-history-refutes][] ← <a id="what-a-finite-history-refutes--becoming-finite-horizon"></a>[becoming-finite-horizon][]
 - [what-a-finite-stretch-verifies][] ← <a id="what-a-finite-stretch-verifies--a-history-read-off-its-finite-stretches"></a>[a-history-read-off-its-finite-stretches][] · <a id="what-a-finite-stretch-verifies--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][]
 - [what-a-law-of-the-whole-and-no-part-takes][] ← <a id="what-a-law-of-the-whole-and-no-part-takes--sensitivity-is-the-least-coupling"></a>[sensitivity-is-the-least-coupling][] · <a id="what-a-law-of-the-whole-and-no-part-takes--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-a-law-of-the-whole-and-no-part-takes--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
-- [what-a-line-holds-and-a-regularity-takes-in][] ← <a id="what-a-line-holds-and-a-regularity-takes-in--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
+- [what-a-line-holds-and-a-regularity-takes-in][] ← <a id="what-a-line-holds-and-a-regularity-takes-in--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="what-a-line-holds-and-a-regularity-takes-in--not-going-out-of-a-region"></a>[not-going-out-of-a-region][]
 - [what-a-method-comes-to-say-in-the-limit][] ← <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-stretch-verifies"></a>[what-a-finite-stretch-verifies][] · <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][] · <a id="what-a-method-comes-to-say-in-the-limit--when-the-runs-of-a-process-settle"></a>[when-the-runs-of-a-process-settle][]
 - [what-a-pools-acts-respond-to][] ← <a id="what-a-pools-acts-respond-to--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="what-a-pools-acts-respond-to--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-a-pools-acts-respond-to--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="what-a-pools-acts-respond-to--timely-response-necessity"></a>[timely-response-necessity][]
 - [what-a-rise-draws-from-beyond][] ← <a id="what-a-rise-draws-from-beyond--raising-what-couples-in-draws-from-beyond"></a>[raising-what-couples-in-draws-from-beyond][] · <a id="what-a-rise-draws-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="what-a-rise-draws-from-beyond--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-a-rise-draws-from-beyond--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][]
@@ -480,6 +485,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [additive-part-of-offspring-variance]: theories/becoming/results/records/additive-part-of-offspring-variance.md
 [alignment-approaches-under-the-selection-laws]: theories/becoming/results/records/alignment-approaches-under-the-selection-laws.md
 [alignment-direction-under-widening]: theories/becoming/results/records/alignment-direction-under-widening.md
+[amounts-by-unit-matchings]: theories/becoming/results/records/amounts-by-unit-matchings.md
 [any-number-of-drawers-in-turn]: theories/becoming/results/records/any-number-of-drawers-in-turn.md
 [arising-needs-change]: theories/becoming/results/records/arising-needs-change.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
@@ -695,8 +701,10 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [negation-change-and-stable-cases]: theories/becoming/results/records/negation-change-and-stable-cases.md
 [no-finite-part-bears-taking]: theories/becoming/results/records/no-finite-part-bears-taking.md
 [normal-forms-need-decided-apartness]: theories/becoming/results/records/normal-forms-need-decided-apartness.md
+[not-going-out-of-a-region]: theories/becoming/results/records/not-going-out-of-a-region.md
 [observation-is-a-route]: theories/becoming/results/records/observation-is-a-route.md
 [one-reader-several-conditions]: theories/becoming/results/records/one-reader-several-conditions.md
+[one-root-to-its-edge]: theories/becoming/results/records/one-root-to-its-edge.md
 [one-search-one-line]: theories/becoming/results/records/one-search-one-line.md
 [one-step-missing-laws]: theories/becoming/results/records/one-step-missing-laws.md
 [only-the-order-of-change-shows]: theories/becoming/results/records/only-the-order-of-change-shows.md
@@ -822,6 +830,8 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [testing-within-couplings]: theories/becoming/results/records/testing-within-couplings.md
 [testing-within-the-net]: theories/becoming/results/records/testing-within-the-net.md
 [tests-fix-likeness-where-determined]: theories/becoming/results/records/tests-fix-likeness-where-determined.md
+[the-blanket-at-a-steady-state]: theories/becoming/results/records/the-blanket-at-a-steady-state.md
+[the-blanket-in-a-linear-steady-state]: theories/becoming/results/records/the-blanket-in-a-linear-steady-state.md
 [the-breeding-value]: theories/becoming/results/records/the-breeding-value.md
 [the-class-of-being-joined]: theories/becoming/results/records/the-class-of-being-joined.md
 [the-continuation-condition-on-the-root]: theories/becoming/results/records/the-continuation-condition-on-the-root.md

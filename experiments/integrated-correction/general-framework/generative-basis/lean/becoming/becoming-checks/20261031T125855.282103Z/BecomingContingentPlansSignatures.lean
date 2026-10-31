@@ -1,0 +1,16 @@
+import Becoming.ContingentPlans
+#check @Becoming.ContingentPlans.mem_repertoire
+#check @Becoming.ContingentPlans.run_none
+#check @Becoming.ContingentPlans.run_some
+#check @Becoming.ContingentPlans.run_iff_trace
+#check @Becoming.ContingentPlans.passes_iff_completes
+#check @Becoming.ContingentPlans.valid_iff
+#check @Becoming.ContingentPlans.valid_iff_passes
+#check @Becoming.ContingentPlans.chosen_sound
+#check @Becoming.ContingentPlans.empty_belief_none
+#check @Becoming.ContingentPlans.selected_executes
+#check @Becoming.ContingentPlans.selected_iff_completes
+#check @Becoming.ContingentPlans.none_selected_iff
+#check @Becoming.ContingentPlans.selected_completes
+#check @Becoming.ContingentPlans.branch_congr
+#check @Becoming.ContingentPlans.branch_incompatible

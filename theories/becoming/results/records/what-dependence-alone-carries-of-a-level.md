@@ -11,17 +11,18 @@
 ## Laws
 
 1. Read activity needing support off a law at a step: a formation the levels there do not admit exchanges nothing across it. Under a law reading through dependence alone, such a formation outside the part takes and gives no less where the levels at the step stand no lower, the history before alike. (`Becoming.ExchangeLaw.NeedsSupportAt`, `Becoming.NoLowerAt`, `Becoming.ExchangeLaw.Through.rises_at_step`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A response of giving carried by a family of such formations rises with the levels at the step, and gives less under one history than under another alike before the step only where some level at the step stands lower. (`Becoming.ExchangeLaw.CarriesGiving`, `Becoming.ExchangeLaw.Through.carried_rises`, `Becoming.ExchangeLaw.Through.carried_fall_needs_fall`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A response rising with one level up to a bound is carried by units at thresholds: unit j + 1 depends on the level at need j + 1 and gives the rise there, unit 0 gives the response at nothing; the units read through dependence alone and exchange only where supported. (`Becoming.Layers.web`, `Becoming.Layers.law`, `Becoming.Layers.admits_iff`, `Becoming.Layers.law_through`, `Becoming.Layers.law_needsSupport`, `Becoming.Layers.dependsOn`, `Becoming.Layers.rises_add`, `Becoming.Layers.rises_stop`, `Becoming.Layers.carry`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A response giving a condition an amount fixed by one level at the step, up to a bound, is carried by some family of formations each exchanging only where supported, under a law reading through dependence alone, exactly where it rises with that level up to the bound. (`Becoming.onlyAt`, `Becoming.onlyAt_self`, `Becoming.onlyAt_noLower`, `Becoming.carried_iff_rising`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.carried_iff_rising` as following from a premise of the account (support, as NeedsSupportAt).
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.carried_iff_rising` as following from a premise of the account (support, as NeedsSupportAt).
+   - *Standing of `Becoming.carried_iff_rising`:* amounts, a reading: An exchange law carries exactly where the reading rises: the statement compares responses (r x ≤ r (x + 1) below N, the levels bounded by N), and the support is inside the existential, not kept. A law of its model, placed by its amounts, as responses_le_missBound is ([REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)); the rule gives unplaced (none of the rule's tests holds).
 5. Where the level of d and of a condition e stand at the step at a fixed total N, unit j depending on d at need j and on e at need N - j is admitted exactly where d stands at j, so the units, one for each level up to N, carry every response to the level of d; they read through dependence alone and exchange only where supported. (`Becoming.eq_of_true_iff`, `Becoming.ble_and_iff`, `Becoming.total_steps_nothing`, `Becoming.total_steps_only`, `Becoming.Complement.web`, `Becoming.Complement.law`, `Becoming.Complement.admits_iff`, `Becoming.Complement.law_through`, `Becoming.Complement.law_needsSupport`, `Becoming.Complement.dependsOn`, `Becoming.Complement.admitted_iff`, `Becoming.Complement.carry`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Supplying what a level lacks of a positive amount passes by level, under a law reading through a coupling by level; it is carried by no family through dependence alone over the levels up to a positive bound, and with a complement at a fixed total it is carried by the complement units. (`Becoming.supplyLaw`, `Becoming.supplyLaw_through`, `Becoming.supply_not_carried`, `Becoming.supply_carried_by_complement`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

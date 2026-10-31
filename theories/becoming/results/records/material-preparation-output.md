@@ -11,19 +11,19 @@
 ## Laws
 
 1. For every alphabet with decidable equality and every law of draws, a copy of a word completes with nothing left in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers what its attachments draw. Once a supplied word is taken, the pool holds of each token what it held less what the word used, and a list is empty exactly when it holds no token. (`Becoming.Copying.empties_iff`, `Becoming.Copying.countOf_removeAll`, `Becoming.Copying.nil_iff_countOf_zero`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. As a plan of the copy's determined process, whose moves go along its law's orbit, a plan of k moves completing exactly when the goal holds on the orbit at k, the copy completes with nothing pending exactly when the pool supplies the word and the support covers its draws, and leaves nothing in the pool exactly when the pool holds each token exactly as often as the word uses it and the support covers the draws. (`Becoming.Courses.steps_orbit`, `Becoming.Courses.completes_units_iff`, `Becoming.Courses.copy_completes_iff`, `Becoming.Courses.copy_empties_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Preparation is copying with a unit draw: each attachment draws one unit, so a word uses its length. For Boolean tokens, routing a recipe from a pool with some support completes with a given rest left in the pool and given support left exactly when copying the recipe from that pool and support with unit draws completes with that pool and support left. (`Becoming.PreparationCorrespondence.unit`, `Becoming.PreparationCorrespondence.use_unit`, `Becoming.PreparationCorrespondence.countOf_eq_count`, `Becoming.PreparationCorrespondence.mem_iff_countOf_pos`, `Becoming.PreparationCorrespondence.erase_eq_remove`, `Becoming.PreparationCorrespondence.route_some_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. For every target recipe, pool and routing support, routing completes with an empty residual pool exactly when the pool is a permutation of the recipe and the recipe is no longer than the support, the support then left being the support less the recipe's length. (`Becoming.PreparationCorrespondence.preparation_empties_iff`, `Becoming.PreparationCorrespondence.preparation_leaves`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. In the routing machine, a routing that completes with a rest and some support left has the pool a permutation of the recipe followed by the rest, and that support with the recipe's length equal to the routing support; a pool that is a permutation of the recipe, the recipe no longer than the support, routes with an empty residual pool and the support less the recipe's length left. (`MaterialMaturation.route_sound`, `MaterialMaturation.route_complete`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. For every input the routing trace keeps placed tokens and leftover pool: the pool is a permutation of the placed followed by the leftover, the free support with the number placed is the routing support, and no more is placed than the recipe; routing is the trace's projection, completing exactly where all of the recipe is placed. In a witness a failed routing keeps its partial placement, leftover and unused support. (`MaterialMaturation.routing_trace_accounts`, `MaterialMaturation.route_trace_projection`, `MaterialMaturation.partial_routing_preserves_unused_components_and_work`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. For the eight-slot recipe of four tokens of each kind, a pool is a permutation of it exactly when it holds four of each, and under eight units of support routing completes with an empty pool and no support left exactly when the pool holds four of each kind. (`MaterialMaturation.canonical_iff_counts`, `MaterialMaturation.actual_preparation_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -42,7 +42,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261020T161943.503298Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
+Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261031T133608.754102Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
 
 Canonical source: [MaterialMaturation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean)
 
@@ -94,6 +94,7 @@ The actual routeTrace output is the reusable material interface; it does not rec
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json) | — |
 
 Aliases: `MaterialMaturation.actual_preparation_iff`, `MaterialMaturation.route_sound`, `MaterialMaturation.route_complete`, `Becoming.Copying.empties_iff`, `Becoming.Courses.copy_empties_iff`, `Becoming.Courses.copy_completes_iff`
 

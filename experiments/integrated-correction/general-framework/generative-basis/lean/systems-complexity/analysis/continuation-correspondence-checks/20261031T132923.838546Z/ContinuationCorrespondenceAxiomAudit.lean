@@ -1,0 +1,18 @@
+import ContinuationCorrespondence
+#print axioms Becoming.ContinuationCorrespondence.processOf
+#print axioms Becoming.ContinuationCorrespondence.successor
+#print axioms Becoming.ContinuationCorrespondence.post_eq_seen
+#print axioms Becoming.ContinuationCorrespondence.usable_iff
+#print axioms Becoming.ContinuationCorrespondence.viable_iff_keptFor
+#print axioms Becoming.ContinuationCorrespondence.toPlan
+#print axioms Becoming.ContinuationCorrespondence.ofPlan
+#print axioms Becoming.ContinuationCorrespondence.works_iff_keeps
+#print axioms Becoming.ContinuationCorrespondence.keeps_iff_works
+#print axioms Becoming.ContinuationCorrespondence.works_exists_iff
+#print axioms Becoming.ContinuationCorrespondence.classicalChoice
+#print axioms Becoming.ContinuationCorrespondence.viable_iff_plan_by_core
+#print axioms Becoming.ContinuationCorrespondence.viable_iff_plan_listed
+#print axioms Becoming.ContinuationCorrespondence.toPlan_zip
+#print axioms Becoming.ContinuationCorrespondence.compatible_iff
+#print axioms Becoming.ContinuationCorrespondence.joint_plan_composition_by_core
+#print axioms Becoming.ContinuationCorrespondence.compatibility_necessary_by_core

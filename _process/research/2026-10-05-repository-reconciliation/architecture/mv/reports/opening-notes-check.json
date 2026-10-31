@@ -1,0 +1,121 @@
+{
+ "about": "A check of OPENING's notes [^axiom] and [^own], as rewritten so that the line before the notes holds of every note, against chapters 07 and 08, the records and Lean they cite, AGENTS and the glossary, by one checker; its findings then given to a skeptic told to refute them. A finding the skeptic confirms (real) was taken; a refuted one was left, with the skeptic's reason.",
+ "run": "wf_bca9f6a4-834",
+ "agents": 2,
+ "claims_checked": 72,
+ "totals": {
+  "findings": 9,
+  "confirmed_and_taken": 3,
+  "refuted": 6
+ },
+ "findings": [
+  {
+   "claim": "[^axiom]: \"P2 (one's class is constant up to the net's end) and P4 (it holds one's effects) are the crux\"",
+   "problem": "The gloss gives P2 as the stronger condition, constancy up to the net's end over the whole class («至终有常»). The chapter says P2 does not ask for that. P2 is that the self is a line under a class that is constant up to the net's end at oneself («本类至终有常»), and constancy over the whole class 'is no regularity of one's own'. So the note states a premise the path does not use.",
+   "evidence": "07-SIGNIFICANCE.md:403 (P2: 'that class is constant up to the net's end at oneself ... It is a regularity of its own'); 07:427 ('P2 asks constancy up to the net's end only at one's own class ... Over the whole class the condition would ask the same of every block of what lies outside one, which is no regularity of one's own'); 07:390-392 (constancy at the member's class defined apart from «至终有常»); THE-THEORY-OF-BECOMING.md:237 glosses P2 as 'that one's own line is a regularity of its own'.",
+   "fix": "P2 (one's line is a regularity of its own: its class is constant up to the net's end at oneself) and P4 (that class holds one's effects: everything one conditions is alike to oneself) are the crux",
+   "severity": "wrong",
+   "verdict": {
+    "real": true,
+    "reason": "Reproduced. In GrammarPath.lean:223, «至终有常» R E quantifies over every pair of alike occurrences. «本类至终有常» R E m (line 236) quantifies only over occurrences alike to m. The chapter keeps its phrasing parallel to these: 'The member's class is not constant up to the net's end' names member_not_constant_to_end, which is ¬«至终有常». The weaker condition is always written 'at its own class' or 'at oneself' (member_not_constant_at). So the note's 'one's class is constant up to the net's end', in the chapter's own usage, is the whole-class condition. That is stronger than P2 (07:403, 'constant up to the net's end at oneself'). 07:427 rejects that reading outright: over the whole class it 'is no regularity of one's own', and UnevenOutside separates the two. The fix restates the chapter's P2 and P4 and agrees with the overview's glosses (THE-THEORY-OF-BECOMING:228, 237)."
+   },
+   "taken": true
+  },
+  {
+   "claim": "[^own]: \"Each standpoint's own living continuation has significance for it (self-significance). This is the self's presupposition, P1 of §4.6\"",
+   "problem": "The first sentence states self-significance (S0) flatly, with no condition. The old text had 'Under the continuation condition'. The theory does not assert S0. P1 says only that acting presupposes it, P1 is listed as a premise of §4.6's argument, and the condition that would give S0 is not asserted. Stating the content as a fact and then calling it the presupposition hides that it is presupposed and not shown. (T8 does support the identification of P1 with the self's presupposition and 'the condition contains it'.)",
+   "evidence": "07-SIGNIFICANCE.md:141 ('Seed, neutralities and A are normative premises'); 07:400-402 (P1 listed under 'Premises'); 07:259 (D59: 'P1 chooses'); 07:661 (T8: 'P1 is not a third premise, being the self's presupposition, which the condition contains'); Metaethics.lean:98 ('Nothing here proves S0'); Metaethics.lean:147 (SelfSignificance = S0, its own living claims have significance from it); Significance.lean:371 (premises_of_unrestricted gives S0 only under Unrestricted and a `reads` correspondence).",
+   "fix": "**A reading.** Held de se, acting presupposes that one's own continuation has significance: the self's presupposition, P1 of [§4.6](chapters/07-SIGNIFICANCE.md#future-path), stated and not asserted. The continuation condition contains it ([§4.1](chapters/07-SIGNIFICANCE.md#decomposition)), and under the condition each standpoint's own living continuation has significance for it, on every reading where a claim's significance is some formation's continuation at some step (self-significance, `Valuation.premises_of_unrestricted`). That every living being acts on this ...",
+   "severity": "overstated",
+   "verdict": {
+    "real": true,
+    "reason": "Reproduced. The 08 premise card files Self-significance under 'Ethics, none asserted'. Metaethics.lean says 'Nothing here proves S0'. In the §4.2 table, each standpoint's presupposition is a premise 'with nothing asserted', and D59 says 'P1 chooses'. The new [^own] opens with a bare declarative, 'Each standpoint's own living continuation has significance for it', which asserts S0 with no condition. The old text said 'Under the continuation condition'. The next sentence calls it the self's presupposition, which acting presupposes, but it does not take back the flat assertion. A reader can even take P1 as grounding S0, which is how the commit message describes the change. The fix opens with what the account actually says (acting presupposes it, de se; P1; contained in the condition), then gives S0 under the condition with the theorem's own correspondence hypothesis (07:164; record, Conditions). Both follow the chapters."
+   },
+   "taken": true
+  },
+  {
+   "claim": "[^axiom]: \"Read with time, part of the future the step reaches is reached without it, along one path (§4.6): under P1 to P4, one's concern for one's own continuation reaches everything downstream of what one conditions, past the end of one's organism\"",
+   "problem": "The sentence gives no standing. The chapter labels the path an AI reading whose steps are proved in Lean but whose joining is argued. OPENING's notes are meant to say how far each sentence is proved. As written, the path reads as a flat result. P1 and P3 are also used without a gloss in this note.",
+   "evidence": "07-SIGNIFICANCE.md:400 ('**Argument** [AI reading; each step cites its Lean, and the joining of the steps is argued]'); 07:427 ('That P2 is read so is argued here, not proved'); OPENING.md:5 ('Each note says how far its sentence is proved: proved, proved under conditions, a reading, or a judgment').",
+   "fix": "Read with time, part of the future the step of invariance reaches is reached without it, along one path, an argument whose steps are proved and whose joining is argued ([§4.6](chapters/07-SIGNIFICANCE.md#future-path)): under P1 to P4 (acting presupposes one's own continuation, de se; one's line is a regularity of its own; the conditions one affects feed other lines; one's class holds one's effects), one's concern ...",
+   "severity": "missing",
+   "verdict": {
+    "real": false,
+    "reason": "Not reproduced as a defect. The sentence is a conditional ('under P1 to P4'), and it mirrors the chapter's own Conclusion: 'Under P1–P4, one's concern ... reaches everything downstream of what one conditions ... That is a law, not only a reading of witnesses' (07:418). T8 and the overview's Warrant line (THE-THEORY-OF-BECOMING:237) state it the same way. The note marks P2 and P4 as the crux, lists their warrant as open, and links §4.6. OPENING:5's rule applies to the body sentence a note annotates; it does not ask for a label on every supplementary sentence. P1 is glossed in [^own], and the link gives P1 to P4. The proposed fix is harmless, but the present wording neither overstates nor leaves out anything required."
+   },
+   "taken": false
+  },
+  {
+   "claim": "[^axiom]: \"**Open:** the warrant of the condition and of its step of invariance, of C, and of P2 and P4 for that path.\"",
+   "problem": "T8's Open list for the path also names P3, a correspondence not shown for actual selves. The note relies on 'P1 to P4' but leaves P3's open status out. P3 is where the reach across lines depends on actual selves.",
+   "evidence": "07-SIGNIFICANCE.md:661 (T8: 'Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C'); 07:431 ('P3 is a correspondence ... not shown for actual selves').",
+   "fix": "**Open:** the warrant of the condition and of its step of invariance, of C, and of P2 and P4 for that path; P3, that the conditions one affects feed other lines, is a correspondence not shown for actual selves.",
+   "severity": "missing",
+   "verdict": {
+    "real": false,
+    "reason": "Defensible as written. The note's Open list is a list of warrants: of the condition, its step of invariance, C, and P2 and P4. That is exactly what AGENTS requires wherever the ethics is summarized: 'for the path of chapter 7 §4.6, P2 and P4 still need warrant, and the step of invariance stays open for what that path does not reach'. The overview's Warrant line (THE-THEORY-OF-BECOMING:228, 237) names the same items and not P3. P3 is a correspondence about actual selves, not a warrant question (07:431). The note's conclusion, 'everything downstream of what one conditions', is what P2 and P4 give, and the note states it conditionally on P1 to P4, so leaving P3 out of the warrant list does not overstate anything."
+   },
+   "taken": false
+  },
+  {
+   "claim": "[^axiom]: \"The zero-axiom target, which would explain how recognizing this step forms within the dynamics, is open (08 §12).\"",
+   "problem": "08 §12 describes the target as one theory with no substantive axiom that warrants whatever universal content it asserts. It does not describe it by an explanation of recognition, and it keeps explaining how evaluation forms apart from justifying it. Placed right after the list of open warrants, the clause invites the reading that explaining recognition would answer the warrant. AGENTS keeps warrant and recognition distinct. 'This step' is also ambiguous, because the note uses 'step' both for the condition ('The theory states this step as a condition') and for the step of invariance. The [^own] wording ('how recognition and motivation form ... belongs to the zero-axiom target') is acceptable: 08:613 puts evaluation within the target, and Significance.lean:159 says the same.",
+   "evidence": "08-METHOD.md:607 ('It requires warranting whatever universal content the theory asserts'); 08:609 ('Explaining how evaluation forms is distinct from justifying what deserves favourable appraisal'); AGENTS.md ('Normative warrant, recognition, motivation, compliance and implemented preservation stay distinct'); GLOSSARY.md:63 (the step of invariance, one sense).",
+   "fix": "The zero-axiom target, one theory with no substantive axiom that warrants whatever universal content it asserts, is open ([08 §12](chapters/08-METHOD.md#open-programme)); how recognizing the step of invariance forms within the dynamics belongs to it, and is a question apart from the step's warrant.",
+   "severity": "nit",
+   "verdict": {
+    "real": false,
+    "reason": "Defensible. The clause 'which would explain how recognizing this step forms within the dynamics' is carried over unchanged from the old text; only 'has not yet begun' became 'is open (08 §12)'. It matches Significance.lean ('Recognition and motivation belong to the later attempt without axiom') and 08 §12, which puts evaluation inside the target's unfolding. It names one thing the target would do. It does not say that explaining recognition would supply warrant, and the warrants are listed separately in the sentences just before. 'This step' can mean either the body's one step (the condition) or the step of invariance, but the body itself identifies the two ('the step is exactly this ... what matters from one standpoint matters from every other'), so the ambiguity misleads no one."
+   },
+   "taken": false
+  },
+  {
+   "claim": "[^axiom]: \"with it come each standpoint's own significance and both neutralities, assuming no connection (`Valuation.premises_of_unrestricted`; ...)\"",
+   "problem": "'Assuming no connection' can be read as a hypothesis that nothing is connected. The theorem uses no connection hypothesis at all. The sentence also drops the theorem's correspondence hypothesis (`reads`: a claim's significance is some formation's continuation at some step). The record says the theorem says nothing on readings that do not meet it. [^own] cites the same theorem without this hypothesis.",
+   "evidence": "Significance.lean:366-375 (premises_of_unrestricted takes `reads : ∀ p c, sig p (step c) (formation c) → V.sig p c`; docstring 'No connection is used'); 07-SIGNIFICANCE.md:164 ('On any reading where a claim's significance is some formation's continuation at some step ... with no connection used'); record continuation-condition-yields-living-significance.md, Conditions ('on readings that do not meet it the theorem says nothing').",
+   "fix": "with it come each standpoint's own significance and both neutralities, with no connection used, on every reading where a claim's significance is some formation's continuation at some step (`Valuation.premises_of_unrestricted`; ...)",
+   "severity": "nit",
+   "verdict": {
+    "real": false,
+    "reason": "Not wrong. The sentence is unchanged from the old text. 'Assuming no connection' can be read as 'no connection premise assumed' (the docstring says 'No connection is used'). It can also be read as 'nothing connected', and on that reading the claim is still true, only weaker, because the theorem holds whatever the connection. The `reads` correspondence is left out, but the same simplification appears in the chapter's own summary ('So living significance is the condition restricted to living claims, an instantiation', 07 §3.2), and 'restricted to living claims' already treats claims as formation continuations. The suggested wording would be clearer, but the present wording is defensible."
+   },
+   "taken": false
+  },
+  {
+   "claim": "[^axiom]: \"This is checked; no human has reviewed it yet.\"",
+   "problem": "The sentence is true and matches ONE-PAGE and 08 §11. It does drop what the old wording kept from the result's own record: the record says the result has had no independent review at all, only author counterreviews. A reader could take the new wording to imply an independent machine review.",
+   "evidence": "results/records/continuation-condition-yields-living-significance.md:77 ('Author counterreviews in §53 and §64 of the integration note; no independent review'); ONE-PAGE.md:5 ('No human has yet reviewed it'); 08-METHOD.md:591 ('Every review so far is by AI ... No human review is claimed').",
+   "fix": "This is checked; it has had no independent review, and no human has reviewed it.",
+   "severity": "nit",
+   "verdict": {
+    "real": false,
+    "reason": "The new wording is true and matches ONE-PAGE:5 ('No human has yet reviewed it ... everything else so far only by further machine reviews') and 08 §11 ('Every review so far is by AI ... No human review is claimed'). It does not imply that a machine review was independent. The fix's 'it has had no independent review' rests on the record's evidence line, dated 13 October. The account has since counted AI reviews of the theory, so that clause could itself be wrong, while the note's wording is the one the current account supports."
+   },
+   "taken": false
+  },
+  {
+   "claim": "[^axiom]: \"The condition fixes scope, whose losses count, and orders nothing; ranking uses comparison by widening (C)\"",
+   "problem": "'Comparison by widening' names the order derived with no premise. C is the premise that widening is better. This sentence now sits beside the new Open list that names C's warrant, and calling C 'comparison by widening' hides that the ranking rests on a premise. Together with 'the rules are derived without it' earlier in the note, the ranking can read as derived.",
+   "evidence": "AGENTS.md ('What ranks lies in calling widening better (C) alone, and a reason for C is open apart'); GLOSSARY.md:62 ('C | the widening comparison: widening what can form is better; it alone orders'); 07-SIGNIFICANCE.md:316-317 ('C's normative content having moved into calling widening better').",
+   "fix": "The condition fixes scope, whose losses count, and orders nothing; what ranks is C alone, calling widening what can form better, a premise stated and not asserted",
+   "severity": "nit",
+   "verdict": {
+    "real": false,
+    "reason": "Defensible. The glossary's sense of C is 'the widening comparison: widening what can form is better; it alone orders', and 'comparison by widening (C)' names C in that sense. The phrase is unchanged, and [^good-evil] and [^alignment] use it the same way. The sentence gives both roles ('fixes scope ... orders nothing; ranking uses ... (C)'), as AGENTS requires, and the new Open list names 'the warrant ... of C', so the note says plainly that the ranking rests on a premise whose warrant is open. Nothing makes the ranking read as derived."
+   },
+   "taken": false
+  },
+  {
+   "claim": "OPENING.md:59: \"The notes below are written apart from the first-person text above and follow the current account.\"",
+   "problem": "For these two notes the line is not yet true. [^axiom] misstates P2, and [^own] asserts self-significance where the current account says only that acting presupposes it. Everything else in the two notes follows the chapters. Every link target and anchor exists: #condition, #scope-and-order, #step, #future-path, #decomposition, #r-universal-practical-warrant, #open in 07, #premise-card and #open-programme in 08, and the record. Every cited Lean declaration exists and states what the note says, apart from the correspondence hypothesis noted above. 'Crux' and 'past the end of one's organism' are the chapter's own words. Both premises keep their roles wherever the ethics is summarized. Neither note names a person or AI beyond the scholarly citations.",
+   "evidence": "07-SIGNIFICANCE.md:403, 427 (P2 at one's own class); 07:141 and Metaethics.lean:98 (S0 a premise, not proved).",
+   "fix": "Keep the line. Apply the P2 and [^own] replacements above so that it holds of both notes.",
+   "severity": "overstated",
+   "verdict": {
+    "real": true,
+    "reason": "Follows from findings 0 and 1, both reproduced. As the notes stand, [^axiom] gives a stronger P2 than the path uses, and [^own] asserts S0, which the account lists as not asserted. So the line 'follow the current account' does not yet hold for these two notes. Spot checks found the rest of the evidence correct: the anchors #condition, #scope-and-order, #decomposition, #step, #future-path, #open and #r-universal-practical-warrant in 07, #premise-card and #open-programme in 08, and the record all exist. The fix (keep the line, apply findings 0 and 1) is correct. It asks for no change beyond those two fixes."
+   },
+   "taken": true
+  }
+ ]
+}

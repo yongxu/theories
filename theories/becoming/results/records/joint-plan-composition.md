@@ -11,15 +11,15 @@
 ## Laws
 
 1. For every process, map of its steps to the values they keep, guard and condition on moves, a plan of n moves gives a first move and, for each value its step keeps, a plan of the moves after it. It keeps the guard from a class where the guard holds throughout the class and, with moves to go, its first move is usable from the class and each continuation keeps the guard from the class seen. (`Becoming.Viability.Plan`, `Becoming.Viability.Plan.Keeps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Two plans of one length run together as one plan of pairs, each part continuing by the value its own step keeps; the two plans are compatible from a joint class where each pair of moves they make together is usable from the joint class it is made from, at every branch. (`Becoming.Viability.Plan.zip`, `Becoming.Viability.jointSense`, `Becoming.Viability.Plan.Compatible`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Where every joint step projects onto a step of each part, the joint class lies over classes the parts' plans keep, and the plans are compatible, the joint plan keeps both guards at every stage; and every joint plan that keeps a guard is compatible. (`Becoming.Viability.Plan.zip_keeps`, `Becoming.Viability.Plan.compatible_of_zip_keeps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. The periphery's observation plans are the core's plans: their pairing is the core's zip and their recursive joint executability the core's compatibility, so the periphery's composition (under projection, the joint class over kept classes and compatibility, the paired plan meets both parts' requirements at every stage) and its need of compatibility follow from the core laws. (`Becoming.ContinuationCorrespondence.toPlan`, `Becoming.ContinuationCorrespondence.toPlan_zip`, `Becoming.ContinuationCorrespondence.compatible_iff`, `Becoming.ContinuationCorrespondence.joint_plan_composition_by_core`, `Becoming.ContinuationCorrespondence.compatibility_necessary_by_core`, `JointContinuation.joint_plan_composition`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. On one reserve of two units, where each step of a part draws one unit and a joint step two, each part's two-step plan works alone, yet the paired plan, whose first joint step works, fails at the second joint step; a reserve of four makes it work; and four single-unit draws in sequence from two, without renewal, fail. (`JointContinuation.each_local_twice`, `JointContinuation.joint_first_step`, `JointContinuation.joint_second_step_fails`, `JointContinuation.sufficient_stock_repairs`, `JointContinuation.serialization_without_renewal_fails`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -81,6 +81,7 @@ Actual joint effects must remain covered by local laws; every subsequent observa
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json) | — |
 
 Aliases: `JointContinuation.joint_plan_composition`, `Becoming.Viability.Plan.zip_keeps`, `Becoming.Viability.Plan.compatible_of_zip_keeps`
 

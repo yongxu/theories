@@ -11,9 +11,9 @@
 ## Laws
 
 1. A law with noise is the relation of exchange opening what some noise value gives; along every realization its course is a run, and the world read off it a world read off a relation of exchange. (`Becoming.NoisyLaw`, `Becoming.NoisyLaw.course_runs`, `Becoming.NoisyLaw.readOffExchange`, `Becoming.NoisyLaw.realize`, `Becoming.NoisyLaw.relation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Balance holds in expectation over any distribution of the noise with integrable amounts; a condition ending at a random step rests along every realization while its expected level falls at every step. (`Becoming.Representation.RandomEnd.expected`, `Becoming.Representation.RandomEnd.level`, `Becoming.Representation.RandomEnd.rest_not_in_expectation`, `Becoming.Representation.RandomEnd.rests`, `Becoming.Representation.RandomEnd.summable_weighted`, `Becoming.Representation.RandomEnd.weight`, `Becoming.Representation.expected_balance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -31,7 +31,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Lean 4.29.1 checker, receipt 20261022T151214.034215Z, empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261022T151119.678274Z, Lean's standard axioms only. Author review in study section 369; not independently reviewed.
+Core: Lean 4.29.1 checker, receipt 20261022T151214.034215Z, empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261031T134302.467521Z, Lean's standard axioms only. Author review in study section 369; not independently reviewed.
 
 Canonical source: [OverExchange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean)
 
@@ -67,6 +67,7 @@ Chapter §8.1 item 7's "a law with noise and its course". The seen half of T6 (p
 | receipt | [representation-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json) | — |
 
 Aliases: `laws with noise`, `带噪声的规律`, `Becoming.NoisyLaw.readOffExchange`, `Becoming.Representation.expected_balance`, `Becoming.Representation.RandomEnd.rest_not_in_expectation`
 

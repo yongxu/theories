@@ -204,6 +204,20 @@
         "en": "The free-energy principle's blanket and existence claim, stated in the same module.",
         "zh": "同一模块所述之自由能原理之毯与存在之主张。"
       }
+    },
+    {
+      "id": "the-blanket-at-a-steady-state",
+      "detail": {
+        "en": "The blanket at a steady state: the statistical form, conditional independence given the blanket, which detailed balance of the internal moves gives with positive weights, moves present at every external state and rate ratios reading none; the coupling form holds on every run.",
+        "zh": "稳态之毯：统计之形（予毯之条件独立），权皆正、移于每一外部态皆在、率比不读外部态时，内部诸移之细致平衡予之；耦合之形于每一运行皆成。"
+      }
+    },
+    {
+      "id": "the-blanket-in-a-linear-steady-state",
+      "detail": {
+        "en": "The linear case: the Euler step of a sparsely coupled drift as a blanketed law, with noise, and the synchronous scheme against the statistical form.",
+        "zh": "线性情形：稀疏耦合之漂移之 Euler 步为毯化之律（含噪声），及同步之法与统计之形之关系。"
+      }
     }
   ],
   "references": [
@@ -303,6 +317,10 @@
     {
       "en": "29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.",
       "zh": "2026年10月29日：新增（UE18），马尔可夫毯作为耦合结构：于毯化之律主体由其感官历程所驱动，受感官部分所读所限（归并）；无论模型与策略，唯以阈读之供给于断裂登记前不可见，例与世界之耦合相接；经审查（修订采其探针）与复查；研究第 452 节。"
+    },
+    {
+      "en": "1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 UE26（研究第 484 节）：与 the-blanket-at-a-steady-state、the-blanket-in-a-linear-steady-state 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

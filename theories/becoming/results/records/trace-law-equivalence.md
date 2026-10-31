@@ -11,9 +11,9 @@
 ## Laws
 
 1. Two processes on the same configurations and moves take the same steps exactly when they have the same finite traces, both endpoints kept, from every configuration; a trace of one move is exactly a step, so traces of one move suffice. (`Becoming.same_steps_iff_traces`, `Generative.trace_singleton_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Forgetting endpoints loses the law: on two configurations with one move, static keeps the configuration and toggle flips it; they take the same words from every configuration, static goes from false to false in one move and toggle does not, so they do not take the same steps. (`Becoming.Carriers.static`, `Becoming.Carriers.toggle`, `Becoming.Carriers.word_feasibility_does_not_determine_endpoints`, `Becoming.Carriers.static_toggle_not_same_steps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,27 +11,28 @@
 ## Laws
 
 1. A valuation gives which claims are living, which are related by formed relations, each standpoint's own region and what has significance from it. A seed is a living claim with significance from some standpoint; relational neutrality, no formed boundary restricting it, passes significance along formed relations to living claims; standpoint neutrality makes it hold from every standpoint. (`Becoming.Valuation`, `Becoming.Valuation.Seed`, `Becoming.Valuation.transmits`, `Becoming.Valuation.shares`, `Becoming.Valuation.Grounds`, `Becoming.Neutral`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. On a whole where formed relations among living claims connect every two living claims, with some living claim and some standpoint, every living claim being significant from every standpoint is equivalent to the seed with both neutralities; from those three to living significance needs only the connection. (`Becoming.Valuation.Significant`, `Becoming.Valuation.relations`, `Becoming.Valuation.Connected`, `Becoming.Valuation.significant_iff`, `Becoming.Valuation.significant_of_grounds`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Valuation.significant_iff` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Valuation.significant_iff` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Valuation.significant_iff`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 3. Under relational neutrality each standpoint's significance is invariant along the formed relations, so it reaches every living claim linked to a valued one; a standpoint holding self-significance with a living claim of its own supplies a seed. (`Becoming.Valuation.transmits_invariant`, `Becoming.Valuation.reaches`, `Becoming.Valuation.SelfSignificance`, `Becoming.Valuation.seed_of_selfSignificance`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Evaluation is stated over one frame, the core process with realized claims: claim-level living significance gives living significance for the frame, with relevance read as significance from every standpoint. (`Becoming.Valuation.livingSignificance`, `Becoming.LivingSignificance`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Where A holds unrestricted by any formed boundary, the positioned articulation D follows, with the content D's reason answers to read as significance from every standpoint: every position with access to a response each of whose admitted outcomes holds such content absent before it has a contributory reason for it. (`Becoming.articulates`, `Becoming.positioned_articulation_of_articulates`, `Becoming.PositionedArticulation`, `Becoming.SecuresNewContent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. With the seed, both neutralities and A as premises, on a connected whole, a policy sound for new living content (some living claim realized and absent before) gives every position with access to it a contributory reason for it. (`Becoming.universal_reason`, `Becoming.Novel`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 7. The scope of a policy from a belief is the configurations its actual executions reach from believed ones: a sound policy secures its goal on its whole scope and has a nonempty scope from every believed configuration; the scope is reached from the belief by actual paths, and narrowing belief narrows it. (`Becoming.Scope`, `Becoming.Scope.secures`, `Becoming.Scope.reached`, `Becoming.Scope.nonempty`, `Becoming.Scope.antitone`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. In a finite model of two standpoints and three lives, with the two linked lives connected: with no seed both neutralities hold vacuously and nothing is significant; a significance of the evaluator's own life only holds self-significance, a seed and standpoint neutrality, transmits inside the evaluator's own region and not beyond it, and leaves the other life without significance. (`Becoming.Model.valuation`, `Becoming.Model.linked_connected`, `Becoming.Model.seed_is_needed`, `Becoming.Model.ownRegion`, `Becoming.Model.relational_neutrality_is_needed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. There, significance from the evaluator's standpoint only holds a seed and relational neutrality, shares only with its own standpoint and leaves the bystander none; with a living claim no formed relation enters, the seed and neutralities hold without connection and that claim is not significant; with living significance, a reason for endorsers only is accepted among them and withheld from the bystander with access. (`Becoming.Model.ownStandpoint`, `Becoming.Model.standpoint_neutrality_is_needed`, `Becoming.Model.no_relation_into_beyond`, `Becoming.Model.isolated`, `Becoming.Model.connection_is_needed`, `Becoming.Model.endorses`, `Becoming.Model.articulation_neutrality_is_needed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. A rule no formed boundary restricts is accepted within every boundary; each of the three rivals above is its rule accepted within a formed boundary, the evaluator's own region, each standpoint's own, or the endorsers. (`Becoming.Within`, `Becoming.Neutral.within`, `Becoming.Model.relational_neutrality_is_needed`, `Becoming.Model.standpoint_neutrality_is_needed`, `Becoming.Model.articulation_neutrality_is_needed`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 11. Lifting better from outcomes to moves, every outcome of one better than every outcome of the other: lifting is transitive for a transitive better where the middle move has an outcome, which is needed (through a move with none both lifts hold vacuously and the composite can fail), irreflexive for an irreflexive better where the move has one, and gives some outcome better than some outcome where both moves have one. (`Becoming.LiftBetter`, `Becoming.LiftBetter.trans`, `Becoming.LiftBetter.irrefl`, `Becoming.LiftBetter.some`, `Becoming.LiftModel.lift_needs_live_middle`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

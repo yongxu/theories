@@ -11,17 +11,17 @@
 ## Laws
 
 1. Where a region, given by a decided predicate, is left under a class only into a set, a line under that class from inside the region to outside holds a member of that set alike to its start, and reaches it; where the class holds none of them alike to the start, nothing outside is reached. (`Becoming.«所经不同则不及»`, `Becoming.«所经必同»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. A class holds a member's effects where everything the member conditions is alike to it. Under a constant class, everything downstream of anything alike to such a member is alike to it and lies on a line under the class from there, so a line that reaches it reaches all that follows; given constancy, holding a member's effects is equivalent to everything downstream of it being alike to it. (`Becoming.«常类之闭当且仅当后皆同类»`, `Becoming.«常闭则后皆续»`, `Becoming.«常闭则所及皆及»`, `Becoming.«常闭则所缘同类»`, `Becoming.«所缘同于»`, `Becoming.«有常则同类者有所缘»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. A class is constant up to the net's end where whatever an alike occurrence conditions, this one conditions something alike to it unless it conditions nothing. Constancy gives it; a relation under which a line ends at an occurrence that still conditions something lacks it; under it the same laws hold, for a member that conditions something where the start is another occurrence alike to it. (`Becoming.«亡而网续则不至终有常»`, `Becoming.«有常则至终有常»`, `Becoming.«至终常类之闭当且仅当后皆同类»`, `Becoming.«至终常闭则后皆续»`, `Becoming.«至终常闭则所及皆及»`, `Becoming.«至终常闭则所缘同类»`, `Becoming.«至终有常»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. Neither premise can be dropped from these laws: where a member's line runs through a condition but its effects leave its class, a constant class holding the member with the condition does not reach what the condition feeds; where the class is not constant even up to the net's end, holding a member's effects need not make what follows them alike to it. (`Becoming.Inconstant.Occ`, `Becoming.Inconstant.not_all_follow`, `Becoming.Inconstant.same`, `Becoming.Inconstant.same_class`, `Becoming.Inconstant.step`, `Becoming.Inconstant.upper`, `Becoming.Unclosed.Occ`, `Becoming.Unclosed.constant`, `Becoming.Unclosed.not_taken_in`, `Becoming.Unclosed.same`, `Becoming.Unclosed.same_class`, `Becoming.Unclosed.step`, `Becoming.Unclosed.upper`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 5. In a finite net with two families, each of two members in turn: the one is not constant; the class of one family, narrower than the one, is constant up to the net's end, takes in everything downstream of the family's first birth and reaches nothing of the other family; the organism's class is not constant up to the net's end. (`Becoming.FiniteFamilies.Occ`, `Becoming.FiniteFamilies.family`, `Becoming.FiniteFamilies.family_class`, `Becoming.FiniteFamilies.family_constant_to_end`, `Becoming.FiniteFamilies.family_narrower`, `Becoming.FiniteFamilies.family_takes_in_all`, `Becoming.FiniteFamilies.first_birth_held`, `Becoming.FiniteFamilies.member`, `Becoming.FiniteFamilies.member_not_constant_to_end`, `Becoming.FiniteFamilies.one_not_constant`, `Becoming.FiniteFamilies.other_family_outside`, `Becoming.FiniteFamilies.step`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 6. In a finite net with two families sharing a condition they affect, and a fourth thing joined to nothing, every premise holds at once: the class holding the families with their condition is narrower than the one, constant up to the net's end and holds the first member's effects; its line from the first family's first birth reaches the second family past the first member's end and never the fourth thing; the member's class is not constant up to the net's end. (`Becoming.FiniteSharedCondition.Kind`, `Becoming.FiniteSharedCondition.Occ`, `Becoming.FiniteSharedCondition.first_birth_held`, `Becoming.FiniteSharedCondition.fourth_outside`, `Becoming.FiniteSharedCondition.held`, `Becoming.FiniteSharedCondition.held_class`, `Becoming.FiniteSharedCondition.held_constant_to_end`, `Becoming.FiniteSharedCondition.held_narrower`, `Becoming.FiniteSharedCondition.joined`, `Becoming.FiniteSharedCondition.link`, `Becoming.FiniteSharedCondition.link_joined`, `Becoming.FiniteSharedCondition.link_self`, `Becoming.FiniteSharedCondition.member`, `Becoming.FiniteSharedCondition.member_not_constant_to_end`, `Becoming.FiniteSharedCondition.one_not_constant`, `Becoming.FiniteSharedCondition.reaches_other_past_end`, `Becoming.FiniteSharedCondition.step`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -61,6 +61,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 ### Dependencies
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «类», «有常», «有常之逐点», «亡», «线内同类», «一»; «所及» from the map.
+- **formal-reuse**: [not-going-out-of-a-region](not-going-out-of-a-region.md). «所经必同» is proved from «定则内至外之线有出步»: a step going out of the region, given by it, lands in the set.
 - related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside and fed_outside are proved from law 1 (GS6).
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
@@ -82,6 +83,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 
 Aliases: `What a line must hold, and what a regularity takes in`, `线所必含，与理之所纳`, `Becoming.«常闭则后皆续»`, `Becoming.«所经必同»`, `Becoming.«至终有常»`
 
@@ -93,7 +95,8 @@ Aliases: `What a line must hold, and what a regularity takes in`, `线所必含�
 - 26 October 2026, board item DF1b (study section 422): Law 1 is not called the first law, the spine's name for Flow.Gainless (English only; the Chinese has 首律).
 - 30 October 2026: the fourth law scoped to these laws, as OC5's review found; content unchanged.
 - 31 October 2026, board item HE2, items 6 and 7 (study section 474): wording only in title (zh): 理 written for a regularity, there a constant class, becomes 规律, as the package README's cell now writes; the old title stays among the aliases; no statement's content changes.
+- 31 October 2026, board item BD2: «所经必同»'s direct proof by induction on the line replaced by a derivation from a step going out of a region on a line («定则内至外之线有出步», Becoming.GrammarCrossing), that step's end being the member of the set; the dependency added. No statement, premise, law or declaration changed.
 
 </details>
 
-Documentary review UTC: `2026-10-31T05:47:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-31T12:15:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

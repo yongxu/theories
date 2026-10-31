@@ -1,0 +1,51 @@
+# Measure runs (AJ4's counting: visible prose only; a Chinese character counts half a word)
+
+## Before (live pages on main d3a502880)
+  2154 words      6 chars      2157 budget-words  16.6–21.6 min  theories/becoming/ONE-PAGE.md
+    36 words   3579 chars      1826 budget-words  14.0–18.3 min  theories/becoming/ONE-PAGE.zh.md
+ 13635 words     52 chars     13661 budget-words  105.1–136.6 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   276 words  21968 chars     11260 budget-words  86.6–112.6 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+## Drafts, pass 1 (before the independent read)
+  1098 words      4 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    45 words   1818 chars       954 budget-words  7.3–9.5 min  ONE-PAGE.zh.md.staged
+  5983 words     29 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   157 words  10359 chars      5336 budget-words  41.0–53.4 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+Overview passes (English): 6,499 → 6,248 → 6,142 → 6,057 → 6,023 → 5,992 → 5,977 → 5,983 words (T1's claim restored in full). One page: 1,386 → 1,233 → 1,175 → 1,147 → 1,110 → 1,101 → 1,103 → 1,098.
+
+## Drafts, pass 2 (the read's 21 findings and the restored open items taken, offset by cuts)
+  1095 words      6 chars      1098 budget-words  8.4–11.0 min  ONE-PAGE.md.staged
+    49 words   1839 chars       968 budget-words  7.4–9.7 min  ONE-PAGE.zh.md.staged
+  5980 words     31 chars      5996 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10369 chars      5356 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+Pass 2, overview (English): 5,983 → 6,158 (findings) → 6,043 → 5,986 → 5,980 words. One page: 1,098 → 1,159 (findings) → 1,116 → 1,103 → 1,095.
+
+## Drafts, pass 3 (OU's owner's wording of the de se clause, in both pages and editions; a stray full stop in overview §7)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1842 chars       970 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10380 chars      5362 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+## Drafts, pass 4 (the zh read's 22 findings taken; two full stops before link parentheses in the English overview)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1847 chars       972 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10389 chars      5366 budget-words  41.3–53.7 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+## Landed pages (front-pages-land on main d8e629828: U4's boundary record in the one page's first open item and the overview's Lifting item; T3's standing restored from 08; the landing comments resolved)
+  1123 words      9 chars      1128 budget-words  8.7–11.3 min  theories/becoming/ONE-PAGE.md
+    49 words   1893 chars       996 budget-words  7.7–10.0 min  theories/becoming/ONE-PAGE.zh.md
+  6047 words     31 chars      6062 budget-words  46.6–60.6 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   172 words  10514 chars      5429 budget-words  41.8–54.3 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget, amendment 1 (never-cut: each claim's standing; a failure as it fell): the one page by 28 budget-words, all in the first open item (each central declaration's standing on the edge of the root, its four kinds named); the overview by 62, about 40 in T3's row (the second forbidden case proved in expectation, and its first wording failing where the learner reads the condition, as 08 and the live page state it) and about 20 in the Lifting item (the four kinds of standing on the edge). Both Chinese editions are within budget.
+
+## After OU's owner's read (the shaping result restored to §2 with its anchor, its deciding hypothesis restored to the reading in time, §6's counts linked to the record, the one page's and the overview's standings sentences shortened to the link)
+  1102 words      9 chars      1106 budget-words  8.5–11.1 min  theories/becoming/ONE-PAGE.md
+    49 words   1858 chars       978 budget-words  7.5–9.8 min  theories/becoming/ONE-PAGE.zh.md
+  6090 words     31 chars      6106 budget-words  47.0–61.1 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   172 words  10559 chars      5452 budget-words  41.9–54.5 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 6 budget-words, in its first open item, each central declaration's standing (never-cut, amendment 1). The overview by 106. About 40 are in T3's row: its second forbidden case proved in expectation, and its first wording failing where the learner reads the condition (a failure as it fell, never-cut). About 6 restore the reading in time's deciding hypothesis, that only those the rule disfavours read the loss (never-cut). About 60 restore the critical-mass loop of shaping read by the selected. The drafts had dropped it with no line in the note, and its record cites the overview as a place where it is stated, so its omission would leave that citation false. OU's owner judged the excess within amendment 1's intent and made no offsetting cut of settled prose. Both Chinese editions are within budget.

@@ -11,11 +11,11 @@
 ## Laws
 
 1. Within m listed configurations every course enters what returns before step m. (`Becoming.Law.enters_returning_within`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. The courses of two configurations meet where at some steps they are at one configuration; after meeting they run together, and meeting is reflexive, symmetric and transitive under any determined law. (`Becoming.Law.Meet`, `Becoming.Law.Meet.refl`, `Becoming.Law.Meet.symm`, `Becoming.Law.Meet.later`, `Becoming.Law.Meet.trans`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A course reaches every returning configuration of its basin; within finitely many configurations each basin holds one cycle. (`Becoming.Law.Meet.reaches_returning`, `Becoming.Law.basin_one_cycle`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

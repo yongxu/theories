@@ -11,25 +11,26 @@
 ## Laws
 
 1. Three readings of a web whose closures are the whole: sharing conditions throughout (every system the whole), mutual dependence (every influence closure the whole: every continuation can be affected, at some remove, by every other) and mutual feeding (every feeding closure the whole). Mutual feeding gives mutual dependence, which gives sharing conditions throughout. (`Becoming.Flow.SharesThroughout`, `Becoming.Flow.MutuallyDependent`, `Becoming.Flow.MutuallyFed`, `Becoming.Flow.MutuallyFed.mutuallyDependent`, `Becoming.Flow.MutuallyDependent.sharesThroughout`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Influence and reach are converse: g lies within f's influence closure exactly where f lies within g's reach closure. So a flow is mutually dependent exactly where every reach closure is the whole: whatever a formation affects can affect it back, and every link of affecting lies on a loop through the whole. (`Becoming.WithinClosure.converse`, `Becoming.Flow.mutuallyDependent_iff_reach`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.mutuallyDependent_iff_reach` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.mutuallyDependent_iff_reach` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Flow.mutuallyDependent_iff_reach`:* derived, a case of `Becoming.«所闭之逆»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 3. One condition that every formation depends on and exchanges with makes a flow mutually dependent; one that every formation takes part in, requires and gives to at one step makes it mutually fed. (`Becoming.Flow.mutuallyDependent_of_common`, `Becoming.Flow.feeding_whole_of_common`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Under each reading, significance bounded by the matching closure of each center (its system, influence closure or feeding closure) is the continuation condition; for feeding this holds for any web of mutual feeding, not only around one common condition. (`Becoming.Flow.SharesThroughout.unrestricted`, `Becoming.Flow.MutuallyDependent.unrestricted`, `Becoming.Flow.MutuallyFed.unrestricted`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 5. Around a loop of m + 1 couplings holding at every step, a chain advances one coupling a step and the loop returns what reached its condition every m + 1 steps; after R turns the carried amount there, the most difference that can arrive, is at least 2^R times what had reached it, and likewise at every condition downstream along couplings holding at every step. (`Becoming.CoupledAlways.chainInTime`, `Becoming.roundTrip_of_coupledAlways`, `Becoming.carried_pow_around`, `Becoming.carried_pow_downstream`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. With the part giving no gap after the start, starting gaps at most D and the strengths into each condition at most M, the carried amount at step t is at most D (1 + M)^t whatever the couplings, so around such a loop it is exponential both ways; where every listed condition is coupled at every step into every listed condition, the lower bound holds from every condition to every condition. (`Becoming.carried_le_pow_always`, `Becoming.exponential_around`, `Becoming.CoupledThroughout`, `Becoming.CoupledThroughout.exponential`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. The pace of a selection: where at every generation each carrier of a target leaves at least a offspring and each other parent at most b, the carriers' offspring carry it and the others' next generation is among their offspring, the carriers grow at least as a^n, the others at most as b^n, and the carriers stand to the others at least (a/b)^n times as they stood. (`Becoming.carriers_grow`, `Becoming.others_bounded`, `Becoming.share_ratio_pow`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. A draw that exceeds everything drawn before: where each step's draw exceeds the sum of the earlier ones, two to the j is at most what was drawn before j plus one. Under balance with nothing given, what stands and what has been drawn add up to the starting stock, so everything drawn is within it; more than half the starting stock stands at every step such a draw is met, and lasting n steps needs a stock of at least 2^n - 1. (`Becoming.drawnBefore`, `Becoming.pow_le_drawnBefore`, `Becoming.Flow.Balances.level_add_drawn`, `Becoming.Flow.Balances.drawn_within`, `Becoming.Flow.Balances.half_stands`, `Becoming.Flow.Balances.doubling_needs`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. Overshoot, in which each formation feeds the other's condition, is mutually fed. (`Becoming.Overshoot.closure_whole`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 10. In DoublingDraw a stock of seven meets draws of one, two and four: the flow balances, four of the seven stand at the third step, more than half, nothing stands after it, and two to the third is the stock plus one, so the bound of doubling_needs is attained. (`Becoming.DoublingDraw.flow`, `Becoming.DoublingDraw.web`, `Becoming.DoublingDraw.balances`, `Becoming.DoublingDraw.exceeds`, `Becoming.DoublingDraw.half_then_none`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

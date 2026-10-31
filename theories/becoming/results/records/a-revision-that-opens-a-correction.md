@@ -11,19 +11,19 @@
 ## Laws
 
 1. Correctable at a configuration: through the reading in force there, a uniform policy exists whose act at each reading is acceptable at every situation giving it and executable there; given choice over the readings, exactly where each reading has one such act. (`Becoming.OpenedCorrection.Correctable`, `Becoming.OpenedCorrection.correctable_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A course opens a correction from x to x' where a trace of the process leads from x to x', no fitting uniform policy exists at x and one exists at x', with one acceptability throughout; the gain may come from the reading, from executability, or both. (`Becoming.OpenedCorrection.OpensAlong`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. With readings in one type and a supplied map f between them: where f (reading x' s) = reading x s at every situation and every act executable at x stays executable at x', correctability is kept; where f (reading x s) = reading x' s at every situation and every act executable at x' was executable at x, nothing is opened. (`Becoming.OpenedCorrection.finer_keeps`, `Becoming.OpenedCorrection.coarser_opens_nothing`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. With every act counted acceptable, a configuration with an executable act is correctable already: an opening counts only with the acceptability fixed. (`Becoming.OpenedCorrection.widened_correctable`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. On Revising's stock-and-link process, the correction acceptable where it is needed and replenishing where it is not, executability the process's enabling: with the link off no configuration is correctable; with it on and a unit of stock every one is; with it on and no stock none is. (`Becoming.OpenedCorrection.Linked.acceptable`, `Becoming.OpenedCorrection.Linked.executable`, `Becoming.OpenedCorrection.Linked.unlinked_uncorrectable`, `Becoming.OpenedCorrection.Linked.linked_correctable`, `Becoming.OpenedCorrection.Linked.starved_uncorrectable`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Starting with the link off and at least two units, rebuilding it opens the correction in one step; starting with it off and one unit, rebuilding alone does not, the rebuild consuming the last unit, though rebuilding then replenishing does; with every act counted acceptable, the unlinked configuration is correctable already. (`Becoming.OpenedCorrection.Linked.opens`, `Becoming.OpenedCorrection.Linked.rebuilt_starved`, `Becoming.OpenedCorrection.Linked.opens_after_replenishing`, `Becoming.OpenedCorrection.Linked.widened_unlinked`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Replenishing alone opens the correction where the link is on and the stock is not: the reading unchanged, the gain is in what can be executed. (`Becoming.OpenedCorrection.Linked.opens_by_support`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -51,7 +51,7 @@ Canonical source: [OpenedCorrection.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a frozen institution simulation with three controls (the plan's TR4); review by a person.
+A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a frozen test of whether a language-model institution corrects only through the reading its register states, with the plan's controls (the plan's TR4); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -87,6 +87,7 @@ Aliases: `opening a correction`, `开更正`, `a correctable configuration`, `�
 ### History
 
 - 30 October 2026: added (RF round 2), a revision of a reading that opens a correction along one process: correctable at a configuration, opening along a trace, the two monotonicities, acceptability held fixed, on Revising's process; after a cross-model review of the Lean with a re-check, every finding taken; study section 457.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR4 in experiments/formations-that-read, which can refute at most the bridge that the reading in force is the register's rule, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

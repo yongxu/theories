@@ -11,11 +11,11 @@
 ## Laws
 
 1. From a step continuing under the core of a relation, every occurrence its line under the core reaches has a successor under the core; a line along which the core is kept leaves its last occurrence continued under the class; the first occurrence of a line is continued, and its last is reached by a step from the first or from an occurrence the line reaches. (`Becoming.«守核之线不亡»`, `Becoming.«守核则不穷»`, `Becoming.«相续之始有后»`, `Becoming.«相续之末步»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. For every relation E, a step into an end under E leaves the core, and so does the last step of every line under E that ends; where E is a class, the two ends of such a line lie in different classes of the core. (`Becoming.«亡前核变»`, `Becoming.«有亡之线两端核异»`, `Becoming.«有亡之线末步离核»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Along a determined law's step a line under any relation never ends exactly where every step of the orbit continues under it, and under a class such a line keeps every configuration of the orbit alike with its start. (`Becoming.Law.unending_alike`, `Becoming.Law.unending_iff_steps`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -1,0 +1,33 @@
+'Becoming.PreparationCorrespondence.unit' does not depend on any axioms
+'Becoming.PreparationCorrespondence.use_unit' does not depend on any axioms
+'Becoming.PreparationCorrespondence.countOf_eq_count' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.mem_iff_countOf_pos' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.erase_eq_remove' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.route_some_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.preparation_empties_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.preparation_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.adjacent' does not depend on any axioms
+'Becoming.PreparationCorrespondence.connected_of_adjacent' does not depend on any axioms
+'Becoming.PreparationCorrespondence.connected_iff_within' does not depend on any axioms
+'Becoming.PreparationCorrespondence.component_is_closure' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.certificate_exact_split_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.PreparationCorrespondence.cut_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.returns_differ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.PreparationCorrespondence.adjacent_iff_links' depends on axioms: [propext]
+'Becoming.PreparationCorrespondence.connected_iff_links' depends on axioms: [propext]
+'Becoming.PreparationCorrespondence.AttachedBelow' does not depend on any axioms
+'Becoming.PreparationCorrespondence.divide_attached' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.develop_attached' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.PreparationCorrespondence.initial_attached' does not depend on any axioms
+'Becoming.PreparationCorrespondence.cut_attached' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.bond_cut_separates' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.every_grown_bond_separates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.PreparationCorrespondence.reinforced_cut_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]

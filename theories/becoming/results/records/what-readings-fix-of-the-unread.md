@@ -11,17 +11,17 @@
 ## Laws
 
 1. With being in x's lump decided, where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x. (`Becoming.Learning.free_lumped`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin reading through the lumping, agreeing with it on every reading and taking that value at x. (`Becoming.Learning.twin_selected`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Example, why the exact form takes a list: with one occasion, a constant lumping and two act values, the occasion read exactly where P holds, the readings fix the act exactly where ¬¬P, where the exact form would say P. (`Becoming.Learning.determines_iff_not_not`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where acts read a state formed from what couples in, acts that differ at two occasions come from states that differ, and states that differ from couplings that differ. (`Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.coupling_apart_of_state_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content (Learning.Shift's pattern); for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has a selected twin answering otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there. (`Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Witness, the converses fail: a read and an unread occasion differ while their content acts agree; with the state the occasion and the act its content, states differ and acts agree, and with the coupling the occasion and the state its content, couplings differ and states agree. (`Becoming.Learning.Cue.apart_with_content_alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -51,7 +51,7 @@ Canonical source: [Unread.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-A frozen test of the chain on a trained model with cues varied apart from content; review by a person.
+A frozen measurement of the chain's correspondence on trained models (the plan's TR2): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -92,6 +92,7 @@ Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a tw
 
 - 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 - 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; the next step drops disclosure or concealment in two stages, whose two-stage comparison with the continuation value is now stated there, disclosure and concealment readings of it; the second item of what it does not show points to it; the correspondence says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one, reads with deceptive alignment that such a law acting alike on every reading acts otherwise unread only there, says differing rates, as in alignment faking, are not so bounded, no longer calls telling the occasion apart a necessary condition of what deceptive alignment and alignment faking describe, and adds that a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5); no statement or declaration changed.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR2 in experiments/formations-that-read, which can refute at most a stated lumping or an implementation, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

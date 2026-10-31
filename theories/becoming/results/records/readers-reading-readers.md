@@ -11,15 +11,15 @@
 ## Laws
 
 1. Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; from member k on, every member acting alike whatever its coupling, on every list of earlier acts, and two worlds alike through the couplings of the members before k, are named. (`Becoming.Turns`, `Becoming.Turns.acts`, `Becoming.Turns.act`, `Becoming.Turns.ReadsOnlyActsFrom`, `Becoming.Turns.AlikeBefore`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. From member k on, k included, where every member reads only the acts before it, two worlds alike through the couplings of the members before k give every member the same act, and the same list of acts at every length. (`Becoming.Turns.law_alike_of_cascade`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.act_alike_of_cascade`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. So every selection reading the list of the first N acts, for any N, selects alike any two worlds alike through the couplings of the members before k. (`Becoming.Turns.cascade_through`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. After the same earlier acts, a member acts differently in two worlds exactly where its law tells apart the values they give its coupling. (`Becoming.Turns.separates_at`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Copying: the first member acts on its own coupling and every later one copies the first act before it; it is a cascade from the second member, and two worlds alike through the first member's coupling give every member the same act. (`Becoming.Turns.Copying.turns`, `Becoming.Turns.Copying.readsOnlyActs`, `Becoming.Turns.Copying.reaches_first_only`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -48,7 +48,7 @@ Canonical source: [Cascade.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-The probabilistic form, a cascade once public evidence outweighs every private signal; a test predicting when sequential choosers stop reading their own signals; review by a person.
+The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise, a named probabilistic model's timing judged apart (the plan's TR3, its verdict resting on the premise at the histories reached, a lemma to state first); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -84,6 +84,7 @@ Aliases: `readers reading readers`, `读者读读者`, `a cascade`, `级联`, `B
 ### History
 
 - 29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool's acts carry no more than the couplings of the members before it; a member carrying its coupling; copying; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

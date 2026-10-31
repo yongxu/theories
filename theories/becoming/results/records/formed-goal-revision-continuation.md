@@ -11,21 +11,21 @@
 ## Laws
 
 1. In the supplied two-practice construction, for every selector, practice, work w, reserve q and used units z, a cycle needs 2 ≤ w and uses two units, of the reserve where the selector feeds the practice back and 2 ≤ q, else of the work; the practice runs n cycles from (w, q, z) exactly where n = 0, or 2 ≤ w and twice the cycles the reserve does not support (q/2 if fed back, by natural division, else 0) is at most w. (`Becoming.MachineInstances.cycle_eq`, `Becoming.MachineInstances.cycles_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. In the supplied two-practice construction, the learning practice runs n cycles from (w, q, z) under the learning selector exactly where n = 0, or 2 ≤ w and 2(n − q/2) ≤ w, with natural subtraction and division, and under the attendance selector exactly where 2n ≤ w. (`Becoming.MachineInstances.cycles_learning_iff`, `Becoming.MachineInstances.cycles_unselected_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. In the supplied two-practice construction, for every condition, every state holding the learning goal and every n, n operations run exactly where the state's cycles of the learning practice under its selector do; each keeps the learning goal and the selector, adds one loss where transition maintenance is lost and none otherwise, and appends one record. (`Becoming.MachineInstances.lossPer`, `Becoming.MachineInstances.learning_loss`, `Becoming.MachineInstances.operateMany_learning`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. In the supplied two-practice construction, acquisition, revision and reform complete for a condition exactly under access loss with kept transition maintenance; there revision holds the learning goal under the attendance selector with one loss, work 5, reserve 8, used 5 and two records, and reform moves the selector to learning at work 3, reserve 8, used 7. (`Becoming.MachineInstances.completed_isSome_iff`, `Becoming.MachineInstances.revised_class`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. In the supplied two-practice construction, for every condition with access loss and kept transition maintenance, after acquisition, revision and reform n operations run exactly where n ≤ 5, each run ending with the learning goal, the one earlier loss and 2 + n records; without reform, n operations run exactly where n ≤ 2. (`Becoming.MachineInstances.revision_continues`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. In the supplied two-practice construction, whose comparison ranks one practice above another where it protects strictly more of the protected claims (access, maintenance), or the same with strictly more gains, for every condition learning ranks above attendance exactly under access loss with kept transition maintenance, and acquisition, revision and reform complete exactly where it does. (`Becoming.MachineInstances.better_iff`, `Becoming.MachineInstances.completed_iff_better`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. In the supplied two-practice construction, the harmful condition, with access loss and kept transition maintenance, is an instance: the comparison ranks learning above attendance, acquisition forms the attendance goal, and after revision and reform five operations hold the learning goal with one loss, while six do not run, nor three without reform. (`GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation`, `Becoming.MachineInstances.harmful_instance`, `Becoming.MachineInstances.harmful_bounds`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. In the supplied two-practice construction, witnesses: a false reference leaves the attendance goal in place despite a real loss; grounds revised under the safe condition, then operated under the harmful one, keep the attendance goal and incur a loss; without response the goal is not revised though the grounds are the same; crossed losses block revision; reform with work 1 fails. (`GoalFormationRevision.false_reference_can_hide_real_loss`, `GoalFormationRevision.stale_grounds_can_leave_new_loss_unaddressed`, `GoalFormationRevision.recognition_does_not_force_revision`, `GoalFormationRevision.crossed_loss_blocks_simple_revision`, `GoalFormationRevision.reform_with_insufficient_work_fails`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -45,7 +45,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.
+Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261031T131812.213702Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.
 
 Canonical source: [GoalFormationRevision.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean)
 
@@ -82,6 +82,7 @@ Distinguishes goal formation, changed attainment criteria and action; the two-pr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation`, `Becoming.MachineInstances.cycles_iff`, `Becoming.MachineInstances.operateMany_learning`, `Becoming.MachineInstances.completed_isSome_iff`, `Becoming.MachineInstances.revision_continues`, `Becoming.MachineInstances.harmful_instance`, `Becoming.MachineInstances.harmful_bounds`, `Becoming.MachineInstances.better_iff`
 

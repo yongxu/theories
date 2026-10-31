@@ -11,11 +11,11 @@
 ## Laws
 
 1. A tower has at each level n a web and a flow, level n being level n + 1 read at the strictly increasing times refine n; step s of the coarsest level is read at step reads n s of level n, those times are strictly increasing, and the coarsest level's web is level n's read at them, so each condition's standing at step s is its standing there. (`Becoming.Tower`, `Becoming.Tower.reads`, `Becoming.Tower.reads_strict`, `Becoming.Tower.web_zero`, `Becoming.Tower.level_zero`, `Becoming.Strict`, `Becoming.Web.sample`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the flow of level n + 1 lists each relatum once at every step and balances on its web, the flow of level n balances on its web; where the flow of level n + 1 dissipates, so does that of level n. Both come from reading a flow at coarser steps: at strictly increasing times it keeps balance where each relatum is listed once at every fine step, and at any times it keeps dissipation. (`Becoming.Tower.balances_coarser`, `Becoming.Tower.dissipative_coarser`, `Becoming.Flow.Once`, `Becoming.Flow.sample_balances`, `Becoming.Flow.sample_dissipative`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. A stretch of N steps of the coarsest level from step S, read at level n: under a census of what stands at level n, each condition standing at a step listed once, and with what stands not refuted to run down across each fine step of it, the fine steps at which the total standing falls number at most the coarsest level's total standing at S; the bound is the same at every level. (`Becoming.Tower.changes_within`, `Becoming.Web.StandingCensus`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

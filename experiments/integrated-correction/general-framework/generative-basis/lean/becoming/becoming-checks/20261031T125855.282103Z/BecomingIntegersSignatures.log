@@ -1,0 +1,43 @@
+Becoming.Integers.nat_sub_add_of_sub_zero : ∀ (m n : Nat), n - m = 0 → m - n + n = m
+Becoming.Integers.nat_eq_add_of_sub_succ : ∀ (m n k : Nat), n - m = k + 1 → n = m + (k + 1)
+Becoming.Integers.nat_add_add_add_comm : ∀ (a b c d : Nat), a + b + (c + d) = a + c + (b + d)
+Becoming.Integers.nat_rearrange : ∀ (a b c d : Nat), a + b + (c + d) = a + d + (c + b)
+Becoming.Integers.Same.refl : ∀ (x : Nat × Nat), Becoming.Integers.Same x x
+@Becoming.Integers.Same.symm : ∀ {x y : Nat × Nat}, Becoming.Integers.Same x y → Becoming.Integers.Same y x
+@Becoming.Integers.Same.trans : ∀ {x y z : Nat × Nat},
+  Becoming.Integers.Same x y → Becoming.Integers.Same y z → Becoming.Integers.Same x z
+@Becoming.Integers.Same.add : ∀ {x x' y y' : Nat × Nat},
+  Becoming.Integers.Same x x' →
+    Becoming.Integers.Same y y' → Becoming.Integers.Same (Becoming.Integers.plus x y) (Becoming.Integers.plus x' y')
+@Becoming.Integers.Same.swap : ∀ {x y : Nat × Nat},
+  Becoming.Integers.Same x y → Becoming.Integers.Same (Becoming.Integers.swap x) (Becoming.Integers.swap y)
+@Becoming.Integers.Same.of_eq : ∀ {x y : Nat × Nat}, x = y → Becoming.Integers.Same x y
+@Becoming.Integers.eq_of_same : ∀ {a b : Int},
+  Becoming.Integers.Same (Becoming.Integers.pair a) (Becoming.Integers.pair b) → a = b
+Becoming.Integers.pair_subNatNat : ∀ (m n : Nat),
+  Becoming.Integers.Same (Becoming.Integers.pair (Int.subNatNat m n)) (m, n)
+Becoming.Integers.pair_add : ∀ (a b : Int),
+  Becoming.Integers.Same (Becoming.Integers.pair (a + b))
+    (Becoming.Integers.plus (Becoming.Integers.pair a) (Becoming.Integers.pair b))
+Becoming.Integers.pair_neg : ∀ (a : Int),
+  Becoming.Integers.pair (-a) = Becoming.Integers.swap (Becoming.Integers.pair a)
+Becoming.Integers.add_comm : ∀ (a b : Int), a + b = b + a
+Becoming.Integers.add_assoc : ∀ (a b c : Int), a + b + c = a + (b + c)
+Becoming.Integers.add_zero : ∀ (a : Int), a + 0 = a
+Becoming.Integers.neg_add : ∀ (a b : Int), -(a + b) = -a + -b
+Becoming.Integers.add_right_neg : ∀ (a : Int), a + -a = 0
+Becoming.Integers.add_left_neg : ∀ (a : Int), -a + a = 0
+@Becoming.Integers.add_left_cancel : ∀ {a b c : Int}, a + b = a + c → b = c
+@Becoming.Integers.add_right_cancel : ∀ {a b c : Int}, a + c = b + c → a = b
+Becoming.Integers.add_left_comm : ∀ (a b c : Int), a + (b + c) = b + (a + c)
+Becoming.Integers.add_right_comm : ∀ (a b c : Int), a + b + c = a + c + b
+Becoming.Integers.add_add_add_comm : ∀ (a b c d : Int), a + b + (c + d) = a + c + (b + d)
+Becoming.Integers.sub_zero : ∀ (a : Int), a - 0 = a
+Becoming.Integers.neg_neg : ∀ (a : Int), - -a = a
+Becoming.Integers.negOfNat_neg : ∀ (n : Nat), -Int.negOfNat n = Int.ofNat n
+Becoming.Integers.mul_comm : ∀ (a b : Int), a * b = b * a
+Becoming.Integers.mul_zero : ∀ (a : Int), a * 0 = 0
+Becoming.Integers.mul_neg : ∀ (a b : Int), a * -b = -(a * b)
+Becoming.Integers.neg_mul : ∀ (a b : Int), -a * b = -(a * b)
+Becoming.Integers.neg_mul_neg : ∀ (a b : Int), -a * -b = a * b
+Becoming.Integers.two_mul : ∀ (a : Int), 2 * a = a + a

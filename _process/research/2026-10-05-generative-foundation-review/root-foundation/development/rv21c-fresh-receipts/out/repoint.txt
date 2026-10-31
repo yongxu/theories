@@ -1,0 +1,31 @@
+fallible-inquiry-verification 20261031T130828.999853Z records 3 {'finite-fallible-inquiry-necessity': (1, 1), 'timely-response-necessity': (1, 1), 'wisdom-root': (1, 1)}
+correction-inquiry-verification 20261031T131415.384434Z records 1 {'becoming-spine-instances': (1, 3)}
+machine-instances-verification 20261031T131812.213702Z records 8 {'acquired-binding-compositional-use': (1, 1), 'enacted-scene-binding': (1, 1), 'encounter-selection-and-revision': (1, 1), 'formed-goal-revision-continuation': (1, 1), 'joint-correlation-reduced-dynamics': (1, 1), 'joint-practice-forms-continuation': (1, 1), 'retrospective-source-binding': (1, 1), 'transition-grouping-word-partition': (1, 1)}
+learning-correspondence-verification 20261031T131847.549129Z records 2 {'generalization-through-lumping': (2, 1), 'wisdom-root-without-axiom': (2, 1)}
+copying-instances-verification 20261031T131950.855717Z records 4 {'formed-copying-correction': (1, 1), 'formed-copying-registration': (1, 1), 'inherited-structural-copying': (1, 1), 'recurrent-chain-assembly': (1, 1)}
+retrodiction-instances-verification 20261031T132046.721958Z records 1 {'historical-source-binding': (1, 1)}
+market-instances-verification 20261031T132103.724349Z records 4 {'market-finite-support-obstruction': (1, 1), 'market-partial-correction-boundary': (1, 1), 'market-protected-continuation': (1, 1), 'market-supported-finite-transition': (1, 1)}
+protocol-instances-verification 20261031T132145.271099Z records 3 {'mediated-evidence-transport': (1, 1), 'recoverable-mediated-change': (1, 1), 'reserved-shutdown-during-recovery': (1, 1)}
+versioned-task-instances-verification 20261031T132223.713396Z records 3 {'acquired-revision-of-pending-task': (1, 1), 'pending-task-context-applicability': (1, 1), 'versioned-request-completion': (1, 1)}
+shared-stock-instances-verification 20261031T132907.790736Z records 1 {'draws-on-a-shared-stock': (1, 1)}
+continuation-correspondence-verification 20261031T132923.838546Z records 2 {'finite-continuation-plans': (1, 1), 'joint-plan-composition': (1, 1)}
+transmission-correspondence-verification 20261031T133044.516133Z records 1 {'learned-procedure-transmission': (1, 1)}
+preparation-correspondence-verification 20261031T133608.754102Z records 2 {'growth-constrained-fragmentation': (1, 1), 'material-preparation-output': (1, 1)}
+judging-correspondence-verification 20261031T133748.088094Z records 1 {'risk-certificate-outcome-distinction': (1, 1)}
+renewing-correspondence-verification 20261031T133811.050699Z records 1 {'renewing-consuming-formation': (1, 1)}
+substitution-correspondence-verification 20261031T133836.069337Z records 1 {'binding-preserving-substitution': (1, 1)}
+organization-correspondence-verification 20261031T133859.385075Z records 1 {'organizational-formation-from-generative-comparison': (1, 1)}
+living-organization-correspondence-verification 20261031T133915.555151Z records 1 {'every-origin-passes-the-gate': (1, 1)}
+prefix-safety-correspondence-verification 20261031T133925.659050Z records 1 {'what-a-finite-history-refutes': (1, 2)}
+finite-branching-correspondence-verification 20261031T133936.018674Z records 1 {'lifting-where-branching-is-finite': (1, 2)}
+selection-relabel-correspondence-verification 20261031T133952.181485Z records 1 {'selection-through-a-model-of-the-options': (1, 3)}
+ideals-correspondence-verification 20261031T134003.600817Z records 1 {'a-history-read-off-its-finite-stretches': (1, 4)}
+entropy-production-verification 20261031T134022.206464Z records 2 {'balance-from-the-first-law': (1, 1), 'least-loss-from-entropy-production': (1, 1)}
+cells-under-noise-verification 20261031T134056.109386Z records 1 {'identical-cells-under-noise': (1, 1)}
+expected-free-energy-reals-verification 20261031T134130.030892Z records 1 {'expected-free-energy-and-its-terms': (1, 1)}
+free-energy-reals-verification 20261031T134204.303683Z records 2 {'expected-free-energy-and-its-terms': (1, 1), 'free-energy-bounds-surprisal': (1, 1)}
+regime-reals-verification 20261031T134231.224593Z records 1 {'regime-in-any-amounts': (1, 1)}
+representation-verification 20261031T134302.467521Z records 2 {'laws-with-noise': (2, 1), 'what-discrete-steps-and-whole-amounts-represent': (2, 1)}
+older experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json no record binds it; logged
+older experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json records 1
+older experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json records 1

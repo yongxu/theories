@@ -11,21 +11,21 @@
 ## Laws
 
 1. The net is a law of exchange reading nothing, whose course along a schedule is the net's flow and whose levels along a firing sequence are its markings in units. (`Becoming.Net.law`, `Becoming.Net.flow`, `Becoming.Net.web`, `Becoming.Net.law_nonanticipating`, `Becoming.Net.course_eq`, `Becoming.Net.Fires.levels_eq`, `Becoming.Net.levels_eq_of_enabled`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Balance is the firing rule: along a firing sequence the flow balances the markings in any units, and with every weight positive it balances exactly where the schedule is a firing sequence. (`Becoming.Net.Fires.balances`, `Becoming.Net.balances_iff`, `Becoming.Net.balance_at_iff`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Enabling gives the law's feasibility, so course_balances_iff applies; feasibility is enabling exactly for pure nets fired one transition at a time, and a catalyst and a concurrent step are feasible and do not fire. (`Becoming.Net.Fires.feasible`, `Becoming.Net.Fires.course_balances`, `Becoming.Net.fires_iff_feasible`, `Becoming.Net.catalyst_feasible_not_fires`, `Becoming.Net.relay_feasible_not_fires`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Only active transitions give and take, and only from what they draw on; along a firing sequence activity needs support. (`Becoming.Net.acting`, `Becoming.Net.taking`, `Becoming.Net.Fires.dependent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. With finitely many places listed once, the flow is dissipative exactly where every fired transition loses weighted tokens, which a strict P-subinvariant gives; every step is enclosed. (`Becoming.Net.Loses`, `Becoming.Net.StrictSubinvariant`, `Becoming.Net.Loses.of_lt`, `Becoming.Net.dissipative_iff`, `Becoming.Net.StrictSubinvariant.dissipative`, `Becoming.Net.enclosed`, `Becoming.Net.total_eq_closed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Along such a firing sequence a place rises only as another falls, the consuming firings number at most the initial weighted tokens and do not recur, and that the marking stops changing cannot be refuted. (`Becoming.Net.rise_with_fall`, `Becoming.Net.rise_with_fall_tokens`, `Becoming.Net.takers_within`, `Becoming.Net.taking_not_recurring`, `Becoming.Net.change_stops_unrefuted`, `Becoming.Net.marking_stops_unrefuted`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 7. Read as a world of places and transitions with finitely many transitions, every premise of World.rests_unrefuted_enclosed holds, so that the world rests from some step on cannot be refuted. (`Becoming.Net.world`, `Becoming.Net.Fires.world_balanced`, `Becoming.Net.world_embodied`, `Becoming.Net.world_counted`, `Becoming.Net.world_dissipative`, `Becoming.Net.world_enclosed`, `Becoming.Net.rests_unrefuted`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 8. The siphon law is the joint-excess law: where every producer of a place consumes at least m from it, joint excess starting below n + m leaves every transition consuming m from it dead; an empty such place stays empty. (`Becoming.Net.Gated`, `Becoming.Net.Gated.gates`, `Becoming.Net.gated_ends`, `Becoming.Net.siphon_empty`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. Agreement of two runs up to a horizon is reflexive, symmetric and transitive, and holds at every smaller horizon. A reading is refutable where every run outside it has a horizon within which every agreeing run is outside; verifiable dually. A run adheres to a reading where at every horizon it agrees with a run inside. Runs inside adhere, adherence grows with the reading, and adhering to the adherent is adhering. (`Becoming.Run.AgreeUpTo.refl`, `Becoming.Run.AgreeUpTo.symm`, `Becoming.Run.AgreeUpTo.trans`, `Becoming.Run.AgreeUpTo.mono`, `Becoming.Refutable`, `Becoming.Verifiable`, `Becoming.Adheres`, `Becoming.Adheres.of`, `Becoming.Adheres.mono`, `Becoming.Adheres.adheres`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A refutable reading holds, up to double negation, at every run adhering to it, and a refutable superset so holds at every run adhering to the subset; where the reading is stable (holding up to double negation is holding), adhering is holding. (`Becoming.Refutable.not_not`, `Becoming.Refutable.adheres_least`, `Becoming.Refutable.adheres_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A run adhering to a reading while outside it shows the reading is not refutable, and one adhering to the complement while inside shows it is not verifiable. In the process whose runs are all sequences, splicing a constant after a horizon keeps agreement within it, so recurrence and eventual occurrence are not refutable and never occurring is not verifiable. (`Becoming.not_refutable_of_adheres`, `Becoming.not_verifiable_of_adheres`, `Becoming.Sequences.process`, `Becoming.Sequences.run`, `Becoming.Sequences.agree_iff`, `Becoming.Sequences.splice`, `Becoming.Sequences.splice_agree`, `Becoming.Sequences.splice_after`, `Becoming.Sequences.Recurs`, `Becoming.Sequences.Eventually`, `Becoming.Sequences.recurs_not_refutable`, `Becoming.Sequences.eventually_not_refutable`, `Becoming.Sequences.never_not_verifiable`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A reading made of tests: the test at n is Boolean and fixed by the history through step n + 1, and the reading is that no test fails; it holds at every run adhering to it. Given Markov's principle (a Boolean sequence not all false has a true term) it is refutable; every finite prefix of a Boolean sequence is all false or shows a true term. (`Becoming.Passes`, `Becoming.ByPrefixes`, `Becoming.adheres_passes`, `Becoming.Markov`, `Becoming.refutable_passes`, `Becoming.false_below_or_true`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Asked of every process, refutability of every reading made of tests is exactly Markov's principle (witness: the process of all Boolean sequences, the test at n reading term n). (`Becoming.refutable_passes_iff_markov`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Instance (periphery, own checker): PrefixSafety's traces are the runs of the process of all sequences, a shared prefix is agreement up to a horizon, finite refutability is refutability and the prefix closure is adherence; its classical theorems follow from the core laws with classical reasoning: holding within the closure, the least closure, recurrence and termination not finitely refutable, prefix tests refutable. (`Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree`, `Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable`, `Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres`, `Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core`, `Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core`, `Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core`, `Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core`, `Becoming.PrefixSafetyCorrespondence.markov_classical`, `Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -91,6 +91,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261031T133925.659050Z/verification.json) | — |
 
 Aliases: `Becoming.Refutable`, `Becoming.Adheres`, `Becoming.refutable_passes_iff_markov`, `Becoming.Refutable.not_not`, `what a finite history refutes`, `有限历史所否证者`, `finite refutability`, `有限可否证`, `adherence`, `附着`
 

@@ -800,6 +800,18 @@
    "page": "theories/becoming/results/records/alignment-direction-under-widening.md"
   },
   {
+   "id": "record:amounts-by-unit-matchings",
+   "type": "result",
+   "record": "amounts-by-unit-matchings",
+   "title": "Amounts, the root's second sort: balance represented by selected unit matchings, not derived",
+   "title_zh": "数量为根之第二类：平衡由所选之单位配对表示，非推出",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/amounts-by-unit-matchings.md"
+  },
+  {
    "id": "record:any-number-of-drawers-in-turn",
    "type": "result",
    "record": "any-number-of-drawers-in-turn",
@@ -3347,8 +3359,8 @@
    "id": "record:master-laws-on-the-grammar",
    "type": "result",
    "record": "master-laws-on-the-grammar",
-   "title": "The master laws on the grammar",
-   "title_zh": "文法上的主律",
+   "title": "The shared laws on the grammar",
+   "title_zh": "文法上的共律",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
@@ -3536,6 +3548,18 @@
    "page": "theories/becoming/results/records/normal-forms-need-decided-apartness.md"
   },
   {
+   "id": "record:not-going-out-of-a-region",
+   "type": "result",
+   "record": "not-going-out-of-a-region",
+   "title": "Not going out of a region",
+   "title_zh": "不出一域",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/not-going-out-of-a-region.md"
+  },
+  {
    "id": "record:observation-is-a-route",
    "type": "result",
    "record": "observation-is-a-route",
@@ -3570,6 +3594,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/one-reader-several-conditions.md"
+  },
+  {
+   "id": "record:one-root-to-its-edge",
+   "type": "result",
+   "record": "one-root-to-its-edge",
+   "title": "One root to its edge: where each central declaration stands",
+   "title_zh": "一根至其边：各中心声明之所立",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/one-root-to-its-edge.md"
   },
   {
    "id": "record:one-search-one-line",
@@ -5154,6 +5190,30 @@
    "region": "knowing",
    "base": "frame",
    "page": "theories/becoming/results/records/tests-fix-likeness-where-determined.md"
+  },
+  {
+   "id": "record:the-blanket-at-a-steady-state",
+   "type": "result",
+   "record": "the-blanket-at-a-steady-state",
+   "title": "The blanket at a steady state: conditional independence and what holds it",
+   "title_zh": "稳态之毯：条件独立及其所以成立",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-blanket-at-a-steady-state.md"
+  },
+  {
+   "id": "record:the-blanket-in-a-linear-steady-state",
+   "type": "result",
+   "record": "the-blanket-in-a-linear-steady-state",
+   "title": "The blanket in a linear steady state: the coupling form and the statistical form",
+   "title_zh": "线性稳态之毯：耦合之形与统计之形",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/the-blanket-in-a-linear-steady-state.md"
   },
   {
    "id": "record:the-boundary-of-enough-under-undetermined-laws",
@@ -7199,6 +7259,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RootForms",
+   "type": "module",
+   "name": "Becoming.RootForms",
+   "level": "L1",
+   "theorems": 30,
+   "region": "method",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Founding",
    "type": "module",
    "name": "Becoming.Founding",
@@ -7628,6 +7699,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.BlanketWeights",
+   "type": "module",
+   "name": "Becoming.BlanketWeights",
+   "level": "L1",
+   "theorems": 46,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.LumpedSeeking",
    "type": "module",
    "name": "Becoming.LumpedSeeking",
@@ -7955,6 +8037,17 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ConveyanceBoundaries",
+   "type": "module",
+   "name": "Becoming.ConveyanceBoundaries",
+   "level": "L2",
+   "theorems": 8,
+   "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -9982,6 +10075,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.UnitMatchings",
+   "type": "module",
+   "name": "Becoming.UnitMatchings",
+   "level": "L1",
+   "theorems": 16,
+   "region": "root",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.DrawnBeyond",
    "type": "module",
    "name": "Becoming.DrawnBeyond",
@@ -10361,6 +10465,17 @@
    "name": "Becoming.GrammarCases",
    "level": "L2",
    "theorems": 40,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarCrossing",
+   "type": "module",
+   "name": "Becoming.GrammarCrossing",
+   "level": "L1",
+   "theorems": 11,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -27779,6 +27894,12 @@
    "anchor": "r-the-world-represented-both-ways"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-amounts-by-unit-matchings"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -28095,6 +28216,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
    "anchor": "r-which-links-a-closure-needs"
+  },
+  {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-not-going-out-of-a-region",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-not-going-out-of-a-region"
   },
   {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-exclusive-footprint-support",
@@ -28701,6 +28828,18 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-the-markov-blanket-as-a-coupling-structure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-blanket-at-a-steady-state"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-in-a-linear-steady-state",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-the-blanket-in-a-linear-steady-state"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route",
@@ -30623,6 +30762,12 @@
    "anchor": "r-self-reference-does-not-certify-itself"
   },
   {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-root-to-its-edge"
+  },
+  {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
    "type": "section",
    "chapter": "theories/becoming/chapters/08-METHOD.md",
@@ -30789,6 +30934,16 @@
   {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketWeights",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketWeights",
+   "to": "module:Becoming.Flow",
    "type": "imports"
   },
   {
@@ -31144,6 +31299,16 @@
   {
    "from": "module:Becoming.Continuity",
    "to": "module:Becoming.Dissipation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConveyanceBoundaries",
+   "to": "module:Becoming.Boundaries",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConveyanceBoundaries",
+   "to": "module:Becoming.GrammarCrossing",
    "type": "imports"
   },
   {
@@ -31827,6 +31992,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarCrossing",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.GrammarLaws",
    "to": "module:Becoming.Grammar",
    "type": "imports"
@@ -31849,6 +32019,11 @@
   {
    "from": "module:Becoming.GrammarPath",
    "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarPath",
+   "to": "module:Becoming.GrammarCrossing",
    "type": "imports"
   },
   {
@@ -33782,6 +33957,21 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.GroupEnding",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RootForms",
+   "to": "module:Becoming.Transmission",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.RouteFormation",
    "to": "module:Becoming.CodeAcquisition",
    "type": "imports"
@@ -34369,6 +34559,26 @@
   {
    "from": "module:Becoming.Unfolding",
    "to": "module:Becoming.Space",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.Flow",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.SelectionReach",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.Undecided",
    "type": "imports"
   },
   {
@@ -35899,6 +36109,26 @@
   {
    "from": "record:alignment-direction-under-widening",
    "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "module:Becoming.UnitMatchings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:the-world-represented-both-ways",
    "type": "related"
   },
   {
@@ -39353,6 +39583,11 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "module:Becoming.ConveyanceBoundaries",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "module:Becoming.Correspondence",
    "type": "proved-in"
   },
@@ -39383,6 +39618,11 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "record:life-as-condition-of-life",
    "type": "formal-reuse"
   },
@@ -39398,8 +39638,18 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
    "to": "record:metaethical-core-characterization",
    "type": "related"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
   },
   {
    "from": "record:copied-witnesses-change-nothing",
@@ -46367,6 +46617,41 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:not-going-out-of-a-region",
+   "to": "module:Becoming.GrammarCrossing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:conveyance-crosses-the-boundary",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:reach-from-a-seed",
+   "type": "related"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "related"
+  },
+  {
    "from": "record:observation-is-a-route",
    "to": "module:Becoming.Closing",
    "type": "proved-in"
@@ -46524,6 +46809,26 @@
   {
    "from": "record:one-reader-several-conditions",
    "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "module:Becoming.RootForms",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:selection-among-groups-by-ending",
+   "type": "related"
+  },
+  {
+   "from": "record:one-root-to-its-edge",
+   "to": "record:transmission-is-inheritance-and-need",
    "type": "related"
   },
   {
@@ -52407,6 +52712,51 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "module:Becoming.BlanketWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:the-blanket-in-a-linear-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
+   "to": "record:what-the-existence-claim-forbids",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-blanket-in-a-linear-steady-state",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-boundary-of-enough-under-undetermined-laws",
    "to": "module:Becoming.Enough",
    "type": "proved-in"
@@ -52585,6 +52935,16 @@
    "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "record:selection-through-couplings",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:the-blanket-in-a-linear-steady-state",
+   "type": "related"
   },
   {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
@@ -54689,6 +55049,11 @@
   {
    "from": "record:what-a-line-holds-and-a-regularity-takes-in",
    "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "record:not-going-out-of-a-region",
    "type": "formal-reuse"
   },
   {
@@ -57692,6 +58057,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+   "to": "record:amounts-by-unit-matchings",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-balance-from-conservation-along-a-relation",
    "to": "record:balance-from-conservation-along-a-relation",
    "type": "states"
@@ -57904,6 +58274,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-normal-forms-need-decided-apartness",
    "to": "record:normal-forms-need-decided-apartness",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-not-going-out-of-a-region",
+   "to": "record:not-going-out-of-a-region",
    "type": "states"
   },
   {
@@ -58949,6 +59324,16 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-tests-fix-likeness-where-determined",
    "to": "record:tests-fix-likeness-where-determined",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-in-a-linear-steady-state",
+   "to": "record:the-blanket-in-a-linear-steady-state",
    "type": "states"
   },
   {
@@ -60139,6 +60524,11 @@
   {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-move-covering",
    "to": "record:one-move-covering",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+   "to": "record:one-root-to-its-edge",
    "type": "states"
   },
   {

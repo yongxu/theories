@@ -11,19 +11,20 @@
 ## Laws
 
 1. A run still from a step stays at its configuration there, so a run still from two steps is at one configuration at both: a run has at most one rest. (`Becoming.LastChange.still_stays`, `Becoming.LastChange.still_same`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the adjustment rises with what is left and with the recent giving and keeps a band up to hi, a state at or below one within the band whose run comes to rest below the draw comes to rest below it too, and whether the run from a state up to hi does is decided at step 3 hi + 3. (`Becoming.RegimeMargin.Adjusted.RestsBelow`, `Becoming.RegimeMargin.Adjusted.falls_of_below`, `Becoming.RegimeMargin.Adjusted.falls_iff`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 3. For each recent giving up to hi the threshold, the length of the leading run of levels whose runs are below the draw at step 3 hi + 3, is at most hi + 1; the run from a level up to hi rests below the draw exactly where the level is below it, and a larger recent giving has a threshold no higher. (`Becoming.RegimeMargin.leading`, `Becoming.RegimeMargin.leading_le`, `Becoming.RegimeMargin.leading_true`, `Becoming.RegimeMargin.leading_false`, `Becoming.RegimeMargin.Adjusted.falling`, `Becoming.RegimeMargin.Adjusted.threshold`, `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Adjusted.falls_iff_below` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Adjusted.falls_iff_below` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.RegimeMargin.Adjusted.falls_iff_below`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»`, `Becoming.«缘在所闭»`, `Becoming.«迭之周»` and `Becoming.«迭之定»` among its reasons; not declared a case of one).
 4. Every run from a state up to hi is still from some step at most 3 hi + 3: below the threshold at a rest below the draw with level and recent giving equal, at a recent giving the adjustment returns from nothing; from it on at the draw with a level the regime's step leaves as it is. (`Becoming.RegimeMargin.Adjusted.fates`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 5. Where giving rises with what is left, falls short of the draw below y, meets it from y up to the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi. (`Becoming.RegimeMargin.threshold_regime`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 6. Witness: giving that is two from one and nothing from any other level keeps every state up to four within four under a draw of two, yet the run from four rests at nothing and the run from three at three, so no least level separates the runs resting below the draw from the rest. (`Becoming.RegimeMargin.Notch.giving`, `Becoming.RegimeMargin.Notch.keeps`, `Becoming.RegimeMargin.Notch.stays_three`, `Becoming.RegimeMargin.Notch.ends_four`, `Becoming.RegimeMargin.Notch.no_threshold`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 7. One law of exact thresholds: where a fate is down-closed in the level and read off an exact check, the least level up to a bound from which the check fails is exact, and no lower where one fate implies another; every threshold of the regime and its webs is derived from it. (`Becoming.RegimeMargin.leading_exact`, `Becoming.RegimeMargin.leading_falls`, `Becoming.RegimeMargin.leading_eq`, `Becoming.RegimeMargin.leading_congr`, `Becoming.RegimeMargin.Adjusted.rests_iff_falling`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

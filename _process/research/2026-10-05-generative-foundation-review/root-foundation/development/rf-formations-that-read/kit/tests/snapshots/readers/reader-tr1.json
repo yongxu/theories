@@ -1,0 +1,599 @@
+{
+ "laws": [
+  {
+   "record_id": "what-choices-show-of-an-order",
+   "module": "Becoming.ShownOrder, experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean (pure core, imports only Becoming.Grammar; 28 theorems in 40 declarations). Read at eb3045799, where main and rf-round2 are the same commit. The source's sha256 ca92c787…2b43 is the one in the record and in the latest core receipt (becoming-checks/20261031T013649.265381Z, status passed, Lean 4.29.1). The Lean below is quoted with line breaks collapsed.",
+   "home": "theories/becoming/chapters/03-KNOWING.md §11, anchor r-what-choices-show-of-an-order (line 471), labelled 'root: any carrier of alternatives and any occasions; no premise; near-definitional'. regions.json gives region knowing, base grammar. Record: theories/becoming/results/records/what-choices-show-of-an-order.json and .md. Plan §4.1 and §10 TR1.",
+   "assumptions": [
+    "The carrier is any α : Type u and the occasions any O : Type v. What is open at an occasion is any Prop-valued predicate, so a menu may be empty or infinite.",
+    "The pick is a total function O → α: one pick per occasion. No abstention, no set of picks and no tie is represented. Untried.search can return none; a ChoiceOccasions pick cannot.",
+    "Relations are Prop-valued (α → α → Prop). A strict order is an irreflexive, transitive relation, not required to be complete. No utility, total order or optimizer appears.",
+    "Accords is strict dominance: the pick stands above every other open alternative. AccordsWeakly is maximality. The general laws do not assume PicksOpen (the pick being open at its occasion).",
+    "No decidability, finiteness or inhabitedness is used. The proofs are constructive and every axiom report is empty.",
+    "Choices are deterministic and noise is not represented. Two presentations of one menu that get different picks are two occasions, and those two occasions already form a cycle.",
+    "There is no time. 'Met' and 'after' are a split that a reader makes of one family of occasions.",
+    "Witness: three alternatives and one occasion; Boolean orders written as nested matches. The search is evaluated by rfl on two lists only. The record's does_not_show says it is not proved to choose the top for every list."
+   ],
+   "statements": [
+    {
+     "name": "ChoiceOccasions, Shown, Accords, AccordsWeakly, PicksOpen (with the grammar's «际», «及», «无环», «则»)",
+     "lean": "structure ChoiceOccasions (α : Type u) (O : Type v) where menu : O → α → Prop pick : O → α\ndef Shown : «际» α := fun x y => ∃ o, ch.pick o = x ∧ ch.menu o y ∧ y ≠ x\ndef Accords (P : «际» α) : Prop := ∀ o y, ch.menu o y → y ≠ ch.pick o → P (ch.pick o) y\ndef AccordsWeakly (P : «际» α) : Prop := ∀ o y, ch.menu o y → ¬ P y (ch.pick o)\ndef PicksOpen : Prop := ∀ o, ch.menu o (ch.pick o)\n-- Grammar.lean: abbrev «际» (α : Type u) : Type u := α → α → Prop\ninductive «及» (R : «际» α) : «际» α | one {x y : α} : R x y → «及» R x y | more {x y z : α} : R x y → «及» R y z → «及» R x z\ndef «无环» (R : «际» α) : Prop := ∀ x, ¬ «及» R x x\ndef «则» (R S : «际» α) : Prop := ∀ x y, R x y → S x y",
+     "plain": "At each occasion o, menu o says what is open, and one alternative, pick o, is chosen; the pick need not be open. Shown x y holds where, at some occasion, x is picked while y, distinct from x, is open. A relation P accords where, at every occasion, P puts the pick above every other open alternative (strict dominance). P accords weakly where no open alternative stands above the pick in P (maximality). PicksOpen names the pick's being open; no general law assumes it. «及» is reach (the transitive closure, built from finite chains), «无环» says nothing reaches itself, and «则» is inclusion."
+    },
+    {
+     "name": "reach_within",
+     "lean": "theorem reach_within {P : «际» α} (trans : ∀ x y z, P x y → P y z → P x z) (accords : ch.Accords P) : «则» («及» ch.Shown) P",
+     "plain": "Take any relation P that is transitive and accords with the choices. Then every pair joined by a finite chain of shown steps is in P. The proof uses no irreflexivity, acyclicity, decidability, finiteness or PicksOpen."
+    },
+    {
+     "name": "shown_accords, reach_accords",
+     "lean": "theorem shown_accords : ch.Accords ch.Shown\ntheorem reach_accords : ch.Accords («及» ch.Shown)",
+     "plain": "The shown relation and its reach both accord with the choices they are read from. There is no hypothesis."
+    },
+    {
+     "name": "accorded_iff_noCycle",
+     "lean": "theorem accorded_iff_noCycle : (∃ P : «际» α, (∀ x, ¬ P x x) ∧ (∀ x y z, P x y → P y z → P x z) ∧ ch.Accords P) ↔ «无环» ch.Shown",
+     "plain": "Some irreflexive, transitive relation accords with the choices exactly where no alternative reaches itself in the shown relation. When none does, the shown reach is such a relation. The converse matters for tests: every family of choices without a cycle has an according strict order."
+    },
+    {
+     "name": "above_in_every_iff_reach",
+     "lean": "theorem above_in_every_iff_reach (none : «无环» ch.Shown) {x y : α} : (∀ P : «际» α, (∀ a, ¬ P a a) → (∀ a b c, P a b → P b c → P a c) → ch.Accords P → P x y) ↔ «及» ch.Shown x y",
+     "plain": "Suppose the shown relation has no cycle. Then x stands above y in every irreflexive, transitive relation according with the choices exactly where x reaches y in the shown relation. If a cycle is shown, no strict order accords, and the left side holds vacuously of every pair."
+    },
+    {
+     "name": "top_in_every_iff_reach",
+     "lean": "theorem top_in_every_iff_reach (none : «无环» ch.Shown) {N : α → Prop} {x : α} : (∀ P : «际» α, (∀ a, ¬ P a a) → (∀ a b c, P a b → P b c → P a c) → ch.Accords P → ∀ y, N y → y ≠ x → P x y) ↔ ∀ y, N y → y ≠ x → «及» ch.Shown x y",
+     "plain": "Suppose there is no cycle, and take any predicate N (a menu) and any x. Then x stands above every y with N y and y ≠ x in every strict according order exactly where x reaches each such y. Nothing here requires N x, or that x be chosen."
+    },
+    {
+     "name": "above_in_class_of_every",
+     "lean": "theorem above_in_class_of_every {Q : «际» α → Prop} (within : ∀ P, Q P → (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P) {x y : α} (every : ∀ P : «际» α, (∀ a, ¬ P a a) → (∀ a b c, P a b → P b c → P a c) → ch.Accords P → P x y) : ∀ P, Q P → P x y",
+     "plain": "Take a class Q every member of which is an irreflexive, transitive, according relation. If x is above y in every strict according order, then x is above y in every member of Q. The class need not be nonempty; for an empty class the conclusion is vacuous."
+    },
+    {
+     "name": "withPair, reach_withPair_iff, noCycle_withPair, noCycle_withPair_iff",
+     "lean": "def withPair (R : «际» α) (x y : α) : «际» α := fun a b => R a b ∨ (a = x ∧ b = y)\ntheorem reach_withPair_iff {R : «际» α} {x y a b : α} : «及» (withPair R x y) a b ↔ «及» R a b ∨ ((a = x ∨ «及» R a x) ∧ (y = b ∨ «及» R y b))\ntheorem noCycle_withPair {R : «际» α} (none : «无环» R) {x y : α} (apart : x ≠ y) (unreached : ¬ «及» R y x) : «无环» (withPair R x y)\ntheorem noCycle_withPair_iff {R : «际» α} {x y : α} : «无环» (withPair R x y) ↔ «无环» R ∧ y ≠ x ∧ ¬ «及» R y x",
+     "plain": "withPair R x y is R with the pair (x, y) added. Reach in the enlarged relation is either reach in R, or a path that gets to x (or starts at x) and leaves from y (or ends at y); this needs no acyclicity or decision. The enlarged relation has no cycle exactly where R has none, y ≠ x, and y does not reach x in R."
+    },
+    {
+     "name": "above_in_some_of_unreached",
+     "lean": "theorem above_in_some_of_unreached (none : «无环» ch.Shown) {x y : α} (apart : x ≠ y) (unreached : ¬ «及» ch.Shown y x) : ∃ P : «际» α, (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ P x y",
+     "plain": "Suppose there is no cycle, x ≠ y, and y does not reach x. Then some strict according order puts x above y: the reach of the shown relation with (x, y) added."
+    },
+    {
+     "name": "both_ways_of_unreached",
+     "lean": "theorem both_ways_of_unreached (none : «无环» ch.Shown) {x y : α} (apart : x ≠ y) (xy : ¬ «及» ch.Shown x y) (yx : ¬ «及» ch.Shown y x) : (∃ P : «际» α, (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ P x y) ∧ (∃ P : «际» α, (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧ P y x)",
+     "plain": "Suppose there is no cycle, x ≠ y, and neither reaches the other. Then one strict according order puts x above y, and another puts y above x."
+    },
+    {
+     "name": "weakly_forces_no_comparison",
+     "lean": "theorem weakly_forces_no_comparison (x y : α) : ¬ ∀ P : «际» α, (∀ a, ¬ P a a) → (∀ a b c, P a b → P b c → P a c) → ch.AccordsWeakly P → P x y",
+     "plain": "For any x and y, and for any choices whatever (cyclic ones included), it is not the case that every strict order according weakly puts x above y. The empty relation is the witness, so choices required only to be maximal force no positive comparison."
+    },
+    {
+     "name": "Untried.occasions, noCycle, met_fixed, untried_free",
+     "lean": "def occasions : ChoiceOccasions Alt Unit where menu := fun _ a => a = .first ∨ a = .second pick := fun _ => .first\ntheorem noCycle : «无环» occasions.Shown\ntheorem met_fixed : ∀ P : «际» Alt, occasions.Accords P → P .first .second\ntheorem untried_free : (∃ P : «际» Alt, (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ occasions.Accords P ∧ P .first .third) ∧ (∃ P : «际» Alt, (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ occasions.Accords P ∧ P .third .first)",
+     "plain": "There is one occasion: first and second are open and first is chosen; third is never open. Every according relation, strict or not, puts first above second. Some strict according order puts first above third, and another puts third above first."
+    },
+    {
+     "name": "Untried.search, both_accord, same_search_met, same_search_after",
+     "lean": "def search (above : Alt → Alt → Bool) (menu : List Alt) : Option Alt := menu.find? (fun a => menu.all (fun b => same b a || above a b))\ntheorem both_accord : occasions.Accords (fun a b => aboveFirst a b = true) ∧ occasions.Accords (fun a b => aboveThird a b = true)\ntheorem same_search_met : search aboveFirst [Alt.first, Alt.second] = some Alt.first ∧ search aboveThird [Alt.first, Alt.second] = some Alt.first\ntheorem same_search_after : search aboveFirst [Alt.first, Alt.third] = some Alt.first ∧ search aboveThird [Alt.first, Alt.third] = some Alt.third",
+     "plain": "aboveFirst is the order first > third > second, and aboveThird is third > first > second; both are strict (aboveFirst_strict, aboveThird_strict). Both accord with the one occasion. The search returns the first listed alternative that stands above every distinct listed one, and none if there is no such alternative. Run with either order, it picks first from [first, second]. From [first, third] it picks first under aboveFirst and third under aboveThird. Both results are evaluated on these two lists only."
+    }
+   ],
+   "forbidden": [
+    {
+     "case": "One strict order chooses by strict dominance at every occasion of a family, yet the family's shown relation has a cycle (accorded_iff_noCycle, the forward direction).",
+     "quantifier": "Holds for every family of occasions and every strict order according with all of them: no alternative reaches itself (∀ x, ¬ «及» Shown x x). The forbidden case is the existence of a chain of any finite length k ≥ 2.",
+     "observable": "Occasions o₁ … o_k in which pick(o_{i+1}) is open at o_i and differs from pick(o_i), and pick(o₁) is open at o_k and differs from pick(o_k). The shortest case is k = 2: the same two alternatives open at two occasions with opposite picks. If each presentation is its own occasion, this covers a repeat that gets a different pick, and a swap of presentation order that changes the pick."
+    },
+    {
+     "case": "Inference, by composition (not a theorem in the module). At an after-occasion, the pick is reached, in the shown relation of the met occasions, by another alternative open with it. This is reach_within applied to the met subfamily, plus Accords at the after-occasion, plus irreflexivity and transitivity. It is a two-step cycle of the joint family, so the first case already covers it.",
+     "quantifier": "Holds for every after-occasion o and every x open at o with x ≠ pick(o): x does not reach pick(o) in the met shown relation. The forbidden case is the existence of such an o and x.",
+     "observable": "An after presentation in which x and y are both open and y is picked, while the met picks contain a chain from x to y."
+    },
+    {
+     "case": "Inference that also needs PicksOpen at the after-occasion. At an after-occasion where one open alternative x reaches every other open alternative in the met reach (top_in_every_iff_reach), a different open alternative is picked.",
+     "quantifier": "Holds for every such after-occasion.",
+     "observable": "The pick is open, and it is not x."
+    },
+    {
+     "case": "From reach_within, about a reader's fitted relation: the relation is transitive and accords with the choices it was given, yet it lacks a pair of the shown reach.",
+     "quantifier": "Holds for every transitive relation that accords with the choices.",
+     "observable": "This can be checked only on a stated relation, such as a ranking that a reader outputs. Such a relation is impossible: an output ranking that misses a reach pair either is not transitive or does not accord with the choices."
+    }
+   ],
+   "predicts_nothing_about": [
+    "Which strict order an actual chooser carries, or whether it chooses by one at all.",
+    "Any comparison beyond the shown reach: every such comparison is taken, one way or the other, by some according strict order. So success or failure of predictions there, and convergence or divergence of trained systems there, bear on nothing in RF1.",
+    "Choosers required only to pick a maximal element. For them no pattern of single picks is forbidden.",
+    "Choice probabilities, noise, response times, confidence, and distance or terminal-item effects.",
+    "What a reader can learn from more than the choices: reports, internal states, interventions.",
+    "Whether a training can install either order of the witness, and which class an architecture realizes. The one thing said is that a narrower class fixes at least as much, and possibly more.",
+    "Total orders, utilities, optimizers, or agreement with any independently stated objective.",
+    "The search's top on lists other than the witness's two.",
+    "The order in time of the occasions."
+   ],
+   "plan_corrections": [
+    "Plan §10's TR1 forbids 'a choice closing a cycle with the training choices'. The Lean's forbidden case is wider: accorded_iff_noCycle excludes a cycle anywhere in the shown relation of all the occasions the one order is claimed for. That includes cycles among the met choices alone, cycles among the after choices alone, and cycles that need several after choices. Correction: 'for a chooser whose every pick, at every occasion of the family, stands in one strict order above every other alternative open there (Accords), no alternative reaches itself in the shown relation of the whole family; in particular no later pick is reached, in the shown relation of the earlier choices, by an alternative open with it.'",
+    "'A chooser by one strict order' must be read as choosing by strict dominance under one strict order. A chooser that picks merely a maximal element of a strict order is not covered: weakly_forces_no_comparison shows the empty strict order accords weakly with every family of choices, cyclic ones included, so for such a chooser the Lean forbids nothing. The premise 'no ties' is therefore what gives TR1 any forbidden case at all. It should read: at every occasion presented, one open alternative stands above every other in the chooser's order. It must be checked apart from the outcome, for example by stability across repetitions and presentation orders, or by an explicit indifference answer that is counted as not strict.",
+    "If the met choices already show a cycle, no strict order accords with them, and above_in_every_iff_reach's universal statement holds vacuously of every pair. The rule must then report the met family's cycle and must not read predictions for after menus from the met choices.",
+    "'Success beyond the reach cannot confirm RF1' is right; add the exact boundary. On an after menu, the met reach predicts only two things, for a chooser that picks by strict dominance under one order and picks what is open. First, no pick is reached by another open alternative. Second, the pick is forced exactly where one open alternative reaches every other (by composition with top_in_every_iff_reach; an inference). Every other pick is taken by some according strict order (above_in_some_of_unreached).",
+    "'Violations show the chooser is not one fixed strict order' is right relative to the test's carrier and occasion family. A cycle shows that no strict order on alternatives, as the test defines alternatives, menus and picks (content alone, or content with position), accords with all the family's picks. It names no rival. It refutes the correspondence, not RF1. Plan §11's 'a test whose forbidden case occurs at its frozen reading' should say so for TR1.",
+    "'A noise model': RF1 has no noise. The noise model can enter only the definition of a strict pick (which answers count) and the power check. A verdict that tolerates some cycles would test a different claim than RF1's quantifier.",
+    "Plan §4.1, statement 6, says 'a narrower class of orders holding some according order fixes at least as much'. above_in_class_of_every asks instead that every member of the class be a strict according order (its `within` hypothesis), and it asks no nonemptiness: for an empty class the conclusion is vacuous. A design that reads a class's bias must first show the class nonempty.",
+    "Plan §4.1's 'Forbids' needs 'by strict dominance', as in the second correction above. Its second sentence (a reader claiming to have learned an order) is a statement about warrant and has no observable case. Its Lean content: for x ≠ y with ¬ «及» Shown x y, some according strict order puts y above x (above_in_some_of_unreached with the roles exchanged).",
+    "Plan §4.1's readings attach Armstrong and Mindermann (2018) to the degenerate-reward case, but the module and the record put that paper 'outside'. And 03 §11 ties Ng and Russell (2000) to strict choice beyond the reach, where the module and the record tie it to maximal choices (weakly_forces_no_comparison).",
+    "Minor: plan §4.1's heading says '27 theorems, 39 declarations'. The module has 28 theorems in 40 declarations, as study §446 and the record's 40 declarations state.",
+    "Wording: TR1's 'shown menus' collides with the relation Shown. The witness's own words are 'the menu met' and 'the menu met after'; use 'met' and 'after'."
+   ]
+  },
+  {
+   "record_id": "acts-alike-from-a-model-or-from-an-order",
+   "module": "Becoming.ReadingLoop, experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean (pure core; imports Blanket, Keeping, Narrowing and ShownOrder). Its sha256 5ca0f323…1812 is the one in the record and in the latest core receipt (20261031T013649.265381Z, passed). Blanketed, step and course are from Becoming/Blanket.lean.",
+   "home": "theories/becoming/chapters/03-KNOWING.md §12, anchor r-acts-alike-from-a-model-or-from-an-order (line 501), labelled 'any types for the law; a witness'. regions.json gives region knowing, base general. Plan §4.6 (RF-M) and §4.8's Standing. Plan §10 has no entry for it.",
+   "assumptions": [
+    "observed_alike: any types I₁ and I₂ for the internal parts, and shared types S (sensed), A (acts) and E (external). The two blanketed laws are deterministic: discrete synchronous steps, each part's next state a function of the parts it reads. The relation R is supplied, and steps are indexed by the natural numbers.",
+    "Witness: Value is {low, mid, high}, with decided equality, which Loop.keep needs. Act is {known, untried}; World is {up, down}, and the world does not move. reply ignores the value sensed: the known act answers mid in both worlds; the untried act answers high in up and low in down.",
+    "The candidates are the worlds, each predicting as that world answers. Refuted candidates are eliminated, not weighted.",
+    "The choice is the worst case over the candidates kept (byWorst; lower is the minimum). With no candidate kept, both acts score 0 and the known act is taken.",
+    "Rankings are Nat-valued: rank gives low 0, mid 1, high 2; rank' gives low 0, high 1, mid 2. The orders are read from ranks by above r x y := r y < r x.",
+    "Informing is represented by its outcome, a start that lists the true candidate alone, not by an act within the law.",
+    "Left out: probabilities, continuation values, how candidates are proposed, a formation's revising its own order, and worlds that move."
+   ],
+   "statements": [
+    {
+     "name": "ReadingLoop.observed_alike",
+     "lean": "theorem observed_alike {I₁ I₂ : Type} (b₁ : Blanketed I₁ S A E) (b₂ : Blanketed I₂ S A E) (R : Parts I₁ S A E → Parts I₂ S A E → Prop) (steps : ∀ x₁ x₂, R x₁ x₂ → R (b₁.step x₁) (b₂.step x₂)) (observed : ∀ x₁ x₂, R x₁ x₂ → x₁.sensory = x₂.sensory ∧ x₁.active = x₂.active) {x₁ : Parts I₁ S A E} {x₂ : Parts I₂ S A E} (related : R x₁ x₂) : ∀ n, (b₁.course x₁ n).sensory = (b₂.course x₂ n).sensory ∧ (b₁.course x₁ n).active = (b₂.course x₂ n).active\n-- Blanket.lean: def step (x : Parts I S A E) : Parts I S A E := ⟨b.nextInternal x.internal x.sensory x.active, b.nextSensory x.sensory x.active x.external, b.nextActive x.internal x.sensory x.active, b.nextExternal x.sensory x.active x.external⟩; def course (x : Parts I S A E) : Nat → Parts I S A E := Law.orbit b.step x",
+     "plain": "Take two deterministic blanketed laws with the same types of value sensed, act and external part. Take any relation R between their configurations that both steps keep and under which the values sensed and the acts are equal. Then from any related starts, the two sense the same value and take the same act at every step n. Their internal parts may differ, and so may their external parts and their laws."
+    },
+    {
+     "name": "Loop.keep, Loop.law, Loop.start, and Untested.reply, rank, worst, byWorst, loop",
+     "lean": "def keep (hs : List H) (last : Option (S × A)) (sensed : S) : List H := match last with | none => hs | some (s, a) => hs.filter fun h => decide (L.predict h s a = sensed)\ndef law : Blanketed (List H × Option (S × A)) S A E where nextInternal i s a := (L.keep i.1 i.2 s, some (s, a)) nextSensory := L.answer nextActive i s _ := L.choose (L.keep i.1 i.2 s) s nextExternal := L.move\ndef start (hs : List H) (s : S) (a : A) (e : E) : Parts (List H × Option (S × A)) S A E := ⟨(hs, none), s, a, e⟩\ndef reply (_ : Value) (a : Act) (w : World) : Value := match a with | .known => .mid | .untried => match w with | .up => .high | .down => .low\ndef rank : Value → Nat | .low => 0 | .mid => 1 | .high => 2\ndef worst (r : Value → Nat) (a : Act) : List World → Nat | [] => 0 | [w] => r (reply .mid a w) | w :: v :: ws => lower (r (reply .mid a w)) (worst r a (v :: ws))\ndef byWorst (r : Value → Nat) (ws : List World) (_ : Value) : Act := if worst r .known ws < worst r .untried ws then .untried else .known\ntheorem byWorst_iff (r : Value → Nat) (ws : List World) (s : Value) : byWorst r ws s = .untried ↔ worst r .known ws < worst r .untried ws\ndef loop (r : Value → Nat) : Loop World Value Act World where predict w s a := reply s a w choose := byWorst r answer := reply move _ _ w := w",
+     "plain": "The formation keeps candidate worlds and drops those that the answer to its last act refutes. It chooses its act from the candidates kept and the value sensed, by the worst case: the untried act exactly where the least rank its kept candidates predict for it is strictly above the known act's. The act at step n is answered by the value sensed at step n + 1."
+    },
+    {
+     "name": "Untested.rank', training, above, both_accord, apart_beyond",
+     "lean": "def rank' : Value → Nat | .low => 0 | .high => 1 | .mid => 2\ndef training : ChoiceOccasions Value Unit where menu := fun _ v => v = .mid ∨ v = .low pick := fun _ => .mid\ndef above (r : Value → Nat) : «际» Value := fun x y => r y < r x\ntheorem both_accord : training.Accords (above rank) ∧ training.Accords (above rank')\ntheorem apart_beyond : above rank .high .mid ∧ above rank' .mid .high",
+     "plain": "There is one training occasion over values: mid and low are open and mid is chosen. Read as orders, rank (high > mid > low) and rank' (mid > high > low) both accord with it, and they put high and mid in opposite orders. The occasion's shown reach (mid above low only) leaves that pair unjoined."
+    },
+    {
+     "name": "Untested.orderRest, order_rests",
+     "lean": "def orderRest : Parts (List World × Option (Value × Act)) Value Act World := ⟨([.up], some (.mid, .known)), .mid, .known, .up⟩\ntheorem order_rests : ∀ n, (loop rank').law.course (Loop.start [.up] .mid .known .up) (n + 1) = orderRest",
+     "plain": "In world up, the rank' formation listing only the true candidate starts with no answer pending, mid sensed and the known act. At every step from 1 it is at orderRest: the known act, mid sensed, [up] kept. This is a case of Loop.rests_of_unrefuted."
+    },
+    {
+     "name": "Untested.model_or_order",
+     "lean": "theorem model_or_order : ∀ n, ((loop rank).law.course (Loop.start [.up, .down] .mid .known .up) n).sensory = ((loop rank').law.course (Loop.start [.up] .mid .known .up) n).sensory ∧ ((loop rank).law.course (Loop.start [.up, .down] .mid .known .up) n).active = ((loop rank').law.course (Loop.start [.up] .mid .known .up) n).active",
+     "plain": "This holds in world up only. Two formations start with no answer pending, mid sensed and the known act: one uses rank and lists both candidates, the other uses rank' and lists only the true one. They sense the same value and take the same act at every step n: mid and known throughout. Their internal parts differ ([up, down] against [up]). It is proved as an instance of observed_alike, with a relation that holds the two starts and the two rests."
+    },
+    {
+     "name": "Untested.upRest, informed_turns",
+     "lean": "def upRest : Parts (List World × Option (Value × Act)) Value Act World := ⟨([.up], some (.high, .untried)), .high, .untried, .up⟩\ntheorem informed_turns : ∀ n, (loop rank).law.course (Loop.start [.up] .mid .known .up) (n + 3) = upRest",
+     "plain": "The rank formation started the same way but listing only the true candidate is at upRest (the untried act, high sensed) at every step from 3. Inference, by evaluating the definitions: it takes the untried act from step 1 and senses high from step 2. The theorem states only the configuration from step 3."
+    },
+    {
+     "name": "Neighbours: Untested.rest, rests, and floor_forgoes (from what-a-course-chosen-through-its-model-does-not-test)",
+     "lean": "def rest (w : World) : Parts (List World × Option (Value × Act)) Value Act World := ⟨([.up, .down], some (.mid, .known)), .mid, .known, w⟩\ntheorem rests (w : World) : ∀ n, (loop rank).law.course (Loop.start [.up, .down] .mid .known w) (n + 1) = rest w\ntheorem floor_forgoes {I : Type} (b : Blanketed I Value Act World) (sensed : ∀ s a w, b.nextSensory s a w = reply s a w) (stays : ∀ s a w, b.nextExternal s a w = w) (i : I) (s : Value) (a : Act) (floor : ∀ n, (b.course ⟨i, s, a, .down⟩ n).sensory ≠ .low) : ∀ n, (b.course ⟨i, s, a, .up⟩ n).sensory = (b.course ⟨i, s, a, .down⟩ n).sensory ∧ (b.course ⟨i, s, a, .down⟩ n).active = .known",
+     "plain": "rests: the rank formation listing both candidates rests at once, in either world, on the known act, sensing mid. floor_forgoes ranges over every formation: take any blanketed law that senses by reply in worlds that do not move, started from one internal, sensory and active state in both worlds. If it never senses low in down, it senses alike in both worlds and takes the known act in down at every step."
+    }
+   ],
+   "forbidden": [
+    {
+     "case": "observed_alike: two laws whose steps keep a relation under which the values sensed and the acts are equal, related at the start, yet differing in a value sensed or an act at some step.",
+     "quantifier": "Holds for every step n.",
+     "observable": "This is observable only where the relation is known, as in a simulation. For actual systems the relation cannot be observed apart from the courses themselves."
+    },
+    {
+     "case": "model_or_order: in world up, the two specified formations differ in act or in value sensed at some step.",
+     "quantifier": "Holds for every step n.",
+     "observable": "In an exact simulation of the witness."
+    },
+    {
+     "case": "order_rests and informed_turns: the rank' formation started from [up] is not at orderRest at some step ≥ 1, or the rank formation started from [up] is not at upRest at some step ≥ 3.",
+     "quantifier": "Holds for every n from the stated step.",
+     "observable": "In an exact simulation."
+    },
+    {
+     "case": "floor_forgoes (neighbour): a formation that senses by reply in stationary worlds and is started alike in both worlds never senses low in down, yet at some step senses differently in up and down, or takes the untried act in down.",
+     "quantifier": "Holds for every formation (any internal type, update and choice of act) and every step.",
+     "observable": "Run a deterministic agent from one start in both worlds of an environment built to the witness's answer. This is a premise and leakage check in TR-AA.B, not a test of cognition."
+    }
+   ],
+   "predicts_nothing_about": [
+    "Which explanation holds of an actual formation's acts (the record's does_not_show).",
+    "Whether actual formations choose by the worst case, eliminate candidates, or credit what they are told.",
+    "Informing as an act within a law. Only its outcome is represented: a start listing the true candidate alone.",
+    "Worlds that move, probabilities, continuation values, and how candidates are proposed.",
+    "Any general assistance theorem, or whether informing helps in general.",
+    "The internal parts. They differ, so a reader of internals or of reports could separate the two formations.",
+    "World down. model_or_order is stated in up only. By evaluation (an inference), informing about down changes neither formation's act."
+   ],
+   "plan_corrections": [
+    "Plan §10 has no entry for this record, or for any RF-M result. Yet C5 asks for a frozen design for each new law that bears on actual systems, and the record's next step names 'a frozen test separating a model that does not separate from an order that ranks otherwise by informing'. Add one, or the reason none is designed. TR-AA below gives both: no informative test of the law itself exists; a classification design can carry one verdict, taken from RF1.",
+    "Plan §4.6 says 'an unresolved model and a reversed ranking act alike'. This holds in world up only, and for the sensed and active parts only. It also rests on the worst-case rule byWorst: with both candidates kept, the untried act's worst predicted value (low) ranks below mid under both rankings. Under a rule that does not take the worst case (expected value, optimism), the uninformed formation can try the untried act, and the two courses need not be alike.",
+    "informed_turns states the configuration upRest from step 3 on. By evaluation (an inference), the act is already untried at step 1 and high is sensed from step 2. Per-step rules should use the law's quantifier, 'at every step from s*'.",
+    "Inference from byWorst on the witness's lists, not a stated theorem. For every ranking r with r low < r mid (that is, every ranking according with the training occasion), the formation keeping both candidates takes the known act at every step. The formation keeping only the true candidate takes the untried act exactly where r mid < r high. So the uninformed course is the same for every according ranking, and informing reads exactly the comparison beyond the shown reach. If the designs lean on this general form, it could be proved in the core before freezing."
+   ]
+  },
+  {
+   "record_id": "what-holding-for-a-reading-is-worth",
+   "module": "Becoming.HeldForReading, experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean, section Shown only. It is a core leaf importing ShownOrder and ReadingLoop; its sha256 3e7c19b1…b94b matches the latest receipt. Only its uses of ChoiceOccasions.reach_within are covered here.",
+   "home": "theories/becoming/chapters/03-KNOWING.md §12, anchor r-what-holding-for-a-reading-is-worth; plan §4.7, item 6.",
+   "assumptions": [
+    "Natural-number weights and values. A model is a list of candidates with Nat weights; committed and after are weighted totals over that list.",
+    "Picks are valued one or nothing, a cardinal choice that the choices do not supply.",
+    "Each candidate's comparisons are decided Booleans. Transitivity and accordance with the choices are asked at every listed candidate of positive weight. pair_gains_iff also needs asymmetry.",
+    "reach_fixes and pair_gains_unreached need neither irreflexivity nor acyclicity."
+   ],
+   "statements": [
+    {
+     "name": "Model, committed, after, pairValue, pairPolicy",
+     "lean": "structure Model (C : Type) where listed : List C weight : C → Nat\ndef committed (a : A) : Nat := total m.listed fun c => m.weight c * value c a\ndef after (p : C → A) : Nat := total m.listed fun c => m.weight c * value c (p c)\ndef pairValue (above : C → α → α → Bool) (x y : α) : C → Pick → Nat | c, .first => cond (above c x y) 1 0 | c, .second => cond (above c y x) 1 0\ndef pairPolicy (above : C → α → α → Bool) (x y : α) (c : C) : Pick := cond (above c y x) .second .first",
+     "plain": "Committing to a pick is valued at its weighted total over the listed candidates. Picking after a reading that tells the candidate is valued at the weighted total of each candidate's best pick."
+    },
+    {
+     "name": "reach_fixes",
+     "lean": "theorem reach_fixes (m : Model C) {ch : ChoiceOccasions α O} {above : C → α → α → Bool} (trans : ∀ c, c ∈ m.listed → 0 < m.weight c → ∀ a b d, above c a b = true → above c b d = true → above c a d = true) (accords : ∀ c, c ∈ m.listed → 0 < m.weight c → ch.Accords fun a b => above c a b = true) {x y : α} (reach : «及» ch.Shown x y) : m.committed (pairValue above x y) .first = m.after (pairValue above x y) (pairPolicy above x y)",
+     "plain": "Suppose every listed candidate of positive weight has comparisons that are transitive and accord with the choices, and x reaches y in the shown relation. Then every such candidate ranks x above y (by reach_within), and committing to x attains the value of picking after the reading: asking gains nothing."
+    },
+    {
+     "name": "pair_gains_iff",
+     "lean": "theorem pair_gains_iff (m : Model C) {above : C → α → α → Bool} {x y : α} (asymm : ∀ c, c ∈ m.listed → 0 < m.weight c → above c y x = true → above c x y = false) : (m.committed (pairValue above x y) .first < m.after (pairValue above x y) (pairPolicy above x y) ∧ m.committed (pairValue above x y) .second < m.after (pairValue above x y) (pairPolicy above x y)) ↔ (∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ above c y x = true) ∧ (∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ above c x y = true)",
+     "plain": "Suppose no listed candidate of positive weight ranks each of x and y above the other. Then picking after the reading stands above both picks exactly where some candidate of positive weight ranks y above x and some ranks x above y."
+    },
+    {
+     "name": "pair_gains_unreached",
+     "lean": "theorem pair_gains_unreached (m : Model C) {ch : ChoiceOccasions α O} {above : C → α → α → Bool} (trans : ∀ c, c ∈ m.listed → 0 < m.weight c → ∀ a b d, above c a b = true → above c b d = true → above c a d = true) (accords : ∀ c, c ∈ m.listed → 0 < m.weight c → ch.Accords fun a b => above c a b = true) {x y : α} (gains : m.committed (pairValue above x y) .first < m.after (pairValue above x y) (pairPolicy above x y) ∧ m.committed (pairValue above x y) .second < m.after (pairValue above x y) (pairPolicy above x y)) : ¬ «及» ch.Shown x y ∧ ¬ «及» ch.Shown y x",
+     "plain": "Suppose every positive-weight candidate is transitive and according. Then wherever holding gains over both picks, neither alternative reaches the other in the shown relation."
+    }
+   ],
+   "forbidden": [
+    {
+     "case": "Every positive-weight candidate is transitive and according, x reaches y, and yet committing to x is valued below picking after the reading. Or: holding gains over both picks on a pair one of which reaches the other.",
+     "quantifier": "Holds for every model, every family of choices and every such pair.",
+     "observable": "This can be checked only on a known model, such as a scripted helper's, so it is a computation. It says nothing about the valuations actual helpers hold."
+    }
+   ],
+   "predicts_nothing_about": [
+    "That a formation computes by these counts.",
+    "Whether a model lists candidates of both rankings, with positive weight, on a pair that neither member reaches (the record's does_not_show).",
+    "Noisy or probabilistic readers, time, and repeated holding.",
+    "How actual helpers decide when to ask."
+   ],
+   "plan_corrections": [
+    "None found. Plan §4.7, item 6, matches reach_fixes, pair_gains_iff and pair_gains_unreached. Precision: 'holding the pick gains nothing' means m.committed … .first = m.after …, and neither irreflexivity nor acyclicity is needed for it."
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "TR1.0",
+   "law": "RF1 (what-choices-show-of-an-order): accorded_iff_noCycle, reach_within, above_in_every_iff_reach, top_in_every_iff_reach, above_in_some_of_unreached, both_ways_of_unreached, weakly_forces_no_comparison, and the Untried witness.",
+   "setting": "Exact computation and simulated agents, by script, here. No model, person or download is involved.",
+   "unit": "A frozen menu design (carrier of n alternatives, met menus, after menus, presentation orders, repetitions) and one simulated chooser run on it.",
+   "conditions": "(a) Mirror the Lean: Shown; its reach by full transitive closure; cycles by strongly connected components; the shared comparisons; unjoined pairs; P1-testable after-occasions (another open alternative reaches the pick in the met reach); forced-top after-occasions.\n(b) Check the mirror on Untried. The reach is {(first, second)}; the pairs (first, third) and (second, third) are unjoined; the search picks first and first on [first, second], and first and third on [first, third].\n(c) Check the mirror by enumeration: all labelled strict partial orders for n ≤ 5, and all 720 linear orders for n = 6. On each design, the comparisons shared by the according orders must equal the computed reach; every acyclic met family must have an according order; each distinct unjoined pair must be ranked both ways.\n(d) Simulated choosers: one strict order, deterministic; one strict order with tremble ε; Thurstonian scores with small gaps; position-first and position-last readers; a label reader; a cue reader (picks the option an irrelevant, randomized cue names); a decoy-sensitive, menu-dependent order; limited attention (only the first k listed considered); a mixture of two orders drawn afresh per call; a history follower (copies its visible earlier picks, uses position elsewhere); a hybrid (follows the order where score gaps are large, position where they are small); uniform random.",
+   "measures": "For each chooser and design:\n- the probability of at least one cycle among strict occasions (C);\n- the probability of a P1 violation;\n- the counts of strict occasions and of P1-testable occasions;\n- the false-strict rate of the stability rule;\n- Selten's predictive success: the one-order class's pass rate minus the share of all choice patterns it allows.",
+   "forbidden_operational": "None at this stage: the script computes what the frozen rules can detect. If the deterministic one-order chooser shows a cycle or a P1 violation in the script, that is a bug, since the Lean forbids it.",
+   "rivals_and_controls": "Readers fixed by what they read (position, label, cue) pass any design that shows each menu in one fixed presentation, because their picks reveal that presentation's own order. Only presentation orders swapped across occasions make them fail. The label-order rival passes unless names are reassigned across calls. The history follower passes when its history is visible and fails in fresh calls.",
+   "power_check": "This stage is the power check.\nExact anchors (my arithmetic, for every pair shown once and uniform random picks): a random tournament is acyclic with probability n!/2^{n(n−1)/2}, which is 0.375, 0.117 and 0.022 for n = 4, 5 and 6. With both orders of each pair as separate occasions it is n!/4^{n(n−1)/2}, about 5.9e-3, 1.1e-4 and 6.7e-7.\nBut a one-order chooser with per-presentation tremble 0.05, unrepeated, shows no flip on all 30 presentations of n = 6 only with probability 0.95^30 ≈ 0.21. With r = 5 repetitions and threshold q = 4 (my arithmetic), a wrong pick is counted strict with probability ≈ 3.0e-5 per presentation, and about 2.3% of presentations are not strict.\nSo what matters is power against the structured rivals and against false strictness, not against uniform choice. Freeze r, q and the largest tolerated tremble so that a one-order chooser passes with probability ≥ 0.95 and each named rival fails with probability ≥ 0.8; the designer sets these thresholds.",
+   "cost_and_yes": "CPU seconds only. The board claim counts power checks by script as design work.",
+   "checkable_here_first": "All of it.",
+   "risks": "Checking the mirror only on designs where no cycle can occur. Reading Bronars-style power against random choice as power against position readers."
+  },
+  {
+   "id": "TR1.A",
+   "law": "RF1: the correspondence that a given judge picks by strict dominance under one strict order, tested by accorded_iff_noCycle.",
+   "setting": "Existing public data. Language-model judges' pairwise verdicts with positions swapped: the FastChat llm_judge files for MT-Bench (Zheng and others 2023) record two games per pair with positions swapped, as I recall; check before use. Later, human repeated-choice data covering every pair of a fixed set, of the Regenwetter, Dana and Davis-Stober (2011) kind; such data must still be located.",
+   "unit": "One judge (or participant) on one question's set of answers (or one set of gambles).",
+   "conditions": "Each pair in each presentation order is one occasion. Ties are excluded as not strict, and counted. Menus are pairs only.",
+   "measures": "Cycles of any length among strict verdicts, per unit. The share of pairs that flip with presentation order. The tie share. As a separate family, cycles after aggregating each pair's two orders.",
+   "forbidden_operational": "For a judge choosing by strict dominance under one strict order on a question's answers: a cycle among its strict verdicts on those answers. With pairs only, the predictive rule P1 is part of C.",
+   "rivals_and_controls": "Position bias (Zheng and others 2023; Wang and others 2024) produces two-cycles across the two orders. Ties hide incomparability, which is the weak case, where nothing is forbidden. The aggregated family is a different family and is reported apart.",
+   "power_check": "Needed. Per unit, check that a cycle is possible (at least three answers with strict verdicts) and take pass rates from TR1.0 for the observed number of strict pairs.",
+   "cost_and_yes": "No API cost. A download of public data needs Ren's yes.",
+   "checkable_here_first": "The analysis code, on TR1.0's simulated judges.",
+   "risks": "Quality judgments are not preferences over outcomes. The prompts and the tie option were fixed by others. The outcome is largely known (position bias). A reanalysis is a frozen prediction only if the predictions are fixed before the data are opened."
+  },
+  {
+   "id": "TR1.B",
+   "law": "RF1: the correspondence, through accorded_iff_noCycle, with the met-then-after split giving the predictive form.",
+   "setting": "Language models through an API: several families, versions pinned, a fresh call for each presentation.",
+   "unit": "A chooser is one (model version, fixed system prompt, domain, sampling regime). Each chooser gets its own verdict. Pooled counts are descriptive only, with the theory's own family reported apart.",
+   "conditions": "- Carrier: 5–6 alternatives per domain, names reassigned per call.\n- Three domains: a canonical order (amounts of money) as positive control; a neutral domain with no canonical order, which is the test; and decoy triples, for the menu-dependence rival.\n- Met menus: a frozen subset whose reach, once the picks are in, can join some pairs and leave others unjoined (for example, chains plus the Untried shape).\n- After menus: all remaining pairs, triples and some quadruples. Pairs appear in both orders; larger menus in balanced rotations.\n- Repetitions: r at temperature 0 with a seed, and r at the default temperature.\n- Rival control: a condition with the history visible, met and after menus in one conversation.\n- Pipeline controls: scripted choosers of each TR1.0 kind sent through the same pipeline.\n- A valid answer is the name of one open alternative. A variant allows 'no preference', counted as not strict.",
+   "measures": "Per chooser:\n- strict share, invalid share and first-position share;\n- C on the per-presentation family and on the aggregated family;\n- P1 violations and forced-top accuracy;\n- picks on unjoined pairs, descriptive only;\n- at default temperature, binary choice frequencies with an order-constrained test of a mixture of orders (a periphery measure that carries no RF1 verdict).",
+   "forbidden_operational": "Primary rule C: a cycle of any length in the shown relation of the chooser's strict occasions, met and after menus together, with each presentation order its own occasion.\nPredictive rule P1: a strict after-pick y where another alternative x is open at that presentation and x reaches y in the met strict occasions' shown relation.\nNothing is forbidden on unjoined pairs.",
+   "rivals_and_controls": "- Position, label and cue readers: caught by swapped orders, reassigned names and randomized cues.\n- Menu dependence: decoy triples.\n- Limited attention: quadruples.\n- A mixture of orders: unstable picks and majority (Condorcet) cycles, separated by the stability measure and the polytope test.\n- A reader of its own history: the visible-history condition against fresh calls.\n- A chooser by a content rule unrelated to any valuation (alphabetical, say) passes every contrast. RF1 does not tell it apart, so the claim tested is only 'one strict order on these contents'.\n- Positive control: the canonical domain. Negative control: a scripted position reader.",
+   "power_check": "Needed before freezing, on TR1.0's agents calibrated to the models' noise. VD1's replicate flip share, 0.124 at default sampling, is a prior baseline. Fix r, q, the tolerated tremble, the minimum number of P1-testable occasions per chooser, and each rival's probability of showing a forbidden case.",
+   "cost_and_yes": "My estimate: with 6 alternatives, 15 pairs × 2 orders + 20 triples × 3 rotations + 15 quadruples × 4 rotations ≈ 150 presentations, × r = 5 ≈ 750 short calls per chooser and regime. For 5–6 models × 3 domains × 2 regimes × 2 contexts that is roughly 30,000–50,000 calls. For scale, VD1 made 7,680 calls, about 3M input and 1.5M output tokens. Needs Ren's yes on usage.",
+   "checkable_here_first": "Every rule on scripted choosers; a dry run with scripted answers; the exact reach and P1 sets of the frozen design.",
+   "risks": "- A cycle refutes only the correspondence on this carrier.\n- Position effects may dominate.\n- API answers can vary even at temperature 0, and providers can change versions.\n- Models may recognize a consistency test.\n- Forced choice hides incomparability.\n- Excluding invalid answers selects on outcomes.\n- A chooser's own consistency says nothing about RF1's reading with training."
+  },
+  {
+   "id": "TR1.C",
+   "law": "RF1 read with training: accorded_iff_noCycle and P1 on trained networks; above_in_class_of_every for the class's bias.",
+   "setting": "Simulated agents trained by gradient on choice data: small networks, local.",
+   "unit": "One trained network (architecture × regime × seed × hidden order).",
+   "conditions": "- Met menus are drawn from a hidden strict order with unjoined pairs.\n- Architectures: item-score softmax (one order by construction), a pairwise-comparator MLP, and a set-input network (attention over the menu).\n- Lazy and rich regimes, by initial scale, following Lippl and others (2024).\n- 20 or more seeds per cell.\n- Shuffled-label and position-swapped training as controls.",
+   "measures": "- Fit to the met picks.\n- C and P1 on after menus (transitive inference).\n- Picks on unjoined pairs across seeds: the class's bias.\n- For the item-score class over item features, the comparisons beyond the reach that the class fixes, computed exactly by linear programming (above_in_class_of_every's 'possibly more').",
+   "forbidden_operational": "For a network whose picks on met and after menus all stand at the top of one strict order: a cycle or a P1 violation. For the item-score class this is only an implementation check. For other classes, a cycle shows the network does not choose by one order, which is the premise of the inner-alignment reading ('searches by an order'); it is not a failure of RF1. Nothing is forbidden beyond the reach.",
+   "rivals_and_controls": "Memorizing pairs with their positions: controlled by swapped positions. The item-score class is the positive control; shuffled labels the negative control. Check each class nonempty before reading its bias, since the theorem is vacuous for an empty class.",
+   "power_check": "Enough seeds to estimate each unjoined pair's class-bias share to a stated precision (descriptive). Enough after-occasions per network for C and P1.",
+   "cost_and_yes": "CPU only and small, but it is a run on trained systems, so it needs Ren's yes. LA4's Stage A runs wait for Ren's new machine.",
+   "checkable_here_first": "The linear program, and the item-score network's P1 compliance on a toy run.",
+   "risks": "Small networks are not the systems the reading concerns. Divergence or convergence across seeds beyond the reach neither confirms nor refutes RF1."
+  },
+  {
+   "id": "TR1.D",
+   "law": "RF1: the correspondence in people.",
+   "setting": "Human participants: lab-style repeated choice over pairs and triples of fixed items, or a transitive-inference task.",
+   "unit": "One participant in one session.",
+   "conditions": "As TR1.B, with positions counterbalanced, repetitions, met then after blocks, and payment by one randomly chosen choice.",
+   "measures": "As TR1.B, plus order-constrained tests of mixtures of orders (Regenwetter and others 2011) as the stochastic analog.",
+   "forbidden_operational": "C and P1 on strict occasions, as in TR1.B.",
+   "rivals_and_controls": "The noise model is the main rival (Tversky 1969 against Regenwetter and others 2011). Others: decoy effects, attention, fatigue.",
+   "power_check": "Needed, on the stability rule and on the trembles that prior repeated-choice data report.",
+   "cost_and_yes": "Recruitment and payment, and an ethics process. Needs Ren's yes. The repository has so far reanalysed human data only, never run participants.",
+   "checkable_here_first": "TR1.0, and a public-data reanalysis (TR1.A) first.",
+   "risks": "Results in this area are largely known. RF1 adds only the exact boundary of prediction."
+  },
+  {
+   "id": "TR1.R",
+   "law": "RF1's answer key, from above_in_every_iff_reach and both_ways_of_unreached, with HeldForReading.reach_fixes and pair_gains_unreached for a variant where the reader may ask.",
+   "setting": "Language models through an API, reading a scripted chooser's choices.",
+   "unit": "One reader (model, prompt) on one family of met choices.",
+   "conditions": "- Scripted choosers with hidden strict orders, using content-neutral labels.\n- The reader states, for each pair, whether the choices determine which alternative the chooser puts higher (and which), and predicts the after menus.\n- Variant: the reader may ask the chooser, at a cost, before picking for it.",
+   "measures": "- Agreement with the exact key: a pair is determined toward x exactly where x reaches y; it is undetermined for distinct pairs neither member of which reaches the other.\n- Accuracy on reach pairs.\n- Asking on reach pairs against unjoined pairs (descriptive).",
+   "forbidden_operational": "RF1 forbids nothing for actual readers; the key is a theorem. Given the stated premise that the chooser is one strict order, a reader that calls an unjoined pair determined is wrong by both_ways_of_unreached, and one that reverses a reach pair is wrong by above_in_every_iff_reach.",
+   "rivals_and_controls": "Readers using item meanings: controlled by content-neutral labels. Readers that assume a total order: ask them to state that premise.",
+   "power_check": "The numbers of reach and unjoined pairs per family, for estimating error rates.",
+   "cost_and_yes": "Small API spend; needs Ren's yes.",
+   "checkable_here_first": "The key, exactly.",
+   "risks": "It tests readers, not RF1. Results depend on the prompt."
+  },
+  {
+   "id": "TR-AA.0",
+   "law": "acts-alike-from-a-model-or-from-an-order: observed_alike, model_or_order, order_rests, informed_turns, both_accord, apart_beyond; neighbours rests and floor_forgoes.",
+   "setting": "Exact simulation by script, here.",
+   "unit": "One scripted formation in the witness's two worlds, under each condition.",
+   "conditions": "- A mirror of Loop.law with reply, worst and byWorst and both rankings, checked to reproduce rests, model_or_order, order_rests, informed_turns and explorer_up/down.\n- floor_forgoes checked over an exhaustive class of small deterministic formations, for example all finite-state choosers with up to three internal states.\n- Scripted family: worst case with both candidates (M); reversed ranking with the true candidate (O); expected value with prior weight p on low; optimistic (max); a floor keeper; an untrusting formation that ignores information; label readers (always the known option, or the first listed); hybrids.\n- Conditions: U uninformed; I informed (start with the true candidate alone); C the outcome frame (mid against high, given as values); T the training occasion (mid against low). Both worlds.",
+   "measures": "The identification table: each formation's acts and values per step, in every condition and world. It shows which formations act alike in U, which ones I separates, and which only C or a manipulation check separates.",
+   "forbidden_operational": "For the mirror, any departure from the Lean's evaluated courses is a bug. In the exhaustive class, a floor keeper that senses differently in the two worlds, or takes the untried act in down, would contradict floor_forgoes.",
+   "rivals_and_controls": "The table is itself the analysis of rivals.",
+   "power_check": "Not needed; the computation is exact.",
+   "cost_and_yes": "None; this is design work.",
+   "checkable_here_first": "All of it.",
+   "risks": "A scripted family chosen so that informing looks decisive. Leaving out the untrusting and floor-keeping formations."
+  },
+  {
+   "id": "TR-AA.B",
+   "law": "acts-alike, read on actual choosers. The only verdict comes from RF1 (accorded_iff_noCycle across frames). Premise checks come from agent_through_sensory and floor_forgoes.",
+   "setting": "Language models through an API: a repeated two-option game built to the witness. A lab-style game with people can come later.",
+   "unit": "The course of one chooser (model version, prompt, name assignment, seed) in one world and condition. Each chooser is then classified across conditions.",
+   "conditions": "- Two options with neutral names, counterbalanced. One pays a stated middle amount in both worlds; the other pays high in world up and low in world down.\n- U: the chooser is told the other option pays 'high or low'. I: told it pays high here. C: choose between the middle and the high amount, stated as amounts. T: choose between the middle and the low amount.\n- A manipulation check asks what the other option pays. A belief report in U asks the same.\n- Each step is a fresh call that carries the course of acts and payoffs, as the loop does. Temperature 0 with a seed, plus repetitions for strictness. U runs in both worlds.",
+   "measures": "- U course: the known option throughout, or a try of the other; exploration measured apart from selection after trying.\n- I course: turns at every step from a frozen s*, or does not.\n- C and T picks, the check, and the belief report.\n- A descriptive classification. A chooser known in U that turns in I fits the model-held formation (M). One that does not turn and has C = middle fits the order-held formation (O). One that does not turn, has C = high and passes the check is inconsistent across frames. One that fails the check is untrusting.",
+   "forbidden_operational": "V1, the one verdict from a law (RF1 across frames): for a chooser by strict dominance under one strict order on the amounts {low, middle, high} across T, I and C, no cycle among strict occasions. In particular, not high over middle in C together with middle over high in I, nor the reverse.\nPremise checks, not outcomes: V2, in deterministic settings, identical acts in up and down at every step before the other option is first taken, else the world leaks and the run is void; V3, the manipulation check.\nThere is no verdict on which explanation holds.",
+   "rivals_and_controls": "- An untrusting chooser passes as order-held: controlled by V3 and by C.\n- A label or novelty reader: counterbalanced names, and a version of C without novelty.\n- Expected value with a pessimistic prior also keeps the known option in U and turns in I. Informing does not separate it from M, so the classification names the class (held by the model), not the rule.\n- A history reader: each prompt carries only the course.",
+   "power_check": "Needed: strictness of the I and C picks; misclassification of TR-AA.0's formations once noise is added; V2's sensitivity to an injected leak of the world.",
+   "cost_and_yes": "Small. My estimate: 10 steps × 4 conditions × 2 worlds × 2 name orders × 10 seeds × 5 models ≈ 8,000 short calls. Needs Ren's yes on usage. People later, with an ethics process.",
+   "checkable_here_first": "TR-AA.0's table, and every rule run on scripted formations.",
+   "risks": "- It classifies actual choosers and cannot confirm or refute the record.\n- Being told 'it pays high' may be read as a hint, not as the true candidate alone.\n- The worst-case rule is the witness's assumption, and the set of explanations is incomplete.\n- Rules must take 'at every step from s*', not compare one step with another (LA2's lesson)."
+  }
+ ],
+ "no_test": [
+  {
+   "law": "RF1 beyond the reach: above_in_some_of_unreached, both_ways_of_unreached, Untried.untried_free, Untried.same_search_after",
+   "reason": "These are existence statements about relations, and the free order is constructed (the reach with one pair added). No choice by anyone can contradict them. Picks beyond the reach, by a chooser or a trained system, measure that chooser's class (above_in_class_of_every: a narrower class fixes at least as much, and possibly more), not RF1."
+  },
+  {
+   "law": "RF1 maximal choices: weakly_forces_no_comparison",
+   "reason": "The empty strict order accords weakly with every family of choices, cyclic ones included, so no pattern of single picks is forbidden. A test would need sets of picks or reports of indifference (Eliaz and Ok 2006), which lie outside ChoiceOccasions."
+  },
+  {
+   "law": "RF1's general laws as statements: reach_within, accorded_iff_noCycle, above_in_every_iff_reach, top_in_every_iff_reach, above_in_class_of_every",
+   "reason": "They are near-definitional and cannot fail. Their empirical use is the correspondence (this chooser picks by strict dominance under one order), whose whole observable content is acyclicity: by the converse of accorded_iff_noCycle, every acyclic family has an according strict order. TR1 tests the correspondence, and a pass is weak unless the power check shows that the rivals would have produced a cycle."
+  },
+  {
+   "law": "acts-alike: observed_alike",
+   "reason": "It is an induction on its hypotheses. For actual systems the relation kept by both steps cannot be observed apart from the courses, so any check is a check of a simulation or of how an environment was built."
+  },
+  {
+   "law": "acts-alike witness: model_or_order, order_rests, informed_turns, both_accord, apart_beyond",
+   "reason": "They evaluate two specified formations in one specified world, and TR-AA.0 reproduces them exactly. The record does not claim that any actual formation is either one (does_not_show), so no outcome on actual choosers bears on them. TR-AA.B classifies actual choosers and takes its one verdict from RF1."
+  },
+  {
+   "law": "what-holding-for-a-reading-is-worth, as it bears on what choices show: reach_fixes, pair_gains_iff, pair_gains_unreached",
+   "reason": "These are compositions in counts for a supplied model. Nothing says an actual helper values by these counts, so a helper that asks on reach pairs violates nothing. The composition supplies the split of pairs into reach and unjoined, for RF-M.2's own test and for TR1.R's key."
+  }
+ ],
+ "prior_repo": [
+  {
+   "path": "experiments/valuer-agreement/README.md (also PREDICTIONS-2026-10-21.md and results/verdicts.json)",
+   "found": "VD1 and VD2: six model families through OpenRouter judged pairs of plans under sixteen standpoints, with order and framing counterbalanced (every share 0.50). Every frozen rule of VD1 failed. Its replicate calls with another seed flipped in 12.4% of 768 replicate pairs. The first-listed plan's share was measured without prediction: 0.18 in K and 0.39 in M0, with 'equal' as a third option. In VD2, two elicitations of a sign agreed in 0.86–0.93 of cells. VT1 names presentation invariance as a premise still to measure. VD1 used 7,680 calls (about 3M input and 1.5M output tokens); VD2 ran under a $9 cap.",
+   "relevance": "The closest prior pairwise-choice tests of language models, though they tested Becoming.Weightings, not RF1. They offer reusable clients, counterbalancing and a budget guard; a stability baseline for TR1's noise model; and the practice of reporting the theory's own family apart."
+  },
+  {
+   "path": "experiments/shaping-what-comes-back/README.md (LA3)",
+   "found": "The agent began with N in 27 of 30 seeds and never tried S in 9. Where both policies had been played (21 seeds) it ended on the higher mean score; where only one had (9 seeds) it ended on N. The frozen bridge counted both kinds in one measure.",
+   "relevance": "An actual case of the ambiguity acts-alike formalizes: rejecting a never-tried policy may be held by the prior (the model) or by a ranking. It is also the source of the lesson to measure exploration apart from selection, which TR-AA needs."
+  },
+  {
+   "path": "experiments/commons-llm-feedback-resolved/README.md (LA1b)",
+   "found": "Rounds were assigned at m = 0, 1 and 6 before free choice, and every verdict passed. A restraint chosen before any result was dropped once the results resolved.",
+   "relevance": "Informing by resolved feedback turned a choice that was held before any result. This is the pattern informed_turns states (as a reading), and assigned rounds are a way to measure exploration apart."
+  },
+  {
+   "path": "experiments/commons-llm-feedback-unaided/README.md (LA1c)",
+   "found": "The model raised its threshold in round 2 in 35 of 40 seeds, trying restraint before its results decided it.",
+   "relevance": "Language-model agents do try untried acts in some settings, so the witness's worst-case rest is not assured."
+  },
+  {
+   "path": "experiments/self-rewarding-lock/README.md (LA2), as summarized in experiments/README.md",
+   "found": "The judge answered by what it read, all one way in 112 of its 119 calls, and one rule passed by an exact tie.",
+   "relevance": "Readers fixed by what they read belong among TR1's simulated rivals, and the unit of analysis is the call."
+  },
+  {
+   "path": "experiments/recipient-value-learning/README.md",
+   "found": "A reanalysis of human data notes that a fixed concern weight with changed reward beliefs can also change choices: behaviour does not identify a changed value coefficient.",
+   "relevance": "The belief-versus-value confound that acts-alike states formally, here in human data."
+  },
+  {
+   "path": "experiments/README.md, section 'Freezing a test on a trained system'",
+   "found": "Six lessons: verdicts only on resolved differences; the law's own quantifier; simulate readers fixed by what they read, and hybrids; measure exploration apart; guard support rules against contradiction; add a control where a rival passes every contrast.",
+   "relevance": "Each is applied in the tests above."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md (literature table near line 1085)",
+   "found": "It places Mazeika and others 2025 (coherent pairwise preferences, more so with scale); Shen, Clark and Mitra 2025 (stated values and actions align poorly); and Hsee 1996 (joint and separate evaluations reverse).",
+   "relevance": "Prior placement of these papers. It bears on TR-AA's cross-frame rule."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md (findings 2 and 14)",
+   "found": "Finding 2: strict dominance is not maximality. Finding 14 is where TR1's premises (ties, stochastic choice, context, invalid choices, a noise model) come from.",
+   "relevance": "The origin of plan §10's TR1."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md (TR-RR1, TR-RR2)",
+   "found": "Sibling designs for language-model tests, not frozen.",
+   "relevance": "A format precedent."
+  },
+  {
+   "path": "experiments/*/README.md and experiments/history/INDEX.md",
+   "found": "No experiment tests revealed-preference acyclicity, transitive inference or the shown reach. I searched for revealed preference, GARP, SARP, transitive inference and intransitivity.",
+   "relevance": "TR1 would be the repository's first test of this kind."
+  }
+ ],
+ "literature": [
+  {
+   "cite": "Richter (1966), 'Revealed preference theory', Econometrica 34: 635–645 [cited in the repository]",
+   "relevance": "Congruence is equivalent to rationalization by a complete preference, on any domain. RF1 is close to it without completeness (record, 03 §11)."
+  },
+  {
+   "cite": "Afriat (1967), International Economic Review 8: 67–77; Polisson and Renou (2016), Journal of Mathematical Economics 65: 36–40 [cited in the repository]",
+   "relevance": "GARP is equivalent to a concave monotone utility for expenditure data. RF1 is not this result: it has no budgets and no utility. Polisson and Renou make the extra structure explicit."
+  },
+  {
+   "cite": "Szpilrajn (1930), Fundamenta Mathematicae 16 [cited in the repository]; Dushnik and Miller (1941), American Journal of Mathematics 63 [added]",
+   "relevance": "Every partial order extends to a linear order, and a strict partial order is the intersection of its linear extensions. So on finite carriers the comparisons shared by according linear orders are again the shown reach. This is standard mathematics, not proved in the Lean."
+  },
+  {
+   "cite": "Samuelson (1938), Economica 5: 61–71; Houthakker (1950), Economica 17: 159–174 [added]",
+   "relevance": "The weak and strong axioms. Houthakker's acyclicity of indirect revealed preference is accorded_iff_noCycle's condition, for strict single-valued choice."
+  },
+  {
+   "cite": "Arrow (1959), Economica 26; Sen (1971), Review of Economic Studies 38 [added]",
+   "relevance": "On finite domains that include every pair and triple, WARP (Sen's α and β) is equivalent to rationalization by an ordering. This is why designs present every pair and triple."
+  },
+  {
+   "cite": "Varian (1982), Econometrica 50; Varian (1990), Journal of Econometrics 46; Afriat (1973), IER 14; Houtman and Maks (1985); Echenique, Lee and Shum (2011), Journal of Political Economy 119 [added]",
+   "relevance": "Nonparametric tests and indices of how far choices violate consistency (CCEI, the largest consistent subset, the money pump). Under RF1 they are descriptive only, since its quantifier is 'no cycle'."
+  },
+  {
+   "cite": "Bronars (1987), Econometrica 55; Beatty and Crawford (2011), American Economic Review 101; Selten (1991), Mathematical Social Sciences 21 [added]",
+   "relevance": "The power of revealed-preference tests against random choice, and Selten's predictive success (hit rate minus area). This is what TR1.0's power check computes."
+  },
+  {
+   "cite": "Eliaz and Ok (2006), Games and Economic Behavior 56; Mandler (2005), Games and Economic Behavior 50 [added]",
+   "relevance": "Indifference and incomparability can be told apart only from sets of picks (the weak case). Incomplete preferences with a status quo produce cycles without irrationality, a rival that produces RF1's forbidden case."
+  },
+  {
+   "cite": "Bernheim and Rangel (2009), Quarterly Journal of Economics 124 [added]",
+   "relevance": "Choice with ancillary conditions (frames), and the unambiguous choice relation. A model for treating frames and presentation orders as occasions."
+  },
+  {
+   "cite": "Masatlioglu, Nakajima and Ozbay (2012), American Economic Review 102; Manzini and Mariotti (2007), American Economic Review 97; Kalai, Rubinstein and Spiegler (2002), Econometrica 70 [added]",
+   "relevance": "Limited attention (an alternative open but not considered breaks 'shown'), and choice by several rationales. Both are rivals in TR1."
+  },
+  {
+   "cite": "Huber, Payne and Puto (1982), Journal of Consumer Research 9; Simonson (1989), Journal of Consumer Research 16 [added]",
+   "relevance": "Attraction and compromise effects. In an individual, a reversal driven by a decoy is a cycle in RF1's sense, hence TR1.B's decoy triples."
+  },
+  {
+   "cite": "Tversky (1969), Psychological Review 76; Regenwetter, Dana and Davis-Stober (2011), Psychological Review 118; Birnbaum and Gutierrez (2007), OBHDP 104; Loomes, Starmer and Sugden (1991), Econometrica 59 [added]",
+   "relevance": "Claims of intransitivity and their re-examination. Whether a violation is read as noise depends on the noise model, and order-constrained inference is the method to follow for sampled choices."
+  },
+  {
+   "cite": "Block and Marschak (1960); Falmagne (1978), Journal of Mathematical Psychology 18; McFadden and Richter (1990); Fishburn (1992), Mathematical Social Sciences 23; Kitamura and Stoye (2018), Econometrica 86 [added]",
+   "relevance": "Random utility (mixtures of orders) and tests of it: the stochastic counterpart that RF1 does not cover, usable as a periphery measure. From memory, to verify: triangle inequalities describe the binary polytope up to five alternatives."
+  },
+  {
+   "cite": "Harless and Camerer (1994), Econometrica 62; Hey and Orme (1994), Econometrica 62 [added]",
+   "relevance": "Error models. From memory, to verify: repeated identical choices switch in roughly a quarter of cases. So a person's 'pick' needs a frozen stability rule."
+  },
+  {
+   "cite": "[Chen, Liu, Shan and Zhong (2023), PNAS 120: e2316205120](https://arxiv.org/abs/2305.12763v3)",
+   "relevance": "GPT-3.5 was nearly GARP-consistent in budget tasks, more so than humans. Consistency fell under another price description and in discrete choice, the setting closest to RF1 (from summaries; check the paper)."
+  },
+  {
+   "cite": "[Zhao, Wang and Peng (2024), KnowLLM workshop, arXiv 2410.08851](https://arxiv.org/abs/2410.08851v1)",
+   "relevance": "Rankings by large open models failed asymmetry (strong position bias), showed poor transitivity, and were swayed by irrelevant alternatives."
+  },
+  {
+   "cite": "[Xu, Ruis, Rocktäschel and Kirk (2025), ICML](https://proceedings.mlr.press/v267/xu25w.html)",
+   "relevance": "Language-model judges are non-transitive in AlpacaEval, so rankings depend on the baseline. The paper proposes round-robin comparisons scored with Bradley–Terry."
+  },
+  {
+   "cite": "[Song, Jennings and Davis-Stober (2025), arXiv 2502.10554](https://arxiv.org/abs/2502.10554); ['Do LLM Recommenders Obey Preference Axioms?', ICLR 2026](https://iclr.cc/virtual/2026/10017455)",
+   "relevance": "Benchmarks of language models on the transitivity axiom, the first from the order-constrained school. From search summaries only, to check: transitivity is mostly held, and IIA is violated far more often."
+  },
+  {
+   "cite": "[Mazeika and others (2025), arXiv 2502.08640](https://arxiv.org/pdf/2502.08640) [also cited in the repository]",
+   "relevance": "Pairwise preferences over outcomes are coherent enough to fit utilities, more so with scale."
+  },
+  {
+   "cite": "Zheng and others (2023), NeurIPS Datasets and Benchmarks; Wang and others (2024), ACL; Zheng, Zhou, Meng, Zhou and Huang (2024), ICLR [added]",
+   "relevance": "Position and label biases in language models' choices, and the protocol of swapping positions. These are the readers-fixed-by-what-they-read rivals, and a data source for TR1.A."
+  },
+  {
+   "cite": "Shen, Clark and Mitra (2025), EMNLP; Hsee (1996), OBHDP 67 [cited in the repository]",
+   "relevance": "Stated values and actions diverge, and joint and separate evaluations reverse. So the act frame and the outcome frame in TR-AA may differ."
+  },
+  {
+   "cite": "[Lippl, Kay, Jensen, Ferrera and Abbott (2024), PNAS 121: e2314511121](https://bibliography.cumc.columbia.edu/node/43311); [Kay and others (2024), PLOS Computational Biology](https://columbia.demo.elsevierpure.com/en/publications/emergent-neural-dynamics-and-geometry-for-generalization-in-a-tra); Bryant and Trabasso (1971); McGonigle and Chalmers (1977) [added]",
+   "relevance": "Transitive inference is RF1's met reach tested on after pairs. Item-additive models generalize transitively; networks in the rich regime generalize poorly (TR1.C)."
+  },
+  {
+   "cite": "Ng and Russell (2000); Armstrong and Mindermann (2018); Reddy, Dragan and Levine (2018) [cited in the repository]",
+   "relevance": "The degenerate reward (which the module ties to maximal choices); a planner and a reward that cannot be told apart without assumptions on the planner (outside RF1, and the correspondence for acts-alike); beliefs about dynamics inferred from behaviour."
+  },
+  {
+   "cite": "Langosco and others (2022); Shah and others (2022); Hubinger and others (2019) [cited in the repository]; Skalse and others (2023), ICML [added]",
+   "relevance": "Goal misgeneralization and mesa-optimization: RF1 locates the possibility, and how often it occurs is empirical (plan §8). Skalse and others treat partial identifiability of reward."
+  },
+  {
+   "cite": "Savage (1954); Karni, Schmeidler and Vind (1983), Econometrica 51; Manski (2004), Econometrica 72 [added]",
+   "relevance": "Choices separate beliefs from preferences only under premises; Manski argues for measuring expectations directly. Hence the belief report and manipulation check in TR-AA."
+  },
+  {
+   "cite": "Ellsberg (1961), Quarterly Journal of Economics 75; Gilboa and Schmeidler (1989), Journal of Mathematical Economics 18 [the second cited in ReadingLoop]",
+   "relevance": "Ambiguity aversion, and maxmin over candidates, which is the witness's own choice rule."
+  },
+  {
+   "cite": "Wilson, Geana, White, Ludvig and Cohen (2014), Journal of Experimental Psychology: General 143 [added]",
+   "relevance": "The horizon task separates seeking information from seeking reward: a design pattern for telling 'not yet known' from 'ranked lower'."
+  },
+  {
+   "cite": "Binz and Schulz (2023), PNAS 120; Krishnamurthy, Harris, Foster, Zhang and Slivkins (2024), NeurIPS [added]",
+   "relevance": "Language models often fail to explore in context, so the uninformed known-act course does occur in them."
+  },
+  {
+   "cite": "Fudenberg and Levine (1993), Econometrica 61; Rothschild (1974), Journal of Economic Theory 9 [cited in the repository]",
+   "relevance": "Self-confirming equilibrium and incomplete learning, the relatives of the Untested witness."
+  }
+ ],
+ "open_questions": [
+  "Carrier and occasion. Are alternatives contents alone, with position, label and cue part of the occasion so that a reversal driven by position counts as a cycle, or contents with their presentation? Which family carries the verdict, and which is only reported?",
+  "The pick. One presentation at temperature 0 with a seed, or a frozen stability rule over r repetitions with threshold q? The values of r, q and the largest tolerated tremble should be fixed by TR1.0's power check before freezing.",
+  "Strictness, checked apart from the outcome. Forced choice with a stability rule, or an explicit 'no preference' answer counted as not strict? ChoiceOccasions has a total pick and no abstention. What share of non-strict or invalid answers voids a chooser?",
+  "The primary family: fresh calls or visible history? The other then serves as the control for a reader of its own history.",
+  "Domains and menus. Which met design, and which frozen rule computes the P1-testable after-occasions from the met outcomes?",
+  "What a cycle refutes. Plan §10 calls a violation 'the finding'; plan §11 counts a forbidden case as the objective failing. For TR1 a cycle refutes only the correspondence, never RF1, and the frozen reading should say so.",
+  "The stochastic analysis. Are order-constrained tests of mixtures of orders reported? They carry no verdict from RF1.",
+  "Training stage. Which classes, regimes and seeds? Check each class nonempty before reading its bias. Do CPU training runs need Ren's yes now?",
+  "TR-AA. Should it be designed at all? If so: is informing given as certainty or as evidence; is the worst-case rule made explicit as the bridge; what is the set of rivals; and what is the per-step quantifier ('at every step from s*')?",
+  "Lean before the freeze? Three general forms the designs use are inferences now: the met reach's exclusions and forced tops; the uninformed worst-case course being the same for every ranking with low below mid; the informed act equalling the ranking of mid against the untried value. They could be proved in the core first.",
+  "Pooling and the theory's own family. Are pooled rules reported, and are they also reported without Claude models, as VD1 did?",
+  "Public data. Do the MT-Bench pairwise files record both games, with positions swapped? Which human datasets of repeated choice over every pair of a fixed set are public? Any download needs Ren's yes."
+ ],
+ "recommendation": "Freeze TR1 as a test of the correspondence (this chooser picks by strict dominance under one strict order on a stated carrier), not of RF1. By accorded_iff_noCycle, the whole observable content of that claim is a shown relation with no cycle of any length over all strict occasions: the met-then-after split yields only exclusions and forced tops, and nothing beyond the reach. Each presentation order should be its own occasion, strictness should be checked by a frozen repetition rule, and the exact stage (TR1.0: the mirror and its power check against the structured rivals) should be done here before TR1.A and the API runs, which wait on Ren's yes. For acts-alike, record that no informative test of the law exists, because observed_alike is an induction on unobservable hypotheses and model_or_order a computation on two specified formations. If a test is still wanted, design TR-AA.B: its one verdict comes from RF1 across frames, with two premise checks and a descriptive classification, after TR-AA.0's exact table shows what informing can and cannot separate."
+}

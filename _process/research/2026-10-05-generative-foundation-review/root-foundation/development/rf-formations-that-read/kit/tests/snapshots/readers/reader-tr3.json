@@ -1,0 +1,512 @@
+{
+ "laws": [
+  {
+   "record_id": "readers-reading-readers",
+   "module": "Becoming.Cascade: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean. The file is 172 lines; its sha256 is e6add4291cb2…, the hash the record binds. Core receipt 20261029T134236.345943Z. It imports Learning only for Training.Through.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers (05 §8, Pools; bracket 'any type: members in turn, indexed by the natural numbers; near-definitional'). Record: theories/becoming/results/records/readers-reading-readers.json and .md. Plan §4.3; plan §10 TR3.",
+   "assumptions": [
+    "Laws are deterministic. Member n's act is `T.law n (T.coupling n w) (T.acts w n)`: a function of its own coupling and of the ordered list of every earlier act. A law may depend on n and may ignore entries of the list, so restricted access is represented. No graph of who reads whom is developed.",
+    "A world fixes every member's coupling (`coupling : Nat → W → O`). Random private signals enter only by taking worlds to be signal assignments. No probability, prior, belief, payoff or accuracy occurs anywhere.",
+    "Members are indexed by the natural numbers, a well-founded order. Each has one act, and the acts are built by recursion on the number of members.",
+    "The cascade premise `ReadsOnlyActsFrom k` is independence on all of the law's inputs. It covers every member n with k ≤ n (member k included), every two coupling values, and every list of earlier acts, histories no run reaches included. `AlikeBefore k` compares only members j < k.",
+    "A selection is a Prop-valued predicate on the list of the first N acts, for any finite N. The conclusions are about pairs of worlds.",
+    "Any types W, O, A. Pure core: the module says every declaration has an empty axiom report. In the receipt's EnvironmentAudit.log only the compiler-generated `Becoming.Turns.mk.injEq` reports propext, as generated injEq lemmas do. Standing: an upper bound, 'not the pool's exact reach'; near-definitional.",
+    "Inference from the proof term, not a stated theorem: `law_alike_of_cascade` uses the premise only at `T.acts w n`, the history that world w reaches, with the two worlds' couplings. A premise restricted to the histories reached in the two worlds compared would therefore give the same conclusion by the same proof. The Lean states only the form quantified over all histories."
+   ],
+   "statements": [
+    {
+     "name": "Turns, Turns.acts, Turns.act (definitions)",
+     "lean": "structure Turns (W : Type u) (O : Type v) (A : Type w) where coupling : Nat → W → O; law : Nat → O → List A → A — def acts (w : W) : Nat → List A | 0 => [] | n + 1 => acts w n ++ [T.law n (T.coupling n w) (acts w n)] — def act (w : W) (n : Nat) : A := T.law n (T.coupling n w) (T.acts w n)",
+     "plain": "Member n couples into the world as `coupling n w`. It acts by `law n` on that coupling and on the list of the acts of members 0 to n−1, in order. `acts w n` is that list and `act w n` is member n's act."
+    },
+    {
+     "name": "Turns.ReadsOnlyActsFrom, Turns.AlikeBefore (definitions)",
+     "lean": "def ReadsOnlyActsFrom (k : Nat) : Prop := ∀ n, k ≤ n → ∀ o o' (before : List A), T.law n o before = T.law n o' before — def AlikeBefore (k : Nat) (w w' : W) : Prop := ∀ j, j < k → T.coupling j w = T.coupling j w'",
+     "plain": "From member k on, member k included, every member gives one act for every two values of its own coupling, on every list of earlier acts, reached or not. Two worlds are alike before k where members 0 to k−1 couple into them alike. Member k's own coupling is not compared."
+    },
+    {
+     "name": "Turns.law_alike_of_cascade",
+     "lean": "theorem law_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W} (alike : T.AlikeBefore k w w') {n : Nat} (before : T.acts w n = T.acts w' n) : T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n)",
+     "plain": "Assume the cascade premise from k and two worlds alike before k. Wherever their first n acts agree, member n acts alike in both. For n < k this is because its couplings agree; for n ≥ k it is because its law ignores the coupling."
+    },
+    {
+     "name": "Turns.acts_alike_of_cascade (the law)",
+     "lean": "theorem acts_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W} (alike : T.AlikeBefore k w w') : ∀ n, T.acts w n = T.acts w' n",
+     "plain": "Assume every member from k on, k included, acts alike whatever its own coupling, on every list of earlier acts. Then two worlds alike through the couplings of members 0 to k−1 give the same list of acts for every number of members."
+    },
+    {
+     "name": "Turns.act_alike_of_cascade",
+     "lean": "theorem act_alike_of_cascade {k : Nat} (cascade : T.ReadsOnlyActsFrom k) {w w' : W} (alike : T.AlikeBefore k w w') (n : Nat) : T.act w n = T.act w' n",
+     "plain": "Under the same hypotheses, every member's act is the same in the two worlds."
+    },
+    {
+     "name": "Turns.cascade_through",
+     "lean": "theorem cascade_through {k : Nat} (cascade : T.ReadsOnlyActsFrom k) (N : Nat) (select : List A → Prop) : Learning.Training.Through (T.AlikeBefore k) (fun w => select (T.acts w N)) — where def Through (alike : X → X → Prop) (select : X → Prop) : Prop := ∀ x x', alike x x' → (select x ↔ select x')",
+     "plain": "Under the cascade premise from k, take any N and any Prop-valued selection that reads the list of the first N acts. Two worlds alike before k are selected alike: the selection holds of one exactly when it holds of the other. This is an upper bound on what the acts carry, not the pool's exact reach."
+    },
+    {
+     "name": "Turns.separates_at",
+     "lean": "theorem separates_at {w w' : W} {n : Nat} (before : T.acts w n = T.acts w' n) : T.act w n ≠ T.act w' n ↔ T.law n (T.coupling n w) (T.acts w n) ≠ T.law n (T.coupling n w') (T.acts w n)",
+     "plain": "No cascade premise is needed. Where two worlds give the same first n acts, member n acts differently in them exactly where its law, at that shared list, gives different acts for the two coupling values the worlds give it. This transports a distinction already in the law. It acquires or restores none, and it says nothing of what later members or selections keep."
+    },
+    {
+     "name": "Turns.Copying.turns, Copying.readsOnlyActs, Copying.reaches_first_only (witness)",
+     "lean": "def turns (coupling : Nat → W → O) (fallback : O) : Turns W O O where coupling := coupling; law := fun n o before => match n, before with | 0, _ => o | _ + 1, first :: _ => first | _ + 1, [] => fallback — theorem readsOnlyActs (coupling : Nat → W → O) (fallback : O) : (turns coupling fallback).ReadsOnlyActsFrom 1 — theorem reaches_first_only (coupling : Nat → W → O) (fallback : O) {w w' : W} (first : coupling 0 w = coupling 0 w') (n : Nat) : (turns coupling fallback).act w n = (turns coupling fallback).act w' n",
+     "plain": "Member 0 acts as its coupling, and every later member copies the first act of its list. The fallback serves only an empty list, which no run gives a later member. This is a cascade from member 1. So worlds alike in member 0's coupling give every member the same act, whatever couples into the others; this is the record's counterexample."
+    }
+   ],
+   "forbidden": [
+    {
+     "case": "Later acts differ under a cascade (acts_alike_of_cascade, act_alike_of_cascade).",
+     "quantifier": "Premise: every member n ≥ k (k included), every two coupling values, every list of earlier acts. Conclusion: every pair of worlds alike in the couplings of members 0 to k−1, and every n. The first n acts are then equal, and so is every member's act.",
+     "observable": "Hold the couplings of members before k fixed, or script their acts. Set the private signals of members k, k+1, … at random, and measure each such member's act under both values of its own signal at the histories reached. Forbidden: every member from k on is found not to read its signal there, yet two runs that differ only in later signals give some different act. With stateless, deterministic members this can arise only from nondeterminism or a harness fault. So it checks the representation (member n reads only its own signal and the earlier acts), not the theorem. For sampled members the Lean gives no verdict, because no distributional analogue is proved."
+    },
+    {
+     "case": "A selection through the acts tells apart worlds alike before k (cascade_through).",
+     "quantifier": "Every N, every select : List A → Prop, and every pair of worlds alike before k, under the premise.",
+     "observable": "After a cascade prefix whose later members do not read their signals: any frozen function of the act list that holds for one assignment of later signals and fails for another. That covers the majority, the last act, the count, the whole vector and any classifier. A verdict rule must read the whole act vector, because the law quantifies over every selection, not one aggregate or the end only."
+    },
+    {
+     "case": "A member's act does not follow its law at a shared history (separates_at).",
+     "quantifier": "Every pair of worlds giving the same first n acts, at member n. It is an iff with no premise.",
+     "observable": "Two calls with the same earlier list and the same own signal give different acts. Or one act appears under two signal values for which the law gives different acts. Either is a breach of the Turns representation: sampling, hidden state, or a channel beyond own signal and earlier acts. This holds definitionally for any law, and the law forbids nothing beyond it."
+    },
+    {
+     "case": "In a copying pool, acts differ across worlds alike in the first coupling (Copying.reaches_first_only).",
+     "quantifier": "Every n, and every pair of worlds with coupling 0 w = coupling 0 w'.",
+     "observable": "Observable only in a pool built to copy, so it is an implementation check."
+    }
+   ],
+   "predicts_nothing_about": [
+    "When an actual member stops reading its own coupling. In Bikhchandani, Hirshleifer and Welch's model this happens once public evidence outweighs any private signal; here it is a premise (record, does_not_show). Realized cascade times, wrong-cascade rates and fragility are predictions of that model, not of RF4.",
+    "Whether a cascade is right or wrong. It suppresses what later couplings carry, and it can be accurate.",
+    "Whether a pool's later selection keeps a coupling that one member's act carries; any return or restoration of reach.",
+    "The pool's exact reach. The acts may carry less than the first k couplings.",
+    "Any case where, from no member on, every member ignores its signal at every list. Examples: choosers who overweight their own signal, unbounded signals (Smith and Sørensen 2000), quantal responders. There the theorem is vacuous.",
+    "Members who ignore their signals only approximately, within a tolerance; probabilistic accuracy; Condorcet majority convergence.",
+    "DeGroot averaging and Golub and Jackson's wisdom condition; bounds depending on who reads whom; members in no well-founded order.",
+    "Accuracy, payoff or welfare of any member, or of the pool; how a pool forms."
+   ],
+   "plan_corrections": [
+    "Plan §10 TR3 opens with 'Predict when naturally operating sequential choosers stop using their private signals', framed as RF4's test. RF4 predicts no timing. That member n stops reading its coupling is the hypothesis `ReadsOnlyActsFrom k` (record: 'When an actual member stops reading its own coupling … a premise here'). The record's next delta pairs such a test with the probabilistic form, a debt. Correction: take the timing prediction from a named model (BHW's public odds past every private increment, or a stated behavioural model) and judge it apart. A failure refutes that model for those choosers. It is not, for RF4, 'a test whose forbidden case occurs' (plan §11).",
+    "TR3's last sentence reads 'Test the claimed return of reach separately, with members whose acts must carry their signal'. The Lean makes no such claim. The sentence predates REVIEW-LEAN finding 13, which removed 'reach returns only through'. Cascade.lean says 'nothing here acquires or restores a distinction'; plan §4.3 says separates_at 'acquires or restores none'; the record lists as not shown 'That a pool's later selection keeps a coupling one member's act carries'. Correction: drop the sentence, or say only this: `separates_at` gives that, after the same earlier acts, such a member's act differs across its signal values exactly where its law separates them. Whether later members or the pool keep that difference is outside RF4, and neither outcome bears on it.",
+    "TR3 leaves out the premise's scope. RF4 needs every member from k on, k included, to ignore its own coupling on every list of earlier acts, histories no run reaches included, with k fixed. BHW's law meets this for no k. I computed this exactly for ten members, signal precision 2/3, prior 1:1 and the tie rule 'follow own signal': at every position 0 to 9, some reachable history has the act reading its own signal. By inference, alternating histories give the same at every position for any length. A natural cascade therefore holds only along the reached histories, from a time fixed by the first signals. The design must either rest on the proof's reached-history use of the premise, or build a law that agrees with the member on the histories reached. The first is an inference from the proof term and is best stated as a lemma before freezing. The design must also fix k, by a scripted prefix or by conditioning on the realized prefix; a stopping-time form is not in the Lean.",
+    "TR3's 'then intervene on those signals' is right in form. But the intervention must be on the signals of members from k on, k included, with the couplings (or acts) of members before k held fixed. With stateless members the conclusion then follows from the measured premise by construction, so checking it is a representation check. RF4 is deterministic. Before sampled choosers can be judged within a tolerance, a stochastic analogue must be proved. By inference: if each member's dependence on its own signal is at most ε in total variation, the act list's total variation is at most (N − k)ε. This is not proved here.",
+    "Plan §3's table row for a pool still reads 'only what couples into those read first where members read one another's acts (RF4)'. The cold read (REVIEW-TEXTS finding 7) corrected this wording everywhere else. Members who read one another's acts and also their own couplings carry those couplings (separates_at), so the Lean forbids no such case. Correction: 'where, from some member k on, k included, every member acts alike whatever its own coupling on every list of earlier acts, only what couples into the members before k (RF4)'."
+   ]
+  },
+  {
+   "record_id": "a-prediction-read-by-what-it-predicts",
+   "module": "Becoming.ReflexivePrediction: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean. The file is 244 lines; its sha256 is 4eb919e7…, the hash the record binds. Core receipt 20261029T191748.070149Z; its BecomingReflexivePredictionAxiomAudit.log lists all 26 declarations as depending on no axioms. It imports Keeping (Viability.ChoiceOver) and Recurrence (Law.orbit).",
+   "home": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts (03 §12, The reading loop; bracket 'any type; the natural numbers 0 to n for the chain; near-definitional, with one general law'). Record: theories/becoming/results/records/a-prediction-read-by-what-it-predicts.json and .md. Plan §4.4 (design) and §4.6 (as built). There is no entry in plan §10.",
+   "assumptions": [
+    "The response is a deterministic function r : V → V of the published prediction alone, read before the outcome. It has no other input, no history, no time dependence and no noise.",
+    "A prediction is one value. There are no probabilities, distributions or calibration.",
+    "Repeated publication is the orbit `Law.orbit r p`, from Recurrence: def orbit (next : S → S) (s : S) : Nat → S | 0 => s | n + 1 => next (orbit next s n). Each step publishes the previous step's outcome. The chain law starts at 0.",
+    "The chain is the natural numbers 0..n. The response maps it into itself (`within`) and keeps the order only on pairs v ≤ w ≤ n (`keeps`). 'Least' means least among right predictions f ≤ n.",
+    "`predictor_iff` needs choice over the admitted responses: `Viability.ChoiceOver {r : V → V // admitted r} V`, where ChoiceOver O α := ∀ R : O → α → Prop, (∀ o, ∃ x, R o x) → ∃ f : O → α, ∀ o, R o (f o). Only its converse uses it.",
+    "Any type V outside the chain. Pure core: equality of naturals is decided at each step, with no excluded middle. The links to Merton, Grunberg and Modigliani, Simon, Tarski, Perdomo and others, and Diamond and Dybvig are readings, not containments."
+   ],
+   "statements": [
+    {
+     "name": "ReflexivePrediction.Right (definition)",
+     "lean": "def Right (r : V → V) (p : V) : Prop := r p = p",
+     "plain": "A prediction p, published and read by the response r, is right where the outcome (r applied to p) is p itself: a fixed point of r."
+    },
+    {
+     "name": "ReflexivePrediction.none_right_of_moves",
+     "lean": "theorem none_right_of_moves {r : V → V} (moves : ∀ v, r v ≠ v) (p : V) : ¬ Right r p",
+     "plain": "If the response moves every value, no published prediction is right."
+    },
+    {
+     "name": "ReflexivePrediction.no_predictor_right",
+     "lean": "theorem no_predictor_right {admitted : (V → V) → Prop} {r : V → V} (holds : admitted r) (moves : ∀ v, r v ≠ v) : ¬ ∃ predict : (V → V) → V, ∀ r', admitted r' → Right r' (predict r')",
+     "plain": "Suppose some admitted response moves every value. Then there is no predictor right on every admitted response. A predictor here is any function from responses to values, so this holds even for one that reads the response itself."
+    },
+    {
+     "name": "ReflexivePrediction.not_moves",
+     "lean": "theorem not_moves : ∀ b : Bool, (!b) ≠ b",
+     "plain": "On two values, negation moves every value."
+    },
+    {
+     "name": "ReflexivePrediction.predictor_iff",
+     "lean": "theorem predictor_iff {admitted : (V → V) → Prop} (choice : Viability.ChoiceOver {r : V → V // admitted r} V) : (∃ predict : {r : V → V // admitted r} → V, ∀ r, Right r.1 (predict r)) ↔ ∀ r : V → V, admitted r → ∃ p, Right r p",
+     "plain": "Given choice over the admitted responses, a predictor right on every admitted response exists exactly where each admitted response has some right prediction."
+    },
+    {
+     "name": "ReflexivePrediction.rests_iff_right, right_rests, reached_rests",
+     "lean": "theorem rests_iff_right (r : V → V) (p : V) (n : Nat) : Law.orbit r p (n + 1) = Law.orbit r p n ↔ Right r (Law.orbit r p n) — theorem right_rests {r : V → V} {p : V} (right : Right r p) : ∀ n, Law.orbit r p n = p — theorem reached_rests {r : V → V} {p q : V} (first : r p = q) (right : Right r q) : ∀ n, Law.orbit r p (n + 1) = q",
+     "plain": "Publish at each step the outcome of the step before. Step n's publication is published again at step n+1 exactly where it is right; this is definitional. A right published prediction is published at every step. If the outcome of p is a right prediction q, every step from 1 on publishes q."
+    },
+    {
+     "name": "Chain: on_chain, rises, below_right, stays_from, again_or_risen",
+     "lean": "variable {n : Nat} {r : Nat → Nat} — theorem on_chain (within : ∀ v, v ≤ n → r v ≤ n) : ∀ k, Law.orbit r 0 k ≤ n — theorem rises (within : ∀ v, v ≤ n → r v ≤ n) (keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w) : ∀ k, Law.orbit r 0 k ≤ Law.orbit r 0 (k + 1) — theorem below_right (keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w) {f : Nat} (on : f ≤ n) (right : Right r f) : ∀ k, Law.orbit r 0 k ≤ f — theorem stays_from (r : Nat → Nat) {j : Nat} (again : Law.orbit r 0 (j + 1) = Law.orbit r 0 j) : ∀ m, Law.orbit r 0 (j + m) = Law.orbit r 0 j — theorem again_or_risen (within : ∀ v, v ≤ n → r v ≤ n) (keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w) : ∀ k, (∃ j, j < k ∧ Law.orbit r 0 (j + 1) = Law.orbit r 0 j) ∨ k ≤ Law.orbit r 0 k",
+     "plain": "With r mapping 0..n into itself, the orbit from 0 stays on the chain. If r also keeps the order there, the orbit never falls from one step to the next. With only order-keeping (no `within`), the orbit from 0 is at or below every right f ≤ n at every step. For any r, once the orbit from 0 repeats at step j it stays at that value. Under both hypotheses, by step k either some earlier step repeated or the orbit has risen to at least k."
+    },
+    {
+     "name": "ReflexivePrediction.bottom_rests (the chain law)",
+     "lean": "theorem bottom_rests (within : ∀ v, v ≤ n → r v ≤ n) (keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w) : Right r (Law.orbit r 0 n) ∧ ∀ f, f ≤ n → Right r f → Law.orbit r 0 n ≤ f",
+     "plain": "Take the chain 0..n and a response that maps it into itself and keeps its order. Repeated publication from 0 is right at step n and lies at or below every right prediction f ≤ n. So it reaches the least right prediction within the chain's length."
+    },
+    {
+     "name": "Witnesses: ThresholdResponse, Negating, Reflecting",
+     "lean": "def threshold (v : Nat) : Nat := if 1 ≤ v then 2 else 0; theorem within : ∀ v, v ≤ 2 → threshold v ≤ 2; theorem keeps : ∀ v w, v ≤ w → w ≤ 2 → threshold v ≤ threshold w; theorem both_right : Right threshold 0 ∧ Right threshold 2; theorem reached_by_start : ∀ k, Law.orbit threshold 0 k = 0 ∧ Law.orbit threshold 1 (k + 1) = 2 — def negate (v : Bool) : Bool := !v; theorem none_right : ∀ p, ¬ Right negate p; theorem alternates : ∀ p k, Law.orbit negate p (k + 1) ≠ Law.orbit negate p k — def reflect (v : Nat) : Nat := 2 - v; theorem sub_antitone (k : Nat) {v w : Nat} (le : v ≤ w) : k - w ≤ k - v; theorem reverses {v w : Nat} (le : v ≤ w) : reflect w ≤ reflect v; theorem middle_right : Right reflect 1",
+     "plain": "The threshold response on 0, 1, 2 keeps the chain and its order. Both 0 and 2 are right. Publication from 0 stays 0; from 1 it is 2 at every step from 1 on. Negation on Bool has no right prediction, and publication changes at every step. The reflection 2 − v (natural subtraction) reverses the order and leaves 1 right. Computed in this reading and not in the Lean: its orbit from 0 alternates 0, 2, 0, 2, … and never reaches 1."
+    }
+   ],
+   "forbidden": [
+    {
+     "case": "A right round where none can be (none_right_of_moves).",
+     "quantifier": "Every published p, for a response that moves every value.",
+     "observable": "Measure the public offline and find that every forecast's outcome differs from it. Forbidden: a live round whose outcome equals its published forecast."
+    },
+    {
+     "case": "A right publication is not published again (right_rests, reached_rests; rests_iff_right is the bookkeeping).",
+     "quantifier": "Every later step.",
+     "observable": "In the loop that publishes the last outcome: a round's outcome equals its forecast, or an outcome equals a value found right, and some later round gives another outcome."
+    },
+    {
+     "case": "Publication from 0 falls (rises).",
+     "quantifier": "Every step k, under within and keeps.",
+     "observable": "The public's response is found order-keeping on 0..N and maps into it. Forbidden: a live round, starting from 0, whose outcome is below the previous round's."
+    },
+    {
+     "case": "Publication from 0 passes a right prediction (below_right).",
+     "quantifier": "Every right f ≤ n and every step k, under keeps.",
+     "observable": "A live outcome, starting from 0, above a value found right offline."
+    },
+    {
+     "case": "No rest by step n, or a rest above the least (bottom_rests).",
+     "quantifier": "At step n (a deadline); against every right f ≤ n.",
+     "observable": "In a loop over N+1 values started at 0: no repeat by round N, or a rest at a value above the least value found right."
+    },
+    {
+     "case": "A negating response comes to rest (Negating.alternates).",
+     "quantifier": "Every step, every start.",
+     "observable": "The public is found to be Boolean negation, for example identical agents in a two-valued congestion framing. Forbidden: a round that repeats its predecessor."
+    }
+   ],
+   "predicts_nothing_about": [
+    "Whether actual publics respond by a function of the prediction alone, or keep or reverse its order (record, does_not_show).",
+    "Probabilistic forecasts, calibration, and noisy or history-dependent responses.",
+    "Convergence of retraining with losses (performative stability as defined by risk minimization). The only exception is where retraining returns the outcome exactly, and that is a reading.",
+    "Where repeated publication goes from starts other than 0 under an order-keeping response, beyond right_rests and reached_rests.",
+    "Whether a right prediction is reached under a response that does not keep the order. The reflection's right value is never reached from 0.",
+    "The response's shape in any actual public: how many right values it has and where. Which right value is better, or welfare.",
+    "How forecasters choose their forecasts; learning-to-forecast subjects do not publish the last outcome.",
+    "A predictor's incentives or scoring rules.",
+    "Existence on a continuum; Grunberg and Modigliani's result enters only as a reading."
+   ],
+   "plan_corrections": [
+    "Plan §10 has no entry for RF6.3. Yet criterion C5 asks for a frozen test design of each new law that bears on actual systems, and the record's next delta names 'a frozen test of a published forecast's response'. Suggested entry, TR6: the theorems hold of any response that is a function of the published prediction alone, so a test asks whether a public is one. Measure its response to each published forecast, then publish the previous outcome from zero. Under an order-keeping response so measured, no round falls, none passes a right value, and some round repeats by round n. A public failing these is outside the law's representation; that narrows the readings, not the theorems.",
+    "Plan §4.6's summary reads: 'on a finite chain, repeated publication from the bottom under a response keeping the order reaches the least right prediction within the chain's length'. It drops `within`, the response mapping 0..n into itself, which is a hypothesis of on_chain, rises, again_or_risen and bottom_rests. The cold read flagged the same omission in other texts. The chain is the natural numbers 0..n, and the order is kept only on pairs within it. With counts of N agents `within` holds by construction, so no test can check it.",
+    "Plan §4.6 says 'a response reversing the order can leave one' (Reflecting.middle_right). That says nothing about reaching it. From 0 the reflection's orbit is 0, 2, 0, 2, …; this is an exact computation in this reading, not a Lean statement. A design must not predict that repeated publication reaches a right prediction under an order-reversing response (underdog, congestion). There the Lean forbids only rounds that are right where none can be (none_right_of_moves).",
+    "Plan §4.4 says 'a prediction published, read before the response and negated by an admitted response is not right on every response'. This matches no_predictor_right when read as follows: where some admitted response moves every value, no predictor is right on every admitted response, even one reading the response. It is a statement over a class of responses. Its only observable instance is a single response that moves every value."
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "TR3-0 (RF4): exact Turns computation and power check, done here first",
+   "law": "RF4 readers-reading-readers, with BHW's probabilistic form as the timing model (a debt, not RF4)",
+   "setting": "Simulated agents in a script, with no model calls and every case enumerated. The setting is Anderson and Holt's binary urn game: two urns, private draws of precision p, public guesses in turn. Ten to fourteen members, every signal assignment enumerated with its probability.",
+   "unit": "For the premise: one member's act at one history and one signal value. For the conclusion: the run of members k..N−1 after a fixed prefix.",
+   "conditions": "Signal precision p ∈ {5/9, 2/3, 3/4}. Prior odds 1:1 and 2:1. Scripted prefixes (A,A), (B,B), (A,B), (A), plus natural sequences. Agent types: (1) BHW Bayesian with the tie rule 'follow own signal' (deterministic, the Lean's case); (2) BHW with coin-flip ties; (3) logit quantal response at several precisions (Goeree and others 2007); (4) own-signal overweighting, abandoning the signal only at odds above 2:1 (Weizsäcker 2010); (5) naive counting of every earlier act as a signal (Eyster and Rabin 2010); (6) the Lean's copier (Copying.turns); (7) readers fixed by what they read: a constant act, or copying the first, last or majority act, all-or-nothing as LA2's judge was; (8) hybrids that read the signal with probability q and otherwise copy the majority; (9) a leaky member that also reads the next member's signal, outside the Turns representation.",
+   "measures": "For each position and reached history, the own-signal dependence D(h) = P(A | a, h) − P(A | b, h). The first position at which acts stop reading signals, a stopping time. Whether the reached-history premise holds from k for each prefix. The total-variation distance between the laws of the act list from k on, across assignments of the later signals. The accuracy of the majority and of the last act, by N. For each verdict rule of TR3-1, its pass probability per agent type at the planned call counts.",
+   "forbidden_operational": "For every agent type that meets the reached-history premise from k (BHW deterministic after a cascade prefix, the copier, fixed readers), the act-list distance across later-signal assignments must be exactly 0 at every N. Any nonzero value is a harness fault. The leaky member must show D = 0 member by member and still a positive distance, which shows the representation control works. Exact values computed in this reading, for p = 2/3, prior 1:1, tie rule 'own signal', true urn A: (1) the cascade starts at the third member with probability 5/9 (0.5556); it has started by the fifth member with 0.8025 and by the seventh with 0.9122. (2) Within ten members, a wrong cascade has probability 0.1922 and no cascade 0.0390. (3) At every position 0 to 9, some reachable history has the act reading its own signal, so BHW's law meets ReadsOnlyActsFrom k for no k ≤ 9. (4) With prior odds 2:1, a cascade on A starts after one informative A, and a cascade on B only after three net informative B's. These are BHW's predictions, to be frozen for TR3-1's timing part, not RF4's.",
+   "rivals_and_controls": "Overweighting and BHW part at |d| = 2: BHW predicts D = 0 there, overweighting D > 0, so that history is the discriminating cell. Fixed readers pass RF4's conclusion and fail BHW's timing; the empty-history and balanced-history cells, where BHW predicts D = 1, tell them apart. The leaky member passes every member-wise premise check and fails the conclusion; it is caught by a placebo (change a later member's signal and check that earlier members' acts are unchanged) and by verified stateless calls. Every support rule must read these controls: for example, 'members cascade where BHW says' must read the empty-history cell. Otherwise a reader fixed from the start would be printed as a Bayesian cascade.",
+   "power_check": "Yes; this is the stage's main output. Indicative normal-approximation sizes I computed here: detecting a dependence of 0.1 between 0.9 and 0.8 needs about 196 calls per signal value per history. Claiming independence within a margin of 0.1 (an equivalence test, true difference 0) needs about 154 calls per signal value at baseline 0.9 and 428 at baseline 0.5. A margin of 0.05 needs about 617 and 1,713. The script should replace these with exact binomial pass rates simulated per agent type, including all-or-nothing deterministic readers, which need only a few repeats.",
+   "cost_and_yes": "No model calls and no cost. A script in experiments/formations-that-read/, reviewed by AI before any person reads it. Nothing is frozen and no yes is needed.",
+   "checkable_here_first": "All of it.",
+   "risks": "Encoding the tie rule and the off-path beliefs: BHW does not fix beliefs after a deviation, while QRE does. Tuning the later stage to one timing model. Treating BHW's timing as RF4's verdict."
+  },
+  {
+   "id": "TR3-1 (RF4): language-model members in the urn game, with a scripted prefix and draws set by the experimenter",
+   "law": "RF4: its conclusion, conditional on the premise as measured. BHW's timing is tested apart, as the bridge for the probabilistic form.",
+   "setting": "Language models through an API, at least two families, with one family other than the theory's own (as VD1 did). Each member is a fresh stateless call. It is shown the urn compositions, the prior, its own draw and the ordered list of earlier public guesses, in a neutral cover story. A lab-style sequential game with nothing paid.",
+   "unit": "For the premise: the call, contrasted in pairs of calls that differ only in the draw. For the conclusion: the run of members k..N−1. LA2's lesson takes the call as the unit, not the pick.",
+   "conditions": "(a) Scripted prefixes of earlier guesses: (A,A) and (B,B), which give a BHW cascade; (A,B), balanced; (A), one ahead; each extended by j further cascade guesses to reach every position up to N−1. Prior 1:1 and 2:1. (b) Later members' draws set at random by the experimenter, independent of the urn. This is the intervention on the couplings of members from k on, with the first k fixed by script. (c) Natural sequences, with draws taken from the urn, to give realized cascade times. Controls: an empty history, where the draw must be read; no draw shown, history only; a placebo on a later member's draw; prompts identical except for the draw and history; repeated identical calls to check determinism; decoding at temperature 0 and sampled. On a subsample, a comprehension probe asks the member to restate its draw and the counts, scored apart from the act. Optional exploration, with no verdict: an off-path history such as (A,A,B), to see whether cascades break.",
+   "measures": "D(h) for each position and history. The set of positions from k on whose D is within the power-check margin of 0. The premise needs every position, not most. BHW's predicted D for each cell, from TR3-0. At temperature 0, the act lists over a sample of later-draw assignments. With sampling, the joint distribution of the act vector for each later-draw assignment. Accuracy of the majority and of the last act, by N, reported only (RF4 predicts nothing of accuracy). Comprehension failures counted apart from ignoring the draw.",
+   "forbidden_operational": "RF4's verdict applies at temperature 0. Take a prefix where every position from k on gave one guess for both draws in every repeat: the premise at the reached histories, the proof's weakening (an inference). Forbidden: any later-draw assignment that gives a different act list, or a different value of any frozen selection (majority, last act, count of A, the whole vector). With stateless calls this can happen only through nondeterminism or a harness fault, so it is a representation check. For sampled calls RF4 gives no verdict until a stochastic analogue is proved. BHW's prediction is judged apart and is not RF4's. With prior 1:1 and the tie rule 'own signal', BHW predicts D = 0 at |d| ≥ 2. With prior 2:1 it predicts D = 0 after one informative A. At the empty, balanced and one-ahead histories it predicts D = 1.",
+   "rivals_and_controls": "Fixed readers that ignore the draw even at the empty history: caught by the empty-history control. Members that weigh one salient piece of their own evidence over the counts, as LA2's judge did, or that overweight their own draw (Weizsäcker's 2:1): caught by the |d| = 2 versus |d| = 3 cells. Members responding to the format of the list (Cho and others 2025): freeze the format, and vary it only as a stated factor. Position effects are allowed (law n may depend on n), but members must not vary with anything else. Common training across one family: use several families. Members that fail to parse are separated from members that ignore, by the comprehension probe.",
+   "power_check": "Yes, taken from TR3-0. Choose calls per cell so that D = 0 and D = 0.1 are resolved, and so is the overweighting rival's D at |d| = 2. Members that answer all-or-nothing need few repeats; noisy members need hundreds.",
+   "cost_and_yes": "At temperature 0, about 1,300 calls per model (8 positions × 4 prefixes × 2 draws × 20 repeats). Sampled, up to about 13,000. Each call is a few hundred tokens. Runs happen only on Ren's yes on usage, after predictions, verdict rules, exact values and code are frozen in one commit.",
+   "checkable_here_first": "TR3-0 with simulated agents shaped like language models (all-or-nothing readers, hybrids), plus a dry run with scripted clients, as VD1 and LA2 did.",
+   "risks": "Contamination: models know the urn game and BHW; a cover story and unusual precisions reduce recognition. Prompt and position sensitivity. Differences between reasoning modes. API nondeterminism at temperature 0. Measuring stated reasons instead of acts. Reading a failed timing prediction as RF4 failing."
+  },
+  {
+   "id": "TR3-2 (RF4's premise): reanalysis of existing laboratory cascade data",
+   "law": "Where RF4's premise holds for human choosers. No verdict on RF4.",
+   "setting": "Existing public data, if available: Anderson and Holt 1997; Goeree, Palfrey, Rogers and McKelvey 2007; the thirteen experiments pooled by Weizsäcker 2010; Ziegelmeyer, Koessler, Bracht and Winter 2010.",
+   "unit": "The decision.",
+   "conditions": "Histories classified by BHW's public odds. Given the urn, nature's draw is independent of the history, so own-signal dependence can be estimated without intervention.",
+   "measures": "The share of decisions that read their own draw at cascade histories. How long the reached-history premise lasts once met, that is, cascade breaks. The odds at which subjects abandon their own draw.",
+   "forbidden_operational": "None for RF4. The literature reports overweighting and self-correcting cascades, so human choosers rarely meet the exact premise, and RF4 predicts nothing where the premise fails. The reanalysis places human choosers relative to the premise and fixes the noise model that TR3-0 simulates.",
+   "rivals_and_controls": "Heterogeneity across designs (precision, prior, payoff institution, as in Hung and Plott 2001) is a covariate. Off-path histories are classified by QRE, not by BHW's undefined beliefs.",
+   "power_check": "Depends on the data. Report intervals, with no verdict.",
+   "cost_and_yes": "No model calls. It needs data access and analysis time. American Economic Review papers from about 2005 on deposit data; check whether these papers' data are public.",
+   "checkable_here_first": "Whether the data are public, and the classification code, run on TR3-0's simulated decisions.",
+   "risks": "Data may not be available. Pooling heterogeneous designs. Reading the human baseline as a prediction for models."
+  },
+  {
+   "id": "TR3-3 (RF4, the reading about evaluators): language-model judges in turn, each with its own evidence",
+   "law": "RF4's premise for the record's reading 'evaluators trained on one another's verdicts', here in context, not in training",
+   "setting": "Language models through an API. Judges in sequence grade one item. Each sees its own piece of evidence bearing on the grade and the earlier judges' verdicts. The harness is shared with TR3-1.",
+   "unit": "The call; the run of judges.",
+   "conditions": "Unanimous scripted prefixes of k verdicts, for k from 0 up. Each later judge's evidence is set by the experimenter to support or contradict. Evidence strength and prefix length are crossed. Controls: no prefix; no evidence; and a judge required to report its evidence, a member whose act carries its coupling, measured as exploration only. Calls are stateless.",
+   "measures": "Each judge's dependence on its own evidence, by prefix length. The prefix length from which that dependence reaches 0. How much the verdict list depends on later evidence.",
+   "forbidden_operational": "As in TR3-1. Once every judge from k on is found not to read its own evidence at the reached histories, any difference in the verdict list across later evidence at temperature 0 is forbidden; this is a representation check. The finding that matters is where judges stop reading their own evidence, which is the premise of the reading.",
+   "rivals_and_controls": "Deference to how authority is framed rather than to the count: vary how the earlier verdicts are attributed. Salience of evidence: in LA2 one note in nine turned the judge. Accuracy against ground truth is reported apart, because RF4 predicts nothing of it.",
+   "power_check": "As in TR3-1.",
+   "cost_and_yes": "Comparable to TR3-1. Ren's yes needed.",
+   "checkable_here_first": "Simulated judges in TR3-0's harness.",
+   "risks": "Item contamination. Graded items with known answers mix accuracy with deference. A framing that tells judges to agree would make the test an implementation check."
+  },
+  {
+   "id": "TR6.3-0 (RF6.3): exact orbits on small chains, and the harness for measured responses, done here first",
+   "law": "RF6.3 a-prediction-read-by-what-it-predicts",
+   "setting": "Exact enumeration in a script, with no model calls.",
+   "unit": "One response table r on 0..n and its orbit.",
+   "conditions": "Every self-map of 0..n for n ≤ 4 (3,125 at n = 4). Every order-keeping self-map for n ≤ 6 (1,716 at n = 6). The module's three witnesses. A harness that takes a measured response table and lists its right values, the least of them, the orbit from 0 and the step at which it rests. Simulated publics: memoryless publics of Granovetter thresholds; trend followers; constant publics; identity publics; mixed personas.",
+   "measures": "Whether the orbit from 0 rises, stays at or below every right value, and rests by step n at the least. The most steps needed. The share of maps with no right value. Orbits under order-reversing maps. Each TR6.3-1 verdict rule's outcome on each simulated public.",
+   "forbidden_operational": "An order-keeping map whose orbit from 0 falls, passes a right value, or has not rested by step n would be a harness fault; the Lean proves none exists. Computed in this reading: (1) the chain law holds on all 1,716 order-keeping self-maps of 0..6; (2) for each n ≤ 6 the most steps needed is exactly n (witness r v = min(v+1, n), orbit 0, 1, …, n), so the bound is attained, which the Lean does not state; (3) 279,936 of the 823,543 self-maps of 0..6 have no right value; (4) the reflection 2 − v has 1 right, but its orbit from 0 is 0, 2, 0, 2, …; (5) threshold from 0 stays 0, and from 1 reaches 2; (6) negation alternates.",
+   "rivals_and_controls": "None for the mathematics. Among the simulated publics: a constant public passes every live rule by resting at once, so the offline reading check must catch it. Trend followers fail the memory arm. Identity publics make every forecast right.",
+   "power_check": "No.",
+   "cost_and_yes": "No cost and no yes needed.",
+   "checkable_here_first": "All of it.",
+   "risks": "Reading the bound's tightness or the reflection's orbit as Lean results. They are computations; if a verdict is to rest on them, they must be proved in the core first."
+  },
+  {
+   "id": "TR6.3-1 (RF6.3's premise and bridge): a published count forecast read by a public of language-model agents",
+   "law": "RF6.3; the record's next delta, 'a frozen test of a published forecast's response'",
+   "setting": "Language models through an API, from several families. A public of N = 10 agents, personas with differing payoffs. Each agent reads only a published forecast of the form 'p of the 10 will take part' and chooses whether to take part. The outcome is the count, so the response maps 0..10 into itself by construction and `within` cannot fail. Two framings: (1) joining pays only if enough join, a coordination or bandwagon framing where order-keeping is expected; (2) going pays only if few go, El Farol congestion, where order-reversing is expected.",
+   "unit": "For the offline response: the call. For the live loop: the round, meaning one published forecast and the count it meets.",
+   "conditions": "Offline: every forecast 0..10, fresh stateless agents, repeated at temperature 0 and sampled. This gives the measured response and its premise checks: whether repeats agree (a function of the forecast alone), whether the order is kept or reversed, and which values are right. Live arm A, memoryless: the experimenter publishes the previous count each round, starting from 0 (the Lean's orbit), with stateless agents. The premise holds there by construction, so this arm checks the harness and nondeterminism. Live arm B, with memory: each agent keeps its own conversation across rounds, its past choices and counts, so the premise becomes empirical. Controls: a round with no forecast, to see what the public does unread; a public told nothing of payoffs, the identity rival; a start at a value found right offline (right_rests).",
+   "measures": "The response table and its shape. The right values and the least of them. For each live round, the published value and the count. Where live counts deviate from the offline table. The first round that repeats. Any falls. Any rise above the least right value.",
+   "forbidden_operational": "Conditional on the offline premise, a deterministic order-keeping response at temperature 0. In the live loop from 0, forbidden: a count below the previous round's at any round; a count above a right value found offline; no repeat by round 10; a count that changes after a round whose count equalled its published forecast, at any later round. Under a response found to move every value (congestion with identical personas, the Negating shape), forbidden: any round whose count equals its published forecast. In arm A these can occur only by nondeterminism or a harness fault. In arm B they would show that a public with memory is not the response of the forecast alone, so it lies outside the law's representation. That narrows the readings (self-fulfilling and self-defeating forecasts in actual publics), not the theorems.",
+   "rivals_and_controls": "History-reading publics (trend following, as learning-to-forecast subjects do) pass offline and fail arm B; the contrast between the arms tells them apart. A public deaf to the forecast (a constant response) passes every live rule by resting at once. To catch it, the offline table must vary with the forecast, which is a check that it was read, measured apart from the response's shape; the round with no forecast shows what it does unread. An identity public makes every forecast right; the payoff framing and the identity control catch it. Identical personas give all-or-nothing counts, a threshold map like the module's witnesses, so heterogeneity must be measured before claiming a richer chain.",
+   "power_check": "At temperature 0, verdicts are exact once repeats show determinism. For sampled publics the Lean gives no verdict, because a random response is outside it; a power check is needed only for measures that are reported.",
+   "cost_and_yes": "About 1,100 offline calls (10 agents × 11 forecasts × 2 framings × 5 repeats) and about 1,500 live calls (2 framings × 5 seeds × 11 rounds × 10 agents, plus arm A). Ren's yes on usage needed; freeze first.",
+   "checkable_here_first": "TR6.3-0's harness, run on its simulated publics.",
+   "risks": "Contamination with the El Farol and bandwagon literature. A framing read as an instruction to match the forecast. Thresholds engineered explicitly into personas, which makes the test an implementation check, as TR3's review warned. In arm B, a growing context can change behaviour through its length rather than through memory. Reading passes in arm A as confirming the law."
+  }
+ ],
+ "no_test": [
+  {
+   "law": "RF4: Turns.separates_at, and plan §10 TR3's 'claimed return of reach'",
+   "reason": "separates_at is a conditional transport at a shared history, proved for every law. With stateless members, its only observable failure is an act that is not a function of the member's own signal and the earlier acts. TR3-1's determinism and placebo checks already cover that. No return of reach is claimed. Cascade.lean says 'nothing here acquires or restores a distinction', and the record lists as not shown 'That a pool's later selection keeps a coupling one member's act carries'. So members whose acts must carry their signal test nothing of RF4 beyond that transport. Whether later members or the pool keep what such a member carries is outside the law. Cascade breaking after a revealed signal (Goeree and others' self-correction) may be measured as exploration, with no verdict."
+  },
+  {
+   "law": "RF4: Turns.Copying (readsOnlyActs, reaches_first_only)",
+   "reason": "These are a witness. A copying pool built by instruction can only check the implementation, as TR3's review said of deleting signal access by construction. The copier belongs in TR3-0 as a simulated agent type."
+  },
+  {
+   "law": "RF6.3: no_predictor_right and predictor_iff",
+   "reason": "They are statements about predictors over a class of admitted responses. Each is proved in a line, with choice needed only for predictor_iff's converse. No observation of one public bears on them. Their observable instance, a public that moves every value, is TR6.3-1's congestion framing."
+  },
+  {
+   "law": "RF6.3 witnesses: ThresholdResponse, Negating, Reflecting",
+   "reason": "These are exact values on fixed maps. TR6.3-0 computes them, and nothing in them is empirical."
+  },
+  {
+   "law": "RF6.3's correspondence with performative stability",
+   "reason": "It is a reading: retraining is this orbit only where it returns the outcome exactly. A test of retraining with losses would test the periphery debt the record names ('Probabilistic forecasts and calibration under performativity in the periphery'), not this law."
+  }
+ ],
+ "prior_repo": [
+  {
+   "path": "experiments/README.md, section 'Freezing a test on a trained system'",
+   "found": "Six lessons from LA1 to LA3. Set verdicts only on differences the feedback resolves, shown by a power check before the freeze. Give each verdict rule the law's own quantifier: LA2's 'late' passed by an exact tie because its rule compared two steps where the lock says every step. Simulate readers fixed by what they read, and hybrids. Measure exploration apart from selection. Guard each support rule against contradiction. Add a control wherever a rival passes every contrast.",
+   "relevance": "These govern both designs. RF4's premise is quantified over every member from k on, and its conclusion over every N and every selection. RF6.3's laws are quantified over every step, a deadline of step n, and every right value. Readers fixed by what they read are RF4's cascaded members and RF6.3's memoryless public."
+  },
+  {
+   "path": "experiments/self-rewarding-lock (LA2)",
+   "found": "A Claude Haiku judge read a reference set counted from the loop's earlier selections. Every frozen verdict passed, one by an exact tie. The bridge failed: one note of the loss among nine readers turned the judge. With no note it chose lists in 60 of 60 picks; with one note it chose prose in all 50 picks of late's first reading. It answered 112 of its 119 calls all one way, and its tests took the call as the unit.",
+   "relevance": "This is the nearest prior work for a reader reading a pool of earlier selections. For that model and setting, the reader followed one piece of its own evidence against the counts, the opposite of RF4's premise. Its all-or-nothing calls suggest that language-model members at temperature 0 sit close to the Lean's deterministic form. Its loop, with output read back as input, is a neighbour of RF6.3."
+  },
+  {
+   "path": "experiments/direction-installation (IN1)",
+   "found": "LLM fishers on a GovSim-style lake. Round 2 added one round of public talk. With the bed told, the stronger model kept it in 8 of 10 seasons. With the bed not told, talk kept nothing (0 of 10, read through Flow.unselected_beyond_pool). Round 1 used about 1.2M input tokens for 100 seasons.",
+   "relevance": "Members reading one another added nothing that no member's coupling carried: the pooled bound that RF4 refines. It is also a cost and harness precedent for multi-agent API runs."
+  },
+  {
+   "path": "experiments/valuer-agreement (VD1, VD2)",
+   "found": "Six model families under sixteen standpoints, called through OpenRouter. Every frozen rule of VD1 failed; three of six of VD2's passed. Its boundary says agreement could come from training common to current models, and it reports the theory's own family apart.",
+   "relevance": "Dependence among model readers bears on RF4's reading of copying and of Condorcet. Its multi-family design can be borrowed for TR3-1 and TR6.3-1."
+  },
+  {
+   "path": "experiments/commons-llm-feedback, experiments/commons-llm-feedback-resolved, experiments/commons-llm-feedback-unaided (LA1, LA1b, LA1c)",
+   "found": "LA1's locked side failed where its feedback barely separated the best threshold. With feedback that resolved it, every LA1b verdict passed. LA1c found the best threshold in 29 of 30 locked seeds; the model tried restraint before its results decided.",
+   "relevance": "These are the source of the resolution lesson. A model weighing its prior against what it reads is the analogue of own signal against public evidence."
+  },
+  {
+   "path": "experiments/shaping-what-comes-back (LA3)",
+   "found": "Two of four contrasts passed. Every miss was a seed that never tried shaping; 9 of 30 seeds never tried the other policy.",
+   "relevance": "Measure reading apart from responding. In TR3-1 that means measuring whether the member understood its draw and the history apart from whether it ignored the draw. In TR6.3-1 it means checking that the public reads the forecast apart from the shape of its response."
+  },
+  {
+   "path": "experiments/margin-measured, experiments/break-warnings",
+   "found": "Forecasts frozen before outcomes, in yeast, fish stocks and seabird data. These forecasts are not read by what they forecast.",
+   "relevance": "The non-reflexive contrast, and a model of freeze practice. I searched experiments/*/README.md and the other .md files for cascade, herding, performative and self-fulfilling and found no matching design. No repository experiment publishes a forecast to what it forecasts, and none tests a cascade or herding."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md (findings 6, 7, 14); REVIEW-LEAN.md (findings 12–14); REVIEW-TEXTS.md (finding 7); REVIEW-ROUND2.md (findings 24–27)",
+   "found": "TR3's wording comes from REVIEW-PLAN finding 14: the test 'cannot fail if the cascade is implemented by deleting private-signal access', and it asks to 'Test the claimed restoration separately'. That was written before REVIEW-LEAN finding 13, which says separates_at 'establishes no acquisition or restoration mechanism'. REVIEW-LEAN finding 14 records that the premise quantifies over unreachable histories. REVIEW-TEXTS finding 7 corrected the dropped cascade premise. REVIEW-ROUND2 corrected RF6.3's claims on order reversal, performative stability, continuity and naming.",
+   "relevance": "Shows that TR3's last clause is stale, and where each scope limit came from."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md",
+   "found": "It records the closure of a cascade as a known result: public log-odds pass every private increment, and the constant action then has likelihood ratio one. It records the reflexive-prediction limit as a known diagonal instance, and Condorcet with copying.",
+   "relevance": "The probabilistic forms the tests would need are recorded as known results, not proved in the repository."
+  },
+  {
+   "path": "Lean neighbours: Becoming.WitnessRefinementRuns.copied_witnesses_same; Becoming.Diagonal.gap_unsaid; Becoming.Learning.diagonal_misses",
+   "found": "Copied witnesses add nothing, under hypotheses on support and fault sets. No member of a family of readings says the gap. Every value an extrapolation proposes on its diagonal course misses.",
+   "relevance": "These are the formal neighbours the records relate: copying, and the one-step and course forms of a prediction negated by what it predicts. They carry no tests."
+  }
+ ],
+ "literature": [
+  {
+   "cite": "Bikhchandani, Hirshleifer and Welch 1992, Journal of Political Economy 100(5). Binary state, bounded and conditionally independent private signals. Once public evidence outweighs any private signal, acts stop depending on signals, and later identical acts add no information. Cascades start early, can be wrong, and are fragile.",
+   "relevance": "RF4's record reads this model in deterministic form. Its timing is the prediction that TR3-1 tests apart. Its tie rule and off-path beliefs must be fixed in TR3-0."
+  },
+  {
+   "cite": "Banerjee 1992, Quarterly Journal of Economics 107(3). Herding and inefficiency in a related sequential model.",
+   "relevance": "Named in the record's correspondence; it supplies a second timing model."
+  },
+  {
+   "cite": "Smith and Sørensen 2000, Econometrica 68(2). Cascades need bounded private beliefs. With unbounded beliefs herds may form but no cascade does, and learning is complete in the limit.",
+   "relevance": "For RF4's premise to be reachable, signals must have bounded likelihood ratios, as urn draws do. With continuous unbounded signals RF4 is vacuous."
+  },
+  {
+   "cite": "Anderson and Holt 1997, American Economic Review 87(5). Laboratory urn game with draws of precision 2/3. Rational cascades formed in most periods where an imbalance of earlier decisions arose, and most deviations followed the subject's own draw.",
+   "relevance": "The game for TR3-1, and its human baseline. The exact shares should be read from the paper before citing."
+  },
+  {
+   "cite": "Hung and Plott 2001, American Economic Review 91(5). A replication; institutions that reward a correct majority, or conformity, change how often subjects follow their own signals.",
+   "relevance": "The premise depends on the institution, so the payoff framing must be frozen."
+  },
+  {
+   "cite": "Kübler and Weizsäcker 2004, Review of Economic Studies 71(2). With costly signals, subjects buy too many and reason in short chains, attributing more error to others than to themselves.",
+   "relevance": "A limited-depth rival agent for TR3-0."
+  },
+  {
+   "cite": "Çelen and Kariv 2004, American Economic Review 94(3). Elicited cutoffs separate cascades, where the private signal is ignored, from herds, where all take one action while still reading their signals.",
+   "relevance": "RF4's premise is measured by intervening on signals, or eliciting their use, not by agreement of actions."
+  },
+  {
+   "cite": "Goeree, Palfrey, Rogers and McKelvey 2007, Review of Economic Studies 74(3). In long sequences cascades are ephemeral and self-correcting. Logit quantal response equilibrium fits, with private information overweighted.",
+   "relevance": "Human choosers rarely meet RF4's exact premise. Quantal-response agents belong in TR3-0, and cascade breaking lies outside RF4."
+  },
+  {
+   "cite": "Weizsäcker 2010, American Economic Review 100(5). Pooling 13 experiments, subjects abandon their own signal only when the odds that it is wrong exceed about 2:1, where 1:1 would be rational. A comment by Ziegelmeyer, March and Krügel (2012 working paper) disputes the payoff estimates but keeps the rejection of rational expectations.",
+   "relevance": "The overweighting rival: the |d| = 2 cell discriminates it from BHW. The pooled data are candidates for TR3-2."
+  },
+  {
+   "cite": "Ziegelmeyer, Koessler, Bracht and Winter 2010, Experimental Economics 13(2). The fragility of cascades, studied with elicited beliefs.",
+   "relevance": "Belief elicitation as an independent check on the premise."
+  },
+  {
+   "cite": "Eyster and Rabin 2010, American Economic Journal: Microeconomics 2(4). Naive herding: agents who treat others' acts as independent signals over-count them.",
+   "relevance": "A counting rival for TR3-0."
+  },
+  {
+   "cite": "Acemoglu, Dahleh, Lobel and Ozdaglar 2011, Review of Economic Studies 78(4). Bayesian learning in networks depends on who observes whom and on whether private beliefs are bounded.",
+   "relevance": "The who-reads-whom bound that RF4's record lists as not developed."
+  },
+  {
+   "cite": "DeGroot 1974; Golub and Jackson 2010. Consensus by weighted averaging; a network is wise exactly when its largest influence vanishes.",
+   "relevance": "Outside RF4's scope, as the record says."
+  },
+  {
+   "cite": "Ladha 1992, American Journal of Political Science 36(3); Dietrich and Spiekermann 2013, Mind 122. Jury theorems with correlated votes; independence as a causal condition.",
+   "relevance": "The copying reading. RF4 claims nothing about accuracy."
+  },
+  {
+   "cite": "Jain and Krishnamurthy 2024 (arXiv 2411.01271; IEEE Access 2025). Language-model agents modelled as Bayesian social learners herd, and a control framework can delay the herding.",
+   "relevance": "A modelled, not measured, account of cascades among language-model agents. TR3-1 measures the premise directly."
+  },
+  {
+   "cite": "Arghal, He, Saeedi Bidokhti and Sarkar 2025 (arXiv 2504.02648; ICLR 2026). Cascades as absorbing states in social learning, a planner that steers the agents, and simulations with language models as planner and agents.",
+   "relevance": "The same framing, and simulations to compare with."
+  },
+  {
+   "cite": "Weng, Chen and Wang 2025 (ICLR; the BenchForm benchmark). Conformity of language models under five interaction protocols on BIG-Bench Hard tasks, with majority size and interaction time as factors; personas and reflection reduce it.",
+   "relevance": "Evidence that models defer to majorities. Conformity is not a cascade unless the model's own evidence goes unread, which TR3-1 measures."
+  },
+  {
+   "cite": "Cho, Guntuku and Ungar 2025 (arXiv 2505.21588). Herding in multi-agent language-model systems follows the gap between an agent's own confidence and the confidence it perceives in its peers; the format of peer information changes it.",
+   "relevance": "The presentation of the act list must be frozen."
+  },
+  {
+   "cite": "Horton 2023 (NBER working paper 31122); Aher, Arriaga and Kalai 2023 (ICML). Language models as simulated subjects replicate some classic experiments.",
+   "relevance": "A caution: these results bear on the model as a reading system, not on humans. A search on 31 October 2026 found no published replication of the urn experiment with language-model subjects; search again before freezing."
+  },
+  {
+   "cite": "Merton 1948, Antioch Review 8(2). The self-fulfilling prophecy.",
+   "relevance": "RF6.3's record reading."
+  },
+  {
+   "cite": "Morgenstern 1928 and 1935 (the Holmes–Moriarty problem); Grunberg and Modigliani 1954, Journal of Political Economy 62(6); Simon 1954, Public Opinion Quarterly 18(3). A continuous response that maps a bounded interval into itself has a correct public prediction; that is existence only.",
+   "relevance": "The record's correspondence. Existence is not reaching, and reaching is what the chain law adds."
+  },
+  {
+   "cite": "Tarski 1955, Pacific Journal of Mathematics 5(2). The fixed points of a monotone map on a complete lattice form a complete lattice; on a finite chain, iteration from the bottom reaches the least.",
+   "relevance": "bottom_rests is the finite-chain case."
+  },
+  {
+   "cite": "Granovetter 1978, American Journal of Sociology 83(6). Threshold models: iterating, from zero, the share who act given the last period's share reaches the first equilibrium, and small changes to the distribution of thresholds move it.",
+   "relevance": "An AI reading: this is the closest social-science form of bottom_rests, where his dynamics is the publication of the last outcome. It is a template for TR6.3-1's bandwagon framing."
+  },
+  {
+   "cite": "Arthur 1994, American Economic Review 84(2). El Farol: a forecast that everyone shares defeats itself in a congestion game.",
+   "relevance": "TR6.3-1's congestion framing. With identical agents the response moves every value, the Negating shape."
+  },
+  {
+   "cite": "Diamond and Dybvig 1983, Journal of Political Economy 91(3). Bank runs as one of several equilibria.",
+   "relevance": "The record's reading of the threshold witness."
+  },
+  {
+   "cite": "Perdomo, Zrnic, Mendler-Dünner and Hardt 2020, ICML (PMLR 119). Performative stability is defined by risk minimization on the distribution a deployed model induces. Repeated risk minimization converges at a linear rate to a unique stable point when the distribution map's sensitivity ε is below γ/β (γ-strongly convex, β-smooth loss), and can fail to converge otherwise; a stable point need not be optimal.",
+   "relevance": "Related to Right only where retraining returns the outcome exactly, as the module says. A test of retraining with losses tests a periphery debt."
+  },
+  {
+   "cite": "Miller, Perdomo and Zrnic 2021, ICML; Hardt and Mendler-Dünner 2023, arXiv 2310.16608 (a survey). Optimizing performative risk; the survey places Grunberg, Modigliani and Simon in the performative setting.",
+   "relevance": "Background for the periphery debt."
+  },
+  {
+   "cite": "Oesterheld, Treutlein, Cooper and Hudson 2023, UAI (PMLR 216). Under proper scoring, a predictor maximizing its expected score generally does not report a fixed point. For binary outcomes with bounded influence, some scoring rules make optimal reports arbitrarily close to fixed points; with more than two outcomes this is impossible. Stability-type notions of optimality do lead to reporting fixed points.",
+   "relevance": "A predictor choosing what to publish, rather than republishing the last outcome, is outside RF6.3. Cite it when the reading turns to predictors' incentives."
+  },
+  {
+   "cite": "Hubinger, Jermyn, Treutlein, Hudson and Woolverton 2023, arXiv 2302.00805. Predictive models whose predictions affect the world risk self-fulfilling prophecies.",
+   "relevance": "The AI reading of self-prediction in RF6.3."
+  },
+  {
+   "cite": "van Amsterdam, van Geloven, Krijthe, Ranganath and Cinà 2025, Patterns. Outcome-prediction models used for treatment can become harmful self-fulfilling prophecies while keeping their discrimination after deployment.",
+   "relevance": "Being right about the response to oneself is not being good; the record evaluates nothing."
+  },
+  {
+   "cite": "Hommes, Sonnemans, Tuinstra and van de Velden 2005, Review of Financial Studies 18(3); Heemeijer, Hommes, Sonnemans and Tuinstra 2009, Journal of Economic Dynamics and Control 33(5). In learning-to-forecast experiments, prices converge quickly to the fundamental under negative expectations feedback. Under positive feedback they deviate persistently with slow oscillations, as forecasters coordinate on trend-following.",
+   "relevance": "Human forecasters do not publish the last outcome, so the experimenter must set the publication rule. History-reading publics are the rival that TR6.3-1's memory arm targets."
+  },
+  {
+   "cite": "Rothschild and Malhotra 2014, Research & Politics; Morton, Müller, Page and Torgler 2015, European Economic Review 77 (data on Mendeley Data). Randomized poll information shifted policy support while published probabilities did not. Exit polls known before voting lowered turnout by about 11 points and raised bandwagon voting.",
+   "relevance": "Evidence for the reading of bandwagon as an order-keeping response. Not a test of RF6.3: these publics do not meet its premise, since they respond to many inputs and nothing is republished."
+  }
+ ],
+ "open_questions": [
+  "Should a reached-history form of acts_alike_of_cascade be proved before freezing, together with a stopping-time form? The premise would be needed only at the histories the two worlds reach, and k would be a time fixed by the first k couplings. The current proof suggests this is short. Without it, a natural cascade is an instance only through a constructed law that agrees with the member on the reached histories (an inference).",
+  "Can sampled members get verdicts at all? Only with a stochastic analogue proved in the periphery, such as a total-variation bound, and a frozen tolerance. Otherwise the verdicts for RF4 and RF6.3 are at deterministic decoding only, with determinism shown by repeated calls.",
+  "Which timing model is frozen for TR3-1's premise: BHW with which tie rule and which off-path beliefs, logit quantal response, or overweighting? And is a failure recorded under the probabilistic form's debt, rather than as a test whose forbidden case occurs under plan §11?",
+  "Should TR3's last sentence be dropped, or relabelled as exploration (cascade breaking after a revealed draw)?",
+  "Should RF's owner correct plan §3's pool row and §10's TR3 before the designs land? The row drops the cascade premise; TR3 asks for a prediction RF4 does not make and a return of reach it does not claim. Should §10 gain a TR6 entry for RF6.3?",
+  "For RF6.3: is a test wanted for a law whose theorems are mathematics under its premise? If so, which public: personas with payoffs, and how many families? Is the memory arm the only informative arm?",
+  "Should the core gain the orbit law from any start under an order-keeping response before any verdict from starts other than 0 or a right value? Such a law would rise to the least right value at or above an ascending start, and fall to the greatest at or below a descending one.",
+  "What dependence counts as 'acts alike whatever its own coupling' for an API model at temperature 0 with residual nondeterminism? Which margins does the power check support?",
+  "Which model families, cover stories and reasoning settings should be used? A family other than the theory's own should be reported apart, as VD1 did.",
+  "Human participants are not proposed: the laboratory literature exists, and ethics review and payment are outside the repository's practice. Is the reanalysis of public data (TR3-2) wanted? Its availability is still to be checked.",
+  "Literature check: the 2023–2026 items and several experimental papers were checked by web search on 31 October 2026. Page-level figures, such as Anderson and Holt's shares, were not checked and should be read from the papers before citing."
+ ],
+ "recommendation": "For RF4, design TR3 as a test of where the premise holds, not of the theorem. Build first an exact Turns computation and power check here (TR3-0). Then run a stateless language-model urn game with a scripted prefix and draws set by the experimenter (TR3-1). Its only RF4 verdict should be the conditional one, at deterministic decoding: once every position from k on ignores its draw at the histories reached, no later act or selection differs. BHW's timing should be frozen and judged apart, and the 'return of reach' clause dropped. For RF6.3, design one test, labelled as a test of its premise and bridge. Compute its exact values first (TR6.3-0): every order-keeping map on small chains, the step bound n attained, and the reflection that never reaches its right value. Then measure a language-model public's response to a published count forecast, in bandwagon and congestion framings, and check the live loop's forbidden cases; the memory arm is the informative one. Success there cannot confirm theorems already proved, and failure narrows the readings, not the law."
+}

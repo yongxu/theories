@@ -82,8 +82,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 7 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 15 with propext only and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.",
-    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 development/verification.json，2026年10月7日通过，新鲜构建五个模块，107 项审计；绑定当前字节）：DevelopedResponse 审计 17 项声明，15 项只用 propext，两条能量律另用 Quot.sound，此处引 9 项。内部反审接受此构造；未经人审。"
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 development/verification.json，2026年10月31日通过，新鲜构建五个模块，107 项审计；绑定当前字节）：DevelopedResponse 审计 17 项声明，14 项只用 propext，1 项报告为空，两条能量律另用 Quot.sound，此处引 9 项。内部反审接受此构造；未经人审。"
   },
   "next_delta": {
     "en": "Several transmissible response organizations re-formed differentially in a shared development, with the binding rule and the timing of sampling formed in the history rather than supplied.",
@@ -130,7 +130,7 @@
     {
       "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json",
       "role": "receipt",
-      "sha256": "9a87242192dccd915372b6fdc19a8c5a9a41ce4b9753c43b45ab816717659339",
+      "sha256": "6542465ac984a6e9324e250529cb38020460b895aa15a6c01b3559d5c14d380e",
       "declarations": []
     },
     {
@@ -171,6 +171,10 @@
     {
       "en": "27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.",
       "zh": "2026年10月27日：新增（DF2），同样的承载者未必固定同样的回应：只在采样时机上不同的两段历史得到相同的承载者、门不同的子代与同一检测的相反结果，到孙代的延续及其辅助挽救，以及能量平衡；出自 DEFECTS-FOUND（分诊第 151 行与第 113 行）；研究第 426 节。"
+    },
+    {
+      "en": "31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.",
+      "zh": "2026年10月31日，RV21c（研究第 480 节）：公理报告取自更新的回执；更少，声明相同，无一增加，出自 FormedSelection 10月8日的 set_option 一行。"
     }
   ]
 }

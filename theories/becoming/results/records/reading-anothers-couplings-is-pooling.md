@@ -11,17 +11,18 @@
 ## Laws
 
 1. Reading another's couplings: a formation coupled, besides its own coupling by level, into every condition another couples into, by threshold or by level. (`Becoming.Web.ReadsCouplings`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Two histories the reader couples alike, the reader and the one read both couple alike, so every selection through the pooled coupling of the two is a selection through the reading. (`Becoming.Web.AlikeThrough.of_reads`, `Becoming.Web.SelectsThroughAll.reads`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The reader's coupling closure lies within the pool's, and is exactly the pool's, the union of the two closures, where the one read exchanges with a condition coupled into it; stated first for any relations. (`Becoming.WithinClosure.of_reads`, `Becoming.WithinClosureOf.to_reads`, `Becoming.Flow.CoupledFrom.of_reads`, `Becoming.Flow.withinCoupling_reads`, `Becoming.Flow.withinCoupling_reads_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Flow.withinCoupling_reads_iff`:* derived, a case of `Becoming.«借步之所闭在二所闭»` and `Becoming.«二所闭在借步之所闭»`, with the support `Becoming.Flow.withinCoupling_reads`, `Becoming.WithinClosure.of_reads`, `Becoming.Flow.CoupledFrom.of_reads` and `Becoming.WithinClosureOf.to_reads`, using also `Becoming.«缘在所闭»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 4. Beyond that union a part is selected alike through every reading, the rest of the exchange fixed; so is an act differing only beyond it, the rest following a law reading through the widened coupling, which a law reading through the narrower coupling does. (`Becoming.Flow.unselected_beyond_reads`, `Becoming.Flow.act_unselected_reads`, `Becoming.ExchangeLaw.Through.widen`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 5. Knowing another's law is no coupling: every selection through another's couplings is one through a formation's own exactly when whatever it couples alike the other does, and otherwise some is not; then, under a law reading through the other's coupling, the other's acts are fixed by what the formation couples into. Reading the other's couplings is that fine. (`Becoming.Web.anticipates_iff`, `Becoming.Web.anticipation_misses`, `Becoming.Web.SelectsThrough.read`, `Becoming.ExchangeLaw.Through.anticipated`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Witness: in Clearing the source reading the clearer's couplings selects the cleared and the spared world alike at every step, and reading the dweller's, a formation the act reaches, separates them. (`Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

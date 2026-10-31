@@ -1,0 +1,5 @@
+import LivingOrganizationCorrespondence
+#check @Becoming.LivingOrganizationCorrespondence.presence_reflected
+#check @Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core
+#check @Becoming.LivingOrganizationCorrespondence.entry_then_present
+#check @Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core

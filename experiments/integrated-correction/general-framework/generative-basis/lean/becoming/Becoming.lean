@@ -67,6 +67,7 @@ import Becoming.SelectionTerm
 import Becoming.Reproduction
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.RootForms
 import Becoming.Founding
 import Becoming.Drift
 import Becoming.Space
@@ -106,6 +107,7 @@ import Becoming.Presence
 import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
+import Becoming.BlanketWeights
 import Becoming.LumpedSeeking
 import Becoming.FreeEnergyCounting
 import Becoming.ModelStatements
@@ -136,6 +138,7 @@ import Becoming.EdgeClosure
 import Becoming.SeedReach
 import Becoming.ScopedReach
 import Becoming.Boundaries
+import Becoming.ConveyanceBoundaries
 import Becoming.Weightings
 import Becoming.Relevance
 import Becoming.Testing
@@ -320,6 +323,7 @@ import Becoming.LastChange
 import Becoming.LimitVerification
 import Becoming.SelectionGap
 import Becoming.SelectionReach
+import Becoming.UnitMatchings
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
@@ -355,6 +359,7 @@ import Becoming.GrammarRegularity
 import Becoming.ProcessRepresentation
 import Becoming.GrammarScope
 import Becoming.GrammarCases
+import Becoming.GrammarCrossing
 import Becoming.GrammarPath
 import Becoming.SignificanceStatements
 
@@ -905,6 +910,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   wherever a lineage founded higher leaves offspring beside a lower one with members. Witnesses:
   selection within the keeping group outweighed, and outweighing; mixed groups regrouped by
   descent falling back, and lineages keeping what ending selected.
+* `Becoming.RootForms` (L1): rows stated on the grammar under named hypotheses. A root form's
+  statement names only grammar terms and its own hypotheses, each a definition naming no model and
+  no amount, and each shown needed by a countermodel over one point with its fit; a recovery at the
+  row's own type proves the row through the form, tied to it by an `rfl` certificate. Where giving
+  lies within giving from a region and listed descent within giving, a listing wholly outside the
+  region has no listed offspring (`RootForms.outside_leaves_no_offspring`), and
+  `GroupEnding.Flow.all_end` is that form at one step, each hypothesis met by definitions alone
+  (`RootForms.all_end_at_model`). Where what comes to stand is given to, dependence is inherited
+  along descent and nothing descended from depends before the step, nothing coming to stand
+  depends after it (`RootForms.descent_forms_no_dependence`): the relational part of
+  `Flow.no_new_dependence`, whose balance meets "given to" only through amount reasoning
+  (`RootForms.no_new_dependence_at_model`). The boundary record places these rows by them.
 * `Becoming.Founding` (L1): selection within a whole, a lineage confined to it, and what a
   founding carries. Where a family of conditions ran into excess under the coupled gate, every
   member of a later generation of descent is the offspring of a member that did not depend on
@@ -1653,6 +1670,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   conditioning on it (`Blanket.point_is_restrict`), under which it is of least surprisal
   (`Blanket.least_surprisal`); a listed outcome is forbidden exactly where its weight is nothing
   (`Blanket.forbids_iff`). A leaf importing `Becoming.ConditionalWeights` (board item UE18).
+* `Becoming.BlanketWeights` (L1): the free-energy principle's statistical blanket, conditional
+  independence given the blanket at a steady state, and what holds it. On natural weights of internal,
+  blanket and external states, independence given the blanket on the theory's conditioning
+  (`BlanketWeights.IndependentGiven`) is the cross form on the listed states, the converse on listings
+  listing each state once (`BlanketWeights.independentGiven_of_crossFormOn`,
+  `BlanketWeights.crossFormOn_of_independentGiven`),
+  `ConditionalWeights.restrict_independent` its case at one blanket state
+  (`BlanketWeights.restrict_independent_case`). Where the internal moves are in detailed balance with a
+  positive weighting, within one closure (`«所闭»`) of moves present at every external state, each such
+  move's rate ratio reading no external state, the weighting is in cross form
+  (`BlanketWeights.crossForm_of_detailedBalance`), Kelly's proof at the internal site, no steady state
+  assumed. Witnesses: a lag relay whose steady weights are not independent given the blanket
+  (`BlanketWeights.LagRelay.not_independentGiven`), a turning chain circulating with them independent
+  (`BlanketWeights.Turning.independentGiven`), moves reading the external state
+  (`BlanketWeights.MovesReadExternal.not_crossForm`), a synchronous kernel whose factors read, by its
+  construction, what the blanketed law lets them read, independent when exact and not with a miss (`BlanketWeights.SynchronousCopy.exact_independentGiven`,
+  `BlanketWeights.SynchronousCopy.noisy_not_independentGiven`), and a blanketed run's occupation
+  weighting (`BlanketWeights.Cycle.not_crossForm`). A leaf importing `Becoming.Blanket` and
+  `Becoming.Flow` (board item UE26); the linear case is the periphery's `LinearBlankets`.
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
@@ -2574,6 +2610,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   that rests, leaves a sentence undecided: the gap reappears as undecidedness. The run of a
   monotone map from the undecided value rests from its first step, so the gap of
   `Diagonal.gap_unsaid` needs a map that is not monotone.
+* `Becoming.UnitMatchings` (L1): amounts, the root's second sort, by their interface: balance is
+  represented by selected matchings of units, not derived from the unfolding. A selected matching of
+  a frame (`UnitMatchings.FrameMatch`), a bijection of its in-positions with its out-positions given
+  as data, forces equal counts by pigeonhole through `GrammarLaws.revisits_within`, with no
+  decidability (`UnitMatchings.FrameMatch.eq`), and each out-position has one in-position sent to it
+  (`UnitMatchings.FrameMatch.predecessor_unique`); a flow over a web has one at every step and
+  condition exactly where it balances, the converse pairing by position with no choice
+  (`UnitMatchings.frameMatchings_iff_balances`). In a one-to-one pairing whose first block on one
+  side is longer than the first block on the other, some member of the other side's rest is related
+  to a member of that block (`UnitMatchings.crossing_edge`); so in a balanced flow, where a family
+  listed without repetition rises past the inflow of a family containing it, one formation taking
+  part relates, at every pairing of its exchange, a unit it gives the risen family to another input
+  (`UnitMatchings.rise_crossing_weak`), with beyond's inputs source-minimal to one taken from the
+  rest (`UnitMatchings.rise_crossing_strong`). At a formation, beyond's units source-minimal, every
+  pairing has as many endings as it takes beyond what it gives (`UnitMatchings.endings_count`); on a
+  family a present formation dissipates on, the source-minimal count is zero and, where it takes,
+  the residual count positive. The census form (`Flow.balances_iff_units`, `«对之程»`) is cited, not
+  restated; the residual units are accounting, not actual boundary traffic, and the frame matchings
+  are not joined to the exchange pairings.
 * `Becoming.Junctures` (L1): where a configuration can still be had again and where it is lost.
   A juncture for `s` has a step after which `s` can still be had and one after which it cannot.
   Every loss of a returning `s` passes a juncture on its course, up to double negation; where it
@@ -2681,6 +2736,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   N_std. Sub-true along affecting, the presupposition compares every part within the reach
   closure as the continuation condition does, with no invariance. Covering, sub-truth and invariance are
   hypotheses. The readings are the AI's, adopted on Ren's delegation of 15 October 2026.
+* `Becoming.ConveyanceBoundaries` (L2): the World's cut on the root, and 04 §1's law of crossing on
+  07 §4.1's boundaries (board item BD2). `Flow.Cut` is the grammar's `«不出»` at a valuation's
+  relation, by definition (`Flow.cut_iff_notGoingOut`), so a region closed under the relation is a
+  cut and a cut is closed where membership is stable (`Flow.cut_of_closedUnder`,
+  `Flow.closedUnder_of_cut`); conveyance's relation is symmetric, so along it nothing goes out of a
+  region exactly where nothing comes in (`Flow.conveyance_symm`, `Flow.cut_iff_notComingIn`). Under
+  the premises of `Flow.region_not_a_cut` a continuing family's
+  region is no boundary of any event's self along conveyance (`Flow.region_no_boundary`), and not
+  every member's event has its closure along conveyance within the family
+  (`Flow.closures_not_within_region`); in the clearing the resource's region is no boundary along
+  conveyance nor along living on (`Clearing.resource_no_boundary`). A leaf, the World's case of the
+  crossing laws; the cut keeps its definition in `Becoming.Standpoints`.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
@@ -4213,10 +4280,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
+* `Becoming.GrammarCrossing` (L1): not going out of a region (`«不出»`), for every carrier, relation
+  and region (board item BD2). A closed region is not gone out of (`«闭则不出»`), an occurrence's closure
+  among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going out of a
+  region is exactly the closedness of what is not outside it, with no decision
+  (`«不出当且仅当不外者闭»`); the two coincide where membership is stable (`«不外者内则不出当且仅当闭»`),
+  and that they coincide for every relation and region is exactly excluded middle, a lemma of that
+  law (`«不出皆闭当且仅当排中»`). Nothing comes into a region along a relation exactly where nothing
+  goes out of what lies outside it (`«逆之不出当且仅当外者不出»`); along a symmetric relation nothing
+  goes out exactly where nothing comes in (`«对称则不出当且仅当逆不出»`), and some relation that is not
+  symmetric has a closed region come into (`«闭而有入之例»`). A line under any class from a member to
+  something outside means the region is not one nothing goes out of (`«内至外之线则非不出»`); where
+  every step keeps to the region or goes from a member to something outside, the line has a step going
+  out, placed on the line: `«两端分则中有标»` with keeping to the region as what the ends fail
+  (`«内至外之线有出步»`), every step being of one kind or the other where membership is decided
+  (`«定则内至外之线有出步»`). `«所经必同»` (`Becoming.GrammarPath`) is proved from the last.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
-  start (`«所经必同»`, `«所经不同则不及»`). Under a constant class, everything downstream of anything
+  start (`«所经必同»`, proved from a step going out of the region, `Becoming.GrammarCrossing`;
+  `«所经不同则不及»`). Under a constant class, everything downstream of anything
   alike to a member whose effects the class holds (`«所缘同于»`) is alike to it and on a line under the
   class (`«常闭则后皆续»`), and, given constancy, holding the effects is equivalent to that
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,

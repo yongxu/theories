@@ -1,0 +1,385 @@
+Becoming.ResponseLearning.response_within_stock : ∀ (s : Becoming.RouteFormation.Apparatus)
+  (e : Becoming.CodeAcquisition.Expr) {out : List Bool} {left : Nat},
+  Becoming.RouteFormation.respond s e = some (out, left) → left ≤ s.stock
+@Becoming.ResponseLearning.sender_kept : ∀ {rem ss ds : Nat}, rem ≤ ss → rem + (ds + (ss - rem)) = ss + ds
+Becoming.ResponseLearning.regroup : ∀ (a b c d : Nat), a + b + c + d = a + b + (c + d)
+Becoming.ResponseLearning.sendWith_stock : ∀ (e : Becoming.CodeAcquisition.Expr) (o : Option (List Bool × Nat))
+  (x : Becoming.ResponseLearning.Teaching),
+  (∀ (out : List Bool) (rem : Nat), o = some (out, rem) → rem ≤ x.sender.stock) →
+    Becoming.ResponseLearning.joint (Becoming.ResponseLearning.sendWith o e x) = Becoming.ResponseLearning.joint x
+Becoming.ResponseLearning.send_stock : ∀ (e : Becoming.CodeAcquisition.Expr) (x : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.joint (Becoming.ResponseLearning.send e x) = Becoming.ResponseLearning.joint x
+Becoming.ResponseLearning.lesson_stock : ∀ (es : List Becoming.CodeAcquisition.Expr)
+  (x : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.joint (Becoming.ResponseLearning.lesson es x) = Becoming.ResponseLearning.joint x
+Becoming.ResponseLearning.send_delivers : ∀ (e : Becoming.CodeAcquisition.Expr)
+  (x : Becoming.ResponseLearning.Teaching),
+  x.receiver.blocked = false →
+    1 ≤ x.receiver.stock →
+      ∀ (out : List Bool) (remaining : Nat),
+        Becoming.RouteFormation.respond x.sender e = some (out, remaining) →
+          (Becoming.ResponseLearning.send e x).receiver.samples = x.receiver.samples ++ [(e, out)] ∧
+            (Becoming.ResponseLearning.send e x).sender.stock = remaining
+Becoming.ResponseLearning.send_no_response : ∀ (e : Becoming.CodeAcquisition.Expr)
+  (x : Becoming.ResponseLearning.Teaching),
+  Becoming.RouteFormation.respond x.sender e = none →
+    (Becoming.ResponseLearning.send e x).receiver.samples = x.receiver.samples
+@Becoming.ResponseLearning.respond_congr : ∀ {s s' : Becoming.RouteFormation.Apparatus}
+  (e : Becoming.CodeAcquisition.Expr),
+  s.installed = s'.installed →
+    s.stock = s'.stock → Becoming.RouteFormation.respond s e = Becoming.RouteFormation.respond s' e
+Becoming.ResponseLearning.sendWith_interface : ∀ (e : Becoming.CodeAcquisition.Expr) (o : Option (List Bool × Nat))
+  (x y : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.SameInterface x y →
+    Becoming.ResponseLearning.SameInterface (Becoming.ResponseLearning.sendWith o e x)
+      (Becoming.ResponseLearning.sendWith o e y)
+Becoming.ResponseLearning.send_interface : ∀ (e : Becoming.CodeAcquisition.Expr)
+  (x y : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.SameInterface x y →
+    Becoming.ResponseLearning.SameInterface (Becoming.ResponseLearning.send e x) (Becoming.ResponseLearning.send e y)
+Becoming.ResponseLearning.lesson_interface : ∀ (es : List Becoming.CodeAcquisition.Expr)
+  (x y : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.SameInterface x y →
+    Becoming.ResponseLearning.SameInterface (Becoming.ResponseLearning.lesson es x)
+      (Becoming.ResponseLearning.lesson es y)
+Becoming.ResponseLearning.learn_through_interface : ∀ (t : Becoming.RouteFormation.Apparatus)
+  (p : Becoming.RouteFormation.Program),
+  t.installed = some p →
+    ∀ (stock parts : Nat) (es : List Becoming.CodeAcquisition.Expr),
+      Becoming.ResponseLearning.learn t stock parts es =
+        Becoming.ResponseLearning.learn (Becoming.ResponseLearning.source p t.stock) stock parts es
+Becoming.ResponseLearning.basic_lesson_records : ∀ (p : Becoming.RouteFormation.Program) (n : Nat),
+  p.route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+    7 ≤ n →
+      (Becoming.ResponseLearning.lesson Becoming.ResponseLearning.basic
+            { sender := Becoming.ResponseLearning.source p n,
+              receiver := Becoming.ResponseLearning.blank 25 8 }).receiver =
+        have __src := Becoming.ResponseLearning.blank 22 8;
+        { wires := __src.wires, installed := __src.installed, stock := __src.stock, drawn := 3, parts := __src.parts,
+          usedParts := __src.usedParts, blocked := __src.blocked, samples := Becoming.ResponseLearning.programRecords p,
+          attempts := __src.attempts }
+Becoming.ResponseLearning.reconstructs_program : ∀ (p : Becoming.RouteFormation.Program) (n : Nat),
+  p.route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+    p.first ≠ p.second →
+      7 ≤ n →
+        (Becoming.ResponseLearning.learn (Becoming.ResponseLearning.source p n) 25 8).installed = some p ∧
+          7 ≤ (Becoming.ResponseLearning.learn (Becoming.ResponseLearning.source p n) 25 8).stock
+Becoming.ResponseLearning.successor_keeps : ∀ (t : Becoming.RouteFormation.Apparatus)
+  (p : Becoming.RouteFormation.Program),
+  t.installed = some p →
+    p.route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+      p.first ≠ p.second →
+        7 ≤ t.stock →
+          (Becoming.ResponseLearning.successor t).installed = some p ∧ 7 ≤ (Becoming.ResponseLearning.successor t).stock
+Becoming.ResponseLearning.every_cohort_holds : ∀ (p : Becoming.RouteFormation.Program),
+  p.route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+    p.first ≠ p.second →
+      ∀ (n : Nat),
+        (Becoming.ResponseLearning.cohort p n).installed = some p ∧ 7 ≤ (Becoming.ResponseLearning.cohort p n).stock
+Becoming.ResponseLearning.routeFor_generated : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.RouteFormation.routeFor c ∈ Becoming.RouteFormation.generatedRoutes 2
+Becoming.ResponseLearning.every_cohort_corresponds : ∀ (c : Becoming.CodeAcquisition.Code),
+  c.first ≠ c.second →
+    ∀ (n : Nat) (e : Becoming.CodeAcquisition.Expr),
+      ∃ p,
+        (Becoming.ResponseLearning.cohort (Becoming.RouteFormation.programFor c) n).installed = some p ∧
+          Becoming.RouteFormation.operate p e = Becoming.CodeAcquisition.eval c e
+Becoming.ResponseLearning.formed_teacher_teaches : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 25 4)).installed =
+    some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual) ∧
+  (Becoming.ResponseLearning.learn (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 25 4)) 25
+        8).installed =
+    some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+Becoming.ResponseLearning.execution_stock_interrupts : (Becoming.ResponseLearning.lesson Becoming.ResponseLearning.basic
+          { sender := Becoming.RouteFormation.developed,
+            receiver := Becoming.ResponseLearning.blank 25 8 }).receiver.samples =
+    [(Becoming.CodeAcquisition.p0, [false]), (Becoming.CodeAcquisition.p1, [true])] ∧
+  Becoming.ResponseLearning.firstLearner.installed = none ∧ Becoming.ResponseLearning.firstLearner.blocked = true
+Becoming.ResponseLearning.teacher_changes_evidence : (Becoming.ResponseLearning.lesson Becoming.ResponseLearning.basic
+          { sender := Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 7,
+            receiver := Becoming.ResponseLearning.blank 25 8 }).receiver.samples =
+    Becoming.ResponseLearning.programRecords Becoming.ResponseLearning.selective ∧
+  Becoming.ResponseLearning.programRecords Becoming.ResponseLearning.selective ≠
+    Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual
+Becoming.ResponseLearning.faithful_loses_distinction : (Becoming.ResponseLearning.learn
+        (Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 7) 25 8).installed =
+    some Becoming.ResponseLearning.selective ∧
+  Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.ResponseLearning.joint00 =
+      Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.CodeAcquisition.orderProbe ∧
+    Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.ResponseLearning.joint00 ≠
+      Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.orderProbe
+Becoming.ResponseLearning.stock_keeps_content : (Becoming.ResponseLearning.learn
+      (Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 70) 100 80).installed =
+  some Becoming.ResponseLearning.selective
+Becoming.ResponseLearning.lessons_change_program : (Becoming.ResponseLearning.learn
+        (Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11) 25
+        8).installed =
+    some Becoming.RouteFormation.duplicated ∧
+  (Becoming.ResponseLearning.learn
+        (Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11) 25
+        8 Becoming.ResponseLearning.extended).installed =
+    some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+Becoming.ResponseLearning.peer_repairs : Becoming.ResponseLearning.misleadingPeer.installed =
+    some Becoming.RouteFormation.duplicated ∧
+  Becoming.ResponseLearning.revisedPeer.installed =
+      some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) ∧
+    Becoming.RouteFormation.respond Becoming.ResponseLearning.revisedPeer Becoming.RouteFormation.further =
+      some ([false, false, false], 5)
+Becoming.ResponseLearning.peer_keeps_error_example : (Becoming.RouteFormation.reconsider
+      (Becoming.ResponseLearning.send Becoming.CodeAcquisition.novel
+          { sender := Becoming.ResponseLearning.source Becoming.RouteFormation.duplicated 5,
+            receiver := Becoming.ResponseLearning.misleadingPeer }).receiver).installed =
+  some Becoming.RouteFormation.duplicated
+Becoming.ResponseLearning.short_receiver_not_repaired : (Becoming.ResponseLearning.learn
+      (Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11) 5 8
+      Becoming.ResponseLearning.extended).installed =
+  none
+Becoming.ResponseLearning.distinction_lost_every_cohort : ∀ (n : Nat),
+  (Becoming.ResponseLearning.cohort Becoming.ResponseLearning.selective n).installed =
+      some Becoming.ResponseLearning.selective ∧
+    Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.ResponseLearning.joint00 =
+        Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.CodeAcquisition.orderProbe ∧
+      Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.ResponseLearning.joint00 ≠
+        Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.orderProbe
+Becoming.ResponseLearning.reconstruction_teaches_later : (Becoming.ResponseLearning.successor
+      (Becoming.ResponseLearning.learn (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 25 4)) 25
+        8)).installed =
+  some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+Becoming.ResponseLearning.duplicate_reconstructed : ∀ (t : Becoming.RouteFormation.Apparatus),
+  t.installed = some Becoming.RouteFormation.duplicated →
+    7 ≤ t.stock →
+      (Becoming.ResponseLearning.successor t).installed = some Becoming.RouteFormation.duplicated ∧
+        7 ≤ (Becoming.ResponseLearning.successor t).stock
+Becoming.ResponseLearning.limited_changes_then_stays : ∀ (n : Nat),
+  (Becoming.ResponseLearning.limitedCohort (n + 1)).installed = some Becoming.RouteFormation.duplicated ∧
+    7 ≤ (Becoming.ResponseLearning.limitedCohort (n + 1)).stock
+Becoming.ResponseLearning.limited_fails_task : ∀ (n : Nat),
+  (Becoming.ResponseLearning.limitedCohort (n + 1)).installed = some Becoming.RouteFormation.duplicated ∧
+    Becoming.RouteFormation.operate Becoming.RouteFormation.duplicated Becoming.CodeAcquisition.novel ≠
+      Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel
+Becoming.ResponseLearning.lesson_foldl : ∀ (es : List Becoming.CodeAcquisition.Expr)
+  (x : Becoming.ResponseLearning.Teaching),
+  Becoming.ResponseLearning.lesson es x = List.foldl Becoming.ResponseLearning.deliver x es
+Becoming.ResponseLearning.lesson_trace : ∀ (es : List Becoming.CodeAcquisition.Expr)
+  (x : Becoming.ResponseLearning.Teaching),
+  Generative.Trace Becoming.ResponseLearning.queryProcess x es (Becoming.ResponseLearning.lesson es x)
+@Becoming.ResponseLearning.trace_iff : ∀ {x y : Becoming.ResponseLearning.Teaching}
+  {es : List Becoming.CodeAcquisition.Expr},
+  Generative.Trace Becoming.ResponseLearning.queryProcess x es y ↔ y = Becoming.ResponseLearning.lesson es x
+@Becoming.ResponseLearning.course_records_follow_sender : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      { sender := Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 7,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    y.receiver.samples = Becoming.ResponseLearning.programRecords Becoming.ResponseLearning.selective ∧
+      Becoming.ResponseLearning.programRecords Becoming.ResponseLearning.selective ≠
+        Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual
+@Becoming.ResponseLearning.basic_course_records : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 7,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    y.receiver.samples = Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed
+@Becoming.ResponseLearning.course_record_fits_departing : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 7,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    Becoming.RouteFormation.fits Becoming.RouteFormation.duplicated y.receiver.samples = true ∧
+      Becoming.RouteFormation.operate Becoming.RouteFormation.duplicated Becoming.CodeAcquisition.novel ≠
+        Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel
+@Becoming.ResponseLearning.extended_course_records : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.extended y →
+    y.receiver.samples =
+      Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+        [(Becoming.CodeAcquisition.novel,
+            Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)]
+@Becoming.ResponseLearning.extended_course_separates : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.extended y →
+    Becoming.RouteFormation.fits Becoming.RouteFormation.duplicated y.receiver.samples = false ∧
+      Becoming.RouteFormation.fits (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+          y.receiver.samples =
+        true
+@Becoming.ResponseLearning.step_delivers : ∀ {x y : Becoming.ResponseLearning.Teaching}
+  {e : Becoming.CodeAcquisition.Expr},
+  Becoming.ResponseLearning.queryProcess.step x e y →
+    x.receiver.blocked = false →
+      1 ≤ x.receiver.stock →
+        ∀ {out : List Bool} {remaining : Nat},
+          Becoming.RouteFormation.respond x.sender e = some (out, remaining) →
+            y.receiver.samples = x.receiver.samples ++ [(e, out)] ∧ y.sender.stock = remaining
+@Becoming.ResponseLearning.step_no_response : ∀ {x y : Becoming.ResponseLearning.Teaching}
+  {e : Becoming.CodeAcquisition.Expr},
+  Becoming.ResponseLearning.queryProcess.step x e y →
+    Becoming.RouteFormation.respond x.sender e = none → y.receiver.samples = x.receiver.samples
+@Becoming.ResponseLearning.course_stock : ∀ {x y : Becoming.ResponseLearning.Teaching}
+  {es : List Becoming.CodeAcquisition.Expr},
+  Generative.Trace Becoming.ResponseLearning.queryProcess x es y →
+    Becoming.ResponseLearning.joint y = Becoming.ResponseLearning.joint x
+@Becoming.ResponseLearning.course_without_composite : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual) 4,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      [Becoming.CodeAcquisition.p0, Becoming.CodeAcquisition.p1] y →
+    Becoming.CodeAcquisition.interpretationFromRecords y.receiver.samples = none
+@Becoming.ResponseLearning.course_reversed_composite : ∀ {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      { sender := Becoming.ResponseLearning.source { first := false, second := true, route := [true, false] } 7,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    Becoming.CodeAcquisition.interpretationFromRecords y.receiver.samples = some Becoming.CodeAcquisition.switched
+@Becoming.ResponseLearning.learned_selective_stock : ∀ {y : Becoming.ResponseLearning.Teaching}
+  {z : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      { sender := Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 70,
+        receiver := Becoming.ResponseLearning.blank 100 80 }
+      Becoming.ResponseLearning.basic y →
+    Generative.Trace Becoming.RouteFormation.formationProcess y.receiver [Becoming.RouteFormation.FormationMove.develop]
+        z →
+      z.installed = some Becoming.ResponseLearning.selective
+@Becoming.ResponseLearning.learned_selective_loses_distinction : ∀ {y : Becoming.ResponseLearning.Teaching}
+  {z : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      { sender := Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 7,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    Generative.Trace Becoming.RouteFormation.formationProcess y.receiver [Becoming.RouteFormation.FormationMove.develop]
+        z →
+      z.installed = some Becoming.ResponseLearning.selective ∧
+        Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.ResponseLearning.joint00 =
+            Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.CodeAcquisition.orderProbe ∧
+          Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.ResponseLearning.joint00 ≠
+            Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.orderProbe
+@Becoming.ResponseLearning.learned_depends_on_course : ∀ {y y' : Becoming.ResponseLearning.Teaching}
+  {z z' : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11,
+        receiver := Becoming.ResponseLearning.blank 25 8 }
+      Becoming.ResponseLearning.basic y →
+    Generative.Trace Becoming.RouteFormation.formationProcess y.receiver [Becoming.RouteFormation.FormationMove.develop]
+        z →
+      Generative.Trace Becoming.ResponseLearning.queryProcess
+          {
+            sender :=
+              Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+                11,
+            receiver := Becoming.ResponseLearning.blank 25 8 }
+          Becoming.ResponseLearning.extended y' →
+        Generative.Trace Becoming.RouteFormation.formationProcess y'.receiver
+            [Becoming.RouteFormation.FormationMove.develop] z' →
+          z.installed = some Becoming.RouteFormation.duplicated ∧
+            z'.installed = some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+@Becoming.ResponseLearning.learned_blocked_short : ∀ {y : Becoming.ResponseLearning.Teaching}
+  {z : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.ResponseLearning.queryProcess
+      {
+        sender :=
+          Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11,
+        receiver := Becoming.ResponseLearning.blank 5 8 }
+      Becoming.ResponseLearning.extended y →
+    Generative.Trace Becoming.RouteFormation.formationProcess y.receiver [Becoming.RouteFormation.FormationMove.develop]
+        z →
+      z.installed = none
+Becoming.ResponseLearning.succession_step_keeps : ∀
+  (r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)) {p : Becoming.RouteFormation.Program}
+  (n : Nat),
+  (r.state n).installed = some p →
+    p.route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+      p.first ≠ p.second → 7 ≤ (r.state n).stock → (r.state (n + 1)).installed = some p ∧ 7 ≤ (r.state (n + 1)).stock
+Becoming.ResponseLearning.orbit_cohort : ∀ (p : Becoming.RouteFormation.Program) (n : Nat),
+  Becoming.Law.orbit Becoming.ResponseLearning.successor (Becoming.ResponseLearning.source p 7) n =
+    Becoming.ResponseLearning.cohort p n
+Becoming.ResponseLearning.orbit_limited : ∀ (n : Nat),
+  Becoming.Law.orbit Becoming.ResponseLearning.successor
+      (Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 7) n =
+    Becoming.ResponseLearning.limitedCohort n
+@Becoming.ResponseLearning.run_cohort : ∀ {p : Becoming.RouteFormation.Program}
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  r.state 0 = Becoming.ResponseLearning.source p 7 → ∀ (n : Nat), r.state n = Becoming.ResponseLearning.cohort p n
+@Becoming.ResponseLearning.succession_keeps_correspondence : ∀ {c : Becoming.CodeAcquisition.Code}
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  r.state 0 = Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor c) 7 →
+    c.first ≠ c.second →
+      ∀ (n : Nat) (e : Becoming.CodeAcquisition.Expr),
+        ∃ p, (r.state n).installed = some p ∧ Becoming.RouteFormation.operate p e = Becoming.CodeAcquisition.eval c e
+@Becoming.ResponseLearning.succession_keeps_lost_distinction : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  r.state 0 = Becoming.ResponseLearning.source Becoming.ResponseLearning.selective 7 →
+    ∀ (n : Nat),
+      (r.state n).installed = some Becoming.ResponseLearning.selective ∧
+        Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.ResponseLearning.joint00 =
+            Becoming.RouteFormation.operate Becoming.ResponseLearning.selective Becoming.CodeAcquisition.orderProbe ∧
+          Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.ResponseLearning.joint00 ≠
+            Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.orderProbe
+@Becoming.ResponseLearning.succession_stabilizes_change : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  r.state 0 =
+      Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 7 →
+    ∀ (n : Nat),
+      (r.state (n + 1)).installed = some Becoming.RouteFormation.duplicated ∧
+        Becoming.RouteFormation.operate Becoming.RouteFormation.duplicated Becoming.CodeAcquisition.novel ≠
+          Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel
+@Becoming.ResponseLearning.formed_succession_teaches : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 25 4)
+      [Becoming.RouteFormation.FormationMove.develop] (r.state 0) →
+    (r.state 0).installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual) ∧
+      (r.state 1).installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+@Becoming.ResponseLearning.formed_succession_second : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 25 4)
+      [Becoming.RouteFormation.FormationMove.develop] (r.state 0) →
+    (r.state 2).installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+@Becoming.ResponseLearning.execution_stock_succession_blocked : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)}
+  {y : Becoming.ResponseLearning.Teaching},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] (r.state 0) →
+    Generative.Trace Becoming.ResponseLearning.queryProcess
+        { sender := r.state 0, receiver := Becoming.ResponseLearning.blank 25 8 } Becoming.ResponseLearning.basic y →
+      y.receiver.samples = [(Becoming.CodeAcquisition.p0, [false]), (Becoming.CodeAcquisition.p1, [true])] ∧
+        (r.state 1).installed = none ∧ (r.state 1).blocked = true
+@Becoming.ResponseLearning.peer_repair : ∀ {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)}
+  {y : Becoming.ResponseLearning.Teaching} {z : Becoming.RouteFormation.Apparatus},
+  r.state 0 =
+      Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11 →
+    Generative.Trace Becoming.ResponseLearning.queryProcess
+        {
+          sender :=
+            Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 4,
+          receiver := r.state 1 }
+        [Becoming.CodeAcquisition.novel] y →
+      Generative.Trace Becoming.RouteFormation.formationProcess y.receiver
+          [Becoming.RouteFormation.FormationMove.reconsider] z →
+        (r.state 1).installed = some Becoming.RouteFormation.duplicated ∧
+          z.installed = some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) ∧
+            Becoming.RouteFormation.respond z Becoming.RouteFormation.further = some ([false, false, false], 5)
+@Becoming.ResponseLearning.peer_keeps_error : ∀
+  {r : Becoming.Run (Becoming.Law.process Becoming.ResponseLearning.successor)} {y : Becoming.ResponseLearning.Teaching}
+  {z : Becoming.RouteFormation.Apparatus},
+  r.state 0 =
+      Becoming.ResponseLearning.source (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed) 11 →
+    Generative.Trace Becoming.ResponseLearning.queryProcess
+        { sender := Becoming.ResponseLearning.source Becoming.RouteFormation.duplicated 5, receiver := r.state 1 }
+        [Becoming.CodeAcquisition.novel] y →
+      Generative.Trace Becoming.RouteFormation.formationProcess y.receiver
+          [Becoming.RouteFormation.FormationMove.reconsider] z →
+        z.installed = some Becoming.RouteFormation.duplicated

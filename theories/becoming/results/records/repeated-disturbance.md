@@ -11,9 +11,9 @@
 ## Laws
 
 1. A formation's gift with the part's gaps is its gift with none and the part's gap; a disturbance of E at a marked step adds E to E times the count. (`Becoming.carriedGive_with_gaps`, `Becoming.count_step`, `Becoming.one_le_pow_add`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. With starting gaps at most D, strengths into each condition at most M and none at unmarked steps, part gaps at most E at disturbed steps and none else, the carried amount is at most (D + E d)(1 + M)^a; with no disturbance it is the rate D (1 + M)^a. (`Becoming.carried_le_disturbed`, `Becoming.carried_le_count`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,15 +11,16 @@
 ## Laws
 
 1. With memory, a formation gives at step n exactly where every formation within n waits of it gave at the start; giving at n + 1 gives giving at n, so withholding stays; it spreads downstream along every chain of waits. (`Becoming.Withholding.waitsAll`, `Becoming.Withholding.Chain`, `Becoming.Withholding.Within`, `Becoming.Withholding.waitsAll_closed`, `Becoming.Withholding.waitsAll_gives_earlier`, `Becoming.Withholding.waitsAll_withholding_stays`, `Becoming.Withholding.waitsAll_withholding_stays_le`, `Becoming.Withholding.withholding_spreads`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.Withholding.withholding_spreads` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.Withholding.withholding_spreads` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Withholding.withholding_spreads`:* derived, a case of `Becoming.«存承之迭»` through `Becoming.Withholding.chain_iff_steps`, `Becoming.Withholding.waitsAll_closed` and `Becoming.Withholding.within_iff_withinSteps`, with the support `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`, using also `Becoming.«迭之末步»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean, the bridges checked as equivalences; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 2. One withholding ends all giving in a family reached from it: where every formation lies within d waits of b and b withholds at the start, every formation withholds at every step from d on; two courses withholding everywhere go on alike. (`Becoming.Withholding.withholding_absorbs`, `Becoming.Withholding.total_withholding_merges`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Without memory, a formation gives at step n exactly where every formation with a chain of exactly n waits to it gave at the start; where no chain of L waits exists, every formation gives from step L on, whatever the start (exact in Line); on a loop of p waits, withholding returns at every multiple of p. (`Becoming.Withholding.answers`, `Becoming.Withholding.answers_closed`, `Becoming.Withholding.no_longer_chain`, `Becoming.Withholding.gives_without_chain`, `Becoming.Withholding.Line.passes_out_exact`, `Becoming.Withholding.withholding_returns`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. More waiting, less giving: adding waits takes giving away at every step under both laws. (`Becoming.Withholding.waitsAll_more_waiting`, `Becoming.Withholding.answers_more_waiting`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Restoring needs another law: in Ring, three formations each waiting on the one before, with memory all withhold from step 2, exactly; without memory the withholding circulates; under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly. (`Becoming.Withholding.givesFirst`, `Becoming.Withholding.Ring.waitsAll_absorbs_exact`, `Becoming.Withholding.Ring.answers_circulates`, `Becoming.Withholding.Ring.answers_returns`, `Becoming.Withholding.Ring.givesFirst_restores`, `Becoming.Withholding.Ring.givesFirst_restores_exact`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

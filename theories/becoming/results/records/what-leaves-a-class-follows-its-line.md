@@ -11,11 +11,11 @@
 ## Laws
 
 1. Under a class constant up to the net's end, where a member conditions something not alike to it, every occurrence alike to the member that conditions anything conditions something alike to that effect and outside the class, every one on its line in particular. This is nearly the definition read at a member whose effects the class does not hold. (`Becoming.«出类随线»`, `Becoming.«出类随行»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. Where an occurrence alike to such a member conditions something but nothing alike to its outside effect, the class is not constant up to the net's end; a witness. (`Becoming.CleanStep.Occ`, `Becoming.CleanStep.intended`, `Becoming.CleanStep.not_constant_to_end`, `Becoming.CleanStep.own`, `Becoming.CleanStep.own_class`, `Becoming.CleanStep.step`, `Becoming.«出类不随则不至终有常»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. In a finite net without cycles, a class holding a member and part of what follows it can be constant up to the net's end though not constant, not holding the member's effects, while something outside it follows every occurrence on its line that conditions anything; a witness. (`Becoming.FiniteWake.Occ`, `Becoming.FiniteWake.constant_to_end`, `Becoming.FiniteWake.line`, `Becoming.FiniteWake.not_constant`, `Becoming.FiniteWake.not_held`, `Becoming.FiniteWake.own`, `Becoming.FiniteWake.own_class`, `Becoming.FiniteWake.step`, `Becoming.FiniteWake.wake_follows`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -71,6 +71,7 @@ Read with a class drawn by what a member intends, the agential self of the path:
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 
 Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming.«出类随线»`, `Becoming.«出类随行»`
 

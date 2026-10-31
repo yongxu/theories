@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch": "opening-v13",
+  "date": "2026-10-31T18:39:47+00:00",
+  "base_commit": "815c6425fb9ef3dcf2a5b1c2efd054c8e70db68c",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md",
+      "new_path": "drafts/2026-10-10-opening/history/OPENING-V13-PROPOSAL.md",
+      "sha256": "461c06ee3d4fe04ac474cb70b1520bc0d2cd8ce573b7e73fe7f55b6e965b7ddc",
+      "blob": "79f7dd36f290b8a23b623169ff1455799bfc2f97",
+      "reason": "applied: the version 13 proposal; the applied text is theories/becoming/OPENING.md, revised in place (1 November 2026)",
+      "plan_entry": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/BECOMING-WORKBOARD.md",
+      "old_sha256": "1f1361b600db90deb163807d1d78b55e30adfade42a8048405ea48373eef3669",
+      "new_sha256": "0a34b9cb81417d6af59f85770e14ccb04d7f071718cbb9957be9968fc040f164",
+      "references": 2
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "old_sha256": "9320f77eccbb16b7103c6b75e2c4bde3715bcce6b3d38feaee303081d1359f1a",
+      "new_sha256": "22f502f26e6600d5045db1f60da3cba3dd3a3b0a804140072aae0f4513a5f0e8",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "drafts/2026-10-10-opening/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

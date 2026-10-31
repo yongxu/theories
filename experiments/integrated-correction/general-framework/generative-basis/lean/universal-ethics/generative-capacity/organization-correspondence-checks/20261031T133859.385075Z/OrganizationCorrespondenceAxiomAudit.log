@@ -1,0 +1,7 @@
+'Becoming.OrganizationCorrespondence.frontier_iff_undominated' does not depend on any axioms
+'Becoming.OrganizationCorrespondence.formation_required_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.OrganizationCorrespondence.coordination_is_required_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

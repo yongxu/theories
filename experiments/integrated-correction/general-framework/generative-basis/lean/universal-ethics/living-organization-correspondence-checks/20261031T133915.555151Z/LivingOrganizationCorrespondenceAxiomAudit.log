@@ -1,0 +1,6 @@
+'Becoming.LivingOrganizationCorrespondence.entryDecidable' does not depend on any axioms
+'Becoming.LivingOrganizationCorrespondence.entryGate' does not depend on any axioms
+'Becoming.LivingOrganizationCorrespondence.presence_reflected' depends on axioms: [propext, Quot.sound]
+'Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core' depends on axioms: [propext, Quot.sound]
+'Becoming.LivingOrganizationCorrespondence.entry_then_present' depends on axioms: [propext, Quot.sound]
+'Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core' depends on axioms: [propext, Quot.sound]

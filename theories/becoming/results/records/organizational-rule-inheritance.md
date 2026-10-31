@@ -11,21 +11,21 @@
 ## Laws
 
 1. For every process, gate on moves and quantity of configurations, the quantity is kept along every course of ungated moves exactly when every ungated step keeps it. Where every ungated step keeps it, a course that changes it contains a gated move, and, with equality of its values decided, splits into a prefix keeping it, a gated step that itself changes it, and the rest. (`Becoming.Gated.KeptBy`, `Becoming.Gated.kept_along`, `Becoming.Gated.kept_along_iff`, `Becoming.Gated.change_passes_gate`, `Becoming.Gated.change_located`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The rule protocol is a process of partial steps (review, entry to the recorded roster, proposal, adoption of a rule, integration and handoff) whose traces are exactly its completed runs. Every move but adoption keeps the rule, so every course or completed run without adoption keeps it, and every change of rule is located at an adoption step that changes it. (`Becoming.RuleHandoff.process`, `Becoming.RuleHandoff.run`, `Becoming.RuleHandoff.trace_iff_run`, `Becoming.RuleHandoff.adopts`, `Becoming.RuleHandoff.rule_kept`, `Becoming.RuleHandoff.rule_inherited`, `Becoming.RuleHandoff.nonadopting_history_inherits`, `Becoming.RuleHandoff.rule_change_located`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A step that changes the rule is an adoption with a recorded proposal and a ballot passing the rule of governance, the new rule being that proposal; an adoption makes the recorded proposal the rule and adds it to the adoptions. Entry to the roster needs a recorded review of the entrant and a ballot passing governance. (`Becoming.RuleHandoff.changed_rule_requires_adoption`, `Becoming.RuleHandoff.adoption_uses_recorded_proposal`, `Becoming.RuleHandoff.admitted_requires_review`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Handoff keeps the rule, the roster and the adoptions, and anyone present after it was present before and is among the continuing; repeated handoffs keep the same three. A fork keeps its source as one branch and hands off the other, and a position can be present on both. (`Becoming.RuleHandoff.handoff_preserves_record`, `Becoming.RuleHandoff.handoff_does_not_invent_participation`, `Becoming.RuleHandoff.repeated_handoff_inherits`, `Becoming.RuleHandoff.fork_retains_source`, `Becoming.RuleHandoff.boundary_is_not_exclusive_membership`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A technical decision is read off the enacted relations: two states with the same roster, presence and rule give every ballot the same decision; with nobody present no ballot passes; and no function of the counts of roster, presence and reviews gives the decision in two histories of the protocol. (`Becoming.RuleHandoff.same_enacted_relations_same_decision`, `Becoming.RuleHandoff.no_participation_no_integration`, `Becoming.RuleHandoff.no_count_only_decision`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. In one declared history of six positions, review and entry form the roster through work; a proposal adopted by four votes changes the rule to the timed two-participant rule, while adoption with two votes fails; and after handoffs to two continuing participants two integrations are accepted. (`Becoming.RuleHandoff.relations_form_through_work`, `Becoming.RuleHandoff.authorized_revision_is_actual`, `Becoming.RuleHandoff.low_support_cannot_revise`, `Becoming.RuleHandoff.inherited_revision_continues`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In the declared history, once the rule is revised: with two continuing participants a technical integration is enabled while revising the governance fails; the revised rule handed off to nobody is kept, yet cannot integrate; and duplicate votes, a wait of thirteen days or an objection each fail where two votes over fourteen days pass. (`Becoming.RuleHandoff.enabling_one_operation_need_not_enable_revision`, `Becoming.RuleHandoff.copied_rule_without_participation_fails`, `Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates`, `Becoming.RuleHandoff.wait_and_objection_matter`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. The inherited rule changes access, in the declared history: after handoff to two participants, two votes integrate under the revised rule and not under the first; and a successor carrying the revised rule, handed off to four, revises it again with four votes. (`Becoming.RuleHandoff.inherited_rules_change_access`, `Becoming.RuleHandoff.successor_can_revise_inherited_rule`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

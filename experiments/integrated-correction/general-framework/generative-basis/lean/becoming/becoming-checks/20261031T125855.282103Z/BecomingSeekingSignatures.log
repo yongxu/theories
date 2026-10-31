@@ -1,0 +1,34 @@
+@Becoming.more_not_at_rest : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S} {n : Nat},
+  Becoming.MoreThanNow q g n → ¬Becoming.RestsAt g n
+@Becoming.more_rises : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S} {N : Nat},
+  (∀ (n : Nat), N ≤ n → Becoming.MoreThanNow q g n) → ∀ {i : Nat} (d : Nat), N ≤ i → q (g i) < q (g (i + (d + 1)))
+@Becoming.more_new : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S},
+  (∀ (n : Nat), Becoming.MoreThanNow q g n) → ∀ (i j : Nat), i < j → g i ≠ g j
+@Becoming.more_needs_open : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S},
+  (∀ (n : Nat), Becoming.MoreThanNow q g n) → ¬∃ l, ∀ (n : Nat), g n ∈ l
+Becoming.succ_more : ∀ (s n : Nat), Becoming.MoreThanNow id (Becoming.Law.orbit Nat.succ s) n
+@Becoming.aboveAll_unique : ∀ {S : Type u_1} {I : Type} {q : I → S → Nat} {i j : I} {s : S},
+  i ≠ j → Becoming.AboveAll q i s → Becoming.AboveAll q j s → False
+@Becoming.aboveAll_not_two : ∀ {S : Type u_1} {I : Type} {q : I → S → Nat} {i j : I},
+  i ≠ j → ∀ (s : S), ¬(Becoming.AboveAll q i s ∧ Becoming.AboveAll q j s)
+@Becoming.Law.fixed_rests : ∀ {S : Type u_1} {next : S → S} {s : S},
+  next s = s →
+    ∀ {target : S → Prop},
+      target s → ∀ (n : Nat), Becoming.Law.orbit next s n = s ∧ target (Becoming.Law.orbit next s n)
+@Becoming.Law.rests_iff : ∀ {S : Type u_1} {next : S → S} {s : S} {target : S → Prop},
+  (∃ T,
+      ∀ (n : Nat),
+        T ≤ n →
+          Becoming.Law.orbit next s (n + 1) = Becoming.Law.orbit next s n ∧ target (Becoming.Law.orbit next s n)) ↔
+    ∃ T, next (Becoming.Law.orbit next s T) = Becoming.Law.orbit next s T ∧ target (Becoming.Law.orbit next s T)
+@Becoming.Law.more_never_rests : ∀ {S : Type u_1} {next : S → S} {s : S} {q : S → Nat} (n : Nat),
+  ¬(Becoming.Law.orbit next s (n + 1) = Becoming.Law.orbit next s n ∧
+      Becoming.MoreThanNow q (Becoming.Law.orbit next s) n)
+@Becoming.Law.aboveAll_never_rests : ∀ {S : Type u_1} {I : Type} {q : I → S → Nat} {i j : I},
+  i ≠ j → ∀ (next : S → S), ¬∃ s, next s = s ∧ ∀ (k : I), Becoming.AboveAll q k s
+@Becoming.Flow.more_needs_unrun : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {c : C}, (∀ (N : Nat), ∃ t, N ≤ t ∧ W.Rises t c) → ∀ (N : Nat), ∃ t, N ≤ t ∧ ¬L.RunsDown W t
+@Becoming.Flow.more_exhausted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → L.RunsDown W t) → ∀ {c : C}, ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Rises t c

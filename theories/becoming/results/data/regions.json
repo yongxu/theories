@@ -191,6 +191,11 @@
    "base": "frame",
    "note": "reviewed-scoped; AlignmentDirection conditional on warranted correspondence"
   },
+  "amounts-by-unit-matchings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "UnitMatchings U1b: amounts, the root's second sort, by their interface: balance represented by selected frame matchings, both ways; the crossing laws at a rise; the residual counts and dissipation; not derived, the residual units accounting"
+  },
   "any-number-of-drawers-in-turn": {
    "region": "retire",
    "base": "general",
@@ -1331,6 +1336,11 @@
    "base": "general",
    "note": "Reordering normal forms"
   },
+  "not-going-out-of-a-region": {
+   "region": "root",
+   "base": "grammar",
+   "note": "GrammarCrossing: 不出 = closedness of what is not outside; LEM lemma; going out and coming in; the step out on a line"
+  },
   "observation-is-a-route": {
    "region": "knowing",
    "base": "old-base",
@@ -1345,6 +1355,11 @@
    "region": "knowing",
    "base": "general",
    "note": "ReadingSchedule; reciprocal windows sum ≤1"
+  },
+  "one-root-to-its-edge": {
+   "region": "method",
+   "base": "grammar",
+   "note": "U4: each central declaration's standing on the edge of one root (MV's boundary field); RootForms, row 17's root form and row 5's relational part"
   },
   "one-search-one-line": {
    "region": "classical",
@@ -2006,6 +2021,16 @@
    "base": "frame",
    "note": "Distinguishing"
   },
+  "the-blanket-at-a-steady-state": {
+   "region": "knowing",
+   "base": "general",
+   "note": "BlanketWeights UE26: conditional independence given the blanket is the cross form on states each listed once; with positive weights, detailed balance of the internal moves within one closure of moves present at every external state, rate ratios reading none, gives it, sufficient, not necessary; witnesses on either side, the synchronous copy among them"
+  },
+  "the-blanket-in-a-linear-steady-state": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "LinearBlankets UE26: the linear steady state, Helmholtz as Lyapunov; footnote 13 as a law; the term-by-term corollaries; sparsely coupled Euler-Maruyama runs keep the coupling form, while the synchronous steady law can lose the zero with circulation, a witness (periphery)"
+  },
   "the-boundary-of-enough-under-undetermined-laws": {
    "region": "knowing",
    "base": "general",
@@ -2608,6 +2633,11 @@
    "base": "general",
    "note": "UE18 the Markov blanket and the existence claim (03 §1, §6)"
   },
+  "Becoming.BlanketWeights": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE26 the blanket at a steady state (03 §1)"
+  },
   "Becoming.Boundaries": {
    "region": "significance",
    "base": "old-base",
@@ -2787,6 +2817,11 @@
    "region": "map",
    "base": "old-base",
    "note": "FL2 balance along relation iff conservation on closed families"
+  },
+  "Becoming.ConveyanceBoundaries": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Cut = 不出; a continuing family's region no boundary along conveyance (BD2)"
   },
   "Becoming.CopyCourses": {
    "region": "life",
@@ -3102,6 +3137,11 @@
    "region": "classical",
    "base": "grammar",
    "note": "文 in grammar of continuation (WL3)"
+  },
+  "Becoming.GrammarCrossing": {
+   "region": "root",
+   "base": "grammar",
+   "note": "not going out of a region (不出), coming in, the step out on a line (BD2)"
   },
   "Becoming.GrammarLaws": {
    "region": "root",
@@ -3948,6 +3988,11 @@
    "base": "old-base",
    "note": "formations and conditions as roles of one relatum; two-kind embeds"
   },
+  "Becoming.RootForms": {
+   "region": "method",
+   "base": "grammar",
+   "note": "U4: rows stated on the grammar under named hypotheses, each with a countermodel and a fit; outside_leaves_no_offspring (GroupEnding.Flow.all_end), descent_forms_no_dependence"
+  },
   "Becoming.RouteFormation": {
    "region": "knowing",
    "base": "general",
@@ -4242,6 +4287,11 @@
    "region": "root",
    "base": "old-base",
    "note": "P69 one unfolding: labelled process and frame as readings of a world"
+  },
+  "Becoming.UnitMatchings": {
+   "region": "root",
+   "base": "old-base",
+   "note": "U1b: the interface of amounts by selected unit matchings (01 §8.6): FrameMatch, frameMatchings_iff_balances, crossing_edge, rise_crossing_weak/strong, endings_count"
   },
   "Becoming.Units": {
    "region": "life",

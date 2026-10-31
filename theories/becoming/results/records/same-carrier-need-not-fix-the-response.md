@@ -11,13 +11,13 @@
 ## Laws
 
 1. From one initial state, two traces that differ only in the order of sampling and the founder's repair reach carriers with the same native state, each with a carrier pending and no rig or gate pending, their paired cues differing; the same development word then reconstructs children with the same native state, fuel 9 and one rig each, but different gates and no reading yet. (`DevelopedResponse.same_carrier_different_developmental_record`, `DevelopedResponse.equal_cost_development_reconstructs_different_gates`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. The same read and act events at the same damaged site give both children the same reading and fuel, and leave one intact and able to capture, the other not intact and able neither to capture nor to copy; the response command reads only the acquired gate and the fresh reading. (`DevelopedResponse.same_assay_enacts_developed_difference`, `DevelopedResponse.command_uses_gate_and_reading`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. After the assay, the intact child's capture and copying form a carrier that develops into a grandchild which reads, acts and stays intact; the other cannot run that continuation, and with a supplied assisted repair first it reaches an intact grandchild with the first one's gate. (`DevelopedResponse.consequence_reformation_reaches_operating_grandchild`, `DevelopedResponse.supplied_assistance_can_rescue_development`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. The model's bookkeeping never changes the native transition's physical result, and every enabled event and every runnable finite history balances the native energy: energy after plus the native reactions' draw is energy before. (`DevelopedResponse.advance_core`, `DevelopedResponse.enabled_energy_balance`, `DevelopedResponse.runnable_energy_balance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 7 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 15 with propext only and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.
 
 Canonical source: [DevelopedResponse.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean)
 
@@ -77,6 +77,7 @@ Aliases: `The same carrier need not fix the same response`, `同样的承载者�
 ### History
 
 - 27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.
+- 31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.
 
 </details>
 

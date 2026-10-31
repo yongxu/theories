@@ -11,23 +11,23 @@
 ## Laws
 
 1. For every draw and replenishment of each kind of step, the stock process draws what a step draws from what is held and then replenishes; a course of it from a stock is executable exactly when each step's draw is within the stock then standing. (`Becoming.Stock.process`, `Becoming.Stock.Covered`, `Becoming.Stock.feasible_iff_covered`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. In the pending-task protocol, review draws one unit of work and action two, so their course is covered exactly from three units, and the action runs exactly from two; a pending endpoint with no report yet completes its review and action exactly when its report clears the relevant risk and its work covers that course. (`Becoming.VersionedTaskInstances.review_course_covered_iff`, `Becoming.VersionedTaskInstances.enact_isSome_iff`, `Becoming.VersionedTaskInstances.review_completes_iff`, `PendingTaskApplicability.reviewAndAct`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The relevant risk of each delivered practice is its outcome law's loss condition, and an enacted practice adds one loss exactly where that risk holds; for every condition, report and pending endpoint, a review adds one loss exactly when the report clears the action, the work covers the course and the delivered practice's relevant risk holds, and otherwise keeps the loss count. (`PendingTaskApplicability.relevantRisk`, `Becoming.VersionedTaskInstances.relevant_risk_eq`, `Becoming.VersionedTaskInstances.enact_losses`, `Becoming.VersionedTaskInstances.review_losses`, `Becoming.VersionedTaskInstances.review_adds_loss_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. As a process of reviews, one report a step, every review whose report does not clear the action keeps the loss count, an instance of the gated-change law, and so does every course of such reviews. (`Becoming.VersionedTaskInstances.reviews`, `Becoming.VersionedTaskInstances.clears`, `Becoming.VersionedTaskInstances.losses_kept`, `Becoming.VersionedTaskInstances.losses_kept_along`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. A report that covers the effect, whatever it reports being the delivered practice's relevant risk at the actual effect, makes a review add no loss, for every endpoint. (`PendingTaskApplicability.CoversEffect`, `PendingTaskApplicability.covered_review_adds_no_practice_loss`, `Becoming.VersionedTaskInstances.covered_review_instance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. With at least three units of work and the delivered practice's relevant risk absent, a review its report clears completes with no added loss, one more record and the total of work, reserve and units drawn kept; for the learning action this needs only that the transition loss be absent, whatever the other two context fields. (`PendingTaskApplicability.funded_covered_review`, `PendingTaskApplicability.learning_review_covers_changed_context`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. Under the bank and queue invariant, delivering a rewritten pending head removes it from the queue, keeps the rest of the queue, the banks and the active route, and enters review with the revised value as the endpoint's task. (`PendingTaskApplicability.revised_delivery_enters_review`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. In the protocol's runs after the revision, the review leaves too little of the inherited work for the action and the task stays pending; one more unit completes it, also with an unrelated change of context; a relevant risk reported, or no report, keeps it unfinished with the work used; and a report that does not cover the effect clears an action that adds a second loss. (`PendingTaskApplicability.check_can_exhaust_action_support`, `PendingTaskApplicability.additional_current_support_completes`, `PendingTaskApplicability.irrelevant_context_change_can_still_complete`, `PendingTaskApplicability.relevant_change_retains_unfinished_task`, `PendingTaskApplicability.missing_report_retains_unfinished_task`, `PendingTaskApplicability.report_not_covering_effect_can_still_fail`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. In a witness condition where the learning action's relevant risk is absent, learning is not better than attendance under the inherited comparison. (`PendingTaskApplicability.safe_change_can_remove_comparative_warrant`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -93,6 +93,7 @@ Acquisition, delivery, review and effect are differentiated relations in one com
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json) | — |
 
 Aliases: `PendingTaskApplicability.revised_delivery_enters_review`, `PendingTaskApplicability.funded_covered_review`, `Becoming.Stock.feasible_iff_covered`, `Becoming.VersionedTaskInstances.review_course_covered_iff`, `Becoming.VersionedTaskInstances.review_completes_iff`, `Becoming.VersionedTaskInstances.review_losses`, `Becoming.VersionedTaskInstances.losses_kept`
 

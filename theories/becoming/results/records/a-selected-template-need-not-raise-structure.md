@@ -11,13 +11,13 @@
 ## Laws
 
 1. With AA, AH, HA, HH the weights of an event forming an A or H successor from an A or H template, and a, h the counts, the weighted mean of A's share after the next event exceeds a/(a + h) exactly where a(AH + HH) < h(AA + HA), equals it or falls exactly where the sides are equal or reversed: a balance with no subtraction; read by templates or by successors the total event weight is the same. (`ConsequenceTransmission.numerator_balance`, `ConsequenceTransmission.strict_increase_iff`, `ConsequenceTransmission.neutral_iff`, `ConsequenceTransmission.strict_decrease_iff`, `ConsequenceTransmission.denominator_positive`, `ConsequenceTransmission.transmission_preserves_total_event_weight`, `ConsequenceTransmission.transmitted_structure_increase_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Faithful transmission (AH = HA = 0), or equal transfer both ways (AH = HA), makes the successor weights the template weights, so the share rises under one reading exactly where it rises under the other; copy weights proportional to the counts leave the share unchanged. (`ConsequenceTransmission.faithful_transmission_matches_template`, `ConsequenceTransmission.balanced_transfer_matches_template`, `ConsequenceTransmission.faithful_increase_iff_template_increase`, `ConsequenceTransmission.shared_access_is_neutral`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The native copying law is faithful: a positive copy weight of a kind needs an enabled copy reaction of that kind, and every native copy adds one of its template's kind and leaves the other count; in both reached states an enabled damage event keeps both counts, so the no-change weight has a native event. (`ConsequenceTransmission.Native.positive_a_weight_has_native_event`, `ConsequenceTransmission.Native.positive_h_weight_has_native_event`, `ConsequenceTransmission.Native.native_copy_transmits_its_response_structure`, `ConsequenceTransmission.Native.reached_neutral_event_is_native`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Witnesses: with a = h = 1 and transfers (1, 5, 2, 2), all positive, A has the larger template opportunity, 6 to 4, while its mean share falls from 1/2 to 13/30; in two checked histories of the native law, each reaching one A and one H, A's copy weight exceeds H's in one and falls below it in the other. (`ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission`, `ConsequenceTransmission.Native.actual_capture_changes_copy_access`, `ConsequenceTransmission.Native.actual_transfer_with_both_structures_present`, `ConsequenceTransmission.Native.same_composition_opposite_access`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -25,7 +25,7 @@
 - The stated finite event law: one next event, weighted by supplied natural numbers that are event weights, not fitness or rates, each event copying one kind or changing no count; formation and loss are outside it.
 - The share reading needs positive denominators, a + h > 0 and a positive total weight; the identities hold on the numerators without them.
 - The transfer cells AH and HA extend the event law; they are not mutation in the native copying, which keeps the template's kind. No instance theorem joins the table to Price's equation in counting form.
-- Periphery, a module before the spine on Lean's core library and Std: propext in 13 of its 19 declarations, the other 6 none, as the receipt reports.
+- Periphery, a module before the spine on Lean's core library and Std: propext in 9 of its 19 declarations, the other 10 none, as the receipt reports.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 7 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 13 with propext only and 6 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.
 
 Canonical source: [ConsequenceTransmission.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean)
 
@@ -80,6 +80,7 @@ Aliases: `A selected template need not increase the successor's structure`, `被
 ### History
 
 - 27 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section 426.
+- 31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.
 
 </details>
 

@@ -11,31 +11,32 @@
 ## Laws
 
 1. Pigeonhole, with no decidability: for any list l and sequence g with g n in l for every n up to the length of l, some i < j up to that length have g i = g j, membership used as given. A sequence a list holds revisits from every step on, and so does every run of every process whose configurations a list holds. (`Becoming.revisits_within`, `Becoming.Revisits`, `Becoming.revisits_of_held`, `Becoming.revisits_from`, `Becoming.Run.revisits_from`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.revisits_within` itself; finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.revisits_within` itself; finite runs; its declarations do not reach the grammar.
 2. Never revisiting needs openness: a sequence that never meets one configuration twice has, for no list l, all of its first l.length + 1 values in l, and no list holds the sequence. (`Becoming.unheld_of_new`, `Becoming.unlisted_of_new`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. A quantity marks the changes of a sequence where it never falls along it and rises across every step at which the configuration changes. Where a list holds the configurations of a sequence, or of a run of any process, and a quantity marks its changes, change does not recur: not every step has a later change. While change recurs within a list, no quantity marks it. (`Becoming.Marks`, `Becoming.Marks.change_not_recurring`, `Becoming.Run.change_not_recurring`, `Becoming.not_marks`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A determined law next on configurations of any kind is a process of the spine with one move, the step to next s, and its orbit from s is the run of that process from s. (`Becoming.Law.process`, `Becoming.Law.orbit`, `Becoming.Law.run`, `Becoming.Law.run_state`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Under a determined law, a configuration that cannot be had n steps on cannot be had at any later step; for every process, a configuration not reachable from t is not reachable from anything reachable from t; and configurations merged stay merged, their orbits agreeing from the first step on. (`Becoming.Law.Reachable`, `Becoming.Law.reachable_iff`, `Becoming.Law.lost_stays`, `Becoming.Reach`, `Becoming.Reach.lost_stays`, `Becoming.Law.merged_stays`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A configuration returns where some positive number of steps leads it back to itself. Where every configuration returns, the law merges nothing, two configurations with one successor being equal; for every process a configuration that returns can be had at every step; and where s returns, further steps lead from next s back to s. (`Becoming.Law.Returns`, `Becoming.Law.returns_iff`, `Becoming.Law.Lossless`, `Becoming.Law.lossless_iff`, `Becoming.Law.lossless_of_returns`, `Becoming.Branching.Returns.reachable`, `Becoming.Law.Returns.undo`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 7. Where a list holds every configuration, a determined law merges nothing exactly where every configuration returns, and every configuration returns exactly where every configuration can be had at every step. (`Becoming.Law.lossless_iff_returns`, `Becoming.Law.Lossless.returns`, `Becoming.Law.returns_iff_keeps`, `Becoming.Law.KeepsPossibilities`, `Becoming.Law.keeps_iff`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Law.lossless_iff_returns` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Law.lossless_iff_returns` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Law.lossless_iff_returns`:* derived, a case of `Becoming.«有限遍后定后则定前当且仅当皆返»` through `Becoming.Branching.law_reach_iff`, `Becoming.Branching.law_trace_iff`, `Becoming.Law.lossless_iff`, `Becoming.Law.lossless_iff_fixedBefore`, `Becoming.Law.reaches_iff_orbit`, `Becoming.Law.returns_iff` and `Becoming.Law.returns_iff_reaches`, with the support `Becoming.Branching.law_trace_of`, `Becoming.Branching.units_length`, `Becoming.Law.next_fixed`, `Becoming.Law.next_total`, `Becoming.Law.orbit_add`, `Becoming.Law.orbit_shift` and `Becoming.Law.reaches_of_orbit` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean, the bridges checked as equivalences; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 8. Where a list holds every configuration: if every configuration can be had as many steps on as the list is long, the law merges nothing; and a law that merges two configurations does not have every configuration reachable that many steps on. (`Becoming.Law.lossless_of_reachable`, `Becoming.Law.Merges`, `Becoming.Law.merges_iff`, `Becoming.Law.Merges.loses`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 9. A determined law that merges nothing and under which some configuration does not return has no list holding every configuration. (`Becoming.Law.Lossless.unlisted`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 10. Where a list holds every configuration and the law merges nothing, a quantity that never falls along an orbit keeps its value along it; so, with such a list, where a quantity never falls along an orbit and rises at some step of it, it is not the case that the law merges nothing. (`Becoming.Law.Lossless.no_rise`, `Becoming.Law.rise_not_lossless`)
-    - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 11. On the natural numbers the three come apart: under the successor on the natural numbers nothing merges, no number returns, zero cannot be had one step on, and every orbit rises at every step; under the predecessor two numbers merge (zero and one), yet every number can be had at every step. (`Becoming.Law.succ_open`, `Becoming.Law.pred_open`)
-    - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 12. Keeping its history, the present going on by the law and passing into the past, every law merges nothing, never revisits along an orbit and returns no configuration; a kept history with nothing past cannot be had one or more steps on; no list holds a kept history's orbit; and its present goes on by the law itself. (`Becoming.Law.withHistory`, `Becoming.Law.withHistory_lossless`, `Becoming.Law.withHistory_new`, `Becoming.Law.withHistory_never_returns`, `Becoming.Law.withHistory_loses_beginning`, `Becoming.Law.withHistory_unlisted`, `Becoming.Law.present_orbit`)
-    - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 13. Where s returns after p > 0 steps, the kept history from s with any past has, p steps on, the present s again and differs from where it began. Where a list holds the configurations an orbit from s passes through, from every step on two steps of the kept history from s with nothing past share one present and differ in history. (`Becoming.Law.return_keeps_history`, `Becoming.Law.present_forgets`)
-    - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -1,0 +1,81 @@
+@Becoming.Viability.Certificate.kernel : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {guard K : S → Prop}, Becoming.Viability.Certificate P guard K → ∀ {s : S}, K s → Becoming.Viability.Kernel P guard s
+@Becoming.Viability.kernel_certificate : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (guard : S → Prop), Becoming.Viability.Certificate P guard (Becoming.Viability.Kernel P guard)
+@Becoming.Viability.kernel_iff_certificate : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {guard : S → Prop} {s : S}, Becoming.Viability.Kernel P guard s ↔ ∃ K, K s ∧ Becoming.Viability.Certificate P guard K
+@Becoming.Viability.kernel_largest : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {guard : S → Prop},
+  Becoming.Viability.Certificate P guard (Becoming.Viability.Kernel P guard) ∧
+    ∀ (K : S → Prop), Becoming.Viability.Certificate P guard K → ∀ (s : S), K s → Becoming.Viability.Kernel P guard s
+@Becoming.Viability.kernel_step_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {guard : S → Prop}
+  {s : S},
+  Becoming.Viability.Kernel P guard s ↔ guard s ∧ ∀ (a : A) (t : S), P.step s a t → Becoming.Viability.Kernel P guard t
+@Becoming.Viability.Kernel.mono : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {guard guard' : S → Prop},
+  (∀ (s : S), guard s → guard' s) →
+    ∀ {s : S}, Becoming.Viability.Kernel P guard s → Becoming.Viability.Kernel P guard' s
+@Becoming.Viability.Kernel.run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {guard : S → Prop}
+  (r : Becoming.Run P), Becoming.Viability.Kernel P guard (r.state 0) → ∀ (n : Nat), guard (r.state n)
+Becoming.Viability.Leaves.within_not_kernel : (fun b => b = true) true ∧
+  ¬Becoming.Viability.Kernel Becoming.Viability.Leaves.process (fun b => b = true) true
+@Becoming.Viability.trace_disturbed_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {s t : S}
+  {plan : List A},
+  Generative.Trace (Becoming.Viability.disturbed f adm) s plan t ↔
+    (∀ (a : A), a ∈ plan → adm a) ∧ List.foldl f s plan = t
+@Becoming.Viability.certificate_disturbed_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard K : S → Prop},
+  Becoming.Viability.Certificate (Becoming.Viability.disturbed f adm) guard K ↔
+    (∀ (x : S), K x → guard x) ∧ ∀ (x : S) (a : A), adm a → K x → K (f x a)
+@Becoming.Viability.history_reach : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {s : S}
+  {d : Nat → A},
+  (∀ (n : Nat), adm (d n)) →
+    ∀ (n : Nat), Becoming.Reach (Becoming.Viability.disturbed f adm) s (Becoming.Viability.history f s d n)
+@Becoming.Viability.extend_admissible : ∀ {A : Type u_1} {adm : A → Prop} {a₀ : A},
+  adm a₀ → ∀ {plan : List A}, (∀ (a : A), a ∈ plan → adm a) → ∀ (n : Nat), adm (Becoming.Viability.extend plan a₀ n)
+@Becoming.Viability.history_shift : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S) (s : S) (d : Nat → A) (n : Nat),
+  Becoming.Viability.history f s d (n + 1) = Becoming.Viability.history f (f s (d 0)) (fun k => d (k + 1)) n
+@Becoming.Viability.history_extend : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S) (a₀ : A) (plan : List A) (s : S),
+  Becoming.Viability.history f s (Becoming.Viability.extend plan a₀) plan.length = List.foldl f s plan
+@Becoming.Viability.never_leaves_iff_kernel : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {s : S} {a₀ : A},
+  adm a₀ →
+    ((∀ (d : Nat → A), (∀ (n : Nat), adm (d n)) → ∀ (n : Nat), guard (Becoming.Viability.history f s d n)) ↔
+      Becoming.Viability.Kernel (Becoming.Viability.disturbed f adm) guard s)
+@Becoming.Viability.never_leaves_iff_certificate : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {s : S} {a₀ : A},
+  adm a₀ →
+    ((∀ (d : Nat → A), (∀ (n : Nat), adm (d n)) → ∀ (n : Nat), guard (Becoming.Viability.history f s d n)) ↔
+      ∃ K, K s ∧ (∀ (x : S), K x → guard x) ∧ ∀ (x : S) (a : A), adm a → K x → K (f x a))
+@Becoming.Viability.certificate_never_leaves : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard K : S → Prop},
+  (∀ (x : S), K x → guard x) →
+    (∀ (x : S) (a : A), adm a → K x → K (f x a)) →
+      ∀ {s : S},
+        K s → ∀ (d : Nat → A), (∀ (n : Nat), adm (d n)) → ∀ (n : Nat), guard (Becoming.Viability.history f s d n)
+Becoming.Viability.needs_admissible : (∀ (d : Nat → Unit),
+    (∀ (n : Nat), (fun x => False) (d n)) →
+      ∀ (n : Nat), (fun x => False) (Becoming.Viability.history (fun s x => s) () d n)) ∧
+  ¬∃ K, K () ∧ (∀ (x : Unit), K x → False) ∧ ∀ (x a : Unit), (fun x => False) a → K x → K ((fun s x => s) x a)
+@Becoming.Viability.guardedStep_none : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S) (guard : S → Prop)
+  [inst : DecidablePred guard] (a : A), Becoming.Viability.guardedStep f guard a none = none
+@Becoming.Viability.ready_of_step : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {a : A} {s t : S},
+  Becoming.Viability.guardedStep f guard a (some s) = some t → guard s ∧ guard (f s a)
+@Becoming.Viability.step_of_ready : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {a : A} {s : S},
+  guard s ∧ guard (f s a) → Becoming.Viability.guardedStep f guard a (some s) = some (f s a)
+@Becoming.Viability.agrees_of_within : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A},
+  (∀ (n : Nat), guard (Becoming.Viability.history f s d n)) →
+    ∀ (n : Nat), Becoming.Viability.guardedHistory f guard s d n = some (Becoming.Viability.history f s d n)
+@Becoming.Viability.guarded_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {guard : S → Prop}
+  [inst : DecidablePred guard] {s : S} {d : Nat → A},
+  (∀ (n : Nat), Becoming.Viability.guardedHistory f guard s d n = some (Becoming.Viability.history f s d n)) ↔
+    ∀ (n : Nat), guard (Becoming.Viability.history f s d n)
+@Becoming.Viability.guarded_never_fails_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} [inst : DecidablePred guard] {s : S} {a₀ : A},
+  adm a₀ →
+    ((∀ (d : Nat → A),
+        (∀ (n : Nat), adm (d n)) →
+          ∀ (n : Nat), Becoming.Viability.guardedHistory f guard s d n = some (Becoming.Viability.history f s d n)) ↔
+      ∃ K, K s ∧ (∀ (x : S), K x → guard x) ∧ ∀ (x : S) (a : A), adm a → K x → K (f x a))

@@ -11,19 +11,19 @@
 ## Laws
 
 1. For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it. (`Becoming.Viability.Kernel`, `Becoming.Viability.Certificate`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.kernel_largest`, `Becoming.Viability.kernel_step_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. For a law of change driven by disturbances with an admissibility condition, given one admissible disturbance, no history driven by admissible disturbances ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance. (`Becoming.Viability.never_leaves_iff_certificate`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. With the guard decided, the guarded history stops at the first step beginning or ending outside the guard; it agrees with the history at every time exactly when the history stays within the guard, so, given one admissible disturbance, no guarded history driven by admissible disturbances stops exactly when such a closed set contains the start. (`Becoming.Viability.guarded_iff`, `Becoming.Viability.guarded_never_fails_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Two witnesses: in a two-configuration process the guard holds at a configuration from which one step leaves it, so the guard alone need not be a certificate; and with no admissible disturbance every history condition holds vacuously while no set within an empty guard contains the start, so the given admissible disturbance is needed. (`Becoming.Viability.Leaves.within_not_kernel`, `Becoming.Viability.needs_admissible`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In the market model, for every parameter set, bound set and start, the market's history and guarded history are the core's, with the essential floors as guard, and the worst disturbance a bound admits is admissible; so no admissible guarded history fails the essential floors exactly when some set of states containing the start lies within them and is closed under every admissible disturbance. (`Becoming.MarketInstances.history_eq`, `Becoming.MarketInstances.guardedHistory_eq`, `Becoming.MarketInstances.worst_admissible`, `Becoming.MarketInstances.never_fails_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard. (`Becoming.MarketInstances.safe_closed`, `Becoming.MarketInstances.safe_never_fails`, `Becoming.MarketInstances.safe_within_kernel`, `MarketGenerativity.safe_history_never_fails`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. The model's numerical example, with one essential support of floor 5, satisfies the protection certificate's conditions. (`MarketGenerativity.example_certificate`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -88,6 +88,7 @@ Quantities represent the specified market relations and supports; essential desi
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json) | — |
 
 Aliases: `MarketGenerativity.safe_history_never_fails`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.never_leaves_iff_certificate`, `Becoming.Viability.guarded_never_fails_iff`, `Becoming.MarketInstances.never_fails_iff`, `Becoming.MarketInstances.safe_never_fails`
 

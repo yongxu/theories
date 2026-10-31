@@ -1,0 +1,204 @@
+@Becoming.ReadingSchedule.shift_lt : ∀ {T j ℓ u : Nat}, T + (j + 1 + ℓ) ≤ u → T + j + ℓ < u
+@Becoming.ReadingSchedule.shift_le : ∀ {T j ℓ u : Nat}, T + j + ℓ < u → T + (j + 1 + ℓ) ≤ u
+Becoming.ReadingSchedule.ite_le : ∀ (p : Prop) [inst : Decidable p] (d : Nat), (if p then d else 0) ≤ d
+@Becoming.ReadingSchedule.Within.mono : ∀ {X : Type} {s : Nat → X} {x : X} {a b : Nat},
+  Becoming.ReadingSchedule.Within s x a → a ≤ b → Becoming.ReadingSchedule.Within s x b
+@Becoming.ReadingSchedule.Within.unread_lt : ∀ {X : Type} {s : Nat → X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.Within s x a → ∀ {T k : Nat}, Becoming.ReadingSchedule.Unread s x T k → k < a
+@Becoming.ReadingSchedule.read_or_unread : ∀ {X : Type} [DecidableEq X] (s : Nat → X) (x : X) (T k : Nat),
+  (∃ j, j < k ∧ s (T + j) = x) ∨ Becoming.ReadingSchedule.Unread s x T k
+@Becoming.ReadingSchedule.within_iff : ∀ {X : Type} [DecidableEq X] {s : Nat → X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.Within s x a ↔ ∀ (T : Nat), ¬Becoming.ReadingSchedule.Unread s x T a
+@Becoming.ReadingSchedule.total_of_stretch : ∀ {q : Nat → Nat} {T n d : Nat},
+  (∀ (u : Nat), u < T → q u = 0) →
+    (∀ (u : Nat), T + n ≤ u → q u = 0) →
+      (∀ (u : Nat), q u ≤ d) → ∀ (t : Nat), Becoming.total (Becoming.steps 0 t) q ≤ n * d
+@Becoming.ReadingSchedule.total_steps_ge : ∀ {q : Nat → Nat} {d T n : Nat},
+  (∀ (u : Nat), T ≤ u → u < T + n → d ≤ q u) → n * d ≤ Becoming.total (Becoming.steps T n) q
+Becoming.ReadingSchedule.total_le_of_inside : ∀ (q : Nat → Nat) {T n t : Nat},
+  T + n ≤ t → Becoming.total (Becoming.steps T n) q ≤ Becoming.total (Becoming.steps 0 t) q
+Becoming.ReadingSchedule.total_prefix_le : ∀ (q : Nat → Nat) {n P : Nat},
+  n ≤ P → Becoming.total (Becoming.steps 0 n) q ≤ Becoming.total (Becoming.steps 0 P) q
+@Becoming.ReadingSchedule.Within.pool : ∀ {X : Type} {s : Nat → X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.Within s x a → Becoming.ReadingSchedule.PoolWithin (fun t => [s t]) x a
+@Becoming.ReadingSchedule.one_le_times : ∀ {X : Type} [inst : DecidableEq X] {r : List X} {x : X},
+  x ∈ r → 1 ≤ Becoming.ReadingSchedule.times r x
+@Becoming.ReadingSchedule.total_is_le_one : ∀ {X : Type} [inst : DecidableEq X] (y : X) {cs : List X},
+  Becoming.Distinct cs → (Becoming.total cs fun c => if y = c then 1 else 0) ≤ 1
+@Becoming.ReadingSchedule.one_le_total_steps : ∀ {q : Nat → Nat} {S a j : Nat},
+  j < a → 1 ≤ q (S + j) → 1 ≤ Becoming.total (Becoming.steps S a) q
+@Becoming.ReadingSchedule.PoolWithin.count : ∀ {X : Type} [inst : DecidableEq X] {r : Nat → List X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.PoolWithin r x a →
+    ∀ (T n : Nat), n ≤ Becoming.total (Becoming.steps T (n * a)) fun t => Becoming.ReadingSchedule.times (r t) x
+@Becoming.ReadingSchedule.pool_density : ∀ {X : Type} [DecidableEq X] {ι : Type} {r : Nat → List X} {k : Nat},
+  (∀ (t : Nat), (r t).length ≤ k) →
+    ∀ {cs : List ι} {name : ι → X},
+      Becoming.Distinct (List.map name cs) →
+        ∀ {a q : ι → Nat} {P : Nat},
+          (∀ (c : ι), c ∈ cs → Becoming.ReadingSchedule.PoolWithin r (name c) (a c)) →
+            (∀ (c : ι), c ∈ cs → q c * a c ≤ P) → Becoming.total cs q ≤ P * k
+@Becoming.ReadingSchedule.density : ∀ {X : Type} [DecidableEq X] {ι : Type} {s : Nat → X} {cs : List ι} {name : ι → X},
+  Becoming.Distinct (List.map name cs) →
+    ∀ {a q : ι → Nat} {P : Nat},
+      (∀ (c : ι), c ∈ cs → Becoming.ReadingSchedule.Within s (name c) (a c)) →
+        (∀ (c : ι), c ∈ cs → q c * a c ≤ P) → Becoming.total cs q ≤ P
+@Becoming.ReadingSchedule.no_two_three : ∀ {X : Type} {s : Nat → X} {x y z : X},
+  x ≠ y →
+    z ≠ y →
+      x ≠ z →
+        ∀ (M : Nat),
+          ¬(Becoming.ReadingSchedule.Within s x 2 ∧
+              Becoming.ReadingSchedule.Within s y 3 ∧ Becoming.ReadingSchedule.Within s z M)
+@Becoming.ReadingSchedule.two_three_room : ∀ {M : Nat},
+  7 ≤ M → 3 * M * 2 = 6 * M ∧ 2 * M * 3 = 6 * M ∧ 6 * M = 6 * M ∧ 3 * M + 2 * M + 6 < 6 * M
+@Becoming.ReadingSchedule.weave_even : ∀ {X : Type} (s₀ s₁ : Nat → X) (u : Nat),
+  Becoming.ReadingSchedule.weave s₀ s₁ (2 * u) = s₀ u
+@Becoming.ReadingSchedule.weave_odd : ∀ {X : Type} (s₀ s₁ : Nat → X) (u : Nat),
+  Becoming.ReadingSchedule.weave s₀ s₁ (2 * u + 1) = s₁ u
+Becoming.ReadingSchedule.halves : ∀ (T : Nat), ∃ v, T = 2 * v ∨ T = 2 * v + 1
+@Becoming.ReadingSchedule.double_lt : ∀ {j a : Nat}, j < a → 2 * j + 1 < 2 * a
+Becoming.ReadingSchedule.even_add : ∀ (v j : Nat), 2 * v + 2 * j = 2 * (v + j)
+Becoming.ReadingSchedule.odd_add : ∀ (v j : Nat), 2 * v + 1 + 2 * j = 2 * (v + j) + 1
+Becoming.ReadingSchedule.odd_add_odd : ∀ (v j : Nat), 2 * v + 1 + (2 * j + 1) = 2 * (v + 1 + j)
+@Becoming.ReadingSchedule.weave_left : ∀ {X : Type} {s₀ s₁ : Nat → X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.Within s₀ x a →
+    Becoming.ReadingSchedule.Within (Becoming.ReadingSchedule.weave s₀ s₁) x (2 * a)
+@Becoming.ReadingSchedule.weave_right : ∀ {X : Type} {s₀ s₁ : Nat → X} {x : X} {a : Nat},
+  Becoming.ReadingSchedule.Within s₁ x a →
+    Becoming.ReadingSchedule.Within (Becoming.ReadingSchedule.weave s₀ s₁) x (2 * a)
+@Becoming.ReadingSchedule.Code.At.reads : ∀ {X : Type} {K : Becoming.ReadingSchedule.Code X} {x : X} {k : Nat},
+  K.At x k → Becoming.ReadingSchedule.Within K.reader (some x) (2 ^ k)
+@Becoming.ReadingSchedule.pair_lift : ∀ {X : Type} {L : List (Becoming.ReadingSchedule.Code X)}
+  {t : Becoming.ReadingSchedule.Code X},
+  t ∈ L → ∃ u, u ∈ Becoming.ReadingSchedule.pair L ∧ ∀ (x : X) (k : Nat), t.At x k → u.At x (k + 1)
+@Becoming.ReadingSchedule.pair_length : ∀ {X : Type} (L : List (Becoming.ReadingSchedule.Code X)),
+  2 * (Becoming.ReadingSchedule.pair L).length ≤ L.length + 1
+@Becoming.ReadingSchedule.leaves_mem : ∀ {X : Type} {x : X} {items : List (X × Nat)},
+  (x, 0) ∈ items → Becoming.ReadingSchedule.Code.leaf x ∈ Becoming.ReadingSchedule.leaves items
+@Becoming.ReadingSchedule.deeper_mem : ∀ {X : Type} {x : X} {k : Nat} {items : List (X × Nat)},
+  (x, k + 1) ∈ items → (x, k) ∈ Becoming.ReadingSchedule.deeper items
+@Becoming.ReadingSchedule.leaves_length : ∀ {X : Type} (items : List (X × Nat)),
+  (Becoming.ReadingSchedule.leaves items).length ≤ items.length
+@Becoming.ReadingSchedule.weight_split : ∀ {X : Type} (D : Nat) (items : List (X × Nat)),
+  (Becoming.total items fun i => 2 ^ (D + 1 - i.snd)) =
+    (Becoming.ReadingSchedule.leaves items).length * 2 ^ (D + 1) +
+      Becoming.total (Becoming.ReadingSchedule.deeper items) fun i => 2 ^ (D - i.snd)
+@Becoming.ReadingSchedule.weight_zero : ∀ {X : Type} (items : List (X × Nat)),
+  (Becoming.total items fun i => 2 ^ (0 - i.snd)) = items.length
+Becoming.ReadingSchedule.two_pow_pos : ∀ (n : Nat), 0 < 2 ^ n
+@Becoming.ReadingSchedule.two_pow_le : ∀ {k' k : Nat}, k' ≤ k → 2 ^ k' ≤ 2 ^ k
+@Becoming.ReadingSchedule.build_length : ∀ {X : Type} (D : Nat) (items : List (X × Nat)),
+  (Becoming.ReadingSchedule.build items D).length * 2 ^ D < (Becoming.total items fun i => 2 ^ (D - i.snd)) + 2 ^ D
+@Becoming.ReadingSchedule.build_holds : ∀ {X : Type} (D : Nat) {items : List (X × Nat)} {x : X} {k : Nat},
+  (x, k) ∈ items → k ≤ D → ∃ t, t ∈ Becoming.ReadingSchedule.build items D ∧ ∃ k', k' ≤ k ∧ t.At x k'
+@Becoming.ReadingSchedule.first_of_short : ∀ {X : Type} {L : List (Becoming.ReadingSchedule.Code X)},
+  L.length < 2 → ∀ {t : Becoming.ReadingSchedule.Code X}, t ∈ L → Becoming.ReadingSchedule.first L = t
+@Becoming.ReadingSchedule.lt_of_mul_lt_mul : ∀ {a b c : Nat}, a * c < b * c → a < b
+@Becoming.ReadingSchedule.kraft_reads : ∀ {X : Type} {items : List (X × Nat)} {D : Nat},
+  (∀ (i : X × Nat), i ∈ items → i.snd ≤ D) →
+    (Becoming.total items fun i => 2 ^ (D - i.snd)) ≤ 2 ^ D →
+      ∀ (x : X) (k : Nat),
+        (x, k) ∈ items →
+          Becoming.ReadingSchedule.Within (Becoming.ReadingSchedule.ofItems items D).reader (some x) (2 ^ k)
+Becoming.ReadingSchedule.climb_spec : ∀ (a f k : Nat),
+  2 ^ k ≤ a →
+    a < 2 ^ (k + f + 1) →
+      2 ^ Becoming.ReadingSchedule.climb a f k ≤ a ∧ a < 2 ^ (Becoming.ReadingSchedule.climb a f k + 1)
+Becoming.ReadingSchedule.lt_two_pow : ∀ (n : Nat), n < 2 ^ n
+@Becoming.ReadingSchedule.lg_spec : ∀ {a : Nat},
+  0 < a → 2 ^ Becoming.ReadingSchedule.lg a ≤ a ∧ a < 2 ^ (Becoming.ReadingSchedule.lg a + 1)
+Becoming.ReadingSchedule.cap_le : ∀ (D L : Nat),
+  Becoming.ReadingSchedule.cap D L ≤ D ∧ Becoming.ReadingSchedule.cap D L ≤ L
+@Becoming.ReadingSchedule.mul_lt_mul_left' : ∀ {m n : Nat}, m < n → ∀ {k : Nat}, 0 < k → k * m < k * n
+@Becoming.ReadingSchedule.weight_le : ∀ {a q D : Nat},
+  0 < a → 2 ^ (D + 1) ≤ q * a → 2 ^ (D - Becoming.ReadingSchedule.cap D (Becoming.ReadingSchedule.lg a)) ≤ q
+@Becoming.ReadingSchedule.half_suffices : ∀ {X : Type} {cs : List X} {a q : X → Nat} {D : Nat},
+  (∀ (c : X), c ∈ cs → 0 < a c) →
+    (∀ (c : X), c ∈ cs → 2 ^ (D + 1) ≤ q c * a c) →
+      Becoming.total cs q ≤ 2 ^ D → ∃ s, ∀ (c : X), c ∈ cs → Becoming.ReadingSchedule.Within s (some c) (a c)
+@Becoming.Flow.taken_of_read : ∀ {X F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {s : Nat → X} {name : C → X}
+  {c : C} {a d T ℓ : Nat},
+  Becoming.ReadingSchedule.Within s (name c) a →
+    (∀ (u : Nat), L.partTaken part u c ≤ d) →
+      (∀ (u : Nat), u < T → L.partTaken part u c = 0) →
+        (∀ (u R : Nat), T ≤ R → s R = name c → R + ℓ < u → L.partTaken part u c = 0) →
+          ∀ (t : Nat), (Becoming.total (Becoming.steps 0 t) fun u => L.partTaken part u c) ≤ (a + ℓ) * d
+@Becoming.Flow.Balances.retains_of_read : ∀ {X F C Pos : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos} {s : Nat → X} {name : C → X} {a d T : C → Nat} {ℓ : Nat},
+          (∀ (c : C), 0 < d c → Becoming.ReadingSchedule.Within s (name c) (a c)) →
+            (∀ (u : Nat) (c : C), L.partTaken part u c ≤ d c) →
+              (∀ (u : Nat) (c : C), u < T c → L.partTaken part u c = 0) →
+                (∀ (u : Nat) (c : C) (R : Nat), T c ≤ R → s R = name c → R + ℓ < u → L.partTaken part u c = 0) →
+                  (∀ (t : Nat) (f : F),
+                      sig p t f →
+                        W.Admits (l t) t f → ∀ (c : C), W.requires t f c → W.need t f c + (a c + ℓ) * d c ≤ l t c) →
+                    W.Retains sig p W.level l
+@Becoming.Flow.Balances.loses_of_unread : ∀ {X F C Pos : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos} {s : Nat → X} {name : C → X} {c : C} {T k ℓ d t : Nat} {f : F},
+          Becoming.ReadingSchedule.Unread s (name c) T k →
+            (∀ (u : Nat), T ≤ u → (∀ (R : Nat), T ≤ R → s R = name c → u ≤ R + ℓ) → d ≤ L.partTaken part u c) →
+              (∀ (u : Nat), L.partGiven part u c = 0) →
+                T + (k + 1 + ℓ) ≤ t →
+                  sig p t f →
+                    W.Admits (l t) t f →
+                      W.requires t f c → l t c < W.need t f c + (k + 1 + ℓ) * d → W.Adds sig p l W.level
+@Becoming.ReadingSchedule.keeps_of_within : ∀ {X C : Type} [DecidableEq C] {s : Nat → X} {name : C → X} {c : C}
+  {a ℓ d m : Nat},
+  Becoming.ReadingSchedule.Within s (name c) a → (a + ℓ) * d ≤ m → Becoming.ReadingSchedule.Keeps s name c ℓ d m
+@Becoming.ReadingSchedule.Drawer.partTaken_eq : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d u : Nat) (c' : C),
+  (Becoming.ReadingSchedule.Drawer.flow c T n d).partTaken (fun f => f) u c' =
+    (Becoming.ReadingSchedule.Drawer.flow c T n d).take u true c'
+@Becoming.ReadingSchedule.Drawer.take_le : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d u : Nat) (c' : C),
+  (Becoming.ReadingSchedule.Drawer.flow c T n d).take u true c' ≤ d
+@Becoming.ReadingSchedule.Drawer.take_total : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d : Nat) (c' : C)
+  (t : Nat),
+  (Becoming.total (Becoming.steps 0 t) fun u => (Becoming.ReadingSchedule.Drawer.flow c T n d).take u true c') ≤ n * d
+@Becoming.ReadingSchedule.Drawer.take_total_end : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d : Nat),
+  (Becoming.total (Becoming.steps 0 (T + n)) fun u => (Becoming.ReadingSchedule.Drawer.flow c T n d).take u true c) =
+    n * d
+@Becoming.ReadingSchedule.Drawer.sub_add_of_le : ∀ {B y x : Nat}, y + x ≤ B → B - (y + x) + x = B - y
+@Becoming.ReadingSchedule.Drawer.balances : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d m : Nat),
+  (Becoming.ReadingSchedule.Drawer.flow c T n d).Balances (Becoming.ReadingSchedule.Drawer.web c T n d m)
+@Becoming.ReadingSchedule.Drawer.withheld : ∀ {C : Type} [inst : DecidableEq C] (c : C) (T n d m : Nat),
+  (Becoming.ReadingSchedule.Drawer.flow c T n d).WithheldLevels (fun f => f)
+    (Becoming.ReadingSchedule.Drawer.web c T n d m) fun x x_1 => n * d + m
+@Becoming.ReadingSchedule.within_of_keeps : ∀ {X C : Type} [DecidableEq X] [DecidableEq C] {s : Nat → X} {name : C → X}
+  {c : C} {a ℓ d m : Nat},
+  Becoming.ReadingSchedule.Keeps s name c ℓ d m → m < (a + 1 + ℓ) * d → Becoming.ReadingSchedule.Within s (name c) a
+@Becoming.ReadingSchedule.keeps_iff_within : ∀ {X C : Type} [DecidableEq X] [DecidableEq C] {s : Nat → X} {name : C → X}
+  {c : C} {a ℓ d m : Nat},
+  (a + ℓ) * d ≤ m →
+    m < (a + 1 + ℓ) * d → (Becoming.ReadingSchedule.Keeps s name c ℓ d m ↔ Becoming.ReadingSchedule.Within s (name c) a)
+@Becoming.ReadingSchedule.keeps_density : ∀ {X C : Type} [DecidableEq X] [DecidableEq C] {s : Nat → X} {name : C → X}
+  {cs : List C},
+  Becoming.Distinct (List.map name cs) →
+    ∀ {ℓ P : Nat} {a d m q : C → Nat},
+      (∀ (c : C), c ∈ cs → Becoming.ReadingSchedule.Keeps s name c ℓ (d c) (m c)) →
+        (∀ (c : C), c ∈ cs → m c < (a c + 1 + ℓ) * d c) → (∀ (c : C), c ∈ cs → q c * a c ≤ P) → Becoming.total cs q ≤ P
+@Becoming.ReadingSchedule.spare_not_enough : ∀ {X C : Type} [DecidableEq X] [DecidableEq C] {s : Nat → X} {name : C → X}
+  {x y z : C},
+  name x ≠ name y →
+    name z ≠ name y →
+      name x ≠ name z →
+        ∀ {ℓ M : Nat} {d m : C → Nat},
+          7 ≤ M →
+            m x < (2 + 1 + ℓ) * d x →
+              m y < (3 + 1 + ℓ) * d y →
+                m z < (M + 1 + ℓ) * d z →
+                  (3 * M * 2 = 6 * M ∧ 2 * M * 3 = 6 * M ∧ 6 * M = 6 * M ∧ 3 * M + 2 * M + 6 < 6 * M) ∧
+                    ¬(Becoming.ReadingSchedule.Keeps s name x ℓ (d x) (m x) ∧
+                        Becoming.ReadingSchedule.Keeps s name y ℓ (d y) (m y) ∧
+                          Becoming.ReadingSchedule.Keeps s name z ℓ (d z) (m z))
+@Becoming.ReadingSchedule.keeps_of_half : ∀ {C : Type} [DecidableEq C] {cs : List C} {ℓ D : Nat} {a d m q : C → Nat},
+  (∀ (c : C), c ∈ cs → 0 < a c) →
+    (∀ (c : C), c ∈ cs → (a c + ℓ) * d c ≤ m c) →
+      (∀ (c : C), c ∈ cs → 2 ^ (D + 1) ≤ q c * a c) →
+        Becoming.total cs q ≤ 2 ^ D → ∃ s, ∀ (c : C), c ∈ cs → Becoming.ReadingSchedule.Keeps s some c ℓ (d c) (m c)

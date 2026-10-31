@@ -346,8 +346,8 @@
     "zh": "纯核，公理报告皆空：引 ShownOrder，为 ChoiceOccasions.reach_within；引 ReadingLoop，为 Loop 与 Loop.rests_of_unrefuted，并经之引 Viability.ChoiceOver；诸总用 Flow、Population 与 Dissipation 之引理及前导之消去与减法引理，比较以 Nat.decLt 与 Nat.decLe 判之，不用 omega 与 simp；例之步以 rfl 算。"
   },
   "next_delta": {
-    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.",
-    "zh": "读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；有噪之读与连续之信于外围；持是否随模型之二余之冻结检验；人之审查。"
+    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the threshold, a rule's shortfall plus the amount forgone against each excess (the plan's TR8); review by a person.",
+    "zh": "读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；有噪之读与连续之信于外围；持是否随其阈之冻结检验：规则之所缺加所舍之量对每一余（计划之 TR8）；人之审查。"
   },
   "correspondence": {
     "en": "In counts: the worth of a reading telling the candidate is the perfect-information case of Good's (1967) argument, his Lemma's dominating row its equality boundary; holding for it is the off-switch game's waiting with a rational human (Hadfield-Menell et al. 2017): its Theorem 1 for a belief of finite support; waiting's two differences T E[U⁺] and T E[(−U)⁺], T the total weight, are T times its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed; for a rule that is a function of the candidate, T times its Equation 1's terms are balances; a finer partition never raising the least shortfall is, for this decision, Blackwell's (1953) partition case. AI reading: openness less shortfall is the incentive the off-switch paper's Remark 1 places qualitatively, its Theorem 2, Δ = σ²E[π̇H] − |µ|Pr(C), the Gaussian form, decomposed otherwise; its game has no cost of waiting, what holding forgoes relaxing Good's proviso. SignLoop is nearest to Carey's (2018) conflating model, whose predictions look perfectly accurate on its encoded observations and which may ignore shutdown: related by a misspecified model never refuted, not formalizing the conflation. Readings, not containments.",
@@ -601,7 +601,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
@@ -645,6 +645,10 @@
     {
       "en": "31 October 2026: its balances, after_byReading, shortfall_byReading, held_eq_go_iff, held_eq_off_iff, the thresholds, the comparisons with an amount forgone and across_le_iff proved from RevisionPlans (rule 9, RR2's landing), term_go and term_off gone, every other statement and name unchanged; going on, switching off and holding for a rule stated as plans, with held_above_moves_iff and held_above_held_iff.",
       "zh": "2026年10月31日：其衡、after_byReading、shortfall_byReading、held_eq_go_iff、held_eq_off_iff、阈、舍一量之比与 across_le_iff 由 RevisionPlans 证之（规则九，RR2 之落地），term_go 与 term_off 去之，余之陈述与名不变；续、止与为规则而持述为策，并 held_above_moves_iff 与 held_above_held_iff。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR8 in experiments/formations-that-read, which can refute at most the bridge that a system chooses as the counts rank, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR8，至多能驳系统依计之序而择之桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }

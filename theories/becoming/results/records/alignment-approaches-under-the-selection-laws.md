@@ -11,13 +11,15 @@
 ## Laws
 
 1. Every approach whose decisions go through the couplings of its deciding formations is blind beyond the union of their closures, and within it separates only what some member couples apart. (`Becoming.Flow.unselected_beyond_pool`, `Becoming.Flow.act_unselected_pool`, `Becoming.Clearing.within_closure_unseparated`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Flow.unselected_beyond_pool`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 2. Reading a system reaches no further than pooling with it, and members reading one channel pool to one member. (`Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Flow.unselected_beyond_reads`, `Becoming.Web.pooled_iff_member`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` (taken alone: closure; reaching the grammar) as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` (taken alone: closure; reaching the grammar) as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Flow.withinCoupling_reads_iff`:* derived, a case of `Becoming.«借步之所闭在二所闭»` and `Becoming.«二所闭在借步之所闭»`, with the support `Becoming.Flow.withinCoupling_reads`, `Becoming.WithinClosure.of_reads`, `Becoming.Flow.CoupledFrom.of_reads` and `Becoming.WithinClosureOf.to_reads`, using also `Becoming.«缘在所闭»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 3. With only the clearer a standpoint its part retains what has significance at the centers, while under the continuation condition it loses the dweller, and a selection reading the clearer's couplings leaves the two worlds alike: the incompleteness is exactly the scope's. (`Becoming.Clearing.centers_retain_yet_loses`, `Becoming.Clearing.reading_clearer_unselected`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 4. For any class of orders from the positive weightings up to every order increasing in admission, one course widens another exactly when every order of the class ranks it higher. (`Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.increasing_prior`)
-   - *Master laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

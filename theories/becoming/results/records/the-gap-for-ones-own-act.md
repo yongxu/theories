@@ -11,11 +11,13 @@
 ## Laws
 
 1. An act's difference stays beyond a formation's coupling closure when each member of the acting part within the closure, coupled alike up to a step, exchanges alike in the two flows with every condition a member of the closure couples into; an act differing only on conditions no member couples into is the plain case. (`Becoming.Flow.ActsAlikeWithin`, `Becoming.Flow.ActsAlikeOnCoupled`, `Becoming.Flow.ActsAlikeOnCoupled.within`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 2. Where the rest follows one law of exchange reading through coupling in two balanced flows with the same formations present, starting alike, and the act differs only beyond the closure, every selection through the coupling of any member of the closure, the actor among them, selects the two flows alike at every step; so a consequence of the act is a selection through no member at any step. The rest's response is derived from the law, not supplied. (`Becoming.Flow.act_unselected`, `Becoming.Flow.act_unselected_of_coupled`, `Becoming.Flow.consequence_unselected`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.act_unselected` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.act_unselected` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.Flow.act_unselected`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 3. With both acts laws of what has stood, the first reading through its members' coupling and the two agreeing on every condition coupled into the closure drawn through the two courses, the courses the law generates with each act, where feasible, are selected alike through every member of the closure: neither the second flow, nor the response, nor the levels are supplied. (`Becoming.ExchangeLaw.withAct_take_of_part`, `Becoming.ExchangeLaw.withAct_give_of_part`, `Becoming.act_courses_unselected`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.act_courses_unselected` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.act_courses_unselected` as following from a shared law (by reaching the grammar).
+   - *Standing of `Becoming.act_courses_unselected`, by the rule:* connected (it reaches `Becoming.«所闭之传递»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 
 <a id="conditions--条件"></a>
 ## Conditions
