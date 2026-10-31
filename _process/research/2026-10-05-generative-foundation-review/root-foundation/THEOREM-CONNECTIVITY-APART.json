@@ -6311,6 +6311,131 @@
    "module": "Becoming.UnitMatchings",
    "category": "support",
    "reason": "UnitMatchings.FrameMatch.predecessor_unique: a one-line unpacking of FrameMatch's own fields (bwd_fwd): an out-position has one in-position the selected matching sends to it, «定前» at a frame; the record amounts-by-unit-matchings cites it in its first law"
+  },
+  "Becoming.BlanketWeights.Cycle.not_crossForm": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Cycle.not_crossForm: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Cycle.periodic": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Cycle.periodic: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.LagRelay.circulates": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.LagRelay.circulates: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.LagRelay.steady": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.LagRelay.steady: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.MovesReadExternal.balanced": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.MovesReadExternal.balanced: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.MovesReadExternal.joined": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.MovesReadExternal.joined: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.MovesReadExternal.not_crossForm": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.MovesReadExternal.not_crossForm: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.MovesReadExternal.ratio": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.MovesReadExternal.ratio: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.ReadsDirectly.balanced": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.ReadsDirectly.balanced: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.ReadsDirectly.crossForm": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.ReadsDirectly.crossForm: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.ReadsDirectly.reads_external": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.ReadsDirectly.reads_external: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.SynchronousCopy.exact_independentGiven: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.SynchronousCopy.exact_steady": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.SynchronousCopy.exact_steady: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.SynchronousCopy.noisy_not_independentGiven: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.SynchronousCopy.noisy_steady": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.SynchronousCopy.noisy_steady: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Turning.circulates": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Turning.circulates: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Turning.independentGiven": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Turning.independentGiven: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Turning.steady": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Turning.steady: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Uncovered.crossFormOn": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Uncovered.crossFormOn: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.Uncovered.not_crossForm": {
+   "module": "Becoming.BlanketWeights",
+   "category": "model-witness",
+   "reason": "BlanketWeights.Uncovered.not_crossForm: a fact about one constructed model of a chain or a blanketed law on bits and phases (UE26)"
+  },
+  "Becoming.BlanketWeights.crossFormOn_of_independentGiven": {
+   "module": "Becoming.BlanketWeights",
+   "category": "general-structure",
+   "reason": "BlanketWeights.crossFormOn_of_independentGiven: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
+  },
+  "Becoming.BlanketWeights.crossForm_of_crossFormOn": {
+   "module": "Becoming.BlanketWeights",
+   "category": "general-structure",
+   "reason": "BlanketWeights.crossForm_of_crossFormOn: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
+  },
+  "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread": {
+   "module": "Becoming.BlanketWeights",
+   "category": "general-structure",
+   "reason": "BlanketWeights.crossForm_of_detailedBalance_unread: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
+  },
+  "Becoming.BlanketWeights.ratio_of_crossForm": {
+   "module": "Becoming.BlanketWeights",
+   "category": "general-structure",
+   "reason": "BlanketWeights.ratio_of_crossForm: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
+  },
+  "Becoming.BlanketWeights.restrict_independent_case": {
+   "module": "Becoming.BlanketWeights",
+   "category": "general-structure",
+   "reason": "BlanketWeights.restrict_independent_case: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
   }
  },
  "instances": {

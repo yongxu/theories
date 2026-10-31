@@ -1,11 +1,11 @@
 {
- "commit": "8d46add6f03b9fa092aeb6144aad385a2745266d",
- "sources_match_commit": true,
- "core_receipt_at_commit": "20261031T125855.282103Z",
+ "commit": "815c6425fb9ef3dcf2a5b1c2efd054c8e70db68c",
+ "sources_match_commit": false,
+ "core_receipt_at_commit": "20261031T152525.956467Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 365,
- "constants": 52652,
- "spine_theorems": 17789,
+ "tracked_modules": 366,
+ "constants": 52774,
+ "spine_theorems": 17835,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 216,
   "used by a theorem on the base": 5818,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 2221,
-  "apart: prelude-only statement": 168
+  "apart: own vocabulary": 2263,
+  "apart: prelude-only statement": 172
  },
- "apart": 2389,
- "apart_general_structure_by_design": 999,
- "apart_otherwise": 1390,
+ "apart": 2435,
+ "apart_general_structure_by_design": 1004,
+ "apart_otherwise": 1431,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 123,
   "of them on the base": 81,
@@ -76,12 +76,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1259,
- "apart_roots": 1259,
+ "apart_used_by_nothing": 1284,
+ "apart_roots": 1284,
  "apart_roots_by_category": {
-  "model-witness": 568,
+  "model-witness": 588,
   "support": 140,
-  "general-structure": 503,
+  "general-structure": 508,
   "calibration": 22,
   "restates": 14,
   "logical-strength": 12
@@ -226,6 +226,10 @@
   "Becoming.SelectionLevels": [
    47,
    78
+  ],
+  "Becoming.BlanketWeights": [
+   46,
+   46
   ],
   "Becoming.GrammarCases": [
    38,
@@ -842,9 +846,9 @@
  },
  "rings": {
   "core": {
-   "modules": 348,
-   "theorems": 17017,
-   "apart": 2294,
+   "modules": 349,
+   "theorems": 17063,
+   "apart": 2340,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3342,
@@ -853,8 +857,8 @@
     "proof through a base family": 205,
     "used by a theorem on the base": 5457,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 2127,
-    "apart: prelude-only statement": 167
+    "apart: own vocabulary": 2169,
+    "apart: prelude-only statement": 171
    }
   },
   "instances": {
@@ -979,7 +983,7 @@
   "proof through a base family": 5,
   "used by a theorem on the base": 13,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 45
+  "apart: own vocabulary": 46
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1148,6 +1152,12 @@
    "id": "testing-within-the-net",
    "modules": [
     "Becoming.GrammarTesting"
+   ]
+  },
+  {
+   "id": "the-blanket-at-a-steady-state",
+   "modules": [
+    "Becoming.BlanketWeights"
    ]
   },
   {
@@ -9111,6 +9121,52 @@
   "Becoming.Blanket.read_off_admits": "apart: own vocabulary",
   "Becoming.Blanket.unweighted_share": "apart: own vocabulary",
   "Becoming.Blanket.forbids_iff": "apart: own vocabulary",
+  "Becoming.BlanketWeights.cross_of_move": "apart: prelude-only statement",
+  "Becoming.BlanketWeights.ratio_of_cross": "apart: prelude-only statement",
+  "Becoming.BlanketWeights.cross_trans": "apart: prelude-only statement",
+  "Becoming.BlanketWeights.pos_of_mul_eq": "apart: prelude-only statement",
+  "Becoming.BlanketWeights.cross_of_closure": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossForm_of_detailedBalance": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread": "apart: own vocabulary",
+  "Becoming.BlanketWeights.ratio_of_crossForm": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossFormOn_of_crossForm": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossForm_of_crossFormOn": "apart: own vocabulary",
+  "Becoming.BlanketWeights.total_congr_mem": "apart: own vocabulary",
+  "Becoming.BlanketWeights.total_mul_total": "apart: own vocabulary",
+  "Becoming.BlanketWeights.factorsGiven_of_crossFormOn": "apart: own vocabulary",
+  "Becoming.BlanketWeights.whole_zero_entry": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossFormOn_of_factorsGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.mass_whole": "apart: own vocabulary",
+  "Becoming.BlanketWeights.mass_atBlanket": "apart: own vocabulary",
+  "Becoming.BlanketWeights.scaled_of_factorsGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.independentGiven_of_factorsGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.factorsGiven_of_independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.independentGiven_of_crossFormOn": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossFormOn_of_independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.independentGiven_of_detailedBalance": "apart: own vocabulary",
+  "Becoming.BlanketWeights.crossForm_product": "apart: own vocabulary",
+  "Becoming.BlanketWeights.restrict_independent_case": "apart: own vocabulary",
+  "Becoming.BlanketWeights.LagRelay.steady": "apart: own vocabulary",
+  "Becoming.BlanketWeights.LagRelay.not_independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.LagRelay.circulates": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Turning.steady": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Turning.circulates": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Turning.independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.ReadsDirectly.balanced": "apart: own vocabulary",
+  "Becoming.BlanketWeights.ReadsDirectly.crossForm": "apart: own vocabulary",
+  "Becoming.BlanketWeights.ReadsDirectly.reads_external": "apart: own vocabulary",
+  "Becoming.BlanketWeights.MovesReadExternal.balanced": "apart: own vocabulary",
+  "Becoming.BlanketWeights.MovesReadExternal.joined": "apart: own vocabulary",
+  "Becoming.BlanketWeights.MovesReadExternal.ratio": "apart: own vocabulary",
+  "Becoming.BlanketWeights.MovesReadExternal.not_crossForm": "apart: own vocabulary",
+  "Becoming.BlanketWeights.SynchronousCopy.exact_steady": "apart: own vocabulary",
+  "Becoming.BlanketWeights.SynchronousCopy.noisy_steady": "apart: own vocabulary",
+  "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Cycle.periodic": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Cycle.not_crossForm": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Uncovered.crossFormOn": "apart: own vocabulary",
+  "Becoming.BlanketWeights.Uncovered.not_crossForm": "apart: own vocabulary",
   "Becoming.LumpedSeeking.tied_mass": "apart: own vocabulary",
   "Becoming.LumpedSeeking.single_le_evidence": "apart: own vocabulary",
   "Becoming.LumpedSeeking.posterior_le_iff_prior": "apart: own vocabulary",

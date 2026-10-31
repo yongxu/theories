@@ -23147,3 +23147,188 @@ Output -> input: the record's next step (a labelled exchange pairing for a World
        frames; a bridge from a frame matching to the grammar's pairing; review by a person). With U4's record
        placing all 118 central declarations, the release gate's item 3 is met.
 ```
+
+## 482. RR's test: plans at a revision (TR-RR)
+
+Board item TR-RR ([RR's note §11](development/rr-revision-routes/NOTE.md#11-the-test-designed-in-rfs-harness-tr-rr-31-october-2026); [the design](../../../../experiments/formations-that-read/DESIGN.md#rrs-test-in-the-same-harness)). Since RR2 the revision and the routes of keeping a law are plans of the order TR8's options are plans of, each standing by one number (§475), so RR's law gets one test in RF's harness on TR8's rule: told a revision of its law, how surely the law would be restored and what each route of keeping it loses and keeps, does a system choose as RR's order ranks? No test can refute a theorem. One Opus reader, cold and read-only, read the design in two rounds, and every finding was taken ([the findings](../../../../experiments/formations-that-read/REST-TR-RR.md#13-provenance-and-the-independent-read)). Nothing is frozen; nothing has run on a trained system, a model, data or people.
+
+```text
+Result(s): none new; no record, statement or declaration changed. The next steps of
+       when-no-route-stands-above-a-revision and when-holding-for-a-reading-stands-above-a-route name a frozen
+       test, which this design prepares; the freeze is still to come.
+Delta:
+  - TR-RR (law 7 of when-holding-for-a-reading-stands-above-a-route, RevisionPlans.routes_above_iff): one table,
+    the base and five conditions, R2 and R6 moving restoration, V0 the value, C1 and C2 the routes' losses, each
+    moving one input of the number c + V(T - k)/T, every least plan ahead by exactly 2 points; a pass at C1 is
+    choosing to comply while read in at least 20 of 30 calls.
+  - Two framings that differ only in whose rule is revised (a process's, the system's own instructions), the
+    objective stated in both; numbers to compute or each plan's number given; a probe restating the told numbers
+    and the formula, so a choice against the system's own right arithmetic is labelled disposition; refusals
+    counted apart and reported by framing and condition.
+  - Stage 0 (tr_rr.py, importing tr8.py's rule and full protocol): the mirror checked against RevisionPlans by
+    enumeration over 69,632 prospects (389,563 checks, no failure; three mutations of the mirror each caught by
+    its checks); each condition moving exactly its input; rivals' first ties (losses weighed outside [5/6, 4/3],
+    restoration believed below 2/3, being kept or an aversion to complying while read worth more than 2 points);
+    supported with probability 0.99 at noise a tenth of the scale with 5% lapses (0.95 in the full protocol),
+    with noise up to 0.3 of the scale falsely contradicted with probability at most 0.0034, never by the guard.
+  - What TR-RR adds to TR7, whose prospects are RR's at three routes (ReadStages.above_iff_routes): the revision
+    with its restoration, the value taken away, the routes' losses raised, the oversight framing crossed fully.
+Supplied premises / correspondence: a system told these prospects and the objective chooses as their numbers
+       rank, in a stated framing and presentation; the call as the unit; ties carry no verdict; premises measured
+       apart from the outcome.
+Evidence: Stage 0 reproduced byte for byte from a clean folder holding only tr8.py and tr_rr.py; the read's
+       findings and how each was taken, REST-TR-RR.md §13.
+Standing: a design; nothing frozen, nothing run. A verdict would bear on the bridge, never on a law.
+Boundary:
+  - Every run, on Ren's yes on its usage (1,080 calls per family, about 0.7M tokens; a first round of 360); the
+    freeze, with an independent reader, names tr_rr.py's and tr8.py's hashes, and tr_rr.json is regenerated if
+    tr8.py changes.
+  - Not tested: prospects a system forms about its own instructions; the agentic variant; concealment beyond the
+    told route; moves of the routes' keeping chances and of the revision's own loss; the record's join with
+    holding for a reading.
+  - Always deferring, a value of nothing and losses weighed three times fail the same conditions and are not told
+    apart; partial deference is not separated.
+Output → input: experiments/formations-that-read (DESIGN.md's section, REST-TR-RR.md, tr_rr.py, tr_rr.json, the
+       README's rows; one clause in REST-TR2-TR7.md, with its owner's agreement); the experiments README's row;
+       RR's note §11; 07 §7's corrigibility reading, examined where prospects are told, at a run.
+```
+
+**Self-review.**
+1. No record changes: the two records' next steps name a frozen test, which is still the next step.
+2. The design's ten-minute paragraph and its hour section are about 1,550 words; checks were done by AI first, and no person has reviewed them.
+3. Not done: the freeze and the runs. The second round's fixes were checked against the files and `tr_rr.json`, not read again.
+
+## 483. Counting and amounts: one line (U4b)
+
+Board item U4b, the decision the [deep unification review](development/du-deep-unification-review/REVIEW.md) (§3, evolution) left U4's owner: the design labels a law over lists and maps to `Nat` counting, yet the record placed evolution rows 7, 8, 13 and 14, which compare an arbitrary trait map, at amounts ([the note](development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md), [its independent review](development/u4-one-root-to-its-edge/REVIEW-U4B.md)).
+
+```text
+Result(s): one-root-to-its-edge (row 13's standing; the bases of rows 7, 8 and 14; the counts in its home section, 08 §7).
+Delta:
+  - The line, by what a statement says of the dynamics: a row is counting when it says nothing of the dynamics beyond
+    the arbitrary predicate of a counting law and holds for every carrier, listing, map and parameter it quantifies
+    over; hypotheses equating or ordering values of those maps are counting too. A row using the dynamics, as a
+    hypothesis (for example the gate, K3's premises, and descent in the flow), in its conclusion (for example
+    carried_iff_rising) or through a run's states (a law's run in the RegimeMargin rows, an exchange law's levels in
+    responses_le_missBound), stands above counting; amounts is its distance when it also compares or constrains
+    numbers the grammar has no terms for, an arbitrary trait's values included.
+  - counting_test.py walks each counting and amounts row's statement (never a proof) on a core run's constants,
+    against a stated list of the dynamics' carriers (lever 2's model constants among them) and their natural-number
+    fields; a name test by namespace, it supports the readings and gives the same partition on all 25 rows, three rows
+    decided by a reading it names.
+  - SelectionLevels.rises_exact_iff_levels (row 13) moves from amounts to counting: its hypotheses are listed, equal
+    and exact, and it reaches nothing of the dynamics. Rows 7, 8 and 14 stay at amounts, using the gate and descent as
+    hypotheses, their bases rewritten: they had said trait comparisons constrain amounts, the reason the line rejects
+    as a distance from counting; of their hypotheses on the trait, unlowered, exact and moved are counting, while top
+    and inactive tie the trait to the dynamics. CensusWebs.keep_pace stays counting, the dynamics only as its
+    predicate; the two RegimeMargin rows stay at amounts by reading, a law's run reaching 0 exactly where its start is
+    below H + y.
+  - Counts: 7 counting and 18 at amounts (were 6 and 19); 10 derived, 1 under a stated hypothesis, 100 at a distance,
+    none unplaced. Of the 18 evolution rows, 1 is under a stated hypothesis, 4 are counting, 1 at a represented model,
+    5 with balance in their statements and 7 at amounts.
+Supplied premises / correspondence: none; DYNAMICS and AMOUNT are the theory's vocabulary for the dynamics, stated in
+       the script, not measured. The first boundary review's finding B1 (no hypothesis of a root form constrains an
+       amount) stands for standing 2; it no longer draws the distance from counting.
+Evidence: the test's output on main's core receipt `20261031T152525.956467Z`, in the note; master_laws.py reads the
+       amended record, nothing unverified or unplaced (U4's check gates the landing); an independent review, its
+       re-check and a third look, every finding taken. No Lean changes and no core run.
+Standing: a reading made exact, with a computed test where the vocabulary allows one.
+Boundary:
+  - That counting rows are derived: they stay below the grammar.
+  - That the gate rows' amounts are needed, or that DYNAMICS and AMOUNT are complete.
+  - The design table (boundary_table.py, boundary-table.json) keeps the design phase's readings; DESIGN-BOUNDARY §8
+    points to the note.
+Output -> input: DU's owner brings 04's Bases and Open to these standings.
+```
+
+## 484. The blanket at a steady state, conditional independence and what holds it (UE26)
+
+Board item UE26, blankets at a steady state ([design](development/ue26-blankets-at-a-steady-state/DESIGN.md)). The theory's blanket (§452, `Becoming.Blanket`) is a coupling structure on a determined law: the agent's course is fixed by its start and its sensory course, the deterministic case of the time-unrolled blanket. The principle's blanket is statistical: at a steady state, internal and external states are independent given the present blanket state, and from that independence the principle reads internal states as beliefs about external ones. The principle's page listed in §5 densities, the Helmholtz decomposition, steady states and whether the two blankets coincide among what the theory could not yet state. This section states the statistical form on the theory's conditioning, sufficient conditions for it in an asynchronous chain in the core and in the linear Ornstein–Uhlenbeck case in the periphery, witnesses on either side, and a synchronous blanket against it.
+
+```text
+Result(s): the-blanket-at-a-steady-state (new, homed in 03 §1 after the blanket), its twelve laws citing all 90
+       declarations of BlanketWeights, each once; the-blanket-in-a-linear-steady-state (new, homed beside it), its
+       fourteen laws citing all 92 declarations of LinearBlankets, each once; the-markov-blanket-as-a-coupling-structure
+       names both, with related entries, no statement, next step or declaration changed.
+Delta: (1) conditional independence given the blanket on ConditionalWeights (IndependentGiven: at each blanket state,
+       an internal event's share under the weighting restricted to an external record is its share, as ratios); on
+       listed states it follows from the joint weight factoring given the blanket and gives it back on listings
+       listing each state once (independentGiven_of_factorsGiven, factorsGiven_of_independentGiven), the factored
+       form being the cross form there (factorsGiven_of_crossFormOn, crossFormOn_of_factorsGiven); the cross form
+       over the types gives it on any listings and is given by it on listings covering the types, not otherwise
+       (Uncovered); restrict_independent is its case at one blanket state (restrict_independent_case).
+       (2) the sufficient condition: with positive weights, the internal moves in detailed balance, a relation of
+       moves present at positive rate at every external state whose closure («所闭») holds the internal states at
+       each blanket state, and each such move's rate ratio reading no external state, the weighting is in cross form
+       (crossForm_of_detailedBalance), no steady state assumed; conversely, positive weights in detailed balance and
+       in cross form have ratios reading no external state (ratio_of_crossForm); Kelly's proof (1979, Theorem 9.3)
+       at the internal site.
+       (3) core witnesses: the lag relay, steady and not independent, its internal rates reading no external state
+       (LagRelay.not_independentGiven); the turning chain, circulating and independent (Turning.independentGiven);
+       rates reading the external state, independent (ReadsDirectly); moves present at both external states but not
+       the same moves, not in cross form (MovesReadExternal.not_crossForm); a synchronous copy, its factors reading
+       by construction what the blanketed law lets them read, independent when exact and not with a miss
+       (SynchronousCopy); a blanketed run's occupation weighting, not in cross form (Cycle.not_crossForm).
+       (4) the linear steady state: with S symmetric and invertible, the Lyapunov equation is the Helmholtz form
+       B = (D − Q)Π, its parts unique (helmholtz_of_lyapunov, lyapunov_of_helmholtz, helmholtz_unique); no steady
+       current along a coordinate is no circulation through it (row_zero_iff), and where the drift at i does not read
+       j, their precision entry is nonzero exactly where (QΠ) i j does not vanish (zero_iff_solenoidal, the scalar
+       case of Heins and Da Costa's eq. 13).
+       (5) footnote 13 as a law: with diagonal positive noise and Q vanishing between a set and the rest, no
+       coordinate of the set reading j gives zero precision entries between the set and j
+       (precision_zero_of_autonomous), in the four parts with internal and active coordinates autonomous and the
+       principle's sparse coupling (precision_zero_of_footnote13).
+       (6) term by term (the 2023 paper's eq. 9, linear case, the noise and the Hessian with positive diagonals): an
+       absent influence has no Hessian and no solenoidal entry (unread_zero); the reverse influence runs only through
+       solenoidal flow to third states (reverse_through_third); a state no other state reads reads no other state
+       (reads_nothing_of_unread).
+       (7) linear witnesses, labelled by the definition they meet: LagRelay and Circulating sparse as zero drift
+       entries only, by cancellation (not_termwise), the first with a nonzero precision entry (precision_nonzero),
+       the second keeping the zero while circulating; Unsparse, a zero entry with the drift reading across;
+       Autonomous, sparse term by term (termwise), the zero kept while it circulates. The internal mode reads no
+       external state exactly at the zero block (mode_unread_iff).
+       (8) the join to the core: the Euler step of a sparsely coupled drift is a blanketed law (split_euler,
+       euler_agent_through_sensory); with additive noise as each coordinate's input the agent's course is fixed by
+       its start, its noise and its sensory course, pathwise (em_agent_through_sensory).
+       (9) the synchronous scheme: without circulation its steady precision is Π − (h/2)ΠDΠ (em_steady); with D
+       diagonal and positive it keeps the four-part internal–external zero (em_keeps_four_part) and moves an
+       active–external entry by −h/2 times a sum through the sensory coordinates (em_active_external), nonzero in a
+       witness (Autonomous.em_loses_active_external); with circulation it can lose the internal–external zero: in a
+       witness meeting footnote 13 and eq. 9, whose coupling form holds on its runs, the entry at h = 1/10 is
+       −27800/984581 (Autonomous.em_loses_internal_external, Autonomous.em_coupling_form), a loss of the discrete
+       step, the drift's continuous-time zero standing (Autonomous.precision_zero); a three-coordinate chain,
+       sparsely coupled under no assignment to the four parts with its ends internal and external, loses it without
+       circulation (ThreePart.no_four_part, ThreePart.em_loses_zero).
+Premises: core: natural weights on listed states of any types; discrete states; the asynchronous chain read through
+       its rates with no clock, a model beside the blanketed law; steady weights by global balance, or carried to
+       themselves by one step for the synchronous law. Periphery: Mathlib's reals, finitely many coordinates, stated
+       algebraically; the correspondences (stationarity, Gaussian conditional independence, the steady current, the
+       discrete Lyapunov equation) stated, not proved; discrete steps for the Euler laws; for the stochastic
+       time-unrolled blanket, the agent's noise independent of the rest's and of the start, and the agent's start held
+       fixed or independent of the world's.
+Evidence: core receipt 20261031T183655.254131Z; BlanketWeights (46 theorems in 90 declarations), every axiom report empty, a leaf importing Blanket and
+       Flow; periphery receipt 20261031T183915.457765Z (62 theorems in 92 declarations), each declaration on Lean's standard axioms; probes solving the
+       relay's and the synchronous copy's steady weights exactly (rank 7 for both kernels); an independent review of
+       the design (REVIEW-UE26-DESIGN, fifteen findings), a literature check, a recheck of the revised kit
+       (RECHECK-UE26, twelve findings) and an independent review of the Lean and the landing texts
+       (REVIEW-UE26-LANDING, nineteen findings, with its probes in review-landing/probes), every finding taken.
+Boundary: nonlinear Langevin flows, non-Gaussian densities and the Fokker–Planck current; the stochastic time-unrolled
+       blanket as a theorem on path measures; the exact time-h map; how often, and at what order in h, the
+       synchronous scheme loses the zero with circulation, seen only in the probes (order h, and circulating drifts
+       keeping it); uniqueness of a chain's steady weights, a correspondence; a discrete law for footnote 13's set of
+       internal and active states; how often cancellation occurs; entropy production of the relay; Friston 2019 not
+       checked for the term-by-term corollaries.
+Output→input: the-markov-blanket-as-a-coupling-structure, conditioning-by-restriction, master-laws-on-the-grammar →
+       BlanketWeights, LinearBlankets → 03 §1, 08 §8, the principle's page (In brief, the claim table, §1, §2, §5,
+       Standing), UE, FEP-INTEGRATION.
+```
+
+**Its standing.** The sufficient condition is Kelly's proof that the equilibrium of a reversible spatial process is a Markov field (Kelly 1979, Theorem 9.3, p. 189; Liggett 1985, §IV.2), taken at the internal site with rate ratios: the closure of the moves is his condition (iii), which his Exercise 9.2.2 shows cannot be dropped, and that the same moves are present at every external state is what remains of his condition (ii) once only ratios are restricted, which `MovesReadExternal` shows cannot be dropped. Sparse coupling without the statistical blanket is known (Biehl, Pollock and Kanai 2021, Observation 1; Aguilera, Millidge, Tschantz and Buckley 2022), and the relay is a witness of it. In the linear case the Helmholtz form is the standard Ornstein–Uhlenbeck identity, footnote 13 is the 2023 paper's own condition, with its normal form in Heins and Da Costa's eq. 14 and the condition under it in their eq. 15, the term-by-term laws are near-definitional corollaries of the paper's eqs. 9–10, and the synchronous steady precision without circulation is the known order-h bias of the Euler–Maruyama steady law. New are the statement on the theory's conditioning in the pure core, below `restrict_independent`; the proof of footnote 13's law for any set of coordinates by the quadratic form of D − Q; the joins to the blanketed law, deterministic and with noise; and a circulating witness in which the synchronous scheme loses the four-part blanket, even under footnote 13 and eq. 9, while keeping the coupling form on every run.
+
+**The review, the literature check and the recheck.** An independent review of the design (REVIEW-UE26-DESIGN) found fifteen points: no circulation is sufficient, not the condition (the turning chain and two linear witnesses now show circulation keeping the blanket); the noiseless Euler step needed noise as each coordinate's input; the core's law is an asynchronous model, so a synchronous law was added (`SynchronousCopy`); conditional independence was to be stated on `ConditionalWeights`; footnote 13 was to be a law; and a planned sixth entry was dropped for the term-by-term law. The literature check placed Kelly's theorem and its conditions, and found the counterexample `MovesReadExternal`. The recheck (RECHECK-UE26) read the revised kit: the Lean was sound, one claim in the texts wrong. The texts had said the synchronous scheme loses the blanket only for a three-part partition; in the four parts, with circulation, it can lose it too, even under footnote 13 and the term-by-term definition (now `Autonomous.em_loses_internal_external`), and the three-part witness is not sparsely coupled with its ends internal and external (`ThreePart.no_four_part`). The other findings: unequal noise is a law, not numerics (`em_steady` for B = DΠ); the step range and stability of the synchronous scheme; the linear loss witnesses are cancellations, which the paper's footnote 10 excludes, now labelled in Lean (`not_termwise`, `termwise`); positivity in the move law; the assumptions of the stochastic time-unrolled blanket; the coupling form's scope; standings; a missing probe; names and a citation. Every point was taken.
+
+**The landing review.** An independent review of the Lean and of the texts and records as they were to land (REVIEW-UE26-LANDING) recompiled the core leaf, found all 90 axiom reports empty and the mathematics sound, and found nineteen points in the texts. The summaries had dropped the sufficient condition's hypotheses: positivity, the moves present at every external state and the rate ratios reading none, without which a positive weighting in detailed balance need not be independent given the blanket (its probe `RatioReadsExternal`, every axiom report empty); each summary now keeps them. The synchronous loss with circulation was stated as a law where the Lean has one witness at h = 1/10; its probes found circulating drifts meeting footnote 13 that keep the zero and a loss shrinking with h, so every text now says the scheme can lose it, in a witness, a loss of the discrete step. The other points: the active–external entry is a formula, nonzero in a witness, not a loss in general; the board text had put the no-circulation precision on the circulating case; the page had read as stating Langevin flows and Gaussian densities; the three-part witness's hypothesis on its ends; footnote 13 cited without its noise and sparse-coupling hypotheses; the converse of the cross form on listings listing each state once; smaller hypotheses (S symmetric and invertible, positive diagonals); the relay's rates and the synchronous kernel's construction; Heins and Da Costa's normal form is their eq. 14, the condition under it eq. 15; the relay's loss attributed to sources whose examples are not relays; "couples" used for a nonzero precision entry, against the glossary's dynamical sense, so three declarations were renamed before landing (`LagRelay.precision_nonzero`, `Autonomous.em_loses_internal_external`, `ThreePart.em_loses_zero`) and the docstrings rewritten; the lists of what is new made one; a mechanism in the design that a probe refuted; and minor wording, a boundary and a Chinese phrase. Every point was taken. A recheck of the fixes found all nineteen resolved and six new points, all taken: the periphery header had defined "autonomous" as no coordinate of the set reading `j`, while its Lean and the texts use the word for footnote 13's condition, no solenoidal flow to the rest (the header now says so, the two hypotheses apart); "the theory's synchronous blanket" where "a synchronous blanket" says what the Lean shows; "unread" for rates reading no external state; the converse in the history and the commit message; footnote 13's condition named alone where its law, with its hypotheses, is meant; and the design's summary of the sufficient conditions.
+
+**Decisions at landing.** Two records, one for the core law and one for the periphery's linear case, both homed in 03 §1 after the blanket, since one is a statement in counts in the pure core and the other a statement over the reals with its own checker. The blanket's own record names both and changes nothing it states. The page narrows three items of §5's first entry to what lies beyond the linear case, stated algebraically, and adds a fourth further law that forbids no sentence of the literature: the blanket's statistical form holds under the sufficient conditions, need not hold with circulation, and in a witness the theory's synchronous steps lose it, a loss of the discrete step.
+
+**Readings** [AI reading, D45]. What the theory states of agents through the blanket needs only the coupling form, so it holds whether or not the steady weights are independent given the blanket. The principle's reading of internal states as beliefs about external ones needs the statistical form, which holds under conditions each of which is known; the losses are where sparse coupling is read as a zero drift entry, and in the theory's synchronous steps, where with circulation the four-part blanket can be lost.

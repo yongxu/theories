@@ -60,6 +60,8 @@ The existence claim (Friston 2013; 2019, arXiv:1906.10184): whatever persists ap
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). restrict, share, mass_congr, mass_none and share_within: conditioning by restriction and shares.
 - related, not a proved adapter: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). The free-energy principle's blanket and existence claim, stated in the same module.
 
+**Used by:** [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

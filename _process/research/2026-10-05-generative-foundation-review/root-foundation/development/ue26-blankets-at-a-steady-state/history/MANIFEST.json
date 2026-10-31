@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "root": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history",
+  "entries": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/DESIGN.md",
+      "sha256": "7d0cfb7d8e2f04d627e230496a755249feec2db8c030b7dfcb740cf90f8f42cd",
+      "blob": "b93b80868d9e4c8d210df9f70ca1e93d075122d4",
+      "batch": "moves-2026-10-31-ue26-design",
+      "reason": "the design as the independent review read it (REVIEW-UE26-DESIGN.md); superseded by the revised design taking its fifteen findings",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/kit/periphery/DraftModes.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/DraftModes.lean",
+      "sha256": "b9b67bfcc1152dfe07f72735b88416d6102128c32481e1170398fbd230be35f0",
+      "blob": "949f35ac68fe09bda61fe4ca24fb6d503b5c0424",
+      "batch": "moves-2026-10-31-ue26-draft-modes",
+      "reason": "the periphery draft of the modes and the map between them; law 9 dropped after the review (F7, F11), the rest merged into LinearBlankets.lean",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/kit/periphery/DraftModes.lean"
+    }
+  ]
+}

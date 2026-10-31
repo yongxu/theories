@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-31-ue26-design",
+  "date": "2026-10-31T04:49:58+00:00",
+  "base_commit": "c89f552b42e9d34e3bd9a6f8f63ae1daf6f3d8b5",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/DESIGN.md",
+      "sha256": "7d0cfb7d8e2f04d627e230496a755249feec2db8c030b7dfcb740cf90f8f42cd",
+      "blob": "b93b80868d9e4c8d210df9f70ca1e93d075122d4",
+      "reason": "the design as the independent review read it (REVIEW-UE26-DESIGN.md); superseded by the revised design taking its fifteen findings",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-DESIGN.md",
+      "old_sha256": "90e8c8da083811723d580c24547506e3ebce0707fe1ca3a56a69f4e1a27fd984",
+      "new_sha256": "18caf3627b93576c85f9c4e902de825fd5aaa7b6fda5d5cc35ed425bf7e619d9",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history"
+  ],
+  "generated_pages_to_rerender": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md",
+    "theories/becoming/results/LEAN-INDEX.md",
+    "theories/becoming/results/lean-declarations/becoming-core.md",
+    "theories/becoming/results/records/a-code-formed-between-formations.md",
+    "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md",
+    "theories/becoming/results/records/becoming-finite-horizon.md",
+    "theories/becoming/results/records/comparison-by-widening.md",
+    "theories/becoming/results/records/conditions-kept-together.md",
+    "theories/becoming/results/records/continuation-condition-yields-living-significance.md",
+    "theories/becoming/results/records/eventual-widening.md",
+    "theories/becoming/results/records/experiment-needs-return.md",
+    "theories/becoming/results/records/fidelity-coders-on-own-and-other-texts.md",
+    "theories/becoming/results/records/generalization-through-lumping.md",
+    "theories/becoming/results/records/joint-difference-making.md",
+    "theories/becoming/results/records/learning-through-a-map-is-tracking-in-the-limit.md",
+    "theories/becoming/results/records/life-as-condition-of-life.md",
+    "theories/becoming/results/records/living-on-and-descent.md",
+    "theories/becoming/results/records/living-significance-on-held-lives.md",
+    "theories/becoming/results/records/master-laws-on-the-grammar.md",
+    "theories/becoming/results/records/processes-represented-both-ways.md",
+    "theories/becoming/results/records/represented-boundary-against-dependence.md",
+    "theories/becoming/results/records/significance-retained-within-margin.md",
+    "theories/becoming/results/records/the-test-season-meets-the-optimum-laws.md",
+    "theories/becoming/results/records/the-world-represented-both-ways.md",
+    "theories/becoming/results/records/transmission-is-inheritance-and-need.md",
+    "theories/becoming/results/records/what-a-finite-stretch-verifies.md",
+    "theories/becoming/results/records/what-a-pools-acts-respond-to.md",
+    "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md",
+    "theories/becoming/results/records/what-keeping-widening-needs.md",
+    "theories/becoming/results/records/widening-as-what-every-weighting-ranks.md"
+  ],
+  "verification_errors": []
+}

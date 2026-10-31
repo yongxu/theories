@@ -2021,6 +2021,16 @@
    "base": "frame",
    "note": "Distinguishing"
   },
+  "the-blanket-at-a-steady-state": {
+   "region": "knowing",
+   "base": "general",
+   "note": "BlanketWeights UE26: conditional independence given the blanket is the cross form on states each listed once; with positive weights, detailed balance of the internal moves within one closure of moves present at every external state, rate ratios reading none, gives it, sufficient, not necessary; witnesses on either side, the synchronous copy among them"
+  },
+  "the-blanket-in-a-linear-steady-state": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "LinearBlankets UE26: the linear steady state, Helmholtz as Lyapunov; footnote 13 as a law; the term-by-term corollaries; sparsely coupled Euler-Maruyama runs keep the coupling form, while the synchronous steady law can lose the zero with circulation, a witness (periphery)"
+  },
   "the-boundary-of-enough-under-undetermined-laws": {
    "region": "knowing",
    "base": "general",
@@ -2622,6 +2632,11 @@
    "region": "knowing",
    "base": "general",
    "note": "UE18 the Markov blanket and the existence claim (03 §1, §6)"
+  },
+  "Becoming.BlanketWeights": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE26 the blanket at a steady state (03 §1)"
   },
   "Becoming.Boundaries": {
    "region": "significance",

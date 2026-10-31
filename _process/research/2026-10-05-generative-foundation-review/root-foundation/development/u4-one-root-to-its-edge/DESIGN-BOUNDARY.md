@@ -427,3 +427,13 @@ MV's end-to-end run on GW's core run, with a synthetic carrier holding the eight
 | The table is rerun on main after GW | Done: byte-identical output, no new central declaration (status) |
 | `kept_onward` is not a grammar law under MV's content test; the earlier "qualifies" is withdrawn | §0, finding 2; reach is unchanged |
 | Nothing should say the condition is stated on the root, or that C stands at standing 3 | §1.3 |
+
+## 8. After landing: row 13 at counting (U4b)
+
+1 November 2026. This design records the design phase. [COUNTING-AND-AMOUNTS.md](COUNTING-AND-AMOUNTS.md), board item U4b, draws the line between counting and amounts by what a statement says of the dynamics: a law of counting says nothing of it (as a hypothesis, in its conclusion or through a run's states) beyond the arbitrary predicate of a counting law, and holds for every carrier, listing, map and parameter it quantifies over.
+
+- **Row 13 is counting.** On that line `SelectionLevels.rises_exact_iff_levels` (lever 2's row 13) is a law of counting, so the record has seven counting rows and 18 at amounts.
+- **Seven passages above state the earlier placement** and are kept as written: in §0, "6 stand below the grammar", the table's six counting and "The other 51 are 6 counting … 18 amounts"; §1.2's "Rows 13 and 14 are at amounts"; §1.4's "There are six"; §4's "Rows 13 and 14 stay at amounts"; and §7's row for B1, "Rows 13 and 14 go to amounts".
+- **Row 14 stays at amounts**, with rows 1–3, 7 and 8, for the reason the note gives: it uses the gate and descent as hypotheses, and its hypotheses on an arbitrary trait's values keep it off standing 2.
+- **Finding B1's analogy misread row 13.** Its hypotheses are only `listed`, `equal` and `exact`, with no gate and no descent. B1 stands for standing 2.
+- **The table stays the design phase's.** [boundary_table.py](boundary_table.py) and [boundary-table.json](boundary-table.json) still give row 13 at amounts, and differ from the record on four rows it placed after the design (`carried_iff_rising`, `GroupEnding.Flow.all_end` and HE2's two rows). Where they differ, the record and [make_record_u4.py](make_record_u4.py) stand.

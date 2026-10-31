@@ -244,7 +244,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN-BOUNDARY.md",
       "role": "integration",
-      "sha256": "4096f93f274ad90dc418fca5529b27f2d8417bdf0ca6ac3c46628ef740004b76",
+      "sha256": "3b2af504b701ea8a9eb4e4f1171b0f60baed3298faf0c389cb1c0e53fcf36969",
       "declarations": []
     },
     {
@@ -268,7 +268,25 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "601ec5e0230c9639f66bb229df8e44971eebc297d3755df551ef645960b10b1e",
+      "sha256": "58aa6c084599e919d8af592674567d56c0bef79edd36b76377ff3126e5d609a6",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
+      "role": "review",
+      "sha256": "4829adb93401ea58dccd50e2e2eff7a16003f833b176884d8219eaa822c672b7",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md",
+      "role": "integration",
+      "sha256": "75ddf15ce91f5bc8c036b573dea47c7d6fbc30fa0f817adc42bdb541e516a758",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/counting_test.py",
+      "role": "integration",
+      "sha256": "d69e181c4fa97ab6fcb4f491275a3f0a057d7b4273f17cd90c41140b3ec61149",
       "declarations": []
     }
   ],
@@ -285,6 +303,10 @@
     {
       "en": "31 October 2026, board item U4 (study section 479): added, each central declaration's standing on the edge of one root, carried by MV's boundary field, with Becoming.RootForms' two root forms as its laws; reviewed independently before landing.",
       "zh": "2026年10月31日，工作板条目 U4（研究第 479 节）：增，各中心声明于一根之边上之所立，由 MV 之 boundary 字段所载，以 Becoming.RootForms 之二根形为其律；落地前经独立审阅。"
+    },
+    {
+      "en": "1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).",
+      "zh": "2026年11月1日，工作板条目 U4b（研究第 483 节）：SelectionLevels.rises_exact_iff_levels 由量移至计数。其陈述不言动力，于其所量化之任一载体、列表、映射与参数皆成立，如 SelectionTerm.covariation、SelectionLevels.levels_sized 与 Drift.falls_back。SelectionTerm.Flow.support_not_lower、SelectionTerm.Flow.support_moved_rises 与 GroupEnding.Flow.rises_iff_inactive 仍在量：以门与传为假设，且约束任一性状之值；其理据依此线重写（COUNTING-AND-AMOUNTS.md，经 REVIEW-U4B.md 审阅）。"
     }
   ],
   "boundary": {
@@ -604,33 +626,33 @@
         "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, exact and moved are counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
         },
-        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
       },
       {
         "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
         },
-        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
       },
       {
         "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
         "standing": "amounts",
         "basis": {
-          "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+          "en": "The gate and descent stand as two inclusions in lever 2's weakening, read at the model off giving and level only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each offspring's value its parent's, is counting, while inactive makes the members of groups lower in the trait inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate's premise that only active relata give (K3) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, COUNTING-AND-AMOUNTS.md)."
         },
-        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
       },
       {
         "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
-        "standing": "amounts",
+        "standing": "counting",
         "basis": {
-          "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+          "en": "Price's partition over listed generations with exact transmission of an arbitrary trait map: its statement reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of SelectionLevels.levels_sized equates each group's length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md)."
         },
-        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
       },
       {
         "declaration": "Becoming.Reproduction.Flow.number_within_take",

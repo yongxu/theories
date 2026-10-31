@@ -17,7 +17,7 @@
 
 ## Standings on the edge
 
-**Counts** of the 118 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 6; distances 101 (connected 22, balance in its statement 32, amounts 19, at a represented model 16, own carrier 7, at its model 2, free significance 3); unplaced 0.
+**Counts** of the 118 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 7; distances 100 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 7, at its model 2, free significance 3); unplaced 0.
 
 - **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 - **For order**, C, calling widening better: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows that no statement reading only the dynamics entails Comparison with "better" free; Comparison leaves "better" free as Unrestricted leaves significance free.
@@ -43,6 +43,7 @@
 - `Becoming.Listed.coming_of_ceasing`: counting (a reading; the rule gives unplaced).
 - `Becoming.RelativePosition.rise_needs_fall`: counting (a reading; the rule gives unplaced).
 - `Becoming.SelectionLevels.levels_sized`: counting (a reading; the rule gives unplaced).
+- `Becoming.SelectionLevels.rises_exact_iff_levels`: counting (a reading; the rule gives unplaced).
 - `Becoming.SelectionTerm.covariation`: counting (a reading; the rule gives unplaced).
 
 ### Distances
@@ -109,7 +110,6 @@
 - `Becoming.RegimeMargin.Adjusted.ends_iff_below`: amounts (a reading; the rule gives unplaced).
 - `Becoming.RegimeMargin.ends_iff_below`: amounts (a reading; the rule gives unplaced).
 - `Becoming.Reproduction.Flow.number_within_take`: amounts (a reading; the rule gives unplaced).
-- `Becoming.SelectionLevels.rises_exact_iff_levels`: amounts (a reading; the rule gives unplaced).
 - `Becoming.SelectionTerm.Flow.support_moved_rises`: amounts (a reading; the rule gives unplaced).
 - `Becoming.SelectionTerm.Flow.support_not_lower`: amounts (a reading; the rule gives unplaced).
 - `Becoming.Web.Next.frontier_ends_drawn_first`: amounts (a reading; the rule gives unplaced).
@@ -208,6 +208,9 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 | integration | [CONNECTED-ROWS-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md) | — |
 | integration | [BOUNDARY-FIELD.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md) | — |
 | statement | [08-METHOD.md](../../chapters/08-METHOD.md) | — |
+| review | [REVIEW-U4B.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md) | — |
+| integration | [COUNTING-AND-AMOUNTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md) | — |
+| integration | [counting_test.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/counting_test.py) | — |
 
 Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `边上之所立`, `Becoming.RootForms.outside_leaves_no_offspring`, `Becoming.RootForms.descent_forms_no_dependence`
 
@@ -215,6 +218,7 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 ### History
 
 - 31 October 2026, board item U4 (study section 479): added, each central declaration's standing on the edge of one root, carried by MV's boundary field, with Becoming.RootForms' two root forms as its laws; reviewed independently before landing.
+- 1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).
 
 </details>
 
