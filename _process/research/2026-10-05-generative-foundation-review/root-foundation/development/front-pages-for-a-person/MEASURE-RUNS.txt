@@ -33,3 +33,11 @@ Pass 2, overview (English): 5,983 → 6,158 (findings) → 6,043 → 5,986 → 5
     49 words   1847 chars       972 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
   5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
    172 words  10389 chars      5366 budget-words  41.3–53.7 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+## Landed pages (front-pages-land on main d8e629828: U4's boundary record in the one page's first open item and the overview's Lifting item; T3's standing restored from 08; the landing comments resolved)
+  1123 words      9 chars      1128 budget-words  8.7–11.3 min  theories/becoming/ONE-PAGE.md
+    49 words   1893 chars       996 budget-words  7.7–10.0 min  theories/becoming/ONE-PAGE.zh.md
+  6047 words     31 chars      6062 budget-words  46.6–60.6 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   172 words  10514 chars      5429 budget-words  41.8–54.3 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget, amendment 1 (never-cut: each claim's standing; a failure as it fell): the one page by 28 budget-words, all in the first open item (each central declaration's standing on the edge of the root, its four kinds named); the overview by 62, about 40 in T3's row (the second forbidden case proved in expectation, and its first wording failing where the learner reads the condition, as 08 and the live page state it) and about 20 in the Lifting item (the four kinds of standing on the edge). Both Chinese editions are within budget.
