@@ -734,6 +734,15 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
+      "declarations": [
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«所覆后亡屡则生未否»"
+      ]
     }
   ],
   "proof_bindings": [
@@ -804,6 +813,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/U4D_RECEIPT/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -914,8 +930,8 @@
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering laws of laws 13 and 14 (Covers.coming_from_of_ceasing, Covers.not_not_coming_from, with Covers.ceasing_steps_within and Covers.ceasing_stops_unrefuted) are re-proved as the root's covering laws at a relatum's occurrences, statements unchanged; laws 13 and 14 name the route and their declarations gain the root laws. Locality's helpers with no consumer left (accumulates_or, ceases_once, ceasing_steps_unrefuted) leave the Locality reference. What the record states is unchanged.",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 13、14 条之覆盖之律（Covers.coming_from_of_ceasing、Covers.not_not_coming_from，及 Covers.ceasing_steps_within 与 Covers.ceasing_stops_unrefuted）重证为根上覆盖之律取一关系项之出现，陈述不变；第 13、14 条指明路径，其声明增根律。Locality 中无人再用的辅助（accumulates_or、ceases_once、ceasing_steps_unrefuted）离开 Locality 之引用。记录所述不变。"
+      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering laws of laws 13 and 14 (Covers.coming_from_of_ceasing, Covers.not_not_coming_from, with Covers.ceasing_steps_within and Covers.ceasing_stops_unrefuted) are re-proved as the root's covering laws at a relatum's occurrences, statements unchanged; laws 13 and 14 name the route and their declarations gain the root laws. Locality's helpers with no consumer left (accumulates_or, ceases_once, ceasing_steps_unrefuted) leave the Locality reference. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 13、14 条之覆盖之律（Covers.coming_from_of_ceasing、Covers.not_not_coming_from，及 Covers.ceasing_steps_within 与 Covers.ceasing_stops_unrefuted）重证为根上覆盖之律取一关系项之出现，陈述不变；第 13、14 条指明路径，其声明增根律。Locality 中无人再用的辅助（accumulates_or、ceases_once、ceasing_steps_unrefuted）离开 Locality 之引用。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
     }
   ],
   "text_versions": [

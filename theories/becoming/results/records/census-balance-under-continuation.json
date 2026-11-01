@@ -122,8 +122,8 @@
       ]
     },
     {
-      "zh": "确切形式，延续已判定，不用普查，不用活跃之判定：有覆盖任意晚之步之活跃者的列表、自某步起不分裂、一形成是否延续前一活跃者已判定时，止息于延续之下复现需要生起于其下复现；有长度至多 B 的列表覆盖自某步起每步之活跃者、自那步起不合并、一形成是否为后一活跃者所延续已判定时，生起复现需要止息复现。延续之下的普查律（第 6、9 条）是其特例，普查在每步的列出覆盖该步。判定之需是一种归约，不是反例：在一个每步都有两个形成活跃、建于任一命题 Q 的网上，其余假设皆成立，一形成是否延续恰在 Q ∨ ¬Q 处可判定，生起复现恰当 ¬Q ∨ ¬¬Q（研究之草稿见证，COVERING-ON-THE-ROOT §3.4 与 §4）；故无此判定的确切形式将对每一命题给出弱排中律。何种判定最少仍开放。",
-      "en": "Exact, the continuation decided, with no census and no decision of activity: with lists covering what is active at arbitrarily late steps, no splits from some step on, and whether a formation continues one active before it decided, ceasing under the continuation recurring needs arising under it recurring; with lists of at most B covering what is active at each step from some step on, no merges from that step on, and whether a formation is continued by one active after it decided, arising recurring needs ceasing recurring. The census laws under a continuation (laws 6 and 9) are their cases, a census's listing at each step covering it. The decision is needed as a reduction, not a countermodel: on a web with two formations active at every step, built on any proposition Q, every other hypothesis holds, whether a formation continues is decided exactly where Q ∨ ¬Q, and arising recurs exactly where ¬Q ∨ ¬¬Q (the study's scratch witness, COVERING-ON-THE-ROOT §3.4 and §4); so the exact form without it would give weak excluded middle for every proposition. Which decision is least is open.",
+      "zh": "确切形式，延续已判定，不用普查，不用活跃之判定：有覆盖任意晚之步之活跃者的列表、自某步起不分裂、一形成是否延续前一活跃者已判定时，止息于延续之下复现需要生起于其下复现；有长度至多 B 的列表覆盖自某步起每步之活跃者、自那步起不合并、一形成是否为后一活跃者所延续已判定时，生起复现需要止息复现。延续之下的普查律（第 6、9 条）是其特例，普查在每步的列出覆盖该步。判定之需是一种归约，不是反例：在一个每步都有两个形成活跃、建于任一命题 Q 的网上，其余假设皆成立，一形成是否延续恰在 Q ∨ ¬Q 处可判定，生起复现恰当 ¬Q ∨ ¬¬Q（研究中之草稿见证，COVERING-ON-THE-ROOT）；故无此判定的确切形式将对每一命题给出弱排中律。何种判定最少仍开放。",
+      "en": "Exact, the continuation decided, with no census and no decision of activity: with lists covering what is active at arbitrarily late steps, no splits from some step on, and whether a formation continues one active before it decided, ceasing under the continuation recurring needs arising under it recurring; with lists of at most B covering what is active at each step from some step on, no merges from that step on, and whether a formation is continued by one active after it decided, arising recurring needs ceasing recurring. The census laws under a continuation (laws 6 and 9) are their cases, a census's listing at each step covering it. The decision is needed as a reduction, not a countermodel: on a web with two formations active at every step, built on any proposition Q, every other hypothesis holds, whether a formation continues is decided exactly where Q ∨ ¬Q, and arising recurs exactly where ¬Q ∨ ¬¬Q (a scratch witness in the study, COVERING-ON-THE-ROOT); so the exact form without it would give weak excluded middle for every proposition. Which decision is least is open.",
       "declarations": [
         "Becoming.Web.arisingFrom_of_ceasingFrom_covered",
         "Becoming.Web.ceasingFrom_of_arisingFrom_covered"
@@ -182,8 +182,8 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Identity by receipt 20261013T204910.042715Z; Becoming.Population, Flow and Change by receipt 20261013T094743.528770Z, which checked Identity's statements under former names, tabulated in the unification plan (periphery 20261013T095049.338744Z passed). Their theorems, this record's local laws included, have empty axiom reports, and the checker verifies core purity. Author counterreview in the integration note; no independent review yet."
   },
   "next_delta": {
-    "zh": "确切形式最少需何种判定（见证处弱排中律已足）；从延续之下的普查律去掉其证明已不用的判定（活跃之判定，与另一方向延续之判定）；形成的类、任期与侵蚀在延续下的读法；整段上对延续关系的条件（单步的刻画见 identity-across-steps）；带比率的版本。",
-    "en": "Which decision the exact forms need least (weak excluded middle suffices at the witnesses); dropping from the census laws under a continuation the decisions their proofs no longer use (of activity, and of the other direction's continuation); formation classes, tenure and undermining under a continuation; conditions on continuations over a run (one step: identity-across-steps); a version with rates."
+    "zh": "确切形式最少需何种判定（见证处弱排中律已足）；从延续之下的普查律去掉其证明已不用的判定（活跃之判定，与另一方向延续之判定）；形成的类、任期与侵蚀在延续下的读法；整段上对延续关系的条件（单步的刻画见 identity-across-steps）；比率。",
+    "en": "Which decision the exact forms need least (weak excluded middle suffices at the witnesses); dropping from the census laws under a continuation the decisions their proofs no longer use (of activity, and of the other direction's continuation); formation classes, tenure and undermining under a continuation; conditions on continuations over a run (one step: identity-across-steps); rates."
   },
   "correspondence": {
     "zh": "identity-across-steps 表明，追随形成的读法（生起、不息）依赖谁延续谁，而计数（更多）不依赖。本结果说明普查定律在谁延续谁改变时怎样保持：止息需要生起这一半在每个没有分裂的读法下保持，生起需要止息（计数有界时）这一半在每个没有合并的读法下保持；能抹去生起的恰是分裂，能抹去止息的恰是合并（Tandem）。读法（AI 的论证）：同一个展开读出的生起与止息随读法而变，但不能任意变：在没有分裂、没有合并的读法之间，两者的差恰是活跃者数目的变化。这是活动的计数；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；萌出与合并在生物中有其例（分裂繁殖、融合），那是应用，不是定理的内容。",
@@ -468,7 +468,11 @@
       "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
       "declarations": [
         "Becoming.«定后则后并亡不过前并生»",
-        "Becoming.«定前则前并生不过后并亡»"
+        "Becoming.«定前则前并生不过后并亡»",
+        "Becoming.«所覆后亡屡则生未否»",
+        "Becoming.«有界覆而生屡则亡不止»",
+        "Becoming.«有覆而亡屡则生屡»",
+        "Becoming.«有界覆而生屡则亡屡»"
       ]
     },
     {

@@ -2,7 +2,7 @@
 """U4d's landing (reland_el6.py's pattern): 08's counts from the receipt; the study section from study_u4d.txt
 appended as section N, each changed module's counts read from the receipt; the receipt and section written into the
 records' U4D_RECEIPT and U4D_SECTION marks; and the sha256 of the design and its review into the references the
-branch left `PENDING`. The receipt must have checked the very bytes of the six changed modules, each in the core with
+branch left `PENDING`, with a receipt reference where a GrammarLaws binding the branch added names the receipt. The receipt must have checked the very bytes of the six changed modules, each in the core with
 every axiom report empty, and GrammarLaws must hold the 223 theorems in 252 declarations shared-laws-on-the-grammar's
 scope states. The changed modules' references and proof bindings are repoint_u4d.py's.
 usage (from the checkout root of the worktree): python3 -B <kit>/reland_u4d.py RECEIPT N"""
@@ -85,6 +85,7 @@ STUDY.write_text(t.rstrip('\n') + '\n\n' + section.strip('\n') + '\n', encoding=
 
 # the records: the marks, and the design's and review's sha256
 digests = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in DOCS}
+receipt_digest = hashlib.sha256((ROOT / rpath).read_bytes()).hexdigest()
 filled = {}
 for rid in MARKED:
     p = RECORDS / f'{rid}.json'
@@ -96,6 +97,10 @@ for rid in MARKED:
             assert ref['path'] in DOCS, (rid, ref['path'])
             ref['sha256'] = digests[ref['path']]
             filled[rid] = filled.get(rid, 0) + 1
+    # the GrammarLaws bindings the branch added name the receipt by its mark; their receipt reference goes with them
+    if any(b['receipt'] == rpath for b in d['proof_bindings']) and not any(r['path'] == rpath for r in d['references']):
+        d['references'].append({'path': rpath, 'role': 'receipt', 'sha256': receipt_digest, 'declarations': []})
+        filled[rid] = filled.get(rid, 0) + 1
     out = json.dumps(d, ensure_ascii=False, indent=2) + '\n'
     assert 'PENDING' not in out and 'U4D_' not in out, f'a mark left in {rid}'
     p.write_text(out, encoding='utf-8')
