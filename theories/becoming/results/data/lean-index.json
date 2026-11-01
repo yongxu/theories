@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2263,
-    "distinct_byte_contents": 1793,
+    "lean_paths": 2268,
+    "distinct_byte_contents": 1798,
     "byte_identical_duplicate_groups": 197,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1267,
+      "development-attempt": 1272,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 957
@@ -5741,6 +5741,62 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/check/scratch/Becoming/RoomNet.lean",
+      "sha256": "9e026d4696228592ef13cc35a6604a8413555e4a2044ce31eb868196f75a15ab",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/check/scratch/Becoming/RoomRuns.lean",
+      "sha256": "fef5464efad091996c89165f879ff826b41cc754bca0f332b777d63799c4d412",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/Becoming/GrammarConditionals.lean",
+      "sha256": "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/README.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/README.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/FINDINGS.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/ReviewChecks.lean",
+      "sha256": "eedb98f2c40c0c9a056bd6fd3c6c0158b9229e2daa325824e68954d9cc9745dd",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/FINDINGS.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/tree/Becoming/GrammarConditionalsChecks.lean",
+      "sha256": "faa8a7abea0b53efa939d4277ad4c8c2f4795fea3f4da5bfc5f2a342a7a5bc17",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/FINDINGS.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -339490,6 +339546,752 @@
       },
       "print_axioms_commands": 21
     },
+    "9e026d4696228592ef13cc35a6604a8413555e4a2044ce31eb868196f75a15ab": {
+      "byte_size": 51686,
+      "line_count": 949,
+      "imports": [
+        "Becoming.GrammarTesting",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarReadings",
+        "Becoming.MapRegions"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Occurrence",
+          "qualified_name_hint": "Becoming.Rooms.Occurrence",
+          "line": 58
+        },
+        {
+          "kind": "def",
+          "name": "surroundings",
+          "qualified_name_hint": "Becoming.Rooms.surroundings",
+          "line": 63
+        },
+        {
+          "kind": "def",
+          "name": "exchange",
+          "qualified_name_hint": "Becoming.Rooms.exchange",
+          "line": 66
+        },
+        {
+          "kind": "def",
+          "name": "heater",
+          "qualified_name_hint": "Becoming.Rooms.heater",
+          "line": 70
+        },
+        {
+          "kind": "def",
+          "name": "next",
+          "qualified_name_hint": "Becoming.Rooms.next",
+          "line": 73
+        },
+        {
+          "kind": "def",
+          "name": "shut",
+          "qualified_name_hint": "Becoming.Rooms.shut",
+          "line": 76
+        },
+        {
+          "kind": "def",
+          "name": "net",
+          "qualified_name_hint": "Becoming.Rooms.net",
+          "line": 81
+        },
+        {
+          "kind": "def",
+          "name": "openNet",
+          "qualified_name_hint": "Becoming.Rooms.openNet",
+          "line": 85
+        },
+        {
+          "kind": "def",
+          "name": "sameLevel",
+          "qualified_name_hint": "Becoming.Rooms.sameLevel",
+          "line": 88
+        },
+        {
+          "kind": "def",
+          "name": "warm",
+          "qualified_name_hint": "Becoming.Rooms.warm",
+          "line": 91
+        },
+        {
+          "kind": "def",
+          "name": "alike",
+          "qualified_name_hint": "Becoming.Rooms.alike",
+          "line": 97
+        },
+        {
+          "kind": "def",
+          "name": "start",
+          "qualified_name_hint": "Becoming.Rooms.start",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_class",
+          "qualified_name_hint": "Becoming.Rooms.alike_class",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "next_rest",
+          "qualified_name_hint": "Becoming.Rooms.next_rest",
+          "line": 105
+        },
+        {
+          "kind": "theorem",
+          "name": "warms_open",
+          "qualified_name_hint": "Becoming.Rooms.warms_open",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "rest_step",
+          "qualified_name_hint": "Becoming.Rooms.rest_step",
+          "line": 120
+        },
+        {
+          "kind": "theorem",
+          "name": "opens",
+          "qualified_name_hint": "Becoming.Rooms.opens",
+          "line": 123
+        },
+        {
+          "kind": "theorem",
+          "name": "net_open",
+          "qualified_name_hint": "Becoming.Rooms.net_open",
+          "line": 126
+        },
+        {
+          "kind": "theorem",
+          "name": "net_shut",
+          "qualified_name_hint": "Becoming.Rooms.net_shut",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "shut_start",
+          "qualified_name_hint": "Becoming.Rooms.shut_start",
+          "line": 138
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_open",
+          "qualified_name_hint": "Becoming.Rooms.begins_open",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "not_begins_start",
+          "qualified_name_hint": "Becoming.Rooms.not_begins_start",
+          "line": 147
+        },
+        {
+          "kind": "theorem",
+          "name": "warm_of_pos",
+          "qualified_name_hint": "Becoming.Rooms.warm_of_pos",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "warm_of_level",
+          "qualified_name_hint": "Becoming.Rooms.warm_of_level",
+          "line": 155
+        },
+        {
+          "kind": "theorem",
+          "name": "next_pos",
+          "qualified_name_hint": "Becoming.Rooms.next_pos",
+          "line": 160
+        },
+        {
+          "kind": "theorem",
+          "name": "heated_warm",
+          "qualified_name_hint": "Becoming.Rooms.heated_warm",
+          "line": 171
+        },
+        {
+          "kind": "theorem",
+          "name": "exchange_ge",
+          "qualified_name_hint": "Becoming.Rooms.exchange_ge",
+          "line": 176
+        },
+        {
+          "kind": "theorem",
+          "name": "heater_zero",
+          "qualified_name_hint": "Becoming.Rooms.heater_zero",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "next_zero",
+          "qualified_name_hint": "Becoming.Rooms.next_zero",
+          "line": 189
+        },
+        {
+          "kind": "theorem",
+          "name": "cools",
+          "qualified_name_hint": "Becoming.Rooms.cools",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "cold_after",
+          "qualified_name_hint": "Becoming.Rooms.cold_after",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "cold_step",
+          "qualified_name_hint": "Becoming.Rooms.cold_step",
+          "line": 202
+        },
+        {
+          "kind": "def",
+          "name": "b2",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b2",
+          "line": 209
+        },
+        {
+          "kind": "def",
+          "name": "b1",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b1",
+          "line": 210
+        },
+        {
+          "kind": "def",
+          "name": "b0",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b0",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "s3_b2",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.s3_b2",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "b2_b1",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b2_b1",
+          "line": 214
+        },
+        {
+          "kind": "theorem",
+          "name": "b1_b0",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b1_b0",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_b2",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.begins_b2",
+          "line": 217
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_b1",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.begins_b1",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "b1_ends",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.b1_ends",
+          "line": 221
+        },
+        {
+          "kind": "theorem",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.closed",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "reach",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.reach",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.keeps",
+          "line": 238
+        },
+        {
+          "kind": "theorem",
+          "name": "ends",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.ends",
+          "line": 243
+        },
+        {
+          "kind": "theorem",
+          "name": "not_generates",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.not_generates",
+          "line": 248
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_b1",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.ends_b1",
+          "line": 264
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_b2",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.ends_b2",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "rows",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.rows",
+          "line": 272
+        },
+        {
+          "kind": "theorem",
+          "name": "«平衡守而有终»",
+          "qualified_name_hint": "Becoming.Rooms.«平衡守而有终»",
+          "line": 290
+        },
+        {
+          "kind": "theorem",
+          "name": "«开窗则平衡新而尽»",
+          "qualified_name_hint": "Becoming.Rooms.«开窗则平衡新而尽»",
+          "line": 300
+        },
+        {
+          "kind": "def",
+          "name": "kept",
+          "qualified_name_hint": "Becoming.Rooms.Matched.kept",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "open_rest",
+          "qualified_name_hint": "Becoming.Rooms.Matched.open_rest",
+          "line": 313
+        },
+        {
+          "kind": "theorem",
+          "name": "start_kept",
+          "qualified_name_hint": "Becoming.Rooms.Matched.start_kept",
+          "line": 318
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_kept",
+          "qualified_name_hint": "Becoming.Rooms.Matched.kept_kept",
+          "line": 321
+        },
+        {
+          "kind": "theorem",
+          "name": "not_begins_kept",
+          "qualified_name_hint": "Becoming.Rooms.Matched.not_begins_kept",
+          "line": 324
+        },
+        {
+          "kind": "theorem",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.Rooms.Matched.closed",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "reach",
+          "qualified_name_hint": "Becoming.Rooms.Matched.reach",
+          "line": 334
+        },
+        {
+          "kind": "theorem",
+          "name": "no_renewal",
+          "qualified_name_hint": "Becoming.Rooms.Matched.no_renewal",
+          "line": 340
+        },
+        {
+          "kind": "theorem",
+          "name": "keeping",
+          "qualified_name_hint": "Becoming.Rooms.Matched.keeping",
+          "line": 346
+        },
+        {
+          "kind": "theorem",
+          "name": "not_generates",
+          "qualified_name_hint": "Becoming.Rooms.Matched.not_generates",
+          "line": 353
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps_at",
+          "qualified_name_hint": "Becoming.Rooms.Matched.keeps_at",
+          "line": 358
+        },
+        {
+          "kind": "theorem",
+          "name": "rows",
+          "qualified_name_hint": "Becoming.Rooms.Matched.rows",
+          "line": 371
+        },
+        {
+          "kind": "theorem",
+          "name": "«给如所取则全守»",
+          "qualified_name_hint": "Becoming.Rooms.«给如所取则全守»",
+          "line": 390
+        },
+        {
+          "kind": "def",
+          "name": "o4",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.o4",
+          "line": 399
+        },
+        {
+          "kind": "def",
+          "name": "o3",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.o3",
+          "line": 400
+        },
+        {
+          "kind": "theorem",
+          "name": "s3_o4",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.s3_o4",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "o4_o3",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.o4_o3",
+          "line": 403
+        },
+        {
+          "kind": "theorem",
+          "name": "o3_o4",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.o3_o4",
+          "line": 404
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_o4",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.begins_o4",
+          "line": 406
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_o3",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.begins_o3",
+          "line": 407
+        },
+        {
+          "kind": "def",
+          "name": "Reached",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.Reached",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "closed",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.closed",
+          "line": 413
+        },
+        {
+          "kind": "theorem",
+          "name": "reach",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.reach",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "renews",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.renews",
+          "line": 426
+        },
+        {
+          "kind": "theorem",
+          "name": "renewing_steps",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.renewing_steps",
+          "line": 432
+        },
+        {
+          "kind": "theorem",
+          "name": "generation",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.generation",
+          "line": 448
+        },
+        {
+          "kind": "theorem",
+          "name": "generates",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.generates",
+          "line": 452
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.keeps",
+          "line": 457
+        },
+        {
+          "kind": "theorem",
+          "name": "generation_strong",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.generation_strong",
+          "line": 463
+        },
+        {
+          "kind": "theorem",
+          "name": "openNet_single",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.openNet_single",
+          "line": 469
+        },
+        {
+          "kind": "theorem",
+          "name": "begins_open_line",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.begins_open_line",
+          "line": 474
+        },
+        {
+          "kind": "theorem",
+          "name": "generates_open",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.generates_open",
+          "line": 478
+        },
+        {
+          "kind": "theorem",
+          "name": "single_line_tested",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.single_line_tested",
+          "line": 493
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_open",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.closed_open",
+          "line": 504
+        },
+        {
+          "kind": "theorem",
+          "name": "not_keepsAfter_open",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.not_keepsAfter_open",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "rows",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.rows",
+          "line": 531
+        },
+        {
+          "kind": "theorem",
+          "name": "«给过所取则生守相杂»",
+          "qualified_name_hint": "Becoming.Rooms.«给过所取则生守相杂»",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "shut_rest_step",
+          "qualified_name_hint": "Becoming.Rooms.shut_rest_step",
+          "line": 565
+        },
+        {
+          "kind": "theorem",
+          "name": "shut_rests",
+          "qualified_name_hint": "Becoming.Rooms.shut_rests",
+          "line": 570
+        },
+        {
+          "kind": "theorem",
+          "name": "cold_rests",
+          "qualified_name_hint": "Becoming.Rooms.cold_rests",
+          "line": 587
+        },
+        {
+          "kind": "theorem",
+          "name": "«温有常当且仅当有给»",
+          "qualified_name_hint": "Becoming.Rooms.«温有常当且仅当有给»",
+          "line": 606
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_in_core_iff",
+          "qualified_name_hint": "Becoming.Rooms.alike_in_core_iff",
+          "line": 619
+        },
+        {
+          "kind": "theorem",
+          "name": "cools_to",
+          "qualified_name_hint": "Becoming.Rooms.cools_to",
+          "line": 625
+        },
+        {
+          "kind": "theorem",
+          "name": "«温不穷当且仅当有给»",
+          "qualified_name_hint": "Becoming.Rooms.«温不穷当且仅当有给»",
+          "line": 632
+        },
+        {
+          "kind": "theorem",
+          "name": "heated_unended",
+          "qualified_name_hint": "Becoming.Rooms.heated_unended",
+          "line": 652
+        },
+        {
+          "kind": "theorem",
+          "name": "unended_at_one",
+          "qualified_name_hint": "Becoming.Rooms.unended_at_one",
+          "line": 661
+        },
+        {
+          "kind": "abbrev",
+          "name": "Tagged",
+          "qualified_name_hint": "Becoming.Rooms.Tagged",
+          "line": 682
+        },
+        {
+          "kind": "def",
+          "name": "joint",
+          "qualified_name_hint": "Becoming.Rooms.joint",
+          "line": 685
+        },
+        {
+          "kind": "def",
+          "name": "jointShut",
+          "qualified_name_hint": "Becoming.Rooms.jointShut",
+          "line": 688
+        },
+        {
+          "kind": "def",
+          "name": "jointLevel",
+          "qualified_name_hint": "Becoming.Rooms.jointLevel",
+          "line": 691
+        },
+        {
+          "kind": "def",
+          "name": "jointAlike",
+          "qualified_name_hint": "Becoming.Rooms.jointAlike",
+          "line": 694
+        },
+        {
+          "kind": "theorem",
+          "name": "«不开窗则同核»",
+          "qualified_name_hint": "Becoming.Rooms.«不开窗则同核»",
+          "line": 698
+        },
+        {
+          "kind": "theorem",
+          "name": "shut_one_class_alike",
+          "qualified_name_hint": "Becoming.Rooms.shut_one_class_alike",
+          "line": 710
+        },
+        {
+          "kind": "theorem",
+          "name": "«开窗则一层可分»",
+          "qualified_name_hint": "Becoming.Rooms.«开窗则一层可分»",
+          "line": 716
+        },
+        {
+          "kind": "theorem",
+          "name": "heaters_told_apart",
+          "qualified_name_hint": "Becoming.Rooms.heaters_told_apart",
+          "line": 732
+        },
+        {
+          "kind": "theorem",
+          "name": "unheated_step",
+          "qualified_name_hint": "Becoming.Rooms.unheated_step",
+          "line": 740
+        },
+        {
+          "kind": "theorem",
+          "name": "lasts",
+          "qualified_name_hint": "Becoming.Rooms.lasts",
+          "line": 748
+        },
+        {
+          "kind": "theorem",
+          "name": "empties",
+          "qualified_name_hint": "Becoming.Rooms.empties",
+          "line": 769
+        },
+        {
+          "kind": "theorem",
+          "name": "«开窗以温层如其余乃分»",
+          "qualified_name_hint": "Becoming.Rooms.«开窗以温层如其余乃分»",
+          "line": 781
+        },
+        {
+          "kind": "theorem",
+          "name": "«有给之室以温不可分»",
+          "qualified_name_hint": "Becoming.Rooms.«有给之室以温不可分»",
+          "line": 793
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_converse",
+          "qualified_name_hint": "Becoming.Rooms.joint_converse",
+          "line": 808
+        },
+        {
+          "kind": "def",
+          "name": "nextBefore",
+          "qualified_name_hint": "Becoming.Rooms.nextBefore",
+          "line": 825
+        },
+        {
+          "kind": "theorem",
+          "name": "before_window_moves",
+          "qualified_name_hint": "Becoming.Rooms.before_window_moves",
+          "line": 831
+        },
+        {
+          "kind": "theorem",
+          "name": "before_pos",
+          "qualified_name_hint": "Becoming.Rooms.before_pos",
+          "line": 838
+        },
+        {
+          "kind": "theorem",
+          "name": "before_at_one",
+          "qualified_name_hint": "Becoming.Rooms.before_at_one",
+          "line": 851
+        },
+        {
+          "kind": "theorem",
+          "name": "before_unheated",
+          "qualified_name_hint": "Becoming.Rooms.before_unheated",
+          "line": 854
+        },
+        {
+          "kind": "def",
+          "name": "toy",
+          "qualified_name_hint": "Becoming.Rooms.toy",
+          "line": 864
+        },
+        {
+          "kind": "theorem",
+          "name": "toy_branches",
+          "qualified_name_hint": "Becoming.Rooms.toy_branches",
+          "line": 874
+        },
+        {
+          "kind": "theorem",
+          "name": "toy_verdict",
+          "qualified_name_hint": "Becoming.Rooms.toy_verdict",
+          "line": 927
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 24,
+        "structure": 1,
+        "theorem": 94
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "9e3e4e21ff47851b16ae85de09d2c3666a48a6c20b3108b78435422e9c48389a": {
       "byte_size": 5952,
       "line_count": 137,
@@ -389620,6 +390422,274 @@
         "unsafe": []
       },
       "print_axioms_commands": 11
+    },
+    "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729": {
+      "byte_size": 36199,
+      "line_count": 576,
+      "imports": [
+        "Becoming.GrammarCandidates",
+        "Becoming.GrammarLaws"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "«亡者异当且仅当有后»",
+          "qualified_name_hint": "Becoming.«亡者异当且仅当有后»",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "«亡而息之例»",
+          "qualified_name_hint": "Becoming.«亡而息之例»",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "«两向有常而无前不通之例»",
+          "qualified_name_hint": "Becoming.«两向有常而无前不通之例»",
+          "line": 56
+        },
+        {
+          "kind": "theorem",
+          "name": "«不有常而通之例»",
+          "qualified_name_hint": "Becoming.«不有常而通之例»",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "«皆有后而步皆分则全生成»",
+          "qualified_name_hint": "Becoming.«皆有后而步皆分则全生成»",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "«昼夜全生成»",
+          "qualified_name_hint": "Becoming.«昼夜全生成»",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "«有亡而不全生成之例»",
+          "qualified_name_hint": "Becoming.«有亡而不全生成之例»",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "«步不分而不全生成之例»",
+          "qualified_name_hint": "Becoming.«步不分而不全生成之例»",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "«线不返则短于所列»",
+          "qualified_name_hint": "Becoming.«线不返则短于所列»",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "«不返而有限则非不穷»",
+          "qualified_name_hint": "Becoming.«不返而有限则非不穷»",
+          "line": 172
+        },
+        {
+          "kind": "theorem",
+          "name": "counting_reach_lt",
+          "qualified_name_hint": "Becoming.counting_reach_lt",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "«无环而不穷之例»",
+          "qualified_name_hint": "Becoming.«无环而不穷之例»",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "«返而不穷之例»",
+          "qualified_name_hint": "Becoming.«返而不穷之例»",
+          "line": 200
+        },
+        {
+          "kind": "theorem",
+          "name": "«有限遍后而不返之例»",
+          "qualified_name_hint": "Becoming.«有限遍后而不返之例»",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "«遍后定前而无环之例»",
+          "qualified_name_hint": "Becoming.«遍后定前而无环之例»",
+          "line": 227
+        },
+        {
+          "kind": "theorem",
+          "name": "«无异当且仅当不分续»",
+          "qualified_name_hint": "Becoming.«无异当且仅当不分续»",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "«静分续而有异之例»",
+          "qualified_name_hint": "Becoming.«静分续而有异之例»",
+          "line": 252
+        },
+        {
+          "kind": "theorem",
+          "name": "«非有常之类不含于核之例»",
+          "qualified_name_hint": "Becoming.«非有常之类不含于核之例»",
+          "line": 258
+        },
+        {
+          "kind": "theorem",
+          "name": "«皆不生当且仅当皆非无缘»",
+          "qualified_name_hint": "Becoming.«皆不生当且仅当皆非无缘»",
+          "line": 279
+        },
+        {
+          "kind": "def",
+          "name": "«依»",
+          "qualified_name_hint": "Becoming.«依»",
+          "line": 286
+        },
+        {
+          "kind": "theorem",
+          "name": "«所依无则依者无»",
+          "qualified_name_hint": "Becoming.«所依无则依者无»",
+          "line": 292
+        },
+        {
+          "kind": "theorem",
+          "name": "«依之传»",
+          "qualified_name_hint": "Becoming.«依之传»",
+          "line": 299
+        },
+        {
+          "kind": "theorem",
+          "name": "«不依之例»",
+          "qualified_name_hint": "Becoming.«不依之例»",
+          "line": 307
+        },
+        {
+          "kind": "theorem",
+          "name": "«无环则无俱有»",
+          "qualified_name_hint": "Becoming.«无环则无俱有»",
+          "line": 315
+        },
+        {
+          "kind": "theorem",
+          "name": "«生亡并之例»",
+          "qualified_name_hint": "Becoming.«生亡并之例»",
+          "line": 329
+        },
+        {
+          "kind": "theorem",
+          "name": "«亡于静而住于一之例»",
+          "qualified_name_hint": "Becoming.«亡于静而住于一之例»",
+          "line": 336
+        },
+        {
+          "kind": "theorem",
+          "name": "«无缘不住而他有后之例»",
+          "qualified_name_hint": "Becoming.«无缘不住而他有后之例»",
+          "line": 346
+        },
+        {
+          "kind": "theorem",
+          "name": "«自缘而不生之例»",
+          "qualified_name_hint": "Becoming.«自缘而不生之例»",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "«有前不有常而亡之例»",
+          "qualified_name_hint": "Becoming.«有前不有常而亡之例»",
+          "line": 361
+        },
+        {
+          "kind": "theorem",
+          "name": "«不有常而不穷之例»",
+          "qualified_name_hint": "Becoming.«不有常而不穷之例»",
+          "line": 369
+        },
+        {
+          "kind": "theorem",
+          "name": "«无相而非亦无相之例»",
+          "qualified_name_hint": "Becoming.«无相而非亦无相之例»",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "«无能无所之例»",
+          "qualified_name_hint": "Becoming.«无能无所之例»",
+          "line": 401
+        },
+        {
+          "kind": "theorem",
+          "name": "«像不保之例»",
+          "qualified_name_hint": "Becoming.«像不保之例»",
+          "line": 406
+        },
+        {
+          "kind": "theorem",
+          "name": "«类内有常则线相随»",
+          "qualified_name_hint": "Becoming.«类内有常则线相随»",
+          "line": 424
+        },
+        {
+          "kind": "theorem",
+          "name": "«核同则同不穷»",
+          "qualified_name_hint": "Becoming.«核同则同不穷»",
+          "line": 445
+        },
+        {
+          "kind": "theorem",
+          "name": "«生于核下可变之例»",
+          "qualified_name_hint": "Becoming.«生于核下可变之例»",
+          "line": 462
+        },
+        {
+          "kind": "theorem",
+          "name": "«不穷与亡不同核之例»",
+          "qualified_name_hint": "Becoming.«不穷与亡不同核之例»",
+          "line": 480
+        },
+        {
+          "kind": "theorem",
+          "name": "«逆核不含于核之例»",
+          "qualified_name_hint": "Becoming.«逆核不含于核之例»",
+          "line": 504
+        },
+        {
+          "kind": "theorem",
+          "name": "«无始而有终之例»",
+          "qualified_name_hint": "Becoming.«无始而有终之例»",
+          "line": 521
+        },
+        {
+          "kind": "theorem",
+          "name": "«依于无始而有始之例»",
+          "qualified_name_hint": "Becoming.«依于无始而有始之例»",
+          "line": 530
+        },
+        {
+          "kind": "theorem",
+          "name": "«相须之例»",
+          "qualified_name_hint": "Becoming.«相须之例»",
+          "line": 556
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 40
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "b357aa0a85165b8a862149141e85613515582d3aca45b2b932c78ba59ecd9698": {
       "byte_size": 1440,
@@ -516141,6 +517211,92 @@
       },
       "print_axioms_commands": 0
     },
+    "eedb98f2c40c0c9a056bd6fd3c6c0158b9229e2daa325824e68954d9cc9745dd": {
+      "byte_size": 9255,
+      "line_count": 154,
+      "imports": [
+        "Becoming.GrammarConditionals"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "review_qiong_is_dual",
+          "qualified_name_hint": "Becoming.review_qiong_is_dual",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "review_gan_is_composition",
+          "qualified_name_hint": "Becoming.review_gan_is_composition",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "review_wuyuan_from_yizhisheng",
+          "qualified_name_hint": "Becoming.review_wuyuan_from_yizhisheng",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "review_wuyi_is_logic",
+          "qualified_name_hint": "Becoming.review_wuyi_is_logic",
+          "line": 30
+        },
+        {
+          "kind": "theorem",
+          "name": "review_sheng_kept_along_converse_core",
+          "qualified_name_hint": "Becoming.review_sheng_kept_along_converse_core",
+          "line": 36
+        },
+        {
+          "kind": "theorem",
+          "name": "review_wushi_kept_along_converse_core",
+          "qualified_name_hint": "Becoming.review_wushi_kept_along_converse_core",
+          "line": 46
+        },
+        {
+          "kind": "theorem",
+          "name": "review_converse_core_wider",
+          "qualified_name_hint": "Becoming.review_converse_core_wider",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "review_tong_without_constancy",
+          "qualified_name_hint": "Becoming.review_tong_without_constancy",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "review_line_local_bound",
+          "qualified_name_hint": "Becoming.review_line_local_bound",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "review_not_constant_yet_endless",
+          "qualified_name_hint": "Becoming.review_not_constant_yet_endless",
+          "line": 128
+        },
+        {
+          "kind": "theorem",
+          "name": "review_unconditioned_not_abiding",
+          "qualified_name_hint": "Becoming.review_unconditioned_not_abiding",
+          "line": 148
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "ef1c1a74433469f0d7fbe5dfcc2fed54ddecbeaf935ccb684afe481b306041bd": {
       "byte_size": 22922,
       "line_count": 399,
@@ -533435,6 +534591,129 @@
       },
       "print_axioms_commands": 0
     },
+    "faa8a7abea0b53efa939d4277ad4c8c2f4795fea3f4da5bfc5f2a342a7a5bc17": {
+      "byte_size": 8142,
+      "line_count": 150,
+      "imports": [
+        "Becoming.GrammarConditionals",
+        "Becoming.GrammarTesting"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "check_unconditioned_begins_everywhere",
+          "qualified_name_hint": "Becoming.check_unconditioned_begins_everywhere",
+          "line": 25
+        },
+        {
+          "kind": "theorem",
+          "name": "check_unconditioned_not_abiding",
+          "qualified_name_hint": "Becoming.check_unconditioned_not_abiding",
+          "line": 30
+        },
+        {
+          "kind": "theorem",
+          "name": "check_own_condition_no_beginning",
+          "qualified_name_hint": "Becoming.check_own_condition_no_beginning",
+          "line": 36
+        },
+        {
+          "kind": "theorem",
+          "name": "check_short_end_not_own_condition",
+          "qualified_name_hint": "Becoming.check_short_end_not_own_condition",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "check_parted_steps_alter",
+          "qualified_name_hint": "Becoming.check_parted_steps_alter",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "check_unending_is_altering",
+          "qualified_name_hint": "Becoming.check_unending_is_altering",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "check_tong_is_unending_bian",
+          "qualified_name_hint": "Becoming.check_tong_is_unending_bian",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "check_wushi_along_converse_core",
+          "qualified_name_hint": "Becoming.check_wushi_along_converse_core",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "check_kinds_told_apart",
+          "qualified_name_hint": "Becoming.check_kinds_told_apart",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "check_inquiry_descends",
+          "qualified_name_hint": "Becoming.check_inquiry_descends",
+          "line": 90
+        },
+        {
+          "kind": "theorem",
+          "name": "check_stage_within",
+          "qualified_name_hint": "Becoming.check_stage_within",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "check_stage_eq_inquiry",
+          "qualified_name_hint": "Becoming.check_stage_eq_inquiry",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "check_telling_apart_needs_a_stage",
+          "qualified_name_hint": "Becoming.check_telling_apart_needs_a_stage",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "check_dependence_within_region",
+          "qualified_name_hint": "Becoming.check_dependence_within_region",
+          "line": 124
+        },
+        {
+          "kind": "theorem",
+          "name": "check_dependence_outside_region",
+          "qualified_name_hint": "Becoming.check_dependence_outside_region",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "check_everywhere_no_mark_both",
+          "qualified_name_hint": "Becoming.check_everywhere_no_mark_both",
+          "line": 139
+        },
+        {
+          "kind": "theorem",
+          "name": "check_nothing_conditions_nothing_conditioned",
+          "qualified_name_hint": "Becoming.check_nothing_conditions_nothing_conditioned",
+          "line": 144
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 17
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "fadb5c6e313d26e061ad8549f077e3a426abd9af2101f382cf74d3d66991023f": {
       "byte_size": 12760,
       "line_count": 322,
@@ -542388,6 +543667,192 @@
         "unsafe": []
       },
       "print_axioms_commands": 8
+    },
+    "fef5464efad091996c89165f879ff826b41cc754bca0f332b777d63799c4d412": {
+      "byte_size": 16655,
+      "line_count": 279,
+      "imports": [
+        "Becoming.RoomNet",
+        "Becoming.RegimeMargin",
+        "Becoming.HeldPossible"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "next_open",
+          "qualified_name_hint": "Becoming.Rooms.next_open",
+          "line": 40
+        },
+        {
+          "kind": "abbrev",
+          "name": "windowRun",
+          "qualified_name_hint": "Becoming.Rooms.windowRun",
+          "line": 46
+        },
+        {
+          "kind": "def",
+          "name": "windowAt",
+          "qualified_name_hint": "Becoming.Rooms.windowAt",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "windowAt_level",
+          "qualified_name_hint": "Becoming.Rooms.windowAt_level",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "window_line",
+          "qualified_name_hint": "Becoming.Rooms.window_line",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "Unheated.window_cold",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.window_cold",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "matched_meets",
+          "qualified_name_hint": "Becoming.Rooms.matched_meets",
+          "line": 78
+        },
+        {
+          "kind": "theorem",
+          "name": "matched_keeps",
+          "qualified_name_hint": "Becoming.Rooms.matched_keeps",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "Matched.window_held",
+          "qualified_name_hint": "Becoming.Rooms.Matched.window_held",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.alternates",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.alternates",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.not_widening",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.not_widening",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.generation_at_moments",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.generation_at_moments",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "Matched.no_generation_at_moments",
+          "qualified_name_hint": "Becoming.Rooms.Matched.no_generation_at_moments",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "Unheated.no_generation_at_moments",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.no_generation_at_moments",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.holds_one_way",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.holds_one_way",
+          "line": 148
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.heater_shifted",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.heater_shifted",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.in_phase",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.in_phase",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "Overshooting.alternation_shifted",
+          "qualified_name_hint": "Becoming.Rooms.Overshooting.alternation_shifted",
+          "line": 187
+        },
+        {
+          "kind": "theorem",
+          "name": "Unheated.not_widening",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.not_widening",
+          "line": 195
+        },
+        {
+          "kind": "theorem",
+          "name": "Matched.not_widening",
+          "qualified_name_hint": "Becoming.Rooms.Matched.not_widening",
+          "line": 203
+        },
+        {
+          "kind": "def",
+          "name": "process",
+          "qualified_name_hint": "Becoming.Rooms.process",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "steps_of_net",
+          "qualified_name_hint": "Becoming.Rooms.steps_of_net",
+          "line": 217
+        },
+        {
+          "kind": "theorem",
+          "name": "net_of_steps",
+          "qualified_name_hint": "Becoming.Rooms.net_of_steps",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "line_iff_held",
+          "qualified_name_hint": "Becoming.Rooms.line_iff_held",
+          "line": 231
+        },
+        {
+          "kind": "theorem",
+          "name": "Unheated.cold_not_held",
+          "qualified_name_hint": "Becoming.Rooms.Unheated.cold_not_held",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "heated_held",
+          "qualified_name_hint": "Becoming.Rooms.heated_held",
+          "line": 262
+        },
+        {
+          "kind": "theorem",
+          "name": "heated_possible_held",
+          "qualified_name_hint": "Becoming.Rooms.heated_possible_held",
+          "line": 270
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 2,
+        "theorem": 24
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "fef8f3e1ee587f297c2a36c63d47d58048c4c97ff7a66c05830bff73b36327d5": {
       "byte_size": 16491,
