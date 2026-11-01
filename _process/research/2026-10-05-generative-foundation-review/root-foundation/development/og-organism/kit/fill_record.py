@@ -11,7 +11,7 @@ d = json.loads((kit / "record.draft.json").read_text(encoding="utf-8"))
 sha = hashlib.sha256((root / lean).read_bytes()).hexdigest()
 decls = sorted({x for law in d["laws"] for x in law["declarations"]} | {"Becoming.ReaderRebuilding.«一元三期之时»"})
 d["family"] = "F01"
-d["reviewed_at_utc"] = "2026-11-01T00:00:00+00:00" if rid == "PENDING" else d.get("reviewed_at_utc")
+d["reviewed_at_utc"] = "2026-11-01T00:00:00+00:00" if rid == "PENDING" else f"{rid[:4]}-{rid[4:6]}-{rid[6:8]}T{rid[9:11]}:{rid[11:13]}:{rid[13:15]}+00:00"
 d["aliases"] = ["Becoming.ReaderRebuilding.«以储买时当且仅当取于储»", "a reader rebuilt from the level it reads", "取于储者以储买时"]
 d["dependencies"] = [{"id": "rooms-tested-by-a-window", "relation": "interpretive",
     "detail": {"en": "The rooms tell regulation from equilibrium with a given heater; this family asks where a reader is rebuilt from.",

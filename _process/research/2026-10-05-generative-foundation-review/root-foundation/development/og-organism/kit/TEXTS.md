@@ -34,10 +34,10 @@ Replace "Open: a vortex; an institution's identity through replaced people, rule
 
 ## 3. The one page, "What is not yet done", last bullet
 
-- **.md:** "An organism and an institution have no model yet, and several theses' tests are still to run." becomes "An institution has no model yet; an organism has one minimal model, a reader rebuilt from the level it reads ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)); several theses' tests are still to run."
-- **.zh.md:** the same bullet: "机构尚无模型；生物体有一个最小模型，即由其所读之储重建的读者（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)）；若干论题的检验仍待进行。" Re-read the zh bullet first and keep its other words.
-- **Recount:** recount the one page and write READING-BUDGETS' row from the recount.
+- **.md:** "An organism and an institution have no model yet, and several theses' tests are still to run." becomes "An institution has no model yet, an organism one minimal model ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)), and several theses' tests are still to run." (four words more; a longer first cut cost twelve, over a page already 56 over its budget)
+- **.zh.md:** the same bullet: "一个制度尚无模型，一个有机体有一个最小模型（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)），若干论题的检验还待进行。", keeping the bullet's other words.
+- **Recount:** done on the branch by the kit's measure_layers.py: 1,155 words (60 over), Chinese 1,944 characters; READING-BUDGETS' row written from it. Recount at the landing if the page changed on main.
 
 ## 4. WHAT-REMAINS, "After the gate"
 
-Append to its last sentence: "OG landed (study §N): a reader rebuilt from the level it reads, its stock buying time under a cut exactly where the rebuild draws on the level; the institution is next."
+`land_og.py RECEIPT SECTION` applies this, with the record, 08's receipt sentence and the study's section. It replaces the item 9 clause's "the organism and the institution named" with "the institution named" and the last sentence with: "OG landed (study §N): a reader rebuilt from the level it reads, its stock buying time under a cut exactly where the rebuild draws on the level; the institution is next."
