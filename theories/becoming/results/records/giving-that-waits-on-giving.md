@@ -64,7 +64,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 - related, not a proved adapter: [how-a-carried-difference-grows](how-a-carried-difference-grows.md). Parallel, with no instance theorem: there a finite order is exact where no chain of couplings is long enough and what reaches a loop keeps arriving; here withholding passes out and returns.
 - related, not a proved adapter: [target-capture](target-capture.md). As a perturbed state is re-absorbed under one rule, giving is regained only under another law.
 
-**Used by:** [restoring-giving-from-the-worst-start](restoring-giving-from-the-worst-start.md) · [thresholds-of-waiting](thresholds-of-waiting.md)
+**Used by:** [a-pair-tolerates-only-within-a-window](a-pair-tolerates-only-within-a-window.md) · [restoring-giving-from-the-worst-start](restoring-giving-from-the-worst-start.md) · [thresholds-of-waiting](thresholds-of-waiting.md)
 
 <a id="sources--来源"></a>
 ### Sources

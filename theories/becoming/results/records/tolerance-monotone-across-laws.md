@@ -52,6 +52,8 @@ Monotone threshold dynamics (lower thresholds activate supersets).
 - **formal-reuse**: [thresholds-of-waiting](thresholds-of-waiting.md). Its KeepsInclusion.course is the case of one law.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries lao-36-78-rou-sheng-gang).
 
+**Used by:** [a-pair-tolerates-only-within-a-window](a-pair-tolerates-only-within-a-window.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

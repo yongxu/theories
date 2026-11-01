@@ -1,6 +1,6 @@
 # EL4: giving that waits on giving, under selection
 
-Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the scratch Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`), which is not landed ([EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
+Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the core Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`, landed as core leaves at receipt 20261101T024359.312453Z, study section 490), which is not landed ([EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
 - the windowed law is named for what it is, not "memory", which in 05 means withholding that stays;
 - the alternator that defeats a window is added;
 - the offspring counts hold only while a formation is supported;
@@ -286,7 +286,7 @@ The draft's first item, "a fixed benefit beyond cost with no account of its sour
 ## 8. Placement
 
 **Modules.**
-- *The windowed law* (`answersWithin`, the carrier and `window_one`) is in the scratch `Becoming.WindowedWaiting`, above `Tolerance` (its only import besides `Init`). It goes below `Withholding` only on that module's owner's yes (named in its history row), and there it would lose `Tolerance`'s laws; otherwise it stays above `Tolerance`.
+- *The windowed law* (`answersWithin`, the carrier and `window_one`) is in `Becoming.WindowedWaiting`, above `Tolerance` (its only import besides `Init`). It goes below `Withholding` only on that module's owner's yes (named in its history row), and there it would lose `Tolerance`'s laws; otherwise it stays above `Tolerance`.
 - *Errors, the pair witnesses, the alternator and the one-step split* go in `Becoming.WindowedWaiting`, which uses `Pair`, `answers` and `withholding_returns`.
 - *EL4b and EL4c* go in the leaf `Becoming.PairSelection`, importing `WindowedWaiting`, `SelectionLevels`, `RuleShaping` and `DrawnBeyond`. `SelectionPace` is not imported, since its law is not applied to these runs. It is a leaf because nothing below reads offspring from giving. It lands against EL4a's final `WindowedWaiting` bytes.
 
@@ -307,7 +307,7 @@ The records count these as lemmas, wrappers, corollaries, bounds under a supplie
 
 ## 9. Sources to check before any record cites them
 
-Cited from memory for orientation; each is read before it is cited:
+Cited from memory for orientation; each is read before it is cited. Checked at the landing (1 November 2026) against the published records, titles, venues and abstracts: Trivers 1971, Axelrod and Hamilton 1981, Axelrod 1984, Kraines and Kraines 1989, Molander 1985, Nowak and Sigmund 1992 and 1993, Imhof, Fudenberg and Nowak 2005, Wilkinson 1984 and Wu and Axelrod 1995 are as cited (Nowak and Sigmund 1993's title is "A strategy of win-stay, lose-shift that outperforms tit-for-tat in the Prisoner's Dilemma game"); Boyd 1989 is on contrite tit-for-tat and strong perfect equilibrium, not on the window's instability (the invasion of tit-for-tat through tit-for-two-tats is Boyd and Lorberbaum 1987), so no record cites it:
 - Trivers 1971 (reciprocal altruism);
 - Axelrod and Hamilton 1981; Axelrod 1984 (tit-for-two-tats);
 - Wilkinson 1984 (food sharing in vampire bats);
@@ -337,8 +337,9 @@ Delta: windows on the whole-history carrier, errors as a clock; absorption as an
   bound inside the pair, with a contrast in descent) and of renewal from outside; bounds of a
   factor read on a web under a supplied reading.
 Supplied premises / correspondence: §6; β and γ supplied (EL4c's witnesses are not joined to them).
-Evidence: scratch Lean, Becoming.WindowedWaiting and Becoming.PairSelection, not landed (EL's
-  State of the Lean); the scratch enumeration and counts in scratch/, for the design only.
+Evidence: core Lean, Becoming.WindowedWaiting and Becoming.PairSelection, landed at receipt
+  20261101T024359.312453Z (EL's State of the Lean); the records a-pair-tolerates-only-within-a-window,
+  offspring-read-from-giving-that-waits and what-giving-that-waits-draws-on; the scratch enumeration and counts in scratch/, for the design only.
 Boundary: §7.
 Integration: 04 Open "offspring numbers tied to what a formation gives" (advanced: pairs, supplied
   factors); 05 Open "thresholds with memory" (windows).

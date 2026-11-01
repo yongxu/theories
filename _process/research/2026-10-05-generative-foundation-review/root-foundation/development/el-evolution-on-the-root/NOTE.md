@@ -1,6 +1,6 @@
 # EL: evolution read on the root's map
 
-Design, 31 October 2026. Revised the same day after an independent review in three lenses (Lean correctness, coordination, substance; 65 findings, 21 major, every one taken). Then four rounds of scratch Lean followed, each module recompiled by an independent verifier, and two independent text reviews of the design after round 3 (§10). Every target states its standing: proved, proved in a stronger or weaker form (and how), refuted (with its witness), or open. Proved means proved in the scratch Lean ([State of the Lean](#state-of-the-lean)); nothing is landed. Board item EL claims it. AI-written. Provenance: [Ren, 31 October 2026](../../../../../../sources/15-codex-theory-conversations/2026-10-31-evolution-and-becoming-one.md). Part 4 is the draft first written as WS, now [WS.md](WS.md).
+Design, 31 October 2026. Revised the same day after an independent review in three lenses (Lean correctness, coordination, substance; 65 findings, 21 major, every one taken). Then four rounds of scratch Lean followed, each module recompiled by an independent verifier, and two independent text reviews of the design after round 3 (§10). Every target states its standing: proved, proved in a stronger or weaker form (and how), refuted (with its witness), or open. Proved means proved in the core Lean: the six modules landed as core leaves at receipt 20261101T024359.312453Z (study section 490; [State of the Lean](#state-of-the-lean)). Board item EL claims it. AI-written. Provenance: [Ren, 31 October 2026](../../../../../../sources/15-codex-theory-conversations/2026-10-31-evolution-and-becoming-one.md). Part 4 is the draft first written as WS, now [WS.md](WS.md).
 
 ## In brief
 
@@ -37,22 +37,22 @@ Readings and instances, counted as evidence for existing records, not as results
 
 ## State of the Lean
 
-Scratch, not landed. The six modules below are as they stand after four rounds.
+Landed: the six modules below joined the core as leaves at receipt 20261101T024359.312453Z (study section 490), every axiom report empty, no existing module changed. They are the modules of round 4 with the verifiers' docstring fixes listed at the end of this section, and with `LineageRegions`' copies of EL3's laws and of `SelectionShift`'s counting dropped for imports.
 - *Recompiled.* In round 4 each module was recompiled from source with Lean 4.29.1 by an independent verifier, not restored from a cache.
 - *Axiom reports.* Every source declaration has an empty axiom report. An environment scan of every constant each module adds finds one that depends on an axiom: `PairSelection`'s `Place.mk.injEq`, on `propext`, which Lean generates and nothing uses. `check_becoming.py`'s environment audit admits such generated `injEq` lemmas and lists them.
 - *Imports.* Each module imports only core modules and the EL modules below it.
 - *Dependents.* `LineageRegimes` and `PairSelection` were recompiled against the final `LineageRegions` and `WindowedWaiting`: by round 4's verifiers, and again for the kit's commit `4fd5b45d7`.
 - *The kit* is on branch `el-kit`, in this study's `kit/` folder; it is not on this branch. It holds the six modules, byte for byte as below, together with the builders' and verifiers' reports of rounds 1–4 (`kit/reviews/round1.json` to `round4.json`, the two text reviews in `round3.json`) and the verifiers' probes (`kit/probes/`).
-- *Not yet run.* `check_becoming.py` has not run with any of the modules registered.
+- *Checked.* `check_becoming.py` ran with all six registered in its core list, at receipt 20261101T024359.312453Z.
 
 | Module | Lines | Imports | Carries |
 |---|---|---|---|
-| `Becoming.LineDegeneration` | 572 | `KeepingWidening` | EL3 (§5) |
+| `Becoming.LineDegeneration` | 562 | `KeepingWidening` | EL3 (§5) |
 | `Becoming.SelectionShift` | 1,178 | `Reproduction` | EL1, the counting layer (§3) |
-| `Becoming.LineageRegions` | 1,801 | `Reproduction`, `KeepingWidening`, `Roles` | EL1 on the map (§3), the lineage continuation (§6) |
-| `Becoming.LineageRegimes` | 1,172 | `LineageRegions`, `Continuation`, `MutualDependence`, `Population` | EL2 (§4) |
-| `Becoming.WindowedWaiting` | 1,540 | `Tolerance` | EL4a ([WS §3](WS.md#3-el4a-answering-within-a-window)) |
-| `Becoming.PairSelection` | 2,254 | `WindowedWaiting`, `SelectionLevels`, `RuleShaping`, `DrawnBeyond` | EL4b, EL4c ([WS §4](WS.md#4-el4b-and-el4c-offspring-from-a-run-and-three-sources)) |
+| `Becoming.LineageRegions` | 1,715 | `Reproduction`, `KeepingWidening`, `Roles`, `SelectionShift`, `LineDegeneration` | EL1 on the map (§3), the lineage continuation (§6) |
+| `Becoming.LineageRegimes` | 1,174 | `LineageRegions`, `Continuation`, `MutualDependence`, `Population` | EL2 (§4) |
+| `Becoming.WindowedWaiting` | 1,537 | `Tolerance` | EL4a ([WS §3](WS.md#3-el4a-answering-within-a-window)) |
+| `Becoming.PairSelection` | 2,255 | `WindowedWaiting`, `SelectionLevels`, `RuleShaping`, `DrawnBeyond` | EL4b, EL4c ([WS §4](WS.md#4-el4b-and-el4c-offspring-from-a-run-and-three-sources)) |
 
 Round 4 made the fixes the round-3 verifiers named. Two of them change a statement:
 - `Chain.kinds_apart` now uses the reflexive kind `fun a b => a = b`, with `Chain.stands_once`.
@@ -66,10 +66,10 @@ Round 4 also made these changes:
 - *WindowedWaiting* adds `Pair.not_absorbs_and_answers_spaced`.
 - *PairSelection.* `Seat` and `mate` are renamed `Place` and `other`. `Needs` is rebuilt so that `childless` is not vacuous, and the strict echo and assortment laws and the factor bounds under a supplied reading are added.
 
-The round-4 verifiers named these fixes before landing; none changes a statement:
+The round-4 verifiers named these fixes before landing; none changes a statement. All were made at landing, except the moves and renames at placement, which `LineDegeneration`'s docstring proposes to their owners, each on its owner's yes:
 - `LineDegeneration`:
   - At placement in `GrammarMap`, state `Map.StepWhere` as that module's `Map.short` gated by `P`. Its owner decides whether the three grammar laws take its Chinese law names.
-  - Rename `Map.Undecided` at placement (`Map.ContinuedWhere`, say), since the core has the top-level namespace `Becoming.Undecided`.
+  - The round-4 proposal to rename `Map.Undecided` is dropped: the name states no wrong meaning (the witness is a web whose start is continued exactly where an undecided proposition holds), and sharing a word with the top-level namespace `Becoming.Undecided` is an ambiguity, not a wrong meaning (08 §10).
   - Reflow one docstring.
 - `SelectionShift`: word the exception bullet's extension of `rises_exact_iff` as the nonemptiness of generation `t + 2`, as §3 (b) does.
 - `LineageRegions`:
@@ -251,7 +251,7 @@ Each is read on the map's regions rather than on a growth rate, at the grains an
 - *"From outside".* In the model a formation's giving is not drawn from its own level unless it takes, so "from outside" means from no listed condition.
 - *What it answers.* The witness answers the scope limit stated in 05 §1's record, that the gated conclusions do not reach such renewal. Among the three laws read as deciders, what ends a lineage is a regime; the stock sets when, not whether.
 
-**Home and record.** Home 04 §4, with 05 §1 pointing to it. The record is either an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends, or a record of its own for the lineage reading of the gated regime, the pair of fates at every stock and the takers' law. This is decided with the owners at landing.
+**Home and record.** Home 04 §4, with 05 §1 pointing to it. The record is its own, ending-laws-as-regimes-on-a-lineage: the lineage reading of the gated regime, the pair of fates at every stock and the takers' law. what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends are not amended.
 
 ## 5. EL3: the constructive degeneration law
 
@@ -272,16 +272,16 @@ Each is read on the map's regions rather than on a growth rate, at the grains an
   - In the witnesses of consumption and of a whole drawing, `held` is shown at every occurrence; the stopped relay has no `held` premise.
   - In all three, activity is given, not derived from the regime.
 
-**Placement** (each part on its owner's yes; EL proposes it on the board).
+**Placement** (each part on its owner's yes, decided after OU7 lands; none of it blocks EL's landing, where `Becoming.LineDegeneration` lands as a leaf).
 - *Into `GrammarMap`, on OU's owner's yes:* the part stated on the grammar alone. That is `Map.not_not_end_of_ends`, `Map.end_of_ends_decided`, the witness `Map.StepWhere` and the calibration `Map.end_of_ends_iff_excluded_middle`. It needs nothing of the World and would sit beside `«尽则非不穷»` and `«延尽之定当且仅当排中»`. There `Map.StepWhere` would be stated as GrammarMap's `Map.short` gated by `P`, and that owner decides whether the three laws take its Chinese law names. If the owner declines, this part goes into `MapInstances` with the rest.
-- *Into `Becoming.MapInstances`:* everything else except the kind instance.
+- *Into `Becoming.MapInstances`, on OU's owner's yes* (the OU line created the module): everything else except the kind instance.
   - What goes there: the general law, its activity instance, the three gone lemmas and degeneration laws, the witnesses (`Map.Undecided` without its kind witness) and the base calibration `Map.end_of_gone_iff_excluded_middle`.
   - There the landed `not_endless_of_gone`, `degenerates_of_gone` and the three regime ¬`«不穷»` laws are re-derived in place from degeneration (rule 9), so no restatement is kept.
-  - `Map.Undecided` is renamed at placement (`Map.ContinuedWhere`, say), on that module's owner's yes, since the core has the top-level namespace `Becoming.Undecided`.
-- *The kind instance* (`Web.kind_every_branch_ends_of_gone`, `Map.Undecided.kind_degenerates`) cannot go there: `Web.kindClass` is defined in `KeepingWidening`, which imports `MapInstances`. It goes into `KeepingWidening` after `Web.kindClass_within`, on its owner's yes, or stays in a small leaf.
+  - `Map.Undecided` keeps its name: it states no wrong meaning (08 §10).
+- *The kind instance* (`Web.kind_every_branch_ends_of_gone`, `Map.Undecided.kind_degenerates`) cannot go there: `Web.kindClass` is defined in `KeepingWidening`, which imports `MapInstances`. It goes into `KeepingWidening` after `Web.kindClass_within`, on UE's owner's yes (UE7 created the module), or stays in a small leaf.
 - *If the owners decline,* `Becoming.LineDegeneration` lands as a leaf, with its `Web.Restated` block labelled as restatements and no result.
-- *A rename is proposed.* The landed name `Web.degenerates_of_gone` states a wrong meaning, since it concludes 有终, not `«退化»`. A rename to `Web.end_of_gone` is proposed to `MapInstances`' owner. Until then the scratch module names its own law `every_branch_ends_of_gone`, to keep the two apart.
-- *Home and record.* Home 02 §1 (map), as an amendment of generation-and-degeneration-at-two-grains or as its own record, the owner's call.
+- *A rename is proposed.* The landed name `Web.degenerates_of_gone` states a wrong meaning, since it concludes 有终, not `«退化»`. Its name says the pattern degenerates (`«退化»`, ending on every branch), while its conclusion is that the line reaches an end; the two differ, the gap being exactly excluded middle (§5 above). A rename to `Web.end_of_gone`, which states its conclusion, is proposed to OU's owner, `MapInstances`' owner. The moves above and this rename touch the root's map modules, which OU7's rebuild also changes, so they come after it, decided by the modules' owners. Until then `LineDegeneration` names its own law `every_branch_ends_of_gone`, to keep the two apart.
+- *Home and record.* Home 02 §1 (map), in a record of its own, degeneration-from-a-horizon; generation-and-degeneration-at-two-grains is not amended.
 
 ## 6. Readings and instances (evidence, not results)
 
@@ -352,25 +352,24 @@ An empty axiom report says nothing of these; each law names those it uses.
 ## 9. Coordination, order and the release gate
 
 - **Owners, asked on the board, each deciding for their module.** Chapter text goes through 04's, 02's and 05's home sections.
-  - OU's owner (`GrammarMap`, `MapRegions`): EL3's grammar part, if wanted.
-  - `MapInstances`' and `PatternPassing`'s owners, named in their history rows (OU6, UE7, GW): EL3's laws in `MapInstances`, the proposed rename, and the name of the `Map.Undecided` witness.
-  - UE's owner and GW's session (`KeepingWidening`, `WideningOnTheMap`): EL3's kind instance after `kindClass_within`.
+  - OU's owner (`GrammarMap`, `MapRegions`, and `MapInstances`, which the OU line created): EL3's grammar part, if wanted, EL3's laws in `MapInstances` and the proposed rename of `degenerates_of_gone` (its wrong meaning in §8), all after OU7 lands.
+  - UE's owner (`KeepingWidening`, which UE7 created): EL3's kind instance after `kindClass_within`, after OU7 lands.
   - The evolution modules' owners (`Evolution`, `Reproduction`, `SelectionTerm`, `GroupEnding`): `SelectionShift` above `Reproduction`, and any law of EL1 they want below.
   - U4's owner (`RootForms`, lever 2): nothing of U4 is restated.
 - **Placement.**
   - EL3 as in §5.
   - EL1's counting layer in `Becoming.SelectionShift`, which imports only `Becoming.Reproduction`.
-  - EL1's join to `Descended` courses and the map in the new module `Becoming.LineageRegions`. It imports `Reproduction`, `KeepingWidening` and `Roles`, and only `LineageRegimes` imports it. It is new because it joins modules none of which can import it.
+  - EL1's join to `Descended` courses and the map in the new module `Becoming.LineageRegions`. It imports `Reproduction`, `KeepingWidening`, `Roles`, `SelectionShift` and `LineDegeneration`, and only `LineageRegimes` imports it. It is new because it joins modules none of which can import it.
   - EL2 in the leaf `Becoming.LineageRegimes` above it.
   - EL4 as in [WS.md §8](WS.md#8-placement).
 - **Order.**
   - The scratch Lean stays in a worktree off main; a `.lean` file in a study folder on main is picked up by the catalogue.
   - EL3 lands first, so that `LineageRegions` drops its copies of EL3's laws. Then `SelectionShift`, so that `LineageRegions` imports its counting lemmas instead of repeating them.
   - Then `LineageRegions`, with the verifiers' fixes; then `LineageRegimes`; then `WindowedWaiting` and `PairSelection`.
-  - Core landing is after RV21c's fresh run, by readiness with UE26, BD2 and OU5, on a slot from the coordinator, after a rehearsal on the main holding RV21c. RR2, HE2, U4's leaf and AJ4's documents, named here before, are landed (1721c70ef, 467f075ec, cdeb6b1e8, 3ada8819f).
-  - The branch `el-design` does not yet contain 1721c70ef. It is brought up to main before landing, and the board row's state is brought to the Lean rounds.
+  - Core landing came after RV21c's fresh run, by readiness with UE26, BD2 and OU7 (the conditional-laws item; this note first named it OU5, an id taken on 23 October), on a slot from the coordinator, after a rehearsal; it landed at receipt 20261101T024359.312453Z (study section 490). RR2, HE2, U4's leaf and AJ4's documents, named here before, are landed (1721c70ef, 467f075ec, cdeb6b1e8, 3ada8819f).
+  - The branch `el-design` was brought up to main and its texts landed (e4f578584).
 - **The release gate.** EL adds central declarations, which the gate's item 3 and U4's boundary record must place, and a core landing after RV21c makes the latest receipt incremental (item 5). So EL lands after the freeze, or before it with each new central declaration placed on the boundary record and a fresh receipt rerun. The coordinator and OU's owner decide, on the board.
-- **Checks.** Each module is registered in `check_becoming.py`'s core list and the full check is run, every axiom report empty, the generated `injEq` lemmas listed. This has not been done for any of the six.
+- **Checks.** Each module is registered in `check_becoming.py`'s core list and the full check is run, every axiom report empty, the generated `injEq` lemmas listed. Done at the landing, for all six (receipt 20261101T024359.312453Z).
 
 ## 10. The review, the Lean rounds, and what changed
 
@@ -467,9 +466,10 @@ Delta: EL1, the selection-region boundary: at the counting layer, on the landed 
   three regimes degenerate; 有终 from the premise is exactly excluded middle, on the grammar and on
   the base. EL4 as in WS.md.
 Supplied premises / correspondence: §8.
-Evidence: scratch Lean, six modules after four rounds, not landed (State of the Lean): each
+Evidence: core Lean, six leaves landed at receipt 20261101T024359.312453Z after four rounds (State of the Lean): each
   recompiled by an independent verifier, every source declaration's axiom report empty (one
-  generated injEq on propext in PairSelection); check_becoming.py not yet run with them; the kit
+  generated injEq on propext in PairSelection); check_becoming.py run with them; the records degeneration-from-a-horizon,
+  the-selection-term-and-a-lineages-fate and ending-laws-as-regimes-on-a-lineage; the kit
   on branch el-kit. EL4's scratch enumeration and counts in scratch/, for its design only.
 Boundary: §7; regions decided only where excluded middle is assumed; reaching an end only where
   continuation is decided; amounts stay off the root (World laws read on the map's regions).
