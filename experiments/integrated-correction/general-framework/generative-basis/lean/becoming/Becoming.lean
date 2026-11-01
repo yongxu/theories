@@ -909,11 +909,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   every generation nonempty (`SelectionShift.Generations.never_empties_of_unbounded`); with exact
   transmission of offspring number at every step from `t`, a positive term at `t` does
   (`SelectionShift.Generations.goes_on`), and exactness at `t` alone does not
-  (`SelectionShift.ExactOnce.exact_once_ends`). Within any horizon a course's terms are shared by
-  a course that goes on and one that ends (`SelectionShift.Horizon.same_terms_two_fates`,
-  `SelectionShift.Horizon.two_fates_of_nonempty`), and terms zero after some step by a course
-  nonempty at every generation and one that ends (`SelectionShift.Horizon.eventually_zero_two_fates`);
-  a term can be positive at every step but the last while the family ends
+  (`SelectionShift.ExactOnce.exact_once_ends`). Within any horizon, the terms through it of a course
+  nonempty there are shared by a course that goes on and one that ends
+  (`SelectionShift.Horizon.same_terms_two_fates`, `SelectionShift.Horizon.two_fates_of_nonempty`),
+  and, from a nonempty first cohort, terms zero after some step by a course nonempty at every cohort
+  and one that ends (`SelectionShift.Horizon.eventually_zero_two_fates`); a term can be positive at
+  every step but the last while the family ends
   (`SelectionShift.Shrinking.positive_then_empty`). A leaf.
 * `Becoming.LineageRegions` (L2, through `Becoming.KeepingWidening`): generations of descent read
   on the map's regions, EL1's join (no ethical predicate). Descent within a kind is a lineage
@@ -924,16 +925,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   before, `LineageRegions.descended_carries_supported`); a revival counts as a birth at both grains,
   and the grain decides a region where support does not track standing
   (`LineageRegions.StandingRelay.grain_decides_region`). Where listed offspring continue their
-  parents, a whole generation degenerating makes some later generation empty
-  (`LineageRegions.empty_of_degenerates`), and with the census holding every continuation exactly
-  so (`LineageRegions.generation_degenerates_iff`); so a term positive at every nonempty generation
-  leaves not every member of a generation degenerating (`LineageRegions.not_all_degenerate_while`),
-  while at a kind grain separating offspring from parents the term is positive at every step and
-  every member degenerates (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every
-  horizon, two courses with the same terms through it, the marked line generating in one and the
-  lineage degenerating in the other (`LineageRegions.Courses.same_terms_two_fates`); the census
-  premise of ending cannot be dropped (`LineageRegions.Lasting.lasting`). A leaf importing
-  `Becoming.SelectionShift` and `Becoming.LineDegeneration`.
+  parents, a whole cohort degenerating makes some later cohort empty
+  (`LineageRegions.empty_of_degenerates`), and with the census holding every continuation exactly so
+  (`LineageRegions.generation_degenerates_iff`); so, from a nonempty cohort, a term positive at
+  every nonempty cohort from it on leaves not every member of that cohort degenerating
+  (`LineageRegions.not_all_degenerate_while`), while at a kind grain separating offspring from
+  parents the term is positive at every step and every member degenerates
+  (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every horizon, two courses
+  with the same terms through it, the marked line generating in one and the lineage degenerating in
+  the other (`LineageRegions.Courses.same_terms_two_fates`); the census premise of ending cannot be
+  dropped (`LineageRegions.Lasting.lasting`). A leaf importing `Becoming.SelectionShift` and
+  `Becoming.LineDegeneration`.
 * `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
   ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
   under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on
@@ -941,9 +943,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one the horizon is the stock, `LineageRegimes.degeneration_at_stock_horizon`), dissipation within
   the family (`LineageRegimes.dissipation_degenerates_every_member`), and a draw on a condition
   given nothing (`LineageRegimes.draw_doubling_needs`, of which `Flow.Balances.doubling_needs` is a
-  case; takers at least doubling, each drawing a unit, stop within `log₂ (level + 1)` generations,
-  `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every stock a
-  handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
+  case; takers at least doubling, each drawing a unit, each active one taking from the condition and
+  no cohort listing a member twice, stop within `log₂ (level + 1)` cohorts,
+  `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every positive
+  stock a handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
   `LineageRegimes.stock_forces_neither`); under renewal from outside no gated premise holds
   (`LineageRegimes.FromOutside.not_gated`). A leaf; that every decider of a lineage's region is one
   of the three is not shown.
@@ -2666,21 +2669,22 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   inclusion (`WindowedWaiting.answersWithin_keeps`), a constant withholder is answered within the
   window (`WindowedWaiting.withholder_answered`), errors never `w` in a row are absorbed and `w + 1`
   in a row are answered (`WindowedWaiting.gives_unless_errs`, `WindowedWaiting.errs_answered`), and
-  no window both absorbs one error and answers a formation withholding at no two consecutive steps
-  (`WindowedWaiting.Pair.not_absorbs_and_answers_spaced`). A leaf; the readings as tit-for-tat and
-  its kin are the chapter's.
+  no window both absorbs one error and answers within an error pattern in which no formation errs at
+  two consecutive steps (`WindowedWaiting.Pair.not_absorbs_and_answers_spaced`). A leaf; the
+  readings as tit-for-tat and its kin are the chapter's.
 * `Becoming.PairSelection` (L1): offspring read from what a pair's run gives, and where a gift's
   surplus comes from, EL4b and EL4c (no ethical predicate). The counts a pair's run gives each
   place, steps received and steps withheld, are theorems of the runs at every length, with and
   without errors (`PairSelection.counts_windowed_error`, `PairSelection.counts_answering_error`,
   `PairSelection.counts_windowed_spaced`). With offspring `a + β · received + γ · withheld` and
   `β ≤ γ`, no kind rises against withholders in a cohort listed as pairs, whatever its laws and
-  errors (`PairSelection.never_rises_in_pairs`); under complete assortment answering and the window
+  errors (`PairSelection.never_rises_in_pairs`); under complete assortment, over at least one step, answering and the window
   are weakly favoured exactly where `γ ≤ β` (`PairSelection.assorted_favours_iff`,
-  `PairSelection.window_echo_favours_iff`), and after one error a window pair leaves more than an
-  answerer pair exactly there (`PairSelection.window_echo_lt_iff`); without withholding nothing is
-  selected (`PairSelection.neutral`). On the World's webs, need asymmetry within a pair is the slack
-  bound read with the pair split into family and beyond (`PairSelection.Needs.asymmetric_within_slack`,
+  `PairSelection.window_echo_favours_iff`), and after one error, with at least one step after it, a
+  window pair leaves strictly more than an answerer pair exactly where `γ < β`
+  (`PairSelection.window_echo_lt_iff`); without withholding nothing is selected
+  (`PairSelection.neutral`). On the World's webs, need asymmetry within a pair is the slack bound
+  read with the pair split into family and beyond (`PairSelection.Needs.asymmetric_within_slack`,
   `PairSelection.Needs.symmetric_breaks`), a gift may be carried by an inflow
   (`PairSelection.Renewed.renewal_carried`), and a factor read as a line's rise is bounded by the
   slack beyond and the inflow (`PairSelection.Place.received_factor_le`, a bound under a supplied

@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
   "statement": {
-    "en": "In a pair, keeping inclusion splits the one-step laws restoring mutual giving after a withholding from those answering a constant withholder; answering within a window does both, absorbing errors spaced within it, and no window absorbs one error and answers a formation never erring twice running.",
-    "zh": "在一对中，保持包含把一次扣留后恢复相互给出的一步律与回应恒定扣留者的一步律分开；窗口内的回应两者皆成，吸收窗口内稀疏的差错；没有窗口既吸收一次差错又回应从不连续两次出错的形成。"
+    "en": "In a pair, keeping inclusion splits one-step laws restoring mutual giving after a withholding from those answering a constant withholder; a window of two or more does both and absorbs errors spaced within it; no window both absorbs one error and answers a formation never erring twice running.",
+    "zh": "在一对中，保持包含把一次扣留后恢复相互给出的一步律与回应恒定扣留者的一步律分开；至少两步的窗口两者皆成，并吸收窗口内稀疏的差错；没有窗口既吸收一次差错、又回应一个从不连续两次出错的形成。"
   },
   "laws": [
     {
@@ -207,8 +207,8 @@
       ]
     },
     {
-      "en": "No window both absorbs one error and answers a formation erring at no two consecutive steps: where one error leaves the other giving at the next step the window is at least two, and then every formation gives wherever it does not err. A formation giving once in every w steps is never answered by a window of w. The alternator is the instance; each half holds apart.",
-      "zh": "没有窗口既吸收一次差错又回应从不连续两步出错的形成：一次差错后对方下一步仍给出，则窗口至少为二，此时每个形成凡不出错处皆给出。每 w 步至少给出一次的形成，窗口 w 永不回应。交替者是其实例；两半各自可成。",
+      "en": "No window both absorbs one error and answers within an error pattern in which no formation errs at two consecutive steps: where one error leaves the other giving at the next step the window is at least two, and then every formation gives wherever it does not err. A formation giving at least once in every w steps is never answered by a window of w. The alternator is the instance; each half holds apart.",
+      "zh": "在无形成连续两步出错的差错模式中，没有窗口既吸收一次差错又有所回应：一次差错后对方下一步仍给出，则窗口至少为二，此时每个形成凡不出错处皆给出。每 w 步至少给出一次的形成，窗口 w 永不回应。交替者是其实例；两半各自可成。",
       "declarations": [
         "Becoming.WindowedWaiting.window_holds_of_gaps",
         "Becoming.WindowedWaiting.spaced_window_holds",
@@ -248,8 +248,8 @@
   ],
   "hypotheses": [
     {
-      "en": "Discrete steps; giving all-or-nothing per formation per step, decided (Bool) in the one-step laws and Prop-valued on configurations, joined by bridges; a supplied relation of waiting, fixed over the run; the start's history all giving.",
-      "zh": "离散步；每个形成每步给出为全有或全无，一步律中可判定（Bool），配置上为命题值，两者以桥相连；等待关系给定，在运行中固定；开始时的历史为全部给出。"
+      "en": "Discrete steps; giving all-or-nothing per formation per step, decided (Bool) in the one-step laws and Prop-valued on configurations, joined by bridges; a supplied relation of waiting, fixed over the run; for the one-step runs and the clocked runs the history before step 0 is all giving, while the unclocked laws on configurations are stated from any history or from a named one: total withholding, and the line of three with its source withheld.",
+      "zh": "离散步；每个形成每步给出为全有或全无，一步律中可判定（Bool），配置上为命题值，两者以桥相连；等待关系给定，在运行中固定；一步律的运行与时钟运行在第 0 步之前的历史为全部给出，而配置上不带时钟的定律从任一历史或从指定的历史陈述：全部扣留，以及其源被扣留的三者之线。"
     },
     {
       "en": "The window's carrier is the whole history at every lag, of which the law reads the lags below w; errors are a supplied pattern, counted and not given a chance, read by a clock carried in the state; an error turns an intended giving into withholding at that step and nothing else.",

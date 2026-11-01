@@ -10,12 +10,12 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
   "statement": {
-    "en": "A common shift of offspring numbers leaves the selection term unchanged, so within a horizon the same terms can carry two fates; terms positive unboundedly often, or a positive offspring number transmitted exactly, force going on. On lineages a whole cohort degenerates only if a later one is empty.",
-    "zh": "后代数的共同平移不改变真正的选择项，故在视界之内同一项进程可承载两种命运；而在无界多步为正的项，或正后代数的精确传递，迫使延续；在世系上，一整代退化仅当其后某代为空。"
+    "en": "A common shift of offspring numbers keeps the selection term, so in a horizon two fates can share the terms; unboundedly many positive terms, or one with exact transmission after it, force going on. Where listed offspring continue their parents, a cohort degenerates only if a later one is empty.",
+    "zh": "后代数的共同平移不改变真正的选择项，故在视界之内两种命运可共有同一组项；在无界多步为正的项，或一个正项加上其后的精确传递，迫使延续。在所列后代于粗线上延续其亲代的世系上，一代退化仅当其后某代为空。"
   },
   "laws": [
     {
-      "en": "Shift invariance. A common number added to every member's offspring number leaves concordance and discordance with any amount unchanged, while the total weight moves by that number for each member; over cohorts, two alike at a step whose offspring numbers differ by a common k have the same terms there, the next cohort of one larger by k per member. The excess identity restates Becoming.excess_add_right.",
+      "en": "Shift invariance. A common number added to every member's offspring number leaves concordance and discordance with any amount unchanged, and likewise where the amount is shifted, while the total weight moves by that number for each member; over cohorts, two alike at a step whose offspring numbers differ by a common k have the same terms there, the next cohort of one larger by k per member. The excess identity restates Becoming.excess_add_right.",
       "zh": "平移不变。给每个成员的后代数加上同一个数，与任何量的一致与不一致都不变，量平移时亦然；总权重则每个成员增加该数。在世代中，某步相同、后代数相差共同的 k 的两代，在该步有相同的项，其一的下一代每个成员多 k。过度恒等式是 Becoming.excess_add_right 的重述。",
       "declarations": [
         "Becoming.SelectionShift.excess_shift",
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "Terms positive at unboundedly many steps decide. A term positive at every step keeps every cohort after the first nonempty; from a nonempty first cohort, a term positive at every step whose family is nonempty keeps every cohort nonempty, and so does a term positive at unboundedly many steps. Witness: alternating a concordant step with one copy each meets the last premise and not positivity at every step.",
-      "zh": "在无界多步为正的项起决定作用。每步皆正的项使第一代之后每代非空；自非空的第一代起，在家族非空的每一步皆正的项使每代非空，在无界多步为正的项亦然。见证：交替一个一致之步与一个各复制一份之步，满足后一前提而非每步皆正。",
+      "en": "Terms positive at unboundedly many steps decide. A term positive at every step keeps every cohort after the first nonempty; from a nonempty first cohort, a term positive at every step whose family is nonempty keeps every cohort nonempty; and a term positive at unboundedly many steps keeps every cohort nonempty, the first included, with no premise on it. Witness: alternating a concordant step with one copy each meets the last premise and not positivity at every step.",
+      "zh": "在无界多步为正的项起决定作用。每步皆正的项使第一代之后每代非空；自非空的第一代起，在家族非空的每一步皆正的项使每代非空；在无界多步为正的项使每代非空，第一代亦在内，无需关于它的前提。见证：交替一个一致之步与一个各复制一份之步，满足后一前提而非每步皆正。",
       "declarations": [
         "Becoming.SelectionShift.Generations.never_empties",
         "Becoming.SelectionShift.Generations.never_empties_while",
@@ -67,8 +67,8 @@
       ]
     },
     {
-      "en": "The exception. Read by offspring number with exact transmission at every step from t on, a member of cohort t with an offspring keeps a line with that offspring number in every later cohort; so every later cohort is nonempty exactly where cohort t + 1 is, and a positive term at t forces it, extending to every later cohort the nonemptiness of cohort t + 2 that the one-step law rises_exact_iff gives.",
-      "zh": "例外。以后代数读、自 t 起每步传递精确时，第 t 代中有后代的成员在其后每代都保有一条后代数相同的线；故其后每代非空恰当第 t + 1 代非空，t 处的正项迫使之。这把一步之律 rises_exact_iff 给出的第 t + 2 代非空推广到其后每代。诸前提可同时成立。",
+      "en": "The exception. Read by offspring number with exact transmission at every step from t on, a member of cohort t with an offspring keeps a line with that offspring number in every later cohort; so every later cohort is nonempty exactly where cohort t + 1 is, and a positive term at t forces it, extending to every later cohort the nonemptiness of cohort t + 2 that the one-step law rises_exact_iff gives. The premises hold together (OneLine), and those of a common shift with k positive.",
+      "zh": "例外。以后代数读、自 t 起每步传递精确时，第 t 代中有后代的成员在其后每代都保有一条后代数相同的线；故其后每代非空恰当第 t + 1 代非空，t 处的正项迫使之。这把一步之律 rises_exact_iff 给出的第 t + 2 代非空推广到其后每代。诸前提可同时成立（OneLine），共同平移的前提在 k 为正时亦然。",
       "declarations": [
         "Becoming.SelectionShift.Generations.line_kept",
         "Becoming.SelectionShift.Generations.goes_on_iff",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "en": "Instances, not results: descent read as passing within a kind gives the lineage continuation. From an active parent, at (kind, carrier) and either grain, a carrying renewal is a step of it within the kind into an active formation that did not, the step before, both stand active and carry on as itself, and is a descent within the kind: cases of the World's Web.carries_iff, for a reflexive kind through a restatement.",
+      "en": "Instances, not results: descent read as passing within a kind gives the lineage continuation. From an active parent, at (kind, carrier) and either grain, a carrying renewal is a step of it within the kind into an active formation that was not, the step before, both active and continued by itself, and is a descent within the kind: cases of the World's Web.carries_iff, for a reflexive kind through a restatement.",
       "zh": "实例，不是结果：把世系读作种类之内的传递，即得世系之续。自活跃的亲代起，在（种类，载体）与任一粒度上，传是此续在种类之内进入一个活跃形成的一步，该形成在前一步并非既活跃又作为自身延续；这样的一步是种类之内的世系：世界的 Web.carries_iff 的情形，对自反的种类经一条重述。",
       "declarations": [
         "Becoming.LineageRegions.descent",
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "en": "The join of descent to births. Where only active formations give, a descent within the kind into a formation active after it continues the lineage; with the offspring embodied it is a carrying renewal, so a revival is a birth. Where activity also needs support, a descent from a supported parent is one exactly where the offspring was unsupported the step before; first support from any earlier step says no more.",
+      "en": "The join of descent to births. Where only active formations give, a descent within the kind into a formation active after it continues the lineage; with the offspring embodied it is a carrying renewal, with no premise of newness, so a revival is a birth. Where activity also needs support, a descent from a supported parent is one exactly where the offspring was unsupported the step before; first support from any earlier step says no more.",
       "zh": "世系与出生的接合。只有活跃形成给予时，种类之内进入步后活跃之形成的世系延续世系；后代具身时它是传，不需新颖之前提，故复苏也是出生。活动还需要支持时，自受支持的亲代起的世系恰在后代前一步未受支持时是传；自更早任一步首次受支持，所说不更多。",
       "declarations": [
         "Becoming.LineageRegions.descent_continues",
@@ -218,7 +218,7 @@
     },
     {
       "en": "Generation follows from a family carrying renewals into itself. Where every member from t on has a listed offspring, every member at t generates at (kind, carrier); with exact transmission of offspring number from t on, a member with an offspring at t generates, so a positive term at t puts some member of cohort t in 生成. In Chain every cohort is nonempty and transmission exact, yet a childless member degenerates.",
-      "zh": "延续。每一成员都向家族内传的家族给出生成。自 t 起每个成员都有所列后代时，t 处每个成员在（种类，载体）上生成；自 t 起后代数传递精确时，t 处有后代的成员生成，故 t 处的正项使第 t 代某成员处于生成。在 Chain 中每代非空、传递精确，而一个无后代的成员退化。",
+      "zh": "每一成员都向家族内传的家族给出生成。自 t 起每个成员都有所列后代时，t 处每个成员在（种类，载体）上生成；自 t 起后代数传递精确时，t 处有后代的成员生成，故 t 处的正项使第 t 代某成员处于生成。在 Chain 中每代非空、传递精确，而一个无后代的成员退化。",
       "declarations": [
         "Becoming.LineageRegions.generation_of_carrying",
         "Becoming.LineageRegions.generation_of_reproducing",
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "en": "Ending under the census. Where each continuation of a member on the coarse line is a member's occurrence (at the grain of activity, where each descent within the kind is listed and none carries on as itself), an empty cohort ends the line on every branch. So in a family balanced and dissipated on up to its stock, every member's line in cohorts up to stock + 1 degenerates.",
+      "en": "Ending under the census. Where each continuation of a member on the coarse line is a member's occurrence (at the grain of activity, where each descent within the kind is listed and none carries on as itself), an empty cohort ends the line on every branch. So in a family balanced and dissipated on up to its stock, every member's line in cohorts up to stock + 1 degenerates, at every stock.",
       "zh": "普查下的终结。成员在粗线上的每个续都是某成员之事时，空的一代使线诸支皆尽；在活动粒度上，种类之内的每个世系皆被列出、无成员作为自身延续时即如此。故在直至其存量都平衡且被耗散的族内，自直至存量 + 1 的一代中每个成员起的线退化，对每一存量皆然。",
       "declarations": [
         "Becoming.LineageRegions.ContinuationsListed",
@@ -308,7 +308,7 @@
       ]
     },
     {
-      "en": "A whole cohort degenerating is an empty later cohort. Where listed offspring continue their parents on the coarse line, every member of cohort t degenerating forces some later cohort empty, with no census (line_ends its lemma); with the census the converse holds; member by member, where every continuation is a listed offspring, a member degenerates exactly where it has, at some depth, no listed descendant.",
+      "en": "A whole cohort degenerating is an empty later cohort. Where listed offspring continue their parents on the coarse line, every member of cohort t degenerating forces some later cohort empty, with no census, by induction on 尽 over finite families (line_ends its lemma); with the census the converse holds; member by member, where every continuation is a listed offspring, a member degenerates exactly where it has, at some depth, no listed descendant.",
       "zh": "一整代退化即其后某代为空。所列后代在粗线上延续其亲代时，第 t 代每个成员都退化迫使其后某代为空，无需普查，经有限家族上对尽的归纳（line_ends 为其引理）；有普查时其逆亦成立；逐个成员地，每个续都是所列后代时，一个成员退化恰当它在某一深度没有所列后裔。",
       "declarations": [
         "Becoming.LineageRegions.KidsContinue",
@@ -388,8 +388,8 @@
       ]
     },
     {
-      "en": "At a kind grain that separates offspring from parents, each formation its own kind, the kind class is the carrier class and the line takes no step: there concordance is two at every step while every member of every cohort degenerates, and in Chain every cohort is nonempty while every occurrence degenerates. So the impossibility above is a law of the kind grain.",
-      "zh": "在把后代与亲代分开的种类粒度上（每个形成自成一类），种类之类即载体之类，线不走一步：其处一致在每步为二，而每代每个成员皆退化；在 Chain 中每代非空而每个事皆退化。故上述不可能是种类粒度之律。",
+      "en": "At a kind grain that separates offspring from parents, each formation its own kind, the kind class is the carrier class and the line takes no step: there concordance is two at every step while every member of every cohort degenerates, and in Chain every cohort is nonempty while every occurrence degenerates. So the impossibility above is a law of a kind grain at which listed offspring continue their parents, not of every grain.",
+      "zh": "在把后代与亲代分开的种类粒度上（每个形成自成一类），种类之类即载体之类，线不走一步：其处一致在每步为二，而每代每个成员皆退化；在 Chain 中每代非空而每个事皆退化。故上述不可能是所列后代延续其亲代之种类粒度上的律，不是每一粒度上的律。",
       "declarations": [
         "Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind",
         "Becoming.LineageRegions.Chain.kinds_apart",

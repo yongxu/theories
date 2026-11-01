@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
   "statement": {
-    "en": "At any class within activity, a line from an active occurrence of which nothing reached at one step is active ends on every branch (尽), constructively, and the World's three ending regimes degenerate; reaching an end (有终) from that premise is exactly excluded middle, on the base and the grammar.",
-    "zh": "在活动之内的任一类上，自一活跃之事起、其线于某一步所及皆不活跃者，诸支皆尽，构造地成立，故世界的三种终结之态皆退化；由此前提而有终，恰等价于排中，在基底与文法上皆然。"
+    "en": "At any class within activity, a line from an active occurrence of which nothing reached at a step not before its start is active ends on every branch (尽), constructively, and the three ending regimes degenerate; that the premise, or 尽 on the grammar, gives an end (有终) is exactly excluded middle.",
+    "zh": "在活动之内的任一类上，自一活跃之事起、其线于不早于起点的某一步所及皆不活跃者，诸支皆尽，构造地成立；世界的三种终结之态皆退化；此前提（在文法上则诸支皆尽）总给出有终，恰等价于排中。"
   },
   "laws": [
     {
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "en": "The constructive degeneration law. At any class included in activity, from an active occurrence where every occurrence the line reaches at a step N not before it is inactive, the line ends on every branch: the pattern degenerates (退化). The uniform horizon carries it: nothing the line reaches lies at N. Activity and the kind class are instances, the lineage continuation included.",
+      "en": "The constructive degeneration law. At any class included in activity, from an active occurrence where every occurrence the line reaches at a step N not before it is inactive, the line ends on every branch: the pattern degenerates (退化). What the line reaches lies on the line under activity, so it is active, and nothing is reached at N: the uniform horizon carries it. Activity and the kind class are instances, the lineage continuation included.",
       "zh": "构造的退化之律。在含于活动的任一类上，自一活跃之事起，线于不早于它的某步 N 所及之事皆不活跃时，线诸支皆尽：样式退化。线所及者在活动之线上，故皆活跃，而 N 处无所及：承载此律的是一致的视界。活动与种类之类是其实例，世系之续亦在其中。",
       "declarations": [
         "Becoming.Web.reached_coarser",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "en": "On the base: in a web with one occurrence active at step 0, one at step 1 and none from step 2, the start continued exactly where P holds, the law's premise holds at activity and at the kind grain and the pattern degenerates, while any end decides P; so that every line meeting the law's premise reaches an end is exactly excluded middle. Only whether one relation holds is undecided there.",
+      "en": "On the base: in a web with one occurrence active at step 0, one at step 1 and none from step 2, the start continued exactly where P holds, the law's premise holds at activity and at the kind grain and the pattern degenerates, while any end decides P; so that every line meeting the law's premise reaches an end is exactly excluded middle. Nothing infinite is undecided there, only whether one relation holds.",
       "zh": "在基底上：一网中第 0 步一事活跃、第 1 步一事活跃、自第 2 步起无一活跃，起点恰在 P 成立时被延续；此律的前提在活动与种类粒度上皆成立，样式退化，而任何终点都判定 P；故\"满足此律前提之线皆有终\"恰等价于排中。其处无无穷者未定，只有一个关系是否成立未定。",
       "declarations": [
         "Becoming.Map.Undecided.web",
@@ -138,7 +138,7 @@
       "kind": "scope"
     },
     {
-      "en": "The some-branch regions (生成, 后守) on the World: what is read there is degeneration, the every-branch region.",
+      "en": "The some-branch regions (生成, 后守) on the World: what this record reads on the World is degeneration, the every-branch region.",
       "zh": "世界上的某支之域（生成、后守）：此处在世界上读出的是退化，即诸支之域。",
       "kind": "scope"
     },

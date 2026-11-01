@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
   "statement": {
-    "en": "Three ending laws, each read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: gated renewal run past, dissipation within the family, a draw on a condition given nothing. At every stock both fates occur; renewal from outside meets none.",
-    "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：门控更新被越过、族内耗散、对无所给予之条件的汲取。在每一存量下两种命运皆出现；来自外部的更新不满足其中任何一态。"
+    "en": "Three ending laws, read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: gated renewal run past, dissipation within the family, a draw on a condition given nothing. At each positive stock both fates occur; renewal from outside meets none.",
+    "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：门控更新被越过、族内耗散、对无所给予之条件的汲取。在每一正存量下两种命运皆出现；来自外部的更新不满足其中任何一态。"
   },
   "laws": [
     {
@@ -56,8 +56,8 @@
       ]
     },
     {
-      "en": "The takers' law. Cohorts of takers from at least one, each at least doubling the last and drawing at least a unit per member, on a condition given nothing, last at most log₂(level + 1) cohorts. Where each active member takes part and no cohort lists a member twice, a cohort draws at least its size, so where level + 1 < 2^n not every member of the first n cohorts stays active.",
-      "zh": "取者之律。在无所给予的条件上，自至少一个起、每代至少倍于上代、每成员至少汲取一单位的取者各代，至多延续 log₂(水平 + 1) 代。每个活跃成员皆参与、无一代重复列出成员时，一代所汲取至少为其规模，故水平 + 1 < 2^n 时，前 n 代并非每个成员都保持活跃；所需读作只在取时活跃，或经网的所需读之。",
+      "en": "The takers' law. Cohorts of takers from at least one, each at least doubling the last and drawing at least a unit per member, on a condition given nothing, last at most log₂(level + 1) cohorts. Where each active member takes part and takes from the condition, and no cohort lists a member twice, a cohort draws at least its size, so where level + 1 < 2^n not every member of the first n cohorts stays active; the need read as being active only while taking, or through the web's need, each active member requiring the condition at a need of at least one and taking at least its need.",
+      "zh": "取者之律。在无所给予的条件上，自至少一个起、每代至少倍于上代、每成员至少汲取一单位的取者各代，至多延续 log₂(水平 + 1) 代。每个活跃成员皆参与并从该条件取、无一代重复列出成员时，一代所汲取至少为其规模，故水平 + 1 < 2^n 时，前 n 代并非每个成员都保持活跃；所需读作只在取时活跃，或经网的所需读之：每个活跃成员以至少为一的所需依存于该条件，所取至少为其所需。",
       "declarations": [
         "Becoming.LineageRegimes.sizes_double",
         "Becoming.LineageRegimes.size_le_taken",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "en": "The handover: of two relata, the one whose turn it is holds the step's amount, takes it all and hands the next step's amount to the other. Every handover balances, its stock at each step is the step's amount, and its giver is gated at need one. With amount s at every step it is a relay with no excess and no dissipation that generates at (kind, carrier); at stock one its flow and levels are Reproduction.Relay's.",
+      "en": "The handover: of two relata, the one whose turn it is holds the step's amount, takes it all and hands the next step's amount to the other. Every handover balances, its stock at each step is the step's amount, and its giver is gated at need one. With amount s at every step it is a relay with no excess and no dissipation that generates at (kind, carrier); at stock one its flow and levels are Reproduction.Relay's, while its web differs.",
       "zh": "交接：在两个关系项上，轮到者持有该步之量，全部取走，并把下一步之量交给另一者。每个交接皆平衡，其每步的存量即该步之量，其给予者在所需一上受门控。每步之量为 s 时，它是无过度、无耗散的接力，在（种类，载体）上生成；在存量一时其流与水平同于存量为一的接力，网则不同。",
       "declarations": [
         "Becoming.LineageRegimes.Handover.holder",
@@ -179,8 +179,8 @@
       ]
     },
     {
-      "en": "Renewal from outside, the boundary case: a renewer gives two units at every step and does not require the condition; two takers each take one; nothing is in excess, the condition is not dissipated on, and every formation is active and supported at every step. The gated premise fails at every need, so none of the three regimes binds.",
-      "zh": "来自外部的更新，边界情形：一个更新者每步给出两单位，且不依存于该条件；两个取者各取一；无物过度，条件不被耗散，每个形成每步皆活跃且受支持。门控前提在每一所需上都不成立，故三种态无一约束它。",
+      "en": "Renewal from outside, beyond the boundary of the region where the regimes' verdicts hold: a renewer gives two units at every step and does not require the condition; two takers each take one; nothing is in excess, the condition is not dissipated on, and every formation is active and supported at every step. The gated premise fails at every need, so none of the three regimes binds.",
+      "zh": "来自外部的更新，在诸态之判决成立之域的边界之外：一个更新者每步给出两单位，且不依存于该条件；两个取者各取一；无物过度，条件不被耗散，每个形成每步皆活跃且受支持。门控前提在每一所需上都不成立，故三种态无一约束它。",
       "declarations": [
         "Becoming.LineageRegimes.FromOutside.flow",
         "Becoming.LineageRegimes.FromOutside.web",
@@ -222,8 +222,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the stock decides a lineage's region: at every stock both fates occur.",
-      "zh": "存量决定世系之域：在每一存量下两种命运皆出现。",
+      "en": "That the stock decides a lineage's region: at every positive stock both fates occur.",
+      "zh": "存量决定世系之域：在每一正存量下两种命运皆出现。",
       "kind": "non-implication",
       "witness": "Becoming.LineageRegimes.stock_forces_neither"
     },

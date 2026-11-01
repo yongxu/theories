@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
   "statement": {
-    "en": "A pair's run of laws of giving counts what each formation received and withheld; read as offspring with supplied factors β and γ, where β ≤ γ no kind rises against withholders under any laws and errors, and under complete assortment waiting on giving is weakly favoured exactly where γ ≤ β.",
-    "zh": "给出之律的一对运行计出每个形成所收与所扣；以给定因子 β、γ 读作后代，β ≤ γ 时不论何律何差错都没有种类在扣留者面前上升；完全同类配对下，等待给出弱受偏向恰当 γ ≤ β。"
+    "en": "A pair's run counts what each received and withheld. Read as offspring with supplied factors β and γ: where β ≤ γ no kind rises against withholders in a cohort of pairs, under any giving or errors; under complete assortment over a step or more, waiting on giving is weakly favoured just where γ ≤ β.",
+    "zh": "一对的运行计出每方所收与所扣。以给定因子 β、γ 读作后代：β ≤ γ 时，在按对列出的群中，不论何种给出、何种差错，都没有种类在扣留者面前上升；完全同类配对下、至少一步中，等待给出弱受偏向恰当 γ ≤ β。"
   },
   "laws": [
     {
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "en": "The counts are theorems of the runs for every n: laws giving after mutual giving each receive at every step; against a withholder, answering over 1 + d steps withholds d and the window of two over 2 + d steps withholds d; beside the alternator the window holder gives at every step; with one error at any step, the window absorbs it and answering echoes it.",
-      "zh": "计数是运行的定理，对每个 n 成立：相互给出后仍给出的律每步都收到；对扣留者，回应在 1 + d 步中扣留 d 步，两步窗口在 2 + d 步中扣留 d 步；在交替者旁，窗口持律者每步给出；任一步一次差错时，窗口吸收之，回应使之回声。",
+      "en": "The counts are theorems of the runs for every n: without errors, laws giving after mutual giving each receive at every step; against a withholder, answering over 1 + d steps withholds d and the window of two over 2 + d steps withholds d; beside the alternator the window holder gives at every step; with one error at any step, the window absorbs it and answering echoes it.",
+      "zh": "计数是运行的定理，对每个 n 成立：无差错时，相互给出后仍给出的律每步都收到；对扣留者，回应在 1 + d 步中扣留 d 步，两步窗口在 2 + d 步中扣留 d 步；在交替者旁，窗口持律者每步给出；任一步一次差错时，窗口吸收之，回应使之回声。",
       "declarations": [
         "Becoming.PairSelection.counts_giving",
         "Becoming.PairSelection.counts_sparing_withholding",
@@ -96,8 +96,8 @@
       ]
     },
     {
-      "en": "Pairs as groups of two: a kind rises exactly where its members' mean offspring exceeds the others' (a corollary), giving the exact condition for answering in a cohort of answerer, mixed and withholder pairs; the four-term law restated for families listed by pairs (a wrapper); among-pair discordance can be positive (a check); a mixed pair leaves more than an answerer pair exactly where β < γ.",
-      "zh": "以一对为二人之组读入多层律：一个种类上升恰当其成员的平均后代超过其他（选择项的推论），由此得回应者对、混合对与扣留者对之群中回应上升的确切条件；四项律对按对列出的族重述（包装）；对间不一致可为正（检验）；混合对留下多于回应者对恰当 β < γ。",
+      "en": "Pairs as groups of two: a kind rises exactly where its members' mean offspring exceeds the others' (a corollary), giving the exact condition, over 1 + d steps without errors, for answering in a cohort of answerer, mixed and withholder pairs; the four-term law restated for families listed by pairs (a wrapper); among-pair discordance can be positive (a check); without errors a mixed pair leaves more than an answerer pair exactly where β < γ.",
+      "zh": "以一对为二者之组：一个种类上升恰当其成员的平均后代超过其他（推论），由此得无差错、1 + d 步中回应者对、混合对与扣留者对之群中回应上升的确切条件；四项律对按对列出的族重述（包装）；对间不一致可为正（检验）；无差错时混合对留下多于回应者对恰当 β < γ。",
       "declarations": [
         "Becoming.PairSelection.amountOf",
         "Becoming.PairSelection.otherOf",
@@ -150,8 +150,8 @@
       ]
     },
     {
-      "en": "The window against answering: with one error a pair over t + (m + 1) steps, the echo moves m steps from receiving to withholding, so a window pair leaves strictly more than an answerer pair exactly where γ < β, strictly less exactly where β < γ; under complete assortment selection raises the window pairs' share strictly where γ < β and lowers it strictly where β < γ, each exactly (wrappers).",
-      "zh": "窗口对回应：每对一次差错、t + (m + 1) 步中，回声把 m 步由收到移为扣留，故窗口对留下严格多于回应者对恰当 γ < β，严格少于恰当 β < γ；完全同类配对下，选择严格提升窗口对的份额恰当 γ < β，严格降低恰当 β < γ（包装）。",
+      "en": "The window against answering: with one error a pair over t + (m + 1) steps, the echo moves m steps from receiving to withholding, so for m > 0 a window pair leaves strictly more than an answerer pair exactly where γ < β, strictly less exactly where β < γ; under complete assortment, the window pairs present, selection raises the window pairs' share strictly exactly where γ < β and lowers it strictly exactly where β < γ (wrappers).",
+      "zh": "窗口对回应：每对一次差错、t + (m + 1) 步中，回声把 m 步由收到移为扣留，故 m > 0 时窗口对留下严格多于回应者对恰当 γ < β，严格少于恰当 β < γ；完全同类配对下、窗口对在场时，选择严格提升窗口对的份额恰当 γ < β，严格降低恰当 β < γ（包装）。",
       "declarations": [
         "Becoming.PairSelection.echo_and_window_sums",
         "Becoming.PairSelection.window_echo_shaped",
@@ -163,8 +163,8 @@
       ]
     },
     {
-      "en": "A withholder beside a window holder leaves β more than beside an answerer; an alternator beside a window holder leaves γ·⌈n/2⌉ more than a window holder beside another, and the window holder beside it β·⌈n/2⌉ less; in mixed pairs of window holders and alternators the window never rises, for any β and γ; under complete assortment window pairs against alternator pairs are weakly favoured exactly where γ ≤ β.",
-      "zh": "在他者旁：窗口持律者旁的扣留者比回应者旁多留 β；窗口持律者旁的交替者比两窗口持律者中的一个多留 γ·⌈n/2⌉，其旁的窗口持律者少留 β·⌈n/2⌉；窗口持律者与交替者的混合对中窗口从不上升；完全同类配对下，窗口对对交替者对弱受偏向恰当 γ ≤ β。",
+      "en": "Over at least two steps a withholder beside a window holder leaves β more than beside an answerer; an alternator beside a window holder leaves γ·⌈n/2⌉ more than a window holder beside another, and the window holder beside it β·⌈n/2⌉ less; in mixed pairs of window holders and alternators the window never rises, for any β and γ; under complete assortment, over at least one step, window pairs against alternator pairs are weakly favoured exactly where γ ≤ β.",
+      "zh": "在他者旁：至少两步中，窗口持律者旁的扣留者比回应者旁多留 β；窗口持律者旁的交替者比两窗口持律者中的一个多留 γ·⌈n/2⌉，其旁的窗口持律者少留 β·⌈n/2⌉；窗口持律者与交替者的混合对中，不论 β 与 γ，窗口从不上升；完全同类配对下、至少一步中，窗口对对交替者对弱受偏向恰当 γ ≤ β。",
       "declarations": [
         "Becoming.PairSelection.alternator_beside_window",
         "Becoming.PairSelection.window_beside_alternator",
@@ -196,8 +196,8 @@
       "zh": "配对是给定的（按对列出的群），不是形成的。后代 a + β·所收 + γ·所扣 是带自然数因子的给定公式，在形成受支持期间读取；它在运行中受支持是读法的前提，此处不检验。"
     },
     {
-      "en": "Generations are read one at a time: no law here is of a course of generations. Complete assortment is read with a positive.",
-      "zh": "世代逐一读取：此处没有关于世代进程的定律。读完全同类配对时 a 为正。"
+      "en": "Cohorts are read one at a time: no law here is of a course of cohorts. Complete assortment is read with a positive.",
+      "zh": "群逐一读取：此处没有关于群之进程的定律。读完全同类配对时 a 为正。"
     },
     {
       "en": "(AI reading.) β is what a received step brings the receiver's support and descent, γ what a withheld step keeps for the withholder's, so what a giving takes from the giver; β ≤ γ reads as giving moving what it draws.",
@@ -222,8 +222,8 @@
       "kind": "scope"
     },
     {
-      "en": "Any law over a horizon of generations, stability, mutual best responses or the known cycle as a course; each arc of the cycle is a law here, not the cycle.",
-      "zh": "任何跨世代视野的定律、稳定性、相互最优回应或已知循环之为进程；循环的每一段在此是定律，循环本身不是。",
+      "en": "Any law over a horizon of cohorts, stability, mutual best responses or the known cycle as a course; each arc of the cycle is a law here, not the cycle.",
+      "zh": "任何跨多群视野的定律、稳定性、相互最优回应或已知循环之为进程；循环的每一段在此是定律，循环本身不是。",
       "kind": "scope"
     },
     {
@@ -268,8 +268,8 @@
     "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairSelection，回执 PENDING，223 个声明（151 条定理），本记录引其中 181 个，公理报告均为空；唯一生成的引理 Place.mk.injEq 依赖 propext，检查器的审计允许之；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
   },
   "next_delta": {
-    "en": "The exact condition for a mixed cohort under a supplied error pattern and the four terms in closed form on it; a course of generations over a horizon, with two courses agreeing on the counts and the verdict while one goes on and the other ends.",
-    "zh": "给定差错模式下混合之群的确切条件及其四项的闭式；跨视野的世代进程：两条进程在计数与结论上一致，而一条延续、另一条终止。"
+    "en": "The exact condition for a mixed cohort under a supplied error pattern and the four terms in closed form on it; a course of cohorts over a horizon, with two courses agreeing on the counts and the verdict while one goes on and the other ends.",
+    "zh": "给定差错模式下混合之群的确切条件及其四项的闭式；跨视野的群之进程：两条进程在计数与结论上一致，而一条延续、另一条终止。"
   },
   "correspondence": {
     "en": "Reciprocity in evolutionary game theory (Trivers 1971; Axelrod and Hamilton 1981): the formula a + β·received + γ·withheld stands where that literature takes a fixed benefit and cost, here supplied and read as a relation of the giving, not as amounts owned by two parties (AI reading). The window's disadvantage beside alternators is read as the familiar exploit of tit-for-two-tats by a formation withholding at every other step, a reading with no stability law stated; neutrality among laws giving after mutual giving is one arc of the known cycles (Imhof, Fudenberg and Nowak 2005), which need drift with selection as a course.",
@@ -313,7 +313,7 @@
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses SelectionLevels.rises_iff_sized, restated with groups of two for families listed by pairs.",
-        "zh": "复用 SelectionLevels.rises_iff_sized，对按对列出的族以二人之组重述。"
+        "zh": "复用 SelectionLevels.rises_iff_sized，对按对列出的族以二者之组重述。"
       }
     },
     {

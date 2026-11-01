@@ -9,7 +9,7 @@ Result(s): degeneration-from-a-horizon (EL3, home 02 §1); the-selection-term-an
 Delta:
   - EL3: along any class, where everything the line from an occurrence reaches at a step not before it ends on
     every branch, the line ends on every branch, by induction on the steps left, with no excluded middle; so at
-    every class within activity a uniform horizon at which nothing reached is active gives «尽», «退化» (activity and
+    every class within activity a uniform horizon, not before the start, at which nothing reached is active gives «尽», «退化» (activity and
     the kind grain its instances), and each regime of the map's old base degenerates through one step. Reaching an
     end (有终) from the law's premise is exactly excluded middle, on the base (Map.Undecided) and on the grammar
     (Map.StepWhere): a known horizon gives the region, decided continuation gives the end.
@@ -25,7 +25,7 @@ Delta:
     with two fates; the suicide witness, positive at every cohort but the last nonempty one.
   - EL2: gating with excess, dissipation within the family and a draw on a condition given nothing, read as
     deciders of a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets;
-    from every stock one course generates and one degenerates; takers at least doubling stop within the logarithm
+    from every stock of at least one, one course generates and one degenerates; takers at least doubling stop within the logarithm
     of the level; under renewal from outside no gated premise holds.
   - EL4a: of the eight decided one-step laws of a pair keeping mutual giving, the five keeping inclusion each
     either never restore after one withholding or never answer a constant withholder; agreement alone does both and
