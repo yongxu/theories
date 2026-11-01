@@ -18,7 +18,7 @@ BOARD = Path('_process/BECOMING-WORKBOARD.md')
 TITLE = '| **SJ: the edge where acting meets the situation, and judgement from a reading on the root**'
 HEAD = ("SJ1 at the head of the queue (landing now: one core leaf, `Becoming.CommonResponse`, and `Becoming.Viability`'s "
         "two kernel laws re-proved from it with their statements unchanged; one incremental core run; one new record, "
-        "home 03 §12, and 05 §10's row; then render, strict check, links and tests, then the fast-forward); ")
+        "home 03 §12, 03's bases line and 05 §10's row; then render, strict check, links and tests, then the fast-forward); ")
 
 
 def queue(text):
@@ -43,14 +43,15 @@ def landed(receipt, n):
     line = lines[i]
     assert line.startswith('- **Queue:** ' + HEAD), 'SJ1 does not hold the head'
     clause = (f"SJ1 landed (§{n}, core receipt `{receipt}`, every axiom report empty, one incremental core run: one "
-              "core leaf, `Becoming.CommonResponse`: what holds throughout a relation's closure is the largest region "
-              "inside a region closed under it, the viability kernel at a process's steps, and a response common over "
+              "core leaf, `Becoming.CommonResponse`: the occurrences whose closure under a relation stays in a region "
+              "form its largest part closed under the relation, the viability kernel at a process's steps, and a response common over "
               "a reading within a requirement exists exactly where the acts' kernels cover the situations, so judgment "
-              "is viability indexed by acts; with one act at each situation, exactly where the image of the response "
-              "relation along the map has a fixed successor; `Viability.Certificate.kernel` and "
+              "is viability indexed by acts; with exactly one act at each situation, one common over a map's sameness "
+              "exists exactly where the image of the response relation along the map has a fixed successor; `Viability.Certificate.kernel` and "
               "`Viability.kernel_certificate` re-proved from it, statements unchanged; one new record, "
               "a-response-common-over-a-reading, home 03 §12; the root module's import and bullets, the checker's core "
-              "list and scope, both package READMEs and regions.json; two reviews, every finding taken; the names "
+              "list and scope, both package READMEs and regions.json; three reviews, of the design, the Lean and the map, "
+              "and the landing texts, every confirmed finding taken; the names "
               "provisional for the grammar's owner; the connectivity register's new apart roots each with a reason; "
               "the records citing the changed texts re-pointed and Viability's proof bindings rebound, nothing they "
               "say changed; render, strict check, links and tests pass). ")

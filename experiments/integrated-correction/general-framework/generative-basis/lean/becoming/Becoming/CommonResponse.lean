@@ -47,9 +47,10 @@ the reading: `«承» («逆» E) P s` is `∀ s', E s s' → P s'`.
   (`«一之共应当且仅当一应遍»`).
 * **A rule gives one.** A rule from what a map reads, meeting the requirement at every situation,
   gives a response common over the map's sameness (`«依读而应则共应»`), with no choice. The converse,
-  a rule from a common response, needs choice over the readings and every reading given by some
-  situation; its cases are GuardHorizon's (`GuardHorizon.uniform_policy_iff_fiber_feasible`), and
-  the need for choice is `Viability.plans_iff_choice` (03 §9).
+  a rule from a common response, is not proved here: it asks for one act chosen for each reading,
+  which GuardHorizon has with choice over the readings as a hypothesis
+  (`GuardHorizon.uniform_policy_iff_fiber_feasible`); that such choice cannot be dropped is proved
+  for plans (`Viability.plans_iff_choice`, 03 §9), not for this rule.
 * **One act per situation: the lumping law.** Where the requirement gives exactly one act at each
   situation, a response common over a map's sameness exists exactly where situations the map does not
   tell apart have the same act (`«遍定应共应当且仅当同读同应»`). On the carrier holding situations and

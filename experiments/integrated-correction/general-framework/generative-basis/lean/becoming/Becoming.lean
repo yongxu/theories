@@ -3416,13 +3416,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
 * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
-  carrier, reading and requirement, with no premise. What holds throughout a relation's closure is
-  the largest region inside a region closed under the relation (`«所闭之承最大»`), the viability
-  kernel at a process's steps; a response common over a reading within a requirement, one region
+  carrier, reading and requirement, with no premise. The occurrences at which a region holds
+  throughout their closure under a relation form the largest region closed under the relation
+  inside it (`«所闭之承最大»`), the viability kernel at a process's steps; a response common over a reading within a requirement, one region
   per act, inside the act's requirement and closed under the reading, exists exactly where the
   acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed
-  by acts. Where the requirement gives one act at each situation, a response common over a map's
-  sameness exists exactly where the image of the response relation along the map has a fixed
+  by acts. Where the requirement gives exactly one act at each situation, a response common over a
+  map's sameness exists exactly where the image of the response relation along the map has a fixed
   successor (`«遍定应共应当且仅当像定后»`), on a carrier keeping situations and acts apart. A rule
   from what a map reads gives one with no choice (`«依读而应则共应»`); the closure, covering, one act
   and the sum carrier each do work, and an act at every situation, or one shared by every two, does

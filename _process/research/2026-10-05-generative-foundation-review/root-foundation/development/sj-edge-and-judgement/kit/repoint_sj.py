@@ -35,7 +35,8 @@ VIA_CITERS = {'market-protected-continuation', 'conditions-kept-together'}
 # the sections SJ1's texts change, as research.py check names them (a heading at either level, or an anchor a record
 # cites), compared without their leading #s; set after reading the dry run against the home sections' diff
 EXPECTED = {
-    f'{CH}/03-KNOWING.md': {'12. The reading loop', '12-the-reading-loop', 'the-reading-loop'},
+    f'{CH}/03-KNOWING.md': {'12. The reading loop', '12-the-reading-loop', 'the-reading-loop',
+                            '(before the first heading)'},
     f'{CH}/05-COLLECTIVES.md': {'10. Markets', '10-markets', 'markets', 'r-market-protected-continuation'},
     f'{CH}/08-METHOD.md': {'3. The pure core and the periphery', '3-the-pure-core-and-the-periphery',
                            'pure-core-and-periphery'},
@@ -43,7 +44,8 @@ EXPECTED = {
 REASON = ("SJ1: one core leaf, Becoming.CommonResponse, joined to the core (the root module's import and bullets, the "
           "checker's core list and scope, the package README rows EN and ZH); Viability's two kernel laws re-proved "
           "from it with their statements unchanged and kernel_iff_held added, the proof bindings to Viability.lean "
-          "rebound to the receipt; the new record's home in 03 §12 and the §12 opening's count of its laws; 05 §10's "
+          "rebound to the receipt; the new record's home in 03 §12, the §12 opening's count of its laws and 03's bases "
+          "line naming it; 05 §10's "
           "row naming the kernel's home; 08's counts; regions.json; the study; the connectivity; read before "
           "re-pointing")
 

@@ -14,7 +14,7 @@ branch=$(git branch --show-current)
 git checkout -q --detach "$base" || exit 2
 python3 -B "$K/board_sj.py" head || { git checkout -q "$branch"; exit 2; }
 [ "$(git diff --name-only)" = "$B" ] || { echo "UNEXPECTED PATHS"; git diff --name-only; git checkout -q -- $B; git checkout -q "$branch"; exit 2; }
-git commit -q -m "Board: SJ1 at the head of the queue (landing now: one core leaf, Becoming.CommonResponse, and Becoming.Viability's two kernel laws re-proved from it with their statements unchanged; one incremental core run; one new record, home 03 §12, and 05 §10's row; then render, strict check, links and tests, then the fast-forward)" -- $B
+git commit -q -m "Board: SJ1 at the head of the queue (landing now: one core leaf, Becoming.CommonResponse, and Becoming.Viability's two kernel laws re-proved from it with their statements unchanged; one incremental core run; one new record, home 03 §12, 03's bases line and 05 §10's row; then render, strict check, links and tests, then the fast-forward)" -- $B
 new=$(git rev-parse HEAD)
 git checkout -q "$branch"
 cd "$R"

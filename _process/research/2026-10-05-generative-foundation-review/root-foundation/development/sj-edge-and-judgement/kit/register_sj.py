@@ -29,11 +29,13 @@ LAW = ('a law of every reading and requirement on any carrier (SJ1, 共应 on th
        'form with choice or the one-act form at their own carriers, so nothing on the base uses this one')
 KERNEL = ("the grammar's kernel, a law of every relation on any carrier (SJ1); Viability's kernel laws are proved "
           'from it at a process\'s steps through Viability.kernel_iff_held')
-UNPACK = "a one-line unpacking of the grammar's own definitions (SJ1)"
+UNPACK = "a one-line unpacking of the grammar's definitions and of this module's «共应» (SJ1)"
 WIT = "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
 B, E = 'Becoming.', 'Becoming.«共应之例».'
 REASONS = {
-    B + '«所闭之承最大»': (M, G, KERNEL),
+    B + '«所闭之承最大»': (M, G, "the grammar's kernel stated as one law, the conjunction of its three parts, for "
+                       'every relation on any carrier (SJ1); Viability\'s kernel laws use the parts at a process\'s steps '
+                       'through Viability.kernel_iff_held, and nothing uses the conjunction itself'),
     B + '«所闭之承在内»': (M, G, KERNEL),
     B + '«所闭之承闭»': (M, G, KERNEL),
     B + '«闭在内则在所闭之承»': (M, G, KERNEL),
