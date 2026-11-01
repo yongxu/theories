@@ -1,0 +1,34 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/wt-u4d/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/u4d-scratch",
+  "modules": 31,
+  "ran": [
+    "Becoming.U4dCases",
+    "Becoming.U4dSame",
+    "BecomingU4dCasesAxiomAudit",
+    "BecomingU4dSameAxiomAudit"
+  ],
+  "reused": 31,
+  "unclean": [],
+  "audits": {
+    "Becoming.U4dCases": {
+      "theorems": 38,
+      "declarations": 40,
+      "with_axioms": {}
+    },
+    "Becoming.U4dCover": {
+      "theorems": 34,
+      "declarations": 34,
+      "with_axioms": {}
+    },
+    "Becoming.U4dNeeded": {
+      "theorems": 20,
+      "declarations": 30,
+      "with_axioms": {}
+    },
+    "Becoming.U4dSame": {
+      "theorems": 14,
+      "declarations": 14,
+      "with_axioms": {}
+    }
+  }
+}
