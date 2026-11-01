@@ -64,8 +64,9 @@ assert f'Becoming.{GONE_MODULE}' not in {m['module'] for m in new_r['modules']},
 
 
 def body(sig):
-    """the printed statement without its name"""
-    return sig.split(' : ', 1)[1] if ' : ' in sig else sig
+    """the printed statement without its name, its runs of whitespace collapsed: the printer wraps at a fixed width,
+    so a renamed declaration's statement breaks its lines elsewhere (found in the first rehearsal, 1 November 2026)"""
+    return ' '.join((sig.split(' : ', 1)[1] if ' : ' in sig else sig).split())
 
 
 old, new, defs_old, defs_new, where_old, where_new = {}, {}, {}, {}, {}, {}
