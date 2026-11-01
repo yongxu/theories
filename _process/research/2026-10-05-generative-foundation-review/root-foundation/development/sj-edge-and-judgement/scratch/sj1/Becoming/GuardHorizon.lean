@@ -33,13 +33,13 @@ the kernel asks that no course leave the guard.
 * **Choosing from readings.** A choice made from a reading of the configurations
   (`UniformPolicy`) needs one move good at every configuration of each reading (`FiberFeasible`);
   the converse needs choice over the readings (`Viability.ChoiceOver`), named as a hypothesis
-  (`uniform_policy_iff_fiber_feasible`, `uniform_iff`), from the rule law for a reading given as a
-  relation from readings to configurations (`rule_iff_held_throughout`). Where every reading is
-  given by some configuration, a choice from readings exists exactly where a response common over
-  the reading's sameness does (`uniform_policy_iff_common`, through the core's
-  `«序则共应当且仅当承遍»`); a reading no configuration gives can leave it without a move
-  (`ungiven_reading_not_uniform`). Moves good configuration by configuration
-  need not be a choice from readings (`statewise_not_uniform`); a reading telling the
+  (`uniform_policy_iff_fiber_feasible`, `uniform_iff`). Given choice over the readings and every
+  reading given by some configuration, a choice from readings exists exactly where a response common
+  over the reading's sameness does (`uniform_policy_iff_common`, through the core's
+  `«自反传递则共应当且仅当承遍»`); with choice and a reading no configuration gives, a common response
+  can exist with no choice from readings (`ungiven_reading_not_uniform`). Moves good configuration by
+  configuration need not be a choice from readings (`statewise_not_uniform`, from the core's
+  `«共应之例».EachNotCommon`); a reading telling the
   configurations apart restores one (`discriminating_reading_uniform`); a uniform choice survives
   every finer reading (`uniform_finer`) and keeps the guard one step further (`uniform_viable`).
 * **Coverage and handoff.** An empty catalogue of requirements covers vacuously, hiding loss
@@ -336,28 +336,18 @@ theorem fiber_of_uniform {O : Type} (obs : S → O) (good : S → A → Prop)
   match uniform with
   | ⟨policy, valid⟩ => fun o => ⟨policy o, fun s hs => hs ▸ valid s⟩
 
-/-- **A rule from readings exists exactly where each reading has a move good at every
-configuration it relates**, given choice over the readings. The reading is a relation `gives` from
-readings to configurations; a configuration may give several readings or none. -/
-theorem rule_iff_held_throughout {O : Type} (choice : Viability.ChoiceOver O A)
-    (gives : O → S → Prop) (good : S → A → Prop) :
-    (∃ rule : O → A, ∀ o s, gives o s → good s (rule o)) ↔ ∀ o, ∃ a, ∀ s, gives o s → good s a :=
-  ⟨fun ⟨rule, valid⟩ o => ⟨rule o, valid o⟩,
-   fun held => match choice (fun o a => ∀ s, gives o s → good s a) held with
-    | ⟨rule, chosen⟩ => ⟨rule, chosen⟩⟩
-
 /-- **A choice from readings exists exactly where each reading has one good move**, given choice
-over the readings: the rule law for the reading a map gives. -/
+over the readings. -/
 theorem uniform_policy_iff_fiber_feasible {O : Type} (choice : Viability.ChoiceOver O A)
     (obs : S → O) (good : S → A → Prop) :
     UniformPolicy obs good ↔ FiberFeasible obs good :=
   ⟨fiber_of_uniform obs good,
-   fun feasible => match (rule_iff_held_throughout choice (fun o s => obs s = o) good).mpr feasible with
+   fun feasible => match choice (fun o a => ∀ s, obs s = o → good s a) feasible with
     | ⟨f, chosen⟩ => ⟨f, fun s => chosen (obs s) s rfl⟩⟩
 
-/-- **Where every reading is given by some configuration, a choice from readings exists exactly
-where a response common over the reading's sameness does**, given choice over the readings: the
-core's law of a common response (`«序则共应当且仅当承遍»`) read at a map. -/
+/-- **Given choice over the readings and every reading given by some configuration, a choice
+from readings exists exactly where a response common over the reading's sameness does**: the core's
+law of a common response (`«自反传递则共应当且仅当承遍»`) read at a map. -/
 theorem uniform_policy_iff_common {O : Type} (choice : Viability.ChoiceOver O A)
     (obs : S → O) (given : ∀ o, ∃ s, obs s = o) (good : S → A → Prop) :
     UniformPolicy obs good ↔ ∃ J, «共应» (fun s s' => obs s = obs s') (fun a s => good s a) J :=
@@ -369,24 +359,33 @@ theorem uniform_policy_iff_common {O : Type} (choice : Viability.ChoiceOver O A)
       | ⟨s, at_o⟩ => match each s with
         | ⟨a, held⟩ => ⟨a, fun s' at_o' => held s' (at_o.trans at_o'.symm)⟩⟩
   (uniform_policy_iff_fiber_feasible choice obs good).trans
-    (fibers.trans («序则共应当且仅当承遍» (E := fun s s' : S => obs s = obs s') (fun _ => rfl) (fun _ _ _ xy yz => xy.trans yz)
-      (fun a s => good s a)).symm)
+    (fibers.trans («自反传递则共应当且仅当承遍» (E := fun s s' : S => obs s = obs s') (fun _ => rfl)
+      (fun _ _ _ xy yz => xy.trans yz) (fun a s => good s a)).symm)
 
-/-- **A reading no configuration gives can leave a choice from readings without a move**: with no
-configuration and no move, a response common over the sameness exists vacuously, and the one
-reading has no move. -/
+/-- **A reading no configuration gives can leave a common response without a choice from
+readings**: with no configuration and no move, choice over the one reading holds, the reading is
+given by no configuration, a response common over the sameness exists vacuously, and the reading
+has no move. -/
 theorem ungiven_reading_not_uniform :
-    (∃ J, «共应» (fun s s' : Empty => (fun _ => ()) s = (fun _ => ()) s')
+    Viability.ChoiceOver Unit Empty ∧ ¬ (∀ o : Unit, ∃ s : Empty, (fun _ => ()) s = o) ∧
+      (∃ J, «共应» (fun s s' : Empty => (fun _ => ()) s = (fun _ => ()) s')
         (fun (_ : Empty) (_ : Empty) => True) J) ∧
       ¬ UniformPolicy (A := Empty) (fun _ : Empty => ()) (fun _ _ => True) :=
-  ⟨⟨fun _ _ => True, fun _ _ _ => trivial, (fun s => nomatch s), fun _ _ _ _ _ => trivial⟩,
+  ⟨(fun _ each => match each () with | ⟨a, _⟩ => nomatch a),
+   (fun given => match given () with | ⟨s, _⟩ => nomatch s),
+   ⟨fun _ _ => True, fun _ _ _ => trivial, (fun s => nomatch s), fun _ _ _ _ _ => trivial⟩,
    fun ⟨policy, _⟩ => nomatch policy ()⟩
 
-/-- **Moves good configuration by configuration need not be a choice from readings.** -/
+/-- **Moves good configuration by configuration need not be a choice from readings**: a choice from
+the one reading would give a response common over everything, which the core's
+`«共应之例».EachNotCommon` excludes. -/
 theorem statewise_not_uniform :
     (∀ s : Bool, ∃ a : Bool, a = s) ∧
     ¬ UniformPolicy (fun _ : Bool => ()) (fun s a : Bool => a = s) :=
-  ⟨fun s => ⟨s, rfl⟩, fun ⟨_, valid⟩ => nomatch (valid false).symm.trans (valid true)⟩
+  ⟨«共应之例».EachNotCommon.each,
+   fun ⟨policy, valid⟩ => «共应之例».EachNotCommon.none
+     ⟨_, «共应之细» (fun _ _ _ => rfl)
+       («依读而应则共应» (fun _ : Bool => ()) «共应之例».EachNotCommon.G policy valid)⟩⟩
 
 /-- **A reading telling the configurations apart restores a choice.** -/
 theorem discriminating_reading_uniform :
