@@ -201,6 +201,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
@@ -570,6 +571,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC4.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC5.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/reviews/2026-10-23-sources-against-v10.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/AUDIT.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/DESIGN.md",
@@ -1812,6 +1814,16 @@
         "theories/becoming/chapters/08-METHOD.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/DESIGN.md": {
+      "title": "OG: an organism on the root — design",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/REVIEW-1.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/REVIEW-2.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/build.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/sim",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/REVIEW-LINEAGE.md": {
       "title": "Review: OU3f's lineage part (the bridge and the six lineage laws)",
       "local_links": [
@@ -2796,6 +2808,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
@@ -3071,6 +3084,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
@@ -5576,7 +5590,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T125855.282103Z/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T151111.914612Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

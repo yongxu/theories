@@ -2630,6 +2630,11 @@
    "region": "root",
    "base": "old-base",
    "note": "World = run of its law"
+  },
+  "the-stock-buys-time-where-the-rebuild-draws-on-it": {
+   "region": "life",
+   "base": "grammar",
+   "note": "ReaderRebuilding OG: a reader rebuilt from the level it reads, the test system of an organism"
   }
  },
  "modules": {
@@ -4517,6 +4522,11 @@
    "region": "root",
    "base": "grammar",
    "note": "WRT2 the World as a model of the grammar, both ways (01 §8.6)"
+  },
+  "Becoming.ReaderRebuilding": {
+   "region": "life",
+   "base": "grammar",
+   "note": "OG: where a reader is rebuilt from; the stock buys time under a cut exactly where the rebuild draws on the level; an organism's minimal model"
   }
  }
 }

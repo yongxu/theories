@@ -7161,6 +7161,51 @@
    "module": "Becoming.MapInstances",
    "category": "general-structure",
    "reason": "where going on is decided at the points of a line, the line reaches an end or an occurrence at every later step: a law of the base's lines along any class; its one use was the old proof of Web.end_of_gone, which now follows from degeneration (EL6)"
+  },
+  "Becoming.ReaderRebuilding.one_le_of_lt": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "support",
+   "reason": "an arithmetic lemma on the natural numbers, a statement using only the prelude (OG)"
+  },
+  "Becoming.ReaderRebuilding.«一元三期之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "One unit's horizon under a cut at a span of three, decided for small levels: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«一元二期之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "One unit's horizon under a cut at a span of two, decided for the levels below fifteen: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The family law: over the four readers, at one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«供则读者之域闭»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The region where the reader rebuilt from the level is present is closed («闭») under the supplied step: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于供者之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "A reader of one unit rebuilt from the supply, at a span of three, ends at step three from every level, decided: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于供者复»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "A reader rebuilt from the supply is present again after one supplied step: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于储者绝而不复»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The reader rebuilt from the level, gone at an empty level, stays gone on every branch of the net, the supply on or off («闭» of that state): a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«读者绝则无储»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "Where the reader rebuilt from the level is gone after a step, the level is empty: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
   }
  },
  "instances": {
