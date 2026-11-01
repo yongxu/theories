@@ -94,7 +94,7 @@ def figures_row(board_row):
         "and U4b's landed rows moved here (board rule 4)",
         board_row.split(' | ')[1],
         "landed 2026-11-01 (documents only, no Lean, no record and no core run): the figures as "
-        "`measure_grammar.py` and `master_laws.py` give them on main `e5951932b` at core receipt "
+        "`measure_grammar.py` and `shared_laws.py` give them on main `e5951932b` at core receipt "
         f"`{RECEIPT}`; no record cites the paragraph; render, strict check, links, tests and both dossier checks "
         "pass on the landing tree",
         f"[development/u4-one-root-to-its-edge/](../../{STUDY}/board_u4cf.py)",

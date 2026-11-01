@@ -90,7 +90,7 @@ In the law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, 
 - related, not a proved adapter: [census-balance](census-balance.md). This law followed from it from P30 until U4c, which re-proved it through the root's census of a run (law 2); the census balance still characterizes coming to be recurring exactly, by the lengths of the lists (Listed.coming_iff_excess, Listed.over_stretch), which this law does not. The form with rates: over any stretch, ceasings exceed comings by at most the list at the start.
 - related, not a proved adapter: [continued-change-needs-openness](continued-change-needs-openness.md). The rest theorem uses this law to stop ceasing, so only whatever arises needs to be embodied.
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Plan P26: a law of activity with a census as its premise; this is not the deduction of the whole without axioms.
-- related, not a proved adapter: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). The root's census of a run («定后前者在前则亡屡者生屡»), of which Listed.coming_of_ceasing is the case at a member's occurrences along its steps (law 2).
+- related, not a proved adapter: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). The root's census of a run («定后前者在前则亡屡者生屡»), of which Listed.coming_of_ceasing is the case at a member's occurrences along its steps (law 2).
 
 **Used by:** [bounded-census-keeps-pace](bounded-census-keeps-pace.md) · [census-balance-under-continuation](census-balance-under-continuation.md) · [continued-change-needs-openness](continued-change-needs-openness.md)
 

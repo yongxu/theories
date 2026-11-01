@@ -12,7 +12,7 @@ ROOT = Path.cwd()
 HERE = Path(__file__).resolve().parent
 STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md'
 BOARD = ROOT / '_process/BECOMING-WORKBOARD.md'
-DATA = json.loads((ROOT / 'theories/becoming/results/data/master-laws.json').read_text())
+DATA = json.loads((ROOT / 'theories/becoming/results/data/shared-laws.json').read_text())
 assert not DATA.get('from_dump'), 'the landing data must be computed on the checked sources, not a saved dump'
 
 st = STUDY.read_text(encoding='utf-8')
@@ -28,13 +28,13 @@ b = BOARD.read_text(encoding='utf-8')
 claim = re.findall(r'MV holds the head of the queue \([^)]*\); ', b)
 assert len(claim) == 1, claim
 b = b.replace(claim[0], (f'MV landed (the master laws under each law of a record, computed from the Lean dependencies of its declarations '
-                         f'by tools/research/master_laws.py reading the measure, unchanged; data/master-laws.json on core receipt '
+                         f'by tools/research/shared_laws.py reading the measure, unchanged; data/shared-laws.json on core receipt '
                          f'`{DATA["core_receipt"]}`; the check reports when it goes stale; tooling only, no Lean; study §{N}); '))
 old = re.findall(r"\*\*MV claimed\*\* \(29 October 2026, on Ren's yes\): .*?tooling only, no Lean\.", b)
 assert len(old) == 1, old
 b = b.replace(old[0], (f"MV landed 29 October 2026 (study §{N}, [kit](research/2026-10-05-repository-reconciliation/architecture/mv/README.md)): "
                        f"under each law of a record, the master laws its declarations rest on by Lean dependency, computed from the "
-                       f"measure, unchanged, and the checker cache; landers rerun `tools/research/master_laws.py` after a core landing "
+                       f"measure, unchanged, and the checker cache; landers rerun `tools/research/shared_laws.py` after a core landing "
                        f"that changes dependencies, and the check's `master_laws` entry says when it is stale."))
 BOARD.write_text(b, encoding='utf-8')
 print('STUDY_SECTION', N)

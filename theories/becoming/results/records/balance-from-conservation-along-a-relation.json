@@ -290,7 +290,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "GrammarLaws.uncrossed_of_closed: a region closed under a relation and under its converse is one the relation crosses neither way; closes_iff_closed reads Continuity's closed family through it, the adjacency being symmetric. The eighth law reuses the closure's laws («所闭之自反», «所闭之传递», «所闭之对称», «缘在所闭», «闭含所闭»), the count «计» and the count law of a class «类之对当且仅当类类等数».",

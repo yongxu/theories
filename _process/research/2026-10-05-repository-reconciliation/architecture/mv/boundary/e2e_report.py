@@ -21,7 +21,7 @@ from tools.research import boundary
 boundary.TC = PROBE / '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py'
 C = pickle.load(open(SP / 'constants.pickle', 'rb'))
 measure = json.load(open(SP / 'measure.json'))
-f5 = json.load(open(PROBE / 'theories/becoming/results/data/master-laws.json'))
+f5 = json.load(open(PROBE / 'theories/becoming/results/data/shared-laws.json'))
 probe = json.load(open(SP / 'probe.json'))
 central = {}
 for r in measure['rows']:

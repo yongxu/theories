@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3188 nodes, 6137 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3188 nodes, 6136 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -125,7 +125,7 @@ Results (86):
 - [The move alone does not fix the outcome](records/the-move-alone-underdetermines.md) (recorded-checked)
 - [The order of exchanges as the invariant](records/order-of-exchanges-is-the-invariant.md) (recorded-checked)
 - [The present on causal-set growth](records/the-present-on-causal-set-growth.md) (recorded-checked)
-- [The shared laws on the grammar](records/master-laws-on-the-grammar.md) (recorded-checked)
+- [The shared laws on the grammar](records/shared-laws-on-the-grammar.md) (recorded-checked) ·
 - [The step index read off the relata's own courses](records/the-step-index-from-own-courses.md) (recorded-checked)
 - [The tally is the whole law of counting](records/whole-law-of-counting.md) (recorded-checked)
 - [The whole and its parts](records/space-and-its-parts.md) (recorded-checked)

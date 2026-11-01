@@ -63,7 +63,7 @@ At a process's steps the kernel is what discrete-time viability theory (Aubin 19
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel and the one-act law are proved from them.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel and the one-act law are proved from them.
 - **formal-reuse**: [market-protected-continuation](market-protected-continuation.md). Reuses Viability's kernel and a process's steps: kernel_iff_held reads the kernel as the grammar's, and that record's two kernel laws are proved from this record's first law, their statements unchanged.
 - **interpretive**: [finite-continuation-plans](finite-continuation-plans.md). A rule fixed in advance from a common response asks for a choice over the readings; Viability.plans_iff_choice shows that such choice cannot be dropped for plans, cited by analogy and not re-proved for this rule.
 - **interpretive**: [testing-within-couplings](testing-within-couplings.md). States on the grammar its sentence that a judgment through the couplings is a common response over the class alike through them.

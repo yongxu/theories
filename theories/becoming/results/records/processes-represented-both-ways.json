@@ -283,7 +283,7 @@
   ],
   "dependencies": [
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "«历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».",

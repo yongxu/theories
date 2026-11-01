@@ -7,7 +7,7 @@ counting, with its basis); and the two premises of the ethics apart. What the Le
 reviewed; the rest is computed.
 
 This module holds the field's rules, which the check (registry.py) applies with the review's text and the generator
-(master_laws.py) without it, and the generator's part:
+(shared_laws.py) without it, and the generator's part:
 - the spec's terms (§3.0) on the checker cache's constants: generated auxiliaries, reaching, root constants by
   content, grammar laws, forwarders, the balance anchors;
 - D1 to D5 of a derived entry on those constants, and D6 with the Lean's admission of each law from the Lean check;

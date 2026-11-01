@@ -90,7 +90,7 @@ The outside review of 19 October 2026 (R20) and an outside reader named the rest
 - related, not a proved adapter: [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md). The rest theorem of worlds over any amounts, read finitely.
 - related, not a proved adapter: [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md). Rest over any amounts, exactly where the total stops falling.
 
-**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [rest-by-balance](rest-by-balance.md) · [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md) · [rest-from-a-finite-reading](rest-from-a-finite-reading.md) · [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md)
+**Used by:** [rest-by-balance](rest-by-balance.md) · [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md) · [rest-from-a-finite-reading](rest-from-a-finite-reading.md) · [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md)
 
 <a id="sources--来源"></a>
 ### Sources

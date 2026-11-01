@@ -466,7 +466,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "«所闭当且仅当同一或及»: reach is the start or a reach of the steps.",

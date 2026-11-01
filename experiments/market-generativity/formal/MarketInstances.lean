@@ -16,7 +16,7 @@ instances of the pure core's laws are stated here; the core does not import this
   bound (`worst_admissible`). So, for every parameter set, bound set and start, no admissible
   history ever fails the essential guard exactly when some set of states containing the start
   lies within the essential floors and is closed under every admissible disturbance
-  (`never_fails_iff`); the largest such set is the viability kernel. Under `Certificate p b` the
+  (`never_fails_iff`); the largest such set is the invariance kernel. Under `Certificate p b` the
   rectangle `Safe p b` is one such set (`safe_closed`), so `safe_history_never_fails` is an
   instance (`safe_never_fails`), and every safe state lies in the kernel (`safe_within_kernel`).
   The numerical example is an instance (`example_never_fails`).
@@ -132,7 +132,7 @@ theorem safe_never_fails {n : Nat} {p : Parameters n} {b : Bounds n} {s : State 
     ∀ t, MarketGenerativity.guardedHistory p b s d t = some (MarketGenerativity.history p s d t) :=
   (never_fails_iff p b s).mpr ⟨Safe p b, h0, safe_closed hc⟩ d admissible
 
-/-- Every safe state lies in the viability kernel of the essential guard. -/
+/-- Every safe state lies in the invariance kernel of the essential guard. -/
 theorem safe_within_kernel {n : Nat} {p : Parameters n} {b : Bounds n} (hc : Certificate p b)
     {s : State n} (h0 : Safe p b s) :
     Kernel (disturbed (operatingStep p) (Admissible b)) (essentialReady p b) s :=

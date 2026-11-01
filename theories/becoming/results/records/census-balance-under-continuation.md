@@ -92,7 +92,7 @@ identity-across-steps shows that readings following a formation (arising, unceas
   - Output: The census and list tools.
   - Input: Counting under a continuation.
   - Preserved conditions: None. [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean)
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). Reuses the root's census of a step and its mirror («定后则后并亡不过前并生», «定前则前并生不过后并亡»): Web.Census.balanceFrom_at is their case at the step's relation between formations active at both ends (law 4).
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). Reuses the root's census of a step and its mirror («定后则后并亡不过前并生», «定前则前并生不过后并亡»): Web.Census.balanceFrom_at is their case at the step's relation between formations active at both ends (law 4).
   - Output: The census of a step, counted, in two halves.
   - Input: The balance across a step under a continuation (Web.Census.balanceFrom_at).
   - Preserved conditions: The tests of arising and ceasing; no split at the step for the first half, no merge for its mirror. [GrammarLaws.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean)

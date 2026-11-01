@@ -90,6 +90,7 @@ Quantities represent the specified market relations and supports; essential desi
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261101T114325.150839Z/verification.json) | — |
 
 Aliases: `MarketGenerativity.safe_history_never_fails`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.never_leaves_iff_certificate`, `Becoming.Viability.guarded_never_fails_iff`, `Becoming.MarketInstances.never_fails_iff`, `Becoming.MarketInstances.safe_never_fails`
 

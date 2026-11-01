@@ -1,6 +1,6 @@
 """The attachment rule before the fourth re-check's fixes (26977f25a's tools/research/boundary.py) against the
 current one, on the latest core receipt's dump: generated auxiliaries, root constants, grammar laws, forwarders and
-every theorem's walk, and the theorems outside lists. Run from the checkout root, after master_laws.py's own checks
+every theorem's walk, and the theorems outside lists. Run from the checkout root, after shared_laws.py's own checks
 pass: python3 -B <this file> [OLD_COMMIT]."""
 import importlib.util, json, subprocess, sys, tempfile
 from pathlib import Path

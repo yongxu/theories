@@ -515,7 +515,7 @@
  {
   "region": "collective",
   "kind": "law",
-  "title": "Conditions kept jointly: viability kernel vs choice points",
+  "title": "Conditions kept jointly: invariance kernel vs choice points",
   "summary": "Where every course counts, two guards kept together iff each kept (the truth of 'any factor zero'); through choices each can be kept but not both, and no rule on separate answers decides the joint one.",
   "source": "THE-THEORY-OF-BECOMING.md §4.3 (line 483)",
   "status": "old-base",

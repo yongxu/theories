@@ -13,9 +13,9 @@ distinct central declarations of COVERAGE.json:
   proof, and whether the anchor is one of `Flow`'s (`Balances`, `BalancesOn`, `BalancesBetween`) or only the
   prelude's counting law `balance_over_stretch_on`; and whether the statement writes balance out as an equation
   (its type names `Dependence.level`, `Flow.taken` and `Flow.given` directly);
-- the grammar laws it reaches, by MV's walk (master_laws.py): through every constant, stopping only at «» names; a
+- the grammar laws it reaches, by MV's walk (shared_laws.py): through every constant, stopping only at «» names; a
   law is a «» theorem of a `Becoming.Grammar*` module, and a «» name declared elsewhere is listed apart;
-- F5's items stating it (master-laws.json, `central_reach.rows`) and their models, and the row's class in F5's four
+- F5's items stating it (shared-laws.json, `central_reach.rows`) and their models, and the row's class in F5's four
   counts, which the report prints beside the standings and checks against the published counts;
 - EC6's definitional rows, flagged (they keep the standing F5's items give them);
 - a proposed standing, by the rules in DESIGN-BOUNDARY.md §2, with HAND giving the rows the rules leave to a
@@ -204,7 +204,7 @@ def proof_closure(C, deps, n):
 
 
 def grammar_reach(C, deps, n):
-    """MV's walk (master_laws.py): from a declaration through the constants its type and proof use, every constant
+    """MV's walk (shared_laws.py): from a declaration through the constants its type and proof use, every constant
     expanded except a «» name, where the walk stops; Lean's generated auxiliaries (AUX, such as `«及».brecOn`) are walked
     through, never stopped at or counted. A grammar law is a «» theorem of a Becoming.Grammar* module; a
     grammar term, any other «» constant of one; a «» name declared elsewhere is listed apart, not counted. A Grammar*
@@ -248,7 +248,7 @@ def standing(row, bal, items):
 
 
 def f5_class(row, items):
-    """F5's four counts (master_laws.py, central_reach): the measure's reach first, then the verified items."""
+    """F5's four counts (shared_laws.py, central_reach): the measure's reach first, then the verified items."""
     models = {m for it in items for m in it['models']}
     if row['dependence'] == 'grammar':
         return 'reaches the grammar'
@@ -267,7 +267,7 @@ def main():
                        stdout=subprocess.DEVNULL)
         C = pickle.load(open(dump, 'rb'))
         measure = json.loads(out.read_text())
-    reach = json.loads((root / 'theories/becoming/results/data/master-laws.json').read_text())['central_reach']['rows']
+    reach = json.loads((root / 'theories/becoming/results/data/shared-laws.json').read_text())['central_reach']['rows']
     deps = {n: set(x['t']) | set(x['v']) for n, x in C.items()}
     read = reading(Path(__file__).resolve().with_name('CONNECTED-ROWS-READING.md'))
     rows = {}
@@ -304,7 +304,7 @@ def main():
     f5 = {c: sum(x['f5_class'] == c for x in table) for c in f5_order}
     against = {s: {c: n for c in f5_order if (n := sum(x['standing'] == s and x['f5_class'] == c for x in table))}
                for s in order if counts[s]}
-    published = json.loads((root / 'theories/becoming/results/data/master-laws.json').read_text())['central_reach']['counts']
+    published = json.loads((root / 'theories/becoming/results/data/shared-laws.json').read_text())['central_reach']['counts']
     report = {'distinct_central_declarations': len(table), 'counts': counts,
               'on_the_edge': sum(counts[s] for s in ON_EDGE), 'below_the_grammar': sum(counts[s] for s in BELOW),
               'distances': sum(counts[s] for s in DISTANCES), 'unplaced': [x['declaration'] for x in table

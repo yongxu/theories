@@ -1286,10 +1286,10 @@
    "base": "frame",
    "note": "ladder for lasting n steps; market instance"
   },
-  "master-laws-on-the-grammar": {
+  "shared-laws-on-the-grammar": {
    "region": "root",
    "base": "grammar",
-   "note": "GrammarLaws OU3b: the five master laws on the grammar, the models' laws proved from them"
+   "note": "GrammarLaws OU3b: the five shared laws on the grammar, the models' laws proved from them"
   },
   "material-preparation-output": {
    "region": "life",
@@ -3231,7 +3231,7 @@
   "Becoming.GrammarLaws": {
    "region": "root",
    "base": "grammar",
-   "note": "the master laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, order; below the frame"
+   "note": "the shared laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, order; below the frame"
   },
   "Becoming.GrammarMap": {
    "region": "map",

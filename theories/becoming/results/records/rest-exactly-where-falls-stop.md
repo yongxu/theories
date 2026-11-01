@@ -74,7 +74,7 @@ Well-foundedness of a strict order, read for dissipative worlds: with dependent 
 - related, not a proved adapter: [least-loss-rest](least-loss-rest.md). A least fall in Archimedean amounts is the other.
 - related, not a proved adapter: [space-and-its-parts](space-and-its-parts.md). Its whole-number rest theorem is the instance here with its own premises.
 
-**Used by:** [master-laws-on-the-grammar](master-laws-on-the-grammar.md)
+**Used by:** [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md)
 
 <a id="sources--来源"></a>
 ### Sources
