@@ -14,7 +14,7 @@ No stage has run against the package in the repository. The rehearsal's Lean ste
 | `../check/scratch/Becoming/RoomNet.lean`, `RoomRuns.lean` | part B's two modules, in the instance ring. RoomNet has 120 declarations (94 theorems) and imports GrammarTesting, GrammarLaws, GrammarReadings and MapRegions. RoomRuns has 27 (24 theorems) and imports RoomNet, RegimeMargin and HeldPossible |
 | [patches/](patches/README.md) | four patches. `Grammar.patch` and `GrammarReadings.patch` hold the two general laws below part A's leaf. `MapRegions.patch` changes its module doc, comments only, since it is no longer a leaf. `PLAN.patch` is the OU plan's line on beginning |
 | [../check/kit/GrammarTesting.patch](../check/kit/GrammarTesting.patch) | part B's one clause in GrammarTesting's header, pointing to the toy derived in RoomNet; comments only |
-| [patches/owner/](patches/README.md#the-grammars-owners-patches) | the grammar's owner's four patches, which the apply stage takes in name order after the kit's own. `01` holds the header items held from HE2, comments only: closure's list of cases gains `Response` and `SelectionPool`, "as the pairing is" goes, and the long lines are rewrapped. `02`–`04` hold the items held until BD2 landed, as OU's owner specified them: `«不出»`, `«闭则不出»` and `«所闭不出»` moved unchanged into GrammarLaws, after the closure law; `Flow.Cut` defined as `«不出»` at the valuation's relation; BD2's two equivalences for a region not crossed. What was held is kept in [patches/history/HELD.md](patches/history/HELD.md) |
+| [patches/owner/](patches/README.md#the-grammars-owners-patches) | the grammar's owner's five patches, which the apply stage takes in name order after the kit's own. `01` holds the header items held from HE2, comments only: closure's list of cases gains `Response` and `SelectionPool`, "as the pairing is" goes, and the long lines are rewrapped. `02`–`04` hold the items held until BD2 landed, as OU's owner specified them: `«不出»`, `«闭则不出»` and `«所闭不出»` moved unchanged into GrammarLaws, after the closure law; `Flow.Cut` defined as `«不出»` at the valuation's relation; BD2's two equivalences for a region not crossed. `05` words GrammarScope's docstrings of `«续无外»` as its definition quantifies, comments only. What was held is kept in [patches/history/HELD.md](patches/history/HELD.md) |
 | [stages/](stages/README.md) | extra patch sets that ride in the same rebuild, each its owner's: U4c's census as `10-u4c/`, then ND's names as `20-nd/`, each here as its owner's series. A stage is a directory of patches made against the tree after the kit's `apply` and the stages before it, applied patch by patch, with what the audit and the register expect of it, its re-point reason and its study paragraph. A stage that is empty or does not apply stops `apply`, nothing of it written; a `SKIP` file or `OU7_STAGES` leaves one out |
 | [REHEARSAL.json](REHEARSAL.json) | the full rehearsal: the kit's and the stages' patches and the tree, each with its hash, the gate at the start, the build command, and the build's output with each of the 376 modules' counts and axiom report. The earlier rehearsals are in history: the owner's patches ([history/REHEARSAL-owner-patches.json](history/REHEARSAL-owner-patches.json)) and the kit's own ([history/REHEARSAL.json](history/REHEARSAL.json)) |
 | [rehearsal_tree.py](rehearsal_tree.py) | the full rehearsal's tree and targets, from a dry run's tree: every Lean file apply changed or added, each checked against the synthetic receipt, and every module downstream of them |
@@ -35,7 +35,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
 
 1. By hand: the head claim on the board, with its guard.
 2. `LOG=… zsh <kit>/land_ou7.sh prepare` merges main, then checks three things:
-   - the nine patches apply to the merged tree as one series, in the order apply takes them;
+   - the ten patches apply to the merged tree as one series, in the order apply takes them;
    - the package has none of the three leaves yet;
    - every anchor of the joins and the home sections is found once (`integrate_ou7.py anchors`, which writes nothing).
 
@@ -52,6 +52,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - **The README rows, EN and ZH.** Part A's goes after GrammarLaws', part B's after RegimeMargin's. Part B's EN rows are its own; the ZH rows are this kit's. The ring's summary row names the rooms.
    - **The Lean catalogue.** Its description of the ring (`tools/research/lean_catalogue.py`) names the rooms. The index pages render from it, and the rooms join the ring's group from the receipt's layer.
    - **What the owner's patches change.** The root module's notes on GrammarLaws, GrammarCrossing and ConveyanceBoundaries, the README rows of GrammarLaws and GrammarCrossing, EN and ZH, and those two modules' scope sentences in the checker say where `«不出»`, `«闭则不出»`, `«所闭不出»` and the cut are now stated, and that the two count laws read as one.
+   - **The reading of `«续无外»`.** SignificanceStatements' scope sentence in the checker and PHILOSOPHY.md's gloss read it as everything lying on every center's line, every center and every occurrence, as patch 05 words GrammarScope's docstrings. The text review's merge words the front pages so.
 
    Then each stage's series, in name order, patch by patch, each stage tried first on a copy of the files it changes. A stage with no patch, or one whose series does not apply there, stops `apply` with git's words, nothing of it written. Its owner then rebases the series, or the landing leaves the stage out with `SKIP` or `OU7_STAGES`, and OU7 lands without it (R10).
 
@@ -61,7 +62,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
    - no other declaration is removed, and every other statement is unchanged;
    - `«生于位核下不变»` and `«两向有常则通»` are proved as cases of the new laws;
    - `Flow.Cut`'s new body unfolds to its old one, and no other definition changes;
-   - every other changed source keeps its code: GrammarTesting, MapRegions, ConveyanceBoundaries and BalanceRegions;
+   - every other changed source keeps its code: GrammarTesting, MapRegions, ConveyanceBoundaries, BalanceRegions and GrammarScope;
    - the three leaves import what their notes say, and the plan line is replaced.
 
    Every selected stage must be in place, and each adds its `EXPECTED.json` ([stages/README.md](stages/README.md#expectedjson)). An owner's patch that changes code adds its expectation to the audit in `integrate_ou7.py`: what it adds to `EXPECTED`, a declaration it moves to `MOVED`, and a definition it rewrites to `REDEFINED`, with the body that must unfold to the old one.
@@ -76,6 +77,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
        - in `continuation-relative-to-a-class` (law 5) and `classical-definitions-in-the-grammar` (law 4): the law, its declarations, the validation scope's counts from the receipt, and a history note.
      - generation-and-degeneration-at-two-grains: MapRegions is a core module, no longer a leaf, with a history note.
      - balance-from-conservation-along-a-relation: `«不出»` is GrammarLaws', with a history note.
+     - the-continuation-condition-on-the-root: its correspondence reads the source in English as "everything lies on every center's continuing", with a history note. The Chinese 凡中心之续无外 stands.
      - The owner's two records, each with a history note:
        - master-laws-on-the-grammar: law 4 reads the two count laws as one law on regions not gone out of either way, and so does 01 §7. Law 4 and the GrammarLaws reference gain the two equivalences, and the validation scope takes the receipt's counts.
        - not-going-out-of-a-region: `«不出»`, `«闭则不出»` and `«所闭不出»` move to a GrammarLaws reference with a proof binding, and the validation scope takes the receipt's counts.

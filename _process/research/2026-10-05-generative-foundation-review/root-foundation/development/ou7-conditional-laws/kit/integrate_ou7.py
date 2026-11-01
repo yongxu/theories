@@ -111,6 +111,7 @@ LEAF = ROOT / mr.SOURCE
 ROOTMOD = PKG / 'Becoming.lean'
 CHECKER = PKG / 'check_becoming.py'
 README_EN, README_ZH = PKG / 'README.md', PKG / 'README.zh.md'
+PHILOSOPHY = ROOT / 'theories/becoming/review/PHILOSOPHY.md'
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
 PLAN = ROOT / (RF + 'development/one-unfolding-root/PLAN.md')
 HOME = ROOT / mr.CHAPTER
@@ -565,6 +566,17 @@ def row_once(r, module, old, new, where):
     s, e = row(r, module)
     return r[:s] + once(r[s:e], old, new, where) + r[e:]
 
+# The reading of «续无外» in English where it is worded so outside GrammarScope: everything lies on every center's
+# line, as its definition quantifies (every center, every occurrence). The owner's patch 05 words GrammarScope's
+# docstrings so, the record stage the-continuation-condition-on-the-root's correspondence (RECORD_WORDS), and the
+# text review's merge the front pages.
+READING_CHECKER = ('    "the continuation condition is that nothing lies outside every center\'s line under the one '
+                   'of a relation and "\n',
+                   '    "the continuation condition is that everything lies on every center\'s line under the one '
+                   'of a relation and "\n')
+READING_PHILOSOPHY = ('`«续无外»` nothing outside a line\'s continuing.',
+                      '`«续无外»` everything on every center\'s continuing.')
+
 
 def join():
     for kit, leaf in leaves():
@@ -595,6 +607,8 @@ def join():
     c = once(c, *SCOPE_READINGS, 'checker, GrammarReadings\' scope sentence (the general law)')
     for old, new in OWNER_SCOPES:
         c = once(c, old, new, 'checker, a scope sentence of a module the owner\'s patches change')
+    c = once(c, *READING_CHECKER, 'checker, SignificanceStatements\' scope sentence (the reading of «续无外»)')
+    ph = once(PHILOSOPHY.read_text(encoding='utf-8'), *READING_PHILOSOPHY, 'PHILOSOPHY.md, the gloss of «续无外»')
     readmes = {}
     for path, row_a, rows_b in [(README_EN, ROW_EN, ROWS_B_EN), (README_ZH, ROW_ZH, ROWS_B_ZH)]:
         r = path.read_text(encoding='utf-8')
@@ -615,6 +629,7 @@ def join():
         for path, r in readmes.items():
             path.write_text(r, encoding='utf-8')
         CATALOGUE.write_text(k, encoding='utf-8')
+        PHILOSOPHY.write_text(ph, encoding='utf-8')
 
 
 def apply():
@@ -758,7 +773,8 @@ def audit():
     with nothing changed but a statement a stage restates, the renamed ones changed only in name, every other statement
     kept but those a stage restates, no definition's body changed but a redefined one, which must unfold to its old
     body. Every other changed source (GrammarTesting's header clause, MapRegions' doc, the owner's GrammarLaws header,
-    ConveyanceBoundaries' and BalanceRegions' docs) keeps its code, comments blanked."""
+    ConveyanceBoundaries' and BalanceRegions' docs, the owner's GrammarScope docstrings) keeps its code, comments
+    blanked."""
     problems = []
     stages = stages_in_place()
     expected_all, moved, redefined, restated, renamed = expectations()
@@ -1119,7 +1135,15 @@ RECORD_WORDS = {'generation-and-degeneration-at-two-grains': (
     ('«不出» is now stated in Becoming.GrammarLaws (the grammar\'s owner\'s item held from BD2, patches/owner/02), so '
      'the reuse of not-going-out-of-a-region names the module of each declaration it reuses',
      '«不出» 今陈于 Becoming.GrammarLaws（文法之主人于 BD2 所留之项，patches/owner/02），故对 not-going-out-of-a-region '
-     '之复用各言其所复用之声明所在之模块'))}
+     '之复用各言其所复用之声明所在之模块')),
+    'the-continuation-condition-on-the-root': (
+    [('correspondence', 'en', 'read as "nothing lies outside every center\'s continuing".',
+      'read as "everything lies on every center\'s continuing".')],
+    ('the correspondence\'s English reading of the source restated so that its quantifiers match the definition of '
+     '«续无外» (every center, every occurrence), as GrammarScope\'s docstrings now word it (the grammar\'s owner\'s '
+     'patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes',
+     '对应中来源之英文之读重述，使其量词合于 «续无外» 之定义（每一中心、每一事），与 GrammarScope 之文档今之所言同'
+     '（文法之主人之 patches/owner/05）；中文「凡中心之续无外」不变，所证无改变'))}
 
 
 def words_of(r, field):

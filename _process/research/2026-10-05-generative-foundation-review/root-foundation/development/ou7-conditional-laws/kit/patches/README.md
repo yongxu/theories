@@ -65,6 +65,9 @@ GW's history note keeps "a core leaf", which was true when it was written.
   `«对则不越域守数»` and `«对则双闭域守数»` keep their names and statements. Their docstrings and the module doc's bullet on balance read the two as one law on regions not gone out of either way.
 
   BD2 checked the two theorems on `bd2-crossing` at 7647ea36e, in a scratch module importing GrammarCrossing: 2 theorems in 2 declarations, every axiom report empty, no warning, 5 steps reused. The proofs use only case analysis on `Bool`.
+- **05-scope-wording.patch.** A text review found that `«续无外»`'s docstring, "nothing lies outside every center's continuing", can be read as weaker than its definition, `∀ p x, «所及» R E (center p) x`: as no occurrence lying outside all the centers' lines together. The docstring now reads "everything lies on every center's continuing", and the module's title "everything on every center's continuing". `«族无外»`'s docstring already says that every occurrence lies in every center's family. Comments only, as the owner specified it on 1 November, made against main's GrammarScope, which no other patch or stage changes.
+  - The same reading elsewhere goes with it: the record stage restates the-continuation-condition-on-the-root's correspondence in English, and the joins SignificanceStatements' scope sentence in the checker and PHILOSOPHY.md's gloss. The text review's merge words the front pages so.
+  - GrammarScope has five modules downstream, the root among them. The rehearsal builds them with the patch in place, reusing the full rehearsal's steps.
 
 The kit carries each change to what it touches:
 - **The audit** holds the code:
@@ -83,7 +86,7 @@ The kit carries each change to what it touches:
 
 ## Checked
 
-**The owner's rehearsal** ran on 1 November ([REHEARSAL.json](../REHEARSAL.json)). It started at 23:37 UTC on 31 October, inside the coordinator's gate: the 5-minute load was 5.5, 66% of memory was free, and no other Lean was running.
+**The owner's rehearsal** ran on 1 November ([history/REHEARSAL-owner-patches.json](../history/REHEARSAL-owner-patches.json)). It started at 23:37 UTC on 31 October, inside the coordinator's gate: the 5-minute load was 5.5, 66% of memory was free, and no other Lean was running.
 - Main's five files, with the four patches applied in series, went to a tree outside the repository, beside four scratch modules that check the names. Applied to main's files at a91c84d35, the patches make the tree's five files byte for byte.
 - `scratch_build.py` built ten modules and their import closure, 53 modules: 57 steps ran and 6 were reused. Nothing was unclean, and every axiom report was empty.
 
@@ -116,7 +119,7 @@ theorem cut_as_before {Pos Q : Type} (V : Becoming.Valuation Pos Q) (region : Q 
 | GrammarTesting, MapRegions | 6 in 13, 36 in 42 | the same |
 | GrammarConditionals, RoomNet, RoomRuns | 40 in 41, 94 in 120, 24 in 27 | new |
 
-**Next**, before the rebuild slot, is one full rehearsal with the nine patches, the three leaves and the stages in place. As the coordinator asked, it builds Persistence and every module importing Identity, 185 modules. The other modules meet the patches in the rebuild. Every old statement is kept, so a module could break only through a clash with a new name. On main at a91c84d35, `git grep` finds the names of the three new laws and of the two equivalences nowhere in the package, and `«不出»`, `«闭则不出»` and `«所闭不出»` stated only in GrammarCrossing, which imports GrammarLaws.
+**The full rehearsal** ([REHEARSAL.json](../REHEARSAL.json); the kit's [README](../README.md#checked)) built the nine patches, the three leaves and both stages on main at 9a01af14e: every module downstream of them, 376 of the package's modules, nothing unclean, every axiom report empty in the core and the ring. GrammarLaws came to 192 theorems in 221 declarations, with the stages' laws. No module broke on a clash with a new name or on an old one a stage renames.
 
 **Part A's earlier build**, build 3, applied Grammar's and GrammarReadings' patches to fresh copies of main's files at 8a1b06a3a, the blobs named under **Base**, beside the leaf and its checks module, which stays in scratch. Nothing was unclean, and every axiom report was empty ([BUILD.json](../../tree/BUILD.json)): Grammar 120 declarations, GrammarReadings 18, GrammarConditionals 41 and the checks 17. These commands reproduce it:
 

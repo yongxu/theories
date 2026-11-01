@@ -49,7 +49,8 @@ KIT = STUDY + 'kit/'
 STAMP = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')   # the synthetic receipt's, after every receipt of MAIN's
 GENERALIZED = ('continuation-relative-to-a-class', 'classical-definitions-in-the-grammar')
 WORDS = ('generation-and-degeneration-at-two-grains',     # pins MapRegions; the record stage corrects its words
-         'balance-from-conservation-along-a-relation')     # pins BalanceRegions; reuses «不出», now GrammarLaws'
+         'balance-from-conservation-along-a-relation',     # pins BalanceRegions; reuses «不出», now GrammarLaws'
+         'the-continuation-condition-on-the-root')         # pins GrammarScope; its reading of «续无外» restated
 OWNER = ('master-laws-on-the-grammar', 'not-going-out-of-a-region')   # the record stage applies the owner's items
 CUT = ('conveyance-crosses-the-boundary',)                 # pins Standpoints, whose cut the owner's patch writes anew
 RECEIPT = PKG + f'becoming-checks/{STAMP}/verification.json'
@@ -78,7 +79,8 @@ paths = [PKG + n for n in ('Becoming.lean', 'check_becoming.py', 'README.md', 'R
 paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/PLAN.md',
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
-          'tools/research', '_process/architecture/rebinds.jsonl', '_process/architecture/moves']
+          'tools/research', '_process/architecture/rebinds.jsonl', '_process/architecture/moves',
+          'theories/becoming/review/PHILOSOPHY.md']
 
 
 def patch_paths(patches):
