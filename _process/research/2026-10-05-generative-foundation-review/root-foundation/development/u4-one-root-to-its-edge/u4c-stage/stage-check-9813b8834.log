@@ -1,0 +1,15 @@
+git apply --check over the whole series (two patches, one file): fails, as U4c found: error: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean: patch does not apply
+PASS apply takes the two patches on one file, in order
+PASS the file is the second patch's
+PASS the audit passes with the stage's EXPECTED
+PASS apply again: the stage already in place
+PASS an empty stage stops apply
+PASS nothing written
+PASS a stage that does not apply stops apply
+PASS nothing written
+PASS SKIP leaves it out
+PASS the audit passes, the skipped stage named nowhere
+PASS OU7_STAGES names the stages taken
+PASS a stage applied but not taken fails the audit
+PASS OU7_STAGES naming no stage stops
+stage handling: every check passed

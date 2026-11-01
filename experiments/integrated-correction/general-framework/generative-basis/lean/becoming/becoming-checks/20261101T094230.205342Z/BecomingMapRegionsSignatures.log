@@ -1,0 +1,71 @@
+@Becoming.«传则粗不生» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x y : α}, Becoming.«传» R L E x y → ¬Becoming.«生» R L y
+@Becoming.«粗有前则生为传» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {y : α},
+  Becoming.«有前» R L y → Becoming.«生» R E y → ∃ x, Becoming.«传» R L E x y
+@Becoming.«生则或粗生或传» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {y : α},
+  Becoming.«生» R E y → ¬¬(Becoming.«生» R L y ∨ ∃ x, Becoming.«传» R L E x y)
+@Becoming.«守则后守» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«守» R L E x → Becoming.«后守» R L E x
+@Becoming.«全守则后守» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«全守» R L E x → Becoming.«后守» R L E x
+@Becoming.«后守则延» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«后守» R L E x → Becoming.«延» R L x
+@Becoming.«后守退化不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, ¬(Becoming.«后守» R L E x ∧ Becoming.«退化» R L x)
+@Becoming.«单行则生成后守不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α},
+  (∀ {z w w' : α}, R z w → R z w' → w = w') → ∀ {x : α}, ¬(Becoming.«生成» R L E x ∧ Becoming.«后守» R L E x)
+@Becoming.«三域之周» : ∀ {α : Type u_1},
+  (∀ (P : Prop), P ∨ ¬P) →
+    ∀ (R L E : Becoming.«际» α) (x : α), Becoming.«生成» R L E x ∨ Becoming.«后守» R L E x ∨ Becoming.«退化» R L x
+Becoming.«三域之定当且仅当排中» : (∀ (β : Type) (R L E : Becoming.«际» β) (x : β),
+    Becoming.«生成» R L E x ∨ Becoming.«后守» R L E x ∨ Becoming.«退化» R L x) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.Map.Once.func : ∀ {z w w' : Becoming.Map.Stage}, Becoming.Map.once z w → Becoming.Map.once z w' → w = w'
+Becoming.Map.Once.renews : Becoming.«传» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.first
+  Becoming.Map.Stage.second
+Becoming.Map.Once.third_not_renews : ∀ (w : Becoming.Map.Stage),
+  ¬Becoming.«传» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.third w
+@Becoming.Map.Once.third_next : ∀ {w : Becoming.Map.Stage},
+  Becoming.Map.once Becoming.Map.Stage.third w → w = Becoming.Map.Stage.third
+@Becoming.Map.Once.stays_third : ∀ {x y : Becoming.Map.Stage},
+  Becoming.«相续» Becoming.Map.once Becoming.«一» x y → x = Becoming.Map.Stage.third → y = Becoming.Map.Stage.third
+@Becoming.Map.Once.family : ∀ {S : Becoming.Map.Stage → Prop},
+  S Becoming.Map.Stage.first →
+    (∀ (z : Becoming.Map.Stage), S z → ∃ w, S w ∧ Becoming.«续» Becoming.Map.once Becoming.«一» z w) →
+      S Becoming.Map.Stage.second ∧ S Becoming.Map.Stage.third
+Becoming.Map.Once.endless : Becoming.«不穷» Becoming.Map.once Becoming.«一» Becoming.Map.Stage.first
+Becoming.Map.Once.not_generates : ¬Becoming.«生成» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.first
+Becoming.Map.Once.not_keeps : ¬Becoming.«守» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.first
+Becoming.Map.Once.not_degenerates : ¬Becoming.«退化» Becoming.Map.once Becoming.«一» Becoming.Map.Stage.first
+Becoming.Map.Once.keeping : Becoming.«全守» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.first
+Becoming.Map.Once.keepsAfter : Becoming.«后守» Becoming.Map.once Becoming.«一» Becoming.«静» Becoming.Map.Stage.first
+@Becoming.Map.step_func : ∀ {z w w' : Nat}, Becoming.Map.step z w → Becoming.Map.step z w' → w = w'
+@Becoming.Map.step_family : ∀ {S : Nat → Prop},
+  S 0 → (∀ (z : Nat), S z → ∃ w, S w ∧ Becoming.«续» Becoming.Map.step Becoming.«一» z w) → ∀ (m : Nat), S m
+Becoming.Map.generates_iff_changes : ∀ (b : Nat → Bool),
+  Becoming.«生成» Becoming.Map.step Becoming.«一» (fun n m => b n = b m) 0 ↔ ∀ (y : Nat), ∃ n, y ≤ n ∧ b n ≠ b (n + 1)
+Becoming.Map.keepsAfter_iff_settles : ∀ (b : Nat → Bool),
+  Becoming.«后守» Becoming.Map.step Becoming.«一» (fun n m => b n = b m) 0 ↔ ∃ z, ∀ (n : Nat), z ≤ n → b n = b (n + 1)
+@Becoming.Map.Settles.seen_succ : ∀ {p : Nat → Bool} {n : Nat},
+  Becoming.Map.Settles.seen p n = true → Becoming.Map.Settles.seen p (n + 1) = true
+@Becoming.Map.Settles.seen_of_le : ∀ {p : Nat → Bool} {n m : Nat},
+  Becoming.Map.Settles.seen p n = true → n ≤ m → Becoming.Map.Settles.seen p m = true
+@Becoming.Map.Settles.seen_of : ∀ {p : Nat → Bool} {n : Nat}, p n = true → Becoming.Map.Settles.seen p n = true
+@Becoming.Map.Settles.seen_witness : ∀ {p : Nat → Bool} {n : Nat},
+  Becoming.Map.Settles.seen p n = true → ∃ k, p k = true
+@Becoming.Map.Settles.sequence_seen : ∀ {p : Nat → Bool} {n : Nat},
+  Becoming.Map.Settles.seen p n = true → Becoming.Map.Settles.sequence p n = false
+@Becoming.Map.Settles.sequence_unseen : ∀ {p : Nat → Bool} {n : Nat},
+  Becoming.Map.Settles.seen p n = false → Becoming.Map.Settles.sequence p n = Becoming.Map.Settles.turning n
+Becoming.Map.Settles.turning_turns : ∀ (n : Nat), Becoming.Map.Settles.turning n ≠ Becoming.Map.Settles.turning (n + 1)
+Becoming.Map.«后守之定则LPO» : ∀ (p : Nat → Bool),
+  Becoming.«后守» Becoming.Map.step Becoming.«一»
+        (fun n m => Becoming.Map.Settles.sequence p n = Becoming.Map.Settles.sequence p m) 0 ∨
+      ¬Becoming.«后守» Becoming.Map.step Becoming.«一»
+          (fun n m => Becoming.Map.Settles.sequence p n = Becoming.Map.Settles.sequence p m) 0 →
+    (∃ n, p n = true) ∨ ∀ (n : Nat), p n = false
+Becoming.Map.«生成之定则WLPO» : ∀ (p : Nat → Bool),
+  Becoming.«生成» Becoming.Map.step Becoming.«一»
+        (fun n m => Becoming.Map.Settles.sequence p n = Becoming.Map.Settles.sequence p m) 0 ∨
+      ¬Becoming.«生成» Becoming.Map.step Becoming.«一»
+          (fun n m => Becoming.Map.Settles.sequence p n = Becoming.Map.Settles.sequence p m) 0 →
+    (∀ (n : Nat), p n = false) ∨ ¬∀ (n : Nat), p n = false
+Becoming.Map.«生成后守之定则LPO» : (∀ (b : Nat → Bool),
+    Becoming.«生成» Becoming.Map.step Becoming.«一» (fun n m => b n = b m) 0 ∨
+      Becoming.«后守» Becoming.Map.step Becoming.«一» (fun n m => b n = b m) 0) →
+  ∀ (p : Nat → Bool), (∃ n, p n = true) ∨ ∀ (n : Nat), p n = false

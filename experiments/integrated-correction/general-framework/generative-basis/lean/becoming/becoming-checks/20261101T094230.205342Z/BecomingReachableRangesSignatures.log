@@ -1,0 +1,507 @@
+@Becoming.Run.RangeIncludes.refl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P), Becoming.Run.RangeIncludes adm r r
+@Becoming.Run.RangeIncludes.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {r r' r'' : Becoming.Run P},
+  Becoming.Run.RangeIncludes adm r r' → Becoming.Run.RangeIncludes adm r' r'' → Becoming.Run.RangeIncludes adm r r''
+@Becoming.Run.RangeExceeds.not_included : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {r r' : Becoming.Run P},
+  Becoming.Run.RangeExceeds adm r r' → ¬Becoming.Run.RangeIncludes adm r' r
+@Becoming.Run.RangeWidens.irrefl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P), ¬Becoming.Run.RangeWidens adm r r
+@Becoming.Run.RangeWidens.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {r r' r'' : Becoming.Run P},
+  Becoming.Run.RangeWidens adm r r' → Becoming.Run.RangeWidens adm r' r'' → Becoming.Run.RangeWidens adm r r''
+@Becoming.Run.rangeIncludes_iff : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {r r' : Becoming.Run P},
+  Becoming.Run.RangeIncludes adm r r' ↔ Becoming.«则» (Becoming.Run.admitted adm r') (Becoming.Run.admitted adm r)
+@Becoming.Run.rangeExceeds_iff : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {r r' : Becoming.Run P},
+  Becoming.Run.RangeExceeds adm r r' ↔ Becoming.«逾» (Becoming.Run.admitted adm r) (Becoming.Run.admitted adm r')
+@Becoming.Run.rangeIncludes_conditions_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (K : Becoming.Conditions S F C) (r r' : Becoming.Run P),
+  Becoming.Run.RangeIncludes K.dependence.AdmitsAt r r' ↔
+    (K.dependence.along r).Includes (K.dependence.along r).level (K.dependence.along r').level
+@Becoming.Run.rangeWidens_conditions_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {F C : Type}
+  (K : Becoming.Conditions S F C) (r r' : Becoming.Run P),
+  Becoming.Run.RangeWidens K.dependence.AdmitsAt r r' ↔
+    (K.dependence.along r).Widens (K.dependence.along r).level (K.dependence.along r').level
+@Becoming.Reaching.Covers.refl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (s : S), Becoming.Reaching.Covers P adm s s
+@Becoming.Reaching.Covers.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S},
+  Becoming.Reaching.Covers P adm s s' → Becoming.Reaching.Covers P adm s' s'' → Becoming.Reaching.Covers P adm s s''
+@Becoming.Reaching.Widens.covers : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S}, Becoming.Reaching.Widens P adm s s' → Becoming.Reaching.Covers P adm s s'
+@Becoming.Reaching.Widens.irrefl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (s : S), ¬Becoming.Reaching.Widens P adm s s
+@Becoming.Reaching.Widens.trans_covers : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S},
+  Becoming.Reaching.Widens P adm s s' → Becoming.Reaching.Covers P adm s' s'' → Becoming.Reaching.Widens P adm s s''
+@Becoming.Reaching.Covers.trans_widens : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S},
+  Becoming.Reaching.Covers P adm s s' → Becoming.Reaching.Widens P adm s' s'' → Becoming.Reaching.Widens P adm s s''
+@Becoming.Reaching.Widens.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S},
+  Becoming.Reaching.Widens P adm s s' → Becoming.Reaching.Widens P adm s' s'' → Becoming.Reaching.Widens P adm s s''
+@Becoming.Reaching.widens_not_covered : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S}, Becoming.Reaching.Widens P adm s s' → ¬Becoming.Reaching.Covers P adm s' s
+@Becoming.Reaching.Covers.now : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' → ∀ {r' : Becoming.Run P}, r'.state 0 = s' → ∀ {x : X}, adm s' x → adm s x
+@Becoming.Reaching.not_widens_of_wider_now : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S} {r' : Becoming.Run P},
+  r'.state 0 = s' → ∀ {x : X}, adm s' x → ¬adm s x → ¬Becoming.Reaching.Widens P adm s s'
+@Becoming.Reaching.covers_of_no_course : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  (∀ (r : Becoming.Run P), r.state 0 = s' → False) → Becoming.Reaching.Covers P adm s s'
+@Becoming.Reaching.covers_iff_criteria : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' ↔
+    ∀ (V : (Nat → X → Prop) → Prop),
+      (∀ (ρ σ : Nat → X → Prop), (∀ (t : Nat) (x : X), ρ t x → σ t x) → V ρ → V σ) →
+        (∃ r', r'.state 0 = s' ∧ V fun t x => adm (r'.state t) x) → ∃ r, r.state 0 = s ∧ V fun t x => adm (r.state t) x
+@Becoming.Reaching.widens_iff_of_greatest : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S} {r r' : Becoming.Run P},
+  r.state 0 = s →
+    r'.state 0 = s' →
+      (∀ (q : Becoming.Run P), q.state 0 = s → Becoming.Run.RangeIncludes adm r q) →
+        (∀ (q : Becoming.Run P), q.state 0 = s' → Becoming.Run.RangeIncludes adm r' q) →
+          (Becoming.Reaching.Widens P adm s s' ↔
+            Becoming.Run.RangeIncludes adm r r' ∧ ¬Becoming.Run.RangeIncludes adm r' r)
+@Becoming.Reaching.widens_of_rangeWidens_greatest : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {adm : S → X → Prop} {s s' : S} {r r' : Becoming.Run P},
+  r.state 0 = s →
+    (∀ (q : Becoming.Run P), q.state 0 = s' → Becoming.Run.RangeIncludes adm r' q) →
+      Becoming.Run.RangeWidens adm r r' → Becoming.Reaching.Widens P adm s s'
+@Becoming.Reaching.greatest_of_unique : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s : S},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ {r : Becoming.Run P}, r.state 0 = s → ∀ (q : Becoming.Run P), q.state 0 = s → Becoming.Run.RangeIncludes adm r q
+@Becoming.Reaching.widens_iff_of_unique : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ {r r' : Becoming.Run P},
+      r.state 0 = s →
+        r'.state 0 = s' →
+          (Becoming.Reaching.Widens P adm s s' ↔
+            Becoming.Run.RangeIncludes adm r r' ∧ ¬Becoming.Run.RangeIncludes adm r' r)
+@Becoming.Reaching.widens_of_rangeWidens : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ {r r' : Becoming.Run P},
+      r.state 0 = s → r'.state 0 = s' → Becoming.Run.RangeWidens adm r r' → Becoming.Reaching.Widens P adm s s'
+@Becoming.Reaching.widens_next_iff_rising : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ (r : Becoming.Run P),
+      Becoming.Reaching.Widens P adm (r.state 1) (r.state 0) ↔
+        (∀ (t : Nat) (x : X), adm (r.state t) x → adm (r.state (t + 1)) x) ∧
+          ¬∀ (t : Nat) (x : X), adm (r.state (t + 1)) x → adm (r.state t) x
+@Becoming.Reaching.CoversLater.zero : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S}, Becoming.Reaching.CoversLater P adm 0 s s' ↔ Becoming.Reaching.Covers P adm s s'
+@Becoming.Reaching.CoversLater.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S} {d e : Nat},
+  Becoming.Reaching.CoversLater P adm d s s' →
+    Becoming.Reaching.CoversLater P adm e s' s'' → Becoming.Reaching.CoversLater P adm (e + d) s s''
+@Becoming.Reaching.possibleWithin_iff_withinMoves : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {adm : S → X → Prop} {s : S} {k : Nat} {x : X},
+  Becoming.Reaching.PossibleWithin P adm k s x ↔ Becoming.WithinMoves P adm s k fun c => c = x
+@Becoming.Reaching.possible_iff_withinMoves : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s : S} {x : X},
+  Becoming.Reaching.Possible P adm s x ↔ ∃ n, Becoming.WithinMoves P adm s n fun c => c = x
+@Becoming.Reaching.Possible.of_reach : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  Becoming.Reach P s s' → ∀ {x : X}, Becoming.Reaching.Possible P adm s' x → Becoming.Reaching.Possible P adm s x
+@Becoming.Reaching.PossibleWithin.possible : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s : S} {k : Nat} {x : X},
+  Becoming.Reaching.PossibleWithin P adm k s x → Becoming.Reaching.Possible P adm s x
+@Becoming.Reaching.PossibleWithin.mono : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s : S} {k k' : Nat},
+  k ≤ k' → ∀ {x : X}, Becoming.Reaching.PossibleWithin P adm k s x → Becoming.Reaching.PossibleWithin P adm k' s x
+@Becoming.Reaching.PossibleWithin.present : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s : S} {k : Nat} {x : X}, adm s x → Becoming.Reaching.PossibleWithin P adm k s x
+@Becoming.Reaching.KeepsWidening.gathers : ∀ {X : Type} {Q : Nat → X → Prop},
+  Becoming.Reaching.KeepsWidening Q →
+    ∀ (n : Nat), ∃ xs m, xs.length = n ∧ Becoming.Distinct xs ∧ ∀ (x : X), x ∈ xs → Q m x
+@Becoming.Reaching.KeepsWidening.not_listed : ∀ {X : Type} {Q : Nat → X → Prop},
+  Becoming.Reaching.KeepsWidening Q → ¬∃ ys, ∀ (n : Nat) (x : X), Q n x → x ∈ ys
+@Becoming.Reaching.Lexical.irrefl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {course : S → Becoming.Run P} (s : S), ¬Becoming.Reaching.Lexical P adm course s s
+@Becoming.Reaching.Lexical.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {course : S → Becoming.Run P} {s s' s'' : S},
+  Becoming.Reaching.Lexical P adm course s s' →
+    Becoming.Reaching.Lexical P adm course s' s'' → Becoming.Reaching.Lexical P adm course s s''
+@Becoming.Reaching.Lexical.of_rangeWidens : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {course : S → Becoming.Run P} {s s' : S},
+  Becoming.Run.RangeWidens adm (course s) (course s') → Becoming.Reaching.Lexical P adm course s s'
+@Becoming.Reaching.Lexical.not_reversed : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {course : S → Becoming.Run P} {s s' : S},
+  Becoming.Run.RangeWidens adm (course s) (course s') → ¬Becoming.Reaching.Lexical P adm course s' s
+@Becoming.Reaching.not_above_wider_now : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {course : S → Becoming.Run P} {s s' : S},
+  (course s).state 0 = s →
+    (course s').state 0 = s' →
+      ∀ {x : X},
+        adm s' x → ¬adm s x → ¬Becoming.Reaching.Widens P adm s s' ∧ ¬Becoming.Reaching.Lexical P adm course s s'
+@Becoming.Run.possible_of_next : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat) {x : X},
+  Becoming.Reaching.Possible P adm (r.state (n + 1)) x → Becoming.Reaching.Possible P adm (r.state n) x
+@Becoming.Run.possible_of_later : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (m k : Nat) {x : X},
+  Becoming.Reaching.Possible P adm (r.state (m + k)) x → Becoming.Reaching.Possible P adm (r.state m) x
+@Becoming.Run.possible_from_start : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat) {x : X},
+  Becoming.Reaching.Possible P adm (r.state n) x → Becoming.Reaching.Possible P adm (r.state 0) x
+@Becoming.Run.possibleWithin_moves : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat) {k : Nat} {x : X},
+  Becoming.Reaching.PossibleWithin P adm k (r.state (n + 1)) x →
+    Becoming.Reaching.PossibleWithin P adm (k + 1) (r.state n) x
+@Becoming.Run.not_possible_returns : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat) {x : X},
+  Becoming.Reaching.Possible P adm (r.state n) x →
+    ¬Becoming.Reaching.Possible P adm (r.state (n + 1)) x → ¬Becoming.Reach P (r.state (n + 1)) (r.state n)
+@Becoming.Run.tail_of_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r' : Becoming.Run P)
+  (as : List A) (s : S),
+  Generative.Trace P s as (r'.state 0) → ∃ r k, r.state 0 = s ∧ ∀ (t : Nat), r.state (t + k) = r'.state t
+@Becoming.Run.tail_of_reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s s' : S},
+  Becoming.Reach P s s' →
+    ∀ (r' : Becoming.Run P), r'.state 0 = s' → ∃ r k, r.state 0 = s ∧ ∀ (t : Nat), r.state (t + k) = r'.state t
+@Becoming.Run.coversLater_next : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat),
+  Becoming.Reaching.CoversLater P adm 1 (r.state n) (r.state (n + 1))
+@Becoming.Reaching.Covers.possible : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' →
+    (∀ (t : S), Becoming.Reach P s' t → ∃ q, q.state 0 = t) →
+      ∀ {x : X}, Becoming.Reaching.Possible P adm s' x → Becoming.Reaching.Possible P adm s x
+@Becoming.Run.possible_same_of_covers_next : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat),
+  Becoming.Reaching.Covers P adm (r.state (n + 1)) (r.state n) →
+    (∀ (t : S), Becoming.Reach P (r.state n) t → ∃ q, q.state 0 = t) →
+      ∀ (x : X), Becoming.Reaching.Possible P adm (r.state (n + 1)) x ↔ Becoming.Reaching.Possible P adm (r.state n) x
+@Becoming.Reaching.not_keepsWidening_of_listed_along : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {adm : S → X → Prop} {k : Nat} {r : Becoming.Run P},
+  (∃ ys, ∀ (n : Nat) (x : X), Becoming.Reaching.PossibleWithin P adm k (r.state n) x → x ∈ ys) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleWithin P adm k (r.state n)
+@Becoming.Reaching.listed_along_of_listed : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {k : Nat} {r : Becoming.Run P},
+  (∃ ys, ∀ (x : X), Becoming.Reaching.Possible P adm (r.state 0) x → x ∈ ys) →
+    ∃ ys, ∀ (n : Nat) (x : X), Becoming.Reaching.PossibleWithin P adm k (r.state n) x → x ∈ ys
+@Becoming.Reaching.not_keepsWidening_of_listed : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {k : Nat} {r : Becoming.Run P},
+  (∃ ys, ∀ (x : X), Becoming.Reaching.Possible P adm (r.state 0) x → x ∈ ys) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleWithin P adm k (r.state n)
+@Becoming.Web.KeepsWidening.chain : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself l T → Becoming.Reaching.KeepsWidening fun n f => W.Admits (l (T + n)) (T + n) f
+@Becoming.Web.KeepsWidening.of_chain : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  (Becoming.Reaching.KeepsWidening fun n f => W.Admits (l (T + n)) (T + n) f) → W.KeepsWidening Becoming.Web.itself l T
+@Becoming.Web.keepsWidening_iff_chain : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself l T ↔ Becoming.Reaching.KeepsWidening fun n f => W.Admits (l (T + n)) (T + n) f
+@Becoming.Web.KeepsWidening.not_listed_via_chain : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}
+  {fs : List F}, (∀ (f : F), f ∈ fs) → ∀ {T : Nat}, ¬W.KeepsWidening Becoming.Web.itself l T
+@Becoming.Reaching.WidensOrLater.irrefl : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (s : S), ¬Becoming.Reaching.WidensOrLater P adm s s
+@Becoming.Reaching.WidensOrLater.trans : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' s'' : S},
+  Becoming.Reaching.WidensOrLater P adm s s' →
+    Becoming.Reaching.WidensOrLater P adm s' s'' → Becoming.Reaching.WidensOrLater P adm s s''
+@Becoming.Reaching.WidensOrLater.not_covered : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S}, Becoming.Reaching.WidensOrLater P adm s s' → ¬Becoming.Reaching.Covers P adm s' s
+@Becoming.Reaching.WidensOrLater.not_reversed : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} {s s' : S}, Becoming.Reaching.Widens P adm s s' → ¬Becoming.Reaching.WidensOrLater P adm s' s
+@Becoming.Run.not_widensWithLag_next : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat),
+  ¬Becoming.Reaching.WidensWithLag P adm (r.state (n + 1)) (r.state n)
+@Becoming.Run.widensOrLater_next_iff : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat),
+  Becoming.Reaching.WidensOrLater P adm (r.state (n + 1)) (r.state n) ↔
+    Becoming.Reaching.Widens P adm (r.state (n + 1)) (r.state n)
+@Becoming.Reaching.coversLater_iff_of_unique : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ {s s' : S} {r r' : Becoming.Run P},
+      r.state 0 = s →
+        r'.state 0 = s' →
+          ∀ (d : Nat),
+            Becoming.Reaching.CoversLater P adm d s s' ↔
+              ∀ (t : Nat) (x : X), adm (r'.state t) x → adm (r.state (t + d)) x
+@Becoming.Reaching.widensOrLater_iff_of_unique : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop},
+  (∀ (q q' : Becoming.Run P), q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t) →
+    ∀ {s s' : S} {r r' : Becoming.Run P},
+      r.state 0 = s →
+        r'.state 0 = s' →
+          (Becoming.Reaching.WidensOrLater P adm s s' ↔
+            Becoming.Run.RangeIncludes adm r r' ∧ ¬Becoming.Run.RangeIncludes adm r' r ∨
+              (∃ d, ∀ (t : Nat) (x : X), adm (r'.state t) x → adm (r.state (t + d)) x) ∧
+                ¬∃ d, ∀ (t : Nat) (x : X), adm (r.state t) x → adm (r'.state (t + d)) x)
+@Becoming.Reaching.covers_iff_carries : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' ↔
+    Becoming.CarriesProfiles (Becoming.Reaching.coursesFrame P adm) (fun r => r.state 0 = s')
+      (Becoming.Reaching.coursesFrame P adm) fun r => r.state 0 = s
+@Becoming.Reaching.covers_iff_preserves : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' ↔
+    Becoming.PreservesBundles (Becoming.Reaching.coursesFrame P adm) (fun r => r.state 0 = s')
+      (Becoming.Reaching.coursesFrame P adm) fun r => r.state 0 = s
+@Becoming.Reaching.covers_iff_included : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Covers P adm s s' ↔
+    Becoming.Lexical.Included (Becoming.Reaching.reachableRanges P adm s') (Becoming.Reaching.reachableRanges P adm s)
+@Becoming.Reaching.widens_iff_extension : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop} {s s' : S},
+  Becoming.Reaching.Widens P adm s s' ↔ Becoming.Extension (Becoming.Reaching.reachFrame P adm) (fun x => True) s' s
+@Becoming.Reaching.comparison_widens : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop},
+  Becoming.Comparison (Becoming.Reaching.reachFrame P adm) (fun x => True) fun a b => Becoming.Reaching.Widens P adm b a
+@Becoming.Reaching.comparison_widensOrLater : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop},
+  Becoming.Comparison (Becoming.Reaching.reachFrame P adm) (fun x => True) fun a b =>
+    Becoming.Reaching.WidensOrLater P adm b a
+@Becoming.Reaching.lexical_above : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop}
+  {course : S → Becoming.Run P} {s s' : S},
+  Becoming.Reaching.Lexical P adm course s s' →
+    Becoming.Lexical.Above (Becoming.Reaching.realizedClaims course adm) (Becoming.Reaching.reachableRanges P adm) s s'
+@Becoming.Reaching.lexical_of_above_decided : ∀ {S A X : Type} {P : Generative.Process S A} {adm : S → X → Prop}
+  {course : S → Becoming.Run P} {s s' : S},
+  Becoming.Run.RangeIncludes adm (course s') (course s) ∨ Becoming.Run.RangeExceeds adm (course s) (course s') →
+    (Becoming.Reaching.Covers P adm s' s ∨
+        ∃ r, r.state 0 = s ∧ ∀ (r' : Becoming.Run P), r'.state 0 = s' → ¬Becoming.Run.RangeIncludes adm r' r) →
+      Becoming.Lexical.Above (Becoming.Reaching.realizedClaims course adm) (Becoming.Reaching.reachableRanges P adm) s
+          s' →
+        Becoming.Reaching.Lexical P adm course s s'
+@Becoming.Law.runs_agree : ∀ {S : Type u_1} {next : S → S} (q q' : Becoming.Run (Becoming.Law.process next)),
+  q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t
+Becoming.Rise.process_eq_law : Becoming.Rise.process = Becoming.Law.process fun x => true
+@Becoming.Rise.adm_le : ∀ {s : Bool} {x : Nat}, Becoming.Rise.adm s x → x ≤ 1
+Becoming.Rise.rises : Becoming.Reaching.Widens Becoming.Rise.process Becoming.Rise.adm (Becoming.Rise.course.state 1)
+  (Becoming.Rise.course.state 0)
+Becoming.Rise.possible_same : ∀ (x : Nat),
+  Becoming.Reaching.Possible Becoming.Rise.process Becoming.Rise.adm (Becoming.Rise.course.state 1) x ↔
+    Becoming.Reaching.Possible Becoming.Rise.process Becoming.Rise.adm (Becoming.Rise.course.state 0) x
+Becoming.Rise.possibleWithin_same : ∀ (k x : Nat),
+  Becoming.Reaching.PossibleWithin Becoming.Rise.process Becoming.Rise.adm (k + 1) (Becoming.Rise.course.state 1) x ↔
+    Becoming.Reaching.PossibleWithin Becoming.Rise.process Becoming.Rise.adm (k + 1) (Becoming.Rise.course.state 0) x
+Becoming.Climb.process_eq_law : Becoming.Climb.process = Becoming.Law.process fun n => n + 1
+Becoming.Climb.trace_units : ∀ (j n : Nat), Generative.Trace Becoming.Climb.process n (List.replicate j ()) (n + j)
+@Becoming.Climb.trace_end : ∀ {n : Nat} {as : List Unit} {m : Nat},
+  Generative.Trace Becoming.Climb.process n as m → m = n + as.length
+@Becoming.Climb.within_le : ∀ {k n x : Nat},
+  Becoming.Reaching.PossibleWithin Becoming.Climb.process Becoming.Climb.adm k n x → x ≤ n + k
+@Becoming.Climb.within_of_le : ∀ {k n x : Nat},
+  x ≤ n + k → Becoming.Reaching.PossibleWithin Becoming.Climb.process Becoming.Climb.adm k n x
+Becoming.Climb.keeps : ∀ (k : Nat),
+  Becoming.Reaching.KeepsWidening fun n =>
+    Becoming.Reaching.PossibleWithin Becoming.Climb.process Becoming.Climb.adm k (Becoming.Climb.course.state n)
+Becoming.Climb.not_listed : ¬∃ xs,
+    ∀ (x : Nat),
+      Becoming.Reaching.Possible Becoming.Climb.process Becoming.Climb.adm (Becoming.Climb.course.state 0) x → x ∈ xs
+Becoming.NoCourse.no_course : ∀ (r : Becoming.Run Becoming.NoCourse.process), r.state 0 = false → False
+@Becoming.NoCourse.from_true : ∀ {t : Bool}, Becoming.Reach Becoming.NoCourse.process true t → t = true
+Becoming.NoCourse.widens_reversed : Becoming.Reaching.Widens Becoming.NoCourse.process Becoming.NoCourse.adm true
+    false ∧
+  (∀ (x : Nat), Becoming.Reaching.Possible Becoming.NoCourse.process Becoming.NoCourse.adm false x) ∧
+    ∀ (x : Nat), ¬Becoming.Reaching.Possible Becoming.NoCourse.process Becoming.NoCourse.adm true x
+Becoming.EndsNow.no_course : ∀ (r : Becoming.Run Becoming.EndsNow.process), r.state 0 = none → False
+Becoming.EndsNow.climb_keeps : Becoming.Reaching.KeepsWidening fun n =>
+  Becoming.EndsNow.adm (Becoming.EndsNow.climb.state n)
+Becoming.EndsNow.keeps_widening_above_wider_now : (Becoming.Reaching.KeepsWidening fun n =>
+    Becoming.EndsNow.adm (Becoming.EndsNow.climb.state n)) ∧
+  Becoming.EndsNow.adm none 1 ∧
+    ¬Becoming.EndsNow.adm (some 0) 1 ∧
+      Becoming.Reaching.Widens Becoming.EndsNow.process Becoming.EndsNow.adm (some 0) none
+Becoming.AllAtOnce.converse_fails : (¬∃ xs,
+      ∀ (x : Nat), Becoming.Reaching.Possible Becoming.AllAtOnce.process Becoming.AllAtOnce.adm () x → x ∈ xs) ∧
+  ∀ (r : Becoming.Run Becoming.AllAtOnce.process) (k : Nat),
+    ¬Becoming.Reaching.KeepsWidening fun n =>
+        Becoming.Reaching.PossibleWithin Becoming.AllAtOnce.process Becoming.AllAtOnce.adm k (r.state n)
+Becoming.KeptAlternative.course_start : ∀ (c : Becoming.KeptAlternative.Config),
+  (Becoming.KeptAlternative.course c).state 0 = c
+Becoming.KeptAlternative.fromE_states : ∀ (r : Becoming.Run Becoming.KeptAlternative.process),
+  r.state 0 = Becoming.KeptAlternative.Config.e 0 → ∀ (t : Nat), r.state t = Becoming.KeptAlternative.Config.e t
+Becoming.KeptAlternative.fromSingle_states : ∀ (r : Becoming.Run Becoming.KeptAlternative.process),
+  r.state 0 = Becoming.KeptAlternative.Config.single →
+    ∀ (t : Nat), r.state t = Becoming.KeptAlternative.fromSingle.state t
+Becoming.KeptAlternative.from_k : ∀ (q : Becoming.Run Becoming.KeptAlternative.process),
+  q.state 0 = Becoming.KeptAlternative.Config.k →
+    ∀ (t : Nat),
+      q.state (t + 1) = Becoming.KeptAlternative.Config.real (t + 1) ∨
+        q.state (t + 1) = Becoming.KeptAlternative.Config.wide (t + 1)
+Becoming.KeptAlternative.realized_le : ∀ (t : Nat) {x : Nat},
+  Becoming.KeptAlternative.adm (Becoming.KeptAlternative.realized.state t) x → x ≤ 1
+Becoming.KeptAlternative.unrealized_of_le : ∀ (t : Nat) {x : Nat},
+  x ≤ 1 → Becoming.KeptAlternative.adm (Becoming.KeptAlternative.unrealized.state t) x
+Becoming.KeptAlternative.greatest_not_unique : (∀ (q : Becoming.Run Becoming.KeptAlternative.process),
+    q.state 0 = Becoming.KeptAlternative.Config.k →
+      Becoming.Run.RangeIncludes Becoming.KeptAlternative.adm Becoming.KeptAlternative.unrealized q) ∧
+  ¬∀ (q q' : Becoming.Run Becoming.KeptAlternative.process),
+      q.state 0 = q'.state 0 → ∀ (t : Nat), q.state t = q'.state t
+Becoming.KeptAlternative.disagree : Becoming.Run.RangeWidens Becoming.KeptAlternative.adm
+    (Becoming.KeptAlternative.course (Becoming.KeptAlternative.Config.e 0))
+    (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k) ∧
+  Becoming.Reaching.Widens Becoming.KeptAlternative.process Becoming.KeptAlternative.adm
+    Becoming.KeptAlternative.Config.k (Becoming.KeptAlternative.Config.e 0)
+@Becoming.KeptAlternative.no_order_contains_both : ∀
+  {R : Becoming.KeptAlternative.Config → Becoming.KeptAlternative.Config → Prop},
+  (∀ (a : Becoming.KeptAlternative.Config), ¬R a a) →
+    (∀ {a b c : Becoming.KeptAlternative.Config}, R a b → R b c → R a c) →
+      (∀ {a b : Becoming.KeptAlternative.Config},
+          Becoming.Run.RangeWidens Becoming.KeptAlternative.adm (Becoming.KeptAlternative.course a)
+              (Becoming.KeptAlternative.course b) →
+            R a b) →
+        (∀ {a b : Becoming.KeptAlternative.Config},
+            Becoming.Reaching.Widens Becoming.KeptAlternative.process Becoming.KeptAlternative.adm a b → R a b) →
+          False
+@Becoming.KeptAlternative.no_comparison_both : ∀
+  {Better : Becoming.KeptAlternative.Config → Becoming.KeptAlternative.Config → Prop},
+  (∀ (a : Becoming.KeptAlternative.Config), ¬Better a a) →
+    (∀ {a b c : Becoming.KeptAlternative.Config}, Better a b → Better b c → Better a c) →
+      Becoming.Comparison
+          (Becoming.Reaching.realizedFrame Becoming.KeptAlternative.process Becoming.KeptAlternative.adm
+            Becoming.KeptAlternative.course)
+          (fun x => True) Better →
+        Becoming.Comparison (Becoming.Reaching.reachFrame Becoming.KeptAlternative.process Becoming.KeptAlternative.adm)
+            (fun x => True) Better →
+          False
+Becoming.KeptAlternative.same_realized : ∀ (t : Nat) {x : Nat},
+  Becoming.KeptAlternative.adm (Becoming.KeptAlternative.realized.state t) x ↔
+    Becoming.KeptAlternative.adm (Becoming.KeptAlternative.fromSingle.state t) x
+Becoming.KeptAlternative.tie : Becoming.Run.RangeIncludes Becoming.KeptAlternative.adm
+    (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k)
+    (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.single) ∧
+  Becoming.Run.RangeIncludes Becoming.KeptAlternative.adm
+      (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.single)
+      (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k) ∧
+    ¬Becoming.Run.RangeWidens Becoming.KeptAlternative.adm
+          (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k)
+          (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.single) ∧
+      ¬Becoming.Run.RangeWidens Becoming.KeptAlternative.adm
+            (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.single)
+            (Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k) ∧
+        Becoming.Reaching.Widens Becoming.KeptAlternative.process Becoming.KeptAlternative.adm
+            Becoming.KeptAlternative.Config.k Becoming.KeptAlternative.Config.single ∧
+          Becoming.Reaching.Lexical Becoming.KeptAlternative.process Becoming.KeptAlternative.adm
+            Becoming.KeptAlternative.course Becoming.KeptAlternative.Config.k Becoming.KeptAlternative.Config.single
+@Becoming.KeptTogether.adm_le : ∀ {c : Becoming.KeptTogether.Config} {x : Nat}, Becoming.KeptTogether.adm c x → x ≤ 1
+@Becoming.KeptTogether.stays : ∀ {q : Becoming.Run Becoming.KeptTogether.process} {c : Becoming.KeptTogether.Config},
+  q.state 1 = c →
+    (∀ (a : Unit) (c' : Becoming.KeptTogether.Config), Becoming.KeptTogether.process.step c a c' → c' = c) →
+      ∀ (t : Nat), q.state (t + 1) = c
+Becoming.KeptTogether.split_courses : ∀ (q : Becoming.Run Becoming.KeptTogether.process),
+  q.state 0 = Becoming.KeptTogether.Config.split →
+    (∀ (t : Nat), q.state (t + 1) = Becoming.KeptTogether.Config.zero) ∨
+      ∀ (t : Nat), q.state (t + 1) = Becoming.KeptTogether.Config.one
+@Becoming.KeptTogether.possible_le : ∀ {c : Becoming.KeptTogether.Config} {x : Nat},
+  Becoming.Reaching.Possible Becoming.KeptTogether.process Becoming.KeptTogether.adm c x → x ≤ 1
+@Becoming.KeptTogether.same_possible : ∀ {x : Nat},
+  Becoming.Reaching.Possible Becoming.KeptTogether.process Becoming.KeptTogether.adm Becoming.KeptTogether.Config.both
+      x ↔
+    Becoming.Reaching.Possible Becoming.KeptTogether.process Becoming.KeptTogether.adm
+      Becoming.KeptTogether.Config.split x
+Becoming.KeptTogether.same_bundles : ∀ (n : Nat) (bundle : Nat → Prop),
+  Becoming.WithinMoves Becoming.KeptTogether.process Becoming.KeptTogether.adm Becoming.KeptTogether.Config.both n
+      bundle ↔
+    Becoming.WithinMoves Becoming.KeptTogether.process Becoming.KeptTogether.adm Becoming.KeptTogether.Config.split n
+      bundle
+Becoming.KeptTogether.widens : Becoming.Reaching.Widens Becoming.KeptTogether.process Becoming.KeptTogether.adm
+  Becoming.KeptTogether.Config.both Becoming.KeptTogether.Config.split
+@Becoming.KeptTogether.no_comparison_through_bundles : ∀ {D : Type} (π : Becoming.KeptTogether.Config → D),
+  (∀ (a b : Becoming.KeptTogether.Config),
+      (∀ (n : Nat) (bundle : Nat → Prop),
+          Becoming.WithinMoves Becoming.KeptTogether.process Becoming.KeptTogether.adm a n bundle ↔
+            Becoming.WithinMoves Becoming.KeptTogether.process Becoming.KeptTogether.adm b n bundle) →
+        π a = π b) →
+    ∀ (compare : D → D → Prop),
+      (∀ (d : D), ¬compare d d) →
+        ¬Becoming.Comparison (Becoming.Reaching.reachFrame Becoming.KeptTogether.process Becoming.KeptTogether.adm)
+            (fun x => True) fun s t => compare (π s) (π t)
+Becoming.WiderNow.course_start : ∀ (c : Option Nat), (Becoming.WiderNow.course c).state 0 = c
+Becoming.WiderNow.silent : (Becoming.Reaching.KeepsWidening fun n =>
+    Becoming.WiderNow.adm ((Becoming.WiderNow.course (some 0)).state n)) ∧
+  Becoming.Run.RangeExceeds Becoming.WiderNow.adm (Becoming.WiderNow.course none) (Becoming.WiderNow.course (some 0)) ∧
+    Becoming.Run.RangeExceeds Becoming.WiderNow.adm (Becoming.WiderNow.course (some 0))
+        (Becoming.WiderNow.course none) ∧
+      ¬Becoming.Reaching.Widens Becoming.WiderNow.process Becoming.WiderNow.adm (some 0) none ∧
+        ¬Becoming.Reaching.Widens Becoming.WiderNow.process Becoming.WiderNow.adm none (some 0) ∧
+          ¬Becoming.Reaching.Lexical Becoming.WiderNow.process Becoming.WiderNow.adm Becoming.WiderNow.course (some 0)
+                none ∧
+            ¬Becoming.Reaching.Lexical Becoming.WiderNow.process Becoming.WiderNow.adm Becoming.WiderNow.course none
+                (some 0)
+Becoming.WiderNow.decided : Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.adm (some 0)
+    none ∧
+  ¬Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.adm none (some 0)
+Becoming.WiderNow.inclusion_now_not_covering : (∀ (x : Nat),
+    Becoming.WiderNow.adm (some 0) x → Becoming.WiderNow.adm none x) ∧
+  ¬Becoming.Reaching.Covers Becoming.WiderNow.process Becoming.WiderNow.adm none (some 0)
+Becoming.WiderNow.comparison_undecided : (Becoming.Comparison
+    (Becoming.Reaching.reachFrame Becoming.WiderNow.process Becoming.WiderNow.adm) (fun x => True) fun a b =>
+    Becoming.Reaching.Widens Becoming.WiderNow.process Becoming.WiderNow.adm b a) ∧
+  (Becoming.Comparison (Becoming.Reaching.reachFrame Becoming.WiderNow.process Becoming.WiderNow.adm) (fun x => True)
+      fun a b => Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.adm b a) ∧
+    ¬Becoming.Reaching.Widens Becoming.WiderNow.process Becoming.WiderNow.adm (some 0) none ∧
+      Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.adm (some 0) none
+Becoming.WiderNow.TwoSided.silent : (Becoming.Reaching.KeepsWidening fun n =>
+    Becoming.WiderNow.TwoSided.adm ((Becoming.WiderNow.course (some 0)).state n)) ∧
+  Becoming.WiderNow.TwoSided.adm none (Sum.inr 0) ∧
+    ¬Becoming.WiderNow.TwoSided.adm (some 0) (Sum.inr 0) ∧
+      Becoming.Run.RangeExceeds Becoming.WiderNow.TwoSided.adm (Becoming.WiderNow.course none)
+          (Becoming.WiderNow.course (some 0)) ∧
+        Becoming.Run.RangeExceeds Becoming.WiderNow.TwoSided.adm (Becoming.WiderNow.course (some 0))
+            (Becoming.WiderNow.course none) ∧
+          ¬Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.TwoSided.adm (some 0) none ∧
+            ¬Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.TwoSided.adm none (some 0)
+Becoming.WiderNow.Full.not_silent : (Becoming.Reaching.KeepsWidening fun n =>
+    Becoming.WiderNow.Full.adm ((Becoming.WiderNow.course (some 0)).state n)) ∧
+  Becoming.WiderNow.Full.adm none 1 ∧
+    ¬Becoming.WiderNow.Full.adm (some 0) 1 ∧
+      Becoming.Reaching.Widens Becoming.WiderNow.process Becoming.WiderNow.Full.adm none (some 0) ∧
+        Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.Full.adm none (some 0) ∧
+          ¬Becoming.Reaching.WidensOrLater Becoming.WiderNow.process Becoming.WiderNow.Full.adm (some 0) none
+@Becoming.DeferredBranching.stepped : ∀ {r : Becoming.Run Becoming.DeferredBranching.process} {t : Nat}
+  {c : Becoming.DeferredBranching.Config},
+  r.state t = c → Becoming.DeferredBranching.process.step c (r.act t) (r.state (t + 1))
+@Becoming.DeferredBranching.at_a : ∀ {r : Becoming.Run Becoming.DeferredBranching.process},
+  r.state 2 = Becoming.DeferredBranching.Config.a → ∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.a
+@Becoming.DeferredBranching.at_b : ∀ {r : Becoming.Run Becoming.DeferredBranching.process},
+  r.state 2 = Becoming.DeferredBranching.Config.b → ∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.b
+Becoming.DeferredBranching.from_early : ∀ (r : Becoming.Run Becoming.DeferredBranching.process),
+  r.state 0 = Becoming.DeferredBranching.Config.early →
+    (r.state 1 = Becoming.DeferredBranching.Config.ma ∧
+        ∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.a) ∨
+      r.state 1 = Becoming.DeferredBranching.Config.mb ∧
+        ∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.b
+Becoming.DeferredBranching.from_late : ∀ (r : Becoming.Run Becoming.DeferredBranching.process),
+  r.state 0 = Becoming.DeferredBranching.Config.late →
+    r.state 1 = Becoming.DeferredBranching.Config.mid ∧
+      ((∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.a) ∨
+        ∀ (d : Nat), r.state (d + 2) = Becoming.DeferredBranching.Config.b)
+@Becoming.DeferredBranching.includes_of : ∀ {r q : Becoming.Run Becoming.DeferredBranching.process},
+  (∀ (x : Nat), Becoming.DeferredBranching.adm (r.state 0) x → Becoming.DeferredBranching.adm (q.state 0) x) →
+    (∀ (x : Nat), Becoming.DeferredBranching.adm (r.state 1) x → Becoming.DeferredBranching.adm (q.state 1) x) →
+      (∀ (d x : Nat),
+          Becoming.DeferredBranching.adm (r.state (d + 2)) x → Becoming.DeferredBranching.adm (q.state (d + 2)) x) →
+        Becoming.Run.RangeIncludes Becoming.DeferredBranching.adm q r
+@Becoming.DeferredBranching.moved : ∀ {r : Becoming.Run Becoming.DeferredBranching.process} {n : Nat}
+  {c : Becoming.DeferredBranching.Config},
+  r.state n = c → ∀ {x : Nat}, Becoming.DeferredBranching.adm (r.state n) x → Becoming.DeferredBranching.adm c x
+Becoming.DeferredBranching.cover_both : Becoming.Reaching.Covers Becoming.DeferredBranching.process
+    Becoming.DeferredBranching.adm Becoming.DeferredBranching.Config.late Becoming.DeferredBranching.Config.early ∧
+  Becoming.Reaching.Covers Becoming.DeferredBranching.process Becoming.DeferredBranching.adm
+      Becoming.DeferredBranching.Config.early Becoming.DeferredBranching.Config.late ∧
+    ¬Becoming.Reaching.Widens Becoming.DeferredBranching.process Becoming.DeferredBranching.adm
+          Becoming.DeferredBranching.Config.late Becoming.DeferredBranching.Config.early ∧
+      ¬Becoming.Reaching.Widens Becoming.DeferredBranching.process Becoming.DeferredBranching.adm
+          Becoming.DeferredBranching.Config.early Becoming.DeferredBranching.Config.late
+Becoming.DeferredBranching.mid_widens_ma : Becoming.Reaching.Widens Becoming.DeferredBranching.process
+  Becoming.DeferredBranching.adm Becoming.DeferredBranching.Config.mid Becoming.DeferredBranching.Config.ma
+Becoming.DeferredBranching.mid_widens_mb : Becoming.Reaching.Widens Becoming.DeferredBranching.process
+  Becoming.DeferredBranching.adm Becoming.DeferredBranching.Config.mid Becoming.DeferredBranching.Config.mb
+Becoming.DeferredBranching.widens_after_one_step : ∀ (q : Becoming.Run Becoming.DeferredBranching.process),
+  q.state 0 = Becoming.DeferredBranching.Config.late →
+    ∀ (r : Becoming.Run Becoming.DeferredBranching.process),
+      r.state 0 = Becoming.DeferredBranching.Config.early →
+        Becoming.Reaching.Widens Becoming.DeferredBranching.process Becoming.DeferredBranching.adm (q.state 1)
+          (r.state 1)
+@Becoming.DeferredBranching.early_not_simulating_late : ∀
+  {R : Becoming.DeferredBranching.Config → Becoming.DeferredBranching.Config → Prop},
+  Becoming.DeferredBranching.Simulation R →
+    R Becoming.DeferredBranching.Config.late Becoming.DeferredBranching.Config.early → False
+Becoming.DeferredBranching.late_simulates_early : Becoming.DeferredBranching.Simulation
+    Becoming.DeferredBranching.lateOverEarly ∧
+  Becoming.DeferredBranching.lateOverEarly Becoming.DeferredBranching.Config.early
+    Becoming.DeferredBranching.Config.late

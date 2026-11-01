@@ -128,7 +128,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
       "role": "proof",
-      "sha256": "81b0193e7a5805d327403bcbe6a18ceaeacf334ccb3aef5b86f93b4cb3422305",
+      "sha256": "b7ddc6da044baef36d170d23bb09089d87a63b940fc777f7ddb627bb14e83068",
       "declarations": [
         "Becoming.Room",
         "Becoming.Room.alike",
@@ -149,12 +149,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
       "role": "receipt",
       "sha256": "f6cd693c9b0301157adf4d71822fb5a78c53c70582cdf71654045a84dfe979ba"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarTesting",
       "success_pointer": "/status",
       "success_value": "passed"

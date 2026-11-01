@@ -448,7 +448,7 @@
 | Situations | `Situations.situations_of_course_listed` | `DecidableEq A`；`DecidableEq S` | 分辨相同 | 可判定是它自己的条件 |
 | Situations | `Situations.situations_take` | `DecidableEq A`；`DecidableEq S` | 分辨相同 | 可判定是它自己的条件 |
 | Situations | `Situations.sum_only` | `DecidableEq α` | 分辨相同 | 可判定是它自己的条件 |
-| Standing | `World.Embodied.standsObey_iff` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` | 计数 | 可判定是它自己的条件 |
+| Standing | `World.Embodied.standingMarksHold_iff` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` | 计数 | 可判定是它自己的条件 |
 | Standing | `World.Embodied.tally_of_stands` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` | 计数 | 可判定是它自己的条件 |
 | Standing | `ceasings_congr` | `(a : α) → (t : Nat) → Decidable (p a t)`；`(a : α) → (t : Nat) → Decidable (q a t)` | 计数 | 可判定是它自己的条件 |
 | Standing | `comings_congr` | `(a : α) → (t : Nat) → Decidable (p a t)`；`(a : α) → (t : Nat) → Decidable (q a t)` | 计数 | 可判定是它自己的条件 |
@@ -801,7 +801,7 @@
 | Copying | `Copying.tick` | `DecidableEq α` |
 | Copying | `Copying.unlikeFrom` | `DecidableEq α` |
 | Counterfactual | `mixIn` | `DecidableEq C` |
-| Counting | `World.CountsObey` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` |
+| Counting | `World.CensusMarksHold` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` |
 | Counting | `World.saturated_decided` | `(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)` |
 | Coupling | `policyUpto` | `DecidableEq K` |
 | Courses | `Courses.inspection` | `DecidableEq α` |
@@ -875,7 +875,7 @@
 | Sensitivity | `tailLaw` | `(α : Nat → Nat) → Decidable (Becoming.VanishFrom α)` |
 | Sensitivity | `vanishIndicator` | `(α : Nat → Nat) → Decidable (Becoming.VanishFrom α)` |
 | Situations | `Situations.occ` | `DecidableEq α` |
-| Standing | `World.DependsObey` | `(t : Nat) → (f c : w.Relatum) → Decidable (w.web.requires t f c)` |
+| Standing | `World.DependenceMarksHold` | `(t : Nat) → (f c : w.Relatum) → Decidable (w.web.requires t f c)` |
 | Tail | `lpoRuleOfVanishDecision` | `(α : Nat → Nat) → Decidable (Becoming.VanishFrom α)` |
 | Tail | `neverIndicator` | `(s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)` |
 | Tail | `neverLaw` | `(s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)` |

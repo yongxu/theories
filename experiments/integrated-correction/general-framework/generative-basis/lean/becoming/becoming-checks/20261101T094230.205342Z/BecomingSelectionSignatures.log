@@ -1,0 +1,285 @@
+@Becoming.Web.AlikeThrough.trans : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' l'' : Nat → C → Nat} {t : Nat},
+  W.AlikeThrough obs g l l' t → W.AlikeThrough obs g l' l'' t → W.AlikeThrough obs g l l'' t
+@Becoming.Web.AlikeThroughUpTo.trans : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' l'' : Nat → C → Nat} {t : Nat},
+  W.AlikeThroughUpTo obs g l l' t → W.AlikeThroughUpTo obs g l' l'' t → W.AlikeThroughUpTo obs g l l'' t
+@Becoming.Web.AlikeThroughAll.refl : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l : Nat → C → Nat} (t : Nat), W.AlikeThroughAll obs group l l t
+@Becoming.Web.AlikeThroughAll.symm : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l l' : Nat → C → Nat} {t : Nat}, W.AlikeThroughAll obs group l l' t → W.AlikeThroughAll obs group l' l t
+@Becoming.Web.AlikeThroughAll.trans : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l l' l'' : Nat → C → Nat} {t : Nat},
+  W.AlikeThroughAll obs group l l' t → W.AlikeThroughAll obs group l' l'' t → W.AlikeThroughAll obs group l l'' t
+@Becoming.Web.class_selects : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  {t : Nat}, W.SelectsThrough obs g t (W.ClassThrough obs g l t)
+@Becoming.Web.selects_alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat},
+  (∀ (select : (Nat → C → Nat) → Prop), W.SelectsThrough obs g t select → (select l ↔ select l')) ↔
+    W.AlikeThroughUpTo obs g l l' t
+@Becoming.Web.separates : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l l' : Nat → C → Nat}
+  {t : Nat}, ¬W.AlikeThroughUpTo obs g l l' t → ∃ select, W.SelectsThrough obs g t select ∧ select l ∧ ¬select l'
+@Becoming.Web.SelectsThrough.excludes_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {t : Nat} {select : (Nat → C → Nat) → Prop},
+  W.SelectsThrough obs g t select → (W.Excludes obs select g l t ↔ ¬select l)
+@Becoming.Web.admits_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t s : Nat},
+  s ≤ t → W.SelectsThrough obs g t fun l => W.Admits (l s) s g
+@Becoming.Web.observed_scores : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t : Nat} {c : C}
+  {s : Nat}, obs g c → s ≤ t → W.ScoresThrough obs g t fun l => l s c
+@Becoming.Web.ScoresThrough.atLeast : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t : Nat}
+  {score : (Nat → C → Nat) → Nat},
+  W.ScoresThrough obs g t score → ∀ (k : Nat), W.SelectsThrough obs g t fun l => k ≤ score l
+@Becoming.Web.SelectsThrough.later : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t : Nat}
+  {select : (Nat → C → Nat) → Prop} {s : Nat}, W.SelectsThrough obs g s select → s ≤ t → W.SelectsThrough obs g t select
+@Becoming.Web.SelectsThrough.widen : ∀ {F C : Type} {W : Becoming.Web F C} {obs obs' : F → C → Prop} {g : F} {t : Nat}
+  {select : (Nat → C → Nat) → Prop},
+  (∀ (g : F) (c : C), obs g c → obs' g c) → W.SelectsThrough obs g t select → W.SelectsThrough obs' g t select
+@Becoming.Web.SelectsThrough.not : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t : Nat}
+  {select : (Nat → C → Nat) → Prop}, W.SelectsThrough obs g t select → W.SelectsThrough obs g t fun l => ¬select l
+@Becoming.Web.SelectsThrough.and : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {t : Nat}
+  {select select' : (Nat → C → Nat) → Prop},
+  W.SelectsThrough obs g t select →
+    W.SelectsThrough obs g t select' → W.SelectsThrough obs g t fun l => select l ∧ select' l
+@Becoming.Web.scores_alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat} (decided : (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs g l m t)),
+  (∀ (score : (Nat → C → Nat) → Nat), W.ScoresThrough obs g t score → score l = score l') ↔
+    W.AlikeThroughUpTo obs g l l' t
+@Becoming.Web.SelectsThrough.all : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {group : F → Prop}
+  {t : Nat} {select : (Nat → C → Nat) → Prop},
+  group g → W.SelectsThrough obs g t select → W.SelectsThroughAll obs group t select
+@Becoming.Web.SelectsThroughAll.and : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {t : Nat} {select select' : (Nat → C → Nat) → Prop},
+  W.SelectsThroughAll obs group t select →
+    W.SelectsThroughAll obs group t select' → W.SelectsThroughAll obs group t fun l => select l ∧ select' l
+@Becoming.Web.selects_alike_all_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l l' : Nat → C → Nat} {t : Nat},
+  (∀ (select : (Nat → C → Nat) → Prop), W.SelectsThroughAll obs group t select → (select l ↔ select l')) ↔
+    W.AlikeThroughAll obs group l l' t
+@Becoming.Web.separates_all : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l l' : Nat → C → Nat} {t : Nat},
+  ¬W.AlikeThroughAll obs group l l' t → ∃ select, W.SelectsThroughAll obs group t select ∧ select l ∧ ¬select l'
+@Becoming.Flow.beyond_pool_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {group : F → Prop} {g h : F},
+  L.WithinPoolCoupling W obs group g →
+    ¬L.WithinPoolCoupling W obs group h → ∀ {c : C}, W.CoupledInto obs g c → ¬L.Exchanges h c
+@Becoming.Flow.unselected_beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {select : (Nat → C → Nat) → Prop} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          ∀ {g : F},
+            L.WithinCoupling W obs f g → ∀ {t : Nat}, W.SelectsThrough obs g t select → (select W.level ↔ select l)
+@Becoming.Flow.unscored_beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {score : (Nat → C → Nat) → Nat} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          ∀ {g : F}, L.WithinCoupling W obs f g → ∀ {t : Nat}, W.ScoresThrough obs g t score → score W.level = score l
+@Becoming.Flow.uncoupled_beyond_pool : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    (∀ (t : Nat) (g : F) (c : C), L.WithinPoolCoupling W obs group g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+      (∀ (h : F), part h = true → ¬L.WithinPoolCoupling W obs group h) →
+        ∀ (t : Nat) (g : F), L.WithinPoolCoupling W obs group g → W.AlikeThrough obs g W.level l t
+@Becoming.Flow.unselected_beyond_pool : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {select : (Nat → C → Nat) → Prop} {group : F → Prop} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    (∀ (t : Nat) (g : F) (c : C), L.WithinPoolCoupling W obs group g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+      (∀ (h : F), part h = true → ¬L.WithinPoolCoupling W obs group h) →
+        ∀ {pool : F → Prop},
+          (∀ (g : F), pool g → L.WithinPoolCoupling W obs group g) →
+            ∀ {t : Nat}, W.SelectsThroughAll obs pool t select → (select W.level ↔ select l)
+@Becoming.Flow.unselected_beyond_coupling_all : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {select : (Nat → C → Nat) → Prop} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          ∀ {group : F → Prop},
+            (∀ (g : F), group g → L.WithinCoupling W obs f g) →
+              ∀ {t : Nat}, W.SelectsThroughAll obs group t select → (select W.level ↔ select l)
+@Becoming.Flow.unselected_beyond_coupling_responsive : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {select : (Nat → C → Nat) → Prop} {f : F},
+  (∀ (t : Nat) (g : F) (c : C),
+      Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C),
+        Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F),
+            Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+              ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          (∀ (h : F),
+              Becoming.WithinClosure (L.CoupledFromEither W L' obs) f h →
+                ∀ (t : Nat),
+                  W.AlikeThroughUpTo obs h W.level W'.level t →
+                    ∀ (g : F) (c : C),
+                      Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                        W.CoupledInto obs g c → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ {g : F},
+              Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                ∀ {t : Nat}, W.SelectsThrough obs g t select → (select W.level ↔ select W'.level)
+@Becoming.share_rises_through : ∀ {C α : Type} {history : α → Nat → C → Nat} {kids : α → List α}
+  {select : (Nat → C → Nat) → Prop} {ms es : List α} {a b : Nat},
+  (∀ (p : α), p ∈ ms → select (history p)) →
+    (∀ (p : α), p ∈ es → ¬select (history p)) →
+      (∀ (p : α), select (history p) → a ≤ (kids p).length) →
+        (∀ (p : α), ¬select (history p) → (kids p).length ≤ b) →
+          b < a →
+            0 < ms.length →
+              0 < es.length → ms.length * Becoming.offspringCount es kids < Becoming.offspringCount ms kids * es.length
+@Becoming.Relabel.swap_left : ∀ {K : Type u_1} [inst : DecidableEq K] (a b : K), Becoming.Relabel.swap a b a = b
+@Becoming.Relabel.swap_right : ∀ {K : Type u_1} [inst : DecidableEq K] (a b : K), Becoming.Relabel.swap a b b = a
+@Becoming.Relabel.swap_other : ∀ {K : Type u_1} [inst : DecidableEq K] (a b : K) {k : K},
+  k ≠ a → k ≠ b → Becoming.Relabel.swap a b k = k
+@Becoming.Relabel.swap_swap : ∀ {K : Type u_1} [inst : DecidableEq K] (a b k : K),
+  Becoming.Relabel.swap a b (Becoming.Relabel.swap a b k) = k
+@Becoming.Relabel.swap_inj : ∀ {K : Type u_1} [inst : DecidableEq K] (a b : K) {x y : K},
+  Becoming.Relabel.swap a b x = Becoming.Relabel.swap a b y → x = y
+@Becoming.Relabel.fixed_of_tied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {j k : K},
+  r j = r k → ∀ (i : K), r i = r (Becoming.Relabel.swap j k i)
+@Becoming.Relabel.Equivariant.tied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {j k : K}
+  {select : (K → V) → K → Prop}, Becoming.Relabel.Equivariant select → r j = r k → (select r j ↔ select r k)
+@Becoming.Relabel.selected_alike_iff : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {j k : K},
+  (∀ (select : (K → V) → K → Prop), Becoming.Relabel.Equivariant select → (select r j ↔ select r k)) ↔ r j = r k
+@Becoming.Relabel.Equivariant.untied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {k : K}
+  {select : (K → V) → K → Prop},
+  Becoming.Relabel.Equivariant select →
+    (∀ (i i' : K), select r i → select r i' → i = i') → select r k → ∀ (j : K), j ≠ k → r j ≠ r k
+@Becoming.Relabel.Equivariant.none_of_full_tie : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V}
+  {select : (K → V) → K → Prop},
+  Becoming.Relabel.Equivariant select →
+    (∀ (i i' : K), select r i → select r i' → i = i') →
+      ∀ {a b : K}, a ≠ b → (∀ (i i' : K), r i = r i') → ∀ (k : K), ¬select r k
+@Becoming.Relabel.alone_equivariant : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] (v : V),
+  Becoming.Relabel.Equivariant (Becoming.Relabel.Alone v)
+@Becoming.Relabel.alone_single : ∀ {K : Type u_1} {V : Type u_2} [DecidableEq K] {r : K → V} {v : V} {i i' : K},
+  Becoming.Relabel.Alone v r i → Becoming.Relabel.Alone v r i' → i = i'
+@Becoming.Relabel.singled_iff_untied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {k : K},
+  (∃ select,
+      Becoming.Relabel.Equivariant select ∧
+        (∀ (r' : K → V) (i i' : K), select r' i → select r' i' → i = i') ∧ select r k) ↔
+    ∀ (j : K), j ≠ k → r j ≠ r k
+@Becoming.Relabel.EquivariantValue.tied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {j k : K}
+  {W : Type u_3} {value : (K → V) → K → W}, Becoming.Relabel.EquivariantValue value → r j = r k → value r j = value r k
+@Becoming.Relabel.EquivariantValue.full_tie : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V}
+  {W : Type u_3} {value : (K → V) → K → W},
+  Becoming.Relabel.EquivariantValue value → (∀ (i i' : K), r i = r i') → ∀ (i i' : K), value r i = value r i'
+@Becoming.Relabel.EquivariantValue.level : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {W : Type u_3}
+  {value : (K → V) → K → W},
+  Becoming.Relabel.EquivariantValue value → ∀ (c : W), Becoming.Relabel.Equivariant fun r i => value r i = c
+@Becoming.Relabel.EquivariantValue.const : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {W : Type u_3}
+  (c : W), Becoming.Relabel.EquivariantValue fun x x_1 => c
+@Becoming.Relabel.entry_equivariant : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K],
+  Becoming.Relabel.EquivariantValue fun r i => r i
+@Becoming.Relabel.valued_alike_iff : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {j k : K},
+  (∀ (value : (K → V) → K → V), Becoming.Relabel.EquivariantValue value → value r j = value r k) ↔ r j = r k
+@Becoming.Relabel.map_swap_eq_some : ∀ {K : Type u_1} [inst : DecidableEq K] (a b : K) {i : K} {o : Option K},
+  Option.map (Becoming.Relabel.swap a b) o = some i ↔ o = some (Becoming.Relabel.swap a b i)
+@Becoming.Relabel.EquivariantChoice.selects : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K]
+  {rule : (K → V) → Option K},
+  Becoming.Relabel.EquivariantChoice rule → Becoming.Relabel.Equivariant fun r i => rule r = some i
+@Becoming.Relabel.EquivariantChoice.single : ∀ {K : Type u_1} {V : Type u_2} {rule : (K → V) → Option K} (r : K → V)
+  {i i' : K}, rule r = some i → rule r = some i' → i = i'
+@Becoming.Relabel.EquivariantChoice.untied : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V} {k : K}
+  {rule : (K → V) → Option K}, Becoming.Relabel.EquivariantChoice rule → rule r = some k → ∀ (j : K), j ≠ k → r j ≠ r k
+@Becoming.Relabel.EquivariantChoice.withholds_of_full_tie : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K]
+  {r : K → V} {rule : (K → V) → Option K},
+  Becoming.Relabel.EquivariantChoice rule → ∀ {a b : K}, a ≠ b → (∀ (i i' : K), r i = r i') → rule r = none
+Becoming.Clearing.unselected : (∀ (t : Nat) (select : (Nat → Becoming.Clearing.Place → Nat) → Prop),
+    Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.clearer t select →
+      (select Becoming.Clearing.web.level ↔ select Becoming.Clearing.sparedWeb.level)) ∧
+  Becoming.Clearing.DwellerEnded Becoming.Clearing.web.level ∧
+    ¬Becoming.Clearing.DwellerEnded Becoming.Clearing.sparedWeb.level ∧
+      ∀ (t : Nat),
+        ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.clearer t
+            Becoming.Clearing.DwellerEnded
+Becoming.Clearing.dweller_within_reach : Becoming.Clearing.flow.WithinReach Becoming.Clearing.web
+    Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.dweller ∧
+  ¬Becoming.Clearing.flow.WithinCoupling Becoming.Clearing.web Becoming.thresholdOnly
+        Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.dweller ∧
+    ¬Becoming.Clearing.web.CoupledInto Becoming.thresholdOnly Becoming.Clearing.Formation.clearer
+        Becoming.Clearing.Place.habitat
+Becoming.Clearing.dweller_spared : Becoming.Clearing.web.Admits (Becoming.Clearing.sparedWeb.level 2) 2
+  Becoming.Clearing.Formation.dweller
+Becoming.Clearing.clearer_spared : Becoming.Clearing.web.Admits (Becoming.Clearing.sparedWeb.level 2) 2
+  Becoming.Clearing.Formation.clearer
+Becoming.Clearing.selected_by_dweller : (Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly
+    Becoming.Clearing.Formation.dweller 2 fun l =>
+    Becoming.Clearing.web.Admits (l 2) 2 Becoming.Clearing.Formation.dweller) ∧
+  Becoming.Clearing.web.Admits (Becoming.Clearing.sparedWeb.level 2) 2 Becoming.Clearing.Formation.dweller ∧
+    ¬Becoming.Clearing.web.Admits (Becoming.Clearing.web.level 2) 2 Becoming.Clearing.Formation.dweller ∧
+      ¬Becoming.Clearing.web.AlikeThroughUpTo Becoming.thresholdOnly Becoming.Clearing.Formation.dweller
+          Becoming.Clearing.web.level Becoming.Clearing.sparedWeb.level 2
+Becoming.Clearing.dweller_alike_gone : ∀ (t : Nat),
+  Becoming.Clearing.web.AlikeThroughUpTo Becoming.thresholdOnly Becoming.Clearing.Formation.dweller
+    Becoming.Clearing.sparedWeb.level Becoming.Clearing.resourceGone t
+Becoming.Clearing.selected_pooled : Becoming.Clearing.web.SelectsThroughAll Becoming.thresholdOnly
+    Becoming.Clearing.clearerAndDweller 2 Becoming.Clearing.BothAdmitted ∧
+  Becoming.Clearing.BothAdmitted Becoming.Clearing.sparedWeb.level ∧
+    ¬Becoming.Clearing.BothAdmitted Becoming.Clearing.web.level ∧
+      ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.clearer 2
+            Becoming.Clearing.BothAdmitted ∧
+        ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.dweller 2
+            Becoming.Clearing.BothAdmitted
+Becoming.Diversion.diverting_balances : Becoming.Diversion.diverting.Balances
+  (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+Becoming.Diversion.undiverted_balances : Becoming.Diversion.undiverted.Balances
+  (Becoming.Diversion.web Becoming.Diversion.undivertedLevel)
+Becoming.Diversion.supplying_balances : Becoming.Diversion.supplying.Balances
+  (Becoming.Diversion.web Becoming.Diversion.suppliedLevel)
+Becoming.Diversion.dependent : ∀ (level : Nat → Becoming.Diversion.Place → Nat),
+  (Becoming.Diversion.web level).Dependent
+Becoming.Diversion.diverting_acting : Becoming.Diversion.diverting.Acting
+  (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+Becoming.Diversion.diverting_taking : Becoming.Diversion.diverting.Taking
+  (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+Becoming.Diversion.takerAlone_closed : Becoming.ClosedUnder
+  (Becoming.Diversion.diverting.CoupledFrom (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+    Becoming.Diversion.gauge)
+  Becoming.Diversion.takerAlone
+Becoming.Diversion.supplied_closed : Becoming.ClosedUnder
+  (Becoming.Diversion.supplying.Affects (Becoming.Diversion.web Becoming.Diversion.suppliedLevel))
+  Becoming.Diversion.takerAlone
+Becoming.Diversion.favours : Becoming.Diversion.diverting.Balances
+    (Becoming.Diversion.web Becoming.Diversion.divertedLevel) ∧
+  Becoming.Diversion.undiverted.Balances (Becoming.Diversion.web Becoming.Diversion.undivertedLevel) ∧
+    (Becoming.Diversion.web Becoming.Diversion.divertedLevel).Dependent ∧
+      (Becoming.Diversion.web Becoming.Diversion.undivertedLevel).Dependent ∧
+        Becoming.Diversion.diverting.Acting (Becoming.Diversion.web Becoming.Diversion.divertedLevel) ∧
+          Becoming.Diversion.diverting.Taking (Becoming.Diversion.web Becoming.Diversion.divertedLevel) ∧
+            Becoming.Diversion.diverting.WithinReach (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+                Becoming.Diversion.Formation.taker Becoming.Diversion.Formation.dweller ∧
+              ¬Becoming.Diversion.diverting.WithinCoupling (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+                    Becoming.Diversion.gauge Becoming.Diversion.Formation.taker Becoming.Diversion.Formation.dweller ∧
+                ¬Becoming.Diversion.undiverted.WithinReach (Becoming.Diversion.web Becoming.Diversion.undivertedLevel)
+                      Becoming.Diversion.Formation.taker Becoming.Diversion.Formation.dweller ∧
+                  (Becoming.Diversion.web Becoming.Diversion.divertedLevel).SelectsThrough Becoming.Diversion.gauge
+                      Becoming.Diversion.Formation.taker 1 (Becoming.Diversion.StoreAtLeast 1 1) ∧
+                    Becoming.Diversion.StoreAtLeast 1 1 Becoming.Diversion.divertedLevel ∧
+                      ¬Becoming.Diversion.StoreAtLeast 1 1 Becoming.Diversion.undivertedLevel ∧
+                        (∀ (n : Nat),
+                            ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).Supported (n + 1)
+                                Becoming.Diversion.Formation.dweller) ∧
+                          ∀ (t : Nat),
+                            (Becoming.Diversion.web Becoming.Diversion.undivertedLevel).Supported t
+                              Becoming.Diversion.Formation.dweller
+Becoming.Diversion.blind_to_source : Becoming.Diversion.supplying.Balances
+    (Becoming.Diversion.web Becoming.Diversion.suppliedLevel) ∧
+  (Becoming.Diversion.web Becoming.Diversion.suppliedLevel).Dependent ∧
+    ¬Becoming.Diversion.supplying.WithinReach (Becoming.Diversion.web Becoming.Diversion.suppliedLevel)
+          Becoming.Diversion.Formation.taker Becoming.Diversion.Formation.dweller ∧
+      (∀ (t : Nat),
+          (Becoming.Diversion.web Becoming.Diversion.divertedLevel).AlikeThroughUpTo Becoming.Diversion.gauge
+            Becoming.Diversion.Formation.taker Becoming.Diversion.divertedLevel Becoming.Diversion.suppliedLevel t) ∧
+        (∀ (t : Nat) (select : (Nat → Becoming.Diversion.Place → Nat) → Prop),
+            (Becoming.Diversion.web Becoming.Diversion.divertedLevel).SelectsThrough Becoming.Diversion.gauge
+                Becoming.Diversion.Formation.taker t select →
+              (select Becoming.Diversion.divertedLevel ↔ select Becoming.Diversion.suppliedLevel)) ∧
+          (∀ (t : Nat),
+              (Becoming.Diversion.web Becoming.Diversion.suppliedLevel).Supported t
+                Becoming.Diversion.Formation.dweller) ∧
+            ∀ (n : Nat),
+              ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).Supported (n + 1)
+                  Becoming.Diversion.Formation.dweller

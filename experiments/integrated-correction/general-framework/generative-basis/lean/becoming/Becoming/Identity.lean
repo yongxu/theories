@@ -790,13 +790,14 @@ instance (t : Nat) (f : F) : Decidable (W.ArisesFrom R t f) := instDecidableAnd
 
 instance (t : Nat) (g : F) : Decidable (W.CeasesFrom R t g) := instDecidableAnd
 
-variable {W R} [∀ t g f, Decidable (R t g f)]
+variable {W R}
 
 /-- The census balance under a continuation, across one step at whose two ends the active
 formations are listed: without splits across it, the formations active after the step with
 those ceasing under the continuation are at most those active before with those arising
 under it; without merges across it, at least. Only the two listings and the step's splits
-and merges are used. -/
+and merges are used: it is the root's census of a step, both halves (`«定后则后并亡不过前并生»`,
+`«定前则前并生不过后并亡»`), at the step's relation between formations active at both ends. -/
 theorem Census.balanceFrom_at {alive : Nat → List F} {t : Nat}
     (now : Distinct (alive t) ∧ ∀ f, W.active t f ↔ f ∈ alive t)
     (next : Distinct (alive (t + 1)) ∧ ∀ f, W.active (t + 1) f ↔ f ∈ alive (t + 1)) :
@@ -808,74 +809,32 @@ theorem Census.balanceFrom_at {alive : Nat → List F} {t : Nat}
       W.active (t + 1) f → g = g') →
       (alive t).length + total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f)) ≤
         (alive (t + 1)).length + total (alive t) (fun g => mark (W.CeasesFrom R t g))) :=
-  have after : (alive (t + 1)).length = total (alive (t + 1)) (fun f => mark (W.Continues R t f)) +
-      total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f)) :=
-    (total_ones _).symm.trans ((total_congr_on fun f mem =>
-      have active : W.active (t + 1) f := (next.2 f).mpr mem
-      Eq.symm (mark_add_not (q := W.Continues R t f) (r := W.ArisesFrom R t f)
-        (if h : W.Continues R t f then .inl h else .inr ⟨active, h⟩)
-        fun both => both.2.2 both.1)).trans (total_add _ _ _))
-  have before : (alive t).length = total (alive t) (fun g => mark (W.Continued R t g)) +
-      total (alive t) (fun g => mark (W.CeasesFrom R t g)) :=
-    (total_ones _).symm.trans ((total_congr_on fun g mem =>
-      have active : W.active t g := (now.2 g).mpr mem
-      Eq.symm (mark_add_not (q := W.Continued R t g) (r := W.CeasesFrom R t g)
-        (if h : W.Continued R t g then .inl h else .inr ⟨active, h⟩)
-        fun both => both.2.2 both.1)).trans (total_add _ _ _))
-  have swap : total (alive t) (fun g => total (alive (t + 1)) fun f => mark (R t g f)) =
-      total (alive (t + 1)) (fun f => total (alive t) fun g => mark (R t g f)) :=
-    total_swap (fun g f => mark (R t g f)) (alive (t + 1)) (alive t)
-  have continued : total (alive (t + 1)) (fun f => mark (W.Continues R t f)) ≤
-      total (alive t) (fun g => total (alive (t + 1)) fun f => mark (R t g f)) :=
-    Nat.le_trans (total_le _ fun _ _ => mark_le_total fun ⟨g, active, continues⟩ =>
-      ⟨g, (now.2 g).mp active, continues⟩) (Nat.le_of_eq swap.symm)
-  have continuing : total (alive t) (fun g => mark (W.Continued R t g)) ≤
-      total (alive t) (fun g => total (alive (t + 1)) fun f => mark (R t g f)) :=
-    total_le _ fun _ _ => mark_le_total fun ⟨f, active, continues⟩ =>
-      ⟨f, (next.2 f).mp active, continues⟩
-  ⟨fun noSplit =>
-    have pairs : total (alive t) (fun g => total (alive (t + 1)) fun f => mark (R t g f)) ≤
-        total (alive t) (fun g => mark (W.Continued R t g)) :=
-      total_le _ fun g mem => total_le_mark next.1
-        (fun f f' mem_f mem_f' continues continues' =>
-          noSplit g f f' ((now.2 g).mpr mem) continues continues'
-            ((next.2 f).mpr mem_f) ((next.2 f').mpr mem_f'))
-        fun f mem_f continues => ⟨f, (next.2 f).mpr mem_f, continues⟩
-    calc (alive (t + 1)).length + total (alive t) (fun g => mark (W.CeasesFrom R t g))
-        = (total (alive (t + 1)) (fun f => mark (W.Continues R t f)) +
-            total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f))) +
-            total (alive t) (fun g => mark (W.CeasesFrom R t g)) := congrArg (· + _) after
-      _ ≤ (total (alive t) (fun g => mark (W.Continued R t g)) +
-            total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f))) +
-            total (alive t) (fun g => mark (W.CeasesFrom R t g)) :=
-        Nat.add_le_add_right (Nat.add_le_add_right (Nat.le_trans continued pairs) _) _
-      _ = (alive t).length + total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f)) :=
-        (Nat.add_right_comm _ _ _).trans (congrArg (· + _) before.symm),
-   fun noMerge =>
-    have pairs : total (alive t) (fun g => total (alive (t + 1)) fun f => mark (R t g f)) ≤
-        total (alive (t + 1)) (fun f => mark (W.Continues R t f)) :=
-      Nat.le_trans (Nat.le_of_eq swap) (total_le _ fun f mem => total_le_mark now.1
-        (fun g g' mem_g mem_g' continues continues' =>
-          noMerge g g' f ((now.2 g).mpr mem_g) ((now.2 g').mpr mem_g')
-            continues continues' ((next.2 f).mpr mem))
-        fun g mem_g continues => ⟨g, (now.2 g).mpr mem_g, continues⟩)
-    calc (alive t).length + total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f))
-        = (total (alive t) (fun g => mark (W.Continued R t g)) +
-            total (alive t) (fun g => mark (W.CeasesFrom R t g))) +
-            total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f)) := congrArg (· + _) before
-      _ ≤ (total (alive (t + 1)) (fun f => mark (W.Continues R t f)) +
-            total (alive t) (fun g => mark (W.CeasesFrom R t g))) +
-            total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f)) :=
-        Nat.add_le_add_right (Nat.add_le_add_right (Nat.le_trans continuing pairs) _) _
-      _ = (alive (t + 1)).length + total (alive t) (fun g => mark (W.CeasesFrom R t g)) :=
-        (Nat.add_right_comm _ _ _).trans (congrArg (· + _) after.symm)⟩
+  ⟨fun noSplit => by
+    rw [total_mark_eq_count, total_mark_eq_count]
+    exact «定后则后并亡不过前并生» (R := R t) (E := fun g f => W.active t g ∧ W.active (t + 1) f)
+      next.1
+      («定后之逐点».mpr fun g f f' ⟨r, active, af⟩ ⟨r', _, af'⟩ => noSplit g f f' active r r' af af')
+      (fun f mf off none =>
+        have af : W.active (t + 1) f := (next.2 f).mpr mf
+        (fun alone : ¬ W.Continues R t f => of_decide_eq_false off ⟨af, alone⟩)
+          fun ⟨g, ag, r⟩ => none ⟨g, (now.2 g).mp ag, r, ag, af⟩)
+      (fun g _ on f _ ⟨r, _, af⟩ => (of_decide_eq_true on).2 ⟨f, af, r⟩),
+   fun noMerge => by
+    rw [total_mark_eq_count, total_mark_eq_count]
+    exact «定前则前并生不过后并亡» (R := R t) (E := fun g f => W.active t g ∧ W.active (t + 1) f)
+      now.1
+      («定前之逐点».mpr fun g g' f ⟨r, ag, af⟩ ⟨r', ag', _⟩ => noMerge g g' f ag ag' r r' af)
+      (fun g mg off none =>
+        have ag : W.active t g := (now.2 g).mpr mg
+        (fun alone : ¬ W.Continued R t g => of_decide_eq_false off ⟨ag, alone⟩)
+          fun ⟨f, af, r⟩ => none ⟨f, (next.2 f).mp af, r, ag, af⟩)
+      (fun f _ on g _ ⟨r, ag, _⟩ => (of_decide_eq_true on).2 ⟨g, ag, r⟩)⟩
 
 /-- The census balance under a continuation. Under a census, across each step: without
 splits, the formations active after the step with those ceasing under the continuation are
 at most those active before with those arising under it; without merges, at least. Each
-side is read against the continuing pairs: no more formations after the step continue one
-before it than there are pairs, nor are more before it continued, and without merges the
-first count is the pairs, without splits the second. -/
+side is the root's census of a step at the step's relation between active formations
+(`balanceFrom_at`). -/
 theorem Census.balanceFrom {alive : Nat → List F} (census : W.Census alive) (t : Nat) :
     (W.NoSplit R → (alive (t + 1)).length + total (alive t) (fun g => mark (W.CeasesFrom R t g)) ≤
       (alive t).length + total (alive (t + 1)) (fun f => mark (W.ArisesFrom R t f))) ∧

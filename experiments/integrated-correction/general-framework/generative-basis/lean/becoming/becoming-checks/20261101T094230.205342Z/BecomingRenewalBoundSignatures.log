@@ -1,0 +1,74 @@
+@Becoming.RenewalBound.no_unrenewed_tail_of_accessible : ∀ {State : Type u_1} {unrenewed : State → State → Prop}
+  {states : Nat → State} {a : State},
+  Acc unrenewed a → ∀ (start : Nat), states start = a → ¬∀ (n : Nat), start ≤ n → unrenewed (states (n + 1)) (states n)
+@Becoming.RenewalBound.no_renewal_free_tail : ∀ {State : Type u_1} {unrenewed : State → State → Prop},
+  WellFounded unrenewed →
+    ∀ (states : Nat → State) (renewal : Nat → Prop),
+      (∀ (n : Nat), ¬renewal n → unrenewed (states (n + 1)) (states n)) →
+        ∀ (start : Nat), ¬∀ (n : Nat), start ≤ n → ¬renewal n
+@Becoming.RenewalBound.renewal_after_of_accessible : ∀ {State : Type u_1} {unrenewed : State → State → Prop}
+  {states : Nat → State} {renewal : Nat → Prop},
+  (∀ (n : Nat), renewal n ∨ unrenewed (states (n + 1)) (states n)) →
+    ∀ {a : State}, Acc unrenewed a → ∀ (start : Nat), states start = a → ∃ n, start ≤ n ∧ renewal n
+@Becoming.RenewalBound.renewal_arbitrarily_late : ∀ {State : Type u_1} {unrenewed : State → State → Prop},
+  WellFounded unrenewed →
+    ∀ (states : Nat → State) (renewal : Nat → Prop),
+      (∀ (n : Nat), renewal n ∨ unrenewed (states (n + 1)) (states n)) → ∀ (start : Nat), ∃ n, start ≤ n ∧ renewal n
+@Becoming.RenewalBound.renewal_arbitrarily_late_of_decidable : ∀ {State : Type u_1} {unrenewed : State → State → Prop},
+  WellFounded unrenewed →
+    ∀ (states : Nat → State) (renewal : Nat → Prop) (decision : (n : Nat) → Decidable (renewal n)),
+      (∀ (n : Nat), ¬renewal n → unrenewed (states (n + 1)) (states n)) → ∀ (start : Nat), ∃ n, start ≤ n ∧ renewal n
+Becoming.RenewalBound.renewal_within_rank_bound : ∀ (rank : Nat → Nat) (renewal : Nat → Prop)
+  (decision : (n : Nat) → Decidable (renewal n)),
+  (∀ (n : Nat), ¬renewal n → rank (n + 1) < rank n) →
+    ∀ (bound start : Nat), rank start ≤ bound → ∃ n, start ≤ n ∧ n ≤ start + bound ∧ renewal n
+Becoming.RenewalBound.renewal_within_rank_plus_one_steps : ∀ (rank : Nat → Nat) (renewal : Nat → Prop)
+  (decision : (n : Nat) → Decidable (renewal n)),
+  (∀ (n : Nat), ¬renewal n → rank (n + 1) < rank n) →
+    ∀ (start : Nat), ∃ n, start ≤ n ∧ n ≤ start + rank start ∧ renewal n
+Becoming.RenewalBound.rank_renewal_arbitrarily_late : ∀ (rank : Nat → Nat) (renewal : Nat → Prop)
+  (decision : (n : Nat) → Decidable (renewal n)),
+  (∀ (n : Nat), ¬renewal n → rank (n + 1) < rank n) → ∀ (start : Nat), ∃ n, start ≤ n ∧ renewal n
+@Becoming.RenewalBound.run_no_renewal_free_tail : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) {renews : S → A → S → Prop} {unrenewed : S → S → Prop},
+  WellFounded unrenewed →
+    (∀ (n : Nat), ¬renews (r.state n) (r.act n) (r.state (n + 1)) → unrenewed (r.state (n + 1)) (r.state n)) →
+      ∀ (start : Nat), ¬∀ (n : Nat), start ≤ n → ¬renews (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.RenewalBound.run_renewal_arbitrarily_late : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) {renews : S → A → S → Prop} (decision : (s : S) → (a : A) → (t : S) → Decidable (renews s a t))
+  {unrenewed : S → S → Prop},
+  WellFounded unrenewed →
+    (∀ (n : Nat), ¬renews (r.state n) (r.act n) (r.state (n + 1)) → unrenewed (r.state (n + 1)) (r.state n)) →
+      ∀ (start : Nat), ∃ n, start ≤ n ∧ renews (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.RenewalBound.run_renewal_within_rank : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) {renews : S → A → S → Prop} (decision : (s : S) → (a : A) → (t : S) → Decidable (renews s a t))
+  (rank : S → Nat),
+  (∀ (n : Nat), ¬renews (r.state n) (r.act n) (r.state (n + 1)) → rank (r.state (n + 1)) < rank (r.state n)) →
+    ∀ (start : Nat), ∃ n, start ≤ n ∧ n ≤ start + rank (r.state start) ∧ renews (r.state n) (r.act n) (r.state (n + 1))
+Becoming.RenewalBound.state_succ : ∀ (n : Nat),
+  Becoming.RenewalBound.alternation.state (n + 1) = !Becoming.RenewalBound.alternation.state n
+Becoming.RenewalBound.actual_steps : ∀ (n : Nat),
+  Becoming.RenewalBound.AlternatingStep (Becoming.RenewalBound.alternation.state n)
+    (Becoming.RenewalBound.alternation.state (n + 1))
+Becoming.RenewalBound.nonrestoring_decreases : ∀ (n : Nat),
+  ¬Becoming.RenewalBound.Restoring n →
+    Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state (n + 1)) <
+      Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state n)
+Becoming.RenewalBound.restores_arbitrarily_late : ∀ (start : Nat), ∃ n, start ≤ n ∧ Becoming.RenewalBound.Restoring n
+Becoming.RenewalBound.period_two : ∀ (n : Nat),
+  Becoming.RenewalBound.alternation.state (n + 2) = Becoming.RenewalBound.alternation.state n
+Becoming.RenewalBound.one_restoring_form : ∀ (n : Nat),
+  Becoming.RenewalBound.Restoring n →
+    Becoming.RenewalBound.alternation.state n = false ∧ Becoming.RenewalBound.alternation.state (n + 1) = true
+Becoming.RenewalBound.restoration_raises_rank : ∀ (n : Nat),
+  Becoming.RenewalBound.Restoring n →
+    Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state n) = 0 ∧
+      Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state (n + 1)) = 1
+Becoming.RenewalBound.unrenewed_first_step : ¬Becoming.RenewalBound.Restoring 0 ∧
+  Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state 1) <
+    Becoming.RenewalBound.rank (Becoming.RenewalBound.alternation.state 0)
+Becoming.RenewalBound.no_new_configurations : ∀ (n : Nat),
+  Becoming.RenewalBound.alternation.state n = Becoming.RenewalBound.alternation.state 0 ∨
+    Becoming.RenewalBound.alternation.state n = Becoming.RenewalBound.alternation.state 1
+Becoming.RenewalBound.every_score_bounded : ∀ (score : Bool → Nat),
+  ∃ bound, ∀ (n : Nat), score (Becoming.RenewalBound.alternation.state n) ≤ bound

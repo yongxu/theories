@@ -24,6 +24,7 @@
 #                                      refresh (OU's owner's texts on the four front files, READING-BUDGETS' two rows
 #                                      from one recount); the re-point of the records whose sources the patches, the
 #                                      text review and the refresh changed; render, checks, links, lint, tests
+#                                      (OU7_POST_TESTS=0 leaves the tests to the final checks)
 # LOG holds every log (outside the repository). Each stage stops at the first failure and says where. No stage commits.
 # The re-point is one pass for the kit and every stage in place, its reason the kit's and theirs (integrate_ou7.py
 # reason N); the receipt line, the study section and the commit name only the stages in place.
@@ -148,8 +149,10 @@ for f in d['findings']:
 assert not errors, errors
 print('lint: no error,', d['summary']['findings'], 'findings in all')
 EOF
-  step tests; python3 -B -m unittest discover -s tools/research/tests -p 'test_*.py' > $LOG/tests.log 2>&1 || fail tests
-  grep -E "^Ran |^OK" $LOG/tests.log
+  # OU7_POST_TESTS=0 leaves the tests to the landing's final checks, run on the tree with the board's edits.
+  if [ "${OU7_POST_TESTS:-1}" = 0 ]; then echo "== tests: left to the final checks on the landing tree"
+  else step tests; python3 -B -m unittest discover -s tools/research/tests -p 'test_*.py' > $LOG/tests.log 2>&1 || fail tests
+    grep -E "^Ran |^OK" $LOG/tests.log; fi
   echo "== post done: receipt $ID, study section $N" ;;
 *) echo "stage: prepare | apply | run | post [N]"; exit 2 ;;
 esac

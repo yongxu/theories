@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "能到达的最大差别至多是 D·(1 + M)^a，a 是有耦合作用的步数，由自环达到；强度为自然数时，每次返回至少使之加倍：返回频繁则失控，耦合稀少则保持多项式；每个时程都安定恰是 Σ⁰₂ 排中。",
     "en": "The most difference that can arrive is at most D·(1 + M)^a, a the steps where anything couples, attained by a self-loop; with natural-number strengths each return at least doubles it: frequent returns run away, rare couplings stay polynomial; every schedule settling is exactly Σ⁰₂ excluded middle."
@@ -548,7 +548,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
       "declarations": [
         "Becoming.ListTests.or_cases",
         "Becoming.ListTests.or_left",
@@ -563,7 +563,8 @@
         "Becoming.ListTests.and_right",
         "Becoming.cond_le_one",
         "Becoming.steps",
-        "Becoming.total"
+        "Becoming.total",
+        "Becoming.total_pos"
       ]
     },
     {
@@ -634,7 +635,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
       "declarations": [
         "Becoming.LPO",
         "Becoming.clear",
@@ -658,11 +659,10 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.total_congr",
-        "Becoming.total_pos",
         "Becoming.total_pos_of_mem",
         "Becoming.le_total_of_mem"
       ]
@@ -871,6 +871,12 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -911,7 +917,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -925,7 +931,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -953,7 +959,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1015,6 +1021,10 @@
     {
       "en": "22 October 2026: related to a-coupling-saturated-by-what-it-has-carried (study section 334); its statements are unchanged.",
       "zh": "2026年10月22日：与 a-coupling-saturated-by-what-it-has-carried 相关（研究第 334 节）；其陈述不变。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

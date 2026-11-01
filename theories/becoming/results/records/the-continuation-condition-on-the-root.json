@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-30T13:31:03+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
     "zh": "以相对于类之续而述，条件为：凡事皆在每一中心于此类下之续中；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
@@ -97,7 +97,7 @@
     "zh": "除于网之水平路径上、自闭包读下所述之三条（U3）外，本章以条件为前提之其他定理，经根之条件述为其例；多中心之族之条件；中心之自线在何类下，论证或建模。"
   },
   "correspondence": {
-    "en": "SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"nothing lies outside every center's continuing\".",
+    "en": "SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"everything lies on every center's continuing\".",
     "zh": "SW §3 之结构之读（中心之所计，在其沿一关系之续中者）移于根上；来源之「凡物之续入未来皆有义」读为「凡中心之续无外」。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
@@ -153,7 +153,7 @@
         "Becoming.«续无外则同一中心»",
         "Becoming.«续无外则族无外»"
       ],
-      "sha256": "74f5517bf43f0cc33be0d201f3806e32e97ad14611935d123267cfe8f6987a81"
+      "sha256": "2eb49182ff70b10dfa08581049e06fac198dfef55ba1878149e57ca10405543b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
@@ -205,12 +205,18 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -224,6 +230,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label S0 in the third law reads self-significance; the law is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条律英文中的退役标签 S0 改为自身意义；律不变。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): the correspondence's English reading of the source restated so that its quantifiers match the definition of «续无外» (every center, every occurrence), as GrammarScope's docstrings now word it (the grammar's owner's patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：对应中来源之英文之读重述，使其量词合于 «续无外» 之定义（每一中心、每一事），与 GrammarScope 之文档今之所言同（文法之主人之 patches/owner/05）；中文「凡中心之续无外」不变，所证无改变。记录所述余无改变。"
     }
   ]
 }

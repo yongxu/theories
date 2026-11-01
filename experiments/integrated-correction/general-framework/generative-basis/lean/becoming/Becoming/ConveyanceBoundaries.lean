@@ -7,13 +7,14 @@ import Becoming.GrammarCrossing
 `Flow.Cut` (`Becoming.Standpoints`) is a region of a valuation's events that no formed relation
 leaves; a boundary of a self along a relation (`Boundary`, `Becoming.Boundaries`) is a region holding
 it and closed under the relation. This module reads the first on the root and joins the two. It adds
-no definition and changes none: the cut keeps its definition in `Becoming.Standpoints`, one with
-`«不出»` by `Iff.rfl`, and this module, the World's case of the crossing laws, is a leaf.
+no definition and changes none: the cut is defined in `Becoming.Standpoints` as `«不出»` at the
+valuation's relation, and this module, the World's case of the crossing laws, is a leaf.
 
 * **The World's cut is not going out.** A cut is the grammar's `«不出»` at a valuation's relation, by
   definition (`Flow.cut_iff_notGoingOut`). So a region closed under the relation is a cut
   (`Flow.cut_of_closedUnder`), and a cut is closed where membership is stable
-  (`Flow.closedUnder_of_cut`), by `«闭则不出»` and `«不外者内则不出当且仅当闭»` (`Becoming.GrammarCrossing`).
+  (`Flow.closedUnder_of_cut`), by `«闭则不出»` (`Becoming.GrammarLaws`) and `«不外者内则不出当且仅当闭»`
+  (`Becoming.GrammarCrossing`).
   Conveyance's relation is symmetric (`Flow.conveyance_symm`), so along it nothing goes out of a region
   exactly where nothing comes in (`Flow.cut_iff_notComingIn`, by `«对称则不出当且仅当逆不出»`).
 * **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
@@ -38,8 +39,8 @@ section Cuts
 
 variable {Pos Q : Type}
 
-/-- **The World's cut is not going out**, by definition: a region of a valuation's events that no
-formed relation leaves is one nothing in it goes out of along the valuation's relation. -/
+/-- **The World's cut is not going out.** It holds by definition: a cut is `«不出»` at the valuation's
+relation, nothing in the region going out of it along that relation. -/
 theorem cut_iff_notGoingOut {V : Valuation Pos Q} {region : Q → Prop} :
     Cut V region ↔ «不出» V.related region :=
   Iff.rfl

@@ -1,0 +1,88 @@
+@Becoming.CopyCourses.swap_course_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (pre post : List (List α)) (u v pool : List α) (supply used : Nat),
+  (∃ c,
+      Generative.Trace (Becoming.Assurance.ofPartial (Becoming.Courses.release draw r)) (pool, supply, used)
+        (pre ++ u :: v :: post) c) ↔
+    ∃ c,
+      Generative.Trace (Becoming.Assurance.ofPartial (Becoming.Courses.release draw r)) (pool, supply, used)
+        (pre ++ v :: u :: post) c
+@Becoming.CopyCourses.run_copies : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (r : Becoming.Run (Becoming.Law.process (Becoming.Copying.tick draw))) {prev : Option α} {built word pool : List α}
+  {free used : Nat},
+  r.state 0 = { previous := prev, pending := word, built := built, pool := pool, free := free, used := used } →
+    Becoming.Copying.Supplies word pool →
+      Becoming.Copying.use draw prev word ≤ free →
+        r.state word.length =
+          { previous := Becoming.Copying.lastOr prev word, pending := [], built := built ++ word,
+            pool := Becoming.Copying.removeAll word pool, free := free - Becoming.Copying.use draw prev word,
+            used := used + Becoming.Copying.use draw prev word }
+@Becoming.CopyCourses.run_drawn : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (r : Becoming.Run (Becoming.Law.process (Becoming.Copying.tick draw))) {prev : Option α} {built word pool : List α}
+  {free used : Nat},
+  r.state 0 = { previous := prev, pending := word, built := built, pool := pool, free := free, used := used } →
+    Becoming.Copying.Supplies word pool →
+      Becoming.Copying.use draw prev word ≤ free →
+        (r.state word.length).used = used + Becoming.Copying.use draw prev word
+@Becoming.CopyCourses.runs_draw_lt_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) {x y : α}
+  {l m built built' pool pool' : List α} {free free' used : Nat}
+  (r r' : Becoming.Run (Becoming.Law.process (Becoming.Copying.tick (Becoming.Copying.pairDraw first same differ)))),
+  r.state 0 = { previous := none, pending := x :: l, built := built, pool := pool, free := free, used := used } →
+    Becoming.Copying.Supplies (x :: l) pool →
+      Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (x :: l) ≤ free →
+        r'.state 0 =
+            { previous := none, pending := y :: m, built := built', pool := pool', free := free', used := used } →
+          Becoming.Copying.Supplies (y :: m) pool' →
+            Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (y :: m) ≤ free' →
+              l.length = m.length →
+                ∀ {d : Nat},
+                  Becoming.Copying.unlikeFrom y m = Becoming.Copying.unlikeFrom x l + d →
+                    0 < d → ((r'.state (m.length + 1)).used < (r.state (l.length + 1)).used ↔ differ < same)
+@Becoming.CopyCourses.runs_draw_midpoint : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) {x y z : α}
+  {l m k built₁ built₂ built₃ pool₁ pool₂ pool₃ : List α} {free₁ free₂ free₃ used : Nat}
+  (r₁ r₂ r₃ :
+    Becoming.Run (Becoming.Law.process (Becoming.Copying.tick (Becoming.Copying.pairDraw first same differ)))),
+  r₁.state 0 = { previous := none, pending := x :: l, built := built₁, pool := pool₁, free := free₁, used := used } →
+    Becoming.Copying.Supplies (x :: l) pool₁ →
+      Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (x :: l) ≤ free₁ →
+        r₂.state 0 =
+            { previous := none, pending := y :: m, built := built₂, pool := pool₂, free := free₂, used := used } →
+          Becoming.Copying.Supplies (y :: m) pool₂ →
+            Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (y :: m) ≤ free₂ →
+              r₃.state 0 =
+                  { previous := none, pending := z :: k, built := built₃, pool := pool₃, free := free₃, used := used } →
+                Becoming.Copying.Supplies (z :: k) pool₃ →
+                  Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (z :: k) ≤ free₃ →
+                    l.length = m.length →
+                      k.length = m.length →
+                        Becoming.Copying.unlikeFrom x l + Becoming.Copying.unlikeFrom z k =
+                            2 * Becoming.Copying.unlikeFrom y m →
+                          (r₁.state (l.length + 1)).used + (r₃.state (k.length + 1)).used =
+                            2 * (r₂.state (m.length + 1)).used
+@Becoming.CopyCourses.inspection_step_matches_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat)
+  {ref : Nat → Option α} {i : Nat} {x old : α} {s u : Becoming.Copying.Scan α},
+  (Becoming.Courses.inspection ci ce ref).step s i u →
+    ref i = some x →
+      Becoming.Copying.nth s.built i = some old →
+        old ≠ x → (Becoming.Copying.nth u.built i = some x ↔ ci + ce ≤ s.free ∧ 0 < Becoming.Copying.countOf x s.pool)
+@Becoming.CopyCourses.inspection_course_keeps_counts : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat)
+  (ref : Nat → Option α) (a : α) {s u : Becoming.Copying.Scan α} {sites : List Nat},
+  Generative.Trace (Becoming.Courses.inspection ci ce ref) s sites u →
+    Becoming.Copying.countOf a (u.built ++ u.pool) = Becoming.Copying.countOf a (s.built ++ s.pool)
+@Becoming.CopyCourses.length_setAt : ∀ {α : Type u_1} (b : List α) (i : Nat) (x : α),
+  (Becoming.Copying.setAt b i x).length = b.length
+@Becoming.CopyCourses.exchangeAt_length : ∀ {α : Type u_1} [inst : DecidableEq α] (ce i : Nat) (x : α)
+  (s : Becoming.Copying.Scan α) (o : Option α), (Becoming.Copying.exchangeAt ce i x s o).built.length = s.built.length
+@Becoming.CopyCourses.inspectAt_length : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce i : Nat)
+  (s : Becoming.Copying.Scan α) (o o' : Option α),
+  (Becoming.Copying.inspectAt ci ce i s o o').built.length = s.built.length
+@Becoming.CopyCourses.inspection_course_length : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat)
+  (ref : Nat → Option α) {s u : Becoming.Copying.Scan α} {sites : List Nat},
+  Generative.Trace (Becoming.Courses.inspection ci ce ref) s sites u → u.built.length = s.built.length
+@Becoming.CopyCourses.inspection_course_keeps_template : ∀ {α : Type u_1} [inst : DecidableEq α] {t : List α}
+  {ref : Nat → Option α} (ci ce : Nat) {s u : Becoming.Copying.Scan α} {sites : List Nat},
+  (∀ (i : Nat), i ∈ sites → Becoming.Copying.FaithfulAt ref t i) →
+    Generative.Trace (Becoming.Courses.inspection ci ce ref) s sites u → s.built = t → u.built = t
+Becoming.CopyCourses.doubling_course_iff : ∀ (d n k m : Nat) (t : Nat × Nat),
+  Generative.Trace (Becoming.Copying.doubling d) (k, m) (Becoming.Copying.rounds n) t ↔
+    d * Becoming.Copying.required n k ≤ m ∧
+      t = (Becoming.Copying.required n k + k, m - d * Becoming.Copying.required n k)

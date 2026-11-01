@@ -891,22 +891,22 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e"
+      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92"
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba"
+      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "c0d3b94cd4f95b5602cd69be45b65f655010cfa4c279a259ba148e52b72a5f2d"
+      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LawAlongRun.lean",

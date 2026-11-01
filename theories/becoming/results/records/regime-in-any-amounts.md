@@ -107,6 +107,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`, `runs of the regime over the reals`, `任何量中的体制`, `Becoming.RegimeMargin.Drawn.run_shape`, `Becoming.RegimeMargin.Drawn.converges`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`
 

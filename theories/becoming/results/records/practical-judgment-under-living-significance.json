@@ -256,7 +256,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "0a90c1135ccab9ae2fe35c076f132ec7fd2aa7feb49f6e2bac9ea16329a81215",
+      "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d",
       "declarations": [
         "Becoming.WeaklyDecided",
         "Becoming.Undominated",
@@ -427,12 +427,18 @@
       "role": "receipt",
       "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Decidedness",
       "success_pointer": "/status",
       "success_value": "passed"

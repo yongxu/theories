@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T12:30:00+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "在延续之下，普查的平衡分两半成立：没有分裂时止息复现需要生起复现，没有合并且计数有界时反之；两者都没有时平衡精确。",
     "en": "Under a continuation the census balance holds in two halves: without splits ceasing recurring needs arising recurring, and without merges under a bounded count conversely; with neither the balance is exact."
@@ -36,8 +36,8 @@
       ]
     },
     {
-      "zh": "在普查之下、活动与延续可判定时，每一步上：没有分裂时，步后活跃的连同止息的至多是步前活跃的连同生起的；没有合并时至少如此；两者都没有时恰好相等。",
-      "en": "Under a census, with activity and the continuation decided, across each step: without splits, the formations active after the step with those ceasing are at most those active before with those arising; without merges, at least; with neither, exactly.",
+      "zh": "在普查之下、活动可判定、一个形成是否延续某个活跃形成与是否被某个活跃形成延续可判定时，每一步上：没有分裂时，步后活跃的连同止息的至多是步前活跃的连同生起的；没有合并时至少如此；两者都没有时恰好相等。",
+      "en": "Under a census, with activity decided and whether a formation continues, or is continued by, some active formation decided, across each step: without splits, the formations active after the step with those ceasing are at most those active before with those arising; without merges, at least; with neither, exactly.",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.Web.Census.balanceFrom",
@@ -45,12 +45,13 @@
       ]
     },
     {
-      "zh": "证明以跨步延续的配对数为中介：步后延续步前某个形成的不多于配对数，没有合并时恰是；步前被延续的不多于配对数，没有分裂时恰是。",
-      "en": "The proof goes through the continuing pairs: the formations after the step that continue one before it are no more than the pairs, exactly as many without merges, and those before it that are continued are no more than the pairs, exactly as many without splits.",
+      "zh": "跨步的平衡与经过它的各律（第 3、6、9 条）经过根上一步的清点（«定后则后并亡不过前并生»，其镜像«定前则前并生不过后并亡»），取步上两端都活跃的形成之间的关系：没有分裂时用前者，没有合并时用镜像。检验判定生起与止息，以标记计数；延续本身不需判定。覆盖之律（第 10、11 条）经由谱系。",
+      "en": "The balance across a step and the laws through it (laws 3, 6 and 9) go through the root's census of a step («定后则后并亡不过前并生», its mirror «定前则前并生不过后并亡») at the step's relation between formations active at both ends: without splits the first, without merges the mirror. The tests decide arising and ceasing, counted by marks; the continuation itself is not decided. The covering laws (laws 10 and 11) go by lineages.",
       "declarations": [
-        "Becoming.mark_le_total",
-        "Becoming.total_le_mark",
-        "Becoming.total_swap"
+        "Becoming.Web.Census.balanceFrom_at",
+        "Becoming.«定后则后并亡不过前并生»",
+        "Becoming.«定前则前并生不过后并亡»",
+        "Becoming.total_mark_eq_count"
       ]
     },
     {
@@ -123,8 +124,8 @@
       "en": "The continuation is a reading: which formation continues which is given by the reading (as in identity-across-steps); the result holds for every reading and does not say which one is identity."
     },
     {
-      "zh": "普查：每步活跃的形成被不重复地列出。活动、延续以及“是否延续某个活跃形成”可判定，是定理的假设，不是公理；后两者由普查与可判定的延续给出（Census.decideContinues、Census.decideContinued）。",
-      "en": "A census: the formations active at each step are listed, each once. Decided activity, a decided continuation and decided ‘continues some active formation’ are hypotheses of the theorems, not axioms; the latter two follow from the census and a decided continuation (Census.decideContinues, Census.decideContinued)."
+      "zh": "普查：每步活跃的形成被不重复地列出。活动可判定、“延续某个活跃形成”与“被某个活跃形成延续”可判定，是定理的假设，不是公理；在普查之下，可判定的延续给出后两者（Census.decideContinues、Census.decideContinued），普查诸律不取延续本身的可判定。",
+      "en": "A census: the formations active at each step are listed, each once. Decided activity and decided ‘continues some active formation’ and ‘is continued by some active formation’ are hypotheses of the theorems, not axioms; under a census a decided continuation gives the latter two (Census.decideContinues, Census.decideContinued), and the census laws do not take a decided continuation itself."
     },
     {
       "zh": "有界的一半另需从某步起至多 B 个形成活跃。",
@@ -207,8 +208,8 @@
           "en": "Ceasing and merging under a continuation, and the census balance under it."
         },
         "conditions": {
-          "zh": "普查；活动与延续可判定。",
-          "en": "A census; decided activity and continuation."
+          "zh": "普查；活动可判定，延续某个活跃形成可判定。",
+          "en": "A census; decided activity, and decided continuing of an active formation."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean"
       }
@@ -217,8 +218,8 @@
       "id": "census-balance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用标记的计数（marks_le_of_sub、mark_add_not、total_congr_on）与平衡的累加形式（balance_over_stretch 的不等式版本）。",
-        "en": "Reuses counting by marks (marks_le_of_sub, mark_add_not, total_congr_on) and the stretch form of the balance (balance_over_stretch, here as inequalities)."
+        "zh": "复用标记的计数（total_mark_eq_count，以根上之计读之）与平衡的累加形式（balance_over_stretch 的不等式版本：le_over_stretch、ge_over_stretch，经 gaining_of_losing_from 与 losing_of_gaining_from）。",
+        "en": "Reuses counting by marks (total_mark_eq_count, which reads it as the root's count) and the stretch form of the balance (balance_over_stretch, here as inequalities: le_over_stretch, ge_over_stretch, through gaining_of_losing_from and losing_of_gaining_from)."
       },
       "interface": {
         "output": {
@@ -304,6 +305,29 @@
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean"
       }
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用根上一步的清点及其镜像（«定后则后并亡不过前并生»、«定前则前并生不过后并亡»）：Web.Census.balanceFrom_at 是它们在该步两端都活跃的形成之间的关系上的情形（第 4 条）。",
+        "en": "Reuses the root's census of a step and its mirror («定后则后并亡不过前并生», «定前则前并生不过后并亡»): Web.Census.balanceFrom_at is their case at the step's relation between formations active at both ends (law 4)."
+      },
+      "interface": {
+        "output": {
+          "zh": "计之一步清点，分两半。",
+          "en": "The census of a step, counted, in two halves."
+        },
+        "input": {
+          "zh": "延续下跨一步的平衡（Web.Census.balanceFrom_at）。",
+          "en": "The balance across a step under a continuation (Web.Census.balanceFrom_at)."
+        },
+        "conditions": {
+          "zh": "生起与止息之测；前一半在该步无分裂，其镜像无合并。",
+          "en": "The tests of arising and ceasing; no split at the step for the first half, no merge for its mirror."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean"
+      }
     }
   ],
   "related": [
@@ -324,8 +348,8 @@
     {
       "id": "laws-of-one-step",
       "detail": {
-        "zh": "规律 2 的覆盖列表形式（Covers.not_not_coming_from）在延续之下的读法：Web.not_not_arisingFrom_covered。两者共用 not_not_all（为此移入 Becoming.Population），其余证明不互相引用。",
-        "en": "The continuation reading of law 2's covering-list form (Covers.not_not_coming_from): Web.not_not_arisingFrom_covered. They share not_not_all (moved into Becoming.Population for this); otherwise neither proof cites the other."
+        "zh": "规律 2 的覆盖列表形式（Covers.not_not_coming_from）在延续之下的读法：Web.not_not_arisingFrom_covered。两者共用 not_not_all（为此移入 Becoming.Population，U4c 时移入 Becoming.Prelude），其余证明不互相引用。",
+        "en": "The continuation reading of law 2's covering-list form (Covers.not_not_coming_from): Web.not_not_arisingFrom_covered. They share not_not_all (moved into Becoming.Population for this, and with U4c into Becoming.Prelude); otherwise neither proof cites the other."
       }
     }
   ],
@@ -333,7 +357,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a",
       "declarations": [
         "Becoming.Web.Continues",
         "Becoming.Web.ArisesFrom",
@@ -384,53 +408,57 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
+      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.decideSome",
-        "Becoming.mark_add_not",
-        "Becoming.marks_le_of_sub",
-        "Becoming.mark_le_total",
-        "Becoming.total_le_mark",
-        "Becoming.gaining_of_losing",
-        "Becoming.losing_of_gaining",
         "Becoming.Listed.across",
-        "Becoming.recurs_shift",
-        "Becoming.recurs_unshift",
-        "Becoming.gaining_of_losing_from",
-        "Becoming.losing_of_gaining_from"
+        "Becoming.total_mark_eq_count"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
       "declarations": [
         "Becoming.Distinct",
         "Becoming.le_over_stretch",
-        "Becoming.ge_over_stretch"
+        "Becoming.ge_over_stretch",
+        "Becoming.gaining_of_losing",
+        "Becoming.losing_of_gaining",
+        "Becoming.recurs_shift",
+        "Becoming.recurs_unshift",
+        "Becoming.gaining_of_losing_from",
+        "Becoming.losing_of_gaining_from",
+        "Becoming.recurring_accumulates",
+        "Becoming.pos_of_exceeds",
+        "Becoming.total_pos"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
-        "Becoming.total_swap",
-        "Becoming.total_le",
-        "Becoming.total_pos",
         "Becoming.total_pos_of_mem"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
       "declarations": [
         "Becoming.mark",
-        "Becoming.Web.Ceases",
-        "Becoming.recurring_accumulates",
-        "Becoming.pos_of_exceeds"
+        "Becoming.Web.Ceases"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "declarations": [
+        "Becoming.«定后则后并亡不过前并生»",
+        "Becoming.«定前则前并生不过后并亡»"
       ]
     },
     {
@@ -547,41 +575,60 @@
       "role": "receipt",
       "sha256": "a0ece8d77ed72993b2adde3076d3815f0276be957b2d49c541d54d7288c46fed",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -676,6 +723,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'the author's reading' in the correspondence reads 'a reading (the AI's argument)', the reading keeping its AI label. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法”改为“读法（AI 的论证）”，读法保留其 AI 标签。规律未变。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): Web.Census.balanceFrom_at is re-proved through the root's census of a step, and the instance deciding the continuation is dropped from the eight census laws of Identity's Counting section, none of which uses it; law 4 restated for the new route and laws 10 and 11 left on theirs, law 3, the second hypotheses entry and the home row in 01 §9.5 no longer saying the continuation is decided, nor the identity dependency's conditions; the root's census joins the dependencies, law 4 reusing its two halves, and the related note on not_not_all names the prelude. The census balance's dependency names the counting now reused (total_mark_eq_count, the stretch form as inequalities), and the declarations no law here uses any more leave the Population and Flow references (mark_add_not, marks_le_of_sub, mark_le_total, total_le_mark, total_swap, total_le). Each statement is unchanged or more general. Declarations moved with their full names: gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：Web.Census.balanceFrom_at 改经根上一步的清点证明，判定延续的实例从 Identity 的 Counting 一节的八条普查律中去掉，它们都不用它；第 4 条按新路径重述，第 10、11 条留在其原路径，第 3 条、第二条假设、01 §9.5 的本行与同一性依赖之条件不再说延续可判定；根上之清点入依赖，第 4 条复用其两半；关于 not_not_all 之相关说明名序章。普查平衡之依赖名今所复用之计数（total_mark_eq_count、跨段形之不等式），此处已无律所用之声明离开 Population 与 Flow 之引用（mark_add_not、marks_le_of_sub、mark_le_total、total_le_mark、total_swap、total_le）。各陈述不变或更一般。声明以完整名称移动：gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

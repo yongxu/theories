@@ -1,0 +1,14 @@
+import Becoming.Capture
+#check @Becoming.le_offspringCount
+#check @Becoming.offspringCount_le
+#check @Becoming.share_not_lower
+#check @Becoming.share_rises
+#check @Becoming.Flow.descent_needs_unrun
+#check @Becoming.Flow.descent_exhausted
+#check @Becoming.Captured.byRule
+#check @Becoming.Captured.state_perturbation_returns
+#check @Becoming.Captured.rule_perturbation_changes
+#check @Becoming.CaptureWorlds.length_le_zero
+#check @Becoming.CaptureWorlds.unsupported_leave_none
+#check @Becoming.CaptureWorlds.share_rises_of_unsupported
+#check @Becoming.CaptureWorlds.share_not_lower_of_unsupported

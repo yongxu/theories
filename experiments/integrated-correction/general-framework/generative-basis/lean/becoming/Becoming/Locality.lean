@@ -207,7 +207,7 @@ def RunsDownOn (es : List C) (t : Nat) : Prop :=
 /-- Across the step from `t` what stands runs down: some family runs down across it. This is
 said of a world's flow; `OneStep.RunsDown` of `Becoming.OneStep` is the law of running down read
 on a pattern of passages, and the patterns shown on a family running down are exactly those
-obeying it (`Flow.Realizes.runsDown`, `OneStep.runsDown_iff`). -/
+satisfying it (`Flow.Realizes.runsDown`, `OneStep.runsDown_iff`). -/
 def RunsDown (t : Nat) : Prop :=
   ∃ es, L.RunsDownOn W es t
 

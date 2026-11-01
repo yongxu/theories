@@ -64,7 +64,7 @@ Lean paths are relative to `experiments/integrated-correction/general-framework/
 - *The step of invariance*: the continuation condition's content beyond the self's presupposition (P-10 to P-12).
 - Labels. *(any type)*, *(any process)*: a theorem for every type, or every process. *World*: the model of webs and flows (natural-number amounts, discrete steps) on which most laws of the ethics are proved. *Root*: a theorem for every carrier, relation and class of the theory's grammar. *Witness*: one constructed model, showing that something can happen, not that it does. *Conditional*: a theorem taking a premise as a hypothesis. *Reading* [AI reading, Dn]: an interpretation registered with its argument in the decision register; *new* means not yet numbered.
 - Premises: the continuation condition (scope), C (order), and further practical premises A, D, E, L and J1–J4 (P-21). The theory asserts none of them.
-- The grammar's names that occur: `«续»` continuation (conditioned by and alike under a class), `«相续»` a line (continuation's reach), `«所及»` reached on a line, `«亡»` ends, `«不穷»` goes on without end, `«核»` the core of a class (the regularity a line carries by itself), `«一»` the one (the class under which everything is alike), `«续无外»` nothing outside a line's continuing.
+- The grammar's names that occur: `«续»` continuation (conditioned by and alike under a class), `«相续»` a line (continuation's reach), `«所及»` reached on a line, `«亡»` ends, `«不穷»` goes on without end, `«核»` the core of a class (the regularity a line carries by itself), `«一»` the one (the class under which everything is alike), `«续无外»` everything on every center's continuing.
 
 ---
 

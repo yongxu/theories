@@ -5,7 +5,7 @@
 
 `conditioning-by-restriction` · **recorded-checked** · theorem · F01 · [record](conditioning-by-restriction.json) · [register](../../../../RESULTS.md)
 
-> On a natural weighting of listed courses, restricting to a record is conditioning: an event weighs what the courses meeting it and the record weigh. Shares compared by cross-multiplication obey Bayes's rule, give a generative model's posterior and multiply under independence.
+> On a natural weighting of listed courses, restricting to a record is conditioning: an event weighs what the courses meeting it and the record weigh. Shares compared by cross-multiplication satisfy Bayes's rule, give a generative model's posterior and multiply under independence.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -100,7 +100,8 @@ Aliases: `Conditioning by restriction, shares and a generative model's posterior
 - 29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.
 - 29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; no statement, next step or declaration changed.
 - 30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the correspondence names the bound in counts in the core; no statement, next step or declaration changed.
+- 1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-25T16:34:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -778,12 +778,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba"
+      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "0a90c1135ccab9ae2fe35c076f132ec7fd2aa7feb49f6e2bac9ea16329a81215"
+      "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T054831.888463Z/verification.json",

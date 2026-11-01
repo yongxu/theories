@@ -62,6 +62,7 @@ Confounding: an outcome difference set down to the action that the action does n
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `The move alone does not fix the outcome`, `动作本身不定结果`, `Becoming.Situations.move_underdetermines`
 

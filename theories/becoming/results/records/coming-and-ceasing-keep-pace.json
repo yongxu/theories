@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "有限之中，所计的规定可判定时，开始成立与不再成立同步；这不需要关于展开的前提。",
     "en": "In a finite family whose counted determination is decided, coming to be and ceasing to be keep pace; this needs no premise about the unfolding."
@@ -364,7 +364,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
       "declarations": [
         "Becoming.mark",
         "Becoming.mark_cases",
@@ -384,13 +384,9 @@
         "Becoming.family_over_stretch",
         "Becoming.fallen_within",
         "Becoming.risen_within",
-        "Becoming.steps_mem",
-        "Becoming.steps_last",
-        "Becoming.steps_mono",
         "Becoming.Recurs",
         "Becoming.Recurs.mono",
         "Becoming.Recurs.accumulates",
-        "Becoming.pos_of_exceeds",
         "Becoming.rising_recurs",
         "Becoming.falling_recurs",
         "Becoming.ComesToBe",
@@ -420,19 +416,17 @@
         "Becoming.Attrition.web",
         "Becoming.Attrition.ceasing",
         "Becoming.Attrition.nothing_arises",
-        "Becoming.recurring_accumulates",
         "Becoming.Web.unceasing_iff_covering"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.total_zero",
         "Becoming.total_add",
         "Becoming.total_le",
-        "Becoming.total_pos",
         "Becoming.total_pos_of_mem",
         "Becoming.total_congr",
         "Becoming.total_ones",
@@ -442,7 +436,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "8cbe05184cce5042da4800c11bd3cf4a7158369d9ca81c2ba21235115fa9468a",
+      "sha256": "cdd8e7eea4fbaea144620cf65b4228981c4eb7d83f5f97036504571613876b3e",
       "declarations": [
         "Becoming.Web.Arises",
         "Becoming.Web.Unceasing",
@@ -471,11 +465,17 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
       "declarations": [
         "Becoming.le_dest",
         "Becoming.steps",
-        "Becoming.total"
+        "Becoming.total",
+        "Becoming.steps_mem",
+        "Becoming.steps_last",
+        "Becoming.steps_mono",
+        "Becoming.pos_of_exceeds",
+        "Becoming.recurring_accumulates",
+        "Becoming.total_pos"
       ]
     },
     {
@@ -600,12 +600,18 @@
       "role": "receipt",
       "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -619,7 +625,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -711,6 +717,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'The author' in the correspondence, meaning the AI, now says so, so the reading keeps its AI label.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中意指 AI 的“作者”改为 AI，使读法保持其 AI 标签。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: steps_mem, steps_last, steps_mono, pos_of_exceeds, recurring_accumulates, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：steps_mem, steps_last, steps_mono, pos_of_exceeds, recurring_accumulates, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [
