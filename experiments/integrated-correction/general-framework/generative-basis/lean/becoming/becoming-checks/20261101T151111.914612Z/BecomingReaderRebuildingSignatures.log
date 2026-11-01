@@ -1,0 +1,100 @@
+@Becoming.ReaderRebuilding.cons_present : ∀ {a : Nat} {as : List Nat}, a :: as ≠ []
+@Becoming.ReaderRebuilding.one_le_of_lt : ∀ {a b : Nat}, a < b → 1 ≤ b
+@Becoming.ReaderRebuilding.read_pos : ∀ {m k l : Nat}, 1 ≤ m → 1 ≤ k → 1 ≤ Becoming.ReaderRebuilding.read m k l
+@Becoming.ReaderRebuilding.rebuild_present : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count →
+      ∀ {on : Bool} {l : Nat},
+        1 ≤ l → ∀ (as : List Nat), Becoming.ReaderRebuilding.Present (Becoming.ReaderRebuilding.rebuild r on l as)
+Becoming.ReaderRebuilding.rebuild_level : ∀ (r : Becoming.ReaderRebuilding.Rule) (on : Bool) (l : Nat) (as : List Nat),
+  l ≤ (Becoming.ReaderRebuilding.rebuild r on l as).level + 1
+@Becoming.ReaderRebuilding.rebuild_zero : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    ∀ (on : Bool) (as : List Nat), Becoming.ReaderRebuilding.rebuild r on 0 as = { level := 0, ages := as }
+@Becoming.ReaderRebuilding.«供则读者不绝» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count →
+      1 ≤ r.setLevel →
+        ∀ (l : Nat) {as : List Nat},
+          as ≠ [] → Becoming.ReaderRebuilding.Present (Becoming.ReaderRebuilding.step r true { level := l, ages := as })
+@Becoming.ReaderRebuilding.«供则读者之域闭» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count → 1 ≤ r.setLevel → Becoming.«闭» (Becoming.ReaderRebuilding.supplied r) Becoming.ReaderRebuilding.Present
+Becoming.ReaderRebuilding.le_pred_succ : ∀ (a : Nat), a ≤ a - 1 + 1
+Becoming.ReaderRebuilding.cut_level : ∀ (r : Becoming.ReaderRebuilding.Rule) (x : Becoming.ReaderRebuilding.St),
+  x.level ≤ (Becoming.ReaderRebuilding.step r false x).level + 2
+@Becoming.ReaderRebuilding.cut_present : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count →
+      ∀ {x : Becoming.ReaderRebuilding.St},
+        2 ≤ x.level → Becoming.ReaderRebuilding.Present (Becoming.ReaderRebuilding.step r false x)
+@Becoming.ReaderRebuilding.«断而有储则读者存» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count →
+      ∀ (k : Nat) (x : Becoming.ReaderRebuilding.St),
+        2 * (k + 1) ≤ x.level → Becoming.ReaderRebuilding.Present (Becoming.ReaderRebuilding.run r false (k + 1) x)
+Becoming.ReaderRebuilding.older_replicate : ∀ (s n j : Nat),
+  Becoming.ReaderRebuilding.older s (List.replicate n j) = if j + 1 < s then List.replicate n (j + 1) else []
+Becoming.ReaderRebuilding.length_replicate : ∀ (n j : Nat), (List.replicate n j).length = n
+@Becoming.ReaderRebuilding.rebuild_none : ∀ {r : Becoming.ReaderRebuilding.Rule} {on : Bool} {l : Nat} {as : List Nat},
+  r.source = Becoming.ReaderRebuilding.Source.supply ∧ on = false ∨
+      r.source = Becoming.ReaderRebuilding.Source.none ∨ r.source = Becoming.ReaderRebuilding.Source.level ∧ l = 0 →
+    (Becoming.ReaderRebuilding.rebuild r on l as).ages = as
+@Becoming.ReaderRebuilding.rebuild_full : ∀ {r : Becoming.ReaderRebuilding.Rule} {on : Bool} {l : Nat} {as : List Nat},
+  ¬as.length < r.count → (Becoming.ReaderRebuilding.rebuild r on l as).ages = as
+@Becoming.ReaderRebuilding.quiet_step : ∀ {r : Becoming.ReaderRebuilding.Rule} {on : Bool}
+  {x : Becoming.ReaderRebuilding.St},
+  Becoming.ReaderRebuilding.Quiet r on x.level →
+    (Becoming.ReaderRebuilding.step r on x).ages = Becoming.ReaderRebuilding.older r.span x.ages ∧
+      Becoming.ReaderRebuilding.Quiet r on (Becoming.ReaderRebuilding.step r on x).level
+@Becoming.ReaderRebuilding.quiet_empty : ∀ {r : Becoming.ReaderRebuilding.Rule} {on : Bool} (k : Nat)
+  (x : Becoming.ReaderRebuilding.St),
+  Becoming.ReaderRebuilding.Quiet r on x.level → x.ages = [] → (Becoming.ReaderRebuilding.run r on k x).ages = []
+@Becoming.ReaderRebuilding.quiet_end : ∀ {r : Becoming.ReaderRebuilding.Rule} {on : Bool} (k j : Nat)
+  (x : Becoming.ReaderRebuilding.St),
+  Becoming.ReaderRebuilding.Quiet r on x.level →
+    x.ages = List.replicate r.count j → r.span ≤ j + (k + 1) → (Becoming.ReaderRebuilding.run r on (k + 1) x).ages = []
+@Becoming.ReaderRebuilding.«断则取于供者尽» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.supply →
+    1 ≤ r.span →
+      ∀ (l : Nat), (Becoming.ReaderRebuilding.run r false r.span (Becoming.ReaderRebuilding.fresh r.count l)).ages = []
+@Becoming.ReaderRebuilding.«不复建者尽» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.none →
+    1 ≤ r.span →
+      ∀ (on : Bool) (l : Nat),
+        (Becoming.ReaderRebuilding.run r on r.span (Becoming.ReaderRebuilding.fresh r.count l)).ages = []
+@Becoming.ReaderRebuilding.cut_empty_end : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.span → (Becoming.ReaderRebuilding.run r false r.span (Becoming.ReaderRebuilding.fresh r.count 0)).ages = []
+@Becoming.ReaderRebuilding.«读者绝则无储» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    1 ≤ r.count →
+      ∀ (on : Bool) (x : Becoming.ReaderRebuilding.St),
+        (Becoming.ReaderRebuilding.step r on x).ages = [] → (Becoming.ReaderRebuilding.step r on x).level = 0
+Becoming.ReaderRebuilding.read_zero : ∀ (m : Nat), Becoming.ReaderRebuilding.read m 0 0 = 0
+@Becoming.ReaderRebuilding.«取于储者绝而不复» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.level →
+    Becoming.«闭» (Becoming.ReaderRebuilding.net r) fun x => x = { level := 0, ages := [] }
+@Becoming.ReaderRebuilding.«取于供者复» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.supply →
+    1 ≤ r.count →
+      ∀ (l : Nat), Becoming.ReaderRebuilding.Present (Becoming.ReaderRebuilding.step r true { level := l, ages := [] })
+@Becoming.ReaderRebuilding.given_run : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  r.source = Becoming.ReaderRebuilding.Source.given →
+    ∀ (on : Bool) (k : Nat) (x : Becoming.ReaderRebuilding.St),
+      x.ages = List.replicate r.count 0 → (Becoming.ReaderRebuilding.run r on k x).ages = List.replicate r.count 0
+@Becoming.ReaderRebuilding.pred_succ : ∀ {s : Nat}, 1 ≤ s → s - 1 + 1 = s
+@Becoming.ReaderRebuilding.«以储买时当且仅当取于储» : ∀ {r : Becoming.ReaderRebuilding.Rule},
+  1 ≤ r.count → 1 ≤ r.span → (Becoming.ReaderRebuilding.BuysTime r ↔ r.source = Becoming.ReaderRebuilding.Source.level)
+Becoming.ReaderRebuilding.«一元二期之时» : ∀ (l : Nat),
+  l < 15 →
+    Becoming.ReaderRebuilding.EndsAt
+      { span := 2, count := 1, setLevel := 2, source := Becoming.ReaderRebuilding.Source.level } l (2 * (l / 3 + 1))
+Becoming.ReaderRebuilding.«一元三期之时» : ∀ (l : Nat),
+  l < 16 →
+    Becoming.ReaderRebuilding.EndsAt
+      { span := 3, count := 1, setLevel := 2, source := Becoming.ReaderRebuilding.Source.level } l (3 * (l / 4 + 1))
+Becoming.ReaderRebuilding.«取于供者之时» : ∀ (l : Nat),
+  l < 16 →
+    Becoming.ReaderRebuilding.EndsAt
+      { span := 3, count := 1, setLevel := 2, source := Becoming.ReaderRebuilding.Source.supply } l 3

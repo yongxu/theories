@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T134343.981701Z",
- "core_sources_sha256": "89d7d242776ac795be428896171e3cbe8d0e9235549de3c8c3d4125f1e126e60",
+ "core_receipt": "20261101T151111.914612Z",
+ "core_sources_sha256": "6ae02f2d29a9278d04dfb1239ec61d1cec30e07256b3c615bb367fc90ef6d325",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,10 +58,10 @@
   ]
  },
  "counts": {
-  "laws": 4093,
+  "laws": 4097,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 861,
+  "grammar": 865,
   "balance, represented": 634,
   "anchor, not reached": 135,
   "no shared law": 2063,
@@ -50502,6 +50502,49 @@
     "dependence": "no shared law"
    }
   ],
+  "the-stock-buys-time-where-the-rebuild-draws-on-it": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ReaderRebuilding.«供则读者不绝»",
+     "Becoming.ReaderRebuilding.«供则读者之域闭»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ReaderRebuilding.«断而有储则读者存»",
+     "Becoming.ReaderRebuilding.«断则取于供者尽»",
+     "Becoming.ReaderRebuilding.«不复建者尽»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ReaderRebuilding.«读者绝则无储»",
+     "Becoming.ReaderRebuilding.«取于储者绝而不复»",
+     "Becoming.ReaderRebuilding.«取于供者复»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "the-test-season-meets-the-optimum-laws": [
    {
     "law": 1,
@@ -63164,7 +63207,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "1e3c5155f64ad32433b00e5623b7c7699488c6419d795ef14c24609a70d146bb",
+   "modules_sha256": "586f3536419c8e66c960efbb9e14274d9b28116c18ef4792284119d0d2db3699",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

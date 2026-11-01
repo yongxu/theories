@@ -105,6 +105,8 @@ Thermal equilibrium with the surroundings and on-off thermostatic regulation (ne
   - Preserved conditions: A room read as a process whose act opens the window. [RoomRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean)
 - related, not a proved adapter: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). The rooms are not built as the World's flows; read against these definitions, the shut room's exchange opposes the level's departure within the gap, and a heater reading late would let the window lower the level before it answers.
 
+**Used by:** [the-stock-buys-time-where-the-rebuild-draws-on-it](the-stock-buys-time-where-the-rebuild-draws-on-it.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -1229,6 +1229,73 @@ Definitions and types:
 
 </details>
 
+<a id="module-21ea7f7e1bd1"></a>
+
+<details>
+<summary>ReaderRebuilding.lean — 48 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean`
+
+Imports: `Becoming.GrammarLaws`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ReaderRebuilding.cons_present](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L142) | 142 |
+| [Becoming.ReaderRebuilding.one_le_of_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L144) | 144 |
+| [Becoming.ReaderRebuilding.read_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L147) | 147 |
+| [Becoming.ReaderRebuilding.rebuild_present](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L158) | 158 |
+| [Becoming.ReaderRebuilding.rebuild_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L174) | 174 |
+| [Becoming.ReaderRebuilding.rebuild_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L184) | 184 |
+| [Becoming.ReaderRebuilding.«供则读者不绝»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L196) | 196 |
+| [Becoming.ReaderRebuilding.«供则读者之域闭»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L209) | 209 |
+| [Becoming.ReaderRebuilding.le_pred_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L215) | 215 |
+| [Becoming.ReaderRebuilding.cut_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L220) | 220 |
+| [Becoming.ReaderRebuilding.cut_present](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L230) | 230 |
+| [Becoming.ReaderRebuilding.«断而有储则读者存»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L244) | 244 |
+| [Becoming.ReaderRebuilding.older_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L256) | 256 |
+| [Becoming.ReaderRebuilding.length_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L271) | 271 |
+| [Becoming.ReaderRebuilding.rebuild_none](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L277) | 277 |
+| [Becoming.ReaderRebuilding.rebuild_full](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L290) | 290 |
+| [Becoming.ReaderRebuilding.quiet_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L301) | 301 |
+| [Becoming.ReaderRebuilding.quiet_empty](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L325) | 325 |
+| [Becoming.ReaderRebuilding.quiet_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L335) | 335 |
+| [Becoming.ReaderRebuilding.«断则取于供者尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L356) | 356 |
+| [Becoming.ReaderRebuilding.«不复建者尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L365) | 365 |
+| [Becoming.ReaderRebuilding.cut_empty_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L374) | 374 |
+| [Becoming.ReaderRebuilding.«读者绝则无储»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L386) | 386 |
+| [Becoming.ReaderRebuilding.read_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L396) | 396 |
+| [Becoming.ReaderRebuilding.«取于储者绝而不复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L404) | 404 |
+| [Becoming.ReaderRebuilding.«取于供者复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L423) | 423 |
+| [Becoming.ReaderRebuilding.given_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L435) | 435 |
+| [Becoming.ReaderRebuilding.pred_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L447) | 447 |
+| [Becoming.ReaderRebuilding.«以储买时当且仅当取于储»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L462) | 462 |
+| [Becoming.ReaderRebuilding.«一元二期之时»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L497) | 497 |
+| [Becoming.ReaderRebuilding.«一元三期之时»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L501) | 501 |
+| [Becoming.ReaderRebuilding.«取于供者之时»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L505) | 505 |
+
+Definitions and types:
+
+- `inductive` [Becoming.ReaderRebuilding.Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L67) (L67)
+- `structure` [Becoming.ReaderRebuilding.Rule](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L75) (L75)
+- `structure` [Becoming.ReaderRebuilding.St](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L82) (L82)
+- `def` [Becoming.ReaderRebuilding.read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L87) (L87)
+- `def` [Becoming.ReaderRebuilding.older](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L90) (L90)
+- `def` [Becoming.ReaderRebuilding.age](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L95) (L95)
+- `def` [Becoming.ReaderRebuilding.rebuild](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L103) (L103)
+- `def` [Becoming.ReaderRebuilding.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L119) (L119)
+- `def` [Becoming.ReaderRebuilding.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L124) (L124)
+- `def` [Becoming.ReaderRebuilding.supplied](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L127) (L127)
+- `def` [Becoming.ReaderRebuilding.run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L130) (L130)
+- `def` [Becoming.ReaderRebuilding.Present](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L135) (L135)
+- `def` [Becoming.ReaderRebuilding.fresh](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L138) (L138)
+- `def` [Becoming.ReaderRebuilding.Quiet](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L296) (L296)
+- `def` [Becoming.ReaderRebuilding.BuysTime](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L453) (L453)
+- `abbrev` [Becoming.ReaderRebuilding.EndsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean#L490) (L490)
+
+</details>
+
 <a id="module-4cc32d433d1b"></a>
 
 <details>

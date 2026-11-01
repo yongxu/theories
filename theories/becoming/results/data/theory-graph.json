@@ -5528,6 +5528,18 @@
    "page": "theories/becoming/results/records/the-step-index-from-own-courses.md"
   },
   {
+   "id": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "type": "result",
+   "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "title": "The stock buys time where the rebuild draws on it",
+   "title_zh": "取于储者以储买时",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-stock-buys-time-where-the-rebuild-draws-on-it.md"
+  },
+  {
    "id": "record:the-test-season-meets-the-optimum-laws",
    "type": "result",
    "record": "the-test-season-meets-the-optimum-laws",
@@ -9644,6 +9656,17 @@
    "theorems": 24,
    "region": "knowing",
    "base": "frame",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReaderRebuilding",
+   "type": "module",
+   "name": "Becoming.ReaderRebuilding",
+   "level": "L1",
+   "theorems": 32,
+   "region": "life",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -30005,6 +30028,12 @@
    "anchor": "r-organizational-rule-inheritance"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-the-stock-buys-time-where-the-rebuild-draws-on-it"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -34046,6 +34075,11 @@
   {
    "from": "module:Becoming.ReadStages",
    "to": "module:Becoming.Unread",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReaderRebuilding",
+   "to": "module:Becoming.GrammarLaws",
    "type": "imports"
   },
   {
@@ -54274,6 +54308,16 @@
    "type": "related"
   },
   {
+   "from": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "module:Becoming.ReaderRebuilding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "record:rooms-tested-by-a-window",
+   "type": "interpretive"
+  },
+  {
    "from": "record:the-test-season-meets-the-optimum-laws",
    "to": "module:Becoming.OptimumSeason",
    "type": "proved-in"
@@ -60771,6 +60815,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
    "to": "record:the-selection-term-and-a-lineages-fate",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
    "type": "states"
   },
   {

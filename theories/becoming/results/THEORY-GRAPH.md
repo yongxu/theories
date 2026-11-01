@@ -2,14 +2,14 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3187 nodes, 6136 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3190 nodes, 6140 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 92 | 75 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
-| Life and evolution | 0 | 44 | 21 | 0 |
+| Life and evolution | 0 | 45 | 22 | 0 |
 | Collectives and selection | 0 | 69 | 23 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 81 | 60 | 0 |
@@ -363,7 +363,7 @@ Modules (88, 14 stated on the grammar): `Blanket`, `BlanketCouplings`, `BlanketW
 
 ## Life and evolution
 
-Results (44):
+Results (45):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
@@ -406,11 +406,12 @@ Results (44):
 - [The same carrier need not fix the same response](records/same-carrier-need-not-fix-the-response.md) (recorded-checked)
 - [The selection term and a lineage's fate](records/the-selection-term-and-a-lineages-fate.md) (recorded-checked)
 - [The selection term proper, over generations](records/selection-term-over-generations.md) (recorded-checked)
+- [The stock buys time where the rebuild draws on it](records/the-stock-buys-time-where-the-rebuild-draws-on-it.md) (recorded-checked)
 - [The updater line: development, memory, replacement and margins of a learning network](records/the-updater-line.md) (recorded-checked)
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (21, 6 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
+Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `ReaderRebuilding`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
@@ -652,4 +653,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-303 of 377 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+303 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

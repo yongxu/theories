@@ -24173,3 +24173,34 @@ Output → input: 02 §1; the root module's bullets, the checker's core list and
 1. GrammarMap sits under most of the package, so the change rebuilds nearly every module; it rides one rebuild of the map modules, by readiness, on the coordinator's word.
 2. The re-derivations add no hypothesis: each landed law keeps its printed statement and now follows from the stronger every-branch law, so the core proves each fact once.
 3. The renames follow 08 §10: each old name said degeneration (`«退化»`) where the statement concludes only an end (有终); the gap is exactly excluded middle (`«尽则有终当且仅当排中»`, `Map.end_of_gone_iff_excluded_middle`).
+
+## 497. Where a reader is rebuilt from: an organism's minimal model (OG)
+
+Board item OG, plan §十三 item 9: each test system of plan §六 with its model. The one page named an organism and an institution as having none. The rooms (§492) tell regulation from equilibrium with a given heater, and nothing keeps the heater. This item asks what tells an organism from a thermostat and a flame on the root ([study](development/og-organism/): DESIGN.md, REVIEW-1.md, REVIEW-2.md, sim/).
+
+```text
+Result(s): the-stock-buys-time-where-the-rebuild-draws-on-it (new, home 04 §8), Becoming.ReaderRebuilding,
+       an instance of the ring, 48 declarations (32 theorems), every axiom report empty (receipt 20261101T151111.914612Z).
+Delta:
+  - One rule makes a family of four readers by the rebuild's source: given (not ageing), from the supply,
+    from the level, none. The supply is chosen at each step.
+  - Where the rebuild draws on the level: kept while supplied, from every level; under a cut, present after
+    k + 1 steps from every level of at least 2 (k + 1); its end at an empty stock, closed under the net.
+    Rebuilt from the supply or never: gone at its span from every level. The family law: the stock buys
+    time exactly where the rebuild draws on the level, at every span of at least one.
+  - Decided only: one unit's horizon at spans two and three for small levels; the step law, each further
+    s + 1 units buying s steps, is a conjecture those cases check.
+Design history: three drafts. The first draft's central law, a cycle at the kind grain, held by definition,
+       and the thermostat and the flame had the cycle too (REVIEW-1). The second draft's horizon was not
+       strictly increasing, as runs of the rule showed (REVIEW-1's re-check, sim/). The Lean reading's eight
+       findings narrowed five statements and three names (REVIEW-2): the turnover does not separate the
+       members, the rebuild's source does.
+Not modelled: the flame and the equilibrium; the supply's and the sink's amounts; the turnover read as
+       carrying; the organism's class ending where its matter goes on. These wait for part 2, the family on
+       the World's flows, after which an institution is read as a rule rebuilt from the members it regulates.
+Carried: ND's checker-scope patch (two lines of check_becoming.py's scope: "master law" → ND's names).
+Register: nine apart roots, eight model witnesses of the one family and one arithmetic lemma (register_og.py);
+       the laws the others use are not roots.
+Rehearsal: the whole landing ran dry on a scratch receipt (20261101T135208.604453Z): render, strict check,
+       tests and both dossier checks passed, and links once the kit's own four were fixed.
+```
