@@ -329,12 +329,18 @@
       "role": "receipt",
       "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "role": "receipt",
+      "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"

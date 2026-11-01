@@ -71,6 +71,7 @@ That a selection of relations reading amounts only through sign, comparison in o
 | integration | [REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `the unit is not read off the occurrence model`, `单位不由出现模型读出`, `a world at a finer unit`, `Becoming.World.atFinerUnit_agree`, `Becoming.World.standing_not_read`, `Becoming.World.standing_not_read_up_to_unit`, `Becoming.World.stillAt_relabel_agree`
 
