@@ -537,14 +537,14 @@ OU's owner decided on the reviewed design:
 - GrammarReadings' note and scope sentence state the general law;
 - the toy's line in 03 §3 points to its derivation.
 
-BD2 landed the same day (f1ea9546d). The grammar's owner's three items held for it are now patches in the kit ([kit/patches/README.md](kit/patches/README.md#the-grammars-owners-patches)); what was held is kept in [kit/patches/history/HELD.md](kit/patches/history/HELD.md):
-- `«不出»` is stated in GrammarLaws with `«所闭不出»`, and `«所闭之界»` is proved as `«所闭不出»`'s case;
-- `Flow.Cut` is written as `«不出»` at the valuation's relation, its old body unfolded;
+BD2 landed the same day (f1ea9546d). The grammar's owner's three items held for it are now patches in the kit, as OU's owner specified them on 1 November ([kit/patches/README.md](kit/patches/README.md#the-grammars-owners-patches)); what was held is kept in [kit/patches/history/HELD.md](kit/patches/history/HELD.md):
+- `«不出»`, `«闭则不出»` and `«所闭不出»` move unchanged from GrammarCrossing into GrammarLaws, after the closure law `«所闭之界»`, whose docstring says that `«所闭不出»` is it read through `«不出»`;
+- `Flow.Cut` is defined as `«不出»` at the valuation's relation, its old body unfolded, and `Flow.cut_iff_notGoingOut` holds by definition;
 - BD2's two equivalences read a region not crossed as one not gone out of either way and as one closed both ways, so the two count laws read as one law (master-laws-on-the-grammar's law 4 and 01 §7, with a history note).
 
-The rehearsal's Lean step ran in a copy of the package outside the repository: the nine patches with the three leaves, 145 modules built, nothing unclean, every axiom report empty ([kit/REHEARSAL.json](kit/REHEARSAL.json)). A dry run of the whole kit passed on main at b6c8bedd8, and again at 3e6bc3538. The rebuild still comes last in the core round, now after EL's core Lean, DU and UE27.
+The rehearsal of the owner's patches built them with GrammarPath, BalanceRegions and four name checks, 53 modules, nothing unclean, every axiom report empty ([kit/REHEARSAL.json](kit/REHEARSAL.json)). The first rehearsal built the kit's own patches and the three leaves, 145 modules ([kit/history/REHEARSAL.json](kit/history/REHEARSAL.json)). A dry run of the whole kit passed on main at a91c84d35. The rebuild still comes last in the core round.
 
-Other items ride in the same rebuild as stages of the kit ([kit/stages/README.md](kit/stages/README.md)): U4c's census laws and ND's renames, each its owner's patch series, applied after the kit's joins. Each stage is skippable, and one whose series does not apply is dropped, so OU7 lands without it (R10). The audit and the register take each stage's expectations, and the re-point is one pass for all.
+Other items ride in the same rebuild as stages of the kit ([kit/stages/README.md](kit/stages/README.md)): U4c's census laws, then ND's names, each its owner's patch series, applied patch by patch after the kit's joins. A stage that is empty or does not apply stops `apply`, nothing of it written; a skipped stage leaves OU7 to land without it (R10). The audit and the register take each stage's expectations, and the re-point is one pass for all.
 
 ## Open
 

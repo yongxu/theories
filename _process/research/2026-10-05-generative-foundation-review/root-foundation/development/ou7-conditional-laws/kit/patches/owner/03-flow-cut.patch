@@ -1,5 +1,5 @@
 diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
-index 3858e34..b62fa76 100644
+index f23d39907..f5c64c121 100644
 --- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
 +++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
 @@ -7,8 +7,8 @@ import Becoming.GrammarCrossing
@@ -13,8 +13,19 @@ index 3858e34..b62fa76 100644
  
  * **The World's cut is not going out.** A cut is the grammar's `«不出»` at a valuation's relation, by
    definition (`Flow.cut_iff_notGoingOut`). So a region closed under the relation is a cut
+@@ -39,8 +39,8 @@ section Cuts
+ 
+ variable {Pos Q : Type}
+ 
+-/-- **The World's cut is not going out**, by definition: a region of a valuation's events that no
+-formed relation leaves is one nothing in it goes out of along the valuation's relation. -/
++/-- **The World's cut is not going out.** It holds by definition: a cut is `«不出»` at the valuation's
++relation, nothing in the region going out of it along that relation. -/
+ theorem cut_iff_notGoingOut {V : Valuation Pos Q} {region : Q → Prop} :
+     Cut V region ↔ «不出» V.related region :=
+   Iff.rfl
 diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean
-index cb7e18e..7eef497 100644
+index cb7e18ee3..ae97e61d4 100644
 --- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean
 +++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean
 @@ -291,9 +291,10 @@ theorem valuing_reaches_source (transmit : Neutral (L.conveyance W own sig).tran
@@ -22,8 +33,8 @@ index cb7e18e..7eef497 100644
    transmit (p, (d, t), (c, t)) held ⟨rfl, .inr conveys⟩ alive
  
 -/-- No formed relation leaves the region: its boundary is a cut in the relations. -/
-+/-- No formed relation leaves the region: its boundary is a cut in the relations, the grammar's not
-+going out (`«不出»`) at the valuation's relation. -/
++/-- No formed relation leaves the region: nothing in it goes out of it along the valuation's relation
++(`«不出»`). -/
  def Cut {Q : Type} (V : Valuation Pos Q) (region : Q → Prop) : Prop :=
 -  ∀ e e', region e → ¬ region e' → ¬ V.related e e'
 +  «不出» V.related region

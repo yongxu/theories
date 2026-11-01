@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """A dry run of OU7's landing in a throwaway git tree, with no Lean. The tree holds main's files that the kit reads or
-writes, and the study folder as this checkout has it. The run takes the land script's prepare stage and its apply
-stage twice. It then takes the post stage's own steps against a synthetic receipt and connectivity log:
-  - record, twice (the two general laws in the two records of the laws they generalize, the one record whose words
-    the joins make false, and the two records the owner's patches change, included);
-  - the re-point of those five records and of the one whose cut the owner's patches write anew, as the post stage
-    makes it from the drift;
+writes, every file the kit's patches and the stages' change, every record pinning a file the tree holds with every
+file it references, and the study folder as this checkout has it; its one commit has MAIN for its parent, so that the
+registry reads every version a record was reviewed against, as in the checkout. The run takes the land script's prepare stage and
+its apply stage twice. It then takes the post stage's own steps against a synthetic receipt and connectivity log:
+  - record, twice (the two general laws in the two records of the laws they generalize, the two records whose words
+    the joins and patches make false, and the two records the owner's patches change, included);
+  - the re-point, as the post stage makes it: exactly the registry's drift, the Lean files' proof bindings rebound;
   - register, after a refused log, then once more;
   - study, twice.
-Last, OU7's two records and those six go through the registry's own validation and the lint. Nothing in the
-repository is written. Each stage in the kit's stages/ rides along as the landing takes it (a SKIP file or OU7_STAGES
-leaves one out): the tree holds the files its patches change, the synthetic receipt its declarations, and the records
-its patches change are re-pointed and validated with the rest.
+Last, OU7's two records, those the record stage changes, every re-pointed record and the stages' go through the
+registry's own validation and the lint, and no record is left drifting. Nothing in the repository is written. Each
+stage in the kit's stages/ rides along as the landing takes it (a SKIP file or OU7_STAGES leaves one out): the tree
+holds the files its patches change, the synthetic receipt its declarations, and the records its patches change are
+re-pointed and validated with the rest.
 
   python3 -B <kit>/dry_run.py OUT [MAIN]     OUT: a new folder outside the repository; MAIN: the commit, by default
                                              refs/heads/main
@@ -29,6 +31,7 @@ import re
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True,
@@ -42,9 +45,10 @@ PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
 STUDY = HERE.parent.relative_to(REPO).as_posix() + '/'
 KIT = STUDY + 'kit/'
-STAMP = '20261101T000000.000000Z'
+STAMP = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')   # the synthetic receipt's, after every receipt of MAIN's
 GENERALIZED = ('continuation-relative-to-a-class', 'classical-definitions-in-the-grammar')
-WORDS = ('generation-and-degeneration-at-two-grains',)     # pins MapRegions; the record stage corrects its words
+WORDS = ('generation-and-degeneration-at-two-grains',     # pins MapRegions; the record stage corrects its words
+         'balance-from-conservation-along-a-relation')     # pins BalanceRegions; reuses «不出», now GrammarLaws'
 OWNER = ('master-laws-on-the-grammar', 'not-going-out-of-a-region')   # the record stage applies the owner's items
 CUT = ('conveyance-crosses-the-boundary',)                 # pins Standpoints, whose cut the owner's patch writes anew
 RECEIPT = PKG + f'becoming-checks/{STAMP}/verification.json'
@@ -73,31 +77,87 @@ paths = [PKG + n for n in ('Becoming.lean', 'check_becoming.py', 'README.md', 'R
 paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/PLAN.md',
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
-          'tools/research', '_process/architecture/rebinds.jsonl']
-# Each stage's patches: the files they change that MAIN holds, and the records among them.
-STAGE_DIRS = sorted(d for d in (REPO / KIT / 'stages').iterdir() if d.is_dir()) if (REPO / KIT / 'stages').is_dir() else []
-touched = sorted({m.group(1) for d in STAGE_DIRS for x in sorted(d.glob('*.patch'))
-                  for m in re.finditer(r'^diff --git a/(\S+) b/', x.read_text(encoding='utf-8'), re.M)})
-held = set(run('git', 'ls-tree', '-r', '--name-only', MAIN, '--', *touched, cwd=REPO).stdout.split()) if touched else set()
+          'tools/research', '_process/architecture/rebinds.jsonl', '_process/architecture/moves']
+
+
+def patch_paths(patches):
+    """The paths the patches change, as git reads them (a rename gives both)."""
+    out = set()
+    for p in patches:
+        fields = run('git', 'apply', '--numstat', '-z', str(p), cwd=REPO).stdout.split('\0')
+        i = 0
+        while i < len(fields) and fields[i]:
+            path = fields[i].split('\t', 2)[2]
+            if path:
+                out.add(path)
+                i += 1
+            else:
+                out.update(fields[i + 1:i + 3])
+                i += 3
+    return out
+
+
+def selected_stages():
+    """The stages the landing takes, as integrate_ou7.py selects them (a SKIP file, OU7_STAGES)."""
+    found = sorted(d for d in (REPO / KIT / 'stages').iterdir() if d.is_dir()) if (REPO / KIT / 'stages').is_dir() else []
+    wanted = os.environ.get('OU7_STAGES')
+    if wanted is not None:
+        names = set(wanted.replace(',', ' ').split()) - {'none'}
+        assert names <= {d.name for d in found}, ('OU7_STAGES names no stage', sorted(names - {d.name for d in found}))
+        found = [d for d in found if d.name in names]
+    return [d for d in found if not (d / 'SKIP').exists()]
+
+
+def held_by_main(names):
+    """Of `names`, those MAIN holds (read NUL-separated, so that no path is quoted)."""
+    listed = run('git', 'ls-tree', '-r', '-z', '--name-only', MAIN, '--', *names, cwd=REPO).stdout if names else ''
+    return set(listed.split('\0')) - {''}
+
+
+def extract(names):
+    archive = subprocess.run(['git', 'archive', MAIN, '--', *names], cwd=REPO, capture_output=True, check=True).stdout
+    subprocess.run(['tar', '-x', '-C', str(TREE)], input=archive, check=True)
+
+
+# The kit's patches and the selected stages': every file they change that MAIN holds, and the stages' records.
+STAGE_DIRS = selected_stages()
+KIT_PATCHES = [REPO / KIT / 'patches' / n for n in ('Grammar.patch', 'GrammarReadings.patch', 'MapRegions.patch',
+                                                    'PLAN.patch')] + [REPO / STUDY / 'check/kit/GrammarTesting.patch'] + \
+    sorted((REPO / KIT / 'patches/owner').glob('*.patch'))
+STAGE_TOUCHED = patch_paths([p for d in STAGE_DIRS for p in sorted(d.glob('*.patch'))])
+touched = sorted(patch_paths(KIT_PATCHES) | STAGE_TOUCHED)
+held = held_by_main(touched)
 paths += [x for x in touched if x in held and not any(x == q or x.startswith(q + '/') for q in paths)]
-STAGE_RECORDS = tuple(Path(x).stem for x in touched
-                      if x.startswith('theories/becoming/results/records/') and x.endswith('.json'))
-STAGE_LEAN = [x for x in touched if x.startswith(PKG + 'Becoming/') and x.endswith('.lean')]
-# Every file the records the kit and the stages change reference or keep a text version in, so that they validate in
-# the tree as in the checkout.
-for rid in GENERALIZED + WORDS + OWNER + CUT + tuple(r for r in STAGE_RECORDS
-                                                    if f'theories/becoming/results/records/{r}.json' in held):
-    rec = json.loads(run('git', 'show', f'{MAIN}:theories/becoming/results/records/{rid}.json', cwd=REPO).stdout)
-    paths += [x['path'] for x in rec['references'] + rec.get('text_versions', []) if x['path'] not in paths]
+STAGE_RECORDS = tuple(sorted(Path(x).stem for x in STAGE_TOUCHED
+                             if x.startswith('theories/becoming/results/records/') and x.endswith('.json')))
 TREE.mkdir(parents=True)
 LOG.mkdir()
-archive = subprocess.run(['git', 'archive', MAIN, '--', *paths], cwd=REPO, capture_output=True, check=True).stdout
-subprocess.run(['tar', '-x', '-C', str(TREE)], input=archive, check=True)
+extract(paths)
+# Every record pinning a file the tree holds, which the landing may change, with every file it references or keeps a
+# text version in, so that its drift and its validation run in the tree as in the checkout.
+extra = set()
+for f in sorted((TREE / 'theories/becoming/results/records').glob('*.json')):
+    rec = json.loads(f.read_text(encoding='utf-8'))
+    if any(x.get('sha256') and (TREE / x['path']).is_file() for x in rec.get('references', [])):
+        extra |= {x['path'] for x in rec.get('references', []) + rec.get('text_versions', [])
+                  if not (TREE / x['path']).exists()}
+extra = held_by_main(sorted(extra))
+if extra:
+    extract(sorted(extra))
+print('tree: the kit\'s files,', len(touched), 'files the patches change, and', len(extra), 'more that the records '
+      'pinning those reference')
 shutil.copytree(REPO / STUDY, TREE / STUDY, ignore=shutil.ignore_patterns('__pycache__', '.lake', '.build'))
+# The tree's one commit has MAIN for its parent, read through the repository's objects, so that the registry finds in
+# HEAD's history every version a record was reviewed against, as in the checkout: a source grown only outside what a
+# record cites stays grown, not drift. Nothing is written to the repository's objects.
 run('git', 'init', '-q')
+common = Path(run('git', 'rev-parse', '--path-format=absolute', '--git-common-dir', cwd=REPO).stdout.strip())
+(TREE / '.git/objects/info/alternates').write_text(f'{common / "objects"}\n', encoding='utf-8')
 run('git', 'add', '-A')
-run('git', '-c', 'user.name=dry', '-c', 'user.email=dry@invalid', 'commit', '-q', '-m', 'base')
-run('git', 'branch', '-M', 'main')
+base = run('git', '-c', 'user.name=dry', '-c', 'user.email=dry@invalid', 'commit-tree', '-m', 'base',
+           '-p', run('git', 'rev-parse', MAIN, cwd=REPO).stdout.strip(), run('git', 'write-tree').stdout.strip())
+run('git', 'update-ref', 'refs/heads/main', base.stdout.strip())
+run('git', 'symbolic-ref', 'HEAD', 'refs/heads/main')
 run('git', 'checkout', '-q', '-b', 'land')
 print('tree', TREE, 'from', run('git', 'rev-parse', '--short', MAIN, cwd=REPO).stdout.strip(), 'and', STUDY)
 
@@ -217,18 +277,25 @@ second = run(*integrate, 'record', RECEIPT, N)
 assert 'applied' not in second.stdout.replace('already in place', ''), second.stdout
 show('record, a second time', second, 6)
 
-# The post stage re-points the records whose pinned sources the patches changed, from the drift; here, the two
-# generalized records, the one whose words changed, the owner's two and the one pinning Standpoints, bound to the
-# synthetic receipt as the landing binds them to the run's.
-lean = [mr.BELOW[m] for m in ('Becoming.Grammar', 'Becoming.GrammarReadings')] + \
-       [PKG + f'Becoming/{n}.lean' for n in ('MapRegions', 'GrammarLaws', 'GrammarCrossing', 'Standpoints',
-                                            'ConveyanceBoundaries')]
-lean += [x for x in STAGE_LEAN if x not in lean and (TREE / x).exists()]
+# The post stage re-points exactly the registry's drift, the Lean files the patches changed rebound to the receipt;
+# here the synthetic one, as the landing binds them to the run's.
+registry_probe = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".");'
+                  'from tools.research import registry, reading_catalogue as rc; real = rc.anchors;'
+                  'rc.anchors = lambda p: real(p) if Path(p).exists() else set();'
+                  'loaded, errors = registry.load_records(); assert not errors, errors[:3];'
+                  'findings, drift = registry.validate(loaded);'
+                  'print(json.dumps([{"id": d["id"], "path": d["path"]} for d in drift]))')
+drift = json.loads(run('python3', '-B', '-c', registry_probe).stdout)
+(LOG / 'drift.json').write_text(json.dumps({'source_drift': drift}, ensure_ascii=False, indent=1), encoding='utf-8')
+DRIFTED = tuple(sorted({d['id'] for d in drift}))
+lean = [x for x in run('git', 'diff', '--name-only', 'HEAD', '--', PKG + 'Becoming').stdout.split() if x.endswith('.lean')]
 STAGE_IDS = tuple(r for r in STAGE_RECORDS if (TREE / f'theories/becoming/results/records/{r}.json').exists())
-show('re-point of the six records the record stage changed or whose sources the patches changed', run(
-    'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--ids', *GENERALIZED, *WORDS, *OWNER,
-    *CUT, *STAGE_IDS, '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean,
-    '--apply'), 8)
+show(f're-point of the drift: {len(drift)} pairs in {len(DRIFTED)} records, {len(lean)} Lean files rebound', run(
+    'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--drift-json', str(LOG / 'drift.json'),
+    '--receipt', RECEIPT, '--lean', *lean, '--apply'), 4)
+left = json.loads(run('python3', '-B', '-c', registry_probe).stdout)
+assert not left, ('drift left after the re-point', left[:5])
+print('no drift left after the re-point; re-pointed:', ', '.join(DRIFTED))
 
 APART = RF + 'THEOREM-CONNECTIVITY-APART.json'
 part_b = json.loads((TREE / STUDY / 'check/kit/apart-reasons.json').read_text(encoding='utf-8'))
@@ -276,7 +343,7 @@ validate = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".")
             '[print("lint", r["id"], f["severity"], f["field"], f["rule"], str(f["detail"])[:120]) for r in rs for f in style.lint(r)];'
             'print(len(mine), "findings on the", len(ids), "records;", len(findings) - len(mine), "elsewhere (this tree holds "'
             '"only the files the kit touches)")')
-show('the records through the registry and the lint', run('python3', '-B', '-c', validate, mr.RID, mb.RID,
-                                                          *GENERALIZED, *WORDS, *OWNER, *CUT, *STAGE_IDS), 40)
+CHECKED = tuple(dict.fromkeys((mr.RID, mb.RID) + GENERALIZED + WORDS + OWNER + CUT + DRIFTED + STAGE_IDS))
+show(f'the {len(CHECKED)} records through the registry and the lint', run('python3', '-B', '-c', validate, *CHECKED), 60)
 show('what the dry run changed in the tree', run('git', 'status', '--short'), 40)
 print('dry run done:', TREE)

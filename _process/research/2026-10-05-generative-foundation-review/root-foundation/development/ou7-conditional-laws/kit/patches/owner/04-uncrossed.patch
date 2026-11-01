@@ -1,8 +1,8 @@
 diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
-index ff9b79d..dbf128e 100644
+index 62f65eabd..e9644fc4b 100644
 --- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
 +++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
-@@ -75,9 +75,11 @@ their consumers' stay arithmetic, since each needs only the count.
+@@ -77,9 +77,11 @@ their consumers' stay arithmetic, since each needs only the count.
    pairing of units (`«程守数当且仅当可对»`). This is an exact cardinality representation of
    natural-number balance, near-definitional under the one: the pairing is supplied, not derived from
    the unfolding, and it establishes no trajectory of units. Counting a region's units (`«计»`, the
@@ -17,7 +17,7 @@ index ff9b79d..dbf128e 100644
    by a test, a pairing is exactly equal count in every class (`«类之对当且仅当类类等数»`), and the
    class does work: equal count pairs under the one and not under sameness (`«一对而静不对之例»`). So
    a pairing under continuation relative to such a class keeps the count in every class
-@@ -947,8 +949,36 @@ theorem GrammarLaws.uncrossed_of_closed {R : «际» α} {p : α → Bool}
+@@ -953,8 +955,36 @@ theorem GrammarLaws.uncrossed_of_closed {R : «际» α} {p : α → Bool}
    · exact Bool.noConfusion (hy.symm.trans (forward x y hx r))
    · rfl
  
@@ -55,7 +55,7 @@ index ff9b79d..dbf128e 100644
  theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed : ∀ x y, R x y → p x = p y)
      {a b : List α} (h : «对» R a b) : «计» p a = «计» p b := by
    induction h with
-@@ -958,7 +988,9 @@ theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed
+@@ -964,7 +994,9 @@ theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed
      rw [GrammarLaws.count_insert, uncrossed x y r, ih]
  
  /-- **A pairing keeps the count on every region closed both ways**: closed under the relation and

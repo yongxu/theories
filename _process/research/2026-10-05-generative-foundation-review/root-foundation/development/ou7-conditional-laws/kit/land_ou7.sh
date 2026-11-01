@@ -9,8 +9,10 @@
 #                                      sections found once (integrate_ou7.py anchors, nothing written)
 #   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, MapRegions, OU plan and GrammarTesting patches,
 #                                      then patches/owner/ in name order; the three leaves and their joins; then each
-#                                      stage in stages/ (a SKIP file or OU7_STAGES leaves one out; one whose series does
-#                                      not apply is dropped, and OU7 lands without it); the audit, the stages' merged in
+#                                      stage in stages/, in name order, patch by patch (a SKIP file or OU7_STAGES leaves
+#                                      one out; one with no patch, or whose series does not apply, stops here with git's
+#                                      words and nothing of it written: rebase it, or leave it out and OU7 lands without
+#                                      it); the audit, every selected stage in place and its EXPECTED.json merged in
 #   LOG=DIR zsh land_ou7.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
 #   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions; the two
 #                                      general laws in 01 §4, 06 §三 and their two records; one record's words; OU7's
@@ -45,7 +47,8 @@ prepare)
   step stages; python3 -B $K/integrate_ou7.py stages > $LOG/stages.log 2>&1 || fail stages; head -1 $LOG/stages.log
   echo "each stage's series is checked at apply, after the joins it is made against" ;;
 apply)
-  step apply; python3 -B $K/integrate_ou7.py apply > $LOG/apply.log 2>&1 || fail apply; cat $LOG/apply.log
+  step apply; python3 -B $K/integrate_ou7.py apply > $LOG/apply.log 2>&1 || { tail -12 $LOG/apply.log; fail apply; }
+  cat $LOG/apply.log
   step audit; python3 -B $K/integrate_ou7.py audit > $LOG/audit.log 2>&1 || fail audit; tail -3 $LOG/audit.log
   python3 -B $K/integrate_ou7.py stages | tail -1
   git diff --stat | tail -1 ;;

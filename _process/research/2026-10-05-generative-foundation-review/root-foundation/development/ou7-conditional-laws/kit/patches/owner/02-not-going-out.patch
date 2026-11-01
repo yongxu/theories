@@ -1,0 +1,151 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean
+index 7f90db320..e96678bee 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean
+@@ -6,7 +6,7 @@ import Becoming.GrammarCrossing
+ 
+ `Becoming.Continuity` reads closure by families, tests on the relata: a family the relation closes
+ is one whose adjacent listed relata lie both in it or both outside it (`Continuity.Closes`). This
+-module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`).
++module reads that on the grammar's `«不出»` (`Becoming.GrammarLaws`).
+ 
+ * **Adjacency among the listed relata is a relation of the grammar** (`Continuity.adjacentListed`):
+   both listed, and adjacent under the relation. It is symmetric (`Continuity.adjacentListed_symm`).
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
+index 3858e3495..f23d39907 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean
+@@ -13,7 +13,8 @@ no definition and changes none: the cut keeps its definition in `Becoming.Standp
+ * **The World's cut is not going out.** A cut is the grammar's `«不出»` at a valuation's relation, by
+   definition (`Flow.cut_iff_notGoingOut`). So a region closed under the relation is a cut
+   (`Flow.cut_of_closedUnder`), and a cut is closed where membership is stable
+-  (`Flow.closedUnder_of_cut`), by `«闭则不出»` and `«不外者内则不出当且仅当闭»` (`Becoming.GrammarCrossing`).
++  (`Flow.closedUnder_of_cut`), by `«闭则不出»` (`Becoming.GrammarLaws`) and `«不外者内则不出当且仅当闭»`
++  (`Becoming.GrammarCrossing`).
+   Conveyance's relation is symmetric (`Flow.conveyance_symm`), so along it nothing goes out of a region
+   exactly where nothing comes in (`Flow.cut_iff_notComingIn`, by `«对称则不出当且仅当逆不出»`).
+ * **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
+index 53933e9b2..aaf01d912 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
+@@ -5,23 +5,20 @@ import Becoming.GrammarLaws
+ 
+ A region is delimited from the rest by what it holds, and a relation crosses that delimitation where
+ it bears a member to something outside (the root chapter's reading of boundaries, 01 §9.9). The
+-grammar states the closed region (`«闭»`): whatever a member bears the relation to is a member. This
+-module states not going out (`«不出»`) for every carrier, relation and region, how it differs from
+-being closed, how going out and coming in are related, and where on a line a crossing lies. It adds
+-one definition and changes no definition of an earlier module.
+-
+-| name | reading |
+-|---|---|
+-| `«不出»` | nothing in a region goes out of it along a relation: no member bears it to something outside |
+-
+-* **Closed, and not gone out of.** A closed region is not gone out of (`«闭则不出»`), an occurrence's
+-  closure among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`). Not going out
+-  of a region is exactly the closedness of what is not outside it (`«不出当且仅当不外者闭»`): its
+-  members bear the relation only to what is not outside. No decision is used. Where membership is
+-  stable, whatever is not outside the region lying in it, the two coincide
+-  (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is exactly excluded
+-  middle (`«不出皆闭当且仅当排中»`), a lemma of that law, not a calibration: the need comes from
+-  membership being any proposition, not from the relation.
++grammar states the closed region (`«闭»`), whatever a member bears the relation to being a member,
++and not going out of a region (`«不出»`), no member bearing the relation to something outside, with
++a closed region not gone out of (`«闭则不出»`) and an occurrence's closure among them (`«所闭不出»`,
++the closure law `«所闭之界»` read through `«不出»`), in `Becoming.GrammarLaws`. This module states,
++for every carrier, relation and region, how not going out differs from being closed, how going out
++and coming in are related, and where on a line a crossing lies. It adds no definition and changes no
++definition of an earlier module.
++
++* **Closed, and not gone out of.** Not going out of a region is exactly the closedness of what is not
++  outside it (`«不出当且仅当不外者闭»`): its members bear the relation only to what is not outside. No
++  decision is used. Where membership is stable, whatever is not outside the region lying in it, the
++  two coincide (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is
++  exactly excluded middle (`«不出皆闭当且仅当排中»`), a lemma of that law, not a calibration: the need
++  comes from membership being any proposition, not from the relation.
+ * **Going out and coming in.** Nothing comes into a region along a relation, nothing outside bearing it
+   to a member, where the region is not gone out of along the converse (`«逆»`), and that is exactly
+   that nothing outside the region goes out of what lies outside it (`«逆之不出当且仅当外者不出»`), with
+@@ -38,7 +35,7 @@ one definition and changes no definition of an earlier module.
+   line under a class leaving a decided region only into a set passes a member of the set this way
+   (`«所经必同»`, `Becoming.GrammarPath`).
+ 
+-The World's cut is this module's `«不出»` at a valuation's relation, by definition, and 04 §1's law of
++The World's cut is the grammar's `«不出»` at a valuation's relation, by definition, and 04 §1's law of
+ crossing is read on 07 §4.1's boundaries in `Becoming.ConveyanceBoundaries`. What is not shown: a
+ graded boundary, and which relation a self's boundary is drawn along (07 §4.2). Every declaration has
+ an empty axiom report.
+@@ -54,19 +51,6 @@ section NotGoingOut
+ 
+ variable {α : Type u}
+ 
+-/-- Nothing in a region goes out of it along a relation (不出): no member bears the relation to
+-something outside. -/
+-def «不出» (R : «际» α) (P : α → Prop) : Prop := ∀ x y, P x → ¬ P y → ¬ R x y
+-
+-/-- **A closed region is not gone out of.** -/
+-theorem «闭则不出» {R : «际» α} {P : α → Prop} (closed : «闭» R P) : «不出» R P :=
+-  fun x y inside outside related => outside (closed x y inside related)
+-
+-/-- **An occurrence's closure is not gone out of**, as every closed region: nothing within it bears the
+-relation to what lies beyond it. It is the closure law `«所闭之界»` read through `«不出»`. -/
+-theorem «所闭不出» (R : «际» α) (x : α) : «不出» R («所闭» R x) :=
+-  fun _ _ within beyond => «所闭之界» within beyond
+-
+ /-- **Not going out of a region is the closedness of what is not outside it.** Nothing in `P` bears
+ `R` to something outside `P` exactly where the region of what is not outside `P` is closed under `R`.
+ No decision is used. -/
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+index 414516cc6..62f65eabd 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+@@ -28,6 +28,7 @@ their consumers' stay arithmetic, since each needs only the count.
+ |---|---|
+ | `«闭»` | a region closed under a relation: whatever a member bears it to is a member |
+ | `«所闭»` | lying within a closure: every region closed under the relation that holds `x` holds `y` |
++| `«不出»` | nothing in a region goes out of it along a relation: no member bears it to something outside |
+ | `«对»` | a perfect pairing of the places of two finite lists under a relation, each pair related |
+ | `«计»` | how many units of a list a test holds of: a region read as a test (`α → Bool`), a modelling choice; a region given as a proposition enters by `decide` |
+ | `«聚»` | lists gathered along a list of indices, joined |
+@@ -48,8 +49,11 @@ their consumers' stay arithmetic, since each needs only the count.
+ * **Closure.** `«所闭» R x y` is exactly `x = y ∨ «及» R x y` (`«所闭当且仅当同一或及»`): the least
+   closed region holding `x` is `x` itself with what `x` reaches. It is reflexive, transitive, holds
+   every step, grows with the relation, is symmetric for a symmetric relation, read under the converse
+-  is the closure read backward (`«所闭之逆»`), is itself closed, nothing within it bears the relation
+-  beyond it, and a region is `x`'s closure exactly where it holds `x`, is closed and lies within the
++  is the closure read backward (`«所闭之逆»`), is itself closed, and nothing within it bears the
++  relation beyond it (`«所闭之界»`). Nothing in a region goes out of it along a relation (`«不出»`)
++  where no member bears the relation to something outside: a closed region is not gone out of
++  (`«闭则不出»`), an occurrence's closure among them, the closure law read through not going out
++  (`«所闭不出»`). A region is `x`'s closure exactly where it holds `x`, is closed and lies within the
+   closure (`«所闭之证»`). A closure through borrowed steps, every step of `R'` a step of `R` or a step
+   of `R` from `a` taken at `o`, lies within `o`'s or `a`'s closure under `R`
+   (`«借步之所闭在二所闭»`), and the two lie within `o`'s closure under `R'` where `R'` holds `R` and
+@@ -232,11 +236,25 @@ theorem «所闭之逆» {R : «际» α} {x y : α} : «所闭» («逆» R) x
+       (fun _ _ back related => «所闭之传递» («缘在所闭» (R := «逆» R) related) back)
+       («所闭之自反» («逆» R) y)⟩
+ 
+-/-- Nothing within a closure bears the relation to what lies beyond it. -/
++/-- Nothing within a closure bears the relation to what lies beyond it. Read through `«不出»`, it is
++`«所闭不出»`: an occurrence's closure is not gone out of. -/
+ theorem «所闭之界» {R : «际» α} {x y z : α} (within : «所闭» R x y) (beyond : ¬ «所闭» R x z) :
+     ¬ R y z :=
+   fun related => beyond («所闭之传递» within («缘在所闭» related))
+ 
++/-- Nothing in a region goes out of it along a relation (不出): no member bears the relation to
++something outside. -/
++def «不出» (R : «际» α) (P : α → Prop) : Prop := ∀ x y, P x → ¬ P y → ¬ R x y
++
++/-- **A closed region is not gone out of.** -/
++theorem «闭则不出» {R : «际» α} {P : α → Prop} (closed : «闭» R P) : «不出» R P :=
++  fun x y inside outside related => outside (closed x y inside related)
++
++/-- **An occurrence's closure is not gone out of**, as every closed region: nothing within it bears the
++relation to what lies beyond it. It is the closure law `«所闭之界»` read through `«不出»`. -/
++theorem «所闭不出» (R : «际» α) (x : α) : «不出» R («所闭» R x) :=
++  fun _ _ within beyond => «所闭之界» within beyond
++
+ /-- A closed region holding `x` holds everything within `x`'s closure. -/
+ theorem «闭含所闭» {R : «际» α} {P : α → Prop} (closed : «闭» R P) {x y : α} (holds : P x)
+     (within : «所闭» R x y) : P y :=

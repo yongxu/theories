@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "root": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/history",
+  "entries": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/REHEARSAL.json",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/history/REHEARSAL.json",
+      "sha256": "1aa5f0e3c5106ff11463f77f48e5eaf1f5e82d992196aa93ebafa3e4894e9eb5",
+      "blob": "6b301625796bb3a9fa7ab6d8e97fe393764fa74f",
+      "batch": "moves-2026-11-01-ou7-rehearsal",
+      "reason": "superseded on 1 November 2026 by the rehearsal of the grammar's owner's patches as OU's owner specified them (02 moving «不出», «闭则不出» and «所闭不出» unchanged); its build of the kit's own patches and the three leaves, which have not changed, is cited from the new REHEARSAL.json",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/REHEARSAL.json"
+    }
+  ]
+}
