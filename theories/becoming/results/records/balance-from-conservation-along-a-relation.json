@@ -383,7 +383,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
       "role": "proof",
-      "sha256": "43e1d5f456db213dd4785e6c7145bd28f2539efa1ce7f4a730883eed14e93d8a",
+      "sha256": "324596a83e79821ab0760bba8de0362214f183d681966241b69f42fd53179c71",
       "declarations": [
         "Becoming.Continuity.adjacentListed",
         "Becoming.Continuity.adjacentListed_symm",

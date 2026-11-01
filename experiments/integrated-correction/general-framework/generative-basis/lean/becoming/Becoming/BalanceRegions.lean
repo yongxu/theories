@@ -461,7 +461,7 @@ relation of the grammar. -/
 theorem paired_single {α : Type} {S : «际» α} {x : α} {a b : List α} (paired : «对» S a b)
     (single : a = [x]) : ∃ y, S x y ∧ b = [y] := by
   cases paired with
-  | nil => exact List.noConfusion single
+  | nil => exact nomatch single
   | @cons _ y _ b₁ b₂ related rest =>
     cases single
     cases b₁ with
