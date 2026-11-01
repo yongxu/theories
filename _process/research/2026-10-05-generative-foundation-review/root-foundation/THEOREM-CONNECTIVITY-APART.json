@@ -6706,6 +6706,11 @@
    "module": "Becoming.WindowedWaiting",
    "category": "model-witness",
    "reason": "answering within a window of two keeps inclusion: a fact about one law of a pair, not a law of the unfolding (EL4a)"
+  },
+  "Becoming.BlanketCouplings.stepLaw_course": {
+   "module": "Becoming.BlanketCouplings",
+   "category": "general-structure",
+   "reason": "BlanketCouplings.stepLaw_course: a law of any course read with the step as the external part, or of any web, flow and formation along one balanced run (a formation's level as the internal part); the base supplies no such reading of a formation yet (UE28)"
   }
  },
  "instances": {

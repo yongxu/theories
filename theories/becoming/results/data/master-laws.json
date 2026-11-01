@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T024359.312453Z",
- "core_sources_sha256": "0c1555bef7d604f26df26bd1938f0387dae5526b47951c6bcaf2957defd3228d",
+ "core_receipt": "20261101T044825.244995Z",
+ "core_sources_sha256": "cd753d3f5c04e4699338b603fc79f95b2e6afba52579523164ed9f38d859e784",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4066,
+  "laws": 4072,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 810,
   "balance, represented": 656,
   "anchor, not reached": 135,
-  "no master law": 2065,
+  "no master law": 2071,
   "vocabulary_only": 77,
   "closure": 490,
   "balance": 841,
@@ -1099,6 +1099,118 @@
      "Becoming.BlanketCouplings.ReadsExternal.not_consistent",
      "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
      "Becoming.BlanketCouplings.ReadsExternal.whole_consistent"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.BlanketCouplings.stepExternal",
+     "Becoming.BlanketCouplings.AgentConsistent",
+     "Becoming.BlanketCouplings.stepExternal_consistent_iff",
+     "Becoming.BlanketCouplings.stepExternal_admitted_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.BlanketCouplings.stepLaw",
+     "Becoming.BlanketCouplings.stepLaw_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.BlanketCouplings.ValuesAcross",
+     "Becoming.BlanketCouplings.ValuesAcross.through",
+     "Becoming.BlanketCouplings.listed_valuesAcross"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.BlanketCouplings.next_level_alike_iff",
+     "Becoming.BlanketCouplings.levelParts",
+     "Becoming.BlanketCouplings.rowAct",
+     "Becoming.BlanketCouplings.presentRow",
+     "Becoming.BlanketCouplings.DecidesPresence",
+     "Becoming.BlanketCouplings.agentConsistent_iff_exchange",
+     "Becoming.BlanketCouplings.levelParts_admitted_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.BlanketCouplings.TwoRelata",
+     "Becoming.BlanketCouplings.TwoRelata.g_not_mem_h",
+     "Becoming.BlanketCouplings.PhasedDrain.phase",
+     "Becoming.BlanketCouplings.PhasedDrain.gLevel",
+     "Becoming.BlanketCouplings.PhasedDrain.hLevel",
+     "Becoming.BlanketCouplings.PhasedDrain.hTakesG",
+     "Becoming.BlanketCouplings.PhasedDrain.hGivesG",
+     "Becoming.BlanketCouplings.PhasedDrain.hTakesH",
+     "Becoming.BlanketCouplings.PhasedDrain.hGivesH",
+     "Becoming.BlanketCouplings.PhasedDrain.take",
+     "Becoming.BlanketCouplings.PhasedDrain.give",
+     "Becoming.BlanketCouplings.PhasedDrain.flow",
+     "Becoming.BlanketCouplings.PhasedDrain.level",
+     "Becoming.BlanketCouplings.PhasedDrain.web",
+     "Becoming.BlanketCouplings.PhasedDrain.balance_g",
+     "Becoming.BlanketCouplings.PhasedDrain.balance_h",
+     "Becoming.BlanketCouplings.PhasedDrain.balances",
+     "Becoming.BlanketCouplings.PhasedDrain.uncoupled",
+     "Becoming.BlanketCouplings.PhasedDrain.one_value",
+     "Becoming.BlanketCouplings.PhasedDrain.values",
+     "Becoming.BlanketCouplings.PhasedDrain.presence",
+     "Becoming.BlanketCouplings.PhasedDrain.presence_decides",
+     "Becoming.BlanketCouplings.PhasedDrain.act",
+     "Becoming.BlanketCouplings.PhasedDrain.not_admitted"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 17,
+    "declarations": [
+     "Becoming.BlanketCouplings.Alternating.phase",
+     "Becoming.BlanketCouplings.Alternating.gLevel",
+     "Becoming.BlanketCouplings.Alternating.hLevel",
+     "Becoming.BlanketCouplings.Alternating.hTakesG",
+     "Becoming.BlanketCouplings.Alternating.hGivesG",
+     "Becoming.BlanketCouplings.Alternating.hTakesH",
+     "Becoming.BlanketCouplings.Alternating.hGivesH",
+     "Becoming.BlanketCouplings.Alternating.take",
+     "Becoming.BlanketCouplings.Alternating.give",
+     "Becoming.BlanketCouplings.Alternating.flow",
+     "Becoming.BlanketCouplings.Alternating.level",
+     "Becoming.BlanketCouplings.Alternating.web",
+     "Becoming.BlanketCouplings.Alternating.balance_g",
+     "Becoming.BlanketCouplings.Alternating.balance_h",
+     "Becoming.BlanketCouplings.Alternating.balances",
+     "Becoming.BlanketCouplings.Alternating.uncoupled",
+     "Becoming.BlanketCouplings.Alternating.values",
+     "Becoming.BlanketCouplings.Alternating.presence",
+     "Becoming.BlanketCouplings.Alternating.presence_decides",
+     "Becoming.BlanketCouplings.Alternating.act",
+     "Becoming.BlanketCouplings.Alternating.gLevel_inj",
+     "Becoming.BlanketCouplings.Alternating.recurs",
+     "Becoming.BlanketCouplings.Alternating.agentConsistent",
+     "Becoming.BlanketCouplings.Alternating.admitted"
     ],
     "master_laws": [],
     "grammar": false,
@@ -62700,7 +62812,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "54864be6ff01214382eb6eeda068880ffd116664a1917095b0fa01982e979470",
+   "modules_sha256": "81edb21ff613f9ae32eabc4033ee3d1cd6e155e9ce9e9166da421b312f5610fd",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },

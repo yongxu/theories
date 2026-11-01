@@ -7834,7 +7834,7 @@
    "type": "module",
    "name": "Becoming.BlanketCouplings",
    "level": "L1",
-   "theorems": 43,
+   "theorems": 70,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -35339,6 +35339,11 @@
   {
    "from": "record:a-formations-couplings-as-its-blanket",
    "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:testing-within-couplings",
    "type": "formal-reuse"
   },
   {
