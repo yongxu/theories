@@ -1,0 +1,32 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el6/tree",
+  "modules": 92,
+  "ran": [
+    "Becoming.EL6CheckGM",
+    "Becoming.EL6CheckMI",
+    "Becoming.EL6CheckKW",
+    "BecomingEL6CheckGMAxiomAudit",
+    "BecomingEL6CheckMIAxiomAudit",
+    "BecomingEL6CheckKWAxiomAudit"
+  ],
+  "reused": 89,
+  "unclean": [],
+  "audits": {
+    "Becoming.EL6CheckGM": {
+      "theorems": 6,
+      "declarations": 7,
+      "with_axioms": {}
+    },
+    "Becoming.EL6CheckMI": {
+      "theorems": 54,
+      "declarations": 58,
+      "with_axioms": {}
+    },
+    "Becoming.EL6CheckKW": {
+      "theorems": 2,
+      "declarations": 2,
+      "with_axioms": {}
+    }
+  }
+}
+BECOMING_JOBS=3 python3 -B $B/scratch_build.py $T Becoming.EL6CheckGM    3.79s user 1.54s system 129% cpu 4.128 total

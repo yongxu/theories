@@ -2,7 +2,6 @@ import Becoming.Reproduction
 import Becoming.KeepingWidening
 import Becoming.Roles
 import Becoming.SelectionShift
-import Becoming.LineDegeneration
 
 /-!
 # Lineages on the map: generations of descent read on the lineage continuation
@@ -81,8 +80,8 @@ birth.
   member's occurrence (`ContinuationsListed`, the census holding every continuation), everything
   the line from a member reaches is a member's occurrence (`reached_listed`), so an empty
   generation at a step not before the member ends the line on every branch
-  (`degeneration_of_empty`, through EL3's `Web.ends_of_ends_at`, imported from
-  `Becoming.LineDegeneration`).
+  (`degeneration_of_empty`, through EL3's `Web.ends_of_ends_at`, of `Becoming.MapInstances`,
+  imported through `Becoming.KeepingWidening`).
   Without the census, EL3's law read at the kind grain gives degeneration from the line's own
   reach: from an active occurrence, where nothing the line reaches at a step is active
   (EL3's `Web.kind_every_branch_ends_of_gone`, imported). At the grain of activity every continuation of a member is one
@@ -151,7 +150,8 @@ birth.
   every step, where listed offspring continue their parents, forbids only that every member of a
   generation degenerates (`not_all_degenerate_of_positive`); it decides no point's region.
 * **Counting, imported.** The counting comes from EL1's `Becoming.SelectionShift` and the horizon law
-  from EL3's `Becoming.LineDegeneration`, each imported, so the core holds each once.
+  from EL3's laws in `Becoming.MapInstances` and `Becoming.KeepingWidening`, each imported, so the
+  core holds each once.
   `reproducing_of_term`, `nonempty_of_positive` and `nonempty_while` are lemmas: the first reads
   `reproducing_of_selection` as list membership, the other two start `never_empties` and
   `never_empties_while` from a step `t`.

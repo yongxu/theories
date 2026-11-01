@@ -453,6 +453,15 @@
       "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelWebs.lean"
     },
     {
+      "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LineDegeneration.lean",
+      "sha256": "bbbc76d60ce044334f966c2b638df1fc8d3d47887576e5e4727eadd03d5abd98",
+      "blob": "a874278c91b231f8e8afcf5703abf661a5d1e136",
+      "batch": "EL6-history",
+      "reason": "EL6 (1 November 2026): its laws placed in their owners' modules, each on its owner's yes (the grammar part in Becoming.GrammarMap, the kind instance in Becoming.KeepingWidening, the rest in Becoming.MapInstances, Web.Restated dropped), so the leaf is retired; bytes as on main",
+      "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean"
+    },
+    {
       "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListTests.lean",
       "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/ListTests.lean",
       "sha256": "ae36d0df480bb1b8443d2944bdf35b1c08c80b54c99cec2b883118f45b153616",

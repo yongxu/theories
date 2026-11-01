@@ -1,0 +1,40 @@
+import Becoming.LineDegeneration
+
+namespace Becoming
+
+variable {F C : Type}
+
+namespace Web
+
+variable {W : Web F C}
+
+/-- **Degeneration at the kind grain**: for every kind relation `Q` and every continuation, the
+lineage continuation `Web.withinKind W Q passes` included, a line from an active occurrence along
+which nothing reached at a step is active ends on every branch under the kind class. The kind
+instance of `Web.every_branch_ends_of_gone`. -/
+theorem kind_every_branch_ends_of_gone_check {R : Nat → F → F → Prop} {Q : F → F → Prop}
+    {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
+    (gone : ∀ y, «所及» (continuationStep R) (W.kindClass Q) x y → y.1 = N →
+      ¬ W.active y.1 y.2) :
+    «退化» (continuationStep R) (W.kindClass Q) x :=
+  every_branch_ends_of_gone kindClass_within start le gone
+
+
+end Web
+
+namespace Map.Undecided
+
+/-- **The premise of the degeneration law holds at the kind grain**, for every kind relation, and
+the pattern read at the kind degenerates. -/
+theorem kind_degenerates_check (P : Prop) (Q : Bool → Bool → Prop) :
+    (∀ y, «所及» (Web.continuationStep (continuation P)) (web.kindClass Q) (0, false) y →
+        y.1 = 2 → ¬ web.active y.1 y.2) ∧
+      «退化» (Web.continuationStep (continuation P)) (web.kindClass Q) (0, false) :=
+  have gone : ∀ y, «所及» (Web.continuationStep (continuation P)) (web.kindClass Q) (0, false) y →
+      y.1 = 2 → ¬ web.active y.1 y.2 := fun y _ at_ =>
+    Eq.subst (motive := fun s => ¬ web.active s y.2) at_.symm (inactive_two y.2)
+  ⟨gone, Web.kind_every_branch_ends_of_gone_check (.inl ⟨rfl, rfl⟩) (Nat.zero_le 2) gone⟩
+
+end Map.Undecided
+
+end Becoming

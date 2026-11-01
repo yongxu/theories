@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T112708.430596Z",
- "core_sources_sha256": "d7eba0bb2d43039da5b549f8cdeb012038a51cc55268e0d1c8ba17561c4787d0",
+ "core_receipt": "20261101T134343.981701Z",
+ "core_sources_sha256": "89d7d242776ac795be428896171e3cbe8d0e9235549de3c8c3d4125f1e126e60",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4094,
+  "laws": 4093,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 862,
+  "grammar": 861,
   "balance, represented": 634,
   "anchor, not reached": 135,
   "no shared law": 2063,
   "vocabulary_only": 79,
-  "closure": 495,
-  "balance": 841,
+  "closure": 494,
+  "balance": 840,
   "return": 253,
   "lumping": 84,
   "order": 85
@@ -14105,36 +14105,20 @@
    {
     "law": 4,
     "declarations": [
-     "Becoming.Web.Restated.not_endless_of_gone",
-     "Becoming.Web.Restated.degenerates_of_gone",
-     "Becoming.Web.Restated.consumed_held_not_endless",
-     "Becoming.Web.Restated.family_excess_not_endless",
-     "Becoming.Web.Restated.stopped_not_endless"
-    ],
-    "shared_laws": [
-     "closure",
-     "balance"
-    ],
-    "grammar": true,
-    "dependence": "grammar"
-   },
-   {
-    "law": 5,
-    "declarations": [
-     "Becoming.Map.not_not_end_of_ends",
-     "Becoming.Map.end_of_ends_decided",
+     "Becoming.«尽则非无终»",
+     "Becoming.«尽而续可定则有终»",
      "Becoming.Map.StepWhere.relation",
      "Becoming.Map.StepWhere.ends",
      "Becoming.Map.StepWhere.has_next_iff",
      "Becoming.Map.StepWhere.end_decides",
-     "Becoming.Map.end_of_ends_iff_excluded_middle"
+     "Becoming.«尽则有终当且仅当排中»"
     ],
     "shared_laws": [],
     "grammar": true,
     "dependence": "grammar"
    },
    {
-    "law": 6,
+    "law": 5,
     "declarations": [
      "Becoming.Map.Undecided.web",
      "Becoming.Map.Undecided.continuation",
@@ -14152,7 +14136,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 7,
+    "law": 6,
     "declarations": [
      "Becoming.Map.Depleted.web",
      "Becoming.Map.Depleted.dependent",
@@ -20621,7 +20605,7 @@
      "Becoming.Map.Still.keeps",
      "Becoming.Map.short",
      "Becoming.Map.short_end",
-     "Becoming.Map.Short.degeneration",
+     "Becoming.Map.Short.reaches_end",
      "Becoming.Map.Short.ends",
      "Becoming.Map.Short.renews_and_ends",
      "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -20655,7 +20639,7 @@
      "Becoming.Web.keeping_of_carried_on",
      "Becoming.Web.itself_not_generation",
      "Becoming.Web.always_keeps",
-     "Becoming.Web.degenerates_of_gone",
+     "Becoming.Web.end_of_gone",
      "Becoming.Web.consumed_held_not_endless",
      "Becoming.Web.family_excess_not_endless",
      "Becoming.Web.stopped_not_endless",
@@ -63180,7 +63164,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "6742eca1df85b43dfe425360075c74b2b6dd7579e1292ffb1bdcbf8d4ddc17bd",
+   "modules_sha256": "1e3c5155f64ad32433b00e5623b7c7699488c6419d795ef14c24609a70d146bb",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

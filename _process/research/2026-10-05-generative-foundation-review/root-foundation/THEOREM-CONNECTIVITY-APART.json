@@ -3232,6 +3232,16 @@
    "category": "calibration",
    "reason": "the exact logical principle a stated law of the grammar needs (excluded middle, its weak form or double-negation stability); a lemma of the item that needs it"
   },
+  "Becoming.«尽则有终当且仅当排中»": {
+   "module": "Becoming.GrammarMap",
+   "category": "calibration",
+   "reason": "that every line ending on every branch reaches an end, at every carrier and relation, is exactly excluded middle; the base form, Map.end_of_gone_iff_excluded_middle, is on the World (EL3, placed by EL6)"
+  },
+  "Becoming.«尽则非无终»": {
+   "module": "Becoming.GrammarMap",
+   "category": "general-structure",
+   "reason": "ending on every branch reaches an end up to double negation: a law of the map for every carrier and pair of relations, read on no model; the World's lines are its case (EL3, placed by EL6)"
+  },
   "Becoming.«必或不当当且仅当弱排中»": {
    "module": "Becoming.GrammarCandidates",
    "category": "calibration",
@@ -6457,16 +6467,6 @@
    "category": "general-structure",
    "reason": "from a nonempty generation, a term positive at every nonempty generation leaves not every member degenerating, where listed offspring continue their parents: a law of the map for any relation on occurrences (step, formation) and any listed generations, read on no world; the lineage continuation on the World's webs is its case, with the witnesses Courses and Chain (EL1)"
   },
-  "Becoming.Map.end_of_ends_iff_excluded_middle": {
-   "module": "Becoming.LineDegeneration",
-   "category": "calibration",
-   "reason": "that every line ending on every branch reaches an end, at every carrier and relation, is exactly excluded middle; the base form, Map.end_of_gone_iff_excluded_middle, is on the World (EL3)"
-  },
-  "Becoming.Map.not_not_end_of_ends": {
-   "module": "Becoming.LineDegeneration",
-   "category": "general-structure",
-   "reason": "ending on every branch reaches an end up to double negation: a law of the map for every carrier and pair of relations, read on no model; the World's lines are its case (EL3)"
-  },
   "Becoming.PairSelection.assorted_disfavours_iff": {
    "module": "Becoming.PairSelection",
    "category": "general-structure",
@@ -7156,6 +7156,11 @@
    "module": "Becoming.CommonResponse",
    "category": "general-structure",
    "reason": "under staying the same a common response exists exactly where the requirement covers every situation: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.Web.ends_or_reaches": {
+   "module": "Becoming.MapInstances",
+   "category": "general-structure",
+   "reason": "where going on is decided at the points of a line, the line reaches an end or an occurrence at every later step: a law of the base's lines along any class; its one use was the old proof of Web.end_of_gone, which now follows from degeneration (EL6)"
   }
  },
  "instances": {

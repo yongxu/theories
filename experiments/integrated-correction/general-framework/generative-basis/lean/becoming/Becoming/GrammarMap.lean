@@ -18,7 +18,7 @@ pattern from turnover that ends it; read at two grains it can.
 | `«新而有终»` | renewing and still ending: a carrying renewal on a line that ends |
 
 The strong forms exclude each other (`«全生成有终不并»`, `«全生成全守不并»`, `«全守有终不并»`), each is
-inhabited (`Map.Endless.generation`, `Map.Still.keeping`, `Map.Short.degeneration`; the last states
+inhabited (`Map.Endless.generation`, `Map.Still.keeping`, `Map.Short.reaches_end`; the last states
 only an end, 有终, and that the same point degenerates is `Map.Short.ends`), and with excluded
 middle as a hypothesis they cover every point (`«全三域之周»`). 全生成 holds along its own line
 (`«全生成之所及亦全生成»`) and an end reaches back along it (`«有终之所前亦有终»`). A carrying renewal
@@ -29,6 +29,14 @@ region: a line can renew and still end (`Map.Short.renews_and_ends`). Telling a 
 one that reaches an end, at every point of every model, is exactly excluded middle
 (`«不穷有终之定当且仅当排中»`), and so is placing every point in one of the three strong forms
 (`«全三域之定当且仅当排中»`): the boundary between them is where a line's going on is not decided.
+
+Ending on every branch and reaching an end. What ends on every branch reaches an end up to double
+negation (`«尽则非无终»`), and reaches one where going on is decided at the points of its line
+(`«尽而续可定则有终»`). The decision cannot be dropped: on the short life's two points, with its one
+step taken exactly where a proposition `P` holds (`Map.StepWhere`), the line from `false` ends on
+every branch while an end decides `P`, so that every line ending on every branch reaches an end is
+exactly excluded middle (`«尽则有终当且仅当排中»`). The two calibrations above ask which region a
+point lies in; this one knows the region, every branch ending, and asks where an end lies.
 
 Higher orders: a sequence of classes `Es` reads generation at order `k` as the order-`k + 1` pattern
 continuing through order-`k` renewals (`«阶全生成»`); no order between the classes is assumed, and the
@@ -204,8 +212,10 @@ reached, where `«尽»` asks one on every branch. How `«全生成»` and `«�
 `«守»` is stated in modules that import this one: strong generation gives generation (`«全生成则生成»`,
 `Becoming.KeepingWidening`), and strong keeping gives keeping from some point on (`«全守则后守»`,
 `Becoming.MapRegions`) but not strict keeping, since `«全守»` allows a carrying renewal before its point,
-which `«守»` forbids (`Map.Once.keeping`, `Map.Once.not_keeps`); how `«有终»` stands to `«退化»` is not
-stated. -/
+which `«守»` forbids (`Map.Once.keeping`, `Map.Once.not_keeps`). How `«有终»` stands to `«退化»` is
+stated here: `«尽»` gives `«有终»` up to double negation (`«尽则非无终»`) and where going on is
+decided (`«尽而续可定则有终»`), and with no decision exactly under excluded middle
+(`«尽则有终当且仅当排中»`). -/
 
 /-- A line under `L` continued by a continuation is a line. -/
 theorem «相续之续» {R L : «际» α} {x z w : α} (h : «相续» R L x z) (c : «续» R L z w) : «相续» R L x w :=
@@ -238,6 +248,27 @@ theorem «不穷则延» {R L : «际» α} {x : α} (h : «不穷» R L x) : «
 /-- What ends on every branch does not go on along every branch. -/
 theorem «尽则非不穷» {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ «不穷» R L x :=
   fun n => «延尽不并» h («不穷则延» n)
+
+/-- **Ending on every branch reaches an end, up to double negation.** -/
+theorem «尽则非无终» {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ ¬ «有终» R L x := by
+  induction h with
+  | mk _ ih =>
+    intro none
+    exact none ⟨_, .inl rfl, fun ⟨y, c⟩ =>
+      ih y c fun ⟨w, hw, ends⟩ => none ⟨w, «所及之传递» (.inr (.one c)) hw, ends⟩⟩
+
+/-- **Ending on every branch reaches an end where going on is decided** at the points of the
+line. -/
+theorem «尽而续可定则有终» {R L : «际» α} {x : α} (h : «尽» R L x) :
+    (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x := by
+  induction h with
+  | mk _ ih =>
+    intro decided
+    exact match decided _ (.inl rfl) with
+      | .inr ends => ⟨_, .inl rfl, ends⟩
+      | .inl ⟨y, c⟩ =>
+        match ih y c (fun z hz => decided z («所及之传递» (.inr (.one c)) hz)) with
+        | ⟨w, hw, ends⟩ => ⟨w, «所及之传递» (.inr (.one c)) hw, ends⟩
 
 /-- Generation (生成): along some branch the pattern goes on and a carrying renewal lies ahead of
 every point of it. -/
@@ -406,15 +437,15 @@ def short : «际» Bool := fun a b => a = false ∧ b = true
 theorem short_end : «亡» short «一» true :=
   fun ⟨_, h, _⟩ => Bool.noConfusion h.1
 
-/-- An end is inhabited: the short life reaches an end (有终). The name is older than the distinction;
-that the same point degenerates is `Map.Short.ends`. -/
-theorem Short.degeneration : «有终» short «一» false :=
+/-- An end is inhabited: the short life reaches an end (有终); that the same point degenerates is
+`Map.Short.ends`. -/
+theorem Short.reaches_end : «有终» short «一» false :=
   ⟨true, .inr (.one ⟨⟨rfl, rfl⟩, trivial⟩), short_end⟩
 
 /-- Renewal does not decide the region: the short life renews (its second occurrence begins a new
 part under identity, carried by the pattern) and still ends. -/
 theorem Short.renews_and_ends : «新而有终» short «一» «静» false := by
-  refine ⟨Short.degeneration, false, true, .inl rfl, ⟨⟨rfl, rfl⟩, trivial⟩, ?_⟩
+  refine ⟨Short.reaches_end, false, true, .inl rfl, ⟨⟨rfl, rfl⟩, trivial⟩, ?_⟩
   intro ⟨z, hz, e⟩
   cases e
   exact Bool.noConfusion hz.1
@@ -440,6 +471,34 @@ theorem Short.ends : «退化» short «一» false :=
 theorem Short.renews_and_ends_everywhere : «新而尽» short «一» «静» false :=
   ⟨Short.ends, false, true, .inl rfl, ⟨⟨rfl, rfl⟩, trivial⟩, fun ⟨z, hz, e⟩ => by
     cases e; exact Bool.noConfusion hz.1⟩
+
+/-! ### Reaching an end needs the decision -/
+
+namespace StepWhere
+
+/-- The short life gated by `P`: its one step, from `false` to `true`, taken exactly where `P`
+holds. -/
+def relation (P : Prop) : «际» Bool := fun x y => short x y ∧ P
+
+/-- Witness lemma: under the one (`«一»`), the line from `false` ends on every branch, at every
+proposition: a step from `false` reaches `true`, and nothing steps from `true`. -/
+theorem ends (P : Prop) : «尽» (relation P) «一» false :=
+  .mk fun _ c => .mk fun _ c' => Bool.noConfusion (c.1.1.2.symm.trans c'.1.1.1)
+
+/-- Witness lemma: `false` has a continuation exactly where `P` holds. -/
+theorem has_next_iff (P : Prop) : «有后» (relation P) «一» false ↔ P :=
+  ⟨fun ⟨_, c⟩ => c.1.2, fun p => ⟨true, ⟨⟨rfl, rfl⟩, p⟩, trivial⟩⟩
+
+/-- Witness lemma: **reaching an end from `false` decides `P`.** -/
+theorem end_decides {P : Prop} (h : «有终» (relation P) «一» false) : P ∨ ¬ P :=
+  match h with
+  | ⟨_, .inl same, ends⟩ =>
+    .inr fun p => ends (Eq.subst (motive := fun z => «有后» (relation P) «一» z) same
+      ((has_next_iff P).mpr p))
+  | ⟨_, .inr (.one c), _⟩ => .inl c.1.2
+  | ⟨_, .inr (.more c _), _⟩ => .inl c.1.2
+
+end StepWhere
 
 /-- A root with two branches: a chain that renews at every step, and a still occurrence. -/
 inductive Branch | root | chain (n : Nat) | still
@@ -486,5 +545,16 @@ theorem «生守相杂» : «生成» fork «一» «静» .root ∧ «守» for
     | .still, .still, _, _ => exact hb ⟨.still, trivial, rfl⟩
 
 end Map
+
+/-! ## Ending on every branch and reaching an end -/
+
+/-- **That every line ending on every branch reaches an end is exactly excluded middle**, at every
+carrier and relation. The forward direction is witnessed by `Map.StepWhere` alone: what is
+undecided is not whether a course goes on without end, since every branch ends, but whether its
+one step is taken. -/
+theorem «尽则有终当且仅当排中» :
+    (∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P :=
+  ⟨fun h P => Map.StepWhere.end_decides (h _ _ _ _ (Map.StepWhere.ends P)),
+   fun em _ _ _ _ ends => «尽而续可定则有终» ends fun _ _ => em _⟩
 
 end Becoming
