@@ -119,8 +119,8 @@
       "kind": "scope"
     },
     {
-      "en": "A formation's own record as the internal part of a blanketed law: for any formation the agent is a model fed by what couples in (a-formations-couplings-as-its-blanket).",
-      "zh": "形成自身之记录为毯化之律之内部部分：于任一形成，主体乃以耦合入者为食之模型（a-formations-couplings-as-its-blanket）。",
+      "en": "A formation's other records, or its level across a family of runs, as the internal part of a blanketed law; along one run, a blanketed law for its level from the consistency condition alone (a-formations-couplings-as-its-blanket).",
+      "zh": "形成之其他记录、或其层级于一族运行，为毯化之律之内部部分；沿一运行，仅由一致之条件得其层级之毯化之律（a-formations-couplings-as-its-blanket）。",
       "kind": "scope"
     },
     {
@@ -162,8 +162,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 35 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
   },
   "next_delta": {
-    "en": "A formation's own record as the internal part of a blanketed law; the threshold-reading policy unable to draw on a larger supply; review by a person.",
-    "zh": "形成自身之记录为毯化之律之内部部分；以阈读之策略不能取用更大之供给；人之审查。"
+    "en": "A formation's records other than its level as the internal part of a blanketed law; its level as that part across a family of runs, or along one run from the consistency condition alone, without functions given; the threshold-reading policy unable to draw on a larger supply; review by a person.",
+    "zh": "形成之层级以外之记录为毯化之律之内部部分；其层级于一族运行、或沿一运行仅由一致之条件而无所给之函数，为此部分；以阈读之策略不能取用更大之供给；人之审查。"
   },
   "correspondence": {
     "en": "The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, Friston and Kiverstein 2018) on a determined law: the deterministic case of the time-unrolled Markov blanket (Virgo, Rosas and Biehl 2022, Behavioral and Brain Sciences 45), the sensory and active courses Pearl's blanket (1988) of the internal course in the unrolled graph, the partition what Bruineberg, Dołęga, Dewhurst and Baltieri (2022) call a Friston blanket. Statistical and dynamical blankets need not coincide (Biehl, Pollock and Kanai 2021; Aguilera, Millidge, Tschantz and Buckley 2022). Self-evidencing blind to its break coming is T6's invisible half (runaway-distance-uncoupled) on a blanketed agent. Graded in UE18's NOTE.",
@@ -332,6 +332,10 @@
     {
       "en": "1 November 2026, board item UE27 (study section 488): the World formation in general, not shown, narrowed to a formation's own record as the internal part, any model fed by a formation's couplings being the agent of a blanketed law by construction (a-formations-couplings-as-its-blanket); next step brought to it; related to a-formations-couplings-as-its-blanket; no statement, law or declaration changed.",
       "zh": "2026年11月1日，工作板条目 UE27（研究第 488 节）：一般之世界形成（未示）收窄为形成自身之记录为内部部分，以形成之耦合为食之任一模型依构造为一毯化之律之主体（a-formations-couplings-as-its-blanket）；下一步随之；与 a-formations-couplings-as-its-blanket 相关联；无一陈述、律或声明改变。"
+    },
+    {
+      "en": "1 November 2026, board item UE28 (study section 491): a formation's own record as the internal part, not shown, narrowed to its records other than its level and its level across a family of runs, its level along one run being the internal part of a law determined part by part exactly where its next level and act agree wherever its level, what couples in and its act agree (a-formations-couplings-as-its-blanket); next step brought to it; no statement, law or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 UE28（研究第 491 节）：形成自身之记录为内部部分（未示）收窄为其层级以外之记录及其层级于一族运行，其层级沿一运行为某逐部分确定之律之内部部分，恰当其层级、耦合入者与作为相合之处，其次层级与次作为皆相合（a-formations-couplings-as-its-blanket）；下一步随之；无一陈述、律或声明改变。"
     }
   ]
 }
