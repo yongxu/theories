@@ -381,7 +381,7 @@ def apply_patches():
 # (R10). The audit requires every selected stage in place; the later steps read the selected stages, since the record
 # stage and the re-point change records that a stage's patches may also change.
 STAGES = HERE / 'stages'
-STAGE_KEYS = {'added', 'cases', 'moved', 'redefined', 'restated', 'renamed', 'roots', 'now_used'}
+STAGE_KEYS = {'added', 'cases', 'moved', 'redefined', 'restated', 'renamed', 'binders', 'roots', 'now_used'}
 
 
 def selected_stages():
@@ -695,6 +695,40 @@ def expectations():
     return expected, moved, redefined, restated, renamed
 
 
+def rename_map():
+    """The selected stages' renames as a map on the tokens of a statement: each renamed name as the audit keys it,
+    and every dotted suffix of it (a name is written relative to its namespace), with each stage's binders {old: new},
+    the bound names a rename carries along (obeys to marks). Suffixes of two renames that clash are left out."""
+    tokens, clash = {}, set()
+    for _, data in stage_data():
+        pairs = []
+        for old, new in data.get('renamed', {}).items():
+            o, n = old[len('Becoming.'):].split('.'), new[len('Becoming.'):].split('.')
+            if len(o) == len(n) and o[:-1] == n[:-1]:
+                pairs += [('.'.join(o[i:]), '.'.join(n[i:])) for i in range(len(o))]
+            else:
+                pairs.append(('.'.join(o), '.'.join(n)))
+        pairs += list(data.get('binders', {}).items())
+        for old, new in pairs:
+            if tokens.get(old, new) != new:
+                clash.add(old)
+            tokens[old] = new
+    return {o: n for o, n in tokens.items() if o not in clash}
+
+
+def renamed_only(before, after, tokens):
+    """Whether `after` is `before` with the stages' renames applied and nothing else: equal once every old token is
+    replaced by its new one, where no new token already stood in `before` (so no two names could have been swapped)."""
+    if before == after or not tokens:
+        return before == after
+    pattern = r"(?<![\w'.])(%s)(?![\w'])"
+    olds = sorted(tokens, key=len, reverse=True)
+    news = sorted(set(tokens.values()) - set(tokens), key=len, reverse=True)
+    if news and re.search(pattern % '|'.join(map(re.escape, news)), before):
+        return False
+    return re.sub(pattern % '|'.join(map(re.escape, olds)), lambda m: tokens[m.group(1)], before) == after
+
+
 def unfold(body, names):
     """A definition's body read at given arguments: each of its bound names replaced."""
     return re.sub(r"(?<![\w'.])(" + '|'.join(map(re.escape, names)) + r")(?![\w'.])", lambda m: names[m.group(1)], body)
@@ -711,6 +745,7 @@ def audit():
     problems = []
     stages = stages_in_place()
     expected_all, moved, redefined, restated, renamed = expectations()
+    tokens = rename_map()
     changed = [p for p in git('diff', '--name-only', 'HEAD', '--', mr.PKG + 'Becoming/').stdout.split()
                if p.endswith('.lean')]
     expected = {source_of(m): m for m in expected_all}
@@ -738,16 +773,22 @@ def audit():
         if set(before) - set(after) != {n for n, (source, _) in moved.items() if source == module} | set(renames):
             problems.append((module, 'removed', sorted(set(before) - set(after))))
         for old, new in renames.items():
-            if after.get(new) != before[old].replace(old[len('Becoming.'):], new[len('Becoming.'):], 1):
+            if new not in after or not renamed_only(before[old], after[new], tokens) or (
+                    not whole_before[old].startswith('theorem ')
+                    and not renamed_only(whole_before[old], whole[new], tokens)):
                 problems.append((module, 'renamed, not in name only', old, new))
         kept = [n for n in before if n in after]
-        heads = [n for n in kept if before[n] != after[n]]
+        heads = [n for n in kept if before[n] != after[n] and not renamed_only(before[n], after[n], tokens)]
+        for n in kept:
+            if before[n] != after[n] and n not in heads:
+                print(module, 'changed only by the stages\' renames:', n)
         if [n for n in heads if n not in restated]:
             problems.append((module, 'statements changed', [n for n in heads if n not in restated]))
         for n in heads:
             if n in restated:
                 print(module, 'restated, as its stage says:', n, '-', restated[n])
         rewritten = [n for n in kept if not whole_before[n].startswith('theorem ') and whole_before[n] != whole[n]
+                     and not renamed_only(whole_before[n], whole[n], tokens)
                      and n not in redefined and n not in restated]
         if rewritten:
             problems.append((module, 'definitions changed', rewritten))

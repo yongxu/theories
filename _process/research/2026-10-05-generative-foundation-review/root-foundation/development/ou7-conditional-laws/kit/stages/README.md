@@ -29,7 +29,8 @@ Every name is written as the audit keys it: `Becoming.` and the name as written 
 - `moved`: `{name: [from module, to module]}`. The declaration moves unchanged, and the target need not list it under `added`. A name also under `restated` may arrive with its statement changed.
 - `redefined`: `{name: [old body, new body, definition, {bound name: argument}]}`. The new body must unfold to the old one.
 - `restated`: `{name: why}`. A statement that changes, such as a universe generalization or a renamed name inside it.
-- `renamed`: `{old: new}`. The statement is kept but for the name.
+- `renamed`: `{old: new}`. The statement is kept but for the stage's renames: the audit takes the old statement, and a definition's whole text, replaces every renamed name (and each dotted suffix of it, as a name is written relative to its namespace) and every binder of `binders` by its new form, and requires the result to equal the new text exactly. A new name or binder already standing in the old text fails it, so no two names can be swapped. A kept declaration whose statement changes only so is accepted the same way, with no `restated` entry.
+- `binders`: `{old: new}`. Bound names a rename carries along (`obeys` to `marks`), read only by that check.
 - `roots`: `{name: [module, category, reason]}`. The register entries for the stage's apart roots.
 - `now_used`: `[names]`. Register roots the stage's code now uses, whose entries go.
 
