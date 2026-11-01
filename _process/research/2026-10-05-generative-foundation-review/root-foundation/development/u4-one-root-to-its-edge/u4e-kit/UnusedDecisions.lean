@@ -36,7 +36,8 @@ def unusedDecisions : MetaM Unit := do
         let later ← mkForallFVars (xs.extract (i+1) xs.size) body
         let stmt := later.containsFVar x.fvarId!
         let proof := (Lean.collectFVars {} applied).fvarSet.contains x.fvarId!
-        out := out.push (if stmt || proof then "" else s!"{mod} {n} binder {i}: {← ppExpr t}")
+        let shown ← ppExpr t
+        out := out.push (if stmt || proof then "" else s!"{mod} {n} binder {i}: {shown}")
       return out
     binders := binders + found.size
     for line in found do
