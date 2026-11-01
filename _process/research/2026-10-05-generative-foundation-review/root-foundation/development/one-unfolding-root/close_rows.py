@@ -75,7 +75,7 @@ STALE = [
      'A working version went out to GitHub on 31 October 2026, last at `74e2c9a69` (a push at `d00f1724d` that day '
      'came first).'),
     ('(全二). Of the 118 distinct central declarations, 44 reach the grammar',
-     '(全二). Of the 118 distinct central declarations then (117 since DU took `Web.paths_comparison_widens` off its row), 44 reach the grammar'),
+     '(全二). Of the 118 distinct central declarations then (117 since DU took `Web.paths_comparison_widens` off its row; now 45, 16, 6 and 50, and the item met), 44 reach the grammar'),
 ]
 
 
