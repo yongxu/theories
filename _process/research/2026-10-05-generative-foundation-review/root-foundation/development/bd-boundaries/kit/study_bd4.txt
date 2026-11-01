@@ -1,19 +1,20 @@
 ## {N}. Balance on each closure, on the root (BD4)
 
-Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Each relatum's closure is the least family the relation closes that holds it, a region, membership a test, not gone out of. At the unit grain the same closures keep the count, by the count law of a class, and the two grains are joined: transfers balance a step exactly where the units before pair one to one with the units after under the closure. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)); the join of the grains came from it.
+Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Each relatum's closure is the least family the relation closes that holds it, a region, membership a test, not gone out of. At the unit grain the same closures keep the count, by the count law of a class, and the two grains are joined: transfers balance a step exactly where the units before pair one to one with the units after under the closure. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and read them again once its findings were taken; every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)), and the join of the grains came from it.
 
 ```text
 Result(s): balance-from-conservation-along-a-relation (an eighth law: each closure under the listed adjacency decided
        as a test and least among the families the relation closes, balance from conservation on each closure, and
        the same balance read on units paired under the closure, by the count law of a class; the sixth item on what
-       is not shown replaced by two; the first hypothesis names decided equality a modelling hypothesis).
+       is not shown replaced by two; the first hypothesis names decided equality a modelling hypothesis, and the
+       transfers and the closures computable).
 Delta:
   - The closure decided. With equality decided, a relatum's closure under adjacency among the listed relata, the
     grammar's «所闭», is what is reached from it within as many steps of that adjacency as relata are listed
     (Continuity.closureListed, closureListed_iff). Counted by «计», the listed relata reached grow at each step
     until a step reaches nothing new, after which none does (reachedListed_stays), and they cannot outnumber the
-    list (reachedListed_grows_or_stays, closureListed_closed). An unlisted relatum's closure is itself alone
-    (closureListed_unlisted). The test is built to decide, not to be evaluated.
+    list (reachedListed_grows_or_stays, closureListed_closed). An unlisted relatum's closure holds nothing
+    but itself (closureListed_unlisted). The test is built to decide, not to be evaluated.
   - Balance on each closure. Conservation on every family the relation closes is conservation on each closure
     (conservedOn_iff_closures). A closed family holding a relatum holds its closure (closureListed_inside, by
     «闭含所闭»), so each relatum's closure is the least family the relation closes that holds it. What a closed
@@ -26,11 +27,13 @@ Delta:
     case of «类之对当且仅当类类等数» (pairing_iff_closure_counts). Symmetry is needed: a region closed one way only
     does not keep the count («对而单闭域不守数之例»). Along the listed adjacency the closures are those of every
     relatum, listed or not (pairing_iff_closures).
-  - The two grains joined. Read a level as units, each listed relatum repeated as often as its level (unitsOn): a
-    test counts them on its family as the level's total there (count_unitsOn). So conservation on every family the
-    relation closes is the units before paired one to one with the units after under the closure
-    (closures_iff_unit_counts, conservedOn_iff_units_paired), and transfers balance a step exactly where the units
-    are so paired (balancing_iff_units_paired; on a web, balancesOn_iff_units_paired).
+  - The two grains joined. Read a level as units on its relata, each listed relatum repeated as often as its
+    level, gathered by the grammar's «聚» (unitsOn): a test counts them on its family as the level's total there
+    (count_unitsOn). So, with equality decided, conservation on every family the relation closes is the units
+    before paired one to one with the units after under the closure (closures_iff_unit_counts,
+    conservedOn_iff_units_paired), and transfers balance a step exactly where the units are so paired
+    (balancing_iff_units_paired; on a web, balancesOn_iff_units_paired): the closure-local reading of
+    Flow.balances_iff_units, the closure taking the place of the transfers.
   - Not along one step. On the path 0 — 1 — 2, [0] and [2] keep every closure's count, and no pairing along one
     step of the adjacency joins them (PathOfThree.counts_kept_not_along_step, by paired_single: a pairing with a
     single entry is a single related entry), as an amount may pass through a relatum within the step.
@@ -61,7 +64,8 @@ Boundary:
     trip still fails, and this is locality, not the lift.
 Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of what is not shown);
        balance-from-conservation-along-a-relation's eighth law, its first hypothesis, its two items on what is not
-       shown, its correspondence, its dependency on master-laws-on-the-grammar, its scope and its history; the root
+       shown, its correspondence, its dependency on master-laws-on-the-grammar, its link to
+       amounts-by-unit-matchings, its scope and its history; the root
        module's bullet, the checker's scope, both package READMEs; regions.json; the connectivity register; the
        board's BD4 row.
 ```
@@ -70,5 +74,5 @@ Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of wha
 1. `BalanceRegions` stays a leaf. Nothing imports it, and no other module changes, so only it rebuilds.
 2. No classical principle enters. The closure is a Bool test computed by iteration, and no proof splits on an undecided proposition: each case split is on a Bool's two values (`Bool.eq_false_or_eq_true`), a decided comparison of counts (`Nat.lt_or_ge`), a list, a pairing's constructors, or a disjunction already proved. `DecidableEq` enters only as an argument.
 3. The unit grain is a case of a grammar law, not a separate proof. Its two hypotheses, symmetry and the decision, are named in the law. The join is that case with the count of units on a family.
-4. The counting lemmas (`cond_le_cond`, `count_le_count`, `count_lt_count`, `count_true`, `counted_of_count`, `count_append`, `count_replicate_true`, `count_replicate_false`) and `paired_single` are laws of «计» and «对» with nothing of Continuity in them: candidates for GrammarLaws at its next planned near-full rebuild, OU's owner's call.
+4. The counting lemmas (`cond_le_cond`, `count_le_count`, `count_lt_count`, `count_true`, `counted_of_count`, `count_append`, `count_replicate_true`, `count_replicate_false`) and `paired_single` are laws of «计» and «对» with nothing of Continuity in them: candidates for GrammarLaws at its next planned near-full rebuild, OU's owner's call. `unitsOn` is «聚» of repeated entries; `Weightings.unitsOf` reads a quantity as units the same way, in a module this leaf does not import, and a merge of the two is for a rebuild that touches both.
 5. Not done: the items in Boundary.

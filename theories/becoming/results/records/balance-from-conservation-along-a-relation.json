@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T03:12:56+00:00",
+  "reviewed_at_utc": "2026-11-01T03:31:15+00:00",
   "statement": {
     "en": "Over finitely many relata, transfers between related relata that balance a step exist exactly where the total is conserved on every family the relation closes, and a law reading only related relata that conserves its total gives that conservation.",
     "zh": "在有限多个关系项上，只在相关关系项之间移动、使一步平衡的转移，恰在总量于关系封闭的每个家族上守恒时存在；只读相关关系项、守恒总量的规律给出这一守恒。"
@@ -104,8 +104,8 @@
       ]
     },
     {
-      "en": "With equality decided, each relatum's closure under the listed adjacency, «所闭», is decided by a test and is the least family the relation closes holding it. So, relata listed without repetition, transfers along the relation balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently, by «类之对当且仅当类类等数», where the units before pair one to one with those after under the closure; on a web, at every step likewise.",
-      "zh": "关系项之相等可判定时，所列相邻下每个关系项之闭包（«所闭»）可判定为一检验，且为关系所封闭、含此项之最小家族。故关系项不重复列出时，沿关系使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在，亦即（由 «类之对当且仅当类类等数»）恰在前之单位与后之单位于闭包下一一成对时存在；网在每一步亦然。",
+      "en": "With equality decided, each relatum's closure under the listed adjacency, «所闭», is decided by a test and is the least family the relation closes holding it. So, relata listed without repetition, transfers along the relation balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently where the levels read as units on their relata pair one to one, before with after, under the closure; on a web, at every step likewise.",
+      "zh": "关系项之相等可判定时，所列相邻下每个关系项之闭包（«所闭»）可判定为一检验，且为关系所封闭、含此项之最小家族。故关系项不重复列出时，沿关系使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在各水平读作其关系项上之单位、前后于闭包下一一成对时存在；网在每一步亦然。",
       "declarations": [
         "Becoming.Continuity.closureListed",
         "Becoming.Continuity.closureListed_iff",
@@ -128,7 +128,7 @@
   ],
   "hypotheses": [
     {
-      "en": "Finitely many relata listed without repetition; equality of relata decided, a modelling hypothesis, and the relation a Bool test, so the transfers and the closures are computed; levels are whole numbers.",
+      "en": "Finitely many relata listed without repetition; equality of relata decided, a modelling hypothesis, and the relation a Bool test, so the transfers and the closures are computable; levels are whole numbers.",
       "zh": "有限多个不重复列出的关系项；关系项的相等可判定（建模假设），关系是布尔检验，故转移与闭包可计算；水平是整数。"
     },
     {
@@ -198,7 +198,7 @@
     "zh": "对只在有界邻域内读取的规律，选取局部的通量（只依赖每对相关关系项附近的水平），如格点上的元胞自动机；以及在规律移动单位处，不超过来源所立者的转移，如粒子位移表示。"
   },
   "correspondence": {
-    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component, the uncapacitated, undirected case of the feasibility conditions of Gale (1957) for supplies and demands and, through the usual reduction to a circulation, of Hoffman (1960); balancing_iff is that fact stated with the spine's families and computed, balancing_iff_closures states it on each component, the grammar's «所闭» along the listed adjacency, and balancing_iff_units_paired reads it at the grain of units. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case."
+    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component, the uncapacitated, undirected case of the feasibility conditions of Gale (1957) for supplies and demands and, through the usual reduction to a circulation, of Hoffman (1960); balancing_iff is that fact stated with the spine's families and computed, balancing_iff_closures states it on each component, the grammar's «所闭» along the listed adjacency, and balancing_iff_units_paired is the closure-local reading of Flow.balances_iff_units, the closure taking the place of the transfers; it reads only the counts on each closure, so it derives no balance from the unfolding. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
   "aliases": [
@@ -305,6 +305,13 @@
         "en": "There balance holds by reading a world off an exchange, with the rest counted; here balance along a given relation is equivalent to conservation on the families it closes.",
         "zh": "那里平衡因把世界读自交换（计入其余）而成立；这里沿给定关系的平衡等价于它所封闭的家族上的守恒。"
       }
+    },
+    {
+      "id": "amounts-by-unit-matchings",
+      "detail": {
+        "en": "There balance is represented by selected matchings of units, given as data, not derived from the unfolding, and Flow.balances_iff_units pairs a flow's units at one condition under the one, with what is given and taken among them. Here the levels read as units on their relata pair under each closure exactly where its count is kept; reading only those counts, this pairing derives no balance from the unfolding either.",
+        "zh": "那里平衡由所选之单位配对表示，作为数据给出，非自展开推出；Flow.balances_iff_units 于一条件下在一之下配对流之单位，所给与所取在其中。这里各水平读作其关系项上之单位，恰在每个闭包之计数相守处于其下成对；只读这些计数，此配对亦不自展开推出平衡。"
+      }
     }
   ],
   "references": [
@@ -398,7 +405,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
       "role": "proof",
-      "sha256": "4b41761516d99896f90764629e222e8646f96c06173c9d7df69a6b6e2f148f1e",
+      "sha256": "837f0a26a09d9e31cf834cc0b827b9d5110d34d474eb13bafae11545098f1d7f",
       "declarations": [
         "Becoming.Continuity.adjacentListed",
         "Becoming.Continuity.adjacentListed_symm",
@@ -487,8 +494,8 @@
       "zh": "2026年11月1日，工作板条目 BD3：第七律于文法之 «不出» 上读本记录（Becoming.BalanceRegions）：关系所封闭之家族恰是沿所列关系项间之相邻不出之域，亦恰是不入之域与在其下闭之域，皆由文法之律证得，故使一步平衡之转移恰在总量于每一此域上守恒时存在；增对 not-going-out-of-a-region 与 master-laws-on-the-grammar 之依赖；所不示者增一项，即 «所闭» 形式。先前之陈述、规律与声明皆未变。"
     },
     {
-      "en": "1 November 2026, board item BD4: an eighth law reads the record on the grammar's «所闭» (Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test and is the least family the relation closes holding it, so transfers balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently where the units before pair one to one with the units after under the closure. The sixth item on what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step, with a witness on the path 0 — 1 — 2. Gale and Hoffman named in the correspondence; the first hypothesis names decided equality a modelling hypothesis. No earlier statement, law or declaration changed.",
-      "zh": "2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个闭包可判定为一检验，且为关系所封闭、含此项之最小家族，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在前之单位与后之单位于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman；第一条假设注明可判定相等为建模假设。先前之陈述、规律与声明皆未变。"
+      "en": "1 November 2026, board item BD4: an eighth law reads the record on the grammar's «所闭» (Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test and is the least family the relation closes holding it, so transfers balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently where the levels read as units on their relata pair one to one, before with after, under the closure. The sixth item on what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step, with a witness on the path 0 — 1 — 2. Gale and Hoffman, and the join as the closure-local reading of Flow.balances_iff_units, named in the correspondence, with a link to amounts-by-unit-matchings; the first hypothesis names decided equality a modelling hypothesis, and the transfers and the closures computable. No earlier statement, law or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个闭包可判定为一检验，且为关系所封闭、含此项之最小家族，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在各水平读作其关系项上之单位、前后于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman，并称此合为 Flow.balances_iff_units 之闭包局部读法，链至 amounts-by-unit-matchings；第一条假设注明可判定相等为建模假设、转移与闭包可计算。先前之陈述、规律与声明皆未变。"
     }
   ]
 }

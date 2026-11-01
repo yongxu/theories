@@ -83,9 +83,11 @@ def main():
         "  (`Continuity.balancing_iff_closures`, on a web `Continuity.balancesOn_iff_closures`; board item\n"
         "  BD4), the uncapacitated, undirected case of the feasibility conditions for flows. At the unit\n"
         "  grain, a pairing under the closure of a symmetric relation whose closure a test decides is the\n"
-        "  count kept on the closure of each relatum, listed or not (`Continuity.pairing_iff_closure_counts`,\n"
-        "  `Continuity.pairing_iff_closures`), a case of `«类之对当且仅当类类等数»`; so the transfers exist\n"
-        "  exactly where the units before pair one to one with the units after under the closure\n"
+        "  count kept on each closure (`Continuity.pairing_iff_closure_counts`), a case of\n"
+        "  `«类之对当且仅当类类等数»`; along the listed adjacency, on the closure of each relatum, listed or\n"
+        "  not (`Continuity.pairing_iff_closures`). So, the levels read as units on their relata, each\n"
+        "  listed relatum repeated as often as its level (`Continuity.unitsOn`), the transfers exist exactly\n"
+        "  where the units before pair one to one with the units after under the closure\n"
         "  (`Continuity.balancing_iff_units_paired`), though not always along one step of the adjacency\n"
         "  (`Continuity.PathOfThree.counts_kept_not_along_step`). A leaf.\n")
     # the checker's scope
@@ -94,9 +96,9 @@ def main():
         "    \"conserved on every region not gone out of along that adjacency, and on a web at every step likewise; \"\n"
         "    \"each closure under that adjacency, the grammar's «所闭», is decided as a test by a counting bound, and \"\n"
         "    \"the transfers exist exactly where the total is conserved on the closure of each listed relatum, and \"\n"
-        "    \"exactly where the units before pair one to one with the units after under the closure; at the unit \"\n"
-        "    \"grain a pairing under the closure of a symmetric relation whose closure a test decides is the count \"\n"
-        "    \"kept on the closure of each relatum, a case of the count law of a class. \"\n")
+        "    \"exactly where the levels, read as units on their relata, pair one to one, before with after, under \"\n"
+        "    \"the closure; at the unit grain a pairing under the closure of a symmetric relation whose closure a \"\n"
+        "    \"test decides is the count kept on each closure, a case of the count law of a class. \"\n")
     # both README rows
     rep(f'{PKG}/README.md',
         "and on a web at every step likewise (`Continuity.balancesOn_iff_notGoingOut`); a leaf |",
@@ -104,16 +106,16 @@ def main():
         "adjacency, the grammar's `«所闭»`, decided as a test (`Continuity.closureListed_iff`), and the transfers "
         "existing exactly where the total is conserved on the closure of each listed relatum "
         "(`Continuity.balancing_iff_closures`, on a web `Continuity.balancesOn_iff_closures`) and exactly where the "
-        "units before pair one to one with the units after under the closure "
-        "(`Continuity.balancing_iff_units_paired`); at the unit grain, a pairing under the closure is the count kept "
+        "levels, read as units on their relata (`Continuity.unitsOn`), pair one to one, before with after, under "
+        "the closure (`Continuity.balancing_iff_units_paired`); at the unit grain, a pairing under the closure is the count kept "
         "on the closure of each relatum, listed or not, a case of `«类之对当且仅当类类等数»` "
         "(`Continuity.pairing_iff_closures`); a leaf |")
     rep(f'{PKG}/README.zh.md',
         "依存网上每步亦然（`Continuity.balancesOn_iff_notGoingOut`）；为叶模块 |",
         "依存网上每步亦然（`Continuity.balancesOn_iff_notGoingOut`）；此相邻下每个闭包（文法之 `«所闭»`）可判定为一"
         "检验（`Continuity.closureListed_iff`），而转移恰在总量于每个所列关系项之闭包上守恒处存在"
-        "（`Continuity.balancing_iff_closures`，依存网上为 `Continuity.balancesOn_iff_closures`），亦恰在前之单位与后之"
-        "单位于闭包下一一成对处存在（`Continuity.balancing_iff_units_paired`）；在单位之粒度上，闭包下之配对即每个关系项"
+        "（`Continuity.balancing_iff_closures`，依存网上为 `Continuity.balancesOn_iff_closures`），亦恰在各水平读作其关系项"
+        "上之单位（`Continuity.unitsOn`）、前后于闭包下一一成对处存在（`Continuity.balancing_iff_units_paired`）；在单位之粒度上，闭包下之配对即每个关系项"
         "（无论列出与否）之闭包上计数相守，为 `«类之对当且仅当类类等数»` 之一例（`Continuity.pairing_iff_closures`）；"
         "为叶模块 |")
     # regions.json: the module's note, the file's own formatting (indent 1)
@@ -126,7 +128,7 @@ def main():
     assert entry['note'].endswith('(BD3)'), entry
     entry['note'] = ('a family a relation closes iff a region not gone out of (不出) along the listed adjacency; '
                      'balancing transfers iff conservation on every such region (BD3), iff on each closure (所闭), '
-                     'decided as a test, iff the units before and after pair under the closure (BD4)')
+                     'decided as a test, iff the levels, read as units on their relata, pair under the closure (BD4)')
     touched.append(rpath)
     p.write_text(json.dumps(d, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     # the record
@@ -138,11 +140,11 @@ def main():
     law = {'en': ("With equality decided, each relatum's closure under the listed adjacency, «所闭», is decided by a "
                   "test and is the least family the relation closes holding it. So, relata listed without repetition, "
                   "transfers along the relation balancing a step exist exactly where the total is conserved on each "
-                  "listed relatum's closure, equivalently, by «类之对当且仅当类类等数», where the units before pair one "
-                  "to one with those after under the closure; on a web, at every step likewise."),
+                  "listed relatum's closure, equivalently where the levels read as units on their relata pair one to "
+                  "one, before with after, under the closure; on a web, at every step likewise."),
            'zh': ("关系项之相等可判定时，所列相邻下每个关系项之闭包（«所闭»）可判定为一检验，且为关系所封闭、含此项之最小家族。"
-                  "故关系项不重复列出时，沿关系使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在，亦即（由 "
-                  "«类之对当且仅当类类等数»）恰在前之单位与后之单位于闭包下一一成对时存在；网在每一步亦然。"),
+                  "故关系项不重复列出时，沿关系使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在各水平读作"
+                  "其关系项上之单位、前后于闭包下一一成对时存在；网在每一步亦然。"),
            'declarations': DECLS}
     # the cap on a law warns (tools/research/style.py); the record's laws run to 475 characters
     print('law 8:', len(law['en']), 'en,', len(law['zh']), 'zh (soft caps 420/190)')
@@ -154,7 +156,7 @@ def main():
     assert hyp['en'] == old_h, hyp['en']
     assert hyp['zh'] == '有限多个不重复列出的关系项；关系项的相等可判定，关系是布尔检验，故转移可计算；水平是整数。', hyp['zh']
     hyp['en'] = ('Finitely many relata listed without repetition; equality of relata decided, a modelling hypothesis, '
-                 'and the relation a Bool test, so the transfers and the closures are computed; levels are whole numbers.')
+                 'and the relation a Bool test, so the transfers and the closures are computable; levels are whole numbers.')
     hyp['zh'] = '有限多个不重复列出的关系项；关系项的相等可判定（建模假设），关系是布尔检验，故转移与闭包可计算；水平是整数。'
     dns = r['does_not_show']
     assert len(dns) == 6 and dns[5]['en'].startswith('That conservation on each closure'), dns[5]
@@ -215,7 +217,20 @@ def main():
         "of Gale (1957) for supplies and demands and, through the usual reduction to a circulation, of Hoffman "
         "(1960); balancing_iff is that fact stated with the spine's families and computed, balancing_iff_closures "
         "states it on each component, the grammar's «所闭» along the listed adjacency, and "
-        "balancing_iff_units_paired reads it at the grain of units."))
+        "balancing_iff_units_paired is the closure-local reading of Flow.balances_iff_units, the closure taking "
+        "the place of the transfers; it reads only the counts on each closure, so it derives no balance from the "
+        "unfolding."))
+    assert len(r['correspondence']['en']) <= 1200, len(r['correspondence']['en'])
+    assert not any(x['id'] == 'amounts-by-unit-matchings' for x in r['related']), r['related']
+    r['related'].append({'id': 'amounts-by-unit-matchings', 'detail': {
+        'en': ("There balance is represented by selected matchings of units, given as data, not derived from the "
+               "unfolding, and Flow.balances_iff_units pairs a flow's units at one condition under the one, with what "
+               "is given and taken among them. Here the levels read as units on their relata pair under each closure "
+               "exactly where its count is kept; reading only those counts, this pairing derives no balance from the "
+               "unfolding either."),
+        'zh': ("那里平衡由所选之单位配对表示，作为数据给出，非自展开推出；Flow.balances_iff_units 于一条件下在一之下配对流之"
+               "单位，所给与所取在其中。这里各水平读作其关系项上之单位，恰在每个闭包之计数相守处于其下成对；只读这些计数，"
+               "此配对亦不自展开推出平衡。")}})
     dep = [x for x in r['dependencies'] if x['id'] == 'master-laws-on-the-grammar']
     assert len(dep) == 1, dep
     dep[0]['detail'] = {
@@ -231,15 +246,18 @@ def main():
         'en': ("1 November 2026, board item BD4: an eighth law reads the record on the grammar's «所闭» "
                "(Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test and is the "
                "least family the relation closes holding it, so transfers balancing a step exist exactly where the "
-               "total is conserved on each listed relatum's closure, equivalently where the units before pair one to "
-               "one with the units after under the closure. The sixth item on what is not shown, the «所闭» form, is "
+               "total is conserved on each listed relatum's closure, equivalently where the levels read as units on "
+               "their relata pair one to one, before with after, under the closure. The sixth item on what is not shown, the «所闭» form, is "
                "replaced by two: capacities, and pairing along one step, with a witness on the path 0 — 1 — 2. Gale "
-               "and Hoffman named in the correspondence; the first hypothesis names decided equality a modelling "
-               "hypothesis. No earlier statement, law or declaration changed."),
+               "and Hoffman, and the join as the closure-local reading of Flow.balances_iff_units, named in the "
+               "correspondence, with a link to amounts-by-unit-matchings; the first hypothesis names decided "
+               "equality a modelling hypothesis, and the transfers and the closures computable. No earlier "
+               "statement, law or declaration changed."),
         'zh': ("2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个"
                "闭包可判定为一检验，且为关系所封闭、含此项之最小家族，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒"
-               "时存在，亦即恰在前之单位与后之单位于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，"
-               "与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman；第一条假设注明可判定相等为建模假设。"
+               "时存在，亦即恰在各水平读作其关系项上之单位、前后于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，"
+               "与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman，并称此合为 Flow.balances_iff_units 之闭包局部读法，"
+               "链至 amounts-by-unit-matchings；第一条假设注明可判定相等为建模假设、转移与闭包可计算。"
                "先前之陈述、规律与声明皆未变。")})
     r['reviewed_at_utc'] = REVIEWED
     touched.append(REC)

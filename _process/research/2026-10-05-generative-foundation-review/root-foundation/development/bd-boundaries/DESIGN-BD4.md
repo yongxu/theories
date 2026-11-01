@@ -11,7 +11,7 @@ Every law is in the core leaf `Becoming.BalanceRegions`, in the namespace `Becom
    - `closureListed rel us a` is what is reached within as many steps as relata are listed.
    - `closureListed_iff` proves that this test holds exactly within `«所闭» (adjacentListed rel us) a`, for every relatum, listed or not.
    - The proof is a counting bound (`reachedListed_grows_or_stays`, `closureListed_closed`). For each `k`, either some step up to the `(k + 1)`-th reaches nothing new, and then no later step does (`reachedListed_stays`), or at least `k` more listed relata are reached within `k` steps than at the start. Within as many steps as relata are listed, then, every listed relatum the closure holds is reached. Counts are the grammar's `«计»`.
-   - An unlisted relatum's closure is itself alone (`closureListed_unlisted`).
+   - An unlisted relatum's closure holds nothing but itself (`closureListed_unlisted`).
    - The test is built to decide, not to be evaluated: each step re-reads the step before at every listed relatum, so evaluating it grows exponentially with the listing. A version that carries the list of relata reached so far would evaluate in polynomial time with the same proof shape; nothing here needs it.
 2. **The amount grain.** Over relata listed without repetition, with equality decided:
    - transfers along the relation that balance a step exist exactly where the total is conserved on the closure of each listed relatum (`balancing_iff_closures`);
@@ -22,9 +22,9 @@ Every law is in the core leaf `Becoming.BalanceRegions`, in the namespace `Becom
    - Its two hypotheses are named in the law. Symmetry is what makes the closure a class (`«所闭之自反»`, `«所闭之对称»`, `«所闭之传递»`), and it is needed: a region closed one way only does not keep the count (`«对而单闭域不守数之例»`). The test is the decision.
    - It is proved as a case of `«类之对当且仅当类类等数»` (GrammarLaws). The listed form, `pairing_iff_closures`, discharges the symmetry by `adjacentListed_symm` and the decision by `closureListed_iff`. Its closures are those of every relatum, listed or not.
 4. **The two grains joined** (added on the review's point 3).
-   - `unitsOn q us` reads a level as units: each listed relatum repeated as often as its level. A test counts them on its family as the level's total there (`count_unitsOn`).
-   - So conservation on every family the relation closes is the units before paired one to one with the units after under the closure (`closures_iff_unit_counts`, `conservedOn_iff_units_paired`). On a listed relatum's closure the counts are the totals; an unlisted relatum's closure holds no unit.
-   - Relata listed without repetition, transfers along the relation that balance a step exist exactly where the units are so paired (`balancing_iff_units_paired`; on a web, `balancesOn_iff_units_paired`). This is balance along the relation read at the grain of units, as `Flow.balances_iff_units` reads balance at one condition under the one.
+   - `unitsOn q us` reads a level as units on its relata, gathered by the grammar's `«聚»`: each listed relatum repeated as often as its level. A test counts them on its family as the level's total there (`count_unitsOn`).
+   - So, with equality decided, conservation on every family the relation closes is the units before paired one to one with the units after under the closure (`closures_iff_unit_counts`, `conservedOn_iff_units_paired`). On a listed relatum's closure the counts are the totals; an unlisted relatum's closure holds no unit.
+   - Relata listed without repetition, transfers along the relation that balance a step exist exactly where the units are so paired (`balancing_iff_units_paired`; on a web, `balancesOn_iff_units_paired`). This is the closure-local reading of `Flow.balances_iff_units`, OU's owner's name for it. That law pairs a flow's units at one condition under the one, with what is given and taken among them; here the levels read as units on their relata pair under the closure, which takes the place of the transfers.
 
 So the count is kept closure by closure, at both grains joined, and each relatum's closure is the least family the relation closes that holds it (`closureListed_closes`, `closureListed_self`, `closureListed_inside`). WHAT-REMAINS' "the content is which regions the count is kept on" has its answer. Amounts move by transfers along the relation, which may pass through a relatum within the step. Units are paired within a closure.
 
@@ -49,11 +49,11 @@ The sixth item, the `«所闭»` form, is replaced, with a history note. A secon
 
 ## 5. Texts and record
 
-- **Record.** balance-from-conservation-along-a-relation gets an eighth law, which refines the seventh and is not another result. The unit grain is part of it, not a ninth law. It also gets the scope sentence on decided equality, the first hypothesis's wording, Gale and Hoffman named for the uncapacitated, undirected case, and a history note. The leaf's reference lists every declaration of the leaf.
+- **Record.** balance-from-conservation-along-a-relation gets an eighth law, which refines the seventh and is not another result. The unit grain is part of it, not a ninth law. It also gets the scope sentence on decided equality, the first hypothesis's wording, Gale and Hoffman named for the uncapacitated, undirected case, the join named the closure-local reading of `Flow.balances_iff_units` with a link to amounts-by-unit-matchings, and a history note. The leaf's reference lists every declaration of the leaf. The decided closure stays in the law, since it is proved (`closureListed_iff`); the decided equality it rests on is the first hypothesis, restated in the law as the record's third and seventh laws restate theirs.
 - **Home.** One sentence in 01 §8.4, after BD3's.
 - **Package.** The module docstring gets four bullets, and its "What is not shown" is rewritten. Also the root module's bullet, both package README rows, regions.json's note, and the checker's scope if it names the leaf's content.
 - **Register.** The connectivity register gets its new apart roots, each with its reason. The study gets a section.
-- **Placement.** The counting lemmas (`cond_le_cond`, `count_le_count`, `count_lt_count`, `count_true`, `counted_of_count`, `count_append`, `count_replicate_true`, `count_replicate_false`) and `paired_single` are laws of `«计»` and `«对»` with nothing of Continuity in them. They are candidates for GrammarLaws at its next planned near-full rebuild, which is OU's owner's call; here they stay in the leaf.
+- **Placement.** The counting lemmas (`cond_le_cond`, `count_le_count`, `count_lt_count`, `count_true`, `counted_of_count`, `count_append`, `count_replicate_true`, `count_replicate_false`) and `paired_single` are laws of `«计»` and `«对»` with nothing of Continuity in them. They are candidates for GrammarLaws at its next planned near-full rebuild, which is OU's owner's call; here they stay in the leaf. `unitsOn` is the grammar's `«聚»` of repeated entries, and `Weightings.unitsOf` reads a quantity as units the same way, in a module the leaf does not import; a merge of the two is for a rebuild that touches both.
 
 ## 6. Order
 

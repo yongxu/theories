@@ -31,7 +31,7 @@ module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`) and
   at each step until a step reaches nothing new, after which none does
   (`Continuity.reachedListed_stays`), and they cannot outnumber the list
   (`Continuity.reachedListed_grows_or_stays`, `Continuity.closureListed_closed`). An unlisted
-  relatum's closure is itself alone (`Continuity.closureListed_unlisted`).
+  relatum's closure holds nothing but itself (`Continuity.closureListed_unlisted`).
 * **Balance on each closure.** Conservation on every family the relation closes is conservation on
   each closure (`Continuity.conservedOn_iff_closures`): a closed family holding a listed relatum
   holds its closure (`Continuity.closureListed_inside`), and what it holds beyond that closure the
@@ -46,13 +46,16 @@ module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`) and
   not keep the count (`«对而单闭域不守数之例»`). Along adjacency among the listed relata, which is
   symmetric, the closures are those of every relatum, listed or not
   (`Continuity.pairing_iff_closures`).
-* **The two grains joined.** Read a level as units, each listed relatum repeated as often as its
-  level (`Continuity.unitsOn`); a test counts them on its family as the level's total there
-  (`Continuity.count_unitsOn`). So conservation on every family the relation closes is the units
-  before paired one to one with the units after under the closure
-  (`Continuity.conservedOn_iff_units_paired`), and, relata listed without repetition, transfers
-  along the relation that balance a step exist exactly where they are so paired
-  (`Continuity.balancing_iff_units_paired`; on a web, `Continuity.balancesOn_iff_units_paired`).
+* **The two grains joined.** Read a level as units on its relata, each listed relatum repeated as
+  often as its level, gathered by the grammar's `«聚»` (`Continuity.unitsOn`); a test counts them
+  on its family as the level's total there (`Continuity.count_unitsOn`). So, with equality
+  decided, conservation on every family the relation closes is the units before paired one to one
+  with the units after under the closure (`Continuity.conservedOn_iff_units_paired`), and, relata
+  listed without repetition, transfers along the relation that balance a step exist exactly where
+  they are so paired (`Continuity.balancing_iff_units_paired`; on a web,
+  `Continuity.balancesOn_iff_units_paired`). This is the closure-local reading of
+  `Flow.balances_iff_units`, which pairs a flow's units at one condition under the one, with what
+  is given and taken among them: here the closure takes the place of the transfers.
 
 So balance along a relation is kept on each of its closures among the listed relata, at both
 grains, and each relatum's closure is the least family the relation closes that holds it, a region,
@@ -372,8 +375,8 @@ theorem closureListed_closes {rel : R → R → Bool} {us : List R} {a : R} :
     Closes rel us (closureListed rel us a) :=
   closes_iff_closed.mpr closureListed_closed
 
-/-- An unlisted relatum's closure, along `adjacentListed rel us`, is itself alone: adjacency among
-the listed relata never leaves it. -/
+/-- An unlisted relatum's closure, along `adjacentListed rel us`, holds nothing but itself:
+adjacency among the listed relata never leaves it. -/
 theorem closureListed_unlisted {rel : R → R → Bool} {us : List R} {z x : R} (unlisted : ¬ z ∈ us)
     (inClosure : closureListed rel us z x = true) : x = z :=
   closureListed_iff.mp inClosure (fun y => y = z)
@@ -490,7 +493,7 @@ closure.** The adjacency is symmetric (`Continuity.adjacentListed_symm`) and its
 (`Continuity.closureListed_iff`), so this is `Continuity.pairing_iff_closure_counts` for it: two
 lists of relata are paired one to one within the closures, the grammar's `«所闭»` along
 `adjacentListed rel us`, exactly where the closure of each relatum, listed or not, holds equally
-many entries of both. An unlisted relatum's closure is itself alone
+many entries of both. An unlisted relatum's closure holds nothing but itself
 (`Continuity.closureListed_unlisted`). -/
 theorem pairing_iff_closures [DecidableEq R] {rel : R → R → Bool} {us : List R} {a b : List R} :
     «对» («所闭» (adjacentListed rel us)) a b ↔
@@ -499,11 +502,11 @@ theorem pairing_iff_closures [DecidableEq R] {rel : R → R → Bool} {us : List
 
 /-! ## The two grains joined -/
 
-/-- The units of a quantity on a list of relata: each relatum repeated as often as the quantity
-there. -/
-def unitsOn (q : R → Nat) : List R → List R
-  | [] => []
-  | x :: xs => List.replicate (q x) x ++ unitsOn q xs
+/-- The units of a quantity on a list of relata, gathered by the grammar's `«聚»`: each relatum
+repeated as often as the quantity there. `Weightings.unitsOf` reads a quantity as units the same
+way. -/
+def unitsOn (q : R → Nat) : List R → List R :=
+  «聚» fun x => List.replicate (q x) x
 
 /-- A test counts a quantity's units on a list of relata as the quantity's total there on its
 family. -/
@@ -541,9 +544,9 @@ theorem closures_iff_unit_counts [DecidableEq R] {rel : R → R → Bool} {us : 
       ((counts a).symm.trans (count_unitsOn (closureListed rel us a) prev us))⟩
 
 /-- **Conservation on every family the relation closes is the units paired under the closure.**
-The units before (`Continuity.unitsOn`) are paired one to one with the units after under the
-closure, the grammar's `«所闭»` along adjacency among the listed relata, exactly where the total is
-conserved on every family the relation closes. -/
+With equality decided, the units before (`Continuity.unitsOn`) are paired one to one with the
+units after under the closure, the grammar's `«所闭»` along adjacency among the listed relata,
+exactly where the total is conserved on every family the relation closes. -/
 theorem conservedOn_iff_units_paired [DecidableEq R] {rel : R → R → Bool} {us : List R}
     {prev next : R → Nat} :
     ConservedOn rel us prev next ↔
@@ -554,8 +557,9 @@ theorem conservedOn_iff_units_paired [DecidableEq R] {rel : R → R → Bool} {u
 listed without repetition, with equality decided, transfers along the relation that balance a step
 exist exactly where the units before, each listed relatum repeated as often as its level, are
 paired one to one with the units after under the closure along adjacency among the listed relata:
-balance along the relation read at the grain of units, as `Flow.balances_iff_units` reads balance
-at one condition under the one. -/
+balance along the relation read at the grain of units, local to each closure, as
+`Flow.balances_iff_units` reads a flow's balance at one condition under the one, with what is
+given and taken among the units; here the closure takes the place of the transfers. -/
 theorem balancing_iff_units_paired [DecidableEq R] {rel : R → R → Bool} {us : List R}
     {prev next : R → Nat} (distinct : Distinct us) :
     (∃ move, Balancing rel us prev next move) ↔
@@ -563,7 +567,8 @@ theorem balancing_iff_units_paired [DecidableEq R] {rel : R → R → Bool} {us 
   (balancing_iff distinct).trans conservedOn_iff_units_paired
 
 /-- **On a web, balancing transfers exist exactly where the units pair under the closure, at every
-step.** The closures at each step are taken along that step's adjacency among the listed relata. -/
+step.** Over relata listed without repetition, with equality decided; the closures at each step
+are taken along that step's adjacency among the listed relata. -/
 theorem balancesOn_iff_units_paired [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
     {W : Web R R} (distinct : Distinct us) :
     (∃ move : Nat → R → R → Nat,

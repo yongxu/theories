@@ -2803,9 +2803,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`Continuity.balancing_iff_closures`, on a web `Continuity.balancesOn_iff_closures`; board item
   BD4), the uncapacitated, undirected case of the feasibility conditions for flows. At the unit
   grain, a pairing under the closure of a symmetric relation whose closure a test decides is the
-  count kept on the closure of each relatum, listed or not (`Continuity.pairing_iff_closure_counts`,
-  `Continuity.pairing_iff_closures`), a case of `«类之对当且仅当类类等数»`; so the transfers exist
-  exactly where the units before pair one to one with the units after under the closure
+  count kept on each closure (`Continuity.pairing_iff_closure_counts`), a case of
+  `«类之对当且仅当类类等数»`; along the listed adjacency, on the closure of each relatum, listed or
+  not (`Continuity.pairing_iff_closures`). So, the levels read as units on their relata, each
+  listed relatum repeated as often as its level (`Continuity.unitsOn`), the transfers exist exactly
+  where the units before pair one to one with the units after under the closure
   (`Continuity.balancing_iff_units_paired`), though not always along one step of the adjacency
   (`Continuity.PathOfThree.counts_kept_not_along_step`). A leaf.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
