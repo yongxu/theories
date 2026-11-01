@@ -2,15 +2,15 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3160 nodes, 6024 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3178 nodes, 6088 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 91 | 75 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 92 | 76 | 0 |
 | Knowing and testing | 0 | 108 | 85 | 0 |
-| Life and evolution | 0 | 42 | 18 | 0 |
-| Collectives and selection | 0 | 66 | 21 | 0 |
+| Life and evolution | 0 | 44 | 21 | 0 |
+| Collectives and selection | 0 | 69 | 23 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 81 | 60 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
@@ -145,7 +145,7 @@ Modules (74, 22 stated on the grammar): `BalanceRegions`, `BranchingCorresponden
 
 ## The map: generation, keeping, degeneration, orders
 
-Results (91):
+Results (92):
 
 - [A chooser reading what couples in, its rule read from the count of its choices](records/capture-by-counted-choices.md) (recorded-checked)
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
@@ -168,6 +168,7 @@ Results (91):
 - [Control-response loss and recovery through retained joint relations](records/control-coherence-loss.md) (recorded-checked)
 - [Coupled regimes: a margin that is not its own](records/coupled-regimes.md) (recorded-checked)
 - [Coupled webs: support across a web, and the cascade of ends](records/coupled-webs.md) (recorded-checked)
+- [Degeneration from a horizon](records/degeneration-from-a-horizon.md) (recorded-checked)
 - [Dependence that forms, holds, breaks and transforms](records/becoming-dependence-dynamics.md) (recorded-checked)
 - [Differences below the threshold](records/differences-below-threshold.md) (recorded-checked)
 - [Dormancy over a stretch, and final ending](records/dormancy-over-a-stretch.md) (recorded-checked)
@@ -239,7 +240,7 @@ Results (91):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (75, 12 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (76, 13 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LineDegeneration`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -360,7 +361,7 @@ Modules (85, 11 stated on the grammar): `Blanket`, `BlanketCouplings`, `BlanketW
 
 ## Life and evolution
 
-Results (42):
+Results (44):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
@@ -372,6 +373,7 @@ Results (42):
 - [Conveyance crosses the boundary](records/conveyance-crosses-the-boundary.md) (recorded-checked)
 - [Copying b-fold](records/copying-b-fold.md) (recorded-checked)
 - [Drift: offspring sampled rather than listed](records/drift-offspring-sampled.md) (recorded-checked)
+- [Ending laws as regimes on a lineage](records/ending-laws-as-regimes-on-a-lineage.md) (recorded-checked)
 - [Equal totals can hide what a capacity carries](records/equal-totals-can-hide-what-a-capacity-carries.md) (recorded-checked)
 - [Evolution on descent](records/evolution-on-descent.md) (recorded-checked)
 - [Fixation by drift](records/fixation-by-drift.md) (recorded-checked)
@@ -400,22 +402,24 @@ Results (42):
 - [The breeding value](records/the-breeding-value.md) (recorded-checked)
 - [The pace of selection, within what flows into the lineages carrying an amount](records/pace-of-selection-within-what-flows-in.md) (recorded-checked)
 - [The same carrier need not fix the same response](records/same-carrier-need-not-fix-the-response.md) (recorded-checked)
+- [The selection term and a lineage's fate](records/the-selection-term-and-a-lineages-fate.md) (recorded-checked)
 - [The selection term proper, over generations](records/selection-term-over-generations.md) (recorded-checked)
 - [The updater line: development, memory, replacement and margins of a learning network](records/the-updater-line.md) (recorded-checked)
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (18, 2 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionTerm`, `Transmission`, `Units`
+Modules (21, 5 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
 
-Results (66):
+Results (69):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A code held as counts, learned from what is heard](records/a-code-held-as-counts.md) (recorded-checked)
 - [A commuting learner drives no choice whose values nothing it reads tells apart](records/a-commuting-learner-drives-no-unread-choice.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
+- [A pair tolerates only within a window](records/a-pair-tolerates-only-within-a-window.md) (recorded-checked)
 - [A pool read by its majority](records/a-pool-read-by-its-majority.md) (recorded-checked)
 - [A pool that recruits through itself](records/a-pool-that-recruits-through-itself.md) (recorded-checked)
 - [A race for position draws everything](records/a-race-for-position-draws-everything.md) (recorded-checked)
@@ -445,6 +449,7 @@ Results (66):
 - [LA4's test season meets the optimum laws](records/the-test-season-meets-the-optimum-laws.md) (recorded-checked)
 - [Least parts and equal shares](records/least-parts-and-equal-shares.md) (recorded-checked)
 - [Mutual dependence, and the exponential pace that loops of couplings give](records/mutual-dependence-and-its-pace.md) (recorded-checked)
+- [Offspring read from giving that waits](records/offspring-read-from-giving-that-waits.md) (recorded-checked)
 - [Others drawing first end the base](records/others-drawing-first-end-the-base.md) (recorded-checked)
 - [Over a horizon, optima hold the greatest renewal](records/horizon-optima-hold-the-greatest-renewal.md) (recorded-checked)
 - [Positive seed intervals that finite support cannot rescue in time](records/market-finite-support-obstruction.md) (recorded-checked)
@@ -475,11 +480,12 @@ Results (66):
 - [What a rise draws from beyond](records/what-a-rise-draws-from-beyond.md) (recorded-checked)
 - [What a set-point optimum does beyond what couples in](records/what-a-set-point-optimum-does-beyond.md) (recorded-checked)
 - [What an optimum does beyond what couples in](records/what-an-optimum-does-beyond-what-couples-in.md) (recorded-checked)
+- [What giving that waits draws on](records/what-giving-that-waits-draws-on.md) (recorded-checked)
 - [What pooled coupling reaches](records/what-pooled-coupling-reaches.md) (recorded-checked)
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (21, 2 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `Withholding`
+Modules (23, 2 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
 
 
 ## The classical texts
@@ -643,4 +649,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-304 of 368 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+306 of 374 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

@@ -5,12 +5,14 @@ import Becoming.IdentificationRuns
 /-!
 # A formation's couplings as its blanket, and when a blanket constrains
 
-AI-written, 1 November 2026 (board item UE27), revised after an independent review of the Lean.
+AI-written, 1 November 2026 (board item UE27), revised after an independent review of the Lean;
+extended the same day by board item UE28 with a formation's level as the internal part.
 `Blanket` states the principle's Markov blanket as a coupling structure, a determined law on four
 parts, and joins it to the World at one witness (`ThresholdDrain.blanket_iff_through`). Its header
 leaves out which blanket a thing has, and its record leaves open a World formation in general as
 the agent of a blanketed law. This module states both in the pure core. Every law in it is
-near-definitional; what is new is the classification of when a blanket's existence constrains.
+near-definitional; what is new is the classification of when a blanket's existence constrains,
+to which a formation's level along one run adds a World case.
 
 * **A formation's couplings as its blanket, by construction.** For any web, any formation `g` whose
   couplings `obs` give the values of what couples into it (`Web.ValuesThrough`), any model `update`
@@ -33,7 +35,8 @@ near-definitional; what is new is the classification of when a blanket's existen
   (`Web.listed_values`, with `w.web` as the web), so any model fed by what couples into `g` is such
   an agent. The World's own case is the open loop at `w.web.level`; the closed loop is a model
   beside the World, whose own exchange is not written as an environment. The internal part is a
-  model, not the formation's own record. `ThresholdDrain`'s join is the case of the witness's web,
+  model; a formation's own level as the internal part, along one run, is the last item
+  below. `ThresholdDrain`'s join is the case of the witness's web,
   the supply as the environment state beside the step, the two courses corresponding part by part
   (`ThresholdCase.threshold_case`).
 * **The law a family shows, part by part.** A part of the next configuration depends only on a
@@ -68,15 +71,43 @@ near-definitional; what is new is the classification of when a blanket's existen
   Whoever may pick the reading after seeing the family can pick one of the first two kinds, so a
   blanket read that way constrains nothing. `Hexagram.runsOrder_reads` makes the same kind of
   refutation for a line-by-line reading of a law the same at every step.
+* **A formation's level as the internal part, along one run.** With the step as the external part
+  (`stepExternal`), a course is consistent part by part exactly where its agent is consistent: at
+  any two steps alike on the internal, sensory and active states, the next internal and active
+  states agree (`AgentConsistent`, `stepExternal_consistent_iff`). The world's half holds of every
+  such course, the world's side being the run read by the step, the World's other records entering
+  only through it; so exactly there some law determined part by part admits it
+  (`stepExternal_admitted_iff`), and, given the functions, it is the course of a blanketed law whose
+  internal part moves by the sensory state at its own step and whose world's side is the open loop
+  at that course (`stepLaw_course`); the converse is not stated. The condition is tested only at
+  steps where the three states recur. On a World's run read with a formation's own level as the
+  internal part, a value across steps of what couples into it as the sensory part, telling two steps
+  apart only by admission at each and the levels coupled in (`ValuesAcross`; where admission is
+  decided and the couplings listed, `listed_values`' value meets it, `listed_valuesAcross`), and its
+  act, its rows at the steps a presence course marks (`presentRow`), as the active part
+  (`levelParts`), in a balanced history the condition is one on the World's records: at any two
+  steps alike on its level, its admission, the levels coupled into it and its act, what the relata
+  present give to it at one step plus what they take from it at the other is the same with the
+  steps exchanged, and its next acts agree, pairwise, with no subtraction (`next_level_alike_iff`,
+  `levelParts_admitted_iff`). A drain in three phases from what does not couple in fails it
+  (`PhasedDrain.not_admitted`), and a drain and feed in two phases from the same kind of source
+  meets it, the level recurring (`Alternating.admitted`, `Alternating.recurs`): whether what moves
+  the level couples in does not decide the condition. Across a family of runs, or with the step off
+  the world's side, the world's half becomes a condition, not stated here; the formation's other
+  records are not in the internal part.
 
 Modelling choices: discrete synchronous steps; determined laws, as `Blanketed` is; the four parts
 of types in `Type`; a law the same at every step, read by one map at every step; the blanket as
 sparse coupling, not conditional independence of a stationary density (`BlanketWeights` joins the
 two where it can). In the join, admission is given by the web and the couplings by level `obs` are
 supplied, as in `Testing`; their values are given by `Web.ValuesThrough`. Which map a thing's
-partition is read by is not derived. No `simp`, `omega` or generated injectivity equations, which
-bring `propext`; parts and pairs are compared by matching and `congrArg`, and a reflex to replace
-`parts_eq` by `Parts.mk.injEq` would bring `propext`. The steps of `Assurance.ofMap` are read as
+partition is read by is not derived. For a formation's level: one run with the step as the external
+part; the value and act courses supplied, the World's reading taking a value across steps, which
+tells two steps apart only by admission at each and the levels coupled in, and the act as its rows at
+the steps a presence course marks; amounts in `Nat` under balance. No `simp`, `omega` or
+generated injectivity equations, which bring `propext`; parts and pairs are compared by matching,
+`congrArg` and `Prod.mk.inj`, and a reflex to replace `parts_eq` by `Parts.mk.injEq` would bring
+`propext`. The steps of `Assurance.ofMap` are read as
 `t = f s a`, and `course (n + 1)` unfolds to `step (course n)` (`Law.orbit`). A leaf importing
 `Blanket`, `Histories` and `IdentificationRuns`.
 -/
@@ -743,6 +774,472 @@ theorem injective_converse_fails :
         (fun (h : Nat → Parts Bool Unit Unit ReadsExternal.Three) (_ : Nat → Unit) =>
           h = ReadsExternal.run) :=
   ⟨whole_iff.mp ReadsExternal.whole_consistent, ReadsExternal.not_consistent⟩
+
+/-! ## A formation's level as the internal part, along one run -/
+
+section Along
+
+variable {I S A : Type}
+
+/-- **A course with the step as its external part**: an internal course `i`, a sensory course `s`
+and an active course `a`, the step external. -/
+def stepExternal (i : Nat → I) (s : Nat → S) (a : Nat → A) (n : Nat) : Parts I S A Nat :=
+  ⟨i n, s n, a n, n⟩
+
+/-- **The agent consistent along a course**: at any two steps where the internal, sensory and
+active states agree, the next internal states agree and the next active states agree. A law the
+same at every step on the agent's side, with no clock beyond what the three courses carry: a course
+carrying the step meets it at every pair of steps. It is tested only at steps where the three states
+recur. -/
+def AgentConsistent (i : Nat → I) (s : Nat → S) (a : Nat → A) : Prop :=
+  ∀ j k, i j = i k → s j = s k → a j = a k → i (j + 1) = i (k + 1) ∧ a (j + 1) = a (k + 1)
+
+/-- **With the step external, a course is consistent part by part exactly where its agent is
+consistent.** The world's half holds of every such course, since the step tells any two of its
+steps apart. The condition is tested only at steps where the internal, sensory and active states
+recur; a course where they never recur meets it, whatever moves it. -/
+theorem stepExternal_consistent_iff {i : Nat → I} {s : Nat → S} {a : Nat → A} :
+    BlanketConsistentFamily
+        (fun (r : Nat → Parts I S A Nat) (_ : Nat → Unit) => r = stepExternal i s a) ↔
+      AgentConsistent i s a :=
+  ⟨fun cons j k si ss sa =>
+    have next : agentParts (stepExternal i s a (j + 1)) = agentParts (stepExternal i s a (k + 1)) :=
+      cons.1 (stepExternal i s a) (fun _ => ()) (stepExternal i s a) (fun _ => ()) j k rfl rfl
+        (BlanketCouplings.pair_eq si (BlanketCouplings.pair_eq ss sa)) rfl
+    ⟨congrArg (fun v : I × A => v.1) next, congrArg (fun v : I × A => v.2) next⟩,
+   fun cons =>
+    ⟨fun r _ r' _ j k (held : r = stepExternal i s a) (held' : r' = stepExternal i s a) same _ =>
+      match r, r', held, held', same with
+      | _, _, rfl, rfl, same =>
+        have d := cons j k (congrArg (fun v : I × S × A => v.1) same)
+          (congrArg (fun v : I × S × A => v.2.1) same) (congrArg (fun v : I × S × A => v.2.2) same)
+        BlanketCouplings.pair_eq d.1 d.2,
+     fun r _ r' _ _ _ (held : r = stepExternal i s a) (held' : r' = stepExternal i s a) same _ =>
+      match r, r', held, held', same with
+      | _, _, rfl, rfl, same =>
+        congrArg (fun t => worldParts (stepExternal i s a (t + 1)))
+          (congrArg (fun v : S × A × Nat => v.2.2) same)⟩⟩
+
+/-- **Some law determined part by part admits a course with the step external exactly where its
+agent is consistent.** -/
+theorem stepExternal_admitted_iff {i : Nat → I} {s : Nat → S} {a : Nat → A} :
+    (∃ Q : Process (Parts I S A Nat) Unit, BlanketDetermined Q ∧
+        ∀ r (m : Nat → Unit), r = stepExternal i s a → Admits Q r m) ↔
+      AgentConsistent i s a :=
+  admitted_iff.trans stepExternal_consistent_iff
+
+/-- **The law with the step external, given its functions**: the internal and active parts by
+`own` and `policy`, the sensory part the sensory course at the external part's next step, the
+external part the step. The internal part moves by the sensory state at its own step, as a
+balanced level does. Its world's side reads only the step: the sensory part's next state
+is the given course at the next step, the act moving nothing there. It is the open loop at that
+course, it admits every sensory course, and the law's content is its agent's side. -/
+def stepLaw (own : I → S → A → I) (policy : I → S → A → A) (s : Nat → S) :
+    Blanketed I S A Nat where
+  nextInternal m o a := own m o a
+  nextSensory _ _ t := s (t + 1)
+  nextActive m o a := policy m o a
+  nextExternal _ _ t := t + 1
+
+/-- **Where the functions give the next internal and active states at every step, the law's course
+is the course with the step external.** The converse, functions from `AgentConsistent` alone, needs
+a next state at every reading the course never shows and a search over its steps for those it does,
+and is not stated. -/
+theorem stepLaw_course {i : Nat → I} {s : Nat → S} {a : Nat → A} {own : I → S → A → I}
+    {policy : I → S → A → A} (moves : ∀ t, i (t + 1) = own (i t) (s t) (a t))
+    (acts : ∀ t, a (t + 1) = policy (i t) (s t) (a t)) :
+    ∀ n, (stepLaw own policy s).course (stepExternal i s a 0) n = stepExternal i s a n
+  | 0 => rfl
+  | n + 1 =>
+    (congrArg (stepLaw own policy s).step (stepLaw_course moves acts n)).trans
+      (parts_eq (moves n).symm rfl (acts n).symm rfl)
+
+end Along
+
+/-! ### The World's reading -/
+
+section Level
+
+variable {F C R O A : Type}
+
+/-- **The level's half under balance**: in a balanced history, at two steps alike on a condition's
+level, the next levels agree exactly where what is given to it at one step plus what is taken from
+it at the other is the same with the steps exchanged. Pairwise, with no subtraction. -/
+theorem next_level_alike_iff {L : Flow F C} {l : Nat → C → Nat} (history : L.BalancedHistory l)
+    {g : C} {j k : Nat} (same : l j g = l k g) :
+    l (j + 1) g = l (k + 1) g ↔ L.given j g + L.taken k g = L.given k g + L.taken j g :=
+  ⟨fun next => Naturals.add_left_cancel (k := l j g)
+    ((Nat.add_assoc (l j g) (L.given j g) (L.taken k g)).symm.trans
+      ((congrArg (· + L.taken k g) (history j g).symm).trans
+        ((congrArg (fun v => v + L.taken j g + L.taken k g) next).trans
+          ((Nat.add_right_comm (l (k + 1) g) (L.taken j g) (L.taken k g)).trans
+            ((congrArg (· + L.taken j g) (history k g)).trans
+              ((congrArg (fun v => v + L.given k g + L.taken j g) same.symm).trans
+                (Nat.add_assoc (l j g) (L.given k g) (L.taken j g)))))))),
+   fun net => Naturals.add_right_cancel (k := L.taken j g + L.taken k g)
+    ((Nat.add_assoc (l (j + 1) g) (L.taken j g) (L.taken k g)).symm.trans
+      ((congrArg (· + L.taken k g) (history j g)).trans
+        ((Nat.add_assoc (l j g) (L.given j g) (L.taken k g)).trans
+          ((congrArg (l j g + ·) net).trans
+            ((Nat.add_assoc (l j g) (L.given k g) (L.taken j g)).symm.trans
+              ((congrArg (fun v => v + L.given k g + L.taken j g) same).trans
+                ((congrArg (· + L.taken j g) (history k g)).symm.trans
+                  ((Nat.add_assoc (l (k + 1) g) (L.taken k g) (L.taken j g)).trans
+                    (congrArg (l (k + 1) g + ·) (Nat.add_comm (L.taken k g) (L.taken j g)))))))))))⟩
+
+/-- **A formation's level read along one run**: its own level internal, a value of the levels at
+each step sensory, an act course active, the step external; the World is `World.of R L W`, balance
+a hypothesis where it is used. Where `g`'s own level couples into it, by level or through support
+where it bears on itself (`Web.SelfBearing`), the sensory part reads the internal part at the same
+step; nothing beyond one run with the step external is shown for it. -/
+def levelParts (W : Web R R) (g : R) (value : Nat → (R → Nat) → O) (act : Nat → A) :
+    Nat → Parts Nat O A Nat :=
+  stepExternal (fun t => W.level t g) (fun t => value t (W.level t)) act
+
+/-- A formation's rows on listed relata: what it takes from and gives to each, as lists. -/
+def rowAct (cs : List R) (L : Flow R R) (g : R) (t : Nat) : List Nat × List Nat :=
+  (cs.map (L.take t g), cs.map (L.give t g))
+
+/-- **The formation's act**: its rows on listed relata at a step where it takes part, nothing where
+it does not, `presence` saying which (`DecidesPresence`). -/
+def presentRow (presence : Nat → Bool) (cs : List R) (L : Flow R R) (g : R) (t : Nat) :
+    List Nat × List Nat :=
+  match presence t with
+  | true => rowAct cs L g t
+  | false => ([], [])
+
+/-- `presence` decides whether `g` takes part in each step. -/
+def DecidesPresence (presence : Nat → Bool) (L : Flow R R) (g : R) : Prop :=
+  ∀ t, presence t = true ↔ g ∈ L.present t
+
+/-- **In exchange terms**: along a balanced run, a formation's level and an act course are
+consistent exactly where, at any two steps alike on its level, the value and the act, what the
+relata present give to it at one step plus what they take from it at the other is the same with the
+steps exchanged, and the next acts agree. -/
+theorem agentConsistent_iff_exchange {L : Flow R R} {W : Web R R}
+    (history : L.BalancedHistory W.level) {g : R} {value : Nat → (R → Nat) → O}
+    {act : Nat → A} :
+    AgentConsistent (fun t => W.level t g) (fun t => value t (W.level t)) act ↔
+      ∀ j k, W.level j g = W.level k g → value j (W.level j) = value k (W.level k) →
+        act j = act k → L.given j g + L.taken k g = L.given k g + L.taken j g ∧
+          act (j + 1) = act (k + 1) :=
+  ⟨fun cons j k sl sv sa =>
+    ⟨(next_level_alike_iff history sl).mp (cons j k sl sv sa).1, (cons j k sl sv sa).2⟩,
+   fun ex j k sl sv sa =>
+    ⟨(next_level_alike_iff history sl).mpr (ex j k sl sv sa).1, (ex j k sl sv sa).2⟩⟩
+
+/-- **The values of what couples into a formation, across steps**: two levels at any two steps
+have one value exactly where they admit `g` alike, each at its step, and agree on what couples into
+`g` by level. `Web.ValuesThrough` compares values at one step only, and a value carrying the step
+meets it (`Web.states_by_reading`), under which every run passes; across steps a value tells two
+steps apart only by what couples in. -/
+def ValuesAcross (W : Web R C) (obs : R → C → Prop) (g : R) (value : Nat → (C → Nat) → O) :
+    Prop :=
+  ∀ j k x y, value j x = value k y ↔ (W.Admits x j g ↔ W.Admits y k g) ∧ ∀ c, obs g c → x c = y c
+
+/-- Across steps is at every step. -/
+theorem ValuesAcross.through {W : Web R C} {obs : R → C → Prop} {g : R}
+    {value : Nat → (C → Nat) → O} (across : ValuesAcross W obs g value) :
+    W.ValuesThrough obs g value :=
+  fun t x y => across t t x y
+
+/-- **`listed_values`' value gives the values across steps**: whether the levels admit `g` at the
+step, decided, and the listed levels; the step enters only through admission. -/
+theorem listed_valuesAcross {W : Web R C} {obs : R → C → Prop} {g : R}
+    {admits : Nat → (C → Nat) → Bool} (decides : ∀ t x, admits t x = true ↔ W.Admits x t g)
+    {cs : List C} (listed : ∀ c, obs g c ↔ c ∈ cs) :
+    ValuesAcross W obs g (fun t x => (admits t x, cs.map x)) :=
+  fun j k x y =>
+    ⟨fun same =>
+      match Prod.mk.inj same with
+      | ⟨admitted, levels⟩ =>
+        ⟨(decides j x).symm.trans
+          ((Eq.subst (motive := fun b => admits j x = true ↔ b = true) admitted Iff.rfl).trans
+            (decides k y)),
+         fun c observed => map_eq_at levels ((listed c).mp observed)⟩,
+     fun ⟨admitted, levels⟩ =>
+      (congrArg (Prod.mk · (cs.map x))
+          (Becoming.bool_eq_of_iff ((decides j x).trans (admitted.trans (decides k y).symm)))).trans
+        (congrArg (Prod.mk (admits k y))
+          (map_eq_on fun c mem => levels c ((listed c).mpr mem)))⟩
+
+/-- **On the World's records, a formation's level is the internal part of a law determined part by
+part, along one balanced run with the step external, exactly where**, at any two steps alike on its
+level, alike in admitting it, each at its step, alike on the conditions coupled into it by level and
+alike in its act (its rows at the steps `presence` marks), what the relata present give to it at
+one step plus what they take from it at the other is the same with the steps exchanged, and its next
+acts agree. For a value giving the values across steps, so the statement names no value. Tested only
+where these recur. -/
+theorem levelParts_admitted_iff {L : Flow R R} {W : Web R R} (history : L.BalancedHistory W.level)
+    {g : R} {obs : R → R → Prop} {value : Nat → (R → Nat) → O}
+    (across : ValuesAcross W obs g value) (presence : Nat → Bool) (cs : List R) :
+    (∃ Q : Process (Parts Nat O (List Nat × List Nat) Nat) Unit, BlanketDetermined Q ∧
+        ∀ r (m : Nat → Unit), r = levelParts W g value (presentRow presence cs L g) →
+          Admits Q r m) ↔
+      ∀ j k, W.level j g = W.level k g →
+        (W.Admits (W.level j) j g ↔ W.Admits (W.level k) k g) →
+        (∀ c, obs g c → W.level j c = W.level k c) →
+        presentRow presence cs L g j = presentRow presence cs L g k →
+        L.given j g + L.taken k g = L.given k g + L.taken j g ∧
+          presentRow presence cs L g (j + 1) = presentRow presence cs L g (k + 1) :=
+  stepExternal_admitted_iff.trans ((agentConsistent_iff_exchange history).trans
+    ⟨fun ex j k sl sa so sact => ex j k sl ((across j k _ _).mpr ⟨sa, so⟩) sact,
+     fun ex j k sl sv sact =>
+      match (across j k _ _).mp sv with
+      | ⟨sa, so⟩ => ex j k sl sa so sact⟩)
+
+end Level
+
+/-- Two relata, for the two witnesses below. -/
+inductive TwoRelata where
+  | g
+  | h
+
+/-- `g` is not among the relata `[h]`. -/
+theorem TwoRelata.g_not_mem_h : ¬ TwoRelata.g ∈ [TwoRelata.h] :=
+  fun mem => match mem with
+    | List.Mem.tail _ rest => nomatch rest
+
+/-! ### A drain in three phases: the level is not the internal part -/
+
+namespace PhasedDrain
+
+open ReadsExternal
+
+/-- `h`'s phase at each step: first, second, third, first, … -/
+def phase : Nat → Three := Law.orbit ReadsExternal.next .first
+
+/-- `g`'s level by phase: one, nothing after the draw, one after the give. -/
+def gLevel : Three → Nat
+  | .first => 1
+  | .second => 0
+  | .third => 1
+
+/-- `h`'s level is its phase, kept by giving to and taking from itself. -/
+def hLevel : Three → Nat
+  | .first => 0
+  | .second => 1
+  | .third => 2
+
+def hTakesG : Three → Nat
+  | .first => 1
+  | .second => 0
+  | .third => 0
+
+def hGivesG : Three → Nat
+  | .first => 0
+  | .second => 1
+  | .third => 0
+
+def hTakesH : Three → Nat
+  | .first => 0
+  | .second => 0
+  | .third => 2
+
+def hGivesH : Three → Nat
+  | .first => 1
+  | .second => 1
+  | .third => 0
+
+/-- What each relatum takes: `h` one unit from `g` at its first phase, from itself at its third. -/
+def take : Nat → TwoRelata → TwoRelata → Nat
+  | t, .h, .g => hTakesG (phase t)
+  | t, .h, .h => hTakesH (phase t)
+  | _, .g, .g => 0
+  | _, .g, .h => 0
+
+/-- What each relatum gives: `h` one unit to `g` at its second phase, to itself at its first and
+second. -/
+def give : Nat → TwoRelata → TwoRelata → Nat
+  | t, .h, .g => hGivesG (phase t)
+  | t, .h, .h => hGivesH (phase t)
+  | _, .g, .g => 0
+  | _, .g, .h => 0
+
+/-- Only `h` takes part, at every step. -/
+def flow : Flow TwoRelata TwoRelata := ⟨fun _ => [TwoRelata.h], take, give⟩
+
+def level : Nat → TwoRelata → Nat
+  | t, .g => gLevel (phase t)
+  | t, .h => hLevel (phase t)
+
+/-- Nothing is required, at need nothing; every relatum active; nothing drawn on. -/
+def web : Web TwoRelata TwoRelata :=
+  ⟨level, fun _ _ => True, fun _ _ _ => False, fun _ _ _ => 0, fun _ _ _ => False⟩
+
+theorem balance_g :
+    ∀ p, gLevel (ReadsExternal.next p) + (hTakesG p + 0) = gLevel p + (hGivesG p + 0)
+  | .first => rfl
+  | .second => rfl
+  | .third => rfl
+
+theorem balance_h :
+    ∀ p, hLevel (ReadsExternal.next p) + (hTakesH p + 0) = hLevel p + (hGivesH p + 0)
+  | .first => rfl
+  | .second => rfl
+  | .third => rfl
+
+/-- **The flow balances at every step.** -/
+theorem balances : flow.BalancedHistory web.level := fun t c => match c with
+  | .g => balance_g (phase t)
+  | .h => balance_h (phase t)
+
+/-- **`h` does not couple into `g`**: `g` depends on nothing and observes nothing. -/
+theorem uncoupled : ¬ web.CoupledInto (fun _ _ => False) TwoRelata.g TwoRelata.h :=
+  fun coupled => match coupled with
+    | .inl ⟨_, never⟩ => never
+    | .inr never => never
+
+/-- Nothing couples into `g`, so any value giving the values across steps is one value at every
+step. -/
+theorem one_value {O : Type} {value : Nat → (TwoRelata → Nat) → O}
+    (across : ValuesAcross web (fun _ _ => False) TwoRelata.g value) (j k : Nat) :
+    value j (web.level j) = value k (web.level k) :=
+  (across j k _ _).mpr
+    ⟨⟨fun _ _ req => False.elim req, fun _ _ req => False.elim req⟩, fun _ never => False.elim never⟩
+
+/-- The one value gives the values of what couples into `g` across steps. -/
+theorem values : ValuesAcross web (fun _ _ => False) TwoRelata.g (fun _ _ => ()) :=
+  fun _ _ _ _ => ⟨fun _ => ⟨⟨fun _ _ req => False.elim req, fun _ _ req => False.elim req⟩,
+    fun _ never => False.elim never⟩, fun _ => rfl⟩
+
+/-- `g` takes part in no step. -/
+def presence : Nat → Bool := fun _ => false
+
+theorem presence_decides : DecidesPresence presence flow TwoRelata.g :=
+  fun _ => ⟨fun no => (nomatch no), fun mem => (TwoRelata.g_not_mem_h mem).elim⟩
+
+/-- `g`'s act: nothing, since it takes part in no step. -/
+def act : Nat → List Nat × List Nat := presentRow presence [TwoRelata.g, TwoRelata.h] flow TwoRelata.g
+
+/-- **No law determined part by part admits the run read with `g`'s level internal**, for any
+value giving the values of what couples into `g` across steps: at steps 2 and 3 its level, its
+value and its act agree, and its next levels are one and nothing. -/
+theorem not_admitted {O : Type} {value : Nat → (TwoRelata → Nat) → O}
+    (across : ValuesAcross web (fun _ _ => False) TwoRelata.g value) :
+    ¬ ∃ Q : Process (Parts Nat O (List Nat × List Nat) Nat) Unit, BlanketDetermined Q ∧
+        ∀ r (m : Nat → Unit), r = levelParts web TwoRelata.g value act → Admits Q r m :=
+  fun admitted =>
+    Naturals.succ_ne_zero 0 ((stepExternal_admitted_iff.mp admitted) 2 3 rfl (one_value across 2 3) rfl).1
+
+end PhasedDrain
+
+/-! ### A drain and feed in two phases: the level is the internal part, tested -/
+
+namespace Alternating
+
+/-- `h`'s phase: on, off, on, … -/
+def phase : Nat → Bool
+  | 0 => true
+  | n + 1 => !(phase n)
+
+/-- `g`'s level by phase: one while on, nothing while off. -/
+def gLevel : Bool → Nat
+  | true => 1
+  | false => 0
+
+/-- `h`'s level is its phase, kept by giving to and taking from itself. -/
+def hLevel : Bool → Nat
+  | true => 0
+  | false => 1
+
+def hTakesG : Bool → Nat
+  | true => 1
+  | false => 0
+
+def hGivesG : Bool → Nat
+  | true => 0
+  | false => 1
+
+def hTakesH : Bool → Nat
+  | true => 0
+  | false => 1
+
+def hGivesH : Bool → Nat
+  | true => 1
+  | false => 0
+
+/-- `h` takes one unit from `g` when on and from itself when off. -/
+def take : Nat → TwoRelata → TwoRelata → Nat
+  | t, .h, .g => hTakesG (phase t)
+  | t, .h, .h => hTakesH (phase t)
+  | _, .g, .g => 0
+  | _, .g, .h => 0
+
+/-- `h` gives one unit to `g` when off and to itself when on. -/
+def give : Nat → TwoRelata → TwoRelata → Nat
+  | t, .h, .g => hGivesG (phase t)
+  | t, .h, .h => hGivesH (phase t)
+  | _, .g, .g => 0
+  | _, .g, .h => 0
+
+/-- Only `h` takes part, at every step. -/
+def flow : Flow TwoRelata TwoRelata := ⟨fun _ => [TwoRelata.h], take, give⟩
+
+def level : Nat → TwoRelata → Nat
+  | t, .g => gLevel (phase t)
+  | t, .h => hLevel (phase t)
+
+/-- Nothing is required, at need nothing; every relatum active; nothing drawn on. -/
+def web : Web TwoRelata TwoRelata :=
+  ⟨level, fun _ _ => True, fun _ _ _ => False, fun _ _ _ => 0, fun _ _ _ => False⟩
+
+theorem balance_g : ∀ p, gLevel (!p) + (hTakesG p + 0) = gLevel p + (hGivesG p + 0)
+  | true => rfl
+  | false => rfl
+
+theorem balance_h : ∀ p, hLevel (!p) + (hTakesH p + 0) = hLevel p + (hGivesH p + 0)
+  | true => rfl
+  | false => rfl
+
+/-- **The flow balances at every step.** -/
+theorem balances : flow.BalancedHistory web.level := fun t c => match c with
+  | .g => balance_g (phase t)
+  | .h => balance_h (phase t)
+
+/-- **`h` does not couple into `g`.** -/
+theorem uncoupled : ¬ web.CoupledInto (fun _ _ => False) TwoRelata.g TwoRelata.h :=
+  fun coupled => match coupled with
+    | .inl ⟨_, never⟩ => never
+    | .inr never => never
+
+/-- The one value gives the values of what couples into `g` across steps. -/
+theorem values : ValuesAcross web (fun _ _ => False) TwoRelata.g (fun _ _ => ()) :=
+  fun _ _ _ _ => ⟨fun _ => ⟨⟨fun _ _ req => False.elim req, fun _ _ req => False.elim req⟩,
+    fun _ never => False.elim never⟩, fun _ => rfl⟩
+
+/-- `g` takes part in no step. -/
+def presence : Nat → Bool := fun _ => false
+
+theorem presence_decides : DecidesPresence presence flow TwoRelata.g :=
+  fun _ => ⟨fun no => (nomatch no), fun mem => (TwoRelata.g_not_mem_h mem).elim⟩
+
+/-- `g`'s act: nothing, since it takes part in no step. -/
+def act : Nat → List Nat × List Nat := presentRow presence [TwoRelata.g, TwoRelata.h] flow TwoRelata.g
+
+theorem gLevel_inj : ∀ (p q : Bool), gLevel p = gLevel q → p = q
+  | true, true, _ => rfl
+  | false, false, _ => rfl
+  | true, false, same => (Naturals.succ_ne_zero 0 same).elim
+  | false, true, same => (Naturals.succ_ne_zero 0 same.symm).elim
+
+/-- **The level recurs**: steps 0 and 2 are alike on it, so the condition is tested. -/
+theorem recurs : web.level 0 TwoRelata.g = web.level 2 TwoRelata.g := rfl
+
+/-- **The agent is consistent, for any value**: the next level is fixed by the level, the act is
+nothing throughout. -/
+theorem agentConsistent {O : Type} (value : Nat → (TwoRelata → Nat) → O) :
+    AgentConsistent (fun t => web.level t TwoRelata.g) (fun t => value t (web.level t)) act :=
+  fun j k sl _ _ => ⟨congrArg (fun p => gLevel (!p)) (gLevel_inj (phase j) (phase k) sl), rfl⟩
+
+/-- **Some law determined part by part admits the run read with `g`'s level internal**, for any
+value, though what drains and feeds it does not couple into it. -/
+theorem admitted {O : Type} (value : Nat → (TwoRelata → Nat) → O) :
+    ∃ Q : Process (Parts Nat O (List Nat × List Nat) Nat) Unit, BlanketDetermined Q ∧
+      ∀ r (m : Nat → Unit), r = levelParts web TwoRelata.g value act → Admits Q r m :=
+  stepExternal_admitted_iff.mpr (agentConsistent value)
+
+end Alternating
 
 end BlanketCouplings
 

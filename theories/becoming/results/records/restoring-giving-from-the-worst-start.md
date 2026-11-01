@@ -67,6 +67,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: None. [Withholding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean)
 - related, not a proved adapter: [target-capture](target-capture.md). As a perturbed state is re-absorbed under one rule, giving is regained only under another law; here exactly where every chain of waits passes a source.
 
+**Used by:** [a-pair-tolerates-only-within-a-window](a-pair-tolerates-only-within-a-window.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
