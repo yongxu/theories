@@ -458,6 +458,19 @@ OU7 landed (study §492, core receipt `20261101T094230.205342Z`, every core and 
 - **What item 4 leaves.** The models' conditional laws are each stated with their hypotheses at their homes; they are not yet each given a net where the condition fails. That does not hold a release. It is the kind of work plan §十三 items 6, 8, 9 and 11 still ask for, after the gate.
 - **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model, the organism and the institution named on the one page as having none (9); and the three minimalities' report, with MDL and Pareto not yet done (11). The organism is next, as OG, with its design in review.
 
+## BD3 and BD4 landed: lever 1 (a), balance on closures (1 November 2026)
+
+Lever 1 (a) asked for the locality law restated with «所闭», a grammar-wide law that was to ride the near-full rebuild ("Shared definitions" above). It is met in two halves, both as laws of the record [balance-from-conservation-along-a-relation](../../../../../../theories/becoming/results/records/balance-from-conservation-along-a-relation.md) (01 §8.4). Both are proved in the core leaf `Becoming.BalanceRegions`, which imports GrammarCrossing, and both have empty axiom reports.
+
+- **The region form** (BD3, `07c945c41`, study §487, core receipt `20261031T225858.600119Z`). On the grammar, adjacency among the listed relata is symmetric. A family the relation closes, membership a test, is exactly a region not gone out of along that adjacency (`«不出»`), not come into, and closed under it.
+- **The «所闭» form** (BD4, `440fa6979`, study §493, core receipt `20261101T105110.951913Z`).
+  - With equality decided, each relatum's closure under the listed adjacency is decided by a test, and it is the least family the relation closes that holds the relatum.
+  - Transfers along the relation that balance a step exist exactly where the total is conserved on each listed relatum's closure.
+  - At the unit grain, the levels read as units pair one to one under the closure: a case of `«类之对当且仅当类类等数»`, and the closure-local reading of `Flow.balances_iff_units`.
+  - 01 §9.9's reading of boundaries now carries it: amounts keep to the boundaries the relation crosses neither way, and a closure one way does not keep them.
+- **Where it sits.** The law stays in its leaf. GrammarLaws needs nothing from it, and the leaf states it on the grammar's `«不出»` and `«所闭»`. Three of BD4's lemmas ride the next near-full rebuild of GrammarLaws: the counting lemmas, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
+- **What it does not change.** Balance is localized to closures, not derived, so U1's verdict and lever 1's round trip stand: amounts remain the root's second sort, with their interface in `Becoming.UnitMatchings`. No central declaration is BD3's or BD4's, so 08 §7's figures are unchanged, and no gate item moves.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
