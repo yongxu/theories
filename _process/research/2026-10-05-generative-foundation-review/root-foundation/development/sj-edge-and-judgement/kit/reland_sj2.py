@@ -127,11 +127,19 @@ d['references'].insert(2, {'path': GH, 'role': 'proof', 'sha256': gh_sha,
 d['proof_bindings'].append({'source': GH, 'receipt': rpath, 'sha256_pointer': '/source_sha256/Becoming.GuardHorizon',
                             'success_pointer': '/status', 'success_value': 'passed'})
 d['references'].append({'path': rpath, 'role': 'receipt', 'sha256': digest, 'declarations': []})
-d['validation_scope']['en'] += (f" The seventh law, in the ring module Becoming.GuardHorizon, was checked at core receipt "
-                                f"{RECEIPT}, {len(gh['declarations'])} declarations ({gh['theorems']} theorems), every "
-                                "axiom report empty.")
-d['validation_scope']['zh'] += (f"第七律在环模块 Becoming.GuardHorizon 中，由核心回执 {RECEIPT} 检查，"
-                                f"{len(gh['declarations'])} 个声明（{gh['theorems']} 条定理），公理报告均为空。")
+d['validation_scope'] = {
+    'en': ("Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt "
+           "20261101T112708.430596Z (36 theorems) and Viability, whose two kernel laws are proved from the leaf with "
+           f"their statements unchanged; the seventh law in the ring module Becoming.GuardHorizon at receipt {RECEIPT} "
+           f"({gh['theorems']} theorems); every axiom report empty. Read by independent AI reviewers, the design, the "
+           "Lean and the map, and the landing texts twice, each finding verified, every confirmed one taken."),
+    'zh': ("由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse 于回执 20261101T112708.430596Z（36 条定理），"
+           "以及 Viability，其两条不变核之律由此叶证出、陈述不变；第七律在环模块 Becoming.GuardHorizon，于回执 "
+           f"{RECEIPT}（{gh['theorems']} 条定理）；公理报告均为空。经独立 AI 审阅者阅读设计、Lean 与图，以及两轮落地文本，"
+           "各有核验，所核实者皆采纳。"),
+}
+assert len(d['validation_scope']['en']) <= 600 and len(d['validation_scope']['zh']) <= 260, \
+    (len(d['validation_scope']['en']), len(d['validation_scope']['zh']))
 d['next_delta'] = {
     'en': ("The models' examples of PairsNotCommon (ReadingLoop.PairwiseShared, AssurancePlans.Routes) re-proved from "
            "this record's witness on their owners' word, and the reading's own formation stated within the law."),
