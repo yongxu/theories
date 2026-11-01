@@ -1,13 +1,14 @@
 ## {N}. Identity's covering laws finished (U4e)
 
-Board item U4e, what U4d's section (§498) left in its boundary: "the census recurrence laws keep decisions their proofs no longer use, left to Identity's laws' next change". With it the one covering law of Identity still on an older route: `Web.arisingFrom_not_stopping_covered` went through `not_not_arisingFrom_covered` at one covering list, while the root's «有覆而亡屡则生不止», its form for lists at arbitrarily late stages, was registered by U4d as an apart root with no use on the base. Nothing new is proved. One route is shortened and five statements are made more general; the change was built in scratch first (`u4e-kit/edit_lean.py`, `u4e-kit/edit_texts.py`), and `u4e-kit/UnusedDecisions.lean` read every decision binder of the two modules on main and on the change.
+Board item U4e, what U4d's section (§498) left in its boundary: "the census recurrence laws keep decisions their proofs no longer use, left to Identity's laws' next change". With it the one covering law of Identity still on an older route: `Web.arisingFrom_not_stopping_covered` went through `not_not_arisingFrom_covered` at one covering list, while the root's «有覆而亡屡则生不止», its form for lists at arbitrarily late stages, was registered by U4d as an apart root with no use on the base. Nothing new is proved. One route is shortened, five statements are made more general and one stronger (RootForms.some_depends, which the Lean review found weakened needlessly); the change was built in scratch first (`u4e-kit/edit_lean.py`, `u4e-kit/edit_texts.py`), and `u4e-kit/UnusedDecisions.lean` read every decision binder of the two modules on main and on the change.
 
 ```text
 Result(s): census-balance-under-continuation (home 01 §9.5): the second hypotheses entry and law 12 say which
        decision each law takes; law 4 names «有覆而亡屡则生不止» among the covering laws' routes; the Next drops the
        item now done. identity-across-steps: a history line for Web.persisting_census. one-root-to-its-edge: the
        Next drops a theorem that no statement reading only the dynamics entails C, which DU's
-       ReadsNoOrder.not_entails gives and the home section already names. No new record and no new declaration.
+       ReadsNoOrder.not_entails gives and the home section already names, and a history line names some_depends.
+       No new record and no new declaration.
 Delta:
   - Identity: Web.arisingFrom_not_stopping_covered re-proved as the root's «有覆而亡屡则生不止» at the formations'
     occurrences within activity onward from T, its statement unchanged. The four census recurrence laws
@@ -17,10 +18,12 @@ Delta:
     neither decides activity. The module's covering-lists bullet and the four docstrings say so.
   - Persistence: Web.persisting_census drops decided holding activity and the decided continuation, which its proof
     does not use, keeping the two decisions the census laws take.
+  - RootForms: some_depends states its witness (something over the one point comes to stand and depends after the
+    step) instead of only that it is not refuted, the Lean review's finding; its six uses apply the negations to it.
 Checked: core receipt {RECEIPT}, every axiom report empty; Becoming.Identity (IDENTITY), Becoming.Persistence
-       (PERSISTENCE). The signature audit (u4e-kit/u4e_signatures.py, main's side read at the main merged in): the
-       five statements are main's with exactly the dropped binders removed; every other statement of the two
-       modules unchanged; nothing added, gone or moved. UnusedDecisions.lean: on main the five laws held ten
+       (PERSISTENCE), Becoming.RootForms (ROOTFORMS). The signature audit (u4e-kit/u4e_signatures.py, main's side read at the main merged in): the
+       five statements are main's with exactly the dropped binders removed, and some_depends main's less its double
+       negation; every other statement of the three modules unchanged; nothing added, gone or moved. UnusedDecisions.lean: on main the five laws held ten
        decision binders used by neither statement nor proof; on the change none is left in the two modules.
 Standing: proved, as the records state.
 Boundary: the balance across a step (Web.Census.balanceFrom and its kin) keeps decided activity and both decisions

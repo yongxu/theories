@@ -25,15 +25,15 @@ ROW = (TITLE + " (U4d's study §498, its boundary: \"the census recurrence laws 
        "`Web.arisingFrom_not_stopping_covered` re-proved as the root's «有覆而亡屡则生不止» at the formations' "
        "occurrences, statement unchanged (the root form, registered by U4d with no use on the base, gains its use); "
        "the four census recurrence laws and Persistence's `Web.persisting_census` drop the decision binders their "
-       "proofs do not use, each keeping only the continuation's decision its direction needs; the record and 01 "
-       "§9.5's row say which decision each law takes | Claude Code desktop session \"time moves fast, for all our\" "
+       "proofs do not use, each keeping only the continuation's decision its direction needs; `RootForms.some_depends` "
+       "states its witness (the Lean review's finding); the record and 01 §9.5's row say which decision each law takes | Claude Code desktop session \"time moves fast, for all our\" "
        "(U4's owner), 2 November 2026 | claimed 2 November 2026; Lean and texts on branch `u4e`; one core run when the "
        "coordinator gives the slot | `development/u4-one-root-to-its-edge/u4e-kit/`; at landing "
-       "`Becoming/Identity.lean`, `Becoming/Persistence.lean` | the coordinator for the core run's slot |")
+       "`Becoming/Identity.lean`, `Becoming/Persistence.lean`, `Becoming/RootForms.lean` | the coordinator for the core run's slot |")
 HEAD = ("U4e at the head of the queue (landing now: Identity's covering laws finished, "
         "`Web.arisingFrom_not_stopping_covered` re-proved as the root's «有覆而亡屡则生不止» and the four census "
-        "recurrence laws and `Web.persisting_census` dropping the decision binders their proofs do not use, every other "
-        "statement unchanged; one core run; then render, strict check, links, tests and both dossier checks, then the "
+        "recurrence laws and `Web.persisting_census` dropping the decision binders their proofs do not use, "
+        "`RootForms.some_depends` stating its witness, every other statement unchanged; one core run; then render, strict check, links, tests and both dossier checks, then the "
         "fast-forward); ")
 
 
@@ -95,7 +95,8 @@ def landed(receipt, n):
               "laws finished. `Web.arisingFrom_not_stopping_covered` re-proved as the root's «有覆而亡屡则生不止», "
               "statement unchanged, the root form's register entry gone; the four census recurrence laws and "
               "Persistence's `Web.persisting_census` drop the decision binders their proofs do not use, each statement "
-              "more general; the signature audit: every other statement of the two modules unchanged; "
+              "more general; `RootForms.some_depends` states its witness; the signature audit: every other statement of the "
+              "three modules unchanged; "
               "census-balance-under-continuation's hypotheses, laws 4 and 12 and Next and 01 §9.5's row say which "
               "decision each law takes; one-root-to-its-edge's Next drops the item DU gave; the records citing what "
               "changed re-pointed and the two modules' proof bindings rebound; U4e's and U4's rows in the history file, "

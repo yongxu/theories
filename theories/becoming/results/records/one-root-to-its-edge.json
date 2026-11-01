@@ -365,8 +365,8 @@
       "zh": "2026年11月1日，U4d（研究第 498 节）：覆盖之律之根形，即下一步之首项，已成。Locality、Decidedness 与 Identity 之覆盖之律与根上一程之清点，皆为根上一计之例，即自一列表之线上之终（shared-laws-on-the-grammar 律 19）：U4c 之界，即覆盖之律非清点之例，仍立，而二者今皆为此计之例。一程之清点更强，去二前提；Identity 增覆盖列表之确切形式。达于文法者不变，故诸立与 08 §7 之数不变（落地之构建上重算其度）。下一步去覆盖之律之根形（COVERING-ON-THE-ROOT.md，经 REVIEW-U4D.md 审阅，二者皆在引用中）。"
     },
     {
-      "en": "2 November 2026, U4e (study section U4E_SECTION): the Next drops a theorem that no statement reading only the dynamics entails C. DU gave it (ReadsNoOrder.not_entails: a statement reading no order, as one reading only the dynamics does, entails C at a datum on a frame with an extension only where it fails), and the home section already names it. No standing or count changed.",
-      "zh": "2026年11月2日，U4e（研究第 U4E_SECTION 节）：下一步去掉“无一仅读动力之陈述蕴涵 C 之定理”。DU 已给出之（ReadsNoOrder.not_entails：不读次序之陈述——仅读动力者即是——于有延伸之框架上之一数据处，唯于其不成处蕴含 C），家节已名之。无一立处或计数改变。"
+      "en": "2 November 2026, U4e (study section U4E_SECTION): the Next drops a theorem that no statement reading only the dynamics entails C. DU gave it (ReadsNoOrder.not_entails: a statement reading no order, as one reading only the dynamics does, entails C at a datum on a frame with an extension only where it fails), and the home section already names it. RootForms.some_depends states its witness instead of only that it is not refuted, so law 2's witnesses read directly; its statement is stronger, the law unchanged. No standing or count changed.",
+      "zh": "2026年11月2日，U4e（研究第 U4E_SECTION 节）：下一步去掉“无一仅读动力之陈述蕴涵 C 之定理”。DU 已给出之（ReadsNoOrder.not_entails：不读次序之陈述——仅读动力者即是——于有延伸之框架上之一数据处，唯于其不成处蕴含 C），家节已名之。RootForms.some_depends 径陈其见证，不再只言其不被否证，第 2 条之见证遂直读；其陈述更强，规律不变。无一立处或计数改变。"
     }
   ],
   "boundary": {

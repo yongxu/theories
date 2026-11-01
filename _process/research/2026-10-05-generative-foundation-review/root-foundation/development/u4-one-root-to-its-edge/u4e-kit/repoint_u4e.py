@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """U4e's landing (repoint_u4d.py's pattern): re-point the records drifting by U4e's edits only, then rebind the proof
-bindings of the two Lean files U4e changes to the landing's receipt.
+bindings of the three Lean files U4e changes to the landing's receipt.
 
 The drift list of `research.py check` is filtered to the paths U4e changes, so another session's drift stays with
 its owner and is printed for it. Every drifting (record, path) pair is listed with its changed sections first, and
 in a chapter each changed section must be one U4e's texts write (EXPECTED); a pair outside them stops the script,
 to be read and settled by hand. Then `repoint.py --receipt … --lean …` rebinds every record's proof binding to the
-two changed Lean files, after checking that the receipt binds each file's current bytes and passed.
+three changed Lean files, after checking that the receipt binds each file's current bytes and passed.
 usage (from the checkout root, after reland_u4e.py): python3 -B <kit>/repoint_u4e.py RECEIPT [--apply]"""
 import json
 import subprocess
@@ -19,7 +19,7 @@ RECEIPT_ID = sys.argv[1]
 APPLY = '--apply' in sys.argv[2:]
 PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation'
-LEAN = [f'{PKG}/Becoming/{m}.lean' for m in ('Identity', 'Persistence')]
+LEAN = [f'{PKG}/Becoming/{m}.lean' for m in ('Identity', 'Persistence', 'RootForms')]
 CH = 'theories/becoming/chapters'
 OTHER = [f'{PKG}/becoming-verification.json', f'{CH}/01-ROOT.md', f'{CH}/08-METHOD.md',
          'theories/becoming/results/data/shared-laws.json', f'{RF}/BECOMING-RENEWAL-READING.md',
@@ -32,8 +32,8 @@ EXPECTED = {
 }
 REASON = ("U4e: Identity's covering laws finished; Web.arisingFrom_not_stopping_covered re-proved as the root's "
           "«有覆而亡屡则生不止» with its statement unchanged, and the four census recurrence laws and Persistence's "
-          "persisting_census dropping the decision binders their proofs do not use, each statement more general and "
-          "no other statement changed; 01 §9.5's census row, 08's counts, the study, the connectivity and the shared "
+          "persisting_census dropping the decision binders their proofs do not use, each statement more general, and "
+          "RootForms.some_depends stating its witness, no other statement changed; 01 §9.5's census row, 08's counts, the study, the connectivity and the shared "
           "laws' view; read before re-pointing")
 
 

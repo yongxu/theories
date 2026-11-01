@@ -6,6 +6,7 @@ U4E_BASE, the main merged in (default main); u4d_signatures.py's pattern. Expect
   recurrence laws of Identity (the arising direction drops decided activity and decided `Continued`, the ceasing
   direction decided activity and decided `Continues`) and Persistence's `Web.persisting_census` (decided holding
   activity and the decided continuation);
+- RootForms.some_depends stating its witness: main's statement less its double negation (the Lean review's finding);
 - every other statement unchanged, Web.arisingFrom_not_stopping_covered's included (its proof alone changes);
 - nothing added, gone or moved, and every axiom report of the two modules empty.
 usage (from the checkout root, after the checker): python3 -B <kit>/u4e_signatures.py [RECEIPT_ID | --dir RUN_DIR]"""
@@ -22,7 +23,7 @@ spec = importlib.util.spec_from_file_location('s3b', OU3B)
 s3b = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(s3b)
 PKG = s3b.PKG
-CHANGED = ('Identity', 'Persistence')
+CHANGED = ('Identity', 'Persistence', 'RootForms')
 B = 'Becoming.'
 ACTIVE = '[(t : Nat) → (f : F) → Decidable (W.active t f)]'
 CONTINUES = '[(t : Nat) → (f : F) → Decidable (W.Continues R t f)]'
@@ -35,6 +36,7 @@ DROPPED = {
     B + 'Web.persisting_census': ('[(t : Nat) → (f : F) → Decidable ((W.persisting h).active t f)]',
                                   '[(t : Nat) → (g f : F) → Decidable (R t g f)]'),
 }
+STRONGER = B + 'RootForms.some_depends'
 BASE = os.environ.get('U4E_BASE') or 'main'
 
 
@@ -80,8 +82,10 @@ if '--show' in sys.argv:
         print('OLD', old[n]); print('NEW', new[n]); print()
 print(json.dumps(report, indent=1, ensure_ascii=False))
 problems = []
-if set(changed) != set(DROPPED):
-    problems.append(('statements changed', sorted(set(changed) ^ set(DROPPED))))
+if set(changed) != set(DROPPED) | {STRONGER}:
+    problems.append(('statements changed', sorted(set(changed) ^ (set(DROPPED) | {STRONGER}))))
+elif not (body(old[STRONGER]).startswith('¬¬') and body(old[STRONGER])[2:].lstrip() == body(new[STRONGER])):
+    problems.append(('not main\'s statement less its double negation', STRONGER))
 for name, binders in DROPPED.items():
     if name not in old or name not in new:
         problems.append(('missing', name))
@@ -100,7 +104,7 @@ if decl_old != decl_new:
 for m in new_r['modules']:
     if m['module'] in (B + c for c in CHANGED):
         assert not any(m['axiom_dependencies'].values()), (m['module'], m['axiom_dependencies'])
-print('OK: five statements main\'s less the decision binders their proofs do not use; every other statement of '
-      'Identity and Persistence unchanged; nothing added, gone or moved; every axiom report of the two modules empty'
+print('OK: five statements main\'s less the decision binders their proofs do not use; RootForms.some_depends '
+      'main\'s less its double negation; every other statement of Identity, Persistence and RootForms unchanged; nothing added, gone or moved; every axiom report of the three modules empty'
       if not problems else f'UNEXPECTED: {problems}')
 sys.exit(1 if problems else 0)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """U4e's landing (reland_u4d.py's pattern): 08's counts from the receipt; the study section from study_u4e.txt appended
 as section N, each changed module's counts read from the receipt; the section written into the records' U4E_SECTION
-marks. The receipt must have checked the very bytes of the two changed modules, each in the core with every axiom
+marks. The receipt must have checked the very bytes of the three changed modules, each in the core with every axiom
 report empty. The changed modules' proof bindings are repoint_u4e.py's.
 usage (from the checkout root of the worktree): python3 -B <kit>/reland_u4e.py RECEIPT N"""
 import hashlib
@@ -19,7 +19,7 @@ STUDY = ROOT / f'{RF}/BECOMING-RENEWAL-READING.md'
 CH = ROOT / 'theories/becoming/chapters'
 RECORDS = ROOT / 'theories/becoming/results/records'
 TITLE = "Identity's covering laws finished (U4e)"
-CHANGED = ('Identity', 'Persistence')
+CHANGED = ('Identity', 'Persistence', 'RootForms')
 MARKED = ('census-balance-under-continuation', 'identity-across-steps', 'one-root-to-its-edge')
 
 rpath = f'{PKG}/becoming-checks/{RECEIPT}/verification.json'
