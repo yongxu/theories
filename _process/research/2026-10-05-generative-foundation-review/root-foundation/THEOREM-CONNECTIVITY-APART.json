@@ -7006,6 +7006,21 @@
    "module": "Becoming.GrammarConditionals",
    "category": "model-witness",
    "reason": "«非有常之类不含于核之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.Continuity.PathOfThree.counts_kept_not_along_step": {
+   "module": "Becoming.BalanceRegions",
+   "category": "model-witness",
+   "reason": "On the path 0 — 1 — 2, [0] and [2] keep the count on every closure along the listed adjacency, and no pairing along one step of it joins them: a fact about one constructed relation showing that counts kept on each closure do not give a pairing along one step (BD4)."
+  },
+  "Becoming.Continuity.balancing_iff_closures": {
+   "module": "Becoming.BalanceRegions",
+   "category": "general-structure",
+   "reason": "relata listed without repetition and equality decided, transfers balancing a step exist exactly where the total is conserved on the closure of each listed relatum («所闭» along the listed adjacency): for every Bool relation and list of relata on any type, equality decided; the base reads balance through balancesOn_iff_conserved, and nothing on it uses this law (BD4)"
+  },
+  "Becoming.Continuity.balancing_iff_units_paired": {
+   "module": "Becoming.BalanceRegions",
+   "category": "general-structure",
+   "reason": "relata listed without repetition and equality decided, transfers balancing a step exist exactly where the units before pair one to one with the units after under the closure: for every Bool relation and list of relata on any type, equality decided; the base reads balance through balancesOn_iff_conserved, and nothing on it uses this law (BD4)"
   }
  },
  "instances": {
