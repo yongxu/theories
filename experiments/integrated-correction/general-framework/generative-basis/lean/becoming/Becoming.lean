@@ -270,6 +270,7 @@ import Becoming.ReadingSchedule
 import Becoming.RegimeMargin
 import Becoming.RoomNet
 import Becoming.RoomRuns
+import Becoming.ReaderRebuilding
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -4128,6 +4129,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
   positive margin, is (`Rooms.Overshooting.generation_at_moments`); a coarse line is the possible
   with warmth held (`Rooms.line_iff_held`).
+* `Becoming.ReaderRebuilding` (L1): where a reader is rebuilt from, a family of nets from one rule
+  (board item OG, plan §十三 item 9's organism). A level and a reader of units by age; each step a
+  draw, a read in turn while supplied, ageing to a span and a rebuild from the rule's source. Kept
+  while supplied where the rebuild draws on the level (`ReaderRebuilding.«供则读者不绝»`); under a
+  cut, present after `k + 1` steps from every level of at least `2 (k + 1)`
+  (`ReaderRebuilding.«断而有储则读者存»`), while a reader rebuilt from the supply or never rebuilt
+  ends at its span from every level; the end at an empty stock, closed under the net
+  (`ReaderRebuilding.«取于储者绝而不复»`); the stock buys time exactly where the rebuild draws on
+  the level (`ReaderRebuilding.«以储买时当且仅当取于储»`). A leaf.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

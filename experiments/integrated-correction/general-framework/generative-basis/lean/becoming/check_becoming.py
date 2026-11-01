@@ -88,7 +88,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
 # are leaves nothing in the core imports. Both are held to the core's conditions (prelude only, empty
 # axiom reports) and sit outside it by direction: no core module but the root `Becoming` imports a
 # ring module, and no instance imports an application (`ring_direction`).
-INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns"]
+INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns", "Becoming.ReaderRebuilding"]
 APPLICATIONS = ["Becoming.Dispatch", "Becoming.GuardHorizon", "Becoming.ResponseLearning", "Becoming.Coverage", "Becoming.SeedReach", "Becoming.ScopedReach", "Becoming.OpenedCorrection"]
 RING = INSTANCES + APPLICATIONS
 # The bridge: emptied by the F3 sweep (19 October 2026). Every bridge and pure join module is in
@@ -187,7 +187,7 @@ RECEIPT = HERE / "becoming-verification.json"
 RETAINED = HERE / "becoming-checks"
 
 SCOPE = (
-    "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
+    "GrammarLaws: the five shared laws on the grammar, for every carrier and relation: closure is being the "
     "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
     "on, a closed region is not gone out of, an occurrence's closure among them, the closure under the "
     "converse is the closure read backward, a closure through borrowed steps lies "
@@ -868,7 +868,7 @@ SCOPE = (
     "inside; going on along some branch is lying in a family that keeps moving, a line from it exactly dependent "
     "choice and within finitely many configurations a line with nothing chosen; the steps forget the moves. "
     "ModelStatements: definitions and model laws stated at the grammar's models. Twenty central declarations that "
-    "rest on no master law are each stated at a World's occurrence model, a process's model of its moves' relations or "
+    "rest on no shared law's anchor are each stated at a World's occurrence model, a process's model of its moves' relations or "
     "the row's own carrier, every term a relation of the model, a named comparison of its given amounts or a supplied "
     "parameter, and each is proved through its row: support and dependence are inclusions in the needs met, renewal "
     "an inclusion in the kept relation, undermining drawing into an undermined dependence and transmission two "
@@ -2349,6 +2349,12 @@ SCOPE = (
     "though holds's condition fails for it; none of these three courses keeps widening; read on its moments "
     "the overshooting course is 全生成 and no moment of the unheated course, or of the matched one at a positive "
     "margin, is; a coarse line is the possible with warmth held. "
+    "ReaderRebuilding: one rule makes a family of nets of a level and a reader of units by age, rebuilt "
+    "from the level, the supply, nowhere needed or nothing; where it is rebuilt from the level a present "
+    "reader is present after a supplied step from every level, under a cut it is present after k + 1 steps "
+    "from every level of at least 2 (k + 1), and its end is at an empty stock and closed under the net; "
+    "rebuilt from the supply or never rebuilt it ends at its span from every level; the stock buys time "
+    "under a cut exactly where the rebuild draws on the level. "
     "Regulation: with balance, the joint exchange is within the gap to m on both sides exactly "
     "where the next level lies between m and the level; within the gap and opposing on both sides "
     "the level settles at m within its gap; beyond it an opposing exchange crosses m, a witness "
