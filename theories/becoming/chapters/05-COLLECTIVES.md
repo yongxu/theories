@@ -233,7 +233,7 @@ Formations selecting together tell apart what some one of them tells apart, and 
 **Definition.** A *pool* is a group selecting through its members' couplings together: two histories are alike through the pool where every member couples them alike, so the *pooled coupling* is the meet of the members' equivalences, as with distributed knowledge (`Web.SelectsThroughAll`). A group's *coupling closure* is the least region closed under being affected through what is coupled into that holds every member. Selection through couplings and the gap of one's own act are [03](03-KNOWING.md#r-selection-through-couplings)'s and [07](07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act)'s.
 
 <a id="r-what-pooled-coupling-reaches"></a>
-**Theorem** (World; balance for the gap). A group's closure is the union of its members' closures. With a list holding exactly the members and each member's coupling of two histories decided, some selection through the pooled coupling holds at one history and fails at the other exactly when some member does not couple them alike (`Web.separates_all_iff_member`). Differences beyond the union stay unselected: where the rest follows one law of exchange reading through coupling, in two balanced flows with the same formations and a common start, an act differing only beyond the union of the closures, the pool's own joint act included, is selected alike by every group within it at every step (`Flow.act_unselected_pool`).
+**Theorem** (World; balance for the gap). A group's closure is the union of its members' closures (`withinClosureOf_iff`, under any relation). With a list holding exactly the members and each member's coupling of two histories decided, some selection through the pooled coupling holds at one history and fails at the other exactly when some member does not couple them alike (`Web.separates_all_iff_member`). Differences beyond the union stay unselected: where the rest follows one law of exchange reading through coupling, in two balanced flows with the same formations and a common start, an act differing only beyond the union of the closures, the pool's own joint act included, is selected alike by every group within it at every step (`Flow.act_unselected_pool`).
 
 It does not show which formations pool, how a pool forms or lasts, or that a pool responds to what it separates ([record](../results/records/what-pooled-coupling-reaches.md)).
 
@@ -376,7 +376,7 @@ A commons with gated renewal as the first falsifiable test, with groups whose co
 - Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping. That is asked under the two premises of [07](07-SIGNIFICANCE.md), the continuation condition for scope and C for order.
 - That a mutual best response exists in general (no existence is shown, and none is shown to fail), or which of several self-consistent outcomes learners come to.
 - Real amounts and probabilities in the pure core, whose laws here are in natural numbers, course by course; stochastic regrowth, random orders of hearing and amounts of giving.
-- That the laws here are on the grammar: they are on the World, processes or types ([08](08-METHOD.md)).
+- That most laws here are stated on the grammar: they are on the World, processes or types; the bullets marked *Stated at the model* read some of them at a process's model, and the records' shared-law lines say which reach the grammar ([08](08-METHOD.md)).
 
 <a id="open"></a>
 ## Open
