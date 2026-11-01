@@ -1,11 +1,11 @@
 {
- "commit": "e724b9484af70b091f0a65a10d13d73617811e06",
+ "commit": "141024e30a4b12a32ea8b2a037b9e607e2cdfe54",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261031T202201.956842Z",
+ "core_receipt_at_commit": "20261031T231958.020578Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 369,
- "constants": 52806,
- "spine_theorems": 17860,
+ "tracked_modules": 372,
+ "constants": 53094,
+ "spine_theorems": 17970,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -26,21 +26,21 @@
   "Process reaches World family": false
  },
  "classes": {
-  "statement on both families": 1098,
-  "statement on Process/Frame/Run/Trace": 3562,
-  "statement on World/Flow/Web": 4277,
+  "statement on both families": 1119,
+  "statement on Process/Frame/Run/Trace": 3572,
+  "statement on World/Flow/Web": 4286,
   "statement on the base only through a law of its own module": 276,
-  "proof through a base family": 216,
-  "used by a theorem on the base": 5828,
+  "proof through a base family": 221,
+  "used by a theorem on the base": 5863,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 2272,
+  "apart: own vocabulary": 2302,
   "apart: prelude-only statement": 172
  },
- "apart": 2444,
- "apart_general_structure_by_design": 1010,
- "apart_otherwise": 1434,
+ "apart": 2474,
+ "apart_general_structure_by_design": 1015,
+ "apart_otherwise": 1459,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 123,
+  "spine theorems that are pure forwarders": 124,
   "of them on the base": 81,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 18,
@@ -76,12 +76,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1291,
- "apart_roots": 1291,
+ "apart_used_by_nothing": 1298,
+ "apart_roots": 1298,
  "apart_roots_by_category": {
-  "model-witness": 589,
-  "support": 139,
-  "general-structure": 514,
+  "model-witness": 596,
+  "support": 138,
+  "general-structure": 515,
   "calibration": 23,
   "restates": 14,
   "logical-strength": 12
@@ -108,6 +108,7 @@
   "Becoming.CourseWorlds": 20,
   "Becoming.CensusCounts": 19,
   "Becoming.Correspondence": 18,
+  "Becoming.UnreadStandings": 18,
   "Becoming.CensusTable": 17,
   "Becoming.Relevance": 17,
   "Becoming.Runs": 16,
@@ -148,6 +149,7 @@
   "Becoming.Readings": 3,
   "Becoming.Propagation": 3,
   "Becoming.StrengthFlows": 3,
+  "Becoming.PremiseWitnesses": 3,
   "Becoming.World": 2,
   "Becoming.Stock": 2,
   "Becoming.LeastLoss": 2,
@@ -171,13 +173,13 @@
    138,
    138
   ],
-  "Becoming.Weightings": [
-   103,
-   398
-  ],
   "Becoming.GrammarPath": [
    102,
    102
+  ],
+  "Becoming.Weightings": [
+   101,
+   398
   ],
   "Becoming.HeldForReading": [
    97,
@@ -263,10 +265,6 @@
    28,
    28
   ],
-  "Becoming.Blanket": [
-   28,
-   33
-  ],
   "Becoming.RevisionRoutes": [
    28,
    28
@@ -275,17 +273,21 @@
    27,
    59
   ],
+  "Becoming.PremiseWitnesses": [
+   27,
+   35
+  ],
   "Becoming.CausalGrowth": [
    26,
    161
   ],
+  "Becoming.Blanket": [
+   25,
+   33
+  ],
   "Becoming.WideningOnTheMap": [
    25,
    43
-  ],
-  "Becoming.GrammarTransport": [
-   24,
-   53
   ],
   "Becoming.RootForms": [
    23,
@@ -298,6 +300,10 @@
   "Becoming.ReflexivePrediction": [
    22,
    22
+  ],
+  "Becoming.GrammarTransport": [
+   21,
+   53
   ],
   "Becoming.Founding": [
    21,
@@ -382,6 +388,10 @@
   "Becoming.CountedCodes": [
    12,
    34
+  ],
+  "Becoming.BlanketCouplings": [
+   11,
+   43
   ],
   "Becoming.StrictTransport": [
    11,
@@ -858,18 +868,18 @@
  },
  "rings": {
   "core": {
-   "modules": 352,
-   "theorems": 17088,
-   "apart": 2349,
+   "modules": 355,
+   "theorems": 17198,
+   "apart": 2379,
    "classes": {
-    "statement on both families": 1084,
-    "statement on Process/Frame/Run/Trace": 3342,
-    "statement on World/Flow/Web": 4252,
+    "statement on both families": 1105,
+    "statement on Process/Frame/Run/Trace": 3352,
+    "statement on World/Flow/Web": 4261,
     "statement on the base only through a law of its own module": 230,
-    "proof through a base family": 205,
-    "used by a theorem on the base": 5467,
+    "proof through a base family": 210,
+    "used by a theorem on the base": 5502,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 2178,
+    "apart: own vocabulary": 2208,
     "apart: prelude-only statement": 171
    }
   },
@@ -988,8 +998,8 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 83,
-  "statement on Process/Frame/Run/Trace": 173,
+  "statement on both families": 85,
+  "statement on Process/Frame/Run/Trace": 175,
   "statement on World/Flow/Web": 137,
   "statement on the base only through a law of its own module": 6,
   "proof through a base family": 5,
@@ -1277,14 +1287,14 @@
   }
  ],
  "master_laws": {
-  "central_declarations": 127,
+  "central_declarations": 126,
   "resting_on_no_master_law": 39,
   "by_law": {
    "closure": 41,
    "balance": 55,
    "return": 14,
    "lumping": 2,
-   "order": 9
+   "order": 8
   },
   "rows": [
    {
@@ -1950,12 +1960,6 @@
      },
      {
       "declaration": "Becoming.Web.widens_iff_retains_adds",
-      "laws": [
-       "order"
-      ]
-     },
-     {
-      "declaration": "Becoming.Web.paths_comparison_widens",
       "laws": [
        "order"
       ]
@@ -2673,11 +2677,11 @@
   "Becoming.«相续之对应»": "apart: own vocabulary",
   "Becoming.«所及之对应»": "apart: own vocabulary",
   "Becoming.«所闭之对应»": "used by a theorem on the base",
-  "Becoming.«同族之对应»": "apart: own vocabulary",
+  "Becoming.«同族之对应»": "used by a theorem on the base",
   "Becoming.«有前之对应»": "used by a theorem on the base",
-  "Becoming.«有后之对应»": "apart: own vocabulary",
+  "Becoming.«有后之对应»": "used by a theorem on the base",
   "Becoming.«生之对应»": "used by a theorem on the base",
-  "Becoming.«亡之对应»": "apart: own vocabulary",
+  "Becoming.«亡之对应»": "used by a theorem on the base",
   "Becoming.«住之对应»": "apart: own vocabulary",
   "Becoming.«异之对应»": "apart: own vocabulary",
   "Becoming.«复生之对应»": "apart: own vocabulary",
@@ -9100,10 +9104,10 @@
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent": "statement on World/Flow/Web",
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated": "statement on World/Flow/Web",
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end": "statement on World/Flow/Web",
-  "Becoming.Blanket.congr3": "apart: prelude-only statement",
-  "Becoming.Blanket.Blanketed.agent_through_sensory": "apart: own vocabulary",
+  "Becoming.Blanket.congr3": "used by a theorem on the base",
+  "Becoming.Blanket.Blanketed.agent_through_sensory": "used by a theorem on the base",
   "Becoming.Blanket.Blanketed.world_through_active": "apart: own vocabulary",
-  "Becoming.Blanket.Blanketed.internal_through_blanket": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.internal_through_blanket": "used by a theorem on the base",
   "Becoming.Blanket.Blanketed.external_through_blanket": "apart: own vocabulary",
   "Becoming.Blanket.Blanketed.reads_through_blanket": "apart: own vocabulary",
   "Becoming.Blanket.Blanketed.through_reading": "apart: own vocabulary",
@@ -9179,6 +9183,49 @@
   "Becoming.BlanketWeights.Cycle.not_crossForm": "apart: own vocabulary",
   "Becoming.BlanketWeights.Uncovered.crossFormOn": "apart: own vocabulary",
   "Becoming.BlanketWeights.Uncovered.not_crossForm": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.parts_eq": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.pair_eq": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.unit_eq": "apart: prelude-only statement",
+  "Becoming.BlanketCouplings.partDependsOnlyOn_id_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.PartConsistentFamily.mono": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.BlanketDetermined.of_le": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.BlanketConsistentFamily.mono": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.admitted_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.BlanketDetermined.determined": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.blanketed_determined": "statement on Process/Frame/Run/Trace",
+  "Becoming.BlanketCouplings.blanketed_step_alike": "proof through a base family",
+  "Becoming.BlanketCouplings.blanketed_courses_consistent": "proof through a base family",
+  "Becoming.BlanketCouplings.clock": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.sensory_course": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.blanket_iff_through": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.internal_through_couplings": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.open_external": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.open_levels": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.internal_selectsThrough": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.ThresholdCase.band_congr": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.ThresholdCase.admits_iff": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.ThresholdCase.values": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.ThresholdCase.corr": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.ThresholdCase.own_eq": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.ThresholdCase.threshold_case": "statement on World/Flow/Web",
+  "Becoming.BlanketCouplings.clocked_course": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.clocked_consistent": "proof through a base family",
+  "Becoming.BlanketCouplings.clocked_witness": "proof through a base family",
+  "Becoming.BlanketCouplings.clock_only_fails": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.suffix_apply": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.suffix_zero": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.future_course": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.const_consistent": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.injective_consistent": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.whole_iff": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.ReadsExternal.internal_course": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.ReadsExternal.not_consistent": "used by a theorem on the base",
+  "Becoming.BlanketCouplings.ReadsExternal.not_blanketed": "proof through a base family",
+  "Becoming.BlanketCouplings.ReadsExternal.whole_consistent": "apart: own vocabulary",
+  "Becoming.BlanketCouplings.injective_converse_fails": "apart: own vocabulary",
   "Becoming.LumpedSeeking.tied_mass": "apart: own vocabulary",
   "Becoming.LumpedSeeking.single_le_evidence": "apart: own vocabulary",
   "Becoming.LumpedSeeking.posterior_le_iff_prior": "apart: own vocabulary",
@@ -11928,6 +11975,38 @@
   "Becoming.UnitMatchings.source_minimal_zero_of_dissipates": "statement on World/Flow/Web",
   "Becoming.UnitMatchings.residual_pos_of_dissipates": "statement on World/Flow/Web",
   "Becoming.UnitMatchings.lossless_not_dissipative": "statement on World/Flow/Web",
+  "Becoming.UnreadStandings.total_scaled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.pos_scaled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.le_scaled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.lt_scaled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.sum_eq_scaled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.eq_relabelled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.lt_relabelled": "used by a theorem on the base",
+  "Becoming.UnreadStandings.pos_squared": "used by a theorem on the base",
+  "Becoming.UnreadStandings.le_squared": "used by a theorem on the base",
+  "Becoming.UnreadStandings.assoc_mul": "used by a theorem on the base",
+  "Becoming.UnreadStandings.left_comm_mul": "used by a theorem on the base",
+  "Becoming.UnreadStandings.factor_of_one": "used by a theorem on the base",
+  "Becoming.World.atFinerUnit_level": "statement on both families",
+  "Becoming.World.atFinerUnit_taken": "statement on both families",
+  "Becoming.World.atFinerUnit_given": "statement on both families",
+  "Becoming.World.atFinerUnit_conserves": "statement on both families",
+  "Becoming.World.atFinerUnit_balanced_iff": "statement on both families",
+  "Becoming.World.atFinerUnit_agree": "statement on both families",
+  "Becoming.World.carried_of_same": "used by a theorem on the base",
+  "Becoming.World.atFinerUnit_carried": "statement on both families",
+  "Becoming.World.atFinerUnit_activityClass": "statement on both families",
+  "Becoming.World.atFinerUnit_family": "statement on both families",
+  "Becoming.World.atFinerUnit_begins": "statement on both families",
+  "Becoming.World.atFinerUnit_ends": "statement on both families",
+  "Becoming.World.standing_not_read": "statement on both families",
+  "Becoming.World.standingAt_eq_stillAt": "statement on both families",
+  "Becoming.World.stillAt_conserves": "statement on both families",
+  "Becoming.World.stillAt_relabel_agree": "statement on both families",
+  "Becoming.World.stillAt_squared_agree": "statement on both families",
+  "Becoming.World.oneTwo_not_scaled": "statement on both families",
+  "Becoming.World.ratio_apart": "used by a theorem on the base",
+  "Becoming.World.standing_not_read_up_to_unit": "statement on both families",
   "Becoming.Branching.Juncture.reach": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Juncture.outcomes_differ": "statement on Process/Frame/Run/Trace",
   "Becoming.Branching.Juncture.possiblyDrawn": "statement on Process/Frame/Run/Trace",
@@ -14883,8 +14962,8 @@
   "Becoming.Overlapping.fed_middle": "statement on World/Flow/Web",
   "Becoming.Overlapping.last_quiet": "statement on World/Flow/Web",
   "Becoming.Overlapping.closure_overreaches": "statement on World/Flow/Web",
-  "Becoming.Weighting.increasingInOwn_of_increasing": "apart: own vocabulary",
-  "Becoming.Weighting.increasingInOwn_iff_increasing": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_of_increasing": "used by a theorem on the base",
+  "Becoming.Weighting.increasingInOwn_iff_increasing": "used by a theorem on the base",
   "Becoming.Weighting.widensOwn_iff_every_increasingInOwn": "used by a theorem on the base",
   "Becoming.Weighting.every_increasingInOwn_iff_includes": "used by a theorem on the base",
   "Becoming.Weighting.some_increasingInOwn_reverses": "apart: own vocabulary",
@@ -19062,6 +19141,41 @@
   "Becoming.ThirdFed.constant_takes_third": "apart: own vocabulary",
   "Becoming.Belief.rate_changes_on_step": "statement on Process/Frame/Run/Trace",
   "Becoming.Belief.rate_read_in_regularity": "statement on Process/Frame/Run/Trace",
+  "Becoming.TwoLines.other_center_outside": "apart: own vocabulary",
+  "Becoming.ThirdThing.first_member_outside": "apart: own vocabulary",
+  "Becoming.«续无外随网»": "apart: own vocabulary",
+  "Becoming.«族无外随网»": "apart: own vocabulary",
+  "Becoming.ReadsNoOrder.not_entails": "statement on Process/Frame/Run/Trace",
+  "Becoming.LiftModel.met_and_failed": "statement on Process/Frame/Run/Trace",
+  "Becoming.Weighting.reach_of_beyond": "apart: own vocabulary",
+  "Becoming.Weighting.widensOn_iff_reach": "apart: own vocabulary",
+  "Becoming.Weighting.increasing_iff_by_one": "apart: own vocabulary",
+  "Becoming.Weighting.exists_increasingInOwn_not_increasing": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside": "apart: own vocabulary",
+  "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted": "apart: own vocabulary",
+  "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted": "apart: own vocabulary",
+  "Becoming.Web.admits_need": "statement on World/Flow/Web",
+  "Becoming.Web.admits_nothing_from_of_listed": "statement on World/Flow/Web",
+  "Becoming.Web.not_listsAdmitted_every": "statement on World/Flow/Web",
+  "Becoming.Web.no_extension_of_listsAdmitted_every": "statement on both families",
+  "Becoming.Web.extension_ranked_of_increasing": "statement on both families",
+  "Becoming.Web.extension_ranked_of_increasingInOwn": "statement on both families",
+  "Becoming.TwoLines.first_line_reaches_both": "apart: own vocabulary",
+  "Becoming.TwoLines.first_line_reach_iff": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Last.converse_no_outside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.step_member_le": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.converse_line_le": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.converse_later_outside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.line_member_le": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.later_outside": "apart: own vocabulary",
+  "Becoming.LineOfDescent.Endless.converse_outside": "apart: own vocabulary",
+  "Becoming.«逆缘续无外随网»": "apart: own vocabulary",
+  "Becoming.increasingInOwn_with_net": "apart: own vocabulary",
+  "Becoming.increasingInOwn_with_net_converse": "apart: own vocabulary",
   "Becoming.«闭则不出»": "used by a theorem on the base",
   "Becoming.«所闭不出»": "apart: own vocabulary",
   "Becoming.«不出当且仅当不外者闭»": "apart: own vocabulary",

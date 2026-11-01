@@ -17,9 +17,8 @@
    - *On its own carrier (declared; reviewed in [REVIEW-U3-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md)):* `Becoming.Web.paths_extension_iff_widens` is stated at the row's own carrier by `Becoming.SignificanceStatements.paths_extension_iff_grammar` (law 9 of this record).
    - *Standing of `Becoming.Web.paths_extension_iff_widens`, by the rule:* own carrier (F5's verified items on its own carrier only).
 3. For every reading of living, C, every extension being better, holds on level paths with “better” read as widening; the proof unfolds the comparison to the extension, so that widening is better is supplied by the reading of “better”. (`Becoming.Comparison`, `Becoming.Web.paths_comparison_widens`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar; the measure counts central declaration `Becoming.Web.paths_comparison_widens` as following from a shared law (not reaching the grammar: C's extension on paths, one direction, for every reading of living).
+   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
    - *On its own carrier (declared; reviewed in [REVIEW-U3-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md)):* `Becoming.Web.paths_comparison_widens` is stated at the row's own carrier by `Becoming.SignificanceStatements.paths_comparison_grammar` (law 10 of this record).
-   - *Standing of `Becoming.Web.paths_comparison_widens`, by the rule:* own carrier (F5's verified items on its own carrier only).
 4. Widening is transitive and goes one way, and a widening is never a mixed pair, two level paths each exceeding the other. (`Becoming.Web.Widens.trans`, `Becoming.Web.Widens.not_reverse`, `Becoming.Web.Mixed`, `Becoming.Web.Widens.not_mixed`)
    - *Shared laws, by Lean dependency:* order; its declarations reach the grammar.
 5. Under the continuation condition, for every standpoint, one level path widens another exactly when it retains and adds what has significance from that standpoint. (`Becoming.Unrestricted`, `Becoming.Web.widens_iff_retains_adds`)
@@ -92,7 +91,7 @@ Ren asked on 11 October 2026: “can we reduce is "for anything, its continuatio
 - related, not a proved adapter: [ranking-under-readings](ranking-under-readings.md). Courses are compared on possibilities there; here, on level paths, the comparison on possibilities itself satisfies C.
 - related, not a proved adapter: [comparison-content-under-regrouping](comparison-content-under-regrouping.md). That result supplies local conditions preserving extension under many-to-one regrouping, the exact all-level characterization by minimum requirements, and a generated mixed-loss boundary.
 
-**Used by:** [alignment-direction-under-widening](alignment-direction-under-widening.md) · [comparison-content-under-regrouping](comparison-content-under-regrouping.md) · [widening-along-a-reading](widening-along-a-reading.md) · [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md)
+**Used by:** [alignment-direction-under-widening](alignment-direction-under-widening.md) · [comparison-content-under-regrouping](comparison-content-under-regrouping.md) · [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md) · [widening-along-a-reading](widening-along-a-reading.md) · [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md)
 
 <a id="sources--来源"></a>
 ### Sources

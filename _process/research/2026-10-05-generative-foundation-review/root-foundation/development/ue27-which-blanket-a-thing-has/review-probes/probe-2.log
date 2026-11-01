@@ -1,0 +1,29 @@
+Becoming/UE27ReviewProbe.lean:57:14: warning: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/UE27ReviewProbe.lean:241:29: warning: unused variable `i`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/UE27ReviewProbe.lean:241:31: warning: unused variable `j`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue27/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue27-which-blanket-a-thing-has/review-probes/tree",
+  "modules": 93,
+  "ran": [
+    "Becoming.UE27ReviewProbe",
+    "BecomingUE27ReviewProbeAxiomAudit"
+  ],
+  "reused": 92,
+  "unclean": [
+    "Becoming.UE27ReviewProbe"
+  ],
+  "audits": {
+    "Becoming.UE27ReviewProbe": {
+      "theorems": 13,
+      "declarations": 24,
+      "with_axioms": {}
+    }
+  }
+}

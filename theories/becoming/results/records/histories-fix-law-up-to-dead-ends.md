@@ -74,7 +74,7 @@ Following Ren's “move towards 100%” of 12 October 2026: completeness in the 
 - related, not a proved adapter: [trace-law-equivalence](trace-law-equivalence.md). The periphery's equivalence of traces and laws; here the complete correspondence of laws and families of histories in the core.
 - related, not a proved adapter: [recurrence-without-premise](recurrence-without-premise.md). A kept history never returns; the law it shows admits only it (P69's Run.keepHistory_shown).
 
-**Used by:** [processes-represented-both-ways](processes-represented-both-ways.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive)
+**Used by:** [a-formations-couplings-as-its-blanket](a-formations-couplings-as-its-blanket.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

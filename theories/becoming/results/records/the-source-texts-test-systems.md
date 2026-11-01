@@ -64,6 +64,8 @@ The test systems of the first source text (§7): decay and the system with no cl
 - **formal-reuse**: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). moveRel, adaptive_core_apart.
 - related, not a proved adapter: [testing-within-the-net](testing-within-the-net.md). The thermostat witness, of which an institution kept by consent or by penalty is a social reading.
 
+**Used by:** [premises-met-and-failed](premises-met-and-failed.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

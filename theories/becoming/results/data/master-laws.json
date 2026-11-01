@@ -1,12 +1,12 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T225858.600119Z",
- "core_sources_sha256": "69c17eca088c2decf1fba1a518b6b7de135a9546db689716bb615488a3c1a4fa",
+ "core_receipt": "20261101T000137.132110Z",
+ "core_sources_sha256": "27605f96d960ea09e32d9f930ecf1c45a4c96b1bc325e2ec22fc9aa8a34e9584",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "00db800294bdab201e680cf7a9b11d341359a3a5cf0710e20ce2215be6670e7a",
-  "theories/becoming/results/completion/COVERAGE.json": "0dc05776e9e19df1f4846623890bc421a44b6b422e87f3bf8ce738596afa8a49",
+  "theories/becoming/results/completion/COVERAGE.json": "6246d2f250a68f1df8ed097fe7a1d52eb273cb2d986ccbce3cd7a6c72e3708f6",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "9f70cc2b6fe743972cedee811f4db39673f9ab51fe80dd43ab8d535a086a38d4",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 3982,
+  "laws": 4005,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 777,
-  "balance, represented": 646,
-  "anchor, not reached": 134,
-  "no master law": 2025,
-  "vocabulary_only": 69,
-  "closure": 485,
-  "balance": 819,
+  "grammar": 785,
+  "balance, represented": 647,
+  "anchor, not reached": 135,
+  "no master law": 2038,
+  "vocabulary_only": 72,
+  "closure": 487,
+  "balance": 820,
   "return": 253,
   "lumping": 83,
-  "order": 80
+  "order": 85
  },
  "counts_at_model": {
   "laws": 23,
@@ -129,7 +129,7 @@
   "counts": {
    "reaching the grammar": 44,
    "stated at a represented model": 16,
-   "stated on its own carrier only": 7,
+   "stated on its own carrier only": 6,
    "the rest": 51
   },
   "rows": {
@@ -313,18 +313,6 @@
       "occurrence"
      ],
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
-    }
-   ],
-   "Becoming.Web.paths_comparison_widens": [
-    {
-     "of": "Becoming.Web.paths_comparison_widens",
-     "record": "comparison-by-widening",
-     "law": 10,
-     "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
-     "models": [
-      "own"
-     ],
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
     }
    ],
    "Becoming.Web.paths_extension_iff_widens": [
@@ -945,6 +933,172 @@
      "Becoming.Saturation.course_stops_by",
      "Becoming.Saturation.course_stops_iff",
      "Becoming.Saturation.wearing_stops"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "a-formations-couplings-as-its-blanket": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.BlanketCouplings.couplingLaw",
+     "Becoming.BlanketCouplings.startAt",
+     "Becoming.BlanketCouplings.clock",
+     "Becoming.BlanketCouplings.ownLevels",
+     "Becoming.BlanketCouplings.sensory_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.BlanketCouplings.blanket_iff_through",
+     "Becoming.BlanketCouplings.internal_through_couplings"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.BlanketCouplings.levelsAt",
+     "Becoming.BlanketCouplings.levelsStay",
+     "Becoming.BlanketCouplings.openLoop",
+     "Becoming.BlanketCouplings.open_external",
+     "Becoming.BlanketCouplings.open_levels",
+     "Becoming.BlanketCouplings.internal_selectsThrough"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.BlanketCouplings.ThresholdCase.value",
+     "Becoming.BlanketCouplings.ThresholdCase.lev",
+     "Becoming.BlanketCouplings.ThresholdCase.env",
+     "Becoming.BlanketCouplings.ThresholdCase.update",
+     "Becoming.BlanketCouplings.ThresholdCase.policy",
+     "Becoming.BlanketCouplings.ThresholdCase.band_congr",
+     "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
+     "Becoming.BlanketCouplings.ThresholdCase.values",
+     "Becoming.BlanketCouplings.ThresholdCase.corr",
+     "Becoming.BlanketCouplings.ThresholdCase.own_eq",
+     "Becoming.BlanketCouplings.ThresholdCase.threshold_case"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.BlanketCouplings.PartDependsOnlyOn",
+     "Becoming.BlanketCouplings.partDependsOnlyOn_id_iff",
+     "Becoming.BlanketCouplings.PartConsistentFamily",
+     "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff",
+     "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le",
+     "Becoming.BlanketCouplings.PartConsistentFamily.mono"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.BlanketCouplings.BlanketDetermined",
+     "Becoming.BlanketCouplings.BlanketConsistentFamily",
+     "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff",
+     "Becoming.BlanketCouplings.BlanketDetermined.of_le",
+     "Becoming.BlanketCouplings.BlanketConsistentFamily.mono",
+     "Becoming.BlanketCouplings.admitted_iff",
+     "Becoming.BlanketCouplings.BlanketDetermined.determined"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.BlanketCouplings.blanketed_determined",
+     "Becoming.BlanketCouplings.blanketed_step_alike",
+     "Becoming.BlanketCouplings.blanketed_courses_consistent"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.BlanketCouplings.parts_eq",
+     "Becoming.BlanketCouplings.pair_eq",
+     "Becoming.BlanketCouplings.unit_eq",
+     "Becoming.BlanketCouplings.agentReads",
+     "Becoming.BlanketCouplings.agentParts",
+     "Becoming.BlanketCouplings.worldReads",
+     "Becoming.BlanketCouplings.worldParts"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.BlanketCouplings.clocked",
+     "Becoming.BlanketCouplings.clocked_course",
+     "Becoming.BlanketCouplings.clocked_consistent",
+     "Becoming.BlanketCouplings.parting",
+     "Becoming.BlanketCouplings.clocked_witness",
+     "Becoming.BlanketCouplings.partingLate",
+     "Becoming.BlanketCouplings.clock_only_fails",
+     "Becoming.BlanketCouplings.shift",
+     "Becoming.BlanketCouplings.suffix",
+     "Becoming.BlanketCouplings.suffix_apply",
+     "Becoming.BlanketCouplings.suffix_zero",
+     "Becoming.BlanketCouplings.future",
+     "Becoming.BlanketCouplings.future_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.BlanketCouplings.readFamily",
+     "Becoming.BlanketCouplings.const_consistent",
+     "Becoming.BlanketCouplings.injective_consistent",
+     "Becoming.BlanketCouplings.whole",
+     "Becoming.BlanketCouplings.whole_iff",
+     "Becoming.BlanketCouplings.injective_converse_fails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.BlanketCouplings.ReadsExternal.Three",
+     "Becoming.BlanketCouplings.ReadsExternal.next",
+     "Becoming.BlanketCouplings.ReadsExternal.isFirst",
+     "Becoming.BlanketCouplings.ReadsExternal.step",
+     "Becoming.BlanketCouplings.ReadsExternal.start",
+     "Becoming.BlanketCouplings.ReadsExternal.run",
+     "Becoming.BlanketCouplings.ReadsExternal.internal_course",
+     "Becoming.BlanketCouplings.ReadsExternal.not_consistent",
+     "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
+     "Becoming.BlanketCouplings.ReadsExternal.whole_consistent"
     ],
     "master_laws": [],
     "grammar": false,
@@ -8579,17 +8733,6 @@
     ],
     "grammar": false,
     "dependence": "anchor, not reached",
-    "central": [
-     {
-      "declaration": "Becoming.Web.paths_comparison_widens",
-      "category": "master law",
-      "dependence": "anchor, not reached",
-      "master_laws": [
-       "order"
-      ],
-      "reason": "C's extension on paths, one direction, for every reading of living"
-     }
-    ],
     "stated_at_model": [
      {
       "of": "Becoming.Web.paths_comparison_widens",
@@ -34861,6 +35004,61 @@
     "dependence": "no master law"
    }
   ],
+  "premises-met-and-failed": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.TwoLines.other_center_outside",
+     "Becoming.ThirdThing.first_member_outside",
+     "Becoming.«续无外随网»",
+     "Becoming.«族无外随网»",
+     "Becoming.LineOfDescent.Last.converse_no_outside",
+     "Becoming.LineOfDescent.Endless.step_member_le",
+     "Becoming.LineOfDescent.Endless.converse_line_le",
+     "Becoming.LineOfDescent.Endless.converse_later_outside",
+     "Becoming.LineOfDescent.Endless.line_member_le",
+     "Becoming.LineOfDescent.Endless.later_outside",
+     "Becoming.LineOfDescent.Endless.converse_outside",
+     "Becoming.«逆缘续无外随网»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ReadsNoOrder",
+     "Becoming.ReadsNoOrder.not_entails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LiftModel.met_and_failed"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Weighting.WidensByOne",
+     "Becoming.Weighting.reach_of_beyond",
+     "Becoming.Weighting.widensOn_iff_reach",
+     "Becoming.Weighting.increasing_iff_by_one"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "premises-read-off-the-exchange": [
    {
     "law": 1,
@@ -43014,6 +43212,69 @@
     "dependence": "no master law"
    }
   ],
+  "self-concern-and-c-under-the-condition": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Weighting.exists_increasingInOwn_not_increasing",
+     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks",
+     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside",
+     "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside",
+     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
+     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
+     "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted"
+    ],
+    "master_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.admits_need",
+     "Becoming.Web.admits_nothing_from_of_listed",
+     "Becoming.Web.not_listsAdmitted_every",
+     "Becoming.Web.no_extension_of_listsAdmitted_every",
+     "Becoming.Web.extension_ranked_of_increasing",
+     "Becoming.Web.extension_ranked_of_increasingInOwn"
+    ],
+    "master_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.TwoLines.first_line_reaches_both",
+     "Becoming.TwoLines.first_line_reach_iff",
+     "Becoming.increasingInOwn_with_net",
+     "Becoming.increasingInOwn_with_net_converse"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "self-concern-through-dependence": [
    {
     "law": 1,
@@ -44686,6 +44947,84 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   }
+  ],
+  "standings-not-read-off-the-occurrence-model": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.UnreadStandings.total_scaled",
+     "Becoming.UnreadStandings.sum_eq_scaled",
+     "Becoming.World.atFinerUnit",
+     "Becoming.World.atFinerUnit_level",
+     "Becoming.World.atFinerUnit_taken",
+     "Becoming.World.atFinerUnit_given",
+     "Becoming.World.atFinerUnit_conserves",
+     "Becoming.World.atFinerUnit_balanced_iff"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.UnreadStandings.pos_scaled",
+     "Becoming.UnreadStandings.le_scaled",
+     "Becoming.UnreadStandings.lt_scaled",
+     "Becoming.World.standingOrder",
+     "Becoming.World.ModelRelations",
+     "Becoming.World.ModelRelations.Agree",
+     "Becoming.World.modelRelations",
+     "Becoming.World.atFinerUnit_agree",
+     "Becoming.World.identityOnOccurrences",
+     "Becoming.World.carried_of_same",
+     "Becoming.World.atFinerUnit_carried",
+     "Becoming.World.atFinerUnit_activityClass",
+     "Becoming.World.atFinerUnit_family",
+     "Becoming.World.atFinerUnit_begins",
+     "Becoming.World.atFinerUnit_ends"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.World.standing_not_read"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.UnreadStandings.eq_relabelled",
+     "Becoming.UnreadStandings.lt_relabelled",
+     "Becoming.UnreadStandings.pos_squared",
+     "Becoming.UnreadStandings.le_squared",
+     "Becoming.UnreadStandings.assoc_mul",
+     "Becoming.UnreadStandings.left_comm_mul",
+     "Becoming.UnreadStandings.factor_of_one",
+     "Becoming.World.stillAt",
+     "Becoming.World.standingAt_eq_stillAt",
+     "Becoming.World.stillAt_conserves",
+     "Becoming.World.stillAt_relabel_agree",
+     "Becoming.World.stillAt_squared_agree",
+     "Becoming.World.oneTwo",
+     "Becoming.World.oneTwo_not_scaled",
+     "Becoming.World.ratio_apart",
+     "Becoming.World.standing_not_read_up_to_unit"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    }
   ],
   "steps-met-again-after-a-fall": [
@@ -60944,7 +61283,7 @@
    "balance in its statement": 32,
    "amounts": 18,
    "at a represented model": 16,
-   "own carrier": 7,
+   "own carrier": 6,
    "at its model": 2,
    "free significance": 3,
    "unplaced": 0
@@ -60952,7 +61291,7 @@
   "groups": {
    "on the edge": 11,
    "below the grammar": 7,
-   "distances": 100,
+   "distances": 99,
    "unplaced": 0
   },
   "derived_by_forwarder": [],
@@ -61008,7 +61347,7 @@
    "own carrier": {
     "reaching the grammar": 0,
     "stated at a represented model": 0,
-    "stated on its own carrier only": 7,
+    "stated on its own carrier only": 6,
     "the rest": 0
    },
    "at its model": {
@@ -61059,7 +61398,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "73a30f70be7acea8cb3d058ee64e1c014f33ee8532371af14368a8ef911837cf",
+   "modules_sha256": "2fa0186942121c25f38876997f63c707ca23f6f500a53ea4c1d015ba7ae2b1b2",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },
@@ -63169,28 +63508,6 @@
       "models": [
        "own",
        "occurrence"
-      ]
-     }
-    ],
-    "grammar_laws_reached": [],
-    "balance": {
-     "anchor_in_statement": [],
-     "written_out": false,
-     "proof_only": []
-    }
-   },
-   "Becoming.Web.paths_comparison_widens": {
-    "label": "own carrier",
-    "placed": "the rule",
-    "rule": "own carrier",
-    "f5": "stated on its own carrier only",
-    "at_model": [
-     {
-      "record": "comparison-by-widening",
-      "law": 10,
-      "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
-      "models": [
-       "own"
       ]
      }
     ],

@@ -17,7 +17,7 @@
 
 ## Standings on the edge
 
-**Counts** of the 118 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 7; distances 100 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 7, at its model 2, free significance 3); unplaced 0.
+**Counts** of the 117 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 7; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
 
 - **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 - **For order**, C, calling widening better: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows that no statement reading only the dynamics entails Comparison with "better" free; Comparison leaves "better" free as Unrestricted leaves significance free.
@@ -140,7 +140,6 @@
 - `Becoming.Ideals.verifiableBy_iff_interior`: own carrier (by the rule).
 - `Becoming.Learning.Training.unselected_beyond_data`: own carrier (by the rule).
 - `Becoming.Valuation.significant_iff_held`: own carrier (by the rule).
-- `Becoming.Web.paths_comparison_widens`: own carrier (by the rule).
 - `Becoming.Web.paths_extension_iff_widens`: own carrier (by the rule).
 - `Becoming.Weighting.widens_iff_every_positive`: own carrier (by the rule).
 - `Becoming.Direction.extension_iff_widens`: at its model (a reading; the rule gives unplaced).
@@ -219,6 +218,7 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 
 - 31 October 2026, board item U4 (study section 479): added, each central declaration's standing on the edge of one root, carried by MV's boundary field, with Becoming.RootForms' two root forms as its laws; reviewed independently before landing.
 - 1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).
+- 1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.
 
 </details>
 

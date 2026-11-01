@@ -1,0 +1,435 @@
+{
+  "about": "DU's three records, their prose fields (AI-written, 1 November 2026, from the leaves as revised at their third look, REVIEW-LEAF-2.md and scratch/units/REVIEW.md). The landing script make_record_du.py adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with declarations, proof_bindings bound to the landing's core receipt, history) and the counts read from the receipt. Each law's declarations are the leaf's, in source order within the law; every declaration of a leaf stands in exactly one law of its records.",
+  "records": [
+    {
+      "id": "premises-met-and-failed",
+      "module": "Becoming.PremiseWitnesses",
+      "home": "08 §7, after one-root-to-its-edge (Standings on the edge), before Known results",
+      "region": "method",
+      "base": "grammar",
+      "family": "F01",
+      "title": {
+        "en": "Premises met and failed: the condition on the root, C and L",
+        "zh": "前提之成与不成：根上之条件、C 与 L"
+      },
+      "statement": {
+        "en": "The condition on the root holds on one net and fails on another, along the net, in families and along its converse. A statement reading no order fails wherever it entails C on a frame with an extension. Lifting holds of one pair of moves, not the reverse. Widening on a listing chains one-item steps.",
+        "zh": "根上之条件于一网成、于他网不成，沿网、于族、沿其逆皆然。不读次序之陈述，凡于有扩展之框上蕴含 C 处皆不成。提升于一对动成，于其逆不成。列表上之扩大，即逐一项扩大之链。"
+      },
+      "laws": [
+        {
+          "en": "At the one, the endless line of descent meets the condition along the net from its first birth, and fails it from every later member; two family lines with nothing between them fail it from the first family's first birth. In families the line meets it and a third thing apart from two joined families fails it. Along the converse, descent that ends meets it from its last occurrence, the endless line from no center.",
+          "zh": "于一，无尽传承之线自其初生沿网满足此条件，自每一后来之员则不满足；其间无条件之二族线自第一族之初生不满足之。于族，此线满足之，而离二相连之族之第三者不满足之。沿其逆，有终之传承自其末出现满足之，无尽之线自无一中心满足之。",
+          "declarations": [
+            "Becoming.TwoLines.other_center_outside",
+            "Becoming.ThirdThing.first_member_outside",
+            "Becoming.«续无外随网»",
+            "Becoming.«族无外随网»",
+            "Becoming.LineOfDescent.Last.converse_no_outside",
+            "Becoming.LineOfDescent.Endless.step_member_le",
+            "Becoming.LineOfDescent.Endless.converse_line_le",
+            "Becoming.LineOfDescent.Endless.converse_later_outside",
+            "Becoming.LineOfDescent.Endless.line_member_le",
+            "Becoming.LineOfDescent.Endless.later_outside",
+            "Becoming.LineOfDescent.Endless.converse_outside",
+            "Becoming.«逆缘续无外随网»"
+          ]
+        },
+        {
+          "en": "A statement about some data and an order reads no order where its truth does not change with the order. If such a statement entails C at a datum on a frame with an extension, it fails at that datum for every order: holding at one, it would hold at the order relating nothing, where C fails at the extension. Immediate, since \"better\" is free.",
+          "zh": "关于某资料与一次序之陈述，其真不随次序变者，为不读次序。此陈述若于有扩展之框上于一资料处蕴含 C，则于该资料处对每一次序皆不成：若于一次序成，则于无所关之次序亦成，而 C 于该扩展处不成。直接可得，因「更好」为自由。",
+          "declarations": [
+            "Becoming.ReadsNoOrder",
+            "Becoming.ReadsNoOrder.not_entails"
+          ]
+        },
+        {
+          "en": "On LiftModel's frame, from configuration 0, the move reaching 3 is lifted above the move reaching 1 by the larger configuration, and the move reaching 1 is not lifted above it.",
+          "zh": "于 LiftModel 之框，自构型 0，至 3 之动依较大之构型被提升于至 1 之动之上，而至 1 之动不被提升于其上。",
+          "declarations": [
+            "Becoming.LiftModel.met_and_failed"
+          ]
+        },
+        {
+          "en": "With equality of items decided, one course widens another on a listing exactly when a chain of widenings, each by one listed item alone, leads from the second up to the first. So an order transitive on courses is increasing in admission exactly when it ranks every widening by one item above what it widens.",
+          "zh": "项之相等可判定，则列表上一进程扩大另一进程，恰当自后者至前者有一扩大之链，每步唯以一所列之项扩大。故于进程上可传递之次序，恰当其把每一以一项之扩大排于其所扩大者之上时，于接纳上递增。",
+          "declarations": [
+            "Becoming.Weighting.WidensByOne",
+            "Becoming.Weighting.reach_of_beyond",
+            "Becoming.Weighting.widensOn_iff_reach",
+            "Becoming.Weighting.increasing_iff_by_one"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "en": "No premise beyond each net's own: the nets are the supplied models of the line of descent (Becoming.GrammarScope), two family lines and a third thing (Becoming.GrammarCases), each read at the one or the class stated, with the center stated.",
+          "zh": "除各网所带者外不加前提：诸网为传承之线（Becoming.GrammarScope）、二族线与第三者（Becoming.GrammarCases）之所予模型，各于一或所述之类读之，中心如所述。"
+        },
+        {
+          "en": "For C: a frame with an extension, a statement about some data and an order, and the order free, as C (Comparison) leaves \"better\" free. For L: LiftModel's frame and its order by the larger configuration.",
+          "zh": "就 C：有扩展之框、关于某资料与一次序之陈述，次序自由，如 C（Comparison）令「更好」自由。就 L：LiftModel 之框及其依较大构型之次序。"
+        },
+        {
+          "en": "For widening: a finite listing, two-valued admission, decided equality of items (a modelling assumption); for the item-by-item reading, an order transitive on courses.",
+          "zh": "就扩大：有限之列表、二值之接纳、项之相等可判定（建模之假设）；就逐项之读，于进程上可传递之次序。"
+        }
+      ],
+      "does_not_show": [
+        {
+          "en": "That the condition on the root holds of any actual net, or of a net beyond these witnesses.",
+          "zh": "根上之条件于任一实际之网成立，或于此等见证之外之网成立。",
+          "kind": "non-implication"
+        },
+        {
+          "en": "That C or L is warranted or unwarranted: a frame fixes no order, and meeting and failing say what each asks of an order.",
+          "zh": "C 或 L 有据或无据：框不定次序，成与不成只言其对次序之所求。",
+          "kind": "non-implication"
+        },
+        {
+          "en": "That no statement reading the dynamics entails the free condition: that is ReadsOnlyDynamics.not_entails, for the condition's free form.",
+          "zh": "无读动力之陈述蕴含自由之条件：此为 ReadsOnlyDynamics.not_entails，就条件之自由形。",
+          "kind": "scope"
+        },
+        {
+          "en": "Widening over an infinite listing, or with equality of items undecided.",
+          "zh": "无穷列表上之扩大，或项之相等未判定者。",
+          "kind": "scope"
+        }
+      ],
+      "validation_scope_draft": {
+        "en": "Pure core, every axiom report empty: PremiseWitnesses imports GrammarCases, Lifting and EventualWideningInstances, a leaf nothing imports. Most witnesses are models the package already had (GrammarScope's line of descent, GrammarCases' nets, LiftModel); the leaf states the pairs. The non-entailment of C is immediate and labelled so. Two independent AI reviews of the leaf and a third look, every finding taken.",
+        "zh": "纯核，公理报告皆空：PremiseWitnesses 引 GrammarCases、Lifting 与 EventualWideningInstances，为无引之者之叶。多数见证为本包已有之模型（GrammarScope 之传承线、GrammarCases 之诸网、LiftModel）；此叶陈其成对。C 之不被蕴含为直接可得，并如此标明。此叶经二独立之 AI 审阅与第三次复读，所见皆取。"
+      },
+      "next_delta": {
+        "en": "The premise card's J1–J4 read as a rule of choosing on definitions, with a rival rule as its witness; the witnesses moved beside the models they use at those modules' next change; review by a person.",
+        "zh": "前提卡之 J1–J4 读为依定义选择之规则，以对立之规则为见证；诸见证于其模块下次变更时移至所用模型旁；人之审查。"
+      },
+      "correspondence": {
+        "en": "Meeting and failing a premise in models is the standard way to show it independent of the rest, here of the root's laws: a law holding of every net cannot settle a statement true on one net and false on another. The non-entailment of C follows ReadsOnlyDynamics.not_entails for the condition, with the order in the place of the significance.",
+        "zh": "以模型示一前提之成与不成，为示其独立于其余之常法，此处独立于根之律：于每网皆成之律，不能定一于此网真、于彼网假之陈述。C 之不被蕴含，依 ReadsOnlyDynamics.not_entails 于条件之例，以次序代意义。"
+      },
+      "dependencies_draft": [
+        {
+          "id": "the-continuation-condition-on-the-root",
+          "relation": "formal-reuse",
+          "detail_en": "«续无外», «族无外», «续无外则族无外» and LineOfDescent's models, with LineOfDescent.Endless.descent_no_outside, which the first pair takes as its meeting witness."
+        },
+        {
+          "id": "the-source-texts-test-systems",
+          "relation": "formal-reuse",
+          "detail_en": "TwoLines and ThirdThing, with TwoLines.other_line_outside and ThirdThing.fixed_class, which give the failing witnesses."
+        },
+        {
+          "id": "becoming-spine-instances",
+          "relation": "formal-reuse",
+          "detail_en": "LiftModel's frame and LiftModel.lift_needs_live_middle, whose last part is L's failure here."
+        },
+        {
+          "id": "a-narrowing-above-its-widening",
+          "relation": "formal-reuse",
+          "detail_en": "Weighting.WidensBy and Weighting.widensOn_of_widensBy, a widening by one item alone being a widening."
+        }
+      ],
+      "related_draft": [
+        {
+          "id": "one-root-to-its-edge",
+          "detail_en": "The edge of one root lists the ethics' two premises apart, the condition for scope and C for order; this record gives the condition's root form and C their witnesses."
+        },
+        {
+          "id": "what-the-dynamics-leave-open",
+          "detail_en": "The pattern of the non-entailment: ReadsOnlyDynamics.not_entails for the condition, here with the order in the place of the significance."
+        }
+      ]
+    },
+    {
+      "id": "self-concern-and-c-under-the-condition",
+      "module": "Becoming.PremiseWitnesses",
+      "home": "07 §4, at scope and order, before 4.1",
+      "region": "significance",
+      "base": "grammar",
+      "family": "F07",
+      "title": {
+        "en": "Self-concern and C under the condition",
+        "zh": "条件之下之自关切与 C"
+      },
+      "statement": {
+        "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: as a center's reach, where the root's condition holds; held de se, where the continuation condition does. There, admission decided, it ranks extensions between listed paths, one way.",
+        "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合：于自中心之所及，即根上之条件成立处；于自承，即延续条件成立处。彼成立且接纳可判定处，自关切把二所列层径间之每一扩展皆排定。"
+      },
+      "laws": [
+        {
+          "en": "On a listing, every order is increasing in its own continuation exactly when it is increasing in admission if and only if the marking marks every listed item: a listed item left unmarked gives a self-concerned order not increasing in admission. Read from standpoints, for any relation the markings read, the two coincide everywhere exactly where it holds of every standpoint and item.",
+          "zh": "于一列表，每一次序于其自身延续上递增恰当其于接纳上递增，当且仅当标记标出每一所列之项：一所列而未标之项，给出一自关切而不于接纳上递增之次序。自诸立场读，对标记所读之任一关系，二者处处相合，恰当此关系于每一立场与项皆成。",
+          "declarations": [
+            "Becoming.Weighting.exists_increasingInOwn_not_increasing",
+            "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks",
+            "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all"
+          ]
+        },
+        {
+          "en": "With each marking reading what the line under a class from the standpoint's center reaches along a relation, the two coincide everywhere exactly where the condition on the root holds; with it reading the center's closure along a relation, exactly where the condition held de se does. Near-definitional: the schema above at those readings. One half each: where it holds they coincide; an item outside parts them.",
+          "zh": "各标记读自立场之中心于一类下沿一关系之线所及者，则二者处处相合，恰当根上之条件成立；读中心沿一关系之闭包，则恰当自承之延续条件成立。近乎定义：即上之模式于此等读法。各半：条件成立处二者相合；一在外之项使之分。",
+          "declarations": [
+            "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside",
+            "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside",
+            "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
+            "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
+            "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted"
+          ]
+        },
+        {
+          "en": "With admission decided and what two level paths admit listed, an order increasing in admission ranks every extension between them, every claim counted as living; where the de se condition holds, so does an order increasing in the own continuation, each item marked by its formation. Listed paths admit nothing from some step on, and once there is a formation no list holds what every level path admits.",
+          "zh": "接纳可判定，且二层径所接纳者已列，则于接纳上递增之次序把其间每一扩展皆排定，每一主张皆计为活；自承之条件成立处，于自身延续上递增之次序亦然，每项以其构成标之。所列之径自某步起无所接纳；一有构成，即无一列表含每一层径之所接纳。",
+          "declarations": [
+            "Becoming.Web.admits_need",
+            "Becoming.Web.admits_nothing_from_of_listed",
+            "Becoming.Web.not_listsAdmitted_every",
+            "Becoming.Web.no_extension_of_listsAdmitted_every",
+            "Becoming.Web.extension_ranked_of_increasing",
+            "Becoming.Web.extension_ranked_of_increasingInOwn"
+          ]
+        },
+        {
+          "en": "Along the net, self-concern and being increasing in admission coincide on the endless line of descent and part on two family lines with no condition between them, whose first birth reaches exactly its own family; along the net's converse they coincide in descent that ends and part on the endless line from every center.",
+          "zh": "沿网，自关切与于接纳上递增于无尽传承之线相合，于其间无条件之二族线相分，其初生所及恰为己族；沿网之逆，于有终之传承相合，于无尽之线自每一中心相分。",
+          "declarations": [
+            "Becoming.TwoLines.first_line_reaches_both",
+            "Becoming.TwoLines.first_line_reach_iff",
+            "Becoming.increasingInOwn_with_net",
+            "Becoming.increasingInOwn_with_net_converse"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "en": "No axiom. A finite listing; two-valued admission; an order a relation on courses, not assumed complete or transitive; each standpoint's marking supplied, read as each law states (where a law uses one half of a reading, only that half).",
+          "zh": "不加公理。有限之列表；二值之接纳；次序为进程上之关系，不设其完备或可传递；各立场之标记为所予，依各律所述读之（律只用读法之一半者，只此一半）。"
+        },
+        {
+          "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses: neither is asserted, and the condition varies with the net, the class and the direction.",
+          "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：皆不被断言，且条件随网、类与方向而变。"
+        },
+        {
+          "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
+          "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
+        },
+        {
+          "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. C still alone orders in general; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
+          "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。一般而言仍唯 C 定序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
+        }
+      ],
+      "does_not_show": [
+        {
+          "en": "That C follows from self-concern on all of a web's level paths: the link holds between two listed paths, courses whose admissions end.",
+          "zh": "C 于网之全部层径上自自关切得出：此联系唯于二所列之径间成立，即其接纳有终之进程。",
+          "kind": "scope",
+          "witness": "Becoming.Web.not_listsAdmitted_every"
+        },
+        {
+          "en": "The converse, that C on level paths makes an order increasing in admission on a listing: a course on a listing need not be what any level path admits.",
+          "zh": "其逆：层径上之 C 使列表上之次序于接纳上递增；列表上之进程未必为任一层径之所接纳。",
+          "kind": "converse"
+        },
+        {
+          "en": "That self-concern fails to rank an extension on a web where the condition fails: that half is proved on listings only.",
+          "zh": "条件不成处，自关切于网上不能排定一扩展：此半唯于列表上证之。",
+          "kind": "scope"
+        },
+        {
+          "en": "Any property of reach: the joins to the root are near-definitional, and locate where the two coincide.",
+          "zh": "所及之任一性质：与根之相接近乎定义，只指出二者相合之处。",
+          "kind": "non-implication"
+        },
+        {
+          "en": "That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C's warrant is open.",
+          "zh": "条件成立、自关切有据，或 C 被推出：条件与 C 仍为伦理之前提，自关切为假设；C 之依据仍开放。",
+          "kind": "non-implication"
+        }
+      ],
+      "validation_scope_draft": {
+        "en": "Pure core, every axiom report empty: the laws are in Becoming.PremiseWitnesses, a leaf importing GrammarCases, Lifting and EventualWideningInstances. The joins to the root compose withinClosure_iff_reached and ownClosure_unrestricted_iff_noOutside; the ranking composes Web.paths_extension_iff_widens and Web.widens_iff_every_weighting. Two AI reviews and a third look, every finding taken.",
+        "zh": "纯核，公理报告皆空：诸律在 Becoming.PremiseWitnesses，引 GrammarCases、Lifting 与 EventualWideningInstances 之叶。与根之相接合成 withinClosure_iff_reached 与 ownClosure_unrestricted_iff_noOutside；排序经 paths_extension_iff_widens 等。"
+      },
+      "next_delta": {
+        "en": "The other half on webs, where level paths admit the witness's courses; a bridge at a finite horizon for courses that admit something at every step; review by a person.",
+        "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
+      },
+      "correspondence": {
+        "en": "Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so there self-concern gives what C asks between listed level paths, one way; on all of a web's level paths it gives nothing this way. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+        "zh": "自关切为于自身延续所标者上递增之次序；于接纳上递增为帕累托式之单调，单向给出 C 于所列层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切单向给出 C 于所列层径间之所求；于网之全部层径上，此路不给出任何东西。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+      },
+      "dependencies_draft": [
+        {
+          "id": "what-self-concern-alone-ranks",
+          "relation": "formal-reuse",
+          "detail_en": "Weighting.IncreasingInOwn, Weighting.AddsOwn and Weighting.increasingInOwn_iff_increasing, whose converse this record proves."
+        },
+        {
+          "id": "the-continuation-condition-on-the-root",
+          "relation": "formal-reuse",
+          "detail_en": "«续无外», withinClosure_iff_reached, ownClosure_unrestricted_iff_noOutside and ownClosure_unrestricted_iff, and the line of descent's models."
+        },
+        {
+          "id": "comparison-by-widening",
+          "relation": "formal-reuse",
+          "detail_en": "Web.paths_extension_iff_widens, an extension on a web's level paths a widening of what is admitted."
+        },
+        {
+          "id": "eventual-widening",
+          "relation": "formal-reuse",
+          "detail_en": "Web.ListsAdmitted, Web.DecidesAdmission, Web.stepBound and Web.lt_stepBound, with Web.widens_iff_every_weighting."
+        }
+      ],
+      "related_draft": [
+        {
+          "id": "premises-met-and-failed",
+          "detail_en": "The nets on which the condition on the root holds and fails, which the fourth law reads for self-concern."
+        },
+        {
+          "id": "widening-as-what-every-weighting-ranks",
+          "detail_en": "Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths."
+        }
+      ]
+    },
+    {
+      "id": "standings-not-read-off-the-occurrence-model",
+      "module": "Becoming.UnreadStandings",
+      "home": "01 §8.6, after amounts-by-unit-matchings",
+      "region": "root",
+      "base": "grammar",
+      "family": "F01",
+      "title": {
+        "en": "Standings not read off the occurrence model, even up to a unit",
+        "zh": "立度不由出现模型读出，虽至一单位亦然"
+      },
+      "statement": {
+        "en": "For k > 1, a world counted in a unit k times finer balances where it does and agrees on the occurrence model's selected relations, so no reading of them returns a positive standing in both. In still worlds relabellings keeping sign and order keep them: none gives all worlds' standings up to a unit.",
+        "zh": "于 k > 1，以细 k 倍之单位所计之世界恰于原世界平衡处平衡，且于出现模型所选之关系皆与之一致，故无对此等关系之读法于二者皆返一为正之立度。于静止之世界，保号保序之每一重标皆保之，故无读法返每一世界之立度，虽至一单位亦然。"
+      },
+      "laws": [
+        {
+          "en": "For 0 < k, the world counted in a unit k times finer has k times every standing, need, take and give of the world and the same relata, activity, requirements, drawing and presence; conservation across a step is the same relation, so it balances exactly where the world does.",
+          "zh": "于 0 < k，以细 k 倍之单位所计之世界，其每一立度、所需、所取与所予皆为原世界之 k 倍，关系项、活动、所要求、汲取与在场皆同；跨步之守恒为同一关系，故其恰于原世界平衡处平衡。",
+          "declarations": [
+            "Becoming.UnreadStandings.total_scaled",
+            "Becoming.UnreadStandings.sum_eq_scaled",
+            "Becoming.World.atFinerUnit",
+            "Becoming.World.atFinerUnit_level",
+            "Becoming.World.atFinerUnit_taken",
+            "Becoming.World.atFinerUnit_given",
+            "Becoming.World.atFinerUnit_conserves",
+            "Becoming.World.atFinerUnit_balanced_iff"
+          ]
+        },
+        {
+          "en": "For 0 < k, nine of the ten relations the occurrence model selects, all but the same-step class, with falling and the order of standings added, agree pointwise at the finer unit, each carried by the identity correspondence; so the continuation family, beginning and ending under conservation and the class of activity read alike.",
+          "zh": "于 0 < k，出现模型所选十关系之九（同步之类除外），加以下降与立度之序，于较细之单位逐点一致，各由恒等之对应所承；故于守恒与活动之类下，延续之族、生与亡读之皆同。",
+          "declarations": [
+            "Becoming.UnreadStandings.pos_scaled",
+            "Becoming.UnreadStandings.le_scaled",
+            "Becoming.UnreadStandings.lt_scaled",
+            "Becoming.World.standingOrder",
+            "Becoming.World.ModelRelations",
+            "Becoming.World.ModelRelations.Agree",
+            "Becoming.World.modelRelations",
+            "Becoming.World.atFinerUnit_agree",
+            "Becoming.World.identityOnOccurrences",
+            "Becoming.World.carried_of_same",
+            "Becoming.World.atFinerUnit_carried",
+            "Becoming.World.atFinerUnit_activityClass",
+            "Becoming.World.atFinerUnit_family",
+            "Becoming.World.atFinerUnit_begins",
+            "Becoming.World.atFinerUnit_ends"
+          ]
+        },
+        {
+          "en": "No reading of those relations that keeps pointwise agreement returns, at an occurrence of positive standing of any world, the standing both in the world and in the world counted in a unit k times finer, for 0 < k and k ≠ 1.",
+          "zh": "对此等关系之读法，凡保逐点之一致者，于任一世界立度为正之出现处，皆不能于原世界与以细 k 倍之单位所计之世界二者皆返其立度，于 0 < k 且 k ≠ 1。",
+          "declarations": [
+            "Becoming.World.standing_not_read"
+          ]
+        },
+        {
+          "en": "In a still world every relabelling of the standings keeping sign and order keeps every such relation, squaring among them; standings 1, 2 and 1, 4 on two relata agree with no common factor; so no reading keeping agreement has, for every world, positive whole factors p and q with q times every standing equal to p times what it reads.",
+          "zh": "于静止之世界，保号保序之每一立度重标皆保每一此等关系，平方为其一；二关系项上立度 1、2 与 1、4 一致而无公因子；故无保一致之读法，对每一世界皆有正整因子 p 与 q，使 q 乘每一立度等于 p 乘其所读。",
+          "declarations": [
+            "Becoming.UnreadStandings.eq_relabelled",
+            "Becoming.UnreadStandings.lt_relabelled",
+            "Becoming.UnreadStandings.pos_squared",
+            "Becoming.UnreadStandings.le_squared",
+            "Becoming.UnreadStandings.assoc_mul",
+            "Becoming.UnreadStandings.left_comm_mul",
+            "Becoming.UnreadStandings.factor_of_one",
+            "Becoming.World.stillAt",
+            "Becoming.World.standingAt_eq_stillAt",
+            "Becoming.World.stillAt_conserves",
+            "Becoming.World.stillAt_relabel_agree",
+            "Becoming.World.stillAt_squared_agree",
+            "Becoming.World.oneTwo",
+            "Becoming.World.oneTwo_not_scaled",
+            "Becoming.World.ratio_apart",
+            "Becoming.World.standing_not_read_up_to_unit"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "en": "Natural-number amounts; one common factor k for every amount of a world at every step; discrete steps; the occurrence model and its selection as Becoming.WorldRepresentation fixes them, with falling and the order of standings added; for the relabelling, still worlds only.",
+          "zh": "自然数之数量；一世界于每步之每一数量共一因子 k；离散之步；出现模型及其所选如 Becoming.WorldRepresentation 所定，加以下降与立度之序；就重标，唯静止之世界。"
+        },
+        {
+          "en": "A reading is any map from a world's model relations to a number at each occurrence, the same wherever two readings of the relations agree pointwise; the factors p and q may be chosen world by world.",
+          "zh": "读法为自一世界之模型关系至每一出现处一数之任一映射，凡二关系之读逐点一致处皆同；因子 p 与 q 可逐世界而择。"
+        }
+      ],
+      "does_not_show": [
+        {
+          "en": "What conservation's equation fixes of the standings in worlds with exchange: a reading up to a unit there, or on any class without the two still worlds, is not ruled out.",
+          "zh": "于有交换之世界，守恒之方程定立度至何程度：于彼处，或于无此二静止世界之任一类，至一单位之读法未被排除。",
+          "kind": "scope"
+        },
+        {
+          "en": "Relations that read a value or a difference of amounts, such as \"standing is n\", which a re-identification carries and which read the count.",
+          "zh": "读数量之值或其差之关系，如「立度为 n」，其为重新认同所承且读出计数者。",
+          "kind": "scope"
+        },
+        {
+          "en": "Every relation a World carries, the grammar root itself, another model of the World, or a unit that changes from step to step.",
+          "zh": "世界所承之每一关系、文法之根本身、世界之他模型，或逐步而变之单位。",
+          "kind": "scope"
+        },
+        {
+          "en": "A root in which unit occurrences and their residence are fixed by relations independent of the counts.",
+          "zh": "一根，其中单位之出现及其驻留由独立于计数之关系所定。",
+          "kind": "non-implication"
+        }
+      ],
+      "validation_scope_draft": {
+        "en": "Pure core, every axiom report empty: UnreadStandings imports WorldRepresentation, a leaf nothing imports. Its multiplication lemmas are proved in the module because Init's Nat.mul_assoc and Nat.mul_left_comm report propext. An independent AI review of the leaf, every finding taken.",
+        "zh": "纯核，公理报告皆空：UnreadStandings 引 WorldRepresentation，为无引之者之叶。其乘法引理于本模块中证之，因 Init 之 Nat.mul_assoc 与 Nat.mul_left_comm 报 propext。此叶经一独立之 AI 审阅，所见皆取。"
+      },
+      "next_delta": {
+        "en": "What conservation's equation fixes of the standings in worlds with exchange, up to a unit or to what else; review by a person.",
+        "zh": "于有交换之世界，守恒之方程定立度至一单位或至他何；人之审查。"
+      },
+      "correspondence": {
+        "en": "That a selection of relations reading amounts only through sign, comparison in one unit and a homogeneous linear equation cannot fix the unit is the familiar fact that such measurement is at best of ratio scale; in still worlds the selection reads only order and sign, an ordinal scale, so not even the ratio is fixed.",
+        "zh": "仅经正负、一单位内之比较与齐次线性方程读数量之关系选择，不能定单位，为熟知之事：此等度量至多为比例尺度；于静止之世界，所选只读序与号，为序数尺度，故比例亦不定。"
+      },
+      "dependencies_draft": [
+        {
+          "id": "the-world-represented-both-ways",
+          "relation": "formal-reuse",
+          "detail_en": "The occurrence model (World.conservationStep, Web.partialIdentity, World.withinStep), F1's worlds (World.standingAt, Witnesses.unrequired, Flow.still) and Becoming.GrammarTransport's keeping theorems («对应之像», «同族之对应», «生之对应», «亡之对应»)."
+        }
+      ],
+      "related_draft": [
+        {
+          "id": "amounts-by-unit-matchings",
+          "detail_en": "Balance by selected unit matchings: what amounts have in place of a derivation; this record states what the occurrence model leaves free in them."
+        }
+      ]
+    }
+  ]
+}

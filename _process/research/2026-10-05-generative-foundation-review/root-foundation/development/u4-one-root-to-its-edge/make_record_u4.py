@@ -318,7 +318,13 @@ LABELS = ['derived', 'under a stated hypothesis', 'counting', 'connected', 'witn
 def counts():
     placed = {e['declaration'].removeprefix('Becoming.'): e['standing'] for e in STANDINGS}
     c = dict.fromkeys(LABELS, 0)
+    # DU (1 November 2026): only the declarations COVERAGE.json still lists as central, as the boundary
+    # report counts them (Web.paths_comparison_widens left the significance row).
+    central = {d.removeprefix('Becoming.') for row in json.loads((ROOT / 'theories/becoming/results/'
+               'completion/COVERAGE.json').read_text(encoding='utf-8'))['rows'] for d in row['declarations']}
     for d, row in TABLE.items():
+        if d not in central:
+            continue
         c[placed.get(d) or row['rule_would_give'] or row['standing']] += 1
     return c
 
@@ -361,9 +367,17 @@ def home(c):
             'rests on two premises with two roles, listed apart: the continuation condition (`Unrestricted`) for '
             'scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and '
             'holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C '
-            '(`Comparison`) for order, with no such theorem. Neither stands on the edge: the condition\'s not-entailed '
-            'theorem concerns its free form, which chapter 7 keeps off the root, and its root form at the own-closure '
-            'reading, `«续无外»`, has none; C has neither. `master_laws.py` checks on the core run what the Lean can '
+            '(`Comparison`) for order, which no statement reading no order entails at a datum where it holds, on a '
+            'frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free). Neither stands '
+            'on the edge. The condition\'s not-entailed theorem concerns its free form, which chapter 7 keeps off the '
+            'root. Its root form at the own-closure reading, `«续无外»`, varies with the net: the endless line of '
+            'descent meets it, and two family lines with no condition between them fail it (`«续无外随网»`, and '
+            '`«族无外随网»` in families), so no law that holds of every net settles it. Where the condition held de se '
+            'holds and admission is decided, a self-concerned order ranks every extension between two level paths whose '
+            'admissions are listed, as C asks there, one way and only for paths whose admissions end '
+            '(`Web.extension_ranked_of_increasingInOwn`); '
+            'elsewhere C alone orders ([premises](#r-premises-met-and-failed)). `master_laws.py` checks on the core '
+            'run what the Lean can '
             'show of each entry (the derived entries by D1 to D6, the entry under a stated hypothesis by the Lean '
             'check, the premises by Q1, readings of computed labels against the rule); the other readings and the '
             'case of each derived row rest on the review '

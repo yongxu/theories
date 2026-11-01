@@ -92,7 +92,7 @@ A tail criterion in inclusion form: a criterion reading only tails is a dictator
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Comparing two courses on what they admit: widening with a lag decides the lag, as does a tail order, and widening with a lag and eventual widening rank a pair oppositely.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 
-**Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources

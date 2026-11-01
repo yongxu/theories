@@ -268,7 +268,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "58aa6c084599e919d8af592674567d56c0bef79edd36b76377ff3126e5d609a6",
+      "sha256": "85f8a7374841c786f6a66f84db0a3de0cd6a3378762fbd28deb25ce2d6d4dac0",
       "declarations": []
     },
     {
@@ -307,6 +307,10 @@
     {
       "en": "1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).",
       "zh": "2026年11月1日，工作板条目 U4b（研究第 483 节）：SelectionLevels.rises_exact_iff_levels 由量移至计数。其陈述不言动力，于其所量化之任一载体、列表、映射与参数皆成立，如 SelectionTerm.covariation、SelectionLevels.levels_sized 与 Drift.falls_back。SelectionTerm.Flow.support_not_lower、SelectionTerm.Flow.support_moved_rises 与 GroupEnding.Flow.rises_iff_inactive 仍在量：以门与传为假设，且约束任一性状之值；其理据依此线重写（COUNTING-AND-AMOUNTS.md，经 REVIEW-U4B.md 审阅）。"
+    },
+    {
+      "en": "1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.",
+      "zh": "2026年11月1日，工作板条目 DU：家节言伦理二前提之句，今名 ReadsNoOrder.not_entails（不读次序之陈述唯于其不成处蕴含 C，直接可得）、«续无外随网»（条件之根形随网而变）与 Web.extension_ranked_of_increasingInOwn（自关切单向给出 C 于二所列且接纳有终之层径间之所求处）；Web.paths_comparison_widens 离 COVERAGE 之意义行，故家节少计一在其自身载体上之声明。所立与前提之条目不变。"
     }
   ],
   "boundary": {

@@ -38,7 +38,7 @@
 ## Does not show
 
 - Densities, the Helmholtz decomposition, nonequilibrium steady states, or that statistical and dynamical blankets coincide.
-- A World formation in general as the agent of a blanketed law: the join is proved for the witness only.
+- A formation's own record as the internal part of a blanketed law: for any formation the agent is a model fed by what couples in (a-formations-couplings-as-its-blanket).
 - Any free energy, or that a threshold-reading policy cannot draw on a larger supply.
 - That the principle is wrong: no sentence of its literature is forbidden here.
 - **Counterexample:** From a supply of three and of four or more, with any model and policy, the internal courses agree up to step four and at step five the first has ended (ThresholdDrain.any_model). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
@@ -56,7 +56,7 @@ Canonical source: [Blanket.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A World formation in general as the agent of a blanketed law, its sensory course its own course; the threshold-reading policy unable to draw on a larger supply; review by a person.
+A formation's own record as the internal part of a blanketed law; the threshold-reading policy unable to draw on a larger supply; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -73,8 +73,9 @@ The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, 
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). The free-energy principle's blanket and existence claim, stated in the same module.
 - related, not a proved adapter: [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md). The blanket at a steady state: the statistical form, conditional independence given the blanket, which detailed balance of the internal moves gives with positive weights, moves present at every external state and rate ratios reading none; the coupling form holds on every run.
 - related, not a proved adapter: [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md). The linear case: the Euler step of a sparsely coupled drift as a blanketed law, with noise, and the synchronous scheme against the statistical form.
+- related, not a proved adapter: [a-formations-couplings-as-its-blanket](a-formations-couplings-as-its-blanket.md). A formation's couplings as its blanket, any model fed by them the agent by construction, the witness's join its case; and when a blanket's existence constrains.
 
-**Used by:** [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
+**Used by:** [a-formations-couplings-as-its-blanket](a-formations-couplings-as-its-blanket.md) · [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +99,7 @@ Aliases: `The Markov blanket as a coupling structure`, `马尔可夫毯作为耦
 
 - 29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.
 - 1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.
+- 1 November 2026, board item UE27 (study section 488): the World formation in general, not shown, narrowed to a formation's own record as the internal part, any model fed by a formation's couplings being the agent of a blanketed law by construction (a-formations-couplings-as-its-blanket); next step brought to it; related to a-formations-couplings-as-its-blanket; no statement, law or declaration changed.
 
 </details>
 
