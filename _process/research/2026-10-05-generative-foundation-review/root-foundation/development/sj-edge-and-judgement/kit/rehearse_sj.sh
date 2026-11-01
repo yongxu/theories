@@ -32,6 +32,7 @@ python3 -B tools/research/master_laws.py > "$ASIDE/master.log" 2>&1; step master
 make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-pointing: exit $?"
 python3 -B "$K/repoint_sj.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_sj.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
+python3 -B "$K/free_head_rehearsal.py" "$ASIDE/held-clause.txt" > "$ASIDE/free-head.log" 2>&1; step free-head $?
 python3 -B "$K/board_sj.py" head > "$ASIDE/board-head.log" 2>&1; step board-head $?
 # the coordinator sends the order sentence with its word; the rehearsal writes a placeholder in its place
 SJ_ORDER="${SJ_ORDER:-the order the coordinator sends with its word (rehearsal placeholder)}" \
