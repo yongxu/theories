@@ -5,8 +5,9 @@ Board item U4e, what U4d's section (§498) left in its boundary: "the census rec
 ```text
 Result(s): census-balance-under-continuation (home 01 §9.5): the second hypotheses entry and law 12 say which
        decision each law takes; law 4 names «有覆而亡屡则生不止» among the covering laws' routes; the Next drops the
-       item now done. identity-across-steps: a history line for Web.persisting_census. No new record and no new
-       declaration.
+       item now done. identity-across-steps: a history line for Web.persisting_census. one-root-to-its-edge: the
+       Next drops a theorem that no statement reading only the dynamics entails C, which DU's
+       ReadsNoOrder.not_entails gives and the home section already names. No new record and no new declaration.
 Delta:
   - Identity: Web.arisingFrom_not_stopping_covered re-proved as the root's «有覆而亡屡则生不止» at the formations'
     occurrences within activity onward from T, its statement unchanged. The four census recurrence laws
@@ -26,7 +27,8 @@ Boundary: the balance across a step (Web.Census.balanceFrom and its kin) keeps d
        of the continuation, which its count by marks uses; which decision the exact forms need least stays open
        (weak excluded middle at the witnesses, the record's Next).
 Output → input: 01 §9.5's census row; the connectivity register (the root form's entry, stale, removed); the shared
-       laws' view rerun (08 §7's figures unchanged); 08's counts; the board's U4e row, moved to the history file.
+       laws' view rerun (08 §7's figures unchanged); 08's counts; the board's U4e row and U4's row, both moved to the history file, what U4 leaves being the
+       edge record's Next.
 ```
 
 **Self-review.**

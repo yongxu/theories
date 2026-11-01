@@ -19,6 +19,7 @@ from pathlib import Path
 BOARD = Path('_process/BECOMING-WORKBOARD.md')
 HISTORY = Path('_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md')
 TITLE = "| **U4e: Identity's covering laws finished**"
+U4 = "| **U4: one root to its edge**"
 ROW = (TITLE + " (U4d's study §498, its boundary: \"the census recurrence laws keep decisions their proofs no longer "
        "use, left to Identity's laws' next change\"; census-balance-under-continuation's Next). "
        "`Web.arisingFrom_not_stopping_covered` re-proved as the root's «有覆而亡屡则生不止» at the formations' "
@@ -96,8 +97,9 @@ def landed(receipt, n):
               "Persistence's `Web.persisting_census` drop the decision binders their proofs do not use, each statement "
               "more general; the signature audit: every other statement of the two modules unchanged; "
               "census-balance-under-continuation's hypotheses, laws 4 and 12 and Next and 01 §9.5's row say which "
-              "decision each law takes; the records citing what changed re-pointed and the two modules' proof bindings "
-              "rebound; U4e's row in the history file; render, strict check, links, tests and both dossier checks "
+              "decision each law takes; one-root-to-its-edge's Next drops the item DU gave; the records citing what "
+              "changed re-pointed and the two modules' proof bindings rebound; U4e's and U4's rows in the history file, "
+              "what U4 leaves being the edge record's Next; render, strict check, links, tests and both dossier checks "
               "pass). ")
     rest = line[len('- **Queue:** ' + HEAD):]
     steps = os.environ.get('U4E_ORDER', '').strip()
@@ -127,8 +129,27 @@ def landed(receipt, n):
     while k > 0 and not hist[k].startswith('| **'):
         k -= 1
     hist.insert(k + 1, row)
+    # U4's row closes with U4e: what it leaves is the edge record's Next, unclaimed
+    lines = BOARD.read_text(encoding='utf-8').split('\n')
+    rows = [j for j, l in enumerate(lines) if l.startswith(U4)]
+    assert len(rows) == 1, rows
+    u4 = lines.pop(rows[0])
+    BOARD.write_text('\n'.join(lines), encoding='utf-8')
+    u4 = u4.replace(U4, U4[:-2] + ', done**', 1)
+    cells = u4.split(' | ')
+    assert len(cells) == 5, len(cells)
+    cells[2] += (f' **Closed {datetime.date.today().isoformat()} with U4e (study §{n}):** levers 1 to 3, the leaf and '
+                 'the boundary record, U4b, U4c, U4d and U4e landed; what is left is the edge record\'s Next (a '
+                 'stretch form of the census on positions, of which `CensusWebs.keep_pace` would be a case; the root '
+                 'reading of significance for the three rows keeping it free; HE2\'s laws read as cases at more '
+                 'connected rows), unclaimed')
+    u4 = ' | '.join(cells)
+    u4 = re.sub(r'\]\(\.\./theories/', '](../../../theories/', u4)
+    u4 = re.sub(r'\]\(research/', '](../../research/', u4)
+    u4 = re.sub(r'\]\(\.\./sources/', '](../../../sources/', u4)
+    hist.insert(k + 2, u4)
     HISTORY.write_text('\n'.join(hist), encoding='utf-8')
-    print(f'landed: clause written, row moved after history line {k + 1}')
+    print(f'landed: clause written, U4e\'s and U4\'s rows moved after history line {k + 1}')
 
 
 if __name__ == '__main__':

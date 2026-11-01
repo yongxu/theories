@@ -20,7 +20,7 @@ CH = ROOT / 'theories/becoming/chapters'
 RECORDS = ROOT / 'theories/becoming/results/records'
 TITLE = "Identity's covering laws finished (U4e)"
 CHANGED = ('Identity', 'Persistence')
-MARKED = ('census-balance-under-continuation', 'identity-across-steps')
+MARKED = ('census-balance-under-continuation', 'identity-across-steps', 'one-root-to-its-edge')
 
 rpath = f'{PKG}/becoming-checks/{RECEIPT}/verification.json'
 R = json.loads((ROOT / rpath).read_text())
