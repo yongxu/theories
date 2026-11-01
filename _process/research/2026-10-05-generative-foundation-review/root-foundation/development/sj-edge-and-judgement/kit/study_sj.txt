@@ -8,7 +8,7 @@ Result(s): a-response-common-over-a-reading (SJ1, home 03 §12). New. market-pro
 Delta:
   - The kernel on the grammar: the occurrences whose closure under a relation stays in a region («承» along the
     converse of «所闭») form its largest part closed under the relation («所闭之承最大»), for every carrier and relation. At a
-    process's steps it is the viability kernel (Viability.kernel_iff_held), and Viability.Certificate.kernel and
+    process's steps it is the invariance kernel (Viability.kernel_iff_held), and Viability.Certificate.kernel and
     Viability.kernel_certificate are proved from it with their statements unchanged.
   - Covering: for every reading and requirement, a response common over the reading within the requirement («共应»:
     a region for each act, inside its requirement, closed under the reading, covering the situations) exists
@@ -28,8 +28,7 @@ Evidence: core receipt {RECEIPT}: Becoming.CommonResponse (COMMONRESPONSE), Beco
   axiom report empty.
 Boundary: which requirement is right is not stated; an act at every situation, or one shared by every two, need
   not give a common response; the witnesses keep the work of the closure, covering, one act and the sum carrier.
-  The kernel at a process's steps quantifies over every course: Aubin's invariance kernel, which the repository
-  names the viability kernel.
+  The kernel at a process's steps quantifies over every course: Aubin's invariance kernel.
 Integration: the root module's import and bullets, the checker's core list and scope, both package READMEs,
   regions.json, 03's bases line, §12 and 05 §10's row; the records citing the changed texts re-pointed, nothing they say changed.
 ```

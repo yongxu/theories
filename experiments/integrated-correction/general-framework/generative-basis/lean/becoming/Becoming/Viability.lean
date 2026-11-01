@@ -9,7 +9,7 @@ A guard `guard : S → Prop` marks the configurations in which an activity can g
 states, for every process, exactly where no course leaves the guard, and reads the statement on
 laws of change driven by admissible disturbances.
 
-* **The kernel and its certificates.** The viability kernel of a guard holds the configurations
+* **The kernel and its certificates.** The invariance kernel of a guard holds the configurations
   from which no course leaves it (`Kernel`). A certificate is a set of configurations within the
   guard that every step keeps (`Certificate`: within, and a `Frame` invariant). No course from
   `s` leaves the guard exactly when some certificate contains `s` (`kernel_iff_certificate`);
@@ -51,7 +51,7 @@ variable {S : Type u} {A : Type v}
 
 /-! ## The kernel and its certificates -/
 
-/-- The **viability kernel** of a guard: the configurations from which no course leaves it. -/
+/-- The **invariance kernel** of a guard: the configurations from which no course leaves it. -/
 def Kernel (P : Process S A) (guard : S → Prop) (s : S) : Prop :=
   ∀ t, Reach P s t → guard t
 

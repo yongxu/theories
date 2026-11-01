@@ -220,7 +220,7 @@ SCOPE = (
     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
     "balance is represented both ways in Flow and not derived. "
     "CommonResponse: the occurrences at which a region holds throughout their closure under a relation form "
-    "the largest region closed under the relation inside it, the viability kernel at a process's steps, whose two laws in Viability are proved from "
+    "the largest region closed under the relation inside it, the invariance kernel at a process's steps, whose two laws in Viability are proved from "
     "it; a response common over a reading within a requirement exists exactly where the acts' kernels cover the "
     "situations, and for a reflexive and transitive reading along the reading itself; finer readings keep it, "
     "under staying the same it is the requirement covering, under the reading that tells nothing apart, on an "

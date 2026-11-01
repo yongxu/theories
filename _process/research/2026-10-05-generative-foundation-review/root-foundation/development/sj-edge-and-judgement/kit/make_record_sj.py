@@ -50,18 +50,18 @@ d = {
     'family': 'F02',
     'reviewed_at_utc': 'REVIEWED_AT',
     'statement': t(
-        "The occurrences whose closure under a relation stays in a region form its largest closed part, the viability "
+        "The occurrences whose closure under a relation stays in a region form its largest closed part, the invariance "
         "kernel at a process's steps. A response common over a reading within a requirement exists exactly where the "
         "acts' kernels cover the situations: judgment is viability indexed by acts.",
-        '依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即生存核。读之共应在要求之内存在，'
-        '当且仅当诸行之生存核遍盖诸情境：判断即以行为索引的生存性。'),
+        '依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即不变核。读之共应在要求之内存在，'
+        '当且仅当诸行之不变核遍盖诸情境：判断即以行为索引的生存性。'),
     'laws': [
         {**t("The kernel: for every carrier, relation and region, the occurrences at which the region holds "
              "throughout their closure under the relation lie inside the region, form a region closed under the "
-             "relation, and include every region inside it closed under the relation. At a process's steps it is the viability "
+             "relation, and include every region inside it closed under the relation. At a process's steps it is the invariance "
              "kernel, and the kernel's two laws, every certificate inside it and it a certificate, are proved from it.",
-             '生存核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内'
-             '每一对该关系封闭的区域。在一过程之步即生存核，生存核之二律（每一证书在生存核内、生存核为证书）由之证出。'),
+             '不变核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内'
+             '每一对该关系封闭的区域。在一过程之步即不变核，不变核之二律（每一证书在不变核内、不变核为证书）由之证出。'),
          'declarations': [B + '«所闭之承最大»', B + '«所闭之承在内»', B + '«所闭之承闭»', B + '«闭在内则在所闭之承»',
                           'Becoming.Viability.kernel_iff_held', 'Becoming.Viability.Certificate.kernel',
                           'Becoming.Viability.kernel_certificate']},
@@ -149,7 +149,7 @@ d = {
         "empty axiom report; built in scratch, its Lean and map read by three independent AI reviewers and its "
         "landing texts by four, each with a verifier, every confirmed finding taken.",
         '由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse，回执 PENDING，CR_DECLS 个声明（CR_THMS 条定理），'
-        '以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条生存核之律由此叶证出、陈述不变，公理报告均为空；'
+        '以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条不变核之律由此叶证出、陈述不变，公理报告均为空；'
         '先在草稿中构建，其 Lean 与图经三位独立 AI 审阅者阅读，其落地文本经四位（各有一位核验者）阅读，所核实者皆采纳。'),
     'next_delta': t(
         "The rule form with choice, GuardHorizon's uniform policy, stated as this law with choice over the readings "
@@ -157,15 +157,14 @@ d = {
         '带选择的规则形式（GuardHorizon 之一致策略）表为本律加读数上的选择与每一读数皆被给出，其例由本记录之见证重证。'),
     'correspondence': t(
         "At a process's steps the kernel is what discrete-time viability theory (Aubin 1991) calls the invariance "
-        "kernel of the constraint set, the largest subset that every evolution keeps, which the repository names the "
-        "viability kernel; where each configuration has exactly one successor it is Aubin's viability kernel, from "
-        "which some evolution stays. A common response over a reading is the relational, set-valued form of a policy "
+        "kernel of the constraint set, the largest subset that every evolution keeps; where each configuration has "
+        "exactly one successor it is also Aubin's viability kernel, from which some evolution stays. A common response over a reading is the relational, set-valued form of a policy "
         "measurable with respect to an observation partition: the partition replaced by any relation and its "
         "closure, the policy by an admissible relation closed under the reading; one act chosen in each class gives "
         "the policy. Requisite variety (Ashby 1956) reads the covering law's failure: a reading too coarse for the "
         "requirement.",
-        '在一过程之步，生存核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集，本库称之为生存核；'
-        '每一构型恰有一后继时，即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：'
+        '在一过程之步，此核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集；'
+        '每一构型恰有一后继时，亦即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：'
         '分划换为任一关系及其闭包，策略换为对读封闭的可接受关系；于每一类择一行，即得此策略。必要多样性（Ashby 1956）读出'
         '遍盖律之不成立：读对要求过粗。'),
     'canonical_source': LEAF,
@@ -175,11 +174,11 @@ d = {
         {'id': 'master-laws-on-the-grammar', 'relation': 'formal-reuse', 'detail': t(
             "Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel "
             "and the one-act law are proved from them.",
-            '复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：生存核与每一情境一行之律由之证出。')},
+            '复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：不变核与每一情境一行之律由之证出。')},
         {'id': 'market-protected-continuation', 'relation': 'formal-reuse', 'detail': t(
             "Reuses Viability's kernel and a process's steps: kernel_iff_held reads the kernel as the grammar's, and "
             "that record's two kernel laws are proved from this record's first law, their statements unchanged.",
-            '复用 Viability 之生存核与过程之步：kernel_iff_held 把生存核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条生存核之律由本记录第一律证出，陈述不变。')},
+            '复用 Viability 之不变核与过程之步：kernel_iff_held 把不变核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条不变核之律由本记录第一律证出，陈述不变。')},
         {'id': 'finite-continuation-plans', 'relation': 'interpretive', 'detail': t(
             "A rule fixed in advance from a common response asks for a choice over the readings; "
             "Viability.plans_iff_choice shows that such choice cannot be dropped for plans, cited by analogy and not "
@@ -221,7 +220,7 @@ d = {
         "verifier), every confirmed finding taken; Viability's two kernel laws re-proved "
         "from it with their statements unchanged; GuardHorizon's bridge left to a ring slot.",
         '2026年11月1日，工作板条目 SJ（SJ1）：据 SJ 的设计新增，经三轮审阅（REVIEW-1 以四个视角审设计；REVIEW-2 以三个视角审 Lean '
-        '与图；REVIEW-3 以四个视角审落地文本，各有核验者），所核实者皆采纳；Viability 的两条生存核之律由之重证，陈述不变；GuardHorizon 之桥留待环之槽位。')],
+        '与图；REVIEW-3 以四个视角审落地文本，各有核验者），所核实者皆采纳；Viability 的两条不变核之律由之重证，陈述不变；GuardHorizon 之桥留待环之槽位。')],
 }
 OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('written', OUT.name)

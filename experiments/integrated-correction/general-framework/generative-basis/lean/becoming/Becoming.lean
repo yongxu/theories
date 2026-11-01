@@ -3213,7 +3213,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   law is exactly double-negation elimination.
 * `Becoming.Viability` (L1): where no course leaves a guard, with no premise. No course from a
   configuration leaves the guard exactly when some certificate (a set within the guard that every
-  step keeps) contains it; the viability kernel is the largest certificate. For a law of change
+  step keeps) contains it; the invariance kernel is the largest certificate. For a law of change
   driven by admissible disturbances, given one admissible disturbance, no history ever leaves the
   guard exactly when some set containing the start lies within the guard and is closed under
   every admissible disturbance; a guarded history stops exactly where the history leaves it. The
@@ -3418,7 +3418,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
   carrier, reading and requirement, with no premise. The occurrences at which a region holds
   throughout their closure under a relation form the largest region closed under the relation
-  inside it (`«所闭之承最大»`), the viability kernel at a process's steps; a response common over a reading within a requirement, one region
+  inside it (`«所闭之承最大»`), the invariance kernel at a process's steps; a response common over a reading within a requirement, one region
   per act, inside the act's requirement and closed under the reading, exists exactly where the
   acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed
   by acts. Where the requirement gives exactly one act at each situation, a response common over a

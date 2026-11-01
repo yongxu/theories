@@ -1274,7 +1274,7 @@
   "market-protected-continuation": {
    "region": "collective",
    "base": "frame",
-   "note": "viability kernel = largest certificate"
+   "note": "invariance kernel = largest certificate"
   },
   "market-supported-finite-transition": {
    "region": "collective",

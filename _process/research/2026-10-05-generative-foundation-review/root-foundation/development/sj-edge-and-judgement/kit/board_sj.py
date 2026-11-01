@@ -44,7 +44,7 @@ def landed(receipt, n):
     assert line.startswith('- **Queue:** ' + HEAD), 'SJ1 does not hold the head'
     clause = (f"SJ1 landed (§{n}, core receipt `{receipt}`, every axiom report empty, one incremental core run: one "
               "core leaf, `Becoming.CommonResponse`: the occurrences whose closure under a relation stays in a region "
-              "form its largest part closed under the relation, the viability kernel at a process's steps, and a response common over "
+              "form its largest part closed under the relation, the invariance kernel at a process's steps, and a response common over "
               "a reading within a requirement exists exactly where the acts' kernels cover the situations, so judgment "
               "is viability indexed by acts; with exactly one act at each situation, one common over a map's sameness "
               "exists exactly where the image of the response relation along the map has a fixed successor; `Viability.Certificate.kernel` and "

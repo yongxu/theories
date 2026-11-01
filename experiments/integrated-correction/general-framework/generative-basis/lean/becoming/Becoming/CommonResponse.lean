@@ -138,7 +138,7 @@ theorem «闭在内则在所闭之承» {E : «际» α} {P Q : α → Prop} (in
 
 /-- **The kernel.** What holds throughout the reading's closure is the largest region inside `P`
 closed under the reading: inside, closed, and holding every other such region. For every relation;
-at a process's steps it is the viability kernel. -/
+at a process's steps it is the invariance kernel. -/
 theorem «所闭之承最大» (E : «际» α) (P : α → Prop) :
     (∀ s, «承» («逆» («所闭» E)) P s → P s) ∧ «闭» E («承» («逆» («所闭» E)) P) ∧
       ∀ Q : α → Prop, (∀ s, Q s → P s) → «闭» E Q → ∀ s, Q s → «承» («逆» («所闭» E)) P s :=
