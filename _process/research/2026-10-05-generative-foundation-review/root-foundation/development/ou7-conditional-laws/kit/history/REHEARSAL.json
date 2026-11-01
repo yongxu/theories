@@ -1,0 +1,341 @@
+{
+  "what": "The rehearsal's Lean step for OU7's landing, outside the repository: a copy of the package with the kit's nine patches applied in series and the three leaves added, built with that copy's scratch_build.py, the tree below as its overlay. No package file in the repository was changed and no core run was made.",
+  "date": "2026-11-01",
+  "base": {
+    "commit": "3d1528b36",
+    "note": "The copy was made from the package at 3d1528b36, which is the same as on main at b6c8bedd8. As built, it differs from main's package in exactly the eight files the patches change, plus the three leaves. The dry run's apply stage on b6c8bedd8 makes each of the eleven files below, byte for byte."
+  },
+  "patches": [
+    {
+      "path": "patches/Grammar.patch",
+      "sha256": "93ac3e37a56061c725002bb1ce7ce659ee58849940aff5ecb7efd1c5b1a7648b"
+    },
+    {
+      "path": "patches/GrammarReadings.patch",
+      "sha256": "932becfab8652c6a60337b5d652143d9e9b5347e4c1e4e2b2e951e666452f05c"
+    },
+    {
+      "path": "patches/MapRegions.patch",
+      "sha256": "73f0fa267c72d27e6eb1ffc2218b8a4247170f22a2d11b3331ff1c9681835639"
+    },
+    {
+      "path": "patches/PLAN.patch",
+      "sha256": "eaf8f1b456bdf356a8c852f144114d7c85a7bb50ae458d1ad669cbe2ce323bd7"
+    },
+    {
+      "path": "../check/kit/GrammarTesting.patch",
+      "sha256": "55f155f1fdd039603f5f2c2b8a4f25e59f882a4ce12584fe77aeb673e6740897"
+    },
+    {
+      "path": "patches/owner/01-GrammarLaws-header.patch",
+      "sha256": "b546feade210d401930aed327e2417acefdf8b37bb90039ee6eb34dc542a4d7f"
+    },
+    {
+      "path": "patches/owner/02-GrammarLaws-not-going-out.patch",
+      "sha256": "7a0fd548a43061a4cdc3609bbcc04ad200561019d090d247e3462f37ea9d9831"
+    },
+    {
+      "path": "patches/owner/03-Standpoints-cut.patch",
+      "sha256": "906b1ff9ae2983eefd7d03a2ab050c647c77e14bac00cc0103121afe65247a14"
+    },
+    {
+      "path": "patches/owner/04-GrammarLaws-uncrossed.patch",
+      "sha256": "107d13ef95ac6420332f56504d99fdf51d23ac5357df1ab9c8d50094e825f248"
+    }
+  ],
+  "tree": [
+    {
+      "path": "Becoming/ConveyanceBoundaries.lean",
+      "sha256": "6875ce0495a8120afcd037f6a6ef6271cbb06b8aa51819a8d10ceba79edd7ad4"
+    },
+    {
+      "path": "Becoming/Grammar.lean",
+      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c"
+    },
+    {
+      "path": "Becoming/GrammarConditionals.lean",
+      "sha256": "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729"
+    },
+    {
+      "path": "Becoming/GrammarCrossing.lean",
+      "sha256": "601f53655202e1fc7e351a390c03724f43c3c1a42fed842085afee3e4fa28a04"
+    },
+    {
+      "path": "Becoming/GrammarLaws.lean",
+      "sha256": "ffd6f37dfe1e0e170f77195af022790fc1401190e1ee47a504766bbaf701268b"
+    },
+    {
+      "path": "Becoming/GrammarReadings.lean",
+      "sha256": "23bff2015b58fb271f207b917be41e1b9b3a68a234d9af60d4b66804be5e0cc8"
+    },
+    {
+      "path": "Becoming/GrammarTesting.lean",
+      "sha256": "b7ddc6da044baef36d170d23bb09089d87a63b940fc777f7ddb627bb14e83068"
+    },
+    {
+      "path": "Becoming/MapRegions.lean",
+      "sha256": "fd94d7ebc50f7facea8d5796339397d9e49860d0729c0ff63801cc2488cf84f4"
+    },
+    {
+      "path": "Becoming/RoomNet.lean",
+      "sha256": "9e026d4696228592ef13cc35a6604a8413555e4a2044ce31eb868196f75a15ab"
+    },
+    {
+      "path": "Becoming/RoomRuns.lean",
+      "sha256": "fef5464efad091996c89165f879ff826b41cc754bca0f332b777d63799c4d412"
+    },
+    {
+      "path": "Becoming/Standpoints.lean",
+      "sha256": "c9dab0cdce6f29ee54522f84af94a8725e689312dc54c45e51713617a79bd652"
+    }
+  ],
+  "command": "python3 -B scratch_build.py TREE Becoming.Grammar Becoming.GrammarReadings Becoming.GrammarTesting Becoming.MapRegions Becoming.GrammarLaws Becoming.GrammarCrossing Becoming.Standpoints Becoming.ConveyanceBoundaries Becoming.GrammarConditionals Becoming.RoomNet Becoming.RoomRuns Becoming.Frame Becoming.GrammarPath Becoming.GrammarCases Becoming.ListingRefutations",
+  "build": {
+    "modules": 145,
+    "ran": [
+      "Becoming.GrammarTesting",
+      "Becoming.MapRegions",
+      "Becoming.GrammarLaws",
+      "Becoming.GrammarCrossing",
+      "Becoming.Frame",
+      "Becoming.Amounts",
+      "Becoming.Renewal",
+      "Becoming.World",
+      "Becoming.Witnesses",
+      "Becoming.Dependence",
+      "Becoming.Restoration",
+      "Becoming.Arising",
+      "Becoming.Recurrence",
+      "Becoming.Labelled",
+      "Becoming.Metaethics",
+      "Becoming.Flow",
+      "Becoming.Change",
+      "Becoming.Population",
+      "Becoming.Dissipation",
+      "Becoming.Locality",
+      "Becoming.Roles",
+      "Becoming.Inquiry",
+      "Becoming.Evolution",
+      "Becoming.Reserve",
+      "Becoming.InAmounts",
+      "Becoming.Space",
+      "Becoming.Admission",
+      "Becoming.Continuation",
+      "Becoming.Regions",
+      "Becoming.Retaining",
+      "Becoming.Clearing",
+      "Becoming.Significance",
+      "Becoming.Extension",
+      "Becoming.ValuationFrames",
+      "Becoming.Correspondence",
+      "Becoming.Descent",
+      "Becoming.Standpoints",
+      "Becoming.Interdependence",
+      "Becoming.Feedback",
+      "Becoming.BoundedSignificance",
+      "Becoming.Boundaries",
+      "Becoming.ConveyanceBoundaries",
+      "Becoming.GrammarConditionals",
+      "Becoming.RoomNet",
+      "Becoming.Viability",
+      "Becoming.Laws",
+      "Becoming.Joint",
+      "Becoming.Experiment",
+      "Becoming.Mechanism",
+      "Becoming.Unfolding",
+      "Becoming.Attraction",
+      "Becoming.Capture",
+      "Becoming.Branching",
+      "Becoming.Histories",
+      "Becoming.Decidedness",
+      "Becoming.Refinement",
+      "Becoming.Likeness",
+      "Becoming.Lasting",
+      "Becoming.Seeking",
+      "Becoming.SeekingRuns",
+      "Becoming.Enough",
+      "Becoming.Settling",
+      "Becoming.LastChange",
+      "Becoming.Testing",
+      "Becoming.Selection",
+      "Becoming.Premises",
+      "Becoming.Openness",
+      "Becoming.Resolution",
+      "Becoming.Entropy",
+      "Becoming.SelectionReach",
+      "Becoming.SelectionTerm",
+      "Becoming.DrawnBeyond",
+      "Becoming.Lexical",
+      "Becoming.Frontier",
+      "Becoming.Optimum",
+      "Becoming.RegimeMargin",
+      "Becoming.Horizon",
+      "Becoming.Diagonal",
+      "Becoming.Learning",
+      "Becoming.Description",
+      "Becoming.Identification",
+      "Becoming.Distinguishing",
+      "Becoming.Parting",
+      "Becoming.Onward",
+      "Becoming.LawAlongRun",
+      "Becoming.Bundles",
+      "Becoming.Identity",
+      "Becoming.Persistence",
+      "Becoming.ContinuedClasses",
+      "Becoming.EventualWidening",
+      "Becoming.ReachableRanges",
+      "Becoming.Gated",
+      "Becoming.Response",
+      "Becoming.TimedResponse",
+      "Becoming.Undecided",
+      "Becoming.Junctures",
+      "Becoming.HeldPossible",
+      "Becoming.RoomRuns",
+      "Becoming.GrammarPath",
+      "Becoming.Learnable",
+      "Becoming.HistoryLanguages",
+      "Becoming.HistoryIdeals",
+      "Becoming.Verification",
+      "Becoming.LimitVerification",
+      "Becoming.LearnableRuns",
+      "Becoming.LearningRuns",
+      "Becoming.Assurance",
+      "Becoming.Countdown",
+      "Becoming.Copying",
+      "Becoming.Readout",
+      "Becoming.Weighted",
+      "Becoming.Courses",
+      "Becoming.Imbalance",
+      "Becoming.Novelty",
+      "Becoming.Gain",
+      "Becoming.IdentificationRuns",
+      "Becoming.Unrolling",
+      "Becoming.GrammarCourse",
+      "Becoming.Pace",
+      "Becoming.RuleCapture",
+      "Becoming.ClosedCapture",
+      "Becoming.GrammarRegularity",
+      "Becoming.Reproduction",
+      "Becoming.SelectionLevels",
+      "Becoming.GroupEnding",
+      "Becoming.Weightings",
+      "Becoming.GrammarScope",
+      "Becoming.GrammarCases",
+      "Becoming.Sampling",
+      "Becoming.Listing",
+      "Becoming.ListingRefutations",
+      "BecomingGrammarTestingAxiomAudit",
+      "BecomingMapRegionsAxiomAudit",
+      "BecomingGrammarLawsAxiomAudit",
+      "BecomingGrammarCrossingAxiomAudit",
+      "BecomingStandpointsAxiomAudit",
+      "BecomingConveyanceBoundariesAxiomAudit",
+      "BecomingGrammarConditionalsAxiomAudit",
+      "BecomingRoomNetAxiomAudit",
+      "BecomingRoomRunsAxiomAudit",
+      "BecomingFrameAxiomAudit",
+      "BecomingGrammarPathAxiomAudit",
+      "BecomingGrammarCasesAxiomAudit",
+      "BecomingListingRefutationsAxiomAudit"
+    ],
+    "reused": 16,
+    "unclean": [],
+    "audits": {
+      "Becoming.Grammar": {
+        "theorems": 72,
+        "declarations": 120,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarReadings": {
+        "theorems": 13,
+        "declarations": 18,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarTesting": {
+        "theorems": 6,
+        "declarations": 13,
+        "with_axioms": {}
+      },
+      "Becoming.MapRegions": {
+        "theorems": 36,
+        "declarations": 42,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarLaws": {
+        "theorems": 178,
+        "declarations": 207,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarCrossing": {
+        "theorems": 10,
+        "declarations": 10,
+        "with_axioms": {}
+      },
+      "Becoming.Standpoints": {
+        "theorems": 21,
+        "declarations": 34,
+        "with_axioms": {}
+      },
+      "Becoming.ConveyanceBoundaries": {
+        "theorems": 8,
+        "declarations": 8,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarConditionals": {
+        "theorems": 40,
+        "declarations": 41,
+        "with_axioms": {}
+      },
+      "Becoming.RoomNet": {
+        "theorems": 94,
+        "declarations": 120,
+        "with_axioms": {}
+      },
+      "Becoming.RoomRuns": {
+        "theorems": 24,
+        "declarations": 27,
+        "with_axioms": {}
+      },
+      "Becoming.Frame": {
+        "theorems": 30,
+        "declarations": 40,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarPath": {
+        "theorems": 102,
+        "declarations": 152,
+        "with_axioms": {}
+      },
+      "Becoming.GrammarCases": {
+        "theorems": 40,
+        "declarations": 68,
+        "with_axioms": {}
+      },
+      "Becoming.ListingRefutations": {
+        "theorems": 27,
+        "declarations": 27,
+        "with_axioms": {}
+      }
+    }
+  },
+  "cut_check": {
+    "what": "Flow.Cut, written as «不出» at the valuation's relation, is its old definition, by Iff.rfl: a scratch module importing Becoming.Standpoints, built from the same copy.",
+    "lean": "import Becoming.Standpoints\n\nnamespace Becoming.Flow\n\n/-- The cut, written as «不出» at the valuation's relation, is the old definition, by `Iff.rfl`. -/\ntheorem cut_as_before {Pos Q : Type} (V : Valuation Pos Q) (region : Q → Prop) :\n    Cut V region ↔ ∀ e e', region e → ¬ region e' → ¬ V.related e e' :=\n  Iff.rfl\n\nend Becoming.Flow\n",
+    "build": {
+      "modules": 41,
+      "ran": [
+        "Becoming.CutScratch",
+        "BecomingCutScratchAxiomAudit"
+      ],
+      "reused": 40,
+      "unclean": [],
+      "audits": {
+        "Becoming.CutScratch": {
+          "theorems": 1,
+          "declarations": 1,
+          "with_axioms": {}
+        }
+      }
+    }
+  }
+}

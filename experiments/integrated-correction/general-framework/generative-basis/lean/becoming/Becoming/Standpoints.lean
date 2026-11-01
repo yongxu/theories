@@ -291,9 +291,10 @@ theorem valuing_reaches_source (transmit : Neutral (L.conveyance W own sig).tran
     (alive : (L.conveyance W own sig).living (c, t)) : sig p (c, t) :=
   transmit (p, (d, t), (c, t)) held ⟨rfl, .inr conveys⟩ alive
 
-/-- No formed relation leaves the region: its boundary is a cut in the relations. -/
+/-- No formed relation leaves the region: nothing in it goes out of it along the valuation's relation
+(`«不出»`). -/
 def Cut {Q : Type} (V : Valuation Pos Q) (region : Q → Prop) : Prop :=
-  ∀ e e', region e → ¬ region e' → ¬ V.related e e'
+  «不出» V.related region
 
 /-- The region of a continuing family is not a cut: conveyance leaves it. -/
 theorem region_not_a_cut [DecidableEq X] (balances : L.Balances W)

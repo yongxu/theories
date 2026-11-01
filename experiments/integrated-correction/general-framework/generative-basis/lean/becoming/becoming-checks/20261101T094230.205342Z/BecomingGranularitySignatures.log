@@ -1,0 +1,412 @@
+@Becoming.Granularity.mem_joined_right : ∀ {α : Type u_1} {a : α} (l : List α) {m : List α}, a ∈ m → a ∈ l ++ m
+@Becoming.Granularity.mem_encode : ∀ {α : Type u_1} {β : Type u_2} {g : β → List α} {a : α} {l : List β},
+  a ∈ Becoming.Segmentation.encode g l ↔ ∃ b, b ∈ l ∧ a ∈ g b
+@Becoming.Granularity.listed_through : ∀ {X : Type u_1} {Y : Type u_2} {R : X → Y → Prop},
+  (∀ (x : X), ∃ l, ∀ (y : Y), R x y ↔ y ∈ l) → ∀ (xs : List X), ∃ l, ∀ (y : Y), (∃ x, x ∈ xs ∧ R x y) ↔ y ∈ l
+@Becoming.Frame.blocks_trace_iff : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (word : List B) {s t : S},
+  Generative.Trace (F.blocks expand).P s word t ↔ Generative.Trace F.P s (Becoming.Segmentation.encode expand word) t
+@Becoming.BranchingTest.holds_along : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (word : List A) (s : S) (φ : Becoming.BranchingTest A C),
+  Becoming.BranchingTest.Holds F s (Becoming.BranchingTest.along word φ) ↔
+    ∃ t, Generative.Trace F.P s word t ∧ Becoming.BranchingTest.Holds F t φ
+@Becoming.Frame.holds_blocks : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4} (F : Becoming.Frame S A C)
+  (expand : B → List A) (φ : Becoming.BranchingTest B C) (s : S),
+  Becoming.BranchingTest.Holds (F.blocks expand) s φ ↔
+    Becoming.BranchingTest.Holds F s (Becoming.BranchingTest.finer expand φ)
+@Becoming.Frame.blocks_translates : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A),
+  Becoming.Translates (F.blocks expand) F (Becoming.BranchingTest.finer expand)
+@Becoming.Translates.sameBranchingTests_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4}
+  {D : Type u_5} {C : Type u_6} {G : Becoming.Frame S B C} {F : Becoming.Frame S A C} {G' : Becoming.Frame S' B C}
+  {F' : Becoming.Frame S' D C} {tr : Becoming.BranchingTest B C → Becoming.BranchingTest A C}
+  {tr' : Becoming.BranchingTest B C → Becoming.BranchingTest D C},
+  Becoming.Translates G F tr →
+    Becoming.Translates G' F' tr' →
+      ∀ {s : S} {s' : S'},
+        Becoming.SameBranchingTests G G' s s' ↔
+          ∀ (φ : Becoming.BranchingTest B C),
+            Becoming.BranchingTest.Holds F s (tr φ) ↔ Becoming.BranchingTest.Holds F' s' (tr' φ)
+@Becoming.SameBranchingTests.step_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {s : S} {s' : S'},
+          Becoming.SameBranchingTests F G s s' →
+            ∀ {a : A} {t : S}, F.P.step s a t → ∃ t', G.P.step s' a t' ∧ Becoming.SameBranchingTests F G t t'
+@Becoming.SameBranchingTests.trace_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {s : S} {word : List A} {t : S},
+          Generative.Trace F.P s word t →
+            ∀ {s' : S'},
+              Becoming.SameBranchingTests F G s s' →
+                ∃ t', Generative.Trace G.P s' word t' ∧ Becoming.SameBranchingTests F G t t'
+@Becoming.Translates.history_matches_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4}
+  {D : Type u_5} {C : Type u_6},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {G : Becoming.Frame S B C} {F : Becoming.Frame S A C} {G' : Becoming.Frame S' B C} {F' : Becoming.Frame S' D C}
+      {tr : Becoming.BranchingTest B C → Becoming.BranchingTest A C}
+      {tr' : Becoming.BranchingTest B C → Becoming.BranchingTest D C},
+      Becoming.Translates G F tr →
+        Becoming.Translates G' F' tr' →
+          (∀ (s : S') (b : B), ∃ l, ∀ (t : S'), G'.P.step s b t ↔ t ∈ l) →
+            ∀ {s : S} {s' : S'},
+              (∀ (φ : Becoming.BranchingTest B C),
+                  Becoming.BranchingTest.Holds F s (tr φ) ↔ Becoming.BranchingTest.Holds F' s' (tr' φ)) →
+                ∀ {word : List B} {t : S},
+                  Generative.Trace G.P s word t →
+                    ∃ t',
+                      Generative.Trace G'.P s' word t' ∧
+                        ∀ (φ : Becoming.BranchingTest B C),
+                          Becoming.BranchingTest.Holds F t (tr φ) ↔ Becoming.BranchingTest.Holds F' t' (tr' φ)
+@Becoming.outcomes_of_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (s : S) (a : A), ∃ l, ∀ (t : S), P.step s a t ↔ t ∈ l) →
+    ∀ (word : List A) (s : S), ∃ l, ∀ (t : S), Generative.Trace P s word t ↔ t ∈ l
+@Becoming.Frame.blocks_outcomes : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} (expand : B → List A),
+  (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+    ∀ (s : S) (b : B), ∃ l, ∀ (t : S), (F.blocks expand).P.step s b t ↔ t ∈ l
+@Becoming.Frame.blocks_history_matches_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4}
+  {D : Type u_5} {C : Type u_6},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {F' : Becoming.Frame S' D C} (left : B → List A) (right : B → List D),
+      (∀ (s : S') (d : D), ∃ l, ∀ (t : S'), F'.P.step s d t ↔ t ∈ l) →
+        ∀ {s : S} {s' : S'},
+          (∀ (φ : Becoming.BranchingTest B C),
+              Becoming.BranchingTest.Holds F s (Becoming.BranchingTest.finer left φ) ↔
+                Becoming.BranchingTest.Holds F' s' (Becoming.BranchingTest.finer right φ)) →
+            ∀ {word : List B} {t : S},
+              Generative.Trace F.P s (Becoming.Segmentation.encode left word) t →
+                ∃ t',
+                  Generative.Trace F'.P s' (Becoming.Segmentation.encode right word) t' ∧
+                    ∀ (φ : Becoming.BranchingTest B C),
+                      Becoming.BranchingTest.Holds F t (Becoming.BranchingTest.finer left φ) ↔
+                        Becoming.BranchingTest.Holds F' t' (Becoming.BranchingTest.finer right φ)
+@Becoming.Frame.blocks_bisimulation : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4} {C : Type u_5}
+  (F : Becoming.Frame S A C) (G : Becoming.Frame S' A C) (expand : B → List A),
+  Becoming.Bisimulation (F.blocks expand) (G.blocks expand) (Becoming.Alike F G)
+@Becoming.Alike.blocks : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4} {C : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} (expand : B → List A) {s : S} {s' : S'},
+  Becoming.Alike F G s s' → Becoming.Alike (F.blocks expand) (G.blocks expand) s s'
+@Becoming.SameBranchingTests.blocks : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4} {C : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} (expand : B → List A) {s : S} {s' : S'},
+  Becoming.SameBranchingTests F G s s' → Becoming.SameBranchingTests (F.blocks expand) (G.blocks expand) s s'
+@Becoming.Frame.holds_rename_blocks : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) (name : A → B),
+  (∀ (a : A), expand (name a) = [a]) →
+    ∀ (φ : Becoming.BranchingTest A C) (s : S),
+      Becoming.BranchingTest.Holds (F.blocks expand) s (Becoming.BranchingTest.rename name φ) ↔
+        Becoming.BranchingTest.Holds F s φ
+@Becoming.Frame.blocks_sameBranchingTests_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4}
+  {C : Type u_5} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {expand : B → List A} {name : A → B},
+  (∀ (a : A), expand (name a) = [a]) →
+    ∀ {s : S} {s' : S'},
+      Becoming.SameBranchingTests (F.blocks expand) (G.blocks expand) s s' ↔ Becoming.SameBranchingTests F G s s'
+@Becoming.Frame.blocks_kernel_iff : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {expand : B → List A} {name : A → B},
+  (∀ (a : A), expand (name a) = [a]) →
+    ∀ {K : Type u_5} {K' : Type u_6} {π : S → K} {ρ : S → K'},
+      (∀ (s t : S), π s = π t ↔ Becoming.SameBranchingTests F F s t) →
+        (∀ (s t : S), ρ s = ρ t ↔ Becoming.SameBranchingTests (F.blocks expand) (F.blocks expand) s t) →
+          ∀ (s t : S), π s = π t ↔ ρ s = ρ t
+@Becoming.Joining.retained_blocks_extend : ∀ {F : Type u_1} {J : Becoming.Joining F} {B : Type u_2}
+  (expand : B → List (Nat × Nat)) {xs ys : List F} {word : List B},
+  Generative.Trace (J.retainedFrame.blocks expand).P xs word ys →
+    (∃ added, ys = xs ++ added) ∧ ys.length = xs.length + (Becoming.Segmentation.encode expand word).length
+@Becoming.Recipe.leads_word_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (word : List A) {s t : S}, Becoming.Recipe.Leads F (Becoming.Recipe.word word) s t ↔ Generative.Trace F.P s word t
+@Becoming.Frame.blocks_step_iff_word : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  (F : Becoming.Frame S A C) (expand : B → List A) {s t : S} {b : B},
+  (F.blocks expand).P.step s b t ↔ Becoming.Recipe.Leads F (Becoming.Recipe.word (expand b)) s t
+@Becoming.Recipe.Leads.trace : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p : Becoming.Recipe A C} {s t : S}, Becoming.Recipe.Leads F p s t → ∃ word, Generative.Trace F.P s word t
+@Becoming.Recipe.holds_after_of_leads : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (p : Becoming.Recipe A C) {s t : S} {φ : Becoming.BranchingTest A C},
+  Becoming.Recipe.Leads F p s t → Becoming.BranchingTest.Holds F t φ → Becoming.BranchingTest.Holds F s (p.after φ)
+@Becoming.TestsDecided.of_em : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3},
+  (∀ (p : Prop), Becoming.Decided p) → ∀ (F : Becoming.Frame S A C), Becoming.TestsDecided F
+@Becoming.OutcomesListed.holds_decided : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  Becoming.OutcomesListed F →
+    ∀ (φ : Becoming.BranchingTest A C) (s : S), Becoming.Decided (Becoming.BranchingTest.Holds F s φ)
+@Becoming.OutcomesListed.testsDecided : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  Becoming.OutcomesListed F → Becoming.TestsDecided F
+@Becoming.Recipe.holds_after : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  Becoming.TestsDecided F →
+    ∀ (p : Becoming.Recipe A C) (s : S) (φ : Becoming.BranchingTest A C),
+      Becoming.BranchingTest.Holds F s (p.after φ) ↔
+        ∃ t, Becoming.Recipe.Leads F p s t ∧ Becoming.BranchingTest.Holds F t φ
+Becoming.Recipe.holds_after_iff_em : (∀ (F : Becoming.Frame Unit Unit Unit) (p : Becoming.Recipe Unit Unit) (s : Unit)
+    (φ : Becoming.BranchingTest Unit Unit),
+    Becoming.BranchingTest.Holds F s (p.after φ) ↔
+      ∃ t, Becoming.Recipe.Leads F p s t ∧ Becoming.BranchingTest.Holds F t φ) ↔
+  ∀ (p : Prop), Becoming.Decided p
+@Becoming.Recipe.leads_iff_afterAny : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (p : Becoming.Recipe A C) (s : S) (φ : Becoming.BranchingTest A C),
+  (∃ t, Becoming.Recipe.Leads F p s t ∧ Becoming.BranchingTest.Holds F t φ) ↔
+    ∃ χ, χ ∈ p.afterAny φ ∧ Becoming.BranchingTest.Holds F s χ
+@Becoming.SameBranchingTests.leads_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.SameBranchingTests F G s s' →
+    ∀ (p : Becoming.Recipe A C) (φ : Becoming.BranchingTest A C),
+      (∃ t, Becoming.Recipe.Leads F p s t ∧ Becoming.BranchingTest.Holds F t φ) ↔
+        ∃ t', Becoming.Recipe.Leads G p s' t' ∧ Becoming.BranchingTest.Holds G t' φ
+@Becoming.Frame.holds_byRecipes : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C},
+  Becoming.TestsDecided F →
+    ∀ (recipe : B → Becoming.Recipe A C) (φ : Becoming.BranchingTest B C) (s : S),
+      Becoming.BranchingTest.Holds (F.byRecipes recipe) s φ ↔
+        Becoming.BranchingTest.Holds F s (Becoming.BranchingTest.byRecipes recipe φ)
+@Becoming.Frame.byRecipes_translates : ∀ {S : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C},
+  Becoming.TestsDecided F →
+    ∀ (recipe : B → Becoming.Recipe A C),
+      Becoming.Translates (F.byRecipes recipe) F (Becoming.BranchingTest.byRecipes recipe)
+@Becoming.Recipe.outcomes : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+    Becoming.TestsDecided F → ∀ (p : Becoming.Recipe A C) (s : S), ∃ l, ∀ (t : S), Becoming.Recipe.Leads F p s t ↔ t ∈ l
+@Becoming.Frame.byRecipes_history_matches_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {B : Type u_4}
+  {D : Type u_5} {C : Type u_6},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {F' : Becoming.Frame S' D C} (left : B → Becoming.Recipe A C)
+      (right : B → Becoming.Recipe D C),
+      (∀ (s : S') (d : D), ∃ l, ∀ (t : S'), F'.P.step s d t ↔ t ∈ l) →
+        ∀ {s : S} {s' : S'},
+          (∀ (φ : Becoming.BranchingTest B C),
+              Becoming.BranchingTest.Holds F s (Becoming.BranchingTest.byRecipes left φ) ↔
+                Becoming.BranchingTest.Holds F' s' (Becoming.BranchingTest.byRecipes right φ)) →
+            ∀ {word : List B} {t : S},
+              Generative.Trace (F.byRecipes left).P s word t →
+                ∃ t',
+                  Generative.Trace (F'.byRecipes right).P s' word t' ∧
+                    ∀ (φ : Becoming.BranchingTest B C),
+                      Becoming.BranchingTest.Holds F t (Becoming.BranchingTest.byRecipes left φ) ↔
+                        Becoming.BranchingTest.Holds F' t' (Becoming.BranchingTest.byRecipes right φ)
+@Becoming.Recipe.leads_branch_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {φ : Becoming.BranchingTest A C} {yes no : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Leads F (Becoming.Recipe.branch φ yes no) s t ↔
+    Becoming.BranchingTest.Holds F s φ ∧ Becoming.Recipe.Leads F yes s t ∨
+      ¬Becoming.BranchingTest.Holds F s φ ∧ Becoming.Recipe.Leads F no s t
+@Becoming.Recipe.branch_earlier_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {pre yes no : Becoming.Recipe A C} {φ : Becoming.BranchingTest A C} {s t : S},
+  (∀ (m : S),
+      Becoming.Recipe.Leads F pre s m → (Becoming.BranchingTest.Holds F m φ ↔ Becoming.BranchingTest.Holds F s φ)) →
+    (Becoming.Recipe.Leads F (pre.seq (Becoming.Recipe.branch φ yes no)) s t ↔
+      Becoming.Recipe.Leads F (Becoming.Recipe.branch φ (pre.seq yes) (pre.seq no)) s t)
+@Becoming.Recipe.Advance.leaves : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p p' : Becoming.Recipe A C} {s t : S}, Becoming.Recipe.Advance F p s p' t → Becoming.Recipe.Leaves F p s p' t
+@Becoming.Recipe.Advance.resume : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p p' : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Advance F p s p' t →
+    ∀ {finish : S}, Becoming.Recipe.Leads F p' t finish → Becoming.Recipe.Leads F p s finish
+@Becoming.Recipe.trace_resume : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {c d : Becoming.Recipe A C × S} {schedule : List Unit},
+  Generative.Trace (Becoming.Recipe.unfolding F) c schedule d →
+    ∀ {finish : S}, Becoming.Recipe.Leads F d.fst d.snd finish → Becoming.Recipe.Leads F c.fst c.snd finish
+@Becoming.Recipe.Leaves.resume : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p r : Becoming.Recipe A C} {s t finish : S},
+  Becoming.Recipe.Leaves F p s r t → Becoming.Recipe.Leads F r t finish → Becoming.Recipe.Leads F p s finish
+@Becoming.Recipe.Advance.trace : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p p' : Becoming.Recipe A C} {s t : S}, Becoming.Recipe.Advance F p s p' t → ∃ word, Generative.Trace F.P s word t
+@Becoming.Recipe.trace_native : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {c d : Becoming.Recipe A C × S} {schedule : List Unit},
+  Generative.Trace (Becoming.Recipe.unfolding F) c schedule d → ∃ word, Generative.Trace F.P c.snd word d.snd
+@Becoming.Recipe.Leaves.trace : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p r : Becoming.Recipe A C} {s t : S}, Becoming.Recipe.Leaves F p s r t → ∃ word, Generative.Trace F.P s word t
+@Becoming.Recipe.Leaves.seq : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p r : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Leaves F p s r t → ∀ (q : Becoming.Recipe A C), Becoming.Recipe.Leaves F (p.seq q) s (r.seq q) t
+@Becoming.Recipe.Leads.leaves : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Leads F p s t → Becoming.Recipe.Leaves F p s Becoming.Recipe.skip t
+@Becoming.Recipe.leads_iff_leaves : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C)
+  (p : Becoming.Recipe A C) (s t : S),
+  Becoming.Recipe.Leads F p s t ↔ Becoming.Recipe.Leaves F p s Becoming.Recipe.skip t
+@Becoming.Recipe.Leaves.inserted : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {p r : Becoming.Recipe A C} {s reached current finish : S} {inserted : List A},
+  Becoming.Recipe.Leaves F p s r reached →
+    Generative.Trace F.P reached inserted current →
+      Becoming.Recipe.Leads F r current finish →
+        ∃ first last,
+          Generative.Trace F.P s first reached ∧
+            Generative.Trace F.P current last finish ∧ Generative.Trace F.P s (first ++ inserted ++ last) finish
+@Becoming.Recipe.Advance.alike : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {p p' : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Advance F p s p' t →
+    ∀ {s' : S'}, Becoming.Alike F G s s' → ∃ t', Becoming.Recipe.Advance G p s' p' t' ∧ Becoming.Alike F G t t'
+@Becoming.Recipe.Advance.same_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {p p' : Becoming.Recipe A C} {s t : S},
+          Becoming.Recipe.Advance F p s p' t →
+            ∀ {s' : S'},
+              Becoming.SameBranchingTests F G s s' →
+                ∃ t', Becoming.Recipe.Advance G p s' p' t' ∧ Becoming.SameBranchingTests F G t t'
+@Becoming.Recipe.trace_alike : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {c d : Becoming.Recipe A C × S} {schedule : List Unit},
+  Generative.Trace (Becoming.Recipe.unfolding F) c schedule d →
+    ∀ {s' : S'},
+      Becoming.Alike F G c.snd s' →
+        ∃ t',
+          Generative.Trace (Becoming.Recipe.unfolding G) (c.fst, s') schedule (d.fst, t') ∧ Becoming.Alike F G d.snd t'
+@Becoming.Recipe.Leaves.alike : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {p r : Becoming.Recipe A C} {s t : S},
+  Becoming.Recipe.Leaves F p s r t →
+    ∀ {s' : S'}, Becoming.Alike F G s s' → ∃ t', Becoming.Recipe.Leaves G p s' r t' ∧ Becoming.Alike F G t t'
+@Becoming.Recipe.trace_same_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {c d : Becoming.Recipe A C × S} {schedule : List Unit},
+          Generative.Trace (Becoming.Recipe.unfolding F) c schedule d →
+            ∀ {s' : S'},
+              Becoming.SameBranchingTests F G c.snd s' →
+                ∃ t',
+                  Generative.Trace (Becoming.Recipe.unfolding G) (c.fst, s') schedule (d.fst, t') ∧
+                    Becoming.SameBranchingTests F G d.snd t'
+@Becoming.Recipe.Leaves.same_of_em : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {p r : Becoming.Recipe A C} {s t : S},
+          Becoming.Recipe.Leaves F p s r t →
+            ∀ {s' : S'},
+              Becoming.SameBranchingTests F G s s' →
+                ∃ t', Becoming.Recipe.Leaves G p s' r t' ∧ Becoming.SameBranchingTests F G t t'
+@Becoming.Recipe.Resumes.codes_apart : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {K : Type u_4} {π : Becoming.Recipe A C × S → K},
+  (∀ (c d : Becoming.Recipe A C × S),
+      π c = π d → ∀ (φ : Becoming.BranchingTest A C), Becoming.Recipe.Resumes F c φ ↔ Becoming.Recipe.Resumes F d φ) →
+    ∀ {c d : Becoming.Recipe A C × S} {φ : Becoming.BranchingTest A C},
+      Becoming.Recipe.Resumes F c φ → ¬Becoming.Recipe.Resumes F d φ → π c ≠ π d
+Becoming.Midway.shared_origin : Generative.Trace Becoming.Midway.frame.P Becoming.Midway.Phase.origin
+    [Becoming.Midway.Event.enter] Becoming.Midway.Phase.risky ∧
+  Generative.Trace Becoming.Midway.frame.P Becoming.Midway.Phase.origin [Becoming.Midway.Event.enter]
+    Becoming.Midway.Phase.safe
+@Becoming.Midway.completed_done : ∀ {s t : Becoming.Midway.Phase},
+  Generative.Trace Becoming.Midway.frame.P s [Becoming.Midway.Event.begin, Becoming.Midway.Event.finish] t →
+    t = Becoming.Midway.Phase.done
+Becoming.Midway.completes : Generative.Trace Becoming.Midway.frame.P Becoming.Midway.Phase.risky
+    [Becoming.Midway.Event.begin, Becoming.Midway.Event.finish] Becoming.Midway.Phase.done ∧
+  Generative.Trace Becoming.Midway.frame.P Becoming.Midway.Phase.safe
+    [Becoming.Midway.Event.begin, Becoming.Midway.Event.finish] Becoming.Midway.Phase.done
+Becoming.Midway.completed_bisimulation : Becoming.Bisimulation (Becoming.Midway.frame.blocks Becoming.Midway.completed)
+  (Becoming.Midway.frame.blocks Becoming.Midway.completed) Becoming.Midway.CompletedRelated
+Becoming.Midway.same_completed_tests : Becoming.Alike (Becoming.Midway.frame.blocks Becoming.Midway.completed)
+    (Becoming.Midway.frame.blocks Becoming.Midway.completed) Becoming.Midway.Phase.risky Becoming.Midway.Phase.safe ∧
+  Becoming.SameBranchingTests (Becoming.Midway.frame.blocks Becoming.Midway.completed)
+    (Becoming.Midway.frame.blocks Becoming.Midway.completed) Becoming.Midway.Phase.risky Becoming.Midway.Phase.safe
+Becoming.Midway.internal_loss : Becoming.BranchingTest.Holds Becoming.Midway.frame Becoming.Midway.Phase.risky
+    Becoming.Midway.lost ∧
+  ¬Becoming.BranchingTest.Holds Becoming.Midway.frame Becoming.Midway.Phase.safe Becoming.Midway.lost
+@Becoming.Midway.codes_apart : ∀ {K : Type u_1} {π : Becoming.Midway.Phase → K},
+  (∀ (s t : Becoming.Midway.Phase),
+      π s = π t → Becoming.SameBranchingTests Becoming.Midway.frame Becoming.Midway.frame s t) →
+    π Becoming.Midway.Phase.risky ≠ π Becoming.Midway.Phase.safe
+@Becoming.Midway.prefixes_stuck : ∀ {s : Becoming.Midway.Phase},
+  (∀ (a : Becoming.Midway.Event) (t : Becoming.Midway.Phase), ¬Becoming.Midway.Step s a t) →
+    ∀ (b : Bool) (t : Becoming.Midway.Phase), ¬(Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step s b t
+Becoming.Midway.ready_no_begin : ∀ (t : Becoming.Midway.Phase),
+  ¬Becoming.Midway.Step Becoming.Midway.Phase.ready Becoming.Midway.Event.begin t
+Becoming.Midway.blocked_stuck : ∀ (a : Becoming.Midway.Event) (t : Becoming.Midway.Phase),
+  ¬Becoming.Midway.Step Becoming.Midway.Phase.blocked a t
+Becoming.Midway.ready_stuck : ∀ (b : Bool) (t : Becoming.Midway.Phase),
+  ¬(Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step Becoming.Midway.Phase.ready b t
+@Becoming.Midway.risky_prefix_steps : ∀ {b : Bool} {t : Becoming.Midway.Phase},
+  (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step Becoming.Midway.Phase.risky b t →
+    b = true ∧ t = Becoming.Midway.Phase.done ∨
+      b = false ∧ (t = Becoming.Midway.Phase.ready ∨ t = Becoming.Midway.Phase.blocked)
+@Becoming.Midway.safe_prefix_steps : ∀ {b : Bool} {t : Becoming.Midway.Phase},
+  (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step Becoming.Midway.Phase.safe b t →
+    b = true ∧ t = Becoming.Midway.Phase.done ∨ b = false ∧ t = Becoming.Midway.Phase.ready
+Becoming.Midway.safe_prefixes : (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step
+    Becoming.Midway.Phase.safe true Becoming.Midway.Phase.done ∧
+  (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step Becoming.Midway.Phase.safe false
+    Becoming.Midway.Phase.ready
+Becoming.Midway.risky_prefixes : (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step
+    Becoming.Midway.Phase.risky true Becoming.Midway.Phase.done ∧
+  (Becoming.Midway.frame.blocks Becoming.Midway.prefixes).P.step Becoming.Midway.Phase.risky false
+    Becoming.Midway.Phase.ready
+Becoming.Midway.prefix_bisimulation : Becoming.Bisimulation (Becoming.Midway.frame.blocks Becoming.Midway.prefixes)
+  (Becoming.Midway.frame.blocks Becoming.Midway.prefixes) Becoming.Midway.PrefixRelated
+Becoming.Midway.same_prefix_tests : Becoming.Alike (Becoming.Midway.frame.blocks Becoming.Midway.prefixes)
+    (Becoming.Midway.frame.blocks Becoming.Midway.prefixes) Becoming.Midway.Phase.risky Becoming.Midway.Phase.safe ∧
+  Becoming.SameBranchingTests (Becoming.Midway.frame.blocks Becoming.Midway.prefixes)
+    (Becoming.Midway.frame.blocks Becoming.Midway.prefixes) Becoming.Midway.Phase.risky Becoming.Midway.Phase.safe
+Becoming.Midway.no_prefix_reading : ¬∃ φ,
+    ∀ (s : Becoming.Midway.Phase),
+      Becoming.BranchingTest.Holds (Becoming.Midway.frame.blocks Becoming.Midway.prefixes) s φ ↔
+        Becoming.BranchingTest.Holds Becoming.Midway.frame s Becoming.Midway.lost
+Becoming.Midway.resumption_recovers_loss : Becoming.BranchingTest.Holds
+    (Becoming.Midway.frame.blocks Becoming.Midway.resumable) Becoming.Midway.Phase.risky
+    (Becoming.BranchingTest.can false (Becoming.BranchingTest.can true Becoming.BranchingTest.top).not) ∧
+  ¬Becoming.BranchingTest.Holds (Becoming.Midway.frame.blocks Becoming.Midway.resumable) Becoming.Midway.Phase.safe
+      (Becoming.BranchingTest.can false (Becoming.BranchingTest.can true Becoming.BranchingTest.top).not)
+@Becoming.Midway.reduced_prefix_cannot_extend : ∀ {K : Type u_1} {π : Becoming.Midway.Phase → K},
+  (∀ (s t : Becoming.Midway.Phase),
+      Becoming.SameBranchingTests (Becoming.Midway.frame.blocks Becoming.Midway.prefixes)
+          (Becoming.Midway.frame.blocks Becoming.Midway.prefixes) s t →
+        π s = π t) →
+    ¬∃ read,
+        ∀ (s : Becoming.Midway.Phase) (φ : Becoming.BranchingTest Becoming.Midway.Event Empty),
+          read (π s) φ ↔ Becoming.BranchingTest.Holds Becoming.Midway.frame s φ
+Becoming.Midway.formation_changes_guard : Becoming.Midway.frame.P.step Becoming.Midway.Phase.safe
+    Becoming.Midway.Event.begin Becoming.Midway.Phase.ready ∧
+  ¬Becoming.BranchingTest.Holds Becoming.Midway.frame Becoming.Midway.Phase.safe Becoming.Midway.canFinish ∧
+    Becoming.BranchingTest.Holds Becoming.Midway.frame Becoming.Midway.Phase.ready Becoming.Midway.canFinish
+Becoming.Midway.testing_before_formation_changes_results : Becoming.Recipe.Leads Becoming.Midway.frame
+    Becoming.Midway.adaptive Becoming.Midway.Phase.safe Becoming.Midway.Phase.done ∧
+  ¬Becoming.Recipe.Leads Becoming.Midway.frame Becoming.Midway.earlyCheck Becoming.Midway.Phase.safe
+      Becoming.Midway.Phase.done
+Becoming.Midway.same_start_distinct_remainders : Becoming.Recipe.Leaves Becoming.Midway.frame Becoming.Midway.pending
+    Becoming.Midway.Phase.safe (Becoming.Recipe.move Becoming.Midway.Event.finish) Becoming.Midway.Phase.ready ∧
+  Becoming.Recipe.Leaves Becoming.Midway.frame Becoming.Midway.pending Becoming.Midway.Phase.safe Becoming.Recipe.skip
+    Becoming.Midway.Phase.ready
+Becoming.Midway.remainder_changes_continuation : Becoming.Recipe.Resumes Becoming.Midway.frame
+    (Becoming.Recipe.move Becoming.Midway.Event.finish, Becoming.Midway.Phase.ready) Becoming.Midway.canFinish.not ∧
+  ¬Becoming.Recipe.Resumes Becoming.Midway.frame (Becoming.Recipe.skip, Becoming.Midway.Phase.ready)
+      Becoming.Midway.canFinish.not
+@Becoming.Midway.remainder_codes_apart : ∀ {K : Type u_1}
+  {π : Becoming.Recipe Becoming.Midway.Event Empty × Becoming.Midway.Phase → K},
+  (∀ (c d : Becoming.Recipe Becoming.Midway.Event Empty × Becoming.Midway.Phase),
+      π c = π d →
+        ∀ (φ : Becoming.BranchingTest Becoming.Midway.Event Empty),
+          Becoming.Recipe.Resumes Becoming.Midway.frame c φ ↔ Becoming.Recipe.Resumes Becoming.Midway.frame d φ) →
+    π (Becoming.Recipe.move Becoming.Midway.Event.finish, Becoming.Midway.Phase.ready) ≠
+      π (Becoming.Recipe.skip, Becoming.Midway.Phase.ready)
+Becoming.Midway.inserted_can_disable_resumption : Becoming.Midway.frame.P.step Becoming.Midway.Phase.ready
+    Becoming.Midway.Event.finish Becoming.Midway.Phase.done ∧
+  Becoming.Recipe.Leads Becoming.Midway.frame (Becoming.Recipe.move Becoming.Midway.Event.finish)
+      Becoming.Midway.Phase.ready Becoming.Midway.Phase.done ∧
+    ¬∃ t,
+        Becoming.Recipe.Leads Becoming.Midway.frame (Becoming.Recipe.move Becoming.Midway.Event.finish)
+          Becoming.Midway.Phase.done t
+Becoming.Midway.inserted_changes_tests : ¬Becoming.SameBranchingTests Becoming.Midway.frame Becoming.Midway.frame
+    Becoming.Midway.Phase.ready Becoming.Midway.Phase.done
+@Becoming.BranchingTest.finer_rename : ∀ {A B : Type u_1} {C : Type u_2} (expand : B → List A) (name : A → B),
+  (∀ (a : A), expand (name a) = [a]) →
+    ∀ (φ : Becoming.BranchingTest A C), Becoming.BranchingTest.finer expand (Becoming.BranchingTest.rename name φ) = φ
+@Becoming.BranchingTest.holds_either : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C} {s : S}
+  {φ ψ : Becoming.BranchingTest A C},
+  Becoming.Decided (Becoming.BranchingTest.Holds F s φ) →
+    Becoming.Decided (Becoming.BranchingTest.Holds F s ψ) →
+      (Becoming.BranchingTest.Holds F s (φ.either ψ) ↔
+        Becoming.BranchingTest.Holds F s φ ∨ Becoming.BranchingTest.Holds F s ψ)
+@Becoming.Frame.byRecipes_trace : ∀ {S : Type u_1} {A B : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {recipe : B → Becoming.Recipe A C} {s t : S} {word : List B},
+  Generative.Trace (F.byRecipes recipe).P s word t → ∃ w, Generative.Trace F.P s w t
+@Becoming.Alike.of_stuck : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  (∀ (c : C), F.realized s c ↔ G.realized s' c) →
+    (∀ (a : A) (t : S), ¬F.P.step s a t) → (∀ (a : A) (t : S'), ¬G.P.step s' a t) → Becoming.Alike F G s s'
+@Becoming.SameBranchingTests.of_stuck : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {F : Becoming.Frame S A Empty}
+  {G : Becoming.Frame S' A Empty} {s : S} {s' : S'},
+  (∀ (a : A) (t : S), ¬F.P.step s a t) → (∀ (a : A) (t : S'), ¬G.P.step s' a t) → Becoming.SameBranchingTests F G s s'
+Becoming.Midway.exists_phase : ∀ (p : Becoming.Midway.Phase → Prop),
+  (∃ s, p s) ↔
+    p Becoming.Midway.Phase.origin ∨
+      p Becoming.Midway.Phase.risky ∨
+        p Becoming.Midway.Phase.safe ∨
+          p Becoming.Midway.Phase.ready ∨ p Becoming.Midway.Phase.blocked ∨ p Becoming.Midway.Phase.done

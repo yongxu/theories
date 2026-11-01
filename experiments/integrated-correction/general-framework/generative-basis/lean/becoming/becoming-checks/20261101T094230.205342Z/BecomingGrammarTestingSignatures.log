@@ -1,0 +1,9 @@
+@Becoming.«核在每层之内» : ∀ {α : Type u_1} (R E : Becoming.«际» α) (k : Nat),
+  Becoming.«则» (Becoming.«核» R E) (Becoming.«层» R E k)
+@Becoming.«可分则不在核» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  (∃ k, ¬Becoming.«层» R E k x y) → ¬Becoming.«核» R E x y
+Becoming.Room.same_alike : Becoming.«则» Becoming.Room.same Becoming.Room.alike
+Becoming.Room.same_symm : Becoming.«则» Becoming.Room.same (Becoming.«逆» Becoming.Room.same)
+Becoming.Room.same_constant : Becoming.«有常» Becoming.Room.closed Becoming.Room.same
+Becoming.«恒温与平衡» : Becoming.«核» Becoming.Room.closed Becoming.Room.alike Becoming.Room.balanced Becoming.Room.held ∧
+  ¬Becoming.«核» Becoming.Room.opened Becoming.Room.alike Becoming.Room.balanced Becoming.Room.held

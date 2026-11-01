@@ -40,7 +40,10 @@ passing premise is a reading of how carrying forms, supplied and not derived.
 * **One empty step ends it.** Under the passing premise presence at a step gives presence at every
   earlier step (`Web.ByPassing.present_back`, `Web.ByPassing.present_of_le`), so a step at which
   no formation carries the pattern is followed by none at which any does
-  (`Web.ByPassing.empty_stays`).
+  (`Web.ByPassing.empty_stays`). These use only that a carrier at `t + 1` has a carrier at `t`,
+  whatever `passes` is: they hold with `passes` relating everything, and say nothing of passing
+  itself. `Web.ByPassing.trace` likewise has content only where `passes` is fixed, as in
+  `PatternRelay`.
 * **If passing stops, it ends within one span.** Under the passing premise, its carriers brief for
   `d`, and no carrier passing it across any step from `T` on, no formation carries it at any step
   from `T + d` on (`Web.ByPassing.ends_within`).
@@ -139,7 +142,7 @@ theorem ByPassing.trace (by_passing : V.ByPassing passes) {S : Nat} :
     (fun _ active => .inl active) (Nat.zero_le k) a
 
 /-- **Presence goes back one step.** Under the passing premise, a pattern present at `t + 1` was
-present at `t`. -/
+present at `t`. Whatever `passes` is: only the giver's carrying at `t` is used. -/
 theorem ByPassing.present_back (by_passing : V.ByPassing passes) {t : Nat}
     (present : V.Present (t + 1)) : V.Present t :=
   match present with

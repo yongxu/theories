@@ -1,0 +1,77 @@
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/dry_run.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/dry_run.py
+index cffadde02..924454cfd 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/dry_run.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/dry_run.py
+@@ -220,15 +220,31 @@ def synthetic_receipt():
+     def find(module, name):
+         return next((d for d in by[module]['declarations'] if d['name'] == name), None) or \
+             next((d for d in by[module]['declarations'] if d['name'].endswith('.' + name.split('.')[-1])), None)
++
++    def in_namespace(text, name):
++        """The name Lean gives a declaration the audit keys as `Becoming.` and its name as written: the namespaces
++        open at its line (`namespace Steps` … `theorem along_fixed` is Becoming.Steps.along_fixed)."""
++        short, opened = name.split('.', 1)[1], []
++        for line in text.splitlines():
++            if m := re.match(r'namespace (\S+)\s*$', line):
++                opened.append(m.group(1))
++            elif (m := re.match(r'end (\S+)\s*$', line)) and opened and opened[-1] == m.group(1):
++                opened.pop()
++            elif re.match(r'(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable) )*'
++                          r'(?:theorem|lemma|def|abbrev|structure|inductive|instance) ' + re.escape(short) + r'(?:\s|$)', line):
++                return '.'.join(opened + [short])
++        return name
+     for stage, data in kit.stage_data():
+         for module, names in data.get('added', {}).items():
+-            whole = kit.statements((TREE / kit.source_of(module)).read_text(encoding='utf-8'))[1]
++            source = (TREE / kit.source_of(module)).read_text(encoding='utf-8')
++            whole = kit.statements(source)[1]
+             for name in names:
+                 if name in data.get('moved', {}) or find(module, name):
+                     continue
+                 theorem = whole.get(name, '').startswith('theorem ')
+-                by[module]['declarations'].append({'kind': 'theorem' if theorem else 'def', 'name': name})
+-                by[module]['axiom_dependencies'][name] = []
++                full = in_namespace(source, name)
++                by[module]['declarations'].append({'kind': 'theorem' if theorem else 'def', 'name': full})
++                by[module]['axiom_dependencies'][full] = []
+                 by[module]['theorems'] += theorem
+         for name, (source, target) in data.get('moved', {}).items():
+             entry = find(source, name)
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
+index d62c2fd9f..251c0998e 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
+@@ -434,10 +434,22 @@ def trial(patches, reverse=False):
+     return None, ''
+ 
+ 
++def stage_state():
++    """Where apply records the stages it has put in place, in this tree's own git folder (never committed): the record
++    step and the re-point edit records and chapters a stage's patches also edit, after which its series no longer
++    reverses."""
++    path = Path(git('rev-parse', '--git-path', 'ou7-stages-in-place').stdout.strip())
++    return path if path.is_absolute() else ROOT / path
++
++
+ def applied_stages():
+-    """The selected stages in place: the longest run of them from the first whose patches, all of them, reverse on the
+-    tree as it stands, from the last back."""
++    """The selected stages in place: the longest run of them from the first that apply has recorded in this tree or,
++    before any record, whose patches, all of them, reverse on the tree as it stands, from the last back."""
+     stages = selected_stages()
++    if stage_state().exists():
++        recorded = stage_state().read_text(encoding='utf-8').split()
++        k = next((i for i, s in enumerate(stages) if s.name not in recorded), len(stages))
++        return stages[:k]
+     for k in range(len(stages), 0, -1):
+         if all(series(s) for s in stages[:k]) and trial([p for s in stages[:k] for p in series(s)], True)[0] is None:
+             return stages[:k]
+@@ -462,6 +474,8 @@ def apply_stages():
+                      f'series on that tree, {leave}')
+         for p in patches:
+             git('apply', str(p))
++        done.append(stage)
++        stage_state().write_text(' '.join(s.name for s in done) + '\n', encoding='utf-8')
+         print(f'stage {stage.name} ({len(patches)} patches): applied')
+ 
+ 

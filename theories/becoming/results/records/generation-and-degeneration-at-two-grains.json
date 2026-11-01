@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "At a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; with keeping from some point on, excluded middle makes the regions cover; telling going on from ending is excluded middle.",
     "zh": "以细类与粗类同读、按分支读，样式或沿某支而延，或于诸支皆尽；生成与守皆排斥退化，且可共处一点；以守读为自某点起之守，排中使诸域周遍；分辨延与尽即排中。"
@@ -265,8 +265,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 42 theorems in 61 declarations at receipt 20261031T054654.692180Z, and Becoming.MapInstances, 27 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers. Becoming.MapRegions (GW1, GW2), a core leaf importing GrammarMap only, 36 theorems in 42 declarations at the same receipt, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.",
-    "zh": "核心检查器以 Lean 4.29.1 从前奏检查（回执 20261031T054654.692180Z）：Becoming.GrammarMap，61 个声明中 42 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。MapRegions（GW1、GW2，核心叶）于同一回执：42 项声明（36 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 42 theorems in 61 declarations at receipt 20261031T054654.692180Z, and Becoming.MapInstances, 27 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers. Becoming.MapRegions (GW1, GW2), a core module importing GrammarMap only, 36 theorems in 42 declarations at the same receipt, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.",
+    "zh": "核心检查器以 Lean 4.29.1 从前奏检查（回执 20261031T054654.692180Z）：Becoming.GrammarMap，61 个声明中 42 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。MapRegions（GW1、GW2，核心模块）于同一回执：42 项声明（36 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。"
   },
   "next_delta": {
     "en": "State the old map's regimes (renewal, consumption, capture, the five questions of 势) as regions of this map on the old base's readings, and the meta-attractor's reading of selection at the coarse grain.",
@@ -491,7 +491,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
       "role": "statement",
-      "sha256": "2ec5de856104d4246adf64cf17267bff259e490732bec7b0527bc91c5428d510"
+      "sha256": "5383b3b8a99b2aaedf39039c1e246253aff4a742f9c7ce71853902cbc93fd6ec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
@@ -563,7 +563,7 @@
         "Becoming.«生则或粗生或传»",
         "Becoming.«粗有前则生为传»"
       ],
-      "sha256": "98116bcda6f47dd39a49b7a31bb4dc18c48665baf5a34cf0b7634597aa00c81b"
+      "sha256": "fd94d7ebc50f7facea8d5796339397d9e49860d0729c0ff63801cc2488cf84f4"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
@@ -584,6 +584,12 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -603,7 +609,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapRegions",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -641,6 +647,10 @@
     {
       "en": "31 October 2026, board item HE2, item 5 (study section 474): the successor's three reach laws (Map.step_reached_le, Map.step_reaches, Map.step_reaches_of_le) moved from MapRegions into GrammarMap whole, names and statements unchanged, so this record cites them from GrammarMap, and the validation scope gives both modules' counts at HE2's receipt; no law's text changes.",
       "zh": "2026年10月31日，工作板条目 HE2 之第 5 项（研究第 474 节）：后继之三及达律（Map.step_reached_le、Map.step_reaches、Map.step_reaches_of_le）连名与陈述整移自 MapRegions 入 GrammarMap，本记录遂自 GrammarMap 引之，验证范围言二模块于 HE2 回执之数；诸律之文不变。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): Becoming.RoomNet imports Becoming.MapRegions, so the validation scope calls MapRegions a core module, not a leaf, as its module doc now does. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：Becoming.RoomNet 导入 Becoming.MapRegions，故验证范围称 MapRegions 为核心模块而非叶，与其模块说明今之所言同。记录所述余无改变。"
     }
   ]
 }

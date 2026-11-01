@@ -1,0 +1,33 @@
+diff --git a/theories/becoming/results/records/what-a-cut-loses.json b/theories/becoming/results/records/what-a-cut-loses.json
+index a128f710e..fb82c3faf 100644
+--- a/theories/becoming/results/records/what-a-cut-loses.json
++++ b/theories/becoming/results/records/what-a-cut-loses.json
+@@ -460,7 +460,8 @@
+         "Becoming.le_dest",
+         "Becoming.steps",
+         "Becoming.total",
+-        "Becoming.Distinct"
++        "Becoming.Distinct",
++        "Becoming.total_pos"
+       ]
+     },
+     {
+@@ -489,7 +490,6 @@
+       "declarations": [
+         "Becoming.Flow.Balances",
+         "Becoming.total_add",
+-        "Becoming.total_pos",
+         "Becoming.total_pos_of_mem",
+         "Becoming.lt_iff_pos"
+       ]
+@@ -779,6 +779,10 @@
+     {
+       "en": "20 October 2026, R43 (study section 239): the cut's bound read on the carried world (carriedWorld_within_cut), the base-family instance the completion report's unity criterion asks of responses_le_missBound.",
+       "zh": "2026年10月20日，R43（研究第239节）：截断之界读在承载世界上（carriedWorld_within_cut），即完成报告的统一判据对 responses_le_missBound 所要求的基础族实例。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

@@ -1,0 +1,26 @@
+diff --git a/theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.json b/theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.json
+index bc62ef98d..f76acb54b 100644
+--- a/theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.json
++++ b/theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.json
+@@ -14,8 +14,8 @@
+     "zh": "FR 提议：在独立说明的同类可恢复基本损失中，若支持、负担与历史条件在规模扩展中保持，某个有限的较轻共同保护规模应能取得胜过固定较重损失的充分选择根据；严格损失匹配的规律给出其形式内容。"
+   },
+   "claim": {
+-    "en": "Strict loss matching obeys the laws below on every frame (Becoming.LossMatching). On these laws FR proposes that, within an independently specified family of same-kind recoverable basic losses, a fixed graver loss should not retain sufficient priority over arbitrarily many fixed lesser basic protections solely through its gravity difference. Where support, burdens and historical conditions persist under scale expansion, some finite scale of joint protection should acquire sufficient grounds for choice. This is an additional normative candidate beyond LR’s neighborhood, with affirmative defense and author counterreview, not a consequence of existing axioms; the laws state its exact formal content, not its warrant. One repair process is an instance (laws 7–9).",
+-    "zh": "严格损失匹配对每个框架服从下列规律（Becoming.LossMatching）。在这些规律之上，FR 提议：在独立说明的同类可恢复基本损失比较族中，固定的较重损失不应仅凭程度差异对任意多项固定的较轻基本保护始终保有充分优先；若支持、负担与历史条件可在规模扩展中保持，则某个有限共同保护规模应能取得充分选择根据。这是超出 LR 近邻的新增规范候选，附正面辩护与作者反审，不是已有公理的推论；规律陈述的是它的确切形式内容，不是它的根据。同一修复过程是实例（规律 7–9）。"
++    "en": "Strict loss matching satisfies the laws below on every frame (Becoming.LossMatching). On these laws FR proposes that, within an independently specified family of same-kind recoverable basic losses, a fixed graver loss should not retain sufficient priority over arbitrarily many fixed lesser basic protections solely through its gravity difference. Where support, burdens and historical conditions persist under scale expansion, some finite scale of joint protection should acquire sufficient grounds for choice. This is an additional normative candidate beyond LR’s neighborhood, with affirmative defense and author counterreview, not a consequence of existing axioms; the laws state its exact formal content, not its warrant. One repair process is an instance (laws 7–9).",
++    "zh": "严格损失匹配对每个框架满足下列规律（Becoming.LossMatching）。在这些规律之上，FR 提议：在独立说明的同类可恢复基本损失比较族中，固定的较重损失不应仅凭程度差异对任意多项固定的较轻基本保护始终保有充分优先；若支持、负担与历史条件可在规模扩展中保持，则某个有限共同保护规模应能取得充分选择根据。这是超出 LR 近邻的新增规范候选，附正面辩护与作者反审，不是已有公理的推论；规律陈述的是它的确切形式内容，不是它的根据。同一修复过程是实例（规律 7–9）。"
+   },
+   "laws": [
+     {
+@@ -711,6 +711,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): the first premise restated in the current terms (living significance as a stated condition; the theory without the condition) in place of the retired labels G0, Part I and the second axiom. The Chinese of a hypothesis no longer uses the retired Part I rendering (不含条件的理论, as the English reads).",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条前提以现行之词重述（作为条件陈述的生生之意义；无条件部分），代替已退休之标签 G0、第一部分与第二条公理。一条假设的中文不再用退役的“第一部分”说法（改为“不含条件的理论”，与英文一致）。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ],
+   "text_versions": [

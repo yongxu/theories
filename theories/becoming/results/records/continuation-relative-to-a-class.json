@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the World model's arising, ceasing, lineage and passing are its instances.",
     "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线自身之规律是其类之核；World 模型之生起、终止、世系与传是其实例。"
@@ -63,8 +63,8 @@
       ]
     },
     {
-      "en": "The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant relation inside it: it is the greatest one, and the core of a class is a class. Read both ways, constant under 缘 and under its converse, the core carries beginning, abiding and ending: for a class, what the two-way core relates shares beginning, abiding and ending (altering, a relation between two occurrences with a finer class, is not a mark of one occurrence).",
-      "zh": "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。双向读之（对缘及其逆皆有常），对一个类，双向之核所关联者生同、住同、亡同（异是两事之间带较细之类之关系，不是一事之相）。",
+      "en": "The core of a class under 缘 lies inside it, is constant and symmetric, and contains every symmetric constant relation inside it: it is the greatest one, and the core of a class is a class. For a class, ending is kept along the core and, its mirror, beginning along the core of the converse net; the two-way core, constant both ways, lies inside both, so what it relates shares beginning, abiding and ending (altering, a relation between two occurrences with a finer class, is not a mark of one occurrence).",
+      "zh": "一个类在缘下之核在其内，有常且对称，并包含其内每一个对称而有常之关系：它是最大者；类之核亦是类。对一个类，亡沿核不变，与之相映，生沿逆缘之核不变；双向之核（两向皆有常）在二者之内，故其所关联者生同、住同、亡同（异是两事之间带较细之类之关系，不是一事之相）。",
       "declarations": [
         "Becoming.«核»",
         "Becoming.«根»",
@@ -74,7 +74,9 @@
         "Becoming.«位核»",
         "Becoming.«位根»",
         "Becoming.«位核含于核»",
+        "Becoming.«位核含于逆核»",
         "Becoming.«亡于核下不变»",
+        "Becoming.«生于逆核下不变»",
         "Becoming.«生于位核下不变»",
         "Becoming.«位同则生亡同»",
         "Becoming.«位同则住同»"
@@ -305,8 +307,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 70 theorems in 118 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，118 个声明中 70 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 72 theorems in 120 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，120 个声明中 72 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Lift the shared laws onto the grammar with their owner, and the theorems that read activity only; state the counting of lines; and give generation and degeneration the content that continuation and renewal alone do not carry.",
@@ -486,7 +488,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba",
+      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c",
       "declarations": [
         "Becoming.Flame",
         "Becoming.Flame.alike",
@@ -517,6 +519,7 @@
         "Becoming.«两端分则中有标»",
         "Becoming.«亡»",
         "Becoming.«亡于核下不变»",
+        "Becoming.«生于逆核下不变»",
         "Becoming.«亡于粗则亡于细»",
         "Becoming.«亡于细者不必亡于粗»",
         "Becoming.«以核为判据则火无续»",
@@ -525,6 +528,7 @@
         "Becoming.«位同则生亡同»",
         "Becoming.«位核»",
         "Becoming.«位核含于核»",
+        "Becoming.«位核含于逆核»",
         "Becoming.«位根»",
         "Becoming.«住»",
         "Becoming.«住于细则住于粗»",
@@ -611,12 +615,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
       "role": "statement",
-      "sha256": "2ec5de856104d4246adf64cf17267bff259e490732bec7b0527bc91c5428d510"
+      "sha256": "5383b3b8a99b2aaedf39039c1e246253aff4a742f9c7ce71853902cbc93fd6ec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "8cbe05184cce5042da4800c11bd3cf4a7158369d9ca81c2ba21235115fa9468a",
+      "sha256": "cdd8e7eea4fbaea144620cf65b4228981c4eb7d83f5f97036504571613876b3e",
       "declarations": [
         "Becoming.Steps.along",
         "Becoming.Steps.next",
@@ -629,7 +633,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
       "declarations": [
         "Becoming.Web.ceases_iff_wang",
         "Becoming.Web.flash_positions",
@@ -643,7 +647,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a",
       "declarations": [
         "Becoming.Web.arisesFrom_iff_sheng",
         "Becoming.Web.ceasesFrom_iff_wang",
@@ -671,7 +675,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
       "role": "proof",
-      "sha256": "7b2322a0249ebfa1c75b298907ffe6f2948217ec42625a4d6a71428a770e9b9d",
+      "sha256": "0905ca6aa5e3faf2672042fdb7a593b6c9b9f07c10f89feab3a262a9d73799e7",
       "declarations": [
         "Becoming.PatternRelay.fire_shape",
         "Becoming.Web.byPassing_iff_hasPred",
@@ -758,33 +762,51 @@
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "role": "receipt",
+      "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Grammar",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -798,7 +820,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -842,6 +864,10 @@
     {
       "en": "31 October 2026, board item HE2 (study section 474). Item 1: «两端分则中有标» asks only that the relation it keeps be transitive (its hypotheses split, then trans, in place of a class), so law 10, in English and Chinese, now reads a transitive relation, a class being one; its declarations are unchanged. Items 6 and 7: the core's names «足以定理», «合有常则足以定理» renamed to «足以定核», «合有常则足以定核», with no alias kept, since off a class or a fixed successor the core need not be a 理; wording only in statement (zh), law 4 (zh), law 11 (zh): 理 written for a line's regularity, the core, becomes 规律 or 核; these renames and rewordings change no statement's content. The landing: does-not-show item 5's reason no longer says the grammar states no counting, since GrammarLaws counts on a region; Grammar's counts in the validation scope corrected to the receipt (stale since OU6).",
       "zh": "2026年10月31日，工作板条目 HE2（研究第 474 节）。第 1 项：«两端分则中有标» 只求所保之关系传递（其设先分后传，以代类），故第 10 律之英文与中文今言保一传递之关系，类即其一；所引声明不变。第 6、7 项：核之名 «足以定理»、«合有常则足以定理» 改为 «足以定核»、«合有常则足以定核»，不留别名，因离类或离定后之步，核未必为理；仅措辞，statement (zh)、law 4 (zh)、law 11 (zh)：写作理之一线之规律（核）改为规律或核；此诸改名与措辞皆不改所述之义。落地：不示之第 5 项之理由不再言文法不陈述计数，因 GrammarLaws 于域上计数；验证范围中 Grammar 之数依回执更正（自 OU6 以来未更）。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): law 5 generalized, as the corpus's family of 前際 and 後際 needed (conditional-laws-of-the-corpus): beginning is kept along the core of the converse net («生于逆核下不变»), which holds the two-way core («位核含于逆核»), the mirror of ending kept along the core; «生于位核下不变» is proved as its case, its statement unchanged. The law and the Grammar.lean reference gain 2 declarations; the validation scope's counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：律 5 推广，为语料之前际后际之族所需（conditional-laws-of-the-corpus）：生沿逆缘之核不变（«生于逆核下不变»），此核含双向之核（«位核含于逆核»），与亡沿核不变相映；«生于位核下不变» 证为其一例，陈述不变。律与 Grammar.lean 之引用增 2 声明；验证范围之数目为收据 20261101T094230.205342Z 者。记录所述余无改变。"
     }
   ]
 }

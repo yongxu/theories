@@ -1,0 +1,234 @@
+tree: the kit's files, 63 files the patches change, and 1658 more that the records pinning those reference
+tree /private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/dry-u4c9/tree from f4854baba and _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/
+== prepare
+== merge
+Already up to date.
+== patches
+9 patches apply to the merged tree, in order: Grammar.patch GrammarReadings.patch MapRegions.patch PLAN.patch GrammarTesting.patch 01-GrammarLaws-header.patch 02-not-going-out.patch 03-flow-cut.patch 04-uncrossed.patch
+== anchors
+anchors: every edit applies exactly once or is already in place; nothing written
+== stages
+stages selected: 10-u4c
+each stage's series is checked at apply, after the joins it is made against
+== apply
+Grammar.patch: applied
+GrammarReadings.patch: applied
+MapRegions.patch: applied
+PLAN.patch: applied
+GrammarTesting.patch: applied
+01-GrammarLaws-header.patch: applied
+02-not-going-out.patch: applied
+03-flow-cut.patch: applied
+04-uncrossed.patch: applied
+GrammarConditionals.lean: copied into the package
+RoomNet.lean: copied into the package
+RoomRuns.lean: copied into the package
+root module, import (A): applied
+root module, imports (B): applied
+root module, note (A): applied
+root module, notes (B): applied
+root module, GrammarCandidates's note: applied
+root module, GrammarReadings's note: applied
+root module, GrammarTesting's note: applied
+root module, MapRegions's note: applied
+root module, MapRegions's note: applied
+root module, GrammarReadings's note: applied
+root module, HeldPossible's note: applied
+root module, GrammarLaws's note: applied
+root module, GrammarLaws's note: applied
+root module, GrammarCrossing's note: applied
+root module, ConveyanceBoundaries's note: applied
+checker, core list (A): applied
+checker, INSTANCES list (B): applied
+checker, the ring's comment (B): applied
+checker, scope sentence (A): applied
+checker, scope sentences (B): applied
+checker, GrammarReadings' scope sentence (the general law): applied
+checker, a scope sentence of a module the owner's patches change: applied
+checker, a scope sentence of a module the owner's patches change: applied
+checker, a scope sentence of a module the owner's patches change: applied
+README.md, row (A): applied
+README.md, rows (B): applied
+README.md, MapRegions's row: applied
+README.md, GrammarLaws's row: applied
+README.md, GrammarLaws's row: applied
+README.md, GrammarCrossing's row: applied
+README.md, GrammarCrossing's row: applied
+README.md, the ring's row (B): applied
+README.zh.md, row (A): applied
+README.zh.md, rows (B): applied
+README.zh.md, MapRegions's row: applied
+README.zh.md, GrammarLaws's row: applied
+README.zh.md, GrammarLaws's row: applied
+README.zh.md, GrammarCrossing's row: applied
+README.zh.md, GrammarCrossing's row: applied
+README.zh.md, the ring's row (B): applied
+Lean catalogue, the ring's description (B): applied
+stage 10-u4c (33 patches): applied
+== audit
+Becoming.Prelude moved and restated, as its stage says: Becoming.length_le_of_matched - generalized from Type to every universe as it moves into the prelude (U4c), so that the census laws at Type u can use it; every earlier use is an instance
+Becoming.Prelude moved and restated, as its stage says: Becoming.not_not_all - generalized from Type to every universe as it moves into the prelude (U4c), so that the census laws at Type u can use it; every earlier use is an instance
+audit: the kit's patches add only their three laws, the two old laws their cases; the owner's move «不出», «闭则不出» and «所闭不出» into GrammarLaws unchanged, add the two readings of a region not crossed, and define Flow.Cut as what unfolds to its old body; every other statement is kept and every other changed source keeps its code; the leaves import what their notes say; the plan line is replaced; stages in place: 10-u4c
+stages in place: 10-u4c
+ 48 files changed, 1358 insertions(+), 522 deletions(-)
+== apply, a second time: nothing applied again
+audit: the kit's patches add only their three laws, the two old laws their cases; the owner's move «不出», «闭则不出» and «所闭不出» into GrammarLaws unchanged, add the two readings of a region not crossed, and define Flow.Cut as what unfolds to its old body; every other statement is kept and every other changed source keeps its code; the leaves import what their notes say; the plan line is replaced; stages in place: 10-u4c
+stages in place: 10-u4c
+ 48 files changed, 1358 insertions(+), 522 deletions(-)
+== synthetic receipt experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/verification.json
+== record
+08 §3: At core receipt [`20261101T021118.038876Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101 …
+08 §3: the ring named, seven leaf applications
+06 §四: the home section in place of the sentence on the 丙一 laws
+06, thesis, §四: applied
+06, thesis, open: applied
+06, §三, 通 and 息: applied
+06, open, 丙一: applied
+06, open, 穷 → 变 → 通: applied
+06, §三, 通 in the table: applied
+06, §三, 通 in the reading: applied
+01, §4, beginning kept along the converse net's core: applied
+01, §7, balance on every region not gone out of either way: applied
+03 §3: the home section after testing-within-the-net's open note
+03 §3, the toy's pointer to its branches derived: applied
+regions: two records and three modules
+continuation-relative-to-a-class: law 5 generalized, Becoming.«位核含于逆核», Becoming.«生于逆核下不变» declared; counts 72 theorems in 120 declarations; history note in place
+classical-definitions-in-the-grammar: law 4 generalized, Becoming.«两向有常有前则通» declared; counts 13 theorems in 18 declarations; history note in place
+generation-and-degeneration-at-two-grains: 2 words corrected; history note in place
+balance-from-conservation-along-a-relation: 2 words corrected; history note in place
+master-laws-on-the-grammar: the owner's items in place; Becoming.GrammarLaws 192 theorems in 221 declarations at receipt 20261101T021118.038876Z; history note in place
+not-going-out-of-a-region: the owner's items in place; Becoming.GrammarCrossing 9 theorems in 9 declarations at receipt 20261101T021118.038876Z; history note in place
+record theories/becoming/results/records/conditional-laws-of-the-corpus.json bound to experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/verification.json
+record theories/becoming/results/records/rooms-tested-by-a-window.json bound to experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/verification.json
+== record, a second time
+generation-and-degeneration-at-two-grains: 2 words corrected; history note in place
+balance-from-conservation-along-a-relation: 2 words corrected; history note in place
+master-laws-on-the-grammar: the owner's items in place; Becoming.GrammarLaws 192 theorems in 221 declarations at receipt 20261101T021118.038876Z; history note in place
+not-going-out-of-a-region: the owner's items in place; Becoming.GrammarCrossing 9 theorems in 9 declarations at receipt 20261101T021118.038876Z; history note in place
+record theories/becoming/results/records/conditional-laws-of-the-corpus.json bound to experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/verification.json
+record theories/becoming/results/records/rooms-tested-by-a-window.json bound to experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/verification.json
+== re-point of the drift: 295 pairs in 150 records, 15 Lean files rebound
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
+no drift left after the re-point; re-pointed: a-code-formed-between-formations, a-history-read-off-its-finite-stretches, a-reading-informed-and-revalued, a-step-coupling-keeps-at-every-horizon, a-weighting-faster-than-renewal-ends-the-base, balance-from-conservation-along-a-relation, balance-from-the-first-law, bounded-census-keeps-pace, capture-by-counted-choices, capture-through-the-rule, ceasing-needs-arising, census-balance, census-balance-under-continuation, census-read-off-the-exchange, claims-shown-in-context, classical-definitions-in-the-grammar, closing-needs-net-draw, coming-and-ceasing-keep-pace, comparing-two-courses-on-what-they-admit, comparison-where-the-rest-responds, consumption-ends-with-feeders, continuation-condition-decomposition, continuation-relative-to-a-class, continued-change-needs-openness, continuing-self-fed-from-beyond, conveyance-crosses-the-boundary, counterfactual-is-the-course, counting-standing-and-dependence, counting-under-enclosure, counts-exist-where-decided, coupled-regimes, coupled-webs, derived-extent-limits, differences-below-threshold, entropy-history-and-record, every-loss-passes-a-juncture, evolution-on-descent, exchanges-commute-unless-joined, exit-from-a-margin, feedback-and-reach, feeding-closure, fixed-places-and-sole-lines, free-energy-bound-in-counts, generalization-through-lumping, generation-and-degeneration-at-two-grains, generation-is-replenishment, gluing-under-parity, hexagram-arrangements-and-laws, hexagrams-on-the-spine, horizon-optima-hold-the-greatest-renewal, how-a-carried-difference-grows, how-loops-form, how-much-difference-arrives, how-often-couplings-act, identification-where-bounded, identification-where-runs-part, identity-across-steps, imbalance-as-relatum, keeping-forgoes-the-renewal-at-the-need, laws-at-coarser-steps, laws-at-finer-units, laws-of-one-step, laws-of-one-step-complete, learning-by-refutation, least-footprint-where-idleness-decided, least-loss-rest, life-as-condition-of-life, listing-once-is-decided-identity, living-on-and-descent, living-significance-on-held-lives, loops-within-what-a-law-reads, map-of-premises, master-laws-on-the-grammar, more-needs-renewers, necessarily-drawn-is-not-returning, negation-change-and-stable-cases, no-finite-part-bears-taking, normal-forms-need-decided-apartness, not-going-out-of-a-region, observation-is-a-route, one-root-to-its-edge, only-the-order-of-change-shows, optima-rebuild-a-depleted-base, orders-as-a-sum-over-histories, others-drawing-first-end-the-base, own-count-misses-joint-excess, pace-of-selection-within-what-flows-in, place-transition-nets-on-the-spine, precedence-and-its-links, premises-read-off-the-exchange, process-and-frame-as-readings, processes-represented-both-ways, re-optimizing-above-a-renewal-ends-it, recurrence-without-decidedness, recurrence-without-premise, recurring-reference-revision, regime-in-any-amounts, relata-counted-up-to-indiscernibility, represented-boundary-against-dependence, reserve-defers-ending, rest-at-every-resolution, rest-by-balance, rest-with-refinement-counted, retained-reference-joining-recovery, revision-with-an-undecided-value, rising-and-falling-in-one-exchange, room-read-off-the-exchange, runaway-distance-uncoupled, seeking-boundary, selection-term-over-generations, sensitivity-is-the-least-coupling, several-optimizers-drain-by-their-joint-capacity, space-and-its-parts, sum-over-histories-exact, sums-over-histories-by-support-horizon-and-order, support-from-the-supported, target-capture, tasks-and-what-performs-them, testing-within-couplings, testing-within-the-net, tests-fix-likeness-where-determined, the-boundary-of-enough-under-undetermined-laws, the-present-on-causal-set-growth, the-world-represented-both-ways, threshold-in-the-state-plane, two-sided-regulation-and-late-reading, typicality-by-counting, unceasing-generation-needs-renewal, weights-count-situations, what-a-course-keeps-reachable, what-a-cut-loses, what-a-law-of-the-whole-and-no-part-takes, what-a-method-comes-to-say-in-the-limit, what-a-pools-acts-respond-to, what-can-be-born-next, what-choices-show-of-an-order, what-dependence-alone-carries-of-a-level, what-finitely-many-labels-fix, what-holding-for-a-reading-is-worth, what-keeping-widening-needs, when-complying-when-read-is-best, when-the-runs-of-a-process-settle, where-a-move-is-formed, where-a-run-goes-on, where-novelty-gain-comes-from, where-the-possible-grows, where-two-courses-rejoin, whether-a-loop-closes-a-difference, whole-law-of-counting, whole-persists-through-generation
+== register refuses a log missing a predicted root of part B, the register untouched
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ("part B's roots differ from its apart-reasons.json", 'not predicted', [], 'predicted, not roots', ['Becoming.Rooms.Matched.rows'])
+== register
+dropped 12 register entries the leaves and the patches now use: Becoming.Map.Still.keeping, Becoming.«全守有终不并», Becoming.«全生成全守不并», Becoming.«后守退化不并», Becoming.«四相俱时», Becoming.«守则后守», Becoming.«守退化不并», Becoming.«昼夜往来不穷», Becoming.«有终则粗不有常», Becoming.«生住不并», Becoming.«自缘则常», Becoming.«遍而无相»
+moved roots whose entries name their new module: Becoming.«所闭不出» (Becoming.GrammarLaws)
+registered 36 roots of the leaves and the patches; part B's 28 as predicted
+roots not OU7's, for their owners: Becoming.SomeoneElse.root
+== register, a second time
+dropped 0 register entries the leaves and the patches now use: none
+moved roots whose entries name their new module: none
+registered 0 roots of the leaves and the patches; part B's 28 as predicted
+== study
+study § 490 written
+== study, a second time
+study § 490 already in place
+== the 152 records through the registry and the lint
+lint rest-at-every-resolution warning correspondence length en 2450 chars > 1200
+lint rest-at-every-resolution warning correspondence length zh 974 chars > 500
+lint selection-term-over-generations warning does_not_show[0] length en 256 chars > 240
+lint selection-term-over-generations warning does_not_show[1] length en 303 chars > 240
+lint selection-term-over-generations warning does_not_show[1] length zh 113 chars > 110
+lint selection-term-over-generations warning does_not_show[2] length en 269 chars > 240
+lint selection-term-over-generations warning statement market-word en: Price; name what the relation does
+lint sensitivity-is-the-least-coupling warning correspondence length en 1475 chars > 1200
+lint sensitivity-is-the-least-coupling warning correspondence length zh 614 chars > 500
+lint sensitivity-is-the-least-coupling warning does_not_show[3] length en 328 chars > 240
+lint sensitivity-is-the-least-coupling warning does_not_show[3] length zh 114 chars > 110
+lint sensitivity-is-the-least-coupling warning laws[1] length en 445 chars > 420
+lint space-and-its-parts warning correspondence length en 2297 chars > 1200
+lint space-and-its-parts warning correspondence length zh 1125 chars > 500
+lint sums-over-histories-by-support-horizon-and-order warning laws[2] length en 451 chars > 420
+lint sums-over-histories-by-support-horizon-and-order warning laws[3] length en 449 chars > 420
+lint support-from-the-supported warning correspondence length zh 539 chars > 500
+lint testing-within-couplings warning correspondence length zh 665 chars > 500
+lint testing-within-couplings warning laws[7] length en 452 chars > 420
+lint testing-within-couplings warning laws[8] length en 432 chars > 420
+lint testing-within-couplings warning hypotheses[4] length en 427 chars > 420
+lint testing-within-the-net warning statement negation-lead 1/1 sentences are negations; lead with what the result does
+lint tests-fix-likeness-where-determined warning laws[12] length en 996 chars > 420
+lint tests-fix-likeness-where-determined warning laws[12] length zh 402 chars > 190
+lint tests-fix-likeness-where-determined warning laws[13] length en 688 chars > 420
+lint tests-fix-likeness-where-determined warning laws[13] length zh 312 chars > 190
+lint tests-fix-likeness-where-determined warning laws[14] length en 956 chars > 420
+lint tests-fix-likeness-where-determined warning laws[14] length zh 437 chars > 190
+lint the-world-represented-both-ways warning does_not_show[3] one-sentence item has more than two sentences
+lint threshold-in-the-state-plane warning does_not_show[1] length en 532 chars > 240
+lint threshold-in-the-state-plane warning does_not_show[1] length zh 158 chars > 110
+lint threshold-in-the-state-plane warning does_not_show[1] status-restatement 1 sentence(s) restate open/unproved status
+lint unceasing-generation-needs-renewal warning correspondence length en 1456 chars > 1200
+lint unceasing-generation-needs-renewal warning correspondence length zh 505 chars > 500
+lint weights-count-situations warning correspondence length en 1385 chars > 1200
+lint weights-count-situations warning correspondence length zh 545 chars > 500
+lint what-a-cut-loses warning correspondence length en 1257 chars > 1200
+lint what-a-cut-loses warning correspondence length zh 562 chars > 500
+lint what-a-cut-loses warning laws[8] length en 434 chars > 420
+lint what-a-pools-acts-respond-to warning correspondence length zh 518 chars > 500
+lint what-a-pools-acts-respond-to warning hypotheses[0] length en 467 chars > 420
+lint what-finitely-many-labels-fix warning does_not_show[1] length en 300 chars > 240
+lint what-finitely-many-labels-fix warning does_not_show[1] length zh 118 chars > 110
+lint what-finitely-many-labels-fix warning laws[1] length en 559 chars > 420
+lint what-keeping-widening-needs warning does_not_show[2] market-word en: paid; name what the relation does
+lint what-keeping-widening-needs warning laws[16] market-word en: paid; name what the relation does
+lint where-a-run-goes-on warning correspondence length zh 545 chars > 500
+lint where-novelty-gain-comes-from warning correspondence length en 1335 chars > 1200
+lint where-novelty-gain-comes-from warning correspondence length zh 558 chars > 500
+lint where-two-courses-rejoin warning correspondence length zh 511 chars > 500
+lint whether-a-loop-closes-a-difference warning laws[6] length en 760 chars > 420
+lint whether-a-loop-closes-a-difference warning laws[6] length zh 245 chars > 190
+lint whether-a-loop-closes-a-difference warning laws[7] length en 525 chars > 420
+lint whether-a-loop-closes-a-difference warning laws[7] length zh 245 chars > 190
+lint whether-a-loop-closes-a-difference warning laws[8] length en 635 chars > 420
+lint whether-a-loop-closes-a-difference warning laws[8] length zh 281 chars > 190
+lint whole-law-of-counting warning correspondence length en 2069 chars > 1200
+lint whole-law-of-counting warning correspondence length zh 805 chars > 500
+lint whole-law-of-counting warning laws[24] length en 573 chars > 420
+0 findings on the 152 records; 599 elsewhere (this tree holds only the files the kit touches)
+== what the dry run changed in the tree
+ M theories/becoming/results/records/threshold-in-the-state-plane.json
+ M theories/becoming/results/records/two-sided-regulation-and-late-reading.json
+ M theories/becoming/results/records/typicality-by-counting.json
+ M theories/becoming/results/records/unceasing-generation-needs-renewal.json
+ M theories/becoming/results/records/weights-count-situations.json
+ M theories/becoming/results/records/what-a-course-keeps-reachable.json
+ M theories/becoming/results/records/what-a-cut-loses.json
+ M theories/becoming/results/records/what-a-law-of-the-whole-and-no-part-takes.json
+ M theories/becoming/results/records/what-a-method-comes-to-say-in-the-limit.json
+ M theories/becoming/results/records/what-a-pools-acts-respond-to.json
+ M theories/becoming/results/records/what-can-be-born-next.json
+ M theories/becoming/results/records/what-choices-show-of-an-order.json
+ M theories/becoming/results/records/what-dependence-alone-carries-of-a-level.json
+ M theories/becoming/results/records/what-finitely-many-labels-fix.json
+ M theories/becoming/results/records/what-holding-for-a-reading-is-worth.json
+ M theories/becoming/results/records/what-keeping-widening-needs.json
+ M theories/becoming/results/records/when-complying-when-read-is-best.json
+ M theories/becoming/results/records/when-the-runs-of-a-process-settle.json
+ M theories/becoming/results/records/where-a-move-is-formed.json
+ M theories/becoming/results/records/where-a-run-goes-on.json
+ M theories/becoming/results/records/where-novelty-gain-comes-from.json
+ M theories/becoming/results/records/where-the-possible-grows.json
+ M theories/becoming/results/records/where-two-courses-rejoin.json
+ M theories/becoming/results/records/whether-a-loop-closes-a-difference.json
+ M theories/becoming/results/records/whole-law-of-counting.json
+ M theories/becoming/results/records/whole-persists-through-generation.json
+ M tools/research/lean_catalogue.py
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/board_u4c.py
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/u4c-review-scratch/
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/u4c-scratch/
+?? _process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/u4c-stage/
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean
+?? experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T021118.038876Z/
+?? theories/becoming/results/records/conditional-laws-of-the-corpus.json
+?? theories/becoming/results/records/rooms-tested-by-a-window.json
+dry run done: /private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/dry-u4c9/tree

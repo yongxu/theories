@@ -1,0 +1,29 @@
+@Becoming.World.roles_level : ∀ {R : Type} (L : Becoming.Flow R R) (W : Becoming.Web R R) (t : Nat) (c : R),
+  (Becoming.World.ofRoles L W).web.level t (Sum.inr c) = (Becoming.World.ofKind L W).web.level t c
+@Becoming.World.roles_take : ∀ {R : Type} (L : Becoming.Flow R R) (W : Becoming.Web R R) (t : Nat) (f c : R),
+  (Becoming.World.ofRoles L W).flow.take t (Sum.inl f) (Sum.inr c) = (Becoming.World.ofKind L W).flow.take t f c
+@Becoming.World.roles_give : ∀ {R : Type} (L : Becoming.Flow R R) (W : Becoming.Web R R) (t : Nat) (f c : R),
+  (Becoming.World.ofRoles L W).flow.give t (Sum.inl f) (Sum.inr c) = (Becoming.World.ofKind L W).flow.give t f c
+@Becoming.CourseRoles.world_eq : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {W : Becoming.Web R R},
+  law.world present start W = Becoming.World.ofKind (law.course present start) (law.courseWeb present start W)
+@Becoming.CourseRoles.courseWorld_eq : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {W : Becoming.Web R R},
+  law.courseWorld present start W = Becoming.World.ofRoles (law.course present start) (law.courseWeb present start W)
+@Becoming.CourseRoles.level_eq : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {W : Becoming.Web R R} (t : Nat) (c : R),
+  (law.courseWorld present start W).web.level t (Sum.inr c) = (law.world present start W).web.level t c
+@Becoming.CourseRoles.take_eq : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R} {start : R → Nat}
+  {W : Becoming.Web R R} (t : Nat) (f c : R),
+  (law.courseWorld present start W).flow.take t (Sum.inl f) (Sum.inr c) = (law.world present start W).flow.take t f c
+@Becoming.CourseRoles.give_eq : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R} {start : R → Nat}
+  {W : Becoming.Web R R} (t : Nat) (f c : R),
+  (law.courseWorld present start W).flow.give t (Sum.inl f) (Sum.inr c) = (law.world present start W).flow.give t f c
+@Becoming.CourseRoles.balanced_iff : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {W : Becoming.Web R R},
+  (law.world present start W).Balanced ↔ (law.courseWorld present start W).Balanced
+@Becoming.CourseRoles.runs_agree : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {W : Becoming.Web R R} (na : law.Nonanticipating) (feasible : law.Feasible present start) (t : Nat)
+  (c : R),
+  ((Becoming.ExchangeLaw.courseRun na feasible).state t).level (Sum.inr c) =
+    (Becoming.ExchangeLaw.worldRun na W feasible).state t c

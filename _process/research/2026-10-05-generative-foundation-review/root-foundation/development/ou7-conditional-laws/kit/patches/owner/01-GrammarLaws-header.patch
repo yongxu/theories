@@ -1,0 +1,49 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+index 0482974..414516c 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+@@ -12,13 +12,13 @@ steps counted), lumping and order. Each is stated with what it uses: where a glo
+ whole carrier), it is a corollary of a local one stated beside it. This module imports only the grammar,
+ its map (`Becoming.GrammarMap`, for `«尽»`) and the prelude, so it sits below every model:
+ `Becoming.Frame` imports it, and the models' laws that are cases of these are proved from them in
+-their own modules (closure in `Frame`, `GrammarScope` and `Junctures`; finite runs in `Recurrence`,
+-`Attraction`, `Amounts` and `Learning`; lumping bridged in `Laws` and proved from them in `Mechanism`,
+-`GrammarRegularity`, `IdentificationRuns` and `LearningRuns`; order in `Admission`, `Regions` and
+-`Weightings`, and the lagged orders of `ComparingCourses` and `ReachableRanges` from the two relation
+-laws beside widening's). Those two (`strictJoin_trans`, `strictJoin_irrefl`) are laws of any two
+-relations, stated on `α → α → Prop` rather than `«际» α`: lemmas the orders use, not statements of
+-the grammar. Balance alone is
++their own modules (closure in `Frame`, `GrammarScope`, `Junctures`, `Response` and `SelectionPool`;
++finite runs in `Recurrence`, `Attraction`, `Amounts` and `Learning`; lumping bridged in `Laws` and
++proved from them in `Mechanism`, `GrammarRegularity`, `IdentificationRuns` and `LearningRuns`; order
++in `Admission`, `Regions` and `Weightings`, and the lagged orders of `ComparingCourses` and
++`ReachableRanges` from the two relation laws beside widening's). Those two (`strictJoin_trans`,
++`strictJoin_irrefl`) are laws of any two relations, stated on `α → α → Prop` rather than `«际» α`:
++lemmas the orders use, not statements of the grammar. Balance alone is
+ represented, not derived: `Flow.Balances`, `Flow.BalancesOn`, `Flow.Balances.over` and
+ `balance_over_stretch_on` are each read on the grammar both ways (`Flow.balances_iff_units`,
+ `Flow.balancesOn_iff_units`, `Flow.over_iff_units`, `«程守数当且仅当可对»`), and their proofs and
+@@ -54,10 +54,10 @@ their consumers' stay arithmetic, since each needs only the count.
+   of `R` from `a` taken at `o`, lies within `o`'s or `a`'s closure under `R`
+   (`«借步之所闭在二所闭»`), and the two lie within `o`'s closure under `R'` where `R'` holds `R` and
+   `a` lies within `o`'s closure under it (`«二所闭在借步之所闭»`); Response's `WithinClosure.converse` and
+-  SelectionPool's `WithinClosure.of_reads` and `WithinClosureOf.to_reads` are proved as these. A region of the steps of time that
+-  every step keeps holds from where it holds on, the closure at the successor along a line
+-  (`kept_onward`); the models' activity laws that keep a region along the steps by their own
+-  induction are its cases.
++  SelectionPool's `WithinClosure.of_reads` and `WithinClosureOf.to_reads` are proved as these. A
++  region of the steps of time that every step keeps holds from where it holds on, the closure at the
++  successor along a line (`kept_onward`); the models' activity laws that keep a region along the
++  steps by their own induction are its cases.
+ * **Balance.** A perfect pairing (`«对»`) between finite lists under any relation conserves their
+   count (`«对之长»`); under the one it is exactly equal count (`«一之对»`), and under an arbitrary
+   relation equal count need not give one (`«等长而不对之例»`, under the empty relation). Pairings
+@@ -86,7 +86,7 @@ their consumers' stay arithmetic, since each needs only the count.
+   (`«定后定前则前并生对后并亡»`), and where every predecessor of a unit after stands before and every
+   successor of a unit before stands after, arising and ceasing are exactly beginning (`«生»`) and
+   ending (`«亡»`) (`«前者在前则所列生者生»`, `«后者在后则所列亡者亡»`).
+-  The listing and the test are supplied, as the pairing is.
++  The listing and the test are supplied.
+ * **Finite runs: return and being drawn.** For every relation, `x` is drawn exactly where it
+   reaches something that does not reach back (`«入当且仅当有不返»`). With the successor fixed at
+   what `x` reaches, `x`, reaching itself, is not drawn (`«定后于则返者不入»`, from

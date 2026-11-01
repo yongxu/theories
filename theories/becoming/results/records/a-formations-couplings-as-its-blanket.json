@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T23:21:43+00:00",
+  "reviewed_at_utc": "2026-11-01T04:52:47+00:00",
   "statement": {
-    "en": "Any model fed by what couples into a formation is by construction the agent of a blanketed law whose sensory course is the formation's own course; a degenerate reading refutes no family whose law is determined, while a sparse partition fixed apart from the family can be refuted by one run.",
-    "zh": "以耦合入一形成者为食之任一模型，依构造为一毯化之律之主体，其感官历程即该形成之自身历程；退化之读不驳任何其律确定之族，而独立于族而定之稀疏之分可为一运行所驳。"
+    "en": "A formation's couplings make any model they feed a blanketed agent; degenerate readings refute no determined family, sparse ones fixed apart can fail on one run; there, step external, its level is internal to a law determined part by part exactly where level, what couples in and act fix the next.",
+    "zh": "一形成之耦合使以之为食之任一模型成毯化之主体；退化之读不驳律确定之族，独立而定之稀疏之读可为一运行所驳；于此，步为外部，其层级为某逐部分确定之律之内部，恰当层级、耦合入者与作为逐对定其次。"
   },
   "laws": [
     {
@@ -155,6 +155,106 @@
         "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
         "Becoming.BlanketCouplings.ReadsExternal.whole_consistent"
       ]
+    },
+    {
+      "en": "With the step as the external part, one course is consistent part by part, and admitted by some law determined part by part, exactly where its agent is consistent: at any two steps alike on the internal, sensory and active states, the next internal and active states agree; the world's half holds of every such course; tested only where the three states recur (stepExternal_admitted_iff and three more).",
+      "zh": "步为外部部分，则一历程逐部分一致、且为某逐部分确定之律所容，恰当其主体一致：于内部、感官与作为之态皆相同之任二步，次内部态与次作为态皆相合；世界之半于每一此历程皆成；唯于三态复现处受检（stepExternal_admitted_iff 等四项）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.stepExternal",
+        "Becoming.BlanketCouplings.AgentConsistent",
+        "Becoming.BlanketCouplings.stepExternal_consistent_iff",
+        "Becoming.BlanketCouplings.stepExternal_admitted_iff"
+      ]
+    },
+    {
+      "en": "Given functions for the next internal and active states at every step, the course is the course of a blanketed law whose internal part moves by the sensory state at its own step, whose sensory part is the given course at the next step and whose external part is the step; its world's side is the open loop at that course; the converse, the functions from consistency alone, is not stated (stepLaw, stepLaw_course).",
+      "zh": "若诸函数于每步予次内部态与次作为态，则该历程为一毯化之律之历程，其内部部分依其本步之感官态而移，感官部分为下一步之所给历程，外部部分为步；其世界一侧为该历程之开环；逆向（仅由一致得诸函数）未陈（stepLaw、stepLaw_course）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.stepLaw",
+        "Becoming.BlanketCouplings.stepLaw_course"
+      ]
+    },
+    {
+      "en": "A value across steps: two levels at any two steps have one value exactly where they admit the formation alike, each at its step, and agree on what couples into it by level; it gives the values at each step (ValuesThrough), which compare one step only and which a value carrying the step meets; where admission is decided and the couplings listed, listed_values' value meets it (listed_valuesAcross and two more).",
+      "zh": "跨步之值：任二步之二层级同值，恰当其各于其步同准入该形成，且于以层级耦合入者相合；其予每步之值（ValuesThrough），后者唯比一步，携步之值满足之；准入已定且耦合已列处，listed_values 之值满足之（listed_valuesAcross 等三项）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.ValuesAcross",
+        "Becoming.BlanketCouplings.ValuesAcross.through",
+        "Becoming.BlanketCouplings.listed_valuesAcross"
+      ]
+    },
+    {
+      "en": "One balanced run, read with a formation's level internal, a value across steps sensory, its act active and the step external, is admitted by some law determined part by part exactly where, at any two steps j and k alike on its level, admission, coupled levels and act, given at j plus taken at k equals given at k plus taken at j and next acts agree; tested only where these recur (levelParts_admitted_iff and six more).",
+      "zh": "一平衡之运行，以一形成之层级为内部、跨步之值为感官、其作为为作为部分、步为外部而读，为某逐部分确定之律所容，恰当于其层级、准入、耦合入之层级与作为皆相同之任二步 j、k，j 之所予加 k 之所取等于 k 之所予加 j 之所取，且次作为相合；唯于诸态复现处受检（levelParts_admitted_iff 等七项）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.next_level_alike_iff",
+        "Becoming.BlanketCouplings.levelParts",
+        "Becoming.BlanketCouplings.rowAct",
+        "Becoming.BlanketCouplings.presentRow",
+        "Becoming.BlanketCouplings.DecidesPresence",
+        "Becoming.BlanketCouplings.agentConsistent_iff_exchange",
+        "Becoming.BlanketCouplings.levelParts_admitted_iff"
+      ]
+    },
+    {
+      "en": "A drain in three phases fails the level's condition for every value across steps: nothing couples into the formation; the other relatum, whose level is its phase, takes one unit from the formation at its first phase and gives one at its second, balanced at every step; at steps 2 and 3 the formation's level, value and act agree and its next levels are one and nothing (PhasedDrain.not_admitted and twenty-three more).",
+      "zh": "三相之耗于每一跨步之值皆不满足层级之条件：无物耦合入该形成；另一关系项（其层级即其相）于其第一相取该形成一单位、于第二相予之一单位，每步皆平衡；于第 2、3 步该形成之层级、值与作为相合，而次层级为一与无（PhasedDrain.not_admitted 等二十四项）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.TwoRelata",
+        "Becoming.BlanketCouplings.TwoRelata.g_not_mem_h",
+        "Becoming.BlanketCouplings.PhasedDrain.phase",
+        "Becoming.BlanketCouplings.PhasedDrain.gLevel",
+        "Becoming.BlanketCouplings.PhasedDrain.hLevel",
+        "Becoming.BlanketCouplings.PhasedDrain.hTakesG",
+        "Becoming.BlanketCouplings.PhasedDrain.hGivesG",
+        "Becoming.BlanketCouplings.PhasedDrain.hTakesH",
+        "Becoming.BlanketCouplings.PhasedDrain.hGivesH",
+        "Becoming.BlanketCouplings.PhasedDrain.take",
+        "Becoming.BlanketCouplings.PhasedDrain.give",
+        "Becoming.BlanketCouplings.PhasedDrain.flow",
+        "Becoming.BlanketCouplings.PhasedDrain.level",
+        "Becoming.BlanketCouplings.PhasedDrain.web",
+        "Becoming.BlanketCouplings.PhasedDrain.balance_g",
+        "Becoming.BlanketCouplings.PhasedDrain.balance_h",
+        "Becoming.BlanketCouplings.PhasedDrain.balances",
+        "Becoming.BlanketCouplings.PhasedDrain.uncoupled",
+        "Becoming.BlanketCouplings.PhasedDrain.one_value",
+        "Becoming.BlanketCouplings.PhasedDrain.values",
+        "Becoming.BlanketCouplings.PhasedDrain.presence",
+        "Becoming.BlanketCouplings.PhasedDrain.presence_decides",
+        "Becoming.BlanketCouplings.PhasedDrain.act",
+        "Becoming.BlanketCouplings.PhasedDrain.not_admitted"
+      ]
+    },
+    {
+      "en": "A drain and feed in two phases meets the level's condition for any value, the level recurring: the other relatum, not coupling in, takes one unit when on and gives one when off, and the next level is fixed by the level. With the drain in three phases, whether what moves the level couples in does not decide the condition (Alternating.admitted and twenty-three more).",
+      "zh": "二相之耗与供于任一值皆满足层级之条件，层级复现：另一关系项不耦合入，开时取一单位、关时予一单位，次层级由层级所定。与三相之耗并观，移层级者是否耦合入不定此条件（Alternating.admitted 等二十四项）。",
+      "declarations": [
+        "Becoming.BlanketCouplings.Alternating.phase",
+        "Becoming.BlanketCouplings.Alternating.gLevel",
+        "Becoming.BlanketCouplings.Alternating.hLevel",
+        "Becoming.BlanketCouplings.Alternating.hTakesG",
+        "Becoming.BlanketCouplings.Alternating.hGivesG",
+        "Becoming.BlanketCouplings.Alternating.hTakesH",
+        "Becoming.BlanketCouplings.Alternating.hGivesH",
+        "Becoming.BlanketCouplings.Alternating.take",
+        "Becoming.BlanketCouplings.Alternating.give",
+        "Becoming.BlanketCouplings.Alternating.flow",
+        "Becoming.BlanketCouplings.Alternating.level",
+        "Becoming.BlanketCouplings.Alternating.web",
+        "Becoming.BlanketCouplings.Alternating.balance_g",
+        "Becoming.BlanketCouplings.Alternating.balance_h",
+        "Becoming.BlanketCouplings.Alternating.balances",
+        "Becoming.BlanketCouplings.Alternating.uncoupled",
+        "Becoming.BlanketCouplings.Alternating.values",
+        "Becoming.BlanketCouplings.Alternating.presence",
+        "Becoming.BlanketCouplings.Alternating.presence_decides",
+        "Becoming.BlanketCouplings.Alternating.act",
+        "Becoming.BlanketCouplings.Alternating.gLevel_inj",
+        "Becoming.BlanketCouplings.Alternating.recurs",
+        "Becoming.BlanketCouplings.Alternating.agentConsistent",
+        "Becoming.BlanketCouplings.Alternating.admitted"
+      ]
     }
   ],
   "hypotheses": [
@@ -169,6 +269,10 @@
     {
       "en": "Modelling choices: discrete synchronous steps; determined laws; the four parts of types in Type; the blanket as sparse coupling, not conditional independence; which map a thing's partition is read by is not derived.",
       "zh": "建模之选择：离散同步之步；确定之律；四部分之类型在 Type；毯为稀疏耦合，非条件独立；物之分以何映射而读，未推出。"
+    },
+    {
+      "en": "For a formation's level: one run of a World (World.of R L W), balanced where the exchange form is used, the step the external part; a value across steps (ValuesAcross), the step entering only through admission at each step; the act its rows on listed relata at the steps a presence course marks, which may decide where it takes part (DecidesPresence); amounts in Nat.",
+      "zh": "形成之层级：一世界（World.of R L W）之一运行，用交换之形处平衡，步为外部部分；一跨步之值（ValuesAcross），步唯经各步之准入而入；作为为其于一参与历程所标之步、于所列关系项之行，该历程可定其参与与否（DecidesPresence）；量在 Nat。"
     }
   ],
   "does_not_show": [
@@ -178,18 +282,23 @@
       "kind": "non-implication"
     },
     {
-      "en": "The formation's own record as the internal part: the agent is a model fed by what couples in.",
-      "zh": "形成自身之记录为内部部分：主体乃以耦合入者为食之模型。",
+      "en": "A formation's records other than its level as the internal part: for these the agent is a model fed by what couples in.",
+      "zh": "形成之层级以外之记录为内部部分：于此主体乃以耦合入者为食之模型。",
       "kind": "scope"
     },
     {
-      "en": "The World's own exchange as an environment: the World's case is the open loop, the closed loop a model beside it.",
-      "zh": "世界自身之交换为环境：世界之情形为开环，闭环为其旁之模型。",
+      "en": "The World's own exchange as an environment: the join's World case is the open loop, the closed loop a model beside it; along one run the level's reading carries the exchange in the level, the rest entering only through the step.",
+      "zh": "世界自身之交换为环境：相接之世界情形为开环，闭环为其旁之模型；沿一运行，层级之读以层级载其交换，余者唯经步而入。",
       "kind": "scope"
     },
     {
-      "en": "A blanketed law for every family consistent part by part: a next state at every reading no course shows is needed.",
-      "zh": "每一逐部分一致之族皆有毯化之律：需于无历程所示之每一读择一次态。",
+      "en": "A formation's level as the internal part across a family of runs, or with the step off the world's side, where the world's half is a condition; for self-bearing formations, whose own level couples in, nothing beyond one run with the step.",
+      "zh": "形成之层级于一族运行、或步不在世界一侧时为内部部分，此时世界之半成一条件；自持之形成（其自身层级耦合入）于一运行持步之外无所示。",
+      "kind": "scope"
+    },
+    {
+      "en": "A blanketed law for every family consistent part by part, or functions for a consistent course: a next state at every reading no course shows is needed.",
+      "zh": "每一逐部分一致之族皆有毯化之律，或一致之历程有诸函数：需于无历程所示之每一读择一次态。",
       "kind": "scope"
     },
     {
@@ -226,6 +335,13 @@
         "en": "Two courses from one value parting at their first step: the family is not consistent, its clocked reading consistent part by part (clocked_witness).",
         "zh": "自一值出发、于首步分离之二历程：族不一致，而其带时钟之读逐部分一致（clocked_witness）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
+      "detail": {
+        "en": "A drain in three phases: nothing couples into the formation and the run balances, yet at steps 2 and 3 its level, value and act agree and its next levels differ, so for every value across steps no law determined part by part admits the run read with its level internal (PhasedDrain.not_admitted).",
+        "zh": "三相之耗：无物耦合入该形成，运行平衡，然于第 2、3 步其层级、值与作为相合而次层级相异，故于每一跨步之值，以其层级为内部而读之运行不为任何逐部分确定之律所容（PhasedDrain.not_admitted）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -237,16 +353,16 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty (core receipt 20261031T231958.020578Z): BlanketCouplings (43 theorems in 76 declarations) imports Blanket, Histories and IdentificationRuns, a leaf; comparisons by matching and congrArg, no decide. One result in three parts, each near-definitional; the classification is the delta. Reviewed by other AI agents: the design (REVIEW-UE27-DESIGN, fifteen findings), the scratch Lean (REVIEW-UE27-LEAN, fifteen, with its probe) and the landing texts and records (REVIEW-UE27-LANDING, twenty-two), every finding taken; study section 488; not reviewed by a person.",
-    "zh": "纯核，公理报告皆空（核心回执 20261031T231958.020578Z）：BlanketCouplings（43 条定理，76 项声明）引 Blanket、Histories 与 IdentificationRuns，为叶。一结果三部分，皆近乎定义；分类为其增量。他 AI 代理审之：设计（REVIEW-UE27-DESIGN，十五条）、草稿 Lean（REVIEW-UE27-LEAN，十五条）、落地文本与记录（REVIEW-UE27-LANDING，二十二条），凡所见皆取；研究第 488 节；未经人审。"
+    "en": "Pure core, every axiom report empty (core receipt 20261101T044825.244995Z): BlanketCouplings (70 theorems in 140 declarations) imports Blanket, Histories and IdentificationRuns, a leaf; no decide. Near-definitional; the delta is the classification and, for a formation's level, the condition on the World's exchange, pairwise. Reviewed by other AI agents, every finding taken: UE27's design, Lean and landing texts (fifteen, fifteen and twenty-two findings) and UE28's (fifteen, thirteen and eighteen); study sections 488 and 491; not reviewed by a person.",
+    "zh": "纯核，公理报告皆空（核心回执 20261101T044825.244995Z）：BlanketCouplings（70 条定理，140 项声明）引 Blanket、Histories 与 IdentificationRuns，为叶。近乎定义；增量为分类，及形成之层级于世界之交换上之逐对条件。他 AI 代理审之，凡所见皆取：UE27 之设计、Lean 与落地文本（十五、十五、二十二条），UE28 者（十五、十三、十八条）；研究第 488 与 491 节；未经人审。"
   },
   "next_delta": {
-    "en": "The formation's own record as the internal part of a blanketed law; a blanketed law for a family consistent part by part, with a choice at the readings no course shows; review by a person.",
-    "zh": "形成自身之记录为毯化之律之内部部分；逐部分一致之族之毯化之律（于无历程所示之读择之）；人之审查。"
+    "en": "A formation's records other than its level as the internal part of a blanketed law; its level as that part across a family of runs, where the world's half is a condition, or along one run without functions given; a blanketed law for a family consistent part by part, with a choice at the readings no course shows; review by a person.",
+    "zh": "形成之层级以外之记录为毯化之律之内部部分；其层级于一族运行（世界之半为条件）、或沿一运行而无所给之函数，为此部分；逐部分一致之族之毯化之律（于无历程所示之读择之）；人之审查。"
   },
   "correspondence": {
-    "en": "The principle defines a thing by its Markov blanket (Friston 2013, 2019; Kirchhoff, Parr, Palacios, Friston and Kiverstein 2018). That a blanket depends on how a partition is read is argued in words: Pearl's blankets, fixed within a model, against Friston's, read as a thing's boundary (Bruineberg, Dołęga, Dewhurst and Baltieri 2022). The wider criticism: a formalism applying to any domain is a narrower account of life and mind than claimed (Raja, Valluri, Baggs, Chemero and Anderson 2021); the statistical and dynamical definitions are not equivalent (Biehl, Pollock and Kanai 2021); the proponents class the existence claim with principles of stationary action, not falsifiable strictly speaking (Ramstead and others 2023). The coupling form is the deterministic case of the time-unrolled blanket (Virgo, Rosas and Biehl 2022); since that blanket compares courses from one start, a single run constrains nothing under it. The single-run witness is of the kind of Hexagram.runsOrder_reads. AI reading: which blanket a thing has is how its parts are read; the join is a construction and forbids nothing of the formation's course. The readings are the AI's, in DESIGN.md.",
-    "zh": "原理以马尔可夫毯定一物（Friston 2013、2019；Kirchhoff、Parr、Palacios、Friston、Kiverstein 2018）。毯依分之读法，已以言论之：Pearl 之毯定于模型之内，与 Friston 之毯读为物之界相对（Bruineberg、Dołęga、Dewhurst、Baltieri 2022）。更广之批评：适用于任何领域之形式，作为生命与心智之说明较所称者为窄（Raja 等 2021）；统计与动力之定义不等价（Biehl、Pollock、Kanai 2021）；倡之者将存在之主张归于驻定作用之原理，严格言之不可证伪（Ramstead 等 2023）。耦合之形即时间展开之毯之确定情形（Virgo、Rosas、Biehl 2022）；该毯比较同一起点之诸历程，故其下单一运行无所约束。单一运行之见证与 Hexagram.runsOrder_reads 同类。AI 之读：物有何毯，在其诸部分如何读；相接乃构造，不禁该形成之历程之任何事。读法皆 AI 之读，载于 DESIGN.md。"
+    "en": "The principle defines a thing by its Markov blanket (Friston 2013, 2019; Kirchhoff and others 2018). That a blanket depends on how a partition is read is argued in words: Pearl's blankets, fixed within a model, against Friston's, read as a thing's boundary (Bruineberg, Dołęga, Dewhurst and Baltieri 2022). Wider: a formalism for any domain explains life and mind less than claimed (Raja and others 2021); statistical and dynamical blankets differ (Biehl, Pollock and Kanai 2021); its proponents concede the existence claim is not strictly falsifiable (Ramstead and others 2023). The coupling form is the deterministic time-unrolled blanket (Virgo, Rosas and Biehl 2022), which compares courses from one start, so a single run constrains nothing under it; a single run can refute a law the same at every step on the agent's side, which that blanket does not require, read by a partition fixed apart (ReadsExternal, of Hexagram.runsOrder_reads' kind; for a formation's level, PhasedDrain). The level's condition is the elementary one for one trajectory of a time-invariant deterministic state machine, here on the World's exchange. AI reading: which blanket a thing has is how its parts are read.",
+    "zh": "原理以马尔可夫毯定一物（Friston 2013、2019；Kirchhoff 等 2018）。毯依分之读法，已以言论之：Pearl 之毯定于模型之内，与 Friston 之毯读为物之界相对（Bruineberg、Dołęga、Dewhurst、Baltieri 2022）。更广：适用于任何领域之形式，于生命与心智所释较所称为少（Raja 等 2021）；统计与动力之毯不同（Biehl、Pollock、Kanai 2021）；倡之者认存在之主张严格言之不可证伪（Ramstead 等 2023）。耦合之形即确定之时间展开之毯（Virgo、Rosas、Biehl 2022），其比较同一起点之诸历程，故其下单一运行无所约束；而单一运行可驳主体一侧每步皆同（该毯不要求此）、以独立而定之分读之之律（ReadsExternal，与 Hexagram.runsOrder_reads 同类；形成之层级则 PhasedDrain）。层级之条件即单一轨迹合于时不变确定状态机之初等条件，此处陈于世界之交换。AI 之读：物有何毯，在其诸部分如何读。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
   "aliases": [
@@ -255,7 +371,9 @@
     "which blanket a thing has",
     "when a blanket constrains",
     "Becoming.BlanketCouplings.blanket_iff_through",
-    "Becoming.BlanketCouplings.ReadsExternal.not_blanketed"
+    "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
+    "a formation's level as the internal part",
+    "Becoming.BlanketCouplings.levelParts_admitted_iff"
   ],
   "dependencies": [
     {
@@ -280,6 +398,14 @@
       "detail": {
         "en": "ShownBy, ConsistentFamily, Admits, shownBy_le_iff and shownBy_determined_iff: the law a family shows, read part by part.",
         "zh": "ShownBy、ConsistentFamily、Admits、shownBy_le_iff 与 shownBy_determined_iff：族所示之律，逐部分而读。"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.BalancedHistory and Web.CoupledInto: the balanced history the level's condition reads, and the coupling the witnesses deny.",
+        "zh": "Flow.BalancedHistory 与 Web.CoupledInto：层级之条件所读之平衡之史，及见证所否之耦合。"
       }
     }
   ],
@@ -311,15 +437,63 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.BlanketCouplings.AgentConsistent",
+        "Becoming.BlanketCouplings.Alternating.act",
+        "Becoming.BlanketCouplings.Alternating.admitted",
+        "Becoming.BlanketCouplings.Alternating.agentConsistent",
+        "Becoming.BlanketCouplings.Alternating.balance_g",
+        "Becoming.BlanketCouplings.Alternating.balance_h",
+        "Becoming.BlanketCouplings.Alternating.balances",
+        "Becoming.BlanketCouplings.Alternating.flow",
+        "Becoming.BlanketCouplings.Alternating.gLevel",
+        "Becoming.BlanketCouplings.Alternating.gLevel_inj",
+        "Becoming.BlanketCouplings.Alternating.give",
+        "Becoming.BlanketCouplings.Alternating.hGivesG",
+        "Becoming.BlanketCouplings.Alternating.hGivesH",
+        "Becoming.BlanketCouplings.Alternating.hLevel",
+        "Becoming.BlanketCouplings.Alternating.hTakesG",
+        "Becoming.BlanketCouplings.Alternating.hTakesH",
+        "Becoming.BlanketCouplings.Alternating.level",
+        "Becoming.BlanketCouplings.Alternating.phase",
+        "Becoming.BlanketCouplings.Alternating.presence",
+        "Becoming.BlanketCouplings.Alternating.presence_decides",
+        "Becoming.BlanketCouplings.Alternating.recurs",
+        "Becoming.BlanketCouplings.Alternating.take",
+        "Becoming.BlanketCouplings.Alternating.uncoupled",
+        "Becoming.BlanketCouplings.Alternating.values",
+        "Becoming.BlanketCouplings.Alternating.web",
         "Becoming.BlanketCouplings.BlanketConsistentFamily",
         "Becoming.BlanketCouplings.BlanketConsistentFamily.mono",
         "Becoming.BlanketCouplings.BlanketDetermined",
         "Becoming.BlanketCouplings.BlanketDetermined.determined",
         "Becoming.BlanketCouplings.BlanketDetermined.of_le",
+        "Becoming.BlanketCouplings.DecidesPresence",
         "Becoming.BlanketCouplings.PartConsistentFamily",
         "Becoming.BlanketCouplings.PartConsistentFamily.mono",
         "Becoming.BlanketCouplings.PartDependsOnlyOn",
         "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le",
+        "Becoming.BlanketCouplings.PhasedDrain.act",
+        "Becoming.BlanketCouplings.PhasedDrain.balance_g",
+        "Becoming.BlanketCouplings.PhasedDrain.balance_h",
+        "Becoming.BlanketCouplings.PhasedDrain.balances",
+        "Becoming.BlanketCouplings.PhasedDrain.flow",
+        "Becoming.BlanketCouplings.PhasedDrain.gLevel",
+        "Becoming.BlanketCouplings.PhasedDrain.give",
+        "Becoming.BlanketCouplings.PhasedDrain.hGivesG",
+        "Becoming.BlanketCouplings.PhasedDrain.hGivesH",
+        "Becoming.BlanketCouplings.PhasedDrain.hLevel",
+        "Becoming.BlanketCouplings.PhasedDrain.hTakesG",
+        "Becoming.BlanketCouplings.PhasedDrain.hTakesH",
+        "Becoming.BlanketCouplings.PhasedDrain.level",
+        "Becoming.BlanketCouplings.PhasedDrain.not_admitted",
+        "Becoming.BlanketCouplings.PhasedDrain.one_value",
+        "Becoming.BlanketCouplings.PhasedDrain.phase",
+        "Becoming.BlanketCouplings.PhasedDrain.presence",
+        "Becoming.BlanketCouplings.PhasedDrain.presence_decides",
+        "Becoming.BlanketCouplings.PhasedDrain.take",
+        "Becoming.BlanketCouplings.PhasedDrain.uncoupled",
+        "Becoming.BlanketCouplings.PhasedDrain.values",
+        "Becoming.BlanketCouplings.PhasedDrain.web",
         "Becoming.BlanketCouplings.ReadsExternal.Three",
         "Becoming.BlanketCouplings.ReadsExternal.internal_course",
         "Becoming.BlanketCouplings.ReadsExternal.isFirst",
@@ -341,7 +515,12 @@
         "Becoming.BlanketCouplings.ThresholdCase.update",
         "Becoming.BlanketCouplings.ThresholdCase.value",
         "Becoming.BlanketCouplings.ThresholdCase.values",
+        "Becoming.BlanketCouplings.TwoRelata",
+        "Becoming.BlanketCouplings.TwoRelata.g_not_mem_h",
+        "Becoming.BlanketCouplings.ValuesAcross",
+        "Becoming.BlanketCouplings.ValuesAcross.through",
         "Becoming.BlanketCouplings.admitted_iff",
+        "Becoming.BlanketCouplings.agentConsistent_iff_exchange",
         "Becoming.BlanketCouplings.agentParts",
         "Becoming.BlanketCouplings.agentReads",
         "Becoming.BlanketCouplings.blanket_iff_through",
@@ -362,8 +541,12 @@
         "Becoming.BlanketCouplings.injective_converse_fails",
         "Becoming.BlanketCouplings.internal_selectsThrough",
         "Becoming.BlanketCouplings.internal_through_couplings",
+        "Becoming.BlanketCouplings.levelParts",
+        "Becoming.BlanketCouplings.levelParts_admitted_iff",
         "Becoming.BlanketCouplings.levelsAt",
         "Becoming.BlanketCouplings.levelsStay",
+        "Becoming.BlanketCouplings.listed_valuesAcross",
+        "Becoming.BlanketCouplings.next_level_alike_iff",
         "Becoming.BlanketCouplings.openLoop",
         "Becoming.BlanketCouplings.open_external",
         "Becoming.BlanketCouplings.open_levels",
@@ -373,12 +556,19 @@
         "Becoming.BlanketCouplings.parting",
         "Becoming.BlanketCouplings.partingLate",
         "Becoming.BlanketCouplings.parts_eq",
+        "Becoming.BlanketCouplings.presentRow",
         "Becoming.BlanketCouplings.readFamily",
+        "Becoming.BlanketCouplings.rowAct",
         "Becoming.BlanketCouplings.sensory_course",
         "Becoming.BlanketCouplings.shift",
         "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff",
         "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff",
         "Becoming.BlanketCouplings.startAt",
+        "Becoming.BlanketCouplings.stepExternal",
+        "Becoming.BlanketCouplings.stepExternal_admitted_iff",
+        "Becoming.BlanketCouplings.stepExternal_consistent_iff",
+        "Becoming.BlanketCouplings.stepLaw",
+        "Becoming.BlanketCouplings.stepLaw_course",
         "Becoming.BlanketCouplings.suffix",
         "Becoming.BlanketCouplings.suffix_apply",
         "Becoming.BlanketCouplings.suffix_zero",
@@ -388,17 +578,17 @@
         "Becoming.BlanketCouplings.worldParts",
         "Becoming.BlanketCouplings.worldReads"
       ],
-      "sha256": "fd162b69886bb1afce3a26c7247959ac82be1fd0fd33a531d7b527a76a098f73"
+      "sha256": "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T231958.020578Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
       "role": "receipt",
-      "sha256": "5e9d06f1947b29658d21a4ada051cc9f5d4e712d803f84a06a07f28affc45d23"
+      "sha256": "1d08c7532b7f5b2dc1cd39e2ddae1cb3230cff51662778c27b0115f3d8fe00c1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "6db6fae13bca70f592cffdbdef8f0c4d4f88a4112b01b7d4095a387faa4ae274"
+      "sha256": "7ff69066f203f2be7b2b8b7318db6c683fca927dee26fb63cfab004a0cb05188"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue27-which-blanket-a-thing-has/DESIGN.md",
@@ -421,20 +611,40 @@
       "sha256": "efc67443b957ad1830067eba781b37d81603e9b1c9a19d43baf739e19374b6b2"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/DESIGN.md",
+      "role": "integration",
+      "sha256": "3adfedd16975d8fa8926e2487fe59a54091cb05888aa4352b9bdc27047754278"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/REVIEW-UE28-DESIGN.md",
+      "role": "integration",
+      "sha256": "cf2bec4bd322be578879862a3474ea56522d1a87a5b7f148f898e3652d65f375"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/REVIEW-UE28-LEAN.md",
+      "role": "integration",
+      "sha256": "ea6c7d31ffe292fca4dcf609c8a9a8958d29e171ea0c85e33d67419fd0640889"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/REVIEW-UE28-LANDING.md",
+      "role": "integration",
+      "sha256": "cddc90c14d2adcbb585b720b06c52367c3ca973fdcdbb9fa77e3a510557d0e63"
+    },
+    {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "d083a9944c815157e09ca66dbe510c33f7bbef15dffefe50c7b651903cc2210f"
+      "sha256": "408aa144b54b6122477e4fe47c4a4989c70440b7e24e61ff49032736ed81611b"
     },
     {
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
-      "sha256": "de38818b768012ae34da191cbffd3e34fb7543bf0f3fcb4996217f50d049a8ab"
+      "sha256": "e999cc8ff44283fe5b280f0cf1dd4aceca32409205a352801bd8c95e773cbc21"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T231958.020578Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BlanketCouplings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -444,6 +654,10 @@
     {
       "en": "1 November 2026: added (UE27), which blanket a thing has: any model fed by what couples into a formation is by construction the agent of a blanketed law whose sensory course is the formation's own course, the threshold witness's join its case; the three levels at which a blanket's existence constrains; after reviews of the design, the Lean and the landing texts, every finding taken; study section 488.",
       "zh": "2026年11月1日：新增（UE27），物有何毯：以耦合入一形成者为食之任一模型依构造为一毯化之律之主体，其感官历程即该形成之自身历程，阈之例之相接为其一例；毯之存在有所约束之三层；经设计、Lean 与落地文本之审查，凡所见皆取；研究第 488 节。"
+    },
+    {
+      "en": "1 November 2026, board item UE28 (study section 491): a formation's level as the internal part along one run, the step external: admitted by a law determined part by part exactly where its next level and act agree wherever its level, a value across steps of what couples in and its act agree, on the World's records an equation between what is given to it and taken from it at the two steps, tested only where these recur; a drain in three phases fails it, a drain and feed in two phases meets it; six laws (64 declarations) added, the statement, a hypothesis, the correspondence, does_not_show, a dependency and the next step brought to it; after reviews of the design and the Lean and of the landing texts, every finding taken.",
+      "zh": "2026年11月1日，工作板条目 UE28（研究第 491 节）：形成之层级沿一运行为内部部分，步为外部：为某逐部分确定之律所容，恰当其层级、耦合入者跨步之值与作为相合之处，其次层级与次作为皆相合，于世界之记录即二步所予所取之等式，唯于诸态复现处受检；三相之耗不满足之，二相之耗与供满足之；新增六律（64 项声明），陈述、一前提、对应、所不示、一依赖与下一步随之；经设计与 Lean 及落地文本之审查，凡所见皆取。"
     }
   ]
 }

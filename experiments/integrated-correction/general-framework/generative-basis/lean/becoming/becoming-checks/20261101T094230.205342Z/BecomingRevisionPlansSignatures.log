@@ -1,0 +1,135 @@
+@Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left : ∀ {a b : Nat}, a + b = 0 → a = 0
+@Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right : ∀ {a b : Nat}, a + b = 0 → b = 0
+@Becoming.RevisionPlans.total_eq_zero_iff : ∀ {α : Type} {q : α → Nat} {as : List α},
+  Becoming.total as q = 0 ↔ ∀ (a : α), a ∈ as → q a = 0
+@Becoming.RevisionPlans.le_iff_of_balance : ∀ {G E H F L M : Nat}, G + E = H + F → (H + L ≤ G + M ↔ L + E ≤ M + F)
+@Becoming.RevisionPlans.splits_goOn : ∀ {C : Type} (listed : List C) (weight : C → Nat) (a : Nat),
+  Becoming.RevisionPlans.Splits listed weight (Becoming.RevisionPlans.goOn weight a)
+@Becoming.RevisionPlans.splits_off : ∀ {C : Type} (listed : List C) (weight : C → Nat) (a : Nat),
+  Becoming.RevisionPlans.Splits listed weight (Becoming.RevisionPlans.off weight a)
+Becoming.RevisionPlans.cond_turn_split : ∀ (w : Nat) (b : Bool), ((bif b then 0 else w) + bif b then w else 0) = w
+@Becoming.RevisionPlans.splits_held : ∀ {C : Type} (listed : List C) (weight : C → Nat) (r : C → Bool) (a : Nat),
+  Becoming.RevisionPlans.Splits listed weight (Becoming.RevisionPlans.held weight r a)
+Becoming.RevisionPlans.held_plan_term : ∀ (w g l : Nat) (b : Bool),
+  (bif b then 0 else w) * g + (bif b then w else 0) * l = bif b then w * l else w * g
+Becoming.RevisionPlans.reading_term : ∀ (k s g l : Nat),
+  (bif decide (g < l) then 0 else k + s) * g + (bif decide (g < l) then k + s else 0) * l =
+    k * g + s * l + (k * (l - g) + s * (g - l))
+@Becoming.RevisionPlans.gainOf_reading : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    ∀ (a : Nat),
+      Becoming.RevisionPlans.gainOf listed gain loss
+          (Becoming.RevisionPlans.held weight (Becoming.RevisionPlans.reading gain loss) a) =
+        Becoming.RevisionPlans.gainOf listed gain loss p + Becoming.RevisionPlans.excess listed gain loss p
+@Becoming.RevisionPlans.excess_reading : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat) (a : Nat),
+  Becoming.RevisionPlans.excess listed gain loss
+      (Becoming.RevisionPlans.held weight (Becoming.RevisionPlans.reading gain loss) a) =
+    0
+@Becoming.RevisionPlans.balance : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    Becoming.RevisionPlans.Splits listed weight q →
+      Becoming.RevisionPlans.gainOf listed gain loss p + Becoming.RevisionPlans.excess listed gain loss p =
+        Becoming.RevisionPlans.gainOf listed gain loss q + Becoming.RevisionPlans.excess listed gain loss q
+@Becoming.RevisionPlans.not_above_iff : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    Becoming.RevisionPlans.Splits listed weight q →
+      (¬(Becoming.RevisionPlans.order listed gain loss).Above q p ↔
+        p.loss + Becoming.RevisionPlans.excess listed gain loss p ≤
+          q.loss + Becoming.RevisionPlans.excess listed gain loss q)
+@Becoming.RevisionPlans.above_iff : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    Becoming.RevisionPlans.Splits listed weight q →
+      ((Becoming.RevisionPlans.order listed gain loss).Above q p ↔
+        q.loss + Becoming.RevisionPlans.excess listed gain loss q <
+          p.loss + Becoming.RevisionPlans.excess listed gain loss p)
+@Becoming.RevisionPlans.reading_not_below_iff : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    ∀ (a : Nat),
+      ¬(Becoming.RevisionPlans.order listed gain loss).Above p
+            (Becoming.RevisionPlans.held weight (Becoming.RevisionPlans.reading gain loss) a) ↔
+        a ≤ p.loss + Becoming.RevisionPlans.excess listed gain loss p
+@Becoming.RevisionPlans.reading_above_iff : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    ∀ (a : Nat),
+      (Becoming.RevisionPlans.order listed gain loss).Above
+          (Becoming.RevisionPlans.held weight (Becoming.RevisionPlans.reading gain loss) a) p ↔
+        a < p.loss + Becoming.RevisionPlans.excess listed gain loss p
+@Becoming.RevisionPlans.excess_zero_iff : ∀ {C : Type} (listed : List C) (gain loss : C → Nat)
+  (p : Becoming.RevisionPlans.KeepStop C),
+  Becoming.RevisionPlans.excess listed gain loss p = 0 ↔
+    ∀ (c : C), c ∈ listed → p.kept c * (loss c - gain c) = 0 ∧ p.stopped c * (gain c - loss c) = 0
+Becoming.RevisionPlans.move_term : ∀ (k s r g l : Nat),
+  (k + r) * g + s * l + r * (l - g) = k * g + (s + r) * l + r * (g - l)
+@Becoming.RevisionPlans.gainOf_move : ∀ {C : Type} (listed : List C) (gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C} (r : C → Nat),
+  (∀ (c : C), c ∈ listed → q.kept c = p.kept c + r c) →
+    (∀ (c : C), c ∈ listed → p.stopped c = q.stopped c + r c) →
+      (Becoming.RevisionPlans.gainOf listed gain loss q + Becoming.total listed fun c => r c * (loss c - gain c)) =
+        Becoming.RevisionPlans.gainOf listed gain loss p + Becoming.total listed fun c => r c * (gain c - loss c)
+@Becoming.RevisionPlans.move_le_of : ∀ {C : Type} (listed : List C) (gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C} (r : C → Nat),
+  (∀ (c : C), c ∈ listed → q.kept c = p.kept c + r c) →
+    (∀ (c : C), c ∈ listed → p.stopped c = q.stopped c + r c) →
+      (∀ (c : C), c ∈ listed → loss c ≤ gain c) →
+        Becoming.RevisionPlans.gainOf listed gain loss p ≤ Becoming.RevisionPlans.gainOf listed gain loss q
+@Becoming.RevisionPlans.move_ge_of : ∀ {C : Type} (listed : List C) (gain loss : C → Nat)
+  {p q : Becoming.RevisionPlans.KeepStop C} (r : C → Nat),
+  (∀ (c : C), c ∈ listed → q.kept c = p.kept c + r c) →
+    (∀ (c : C), c ∈ listed → p.stopped c = q.stopped c + r c) →
+      (∀ (c : C), c ∈ listed → gain c ≤ loss c) →
+        Becoming.RevisionPlans.gainOf listed gain loss q ≤ Becoming.RevisionPlans.gainOf listed gain loss p
+@Becoming.RevisionPlans.gainOf_reading_eq_iff : ∀ {C : Type} (listed : List C) (weight gain loss : C → Nat)
+  {p : Becoming.RevisionPlans.KeepStop C},
+  Becoming.RevisionPlans.Splits listed weight p →
+    ∀ (a : Nat),
+      Becoming.RevisionPlans.gainOf listed gain loss
+            (Becoming.RevisionPlans.held weight (Becoming.RevisionPlans.reading gain loss) a) =
+          Becoming.RevisionPlans.gainOf listed gain loss p ↔
+        Becoming.RevisionPlans.excess listed gain loss p = 0
+@Becoming.RevisionPlans.gainOf_ofRoutes : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (p : Option ι),
+  Becoming.RevisionPlans.gainOf [()] (fun x => s.value) (fun x => 0) (Becoming.RevisionPlans.ofRoutes s p) = s.gain p
+@Becoming.RevisionPlans.loss_ofRoutes : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (p : Option ι),
+  (Becoming.RevisionPlans.ofRoutes s p).loss = s.loss p
+@Becoming.RevisionPlans.above_iff_routes : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (p q : Option ι),
+  s.Above p q ↔
+    (Becoming.RevisionPlans.order [()] (fun x => s.value) fun x => 0).Above (Becoming.RevisionPlans.ofRoutes s p)
+      (Becoming.RevisionPlans.ofRoutes s q)
+@Becoming.RevisionPlans.splits_ofRoutes : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.Valid →
+    ∀ (p : Option ι), Becoming.RevisionPlans.Splits [()] (fun x => s.total) (Becoming.RevisionPlans.ofRoutes s p)
+@Becoming.RevisionPlans.excess_ofRoutes : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (p : Option ι),
+  Becoming.RevisionPlans.excess [()] (fun x => s.value) (fun x => 0) (Becoming.RevisionPlans.ofRoutes s p) =
+    (s.total - (Becoming.RevisionPlans.ofRoutes s p).kept ()) * s.value
+@Becoming.RevisionPlans.routes_above_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.Valid →
+    ∀ (p q : Option ι),
+      s.Above q p ↔
+        s.loss q + (s.total - (Becoming.RevisionPlans.ofRoutes s q).kept ()) * s.value <
+          s.loss p + (s.total - (Becoming.RevisionPlans.ofRoutes s p).kept ()) * s.value
+@Becoming.RevisionPlans.ofRoutes_goOn_excess : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (b : Nat),
+  Becoming.RevisionPlans.excess [()] (fun x => s.value) (fun x => 0)
+      (Becoming.RevisionPlans.goOn (fun x => s.total) b) =
+    0
+Becoming.RevisionPlans.Example.hold_three_not_below : ¬(Becoming.RevisionPlans.order
+        Becoming.RevisionPlans.Example.listed Becoming.RevisionPlans.Example.gain
+        Becoming.RevisionPlans.Example.loss).Above
+    Becoming.RevisionPlans.Example.evade
+    (Becoming.RevisionPlans.held Becoming.RevisionPlans.Example.weight
+      (Becoming.RevisionPlans.reading Becoming.RevisionPlans.Example.gain Becoming.RevisionPlans.Example.loss) 3)
+Becoming.RevisionPlans.Example.hold_four_below : (Becoming.RevisionPlans.order Becoming.RevisionPlans.Example.listed
+      Becoming.RevisionPlans.Example.gain Becoming.RevisionPlans.Example.loss).Above
+  Becoming.RevisionPlans.Example.evade
+  (Becoming.RevisionPlans.held Becoming.RevisionPlans.Example.weight
+    (Becoming.RevisionPlans.reading Becoming.RevisionPlans.Example.gain Becoming.RevisionPlans.Example.loss) 4)
+Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn : Becoming.RevisionPlans.gainOf
+    Becoming.RevisionPlans.Example.listed Becoming.RevisionPlans.Example.gain (fun x => 0)
+    (Becoming.RevisionPlans.held Becoming.RevisionPlans.Example.weight
+      (Becoming.RevisionPlans.reading Becoming.RevisionPlans.Example.gain fun x => 0) 5) =
+  Becoming.RevisionPlans.gainOf Becoming.RevisionPlans.Example.listed Becoming.RevisionPlans.Example.gain (fun x => 0)
+    (Becoming.RevisionPlans.goOn Becoming.RevisionPlans.Example.weight 0)

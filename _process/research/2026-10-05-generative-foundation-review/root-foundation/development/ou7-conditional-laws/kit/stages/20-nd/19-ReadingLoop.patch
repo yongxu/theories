@@ -1,0 +1,228 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean
+index 47bafa18a..f3fd1e40d 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean
+@@ -17,13 +17,13 @@ which (board item RF, round 2: RF3, and RF-M's mechanism with its first cases).
+   state (`joint`), with a supplied reading of the world kept by its update under every act
+   (`KeptBy`), keeps a task at every configuration reached from a sound one, and goes on from every
+   sound configuration, exactly where each state's act can be taken at every world its reading admits
+-  and leads only where the task holds (`keeps_continues_iff`; `Good` alone, successor safety, is met
++  and leads only where the task holds (`keeps_continues_iff`; `LeadsInto` alone, successor safety, is met
+   by an act no world can take). Given choice over the states, such a policy exists exactly where
+   each state has one such act (`keeping_policy_iff`): for a supplied invariant reading, policy
+-  existence reduces to a common act for each reading. Acts good for every two worlds a reading
+-  admits need not be one act good for all (`PairwiseShared`), and being kept is not being informative:
+-  the reading of every world and the reading of none are kept by every update (`everything_kept`,
+-  `nothing_kept`, `nothing_sound`).
++  existence reduces to a common act for each reading. Acts leading into the task from every two worlds a
++  reading admits need not be one act leading into it from all (`PairwiseShared`), and being kept is not
++  being informative: the reading of every world and the reading of none are kept by every update
++  (`everything_kept`, `nothing_kept`, `nothing_sound`).
+ * **The reading a formation's own history carries.** With the state the history of acts and values
+   sensed, the worlds possible after a history (`Possible`) are kept by recording (`possible_kept`)
+   and are the least reading so kept that holds at the starts (`possible_least`). What a policy acting
+@@ -84,9 +84,9 @@ which (board item RF, round 2: RF3, and RF-M's mechanism with its first cases).
+   keeps the known act (`Untested.order_rests`).
+ 
+ **Standing.** Near-definitional or short compositions: `kept_iff_closed`, `closed_of_keptBy`,
+-`good_of_keeps`, `keeps_iff_good`, `keeps_continues_iff`, `keeping_policy_iff` (whose choice
++`leadsInto_of_keeps`, `keeps_iff_leadsInto`, `keeps_continues_iff`, `keeping_policy_iff` (whose choice
+ argument is `GuardHorizon`'s), the readings of everything and of nothing, `possible_kept`,
+-`Loop.faithful_kept`, `Loop.kept_alike`. General laws: `keeps_of_good`, `possible_least`,
++`Loop.faithful_kept`, `Loop.kept_alike`. General laws: `keeps_of_leadsInto`, `possible_least`,
+ `history_keeps_iff`, `history_continues_iff`, `sensed_alike_iff`, `alike_within`, `observed_alike`,
+ `Loop.kept_iff`, `Loop.fitting_closed`, `Loop.rests_of_unrefuted`; none is claimed new as
+ mathematics. Witnesses: `PairwiseShared` and `Untested`, of which `floor_forgoes` quantifies over every
+@@ -98,7 +98,7 @@ its rule of reading and disclosure in two stages are later items.
+ 
+ **Readings** [AI reading]. The kept reading is related to possibilistic belief interpretations of
+ regulation (Virgo, Biehl, Baltieri and Capucci 2025), whose closure is under the policy chosen
+-(`keeps_of_good` takes that) where `KeptBy` asks it under every act; the good regulator of Conant
++(`keeps_of_leadsInto` takes that) where `KeptBy` asks it under every act; the good regulator of Conant
+ and Ashby (1970) concerns simplest optimal regulation, and no optimality or model necessity is proved
+ here. The `Untested` witness is a deterministic case of persistent agreement along the course a
+ formation's own choices take, with disagreement off it, related to self-confirming equilibrium
+@@ -176,12 +176,12 @@ theorem closed_of_keptBy {world : W → A → W → Prop} {sense : W → O} {upd
+ 
+ /-- Successor safety for a state's reading of a task `K`: every world the reading admits becomes,
+ under the act, only worlds where `K` holds. An act no world can take meets it. -/
+-def Good (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) : Prop :=
++def LeadsInto (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) : Prop :=
+   ∀ w, B m w → ∀ w', world w a w' → K w'
+ 
+-/-- An act good and enabled for a state's reading: at every world the reading admits it can be
++/-- An act leading into the task and enabled for a state's reading: at every world the reading admits it can be
+ taken, and it leads only to worlds where `K` holds. -/
+-def GoodEnabled (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) :
++def LeadsIntoEnabled (world : W → A → W → Prop) (B : M → W → Prop) (K : W → Prop) (m : M) (a : A) :
+     Prop :=
+   ∀ w, B m w → (∃ w', world w a w') ∧ ∀ w', world w a w' → K w'
+ 
+@@ -197,80 +197,80 @@ def Continues (world : W → A → W → Prop) (sense : W → O) (update : M →
+   ∀ x, Sound B x → ∃ y, joint world sense update act x y
+ 
+ /-- **The safety composition along the loop.** Where the reading is a closed region of the policy's
+-loop and each state's act is good for its reading, the task holds at every configuration reached from
++loop and each state's act leads into the task from its reading, the task holds at every configuration reached from
+ a sound one. -/
+-theorem keeps_of_good {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
++theorem keeps_of_leadsInto {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
+     {B : M → W → Prop} {K : W → Prop} {act : M → A}
+     (closed : «闭» (joint world sense update act) (Sound B))
+-    (good : ∀ m, Good world B K m (act m)) : Keeps world sense update B K act := by
++    (leads : ∀ m, LeadsInto world B K m (act m)) : Keeps world sense update B K act := by
+   intro x y sound reach
+   revert sound
+   induction reach with
+-  | one step => exact fun sound => good _ _ sound _ step.1
++  | one step => exact fun sound => leads _ _ sound _ step.1
+   | more step _ ih => exact fun sound => ih (closed _ _ sound step)
+ 
+-/-- **A policy keeping the task is good for every state's reading.** No hypothesis: one step from a
++/-- **A policy keeping the task leads into it from every state's reading.** No hypothesis: one step from a
+ sound configuration is a reach. -/
+-theorem good_of_keeps {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
++theorem leadsInto_of_keeps {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
+     {B : M → W → Prop} {K : W → Prop} {act : M → A} (keeps : Keeps world sense update B K act) :
+-    ∀ m, Good world B K m (act m) :=
++    ∀ m, LeadsInto world B K m (act m) :=
+   fun m w holds w' moves =>
+     keeps (w, m) (w', update m (act m) (sense w')) holds
+       («及».one (R := joint world sense update act) (And.intro moves rfl))
+ 
+-/-- **With the reading kept by the update, a policy keeps the task exactly where it is good for every
++/-- **With the reading kept by the update, a policy keeps the task exactly where it leads into it from every
+ state's reading.** -/
+-theorem keeps_iff_good {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
++theorem keeps_iff_leadsInto {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
+     {B : M → W → Prop} {K : W → Prop} (kept : KeptBy world sense update B) (act : M → A) :
+-    Keeps world sense update B K act ↔ ∀ m, Good world B K m (act m) :=
+-  ⟨good_of_keeps, keeps_of_good (closed_of_keptBy kept act)⟩
++    Keeps world sense update B K act ↔ ∀ m, LeadsInto world B K m (act m) :=
++  ⟨leadsInto_of_keeps, keeps_of_leadsInto (closed_of_keptBy kept act)⟩
+ 
+ /-- **With the reading kept by the update, a policy keeps the task and goes on from every sound
+-configuration exactly where its act is good and enabled for every state's reading.** What is reached
++configuration exactly where its act leads into the task and is enabled for every state's reading.** What is reached
+ from a sound configuration is sound, so the policy goes on from there too. -/
+ theorem keeps_continues_iff {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M}
+     {B : M → W → Prop} {K : W → Prop} (kept : KeptBy world sense update B) (act : M → A) :
+     (Keeps world sense update B K act ∧ Continues world sense update B act) ↔
+-      ∀ m, GoodEnabled world B K m (act m) :=
++      ∀ m, LeadsIntoEnabled world B K m (act m) :=
+   ⟨fun ⟨keeps, goes⟩ m w holds =>
+     ⟨match goes (w, m) holds with
+       | ⟨y, step⟩ => ⟨y.1, step.1⟩,
+-     good_of_keeps keeps m w holds⟩,
+-   fun good =>
+-    ⟨keeps_of_good (closed_of_keptBy kept act) fun m w holds => (good m w holds).2,
+-     fun x sound => match (good x.2 x.1 sound).1 with
++     leadsInto_of_keeps keeps m w holds⟩,
++   fun leads =>
++    ⟨keeps_of_leadsInto (closed_of_keptBy kept act) fun m w holds => (leads m w holds).2,
++     fun x sound => match (leads x.2 x.1 sound).1 with
+       | ⟨w', moves⟩ => ⟨(w', update x.2 (act x.2) (sense w')), And.intro moves rfl⟩⟩⟩
+ 
+-/-- **A policy keeping the task and going on exists exactly where each state has an act good and
++/-- **A policy keeping the task and going on exists exactly where each state has an act leading into the task and
+ enabled for its reading**, given choice over the states (as for states listed,
+ `Viability.choiceOver_fin`) and the reading kept by the update. -/
+ theorem keeping_policy_iff (choice : Viability.ChoiceOver M A) {world : W → A → W → Prop}
+     {sense : W → O} {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop}
+     (kept : KeptBy world sense update B) :
+     (∃ act : M → A, Keeps world sense update B K act ∧ Continues world sense update B act) ↔
+-      ∀ m, ∃ a, GoodEnabled world B K m a :=
++      ∀ m, ∃ a, LeadsIntoEnabled world B K m a :=
+   ⟨fun ⟨act, both⟩ m => ⟨act m, (keeps_continues_iff kept act).mp both m⟩,
+    fun each => match choice _ each with
+-    | ⟨act, good⟩ => ⟨act, (keeps_continues_iff kept act).mpr good⟩⟩
++    | ⟨act, leads⟩ => ⟨act, (keeps_continues_iff kept act).mpr leads⟩⟩
+ 
+-/-- **The reading admitting every world is kept by every update**; an act is good for it only where
+-it is good at every world. -/
++/-- **The reading admitting every world is kept by every update**; an act leads into the task from it only
++where it does so at every world. -/
+ theorem everything_kept (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) :
+     KeptBy world sense update (fun (_ : M) (_ : W) => True) :=
+   fun _ _ _ _ _ _ => trivial
+ 
+-theorem everything_good_iff {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :
+-    Good world (fun (_ : M) (_ : W) => True) K m a ↔ ∀ w w', world w a w' → K w' :=
+-  ⟨fun good w => good w trivial, fun good w _ => good w⟩
++theorem everything_leadsInto_iff {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :
++    LeadsInto world (fun (_ : M) (_ : W) => True) K m a ↔ ∀ w w', world w a w' → K w' :=
++  ⟨fun leads w => leads w trivial, fun leads w _ => leads w⟩
+ 
+-/-- **The reading admitting no world is kept by every update and every act is good for it**, and no
++/-- **The reading admitting no world is kept by every update and every act leads into the task from it**, and no
+ configuration is sound for it. -/
+ theorem nothing_kept (world : W → A → W → Prop) (sense : W → O) (update : M → A → O → M) :
+     KeptBy world sense update (fun (_ : M) (_ : W) => False) :=
+   fun _ _ _ _ holds _ => holds
+ 
+-theorem nothing_good {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :
+-    Good world (fun (_ : M) (_ : W) => False) K m a :=
++theorem nothing_leadsInto {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A} :
++    LeadsInto world (fun (_ : M) (_ : W) => False) K m a :=
+   fun _ holds => holds.elim
+ 
+ theorem nothing_sound (x : W × M) : ¬ Sound (fun (_ : M) (_ : W) => False) x :=
+@@ -278,7 +278,7 @@ theorem nothing_sound (x : W × M) : ¬ Sound (fun (_ : M) (_ : W) => False) x :
+ 
+ end Joint
+ 
+-/-! ### Acts good pairwise need not be one act good for all -/
++/-! ### Acts leading into the task pairwise need not be one act leading into it from all -/
+ 
+ namespace PairwiseShared
+ 
+@@ -288,11 +288,11 @@ inductive Point where
+   | q
+   | r
+ 
+-/-- An act is good at a world where it is not the act that world names. -/
+-abbrev good (w x : Point) : Prop := x ≠ w
++/-- An act leads into the task at a world where it is not the act that world names. -/
++abbrev leads (w x : Point) : Prop := x ≠ w
+ 
+-/-- **Every two worlds share a good act.** -/
+-theorem two_share : ∀ w₁ w₂ : Point, ∃ x, good w₁ x ∧ good w₂ x
++/-- **Every two worlds share an act leading into the task at both.** -/
++theorem two_share : ∀ w₁ w₂ : Point, ∃ x, leads w₁ x ∧ leads w₂ x
+   | .p, .p => ⟨.q, And.intro (fun h => nomatch h) (fun h => nomatch h)⟩
+   | .p, .q => ⟨.r, And.intro (fun h => nomatch h) (fun h => nomatch h)⟩
+   | .p, .r => ⟨.q, And.intro (fun h => nomatch h) (fun h => nomatch h)⟩
+@@ -303,8 +303,9 @@ theorem two_share : ∀ w₁ w₂ : Point, ∃ x, good w₁ x ∧ good w₂ x
+   | .r, .q => ⟨.p, And.intro (fun h => nomatch h) (fun h => nomatch h)⟩
+   | .r, .r => ⟨.p, And.intro (fun h => nomatch h) (fun h => nomatch h)⟩
+ 
+-/-- **No act is good at all three**: a reading admitting the three has no act good for it. -/
+-theorem none_for_all : ¬ ∃ x, ∀ w, good w x :=
++/-- **No act leads into the task at all three**: a reading admitting the three has no act leading into it from the
++reading. -/
++theorem none_for_all : ¬ ∃ x, ∀ w, leads w x :=
+   fun ⟨x, all⟩ => all x rfl
+ 
+ end PairwiseShared
+@@ -392,17 +393,17 @@ keeps a task at every configuration reached from a start exactly where, at every
+ generates, its act leads only where the task holds from every world possible after it. -/
+ theorem history_keeps_iff (act : List (A × O) → A) (K : W → Prop) :
+     (∀ w₀ y, start w₀ → «及» (joint world sense record act) (w₀, []) y → K y.1) ↔
+-      ∀ h, Generated act h → Good world (Possible world sense start) K h (act h) :=
++      ∀ h, Generated act h → LeadsInto world (Possible world sense start) K h (act h) :=
+   ⟨fun keeps h generated w possible w' moves =>
+     have step : joint world sense record act (w, h) (w', record h (act h) (sense w')) :=
+       And.intro moves rfl
+     match reached_of_possible world sense start act h w generated possible with
+     | .inl ⟨empty, holds⟩ => by subst empty; exact keeps w _ holds (.one step)
+     | .inr ⟨w₀, holds, reach⟩ => keeps w₀ _ holds («及之传递» reach (.one step)),
+-   fun good w₀ y holds reach =>
+-    keeps_of_good (B := fun h w => Generated act h ∧ Possible world sense start h w)
++   fun leads w₀ y holds reach =>
++    keeps_of_leadsInto (B := fun h w => Generated act h ∧ Possible world sense start h w)
+       (generated_closed world sense start act)
+-      (fun h w within => good h within.1 w within.2) (w₀, []) y ⟨trivial, holds⟩ reach⟩
++      (fun h w within => leads h within.1 w within.2) (w₀, []) y ⟨trivial, holds⟩ reach⟩
+ 
+ /-- **A policy acting from its history goes on from every start and everything it reaches exactly
+ where, at every history it generates, its act can be taken at every world possible after it.** -/

@@ -129,7 +129,7 @@ The two rankings part ways under the stepwise reading. If living significance an
 - related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Beyond C, J1's priority of basic conditions is one stronger comparison that might yield “better without malignant growth”; this connection is not formalized here.
 - related, not a proved adapter: [stepwise-law-of-easing](stepwise-law-of-easing.md). The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading.
 - related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.
-- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.
+- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [basic-priority-step-by-step](basic-priority-step-by-step.md) · [relation-level-law-of-easing](relation-level-law-of-easing.md) · [stepwise-law-of-easing](stepwise-law-of-easing.md) · [wisdom-root](wisdom-root.md) (interpretive)
 

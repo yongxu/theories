@@ -1,0 +1,230 @@
+Becoming.FreeEnergyCounting.mul_pow_eq : ∀ (x y n : Nat), (x * y) ^ n = x ^ n * y ^ n
+Becoming.FreeEnergyCounting.self_pow_pos : ∀ (n : Nat), 0 < n ^ n
+@Becoming.FreeEnergyCounting.lt_cancel_mul_left : ∀ {a b c : Nat}, c * a < c * b → a < b
+@Becoming.FreeEnergyCounting.lt_cancel_mul_right : ∀ {a b c : Nat}, a * c < b * c → a < b
+@Becoming.FreeEnergyCounting.base_zero_of_pow_zero : ∀ {p c : Nat}, p ^ c = 0 → p = 0
+@Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ : ∀ {x y : Nat}, x < y → ∀ (j : Nat), x ^ (j + 1) < y ^ (j + 1)
+@Becoming.FreeEnergyCounting.rearrange : ∀ {a b c d : Nat}, a ≤ b → c ≤ d → a * d + b * c ≤ a * c + b * d
+@Becoming.FreeEnergyCounting.rearrange_strict : ∀ {a b c d : Nat}, a < b → c < d → a * d + b * c < a * c + b * d
+Becoming.FreeEnergyCounting.powers_rearrange : ∀ (x y j : Nat), x ^ j * y + x * y ^ j ≤ x ^ (j + 1) + y ^ (j + 1)
+Becoming.FreeEnergyCounting.powers_rearrange_strict : ∀ (x y j : Nat),
+  x ≠ y → x ^ (j + 1) * y + x * y ^ (j + 1) < x ^ (j + 1 + 1) + y ^ (j + 1 + 1)
+Becoming.FreeEnergyCounting.bernoulli_split : ∀ (x y k : Nat),
+  (k + 1 + 1) * x * y ^ (k + 1) = (k + 1) * x * y ^ k * y + x * y ^ (k + 1)
+Becoming.FreeEnergyCounting.bernoulli_regroup : ∀ (x y k : Nat),
+  (x ^ (k + 1) + k * y ^ (k + 1)) * y + x * y ^ (k + 1) = x ^ (k + 1) * y + x * y ^ (k + 1) + k * y ^ (k + 1 + 1)
+Becoming.FreeEnergyCounting.bernoulli_close : ∀ (x y k : Nat),
+  x ^ (k + 1 + 1) + y ^ (k + 1 + 1) + k * y ^ (k + 1 + 1) = x ^ (k + 1 + 1) + (k + 1) * y ^ (k + 1 + 1)
+Becoming.FreeEnergyCounting.bernoulli : ∀ (x y k : Nat), (k + 1) * x * y ^ k ≤ x ^ (k + 1) + k * y ^ (k + 1)
+Becoming.FreeEnergyCounting.bernoulli_strict : ∀ (x y : Nat),
+  x ≠ y → ∀ (k : Nat), 0 < k → (k + 1) * x * y ^ k < x ^ (k + 1) + k * y ^ (k + 1)
+Becoming.FreeEnergyCounting.mean_step_identity : ∀ (k S y : Nat),
+  (k + 1) * (k * (S + y)) * ((k + 1) * S) ^ k = k * ((k + 1) ^ (k + 1) * S ^ k) * (S + y)
+Becoming.FreeEnergyCounting.mean_step_lhs : ∀ (S y k : Nat),
+  (k + 1 + 1) * ((k + 1) * (S + y)) * ((k + 1 + 1) * S) ^ (k + 1) =
+    (k + 1) * ((k + 1 + 1) ^ (k + 1 + 1) * S ^ (k + 1)) * S + (k + 1) * ((k + 1 + 1) ^ (k + 1 + 1) * S ^ (k + 1) * y)
+Becoming.FreeEnergyCounting.mean_step_rhs : ∀ (S y k : Nat),
+  ((k + 1) * (S + y)) ^ (k + 1 + 1) + (k + 1) * ((k + 1 + 1) * S) ^ (k + 1 + 1) =
+    (k + 1) * ((k + 1 + 1) ^ (k + 1 + 1) * S ^ (k + 1)) * S + (k + 1) * ((k + 1) ^ (k + 1) * (S + y) ^ (k + 1 + 1))
+Becoming.FreeEnergyCounting.mean_step : ∀ (S y k : Nat), (k + 1) ^ (k + 1) * S ^ k * y ≤ k ^ k * (S + y) ^ (k + 1)
+Becoming.FreeEnergyCounting.mean_step_strict : ∀ (S y k : Nat),
+  0 < k → k * y ≠ S → (k + 1) ^ (k + 1) * S ^ k * y < k ^ k * (S + y) ^ (k + 1)
+Becoming.FreeEnergyCounting.mean_two_sum : ∀ (n m x y : Nat), n * x + m * y + y = n * x + (m + 1) * y
+Becoming.FreeEnergyCounting.mean_two_ident : ∀ (K A X Y y : Nat), K * (A * (X * (Y * y))) = A * (K * (X * Y)) * y
+Becoming.FreeEnergyCounting.mean_two : ∀ (n x y m : Nat),
+  (n + m) ^ (n + m) * (x ^ n * y ^ m) ≤ (n * x + m * y) ^ (n + m)
+Becoming.FreeEnergyCounting.mean_two_strict : ∀ (n x y : Nat),
+  0 < n →
+    x ≠ y → ∀ (m : Nat), (n + (m + 1)) ^ (n + (m + 1)) * (x ^ n * y ^ (m + 1)) < (n * x + (m + 1) * y) ^ (n + (m + 1))
+Becoming.FreeEnergyCounting.two_parts_lhs : ∀ (a b n m : Nat),
+  (n + m) ^ (n + m) * ((a * m) ^ n * (b * n) ^ m) = (n + m) ^ (n + m) * (a ^ n * b ^ m) * (m ^ n * n ^ m)
+Becoming.FreeEnergyCounting.two_parts_rhs : ∀ (a b n m : Nat),
+  (n * (a * m) + m * (b * n)) ^ (n + m) = (a + b) ^ (n + m) * (n ^ n * m ^ m) * (m ^ n * n ^ m)
+Becoming.FreeEnergyCounting.two_parts : ∀ (a b n m : Nat),
+  (n + m) ^ (n + m) * (a ^ n * b ^ m) ≤ (a + b) ^ (n + m) * (n ^ n * m ^ m)
+Becoming.FreeEnergyCounting.two_parts_strict : ∀ (a b n m : Nat),
+  a * (m + 1) ≠ b * (n + 1) →
+    (n + 1 + (m + 1)) ^ (n + 1 + (m + 1)) * (a ^ (n + 1) * b ^ (m + 1)) <
+      (a + b) ^ (n + 1 + (m + 1)) * ((n + 1) ^ (n + 1) * (m + 1) ^ (m + 1))
+Becoming.FreeEnergyCounting.proportional_of_two_parts_eq : ∀ (a b n m : Nat),
+  (n + m) ^ (n + m) * (a ^ n * b ^ m) = (a + b) ^ (n + m) * (n ^ n * m ^ m) → n * b = a * m
+@Becoming.FreeEnergyCounting.powerProduct_self_pos : ∀ {α : Type} (n : α → Nat) (hs : List α),
+  0 < Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.zero_of_total_zero : ∀ {α : Type} (f : α → Nat) (hs : List α),
+  Becoming.total hs f = 0 → ∀ (h : α), h ∈ hs → f h = 0
+Becoming.FreeEnergyCounting.cons_left : ∀ (K X Y P : Nat), K * (X * (Y * P)) = X * Y * (K * P)
+Becoming.FreeEnergyCounting.cons_mid : ∀ (X Y Z Q : Nat), X * Y * (Z * Q) = X * (Y * Z) * Q
+Becoming.FreeEnergyCounting.cons_right : ∀ (R C K Q : Nat), R * (C * K) * Q = K * (R * (C * Q))
+@Becoming.FreeEnergyCounting.bound : ∀ {α : Type} (n a : α → Nat) (hs : List α),
+  Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs ≤
+    Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.powerProduct_scaled : ∀ {α : Type} (n a : α → Nat) (A N : Nat) (hs : List α),
+  (∀ (h : α), h ∈ hs → n h * A = a h * N) →
+    N ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+      A ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.bound_eq_of_proportional : ∀ {α : Type} (n a : α → Nat) (hs : List α),
+  (∀ (h : α), h ∈ hs → n h * Becoming.total hs a = a h * Becoming.total hs n) →
+    Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+      Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.proportional_cons : ∀ {α : Type} (n a : α → Nat) (g : α) (hs : List α),
+  (∀ (h : α), h ∈ hs → n h * Becoming.total hs a = a h * Becoming.total hs n) →
+    n g * Becoming.total hs a = a g * Becoming.total hs n →
+      ∀ (h : α), h ∈ g :: hs → n h * Becoming.total (g :: hs) a = a h * Becoming.total (g :: hs) n
+@Becoming.FreeEnergyCounting.proportional_of_bound_eq : ∀ {α : Type} (n a : α → Nat) (hs : List α),
+  Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+      Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs →
+    ∀ (h : α), h ∈ hs → n h * Becoming.total hs a = a h * Becoming.total hs n
+@Becoming.FreeEnergyCounting.bound_eq_iff : ∀ {α : Type} (n a : α → Nat) (hs : List α),
+  Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+      Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs ↔
+    ∀ (h : α), h ∈ hs → n h * Becoming.total hs a = a h * Becoming.total hs n
+@Becoming.FreeEnergyCounting.bound_lt_of_not_proportional : ∀ {α : Type} (n a : α → Nat) (hs : List α),
+  (¬∀ (h : α), h ∈ hs → n h * Becoming.total hs a = a h * Becoming.total hs n) →
+    Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs <
+      Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.zero_weights_reach : ∀ {α : Type} (n : α → Nat) (hs : List α),
+  Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct (fun x => 0) n hs =
+    (Becoming.total hs fun x => 0) ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.no_counts_reach : ∀ {α : Type} (a : α → Nat) (hs : List α),
+  ((Becoming.total hs fun x => 0) ^ Becoming.total hs fun x => 0) *
+      Becoming.FreeEnergyCounting.powerProduct a (fun x => 0) hs =
+    (Becoming.total hs a ^ Becoming.total hs fun x => 0) *
+      Becoming.FreeEnergyCounting.powerProduct (fun x => 0) (fun x => 0) hs
+@Becoming.FreeEnergyCounting.record_total : ∀ {α β : Type} (prior : α → Nat) (lik : α → β → Nat) (hs : List α)
+  (os : List β) (rec : β → Bool),
+  (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) =
+    Becoming.total hs (Becoming.FreeEnergyCounting.joint prior lik os rec)
+@Becoming.FreeEnergyCounting.bound_given_record : ∀ {α β : Type} (prior : α → Nat) (lik : α → β → Nat) (hs : List α)
+  (os : List β) (rec : β → Bool) (n : α → Nat),
+  Becoming.total hs n ^ Becoming.total hs n *
+      Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec) n hs ≤
+    (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) ^
+        Becoming.total hs n *
+      Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.given_record_eq_iff : ∀ {α β : Type} (prior : α → Nat) (lik : α → β → Nat) (hs : List α)
+  (os : List β) (rec : β → Bool) (n : α → Nat),
+  Becoming.total hs n ^ Becoming.total hs n *
+        Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec) n hs =
+      (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) ^
+          Becoming.total hs n *
+        Becoming.FreeEnergyCounting.powerProduct n n hs ↔
+    ∀ (h : α),
+      h ∈ hs →
+        (n h *
+            Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+              rec c.snd) =
+          Becoming.FreeEnergyCounting.joint prior lik os rec h * Becoming.total hs n
+@Becoming.FreeEnergyCounting.nothing_record_reach_all : ∀ {α β : Type} (prior : α → Nat) (lik : α → β → Nat)
+  (hs : List α) (os : List β) (rec : β → Bool) (n : α → Nat),
+  (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) = 0 →
+    Becoming.total hs n ^ Becoming.total hs n *
+        Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec) n hs =
+      (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) ^
+          Becoming.total hs n *
+        Becoming.FreeEnergyCounting.powerProduct n n hs
+@Becoming.FreeEnergyCounting.given_record_eq_iff_share : ∀ {α β : Type} [inst : DecidableEq α] (prior : α → Nat)
+  (lik : α → β → Nat) {hs : List α} (os : List β) (rec : β → Bool) (n : α → Nat),
+  Becoming.Distinct hs →
+    (Becoming.total hs n ^ Becoming.total hs n *
+          Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec) n hs =
+        (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+              rec c.snd) ^
+            Becoming.total hs n *
+          Becoming.FreeEnergyCounting.powerProduct n n hs ↔
+      ∀ (h : α),
+        h ∈ hs →
+          { part := n h, whole := Becoming.total hs n }.Same
+            (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                (Becoming.ConditionalWeights.pairWeight prior lik))
+              fun c => decide (c.fst = h)))
+@Becoming.FreeEnergyCounting.posterior_counts_reach : ∀ {α β : Type} (prior : α → Nat) (lik : α → β → Nat) (hs : List α)
+  (os : List β) (rec : β → Bool),
+  Becoming.total hs (Becoming.FreeEnergyCounting.joint prior lik os rec) ^
+        Becoming.total hs (Becoming.FreeEnergyCounting.joint prior lik os rec) *
+      Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec)
+        (Becoming.FreeEnergyCounting.joint prior lik os rec) hs =
+    (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) ^
+        Becoming.total hs (Becoming.FreeEnergyCounting.joint prior lik os rec) *
+      Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.joint prior lik os rec)
+        (Becoming.FreeEnergyCounting.joint prior lik os rec) hs
+Becoming.FreeEnergyCounting.Witness.strict_off_proportion : Becoming.total [true, false]
+        Becoming.FreeEnergyCounting.Witness.first ^
+      Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+    Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.even
+      Becoming.FreeEnergyCounting.Witness.first [true, false] <
+  Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even ^
+      Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+    Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.first
+      Becoming.FreeEnergyCounting.Witness.first [true, false]
+Becoming.FreeEnergyCounting.Witness.scaled_reach : Becoming.total [true, false]
+        Becoming.FreeEnergyCounting.Witness.twoEach ^
+      Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.twoEach *
+    Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.even
+      Becoming.FreeEnergyCounting.Witness.twoEach [true, false] =
+  Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.even ^
+      Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.twoEach *
+    Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.twoEach
+      Becoming.FreeEnergyCounting.Witness.twoEach [true, false]
+Becoming.FreeEnergyCounting.Witness.off_support : Becoming.total [true, false]
+          Becoming.FreeEnergyCounting.Witness.first ^
+        Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+      Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.secondOnly
+        Becoming.FreeEnergyCounting.Witness.first [true, false] =
+    0 ∧
+  0 <
+    Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.secondOnly ^
+        Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+      Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.first
+        Becoming.FreeEnergyCounting.Witness.first [true, false]
+Becoming.FreeEnergyCounting.Witness.total_two_unreached : ∀ (k : Nat),
+  k ≤ 2 →
+    Becoming.total [true, false] (Becoming.FreeEnergyCounting.Witness.split2 k) ^
+          Becoming.total [true, false] (Becoming.FreeEnergyCounting.Witness.split2 k) *
+        Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.oneTwo
+          (Becoming.FreeEnergyCounting.Witness.split2 k) [true, false] <
+      Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.oneTwo ^
+          Becoming.total [true, false] (Becoming.FreeEnergyCounting.Witness.split2 k) *
+        Becoming.FreeEnergyCounting.powerProduct (Becoming.FreeEnergyCounting.Witness.split2 k)
+          (Becoming.FreeEnergyCounting.Witness.split2 k) [true, false]
+Becoming.FreeEnergyCounting.Witness.nothing_record_reach : Becoming.total [true, false]
+          Becoming.FreeEnergyCounting.Witness.first ^
+        Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+      Becoming.FreeEnergyCounting.powerProduct
+        (Becoming.FreeEnergyCounting.joint Becoming.FreeEnergyCounting.Witness.unitPrior
+          Becoming.FreeEnergyCounting.Witness.unitLik [true] fun x => false)
+        Becoming.FreeEnergyCounting.Witness.first [true, false] =
+    0 ∧
+  (Becoming.mass (Becoming.openSteps [true, false] [true])
+          (Becoming.ConditionalWeights.pairWeight Becoming.FreeEnergyCounting.Witness.unitPrior
+            Becoming.FreeEnergyCounting.Witness.unitLik)
+          fun x => false) ^
+        Becoming.total [true, false] Becoming.FreeEnergyCounting.Witness.first *
+      Becoming.FreeEnergyCounting.powerProduct Becoming.FreeEnergyCounting.Witness.first
+        Becoming.FreeEnergyCounting.Witness.first [true, false] =
+    0
+Becoming.FreeEnergyCounting.Witness.duplicate_share : ((Becoming.total [true, true, false] fun x => 1) ^
+        Becoming.total [true, true, false] fun x => 1) *
+      Becoming.FreeEnergyCounting.powerProduct
+        (Becoming.FreeEnergyCounting.joint Becoming.FreeEnergyCounting.Witness.unitPrior
+          Becoming.FreeEnergyCounting.Witness.unitLik [true] fun x => true)
+        (fun x => 1) [true, true, false] =
+    ((Becoming.mass (Becoming.openSteps [true, true, false] [true])
+          (Becoming.ConditionalWeights.pairWeight Becoming.FreeEnergyCounting.Witness.unitPrior
+            Becoming.FreeEnergyCounting.Witness.unitLik)
+          fun x => true) ^
+        Becoming.total [true, true, false] fun x => 1) *
+      Becoming.FreeEnergyCounting.powerProduct (fun x => 1) (fun x => 1) [true, true, false] ∧
+  (Becoming.total [true, true, false] fun x => 1) = 3 ∧
+    (Becoming.ConditionalWeights.share (Becoming.openSteps [true, true, false] [true])
+            (Becoming.ConditionalWeights.restrict (fun x => true)
+              (Becoming.ConditionalWeights.pairWeight Becoming.FreeEnergyCounting.Witness.unitPrior
+                Becoming.FreeEnergyCounting.Witness.unitLik))
+            fun c => decide (c.fst = true)).part =
+        2 ∧
+      (Becoming.ConditionalWeights.share (Becoming.openSteps [true, true, false] [true])
+            (Becoming.ConditionalWeights.restrict (fun x => true)
+              (Becoming.ConditionalWeights.pairWeight Becoming.FreeEnergyCounting.Witness.unitPrior
+                Becoming.FreeEnergyCounting.Witness.unitLik))
+            fun c => decide (c.fst = true)).whole =
+        3

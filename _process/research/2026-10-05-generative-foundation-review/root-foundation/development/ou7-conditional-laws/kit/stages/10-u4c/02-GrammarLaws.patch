@@ -1,0 +1,243 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+index dbf128eb1..7ee1af777 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+@@ -154,6 +154,15 @@ their consumers' stay arithmetic, since each needs only the count.
+   not drawn (`«止而不入之例»`), and a place can be drawn in while its steps of `F` recur
+   (`«入而屡之例»`). The ending of the courses (`«尽»`) gives rest; it is a sufficient condition,
+   not what rest is, and no converse is established.
++* **The census, counted.** Counted by tests on the listed units, with no decision of identity,
++  the census of a step holds by halves: under fixed successors, the units after with those a test
++  marks as ceasing are at most the units before with those a test marks as arising
++  (`«定后则后并亡不过前并生»`), and its mirror under fixed predecessors (`«定前则前并生不过后并亡»`); under both, the halves meet in the count of
++  the paired census, the tests read off its decision (`«定后定前则前并生与后并亡同数»`). Along a run,
++  where every predecessor of a unit listed after a step is listed before it, endings recurring give
++  beginnings recurring (`«定后前者在前则亡屡者生屡»`). Each is the corollary of a local form that asks
++  no split (no merge) only among the listed units (`GrammarLaws.census_le`, `census_le_converse`,
++  `census_count`, `census_run`). The listing and the tests are supplied.
+ * **Lumping.** `«同行» R E` (`R˘;E;R ⊆ E`) says that `E`-alike occurrences go to `E`-alike
+   occurrences (`«同行之逐点»`). Constancy (`«有常»`) gives it where the successor is fixed at the
+   occurrences `E` leads to (`«有常局定后则同行»`); it gives constancy where a successor exists at
+@@ -1845,6 +1854,222 @@ theorem «后者在后则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k
+     | false => rfl
+     | true => exact absurd ⟨f, (dec g f).mpr h⟩ ends
+ 
++/-- A list keeps as many units as a test holds of. -/
++theorem GrammarLaws.length_keep (p : α → Bool) : ∀ l : List α,
++    (GrammarLaws.keep p l).length = «计» p l
++  | [] => rfl
++  | x :: l => by
++    show (cond (p x) (x :: GrammarLaws.keep p l) (GrammarLaws.keep p l)).length =
++      cond (p x) 1 0 + «计» p l
++    cases p x with
++    | true => exact (congrArg (· + 1) (length_keep p l)).trans (Nat.add_comm _ _)
++    | false => exact (length_keep p l).trans (Nat.zero_add _).symm
++
++/-- A list is the units a test holds of with those it fails of. -/
++theorem GrammarLaws.count_add_not (p : α → Bool) : ∀ l : List α,
++    «计» p l + «计» (fun x => !p x) l = l.length
++  | [] => rfl
++  | x :: l => by
++    show (cond (p x) 1 0 + «计» p l) + (cond (!p x) 1 0 + «计» (fun x => !p x) l) = l.length + 1
++    cases p x with
++    | true =>
++      show (1 + «计» p l) + (0 + «计» (fun x => !p x) l) = l.length + 1
++      rw [Nat.zero_add, Nat.add_assoc, count_add_not p l, Nat.add_comm]
++    | false =>
++      show (0 + «计» p l) + (1 + «计» (fun x => !p x) l) = l.length + 1
++      rw [Nat.zero_add, Nat.add_left_comm, count_add_not p l, Nat.add_comm]
++
++/-- Keeping the units a test holds of keeps a list without repetition. -/
++theorem GrammarLaws.distinct_keep (p : α → Bool) : ∀ {l : List α}, Distinct l →
++    Distinct (GrammarLaws.keep p l)
++  | [], _ => trivial
++  | x :: l, ⟨fresh, once⟩ => by
++    show Distinct (cond (p x) (x :: GrammarLaws.keep p l) (GrammarLaws.keep p l))
++    cases p x with
++    | true => exact ⟨fun mem => fresh (GrammarLaws.mem_keep.mp mem).1, distinct_keep p once⟩
++    | false => exact distinct_keep p once
++
++/-- A unit a test holds of makes its count positive. -/
++theorem GrammarLaws.count_pos_of_mem {p : α → Bool} {x : α} {l : List α} (mem : x ∈ l)
++    (holds : p x = true) : 0 < «计» p l :=
++  match List.append_of_mem mem with
++  | ⟨b₁, b₂, split⟩ => by
++    rw [split, GrammarLaws.count_insert, holds]
++    exact Nat.lt_of_lt_of_le Nat.zero_lt_one (Nat.le_add_right _ _)
++
++/-- A test whose negation fails holds. -/
++theorem GrammarLaws.eq_true_of_not_false : ∀ {c : Bool}, (!c) = false → c = true
++  | true, _ => rfl
++  | false, h => Bool.noConfusion h
++
++/-- **The census of a step, counted, one side**, asking only what its proof uses. Units listed before
++and after a step under a continuation (`«续» R E`), those after listed once, no unit before
++continuing as two units listed after: where a test `b` fails only of units after with a predecessor
++among the units before, as far as can be refuted, and a test `e` holds only of units before that no
++unit after continues, the units after with those `e` holds of are at most the units before with
++those `b` holds of. No decision of identity is used: a predecessor is found under a double negation,
++the conclusion being a decided comparison of numbers. -/
++theorem GrammarLaws.census_le {b e : α → Bool} {before after : List α} (dA : Distinct after)
++    (noSplit : ∀ x y y', x ∈ before → y ∈ after → y' ∈ after → «续» R E x y → «续» R E x y' → y = y')
++    (arising : ∀ y, y ∈ after → b y = false → ¬¬ ∃ x, x ∈ before ∧ «续» R E x y)
++    (ceasing : ∀ x, x ∈ before → e x = true → ∀ y, y ∈ after → ¬ «续» R E x y) :
++    after.length + «计» e before ≤ before.length + «计» b after :=
++  have fewer : (GrammarLaws.keep (fun y => !b y) after).length ≤
++      (GrammarLaws.keep (fun x => !e x) before).length :=
++    Decidable.of_not_not fun more =>
++      not_not_all (P := fun y => ∃ x, x ∈ GrammarLaws.keep (fun x => !e x) before ∧ «续» R E x y)
++        (fun y my none =>
++          have h := GrammarLaws.mem_keep.mp my
++          arising y h.1 (GrammarLaws.not_eq_true_iff.mp h.2) fun ⟨x, mx, c⟩ =>
++            none ⟨x, GrammarLaws.mem_keep.mpr ⟨mx, GrammarLaws.not_eq_true_iff.mpr
++              (match he : e x with
++               | false => rfl
++               | true => absurd c (ceasing x mx he y h.1))⟩, c⟩)
++        fun all => more (length_le_of_matched
++          (S := fun y x => x ∈ GrammarLaws.keep (fun x => !e x) before ∧ «续» R E x y)
++          (GrammarLaws.distinct_keep _ dA)
++          (fun y my => match all y my with | ⟨x, mx, c⟩ => ⟨x, mx, mx, c⟩)
++          fun y y' x my my' h h' => noSplit x y y' (GrammarLaws.mem_keep.mp h.1).1
++            (GrammarLaws.mem_keep.mp my).1 (GrammarLaws.mem_keep.mp my').1 h.2 h'.2)
++  calc after.length + «计» e before
++      = («计» b after + (GrammarLaws.keep (fun y => !b y) after).length) + «计» e before := by
++        rw [GrammarLaws.length_keep, GrammarLaws.count_add_not]
++    _ ≤ («计» b after + (GrammarLaws.keep (fun x => !e x) before).length) + «计» e before :=
++        Nat.add_le_add_right (Nat.add_le_add_left fewer _) _
++    _ = before.length + «计» b after := by
++        rw [GrammarLaws.length_keep, Nat.add_assoc, Nat.add_comm («计» (fun x => !e x) before),
++          GrammarLaws.count_add_not, Nat.add_comm]
++
++/-- **The census of a step, counted, one side**, under a continuation that fixes successors
++(`GrammarLaws.census_le`, the fixed successor read at the listed units). `«定后»` is more than the
++proof uses, which is no split among the units listed. -/
++theorem «定后则后并亡不过前并生» {b e : α → Bool} {before after : List α}
++    (dA : Distinct after) (fixedAfter : «定后» («续» R E))
++    (arising : ∀ y, y ∈ after → b y = false → ¬¬ ∃ x, x ∈ before ∧ «续» R E x y)
++    (ceasing : ∀ x, x ∈ before → e x = true → ∀ y, y ∈ after → ¬ «续» R E x y) :
++    after.length + «计» e before ≤ before.length + «计» b after :=
++  GrammarLaws.census_le dA (fun x y y' _ _ _ c c' => «定后之逐点».mp fixedAfter x y y' c c')
++    arising ceasing
++
++/-- **Its mirror**, the same law at the converse, asking only what its proof uses. The units before
++listed once, no two units listed before continuing as one unit after: where `e` fails only of units
++before with a successor among the units after, as far as can be refuted, and `b` holds only of units
++after that no unit before continues, the units before with those `b` holds of are at most the units
++after with those `e` holds of. -/
++theorem GrammarLaws.census_le_converse {b e : α → Bool} {before after : List α}
++    (dB : Distinct before)
++    (noMerge : ∀ x x' y, x ∈ before → x' ∈ before → y ∈ after → «续» R E x y → «续» R E x' y → x = x')
++    (ceasing : ∀ x, x ∈ before → e x = false → ¬¬ ∃ y, y ∈ after ∧ «续» R E x y)
++    (arising : ∀ y, y ∈ after → b y = true → ∀ x, x ∈ before → ¬ «续» R E x y) :
++    before.length + «计» b after ≤ after.length + «计» e before :=
++  GrammarLaws.census_le (R := «逆» R) (E := «逆» E) (b := e) (e := b)
++    (before := after) (after := before) dB
++    (fun y x x' my mx mx' c c' => noMerge x x' y mx mx' my c c')
++    ceasing arising
++
++/-- **Its mirror** under a continuation that fixes predecessors (`GrammarLaws.census_le_converse`,
++merging nothing read at the listed units). -/
++theorem «定前则前并生不过后并亡» {b e : α → Bool} {before after : List α}
++    (dB : Distinct before) (fixedBefore : «定前» («续» R E))
++    (ceasing : ∀ x, x ∈ before → e x = false → ¬¬ ∃ y, y ∈ after ∧ «续» R E x y)
++    (arising : ∀ y, y ∈ after → b y = true → ∀ x, x ∈ before → ¬ «续» R E x y) :
++    before.length + «计» b after ≤ after.length + «计» e before :=
++  GrammarLaws.census_le_converse dB
++    (fun x x' y _ _ _ c c' => «定前之逐点».mp fixedBefore x x' y c c') ceasing arising
++
++/-- **The two halves meet in the paired census's count**, asking only what the proof uses: the
++hypotheses of the paired census (`GrammarLaws.census_pairs`), read on the continuation decided by
++`k`. The units after with those ceasing are as many as the units before with those arising. The
++pairing says more than the count; the count asks neither `k` nor the predecessors' or successors'
++lists, only the tests. -/
++theorem GrammarLaws.census_count (dec : ∀ x y, «续» R E x y ↔ k x y = true)
++    (before after : List α) (dB : Distinct before) (dA : Distinct after)
++    (noSplit : ∀ x y y', x ∈ before → y ∈ after → y' ∈ after → «续» R E x y → «续» R E x y' → y = y')
++    (noMerge : ∀ x x' y, x ∈ before → x' ∈ before → y ∈ after → «续» R E x y → «续» R E x' y → x = x') :
++    after.length + (GrammarLaws.ceasing k before after).length =
++      before.length + (GrammarLaws.arising k before after).length :=
++  have one := GrammarLaws.census_le (b := fun y => !(before.any fun g => k g y))
++    (e := fun x => !(after.any (k x))) dA noSplit
++    (fun y _ off none => match GrammarLaws.any_split (GrammarLaws.eq_true_of_not_false off) with
++      | ⟨a₁, x, a₂, split, kx⟩ =>
++        none ⟨x, split ▸ GrammarLaws.mem_middle x a₂ a₁, (dec x y).mpr kx⟩)
++    (fun x _ on y my c => Bool.noConfusion ((GrammarLaws.any_false_mem
++        (GrammarLaws.not_eq_true_iff.mp on) my).symm.trans ((dec x y).mp c)))
++  have other := GrammarLaws.census_le_converse (b := fun y => !(before.any fun g => k g y))
++    (e := fun x => !(after.any (k x))) dB noMerge
++    (fun x _ off none => match GrammarLaws.any_split (GrammarLaws.eq_true_of_not_false off) with
++      | ⟨a₁, y, a₂, split, ky⟩ =>
++        none ⟨y, split ▸ GrammarLaws.mem_middle y a₂ a₁, (dec x y).mpr ky⟩)
++    (fun y _ on x mx c => Bool.noConfusion ((GrammarLaws.any_false_mem (p := fun g => k g y)
++        (GrammarLaws.not_eq_true_iff.mp on) mx).symm.trans ((dec x y).mp c)))
++  by
++    show after.length + (GrammarLaws.keep _ before).length =
++      before.length + (GrammarLaws.keep _ after).length
++    rw [GrammarLaws.length_keep, GrammarLaws.length_keep]
++    exact Nat.le_antisymm one other
++
++/-- **The two halves meet in the paired census's count**, under the paired census
++(`«定后定前则前并生对后并亡»`), the tests read off `k` (`GrammarLaws.census_count`). -/
++theorem «定后定前则前并生与后并亡同数» (dec : ∀ x y, «续» R E x y ↔ k x y = true)
++    (before after : List α) (dB : Distinct before) (dA : Distinct after)
++    (fixedAfter : «定后» («续» R E)) (fixedBefore : «定前» («续» R E)) :
++    after.length + (GrammarLaws.ceasing k before after).length =
++      before.length + (GrammarLaws.arising k before after).length :=
++  GrammarLaws.census_count dec before after dB dA
++    (fun x y y' _ _ _ c c' => «定后之逐点».mp fixedAfter x y y' c c')
++    (fun x x' y _ _ _ c c' => «定前之逐点».mp fixedBefore x x' y c c')
++
++/-- **The census of a run**, asking only what its proof uses. Units listed at each step of a run
++under a continuation, from step `T` on: the units after each step listed once, no unit listed
++before a step continuing as two units listed after it, every predecessor of a unit listed after a
++step listed before it, and the root's beginnings (`«生»`) and endings (`«亡»`) decided on the listed
++units by tests. Where endings recur among the listed units (`«屡»`), beginnings recur among the
++units listed after a step. At each step the census of a step applies, and the counting step from
++losing to gaining (`gaining_of_losing_from`) sums it over a stretch. -/
++theorem GrammarLaws.census_run {b e : α → Bool} {u : Nat → List α} {T : Nat}
++    (once : ∀ t, T ≤ t → Distinct (u (t + 1)))
++    (noSplit : ∀ t, T ≤ t → ∀ x y y', x ∈ u t → y ∈ u (t + 1) → y' ∈ u (t + 1) →
++      «续» R E x y → «续» R E x y' → y = y')
++    (predecessorsBefore : ∀ t, T ≤ t → ∀ x y, y ∈ u (t + 1) → «续» R E x y → x ∈ u t)
++    (begins : ∀ t, T ≤ t → ∀ y, y ∈ u (t + 1) → (b y = true ↔ «生» R E y))
++    (ends : ∀ t, T ≤ t → ∀ x, x ∈ u t → (e x = true ↔ «亡» R E x))
++    (ending : «屡» (fun before _ => ∃ x, x ∈ before ∧ «亡» R E x) u) :
++    «屡» (fun _ after => ∃ y, y ∈ after ∧ «生» R E y) u :=
++  fun N =>
++    match gaining_of_losing_from (T := T) (q := fun t => (u t).length)
++        (x := fun t => «计» e (u t)) (y := fun t => «计» b (u (t + 1)))
++        (fun t from_ => GrammarLaws.census_le (once t from_) (noSplit t from_)
++          (fun y my off none =>
++            (fun begins' : «生» R E y =>
++              Bool.noConfusion (((begins t from_ y my).mpr begins').symm.trans off))
++            fun ⟨x, c⟩ => none ⟨x, predecessorsBefore t from_ x y my c, c⟩)
++          (fun x mx on y _ c => (ends t from_ x mx).mp on ⟨y, c⟩))
++        (fun M => match ending (M + T) with
++          | ⟨t, later, x, mx, en⟩ =>
++            ⟨t, Nat.le_trans (Nat.le_add_right M T) later, GrammarLaws.count_pos_of_mem mx
++              ((ends t (Nat.le_trans (Nat.le_add_left T M) later) x mx).mpr en)⟩)
++        (N + T) with
++    | ⟨t, later, pos⟩ =>
++      match GrammarLaws.split_of_count_pos pos with
++      | ⟨b₁, y, b₂, split, tested⟩ =>
++        have my : y ∈ u (t + 1) := split ▸ GrammarLaws.mem_middle y b₂ b₁
++        ⟨t, Nat.le_trans (Nat.le_add_right N T) later, y, my,
++          (begins t (Nat.le_trans (Nat.le_add_left T N) later) y my).mp tested⟩
++
++/-- **The census of a run** under a continuation that fixes successors (`GrammarLaws.census_run`,
++the fixed successor read at the listed units). -/
++theorem «定后前者在前则亡屡者生屡» {b e : α → Bool} {u : Nat → List α} {T : Nat}
++    (once : ∀ t, T ≤ t → Distinct (u (t + 1)))
++    (predecessorsBefore : ∀ t, T ≤ t → ∀ x y, y ∈ u (t + 1) → «续» R E x y → x ∈ u t)
++    (fixedAfter : «定后» («续» R E))
++    (begins : ∀ t, T ≤ t → ∀ y, y ∈ u (t + 1) → (b y = true ↔ «生» R E y))
++    (ends : ∀ t, T ≤ t → ∀ x, x ∈ u t → (e x = true ↔ «亡» R E x))
++    (ending : «屡» (fun before _ => ∃ x, x ∈ before ∧ «亡» R E x) u) :
++    «屡» (fun _ after => ∃ y, y ∈ after ∧ «生» R E y) u :=
++  GrammarLaws.census_run once
++    (fun _ _ x y y' _ _ _ c c' => «定后之逐点».mp fixedAfter x y y' c c')
++    predecessorsBefore begins ends ending
++
+ end Census
+ 
+ /-! ## Lumping (同行) -/

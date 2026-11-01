@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/u4c-local/tree",
+  "modules": 4,
+  "ran": [
+    "Becoming.GrammarLaws",
+    "BecomingGrammarLawsAxiomAudit"
+  ],
+  "reused": 3,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 191,
+      "declarations": 220,
+      "with_axioms": {}
+    }
+  }
+}

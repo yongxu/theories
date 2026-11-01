@@ -11,7 +11,7 @@ laws are its whole-number instance: `Becoming.Renewal` proves `falls_not_recurri
 `Amounts.rests`, `Becoming.Space` proves `falls_stop_unrefuted` from `Amounts.rests_unrefuted`, and
 `Becoming.Dissipation` and `Becoming.Openness` prove the family laws and the stopping of change from
 `Amounts.family_rests_of_archimedean`, `Amounts.losses_within` and `Amounts.rests_unrefuted`. It
-imports only `Becoming.Prelude` and the grammar's master laws (`Becoming.GrammarLaws`), so it lies
+imports only `Becoming.Prelude` and the grammar's shared laws (`Becoming.GrammarLaws`), so it lies
 below every module that reads a level.
 
 * **Amounts.** An addition, associative and commutative with nothing as its unit, and an order

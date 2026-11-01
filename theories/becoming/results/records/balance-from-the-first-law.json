@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T18:00:00+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it. Read in available work, thermodynamics' first law and the entropy balance give balance where no store generates entropy, and the exchanges' exergy balance: both from one reading.",
     "zh": "只由参与的交换携带的量，恰在没有条件产生它之处使水平平衡。读作可用功，热力学第一定律与熵平衡在没有储存生熵之处给出平衡，也给出交换的㶲平衡：两者出自同一读法。"
   },
   "laws": [
     {
-      "en": "A quantity held on the conditions obeys a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance.",
-      "zh": "条件上所持的量服从局部平衡：每一步中，条件上所立者的变化，等于在场交换从它带出的，加上条件自身产生的。以单位 u > 0 读水平与交换，条件所产生的，正是 u 乘以它偏离平衡之数。",
+      "en": "A quantity held on the conditions satisfies a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance.",
+      "zh": "条件上所持的量满足局部平衡：每一步中，条件上所立者的变化，等于在场交换从它带出的，加上条件自身产生的。以单位 u > 0 读水平与交换，条件所产生的，正是 u 乘以它偏离平衡之数。",
       "declarations": [
         "Becoming.EntropyProduction.LocalBalance",
         "Becoming.EntropyProduction.ReadsLevels",
@@ -327,7 +327,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "statement",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.taken",
@@ -385,6 +385,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): 'The first law' here is thermodynamics' first law, named in full apart from the spine's first law (Flow.Gainless), which thermodynamics' second law gives read in available work; title, statement, laws 4 and 5, a limit, the correspondence, a dependency and two related notes. Where a related note means the spine's first law, it says so.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：这里的“第一定律”是热力学第一定律，与脊柱的第一律（Flow.Gainless，以可用功读出时由热力学第二定律给出）分开，写出全名；标题、陈述、第 4、5 条规律、一条限度、对应、一项依赖与两条相关说明。一条相关说明的英文版中指脊柱之第一律处写明为脊柱的。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
     }
   ]
 }

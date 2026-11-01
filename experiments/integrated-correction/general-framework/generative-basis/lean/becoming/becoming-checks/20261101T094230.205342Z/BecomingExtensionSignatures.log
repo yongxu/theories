@@ -1,0 +1,32 @@
+@Becoming.Comparison.separates : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {D : Type} {π : S → D}
+  {compare : D → D → Prop},
+  (∀ (d : D), ¬compare d d) →
+    (Becoming.Comparison F living fun s t => compare (π s) (π t)) →
+      ∀ {s t : S}, Becoming.Extension F living s t → π s ≠ π t
+@Becoming.Extension.irrefl : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {s : S},
+  ¬Becoming.Extension F living s s
+@Becoming.Extension.trans : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {s t u : S},
+  Becoming.Extension F living s t → Becoming.Extension F living t u → Becoming.Extension F living s u
+@Becoming.Comparison.climbs : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {score : S → Nat},
+  (Becoming.Comparison F living fun s t => score s < score t) →
+    ∀ {next : Nat → S},
+      (∀ (i : Nat), Becoming.Extension F living (next i) (next (i + 1))) →
+        ∀ (m : Nat), score (next 0) + m ≤ score (next m)
+@Becoming.Comparison.outgrows : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop} {score : S → Nat},
+  (Becoming.Comparison F living fun s t => score s < score t) →
+    ∀ {next : Nat → S},
+      (∀ (i : Nat), Becoming.Extension F living (next i) (next (i + 1))) →
+        ∀ (s : S), score s < score (next (score s + 1))
+@Becoming.LiftBetter.trans : ∀ {S A C : Type} {F : Becoming.Frame S A C} {better : S → S → Prop} {s : S} {a b c : A},
+  (∀ {x y z : S}, better x y → better y z → better x z) →
+    Becoming.LiftBetter F better s a b →
+      Becoming.LiftBetter F better s b c → Generative.Enabled F.P s b → Becoming.LiftBetter F better s a c
+@Becoming.LiftBetter.irrefl : ∀ {S A C : Type} {F : Becoming.Frame S A C} {better : S → S → Prop} {s : S} {a : A},
+  (∀ (x : S), ¬better x x) → Generative.Enabled F.P s a → ¬Becoming.LiftBetter F better s a a
+@Becoming.LiftBetter.some : ∀ {S A C : Type} {F : Becoming.Frame S A C} {better : S → S → Prop} {s : S} {a b : A},
+  Becoming.LiftBetter F better s a b →
+    Generative.Enabled F.P s a → Generative.Enabled F.P s b → ∃ t t', F.P.step s a t ∧ F.P.step s b t' ∧ better t t'
+@Becoming.Web.paths_extension_iff_widens : ∀ {F C : Type} (W : Becoming.Web F C) {l l' : Nat → C → Nat},
+  Becoming.Extension W.paths (fun x => True) l' l ↔ W.Widens l l'
+@Becoming.Web.paths_comparison_widens : ∀ {F C : Type} (W : Becoming.Web F C) (living : F × Nat → Prop),
+  Becoming.Comparison W.paths living fun l' l => W.Widens l l'

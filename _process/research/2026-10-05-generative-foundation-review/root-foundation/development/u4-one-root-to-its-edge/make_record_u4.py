@@ -11,8 +11,10 @@ From the checkout root:
 The standings come from the design (DESIGN-BOUNDARY.md, boundary-table.json's hand readings) and MV's probe (§6: the
 eight derived rows' laws, bridges and support). Two rows depend on HE2's items 3 and 4: once GrammarLaws states
 «所闭之逆», `Flow.mutuallyDependent_iff_reach` and `Flow.withinCoupling_reads_iff` are declared derived, cases of the
-closure laws their model lemmas are now proved as; before, they are readings at connected, as the rule gives. The
-generator checks nothing about the Lean: master_laws.py does (D1 to D6, the Lean check), and the landing requires its
+closure laws their model lemmas are now proved as; before, they are readings at connected, as the rule gives. One row
+depends on U4c: once GrammarLaws states the root's census of a run («定后前者在前则亡屡者生屡»), `Listed.coming_of_ceasing`
+is declared derived, a case of it, and `CensusWebs.keep_pace`'s basis says why it is not; before, the first is counting
+(CENSUS-ON-THE-ROOT.md, REVIEW-U4C-RECORD.md). The generator checks nothing about the Lean: master_laws.py does (D1 to D6, the Lean check), and the landing requires its
 four lists empty. Counts in the statement are computed from the standings and the rule's labels in boundary-table.json
 and checked against master-laws.json's boundary report when it reads this record.
 """
@@ -59,6 +61,10 @@ assert len(DESCENT) == 18 and len(ALL_END) == 24 and set(PARTS) <= set(ALL_END)
 
 # U4_HE2=1 forces the entries of HE2's state, for reviewing them before HE2 lands; the landing never sets it.
 HE2 = os.environ.get('U4_HE2') == '1' or 'theorem «所闭之逆»' in (ROOT / (B + 'GrammarLaws.lean')).read_text(encoding='utf-8')
+# U4_U4C=1 likewise forces U4c's state (the census on the root) before it lands.
+U4C = os.environ.get('U4_U4C') == '1' or 'theorem «定后前者在前则亡屡者生屡»' in (ROOT / (B + 'GrammarLaws.lean')).read_text(
+    encoding='utf-8')
+REVIEW_U4C = DEV + 'REVIEW-U4C-RECORD.md'
 
 # The eight derived rows: MV's probe (BOUNDARY-FIELD.md §6), laws, bridges (equivalences) and support.
 PROBE = json.loads((ROOT / (MV + 'boundary/probe.json')).read_text(encoding='utf-8'))['summary']['eight']
@@ -148,6 +154,24 @@ else:
                 'item 4 lands. The rule gives the same.'),
     ]
 
+# U4c: the census law, a case of the root's census of a run at a member's occurrences (CENSUS-ON-THE-ROOT.md §3.1).
+if U4C:
+    STANDINGS.append({**derived(
+        'Listed.coming_of_ceasing', ['«定后前者在前则亡屡者生屡»'],
+        ['comesToBe_iff_sheng_along', 'ceasesToBe_iff_wang_along'],
+        ['Steps.along_fixed', 'Steps.along_hasPred_iff', 'Steps.along_hasSucc_iff'],
+        'A case of «定后前者在前则亡屡者生屡» at a member\'s occurrences along its steps (Steps.along), under the two-valued '
+        'class of its determination (Steps.alikeAt), the run being the occurrences listed at each step '
+        '(listedOccurrences). The bridges read coming to be and ceasing to be as the root\'s beginning and ending there, '
+        'through an occurrence\'s one predecessor and one successor along its relatum (Steps.along_hasPred_iff, '
+        'Steps.along_hasSucc_iff); nothing splits along a relatum under any class (Steps.along_fixed). The law\'s '
+        'other hypotheses are met inline: the listing\'s Distinct, mapped; a listed occurrence\'s predecessor is the '
+        'same member one step earlier, holding by the class, so listed; the tests decide the determination at a step '
+        'and nothing else, no decision of identity being used. Its statement still reads as counting on U4b\'s line; '
+        'it is placed by its proof\'s reach, as were the eight connected rows the reading of connected rows took as '
+        'derived (DESIGN-BOUNDARY §2, rule 2).'),
+        'review': REVIEW_U4C})
+
 # Row 17: under a stated hypothesis, the root form at one step.
 STANDINGS.append({
     'declaration': 'Becoming.GroupEnding.Flow.all_end', 'standing': 'under a stated hypothesis',
@@ -189,13 +213,19 @@ FREE = ('It keeps significance free, as chapter 7 intends; ')
 READINGS = [
     # below the grammar: laws of counting (lever 2's review, S2)
     ('CensusWebs.keep_pace', 'counting',
-     'The counting law CountsAcross.keep_pace, for any predicate, at a web\'s arising and ceasing over a listing.'),
+     'The counting law CountsAcross.keep_pace, for any predicate, at a web\'s arising and ceasing over a listing.'
+     + (' It is not a case of the root\'s census of a step (U4c): a two-sided bound over a stretch on a fixed family '
+        'that may list a member twice, it would need both halves summed over a stretch, read on positions, and a '
+        'proof off the balance anchor; its counts as relations are not the obstacle, its conclusion being decided.'
+        if U4C else '')),
     ('Drift.falls_back', 'counting',
      'Courses of n binary draws, weighted, counted; reading the courses as drift is the model\'s hypothesis, not '
      'part of the statement.'),
+] + ([] if U4C else [
     ('Listed.coming_of_ceasing', 'counting',
      'For any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the '
      'statement unfolds to the prelude\'s Distinct and Init and names no amount.'),
+]) + [
     ('RelativePosition.rise_needs_fall', 'counting',
      'A rise and a fall counted over a list, by the commutativity of addition.'),
     ('SelectionLevels.levels_sized', 'counting',
@@ -286,6 +316,9 @@ REVIEWED = {d: DEV + 'REVIEW-U4B.md' for d in ['SelectionLevels.rises_exact_iff_
                                               'SelectionTerm.Flow.support_not_lower',
                                               'SelectionTerm.Flow.support_moved_rises',
                                               'GroupEnding.Flow.rises_iff_inactive']}
+# U4c rewrote CensusWebs.keep_pace's basis; its record review read it (REVIEW-U4C-RECORD.md).
+if U4C:
+    REVIEWED['CensusWebs.keep_pace'] = REVIEW_U4C
 STANDINGS += [reading(d, s, b, **({'review': REVIEWED[d]} if d in REVIEWED else {})) for d, s, b in READINGS]
 assert len(STANDINGS) == len({e['declaration'] for e in STANDINGS}) == 42, len(STANDINGS)
 
@@ -344,6 +377,11 @@ def home(c):
     lean = '../../../' + SOURCE
     two = ('; and, since HE2 proved their model lemmas as `«所闭之逆»` and the laws of a closure through borrowed '
            'steps, `Flow.mutuallyDependent_iff_reach` and `Flow.withinCoupling_reads_iff`') if HE2 else ''
+    if U4C:
+        two = two.replace('; and, since HE2', '; since HE2') + (
+            '; and, since U4c, `Listed.coming_of_ceasing`, a case of the root\'s census of a run '
+            '(`«定后前者在前则亡屡者生屡»`) at a member\'s occurrences along its steps, through two bridges reading coming to '
+            'be and ceasing to be as beginning and ending there')
     rest = sum(c.values()) - c['derived'] - c['under a stated hypothesis'] - c['counting']
     word = lambda n: ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven',
                       'Twelve'][n] if n <= 12 else str(n)

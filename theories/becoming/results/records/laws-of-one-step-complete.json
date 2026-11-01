@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T11:54:51+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "Under each hypothesis on the family (none, balanced on, running down, closed, or both), some world shows a pattern of one step with its givers exactly where it obeys that hypothesis's law with its givers, and a run on one family where its passages also chain; capacity adds one law, activity none.",
-    "zh": "在家族上的每个假设之下（无、被平衡、耗减、封闭或二者），一步的模式（含给予者）恰在服从该假设带给予者之律时由某个世界显示，一个家族上的运行恰在其通过还前后相接时显示；容量添一条规律，活动不添。"
+    "en": "Under each hypothesis on the family (none, balanced on, running down, closed, or both), some world shows a pattern of one step with its givers exactly where it satisfies the hypothesis's law with its givers, and a run on a family where its passages also chain; capacity adds one law, activity none.",
+    "zh": "在家族上的每个假设之下（无、被平衡、耗减、封闭或二者），一步的模式（含给予者）恰在满足该假设带给予者之律时由某个世界显示，一个家族上的运行恰在其通过还前后相接时显示；容量添一条规律，活动不添。"
   },
   "laws": [
     {
@@ -26,8 +26,8 @@
       ]
     },
     {
-      "en": "Every step obeys the law of every step: the relata taking from a family number at least one where anything is taken from it and at most what is taken, and something taking part exchanges where anything is taken from or given to the family.",
-      "zh": "每一步都服从每步之律：从一个家族取用的关系项，凡有所取时至少一个，且至多为所取之量；凡对家族有取或给，就有参与者交换。",
+      "en": "Every step satisfies the law of every step: the relata taking from a family number at least one where anything is taken from it and at most what is taken, and something taking part exchanges where anything is taken from or given to the family.",
+      "zh": "每一步都满足每步之律：从一个家族取用的关系项，凡有所取时至少一个，且至多为所取之量；凡对家族有取或给，就有参与者交换。",
       "declarations": [
         "Becoming.OneStep.Every",
         "Becoming.Flow.Realizes.every",
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "en": "A pattern is shown by some world of the spine across some step on some family, the world listing each relatum taking part once, exactly when it obeys the law of every step; on a family balanced on across the step, exactly when each passage also balances; on a family running down across it, exactly when moreover the family's total falls by at least the number of relata taking from it.",
-      "zh": "一个模式恰在服从每步之律时，由脊柱的某个世界跨某一步在某个家族上显示（该世界每个参与者列出一次）；在跨此步被平衡的家族上，恰在每个通过还各自平衡时；在跨此步耗减的家族上，恰在此外家族总量的下降至少为取用者之数时。",
+      "en": "A pattern is shown by some world of the spine across some step on some family, the world listing each relatum taking part once, exactly when it satisfies the law of every step; on a family balanced on across the step, exactly when each passage also balances; on a family running down across it, exactly when moreover the family's total falls by at least the number of relata taking from it.",
+      "zh": "一个模式恰在满足每步之律时，由脊柱的某个世界跨某一步在某个家族上显示（该世界每个参与者列出一次）；在跨此步被平衡的家族上，恰在每个通过还各自平衡时；在跨此步耗减的家族上，恰在此外家族总量的下降至少为取用者之数时。",
       "declarations": [
         "Becoming.OneStep.Realized",
         "Becoming.OneStep.every_iff",
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "On a family closed across the step, nothing taking part taking from or giving to a condition outside it, a pattern is shown by some world listing each relatum taking part once exactly when it obeys the law of every step and nothing exchanges unless something is taken from or given to the family; on a family running down and closed, exactly when it obeys both laws.",
-      "zh": "在跨此步封闭的家族上（参与者不对家族之外的条件取或给），一个模式恰在服从每步之律、且除非对家族有取或给否则无交换时，由某个每个参与者列出一次的世界显示；在耗减且封闭的家族上，恰在两条律都成立时。",
+      "en": "On a family closed across the step, nothing taking part taking from or giving to a condition outside it, a pattern is shown by some world listing each relatum taking part once exactly when it satisfies the law of every step and nothing exchanges unless something is taken from or given to the family; on a family running down and closed, exactly when it satisfies both laws.",
+      "zh": "在跨此步封闭的家族上（参与者不对家族之外的条件取或给），一个模式恰在满足每步之律、且除非对家族有取或给否则无交换时，由某个每个参与者列出一次的世界显示；在耗减且封闭的家族上，恰在两条律都成立时。",
       "declarations": [
         "Becoming.OneStep.Closed",
         "Becoming.OneStep.closed_iff",
@@ -64,8 +64,8 @@
       ]
     },
     {
-      "en": "For a hypothesis whose law is exact, with or without the givers in the pattern, a property of patterns that does not tell apart equivalent readings of whether something exchanges holds of what every step shows where the hypothesis holds, each relatum taking part listed once, exactly when it holds of every pattern obeying the law.",
-      "zh": "对其律精确的假设，不论模式是否含给予者：一个不区分“是否有交换”之等价读法的模式性质，在假设成立处（每个参与者列出一次）对每一步所显示者成立，恰在它对服从该律的每个模式成立时。",
+      "en": "For a hypothesis whose law is exact, with or without the givers in the pattern, a property of patterns that does not tell apart equivalent readings of whether something exchanges holds of what every step shows where the hypothesis holds, each relatum taking part listed once, exactly when it holds of every pattern satisfying the law.",
+      "zh": "对其律精确的假设，不论模式是否含给予者：一个不区分“是否有交换”之等价读法的模式性质，在假设成立处（每个参与者列出一次）对每一步所显示者成立，恰在它对满足该律的每个模式成立时。",
       "declarations": [
         "Becoming.OneStep.Respects",
         "Becoming.OneStep.laws",
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "en": "Under each hypothesis (none, balanced on, running down, closed, or both), a run of patterns is shown by some world across every step on one family, the hypothesis holding at every step and each relatum taking part listed once, exactly when its passages follow one another, what stands after each step at each member being what stands before the next, and each step obeys the hypothesis's law.",
-      "zh": "在每个假设（无、被平衡、耗减、封闭或二者）之下：一串模式恰在其通过前后相接（每个成员每步之后所立即下一步之前所立）且每步服从该假设之律时，由某个世界跨每一步在一个家族上显示（假设每步成立，每个参与者列出一次）。",
+      "en": "Under each hypothesis (none, balanced on, running down, closed, or both), a run of patterns is shown by some world across every step on one family, the hypothesis holding at every step and each relatum taking part listed once, exactly when its passages follow one another, what stands after each step at each member being what stands before the next, and each step satisfies the hypothesis's law.",
+      "zh": "在每个假设（无、被平衡、耗减、封闭或二者）之下：一串模式恰在其通过前后相接（每个成员每步之后所立即下一步之前所立）且每步满足该假设之律时，由某个世界跨每一步在一个家族上显示（假设每步成立，每个参与者列出一次）。",
       "declarations": [
         "Becoming.OneStep.Chained",
         "Becoming.OneStep.RunRealized",
@@ -87,8 +87,8 @@
       ]
     },
     {
-      "en": "For a hypothesis whose law of runs is exact, a property of runs that does not tell apart runs with the same passages and takers and equivalent readings of exchange at every step holds of what every world shows on a family where the hypothesis holds at every step, each relatum taking part listed once, exactly when it holds of every run whose passages follow one another and whose steps obey the law.",
-      "zh": "对其运行之律精确的假设：一个不区分“每步通过与取用者相同、交换读法等价”之运行的运行性质，在假设每步成立的家族上（每个参与者列出一次）对每个世界所显示者成立，恰在它对通过相接且每步服从该律的每串运行成立时。",
+      "en": "For a hypothesis whose law of runs is exact, a property of runs that does not tell apart runs with the same passages and takers and equivalent readings of exchange at every step holds of what every world shows on a family where the hypothesis holds at every step, each relatum taking part listed once, exactly when it holds of every run whose passages follow one another and whose steps satisfy the law.",
+      "zh": "对其运行之律精确的假设：一个不区分“每步通过与取用者相同、交换读法等价”之运行的运行性质，在假设每步成立的家族上（每个参与者列出一次）对每个世界所显示者成立，恰在它对通过相接且每步满足该律的每串运行成立时。",
       "declarations": [
         "Becoming.OneStep.RunRespects",
         "Becoming.OneStep.run_laws"
@@ -104,8 +104,8 @@
       ]
     },
     {
-      "en": "With the givers counted, every step obeys the law of the givers: the relata giving to a family number at least one where anything is given to it and at most what is given; where the family is dissipated on across the step, every relatum giving to it takes from it, so the givers are at most the takers.",
-      "zh": "计入给予者，每一步都服从给予者之律：给一个家族的关系项，凡有所给时至少一个，且至多为所给之量；家族跨此步被耗散时，每个给它的关系项也从它取用，所以给予者不多于取用者。",
+      "en": "With the givers counted, every step satisfies the law of the givers: the relata giving to a family number at least one where anything is given to it and at most what is given; where the family is dissipated on across the step, every relatum giving to it takes from it, so the givers are at most the takers.",
+      "zh": "计入给予者，每一步都满足给予者之律：给一个家族的关系项，凡有所给时至少一个，且至多为所给之量；家族跨此步被耗散时，每个给它的关系项也从它取用，所以给予者不多于取用者。",
       "declarations": [
         "Becoming.Flow.renewers",
         "Becoming.Flow.RealizesGivers",
@@ -117,8 +117,8 @@
       ]
     },
     {
-      "en": "Under no hypothesis, balance on the family and closure, a pattern with its givers is shown by some world across some step on some family, each relatum taking part listed once, exactly when it obeys the hypothesis's law and the law of the givers; on a family running down, or running down and closed, exactly when moreover the givers are at most the takers.",
-      "zh": "在无假设、被平衡与封闭之下：一个带给予者的模式恰在服从该假设之律与给予者之律时，由某个世界跨某步在某个家族上显示（每个参与者列出一次）；在耗减、或耗减且封闭的家族上，恰在此外给予者不多于取用者时。",
+      "en": "Under no hypothesis, balance on the family and closure, a pattern with its givers is shown by some world across some step on some family, each relatum taking part listed once, exactly when it satisfies the hypothesis's law and the law of the givers; on a family running down, or running down and closed, exactly when moreover the givers are at most the takers.",
+      "zh": "在无假设、被平衡与封闭之下：一个带给予者的模式恰在满足该假设之律与给予者之律时，由某个世界跨某步在某个家族上显示（每个参与者列出一次）；在耗减、或耗减且封闭的家族上，恰在此外给予者不多于取用者时。",
       "declarations": [
         "Becoming.OneStep.RealizedGivers",
         "Becoming.OneStep.every_givers_iff",
@@ -129,8 +129,8 @@
       ]
     },
     {
-      "en": "With each relatum taking part giving the family at most cap across the step, what is given to it is at most cap times the givers; under each hypothesis (none, balanced on, running down, closed, or both) with that capacity, a pattern with its givers is shown by some world listing each relatum once exactly when it obeys that hypothesis's law with its givers (running down: givers at most takers) and that bound.",
-      "zh": "跨此步每个参与者给家族至多 cap 时，所给至多为 cap 乘给予者数；在每个假设（无、被平衡、耗减、封闭或二者）加此容量之下，带给予者的模式恰在服从该假设带给予者之律（耗减时给予者不多于取用者）且满足此界时，由某个每个参与者列出一次的世界显示。",
+      "en": "With each relatum taking part giving the family at most cap across the step, what is given to it is at most cap times the givers; under each hypothesis (none, balanced on, running down, closed, or both) with that capacity, a pattern with its givers is shown by some world listing each relatum once exactly when it satisfies that hypothesis's law with its givers (running down: givers at most takers) and that bound.",
+      "zh": "跨此步每个参与者给家族至多 cap 时，所给至多为 cap 乘给予者数；在每个假设（无、被平衡、耗减、封闭或二者）加此容量之下，带给予者的模式恰在满足该假设带给予者之律（耗减时给予者不多于取用者）且满足此界时，由某个每个参与者列出一次的世界显示。",
       "declarations": [
         "Becoming.Flow.CapacityAt",
         "Becoming.Flow.CapacityAt.replenishment_le",
@@ -142,8 +142,8 @@
       ]
     },
     {
-      "en": "With only active relata giving, and only active relata taking and only from what they draw on, across the step, a pattern with its givers is shown by some world listing each relatum taking part once, under each hypothesis (none, balanced on, running down, closed, or both), exactly when it obeys that hypothesis's law with its givers (running down: givers at most takers), as without activity: activity adds no law.",
-      "zh": "跨此步只有活跃者给予、只有活跃者取用且只从其所汲取者取用时，在每个假设（无、被平衡、耗减、封闭或二者）之下，带给予者的模式恰在服从该假设带给予者之律（耗减时给予者不多于取用者）时由某个每个参与者列出一次的世界显示，与不加活动的假设时相同：活动不添规律。",
+      "en": "With only active relata giving, and only active relata taking and only from what they draw on, across the step, a pattern with its givers is shown by some world listing each relatum taking part once, under each hypothesis (none, balanced on, running down, closed, or both), exactly when it satisfies that hypothesis's law with its givers (running down: givers at most takers), as without activity: activity adds no law.",
+      "zh": "跨此步只有活跃者给予、只有活跃者取用且只从其所汲取者取用时，在每个假设（无、被平衡、耗减、封闭或二者）之下，带给予者的模式恰在满足该假设带给予者之律（耗减时给予者不多于取用者）时由某个每个参与者列出一次的世界显示，与不加活动的假设时相同：活动不添规律。",
       "declarations": [
         "Becoming.Flow.ActingAt",
         "Becoming.Flow.TakingAt",
@@ -155,8 +155,8 @@
       ]
     },
     {
-      "en": "Under each hypothesis (none, balanced on, running down, closed, or both), a run of patterns with their givers is shown by some world across every step on one family, the hypothesis holding at every step and each relatum taking part listed once, exactly when its passages follow one another and each step obeys that hypothesis's law with its givers (running down: givers at most takers).",
-      "zh": "在每个假设（无、被平衡、耗减、封闭或二者）之下：一串带给予者的模式恰在其通过前后相接、且每步服从该假设带给予者之律（耗减时给予者不多于取用者）时，由某个世界跨每一步在一个家族上显示（假设每步成立，每个参与者列出一次）。",
+      "en": "Under each hypothesis (none, balanced on, running down, closed, or both), a run of patterns with their givers is shown by some world across every step on one family, the hypothesis holding at every step and each relatum taking part listed once, exactly when its passages follow one another and each step satisfies that hypothesis's law with its givers (running down: givers at most takers).",
+      "zh": "在每个假设（无、被平衡、耗减、封闭或二者）之下：一串带给予者的模式恰在其通过前后相接、且每步满足该假设带给予者之律（耗减时给予者不多于取用者）时，由某个世界跨每一步在一个家族上显示（假设每步成立，每个参与者列出一次）。",
       "declarations": [
         "Becoming.OneStep.RunRealizedGivers",
         "Becoming.OneStep.run_every_givers_iff",
@@ -326,7 +326,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
       "role": "proof",
-      "sha256": "a3573dad850874daa486c38d69f7ae02201572aac6f019785653bfdc45a4f10a",
+      "sha256": "f8785cad86ad3b58a2334dc2b3728d89ad168ec1f0b485b3f3ceddf6ca5e8d89",
       "declarations": [
         "Becoming.steps_succ_map",
         "Becoming.sign_eq_one",
@@ -539,7 +539,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
       "declarations": [
         "Becoming.mem_append_cases",
         "Becoming.length_map",
@@ -553,7 +553,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.takers",
         "Becoming.Flow.BalancesOn",
@@ -563,7 +563,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
+      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
       "declarations": [
         "Becoming.counting_laws",
         "Becoming.tally_iff_counted"
@@ -580,7 +580,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
       "role": "proof",
-      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
       "declarations": [
         "Becoming.Flow.RunsDownOn"
       ]
@@ -716,26 +716,32 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OneStep",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -749,14 +755,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Locality",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -835,6 +841,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement rewritten from the old one, a run on one family being shown where its passages also chain, as the run laws have it; the claim split into fourteen laws, each read against its declarations in OneStep.lean, Flow.lean, Locality.lean and Space.lean, with the conditions the Lean takes written in (each relatum taking part listed once; a property not telling apart equivalent readings of exchange, or runs alike at every step; the exchange clause of runsDown_passages_iff; the givers at most the takers under running down); the witness narrowed from one world serving every pattern to one construction giving a world for each; the limitations and the second hypothesis to three does-not-show items, two hypotheses and the standard boundaries no-ethical-premise, discrete-steps and names-provisional; one hypothesis added, stating what the model already takes (worlds of the spine with natural-number levels and amounts, a pattern counted as shown only where the world lists each relatum taking part once); process markers cut from the correspondence, its reading labelled an AI reading; Flow.renewers, OneStep.stated_not_realized and OneStep.standing_bound_needed added to their files' references; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [laws-of-one-step-complete.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-of-one-step-complete.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the statement, hypotheses, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按旧陈述改写，按运行之律写明一个家族上的运行恰在其通过还前后相接时显示；主张拆为十四条规律，各条对照 OneStep.lean、Flow.lean、Locality.lean 与 Space.lean 中的声明核读，并写入 Lean 所取的条件（每个参与者列出一次；不区分交换之等价读法、或每步相同之运行的性质；runsDown_passages_iff 的交换一项；耗减时给予者不多于取用者）；见证由“一个世界服务每个模式”收窄为“一个构造为每个模式给出一个世界”；限制与第二条前提改为三条“未表明”、两条前提与通用边界 no-ethical-premise、discrete-steps、names-provisional；新增一条前提，写明模型已取的（脊柱的世界，水平与量为自然数；世界只在把每个参与者列出一次时才算显示模式）；对应说明去掉过程标记，读法标为 AI 的读法；Flow.renewers、OneStep.stated_not_realized 与 OneStep.standing_bound_needed 加入其文件的引用；前提的内容、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [laws-of-one-step-complete.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-of-one-step-complete.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、陈述、前提，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
     }
   ],
   "text_versions": [

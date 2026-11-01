@@ -1,0 +1,45 @@
+diff --git a/theories/becoming/results/records/closing-needs-net-draw.json b/theories/becoming/results/records/closing-needs-net-draw.json
+index 5dfca83a1..bb89f52e6 100644
+--- a/theories/becoming/results/records/closing-needs-net-draw.json
++++ b/theories/becoming/results/records/closing-needs-net-draw.json
+@@ -298,14 +298,7 @@
+       "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+       "declarations": [
+         "Becoming.add_right_cancel",
+-        "Becoming.le_of_add_le_add_right"
+-      ]
+-    },
+-    {
+-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+-      "role": "proof",
+-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+-      "declarations": [
++        "Becoming.le_of_add_le_add_right",
+         "Becoming.steps_last"
+       ]
+     },
+@@ -465,13 +458,6 @@
+       "success_pointer": "/status",
+       "success_value": "passed"
+     },
+-    {
+-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+-      "sha256_pointer": "/source_sha256/Becoming.Change",
+-      "success_pointer": "/status",
+-      "success_value": "passed"
+-    },
+     {
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+@@ -561,6 +547,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): 'the author's reading', the author being the AI, reads 'a reading (an AI argument)'; the claim is unchanged.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：“作者的读法”中的作者是 AI，改为“读法（AI 论证）”；主张不变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: steps_last to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; the Change.lean reference, which cited only steps_last, goes with its proof binding, nothing the record says resting on that file. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：steps_last 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；Change.lean 之引用只引 steps_last，与其证明绑定一并去掉，记录所言无一依于该文件。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

@@ -1,0 +1,67 @@
+diff --git a/theories/becoming/results/records/bounded-census-keeps-pace.json b/theories/becoming/results/records/bounded-census-keeps-pace.json
+index 6a5f7ff06..64e65f44b 100644
+--- a/theories/becoming/results/records/bounded-census-keeps-pace.json
++++ b/theories/becoming/results/records/bounded-census-keeps-pace.json
+@@ -453,8 +453,7 @@
+         "Becoming.coming_recurs_iff",
+         "Becoming.Web.Ceases",
+         "Becoming.Web.CeasesToStand",
+-        "Becoming.Web.unceasing_iff",
+-        "Becoming.recurring_accumulates"
++        "Becoming.Web.unceasing_iff"
+       ]
+     },
+     {
+@@ -507,6 +506,14 @@
+         "Becoming.beyond_not_mem"
+       ]
+     },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
++      "role": "proof",
++      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
++      "declarations": [
++        "Becoming.recurring_accumulates"
++      ]
++    },
+     {
+       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+       "role": "receipt",
+@@ -667,6 +674,12 @@
+       "role": "receipt",
+       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
++      "role": "receipt",
++      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
++      "declarations": []
+     }
+   ],
+   "proof_bindings": [
+@@ -739,6 +752,13 @@
+       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+       "success_pointer": "/status",
+       "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Prelude",
++      "success_pointer": "/status",
++      "success_value": "passed"
+     }
+   ],
+   "history": [
+@@ -827,6 +847,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证）”改为“读法（AI 的）”；主张不变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：recurring_accumulates 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

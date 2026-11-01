@@ -20,8 +20,9 @@ The 墨经's and 荀子's 化 are one form (`«化之二说同形»`), and 化 i
 the synchronic reading of the 金师子章 and the diachronic reading of the 墨经 differ only by 缘.
 同 is a class where each thing belongs to one and to one only (`«同于为类»`), and otherwise need not be
 transitive (`«同于不必传递»`), as the 墨经's 類同 is not. A returning occurrence abides (`«复者住»`);
-under a constant class a line with a past never ends going (`«有常则往不穷»`), and what abides
-passes through, going and coming, where a class is constant both ways (`«两向有常则通»`); constancy
+under a constant class a line with a past never ends going (`«有常则往不穷»`), and what has a
+predecessor passes through, going and coming, where a class is constant both ways
+(`«两向有常有前则通»`, what abides being its case, `«两向有常则通»`); constancy
 one way is not enough (`«有常而不通»`), and under the one day and night go and come without end
 (`«昼夜往来不穷»`). The first horn of the 中论's
 dilemma, 「若一則無緣，若異則無相續」, holds of identity and of no class between: in a net without
@@ -118,12 +119,19 @@ theorem «有常则往不穷» {R E : «际» α} (hc : «有常» R E) {x : α}
     | .inl e => by cases e; exact «有常则续不尽» hc hx
     | .inr l => «有常则相续不尽» hc l
 
-/-- **Passing through, going and coming (两向有常则通).** Where a class is constant under 缘 and under
-its converse, an occurrence that abides passes through: going never ends, and coming never ends. -/
+/-- **Passing through, going and coming (两向有常有前则通).** Where a class is constant under 缘 and
+under its converse, an occurrence with a predecessor under it passes through: going never ends, and
+coming never ends. Constancy gives the successor (`«有常则续不尽»`), so a predecessor is enough. -/
+theorem «两向有常有前则通» {R E : «际» α} (hE : «类» E) (hc : «有常» R E) (hc' : «有常» («逆» R) E)
+    {x : α} (hx : «有前» R E x) : «通» R E x :=
+  ⟨«有常则往不穷» hc hx, «有常则往不穷» hc' (match «有常则续不尽» hc hx with
+    | ⟨y, hr, he⟩ => ⟨y, hr, hE.symm he⟩)⟩
+
+/-- **What abides passes through (两向有常则通).** Where a class is constant under 缘 and under its
+converse, an occurrence that abides passes through: the case of `«两向有常有前则通»` for what abides. -/
 theorem «两向有常则通» {R E : «际» α} (hE : «类» E) (hc : «有常» R E) (hc' : «有常» («逆» R) E) {x : α}
     (hx : «住» R E x) : «通» R E x :=
-  ⟨«有常则往不穷» hc hx.1, «有常则往不穷» hc' (match hx.2 with
-    | ⟨y, hr, he⟩ => ⟨y, hr, hE.symm he⟩)⟩
+  «两向有常有前则通» hE hc hc' hx.1
 
 /-- **Constancy one way is not passing through (有常而不通).** Counting up from zero under the one: the
 class is constant and the line from one never ends going, yet coming back it ends at zero. -/

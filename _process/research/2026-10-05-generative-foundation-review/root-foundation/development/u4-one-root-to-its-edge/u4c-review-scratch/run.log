@@ -1,0 +1,51 @@
+U4cReview.lean:229:13: warning: unused variable `t`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:301:4: warning: unused variable `z`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:301:9: warning: unused variable `zs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:310:4: warning: unused variable `z`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:310:9: warning: unused variable `zs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:319:4: warning: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:319:9: warning: unused variable `as`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+U4cReview.lean:324:0: warning: automatically included section variable(s) unused in theorem `Becoming.U4cReview.fixed_selfStep`:
+  [(a : α) → (t : Nat) → Decidable (p a t)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(a : α) → (t : Nat) → Decidable (p a t)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+U4cReview.lean:333:0: warning: automatically included section variable(s) unused in theorem `Becoming.U4cReview.begins_iff`:
+  [(a : α) → (t : Nat) → Decidable (p a t)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(a : α) → (t : Nat) → Decidable (p a t)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+U4cReview.lean:341:0: warning: automatically included section variable(s) unused in theorem `Becoming.U4cReview.ends_iff`:
+  [(a : α) → (t : Nat) → Decidable (p a t)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(a : α) → (t : Nat) → Decidable (p a t)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Becoming.U4cReview.step_form' does not depend on any axioms
+'Becoming.U4cReview.step_needs_once' does not depend on any axioms
+'Becoming.U4cReview.run_form' does not depend on any axioms
+'Becoming.U4cReview.coming_of_ceasing'' does not depend on any axioms
+'Becoming.U4cReview.mirror_step_form' does not depend on any axioms
+'of_decide_eq_false' does not depend on any axioms
+'Becoming.U4cReview.fixed_selfStep' does not depend on any axioms
+'Becoming.U4cReview.begins_iff' does not depend on any axioms
+'Becoming.U4cReview.ends_iff' does not depend on any axioms
+'Becoming.U4cReview.bool_iff_not' does not depend on any axioms
+'Becoming.U4cReview.mem_occ' does not depend on any axioms
+'Becoming.U4cReview.distinct_occ' does not depend on any axioms

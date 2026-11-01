@@ -11,29 +11,29 @@
 ## Laws
 
 1. Where the members of which a determination holds are listed at each step, each once, from some step T on at most B at each step, and the determination is decided at each step, members coming to hold at arbitrarily late steps need members ceasing to hold at arbitrarily late steps. (`Becoming.Listed`, `Becoming.Listed.ceasing_of_coming`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 2. The proof goes through the census balance: with coming to be recurring, the comings from any step on accumulate past B; where the list returns within B, the list at the end is shorter than the list at the start with what came between, so by the balance something ceases between. (`Becoming.recurring_accumulates`, `Becoming.Listed.ceasing_iff_shortfall`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 3. So the bound need not hold at every step from some step on: the list need only return within some number K at arbitrarily late steps. (`Becoming.Listed.ceasing_of_returning`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 4. With the census law (ceasing-needs-arising), the two recur together where the list is bounded from some step on: coming to be recurs exactly when ceasing to be does. (`Becoming.Listed.coming_iff_ceasing`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 5. Read of activity: under a census with at most B formations active at each step from some step on, arising recurs exactly when ceasing recurs. (`Becoming.Web.Census`, `Becoming.Listed.ceasing_of_coming`, `Becoming.Web.unceasing_iff_bounded`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 6. Read of worlds: in a world whose relata active at each step are listed, at most B of them, arising recurs exactly when ceasing does. (`Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 7. Every census of a finite world is bounded, with no decidability, and where activity is decided one exists, the premise of the bounded law; the law of finite worlds is World.arising_iff_ceasing of Becoming.Space. (`Becoming.World.Finite`, `Becoming.World.Finite.census_bounded`, `Becoming.World.Finite.countedWithin`, `Becoming.World.arising_iff_ceasing`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. In procession, where relatum x is active at step x alone, one relatum is active at each step and arising and ceasing both recur, while the relata are not finitely many, so the law reaches beyond finite worlds; accretion has a census without a bound, and arising recurs there while ceasing does not. (`Becoming.World.procession`, `Becoming.World.procession_world`, `Becoming.World.accretion`, `Becoming.World.accretion_unbounded`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 9. The bound may vary with the steps: where at most B t relata are active at each step t, listed (a constant bound being the case), and B returns within some number at arbitrarily late steps, arising recurs exactly when ceasing does. (`Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 10. A bound growing without end, however slowly, does not keep the two together: for any non-decreasing, unbounded B, in slow B the relata below B t are active at step t, with a census counted by B; relatum B t arises across each step at which B grows, and nothing ceases; so under logarithmic growth, for instance, arising can still go on without ceasing. (`Becoming.World.slow`, `Becoming.World.slow_world`)
     - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 11. Where the list grows without end, ceasing to be recurs where, from each step, the comings over some stretch outnumber the bound at its end; this is sufficient, not necessary, and in slow the comings never outnumber the bound; the exact criterion is the shortfall of census-balance. (`Becoming.Listed.ceasing_of_outpacing`, `Becoming.Listed.ceasing_iff_shortfall`)
-    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 12. Read of standing: where from some step on at most B conditions stand at each step, listed, coming to stand recurs exactly when ceasing to stand does. Read of dependence: where the dependences of each step are listed, at most B from some step on, forming recurs exactly when dissolving does. (`Becoming.Web.StandingCensus`, `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.Web.DependenceCensus`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`)
-    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -119,12 +119,13 @@ The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.Listed`, `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasing`, `Becoming.Web.Census`, `Becoming.Web.unceasing_iff_bounded`, `Becoming.length_le_of_sub`, `Becoming.Web.DependenceCensus`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`, `Becoming.Listed.ceasing_of_returning`, `Becoming.Listed.ceasing_of_outpacing`, `Becoming.Listed.ceasing_iff_shortfall`, `Becoming.Cycle.distinct`, `Becoming.Cycle.listed`, `Becoming.rises_between` |
 | proof | [Openness.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean) | `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`, `Becoming.World.Finite.countedWithin`, `Becoming.World.accretion_unbounded`, `Becoming.Procession.web`, `Becoming.Procession.census`, `Becoming.World.procession`, `Becoming.World.procession_world`, `Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`, `Becoming.Slow.web`, `Becoming.Slow.length`, `Becoming.Slow.census`, `Becoming.Slow.grows_between`, `Becoming.World.slow`, `Becoming.World.slow_world`, `Becoming.World.Finite.census_bounded` |
 | proof | [Locality.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean) | `Becoming.Web.StandingCensus` |
-| proof | [Change.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean) | `Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.coming_recurs_iff`, `Becoming.Web.Ceases`, `Becoming.Web.CeasesToStand`, `Becoming.Web.unceasing_iff`, `Becoming.recurring_accumulates` |
+| proof | [Change.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean) | `Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.coming_recurs_iff`, `Becoming.Web.Ceases`, `Becoming.Web.CeasesToStand`, `Becoming.Web.unceasing_iff` |
 | proof | [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean) | `Becoming.Web.Forms`, `Becoming.Web.Dissolves` |
 | proof | [Arising.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean) | `Becoming.Web.Arises`, `Becoming.Web.Unceasing` |
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.Web.ComesToStand`, `Becoming.Cycle.present`, `Becoming.Cycle.present_lt` |
 | proof | [Space.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean) | `Becoming.Flow.still`, `Becoming.World.ArisingRecurs`, `Becoming.World.CeasingRecurs`, `Becoming.World.arising_iff_ceasing`, `Becoming.World.accretion` |
 | proof | [Premises.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean) | `Becoming.World.Finite.counted`, `Becoming.beyond`, `Becoming.beyond_not_mem` |
+| proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.recurring_accumulates` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
@@ -153,6 +154,8 @@ The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasing`, `Becoming.Web.unceasing_iff_bounded`, `Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`, `Becoming.World.Finite.countedWithin`, `Becoming.World.procession_world`, `Becoming.World.accretion_unbounded`, `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`, `Becoming.Listed.ceasing_of_returning`, `Becoming.Listed.ceasing_of_outpacing`, `Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`, `Becoming.World.slow`, `Becoming.World.slow_world`, `Becoming.World.Finite.census_bounded`
 
@@ -174,6 +177,7 @@ Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasin
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Web.ceasing_of_arising (now Listed.ceasing_of_coming). The sentences that named removed declarations name the kept ones. Proof bindings (Change.lean, Dependence.lean, Openness.lean, Population.lean, Space.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Change.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Openness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Population.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.
+- 1 November 2026, U4c (study section 492): declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](bounded-census-keeps-pace.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -184,4 +188,4 @@ Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasin
 
 </details>
 
-Documentary review UTC: `2026-10-25T17:02:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

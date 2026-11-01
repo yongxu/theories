@@ -3,7 +3,7 @@ import Becoming.GrammarMap
 import Becoming.Weightings
 
 /-!
-# The continuation condition on the root: nothing outside a line's continuing (续无外)
+# The continuation condition on the root: everything on every center's continuing (续无外)
 
 The continuation condition says, in its source, that for anything its continuation into the future
 has significance. `Becoming.Significance` states it with significance as a free parameter beside the
@@ -35,7 +35,8 @@ parameter is added. No definition of an earlier module changes.
   condition as a hypothesis instantiates at that significance; one instance is proved here:
   on every reading where a claim's significance is that its formation lies within the standpoint's
   center's closure, living significance follows with S0, both neutralities and, where something
-  lives, a seed (`premises_of_noOutside`).
+  lives, a seed (`premises_of_noOutside`). That reading supplies the significance; the root gives
+  only that every formation lies within every closure.
 * **Along 缘, one center.** Where the net has no cycle, the condition along it holds only with one
   center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), and
   nothing conditions that center (`«续无外则中心无缘»`). In families at the one it asks only that the
@@ -82,7 +83,7 @@ section Root
 variable {Pos : Type} {α : Type u}
 
 /-- **The condition on the root, along the net (续无外).** Every occurrence is reached on the line of
-every center under `E`: nothing lies outside every center's continuing. -/
+every center under `E`: everything lies on every center's continuing. -/
 def «续无外» (R E : «际» α) (center : Pos → α) : Prop := ∀ p x, «所及» R E (center p) x
 
 /-- **The condition on the root, in families (族无外).** Every occurrence lies in every center's family
@@ -271,7 +272,9 @@ formation lies on every center's line under the one of a relation, then on every
 where a claim's significance from a standpoint is that its formation lies within that standpoint's
 center's closure (`reads`), living significance follows, with S0 at every standpoint, both
 neutralities and, wherever something lives and there is a standpoint, a seed: one instance of
-`Valuation.premises_of_unrestricted`. -/
+`Valuation.premises_of_unrestricted`. The significance is supplied by `reads`; with the condition
+every formation lies within every closure, so `reads` makes every claim significant from every
+standpoint, and the root supplies only that every formation lies within. -/
 theorem premises_of_noOutside {Q : Type} {V : Valuation Pos Q} {rel : F → F → Prop} {center : Pos → F}
     (none : «续无外» rel «一» center) (formation : Q → F) (step : Q → Nat)
     (reads : ∀ p c, selfAscribed (ownClosure rel) center p (step c) (formation c) → V.sig p c) :

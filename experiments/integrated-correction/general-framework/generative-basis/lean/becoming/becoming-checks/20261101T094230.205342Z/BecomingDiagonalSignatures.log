@@ -1,0 +1,131 @@
+@Becoming.Diagonal.gap_unsaid : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B},
+  Becoming.Diagonal.Moves same f → ∀ (ψ : A → A → B), ¬Becoming.Diagonal.Says same ψ (Becoming.Diagonal.gap f ψ)
+@Becoming.Diagonal.fixed_of_complete : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} (ψ : A → A → B),
+  (∀ (g : A → B), Becoming.Diagonal.Says same ψ g) → ∀ (f : B → B), ∃ b, same b (f b)
+@Becoming.Diagonal.Says.congr : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop},
+  (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+    ∀ {ψ : A → A → B} {g g' : A → B},
+      Becoming.Diagonal.Says same ψ g → (∀ (x : A), same (g x) (g' x)) → Becoming.Diagonal.Says same ψ g'
+Becoming.Diagonal.moves_not : Becoming.Diagonal.Moves Iff Not
+@Becoming.Diagonal.claims_incomplete : ∀ {A : Type u_1} (ψ : A → A → Prop),
+  ¬∀ (g : A → Prop), Becoming.Diagonal.Says Iff ψ g
+@Becoming.Diagonal.claims_gap : ∀ {A : Type u_1} (ψ : A → A → Prop), ¬Becoming.Diagonal.Says Iff ψ fun x => ¬ψ x x
+@Becoming.Diagonal.alike_of_complete : ∀ {A : Type u_1} {B : Type u_2} (ψ : A → A → B),
+  (∀ (g : A → B), Becoming.Diagonal.Says Eq ψ g) → ∀ (b b' : B) (decided : (x : B) → Decidable (x = b)), b' = b
+@Becoming.Diagonal.complete_of_alike : ∀ {A : Type u_1} {B : Type u_2} (a₀ : A) (b₀ : B),
+  (∀ (b b' : B), b = b') → ∃ ψ, ∀ (g : A → B), Becoming.Diagonal.Says Eq ψ g
+@Becoming.Diagonal.complete_iff_alike : ∀ {A : Type u_1} {B : Type u_2} [DecidableEq B] (a₀ : A) (b₀ : B),
+  (∃ ψ, ∀ (g : A → B), Becoming.Diagonal.Says Eq ψ g) ↔ ∀ (b b' : B), b = b'
+@Becoming.Diagonal.Unfolds.keeps_on : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    ∀ {g : A → B} (n k : Nat), Becoming.Diagonal.Says same (φ n) g → Becoming.Diagonal.Says same (φ (n + k)) g
+@Becoming.Diagonal.Unfolds.incomplete : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    Becoming.Diagonal.Moves same f → ∀ (n : Nat), ¬Becoming.Diagonal.Says same (φ n) (Becoming.Diagonal.gap f (φ n))
+@Becoming.Diagonal.Unfolds.gap_new : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    Becoming.Diagonal.Moves same f →
+      ∀ (m k : Nat), ¬Becoming.Diagonal.Says same (φ m) (Becoming.Diagonal.gap f (φ (m + k)))
+@Becoming.Diagonal.Unfolds.gaps_differ : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    Becoming.Diagonal.Moves same f →
+      (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+        ∀ (m k : Nat), ¬∀ (x : A), same (Becoming.Diagonal.gap f (φ m) x) (Becoming.Diagonal.gap f (φ (m + 1 + k)) x)
+@Becoming.Diagonal.Unfolds.never_returns : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    Becoming.Diagonal.Moves same f →
+      ∀ (n k : Nat), ¬∀ (g : A → B), Becoming.Diagonal.Says same (φ (n + 1 + k)) g → Becoming.Diagonal.Says same (φ n) g
+Becoming.Diagonal.two_ne_odd : ∀ (a b : Nat), a + a ≠ b + b + 1
+@Becoming.Diagonal.stock_unheld : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop},
+  (∀ (b b' : B), same b b' → same b' b) →
+    (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+      ∀ (L : Nat) (r d : Nat → A → B),
+        (∀ (m n : Nat), m < n → ¬∀ (x : A), same (d m x) (d n x)) →
+          ¬∀ (n : Nat), ∃ i, i < L ∧ ∀ (x : A), same (r i x) (d n x)
+@Becoming.Diagonal.Unfolds.unheld : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B},
+  Becoming.Diagonal.Unfolds same f φ →
+    Becoming.Diagonal.Moves same f →
+      (∀ (b b' : B), same b b' → same b' b) →
+        (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+          ∀ (L : Nat) (r : Nat → A → B),
+            ¬∀ (n : Nat), ∃ i, i < L ∧ ∀ (x : A), same (r i x) (Becoming.Diagonal.gap f (φ n) x)
+Becoming.Diagonal.unfolding_fresh : ∀ (n a : Nat), n < a → ∀ (x : Nat), Becoming.Diagonal.unfolding n a x = false
+Becoming.Diagonal.unfolding_zero : ∀ (n x : Nat), Becoming.Diagonal.unfolding n 0 x = false
+Becoming.Diagonal.flip_moves : Becoming.Diagonal.Moves Eq fun b => !b
+Becoming.Diagonal.unfolding_unfolds : Becoming.Diagonal.Unfolds Eq (fun b => !b) Becoming.Diagonal.unfolding
+Becoming.Diagonal.unfolding_open : ∀ (L : Nat) (r : Nat → Nat → Bool),
+  (∀ (n : Nat),
+      ¬Becoming.Diagonal.Says Eq (Becoming.Diagonal.unfolding n)
+          (Becoming.Diagonal.gap (fun b => !b) (Becoming.Diagonal.unfolding n))) ∧
+    (∀ (n k : Nat),
+        ¬∀ (g : Nat → Bool),
+            Becoming.Diagonal.Says Eq (Becoming.Diagonal.unfolding (n + 1 + k)) g →
+              Becoming.Diagonal.Says Eq (Becoming.Diagonal.unfolding n) g) ∧
+      ¬∀ (n : Nat),
+          ∃ i, i < L ∧ ∀ (x : Nat), r i x = Becoming.Diagonal.gap (fun b => !b) (Becoming.Diagonal.unfolding n) x
+@Becoming.Diagonal.revision_never_rests : ∀ {B : Type u_1} {f : B → B},
+  Becoming.Diagonal.Moves Eq f → ∀ (b : B) (n : Nat), Becoming.Law.orbit f b (n + 1) ≠ Becoming.Law.orbit f b n
+Becoming.Diagonal.negation_never_rests : ∀ (P : Prop) (n : Nat),
+  ¬(Becoming.Law.orbit Not P (n + 1) ↔ Becoming.Law.orbit Not P n)
+Becoming.Diagonal.negation_returns : ∀ (b : Bool), Becoming.Law.Returns (fun b => !b) b
+@Becoming.Frame.self_incomplete : ∀ {S : Type u_1} {A : Type u_2} (F : Becoming.Frame S A S),
+  ¬∀ (g : S → Prop), ∃ s, ∀ (x : S), F.realized s x ↔ g x
+@Becoming.DiagonalRuns.run_unfolds : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)), Becoming.Diagonal.Unfolds same f r.state
+@Becoming.DiagonalRuns.unfolds_iff : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  {φ : Nat → A → A → B}, Becoming.Diagonal.Unfolds same f φ ↔ ∃ r, r.state = φ
+@Becoming.DiagonalRuns.incomplete : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)),
+  Becoming.Diagonal.Moves same f →
+    ∀ (n : Nat), ¬Becoming.Diagonal.Says same (r.state n) (Becoming.Diagonal.gap f (r.state n))
+@Becoming.DiagonalRuns.gap_new : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)),
+  Becoming.Diagonal.Moves same f →
+    ∀ (m k : Nat), ¬Becoming.Diagonal.Says same (r.state m) (Becoming.Diagonal.gap f (r.state (m + k)))
+@Becoming.DiagonalRuns.gaps_differ : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)),
+  Becoming.Diagonal.Moves same f →
+    (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+      ∀ (m k : Nat),
+        ¬∀ (x : A), same (Becoming.Diagonal.gap f (r.state m) x) (Becoming.Diagonal.gap f (r.state (m + 1 + k)) x)
+@Becoming.DiagonalRuns.never_returns : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)),
+  Becoming.Diagonal.Moves same f →
+    ∀ (n k : Nat),
+      ¬∀ (g : A → B), Becoming.Diagonal.Says same (r.state (n + 1 + k)) g → Becoming.Diagonal.Says same (r.state n) g
+@Becoming.DiagonalRuns.unheld : ∀ {A : Type u_1} {B : Type u_2} {same : B → B → Prop} {f : B → B}
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion same f)),
+  Becoming.Diagonal.Moves same f →
+    (∀ (b b' : B), same b b' → same b' b) →
+      (∀ (b b' b'' : B), same b b' → same b' b'' → same b b'') →
+        ∀ (L : Nat) (stock : Nat → A → B),
+          ¬∀ (n : Nat), ∃ i, i < L ∧ ∀ (x : A), same (stock i x) (Becoming.Diagonal.gap f (r.state n) x)
+@Becoming.DiagonalRuns.complete_iff_alike : ∀ {A : Type u_1} {B : Type u_2} [DecidableEq B] {f : B → B} (a₀ : A)
+  (r : Becoming.Run (Becoming.DiagonalRuns.Completion Eq f)),
+  (∃ n, ∀ (g : A → B), Becoming.Diagonal.Says Eq (r.state n) g) ↔ ∀ (b b' : B), b = b'
+Becoming.DiagonalRuns.unfoldingRun_open : ∀ (L : Nat) (stock : Nat → Nat → Bool),
+  (∀ (n : Nat),
+      ¬Becoming.Diagonal.Says Eq (Becoming.DiagonalRuns.unfoldingRun.state n)
+          (Becoming.Diagonal.gap (fun b => !b) (Becoming.DiagonalRuns.unfoldingRun.state n))) ∧
+    (∀ (n k : Nat),
+        ¬∀ (g : Nat → Bool),
+            Becoming.Diagonal.Says Eq (Becoming.DiagonalRuns.unfoldingRun.state (n + 1 + k)) g →
+              Becoming.Diagonal.Says Eq (Becoming.DiagonalRuns.unfoldingRun.state n) g) ∧
+      ¬∀ (n : Nat),
+          ∃ i,
+            i < L ∧
+              ∀ (x : Nat),
+                stock i x = Becoming.Diagonal.gap (fun b => !b) (Becoming.DiagonalRuns.unfoldingRun.state n) x
+@Becoming.DiagonalRuns.revision_never_rests : ∀ {B : Type u_1} {f : B → B},
+  Becoming.Diagonal.Moves Eq f → ∀ (r : Becoming.Run (Becoming.Law.process f)) (n : Nat), r.state (n + 1) ≠ r.state n
+Becoming.DiagonalRuns.negation_never_rests : ∀ (r : Becoming.Run (Becoming.Law.process Not)) (n : Nat),
+  ¬(r.state (n + 1) ↔ r.state n)
+Becoming.DiagonalRuns.negation_returns : ∀ (b : Bool), Becoming.Branching.Returns (Becoming.Law.process fun b => !b) b
+@Becoming.DiagonalRuns.frame_gap : ∀ {S : Type u_1} {A : Type u_2} (F : Becoming.Frame S A S),
+  ¬∃ s, ∀ (x : S), F.realized s x ↔ ¬F.realized x x

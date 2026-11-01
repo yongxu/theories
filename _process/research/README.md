@@ -15,7 +15,7 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-04-integrated-evolution/` | — | 2 | — | 0 |
 | `2026-10-05-causal-foundations/` | — | 1 | `outputs/ (1)` | 0 |
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
-| `2026-10-05-generative-foundation-review/` | — | 6158 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6053)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4394 |
+| `2026-10-05-generative-foundation-review/` | — | 6356 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6251)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4401 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
 | `2026-10-05-repository-reconciliation/` | — | 333 | `architecture/ (315)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
@@ -79,6 +79,8 @@ Retired study material, bytes unchanged. Each history folder has a `MANIFEST.jso
 | `2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/kit/history/` | 3 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/kit/history/MANIFEST.json) |
+| `2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/history/MANIFEST.json) |
+| `2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history/` | 3 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history/` | 3 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/history/` | 1 | — |
 | `2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/MANIFEST.json) |
