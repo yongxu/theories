@@ -7156,6 +7156,11 @@
    "module": "Becoming.CommonResponse",
    "category": "general-structure",
    "reason": "under staying the same a common response exists exactly where the requirement covers every situation: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.Web.ends_or_reaches": {
+   "module": "Becoming.MapInstances",
+   "category": "general-structure",
+   "reason": "where going on is decided at the points of a line, the line reaches an end or an occurrence at every later step: a law of the base's lines along any class; its one use was the old proof of Web.end_of_gone, which now follows from degeneration (EL6)"
   }
  },
  "instances": {

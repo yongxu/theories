@@ -162,8 +162,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude at receipt PENDING, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查，回执 PENDING，在 Becoming.GrammarMap、Becoming.MapInstances 与 Becoming.KeepingWidening 中，每个声明的公理报告均为空；最初作为叶 Becoming.LineDegeneration 于回执 20261101T024359.312453Z 检查（45 个声明，40 条定理），经独立 AI 验证者四轮审查重新编译。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude at receipt 20261101T134343.981701Z, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查，回执 20261101T134343.981701Z，在 Becoming.GrammarMap、Becoming.MapInstances 与 Becoming.KeepingWidening 中，每个声明的公理报告均为空；最初作为叶 Becoming.LineDegeneration 于回执 20261101T024359.312453Z 检查（45 个声明，40 条定理），经独立 AI 验证者四轮审查重新编译。"
   },
   "next_delta": {
     "en": "Degeneration where no one step bounds every branch, and the some-branch regions (生成, 后守) on the World.",
@@ -226,7 +226,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "PENDING",
+      "sha256": "fdaf0eaa349d7abd7b6160016e387a1ff60e7f764b97e10ac121a438f2d5647c",
       "declarations": [
         "Becoming.Map.StepWhere.end_decides",
         "Becoming.Map.StepWhere.ends",
@@ -240,7 +240,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
-      "sha256": "PENDING",
+      "sha256": "32f9effbcd2cf460b10b5a3a343597f840dcf1166237c2abd14e4f14f15cdd6b",
       "declarations": [
         "Becoming.Map.Depleted.below",
         "Becoming.Map.Depleted.continues",
@@ -278,31 +278,37 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
       "role": "proof",
-      "sha256": "PENDING",
+      "sha256": "f574904823619ca1da8c7ee0534d179a9132e171ccd4712687cb5bb34d53af29",
       "declarations": [
         "Becoming.Map.Undecided.kind_degenerates",
         "Becoming.Web.kind_every_branch_ends_of_gone"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapInstances",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.KeepingWidening",
       "success_pointer": "/status",
       "success_value": "passed"

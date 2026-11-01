@@ -92,6 +92,7 @@ Units, families, dispositions and labelled readings in _process/research/2026-10
 | review | [FINDINGS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/FINDINGS.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md) | — |
 | statement | [06-CLASSICAL-TEXTS.md](../../chapters/06-CLASSICAL-TEXTS.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json) | — |
 
 Aliases: `the corpus's conditional laws`, `丙一之律`, `conditional laws of the corpus, family by family`, `Becoming.«皆有后而步皆分则全生成»`, `Becoming.«线不返则短于所列»`, `Becoming.«不返而有限则非不穷»`, `Becoming.«核同则同不穷»`, `Becoming.«所依无则依者无»`, `Becoming.«依之传»`, `Becoming.«亡者异当且仅当有后»`
 

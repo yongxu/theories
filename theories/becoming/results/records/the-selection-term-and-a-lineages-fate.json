@@ -740,7 +740,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
       "role": "proof",
-      "sha256": "5a6c2674ee4bbd320e6b8741d436fdf93e8bbba80c9b19add29c2d9a1a24fc60",
+      "sha256": "909c5d951cead58f28337037256d5c9b7e6d0ebe291fb454e96ba0e761c26c60",
       "declarations": [
         "Becoming.LineageRegions.Chain.acting",
         "Becoming.LineageRegions.Chain.chain",
@@ -923,6 +923,12 @@
       "role": "receipt",
       "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -935,7 +941,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegions",
       "success_pointer": "/status",
       "success_value": "passed"

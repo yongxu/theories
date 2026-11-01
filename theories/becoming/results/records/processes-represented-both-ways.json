@@ -536,7 +536,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "0e1c6605d855aa42e5ea057d784725c1474218dbeb9b8df212eab3d26c2b7f80"
+      "sha256": "fdaf0eaa349d7abd7b6160016e387a1ff60e7f764b97e10ac121a438f2d5647c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",

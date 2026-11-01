@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 366 | 18,063 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 365 | 18,058 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 16 | 890 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -544,7 +544,6 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Lifting.lean](lean-declarations/becoming-core.md#module-d94bf165cf48) | Becoming pure core |
 | [Likeness.lean](lean-declarations/becoming-core.md#module-b00054b2fe2f) | Becoming pure core |
 | [LimitVerification.lean](lean-declarations/becoming-core.md#module-39b79d5784de) | Becoming pure core |
-| [LineDegeneration.lean](lean-declarations/becoming-core.md#module-f4e18e81a25d) | Becoming pure core |
 | [LineageAudit.lean](lean-declarations/valuation.md#module-7d1b924b40d2) | Valuation development and liangzhi |
 | [LineageInProcess.lean](lean-declarations/valuation.md#module-45b450e65721) | Valuation development and liangzhi |
 | [LineageRegimes.lean](lean-declarations/becoming-core.md#module-aee8fdbd9169) | Becoming pure core |
