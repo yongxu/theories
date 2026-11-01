@@ -23,7 +23,7 @@
 6. In Matching, where a hidden bit must be matched by the second move, the same process, guard and moves keep the starts for two steps where the step keeps the bit, and not where it keeps nothing. (`Becoming.Viability.Matching.keeping_matters`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. A narrower class is kept wherever a wider one is, n + 1 steps of keeping give n, and a finer map of the steps keeps what a coarser one read off it keeps. A family of classes within the guard, each with a usable move leading for every value into the family, keeps each class for every horizon, as does a viability certificate, or the kernel, with one move usable throughout it. (`Becoming.Viability.KeptFor.mono`, `Becoming.Viability.KeptFor.shorter`, `Becoming.Viability.KeptFor.finer`, `Becoming.Viability.keptFor_of_closed`, `Becoming.Viability.Certificate.keptFor`, `Becoming.Viability.Kernel.keptFor`)
-   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 8. The earlier finite-continuation model is an instance (periphery): its transitions are a process, observing the configuration reached is a map of steps, its class after a response and an observation is the class seen and its viability is keeping; plans translate both ways, keeping what works, and with observations in Fin k viability for n steps is a working plan with an empty axiom report. (`Becoming.ContinuationCorrespondence.processOf`, `Becoming.ContinuationCorrespondence.successor`, `Becoming.ContinuationCorrespondence.post_eq_seen`, `Becoming.ContinuationCorrespondence.viable_iff_keptFor`, `Becoming.ContinuationCorrespondence.toPlan`, `Becoming.ContinuationCorrespondence.ofPlan`, `Becoming.ContinuationCorrespondence.works_iff_keeps`, `Becoming.ContinuationCorrespondence.keeps_iff_works`, `Becoming.ContinuationCorrespondence.viable_iff_plan_listed`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. In the earlier model (periphery), for observations of any type, n-step viability is equivalent to an observation-branching n-step plan that works, the continuations chosen by classical choice; the same equivalence follows from the core law with the choice over the observations taken from Classical.choice. (`ContinuationAdequacy.viable_iff_plan`, `Becoming.ContinuationCorrespondence.viable_iff_plan_by_core`)
@@ -69,7 +69,7 @@ Model admissibility is not automatically ethical permission; effect coverage and
 
 - none
 
-**Used by:** [joint-plan-composition](joint-plan-composition.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive)
+**Used by:** [a-response-common-over-a-reading](a-response-common-over-a-reading.md) (interpretive) · [joint-plan-composition](joint-plan-composition.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +88,7 @@ Model admissibility is not automatically ethical permission; effect coverage and
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 
 Aliases: `ContinuationAdequacy.viable_iff_plan`, `Becoming.Viability.keptFor_iff_plan_of_choice`, `Becoming.Viability.keptFor_iff_plan`, `Becoming.Viability.plans_iff_choice`
 

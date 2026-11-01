@@ -566,7 +566,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
       "role": "proof",
-      "sha256": "8911dc0d19d975ee30a0b1a2dbc4d013fe9fe5db846abc88e4d49219f12983b4"
+      "sha256": "5a237a74ffab31f61d1fcb07875ce1499e970d0a3b80cc26dcbd235ddb788044"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -621,7 +621,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "346f0dc88dc74517f1676fe503e860d5d99193021920a097b4a3a3271c321b6d"
+      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
     }
   ],
   "proof_bindings": [

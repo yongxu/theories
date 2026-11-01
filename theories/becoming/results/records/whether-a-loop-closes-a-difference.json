@@ -439,7 +439,7 @@
         "Becoming.Lasting.Variant.reaches",
         "Becoming.Lasting.orbit_mono"
       ],
-      "sha256": "183b3977568e27a00d1a1e542e4981019bcd6b908d265693fd791851abe1c7b1"
+      "sha256": "57ab5efb7dd2f3db313eb984a6caf04618334b6d799ff8ae40d32ac9332e911b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",

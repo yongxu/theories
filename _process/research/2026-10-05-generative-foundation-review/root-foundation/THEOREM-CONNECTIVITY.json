@@ -1,11 +1,11 @@
 {
- "commit": "a4038541a71dc547d7f50685458a596321366043",
+ "commit": "e20c16b66ec41cde6d33e5db67fd848f1cece46d",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261101T094230.205342Z",
+ "core_receipt_at_commit": "20261101T105110.951913Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 381,
- "constants": 55195,
- "spine_theorems": 18842,
+ "tracked_modules": 382,
+ "constants": 55331,
+ "spine_theorems": 18879,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,18 +27,18 @@
  },
  "classes": {
   "statement on both families": 1125,
-  "statement on Process/Frame/Run/Trace": 3666,
+  "statement on Process/Frame/Run/Trace": 3667,
   "statement on World/Flow/Web": 4482,
   "statement on the base only through a law of its own module": 342,
   "proof through a base family": 221,
-  "used by a theorem on the base": 6099,
+  "used by a theorem on the base": 6102,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 2568,
+  "apart: own vocabulary": 2601,
   "apart: prelude-only statement": 180
  },
- "apart": 2748,
- "apart_general_structure_by_design": 1071,
- "apart_otherwise": 1677,
+ "apart": 2781,
+ "apart_general_structure_by_design": 1084,
+ "apart_otherwise": 1697,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 126,
   "of them on the base": 81,
@@ -77,12 +77,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1401,
- "apart_roots": 1401,
+ "apart_used_by_nothing": 1428,
+ "apart_roots": 1428,
  "apart_roots_by_category": {
-  "model-witness": 663,
-  "support": 148,
-  "general-structure": 539,
+  "model-witness": 680,
+  "support": 150,
+  "general-structure": 547,
   "calibration": 25,
   "restates": 14,
   "logical-strength": 12
@@ -263,6 +263,10 @@
   "Becoming.GrammarMap": [
    33,
    42
+  ],
+  "Becoming.CommonResponse": [
+   33,
+   36
   ],
   "Becoming.RevisionPlans": [
    33,
@@ -842,7 +846,7 @@
   ],
   "Becoming.Viability": [
    1,
-   24
+   25
   ],
   "Becoming.Actuation": [
    1,
@@ -907,18 +911,18 @@
  },
  "rings": {
   "core": {
-   "modules": 362,
-   "theorems": 17952,
-   "apart": 2564,
+   "modules": 363,
+   "theorems": 17989,
+   "apart": 2597,
    "classes": {
     "statement on both families": 1111,
-    "statement on Process/Frame/Run/Trace": 3426,
+    "statement on Process/Frame/Run/Trace": 3427,
     "statement on World/Flow/Web": 4457,
     "statement on the base only through a law of its own module": 296,
     "proof through a base family": 210,
-    "used by a theorem on the base": 5729,
+    "used by a theorem on the base": 5732,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 2385,
+    "apart: own vocabulary": 2418,
     "apart: prelude-only statement": 179
    }
   },
@@ -1039,7 +1043,7 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 87,
-  "statement on Process/Frame/Run/Trace": 177,
+  "statement on Process/Frame/Run/Trace": 178,
   "statement on World/Flow/Web": 140,
   "statement on the base only through a law of its own module": 6,
   "proof through a base family": 5,
@@ -2775,6 +2779,42 @@
   "Becoming.«无始而有终之例»": "apart: own vocabulary",
   "Becoming.«依于无始而有始之例»": "apart: own vocabulary",
   "Becoming.«相须之例»": "apart: own vocabulary",
+  "Becoming.«自反则承在内»": "apart: own vocabulary",
+  "Becoming.«诸承在内当且仅当自反»": "apart: own vocabulary",
+  "Becoming.«传递则承闭»": "apart: own vocabulary",
+  "Becoming.«诸承闭当且仅当传递»": "apart: own vocabulary",
+  "Becoming.«闭在内则在承»": "apart: own vocabulary",
+  "Becoming.«所闭之承在内»": "used by a theorem on the base",
+  "Becoming.«所闭之承闭»": "used by a theorem on the base",
+  "Becoming.«闭在内则在所闭之承»": "used by a theorem on the base",
+  "Becoming.«所闭之承最大»": "apart: own vocabulary",
+  "Becoming.«共应当且仅当所闭之承遍»": "apart: own vocabulary",
+  "Becoming.«自反传递则共应当且仅当承遍»": "apart: own vocabulary",
+  "Becoming.«共应之细»": "apart: own vocabulary",
+  "Becoming.«静之共应当且仅当遍»": "apart: own vocabulary",
+  "Becoming.«一之共应当且仅当一应遍»": "apart: own vocabulary",
+  "Becoming.«依读而应则共应»": "apart: own vocabulary",
+  "Becoming.«应际同行当且仅当同读同应»": "apart: own vocabulary",
+  "Becoming.«遍定应共应当且仅当同读同应»": "apart: own vocabulary",
+  "Becoming.«遍定应共应当且仅当像定后»": "apart: own vocabulary",
+  "Becoming.«映应共应当且仅当同读同应»": "apart: own vocabulary",
+  "Becoming.«共应之例».NotReflexive.trans": "apart: own vocabulary",
+  "Becoming.«共应之例».NotReflexive.held_each": "apart: own vocabulary",
+  "Becoming.«共应之例».NotReflexive.none": "apart: own vocabulary",
+  "Becoming.«共应之例».NotTransitive.refl": "apart: own vocabulary",
+  "Becoming.«共应之例».NotTransitive.symm": "apart: own vocabulary",
+  "Becoming.«共应之例».NotTransitive.held_each": "apart: own vocabulary",
+  "Becoming.«共应之例».NotTransitive.none": "apart: own vocabulary",
+  "Becoming.«共应之例».EachNotCommon.each": "apart: own vocabulary",
+  "Becoming.«共应之例».EachNotCommon.none": "apart: own vocabulary",
+  "Becoming.«共应之例».PairsNotCommon.pairs": "apart: own vocabulary",
+  "Becoming.«共应之例».PairsNotCommon.none": "apart: own vocabulary",
+  "Becoming.«共应之例».NotCovering.fixed": "apart: own vocabulary",
+  "Becoming.«共应之例».NotCovering.none": "apart: own vocabulary",
+  "Becoming.«共应之例».NotOne.common": "apart: own vocabulary",
+  "Becoming.«共应之例».NotOne.differ": "apart: own vocabulary",
+  "Becoming.«共应之例».OneCarrier.fixed": "apart: own vocabulary",
+  "Becoming.«共应之例».OneCarrier.none": "apart: own vocabulary",
   "Becoming.«一一对应».to_eq_iff": "used by a theorem on the base",
   "Becoming.«尽之拉回»": "used by a theorem on the base",
   "Becoming.«延之拉回»": "used by a theorem on the base",
@@ -12868,6 +12908,7 @@
   "Becoming.Gated.origin": "statement on Process/Frame/Run/Trace",
   "Becoming.Gated.origin_of_decides": "statement on Process/Frame/Run/Trace",
   "Becoming.Gated.origin_of_propositions_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.Viability.kernel_iff_held": "statement on Process/Frame/Run/Trace",
   "Becoming.Viability.Certificate.kernel": "statement on Process/Frame/Run/Trace",
   "Becoming.Viability.kernel_certificate": "statement on Process/Frame/Run/Trace",
   "Becoming.Viability.kernel_iff_certificate": "statement on Process/Frame/Run/Trace",

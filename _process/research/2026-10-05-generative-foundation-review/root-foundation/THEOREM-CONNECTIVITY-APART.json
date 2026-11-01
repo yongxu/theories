@@ -7021,6 +7021,141 @@
    "module": "Becoming.BalanceRegions",
    "category": "general-structure",
    "reason": "relata listed without repetition and equality decided, transfers balancing a step exist exactly where the units before pair one to one with the units after under the closure: for every Bool relation and list of relata on any type, equality decided; the base reads balance through balancesOn_iff_conserved, and nothing on it uses this law (BD4)"
+  },
+  "Becoming.«依读而应则共应»": {
+   "module": "Becoming.CommonResponse",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's definitions and of this module's «共应» (SJ1)"
+  },
+  "Becoming.«共应之例».EachNotCommon.each": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».EachNotCommon.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotCovering.fixed": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotCovering.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotOne.common": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotOne.differ": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotReflexive.held_each": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotReflexive.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotReflexive.trans": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotTransitive.held_each": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotTransitive.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotTransitive.refl": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».NotTransitive.symm": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».OneCarrier.fixed": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».OneCarrier.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».PairsNotCommon.none": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之例».PairsNotCommon.pairs": {
+   "module": "Becoming.CommonResponse",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
+  },
+  "Becoming.«共应之细»": {
+   "module": "Becoming.CommonResponse",
+   "category": "support",
+   "reason": "a one-line unpacking of the grammar's definitions and of this module's «共应» (SJ1)"
+  },
+  "Becoming.«共应当且仅当所闭之承遍»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "a common response exists exactly where the acts' kernels cover the situations: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.«所闭之承最大»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "the grammar's kernel stated as one law, the conjunction of its three parts, for every relation on any carrier (SJ1); Viability's kernel laws use the parts at a process's steps through Viability.kernel_iff_held, and nothing uses the conjunction itself"
+  },
+  "Becoming.«映应共应当且仅当同读同应»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "at an act map, a common response exactly where situations read alike get the same act, Learning.Lumped unfolded: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.«自反传递则共应当且仅当承遍»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "for a reflexive and transitive reading, along the reading itself: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.«诸承在内当且仅当自反»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "what holds at every situation alike lies inside every region exactly where the reading is reflexive: a law of every relation on any carrier (SJ1)"
+  },
+  "Becoming.«诸承闭当且仅当传递»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "what holds at every situation alike is closed for every region exactly where the reading is transitive: a law of every relation on any carrier (SJ1)"
+  },
+  "Becoming.«遍定应共应当且仅当像定后»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "with one act at each situation, a common response exactly where the image of the response relation along the map has a fixed successor, through the lumping law: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
+  },
+  "Becoming.«静之共应当且仅当遍»": {
+   "module": "Becoming.CommonResponse",
+   "category": "general-structure",
+   "reason": "under staying the same a common response exists exactly where the requirement covers every situation: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
   }
  },
  "instances": {
