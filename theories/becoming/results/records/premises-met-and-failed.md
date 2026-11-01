@@ -77,6 +77,8 @@ Meeting and failing a premise in models is the standard way to show it independe
 | integration | [REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md) | — |
 | integration | [TEXTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/texts/TEXTS.md) | — |
 | statement | [08-METHOD.md](../../chapters/08-METHOD.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `the condition on the root varies with the net`, `根上之条件随网而变`, `C entailed by no statement reading no order where it holds`, `Becoming.«续无外随网»`, `Becoming.«族无外随网»`, `Becoming.«逆缘续无外随网»`, `Becoming.ReadsNoOrder.not_entails`, `Becoming.LiftModel.met_and_failed`, `Becoming.Weighting.widensOn_iff_reach`
 

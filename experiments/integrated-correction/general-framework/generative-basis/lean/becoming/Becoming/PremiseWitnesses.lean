@@ -22,7 +22,8 @@ whose admissions are listed.
 * **A statement reading no order fails, for every order, at a datum where it entails C on a frame
   with an extension** (`ReadsNoOrder.not_entails`), the pattern of `ReadsOnlyDynamics.not_entails`
   for the condition, with the order in the place of the significance. Immediate, since "better" is
-  free: it shows that a frame fixes no order.
+  free and the hypothesis asks C under every order, the one relating nothing among them: it shows
+  only that a frame fixes no order, not that some particular law fails to give C.
 * **L, lifting, is met and failed on `LiftModel`'s frame**: the move reaching 3 is lifted above the
   move reaching 1, and not the reverse (`LiftModel.met_and_failed`). That the choice of the rule is
   substantive is `LiftModel.some_outcome_does_not_lift`.
@@ -482,7 +483,8 @@ above what `l'` admits: the order is increasing in admission
 is C between two listed level paths only. The listing is asked of the two paths compared, not of
 every level path: that would hold of no web with a formation (`Web.not_listsAdmitted_every`), and
 it leaves no extension (`Web.no_extension_of_listsAdmitted_every`). Listed paths are paths whose
-admissions end (`Web.admits_nothing_from_of_listed`). -/
+admissions end (`Web.admits_nothing_from_of_listed`). Of `unrestricted` only its instance at `p` is
+used. -/
 theorem Web.extension_ranked_of_increasingInOwn {Pos : Type} {rel : F → F → Prop}
     {center : Pos → F} (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center))
     {p : Pos} {own : F → Bool} (marks : ∀ f, WithinClosure rel (center p) f → own f = true)

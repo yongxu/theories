@@ -20,7 +20,7 @@
 **Counts** of the 117 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 7; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
 
 - **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
-- **For order**, C, calling widening better: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows that no statement reading only the dynamics entails Comparison with "better" free; Comparison leaves "better" free as Unrestricted leaves significance free.
+- **For order**, C, calling widening better: `Becoming.Comparison`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 
 ### On the edge
 
@@ -160,7 +160,7 @@
 
 - That a row under a stated hypothesis uses the grammar's laws: neither root form reaches one. A form shows that the row's conclusion follows from its hypotheses read as relations.
 - That the countermodels show more than that no hypothesis of a form is redundant: they are over one point. Lever 2's witnesses at the model stay beside them.
-- That either premise of the ethics is warranted: the condition is not entailed by statements of the dynamics (given a standpoint and a formation), C has no such theorem, and each warrant is open.
+- That either premise of the ethics is warranted: neither is entailed by statements of the dynamics (the condition given a standpoint and a formation, C given a frame with an extension), and each warrant is open.
 - That a distance is a gap or a failure: each row at a distance has its reason, and the measure records dependence, not meaning.
 - **Counterexample:** Over one point, each hypothesis of each root form dropped, the conclusion fails (RootForms.outside_leaves_no_offspring.needs_gate, needs_descent, needs_outside; RootForms.descent_forms_no_dependence.needs_given, needs_inherits, needs_undepended). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean)
 
@@ -210,6 +210,7 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 | review | [REVIEW-U4B.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md) | — |
 | integration | [COUNTING-AND-AMOUNTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md) | — |
 | integration | [counting_test.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/counting_test.py) | — |
+| review | [REVIEW-U4-PREMISE-C.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md) | — |
 
 Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `边上之所立`, `Becoming.RootForms.outside_leaves_no_offspring`, `Becoming.RootForms.descent_forms_no_dependence`
 
@@ -219,7 +220,8 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 - 31 October 2026, board item U4 (study section 479): added, each central declaration's standing on the edge of one root, carried by MV's boundary field, with Becoming.RootForms' two root forms as its laws; reviewed independently before landing.
 - 1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).
 - 1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.
+- 1 November 2026, after DU (study section 489): C's entry among the premises of the ethics names Becoming.ReadsNoOrder.not_entails as its theorem of not being entailed: a statement whose truth does not change with the order, entailing C at a datum on a frame with an extension, fails there at every order, the pattern of ReadsOnlyDynamics.not_entails with the order in the place of the significance. Its reason for absence is dropped, the basis states the condition, and the non-implication on the premises' warrant says that neither is entailed by statements of the dynamics, each under its condition (REVIEW-U4-PREMISE-C.md).
 
 </details>
 
-Documentary review UTC: `2026-10-31T12:37:34+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T02:46:41+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

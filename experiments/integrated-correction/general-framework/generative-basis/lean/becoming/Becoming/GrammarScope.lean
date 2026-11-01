@@ -35,7 +35,8 @@ parameter is added. No definition of an earlier module changes.
   condition as a hypothesis instantiates at that significance; one instance is proved here:
   on every reading where a claim's significance is that its formation lies within the standpoint's
   center's closure, living significance follows with S0, both neutralities and, where something
-  lives, a seed (`premises_of_noOutside`).
+  lives, a seed (`premises_of_noOutside`). That reading supplies the significance; the root gives
+  only that every formation lies within every closure.
 * **Along 缘, one center.** Where the net has no cycle, the condition along it holds only with one
   center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), and
   nothing conditions that center (`«续无外则中心无缘»`). In families at the one it asks only that the
@@ -271,7 +272,9 @@ formation lies on every center's line under the one of a relation, then on every
 where a claim's significance from a standpoint is that its formation lies within that standpoint's
 center's closure (`reads`), living significance follows, with S0 at every standpoint, both
 neutralities and, wherever something lives and there is a standpoint, a seed: one instance of
-`Valuation.premises_of_unrestricted`. -/
+`Valuation.premises_of_unrestricted`. The significance is supplied by `reads`; with the condition
+every formation lies within every closure, so `reads` makes every claim significant from every
+standpoint, and the root supplies only that every formation lies within. -/
 theorem premises_of_noOutside {Q : Type} {V : Valuation Pos Q} {rel : F → F → Prop} {center : Pos → F}
     (none : «续无外» rel «一» center) (formation : Q → F) (step : Q → Nat)
     (reads : ∀ p c, selfAscribed (ownClosure rel) center p (step c) (formation c) → V.sig p c) :

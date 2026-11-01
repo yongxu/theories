@@ -85,8 +85,8 @@ theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Pr
 
 /-- **That not going out is always being closed is exactly excluded middle.** That every region nothing
 goes out of, along every relation on every carrier in `Type`, is closed is exactly excluded middle. It
-is a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, not a calibration: the need comes
-from membership being any proposition. -/
+is the calibration of `«不外者内则不出当且仅当闭»`'s stability hypothesis, proved by its own witness on
+`Bool`, not from that law: the need comes from membership being any proposition. -/
 theorem «不出皆闭当且仅当排中» :
     (∀ (α : Type) (R : «际» α) (P : α → Prop), «不出» R P → «闭» R P) ↔ ∀ Q : Prop, Q ∨ ¬ Q := by
   constructor
@@ -129,7 +129,9 @@ theorem «对称则不出当且仅当逆不出» {R : «际» α} {P : α → Pr
 /-- **A closed region come into: a witness.** Some relation that is not symmetric has a region closed
 under it with something outside bearing it to a member: on two occurrences, the relation from the
 first to the second, and the region of the second. Along a symmetric relation no closed region is
-come into (`«闭则不出»`, `«对称则不出当且仅当逆不出»`). -/
+come into: a closed region does not go out (`«闭则不出»`), and along a symmetric relation not going
+out is not going out along the converse (`«对称则不出当且仅当逆不出»`); the two are not joined in one
+declaration here. -/
 theorem «闭而有入之例» :
     ∃ (R : «际» Bool) (P : Bool → Prop),
       «闭» R P ∧ (∃ x y, ¬ P x ∧ P y ∧ R x y) ∧ ¬ «则» R («逆» R) :=

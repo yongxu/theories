@@ -551,7 +551,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
       "role": "proof",
-      "sha256": "d91503881fa51f661cf301d68c66dd9635baeec53d4147656de015be84d73e2c"
+      "sha256": "8094aec7b0628df313620c05a457ec1e5e75d2f3dd1c1b549fd53d608920e8f5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",

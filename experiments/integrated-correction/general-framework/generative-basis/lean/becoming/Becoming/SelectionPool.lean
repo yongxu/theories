@@ -269,7 +269,8 @@ theorem majority_through_all {members : List F} {read : F → (Nat → C → Nat
 
 /-- **A distinction held by fewer than half is outvoted.** Where more than half the members' readings
 hold of both histories, or more than half fail of both, taking what most read goes alike on the
-two, however many members tell them apart; the pool itself separates them wherever one member does
+two, though the fewer than half remaining may tell them apart; the pool itself separates them
+wherever one member does
 (`separates_all_iff_member`). So the shares of the members, not only which couplings are present,
 decide what a pool read by its majority separates. -/
 theorem majority_outvoted {members : List F} {read : F → (Nat → C → Nat) → Bool}

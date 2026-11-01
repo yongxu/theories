@@ -1,0 +1,42 @@
+@Becoming.Flow.cut_iff_notGoingOut : ∀ {Pos Q : Type} {V : Becoming.Valuation Pos Q} {region : Q → Prop},
+  Becoming.Flow.Cut V region ↔ Becoming.«不出» V.related region
+@Becoming.Flow.cut_of_closedUnder : ∀ {Pos Q : Type} {V : Becoming.Valuation Pos Q} {region : Q → Prop},
+  Becoming.ClosedUnder V.related region → Becoming.Flow.Cut V region
+@Becoming.Flow.closedUnder_of_cut : ∀ {Pos Q : Type} {V : Becoming.Valuation Pos Q} {region : Q → Prop},
+  (∀ (e : Q), ¬¬region e → region e) → Becoming.Flow.Cut V region → Becoming.ClosedUnder V.related region
+@Becoming.Flow.conveyance_symm : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop},
+  Becoming.«则» (L.conveyance W own sig).related (Becoming.«逆» (L.conveyance W own sig).related)
+@Becoming.Flow.cut_iff_notComingIn : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} {region : X × Nat → Prop},
+  Becoming.Flow.Cut (L.conveyance W own sig) region ↔
+    Becoming.«不出» (Becoming.«逆» (L.conveyance W own sig).related) region
+@Becoming.Flow.region_no_boundary : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} [DecidableEq X],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List X},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) →
+                ∀ (e : X × Nat), ¬Becoming.Boundary (L.conveyance W own sig).related e fun e => e.fst ∈ ds
+@Becoming.Flow.closures_not_within_region : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {own sig : Pos → X × Nat → Prop} [DecidableEq X],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List X},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) →
+                ¬∀ (e : X × Nat),
+                    e.fst ∈ ds →
+                      ∀ (g : X × Nat), Becoming.WithinClosure (L.conveyance W own sig).related e g → g.fst ∈ ds
+@Becoming.Clearing.resource_no_boundary : ∀ {Pos : Type}
+  (own sig : Pos → (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat → Prop)
+  (e : (Becoming.Clearing.Formation ⊕ Becoming.Clearing.Place) × Nat),
+  (¬Becoming.Boundary (Becoming.Clearing.flow.roles.conveyance Becoming.Clearing.web.roles own sig).related e fun e =>
+        e.fst ∈ [Sum.inr Becoming.Clearing.Place.resource]) ∧
+    ¬Becoming.Boundary (Becoming.Clearing.web.roles.sustenance own sig).related e fun e =>
+        e.fst ∈ [Sum.inr Becoming.Clearing.Place.resource]

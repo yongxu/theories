@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "id": "a-pool-read-by-its-majority",
+  "title": {
+    "en": "A pool read by its majority",
+    "zh": "按多数读取之池"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "statement": {
+    "en": "Taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool; where more than half read alike on two histories it goes alike on them, however many members tell them apart: shares decide what it separates.",
+    "zh": "取过半成员之所读，是经合用之耦合之选择，所分开者不多于池；过半成员对两历程读法相同处，无论多少成员能分开二者，其读皆同：份额决定其所分开者。"
+  },
+  "laws": [
+    {
+      "en": "Counting the members a test holds of: counts under a weaker test are no more, alike tests count alike, and a test and its negation count every member once.",
+      "zh": "计一检验所成立之成员：较弱检验之数不多，相同检验之数相同，检验与其否定合计每员一次。",
+      "declarations": [
+        "Becoming.Web.holdsCount",
+        "Becoming.Web.toNat_le_of_imp",
+        "Becoming.Web.holdsCount_le_of_imp",
+        "Becoming.Web.holdsCount_congr",
+        "Becoming.Web.toNat_add_not",
+        "Becoming.Web.holdsCount_add_not",
+        "Becoming.Web.and_left_true",
+        "Becoming.Web.and_right_true"
+      ]
+    },
+    {
+      "en": "With each member reading through its own coupling, the majority reading selects through the pooled coupling; where more than half the members hold of both histories or fail of both, it goes alike on them.",
+      "zh": "各成员经其自身之耦合读时，多数之读是经合用耦合之选择；过半成员于两历程皆成立或皆不成立时，其读于二者相同。",
+      "declarations": [
+        "Becoming.Web.MajorityHolds",
+        "Becoming.Web.majority_through_all",
+        "Becoming.Web.majority_outvoted"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom; a finite list of members, each reading a history as a truth value through its own coupling up to the step.",
+      "zh": "不加公理；有限之成员列表，各经其自身至该步之耦合以真值读历程。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any pool reads by its majority, or which members it holds.",
+      "zh": "某池按多数读，或其含何成员。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T064310.304329Z): the 11 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 344; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T064310.304329Z）：本记录所引之新增 11 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 344 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "An independent review.",
+    "zh": "独立审查。"
+  },
+  "correspondence": {
+    "en": "Majority aggregation: a minority distinction is outvoted (Condorcet-style aggregation).",
+    "zh": "多数之聚合：少数之分辨被压过（孔多塞式聚合）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+  "aliases": [
+    "A pool read by its majority",
+    "按多数读取之池",
+    "Becoming.Web.holdsCount"
+  ],
+  "dependencies": [
+    {
+      "id": "what-pooled-coupling-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its pool separates wherever one member does; the majority pool by shares.",
+        "zh": "其池一员能分即分；多数之池按份额。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "civilization-thought-on-the-spine",
+      "detail": {
+        "en": "States a gap its map found (entries wuzi-qun-chen-mo-ji, hanfei-san-shou, hanfei-er-bing).",
+        "zh": "陈述其对应所发现之缺口（条目 wuzi-qun-chen-mo-ji、hanfei-san-shou、hanfei-er-bing）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.MajorityHolds",
+        "Becoming.Web.and_left_true",
+        "Becoming.Web.and_right_true",
+        "Becoming.Web.holdsCount",
+        "Becoming.Web.holdsCount_add_not",
+        "Becoming.Web.holdsCount_congr",
+        "Becoming.Web.holdsCount_le_of_imp",
+        "Becoming.Web.majority_outvoted",
+        "Becoming.Web.majority_through_all",
+        "Becoming.Web.toNat_add_not",
+        "Becoming.Web.toNat_le_of_imp"
+      ],
+      "sha256": "4c6bb2cdd4d71fc30e59def6c5e1493e6f0e5b5b5b13e36eb0e2d5ec0c7906d0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "ba6ed198c6a413310463809542fb4a2ada2e062230a04a6eb95d48387fd1e062"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "c32cc989794d54f344c652545597c844c1e24878ab657c4e244bfd664dc84701"
+    },
+    {
+      "path": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "27c9df52b82d74f96f265c0b43563b3adcdb2fd475ae6c273389eab0a3424e68"
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T140440.478623Z/verification.json",
+      "role": "receipt",
+      "sha256": "ad7a3fca47990f945151cb3e72da72328277f84fe579df3538e9493c85705f92",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
+      "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    }
+  ]
+}

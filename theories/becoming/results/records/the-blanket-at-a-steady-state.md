@@ -101,6 +101,7 @@ The principle's statistical blanket (Friston 2019; Friston, Da Costa, Sajid, Hei
 | integration | [REVIEW-UE26-LANDING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-LANDING.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [FREE-ENERGY-PRINCIPLE.md](../../FREE-ENERGY-PRINCIPLE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `The blanket at a steady state`, `稳态之毯`, `statistical blanket`, `conditional independence given the blanket`, `detailed balance of the internal moves`, `Becoming.BlanketWeights.crossForm_of_detailedBalance`, `Becoming.BlanketWeights.independentGiven_of_crossFormOn`
 

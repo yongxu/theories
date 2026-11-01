@@ -130,6 +130,10 @@ section Plans
 
 variable {C : Type} (listed : List C) (weight : C → Nat) (gain loss : C → Nat)
 
+/-! Here `gain c` is what keeping the law gains at `c` and `loss c` what switching it off gains
+there, despite its name, which its callers (`Becoming.HeldForReading`) share. Neither is a plan's
+own loss, `KeepStop.loss`. -/
+
 /-- **What a plan gains**: at each listed candidate, what keeping gains there at the weight it keeps
 the law and what switching off gains there at the weight it switches it off, summed. -/
 def gainOf (p : KeepStop C) : Nat :=

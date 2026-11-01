@@ -198,6 +198,8 @@ Closure is the reflexive-transitive closure of a relation read as the least clos
 | review | [REVIEW-HE2-KIT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/REVIEW-HE2-KIT.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/DESIGN.md) | — |
 | review | [REVIEW-HE2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/review/REVIEW-HE2.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `The shared laws on the grammar`, `文法上的共律`, `shared laws on the grammar`, `the five shared laws on the grammar`, `The master laws on the grammar`, `文法上的主律`, `master laws on the grammar`, `the five master laws on the grammar`, `Becoming.«所闭当且仅当同一或及»`, `Becoming.«守数当且仅当可对»`, `Becoming.«尽则不或屡»`, `Becoming.«像定后当且仅当同行»`, `Becoming.«广之传递»`
 

@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T044825.244995Z",
- "core_sources_sha256": "cd753d3f5c04e4699338b603fc79f95b2e6afba52579523164ed9f38d859e784",
+ "core_receipt": "20261101T062217.665179Z",
+ "core_sources_sha256": "51e5f25361babbfad50ce2d1a237ca13a2fb85f87b1a0a8efcb8c9823f84d4dd",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -62623,14 +62623,11 @@
       "zh": "C，谓扩大为更好"
      },
      "premise": "Becoming.Comparison",
-     "not_entailed": null,
-     "absent": {
-      "en": "No theorem shows that no statement reading only the dynamics entails Comparison with \"better\" free; Comparison leaves \"better\" free as Unrestricted leaves significance free."
-     },
+     "not_entailed": "Becoming.ReadsNoOrder.not_entails",
      "basis": {
-      "en": "What ranks lies in C alone: the condition by itself orders nothing. A reason for C is open apart from the condition."
+      "en": "What ranks lies in C alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
     }
    ]
   },
@@ -62640,6 +62637,7 @@
    "reviews": [
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY-SECOND.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
    ],
@@ -62803,16 +62801,13 @@
      "zh": "C，谓扩大为更好"
     },
     "premise": "Becoming.Comparison",
-    "not_entailed": null,
-    "absent": {
-     "en": "No theorem shows that no statement reading only the dynamics entails Comparison with \"better\" free; Comparison leaves \"better\" free as Unrestricted leaves significance free."
-    },
-    "result": "not shown"
+    "not_entailed": "Becoming.ReadsNoOrder.not_entails",
+    "result": "not entailed"
    }
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "81edb21ff613f9ae32eabc4033ee3d1cd6e155e9ce9e9166da421b312f5610fd",
+   "modules_sha256": "3a61821ba2073b009c048925eae6692673c4a8b308af6f57070e7f684d39bfcf",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },
