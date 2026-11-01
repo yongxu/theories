@@ -26,7 +26,7 @@ index 3858e3495..f23d39907 100644
    exactly where nothing comes in (`Flow.cut_iff_notComingIn`, by `«对称则不出当且仅当逆不出»`).
  * **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
 diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
-index 53933e9b2..aaf01d912 100644
+index df7b791e9..0841d2d4f 100644
 --- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
 +++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean
 @@ -5,23 +5,20 @@ import Becoming.GrammarLaws
@@ -96,6 +96,18 @@ index 53933e9b2..aaf01d912 100644
  /-- **Not going out of a region is the closedness of what is not outside it.** Nothing in `P` bears
  `R` to something outside `P` exactly where the region of what is not outside `P` is closed under `R`.
  No decision is used. -/
+@@ -85,8 +69,9 @@ theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Pr
+ 
+ /-- **That not going out is always being closed is exactly excluded middle.** That every region nothing
+ goes out of, along every relation on every carrier in `Type`, is closed is exactly excluded middle. It
+-is the calibration of `«不外者内则不出当且仅当闭»`'s stability hypothesis, proved by its own witness on
+-`Bool`, not from that law: the need comes from membership being any proposition. -/
++is a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, not a calibration (08 §2), and is
++not proved from that law: it gives excluded middle by its own witness on `Bool`, and excluded middle
++gives it by deciding membership. The need comes from membership being any proposition. -/
+ theorem «不出皆闭当且仅当排中» :
+     (∀ (α : Type) (R : «际» α) (P : α → Prop), «不出» R P → «闭» R P) ↔ ∀ Q : Prop, Q ∨ ¬ Q := by
+   constructor
 diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
 index 414516cc6..62f65eabd 100644
 --- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean

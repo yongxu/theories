@@ -10,7 +10,7 @@ diff --git a/experiments/integrated-correction/general-framework/generative-basi
  
  The continuation condition says, in its source, that for anything its continuation into the future
  has significance. `Becoming.Significance` states it with significance as a free parameter beside the
-@@ -82,7 +82,7 @@
+@@ -83,7 +83,7 @@
  variable {Pos : Type} {α : Type u}
  
  /-- **The condition on the root, along the net (续无外).** Every occurrence is reached on the line of
