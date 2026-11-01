@@ -42,8 +42,8 @@ Results.
   a step `N` not before `x` ends on every branch, `x` ends on every branch (`Web.ends_of_ends_at`,
   by induction on the steps left: a continuation lies one step later). No excluded middle enters,
   and no premise that the line does not branch. So, at every class `E` within activity
-  (`«则» E W.activityClass`), a line from an active occurrence along which nothing reached at some
-  step `N` not before it is active ends on every branch: the pattern read at `E` degenerates
+  (`«则» E W.activityClass`), a line from an active occurrence, nothing it reaches being active at
+  one step `N` not before the start, ends on every branch: the pattern read at `E` degenerates
   (`Web.every_branch_ends_of_gone`). What the line under `E` reaches lies on the line under
   activity (`Web.reached_coarser`), so it is active (`Web.active_along_finer`), and nothing is
   reached at `N`. What carries the law is the uniform horizon, which it states through activity.
@@ -321,9 +321,9 @@ theorem active_along_finer {E : «际» (Nat × F)} (inside : «则» E W.activi
     (start : W.active x.1 x.2) (reached : «所及» (continuationStep R) E x y) : W.active y.1 y.2 :=
   active_along_line start (reached_coarser inside reached)
 
-/-- **A line from an active occurrence along which nothing reached at a step not before it is
-active ends on every branch**, at every class finer than activity: no decision of going on and no
-premise that the line does not branch. -/
+/-- **A line from an active occurrence, nothing it reaches being active at one step `N` not before
+the start, ends on every branch**, at every class finer than activity: no decision of going on and
+no premise that the line does not branch. -/
 theorem every_branch_ends_of_gone {E : «际» (Nat × F)} (inside : «则» E W.activityClass)
     {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
     (gone : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → ¬ W.active y.1 y.2) :
