@@ -307,7 +307,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用根上一步的清点及其镜像（«定后则后并亡不过前并生»、«定前则前并生不过后并亡»）：Web.Census.balanceFrom_at 是它们在该步两端都活跃的形成之间的关系上的情形（第 4 条）。",

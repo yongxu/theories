@@ -3,7 +3,7 @@
 
 RV21c changes, besides the run folders and the records `repoint_all.py` and `swap_stamps.py` handle: 08 §3's receipt
 sentence (`texts.py`), the study (one section appended), the core pointer, the periphery pointers and the generated
-data the core receipt feeds (master-laws.json, the connectivity, if they change). `research.py check`'s drift list is
+data the core receipt feeds (shared-laws.json, the connectivity, if they change). `research.py check`'s drift list is
 filtered to those paths, so another session's drift stays with its owner and is printed for it. Every drifting pair is
 listed with its changed sections first; in 08 the only section that may change is §3, in the study only the new
 section, and in a chapter whose home section axiom_texts.py brought to a renewed receipt (out/axiom_texts.json) only

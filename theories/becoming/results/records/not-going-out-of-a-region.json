@@ -135,7 +135,7 @@
   ],
   "dependencies": [
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "«闭», «所闭», «闭之及» and «所闭之界» from the closure law, «所闭不出» being «所闭之界» read through «不出».",

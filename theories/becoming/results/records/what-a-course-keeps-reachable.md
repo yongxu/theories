@@ -119,7 +119,7 @@ Covering is the lower (Hoare) preorder of the families of course ranges, exactly
 - **formal-reuse**: [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md). Dependence.AdmitsAt, Dependence.along and Conditions, through which a dependence gives what each configuration admits.
 - **formal-reuse**: [bounded-census-keeps-pace](bounded-census-keeps-pace.md). length_le_of_sub, the pigeonhole of the chain law.
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «际» and «则», the grammar's relation and inclusion, which range inclusion is.
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «逾», the grammar's exceeding, which range exceeding is.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «逾», the grammar's exceeding, which range exceeding is.
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Its lagged order, built again on families of courses, decides one witness's pair where same-offset covering is silent; admitted ranges carry no alternatives, which covering adds.
 - related, not a proved adapter: [eventual-widening](eventual-widening.md). Eventual widening's second order: covering implies inclusion now, so what a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What one course keeping widening needs; here the possible within a horizon keeping widening needs an unlisted range, by the same pigeonhole.

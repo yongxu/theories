@@ -142,9 +142,9 @@ print("older layout still stale:", sorted(older_left) or "none", "; not renewed:
 sys.exit(0 if left == failed & set(sys.argv[4:]) and older_left == older_failed else 1)
 PY
 python3 -B "$K/texts.py" "$ID" "$BASE" "$N" > "$ASIDE/texts.log" 2>&1; T=$?; tail -3 "$ASIDE/texts.log"; step texts $T
-# The rehearsal makes no core run, so its slot cache holds no core step: master_laws.py and the connectivity check
+# The rehearsal makes no core run, so its slot cache holds no core step: shared_laws.py and the connectivity check
 # restore the core from the default cache instead (main's core run). In the landing the fresh core run is in the slot.
-env -u BECOMING_LEAN_CACHE python3 -B tools/research/master_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
+env -u BECOMING_LEAN_CACHE python3 -B tools/research/shared_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
 env -u BECOMING_LEAN_CACHE python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity check: exit $?"
 LOGS="render2.log research-check-strict.log research-links.log research-test-tail.log"
 for f in $LOGS; do touch "$K/out/$f"; done

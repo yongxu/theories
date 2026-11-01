@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""EC measure: which of the master laws each central declaration of the coverage rests on in Lean.
+"""EC measure: which of the shared laws each central declaration of the coverage rests on in Lean.
 
 python3 -B measure.py [--dump PICKLE] [--save PICKLE] [--json OUT]
 
 Restores the spine run from the checker cache through THEOREM-CONNECTIVITY.py's dump (nothing is compiled;
 run check_becoming.py first), then, for every declaration COVERAGE.json lists as central, follows the
-constants its type and proof use and reports which master law's anchors it reaches:
+constants its type and proof use and reports which shared law's anchors it reaches:
 closure (one closure of a relation), balance (a level changes by what is given and taken), return
 (within finitely many configurations a law returns or is drawn), order (widening), lumping (a part read
 alone carries a law exactly where the rest makes no difference to its next value; proposed by line A, LU1). A measurement of Lean
 dependency only: reaching an anchor says the law is a reason the declaration holds, not that the
-declaration says nothing else; reaching none says no master law is among its reasons.
+declaration says nothing else; reaching none says no shared law is among its reasons.
 """
 import importlib.util, json, os, pickle, sys
 from pathlib import Path
@@ -74,11 +74,11 @@ def main():
             n = x['declaration']
             if n in C:
                 vocab |= {t for t in C[n]['t'] if t in C and C[t]['k'] in ('def', 'ind')}
-    report = {'anchors': laws, 'central_declarations': total, 'resting_on_no_master_law': len(none),
+    report = {'anchors': laws, 'central_declarations': total, 'resting_on_no_shared_law': len(none),
               'none': none, 'defined_notions_in_central_statements': len(vocab), 'rows': rows}
     if '--json' in sys.argv:
         Path(sys.argv[sys.argv.index('--json') + 1]).write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n')
-    print(json.dumps({k: report[k] for k in ('central_declarations', 'resting_on_no_master_law',
+    print(json.dumps({k: report[k] for k in ('central_declarations', 'resting_on_no_shared_law',
                                              'defined_notions_in_central_statements')}))
 
 

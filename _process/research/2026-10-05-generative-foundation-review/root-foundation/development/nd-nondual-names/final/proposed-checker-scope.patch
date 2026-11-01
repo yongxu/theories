@@ -1,0 +1,22 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+index 07b665592..cad3d3290 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+@@ -187,7 +187,7 @@ RECEIPT = HERE / "becoming-verification.json"
+ RETAINED = HERE / "becoming-checks"
+ 
+ SCOPE = (
+-    "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
++    "GrammarLaws: the five shared laws on the grammar, for every carrier and relation: closure is being the "
+     "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
+     "on, a closed region is not gone out of, an occurrence's closure among them, the closure under the "
+     "converse is the closure read backward, a closure through borrowed steps lies "
+@@ -858,7 +858,7 @@ SCOPE = (
+     "inside; going on along some branch is lying in a family that keeps moving, a line from it exactly dependent "
+     "choice and within finitely many configurations a line with nothing chosen; the steps forget the moves. "
+     "ModelStatements: definitions and model laws stated at the grammar's models. Twenty central declarations that "
+-    "rest on no master law are each stated at a World's occurrence model, a process's model of its moves' relations or "
++    "rest on no shared law's anchor are each stated at a World's occurrence model, a process's model of its moves' relations or "
+     "the row's own carrier, every term a relation of the model, a named comparison of its given amounts or a supplied "
+     "parameter, and each is proved through its row: support and dependence are inclusions in the needs met, renewal "
+     "an inclusion in the kept relation, undermining drawing into an undermined dependence and transmission two "

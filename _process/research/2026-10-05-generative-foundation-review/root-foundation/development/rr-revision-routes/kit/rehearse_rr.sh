@@ -20,7 +20,7 @@ python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity before re
 python3 -B "$K/register_rr.py" "$ASIDE/conn1.log" > "$ASIDE/register.log" 2>&1; step register $?
 python3 -B $C --write > "$ASIDE/conn2.log" 2>&1; step connectivity-write $?
 python3 -B $C --check > "$ASIDE/conn3.log" 2>&1; step connectivity-check $?
-python3 -B tools/research/master_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
+python3 -B tools/research/shared_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
 make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-pointing: exit $?"
 python3 -B "$K/repoint_rr.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_rr.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
