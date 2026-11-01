@@ -60,8 +60,11 @@ of one weighting, told apart by which states the conditioning holds fixed.
   (`Turning`), the internal part turns through three states one way only, reading nothing, while the
   blanket and external bits flip. The uniform weighting is steady (`Turning.steady`) and in cross form
   (`Turning.independentGiven`), and the internal moves are not in detailed balance
-  (`Turning.circulates`). A rate reading the external state does not by itself lose it
-  (`ReadsDirectly`: symmetric rates reading the external bit, uniform weights in cross form). Which
+  (`Turning.circulates`); the cross form there comes from the weights being uniform, whatever the
+  rates, so the witness is of steadiness and circulation meeting it, not of circulation producing
+  it. A rate reading the external state does not by itself lose it (`ReadsDirectly`: symmetric
+  rates reading the external bit, with which the uniform weights are in detailed balance
+  (`ReadsDirectly.balanced`) and in cross form, again by uniformity). Which
   moves are present must not read it: a positive weighting whose internal moves are in detailed
   balance, joined at each external state by other moves, each move present at both external states
   with one rate ratio at both, is not in cross form (`MovesReadExternal`).
@@ -607,7 +610,8 @@ theorem steady (μ : Phase) (s e : Bool) : inflow (μ, s, e) = outflow (μ, s, e
 theorem circulates : ¬ DetailedBalance w rate := fun h =>
   absurd (h .zero .one false false) (by decide)
 
-/-- **And the steady weights are conditionally independent given the blanket**, on any listings. -/
+/-- **And the steady weights are conditionally independent given the blanket**, on any listings.
+This follows from the weights being uniform alone; the rates play no part in it. -/
 theorem independentGiven (li : List Phase) (le : List Bool) : IndependentGiven li le w :=
   independentGiven_of_crossFormOn li le w (crossFormOn_of_crossForm li le w fun _ _ _ _ _ => rfl)
 

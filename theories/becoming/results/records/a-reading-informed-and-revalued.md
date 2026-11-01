@@ -166,6 +166,7 @@ In counts: informed_le is, for this decision, the deterministic-refinement, fixe
 | integration | [REVIEW-RFM3-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md) | — |
 | integration | [REVIEW-RFM3-COLDREAD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 
 Aliases: `a reading informed and revalued`, `受告与改值之读`, `informing and revaluing a reading formation`, `告读之形成与改其值`, `the valuation as state`, `值为态`, `Becoming.ListingValuation.shortfall_split`, `Becoming.ListingValuation.refining_never_lowers_iff`
 

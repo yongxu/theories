@@ -180,7 +180,7 @@
         "Becoming.«遍有后则核之所及即一之所及»",
         "Becoming.«遍有后则缘在族核»"
       ],
-      "sha256": "44c11fcbfb993b7b8b8c10d3e9d11647a1b554a7d8b66791281d4cfa7640b8fc"
+      "sha256": "74f5517bf43f0cc33be0d201f3806e32e97ad14611935d123267cfe8f6987a81"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
@@ -242,12 +242,18 @@
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"

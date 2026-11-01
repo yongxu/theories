@@ -179,7 +179,7 @@
         "Becoming.UnitMatchings.residual_pos_of_dissipates",
         "Becoming.UnitMatchings.lossless_not_dissipative"
       ],
-      "sha256": "4a322d5c6fd8783502763bc8d35cb223b0531dff940def93d90a9413b08a8a85"
+      "sha256": "60958422e2b9a63a374dbd26b655bd19de026d44dbf0599b04d0b0eda580fc23"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
@@ -216,12 +216,18 @@
       "role": "statement",
       "sha256": "0e8bde3dfdb276983e5d1e517cd33a118e29559c999004f6352798ca0826edc4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.UnitMatchings",
       "success_pointer": "/status",
       "success_value": "passed"

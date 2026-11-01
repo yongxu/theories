@@ -320,7 +320,7 @@
         "Becoming.Web.separates_all_iff_member",
         "Becoming.act_courses_unselected_pool"
       ],
-      "sha256": "4c6bb2cdd4d71fc30e59def6c5e1493e6f0e5b5b5b13e36eb0e2d5ec0c7906d0"
+      "sha256": "7bf239fcf1c4b5d03729549d1744e3180e93a0e372bac3511461eb15a44e2e0b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
@@ -522,12 +522,18 @@
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"

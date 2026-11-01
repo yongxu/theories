@@ -79,6 +79,7 @@ In graph terms a region nothing goes out of has no edge leaving it, and a closed
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | provenance | [2026-10-31-close-the-formal-gap.md](../../../../sources/15-codex-theory-conversations/2026-10-31-close-the-formal-gap.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 
 Aliases: `not going out of a region`, `不出一域`, `不出`, `nothing comes in where nothing goes out of the outside`, `Becoming.«不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不出皆闭当且仅当排中»`, `Becoming.«内至外之线有出步»`
 

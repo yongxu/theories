@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T06:48:43+00:00",
+  "reviewed_at_utc": "2026-11-01T03:48:28+00:00",
   "statement": {
-    "en": "Taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool; where more than half read alike on two histories it goes alike on them, however many members tell them apart: shares decide what it separates.",
-    "zh": "取过半成员之所读，是经合用之耦合之选择，所分开者不多于池；过半成员对两历程读法相同处，无论多少成员能分开二者，其读皆同：份额决定其所分开者。"
+    "en": "Taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool; where more than half read alike on two histories it goes alike on them, though the fewer than half left may tell them apart: shares decide what it separates.",
+    "zh": "取过半成员之所读，是经合用之耦合之选择，所分开者不多于池；过半成员对两历程读法相同处，余下不足半数之成员或能分开二者，其读皆同：份额决定其所分开者。"
   },
   "laws": [
     {
@@ -114,7 +114,7 @@
         "Becoming.Web.toNat_add_not",
         "Becoming.Web.toNat_le_of_imp"
       ],
-      "sha256": "4c6bb2cdd4d71fc30e59def6c5e1493e6f0e5b5b5b13e36eb0e2d5ec0c7906d0"
+      "sha256": "7bf239fcf1c4b5d03729549d1744e3180e93a0e372bac3511461eb15a44e2e0b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
@@ -157,12 +157,18 @@
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -172,6 +178,20 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 344 节。"
+    },
+    {
+      "en": "1 November 2026: the statement's \"however many members tell them apart\" corrected to \"though the fewer than half left may tell them apart\": the premise has more than half reading alike, so fewer than half can tell the histories apart (quick Lean review; the docstring of Web.majority_outvoted corrected with it). No law, declaration or scope changed.",
+      "zh": "2026年11月1日：陈述中「无论多少成员能分开二者」更正为「余下不足半数之成员或能分开二者」：前提为过半成员读法相同，故能分开二历程者不足半数（Lean 快审；Web.majority_outvoted 之文档同改）。法、声明与范围皆未改。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/6161007efaf14479/a-pool-read-by-its-majority.json",
+      "sha256": "6161007efaf14479e1fb1e9f78f296e9397059a5ff6232f4ee52cff002048e8e",
+      "note": {
+        "en": "Exact record bytes before the statement's \"however many members\" was corrected.",
+        "zh": "更正陈述中「无论多少成员」之前的记录原始字节。"
+      }
     }
   ]
 }

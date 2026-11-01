@@ -74,6 +74,7 @@ That a bijection of finite sets forces equal size is the pigeonhole principle, h
 | review | [REVIEW-U1-2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1-2.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 
 Aliases: `balance by selected unit matchings`, `所选单位配对之平衡`, `the interface of amounts`, `数量之接口`, `Becoming.UnitMatchings.frameMatchings_iff_balances`, `Becoming.UnitMatchings.FrameMatch.eq`, `Becoming.UnitMatchings.crossing_edge`, `Becoming.UnitMatchings.rise_crossing_strong`, `Becoming.UnitMatchings.endings_count`
 
