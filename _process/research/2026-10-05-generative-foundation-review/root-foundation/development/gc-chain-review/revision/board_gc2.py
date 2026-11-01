@@ -17,7 +17,7 @@ CLAIM = (ITEM + ' (DF\'s [LEFT](research/2026-10-05-repository-reconciliation/ar
          'root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md); every pending source read and the table rendered. '
          'Documents only: no Lean, no new record and no core run '
          '| Claude Code desktop session "Theory status and claims" '
-         '| claimed 2 November 2026; the text, the renames and the reading done on the branch; an independent read next '
+         '| claimed 2 November 2026; the text, the renames, the reading and an independent AI read done on the branch, the read\'s findings being taken '
          '| branch `chain-revision` (`.claude/worktrees/chain-revision`) '
          '| the coordinator\'s slot after LN2 → the chain current with the account, DF\'s LEFT closed |')
 
@@ -28,31 +28,33 @@ HEAD = ("GC2 at the head of the queue (landing now, on the coordinator's word: t
         "both dossier checks, then the fast-forward)")
 
 LANDED = ("GC2 landed (documents only, no Lean, no new record and no core run): the generativity chain's open proposals "
-          "decided in one revision through its maintenance record. Taken: A1, the status clause in C03, C17, C24, M15, "
-          "M20 and M21 (living significance under the continuation condition, ranking on C, neither asserted, 07 "
-          "§3–§4, G0 no premise of the current account); A2 to A7, the decisions, excluded middle and range the Lean "
-          "takes; A8, the restated question in C20; batch B's option; the retired labels' key (option (b)); B1, B3's "
-          "labels, B4 at the two renamed records and B6; the ids selection-when-the-lumping-changes and "
-          "formed-contacts-change-copying-fidelity by research.py rename-id. Declined, with reasons: options (a) and "
-          "(c), B2, B3's links and B5. Left for the next reading: B7 (sentences giving Ren's direction as a ground) "
-          "and B8 (the other registration words). Every pending source read and recorded, the table rendered from "
-          "the data, an independent AI read taken; the records the renames' rewrites drift re-pointed after reading; "
-          "render, strict check, links (0 broken), the 305 tests and both dossier checks pass on {checked}."
-          " Then, in the coordinator's order: {order}")
+          "decided in one revision through its maintenance record. Taken: A1, the status clause in C03, C17, C24, M15 "
+          "and M20 (living significance, the Lean G0 under its present name, follows under the continuation condition; "
+          "what G0 stated says more; ranking rests on C; neither premise asserted, 07 §3–§4); A2 to A7, the decisions, "
+          "excluded middle, slot counts and range the Lean takes; A8; batch B's option; the retired labels' key, "
+          "stating both senses of G0 (option (b)); B1, B2 as a link, B3's labels, B4 at the two renamed records and B6; "
+          "the ids selection-when-the-lumping-changes and formed-contacts-change-copying-fidelity by research.py "
+          "rename-id, with home anchors at the new ids; D45 (6)'s last sentence marked history. Declined, with reasons: "
+          "options (a) and (c), B3's links and B5. Left for the next reading: B7 (Ren's direction as a ground), B8 (the "
+          "other registration words), G0 use by use, each entry's route to the live statement, and the relabelling "
+          "page's move to history. Every pending source read and recorded, the table rendered from the data, an "
+          "independent AI read taken (37 findings, every blocker and fix taken); the records the renames' rewrites "
+          "drift re-pointed after reading; render, strict check, links (0 broken), the 305 tests and both dossier "
+          "checks pass on {checked}. Then, in the coordinator's order: {order}")
 
 ROW = ("| **GC2: the chain's open proposals decided, in one revision through its maintenance record** (the coordinator's "
-       "word, 2 November 2026; DF's LEFT). A1–A8, batch B's option, the retired labels' key and B1, B3's labels, B4 at "
-       "the renamed records and B6 taken; options (a) and (c), B2, B3's links and B5 declined with reasons; B7 and B8 "
-       "left for the next reading; the ids selection-when-the-lumping-changes and "
-       "formed-contacts-change-copying-fidelity by research.py rename-id; every pending source read and the table "
-       "rendered. No Lean, no new record, no core run "
+       "word, 2 November 2026; DF's LEFT). A1–A8, batch B's option, the retired labels' key with both senses of G0, "
+       "B1, B2 as a link, B3's labels, B4 at the renamed records and B6 taken; options (a) and (c), B3's links and B5 "
+       "declined with reasons; B7, B8, G0 use by use and the entries' routes left for the next reading; the ids "
+       "selection-when-the-lumping-changes and formed-contacts-change-copying-fidelity by research.py rename-id; every "
+       "pending source read, the table rendered, an independent AI read taken. No Lean, no new record, no core run "
        "| Claude Code desktop session \"Theory status and claims\" (2 November 2026) "
        "| landed 2026-11-02 (on the coordinator's order, documents only): render, strict check, links (0 broken), the "
        "305 tests and both dossier checks pass on {checked} "
        "| [maintenance record](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/"
        "GENERATIVITY-CHAIN-INDEX-RECORD.md#gc2-chain-revision-2-november-2026) "
-       "| the chain's data and table, its maintenance record, DF's LEFT, the relabelling proposal's note, the rename "
-       "receipt, the records re-pointed |")
+       "| the chain's data and table, its maintenance record, DF's LEFT, the relabelling proposal's note, D45's dated "
+       "line, the rename receipt, the records re-pointed, the home anchors |")
 
 
 def queue_index(lines):
