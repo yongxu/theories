@@ -1,0 +1,233 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean
+index 7c9a91da1..1a5ee6365 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean
+@@ -17,6 +17,17 @@ or a law: the module imports only Init, and every module of the core reaches it
+   (`mem_append_cases`, `mem_cons_cases`, `mem_append_of_left`, `mem_append_of_right`,
+   `mem_middle`), the length and members of a mapped list (`length_map`, `preimage_of_mem_map`,
+   `map_comp_eq`, `map_eq_of`, `map_eq_singleton`), and equal truth values (`bool_eq_of_iff`).
++* **Lists without repetition, matched** (U4c, moved from Population): removing one occurrence keeps
++  the rest (`mem_remove`), a list without repetition matched one to one into another is no longer
++  (`length_le_of_matched`), and a double negation for each member of a list is one for all
++  (`not_not_all`), each in every universe; a positive total has a positive member (`total_pos`,
++  from Flow); a list paired with a step (`mem_map_prodMk`, `prodMk_mem_map`) and a negated decision
++  (`not_decide_iff`).
++* **Stretches of steps and recurrence** (U4c, moved from Change and Population): the members and
++  totals of a stretch (`steps_mem`, `steps_last`, `steps_mono`), totals of a recurring quantity
++  exceeding every bound (`recurring_accumulates`, `pos_of_exceeds`), and the counting steps from
++  losing to gaining and back (`gaining_of_losing`, `losing_of_gaining`, their forms from a step,
++  `recurs_shift`, `recurs_unshift`), each through `le_over_stretch` or `ge_over_stretch`.
+ * **Balance over a stretch.** A count balanced across each step of a stretch, what it gains
+   against what it loses, is balanced over the stretch (`balance_over_stretch_on`,
+   `balance_over_stretch`), and the same with an inequality at each step (`le_over_stretch`,
+@@ -551,6 +562,28 @@ theorem preimage_of_mem_map {α β : Type} {g : α → β} {b : β} :
+   | a :: _, .tail _ mem => match preimage_of_mem_map mem with
+     | ⟨a', inner, same⟩ => ⟨a', .tail a inner, same⟩
+ 
++
++/-- A member of a list paired with a step is the step with a member of the list. -/
++theorem mem_map_prodMk {t : Nat} : ∀ {zs : List α} {y : Nat × α}, y ∈ zs.map (fun a => (t, a)) →
++    y.1 = t ∧ y.2 ∈ zs
++  | [], _, my => nomatch my
++  | _ :: _, _, my => match mem_cons_cases my with
++    | .inl s => ⟨congrArg Prod.fst s, (congrArg Prod.snd s).symm ▸ .head _⟩
++    | .inr m => match mem_map_prodMk m with | ⟨h1, h2⟩ => ⟨h1, .tail _ h2⟩
++
++/-- Pairing a list with a step pairs each of its members. -/
++theorem prodMk_mem_map {t : Nat} {a : α} : ∀ {zs : List α}, a ∈ zs → (t, a) ∈ zs.map (fun a => (t, a))
++  | [], m => nomatch m
++  | _ :: _, m => match mem_cons_cases m with
++    | .inl s => s ▸ .head _
++    | .inr m' => .tail _ (prodMk_mem_map m')
++
++/-- A test is true where a proposition fails exactly when its decision is false. -/
++theorem not_decide_iff {q : Prop} [Decidable q] : (!decide q) = true ↔ ¬ q := by
++  cases h : decide q with
++  | true => exact ⟨fun f => Bool.noConfusion f, fun n => absurd (of_decide_eq_true h) n⟩
++  | false => exact ⟨fun _ => of_decide_eq_false h, fun _ => rfl⟩
++
+ end Lists
+ 
+ /-! ## Statements stated once (R32)
+@@ -660,6 +693,50 @@ def DistinctUnder (R : α → α → Prop) : List α → Prop
+   | [] => True
+   | x :: s => (∀ y, y ∈ s → ¬ R x y) ∧ DistinctUnder R s
+ 
++/-- Removing one occurrence of `a` keeps every other member. -/
++theorem mem_remove {a b : α} (other : ¬ b = a) : ∀ {p q : List α}, b ∈ p ++ a :: q → b ∈ p ++ q
++  | [], _, mem => match ListTests.mem_cons_iff.mp mem with
++    | .inl same => absurd same other
++    | .inr mem => mem
++  | c :: _, _, mem => match ListTests.mem_cons_iff.mp mem with
++    | .inl same => Eq.subst (motive := fun x => x ∈ c :: _) same.symm (.head _)
++    | .inr mem => .tail _ (mem_remove other mem)
++
++/-- A list without repetition, each member of which is matched to a member of another
++list, no member of which is matched to two: the first list is no longer. -/
++theorem length_le_of_matched {S : α → β → Prop} : ∀ {l : List α} {m : List β}, Distinct l →
++    (∀ a, a ∈ l → ∃ b, b ∈ m ∧ S a b) →
++    (∀ a a' b, a ∈ l → a' ∈ l → S a b → S a' b → a = a') → l.length ≤ m.length
++  | [], _, _, _, _ => Nat.zero_le _
++  | a :: l, m, ⟨fresh, distinct⟩, matched, once => match matched a (.head l) with
++    | ⟨b, mem, paired⟩ => match List.append_of_mem mem with
++      | ⟨p, q, split⟩ =>
++        have inner : l.length ≤ (p ++ q).length :=
++          length_le_of_matched distinct
++            (fun a' mem' => match matched a' (.tail a mem') with
++              | ⟨b', mem_b', paired'⟩ =>
++                have other : ¬ b' = b := fun same =>
++                  fresh (Eq.subst (motive := fun x => x ∈ l)
++                    (once a' a b' (.tail a mem') (.head l) paired'
++                      (Eq.subst (motive := fun x => S a x) same.symm paired)) mem')
++                ⟨b', mem_remove other (split ▸ mem_b'), paired'⟩)
++            (fun x y b' mx my => once x y b' (.tail a mx) (.tail a my))
++        have whole : m.length = (p ++ q).length + 1 :=
++          (congrArg List.length split).trans ((ListTests.length_append p (b :: q)).trans
++            ((Nat.add_succ _ _).trans (congrArg Nat.succ (ListTests.length_append p q).symm)))
++        whole ▸ Nat.succ_le_succ inner
++
++/-- Doubly negated for each member of a list, doubly negated for all of them. -/
++theorem not_not_all {P : β → Prop} :
++    ∀ {E : List β}, (∀ b, b ∈ E → ¬ ¬ P b) → ¬ ¬ ∀ b, b ∈ E → P b
++  | [], _ => fun none => none fun _ mem => nomatch mem
++  | b :: E, each => fun none =>
++    each b (.head E) fun head =>
++      not_not_all (E := E) (fun c mem => each c (.tail b mem)) fun rest =>
++        none fun c mem => match ListTests.mem_cons_iff.mp mem with
++          | .inl same => Eq.subst (motive := P) same.symm head
++          | .inr mem => rest c mem
++
+ namespace Copying
+ 
+ /-- The member at index `i`, if any. -/
+@@ -738,6 +815,14 @@ theorem distinct_map_on {β : Type} {g : α → β} :
+      distinct_map_on (fun x y first second => inj x y (.tail a first) (.tail a second))
+        distinct⟩
+ 
++/-- A positive total has a positive member. -/
++theorem total_pos {q : α → Nat} : ∀ as : List α, 0 < total as q → ∃ a, a ∈ as ∧ 0 < q a
++  | a :: as, pos => match h : q a with
++    | 0 => match total_pos as (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
++        ((congrArg (· + total as q) h).trans (Nat.zero_add (total as q))))) with
++      | ⟨b, mem, positive⟩ => ⟨b, .tail a mem, positive⟩
++    | n + 1 => ⟨a, .head as, h ▸ Nat.succ_pos n⟩
++
+ end OnceLists
+ 
+ /-- Shifting a stretch of steps by one is shifting the quantity. -/
+@@ -770,6 +855,47 @@ theorem between_of_mem_steps : ∀ {T N j : Nat}, j ∈ steps T N → T ≤ j 
+       | ⟨le, lt⟩ => ⟨Nat.le_of_succ_le le,
+           Nat.lt_of_lt_of_le lt (Nat.le_of_eq (Nat.add_right_comm T 1 N))⟩
+ 
++/-! ## Stretches of steps -/
++
++theorem steps_mem : ∀ {T n t : Nat}, t ∈ steps T n → T ≤ t
++  | _, 0, _, mem => nomatch mem
++  | _, _ + 1, _, .head _ => Nat.le_refl _
++  | _, _ + 1, _, .tail _ mem => Nat.le_of_succ_le (steps_mem mem)
++
++theorem steps_last (q : Nat → Nat) :
++    ∀ T n, total (steps T (n + 1)) q = total (steps T n) q + q (T + n)
++  | T, 0 => Nat.add_comm (q T) 0
++  | T, n + 1 =>
++    (congrArg (q T + ·) ((steps_last q (T + 1) n).trans
++      (congrArg (_ + ·) (congrArg q (Nat.add_right_comm T 1 n))))).trans
++      (Nat.add_assoc _ _ _).symm
++
++theorem steps_mono (q : Nat → Nat) (T n : Nat) :
++    ∀ m, total (steps T n) q ≤ total (steps T (n + m)) q
++  | 0 => Nat.le_refl _
++  | m + 1 => Nat.le_trans (steps_mono q T n m)
++      (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (steps_last q T (n + m)).symm))
++
++/-- Where a quantity is positive at arbitrarily late steps, its totals over stretches from
++any step exceed every bound. -/
++theorem recurring_accumulates {q : Nat → Nat} (recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < q t)
++    (N : Nat) : ∀ K, ∃ n, K ≤ total (steps N n) q
++  | 0 => ⟨0, Nat.zero_le _⟩
++  | K + 1 => match recurring_accumulates recurs N K with
++    | ⟨n, many⟩ => match recurs (N + n) with
++      | ⟨_, later, positive⟩ => match le_dest later with
++        | ⟨m, same⟩ => ⟨n + m + 1, Nat.le_trans
++            (Nat.add_le_add (Nat.le_trans many (steps_mono q N n m))
++              (Nat.lt_of_lt_of_le positive
++                (Nat.le_of_eq (congrArg q (same.trans (Nat.add_assoc N n m))))))
++            (Nat.le_of_eq (steps_last q N (n + m)).symm)⟩
++
++/-- What exceeds `K` and is at most `K` and `R` together leaves `R` positive. -/
++theorem pos_of_exceeds {K X R : Nat} (many : K + 1 ≤ X) (within : X ≤ K + R) : 0 < R :=
++  match R, within with
++  | 0, within => absurd (Nat.le_trans many within) (Nat.not_succ_le_self K)
++  | R + 1, _ => Nat.succ_pos R
++
+ /-! ## Balance over a stretch
+ 
+ A count balanced across each step, what it gains against what it loses, is balanced over any
+@@ -842,6 +968,67 @@ theorem ge_over_stretch {q x y : Nat → Nat} (across : ∀ t, q t + y t ≤ q (
+         (Nat.add_left_comm _ _ _).trans
+           (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n)))
+ 
++/-! ## From losing to gaining over a stretch -/
++
++/-- Where a count, at each step, ends with what it loses at most where it started with what
++it gains, losses at arbitrarily late steps need gains at arbitrarily late steps: losses
++recurring accumulate past the count at the start, and only gains make up the
++difference. -/
++theorem gaining_of_losing {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t ≤ q t + y t)
++    (losing : ∀ N, ∃ t, N ≤ t ∧ 0 < x t) : ∀ N, ∃ t, N ≤ t ∧ 0 < y t :=
++  fun N => match recurring_accumulates losing N (q N + 1) with
++  | ⟨n, many⟩ => match total_pos (steps N n) (pos_of_exceeds many
++      (Nat.le_trans (Nat.le_add_left _ _) (le_over_stretch across N n))) with
++    | ⟨t, mem, gained⟩ => ⟨t, steps_mem mem, gained⟩
++
++/-- Where a count, at each step, starts with what it gains at most where it ends with what
++it loses, and from some step on is at most `B`, gains at arbitrarily late steps need losses
++at arbitrarily late steps. -/
++theorem losing_of_gaining {q x y : Nat → Nat} (across : ∀ t, q t + y t ≤ q (t + 1) + x t)
++    {T B : Nat} (bounded : ∀ t, T ≤ t → q t ≤ B) (gaining : ∀ N, ∃ t, N ≤ t ∧ 0 < y t) :
++    ∀ N, ∃ t, N ≤ t ∧ 0 < x t :=
++  fun N => match recurring_accumulates gaining (N + T) (B + 1) with
++  | ⟨n, many⟩ => match total_pos (steps (N + T) n) (pos_of_exceeds many
++      (Nat.le_trans (Nat.le_trans (Nat.le_add_left _ _) (ge_over_stretch across (N + T) n))
++        (Nat.add_le_add_right (bounded _ (Nat.le_trans (Nat.le_add_left T N)
++          (Nat.le_add_right _ n))) _))) with
++    | ⟨t, mem, lost⟩ => ⟨t, Nat.le_trans (Nat.le_add_right N T) (steps_mem mem), lost⟩
++
++/-- A recurrence read from a step `T` on: what recurs recurs at `T + m` for arbitrarily large
++`m`. -/
++theorem recurs_shift {r : Nat → Prop} (T : Nat) (recurs : ∀ N, ∃ t, N ≤ t ∧ r t) :
++    ∀ N, ∃ m, N ≤ m ∧ r (T + m) :=
++  fun N => match recurs (N + T) with
++  | ⟨_, later, holds⟩ => match le_dest (Nat.le_trans (Nat.le_add_left T N) later) with
++    | ⟨m, same⟩ => ⟨m, le_of_add_le_add_right T
++        (Nat.le_trans later (Nat.le_of_eq (same.trans (Nat.add_comm T m)))), same ▸ holds⟩
++
++/-- And back: what holds at `T + m` for arbitrarily large `m` recurs. -/
++theorem recurs_unshift {r : Nat → Prop} (T : Nat) (recurs : ∀ N, ∃ m, N ≤ m ∧ r (T + m)) :
++    ∀ N, ∃ t, N ≤ t ∧ r t :=
++  fun N => match recurs N with
++  | ⟨m, later, holds⟩ => ⟨T + m, Nat.le_trans later (Nat.le_add_left m T), holds⟩
++
++/-- Losses at arbitrarily late steps need gains at arbitrarily late steps, where the count at
++each step from `T` on ends with what it loses at most where it starts with what it gains:
++nothing is asked of the steps before `T`. -/
++theorem gaining_of_losing_from {q x y : Nat → Nat} {T : Nat}
++    (across : ∀ t, T ≤ t → q (t + 1) + x t ≤ q t + y t)
++    (losing : ∀ N, ∃ t, N ≤ t ∧ 0 < x t) : ∀ N, ∃ t, N ≤ t ∧ 0 < y t :=
++  recurs_unshift T (gaining_of_losing (q := fun m => q (T + m)) (x := fun m => x (T + m))
++    (y := fun m => y (T + m)) (fun m => across (T + m) (Nat.le_add_right T m))
++    (recurs_shift T losing))
++
++/-- Gains at arbitrarily late steps need losses at arbitrarily late steps, where from `T` on
++the count is at most `B` and at each step starts with what it gains at most where it ends
++with what it loses. -/
++theorem losing_of_gaining_from {q x y : Nat → Nat} {T B : Nat}
++    (across : ∀ t, T ≤ t → q t + y t ≤ q (t + 1) + x t) (bounded : ∀ t, T ≤ t → q t ≤ B)
++    (gaining : ∀ N, ∃ t, N ≤ t ∧ 0 < y t) : ∀ N, ∃ t, N ≤ t ∧ 0 < x t :=
++  recurs_unshift T (losing_of_gaining (q := fun m => q (T + m)) (x := fun m => x (T + m))
++    (y := fun m => y (T + m)) (T := 0) (B := B) (fun m => across (T + m) (Nat.le_add_right T m))
++    (fun m _ => bounded (T + m) (Nat.le_add_right T m)) (recurs_shift T gaining))
++
+ namespace RouteTraces
+ 
+ /-- A count at most another that is not zero leaves the other not zero. -/

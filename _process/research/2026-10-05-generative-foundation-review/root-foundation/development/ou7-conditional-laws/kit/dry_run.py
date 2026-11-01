@@ -167,10 +167,14 @@ show('prepare', run('zsh', KIT + 'land_ou7.sh', 'prepare', env=env))
 # A stage that is empty or does not apply stops `apply`, nothing of it written. The dry run drops it, says so, and goes
 # on without it, so that a failed stage never holds up OU7's own patches; every later step takes the stages left, as
 # the landing does with OU7_STAGES set to them (or a SKIP file in each dropped stage).
-DROPPED = []
+DROPPED, ATTEMPTS = [], []
 FAILED_STAGE = re.compile(r'^stage (\S+?)(?:: \S+ does not apply| has no patch)', re.M)
+# A record of the stages in place, as an earlier apply on a tree since reset to main would leave it: applying the kit's
+# own patches clears it, so every stage is applied, none taken as in place.
+(TREE / '.git/ou7-stages-in-place').write_text(' '.join(d.name for d in STAGE_DIRS) + '\n', encoding='utf-8')
 while True:
     applied = run('zsh', KIT + 'land_ou7.sh', 'apply', env=env, ok=False)
+    ATTEMPTS.append(applied.stdout)
     failed = FAILED_STAGE.search(applied.stdout + applied.stderr) if applied.returncode else None
     if failed and failed.group(1) in {d.name for d in STAGE_DIRS} - set(DROPPED):
         DROPPED.append(failed.group(1))
@@ -184,6 +188,8 @@ while True:
     break
 show('apply', applied, 60)
 STAGE_DIRS = [d for d in STAGE_DIRS if d.name not in DROPPED]
+stale = [d.name for d in STAGE_DIRS if not any(f'stage {d.name} (' in out for out in ATTEMPTS)]
+assert not stale, ('stages taken as in place from a stale record, not applied', stale)
 again = run('zsh', KIT + 'land_ou7.sh', 'apply', env=env)
 applied = [l for l in (LOG / 'apply.log').read_text().splitlines() if l.endswith(': applied')]
 assert not applied, ('the second apply applied again', applied)
@@ -238,15 +244,30 @@ def synthetic_receipt():
     def find(module, name):
         return next((d for d in by[module]['declarations'] if d['name'] == name), None) or \
             next((d for d in by[module]['declarations'] if d['name'].endswith('.' + name.split('.')[-1])), None)
+    def in_namespace(text, name):
+        """The name Lean gives a declaration the audit keys as `Becoming.` and its name as written: the namespaces
+        open at its line (`namespace Steps` … `theorem along_fixed` is Becoming.Steps.along_fixed)."""
+        short, opened = name.split('.', 1)[1], []
+        for line in text.splitlines():
+            if m := re.match(r'namespace (\S+)\s*$', line):
+                opened.append(m.group(1))
+            elif (m := re.match(r'end (\S+)\s*$', line)) and opened and opened[-1] == m.group(1):
+                opened.pop()
+            elif re.match(r'(?:@\[[^\]]*\]\s*)?(?:(?:private|protected|noncomputable) )*'
+                          r'(?:theorem|lemma|def|abbrev|structure|inductive|instance) ' + re.escape(short) + r'(?:\s|$)', line):
+                return '.'.join(opened + [short])
+        return name
     for stage, data in kit.stage_data():
         for module, names in data.get('added', {}).items():
-            whole = kit.statements((TREE / kit.source_of(module)).read_text(encoding='utf-8'))[1]
+            source = (TREE / kit.source_of(module)).read_text(encoding='utf-8')
+            whole = kit.statements(source)[1]
             for name in names:
-                if name in data.get('moved', {}) or find(module, name):
+                full = in_namespace(source, name)
+                if name in data.get('moved', {}) or any(d['name'] == full for d in by[module]['declarations']):
                     continue
                 theorem = whole.get(name, '').startswith('theorem ')
-                by[module]['declarations'].append({'kind': 'theorem' if theorem else 'def', 'name': name})
-                by[module]['axiom_dependencies'][name] = []
+                by[module]['declarations'].append({'kind': 'theorem' if theorem else 'def', 'name': full})
+                by[module]['axiom_dependencies'][full] = []
                 by[module]['theorems'] += theorem
         for name, (source, target) in data.get('moved', {}).items():
             entry = find(source, name)
@@ -294,6 +315,9 @@ show('record', run(*integrate, 'record', RECEIPT, N), 30)
 second = run(*integrate, 'record', RECEIPT, N)
 assert 'applied' not in second.stdout.replace('already in place', ''), second.stdout
 show('record, a second time', second, 6)
+left = [p.name for p in sorted((TREE / 'theories/becoming/results/records').glob('*.json'))
+        if any(t in p.read_text(encoding='utf-8') for t in kit.PLACEHOLDERS)]
+assert not left, ('a placeholder left in records after the record stage', left)
 
 # The post stage re-points exactly the registry's drift, the Lean files the patches changed rebound to the receipt;
 # here the synthetic one, as the landing binds them to the run's.

@@ -15,8 +15,9 @@
 #                                      it); the audit, every selected stage in place and its EXPECTED.json merged in
 #   LOG=DIR zsh land_ou7.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
 #   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions; the two
-#                                      general laws in 01 §4, 06 §三 and their two records; one record's words; OU7's
-#                                      two records; MV's data and OU7's check; the apart register; the study's section N
+#                                      general laws in 01 §4, 06 §三 and their two records; one record's words; the
+#                                      stages' records' dates and study section ({DAY}, {DAY_ZH}, {N}); OU7's two
+#                                      records; MV's data and OU7's check; the apart register; the study's section N
 #                                      (the next free one, read after main is merged; a given N must match); the
 #                                      re-point of the records whose sources the patches changed; render, checks,
 #                                      links, lint, tests

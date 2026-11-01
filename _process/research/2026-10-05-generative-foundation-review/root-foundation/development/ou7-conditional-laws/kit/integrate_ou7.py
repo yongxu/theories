@@ -363,6 +363,7 @@ def apply_patches():
         if git('apply', '--check', str(p), check=False).returncode == 0:
             git('apply', str(p))
             print(f'{p.name}: applied')
+            stage_state().unlink(missing_ok=True)   # a tree without the kit's patches holds no stage
         elif git('apply', '--reverse', '--check', str(p), check=False).returncode == 0:
             print(f'{p.name}: already in place')
         else:
@@ -434,10 +435,22 @@ def trial(patches, reverse=False):
     return None, ''
 
 
+def stage_state():
+    """Where apply records the stages it has put in place, in this tree's own git folder (never committed): the record
+    step and the re-point edit records and chapters a stage's patches also edit, after which its series no longer
+    reverses. Applying the kit's own patches clears it, since a tree without them holds no stage."""
+    path = Path(git('rev-parse', '--git-path', 'ou7-stages-in-place').stdout.strip())
+    return path if path.is_absolute() else ROOT / path
+
+
 def applied_stages():
-    """The selected stages in place: the longest run of them from the first whose patches, all of them, reverse on the
-    tree as it stands, from the last back."""
+    """The selected stages in place: the longest run of them from the first that apply has recorded in this tree or,
+    before any record, whose patches, all of them, reverse on the tree as it stands, from the last back."""
     stages = selected_stages()
+    if stage_state().exists():
+        recorded = stage_state().read_text(encoding='utf-8').split()
+        k = next((i for i, s in enumerate(stages) if s.name not in recorded), len(stages))
+        return stages[:k]
     for k in range(len(stages), 0, -1):
         if all(series(s) for s in stages[:k]) and trial([p for s in stages[:k] for p in series(s)], True)[0] is None:
             return stages[:k]
@@ -462,6 +475,8 @@ def apply_stages():
                      f'series on that tree, {leave}')
         for p in patches:
             git('apply', str(p))
+        done.append(stage)
+        stage_state().write_text(' '.join(s.name for s in done) + '\n', encoding='utf-8')
         print(f'stage {stage.name} ({len(patches)} patches): applied')
 
 
@@ -1329,6 +1344,41 @@ def regions():
     print('regions: two records and three modules')
 
 
+PLACEHOLDERS = ('{DAY}', '{DAY_ZH}', '{N}')
+RECORDS = 'theories/becoming/results/records/'
+
+
+def stage_records():
+    """The records the stages in place change, as paths."""
+    return [p for p in touched([p for s in stages_in_place() for p in series(s)])
+            if p.startswith(RECORDS) and p.endswith('.json') and (ROOT / p).exists()]
+
+
+def fill_stage_records(study):
+    """A stage leaves its records' history notes' date and the study section as {DAY}, {DAY_ZH} and {N}: each is
+    filled here, the landing's day in each language and the study section, and the record's reviewed_at_utc is that
+    day, as owner_records sets it. HEAD's version holds none, so every one found is the stage's; run again, nothing is
+    left to fill."""
+    from datetime import datetime, timezone
+    day = datetime.now(timezone.utc).replace(microsecond=0)
+    fill = {'{DAY}': f"{day.day} {day:%B %Y}", '{DAY_ZH}': f"{day.year}年{day.month}月{day.day}日", '{N}': str(study)}
+    filled = []
+    for path in stage_records():
+        text = (ROOT / path).read_text(encoding='utf-8')
+        if not any(t in text for t in PLACEHOLDERS):
+            continue
+        assert not any(t in git('show', 'HEAD:' + path, check=False).stdout for t in PLACEHOLDERS), \
+            (path, 'HEAD holds a placeholder')
+        for token, value in fill.items():
+            text = text.replace(token, value)
+        r = json.loads(text)
+        r['reviewed_at_utc'] = day.isoformat()
+        (ROOT / path).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        filled.append(Path(path).stem)
+    print(f"the stages' records: {len(filled)} filled ({fill['{DAY}']}, {fill['{DAY_ZH}']}, study section {study}), "
+          f"reviewed at {day.isoformat()}" if filled else "the stages' records: nothing left to fill")
+
+
 def record(receipt, study):
     receipt_sentence(receipt)
     ring_sentence()
@@ -1339,6 +1389,7 @@ def record(receipt, study):
     general_records(receipt, study)
     record_words(study)
     owner_records(receipt, study)
+    fill_stage_records(study)
     for maker in (mr, mb):
         r = maker.record(receipt, study)
         (ROOT / maker.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -1527,7 +1578,7 @@ def head_master():
 def check():
     data = json.loads((ROOT / MASTER).read_text(encoding='utf-8'))
     before = head_master()
-    problems = []
+    problems, stages = [], stages_in_place()
     verification = json.loads((PKG / 'becoming-verification.json').read_text(encoding='utf-8'))
     if data.get('from_dump') or data.get('core_receipt') != verification.get('utc'):
         problems.append(('the data is not the landing run\'s', data.get('core_receipt'), verification.get('utc')))
@@ -1563,12 +1614,22 @@ def check():
                            ('counts at a model', data.get('counts_at_model'), before.get('counts_at_model')),
                            ('counts at the boundary record', data.get('counts_at_boundary_record'),
                             before.get('counts_at_boundary_record'))]:
-        if now != then:
+        if now != then and stages:
+            print(f'{key} changed with the stages in place, for their owners to check: {then} -> {now}')
+        elif now != then:
             problems.append((key + ' changed', then, now))
     grown = {k: (before['counts'].get(k), v) for k, v in data['counts'].items() if before['counts'].get(k) != v}
-    print('record-law counts, main -> landing (only the new records\' laws should add):', grown)
-    if data['counts']['laws'] != before['counts']['laws'] + sum(len(rec['laws']) for rec in records.values()):
-        problems.append(('law count', before['counts']['laws'], data['counts']['laws']))
+    print('record-law counts, main -> landing (only the new records\' laws and the stages\' should add):', grown)
+    # A stage's records may gain or lose laws: what each holds now against HEAD.
+    staged = sum(len(json.loads((ROOT / p).read_text(encoding='utf-8'))['laws']) -
+                 len(json.loads(git('show', 'HEAD:' + p, check=False).stdout or '{"laws": []}')['laws'])
+                 for p in stage_records())
+    if data['counts']['laws'] != before['counts']['laws'] + sum(len(rec['laws']) for rec in records.values()) + staged:
+        problems.append(('law count', before['counts']['laws'], data['counts']['laws'], 'stages', staged))
+    left = [p.name for p in sorted((ROOT / RECORDS).glob('*.json'))
+            if any(t in p.read_text(encoding='utf-8') for t in PLACEHOLDERS)]
+    if left:
+        problems.append(('a placeholder left in records', left))
     for p in problems:
         print('PROBLEM', p)
     assert not problems

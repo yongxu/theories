@@ -2,6 +2,8 @@
 
 Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a directory here, `NN-name/`, and stages are taken in name order: U4c's census on the root as `10-u4c/`, then ND's names that state relations as `20-nd/`.
 
+`10-u4c/` is its owner's final series, copied unchanged from branch `u4c` at d5d034614 and cut on main at 4a86127e4. If main moves under it before the landing, its owner re-cuts the patches from 09 on against the main the landing merges, with `cut_u4c_patches.py` in the stage's design folder.
+
 | file | what it is |
 |---|---|
 | `*.patch` | the series: unified diffs from the repository root, applied in name order, each to the tree the one before it leaves, so two patches may change one file. Make the first against the tree after the kit's `apply` (its patches and joins) and the stages before this one: in a throwaway copy of main, run `land_ou7.sh prepare` and `apply` with the earlier stages in place |
@@ -14,9 +16,13 @@ Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a dire
 
 **Apply.** Each stage is tried first on a copy of the files its series changes, as the tree has them, patch by patch. A stage with no patch, or one whose series does not apply there, stops `apply` with the patch and git's words, and nothing of the stage is written. Its owner then rebases the series on that tree, or the landing leaves the stage out with a `SKIP` file or `OU7_STAGES`, and OU7 lands without it (R10). Run again, `apply` finds the stages already in place and goes on from the first that is not. The dry run drops such a stage itself, names it, and goes on without it, so that a failed stage never holds up OU7's own patches; it prints the `OU7_STAGES` the landing then takes.
 
+`apply` records the stages it puts in place in the tree's own git folder (`ou7-stages-in-place`, never committed). The record stage and the re-point later edit records and chapters that a stage's patches also edit, after which its series no longer reverses. Applying the kit's own patches clears the record, since a tree without them holds no stage.
+
 The audit requires every selected stage in place. The audit, the receipt line, the study section and the commit name exactly the stages taken.
 
-A stage leaves the counts in the validation scopes of `master-laws-on-the-grammar` and `not-going-out-of-a-region` to the record stage, which reads them from the receipt.
+**Records.** A stage leaves the counts in the validation scopes of `master-laws-on-the-grammar` and `not-going-out-of-a-region` to the record stage, which reads them from the receipt. A stage's records may leave their history notes' date and the study section as `{DAY}`, `{DAY_ZH}` and `{N}`. The record stage fills them with the landing's day in each language (`1 November 2026`, `2026年11月1日`) and the study section. Each record it fills has that day as its `reviewed_at_utc`, as the owner's records have. Only records are filled, so a design text may name the placeholders. OU7's check and the dry run find none left in any record.
+
+**OU7's check.** With a stage in place, a change in the boundary report's counts, the central reach, or the counts at a model or at the boundary record is reported for the stages' owners to check, not as a failure: their owners check those after the core run. The law count allows for what the stages' records gain or lose against HEAD.
 
 A rename of a record id is not a stage. It changes every record and page that names the id, so it comes after the rebuild, last, in its owner's own landing.
 
