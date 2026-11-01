@@ -42,7 +42,7 @@ REASON = ("EL6: EL3's leaf Becoming.LineDegeneration placed in its owners' modul
           "grammar part in GrammarMap under Chinese names, the kind instance in KeepingWidening, the rest in "
           "MapInstances with the landed laws proved from degeneration in place), Web.degenerates_of_gone renamed "
           "Web.end_of_gone and Map.Short.degeneration renamed Map.Short.reaches_end (each concludes 有终, not «退化»), "
-          "no statement changed; the root module's bullets, the checker's core list and scope, both package README "
+          "no theorem's statement changed (Map.StepWhere.relation restated with an equivalent body); the root module's bullets, the checker's core list and scope, both package README "
           "rows, 02 §1's names, 08's counts, regions.json, the study, the connectivity; read before re-pointing")
 
 

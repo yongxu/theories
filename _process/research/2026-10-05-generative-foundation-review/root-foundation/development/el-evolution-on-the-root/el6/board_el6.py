@@ -3,10 +3,13 @@
 
 head: put EL6's clause at the head of the Queue line, behind no other "landing now" clause; the coordinator's order
       sentence is kept as it stands.
+head --rehearse: the same in a rehearsal's scratch tree, where another item may hold the head while EL6 waits: that
+      item's leading "(landing now …)" clause is stepped past (dropped from the scratch board only), so that every later
+      step is rehearsed; nothing of it is committed.
 landed RECEIPT N: replace EL6's head clause with the landed one, followed by the coordinator's order sentence, given
       verbatim in EL6_ORDER (required: the coordinator sends it with its word), and move EL6's row to the history
       file (titled done, its status the landing, its links rebased there), after the last landed row.
-usage (from the checkout root): python3 -B board_el6.py head | landed RECEIPT N"""
+usage (from the checkout root): python3 -B board_el6.py head [--rehearse] | landed RECEIPT N"""
 import datetime
 import os
 import re
@@ -20,7 +23,7 @@ HEAD = ("EL6 at the head of the queue (landing now: EL3's leaf `Becoming.LineDeg
         "modules on their yes and retired, the grammar part in `Becoming.GrammarMap`, the rest in "
         "`Becoming.MapInstances` with the landed laws proved from degeneration, the kind instance in "
         "`Becoming.KeepingWidening`, and the renames `Web.degenerates_of_gone` → `Web.end_of_gone` and "
-        "`Map.Short.degeneration` → `Map.Short.reaches_end`, no statement changed; one near-full core run; then render, "
+        "`Map.Short.degeneration` → `Map.Short.reaches_end`, no theorem's statement changed; one near-full core run; then render, "
         "strict check, links and tests, then the fast-forward); ")
 
 
@@ -31,9 +34,29 @@ def queue(text):
     return lines, i[0]
 
 
-def head():
+def foreign_head(rest):
+    """the length of another item's leading "X at the head of the queue (landing now …); " clause in `rest`, the Queue
+    line after its label: its parentheses matched, then the "; " or ". " after them"""
+    open_ = rest.find(' (landing now')
+    assert open_ > 0 and ' at the head of the queue' in rest[:open_], 'no leading head clause: ' + rest[:200]
+    depth = 0
+    for k in range(open_ + 1, len(rest)):
+        depth += {'(': 1, ')': -1}.get(rest[k], 0)
+        if depth == 0:
+            end = k + 1
+            assert rest[end:end + 2] in ('; ', '. '), rest[open_:end + 10]
+            return end + 2
+    raise AssertionError('the head clause does not close: ' + rest[:200])
+
+
+def head(rehearse=False):
     lines, i = queue(BOARD.read_text(encoding='utf-8'))
     line = lines[i]
+    if rehearse and '(landing now' in line:
+        rest = line[len('- **Queue:** '):]
+        cut = foreign_head(rest)
+        print('head --rehearse: stepped past', rest[:cut].split(' (landing now')[0])
+        line = '- **Queue:** ' + rest[cut:]
     assert '(landing now' not in line, 'another clause holds the head: ' + line[:200]
     assert sum(l.startswith(TITLE) for l in lines) == 1, 'EL6 not claimed'
     lines[i] = '- **Queue:** ' + HEAD + line[len('- **Queue:** '):]
@@ -53,7 +76,7 @@ def landed(receipt, n):
               "the landed laws that a line is not without end and `Web.end_of_gone` proved from degeneration in place "
               "and `Web.Restated` dropped; in `Becoming.KeepingWidening` the kind instance; renamed, each concluding an "
               "end and not degeneration, `Web.degenerates_of_gone` → `Web.end_of_gone` and `Map.Short.degeneration` → "
-              "`Map.Short.reaches_end`; the signature audit: every statement unchanged; records "
+              "`Map.Short.reaches_end`; the signature audit: every theorem's statement unchanged, `Map.StepWhere.relation` restated with a body equivalent to its old one; records "
               "degeneration-from-a-horizon and generation-and-degeneration-at-two-grains, home 02 §1; the root module's "
               "bullets, the checker's core list and scope, both package READMEs and regions.json; the connectivity "
               "register; the records citing what changed re-pointed and the changed modules' proof bindings rebound, "
@@ -77,7 +100,7 @@ def landed(receipt, n):
     assert len(cells) == 5, len(cells)
     cells[2] = (f'landed {datetime.date.today().isoformat()} at core receipt `{receipt}`, study §{n}: EL3 placed in '
                 'GrammarMap, MapInstances and KeepingWidening on their owners\' yes, `Becoming.LineDegeneration` '
-                'retired, two renames, every statement unchanged, every axiom report empty '
+                'retired, two renames, every theorem\'s statement unchanged, every axiom report empty '
                 '([note](../../research/2026-10-05-generative-foundation-review/root-foundation/development/'
                 'el-evolution-on-the-root/NOTE.md#state-of-the-lean))')
     row = ' | '.join(cells)
@@ -95,8 +118,8 @@ def landed(receipt, n):
 
 
 if __name__ == '__main__':
-    if sys.argv[1:] == ['head']:
-        head()
+    if sys.argv[1:] in (['head'], ['head', '--rehearse']):
+        head(rehearse=sys.argv[2:] == ['--rehearse'])
     elif len(sys.argv) == 4 and sys.argv[1] == 'landed':
         landed(sys.argv[2], int(sys.argv[3]))
     else:

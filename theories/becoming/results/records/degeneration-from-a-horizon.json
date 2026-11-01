@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
   "statement": {
     "en": "At any class within activity, a line from an active occurrence of which nothing reached at a step not before its start is active ends on every branch (尽), constructively, and the three ending regimes degenerate; that the premise, or 尽 on the grammar, gives an end (有终) is exactly excluded middle.",
     "zh": "在活动之内的任一类上，自一活跃之事起、其线于不早于起点的某一步所及皆不活跃者，诸支皆尽，构造地成立；世界的三种终结之态皆退化；此前提（在文法上则诸支皆尽）总给出有终，恰等价于排中。"
@@ -192,8 +192,8 @@
       "id": "generation-and-degeneration-at-two-grains",
       "relation": "formal-reuse",
       "detail": {
-        "en": "The map's «尽», «退化» and «尽则非不穷» (Becoming.GrammarMap) and its reading on the World (Becoming.MapInstances): occurrences along a continuation's step, activity as the coarse class, and the laws that a line is not without end and that it reaches an end where going on is decided, which MapInstances proves from degeneration.",
-        "zh": "复用地图的 «尽»、«退化» 与 «尽则非不穷»（Becoming.GrammarMap）及其在世界上的读法（Becoming.MapInstances）：沿续之步的事、以活动为粗类，以及\"线非不穷\"之律与延续可判定时\"线有终\"之律；MapInstances 由退化证明它们。"
+        "en": "The map's «尽», «退化» and «尽则非不穷» (Becoming.GrammarMap) and its reading on the World (Becoming.MapInstances): occurrences along a continuation's step and activity as the coarse class. MapInstances now proves that record's laws that a line is not without end and, where going on is decided, reaches an end, from this record's activity instance.",
+        "zh": "复用地图的 «尽»、«退化» 与 «尽则非不穷»（Becoming.GrammarMap）及其在世界上的读法（Becoming.MapInstances）：沿续之步的事、以活动为粗类。MapInstances 今由本记录的活动实例证明该记录的\"线非不穷\"之律与延续可判定时\"线有终\"之律。"
       }
     },
     {
@@ -314,8 +314,8 @@
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL3 部分）：新增。基底的\"线非不穷\"诸律在活动之内的每一类上被构造地读作退化；三种态皆退化；有终所需的判定在基底与文法上与排中校准。作为核心叶落地；拟放入 GrammarMap、MapInstances 与 KeepingWidening 的安排，以及 Web.degenerates_of_gone 的改名，待其所属者定。"
     },
     {
-      "en": "1 November 2026, board item EL6: placed in its owners' modules, each on its owner's yes. The grammar part is in Becoming.GrammarMap, its laws named «尽则非无终», «尽而续可定则有终» and «尽则有终当且仅当排中» (formerly Map.not_not_end_of_ends, Map.end_of_ends_decided and Map.end_of_ends_iff_excluded_middle), with Map.StepWhere stated as Map.short gated by P; the kind instance is in Becoming.KeepingWidening; the rest is in Becoming.MapInstances, where the landed laws that a line is not without end, and the law concluding an end (renamed Web.end_of_gone), are proved from degeneration in place, so the restatements (Web.Restated) and their law here are dropped. Becoming.LineDegeneration is retired to the Lean history folder. No statement changed.",
-      "zh": "2026年11月1日，工作板条目 EL6：各部分经其所属者同意放入其模块。文法部分在 Becoming.GrammarMap，其律名为 «尽则非无终»、«尽而续可定则有终» 与 «尽则有终当且仅当排中»（原名 Map.not_not_end_of_ends、Map.end_of_ends_decided、Map.end_of_ends_iff_excluded_middle），Map.StepWhere 陈述为以 P 为门的 Map.short；种类实例在 Becoming.KeepingWidening；其余在 Becoming.MapInstances，在那里已落地的\"线非不穷\"诸律与推出有终之律（改名为 Web.end_of_gone）就地由退化证明，故重述（Web.Restated）及其在此的律一并去除。Becoming.LineDegeneration 移入 Lean 历史文件夹。无陈述改变。"
+      "en": "1 November 2026, board item EL6: placed in its owners' modules, each on its owner's yes. The grammar part is in Becoming.GrammarMap, its laws named «尽则非无终», «尽而续可定则有终» and «尽则有终当且仅当排中» (formerly Map.not_not_end_of_ends, Map.end_of_ends_decided and Map.end_of_ends_iff_excluded_middle), with Map.StepWhere stated as Map.short gated by P; the kind instance is in Becoming.KeepingWidening; the rest is in Becoming.MapInstances, where the landed laws that a line is not without end, and the law concluding an end (renamed Web.end_of_gone), are proved from degeneration in place, so the restatements (Web.Restated) and their law here are dropped. Becoming.LineDegeneration is retired to the Lean history folder. No theorem's statement changed; the restated Map.StepWhere.relation is equivalent to the old one, not definitionally equal.",
+      "zh": "2026年11月1日，工作板条目 EL6：各部分经其所属者同意放入其模块。文法部分在 Becoming.GrammarMap，其律名为 «尽则非无终»、«尽而续可定则有终» 与 «尽则有终当且仅当排中»（原名 Map.not_not_end_of_ends、Map.end_of_ends_decided、Map.end_of_ends_iff_excluded_middle），Map.StepWhere 陈述为以 P 为门的 Map.short；种类实例在 Becoming.KeepingWidening；其余在 Becoming.MapInstances，在那里已落地的\"线非不穷\"诸律与推出有终之律（改名为 Web.end_of_gone）就地由退化证明，故重述（Web.Restated）及其在此的律一并去除。Becoming.LineDegeneration 移入 Lean 历史文件夹。无定理之陈述改变；重述的 Map.StepWhere.relation 与旧者等价，但非定义相等。"
     }
   ]
 }

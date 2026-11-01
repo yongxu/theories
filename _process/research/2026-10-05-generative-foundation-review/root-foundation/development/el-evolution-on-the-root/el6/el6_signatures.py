@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """EL6: compare the printed statements (`#check @name`, the checker's signature audit) of every declaration of the
 modules EL6 changes, and of the retired Becoming.LineDegeneration, between main's receipt (the one main holds) and
-EL6's (or a rehearsal's) receipt (he_signatures.py's pattern, its log reading from OU3b's signatures_ou3b.py).
+EL6's (or a rehearsal's) receipt, main's side read at EL6_BASE, the main merged in (default main), so that main moving
+during a long run changes nothing (he_signatures.py's pattern, its log reading from OU3b's signatures_ou3b.py).
 Expected, and nothing else:
 - every declaration of LineDegeneration but Web.Restated's moves with its statement unchanged: the grammar part to
   GrammarMap, the kind instance to KeepingWidening, the rest to MapInstances;
@@ -9,11 +10,14 @@ Expected, and nothing else:
   «尽而续可定则有终», Map.end_of_ends_iff_excluded_middle → «尽则有终当且仅当排中» (each also moving to GrammarMap),
   Web.degenerates_of_gone → Web.end_of_gone, Map.Short.degeneration → Map.Short.reaches_end;
 - the five Web.Restated declarations gone;
-- one definition rewritten, Map.StepWhere.relation, now Map.short gated by P, its type unchanged;
+- one definition rewritten, Map.StepWhere.relation, now Map.short gated by P: the body is equivalent to the old one
+  at every P, x and y (scratch/EL6CheckGM.lean.txt, `relation_iff_leaf_body`) but not definitionally equal (its
+  conjunction is grouped otherwise), so the printed statements that mention it are compared by text only;
 - Becoming.LineDegeneration gone from the run, and every axiom report of the changed modules empty.
 usage (from the checkout root, after the checker): python3 -B <kit>/el6_signatures.py [RECEIPT_ID | --dir RUN_DIR]"""
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -35,15 +39,16 @@ GRAMMAR = {'Becoming.Map.StepWhere.relation', 'Becoming.Map.StepWhere.ends', 'Be
            'Becoming.Map.StepWhere.end_decides'}
 KIND = {'Becoming.Web.kind_every_branch_ends_of_gone', 'Becoming.Map.Undecided.kind_degenerates'}
 REWRITTEN = ['Becoming.Map.StepWhere.relation']
+BASE = os.environ.get('EL6_BASE') or 'main'
 
 
 def main_json(path):
-    return json.loads(subprocess.run(['git', 'show', f'main:{path}'], cwd=ROOT, capture_output=True, text=True,
+    return json.loads(subprocess.run(['git', 'show', f'{BASE}:{path}'], cwd=ROOT, capture_output=True, text=True,
                                      check=True).stdout)
 
 
 def main_source(m):
-    return subprocess.run(['git', 'show', f'main:{PKG}/Becoming/{m}.lean'], cwd=ROOT, capture_output=True, text=True,
+    return subprocess.run(['git', 'show', f'{BASE}:{PKG}/Becoming/{m}.lean'], cwd=ROOT, capture_output=True, text=True,
                           check=True).stdout
 
 
@@ -96,7 +101,7 @@ renamed_moves = {b: (where_old[a], where_new.get(b)) for a, b in RENAMED.items()
 expected_renamed_moves = {b: (where_old[a], home(b) if where_old[a] == GONE_MODULE else where_old[a])
                           for a, b in RENAMED.items() if a in old and b in new}
 rewritten = sorted(n for n in defs_old if n in defs_new and defs_old[n] != defs_new[n])
-report = {'old_receipt': old_r['utc'], 'new_receipt': new_r['utc'], 'declarations_old': len(old),
+report = {'base': BASE, 'old_receipt': old_r['utc'], 'new_receipt': new_r['utc'], 'declarations_old': len(old),
           'declarations_new': len(new), 'changed': changed, 'gone': gone, 'expected_gone': expected_gone,
           'added': added, 'renamed_bad': renamed_bad,
           'moved': {n: list(v) for n, v in sorted(moved.items())},
@@ -122,7 +127,7 @@ if rewritten != REWRITTEN:
 for m in new_r['modules']:
     if m['module'] in ('Becoming.' + c for c in CHANGED):
         assert not any(m['axiom_dependencies'].values()), (m['module'], m['axiom_dependencies'])
-print('OK: every statement unchanged; moved', len(moved), '; renamed', len(RENAMED), '; gone', len(gone),
+print('OK: every theorem\'s statement unchanged; moved', len(moved), '; renamed', len(RENAMED), '; gone', len(gone),
       '(Web.Restated); rewritten', rewritten, '; LineDegeneration gone from the run; every axiom report of the',
       len(CHANGED), 'changed modules empty' if not problems else f'UNEXPECTED: {problems}')
 sys.exit(1 if problems else 0)

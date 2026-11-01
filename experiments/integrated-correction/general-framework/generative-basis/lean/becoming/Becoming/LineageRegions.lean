@@ -80,8 +80,8 @@ birth.
   member's occurrence (`ContinuationsListed`, the census holding every continuation), everything
   the line from a member reaches is a member's occurrence (`reached_listed`), so an empty
   generation at a step not before the member ends the line on every branch
-  (`degeneration_of_empty`, through EL3's `Web.ends_of_ends_at`, imported from
-  `Becoming.MapInstances`).
+  (`degeneration_of_empty`, through EL3's `Web.ends_of_ends_at`, of `Becoming.MapInstances`,
+  imported through `Becoming.KeepingWidening`).
   Without the census, EL3's law read at the kind grain gives degeneration from the line's own
   reach: from an active occurrence, where nothing the line reaches at a step is active
   (EL3's `Web.kind_every_branch_ends_of_gone`, imported). At the grain of activity every continuation of a member is one

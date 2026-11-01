@@ -939,8 +939,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every horizon, two courses
   with the same terms through it, the marked line generating in one and the lineage degenerating in
   the other (`LineageRegions.Courses.same_terms_two_fates`); the census premise of ending cannot be
-  dropped (`LineageRegions.Lasting.lasting`). A leaf importing `Becoming.SelectionShift` and
-  `Becoming.KeepingWidening`, where EL3's laws lie.
+  dropped (`LineageRegions.Lasting.lasting`). Importing `Becoming.SelectionShift` and
+  `Becoming.KeepingWidening`, through which EL3's laws in `Becoming.MapInstances` and
+  `Becoming.KeepingWidening` arrive; imported by `Becoming.LineageRegimes`.
 * `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
   ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
   under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on

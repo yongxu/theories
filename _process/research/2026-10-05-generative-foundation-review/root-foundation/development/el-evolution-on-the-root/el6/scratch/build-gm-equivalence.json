@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el6/tree2",
+  "modules": 3,
+  "ran": [
+    "Becoming.EL6CheckGM",
+    "BecomingEL6CheckGMAxiomAudit"
+  ],
+  "reused": 2,
+  "unclean": [],
+  "audits": {
+    "Becoming.EL6CheckGM": {
+      "theorems": 7,
+      "declarations": 8,
+      "with_axioms": {}
+    }
+  }
+}

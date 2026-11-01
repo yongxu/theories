@@ -1,7 +1,9 @@
 # EL6's landing steps after the checker, shared by rehearse_el6.sh and land_el6.sh (sourced; needs K, ASIDE, ID, N,
-# step()). The board's landed clause takes EL6_ORDER.
+# step()). The board's landed clause takes EL6_ORDER; the signature audit reads main's side at EL6_BASE, the main
+# merged in (main-at-merge.txt), not at the moving main.
 C=_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py
 D=_process/research/2026-10-05-generative-foundation-review/root-foundation/development
+[ -n "${EL6_BASE:-}" ]; step base $?
 python3 -B "$K/el6_signatures.py" "$ID" > "$ASIDE/signatures.log" 2>&1; step signatures $?
 python3 -B "$K/reland_el6.py" "$ID" "$N" > "$ASIDE/reland.log" 2>&1; step reland $?
 python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity before registering: exit $?"

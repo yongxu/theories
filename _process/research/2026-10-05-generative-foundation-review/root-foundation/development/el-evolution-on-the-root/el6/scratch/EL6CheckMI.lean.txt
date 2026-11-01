@@ -322,8 +322,9 @@ theorem active_along_finer {E : «际» (Nat × F)} (inside : «则» E W.activi
     (start : W.active x.1 x.2) (reached : «所及» (continuationStep R) E x y) : W.active y.1 y.2 :=
   active_along_line start (reached_coarser inside reached)
 
-/-- **A line along which nothing reached at a step is active ends on every branch**, at every class
-finer than activity: no decision of going on and no premise that the line does not branch. -/
+/-- **A line from an active occurrence along which nothing reached at a step not before it is
+active ends on every branch**, at every class finer than activity: no decision of going on and no
+premise that the line does not branch. -/
 theorem every_branch_ends_of_gone {E : «际» (Nat × F)} (inside : «则» E W.activityClass)
     {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
     (gone : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → ¬ W.active y.1 y.2) :

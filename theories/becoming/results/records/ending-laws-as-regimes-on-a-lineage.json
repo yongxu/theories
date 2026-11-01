@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
   "statement": {
     "en": "Three ending laws, read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: gated renewal run past, dissipation within the family, a draw on a condition given nothing. At each positive stock both fates occur; renewal from outside meets none.",
     "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：门控更新被越过、族内耗散、对无所给予之条件的汲取。在每一正存量下两种命运皆出现；来自外部的更新不满足其中任何一态。"
@@ -519,8 +519,8 @@
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL2 部分）：作为独立记录新增，而非对 what-bounds-offspring-numbers 与 whole-drawing-beyond-renewal-ends 的修订：门控之态的世系读法及其关于线之所及的新前提、每一存量下的两种命运、汲取的取者之律，以及来自外部之更新的见证。"
     },
     {
-      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in MapInstances and KeepingWidening and retired; nothing the record says changes.",
-      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入 MapInstances 与 KeepingWidening 并退役；记录所说无一改变。"
+      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.",
+      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入其所属者的模块（GrammarMap、MapInstances 与 KeepingWidening）并退役；记录所说无一改变。"
     }
   ]
 }

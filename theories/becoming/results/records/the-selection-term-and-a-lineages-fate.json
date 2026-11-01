@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
   "statement": {
     "en": "A common shift of offspring numbers keeps the selection term, so in a horizon two fates can share the terms; unboundedly many positive terms, or one with exact transmission after it, force going on. Where listed offspring continue their parents, a cohort degenerates only if a later one is empty.",
     "zh": "后代数的共同平移不改变真正的选择项，故在视界之内两种命运可共有同一组项；在无界多步为正的项，或一个正项加上其后的精确传递，迫使延续。在所列后代于粗线上延续其亲代的世系上，一代退化仅当其后某代为空。"
@@ -947,8 +947,8 @@
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL1 部分）：新增，引用 Becoming.SelectionShift（计数层）与 Becoming.LineageRegions（地图上的接合）。设计草稿中\"无选择项进程起决定作用\"与\"每代皆正的项可与每个成员退化并存\"二说，在 Lean 各轮中被驳倒，保留为驳倒它们的律；见证是除最后的非空之代外每代皆正。"
     },
     {
-      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in MapInstances and KeepingWidening and retired; nothing the record says changes.",
-      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入 MapInstances 与 KeepingWidening 并退役；记录所说无一改变。"
+      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.",
+      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入其所属者的模块（GrammarMap、MapInstances 与 KeepingWidening）并退役；记录所说无一改变。"
     }
   ]
 }
