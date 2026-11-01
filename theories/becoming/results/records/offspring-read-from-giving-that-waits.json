@@ -1,0 +1,534 @@
+{
+  "schema_version": 2,
+  "id": "offspring-read-from-giving-that-waits",
+  "title": {
+    "en": "Offspring read from giving that waits",
+    "zh": "由等待给出之给出读出的后代"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
+  "statement": {
+    "en": "A pair's run of laws of giving counts what each formation received and withheld; read as offspring with supplied factors β and γ, where β ≤ γ no kind rises against withholders under any laws and errors, and under complete assortment waiting on giving is weakly favoured exactly where γ ≤ β.",
+    "zh": "给出之律的一对运行计出每个形成所收与所扣；以给定因子 β、γ 读作后代，β ≤ γ 时不论何律何差错都没有种类在扣留者面前上升；完全同类配对下，等待给出弱受偏向恰当 γ ≤ β。"
+  },
+  "laws": [
+    {
+      "en": "A pair's run of two laws of giving, from a history of mutual giving and with a supplied error pattern, gives each formation two counts over steps 0 to n − 1: the steps its partner gave it and the steps it withheld. A place is a formation's place in a pair; read while it is supported, its offspring are a + β·received + γ·withheld, a supplied formula with natural factors.",
+      "zh": "两条给出之律构成的一对的运行，从相互给出的历史出发、带给定差错模式，在第 0 到 n − 1 步给每个形成两个计数：对方给它的步数，与它扣留的步数。位置是形成在一对中的位置；在其受支持期间读其后代为 a + β·所收 + γ·所扣，这是带自然数因子的给定公式。",
+      "declarations": [
+        "Becoming.PairSelection.Lags",
+        "Becoming.PairSelection.PairLaw",
+        "Becoming.PairSelection.Errors",
+        "Becoming.PairSelection.noErrors",
+        "Becoming.PairSelection.errAt",
+        "Becoming.PairSelection.State",
+        "Becoming.PairSelection.start",
+        "Becoming.PairSelection.step",
+        "Becoming.PairSelection.course",
+        "Becoming.PairSelection.gives",
+        "Becoming.PairSelection.before",
+        "Becoming.PairSelection.tally",
+        "Becoming.PairSelection.received",
+        "Becoming.PairSelection.withheld",
+        "Becoming.PairSelection.half",
+        "Becoming.PairSelection.sparing",
+        "Becoming.PairSelection.answering",
+        "Becoming.PairSelection.windowed",
+        "Becoming.PairSelection.agreeing",
+        "Becoming.PairSelection.waitingBoth",
+        "Becoming.PairSelection.withholding",
+        "Becoming.PairSelection.alternating",
+        "Becoming.PairSelection.laws",
+        "Becoming.PairSelection.Place",
+        "Becoming.PairSelection.Place.other",
+        "Becoming.PairSelection.Place.received",
+        "Becoming.PairSelection.Place.withheld",
+        "Becoming.PairSelection.Place.kind",
+        "Becoming.PairSelection.Place.offspring"
+      ]
+    },
+    {
+      "en": "The counts are theorems of the runs for every n: laws giving after mutual giving each receive at every step; against a withholder, answering over 1 + d steps withholds d and the window of two over 2 + d steps withholds d; beside the alternator the window holder gives at every step; with one error at any step, the window absorbs it and answering echoes it.",
+      "zh": "计数是运行的定理，对每个 n 成立：相互给出后仍给出的律每步都收到；对扣留者，回应在 1 + d 步中扣留 d 步，两步窗口在 2 + d 步中扣留 d 步；在交替者旁，窗口持律者每步给出；任一步一次差错时，窗口吸收之，回应使之回声。",
+      "declarations": [
+        "Becoming.PairSelection.counts_giving",
+        "Becoming.PairSelection.counts_sparing_withholding",
+        "Becoming.PairSelection.counts_answering_withholding",
+        "Becoming.PairSelection.counts_windowed_withholding",
+        "Becoming.PairSelection.counts_agreeing_withholding",
+        "Becoming.PairSelection.counts_waitingBoth_withholding",
+        "Becoming.PairSelection.counts_withholding_withholding",
+        "Becoming.PairSelection.counts_alternating_withholding",
+        "Becoming.PairSelection.counts_sparing_alternating",
+        "Becoming.PairSelection.counts_answering_alternating",
+        "Becoming.PairSelection.counts_windowed_alternating",
+        "Becoming.PairSelection.counts_waitingBoth_alternating",
+        "Becoming.PairSelection.counts_alternating_alternating",
+        "Becoming.PairSelection.counts_withholding_alternating",
+        "Becoming.PairSelection.after",
+        "Becoming.PairSelection.Meets",
+        "Becoming.PairSelection.meets_after",
+        "Becoming.PairSelection.counts_after",
+        "Becoming.PairSelection.counts_windowed_error",
+        "Becoming.PairSelection.counts_answering_error",
+        "Becoming.PairSelection.counts_waitingBoth_error",
+        "Becoming.PairSelection.counts_agreeing_error"
+      ]
+    },
+    {
+      "en": "Under the window of two with any errors, the run of two window holders is the clocked course of the windowed law on configurations; where no formation errs at two consecutive steps, each withholds exactly at its errors and receives at every step its partner does not err. The tables at n = 20 are checks by evaluation.",
+      "zh": "任意差错下两步窗口中，两个窗口持律者的运行即配置上窗口律的时钟进程；若无形成连续两步出错，每个只在其差错处扣留，在对方不出错的每一步收到。n = 20 处的表是求值的检验。",
+      "declarations": [
+        "Becoming.PairSelection.asProp",
+        "Becoming.PairSelection.ClockMatches",
+        "Becoming.PairSelection.window_gives_iff",
+        "Becoming.PairSelection.start_gives_iff",
+        "Becoming.PairSelection.windowed_course",
+        "Becoming.PairSelection.gives_window",
+        "Becoming.PairSelection.windowed_gives_spaced",
+        "Becoming.PairSelection.counts_windowed_spaced",
+        "Becoming.PairSelection.countsTable",
+        "Becoming.PairSelection.table_twenty",
+        "Becoming.PairSelection.errorTable",
+        "Becoming.PairSelection.error_table_twenty"
+      ]
+    },
+    {
+      "en": "Pairs as groups of two: a kind rises exactly where its members' mean offspring exceeds the others' (a corollary), giving the exact condition for answering in a cohort of answerer, mixed and withholder pairs; the four-term law restated for families listed by pairs (a wrapper); among-pair discordance can be positive (a check); a mixed pair leaves more than an answerer pair exactly where β < γ.",
+      "zh": "以一对为二人之组读入多层律：一个种类上升恰当其成员的平均后代超过其他（选择项的推论），由此得回应者对、混合对与扣留者对之群中回应上升的确切条件；四项律对按对列出的族重述（包装）；对间不一致可为正（检验）；混合对留下多于回应者对恰当 β < γ。",
+      "declarations": [
+        "Becoming.PairSelection.amountOf",
+        "Becoming.PairSelection.otherOf",
+        "Becoming.PairSelection.kind_rises_iff",
+        "Becoming.PairSelection.kind_not_rises_of_below",
+        "Becoming.PairSelection.kind_not_rises_of_bound",
+        "Becoming.PairSelection.answerPair",
+        "Becoming.PairSelection.mixedLaw",
+        "Becoming.PairSelection.mixedMarks",
+        "Becoming.PairSelection.mixedPair",
+        "Becoming.PairSelection.withholdPair",
+        "Becoming.PairSelection.cohort",
+        "Becoming.PairSelection.answering_rises_iff",
+        "Becoming.PairSelection.pairs_rises_iff",
+        "Becoming.PairSelection.among_discord_witness",
+        "Becoming.PairSelection.mixed_exceeds_iff"
+      ]
+    },
+    {
+      "en": "Under complete assortment the pairs' offspring are the rule after shaping, with s = βn coming back to the carriers and c = γn to the others; so for n > 0 answering is weakly favoured exactly where γ ≤ β, raised strictly exactly where γ < β, weakly disfavoured exactly where β ≤ γ, lowered strictly exactly where β < γ, and left as it is at γ = β (corollaries of the shaping laws, n cancelled).",
+      "zh": "完全同类配对下，各对的后代即塑规后的规则，携带者所返 s = βn、他者 c = γn；故 n > 0 时，回应弱受偏向恰当 γ ≤ β，严格上升恰当 γ < β，弱受不利恰当 β ≤ γ，严格下降恰当 β < γ，γ = β 时份额不变（塑规律之推论，n 消去）。",
+      "declarations": [
+        "Becoming.PairSelection.assorted_counts",
+        "Becoming.PairSelection.assorted_favours_iff",
+        "Becoming.PairSelection.assorted_raises_iff",
+        "Becoming.PairSelection.assorted_disfavours_iff",
+        "Becoming.PairSelection.assorted_lowers_iff",
+        "Becoming.PairSelection.assorted_neutral"
+      ]
+    },
+    {
+      "en": "With β ≤ γ no kind rises against withholders: a pair leaves at most 2·(a + γ·n) whatever its laws and errors, so in every cohort listed as pairs whose places not of the kind withhold, the kind does not rise, answering one case. Member by member the law holds only for carriers without errors of their own; with errors it fails, and the law on pairs does not.",
+      "zh": "β ≤ γ 时没有种类在扣留者面前上升：不论其律与差错，一对至多留下 2·(a + γ·n)，故在每个按对列出、非该种类的位置皆扣留的群中，该种类不上升，回应是一例。逐成员的定律只对自身无差错的携带者成立；带差错时它不成立，而按对的定律仍成立。",
+      "declarations": [
+        "Becoming.PairSelection.partner_partner",
+        "Becoming.PairSelection.received_add_withheld",
+        "Becoming.PairSelection.other_received_add_withheld",
+        "Becoming.PairSelection.pair_le",
+        "Becoming.PairSelection.Place.withheld_of_withholding",
+        "Becoming.PairSelection.Place.answering_le",
+        "Becoming.PairSelection.Place.withholder_ge",
+        "Becoming.PairSelection.Place.answerer_le",
+        "Becoming.PairSelection.answering_never_rises",
+        "Becoming.PairSelection.never_rises_in_pairs",
+        "Becoming.PairSelection.cohort_never_rises",
+        "Becoming.PairSelection.firstAlways",
+        "Becoming.PairSelection.erringPair",
+        "Becoming.PairSelection.erring_answerer_exceeds",
+        "Becoming.PairSelection.erring_cohort_never_rises"
+      ]
+    },
+    {
+      "en": "The window against answering: with one error a pair over t + (m + 1) steps, the echo moves m steps from receiving to withholding, so a window pair leaves strictly more than an answerer pair exactly where γ < β, strictly less exactly where β < γ; under complete assortment selection raises the window pairs' share strictly where γ < β and lowers it strictly where β < γ, each exactly (wrappers).",
+      "zh": "窗口对回应：每对一次差错、t + (m + 1) 步中，回声把 m 步由收到移为扣留，故窗口对留下严格多于回应者对恰当 γ < β，严格少于恰当 β < γ；完全同类配对下，选择严格提升窗口对的份额恰当 γ < β，严格降低恰当 β < γ（包装）。",
+      "declarations": [
+        "Becoming.PairSelection.echo_and_window_sums",
+        "Becoming.PairSelection.window_echo_shaped",
+        "Becoming.PairSelection.window_echo_favours_iff",
+        "Becoming.PairSelection.window_echo_select_iff",
+        "Becoming.PairSelection.windowErrAt",
+        "Becoming.PairSelection.answerErrAt",
+        "Becoming.PairSelection.window_echo_lt_iff"
+      ]
+    },
+    {
+      "en": "A withholder beside a window holder leaves β more than beside an answerer; an alternator beside a window holder leaves γ·⌈n/2⌉ more than a window holder beside another, and the window holder beside it β·⌈n/2⌉ less; in mixed pairs of window holders and alternators the window never rises, for any β and γ; under complete assortment window pairs against alternator pairs are weakly favoured exactly where γ ≤ β.",
+      "zh": "在他者旁：窗口持律者旁的扣留者比回应者旁多留 β；窗口持律者旁的交替者比两窗口持律者中的一个多留 γ·⌈n/2⌉，其旁的窗口持律者少留 β·⌈n/2⌉；窗口持律者与交替者的混合对中窗口从不上升；完全同类配对下，窗口对对交替者对弱受偏向恰当 γ ≤ β。",
+      "declarations": [
+        "Becoming.PairSelection.alternator_beside_window",
+        "Becoming.PairSelection.window_beside_alternator",
+        "Becoming.PairSelection.withholder_beside_window",
+        "Becoming.PairSelection.window_below_alternator",
+        "Becoming.PairSelection.window_never_rises_beside_alternators",
+        "Becoming.PairSelection.windowAlternator",
+        "Becoming.PairSelection.alternatorPair",
+        "Becoming.PairSelection.windowPair",
+        "Becoming.PairSelection.window_alternator_shaped",
+        "Becoming.PairSelection.window_alternator_favours_iff"
+      ]
+    },
+    {
+      "en": "Neutrality without withholding: where every place's laws give after mutual giving and none errs, every place leaves a + β·n, so concordance and discordance are both zero for any amount, and nothing is selected.",
+      "zh": "无扣留则中性：每个位置的律在相互给出后仍给出且无差错时，每个位置都留下 a + β·n，故对任何量一致与不一致皆为零，无所选择。",
+      "declarations": [
+        "Becoming.PairSelection.neutral"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Discrete, natural-numbered steps; giving and errors decided Bools, bridged to Prop only for the windowed course; each run starts from a history of mutual giving; an error turns an intended giving into withholding at that step and nothing else.",
+      "zh": "离散、以自然数编号的步；给出与差错为可判定的 Bool，只为窗口进程桥接到命题；每次运行从相互给出的历史开始；差错只把该步本应的给出变为扣留。"
+    },
+    {
+      "en": "The pairing is supplied, a cohort listed as pairs, not formed. Offspring a + β·received + γ·withheld are a supplied formula with natural factors, read while a formation is supported; that it is supported over the run is a premise of the reading, not checked here.",
+      "zh": "配对是给定的（按对列出的群），不是形成的。后代 a + β·所收 + γ·所扣 是带自然数因子的给定公式，在形成受支持期间读取；它在运行中受支持是读法的前提，此处不检验。"
+    },
+    {
+      "en": "Generations are read one at a time: no law here is of a course of generations. Complete assortment is read with a positive.",
+      "zh": "世代逐一读取：此处没有关于世代进程的定律。读完全同类配对时 a 为正。"
+    },
+    {
+      "en": "(AI reading.) β is what a received step brings the receiver's support and descent, γ what a withheld step keeps for the withholder's, so what a giving takes from the giver; β ≤ γ reads as giving moving what it draws.",
+      "zh": "（AI 读法。）β 是收到的一步给收者的支持与世系带来的，γ 是扣留的一步为扣留者保留的，即一次给出从给者取走的；β ≤ γ 读作给出只移动其所汲取。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which sign β − γ has: both factors are supplied, and the sign decides every verdict here.",
+      "zh": "β − γ 的符号：两因子皆为给定，而此符号决定此处每个结论。",
+      "kind": "scope"
+    },
+    {
+      "en": "Agreement against the alternator, and one error for the sparer, the withholder and the alternator, beyond n = 20.",
+      "zh": "一致律对交替者，以及容忍者、扣留者与交替者的一次差错，在 n = 20 之外。",
+      "kind": "scope",
+      "witness": "Becoming.PairSelection.table_twenty"
+    },
+    {
+      "en": "The exact condition for a mixed cohort of windows, answerers, withholders and alternators under a supplied error pattern beyond the mean law, or the four terms of the pair law in closed form on the cohort.",
+      "zh": "给定差错模式下窗口、回应者、扣留者与交替者混合之群在均值律之外的确切条件，或四项律在该群上的闭式。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any law over a horizon of generations, stability, mutual best responses or the known cycle as a course; each arc of the cycle is a law here, not the cycle.",
+      "zh": "任何跨世代视野的定律、稳定性、相互最优回应或已知循环之为进程；循环的每一段在此是定律，循环本身不是。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a member-by-member law holds with errors: an answerer erring at every step beside an answerer leaves β more than a withholder beside a withholder.",
+      "zh": "带差错时逐成员的定律成立：每步出错的回应者在回应者旁比扣留者在扣留者旁多留 β。",
+      "kind": "non-implication",
+      "witness": "Becoming.PairSelection.erring_answerer_exceeds"
+    },
+    {
+      "en": "That giving, a window or any law of giving is better, or that any actual organism, institution or trained system meets the counts.",
+      "zh": "给出、窗口或任何给出之律更好，或任何实际生物、制度或受训系统符合这些计数。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "detail": {
+        "en": "With errors, an answerer erring at every step beside an answerer leaves β more than a withholder beside a withholder (PairSelection.erring_answerer_exceeds), so the law that no kind rises holds on pairs, not member by member.",
+        "zh": "带差错时，每步出错的回应者在回应者旁比扣留者在扣留者旁多留 β（PairSelection.erring_answerer_exceeds），故“没有种类上升”之律按对成立，而非逐成员成立。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "detail": {
+        "en": "Among-pair discordance can be positive: at a = 1, β = 1, γ = 3 over two steps in a cohort of one answerer pair and one mixed pair (PairSelection.among_discord_witness).",
+        "zh": "对间不一致可为正：a = 1、β = 1、γ = 3、两步，一个回应者对与一个混合对之群（PairSelection.among_discord_witness）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "decidability",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.PairSelection at receipt PENDING, 223 declarations (151 theorems), this record citing 181 of them, each with an empty axiom report; the one generated lemma Place.mk.injEq depends on propext, which the checker's audit admits; recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairSelection，回执 PENDING，223 个声明（151 条定理），本记录引其中 181 个，公理报告均为空；唯一生成的引理 Place.mk.injEq 依赖 propext，检查器的审计允许之；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "The exact condition for a mixed cohort under a supplied error pattern and the four terms in closed form on it; a course of generations over a horizon, with two courses agreeing on the counts and the verdict while one goes on and the other ends.",
+    "zh": "给定差错模式下混合之群的确切条件及其四项的闭式；跨视野的世代进程：两条进程在计数与结论上一致，而一条延续、另一条终止。"
+  },
+  "correspondence": {
+    "en": "Reciprocity in evolutionary game theory (Trivers 1971; Axelrod and Hamilton 1981): the formula a + β·received + γ·withheld stands where that literature takes a fixed benefit and cost, here supplied and read as a relation of the giving, not as amounts owned by two parties (AI reading). The window's disadvantage beside alternators is read as the familiar exploit of tit-for-two-tats by a formation withholding at every other step, a reading with no stability law stated; neutrality among laws giving after mutual giving is one arc of the known cycles (Imhof, Fudenberg and Nowak 2005), which need drift with selection as a course.",
+    "zh": "演化博弈论中的互惠（Trivers 1971；Axelrod 与 Hamilton 1981）：公式 a + β·所收 + γ·所扣 处在该文献取固定收益与成本之位，此处为给定，读作给出的关系，而非两方所有的量（AI 读法）。窗口在交替者旁的劣势读作两报还一报被隔步扣留者利用的熟知情形，这是读法，未陈述稳定性定律；相互给出后仍给出之律间的中性是已知循环（Imhof、Fudenberg 与 Nowak 2005）的一段，循环作为进程需要带选择的漂变。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+  "aliases": [
+    "offspring read from giving that waits",
+    "Becoming.PairSelection.never_rises_in_pairs",
+    "Becoming.PairSelection.pair_le",
+    "Becoming.PairSelection.answering_never_rises",
+    "Becoming.PairSelection.assorted_favours_iff",
+    "Becoming.PairSelection.assorted_counts",
+    "Becoming.PairSelection.kind_rises_iff",
+    "Becoming.PairSelection.windowed_course",
+    "Becoming.PairSelection.echo_and_window_sums",
+    "Becoming.PairSelection.window_echo_lt_iff",
+    "Becoming.PairSelection.window_never_rises_beside_alternators",
+    "Becoming.PairSelection.neutral",
+    "tit-for-tat under selection (reading)"
+  ],
+  "dependencies": [
+    {
+      "id": "a-pair-tolerates-only-within-a-window",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses WindowedWaiting's pair, its one-step laws and the clocked windowed law: the run of two window holders under any errors is its clocked course, and the spaced counts are gives_unless_errs read on it.",
+        "zh": "复用 WindowedWaiting 的一对、其一步律与带时钟的窗口律：任意差错下两个窗口持律者的运行即其时钟进程，稀疏差错下的计数即在其上读出的 gives_unless_errs。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses SelectionTerm's concordance and discordance, exceeds_iff, concord_uniform and discord_uniform and its cancellation lemmas: a kind rises exactly where its mean exceeds the others', and uniform offspring select nothing.",
+        "zh": "复用 SelectionTerm 的一致与不一致、exceeds_iff、concord_uniform、discord_uniform 及其消去引理：种类上升恰当其均值超过其他，均匀的后代无所选择。"
+      }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses SelectionLevels.rises_iff_sized, restated with groups of two for families listed by pairs.",
+        "zh": "复用 SelectionLevels.rises_iff_sized，对按对列出的族以二人之组重述。"
+      }
+    },
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses RuleShaping's favours_iff, disfavours_iff, lt_select_iff and falls_strictly: under complete assortment the pairs' offspring are the rule after shaping, with s = βn coming back to the carriers and c = γn to the others.",
+        "zh": "复用 RuleShaping 的 favours_iff、disfavours_iff、lt_select_iff 与 falls_strictly：完全同类配对下各对的后代即塑规后的规则，携带者所返 s = βn，他者 c = γn。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "role": "proof",
+      "sha256": "e68225fc391381c795ee4ee0ff7a83d8f89e59f3d5c359bc65d04a59f84a9a6a",
+      "declarations": [
+        "Becoming.PairSelection.ClockMatches",
+        "Becoming.PairSelection.Errors",
+        "Becoming.PairSelection.Lags",
+        "Becoming.PairSelection.Meets",
+        "Becoming.PairSelection.PairLaw",
+        "Becoming.PairSelection.Place",
+        "Becoming.PairSelection.Place.answerer_le",
+        "Becoming.PairSelection.Place.answering_le",
+        "Becoming.PairSelection.Place.kind",
+        "Becoming.PairSelection.Place.offspring",
+        "Becoming.PairSelection.Place.other",
+        "Becoming.PairSelection.Place.received",
+        "Becoming.PairSelection.Place.withheld",
+        "Becoming.PairSelection.Place.withheld_of_withholding",
+        "Becoming.PairSelection.Place.withholder_ge",
+        "Becoming.PairSelection.State",
+        "Becoming.PairSelection.after",
+        "Becoming.PairSelection.agreeing",
+        "Becoming.PairSelection.alternating",
+        "Becoming.PairSelection.alternatorPair",
+        "Becoming.PairSelection.alternator_beside_window",
+        "Becoming.PairSelection.among_discord_witness",
+        "Becoming.PairSelection.amountOf",
+        "Becoming.PairSelection.and_not_true",
+        "Becoming.PairSelection.and_true_eq",
+        "Becoming.PairSelection.answerErrAt",
+        "Becoming.PairSelection.answerPair",
+        "Becoming.PairSelection.answering",
+        "Becoming.PairSelection.answering_never_rises",
+        "Becoming.PairSelection.answering_rises_iff",
+        "Becoming.PairSelection.answering_sum_le",
+        "Becoming.PairSelection.asProp",
+        "Becoming.PairSelection.assorted_counts",
+        "Becoming.PairSelection.assorted_disfavours_iff",
+        "Becoming.PairSelection.assorted_favours_iff",
+        "Becoming.PairSelection.assorted_lowers_iff",
+        "Becoming.PairSelection.assorted_neutral",
+        "Becoming.PairSelection.assorted_raises_iff",
+        "Becoming.PairSelection.before",
+        "Becoming.PairSelection.before_after",
+        "Becoming.PairSelection.before_true",
+        "Becoming.PairSelection.below",
+        "Becoming.PairSelection.beq_false_eq",
+        "Becoming.PairSelection.cases_ff",
+        "Becoming.PairSelection.cases_ft",
+        "Becoming.PairSelection.cases_tf",
+        "Becoming.PairSelection.cases_tt",
+        "Becoming.PairSelection.cohort",
+        "Becoming.PairSelection.cohort_never_rises",
+        "Becoming.PairSelection.cohort_paired",
+        "Becoming.PairSelection.cohort_places",
+        "Becoming.PairSelection.countsTable",
+        "Becoming.PairSelection.counts_after",
+        "Becoming.PairSelection.counts_agreeing_error",
+        "Becoming.PairSelection.counts_agreeing_withholding",
+        "Becoming.PairSelection.counts_alternating_alternating",
+        "Becoming.PairSelection.counts_alternating_withholding",
+        "Becoming.PairSelection.counts_answering_alternating",
+        "Becoming.PairSelection.counts_answering_error",
+        "Becoming.PairSelection.counts_answering_withholding",
+        "Becoming.PairSelection.counts_giving",
+        "Becoming.PairSelection.counts_of",
+        "Becoming.PairSelection.counts_sparing_alternating",
+        "Becoming.PairSelection.counts_sparing_withholding",
+        "Becoming.PairSelection.counts_waitingBoth_alternating",
+        "Becoming.PairSelection.counts_waitingBoth_error",
+        "Becoming.PairSelection.counts_waitingBoth_withholding",
+        "Becoming.PairSelection.counts_windowed_alternating",
+        "Becoming.PairSelection.counts_windowed_error",
+        "Becoming.PairSelection.counts_windowed_spaced",
+        "Becoming.PairSelection.counts_windowed_withholding",
+        "Becoming.PairSelection.counts_withholding_alternating",
+        "Becoming.PairSelection.counts_withholding_withholding",
+        "Becoming.PairSelection.course",
+        "Becoming.PairSelection.course_of",
+        "Becoming.PairSelection.echo_and_window_sums",
+        "Becoming.PairSelection.echo_pair_sums",
+        "Becoming.PairSelection.errAt",
+        "Becoming.PairSelection.erringPair",
+        "Becoming.PairSelection.erring_answerer_exceeds",
+        "Becoming.PairSelection.erring_cohort_never_rises",
+        "Becoming.PairSelection.errorTable",
+        "Becoming.PairSelection.error_table_twenty",
+        "Becoming.PairSelection.firstAlways",
+        "Becoming.PairSelection.fromOne",
+        "Becoming.PairSelection.fromTwo",
+        "Becoming.PairSelection.gives",
+        "Becoming.PairSelection.gives_answering_first",
+        "Becoming.PairSelection.gives_answering_second",
+        "Becoming.PairSelection.gives_of",
+        "Becoming.PairSelection.gives_window",
+        "Becoming.PairSelection.gives_withholding_first",
+        "Becoming.PairSelection.gives_withholding_second",
+        "Becoming.PairSelection.half",
+        "Becoming.PairSelection.half_add",
+        "Becoming.PairSelection.half_succ_pos",
+        "Becoming.PairSelection.keep",
+        "Becoming.PairSelection.kind_not_rises_of_below",
+        "Becoming.PairSelection.kind_not_rises_of_bound",
+        "Becoming.PairSelection.kind_rises_iff",
+        "Becoming.PairSelection.laws",
+        "Becoming.PairSelection.lt_iff_split",
+        "Becoming.PairSelection.meets_after",
+        "Becoming.PairSelection.mem_replicate_eq",
+        "Becoming.PairSelection.mem_whole",
+        "Becoming.PairSelection.mixedLaw",
+        "Becoming.PairSelection.mixedMarks",
+        "Becoming.PairSelection.mixedPair",
+        "Becoming.PairSelection.mixed_exceeds_iff",
+        "Becoming.PairSelection.neutral",
+        "Becoming.PairSelection.never_rises_in_pairs",
+        "Becoming.PairSelection.noErrors",
+        "Becoming.PairSelection.not_not_tally",
+        "Becoming.PairSelection.offspring_answerPair",
+        "Becoming.PairSelection.offspring_answerPair_other",
+        "Becoming.PairSelection.offspring_mixedPair",
+        "Becoming.PairSelection.offspring_mixedPair_other",
+        "Becoming.PairSelection.offspring_withholdPair",
+        "Becoming.PairSelection.offspring_withholdPair_other",
+        "Becoming.PairSelection.otherOf",
+        "Becoming.PairSelection.other_received_add_withheld",
+        "Becoming.PairSelection.pair_le",
+        "Becoming.PairSelection.pair_sum",
+        "Becoming.PairSelection.pairs_rises_iff",
+        "Becoming.PairSelection.partner_partner",
+        "Becoming.PairSelection.rearrange",
+        "Becoming.PairSelection.received",
+        "Becoming.PairSelection.received_add_withheld",
+        "Becoming.PairSelection.skipsOne",
+        "Becoming.PairSelection.sparing",
+        "Becoming.PairSelection.start",
+        "Becoming.PairSelection.start_gives_iff",
+        "Becoming.PairSelection.step",
+        "Becoming.PairSelection.table_twenty",
+        "Becoming.PairSelection.tally",
+        "Becoming.PairSelection.tally_after",
+        "Becoming.PairSelection.tally_all",
+        "Becoming.PairSelection.tally_below",
+        "Becoming.PairSelection.tally_congr",
+        "Becoming.PairSelection.tally_even",
+        "Becoming.PairSelection.tally_every",
+        "Becoming.PairSelection.tally_false",
+        "Becoming.PairSelection.tally_fromOne",
+        "Becoming.PairSelection.tally_head",
+        "Becoming.PairSelection.tally_le_succ",
+        "Becoming.PairSelection.tally_none",
+        "Becoming.PairSelection.tally_not",
+        "Becoming.PairSelection.tally_not_after",
+        "Becoming.PairSelection.tally_not_below",
+        "Becoming.PairSelection.tally_not_fromOne",
+        "Becoming.PairSelection.tally_not_of",
+        "Becoming.PairSelection.tally_odd",
+        "Becoming.PairSelection.tally_true",
+        "Becoming.PairSelection.tally_two_head",
+        "Becoming.PairSelection.tally_zero",
+        "Becoming.PairSelection.time",
+        "Becoming.PairSelection.total_cohort",
+        "Becoming.PairSelection.total_replicate",
+        "Becoming.PairSelection.waitingBoth",
+        "Becoming.PairSelection.windowAlternator",
+        "Becoming.PairSelection.windowErrAt",
+        "Becoming.PairSelection.windowPair",
+        "Becoming.PairSelection.window_alternates",
+        "Becoming.PairSelection.window_alternator_favours_iff",
+        "Becoming.PairSelection.window_alternator_shaped",
+        "Becoming.PairSelection.window_arith",
+        "Becoming.PairSelection.window_below_alternator",
+        "Becoming.PairSelection.window_beside_alternator",
+        "Becoming.PairSelection.window_echo_favours_iff",
+        "Becoming.PairSelection.window_echo_lt_iff",
+        "Becoming.PairSelection.window_echo_select_iff",
+        "Becoming.PairSelection.window_echo_shaped",
+        "Becoming.PairSelection.window_gives_iff",
+        "Becoming.PairSelection.window_never_rises_beside_alternators",
+        "Becoming.PairSelection.windowed",
+        "Becoming.PairSelection.windowed_course",
+        "Becoming.PairSelection.windowed_gives_spaced",
+        "Becoming.PairSelection.withheld",
+        "Becoming.PairSelection.withholdPair",
+        "Becoming.PairSelection.withholder_beside_window",
+        "Becoming.PairSelection.withholding"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PairSelection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on counts and selection among pairs; its parts on what a gift draws on are a separate record; the lemmas of counting are listed in references only.",
+      "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 的设计新增，即 Becoming.PairSelection 中关于计数与对间选择的部分；关于给出所汲取者的部分另立一条记录；计数的引理只列在 references 中。"
+    }
+  ]
+}

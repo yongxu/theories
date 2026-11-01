@@ -1,0 +1,580 @@
+{
+  "schema_version": 2,
+  "id": "a-pair-tolerates-only-within-a-window",
+  "title": {
+    "en": "A pair tolerates only within a window",
+    "zh": "一对只在窗口内容忍"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
+  "statement": {
+    "en": "In a pair, keeping inclusion splits the one-step laws restoring mutual giving after a withholding from those answering a constant withholder; answering within a window does both, absorbing errors spaced within it, and no window absorbs one error and answers a formation never erring twice running.",
+    "zh": "在一对中，保持包含把一次扣留后恢复相互给出的一步律与回应恒定扣留者的一步律分开；窗口内的回应两者皆成，吸收窗口内稀疏的差错；没有窗口既吸收一次差错又回应从不连续两次出错的形成。"
+  },
+  "laws": [
+    {
+      "en": "A one-step law of a pair, on decided giving, says whether a holder gives from its own last step and its partner's. Of the eight that give after mutual giving, exactly five keep inclusion: more giving in either input never gives less. Such a law answers a constant withholder exactly where it withholds after giving against withholding, that is, at step 1.",
+      "zh": "一对的一步律在可判定的给出上，依持律者自身上一步与对方上一步定其是否给出。相互给出之后仍给出的八条中，恰有五条保持包含：任一输入给出更多，绝不给出更少。这样的律回应恒定扣留者，恰当它在自己给出而对方扣留之后扣留，即在第 1 步。",
+      "declarations": [
+        "Becoming.WindowedWaiting.table",
+        "Becoming.WindowedWaiting.eq_table_of",
+        "Becoming.WindowedWaiting.PairKeepsInclusion",
+        "Becoming.WindowedWaiting.pairStep",
+        "Becoming.WindowedWaiting.oneWithheldBool",
+        "Becoming.WindowedWaiting.Restores",
+        "Becoming.WindowedWaiting.NeverRestores",
+        "Becoming.WindowedWaiting.againstWithholder",
+        "Becoming.WindowedWaiting.AnswersWithholder",
+        "Becoming.WindowedWaiting.NeverAnswers",
+        "Becoming.WindowedWaiting.never_restores_of",
+        "Becoming.WindowedWaiting.never_answers_of",
+        "Becoming.WindowedWaiting.answersWithholder_iff",
+        "Becoming.WindowedWaiting.pairKeepsInclusion_iff",
+        "Becoming.WindowedWaiting.bothGave",
+        "Becoming.WindowedWaiting.partnerGave",
+        "Becoming.WindowedWaiting.ownGave",
+        "Becoming.WindowedWaiting.eitherGave",
+        "Becoming.WindowedWaiting.alwaysGives",
+        "Becoming.WindowedWaiting.partnerGave_eq",
+        "Becoming.WindowedWaiting.bothGave_keeps",
+        "Becoming.WindowedWaiting.partnerGave_keeps",
+        "Becoming.WindowedWaiting.ownGave_keeps",
+        "Becoming.WindowedWaiting.eitherGave_keeps",
+        "Becoming.WindowedWaiting.alwaysGives_keeps",
+        "Becoming.WindowedWaiting.pairKeepsInclusion_table_iff"
+      ]
+    },
+    {
+      "en": "Keeping inclusion splits restoring from answering: a one-step law keeping mutual giving and inclusion either never restores mutual giving after one withholding or never answers a constant withholder. Giving after mutual giving only, answering and repeating one's own step never restore; withholding only after mutual withholding, giving always and repeating one's own step never answer.",
+      "zh": "保持包含把恢复与回应分开：保持相互给出且保持包含的一步律，要么在一次扣留后永不恢复相互给出，要么永不回应恒定扣留者。只在相互给出后给出、回应、重复自身一步者永不恢复；只在相互扣留后扣留、总是给出、重复自身一步者永不回应。",
+      "declarations": [
+        "Becoming.WindowedWaiting.apart",
+        "Becoming.WindowedWaiting.notBoth",
+        "Becoming.WindowedWaiting.bothGave_never_restores",
+        "Becoming.WindowedWaiting.partnerGave_never_restores",
+        "Becoming.WindowedWaiting.ownGave_never_restores",
+        "Becoming.WindowedWaiting.ownGave_never_answers",
+        "Becoming.WindowedWaiting.eitherGave_never_answers",
+        "Becoming.WindowedWaiting.alwaysGives_never_answers",
+        "Becoming.WindowedWaiting.keeps_split",
+        "Becoming.WindowedWaiting.keeps_not_both"
+      ]
+    },
+    {
+      "en": "Among the one-step laws keeping mutual giving, restoring and answering a constant withholder hold together exactly where the law is agreement of one's own last step with the partner's. Agreement restores at step 2, withholds against a constant withholder at step 1 and gives there at every even step, and does not keep inclusion.",
+      "zh": "在保持相互给出的一步律中，恢复与回应恒定扣留者同时成立，恰当此律是自身上一步与对方上一步的一致。一致律在第 2 步恢复，对恒定扣留者在第 1 步扣留，并在每个偶数步给出；它不保持包含。",
+      "declarations": [
+        "Becoming.WindowedWaiting.agreement",
+        "Becoming.WindowedWaiting.agreement_eq",
+        "Becoming.WindowedWaiting.agreement_restores_at_two",
+        "Becoming.WindowedWaiting.agreement_restores",
+        "Becoming.WindowedWaiting.agreement_answers_at_one",
+        "Becoming.WindowedWaiting.agreement_answers",
+        "Becoming.WindowedWaiting.agreement_against",
+        "Becoming.WindowedWaiting.agreement_not_keeps",
+        "Becoming.WindowedWaiting.restores_and_answers_iff"
+      ]
+    },
+    {
+      "en": "Answering within a window of two, giving where the partner gave at one of its last two steps, keeps inclusion and does both: after one withholding the pair gives together at every step from step 1; against a constant withholder the holder gives at step 1 and withholds from step 2. Beside an alternator, giving exactly where it withheld last, the holder gives at every step and the alternator at every odd one.",
+      "zh": "两步窗口内的回应（对方在其最近两步之一给出即给出）保持包含且两者皆成：一次扣留后，这一对从第 1 步起每步共同给出；对恒定扣留者，持律者在第 1 步给出，从第 2 步起扣留。在交替者（恰在上一步扣留处给出）旁，持律者每步给出，交替者在每个奇数步给出。",
+      "declarations": [
+        "Becoming.WindowedWaiting.windowTwo",
+        "Becoming.WindowedWaiting.windowStep",
+        "Becoming.WindowedWaiting.windowOneWithheld",
+        "Becoming.WindowedWaiting.windowAgainst",
+        "Becoming.WindowedWaiting.windowFacing",
+        "Becoming.WindowedWaiting.windowTwo_keeps",
+        "Becoming.WindowedWaiting.windowTwo_restored_stays",
+        "Becoming.WindowedWaiting.windowTwo_restores",
+        "Becoming.WindowedWaiting.windowTwo_answers",
+        "Becoming.WindowedWaiting.windowTwo_answers_stays",
+        "Becoming.WindowedWaiting.alternatorStep",
+        "Becoming.WindowedWaiting.alternatorStart",
+        "Becoming.WindowedWaiting.alternator_course",
+        "Becoming.WindowedWaiting.alternator_never_answered",
+        "Becoming.WindowedWaiting.alternator_gives_half",
+        "Becoming.WindowedWaiting.alternator_second"
+      ]
+    },
+    {
+      "en": "The echo under answers, in a pair of two formations each waiting on the other: from one withholding after mutual giving, at every even step the first withholds and the second gives, at every odd step the reverse; so at every step exactly one gives and the pair never gives together again. It is the return of a withholding on a loop of two waits.",
+      "zh": "answers 下的回声：在两个彼此等待的形成组成的一对中，相互给出后一次扣留起，每个偶数步第一个扣留、第二个给出，每个奇数步相反；故每一步恰有一个给出，这一对不再共同给出。这是扣留在两次等待之回路上的复返。",
+      "declarations": [
+        "Becoming.WindowedWaiting.Pair",
+        "Becoming.WindowedWaiting.Pair.Waits",
+        "Becoming.WindowedWaiting.Pair.oneWithheld",
+        "Becoming.WindowedWaiting.Pair.answers_first",
+        "Becoming.WindowedWaiting.Pair.answers_second",
+        "Becoming.WindowedWaiting.Pair.loop",
+        "Becoming.WindowedWaiting.Pair.swap_first",
+        "Becoming.WindowedWaiting.Pair.swap_second",
+        "Becoming.WindowedWaiting.Pair.echo",
+        "Becoming.WindowedWaiting.Pair.exactly_one",
+        "Becoming.WindowedWaiting.Pair.never_together",
+        "Becoming.WindowedWaiting.Pair.echo_returns"
+      ]
+    },
+    {
+      "en": "Bridges from decided to Prop-valued giving: two holders of answering run the course of answers on the pair, so never restoring is the echo. A two-input law keeps inclusion exactly where some Prop law agreeing with it on decided giving induces a law on the pair's configurations keeping inclusion; the disjunctive normal form of answering does so exactly under excluded middle (lemmas of the bridge, calibrations).",
+      "zh": "由可判定的给出到命题值给出的桥：两个回应持律者走 answers 在这一对上的进程，故永不恢复即回声。二输入律保持包含，恰当有一条在可判定给出上与之一致的命题律在这一对的配置上导出保持包含的律；回应的析取范式恰在排中律下如此（桥的引理，逻辑的校准）。",
+      "declarations": [
+        "Becoming.WindowedWaiting.Pair.Matches",
+        "Becoming.WindowedWaiting.Pair.partnerGave_course",
+        "Becoming.WindowedWaiting.Pair.partnerGave_never_restores_of_echo",
+        "Becoming.WindowedWaiting.Pair.partner",
+        "Becoming.WindowedWaiting.Pair.waits_partner",
+        "Becoming.WindowedWaiting.Pair.config",
+        "Becoming.WindowedWaiting.Pair.induced",
+        "Becoming.WindowedWaiting.Pair.Agrees",
+        "Becoming.WindowedWaiting.Pair.InputsKeepInclusion",
+        "Becoming.WindowedWaiting.Pair.induced_partner",
+        "Becoming.WindowedWaiting.Pair.induced_keeps",
+        "Becoming.WindowedWaiting.Pair.keeps_of_induced",
+        "Becoming.WindowedWaiting.Pair.agrees_table",
+        "Becoming.WindowedWaiting.Pair.agrees_never",
+        "Becoming.WindowedWaiting.Pair.agrees_both",
+        "Becoming.WindowedWaiting.Pair.agrees_partner",
+        "Becoming.WindowedWaiting.Pair.agrees_own",
+        "Becoming.WindowedWaiting.Pair.agrees_either",
+        "Becoming.WindowedWaiting.Pair.agrees_always",
+        "Becoming.WindowedWaiting.Pair.pairKeepsInclusion_iff_induced",
+        "Becoming.WindowedWaiting.Pair.partnerGaveDnf",
+        "Becoming.WindowedWaiting.Pair.agrees_dnf",
+        "Becoming.WindowedWaiting.Pair.dnf_keeps_iff_em",
+        "Becoming.WindowedWaiting.Pair.dnf_keeps_em",
+        "Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em"
+      ]
+    },
+    {
+      "en": "On configurations of the whole history, answering within a window w gives at lag 0 where each formation waited on gave at some lag below w, and shifts every lag by one. A window of one is answers along every course; every window keeps inclusion, also into every wider one, which gives no less; where every formation waits on some formation, total withholding is kept at every step and lag.",
+      "zh": "在整段历史的配置上，窗口 w 内的回应在滞后 0 处给出，恰当所等待的每个形成在低于 w 的某个滞后处给出，并把每个滞后移一位。窗口一沿每条进程即 answers；每个窗口保持包含，也保持入每个更宽的窗口，后者给出不少；每个形成都等待某个形成时，全部扣留在每步每个滞后处保持。",
+      "declarations": [
+        "Becoming.WindowedWaiting.answersWithin",
+        "Becoming.WindowedWaiting.window_one",
+        "Becoming.WindowedWaiting.answersWithin_into",
+        "Becoming.WindowedWaiting.answersWithin_keeps",
+        "Becoming.WindowedWaiting.window_mono",
+        "Becoming.WindowedWaiting.window_worst_start",
+        "Becoming.WindowedWaiting.window_restored_stays",
+        "Becoming.WindowedWaiting.window_withheld_kept",
+        "Becoming.WindowedWaiting.lag_shift"
+      ]
+    },
+    {
+      "en": "Errors a supplied pattern folded into the state as a clock, each time's law keeping inclusion: from all giving, where no formation errs at w consecutive steps, every formation gives at every step exactly where it does not err; w + 1 consecutive errors at one formation make every formation waiting on it withhold at the step after the last under a window of w + 1.",
+      "zh": "差错为给定模式，作为时钟并入状态，每个时刻的律保持包含：从全部给出起，若无形成在 w 个连续步出错，每个形成在每一步给出恰当它不出错；在窗口 w + 1 下，一个形成连续 w + 1 次出错，使等待它的每个形成在最后一次之后的一步扣留。",
+      "declarations": [
+        "Becoming.WindowedWaiting.answersWithinErring",
+        "Becoming.WindowedWaiting.erring_keeps",
+        "Becoming.WindowedWaiting.clocked",
+        "Becoming.WindowedWaiting.erringStart",
+        "Becoming.WindowedWaiting.erringRun",
+        "Becoming.WindowedWaiting.clocked_state",
+        "Becoming.WindowedWaiting.erring_shift",
+        "Becoming.WindowedWaiting.erring_history",
+        "Becoming.WindowedWaiting.erringRun_no_error",
+        "Becoming.WindowedWaiting.Spaced",
+        "Becoming.WindowedWaiting.spaced_mono",
+        "Becoming.WindowedWaiting.window_turn",
+        "Becoming.WindowedWaiting.window_of_gap",
+        "Becoming.WindowedWaiting.gap_le",
+        "Becoming.WindowedWaiting.gives_unless_errs_le",
+        "Becoming.WindowedWaiting.gives_unless_errs",
+        "Becoming.WindowedWaiting.errs_answered",
+        "Becoming.WindowedWaiting.ringTwoErrors",
+        "Becoming.WindowedWaiting.ringTwoErrors_answered"
+      ]
+    },
+    {
+      "en": "A constant withholder is answered within the window: a formation erring at every step from T makes every formation waiting on it withhold at every step from T + (w + 1) under a window of w + 1, the bound reached in the pair under a window of two. The unclocked form holds where the formation withholds in the run itself, as in total withholding and in a line of three, where the bound is reached too.",
+      "zh": "恒定扣留者在窗口内被回应：从 T 起每步出错的形成，使等待它的每个形成在窗口 w + 1 下从 T + (w + 1) 起每步扣留；两步窗口下这一对达到此界。不带时钟的形式在形成于运行本身中扣留处成立，如全部扣留中、三者之线中，后者也达到此界。",
+      "declarations": [
+        "Becoming.WindowedWaiting.withholder_answered",
+        "Becoming.WindowedWaiting.withholder_answered_clocked",
+        "Becoming.WindowedWaiting.Pair.waited_on",
+        "Becoming.WindowedWaiting.Pair.withholder_answered_holds",
+        "Becoming.WindowedWaiting.Pair.firstAlwaysErrs",
+        "Becoming.WindowedWaiting.Pair.withholder_answered_tight",
+        "Becoming.WindowedWaiting.Line",
+        "Becoming.WindowedWaiting.Line.Waits",
+        "Becoming.WindowedWaiting.Line.sourceWithheld",
+        "Becoming.WindowedWaiting.Line.source_out",
+        "Becoming.WindowedWaiting.Line.relay_course",
+        "Becoming.WindowedWaiting.Line.withholder_answered_reached"
+      ]
+    },
+    {
+      "en": "No window both absorbs one error and answers a formation erring at no two consecutive steps: where one error leaves the other giving at the next step the window is at least two, and then every formation gives wherever it does not err. A formation giving once in every w steps is never answered by a window of w. The alternator is the instance; each half holds apart.",
+      "zh": "没有窗口既吸收一次差错又回应从不连续两步出错的形成：一次差错后对方下一步仍给出，则窗口至少为二，此时每个形成凡不出错处皆给出。每 w 步至少给出一次的形成，窗口 w 永不回应。交替者是其实例；两半各自可成。",
+      "declarations": [
+        "Becoming.WindowedWaiting.window_holds_of_gaps",
+        "Becoming.WindowedWaiting.spaced_window_holds",
+        "Becoming.WindowedWaiting.Pair.firstErrsOnce",
+        "Becoming.WindowedWaiting.Pair.firstErrsOnce_spaced",
+        "Becoming.WindowedWaiting.Pair.window_absorbs_within",
+        "Becoming.WindowedWaiting.Pair.window_absorbs",
+        "Becoming.WindowedWaiting.Pair.secondErrsEven",
+        "Becoming.WindowedWaiting.Pair.secondErrsEven_spaced",
+        "Becoming.WindowedWaiting.Pair.alternator_received_within",
+        "Becoming.WindowedWaiting.Pair.alternator_gives_odd_within",
+        "Becoming.WindowedWaiting.Pair.alternator_received",
+        "Becoming.WindowedWaiting.Pair.alternator_gives_odd",
+        "Becoming.WindowedWaiting.Pair.alternator_answered_one",
+        "Becoming.WindowedWaiting.Pair.absorbs_needs_two",
+        "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced",
+        "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers"
+      ]
+    },
+    {
+      "en": "Bridges for the window of two: its decided course is the course of answering within a window of two on configurations, so that pair gives together from step 1; against a constant withholder it is the clocked course with the withholder erring at every step; beside the alternator it is the clocked course with the alternator's withholdings as errors.",
+      "zh": "两步窗口的桥：其可判定进程即配置上两步窗口内回应的进程，故那一对从第 1 步起共同给出；对恒定扣留者，它是扣留者每步出错的时钟进程；在交替者旁，它是把交替者的扣留当作差错的时钟进程。",
+      "declarations": [
+        "Becoming.WindowedWaiting.Pair.oneWithheldHistory",
+        "Becoming.WindowedWaiting.Pair.WindowMatches",
+        "Becoming.WindowedWaiting.Pair.within_first",
+        "Becoming.WindowedWaiting.Pair.within_second",
+        "Becoming.WindowedWaiting.Pair.windowStep_course",
+        "Becoming.WindowedWaiting.Pair.window_restores",
+        "Becoming.WindowedWaiting.Pair.alternator_bridge",
+        "Becoming.WindowedWaiting.Pair.firstAlwaysErrs_second",
+        "Becoming.WindowedWaiting.Pair.AgainstMatches",
+        "Becoming.WindowedWaiting.Pair.windowAgainst_course",
+        "Becoming.WindowedWaiting.Pair.windowAgainst_withholds_of_clocked"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Discrete steps; giving all-or-nothing per formation per step, decided (Bool) in the one-step laws and Prop-valued on configurations, joined by bridges; a supplied relation of waiting, fixed over the run; the start's history all giving.",
+      "zh": "离散步；每个形成每步给出为全有或全无，一步律中可判定（Bool），配置上为命题值，两者以桥相连；等待关系给定，在运行中固定；开始时的历史为全部给出。"
+    },
+    {
+      "en": "The window's carrier is the whole history at every lag, of which the law reads the lags below w; errors are a supplied pattern, counted and not given a chance, read by a clock carried in the state; an error turns an intended giving into withholding at that step and nothing else.",
+      "zh": "窗口的载体是每个滞后处的整段历史，律只读低于 w 的滞后；差错是给定模式，只计数、不赋概率，由状态中的时钟读取；差错只把该步本应的给出变为扣留。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That giving, a window or any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+      "zh": "给出、窗口或任何给出之律更好：这在伦理的两个前提下才被问及，延续条件定范围，C 定次序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Probabilities, and so not generous tit-for-tat's forgiveness with a probability; the window is a deterministic relative of it.",
+      "zh": "概率，因而不含慷慨以牙还牙以概率给出的宽恕；窗口只是其确定性的亲属。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the agreeing Prop law of the bridge can always be the normal form: the disjunctive normal form of answering keeps inclusion only under excluded middle.",
+      "zh": "桥中一致的命题律总可取为范式：回应的析取范式只在排中律下保持包含。",
+      "kind": "non-implication",
+      "witness": "Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em"
+    },
+    {
+      "en": "How waiting forms or how a pairing comes about; amounts of giving.",
+      "zh": "等待如何形成，一对如何结成；给出的数量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the readings as tit-for-tat, tit-for-two-tats, win-stay lose-shift or grim trigger carry the literature's results on stability or noise.",
+      "zh": "以牙还牙、两报还一报、赢留输变或冷酷触发的读法带有文献中关于稳定或噪声的结果。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
+      "detail": {
+        "en": "Agreement restores and answers a constant withholder, and does not keep inclusion (WindowedWaiting.agreement_not_keeps): doing both needs a law not keeping inclusion, or a window.",
+        "zh": "一致律恢复并回应恒定扣留者，但不保持包含（WindowedWaiting.agreement_not_keeps）：两者皆成需要不保持包含的律，或窗口。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
+      "detail": {
+        "en": "The alternator, the second erring at every even step: under every window of at least two the first gives at every step, so the window that absorbs one error never answers it (WindowedWaiting.Pair.not_absorbs_and_answers).",
+        "zh": "交替者，第二个在每个偶数步出错：在每个至少为二的窗口下第一个每步给出，故吸收一次差错的窗口永不回应它（WindowedWaiting.Pair.not_absorbs_and_answers）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "decidability",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.WindowedWaiting at receipt PENDING, 181 declarations (130 theorems), each with an empty axiom report; recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.WindowedWaiting，回执 PENDING，181 个声明（130 条定理），公理报告均为空；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "Errors with a probability, so that the window meets generous tit-for-tat's forgiveness; laws of giving with amounts; how a pairing and its waiting form.",
+    "zh": "带概率的差错，使窗口与慷慨以牙还牙的宽恕相接；带数量的给出之律；一对及其等待如何形成。"
+  },
+  "correspondence": {
+    "en": "Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a deterministic relative of generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992), whose forgiveness with a probability is not represented; errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs.",
+    "zh": "互惠的演化博弈论，作为读法（AI 读法，非形式名称）：answers 即以牙还牙，两步窗口即两报还一报（Axelrod 与 Hamilton 1981；Axelrod 1984），一致律即赢留输变（Kraines 与 Kraines 1989，Pavlov；Nowak 与 Sigmund 1993），waitsAll 即冷酷触发，不论如何都给出即无条件合作。窗口是慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）的确定性亲属，其以概率的宽恕未被表示；给定的差错模式处在该文献的噪声之位（Wu 与 Axelrod 1995）。按保持包含的划分近乎定义：二输入的单调布尔函数。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
+  "aliases": [
+    "a pair tolerates only within a window",
+    "Becoming.WindowedWaiting.keeps_split",
+    "Becoming.WindowedWaiting.restores_and_answers_iff",
+    "Becoming.WindowedWaiting.agreement_not_keeps",
+    "Becoming.WindowedWaiting.windowTwo_keeps",
+    "Becoming.WindowedWaiting.Pair.echo",
+    "Becoming.WindowedWaiting.window_one",
+    "Becoming.WindowedWaiting.gives_unless_errs",
+    "Becoming.WindowedWaiting.errs_answered",
+    "Becoming.WindowedWaiting.withholder_answered_clocked",
+    "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced",
+    "tit-for-two-tats (reading)",
+    "win-stay lose-shift (reading)"
+  ],
+  "dependencies": [
+    {
+      "id": "giving-that-waits-on-giving",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Withholding's answers, its ring of three and withholding_returns: the pair is a loop of two waits, and the echo is a withholding's return on it.",
+        "zh": "复用 Withholding 的 answers、三者之环与 withholding_returns：这一对是两次等待的回路，回声即扣留在其上的复返。"
+      }
+    },
+    {
+      "id": "restoring-giving-from-the-worst-start",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Tolerance's KeepsInclusion, worst_start, restored_stays and withheld_kept: the windowed laws keep inclusion, so these apply to them as they stand.",
+        "zh": "复用 Tolerance 的 KeepsInclusion、worst_start、restored_stays 与 withheld_kept：窗口律保持包含，故这些原样适用。"
+      }
+    },
+    {
+      "id": "thresholds-of-waiting",
+      "relation": "interpretive",
+      "detail": {
+        "en": "In a pair a tolerance of one is giving whatever comes (Tolerance.AllBut.of_length_le), so a pair passes a withholding out only through time; the window is that passing in time.",
+        "zh": "在一对中容忍一即不论如何都给出（Tolerance.AllBut.of_length_le），故一对只能经由时间使扣留消散；窗口即这种时间上的消散。"
+      }
+    },
+    {
+      "id": "tolerance-monotone-across-laws",
+      "relation": "interpretive",
+      "detail": {
+        "en": "A wider window gives no less, as more tolerance gives no less; window_mono is proved directly on the carrier.",
+        "zh": "更宽的窗口给出不少，如同更多容忍给出不少；window_mono 直接在载体上证明。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
+      "role": "proof",
+      "sha256": "04489fb85bf432f4e90fd23b34cefba89f81e8503ffd2516a4da00c78699f744",
+      "declarations": [
+        "Becoming.WindowedWaiting.AnswersWithholder",
+        "Becoming.WindowedWaiting.Line",
+        "Becoming.WindowedWaiting.Line.Waits",
+        "Becoming.WindowedWaiting.Line.relay_course",
+        "Becoming.WindowedWaiting.Line.sourceWithheld",
+        "Becoming.WindowedWaiting.Line.source_out",
+        "Becoming.WindowedWaiting.Line.withholder_answered_reached",
+        "Becoming.WindowedWaiting.NeverAnswers",
+        "Becoming.WindowedWaiting.NeverAnswers.not",
+        "Becoming.WindowedWaiting.NeverRestores",
+        "Becoming.WindowedWaiting.NeverRestores.not",
+        "Becoming.WindowedWaiting.Pair",
+        "Becoming.WindowedWaiting.Pair.AgainstMatches",
+        "Becoming.WindowedWaiting.Pair.Agrees",
+        "Becoming.WindowedWaiting.Pair.InputsKeepInclusion",
+        "Becoming.WindowedWaiting.Pair.Matches",
+        "Becoming.WindowedWaiting.Pair.Waits",
+        "Becoming.WindowedWaiting.Pair.WindowMatches",
+        "Becoming.WindowedWaiting.Pair.absorbs_needs_two",
+        "Becoming.WindowedWaiting.Pair.agrees_always",
+        "Becoming.WindowedWaiting.Pair.agrees_both",
+        "Becoming.WindowedWaiting.Pair.agrees_dnf",
+        "Becoming.WindowedWaiting.Pair.agrees_either",
+        "Becoming.WindowedWaiting.Pair.agrees_never",
+        "Becoming.WindowedWaiting.Pair.agrees_own",
+        "Becoming.WindowedWaiting.Pair.agrees_partner",
+        "Becoming.WindowedWaiting.Pair.agrees_table",
+        "Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em",
+        "Becoming.WindowedWaiting.Pair.alternator_answered_one",
+        "Becoming.WindowedWaiting.Pair.alternator_bridge",
+        "Becoming.WindowedWaiting.Pair.alternator_gives_odd",
+        "Becoming.WindowedWaiting.Pair.alternator_gives_odd_within",
+        "Becoming.WindowedWaiting.Pair.alternator_received",
+        "Becoming.WindowedWaiting.Pair.alternator_received_within",
+        "Becoming.WindowedWaiting.Pair.answers_first",
+        "Becoming.WindowedWaiting.Pair.answers_second",
+        "Becoming.WindowedWaiting.Pair.config",
+        "Becoming.WindowedWaiting.Pair.dnf_keeps_em",
+        "Becoming.WindowedWaiting.Pair.dnf_keeps_iff_em",
+        "Becoming.WindowedWaiting.Pair.echo",
+        "Becoming.WindowedWaiting.Pair.echo_returns",
+        "Becoming.WindowedWaiting.Pair.exactly_one",
+        "Becoming.WindowedWaiting.Pair.firstAlwaysErrs",
+        "Becoming.WindowedWaiting.Pair.firstAlwaysErrs_second",
+        "Becoming.WindowedWaiting.Pair.firstErrsOnce",
+        "Becoming.WindowedWaiting.Pair.firstErrsOnce_spaced",
+        "Becoming.WindowedWaiting.Pair.induced",
+        "Becoming.WindowedWaiting.Pair.induced_keeps",
+        "Becoming.WindowedWaiting.Pair.induced_partner",
+        "Becoming.WindowedWaiting.Pair.keeps_of_induced",
+        "Becoming.WindowedWaiting.Pair.loop",
+        "Becoming.WindowedWaiting.Pair.never_together",
+        "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers",
+        "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced",
+        "Becoming.WindowedWaiting.Pair.oneWithheld",
+        "Becoming.WindowedWaiting.Pair.oneWithheldHistory",
+        "Becoming.WindowedWaiting.Pair.pairKeepsInclusion_iff_induced",
+        "Becoming.WindowedWaiting.Pair.partner",
+        "Becoming.WindowedWaiting.Pair.partnerGaveDnf",
+        "Becoming.WindowedWaiting.Pair.partnerGave_course",
+        "Becoming.WindowedWaiting.Pair.partnerGave_never_restores_of_echo",
+        "Becoming.WindowedWaiting.Pair.secondErrsEven",
+        "Becoming.WindowedWaiting.Pair.secondErrsEven_spaced",
+        "Becoming.WindowedWaiting.Pair.swap_first",
+        "Becoming.WindowedWaiting.Pair.swap_second",
+        "Becoming.WindowedWaiting.Pair.waited_on",
+        "Becoming.WindowedWaiting.Pair.waits_partner",
+        "Becoming.WindowedWaiting.Pair.windowAgainst_course",
+        "Becoming.WindowedWaiting.Pair.windowAgainst_withholds_of_clocked",
+        "Becoming.WindowedWaiting.Pair.windowStep_course",
+        "Becoming.WindowedWaiting.Pair.window_absorbs",
+        "Becoming.WindowedWaiting.Pair.window_absorbs_within",
+        "Becoming.WindowedWaiting.Pair.window_restores",
+        "Becoming.WindowedWaiting.Pair.withholder_answered_holds",
+        "Becoming.WindowedWaiting.Pair.withholder_answered_tight",
+        "Becoming.WindowedWaiting.Pair.within_first",
+        "Becoming.WindowedWaiting.Pair.within_second",
+        "Becoming.WindowedWaiting.PairKeepsInclusion",
+        "Becoming.WindowedWaiting.Restores",
+        "Becoming.WindowedWaiting.Spaced",
+        "Becoming.WindowedWaiting.againstWithholder",
+        "Becoming.WindowedWaiting.agreement",
+        "Becoming.WindowedWaiting.agreement_against",
+        "Becoming.WindowedWaiting.agreement_answers",
+        "Becoming.WindowedWaiting.agreement_answers_at_one",
+        "Becoming.WindowedWaiting.agreement_eq",
+        "Becoming.WindowedWaiting.agreement_not_keeps",
+        "Becoming.WindowedWaiting.agreement_restores",
+        "Becoming.WindowedWaiting.agreement_restores_at_two",
+        "Becoming.WindowedWaiting.alternatorStart",
+        "Becoming.WindowedWaiting.alternatorStep",
+        "Becoming.WindowedWaiting.alternator_course",
+        "Becoming.WindowedWaiting.alternator_gives_half",
+        "Becoming.WindowedWaiting.alternator_never_answered",
+        "Becoming.WindowedWaiting.alternator_second",
+        "Becoming.WindowedWaiting.alwaysGives",
+        "Becoming.WindowedWaiting.alwaysGives_keeps",
+        "Becoming.WindowedWaiting.alwaysGives_never_answers",
+        "Becoming.WindowedWaiting.answersWithholder_at_one",
+        "Becoming.WindowedWaiting.answersWithholder_iff",
+        "Becoming.WindowedWaiting.answersWithin",
+        "Becoming.WindowedWaiting.answersWithinErring",
+        "Becoming.WindowedWaiting.answersWithin_into",
+        "Becoming.WindowedWaiting.answersWithin_keeps",
+        "Becoming.WindowedWaiting.apart",
+        "Becoming.WindowedWaiting.boolNot_true_iff",
+        "Becoming.WindowedWaiting.boolOr_true_iff",
+        "Becoming.WindowedWaiting.bothGave",
+        "Becoming.WindowedWaiting.bothGave_keeps",
+        "Becoming.WindowedWaiting.bothGave_never_restores",
+        "Becoming.WindowedWaiting.clocked",
+        "Becoming.WindowedWaiting.clocked_state",
+        "Becoming.WindowedWaiting.course_congr",
+        "Becoming.WindowedWaiting.course_rel",
+        "Becoming.WindowedWaiting.eitherGave",
+        "Becoming.WindowedWaiting.eitherGave_keeps",
+        "Becoming.WindowedWaiting.eitherGave_never_answers",
+        "Becoming.WindowedWaiting.eq_table_of",
+        "Becoming.WindowedWaiting.erringRun",
+        "Becoming.WindowedWaiting.erringRun_no_error",
+        "Becoming.WindowedWaiting.erringStart",
+        "Becoming.WindowedWaiting.erring_history",
+        "Becoming.WindowedWaiting.erring_keeps",
+        "Becoming.WindowedWaiting.erring_shift",
+        "Becoming.WindowedWaiting.errs_answered",
+        "Becoming.WindowedWaiting.even",
+        "Becoming.WindowedWaiting.even_two_mul",
+        "Becoming.WindowedWaiting.gap_le",
+        "Becoming.WindowedWaiting.gives_unless_errs",
+        "Becoming.WindowedWaiting.gives_unless_errs_le",
+        "Becoming.WindowedWaiting.invariant",
+        "Becoming.WindowedWaiting.keeps_not_both",
+        "Becoming.WindowedWaiting.keeps_split",
+        "Becoming.WindowedWaiting.lag_below_one",
+        "Becoming.WindowedWaiting.lag_below_two",
+        "Becoming.WindowedWaiting.lag_shift",
+        "Becoming.WindowedWaiting.neverRestores_congr",
+        "Becoming.WindowedWaiting.never_answers_of",
+        "Becoming.WindowedWaiting.never_restores_of",
+        "Becoming.WindowedWaiting.notBoth",
+        "Becoming.WindowedWaiting.oneWithheldBool",
+        "Becoming.WindowedWaiting.or_congr_both",
+        "Becoming.WindowedWaiting.ownGave",
+        "Becoming.WindowedWaiting.ownGave_keeps",
+        "Becoming.WindowedWaiting.ownGave_never_answers",
+        "Becoming.WindowedWaiting.ownGave_never_restores",
+        "Becoming.WindowedWaiting.pairKeepsInclusion_iff",
+        "Becoming.WindowedWaiting.pairKeepsInclusion_table_iff",
+        "Becoming.WindowedWaiting.pairStep",
+        "Becoming.WindowedWaiting.pairStep_congr",
+        "Becoming.WindowedWaiting.partnerGave",
+        "Becoming.WindowedWaiting.partnerGave_eq",
+        "Becoming.WindowedWaiting.partnerGave_keeps",
+        "Becoming.WindowedWaiting.partnerGave_never_restores",
+        "Becoming.WindowedWaiting.restores_and_answers_iff",
+        "Becoming.WindowedWaiting.restores_congr",
+        "Becoming.WindowedWaiting.ringTwoErrors",
+        "Becoming.WindowedWaiting.ringTwoErrors_answered",
+        "Becoming.WindowedWaiting.spaced_mono",
+        "Becoming.WindowedWaiting.spaced_window_holds",
+        "Becoming.WindowedWaiting.table",
+        "Becoming.WindowedWaiting.windowAgainst",
+        "Becoming.WindowedWaiting.windowFacing",
+        "Becoming.WindowedWaiting.windowOneWithheld",
+        "Becoming.WindowedWaiting.windowStep",
+        "Becoming.WindowedWaiting.windowTwo",
+        "Becoming.WindowedWaiting.windowTwo_answers",
+        "Becoming.WindowedWaiting.windowTwo_answers_stays",
+        "Becoming.WindowedWaiting.windowTwo_keeps",
+        "Becoming.WindowedWaiting.windowTwo_restored_stays",
+        "Becoming.WindowedWaiting.windowTwo_restores",
+        "Becoming.WindowedWaiting.window_holds_of_gaps",
+        "Becoming.WindowedWaiting.window_mono",
+        "Becoming.WindowedWaiting.window_of_gap",
+        "Becoming.WindowedWaiting.window_one",
+        "Becoming.WindowedWaiting.window_restored_stays",
+        "Becoming.WindowedWaiting.window_turn",
+        "Becoming.WindowedWaiting.window_withheld_kept",
+        "Becoming.WindowedWaiting.window_worst_start",
+        "Becoming.WindowedWaiting.withholder_answered",
+        "Becoming.WindowedWaiting.withholder_answered_clocked"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WindowedWaiting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design of giving that waits on giving under selection, asked whether the account explains tit-for-tat with forgiveness; the windowed law on the whole-history carrier with errors as a clock, the one-step split, the echo and the alternator; the lemmas of runs, the local unfoldings and the restatements are listed in references only.",
+      "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 关于选择下等待给出之给出的设计新增，起于“本理论能否解释带宽恕的以牙还牙”之问；整段历史载体上的窗口律、以时钟表示的差错、一步划分、回声与交替者；运行的引理、局部展开与重述只列在 references 中。"
+    }
+  ]
+}

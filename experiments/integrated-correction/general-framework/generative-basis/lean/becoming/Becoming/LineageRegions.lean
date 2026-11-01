@@ -635,11 +635,6 @@ theorem length_zero_of_no_mem {α : Type} : ∀ {l : List α}, (∀ a, a ∈ l �
   | [], _ => rfl
   | a :: _, absent => (absent a (.head _)).elim
 
-/-- A list of length zero has no member. -/
-theorem not_mem_of_length_zero {α : Type} : ∀ {l : List α} {a : α}, l.length = 0 → a ∈ l → False
-  | [], _, _, m => nomatch m
-  | _ :: _, _, zero, _ => Nat.noConfusion zero
-
 /-- **A member's census line ends where its occurrence ends on every branch** (a lemma of
 `empty_of_degenerates`, the per-member step it combines by `common_bound`). Where listed
 offspring continue their parents, a member whose occurrence degenerates has, from some depth on,

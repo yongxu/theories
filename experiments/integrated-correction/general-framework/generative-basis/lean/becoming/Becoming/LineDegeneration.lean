@@ -114,13 +114,12 @@ each on its owner's yes, and change no statement: the part stated on the grammar
 the three laws that a regime's line does not go on would be re-derived in place from degeneration
 and `Web.Restated` dropped; the kind instance `Web.kind_every_branch_ends_of_gone` and
 `Map.Undecided.kind_degenerates` after `Web.kindClass_within` in `Becoming.KeepingWidening`, which
-imports `Becoming.MapInstances`. Also proposed: renaming `Map.Undecided` (`Map.ContinuedWhere`,
-say), since the core has a top-level `Becoming.Undecided` namespace and a reference `Undecided.x`
-under `open Map` could resolve to either.
+imports `Becoming.MapInstances`. The moves touch the root's map modules, which the rebuild of
+the conditional laws (board item OU7) also changes, so they would come after it.
 
 The landed name `Web.degenerates_of_gone` states a wrong meaning: it concludes an end (有终), and
 degeneration (退化) is ending on every branch (尽). A rename at placement, to `Web.end_of_gone`, is
-proposed to the owner of `Becoming.MapInstances`, and is that owner's call; until then this module
+proposed to the owner of `Becoming.MapInstances`, after that rebuild, and is that owner's call; until then this module
 names its law `Web.every_branch_ends_of_gone` so the two stay apart.
 
 Modelling choices: discrete steps (a continuation advances the step by one), formations a fixed

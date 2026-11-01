@@ -346,10 +346,6 @@ def half : Nat → Nat
   | 1 => 0
   | n + 2 => half n + 1
 
-theorem even_add_two (n : Nat) : even (n + 2) = even n := by
-  show (!(!even n)) = even n
-  cases even n <;> rfl
-
 /-- **The odd steps below `n` are `half n`.** -/
 theorem tally_odd : ∀ n, tally (fun t => !even t) n = half n
   | 0 => rfl
@@ -369,14 +365,6 @@ theorem tally_even : ∀ n, tally even n = half (n + 1)
     rw [tally_even n]
     show half (n + 1) + cond (even n) 1 0 + cond (!even n) 1 0 = half (n + 1) + 1
     cases even n <;> rfl
-
-theorem half_two_mul : ∀ k, half (2 * k) = k ∧ half (2 * k + 1) = k
-  | 0 => ⟨rfl, rfl⟩
-  | k + 1 => by
-    have e1 : 2 * (k + 1) = 2 * k + 2 := Nat.mul_succ 2 k
-    rw [e1]
-    show half (2 * k) + 1 = k + 1 ∧ half (2 * k + 1) + 1 = k + 1
-    exact ⟨congrArg (· + 1) (half_two_mul k).1, congrArg (· + 1) (half_two_mul k).2⟩
 
 /-! ## The laws -/
 
@@ -1057,8 +1045,6 @@ theorem gives_withholding_second (f : PairLaw) (e : Errors) : ∀ n, gives f wit
   | 0 => rfl
   | _ + 1 => rfl
 
-theorem not_false_true : (!false) = true := rfl
-
 /-- **A withholder withholds at every step**, whatever its partner and the errors. -/
 theorem Place.withheld_of_withholding (s : Place) (h : s.law s.side = withholding) (n : Nat) :
     s.withheld n = n :=
@@ -1241,10 +1227,6 @@ theorem cohort_paired (x y z : Nat) : ∀ g, g ∈ cohort x y z → ∃ s, g = [
     | .inl m => ⟨answerPair, mem_replicate_eq m⟩
     | .inr m => ⟨mixedPair, mem_replicate_eq m⟩
   | .inr m => ⟨withholdPair, mem_replicate_eq m⟩
-
-theorem cohort_two (x y z : Nat) : ∀ g, g ∈ cohort x y z → g.length = 2 := fun _ mg =>
-  match cohort_paired x y z _ mg with
-  | ⟨_, same⟩ => same ▸ rfl
 
 theorem total_cohort (x y z : Nat) (q : Place → Nat) :
     total (whole (cohort x y z)) q =

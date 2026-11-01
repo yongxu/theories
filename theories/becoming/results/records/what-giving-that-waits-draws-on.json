@@ -1,0 +1,274 @@
+{
+  "schema_version": 2,
+  "id": "what-giving-that-waits-draws-on",
+  "title": {
+    "en": "What giving that waits draws on",
+    "zh": "等待给出之给出所汲取者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
+  "statement": {
+    "en": "On balanced webs a gift brings support beyond what it draws through need asymmetry within the pair, the slack bound with the pair split into family and beyond, or through renewal carried in from outside; a factor read as a line's rise on such a web is bounded by the slack beyond and the inflow.",
+    "zh": "在平衡网上，给出带来超出其所汲取的支持，或经由一对之内的需求不对称（即把一对分为家族与其外时的余量之界），或经由从外部带入的补给；读作这种网上一条线之上升的因子，受其外余量与流入约束。"
+  },
+  "laws": [
+    {
+      "en": "Need asymmetry within the pair: in a balanced pair into which nothing flows, a giver at level two moving one unit to a receiver at level one leaves both supported where the needs are one and two, and only moves support where they are two and two; under two and two the giver, present after its gift, leaves no descendant, while under one and two a child descends from it.",
+      "zh": "一对之内的需求不对称：在无流入的平衡一对中，水平为二的给者把一个单位移给水平为一的收者，需求为一与二时两者皆受支持，二与二时只是移动支持；二与二下，给者在给出后仍在场却无后代，一与二下有一子从它而出。",
+      "declarations": [
+        "Becoming.PairSelection.Needs.Member",
+        "Becoming.PairSelection.Needs.onward",
+        "Becoming.PairSelection.Needs.level",
+        "Becoming.PairSelection.Needs.requires",
+        "Becoming.PairSelection.Needs.need",
+        "Becoming.PairSelection.Needs.active",
+        "Becoming.PairSelection.Needs.web",
+        "Becoming.PairSelection.Needs.take",
+        "Becoming.PairSelection.Needs.give",
+        "Becoming.PairSelection.Needs.present",
+        "Becoming.PairSelection.Needs.flow",
+        "Becoming.PairSelection.Needs.balances",
+        "Becoming.PairSelection.Needs.acting",
+        "Becoming.PairSelection.Needs.dependent",
+        "Becoming.PairSelection.Needs.closed",
+        "Becoming.PairSelection.Needs.asymmetry_gains",
+        "Becoming.PairSelection.Needs.symmetry_moves",
+        "Becoming.PairSelection.Needs.childless"
+      ]
+    },
+    {
+      "en": "Need asymmetry is the slack bound with the pair split into family and beyond: read with the receiver as the family and the giver as the beyond, the symmetric gift breaks the giver's dependence, and under needs one and two the rise is exactly the giver's slack above its need, with nothing flowing in and the giver's dependence kept.",
+      "zh": "需求不对称即把一对分为家族与其外时的余量之界：以收者为家族、给者为其外读之，对称的给出打断给者的依存；需求为一与二时，上升恰为给者高出其需求的余量，无所流入，给者的依存保持。",
+      "declarations": [
+        "Becoming.PairSelection.Needs.symmetric_breaks",
+        "Becoming.PairSelection.Needs.asymmetric_within_slack"
+      ]
+    },
+    {
+      "en": "Renewal from outside: a renewer whose giving does not require its own level gives the giver one unit a step, and the giver gives the receiver one unit a step; then the giver gives at every step, both stay supported, the giver's level never falls, and over any N steps the gifts total N, the inflow into the pair.",
+      "zh": "来自外部的补给：一个给出不依赖自身水平的补给者每步给给者一个单位，给者每步给收者一个单位；于是给者每步给出，两者皆受支持，给者水平从不下降，任意 N 步中给出总计 N，即流入这一对者。",
+      "declarations": [
+        "Becoming.PairSelection.Renewed.Member",
+        "Becoming.PairSelection.Renewed.requires",
+        "Becoming.PairSelection.Renewed.web",
+        "Becoming.PairSelection.Renewed.take",
+        "Becoming.PairSelection.Renewed.give",
+        "Becoming.PairSelection.Renewed.flow",
+        "Becoming.PairSelection.Renewed.balances",
+        "Becoming.PairSelection.Renewed.acting",
+        "Becoming.PairSelection.Renewed.dependent",
+        "Becoming.PairSelection.Renewed.renewer_free",
+        "Becoming.PairSelection.Renewed.inflow_one",
+        "Becoming.PairSelection.Renewed.renewal_carried"
+      ]
+    },
+    {
+      "en": "Without a break beyond, a step's rise with what the whole loses is at most the slack beyond and the inflow (a corollary, the contrapositive of the landed break law). Read a factor as a line's per-step rise on a balanced web with no dependence beyond broken: β·received and γ·withheld are each at most that slack and inflow summed over the counted steps (bounds under a supplied reading).",
+      "zh": "其外无打断时，一步的上升连同整体所失，至多为其外余量加流入（推论，即已有打断律的逆否）。把因子读作平衡网上一条线每步的上升、其外无依存被打断：β·所收与 γ·所扣 各至多为所计各步上该余量与流入之和（给定读法下的界）。",
+      "declarations": [
+        "Becoming.PairSelection.tallyBy",
+        "Becoming.PairSelection.mul_tally_le",
+        "Becoming.PairSelection.rise_le_slack_inflow",
+        "Becoming.PairSelection.Place.received_factor_le",
+        "Becoming.PairSelection.Place.withheld_factor_le"
+      ]
+    },
+    {
+      "en": "Under that reading, where at the received steps the beyond stands at its needs and nothing flows in, a place that received has β = 0: a positive β so read needs slack beyond, an inflow, or a break (a corollary).",
+      "zh": "在该读法下，若所收各步其外恰在其需求、无所流入，则有所收的位置 β = 0：如此读出的正 β 需要其外余量、流入或打断（推论）。",
+      "declarations": [
+        "Becoming.PairSelection.tallyBy_zero",
+        "Becoming.PairSelection.Place.received_factor_zero"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "World: balance; discrete steps and natural-number levels. The webs are single small witnesses with constant or few-valued levels, not general laws of renewal or need; in the need witness the child's unit comes from a pool beyond the pair.",
+      "zh": "World：平衡；离散步与自然数水平。这些网是单一的小见证，水平恒定或取值很少，不是补给或需求的一般定律；在需求见证中，子的单位来自一对之外的池。"
+    },
+    {
+      "en": "The factor bounds take as a hypothesis the reading of a factor as a line's per-step rise on a balanced web, each condition beyond depended on at a need it meets and none of those dependences broken.",
+      "zh": "因子之界以如下读法为假设：因子是平衡网上一条线每步的上升，其外每个条件以其所满足的需求被依存，且这些依存无一被打断。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The join of the witnesses to the formula's β and γ: no statement makes the pair's run a flow on a web or derives the offspring from one, so neither factor is bounded for the formula itself.",
+      "zh": "见证与公式中 β、γ 的连接：没有陈述把一对的运行作为网上的流，或由之导出后代，故两因子在公式本身上皆未受约束。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any comparison of β with γ from a web: both bounds have the same form, so the sign that decides selection among pairs is not reached from the webs.",
+      "zh": "由网对 β 与 γ 的任何比较：两界形式相同，故决定对间选择的符号无法从网得到。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a gift brings more than it draws on the giver only by carrying a flux in: only the renewal witness is shown.",
+      "zh": "给出只有带入通量才能带来多于它从给者汲取的：只给出补给见证。",
+      "kind": "scope",
+      "witness": "Becoming.PairSelection.Renewed.renewal_carried"
+    },
+    {
+      "en": "That the pair supplies the child's unit: the descent under needs one and two shows only that the giver's support decides whether it can give.",
+      "zh": "子的单位由这一对供给：需求为一与二时的世系只表明给者的支持决定它能否给出。",
+      "kind": "scope",
+      "witness": "Becoming.PairSelection.Needs.childless"
+    },
+    {
+      "en": "The pace of selection within what flows in, applied to these runs.",
+      "zh": "流入之内的选择速度应用于这些运行。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "detail": {
+        "en": "Under needs two and two the same one-unit gift only moves support and breaks the giver's dependence (PairSelection.Needs.symmetry_moves, PairSelection.Needs.symmetric_breaks): without asymmetry or an inflow a gift brings no support beyond what it draws.",
+        "zh": "需求为二与二时，同样一个单位的给出只是移动支持，并打断给者的依存（PairSelection.Needs.symmetry_moves、PairSelection.Needs.symmetric_breaks）：没有不对称或流入，给出不带来超出其所汲取的支持。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.PairSelection at receipt PENDING, 223 declarations (151 theorems), this record citing 42 of them, each with an empty axiom report; the one generated lemma Place.mk.injEq depends on propext, which the checker's audit admits; recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairSelection，回执 PENDING，223 个声明（151 条定理），本记录引其中 42 个，公理报告均为空；唯一生成的引理 Place.mk.injEq 依赖 propext，检查器的审计允许之；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "A model of the pair's run as a flow on a web, with offspring derived from it, support over the run and a constant rise per step, so that β and γ follow from the flow and can be compared.",
+    "zh": "把一对的运行作为网上之流的模型：由之导出后代、运行中的支持与每步恒定的上升，使 β 与 γ 由流得出并可比较。"
+  },
+  "correspondence": {
+    "en": "Food sharing among vampire bats (Wilkinson 1984) is the classical case of need asymmetry within a pair: a gift of little to a giver with slack keeps a receiver below its need alive. The renewal witness reads a gift carried by an inflow from outside the pair.",
+    "zh": "吸血蝠的食物分享（Wilkinson 1984）是一对之内需求不对称的经典例子：对有余量的给者所费甚少的给出，使低于其需求的收者存活。补给见证读出由一对之外的流入所带的给出。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+  "aliases": [
+    "what giving that waits draws on",
+    "Becoming.PairSelection.Needs.asymmetry_gains",
+    "Becoming.PairSelection.Needs.symmetry_moves",
+    "Becoming.PairSelection.Needs.asymmetric_within_slack",
+    "Becoming.PairSelection.Needs.symmetric_breaks",
+    "Becoming.PairSelection.Renewed.renewal_carried",
+    "Becoming.PairSelection.rise_le_slack_inflow"
+  ],
+  "dependencies": [
+    {
+      "id": "offspring-read-from-giving-that-waits",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pair's run, Place, its counts and Place.offspring: the factor bounds read the factors of that formula on a web.",
+        "zh": "复用一对的运行、Place、其计数与 Place.offspring：因子之界在网上读该公式的因子。"
+      }
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Flow.Balances.breaks_beyond_inflow and the inflow: rise_le_slack_inflow is its contrapositive, and the symmetric gift's break is its case.",
+        "zh": "复用 Flow.Balances.breaks_beyond_inflow 与流入：rise_le_slack_inflow 即其逆否，对称给出的打断即其情形。"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the slack beyond (Web.slack) and the dependences met at a step: need asymmetry is that slack bound with the pair split into family and beyond.",
+        "zh": "复用其外余量（Web.slack）与一步所满足的依存：需求不对称即把一对分为家族与其外时的余量之界。"
+      }
+    },
+    {
+      "id": "evolution-on-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses support at a need and Flow.unsupported_childless: under needs two and two the giver, unsupported, leaves no descendant.",
+        "zh": "复用以需求定义的支持与 Flow.unsupported_childless：需求为二与二时，给者不受支持，无后代。"
+      }
+    },
+    {
+      "id": "pace-of-selection-within-what-flows-in",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Renewal from outside reads the first source, where selection is bounded by the flux carried in per step; that law is not applied to these runs.",
+        "zh": "来自外部的补给读出第一个来源，选择受每步带入的通量约束；该定律未应用于这些运行。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "role": "proof",
+      "sha256": "e68225fc391381c795ee4ee0ff7a83d8f89e59f3d5c359bc65d04a59f84a9a6a",
+      "declarations": [
+        "Becoming.PairSelection.Needs.Member",
+        "Becoming.PairSelection.Needs.acting",
+        "Becoming.PairSelection.Needs.active",
+        "Becoming.PairSelection.Needs.asymmetric_within_slack",
+        "Becoming.PairSelection.Needs.asymmetry_gains",
+        "Becoming.PairSelection.Needs.balances",
+        "Becoming.PairSelection.Needs.childless",
+        "Becoming.PairSelection.Needs.closed",
+        "Becoming.PairSelection.Needs.dependent",
+        "Becoming.PairSelection.Needs.flow",
+        "Becoming.PairSelection.Needs.give",
+        "Becoming.PairSelection.Needs.level",
+        "Becoming.PairSelection.Needs.need",
+        "Becoming.PairSelection.Needs.onward",
+        "Becoming.PairSelection.Needs.present",
+        "Becoming.PairSelection.Needs.receiver_supported",
+        "Becoming.PairSelection.Needs.receiver_unsupported",
+        "Becoming.PairSelection.Needs.requires",
+        "Becoming.PairSelection.Needs.symmetric_breaks",
+        "Becoming.PairSelection.Needs.symmetry_moves",
+        "Becoming.PairSelection.Needs.take",
+        "Becoming.PairSelection.Needs.web",
+        "Becoming.PairSelection.Place.received_factor_le",
+        "Becoming.PairSelection.Place.received_factor_zero",
+        "Becoming.PairSelection.Place.withheld_factor_le",
+        "Becoming.PairSelection.Renewed.Member",
+        "Becoming.PairSelection.Renewed.acting",
+        "Becoming.PairSelection.Renewed.balances",
+        "Becoming.PairSelection.Renewed.dependent",
+        "Becoming.PairSelection.Renewed.flow",
+        "Becoming.PairSelection.Renewed.give",
+        "Becoming.PairSelection.Renewed.inflow_one",
+        "Becoming.PairSelection.Renewed.renewal_carried",
+        "Becoming.PairSelection.Renewed.renewer_free",
+        "Becoming.PairSelection.Renewed.requires",
+        "Becoming.PairSelection.Renewed.take",
+        "Becoming.PairSelection.Renewed.total_steps_one",
+        "Becoming.PairSelection.Renewed.web",
+        "Becoming.PairSelection.mul_tally_le",
+        "Becoming.PairSelection.rise_le_slack_inflow",
+        "Becoming.PairSelection.tallyBy",
+        "Becoming.PairSelection.tallyBy_zero"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PairSelection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on need asymmetry, renewal from outside and a factor read on a web; whether need asymmetry counts as a third source or as the slack bound read inside the pair is settled as the latter.",
+      "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 的设计新增，即 Becoming.PairSelection 中关于需求不对称、来自外部的补给与网上所读因子的部分；需求不对称算作第三来源还是一对之内所读的余量之界，定为后者。"
+    }
+  ]
+}

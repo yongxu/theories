@@ -203,17 +203,6 @@ theorem discord_shift (ps : List α) (w a : α → Nat) (k : Nat) :
     discord ps (fun p => w p + k) a = discord ps w a :=
   discord_shifted (fun _ _ => rfl) (fun _ _ => rfl)
 
-/-- Weights and amounts agreeing at every member give the same concordance and discordance. -/
-theorem concord_congr {ps : List α} {w w' a a' : α → Nat}
-    (same_w : ∀ p, p ∈ ps → w' p = w p) (same_a : ∀ p, p ∈ ps → a' p = a p) :
-    concord ps w' a' = concord ps w a :=
-  concord_shifted (k := 0) same_w same_a
-
-theorem discord_congr {ps : List α} {w w' a a' : α → Nat}
-    (same_w : ∀ p, p ∈ ps → w' p = w p) (same_a : ∀ p, p ∈ ps → a' p = a p) :
-    discord ps w' a' = discord ps w a :=
-  discord_shifted (k := 0) same_w same_a
-
 /-- Adding a common number to every amount leaves concordance unchanged. -/
 theorem concord_shift_amount (ps : List α) (w a : α → Nat) (k : Nat) :
     concord ps w (fun p => a p + k) = concord ps w a :=

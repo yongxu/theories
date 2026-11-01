@@ -1,0 +1,516 @@
+{
+  "schema_version": 2,
+  "id": "ending-laws-as-regimes-on-a-lineage",
+  "title": {
+    "en": "Ending laws as regimes on a lineage",
+    "zh": "世系上作为态的终结之律"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "statement": {
+    "en": "Three ending laws, each read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: gated renewal run past, dissipation within the family, a draw on a condition given nothing. At every stock both fates occur; renewal from outside meets none.",
+    "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：门控更新被越过、族内耗散、对无所给予之条件的汲取。在每一存量下两种命运皆出现；来自外部的更新不满足其中任何一态。"
+  },
+  "laws": [
+    {
+      "en": "Restatements, no result: under balance, n steps of joint excess at a condition need its level at least n, and n steps of a family's uptake above its replenishment need its stock at least n, so no course has stock + 1 such steps.",
+      "zh": "重述，不是结果：在平衡下，一条件上 n 步共同过度需要其水平至少为 n；一族的摄取超过补充 n 步需要其存量至少为 n，故没有进程有存量 + 1 这样的步。",
+      "declarations": [
+        "Becoming.LineageRegimes.excess_within_level",
+        "Becoming.LineageRegimes.family_excess_within_stock",
+        "Becoming.LineageRegimes.family_excess_not_past_stock"
+      ]
+    },
+    {
+      "en": "The gated regime on a lineage. Where the flow balances, whatever gives to a member of a family requires a member at a need of at least m, only active formations give and activity needs support, n steps of excess from a stock below n + m make the line from an active occurrence, at a step not after T + n, degenerate at the kind grain wherever everything it reaches at T + n requires a member at such a need.",
+      "zh": "世系上的门控之态。流平衡、给予族中成员者皆以至少 m 的所需依存于某成员、只有活跃形成给予、活动需要支持时，自低于 n + m 的存量起 n 步过度，使自不晚于 T + n 之步的活跃之事起的线，在其于 T + n 所及者皆以此所需依存于某成员之处，在种类粒度上退化。",
+      "declarations": [
+        "Becoming.LineageRegimes.degeneration_of_family_excess"
+      ]
+    },
+    {
+      "en": "That law is the kind-grain reading of the horizon law's family_excess_degenerates with the gated ending, not a further result: the gated laws end formations, and the premise on the line's reach is what the lineage reading adds. Where the census holds every continuation, every member of cohort T + n so depending suffices; at need one the horizon is the stock itself.",
+      "zh": "此律是视界之律的 family_excess_degenerates 与门控终结在种类粒度上的读法，不是进一步的结果：门控诸律终结的是形成，关于线之所及的前提是世系读法所加。普查包含每个续时，第 T + n 代每个成员如此依存即足；在所需为一时，视界即存量本身。",
+      "declarations": [
+        "Becoming.LineageRegimes.degeneration_of_family_excess_listed",
+        "Becoming.LineageRegimes.degeneration_at_stock_horizon"
+      ]
+    },
+    {
+      "en": "Corollary, dissipation within the family: in cohorts of descent whose offspring stand within a family balanced and dissipated on across each step up to its stock, where the census holds every continuation, the line from every member of every cohort degenerates.",
+      "zh": "推论，族内耗散：后代立于在直至其存量的每一步上平衡且被耗散之族内的世系各代中，普查包含每个续时，自每代每个成员起的线皆退化。",
+      "declarations": [
+        "Becoming.LineageRegimes.dissipation_degenerates_every_member"
+      ]
+    },
+    {
+      "en": "A draw on a condition given nothing. Under balance, with nothing given to a condition across n steps and the draw at the j-th of them at least 2^j, the level at the start satisfies 2^n ≤ level + 1; a draw exceeding everything drawn before is at least 2^j at its j-th step, so the doubling law Flow.Balances.doubling_needs is its case.",
+      "zh": "对无所给予之条件的汲取。在平衡下，n 步中无物给予一条件、其中第 j 步的汲取至少为 2^j 时，起始水平满足 2^n ≤ 水平 + 1；超过此前所取之总的汲取在其第 j 步至少为 2^j，故倍增之律 Flow.Balances.doubling_needs 是其情形。",
+      "declarations": [
+        "Becoming.LineageRegimes.pow_le_drawnBefore_of_ge",
+        "Becoming.LineageRegimes.exceeds_doubles",
+        "Becoming.LineageRegimes.draw_doubling_needs",
+        "Becoming.LineageRegimes.doubling_needs_of_draw"
+      ]
+    },
+    {
+      "en": "The takers' law. Cohorts of takers from at least one, each at least doubling the last and drawing at least a unit per member, on a condition given nothing, last at most log₂(level + 1) cohorts. Where each active member takes part and no cohort lists a member twice, a cohort draws at least its size, so where level + 1 < 2^n not every member of the first n cohorts stays active.",
+      "zh": "取者之律。在无所给予的条件上，自至少一个起、每代至少倍于上代、每成员至少汲取一单位的取者各代，至多延续 log₂(水平 + 1) 代。每个活跃成员皆参与、无一代重复列出成员时，一代所汲取至少为其规模，故水平 + 1 < 2^n 时，前 n 代并非每个成员都保持活跃；所需读作只在取时活跃，或经网的所需读之。",
+      "declarations": [
+        "Becoming.LineageRegimes.sizes_double",
+        "Becoming.LineageRegimes.size_le_taken",
+        "Becoming.LineageRegimes.multiplying_takers_need",
+        "Becoming.LineageRegimes.multiplying_takers_stop",
+        "Becoming.LineageRegimes.multiplying_takers_stop_of_need"
+      ]
+    },
+    {
+      "en": "Witness: one taker, then two, each requiring the pool at need one and taking a unit, the pool at 3, 2, then nothing, meets every premise of both takers' laws at level three; the four takers born at step two are unsupported and inactive, the next cohort is empty and the line from the first degenerates.",
+      "zh": "见证：一个取者，然后两个，各以所需一依存于池并取一单位，池为 3、2、然后无，在水平三上满足两条取者之律的每个前提；第二步出生的四个取者皆未受支持、不活跃，下一代为空，自第一个起的线退化。",
+      "declarations": [
+        "Becoming.LineageRegimes.MultiplyingTakers.present",
+        "Becoming.LineageRegimes.MultiplyingTakers.take",
+        "Becoming.LineageRegimes.MultiplyingTakers.give",
+        "Becoming.LineageRegimes.MultiplyingTakers.flow",
+        "Becoming.LineageRegimes.MultiplyingTakers.level",
+        "Becoming.LineageRegimes.MultiplyingTakers.needsPool",
+        "Becoming.LineageRegimes.MultiplyingTakers.web",
+        "Becoming.LineageRegimes.MultiplyingTakers.kids",
+        "Becoming.LineageRegimes.MultiplyingTakers.generations",
+        "Becoming.LineageRegimes.MultiplyingTakers.balances",
+        "Becoming.LineageRegimes.MultiplyingTakers.unfed",
+        "Becoming.LineageRegimes.MultiplyingTakers.acting",
+        "Becoming.LineageRegimes.MultiplyingTakers.pool_of_needs",
+        "Becoming.LineageRegimes.MultiplyingTakers.dependent",
+        "Becoming.LineageRegimes.MultiplyingTakers.descended",
+        "Becoming.LineageRegimes.MultiplyingTakers.family_two",
+        "Becoming.LineageRegimes.MultiplyingTakers.family_three",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_first",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_second",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_third",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct",
+        "Becoming.LineageRegimes.MultiplyingTakers.multiplies",
+        "Becoming.LineageRegimes.MultiplyingTakers.draws",
+        "Becoming.LineageRegimes.MultiplyingTakers.needs",
+        "Becoming.LineageRegimes.MultiplyingTakers.pool_required",
+        "Becoming.LineageRegimes.MultiplyingTakers.takesNeed",
+        "Becoming.LineageRegimes.MultiplyingTakers.unsupported",
+        "Becoming.LineageRegimes.MultiplyingTakers.inactive",
+        "Becoming.LineageRegimes.MultiplyingTakers.degenerates",
+        "Becoming.LineageRegimes.MultiplyingTakers.multiplying",
+        "Becoming.LineageRegimes.MultiplyingTakers.stops_of_need"
+      ]
+    },
+    {
+      "en": "The handover: of two relata, the one whose turn it is holds the step's amount, takes it all and hands the next step's amount to the other. Every handover balances, its stock at each step is the step's amount, and its giver is gated at need one. With amount s at every step it is a relay with no excess and no dissipation that generates at (kind, carrier); at stock one its flow and levels are Reproduction.Relay's.",
+      "zh": "交接：在两个关系项上，轮到者持有该步之量，全部取走，并把下一步之量交给另一者。每个交接皆平衡，其每步的存量即该步之量，其给予者在所需一上受门控。每步之量为 s 时，它是无过度、无耗散的接力，在（种类，载体）上生成；在存量一时其流与水平同于存量为一的接力，网则不同。",
+      "declarations": [
+        "Becoming.LineageRegimes.Handover.holder",
+        "Becoming.LineageRegimes.Handover.pick",
+        "Becoming.LineageRegimes.Handover.pick_self",
+        "Becoming.LineageRegimes.Handover.pick_other",
+        "Becoming.LineageRegimes.Handover.pick_zero",
+        "Becoming.LineageRegimes.Handover.pick_le",
+        "Becoming.LineageRegimes.Handover.pick_back",
+        "Becoming.LineageRegimes.Handover.pick_pos",
+        "Becoming.LineageRegimes.Handover.pick_pos_mono",
+        "Becoming.LineageRegimes.Handover.flow",
+        "Becoming.LineageRegimes.Handover.web",
+        "Becoming.LineageRegimes.Handover.family",
+        "Becoming.LineageRegimes.Handover.exchange",
+        "Becoming.LineageRegimes.Handover.balances",
+        "Becoming.LineageRegimes.Handover.total_pick",
+        "Becoming.LineageRegimes.Handover.stock_eq",
+        "Becoming.LineageRegimes.Handover.uptake_pick",
+        "Becoming.LineageRegimes.Handover.replenish_pick",
+        "Becoming.LineageRegimes.Handover.uptake_eq",
+        "Becoming.LineageRegimes.Handover.replenishment_eq",
+        "Becoming.LineageRegimes.Handover.take_total",
+        "Becoming.LineageRegimes.Handover.give_total",
+        "Becoming.LineageRegimes.Handover.mem_family",
+        "Becoming.LineageRegimes.Handover.acting",
+        "Becoming.LineageRegimes.Handover.dependent",
+        "Becoming.LineageRegimes.Handover.embodied",
+        "Becoming.LineageRegimes.Handover.gated",
+        "Becoming.LineageRegimes.Handover.descends",
+        "Becoming.LineageRegimes.Handover.taken_eq",
+        "Becoming.LineageRegimes.Handover.relay",
+        "Becoming.LineageRegimes.Handover.relay_one_flow",
+        "Becoming.LineageRegimes.Handover.relay_descended",
+        "Becoming.LineageRegimes.Handover.relay_no_excess",
+        "Becoming.LineageRegimes.Handover.one_le_sign",
+        "Becoming.LineageRegimes.Handover.relay_not_dissipates",
+        "Becoming.LineageRegimes.Handover.relay_generates"
+      ]
+    },
+    {
+      "en": "The run-down, with amount s − t, has s steps of excess and dissipation at every step and degenerates through the gated regime at its horizon; the census holds, so the census reading and the dissipation corollary apply, while no handover meets the draw regime's premise over two or more steps. These show that the premises hold together, not that a regime is needed: nothing is active at step s.",
+      "zh": "衰减交接，每步之量为 s − t，有 s 步过度且每步被耗散，经门控之态在其视界处退化；普查成立，故普查读法与耗散推论亦适用；而没有交接在两步或更多步上满足汲取之态的前提。这些表明诸前提可同时成立，不表明需要某一态：第 s 步无一活跃。",
+      "declarations": [
+        "Becoming.LineageRegimes.Handover.draw_not_doubling",
+        "Becoming.LineageRegimes.Handover.not_draw_regime",
+        "Becoming.LineageRegimes.Handover.none_active",
+        "Becoming.LineageRegimes.Handover.runDown",
+        "Becoming.LineageRegimes.Handover.runKids",
+        "Becoming.LineageRegimes.Handover.runGenerations",
+        "Becoming.LineageRegimes.Handover.run_kid",
+        "Becoming.LineageRegimes.Handover.run_turn",
+        "Becoming.LineageRegimes.Handover.runDown_falls",
+        "Becoming.LineageRegimes.Handover.runDown_descended",
+        "Becoming.LineageRegimes.Handover.runDown_excess",
+        "Becoming.LineageRegimes.Handover.pred_sign",
+        "Becoming.LineageRegimes.Handover.runDown_dissipates",
+        "Becoming.LineageRegimes.Handover.run_member_before",
+        "Becoming.LineageRegimes.Handover.run_empty",
+        "Becoming.LineageRegimes.Handover.runDown_listed",
+        "Becoming.LineageRegimes.Handover.runDown_degenerates",
+        "Becoming.LineageRegimes.Handover.runDown_every_regime"
+      ]
+    },
+    {
+      "en": "The stock decides neither fate: for every stock s ≥ 1 the relay and the run-down start from the same stock s and meet the premises GatedPairCourse lists, which encodes no verdict; one generates and one degenerates, so no verdict on the region follows from the stock alone (a restatement of the pair with «生成退化不并»).",
+      "zh": "存量不决定任何一种命运：对每个存量 s ≥ 1，接力与衰减交接自同一存量 s 起，满足 GatedPairCourse 所列的前提（它不编码任何判决）；一个生成，一个退化，故仅由存量得不出关于域的判决（这对见证与 «生成退化不并» 合成的重述）。",
+      "declarations": [
+        "Becoming.LineageRegimes.Handover.both_fates",
+        "Becoming.LineageRegimes.GatedPairCourse",
+        "Becoming.LineageRegimes.stock_forces_neither"
+      ]
+    },
+    {
+      "en": "Renewal from outside, the boundary case: a renewer gives two units at every step and does not require the condition; two takers each take one; nothing is in excess, the condition is not dissipated on, and every formation is active and supported at every step. The gated premise fails at every need, so none of the three regimes binds.",
+      "zh": "来自外部的更新，边界情形：一个更新者每步给出两单位，且不依存于该条件；两个取者各取一；无物过度，条件不被耗散，每个形成每步皆活跃且受支持。门控前提在每一所需上都不成立，故三种态无一约束它。",
+      "declarations": [
+        "Becoming.LineageRegimes.FromOutside.flow",
+        "Becoming.LineageRegimes.FromOutside.web",
+        "Becoming.LineageRegimes.FromOutside.balances",
+        "Becoming.LineageRegimes.FromOutside.acting",
+        "Becoming.LineageRegimes.FromOutside.supported",
+        "Becoming.LineageRegimes.FromOutside.dependent",
+        "Becoming.LineageRegimes.FromOutside.not_gated",
+        "Becoming.LineageRegimes.FromOutside.from_outside"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number levels, needs, gifts, takes and offspring numbers; activity Prop-valued; a continuation advances the step by one.",
+      "zh": "自然数的水平、所需、给予、所取与后代数；活动取命题值；一个续使步数加一。"
+    },
+    {
+      "en": "Giving is not drawn from the giver's own level unless it takes, so a renewer can give from no listed condition: that is what \"from outside\" means.",
+      "zh": "给予者除非取，否则其给予不出自自身水平，故更新者可以不出自任何所列条件而给予：\"来自外部\"即此义。"
+    },
+    {
+      "en": "Descent as giving to what comes to stand on Flow X X; cohorts listed, so the takers' sizes are census sizes and each cohort lists no member twice; kinds supplied, one kind in the witnesses.",
+      "zh": "世系即在 Flow X X 上给予成立者；各代被列出，故取者的规模是普查的规模，每代不重复列出成员；种类给定，见证中只有一个种类。"
+    },
+    {
+      "en": "For the gated regime: balance, the coupled gate on members of the family at a need of at least m, only active formations giving, activity needing support, n steps of excess from a stock below n + m, and the premise on the line's reach: everything it reaches at T + n requires a member at such a need.",
+      "zh": "对门控之态：平衡、族中成员上所需至少为 m 的耦合门控、只有活跃形成给予、活动需要支持、自低于 n + m 的存量起 n 步过度，以及关于线之所及的前提：其于 T + n 所及者皆以此所需依存于某成员。"
+    },
+    {
+      "en": "For dissipation: balance and dissipation on the family across each step up to its stock, with the census holding every continuation. For the draw: balance and nothing given to the condition across the steps.",
+      "zh": "对耗散：族在直至其存量的每一步上平衡且被耗散，普查包含每个续。对汲取：平衡，且诸步中无物给予该条件。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every decider of a lineage's region is one of the three regimes: the classification is of these three laws.",
+      "zh": "世系之域的每个判定者都是三种态之一：此分类只关于这三条律。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the stock decides a lineage's region: at every stock both fates occur.",
+      "zh": "存量决定世系之域：在每一存量下两种命运皆出现。",
+      "kind": "non-implication",
+      "witness": "Becoming.LineageRegimes.stock_forces_neither"
+    },
+    {
+      "en": "That a regime is needed for an end: in the run-down nothing is active at its last step, which ends the line by itself.",
+      "zh": "终结需要某一态：在衰减交接中，最后一步无一活跃，这本身就使线终结。",
+      "kind": "non-implication",
+      "witness": "Becoming.LineageRegimes.Handover.none_active"
+    },
+    {
+      "en": "Which member of the takers' cohorts stops, and at which step: naming one asks to decide activity.",
+      "zh": "取者各代中哪个成员停止、在哪一步：指出一个需要判定活动。",
+      "kind": "scope"
+    },
+    {
+      "en": "That multiplying takers degenerate on the map in general: the witness reads it, through the horizon law.",
+      "zh": "倍增的取者在地图上一般地退化：只在见证中经视界之律读出。",
+      "kind": "scope"
+    },
+    {
+      "en": "A lineage reading of joint excess ending a renewal (Flow.joint_excess_ends).",
+      "zh": "共同过度终结更新（Flow.joint_excess_ends）的世系读法。",
+      "kind": "scope"
+    },
+    {
+      "en": "That any actual flow meets the premises.",
+      "zh": "任何实际的流满足这些前提。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+      "detail": {
+        "en": "Handover: from the same stock s, for every s ≥ 1, the relay generates and the run-down degenerates (LineageRegimes.Handover.both_fates).",
+        "zh": "Handover：对每个 s ≥ 1，自同一存量 s 起，接力生成而衰减交接退化（LineageRegimes.Handover.both_fates）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+      "detail": {
+        "en": "FromOutside: a renewer requiring nothing feeds two takers with nothing in excess or dissipated, every formation active and supported at every step, the gated premise failing at every need (LineageRegimes.FromOutside.from_outside, FromOutside.not_gated).",
+        "zh": "FromOutside：一个无所依存的更新者供给两个取者，无物过度或被耗散，每个形成每步皆活跃且受支持，门控前提在每一所需上都不成立（LineageRegimes.FromOutside.from_outside、FromOutside.not_gated）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+      "detail": {
+        "en": "Handover: no handover meets the draw regime's premise over two or more steps (LineageRegimes.Handover.not_draw_regime).",
+        "zh": "Handover：没有交接在两步或更多步上满足汲取之态的前提（LineageRegimes.Handover.not_draw_regime）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt PENDING, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 PENDING，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "Whether every decider of a lineage's region is one of the three regimes, or a further regime with its own horizon; a lineage reading of joint excess ending a renewal; and multiplying takers read on the map beyond the witness.",
+    "zh": "世系之域的每个判定者是否都是三种态之一，或另有一种有其自身视界的态；共同过度终结更新的世系读法；以及在见证之外于地图上读倍增的取者。"
+  },
+  "correspondence": {
+    "en": "The stock as a horizon is the Malthusian bound of a finite closed resource read on a lineage's region: the stock sets when the regime ends the line, not whether a lineage can go on. The draw on a condition given nothing is growth that at least doubles against a finite pool, lasting at most log₂ of the level plus one. Renewal from outside answers the scope limit of the gated conclusions, which do not reach renewal given from an outside source such as a sun. Readings (the AI's): among these laws, what ends a lineage is a regime, not a level.",
+    "zh": "作为视界的存量，是有限封闭资源的马尔萨斯界在世系之域上的读法：存量设定态何时终结线，不设定世系能否延续。对无所给予之条件的汲取，是面对有限之池至少倍增的增长，至多延续水平加一的 log₂。来自外部的更新回应门控结论的范围之限：它们不及于来自外部来源（如太阳）的更新。读法（AI 的）：在这些律中，使世系终结的是态，不是水平。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+  "aliases": [
+    "Becoming.LineageRegimes.degeneration_of_family_excess",
+    "Becoming.LineageRegimes.degeneration_of_family_excess_listed",
+    "Becoming.LineageRegimes.degeneration_at_stock_horizon",
+    "Becoming.LineageRegimes.dissipation_degenerates_every_member",
+    "Becoming.LineageRegimes.draw_doubling_needs",
+    "Becoming.LineageRegimes.multiplying_takers_need",
+    "Becoming.LineageRegimes.multiplying_takers_stop",
+    "Becoming.LineageRegimes.multiplying_takers_stop_of_need",
+    "Becoming.LineageRegimes.stock_forces_neither",
+    "Becoming.LineageRegimes.Handover.both_fates",
+    "Becoming.LineageRegimes.FromOutside.from_outside"
+  ],
+  "dependencies": [
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.family_excess_ends and Flow.family_excess_bounded (Becoming.Continuation): the gated regime on a family read as one, whose horizon the stock sets.",
+        "zh": "复用 Flow.family_excess_ends 与 Flow.family_excess_bounded（Becoming.Continuation）：读作一体之族上的门控之态，其视界由存量设定。"
+      }
+    },
+    {
+      "id": "own-count-misses-joint-excess",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.excess_bounded, and Alone as the gated neighbour of renewal from outside; FromOutside answers this record's scope limit that the gated conclusions do not reach renewal given from an outside source.",
+        "zh": "复用 Flow.excess_bounded，以 Alone 为来自外部之更新的门控近邻；FromOutside 回应此记录的范围之限：门控结论不及于来自外部来源的更新。"
+      }
+    },
+    {
+      "id": "what-bounds-offspring-numbers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reproduction.Flow.lineage_ends and Reproduction.Generations.empty_from: the dissipation regime, read on every member of every cohort; the stock-one relay, whose flow and levels the handover relay matches at stock one.",
+        "zh": "复用 Reproduction.Flow.lineage_ends 与 Reproduction.Generations.empty_from：耗散之态，读于每代每个成员；存量为一的接力，交接接力在存量一时与其流与水平相同。"
+      }
+    },
+    {
+      "id": "mutual-dependence-and-its-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.Balances.doubling_needs and DoublingDraw (Becoming.MutualDependence): the draw on a condition given nothing, of which draw_doubling_needs is the generalization.",
+        "zh": "复用 Flow.Balances.doubling_needs 与 DoublingDraw（Becoming.MutualDependence）：对无所给予之条件的汲取，draw_doubling_needs 是其推广。"
+      }
+    },
+    {
+      "id": "the-selection-term-and-a-lineages-fate",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Becoming.LineageRegions, imported: the lineage continuation, the census premise (ContinuationsListed) and degeneration_of_dissipation, which the dissipation corollary extends to every cohort.",
+        "zh": "复用已导入的 Becoming.LineageRegions：世系之续、普查前提（ContinuationsListed）与 degeneration_of_dissipation，耗散推论把后者推广到每一代。"
+      }
+    },
+    {
+      "id": "degeneration-from-a-horizon",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.family_excess_degenerates and Web.kind_every_branch_ends_of_gone (Becoming.LineDegeneration): the gated regime's lineage reading at the kind grain, and the takers' witness read on the map.",
+        "zh": "复用 Web.family_excess_degenerates 与 Web.kind_every_branch_ends_of_gone（Becoming.LineDegeneration）：门控之态在种类粒度上的世系读法，以及取者见证在地图上的读法。"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«生成退化不并»: generation and degeneration exclude each other, so the two fates from one stock show that the stock decides neither.",
+        "zh": "复用 «生成退化不并»：生成与退化互斥，故同一存量的两种命运表明存量不决定任何一种。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "whole-drawing-beyond-renewal-ends",
+      "detail": {
+        "en": "There a whole drawing beyond its gated renewal ends; here that gated regime is read on a lineage's region, with the stock as its horizon.",
+        "zh": "那里超出其门控更新而汲取的整体终结；此处把该门控之态读在世系之域上，以存量为其视界。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+      "role": "proof",
+      "sha256": "d1c123edee1618429ab9db66ce56e4b099b0a2f29c34fb2ef64c163e24467cc9",
+      "declarations": [
+        "Becoming.LineageRegimes.FromOutside.acting",
+        "Becoming.LineageRegimes.FromOutside.balances",
+        "Becoming.LineageRegimes.FromOutside.dependent",
+        "Becoming.LineageRegimes.FromOutside.flow",
+        "Becoming.LineageRegimes.FromOutside.from_outside",
+        "Becoming.LineageRegimes.FromOutside.not_gated",
+        "Becoming.LineageRegimes.FromOutside.supported",
+        "Becoming.LineageRegimes.FromOutside.web",
+        "Becoming.LineageRegimes.GatedPairCourse",
+        "Becoming.LineageRegimes.Handover.acting",
+        "Becoming.LineageRegimes.Handover.balances",
+        "Becoming.LineageRegimes.Handover.both_fates",
+        "Becoming.LineageRegimes.Handover.dependent",
+        "Becoming.LineageRegimes.Handover.descends",
+        "Becoming.LineageRegimes.Handover.draw_not_doubling",
+        "Becoming.LineageRegimes.Handover.embodied",
+        "Becoming.LineageRegimes.Handover.exchange",
+        "Becoming.LineageRegimes.Handover.family",
+        "Becoming.LineageRegimes.Handover.flow",
+        "Becoming.LineageRegimes.Handover.gated",
+        "Becoming.LineageRegimes.Handover.give_total",
+        "Becoming.LineageRegimes.Handover.holder",
+        "Becoming.LineageRegimes.Handover.mem_family",
+        "Becoming.LineageRegimes.Handover.none_active",
+        "Becoming.LineageRegimes.Handover.not_draw_regime",
+        "Becoming.LineageRegimes.Handover.one_le_sign",
+        "Becoming.LineageRegimes.Handover.pick",
+        "Becoming.LineageRegimes.Handover.pick_back",
+        "Becoming.LineageRegimes.Handover.pick_le",
+        "Becoming.LineageRegimes.Handover.pick_other",
+        "Becoming.LineageRegimes.Handover.pick_pos",
+        "Becoming.LineageRegimes.Handover.pick_pos_mono",
+        "Becoming.LineageRegimes.Handover.pick_self",
+        "Becoming.LineageRegimes.Handover.pick_zero",
+        "Becoming.LineageRegimes.Handover.pred_sign",
+        "Becoming.LineageRegimes.Handover.relay",
+        "Becoming.LineageRegimes.Handover.relay_descended",
+        "Becoming.LineageRegimes.Handover.relay_generates",
+        "Becoming.LineageRegimes.Handover.relay_no_excess",
+        "Becoming.LineageRegimes.Handover.relay_not_dissipates",
+        "Becoming.LineageRegimes.Handover.relay_one_flow",
+        "Becoming.LineageRegimes.Handover.replenish_pick",
+        "Becoming.LineageRegimes.Handover.replenishment_eq",
+        "Becoming.LineageRegimes.Handover.runDown",
+        "Becoming.LineageRegimes.Handover.runDown_degenerates",
+        "Becoming.LineageRegimes.Handover.runDown_descended",
+        "Becoming.LineageRegimes.Handover.runDown_dissipates",
+        "Becoming.LineageRegimes.Handover.runDown_every_regime",
+        "Becoming.LineageRegimes.Handover.runDown_excess",
+        "Becoming.LineageRegimes.Handover.runDown_falls",
+        "Becoming.LineageRegimes.Handover.runDown_listed",
+        "Becoming.LineageRegimes.Handover.runGenerations",
+        "Becoming.LineageRegimes.Handover.runKids",
+        "Becoming.LineageRegimes.Handover.run_empty",
+        "Becoming.LineageRegimes.Handover.run_kid",
+        "Becoming.LineageRegimes.Handover.run_member_before",
+        "Becoming.LineageRegimes.Handover.run_turn",
+        "Becoming.LineageRegimes.Handover.stock_eq",
+        "Becoming.LineageRegimes.Handover.take_total",
+        "Becoming.LineageRegimes.Handover.taken_eq",
+        "Becoming.LineageRegimes.Handover.total_pick",
+        "Becoming.LineageRegimes.Handover.uptake_eq",
+        "Becoming.LineageRegimes.Handover.uptake_pick",
+        "Becoming.LineageRegimes.Handover.web",
+        "Becoming.LineageRegimes.MultiplyingTakers.acting",
+        "Becoming.LineageRegimes.MultiplyingTakers.balances",
+        "Becoming.LineageRegimes.MultiplyingTakers.degenerates",
+        "Becoming.LineageRegimes.MultiplyingTakers.dependent",
+        "Becoming.LineageRegimes.MultiplyingTakers.descended",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_first",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_second",
+        "Becoming.LineageRegimes.MultiplyingTakers.distinct_third",
+        "Becoming.LineageRegimes.MultiplyingTakers.draws",
+        "Becoming.LineageRegimes.MultiplyingTakers.family_three",
+        "Becoming.LineageRegimes.MultiplyingTakers.family_two",
+        "Becoming.LineageRegimes.MultiplyingTakers.flow",
+        "Becoming.LineageRegimes.MultiplyingTakers.generations",
+        "Becoming.LineageRegimes.MultiplyingTakers.give",
+        "Becoming.LineageRegimes.MultiplyingTakers.inactive",
+        "Becoming.LineageRegimes.MultiplyingTakers.kids",
+        "Becoming.LineageRegimes.MultiplyingTakers.level",
+        "Becoming.LineageRegimes.MultiplyingTakers.multiplies",
+        "Becoming.LineageRegimes.MultiplyingTakers.multiplying",
+        "Becoming.LineageRegimes.MultiplyingTakers.needs",
+        "Becoming.LineageRegimes.MultiplyingTakers.needsPool",
+        "Becoming.LineageRegimes.MultiplyingTakers.pool_of_needs",
+        "Becoming.LineageRegimes.MultiplyingTakers.pool_required",
+        "Becoming.LineageRegimes.MultiplyingTakers.present",
+        "Becoming.LineageRegimes.MultiplyingTakers.stops_of_need",
+        "Becoming.LineageRegimes.MultiplyingTakers.take",
+        "Becoming.LineageRegimes.MultiplyingTakers.takesNeed",
+        "Becoming.LineageRegimes.MultiplyingTakers.unfed",
+        "Becoming.LineageRegimes.MultiplyingTakers.unsupported",
+        "Becoming.LineageRegimes.MultiplyingTakers.web",
+        "Becoming.LineageRegimes.degeneration_at_stock_horizon",
+        "Becoming.LineageRegimes.degeneration_of_family_excess",
+        "Becoming.LineageRegimes.degeneration_of_family_excess_listed",
+        "Becoming.LineageRegimes.dissipation_degenerates_every_member",
+        "Becoming.LineageRegimes.doubling_needs_of_draw",
+        "Becoming.LineageRegimes.draw_doubling_needs",
+        "Becoming.LineageRegimes.exceeds_doubles",
+        "Becoming.LineageRegimes.excess_within_level",
+        "Becoming.LineageRegimes.family_excess_not_past_stock",
+        "Becoming.LineageRegimes.family_excess_within_stock",
+        "Becoming.LineageRegimes.multiplying_takers_need",
+        "Becoming.LineageRegimes.multiplying_takers_stop",
+        "Becoming.LineageRegimes.multiplying_takers_stop_of_need",
+        "Becoming.LineageRegimes.pow_le_drawnBefore_of_ge",
+        "Becoming.LineageRegimes.size_le_taken",
+        "Becoming.LineageRegimes.sizes_double",
+        "Becoming.LineageRegimes.stock_forces_neither"
+      ]
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineageRegimes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (evolution read on the root, its part EL2): added as a record of its own rather than an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends: the lineage reading of the gated regime with its new premise on the line's reach, both fates at every stock, the takers' law for the draw and the renewal-from-outside witness.",
+      "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL2 部分）：作为独立记录新增，而非对 what-bounds-offspring-numbers 与 whole-drawing-beyond-renewal-ends 的修订：门控之态的世系读法及其关于线之所及的新前提、每一存量下的两种命运、汲取的取者之律，以及来自外部之更新的见证。"
+    }
+  ]
+}
