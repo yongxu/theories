@@ -3596,8 +3596,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   each reading has one good move, the converse with `Viability.ChoiceOver`
   (`uniform_policy_iff_fiber_feasible`), and, every reading given by some configuration, exactly
   where a response common over the reading's sameness does (`uniform_policy_iff_common`, through
-  `Becoming.CommonResponse`), a reading no configuration gives can leave a common response with
-  no choice from readings (`ungiven_reading_not_uniform`); endpoint access can hide a gap that an
+  `Becoming.CommonResponse`), a reading no configuration gives, with no move at all, can leave a
+  common response with no choice from readings (`ungiven_reading_not_uniform`); endpoint access can hide a gap that an
   overlapping handoff closes (`endpoint_access_hides_gap`, `overlapping_handoff_keeps_access`).
 * `Becoming.OpenedCorrection` (L1): a revision of a reading that opens a correction, along one
   process. Correctable at a configuration: a fitting uniform policy exists through the reading in

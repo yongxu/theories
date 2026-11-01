@@ -89,16 +89,16 @@ assert len(d['laws']) == 6, len(d['laws'])
 d['laws'].append({
     'en': ("The rule's converse, at any type: given a choice over the readings and every reading given by some "
            "situation, a rule from readings meeting the requirement exists exactly where a response common over the "
-           "reading's sameness does; with that choice and a reading no situation gives, a common response can exist "
-           "with no such rule."),
+           "reading's sameness does; with that choice, no situation and no act, a common response exists with no such "
+           "rule, so the readings' being given cannot simply be dropped."),
     'zh': ("规则之逆，对任一类型：给定读数上的选择，且每一读数皆由某一情境给出，则合乎要求、由读数而定的规则存在，"
-           "当且仅当对读之同的共应存在；有此选择而有一读数无情境给出时，共应可存在而无此规则。"),
+           "当且仅当对读之同的共应存在；有此选择而无情境亦无行时，共应存在而无此规则，故读数皆被给出不可径去。"),
     'declarations': BRIDGE,
 })
 d['hypotheses'].append({
     'en': ("For the seventh law only: a choice over the readings (`Viability.ChoiceOver`) and every reading given by "
-           "some situation, each named as a hypothesis, the second shown to do work by a witness."),
-    'zh': "仅第七律：读数上的选择（`Viability.ChoiceOver`）与每一读数皆由某一情境给出，各列为前提，第二者由见证表明其作用。",
+           "some situation, each named as a hypothesis; the second cannot simply be dropped, by a witness with no situation and no act."),
+    'zh': "仅第七律：读数上的选择（`Viability.ChoiceOver`）与每一读数皆由某一情境给出，各列为前提；第二者不可径去，见证中既无情境亦无行。",
 })
 conv = [x for x in d['does_not_show'] if x.get('kind') == 'converse']
 assert len(conv) == 1, conv
@@ -114,9 +114,9 @@ d['dependencies'].append({
     'relation': 'formal-reuse',
     'detail': {
         'en': ("The seventh law reads that record's uniform policy: uniform_policy_iff_common is its "
-               "uniform_policy_iff_fiber_feasible with the condition rearranged into this record's covering law, and "
+               "uniform_policy_iff_fiber_feasible with, every reading given, the condition rearranged into this record's covering law, and "
                "its example statewise_not_uniform is re-proved from this record's witness, its statement unchanged."),
-        'zh': ("第七律读该记录之一致策略：uniform_policy_iff_common 即其 uniform_policy_iff_fiber_feasible，条件改写为本记录之"
+        'zh': ("第七律读该记录之一致策略：uniform_policy_iff_common 即其 uniform_policy_iff_fiber_feasible，每一读数皆被给出时，条件改写为本记录之"
                "遍盖律；其例 statewise_not_uniform 由本记录之见证重证，陈述不变。"),
     },
 })
@@ -154,16 +154,17 @@ p = RECORDS / 'when-to-inquire-and-when-to-respond.json'
 d = json.loads(p.read_text(encoding='utf-8'))
 d['history'].append({
     'en': (f"{TODAY}: statewise_not_uniform (law 2) re-proved from the core's witness «共应之例».EachNotCommon, its "
-           "statement unchanged; GuardHorizon gains uniform_policy_iff_common, law 1's equivalence with the "
-           "condition read as a response common over the reading's sameness, recorded as the seventh law of "
+           "statement unchanged; GuardHorizon gains uniform_policy_iff_common: with every reading given by some "
+           "configuration, law 1's equivalence with the condition read as a response common over the reading's "
+           "sameness, recorded as the seventh law of "
            "a-response-common-over-a-reading."),
     'zh': (f"2026年11月2日：statewise_not_uniform（第 2 律）由核心见证 «共应之例».EachNotCommon 重证，陈述不变；"
-           "GuardHorizon 新增 uniform_policy_iff_common，即第 1 律之等价，其条件读作对读之同的共应，记为 "
+           "GuardHorizon 新增 uniform_policy_iff_common：每一读数皆由某一配置给出时，即第 1 律之等价，其条件读作对读之同的共应，记为 "
            "a-response-common-over-a-reading 之第七律。"),
 })
 if not any(x['id'] == 'a-response-common-over-a-reading' for x in d.get('related', [])):
     d.setdefault('related', []).append({'id': 'a-response-common-over-a-reading', 'detail': {
-        'en': "Its seventh law reads law 1's equivalence with the condition as a response common over the reading's sameness.",
-        'zh': '其第七律把第 1 律之等价的条件读作对读之同的共应。'}})
+        'en': "Its seventh law reads law 1's equivalence, with every reading given by some configuration, with the condition as a response common over the reading's sameness.",
+        'zh': '其第七律在每一读数皆由某一配置给出时，把第 1 律之等价的条件读作对读之同的共应。'}})
 p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('reland:', counts[:110], '...; study section', N, '; two records written')
