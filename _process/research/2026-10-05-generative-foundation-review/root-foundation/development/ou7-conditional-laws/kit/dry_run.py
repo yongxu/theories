@@ -220,6 +220,8 @@ def synthetic_receipt():
         if path.endswith('.lean'):
             module = 'Becoming.' + path[len(PKG + 'Becoming/'):-len('.lean')].replace('/', '.')
             r['source_sha256'][module] = hashlib.sha256((TREE / path).read_bytes()).hexdigest()
+    if run('git', 'diff', '--name-only', 'HEAD', '--', PKG + 'Becoming.lean').stdout.strip():     # the root module
+        r['source_sha256']['Becoming'] = hashlib.sha256((TREE / PKG / 'Becoming.lean').read_bytes()).hexdigest()
     for module in mr.BELOW:     # exactly the declarations the patches add, as the audit checks
         for name in sorted((mr.PATCHED & mr.BELOW_NAMES[module]) - {d['name'] for d in by[module]['declarations']}):
             by[module]['declarations'].append({'kind': 'theorem', 'name': name})

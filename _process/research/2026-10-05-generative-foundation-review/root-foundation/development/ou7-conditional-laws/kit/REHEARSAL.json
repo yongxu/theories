@@ -1,20 +1,357 @@
 {
- "what": "The rehearsal's Lean step for the grammar's owner's patches, outside the repository: main's GrammarLaws, GrammarCrossing, Standpoints, ConveyanceBoundaries and BalanceRegions with patches/owner/01-04 applied in series, beside four scratch modules, not for the package, that check from GrammarCrossing, ConveyanceBoundaries, GrammarPath and BalanceRegions that every name the patches move or define anew resolves as before, to its old statement. scratch_build.py built them and their import closure against the package's shared step cache, which reuses passed steps.",
+ "what": "OU7's full rehearsal: every Lean file the kit's apply and both stages change or add, at its package path, with every module of the package downstream of them and the root (376 targets; their import closure, 383 modules), built by the package's scratch_build.py outside the repository, inside the coordinator's gate. A working build, not a receipt: the environment audit, the controls, the prelude-only compile and the core receipt are the landing's core run, which reuses every step that passed here.",
  "date": "2026-11-01",
- "started_utc": "2026-10-31T23:37:50Z",
+ "started_utc": "2026-11-01T03:55:51Z",
+ "finished_utc": "2026-11-01T03:58:26Z",
  "gate": {
-  "rule": "the coordinator's: the 5-minute load under 24, memory_pressure at least 40% free, and fewer than two Lean runs (pgrep -fl 'lake|lean ')",
+  "rule": "the coordinator's: the 5-minute load under 24, memory_pressure at least 40% free, and fewer than two Lean runs (pgrep -f 'toolchains/.*/bin/lean', which matches Lean processes only), checked every minute until met",
   "at_start": {
-   "load_5min": 5.5,
-   "memory_free_percent": 66,
-   "lean_runs": 0
+   "load_1_5_15": "{ 10.87 22.73 24.17 }",
+   "load_5min": 22.73,
+   "memory_free_percent": 60,
+   "lean_runs": 0,
+   "polls": 18
   }
  },
+ "scope": "Every module downstream of the changes, not only Persistence and the modules importing Identity (214 with the changed modules): the landing's core run rebuilds all of them, so the machine time is the same either way, the landing reuses every step, and a break outside Identity's cone (an old name of 20-nd's) shows here. OU's owner and the coordinator agreed.",
  "base": {
-  "commit": "8f11b43bd",
-  "note": "The five files are main's at 8f11b43bd, unchanged at 6eba2890d: blobs GrammarLaws 0482974, GrammarCrossing 53933e9, Standpoints cb7e18e, ConveyanceBoundaries 3858e34, BalanceRegions 7f90db3. Applied in series to main's files at 6eba2890d, the four patches make the tree's five files byte for byte. The kit's other patches change no file these import or are imported by among the five."
+  "main": "9a01af14e",
+  "kit": "9ea63b384",
+  "note": "The dry run's tree on main at 9a01af14e (ca73609f8, EL landed, is in it), this branch at 9ea63b384 merged with it, after prepare and apply with both stages in place: the kit's patches, the owner's 01-04, the three leaves and their joins, then 10-u4c's 33 patches and 20-nd's 43, patch by patch. Its synthetic receipt (20261101T032611.121204Z) recorded each changed source's hash right after apply. Main has since moved by documents only (the collective page's text-review fixes, OPENING's version 13) up to UE28's head claim 1f1bbb543."
  },
- "patches": [
+ "stages": {
+  "10-u4c": {
+   "from": "branch u4c at d5d034614, cut on main 4a86127e4",
+   "patches": [
+    {
+     "path": "stages/10-u4c/01-Prelude.patch",
+     "sha256": "9003cf843e22a8fea901edabde60df623e0a62b2edda70fe246bb2a195cd9752"
+    },
+    {
+     "path": "stages/10-u4c/02-GrammarLaws.patch",
+     "sha256": "0e6c18c68da4f716cd1d89c8ea5d5623a7e6a2e20c3ce1b69047f868e85dbb09"
+    },
+    {
+     "path": "stages/10-u4c/03-Arising.patch",
+     "sha256": "970e7b16bae864c93501166847b01f8b146f8d7506a64019cb16833e181a03cc"
+    },
+    {
+     "path": "stages/10-u4c/04-Change.patch",
+     "sha256": "2c02773bbda0d1662f764af83ed670b52cd53ff3f4f16a0b99ad940f49e7ab9b"
+    },
+    {
+     "path": "stages/10-u4c/05-Flow.patch",
+     "sha256": "38527609f99566b6a9369facf36e9e3503f85aa9e4c83bb2c89879a7236cfdf3"
+    },
+    {
+     "path": "stages/10-u4c/06-Population.patch",
+     "sha256": "aff6185d22f4d073530da4ce6108d4285ac8e1b28618edcc74c9fcafb81877ae"
+    },
+    {
+     "path": "stages/10-u4c/07-Identity.patch",
+     "sha256": "fe78352db6c5ec57a587735fe008c70f5b118889f72273fedd8589a5cb476c82"
+    },
+    {
+     "path": "stages/10-u4c/08-u4c-design.patch",
+     "sha256": "1f2cf7c3ad8d3eac127c6cb7efc553f0ecc1dded83bec8f2bf0c1cde14ad54dc"
+    },
+    {
+     "path": "stages/10-u4c/09-WHAT-REMAINS.patch",
+     "sha256": "3bb5f935258daaf7ac62e95228d207e9603bfc96b3b13b372245dd8846d14bc7"
+    },
+    {
+     "path": "stages/10-u4c/10-01-ROOT.patch",
+     "sha256": "13c0df517a4f1626a5a7d54bed0bacd55188ce08d9395ba7fc6a9e99b7d9f3c3"
+    },
+    {
+     "path": "stages/10-u4c/11-08-METHOD.patch",
+     "sha256": "21c173e0697a2d80b7a056a0b6491028f84083f4ce5d99323d5913dd448c8027"
+    },
+    {
+     "path": "stages/10-u4c/12-bounded-census-keeps-pace.patch",
+     "sha256": "fc0cec8e4a0f9154069198de0d5af894c3a048b3d929221a3e2618b0c9c6ce0c"
+    },
+    {
+     "path": "stages/10-u4c/13-ceasing-needs-arising.patch",
+     "sha256": "3d3f3cc19d3087ddd22cb439b97b8ace5ca45c9aa526eb9cb7f7a10ddba85ab8"
+    },
+    {
+     "path": "stages/10-u4c/14-census-balance-under-continuation.patch",
+     "sha256": "f5e3cf2f4ff3b581218f7ee74e45f1f05a64f72120c2e20e02bef167a318ec27"
+    },
+    {
+     "path": "stages/10-u4c/15-census-balance.patch",
+     "sha256": "f982787988b158f4e4ea1a83061334c549780f294b41442d2da3a525ee2251f7"
+    },
+    {
+     "path": "stages/10-u4c/16-closing-needs-net-draw.patch",
+     "sha256": "5ba3c649b05c925f729d074a83097b01d7003322692defdb5169a2e80dac2b02"
+    },
+    {
+     "path": "stages/10-u4c/17-coming-and-ceasing-keep-pace.patch",
+     "sha256": "0a301fb28a5c5d95861e0aa6ab1e848dec2e1ebb3049471fa8af60c988a33255"
+    },
+    {
+     "path": "stages/10-u4c/18-continued-change-needs-openness.patch",
+     "sha256": "f2f5a8d009a4f89959d3db7c227ef8c36569090f4c485edd65830f66f2f640d4"
+    },
+    {
+     "path": "stages/10-u4c/19-counting-under-enclosure.patch",
+     "sha256": "cd2ac0746c77341031cfc351e5d3ba7f987c3f0ba88e67713b8a695311e63bb2"
+    },
+    {
+     "path": "stages/10-u4c/20-generation-is-replenishment.patch",
+     "sha256": "11c5f6612011eac865a4abede5ba3a9b8d82ab894e38096977bfe50c804efae9"
+    },
+    {
+     "path": "stages/10-u4c/21-how-often-couplings-act.patch",
+     "sha256": "edd5765e826f7b2a03e6024b7e7f12c779500676d397bb98c19729973a008683"
+    },
+    {
+     "path": "stages/10-u4c/22-identity-across-steps.patch",
+     "sha256": "0cf03361b6b6c53a79e5c7c4d01c642489d566b41af5c71ed3a8728dcd21e758"
+    },
+    {
+     "path": "stages/10-u4c/23-laws-of-one-step.patch",
+     "sha256": "703adbc1a5c6bbdcab9a20de0790b1246f88d93de5ec922cf47eac2041035b47"
+    },
+    {
+     "path": "stages/10-u4c/24-master-laws-on-the-grammar.patch",
+     "sha256": "af76f1268496363dea94a33fd62ac440a5238884a73fafe409d13f57e7b59b70"
+    },
+    {
+     "path": "stages/10-u4c/25-more-needs-renewers.patch",
+     "sha256": "9553bb8a7b14710b7b54dbfb86599eca87abacde11aed440b50a4913bf9c3fb9"
+    },
+    {
+     "path": "stages/10-u4c/26-no-finite-part-bears-taking.patch",
+     "sha256": "6b6cbb7f00031ffc68b6ea794fc0b7a9536fc2e95da180a27644067ec7bfd60d"
+    },
+    {
+     "path": "stages/10-u4c/27-one-root-to-its-edge.patch",
+     "sha256": "bd5d87d7abe543603d708f3e3a15b5f85ddd53cc0e8c2dd056ad57292d7f3579"
+    },
+    {
+     "path": "stages/10-u4c/28-orders-as-a-sum-over-histories.patch",
+     "sha256": "3c5bb4647c01dc8f795ce96fcc7ba9010a487429c15c61b5e1cf13b5454cbdc1"
+    },
+    {
+     "path": "stages/10-u4c/29-rest-at-every-resolution.patch",
+     "sha256": "014fe4bf2f8a2bebf62aec10483f9d44d59a877cd8cebf11d679ec97ced9985b"
+    },
+    {
+     "path": "stages/10-u4c/30-rising-and-falling-in-one-exchange.patch",
+     "sha256": "e9070b8bc9b54005fd42742eec397814e5579619e018246fcbb9c53597945e80"
+    },
+    {
+     "path": "stages/10-u4c/31-support-from-the-supported.patch",
+     "sha256": "55dad21deed48b2ef9532763dca0850f632c54243d14246eb84a1199d795c490"
+    },
+    {
+     "path": "stages/10-u4c/32-what-a-cut-loses.patch",
+     "sha256": "1d4d0815ca8c991efb478cb790c5fd66a28a129a2316f77c445c4f2cbcb8a3c4"
+    },
+    {
+     "path": "stages/10-u4c/33-whole-law-of-counting.patch",
+     "sha256": "c574764f8b626785062549beb2eee217ed861853dd4f24a25f7b0760d33b970c"
+    }
+   ]
+  },
+  "20-nd": {
+   "from": "branch nd-stage at 24d4aef64",
+   "patches": [
+    {
+     "path": "stages/20-nd/01-DECIDABILITY-INVENTORY.patch",
+     "sha256": "735f01a6fe6935fc61fbdfd094ddf6885cf77de2237c0c79d8a0028f95d21500"
+    },
+    {
+     "path": "stages/20-nd/02-DECIDABILITY-INVENTORY-py.patch",
+     "sha256": "234872e63527ee252b9f1a5c1cb9bc9d2bdd13df6a89d30d96f384499bcde0cc"
+    },
+    {
+     "path": "stages/20-nd/03-DECIDABILITY-INVENTORY.zh.patch",
+     "sha256": "8378fb4b080e99bce6fac4240c2d402e277e8f8d0506ecd82e4c23f767391506"
+    },
+    {
+     "path": "stages/20-nd/05-SCIENCES.patch",
+     "sha256": "787576ac8281c430827ffb343e0f576c08e48898045e36336c03b11ab8b558b5"
+    },
+    {
+     "path": "stages/20-nd/06-Becoming.patch",
+     "sha256": "748aaa71db05751b7dda4f0350f3f097bc8f5c18f853e9ca69670429b3fdc4a3"
+    },
+    {
+     "path": "stages/20-nd/07-Amounts.patch",
+     "sha256": "53ac3c699a3f59d49dc72cc1a9a1354aa2f992da511dbd26081b78238e289c58"
+    },
+    {
+     "path": "stages/20-nd/08-CensusBinding.patch",
+     "sha256": "04312754fe44fb4e142da4ca5c8286af6624cb7ea400abfd638d9d31c415cfb8"
+    },
+    {
+     "path": "stages/20-nd/09-CensusCounts.patch",
+     "sha256": "3e2d75f516419fa4aa815e8e863d6bb1e8539fcaa67ddb813142cea31ad11c8f"
+    },
+    {
+     "path": "stages/20-nd/10-CensusTable.patch",
+     "sha256": "8ca0bda1f0ef12cbcc8d6e5605862c0b3e99abdee984f0238a7ce50d2f891df4"
+    },
+    {
+     "path": "stages/20-nd/11-Counting.patch",
+     "sha256": "b67c287a7e073370ddd5dcdf53a16039f3b7204cdb4caa587dfef28a2b4bc85f"
+    },
+    {
+     "path": "stages/20-nd/12-Decidedness.patch",
+     "sha256": "14633177b2ca2ee231348cdad61cc8a70bf48d741cd7faa1af80bd46fa277709"
+    },
+    {
+     "path": "stages/20-nd/13-GrammarLaws.patch",
+     "sha256": "92247188db336a40d4c47d3649045e480794eebc52c0968be55785c971a2064b"
+    },
+    {
+     "path": "stages/20-nd/14-Joint.patch",
+     "sha256": "d64f3eb4aac9a23a4f0097d063d36e8c99ce57da8667da13cae8441ec7a47812"
+    },
+    {
+     "path": "stages/20-nd/15-Locality.patch",
+     "sha256": "ca0f0ceccfd299dbee234ae5adc251f3f049e009d3bf52cfd7a45329234016a5"
+    },
+    {
+     "path": "stages/20-nd/16-ModelStatements.patch",
+     "sha256": "fa27db241e4f001700854d4a769cfe049048ff8bd2dece7370ca71fb061a1964"
+    },
+    {
+     "path": "stages/20-nd/17-OneStep.patch",
+     "sha256": "1b4e65d390613b77ab648fc9431e28064c0bbfb33e6dddd02a19f383d4c24f1b"
+    },
+    {
+     "path": "stages/20-nd/18-Population.patch",
+     "sha256": "7876cf10d9693a01e5c09acf858d0db3e83c173ac557064a7552cf32964bf10c"
+    },
+    {
+     "path": "stages/20-nd/19-ReadingLoop.patch",
+     "sha256": "3b9a98ad87913c64a6a2ed350bebb9a187d2100a65112f627b07e48bcc376e8d"
+    },
+    {
+     "path": "stages/20-nd/20-RegimeMargin.patch",
+     "sha256": "ad6d24dc841daac5a4637b4a17b89d8d519c25d32159a9581dad87f1290004e1"
+    },
+    {
+     "path": "stages/20-nd/21-Situations.patch",
+     "sha256": "220960a9bfa8df78d2c70c40452182b807fa94915f0a875d9cbe2318a9c3a078"
+    },
+    {
+     "path": "stages/20-nd/22-Standing.patch",
+     "sha256": "188cb80904d74084b2671ea6dac85456160e93848da3cfed92f2262c16616a67"
+    },
+    {
+     "path": "stages/20-nd/23-Lean-README.patch",
+     "sha256": "627f86e3a90441c2de57e74f77cc9203b677424aa09ad9b6a0eff358b869cb14"
+    },
+    {
+     "path": "stages/20-nd/24-Lean-README.zh.patch",
+     "sha256": "c9f94ac20197189e609d44a718caba9bf00a1b141cf6eadfaa67f83ac2335316"
+    },
+    {
+     "path": "stages/20-nd/25-COLLECTIVE-DIRECTION.patch",
+     "sha256": "221e29b5aca3513941173ec9a44721dc9408529cc128c0d890b4f9fa4eb8355a"
+    },
+    {
+     "path": "stages/20-nd/26-02-MAP.patch",
+     "sha256": "7403f4f7464742d8bee78b472e10cf4d753a9decfb8d5a1e134821003c36f466"
+    },
+    {
+     "path": "stages/20-nd/27-03-KNOWING.patch",
+     "sha256": "97232cc461cb8feabbf8d83b68a04d735506281be216a435998129623aab665c"
+    },
+    {
+     "path": "stages/20-nd/28-05-COLLECTIVES.patch",
+     "sha256": "97e276067da337df9ea776323a2c5ffc1c15757d66cf7ec1eb72d11fe362ce7e"
+    },
+    {
+     "path": "stages/20-nd/29-06-CLASSICAL-TEXTS.patch",
+     "sha256": "9bd2377e410f1bd3083c9b5dd301bb1ffb46f04fd5c78f41eb92eab5a9b722b5"
+    },
+    {
+     "path": "stages/20-nd/30-a-reading-kept-by-its-update.patch",
+     "sha256": "3c5b0002039875be8b0e6ab7d70688a896b966fee130c6903510cdf51bc8955f"
+    },
+    {
+     "path": "stages/20-nd/31-balance-from-the-first-law.patch",
+     "sha256": "c75f6afc92160bf12a9635de4cc82a5f32bb06ba3d4bce986534e95327bb437c"
+    },
+    {
+     "path": "stages/20-nd/32-conditioning-by-restriction.patch",
+     "sha256": "e379e1c4487cf2a07dab4aa48115a7e5afeb38e2a29c74c3fa22fd210d34c08c"
+    },
+    {
+     "path": "stages/20-nd/33-counting-standing-and-dependence.patch",
+     "sha256": "c6715e0d2d137548bddf86ee45cda880609aa06e2931138afbc2d9397e3ca509"
+    },
+    {
+     "path": "stages/20-nd/34-counting-under-enclosure.patch",
+     "sha256": "9859a9800a5f5511f03e2e5c315d90c84dcf2bafc80009a645e61cca6288bab1"
+    },
+    {
+     "path": "stages/20-nd/35-counting-where-the-counts-exist.patch",
+     "sha256": "d1f7cc426af93c75bca15a44893edc46addb28de6932094cd1438ba51e95a7f7"
+    },
+    {
+     "path": "stages/20-nd/36-finite-aggregation-within-restorable-basic-losses.patch",
+     "sha256": "df70dfee8cca8b78904bb30255ef69591f9feea4e6ba7566d964574f0b9f8d9e"
+    },
+    {
+     "path": "stages/20-nd/37-joint-difference-making.patch",
+     "sha256": "b2011edbec7db8d81f097620ae5dd8d466a74396af3c57cfbd7fd63946ae0a0d"
+    },
+    {
+     "path": "stages/20-nd/38-laws-of-one-step-complete.patch",
+     "sha256": "eed058dbdf5c9d6ba0c0abf38af2e4a0111a4f05824eb8e0d9005a8fc7532740"
+    },
+    {
+     "path": "stages/20-nd/39-laws-of-one-step.patch",
+     "sha256": "eed042d07b8ed819dc1c54d359f6b45410dcb16d340468b87d96c9e929e2f7e8"
+    },
+    {
+     "path": "stages/20-nd/40-margin-of-a-regime.patch",
+     "sha256": "69b216f728a14f91de8f847717535a483c7fcfe22bac42ef0661f043d3b4e1ea"
+    },
+    {
+     "path": "stages/20-nd/41-one-step-missing-laws.patch",
+     "sha256": "ccbd8c8d67b5eeb560d17b95d65ff43e75ac9e05e5ea13edd6c3d455be27e93e"
+    },
+    {
+     "path": "stages/20-nd/42-runs-on-families-chosen-step-by-step.patch",
+     "sha256": "9340c5908efaef6ac047dffe6a25fd4b7f0595230b88103a8186bf48dde189b7"
+    },
+    {
+     "path": "stages/20-nd/43-whole-law-of-counting.patch",
+     "sha256": "92bc3a2907a18c37168d15e5a5e5f1cb6d09f6783452e07519d03e09afa62192"
+    },
+    {
+     "path": "stages/20-nd/44-review-CLASSICAL-TEXTS.patch",
+     "sha256": "702512480c7974966331c4553d428064427cb55e097aa18cd64391aa4bab573c"
+    }
+   ]
+  }
+ },
+ "kit_patches": [
+  {
+   "path": "patches/Grammar.patch",
+   "sha256": "93ac3e37a56061c725002bb1ce7ce659ee58849940aff5ecb7efd1c5b1a7648b"
+  },
+  {
+   "path": "patches/GrammarReadings.patch",
+   "sha256": "932becfab8652c6a60337b5d652143d9e9b5347e4c1e4e2b2e951e666452f05c"
+  },
+  {
+   "path": "patches/MapRegions.patch",
+   "sha256": "73f0fa267c72d27e6eb1ffc2218b8a4247170f22a2d11b3331ff1c9681835639"
+  },
+  {
+   "path": "patches/PLAN.patch",
+   "sha256": "eaf8f1b456bdf356a8c852f144114d7c85a7bb50ae458d1ad669cbe2ce323bd7"
+  },
   {
    "path": "patches/owner/01-GrammarLaws-header.patch",
    "sha256": "b546feade210d401930aed327e2417acefdf8b37bb90039ee6eb34dc542a4d7f"
@@ -30,143 +367,824 @@
   {
    "path": "patches/owner/04-uncrossed.patch",
    "sha256": "11efe0d8af610c5603faec68f955e343b134ae80f77c073d64d4f6bff17d88b0"
+  },
+  {
+   "path": "../check/kit/GrammarTesting.patch",
+   "sha256": "55f155f1fdd039603f5f2c2b8a4f25e59f882a4ce12584fe77aeb673e6740897"
   }
  ],
- "tree": [
-  {
-   "path": "Becoming/BalanceRegions.lean",
-   "sha256": "d6328049ce00faf200397756db841634d2090f77178b7a59dba48bb749346716"
-  },
-  {
-   "path": "Becoming/ConveyanceBoundaries.lean",
-   "sha256": "a13b191776b851520bce25708b6f3c515f2351837cbec2ccf88153930ff71bd3"
-  },
-  {
-   "path": "Becoming/GrammarCrossing.lean",
-   "sha256": "e2f87ac0c81c7eaa51a66074063fd25a48d2ec666f1bf4ae1edcf8dcdf275f96"
-  },
-  {
-   "path": "Becoming/GrammarLaws.lean",
-   "sha256": "f6290e03a34974acad880517e5163685f209ca2dc963b89204b2e0efa538c7f1"
-  },
-  {
-   "path": "Becoming/NameCheckBalance.lean",
-   "sha256": "0ee4123762719a2d5da7fc94d5feee9ab8d68e8ee5cd2301b37575f51b3a8d3e"
-  },
-  {
-   "path": "Becoming/NameCheckConveyance.lean",
-   "sha256": "ebf2be830cf3b87a7fa5fc860d9a859030029ac38d6cb52e5d9395b0f438825b"
-  },
-  {
-   "path": "Becoming/NameCheckCrossing.lean",
-   "sha256": "8a5eb37eb0603c9b5c2d9573af29d4513e2c0020922a1407e77cfe3eb5f565e5"
-  },
-  {
-   "path": "Becoming/NameCheckPath.lean",
-   "sha256": "1dbb73153cd1b69e891c027e0fb931309764fb3a7878422f4953336aa0d9b9db"
-  },
-  {
-   "path": "Becoming/Standpoints.lean",
-   "sha256": "d2ab739c229ccd9b0631291d0f15aa32a599b18d82b9a786a17c5fd3807d52d0"
-  }
- ],
- "name_checks": {
-  "what": "Each module states, from the module it imports, «不出» as its old definition by Iff.rfl, and «闭则不出» and «所闭不出» at their old statements, as written in GrammarCrossing on main; NameCheckConveyance adds Flow.Cut as its old definition by Iff.rfl. GrammarCrossing, ConveyanceBoundaries, GrammarPath and BalanceRegions reach GrammarLaws through GrammarCrossing's import, and Standpoints through Descent, Correspondence, Labelled and Frame; no import changed.",
-  "lean": {
-   "NameCheckBalance.lean": "import Becoming.BalanceRegions\n\n/-! Scratch, not for the package: from `Becoming.BalanceRegions`, the names the grammar's owner's patches move\nresolve as before, each to its old statement. -/\n\nnamespace Becoming.NameCheckBalance\n\nuniverse u\n\n/-- `«不出»` resolves to its old definition. -/\ntheorem moved_notGoingOut {α : Type u} (R : Becoming.«际» α) (P : α → Prop) :\n    Becoming.«不出» R P ↔ ∀ x y, P x → ¬ P y → ¬ R x y :=\n  Iff.rfl\n\n/-- `«闭则不出»` resolves to its old statement. -/\ntheorem moved_closed_notGoingOut :\n    ∀ {α : Type u} {R : Becoming.«际» α} {P : α → Prop}, Becoming.«闭» R P → Becoming.«不出» R P :=\n  @Becoming.«闭则不出»\n\n/-- `«所闭不出»` resolves to its old statement. -/\ntheorem moved_closure_notGoingOut :\n    ∀ {α : Type u} (R : Becoming.«际» α) (x : α), Becoming.«不出» R (Becoming.«所闭» R x) :=\n  @Becoming.«所闭不出»\n\nend Becoming.NameCheckBalance\n",
-   "NameCheckConveyance.lean": "import Becoming.ConveyanceBoundaries\n\n/-! Scratch, not for the package: from `Becoming.ConveyanceBoundaries`, the names the grammar's owner's patches move\nresolve as before, each to its old statement. -/\n\nnamespace Becoming.NameCheckConveyance\n\nuniverse u\n\n/-- `«不出»` resolves to its old definition. -/\ntheorem moved_notGoingOut {α : Type u} (R : Becoming.«际» α) (P : α → Prop) :\n    Becoming.«不出» R P ↔ ∀ x y, P x → ¬ P y → ¬ R x y :=\n  Iff.rfl\n\n/-- `«闭则不出»` resolves to its old statement. -/\ntheorem moved_closed_notGoingOut :\n    ∀ {α : Type u} {R : Becoming.«际» α} {P : α → Prop}, Becoming.«闭» R P → Becoming.«不出» R P :=\n  @Becoming.«闭则不出»\n\n/-- `«所闭不出»` resolves to its old statement. -/\ntheorem moved_closure_notGoingOut :\n    ∀ {α : Type u} (R : Becoming.«际» α) (x : α), Becoming.«不出» R (Becoming.«所闭» R x) :=\n  @Becoming.«所闭不出»\n\n/-- `Flow.Cut`, defined as `«不出»` at the valuation's relation, is its old definition. -/\ntheorem cut_as_before {Pos Q : Type} (V : Becoming.Valuation Pos Q) (region : Q → Prop) :\n    Becoming.Flow.Cut V region ↔ ∀ e e', region e → ¬ region e' → ¬ V.related e e' :=\n  Iff.rfl\n\nend Becoming.NameCheckConveyance\n",
-   "NameCheckCrossing.lean": "import Becoming.GrammarCrossing\n\n/-! Scratch, not for the package: from `Becoming.GrammarCrossing`, the names the grammar's owner's patches move\nresolve as before, each to its old statement. -/\n\nnamespace Becoming.NameCheckCrossing\n\nuniverse u\n\n/-- `«不出»` resolves to its old definition. -/\ntheorem moved_notGoingOut {α : Type u} (R : Becoming.«际» α) (P : α → Prop) :\n    Becoming.«不出» R P ↔ ∀ x y, P x → ¬ P y → ¬ R x y :=\n  Iff.rfl\n\n/-- `«闭则不出»` resolves to its old statement. -/\ntheorem moved_closed_notGoingOut :\n    ∀ {α : Type u} {R : Becoming.«际» α} {P : α → Prop}, Becoming.«闭» R P → Becoming.«不出» R P :=\n  @Becoming.«闭则不出»\n\n/-- `«所闭不出»` resolves to its old statement. -/\ntheorem moved_closure_notGoingOut :\n    ∀ {α : Type u} (R : Becoming.«际» α) (x : α), Becoming.«不出» R (Becoming.«所闭» R x) :=\n  @Becoming.«所闭不出»\n\nend Becoming.NameCheckCrossing\n",
-   "NameCheckPath.lean": "import Becoming.GrammarPath\n\n/-! Scratch, not for the package: from `Becoming.GrammarPath`, the names the grammar's owner's patches move\nresolve as before, each to its old statement. -/\n\nnamespace Becoming.NameCheckPath\n\nuniverse u\n\n/-- `«不出»` resolves to its old definition. -/\ntheorem moved_notGoingOut {α : Type u} (R : Becoming.«际» α) (P : α → Prop) :\n    Becoming.«不出» R P ↔ ∀ x y, P x → ¬ P y → ¬ R x y :=\n  Iff.rfl\n\n/-- `«闭则不出»` resolves to its old statement. -/\ntheorem moved_closed_notGoingOut :\n    ∀ {α : Type u} {R : Becoming.«际» α} {P : α → Prop}, Becoming.«闭» R P → Becoming.«不出» R P :=\n  @Becoming.«闭则不出»\n\n/-- `«所闭不出»` resolves to its old statement. -/\ntheorem moved_closure_notGoingOut :\n    ∀ {α : Type u} (R : Becoming.«际» α) (x : α), Becoming.«不出» R (Becoming.«所闭» R x) :=\n  @Becoming.«所闭不出»\n\nend Becoming.NameCheckPath\n"
-  }
+ "tree": {
+  "made_by": "kit/rehearsal_tree.py DRY_TREE OUT, from the dry run's tree: every Lean file apply changed or added, each checked against the hash the synthetic receipt recorded right after apply, and targets.txt",
+  "files": [
+   {
+    "path": "Becoming.lean",
+    "sha256": "2d3207d4a5808d5312c1ad0a15bbdcca01d5d32ca382da1434f6183892b5f2c2",
+    "checked_against": "apply"
+   },
+   {
+    "path": "Becoming/Amounts.lean",
+    "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Arising.lean",
+    "sha256": "cdd8e7eea4fbaea144620cf65b4228981c4eb7d83f5f97036504571613876b3e",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/BalanceRegions.lean",
+    "sha256": "d6328049ce00faf200397756db841634d2090f77178b7a59dba48bb749346716",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/CensusBinding.lean",
+    "sha256": "dc3f6cbe5721f4a570e88d3ab79ab26c1d651bc6c50cc9e3164e59337ed24b93",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/CensusCounts.lean",
+    "sha256": "475906c95475e476a3f62d9002945f7f7003e2d3faa624326c2e65ab7e0b78a7",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/CensusTable.lean",
+    "sha256": "dc316bd697d747ac8537f63407606b8534eb92d5f0cce622959aafd14863825a",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Change.lean",
+    "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/ConveyanceBoundaries.lean",
+    "sha256": "a13b191776b851520bce25708b6f3c515f2351837cbec2ccf88153930ff71bd3",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Counting.lean",
+    "sha256": "33b1c443d5a77f1d3c55a2b2f34b5cf44c4949a5f74e1579bb45135018f7ac05",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Decidedness.lean",
+    "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Flow.lean",
+    "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Grammar.lean",
+    "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/GrammarConditionals.lean",
+    "sha256": "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/GrammarCrossing.lean",
+    "sha256": "e2f87ac0c81c7eaa51a66074063fd25a48d2ec666f1bf4ae1edcf8dcdf275f96",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/GrammarLaws.lean",
+    "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/GrammarReadings.lean",
+    "sha256": "23bff2015b58fb271f207b917be41e1b9b3a68a234d9af60d4b66804be5e0cc8",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/GrammarTesting.lean",
+    "sha256": "b7ddc6da044baef36d170d23bb09089d87a63b940fc777f7ddb627bb14e83068",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Identity.lean",
+    "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Joint.lean",
+    "sha256": "f00f55338b2185622319a740c153d44fe0e66ee8cd30eda26565335e370b0e8f",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Locality.lean",
+    "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/MapRegions.lean",
+    "sha256": "fd94d7ebc50f7facea8d5796339397d9e49860d0729c0ff63801cc2488cf84f4",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/ModelStatements.lean",
+    "sha256": "33088444032f3660972fbc92a8575eec4dc5a4efa846011b15a9301c6d2bc021",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/OneStep.lean",
+    "sha256": "f8785cad86ad3b58a2334dc2b3728d89ad168ec1f0b485b3f3ceddf6ca5e8d89",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Population.lean",
+    "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Prelude.lean",
+    "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/ReadingLoop.lean",
+    "sha256": "b7df34884f4bb98d605586c47d9477736a2a0ef617145c3e038cd1fe050fbe3a",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/RegimeMargin.lean",
+    "sha256": "8969413f28246ba831f13cc98b429d67c81e0fa734bf0f9d6dc30edb96e222e8",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/RoomNet.lean",
+    "sha256": "9e026d4696228592ef13cc35a6604a8413555e4a2044ce31eb868196f75a15ab",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/RoomRuns.lean",
+    "sha256": "fef5464efad091996c89165f879ff826b41cc754bca0f332b777d63799c4d412",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Situations.lean",
+    "sha256": "b91806df0da6d155757c9e8d55518aa276dbf4e2327d8f7c23455733d09c2c69",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Standing.lean",
+    "sha256": "a552ea48d790ad377a6b21350794fd9dc153c7c3ed54e5cf1981abe15ff9d213",
+    "checked_against": "receipt"
+   },
+   {
+    "path": "Becoming/Standpoints.lean",
+    "sha256": "d2ab739c229ccd9b0631291d0f15aa32a599b18d82b9a786a17c5fd3807d52d0",
+    "checked_against": "receipt"
+   }
+  ],
+  "note": "32 files match the synthetic receipt. The root module matches apply's output in the dry run's tree; that receipt carried main's hash for it, as the dry run then did not rehash the root module, which it now does. The root has none of the throwaway stage's edits."
  },
- "command": "cd experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py TREE Becoming.GrammarLaws Becoming.GrammarCrossing Becoming.Standpoints Becoming.ConveyanceBoundaries Becoming.GrammarPath Becoming.BalanceRegions Becoming.NameCheckCrossing Becoming.NameCheckConveyance Becoming.NameCheckPath Becoming.NameCheckBalance",
+ "command": "cd experiments/integrated-correction/general-framework/generative-basis/lean/becoming/ && python3 -B scratch_build.py TREE $(cat targets.txt)",
+ "targets": 376,
  "build": {
-  "modules": 53,
+  "modules": 383,
+  "compiled": 225,
+  "audited": 344,
+  "reused": 190,
+  "reused_note": "158 compiles and 32 audits restored from the shared cache, steps whose inputs match steps that passed",
+  "unclean": [],
+  "theorems": 18670,
+  "declarations": 25419,
   "ran": [
-   "Becoming.GrammarLaws",
-   "Becoming.GrammarCrossing",
-   "Becoming.Frame",
-   "Becoming.Amounts",
-   "Becoming.Renewal",
-   "Becoming.World",
-   "Becoming.Witnesses",
-   "Becoming.Dependence",
-   "Becoming.Restoration",
-   "Becoming.Arising",
-   "Becoming.Recurrence",
-   "Becoming.Labelled",
-   "Becoming.Metaethics",
-   "Becoming.Flow",
-   "Becoming.Change",
-   "Becoming.Population",
-   "Becoming.Dissipation",
-   "Becoming.Locality",
-   "Becoming.Roles",
-   "Becoming.Inquiry",
-   "Becoming.Evolution",
-   "Becoming.Reserve",
-   "Becoming.InAmounts",
-   "Becoming.Space",
-   "Becoming.Admission",
-   "Becoming.Continuation",
-   "Becoming.Regions",
-   "Becoming.Retaining",
-   "Becoming.Clearing",
-   "Becoming.Significance",
-   "Becoming.Extension",
-   "Becoming.ValuationFrames",
-   "Becoming.Correspondence",
-   "Becoming.Descent",
-   "Becoming.Standpoints",
-   "Becoming.Interdependence",
-   "Becoming.Feedback",
+   "Becoming.Bundles",
+   "Becoming.ActivationCapacity",
+   "Becoming.Ranking",
+   "Becoming.ActiveReading",
+   "Becoming.ContingentPlans",
+   "Becoming.Actuation",
    "Becoming.BoundedSignificance",
    "Becoming.Boundaries",
-   "Becoming.ConveyanceBoundaries",
-   "Becoming.GrammarPath",
+   "Becoming.Relevance",
+   "Becoming.Lifting",
+   "Becoming.Alternatives",
+   "Becoming.AssurancePlans",
+   "Becoming.AttractionRuns",
    "Becoming.Continuity",
+   "Becoming.GrammarCrossing",
    "Becoming.BalanceRegions",
-   "Becoming.NameCheckCrossing",
-   "Becoming.NameCheckConveyance",
-   "Becoming.NameCheckPath",
-   "Becoming.NameCheckBalance",
-   "BecomingGrammarLawsAxiomAudit",
-   "BecomingGrammarCrossingAxiomAudit",
-   "BecomingStandpointsAxiomAudit",
-   "BecomingConveyanceBoundariesAxiomAudit",
-   "BecomingGrammarPathAxiomAudit",
+   "Becoming.BlanketCouplings",
+   "Becoming.BlanketWeights",
+   "Becoming.Joining",
+   "Becoming.Granularity",
+   "Becoming.Composition",
+   "Becoming.Presentations",
+   "Becoming.BranchingCorrespondence",
+   "Becoming.Carriers",
+   "Becoming.Cascade",
+   "Becoming.LawAlongRun",
+   "Becoming.EventualWidening",
+   "Becoming.ReachableRanges",
+   "Becoming.HeldPossible",
+   "Becoming.CausalGrowth",
+   "Becoming.Centers",
+   "Becoming.ChanceFloors",
+   "Becoming.RuleShaping",
+   "Becoming.ChoiceCountCapture",
+   "Becoming.ClassifiedBeliefProcesses",
+   "Becoming.Propagation",
+   "Becoming.Loops",
+   "Becoming.Remainder",
+   "Becoming.Closing",
+   "Becoming.PartialReadout",
+   "Becoming.CodeAcquisition",
+   "Becoming.Reproduction",
+   "Becoming.SelectionLevels",
+   "Becoming.GroupEnding",
+   "Becoming.Weightings",
+   "Becoming.EventualWideningInstances",
+   "Becoming.ComparingCourses",
+   "Becoming.Stock",
+   "Becoming.Revision",
+   "Becoming.Contacts",
+   "Becoming.ContactCourses",
+   "Becoming.ContextArrivalTraces",
+   "Becoming.Reading",
+   "Becoming.Readings",
+   "Becoming.Gluing",
+   "Becoming.ParityReadings",
+   "Becoming.ContextualRuns",
+   "Becoming.ReferencePlan",
+   "Becoming.ContinuingRevision",
+   "Becoming.ContinuingRuns",
+   "Becoming.ConveyanceBoundaries",
+   "Becoming.CopyCourses",
+   "Becoming.FreeEnergyCounting",
+   "Becoming.CountedCodes",
+   "Becoming.Runs",
+   "Becoming.CounterfactualRuns",
+   "Becoming.Routes",
+   "Becoming.Frequency",
+   "Becoming.Runaway",
+   "Becoming.Thresholds",
+   "Becoming.Observation",
+   "Becoming.CourseWorlds",
+   "Becoming.FormedLoops",
+   "Becoming.CouplingTraces",
+   "Becoming.CourseRoles",
+   "Becoming.Coverage",
+   "Becoming.Cuts",
+   "Becoming.Dephasing",
+   "Becoming.Derivation",
+   "Becoming.FrontierFrames",
+   "Becoming.Direction",
+   "Becoming.TreeSearch",
+   "Becoming.Dispatch",
+   "Becoming.DrawnShaping",
+   "Becoming.Drift",
+   "Becoming.ExchangePremises",
+   "Becoming.Exclusion",
+   "Becoming.Exhaustion",
+   "Becoming.FallibleInquiry",
+   "Becoming.Feeding",
+   "Becoming.WeightedTraces",
+   "Becoming.FinerTraces",
+   "Becoming.Founding",
+   "Becoming.Fragments",
+   "Becoming.Regulation",
+   "Becoming.SetPointOptimum",
+   "Becoming.FreeEnergyGuarantees",
+   "Becoming.FrontierWorlds",
+   "Becoming.GrammarScope",
+   "Becoming.GrammarPath",
+   "Becoming.GrammarCases",
+   "Becoming.GrammarConditionals",
+   "Becoming.Growth",
+   "Becoming.GuardHorizon",
+   "Becoming.SecuredContent",
+   "Becoming.RenewalBound",
+   "Becoming.Handoff",
+   "Becoming.RevisionPlans",
+   "Becoming.HeldForReading",
+   "Becoming.Hexagrams",
+   "Becoming.HexagramCommuting",
+   "Becoming.HexagramPlaces",
+   "Becoming.HexagramLaws",
+   "Becoming.HexagramSites",
+   "Becoming.HexagramSequences",
+   "Becoming.HistoryIdealsTraces",
+   "Becoming.HistorySums",
+   "Becoming.HorizonWebs",
+   "Becoming.Stuttering",
+   "Becoming.Reordering",
+   "Becoming.IdleRemoval",
+   "Becoming.Interleavings",
+   "Becoming.Irreversibility",
+   "Becoming.LocalUnits",
+   "Becoming.JoiningContexts",
+   "Becoming.JoiningCodes",
+   "Becoming.JoiningRoles",
+   "Becoming.JointCorrespondence",
+   "Becoming.JointDraw",
+   "Becoming.ProjectedLaws",
+   "Becoming.JointPhase",
+   "Becoming.Wholes",
+   "Becoming.PatternPassing",
+   "Becoming.MapInstances",
+   "Becoming.KeepingWidening",
+   "Becoming.Labels",
+   "Becoming.LastingRuns",
+   "Becoming.Latency",
+   "Becoming.RouteFormation",
+   "Becoming.LearnedGrouping",
+   "Becoming.LeastLoss",
+   "Becoming.LevelCoupling",
+   "Becoming.LineDegeneration",
+   "Becoming.SelectionShift",
+   "Becoming.LineageRegions",
+   "Becoming.MutualDependence",
+   "Becoming.LineageRegimes",
+   "Becoming.ListFootprints",
+   "Becoming.ListedWebs",
+   "Becoming.Listing",
+   "Becoming.ListingRefutations",
+   "Becoming.ListingValuation",
+   "Becoming.Rejoining",
+   "Becoming.LoopReturn",
+   "Becoming.LossMatching",
+   "Becoming.LumpedSeeking",
+   "Becoming.StrictTransport",
+   "Becoming.MatchedCourses",
+   "Becoming.MoveFormation",
+   "Becoming.MoveOutcomeProcesses",
+   "Becoming.NarrowingRuns",
+   "Becoming.OpenedCorrection",
+   "Becoming.OptimumSeason",
+   "Becoming.OrderNormal",
+   "Becoming.OwnWidening",
+   "Becoming.OverExchange",
+   "Becoming.Withholding",
+   "Becoming.Tolerance",
+   "Becoming.WindowedWaiting",
+   "Becoming.PairSelection",
+   "Becoming.PlaceTransitionNets",
+   "Becoming.PoolCourse",
+   "Becoming.Transactions",
+   "Becoming.Reconfiguration",
+   "Becoming.PooledEnvelopes",
+   "Becoming.Postponement",
+   "Becoming.PremiseWitnesses",
+   "Becoming.Presence",
+   "Becoming.ProfileReach",
+   "Becoming.PropositionIdentity",
+   "Becoming.ReadInTime",
+   "Becoming.Unread",
+   "Becoming.ReadStages",
+   "Becoming.ReadingSchedule",
+   "Becoming.ReferencePlanTraces",
+   "Becoming.ReflexivePrediction",
+   "Becoming.RegimeMargin",
+   "Becoming.Regrouping",
+   "Becoming.RegroupingSelection",
+   "Becoming.RelativePosition",
+   "Becoming.RenewalFlow",
+   "Becoming.ReorderingGrowth",
+   "Becoming.ResponseLearning",
+   "Becoming.RoomNet",
+   "Becoming.RoomRuns",
+   "Becoming.RootForms",
+   "Becoming.RouteTraces",
+   "Becoming.RuleHandoff",
+   "Becoming.SeedReach",
+   "Becoming.ScopedReach",
+   "Becoming.ScoreRepresentation",
+   "Becoming.SelectionPace",
+   "Becoming.SelectionRuns",
+   "Becoming.Sensitivity",
+   "Becoming.Tail",
+   "Becoming.SensitivityWebs",
+   "Becoming.SignificanceStatements",
+   "Becoming.TypicalRuns",
+   "Becoming.SituationTraces",
+   "Becoming.StrengthFlows",
+   "Becoming.Substitution",
+   "Becoming.Succession",
+   "Becoming.SummaryFutures",
+   "Becoming.Tasks",
+   "Becoming.Tower",
+   "Becoming.Training",
+   "Becoming.UnitMatchings",
+   "Becoming.Units",
+   "Becoming.UnreadStandings",
+   "Becoming.WeightedCommuting",
+   "Becoming.WholeAmounts",
+   "Becoming.WideningOnTheMap",
+   "Becoming.WitnessRefinement",
+   "Becoming.WitnessRefinementRuns",
+   "Becoming",
+   "BecomingActivationCapacityAxiomAudit",
+   "BecomingActiveReadingAxiomAudit",
+   "BecomingActuationAxiomAudit",
+   "BecomingAdmissionAxiomAudit",
+   "BecomingAlternativesAxiomAudit",
+   "BecomingArisingAxiomAudit",
+   "BecomingAssuranceAxiomAudit",
+   "BecomingAssurancePlansAxiomAudit",
+   "BecomingAttractionAxiomAudit",
+   "BecomingAttractionRunsAxiomAudit",
    "BecomingBalanceRegionsAxiomAudit",
-   "BecomingNameCheckCrossingAxiomAudit",
-   "BecomingNameCheckConveyanceAxiomAudit",
-   "BecomingNameCheckPathAxiomAudit",
-   "BecomingNameCheckBalanceAxiomAudit"
+   "BecomingBlanketAxiomAudit",
+   "BecomingBlanketCouplingsAxiomAudit",
+   "BecomingBlanketWeightsAxiomAudit",
+   "BecomingBoundariesAxiomAudit",
+   "BecomingBoundedSignificanceAxiomAudit",
+   "BecomingBranchingAxiomAudit",
+   "BecomingBranchingCorrespondenceAxiomAudit",
+   "BecomingBundlesAxiomAudit",
+   "BecomingCaptureAxiomAudit",
+   "BecomingCarriersAxiomAudit",
+   "BecomingCascadeAxiomAudit",
+   "BecomingCausalGrowthAxiomAudit",
+   "BecomingCentersAxiomAudit",
+   "BecomingChanceFloorsAxiomAudit",
+   "BecomingChangeAxiomAudit",
+   "BecomingChoiceCountCaptureAxiomAudit",
+   "BecomingClassifiedBeliefProcessesAxiomAudit",
+   "BecomingClearingAxiomAudit",
+   "BecomingClosedCaptureAxiomAudit",
+   "BecomingClosingAxiomAudit",
+   "BecomingCodeAcquisitionAxiomAudit",
+   "BecomingCommutingAxiomAudit",
+   "BecomingComparingCoursesAxiomAudit",
+   "BecomingCompositionAxiomAudit",
+   "BecomingConditionalWeightsAxiomAudit",
+   "BecomingContactCoursesAxiomAudit",
+   "BecomingContactsAxiomAudit",
+   "BecomingContextArrivalTracesAxiomAudit",
+   "BecomingContextualRunsAxiomAudit",
+   "BecomingContingentPlansAxiomAudit",
+   "BecomingContinuationAxiomAudit",
+   "BecomingContinuedClassesAxiomAudit",
+   "BecomingContinuingRevisionAxiomAudit",
+   "BecomingContinuingRunsAxiomAudit",
+   "BecomingContinuityAxiomAudit",
+   "BecomingConveyanceBoundariesAxiomAudit",
+   "BecomingCopyCoursesAxiomAudit",
+   "BecomingCopyingAxiomAudit",
+   "BecomingCorrespondenceAxiomAudit",
+   "BecomingCountdownAxiomAudit",
+   "BecomingCountedCodesAxiomAudit",
+   "BecomingCounterfactualAxiomAudit",
+   "BecomingCounterfactualRunsAxiomAudit",
+   "BecomingCouplingTracesAxiomAudit",
+   "BecomingCourseRolesAxiomAudit",
+   "BecomingCourseWorldsAxiomAudit",
+   "BecomingCoursesAxiomAudit",
+   "BecomingCoverageAxiomAudit",
+   "BecomingCutsAxiomAudit",
+   "BecomingDependenceAxiomAudit",
+   "BecomingDephasingAxiomAudit",
+   "BecomingDerivationAxiomAudit",
+   "BecomingDescentAxiomAudit",
+   "BecomingDescriptionAxiomAudit",
+   "BecomingDiagonalAxiomAudit",
+   "BecomingDirectionAxiomAudit",
+   "BecomingDispatchAxiomAudit",
+   "BecomingDissipationAxiomAudit",
+   "BecomingDistinguishingAxiomAudit",
+   "BecomingDrawnBeyondAxiomAudit",
+   "BecomingDrawnShapingAxiomAudit",
+   "BecomingDriftAxiomAudit",
+   "BecomingEdgeClosureAxiomAudit",
+   "BecomingEnoughAxiomAudit",
+   "BecomingEntropyAxiomAudit",
+   "BecomingEventualWideningAxiomAudit",
+   "BecomingEventualWideningInstancesAxiomAudit",
+   "BecomingEvolutionAxiomAudit",
+   "BecomingExchangePremisesAxiomAudit",
+   "BecomingExclusionAxiomAudit",
+   "BecomingExhaustionAxiomAudit",
+   "BecomingExperimentAxiomAudit",
+   "BecomingExtensionAxiomAudit",
+   "BecomingFallibleInquiryAxiomAudit",
+   "BecomingFeedbackAxiomAudit",
+   "BecomingFeedingAxiomAudit",
+   "BecomingFinerTracesAxiomAudit",
+   "BecomingFlowAxiomAudit",
+   "BecomingFormedLoopsAxiomAudit",
+   "BecomingFoundingAxiomAudit",
+   "BecomingFragmentsAxiomAudit",
+   "BecomingFrameAxiomAudit",
+   "BecomingFreeEnergyCountingAxiomAudit",
+   "BecomingFreeEnergyGuaranteesAxiomAudit",
+   "BecomingFrequencyAxiomAudit",
+   "BecomingFrontierAxiomAudit",
+   "BecomingFrontierFramesAxiomAudit",
+   "BecomingFrontierWorldsAxiomAudit",
+   "BecomingGainAxiomAudit",
+   "BecomingGatedAxiomAudit",
+   "BecomingGluingAxiomAudit",
+   "BecomingGrammarCasesAxiomAudit",
+   "BecomingGrammarConditionalsAxiomAudit",
+   "BecomingGrammarCourseAxiomAudit",
+   "BecomingGrammarCrossingAxiomAudit",
+   "BecomingGrammarPathAxiomAudit",
+   "BecomingGrammarRegularityAxiomAudit",
+   "BecomingGrammarScopeAxiomAudit",
+   "BecomingGrammarTransportAxiomAudit",
+   "BecomingGranularityAxiomAudit",
+   "BecomingGroupEndingAxiomAudit",
+   "BecomingGrowthAxiomAudit",
+   "BecomingGuardHorizonAxiomAudit",
+   "BecomingHandoffAxiomAudit",
+   "BecomingHeldForReadingAxiomAudit",
+   "BecomingHeldPossibleAxiomAudit",
+   "BecomingHexagramCommutingAxiomAudit",
+   "BecomingHexagramLawsAxiomAudit",
+   "BecomingHexagramPlacesAxiomAudit",
+   "BecomingHexagramSequencesAxiomAudit",
+   "BecomingHexagramSitesAxiomAudit",
+   "BecomingHexagramsAxiomAudit",
+   "BecomingHistoriesAxiomAudit",
+   "BecomingHistoryIdealsAxiomAudit",
+   "BecomingHistoryIdealsTracesAxiomAudit",
+   "BecomingHistoryLanguagesAxiomAudit",
+   "BecomingHistorySumsAxiomAudit",
+   "BecomingHorizonAxiomAudit",
+   "BecomingHorizonWebsAxiomAudit",
+   "BecomingIdentificationAxiomAudit",
+   "BecomingIdentificationRunsAxiomAudit",
+   "BecomingIdentityAxiomAudit",
+   "BecomingIdleRemovalAxiomAudit",
+   "BecomingImbalanceAxiomAudit",
+   "BecomingInAmountsAxiomAudit",
+   "BecomingInquiryAxiomAudit",
+   "BecomingInterdependenceAxiomAudit",
+   "BecomingInterleavingsAxiomAudit",
+   "BecomingIrreversibilityAxiomAudit",
+   "BecomingJoiningAxiomAudit",
+   "BecomingJoiningCodesAxiomAudit",
+   "BecomingJoiningContextsAxiomAudit",
+   "BecomingJoiningRolesAxiomAudit",
+   "BecomingJointCorrespondenceAxiomAudit",
+   "BecomingJointDrawAxiomAudit",
+   "BecomingJointKeepingAxiomAudit",
+   "BecomingJointPhaseAxiomAudit",
+   "BecomingJuncturesAxiomAudit",
+   "BecomingKeepingAxiomAudit",
+   "BecomingKeepingWideningAxiomAudit",
+   "BecomingLabelledAxiomAudit",
+   "BecomingLabelledRolesAxiomAudit",
+   "BecomingLabelsAxiomAudit",
+   "BecomingLastChangeAxiomAudit",
+   "BecomingLastingAxiomAudit",
+   "BecomingLastingRunsAxiomAudit",
+   "BecomingLatencyAxiomAudit",
+   "BecomingLawAlongRunAxiomAudit",
+   "BecomingLawsAxiomAudit",
+   "BecomingLearnableAxiomAudit",
+   "BecomingLearnableRunsAxiomAudit",
+   "BecomingLearnedGroupingAxiomAudit",
+   "BecomingLearningAxiomAudit",
+   "BecomingLearningRunsAxiomAudit",
+   "BecomingLeastLossAxiomAudit",
+   "BecomingLevelCouplingAxiomAudit",
+   "BecomingLexicalAxiomAudit",
+   "BecomingLiftingAxiomAudit",
+   "BecomingLikenessAxiomAudit",
+   "BecomingLimitVerificationAxiomAudit",
+   "BecomingLineDegenerationAxiomAudit",
+   "BecomingLineageRegimesAxiomAudit",
+   "BecomingLineageRegionsAxiomAudit",
+   "BecomingListFootprintsAxiomAudit",
+   "BecomingListedWebsAxiomAudit",
+   "BecomingListingAxiomAudit",
+   "BecomingListingRefutationsAxiomAudit",
+   "BecomingListingValuationAxiomAudit",
+   "BecomingLocalUnitsAxiomAudit",
+   "BecomingLoopReturnAxiomAudit",
+   "BecomingLoopsAxiomAudit",
+   "BecomingLossMatchingAxiomAudit",
+   "BecomingLumpedSeekingAxiomAudit",
+   "BecomingMapInstancesAxiomAudit",
+   "BecomingMatchedCoursesAxiomAudit",
+   "BecomingMechanismAxiomAudit",
+   "BecomingMetaethicsAxiomAudit",
+   "BecomingMoveFormationAxiomAudit",
+   "BecomingMoveOutcomeProcessesAxiomAudit",
+   "BecomingMutualDependenceAxiomAudit",
+   "BecomingNarrowingAxiomAudit",
+   "BecomingNarrowingRunsAxiomAudit",
+   "BecomingNoveltyAxiomAudit",
+   "BecomingObservationAxiomAudit",
+   "BecomingOnwardAxiomAudit",
+   "BecomingOpenedCorrectionAxiomAudit",
+   "BecomingOpennessAxiomAudit",
+   "BecomingOptimumAxiomAudit",
+   "BecomingOptimumSeasonAxiomAudit",
+   "BecomingOrderNormalAxiomAudit",
+   "BecomingOverExchangeAxiomAudit",
+   "BecomingOwnWideningAxiomAudit",
+   "BecomingPaceAxiomAudit",
+   "BecomingPairSelectionAxiomAudit",
+   "BecomingParityReadingsAxiomAudit",
+   "BecomingPartialReadoutAxiomAudit",
+   "BecomingPartingAxiomAudit",
+   "BecomingPatternPassingAxiomAudit",
+   "BecomingPersistenceAxiomAudit",
+   "BecomingPlaceTransitionNetsAxiomAudit",
+   "BecomingPoolCourseAxiomAudit",
+   "BecomingPoolResponseAxiomAudit",
+   "BecomingPooledEnvelopesAxiomAudit",
+   "BecomingPostponementAxiomAudit",
+   "BecomingPremiseWitnessesAxiomAudit",
+   "BecomingPremisesAxiomAudit",
+   "BecomingPresenceAxiomAudit",
+   "BecomingPresentationsAxiomAudit",
+   "BecomingProcessRepresentationAxiomAudit",
+   "BecomingProfileReachAxiomAudit",
+   "BecomingProjectedLawsAxiomAudit",
+   "BecomingPropagationAxiomAudit",
+   "BecomingPropositionIdentityAxiomAudit",
+   "BecomingRankingAxiomAudit",
+   "BecomingReachableRangesAxiomAudit",
+   "BecomingReadInTimeAxiomAudit",
+   "BecomingReadStagesAxiomAudit",
+   "BecomingReadingAxiomAudit",
+   "BecomingReadingScheduleAxiomAudit",
+   "BecomingReadingsAxiomAudit",
+   "BecomingReadoutAxiomAudit",
+   "BecomingReconfigurationAxiomAudit",
+   "BecomingRecurrenceAxiomAudit",
+   "BecomingReferencePlanAxiomAudit",
+   "BecomingReferencePlanTracesAxiomAudit",
+   "BecomingRefinementAxiomAudit",
+   "BecomingReflexivePredictionAxiomAudit",
+   "BecomingRegimeMarginAxiomAudit",
+   "BecomingRegionsAxiomAudit",
+   "BecomingRegroupingAxiomAudit",
+   "BecomingRegroupingSelectionAxiomAudit",
+   "BecomingRegulationAxiomAudit",
+   "BecomingRejoiningAxiomAudit",
+   "BecomingRelativePositionAxiomAudit",
+   "BecomingRelevanceAxiomAudit",
+   "BecomingRemainderAxiomAudit",
+   "BecomingRenewalAxiomAudit",
+   "BecomingRenewalBoundAxiomAudit",
+   "BecomingRenewalFlowAxiomAudit",
+   "BecomingReorderingAxiomAudit",
+   "BecomingReorderingGrowthAxiomAudit",
+   "BecomingReproductionAxiomAudit",
+   "BecomingReserveAxiomAudit",
+   "BecomingResolutionAxiomAudit",
+   "BecomingResponseAxiomAudit",
+   "BecomingResponseLearningAxiomAudit",
+   "BecomingRestorationAxiomAudit",
+   "BecomingRetainingAxiomAudit",
+   "BecomingRevisionAxiomAudit",
+   "BecomingRevisionPlansAxiomAudit",
+   "BecomingRolesAxiomAudit",
+   "BecomingRoomNetAxiomAudit",
+   "BecomingRoomRunsAxiomAudit",
+   "BecomingRootFormsAxiomAudit",
+   "BecomingRouteFormationAxiomAudit",
+   "BecomingRouteTracesAxiomAudit",
+   "BecomingRoutesAxiomAudit",
+   "BecomingRuleCaptureAxiomAudit",
+   "BecomingRuleHandoffAxiomAudit",
+   "BecomingRuleShapingAxiomAudit",
+   "BecomingRunawayAxiomAudit",
+   "BecomingRunsAxiomAudit",
+   "BecomingSamplingAxiomAudit",
+   "BecomingScopedReachAxiomAudit",
+   "BecomingScoreRepresentationAxiomAudit",
+   "BecomingSecuredContentAxiomAudit",
+   "BecomingSeedReachAxiomAudit",
+   "BecomingSeekingAxiomAudit",
+   "BecomingSeekingRunsAxiomAudit",
+   "BecomingSelectionAxiomAudit",
+   "BecomingSelectionGapAxiomAudit",
+   "BecomingSelectionLevelsAxiomAudit",
+   "BecomingSelectionPaceAxiomAudit",
+   "BecomingSelectionPoolAxiomAudit",
+   "BecomingSelectionReachAxiomAudit",
+   "BecomingSelectionRunsAxiomAudit",
+   "BecomingSelectionShiftAxiomAudit",
+   "BecomingSelectionTermAxiomAudit",
+   "BecomingSensitivityAxiomAudit",
+   "BecomingSensitivityWebsAxiomAudit",
+   "BecomingSetPointOptimumAxiomAudit",
+   "BecomingSettlingAxiomAudit",
+   "BecomingSharedCodesAxiomAudit",
+   "BecomingSignificanceAxiomAudit",
+   "BecomingSignificanceStatementsAxiomAudit",
+   "BecomingSituationTracesAxiomAudit",
+   "BecomingSpaceAxiomAudit",
+   "BecomingStandpointsAxiomAudit",
+   "BecomingStockAxiomAudit",
+   "BecomingStrengthFlowsAxiomAudit",
+   "BecomingStrictTransportAxiomAudit",
+   "BecomingStutteringAxiomAudit",
+   "BecomingSubstitutionAxiomAudit",
+   "BecomingSuccessionAxiomAudit",
+   "BecomingSummaryFuturesAxiomAudit",
+   "BecomingTailAxiomAudit",
+   "BecomingTasksAxiomAudit",
+   "BecomingTestingAxiomAudit",
+   "BecomingThresholdsAxiomAudit",
+   "BecomingTimedResponseAxiomAudit",
+   "BecomingToleranceAxiomAudit",
+   "BecomingTowerAxiomAudit",
+   "BecomingTrainingAxiomAudit",
+   "BecomingTransactionsAxiomAudit",
+   "BecomingTransmissionAxiomAudit",
+   "BecomingTreeSearchAxiomAudit",
+   "BecomingTypicalRunsAxiomAudit",
+   "BecomingTypicalityAxiomAudit",
+   "BecomingUndecidedAxiomAudit",
+   "BecomingUnfoldingAxiomAudit",
+   "BecomingUnitMatchingsAxiomAudit",
+   "BecomingUnitsAxiomAudit",
+   "BecomingUnreadAxiomAudit",
+   "BecomingUnreadStandingsAxiomAudit",
+   "BecomingUnrollingAxiomAudit",
+   "BecomingValuationFramesAxiomAudit",
+   "BecomingVerificationAxiomAudit",
+   "BecomingViabilityAxiomAudit",
+   "BecomingWeightedAxiomAudit",
+   "BecomingWeightedCommutingAxiomAudit",
+   "BecomingWeightedTracesAxiomAudit",
+   "BecomingWeightingsAxiomAudit",
+   "BecomingWholeAmountsAxiomAudit",
+   "BecomingWholesAxiomAudit",
+   "BecomingWideningOnTheMapAxiomAudit",
+   "BecomingWindowedWaitingAxiomAudit",
+   "BecomingWithholdingAxiomAudit",
+   "BecomingWitnessRefinementAxiomAudit",
+   "BecomingWitnessRefinementRunsAxiomAudit",
+   "BecomingWitnessesAxiomAudit",
+   "BecomingWorldAxiomAudit",
+   "BecomingWorldRepresentationAxiomAudit",
+   "BecomingAxiomAudit"
   ],
-  "reused": 6,
-  "unclean": [],
   "audits": {
-   "Becoming.GrammarLaws": {
-    "theorems": 179,
-    "declarations": 208,
+   "Becoming.Acceptance": {
+    "theorems": 17,
+    "declarations": 27,
     "with_axioms": {}
    },
-   "Becoming.GrammarCrossing": {
-    "theorems": 9,
-    "declarations": 9,
-    "with_axioms": {}
-   },
-   "Becoming.Standpoints": {
-    "theorems": 21,
-    "declarations": 34,
-    "with_axioms": {}
-   },
-   "Becoming.ConveyanceBoundaries": {
-    "theorems": 8,
+   "Becoming.ActivationCapacity": {
+    "theorems": 7,
     "declarations": 8,
     "with_axioms": {}
    },
-   "Becoming.GrammarPath": {
-    "theorems": 102,
-    "declarations": 152,
+   "Becoming.ActiveReading": {
+    "theorems": 12,
+    "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.Actuation": {
+    "theorems": 45,
+    "declarations": 61,
+    "with_axioms": {}
+   },
+   "Becoming.Admission": {
+    "theorems": 56,
+    "declarations": 84,
+    "with_axioms": {}
+   },
+   "Becoming.Alternatives": {
+    "theorems": 17,
+    "declarations": 31,
+    "with_axioms": {}
+   },
+   "Becoming.Amounts": {
+    "theorems": 37,
+    "declarations": 42,
+    "with_axioms": {}
+   },
+   "Becoming.Arising": {
+    "theorems": 46,
+    "declarations": 82,
+    "with_axioms": {}
+   },
+   "Becoming.Assurance": {
+    "theorems": 16,
+    "declarations": 18,
+    "with_axioms": {}
+   },
+   "Becoming.AssurancePlans": {
+    "theorems": 23,
+    "declarations": 44,
+    "with_axioms": {}
+   },
+   "Becoming.Attraction": {
+    "theorems": 56,
+    "declarations": 71,
+    "with_axioms": {}
+   },
+   "Becoming.AttractionRuns": {
+    "theorems": 15,
+    "declarations": 15,
     "with_axioms": {}
    },
    "Becoming.BalanceRegions": {
@@ -174,34 +1192,613 @@
     "declarations": 7,
     "with_axioms": {}
    },
-   "Becoming.NameCheckCrossing": {
+   "Becoming.Blanket": {
+    "theorems": 33,
+    "declarations": 49,
+    "with_axioms": {}
+   },
+   "Becoming.BlanketCouplings": {
+    "theorems": 43,
+    "declarations": 76,
+    "with_axioms": {}
+   },
+   "Becoming.BlanketWeights": {
+    "theorems": 46,
+    "declarations": 90,
+    "with_axioms": {}
+   },
+   "Becoming.Boundaries": {
+    "theorems": 69,
+    "declarations": 77,
+    "with_axioms": {}
+   },
+   "Becoming.BoundedSignificance": {
+    "theorems": 17,
+    "declarations": 19,
+    "with_axioms": {}
+   },
+   "Becoming.Branching": {
+    "theorems": 107,
+    "declarations": 139,
+    "with_axioms": {}
+   },
+   "Becoming.BranchingCorrespondence": {
+    "theorems": 10,
+    "declarations": 10,
+    "with_axioms": {}
+   },
+   "Becoming.Bundles": {
+    "theorems": 30,
+    "declarations": 58,
+    "with_axioms": {}
+   },
+   "Becoming.Capture": {
+    "theorems": 13,
+    "declarations": 15,
+    "with_axioms": {}
+   },
+   "Becoming.Carriers": {
+    "theorems": 46,
+    "declarations": 57,
+    "with_axioms": {}
+   },
+   "Becoming.Cascade": {
+    "theorems": 7,
+    "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.CausalGrowth": {
+    "theorems": 161,
+    "declarations": 212,
+    "with_axioms": {}
+   },
+   "Becoming.CensusBinding": {
+    "theorems": 22,
+    "declarations": 22,
+    "with_axioms": {}
+   },
+   "Becoming.CensusCounts": {
+    "theorems": 20,
+    "declarations": 20,
+    "with_axioms": {}
+   },
+   "Becoming.CensusTable": {
+    "theorems": 30,
+    "declarations": 38,
+    "with_axioms": {}
+   },
+   "Becoming.Centers": {
+    "theorems": 22,
+    "declarations": 28,
+    "with_axioms": {}
+   },
+   "Becoming.ChanceFloors": {
+    "theorems": 5,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.Change": {
+    "theorems": 85,
+    "declarations": 103,
+    "with_axioms": {}
+   },
+   "Becoming.ChoiceCountCapture": {
+    "theorems": 35,
+    "declarations": 45,
+    "with_axioms": {}
+   },
+   "Becoming.ClassifiedBeliefProcesses": {
     "theorems": 3,
     "declarations": 3,
     "with_axioms": {}
    },
-   "Becoming.NameCheckConveyance": {
+   "Becoming.Clearing": {
+    "theorems": 14,
+    "declarations": 25,
+    "with_axioms": {}
+   },
+   "Becoming.ClosedCapture": {
+    "theorems": 63,
+    "declarations": 85,
+    "with_axioms": {}
+   },
+   "Becoming.Closing": {
+    "theorems": 52,
+    "declarations": 62,
+    "with_axioms": {}
+   },
+   "Becoming.CodeAcquisition": {
+    "theorems": 37,
+    "declarations": 68,
+    "with_axioms": {}
+   },
+   "Becoming.Commuting": {
+    "theorems": 17,
+    "declarations": 20,
+    "with_axioms": {}
+   },
+   "Becoming.ComparingCourses": {
+    "theorems": 189,
+    "declarations": 242,
+    "with_axioms": {}
+   },
+   "Becoming.Composition": {
+    "theorems": 40,
+    "declarations": 62,
+    "with_axioms": {}
+   },
+   "Becoming.ConditionalWeights": {
+    "theorems": 93,
+    "declarations": 110,
+    "with_axioms": {}
+   },
+   "Becoming.ContactCourses": {
+    "theorems": 3,
+    "declarations": 3,
+    "with_axioms": {}
+   },
+   "Becoming.Contacts": {
+    "theorems": 23,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.Context": {
+    "theorems": 25,
+    "declarations": 57,
+    "with_axioms": {}
+   },
+   "Becoming.ContextArrivalTraces": {
+    "theorems": 23,
+    "declarations": 33,
+    "with_axioms": {}
+   },
+   "Becoming.ContextualRuns": {
+    "theorems": 16,
+    "declarations": 21,
+    "with_axioms": {}
+   },
+   "Becoming.ContingentPlans": {
+    "theorems": 15,
+    "declarations": 26,
+    "with_axioms": {}
+   },
+   "Becoming.Continuation": {
+    "theorems": 69,
+    "declarations": 104,
+    "with_axioms": {}
+   },
+   "Becoming.ContinuedClasses": {
+    "theorems": 73,
+    "declarations": 98,
+    "with_axioms": {}
+   },
+   "Becoming.ContinuingRevision": {
+    "theorems": 58,
+    "declarations": 91,
+    "with_axioms": {}
+   },
+   "Becoming.ContinuingRuns": {
+    "theorems": 12,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.Continuity": {
+    "theorems": 43,
+    "declarations": 64,
+    "with_axioms": {}
+   },
+   "Becoming.ConveyanceBoundaries": {
+    "theorems": 8,
+    "declarations": 8,
+    "with_axioms": {}
+   },
+   "Becoming.CopyCourses": {
+    "theorems": 13,
+    "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.Copying": {
+    "theorems": 65,
+    "declarations": 101,
+    "with_axioms": {}
+   },
+   "Becoming.Correspondence": {
+    "theorems": 37,
+    "declarations": 53,
+    "with_axioms": {}
+   },
+   "Becoming.Countdown": {
+    "theorems": 22,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.CountedCodes": {
+    "theorems": 34,
+    "declarations": 47,
+    "with_axioms": {}
+   },
+   "Becoming.Counterfactual": {
+    "theorems": 38,
+    "declarations": 64,
+    "with_axioms": {}
+   },
+   "Becoming.CounterfactualRuns": {
+    "theorems": 8,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.Counting": {
+    "theorems": 249,
+    "declarations": 349,
+    "with_axioms": {}
+   },
+   "Becoming.CouplingTraces": {
+    "theorems": 33,
+    "declarations": 35,
+    "with_axioms": {}
+   },
+   "Becoming.CourseRoles": {
+    "theorems": 10,
+    "declarations": 10,
+    "with_axioms": {}
+   },
+   "Becoming.CourseWorlds": {
+    "theorems": 33,
+    "declarations": 37,
+    "with_axioms": {}
+   },
+   "Becoming.Courses": {
+    "theorems": 91,
+    "declarations": 101,
+    "with_axioms": {}
+   },
+   "Becoming.Coverage": {
+    "theorems": 22,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.CrossSituational": {
+    "theorems": 34,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.Cuts": {
+    "theorems": 51,
+    "declarations": 60,
+    "with_axioms": {}
+   },
+   "Becoming.Decidedness": {
+    "theorems": 70,
+    "declarations": 77,
+    "with_axioms": {}
+   },
+   "Becoming.Dependence": {
+    "theorems": 44,
+    "declarations": 102,
+    "with_axioms": {}
+   },
+   "Becoming.Dephasing": {
+    "theorems": 63,
+    "declarations": 91,
+    "with_axioms": {}
+   },
+   "Becoming.Derivation": {
+    "theorems": 26,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.Descent": {
+    "theorems": 40,
+    "declarations": 49,
+    "with_axioms": {}
+   },
+   "Becoming.Description": {
+    "theorems": 35,
+    "declarations": 47,
+    "with_axioms": {}
+   },
+   "Becoming.Diagonal": {
+    "theorems": 39,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.Direction": {
+    "theorems": 14,
+    "declarations": 17,
+    "with_axioms": {}
+   },
+   "Becoming.Dispatch": {
+    "theorems": 33,
+    "declarations": 45,
+    "with_axioms": {}
+   },
+   "Becoming.Dissipation": {
+    "theorems": 111,
+    "declarations": 135,
+    "with_axioms": {}
+   },
+   "Becoming.Distinguishing": {
+    "theorems": 11,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.DrawnBeyond": {
+    "theorems": 44,
+    "declarations": 56,
+    "with_axioms": {}
+   },
+   "Becoming.DrawnShaping": {
+    "theorems": 31,
+    "declarations": 38,
+    "with_axioms": {}
+   },
+   "Becoming.Drift": {
+    "theorems": 82,
+    "declarations": 95,
+    "with_axioms": {}
+   },
+   "Becoming.EdgeClosure": {
     "theorems": 4,
-    "declarations": 4,
+    "declarations": 6,
     "with_axioms": {}
    },
-   "Becoming.NameCheckPath": {
-    "theorems": 3,
-    "declarations": 3,
+   "Becoming.Enough": {
+    "theorems": 8,
+    "declarations": 19,
     "with_axioms": {}
    },
-   "Becoming.NameCheckBalance": {
-    "theorems": 3,
-    "declarations": 3,
+   "Becoming.Entropy": {
+    "theorems": 190,
+    "declarations": 238,
     "with_axioms": {}
-   }
-  }
- },
- "kit_part": {
-  "what": "The kit's own patches (Grammar, GrammarReadings, MapRegions, PLAN, GrammarTesting) and the three leaves have not changed since the first rehearsal (history/REHEARSAL.json, 1 November), which built them, with fifteen modules and their closure, 145 of the package's modules then, beside the earlier owner patches. Those modules' counts and empty axiom reports, from it:",
-  "audits": {
+   },
+   "Becoming.EventualWidening": {
+    "theorems": 24,
+    "declarations": 36,
+    "with_axioms": {}
+   },
+   "Becoming.EventualWideningInstances": {
+    "theorems": 82,
+    "declarations": 106,
+    "with_axioms": {}
+   },
+   "Becoming.Evolution": {
+    "theorems": 35,
+    "declarations": 54,
+    "with_axioms": {}
+   },
+   "Becoming.ExchangePremises": {
+    "theorems": 51,
+    "declarations": 78,
+    "with_axioms": {}
+   },
+   "Becoming.Exclusion": {
+    "theorems": 39,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.Exhaustion": {
+    "theorems": 23,
+    "declarations": 27,
+    "with_axioms": {}
+   },
+   "Becoming.Experiment": {
+    "theorems": 24,
+    "declarations": 41,
+    "with_axioms": {}
+   },
+   "Becoming.Extension": {
+    "theorems": 10,
+    "declarations": 15,
+    "with_axioms": {}
+   },
+   "Becoming.FallibleInquiry": {
+    "theorems": 31,
+    "declarations": 37,
+    "with_axioms": {
+     "Becoming.FallibleInquiry.closed_with_imbalance": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.alike_with_common_imbalance": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.answer_alike_with_common_imbalance": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.coverage_le_errors_add_reach": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.error_bounds_require_reach": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.balanced": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.follows": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.connected": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.omitted_exchange_none": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.omitted_exchange_follows": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.Witness.common_nonzero_imbalance": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.error_bounds_require_timed_reach": [
+      "propext",
+      "Quot.sound"
+     ],
+     "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors": [
+      "propext",
+      "Quot.sound"
+     ]
+    }
+   },
+   "Becoming.FaultEnvelopes": {
+    "theorems": 21,
+    "declarations": 31,
+    "with_axioms": {}
+   },
+   "Becoming.Feedback": {
+    "theorems": 84,
+    "declarations": 128,
+    "with_axioms": {}
+   },
+   "Becoming.Feeding": {
+    "theorems": 41,
+    "declarations": 65,
+    "with_axioms": {}
+   },
+   "Becoming.FinerTraces": {
+    "theorems": 11,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.Flow": {
+    "theorems": 102,
+    "declarations": 140,
+    "with_axioms": {}
+   },
+   "Becoming.FormedLoops": {
+    "theorems": 7,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.Founding": {
+    "theorems": 42,
+    "declarations": 77,
+    "with_axioms": {}
+   },
+   "Becoming.Fragments": {
+    "theorems": 23,
+    "declarations": 36,
+    "with_axioms": {}
+   },
+   "Becoming.Frame": {
+    "theorems": 30,
+    "declarations": 40,
+    "with_axioms": {}
+   },
+   "Becoming.FreeEnergyCounting": {
+    "theorems": 55,
+    "declarations": 65,
+    "with_axioms": {}
+   },
+   "Becoming.FreeEnergyGuarantees": {
+    "theorems": 67,
+    "declarations": 98,
+    "with_axioms": {}
+   },
+   "Becoming.Frequency": {
+    "theorems": 109,
+    "declarations": 130,
+    "with_axioms": {}
+   },
+   "Becoming.Frontier": {
+    "theorems": 70,
+    "declarations": 103,
+    "with_axioms": {}
+   },
+   "Becoming.FrontierFrames": {
+    "theorems": 44,
+    "declarations": 53,
+    "with_axioms": {}
+   },
+   "Becoming.FrontierWorlds": {
+    "theorems": 8,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.Gain": {
+    "theorems": 29,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.Gated": {
+    "theorems": 13,
+    "declarations": 16,
+    "with_axioms": {}
+   },
+   "Becoming.Gluing": {
+    "theorems": 76,
+    "declarations": 108,
+    "with_axioms": {}
+   },
    "Becoming.Grammar": {
     "theorems": 72,
     "declarations": 120,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarCandidates": {
+    "theorems": 66,
+    "declarations": 90,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarCases": {
+    "theorems": 40,
+    "declarations": 68,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarConditionals": {
+    "theorems": 40,
+    "declarations": 41,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarCourse": {
+    "theorems": 32,
+    "declarations": 36,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarCrossing": {
+    "theorems": 9,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarLaws": {
+    "theorems": 192,
+    "declarations": 221,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarMap": {
+    "theorems": 42,
+    "declarations": 61,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarPath": {
+    "theorems": 102,
+    "declarations": 152,
     "with_axioms": {}
    },
    "Becoming.GrammarReadings": {
@@ -209,9 +1806,424 @@
     "declarations": 18,
     "with_axioms": {}
    },
+   "Becoming.GrammarRegularity": {
+    "theorems": 25,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarScope": {
+    "theorems": 38,
+    "declarations": 45,
+    "with_axioms": {}
+   },
    "Becoming.GrammarTesting": {
     "theorems": 6,
     "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.GrammarTransport": {
+    "theorems": 53,
+    "declarations": 57,
+    "with_axioms": {}
+   },
+   "Becoming.Granularity": {
+    "theorems": 89,
+    "declarations": 123,
+    "with_axioms": {}
+   },
+   "Becoming.GroupEnding": {
+    "theorems": 38,
+    "declarations": 55,
+    "with_axioms": {}
+   },
+   "Becoming.Growth": {
+    "theorems": 12,
+    "declarations": 19,
+    "with_axioms": {}
+   },
+   "Becoming.GuardHorizon": {
+    "theorems": 32,
+    "declarations": 48,
+    "with_axioms": {}
+   },
+   "Becoming.Handoff": {
+    "theorems": 22,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.HeldForReading": {
+    "theorems": 97,
+    "declarations": 127,
+    "with_axioms": {}
+   },
+   "Becoming.HeldPossible": {
+    "theorems": 89,
+    "declarations": 118,
+    "with_axioms": {}
+   },
+   "Becoming.HexagramCommuting": {
+    "theorems": 7,
+    "declarations": 7,
+    "with_axioms": {}
+   },
+   "Becoming.HexagramLaws": {
+    "theorems": 129,
+    "declarations": 186,
+    "with_axioms": {}
+   },
+   "Becoming.HexagramPlaces": {
+    "theorems": 121,
+    "declarations": 183,
+    "with_axioms": {}
+   },
+   "Becoming.HexagramSequences": {
+    "theorems": 96,
+    "declarations": 167,
+    "with_axioms": {}
+   },
+   "Becoming.HexagramSites": {
+    "theorems": 98,
+    "declarations": 137,
+    "with_axioms": {}
+   },
+   "Becoming.Hexagrams": {
+    "theorems": 67,
+    "declarations": 93,
+    "with_axioms": {}
+   },
+   "Becoming.Histories": {
+    "theorems": 26,
+    "declarations": 40,
+    "with_axioms": {}
+   },
+   "Becoming.HistoryIdeals": {
+    "theorems": 72,
+    "declarations": 94,
+    "with_axioms": {}
+   },
+   "Becoming.HistoryIdealsTraces": {
+    "theorems": 7,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.HistoryLanguages": {
+    "theorems": 34,
+    "declarations": 44,
+    "with_axioms": {}
+   },
+   "Becoming.HistorySums": {
+    "theorems": 39,
+    "declarations": 51,
+    "with_axioms": {}
+   },
+   "Becoming.Horizon": {
+    "theorems": 32,
+    "declarations": 47,
+    "with_axioms": {}
+   },
+   "Becoming.HorizonWebs": {
+    "theorems": 8,
+    "declarations": 11,
+    "with_axioms": {}
+   },
+   "Becoming.Identification": {
+    "theorems": 99,
+    "declarations": 120,
+    "with_axioms": {}
+   },
+   "Becoming.IdentificationRuns": {
+    "theorems": 58,
+    "declarations": 65,
+    "with_axioms": {}
+   },
+   "Becoming.Identity": {
+    "theorems": 152,
+    "declarations": 217,
+    "with_axioms": {}
+   },
+   "Becoming.IdleRemoval": {
+    "theorems": 13,
+    "declarations": 17,
+    "with_axioms": {}
+   },
+   "Becoming.Imbalance": {
+    "theorems": 14,
+    "declarations": 15,
+    "with_axioms": {}
+   },
+   "Becoming.InAmounts": {
+    "theorems": 91,
+    "declarations": 127,
+    "with_axioms": {}
+   },
+   "Becoming.Inquiry": {
+    "theorems": 6,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.IntegerOrder": {
+    "theorems": 38,
+    "declarations": 38,
+    "with_axioms": {}
+   },
+   "Becoming.Integers": {
+    "theorems": 34,
+    "declarations": 38,
+    "with_axioms": {}
+   },
+   "Becoming.Interdependence": {
+    "theorems": 25,
+    "declarations": 32,
+    "with_axioms": {}
+   },
+   "Becoming.Interleavings": {
+    "theorems": 163,
+    "declarations": 199,
+    "with_axioms": {}
+   },
+   "Becoming.Irreversibility": {
+    "theorems": 3,
+    "declarations": 4,
+    "with_axioms": {}
+   },
+   "Becoming.Joining": {
+    "theorems": 65,
+    "declarations": 106,
+    "with_axioms": {}
+   },
+   "Becoming.JoiningCodes": {
+    "theorems": 10,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.JoiningContexts": {
+    "theorems": 23,
+    "declarations": 30,
+    "with_axioms": {}
+   },
+   "Becoming.JoiningRoles": {
+    "theorems": 23,
+    "declarations": 26,
+    "with_axioms": {}
+   },
+   "Becoming.Joint": {
+    "theorems": 34,
+    "declarations": 76,
+    "with_axioms": {}
+   },
+   "Becoming.JointCorrespondence": {
+    "theorems": 9,
+    "declarations": 10,
+    "with_axioms": {}
+   },
+   "Becoming.JointDraw": {
+    "theorems": 25,
+    "declarations": 31,
+    "with_axioms": {}
+   },
+   "Becoming.JointKeeping": {
+    "theorems": 22,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.JointPhase": {
+    "theorems": 23,
+    "declarations": 38,
+    "with_axioms": {}
+   },
+   "Becoming.JointPlans": {
+    "theorems": 4,
+    "declarations": 10,
+    "with_axioms": {}
+   },
+   "Becoming.Junctures": {
+    "theorems": 51,
+    "declarations": 65,
+    "with_axioms": {}
+   },
+   "Becoming.Keeping": {
+    "theorems": 30,
+    "declarations": 55,
+    "with_axioms": {}
+   },
+   "Becoming.KeepingWidening": {
+    "theorems": 248,
+    "declarations": 306,
+    "with_axioms": {}
+   },
+   "Becoming.Labelled": {
+    "theorems": 69,
+    "declarations": 108,
+    "with_axioms": {}
+   },
+   "Becoming.LabelledRoles": {
+    "theorems": 11,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.Labels": {
+    "theorems": 19,
+    "declarations": 24,
+    "with_axioms": {}
+   },
+   "Becoming.LastChange": {
+    "theorems": 27,
+    "declarations": 31,
+    "with_axioms": {}
+   },
+   "Becoming.Lasting": {
+    "theorems": 90,
+    "declarations": 112,
+    "with_axioms": {}
+   },
+   "Becoming.LastingRuns": {
+    "theorems": 18,
+    "declarations": 18,
+    "with_axioms": {}
+   },
+   "Becoming.Latency": {
+    "theorems": 11,
+    "declarations": 20,
+    "with_axioms": {}
+   },
+   "Becoming.LawAlongRun": {
+    "theorems": 59,
+    "declarations": 85,
+    "with_axioms": {}
+   },
+   "Becoming.Laws": {
+    "theorems": 5,
+    "declarations": 11,
+    "with_axioms": {}
+   },
+   "Becoming.Learnable": {
+    "theorems": 17,
+    "declarations": 23,
+    "with_axioms": {}
+   },
+   "Becoming.LearnableRuns": {
+    "theorems": 22,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.LearnedGrouping": {
+    "theorems": 41,
+    "declarations": 67,
+    "with_axioms": {}
+   },
+   "Becoming.Learning": {
+    "theorems": 80,
+    "declarations": 114,
+    "with_axioms": {}
+   },
+   "Becoming.LearningRuns": {
+    "theorems": 30,
+    "declarations": 33,
+    "with_axioms": {}
+   },
+   "Becoming.LeastLoss": {
+    "theorems": 55,
+    "declarations": 71,
+    "with_axioms": {}
+   },
+   "Becoming.LevelCoupling": {
+    "theorems": 56,
+    "declarations": 76,
+    "with_axioms": {}
+   },
+   "Becoming.Lexical": {
+    "theorems": 45,
+    "declarations": 64,
+    "with_axioms": {}
+   },
+   "Becoming.Lifting": {
+    "theorems": 6,
+    "declarations": 14,
+    "with_axioms": {}
+   },
+   "Becoming.Likeness": {
+    "theorems": 176,
+    "declarations": 229,
+    "with_axioms": {}
+   },
+   "Becoming.LimitVerification": {
+    "theorems": 63,
+    "declarations": 95,
+    "with_axioms": {}
+   },
+   "Becoming.LineDegeneration": {
+    "theorems": 40,
+    "declarations": 45,
+    "with_axioms": {}
+   },
+   "Becoming.LineageRegimes": {
+    "theorems": 91,
+    "declarations": 112,
+    "with_axioms": {}
+   },
+   "Becoming.LineageRegions": {
+    "theorems": 129,
+    "declarations": 174,
+    "with_axioms": {}
+   },
+   "Becoming.ListFootprints": {
+    "theorems": 9,
+    "declarations": 11,
+    "with_axioms": {}
+   },
+   "Becoming.ListedWebs": {
+    "theorems": 6,
+    "declarations": 6,
+    "with_axioms": {}
+   },
+   "Becoming.Listing": {
+    "theorems": 89,
+    "declarations": 106,
+    "with_axioms": {}
+   },
+   "Becoming.ListingRefutations": {
+    "theorems": 27,
+    "declarations": 27,
+    "with_axioms": {}
+   },
+   "Becoming.ListingValuation": {
+    "theorems": 138,
+    "declarations": 186,
+    "with_axioms": {}
+   },
+   "Becoming.LocalUnits": {
+    "theorems": 45,
+    "declarations": 60,
+    "with_axioms": {}
+   },
+   "Becoming.Locality": {
+    "theorems": 44,
+    "declarations": 51,
+    "with_axioms": {}
+   },
+   "Becoming.LoopReturn": {
+    "theorems": 77,
+    "declarations": 89,
+    "with_axioms": {}
+   },
+   "Becoming.Loops": {
+    "theorems": 106,
+    "declarations": 130,
+    "with_axioms": {}
+   },
+   "Becoming.LossMatching": {
+    "theorems": 29,
+    "declarations": 37,
+    "with_axioms": {}
+   },
+   "Becoming.LumpedSeeking": {
+    "theorems": 14,
+    "declarations": 27,
+    "with_axioms": {}
+   },
+   "Becoming.MapInstances": {
+    "theorems": 27,
+    "declarations": 27,
     "with_axioms": {}
    },
    "Becoming.MapRegions": {
@@ -219,9 +2231,424 @@
     "declarations": 42,
     "with_axioms": {}
    },
-   "Becoming.GrammarConditionals": {
-    "theorems": 40,
-    "declarations": 41,
+   "Becoming.MatchedCourses": {
+    "theorems": 33,
+    "declarations": 61,
+    "with_axioms": {}
+   },
+   "Becoming.Mechanism": {
+    "theorems": 31,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.Metaethics": {
+    "theorems": 11,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.ModelStatements": {
+    "theorems": 78,
+    "declarations": 121,
+    "with_axioms": {}
+   },
+   "Becoming.MoveFormation": {
+    "theorems": 55,
+    "declarations": 78,
+    "with_axioms": {}
+   },
+   "Becoming.MoveOutcomeProcesses": {
+    "theorems": 28,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.MutualDependence": {
+    "theorems": 30,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.Narrowing": {
+    "theorems": 60,
+    "declarations": 79,
+    "with_axioms": {}
+   },
+   "Becoming.NarrowingRuns": {
+    "theorems": 11,
+    "declarations": 14,
+    "with_axioms": {}
+   },
+   "Becoming.Novelty": {
+    "theorems": 22,
+    "declarations": 23,
+    "with_axioms": {}
+   },
+   "Becoming.Observation": {
+    "theorems": 27,
+    "declarations": 32,
+    "with_axioms": {}
+   },
+   "Becoming.OneStep": {
+    "theorems": 305,
+    "declarations": 395,
+    "with_axioms": {}
+   },
+   "Becoming.Onward": {
+    "theorems": 28,
+    "declarations": 40,
+    "with_axioms": {}
+   },
+   "Becoming.OpenedCorrection": {
+    "theorems": 12,
+    "declarations": 16,
+    "with_axioms": {}
+   },
+   "Becoming.Openness": {
+    "theorems": 78,
+    "declarations": 110,
+    "with_axioms": {}
+   },
+   "Becoming.Optimum": {
+    "theorems": 506,
+    "declarations": 637,
+    "with_axioms": {}
+   },
+   "Becoming.OptimumSeason": {
+    "theorems": 63,
+    "declarations": 98,
+    "with_axioms": {}
+   },
+   "Becoming.OrderNormal": {
+    "theorems": 101,
+    "declarations": 127,
+    "with_axioms": {}
+   },
+   "Becoming.OverExchange": {
+    "theorems": 50,
+    "declarations": 57,
+    "with_axioms": {}
+   },
+   "Becoming.OwnWidening": {
+    "theorems": 15,
+    "declarations": 25,
+    "with_axioms": {}
+   },
+   "Becoming.Pace": {
+    "theorems": 34,
+    "declarations": 44,
+    "with_axioms": {}
+   },
+   "Becoming.PairSelection": {
+    "theorems": 151,
+    "declarations": 223,
+    "with_axioms": {}
+   },
+   "Becoming.ParityReadings": {
+    "theorems": 10,
+    "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.PartialReadout": {
+    "theorems": 25,
+    "declarations": 42,
+    "with_axioms": {}
+   },
+   "Becoming.Parting": {
+    "theorems": 42,
+    "declarations": 61,
+    "with_axioms": {}
+   },
+   "Becoming.PatternPassing": {
+    "theorems": 33,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.Persistence": {
+    "theorems": 86,
+    "declarations": 106,
+    "with_axioms": {}
+   },
+   "Becoming.PlaceTransitionNets": {
+    "theorems": 63,
+    "declarations": 96,
+    "with_axioms": {}
+   },
+   "Becoming.PoolCourse": {
+    "theorems": 17,
+    "declarations": 28,
+    "with_axioms": {}
+   },
+   "Becoming.PoolResponse": {
+    "theorems": 18,
+    "declarations": 21,
+    "with_axioms": {}
+   },
+   "Becoming.PooledEnvelopes": {
+    "theorems": 44,
+    "declarations": 69,
+    "with_axioms": {}
+   },
+   "Becoming.Population": {
+    "theorems": 116,
+    "declarations": 144,
+    "with_axioms": {}
+   },
+   "Becoming.Postponement": {
+    "theorems": 16,
+    "declarations": 17,
+    "with_axioms": {}
+   },
+   "Becoming.Prelude": {
+    "theorems": 141,
+    "declarations": 151,
+    "with_axioms": {}
+   },
+   "Becoming.PremiseWitnesses": {
+    "theorems": 35,
+    "declarations": 37,
+    "with_axioms": {}
+   },
+   "Becoming.Premises": {
+    "theorems": 61,
+    "declarations": 132,
+    "with_axioms": {}
+   },
+   "Becoming.Presence": {
+    "theorems": 164,
+    "declarations": 190,
+    "with_axioms": {}
+   },
+   "Becoming.Presentations": {
+    "theorems": 35,
+    "declarations": 51,
+    "with_axioms": {}
+   },
+   "Becoming.ProcessRepresentation": {
+    "theorems": 52,
+    "declarations": 70,
+    "with_axioms": {}
+   },
+   "Becoming.ProfileReach": {
+    "theorems": 16,
+    "declarations": 33,
+    "with_axioms": {}
+   },
+   "Becoming.ProjectedLaws": {
+    "theorems": 28,
+    "declarations": 43,
+    "with_axioms": {}
+   },
+   "Becoming.Propagation": {
+    "theorems": 75,
+    "declarations": 96,
+    "with_axioms": {}
+   },
+   "Becoming.PropositionIdentity": {
+    "theorems": 12,
+    "declarations": 22,
+    "with_axioms": {}
+   },
+   "Becoming.Quantum": {
+    "theorems": 35,
+    "declarations": 67,
+    "with_axioms": {}
+   },
+   "Becoming.Ranking": {
+    "theorems": 52,
+    "declarations": 78,
+    "with_axioms": {}
+   },
+   "Becoming.ReachableRanges": {
+    "theorems": 135,
+    "declarations": 196,
+    "with_axioms": {}
+   },
+   "Becoming.ReadInTime": {
+    "theorems": 34,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.ReadStages": {
+    "theorems": 57,
+    "declarations": 79,
+    "with_axioms": {}
+   },
+   "Becoming.Reading": {
+    "theorems": 28,
+    "declarations": 44,
+    "with_axioms": {}
+   },
+   "Becoming.ReadingLoop": {
+    "theorems": 51,
+    "declarations": 84,
+    "with_axioms": {}
+   },
+   "Becoming.ReadingSchedule": {
+    "theorems": 67,
+    "declarations": 87,
+    "with_axioms": {}
+   },
+   "Becoming.Readings": {
+    "theorems": 11,
+    "declarations": 14,
+    "with_axioms": {}
+   },
+   "Becoming.Readout": {
+    "theorems": 22,
+    "declarations": 35,
+    "with_axioms": {}
+   },
+   "Becoming.Reconfiguration": {
+    "theorems": 51,
+    "declarations": 80,
+    "with_axioms": {}
+   },
+   "Becoming.Recurrence": {
+    "theorems": 82,
+    "declarations": 103,
+    "with_axioms": {}
+   },
+   "Becoming.ReferencePlan": {
+    "theorems": 55,
+    "declarations": 81,
+    "with_axioms": {}
+   },
+   "Becoming.ReferencePlanTraces": {
+    "theorems": 55,
+    "declarations": 59,
+    "with_axioms": {}
+   },
+   "Becoming.Refinement": {
+    "theorems": 10,
+    "declarations": 12,
+    "with_axioms": {}
+   },
+   "Becoming.ReflexivePrediction": {
+    "theorems": 22,
+    "declarations": 26,
+    "with_axioms": {}
+   },
+   "Becoming.RegimeMargin": {
+    "theorems": 247,
+    "declarations": 337,
+    "with_axioms": {}
+   },
+   "Becoming.Regions": {
+    "theorems": 23,
+    "declarations": 31,
+    "with_axioms": {}
+   },
+   "Becoming.Regrouping": {
+    "theorems": 24,
+    "declarations": 33,
+    "with_axioms": {}
+   },
+   "Becoming.RegroupingSelection": {
+    "theorems": 11,
+    "declarations": 11,
+    "with_axioms": {}
+   },
+   "Becoming.Regulation": {
+    "theorems": 113,
+    "declarations": 141,
+    "with_axioms": {}
+   },
+   "Becoming.Rejoining": {
+    "theorems": 20,
+    "declarations": 32,
+    "with_axioms": {}
+   },
+   "Becoming.RelativePosition": {
+    "theorems": 64,
+    "declarations": 89,
+    "with_axioms": {}
+   },
+   "Becoming.Relevance": {
+    "theorems": 34,
+    "declarations": 42,
+    "with_axioms": {}
+   },
+   "Becoming.Remainder": {
+    "theorems": 56,
+    "declarations": 64,
+    "with_axioms": {}
+   },
+   "Becoming.Renewal": {
+    "theorems": 1,
+    "declarations": 5,
+    "with_axioms": {}
+   },
+   "Becoming.RenewalBound": {
+    "theorems": 21,
+    "declarations": 25,
+    "with_axioms": {}
+   },
+   "Becoming.RenewalFlow": {
+    "theorems": 28,
+    "declarations": 33,
+    "with_axioms": {}
+   },
+   "Becoming.Reordering": {
+    "theorems": 172,
+    "declarations": 215,
+    "with_axioms": {}
+   },
+   "Becoming.ReorderingGrowth": {
+    "theorems": 62,
+    "declarations": 76,
+    "with_axioms": {}
+   },
+   "Becoming.Reproduction": {
+    "theorems": 114,
+    "declarations": 158,
+    "with_axioms": {}
+   },
+   "Becoming.Reserve": {
+    "theorems": 89,
+    "declarations": 131,
+    "with_axioms": {}
+   },
+   "Becoming.Resolution": {
+    "theorems": 203,
+    "declarations": 257,
+    "with_axioms": {}
+   },
+   "Becoming.Response": {
+    "theorems": 29,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.ResponseLearning": {
+    "theorems": 62,
+    "declarations": 84,
+    "with_axioms": {}
+   },
+   "Becoming.Restoration": {
+    "theorems": 27,
+    "declarations": 36,
+    "with_axioms": {}
+   },
+   "Becoming.Retaining": {
+    "theorems": 34,
+    "declarations": 49,
+    "with_axioms": {}
+   },
+   "Becoming.Retrodiction": {
+    "theorems": 16,
+    "declarations": 23,
+    "with_axioms": {}
+   },
+   "Becoming.Revision": {
+    "theorems": 33,
+    "declarations": 46,
+    "with_axioms": {}
+   },
+   "Becoming.RevisionPlans": {
+    "theorems": 33,
+    "declarations": 48,
+    "with_axioms": {}
+   },
+   "Becoming.Roles": {
+    "theorems": 142,
+    "declarations": 185,
     "with_axioms": {}
    },
    "Becoming.RoomNet": {
@@ -233,30 +2660,535 @@
     "theorems": 24,
     "declarations": 27,
     "with_axioms": {}
+   },
+   "Becoming.RootForms": {
+    "theorems": 30,
+    "declarations": 42,
+    "with_axioms": {}
+   },
+   "Becoming.RouteFormation": {
+    "theorems": 67,
+    "declarations": 99,
+    "with_axioms": {}
+   },
+   "Becoming.RouteTraces": {
+    "theorems": 6,
+    "declarations": 6,
+    "with_axioms": {}
+   },
+   "Becoming.Routes": {
+    "theorems": 28,
+    "declarations": 37,
+    "with_axioms": {}
+   },
+   "Becoming.RuleCapture": {
+    "theorems": 56,
+    "declarations": 79,
+    "with_axioms": {}
+   },
+   "Becoming.RuleHandoff": {
+    "theorems": 67,
+    "declarations": 92,
+    "with_axioms": {}
+   },
+   "Becoming.RuleShaping": {
+    "theorems": 52,
+    "declarations": 58,
+    "with_axioms": {}
+   },
+   "Becoming.Runaway": {
+    "theorems": 13,
+    "declarations": 17,
+    "with_axioms": {}
+   },
+   "Becoming.Runs": {
+    "theorems": 17,
+    "declarations": 28,
+    "with_axioms": {}
+   },
+   "Becoming.Sampling": {
+    "theorems": 88,
+    "declarations": 117,
+    "with_axioms": {}
+   },
+   "Becoming.ScopedReach": {
+    "theorems": 15,
+    "declarations": 24,
+    "with_axioms": {}
+   },
+   "Becoming.ScoreRepresentation": {
+    "theorems": 16,
+    "declarations": 26,
+    "with_axioms": {}
+   },
+   "Becoming.SecuredContent": {
+    "theorems": 30,
+    "declarations": 63,
+    "with_axioms": {}
+   },
+   "Becoming.SeedReach": {
+    "theorems": 15,
+    "declarations": 19,
+    "with_axioms": {}
+   },
+   "Becoming.Seeking": {
+    "theorems": 13,
+    "declarations": 16,
+    "with_axioms": {}
+   },
+   "Becoming.SeekingRuns": {
+    "theorems": 7,
+    "declarations": 7,
+    "with_axioms": {}
+   },
+   "Becoming.Selection": {
+    "theorems": 70,
+    "declarations": 95,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionGap": {
+    "theorems": 7,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionLevels": {
+    "theorems": 78,
+    "declarations": 107,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionPace": {
+    "theorems": 103,
+    "declarations": 224,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionPool": {
+    "theorems": 50,
+    "declarations": 55,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionReach": {
+    "theorems": 18,
+    "declarations": 18,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionRuns": {
+    "theorems": 7,
+    "declarations": 7,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionShift": {
+    "theorems": 83,
+    "declarations": 105,
+    "with_axioms": {}
+   },
+   "Becoming.SelectionTerm": {
+    "theorems": 67,
+    "declarations": 91,
+    "with_axioms": {}
+   },
+   "Becoming.Sensitivity": {
+    "theorems": 45,
+    "declarations": 56,
+    "with_axioms": {}
+   },
+   "Becoming.SensitivityWebs": {
+    "theorems": 4,
+    "declarations": 4,
+    "with_axioms": {}
+   },
+   "Becoming.SetPointOptimum": {
+    "theorems": 82,
+    "declarations": 124,
+    "with_axioms": {}
+   },
+   "Becoming.Settling": {
+    "theorems": 26,
+    "declarations": 35,
+    "with_axioms": {}
+   },
+   "Becoming.SharedCodes": {
+    "theorems": 125,
+    "declarations": 173,
+    "with_axioms": {}
+   },
+   "Becoming.ShownOrder": {
+    "theorems": 28,
+    "declarations": 40,
+    "with_axioms": {}
+   },
+   "Becoming.Significance": {
+    "theorems": 30,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.SignificanceStatements": {
+    "theorems": 5,
+    "declarations": 5,
+    "with_axioms": {}
+   },
+   "Becoming.SituationTraces": {
+    "theorems": 20,
+    "declarations": 23,
+    "with_axioms": {}
+   },
+   "Becoming.Situations": {
+    "theorems": 38,
+    "declarations": 53,
+    "with_axioms": {}
+   },
+   "Becoming.Space": {
+    "theorems": 62,
+    "declarations": 126,
+    "with_axioms": {}
+   },
+   "Becoming.Standing": {
+    "theorems": 44,
+    "declarations": 61,
+    "with_axioms": {}
+   },
+   "Becoming.Standpoints": {
+    "theorems": 21,
+    "declarations": 34,
+    "with_axioms": {}
+   },
+   "Becoming.Stock": {
+    "theorems": 46,
+    "declarations": 58,
+    "with_axioms": {}
+   },
+   "Becoming.StrengthFlows": {
+    "theorems": 12,
+    "declarations": 13,
+    "with_axioms": {}
+   },
+   "Becoming.StrictTransport": {
+    "theorems": 18,
+    "declarations": 25,
+    "with_axioms": {}
+   },
+   "Becoming.Stuttering": {
+    "theorems": 77,
+    "declarations": 81,
+    "with_axioms": {}
+   },
+   "Becoming.Substitution": {
+    "theorems": 12,
+    "declarations": 24,
+    "with_axioms": {}
+   },
+   "Becoming.Succession": {
+    "theorems": 6,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.SummaryFutures": {
+    "theorems": 3,
+    "declarations": 5,
+    "with_axioms": {}
+   },
+   "Becoming.Tail": {
+    "theorems": 49,
+    "declarations": 69,
+    "with_axioms": {}
+   },
+   "Becoming.Tasks": {
+    "theorems": 128,
+    "declarations": 167,
+    "with_axioms": {}
+   },
+   "Becoming.Testing": {
+    "theorems": 85,
+    "declarations": 142,
+    "with_axioms": {}
+   },
+   "Becoming.Thresholds": {
+    "theorems": 38,
+    "declarations": 45,
+    "with_axioms": {}
+   },
+   "Becoming.TimedResponse": {
+    "theorems": 22,
+    "declarations": 30,
+    "with_axioms": {}
+   },
+   "Becoming.Tolerance": {
+    "theorems": 63,
+    "declarations": 80,
+    "with_axioms": {}
+   },
+   "Becoming.Tower": {
+    "theorems": 6,
+    "declarations": 8,
+    "with_axioms": {}
+   },
+   "Becoming.Training": {
+    "theorems": 59,
+    "declarations": 88,
+    "with_axioms": {}
+   },
+   "Becoming.Transactions": {
+    "theorems": 59,
+    "declarations": 91,
+    "with_axioms": {}
+   },
+   "Becoming.Transmission": {
+    "theorems": 88,
+    "declarations": 111,
+    "with_axioms": {}
+   },
+   "Becoming.TreeSearch": {
+    "theorems": 34,
+    "declarations": 56,
+    "with_axioms": {}
+   },
+   "Becoming.TypicalRuns": {
+    "theorems": 21,
+    "declarations": 25,
+    "with_axioms": {}
+   },
+   "Becoming.Typicality": {
+    "theorems": 52,
+    "declarations": 72,
+    "with_axioms": {}
+   },
+   "Becoming.Undecided": {
+    "theorems": 63,
+    "declarations": 88,
+    "with_axioms": {}
+   },
+   "Becoming.Unfolding": {
+    "theorems": 31,
+    "declarations": 39,
+    "with_axioms": {}
+   },
+   "Becoming.UnitMatchings": {
+    "theorems": 16,
+    "declarations": 24,
+    "with_axioms": {}
+   },
+   "Becoming.Units": {
+    "theorems": 32,
+    "declarations": 42,
+    "with_axioms": {}
+   },
+   "Becoming.Unread": {
+    "theorems": 8,
+    "declarations": 11,
+    "with_axioms": {}
+   },
+   "Becoming.UnreadStandings": {
+    "theorems": 32,
+    "declarations": 40,
+    "with_axioms": {}
+   },
+   "Becoming.Unrolling": {
+    "theorems": 15,
+    "declarations": 22,
+    "with_axioms": {}
+   },
+   "Becoming.ValuationFrames": {
+    "theorems": 26,
+    "declarations": 32,
+    "with_axioms": {}
+   },
+   "Becoming.Verification": {
+    "theorems": 87,
+    "declarations": 105,
+    "with_axioms": {}
+   },
+   "Becoming.Viability": {
+    "theorems": 24,
+    "declarations": 32,
+    "with_axioms": {}
+   },
+   "Becoming.Weighted": {
+    "theorems": 38,
+    "declarations": 60,
+    "with_axioms": {}
+   },
+   "Becoming.WeightedCommuting": {
+    "theorems": 18,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.WeightedTraces": {
+    "theorems": 6,
+    "declarations": 8,
+    "with_axioms": {}
+   },
+   "Becoming.Weightings": {
+    "theorems": 398,
+    "declarations": 560,
+    "with_axioms": {}
+   },
+   "Becoming.WholeAmounts": {
+    "theorems": 7,
+    "declarations": 7,
+    "with_axioms": {}
+   },
+   "Becoming.Wholes": {
+    "theorems": 98,
+    "declarations": 130,
+    "with_axioms": {}
+   },
+   "Becoming.WideningOnTheMap": {
+    "theorems": 43,
+    "declarations": 52,
+    "with_axioms": {}
+   },
+   "Becoming.WindowedWaiting": {
+    "theorems": 130,
+    "declarations": 181,
+    "with_axioms": {}
+   },
+   "Becoming.Withholding": {
+    "theorems": 40,
+    "declarations": 52,
+    "with_axioms": {}
+   },
+   "Becoming.WitnessRefinement": {
+    "theorems": 44,
+    "declarations": 64,
+    "with_axioms": {}
+   },
+   "Becoming.WitnessRefinementRuns": {
+    "theorems": 25,
+    "declarations": 29,
+    "with_axioms": {}
+   },
+   "Becoming.Witnesses": {
+    "theorems": 0,
+    "declarations": 9,
+    "with_axioms": {}
+   },
+   "Becoming.World": {
+    "theorems": 2,
+    "declarations": 15,
+    "with_axioms": {}
+   },
+   "Becoming.WorldRepresentation": {
+    "theorems": 34,
+    "declarations": 48,
+    "with_axioms": {}
+   },
+   "Becoming": {
+    "theorems": 0,
+    "declarations": 0,
+    "with_axioms": {}
    }
-  },
-  "patches_unchanged": [
-   {
-    "path": "patches/Grammar.patch",
-    "sha256": "93ac3e37a56061c725002bb1ce7ce659ee58849940aff5ecb7efd1c5b1a7648b"
-   },
-   {
-    "path": "patches/GrammarReadings.patch",
-    "sha256": "932becfab8652c6a60337b5d652143d9e9b5347e4c1e4e2b2e951e666452f05c"
-   },
-   {
-    "path": "patches/MapRegions.patch",
-    "sha256": "73f0fa267c72d27e6eb1ffc2218b8a4247170f22a2d11b3331ff1c9681835639"
-   },
-   {
-    "path": "patches/PLAN.patch",
-    "sha256": "eaf8f1b456bdf356a8c852f144114d7c85a7bb50ae458d1ad669cbe2ce323bd7"
-   },
-   {
-    "path": "../check/kit/GrammarTesting.patch",
-    "sha256": "55f155f1fdd039603f5f2c2b8a4f25e59f882a4ce12584fe77aeb673e6740897"
+  }
+ },
+ "axioms": {
+  "summary": "Every audited module's axiom report is empty but one: Becoming.FallibleInquiry, a periphery bridge (it imports ScientificInquiryNecessity), not in the tree and rebuilt as downstream of it. Its 17 declarations with propext and Quot.sound are exactly those of its own receipt (fallible-inquiry-verification.json, 20261031T130828.999853Z, 31 theorems in 37 declarations, layer 'periphery bridge'). No core or ring module has an axiom.",
+  "with_axioms": {
+   "Becoming.FallibleInquiry": {
+    "Becoming.FallibleInquiry.closed_with_imbalance": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.alike_with_common_imbalance": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.answer_alike_with_common_imbalance": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.coverage_le_errors_add_reach": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.error_bounds_require_reach": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.balanced": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.follows": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.connected": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.omitted_exchange_none": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.omitted_exchange_follows": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.Witness.common_nonzero_imbalance": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.error_bounds_require_timed_reach": [
+     "propext",
+     "Quot.sound"
+    ],
+    "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors": [
+     "propext",
+     "Quot.sound"
+    ]
    }
+  }
+ },
+ "counts_checked": {
+  "Becoming.GrammarLaws": [
+   192,
+   221
+  ],
+  "Becoming.Grammar": [
+   72,
+   120
+  ],
+  "Becoming.GrammarReadings": [
+   13,
+   18
+  ],
+  "Becoming.GrammarCrossing": [
+   9,
+   9
+  ],
+  "Becoming.GrammarConditionals": [
+   40,
+   41
+  ],
+  "Becoming.RoomNet": [
+   94,
+   120
+  ],
+  "Becoming.RoomRuns": [
+   24,
+   27
   ]
  },
- "next": "The full rehearsal: the nine patches, the three leaves and the stages in place, building Persistence and every module importing Identity (185 modules), as the coordinator asked, before the rebuild slot."
+ "invalid_first_run": "A first build, started at 2026-11-01T03:34:38Z, is not this rehearsal: its tree was copied after stage_check.py had applied a throwaway stage, so its GrammarLaws held the test theorems «试甲» and «试乙» (194 theorems in 223 declarations, not 192 in 221). Its result is not used. The throwaway patches were reversed, the tree rebuilt and checked, and rehearsal_tree.py now refuses any file the receipt does not record.",
+ "not_in_it": [
+  "U4c's re-cut of 10-u4c after its documents slot: record side only, as the coordinator was told; any Lean it changes is built alone, reusing these steps.",
+  "Owner patch 05-scope-wording: GrammarScope's comments, a small incremental run after this one.",
+  "The text-review merge (dd95b4ba7) and the front refresh: documents only.",
+  "Main's next Lean (UE28, at the head of the queue): the landing's merge brings it, and the landing's core run builds what it changes."
+ ],
+ "next": "The landing's core run on main with the kit and both stages applied reuses these steps; the incremental build of patch 05 first."
 }
