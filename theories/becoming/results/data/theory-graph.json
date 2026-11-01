@@ -500,6 +500,18 @@
    "page": "theories/becoming/results/records/a-need-with-a-cap.md"
   },
   {
+   "id": "record:a-pair-tolerates-only-within-a-window",
+   "type": "result",
+   "record": "a-pair-tolerates-only-within-a-window",
+   "title": "A pair tolerates only within a window",
+   "title_zh": "一对只在窗口内容忍",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md"
+  },
+  {
    "id": "record:a-pattern-lasts-through-passing",
    "type": "result",
    "record": "a-pattern-lasts-through-passing",
@@ -1772,6 +1784,18 @@
    "page": "theories/becoming/results/records/coupling-closures-of-training-pipelines.md"
   },
   {
+   "id": "record:degeneration-from-a-horizon",
+   "type": "result",
+   "record": "degeneration-from-a-horizon",
+   "title": "Degeneration from a horizon",
+   "title_zh": "由视界而退化",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/degeneration-from-a-horizon.md"
+  },
+  {
    "id": "record:dependence-formed-from-drawing",
    "type": "result",
    "record": "dependence-formed-from-drawing",
@@ -1974,6 +1998,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/encounter-selection-and-revision.md"
+  },
+  {
+   "id": "record:ending-laws-as-regimes-on-a-lineage",
+   "type": "result",
+   "record": "ending-laws-as-regimes-on-a-lineage",
+   "title": "Ending laws as regimes on a lineage",
+   "title_zh": "世系上作为态的终结之律",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md"
   },
   {
    "id": "record:endpoint-loss-and-return",
@@ -3582,6 +3618,18 @@
    "region": "knowing",
    "base": "old-base",
    "page": "theories/becoming/results/records/observation-is-a-route.md"
+  },
+  {
+   "id": "record:offspring-read-from-giving-that-waits",
+   "type": "result",
+   "record": "offspring-read-from-giving-that-waits",
+   "title": "Offspring read from giving that waits",
+   "title_zh": "由等待给出之给出读出的后代",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/offspring-read-from-giving-that-waits.md"
   },
   {
    "id": "record:one-move-covering",
@@ -5396,6 +5444,18 @@
    "page": "theories/becoming/results/records/the-run-classes-and-widening.md"
   },
   {
+   "id": "record:the-selection-term-and-a-lineages-fate",
+   "type": "result",
+   "record": "the-selection-term-and-a-lineages-fate",
+   "title": "The selection term and a lineage's fate",
+   "title_zh": "选择项与世系的命运",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/the-selection-term-and-a-lineages-fate.md"
+  },
+  {
    "id": "record:the-source-texts-test-systems",
    "type": "result",
    "record": "the-source-texts-test-systems",
@@ -6078,6 +6138,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/what-finitely-many-labels-fix.md"
+  },
+  {
+   "id": "record:what-giving-that-waits-draws-on",
+   "type": "result",
+   "record": "what-giving-that-waits-draws-on",
+   "title": "What giving that waits draws on",
+   "title_zh": "等待给出之给出所汲取者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-giving-that-waits-draws-on.md"
   },
   {
    "id": "record:what-holding-for-a-reading-is-worth",
@@ -9617,6 +9689,50 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.LineDegeneration",
+   "type": "module",
+   "name": "Becoming.LineDegeneration",
+   "level": "L2",
+   "theorems": 40,
+   "region": "map",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.SelectionShift",
+   "type": "module",
+   "name": "Becoming.SelectionShift",
+   "level": "L1",
+   "theorems": 83,
+   "region": "life",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LineageRegions",
+   "type": "module",
+   "name": "Becoming.LineageRegions",
+   "level": "L2",
+   "theorems": 129,
+   "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LineageRegimes",
+   "type": "module",
+   "name": "Becoming.LineageRegimes",
+   "level": "L2",
+   "theorems": 91,
+   "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.WideningOnTheMap",
    "type": "module",
    "name": "Becoming.WideningOnTheMap",
@@ -10174,6 +10290,28 @@
    "theorems": 44,
    "region": "map",
    "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WindowedWaiting",
+   "type": "module",
+   "name": "Becoming.WindowedWaiting",
+   "level": "L1",
+   "theorems": 130,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PairSelection",
+   "type": "module",
+   "name": "Becoming.PairSelection",
+   "level": "L1",
+   "theorems": 151,
+   "region": "collective",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -28358,6 +28496,12 @@
    "anchor": "r-generation-and-degeneration-at-two-grains"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-degeneration-from-a-horizon",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-degeneration-from-a-horizon"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -29666,10 +29810,22 @@
    "anchor": "r-selection-term-over-generations"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-the-selection-term-and-a-lineages-fate"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
    "anchor": "r-what-bounds-offspring-numbers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-ending-laws-as-regimes-on-a-lineage"
   },
   {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-pace-of-selection-within-what-flows-in",
@@ -29900,6 +30056,18 @@
    "anchor": "r-tolerance-monotone-across-laws"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-pair-tolerates-only-within-a-window"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-offspring-read-from-giving-that-waits"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -29916,6 +30084,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-what-a-rise-draws-from-beyond"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-giving-that-waits-draws-on"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
@@ -32938,6 +33112,56 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.LineDegeneration",
+   "to": "module:Becoming.KeepingWidening",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegimes",
+   "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegimes",
+   "to": "module:Becoming.LineageRegions",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegimes",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegimes",
+   "to": "module:Becoming.Population",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegions",
+   "to": "module:Becoming.KeepingWidening",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegions",
+   "to": "module:Becoming.LineDegeneration",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegions",
+   "to": "module:Becoming.Reproduction",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegions",
+   "to": "module:Becoming.Roles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineageRegions",
+   "to": "module:Becoming.SelectionShift",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ListFootprints",
    "to": "module:Becoming.Decidedness",
    "type": "imports"
@@ -33390,6 +33614,26 @@
   {
    "from": "module:Becoming.Pace",
    "to": "module:Becoming.SeekingRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairSelection",
+   "to": "module:Becoming.DrawnBeyond",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairSelection",
+   "to": "module:Becoming.RuleShaping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairSelection",
+   "to": "module:Becoming.SelectionLevels",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairSelection",
+   "to": "module:Becoming.WindowedWaiting",
    "type": "imports"
   },
   {
@@ -34373,6 +34617,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.SelectionShift",
+   "to": "module:Becoming.Reproduction",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.SelectionTerm",
    "to": "module:Becoming.Evolution",
    "type": "imports"
@@ -34855,6 +35104,11 @@
   {
    "from": "module:Becoming.WideningOnTheMap",
    "to": "module:Becoming.KeepingWidening",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WindowedWaiting",
+   "to": "module:Becoming.Tolerance",
    "type": "imports"
   },
   {
@@ -35491,6 +35745,31 @@
    "from": "record:a-need-with-a-cap",
    "to": "record:closing-needs-net-draw",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "module:Becoming.WindowedWaiting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "record:giving-that-waits-on-giving",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "record:restoring-giving-from-the-worst-start",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "record:thresholds-of-waiting",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "record:tolerance-monotone-across-laws",
+   "type": "interpretive"
   },
   {
    "from": "record:a-pattern-lasts-through-passing",
@@ -40428,6 +40707,31 @@
    "type": "application"
   },
   {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "module:Becoming.LineDegeneration",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "record:a-pattern-lasts-through-passing",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "record:groups-whose-conditions-are-coupled",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "record:what-keeping-widening-needs",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:dependence-formed-from-drawing",
    "to": "module:Becoming.Transmission",
    "type": "proved-in"
@@ -40906,6 +41210,51 @@
    "from": "record:encounter-selection-and-revision",
    "to": "record:enacted-scene-binding",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "module:Becoming.LineageRegimes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:degeneration-from-a-horizon",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:groups-whose-conditions-are-coupled",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:own-count-misses-joint-excess",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:the-selection-term-and-a-lineages-fate",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:what-bounds-offspring-numbers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "record:whole-drawing-beyond-renewal-ends",
+   "type": "related"
   },
   {
    "from": "record:endpoint-loss-and-return",
@@ -46966,6 +47315,31 @@
    "from": "record:observation-is-a-route",
    "to": "record:what-dependence-alone-carries-of-a-level",
    "type": "related"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
+   "to": "module:Becoming.PairSelection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
+   "to": "record:a-pair-tolerates-only-within-a-window",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
+   "to": "record:selection-within-and-among-groups-of-any-sizes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse"
   },
   {
    "from": "record:one-move-covering",
@@ -53388,6 +53762,61 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.LineageRegions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.SelectionShift",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:degeneration-from-a-horizon",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:evolution-on-descent",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:only-the-order-of-change-shows",
+   "type": "related"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:the-breeding-value",
+   "type": "related"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:what-bounds-offspring-numbers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:what-keeping-widening-needs",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-source-texts-test-systems",
    "to": "module:Becoming.GrammarCases",
    "type": "proved-in"
@@ -56006,6 +56435,36 @@
    "from": "record:what-finitely-many-labels-fix",
    "to": "record:what-an-extrapolation-given-nothing-fixes",
    "type": "related"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "module:Becoming.PairSelection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:evolution-on-descent",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:offspring-read-from-giving-that-waits",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:pace-of-selection-within-what-flows-in",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:what-a-rise-draws-from-beyond",
+   "type": "formal-reuse"
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
@@ -58898,6 +59357,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-degeneration-from-a-horizon",
+   "to": "record:degeneration-from-a-horizon",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-differences-below-threshold",
    "to": "record:differences-below-threshold",
    "type": "states"
@@ -59823,6 +60287,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage",
+   "to": "record:ending-laws-as-regimes-on-a-lineage",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
    "to": "record:equal-totals-can-hide-what-a-capacity-carries",
    "type": "states"
@@ -59973,6 +60442,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
+   "to": "record:the-selection-term-and-a-lineages-fate",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
    "to": "record:the-updater-line",
    "type": "states"
@@ -60000,6 +60474,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
    "to": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
+   "to": "record:a-pair-tolerates-only-within-a-window",
    "type": "states"
   },
   {
@@ -60153,6 +60632,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+   "to": "record:offspring-read-from-giving-that-waits",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base",
    "to": "record:optima-rebuild-a-depleted-base",
    "type": "states"
@@ -60295,6 +60779,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on",
+   "to": "record:what-giving-that-waits-draws-on",
    "type": "states"
   },
   {

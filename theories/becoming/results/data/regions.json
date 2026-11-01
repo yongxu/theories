@@ -66,6 +66,11 @@
    "base": "old-base",
    "note": "Admission: band between need and cap"
   },
+  "a-pair-tolerates-only-within-a-window": {
+   "region": "collective",
+   "base": "general",
+   "note": "WindowedWaiting EL4a: keeping inclusion splits restoring from answering; the window of two does both; errors absorbed and answered"
+  },
   "a-pattern-lasts-through-passing": {
    "region": "life",
    "base": "old-base",
@@ -596,6 +601,11 @@
    "base": "none",
    "note": "reviewed-scoped AI training pipeline closures"
   },
+  "degeneration-from-a-horizon": {
+   "region": "map",
+   "base": "old-base",
+   "note": "LineDegeneration EL3: a uniform horizon gives 尽/退化 constructively at every class within activity; an end (有终) from it is exactly excluded middle"
+  },
   "dependence-formed-from-drawing": {
    "region": "life",
    "base": "old-base",
@@ -680,6 +690,11 @@
    "region": "knowing",
    "base": "general",
    "note": "EncounterChoice: records only narrow"
+  },
+  "ending-laws-as-regimes-on-a-lineage": {
+   "region": "life",
+   "base": "old-base",
+   "note": "LineageRegimes EL2: three ending laws as regimes on a lineage, the stock their horizon; the stock decides neither fate"
   },
   "endpoint-loss-and-return": {
    "region": "map",
@@ -1350,6 +1365,11 @@
    "region": "knowing",
    "base": "old-base",
    "note": "P125 Observation"
+  },
+  "offspring-read-from-giving-that-waits": {
+   "region": "collective",
+   "base": "general",
+   "note": "PairSelection EL4b: offspring from a pair's run; with beta <= gamma no kind rises against withholders; assortment favours waiting exactly where gamma <= beta"
   },
   "one-move-covering": {
    "region": "method",
@@ -2106,6 +2126,11 @@
    "base": "old-base",
    "note": "Retaining"
   },
+  "the-selection-term-and-a-lineages-fate": {
+   "region": "life",
+   "base": "old-base",
+   "note": "SelectionShift + LineageRegions EL1: what the selection term proper decides; a whole cohort degenerating is extinction where offspring continue their parents; same terms, two fates"
+  },
   "the-source-texts-test-systems": {
    "region": "root",
    "base": "grammar",
@@ -2390,6 +2415,11 @@
    "region": "knowing",
    "base": "general",
    "note": "Labels"
+  },
+  "what-giving-that-waits-draws-on": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "PairSelection EL4c: need asymmetry as the slack bound within a pair; a gift carried by an inflow; factors bounded by slack and inflow"
   },
   "what-holding-for-a-reading-is-worth": {
    "region": "knowing",
@@ -3538,6 +3568,21 @@
    "base": "frame",
    "note": "limit verification; Markov's principle named (O2)"
   },
+  "Becoming.LineDegeneration": {
+   "region": "map",
+   "base": "old-base",
+   "note": "EL3 a horizon ends the line on every branch (尽, 退化) constructively; an end (有终) needs the decision, as strong as excluded middle (02 §1)"
+  },
+  "Becoming.LineageRegimes": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EL2 regime, not level: three ending laws as regimes, the stock their horizon; the stock decides neither fate (04 §4)"
+  },
+  "Becoming.LineageRegions": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EL1 join: descent read on the map; a whole generation degenerating is extinction where offspring continue their parents; same terms, two fates (04 §3, §4)"
+  },
   "Becoming.ListFootprints": {
    "region": "collective",
    "base": "general",
@@ -3707,6 +3752,11 @@
    "region": "map",
    "base": "general",
    "note": "V how fast a rule may change; two-level course"
+  },
+  "Becoming.PairSelection": {
+   "region": "collective",
+   "base": "general",
+   "note": "EL4b/c offspring from a pair's run; with beta <= gamma no kind rises against withholders; where a gift's surplus comes from (05 §5, §6)"
   },
   "Becoming.ParityReadings": {
    "region": "root",
@@ -4143,6 +4193,11 @@
    "base": "frame",
    "note": "selection through registered course"
   },
+  "Becoming.SelectionShift": {
+   "region": "life",
+   "base": "general",
+   "note": "EL1 counting: a common shift of offspring numbers leaves the selection term; what a positive term forces; same terms, two fates within a horizon (04 §3)"
+  },
   "Becoming.SelectionTerm": {
    "region": "life",
    "base": "old-base",
@@ -4397,6 +4452,11 @@
    "region": "significance",
    "base": "general",
    "note": "GW6 keeping widening read on the map: 全生成 at (nothing lost, the same possible) both ways; loss parts it from generation under the one; by name each kept, the whole generating"
+  },
+  "Becoming.WindowedWaiting": {
+   "region": "collective",
+   "base": "general",
+   "note": "EL4a windowed waiting: keeping inclusion splits restoring from answering; the window of two; errors absorbed and answered (05 §5)"
   },
   "Becoming.Withholding": {
    "region": "collective",

@@ -84,7 +84,7 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
 - related, not a proved adapter: [evolution-on-descent](evolution-on-descent.md). Descent read with what it gives: offspring numbers bounded by giving and taking, and a lineage that ends within a closed family.
 - related, not a proved adapter: [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md). The additive part through any carried amount, of which this record's exact case is the top.
 
-**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md)
+**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md)
 
 <a id="sources--来源"></a>
 ### Sources

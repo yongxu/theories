@@ -74,7 +74,7 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Groups on conditions of their own; here groups on coupled conditions.
 - related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). A lineage within a whole confined to one family of conditions in excess has no member once it ends, whatever selection within had raised it to.
 
-**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
+**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [degeneration-from-a-horizon](degeneration-from-a-horizon.md) · [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
 
 <a id="sources--来源"></a>
 ### Sources

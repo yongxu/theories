@@ -76,7 +76,7 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups on coupled conditions end together; here groups alike in mean are not selected among.
 - related, not a proved adapter: [groups-formed-by-descent](groups-formed-by-descent.md). Groups formed by descent from uniform groups, which keep the differences this record's witness saw used up.
 
-**Used by:** [groups-formed-by-descent](groups-formed-by-descent.md)
+**Used by:** [groups-formed-by-descent](groups-formed-by-descent.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md)
 
 <a id="sources--来源"></a>
 ### Sources

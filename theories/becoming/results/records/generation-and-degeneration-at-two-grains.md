@@ -80,7 +80,7 @@ Generation as a pattern continuing through the renewal of its parts is close to 
   - Input: A fine and a coarse class on one net.
   - Preserved conditions: None beyond the grammar. [GrammarMap.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean)
 
-**Used by:** [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [reach-past-ones-own-end](reach-past-ones-own-end.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [degeneration-from-a-horizon](degeneration-from-a-horizon.md) · [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [reach-past-ones-own-end](reach-past-ones-own-end.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md) · [the-source-texts-test-systems](the-source-texts-test-systems.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources
