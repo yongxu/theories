@@ -9,7 +9,7 @@ Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a dire
 | `*.patch` | the series: unified diffs from the repository root, applied in name order, each to the tree the one before it leaves, so two patches may change one file. Make the first against the tree after the kit's `apply` (its patches and joins) and the stages before this one: in a throwaway copy of main, run `land_ou7.sh prepare` and `apply` with the earlier stages in place |
 | `EXPECTED.json` | what the audit and the register expect of the series ([below](#expectedjson)) |
 | `repoint_reason.txt` | one line, joined to the kit's reason for the one re-point pass. `{N}` stands for the study section |
-| `study.md` | the stage's paragraph in OU7's study section |
+| `study.txt` | the stage's paragraph in OU7's study section. A fragment of the study page, like `repoint_reason.txt`, so its links are written from there and checked there once the section is written |
 | `SKIP` | leaves the stage out |
 
 `OU7_STAGES`, when set, names the stages taken, and `none` takes none.

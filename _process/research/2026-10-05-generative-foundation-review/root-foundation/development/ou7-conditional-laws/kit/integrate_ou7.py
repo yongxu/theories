@@ -72,7 +72,7 @@ law 4).
 
 Stages: extra patch sets riding in the same rebuild, each its owner's, in stages/NN-name/ (a series of *.patch made
 against the tree after the kit's patches and joins and the stages before it, applied by `apply` after the joins, in
-name order and patch by patch; EXPECTED.json for the audit and the register; repoint_reason.txt; study.md). A stage
+name order and patch by patch; EXPECTED.json for the audit and the register; repoint_reason.txt; study.txt). A stage
 that is empty or whose series does not apply stops `apply` with the reason, nothing of it written; a SKIP file in it,
 or OU7_STAGES, leaves it out, and OU7 lands without it (R10).
 
@@ -376,7 +376,7 @@ def apply_patches():
 # stages/NN-name/ holding a series of *.patch files, made against the tree after the kit's patches and joins and the
 # stages before it, applied in name order, each patch to the tree the one before it leaves, so that two patches may
 # change one file. A stage may also hold EXPECTED.json (merged into the audit's and the register's, below),
-# repoint_reason.txt (joined to the kit's, for the one re-point pass) and study.md (its paragraph in the study section).
+# repoint_reason.txt (joined to the kit's, for the one re-point pass) and study.txt (its paragraph in the study section).
 # A SKIP file in it skips it, and OU7_STAGES, when set, names the stages taken ('none' takes none). A stage that is
 # empty or whose series does not apply stops `apply`, nothing of it written: leave it out, and OU7 lands without it
 # (R10). The audit requires every selected stage in place; the later steps read the selected stages, since the record
@@ -1733,7 +1733,7 @@ Output → input: 06 §四's home section, its thesis, §三's 通 (its table ro
 {part_b_block(stamp, mb.receipt_modules(receipt))}
 """
     for stage in selected_stages():
-        said = (stage / 'study.md').read_text(encoding='utf-8').strip() if (stage / 'study.md').exists() else ''
+        said = (stage / 'study.txt').read_text(encoding='utf-8').strip() if (stage / 'study.txt').exists() else ''
         section += f"\n**Stage {stage.name}**, in the same core run. {said or 'Its records say what it holds.'}\n"
     STUDY.write_text(text.rstrip('\n') + '\n\n' + section, encoding='utf-8')
     print('study §', n, 'written')
