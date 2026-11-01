@@ -571,8 +571,8 @@
       "id": "degeneration-from-a-horizon",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.LineDegeneration, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.",
-        "zh": "复用 Web.ends_of_ends_at 与 Web.kind_every_branch_ends_of_gone（Becoming.LineDegeneration，已导入）：普查下的空代，以及在某步已逝的线，使线诸支皆尽。"
+        "en": "Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.MapInstances and Becoming.KeepingWidening, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.",
+        "zh": "复用 Web.ends_of_ends_at 与 Web.kind_every_branch_ends_of_gone（Becoming.MapInstances 与 Becoming.KeepingWidening，已导入）：普查下的空代，以及在某步已逝的线，使线诸支皆尽。"
       }
     },
     {
@@ -945,6 +945,10 @@
     {
       "en": "1 November 2026, board item EL (evolution read on the root, its part EL1): added, citing Becoming.SelectionShift (the counting layer) and Becoming.LineageRegions (the join on the map). The design's draft claims that no course of selection terms decides and that a term positive at every generation can go with every member degenerating were refuted in the Lean rounds and are kept as the laws that refute them; the witness is positive at every cohort but the last nonempty one.",
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL1 部分）：新增，引用 Becoming.SelectionShift（计数层）与 Becoming.LineageRegions（地图上的接合）。设计草稿中\"无选择项进程起决定作用\"与\"每代皆正的项可与每个成员退化并存\"二说，在 Lean 各轮中被驳倒，保留为驳倒它们的律；见证是除最后的非空之代外每代皆正。"
+    },
+    {
+      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in MapInstances and KeepingWidening and retired; nothing the record says changes.",
+      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入 MapInstances 与 KeepingWidening 并退役；记录所说无一改变。"
     }
   ]
 }

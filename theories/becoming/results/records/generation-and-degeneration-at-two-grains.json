@@ -156,7 +156,7 @@
         "Becoming.Map.Still.keeps",
         "Becoming.Map.short",
         "Becoming.Map.short_end",
-        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.reaches_end",
         "Becoming.Map.Short.ends",
         "Becoming.Map.Short.renews_and_ends",
         "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -186,7 +186,7 @@
         "Becoming.Web.keeping_of_carried_on",
         "Becoming.Web.itself_not_generation",
         "Becoming.Web.always_keeps",
-        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.end_of_gone",
         "Becoming.Web.consumed_held_not_endless",
         "Becoming.Web.family_excess_not_endless",
         "Becoming.Web.stopped_not_endless",
@@ -280,7 +280,7 @@
     "Becoming.Map.Branch",
     "Becoming.Map.Endless.generates",
     "Becoming.Map.Endless.generation",
-    "Becoming.Map.Short.degeneration",
+    "Becoming.Map.Short.reaches_end",
     "Becoming.Map.Short.ends",
     "Becoming.Map.Short.renews_and_ends",
     "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -300,7 +300,7 @@
     "Becoming.Web.always_keeps",
     "Becoming.Web.carries_iff",
     "Becoming.Web.consumed_held_not_endless",
-    "Becoming.Web.degenerates_of_gone",
+    "Becoming.Web.end_of_gone",
     "Becoming.Web.family_excess_not_endless",
     "Becoming.Web.generation_arises_late",
     "Becoming.Web.generation_renews_late",
@@ -389,7 +389,7 @@
         "Becoming.Map.Branch",
         "Becoming.Map.Endless.generates",
         "Becoming.Map.Endless.generation",
-        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.reaches_end",
         "Becoming.Map.Short.ends",
         "Becoming.Map.Short.renews_and_ends",
         "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -465,7 +465,7 @@
         "Becoming.Web.always_keeps",
         "Becoming.Web.carries_iff",
         "Becoming.Web.consumed_held_not_endless",
-        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.end_of_gone",
         "Becoming.Web.ends_or_reaches",
         "Becoming.Web.family_excess_not_endless",
         "Becoming.Web.generation_arises_late",
@@ -651,6 +651,10 @@
     {
       "en": "1 November 2026, board item OU7 (study section 492): Becoming.RoomNet imports Becoming.MapRegions, so the validation scope calls MapRegions a core module, not a leaf, as its module doc now does. Nothing else the record states changed.",
       "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：Becoming.RoomNet 导入 Becoming.MapRegions，故验证范围称 MapRegions 为核心模块而非叶，与其模块说明今之所言同。记录所述余无改变。"
+    },
+    {
+      "en": "1 November 2026, board item EL6: Web.degenerates_of_gone renamed Web.end_of_gone and Map.Short.degeneration renamed Map.Short.reaches_end, on their owner's yes: each law concludes an end (有终), not «退化»; nothing the record says changes. Web.end_of_gone and the laws that a line is not without end are now proved in Becoming.MapInstances from degeneration (record degeneration-from-a-horizon), their statements unchanged.",
+      "zh": "2026年11月1日，工作板条目 EL6：经所属者同意，Web.degenerates_of_gone 改名为 Web.end_of_gone，Map.Short.degeneration 改名为 Map.Short.reaches_end：两律所推出的是有终，不是 «退化»；记录所说无一改变。Web.end_of_gone 与\"线非不穷\"诸律今在 Becoming.MapInstances 中由退化证明（记录 degeneration-from-a-horizon），陈述不变。"
     }
   ]
 }

@@ -6,8 +6,9 @@ import Becoming.Continuation
 /-!
 # The map's instances: the old base's regimes as regions (地图之例)
 
-`Becoming.GrammarMap` reads generation and keeping in the strong form (`«全生成»`, `«全守»`) and
-reaching an end (`«有终»`, not degeneration, `«退化»`) at a fine class `E` and a coarse class `L`. This module reads the old base in it, with one reading
+`Becoming.GrammarMap` reads generation and keeping in the strong form (`«全生成»`, `«全守»`),
+reaching an end (`«有终»`) and degeneration (`«退化»`, ending on every branch) at a fine class `E`
+and a coarse class `L`. This module reads the old base in it, with one reading
 throughout, already used by `Becoming.Identity`, `Becoming.ContinuedClasses` and
 `Becoming.PatternPassing`:
 
@@ -37,27 +38,57 @@ Results.
   `Web.not_generation_of_within_itself`); every endless line keeps (`Web.itself_keeps`), and a formation
   active at every step keeps (`Web.always_keeps`). The name classes therefore never read as
   generation: generation needs a continuation other than names.
-* **Not going on, and reaching an end.** A line from an active occurrence along which nothing reached at some step is
-  active does not go on (`Web.not_endless_of_gone`), so it lies outside generation and keeping
-  (`Map.outside_of_not_endless`); where going on is decided at the points of the line, it
-  reaches an end (有终; `Web.degenerates_of_gone`, whose name is older than the distinction). This is where the map's boundary
-  (`«不穷有终之定当且仅当排中»`) enters the instances: the regimes below refute going on
-  constructively, and reaching an end is the further step that decided going on supplies. Three
-  regimes of the base fall there:
+* **Degeneration, constructively.** Along any class, where everything the line from `x` reaches at
+  a step `N` not before `x` ends on every branch, `x` ends on every branch (`Web.ends_of_ends_at`,
+  by induction on the steps left: a continuation lies one step later). No excluded middle enters,
+  and no premise that the line does not branch. So, at every class `E` within activity
+  (`«则» E W.activityClass`), a line from an active occurrence along which nothing reached at some
+  step `N` not before it is active ends on every branch: the pattern read at `E` degenerates
+  (`Web.every_branch_ends_of_gone`). What the line under `E` reaches lies on the line under
+  activity (`Web.reached_coarser`), so it is active (`Web.active_along_finer`), and nothing is
+  reached at `N`. What carries the law is the uniform horizon, which it states through activity.
+  Its instance at activity itself is `Web.activity_every_branch_ends_of_gone`; the kind grain's is
+  in `Becoming.KeepingWidening`.
+* **Not going on, and reaching an end.** Read coarser, the same line does not go on
+  (`Web.not_endless_of_gone`, by `«尽则非不穷»`), so it lies outside generation and keeping
+  (`Map.outside_of_not_endless`); where going on is decided at the points of the line, it reaches
+  an end (有终, `Web.end_of_gone`, by `«尽而续可定则有终»`). With no decision, that every line meeting
+  the law's premise reaches an end is exactly excluded middle (`Map.end_of_gone_iff_excluded_middle`):
+  in `Map.Undecided`, a web with one occurrence active at step `0`, one at step `1` and none from
+  step `2`, continued exactly where a proposition `P` holds, the premise holds and the pattern
+  degenerates (`Map.Undecided.degenerates`) while an end decides `P` (`Map.Undecided.end_decides`;
+  the start is continued exactly where `P` holds, `Map.Undecided.first_has_next_iff`). Nothing
+  infinite is undecided there, only whether one step is taken. This is where the map's boundary
+  (`«不穷有终之定当且仅当排中»`) enters the instances: on the base, constructively, degeneration is
+  the region a known horizon gives, and reaching an end is the further step that decided going on
+  supplies. Three regimes of the base fall there, each making an occurrence at its step inactive,
+  stated once, pointwise, and degenerating the line through that step:
   - consumption of a condition whose dependence the line still holds at a later step at no lower
-    need, where activity needs support (`Web.consumed_held_not_endless`);
+    need, where activity needs support (`Web.consumed_held_gone`, `Web.consumed_held_degenerates`,
+    so `Web.consumed_held_not_endless`);
   - a whole drawing beyond renewal: a family of conditions whose gated renewal ran into excess, as
     in `Flow.family_excess_ends`, ending every line that depends on the family at the step the
-    excess reaches (`Web.family_excess_not_endless`);
+    excess reaches (`Web.family_excess_gone`, `Web.family_excess_degenerates`, so
+    `Web.family_excess_not_endless`);
   - passing that stops, with brief carriers, as in `Web.ByPassing.ends_within`
-    (`Web.stopped_not_endless`).
+    (`Web.stopped_gone`, `Web.stopped_degenerates`, so `Web.stopped_not_endless`).
 * **Witnesses on the base.** The carriers in shifts of `PatternRelay.shifted` generate at every
   occurrence (`Map.shifted_generates`). The relay of `PatternRelay.web`, in which a carrier passes
   the pattern at its first step and carries on one more, renews and still ends at every carrier's
   first occurrence (`Map.relay_renews_and_ends`): the line branches, and the carrier's last
   occurrence ends it. Both have no conditions, so every carrier renews along the passing
   continuation vacuously; renewal of relations does not decide the region
-  (`Map.renewal_undecided`).
+  (`Map.renewal_undecided`). The hypotheses of each regime's degeneration law hold together from
+  an active start, and the line takes a step before it degenerates: consumption, in a web of one
+  formation depending at need one on a condition whose level falls to zero after step `1`
+  (`Map.Depleted.degenerates`, `Map.Depleted.continues`); a whole drawing, in `Coupled` of
+  `Becoming.Continuation`, the taker and the renewer of a patch read as one family
+  (`Map.coupled_degenerates`, `Map.coupled_continues`); passing that stops, in the stopped relay of
+  `Becoming.PatternPassing`, at every stopping step (`Map.stopped_relay_degenerates`,
+  `Map.stopped_relay_continues`). In the first two the dependence premise is shown at every
+  occurrence, reached or not; the stopped relay has none. In all three the web's activity is given,
+  not derived from the regime: the premise sets can hold together on an active start, which does
+  not show that a regime is what ends the line.
 
 Not connected: renewal along a continuation (`Web.RenewingAlong`) reads conditions, not whether a
 line goes on, and does not imply any region (`Map.renewal_undecided`); consumption along a
@@ -67,8 +98,11 @@ line's going on (`«不穷»`) asks every branch to go on, so one branch's end i
 not to go on and, where decided, to reach an end (有终); degeneration (尽) asks every branch to
 end.
 
-Modelling choices: discrete steps, formations a fixed index type, activity Prop-valued, natural
-number levels and needs. Every declaration has an empty axiom report.
+Modelling choices: discrete steps (a continuation advances the step by one), formations a fixed
+index type, activity Prop-valued, continuations Prop-valued relations, natural-number levels and
+needs, natural-number amounts of a family's stock, uptake and replenishment (the second regime), and
+in the degeneration laws a uniform horizon: one step `N` at which every branch is gone. Every
+declaration has an empty axiom report.
 -/
 
 namespace Becoming
@@ -253,30 +287,98 @@ theorem always_keeps {t : Nat} {f : F} (always : ∀ s, t ≤ s → W.active s f
         (always (s + 1) (Nat.le_succ_of_le later)),
       fun _ => Eq.subst (motive := fun h => W.active s h) same.symm (always s later)⟩⟩
 
-/-! ## Not going on, and reaching an end -/
+/-! ## Ending on every branch, by the steps left -/
+
+/-- Everything the line reaches `d` steps before `N` ends on every branch, where everything it
+reaches at `N` does. -/
+theorem ends_before {E : «际» (Nat × F)} {x : Nat × F} {N : Nat}
+    (at_N : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → «尽» (continuationStep R) E y) :
+    ∀ d y, «所及» (continuationStep R) E x y → y.1 + d = N → «尽» (continuationStep R) E y
+  | 0, y, hy, at_ => at_N y hy at_
+  | d + 1, y, hy, at_ => .mk fun z c =>
+    ends_before at_N d z («所及之传递» hy (.inr (.one c)))
+      ((congrArg (· + d) c.1.1).trans ((Nat.succ_add y.1 d).trans at_))
+
+/-- **Ending at a step ends the line before it.** Along any class, where everything the line from
+`x` reaches at a step `N` not before `x` ends on every branch, `x` ends on every branch. -/
+theorem ends_of_ends_at {E : «际» (Nat × F)} {x : Nat × F} {N : Nat} (le : x.1 ≤ N)
+    (at_N : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → «尽» (continuationStep R) E y) :
+    «尽» (continuationStep R) E x :=
+  match le_dest le with
+  | ⟨k, at_⟩ => ends_before at_N k x (.inl rfl) at_.symm
+
+/-! ## Degeneration: the constructive law -/
+
+/-- What the line reaches under a finer class it reaches under a coarser one. -/
+theorem reached_coarser {E E' : «际» (Nat × F)} (inside : «则» E E') {x y : Nat × F}
+    (reached : «所及» (continuationStep R) E x y) : «所及» (continuationStep R) E' x y :=
+  match reached with
+  | .inl same => .inl same
+  | .inr line => .inr («及之单调» («粗化» (continuationStep R) inside) x y line)
+
+/-- What the line under a class finer than activity reaches from an active occurrence is active. -/
+theorem active_along_finer {E : «际» (Nat × F)} (inside : «则» E W.activityClass) {x y : Nat × F}
+    (start : W.active x.1 x.2) (reached : «所及» (continuationStep R) E x y) : W.active y.1 y.2 :=
+  active_along_line start (reached_coarser inside reached)
+
+/-- **A line along which nothing reached at a step is active ends on every branch**, at every class
+finer than activity: no decision of going on and no premise that the line does not branch. -/
+theorem every_branch_ends_of_gone {E : «际» (Nat × F)} (inside : «则» E W.activityClass)
+    {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
+    (gone : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → ¬ W.active y.1 y.2) :
+    «退化» (continuationStep R) E x :=
+  ends_of_ends_at le fun y hy at_ => absurd (active_along_finer inside start hy) (gone y hy at_)
+
+/-- **At the activity grain**, under exactly the premises of `Web.not_endless_of_gone`. -/
+theorem activity_every_branch_ends_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2)
+    (le : x.1 ≤ N)
+    (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
+      ¬ W.active y.1 y.2) :
+    «退化» (continuationStep R) W.activityClass x :=
+  every_branch_ends_of_gone («则之自反» W.activityClass) start le gone
+
+/-! ## Not going on, and reaching an end: degeneration read coarser -/
 
 /-- **A line along which nothing reached at a step is active does not go on.** -/
 theorem not_endless_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
     (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
       ¬ W.active y.1 y.2) :
     ¬ «不穷» (continuationStep R) W.activityClass x :=
-  fun endless => match le_dest le with
-  | ⟨k, at_⟩ => match reaches_onward endless k with
-    | ⟨y, hy, at'⟩ => gone y hy (at'.trans at_.symm) (active_along_line start hy)
+  «尽则非不穷» (activity_every_branch_ends_of_gone start le gone)
 
-/-- **Where going on is decided, such a line reaches an end** (有终); that it degenerates (尽) is not
-shown. -/
-theorem degenerates_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
+/-- **Where going on is decided, such a line reaches an end** (有终): its degeneration
+(`Web.activity_every_branch_ends_of_gone`) with the decision. -/
+theorem end_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)
     (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
       ¬ W.active y.1 y.2)
     (decided : ∀ y, «所及» (continuationStep R) W.activityClass x y →
       «有后» (continuationStep R) W.activityClass y ∨
         ¬ «有后» (continuationStep R) W.activityClass y) :
     «有终» (continuationStep R) W.activityClass x :=
-  match le_dest le with
-  | ⟨k, at_⟩ => match ends_or_reaches decided k with
-    | .inl d => d
-    | .inr ⟨y, hy, at'⟩ => absurd (active_along_line start hy) (gone y hy (at'.trans at_.symm))
+  «尽而续可定则有终» (activity_every_branch_ends_of_gone start le gone) decided
+
+/-! ## The three regimes degenerate, through one gone step each -/
+
+/-- **Consumption makes an occurrence at the later step inactive** where it holds the dependence
+at no lower need. -/
+theorem consumed_held_gone (dependent : W.Dependent) {c : C} {g : F} {T N : Nat}
+    (below : ∀ s, T < s → W.level s c < W.need T g c) (after : T < N) {y : Nat × F}
+    (at_ : y.1 = N) (held : W.requires N y.2 c ∧ W.need T g c ≤ W.need N y.2 c) :
+    ¬ W.active y.1 y.2 :=
+  fun active =>
+    have now : W.active N y.2 := Eq.subst (motive := fun s => W.active s y.2) at_ active
+    Nat.not_le_of_gt (below N after) (Nat.le_trans held.2 (dependent N y.2 now c held.1))
+
+/-- **Consumption of what the line depends on degenerates it**, under the hypotheses of
+`Web.consumed_held_not_endless`. -/
+theorem consumed_held_degenerates (dependent : W.Dependent) {c : C} {g : F} {T N : Nat}
+    (below : ∀ s, T < s → W.level s c < W.need T g c) (after : T < N)
+    {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ N)
+    (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
+      W.requires N y.2 c ∧ W.need T g c ≤ W.need N y.2 c) :
+    «退化» (continuationStep R) W.activityClass x :=
+  activity_every_branch_ends_of_gone start le fun y hy at_ =>
+    consumed_held_gone dependent below after at_ (held y hy at_)
 
 /-- **Consumption of what the line depends on ends it.** Where activity needs support, the level
 of `c` stays below the need of `g`'s dependence on it at `T` from `T` on (with that dependence held
@@ -288,11 +390,37 @@ theorem consumed_held_not_endless (dependent : W.Dependent) {c : C} {g : F} {T N
     (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →
       W.requires N y.2 c ∧ W.need T g c ≤ W.need N y.2 c) :
     ¬ «不穷» (continuationStep R) W.activityClass x :=
-  not_endless_of_gone start le fun y hy at_ active =>
-    match held y hy at_ with
-    | ⟨depends, high⟩ =>
-      have now : W.active N y.2 := Eq.subst (motive := fun s => W.active s y.2) at_ active
-      Nat.not_le_of_gt (below N after) (Nat.le_trans high (dependent N y.2 now c depends))
+  «尽则非不穷» (consumed_held_degenerates dependent below after start le held)
+
+/-- **A whole drawing beyond renewal makes an occurrence at the step the excess reaches inactive**
+where it depends on a member of the family at a need of at least `m`. -/
+theorem family_excess_gone {L : Flow F C} (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {ds : List C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (stock : W.stock ds T < n + m) {y : Nat × F} (at_ : y.1 = T + n)
+    (held : ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
+    ¬ W.active y.1 y.2 :=
+  match held with
+  | ⟨e, inside, depends, high⟩ =>
+    Eq.subst (motive := fun s => ¬ W.active s y.2) at_.symm
+      (Becoming.Flow.family_excess_ends balances acting dependent gated excess stock 0 y.2 e
+        inside depends high)
+
+/-- **A whole drawing beyond renewal degenerates the lines that depend on it**, under the
+hypotheses of `Web.family_excess_not_endless`. -/
+theorem family_excess_degenerates {L : Flow F C} (balances : L.Balances W)
+    (acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)
+    (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = T + n →
+      ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
+    «退化» (continuationStep R) W.activityClass x :=
+  activity_every_branch_ends_of_gone start le fun y hy at_ =>
+    family_excess_gone balances acting dependent gated excess stock at_ (held y hy at_)
 
 /-- **A whole drawing beyond renewal ends the lines that depend on it.** Under the premises of
 `Flow.family_excess_ends` (balance, only active formations giving, activity needing support, the
@@ -308,11 +436,24 @@ theorem family_excess_not_endless {L : Flow F C} (balances : L.Balances W)
     (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = T + n →
       ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
     ¬ «不穷» (continuationStep R) W.activityClass x :=
-  not_endless_of_gone start le fun y hy at_ => match held y hy at_ with
-    | ⟨e, inside, depends, high⟩ =>
-      Eq.subst (motive := fun s => ¬ W.active s y.2) at_.symm
-        (Becoming.Flow.family_excess_ends balances acting dependent gated excess stock 0 y.2 e
-          inside depends high)
+  «尽则非不穷» (family_excess_degenerates balances acting dependent gated excess stock start le held)
+
+/-- **Passing that stops makes every occurrence at step `T + d` inactive**, `d` the span for which
+carriers are brief and `T` the step from which nothing passes. -/
+theorem stopped_gone {V : Web F C} {passes : Nat → F → F → Prop} (byPassing : V.ByPassing passes)
+    {d T : Nat} (brief : ∀ a, V.Brief d a) (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t)
+    {y : Nat × F} (at_ : y.1 = T + d) : ¬ V.active y.1 y.2 :=
+  fun active => byPassing.ends_within brief stopped (Nat.le_of_eq at_.symm) ⟨y.2, active⟩
+
+/-- **Passing that stops degenerates the pattern's line**, under the hypotheses of
+`Web.stopped_not_endless`. -/
+theorem stopped_degenerates {V : Web F C} {passes : Nat → F → F → Prop}
+    (byPassing : V.ByPassing passes) {d T : Nat} (brief : ∀ a, V.Brief d a)
+    (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t) {x : Nat × F} (start : V.active x.1 x.2)
+    (le : x.1 ≤ T + d) :
+    «退化» (continuationStep (passingContinuation passes)) V.activityClass x :=
+  activity_every_branch_ends_of_gone start le fun _ _ at_ =>
+    stopped_gone byPassing brief stopped at_
 
 /-- **Passing that stops ends the pattern's line.** Under the passing premise, with carriers brief
 for `d` and no passing from step `T` on, a line from a carrier at a step up to `T + d` does not go
@@ -322,8 +463,7 @@ theorem stopped_not_endless {V : Web F C} {passes : Nat → F → F → Prop}
     (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t) {x : Nat × F} (start : V.active x.1 x.2)
     (le : x.1 ≤ T + d) :
     ¬ «不穷» (continuationStep (passingContinuation passes)) V.activityClass x :=
-  not_endless_of_gone start le fun y _ at_ active =>
-    byPassing.ends_within brief stopped (Nat.le_of_eq at_.symm) ⟨y.2, active⟩
+  «尽则非不穷» (stopped_degenerates byPassing brief stopped start le)
 
 end Web
 
@@ -412,6 +552,161 @@ theorem renewal_undecided (t : Nat) :
      | .inl r => False.elim r
      | .inr d => False.elim d,
    shifted_generates t⟩
+
+/-! ## Witnesses of the regimes, and of the decision -/
+
+namespace Depleted
+
+/-- One formation, active at steps `0` and `1`, depending at need one on one condition, whose level
+is one at steps `0` and `1` and zero after. -/
+def web : Web Unit Unit where
+  level t _ := match t with
+    | 0 => 1
+    | 1 => 1
+    | _ + 2 => 0
+  active t _ := t ≤ 1
+  requires _ _ _ := True
+  need _ _ _ := 1
+  draws _ _ _ := True
+
+/-- Activity needs support. -/
+theorem dependent : web.Dependent :=
+  fun t _ active _ _ => match t, active with
+    | 0, _ => Nat.le_refl 1
+    | 1, _ => Nat.le_refl 1
+    | n + 2, late => absurd late (Nat.not_le_of_gt (Nat.le_add_left 2 n))
+
+/-- After step `1` the level is below the need at step `1`. -/
+theorem below : ∀ s, 1 < s → web.level s () < web.need 1 () ()
+  | 0, early => absurd early (Nat.not_lt_zero 1)
+  | 1, early => absurd early (Nat.lt_irrefl 1)
+  | _ + 2, _ => Nat.zero_lt_one
+
+/-- Every step is a continuation. -/
+def every : Nat → Unit → Unit → Prop := fun _ _ _ => True
+
+/-- **The line takes its step**: the occurrence at step `0` is continued by the one at step `1`. -/
+theorem continues :
+    «续» (Web.continuationStep every) web.activityClass (0, ()) (1, ()) :=
+  ⟨⟨rfl, trivial⟩, ⟨fun _ => Nat.le_refl 1, fun _ => Nat.zero_le 1⟩⟩
+
+/-- **The premises of `Web.consumed_held_degenerates` hold together, and the line degenerates.** -/
+theorem degenerates : «退化» (Web.continuationStep every) web.activityClass (0, ()) :=
+  Web.consumed_held_degenerates (c := ()) (g := ()) (T := 1) (N := 2) dependent below
+    (Nat.lt_succ_self 1) (Nat.zero_le 1) (Nat.zero_le 2) fun _ _ _ => ⟨trivial, Nat.le_refl 1⟩
+
+end Depleted
+
+/-- **The premises of `Web.family_excess_degenerates` hold together** in `Coupled`: the taker's
+line, along every continuation, degenerates. -/
+theorem coupled_degenerates :
+    «退化» (Web.continuationStep (fun _ _ _ => True)) Coupled.web.activityClass
+      (0, Coupled.Formation.taker) :=
+  Web.family_excess_degenerates (T := 0) (n := 3) Coupled.balances Coupled.acting Coupled.dependent
+    Coupled.gated Coupled.excess (show 1 + (2 + 0) < 3 + 1 from Nat.lt_succ_self 3) trivial
+    (Nat.zero_le 3) fun y _ _ => match y with
+      | (_, .taker) => ⟨.patch, .head _, trivial, Nat.le_refl 1⟩
+      | (_, .renewer) => ⟨.neighbour, .tail _ (.head _), trivial, Nat.le_refl 1⟩
+
+/-- **The taker's line takes its step**: in `Coupled`, along every continuation, the taker at step
+`0` is continued by the taker at step `1`. -/
+theorem coupled_continues :
+    «续» (Web.continuationStep (fun _ _ _ => True)) Coupled.web.activityClass
+      (0, Coupled.Formation.taker) (1, Coupled.Formation.taker) :=
+  ⟨⟨rfl, trivial⟩, ⟨fun _ => trivial, fun _ => trivial⟩⟩
+
+/-- **The premises of `Web.stopped_degenerates` hold together** in the relay stopped at `T`: the
+first carrier's line degenerates. -/
+theorem stopped_relay_degenerates (T : Nat) :
+    «退化» (Web.continuationStep (Web.passingContinuation (PatternRelay.passesUntil T)))
+      (PatternRelay.stopped T).activityClass (0, 0) :=
+  Web.stopped_degenerates (d := 2) (T := T) (PatternRelay.stopped_by_passing T)
+    (PatternRelay.stopped_brief T) (PatternRelay.stopped_quiet T) ⟨Nat.zero_le T, .inl rfl⟩
+    (Nat.zero_le (T + 2))
+
+/-- **The first carrier's line takes its step**: in the relay stopped at `T`, the first carrier at
+step `0` is continued by itself at step `1`. -/
+theorem stopped_relay_continues (T : Nat) :
+    «续» (Web.continuationStep (Web.passingContinuation (PatternRelay.passesUntil T)))
+      (PatternRelay.stopped T).activityClass (0, 0) (1, 0) :=
+  ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => ⟨Nat.zero_le T, .inr rfl⟩, fun _ => ⟨Nat.zero_le T, .inl rfl⟩⟩⟩
+
+/-! ## Reaching an end needs the decision -/
+
+namespace Undecided
+
+/-- One occurrence at step `0` (`false`), one at step `1` (`true`), nothing active from step `2`. -/
+def web : Web Bool Unit where
+  level _ _ := 0
+  active t f := (t = 0 ∧ f = false) ∨ (t = 1 ∧ f = true)
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+/-- Every step is continued exactly where `P` holds. -/
+def continuation (P : Prop) : Nat → Bool → Bool → Prop := fun _ _ _ => P
+
+/-- Nothing is active at step `2`. -/
+theorem inactive_two (f : Bool) : ¬ web.active 2 f :=
+  fun now => match now with
+    | .inl ⟨e, _⟩ => Nat.noConfusion e
+    | .inr ⟨e, _⟩ => Nat.noConfusion (Nat.succ.inj e)
+
+/-- The occurrence at step `1` ends: nothing continues it. -/
+theorem last_ends (P : Prop) :
+    «亡» (Web.continuationStep (continuation P)) web.activityClass (1, true) :=
+  fun ⟨(_, f), ⟨next, _⟩, alike⟩ =>
+    inactive_two f
+      (Eq.subst (motive := fun s' => web.active s' f) next (alike.mp (.inr ⟨rfl, rfl⟩)))
+
+/-- Where `P` holds, the occurrence at step `0` is continued by the one at step `1`. -/
+theorem first_continues {P : Prop} (p : P) :
+    «续» (Web.continuationStep (continuation P)) web.activityClass (0, false) (1, true) :=
+  ⟨⟨rfl, p⟩, ⟨fun _ => .inr ⟨rfl, rfl⟩, fun _ => .inl ⟨rfl, rfl⟩⟩⟩
+
+/-- Witness lemma: the occurrence at step `0` has a continuation exactly where `P` holds. -/
+theorem first_has_next_iff (P : Prop) :
+    «有后» (Web.continuationStep (continuation P)) web.activityClass (0, false) ↔ P :=
+  ⟨fun ⟨_, c⟩ => c.1.2, fun p => ⟨(1, true), first_continues p⟩⟩
+
+/-- **The premise of the degeneration law holds at the activity grain, and the pattern
+degenerates.** -/
+theorem degenerates (P : Prop) :
+    (∀ y, «所及» (Web.continuationStep (continuation P)) web.activityClass (0, false) y →
+        y.1 = 2 → ¬ web.active y.1 y.2) ∧
+      «退化» (Web.continuationStep (continuation P)) web.activityClass (0, false) :=
+  have gone : ∀ y, «所及» (Web.continuationStep (continuation P)) web.activityClass (0, false) y →
+      y.1 = 2 → ¬ web.active y.1 y.2 := fun y _ at_ =>
+    Eq.subst (motive := fun s => ¬ web.active s y.2) at_.symm (inactive_two y.2)
+  ⟨gone, Web.activity_every_branch_ends_of_gone (.inl ⟨rfl, rfl⟩) (Nat.zero_le 2) gone⟩
+
+/-- **Reaching an end decides `P`.** -/
+theorem end_decides {P : Prop}
+    (h : «有终» (Web.continuationStep (continuation P)) web.activityClass (0, false)) : P ∨ ¬ P :=
+  match h with
+  | ⟨_, .inl same, ends⟩ =>
+    .inr fun p => ends (Eq.subst
+      (motive := fun z => «有后» (Web.continuationStep (continuation P)) web.activityClass z) same
+      ((first_has_next_iff P).mpr p))
+  | ⟨_, .inr (.one c), _⟩ => .inl c.1.2
+  | ⟨_, .inr (.more c _), _⟩ => .inl c.1.2
+
+end Undecided
+
+/-- **That every line meeting the degeneration law's premise reaches an end is exactly excluded
+middle**, at every web and continuation: the decision premise of `Web.end_of_gone` is as strong as
+excluded middle. -/
+theorem end_of_gone_iff_excluded_middle :
+    (∀ (F' C' : Type) (V : Web F' C') (R : Nat → F' → F' → Prop) (x : Nat × F') (N : Nat),
+        V.active x.1 x.2 → x.1 ≤ N →
+        (∀ y, «所及» (Web.continuationStep R) V.activityClass x y → y.1 = N → ¬ V.active y.1 y.2) →
+        «有终» (Web.continuationStep R) V.activityClass x) ↔
+      ∀ P : Prop, P ∨ ¬ P :=
+  ⟨fun h P => Undecided.end_decides
+      (h _ _ Undecided.web (Undecided.continuation P) (0, false) 2 (.inl ⟨rfl, rfl⟩)
+        (Nat.zero_le 2) (Undecided.degenerates P).1),
+   fun em _ _ _ _ _ _ start le gone =>
+    «尽而续可定则有终» (Web.activity_every_branch_ends_of_gone start le gone) fun _ _ => em _⟩
 
 end Map
 

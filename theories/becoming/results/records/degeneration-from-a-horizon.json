@@ -46,27 +46,16 @@
       ]
     },
     {
-      "en": "Restatements, no result: the laws that a line from an active occurrence is not without end, under the horizon and under each regime, derived from degeneration with their statements unchanged, and the law concluding an end as the degeneration law with the decision.",
-      "zh": "重述，不是结果：\"自活跃之事起的线非不穷\"诸律（在视界下与在每一态下），以原陈述由退化推出；推出有终之律，即退化之律加上判定。",
-      "declarations": [
-        "Becoming.Web.Restated.not_endless_of_gone",
-        "Becoming.Web.Restated.degenerates_of_gone",
-        "Becoming.Web.Restated.consumed_held_not_endless",
-        "Becoming.Web.Restated.family_excess_not_endless",
-        "Becoming.Web.Restated.stopped_not_endless"
-      ]
-    },
-    {
       "en": "On the grammar, at any carrier and relations: ending on every branch reaches an end (有终) up to double negation, and reaches one where going on is decided along the line. On two points, with one step from false to true taken exactly where a proposition P holds, the line from false ends on every branch while any end decides P; so that every line ending on every branch reaches an end is exactly excluded middle.",
       "zh": "在文法上，对任意载体与关系：诸支皆尽在双重否定下有终，在线上各点是否延续可判定时有终。两点之上，自 false 到 true 的一步恰在命题 P 成立时发生，自 false 之线诸支皆尽，而任何终点都判定 P；故\"诸支皆尽之线皆有终\"恰等价于排中。",
       "declarations": [
-        "Becoming.Map.not_not_end_of_ends",
-        "Becoming.Map.end_of_ends_decided",
+        "Becoming.«尽则非无终»",
+        "Becoming.«尽而续可定则有终»",
         "Becoming.Map.StepWhere.relation",
         "Becoming.Map.StepWhere.ends",
         "Becoming.Map.StepWhere.has_next_iff",
         "Becoming.Map.StepWhere.end_decides",
-        "Becoming.Map.end_of_ends_iff_excluded_middle"
+        "Becoming.«尽则有终当且仅当排中»"
       ]
     },
     {
@@ -150,17 +139,17 @@
   ],
   "counterexamples": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "detail": {
         "en": "Map.Undecided: the premise of the law holds and the pattern degenerates, while any end the line reaches decides P (Map.Undecided.end_decides), so reaching an end from the premise asks excluded middle.",
         "zh": "Map.Undecided：此律的前提成立且样式退化，而线所及的任何终点都判定 P（Map.Undecided.end_decides），故由此前提而有终需要排中。"
       }
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "detail": {
-        "en": "Map.StepWhere: on the grammar, one step from false to true taken exactly where P holds; the line from false ends on every branch and any end decides P (Map.StepWhere.end_decides).",
-        "zh": "Map.StepWhere：在文法上，自 false 到 true 的一步恰在 P 成立时发生；自 false 之线诸支皆尽，而任何终点都判定 P（Map.StepWhere.end_decides）。"
+        "en": "Map.StepWhere: on the grammar, the short life gated by P, its one step from false to true taken exactly where P holds; the line from false ends on every branch and any end decides P (Map.StepWhere.end_decides).",
+        "zh": "Map.StepWhere：在文法上，以 P 为门的短命之线，自 false 到 true 的一步恰在 P 成立时发生；自 false 之线诸支皆尽，而任何终点都判定 P（Map.StepWhere.end_decides）。"
       }
     }
   ],
@@ -173,18 +162,18 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineDegeneration at receipt 20261101T024359.312453Z, 45 declarations (40 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineDegeneration，回执 20261101T024359.312453Z，45 个声明（40 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude at receipt PENDING, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查，回执 PENDING，在 Becoming.GrammarMap、Becoming.MapInstances 与 Becoming.KeepingWidening 中，每个声明的公理报告均为空；最初作为叶 Becoming.LineDegeneration 于回执 20261101T024359.312453Z 检查（45 个声明，40 条定理），经独立 AI 验证者四轮审查重新编译。"
   },
   "next_delta": {
-    "en": "Placing the parts in their owners' modules: the grammar part in GrammarMap beside «尽则非不穷», the rest in MapInstances, where the laws that a regime's line is not without end would be re-derived from degeneration in place, and the kind instance in KeepingWidening; with Web.degenerates_of_gone renamed for the end it concludes.",
-    "zh": "把各部分放入其所属模块：文法部分入 GrammarMap，置于 «尽则非不穷» 旁；其余入 MapInstances，在那里\"态之线非不穷\"诸律就地由退化重新推出；种类实例入 KeepingWidening；并按其所推出的终点为 Web.degenerates_of_gone 改名。"
+    "en": "Degeneration where no one step bounds every branch, and the some-branch regions (生成, 后守) on the World.",
+    "zh": "没有一步能约束每一支时的退化，以及世界上的某支之域（生成、后守）。"
   },
   "correspondence": {
     "en": "Constructively, a branching bounded by a common step is well founded: every branch ends with no excluded middle, while exhibiting an end asks for decided branching. The calibration is of the kind of the grammar's «延尽之定当且仅当排中» and «不穷有终之定当且仅当排中», which ask which region a point lies in; here the region is known and where an end lies is asked. All three are equivalent to excluded middle.",
     "zh": "构造地看，以一个公共步数为界的分支是良基的：每一支皆终，不用排中；而给出一个终点需要分支可判定。此校准与文法的 «延尽之定当且仅当排中»、«不穷有终之定当且仅当排中» 同类，那两条问一点在哪个域；此处域已知，所问的是终点在何处。三者皆等价于排中。"
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
   "aliases": [
     "Becoming.Web.ends_of_ends_at",
     "Becoming.Web.every_branch_ends_of_gone",
@@ -193,9 +182,9 @@
     "Becoming.Web.consumed_held_degenerates",
     "Becoming.Web.family_excess_degenerates",
     "Becoming.Web.stopped_degenerates",
-    "Becoming.Map.not_not_end_of_ends",
-    "Becoming.Map.end_of_ends_decided",
-    "Becoming.Map.end_of_ends_iff_excluded_middle",
+    "Becoming.«尽则非无终»",
+    "Becoming.«尽而续可定则有终»",
+    "Becoming.«尽则有终当且仅当排中»",
     "Becoming.Map.end_of_gone_iff_excluded_middle"
   ],
   "dependencies": [
@@ -203,16 +192,16 @@
       "id": "generation-and-degeneration-at-two-grains",
       "relation": "formal-reuse",
       "detail": {
-        "en": "The map's «尽», «退化» and «尽则非不穷» (Becoming.GrammarMap) and its reading on the World (Becoming.MapInstances): occurrences along a continuation's step, activity as the coarse class, and the laws that a line is not without end, which degeneration here gives.",
-        "zh": "复用地图的 «尽»、«退化» 与 «尽则非不穷»（Becoming.GrammarMap）及其在世界上的读法（Becoming.MapInstances）：沿续之步的事、以活动为粗类，以及\"线非不穷\"诸律；此处由退化给出它们。"
+        "en": "The map's «尽», «退化» and «尽则非不穷» (Becoming.GrammarMap) and its reading on the World (Becoming.MapInstances): occurrences along a continuation's step, activity as the coarse class, and the laws that a line is not without end and that it reaches an end where going on is decided, which MapInstances proves from degeneration.",
+        "zh": "复用地图的 «尽»、«退化» 与 «尽则非不穷»（Becoming.GrammarMap）及其在世界上的读法（Becoming.MapInstances）：沿续之步的事、以活动为粗类，以及\"线非不穷\"之律与延续可判定时\"线有终\"之律；MapInstances 由退化证明它们。"
       }
     },
     {
       "id": "what-keeping-widening-needs",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Web.kindClass and Web.kindClass_within (Becoming.KeepingWidening): the kind class is a class within activity, so the law holds at the kind grain, the lineage continuation Web.withinKind included.",
-        "zh": "复用 Web.kindClass 与 Web.kindClass_within（Becoming.KeepingWidening）：种类之类含于活动，故此律在种类粒度上成立，世系之续 Web.withinKind 亦在其中。"
+        "en": "Web.kindClass and Web.kindClass_within (Becoming.KeepingWidening): the kind class is a class within activity, so the law holds at the kind grain, the lineage continuation Web.withinKind included; the kind instance is stated there, after Web.kindClass_within.",
+        "zh": "复用 Web.kindClass 与 Web.kindClass_within（Becoming.KeepingWidening）：种类之类含于活动，故此律在种类粒度上成立，世系之续 Web.withinKind 亦在其中；种类实例即陈述于其处，在 Web.kindClass_within 之后。"
       }
     },
     {
@@ -235,9 +224,23 @@
   "related": [],
   "references": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "bbbc76d60ce044334f966c2b638df1fc8d3d47887576e5e4727eadd03d5abd98",
+      "sha256": "PENDING",
+      "declarations": [
+        "Becoming.Map.StepWhere.end_decides",
+        "Becoming.Map.StepWhere.ends",
+        "Becoming.Map.StepWhere.has_next_iff",
+        "Becoming.Map.StepWhere.relation",
+        "Becoming.«尽则有终当且仅当排中»",
+        "Becoming.«尽则非无终»",
+        "Becoming.«尽而续可定则有终»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "role": "proof",
+      "sha256": "PENDING",
       "declarations": [
         "Becoming.Map.Depleted.below",
         "Becoming.Map.Depleted.continues",
@@ -245,32 +248,19 @@
         "Becoming.Map.Depleted.dependent",
         "Becoming.Map.Depleted.every",
         "Becoming.Map.Depleted.web",
-        "Becoming.Map.StepWhere.end_decides",
-        "Becoming.Map.StepWhere.ends",
-        "Becoming.Map.StepWhere.has_next_iff",
-        "Becoming.Map.StepWhere.relation",
         "Becoming.Map.Undecided.continuation",
         "Becoming.Map.Undecided.degenerates",
         "Becoming.Map.Undecided.end_decides",
         "Becoming.Map.Undecided.first_continues",
         "Becoming.Map.Undecided.first_has_next_iff",
         "Becoming.Map.Undecided.inactive_two",
-        "Becoming.Map.Undecided.kind_degenerates",
         "Becoming.Map.Undecided.last_ends",
         "Becoming.Map.Undecided.web",
         "Becoming.Map.coupled_continues",
         "Becoming.Map.coupled_degenerates",
-        "Becoming.Map.end_of_ends_decided",
-        "Becoming.Map.end_of_ends_iff_excluded_middle",
         "Becoming.Map.end_of_gone_iff_excluded_middle",
-        "Becoming.Map.not_not_end_of_ends",
         "Becoming.Map.stopped_relay_continues",
         "Becoming.Map.stopped_relay_degenerates",
-        "Becoming.Web.Restated.consumed_held_not_endless",
-        "Becoming.Web.Restated.degenerates_of_gone",
-        "Becoming.Web.Restated.family_excess_not_endless",
-        "Becoming.Web.Restated.not_endless_of_gone",
-        "Becoming.Web.Restated.stopped_not_endless",
         "Becoming.Web.active_along_finer",
         "Becoming.Web.activity_every_branch_ends_of_gone",
         "Becoming.Web.consumed_held_degenerates",
@@ -280,24 +270,40 @@
         "Becoming.Web.every_branch_ends_of_gone",
         "Becoming.Web.family_excess_degenerates",
         "Becoming.Web.family_excess_gone",
-        "Becoming.Web.kind_every_branch_ends_of_gone",
         "Becoming.Web.reached_coarser",
         "Becoming.Web.stopped_degenerates",
         "Becoming.Web.stopped_gone"
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
-      "role": "receipt",
-      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
-      "declarations": []
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+      "role": "proof",
+      "sha256": "PENDING",
+      "declarations": [
+        "Becoming.Map.Undecided.kind_degenerates",
+        "Becoming.Web.kind_every_branch_ends_of_gone"
+      ]
     }
   ],
   "proof_bindings": [
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.LineDegeneration",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.MapInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.KeepingWidening",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -306,6 +312,10 @@
     {
       "en": "1 November 2026, board item EL (evolution read on the root, its part EL3): added. The base's laws that a line is not without end are read as degeneration, constructively, at every class within activity; the three regimes degenerate; the decision behind reaching an end is calibrated against excluded middle on the base and on the grammar. Landed as a core leaf; the proposed placement in GrammarMap, MapInstances and KeepingWidening, and the rename of Web.degenerates_of_gone, wait on their owners.",
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL3 部分）：新增。基底的\"线非不穷\"诸律在活动之内的每一类上被构造地读作退化；三种态皆退化；有终所需的判定在基底与文法上与排中校准。作为核心叶落地；拟放入 GrammarMap、MapInstances 与 KeepingWidening 的安排，以及 Web.degenerates_of_gone 的改名，待其所属者定。"
+    },
+    {
+      "en": "1 November 2026, board item EL6: placed in its owners' modules, each on its owner's yes. The grammar part is in Becoming.GrammarMap, its laws named «尽则非无终», «尽而续可定则有终» and «尽则有终当且仅当排中» (formerly Map.not_not_end_of_ends, Map.end_of_ends_decided and Map.end_of_ends_iff_excluded_middle), with Map.StepWhere stated as Map.short gated by P; the kind instance is in Becoming.KeepingWidening; the rest is in Becoming.MapInstances, where the landed laws that a line is not without end, and the law concluding an end (renamed Web.end_of_gone), are proved from degeneration in place, so the restatements (Web.Restated) and their law here are dropped. Becoming.LineDegeneration is retired to the Lean history folder. No statement changed.",
+      "zh": "2026年11月1日，工作板条目 EL6：各部分经其所属者同意放入其模块。文法部分在 Becoming.GrammarMap，其律名为 «尽则非无终»、«尽而续可定则有终» 与 «尽则有终当且仅当排中»（原名 Map.not_not_end_of_ends、Map.end_of_ends_decided、Map.end_of_ends_iff_excluded_middle），Map.StepWhere 陈述为以 P 为门的 Map.short；种类实例在 Becoming.KeepingWidening；其余在 Becoming.MapInstances，在那里已落地的\"线非不穷\"诸律与推出有终之律（改名为 Web.end_of_gone）就地由退化证明，故重述（Web.Restated）及其在此的律一并去除。Becoming.LineDegeneration 移入 Lean 历史文件夹。无陈述改变。"
     }
   ]
 }

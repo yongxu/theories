@@ -123,7 +123,7 @@ theorem «昼夜全生成» (x : Bool) : «全生成» (fun a b : Bool => b = !a
 successor, so not everything is continued, and the line from `false` reaches an end, so it is not
 全生成. -/
 theorem «有亡而不全生成之例» : «亡» Map.short «一» true ∧ ¬ «全生成» Map.short «一» «静» false :=
-  ⟨Map.short_end, fun g => «全生成有终不并» ⟨g, Map.Short.degeneration⟩⟩
+  ⟨Map.short_end, fun g => «全生成有终不并» ⟨g, Map.Short.reaches_end⟩⟩
 
 /-- **A step not parted, and not 全生成 (步不分而不全生成之例).** The still occurrence: its step keeps
 the class, so not every step is parted, and it keeps (全守), so it is not 全生成. -/
