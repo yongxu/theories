@@ -53,11 +53,14 @@ def quoted(n):
 
 
 S1, S1_ZH = quoted(1)
+# Item 4's excess reasons, as TEXTS.md words them: the one page's whole, the overview's addition.
+REASON_ONE = re.search(r'^- \*\*One page:\*\* the excess reason reads: "…(.+?)…"\.$', section(4), re.M)
+REASON_OVER = re.search(r'^- \*\*Overview:\*\* the excess reason adds: "…(.+?)"\.', section(4), re.M)
 B2, B2_ZH = quoted(2)
 F3 = dict((ed, (old, new)) for ed, old, new in
           re.findall(r'^\*\*\.(md|zh\.md)\*\*: "…(.+?)" becomes "…(.+?)"$', section(3), re.M))
-assert set(F3) == {'md', 'zh.md'} and B2.startswith('- **Conditional laws.**') and B2_ZH.startswith('- **有条件之律。**'), \
-    'TEXTS.md is not in the form this step reads'
+assert set(F3) == {'md', 'zh.md'} and B2.startswith('- **Conditional laws.**') and B2_ZH.startswith('- **有条件之律。**') \
+    and REASON_ONE and REASON_OVER, 'TEXTS.md is not in the form this step reads'
 
 
 def load(name, path):
@@ -168,15 +171,13 @@ def rows(c, texts):
                 f'{"stating its time" if stated else "not stating its time"}; Chinese {zzh:,} characters ({zlow} to '
                 f'{zhigh}), {chinese}')
     n = over(c['one page'])
-    done_one = (f'Done: {n} over, in its first open item, each central declaration\'s standing, and in the condition\'s '
-                'two corrections (its definition at line 23 and its standing on the root at line 35), neither cut '
-                f'(amendment 1), recorded in {RUNS_LINK}' if n > 0 else f'Done: within, recorded in {RUNS_LINK}')
+    done_one = (f'Done: {n} over, {REASON_ONE.group(1)}, recorded in {RUNS_LINK}' if n > 0
+                else f'Done: within, recorded in {RUNS_LINK}')
     n, high = over(c['overview']), float(c['overview'][3])
     upper = (f'the upper bound, {high:.1f} minutes, is over the hour by {high - 60:.1f}, for the same reasons'
              if high > 60 else f'the upper bound, {high:.1f} minutes, is within the hour')
     done_over = (f'Done: {n} over, which OU\'s owner judged within amendment 1\'s intent (T3\'s row with a failure as it '
-                 'fell, a deciding hypothesis, and the shaping loop whose record cites the overview), and the '
-                 'condition\'s standing on the root (lines 115 and 164), not cut (amendment 1); '
+                 f'fell, a deciding hypothesis, and the shaping loop whose record cites the overview), {REASON_OVER.group(1)}; '
                  f'{upper}; recorded in {RUNS_LINK}' if n > 0 else f'Done: within; {upper}; recorded in {RUNS_LINK}')
     return {'| One page (and Chinese) |': f'| One page (and Chinese) | {counts("one page", "one page, Chinese")} | '
                                          f'Ten minutes | {done_one} | OU\'s owner |',

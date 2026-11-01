@@ -6,11 +6,11 @@ AI-written texts for the one front-page change that lands with OU7. Apply after 
 
 **.md**: keep the bullet's first sentence; replace its HTML comment with:
 
-> The classical corpus's conditional statements are written on the grammar as exact conditions, each law with a net where its condition fails and its conclusion fails with it ([06 §四](chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)); the models' conditional laws are not yet each given such a net.
+> The classical corpus's conditional laws each have a net where the condition fails and the conclusion with it ([06 §四](chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)); the models' do not yet.
 
 **.zh.md**: keep the bullet's first sentence; replace its HTML comment with:
 
-> 古典语料中的有条件陈述已在文法上写成确切的条件，每条律都有一个网，其中条件不成立、结论也随之不成立（[06 §四](chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)）；各模型的有条件之律尚未每一条都配有这样的网。
+> 古典语料的有条件之律各有一个条件不成立、结论也随之不成立的网（[06 §四](chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)）；各模型的尚未如此。
 
 ## 2. Overview, "Conditional laws" bullet (the step-5 comment)
 
@@ -32,7 +32,7 @@ Check at landing: 219, 22 and six against the record conditional-laws-of-the-cor
 
 ## 4. READING-BUDGETS (aj4-alignment-readers), the two front rows, from the recount
 
-- **One page:** the excess reason reads: "…in its first open item, each central declaration's standing, and in the condition's two corrections (its definition at line 23 and its standing on the root at line 35), neither cut (amendment 1)…".
+- **One page:** the excess reason reads: "…in its first open item, each central declaration's standing, in the condition's two corrections (its definition at line 23 and its standing on the root at line 35), and step 5's conditional laws, one sentence in its first open item, none cut (amendment 1)…".
 - **Overview:** the excess reason adds: "…and the condition's standing on the root (lines 115 and 164), not cut (amendment 1)". If the upper bound is over 60 minutes, the row says so: "the upper bound, N minutes, is over the hour by M, for the same reasons"; if under, it says "within".
 
 ## 5. Records the refresh re-points

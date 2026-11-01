@@ -20,8 +20,11 @@ Supplied premises / correspondence: the tests on listed units, the modelling cho
        hypotheses of each law (listed once, nothing splitting, predecessors listed before), each needed by a
        witness in scratch (U4cCensus.Needed).
 Evidence: the scratch (U4cCensus, U4cCases: 44 theorems, every axiom report empty); the stage's closure built on
-       the tree after the kit's apply (39 modules, every axiom report empty, no warning), GrammarLaws rebuilt with
-       the local forms (191 theorems in 220 declarations, the same); this core run.
+       the tree after the kit's apply, before the grammar owner's patches came into the kit (39 modules, every
+       axiom report empty, no warning), GrammarLaws rebuilt there with the local forms (191 theorems in 220
+       declarations, the same); OU7's full rehearsal with both stages and the owner's patches (the kit's
+       REHEARSAL.json: 383 modules, none unclean, GrammarLaws 192 theorems in 221 declarations, its axiom report
+       empty); this core run.
 Standing: the census row derived; the other census laws rest on the root's census of a step; HE2's census is the
        two halves' corollary in its count.
 Boundary:
