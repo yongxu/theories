@@ -1,11 +1,11 @@
 {
- "commit": "5a394ae709aa4198b45bd1103c216607230caee0",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261101T062217.665179Z",
+ "commit": "a4038541a71dc547d7f50685458a596321366043",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261101T094230.205342Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 381,
- "constants": 55125,
- "spine_theorems": 18805,
+ "constants": 55195,
+ "spine_theorems": 18842,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 1125,
   "statement on Process/Frame/Run/Trace": 3666,
-  "statement on World/Flow/Web": 4480,
+  "statement on World/Flow/Web": 4482,
   "statement on the base only through a law of its own module": 342,
   "proof through a base family": 221,
-  "used by a theorem on the base": 6066,
+  "used by a theorem on the base": 6099,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 2566,
+  "apart: own vocabulary": 2568,
   "apart: prelude-only statement": 180
  },
- "apart": 2746,
- "apart_general_structure_by_design": 1072,
- "apart_otherwise": 1674,
+ "apart": 2748,
+ "apart_general_structure_by_design": 1071,
+ "apart_otherwise": 1677,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 126,
   "of them on the base": 81,
@@ -77,12 +77,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1398,
- "apart_roots": 1398,
+ "apart_used_by_nothing": 1401,
+ "apart_roots": 1401,
  "apart_roots_by_category": {
-  "model-witness": 662,
+  "model-witness": 663,
   "support": 148,
-  "general-structure": 537,
+  "general-structure": 539,
   "calibration": 25,
   "restates": 14,
   "logical-strength": 12
@@ -221,7 +221,7 @@
    114
   ],
   "Becoming.GrammarLaws": [
-   61,
+   57,
    192
   ],
   "Becoming.ReadStages": [
@@ -475,6 +475,10 @@
   "Becoming.Unread": [
    8,
    8
+  ],
+  "Becoming.BalanceRegions": [
+   8,
+   43
   ],
   "Becoming.SecuredContent": [
    8,
@@ -764,10 +768,6 @@
    2,
    46
   ],
-  "Becoming.BalanceRegions": [
-   2,
-   6
-  ],
   "Becoming.LineageRegimes": [
    2,
    91
@@ -908,17 +908,17 @@
  "rings": {
   "core": {
    "modules": 362,
-   "theorems": 17915,
-   "apart": 2562,
+   "theorems": 17952,
+   "apart": 2564,
    "classes": {
     "statement on both families": 1111,
     "statement on Process/Frame/Run/Trace": 3426,
-    "statement on World/Flow/Web": 4455,
+    "statement on World/Flow/Web": 4457,
     "statement on the base only through a law of its own module": 296,
     "proof through a base family": 210,
-    "used by a theorem on the base": 5696,
+    "used by a theorem on the base": 5729,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 2383,
+    "apart: own vocabulary": 2385,
     "apart: prelude-only statement": 179
    }
   },
@@ -956,7 +956,7 @@
   }
  },
  "components": {
-  "count": 97,
+  "count": 98,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
@@ -2618,12 +2618,12 @@
   "Becoming.GrammarLaws.uncrossed_of_closed": "used by a theorem on the base",
   "Becoming.GrammarLaws.uncrossed_iff_notGoingOut": "apart: own vocabulary",
   "Becoming.GrammarLaws.uncrossed_iff_closed": "apart: own vocabulary",
-  "Becoming.«对则不越域守数»": "apart: own vocabulary",
+  "Becoming.«对则不越域守数»": "used by a theorem on the base",
   "Becoming.«对则双闭域守数»": "apart: own vocabulary",
   "Becoming.«对而单闭域不守数之例»": "apart: own vocabulary",
-  "Becoming.GrammarLaws.class_test_congr": "apart: own vocabulary",
-  "Becoming.GrammarLaws.pair_of_class_counts": "apart: own vocabulary",
-  "Becoming.«类之对当且仅当类类等数»": "apart: own vocabulary",
+  "Becoming.GrammarLaws.class_test_congr": "used by a theorem on the base",
+  "Becoming.GrammarLaws.pair_of_class_counts": "used by a theorem on the base",
+  "Becoming.«类之对当且仅当类类等数»": "used by a theorem on the base",
   "Becoming.«续之对则类类等数»": "apart: own vocabulary",
   "Becoming.«一对而静不对之例»": "apart: own vocabulary",
   "Becoming.«定后之逐点»": "used by a theorem on the base",
@@ -14739,6 +14739,43 @@
   "Becoming.Continuity.closes_iff_notComingIn": "apart: own vocabulary",
   "Becoming.Continuity.balancing_iff_notGoingOut": "apart: own vocabulary",
   "Becoming.Continuity.balancesOn_iff_notGoingOut": "statement on World/Flow/Web",
+  "Becoming.Continuity.cond_le_cond": "used by a theorem on the base",
+  "Becoming.Continuity.count_le_count": "used by a theorem on the base",
+  "Becoming.Continuity.count_lt_count": "used by a theorem on the base",
+  "Becoming.Continuity.count_true": "used by a theorem on the base",
+  "Becoming.Continuity.counted_of_count": "used by a theorem on the base",
+  "Becoming.Continuity.count_append": "used by a theorem on the base",
+  "Becoming.Continuity.count_replicate_true": "used by a theorem on the base",
+  "Becoming.Continuity.count_replicate_false": "used by a theorem on the base",
+  "Becoming.Continuity.closes_and_not": "used by a theorem on the base",
+  "Becoming.Continuity.within_split": "used by a theorem on the base",
+  "Becoming.Continuity.conserved_of_absent": "used by a theorem on the base",
+  "Becoming.Continuity.reachedListed_within": "used by a theorem on the base",
+  "Becoming.Continuity.reachedListed_add": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_self": "used by a theorem on the base",
+  "Becoming.Continuity.reachedListed_stays": "used by a theorem on the base",
+  "Becoming.Continuity.reachedListed_grows_or_stays": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_closed": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_iff": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_closes": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_unlisted": "used by a theorem on the base",
+  "Becoming.Continuity.closureListed_inside": "used by a theorem on the base",
+  "Becoming.Continuity.conserved_of_fewer": "used by a theorem on the base",
+  "Becoming.Continuity.conserved_of_closures": "used by a theorem on the base",
+  "Becoming.Continuity.conservedOn_iff_closures": "used by a theorem on the base",
+  "Becoming.Continuity.balancing_iff_closures": "apart: own vocabulary",
+  "Becoming.Continuity.balancesOn_iff_closures": "statement on World/Flow/Web",
+  "Becoming.Continuity.pairing_iff_closure_counts": "used by a theorem on the base",
+  "Becoming.Continuity.pairing_iff_closures": "used by a theorem on the base",
+  "Becoming.Continuity.count_unitsOn": "used by a theorem on the base",
+  "Becoming.Continuity.closures_iff_unit_counts": "used by a theorem on the base",
+  "Becoming.Continuity.conservedOn_iff_units_paired": "used by a theorem on the base",
+  "Becoming.Continuity.balancing_iff_units_paired": "apart: own vocabulary",
+  "Becoming.Continuity.balancesOn_iff_units_paired": "statement on World/Flow/Web",
+  "Becoming.Continuity.paired_single": "apart: own vocabulary",
+  "Becoming.Continuity.PathOfThree.paired_within": "apart: own vocabulary",
+  "Becoming.Continuity.PathOfThree.not_paired_along_step": "apart: own vocabulary",
+  "Becoming.Continuity.PathOfThree.counts_kept_not_along_step": "apart: own vocabulary",
   "Becoming.Map.not_not_end_of_ends": "apart: own vocabulary",
   "Becoming.Map.end_of_ends_decided": "used by a theorem on the base",
   "Becoming.Map.StepWhere.ends": "apart: own vocabulary",
