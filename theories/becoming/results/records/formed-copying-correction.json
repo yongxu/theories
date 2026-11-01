@@ -161,7 +161,7 @@
   ],
   "dependencies": [
     {
-      "id": "formed-copying-registration",
+      "id": "formed-contacts-change-copying-fidelity",
       "relation": "formal-reuse",
       "detail": {
         "zh": "damaged 直接执行旧形成、错位及复制操作；新 step_accounts 调用旧 step_accounts，编辑后实际后继接入原复制。",

@@ -2420,6 +2420,18 @@
    "page": "theories/becoming/results/records/fixed-places-and-sole-lines.md"
   },
   {
+   "id": "record:formed-contacts-change-copying-fidelity",
+   "type": "result",
+   "record": "formed-contacts-change-copying-fidelity",
+   "title": "Formed contacts change copying fidelity",
+   "title_zh": "形成的接触改变复制保真度",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "general",
+   "page": "theories/becoming/results/records/formed-contacts-change-copying-fidelity.md"
+  },
+  {
    "id": "record:formed-copying-correction",
    "type": "result",
    "record": "formed-copying-correction",
@@ -2430,18 +2442,6 @@
    "region": "life",
    "base": "general",
    "page": "theories/becoming/results/records/formed-copying-correction.md"
-  },
-  {
-   "id": "record:formed-copying-registration",
-   "type": "result",
-   "record": "formed-copying-registration",
-   "title": "Formed contacts change copying fidelity",
-   "title_zh": "形成的接触改变复制保真度",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "life",
-   "base": "general",
-   "page": "theories/becoming/results/records/formed-copying-registration.md"
   },
   {
    "id": "record:formed-goal-revision-continuation",
@@ -4892,16 +4892,16 @@
    "page": "theories/becoming/results/records/selection-through-couplings.md"
   },
   {
-   "id": "record:selection-under-registration-revision",
+   "id": "record:selection-when-the-lumping-changes",
    "type": "result",
-   "record": "selection-under-registration-revision",
+   "record": "selection-when-the-lumping-changes",
    "title": "Which selections survive and remain executable when the lumping changes",
    "title_zh": "归并改变时，哪些选择仍可表达与执行",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "knowing",
    "base": "frame",
-   "page": "theories/becoming/results/records/selection-under-registration-revision.md"
+   "page": "theories/becoming/results/records/selection-when-the-lumping-changes.md"
   },
   {
    "id": "record:selection-with-returns-to-groupmates",
@@ -36240,7 +36240,7 @@
   },
   {
    "from": "record:a-revision-that-opens-a-correction",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "formal-reuse"
   },
   {
@@ -39710,7 +39710,7 @@
   },
   {
    "from": "record:consequence-revised-reference-plan",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "formal-reuse"
   },
   {
@@ -40475,7 +40475,7 @@
   },
   {
    "from": "record:correction-is-not-calibration",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "related"
   },
   {
@@ -42629,43 +42629,43 @@
    "type": "formal-reuse"
   },
   {
-   "from": "record:formed-copying-correction",
+   "from": "record:formed-contacts-change-copying-fidelity",
    "to": "module:Becoming.Copying",
    "type": "proved-in"
   },
   {
-   "from": "record:formed-copying-correction",
+   "from": "record:formed-contacts-change-copying-fidelity",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
   },
   {
-   "from": "record:formed-copying-correction",
-   "to": "record:formed-copying-registration",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:formed-copying-registration",
-   "to": "module:Becoming.Copying",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:formed-copying-registration",
-   "to": "module:Becoming.Courses",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:formed-copying-registration",
+   "from": "record:formed-contacts-change-copying-fidelity",
    "to": "module:Becoming.Gated",
    "type": "proved-in"
   },
   {
-   "from": "record:formed-copying-registration",
+   "from": "record:formed-contacts-change-copying-fidelity",
    "to": "record:formed-copying-correction",
    "type": "related"
   },
   {
-   "from": "record:formed-copying-registration",
+   "from": "record:formed-contacts-change-copying-fidelity",
    "to": "record:inherited-structural-copying",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:formed-copying-correction",
+   "to": "module:Becoming.Copying",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:formed-copying-correction",
+   "to": "module:Becoming.Courses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:formed-copying-correction",
+   "to": "record:formed-contacts-change-copying-fidelity",
    "type": "formal-reuse"
   },
   {
@@ -44685,12 +44685,12 @@
   },
   {
    "from": "record:inherited-structural-copying",
-   "to": "record:formed-copying-correction",
+   "to": "record:formed-contacts-change-copying-fidelity",
    "type": "related"
   },
   {
    "from": "record:inherited-structural-copying",
-   "to": "record:formed-copying-registration",
+   "to": "record:formed-copying-correction",
    "type": "related"
   },
   {
@@ -49890,7 +49890,7 @@
   },
   {
    "from": "record:recurrent-chain-assembly",
-   "to": "record:formed-copying-registration",
+   "to": "record:formed-contacts-change-copying-fidelity",
    "type": "related"
   },
   {
@@ -49935,7 +49935,7 @@
   },
   {
    "from": "record:recurring-reference-revision",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "related"
   },
   {
@@ -52095,7 +52095,7 @@
   },
   {
    "from": "record:selection-through-couplings",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "related"
   },
   {
@@ -52119,52 +52119,52 @@
    "type": "related"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "module:Becoming.Revision",
    "type": "proved-in"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "module:Becoming.Stock",
    "type": "proved-in"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:consequence-revised-reference-plan",
    "type": "related"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:correction-is-not-calibration",
    "type": "related"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:generalization-through-lumping",
    "type": "formal-reuse"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:learned-procedure-transmission",
    "type": "related"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:process-and-frame-as-readings",
    "type": "formal-reuse"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:selection-through-couplings",
    "type": "formal-reuse"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:target-capture",
    "type": "related"
   },
   {
-   "from": "record:selection-under-registration-revision",
+   "from": "record:selection-when-the-lumping-changes",
    "to": "record:what-seeking-cannot-separate",
    "type": "related"
   },
@@ -55395,7 +55395,7 @@
   },
   {
    "from": "record:universal-practical-warrant",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "related"
   },
   {
@@ -58930,7 +58930,7 @@
   },
   {
    "from": "record:wisdom-root",
-   "to": "record:selection-under-registration-revision",
+   "to": "record:selection-when-the-lumping-changes",
    "type": "formal-reuse"
   },
   {
@@ -60469,11 +60469,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-under-registration-revision",
-   "to": "record:selection-under-registration-revision",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
    "to": "record:sensitivity-is-the-least-coupling",
    "type": "states"
@@ -60716,11 +60711,6 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-correction",
    "to": "record:formed-copying-correction",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-registration",
-   "to": "record:formed-copying-registration",
    "type": "states"
   },
   {

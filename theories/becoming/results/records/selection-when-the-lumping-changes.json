@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "id": "selection-under-registration-revision",
+  "id": "selection-when-the-lumping-changes",
   "title": {
     "zh": "归并改变时，哪些选择仍可表达与执行",
     "en": "Which selections survive and remain executable when the lumping changes"
@@ -413,7 +413,7 @@
     {
       "path": "theories/meta-attractor/COMMON-ORGANIZATION.md",
       "role": "statement",
-      "sha256": "a2c1f958d84bf7464623dfbdd0065be177556f7801e5055d7cdfc08e04c60f3b",
+      "sha256": "5b6e24935a66a61e37ddcf0ba371716bf8c1584aaccc3b209f2ddcc09a61b9b5",
       "declarations": []
     },
     {
@@ -600,5 +600,8 @@
         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
       }
     }
+  ],
+  "former_ids": [
+    "selection-under-registration-revision"
   ]
 }

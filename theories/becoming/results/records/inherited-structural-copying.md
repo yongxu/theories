@@ -88,10 +88,10 @@ The previous actual ABAB fragment meets the new structural template input; this 
   - Output: The four-component ABAB fragment and retained edges of the actual eight-component chain.
   - Input: A nonempty path template for structural copying.
   - Preserved conditions: Beyond endpoint identity, ordered access, exact copying, attachment and release must be provided; old cleavage and new template operations are not identified. [StructuralCopying.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean)
-- related, not a proved adapter: [formed-copying-registration](formed-copying-registration.md). Contacts formed by consuming connectors and support enter this copying; their loss, displacement and rebinding change what is copied.
+- related, not a proved adapter: [formed-contacts-change-copying-fidelity](formed-contacts-change-copying-fidelity.md). Contacts formed by consuming connectors and support enter this copying; their loss, displacement and rebinding change what is copied.
 - related, not a proved adapter: [formed-copying-correction](formed-copying-correction.md). Edits an existing product of this copying against a reference and passes the edited successor on to further copying.
 
-**Used by:** [formed-copying-registration](formed-copying-registration.md) · [learned-procedure-transmission](learned-procedure-transmission.md)
+**Used by:** [formed-contacts-change-copying-fidelity](formed-contacts-change-copying-fidelity.md) · [learned-procedure-transmission](learned-procedure-transmission.md)
 
 <a id="sources--来源"></a>
 ### Sources

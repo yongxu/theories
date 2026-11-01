@@ -66,7 +66,7 @@ Materials and connections retained from one copying history form the editing rel
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [formed-copying-registration](formed-copying-registration.md). damaged directly executes prior formation, displacement and copying; new step_accounts invokes prior step_accounts, and the actual edited daughter enters inherited copying.
+- **formal-reuse**: [formed-contacts-change-copying-fidelity](formed-contacts-change-copying-fidelity.md). damaged directly executes prior formation, displacement and copying; new step_accounts invokes prior step_accounts, and the actual edited daughter enters inherited copying.
   - Output: The AAAB product, residual B, four formed contacts and the draws accumulated from the entrance support.
   - Input: The checking/editing process retains that whole state, reclaims and reconnects one contact, then performs actual replacement.
   - Preserved conditions: Entrance support is explicitly 13, 14 or 15; support is not added after failure. Exchange is an added law, and subsequent copying separately requires accurate reading and supply. [CopyingCorrection.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingCorrection.lean)

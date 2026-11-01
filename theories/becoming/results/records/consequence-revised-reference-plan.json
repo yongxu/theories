@@ -267,7 +267,7 @@
   ],
   "dependencies": [
     {
-      "id": "selection-under-registration-revision",
+      "id": "selection-when-the-lumping-changes",
       "relation": "formal-reuse",
       "detail": {
         "zh": "old_selections_remain 在同一关系定义上直接调用精确保留条件",

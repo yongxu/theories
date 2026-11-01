@@ -1,0 +1,129 @@
+{
+ "batch": "gc2-registration-ids",
+ "date": "2026-11-02",
+ "renames": [
+  {
+   "old": "selection-under-registration-revision",
+   "new": "selection-when-the-lumping-changes",
+   "reason": "the chain revision GC2 (DF LEFT): the id states the retired registration sense; the record is about which selections survive and stay executable when the lumping changes, as its title says"
+  },
+  {
+   "old": "formed-copying-registration",
+   "new": "formed-contacts-change-copying-fidelity",
+   "reason": "the chain revision GC2 (DF LEFT): the id states the retired registration sense; the record is about formed contacts changing copying fidelity, as its title says"
+  }
+ ],
+ "files": [
+  {
+   "path": "_process/goals/meta-attractor-integration-session.json",
+   "sha256_before": "11b79f0becd3cea135bd3070e100a4de89ea247c68051237c57a7bcaad21a999",
+   "sha256_after": "070389c01b47e52e4ec487f2bc47b3ae0ae13b710a587c309f06f54e53a275b1"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GROWN-FRAGMENTATION-INTEGRATION.md",
+   "sha256_before": "d4fff557eb4418961796ba020b4199db29ec1cfda7d4a6e14aeb0fe561e32546",
+   "sha256_after": "5925b00793b30937b6cd7fea3083cf7c710d980aa199890572eb2fe6fc7d3522"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md",
+   "sha256_before": "ac2200a278a37b53e58dd5a5c0112f38b369637e049436f180b82bdb1e7f14dc",
+   "sha256_after": "b047d503986e48750c393ff541ce706d9874b471fd65f6f19ea1cf5ec6eeec41"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md",
+   "sha256_before": "2c788e606954c98c36a6977b011cf9e655c1e28c27374103e91eee8306c701e6",
+   "sha256_after": "0344eaf660eb95620b9e8c559e6e23079113f3af8429568b10a3e7bc8e6b047b"
+  },
+  {
+   "path": "theories/becoming/chapters/03-KNOWING.md",
+   "sha256_before": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b",
+   "sha256_after": "368cc450cef0023c83f72e93c32d502e69ec6030cad663b824762fb1cc07c189"
+  },
+  {
+   "path": "theories/becoming/chapters/04-LIFE.md",
+   "sha256_before": "12a7c3c6832ddf358e9eef35dca3cc93e3cd046c372149a3c86722a5a4bc9bb3",
+   "sha256_after": "7ed30bde3b7cd2011d0304c8ab1fac611f411678d432b34625cce55794d1a172"
+  },
+  {
+   "path": "theories/becoming/results/GENERATIVITY-CHAIN.md",
+   "sha256_before": "945c4f6766ae77806808a35156e69382967f1d2976fcad5d651df2b85df31533",
+   "sha256_after": "f18878186981f9286cb10eb20cd86b9f803d1693a3cd4a033148ed63d805d01e"
+  },
+  {
+   "path": "theories/becoming/results/data/regions.json",
+   "sha256_before": "1eaa8a3db1f1c08c236a95b42c030aef19eb71186afd1122c35540dd7855150d",
+   "sha256_after": "792e9d5bb7169f606fd1b0c3658a2e1fec158f74d867b9371d9ed9f4f3856618"
+  },
+  {
+   "path": "theories/becoming/results/data/shared-laws.json",
+   "sha256_before": "503a26921d7562748475859f5ac110d1392df1442b5574b42ab2081302c4df62",
+   "sha256_after": "ce4585aa2bcebf84025b96ea4a445a5ae7aae3a650fdb93083305f99e6214718"
+  },
+  {
+   "path": "theories/becoming/results/records/a-revision-that-opens-a-correction.json",
+   "sha256_before": "43828d553838d52709a004e4fe7f5123a78a19cbb189247df84d498dc918252c",
+   "sha256_after": "b4b4c402ef7e1465a1ca7ae6d47ca2d73de985f633d6564c0e2878d6722865cd"
+  },
+  {
+   "path": "theories/becoming/results/records/consequence-revised-reference-plan.json",
+   "sha256_before": "24ca71797c8a64f7d232a7348b9a1a91ad777297a4086ee01b183c7932a38317",
+   "sha256_after": "35b61e507d9b775ba0002eb9a62f96fc881d0707dba7ef11d25819f1eb82068e"
+  },
+  {
+   "path": "theories/becoming/results/records/correction-is-not-calibration.json",
+   "sha256_before": "d33d7d240ea44522b3a71a6370f151289349ad54f2da15e604f902af9d4c4274",
+   "sha256_after": "ef0cc5a0ce89fab61ba428dff78f31e6328a88e30ca9d3204fbd95a43c68f800"
+  },
+  {
+   "path": "theories/becoming/results/records/formed-copying-correction.json",
+   "sha256_before": "57b0ac45c6fda1ea18867191a4b0d5b86701238a63c39edf6df96900260a4a1c",
+   "sha256_after": "d57b8d74e7a817dfd995450fa787c98127159f45ae9ab30dac85ba0afcfb9d68"
+  },
+  {
+   "path": "theories/becoming/results/records/inherited-structural-copying.json",
+   "sha256_before": "b7ab35a2b0acd5d04aa61defbe825d2e21c5785fb0f2f3bd0219ea761c4dec3c",
+   "sha256_after": "c6ba1d6db4b42ee94694a2a020f7b062d127e2537dbc408f74c32c8541dd6f37"
+  },
+  {
+   "path": "theories/becoming/results/records/recurrent-chain-assembly.json",
+   "sha256_before": "54a7f6796b68827d40dfc34e7cc48586f5d2189b4441101e02b19dee10f066a0",
+   "sha256_after": "f6afca3c294140414aa16ba97112bf6eb92bed74a8755645b5b0a4a2330f9fa9"
+  },
+  {
+   "path": "theories/becoming/results/records/recurring-reference-revision.json",
+   "sha256_before": "8f6d86dbaccff2d5b234cce2004dbdca609895d0f96f17fa0a5d243af85cd767",
+   "sha256_after": "230abe41d53464a0ca483556df1e58b2eee2d06475277213fddfd4d55056e517"
+  },
+  {
+   "path": "theories/becoming/results/records/selection-through-couplings.json",
+   "sha256_before": "8eb54907799b46bfc4863f050e7236e6360e75c8a22e235df102f6624e10ac36",
+   "sha256_after": "543a20471f2353216f28ed3408d0e40b898e0c37fe36441ea98c0b8ffc24812b"
+  },
+  {
+   "path": "theories/becoming/results/records/universal-practical-warrant.json",
+   "sha256_before": "972133f7049284ea5ded5ba2997836f298a5f97bf2087164cd82b954e9b9d040",
+   "sha256_after": "5f2f034033c9853ea944fe3c657ba5a9822af839c4ecb5053c3f71b309e4558c"
+  },
+  {
+   "path": "theories/becoming/results/records/wisdom-root.json",
+   "sha256_before": "fd8a08f5ed17587fc2c07cac6449ce5ce1d5069b6985e42979d39613c89079dd",
+   "sha256_after": "38da1dad6818bbd41cd8c27c25d2cfff46cc94913658533a3a5730cf9b8c3669"
+  },
+  {
+   "path": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+   "sha256_before": "c617675c9deb2157854f047b0f2b34de67513227a8b6ae1689e55e2da73b31ad",
+   "sha256_after": "5b6e24935a66a61e37ddcf0ba371716bf8c1584aaccc3b209f2ddcc09a61b9b5"
+  },
+  {
+   "path": "theories/becoming/results/records/selection-when-the-lumping-changes.json",
+   "former_path": "theories/becoming/results/records/selection-under-registration-revision.json",
+   "sha256_after": "58b38403d7c63deffc17313e4d00a39a45d5dc52629e3c69029c830cd02763d7"
+  },
+  {
+   "path": "theories/becoming/results/records/formed-contacts-change-copying-fidelity.json",
+   "former_path": "theories/becoming/results/records/formed-copying-registration.json",
+   "sha256_after": "872a10aef106c82446b3873dde2f6b8d5ed94ae41a784e4139fcd561afbee934"
+  }
+ ],
+ "scope": "Record ids renamed with former_ids kept; live references rewritten; history, evidence and sources keep the old ids, and records/OLD.md is a generated redirect page."
+}

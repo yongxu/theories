@@ -1,5 +1,7 @@
 # The generativity chain's retired labels: a proposal for Ren
 
+**Decided, 2 November 2026, on argument** ([GC2](GENERATIVITY-CHAIN-INDEX-RECORD.md#gc2-chain-revision-2-november-2026)): option (b) taken, a key in the chain's opening scope pointing to 08 §10; options (a) and (c) declined. After R19, living significance gives significance with no valence and no further generation, so relabelling G0 as living significance would give it what the theory denies it. The chain is now revised by the work on argument, not on Ren's answer, so the section below on why this was his decision is history. The text below is the proposal as written on 19 October.
+
 19 October 2026. Written by the AI (Claude Code session of 19 October, board item A3) for Ren's decision. Everything here is the AI's except text in quotation marks attributed to Ren, each with its source. **Nothing here is applied.** Taking, changing or declining the proposal changes no theorem, no premise and no entry's claim; it changes the words the chain uses for them.
 
 ## Why this is Ren's decision
