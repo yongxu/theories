@@ -70,7 +70,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: None. [Withholding.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean)
 - related, not a proved adapter: [restoring-giving-from-the-worst-start](restoring-giving-from-the-worst-start.md). The tolerating law keeps inclusion, so its restoring is read off the course from total withholding.
 
-**Used by:** [tolerance-monotone-across-laws](tolerance-monotone-across-laws.md)
+**Used by:** [a-pair-tolerates-only-within-a-window](a-pair-tolerates-only-within-a-window.md) (interpretive) · [tolerance-monotone-across-laws](tolerance-monotone-across-laws.md)
 
 <a id="sources--来源"></a>
 ### Sources

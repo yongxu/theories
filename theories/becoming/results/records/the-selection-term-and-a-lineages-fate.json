@@ -1,0 +1,950 @@
+{
+  "schema_version": 2,
+  "id": "the-selection-term-and-a-lineages-fate",
+  "title": {
+    "en": "The selection term and a lineage's fate",
+    "zh": "选择项与世系的命运"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "statement": {
+    "en": "A common shift of offspring numbers keeps the selection term, so in a horizon two fates can share the terms; unboundedly many positive terms, or one with exact transmission after it, force going on. Where listed offspring continue their parents, a cohort degenerates only if a later one is empty.",
+    "zh": "后代数的共同平移不改变真正的选择项，故在视界之内两种命运可共有同一组项；在无界多步为正的项，或一个正项加上其后的精确传递，迫使延续。在所列后代于粗线上延续其亲代的世系上，一代退化仅当其后某代为空。"
+  },
+  "laws": [
+    {
+      "en": "Shift invariance. A common number added to every member's offspring number leaves concordance and discordance with any amount unchanged, and likewise where the amount is shifted, while the total weight moves by that number for each member; over cohorts, two alike at a step whose offspring numbers differ by a common k have the same terms there, the next cohort of one larger by k per member. The excess identity restates Becoming.excess_add_right.",
+      "zh": "平移不变。给每个成员的后代数加上同一个数，与任何量的一致与不一致都不变，量平移时亦然；总权重则每个成员增加该数。在世代中，某步相同、后代数相差共同的 k 的两代，在该步有相同的项，其一的下一代每个成员多 k。过度恒等式是 Becoming.excess_add_right 的重述。",
+      "declarations": [
+        "Becoming.SelectionShift.excess_shift",
+        "Becoming.SelectionShift.concord_shifted",
+        "Becoming.SelectionShift.discord_shifted",
+        "Becoming.SelectionShift.concord_shift",
+        "Becoming.SelectionShift.discord_shift",
+        "Becoming.SelectionShift.concord_shift_amount",
+        "Becoming.SelectionShift.discord_shift_amount",
+        "Becoming.SelectionShift.total_shifted",
+        "Becoming.SelectionShift.weighted_shift",
+        "Becoming.SelectionShift.Generations.shift_step"
+      ]
+    },
+    {
+      "en": "What a positive term needs. Positive concordance or discordance of a weight with any amount means the weight varies over the list, so some member's weight is positive; over cohorts a positive term at a step means some member has an offspring and the next cohort is nonempty, and at a step whose next cohort is empty both terms are zero.",
+      "zh": "正项所需。权重与任何量的一致或不一致为正，意味着权重在列表上有差异，故某成员的权重为正；在世代中，某步的项为正意味着某成员有后代、下一代非空；下一代为空之步，两项皆为零。",
+      "declarations": [
+        "Becoming.SelectionShift.weight_varies_of_concord",
+        "Becoming.SelectionShift.weight_varies_of_discord",
+        "Becoming.SelectionShift.pos_weight_of_varies",
+        "Becoming.SelectionShift.pos_weight_of_concord",
+        "Becoming.SelectionShift.pos_weight_of_discord",
+        "Becoming.SelectionShift.Generations.varies_of_selection",
+        "Becoming.SelectionShift.Generations.reproducing_of_selection",
+        "Becoming.SelectionShift.Generations.next_of_reproducing",
+        "Becoming.SelectionShift.Generations.next_of_selection",
+        "Becoming.SelectionShift.Generations.last_term_zero"
+      ]
+    },
+    {
+      "en": "Terms positive at unboundedly many steps decide. A term positive at every step keeps every cohort after the first nonempty; from a nonempty first cohort, a term positive at every step whose family is nonempty keeps every cohort nonempty; and a term positive at unboundedly many steps keeps every cohort nonempty, the first included, with no premise on it. Witness: alternating a concordant step with one copy each meets the last premise and not positivity at every step.",
+      "zh": "在无界多步为正的项起决定作用。每步皆正的项使第一代之后每代非空；自非空的第一代起，在家族非空的每一步皆正的项使每代非空；在无界多步为正的项使每代非空，第一代亦在内，无需关于它的前提。见证：交替一个一致之步与一个各复制一份之步，满足后一前提而非每步皆正。",
+      "declarations": [
+        "Becoming.SelectionShift.Generations.never_empties",
+        "Becoming.SelectionShift.Generations.never_empties_while",
+        "Becoming.SelectionShift.Generations.nonempty_before",
+        "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+        "Becoming.SelectionShift.Alternating.even",
+        "Becoming.SelectionShift.Alternating.course",
+        "Becoming.SelectionShift.Alternating.step_family",
+        "Becoming.SelectionShift.Alternating.course_family",
+        "Becoming.SelectionShift.Alternating.step_terms",
+        "Becoming.SelectionShift.Alternating.course_terms",
+        "Becoming.SelectionShift.Alternating.even_double",
+        "Becoming.SelectionShift.Alternating.odd_double",
+        "Becoming.SelectionShift.Alternating.le_double",
+        "Becoming.SelectionShift.Alternating.unbounded_not_every"
+      ]
+    },
+    {
+      "en": "The exception. Read by offspring number with exact transmission at every step from t on, a member of cohort t with an offspring keeps a line with that offspring number in every later cohort; so every later cohort is nonempty exactly where cohort t + 1 is, and a positive term at t forces it, extending to every later cohort the nonemptiness of cohort t + 2 that the one-step law rises_exact_iff gives. The premises hold together (OneLine), and those of a common shift with k positive.",
+      "zh": "例外。以后代数读、自 t 起每步传递精确时，第 t 代中有后代的成员在其后每代都保有一条后代数相同的线；故其后每代非空恰当第 t + 1 代非空，t 处的正项迫使之。这把一步之律 rises_exact_iff 给出的第 t + 2 代非空推广到其后每代。诸前提可同时成立（OneLine），共同平移的前提在 k 为正时亦然。",
+      "declarations": [
+        "Becoming.SelectionShift.Generations.line_kept",
+        "Becoming.SelectionShift.Generations.goes_on_iff",
+        "Becoming.SelectionShift.Generations.goes_on",
+        "Becoming.SelectionShift.OneLine.keepsOne",
+        "Becoming.SelectionShift.OneLine.course",
+        "Becoming.SelectionShift.OneLine.goes_on_premises",
+        "Becoming.SelectionShift.OneLine.shifted",
+        "Becoming.SelectionShift.OneLine.shift_step_premises"
+      ]
+    },
+    {
+      "en": "Witnesses. Exactness at t alone is not enough: a course read by offspring number, exact at step 0 and not at step 1 and concordant at step 0, has one member at cohorts 1 and 2 and is empty from cohort 3 on. A zero term decides nothing: one offspring each and none each have no terms at any step, the first one member at every cohort, the second empty from the first step.",
+      "zh": "见证。只在 t 处精确不够：以后代数读、第 0 步精确而第 1 步不精确、第 0 步一致的进程，第 1、2 代各有一个成员，自第 3 代起为空。零项不决定任何事：各一个后代与各无后代，在任何步都没有项，前者每代一个成员，后者自第一步起为空。",
+      "declarations": [
+        "Becoming.SelectionShift.ExactOnce.kids",
+        "Becoming.SelectionShift.ExactOnce.course",
+        "Becoming.SelectionShift.ExactOnce.exact_first",
+        "Becoming.SelectionShift.ExactOnce.not_exact_second",
+        "Becoming.SelectionShift.ExactOnce.concord_first",
+        "Becoming.SelectionShift.ExactOnce.size_three",
+        "Becoming.SelectionShift.ExactOnce.exact_once_ends",
+        "Becoming.SelectionShift.ZeroTerm.oneEach",
+        "Becoming.SelectionShift.ZeroTerm.noneEach",
+        "Becoming.SelectionShift.ZeroTerm.oneEach_family",
+        "Becoming.SelectionShift.ZeroTerm.decides_nothing"
+      ]
+    },
+    {
+      "en": "Within a horizon. For every course of cohorts and horizon H, two courses keep its cohorts through H + 1 and its terms through H and share their terms at every step, one as large from H + 1 on as it is at H + 1 and one empty from H + 2 on; where it is merely nonempty at H, one shifted by an offspring per member at H, and one copy each after, is nonempty at every cohort and shares terms with the ending one.",
+      "zh": "在视界之内。对每个世代进程与视界 H，两个进程保有其至 H + 1 的各代与至 H 的项，且彼此每步的项相同：其一自 H + 1 起与它在 H + 1 时一样大，其一自 H + 2 起为空；它在 H 处仅非空时，一个在 H 处每成员多一个后代（即其自身的复制）、此后各复制一份的进程，每代非空，且与终结者项相同。",
+      "declarations": [
+        "Becoming.SelectionShift.SameTerms",
+        "Becoming.SelectionShift.Horizon.keep",
+        "Becoming.SelectionShift.Horizon.going",
+        "Becoming.SelectionShift.Horizon.ending",
+        "Becoming.SelectionShift.Horizon.keep_kids",
+        "Becoming.SelectionShift.Horizon.keep_kids_after",
+        "Becoming.SelectionShift.Horizon.keep_family",
+        "Becoming.SelectionShift.Horizon.keep_terms",
+        "Becoming.SelectionShift.Horizon.keep_terms_after",
+        "Becoming.SelectionShift.Horizon.not_le_after",
+        "Becoming.SelectionShift.Horizon.going_family",
+        "Becoming.SelectionShift.Horizon.ending_empty",
+        "Becoming.SelectionShift.Horizon.same_terms_two_fates",
+        "Becoming.SelectionShift.Horizon.going_goes_on",
+        "Becoming.SelectionShift.Horizon.going_goes_on_of_selection",
+        "Becoming.SelectionShift.Horizon.markedPair",
+        "Becoming.SelectionShift.Horizon.carried",
+        "Becoming.SelectionShift.Horizon.steady",
+        "Becoming.SelectionShift.Horizon.steady_family",
+        "Becoming.SelectionShift.Horizon.steady_terms",
+        "Becoming.SelectionShift.Horizon.steady_two_fates",
+        "Becoming.SelectionShift.Horizon.shiftAt",
+        "Becoming.SelectionShift.Horizon.goingShifted",
+        "Becoming.SelectionShift.Horizon.shiftAt_family",
+        "Becoming.SelectionShift.Horizon.shiftAt_step",
+        "Becoming.SelectionShift.Horizon.shiftAt_terms",
+        "Becoming.SelectionShift.Horizon.two_fates_of_nonempty"
+      ]
+    },
+    {
+      "en": "The terms boundary. With terms zero after H, the two courses share its terms everywhere; so from a nonempty first cohort, terms zero from some step on are shared by a course that goes on and one that ends. Joined with going on under terms positive at unboundedly many steps, in a restatement, these are the two sides of the boundary of the region where the terms decide a fate; which side holds is not decided.",
+      "zh": "项之边界。进程在 H 之后项为零时，两个进程每步都与它项相同；故自非空的第一代起，自某步起为零的项为一个延续的进程与一个终结的进程所共有。与\"在无界多步为正的项下延续\"合为一条重述，这是\"项决定命运\"之域的边界的两侧；一个进程在哪一侧，并未判定。",
+      "declarations": [
+        "Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after",
+        "Becoming.SelectionShift.Horizon.zero_after_two_fates",
+        "Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted",
+        "Becoming.SelectionShift.Horizon.zero_after_premises",
+        "Becoming.SelectionShift.Horizon.eventually_zero_two_fates",
+        "Becoming.SelectionShift.Horizon.terms_boundary"
+      ]
+    },
+    {
+      "en": "Witness, positive but for the last: for every N, a course shrinking by one at every step, a marked member having as many offspring as the family less one and the others none, has positive concordance with the mark at every step before N, a nonempty cohort at N with a zero term there, and is empty from N + 1 on.",
+      "zh": "见证，除最后一代外皆正：对每个 N，一个每步减一的进程（标记成员的后代数为家族规模减一，其余皆无）在 N 之前每步与标记的一致为正，第 N 代非空且该处项为零，自 N + 1 起为空。",
+      "declarations": [
+        "Becoming.SelectionShift.Shrinking.line",
+        "Becoming.SelectionShift.Shrinking.kids",
+        "Becoming.SelectionShift.Shrinking.mark",
+        "Becoming.SelectionShift.Shrinking.course",
+        "Becoming.SelectionShift.Shrinking.unmarked_flatMap",
+        "Becoming.SelectionShift.Shrinking.unmarked_mark",
+        "Becoming.SelectionShift.Shrinking.replicate_length",
+        "Becoming.SelectionShift.Shrinking.line_step",
+        "Becoming.SelectionShift.Shrinking.course_family",
+        "Becoming.SelectionShift.Shrinking.course_size",
+        "Becoming.SelectionShift.Shrinking.course_sum",
+        "Becoming.SelectionShift.Shrinking.course_concord",
+        "Becoming.SelectionShift.Shrinking.split_le",
+        "Becoming.SelectionShift.Shrinking.positive_then_empty"
+      ]
+    },
+    {
+      "en": "Instances, not results: descent read as passing within a kind gives the lineage continuation. From an active parent, at (kind, carrier) and either grain, a carrying renewal is a step of it within the kind into an active formation that was not, the step before, both active and continued by itself, and is a descent within the kind: cases of the World's Web.carries_iff, for a reflexive kind through a restatement.",
+      "zh": "实例，不是结果：把世系读作种类之内的传递，即得世系之续。自活跃的亲代起，在（种类，载体）与任一粒度上，传是此续在种类之内进入一个活跃形成的一步，该形成在前一步并非既活跃又作为自身延续；这样的一步是种类之内的世系：世界的 Web.carries_iff 的情形，对自反的种类经一条重述。",
+      "declarations": [
+        "Becoming.LineageRegions.descent",
+        "Becoming.LineageRegions.continuation",
+        "Becoming.LineageRegions.lineStep",
+        "Becoming.LineageRegions.oneKind",
+        "Becoming.LineageRegions.carries_iff",
+        "Becoming.LineageRegions.carrying_descends",
+        "Becoming.LineageRegions.carries_iff_via_base"
+      ]
+    },
+    {
+      "en": "The join of descent to births. Where only active formations give, a descent within the kind into a formation active after it continues the lineage; with the offspring embodied it is a carrying renewal, with no premise of newness, so a revival is a birth. Where activity also needs support, a descent from a supported parent is one exactly where the offspring was unsupported the step before; first support from any earlier step says no more.",
+      "zh": "世系与出生的接合。只有活跃形成给予时，种类之内进入步后活跃之形成的世系延续世系；后代具身时它是传，不需新颖之前提，故复苏也是出生。活动还需要支持时，自受支持的亲代起的世系恰在后代前一步未受支持时是传；自更早任一步首次受支持，所说不更多。",
+      "declarations": [
+        "Becoming.LineageRegions.descent_continues",
+        "Becoming.LineageRegions.descent_carries",
+        "Becoming.LineageRegions.WithinKind",
+        "Becoming.LineageRegions.EmbodiedOffspring",
+        "Becoming.LineageRegions.descended_carries",
+        "Becoming.LineageRegions.UnsupportedBefore",
+        "Becoming.LineageRegions.SupportedAfter",
+        "Becoming.LineageRegions.supportedAfter_of_unsupportedBefore",
+        "Becoming.LineageRegions.FirstSupportedOffspring",
+        "Becoming.LineageRegions.firstSupported_iff_step",
+        "Becoming.LineageRegions.unsupportedBefore_of_first",
+        "Becoming.LineageRegions.supported_carries_iff",
+        "Becoming.LineageRegions.descent_continues_supported",
+        "Becoming.LineageRegions.descent_carries_supported",
+        "Becoming.LineageRegions.descended_carries_supported",
+        "Becoming.LineageRegions.nothing_carries_of_always_supported",
+        "Becoming.LineageRegions.active_along_kind"
+      ]
+    },
+    {
+      "en": "Witnesses by grain. In the stock-one relay each descent continues the lineage at both grains and is a carrying renewal at neither. Read with activity as standing, the same course generates at the grain of activity and keeps at a grain of support where nothing is required, at which the lineage continuation also carries a dormant formation on.",
+      "zh": "按粒度的见证。在存量为一的接力中，每个世系在两种粒度上都延续世系，在两者上都不是传。以立为活动来读，同一进程在活动粒度上生成，在无所需求的支持粒度上守；在那一粒度上，世系之续也使休眠的形成延续。",
+      "declarations": [
+        "Becoming.LineageRegions.RelayRead.acting",
+        "Becoming.LineageRegions.RelayRead.supported",
+        "Becoming.LineageRegions.RelayRead.dependent",
+        "Becoming.LineageRegions.RelayRead.descent_not_birth",
+        "Becoming.LineageRegions.StandingRelay.web",
+        "Becoming.LineageRegions.StandingRelay.embodied",
+        "Becoming.LineageRegions.StandingRelay.acting",
+        "Becoming.LineageRegions.StandingRelay.supported",
+        "Becoming.LineageRegions.StandingRelay.dependent",
+        "Becoming.LineageRegions.StandingRelay.descended",
+        "Becoming.LineageRegions.StandingRelay.grain_decides_region",
+        "Becoming.LineageRegions.OneBirth.dormant_goes_on_at_support"
+      ]
+    },
+    {
+      "en": "Generation follows from a family carrying renewals into itself. Where every member from t on has a listed offspring, every member at t generates at (kind, carrier); with exact transmission of offspring number from t on, a member with an offspring at t generates, so a positive term at t puts some member of cohort t in 生成. In Chain every cohort is nonempty and transmission exact, yet a childless member degenerates.",
+      "zh": "每一成员都向家族内传的家族给出生成。自 t 起每个成员都有所列后代时，t 处每个成员在（种类，载体）上生成；自 t 起后代数传递精确时，t 处有后代的成员生成，故 t 处的正项使第 t 代某成员处于生成。在 Chain 中每代非空、传递精确，而一个无后代的成员退化。",
+      "declarations": [
+        "Becoming.LineageRegions.generation_of_carrying",
+        "Becoming.LineageRegions.generation_of_reproducing",
+        "Becoming.LineageRegions.generation_of_reproducing_supported",
+        "Becoming.LineageRegions.generation_of_exact",
+        "Becoming.LineageRegions.generation_of_positive_term",
+        "Becoming.LineageRegions.reproducing_of_term",
+        "Becoming.LineageRegions.Chain.level",
+        "Becoming.LineageRegions.Chain.web",
+        "Becoming.LineageRegions.Chain.give",
+        "Becoming.LineageRegions.Chain.flow",
+        "Becoming.LineageRegions.Chain.children",
+        "Becoming.LineageRegions.Chain.generations",
+        "Becoming.LineageRegions.Chain.children_self",
+        "Becoming.LineageRegions.Chain.children_other",
+        "Becoming.LineageRegions.Chain.level_self",
+        "Becoming.LineageRegions.Chain.succ_ne_zero",
+        "Becoming.LineageRegions.Chain.level_next",
+        "Becoming.LineageRegions.Chain.give_self",
+        "Becoming.LineageRegions.Chain.give_other",
+        "Becoming.LineageRegions.Chain.family_succ",
+        "Becoming.LineageRegions.Chain.kid_eq",
+        "Becoming.LineageRegions.Chain.one_le_self",
+        "Becoming.LineageRegions.Chain.acting",
+        "Becoming.LineageRegions.Chain.embodied",
+        "Becoming.LineageRegions.Chain.dependent",
+        "Becoming.LineageRegions.Chain.descends",
+        "Becoming.LineageRegions.Chain.descended",
+        "Becoming.LineageRegions.Chain.number",
+        "Becoming.LineageRegions.Chain.exact",
+        "Becoming.LineageRegions.Chain.first_supported_from_zero",
+        "Becoming.LineageRegions.Chain.first_supported",
+        "Becoming.LineageRegions.Chain.reproduces_from_one",
+        "Becoming.LineageRegions.Chain.childless_degenerates",
+        "Becoming.LineageRegions.Chain.chain"
+      ]
+    },
+    {
+      "en": "Ending under the census. Where each continuation of a member on the coarse line is a member's occurrence (at the grain of activity, where each descent within the kind is listed and none carries on as itself), an empty cohort ends the line on every branch. So in a family balanced and dissipated on up to its stock, every member's line in cohorts up to stock + 1 degenerates, at every stock.",
+      "zh": "普查下的终结。成员在粗线上的每个续都是某成员之事时，空的一代使线诸支皆尽；在活动粒度上，种类之内的每个世系皆被列出、无成员作为自身延续时即如此。故在直至其存量都平衡且被耗散的族内，自直至存量 + 1 的一代中每个成员起的线退化，对每一存量皆然。",
+      "declarations": [
+        "Becoming.LineageRegions.ContinuationsListed",
+        "Becoming.LineageRegions.line_listed",
+        "Becoming.LineageRegions.reached_listed",
+        "Becoming.LineageRegions.degeneration_of_empty",
+        "Becoming.LineageRegions.ContinuationsAreKids",
+        "Becoming.LineageRegions.listed_of_kids",
+        "Becoming.LineageRegions.kids_of_census",
+        "Becoming.LineageRegions.listed_of_census",
+        "Becoming.LineageRegions.degeneration_of_dissipation"
+      ]
+    },
+    {
+      "en": "Witnesses of the census law: in OneBirth a parent uses up its standing on one offspring, which uses up its own, every premise is met and the line renews and still ends (新而尽); in Lasting every premise of lineage_ends holds while the offspring stands on unspent outside the census and the line goes on, so the census is needed.",
+      "zh": "普查之律的见证：在 OneBirth 中，亲代把其立耗于一个后代，后代又耗其自身之立，每个前提皆满足，线更新而仍尽（新而尽）；在 Lasting 中，lineage_ends 的每个前提成立，而后代在普查之外未耗尽地立着，线延续，故需要普查。",
+      "declarations": [
+        "Becoming.LineageRegions.OneBirth.level",
+        "Becoming.LineageRegions.OneBirth.web",
+        "Becoming.LineageRegions.OneBirth.present",
+        "Becoming.LineageRegions.OneBirth.take",
+        "Becoming.LineageRegions.OneBirth.give",
+        "Becoming.LineageRegions.OneBirth.flow",
+        "Becoming.LineageRegions.OneBirth.family",
+        "Becoming.LineageRegions.OneBirth.kids",
+        "Becoming.LineageRegions.OneBirth.generations",
+        "Becoming.LineageRegions.OneBirth.family_two",
+        "Becoming.LineageRegions.OneBirth.descends",
+        "Becoming.LineageRegions.OneBirth.listed_birth",
+        "Becoming.LineageRegions.OneBirth.descended",
+        "Becoming.LineageRegions.OneBirth.acting",
+        "Becoming.LineageRegions.OneBirth.embodied",
+        "Becoming.LineageRegions.OneBirth.balances",
+        "Becoming.LineageRegions.OneBirth.dissipates",
+        "Becoming.LineageRegions.OneBirth.stock",
+        "Becoming.LineageRegions.OneBirth.listed",
+        "Becoming.LineageRegions.OneBirth.one_birth",
+        "Becoming.LineageRegions.Lasting.level",
+        "Becoming.LineageRegions.Lasting.web",
+        "Becoming.LineageRegions.Lasting.present",
+        "Becoming.LineageRegions.Lasting.flow",
+        "Becoming.LineageRegions.Lasting.acting",
+        "Becoming.LineageRegions.Lasting.descended",
+        "Becoming.LineageRegions.Lasting.balances",
+        "Becoming.LineageRegions.Lasting.dissipates",
+        "Becoming.LineageRegions.Lasting.goes_on",
+        "Becoming.LineageRegions.Lasting.lasting"
+      ]
+    },
+    {
+      "en": "A whole cohort degenerating is an empty later cohort. Where listed offspring continue their parents on the coarse line, every member of cohort t degenerating forces some later cohort empty, with no census, by induction on 尽 over finite families (line_ends its lemma); with the census the converse holds; member by member, where every continuation is a listed offspring, a member degenerates exactly where it has, at some depth, no listed descendant.",
+      "zh": "一整代退化即其后某代为空。所列后代在粗线上延续其亲代时，第 t 代每个成员都退化迫使其后某代为空，无需普查，经有限家族上对尽的归纳（line_ends 为其引理）；有普查时其逆亦成立；逐个成员地，每个续都是所列后代时，一个成员退化恰当它在某一深度没有所列后裔。",
+      "declarations": [
+        "Becoming.LineageRegions.KidsContinue",
+        "Becoming.LineageRegions.kids_continue",
+        "Becoming.LineageRegions.kids_continue_supported",
+        "Becoming.LineageRegions.ListedDescendant",
+        "Becoming.LineageRegions.ListedDescendant.snoc",
+        "Becoming.LineageRegions.ListedDescendant.of_succ",
+        "Becoming.LineageRegions.family_descendant",
+        "Becoming.LineageRegions.common_bound",
+        "Becoming.LineageRegions.length_zero_of_no_mem",
+        "Becoming.LineageRegions.line_ends",
+        "Becoming.LineageRegions.empty_of_degenerates",
+        "Becoming.LineageRegions.generation_degenerates_iff",
+        "Becoming.LineageRegions.ends_of_line_ends",
+        "Becoming.LineageRegions.degenerates_iff_line_ends"
+      ]
+    },
+    {
+      "en": "Corollaries with the counting: where listed offspring continue their parents, nonempty cohorts from t on leave not every member of cohort t degenerating, and so does a term positive at every nonempty cohort from a nonempty cohort t on, or at every step. They place no member in any region.",
+      "zh": "与计数合得的推论：所列后代延续其亲代时，自 t 起各代非空，则第 t 代并非每个成员都退化；自非空的第 t 代起在每个非空之代皆正的项，或每步皆正的项，亦然。它们不把任何成员置于任何域。",
+      "declarations": [
+        "Becoming.LineageRegions.not_all_degenerate_of_nonempty",
+        "Becoming.LineageRegions.nonempty_of_positive",
+        "Becoming.LineageRegions.nonempty_while",
+        "Becoming.LineageRegions.not_all_degenerate_while",
+        "Becoming.LineageRegions.not_all_degenerate_of_positive"
+      ]
+    },
+    {
+      "en": "Witnesses in Courses, one kind, every formation embodied: for every horizon H, two courses with the same cohorts through H + 1 and the same terms through H (concordance two), one generating, one degenerating. With reproduction stopping after H, the term is positive through H and zero at the last nonempty cohort, every member of every cohort degenerates and the lineage renews and still ends (新而尽).",
+      "zh": "Courses 中的见证，一个种类，每个形成皆具身：对每个视界 H，两个进程至 H + 1 各代相同、至 H 项相同（一致为二），一个生成，一个退化。繁殖在 H 后停止时，项至 H 为正，在最后的非空之代为零，每代每个成员皆退化，世系更新而仍尽（新而尽）。",
+      "declarations": [
+        "Becoming.LineageRegions.Courses.Formation",
+        "Becoming.LineageRegions.Courses.kids",
+        "Becoming.LineageRegions.Courses.give",
+        "Becoming.LineageRegions.Courses.born",
+        "Becoming.LineageRegions.Courses.level",
+        "Becoming.LineageRegions.Courses.web",
+        "Becoming.LineageRegions.Courses.flow",
+        "Becoming.LineageRegions.Courses.mark",
+        "Becoming.LineageRegions.Courses.generations",
+        "Becoming.LineageRegions.Courses.always",
+        "Becoming.LineageRegions.Courses.upTo",
+        "Becoming.LineageRegions.Courses.cond_pos",
+        "Becoming.LineageRegions.Courses.mem_cond",
+        "Becoming.LineageRegions.Courses.and_split",
+        "Becoming.LineageRegions.Courses.fst_of_mem",
+        "Becoming.LineageRegions.Courses.mem_of_fst",
+        "Becoming.LineageRegions.Courses.kids_marked",
+        "Becoming.LineageRegions.Courses.kids_off",
+        "Becoming.LineageRegions.Courses.give_pos",
+        "Becoming.LineageRegions.Courses.level_own",
+        "Becoming.LineageRegions.Courses.level_other",
+        "Becoming.LineageRegions.Courses.born_on",
+        "Becoming.LineageRegions.Courses.born_off",
+        "Becoming.LineageRegions.Courses.family_of",
+        "Becoming.LineageRegions.Courses.member_of",
+        "Becoming.LineageRegions.Courses.descends",
+        "Becoming.LineageRegions.Courses.DownClosed",
+        "Becoming.LineageRegions.Courses.acting",
+        "Becoming.LineageRegions.Courses.embodied",
+        "Becoming.LineageRegions.Courses.descended",
+        "Becoming.LineageRegions.Courses.only_kids",
+        "Becoming.LineageRegions.Courses.terms_on",
+        "Becoming.LineageRegions.Courses.terms_off",
+        "Becoming.LineageRegions.Courses.always_down",
+        "Becoming.LineageRegions.Courses.upTo_down",
+        "Becoming.LineageRegions.Courses.upTo_on",
+        "Becoming.LineageRegions.Courses.upTo_off",
+        "Becoming.LineageRegions.Courses.marked_generates",
+        "Becoming.LineageRegions.Courses.upTo_empty",
+        "Becoming.LineageRegions.Courses.upTo_degenerates",
+        "Becoming.LineageRegions.Courses.positive_throughout",
+        "Becoming.LineageRegions.Courses.same_terms_two_fates",
+        "Becoming.LineageRegions.Courses.positive_but_last"
+      ]
+    },
+    {
+      "en": "At a kind grain that separates offspring from parents, each formation its own kind, the kind class is the carrier class and the line takes no step: there concordance is two at every step while every member of every cohort degenerates, and in Chain every cohort is nonempty while every occurrence degenerates. So the impossibility above is a law of a kind grain at which listed offspring continue their parents, not of every grain.",
+      "zh": "在把后代与亲代分开的种类粒度上（每个形成自成一类），种类之类即载体之类，线不走一步：其处一致在每步为二，而每代每个成员皆退化；在 Chain 中每代非空而每个事皆退化。故上述不可能是所列后代延续其亲代之种类粒度上的律，不是每一粒度上的律。",
+      "declarations": [
+        "Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind",
+        "Becoming.LineageRegions.Chain.kinds_apart",
+        "Becoming.LineageRegions.Chain.stands_once"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "At the counting layer: finite cohorts as lists, each listed as the offspring of the last; natural-number weights, amounts and offspring numbers; going on read as every later cohort nonempty, ending as every cohort empty from some step on; newness not represented; same terms comparing concordance and discordance only.",
+      "zh": "计数层：有限的世代以列表表示，每一代列为上一代的后代；自然数的权重、量与后代数；延续读作其后每代非空，终结读作自某步起每代为空；不表示新颖；\"项相同\"只比较一致与不一致。"
+    },
+    {
+      "en": "In the exception: the reading by offspring number (ByNumber) and exact transmission of it at every step from t on.",
+      "zh": "在例外中：以后代数读（ByNumber），且自 t 起每步后代数传递精确。"
+    },
+    {
+      "en": "On the map: descent as giving to what comes to stand on Flow X X, read as passing within a kind (Web.withinKind); grains (kind, carrier) and (activity, carrier), the carrier read as the organism; kinds supplied as a relation Q; activity Prop-valued, read as the web's activity or as support.",
+      "zh": "在地图上：世系即在 Flow X X 上给予成立者，读作种类之内的传递（Web.withinKind）；粒度为（种类，载体）与（活动，载体），载体读作有机体；种类以关系 Q 给出；活动取命题值，读作网的活动或支持。"
+    },
+    {
+      "en": "The join at the grain of activity: only active formations giving (Acting), births within the kind and embodied offspring. At the grain of support: Acting, activity needing support (Dependent), births within the kind, offspring supported after their step, and for a birth unsupported at the step before.",
+      "zh": "活动粒度上的接合：只有活跃形成给予（Acting）、种类之内的出生、后代具身。支持粒度上：Acting、活动需要支持（Dependent）、种类之内的出生、后代在其步后受支持，出生还需前一步未受支持。"
+    },
+    {
+      "en": "Where an empty cohort is read as degeneration: the census holding every continuation (ContinuationsListed), or every continuation a listed offspring (ContinuationsAreKids).",
+      "zh": "把空的一代读作退化之处：普查包含每个续（ContinuationsListed），或每个续都是所列后代（ContinuationsAreKids）。"
+    },
+    {
+      "en": "For the dissipation law: balance and dissipation on the family the offspring stand within, across each step up to its stock, with natural-number levels, needs and gifts.",
+      "zh": "对耗散之律：后代立于其内的族在直至其存量的每一步上平衡且被耗散，水平、所需与给予皆为自然数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every cohort nonempty puts some member in 生成: that asks a König-type choice of a branch; exact transmission makes it constructive, and the constructive half rules out only that all degenerate.",
+      "zh": "每代非空即使某成员处于生成：这需要 König 型的选支；精确传递使之构造地成立，构造的一半只排除全部退化。",
+      "kind": "non-implication",
+      "witness": "Becoming.LineageRegions.not_all_degenerate_of_nonempty"
+    },
+    {
+      "en": "Which side of the terms boundary a course is on, or the horizon of the second side: every course is on one of the two only classically.",
+      "zh": "一个进程在项之边界的哪一侧，或第二侧的视界：每个进程在两侧之一，只是经典地成立。",
+      "kind": "scope"
+    },
+    {
+      "en": "Two fates for every course of terms through a horizon on Descended courses read on regions: on the map one course of terms per horizon is shown.",
+      "zh": "在按域读的 Descended 进程上，每个至视界的项进程都有两种命运：地图上每个视界只给出一个项进程。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a term positive at every step places any member in a region: it rules out only that every member of a cohort degenerates.",
+      "zh": "每步皆正的项把某成员置于某域：它只排除一代每个成员皆退化。",
+      "kind": "non-implication",
+      "witness": "Becoming.LineageRegions.not_all_degenerate_of_positive"
+    },
+    {
+      "en": "That a positive term forces going on with exact transmission at its step alone: exactness from that step on is asked.",
+      "zh": "只在其步上传递精确时正项即迫使延续：所需的是自该步起的精确。",
+      "kind": "non-implication",
+      "witness": "Becoming.SelectionShift.ExactOnce.exact_once_ends"
+    },
+    {
+      "en": "A witness of going on that also meets balance and dissipation.",
+      "zh": "同时满足平衡与耗散的延续见证。",
+      "kind": "scope"
+    },
+    {
+      "en": "A suicide witness whose amount draws past the family's gated renewal: the mark here is a label, not a draw.",
+      "zh": "其量汲取超出族之门控更新的自杀见证：此处的标记是标签，不是汲取。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the lineage continuation links no dormant formation where support needs standing: that is shown at the grain of activity from an active start.",
+      "zh": "支持需要立时，世系之续不连接休眠的形成：这只在活动粒度上自活跃起点给出。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
+      "detail": {
+        "en": "ExactOnce: exact at step 0 only and concordant there, the course has one member at cohorts 1 and 2 and is empty from cohort 3 on (SelectionShift.ExactOnce.exact_once_ends).",
+        "zh": "ExactOnce：只在第 0 步精确且该处一致，进程第 1、2 代各一个成员，自第 3 代起为空（SelectionShift.ExactOnce.exact_once_ends）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
+      "detail": {
+        "en": "Shrinking: concordance with the mark positive at every step before N, zero at the last nonempty cohort N, and the family empty from N + 1 on (SelectionShift.Shrinking.positive_then_empty).",
+        "zh": "Shrinking：与标记的一致在 N 之前每步为正，在最后的非空之代 N 为零，自 N + 1 起家族为空（SelectionShift.Shrinking.positive_then_empty）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+      "detail": {
+        "en": "Chain: every cohort nonempty, transmission exact and the term positive, while a childless member degenerates (LineageRegions.Chain.chain): regions are properties of points.",
+        "zh": "Chain：每代非空、传递精确、项为正，而一个无后代的成员退化（LineageRegions.Chain.chain）：域是点的性质。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+      "detail": {
+        "en": "Lasting: every premise of lineage_ends holds while the offspring stands on unspent outside the census and the line goes on (LineageRegions.Lasting.lasting): the census premise is needed.",
+        "zh": "Lasting：lineage_ends 的每个前提成立，而后代在普查之外未被耗尽地立着，线延续（LineageRegions.Lasting.lasting）：需要普查前提。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+      "detail": {
+        "en": "Courses at each formation its own kind: concordance two at every step while every member of every cohort degenerates (LineageRegions.Courses.positive_and_degenerate_at_own_kind): births within the kind are needed.",
+        "zh": "每个形成自成一类的 Courses：一致每步为二，而每代每个成员皆退化（LineageRegions.Courses.positive_and_degenerate_at_own_kind）：需要种类之内的出生。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.SelectionShift, 105 declarations (83 theorems), and Becoming.LineageRegions, 174 declarations (129 theorems), at receipt 20261101T024359.312453Z, each with an empty axiom report; the modules recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.SelectionShift，105 个声明（83 条定理），与 Becoming.LineageRegions，174 个声明（129 条定理），回执 20261101T024359.312453Z，公理报告均为空；两模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "Two fates for every course of terms through a horizon on Descended courses read on the map's regions; and the suicide witness joined to an amount that draws past the family's gated renewal, so that ending by a drain meets selection on the same lineage.",
+    "zh": "在按地图之域读的 Descended 进程上，给出每个至视界的项进程的两种命运；并把自杀见证接到一个汲取超出族之门控更新的量上，使经汲取的终结与同一世系上的选择相遇。"
+  },
+  "correspondence": {
+    "en": "Price's equation (Price 1970) and Fisher's fundamental theorem in its exact case (Fisher 1930) supply the selection term these laws read. The laws state, in counts and on the map's regions, the classical distinction between relative and absolute fitness: the term reads how offspring numbers differ, not how many there are, which decides persistence; its classical cases are evolutionary rescue and evolutionary suicide, or Darwinian extinction. Readings (the AI's): the regions on lineages are demographic, so a lineage whose descendants all change kind ends at the kind grain while descent goes on, which is pseudo-extinction; selection decides what rises among the members, not whether any go on.",
+    "zh": "Price 方程（Price 1970）与 Fisher 基本定理的精确情形（Fisher 1930）给出这些律所读的选择项。这些律以计数、在地图之域上陈述相对与绝对适应度的经典区分：项读后代数如何不同，不读其多少，而后者决定存续；其经典情形是演化救援与演化自杀（达尔文式灭绝）。读法（AI 的）：世系上的域是人口学的，故后裔皆改变种类的世系在种类粒度上终结而世系继续，即伪灭绝；选择决定成员之中何者上升，不决定是否有成员延续。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+  "aliases": [
+    "Becoming.SelectionShift.Generations.shift_step",
+    "Becoming.SelectionShift.Generations.last_term_zero",
+    "Becoming.SelectionShift.Generations.never_empties_while",
+    "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+    "Becoming.SelectionShift.Generations.line_kept",
+    "Becoming.SelectionShift.Generations.goes_on_iff",
+    "Becoming.SelectionShift.Generations.goes_on",
+    "Becoming.SelectionShift.Horizon.same_terms_two_fates",
+    "Becoming.SelectionShift.Horizon.two_fates_of_nonempty",
+    "Becoming.SelectionShift.Horizon.eventually_zero_two_fates",
+    "Becoming.SelectionShift.Horizon.terms_boundary",
+    "Becoming.LineageRegions.descended_carries",
+    "Becoming.LineageRegions.descended_carries_supported",
+    "Becoming.LineageRegions.generation_of_exact",
+    "Becoming.LineageRegions.generation_of_positive_term",
+    "Becoming.LineageRegions.degeneration_of_empty",
+    "Becoming.LineageRegions.degeneration_of_dissipation",
+    "Becoming.LineageRegions.empty_of_degenerates",
+    "Becoming.LineageRegions.generation_degenerates_iff",
+    "Becoming.LineageRegions.degenerates_iff_line_ends",
+    "Becoming.LineageRegions.not_all_degenerate_while",
+    "Becoming.LineageRegions.Courses.same_terms_two_fates",
+    "Becoming.LineageRegions.Courses.positive_but_last"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The selection term proper (SelectionTerm.concord, discord), the cohorts of SelectionTerm.Generations and generations of descent (SelectionTerm.Flow.Descended), read here for what the term leaves out and joined to the map.",
+        "zh": "复用真正的选择项（SelectionTerm.concord、discord）、SelectionTerm.Generations 的世代与世系的世代（SelectionTerm.Flow.Descended）；此处读出项所遗漏者，并接到地图上。"
+      }
+    },
+    {
+      "id": "what-bounds-offspring-numbers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The reading by offspring number (ByNumber) and the one-step law rises_exact_iff, whose nonemptiness the exception extends to every later cohort; Reproduction.Flow.lineage_ends, which the census reads as degeneration; the stock-one relay.",
+        "zh": "复用以后代数读（ByNumber）与一步之律 rises_exact_iff（例外把其非空推广到其后每代）；Reproduction.Flow.lineage_ends（普查把它读作退化）；存量为一的接力。"
+      }
+    },
+    {
+      "id": "degeneration-from-a-horizon",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.LineDegeneration, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.",
+        "zh": "复用 Web.ends_of_ends_at 与 Web.kind_every_branch_ends_of_gone（Becoming.LineDegeneration，已导入）：普查下的空代，以及在某步已逝的线，使线诸支皆尽。"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The map's regions «生成», «守», «退化» and its reading on the World (Web.carries_iff), at (kind, carrier) and (activity, carrier).",
+        "zh": "复用地图之域 «生成»、«守»、«退化» 及其在世界上的读法（Web.carries_iff），在（种类，载体）与（活动，载体）上。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.withinKind and Web.kindClass (Becoming.KeepingWidening): the lineage continuation is withinKind with descent as its passing, the kind its coarse class.",
+        "zh": "复用 Web.withinKind 与 Web.kindClass（Becoming.KeepingWidening）：世系之续即以世系为传递的 withinKind，种类为其粗类。"
+      }
+    },
+    {
+      "id": "evolution-on-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Descent as giving to what comes to stand (Flow.DescendsAt, Becoming.Evolution): the passing of the lineage continuation.",
+        "zh": "复用世系即给予成立者（Flow.DescendsAt，Becoming.Evolution）：世系之续的传递。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.carrierClass: the fine class, a formation's occurrences alike in activity, read as the organism.",
+        "zh": "复用 Web.carrierClass：细类，即活动相同的一个形成之诸事，读作有机体。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-breeding-value",
+      "detail": {
+        "en": "There the counted covariance is linear in the amount under a common shift; here a common shift of offspring numbers rests on the same excess identity and leaves the term unchanged.",
+        "zh": "那里在共同平移下所计的协方差对量是线性的；此处后代数的共同平移基于同一过度恒等式，项不变。"
+      }
+    },
+    {
+      "id": "only-the-order-of-change-shows",
+      "detail": {
+        "en": "Becoming.excess_add_right, of which SelectionShift.excess_shift is a restatement outside that module's imports.",
+        "zh": "Becoming.excess_add_right；SelectionShift.excess_shift 是它在该模块导入之外的重述。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
+      "role": "proof",
+      "sha256": "d33c854ee6b97abf334666d15919edbc54f8d45d0c452314ebd4078febce6c5d",
+      "declarations": [
+        "Becoming.SelectionShift.Alternating.course",
+        "Becoming.SelectionShift.Alternating.course_family",
+        "Becoming.SelectionShift.Alternating.course_terms",
+        "Becoming.SelectionShift.Alternating.even",
+        "Becoming.SelectionShift.Alternating.even_double",
+        "Becoming.SelectionShift.Alternating.le_double",
+        "Becoming.SelectionShift.Alternating.odd_double",
+        "Becoming.SelectionShift.Alternating.step_family",
+        "Becoming.SelectionShift.Alternating.step_terms",
+        "Becoming.SelectionShift.Alternating.unbounded_not_every",
+        "Becoming.SelectionShift.ExactOnce.concord_first",
+        "Becoming.SelectionShift.ExactOnce.course",
+        "Becoming.SelectionShift.ExactOnce.exact_first",
+        "Becoming.SelectionShift.ExactOnce.exact_once_ends",
+        "Becoming.SelectionShift.ExactOnce.kids",
+        "Becoming.SelectionShift.ExactOnce.not_exact_second",
+        "Becoming.SelectionShift.ExactOnce.size_three",
+        "Becoming.SelectionShift.Generations.goes_on",
+        "Becoming.SelectionShift.Generations.goes_on_iff",
+        "Becoming.SelectionShift.Generations.last_term_zero",
+        "Becoming.SelectionShift.Generations.line_kept",
+        "Becoming.SelectionShift.Generations.never_empties",
+        "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
+        "Becoming.SelectionShift.Generations.never_empties_while",
+        "Becoming.SelectionShift.Generations.next_of_reproducing",
+        "Becoming.SelectionShift.Generations.next_of_selection",
+        "Becoming.SelectionShift.Generations.nonempty_before",
+        "Becoming.SelectionShift.Generations.reproducing_of_selection",
+        "Becoming.SelectionShift.Generations.shift_step",
+        "Becoming.SelectionShift.Generations.varies_of_selection",
+        "Becoming.SelectionShift.Horizon.carried",
+        "Becoming.SelectionShift.Horizon.ending",
+        "Becoming.SelectionShift.Horizon.ending_empty",
+        "Becoming.SelectionShift.Horizon.eventually_zero_two_fates",
+        "Becoming.SelectionShift.Horizon.going",
+        "Becoming.SelectionShift.Horizon.goingShifted",
+        "Becoming.SelectionShift.Horizon.going_family",
+        "Becoming.SelectionShift.Horizon.going_goes_on",
+        "Becoming.SelectionShift.Horizon.going_goes_on_of_selection",
+        "Becoming.SelectionShift.Horizon.keep",
+        "Becoming.SelectionShift.Horizon.keep_family",
+        "Becoming.SelectionShift.Horizon.keep_kids",
+        "Becoming.SelectionShift.Horizon.keep_kids_after",
+        "Becoming.SelectionShift.Horizon.keep_terms",
+        "Becoming.SelectionShift.Horizon.keep_terms_after",
+        "Becoming.SelectionShift.Horizon.markedPair",
+        "Becoming.SelectionShift.Horizon.not_le_after",
+        "Becoming.SelectionShift.Horizon.same_terms_everywhere_of_zero_after",
+        "Becoming.SelectionShift.Horizon.same_terms_two_fates",
+        "Becoming.SelectionShift.Horizon.shiftAt",
+        "Becoming.SelectionShift.Horizon.shiftAt_family",
+        "Becoming.SelectionShift.Horizon.shiftAt_step",
+        "Becoming.SelectionShift.Horizon.shiftAt_terms",
+        "Becoming.SelectionShift.Horizon.steady",
+        "Becoming.SelectionShift.Horizon.steady_family",
+        "Becoming.SelectionShift.Horizon.steady_terms",
+        "Becoming.SelectionShift.Horizon.steady_two_fates",
+        "Becoming.SelectionShift.Horizon.terms_boundary",
+        "Becoming.SelectionShift.Horizon.two_fates_of_nonempty",
+        "Becoming.SelectionShift.Horizon.zero_after_premises",
+        "Becoming.SelectionShift.Horizon.zero_after_two_fates",
+        "Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted",
+        "Becoming.SelectionShift.OneLine.course",
+        "Becoming.SelectionShift.OneLine.goes_on_premises",
+        "Becoming.SelectionShift.OneLine.keepsOne",
+        "Becoming.SelectionShift.OneLine.shift_step_premises",
+        "Becoming.SelectionShift.OneLine.shifted",
+        "Becoming.SelectionShift.SameTerms",
+        "Becoming.SelectionShift.Shrinking.course",
+        "Becoming.SelectionShift.Shrinking.course_concord",
+        "Becoming.SelectionShift.Shrinking.course_family",
+        "Becoming.SelectionShift.Shrinking.course_size",
+        "Becoming.SelectionShift.Shrinking.course_sum",
+        "Becoming.SelectionShift.Shrinking.kids",
+        "Becoming.SelectionShift.Shrinking.line",
+        "Becoming.SelectionShift.Shrinking.line_step",
+        "Becoming.SelectionShift.Shrinking.mark",
+        "Becoming.SelectionShift.Shrinking.positive_then_empty",
+        "Becoming.SelectionShift.Shrinking.replicate_length",
+        "Becoming.SelectionShift.Shrinking.split_le",
+        "Becoming.SelectionShift.Shrinking.unmarked_flatMap",
+        "Becoming.SelectionShift.Shrinking.unmarked_mark",
+        "Becoming.SelectionShift.ZeroTerm.decides_nothing",
+        "Becoming.SelectionShift.ZeroTerm.noneEach",
+        "Becoming.SelectionShift.ZeroTerm.oneEach",
+        "Becoming.SelectionShift.ZeroTerm.oneEach_family",
+        "Becoming.SelectionShift.concord_shift",
+        "Becoming.SelectionShift.concord_shift_amount",
+        "Becoming.SelectionShift.concord_shifted",
+        "Becoming.SelectionShift.discord_shift",
+        "Becoming.SelectionShift.discord_shift_amount",
+        "Becoming.SelectionShift.discord_shifted",
+        "Becoming.SelectionShift.excess_shift",
+        "Becoming.SelectionShift.flatMap_empty",
+        "Becoming.SelectionShift.flatMap_singleton",
+        "Becoming.SelectionShift.length_pos_of_mem",
+        "Becoming.SelectionShift.mem_flatMap_of",
+        "Becoming.SelectionShift.mul_excess_congr",
+        "Becoming.SelectionShift.pos_weight_of_concord",
+        "Becoming.SelectionShift.pos_weight_of_discord",
+        "Becoming.SelectionShift.pos_weight_of_varies",
+        "Becoming.SelectionShift.total_shifted",
+        "Becoming.SelectionShift.weight_varies_of_concord",
+        "Becoming.SelectionShift.weight_varies_of_discord",
+        "Becoming.SelectionShift.weighted_shift"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+      "role": "proof",
+      "sha256": "5a6c2674ee4bbd320e6b8741d436fdf93e8bbba80c9b19add29c2d9a1a24fc60",
+      "declarations": [
+        "Becoming.LineageRegions.Chain.acting",
+        "Becoming.LineageRegions.Chain.chain",
+        "Becoming.LineageRegions.Chain.childless_degenerates",
+        "Becoming.LineageRegions.Chain.children",
+        "Becoming.LineageRegions.Chain.children_other",
+        "Becoming.LineageRegions.Chain.children_self",
+        "Becoming.LineageRegions.Chain.dependent",
+        "Becoming.LineageRegions.Chain.descended",
+        "Becoming.LineageRegions.Chain.descends",
+        "Becoming.LineageRegions.Chain.embodied",
+        "Becoming.LineageRegions.Chain.exact",
+        "Becoming.LineageRegions.Chain.family_succ",
+        "Becoming.LineageRegions.Chain.first_supported",
+        "Becoming.LineageRegions.Chain.first_supported_from_zero",
+        "Becoming.LineageRegions.Chain.flow",
+        "Becoming.LineageRegions.Chain.generations",
+        "Becoming.LineageRegions.Chain.give",
+        "Becoming.LineageRegions.Chain.give_other",
+        "Becoming.LineageRegions.Chain.give_self",
+        "Becoming.LineageRegions.Chain.kid_eq",
+        "Becoming.LineageRegions.Chain.kinds_apart",
+        "Becoming.LineageRegions.Chain.level",
+        "Becoming.LineageRegions.Chain.level_next",
+        "Becoming.LineageRegions.Chain.level_self",
+        "Becoming.LineageRegions.Chain.number",
+        "Becoming.LineageRegions.Chain.one_le_self",
+        "Becoming.LineageRegions.Chain.reproduces_from_one",
+        "Becoming.LineageRegions.Chain.stands_once",
+        "Becoming.LineageRegions.Chain.succ_ne_zero",
+        "Becoming.LineageRegions.Chain.web",
+        "Becoming.LineageRegions.ContinuationsAreKids",
+        "Becoming.LineageRegions.ContinuationsListed",
+        "Becoming.LineageRegions.Courses.DownClosed",
+        "Becoming.LineageRegions.Courses.Formation",
+        "Becoming.LineageRegions.Courses.acting",
+        "Becoming.LineageRegions.Courses.always",
+        "Becoming.LineageRegions.Courses.always_down",
+        "Becoming.LineageRegions.Courses.and_split",
+        "Becoming.LineageRegions.Courses.born",
+        "Becoming.LineageRegions.Courses.born_off",
+        "Becoming.LineageRegions.Courses.born_on",
+        "Becoming.LineageRegions.Courses.cond_pos",
+        "Becoming.LineageRegions.Courses.descended",
+        "Becoming.LineageRegions.Courses.descends",
+        "Becoming.LineageRegions.Courses.embodied",
+        "Becoming.LineageRegions.Courses.family_of",
+        "Becoming.LineageRegions.Courses.flow",
+        "Becoming.LineageRegions.Courses.fst_of_mem",
+        "Becoming.LineageRegions.Courses.generations",
+        "Becoming.LineageRegions.Courses.give",
+        "Becoming.LineageRegions.Courses.give_pos",
+        "Becoming.LineageRegions.Courses.kids",
+        "Becoming.LineageRegions.Courses.kids_marked",
+        "Becoming.LineageRegions.Courses.kids_off",
+        "Becoming.LineageRegions.Courses.level",
+        "Becoming.LineageRegions.Courses.level_other",
+        "Becoming.LineageRegions.Courses.level_own",
+        "Becoming.LineageRegions.Courses.mark",
+        "Becoming.LineageRegions.Courses.marked_generates",
+        "Becoming.LineageRegions.Courses.mem_cond",
+        "Becoming.LineageRegions.Courses.mem_of_fst",
+        "Becoming.LineageRegions.Courses.member_of",
+        "Becoming.LineageRegions.Courses.only_kids",
+        "Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind",
+        "Becoming.LineageRegions.Courses.positive_but_last",
+        "Becoming.LineageRegions.Courses.positive_throughout",
+        "Becoming.LineageRegions.Courses.same_terms_two_fates",
+        "Becoming.LineageRegions.Courses.terms_off",
+        "Becoming.LineageRegions.Courses.terms_on",
+        "Becoming.LineageRegions.Courses.upTo",
+        "Becoming.LineageRegions.Courses.upTo_degenerates",
+        "Becoming.LineageRegions.Courses.upTo_down",
+        "Becoming.LineageRegions.Courses.upTo_empty",
+        "Becoming.LineageRegions.Courses.upTo_off",
+        "Becoming.LineageRegions.Courses.upTo_on",
+        "Becoming.LineageRegions.Courses.web",
+        "Becoming.LineageRegions.EmbodiedOffspring",
+        "Becoming.LineageRegions.FirstSupportedOffspring",
+        "Becoming.LineageRegions.KidsContinue",
+        "Becoming.LineageRegions.Lasting.acting",
+        "Becoming.LineageRegions.Lasting.balances",
+        "Becoming.LineageRegions.Lasting.descended",
+        "Becoming.LineageRegions.Lasting.dissipates",
+        "Becoming.LineageRegions.Lasting.flow",
+        "Becoming.LineageRegions.Lasting.goes_on",
+        "Becoming.LineageRegions.Lasting.lasting",
+        "Becoming.LineageRegions.Lasting.level",
+        "Becoming.LineageRegions.Lasting.present",
+        "Becoming.LineageRegions.Lasting.web",
+        "Becoming.LineageRegions.ListedDescendant",
+        "Becoming.LineageRegions.ListedDescendant.of_succ",
+        "Becoming.LineageRegions.ListedDescendant.snoc",
+        "Becoming.LineageRegions.OneBirth.acting",
+        "Becoming.LineageRegions.OneBirth.balances",
+        "Becoming.LineageRegions.OneBirth.descended",
+        "Becoming.LineageRegions.OneBirth.descends",
+        "Becoming.LineageRegions.OneBirth.dissipates",
+        "Becoming.LineageRegions.OneBirth.dormant_goes_on_at_support",
+        "Becoming.LineageRegions.OneBirth.embodied",
+        "Becoming.LineageRegions.OneBirth.family",
+        "Becoming.LineageRegions.OneBirth.family_two",
+        "Becoming.LineageRegions.OneBirth.flow",
+        "Becoming.LineageRegions.OneBirth.generations",
+        "Becoming.LineageRegions.OneBirth.give",
+        "Becoming.LineageRegions.OneBirth.kids",
+        "Becoming.LineageRegions.OneBirth.level",
+        "Becoming.LineageRegions.OneBirth.listed",
+        "Becoming.LineageRegions.OneBirth.listed_birth",
+        "Becoming.LineageRegions.OneBirth.one_birth",
+        "Becoming.LineageRegions.OneBirth.present",
+        "Becoming.LineageRegions.OneBirth.stock",
+        "Becoming.LineageRegions.OneBirth.take",
+        "Becoming.LineageRegions.OneBirth.web",
+        "Becoming.LineageRegions.RelayRead.acting",
+        "Becoming.LineageRegions.RelayRead.dependent",
+        "Becoming.LineageRegions.RelayRead.descent_not_birth",
+        "Becoming.LineageRegions.RelayRead.supported",
+        "Becoming.LineageRegions.StandingRelay.acting",
+        "Becoming.LineageRegions.StandingRelay.dependent",
+        "Becoming.LineageRegions.StandingRelay.descended",
+        "Becoming.LineageRegions.StandingRelay.embodied",
+        "Becoming.LineageRegions.StandingRelay.grain_decides_region",
+        "Becoming.LineageRegions.StandingRelay.supported",
+        "Becoming.LineageRegions.StandingRelay.web",
+        "Becoming.LineageRegions.SupportedAfter",
+        "Becoming.LineageRegions.UnsupportedBefore",
+        "Becoming.LineageRegions.WithinKind",
+        "Becoming.LineageRegions.active_along_kind",
+        "Becoming.LineageRegions.carries_iff",
+        "Becoming.LineageRegions.carries_iff_via_base",
+        "Becoming.LineageRegions.carrying_descends",
+        "Becoming.LineageRegions.common_bound",
+        "Becoming.LineageRegions.continuation",
+        "Becoming.LineageRegions.degenerates_iff_line_ends",
+        "Becoming.LineageRegions.degeneration_of_dissipation",
+        "Becoming.LineageRegions.degeneration_of_empty",
+        "Becoming.LineageRegions.descended_carries",
+        "Becoming.LineageRegions.descended_carries_supported",
+        "Becoming.LineageRegions.descent",
+        "Becoming.LineageRegions.descent_carries",
+        "Becoming.LineageRegions.descent_carries_supported",
+        "Becoming.LineageRegions.descent_continues",
+        "Becoming.LineageRegions.descent_continues_supported",
+        "Becoming.LineageRegions.empty_of_degenerates",
+        "Becoming.LineageRegions.ends_of_line_ends",
+        "Becoming.LineageRegions.family_descendant",
+        "Becoming.LineageRegions.firstSupported_iff_step",
+        "Becoming.LineageRegions.generation_degenerates_iff",
+        "Becoming.LineageRegions.generation_of_carrying",
+        "Becoming.LineageRegions.generation_of_exact",
+        "Becoming.LineageRegions.generation_of_positive_term",
+        "Becoming.LineageRegions.generation_of_reproducing",
+        "Becoming.LineageRegions.generation_of_reproducing_supported",
+        "Becoming.LineageRegions.kids_continue",
+        "Becoming.LineageRegions.kids_continue_supported",
+        "Becoming.LineageRegions.kids_of_census",
+        "Becoming.LineageRegions.length_zero_of_no_mem",
+        "Becoming.LineageRegions.lineStep",
+        "Becoming.LineageRegions.line_ends",
+        "Becoming.LineageRegions.line_listed",
+        "Becoming.LineageRegions.listed_of_census",
+        "Becoming.LineageRegions.listed_of_kids",
+        "Becoming.LineageRegions.nonempty_of_positive",
+        "Becoming.LineageRegions.nonempty_while",
+        "Becoming.LineageRegions.not_all_degenerate_of_nonempty",
+        "Becoming.LineageRegions.not_all_degenerate_of_positive",
+        "Becoming.LineageRegions.not_all_degenerate_while",
+        "Becoming.LineageRegions.nothing_carries_of_always_supported",
+        "Becoming.LineageRegions.oneKind",
+        "Becoming.LineageRegions.reached_listed",
+        "Becoming.LineageRegions.reproducing_of_term",
+        "Becoming.LineageRegions.supportedAfter_of_unsupportedBefore",
+        "Becoming.LineageRegions.supported_carries_iff",
+        "Becoming.LineageRegions.unsupportedBefore_of_first"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionShift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineageRegions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (evolution read on the root, its part EL1): added, citing Becoming.SelectionShift (the counting layer) and Becoming.LineageRegions (the join on the map). The design's draft claims that no course of selection terms decides and that a term positive at every generation can go with every member degenerating were refuted in the Lean rounds and are kept as the laws that refute them; the witness is positive at every cohort but the last nonempty one.",
+      "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL1 部分）：新增，引用 Becoming.SelectionShift（计数层）与 Becoming.LineageRegions（地图上的接合）。设计草稿中\"无选择项进程起决定作用\"与\"每代皆正的项可与每个成员退化并存\"二说，在 Lean 各轮中被驳倒，保留为驳倒它们的律；见证是除最后的非空之代外每代皆正。"
+    }
+  ]
+}
