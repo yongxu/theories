@@ -1,0 +1,86 @@
+import Becoming.GrammarMap
+
+namespace Becoming
+
+universe u
+
+section Map
+
+variable {α : Type u}
+
+/-- **Ending on every branch reaches an end, up to double negation.** -/
+theorem «尽则非无终» {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ ¬ «有终» R L x := by
+  induction h with
+  | mk _ ih =>
+    intro none
+    exact none ⟨_, .inl rfl, fun ⟨y, c⟩ =>
+      ih y c fun ⟨w, hw, ends⟩ => none ⟨w, «所及之传递» (.inr (.one c)) hw, ends⟩⟩
+
+/-- **Ending on every branch reaches an end where going on is decided** at the points of the
+line. -/
+theorem «尽而续可定则有终» {R L : «际» α} {x : α} (h : «尽» R L x) :
+    (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x := by
+  induction h with
+  | mk _ ih =>
+    intro decided
+    exact match decided _ (.inl rfl) with
+      | .inr ends => ⟨_, .inl rfl, ends⟩
+      | .inl ⟨y, c⟩ =>
+        match ih y c (fun z hz => decided z («所及之传递» (.inr (.one c)) hz)) with
+        | ⟨w, hw, ends⟩ => ⟨w, «所及之传递» (.inr (.one c)) hw, ends⟩
+
+
+end Map
+
+namespace Map
+
+namespace StepWhere
+
+/-- The short life gated by `P`: its one step, from `false` to `true`, taken exactly where `P`
+holds. -/
+def relation (P : Prop) : «际» Bool := fun x y => short x y ∧ P
+
+/-- Witness lemma: under the one (`«一»`), the line from `false` ends on every branch, at every
+proposition: a step from `false` reaches `true`, and nothing steps from `true`. -/
+theorem ends (P : Prop) : «尽» (relation P) «一» false :=
+  .mk fun _ c => .mk fun _ c' => Bool.noConfusion (c.1.1.2.symm.trans c'.1.1.1)
+
+/-- Witness lemma: `false` has a continuation exactly where `P` holds. -/
+theorem has_next_iff (P : Prop) : «有后» (relation P) «一» false ↔ P :=
+  ⟨fun ⟨_, c⟩ => c.1.2, fun p => ⟨true, ⟨⟨rfl, rfl⟩, p⟩, trivial⟩⟩
+
+/-- Witness lemma: **reaching an end from `false` decides `P`.** -/
+theorem end_decides {P : Prop} (h : «有终» (relation P) «一» false) : P ∨ ¬ P :=
+  match h with
+  | ⟨_, .inl same, ends⟩ =>
+    .inr fun p => ends (Eq.subst (motive := fun z => «有后» (relation P) «一» z) same
+      ((has_next_iff P).mpr p))
+  | ⟨_, .inr (.one c), _⟩ => .inl c.1.2
+  | ⟨_, .inr (.more c _), _⟩ => .inl c.1.2
+
+end StepWhere
+
+end Map
+
+/-- **That every line ending on every branch reaches an end is exactly excluded middle**, at every
+carrier and relation. The forward direction is witnessed by `Map.StepWhere` alone: what is
+undecided is not whether a course goes on without end, since every branch ends, but whether its
+one step is taken. -/
+theorem «尽则有终当且仅当排中» :
+    (∀ (β : Type) (R L : «际» β) (x : β), «尽» R L x → «有终» R L x) ↔ ∀ P : Prop, P ∨ ¬ P :=
+  ⟨fun h P => Map.StepWhere.end_decides (h _ _ _ _ (Map.StepWhere.ends P)),
+   fun em _ _ _ _ ends => «尽而续可定则有终» ends fun _ _ => em _⟩
+
+
+end Becoming
+
+namespace Becoming
+
+/-- Check only, not landed: `Map.StepWhere.relation`, restated as `Map.short` gated by `P`, is
+equivalent at every `P`, `x` and `y` to the leaf's body `x = false ∧ y = true ∧ P`; the two are not
+definitionally equal, the conjunction being grouped otherwise. -/
+theorem relation_iff_leaf_body (P : Prop) (x y : Bool) :
+    Map.StepWhere.relation P x y ↔ (x = false ∧ y = true ∧ P) :=
+  ⟨fun ⟨⟨a, b⟩, p⟩ => ⟨a, b, p⟩, fun ⟨a, b, p⟩ => ⟨⟨a, b⟩, p⟩⟩
+
+end Becoming

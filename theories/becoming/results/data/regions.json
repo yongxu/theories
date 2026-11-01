@@ -614,7 +614,7 @@
   "degeneration-from-a-horizon": {
    "region": "map",
    "base": "old-base",
-   "note": "LineDegeneration EL3: a uniform horizon gives 尽/退化 constructively at every class within activity; an end (有终) from it is exactly excluded middle"
+   "note": "EL3, in MapInstances, GrammarMap and KeepingWidening (EL6): a uniform horizon gives 尽/退化 constructively at every class within activity; an end (有终) from it is exactly excluded middle"
   },
   "dependence-formed-from-drawing": {
    "region": "life",
@@ -3593,11 +3593,6 @@
    "base": "frame",
    "note": "limit verification; Markov's principle named (O2)"
   },
-  "Becoming.LineDegeneration": {
-   "region": "map",
-   "base": "old-base",
-   "note": "EL3 a horizon ends the line on every branch (尽, 退化) constructively; an end (有终) needs the decision, as strong as excluded middle (02 §1)"
-  },
   "Becoming.LineageRegimes": {
    "region": "life",
    "base": "old-base",
@@ -3666,7 +3661,7 @@
   "Becoming.MapInstances": {
    "region": "map",
    "base": "old-base",
-   "note": "old base's regimes on the map"
+   "note": "old base's regimes on the map, and degeneration from a horizon (EL3, placed by EL6)"
   },
   "Becoming.MapRegions": {
    "region": "map",

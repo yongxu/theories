@@ -6682,7 +6682,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 42,
+   "theorems": 48,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6715,7 +6715,7 @@
    "type": "module",
    "name": "Becoming.MapInstances",
    "level": "L1",
-   "theorems": 27,
+   "theorems": 54,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -9762,19 +9762,8 @@
    "type": "module",
    "name": "Becoming.KeepingWidening",
    "level": "L2",
-   "theorems": 248,
+   "theorems": 250,
    "region": "significance",
-   "base": "old-base",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.LineDegeneration",
-   "type": "module",
-   "name": "Becoming.LineDegeneration",
-   "level": "L2",
-   "theorems": 40,
-   "region": "map",
    "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
@@ -33231,11 +33220,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.LineDegeneration",
-   "to": "module:Becoming.KeepingWidening",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.LineageRegimes",
    "to": "module:Becoming.Continuation",
    "type": "imports"
@@ -33258,11 +33242,6 @@
   {
    "from": "module:Becoming.LineageRegions",
    "to": "module:Becoming.KeepingWidening",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.LineageRegions",
-   "to": "module:Becoming.LineDegeneration",
    "type": "imports"
   },
   {
@@ -40982,7 +40961,17 @@
   },
   {
    "from": "record:degeneration-from-a-horizon",
-   "to": "module:Becoming.LineDegeneration",
+   "to": "module:Becoming.GrammarMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "module:Becoming.KeepingWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "module:Becoming.MapInstances",
    "type": "proved-in"
   },
   {
