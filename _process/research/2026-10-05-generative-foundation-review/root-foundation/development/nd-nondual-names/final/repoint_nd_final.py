@@ -76,6 +76,8 @@ for path in sorted(mine):
         h1 = n.pop('history', [])
         o.pop('history', None)
         same = o == n and h1[:len(h0)] == h0 and len(h1) - len(h0) <= 1
+    elif path.endswith('/BECOMING-RENEWAL-READING.md'):
+        same = new.startswith(raw.rstrip('\n'))   # the study keeps its words and gains this stage's section
     else:
         same = old == new
     if not same:
