@@ -163,13 +163,14 @@
       ]
     },
     {
-      "zh": "有一个列表从某步起覆盖活跃者时，止息复现使此后每一步之后的生起都不能被否证（经 laws-of-one-step 的覆盖定律），这一不能被否证的停止否证它；所以 World.rests_unrefuted_covering 与 World.rests_unrefuted 不要求活动可判定，陈述更强。",
-      "en": "With a list covering what is active from some step on, ceasing recurring leaves a later arising unrefuted after every step (through the covering law of laws-of-one-step), which the unrefuted stopping refutes; so World.rests_unrefuted_covering and World.rests_unrefuted need no decided activity, their statements stronger.",
+      "zh": "有一个列表从某步起覆盖活跃者时，止息复现使此后每一步之后的生起都不能被否证（经 laws-of-one-step 的覆盖定律，即根上之 «所覆后亡屡则生未否» 取一关系项之出现），这一不能被否证的停止否证它；所以 World.rests_unrefuted_covering 与 World.rests_unrefuted 不要求活动可判定，陈述更强。",
+      "en": "With a list covering what is active from some step on, ceasing recurring leaves a later arising unrefuted after every step (through the covering law of laws-of-one-step, the root's «所覆后亡屡则生未否» at a relatum's occurrences), which the unrefuted stopping refutes; so World.rests_unrefuted_covering and World.rests_unrefuted need no decided activity, their statements stronger.",
       "declarations": [
         "Becoming.World.arising_unrefuted_covering",
         "Becoming.Covers.not_not_coming_from",
         "Becoming.World.rests_unrefuted_covering",
-        "Becoming.World.rests_unrefuted"
+        "Becoming.World.rests_unrefuted",
+        "Becoming.«所覆后亡屡则生未否»"
       ]
     },
     {
@@ -1035,6 +1036,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): in the correspondence the retired label G0 reads living significance and 'the author's reading' reads 'a reading (the AI's)'; Ren's quoted words are kept verbatim and the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的退役标签 G0 改为生生之意义，“作者的读法”改为“读法（AI 的）”；Ren 的引语原样保留，定律不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering law law 18 goes through (Covers.not_not_coming_from) is re-proved as the root's covering law at a relatum's occurrences, statement unchanged; law 18 names the route and its declarations gain the root law. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 18 条所经之覆盖之律（Covers.not_not_coming_from）重证为根上覆盖之律取一关系项之出现，陈述不变；第 18 条指明路径，其声明增根律。记录所述不变。"
     }
   ],
   "text_versions": [

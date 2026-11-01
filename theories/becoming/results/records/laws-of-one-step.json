@@ -109,19 +109,21 @@
       ]
     },
     {
-      "zh": "只要在任意晚的步有列表覆盖成立者，不再成立的复现就需要开始成立的复现；普查是覆盖每一步的情形。",
-      "en": "Ceasing recurring needs coming to be recurring wherever some list covers what holds at arbitrarily late steps, a census being the case of covering every step.",
+      "zh": "只要在任意晚的步有列表覆盖成立者，不再成立的复现就需要开始成立的复现；普查是覆盖每一步的情形：即根上覆盖之律（«所覆后亡屡则有生»）取一关系项之出现，每步进一阶。",
+      "en": "Ceasing recurring needs coming to be recurring wherever some list covers what holds at arbitrarily late steps, a census being the case of covering every step: the root's covering law («所覆后亡屡则有生») at a relatum's occurrences, each step one stage on.",
       "declarations": [
         "Becoming.coming_of_ceasing_covered",
-        "Becoming.Listed.covered"
+        "Becoming.Listed.covered",
+        "Becoming.«所覆后亡屡则有生»"
       ]
     },
     {
-      "zh": "不用判定时，列表覆盖第 N 步、此后没有开始成立，不再成立就不复现。",
-      "en": "With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur.",
+      "zh": "不用判定时，列表覆盖第 N 步、此后没有开始成立，不再成立就不复现：不再成立复现时，自 N 起有开始成立这一点不被否定，即根上之 «所覆后亡屡则生未否» 取一关系项之出现。",
+      "en": "With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur: it is not refuted that something comes to be from N on where ceasing recurs, the root's «所覆后亡屡则生未否» at a relatum's occurrences.",
       "declarations": [
         "Becoming.Covers.ceasing_not_recurring",
-        "Becoming.Covers.not_not_coming_from"
+        "Becoming.Covers.not_not_coming_from",
+        "Becoming.«所覆后亡屡则生未否»"
       ]
     },
     {
@@ -434,7 +436,6 @@
         "Becoming.Covers",
         "Becoming.ListsAt",
         "Becoming.NoneComes",
-        "Becoming.accumulates_or",
         "Becoming.stays_failing_within",
         "Becoming.Covers.within",
         "Becoming.cohort_closes_iff",
@@ -442,10 +443,8 @@
         "Becoming.Covers.coming_from_of_ceasing",
         "Becoming.coming_of_ceasing_covered",
         "Becoming.Listed.covered",
-        "Becoming.ceases_once",
         "Becoming.Covers.ceasing_steps_within",
         "Becoming.ceasing_steps_found",
-        "Becoming.ceasing_steps_unrefuted",
         "Becoming.Covers.ceasing_stops_unrefuted",
         "Becoming.Covers.ceasing_not_recurring",
         "Becoming.Covers.not_not_coming_from"
@@ -913,6 +912,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering laws of laws 13 and 14 (Covers.coming_from_of_ceasing, Covers.not_not_coming_from, with Covers.ceasing_steps_within and Covers.ceasing_stops_unrefuted) are re-proved as the root's covering laws at a relatum's occurrences, statements unchanged; laws 13 and 14 name the route and their declarations gain the root laws. Locality's helpers with no consumer left (accumulates_or, ceases_once, ceasing_steps_unrefuted) leave the Locality reference. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 13、14 条之覆盖之律（Covers.coming_from_of_ceasing、Covers.not_not_coming_from，及 Covers.ceasing_steps_within 与 Covers.ceasing_stops_unrefuted）重证为根上覆盖之律取一关系项之出现，陈述不变；第 13、14 条指明路径，其声明增根律。Locality 中无人再用的辅助（accumulates_or、ceases_once、ceasing_steps_unrefuted）离开 Locality 之引用。记录所述不变。"
     }
   ],
   "text_versions": [
