@@ -703,7 +703,7 @@ Each reading is an interpretation of checked content, adopted with its argument 
 <a id="no-reading-open"></a>
 ### No reading open
 
-With D65 the register again lists none open; a reading added later is decided the same way, by argument and fit. Two texts change only by proposal: the body of [OPENING](../OPENING.md), Ren's text, and the [generativity chain](../results/GENERATIVITY-CHAIN.md), his curated argument, through its [maintenance record](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md). His terms keep his wording where quoted, with their source, and are read like any reading.
+With D65 the register again lists none open; a reading added later is decided the same way, by argument and fit. The first-person body of [OPENING](../OPENING.md) is revised in place, a note at its top naming each passage revised since its author's own last text, which is kept verbatim in history; the [generativity chain](../results/GENERATIVITY-CHAIN.md) changes through its [maintenance record](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md). His terms keep his wording where quoted, with their source, and are read like any reading.
 
 <a id="philosophical-warrant"></a>
 ### Philosophical warrant
