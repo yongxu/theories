@@ -16,15 +16,15 @@ Every law is in the core leaf `Becoming.BalanceRegions`, in the namespace `Becom
    - on a web, likewise at every step (`balancesOn_iff_closures`).
    - Both rest on `conservedOn_iff_closures`, conservation on every closed family exactly where on each closure. Its converse is a decomposition, by induction on how many listed relata the family holds (`conserved_of_closures`). A closed family holding a listed relatum holds that relatum's closure (`closureListed_inside`, by `«闭含所闭»`). What the family holds beyond the closure is closed again (`closes_and_not`) and holds fewer listed relata. The family's total splits into the two totals (`within_split`).
 3. **The unit grain, the same closures.**
-   - `pairing_iff_closure_counts`: for a symmetric relation `S`, with a test deciding its closure, two lists are paired one to one under `«所闭» S` exactly where each closure holds as many units of the one as of the other.
+   - `pairing_iff_closure_counts`: for a symmetric relation `S`, with a test deciding its closure, two lists are paired one to one under `«所闭» S` exactly where every closure holds equally many entries of both.
    - Its two hypotheses are named in the law. Symmetry is what makes the closure a class (`«所闭之自反»`, `«所闭之对称»`, `«所闭之传递»`). The test is the decision.
    - It is proved as a case of `«类之对当且仅当类类等数»` (GrammarLaws). The listed form, `pairing_iff_closures`, discharges the symmetry by `adjacentListed_symm` and the decision by `closureListed_iff`.
 
-So the regions the count is kept on are exactly the relation's own closures, at both grains. WHAT-REMAINS' "the content is which regions the count is kept on" has its answer. Amounts move by transfers along the relation, which may pass through a relatum within the step. Units are paired within a closure.
+So the count is kept closure by closure, at both grains, and each relatum's closure is the least region not gone out of that holds it (`closureListed_closes`, `closureListed_self`, `closureListed_inside`). WHAT-REMAINS' "the content is which regions the count is kept on" has its answer. Amounts move by transfers along the relation, which may pass through a relatum within the step. Units are paired within a closure.
 
 ## 2. Hypotheses and modelling choices
 
-- **Decided equality** on relata (`DecidableEq`) is a modelling hypothesis, used by the test and by Continuity's routed transfers. It is stated in the record's scope. The scratch build checks that its instances add nothing to any axiom report.
+- **Decided equality** on relata (`DecidableEq`) is a modelling hypothesis, used by the test and by Continuity's routed transfers. It is stated in the record's scope. It is taken as an argument, and the scratch build checks that it adds nothing to any axiom report.
 - **The remaining choices are Continuity's own:** finitely many listed relata, the relation as a Bool test, natural-number levels, and discrete steps.
 - **Re-pairing** (OU's condition on lever 1's test). The amount-grain laws quantify over no pairing. In one direction the unit-grain law holds for every pairing under the closure; in the other it is an existence statement. So each law is invariant under re-pairing. This does not reopen U4's verdict: lever 1's round trip still fails, and this is locality, not the lift.
 
@@ -39,7 +39,7 @@ These items stay on the record:
 - transfers within capacities, the capacitated case of the same conditions, a new item;
 - a local choice of flux, Continuity's own boundary, as before.
 
-The sixth item, the `«所闭»` form, is replaced, with a history note. Also not shown: pairing along one step of the adjacency. Units in one closure need not be adjacent, and the law pairs within a closure, not step by step. If the review asks for it, this goes in as a non-implication with a witness, the path 0–1–2 with `[0]` and `[2]`.
+The sixth item, the `«所闭»` form, is replaced, with a history note. A second new item is a non-implication with a witness: counts kept on each closure do not give a pairing along one step of the adjacency. Entries in one closure need not be adjacent, and the law pairs within a closure, not step by step. On the path 0 — 1 — 2, `[0]` and `[2]` keep every closure's count, and no step joins 0 to 2 (`PathOfThree.counts_kept_not_along_step`). The proof inverts a pairing with a single entry (`paired_single`).
 
 ## 5. Texts and record
 

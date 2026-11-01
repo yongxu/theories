@@ -7,6 +7,8 @@ stale entry, which BD4's change (BD3's leaf extended, no other module changed) d
   through balancesOn_iff_conserved, so nothing on the base uses it (general structure); likewise the web form.
 * pairing_iff_closures and pairing_iff_closure_counts are the unit grain's case of the count law of a class; nothing on
   the base uses them (general structure).
+* PathOfThree.counts_kept_not_along_step is the witness of a non-implication on the record, a fact about one
+  constructed relation (model witness); its two steps likewise, and paired_single, the inversion it uses, is support.
 * The other new declarations (the counting lemmas, the reach and its closure, the decomposition) are steps of these
   laws, so expected connected through them; their reasons are kept in case the measure places one apart.
 
@@ -68,6 +70,17 @@ REASONS = {
     C + 'count_lt_count': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'count_true': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'counted_of_count': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
+    C + 'PathOfThree.counts_kept_not_along_step': (
+        'model-witness',
+        'On the path 0 — 1 — 2, [0] and [2] keep the count on every closure along the listed adjacency, and no '
+        'pairing along one step of it joins them: a fact about one constructed relation showing that counts kept on '
+        'each closure do not give a pairing along one step (BD4).'),
+    C + 'PathOfThree.paired_within': ('model-witness', 'a step of the path witness: [0] and [2] paired under the '
+                                      'closure along the listed adjacency of 0 — 1 — 2 (BD4)'),
+    C + 'PathOfThree.not_paired_along_step': ('model-witness', 'a step of the path witness: no pairing along one step '
+                                              'of the listed adjacency of 0 — 1 — 2 joins [0] with [2] (BD4)'),
+    C + 'paired_single': ('support', 'a pairing with a single entry inverted, for any relation of the grammar; a step '
+                                     'of the path witness of BD4'),
 }
 others = [n for n in unclassified if n not in REASONS]
 assert not others, ("apart roots not registered here: read them; another session's belong to their owners", others)

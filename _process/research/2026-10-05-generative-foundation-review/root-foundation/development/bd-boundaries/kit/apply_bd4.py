@@ -25,6 +25,10 @@ DECLS = [C + n for n in (
     'closureListed', 'closureListed_iff', 'closureListed_closed', 'closureListed_closes',
     'conservedOn_iff_closures', 'balancing_iff_closures', 'balancesOn_iff_closures',
     'pairing_iff_closure_counts', 'pairing_iff_closures')]
+# the witness of the second new item on what is not shown, and the inversion it uses
+WITNESS = [C + n for n in (
+    'paired_single', 'PathOfThree.rel', 'PathOfThree.paired_within', 'PathOfThree.not_paired_along_step',
+    'PathOfThree.counts_kept_not_along_step')]
 touched = []
 for path in (f'{PKG}/Becoming.lean', f'{PKG}/check_becoming.py', f'{PKG}/README.md', f'{PKG}/README.zh.md',
              'theories/becoming/results/data/regions.json', REC, 'theories/becoming/chapters/01-ROOT.md'):
@@ -54,7 +58,8 @@ def main():
         "  BD4), the uncapacitated case of the feasibility conditions for flows. At the unit grain, a\n"
         "  pairing under the closure of a symmetric relation whose closure a test decides is the count kept\n"
         "  on each closure (`Continuity.pairing_iff_closure_counts`, `Continuity.pairing_iff_closures`), a\n"
-        "  case of `«类之对当且仅当类类等数»`. A leaf.\n")
+        "  case of `«类之对当且仅当类类等数»`, though not always along one step of the adjacency\n"
+        "  (`Continuity.PathOfThree.counts_kept_not_along_step`). A leaf.\n")
     # the checker's scope
     rep(f'{PKG}/check_becoming.py',
         "    \"conserved on every region not gone out of along that adjacency, and on a web at every step likewise. \"\n",
@@ -70,7 +75,7 @@ def main():
         "adjacency, the grammar's `«所闭»`, decided as a test (`Continuity.closureListed_iff`), and the transfers "
         "existing exactly where the total is conserved on the closure of each listed relatum "
         "(`Continuity.balancing_iff_closures`, on a web `Continuity.balancesOn_iff_closures`); at the unit grain, a "
-        "pairing under the closure the count kept on each closure, a case of `«类之对当且仅当类类等数»` "
+        "pairing under the closure is the count kept on each closure, a case of `«类之对当且仅当类类等数»` "
         "(`Continuity.pairing_iff_closures`); a leaf |")
     rep(f'{PKG}/README.zh.md',
         "依存网上每步亦然（`Continuity.balancesOn_iff_notGoingOut`）；为叶模块 |",
@@ -98,32 +103,34 @@ def main():
     assert json.dumps(json.loads(old_text), ensure_ascii=False, indent=2) + '\n' == old_text, 'record does not round-trip'
     r = json.loads(old_text)
     assert len(r['laws']) == 7, len(r['laws'])
-    law = {'en': ("Each relatum's closure under the listed adjacency, the grammar's «所闭», is decided as a test. So, "
-                  "relata listed without repetition and equality decided, transfers along the relation balancing a "
-                  "step exist exactly where the total is conserved on each listed relatum's closure; on a web, at "
-                  "every step likewise. Units are paired under the closure exactly where each closure holds as many "
-                  "of each list, a case of «类之对当且仅当类类等数»."),
-           'zh': ("所列相邻下每个关系项之闭包（文法之 «所闭»）可判定为一检验。故在不重复列出、相等可判定的关系项上，沿关系使"
-                  "一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在；网在每一步亦然。单位在闭包下成对，恰在每个闭包"
-                  "含两列同样多之单位时，为 «类之对当且仅当类类等数» 之一例。"),
+    law = {'en': ("With equality decided, each relatum's closure under the listed adjacency, «所闭», is decided by a "
+                  "test. So, relata listed without repetition, transfers along the relation balancing a step exist "
+                  "exactly where the total is conserved on each listed relatum's closure; on a web, at every step "
+                  "likewise. Two lists pair one to one under the closure exactly where each closure holds equally many "
+                  "of both, a case of «类之对当且仅当类类等数»."),
+           'zh': ("关系项之相等可判定时，所列相邻下每个关系项之闭包（«所闭»）可判定为一检验。故关系项不重复列出时，沿关系"
+                  "使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在；网在每一步亦然。两列在闭包下一一成对，恰在每个"
+                  "闭包所含两列之项同样多时，为 «类之对当且仅当类类等数» 之一例。"),
            'declarations': DECLS}
     print('law 8:', len(law['en']), 'en,', len(law['zh']), 'zh (soft caps 420/190)')
+    assert len(law['en']) <= 420 and len(law['zh']) <= 190, (len(law['en']), len(law['zh']))
     r['laws'].append(law)
     dns = r['does_not_show']
-    assert len(dns) == 6 and dns[5]['text']['en'].startswith('That conservation on each closure'), dns[5]
+    assert len(dns) == 6 and dns[5]['en'].startswith('That conservation on each closure'), dns[5]
     dns.pop()
-    dns.append({'text': {
+    dns.append({
         'en': ("Transfers within capacities: conservation on each closure is the uncapacitated case of the "
                "feasibility conditions of Gale (1957) and Hoffman (1960); their capacitated case is not stated."),
-        'zh': "容量之内的转移：每个闭包上的守恒是 Gale（1957）与 Hoffman（1960）可行性条件的无容量情形；有容量情形未陈述。"},
+        'zh': "容量之内的转移：每个闭包上的守恒是 Gale（1957）与 Hoffman（1960）可行性条件的无容量情形；有容量情形未陈述。",
         'kind': 'scope'})
-    dns.append({'text': {
-        'en': ("That units are paired along one step of the adjacency where each closure keeps its count: the "
-               "unit-grain law pairs them within a closure, whose units need not be adjacent."),
-        'zh': "每个闭包计数相守处，单位沿相邻的一步成对：单位粒度之律在闭包之内配对，而闭包之单位未必相邻。"},
-        'kind': 'non-implication'})
+    dns.append({
+        'en': ("That counts kept on each closure give a pairing along one step of the adjacency: on the path "
+               "0 — 1 — 2, [0] and [2] keep every closure's count, and no step joins 0 to 2."),
+        'zh': "每个闭包计数相守即给出沿相邻一步之配对：在路径 0 — 1 — 2 上，[0] 与 [2] 在每个闭包上计数相守，而无一步连接 0 与 2。",
+        'kind': 'non-implication',
+        'witness': C + 'PathOfThree.counts_kept_not_along_step'})
     for x in dns[-2:]:
-        assert len(x['text']['en']) <= 240 and len(x['text']['zh']) <= 110, (len(x['text']['en']), len(x['text']['zh']))
+        assert len(x['en']) <= 240 and len(x['zh']) <= 110, (len(x['en']), len(x['zh']))
     vs = r['validation_scope']
     old_en = ('Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 '
               'declarations, and Becoming.BalanceRegions (the seventh law) at receipt 20261031T225858.600119Z, '
@@ -134,14 +141,15 @@ def main():
     vs['en'] = ('Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 '
                 'declarations, and Becoming.BalanceRegions (the seventh and eighth laws) at receipt PENDING, '
                 f'{N_DECL} declarations ({N_THM} theorems), each with an empty axiom report; equality of relata '
-                'decided, a modelling hypothesis whose instances add no axiom. No independent review of '
+                'decided, a modelling hypothesis taken as an argument, which adds no axiom to the reports. No '
+                'independent review of '
                 'Becoming.Continuity; Becoming.BalanceRegions and its two laws read by independent AI readers, every '
                 'finding taken.')
     old_zh = vs['zh']
     assert '20261031T225858.600119Z' in old_zh, old_zh
     vs['zh'] = ('由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions'
                 f'（第七、八律），回执 PENDING，{N_DECL} 个声明中 {N_THM} 条定理；公理报告均为空；关系项之相等可判定，'
-                '为建模假设，其实例不增公理。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI '
+                '为建模假设，作为参数取入，不增报告之公理。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI '
                 '读者审读，所提各点皆已采纳。')
     assert len(vs['en']) - 7 + 23 <= 600 and len(vs['zh']) - 7 + 23 <= 260, (len(vs['en']), len(vs['zh']))
     bound = [b for b in r['proof_bindings'] if b['source'] == LEAF]
@@ -150,8 +158,8 @@ def main():
     named = [x for x in r['references'] if x['path'] == LEAF]
     assert len(named) == 1, named
     named[0]['sha256'] = hashlib.sha256((ROOT / LEAF).read_bytes()).hexdigest()
-    named[0]['declarations'] = named[0]['declarations'] + DECLS
-    r['aliases'] = r['aliases'] + DECLS
+    named[0]['declarations'] = named[0]['declarations'] + DECLS + WITNESS
+    r['aliases'] = r['aliases'] + DECLS + WITNESS
     corr = r['correspondence']['en']
     old_c = ("Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence "
              "sums to zero on each connected component; balancing_iff is that fact stated with the spine's families "
@@ -178,11 +186,12 @@ def main():
                "(Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test, so transfers "
                "balancing a step exist exactly where the total is conserved on each listed relatum's closure, and "
                "units are paired under the closure exactly where each closure keeps its count. The sixth item on "
-               "what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step. "
+               "what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step, with a "
+               "witness on the path 0 — 1 — 2. "
                "Gale and Hoffman named in the correspondence. No earlier statement, law or declaration changed."),
         'zh': ("2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个"
                "闭包可判定为一检验，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒时存在，而单位在闭包下成对恰在"
-               "每个闭包计数相守时。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对。对应中写出 Gale 与 "
+               "每个闭包计数相守时。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 "
                "Hoffman。先前之陈述、规律与声明皆未变。")})
     r['reviewed_at_utc'] = REVIEWED
     touched.append(REC)
@@ -192,12 +201,14 @@ def main():
         "so such transfers exist exactly where the total is conserved on every such region "
         "(`Continuity.balancing_iff_notGoingOut`). A swap",
         "so such transfers exist exactly where the total is conserved on every such region "
-        "(`Continuity.balancing_iff_notGoingOut`). The least such regions are the closures, the grammar's `«所闭»` "
-        "along that adjacency, each decided as a test among the listed relata (`Continuity.closureListed_iff`), so "
-        "such transfers exist exactly where the total is conserved on the closure of each listed relatum "
-        "(`Continuity.balancing_iff_closures`), the uncapacitated case of the feasibility conditions for flows of "
-        "Gale and Hoffman; at the grain of units, two lists are paired within the closures exactly where each "
-        "closure holds as many units of each (`Continuity.pairing_iff_closures`). A swap")
+        "(`Continuity.balancing_iff_notGoingOut`). Each relatum's closure, the grammar's `«所闭»` along that "
+        "adjacency, is decided as a test (`Continuity.closureListed_iff`) and is the least such region holding it "
+        "(`Continuity.closureListed_inside`), so such transfers exist exactly where the total is conserved on the "
+        "closure of each listed relatum (`Continuity.balancing_iff_closures`), the uncapacitated case of the "
+        "feasibility conditions for flows of Gale and Hoffman. At the grain of units, two lists of relata are paired "
+        "one to one within the closures exactly where every closure holds equally many entries of both "
+        "(`Continuity.pairing_iff_closures`), though not always along one step "
+        "(`Continuity.PathOfThree.counts_kept_not_along_step`). A swap")
     rep('theories/becoming/chapters/01-ROOT.md',
         "Not shown: local fluxes in the lattice sense, or infinitely many relata ([record]",
         "Not shown: local fluxes in the lattice sense, transfers within capacities, or infinitely many relata "

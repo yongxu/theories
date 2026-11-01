@@ -2651,7 +2651,7 @@
   "Becoming.BalanceRegions": {
    "region": "root",
    "base": "old-base",
-   "note": "a family a relation closes iff a region not gone out of (不出) along the listed adjacency; balancing transfers iff conservation on every such region (BD3)"
+   "note": "a family a relation closes iff a region not gone out of (不出) along the listed adjacency; balancing transfers iff conservation on every such region (BD3), iff on each closure (所闭), decided as a test (BD4)"
   },
   "Becoming.Blanket": {
    "region": "knowing",

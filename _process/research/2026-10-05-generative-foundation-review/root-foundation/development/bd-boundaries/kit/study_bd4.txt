@@ -1,6 +1,6 @@
 ## {N}. Balance on each closure, on the root (BD4)
 
-Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Of the regions not gone out of, the closures are the least: among the listed relata, each such region is the union of the closures of the relata it holds. At the unit grain the same closures keep the count, by the count law of a class. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)).
+Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Each relatum's closure is the least region not gone out of that holds it. At the unit grain the same closures keep the count, by the count law of a class. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)).
 
 ```text
 Result(s): balance-from-conservation-along-a-relation (an eighth law: each closure under the listed adjacency decided
@@ -22,9 +22,12 @@ Delta:
   - The unit grain. The closure of a symmetric relation is a class (by «所闭之自反», «所闭之对称» and
     «所闭之传递»). So, where a test decides the closure, a pairing under it is the count kept on each closure: a
     case of «类之对当且仅当类类等数» (pairing_iff_closure_counts; along the listed adjacency, pairing_iff_closures).
+  - Not along one step. On the path 0 — 1 — 2, [0] and [2] keep every closure's count, and no pairing along one
+    step of the adjacency joins them (PathOfThree.counts_kept_not_along_step, by paired_single: a pairing with a
+    single entry is a single related entry).
 Supplied premises / correspondence: none beyond balancing_iff's own (relata listed without repetition, decided
-       equality, the relation and membership as Bool tests). Decided equality is a modelling hypothesis, and its
-       instances add no axiom. Conservation on each connected part is the uncapacitated case of the feasibility
+       equality, the relation and membership as Bool tests). Decided equality is a modelling hypothesis, taken as an
+       argument, and adds no axiom to the reports. Conservation on each connected part is the uncapacitated case of the feasibility
        conditions for flows (Gale 1957; Hoffman 1960). Modelling choices are those of Becoming.Continuity (finitely
        many listed relata, natural-number levels, discrete steps).
 Evidence: core receipt `{RECEIPT}`; Becoming.BalanceRegions (BALANCEREGIONS), the core leaf BD3 began, extended;
@@ -35,8 +38,8 @@ Standing: proved. The closure's decision by a counting bound and the decompositi
        closures, at both grains, so locality is the relation's own: what it holds together keeps its count.
 Boundary:
   - Transfers within capacities, the capacitated case of the same conditions: not stated.
-  - Units paired along one step of the adjacency where each closure keeps its count: the unit-grain law pairs
-    them within a closure, whose units need not be adjacent.
+  - A pairing along one step of the adjacency where each closure keeps its count: not implied (the path witness
+    above). The unit-grain law pairs within a closure, whose entries need not be adjacent.
   - Infinitely many relata, levels other than natural numbers, and a local choice of flux (Continuity's own
     boundary) are not reached.
   - Re-pairing (OU's condition on lever 1's test): the amount-grain laws quantify over no pairing. The unit-grain

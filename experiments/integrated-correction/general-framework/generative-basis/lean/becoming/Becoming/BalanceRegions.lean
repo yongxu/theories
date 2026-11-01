@@ -39,17 +39,19 @@ module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`) and
   web at every step likewise (`Continuity.balancesOn_iff_closures`).
 * **At the unit grain, the same closures.** The closure of a symmetric relation is a class, so
   where a test decides it, two lists are paired one to one under it exactly where each closure
-  holds as many units of the one as of the other, a case of `«类之对当且仅当类类等数»`
+  holds as many entries of the one as of the other, a case of `«类之对当且仅当类类等数»`
   (`Continuity.pairing_iff_closure_counts`); along adjacency among the listed relata,
   `Continuity.pairing_iff_closures`.
 
-So balance along a relation is kept on each of its closures among the listed relata, and on the
-regions they make up: among the listed relata a region not gone out of is the union of the closures
-of the relata it holds, and each relatum's closure is the least such region holding it. This is the
-uncapacitated case of the feasibility conditions for flows (Gale 1957; Hoffman 1960), read on the
-grammar. What is not shown: transfers within capacities, the capacitated case; and units paired
-along one step of the adjacency, where the unit-grain law pairs them within a closure. Every
-declaration has an empty axiom report.
+So balance along a relation is kept on each of its closures among the listed relata, and each
+relatum's closure is the least region not gone out of that holds it
+(`Continuity.closureListed_closes`, `Continuity.closureListed_self`,
+`Continuity.closureListed_inside`). This is the uncapacitated case of the feasibility conditions
+for flows (Gale 1957; Hoffman 1960), read on the grammar. Not shown: transfers within capacities,
+the capacitated case. Nor do counts kept on each closure give a pairing along one step of the
+adjacency: on the path `0 — 1 — 2`, `[0]` and `[2]` keep every closure's count, and no step joins
+`0` to `2` (`Continuity.PathOfThree.counts_kept_not_along_step`). Every declaration has an empty
+axiom report.
 -/
 
 namespace Becoming
@@ -404,7 +406,7 @@ theorem conservedOn_iff_closures {rel : R → R → Bool} {us : List R} {prev ne
 listed without repetition, with equality decided, transfers along the relation that balance a step
 exist exactly where the total is conserved on the closure of each listed relatum, the grammar's
 `«所闭»` along adjacency among the listed relata. This is `Continuity.balancing_iff` read on
-`«所闭»`: of the regions not gone out of, the closures are the least. -/
+`«所闭»`: each relatum's closure is the least region not gone out of that holds it. -/
 theorem balancing_iff_closures {rel : R → R → Bool} {us : List R} {prev next : R → Nat}
     (distinct : Distinct us) :
     (∃ move, Balancing rel us prev next move) ↔
@@ -434,8 +436,8 @@ end Closures
 /-- **A pairing under the closure of a symmetric relation is the count kept on each closure.** The
 closure (`«所闭»`) of a symmetric relation is a class: reflexive (`«所闭之自反»`), symmetric
 (`«所闭之对称»`) and transitive (`«所闭之传递»`). So where a test decides it, two lists are paired
-one to one under it exactly where each closure holds as many units of the one as of the other: a
-case of the count law of a class, `«类之对当且仅当类类等数»`. -/
+one to one under it exactly where each closure holds as many entries of the one as of the other:
+a case of the count law of a class, `«类之对当且仅当类类等数»`. -/
 theorem pairing_iff_closure_counts {α : Type} {S : «际» α} {e : α → α → Bool}
     (symm : «则» S («逆» S)) (dec : ∀ x y, «所闭» S x y ↔ e x y = true) {a b : List α} :
     «对» («所闭» S) a b ↔ ∀ z, «计» (e z) a = «计» (e z) b :=
@@ -445,12 +447,60 @@ theorem pairing_iff_closure_counts {α : Type} {S : «际» α} {e : α → α �
 closure.** The adjacency is symmetric (`Continuity.adjacentListed_symm`) and its closure decided
 (`Continuity.closureListed_iff`), so this is `Continuity.pairing_iff_closure_counts` for it: two
 lists of relata are paired one to one within the closures, the grammar's `«所闭»` along
-`adjacentListed rel us`, exactly where each closure holds as many units of the one as of the
+`adjacentListed rel us`, exactly where each closure holds as many entries of the one as of the
 other. -/
 theorem pairing_iff_closures [DecidableEq R] {rel : R → R → Bool} {us : List R} {a b : List R} :
     «对» («所闭» (adjacentListed rel us)) a b ↔
       ∀ z, «计» (closureListed rel us z) a = «计» (closureListed rel us z) b :=
   pairing_iff_closure_counts (adjacentListed_symm rel us) fun _ _ => closureListed_iff.symm
+
+/-! ## A pairing within a closure need not be along one step -/
+
+/-- A list paired one to one with a single entry is a single entry related to it, under any
+relation of the grammar. -/
+theorem paired_single {α : Type} {S : «际» α} {x : α} {a b : List α} (paired : «对» S a b)
+    (single : a = [x]) : ∃ y, S x y ∧ b = [y] := by
+  cases paired with
+  | nil => exact List.noConfusion single
+  | @cons _ y _ b₁ b₂ related rest =>
+    cases single
+    cases b₁ with
+    | nil =>
+      cases b₂ with
+      | nil => exact ⟨y, related, rfl⟩
+      | cons _ _ => exact Nat.noConfusion («对之长» rest)
+    | cons _ _ => exact Nat.noConfusion («对之长» rest)
+
+namespace PathOfThree
+
+/-- Each natural related to the next: listed as `[0, 1, 2]`, the path `0 — 1 — 2`. -/
+def rel (x y : Nat) : Bool := Nat.beq (x + 1) y
+
+/-- `[0]` and `[2]` are paired one to one under the closure along adjacency among `[0, 1, 2]`. -/
+theorem paired_within : «对» («所闭» (adjacentListed rel [0, 1, 2])) [0] [2] :=
+  «对».cons (b₁ := []) (b₂ := [])
+    («所闭之传递» («缘在所闭» ⟨.head _, .tail _ (.head _), rfl⟩)
+      («缘在所闭» ⟨.tail _ (.head _), .tail _ (.tail _ (.head _)), rfl⟩))
+    «对».nil
+
+/-- `0` and `2` are not adjacent, so no pairing along one step of the adjacency joins `[0]` with
+`[2]`. -/
+theorem not_paired_along_step : ¬ «对» (adjacentListed rel [0, 1, 2]) [0] [2] := by
+  intro paired
+  obtain ⟨_, adjacent, single⟩ := paired_single paired rfl
+  cases single
+  exact Bool.noConfusion adjacent.2.2
+
+/-- **Counts kept on each closure do not give a pairing along one step.** On the path
+`0 — 1 — 2`, each closure along adjacency among the listed relata holds as many entries of `[0]` as
+of `[2]` (`Continuity.pairing_iff_closures`), and no pairing along one step of that adjacency joins
+them. -/
+theorem counts_kept_not_along_step :
+    (∀ z, «计» (closureListed rel [0, 1, 2] z) [0] = «计» (closureListed rel [0, 1, 2] z) [2]) ∧
+      ¬ «对» (adjacentListed rel [0, 1, 2]) [0] [2] :=
+  ⟨pairing_iff_closures.mp paired_within, not_paired_along_step⟩
+
+end PathOfThree
 
 end Continuity
 
