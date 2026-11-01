@@ -118,6 +118,8 @@ Malthus (1798), the main neighbour: reproduction limited by what sustains it, re
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). The beyond falls by the rise and the loss; the carriers and the rest of a whole are a case.
 - related, not a proved adapter: [entropy-history-and-record](entropy-history-and-record.md). Entropy's module, whose stock law born_within_inflow re-derives on a list balanced on.
 
+**Used by:** [what-giving-that-waits-draws-on](what-giving-that-waits-draws-on.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

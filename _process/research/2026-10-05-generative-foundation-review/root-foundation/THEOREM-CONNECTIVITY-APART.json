@@ -6506,6 +6506,206 @@
    "module": "Becoming.PremiseWitnesses",
    "category": "model-witness",
    "reason": "the condition along the converse of 缘 met at the last occurrence of descent that ends and failed on the endless line from every center: computed on the supplied nets"
+  },
+  "Becoming.LineageRegimes.MultiplyingTakers.family_three": {
+   "module": "Becoming.LineageRegimes",
+   "category": "model-witness",
+   "reason": "generation three of the multiplying takers is empty, by evaluation: a fact about one constructed course, not a law of the unfolding (EL2)"
+  },
+  "Becoming.LineageRegimes.MultiplyingTakers.family_two": {
+   "module": "Becoming.LineageRegimes",
+   "category": "model-witness",
+   "reason": "generation two of the multiplying takers lists four takers, by evaluation: a fact about one constructed course, not a law of the unfolding (EL2)"
+  },
+  "Becoming.LineageRegions.degenerates_iff_line_ends": {
+   "module": "Becoming.LineageRegions",
+   "category": "general-structure",
+   "reason": "where every continuation of a member is one of its listed offspring, a member degenerates exactly where at some depth it has no listed descendant: a law of the map for any relation on occurrences (step, formation) and any listed generations, read on no world; the lineage continuation on the World's webs is its case, with the witnesses Courses and Chain (EL1)"
+  },
+  "Becoming.LineageRegions.generation_degenerates_iff": {
+   "module": "Becoming.LineageRegions",
+   "category": "general-structure",
+   "reason": "where listed offspring continue their parents and the census holds every continuation, a whole generation degenerates exactly where a later one is empty: a law of the map for any relation on occurrences (step, formation) and any listed generations, read on no world; the lineage continuation on the World's webs is its case, with the witnesses Courses and Chain (EL1)"
+  },
+  "Becoming.LineageRegions.not_all_degenerate_of_positive": {
+   "module": "Becoming.LineageRegions",
+   "category": "general-structure",
+   "reason": "a term positive at every step from t leaves not every member of generation t degenerating, where listed offspring continue their parents: a law of the map for any relation on occurrences (step, formation) and any listed generations, read on no world; the lineage continuation on the World's webs is its case, with the witnesses Courses and Chain (EL1)"
+  },
+  "Becoming.LineageRegions.not_all_degenerate_while": {
+   "module": "Becoming.LineageRegions",
+   "category": "general-structure",
+   "reason": "from a nonempty generation, a term positive at every nonempty generation leaves not every member degenerating, where listed offspring continue their parents: a law of the map for any relation on occurrences (step, formation) and any listed generations, read on no world; the lineage continuation on the World's webs is its case, with the witnesses Courses and Chain (EL1)"
+  },
+  "Becoming.Map.end_of_ends_iff_excluded_middle": {
+   "module": "Becoming.LineDegeneration",
+   "category": "calibration",
+   "reason": "that every line ending on every branch reaches an end, at every carrier and relation, is exactly excluded middle; the base form, Map.end_of_gone_iff_excluded_middle, is on the World (EL3)"
+  },
+  "Becoming.Map.not_not_end_of_ends": {
+   "module": "Becoming.LineDegeneration",
+   "category": "general-structure",
+   "reason": "ending on every branch reaches an end up to double negation: a law of the map for every carrier and pair of relations, read on no model; the World's lines are its case (EL3)"
+  },
+  "Becoming.PairSelection.assorted_disfavours_iff": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "under complete assortment the carrier is weakly disfavoured exactly where a withheld step weighs at least a received one: a law of the carrier counts after shaping for any natural factors, a corollary of RuleShaping's laws with the count of steps cancelled, with no world; the pair runs of PairSelection supply its counts (EL4b)"
+  },
+  "Becoming.PairSelection.assorted_neutral": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "with the two factors equal, selection leaves the share as it is: a law of the carrier counts after shaping for any natural factors, a corollary of RuleShaping's laws with the count of steps cancelled, with no world; the pair runs of PairSelection supply its counts (EL4b)"
+  },
+  "Becoming.PairSelection.cohort_paired": {
+   "module": "Becoming.PairSelection",
+   "category": "model-witness",
+   "reason": "every group of the witness cohort is a pair: the witness meets the premise of never_rises_in_pairs, a cohort listed as pairs (EL4b)"
+  },
+  "Becoming.PairSelection.pairs_rises_iff": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "SelectionLevels.rises_iff_sized with groups of two, a wrapper: a law of any finite family listed by pairs, read with weights and amounts, with no world (EL4b)"
+  },
+  "Becoming.PairSelection.window_alternator_favours_iff": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "window pairs against alternator pairs are weakly favoured exactly where a received step weighs at least a withheld one: a law of the carrier counts after shaping for any natural factors, a corollary of RuleShaping's laws with the count of steps cancelled, with no world; the pair runs of PairSelection supply its counts (EL4b)"
+  },
+  "Becoming.PairSelection.window_echo_favours_iff": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "with one error a pair, window pairs are weakly favoured over answerer pairs exactly where a received step weighs at least a withheld one, a wrapper of assorted_favours_iff: a law of the carrier counts after shaping for any natural factors, a corollary of RuleShaping's laws with the count of steps cancelled, with no world; the pair runs of PairSelection supply its counts (EL4b)"
+  },
+  "Becoming.PairSelection.window_echo_select_iff": {
+   "module": "Becoming.PairSelection",
+   "category": "general-structure",
+   "reason": "with one error a pair, selection raises the window pairs' share strictly exactly where a received step weighs more, and lowers it strictly exactly where it weighs less, a wrapper of the assorted laws: a law of the carrier counts after shaping for any natural factors, a corollary of RuleShaping's laws with the count of steps cancelled, with no world; the pair runs of PairSelection supply its counts (EL4b)"
+  },
+  "Becoming.SelectionShift.Alternating.unbounded_not_every": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "a course concordant at every even step and with no terms at every odd one, two members at every generation: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.ExactOnce.exact_once_ends": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "exact at step 0 and not at step 1, concordant at step 0, and empty from generation 3 on: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.Generations.goes_on_iff": {
+   "module": "Becoming.SelectionShift",
+   "category": "general-structure",
+   "reason": "with exact transmission of offspring number at every step from t, every later generation is nonempty exactly where the one after t is: a law of any listed generations, each the offspring of the last, with no world; generations of descent in a flow (SelectionTerm.Flow.Descended) are one case, read on the map by Becoming.LineageRegions (EL1)"
+  },
+  "Becoming.SelectionShift.Generations.never_empties_while": {
+   "module": "Becoming.SelectionShift",
+   "category": "general-structure",
+   "reason": "from a nonempty first generation, a term positive at every nonempty generation keeps every generation nonempty: a law of any listed generations, each the offspring of the last, with no world; generations of descent in a flow (SelectionTerm.Flow.Descended) are one case, read on the map by Becoming.LineageRegions (EL1)"
+  },
+  "Becoming.SelectionShift.Horizon.going_goes_on_of_selection": {
+   "module": "Becoming.SelectionShift",
+   "category": "general-structure",
+   "reason": "where the term at the horizon is positive, the course going on past it is nonempty at every later generation: a law of any listed generations, each the offspring of the last, with no world; generations of descent in a flow (SelectionTerm.Flow.Descended) are one case, read on the map by Becoming.LineageRegions (EL1)"
+  },
+  "Becoming.SelectionShift.Horizon.terms_boundary": {
+   "module": "Becoming.SelectionShift",
+   "category": "general-structure",
+   "reason": "the two cases of the terms boundary joined, a restatement of never_empties_of_unbounded and eventually_zero_two_fates: a law of any listed generations, each the offspring of the last, with no world; generations of descent in a flow (SelectionTerm.Flow.Descended) are one case, read on the map by Becoming.LineageRegions (EL1)"
+  },
+  "Becoming.SelectionShift.Horizon.zero_after_premises": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "the steady course gone on past a horizon meets the premises of zero_after_two_fates: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.Horizon.zero_after_two_fates": {
+   "module": "Becoming.SelectionShift",
+   "category": "general-structure",
+   "reason": "terms zero after the horizon, the next generation nonempty, are shared by a course that goes on and one that ends: a law of any listed generations, each the offspring of the last, with no world; generations of descent in a flow (SelectionTerm.Flow.Descended) are one case, read on the map by Becoming.LineageRegions (EL1)"
+  },
+  "Becoming.SelectionShift.OneLine.goes_on_premises": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "one member leaving one like itself beside one leaving none meets every premise of goes_on: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.OneLine.shift_step_premises": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "the same family with offspring numbers shifted by two meets the premises of shift_step: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.Shrinking.positive_then_empty": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "positive concordance at every step but the last while the family shrinks to nothing: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.ZeroTerm.decides_nothing": {
+   "module": "Becoming.SelectionShift",
+   "category": "model-witness",
+   "reason": "one offspring each and none each, both exact with no terms, the first going on and the second ending: a fact about one constructed course of generations, not a law of the unfolding (EL1)"
+  },
+  "Becoming.SelectionShift.concord_shift": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "a common shift of the weights leaves concordance unchanged: an arithmetic identity on lists, through excess_shift (EL1)"
+  },
+  "Becoming.SelectionShift.concord_shift_amount": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "a common shift of the amount leaves concordance unchanged: an arithmetic identity on lists, through excess_shift (EL1)"
+  },
+  "Becoming.SelectionShift.discord_shift": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "a common shift of the weights leaves discordance unchanged: an arithmetic identity on lists, through excess_shift (EL1)"
+  },
+  "Becoming.SelectionShift.discord_shift_amount": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "a common shift of the amount leaves discordance unchanged: an arithmetic identity on lists, through excess_shift (EL1)"
+  },
+  "Becoming.SelectionShift.pos_weight_of_discord": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "positive discordance needs a positive weight: a list lemma, the discordance half of pos_weight_of_varies (EL1)"
+  },
+  "Becoming.SelectionShift.weighted_shift": {
+   "module": "Becoming.SelectionShift",
+   "category": "support",
+   "reason": "a common shift of the weights moves the weighted total by the shift times the total amount: an arithmetic identity on lists (EL1)"
+  },
+  "Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "calibration",
+   "reason": "were every Prop-valued law agreeing with answering to induce a law keeping inclusion, excluded middle would hold: a lemma of the bridge, a calibration of the logic (EL4a)"
+  },
+  "Becoming.WindowedWaiting.Pair.induced_partner": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "support",
+   "reason": "answering is the law the partner's step induces: a one-line unpacking of the module's own definitions (EL4a)"
+  },
+  "Becoming.WindowedWaiting.Pair.pairKeepsInclusion_iff_induced": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "general-structure",
+   "reason": "a two-input Bool law keeps inclusion exactly where some Prop-valued law agreeing with it induces one keeping inclusion on the pair's configurations: the bridge between the decided laws and Tolerance's, for every two-input law (EL4a)"
+  },
+  "Becoming.WindowedWaiting.agreement_not_keeps": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "model-witness",
+   "reason": "agreement, the one law that restores and answers, does not keep inclusion: a fact about one law of a pair, not a law of the unfolding (EL4a)"
+  },
+  "Becoming.WindowedWaiting.erring_keeps": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "general-structure",
+   "reason": "each time's law of a window under a supplied error pattern keeps inclusion: a law of every window, error pattern and waiting relation on any type, with no world (EL4a)"
+  },
+  "Becoming.WindowedWaiting.pairKeepsInclusion_table_iff": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "general-structure",
+   "reason": "a decided one-step law of a pair keeping mutual giving keeps inclusion exactly where it is one of five tables: a law of every two-input Bool law, with no world (EL4a)"
+  },
+  "Becoming.WindowedWaiting.windowTwo_keeps": {
+   "module": "Becoming.WindowedWaiting",
+   "category": "model-witness",
+   "reason": "answering within a window of two keeps inclusion: a fact about one law of a pair, not a law of the unfolding (EL4a)"
   }
  },
  "instances": {

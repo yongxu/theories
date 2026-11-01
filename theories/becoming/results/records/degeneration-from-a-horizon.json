@@ -1,0 +1,311 @@
+{
+  "schema_version": 2,
+  "id": "degeneration-from-a-horizon",
+  "title": {
+    "en": "Degeneration from a horizon",
+    "zh": "由视界而退化"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "statement": {
+    "en": "At any class within activity, a line from an active occurrence of which nothing reached at a step not before its start is active ends on every branch (尽), constructively, and the three ending regimes degenerate; that the premise, or 尽 on the grammar, gives an end (有终) is exactly excluded middle.",
+    "zh": "在活动之内的任一类上，自一活跃之事起、其线于不早于起点的某一步所及皆不活跃者，诸支皆尽，构造地成立；世界的三种终结之态皆退化；此前提（在文法上则诸支皆尽）总给出有终，恰等价于排中。"
+  },
+  "laws": [
+    {
+      "en": "Along any class, where everything the line from an occurrence reaches at a step N, not before it, ends on every branch, the occurrence ends on every branch (尽). The proof is by induction on the steps left, along every branch, with no excluded middle and no premise that an occurrence has one continuation.",
+      "zh": "沿任一类，自一事起之线于不早于它的某步 N 所及者皆诸支皆尽时，此事诸支皆尽（尽）。证明对所余步数归纳，遍历每一支，不用排中，也不设每事只有一个续。",
+      "declarations": [
+        "Becoming.Web.ends_before",
+        "Becoming.Web.ends_of_ends_at"
+      ]
+    },
+    {
+      "en": "The constructive degeneration law. At any class included in activity, from an active occurrence where every occurrence the line reaches at a step N not before it is inactive, the line ends on every branch: the pattern degenerates (退化). What the line reaches lies on the line under activity, so it is active, and nothing is reached at N: the uniform horizon carries it. Activity and the kind class are instances, the lineage continuation included.",
+      "zh": "构造的退化之律。在含于活动的任一类上，自一活跃之事起，线于不早于它的某步 N 所及之事皆不活跃时，线诸支皆尽：样式退化。线所及者在活动之线上，故皆活跃，而 N 处无所及：承载此律的是一致的视界。活动与种类之类是其实例，世系之续亦在其中。",
+      "declarations": [
+        "Becoming.Web.reached_coarser",
+        "Becoming.Web.active_along_finer",
+        "Becoming.Web.every_branch_ends_of_gone",
+        "Becoming.Web.activity_every_branch_ends_of_gone",
+        "Becoming.Web.kind_every_branch_ends_of_gone"
+      ]
+    },
+    {
+      "en": "The three regimes degenerate, through one step each. Each regime on the World makes an occurrence at its step inactive: a dependence held below its need, a family drawn beyond its gated renewal, a passing that has stopped with brief carriers. Under exactly the premises of the laws that such a line is not without end, the line degenerates, so those laws follow from degeneration through «尽则非不穷».",
+      "zh": "三种态各经一步而退化。世界在地图上所读的每一态都使其步上之事不活跃：活动需要支持时依存保持在其所需之下、一族被汲取超出其门控更新、承载者短暂而传递已停。恰在\"此线非不穷\"诸律的前提下，线退化，故那些律经 «尽则非不穷» 由退化得出。",
+      "declarations": [
+        "Becoming.Web.consumed_held_gone",
+        "Becoming.Web.family_excess_gone",
+        "Becoming.Web.stopped_gone",
+        "Becoming.Web.consumed_held_degenerates",
+        "Becoming.Web.family_excess_degenerates",
+        "Becoming.Web.stopped_degenerates"
+      ]
+    },
+    {
+      "en": "Restatements, no result: the laws that a line from an active occurrence is not without end, under the horizon and under each regime, derived from degeneration with their statements unchanged, and the law concluding an end as the degeneration law with the decision.",
+      "zh": "重述，不是结果：\"自活跃之事起的线非不穷\"诸律（在视界下与在每一态下），以原陈述由退化推出；推出有终之律，即退化之律加上判定。",
+      "declarations": [
+        "Becoming.Web.Restated.not_endless_of_gone",
+        "Becoming.Web.Restated.degenerates_of_gone",
+        "Becoming.Web.Restated.consumed_held_not_endless",
+        "Becoming.Web.Restated.family_excess_not_endless",
+        "Becoming.Web.Restated.stopped_not_endless"
+      ]
+    },
+    {
+      "en": "On the grammar, at any carrier and relations: ending on every branch reaches an end (有终) up to double negation, and reaches one where going on is decided along the line. On two points, with one step from false to true taken exactly where a proposition P holds, the line from false ends on every branch while any end decides P; so that every line ending on every branch reaches an end is exactly excluded middle.",
+      "zh": "在文法上，对任意载体与关系：诸支皆尽在双重否定下有终，在线上各点是否延续可判定时有终。两点之上，自 false 到 true 的一步恰在命题 P 成立时发生，自 false 之线诸支皆尽，而任何终点都判定 P；故\"诸支皆尽之线皆有终\"恰等价于排中。",
+      "declarations": [
+        "Becoming.Map.not_not_end_of_ends",
+        "Becoming.Map.end_of_ends_decided",
+        "Becoming.Map.StepWhere.relation",
+        "Becoming.Map.StepWhere.ends",
+        "Becoming.Map.StepWhere.has_next_iff",
+        "Becoming.Map.StepWhere.end_decides",
+        "Becoming.Map.end_of_ends_iff_excluded_middle"
+      ]
+    },
+    {
+      "en": "On the base: in a web with one occurrence active at step 0, one at step 1 and none from step 2, the start continued exactly where P holds, the law's premise holds at activity and at the kind grain and the pattern degenerates, while any end decides P; so that every line meeting the law's premise reaches an end is exactly excluded middle. Nothing infinite is undecided there, only whether one relation holds.",
+      "zh": "在基底上：一网中第 0 步一事活跃、第 1 步一事活跃、自第 2 步起无一活跃，起点恰在 P 成立时被延续；此律的前提在活动与种类粒度上皆成立，样式退化，而任何终点都判定 P；故\"满足此律前提之线皆有终\"恰等价于排中。其处无无穷者未定，只有一个关系是否成立未定。",
+      "declarations": [
+        "Becoming.Map.Undecided.web",
+        "Becoming.Map.Undecided.continuation",
+        "Becoming.Map.Undecided.inactive_two",
+        "Becoming.Map.Undecided.last_ends",
+        "Becoming.Map.Undecided.first_continues",
+        "Becoming.Map.Undecided.first_has_next_iff",
+        "Becoming.Map.Undecided.degenerates",
+        "Becoming.Map.Undecided.kind_degenerates",
+        "Becoming.Map.Undecided.end_decides",
+        "Becoming.Map.end_of_gone_iff_excluded_middle"
+      ]
+    },
+    {
+      "en": "Witnesses that each regime's premises hold together from an active start, each line taking a step before it degenerates: a formation whose condition falls below its need after step 1; the coupled patch, its taker and renewer read as one family; the stopped relay at every stopping step. In all three activity is given, not derived from the regime.",
+      "zh": "见证：每一态的前提自一活跃起点可同时成立，每条线在退化前先走一步：一个形成，其条件在第 1 步后降至所需之下；耦合的地块，取者与更新者读作一族；在每一停止步停止的接力。三者中活动皆是给定的，不由态推出。",
+      "declarations": [
+        "Becoming.Map.Depleted.web",
+        "Becoming.Map.Depleted.dependent",
+        "Becoming.Map.Depleted.below",
+        "Becoming.Map.Depleted.every",
+        "Becoming.Map.Depleted.continues",
+        "Becoming.Map.Depleted.degenerates",
+        "Becoming.Map.coupled_degenerates",
+        "Becoming.Map.coupled_continues",
+        "Becoming.Map.stopped_relay_degenerates",
+        "Becoming.Map.stopped_relay_continues"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "A uniform horizon: one step N, not before the start, at which nothing the line reaches is active, on every branch; an active start; the class read included in activity («则» E W.activityClass).",
+      "zh": "一致的视界：不早于起点的某一步 N，线在每一支上于此所及皆不活跃；起点活跃；所读之类含于活动（«则» E W.activityClass）。"
+    },
+    {
+      "en": "A continuation advances the step by one; formations are a fixed index type; activity is Prop-valued; continuations and kinds are Prop-valued relations, kinds supplied as a relation Q.",
+      "zh": "一个续使步数加一；形成是固定的指标类型；活动取命题值；续与种类是命题值关系，种类以关系 Q 给出。"
+    },
+    {
+      "en": "For the regimes, each regime law's own premises: natural-number levels and needs, activity needing support (consumption); a family's natural-number stock, uptake and replenishment, balance and the coupled gate (a whole drawing); passing with brief carriers that stops (the stopped relay).",
+      "zh": "对诸态，各态之律自身的前提：自然数的水平与所需、活动需要支持（消耗）；一族的自然数存量、摄取与补充，平衡与耦合门控（整体汲取）；承载者短暂而停止的传递（停止的接力）。"
+    },
+    {
+      "en": "For reaching an end: going on decided at the points of the line, a logical commitment. The calibrations compare with excluded middle; they do not assume it.",
+      "zh": "对有终：线上各点是否延续可判定，这是逻辑承诺。校准是与排中相比较，并不假定它。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a line known to end on every branch within a known horizon shows a point at which it ends: showing one is deciding, at the points of the line, whether a step continues it.",
+      "zh": "已知在已知视界内诸支皆尽的线，即显示其终点：显示终点就是在线上各点判定一步是否延续它。",
+      "kind": "non-implication",
+      "witness": "Becoming.Map.end_of_gone_iff_excluded_middle"
+    },
+    {
+      "en": "That a regime is what ends a line: in the witnesses activity is given, and they show only that the premises hold together.",
+      "zh": "态就是使线终结者：见证中活动是给定的，它们只表明前提可同时成立。",
+      "kind": "scope"
+    },
+    {
+      "en": "Degeneration where no one step bounds every branch: the law asks for a uniform horizon.",
+      "zh": "没有一步能约束每一支时的退化：此律要求一致的视界。",
+      "kind": "scope"
+    },
+    {
+      "en": "The some-branch regions (生成, 后守) on the World: what this record reads on the World is degeneration, the every-branch region.",
+      "zh": "世界上的某支之域（生成、后守）：此处在世界上读出的是退化，即诸支之域。",
+      "kind": "scope"
+    },
+    {
+      "en": "Classes coarser than activity: the law is stated at every class included in activity.",
+      "zh": "比活动更粗的类：此律陈述于含于活动的每一类。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "detail": {
+        "en": "Map.Undecided: the premise of the law holds and the pattern degenerates, while any end the line reaches decides P (Map.Undecided.end_decides), so reaching an end from the premise asks excluded middle.",
+        "zh": "Map.Undecided：此律的前提成立且样式退化，而线所及的任何终点都判定 P（Map.Undecided.end_decides），故由此前提而有终需要排中。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "detail": {
+        "en": "Map.StepWhere: on the grammar, one step from false to true taken exactly where P holds; the line from false ends on every branch and any end decides P (Map.StepWhere.end_decides).",
+        "zh": "Map.StepWhere：在文法上，自 false 到 true 的一步恰在 P 成立时发生；自 false 之线诸支皆尽，而任何终点都判定 P（Map.StepWhere.end_decides）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "decidability",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineDegeneration at receipt 20261101T024359.312453Z, 45 declarations (40 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineDegeneration，回执 20261101T024359.312453Z，45 个声明（40 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "Placing the parts in their owners' modules: the grammar part in GrammarMap beside «尽则非不穷», the rest in MapInstances, where the laws that a regime's line is not without end would be re-derived from degeneration in place, and the kind instance in KeepingWidening; with Web.degenerates_of_gone renamed for the end it concludes.",
+    "zh": "把各部分放入其所属模块：文法部分入 GrammarMap，置于 «尽则非不穷» 旁；其余入 MapInstances，在那里\"态之线非不穷\"诸律就地由退化重新推出；种类实例入 KeepingWidening；并按其所推出的终点为 Web.degenerates_of_gone 改名。"
+  },
+  "correspondence": {
+    "en": "Constructively, a branching bounded by a common step is well founded: every branch ends with no excluded middle, while exhibiting an end asks for decided branching. The calibration is of the kind of the grammar's «延尽之定当且仅当排中» and «不穷有终之定当且仅当排中», which ask which region a point lies in; here the region is known and where an end lies is asked. All three are equivalent to excluded middle.",
+    "zh": "构造地看，以一个公共步数为界的分支是良基的：每一支皆终，不用排中；而给出一个终点需要分支可判定。此校准与文法的 «延尽之定当且仅当排中»、«不穷有终之定当且仅当排中» 同类，那两条问一点在哪个域；此处域已知，所问的是终点在何处。三者皆等价于排中。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+  "aliases": [
+    "Becoming.Web.ends_of_ends_at",
+    "Becoming.Web.every_branch_ends_of_gone",
+    "Becoming.Web.activity_every_branch_ends_of_gone",
+    "Becoming.Web.kind_every_branch_ends_of_gone",
+    "Becoming.Web.consumed_held_degenerates",
+    "Becoming.Web.family_excess_degenerates",
+    "Becoming.Web.stopped_degenerates",
+    "Becoming.Map.not_not_end_of_ends",
+    "Becoming.Map.end_of_ends_decided",
+    "Becoming.Map.end_of_ends_iff_excluded_middle",
+    "Becoming.Map.end_of_gone_iff_excluded_middle"
+  ],
+  "dependencies": [
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The map's «尽», «退化» and «尽则非不穷» (Becoming.GrammarMap) and its reading on the World (Becoming.MapInstances): occurrences along a continuation's step, activity as the coarse class, and the laws that a line is not without end, which degeneration here gives.",
+        "zh": "复用地图的 «尽»、«退化» 与 «尽则非不穷»（Becoming.GrammarMap）及其在世界上的读法（Becoming.MapInstances）：沿续之步的事、以活动为粗类，以及\"线非不穷\"诸律；此处由退化给出它们。"
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.kindClass and Web.kindClass_within (Becoming.KeepingWidening): the kind class is a class within activity, so the law holds at the kind grain, the lineage continuation Web.withinKind included.",
+        "zh": "复用 Web.kindClass 与 Web.kindClass_within（Becoming.KeepingWidening）：种类之类含于活动，故此律在种类粒度上成立，世系之续 Web.withinKind 亦在其中。"
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The coupled patch (Coupled, Becoming.Continuation) witnesses the regime of a whole drawing beyond its gated renewal, read along every continuation.",
+        "zh": "复用耦合地块（Coupled，Becoming.Continuation）作为\"整体汲取超出其门控更新\"之态的见证，沿每一续读之。"
+      }
+    },
+    {
+      "id": "a-pattern-lasts-through-passing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The stopped relay (PatternRelay.stopped, Becoming.PatternPassing) witnesses the regime of passing that stops, at every stopping step.",
+        "zh": "复用停止的接力（PatternRelay.stopped，Becoming.PatternPassing）作为\"传递停止\"之态的见证，在每一停止步。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "role": "proof",
+      "sha256": "bbbc76d60ce044334f966c2b638df1fc8d3d47887576e5e4727eadd03d5abd98",
+      "declarations": [
+        "Becoming.Map.Depleted.below",
+        "Becoming.Map.Depleted.continues",
+        "Becoming.Map.Depleted.degenerates",
+        "Becoming.Map.Depleted.dependent",
+        "Becoming.Map.Depleted.every",
+        "Becoming.Map.Depleted.web",
+        "Becoming.Map.StepWhere.end_decides",
+        "Becoming.Map.StepWhere.ends",
+        "Becoming.Map.StepWhere.has_next_iff",
+        "Becoming.Map.StepWhere.relation",
+        "Becoming.Map.Undecided.continuation",
+        "Becoming.Map.Undecided.degenerates",
+        "Becoming.Map.Undecided.end_decides",
+        "Becoming.Map.Undecided.first_continues",
+        "Becoming.Map.Undecided.first_has_next_iff",
+        "Becoming.Map.Undecided.inactive_two",
+        "Becoming.Map.Undecided.kind_degenerates",
+        "Becoming.Map.Undecided.last_ends",
+        "Becoming.Map.Undecided.web",
+        "Becoming.Map.coupled_continues",
+        "Becoming.Map.coupled_degenerates",
+        "Becoming.Map.end_of_ends_decided",
+        "Becoming.Map.end_of_ends_iff_excluded_middle",
+        "Becoming.Map.end_of_gone_iff_excluded_middle",
+        "Becoming.Map.not_not_end_of_ends",
+        "Becoming.Map.stopped_relay_continues",
+        "Becoming.Map.stopped_relay_degenerates",
+        "Becoming.Web.Restated.consumed_held_not_endless",
+        "Becoming.Web.Restated.degenerates_of_gone",
+        "Becoming.Web.Restated.family_excess_not_endless",
+        "Becoming.Web.Restated.not_endless_of_gone",
+        "Becoming.Web.Restated.stopped_not_endless",
+        "Becoming.Web.active_along_finer",
+        "Becoming.Web.activity_every_branch_ends_of_gone",
+        "Becoming.Web.consumed_held_degenerates",
+        "Becoming.Web.consumed_held_gone",
+        "Becoming.Web.ends_before",
+        "Becoming.Web.ends_of_ends_at",
+        "Becoming.Web.every_branch_ends_of_gone",
+        "Becoming.Web.family_excess_degenerates",
+        "Becoming.Web.family_excess_gone",
+        "Becoming.Web.kind_every_branch_ends_of_gone",
+        "Becoming.Web.reached_coarser",
+        "Becoming.Web.stopped_degenerates",
+        "Becoming.Web.stopped_gone"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineDegeneration",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item EL (evolution read on the root, its part EL3): added. The base's laws that a line is not without end are read as degeneration, constructively, at every class within activity; the three regimes degenerate; the decision behind reaching an end is calibrated against excluded middle on the base and on the grammar. Landed as a core leaf; the proposed placement in GrammarMap, MapInstances and KeepingWidening, and the rename of Web.degenerates_of_gone, wait on their owners.",
+      "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL3 部分）：新增。基底的\"线非不穷\"诸律在活动之内的每一类上被构造地读作退化；三种态皆退化；有终所需的判定在基底与文法上与排中校准。作为核心叶落地；拟放入 GrammarMap、MapInstances 与 KeepingWidening 的安排，以及 Web.degenerates_of_gone 的改名，待其所属者定。"
+    }
+  ]
+}

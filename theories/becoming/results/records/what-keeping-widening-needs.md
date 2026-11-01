@@ -117,7 +117,7 @@ Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evoluti
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Comparing two courses on what they admit, which no law here does.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 
-**Used by:** [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md)
+**Used by:** [degeneration-from-a-horizon](degeneration-from-a-horizon.md) · [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md)
 
 <a id="sources--来源"></a>
 ### Sources
