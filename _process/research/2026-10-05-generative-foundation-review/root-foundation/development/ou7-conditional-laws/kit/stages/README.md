@@ -12,7 +12,7 @@ Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a dire
 
 `OU7_STAGES`, when set, names the stages taken, and `none` takes none.
 
-**Apply.** Each stage is tried first on a copy of the files its series changes, as the tree has them, patch by patch. A stage with no patch, or one whose series does not apply there, stops `apply` with the patch and git's words, and nothing of the stage is written. Its owner then rebases the series on that tree, or the landing leaves the stage out with a `SKIP` file or `OU7_STAGES`, and OU7 lands without it (R10). Run again, `apply` finds the stages already in place and goes on from the first that is not.
+**Apply.** Each stage is tried first on a copy of the files its series changes, as the tree has them, patch by patch. A stage with no patch, or one whose series does not apply there, stops `apply` with the patch and git's words, and nothing of the stage is written. Its owner then rebases the series on that tree, or the landing leaves the stage out with a `SKIP` file or `OU7_STAGES`, and OU7 lands without it (R10). Run again, `apply` finds the stages already in place and goes on from the first that is not. The dry run drops such a stage itself, names it, and goes on without it, so that a failed stage never holds up OU7's own patches; it prints the `OU7_STAGES` the landing then takes.
 
 The audit requires every selected stage in place. The audit, the receipt line, the study section and the commit name exactly the stages taken.
 
@@ -37,7 +37,7 @@ Every name is written as the audit keys it: `Becoming.` and the name as written 
 
 [dry_run.py](../dry_run.py) takes every stage the landing takes:
 - its tree holds the files the series changes;
-- the land script's `apply` tries and applies each series there, as in the landing, and stops where the landing would;
+- the land script's `apply` tries and applies each series there, as in the landing; a stage that stops it is dropped and named, and the run goes on with the stages left;
 - its synthetic receipt holds the declarations `EXPECTED.json` names;
 - the records the series changes are re-pointed and validated with the rest.
 

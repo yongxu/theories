@@ -13,7 +13,8 @@ Last, OU7's two records, those the record stage changes, every re-pointed record
 registry's own validation and the lint, and no record is left drifting. Nothing in the repository is written. Each
 stage in the kit's stages/ rides along as the landing takes it (a SKIP file or OU7_STAGES leaves one out): the tree
 holds the files its patches change, the synthetic receipt its declarations, and the records its patches change are
-re-pointed and validated with the rest.
+re-pointed and validated with the rest. A stage that is empty or does not apply is dropped, named, and the run goes
+on without it, as the landing would with OU7_STAGES set to the stages left.
 
   python3 -B <kit>/dry_run.py OUT [MAIN]     OUT: a new folder outside the repository; MAIN: the commit, by default
                                              refs/heads/main
@@ -128,8 +129,6 @@ STAGE_TOUCHED = patch_paths([p for d in STAGE_DIRS for p in sorted(d.glob('*.pat
 touched = sorted(patch_paths(KIT_PATCHES) | STAGE_TOUCHED)
 held = held_by_main(touched)
 paths += [x for x in touched if x in held and not any(x == q or x.startswith(q + '/') for q in paths)]
-STAGE_RECORDS = tuple(sorted(Path(x).stem for x in STAGE_TOUCHED
-                             if x.startswith('theories/becoming/results/records/') and x.endswith('.json')))
 TREE.mkdir(parents=True)
 LOG.mkdir()
 extract(paths)
@@ -165,7 +164,26 @@ print('tree', TREE, 'from', run('git', 'rev-parse', '--short', MAIN, cwd=REPO).s
 
 env = {**os.environ, 'LOG': str(LOG)}
 show('prepare', run('zsh', KIT + 'land_ou7.sh', 'prepare', env=env))
-show('apply', run('zsh', KIT + 'land_ou7.sh', 'apply', env=env), 60)
+# A stage that is empty or does not apply stops `apply`, nothing of it written. The dry run drops it, says so, and goes
+# on without it, so that a failed stage never holds up OU7's own patches; every later step takes the stages left, as
+# the landing does with OU7_STAGES set to them (or a SKIP file in each dropped stage).
+DROPPED = []
+FAILED_STAGE = re.compile(r'^stage (\S+?)(?:: \S+ does not apply| has no patch)', re.M)
+while True:
+    applied = run('zsh', KIT + 'land_ou7.sh', 'apply', env=env, ok=False)
+    failed = FAILED_STAGE.search(applied.stdout + applied.stderr) if applied.returncode else None
+    if failed and failed.group(1) in {d.name for d in STAGE_DIRS} - set(DROPPED):
+        DROPPED.append(failed.group(1))
+        env['OU7_STAGES'] = os.environ['OU7_STAGES'] = \
+            ' '.join(d.name for d in STAGE_DIRS if d.name not in DROPPED) or 'none'
+        print(f'== stage {failed.group(1)} dropped, nothing of it written: {failed.group(0)}; the landing takes '
+              f'OU7_STAGES="{env["OU7_STAGES"]}" or a SKIP file in stages/{failed.group(1)}/, and OU7 lands without it')
+        continue
+    if applied.returncode:
+        sys.exit(f'FAILED: apply\n{applied.stdout[-3000:]}\n{applied.stderr[-3000:]}')
+    break
+show('apply', applied, 60)
+STAGE_DIRS = [d for d in STAGE_DIRS if d.name not in DROPPED]
 again = run('zsh', KIT + 'land_ou7.sh', 'apply', env=env)
 applied = [l for l in (LOG / 'apply.log').read_text().splitlines() if l.endswith(': applied')]
 assert not applied, ('the second apply applied again', applied)
@@ -289,7 +307,9 @@ drift = json.loads(run('python3', '-B', '-c', registry_probe).stdout)
 (LOG / 'drift.json').write_text(json.dumps({'source_drift': drift}, ensure_ascii=False, indent=1), encoding='utf-8')
 DRIFTED = tuple(sorted({d['id'] for d in drift}))
 lean = [x for x in run('git', 'diff', '--name-only', 'HEAD', '--', PKG + 'Becoming').stdout.split() if x.endswith('.lean')]
-STAGE_IDS = tuple(r for r in STAGE_RECORDS if (TREE / f'theories/becoming/results/records/{r}.json').exists())
+STAGE_IDS = tuple(sorted(Path(x).stem for x in patch_paths([p for d in STAGE_DIRS for p in sorted(d.glob('*.patch'))])
+                         if x.startswith('theories/becoming/results/records/') and x.endswith('.json')
+                         and (TREE / x).exists()))   # the records of the stages taken
 show(f're-point of the drift: {len(drift)} pairs in {len(DRIFTED)} records, {len(lean)} Lean files rebound', run(
     'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--drift-json', str(LOG / 'drift.json'),
     '--receipt', RECEIPT, '--lean', *lean, '--apply'), 4)
@@ -346,4 +366,5 @@ validate = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".")
 CHECKED = tuple(dict.fromkeys((mr.RID, mb.RID) + GENERALIZED + WORDS + OWNER + CUT + DRIFTED + STAGE_IDS))
 show(f'the {len(CHECKED)} records through the registry and the lint', run('python3', '-B', '-c', validate, *CHECKED), 60)
 show('what the dry run changed in the tree', run('git', 'status', '--short'), 40)
+print('stages taken:', ' '.join(d.name for d in STAGE_DIRS) or 'none', '| dropped:', ' '.join(DROPPED) or 'none')
 print('dry run done:', TREE)

@@ -150,7 +150,7 @@ All checks ran on 1 November.
   - Part A: one finding, because the leaf is not yet in the package. No other finding, and no lint finding.
   - Part B: two findings, because the leaves are not yet in the package. No other finding, and no lint finding.
 - **Part B's names.** `check_record_b.py`: every declaration the record names was built, and there were no errors.
-- **Dry run.** [dry_run.py](dry_run.py) ran on main at a91c84d35 (DU landed), in a throwaway git tree. The tree held the main files the kit reads or writes, every record pinning one of them with every file it references, and this branch's study folder. Its one commit has main for its parent, so the registry reads every version a record was reviewed against, as in the checkout.
+- **Dry run.** [dry_run.py](dry_run.py) ran on main at a91c84d35 (DU landed), merged into this branch as dfcd8d450, in a throwaway git tree. The tree held the main files the kit reads or writes, every record pinning one of them with every file it references, and this branch's study folder. Its one commit has main for its parent, so the registry reads every version a record was reviewed against, as in the checkout.
   - `prepare`: the nine patches applied as one series, and every anchor was found.
   - `apply`, run twice: the first run made every edit, the Lean catalogue's description of the ring and the owner's notes, rows and scope sentences among them. The second run applied nothing. The audit passed after each run:
     - Grammar gained exactly its two laws and GrammarReadings its one;
@@ -176,9 +176,14 @@ All checks ran on 1 November.
   - an empty stage and a stage whose patch does not apply each stopped `apply`, with nothing written;
   - `SKIP` left the second out, and the audit named it nowhere;
   - `OU7_STAGES` selected the stages taken; a stage applied but not taken failed the audit; and a name with no stage stopped the run.
+- **A failed stage dropped.** A second dry run took two throwaway stages, one that applies and one that does not. The second was dropped and named, nothing of it written, and the run printed the `OU7_STAGES` the landing would take. The run went on with the first, every step taking it:
+  - the audit took its `EXPECTED.json`;
+  - the record stage counted its law in master-laws-on-the-grammar's scope, at 180 theorems in 209 declarations;
+  - the register took its root, the study section its paragraph, and the joined re-point reason its line;
+  - `integrate_ou7.py stages` named it alone, and 0 findings were left on the 26 records.
 - **Links.** `research.py links`: 0 broken in 1,954 files, the kit's documents among them.
 - **The rehearsals' Lean steps** ([REHEARSAL.json](REHEARSAL.json); the counts are in [the patches' README](patches/README.md#checked)), each in a tree outside the repository:
-  - The owner's: the four patches on main's five files, beside four name checks, inside the coordinator's gate. `scratch_build.py` built 53 modules, nothing unclean, every axiom report empty. Every name the patches move or define anew resolves as before, to its old statement, from GrammarCrossing, ConveyanceBoundaries, GrammarPath and BalanceRegions. Applied to main's files at a91c84d35, the patches make the tree's five files byte for byte.
+  - The owner's: the four patches on main's five files, beside four name checks, inside the coordinator's gate. It stands on a91c84d35: since its base, 8f11b43bd, main has changed only three new leaves and the root module, none of them in the closure it built. `scratch_build.py` built 53 modules, nothing unclean, every axiom report empty. Every name the patches move or define anew resolves as before, to its old statement, from GrammarCrossing, ConveyanceBoundaries, GrammarPath and BalanceRegions. Applied to main's files at a91c84d35, the patches make the tree's five files byte for byte.
   - The first ([history/REHEARSAL.json](history/REHEARSAL.json)): the kit's own patches and the three leaves, with the earlier owner patches, 145 modules, nothing unclean, every axiom report empty. Neither the kit's patches nor the leaves have changed since.
   - The rehearsals leave three things to the rebuild: the other modules, the checker's run with its new lists, and the core receipt. The full rehearsal with the stages comes first ([below](#what-waits)).
   - Earlier builds: part A's build 3 ([BUILD.json](../tree/BUILD.json)) and part B's scratch build, which is fork 2's ([check/scratch-build.log](../check/scratch-build.log)).
