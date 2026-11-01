@@ -131,6 +131,8 @@ REASONS = {
         'exactly where it weighs less, a wrapper of the assorted laws: ' + SHAPED),
     'Becoming.PairSelection.window_alternator_favours_iff': ('Becoming.PairSelection', R, 'window pairs against '
         'alternator pairs are weakly favoured exactly where a received step weighs at least a withheld one: ' + SHAPED),
+    'Becoming.PairSelection.cohort_paired': ('Becoming.PairSelection', W, 'every group of the witness cohort is a pair: '
+        'the witness meets the premise of never_rises_in_pairs, a cohort listed as pairs (EL4b)'),
 }
 others = [n for n in unclassified if n not in REASONS]
 assert not others, ("apart roots not registered here: read them; another session's belong to their owners", others)
