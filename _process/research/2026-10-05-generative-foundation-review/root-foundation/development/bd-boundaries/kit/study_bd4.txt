@@ -1,0 +1,55 @@
+## {N}. Balance on each closure, on the root (BD4)
+
+Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Of the regions not gone out of, the closures are the least: among the listed relata, each such region is the union of the closures of the relata it holds. At the unit grain the same closures keep the count, by the count law of a class. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)).
+
+```text
+Result(s): balance-from-conservation-along-a-relation (an eighth law: each closure under the listed adjacency decided
+       as a test, balance from conservation on each closure, and the unit grain's case of the count law of a class;
+       the sixth item on what is not shown replaced by two).
+Delta:
+  - The closure decided. A relatum's closure under adjacency among the listed relata, the grammar's «所闭», is
+    what is reached from it within as many steps of that adjacency as relata are listed
+    (Continuity.closureListed, closureListed_iff). Counted by «计», the listed relata reached grow at each step
+    until a step reaches nothing new, after which none does (reachedListed_stays), and they cannot outnumber the
+    list (reachedListed_grows_or_stays, closureListed_closed).
+  - Balance on each closure. Conservation on every family the relation closes is conservation on each closure
+    (conservedOn_iff_closures). A closed family holding a listed relatum holds its closure (closureListed_inside,
+    by «闭含所闭»). What it holds beyond that closure the relation closes (closes_and_not), and it holds fewer
+    listed relata (conserved_peel, conserved_of_closures). So, relata listed without repetition and equality
+    decided, transfers along the relation that balance a step exist exactly where the total is conserved on the
+    closure of each listed relatum (balancing_iff_closures); on a web, likewise at every step
+    (balancesOn_iff_closures).
+  - The unit grain. The closure of a symmetric relation is a class (by «所闭之自反», «所闭之对称» and
+    «所闭之传递»). So, where a test decides the closure, a pairing under it is the count kept on each closure: a
+    case of «类之对当且仅当类类等数» (pairing_iff_closure_counts; along the listed adjacency, pairing_iff_closures).
+Supplied premises / correspondence: none beyond balancing_iff's own (relata listed without repetition, decided
+       equality, the relation and membership as Bool tests). Decided equality is a modelling hypothesis, and its
+       instances add no axiom. Conservation on each connected part is the uncapacitated case of the feasibility
+       conditions for flows (Gale 1957; Hoffman 1960). Modelling choices are those of Becoming.Continuity (finitely
+       many listed relata, natural-number levels, discrete steps).
+Evidence: core receipt `{RECEIPT}`; Becoming.BalanceRegions (BALANCEREGIONS), the core leaf BD3 began, extended;
+       every axiom report empty; no other module changed.
+Standing: proved. The closure's decision by a counting bound and the decomposition by induction on what a family
+       holds are the new pieces. The rest is Continuity's law and the grammar's laws applied to them. The unit
+       grain is a case of a grammar law. Read [AI reading]: the regions balance is kept on are the relation's own
+       closures, at both grains, so locality is the relation's own: what it holds together keeps its count.
+Boundary:
+  - Transfers within capacities, the capacitated case of the same conditions: not stated.
+  - Units paired along one step of the adjacency where each closure keeps its count: the unit-grain law pairs
+    them within a closure, whose units need not be adjacent.
+  - Infinitely many relata, levels other than natural numbers, and a local choice of flux (Continuity's own
+    boundary) are not reached.
+  - Re-pairing (OU's condition on lever 1's test): the amount-grain laws quantify over no pairing. The unit-grain
+    law holds for every pairing under the closure one way and is an existence statement the other, so each is
+    invariant. U4's verdict stands: lever 1's round trip still fails, and this is locality, not the lift.
+Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of what is not shown);
+       balance-from-conservation-along-a-relation's eighth law, its two items on what is not shown, its
+       correspondence, its dependency on master-laws-on-the-grammar, its scope and its history; the root module's
+       bullet, the checker's scope, both package READMEs; regions.json; the board's BD4 row.
+```
+
+**Self-review.**
+1. `BalanceRegions` stays a leaf. It imports `Continuity` and `GrammarCrossing`, nothing imports it, and no other module changes, so only it rebuilds.
+2. No classical principle enters. The closure is a Bool test computed by iteration. Each case split is on a Bool's two values (`Bool.eq_false_or_eq_true`) or on a decided comparison of counts (`Nat.lt_or_ge`). `DecidableEq` enters only as the hypothesis on relata.
+3. The unit grain is a case of a grammar law, not a separate proof. Its two hypotheses, symmetry and the decision, are named in the law.
+4. Not done: the items in Boundary.
