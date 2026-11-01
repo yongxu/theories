@@ -1,0 +1,26 @@
+diff --git a/theories/becoming/results/records/laws-of-one-step.json b/theories/becoming/results/records/laws-of-one-step.json
+index b40225b28..cfc549973 100644
+--- a/theories/becoming/results/records/laws-of-one-step.json
++++ b/theories/becoming/results/records/laws-of-one-step.json
+@@ -221,8 +221,8 @@
+     "en": "Restate the remaining localizable laws (dependence, reserve and support) locally; real-valued time; the representation decisions of class (b) and the names."
+   },
+   "correspondence": {
+-    "zh": "各取舍下的定理问的是：在八个前提的某种取舍之下，计数服从哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，各取舍下的结果因此是推论。读法（AI，依 Ren 的交托采用）：不用条件的理论中前提约束的规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
+-    "en": "The theorems on choices of premises ask which laws the counts obey under a choice of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the results for each choice are corollaries. Reading (AI, adopted on Ren's delegation): the laws that the premises bound in the theory without the condition are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
++    "zh": "各取舍下的定理问的是：在八个前提的某种取舍之下，计数满足哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，各取舍下的结果因此是推论。读法（AI，依 Ren 的交托采用）：不用条件的理论中前提约束的规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
++    "en": "The theorems on choices of premises ask which laws the counts satisfy under a choice of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the results for each choice are corollaries. Reading (AI, adopted on Ren's delegation): the laws that the premises bound in the theory without the condition are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
+   },
+   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+   "aliases": [
+@@ -903,6 +903,10 @@
+     {
+       "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: not_not_all to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; not_not_all generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+       "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：not_not_all 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；not_not_all 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ],
+   "text_versions": [

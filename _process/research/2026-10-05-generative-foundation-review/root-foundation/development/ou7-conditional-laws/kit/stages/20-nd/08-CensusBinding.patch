@@ -1,0 +1,37 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusBinding.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusBinding.lean
+index 7244ad17e..ab2d6b880 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusBinding.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusBinding.lean
+@@ -47,7 +47,7 @@ from one proof. Each equivalence saying where a law is one (`…_activity_iff_co
+ that its property is pointwise, and the decided equivalence, composed; finite and enclosed worlds
+ agree under a selection, for every property and for pointwise ones, by one tally lemma
+ (`World.enclosed_iff_finite_tally`). Where a procedure decides activity, these laws give the
+-decided ones (`World.CountsHold.obey`). The decided statements stay, with their scope.
++decided ones (`World.CountsHold.marks`). The decided statements stay, with their scope.
+ -/
+ 
+ namespace Becoming
+@@ -319,10 +319,10 @@ theorem counting_binds_jointly_counted :
+       (fun n _ a => ∀ t, 0 < a t → 0 < n t) :=
+   ⟨fun _ balanced acting embodied _ _ _ _ census counted _ =>
+     counted.company fun _ _ comes => active_of_coming_jointly balanced acting embodied census comes,
+-   fun obeys => Nat.lt_irrefl 0
+-    (obeys _ _ _ _ Queue.listed (queue_countsOf Queue.lone_tally) 0 Nat.zero_lt_one),
+-   fun obeys => Nat.lt_irrefl 0
+-    (obeys _ _ _ _ Queue.listed (embodiedQueue_countsOf Queue.lone_tally) 0 Nat.zero_lt_one)⟩
++   fun marks => Nat.lt_irrefl 0
++    (marks _ _ _ _ Queue.listed (queue_countsOf Queue.lone_tally) 0 Nat.zero_lt_one),
++   fun marks => Nat.lt_irrefl 0
++    (marks _ _ _ _ Queue.listed (embodiedQueue_countsOf Queue.lone_tally) 0 Nat.zero_lt_one)⟩
+ 
+ /-- So, where the counts exist, under the eight premises worlds enclosed from some step on and
+ finite worlds have the same laws of counting. -/
+@@ -351,7 +351,7 @@ every world meeting it. The pointwise condition belongs to the reading on what s
+ counted side needs none. -/
+ theorem standing_iff_counting_counted (S : Premise → Bool)
+     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q) :
+-    (∀ w : World, w.Meets S → w.StandsObey Q) ↔ ∀ w : World, w.Meets S → w.CountsHold Q :=
++    (∀ w : World, w.Meets S → w.StandingMarksHold Q) ↔ ∀ w : World, w.Meets S → w.CountsHold Q :=
+   (standing_counting_under S pointwise).symm.trans (counting_under_counted S)
+ 
+ end World

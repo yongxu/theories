@@ -1,0 +1,16 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+index a7fd175c2..9705940d9 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+@@ -3,9 +3,9 @@ import Becoming.GrammarMap
+ import Becoming.Prelude
+ 
+ /-!
+-# The five master laws on the grammar (主律)
++# The five shared laws on the grammar (共律)
+ 
+-The master laws of the method chapter (08 §7) restated on the grammar of `Becoming.Grammar`, for
++The shared laws of the method chapter (08 §7) restated on the grammar of `Becoming.Grammar`, for
+ every carrier and every relation: closure, balance, finite runs (return, being drawn, rest and
+ steps counted), lumping and order. Each is stated with what it uses: where a global form uses more
+ (a fixed successor everywhere, merging nothing everywhere, a successor everywhere, a list of the
