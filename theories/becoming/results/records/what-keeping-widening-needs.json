@@ -999,7 +999,7 @@
         "Becoming.Web.withinKind_within",
         "Becoming.«全生成则生成»"
       ],
-      "sha256": "e0ad2ca67a7b6abeca90a6d1d982f4169c4ce80c7eb28b4e6cc21bceb746679b"
+      "sha256": "f574904823619ca1da8c7ee0534d179a9132e171ccd4712687cb5bb34d53af29"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
@@ -1045,7 +1045,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
-      "sha256": "681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5"
+      "sha256": "32f9effbcd2cf460b10b5a3a343597f840dcf1166237c2abd14e4f14f15cdd6b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean",
@@ -1122,12 +1122,18 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.KeepingWidening",
       "success_pointer": "/status",
       "success_value": "passed"

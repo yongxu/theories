@@ -85,7 +85,7 @@ The stock as a horizon is the Malthusian bound of a finite closed resource read 
 - **formal-reuse**: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Reproduction.Flow.lineage_ends and Reproduction.Generations.empty_from: the dissipation regime, read on every member of every cohort; the stock-one relay, whose flow and levels the handover relay matches at stock one.
 - **formal-reuse**: [mutual-dependence-and-its-pace](mutual-dependence-and-its-pace.md). Flow.Balances.doubling_needs and DoublingDraw (Becoming.MutualDependence): the draw on a condition given nothing, of which draw_doubling_needs is the generalization.
 - **formal-reuse**: [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md). Becoming.LineageRegions, imported: the lineage continuation, the census premise (ContinuationsListed) and degeneration_of_dissipation, which the dissipation corollary extends to every cohort.
-- **formal-reuse**: [degeneration-from-a-horizon](degeneration-from-a-horizon.md). Web.family_excess_degenerates and Web.kind_every_branch_ends_of_gone (Becoming.LineDegeneration): the gated regime's lineage reading at the kind grain, and the takers' witness read on the map.
+- **formal-reuse**: [degeneration-from-a-horizon](degeneration-from-a-horizon.md). Web.family_excess_degenerates and Web.kind_every_branch_ends_of_gone (Becoming.MapInstances and Becoming.KeepingWidening): the gated regime's lineage reading at the kind grain, and the takers' witness read on the map.
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «生成退化不并»: generation and degeneration exclude each other, so the two fates from one stock show that the stock decides neither.
 - related, not a proved adapter: [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md). There a whole drawing beyond its gated renewal ends; here that gated regime is read on a lineage's region, with the stock as its horizon.
 
@@ -103,7 +103,8 @@ Aliases: `Becoming.LineageRegimes.degeneration_of_family_excess`, `Becoming.Line
 ### History
 
 - 1 November 2026, board item EL (evolution read on the root, its part EL2): added as a record of its own rather than an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends: the lineage reading of the gated regime with its new premise on the line's reach, both fates at every stock, the takers' law for the draw and the renewal-from-outside witness.
+- 1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.
 
 </details>
 
-Documentary review UTC: `2026-11-01T00:04:11+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T11:06:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

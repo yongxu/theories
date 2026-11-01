@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T00:04:11+00:00",
+  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
   "statement": {
     "en": "A common shift of offspring numbers keeps the selection term, so in a horizon two fates can share the terms; unboundedly many positive terms, or one with exact transmission after it, force going on. Where listed offspring continue their parents, a cohort degenerates only if a later one is empty.",
     "zh": "后代数的共同平移不改变真正的选择项，故在视界之内两种命运可共有同一组项；在无界多步为正的项，或一个正项加上其后的精确传递，迫使延续。在所列后代于粗线上延续其亲代的世系上，一代退化仅当其后某代为空。"
@@ -571,8 +571,8 @@
       "id": "degeneration-from-a-horizon",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.LineDegeneration, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.",
-        "zh": "复用 Web.ends_of_ends_at 与 Web.kind_every_branch_ends_of_gone（Becoming.LineDegeneration，已导入）：普查下的空代，以及在某步已逝的线，使线诸支皆尽。"
+        "en": "Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.MapInstances and Becoming.KeepingWidening, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.",
+        "zh": "复用 Web.ends_of_ends_at 与 Web.kind_every_branch_ends_of_gone（Becoming.MapInstances 与 Becoming.KeepingWidening，已导入）：普查下的空代，以及在某步已逝的线，使线诸支皆尽。"
       }
     },
     {
@@ -740,7 +740,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
       "role": "proof",
-      "sha256": "5a6c2674ee4bbd320e6b8741d436fdf93e8bbba80c9b19add29c2d9a1a24fc60",
+      "sha256": "909c5d951cead58f28337037256d5c9b7e6d0ebe291fb454e96ba0e761c26c60",
       "declarations": [
         "Becoming.LineageRegions.Chain.acting",
         "Becoming.LineageRegions.Chain.chain",
@@ -923,6 +923,12 @@
       "role": "receipt",
       "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -935,7 +941,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegions",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -945,6 +951,10 @@
     {
       "en": "1 November 2026, board item EL (evolution read on the root, its part EL1): added, citing Becoming.SelectionShift (the counting layer) and Becoming.LineageRegions (the join on the map). The design's draft claims that no course of selection terms decides and that a term positive at every generation can go with every member degenerating were refuted in the Lean rounds and are kept as the laws that refute them; the witness is positive at every cohort but the last nonempty one.",
       "zh": "2026年11月1日，工作板条目 EL（在根上读演化，其 EL1 部分）：新增，引用 Becoming.SelectionShift（计数层）与 Becoming.LineageRegions（地图上的接合）。设计草稿中\"无选择项进程起决定作用\"与\"每代皆正的项可与每个成员退化并存\"二说，在 Lean 各轮中被驳倒，保留为驳倒它们的律；见证是除最后的非空之代外每代皆正。"
+    },
+    {
+      "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.",
+      "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入其所属者的模块（GrammarMap、MapInstances 与 KeepingWidening）并退役；记录所说无一改变。"
     }
   ]
 }

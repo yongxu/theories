@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "batch": "EL6-history",
+  "date": "2026-11-01T10:39:53+00:00",
+  "base_commit": "c0c95f7ec4a9a90202c84d5e0b5c83786e2ec992",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
+      "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LineDegeneration.lean",
+      "sha256": "bbbc76d60ce044334f966c2b638df1fc8d3d47887576e5e4727eadd03d5abd98",
+      "blob": "a874278c91b231f8e8afcf5703abf661a5d1e136",
+      "reason": "EL6 (1 November 2026): its laws placed in their owners' modules, each on its owner's yes (the grammar part in Becoming.GrammarMap, the kind instance in Becoming.KeepingWidening, the rest in Becoming.MapInstances, Web.Restated dropped), so the leaf is retired; bytes as on main",
+      "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [],
+  "history_roots": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/history"
+  ],
+  "generated_pages_to_rerender": [
+    "RESULTS.md",
+    "theories/becoming/results/LEAN-DECLARATIONS.md",
+    "theories/becoming/results/LEAN-INDEX.md",
+    "theories/becoming/results/data/lean-index.json",
+    "theories/becoming/results/data/source-index.json",
+    "theories/becoming/results/lean-declarations/becoming-core.md",
+    "theories/becoming/results/records/degeneration-from-a-horizon.md"
+  ],
+  "verification_errors": []
+}
