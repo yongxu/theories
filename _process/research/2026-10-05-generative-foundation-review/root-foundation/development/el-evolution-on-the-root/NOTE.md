@@ -251,7 +251,7 @@ Each is read on the map's regions rather than on a growth rate, at the grains an
 - *"From outside".* In the model a formation's giving is not drawn from its own level unless it takes, so "from outside" means from no listed condition.
 - *What it answers.* The witness answers the scope limit stated in 05 §1's record, that the gated conclusions do not reach such renewal. Among the three laws read as deciders, what ends a lineage is a regime; the stock sets when, not whether.
 
-**Home and record.** Home 04 §4, with 05 §1 pointing to it. The record is either an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends, or a record of its own for the lineage reading of the gated regime, the pair of fates at every stock and the takers' law. This is decided with the owners at landing.
+**Home and record.** Home 04 §4, with 05 §1 pointing to it. The record is its own, ending-laws-as-regimes-on-a-lineage: the lineage reading of the gated regime, the pair of fates at every stock and the takers' law. what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends are not amended.
 
 ## 5. EL3: the constructive degeneration law
 
@@ -272,16 +272,16 @@ Each is read on the map's regions rather than on a growth rate, at the grains an
   - In the witnesses of consumption and of a whole drawing, `held` is shown at every occurrence; the stopped relay has no `held` premise.
   - In all three, activity is given, not derived from the regime.
 
-**Placement** (each part on its owner's yes; EL proposes it on the board).
+**Placement** (each part on its owner's yes, decided after OU7 lands; none of it blocks EL's landing, where `Becoming.LineDegeneration` lands as a leaf).
 - *Into `GrammarMap`, on OU's owner's yes:* the part stated on the grammar alone. That is `Map.not_not_end_of_ends`, `Map.end_of_ends_decided`, the witness `Map.StepWhere` and the calibration `Map.end_of_ends_iff_excluded_middle`. It needs nothing of the World and would sit beside `«尽则非不穷»` and `«延尽之定当且仅当排中»`. There `Map.StepWhere` would be stated as GrammarMap's `Map.short` gated by `P`, and that owner decides whether the three laws take its Chinese law names. If the owner declines, this part goes into `MapInstances` with the rest.
-- *Into `Becoming.MapInstances`:* everything else except the kind instance.
+- *Into `Becoming.MapInstances`, on OU's owner's yes* (the OU line created the module): everything else except the kind instance.
   - What goes there: the general law, its activity instance, the three gone lemmas and degeneration laws, the witnesses (`Map.Undecided` without its kind witness) and the base calibration `Map.end_of_gone_iff_excluded_middle`.
   - There the landed `not_endless_of_gone`, `degenerates_of_gone` and the three regime ¬`«不穷»` laws are re-derived in place from degeneration (rule 9), so no restatement is kept.
   - `Map.Undecided` keeps its name: it states no wrong meaning (08 §10).
-- *The kind instance* (`Web.kind_every_branch_ends_of_gone`, `Map.Undecided.kind_degenerates`) cannot go there: `Web.kindClass` is defined in `KeepingWidening`, which imports `MapInstances`. It goes into `KeepingWidening` after `Web.kindClass_within`, on its owner's yes, or stays in a small leaf.
+- *The kind instance* (`Web.kind_every_branch_ends_of_gone`, `Map.Undecided.kind_degenerates`) cannot go there: `Web.kindClass` is defined in `KeepingWidening`, which imports `MapInstances`. It goes into `KeepingWidening` after `Web.kindClass_within`, on UE's owner's yes (UE7 created the module), or stays in a small leaf.
 - *If the owners decline,* `Becoming.LineDegeneration` lands as a leaf, with its `Web.Restated` block labelled as restatements and no result.
-- *A rename is proposed.* The landed name `Web.degenerates_of_gone` states a wrong meaning, since it concludes 有终, not `«退化»`. Its name says the pattern degenerates (`«退化»`, ending on every branch), while its conclusion is that the line reaches an end; the two differ, the gap being exactly excluded middle (§5 above). A rename to `Web.end_of_gone`, which states its conclusion, is proposed to `MapInstances`' owner. The moves above and this rename touch the root's map modules, which OU7's rebuild also changes, so they come after it, decided by the modules' owners. Until then `LineDegeneration` names its own law `every_branch_ends_of_gone`, to keep the two apart.
-- *Home and record.* Home 02 §1 (map), as an amendment of generation-and-degeneration-at-two-grains or as its own record, the owner's call.
+- *A rename is proposed.* The landed name `Web.degenerates_of_gone` states a wrong meaning, since it concludes 有终, not `«退化»`. Its name says the pattern degenerates (`«退化»`, ending on every branch), while its conclusion is that the line reaches an end; the two differ, the gap being exactly excluded middle (§5 above). A rename to `Web.end_of_gone`, which states its conclusion, is proposed to OU's owner, `MapInstances`' owner. The moves above and this rename touch the root's map modules, which OU7's rebuild also changes, so they come after it, decided by the modules' owners. Until then `LineDegeneration` names its own law `every_branch_ends_of_gone`, to keep the two apart.
+- *Home and record.* Home 02 §1 (map), in a record of its own, degeneration-from-a-horizon; generation-and-degeneration-at-two-grains is not amended.
 
 ## 6. Readings and instances (evidence, not results)
 
@@ -352,9 +352,8 @@ An empty axiom report says nothing of these; each law names those it uses.
 ## 9. Coordination, order and the release gate
 
 - **Owners, asked on the board, each deciding for their module.** Chapter text goes through 04's, 02's and 05's home sections.
-  - OU's owner (`GrammarMap`, `MapRegions`): EL3's grammar part, if wanted.
-  - `MapInstances`' and `PatternPassing`'s owners, named in their history rows (OU6, UE7, GW): EL3's laws in `MapInstances` and the proposed rename of `degenerates_of_gone`, after OU7's rebuild.
-  - UE's owner and GW's session (`KeepingWidening`, `WideningOnTheMap`): EL3's kind instance after `kindClass_within`.
+  - OU's owner (`GrammarMap`, `MapRegions`, and `MapInstances`, which the OU line created): EL3's grammar part, if wanted, EL3's laws in `MapInstances` and the proposed rename of `degenerates_of_gone` (its wrong meaning in §8), all after OU7 lands.
+  - UE's owner (`KeepingWidening`, which UE7 created): EL3's kind instance after `kindClass_within`, after OU7 lands.
   - The evolution modules' owners (`Evolution`, `Reproduction`, `SelectionTerm`, `GroupEnding`): `SelectionShift` above `Reproduction`, and any law of EL1 they want below.
   - U4's owner (`RootForms`, lever 2): nothing of U4 is restated.
 - **Placement.**
