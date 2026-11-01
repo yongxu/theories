@@ -44,7 +44,8 @@ the reading: `«承» («逆» E) P s` is `∀ s', E s s' → P s'`.
   acts apart, that is the response relation going alike across the map's sameness
   (`«应际同行当且仅当同读同应»`), so by the lumping law it is the image of the response relation along
   the map having a fixed successor (`«定应共应当且仅当像定后»`, through `«像定后当且仅当同行»`).
-  `Learning.Lumped` is this condition at an act map. Each hypothesis does work: with a situation that
+  With an act map, the condition is that situations read alike get the same act
+  (`«映应共应当且仅当同读同应»`), which is `Learning.Lumped` of the map and the act map, unfolded. Each hypothesis does work: with a situation that
   has no act the image is determined and no response exists (`«共应之例».NotCovering`); with two acts at
   one situation a response exists and the acts differ (`«共应之例».NotOne`).
 * **Not from situations one at a time, nor from pairs.** Every situation having an act does not give a
@@ -225,6 +226,17 @@ theorem «定应共应当且仅当像定后» (read : S → O) (G : A → S → 
     (∃ J, «共应» (fun s s' => read s = read s') G J) ↔ «定后» («像» («读应» read) («应际» G)) :=
   («定应共应当且仅当同读同应» read G covers one).trans
     ((«应际同行当且仅当同读同应» read G).symm.trans «像定后当且仅当同行».symm)
+
+/-- **With an act map, a response common over a map's sameness exists exactly where situations the
+map does not tell apart get the same act**: `Learning.Lumped` of the map and the act map, stated
+unfolded. -/
+theorem «映应共应当且仅当同读同应» (read : S → O) (act : S → A) :
+    (∃ J, «共应» (fun s s' => read s = read s') (fun a s => act s = a) J) ↔
+      ∀ s s', read s = read s' → act s = act s' :=
+  («定应共应当且仅当同读同应» read (fun a s => act s = a) (fun s => ⟨act s, rfl⟩)
+      (fun _ _ _ g g' => g.symm.trans g')).trans
+    ⟨fun lumped s s' same => lumped s s' (act s) (act s') same rfl rfl,
+     fun lumped s s' _ _ same g g' => g.symm.trans ((lumped s s' same).trans g')⟩
 
 end OneAct
 
