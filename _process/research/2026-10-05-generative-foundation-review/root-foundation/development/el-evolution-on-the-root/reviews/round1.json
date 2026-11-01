@@ -1,0 +1,585 @@
+{
+  "summary": "Build EL scratch Lean (EL3 degeneration law, EL1 shift invariance and exception, EL4a windowed waiting) in disjoint scratch trees, then verify each independently",
+  "agentCount": 6,
+  "logs": [],
+  "result": [
+    {
+      "task": "el3-degeneration",
+      "built": {
+        "tree": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el3",
+        "module": "Becoming.LineDegeneration",
+        "build_passed": true,
+        "axioms_all_empty": true,
+        "build_tail": "cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el3 Becoming.LineDegeneration\n...\n  \"modules\": 41,\n  \"ran\": [\"Becoming.LineDegeneration\", \"BecomingLineDegenerationAxiomAudit\"],\n  \"reused\": 40,\n  \"unclean\": [],\n  \"audits\": { \"Becoming.LineDegeneration\": { \"theorems\": 17, \"declarations\": 19, \"with_axioms\": {} } }\n(no errors, no warnings; an earlier unused-variable warning was fixed)",
+        "laws": [
+          {
+            "declaration": "Becoming.Web.ends_of_ends_at",
+            "statement": "theorem ends_of_ends_at {E : «际» (Nat × F)} {x : Nat × F} {N : Nat} (le : x.1 ≤ N)\n    (at_N : ∀ y, «所及» (continuationStep R) E x y → y.1 = N → «尽» (continuationStep R) E y) :\n    «尽» (continuationStep R) E x",
+            "standing": "proved (any class E; induction on the steps left via helper Web.ends_before : ∀ d y, «所及» … x y → y.1 + d = N → «尽» … y, successors one step later by continuationStep; no EM, no single-continuation premise)",
+            "meets": "NOTE §5 proof plan (induction on N − y.1), stated for every class as the general lemma"
+          },
+          {
+            "declaration": "Becoming.Web.degeneration_of_gone",
+            "statement": "theorem degeneration_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)\n    (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →\n      ¬ W.active y.1 y.2) :\n    «退化» (continuationStep R) W.activityClass x",
+            "standing": "proved (exactly not_endless_of_gone's hypotheses; reached occurrences are active by active_along_line, so ends_of_ends_at applies vacuously at N)",
+            "meets": "EL3 target (1): the constructive degeneration law, «尽» hence «退化»"
+          },
+          {
+            "declaration": "Becoming.Web.not_endless_of_degeneration",
+            "statement": "theorem not_endless_of_degeneration {x : Nat × F} {N : Nat} (start : W.active x.1 x.2)\n    (le : x.1 ≤ N)\n    (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →\n      ¬ W.active y.1 y.2) :\n    ¬ «不穷» (continuationStep R) W.activityClass x",
+            "standing": "proved (not_endless_of_gone recovered through «尽则非不穷»)",
+            "meets": "EL3 (1): shows the new law strengthens not_endless_of_gone"
+          },
+          {
+            "declaration": "Becoming.Web.consumed_held_degenerates",
+            "statement": "theorem consumed_held_degenerates (dependent : W.Dependent) {c : C} {g : F} {T N : Nat}\n    (below : ∀ s, T < s → W.level s c < W.need T g c) (after : T < N)\n    {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ N)\n    (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →\n      W.requires N y.2 c ∧ W.need T g c ≤ W.need N y.2 c) :\n    «退化» (continuationStep R) W.activityClass x",
+            "standing": "proved (exactly consumed_held_not_endless's hypotheses)",
+            "meets": "EL3 target (2)"
+          },
+          {
+            "declaration": "Becoming.Web.family_excess_degenerates",
+            "statement": "theorem family_excess_degenerates {L : Flow F C} (balances : L.Balances W)\n    (acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}\n    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →\n      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)\n    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))\n    (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)\n    (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = T + n →\n      ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :\n    «退化» (continuationStep R) W.activityClass x",
+            "standing": "proved (exactly family_excess_not_endless's hypotheses)",
+            "meets": "EL3 target (2)"
+          },
+          {
+            "declaration": "Becoming.Web.stopped_degenerates",
+            "statement": "theorem stopped_degenerates {V : Web F C} {passes : Nat → F → F → Prop}\n    (byPassing : V.ByPassing passes) {d T : Nat} (brief : ∀ a, V.Brief d a)\n    (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t) {x : Nat × F} (start : V.active x.1 x.2)\n    (le : x.1 ≤ T + d) :\n    «退化» (continuationStep (passingContinuation passes)) V.activityClass x",
+            "standing": "proved (exactly stopped_not_endless's hypotheses)",
+            "meets": "EL3 target (2)"
+          },
+          {
+            "declaration": "Becoming.Map.end_of_ends_decided",
+            "statement": "theorem end_of_ends_decided {R L : «际» α} {x : α} (h : «尽» R L x) :\n    (∀ y, «所及» R L x y → «有后» R L y ∨ ¬ «有后» R L y) → «有终» R L x",
+            "standing": "proved (grammar level, any carrier; induction on «尽»)",
+            "meets": "EL3 target (3): how «尽» stands to «有终» (GrammarMap says this is not stated)"
+          },
+          {
+            "declaration": "Becoming.Web.end_of_gone",
+            "statement": "theorem end_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)\n    (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →\n      ¬ W.active y.1 y.2)\n    (decided : ∀ y, «所及» (continuationStep R) W.activityClass x y →\n      «有后» (continuationStep R) W.activityClass y ∨\n        ¬ «有后» (continuationStep R) W.activityClass y) :\n    «有终» (continuationStep R) W.activityClass x",
+            "standing": "proved (degenerates_of_gone's statement re-derived as degeneration_of_gone + end_of_ends_decided)",
+            "meets": "EL3 target (3): degenerates_of_gone as a corollary of the law"
+          },
+          {
+            "declaration": "Becoming.Map.not_not_end_of_ends / Becoming.Web.not_not_end_of_gone",
+            "statement": "theorem not_not_end_of_ends {R L : «际» α} {x : α} (h : «尽» R L x) : ¬ ¬ «有终» R L x\n\ntheorem not_not_end_of_gone {x : Nat × F} {N : Nat} (start : W.active x.1 x.2) (le : x.1 ≤ N)\n    (gone : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = N →\n      ¬ W.active y.1 y.2) :\n    ¬ ¬ «有终» (continuationStep R) W.activityClass x",
+            "standing": "proved weaker: without the decision premise, «有终» holds only up to double negation (the strongest decision-free form)",
+            "meets": "EL3 target (3), strongest true form"
+          },
+          {
+            "declaration": "Becoming.Map.Undecided.degenerates / end_decides / ends_iff_excluded_middle",
+            "statement": "theorem degenerates (P : Prop) :\n    (∀ y, «所及» (Web.continuationStep (continuation P)) web.activityClass (0, false) y →\n        y.1 = 2 → ¬ web.active y.1 y.2) ∧\n      «退化» (Web.continuationStep (continuation P)) web.activityClass (0, false)\n\ntheorem end_decides {P : Prop}\n    (h : «有终» (Web.continuationStep (continuation P)) web.activityClass (0, false)) : P ∨ ¬ P\n\ntheorem ends_iff_excluded_middle :\n    (∀ P : Prop, «有终» (Web.continuationStep (continuation P)) web.activityClass (0, false)) ↔\n      ∀ P : Prop, P ∨ ¬ P",
+            "standing": "refuted (for «有终»): witness Map.Undecided.web : Web Bool Unit (active at 0: false; at 1: true; nothing from 2), continuation P := fun _ _ _ => P. The gone premise holds at N = 2 and the pattern degenerates, but «有终» at (0,false) decides P; that every such line reaches an end is exactly excluded middle. So degenerates_of_gone's decision premise cannot be removed for 有终 on this reading; it is removed only for 退化",
+            "meets": "EL3 target (3): NOTE §5's sentence \"degenerates_of_gone's 有终 no longer needs its decision for this reading\" is false as worded; what holds is that 退化 needs none"
+          }
+        ],
+        "notes": "File: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el3/Becoming/LineDegeneration.lean (imports only Becoming.MapInstances; 19 declarations, 17 theorems + 2 defs, all with empty axiom reports; module docstring lists each law with its declaration names, in the style of MapInstances). Nothing was touched outside the tree.\n\nCorrection for NOTE §5: its sentence \"degenerates_of_gone's 有终 no longer needs its decision for this reading\" is wrong as written. Two things are true: (a) 退化/尽 needs no decision (Web.degeneration_of_gone), and (b) 有终 follows from 尽 together with the same decision (Map.end_of_ends_decided, Web.end_of_gone), or holds only up to double negation without it (Map.not_not_end_of_ends). The Map.Undecided witness shows the decision cannot be dropped for 有终 on this exact reading: over all P, that 有终 holds ⇔ excluded middle. Suggested rewording: \"the law gives 退化 without a decision; 有终 still needs degenerates_of_gone's decision (Map.Undecided), and degenerates_of_gone becomes the law plus Map.end_of_ends_decided\".\n\nAlso: GrammarMap's docstring says \"how «有终» stands to «退化» is not stated\". Map.end_of_ends_decided and Map.not_not_end_of_ends now state it at grammar level for any carrier. If these land, that sentence should change at its home.\n\nNot attempted: \"the same at the lineage continuation of §6\", which the NOTE lists after the corollaries. It is not among this task's targets. Web.ends_of_ends_at is stated for every class E, so it may carry over directly where the lineage reading uses continuationStep.\n\nPlacement inside MapInstances is the owner's call. Two things would change if moved: the existing degenerates_of_gone could be re-proved as end_of_gone, and its docstring's \"that it degenerates (尽) is not shown\" would become out of date."
+      },
+      "verify": {
+        "rebuilt_passed": true,
+        "axioms_all_empty": true,
+        "findings": [
+          {
+            "severity": "minor",
+            "declaration": "Becoming.Web.end_of_gone, Becoming.Web.not_endless_of_degeneration (vs MapInstances' Web.degenerates_of_gone, Web.not_endless_of_gone)",
+            "problem": "`end_of_gone` has exactly the hypotheses and conclusion of the landed `Web.degenerates_of_gone`, and `not_endless_of_degeneration` has exactly those of the landed `Web.not_endless_of_gone`. Both are re-proofs of landed statements: wrappers, not results. There is also a naming hazard: `degeneration_of_gone` (concludes «退化») sits beside the landed `degenerates_of_gone` (concludes only «有终», with a decision), so the two names differ by one suffix and mean different things.",
+            "fix": "Count both as no result. When the law goes into MapInstances (NOTE §5 placement), ask the owner whether `degenerates_of_gone` can be renamed to `end_of_gone`. Its name states a wrong meaning («有终» is not «退化»), which is the condition AGENTS sets for a rename. Then derive it as `Map.end_of_ends_decided (degeneration_of_gone …)` and derive `not_endless_of_gone` through «尽则非不穷», with no duplicate copy kept. If the owner declines, rename the new law to something like `ends_everywhere_of_gone` so it cannot be confused with the old name."
+          },
+          {
+            "severity": "minor",
+            "declaration": "Becoming.Map.Undecided.ends_iff_excluded_middle (module docstring, lines 33-37)",
+            "problem": "The docstring says \"that every such line reaches an end is exactly excluded middle\", meaning every line satisfying the law's premise. The Lean proves the iff only for the family indexed by P inside one fixed two-occurrence web. The forward direction holds for the general claim a fortiori. The backward direction (EM gives «有终» for every line meeting the premise) follows from `end_of_gone` with `decided := em`, but no theorem states it. The grammar-level form of target (3) is also left unstated.",
+            "fix": "Either add the general iff, `(∀ (F C : Type) (W : Web F C) R x N, start → le → gone → «有终» …) ↔ ∀ P : Prop, P ∨ ¬ P`, together with its grammar form `(∀ (β : Type) (R L : «际» β) x, «尽» R L x → «有终» R L x) ↔ ∀ P, P ∨ ¬ P` (forward by Undecided, backward by end_of_ends_decided with em; both a few lines). Or reword the docstring to \"that every line of this family reaches an end is exactly excluded middle\"."
+          },
+          {
+            "severity": "minor",
+            "declaration": "Becoming.Web.degeneration_of_gone (scope relative to NOTE §5's last sentence, and EL1(c)'s 'read through EL3's law')",
+            "problem": "The target ends with 'Then the same at the lineage continuation of §6', and EL1(c) reads `lineage_ends` 'through EL3's law' at the (kind, organism) grain, where the coarse class is `kindClass V Q = «合» activityClass Q`. `degeneration_of_gone` is fixed to `W.activityClass`. So it covers the lineage continuation `continuationStep (withinKind W Q passes)` at the activity grain only, as an instance with R arbitrary, and not at the kind grain. `ends_of_ends_at` is general, but the 'gone' form is not.",
+            "fix": "Generalize `degeneration_of_gone` to any class `E` with `«则» E W.activityClass`, or with reached points from an active start active. Activity and kind grains then both become instances. Or state explicitly in the docstring and in the result block that the kind-grain and lineage forms are left to EL1."
+          },
+          {
+            "severity": "minor",
+            "declaration": "builder report for Becoming.Map.not_not_end_of_ends / Becoming.Web.not_not_end_of_gone",
+            "problem": "The report calls ¬¬«有终» 'the strongest decision-free form' and 'strongest true form'. No theorem shows that nothing strictly between ¬¬«有终» and «有终» holds without a decision. The Lean shows only that ¬¬«有终» holds and that «有终» itself needs excluded middle on a family of instances. The module docstring makes no such claim; only the report does.",
+            "fix": "Drop 'strongest' from the report and the eventual record. Say instead: «有终» up to double negation, while «有终» itself decides P (Undecided.end_decides)."
+          },
+          {
+            "severity": "minor",
+            "declaration": "module docstring, 'Modelling choices'",
+            "problem": "The modelling choices list discrete steps, a fixed index type and Prop-valued activity. They omit natural-number levels and needs, which MapInstances lists. The three regime corollaries depend on them (level < need, the stock bound n + m).",
+            "fix": "Add 'natural number levels and needs (the three regimes)' to the modelling choices, as MapInstances does."
+          },
+          {
+            "severity": "note",
+            "declaration": "Becoming.Web.consumed_held_degenerates, family_excess_degenerates, stopped_degenerates",
+            "problem": "Each has exactly the hypotheses of its landed ¬«不穷» counterpart, which I checked hypothesis by hypothesis, so they are not weaker than claimed. But each copies the counterpart's 'gone' sub-proof inline instead of sharing it. This module gives no witness that a line satisfying the full hypothesis set exists. They inherit the standing of the landed laws: MapInstances instantiates none of them on a line, and Continuation.lean only witnesses `family_excess_ends` (taker/renewer).",
+            "fix": "On placement in MapInstances, factor each regime's 'gone' step into one lemma (for example `consumed_held_gone`). Derive both the «退化» law and the ¬«不穷» law from it, so the ¬«不穷» laws become corollaries via «尽则非不穷» (rule 9). State in the record that no map-level witness of the full regime premises is given."
+          },
+          {
+            "severity": "note",
+            "declaration": "Becoming.LineDegeneration (placement)",
+            "problem": "NOTE §5 places the law in `Becoming.MapInstances`, below its corollaries, on its owner's yes. The scratch module is a separate leaf that imports MapInstances. That is fine for scratch, but as a landing it would leave `not_endless_of_gone` and `degenerates_of_gone` as independent proofs above which the stronger law sits.",
+            "fix": "Land into MapInstances on the owner's yes, as planned. Keep a leaf only if the owner declines, and then say so in the record."
+          },
+          {
+            "severity": "note",
+            "declaration": "Becoming.Map.Undecided.*",
+            "problem": "This is a calibration against excluded middle. By AGENTS it counts as a result only if its record states what the need says about the unfolding. The docstring does say this: reaching an end needs deciding, at each point, whether a step continues it; without that decision the base gives degeneration, not reaching an end. It is distinct from the landed «不穷有终之定当且仅当排中» and «延尽之定当且仅当排中», which calibrate placing points in regions, not «尽» → «有终».",
+            "fix": "Carry the docstring's unfolding sentence into the record. Otherwise count the Undecided block as a lemma of EL3. Also cite the two landed grammar calibrations and say how this one differs."
+          },
+          {
+            "severity": "note",
+            "declaration": "verification procedure",
+            "problem": "`scratch_build.py` restored every step from the shared cache (ran: [], reused: 42), so it did not recompile the module. WS.md has no section named el3-degeneration (WS.md covers EL4), so I took the target from NOTE.md §5 and §0 item 3.",
+            "fix": "None needed. I compiled the module from scratch independently in a copy of the build folder (/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/verify-el3-build) with the checker's Lean 4.29.1: exit 0, no errors or warnings, and `#print axioms` reports 'does not depend on any axioms' for all 19 declarations."
+          }
+        ],
+        "verdict": "The module holds up. It compiles from a fresh run with no errors or warnings, and all 19 declarations (17 theorems, 2 defs) have empty axiom reports, with no propext, Quot.sound or Classical.choice. Each statement matches its target. `ends_of_ends_at` proves «尽» along `continuationStep R` for any class from a horizon N ≥ x.1, by induction on the steps left, with no single-continuation premise. `degeneration_of_gone` concludes «退化» under exactly `not_endless_of_gone`'s hypotheses. The three regime laws have exactly the hypotheses of their landed ¬«不穷» counterparts. The definitions of «尽», «退化», «有终», «所及», «续», «亡», «不穷», `continuationStep` and `activityClass` are used as defined in Grammar, GrammarMap, Identity and Arising. No definition encodes the verdict. The core law is not vacuous: `Map.Undecided.degenerates` gives a witness, with an active start at step 0 and N = 2, and for P true a real two-step line. The Undecided block correctly shows that «有终» cannot be had without a decision, which is the right reading of the NOTE's remark about `degenerates_of_gone`. None of the findings is major. `end_of_gone` and `not_endless_of_degeneration` restate landed laws, and the new name sits one suffix from the misleading old `degenerates_of_gone`; resolve both by renaming the old law with MapInstances' owner when the law goes there. The docstring's 'every such line … exactly excluded middle' is proved only for the P-indexed family; add the general and grammar-level iff, a few lines. The report's 'strongest decision-free form' is unproved wording. The gone-form law is fixed to the activity class, so it does not reach the kind grain that EL1(c) relies on; generalize to E ⊆ activityClass. The modelling choices should name natural-number levels and needs. With those changes, the module is ready to land into MapInstances on its owner's yes."
+      }
+    },
+    {
+      "task": "el1-shift",
+      "built": {
+        "tree": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1",
+        "module": "Becoming.SelectionShift",
+        "build_passed": true,
+        "axioms_all_empty": true,
+        "build_tail": "cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1 Becoming.SelectionShift\n{\n  \"tree\": \"/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1\",\n  \"modules\": 23,\n  \"ran\": [\"Becoming.SelectionShift\", \"BecomingSelectionShiftAxiomAudit\"],\n  \"reused\": 22,\n  \"unclean\": [],\n  \"audits\": {\"Becoming.SelectionShift\": {\"theorems\": 36, \"declarations\": 42, \"with_axioms\": {}}}\n}\n(no errors and no warnings; every one of the 42 declarations has an empty axiom report)",
+        "laws": [
+          {
+            "declaration": "Becoming.SelectionShift.excess_shift",
+            "statement": "theorem excess_shift (x y : Nat) : ∀ k : Nat, excess (x + k) (y + k) = excess x y",
+            "standing": "proved (the pair-level lemma; excess is Becoming.excess from Change.lean, which builds the pair counts)",
+            "meets": "EL1 (a), NOTE §3: `excess (x + k) (y + k) = excess x y`"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.concord_shifted / discord_shifted",
+            "statement": "theorem concord_shifted {ps : List α} {w w' a a' : α → Nat} {k : Nat}\n    (shift : ∀ p, p ∈ ps → w' p = w p + k) (same : ∀ p, p ∈ ps → a' p = a p) :\n    concord ps w' a' = concord ps w a\n(discord_shifted: the same hypotheses, discord ps w' a' = discord ps w a)",
+            "standing": "proved (shift needed only at members; amounts may agree only at members)",
+            "meets": "EL1 (a): shift invariance of the selection term proper at member level, used for Generations"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.concord_shift / discord_shift",
+            "statement": "theorem concord_shift (ps : List α) (w a : α → Nat) (k : Nat) :\n    concord ps (fun p => w p + k) a = concord ps w a\ntheorem discord_shift (ps : List α) (w a : α → Nat) (k : Nat) :\n    discord ps (fun p => w p + k) a = discord ps w a",
+            "standing": "proved",
+            "meets": "EL1 (a), exactly as the task stated"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.concord_shift_amount / discord_shift_amount",
+            "statement": "theorem concord_shift_amount (ps : List α) (w a : α → Nat) (k : Nat) :\n    concord ps w (fun p => a p + k) = concord ps w a\n(discord_shift_amount alike)",
+            "standing": "proved (extra: shifting the amount also leaves the term unchanged)",
+            "meets": "EL1 (a), extra"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.total_shifted / weighted_shift",
+            "statement": "theorem total_shifted {ps : List α} {w w' : α → Nat} {k : Nat}\n    (shift : ∀ p, p ∈ ps → w' p = w p + k) :\n    total ps w' = total ps w + ps.length * k\ntheorem weighted_shift (ps : List α) (w a : α → Nat) (k : Nat) :\n    weighted ps (fun p => w p + k) a = weighted ps w a + k * total ps a",
+            "standing": "proved",
+            "meets": "EL1 (a): the total weight, which is the next generation's size, moves by k times the length, so it is not invariant"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Generations.shift_step",
+            "statement": "theorem shift_step {t k : Nat} (family : G'.family t = G.family t)\n    (amount : ∀ p, p ∈ G.family t → G'.amount t p = G.amount t p)\n    (shift : ∀ p, p ∈ G.family t → G'.offspringNumber t p = G.offspringNumber t p + k) :\n    G'.concordAt t = G.concordAt t ∧ G'.discordAt t = G.discordAt t ∧\n      G'.size (t + 1) = G.size (t + 1) + G.size t * k",
+            "standing": "proved",
+            "meets": "EL1 (a) on SelectionTerm.Generations: the same selection term at the step, with the next generation's size moved by size t * k"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.reproducing_of_concord / reproducing_of_discord",
+            "statement": "theorem reproducing_of_concord {ps : List α} {w a : α → Nat} (pos : 0 < concord ps w a) :\n    ∃ p, p ∈ ps ∧ 0 < w p\n(reproducing_of_discord: same, from 0 < discord ps w a)",
+            "standing": "proved (holds for any amount, not only offspring number)",
+            "meets": "EL1 (b), first half: a positive term means some member has at least one offspring"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Generations.reproducing_of_selection",
+            "statement": "theorem reproducing_of_selection {t : Nat} (pos : 0 < G.concordAt t ∨ 0 < G.discordAt t) :\n    ∃ p, p ∈ G.family t ∧ 0 < G.offspringNumber t p",
+            "standing": "proved",
+            "meets": "EL1 (b), first half, on Generations"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Generations.line_kept",
+            "statement": "theorem line_kept (number : Reproduction.Generations.ByNumber G) {t : Nat}\n    (exact : ∀ s, t ≤ s → Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1)))\n    {p : α} (mp : p ∈ G.family t) (pos : 0 < G.offspringNumber t p) :\n    ∀ n, ∃ q, q ∈ G.family (t + n) ∧ G.offspringNumber (t + n) q = G.offspringNumber t p",
+            "standing": "proved (stronger than asked: the line keeps the same offspring number, not just a positive one)",
+            "meets": "EL1 (b), second half: with exact transmission, the member's line has offspring at every later generation"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Generations.goes_on",
+            "statement": "theorem goes_on (number : Reproduction.Generations.ByNumber G) {t : Nat}\n    (exact : ∀ s, t ≤ s → Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1)))\n    (pos : 0 < G.concordAt t) :\n    (∀ n, ∃ q, q ∈ G.family (t + n) ∧ 0 < G.offspringNumber (t + n) q) ∧\n      ∀ n, 0 < G.size (t + n + 1)",
+            "standing": "proved. It needs a hypothesis the design does not name: exact transmission at every step s ≥ t, not only at t. Under ByNumber, discordAt is always zero, so concordAt is the whole term.",
+            "meets": "EL1 (b), the exception, in the exact form the task asked for"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Generations.goes_on_iff",
+            "statement": "theorem goes_on_iff (number : Reproduction.Generations.ByNumber G) {t : Nat}\n    (exact : ∀ s, t ≤ s → Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) :\n    (∀ n, 0 < G.size (t + n + 1)) ↔ 0 < G.size (t + 1)",
+            "standing": "proved (sharpening: under ByNumber and exact transmission from t on, going on is exactly a nonempty next generation, so the positive term is sufficient but not necessary)",
+            "meets": "EL1 (b), the exact boundary of the exception"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.ZeroTerm.decides_nothing",
+            "statement": "theorem decides_nothing :\n    Reproduction.Generations.ByNumber oneEach ∧ Reproduction.Generations.ByNumber noneEach ∧\n      (∀ t, Exact (oneEach.family t) (oneEach.kids t) (oneEach.amount t)\n        (oneEach.amount (t + 1))) ∧\n      (∀ t, Exact (noneEach.family t) (noneEach.kids t) (noneEach.amount t)\n        (noneEach.amount (t + 1))) ∧\n      (∀ t, oneEach.concordAt t = 0 ∧ oneEach.discordAt t = 0) ∧\n      (∀ t, noneEach.concordAt t = 0 ∧ noneEach.discordAt t = 0) ∧\n      (∀ t, oneEach.size t = 1) ∧ (∀ n, noneEach.size (n + 1) = 0)",
+            "standing": "proved (witness)",
+            "meets": "EL1 (b): a zero term decides nothing (uniform one against uniform zero), even under ByNumber with exact transmission"
+          },
+          {
+            "declaration": "Becoming.SelectionShift.Horizon.horizon",
+            "statement": "theorem horizon (H : Nat) :\n    (∀ t, (ending H).concordAt t = (going H).concordAt t ∧\n      (ending H).discordAt t = (going H).discordAt t) ∧\n    (∀ t, t < H → (going H).concordAt t = 2 ∧ (going H).discordAt t = 0) ∧\n    (∀ t, t ≤ H → (ending H).family t = (going H).family t) ∧\n    (∀ t p, t < H → (ending H).kids t p = (going H).kids t p) ∧\n    (∀ p, (going H).offspringNumber H p = (ending H).offspringNumber H p + 1) ∧\n    (∀ t, (going H).size t = 2) ∧ (∀ n, (ending H).size (H + 1 + n) = 0)",
+            "standing": "proved, as a witness family for every H; equal terms hold at every step, not only for H steps. Weaker than the NOTE's 'for every course of selection terms there are two courses with those terms': that realisability claim was not attempted.",
+            "meets": "EL1 (a), horizon form (task item c), on Generations only, not on Flow.Descended"
+          }
+        ],
+        "notes": "File: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1/Becoming/SelectionShift.lean. It imports only Becoming.Reproduction, which brings in SelectionTerm. The module docstring states each law in prose with its declaration names, in the neighbours' style. Helper lemmas, all with empty axiom reports: total_congr_mem, mem_append_left, mem_append_right, mem_flatMap_of, length_pos_of_mem, mul_excess_congr, concord_congr, discord_congr, Horizon.flatMap_pair, pair_congr, going_family, ending_family, ending_after, ending_empty, before_terms, terms_below, terms_uniform, and ZeroTerm.oneEach_family. One axiom pitfall: Nat.right_distrib brings in propext. It was replaced by the Prelude's add_mul_split.\n\nFindings for the design:\n(1) Item (b) needs a hypothesis the NOTE does not name: exact transmission of offspring number at every step from t on, as `∀ s, t ≤ s → Exact ...`, not only at t. ByNumber is used in its global form, though only steps from t on matter.\n(2) The positive term is sufficient, not the cause. goes_on_iff shows that under ByNumber and exact transmission from t on, every later generation is nonempty exactly when generation t+1 is nonempty. A positive term is one way to have a reproducing member: uniform positive offspring numbers go on with a zero term. The NOTE's wording 'a positive selection term ... forces going on' is true but should not suggest the term is what forces it.\n(3) Under ByNumber, discordAt is always zero (Reproduction.Generations.ByNumber.discord_none). So the 'positive term' is concordAt t > 0, as in rises_exact_iff.\n(4) Horizon.horizon is one witness family for each H. Both courses have equal concordance and discordance at every step: 2 and 0 before H, 0 and 0 from H on. At step H, going's offspring numbers are ending's shifted by one, an instance of shift_step with k = 1. The NOTE's claim that every course of selection terms is realisable by two courses with opposite fates was not attempted. A generic construction that shifts a given G at every step changes the later families, so the later terms change too. The amount in the witness is a carried marker, not offspring number. By goes_on, the ending course cannot be read by offspring number with exact transmission.\n(5) Nothing is stated on SelectionTerm.Flow.Descended, Embodied or newness, nor on the map's regions («生成» / «尽»). Joining these laws to Descended courses and to the regions, (c) and (d), and EL3, is left for later. Nothing was edited outside the scratch tree; check_becoming.py was not run."
+      },
+      "verify": {
+        "rebuilt_passed": true,
+        "axioms_all_empty": true,
+        "findings": [
+          {
+            "severity": "major",
+            "declaration": "Becoming.SelectionShift.Horizon.horizon (docstring heading) and the module docstring bullet 'Horizon: no course of selection terms decides a fate'",
+            "problem": "Without its horizon the heading is false, and the module's own lemmas refute it. A course whose selection term is positive at every step does decide a fate: it forces every generation to be nonempty. I proved this in my own scratch file (/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-verify/Always.lean) from reproducing_of_selection, exists_mem_of_length_pos, mem_flatMap_of and length_pos_of_mem, with an empty axiom report: `theorem never_empties (pos : ∀ t, 0 < G.concordAt t ∨ 0 < G.discordAt t) : ∀ t, 0 < G.size (t + 1)`. What the Lean actually shows is narrower: for every H there is one course, positive before H and zero from H on, that two Generations with opposite fates share. This also shows that NOTE §3 (d), 'selection positive at every generation while every branch ends', cannot be a witness on Generations if 'ends' means the family empties. Classically it cannot be one at all with finite families: by König's lemma, nonempty generations at every step contain an infinite line.",
+            "fix": "Retitle the law to say that within any horizon the course of selection terms does not decide a fate. Add never_empties, or the same law with a better name, as the boundary on the other side: a term positive at every step forces going on. Flag to the design owner that (d) needs a reading of 'every branch ends' other than the family emptying (for example a map region of the lineage continuation, with revivals excluded), or must be stated within a horizon."
+          },
+          {
+            "severity": "major",
+            "declaration": "Becoming.SelectionShift.Generations.shift_step, goes_on, goes_on_iff, Horizon.horizon (the claimed meeting of EL1 (a) and (b))",
+            "problem": "The laws are weaker than the design target in NOTE §3. (a) asks for two `SelectionTerm.Flow.Descended` courses on `Flow X X`, and (b) asks for going on as «生成» at (kind, organism) on the lineage continuation, under births within the kind, `Embodied` and newness. The module states everything on bare `SelectionTerm.Generations`, with 'goes on' read as every later family being nonempty. No law involves Descended, the Flow, the map or a region, and the docstring says as much ('none is stated here on generations of descent in a flow'). The builder's 'meets EL1 (a)' and 'meets EL1 (b) ... in the exact form the task asked for' therefore overstate the match with the design.",
+            "fix": "In the report and any record, label these as the counting layer of EL1 (a) and (b), not as EL1 (a) and (b). Keep the Descended and map join (the witness courses shown to be Descended in some Flow, and nonempty-forever read as «生成» under newness) as open EL1 work. Until that lands, cite no region or «生成» reading against this module."
+          },
+          {
+            "severity": "major",
+            "declaration": "Becoming.SelectionShift.Horizon.horizon",
+            "problem": "Design (a) says 'for every horizon H and every course of selection terms over H generations there are two courses with those terms'. The Lean gives, for each H, a single fixed course (concordance 2 and discordance 0 before H, zero from H on), not every course. The statement is existential where the design is universal over courses of terms. It is also unclear whether the universal version holds as worded: within H steps, which courses are realizable, and realizable both ways, is not settled.",
+            "fix": "Either restate the design target as existential (for every H there is a course of positive terms before H that both fates share), or prove the general form: given any Generations G and a horizon H, build G' that agrees with G before H, has the same terms at every step, and has the opposite fate after H. That needs care at H, where the offspring numbers are shifted, and after H."
+          },
+          {
+            "severity": "minor",
+            "declaration": "Becoming.SelectionShift.Generations.goes_on (and goes_on_iff, line_kept)",
+            "problem": "The module gives no witness that the hypotheses of goes_on can hold together: ByNumber, exact transmission at every s ≥ t, and 0 < concordAt t. ZeroTerm witnesses ByNumber with exactness only where the term is zero, and Horizon's courses are not ByNumber (true carries 1 but has 2 offspring before H). I checked that the hypotheses can be met: first [true, false], kids true = [true], kids false = [], amount equal to offspring number, gives concordAt 0 = 1, and goes_on applies (my file /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-verify/Witness.lean). So the law is not empty, but the module does not show it. Note also that exactness is required at every step from t on, a stronger hypothesis than the design's 'with exact transmission'; the builder reports this.",
+            "fix": "Add this witness, one member keeping a line of one offspring each beside one with none, with a theorem that it meets ByNumber, exactness from 0 and a positive concordance. That shows goes_on's premises can be met. State the 'exact at every s ≥ t' hypothesis in the record."
+          },
+          {
+            "severity": "minor",
+            "declaration": "Becoming.SelectionShift.reproducing_of_concord / reproducing_of_discord",
+            "problem": "Design (b) says 'a positive selection term means offspring numbers vary, so some parent has at least one offspring'. The lemma proves only the second half (some p with 0 < w p), although its proof already finds p and q with w q < w p. Its name also reads 'reproducing' into a list-level law about an arbitrary weight w.",
+            "fix": "Strengthen the conclusion to ∃ p q, p ∈ ps ∧ q ∈ ps ∧ w q < w p, so that variation is stated, and derive positivity from it. Give the list-level lemma a structural name (for example weight_varies_of_concord, or pos_weight_of_concord) and keep 'reproducing' for the Generations form."
+          },
+          {
+            "severity": "note",
+            "declaration": "Becoming.SelectionShift (module placement and name)",
+            "problem": "NOTE §6 places EL1 in a leaf above Reproduction, SelectionTerm and KeepingWidening, working name Becoming.LineageRegions. This module imports only Becoming.Reproduction and is named SelectionShift. That suits the counting layer, but the placement differs from the design. WS.md has no section named el1-shift: the EL1 design lives only in NOTE §3, and WS.md is EL4. Horizon.horizon repeats its namespace in its name. Helper lemmas (mem_append_left/right, length_pos_of_mem, total_congr_mem) repeat lemmas found in RelativePosition, Typicality and Cuts, none of which is imported here, so the duplication is harmless.",
+            "fix": "Record in the NOTE that the counting layer sits in SelectionShift, below the planned LineageRegions leaf that will carry the Descended and map join. Rename Horizon.horizon (for example Horizon.same_terms_two_fates). Point the task's 'el1-shift' reference at NOTE §3."
+          },
+          {
+            "severity": "note",
+            "declaration": "build",
+            "problem": "Running scratch_build.py again reported ran: [] and reused: 24: it restored the builder's cached steps and did not compile anything again. I compiled the module myself, directly with Lean 4.29.1 (lean -o into my own folder, with the dependency .olean files linked from the scratch .build), with no errors or warnings. An environment scan of every constant the module defines (74, auxiliaries included) found no axioms, and #print axioms on all 42 named declarations reports 'does not depend on any axioms'. The checker's prelude-only compile and environment audit for the pure core were not run, since scratch_build leaves them to check_becoming.py.",
+            "fix": "Before landing, run the full check_becoming.py so the core's prelude-only compile is done too."
+          }
+        ],
+        "verdict": "The module builds cleanly. I compiled it with Lean myself rather than through the cache, and every one of its 74 constants, including the 42 named declarations, has an empty axiom report. Each formal statement is proved as written, and none is empty: where the module gives no witness I built one. The shift-invariance identities (excess_shift, concord_shift and discord_shift, shifted and amount forms) are exact and unconditional. shift_step correctly separates the unchanged term from the next generation's size, which moves by size t * k. line_kept, goes_on_iff and goes_on correctly give the exact-transmission exception, under the stronger hypothesis of exactness at every step from t on. ZeroTerm and Horizon are sound witnesses. Three things fall short of the claims. First, the module meets only the counting layer of EL1 (a) and (b): nothing touches Descended, the Flow, the map or «生成», which the design requires. Second, Horizon gives one course of terms per horizon, where the design asks for every course. Third, the unqualified heading 'no course of selection terms decides a fate' is false: from the module's own lemmas, a term positive at every step forces every generation to be nonempty (never_empties, axiom-free). The same fact undermines NOTE §3 (d)'s suicide witness on Generations. Recommendation: accept the Lean as the counting layer of EL1, retitle the horizon law to its horizon form, add never_empties and a witness for goes_on's premises, and send the (d) contradiction and the Descended and map join back to the design before any record cites it as EL1 (a) or (b)."
+      }
+    },
+    {
+      "task": "el4a-window",
+      "built": {
+        "tree": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el4a",
+        "module": "Becoming.WindowedWaiting",
+        "build_passed": true,
+        "axioms_all_empty": true,
+        "build_tail": "cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el4a Becoming.WindowedWaiting\n{\n  \"tree\": \".../el-scratch/el4a\",\n  \"modules\": 20,\n  \"ran\": [\"Becoming.WindowedWaiting\", \"BecomingWindowedWaitingAxiomAudit\"],\n  \"reused\": 19,\n  \"unclean\": [],\n  \"audits\": {\n    \"Becoming.WindowedWaiting\": {\n      \"theorems\": 66,\n      \"declarations\": 101,\n      \"with_axioms\": {}\n    }\n  }\n}\nNo errors and no warnings. All 101 declarations have empty axiom reports. Two intermediate propext hits (Nat.lt_succ_self, Nat.succ_ne_zero in the Pair witness) were swapped for Nat.le_refl 2 and Nat.noConfusion. The module imports only Becoming.Tolerance.",
+        "laws": [
+          {
+            "declaration": "WindowedWaiting.keeps_split",
+            "statement": "theorem keeps_split {f : Bool → Bool → Bool} (keepsBoth : f true true = true) (keeps : Keeps f) :\n    NeverRestores f ∨ NeverAnswers f",
+            "standing": "proved (by cases on f true false, f false true, f false false; monotonicity forces f false false = false when f true false = false; transfer to the tables via eq_table_of / neverRestores_congr)",
+            "meets": "(g)(i) headline"
+          },
+          {
+            "declaration": "WindowedWaiting.keeps_iff",
+            "statement": "theorem keeps_iff {f : Bool → Bool → Bool} (keepsBoth : f true true = true) :\n    Keeps f ↔ (f false false = true → f true false = true) ∧\n      (f false false = true → f false true = true)",
+            "standing": "proved. With mutual giving kept, this characterizes the monotone laws, so five of the eight keep inclusion (the count is read off the iff, not stated as a separate theorem)",
+            "meets": "(g) which laws keep inclusion"
+          },
+          {
+            "declaration": "bothGave_never_restores, partnerGave_never_restores, ownGave_never_restores, ownGave_never_answers, eitherGave_never_answers, alwaysGives_never_answers",
+            "statement": "theorem bothGave_never_restores : NeverRestores bothGave\ntheorem partnerGave_never_restores : NeverRestores partnerGave\ntheorem ownGave_never_restores : NeverRestores ownGave\ntheorem ownGave_never_answers : NeverAnswers ownGave\ntheorem eitherGave_never_answers : NeverAnswers eitherGave\ntheorem alwaysGives_never_answers : NeverAnswers alwaysGives",
+            "standing": "proved (each by an invariant Bool set closed under pairStep: notBoth or apart; never_answers_of from f true false = true)",
+            "meets": "(g)(i) the five laws named, in the design's grouping"
+          },
+          {
+            "declaration": "WindowedWaiting.keeps_not_both",
+            "statement": "theorem keeps_not_both {f : Bool → Bool → Bool} (keepsBoth : f true true = true) (keeps : Keeps f) :\n    ¬ (Restores f ∧ AnswersWithholder f)",
+            "standing": "proved (corollary of keeps_split)",
+            "meets": "(g)(i); forbids item 1"
+          },
+          {
+            "declaration": "WindowedWaiting.answers_iff",
+            "statement": "theorem answers_iff (f : Bool → Bool → Bool) : AnswersWithholder f ↔ f true false = false",
+            "standing": "proved",
+            "meets": "(g) the property 'answers a constant withholder' made exact"
+          },
+          {
+            "declaration": "WindowedWaiting.restores_and_answers_iff",
+            "statement": "theorem restores_and_answers_iff {f : Bool → Bool → Bool} (keepsBoth : f true true = true) :\n    Restores f ∧ AnswersWithholder f ↔ ∀ a b, f a b = (a == b)",
+            "standing": "proved (by cases. The other non-monotone tables, T F T T and T T F T, fail: one never restores, which is proved by an invariant, and the other never answers, since f true false = true)",
+            "meets": "(g)(ii) exactly one law restores and answers"
+          },
+          {
+            "declaration": "WindowedWaiting.agreement_not_keeps; agreement_restores; agreement_answers; agreement_against",
+            "statement": "theorem agreement_not_keeps : ¬ Keeps agreement\ntheorem agreement_restores : Restores agreement := ⟨2, rfl⟩\ntheorem agreement_answers : AnswersWithholder agreement := ⟨1, rfl⟩\ntheorem agreement_against : ∀ k,\n    (Law.run (againstWithholder agreement) true).state (2 * k) = true ∧\n      (Law.run (againstWithholder agreement) true).state (2 * k + 1) = false",
+            "standing": "proved",
+            "meets": "(g)(ii) agreement restores in two steps, gives at every other step against a constant withholder, and is not monotone"
+          },
+          {
+            "declaration": "WindowedWaiting.windowTwo_keeps; windowTwo_restores; windowTwo_restored_stays; windowTwo_answers; windowTwo_answers_stays",
+            "statement": "theorem windowTwo_keeps : Keeps windowTwo\ntheorem windowTwo_restores :\n    ∃ n, ((Law.run windowStep windowOneWithheld).state n).1 = (true, true)\ntheorem windowTwo_restored_stays :\n    ∀ n, ((Law.run windowStep windowOneWithheld).state (n + 1)).1 = (true, true)\ntheorem windowTwo_answers : ∃ n, ((Law.run windowAgainst windowFacing).state n).1.1 = false\ntheorem windowTwo_answers_stays :\n    ∀ n, ((Law.run windowAgainst windowFacing).state (n + 2)).1.1 = false",
+            "standing": "proved. On Bool, the state is the pair's last two steps and the start's history is mutual giving. It restores at step 1 and stays restored, and against a constant withholder it withholds from step 2 on",
+            "meets": "(g)(iii)"
+          },
+          {
+            "declaration": "WindowedWaiting.alternator_course; alternator_never_answered; alternator_gives_half",
+            "statement": "theorem alternator_course : ∀ k,\n    (Law.run alternatorStep alternatorStart).state (2 * k) = alternatorStart ∧\n      (Law.run alternatorStep alternatorStart).state (2 * k + 1) = ((true, true), (true, false))\ntheorem alternator_never_answered :\n    ∀ n, ((Law.run alternatorStep alternatorStart).state n).1.1 = true\ntheorem alternator_gives_half : ∀ k,\n    ((Law.run alternatorStep alternatorStart).state (2 * k)).1.2 = false ∧\n      ((Law.run alternatorStep alternatorStart).state (2 * k + 1)).1.2 = true",
+            "standing": "proved on Bool, not on the Prop carrier. A Prop version would need a pair of two different laws, which the carrier does not offer. The alternator gives exactly where it withheld at its last step and starts withholding after a history of mutual giving. The holder of the window of two gives at every step, and the alternator gives at odd steps and withholds at even ones",
+            "meets": "(e); forbids item 3"
+          },
+          {
+            "declaration": "WindowedWaiting.Pair.echo; Pair.exactly_one; Pair.never_together; Pair.echo_returns",
+            "statement": "theorem echo : ∀ k : Nat,\n    (¬ (Law.run (answers Waits) oneWithheld).state (2 * k) first ∧\n      (Law.run (answers Waits) oneWithheld).state (2 * k) second) ∧\n    ((Law.run (answers Waits) oneWithheld).state (2 * k + 1) first ∧\n      ¬ (Law.run (answers Waits) oneWithheld).state (2 * k + 1) second)\ntheorem exactly_one : ∀ n,\n    (¬ (Law.run (answers Waits) oneWithheld).state n first ∧\n      (Law.run (answers Waits) oneWithheld).state n second) ∨\n    ((Law.run (answers Waits) oneWithheld).state n first ∧\n      ¬ (Law.run (answers Waits) oneWithheld).state n second)\ntheorem never_together : ∀ n,\n    ¬ ((Law.run (answers Waits) oneWithheld).state n first ∧\n      (Law.run (answers Waits) oneWithheld).state n second)\ntheorem echo_returns : ∀ k, ¬ (Law.run (answers Waits) oneWithheld).state (k * 2) first",
+            "standing": "proved on Prop configurations with Withholding.answers. Withholding has no Pair, so Pair, Pair.Waits and Pair.loop (Chain Waits 2 first first) are defined here. echo_returns is withholding_returns at p = 2",
+            "meets": "(f)"
+          },
+          {
+            "declaration": "WindowedWaiting.window_one",
+            "statement": "theorem window_one (up : α → α → Prop) (h : α × Nat → Prop) : ∀ n a,\n    (Law.run (answersWithin 1 up) h).state n (a, 0) ↔\n      (Law.run (answers up) (fun a => h (a, 0))).state n a",
+            "standing": "proved, from every history (every course)",
+            "meets": "(a)"
+          },
+          {
+            "declaration": "WindowedWaiting.answersWithin_keeps; answersWithin_into; window_mono; window_worst_start; window_restored_stays; window_withheld_kept",
+            "statement": "theorem answersWithin_keeps (w : Nat) (up : α → α → Prop) : KeepsInclusion (answersWithin w up)\ntheorem answersWithin_into {w w' : Nat} (le : w ≤ w') (up : α → α → Prop) :\n    KeepsInclusionInto (answersWithin w up) (answersWithin w' up)\ntheorem window_withheld_kept (w : Nat) (waits : ∀ a, ∃ b, up b a) :\n    ∀ n p, ¬ (Law.run (answersWithin w up) allWithheld).state n p",
+            "standing": "proved. The lift needs only the carrier α × Nat (the configuration at each lag), where KeepsInclusion applies as it stands; Tolerance.worst_start, restored_stays and withheld_kept are applied directly. Deviation from the design: the carrier keeps every lag and the law reads lags below w, instead of α × Fin w. That choice avoids Fin and the empty window. A wider window gives no less",
+            "meets": "(b); forbids item 2 (no window restores from total withholding)"
+          },
+          {
+            "declaration": "WindowedWaiting.withholder_answered",
+            "statement": "theorem withholder_answered {h : α × Nat → Prop} {c : α} {T : Nat}\n    (out : ∀ t, T ≤ t → ¬ (Law.run (answersWithin (w + 1) up) h).state t (c, 0)) :\n    ∀ a, up c a → ∀ n, T + (w + 1) ≤ n →\n      ¬ (Law.run (answersWithin (w + 1) up) h).state n (a, 0)",
+            "standing": "proved, stated for a positive window w + 1 (with window 0 nothing can be read, and the start may still give at step 0)",
+            "meets": "(d)"
+          },
+          {
+            "declaration": "WindowedWaiting.gives_unless_errs; errs_answered; erring_keeps; clocked_state",
+            "statement": "theorem gives_unless_errs (spaced : Spaced e w) : ∀ n a,\n    ((Law.run (clocked e w up) (0, erringStart e)).state n).2 (a, 0) ↔ ¬ e n a\ntheorem errs_answered {b a : α} (link : up b a) (t : Nat)\n    (errs : ∀ i, i < w + 1 → e (t + i) b) :\n    ¬ ((Law.run (clocked e (w + 1) up) (0, erringStart e)).state (t + w + 1)).2 (a, 0)\ntheorem erring_keeps (t : Nat) : KeepsInclusion (answersWithinErring e w up t)",
+            "standing": "proved. Spaced e w := ∀ a t, ∃ i, i < w ∧ ¬ e (t + i) a. The errors are folded into the state as a clock (clocked law on Nat × (α × Nat → Prop)); the time-indexed law answersWithinErring keeps inclusion at each time t. Errors at step 0 are written into the start (erringStart), and the rest of the history is all giving. For the lift: the clocked law is not on a configuration carrier, so Tolerance's KeepsInclusion results reach it only through a time-indexed course lemma, which is not written",
+            "meets": "(c) with its exactness"
+          },
+          {
+            "declaration": "WindowedWaiting.Pair.window_absorbs; ringTwoErrors_answered",
+            "statement": "theorem window_absorbs :\n    (∀ n a, ((Law.run (clocked firstErrsOnce 2 Waits) (0, erringStart firstErrsOnce)).state\n      (n + 1)).2 (a, 0)) ∧\n    ¬ ((Law.run (clocked firstErrsOnce 2 Waits) (0, erringStart firstErrsOnce)).state 0).2\n      (first, 0)\ntheorem ringTwoErrors_answered :\n    ¬ ((Law.run (clocked ringTwoErrors 2 Withholding.Ring.Waits)\n      (0, erringStart ringTwoErrors)).state (0 + 1 + 1)).2 (Withholding.Ring.second, 0)",
+            "standing": "proved",
+            "meets": "design witnesses: Pair under answersWithin 2 (absorbed); a ring of three under answersWithin 2 with two consecutive errors"
+          }
+        ],
+        "notes": "All targets (g), (e), (f), (a)-(d) are proved. None was weakened, and none turned out false. File: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el4a/Becoming/WindowedWaiting.lean. Its module docstring states each law with its declaration names.\n\nHow the design's terms are stated in Lean:\n- 'Restores' runs from (false, true) only; the start (true, false) is the same by symmetry and is not proved separately.\n- 'Answers a constant withholder' runs the holder's own Bool state against a partner fixed at false, starting from its own giving. answers_iff shows it is exactly f true false = false.\n- Keeps f is monotonicity in both Bool inputs, the Bool reading of KeepsInclusion. No theorem joins the Bool one-step laws to the Prop KeepsInclusion; a constructive join would need decided giving.\n- (g)(iii) and (e) are on Bool. On Prop configurations, the window of two is covered by (a)-(d) and Pair.window_absorbs.\n\nDeviations from WS §3, to name in the design:\n1. The window carrier is α × Nat (every lag kept, the law reads lags below w), not α × Fin w.\n2. (d) and the exactness of (c) are stated for windows w + 1.\n3. Errors are folded into the state as a clock (`clocked`). Each time's law keeps inclusion (`erring_keeps`), but there is no time-indexed form of KeepsInclusion.course, so worst_start and restored_stays are not transferred to the erring run.\n\nPossible additions if the record wants them: exactness of (d) (a formation can still give at T + w), and a Prop-level alternator run with two different laws.\n\nNothing was written outside the tree, and no git state was touched."
+      },
+      "verify": {
+        "rebuilt_passed": true,
+        "axioms_all_empty": true,
+        "findings": [
+          {
+            "severity": "major",
+            "declaration": "WindowedWaiting.alternator_course / alternator_never_answered / alternator_gives_half (design EL4a (e))",
+            "problem": "Design target (e) has a general law, 'a window never answers a formation giving at least once in every w steps', and then the pair under answersWithin 2 as its instance. The module proves only the window-two instance, and only on a separate Bool model (alternatorStep). The builder gives a reason for leaving it off the Prop carrier ('a Prop version would need a pair of two different laws, which the carrier does not offer'), and that reason is false. The error clock already in the module covers it. Read the alternator's withholding at even steps as the error pattern e n a := (n even and a = second). That pattern is Spaced e 2, so gives_unless_errs gives two things at once: the window holder gives at every step, and the alternator gives exactly at the odd steps. That is (e) on the Prop carrier, and Spaced e w gives it for every w. I checked this with a probe in my own scratch folder: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/verify-el4a/Probe.lean. It compiles against the module. Its parity proof uses omega or Nat.mod and so reports propext and Quot.sound; the route through gives_unless_errs does not. As it stands, any record that claims (e), or forbids item 3 for 'a window', claims more than the Lean proves.",
+            "fix": "Add (e) for every window as a corollary of gives_unless_errs: where a formation c's withholdings are a pattern with no w consecutive steps (Spaced), each formation waiting on c gives at every step at which it does not err. Add the Pair alternator on the carrier as its witness, with the parity proved without axioms (for example, an even : Nat → Bool defined by recursion). Keep the Bool alternator as a second witness, or join it to the Prop one by a bridge theorem. Correct the builder's stated reason in the record."
+          },
+          {
+            "severity": "minor",
+            "declaration": "pairStep/partnerGave vs Pair.echo; windowStep/windowTwo vs answersWithin 2 on Pair; Keeps vs Tolerance.KeepsInclusion",
+            "problem": "The module builds two Bool models beside the spine's Prop laws, the one-step tables and the window-two pair, and no instance or equivalence theorem joins them. partnerGave_never_restores and Pair.never_together state the same fact on two carriers. windowTwo_restores/windowTwo_answers and window_absorbs/withholder_answered do the same for the window of two. Keeps (Bool, two inputs) is the analogue of KeepsInclusion, but nothing states that link. AGENTS asks that new models connect to the spine by instance or equivalence theorems. Without one, the split (g) is not shown to be about the spine's answers and answersWithin.",
+            "fix": "Add bridge theorems proved by induction (constructive, no decision needed). First: ((Law.run (pairStep partnerGave) oneWithheld).state n).1 = true ↔ (Law.run (answers Pair.Waits) Pair.oneWithheld).state n first, and the same for second. Second, the corresponding statement joining windowStep from windowOneWithheld to answersWithin 2 Pair.Waits, run from the history with first withheld at lag 0. Third, for the monotone tables that can be written in Prop (∧, the partner, the own step, ∨, True), state that Keeps f matches KeepsInclusion of the induced Pair law."
+          },
+          {
+            "severity": "minor",
+            "declaration": "WindowedWaiting.withholder_answered (design (d))",
+            "problem": "The hypothesis is about the run of the homogeneous monotone law itself: c withholds at lag 0 at every step from T. The module gives no witness for it. It can be satisfied, for example from total withholding where everything waits on something, but there window_withheld_kept already gives the conclusion. The 'constant withholder' of (g), a formation that withholds whatever comes, cannot be represented by one homogeneous answersWithin law. It can be represented with the error clock.",
+            "fix": "Add the clocked form as a corollary of errs_answered. Where e t c holds at every t ≥ T, every a with up c a withholds at every step from T + (w + 1) under window w + 1. Give it a Pair witness. Alternatively, give a witness for withholder_answered in which a gives before T + (w + 1) and withholds after, which shows the bound is tight."
+          },
+          {
+            "severity": "minor",
+            "declaration": "keeps_iff, keeps_split (the 'five of the eight' count)",
+            "problem": "No theorem states the count 'five of the eight keep inclusion'. The docstrings and the builder's summary assert it, and the builder says it is 'read off the iff'. Nor does any theorem state that the five named laws keep inclusion (Keeps bothGave, partnerGave, ownGave, eitherGave, alwaysGives). The hypothesis of keeps_split therefore has no stated witness, and 'the five' are not proved to be the monotone ones.",
+            "fix": "Add a theorem: Keeps (table true tf ft ff) ↔ (tf, ft, ff) is one of the five listed triples. Or add the five Keeps facts plus agreement_not_keeps and the two other non-monotone tables, so the count is a Lean statement."
+          },
+          {
+            "severity": "minor",
+            "declaration": "answers_iff, agreement_restores, agreement_answers",
+            "problem": "Docstrings and summaries make timing claims that the statements do not carry. answers_iff says the answer 'happens at step 1', but the statement is only the iff. agreement 'restores in two steps', but Restores is only an existential: the witness 2 sits in the proof term, and nothing states that step 1 is not restored. AGENTS asks that claims say exactly what the Lean proves.",
+            "fix": "Put the steps in the statements. For example, (Law.run (pairStep agreement) oneWithheld).state 1 = (false, false) ∧ ...state 2 = (true, true), and AnswersWithholder f ↔ (Law.run (againstWithholder f) true).state 1 = false. Or cut the timing words from the docstrings and the record."
+          },
+          {
+            "severity": "minor",
+            "declaration": "WindowedWaiting.Keeps, WindowedWaiting.answers_iff, WindowedWaiting.oneWithheld / Pair.oneWithheld",
+            "problem": "Some names are not exact. Keeps does not say what is kept, and it sits next to Tolerance.KeepsInclusion; windowTwo_keeps also uses it with a different reading of the inputs (partner now, partner before) than its docstring's (own, partner). answers_iff concerns AnswersWithholder, yet Withholding.answers is opened in the same scope, which invites a misreading. oneWithheld names both a Bool pair state and a Prop configuration, in nested namespaces.",
+            "fix": "Rename Keeps to KeepsInclusion₂ or PairKeepsInclusion, with a docstring that does not tie the inputs to own and partner. Rename answers_iff to answersWithholder_iff. Name the Bool start oneWithheldBool, or bridge it to Pair.oneWithheld (see the bridge finding). These are names chosen at claim time, before landing, so no sweep is involved."
+          },
+          {
+            "severity": "note",
+            "declaration": "answersWithin (carrier)",
+            "problem": "The design (WS.md §3, Carrier) specifies α × Fin w with a shift law. The Lean uses α × Nat, the whole history, with the law reading only lags below w. This carrier is what makes window_mono possible, since it compares windows on one carrier, and the module docstring says so. The design says the choice is 'decided in the Lean, and named in (a) and (b)'; WS.md still names Fin w.",
+            "fix": "Update WS.md §3 and the record's correspondence to name the α × Nat carrier and the clock option chosen for errors."
+          },
+          {
+            "severity": "note",
+            "declaration": "WindowedWaiting.invariant, course_congr",
+            "problem": "invariant restates the orbit-closure lemma Lasting.closed_orbit, and Run.stays in Attraction is close to it; neither module is in this module's import closure. These are local lemmas, not results.",
+            "fix": "Keep them as lemmas, but do not count them as results in the record. Consider a docstring pointer to Lasting.closed_orbit."
+          }
+        ],
+        "verdict": "The module builds and every declaration's axiom report is empty. The scratch_build rerun reused the cached steps, so I recompiled Becoming/WindowedWaiting.lean myself with the checker's Lean (v4.29.1), with no errors or warnings, and reran the generated #print axioms file: all 101 declarations, every source def, theorem and inductive, report 'does not depend on any axioms'. The only import is Becoming.Tolerance. The statements I read are correct and meet their design targets in substance. keeps_split, keeps_not_both, answers_iff and restores_and_answers_iff, checked case by case against the eight tables, meet (g)(i) and (g)(ii). agreement_* and windowTwo_* meet (g)(ii) and (g)(iii), with the window's restoring and answering shown to persist. window_one meets (a), answersWithin_keeps/_into meet (b), gives_unless_errs and errs_answered meet (c), with the window size matched to the design's w. withholder_answered meets (d), with the tight bound T + window. Pair.echo, exactly_one, never_together and echo_returns (through withholding_returns) meet (f). The cited core definitions (answers, KeepsInclusion, KeepsInclusionInto, worst_start, restored_stays, withheld_kept, Chain) are read correctly, and no definition encodes the verdict. The one material gap is (e). The general law, that a window never answers a formation giving at least once in every w steps, is not proved: only a window-two Bool instance is. The builder's reason that a Prop version is impossible is wrong, because gives_unless_errs gives it at once with the alternator read as an error pattern; my scratch probe confirms the route. Beyond that, the Bool models need bridge theorems to the spine's answers and answersWithin. The count and the five Keeps facts should be Lean statements. withholder_answered lacks a witness. A few docstring timings and names say more than the statements do. I would land the module after the (e) corollary and the bridges are added and the record states exactly the proved forms."
+      }
+    }
+  ],
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Build"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "build:el3-degeneration",
+      "phaseIndex": 1,
+      "phaseTitle": "Build",
+      "agentId": "a4fabe4c9a6d1c12a",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793434934063,
+      "queuedAt": 1793434934015,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-4…",
+      "promptPreview": "You are writing SCRATCH Lean 4 for board item EL of the Theory of Becoming repository. Design: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/wt-el/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/el-evolution-on-the-root/NOTE.md and /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scr…",
+      "promptFramed": true,
+      "lastProgressAt": 1793435205795,
+      "tokens": 117040,
+      "toolCalls": 19,
+      "durationMs": 271728,
+      "resultPreview": "{\"tree\":\"/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el3\",\"module\":\"Becoming.LineDegeneration\",\"build_passed\":true,\"axioms_all_empty\":true,\"build_tail\":\"cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b6…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "build:el1-shift",
+      "phaseIndex": 1,
+      "phaseTitle": "Build",
+      "agentId": "a3b95b815d9cacde1",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793434934064,
+      "queuedAt": 1793434934015,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-4…",
+      "promptPreview": "You are writing SCRATCH Lean 4 for board item EL of the Theory of Becoming repository. Design: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/wt-el/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/el-evolution-on-the-root/NOTE.md and /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scr…",
+      "promptFramed": true,
+      "lastProgressAt": 1793435588262,
+      "tokens": 175187,
+      "toolCalls": 28,
+      "durationMs": 649460,
+      "resultPreview": "{\"tree\":\"/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1\",\"module\":\"Becoming.SelectionShift\",\"build_passed\":true,\"axioms_all_empty\":true,\"build_tail\":\"cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b66-…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "build:el4a-window",
+      "phaseIndex": 1,
+      "phaseTitle": "Build",
+      "agentId": "a61752744431132af",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793434934064,
+      "queuedAt": 1793434934016,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-4…",
+      "promptPreview": "You are writing SCRATCH Lean 4 for board item EL of the Theory of Becoming repository. Design: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/wt-el/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/el-evolution-on-the-root/NOTE.md and /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scr…",
+      "promptFramed": true,
+      "lastProgressAt": 1793435841719,
+      "tokens": 193797,
+      "toolCalls": 26,
+      "durationMs": 902915,
+      "resultPreview": "{\"tree\":\"/private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el4a\",\"module\":\"Becoming.WindowedWaiting\",\"build_passed\":true,\"axioms_all_empty\":true,\"build_tail\":\"cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming && python3 -B scratch_build.py /private/tmp/claude-501/-Users-ren-theories/6e883b6…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:el3-degeneration",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a0d60d2cd5252e982",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793435205912,
+      "queuedAt": 1793435205889,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The module holds up. It compiles from a fresh run with no e…",
+      "promptPreview": "You independently verify a scratch Lean module for board item EL of the Theory of Becoming. Do NOT edit any file; do not commit; do not touch /Users/ren/theories's working tree. Module Becoming.LineDegeneration in tree /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el3 (file /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-…",
+      "promptFramed": true,
+      "lastProgressAt": 1793435447265,
+      "tokens": 127832,
+      "toolCalls": 20,
+      "durationMs": 241351,
+      "resultPreview": "{\"rebuilt_passed\":true,\"axioms_all_empty\":true,\"findings\":[{\"severity\":\"minor\",\"declaration\":\"Becoming.Web.end_of_gone, Becoming.Web.not_endless_of_degeneration (vs MapInstances' Web.degenerates_of_gone, Web.not_endless_of_gone)\",\"problem\":\"`end_of_gone` has exactly the hypotheses and conclusion of the landed `Web.degenerates_of_gone`, and `not_endless_of_degeneration` has exactly those of the lan…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:el1-shift",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a81ba139d2a33f97e",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793435588287,
+      "queuedAt": 1793435588274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The module builds cleanly. I compiled it with Lean myself r…",
+      "promptPreview": "You independently verify a scratch Lean module for board item EL of the Theory of Becoming. Do NOT edit any file; do not commit; do not touch /Users/ren/theories's working tree. Module Becoming.SelectionShift in tree /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el1 (file /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e…",
+      "promptFramed": true,
+      "lastProgressAt": 1793435886584,
+      "tokens": 119934,
+      "toolCalls": 18,
+      "durationMs": 298289,
+      "resultPreview": "{\"rebuilt_passed\":true,\"axioms_all_empty\":true,\"findings\":[{\"severity\":\"major\",\"declaration\":\"Becoming.SelectionShift.Horizon.horizon (docstring heading) and the module docstring bullet 'Horizon: no course of selection terms decides a fate'\",\"problem\":\"Without its horizon the heading is false, and the module's own lemmas refute it. A course whose selection term is positive at every step does decid…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:el4a-window",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a885fdf88e7f2aa76",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1793435841726,
+      "queuedAt": 1793435841724,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The module builds and every declaration's axiom report is e…",
+      "promptPreview": "You independently verify a scratch Lean module for board item EL of the Theory of Becoming. Do NOT edit any file; do not commit; do not touch /Users/ren/theories's working tree. Module Becoming.WindowedWaiting in tree /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el-scratch/el4a (file /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-…",
+      "promptFramed": true,
+      "lastProgressAt": 1793436137014,
+      "tokens": 130336,
+      "toolCalls": 17,
+      "durationMs": 295287,
+      "resultPreview": "{\"rebuilt_passed\":true,\"axioms_all_empty\":true,\"findings\":[{\"severity\":\"major\",\"declaration\":\"WindowedWaiting.alternator_course / alternator_never_answered / alternator_gives_half (design EL4a (e))\",\"problem\":\"Design target (e) has a general law, 'a window never answers a formation giving at least once in every w steps', and then the pair under answersWithin 2 as its instance. The module proves on…"
+    }
+  ],
+  "totalTokens": 864126,
+  "totalToolCalls": 128
+}

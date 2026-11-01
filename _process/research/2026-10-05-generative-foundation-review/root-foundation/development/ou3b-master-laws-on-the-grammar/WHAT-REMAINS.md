@@ -197,7 +197,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 1. **The ethics on the root** (全四: U3's documents, then its Lean items 1 and 2). Readers from alignment read the ethics first. Today none of the five significance rows reaches the root, and 全四 is designed, not met. It is met when the five rows are stated in the root's terms in the package, with the condition and C still named premises.
 2. **Generation and widening** (全三: GW6 on GW's line, claimed with GW1 and GW2 at `6376f0da3`). The account's direction, 生生 compared by widening, needs the map's generation and the ethics' widening joined both ways, or their split stated as a central result. Today they are joined one way: keeping widening gives 全生成, and the converse does not hold. Either outcome meets the item. It is new mathematics, not restatement.
-3. **Every central declaration placed** (全二). Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier and 54 are the rest. The item is met when each of the 54 is lifted, or its not entering is written with its reason. U1's seven interface laws for amounts must also be in the package (its §6 leaf), not only in scratch.
+3. **Every central declaration placed** (全二). Of the 118 distinct central declarations then (117 since DU took `Web.paths_comparison_widens` off its row; now 45, 16, 6 and 50, and the item met), 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier and 54 are the rest. The item is met when each of the 54 is lifted, or its not entering is written with its reason. U1's seven interface laws for amounts must also be in the package (its §6 leaf), not only in scratch.
 4. **Plan §八 step 5** (丙一与验). Each conditional law is written as "Y 当且仅当 Z", with Z in the grammar and a counterexample where Z fails. That is what lets a reader check a law's hypotheses against a situation without reading the Lean. **Met** with OU7 (see "OU7 landed" below).
 
 **What lets an outside reader check it.**
@@ -430,7 +430,7 @@ HE2 landed in one near-full rebuild (`467f075ec`, study §474), with every axiom
 U1b landed (study §481, core receipt `20261031T152525.956467Z`, every axiom report empty). U1's limited interface for amounts, the root's second sort, is now in the package as one core leaf, `Becoming.UnitMatchings`, which nothing imports. It holds 16 theorems in 24 declarations: frame matchings both ways, the crossing laws at a rise, the residual counts, and dissipation. The record [amounts-by-unit-matchings](../../../../../../theories/becoming/results/records/amounts-by-unit-matchings.md) has its home in 01 §8.6, after the World's representation. U1's failures are its boundary. Balance is not derived, and the residual units are accounting.
 
 - **The release gate's item 3 is met.** U4's boundary record placed all 118 distinct central declarations, none unplaced, so each of the 51 has its standing and reason written. With U1's interface now in the package and not only in scratch, the item's last part is met too. No row changes category, since no central declaration belongs to the leaf. The measure stays at 44, 16, 7 and 51.
-- **What reached GitHub.** A working version went out to GitHub at `d00f1724d` on 31 October 2026. The gate still stands for the final version. Later landings, U1b included, reach GitHub only when someone pushes again.
+- **What reached GitHub.** A working version went out to GitHub on 31 October 2026, last at `74e2c9a69` (a push at `d00f1724d` that day came first). The gate still stands for the final version. Later landings, U1b included, reach GitHub only when someone pushes again.
 - **The gate after U1b.** Items 1, 2 and 3 are met. Item 5 is met: RV21c's fresh core receipt `20261031T125855.282103Z` (`4ea66f49e`, study §480) ran every Lean step on an empty step cache. Item 6 is met for now: the front pages landed (`928b3a4e3`), the one page at ten minutes and the overview at an hour, each with its Chinese edition. Their lines on conditional laws are marked for a refresh once item 4 lands. Still open: item 4, plan §八 step 5 (OU7, formerly OU5: parts A and B in kit and reviewed, its near-full rebuild last in the core round). Item 7, the freeze, comes last.
 
 ## The unit grain is balance, not atomism (DU, 31 October 2026)
@@ -470,6 +470,20 @@ Lever 1 (a) asked for the locality law restated with «所闭», a grammar-wide 
   - 01 §9.9's reading of boundaries now carries it: amounts keep to the boundaries the relation crosses neither way, and balance is kept on the closures of the relation read both ways; a region closed under the relation one way only need not keep the count (`«对而单闭域不守数之例»`).
 - **Where it sits.** The law stays in its leaf. GrammarLaws needs nothing from it, and the leaf states it on the grammar's `«不出»` and `«所闭»`. Three pieces of BD4 ride the next near-full rebuild of GrammarLaws: the counting lemmas of `«计»`, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
 - **What it does not change.** Balance is localized to closures, not derived, so U1's verdict stands and lever 1's round trip still fails its second test: amounts remain the root's second sort, with their interface in `Becoming.UnitMatchings`. No central declaration is BD3's or BD4's, so 08 §7's figures are unchanged, and no gate item moves.
+
+## What rides the next near-full rebuild of the grammar (2 November 2026)
+
+A change to Grammar, GrammarMap or GrammarLaws recompiles nearly every module, so such changes wait and go in one rebuild, as HE2's did. Each keeps its statement unless its owner decides otherwise.
+
+- **BD4's three pieces** ("BD3 and BD4 landed" above): the counting lemmas of `«计»`, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
+- **The quick Lean review's open findings in the grammar** ([FINDINGS](../qr-quick-lean-review/FINDINGS.md)):
+  - in Grammar, `«火薪相须»`, `«四相无自立»`'s docstring and `«不复生则息»`;
+  - in GrammarMap, `Endless.generation` and its siblings' identity-class witnesses, `«有终则粗不有常»` and `«不穷有终之定当且仅当排中»`;
+  - in GrammarLaws, `«无后者不入亦不返»` and `«止而不入之例»`.
+- **KeepingWidening's `Flow.whole_not_keepsWidening`**: its docstring's bold headline says nothing keeps widening, where its body and its statement say by name.
+- **The review's six optional statement or name changes in leaves**: PremiseWitnesses, UnitMatchings, RevisionPlans, ReadStages, CountedCodes and Wholes. They ride the same rebuild so that one core run carries them.
+
+The review's docstring-only findings outside the grammar ride UE29.
 
 ## What this note does not do
 
