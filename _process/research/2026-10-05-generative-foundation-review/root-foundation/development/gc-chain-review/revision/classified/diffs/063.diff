@@ -1,0 +1,189 @@
+--- b6d4f1493:RESULTS.md
++++ RESULTS.md
+@@ -7,3 +7,3 @@
+ 
+-The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. 478 registered results: 447 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Unmigrated results retain their existing sources; files, checks and repeated acceptances are not independent results. Hash drift requires reading the changed source before updating its record.
++The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. 527 registered results: 496 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Unmigrated results retain their existing sources; files, checks and repeated acceptances are not independent results. Hash drift requires reading the changed source before updating its record.
+ 
+@@ -15,3 +15,6 @@
+ | `a-code-formed-between-formations` | [A code formed between formations](·) | theorem | recorded-checked | [SharedCodes.lean](·) |
++| `a-code-held-as-counts` | [A code held as counts, learned from what is heard](·) | theorem | recorded-checked | [CountedCodes.lean](·) |
++| `a-commuting-learner-drives-no-unread-choice` | [A commuting learner drives no choice whose values nothing it reads tells apart](·) | theorem | recorded-checked | [WeightedCommuting.lean](·) |
+ | `a-coupling-saturated-by-what-it-has-carried` | [A coupling saturated by what it has carried](·) | theorem | recorded-checked | [Frequency.lean](·) |
++| `a-formations-couplings-as-its-blanket` | [A formation's couplings as its blanket, and when a blanket constrains](·) | theorem | recorded-checked | [BlanketCouplings.lean](·) |
+ | `a-formations-own-course` | [A formation's own course](·) | theorem | recorded-checked | [IdentificationRuns.lean](·) |
+@@ -24,2 +27,3 @@
+ | `a-need-with-a-cap` | [A need with a cap](·) | theorem | recorded-checked | [Admission.lean](·) |
++| `a-pair-tolerates-only-within-a-window` | [A pair tolerates only within a window](·) | theorem | recorded-checked | [WindowedWaiting.lean](·) |
+ | `a-pattern-lasts-through-passing` | [A pattern outlasting its carriers lasts through passing](·) | theorem | recorded-checked | [PatternPassing.lean](·) |
+@@ -27,5 +31,10 @@
+ | `a-pool-that-recruits-through-itself` | [A pool that recruits through itself](·) | theorem | recorded-checked | [PoolCourse.lean](·) |
++| `a-prediction-read-by-what-it-predicts` | [A prediction read by what it predicts](·) | theorem | recorded-checked | [ReflexivePrediction.lean](·) |
+ | `a-race-for-position-draws-everything` | [A race for position draws everything](·) | theorem | recorded-checked | [Optimum.lean](·) |
+ | `a-reading-against-the-share-does-not-ratchet` | [A reading against the share does not ratchet](·) | theorem | recorded-checked | [RuleCapture.lean](·) |
++| `a-reading-informed-and-revalued` | [A reading informed and revalued](·) | theorem | recorded-checked | [ListingValuation.lean](·) |
++| `a-reading-kept-by-its-update` | [A reading kept by its update, and the reading its own history carries](·) | theorem | recorded-checked | [ReadingLoop.lean](·) |
+ | `a-regularity-kept-and-changed` | [A regularity kept and left along its own line](·) | theorem | recorded-checked | [GrammarRegularity.lean](·) |
++| `a-response-common-over-a-reading` | [A response common over a reading](·) | theorem | recorded-checked | [CommonResponse.lean](·) |
++| `a-revision-that-opens-a-correction` | [A revision of a reading that opens a correction, along one process](·) | theorem | recorded-checked | [OpenedCorrection.lean](·) |
+ | `a-rise-past-the-inflow-is-drawn-from-beyond` | [A rise past the inflow is drawn from beyond](·) | theorem | recorded-checked | [SelectionReach.lean](·) |
+@@ -41,2 +50,3 @@
+ | `acquired-revision-of-pending-task` | [Acquired goal revision enters a pending task](·) | theorem | recorded-checked | [CommonTaskRevision.lean](·) |
++| `acts-alike-from-a-model-or-from-an-order` | [Acts alike from a model or from an order](·) | theorem | recorded-checked | [ReadingLoop.lean](·) |
+ | `adaptive-closure-cannot-resolve` | [Adaptive closure: a reference changed outside what is retained is not resolved from the view](·) | theorem | recorded-checked | [NormativeActivity.lean](·) |
+@@ -45,2 +55,3 @@
+ | `alignment-direction-under-widening` | [AI alignment direction under widening and the practical commitments](·) | argument | reviewed-scoped | [ALIGNMENT-DIRECTION.md](·) |
++| `amounts-by-unit-matchings` | [Amounts, the root's second sort: balance represented by selected unit matchings, not derived](·) | theorem | recorded-checked | [UnitMatchings.lean](·) |
+ | `any-number-of-drawers-in-turn` | [Any number of drawers in turn](·) | theorem | superseded | [Becoming.Optimum.lean](·) |
+@@ -59,3 +70,3 @@
+ | `becoming-return-grades` | [Return grades](·) | theorem | recorded-checked | [Restoration.lean](·) |
+-| `becoming-spine-instances` | [Existing interfaces are instances of the Becoming spine; comparison extends to every frame under the lifting rule](·) | theorem | recorded-checked | [Lifting.lean](·) |
++| `becoming-spine-instances` | [Earlier interfaces as instances of the spine, and comparison lifted to every frame](·) | theorem | recorded-checked | [Lifting.lean](·) |
+ | `becoming-stepwise-reading` | [The stepwise reading](·) | theorem | recorded-checked | [Metaethics.lean](·) |
+@@ -95,2 +106,3 @@
+ | `conditional-foundation-assessment` | [Five-condition acceptance of the conditional foundation](·) | assessment | superseded | [FIXED-FINISH-LINE-AUDIT.md](·) |
++| `conditional-laws-of-the-corpus` | [The corpus's conditional laws in the grammar, each with a net where its condition fails](·) | theorem | recorded-checked | [GrammarConditionals.lean](·) |
+ | `conditioning-by-restriction` | [Conditioning by restriction, shares and a generative model's posterior](·) | theorem | recorded-checked | [ConditionalWeights.lean](·) |
+@@ -124,2 +136,3 @@
+ | `coupling-closures-of-training-pipelines` | [The coupling closures of deployed training pipelines](·) | assessment | reviewed-scoped | [CORRESPONDENCE.md](·) |
++| `degeneration-from-a-horizon` | [Degeneration from a horizon](·) | theorem | recorded-checked | [MapInstances.lean](·) |
+ | `dependence-formed-from-drawing` | [A dependence formed from drawing](·) | theorem | recorded-checked | [Transmission.lean](·) |
+@@ -135,3 +148,3 @@
+ | `drawers-in-turn-within-capacities` | [Drawers in turn within capacities](·) | theorem | superseded | [Becoming.Optimum.lean](·) |
+-| `draws-on-a-shared-stock` | [Draws on one shared stock: every combination fits exactly when the total does](·) | theorem | recorded-checked | [Weighted.lean](·) |
++| `draws-on-a-shared-stock` | [Draws on one shared stock](·) | theorem | recorded-checked | [Weighted.lean](·) |
+ | `drift-offspring-sampled` | [Drift: offspring sampled rather than listed](·) | theorem | recorded-checked | [Drift.lean](·) |
+@@ -141,2 +154,3 @@
+ | `encounter-selection-and-revision` | [Acquired access selects learning encounters](·) | theorem | recorded-checked | [EncounterChoice.lean](·) |
++| `ending-laws-as-regimes-on-a-lineage` | [Ending laws as regimes on a lineage](·) | theorem | recorded-checked | [LineageRegimes.lean](·) |
+ | `endpoint-loss-and-return` | [Endpoint opportunity loss and return](·) | theorem | recorded-checked | [Labelled.lean](·) |
+@@ -152,2 +166,3 @@
+ | `exit-from-a-margin` | [The exit from a margin, and what a record of the course says of it](·) | theorem | recorded-checked | [ConditionalWeights.lean](·) |
++| `expected-free-energy-and-its-terms` | [Expected free energy and its terms](·) | theorem | recorded-checked | [ExpectedFreeEnergyReals.lean](·) |
+ | `experiment-needs-return` | [Experiment needs return](·) | theorem | recorded-checked | [Experiment.lean](·) |
+@@ -178,2 +193,4 @@
+ | `four-cases-of-a-part` | [Four cases of a part](·) | theorem | recorded-checked | [Admission.lean](·) |
++| `free-energy-bound-in-counts` | [The free-energy bound in counts](·) | theorem | recorded-checked | [FreeEnergyCounting.lean](·) |
++| `free-energy-bounds-surprisal` | [Variational free energy bounds surprisal](·) | theorem | recorded-checked | [FreeEnergyReals.lean](·) |
+ | `fulfillment-chance-floor` | [Fulfillment implies a same-law chance floor](·) | theorem | recorded-checked | [ChanceFloors.lean](·) |
+@@ -202,2 +219,4 @@
+ | `how-often-couplings-act` | [How often couplings act: settling, runaway and its rate](·) | theorem | recorded-checked | [Frequency.lean](·) |
++| `identical-cells-under-a-descent-treating-them-alike` | [Identical cells under a descent that treats them alike](·) | theorem | recorded-checked | [FreeEnergyGuarantees.lean](·) |
++| `identical-cells-under-noise` | [Identical cells under noise](·) | theorem | recorded-checked | [CellsUnderNoise.lean](·) |
+ | `identification-where-bounded` | [Identification where bounded](·) | theorem | recorded-checked | [Identification.lean](·) |
+@@ -220,2 +239,3 @@
+ | `keeping-forgoes-the-renewal-at-the-need` | [Keeping a dependence forgoes the renewal at its need](·) | theorem | recorded-checked | [Optimum.lean](·) |
++| `keeping-widening-is-generation-losing-nothing` | [Keeping widening is generation that loses nothing](·) | theorem | recorded-checked | [WideningOnTheMap.lean](·) |
+ | `laws-at-coarser-steps` | [Laws of one step at coarser steps](·) | theorem | recorded-checked | [Sampling.lean](·) |
+@@ -251,3 +271,2 @@
+ | `market-supported-finite-transition` | [Supported finite correction and protective handoff](·) | theorem | recorded-checked | [RegimeTransition.lean](·) |
+-| `master-laws-on-the-grammar` | [The master laws on the grammar](·) | theorem | recorded-checked | [GrammarLaws.lean](·) |
+ | `material-preparation-output` | [Actual material preparation output](·) | theorem | recorded-checked | [MaterialMaturation.lean](·) |
+@@ -267,5 +286,8 @@
+ | `normal-forms-need-decided-apartness` | [Normal forms of named exchanges need exactly decided apartness on the stretch](·) | theorem | recorded-checked | [OrderNormal.lean](·) |
++| `not-going-out-of-a-region` | [Not going out of a region](·) | theorem | recorded-checked | [GrammarCrossing.lean](·) |
+ | `observation-is-a-route` | [Observation lies within the downstream: a difference goes only downstream](·) | theorem | recorded-checked | [Observation.lean](·) |
++| `offspring-read-from-giving-that-waits` | [Offspring read from giving that waits](·) | theorem | recorded-checked | [PairSelection.lean](·) |
+ | `one-move-covering` | [What one move ensures, and covering of moves](·) | theorem | recorded-checked | [MoveOutcomeProcesses.lean](·) |
+ | `one-reader-several-conditions` | [One reader, several conditions](·) | theorem | recorded-checked | [ReadingSchedule.lean](·) |
++| `one-root-to-its-edge` | [One root to its edge: where each central declaration stands](·) | theorem | recorded-checked | [RootForms.lean](·) |
+ | `one-search-one-line` | [One search, one line](·) | theorem | recorded-checked | [HexagramSequences.lean](·) |
+@@ -293,2 +315,3 @@
+ | `prefix-observation-loss` | [All prefix questions can still omit an intermediate loss](·) | theorem | recorded-checked | [Granularity.lean](·) |
++| `premises-met-and-failed` | [Premises met and failed: the condition on the root, C and L](·) | theorem | recorded-checked | [PremiseWitnesses.lean](·) |
+ | `premises-read-off-the-exchange` | [Premises read off the exchange](·) | theorem | recorded-checked | [Reading.lean](·) |
+@@ -297,2 +320,3 @@
+ | `process-and-frame-as-readings` | [Process and frame as readings of one unfolding](·) | theorem | recorded-checked | [Unfolding.lean](·) |
++| `processes-represented-both-ways` | [Processes represented in the grammar both ways](·) | theorem | recorded-checked | [ProcessRepresentation.lean](·) |
+ | `projection-carrying-a-law` | [A projection carrying a law](·) | theorem | recorded-checked | [Mechanism.lean](·) |
+@@ -308,2 +332,3 @@
+ | `readers-drawn-from-the-selected` | [Readers drawn from the selected](·) | theorem | recorded-checked | [ClosedCapture.lean](·) |
++| `readers-reading-readers` | [Readers reading readers](·) | theorem | recorded-checked | [Cascade.lean](·) |
+ | `reading-anothers-couplings-is-pooling` | [Reading another's couplings is pooling with it](·) | theorem | recorded-checked | [SelectionPool.lean](·) |
+@@ -328,2 +353,3 @@
+ | `renewing-consuming-formation` | [Renewing and consuming formation: a dynamical distinction in one wear-law class](·) | theorem | recorded-checked | [RenewingFormation.lean](·) |
++| `reorderings-as-courses-of-growth` | [A world's reorderings as courses of growth](·) | theorem | recorded-checked | [ReorderingGrowth.lean](·) |
+ | `repeated-disturbance` | [Repeated disturbance](·) | theorem | recorded-checked | [Frequency.lean](·) |
+@@ -352,4 +378,6 @@
+ | `risk-certificate-outcome-distinction` | [Risk bounds and realized outcomes](·) | theorem | recorded-checked | [WisdomFallibleJudgment.lean](·) |
++| `risk-minimization-on-a-shared-renewal` | [Risk minimization on a shared renewal](·) | theorem | recorded-checked | [FreeEnergyGuarantees.lean](·) |
+ | `rivals-bounded-in-time` | [Rivals bounded in time](·) | theorem | recorded-checked | [Significance.lean](·) |
+ | `room-read-off-the-exchange` | [Room read off the exchange](·) | theorem | recorded-checked | [Optimum.lean](·) |
++| `rooms-tested-by-a-window` | [Rooms tested by a window: regulation and equilibrium on the net of the possible](·) | theorem | recorded-checked | [RoomNet.lean](·) |
+ | `rules-that-change-themselves-in-the-grammar` | [Rules that change themselves, read in the grammar](·) | theorem | recorded-checked | [GrammarRegularity.lean](·) |
+@@ -369,2 +397,3 @@
+ | `selection-within-and-among-groups-of-any-sizes` | [Selection within and among groups of any sizes](·) | theorem | recorded-checked | [SelectionLevels.lean](·) |
++| `self-concern-and-c-under-the-condition` | [Self-concern and C under the condition](·) | theorem | recorded-checked | [PremiseWitnesses.lean](·) |
+ | `self-concern-through-dependence` | [Self-concern through dependence](·) | theorem | recorded-checked | [Weightings.lean](·) |
+@@ -376,2 +405,3 @@
+ | `shaping-the-rule-selected-by-what-comes-back` | [The capacity to shape the rule, selected by what comes back to it](·) | theorem | recorded-checked | [RuleShaping.lean](·) |
++| `shared-laws-on-the-grammar` | [The shared laws on the grammar](·) | theorem | recorded-checked | [GrammarLaws.lean](·) |
+ | `significance-retained-within-margin` | [Significance retained within the margin](·) | theorem | recorded-checked | [Significance.lean](·) |
+@@ -381,2 +411,3 @@
+ | `space-and-its-parts` | [The whole and its parts](·) | theorem | recorded-checked | [Space.lean](·) |
++| `standings-not-read-off-the-occurrence-model` | [Standings not read off the occurrence model, even up to a unit](·) | theorem | recorded-checked | [UnreadStandings.lean](·) |
+ | `steps-met-again-after-a-fall` | [Steps met again after a fall](·) | theorem | recorded-checked | [Optimum.lean](·) |
+@@ -398,2 +429,4 @@
+ | `tests-fix-likeness-where-determined` | [Tests that fix likeness](·) | theorem | recorded-checked | [Histories.lean](·) |
++| `the-blanket-at-a-steady-state` | [The blanket at a steady state: conditional independence and what holds it](·) | theorem | recorded-checked | [BlanketWeights.lean](·) |
++| `the-blanket-in-a-linear-steady-state` | [The blanket in a linear steady state: the coupling form and the statistical form](·) | theorem | recorded-checked | [LinearBlankets.lean](·) |
+ | `the-boundary-of-enough-under-undetermined-laws` | [The boundary of enough under undetermined laws](·) | theorem | recorded-checked | [Enough.lean](·) |
+@@ -404,5 +437,8 @@
+ | `the-last-change-of-a-run` | [The last change of a run](·) | theorem | recorded-checked | [LastChange.lean](·) |
++| `the-markov-blanket-as-a-coupling-structure` | [The Markov blanket as a coupling structure](·) | theorem | recorded-checked | [Blanket.lean](·) |
+ | `the-move-alone-underdetermines` | [The move alone does not fix the outcome](·) | theorem | recorded-checked | [Situations.lean](·) |
++| `the-present-on-causal-set-growth` | [The present on causal-set growth](·) | theorem | recorded-checked | [Presence.lean](·) |
+ | `the-rest-outruns-the-renewal` | [The rest outruns the renewal](·) | theorem | recorded-checked | [Exclusion.lean](·) |
+ | `the-run-classes-and-widening` | [The run classes and widening](·) | theorem | recorded-checked | [Retaining.lean](·) |
++| `the-selection-term-and-a-lineages-fate` | [The selection term and a lineage's fate](·) | theorem | recorded-checked | [LineageRegions.lean](·) |
+ | `the-source-texts-test-systems` | [Test systems of the source texts as small witnesses](·) | theorem | recorded-checked | [GrammarCases.lean](·) |
+@@ -410,4 +446,7 @@
+ | `the-step-index-from-own-courses` | [The step index read off the relata's own courses](·) | theorem | recorded-checked | [Interleavings.lean](·) |
++| `the-stock-buys-time-where-the-rebuild-draws-on-it` | [The stock buys time where the rebuild draws on it](·) | theorem | recorded-checked | [ReaderRebuilding.lean](·) |
++| `the-test-season-meets-the-optimum-laws` | [LA4's test season meets the optimum laws](·) | theorem | recorded-checked | [OptimumSeason.lean](·) |
+ | `the-updater-line` | [The updater line: development, memory, replacement and margins of a learning network](·) | theorem | recorded-checked | [ConnectionistRecovery.lean](·) |
+ | `the-world-an-interleaving-builds` | [The world an interleaving builds](·) | theorem | recorded-checked | [Interleavings.lean](·) |
++| `the-world-represented-both-ways` | [The World represented in the grammar both ways, its amounts not](·) | theorem | recorded-checked | [WorldRepresentation.lean](·) |
+ | `theory-of-becoming-foundation` | [Theory of Becoming: full foundational target](·) | target | open | [BECOMING-FOUNDATION.md](·) |
+@@ -425,3 +464,3 @@
+ | `two-sided-regulation-and-late-reading` | [Two-sided regulation, and regulation that reads late](·) | theorem | recorded-checked | [Regulation.lean](·) |
+-| `type-formation-gives-no-dynamics` | [Type formation keeps the seed's boundary and gives no dynamics](·) | theorem | recorded-checked | [ProductTower.lean](·) |
++| `type-formation-gives-no-dynamics` | [Type formation keeps the seed's size bounds and gives no dynamics](·) | theorem | recorded-checked | [ProductTower.lean](·) |
+ | `typicality-by-counting` | [Typicality by counting](·) | theorem | recorded-checked | [Typicality.lean](·) |
+@@ -430,3 +469,3 @@
+ | `unity-of-readings` | [One unfolding, read in context](·) | theorem | recorded-checked | [Readings.lean](·) |
+-| `universal-practical-warrant` | [Stronger universal practical warrant target](·) | target | open | [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](·) |
++| `universal-practical-warrant` | [Whether a universal practical warrant exists](·) | target | open | [ZERO-AXIOM-PRACTICAL-JUDGMENT.md](·) |
+ | `valuing-what-is-left-at-any-worth` | [Valuing what is left at any worth](·) | theorem | recorded-checked | [Optimum.lean](·) |
+@@ -441,2 +480,3 @@
+ | `what-a-commuting-law-keeps-apart` | [What a commuting law keeps apart](·) | theorem | recorded-checked | [Commuting.lean](·) |
++| `what-a-course-chosen-through-its-model-does-not-test` | [What a course chosen through its model does not test](·) | theorem | recorded-checked | [ReadingLoop.lean](·) |
+ | `what-a-course-keeps-reachable` | [What a course keeps reachable](·) | theorem | recorded-checked | [ReachableRanges.lean](·) |
+@@ -457,2 +497,3 @@
+ | `what-can-be-born-next` | [What can be born next against what continues](·) | theorem | recorded-checked | [CausalGrowth.lean](·) |
++| `what-choices-show-of-an-order` | [What choices show of the order they come from](·) | theorem | recorded-checked | [ShownOrder.lean](·) |
+ | `what-dependence-alone-carries-of-a-level` | [What dependence alone carries of a level](·) | theorem | recorded-checked | [LevelCoupling.lean](·) |
+@@ -460,2 +501,4 @@
+ | `what-finitely-many-labels-fix` | [What finitely many labels fix](·) | theorem | recorded-checked | [Labels.lean](·) |
++| `what-giving-that-waits-draws-on` | [What giving that waits draws on](·) | theorem | recorded-checked | [PairSelection.lean](·) |
++| `what-holding-for-a-reading-is-worth` | [What holding an act for a reading is worth](·) | theorem | recorded-checked | [HeldForReading.lean](·) |
+ | `what-keeping-widening-needs` | [What keeping widening needs, and what carries it](·) | theorem | recorded-checked | [KeepingWidening.lean](·) |
+@@ -464,2 +507,4 @@
+ | `what-position-reads` | [What position reads](·) | theorem | recorded-checked | [RelativePosition.lean](·) |
++| `what-readings-fix-of-the-unread` | [What readings fix of the unread](·) | theorem | recorded-checked | [Unread.lean](·) |
++| `what-seeking-cannot-separate` | [What seeking cannot separate](·) | theorem | recorded-checked | [LumpedSeeking.lean](·) |
+ | `what-self-concern-alone-ranks` | [What self-concern alone ranks](·) | theorem | recorded-checked | [Weightings.lean](·) |
+@@ -468,4 +513,8 @@
+ | `what-the-dynamics-leave-open` | [What the dynamics leave open of the continuation condition, and what closes it](·) | theorem | recorded-checked | [Significance.lean](·) |
++| `what-the-existence-claim-forbids` | [What the existence claim forbids](·) | theorem | recorded-checked | [Blanket.lean](·) |
+ | `what-the-step-across-standpoints-reaches` | [What the step across standpoints reaches](·) | theorem | recorded-checked | [Weightings.lean](·) |
+ | `what-training-installs` | [What training installs](·) | theorem | recorded-checked | [Training.lean](·) |
++| `when-complying-when-read-is-best` | [When complying when read and acting by its own law when not is best](·) | theorem | recorded-checked | [ReadStages.lean](·) |
++| `when-holding-for-a-reading-stands-above-a-route` | [When holding for a reading stands above a route of keeping](·) | theorem | recorded-checked | [RevisionPlans.lean](·) |
++| `when-no-route-stands-above-a-revision` | [When no route of keeping a law stands above a revision of it](·) | theorem | recorded-checked | [RevisionRoutes.lean](·) |
+ | `when-the-runs-of-a-process-settle` | [When the runs of a process settle](·) | theorem | recorded-checked | [Settling.lean](·) |
+@@ -511,3 +560,3 @@
+ - Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.
+-- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The independent targets `universal-practical-warrant` and `wisdom-root` remain open.
++- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` and the independent target `wisdom-root` remain open.
+ 

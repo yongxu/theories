@@ -1,0 +1,23 @@
+--- 1c704bc70:theories/becoming/results/records/enacted-scene-binding.json
++++ theories/becoming/results/records/enacted-scene-binding.json
+@@ -177,4 +177,4 @@
+   "validation_scope": {
+-    "en": "Core: the current bytes of Becoming.CrossSituational and Becoming.Courses are bound to receipt becoming-checks/20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: MachineInstances is bound to machine-instances-checks/20261020T161859.257200Z and EnactedScene to enacted-scene-verification.json, both Lean 4.29.1, their cited declarations using propext and some Quot.sound. Author counterreview and a comparison with primary sources; no new experiment or independent acceptance.",
+-    "zh": "核心：CrossSituational、Courses 绑定合并核心检查器回执 becoming-checks/20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.29.1）：MachineInstances 绑定 20261020T161859.257200Z，EnactedScene 绑定 enacted-scene-verification.json，所引声明用 propext，部分用 Quot.sound。作者反审并与原始文献比较；无新实验或独立验收。"
++    "en": "Core: the current bytes of Becoming.CrossSituational and Becoming.Courses are bound to receipt becoming-checks/20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: MachineInstances is bound to machine-instances-checks/20261031T131812.213702Z and EnactedScene to enacted-scene-verification.json, both Lean 4.29.1, their cited declarations using propext and some Quot.sound. Author counterreview and a comparison with primary sources; no new experiment or independent acceptance.",
++    "zh": "核心：CrossSituational、Courses 绑定合并核心检查器回执 becoming-checks/20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.29.1）：MachineInstances 绑定 20261031T131812.213702Z，EnactedScene 绑定 enacted-scene-verification.json，所引声明用 propext，部分用 Quot.sound。作者反审并与原始文献比较；无新实验或独立验收。"
+   },
+@@ -384,2 +384,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
++      "role": "receipt",
++      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
++      "declarations": []
+     }
+@@ -396,3 +402,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+       "sha256_pointer": "/source_sha256/MachineInstances",

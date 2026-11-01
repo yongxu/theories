@@ -650,6 +650,8 @@ Where: Parts [C](../history/root-foundation/READINGS-PENDING-REN.md#c-the-regist
 
 **Narrowed** (30 October 2026, board item AJ6, from RF's plan §9 item 2). 07 §6 now reads pooled coupling across intelligences as a route to alignment for all, not the whole of it. A pool's acts respond to a difference only through members that couple it apart, and coupling bounds that response without fixing it. That a member coupled into a loss acts on it where the member itself is not read, that what is read tells the loss apart, that mixed courses are ordered (which C alone does not do; a commitment such as J1 does it in part) and that a revision completes are further conditions, which pooling does not give. The rest of the reading is kept.
 
+**Outgrown in part** (2 November 2026, board item GC2). The last sentence of (6) is history. Since 31 October OPENING's first-person body is revised in place and the generativity chain through its maintenance record, both on argument, not on proposals to Ren (AGENTS.md); GC2 decided the chain's open proposals so ([the record](GENERATIVITY-CHAIN-INDEX-RECORD.md#gc2-chain-revision-2-november-2026)). The rest of the decision is kept.
+
 <a id="d46-多于此刻的取用终于何处--where-a-rising-take-ends"></a>
 ### Where a rising take ends
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "id": "formed-copying-registration",
+  "id": "formed-contacts-change-copying-fidelity",
   "title": {
     "zh": "形成的接触改变复制保真度",
     "en": "Formed contacts change copying fidelity"
@@ -295,7 +295,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GROWN-FRAGMENTATION-INTEGRATION.md",
       "role": "integration",
-      "sha256": "0c2a66dfa4deb7aecd05cfe1f0acc711cdc9d6c6b90784ca54aea02f88b2a06f",
+      "sha256": "5925b00793b30937b6cd7fea3083cf7c710d980aa199890572eb2fe6fc7d3522",
       "declarations": []
     },
     {
@@ -521,5 +521,8 @@
         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
       }
     }
+  ],
+  "former_ids": [
+    "formed-copying-registration"
   ]
 }

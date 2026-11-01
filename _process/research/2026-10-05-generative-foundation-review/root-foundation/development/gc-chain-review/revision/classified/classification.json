@@ -1,0 +1,1858 @@
+{
+ "theories/becoming/history/PRACTICAL-JUDGMENT.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/PRACTICAL-JUDGMENT.md",
+  "entries": [
+   "C17",
+   "C18",
+   "C19",
+   "C23",
+   "C24",
+   "M14",
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "bf950279e R35 step 3, E13: 40 dated round banners of 5-13 October 2026 at the heads of 12 live chapter files (THE-THEORY-OF-EVOLUTION 15, WISDOM-AND-CONTEXT 10,",
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/000.diff",
+  "diff_lines": 6
+ },
+ "theories/becoming/history/KNOWLEDGE.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/KNOWLEDGE.md",
+  "entries": [
+   "M15",
+   "M21"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F",
+   "28a97ad91 R19: kept chapters state living significance as the Lean shows; retired standing and past words as warrant"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/001.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/history/ALIGNMENT-DIRECTION.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/ALIGNMENT-DIRECTION.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F",
+   "28a97ad91 R19: kept chapters state living significance as the Lean shows; retired standing and past words as warrant",
+   "07cd8179f N7 landing: the reading pass on \"correction\" (Ren 19 Oct: \"correct? this is a dualist word, are we drifting off?\"). Where a use made one course the ri"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/002.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/history/PHILOSOPHICAL-ACCOUNT.md": {
+  "kind": "other",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/PHILOSOPHICAL-ACCOUNT.md",
+  "entries": [
+   "M21"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F",
+   "28a97ad91 R19: kept chapters state living significance as the Lean shows; retired standing and past words as warrant"
+  ],
+  "diff_basis": "links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/003.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/ROADMAP.md": {
+  "kind": "generated",
+  "recorded_commit": "0d7a397a5a97857d001e57cc9164d3d7ef273f8e",
+  "recorded_path": "theories/becoming/results/ROADMAP.md",
+  "entries": [],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "cb3edc5d0 lw-goal-bases landed: universal-intelligence-session's objective says its laws are proved each on its stated base, and zero-axiom-session is restated ",
+   "4e3627e22 LW: the goal universal-intelligence-session restated as approved on 30 October (title: The ethics for life, and every intelligence formed within it; o"
+  ],
+  "diff_basis": "links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/004.diff",
+  "diff_lines": 6
+ },
+ "theories/becoming/history/ETHICAL-LEARNING.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/ETHICAL-LEARNING.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "bf950279e R35 step 3, E13: 40 dated round banners of 5-13 October 2026 at the heads of 12 live chapter files (THE-THEORY-OF-EVOLUTION 15, WISDOM-AND-CONTEXT 10,",
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F",
+   "28a97ad91 R19: kept chapters state living significance as the Lean shows; retired standing and past words as warrant"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/005.diff",
+  "diff_lines": 16
+ },
+ "theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/BASIC-CONFLICT-JUDGMENT.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "bf950279e R35 step 3, E13: 40 dated round banners of 5-13 October 2026 at the heads of 12 live chapter files (THE-THEORY-OF-EVOLUTION 15, WISDOM-AND-CONTEXT 10,",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/006.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/history/WISDOM-AND-CONTEXT.md": {
+  "kind": "split+edits",
+  "recorded_commit": "1038a699e81765bd214a90e74b933e3a04e0af8c",
+  "recorded_path": "theories/becoming/chapters/WISDOM-AND-CONTEXT.md",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "bf950279e R35 step 3, E13: 40 dated round banners of 5-13 October 2026 at the heads of 12 live chapter files (THE-THEORY-OF-EVOLUTION 15, WISDOM-AND-CONTEXT 10,",
+   "e936f8ee6 R30: one notion, one name (one rename table, statements unchanged): 336 declarations (199 moved with their namespace), 11 namespaces and 4 modules (Ge"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/007.diff",
+  "diff_lines": 26
+ },
+ "theories/becoming/results/records/transition-grouping-word-partition.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/transition-grouping-word-partition.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/008.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/acquired-binding-compositional-use.json": {
+  "kind": "record-bindings",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/acquired-binding-compositional-use.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/009.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/acquired-binding-compositional-use.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/acquired-binding-compositional-use.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/010.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/records/enacted-scene-binding.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/enacted-scene-binding.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/011.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/enacted-scene-binding.md": {
+  "kind": "generated",
+  "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+  "recorded_path": "theories/becoming/results/records/enacted-scene-binding.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "6d12741be DF3 batch B: the cold read taken (three readers, 44 findings, all but two: the conditions a statement or law left unnamed, a home section's link and a",
+   "78e709ff3 DF3 batch B applied, not landed: unit K's review taken (37 edits; Identity and Arising bound for whole-persists-through-generation); two reference lis",
+   "64c11b8ed DF1 landed: the record corrections of DEFECTS-FOUND (board item DF under RA). Each of its 174 entries checked against the current records, chapters an",
+   "089fb56da PR1: every periphery receipt renewed on the current core. The 23 periphery checkers chapter section 9 names (FallibleInquiry, CorrectionInquiry, Machi",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "78ee830f0 R34: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "4edaf794f R33: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "fb91812e4 R31: 260 records re-pointed after reading the change (rebind.py): proof bindings of the changed core modules rebound to core receipt 20261019T213206.6",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "a0804767c R29 landing: records rebound and re-pointed after reading (204; 25 with moved or replaced declarations, each removed name replaced by the kept stateme",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded",
+   "8fce36372 N6 landing: the reading pass of the N1 renaming's open prose (Ren 19 Oct: \"Yes to the N6 reading pass: reapply it on current main, rerun the checkers ",
+   "cb8f60675 N6 (unproposed, not landed): pass reapplied on main 9b9e7951b (A1, F1, G3, L2 + C1, U2c)",
+   "07a3db6ed N6 (unproposed, not landed): pass reapplied on main d4dd2a8a7 after the rebase",
+   "81dbce1c5 N6 (unproposed, not landed): record reading pass complete, records rebound to in-tree receipts, proposal table"
+  ],
+  "record_fields": [
+   "claim",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/012.diff",
+  "diff_lines": 148
+ },
+ "theories/becoming/results/records/market-supported-finite-transition.md": {
+  "kind": "version-not-found",
+  "entries": [
+   "M20"
+  ]
+ },
+ "theories/becoming/results/records/open-form-realization-under-revision.json": {
+  "kind": "other",
+  "recorded_commit": "502c22b45a9a5b42e5892e7c20658e2793808e0f",
+  "recorded_path": "theories/becoming/results/records/open-form-realization-under-revision.json",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [
+   "aliases",
+   "claim",
+   "counterexamples",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t",
+   "64c11b8ed DF1 landed: the record corrections of DEFECTS-FOUND (board item DF under RA). Each of its 174 entries checked against the current records, chapters an",
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "3f75b72e7 SG2 landed: room read off the exchange (study §288, record room-read-off-the-exchange, receipt 20261020T222228.243650Z). Among the outcomes open to a ",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "bf950279e R35 step 3, E13: 40 dated round banners of 5-13 October 2026 at the heads of 12 live chapter files (THE-THEORY-OF-EVOLUTION 15, WISDOM-AND-CONTEXT 10,",
+   "ee8ebc82e R35 step 2(d), E4: 17 record ids renamed off retired labels (G0, J, the one axiom, Part I, registration), with redirects. New research.py rename-id (t",
+   "ec1d58023 R35 step 2(b), E8: 57 records whose proof references bound superseded periphery modules (bridge-fold retire list, or lean/history). 154 such reference",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "5d32f69f9 R20b landing: core receipt 20261019T090457.012800Z (passed, empty core axiom report; nine files changed in comments only), 72 records re-pointed and 3",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/014.diff",
+  "diff_lines": 429
+ },
+ "theories/becoming/results/records/recurrent-chain-assembly.json": {
+  "kind": "other",
+  "recorded_commit": "0d7a397a5a97857d001e57cc9164d3d7ef273f8e",
+  "recorded_path": "theories/becoming/results/records/recurrent-chain-assembly.json",
+  "entries": [
+   "C14"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/015.diff",
+  "diff_lines": 214
+ },
+ "theories/becoming/results/records/classification-robust-generative-comparison.md": {
+  "kind": "generated",
+  "recorded_commit": "35ce2ea296015ad016dafd8fe49257abd82424d7",
+  "recorded_path": "theories/becoming/results/records/classification-robust-generative-comparison.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "8b820618d DF3 batch A landed (study §435): the thirty schema-1 records DF1 named migrated to schema 2, 224 laws each read against its declarations, limitations ",
+   "d18032c2c DF3 batch A applied, not landed: thirty schema-1 records migrated to schema 2 with laws arrays (each law read against its declarations; limitations to",
+   "64c11b8ed DF1 landed: the record corrections of DEFECTS-FOUND (board item DF under RA). Each of its 174 entries checked against the current records, chapters an",
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "7a7d74c48 ZG7 landed: the last ZH gaps (seven records: two-rules-lock-together, a-reading-against-the-share-does-not-ratchet, a-pool-read-by-its-majority, what-",
+   "29ad55f4e EC2 and EC4 records: balance_over_stretch_on and its forms cited under Becoming.Prelude (census-balance, census-balance-under-continuation, laws-at-co",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "ee8ebc82e R35 step 2(d), E4: 17 record ids renamed off retired labels (G0, J, the one axiom, Part I, registration), with redirects. New research.py rename-id (t",
+   "ec1d58023 R35 step 2(b), E8: 57 records whose proof references bound superseded periphery modules (bridge-fold retire list, or lean/history). 154 such reference",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "78ee830f0 R34: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "fb91812e4 R31: 260 records re-pointed after reading the change (rebind.py): proof bindings of the changed core modules rebound to core receipt 20261019T213206.6",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "f0b603b88 U3/U4 landing: theorems apart from the base, largest groups first, and the practical commitments in the core — four core modules read general laws on ",
+   "5d32f69f9 R20b landing: core receipt 20261019T090457.012800Z (passed, empty core axiom report; nine files changed in comments only), 72 records re-pointed and 3",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded"
+  ],
+  "record_fields": [
+   "aliases",
+   "claim",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/016.diff",
+  "diff_lines": 203
+ },
+ "theories/becoming/results/records/encounter-selection-and-revision.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/encounter-selection-and-revision.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/017.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/encounter-selection-and-revision.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/encounter-selection-and-revision.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/018.diff",
+  "diff_lines": 15
+ },
+ "theories/becoming/results/records/market-partial-correction-boundary.md": {
+  "kind": "generated",
+  "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+  "recorded_path": "theories/becoming/results/records/market-partial-correction-boundary.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "12fbcf71a VK part 2 kit on main after SJ1: periphery receipt 20261101T114325.150839Z for MarketInstances (4 Lean steps run, 47 reused); the four market records ",
+   "0e01bfafa SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt 20261101T112708.430596Z, every axiom report empty, study §494; ",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "8b820618d DF3 batch A landed (study §435): the thirty schema-1 records DF1 named migrated to schema 2, 224 laws each read against its declarations, limitations ",
+   "565601488 EC6b landed: EC6's cases of closure and balance derived (board rule 9), every statement and definition unchanged. Pace gains stays (a region of the pa",
+   "d18032c2c DF3 batch A applied, not landed: thirty schema-1 records migrated to schema 2 with laws arrays (each law read against its declarations; limitations to",
+   "64c11b8ed DF1 landed: the record corrections of DEFECTS-FOUND (board item DF under RA). Each of its 174 entries checked against the current records, chapters an",
+   "c99e2af06 OU3b landed: the five master laws on the grammar (Becoming.GrammarLaws, 113 theorems in 133 declarations, below the frame; board rule 9 in fourteen mo",
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "089fb56da PR1: every periphery receipt renewed on the current core. The 23 periphery checkers chapter section 9 names (FallibleInquiry, CorrectionInquiry, Machi",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "ee8ebc82e R35 step 2(d), E4: 17 record ids renamed off retired labels (G0, J, the one axiom, Part I, registration), with redirects. New research.py rename-id (t",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "78ee830f0 R34: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "4edaf794f R33: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "fb91812e4 R31: 260 records re-pointed after reading the change (rebind.py): proof bindings of the changed core modules rebound to core receipt 20261019T213206.6",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "a0804767c R29 landing: records rebound and re-pointed after reading (204; 25 with moved or replaced declarations, each removed name replaced by the kept stateme",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "8fce36372 N6 landing: the reading pass of the N1 renaming's open prose (Ren 19 Oct: \"Yes to the N6 reading pass: reapply it on current main, rerun the checkers ",
+   "cb8f60675 N6 (unproposed, not landed): pass reapplied on main 9b9e7951b (A1, F1, G3, L2 + C1, U2c)",
+   "07a3db6ed N6 (unproposed, not landed): pass reapplied on main d4dd2a8a7 after the rebase",
+   "81dbce1c5 N6 (unproposed, not landed): record reading pass complete, records rebound to in-tree receipts, proposal table"
+  ],
+  "record_fields": [
+   "claim",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/019.diff",
+  "diff_lines": 179
+ },
+ "theories/becoming/results/records/retrospective-source-binding.md": {
+  "kind": "generated",
+  "recorded_commit": "089fb56daf5125593b61c1b5cb41fb223321b752",
+  "recorded_path": "theories/becoming/results/records/retrospective-source-binding.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "78e709ff3 DF3 batch B applied, not landed: unit K's review taken (37 edits; Identity and Arising bound for whole-persists-through-generation); two reference lis"
+  ],
+  "record_fields": [
+   "claim",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/020.diff",
+  "diff_lines": 126
+ },
+ "theories/becoming/results/records/finite-granularity-question-recovery.json": {
+  "kind": "other",
+  "recorded_commit": "89199e2cc2a56304178b44ed87ed46ffdea4943f",
+  "recorded_path": "theories/becoming/results/records/finite-granularity-question-recovery.json",
+  "entries": [
+   "C30",
+   "F22"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "6d12741be DF3 batch B: the cold read taken (three readers, 44 findings, all but two: the conditions a statement or law left unnamed, a home section's link and a",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/021.diff",
+  "diff_lines": 239
+ },
+ "theories/becoming/results/records/derived-history-law-exactness.json": {
+  "kind": "version-not-found",
+  "entries": [
+   "C01"
+  ]
+ },
+ "theories/becoming/results/records/incidence-common-refinement.json": {
+  "kind": "other",
+  "recorded_commit": "89199e2cc2a56304178b44ed87ed46ffdea4943f",
+  "recorded_path": "theories/becoming/results/records/incidence-common-refinement.json",
+  "entries": [
+   "C30",
+   "F22"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "58563d56e DF3 batch B in progress, not landed: all 87 records migrated (the last three of unit K after the outage); the reviews of units M, B, C and J taken (18",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/023.diff",
+  "diff_lines": 188
+ },
+ "theories/becoming/results/records/multivalued-joining-common-structure.json": {
+  "kind": "other",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/multivalued-joining-common-structure.json",
+  "entries": [
+   "C30",
+   "F22"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/024.diff",
+  "diff_lines": 217
+ },
+ "theories/becoming/results/records/retained-reference-joining-recovery.json": {
+  "kind": "other",
+  "recorded_commit": "29ad55f4ec41c8a3df0a53ea3dedf57444c14cb5",
+  "recorded_path": "theories/becoming/results/records/retained-reference-joining-recovery.json",
+  "entries": [
+   "C30",
+   "F22"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the grammar does ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t",
+   "0ba523c04 OU3e landing in progress (before merging main's head claim): core receipt 20261028T085101.429997Z from a rehearsed run, signatures, connectivity (OU3d"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/025.diff",
+  "diff_lines": 179
+ },
+ "theories/becoming/results/records/binding-preserving-substitution.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/binding-preserving-substitution.json",
+  "entries": [
+   "F01"
+  ],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/026.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/records/acquired-revision-of-pending-task.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/acquired-revision-of-pending-task.md",
+  "entries": [
+   "M24"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/027.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/mediated-evidence-transport.json": {
+  "kind": "record-bindings",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/mediated-evidence-transport.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/028.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/recoverable-mediated-change.json": {
+  "kind": "version-not-found",
+  "entries": []
+ },
+ "theories/becoming/results/records/recoverable-mediated-change.md": {
+  "kind": "version-not-found",
+  "entries": [
+   "F30",
+   "M25"
+  ]
+ },
+ "theories/becoming/results/records/retrospective-source-binding.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/retrospective-source-binding.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/031.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/records/historical-source-binding.json": {
+  "kind": "record-bindings",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/historical-source-binding.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/032.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/historical-source-binding.md": {
+  "kind": "generated",
+  "recorded_commit": "77dc88103e95053be16160c7781053360b5fda1f",
+  "recorded_path": "theories/becoming/results/records/historical-source-binding.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "78e709ff3 DF3 batch B applied, not landed: unit K's review taken (37 edits; Identity and Arising bound for whole-persists-through-generation); two reference lis",
+   "64c11b8ed DF1 landed: the record corrections of DEFECTS-FOUND (board item DF under RA). Each of its 174 entries checked against the current records, chapters an",
+   "089fb56da PR1: every periphery receipt renewed on the current core. The 23 periphery checkers chapter section 9 names (FallibleInquiry, CorrectionInquiry, Machi",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "318b4df2f R35 batch B4 (E10; research.py move, receipt _process/architecture/moves/R35-B4-study.json): 37 study files to the study's history unchanged: the exec",
+   "78ee830f0 R34: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "4edaf794f R33: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "fb91812e4 R31: 260 records re-pointed after reading the change (rebind.py): proof bindings of the changed core modules rebound to core receipt 20261019T213206.6",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "a0804767c R29 landing: records rebound and re-pointed after reading (204; 25 with moved or replaced declarations, each removed name replaced by the kept stateme",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "8fce36372 N6 landing: the reading pass of the N1 renaming's open prose (Ren 19 Oct: \"Yes to the N6 reading pass: reapply it on current main, rerun the checkers ",
+   "cb8f60675 N6 (unproposed, not landed): pass reapplied on main 9b9e7951b (A1, F1, G3, L2 + C1, U2c)",
+   "07a3db6ed N6 (unproposed, not landed): pass reapplied on main d4dd2a8a7 after the rebase",
+   "81dbce1c5 N6 (unproposed, not landed): record reading pass complete, records rebound to in-tree receipts, proposal table"
+  ],
+  "record_fields": [
+   "claim",
+   "correspondence",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/033.diff",
+  "diff_lines": 154
+ },
+ "theories/becoming/results/records/joint-practice-forms-continuation.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/joint-practice-forms-continuation.json",
+  "entries": [
+   "C14"
+  ],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/034.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/records/residual-continuation-correspondence.json": {
+  "kind": "other",
+  "recorded_commit": "89199e2cc2a56304178b44ed87ed46ffdea4943f",
+  "recorded_path": "theories/becoming/results/records/residual-continuation-correspondence.json",
+  "entries": [
+   "C30",
+   "F22"
+  ],
+  "changed_fields": [
+   "claim",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/035.diff",
+  "diff_lines": 292
+ },
+ "theories/becoming/results/records/inherited-structural-copying.json": {
+  "kind": "other",
+  "recorded_commit": "0d7a397a5a97857d001e57cc9164d3d7ef273f8e",
+  "recorded_path": "theories/becoming/results/records/inherited-structural-copying.json",
+  "entries": [
+   "C14"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/036.diff",
+  "diff_lines": 293
+ },
+ "theories/becoming/results/records/pending-task-context-applicability.md": {
+  "kind": "version-not-found",
+  "entries": [
+   "M24"
+  ]
+ },
+ "theories/becoming/results/records/mediated-evidence-transport.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/mediated-evidence-transport.md",
+  "entries": [],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/038.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/reserved-shutdown-during-recovery.json": {
+  "kind": "record-bindings",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/reserved-shutdown-during-recovery.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/039.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/reserved-shutdown-during-recovery.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/reserved-shutdown-during-recovery.md",
+  "entries": [
+   "F30",
+   "M25"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a class's core",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/040.diff",
+  "diff_lines": 15
+ },
+ "theories/becoming/results/records/formed-copying-registration.json": {
+  "kind": "other",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/formed-copying-registration.json",
+  "entries": [
+   "C14"
+  ],
+  "changed_fields": [
+   "claim",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/041.diff",
+  "diff_lines": 268
+ },
+ "theories/becoming/results/records/growth-constrained-fragmentation.json": {
+  "kind": "version-not-found",
+  "entries": []
+ },
+ "theories/becoming/results/records/formed-copying-correction.json": {
+  "kind": "other",
+  "recorded_commit": "0d7a397a5a97857d001e57cc9164d3d7ef273f8e",
+  "recorded_path": "theories/becoming/results/records/formed-copying-correction.json",
+  "entries": [
+   "C14"
+  ],
+  "changed_fields": [
+   "claim",
+   "counterexamples",
+   "dependencies",
+   "does_not_show",
+   "history",
+   "hypotheses",
+   "laws",
+   "limitations",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "reviewed_at_utc",
+   "schema_version",
+   "standard_boundaries",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "1c704bc70 DF3 batch B landed (study §441): the other 87 schema-1 records migrated to schema 2, 797 laws each read against its declarations, limitations as 288 t",
+   "9a862eda4 DF3 batch B in progress, not landed: 84 of the 87 schema-1 records migrated to schema 2 with laws arrays and mapping tables (snapshots taken first); t"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/043.diff",
+  "diff_lines": 207
+ },
+ "theories/becoming/results/records/learned-procedure-transmission.json": {
+  "kind": "record-bindings",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/learned-procedure-transmission.json",
+  "entries": [],
+  "changed_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/044.diff",
+  "diff_lines": 10
+ },
+ "theories/becoming/results/records/learned-procedure-transmission.md": {
+  "kind": "generated",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/learned-procedure-transmission.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/045.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/finite-fallible-inquiry-necessity.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.md",
+  "entries": [],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/046.diff",
+  "diff_lines": 23
+ },
+ "theories/becoming/results/records/selection-under-registration-revision.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/selection-under-registration-revision.md",
+  "entries": [
+   "M24"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a class's core",
+   "580cd9d62 RF6.1 landed (study §457, core receipt 20261029T200440.502813Z): Becoming.OpenedCorrection (12 theorems in 16 declarations) joined to the ring as an a",
+   "e0ac63f87 UE18 and UE19 landed in one landing (study §452 and §453, core receipt 20261029T164943.729811Z, periphery receipt 20261029T164946.410686Z). UE18, the ",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "history",
+   "related"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/047.diff",
+  "diff_lines": 24
+ },
+ "theories/becoming/results/records/consequence-revised-reference-plan.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/consequence-revised-reference-plan.md",
+  "entries": [
+   "M24"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/048.diff",
+  "diff_lines": 15
+ },
+ "theories/becoming/results/records/timely-response-necessity.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/timely-response-necessity.md",
+  "entries": [
+   "M21"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/049.diff",
+  "diff_lines": 15
+ },
+ "theories/becoming/results/records/recurring-reference-revision.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/recurring-reference-revision.md",
+  "entries": [
+   "M24"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the grammar does ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a class's core",
+   "ef992f2d2 The measure counts each master law's statement on the grammar among its anchors: measure_grammar.py's GRAMMAR_FORMS (08 §7's column, with «所闭», «同行» a",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/050.diff",
+  "diff_lines": 18
+ },
+ "theories/becoming/results/records/finite-fallible-inquiry-necessity.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.json",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/051.diff",
+  "diff_lines": 14
+ },
+ "theories/becoming/results/records/timely-response-necessity.json": {
+  "kind": "other",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/timely-response-necessity.json",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "move_rewrites": null,
+  "commits": [
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/052.diff",
+  "diff_lines": 14
+ },
+ "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean": {
+  "kind": "other",
+  "recorded_commit": "c99e2af06b7c6ce97e4f877e439dcd545c3c33bd",
+  "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "6eb479810 HE landed (study §455, core receipt 20261029T184601.050950Z): the held edits in one near-full rebuild, every statement and name unchanged (the signatu"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/053.diff",
+  "diff_lines": 20
+ },
+ "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean": {
+  "kind": "other",
+  "recorded_commit": "e5ebbdd284a2902479f6c0f6d7efd9ccc8933c0d",
+  "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "467f075ec HE2 landed (study §474, core receipt 20261031T054654.692180Z, every axiom report empty, one core run in place on the rehearsal's steps, all 1,447 modu"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/054.diff",
+  "diff_lines": 13
+ },
+ "theories/becoming/history/THE-THEORY-OF-BECOMING.md": {
+  "kind": "split+edits",
+  "recorded_commit": "0217baa3878592d5e0b72a486738ecdf3fd440c7",
+  "recorded_path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+  "entries": [
+   "C01",
+   "C03"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "b0e2f62f8 IV3i landed: need in degree with capacities read off the stores. Becoming.Weightings (324 theorems in 454 declarations, every axiom report empty; core",
+   "a51d5747e IV3h landed: the independent review of the IV3 line, and its fixes. A reader that did not write the line (a separate AI agent) checked every text clai",
+   "d6dbc9e43 IV3g landed: need in degree. Becoming.Weightings (305 theorems in 433 declarations, every axiom report empty; core receipt 20261023T094249.727687Z): a",
+   "ddd911e28 IV3f landed: what a feeder can give, read off its own supply, and need up a hierarchy. Becoming.Weightings (289 theorems in 413 declarations, every ax",
+   "dac976bb4 IV3e landed: need with capacities, exact. Becoming.Weightings (258 theorems in 364 declarations, every axiom report empty; core receipt 20261023T08503",
+   "b093a15c8 IV3d landed: capacities of giving, read with the web. Becoming.Weightings (226 theorems in 321 declarations, every axiom report empty; core receipt 20",
+   "bbaa6df00 IV3c landed: which feeders can feed a family alone, read off a web. Becoming.Weightings (199 theorems in 282 declarations, every axiom report empty; c",
+   "235041f53 IV3b landed: need on the base, and the coupled ending ranked in one theorem. Becoming.Weightings (181 theorems in 255 declarations, every axiom report",
+   "205696be5 EC6 landed: rest by balance. In Becoming.Amounts, from the stretch balance (balance_over_stretch_on): a count balanced across each step and losing at ",
+   "d13346ced WL3 landed: the 文 line joined to the one-unfolding root. Becoming.GrammarCourse (32 theorems in 36 declarations, every declaration with an empty axiom",
+   "4b1f7bd3f IV3 landed: the route through dependence. Becoming.Weightings (170 theorems in 234 declarations, every axiom report empty; core receipt 20261023T05115",
+   "6c07c37e9 XL4 landed: what stayed open after XL1-XL3. Becoming.OverExchange gains two sections (57 declarations, empty axiom reports; core receipt 20261022T1512",
+   "c31156426 EV13-EV16 landed: selection in the draw, mutation, the breeding value, and dependences formed from drawing. Becoming.Drift (36 theorems added): replac",
+   "cbed82ff8 VT1 landed: the valuer tests as theorems. Becoming.Weightings (146 theorems in 199 declarations, every axiom report empty; core receipt 20261022T14381",
+   "40f882b7b CA1 landed: what cancer is, and what keeps a part from turning back. New core module Becoming.Founding (42 theorems, empty axiom reports; core receipt",
+   "5c0e185ca XL1, XL2 and XL3 landed: the central laws over every relation of exchange, and what discrete steps and whole amounts represent. New core module Becomi",
+   "15321dbe1 TI1 and TI2 landed: what training installs. New core module Becoming.Training (59 theorems in 88 declarations, empty axiom reports; core receipt 20261",
+   "5de8b639b AL1 landed: when drawing at once drains, and whom restraint pays. Becoming.Optimum (every axiom report empty, core receipt 20261022T134333.178862Z on ",
+   "e8829e634 NL1 landed: what position reads, and the opening's version 12. Core receipt 20261022T133248.097273Z on main d5bfb577b (passed, empty core axiom report",
+   "7d05030b2 PL1, CK1, CK2, CR1 and EM1 landed. Core receipt 20261022T132056.171285Z on main 07019c321 (passed, empty core axiom reports). Becoming.PoolCourse (17 ",
+   "4ac870051 IF1 and RP1 landed: a rise past the inflow is drawn from beyond, and a race for position draws everything. Records a-rise-past-the-inflow-is-drawn-fro",
+   "5c749cd53 FL2 landed: balance from conservation along a relation. New core module Becoming.Continuity (43 theorems in 64 declarations, empty axiom reports; core",
+   "4b42bd753 EV12 landed: groups founded mixed, and the rule of returns to groupmates. Becoming.SelectionLevels (every axiom report empty; now importing Becoming.R",
+   "934bfc9cc EW4 landed: the third frozen field test of T6's uncoupled side, on a stock no verdict had used (Southeast Farallon seabirds, central California young-",
+   "8f8415266 CS1 and EW3 landed. CS1: T6's seen half proved in its model (periphery SlowingDown, receipt 20261022T104044.892409Z): stationary variance Var E/(1 − a",
+   "d5fd66add MA2: readers drawn from the selected (Becoming.ClosedCapture gains 42 declarations, 35 theorems, empty axiom reports). The rule read as the pool of it",
+   "50eb2006d FL1 landed: balance from the first law. EntropyProduction (periphery) gains the first-law section: a quantity carried only by the exchanges taking par",
+   "0accf7adc WL2 landed: the laws of 文 as theorems. The coarsest class keeping a map's values and carrying a determined law, one law: the same course is the coarse",
+   "eaec9fd84 SD1 landed: the theorem map's row for what-the-dynamics-leave-open (chapter EN, ZH); the SD1 board row moved to the history file, queue and receipt se",
+   "c162faedc SD1: what the dynamics leave open of the continuation condition, and what closes it (Becoming.Significance: Rival, rival_iff_lacks, Unrestricted.not_r",
+   "cac77c0b7 ZG8 landed: the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient, study §345, review #gaps-check-4); the ZH map'",
+   "7a7d74c48 ZG7 landed: the last ZH gaps (seven records: two-rules-lock-together, a-reading-against-the-share-does-not-ratchet, a-pool-read-by-its-majority, what-",
+   "fc5dacf2b ZG4-ZG6 landed: the ZH gaps (twelve records: copied-witnesses-change-nothing, synonyms-and-coined-forms, taking-what-most-hold, imposing-a-code-breaks",
+   "715af1d68 ZG1-ZG3 landed: the ZH gaps with precise statements (sixteen records: negation-change-and-stable-cases, least-parts-and-equal-shares, copying-b-fold, ",
+   "6617e9983 UM3 landed: drawing at once, the same law (record drawers-in-turn updated, study §337, review #at-once-check; Optimum.InTurn.floor_of_less, the law's ",
+   "da3c5a04f UM2 landed: where floors bind, two drawers with no floor drain (record drawers-in-turn updated, study §336, review #floors-check; Optimum.InTurn: thro",
+   "52031c89a UM landed: one model of drawers in turn and one law of exact thresholds (record drawers-in-turn, superseding drawers-in-turn-draw-everything, revision",
+   "6ce7741ce WH1 and SAT1 landed: a whole of every part, and a graded whole (record a-whole-of-every-part, study §333, review #wholes-check; Becoming.Wholes: Web.A",
+   "63781794e SG17 landed: any number of drawers in turn (record any-number-of-drawers-in-turn, study §332, review #many-check; Optimum.InTurn.Many: k drawers in tu",
+   "c1a02e42f ZHK: the five kinds the 脉络 map decided (D62) written into the RO and Y1 maps. RO (build_passages.py FIXES, which now carry a kind and a whole reading)",
+   "03e03f174 RM10 landed: webs with a recent giving (record webs-with-a-recent-giving, study §331, review #recent-check; RegimeMargin.Coupled.Indexed: RM9's bounde",
+   "9d7ed9ceb VD2 landed: T5's exception with each valuer's sign measured apart from the ranking, run complete. VD1's six models x 16 standpoints (96 valuers) judge",
+   "89d8e0a02 SG15 landed: drawers in turn whose capacity limits a draw (record drawers-in-turn-within-capacities, study §329, review #capacity-check; Optimum.InTur",
+   "14592b8aa RM9 landed: thresholds beyond a band, a bound on the run in its place (record thresholds-beyond-a-band, study §327, review #bounded-check; RegimeMargi",
+   "fb808076e SG16 landed: how drawers in turn come to a mutual best response (record revision-comes-to-drawing-everything, study §326, review #revision-check; Opti",
+   "97c18a670 RM8 landed: rest and points of no return on coupled webs (record rest-on-coupled-webs, study §325, review #web-rest-check; RegimeMargin.Coupled.Indexe",
+   "c3b65f663 SG14 landed: drawers in turn, each ranking courses (record drawers-in-turn-draw-everything, study §324, review #in-turn-check; Optimum.InTurn: two dra",
+   "234fb8b55 SG13 landed: steps met again after a fall (record steps-met-again-after-a-fall, study §323, review #met-again-check; Optimum: counted at every step me",
+   "be039cd9b SG12 landed: valuing what is left at any worth (record valuing-what-is-left-at-any-worth, study §322, review #worth-check; Optimum: at a worth v of at",
+   "b58eb5d6a SG11 landed: valuing what is left at the horizon (record valuing-what-is-left-at-the-horizon, study §321, review #left-check; Optimum: with what is le",
+   "da87145ee J1S landed: the priority of basic conditions, step by step (record basic-priority-step-by-step, study §320, review #j1-check; Ranking, now importing L",
+   "6a16d2e9d EC3 landing text: study section 319, chapter section 9 receipt (EN, ZH), board row (EC3 landed)",
+   "1af8e0949 EC3 integrated: one rest theorem below the worlds that use it. Becoming.InAmounts imports only the amounts, finite runs and what lies below Space; the",
+   "e044f63eb EC5: the master laws stated and measured. The chapter's preface states closure, balance, finite runs, lumping and order with their anchors and the eth",
+   "3790a49e4 MQ7 landed: fates on either side of the curve in the plane of level and recent giving, in the field. Frozen at f561a0218 and run at 821c9bc52 on the 2",
+   "1305aaa3f RL1 landed: the relation-level reading's law of easing, and restraint under it (record relation-level-law-of-easing, study §316, review #relation-chec",
+   "3942a5b99 ST1 landed: the stepwise law of easing, and restraint over any number of drawers under the stepwise reading (record stepwise-law-of-easing, study §314",
+   "6a310865e MQ6: the margin's time to break past the fold, in the lab (Dai, Korolev and Gore 2015, Dryad doi:10.5061/dryad.k30v3, CC0), frozen in three stages bef",
+   "e83f203a7 EC2 and EC4 landing text: study sections 312-313, readings D61 numbered, chapter section 9 receipt (EN, ZH), board row (EC2 and EC4 landed, EC open fo",
+   "7dadf43eb RM7 landed: coupled webs, support across a web and the cascade of ends (record coupled-webs, study §311, review #web-check; RegimeMargin.Coupled.Index",
+   "e603c661f RS1 landed: one reader, several conditions (new core module Becoming.ReadingSchedule, 67 theorems in 87 declarations, empty axiom reports; core receip",
+   "1081192c0 LU1: study section 309; chapter section 9's receipt, counts and audit sentence (EN, ZH); record closed-capture extended (the law of a part read alone,",
+   "0316324ee LU1: T7's standing, section 4.5's ClosedCapture bullet and the relation to known results (EN, ZH) read the capture laws as the law of a part read alon",
+   "4b6693ad3 LC3 landed: one rest theorem over any amounts, exactly where the total stops falling (core receipt 20261021T124304.830826Z, study section 308). Becomi",
+   "5d5cd1cb1 EC1 landing text: study section 307, chapter 2.5 (the five levels as the frame's one closure, reach the closure of the steps) and section 9 receipt (E",
+   "6534be489 RM6 on the merged tree: chapter section 9's receipt, counts and audit sentence for receipt 20261021T121942.438529Z (EN, ZH); the board's receipt sente",
+   "686a6af0f AP2: reading another's law, and lexical priority within the class. Knowing another's law is no coupling: in Becoming.SelectionPool (every axiom report",
+   "edc6b89a2 CG1c: section 7's CG1 boundary read through the laws landed since. Chapter 7.5's paragraph restated as one account: widening the coupling is necessary",
+   "b51358876 MQ5's premise check (post hoc, not verdicts), on MC1's one account: the regime's order laws over giving that adjusts (rest, the threshold in the plane",
+   "572d54a8d T3's evidence qualified (chapter, EN and ZH): not every learner failure is a drain. One learner rewarded with every apple and the stock's end level, n",
+   "a82b71c66 MC1: the margin line closed into one account. experiments/margin-measured/README.md rewritten by finding (the answer; why the frozen-rest margin is no",
+   "fa6b007f5 T5 restated after VD1 (chapter, EN and ZH): the heading and the claim scoped to valuers who count everything at stake; the claim a bound on where disa",
+   "4397afb0b RM6 landed: coupled regimes, a margin that is not its own (record coupled-regimes, study §303, review #coupled-check; RegimeMargin.Coupled: two condit",
+   "3f86edeab RM5 landed: the regime in any amounts, and its runs over the reals (record regime-in-any-amounts, study §302, review #amounts-check; in any linearly o",
+   "34f96dfc4 RM4 landed: the threshold in the plane of level and recent giving (record threshold-in-the-state-plane, study §301, review #threshold-check; a run has",
+   "8316e7d7c RM3 landed: where a run of a regime comes to rest (record where-a-run-of-a-regime-comes-to-rest, study §300, review #rest-check; a law's run with a bo",
+   "7d74bea2e RM2 landed: the regime's point over every adjustment of giving (record regime-point-under-adjusting-giving, study §299, review #adjusted-giving-check;",
+   "12be96f4b SG10 landed: over every law of what stands, others drawing first end the base (record others-drawing-first-end-the-base, study §298, review #drawn-fir",
+   "78ba45fb4 VD1: where valuers agree and disagree, a frozen test of thesis T5, run complete and every frozen rule failed. Six model families (DeepSeek, GLM, Qwen,",
+   "7d334b70f SG9 landed: every optimum rebuilds a depleted base (record optima-rebuild-a-depleted-base, study §296, review #rebuilding-check; chapter §3.4, §7.1, §",
+   "fa68dead4 SG8 landed: an order weighting later draws less (record a-weighting-faster-than-renewal-ends-the-base, study §295, review #weighted-check; chapter §3.",
+   "c68d86769 SG7 landed: a coupling added for each step a dependence is kept (record a-step-coupling-keeps-at-every-horizon, study §294, review #stepwise-check; ch",
+   "c20926bf9 SG6 landed: what keeping a dependence forgoes over a horizon (record keeping-forgoes-the-renewal-at-the-need, study §293, review #keeping-check; chapt",
+   "d45f6e959 SG5: courses ranked over a horizon landed (record horizon-optima-hold-the-greatest-renewal, study §292, significance review horizon check; chapter §3.",
+   "e220f4ef0 SG4 landed: a course of re-optimizing steps against a renewal (study §291, record re-optimizing-above-a-renewal-ends-it, receipt 20261021T000629.90564",
+   "c31434fc9 SG3 landed: several optimizers at a mutual best response (study §290, record several-optimizers-drain-by-their-joint-capacity, receipt 20261020T224903",
+   "c8fdfdb69 EW2: thesis T6's uncoupled side in the field, run once on the frozen design of 44ced15e8 (landed on main before the run). On Cury et al.'s (2011) publ",
+   "3f75b72e7 SG2 landed: room read off the exchange (study §288, record room-read-off-the-exchange, receipt 20261020T222228.243650Z). Among the outcomes open to a ",
+   "037916243 WE1: a whole that draws its parts' arising beyond its renewal ends. Below Whole.needs_arising: listed parts each of whose activity ends, none arising ",
+   "dc29cf193 EW1: thesis T6's uncoupled side checked against the literature before building; settled in substance, so the frozen simulation was not built (brief's ",
+   "c441c2200 OB1: what dependence alone carries of a level (new laws of Becoming.LevelCoupling, receipt 20261020T204155.924362Z, study section 285): rising respons",
+   "224944238 TH1: theses and conjectures, the theory's strongest claims with their standing. A layer of the canonical chapter after the relation to known results (",
+   "f9f513bcf SG1: what optimizing through couplings does beyond them. Becoming.Optimum (new leaf importing DrawnBeyond and Frontier; 39 declarations, 23 theorems, ",
+   "139e98ec3 AP1: alignment approaches under the selection laws. Six approaches (RLHF and reward modelling, constitutional AI, debate and scalable oversight, inter",
+   "455bd883a MQ5 why (post hoc, asked after the run; not verdicts): why D1 and D2 failed. Half the test stocks are New Zealand's (34 of 69, 25 CASAL; development 1",
+   "cc2ab8df8 EV11: groups formed by descent. Becoming.SelectionLevels (every axiom report empty) gains a group's lineage over listed generations (lineage, lineages",
+   "478beba64 MQ5: a lag and the draw's response in the field, on 69 assessed stocks of the RAM Legacy database v4.66 with spawning biomass and catch no analysis ha",
+   "f4454cfe8 EV10: the additive part of Fisher's theorem. Becoming.Reproduction (every axiom report empty) gains counted Cauchy-Schwarz over any finite list (bound",
+   "efaf42140 EV9: fixation by drift. Becoming.Drift (75 declarations, every axiom report empty) gains many sampled generations: a population of N, each next genera",
+   "a6121bca7 MQ4: a state of level and recent giving in the field, on 76 assessed stocks of the RAM Legacy database v4.66 no analysis had read (each a current stoc",
+   "1d1e77a9e EV8: drift, offspring sampled rather than listed. New core module Becoming.Drift (21 theorems, every axiom report empty): a next generation of two kin",
+   "089fb56da PR1: every periphery receipt renewed on the current core. The 23 periphery checkers chapter section 9 names (FallibleInquiry, CorrectionInquiry, Machi",
+   "8de057658 R52: which dependence breaks when several formations take at once, and restraint over any number of drawers. New core module Becoming.JointDraw (22 th",
+   "853aefaa0 EV7: selection within and among groups of any sizes, and regrouping. Becoming.SelectionLevels (42 theorems): levels_sized divides the selection term f",
+   "a0af2a5f6 MQ3: the margin of a regime in the field, every frozen verdict failed. On 113 assessed fish stocks of the RAM Legacy Stock Assessment Database v4.66 (",
+   "90da21725 R51: widening across a stretch along a continuation. Becoming.ContinuedClasses extended to 52 theorems, 76 declarations, every axiom report empty (now",
+   "60126bcd5 RM1: the margin of a regime, giving read off the level under a standing draw. New core module Becoming.RegimeMargin on Law.run, 36 theorems, 49 declar",
+   "30114ac09 R50: tenure and undermining along a continuation, and identity where standings coincide. Becoming.ContinuedClasses extended to 35 theorems, 52 declara",
+   "b83baedf9 LC2 landed: the rest theorem over any amounts, read finitely (core receipt 20261020T133130.717227Z, study section 267). New core module Becoming.InAmo",
+   "522e0cf8d EV6 landed: groups whose conditions are coupled (core receipt 20261020T130550.714830Z, study section 265). Record groups-whose-conditions-are-coupled ",
+   "ae651630b R49: formation classes along a continuation. New core module Becoming.ContinuedClasses (20 theorems, 33 declarations, every axiom report empty): what ",
+   "c3f912268 R48: arising forced over a run, exactly. Becoming.ListedWebs gains forcedAlong_iff_more and forcedAlong_of_eventually_noSplit (6 theorems in the modul",
+   "4f2586c0d IV2 landing text: study section 260, readings D60 numbered, theorem map and section 9 receipt (EN, ZH), the argument chapter's rows landed, COVERAGE e",
+   "a3ef67a5a IV2 draft: canonical 8.9 rows (de se and privileged relation one question; standing against status; priority and sufficiency), Chinese summary, readin",
+   "d84fd32b4 EV5b: the evolution row's central laws on the base. Becoming.GroupEnding gains Flow.rises_iff_inactive (20 theorems, 25 declarations, every axiom repo",
+   "598cff647 PE1: what identifying interderivable propositions keeps and loses (new core module Becoming.PropositionIdentity, a leaf on Becoming.Learning, 12 theor",
+   "09e64644e CG2: the rest outruns the renewal (Becoming.Exclusion, 36 theorems, 5 new). Flow.outrun_excess: where a part takes from a condition jointly more than ",
+   "a7d31419a R47: widening along a reading, and over a grown world (new core module Becoming.Growth, 12 theorems, 19 declarations). Web.IncludesAlong, Web.ExceedsA",
+   "2a2c6ec43 IV1: core receipt 20261020T111531.545286Z (passed on main 8749466de; Becoming.Weightings 35 theorems, 50 declarations, empty axiom reports; connectivi",
+   "b3e854ee6 IV1 draft: the step of invariance (chapter THE-STEP-OF-INVARIANCE, literature check in the significance review, D59, chapter 6.2, 6.5, 8.1 item 12, 8.",
+   "af6a04ba9 LC1: rest from a finite reading, and a part's merge kept by the rest (Becoming.LeastLoss, 13 new theorems, 51 in all). Read off configurations a list ",
+   "be3d43803 R46: one renumbering of the steps of two interleavings (study section 252): record the-world-an-interleaving-builds extended (laws, premise Touching, ",
+   "8cf7fdc02 R46 work in progress: world_renumber_correspondence, chapter citations, kit scripts",
+   "512ce08ad EV4 and EV5, landed together. EV4, selection within groups and among them (Becoming.SelectionLevels, 21 theorems): over a family listed as k groups of",
+   "27ebe6735 R44 and R45, with CG1b. R44, the alignment direction on a world's moves (Becoming.Direction): Direction.exchangeOutcome (a move is a part's act under ",
+   "af9488b43 EV2: what bounds offspring numbers, and selection on offspring number itself (Becoming.Reproduction, 50 theorems): read on the weights themselves no p",
+   "facd1e156 OW1: core receipt 20261020T085940.676690Z (passed; Becoming.OwnWidening 15 theorems, empty axiom reports; connectivity none apart); study section 243;",
+   "f5dfc6d26 OW1: Becoming.OwnWidening joined to the core (import, CORE entry, scope, README rows); chapter 7.2 paragraph and the relation-to-known-results sentenc",
+   "e19a76f86 MA1: the meta-attractor's loop closed on the spine (Becoming.ClosedCapture, 25 theorems, empty axiom reports). Where neither the next share nor the ru",
+   "892cf688e RB1: what a rise draws from beyond (Becoming.DrawnBeyond, 37 theorems): where the whole gains nothing the beyond falls by the rise and the loss exactl",
+   "a5b626f61 R43: one base, the completion report's K2. completion.py K2: the World family reaches the Process family by definition (asked), and since definitions ",
+   "81e07ef00 R37c (docs, step 1): study section 238 and section 230's Boundary corrected; chapter section 9 from the receipt and the connectivity measure on R37c's",
+   "6aacd560d LK1: relation to known results. Chapter section after the theorem map (EN, ZH): one row per central result with the closest prior result, what the the",
+   "b124760ce R42: the completion report's K3 met. C: met by widening on level paths (Web.paths_comparison_widens), failed by any comparison read off marginals (Reg",
+   "423569438 R41: more without end over any amounts. Becoming.Amounts: Amounts.replenishment_unbounded (balanced, with uptake from some step on at least every mult",
+   "821d8f63b EV1: the selection term proper of Price's counting identity and its course over generations (Becoming.SelectionTerm, 67 theorems): covariation (the nu",
+   "961d6273d R38: the open parts of G6 and G10, records and docs. Records whether-a-loop-closes-a-difference (the exact turn around a cycle of exact links, the rin",
+   "e471088c2 R40: the ethics chain is one derivation; two natural-number laws have their dense forms. Becoming.Direction: Web.unrestricted_iff_grounds_beyond (on a",
+   "862c55f90 R39: the completion criterion K1-K7 runs. Coverage file theories/becoming/results/completion/COVERAGE.json (17 rows: five phases, six differentiations",
+   "5e4825932 R37b: B11 of the twentieth review, one census table for any listing (Becoming.CensusTable); the laws of counting what is active, what stands and what ",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "4ef4233f2 R35b: the instance and applications ring. Becoming.Commuting's namespace Hexagram section (7 theorems) moved unchanged to the new instance module Beco",
+   "2ca82e5dc R36: the chapter, once. The canonical chapter restructured reader-first (preface; premise card; sections 1-7 once in argument order, each opening 'In ",
+   "ee8ebc82e R35 step 2(d), E4: 17 record ids renamed off retired labels (G0, J, the one axiom, Part I, registration), with redirects. New research.py rename-id (t",
+   "815af1a84 R35 batch B5 (E10; research.py move, receipt _process/architecture/moves/R35-B5-kits.json): 82 kits of landed items (967 files) to the study's history",
+   "318b4df2f R35 batch B4 (E10; research.py move, receipt _process/architecture/moves/R35-B4-study.json): 37 study files to the study's history unchanged: the exec",
+   "98e0b332a R35 batch B2 (research.py move, receipt _process/architecture/moves/R35-B2-reference.json): THE-THEORY-OF-BECOMING-REFERENCE.md to theories/becoming/h",
+   "40800f706 R35 batch B1 (research.py move, receipt _process/architecture/moves/R35-B1-chapters.json): 14 chapter files to theories/becoming/history, unchanged: F",
+   "d226045b4 R35 step 0: the two goal-scope proposals approved by Ren on 20 October 2026 applied. Target 1's formal part restated (every central law of the spine o",
+   "1b750f2a9 R34: the docs follow the evaluative chain. Chapter (EN, ZH): §5 and §6's start (standpoints of any type, own as a closure, sig the one supplied evalua",
+   "9474ddf65 R33: the docs follow the joins. Chapter (EN, ZH): one bullet for the law along one run under a relation with its three readings; learning through a ma",
+   "ada4b87f1 R33: LawThroughCoupling.lean and LawThroughChangingCoupling.lean to the Lean history folder with their bytes as on main 7950e8798 (research.py move, b",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "31b4432e8 R31: chapter section 9 in English and Chinese: three layers on one base (L0 World, Frame, Prelude; L1 no continuation condition or valuation; L2 condi",
+   "e936f8ee6 R30: one notion, one name (one rename table, statements unchanged): 336 declarations (199 moved with their namespace), 11 namespaces and 4 modules (Ge",
+   "0d79dca11 R29: compression under board rule 9, generalize below, not beside (the laws of every process in Recurrence, Law.* forms their one-line cases or remove",
+   "ce5982a08 R28: one base by definition, the run (a world is a run of every step by its type; Web := Dependence Nat; Law.* abbreviations at Law.process with five ",
+   "2b80b5500 R25, the twentieth review's step 1, docs now (no Lean, no checker run), on R27's landing: (a) the ethics' scope and order stated apart: the continuati",
+   "614f2c8d7 R27: the stepwise classes and loss (undermining leaves the levels exceeded; within renewal yet closing a possibility; core receipt 20261019T174929.247",
+   "6d3f86530 R26: Horizon's refutation laws derived from the laws of ideals (rule 9: Ideals below Horizon; five restatements removed; core receipt 20261019T172902.",
+   "113a2400a R23: Becoming.ListingRefutations, the 22 refutation laws as corollaries however a family is listed (core receipt 20261019T170714.008572Z)",
+   "1e20a4bb4 R22: the names of the nineteenth review (N1: Becoming.Widening → Becoming.LoopReturn, Relevance's witness → BareSignificance; N2: Becoming.Passing → B",
+   "058cbe97d R21: records rebound to receipt 20261019T162802.564989Z and re-pointed after reading (43 records, kit repoint_drift.py), §8.8 row, views rendered (ren",
+   "2add50100 R21: the receipt of its checker run (20261019T162802.564989Z, passed, counts unchanged) in §9; the Chinese §9 receipt paragraph regenerated from the E",
+   "970f1d364 R21: §9 roots of the import tree after W2, and the connectivity count of the last rerun (P1)",
+   "dc3629582 R21: presentation P3–P8 and P11 (port hypotheses counted, Unrestricted scan counts, V wording, admitted_all_without, standpoint in the characterizatio",
+   "510da4bc8 R21: labels L2 (D-numbers on the readings of §6.8, §6.9, §6.10, §6.12, en and zh) and L3 (V's framings under D48)",
+   "8269f278c R21: overstatements O1–O8 of the nineteenth review (double negation of begins_within, conditions of 生生之謂易, center not derived along dependence, starti",
+   "44bba7be5 R21: errors E1–E5 of the nineteenth review (glossary significance, §6.1 object, the doubling of the carried amount, §6.12 core citation, the register ",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "d0a01afa5 R20r, the nineteenth review, landed as written on its branch (80ef86bdc; claimed there as R20 before the outside-review fixes took that ID on main): t",
+   "ce980ac0a RG landing: two-sided regulation of a level and regulation that reads the level late (the first gap RO found; 老子 77 天之道, 老子 42 冲气以为和, 左传 昭公二十年 宽猛相济, 中",
+   "860ebd030 RC landing: capture through the rule (the third gap RO found; 二柄, 据有余而制不足, 壹赏壹刑壹教), core receipt 20261019T151254.157652Z on 5fe6d1edd (passed, empty c",
+   "990cfa614 MD1 landing text: study section 212, record mutual-dependence-and-its-pace (33 theorems, 42 declarations), chapter §4 paragraph, the reading of \"a hig",
+   "9afe2b2ba HS landing text: study section 211, record sums-over-histories-by-support-horizon-and-order (support, splitting, exact orders and the steps between; 7",
+   "f8635d18a RH: the four earlier Chinese chapters after RO, passage by passage. The 6-7 October texts of DAO-AND-GENERATIVITY, HANZI-AND-THEORY-TREE, PRE-QIN-AND-",
+   "17b3ccde6 SC landing: a code formed between formations (约定俗成, the second gap RO found), core receipt 20261019T141645.763808Z on 1fff0dbe5 (passed, empty core ax",
+   "ee4399806 Y5 landing: what of the arrangements of the 傳 is a law, core receipt 20261019T140534.048868Z on 11a3c65e4 (passed, empty core axiom reports): Becoming",
+   "5535929ba U5 landing: the general-structure groups of study §196 read on the base, core receipt 20261019T133615.720595Z on b5bf2e148 (passed, empty core axiom r",
+   "cbbb4e537 RO landing: study section 207 and readings D54 (both editions); record chinese-sources-on-the-spine (assessment, reviewed and scoped); the canonical c",
+   "4642e10e5 O1 and O2 landing: what a finite stretch verifies, and what a method comes to say in the limit (core receipt 20261019T130853.816105Z on f9752aacc) — s",
+   "1c8f8ca3b LL1 landing text: study section 204, record least-loss-rest, chapter item 4, premise card, §1 limits of the rest theorem, §8.2 rows, §8.6, §8.7 and §9",
+   "5e6296b28 PT1 landing text: study section 203, record place-transition-nets-on-the-spine, chapter §8.7 bullet, §8.2 integration row and §9 counts and receipt; t",
+   "4353b5854 Y4 landing: 王弼's readings of the places on the spine (core receipt 20261019T113250.301688Z on b45ca478d) — study section 202, decision D53 (the readin",
+   "610b8d4e4 T1 landing: the least loss from entropy production — which physical premises give the spine's dissipation",
+   "46505fedf X1b: the 护闭 texts at the exact scope of the juncture laws — every loss passes a juncture where s returns (loss_passes_juncture), keeping is the larges",
+   "e67810266 Z1 landing: the game of relative position in the pure core, core receipt 20261019T110924.527968Z on b31bf5a58 (passed, empty core axiom reports): Beco",
+   "205ba2a12 Y3 follow-up after SG: Becoming.HexagramLaws imports Becoming.Commuting and states nuclear_run_act and run_complement_apart as instances of Law.Commut",
+   "698ef803c SG landing: three general laws of the SSBX review (G1–G3) in the pure core, core receipt 20261019T102354.824114Z on df89dcc29 (passed, empty core axio",
+   "076fdaa04 Y3 landing: laws of the hexagram world beyond waxing and waning (core receipt 20261019T101219.302788Z) — study section 198, decision D51 (the readings",
+   "9410ba2cd X1: the crosswalk of closing and opening on the spine (readings A1–A3 of the SSBX review), docs only",
+   "9a433b1b9 E1 landing text: study section 197, chapter item 3, premise card C (with R20b's feasibility sentence kept), §8.1 and §8.2 rows and §9 receipt (en, zh)",
+   "f0b603b88 U3/U4 landing: theorems apart from the base, largest groups first, and the practical commitments in the core — four core modules read general laws on ",
+   "42802a727 R20b: premise card C and its Chinese passage say what balance by reading leaves: the rest idle, which under a law of what has stood is feasibility (wi",
+   "b729d81a6 R20b: the chapter, method, AGENTS and Lean docstrings say exactly what the Lean shows — consequences of the continuation condition are instantiations ",
+   "2659f5966 V2 landing: thresholds of waiting and the laws that restore giving — core module Becoming.Tolerance (52 theorems, empty axiom reports, core receipt 20",
+   "88534a1aa Y2 landing: the relations of the places in the Changes (應, 比, 中, 正) as readings in context, new core module Becoming.HexagramPlaces",
+   "b88c2d972 V landing: what a collective's continuation needs — five core modules (Withholding, Widening, Pace, Passing, JointKeeping; 157 theorems, empty axiom r",
+   "022acbbe3 R19: the 9 October chapter on how relations of becoming change moves to history (move R19-chapters, bytes unchanged); BECOMING-FOUNDATION keeps its un",
+   "ec24028e2 R19: the chapter's new reasons say exactly what Frame.self_incomplete shows; the living content is no longer read as 生生 (D1); arising and ceasing coin",
+   "8cede545d R19: the chapter gives reasons where it cited Ren's past words, orders or acceptance; section 8 without review bookkeeping",
+   "e96ab8fc6 R19: living significance stated as the Lean shows (chapter, OPENING footnote, README lead); review of 19 October; Ren's words of 19 October",
+   "928422fa2 Y1 landing: the Changes on the spine, new core module Becoming.Hexagrams (Ren 19 Oct: \"我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping\")",
+   "9ea376d53 K3 landing: the last apart theorem of Becoming.Cuts (Ren 19 Oct: \"please finish it\")",
+   "6ac309523 K2 landing: growth by attachment on the base (Ren 19 Oct: \"let's make these limited, non general laws, into general ones\")",
+   "1a627014b K1 landing: which links a closure needs (Ren 19 Oct: \"let's make these limited, non general laws, into general ones\")",
+   "951dcdcbe A4-L landing: the family of ideals in the core (Ren 19 Oct: \"integrate all, the theory is a whole, not stitched pieces, go ahead\")",
+   "07cd8179f N7 landing: the reading pass on \"correction\" (Ren 19 Oct: \"correct? this is a dualist word, are we drifting off?\"). Where a use made one course the ri",
+   "043eab2b9 A4 landing: the readings in one account, chapter (en + zh) and records (Ren 19 Oct: \"integrate all, the theory is a whole, not stitched pieces, go ahe",
+   "c0deec016 M4 landing: where two courses rejoin (Ren 18 Oct: \"please make your own pareto frontier decisions, and push the frontier\"; 19 Oct: \"correct? this is a",
+   "23c8764d7 G5 landing: a law through coupling that changes along the run (Ren 18 Oct: \"you have permission now, please see what else is there to do - keep pushin",
+   "de368fc53 C2 landing: where a rising take ends (Ren 18 Oct: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - w",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded",
+   "8fce36372 N6 landing: the reading pass of the N1 renaming's open prose (Ren 19 Oct: \"Yes to the N6 reading pass: reapply it on current main, rerun the checkers ",
+   "cb8f60675 N6 (unproposed, not landed): pass reapplied on main 9b9e7951b (A1, F1, G3, L2 + C1, U2c)",
+   "07a3db6ed N6 (unproposed, not landed): pass reapplied on main d4dd2a8a7 after the rebase",
+   "27e054beb N6 (work in progress, unproposed): reading pass of the chapter, English and Chinese editions"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/055.diff",
+  "diff_lines": 3279
+ },
+ "theories/becoming/results/records/organizational-formation-from-generative-comparison.md": {
+  "kind": "generated",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/organizational-formation-from-generative-comparison.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the grammar does ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a class's core",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "565601488 EC6b landed: EC6's cases of closure and balance derived (board rule 9), every statement and definition unchanged. Pace gains stays (a region of the pa"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/056.diff",
+  "diff_lines": 12
+ },
+ "theories/becoming/results/records/transition-grouping-word-partition.md": {
+  "kind": "generated",
+  "recorded_commit": "1c704bc70a81252a1f2c9eb06029e3c81d7b5420",
+  "recorded_path": "theories/becoming/results/records/transition-grouping-word-partition.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/057.diff",
+  "diff_lines": 18
+ },
+ "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md": {
+  "kind": "version-not-found",
+  "entries": [
+   "M15",
+   "M26"
+  ]
+ },
+ "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean": {
+  "kind": "other",
+  "recorded_commit": "c05d509af0c06f65785fe31a0bf9ed3fd17f8054",
+  "recorded_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "11cb5342c OU3c landed: the return, lumping and order anchors on the grammar (OU3b's what-remains items 1, 3 and 4). No anchor body is its grammar term by rfl (c"
+  ],
+  "diff_basis": "raw",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/059.diff",
+  "diff_lines": 24
+ },
+ "theories/becoming/results/records/identification-where-runs-part.md": {
+  "kind": "generated",
+  "recorded_commit": "64c11b8ed91e7c930686950f0e86c48b1df93f7f",
+  "recorded_path": "theories/becoming/results/records/identification-where-runs-part.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the grammar does ",
+   "0e01bfafa SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt 20261101T112708.430596Z, every axiom report empty, study §494; ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "406ed1303 OU3e landed: the step-indexed bridges, the three rows of EC6's audit proved from OU3d's laws of steps counted by board rule 9, every statement and nam",
+   "565601488 EC6b landed: EC6's cases of closure and balance derived (board rule 9), every statement and definition unchanged. Pace gains stays (a region of the pa",
+   "11cb5342c OU3c landed: the return, lumping and order anchors on the grammar (OU3b's what-remains items 1, 3 and 4). No anchor body is its grammar term by rfl (c"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/060.diff",
+  "diff_lines": 19
+ },
+ "theories/becoming/results/records/observation-is-a-route.md": {
+  "kind": "generated",
+  "recorded_commit": "ebdc971efaadc8df42405b13f71d5a7d37fb786c",
+  "recorded_path": "theories/becoming/results/records/observation-is-a-route.md",
+  "entries": [
+   "M26"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the grammar does ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "cdeb6b1e8 U4 landed: the leaf Becoming.RootForms and the boundary record one-root-to-its-edge (study §479, core receipt 20261031T123637.207595Z, every axiom rep",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "994c9d10f EC6c and EC6d landed. EC6c: Flow.BalancesBetween l o t, named once right after Flow.Balances (the flow balances from levels l to o across the step fro",
+   "565601488 EC6b landed: EC6's cases of closure and balance derived (board rule 9), every statement and definition unchanged. Pace gains stays (a region of the pa",
+   "07a45d6ce DF2 landed (study §426): thirty records of results the chapters state, each with its anchor in its home section and its regions entry; two statements ",
+   "17ee7fbf4 DF2 applied (board item DF, under RA): the chapter edits with the reviewers' corrections, the thirty anchors, regions entries, becoming-renewal-readin",
+   "d299d86af UE7 landed: what keeping widening needs, and what carries it (UE plan item 7, the second-order direction of 生生 after UE4). Becoming.KeepingWidening jo",
+   "c99e2af06 OU3b landed: the five master laws on the grammar (Becoming.GrammarLaws, 113 theorems in 133 declarations, below the frame; board rule 9 in fourteen mo",
+   "0d7a397a5 RA landed: the account in four layers. The one page (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md) and the overview (theories/becoming/THE-THEORY-OF-",
+   "7d05030b2 PL1, CK1, CK2, CR1 and EM1 landed. Core receipt 20261022T132056.171285Z on main 07019c321 (passed, empty core axiom reports). Becoming.PoolCourse (17 ",
+   "29ad55f4e EC2 and EC4 records: balance_over_stretch_on and its forms cited under Becoming.Prelude (census-balance, census-balance-under-continuation, laws-at-co",
+   "c441c2200 OB1: what dependence alone carries of a level (new laws of Becoming.LevelCoupling, receipt 20261020T204155.924362Z, study section 285): rising respons",
+   "a5b626f61 R43: one base, the completion report's K2. completion.py K2: the World family reaches the Process family by definition (asked), and since definitions ",
+   "423569438 R41: more without end over any amounts. Becoming.Amounts: Amounts.replenishment_unbounded (balanced, with uptake from some step on at least every mult",
+   "89199e2cc R37: lens B of the twentieth review (B14, B4, B6). Core receipt 20261020T051144.879480Z passed (core 267 modules and 10,635 theorems, instances 7 and ",
+   "ee8ebc82e R35 step 2(d), E4: 17 record ids renamed off retired labels (G0, J, the one axiom, Part I, registration), with redirects. New research.py rename-id (t",
+   "5a053347c R35 step 2(a), E3: record histories compacted. New research.py compact-history (classifier and compaction in tools/research/history_notes.py, tests in",
+   "78ee830f0 R34: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "4edaf794f R33: generated pages rendered (make research-render): record pages, registers, Lean index and declarations, research indexes, generated manifest",
+   "e122d612f R32: 253 records re-pointed after reading the change (rebind.py): proof bindings of 210 records rebound to core receipt 20261019T231053.882924Z; 8 nam",
+   "fb91812e4 R31: 260 records re-pointed after reading the change (rebind.py): proof bindings of the changed core modules rebound to core receipt 20261019T213206.6",
+   "14765c561 R30 landing: records renamed, rebound and re-pointed after reading (244: live fields follow the table, aliases follow the new names as in N5, record I",
+   "a0804767c R29 landing: records rebound and re-pointed after reading (204; 25 with moved or replaced declarations, each removed name replaced by the kept stateme",
+   "22cdfe6f0 R28 landing: records rebound and re-pointed after reading (193; 21 with moved declarations re-homed; worlds-are-runs advanced), four apart roots retir",
+   "2b80b5500 R25, the twentieth review's step 1, docs now (no Lean, no checker run), on R27's landing: (a) the ethics' scope and order stated apart: the continuati",
+   "058cbe97d R21: records rebound to receipt 20261019T162802.564989Z and re-pointed after reading (43 records, kit repoint_drift.py), §8.8 row, views rendered (ren",
+   "831fcaf73 W2 landing: the modules free of the labelled process no longer import the frame (board item W, second batch, with W3), core receipt 20261019T160413.54",
+   "9afe2b2ba HS landing text: study section 211, record sums-over-histories-by-support-horizon-and-order (support, splitting, exact orders and the steps between; 7",
+   "9a433b1b9 E1 landing text: study section 197, chapter item 3, premise card C (with R20b's feasibility sentence kept), §8.1 and §8.2 rows and §9 receipt (en, zh)",
+   "f0b603b88 U3/U4 landing: theorems apart from the base, largest groups first, and the practical commitments in the core — four core modules read general laws on ",
+   "5d32f69f9 R20b landing: core receipt 20261019T090457.012800Z (passed, empty core axiom report; nine files changed in comments only), 72 records re-pointed and 3",
+   "2659f5966 V2 landing: thresholds of waiting and the laws that restore giving — core module Becoming.Tolerance (52 theorems, empty axiom reports, core receipt 20",
+   "88534a1aa Y2 landing: the relations of the places in the Changes (應, 比, 中, 正) as readings in context, new core module Becoming.HexagramPlaces",
+   "b88c2d972 V landing: what a collective's continuation needs — five core modules (Withholding, Widening, Pace, Passing, JointKeeping; 157 theorems, empty axiom r",
+   "a2e6d5b53 R19: 26 records re-pointed after reading the changed lines (wording only; claims unchanged); views rendered",
+   "951dcdcbe A4-L landing: the family of ideals in the core (Ren 19 Oct: \"integrate all, the theory is a whole, not stitched pieces, go ahead\")",
+   "07cd8179f N7 landing: the reading pass on \"correction\" (Ren 19 Oct: \"correct? this is a dualist word, are we drifting off?\"). Where a use made one course the ri",
+   "043eab2b9 A4 landing: the readings in one account, chapter (en + zh) and records (Ren 19 Oct: \"integrate all, the theory is a whole, not stitched pieces, go ahe",
+   "c0deec016 M4 landing: where two courses rejoin (Ren 18 Oct: \"please make your own pareto frontier decisions, and push the frontier\"; 19 Oct: \"correct? this is a",
+   "23c8764d7 G5 landing: a law through coupling that changes along the run (Ren 18 Oct: \"you have permission now, please see what else is there to do - keep pushin",
+   "de368fc53 C2 landing: where a rising take ends (Ren 18 Oct: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - w",
+   "2f8b4d3b3 F3 final sweep: no bridge or join modules remain; all 75 inherited periphery modules are stated in the core and registered as superseded",
+   "8fce36372 N6 landing: the reading pass of the N1 renaming's open prose (Ren 19 Oct: \"Yes to the N6 reading pass: reapply it on current main, rerun the checkers ",
+   "cb8f60675 N6 (unproposed, not landed): pass reapplied on main 9b9e7951b (A1, F1, G3, L2 + C1, U2c)",
+   "81dbce1c5 N6 (unproposed, not landed): record reading pass complete, records rebound to in-tree receipts, proposal table"
+  ],
+  "record_fields": [
+   "correspondence",
+   "dependencies",
+   "history",
+   "laws",
+   "next_delta",
+   "proof_bindings",
+   "references",
+   "related",
+   "statement",
+   "text_versions",
+   "validation_scope"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/061.diff",
+  "diff_lines": 75
+ },
+ "theories/becoming/results/records/selection-through-a-model-of-the-options.md": {
+  "kind": "generated",
+  "recorded_commit": "0d7a397a5a97857d001e57cc9164d3d7ef273f8e",
+  "recorded_path": "theories/becoming/results/records/selection-through-a-model-of-the-options.md",
+  "entries": [
+   "M15"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.282103Z ran",
+   "c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the grammar is",
+   "e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's rows and t",
+   "11cb5342c OU3c landed: the return, lumping and order anchors on the grammar (OU3b's what-remains items 1, 3 and 4). No anchor body is its grammar term by rfl (c"
+  ],
+  "record_fields": [
+   "proof_bindings",
+   "references"
+  ],
+  "diff_basis": "split English output, links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/062.diff",
+  "diff_lines": 13
+ },
+ "RESULTS.md": {
+  "kind": "other",
+  "recorded_commit": "b6d4f1493bd19d10355a6e32dcc8a3a1ba75285a",
+  "recorded_path": "RESULTS.md",
+  "entries": [
+   "E06"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "cf69dda5a OG landed: an organism's minimal model, a reader rebuilt from the level it reads (`Becoming.ReaderRebuilding`, a new instance of the ring on the gramm",
+   "bc4f51bc4 EL6 landed: EL3 placed in its owners' modules (core receipt 20261101T134343.981701Z, every axiom report empty, study §496), each part on its owner's y",
+   "3e2e702be ND's final stage landed: names that state relations, not rule (study §495; documents and tools only: no Lean, no new record and no core run). Paths, o",
+   "0e01bfafa SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt 20261101T112708.430596Z, every axiom report empty, study §494; ",
+   "e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches, U4c's cen",
+   "ca73609f8 EL landed: evolution read on the root (six core leaves, core receipt 20261101T024359.312453Z, every axiom report empty, study §490; no existing module",
+   "756eb1e84 DU landed: premises met and failed, self-concern and C under the condition, standings not read off the occurrence model (`Becoming.PremiseWitnesses` a",
+   "29fbe6dee UE27 landed: which blanket a thing has, and a formation's couplings as its blanket (`Becoming.BlanketCouplings` as a core leaf importing Blanket, Hist",
+   "249565d46 ND part 1, documents (not yet landed): \"master law\" (主律) becomes \"shared law\" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement and alias",
+   "f1ea9546d BD2 landed: not going out of a region, on the root (`Becoming.GrammarCrossing` and `Becoming.ConveyanceBoundaries` joined to the core, core receipt 20",
+   "cc2074912 UE26 landed: the blanket at a steady state, conditional independence and what holds it (`Becoming.BlanketWeights` as a core leaf importing Blanket and",
+   "9651f5829 U1b landed: U1's limited interface for amounts, the root's second sort, as the core leaf Becoming.UnitMatchings that nothing imports (16 theorems in 2",
+   "cdeb6b1e8 U4 landed: the leaf Becoming.RootForms and the boundary record one-root-to-its-edge (study §479, core receipt 20261031T123637.207595Z, every axiom rep",
+   "35892de89 BD landed: boundaries read in one account, texts only (no Lean, no new record, no core run). A reading in 01 §9.9 (anchor `boundaries`, an AI reading)",
+   "1721c70ef RR2 landed: holding for a reading against the routes of keeping a law, one order (`Becoming.RevisionPlans` joined to the core below `Becoming.HeldForR",
+   "8dd9ce3d9 RF-M.3 landed: a reading informed and revalued (`Becoming.ListingValuation` as a core leaf importing `Becoming.HeldForReading`, 138 theorems in 186 de",
+   "806a92331 UE25 landed: a code held as counts, learned from what is heard (`Becoming.CountedCodes` as a core leaf importing SharedCodes and FreeEnergyCounting, c",
+   "38738ab59 LA4's formal part landed: the core leaves Becoming.OptimumSeason (the season LA4 trains on and the optimum laws it meets, 63 theorems) and Becoming.We",
+   "b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a class's core",
+   "403f777b6 RR landed: corrigibility on the map, a revision and the routes of keeping a law (`Becoming.RevisionRoutes` as a core leaf importing only the prelude, ",
+   "35965e81f UE24 landed (study §468, periphery receipt 20261030T160959.698859Z): identical cells under noise. The new periphery module CellsUnderNoise, importing ",
+   "24a17f202 GW1, GW2 and GW6: the views rendered in a clean worktree (the new record's page, the two-grains and neighbouring record pages, the indexes, the theory",
+   "bccab518f RF-M.2 landed: what holding an act for a reading is worth (`Becoming.HeldForReading` as a core leaf, core receipt 20261030T134037.582088Z, study §466;",
+   "75be744fb RF7 landed (study §463, core receipt 20261030T075728.527064Z): Becoming.ReadStages joined to the core as a leaf after Becoming.Cascade, 52 theorems in",
+   "9bc918584 UE21 landed (study §460, core receipt 20261029T210603.495422Z): the free-energy bound in counting form, in the pure core. Becoming.FreeEnergyCounting,",
+   "580cd9d62 RF6.1 landed (study §457, core receipt 20261029T200440.502813Z): Becoming.OpenedCorrection (12 theorems in 16 declarations) joined to the ring as an a",
+   "d7ada3c00 RF round 2's first landing (study §456, core receipt 20261029T191748.070149Z): Becoming.ReadingLoop (51 theorems in 84 declarations) and Becoming.Refl",
+   "e0ac63f87 UE18 and UE19 landed in one landing (study §452 and §453, core receipt 20261029T164943.729811Z, periphery receipt 20261029T164946.410686Z). UE18, the ",
+   "18ad739d2 UE17 landed (study §450, periphery receipt 20261029T155901.350188Z, run fresh on UE16's core receipt): variational free energy and its bound. lean/fre",
+   "7401130f5 UE16 landed (study §449, core receipt 20261029T153820.435638Z): what free-energy minimization does not guarantee. Becoming.FreeEnergyGuarantees, a cor",
+   "f28abafc6 WRP2 landed (study §447, core receipt 20261029T142634.455566Z): processes represented in the grammar both ways",
+   "e1c648908 RF round 1 (formations that read): Becoming.ShownOrder, Becoming.Unread and Becoming.Cascade joined to the core as leaves at L1 (root imports and bull",
+   "8882b7995 WRT2 landed: the World represented in the grammar both ways, its amounts not (OU's completion criterion 7, its last part). Becoming.GrammarTransport, ",
+   "78e709ff3 DF3 batch B applied, not landed: unit K's review taken (37 edits; Identity and Arising bound for whole-persists-through-generation); two reference lis",
+   "8e306c316 UE15 landed: a world's reorderings as courses of growth (the UE plan's representation, and presence in time on the World). Becoming.ReorderingGrowth, ",
+   "d18032c2c DF3 batch A applied, not landed: thirty schema-1 records migrated to schema 2 with laws arrays (each law read against its declarations; limitations to",
+   "34e8f9185 UE14 landed: the present on causal-set growth (the UE plan's structural gap of presence in time). Becoming.Presence, a new leaf at L1 importing Becomi"
+  ],
+  "diff_basis": "links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/063.diff",
+  "diff_lines": 65
+ },
+ "GOALS.md": {
+  "kind": "other",
+  "recorded_commit": "8ab22de824e46b704688fe7ec5cdf1c568499211",
+  "recorded_path": "GOALS.md",
+  "entries": [
+   "M20"
+  ],
+  "changed_fields": [],
+  "move_rewrites": null,
+  "commits": [
+   "9fcb5d02f AJ's condition 1 landed: the goal generative-alignment restated on argument (documents only: no Lean, no record and no core run). The objective and th",
+   "bd36c74a3 RV21b landed: the twenty-first review's remaining §6 fixes (08 §8's verdict farther only than the few frameworks lacking conservation, renewal over ti",
+   "cb3edc5d0 lw-goal-bases landed: universal-intelligence-session's objective says its laws are proved each on its stated base, and zero-axiom-session is restated ",
+   "4e3627e22 LW: the goal universal-intelligence-session restated as approved on 30 October (title: The ethics for life, and every intelligence formed within it; o"
+  ],
+  "diff_basis": "links blanked",
+  "diff": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gc-chain-review/revision/classified/diffs/064.diff",
+  "diff_lines": 36
+ }
+}

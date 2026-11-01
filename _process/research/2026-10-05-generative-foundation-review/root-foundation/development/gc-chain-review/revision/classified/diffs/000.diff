@@ -1,0 +1,12 @@
+--- 1038a699e:theories/becoming/chapters/PRACTICAL-JUDGMENT.md
++++ theories/becoming/history/PRACTICAL-JUDGMENT.md
+@@ -5,3 +5,3 @@
+ 
+-**Additional conflict comparison, 2026-10-08.** [Equal basic rescue BC1](·) directly addresses a class of cross-cutting basic requirements that basic-condition priority in this chapter leaves unordered, and states its opportunity-fairness cost openly. This is an additional philosophical commitment with its own scope, not a theorem of the practical commitments. The existing principles, Lean comparator and prior completion remain unchanged.
++> **Status:** live: statement source of [practical-judgment-under-living-significance](·). Its dated round note of October 2026 is kept verbatim in [its rounds history](·).
+ 
+@@ -18,3 +18,3 @@
+ |---|---|---|
+-| Living significance | Living and further generation have positive significance | Follows under the continuation condition (canonical chapter §6.15); not assumed |
++| Living significance | Living and further generation have positive significance | Follows under the continuation condition (canonical chapter §6.4); not assumed |
+ | Full comparison | Genuine improvement without countervailing loss has comparative favor; restoration does not erase history | Explicit comparative commitment, continuing C |

@@ -76,7 +76,7 @@ Structure consists of actual token transfers, formed edges, filtered old edges a
   - Input: New attachment endpoint and internally connected fragments.
   - Preserved conditions: Only the checked chain class and endpoint correspondence between formation routes; local laws and draws are not identified. [RecurrentAssembly.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean)
 - related, not a proved adapter: [inherited-structural-copying](inherited-structural-copying.md). Copies a template strand, the fragment this formation leaves, token by token from a shared pool.
-- related, not a proved adapter: [formed-copying-registration](formed-copying-registration.md). Local contact formation entering that copying.
+- related, not a proved adapter: [formed-contacts-change-copying-fidelity](formed-contacts-change-copying-fidelity.md). Local contact formation entering that copying.
 
 **Used by:** [copying-b-fold](copying-b-fold.md) · [inherited-structural-copying](inherited-structural-copying.md) · [organizational-rule-inheritance](organizational-rule-inheritance.md) (interpretive)
 

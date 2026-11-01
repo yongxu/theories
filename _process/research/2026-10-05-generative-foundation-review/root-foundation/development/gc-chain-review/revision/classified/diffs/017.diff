@@ -1,0 +1,23 @@
+--- 1c704bc70:theories/becoming/results/records/encounter-selection-and-revision.json
++++ theories/becoming/results/records/encounter-selection-and-revision.json
+@@ -150,4 +150,4 @@
+   "validation_scope": {
+-    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.CrossSituational and Becoming.Courses by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited core declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z) and EncounterChoice by its check (encounter-choice-verification.json: 22 new theorems, 46 declaration audits), reporting at most propext and Quot.sound. Author counterreview and two primary developmental comparisons; no new experiment or independent review.",
+-    "zh": "Lean 4.29.1：核心 CrossSituational、Courses 经合并检查器（becoming-checks/20261020T051144.879480Z），无公理；外围MachineInstances（machine-instances-checks/20261020T161859.257200Z）、EncounterChoice（encounter-choice-verification.json）至多报 propext、Quot.sound；作者反审，两项发育原典比较；无新实验或独立审查。"
++    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.CrossSituational and Becoming.Courses by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited core declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z) and EncounterChoice by its check (encounter-choice-verification.json: 22 new theorems, 46 declaration audits), reporting at most propext and Quot.sound. Author counterreview and two primary developmental comparisons; no new experiment or independent review.",
++    "zh": "Lean 4.29.1：核心 CrossSituational、Courses 经合并检查器（becoming-checks/20261020T051144.879480Z），无公理；外围MachineInstances（machine-instances-checks/20261031T131812.213702Z）、EncounterChoice（encounter-choice-verification.json）至多报 propext、Quot.sound；作者反审，两项发育原典比较；无新实验或独立审查。"
+   },
+@@ -358,2 +358,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
++      "role": "receipt",
++      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
++      "declarations": []
+     }
+@@ -370,3 +376,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+       "sha256_pointer": "/source_sha256/MachineInstances",

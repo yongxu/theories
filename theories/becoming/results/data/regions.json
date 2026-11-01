@@ -871,7 +871,7 @@
    "base": "general",
    "note": "CopyingCorrection: correction never worsens"
   },
-  "formed-copying-registration": {
+  "formed-contacts-change-copying-fidelity": {
    "region": "life",
    "base": "general",
    "note": "CopyingRegistration: contacts change fidelity"
@@ -1901,7 +1901,7 @@
    "base": "old-base",
    "note": "blind beyond coupling closure"
   },
-  "selection-under-registration-revision": {
+  "selection-when-the-lumping-changes": {
    "region": "knowing",
    "base": "frame",
    "note": "Process/Trace/Run lumping"

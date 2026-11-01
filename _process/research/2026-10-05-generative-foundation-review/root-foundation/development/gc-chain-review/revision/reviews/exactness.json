@@ -1,0 +1,150 @@
+{
+  "findings": [
+    {
+      "severity": "blocker",
+      "where": "opening scope_en / scope_zh (theories/becoming/results/data/generativity-chain.json:3-4), the key of retired labels",
+      "quote": "The entries keep the labels of their time; [08 §10](../chapters/08-METHOD.md#retired-labels) explains them once. G0 in them is the favourable significance of life and its further generation, once taken as a starting point. / 各条目保留其时的标签，[08 §10](...) 一次说明。其中 G0 指生及其继续生成的正面意义，曾取作起点",
+      "problem": "The key sends the reader to a table that maps G0 to living significance, and then denies that reading. 08 §10 is the page the key says explains the labels. Its row maps G0 to exactly the reading that GC2 declined as option (a). In the same revision, C03, C17, C24, M15 and M20 say G0's significance 'is not that significance'. The Lean also shows that G0 was once the name of the predicate now called `LivingSignificance`. So the key's single reading of G0 does not fit the entries that cite that predicate either.",
+      "evidence": "theories/becoming/chapters/08-METHOD.md:599 \"| G0 (the label; Lean `G0`) | living significance (`LivingSignificance`) |\"; GENERATIVITY-CHAIN-INDEX-RECORD.md:1439 \"Relabelling G0 in place as living significance would give it what the theory denies it\"; chain C03 scope_en (json:465) \"the favourable significance of life and its further generation that G0 stated is not that significance\"; lean/history/becoming/Becoming/ReachableFramesInherited.lean:39 `(g0 : G0 F living positive)` and Becoming/Handoff.lean:90 `(g0 : LivingSignificance ...)` (the parameter keeps the old name); C14 scope_en \"the ethical extension discloses G0\" and F08 scope_en \"G0 positive relevance\" cite that Lean hypothesis.",
+      "fix": "Either correct 08 §10's row (a chapter edit, outside the chain), or say in the key what 08 §10 maps. en: \"The entries keep the labels of their time, explained once in [08 §10](../chapters/08-METHOD.md#retired-labels), where the Lean predicate then named `G0` is living significance. In the entries' prose G0 is the favourable significance of life and its further generation, once taken as a starting point, which says more than living significance.\" zh: \"各条目保留其时的标签，[08 §10](../chapters/08-METHOD.md#retired-labels) 一次说明，该处以 Lean 中当时名为 `G0` 的谓词为存活之意义。条目文字中的 G0 指生及其继续生成的正面意义，曾取作起点，所说多于存活之意义。\""
+    },
+    {
+      "severity": "blocker",
+      "where": "S_ZH standard clause in C03 scope_zh, C17 claim_zh, C24 scope_zh, M15 scope_zh, M20 scope_zh, and the opening scope_zh",
+      "quote": "继续生成是生生",
+      "problem": "This makes 生成 identical to 生生. The glossary, 08 §10's Chinese terms and both live zh editions keep bare 生成 for generation, the opposite of 退化, and say that generation is not 生生. They gloss 生生 as 生发, not as the map's 生成. The rule broken is 'each term in GLOSSARY.md's one sense'.",
+      "evidence": "GLOSSARY.md:32 generation (生成) \"is not 生生, whose English gloss 'continuing generation' (07 §2) says 生发, not this sense\"; GLOSSARY.md:65 生生 \"Neither the grammar's «生生» ..., nor 02's generation (生成) as such\"; 08-METHOD.md:592 \"They keep bare 生成 (shēngchéng) for generation, the opposite of 退化\"; THE-THEORY-OF-BECOMING.zh.md:117 and ONE-PAGE.zh.md:26 \"生生，即整体之中的生命及其持续的生发（生发，不是地图上的生成）\".",
+      "fix": "zh, in S_ZH and the opening: \"继续生发属于生生（整体中的生命及其持续的生发），以扩大相比较\". G0's own words can stay quoted as \"G0 所述生及其继续生成的正面意义\", since those are the words of its time."
+    },
+    {
+      "severity": "fix",
+      "where": "S_EN standard clause in C03, C17, C24, M15, M20, and the opening scope_en",
+      "quote": "further generation is 生生, compared by widening",
+      "problem": "07 §3.1 does not state this identity. It says that no reading of `living` includes further generation, and that 生生, the object of the direction, is compared by widening. In the glossary, 生生 is life in the whole and its continuing generation (生发), and 'generation' in its glossary sense is not 生生. GC2's A1 says 'so the sentence says that', but the sentence says more: it narrows 生生 to its second half, in a word the glossary keeps apart from 生生.",
+      "evidence": "07-SIGNIFICANCE.md:136 \"no reading of `living` includes further generation, and 生生, the object of the direction, is compared by widening\"; GLOSSARY.md:65 \"生生 ... life in the whole and its continuing generation (生发)\"; GLOSSARY.md:32; GENERATIVITY-CHAIN-INDEX-RECORD.md:1422 \"so the sentence says that\".",
+      "fix": "en: \"further generation belongs to 生生, the object of the direction (life in the whole and its continuing generation), compared by widening\". The opening likewise: \"..., further generation belongs to 生生, compared by widening, ...\"."
+    },
+    {
+      "severity": "fix",
+      "where": "S_ZH in C03, C17, C24, M15, M20, and the opening scope_zh (6 uses)",
+      "quote": "以拓宽相比较，排序依于 C，即拓宽可形成者为更好",
+      "problem": "The live zh editions name C and widening with 扩大, not 拓宽. The chain coins a second Chinese word for one term. 拓宽 occurs nowhere else in the live zh texts or the records.",
+      "evidence": "ONE-PAGE.zh.md:24 \"*C*，即扩大可形成者更好\"; THE-THEORY-OF-BECOMING.zh.md:122 \"*C*，即扩大可形成者更好，确定*次序*\" and :155 \"道是生生，以扩大来比较\"; on main the chain JSON has 0 uses of 拓宽.",
+      "fix": "\"以扩大相比较，排序依于 C，即扩大可形成者更好\""
+    },
+    {
+      "severity": "fix",
+      "where": "S_ZH (C03, C17, C24, M15, M20) and the opening scope_zh; M20 claim_zh (json:2955)",
+      "quote": "在延续条件之下（理论不断言，07 §3）得出生的意义，即每一生的主张从每一立场都有意义 ; 新的生的内容",
+      "problem": "The Chinese does not read as the term it renders. '每一生' reads as 'every lifetime' (一生), not 'every living claim'. '得出生的意义' can also parse as 出生 (birth). The live zh edition and the records write 存活之意义 and 活的主张, and the cited record writes 新的活的内容 where M20 writes 新的生的内容. So the zh does not say clearly what the en says.",
+      "evidence": "THE-THEORY-OF-BECOMING.zh.md:126 \"*存活之意义*，即每一个活的主张从每一个立场看都有意义\"; records/metaethical-core-characterization.json statement zh \"活的主张\"; records/open-form-realization-under-revision.json:13 zh \"完成实现新的活的内容\".",
+      "fix": "zh: \"在延续条件之下（理论不断言，07 §3）得出存活之意义，即每一个活的主张从每一个立场看都有意义\"; and \"G0 所述……并非这一意义\". In M20: \"新的活的内容\" for 新的生的内容 (two places)."
+    },
+    {
+      "severity": "fix",
+      "where": "M20 claim_en / claim_zh, the P89 sentence (json:2955-2956)",
+      "quote": "inherited generation actually realizes new living content, which under the continuation condition falls under the relevance read from significance / 旧生成输出实际实现新的生的内容，它在延续条件之下落入由意义读出的相关性",
+      "problem": "The old text said the inherited output 'feeds' an interface, which is a statement about composition. The new text says it 'actually realizes' living content, which is a statement about the run. That is stronger than the Lean and drops the hypotheses. Generation by bound forms new living content only given the correspondence, decided completion, the initial bound, local descent and the handoff. The first M20 hunk names the correspondence ('where each completion corresponds to new living content'); this one does not.",
+      "evidence": "Becoming/Handoff.lean:66-77 `newContent_by_bound` takes `decideEvent`, `initial`, `localStep`, `handoff` and `(correspondence : ∀ h, admitted h → ∀ n, completed h n → ∃ q, living q ∧ appears h n q ∧ ¬ before h q)`; records/open-form-realization-under-revision.json:13 \"Where completion is decided, ... and completions realize new living content, a run ... realizes such content by step B + 1\".",
+      "fix": "en: \"inherited generation's output passes into the formation premise, so that, where each completion corresponds to new living content, the content formed falls under the relevance read from significance under the continuation condition,\" zh: \"旧生成输出接入形成前提，在每次完成都对应新的活的内容之处，所形成的内容在延续条件之下落入由意义读出的相关性，\""
+    },
+    {
+      "severity": "fix",
+      "where": "M26 scope_en / scope_zh, A3 (json:5056-5057)",
+      "quote": "whether observation is a second relation beside dependence is settled at the step of the exchange: dependence alone carries exactly the responses rising with a level, and a fall only where some level falls (what-dependence-alone-carries-of-a-level), and observation and dependence are both coupling, by level and by threshold (where-a-level-couples, D45); neither result is part of this link.",
+      "problem": "The sources keep two senses apart, and the text merges them under 'settled'. Only the derivability sense (whether obs could be derived from dependence) is settled at the step of the exchange. The coupling sense 'holds' as a reading adopted in D45, yet the text calls it a 'result'. The text also leaves out what was settled: the second relation is genuinely second only for a falling response with no complement. It drops the hypotheses too: decided equality of conditions, activity needing support, the bound, and the complement case.",
+      "evidence": "01-ROOT.md:312 \"with equality of conditions decided and activity needing support read off the law, dependence alone carries of a level exactly the responses rising with it up to a bound ..., and with a complement, a different condition at a fixed total, every response ... So the second relation is genuinely second only for a falling response with no complement\"; records/observation-is-a-route.json:122 \"in the sense that obs could be derived from dependence ... Since OB1 it is settled at the step of the exchange ... In the sense that obs and dependence are both coupling, by level and by threshold, it holds (where-a-level-couples, adopted by its place in one account, DELEGATED-CHOICES D45)\".",
+      "fix": "en: \"whether observation could be derived from dependence is settled at the step of the exchange: with equality of conditions decided and activity needing support, dependence alone carries of a level exactly the responses rising with it, a fall only where some level falls, and with a complement at a fixed total every response, so observation is genuinely second only for a falling response with no complement (what-dependence-alone-carries-of-a-level); in the sense that both are coupling, by level and by threshold, it is no second relation, a reading adopted in D45 (where-a-level-couples); neither is part of this link.\" zh: \"观察能否由依存推出，已在交换之步解决：条件的相等可判定、活动需要支持时，单凭依存承载一个水平的，恰是随它升高的回应，下降只在某水平下降处，有总量固定的补时承载每个回应，所以观察只对没有补的下降回应才真是第二种关系（what-dependence-alone-carries-of-a-level）；在二者都是耦合（经水平与经阈）的意义上，它不是第二种关系，这是 D45 采用的读法（where-a-level-couples）；二者都不在这一环节之内。\""
+    },
+    {
+      "severity": "fix",
+      "where": "M24 claim_en / claim_zh, B4 (json:4597-4598)",
+      "quote": "a course of reconstruction and correction is executable exactly when the process admits it and the stock covers it / 恰当过程容许且存量覆盖",
+      "problem": "The record and its Lean name the link process. 'The process' reads as Revising as a whole, which admits exactly what is executable, and then the law says nothing.",
+      "evidence": "records/selection-when-the-lumping-changes.json:105-106 \"a course of reconstruction and correction is executable exactly where the stock covers it and the link process admits it\" / \"恰当存量覆盖它且关联过程容许它\" (`Becoming.Revising.feasible_iff`).",
+      "fix": "en: \"exactly when the link process admits it and the stock covers it\"; zh: \"恰当关联过程容许且存量覆盖\""
+    },
+    {
+      "severity": "fix",
+      "where": "C30 and F22 scope_en / scope_zh, A6 (json:569-570, 6240-6241)",
+      "quote": "reference repair uses equal initial slot counts with alike starts, or complete answer agreement with finite fixed-pair outcomes and excluded middle / 引用修复用初始位置数相同及相似的起点，或完整问答一致、固定输入对有限结果及排中律",
+      "problem": "Read naturally, and plainly so in the zh, equal slot counts belong only to the alike-starts form. The excluded-middle form takes equal slot counts too, so that branch drops a hypothesis the Lean takes. The text it replaced listed slot counts with the answer-agreement form.",
+      "evidence": "Becoming/Joining.lean:948-951 `retained_history_matches_of_em (em : ∀ p : Prop, Decided p) ... (finite : J.FiniteOutcomes) (finite' : K.FiniteOutcomes) ... (same : SameBranchingTests ...) (slots : xs.length = ys.length)`; Joining.lean:877-878 `retained_history_matches ... (alike : Alike ...) (slots : xs.length = ys.length)`.",
+      "fix": "en: \"reference repair uses equal initial slot counts, with alike starts, or with complete answer agreement, finite fixed-pair outcomes and excluded middle.\" zh: \"引用修复用初始位置数相同，并用相似的起点，或用完整问答一致、固定输入对有限结果及排中律。\""
+    },
+    {
+      "severity": "fix",
+      "where": "opening scope_en / scope_zh, B6",
+      "quote": "None of the central results is new mathematics: each is near-definitional or a known result restated, by an AI review whose search was not exhaustive (08 §8). / 核心成果都不是新数学",
+      "problem": "In a table of the chain's 'main propositions', 'the central results' reads as the chain's own central results. 08 §8's verdict covers the theory's twelve ranked rows (coming and ceasing, recurrence, closures, loops, evolution and the rest). Most of the chain's entries are outside them: practical judgment, wisdom, alignment, the market models, copying. So the sentence carries the review's verdict beyond its scope.",
+      "evidence": "08-METHOD.md:462 \"The review ranks ten central results and two groups of laws in twelve rows\" and the table at 464-478.",
+      "fix": "en: \"None of the theory's central results, as 08 §8 ranks them, is new mathematics: each is near-definitional or a known result restated, by an AI review whose search was not exhaustive ([08 §8](...)).\" zh: \"本理论的核心成果（08 §8 所列）都不是新数学：……\""
+    },
+    {
+      "severity": "note",
+      "where": "M20 claim_zh, A5 (json:2955); GENERATIVITY-CHAIN-INDEX-RECORD.md:1426",
+      "quote": "所比较的实现可判定时",
+      "problem": "GC2 says A5 uses 'the record's own words'. That holds for the en. The record's zh says 已判定 (decided), not 可判定 (decidable). Both readings fit the Lean, where the decisions are supplied as data.",
+      "evidence": "records/classification-robust-generative-comparison.json:14 \"前提是所比较的实现已判定\"; Becoming/Lexical.lean:522-523 `(held : ∀ n, Decided (f b n)) (tie : ∀ q, Decided (...))`.",
+      "fix": "Optional zh: \"所比较的实现已判定时\"."
+    },
+    {
+      "severity": "note",
+      "where": "C20 scope_en / scope_zh, A8 (json:1887-1888)",
+      "quote": "whether practical reasons have a warrant binding every possible mind",
+      "problem": "The record's question has one more qualifier, 'with zero substantive premises'. The record's title and GC2's own wording also leave it out.",
+      "evidence": "records/universal-practical-warrant.json:13 \"Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises.\"",
+      "fix": "Optional en: \"... a warrant binding every possible mind, with zero substantive premises; ...\"; zh: \"实践理由是否有一个零实质前提、对一切可能心智都有约束力的根据\"."
+    },
+    {
+      "severity": "note",
+      "where": "M20 scope_en / scope_zh (json:2957-2958), unchanged text in a revised entry",
+      "quote": "G0 retains its folded significance interface / G0 沿用折入意义后的条件接口",
+      "problem": "The same entry now says that G0's favourable significance is not living significance. This unchanged sentence still reads G0 as folded into significance. GC2 leaves 'G0, use by use' for the next reading, so no change is needed now. It is the first place a careful reader of M20 would trip.",
+      "evidence": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1447 \"G0, use by use. The key stands in for it; it is not done.\"",
+      "fix": "At the next reading."
+    },
+    {
+      "severity": "note",
+      "where": "C14 and M24 links",
+      "quote": "Formed registration and fidelity / 配准形成与保真; Registration-copying checks / 配准复制实查; Registration revision on the unified spine",
+      "problem": "These link labels sit beside the two renamed records and keep the retired 'registration' word. They are outside B4's scope and belong with B8.",
+      "evidence": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1446 (B8 left for the next reading).",
+      "fix": "With B8."
+    },
+    {
+      "severity": "note",
+      "where": "M20 links, the history path …/history/root-foundation/CHANCE-GROUNDING-PROTOCOL.md",
+      "quote": "本轮范围 | Study protocol",
+      "problem": "The zh label carries a currency word ('this round') on a retired text, and the en does not. B3's matcher looked only for 'current' and 当前, so it did not relabel this one.",
+      "evidence": "development/gc-chain-review/revision/apply_text.py, the relabel condition `re.search(r'\\bcurrent\\b', ...) or '当前' in key[1]`.",
+      "fix": "zh: \"复核时的研究范围\"."
+    },
+    {
+      "severity": "note",
+      "where": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1436",
+      "quote": "selection-under-registration-revision → selection-when-the-lumping-changes and formed-copying-registration → formed-contacts-change-copying-fidelity, each the record's title",
+      "problem": "Only the second id is the record's title. The first record's title is 'Which selections survive and remain executable when the lumping changes'. The zh at :1409 says only that the labels take the titles, which is accurate.",
+      "evidence": "records/selection-when-the-lumping-changes.json title en \"Which selections survive and remain executable when the lumping changes\".",
+      "fix": "\"..., each named from the record's title\"."
+    },
+    {
+      "severity": "note",
+      "where": "C01 claim_zh, B1 (json:19)",
+      "quote": "在形成之中，生成与退化皆然，活动形成并转化后续活动的条件",
+      "problem": "皆然 normally refers back to something already said. Placed before the clause it qualifies, it reads awkwardly.",
+      "evidence": "en (json:20) \"Within formation, generative and degenerative alike, activity forms ...\".",
+      "fix": "Optional: \"在形成之中（生成与退化皆然），活动形成并转化后续活动的条件\"."
+    },
+    {
+      "severity": "note",
+      "where": "S_EN / S_ZH and the opening",
+      "quote": "living significance (every living claim has significance from every standpoint) follows under the continuation condition",
+      "problem": "07 §3.2 states the yield on a reading: where a claim's significance is some formation's continuation at some step. 07 §4 uses the same short form, so no change is needed.",
+      "evidence": "07-SIGNIFICANCE.md:164 \"On any reading where a claim's significance is some formation's continuation at some step, the condition gives living significance\"; 07-SIGNIFICANCE.md:220 \"under it living significance follows\".",
+      "fix": "None needed."
+    }
+  ],
+  "checked": "Read every hunk in the diff file, GC2's section (maintenance record 1404-1451), apply_text.py's edit list, key and relabel rule, and the relabelling note and DF LEFT.md dated lines.\n\nLean and records checked, and found to say what the new words say:\n- A4: PartialRegimeTransition.exact_universal_landing_boundary (hb0 : 0 ≤ b) (hb1 : b ≤ 3/4) ↔ b ≤ 5/12, and the record market-partial-correction-boundary.\n- A5: Lexical.classified_extremes_iff_of_decided with its held/tie decisions, and the record's \"where the realizations compared are decided\".\n- A2: CrossSituational.resolves_explained_iff [DecidableEq M]; Retrodiction.reading_right_iff [DecidableEq O] [DecidableEq V].\n- A7: Copying's section variable [DecidableEq α], draw as a law of draws, inspect_le_iff with FaithfulAt (∀ x y, ref i = some x → nth t i = some y → x = y), i.e. \"wherever both have a token there\".\n- A6: Joining.common_refinement (alike, connected, no finiteness or decision); common_refinement_of_em (em, LocallyFinite both); Joining.common_structure (bisimulation kernel, no premise); FiniteOutcomes.common_structure (em, finite); Translates.history_matches_of_em (em, listed receiving outcomes, answers at start); Recipe.Leaves.alike / same_of_em; retained_history_matches(_of_em).\n- M20's first hunk and its scope's \"Decided completion\": Handoff.Run.novel_by_handoff / relevance_by_handoff_of_unrestricted (decision, correspondence, bound).\n\nStandard clause, checked against 07 §3 (#condition, 3.1, 3.2), §4 (#scope-and-order) and GLOSSARY: living significance as defined; no valence (07:131); G0's favourable significance denied to it; ranking on C; both premises named and neither asserted. Nothing says the ethics derives from the condition, and no \"§6.15\" is left in any entry.\n\nzh against en, checked for every changed field: the same claims and hedges, except where reported. A8 matches the record's statement except one qualifier.\n\nRenames:\n- Both new link paths resolve: records/formed-contacts-change-copying-fidelity.json and selection-when-the-lumping-changes.md.\n- Labels equal the JSON titles (zh and en).\n- No old id remains anywhere in the chain JSON, reviewed_sources included.\n- C14's contact wording matches the record (contact machine; loss, displacement, rebinding).\n\nRelabels:\n- Exactly 50 labels carry \"as reviewed\"/复核时, all on paths under a history/ directory, all of which exist.\n- No live link was relabelled; the only other changed labels are the two renamed-record links (52 changed of 1232).\n- The kept \"current-theorem counterexample\" is on a history path, as GC2 says.\n\nOpening scope's anchors exist (07 #condition, #scope-and-order; 08 #retired-labels, #known-results), and J1–J4 match 08 §10.",
+  "summary": "Two blockers, eight fixes, eight notes.\n\n**Blockers.**\n- **The key contradicts the page it points to.** The opening scope says 08 §10 explains the old labels, but 08 §10's table maps G0 to living significance. That is the reading GC2 declined, and the revised entries deny it. The Lean also shows that `G0` was once the name of the predicate now called `LivingSignificance`, so a single reading of G0 does not fit every entry.\n- **The zh standard clause breaks the glossary.** \"继续生成是生生\" (in the opening and five entries) calls 生成 生生. The glossary, 08 §10 and both zh editions say 生生 is 生发, not 生成.\n\n**Fixes.**\n- The en \"further generation is 生生\" asserts an identity that 07 §3.1 does not state.\n- The zh renders widening as 拓宽, while the live zh texts use 扩大.\n- \"每一生的主张\" / \"生的意义\" misread in Chinese (\"every lifetime\", \"birth\") and differ from the live zh terms 活的主张 / 存活之意义.\n- M20's P89 sentence (\"actually realizes new living content\") drops the correspondence hypothesis the Lean takes.\n- M26's A3 merges the settled derivability question with the D45 coupling reading, calls the reading a result, and leaves out the verdict and the hypotheses.\n- M24 says \"the process\" where the record says \"the link process\".\n- In C30/F22's scope, the \"or\" leaves equal slot counts out of the excluded-middle form, which also takes them.\n- The opening's \"None of the central results is new mathematics\" carries 08 §8's verdict beyond the twelve rows it ranks.\n\n**Verified correct.** The Lean for A2, A4, A5 and A7, and A6 apart from the slot-count wording. M20's first hunk. The standard clause against 07 §3–§4, apart from the 生生 wording. The two renames: paths resolve, labels match the titles, no old id remains. All 50 relabelled links are on history/ paths."
+}

@@ -1,0 +1,103 @@
+6c84c2d90 PRACTICAL-JUDGMENT.md | 
+     
+6c84c2d90 KNOWLEDGE.md | 
+     
+6c84c2d90 ALIGNMENT-DIRECTION.md | 
+     
+6c84c2d90 PHILOSOPHICAL-ACCOUNT.md | 
+     
+6c84c2d90 ETHICAL-LEARNING.md | 
+     
+6c84c2d90 BASIC-CONFLICT-JUDGMENT.md | 
+     
+6c84c2d90 WISDOM-AND-CONTEXT.md | 
+     
+6c84c2d90 THE-THEORY-OF-BECOMING.md | 
+     
+6c84c2d90 observation-is-a-route.md |  1 file changed, 10 insertions(+)
+     631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the gra
+     e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches,
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     cdeb6b1e8 U4 landed: the leaf Becoming.RootForms and the boundary record one-root-to-its-edge (study §479, core receipt 20261031T123637.207595Z, every
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+     994c9d10f EC6c and EC6d landed. EC6c: Flow.BalancesBetween l o t, named once right after Flow.Balances (the flow balances from levels l to o across th
+     565601488 EC6b landed: EC6's cases of closure and balance derived (board rule 9), every statement and definition unchanged. Pace gains stays (a region
+13bf74dbc market-partial-correction-boundary.md |  1 file changed, 25 insertions(+), 2 deletions(-)
+     12fbcf71a VK part 2 kit on main after SJ1: periphery receipt 20261101T114325.150839Z for MarketInstances (4 Lean steps run, 47 reused); the four marke
+     0e01bfafa SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt 20261101T112708.430596Z, every axiom report empty, st
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+13bf74dbc classification-robust-generative-comparison.md |  1 file changed, 11 insertions(+)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+13bf74dbc market-supported-finite-transition.md |  1 file changed, 12 insertions(+)
+     12fbcf71a VK part 2 kit on main after SJ1: periphery receipt 20261101T114325.150839Z for MarketInstances (4 Lean steps run, 47 reused); the four marke
+     0e01bfafa SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt 20261101T112708.430596Z, every axiom report empty, st
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+13bf74dbc derived-history-law-exactness.json |  1 file changed, 8 insertions(+), 2 deletions(-)
+     6eb479810 HE landed (study §455, core receipt 20261029T184601.050950Z): the held edits in one near-full rebuild, every statement and name unchanged (t
+13bf74dbc recoverable-mediated-change.json |  1 file changed, 7 insertions(+), 1 deletion(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+13bf74dbc recoverable-mediated-change.md |  1 file changed, 12 insertions(+), 1 deletion(-)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     b4cec4c71 RV21's item 13 and the restated question landed: 生生 and 理 each in one sense (the grammar's word written «生生», 理 in knowing's sense with a cl
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+13bf74dbc pending-task-context-applicability.md |  1 file changed, 10 insertions(+)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+13bf74dbc growth-constrained-fragmentation.json |  1 file changed, 7 insertions(+), 1 deletion(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+1c704bc70 open-form-realization-under-revision.json | 
+     
+1c704bc70 enacted-scene-binding.md |  1 file changed, 15 insertions(+), 1 deletion(-)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+1c704bc70 historical-source-binding.md |  1 file changed, 15 insertions(+)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+1c704bc70 retrospective-source-binding.md |  1 file changed, 13 insertions(+), 1 deletion(-)
+     249565d46 ND part 1, documents (not yet landed): "master law" (主律) becomes "shared law" (共律) in 08 §7 and §10, 01 §7 and its record's title, statement
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+     c763b567a MV: the review taken (two readers, 27 findings, all but one: the note a child of its item at every marker width; no empty subject where the 
+     e1bcc4157 MV: the master laws each law of a record rests on, computed from the Lean dependencies (tools/research/master_laws.py reading the measure's 
+1c704bc70 finite-granularity-question-recovery.json | 
+     
+1c704bc70 incidence-common-refinement.json | 
+     
+1c704bc70 multivalued-joining-common-structure.json | 
+     
+1c704bc70 residual-continuation-correspondence.json | 
+     
+1c704bc70 retained-reference-joining-recovery.json |  1 file changed, 14 insertions(+), 2 deletions(-)
+     631762ba2 U4d landed: the covering laws on the root (core receipt 20261101T161537.177111Z, every axiom report empty, study §498). One count on the gra
+     e5951932b OU7 landed: the corpus's conditional laws and 验's rooms (plan §八 step 5, 丙一与验, the release gate's item 4), with the grammar owner's patches,
+1c704bc70 formed-copying-correction.json |  1 file changed, 8 insertions(+), 2 deletions(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+1c704bc70 formed-copying-registration.json |  1 file changed, 8 insertions(+), 2 deletions(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+1c704bc70 inherited-structural-copying.json |  1 file changed, 8 insertions(+), 2 deletions(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+1c704bc70 recurrent-chain-assembly.json |  1 file changed, 8 insertions(+), 2 deletions(-)
+     4ea66f49e RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as the coordinator widened it (study §480). Core receipt 20261031T125855.2
+1c704bc70 DELEGATED-CHOICES.md |  1 file changed, 15 insertions(+), 3 deletions(-)
+     b976363f0 TX: 05's pool theorem cites withinClosureOf_iff and its Not-shown line on the grammar corrected; the priority of basic conditions labelled a
+     2c8aa0fb3 AJ6b landed: T3's evidence in 05 corrected (CG1's C1, its second round, and IN1 test the drain beyond the reward's couplings in tabular lear
+     a75a131d4 Merge main into gw-lean (U3's Lean landed): CORE keeps both new leaves (MapRegions, WideningOnTheMap with SignificanceStatements after Gramm
+     85911ab22 AJ6 landed (documents only, no Lean, no new record, no core run): two readings in 07 §6 narrowed to their laws, from RF's plan §9 items 2 an
+     669dab92b GW1, GW2 and GW6 on the branch, before landing: Becoming.MapRegions (39 theorems in 45 declarations) and Becoming.WideningOnTheMap (43 in 52
+     6ffb151e1 GW3-GW5: the re-check of the Lean (RECHECK-GW-LEAN, 8 findings) taken: the three escapes from the laws for dissipated requirements stated ex

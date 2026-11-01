@@ -1,0 +1,247 @@
+--- 64c11b8ed:theories/becoming/results/records/multivalued-joining-common-structure.json
++++ theories/becoming/results/records/multivalued-joining-common-structure.json
+@@ -1,3 +1,3 @@
+ {
+-  "schema_version": 1,
++  "schema_version": 2,
+   "id": "multivalued-joining-common-structure",
+@@ -10,11 +10,98 @@
+   "family": "F22",
+-  "reviewed_at_utc": "2026-10-25T14:32:50+00:00",
+-  "claim": {
+-    "zh": "有限结果接合的两份精确约简分支说明具有唯一的已用代码对齐，保持所有可能输出类；代码结果可从任意原来指定的同码输入对提升。",
+-    "en": "Two exact reduced branch accounts of finite-outcome joining have a unique alignment on used codes preserving all possible outcome classes; each code outcome lifts from any originally specified input pair with those codes."
++  "reviewed_at_utc": "2026-10-28T11:52:34+00:00",
++  "statement": {
++    "en": "Two descriptions of a joining with one kernel that is a bisimulation lift it, align one to one on used codes and carry its reading across; where pairs join into listed fragments, codes whose kernel is sameness of branching tests suffice under excluded middle, and the relation can stay multivalued.",
++    "zh": "一个接合的两个描述若有同一个核且该核是互模拟，则各自提升接合，在所用代码上一一对齐，并把一个读法带到另一个；每对结合成已列出的片段时，在排中律下，恰认同通过相同分支检验者的代码即足够，关系可以仍是多值的。"
+   },
++  "laws": [
++    {
++      "en": "A joining relates two fragments to what they join into, in several ways, one or none. Read as a frame, a fragment moves, with a partner on either side, to what they join into; the bisimulations of that frame are exactly the relations compatible with the joining: related fragments joined with one partner on one side give related results, either way.",
++      "zh": "接合把两个片段关联到它们结合成的东西：多种方式、一种或没有。读作框架时，片段与任一侧的伙伴移到它们结合成的东西；该框架的互模拟恰是与接合相容的关系：相关的片段与同一侧的同一伙伴结合，给出相关的结果，双向皆然。",
++      "declarations": [
++        "Becoming.Joining.frame",
++        "Becoming.Joining.Compatible",
++        "Becoming.Joining.bisimulation_iff_compatible"
++      ]
++    },
++    {
++      "en": "Read through a description, codes join where fragments with those codes join. For any joining, the description lifts it, every joining of codes coming from a joining of the fragments themselves, exactly where having one code is a bisimulation of the joining's frame, with no premise; where it lifts, a joining of codes is exactly the code of a joining of any fragments having them.",
++      "zh": "经一个描述读取，代码在具有这些代码的片段结合处结合。对任一接合：描述提升它（代码的每个结合都来自片段本身的结合），恰当“同码”是接合框架的互模拟，无需前提；提升时，代码的结合恰是任何具有这些代码之片段的某个结合的代码。",
++      "declarations": [
++        "Becoming.Joining.image",
++        "Becoming.Joining.Lifts",
++        "Becoming.Joining.lifts_iff",
++        "Becoming.Joining.image_iff"
++      ]
++    },
++    {
++      "en": "For any joining, two descriptions with one kernel that is a bisimulation of the joining's frame each lift the joining, are aligned one to one on the codes they use (each used code with exactly one code of the other, through a fragment having both), and the alignment carries one reading of the joining onto the other, with no further premise.",
++      "zh": "对任一接合：两个描述有同一个核，且该核是接合框架的互模拟时，各自提升接合，在所用代码上一一对齐（每个所用代码经同时具有两者的片段恰对齐另一方的一个代码），对齐把接合的一个读法带到另一个，无需其他前提。",
++      "declarations": [
++        "Becoming.Used",
++        "Becoming.Aligned",
++        "Becoming.aligned_one_to_one",
++        "Becoming.Joining.common_structure"
++      ]
++    },
++    {
++      "en": "Under excluded middle, for a joining whose pairs each join into listed fragments, fragments are alike exactly where they pass the same branching tests, and two descriptions whose codes identify exactly the fragments passing the same branching tests each lift the joining, align one to one on used codes, and carry one reading onto the other; the joining may have several outcomes.",
++      "zh": "在排中律下，若接合的每对片段都结合成已列出的片段：片段相似恰当它们通过相同分支检验；代码恰认同通过相同分支检验之片段的两个描述，各自提升接合，在所用代码上一一对齐，并把一个读法带到另一个；接合可以有多个结果。",
++      "declarations": [
++        "Becoming.Joining.FiniteOutcomes",
++        "Becoming.Joining.FiniteOutcomes.alike_iff_sameBranchingTests",
++        "Becoming.Joining.FiniteOutcomes.common_structure"
++      ]
++    },
++    {
++      "en": "Under excluded middle, for a joining whose pairs each join into listed fragments, fragments passing the same branching tests join into fragments passing the same tests, and a presentation reading the branching tests exactly and reducedly lifts the joining; for any two frames that list each move's outcomes, passing the same branching tests is a bisimulation.",
++      "zh": "在排中律下，若接合的每对片段都结合成已列出的片段：通过相同分支检验的片段结合成通过相同检验的片段，精确且约简地读取分支检验的呈现提升接合；对任两个列出每个动作结果的框架，通过相同分支检验是互模拟。",
++      "declarations": [
++        "Becoming.Joining.FiniteOutcomes.joined_sameBranchingTests_of_em",
++        "Becoming.Joining.FiniteOutcomes.lifts_of_exact",
++        "Becoming.SameBranchingTests.bisimulation_of_em"
++      ]
++    },
++    {
++      "en": "For any configurations and questions, a presentation is exact where each configuration's code reads its answers, and reduced where configurations answering alike get one code. An exact reduced presentation gives one code exactly to configurations answering alike, and two exact reduced presentations correspond one to one on used codes.",
++      "zh": "对任意构型与问题：呈现精确，是指每个构型的代码读出其回答；约简，是指回答相同的构型得到同一代码。精确约简的呈现恰对回答相同的构型给同一代码，两个精确约简的呈现在所用代码上一一对应。",
++      "declarations": [
++        "Becoming.Presentations.Exact",
++        "Becoming.Presentations.Reduced",
++        "Becoming.Presentations.reduced_exact_kernel",
++        "Becoming.Presentations.relative_unique_correspondence"
++      ]
++    },
++    {
++      "en": "Where predicates on the questions answering alike are one predicate, every exact presentation factors through the canonical one, which codes each configuration by the predicate of its answers: each used code matches exactly one used canonical code and each used canonical code is matched; on a frame, the canonical codes of two configurations are one exactly where they pass the same branching tests.",
++      "zh": "问题上的谓词回答相同即为同一谓词时，每个精确呈现都经典范呈现分解（典范呈现以回答之谓词为构型编码）：每个所用代码恰配一个所用典范代码，每个所用典范代码都被配到；在框架上，两构型的典范代码相同恰当它们通过相同分支检验。",
++      "declarations": [
++        "Becoming.Presentations.PredicateExt",
++        "Becoming.Presentations.canonical_factor",
++        "Becoming.PresentationFrames.canonical_kernel"
++      ]
++    },
++    {
++      "en": "For an exact reduced presentation, a three-place relation on configurations descends to an exact reading on codes exactly where it is the same for configurations answering alike, its image then being that reading; any two exact readings agree on used codes; and for a reduced presentation, one pair of triples answering alike on which the relation differs blocks every exact reading.",
++      "zh": "对精确约简的呈现：构型上的三元关系下降为代码上的精确读法，恰当它对回答相同的构型相同，此时其像就是该读法；任两个精确读法在所用代码上一致；对约简的呈现，关系在一对回答相同的三元组上不同，就阻断每个精确读法。",
++      "declarations": [
++        "Becoming.Presentations.Saturated",
++        "Becoming.Presentations.RelExact",
++        "Becoming.Presentations.relation_descends_iff_saturated",
++        "Becoming.Presentations.lift_exact_iff_saturated",
++        "Becoming.Presentations.relational_reading_unique_on_used",
++        "Becoming.Presentations.separating_relation_blocks_descent"
++      ]
++    },
++    {
++      "en": "In the periphery (propext, Quot.sound), in a finite joining where split joined with enter gives the two outcomes leftOnly and rightOnly, the joining read through the canonical presentation is not functional: the common relation can stay multivalued.",
++      "zh": "外围（propext、Quot.sound）：在一个有限接合中，split 与 enter 结合给出 leftOnly 与 rightOnly 两个结果；经典范呈现读取的接合不是函数式的：共同关系可以仍是多值的。",
++      "declarations": [
++        "Generative.ExplanatoryJoiningBranchWitnesses.canonical_operation_still_multivalued"
++      ]
++    }
++  ],
+   "hypotheses": [
+     {
+-      "zh": "同一部分接合 J；每对输入具有有限结果集合。",
+-      "en": "One partial joining relation J; each input pair has a finite outcome set."
++      "en": "One partial joining relation J; for the finite-outcome laws, each input pair joins into a listed, finite set of fragments.",
++      "zh": "同一部分接合 J；有限结果的规律中，每对输入结合成已列出的有限片段集合。"
+     },
+@@ -27,4 +114,41 @@
+       "en": "Exact supplies complete truthful answers; Reduced is used for minimal codes and lifting output codes."
+-    }
+-  ],
++    },
++    {
++      "en": "Excluded middle is a named hypothesis of the finite-outcome laws: where outcomes are listed, it matches the steps of fragments passing the same branching tests, and so identifies that sameness with likeness; with the kernel supplied as a bisimulation, the laws use no premise beyond the two named.",
++      "zh": "排中律是有限结果规律的明示前提：结果已列出时，它使通过相同分支检验的片段的各步相互匹配，从而把这种相同认同为相似；核作为互模拟给出时，规律除所述两项外不用其他前提。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "The alignment carries the joining read on codes, its outcome classes, not every joining fact among the fragments themselves.",
++      "zh": "对齐所带的是代码上读出的接合，即其结果类，而不是片段本身之间的每个接合事实。",
++      "kind": "scope"
++    },
++    {
++      "en": "That a given explanation's description is exact and reduced, and a common correspondence across articulations into different fragments, do not follow.",
++      "zh": "某个解释的描述是精确且约简的，以及把接合分成不同片段的表述之间的共同对应，都不由此得出。",
++      "kind": "non-implication"
++    }
++  ],
++  "counterexamples": [
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean",
++      "detail": {
++        "zh": "同一规律有可区分的左／右结果；规范共同表示仍非单值，且共享后继不同于分别可行的路径。",
++        "en": "One law has distinguishable left/right outcomes; the canonical presentation remains nonfunctional, and shared continuation differs from individually feasible paths."
++      }
++    }
++  ],
++  "standard_boundaries": [
++    "no-ethical-premise-core-axiom-free",
++    "decidability"
++  ],
++  "validation_scope": {
++    "en": "Machine-checked with Lean 4.29.1 by the consolidated core checker: Becoming.Joining (becoming-checks/20261020T051144.879480Z), Becoming.JoiningCodes and Becoming.Presentations (20261019T231053.882924Z) and Becoming.BranchingCorrespondence (20261018T222948.779875Z), every cited core declaration with an empty axiom report. The periphery witness ExplanatoryJoiningBranchWitnesses by its check (explanatory-joining-branches-checks/20261008T130611.816353Z: 223 audits, 26 new), reporting propext and Quot.sound for it. ExplanatoryJoiningBranches, ExplanatoryBranching and JoiningBridge are provenance.",
++    "zh": "Lean 4.29.1 合并核心检查器实查：Joining（becoming-checks/20261020T051144.879480Z）、JoiningCodes、Presentations（20261019T231053.882924Z）、BranchingCorrespondence（20261018T222948.779875Z），核心声明公理报告皆空；外围见证经 explanatory-joining-branches-checks/ 下回执检查，报 propext、Quot.sound；旧模块为来源。"
++  },
++  "next_delta": {
++    "en": "Relate two articulations of one joining into different fragments, giving the common correspondence of their descriptions where the fragments themselves differ.",
++    "zh": "把同一接合分成不同片段的两种表述联系起来，在片段本身不同之处给出其描述的共同对应。"
++  },
+   "correspondence": {
+@@ -69,4 +193,4 @@
+       "detail": {
+-        "zh": "从单值共同操作接续到多结果关系；并非相同问题集下的无代价弱化。",
+-        "en": "Continues from functional common operations to a multivalued relation, not a cost-free weakening for the identical question family."
++        "zh": "从单值共同操作接续到多结果关系；并非相同问题集下无需额外条件的弱化。",
++        "en": "Continues from functional common operations to a multivalued relation, not a weakening that needs no further condition for the identical question family."
+       }
+@@ -109,26 +233,2 @@
+   ],
+-  "counterexamples": [
+-    {
+-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+-      "detail": {
+-        "zh": "有限结果和丰富问答仍是前提；保持结果类而非每个原生三元事实。例子证明共同关系仍可多结果。任意解释的适用性及不同分节的共同对应未证。",
+-        "en": "Finite outcomes and rich answers remain premises; outcome classes, not every native ternary fact, are preserved. The witness proves the common relation can remain multivalued. Applicability to every explanation and common correspondence across different articulations remain unproved."
+-      }
+-    },
+-    {
+-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean",
+-      "detail": {
+-        "zh": "同一规律有可区分的左／右结果；规范共同表示仍非单值，且共享后继不同于分别可行的路径。",
+-        "en": "One law has distinguishable left/right outcomes; the canonical account remains nonfunctional, and shared continuation differs from individually feasible paths."
+-      }
+-    }
+-  ],
+-  "limitations": {
+-    "zh": "有限结果和丰富问答仍是前提；保持结果类而非每个原生三元事实。例子证明共同关系仍可多结果。任意解释的适用性及不同分节的共同对应未证。",
+-    "en": "Finite outcomes and rich answers remain premises; outcome classes, not every native ternary fact, are preserved. The witness proves the common relation can remain multivalued. Applicability to every explanation and common correspondence across different articulations remain unproved."
+-  },
+-  "validation_scope": {
+-    "zh": "所列 Lean 源码与成功冻结回执逐字哈希绑定；本轮223项审计含26项新声明。旧功能性定理信用此前166项回执，未冒充新证明。",
+-    "en": "Listed Lean sources bind by exact hash to successful frozen receipts. This round checks 223 declarations including 26 new ones. The older functional theorem credits its previous 166-audit receipt, not a new proof."
+-  },
+   "references": [
+@@ -167,3 +267,8 @@
+         "Becoming.Presentations.relational_reading_unique_on_used",
+-        "Becoming.Presentations.separating_relation_blocks_descent"
++        "Becoming.Presentations.separating_relation_blocks_descent",
++        "Becoming.Presentations.Exact",
++        "Becoming.Presentations.Reduced",
++        "Becoming.Presentations.PredicateExt",
++        "Becoming.Presentations.Saturated",
++        "Becoming.Presentations.RelExact"
+       ]
+@@ -214,3 +319,13 @@
+         "Becoming.Joining.bisimulation_iff_compatible",
+-        "Becoming.Joining.image_iff"
++        "Becoming.Joining.image_iff",
++        "Becoming.Joining.frame",
++        "Becoming.Joining.Compatible",
++        "Becoming.Joining.image",
++        "Becoming.Joining.Lifts",
++        "Becoming.Joining.lifts_iff",
++        "Becoming.Used",
++        "Becoming.Aligned",
++        "Becoming.aligned_one_to_one",
++        "Becoming.Joining.FiniteOutcomes",
++        "Becoming.Joining.FiniteOutcomes.alike_iff_sameBranchingTests"
+       ]
+@@ -314,6 +429,2 @@
+   ],
+-  "next_delta": {
+-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+-  },
+   "history": [
+@@ -354,2 +465,24 @@
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：别名 Becoming.Joining.operation_lifts_iff 与 Becoming.Joining.common_multivalued_structure_of_em 标为已退休模块之名：它们只在 JoiningBridge 的历史副本中声明，本记录以之为来历；当前证明是 Becoming.Joining.common_structure。主张不变。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; a statement written from the home section and the claim; the claim split into 9 laws, each read against its declarations in Becoming.Joining, Becoming.JoiningCodes, Becoming.Presentations, Becoming.BranchingCorrespondence (core) and ExplanatoryJoiningBranchWitnesses (periphery), with the conditions the Lean takes written in (listed outcomes and excluded middle for the finite-outcome laws, one kernel that is a bisimulation for the constructive law, exactness and reduction for the presentation laws); the first hypothesis says listed outcomes, a fourth names where excluded middle enters, the others kept; the limitations to two does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free and decidability, the finite-outcome premise kept in the hypotheses; the first counterexample, which repeated the limitations and cites a study page no declaration of which witnesses it, removed, its sentences carried by those items and law 9; in the second counterexample and one related entry, words of exchange replaced (\"account\" by \"presentation\", \"cost-free\" by what it meant); the evidence paragraph rewritten from the receipts; the next step's instruction to reuse dropped; 15 declarations added to the references of their files; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [multivalued-joining-common-structure.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/multivalued-joining-common-structure.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, each read against the Lean it cites.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；依主章与主张写出陈述；主张拆为 9 条规律，各条对照 Becoming.Joining、JoiningCodes、Presentations、BranchingCorrespondence（核心）与 ExplanatoryJoiningBranchWitnesses（外围）中的声明核读，写入 Lean 所取的条件（有限结果规律中的已列出结果与排中律、构造性规律中作为互模拟的同一核、呈现规律中的精确与约简）；第一条前提写明已列出的结果，第四条说明排中律从何处进入，其余保留；限制改为两条“未表明”与通用边界 no-ethical-premise-core-axiom-free、decidability，有限结果前提留在前提中；第一条反例只重复限制、所引为研究页且无声明见证，已删去，其句由这些条目与第 9 条规律承载；第二条反例与一条相关条目中的交换用语已替换（“account”改为“presentation”，“cost-free”改为其本意）；证据段按回执重写；删去下一步中复用的指示；15 个声明加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [multivalued-joining-common-structure.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/multivalued-joining-common-structure.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述，各条对照所引 Lean 核读。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/f972c0cfd4d41e5e/multivalued-joining-common-structure.json",
++      "sha256": "f972c0cfd4d41e5e8c6cd842dedee6c8009517b25bcdef38f8f2e3b9c100ed08",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/f472b6b55cea5c62/multivalued-joining-common-structure.json",
++      "sha256": "f472b6b55cea5c628b9ca7aacdcbe2f9e55046e3e6b5e51d2f51c75158a3c129",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
+     }

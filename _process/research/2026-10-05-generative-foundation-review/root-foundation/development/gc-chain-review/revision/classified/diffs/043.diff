@@ -1,0 +1,241 @@
+--- 0d7a397a5:theories/becoming/results/records/formed-copying-correction.json
++++ theories/becoming/results/records/formed-copying-correction.json
+@@ -1,3 +1,3 @@
+ {
+-  "schema_version": 1,
++  "schema_version": 2,
+   "id": "formed-copying-correction",
+@@ -10,7 +10,87 @@
+   "family": "F10",
+-  "reviewed_at_utc": "2026-10-14T04:00:00+00:00",
+-  "claim": {
+-    "zh": "对每个字母表：在某一位对照参考检查并把该位记号换为参考记号，对每个产物、池与支持都不增加相对模板的缺陷，当且仅当参考在该位与模板一致；对此类位置的每次扫描都不增加缺陷；在缺陷位，检查留下参考记号当且仅当池中有该记号且支持覆盖检查与替换；长度等于模板的产物无缺陷当且仅当它即模板；替换保持产物与池中每个记号的计数。纠正机是单位汲取下的实例：对每个状态与位置，该等价对每个进行中的复制成立，旧忠实扫描定理与单点精确条件是实例，损坏正确产物的旧错误参考在被检位不忠实。旧错误复制留下的产物、库存和连接进入检查／编辑过程；实际材料替换接通释放与随后遗传。",
+-    "en": "For every alphabet: inspecting a site against a reference and exchanging its token for the reference's never increases the defects against a template, for every product, pool and support, exactly when the reference agrees with the template at that site; every scan of such sites never increases them; at a defective site the inspection leaves the reference's token exactly when the pool holds it and the support covers inspection and exchange; a product of the template's length has no defect exactly when it is the template; an exchange keeps every token's count across product and pool. The correction machine is the instance with unit draws: for every state and site the equivalence holds over every copy in progress, the old faithful-scan theorem and the exact single-site criterion are instances, and the old wrong reference that damages a correct product is unfaithful at the inspected site. The product, stock and connections retained from erroneous copying enter the checking/editing process; actual component exchange joins release and subsequent inheritance."
++  "reviewed_at_utc": "2026-10-28T14:42:32+00:00",
++  "statement": {
++    "en": "Exchanging a site's token for a reference's never increases the defects against a template, for every product, pool and support, exactly when, wherever both the reference and the template have a token at that site, the two agree; scans of such sites never increase them.",
++    "zh": "把某一位的记号换成参考的记号，对每个产物、池与支持都不增加相对模板的缺陷，恰当在参考与模板都在该位有记号之处两者一致；对这样的位的扫描也从不增加缺陷。"
+   },
++  "laws": [
++    {
++      "en": "For every alphabet with decidable equality, a product's defects against a template count the sites of their common length where they differ; a reference is faithful at a site where, both it and the template having a token there, they agree.",
++      "zh": "对每个有可判定相等的字母表：产物相对模板的缺陷是两者共同长度内不同之位的计数；参考与模板在某位都有记号且一致，即参考在该位忠实。",
++      "declarations": [
++        "Becoming.Copying.defects",
++        "Becoming.Copying.FaithfulAt"
++      ]
++    },
++    {
++      "en": "For every alphabet with decidable equality, inspecting a site (drawing ci, then exchanging its token for the reference's at ce where the pool holds it) never increases the defects against a template, for every product, pool and support, exactly when the reference is faithful at that site.",
++      "zh": "对每个有可判定相等的字母表：检查某位（取 ci，池中有参考记号时以 ce 把该位记号换成它），对每个产物、池与支持都不增加相对模板的缺陷，恰当参考在该位忠实。",
++      "declarations": [
++        "Becoming.Copying.inspect",
++        "Becoming.Copying.inspect_le_iff"
++      ]
++    },
++    {
++      "en": "A scan of sites at which the reference is faithful never increases the defects. Read as a process whose moves are the sites inspected, every inspection of a site keeps the defects from rising exactly when the reference is faithful there, and no course of inspections at faithful sites raises them.",
++      "zh": "对参考忠实之位的扫描从不增加缺陷。读作以所检查之位为动作的过程：对某位的每次检查都不使缺陷上升，恰当参考在该位忠实；在忠实之位的检查进程从不使缺陷上升。",
++      "declarations": [
++        "Becoming.Copying.scan_le",
++        "Becoming.Courses.inspection",
++        "Becoming.Courses.inspection_le_iff",
++        "Becoming.Courses.inspection_course_le"
++      ]
++    },
++    {
++      "en": "At a site holding a token other than the one the reference reads, inspection leaves the reference's token there exactly when the support covers the draws of inspection and exchange and the pool holds that token. A product of the template's length has no defect exactly when it is the template, and an exchange keeps every token's count across product and pool.",
++      "zh": "在持有与参考所读不同记号的位上，检查在该位留下参考的记号，恰当支持覆盖检查与替换的所取、且池持有该记号。与模板等长的产物没有缺陷，恰当它就是模板；一次替换保持每个记号在产物与池中的总计数。",
++      "declarations": [
++        "Becoming.Copying.inspect_matches_iff",
++        "Becoming.Copying.defects_zero_iff",
++        "Becoming.Copying.exchange_keeps_counts"
++      ]
++    },
++    {
++      "en": "The correction machine is the instance with unit draws: its exchange, inspection and scan are the core's with its reference. For every correction state and site, inspection never increases the defects against the template for any copy in progress exactly when the reference is faithful at the site; a scan of faithful sites never increases them, the earlier theorem for a reference faithful everywhere an instance.",
++      "zh": "纠正机是单位汲取的实例：其替换、检查与扫描即以其参考进行的核心操作。对每个纠正状态与位：检查对任何进行中的复制都不增加相对模板的缺陷，恰当参考在该位忠实；对忠实之位的扫描不增加缺陷，此前关于处处忠实之参考的定理是其实例。",
++      "declarations": [
++        "Becoming.CopyingInstances.exchange_view",
++        "Becoming.CopyingInstances.inspect_view",
++        "Becoming.CopyingInstances.scan_view",
++        "Becoming.CopyingInstances.inspect_le_iff_instance",
++        "Becoming.CopyingInstances.scan_le_from_law",
++        "Becoming.CopyingInstances.scan_faithful_instance",
++        "CopyingCorrection.inspection_scan_does_not_increase_defects"
++      ]
++    },
++    {
++      "en": "In the machine, at a site holding a token other than the reference's, inspection leaves the reference's token exactly when two units of support are free and the pool holds the token; a product of the template's length has no defect exactly when it is the template; an exchange permutes the tokens across product and pool, and every admitted history keeps its totals of connectors, material and support.",
++      "zh": "在该机中，在持有与参考不同记号的位上，检查留下参考的记号，恰当有两个单位支持空闲且池持有该记号；与模板等长的产物没有缺陷，恰当它就是模板；一次替换使产物与池中的记号成一置换，每段被容许的历史都保持连接件、材料与支持的总量。",
++      "declarations": [
++        "Becoming.CopyingInstances.matches_reference_from_law",
++        "CopyingCorrection.inspection_matches_reference_iff",
++        "Becoming.CopyingInstances.product_is_template_iff",
++        "CopyingCorrection.exchange_material",
++        "CopyingCorrection.history_accounts"
++      ]
++    },
++    {
++      "en": "In witnesses from a product copied with one slipped contact: with 15 units of support at entry, losing that contact and routing the defective site to its template site, inspection edits the product into the template, released and copied faithfully as a daughter; with 13 the repair uses up the support, the wrong token staying and the product, releasable before, unreleased; with 14 it is corrected but not releasable.",
++      "zh": "在一个错位接触下复制所得产物的见证中：入口支持为 15 时，丢失该接触并从缺陷之位到其模板之位形成一条路由，检查把产物编辑为模板，后者被释放并作为子代被忠实复制；为 13 时修复用尽支持，留下错误记号，原本可释放的产物不再释放；为 14 时产物被纠正但不能释放。",
++      "declarations": [
++        "CopyingCorrection.formed_route_edits_actual_product",
++        "CopyingCorrection.corrected_daughter_enters_inheritance",
++        "CopyingCorrection.checking_can_exhaust_editing_support",
++        "CopyingCorrection.corrected_product_can_remain_unreleased"
++      ]
++    },
++    {
++      "en": "A shared wrong source can conceal or cause error, in witnesses: a route from the defective site to a template site holding the same wrong token leaves the error in place, and the same route from a correct product damages it, its reference being unfaithful at the inspected site.",
++      "zh": "共同的错误来源可掩盖或造成错误，见于见证：从缺陷之位到持有同一错误记号的模板之位的路由使错误留在原处；同一路由从正确产物出发则损坏它，其参考在所检查之位不忠实。",
++      "declarations": [
++        "CopyingCorrection.shared_wrong_source_hides_error",
++        "CopyingCorrection.wrong_reference_damages_correct_product",
++        "Becoming.CopyingInstances.wrong_reference_unfaithful"
++      ]
++    }
++  ],
+   "hypotheses": [
+@@ -21,6 +101,50 @@
+     {
+-      "zh": "参考匹配成为模板纠正需要忠实参考；一般不增定理不保证覆盖全部位置、供给充足或最终完成。",
+-      "en": "Reference matching becomes template correction under faithful correspondence; the general non-increase theorem does not guarantee coverage, sufficient stock or eventual completion."
+-    }
+-  ],
++      "en": "Reference matching becomes template correction under a faithful reference.",
++      "zh": "参考匹配成为模板纠正需要忠实参考。"
++    },
++    {
++      "en": "The core laws hold for every alphabet with decidable equality and any draws ci and ce for inspection and exchange; the machine's tokens are Boolean, its draws one unit each and its counts natural numbers.",
++      "zh": "核心规律对每个有可判定相等的字母表与检查、替换的任意所取 ci、ce 成立；该机的记号是布尔值，每次所取一个单位，计数是自然数。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "The non-increase laws do not make inspection cover every site, the pool sufficient or correction complete.",
++      "zh": "不增之律不使检查覆盖每一位、不使池充足，也不使纠正完成。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "Reference selection, fault localization, microscopic comparison and exchange, autonomous repair planning, renewal, error rates and population advantage do not follow from these laws.",
++      "zh": "由这些规律推不出参考选择、故障定位、比较与替换的微观规律、自动修复计划、更新、误差率或种群优势。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "Coding, kinetic proofreading and equivalent conventional mechanisms keep comparable standing.",
++      "zh": "编码、动力学校对及同机制的传统模型保有可比地位。",
++      "kind": "scope"
++    }
++  ],
++  "counterexamples": [
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingCorrection.lean",
++      "detail": {
++        "zh": "共同错误来源可掩盖错误或损坏正确产物；入口支持为13时检查耗尽编辑／释放支持，14时纠正完成但不能释放。",
++        "en": "A shared wrong source can conceal error or damage correct output; entrance support 13 exhausts editing/release support, while 14 corrects without releasing."
++      }
++    }
++  ],
++  "standard_boundaries": [
++    "no-ethical-premise-core-axiom-free",
++    "discrete-steps",
++    "decidability",
++    "formal-not-empirical"
++  ],
++  "validation_scope": {
++    "en": "Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingCorrection by its folder's check (copying-correction-verification/, Lean 4.29.1: 27 new theorems, 45 new audits, 529 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. Two original papers are read at the recorded scope with key-page inspection, with no new empirical reanalysis.",
++    "zh": "核心 Copying、Courses：4.29.1 合并检查器（becoming-checks/），公理报告为空。外围 CopyingCorrection：目录检查（copying-correction-verification/，4.29.1，新定理27、审计45、闭包529）；CopyingInstances：实例检查（copying-instances-checks/，4.29.1）；至多 propext、Quot.sound、Classical.choice。两份原论文按记录范围读并查关键页，无新复算。"
++  },
++  "next_delta": {
++    "en": "Explain how a reference is acquired and renewed together with this editing relation: how a shared wrong source is told apart, how the guiding relation changes, and how support for actual editing is kept.",
++    "zh": "说明参考怎样与本编辑关系一起取得与更新：怎样辨别共同错误来源、所依据的关系怎样改变、实施编辑所需的支持怎样保持。"
++  },
+   "correspondence": {
+@@ -47,4 +171,4 @@
+         "output": {
+-          "zh": "AAAB 产物、剩余 B、四个已成连接及自初始预算累计的消耗。",
+-          "en": "The AAAB product, residual B, four formed contacts and expenditure accumulated from the entrance budget."
++          "zh": "AAAB 产物、剩余 B、四个已成连接及自入口支持起累计的所取。",
++          "en": "The AAAB product, residual B, four formed contacts and the draws accumulated from the entrance support."
+         },
+@@ -55,4 +179,4 @@
+         "conditions": {
+-          "zh": "入口预算明确为13、14或15；未在失败后补入支持。替换规律新增，随后复制另需其准确读取和供给。",
+-          "en": "Entrance budgets are explicitly 13, 14 or 15; support is not added after failure. Exchange is an added law, and subsequent copying separately requires accurate reading and supply."
++          "zh": "入口支持明确为13、14或15；未在失败后补入支持。替换规律新增，随后复制另需其准确读取和供给。",
++          "en": "Entrance support is explicitly 13, 14 or 15; support is not added after failure. Exchange is an added law, and subsequent copying separately requires accurate reading and supply."
+         },
+@@ -63,19 +187,2 @@
+   "related": [],
+-  "counterexamples": [
+-    {
+-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingCorrection.lean",
+-      "detail": {
+-        "zh": "共同错误来源可掩盖错误或损坏正确产物；预算13时检查耗尽编辑／释放支持，14时纠正完成但不能释放。",
+-        "en": "A shared wrong source can conceal error or damage correct output; budget 13 exhausts editing/release support, while 14 corrects without releasing."
+-      }
+-    }
+-  ],
+-  "limitations": {
+-    "zh": "未导出参考选择、故障定位、比较／替换微观规律、自动修复计划、自供、误差率或种群优势；编码与动力学校对及同机制传统模型保有可比地位。",
+-    "en": "Reference selection, fault localization, microscopic comparison/exchange, autonomous repair planning, renewal, error rates and population advantage are not derived; coding, kinetic proofreading and equivalent conventional mechanisms keep comparable standing."
+-  },
+-  "validation_scope": {
+-    "zh": "27项新定理声明／45项新审计，529项实际闭包中484项继承分列；两份原始论文按记录范围阅读并检查关键页，无新经验复算。一般律已由检查器回执绑定。",
+-    "en": "27 new theorem declarations / 45 new audits, with 484 inherited declarations separate in 529 actual-closure audits. Two original papers are read at the recorded scope with key-page inspection, without new empirical reanalysis. General laws: checker receipts bound."
+-  },
+   "references": [
+@@ -93,3 +200,5 @@
+         "CopyingCorrection.wrong_reference_damages_correct_product",
+-        "CopyingCorrection.corrected_daughter_enters_inheritance"
++        "CopyingCorrection.corrected_daughter_enters_inheritance",
++        "CopyingCorrection.checking_can_exhaust_editing_support",
++        "CopyingCorrection.corrected_product_can_remain_unreleased"
+       ]
+@@ -244,2 +353,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json",
++      "role": "receipt",
++      "sha256": "1714d686be952c87cf3753951a201e5755d18b2d3a3762dc816abd2d7ef9813f",
++      "declarations": []
+     }
+@@ -263,3 +378,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json",
+       "sha256_pointer": "/source_sha256/CopyingInstances",
+@@ -276,6 +391,2 @@
+   ],
+-  "next_delta": {
+-    "zh": "把已有参考取得／更新机制接到本编辑关系，说明如何辨别共同错误来源、改变所依据的关系，并保持实施编辑所需支持。",
+-    "en": "Compose existing reference-acquisition/renewal mechanisms with this editing relation, explaining discrimination of a shared wrong source, change of the guiding relationship and retained support for actual editing."
+-  },
+   "history": [
+@@ -318,2 +429,24 @@
+       "zh": "2026-10-20：20 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/3bdc007e6cdaa860/formed-copying-correction.json 和 git 中。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the home section, with faithfulness as the Lean defines it (agreement where both the reference and the template have a token); the claim split into 8 laws, each read against its declarations in Becoming.Copying and Becoming.Courses (core) and CopyingCorrection and CopyingInstances (periphery), with the conditions the Lean takes written in (decidable equality, the draws ci and ce, a token other than the reference's, unit draws in the machine); checking_can_exhaust_editing_support and corrected_product_can_remain_unreleased, which witness the counterexample, added to CopyingCorrection's references (its receipt binds them, with propext only); the limitations and the second clause of the second hypothesis, a non-implication, became three does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and formal-not-empirical and one added hypothesis; \"budget\" became \"support\" in the counterexample and the dependency's interface, the meaning unchanged; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [formed-copying-correction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/formed-copying-correction.md); the exact earlier record is the first text_versions entry.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主章写出陈述，忠实按 Lean 的定义写（参考与模板都有记号处一致）；主张拆为 8 条规律，各条对照 Becoming.Copying、Becoming.Courses（核心）与 CopyingCorrection、CopyingInstances（外围）中的声明核读，Lean 所取的条件都写入（可判定相等、所取 ci 与 ce、与参考不同的记号、机器中的单位汲取）；见证反例的 checking_can_exhaust_editing_support 与 corrected_product_can_remain_unreleased 加入 CopyingCorrection 的引用（其回执绑定它们，只用 propext）；限制与第二条前提的后一分句（一条“未表明”）改为三条“未表明”，并引用通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、formal-not-empirical，加一条前提；反例与依赖接口中的“预算”改为“支持”，意义不变；前提内容、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [formed-copying-correction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/formed-copying-correction.md)；迁移前的完整记录为 text_versions 首项。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/97a4210950a10125/formed-copying-correction.json",
++      "sha256": "97a4210950a10125abc02ec0ddffc81602aa6550575ad0899f185594f03a09a9",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/3bdc007e6cdaa860/formed-copying-correction.json",
++      "sha256": "3bdc007e6cdaa86053c3ba01fc91e1c54012bb8fd15459cfc17211fcb7c405d1",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
+     }
