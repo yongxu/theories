@@ -116,7 +116,7 @@ EL2's regime of a draw on a condition given nothing does not apply: its draws do
 
 ## 8. What the Lean proves
 
-`Becoming.ReaderRebuilding` ([scratch](scratch/Becoming/ReaderRebuilding.lean)): 32 theorems in 48 declarations, every axiom report empty ([build.log](build.log)). It models four members, the given reader (c), the reader rebuilt from the supply (c′), the one never rebuilt (c″) and the one rebuilt from the level (d). The supply is a choice at every step, so every sequence of on and off is a course.
+`Becoming.ReaderRebuilding` (built in scratch, now [in the package](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean)): 32 theorems in 48 declarations, every axiom report empty ([build.log](build.log)). It models four members, the given reader (c), the reader rebuilt from the supply (c′), the one never rebuilt (c″) and the one rebuilt from the level (d). The supply is a choice at every step, so every sequence of on and off is a course.
 
 - **L0, proved in general.** In (d), at `n ≥ 1` and `m ≥ 1`, a present reader is present after a supplied step from every level, and its region is closed under the supplied step. With the supply on, the level before the step plays no part. So a window tests nothing in this rule, and the window theorem of the scratch's first build is folded into L0.
 - **L1, a lower bound that grows with the stock.** In (d), under a cut, the reader is present after `k + 1` steps from every level of at least `2 (k + 1)`, whatever it was at the start, an empty reader included, since the rule's rebuild makes a unit from the level. (c′) and (c″), from `n` new units, are gone after `s` steps of cut from every level.

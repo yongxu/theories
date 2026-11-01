@@ -30,12 +30,12 @@ The link definition beside 04's others:
 
 ## 2. 01, Bases, the Test systems bullet
 
-Replace "Open: a vortex; an institution's identity through replaced people, rules and purposes; self-maintenance and adaptive regulation, and an organism that ends;" with "A reader rebuilt from the level it reads models self-maintenance and an organism that ends: its stock buys it time under a cut, and its end does not come back ([04 §8](04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)). Open: a vortex; an institution's identity through replaced people, rules and purposes; adaptive regulation;". Then the zh edition of the same bullet, if 01 has one, likewise.
+Replace "Open: a vortex; an institution's identity through replaced people, rules and purposes; self-maintenance and adaptive regulation, and an organism that ends;" with "A reader rebuilt from the level it reads models self-maintenance and an organism that ends: its stock buys it time under a cut, and its end does not come back (04 §8`(04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)`). Open: a vortex; an institution's identity through replaced people, rules and purposes; adaptive regulation;". Then the zh edition of the same bullet, if 01 has one, likewise.
 
 ## 3. The one page, "What is not yet done", last bullet
 
-- **.md:** "An organism and an institution have no model yet, and several theses' tests are still to run." becomes "An institution has no model yet, an organism one minimal model ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)), and several theses' tests are still to run." (four words more; a longer first cut cost twelve, over a page already 56 over its budget)
-- **.zh.md:** the same bullet: "一个制度尚无模型，一个有机体有一个最小模型（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)），若干论题的检验还待进行。", keeping the bullet's other words.
+- **.md:** "An organism and an institution have no model yet, and several theses' tests are still to run." becomes "An institution has no model yet, an organism one minimal model (04 §8`(chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)`), and several theses' tests are still to run." (four words more; a longer first cut cost twelve, over a page already 56 over its budget)
+- **.zh.md:** the same bullet: "一个制度尚无模型，一个有机体有一个最小模型（04 §8`(chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)`），若干论题的检验还待进行。", keeping the bullet's other words.
 - **Recount:** done on the branch by the kit's measure_layers.py: 1,155 words (60 over), Chinese 1,944 characters; READING-BUDGETS' row written from it. Recount at the landing if the page changed on main.
 
 ## 4. WHAT-REMAINS, "After the gate"
