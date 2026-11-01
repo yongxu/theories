@@ -2,6 +2,10 @@
 
 Apply each to the sentence as it stands on the landing's main, re-reading it first. Run the mechanical parts at the landing too: 08's counts, the root module's bullet, the checker's core list and scope, both package READMEs, regions.json, and the study's section.
 
+## 0. Carried for ND: the checker's scope text
+
+ND's `proposed-checker-scope.patch` (its path comes from ND's owner) takes check_becoming.py's scope text from "master law" to ND's names, twice. It rides OG's core landing because the scope is written into each core receipt, and OG edits check_becoming.py's core list anyway. Read its hunks as OG's own before the rehearsal, and apply it before adding `Becoming.ReaderRebuilding` to the core list. After ND's renames land, the kit calls `shared_laws.py` and `shared-laws.json`, not the old names.
+
 ## 1. 04 §8, after the paragraph on where an organizing pool came from
 
 ```
