@@ -672,7 +672,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
       "role": "proof",
-      "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
+      "sha256": "caa8f852c555caa3bf9cbe09b4bc008ae6e3c576f2fe0884e8ca276b078d4aa8",
       "declarations": [
         "Becoming.Covers",
         "Becoming.Covers.not_not_coming_from"
@@ -884,6 +884,12 @@
       "declarations": [
         "Becoming.«所覆后亡屡则生未否»"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -938,7 +944,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Locality",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -959,7 +965,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/U4D_RECEIPT/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1053,8 +1059,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的退役标签 G0 改为生生之意义，“作者的读法”改为“读法（AI 的）”；Ren 的引语原样保留，定律不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering law law 18 goes through (Covers.not_not_coming_from) is re-proved as the root's covering law at a relatum's occurrences, statement unchanged; law 18 names the route and its declarations gain the root law. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 18 条所经之覆盖之律（Covers.not_not_coming_from）重证为根上覆盖之律取一关系项之出现，陈述不变；第 18 条指明路径，其声明增根律。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
+      "en": "1 November 2026, U4d (study section 498): the covering law law 18 goes through (Covers.not_not_coming_from) is re-proved as the root's covering law at a relatum's occurrences, statement unchanged; law 18 names the route and its declarations gain the root law. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：第 18 条所经之覆盖之律（Covers.not_not_coming_from）重证为根上覆盖之律取一关系项之出现，陈述不变；第 18 条指明路径，其声明增根律。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
     }
   ],
   "text_versions": [

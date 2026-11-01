@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T151111.914612Z",
- "core_sources_sha256": "6ae02f2d29a9278d04dfb1239ec61d1cec30e07256b3c615bb367fc90ef6d325",
+ "core_receipt": "20261101T161537.177111Z",
+ "core_sources_sha256": "bc73e3d3aac60c371038c5643cb94fbdd19a1efc692c85ab85562e95f9088ae3",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4097,
+  "laws": 4099,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 865,
-  "balance, represented": 634,
-  "anchor, not reached": 135,
-  "no shared law": 2063,
+  "grammar": 883,
+  "balance, represented": 628,
+  "anchor, not reached": 131,
+  "no shared law": 2057,
   "vocabulary_only": 79,
-  "closure": 494,
-  "balance": 840,
+  "closure": 528,
+  "balance": 836,
   "return": 253,
   "lumping": 84,
   "order": 85
@@ -6487,6 +6487,7 @@
      "Becoming.Listed.coming_iff_ceasing"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6500,6 +6501,7 @@
      "Becoming.Web.unceasing_iff_bounded"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6512,6 +6514,7 @@
      "Becoming.World.CountedWithin.arising_iff_ceasing"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6540,6 +6543,7 @@
      "Becoming.World.accretion_unbounded"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6552,6 +6556,7 @@
      "Becoming.World.CountedBy.arising_iff_ceasing"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6588,6 +6593,7 @@
      "Becoming.Web.DependenceCensus.forming_iff_dissolving"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -7099,7 +7105,9 @@
      "Becoming.Listed",
      "Becoming.Listed.coming_of_ceasing"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar",
     "central": [
@@ -7107,7 +7115,9 @@
       "declaration": "Becoming.Listed.coming_of_ceasing",
       "category": "shared law",
       "dependence": "grammar",
-      "shared_laws": []
+      "shared_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -7119,9 +7129,12 @@
      "Becoming.ceasesToBe_iff_wang_along",
      "Becoming.Steps.along_fixed",
      "Becoming.listedOccurrences",
-     "Becoming.gaining_of_losing_from"
+     "Becoming.«所覆后亡屡则有生»",
+     "Becoming.«间无生则间亡不过所覆»"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -7134,7 +7147,7 @@
      "Becoming.World.arising_of_ceasing"
     ],
     "shared_laws": [
-     "balance"
+     "closure"
     ],
     "grammar": true,
     "dependence": "grammar",
@@ -7143,7 +7156,9 @@
       "declaration": "Becoming.Listed.coming_of_ceasing",
       "category": "shared law",
       "dependence": "grammar",
-      "shared_laws": []
+      "shared_laws": [
+       "closure"
+      ]
      }
     ]
    },
@@ -7156,7 +7171,7 @@
      "Becoming.Web.DependenceCensus.forming_of_dissolving"
     ],
     "shared_laws": [
-     "balance"
+     "closure"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -7170,10 +7185,11 @@
      "Becoming.World.census_one_way"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -7182,19 +7198,21 @@
      "Becoming.Listed.covered"
     ],
     "shared_laws": [
-     "balance"
+     "closure"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
     "declarations": [
      "Becoming.Covers.ceasing_not_recurring"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "census-balance-under-continuation": [
@@ -7240,9 +7258,15 @@
      "Becoming.Web.Census.balanceFrom_at",
      "Becoming.«定后则后并亡不过前并生»",
      "Becoming.«定前则前并生不过后并亡»",
-     "Becoming.total_mark_eq_count"
+     "Becoming.total_mark_eq_count",
+     "Becoming.«所覆后亡屡则生未否»",
+     "Becoming.«有界覆而生屡则亡不止»",
+     "Becoming.«有覆而亡屡则生屡»",
+     "Becoming.«有界覆而生屡则亡屡»"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -7265,7 +7289,9 @@
      "Becoming.Web.Census.arisingFrom_of_ceasingFrom",
      "Becoming.Web.Census.ceasingFrom_of_arisingFrom"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -7300,7 +7326,9 @@
      "Becoming.Web.Census.arisingFrom_of_ceasingFrom_from",
      "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -7321,7 +7349,21 @@
     "declarations": [
      "Becoming.Web.ceasingFrom_not_stopping_covered"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.Web.arisingFrom_of_ceasingFrom_covered",
+     "Becoming.Web.ceasingFrom_of_arisingFrom_covered"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -11948,7 +11990,8 @@
     "law": 7,
     "declarations": [
      "Becoming.Covers.not_not_coming_from",
-     "Becoming.World.comes_to_rest_unrefuted_from"
+     "Becoming.World.comes_to_rest_unrefuted_from",
+     "Becoming.«所覆后亡屡则生未否»"
     ],
     "shared_laws": [
      "closure",
@@ -11965,10 +12008,11 @@
      "Becoming.World.rest_needs_census"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 9,
@@ -24769,6 +24813,7 @@
      "Becoming.Sleeper.held_readings"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -26967,23 +27012,27 @@
     "law": 13,
     "declarations": [
      "Becoming.coming_of_ceasing_covered",
-     "Becoming.Listed.covered"
+     "Becoming.Listed.covered",
+     "Becoming.«所覆后亡屡则有生»"
     ],
     "shared_laws": [
-     "balance"
+     "closure"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 14,
     "declarations": [
      "Becoming.Covers.ceasing_not_recurring",
-     "Becoming.Covers.not_not_coming_from"
+     "Becoming.Covers.not_not_coming_from",
+     "Becoming.«所覆后亡屡则生未否»"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 15,
@@ -28938,7 +28987,9 @@
      "Becoming.Listed.of_listing",
      "Becoming.Web.arising_of_ceasing_listing"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -37866,11 +37917,15 @@
      "Becoming.comes_once",
      "Becoming.ceases_once_of",
      "Becoming.coming_steps_within",
-     "Becoming.ceasing_steps_within"
+     "Becoming.ceasing_steps_within",
+     "Becoming.«间无亡则间生不过所覆»",
+     "Becoming.«间无生则间亡不过所覆»"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -37880,9 +37935,11 @@
      "Becoming.Recurs.coming_within",
      "Becoming.Recurs.coming_not_stopping"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -37890,9 +37947,11 @@
      "Becoming.Recurs.ceasing_found",
      "Becoming.Recurs.coming_found"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -37902,10 +37961,11 @@
      "Becoming.Web.unceasing_iff_decided"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -37919,10 +37979,11 @@
      "Becoming.World.CeasingRecurs"
     ],
     "shared_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -37931,9 +37992,11 @@
      "Becoming.World.arising_not_stopping_covered",
      "Becoming.World.arising_iff_ceasing_covered"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "recurrence-without-premise": [
@@ -40620,10 +40683,11 @@
      "Becoming.World.InAmounts.stops_of_reading"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -40677,10 +40741,11 @@
      "Becoming.Amounts.totalOf_single"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -40868,10 +40933,11 @@
      "Becoming.World.InAmounts.rests_unrefuted"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -40899,10 +40965,11 @@
      "Becoming.Pass.levels_unlisted"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "rest-with-refinement-counted": [
@@ -45101,9 +45168,7 @@
      "Becoming.GrammarLaws.census_le_converse",
      "Becoming.«定前则前并生不过后并亡»",
      "Becoming.GrammarLaws.census_count",
-     "Becoming.«定后定前则前并生与后并亡同数»",
-     "Becoming.GrammarLaws.census_run",
-     "Becoming.«定后前者在前则亡屡者生屡»"
+     "Becoming.«定后定前则前并生与后并亡同数»"
     ],
     "shared_laws": [
      "balance"
@@ -45170,6 +45235,11 @@
      "Becoming.«定后于»",
      "Becoming.«定后则定后于»",
      "Becoming.«定后于之后»",
+     "Becoming.«所闭当且仅当有迭»",
+     "Becoming.«分处定后则迭之定于»",
+     "Becoming.GrammarLaws.reorder",
+     "Becoming.«亡者不在长迭»",
+     "Becoming.«定后则线至多一亡»",
      "Becoming.«迭之定于»",
      "Becoming.«迭之定»",
      "Becoming.«迭之定前»"
@@ -45443,6 +45513,44 @@
    },
    {
     "law": 19,
+    "declarations": [
+     "Becoming.«线终不过所列»",
+     "Becoming.GrammarLaws.line_ends_unrefuted",
+     "Becoming.«线亡不过所列»",
+     "Becoming.«线亡不过所列之未否»",
+     "Becoming.«线生不过所列»",
+     "Becoming.«线生不过所列之未否»",
+     "Becoming.GrammarLaws.stage_steps",
+     "Becoming.GrammarLaws.fixed_of_noSplit",
+     "Becoming.GrammarLaws.found_cons",
+     "Becoming.GrammarLaws.found",
+     "Becoming.GrammarLaws.found_unrefuted",
+     "Becoming.GrammarLaws.found_or_all",
+     "Becoming.GrammarLaws.trace",
+     "Becoming.GrammarLaws.trace_unrefuted",
+     "Becoming.«间无生则间亡不过所覆»",
+     "Becoming.«所覆后亡屡则有生»",
+     "Becoming.«有覆而亡屡则生屡»",
+     "Becoming.«所覆后亡屡则生未否»",
+     "Becoming.«有覆而亡屡则生不止»",
+     "Becoming.GrammarLaws.onward_within",
+     "Becoming.«间无亡则间生不过所覆»",
+     "Becoming.«有界覆而生屡则亡不止»",
+     "Becoming.GrammarLaws.trace_on",
+     "Becoming.«有界覆而生屡则亡屡»",
+     "Becoming.GrammarLaws.pair_eq",
+     "Becoming.GrammarLaws.stage_search",
+     "Becoming.GrammarLaws.census_run",
+     "Becoming.«定后前者在前则亡屡者生屡»"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 20,
     "declarations": [
      "Becoming.Amounts.rests_unrefuted",
      "Becoming.Branching.Lossless.cancel",
@@ -46152,7 +46260,8 @@
      "Becoming.World.arising_unrefuted_covering",
      "Becoming.Covers.not_not_coming_from",
      "Becoming.World.rests_unrefuted_covering",
-     "Becoming.World.rests_unrefuted"
+     "Becoming.World.rests_unrefuted",
+     "Becoming.«所覆后亡屡则生未否»"
     ],
     "shared_laws": [
      "closure",
@@ -63039,7 +63148,8 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md"
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4D.md"
    ],
    "laws": [
     "Becoming.RootForms.GivenTo",
@@ -63207,7 +63317,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "586f3536419c8e66c960efbb9e14274d9b28116c18ef4792284119d0d2db3699",
+   "modules_sha256": "c447910666b17072c39dcf42732c3f74e5cef327a9619b6701394496c791d743",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
@@ -64439,11 +64549,9 @@
        "Becoming.«定后之逐点»"
       ],
       "root_theorems_named": [
-       "Becoming.distinct_map_on",
        "Becoming.mem_cons_cases",
        "Becoming.mem_map_prodMk",
        "Becoming.not_decide_iff",
-       "Becoming.preimage_of_mem_map",
        "Becoming.prodMk_mem_map"
       ],
       "forwarder": null
@@ -65696,7 +65804,9 @@
     "f5": "reaching the grammar",
     "at_model": [],
     "grammar_laws_reached": [
-     "Becoming.«尽则不或屡»"
+     "Becoming.«定后之逐点»",
+     "Becoming.«尽则不或屡»",
+     "Becoming.«所覆后亡屡则生未否»"
     ],
     "balance": {
      "anchor_in_statement": [

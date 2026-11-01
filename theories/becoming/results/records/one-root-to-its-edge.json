@@ -316,13 +316,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md",
       "role": "integration",
-      "sha256": "PENDING",
+      "sha256": "43d1c698228fd79b45413bb951a36e6de323d32063c79703b4c07e6a4b8a8784",
       "declarations": []
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4D.md",
       "role": "review",
-      "sha256": "PENDING",
+      "sha256": "380497dfa83d767b26ef049da8ba03e390e22c411c75b99fd82d611cfa5809c5",
       "declarations": []
     }
   ],
@@ -361,8 +361,8 @@
       "zh": "2026年11月1日，工作板条目 ND（研究第 495 节）：验诸所立之生成程序名 shared_laws.py（原 master_laws.py），其数据名 shared-laws.json；所验与论断不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): the covering laws' root form, the first next step, is done. The covering laws at Locality, Decidedness and Identity and the root's census of a run are cases of one count on the root, ends on lines from a list (shared-laws-on-the-grammar, law 19): U4c's boundary, that the covering laws are not cases of the census, stands, and both are now cases of the count. The census of a run is stronger, two hypotheses dropped; Identity gains the exact forms from covering lists. What reaches the grammar does not change, so the standings and 08 §7's figures are unchanged (the measure rerun on the landing build). The next step drops the covering laws' root form (COVERING-ON-THE-ROOT.md, reviewed in REVIEW-U4D.md, both among the references).",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：覆盖之律之根形，即下一步之首项，已成。Locality、Decidedness 与 Identity 之覆盖之律与根上一程之清点，皆为根上一计之例，即自一列表之线上之终（shared-laws-on-the-grammar 律 19）：U4c 之界，即覆盖之律非清点之例，仍立，而二者今皆为此计之例。一程之清点更强，去二前提；Identity 增覆盖列表之确切形式。达于文法者不变，故诸立与 08 §7 之数不变（落地之构建上重算其度）。下一步去覆盖之律之根形（COVERING-ON-THE-ROOT.md，经 REVIEW-U4D.md 审阅，二者皆在引用中）。"
+      "en": "1 November 2026, U4d (study section 498): the covering laws' root form, the first next step, is done. The covering laws at Locality, Decidedness and Identity and the root's census of a run are cases of one count on the root, ends on lines from a list (shared-laws-on-the-grammar, law 19): U4c's boundary, that the covering laws are not cases of the census, stands, and both are now cases of the count. The census of a run is stronger, two hypotheses dropped; Identity gains the exact forms from covering lists. What reaches the grammar does not change, so the standings and 08 §7's figures are unchanged (the measure rerun on the landing build). The next step drops the covering laws' root form (COVERING-ON-THE-ROOT.md, reviewed in REVIEW-U4D.md, both among the references).",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：覆盖之律之根形，即下一步之首项，已成。Locality、Decidedness 与 Identity 之覆盖之律与根上一程之清点，皆为根上一计之例，即自一列表之线上之终（shared-laws-on-the-grammar 律 19）：U4c 之界，即覆盖之律非清点之例，仍立，而二者今皆为此计之例。一程之清点更强，去二前提；Identity 增覆盖列表之确切形式。达于文法者不变，故诸立与 08 §7 之数不变（落地之构建上重算其度）。下一步去覆盖之律之根形（COVERING-ON-THE-ROOT.md，经 REVIEW-U4D.md 审阅，二者皆在引用中）。"
     }
   ],
   "boundary": {

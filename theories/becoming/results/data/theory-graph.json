@@ -6749,7 +6749,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 192,
+   "theorems": 223,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7266,7 +7266,7 @@
    "type": "module",
    "name": "Becoming.Identity",
    "level": "L1",
-   "theorems": 152,
+   "theorems": 162,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7332,10 +7332,10 @@
    "type": "module",
    "name": "Becoming.Locality",
    "level": "L1",
-   "theorems": 44,
+   "theorems": 47,
    "region": "method",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7541,10 +7541,10 @@
    "type": "module",
    "name": "Becoming.Decidedness",
    "level": "L1",
-   "theorems": 70,
+   "theorems": 74,
    "region": "method",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8927,7 +8927,7 @@
    "type": "module",
    "name": "Becoming.Prelude",
    "level": "L0",
-   "theorems": 141,
+   "theorems": 143,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -40114,6 +40114,11 @@
   },
   {
    "from": "record:continued-change-needs-openness",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continued-change-needs-openness",
    "to": "module:Becoming.InAmounts",
    "type": "proved-in"
   },
@@ -45169,6 +45174,11 @@
   },
   {
    "from": "record:laws-of-one-step",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:laws-of-one-step",
    "to": "module:Becoming.Locality",
    "type": "proved-in"
   },
@@ -49769,6 +49779,11 @@
   },
   {
    "from": "record:recurrence-without-decidedness",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:recurrence-without-decidedness",
    "to": "module:Becoming.InAmounts",
    "type": "proved-in"
   },
@@ -52975,6 +52990,11 @@
   {
    "from": "record:space-and-its-parts",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:space-and-its-parts",
+   "to": "module:Becoming.GrammarLaws",
    "type": "proved-in"
   },
   {

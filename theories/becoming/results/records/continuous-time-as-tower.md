@@ -87,6 +87,7 @@ Continuous time is built in the core as a tower of ever-finer discrete readings,
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 
 Aliases: `Becoming.Tower`, `Becoming.Tower.reads`, `Becoming.Tower.web_zero`, `Becoming.Tower.balances_coarser`, `Becoming.Tower.dissipative_coarser`, `Becoming.Tower.changes_within`
 

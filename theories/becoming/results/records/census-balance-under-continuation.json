@@ -369,7 +369,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a",
+      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65",
       "declarations": [
         "Becoming.Web.Continues",
         "Becoming.Web.ArisesFrom",
@@ -418,7 +418,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
+      "sha256": "c64c39ac2e8d46be6599dbeab7c4f947892d7e2aeadfc305d0a84966e09f740c",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.decideSome",
@@ -429,7 +429,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
       "declarations": [
         "Becoming.Distinct",
         "Becoming.le_over_stretch",
@@ -465,7 +465,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
       "declarations": [
         "Becoming.«定后则后并亡不过前并生»",
         "Becoming.«定前则前并生不过后并亡»",
@@ -605,21 +605,27 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md",
       "role": "integration",
-      "sha256": "PENDING",
+      "sha256": "43d1c698228fd79b45413bb951a36e6de323d32063c79703b4c07e6a4b8a8784",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -640,14 +646,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -749,8 +755,8 @@
       "zh": "2026年11月1日，U4c（研究第 492 节）：Web.Census.balanceFrom_at 改经根上一步的清点证明，判定延续的实例从 Identity 的 Counting 一节的八条普查律中去掉，它们都不用它；第 4 条按新路径重述，第 10、11 条留在其原路径，第 3 条、第二条假设、01 §9.5 的本行与同一性依赖之条件不再说延续可判定；根上之清点入依赖，第 4 条复用其两半；关于 not_not_all 之相关说明名序章。普查平衡之依赖名今所复用之计数（total_mark_eq_count、跨段形之不等式），此处已无律所用之声明离开 Population 与 Flow 之引用（mark_add_not、marks_le_of_sub、mark_le_total、total_le_mark、total_swap、total_le）。各陈述不变或更一般。声明以完整名称移动：gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): a new law 12 states the exact forms from covering lists (Web.arisingFrom_of_ceasingFrom_covered, Web.ceasingFrom_of_arisingFrom_covered), the root's «有覆而亡屡则生屡» and «有界覆而生屡则亡屡» at the formations' occurrences, with the decision each needs read as a reduction (the study's scratch witness); the census recurrence laws (laws 6 and 9) are re-proved as their cases, statements unchanged, their decisions written as binders, and the covering laws (laws 10 and 11) through the root's covering laws instead of by lineages, statements unchanged. Law 4 restated for the routes, law 6 no longer read as following from law 5, and the dependency on census-balance no longer naming the stretch inequalities as a route (gaining_of_losing_from and losing_of_gaining_from now have no use in the package); the Next drops the exact forms and the converse from covering lists, now closed, and names the decisions the census laws keep unused; the related note on laws-of-one-step says both covering forms are cases of one root law. Identity's helpers with no consumer left leave the Identity reference (Lineage.ends, ceasingFrom_found, arisingFrom_found, lineages_apart); the exact forms join it, and the design joins the references (COVERING-ON-THE-ROOT.md).",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述，第 6 条不再读作由第 5 条而来，对 census-balance 之依赖不再以跨段不等式为路径（gaining_of_losing_from 与 losing_of_gaining_from 今在包中无用）；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
+      "en": "1 November 2026, U4d (study section 498): a new law 12 states the exact forms from covering lists (Web.arisingFrom_of_ceasingFrom_covered, Web.ceasingFrom_of_arisingFrom_covered), the root's «有覆而亡屡则生屡» and «有界覆而生屡则亡屡» at the formations' occurrences, with the decision each needs read as a reduction (the study's scratch witness); the census recurrence laws (laws 6 and 9) are re-proved as their cases, statements unchanged, their decisions written as binders, and the covering laws (laws 10 and 11) through the root's covering laws instead of by lineages, statements unchanged. Law 4 restated for the routes, law 6 no longer read as following from law 5, and the dependency on census-balance no longer naming the stretch inequalities as a route (gaining_of_losing_from and losing_of_gaining_from now have no use in the package); the Next drops the exact forms and the converse from covering lists, now closed, and names the decisions the census laws keep unused; the related note on laws-of-one-step says both covering forms are cases of one root law. Identity's helpers with no consumer left leave the Identity reference (Lineage.ends, ceasingFrom_found, arisingFrom_found, lineages_apart); the exact forms join it, and the design joins the references (COVERING-ON-THE-ROOT.md).",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述，第 6 条不再读作由第 5 条而来，对 census-balance 之依赖不再以跨段不等式为路径（gaining_of_losing_from 与 losing_of_gaining_from 今在包中无用）；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
     }
   ],
   "text_versions": [

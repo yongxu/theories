@@ -234,7 +234,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d",
+      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca",
       "declarations": [
         "Becoming.holds_on",
         "Becoming.comes_once",
@@ -435,12 +435,18 @@
         "Becoming.«间无亡则间生不过所覆»",
         "Becoming.«间无生则间亡不过所覆»"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Decidedness",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -475,7 +481,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/U4D_RECEIPT/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -567,8 +573,8 @@
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为七条规律，各条对照 Decidedness.lean、Change.lean 与 Space.lean 中的声明核读（持续与复现的事件、至多开始一次、不终止的形式、找到一步的形式、已定的家族与网、有限世界、覆盖列表），其末句即通用边界 no-ethical-premise；限制改为一条“未表明”、承载可判定性之需的反例（不变）、对应说明，以及通用边界 discrete-steps（即前提“离散的步”）与 decidability；对应说明中提议的归属与交托措辞改述为来源与 AI 的读法；前提的内容、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [recurrence-without-decidedness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-decidedness.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): law 2's counts (coming_steps_within, ceasing_steps_within) are re-proved as the root's stretch form and its mirror at the family's occurrences, statements unchanged; law 2 names the route, its counts no longer read as following from coming at most once (comes_once and ceases_once_of stand as laws of their own), and its declarations gain the two root laws. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 2 条之计数（coming_steps_within、ceasing_steps_within）重证为根上之段之形及其镜像取家族之出现，陈述不变；第 2 条指明路径，其计数不再读作由至多一次之生而来（comes_once 与 ceases_once_of 自为其律），其声明增二根律。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
+      "en": "1 November 2026, U4d (study section 498): law 2's counts (coming_steps_within, ceasing_steps_within) are re-proved as the root's stretch form and its mirror at the family's occurrences, statements unchanged; law 2 names the route, its counts no longer read as following from coming at most once (comes_once and ceases_once_of stand as laws of their own), and its declarations gain the two root laws. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：第 2 条之计数（coming_steps_within、ceasing_steps_within）重证为根上之段之形及其镜像取家族之出现，陈述不变；第 2 条指明路径，其计数不再读作由至多一次之生而来（comes_once 与 ceases_once_of 自为其律），其声明增二根律。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
     }
   ],
   "text_versions": [

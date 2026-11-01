@@ -120,6 +120,7 @@ Ren on 10 October 2026: “the seeking system got locked in, what they are pursu
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 
 Aliases: `Becoming.Law.rests_iff`, `Becoming.more_needs_open`, `Becoming.aboveAll_unique`, `Becoming.Law.aboveAll_never_rests`, `Becoming.Flow.more_needs_unrun`, `Becoming.Flow.more_exhausted`, `无明`, `boundary condition for 无明`, `够`, `enough`, `seeking`, `寻求`, `Becoming.SeekingRuns.rests_iff`, `Becoming.SeekingRuns.more_never_rests`, `Becoming.SeekingRuns.aboveAll_never_rests`, `Becoming.SeekingRuns.aboveAll_not_two`, `寻求在何处静止：“比现在更多”从不静止，“高于一切他者”不对两者静止`
 
