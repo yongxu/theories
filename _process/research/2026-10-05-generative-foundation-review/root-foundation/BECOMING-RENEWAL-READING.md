@@ -24126,4 +24126,7 @@ Boundary:
     and the generator's name follow here).
   - After this stage a live text names a master law only as an alias, a former id, an old anchor, in history, in
     the checker's scope until that landing, or on AJ4's map until its owner's edit.
+  - Added after the landing: 01 §7's home anchor r-shared-laws-on-the-grammar, beside the old one (every renamed
+    record's home anchor is at its id, and rename-id leaves anchors alone); 01's and 08's links read the new one,
+    the old anchor kept for links from history and branches.
 ```

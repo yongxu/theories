@@ -28084,6 +28084,12 @@
    "anchor": "r-a-regularity-kept-and-changed"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-shared-laws-on-the-grammar",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-shared-laws-on-the-grammar"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-master-laws-on-the-grammar",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -59462,6 +59468,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-separation-loses-the-relation",
    "to": "record:separation-loses-the-relation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-shared-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "states"
   },
   {
