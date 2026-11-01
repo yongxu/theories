@@ -465,11 +465,11 @@ Lever 1 (a) asked for the locality law restated with «所闭», a grammar-wide 
 - **The region form** (BD3, `07c945c41`, study §487, core receipt `20261031T225858.600119Z`). On the grammar, adjacency among the listed relata is symmetric. A family the relation closes, membership a test, is exactly a region not gone out of along that adjacency (`«不出»`), not come into, and closed under it.
 - **The «所闭» form** (BD4, `440fa6979`, study §493, core receipt `20261101T105110.951913Z`).
   - With equality decided, each relatum's closure under the listed adjacency is decided by a test, and it is the least family the relation closes that holds the relatum.
-  - Transfers along the relation that balance a step exist exactly where the total is conserved on each listed relatum's closure.
-  - At the unit grain, the levels read as units pair one to one under the closure: a case of `«类之对当且仅当类类等数»`, and the closure-local reading of `Flow.balances_iff_units`.
-  - 01 §9.9's reading of boundaries now carries it: amounts keep to the boundaries the relation crosses neither way, and a closure one way does not keep them.
-- **Where it sits.** The law stays in its leaf. GrammarLaws needs nothing from it, and the leaf states it on the grammar's `«不出»` and `«所闭»`. Three of BD4's lemmas ride the next near-full rebuild of GrammarLaws: the counting lemmas, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
-- **What it does not change.** Balance is localized to closures, not derived, so U1's verdict and lever 1's round trip stand: amounts remain the root's second sort, with their interface in `Becoming.UnitMatchings`. No central declaration is BD3's or BD4's, so 08 §7's figures are unchanged, and no gate item moves.
+  - Relata listed without repetition and equality decided, transfers along the relation that balance a step exist exactly where the total is conserved on each listed relatum's closure.
+  - At the unit grain, the same transfers exist exactly where the levels, read as units on their relata, pair one to one, before with after, under the closure. Such a pairing is the count kept on each closure, a case of `«类之对当且仅当类类等数»`, and the join is the closure-local reading of `Flow.balances_iff_units`.
+  - 01 §9.9's reading of boundaries now carries it: amounts keep to the boundaries the relation crosses neither way, and balance is kept on the closures of the relation read both ways; a region closed under the relation one way only need not keep the count (`«对而单闭域不守数之例»`).
+- **Where it sits.** The law stays in its leaf. GrammarLaws needs nothing from it, and the leaf states it on the grammar's `«不出»` and `«所闭»`. Three pieces of BD4 ride the next near-full rebuild of GrammarLaws: the counting lemmas of `«计»`, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
+- **What it does not change.** Balance is localized to closures, not derived, so U1's verdict stands and lever 1's round trip still fails its second test: amounts remain the root's second sort, with their interface in `Becoming.UnitMatchings`. No central declaration is BD3's or BD4's, so 08 §7's figures are unchanged, and no gate item moves.
 
 ## What this note does not do
 
