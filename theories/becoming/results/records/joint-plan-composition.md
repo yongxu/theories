@@ -82,6 +82,7 @@ Actual joint effects must remain covered by local laws; every subsequent observa
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 
 Aliases: `JointContinuation.joint_plan_composition`, `Becoming.Viability.Plan.zip_keeps`, `Becoming.Viability.Plan.compatible_of_zip_keeps`
 

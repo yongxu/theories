@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
+  "reviewed_at_utc": "2026-11-01T08:49:20+00:00",
   "statement": {
     "en": "For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.",
     "zh": "对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。"
   },
   "laws": [
     {
-      "en": "For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
-      "zh": "对每个过程与守卫：生存核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
+      "en": "For every process and guard, the invariance kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
+      "zh": "对每个过程与守卫：不变核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
       "declarations": [
         "Becoming.Viability.Kernel",
         "Becoming.Viability.Certificate",
@@ -59,8 +59,8 @@
       ]
     },
     {
-      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard.",
-      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的生存核中。",
+      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the invariance kernel of the essential guard.",
+      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的不变核中。",
       "declarations": [
         "Becoming.MarketInstances.safe_closed",
         "Becoming.MarketInstances.safe_never_fails",
@@ -98,7 +98,7 @@
     },
     {
       "en": "The safe rectangle is one certificate within the kernel; the market's kernel itself, the complete region of nonfailure, is not computed.",
-      "zh": "安全矩形是核之内的一个证书；市场的生存核本身，即完整的不失败区域，没有算出。",
+      "zh": "安全矩形是核之内的一个证书；市场的不变核本身，即完整的不失败区域，没有算出。",
       "kind": "scope",
       "witness": "Becoming.MarketInstances.safe_within_kernel"
     },
@@ -140,7 +140,7 @@
   },
   "next_delta": {
     "en": "Identify actual market parameters and bounds that satisfy the protection certificate, with an actual state in the safe rectangle, or establish the law at another scope, such as entry from unsafe states or the market's whole kernel.",
-    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个生存核。"
+    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个不变核。"
   },
   "correspondence": {
     "zh": "量表示指定市场中的运行关系与支持，必要支持由 essential 指定；其正确性、伦理范围和真实参数另需对应。",
@@ -197,7 +197,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
       "role": "proof",
-      "sha256": "83fa2be908e4412c877f839c4fcf4763e7e2f36349eb0ccfe844d04bcb75556b",
+      "sha256": "ca83c0ad2fdf750d673a39ead5025f609429423b80e3605b6f2f296764ce9c69",
       "declarations": [
         "Becoming.Viability.Kernel",
         "Becoming.Viability.Certificate",
@@ -266,6 +266,12 @@
       "role": "receipt",
       "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
+      "role": "receipt",
+      "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -278,7 +284,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Viability",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -326,6 +332,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 7 laws, each read against its declarations in Becoming.Viability, MarketInstances and MarketGenerativity, with every condition the Lean takes written in (one admissible disturbance given, a decided guard for guarded histories, the protection certificate); the example certificate, already referenced, has its own law; the limitations became four does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two hypotheses stating the core laws' conditions and the rational quantities; the evidence paragraph names the checkers and receipt folders, the next step is stated positively; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the next step, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 7 条规律，各条对照其在 Becoming.Viability、MarketInstances 与 MarketGenerativity 中的声明核读，Lean 所取的每个条件都写入（给定一个可容许扰动、受守卫历史要求守卫可判定、保护证书）；已引用的数值例证书单列一条规律；限制改为四条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，以及说明核心规律条件与有理数量的两条前提；证据段写明检查器与回执目录，下一步以正面陈述；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、下一步，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "1 November 2026: \"viability kernel\" corrected to \"invariance kernel\" in laws 1 and 6, the scope and the next step: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).",
+      "zh": "2026年11月1日：「生存核」更正为「不变核」：Viability.Kernel 成立于每一进程皆留在守卫之内处，即 Aubin 之不变核；生存核只要求某一进程留于其中（于确定之律二者重合）。此为名称所陈之义有误；法、声明与范围皆未改（随 SJ 之落地，其重证该核之律）。"
     }
   ],
   "text_versions": [
@@ -343,6 +353,14 @@
       "note": {
         "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    },
+    {
+      "path": "_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json",
+      "sha256": "bd4e6e9a1ccd178e81a6ddf5b35d07cf9093b5e6c790deca6cf311440f1ab2e5",
+      "note": {
+        "en": "Exact record bytes before \"viability kernel\" was corrected to \"invariance kernel\".",
+        "zh": "「生存核」更正为「不变核」之前的记录原始字节。"
       }
     }
   ]

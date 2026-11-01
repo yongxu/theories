@@ -233,7 +233,7 @@
         "Becoming.Viability.Kernel.mono",
         "Becoming.Viability.Kernel.run"
       ],
-      "sha256": "83fa2be908e4412c877f839c4fcf4763e7e2f36349eb0ccfe844d04bcb75556b"
+      "sha256": "ca83c0ad2fdf750d673a39ead5025f609429423b80e3605b6f2f296764ce9c69"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",

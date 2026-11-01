@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it. (`Becoming.Viability.Kernel`, `Becoming.Viability.Certificate`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.kernel_largest`, `Becoming.Viability.kernel_step_iff`)
+1. For every process and guard, the invariance kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it. (`Becoming.Viability.Kernel`, `Becoming.Viability.Certificate`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.kernel_largest`, `Becoming.Viability.kernel_step_iff`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. For a law of change driven by disturbances with an admissibility condition, given one admissible disturbance, no history driven by admissible disturbances ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance. (`Becoming.Viability.never_leaves_iff_certificate`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
@@ -20,7 +20,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In the market model, for every parameter set, bound set and start, the market's history and guarded history are the core's, with the essential floors as guard, and the worst disturbance a bound admits is admissible; so no admissible guarded history fails the essential floors exactly when some set of states containing the start lies within them and is closed under every admissible disturbance. (`Becoming.MarketInstances.history_eq`, `Becoming.MarketInstances.guardedHistory_eq`, `Becoming.MarketInstances.worst_admissible`, `Becoming.MarketInstances.never_fails_iff`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
-6. Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard. (`Becoming.MarketInstances.safe_closed`, `Becoming.MarketInstances.safe_never_fails`, `Becoming.MarketInstances.safe_within_kernel`, `MarketGenerativity.safe_history_never_fails`)
+6. Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the invariance kernel of the essential guard. (`Becoming.MarketInstances.safe_closed`, `Becoming.MarketInstances.safe_never_fails`, `Becoming.MarketInstances.safe_within_kernel`, `MarketGenerativity.safe_history_never_fails`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. The model's numerical example, with one essential support of floor 5, satisfies the protection certificate's conditions. (`MarketGenerativity.example_certificate`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
@@ -70,7 +70,7 @@ Quantities represent the specified market relations and supports; essential desi
 - related, not a proved adapter: [market-partial-correction-boundary](market-partial-correction-boundary.md). The new result relaxes the correction parameter; the original scope remains preserved and reusable.
 - related, not a proved adapter: [market-finite-support-obstruction](market-finite-support-obstruction.md). Completed finite-support obstruction preserving this record’s narrower result.
 
-**Used by:** [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-model-share-margin-and-ends](market-model-share-margin-and-ends.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md) · [market-supported-finite-transition](market-supported-finite-transition.md) · [succession-on-a-funded-carrier](succession-on-a-funded-carrier.md)
+**Used by:** [a-response-common-over-a-reading](a-response-common-over-a-reading.md) · [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-model-share-margin-and-ends](market-model-share-margin-and-ends.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md) · [market-supported-finite-transition](market-supported-finite-transition.md) · [succession-on-a-funded-carrier](succession-on-a-funded-carrier.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -89,6 +89,7 @@ Quantities represent the specified market relations and supports; essential desi
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 
 Aliases: `MarketGenerativity.safe_history_never_fails`, `Becoming.Viability.kernel_iff_certificate`, `Becoming.Viability.never_leaves_iff_certificate`, `Becoming.Viability.guarded_never_fails_iff`, `Becoming.MarketInstances.never_fails_iff`, `Becoming.MarketInstances.safe_never_fails`
 
@@ -103,6 +104,7 @@ Aliases: `MarketGenerativity.safe_history_never_fails`, `Becoming.Viability.kern
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).
 - 28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 7 laws, each read against its declarations in Becoming.Viability, MarketInstances and MarketGenerativity, with every condition the Lean takes written in (one admissible disturbance given, a decided guard for guarded histories, the protection certificate); the example certificate, already referenced, has its own law; the limitations became four does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two hypotheses stating the core laws' conditions and the rational quantities; the evidence paragraph names the checkers and receipt folders, the next step is stated positively; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the next step, each read against the Lean it cites.
+- 1 November 2026: "viability kernel" corrected to "invariance kernel" in laws 1 and 6, the scope and the next step: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](market-protected-continuation.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -110,7 +112,8 @@ Aliases: `MarketGenerativity.safe_history_never_fails`, `Becoming.Viability.kern
 
 - [market-protected-continuation.json](../../../../_process/architecture/history/e41907ebbf4c9b9b/market-protected-continuation.json) (sha256 `e41907ebbf4c9b9b…`): Exact record bytes before the migration (schema 1).
 - [market-protected-continuation.json](../../../../_process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json) (sha256 `a67e2a7ff5606344…`): Exact record bytes before its history was compacted (R35); every condensed note is kept here.
+- [market-protected-continuation.json](../../../../_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json) (sha256 `bd4e6e9a1ccd178e…`): Exact record bytes before "viability kernel" was corrected to "invariance kernel".
 
 </details>
 
-Documentary review UTC: `2026-10-28T05:53:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T08:49:20+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

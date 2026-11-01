@@ -1,0 +1,349 @@
+{
+  "schema_version": 2,
+  "id": "market-protected-continuation",
+  "title": {
+    "zh": "市场保护证书下的持续运行",
+    "en": "Continued market operation under a protection certificate"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F06",
+  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
+  "statement": {
+    "en": "For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.",
+    "zh": "对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。"
+  },
+  "laws": [
+    {
+      "en": "For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
+      "zh": "对每个过程与守卫：生存核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
+      "declarations": [
+        "Becoming.Viability.Kernel",
+        "Becoming.Viability.Certificate",
+        "Becoming.Viability.kernel_iff_certificate",
+        "Becoming.Viability.kernel_largest",
+        "Becoming.Viability.kernel_step_iff"
+      ]
+    },
+    {
+      "en": "For a law of change driven by disturbances with an admissibility condition, given one admissible disturbance, no history driven by admissible disturbances ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance.",
+      "zh": "对带可容许条件的扰动所驱动的变化之律，给定一个可容许扰动：由可容许扰动驱动的历史永不离开守卫，恰当有某个含起点的集合在守卫之内，且对每个可容许扰动封闭。",
+      "declarations": [
+        "Becoming.Viability.never_leaves_iff_certificate"
+      ]
+    },
+    {
+      "en": "With the guard decided, the guarded history stops at the first step beginning or ending outside the guard; it agrees with the history at every time exactly when the history stays within the guard, so, given one admissible disturbance, no guarded history driven by admissible disturbances stops exactly when such a closed set contains the start.",
+      "zh": "守卫可判定时，受守卫的历史在第一个始于或终于守卫之外的步停止；它在每个时刻与历史一致，恰当历史留在守卫之内；所以给定一个可容许扰动，由可容许扰动驱动的受守卫历史都不停止，恰当这样的封闭集含起点。",
+      "declarations": [
+        "Becoming.Viability.guarded_iff",
+        "Becoming.Viability.guarded_never_fails_iff"
+      ]
+    },
+    {
+      "en": "Two witnesses: in a two-configuration process the guard holds at a configuration from which one step leaves it, so the guard alone need not be a certificate; and with no admissible disturbance every history condition holds vacuously while no set within an empty guard contains the start, so the given admissible disturbance is needed.",
+      "zh": "两个见证：在两个构型的过程中，守卫在某构型处成立，而一步就离开它，故守卫本身未必是证书；没有可容许扰动时，每个历史条件空真成立，而空守卫之内没有集合含起点，故所给的可容许扰动是需要的。",
+      "declarations": [
+        "Becoming.Viability.Leaves.within_not_kernel",
+        "Becoming.Viability.needs_admissible"
+      ]
+    },
+    {
+      "en": "In the market model, for every parameter set, bound set and start, the market's history and guarded history are the core's, with the essential floors as guard, and the worst disturbance a bound admits is admissible; so no admissible guarded history fails the essential floors exactly when some set of states containing the start lies within them and is closed under every admissible disturbance.",
+      "zh": "在市场模型中，对每组参数、界与起点：市场的历史与受守卫历史就是核心的历史与受守卫历史，以必要底线为守卫；界所容许的最坏扰动是可容许的；所以没有可容许的受守卫历史违反必要底线，恰当有含起点、在底线之内且对每个可容许扰动封闭的状态集。",
+      "declarations": [
+        "Becoming.MarketInstances.history_eq",
+        "Becoming.MarketInstances.guardedHistory_eq",
+        "Becoming.MarketInstances.worst_admissible",
+        "Becoming.MarketInstances.never_fails_iff"
+      ]
+    },
+    {
+      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard.",
+      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的生存核中。",
+      "declarations": [
+        "Becoming.MarketInstances.safe_closed",
+        "Becoming.MarketInstances.safe_never_fails",
+        "Becoming.MarketInstances.safe_within_kernel",
+        "MarketGenerativity.safe_history_never_fails"
+      ]
+    },
+    {
+      "en": "The model's numerical example, with one essential support of floor 5, satisfies the protection certificate's conditions.",
+      "zh": "模型的数值例（一项必要支持，底线为 5）满足保护证书的条件。",
+      "declarations": [
+        "MarketGenerativity.example_certificate"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "Certificate、Safe、Admissible 的全部公开条件，包括选择、责任、影响、资金及各支持底线；不是只检查维护份额。",
+      "en": "All public Certificate, Safe and Admissible conditions, including selection, accountability, influence, funding and every support floor; renewal share alone is insufficient."
+    },
+    {
+      "en": "The core laws: any process and guard; for laws driven by disturbances, one admissible disturbance given, and for guarded histories a decided guard, each written into the laws that use it.",
+      "zh": "核心规律：任意过程与守卫；对扰动驱动之律给定一个可容许扰动，对受守卫历史要求守卫可判定，各自只写在用到它的规律中。"
+    },
+    {
+      "en": "The market model's quantities and parameters are rational numbers, and its histories are indexed by natural times from 0.",
+      "zh": "市场模型的量与参数是有理数，其历史以从 0 起的自然时刻为索引。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "No law gives entry from unsafe states: the certificate says where histories never fail, not how a state outside every certificate comes into one.",
+      "zh": "没有一条规律给出从不安全状态的进入：证书说明历史在何处永不失败，而不说明一切证书之外的状态怎样进入证书。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The safe rectangle is one certificate within the kernel; the market's kernel itself, the complete region of nonfailure, is not computed.",
+      "zh": "安全矩形是核之内的一个证书；市场的生存核本身，即完整的不失败区域，没有算出。",
+      "kind": "scope",
+      "witness": "Becoming.MarketInstances.safe_within_kernel"
+    },
+    {
+      "en": "Apart from the numerical example, no law says that given parameters and bounds satisfy the protection certificate, or that some certificate holds a given start; the protection certificate is a supplied condition.",
+      "zh": "除数值例之外，没有一条规律说给定的参数与界满足保护证书，或说某个证书含给定的起点；保护证书是给定的条件。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Nothing in the model makes actual markets satisfy its laws or comply with its certificate.",
+      "zh": "模型中没有什么使实际市场满足其规律或服从其证书。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
+      "detail": {
+        "zh": "有限支持下低端吸引历史失败，表明一般物理初态不自动满足保护证书；保护范围也不是全体伦理后果。",
+        "en": "Low-attractor histories fail with finite support: a physical initial state does not automatically satisfy the certificate, nor does protection cover every ethical consequence."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
+      "detail": {
+        "zh": "Leaves.within_not_kernel：守卫本身未必是证书；needs_admissible：没有可容许扰动时历史条件空真而律不成立。",
+        "en": "Leaves.within_not_kernel: the guard alone need not be a certificate; needs_admissible: with no admissible disturbance the history condition holds vacuously and the law fails."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1. The core module Becoming.Viability by the consolidated checker (receipts under becoming-checks/), every declaration with an empty axiom report; the periphery MarketInstances by its instance checker (market-instances-checks/) and MarketGenerativity by the finite-transition check (transition-verification.json), reporting only propext, Quot.sound and Classical.choice. The claim comes from the original 39 results; the transition check rebuilt and audited its source without counting it as new.",
+    "zh": "Lean 4.29.1 实查。核心模块 Becoming.Viability 由合并检查器检查（becoming-checks/），公理报告皆空；外围 MarketInstances 由实例检查器（market-instances-checks/）、MarketGenerativity 由有限转变检查（transition-verification.json）检查，只报告 propext、Quot.sound 与 Classical.choice。主张来自原 39 项结果；转变检查重编并审计源码，不计为新结果。"
+  },
+  "next_delta": {
+    "en": "Identify actual market parameters and bounds that satisfy the protection certificate, with an actual state in the safe rectangle, or establish the law at another scope, such as entry from unsafe states or the market's whole kernel.",
+    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个生存核。"
+  },
+  "correspondence": {
+    "zh": "量表示指定市场中的运行关系与支持，必要支持由 essential 指定；其正确性、伦理范围和真实参数另需对应。",
+    "en": "Quantities represent the specified market relations and supports; essential designates necessary supports. Correct mapping, ethical scope and actual parameters remain separate."
+  },
+  "canonical_source": "experiments/market-generativity/formal/MarketGenerativity.lean",
+  "aliases": [
+    "MarketGenerativity.safe_history_never_fails",
+    "Becoming.Viability.kernel_iff_certificate",
+    "Becoming.Viability.never_leaves_iff_certificate",
+    "Becoming.Viability.guarded_never_fails_iff",
+    "Becoming.MarketInstances.never_fails_iff",
+    "Becoming.MarketInstances.safe_never_fails"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "market-partial-correction-boundary",
+      "detail": {
+        "zh": "新增结果放宽纠正参数，原范围继续保留和复用。",
+        "en": "The new result relaxes the correction parameter; the original scope remains preserved and reusable."
+      }
+    },
+    {
+      "id": "market-finite-support-obstruction",
+      "detail": {
+        "zh": "已完成的有限支持阻碍，保留本记录较窄结论。",
+        "en": "Completed finite-support obstruction preserving this record’s narrower result."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/market-generativity/formal/MarketGenerativity.lean",
+      "role": "proof",
+      "sha256": "db7cf7f120e8759aebc1e280e9dc1bbd10b30a6b7004a835015624f85f8d49b1",
+      "declarations": [
+        "MarketGenerativity.safe_history_never_fails",
+        "MarketGenerativity.example_certificate"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/formal/transition-verification.json",
+      "role": "receipt",
+      "sha256": "94eb627cc38494b3347b7c5046e20b1e79bb41d35d6c01342d62241ef513c683",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
+      "role": "integration",
+      "sha256": "75fee116ec006410ab9f97667b32efecbbb795d56b5ef8f0493ea24bb7ed75e0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
+      "role": "proof",
+      "sha256": "83fa2be908e4412c877f839c4fcf4763e7e2f36349eb0ccfe844d04bcb75556b",
+      "declarations": [
+        "Becoming.Viability.Kernel",
+        "Becoming.Viability.Certificate",
+        "Becoming.Viability.kernel_iff_certificate",
+        "Becoming.Viability.kernel_largest",
+        "Becoming.Viability.kernel_step_iff",
+        "Becoming.Viability.never_leaves_iff_certificate",
+        "Becoming.Viability.guarded_iff",
+        "Becoming.Viability.guarded_never_fails_iff",
+        "Becoming.Viability.Leaves.within_not_kernel",
+        "Becoming.Viability.needs_admissible"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/formal/MarketInstances.lean",
+      "role": "proof",
+      "sha256": "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da",
+      "declarations": [
+        "Becoming.MarketInstances.history_eq",
+        "Becoming.MarketInstances.guardedHistory_eq",
+        "Becoming.MarketInstances.worst_admissible",
+        "Becoming.MarketInstances.never_fails_iff",
+        "Becoming.MarketInstances.safe_closed",
+        "Becoming.MarketInstances.safe_never_fails",
+        "Becoming.MarketInstances.safe_within_kernel"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T044840.291323Z/verification.json",
+      "role": "receipt",
+      "sha256": "6d4711df073c8ece68a00ef4097ad5b149adb2ef04c8832a145ef90d02b10e98",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
+      "role": "receipt",
+      "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+      "role": "receipt",
+      "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/formal/MarketGenerativity.lean",
+      "receipt": "experiments/market-generativity/formal/transition-verification.json",
+      "sha256_pointer": "/sources/MarketGenerativity.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Viability",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/formal/MarketInstances.lean",
+      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
+      "sha256_pointer": "/source_sha256/MarketInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "zh": "2026-10-08：随有限转变的正式复用迁移既有成果身份；原源码和历史回执保留。",
+      "en": "2026-10-08: migrated the inherited result identity for formal reuse by finite transition; original source and historical receipts remain."
+    },
+    {
+      "zh": "2026-10-09：核读既有研究§§41–46的LibreOffice形成对应；原定理、条件和回执均保留，新历史评估另记formed-software-continuation，未作数值映射。",
+      "en": "2026-10-09: reconciled study sections 41–46 on LibreOffice formation; original theorem, hypotheses and receipt remain, with the new historical assessment in formed-software-continuation and no numerical mapping."
+    },
+    {
+      "zh": "2026-10-09：核读同一研究§§47–52的API接续与保留依存评估；先前正文原字节前缀保留。此对应未改变本条数学命题、前提或回执，也未提供数量化参数。",
+      "en": "2026-10-09: reconciles sections 47–52 on API continuation and retained dependence; original study/chapter byte prefixes remain. The assessment changes no mathematical claim, hypothesis or receipt and supplies no quantitative parameters."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。新核心模块 Becoming.Viability：生存核恰是含起点的证书之并，扰动律下历史永不离开守卫恰当存在封闭于每个可容许扰动的证书；市场律经外围 MarketInstances 对每组参数、界与起点成为实例，safe_history_never_fails 由安全矩形得出。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Viability: no course leaves the guard exactly when a certificate contains the start, and under disturbances exactly when a set within the guard is closed under every admissible disturbance; the market law becomes an instance for every parameter set, bound set and start through the periphery MarketInstances, and safe_history_never_fails follows from the safe rectangle. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-08 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json and in git.",
+      "zh": "2026-10-20：20 条记账性说明合并（2026-10-08 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 7 laws, each read against its declarations in Becoming.Viability, MarketInstances and MarketGenerativity, with every condition the Lean takes written in (one admissible disturbance given, a decided guard for guarded histories, the protection certificate); the example certificate, already referenced, has its own law; the limitations became four does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two hypotheses stating the core laws' conditions and the rational quantities; the evidence paragraph names the checkers and receipt folders, the next step is stated positively; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the next step, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 7 条规律，各条对照其在 Becoming.Viability、MarketInstances 与 MarketGenerativity 中的声明核读，Lean 所取的每个条件都写入（给定一个可容许扰动、受守卫历史要求守卫可判定、保护证书）；已引用的数值例证书单列一条规律；限制改为四条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，以及说明核心规律条件与有理数量的两条前提；证据段写明检查器与回执目录，下一步以正面陈述；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、下一步，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/e41907ebbf4c9b9b/market-protected-continuation.json",
+      "sha256": "e41907ebbf4c9b9bf41eb2b7f670bb3284ba92503c99239cc3d7a4ac4256bdb9",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json",
+      "sha256": "a67e2a7ff5606344dc45bdf8ecadcf4222f0b09d9f7557d3a51d421014e1920c",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
+}

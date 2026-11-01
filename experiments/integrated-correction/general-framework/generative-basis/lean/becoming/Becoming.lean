@@ -7,6 +7,7 @@ import Becoming.MapInstances
 import Becoming.MapRegions
 import Becoming.GrammarLaws
 import Becoming.GrammarConditionals
+import Becoming.CommonResponse
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
 import Becoming.World
@@ -3237,10 +3238,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   law is exactly double-negation elimination.
 * `Becoming.Viability` (L1): where no course leaves a guard, with no premise. No course from a
   configuration leaves the guard exactly when some certificate (a set within the guard that every
-  step keeps) contains it; the viability kernel is the largest certificate. For a law of change
+  step keeps) contains it; the invariance kernel is the largest certificate. For a law of change
   driven by admissible disturbances, given one admissible disturbance, no history ever leaves the
   guard exactly when some set containing the start lies within the guard and is closed under
-  every admissible disturbance; a guarded history stops exactly where the history leaves it.
+  every admissible disturbance; a guarded history stops exactly where the history leaves it. The
+  kernel is what holds throughout the closure of the steps (`Viability.kernel_iff_held`), and its two
+  laws are proved from the grammar's kernel (`Becoming.CommonResponse`).
 * `Becoming.Keeping` (L1): a guard kept through what is registered, with no premise. A class is
   kept for `n` steps where the guard holds throughout it and, with steps to go, some move usable
   from it leaves, whatever the step registers, a class kept for one step fewer. A plan whose later
@@ -3455,6 +3458,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   definitional laws state families exactly (`«亡者异当且仅当有后»`, `«无异当且仅当不分续»`,
   `«皆不生当且仅当皆非无缘»`), and 27 witnesses (`…之例`) give the nets the other modules do not. Which unit
   states which law is an AI reconstruction (the OU7 study's `data/groups.tsv`). A leaf.
+* `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
+  carrier, reading and requirement, with no premise. The occurrences at which a region holds
+  throughout their closure under a relation form the largest region closed under the relation
+  inside it (`«所闭之承最大»`), the invariance kernel at a process's steps; a response common over a reading within a requirement, one region
+  per act, inside the act's requirement and closed under the reading, exists exactly where the
+  acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed
+  by acts. Where the requirement gives exactly one act at each situation, a response common over a
+  map's sameness exists exactly where the image of the response relation along the map has a fixed
+  successor (`«遍定应共应当且仅当像定后»`), on a carrier keeping situations and acts apart. A rule
+  from what a map reads gives one with no choice (`«依读而应则共应»`); the closure, covering, one act
+  and the sum carrier each do work, and an act at every situation, or one shared by every two, does
+  not give one (`«共应之例»`).
 * `Becoming.GrammarTransport` (L1): the grammar kept by one-to-one correspondence of models, for
   the terms the World's instance theorems and `Becoming.WorldRepresentation` read. A correspondence
   (`«一一对应»`) carrying the relations a listed term reads carries the term (`«生之对应»`,

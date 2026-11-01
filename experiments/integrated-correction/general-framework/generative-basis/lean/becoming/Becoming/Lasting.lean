@@ -37,7 +37,8 @@ law never reaches a target, and, dually, when a law reaches a target within `n` 
   leaves the guard within `n` steps on every admissible history (`exhausts`).
 * **Never reaching.** A determined law's orbit never reaches a target exactly when some set
   containing the start avoids the target and is closed under the law (`avoids_iff_closed`).
-  This is the viability kernel of the target's complement (`avoids_iff_kernel`). Some seed
+  This is the invariance kernel of the target's complement (`avoids_iff_kernel`). Here each
+  configuration has one course, so in Aubin's terms this is also the viability kernel. Some seed
   never reaches the target exactly when such a set contains a seed (`some_avoids_iff`). No seed
   avoids the target exactly when no such set contains a seed (`none_avoid_iff`); read with
   excluded middle, which the core does not use, the left side says every seed reaches the
@@ -471,7 +472,7 @@ theorem orbit_eq_history (next : S → S) (s : S) (d : Nat → Unit) :
   | n + 1 => congrArg next (orbit_eq_history next s d n)
 
 /-- **Never reaching a target is never leaving its complement**: the orbit never reaches the
-target exactly when the start is in the viability kernel of the target's complement. -/
+target exactly when the start is in the invariance kernel of the target's complement. -/
 theorem avoids_iff_kernel {s : S} :
     (∀ n, ¬ target (Law.orbit next s n)) ↔
       Kernel (disturbed (determined next) (fun _ => True)) (fun x => ¬ target x) s :=

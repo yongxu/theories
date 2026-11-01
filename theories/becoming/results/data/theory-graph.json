@@ -620,6 +620,18 @@
    "page": "theories/becoming/results/records/a-regularity-kept-and-changed.md"
   },
   {
+   "id": "record:a-response-common-over-a-reading",
+   "type": "result",
+   "record": "a-response-common-over-a-reading",
+   "title": "A response common over a reading",
+   "title_zh": "读之共应",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/a-response-common-over-a-reading.md"
+  },
+  {
    "id": "record:a-revision-that-opens-a-correction",
    "type": "result",
    "record": "a-revision-that-opens-a-correction",
@@ -6743,6 +6755,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.CommonResponse",
+   "type": "module",
+   "name": "Becoming.CommonResponse",
+   "level": "L1",
+   "theorems": 36,
+   "region": "knowing",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.GrammarTransport",
    "type": "module",
    "name": "Becoming.GrammarTransport",
@@ -8859,10 +8882,10 @@
    "type": "module",
    "name": "Becoming.Viability",
    "level": "L1",
-   "theorems": 24,
+   "theorems": 25,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -29753,6 +29776,12 @@
    "anchor": "r-a-reading-informed-and-revalued"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-response-common-over-a-reading"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -31543,6 +31572,11 @@
   {
    "from": "module:Becoming.CodeAcquisition",
    "to": "module:Becoming.PartialReadout",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CommonResponse",
+   "to": "module:Becoming.GrammarLaws",
    "type": "imports"
   },
   {
@@ -35147,6 +35181,11 @@
   },
   {
    "from": "module:Becoming.Viability",
+   "to": "module:Becoming.CommonResponse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Viability",
    "to": "module:Becoming.Frame",
    "type": "imports"
   },
@@ -36114,6 +36153,51 @@
    "from": "record:a-regularity-kept-and-changed",
    "to": "record:wen-in-the-grammar",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "module:Becoming.CommonResponse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "module:Becoming.Viability",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:finite-continuation-plans",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:generalization-through-lumping",
+   "type": "related"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:market-protected-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:readings-a-response-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:testing-within-couplings",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "related"
   },
   {
    "from": "record:a-revision-that-opens-a-correction",
@@ -59983,6 +60067,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
    "to": "record:a-reading-kept-by-its-update",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+   "to": "record:a-response-common-over-a-reading",
    "type": "states"
   },
   {
