@@ -5,18 +5,26 @@ Reads the source_drift of a `research.py render` or `check` output (DRIFT_LOG, t
 keeps the pairs whose path this branch changed against main, and for each such path checks that its text with the new
 ids mapped back to the old equals main's text, so the drift is the rewritten link paths and nothing else. Any other
 difference stops the script. Then it hands the kept pairs to tools/research/repoint.py with the reason below.
-usage (from the checkout root): python3 -B <kit>/repoint_gc2.py DRIFT_LOG [--apply]"""
+The home anchors added at the new ids (beside the old, in 03 and 04) are folded back before the comparison.
+With --against REF (main during a merge of main) the comparison is with REF instead of the merge base.
+usage (from the checkout root): python3 -B <kit>/repoint_gc2.py DRIFT_LOG [--against REF] [--apply]"""
 import json, subprocess, sys, tempfile
 from pathlib import Path
 
 ROOT = Path.cwd()
 APPLY = '--apply' in sys.argv[2:]
+AGAINST = sys.argv[sys.argv.index('--against') + 1] if '--against' in sys.argv else None
 MAP = [('selection-when-the-lumping-changes', 'selection-under-registration-revision'),
        ('formed-contacts-change-copying-fidelity', 'formed-copying-registration')]
 REASON = ("GC2: the record ids selection-under-registration-revision and formed-copying-registration renamed "
           "selection-when-the-lumping-changes and formed-contacts-change-copying-fidelity by research.py rename-id "
-          "(batch gc2-registration-ids), which rewrote the record links in the cited sections; link paths only, "
+          "(batch gc2-registration-ids), which rewrote the record links in the cited sections, and links to a home anchor "
+          "moved to the anchor at the new id (the old one kept beside it); link targets only, "
           "nothing the records say changed; each section read before re-pointing")
+FOLD = [('<a id="r-selection-under-registration-revision"></a>\n<a id="r-selection-under-registration-revision"></a>',
+         '<a id="r-selection-under-registration-revision"></a>'),
+        ('<a id="r-formed-copying-registration"></a><a id="r-formed-copying-registration"></a>',
+         '<a id="r-formed-copying-registration"></a>')]
 
 
 def git(*a):
@@ -25,7 +33,7 @@ def git(*a):
 
 text = Path(sys.argv[1]).read_text(encoding='utf-8')
 report = json.loads(text[text.index('\n{') + 1:text.rindex('\n}') + 2])
-base = git('merge-base', 'HEAD', 'main').strip()
+base = AGAINST or git('merge-base', 'HEAD', 'main').strip()
 mine = set(git('diff', '--name-only', base, '--').split())
 kept, other = [], []
 for d in report['source_drift']:
@@ -36,6 +44,8 @@ for path in sorted({d['path'] for d in kept}):
     new = (ROOT / path).read_text(encoding='utf-8')
     for n, o in MAP:
         new = new.replace(n, o)
+    for a, b in FOLD:
+        new = new.replace(a, b)
     if new != git('show', f'{base}:{path}'):
         raise SystemExit(f'STOP: {path} differs from main beyond the two ids')
     print('ids only:', path)

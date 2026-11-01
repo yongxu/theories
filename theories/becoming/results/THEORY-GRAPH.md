@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3191 nodes, 6143 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3193 nodes, 6145 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -355,7 +355,7 @@ Results (110):
 - [When to inquire and when to respond](records/when-to-inquire-and-when-to-respond.md) (recorded-checked)
 - [Where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
 - [Where seeking rests: more than now never does, above all others never for two](records/seeking-boundary.md) (recorded-checked)
-- [Which selections survive and remain executable when the lumping changes](records/selection-when-the-lumping-changes.md) (recorded-checked) ·
+- [Which selections survive and remain executable when the lumping changes](records/selection-when-the-lumping-changes.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
 Modules (88, 14 stated on the grammar): `Blanket`, `BlanketCouplings`, `BlanketWeights`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `CommonResponse`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `FreeEnergyCounting`, `GrammarTesting`, `HeldForReading`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `ListingValuation`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadStages`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RoomNet`, `RoomRuns`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
@@ -381,7 +381,7 @@ Results (45):
 - [Fixation by drift](records/fixation-by-drift.md) (recorded-checked)
 - [Fixation with selection in the draw](records/fixation-with-selection.md) (recorded-checked)
 - [Formation and inheritance of organizational rule differences](records/organizational-rule-inheritance.md) (recorded-checked)
-- [Formed contacts change copying fidelity](records/formed-contacts-change-copying-fidelity.md) (recorded-checked) ·
+- [Formed contacts change copying fidelity](records/formed-contacts-change-copying-fidelity.md) (recorded-checked)
 - [Formed correction edits an existing successor](records/formed-copying-correction.md) (recorded-checked)
 - [Forming anew, necessary and sufficient](records/forming-anew-necessary-and-sufficient.md) (recorded-checked)
 - [Generation is replenishment](records/generation-is-replenishment.md) (recorded-checked)

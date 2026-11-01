@@ -1,6 +1,6 @@
 # EL4: giving that waits on giving, under selection
 
-Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the core Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`, landed as core leaves at receipt 20261101T024359.312453Z, study section 490), which is not landed ([EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
+Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the core Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`, landed as core leaves at receipt 20261101T024359.312453Z, study section 490; [EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`, kept since 2 November 2026 as `refs/salvage/branches/ws-claim`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
 - the windowed law is named for what it is, not "memory", which in 05 means withholding that stays;
 - the alternator that defeats a window is added;
 - the offspring counts hold only while a formation is supported;
@@ -22,7 +22,7 @@ Revised again after the Lean rounds (§10 of [EL](NOTE.md#10-the-review-the-lean
 - (c) with errors holds as a law on pairs;
 - the third source is the second's slack bound, read inside the pair.
 
-Revised after round 4 and two text reviews (in the kit's `round3.json`, on branch `el-kit`):
+Revised after round 4 and two text reviews (in [reviews/round3.json](reviews/round3.json)):
 - `Seat` and `mate` are now `Place` and `other`;
 - the strict forms of the echo and of complete assortment are theorems;
 - `childless` is no longer vacuous;

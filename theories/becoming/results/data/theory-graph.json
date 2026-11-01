@@ -29530,6 +29530,12 @@
    "anchor": "r-the-boundary-of-enough-under-undetermined-laws"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-selection-when-the-lumping-changes"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-under-registration-revision",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -29870,6 +29876,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
    "anchor": "r-inherited-structural-copying"
+  },
+  {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-formed-contacts-change-copying-fidelity",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-formed-contacts-change-copying-fidelity"
   },
   {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-formed-copying-registration",
@@ -60469,6 +60481,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+   "to": "record:selection-when-the-lumping-changes",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
    "to": "record:sensitivity-is-the-least-coupling",
    "type": "states"
@@ -60706,6 +60723,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-fixation-with-selection",
    "to": "record:fixation-with-selection",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-formed-contacts-change-copying-fidelity",
+   "to": "record:formed-contacts-change-copying-fidelity",
    "type": "states"
   },
   {
