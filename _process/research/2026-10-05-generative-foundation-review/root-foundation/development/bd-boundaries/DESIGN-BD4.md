@@ -60,6 +60,7 @@ The sixth item, the `«所闭»` form, is replaced, with a history note. A secon
 1. The scratch build, one at a time under the load rule.
 2. One independent AI review of the Lean and the texts.
 3. A kit on BD3's pattern (`kit/*_bd4`).
-4. The landing, in the slot after OU7's landing, rehearsed on that head, as the coordinator orders.
+4. Main merged into the branch (`kit/merge_bd4.sh`). OU7 changes one comment line of the leaf, which BD4 does not touch, and the record's dependency on not-going-out-of-a-region with a history note, and rebinds the record. So the seven files BD4's texts go in are taken from main and the texts applied on them again: every change main made to them is kept, and BD4's history note follows OU7's.
+5. The landing, in the slot after OU7's landing, rehearsed on that head, as the coordinator orders.
 
 When BD4 lands, OU's owner records BD3 and BD4 in WHAT-REMAINS together, as lever 1 (a)'s two halves.

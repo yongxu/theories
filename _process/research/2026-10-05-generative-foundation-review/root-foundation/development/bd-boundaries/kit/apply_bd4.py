@@ -5,7 +5,8 @@ balance-from-conservation-along-a-relation, and 01 §8.4's sentence. The leaf it
 is left `PENDING` (three places: the scope in both languages and the leaf's proof binding), for reland_bd4.py; the
 leaf's reference carries the leaf's digest now and every declaration of the leaf, read from its source, and sha_bd4.py
 refreshes the digest after any later edit of the leaf. Run from the worktree root on a tree with no other change to
-these files; on any failed assertion every touched file is restored.
+these files; on any failed assertion every touched file is restored. On main's files after a later core run (OU7's),
+the record's receipt is whichever that run bound it to: merge_bd4.sh applies the texts again on them.
 usage: python3 -B apply_bd4.py REVIEWED_AT_UTC DECLARATIONS THEOREMS (the scratch build's counts for the leaf, which
 reland_bd4.py replaces with the receipt's)"""
 import hashlib
@@ -34,6 +35,8 @@ WITNESS = [C + n for n in (
     'paired_single', 'PathOfThree.rel', 'PathOfThree.paired_within', 'PathOfThree.not_paired_along_step',
     'PathOfThree.counts_kept_not_along_step')]
 ALIASES = DECLS + WITNESS + [C + 'closureListed_unlisted']
+# a core receipt's stamp: BD3's, 20261031T225858.600119Z, or the one a later core run rebound the record to
+STAMP = r'\d{8}T\d{6}\.\d{6}Z'
 touched = []
 for path in (f'{PKG}/Becoming.lean', f'{PKG}/check_becoming.py', f'{PKG}/README.md', f'{PKG}/README.zh.md',
              'theories/becoming/results/data/regions.json', REC, 'theories/becoming/chapters/01-ROOT.md'):
@@ -177,12 +180,12 @@ def main():
     for x in dns[-2:]:
         assert len(x['en']) <= 240 and len(x['zh']) <= 110, (len(x['en']), len(x['zh']))
     vs = r['validation_scope']
-    old_en = ('Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 '
-              'declarations, and Becoming.BalanceRegions (the seventh law) at receipt 20261031T225858.600119Z, '
-              '7 declarations (6 theorems), each with an empty axiom report. No independent review of '
-              'Becoming.Continuity; Becoming.BalanceRegions and the seventh law read by an independent AI reader, '
-              'every finding taken.')
-    assert vs['en'] == old_en, vs['en']
+    old_en = (re.escape('Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems '
+                        'in 64 declarations, and Becoming.BalanceRegions (the seventh law) at receipt ') + STAMP +
+              re.escape(', 7 declarations (6 theorems), each with an empty axiom report. No independent review of '
+                        'Becoming.Continuity; Becoming.BalanceRegions and the seventh law read by an independent AI '
+                        'reader, every finding taken.'))
+    assert re.fullmatch(old_en, vs['en']), vs['en']
     vs['en'] = ('Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 '
                 'declarations, and Becoming.BalanceRegions (the seventh and eighth laws) at receipt PENDING, '
                 f'{N_DECL} declarations ({N_THM} theorems), each with an empty axiom report, decided equality taken '
@@ -190,14 +193,15 @@ def main():
                 'Becoming.Continuity; Becoming.BalanceRegions and its two laws read by independent AI readers, every '
                 'finding taken.')
     old_zh = vs['zh']
-    assert '20261031T225858.600119Z' in old_zh, old_zh
+    assert re.search('回执 ' + STAMP + '，7 个声明中 6 条定理', old_zh), old_zh
     vs['zh'] = ('由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions'
                 f'（第七、八律），回执 PENDING，{N_DECL} 个声明中 {N_THM} 条定理；公理报告均为空，可判定相等作为参数取入，'
                 '使用时所给实例自带其报告。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI '
                 '读者审读，所提各点皆已采纳。')
     assert len(vs['en']) - 7 + 24 <= 600 and len(vs['zh']) - 7 + 24 <= 260, (len(vs['en']), len(vs['zh']))
     bound = [b for b in r['proof_bindings'] if b['source'] == LEAF]
-    assert len(bound) == 1 and '20261031T225858.600119Z' in bound[0]['receipt'], bound
+    assert len(bound) == 1, bound
+    assert re.fullmatch(f'{PKG}/becoming-checks/{STAMP}/verification\\.json', bound[0]['receipt']), bound
     bound[0]['receipt'] = f'{PKG}/becoming-checks/PENDING/verification.json'
     named = [x for x in r['references'] if x['path'] == LEAF]
     assert len(named) == 1, named
