@@ -113,7 +113,7 @@ By the core convention a configuration retains whatever history the question nee
 - related, not a proved adapter: [open-form-realization-under-revision](open-form-realization-under-revision.md). The four checked adapters belong to that existing result, with no new result identity.
 - related, not a proved adapter: [becoming-renewal-reading](becoming-renewal-reading.md). The unification of renewal and consumption, and the dynamic reading of `living`, are there, not here.
 
-**Used by:** [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [finite-aggregation-within-restorable-basic-losses](finite-aggregation-within-restorable-basic-losses.md) · [levels-of-closure](levels-of-closure.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
+**Used by:** [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md) · [finite-aggregation-within-restorable-basic-losses](finite-aggregation-within-restorable-basic-losses.md) · [levels-of-closure](levels-of-closure.md) · [premises-met-and-failed](premises-met-and-failed.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md)
 
 <a id="sources--来源"></a>
 ### Sources

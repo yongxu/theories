@@ -2722,11 +2722,6 @@
    "category": "general-structure",
    "reason": "on the boundary n q = d p the weighting tilted toward the smaller side ties the two courses: a law of any finite listing and any ratio, with no world"
   },
-  "Becoming.Weighting.widensOn_of_widensBy": {
-   "module": "Becoming.Weightings",
-   "category": "support",
-   "reason": "a widening by one item alone is a widening: a one-line unpacking of the module's own definitions"
-  },
   "Becoming.Framed.framing_alone": {
    "module": "Becoming.Weightings",
    "category": "model-witness",
@@ -3071,11 +3066,6 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "the ending of what everything needs is ranked below from every standpoint whose own continuation the other course adds to: a law of any finite listing and any order on courses, with no world"
-  },
-  "Becoming.Weighting.increasingInOwn_iff_increasing": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "where its own continuation marks every listed item, an order is increasing in it exactly when it is increasing in admission: a law of any finite listing and any order on courses, with no world"
   },
   "Becoming.Weighting.some_increasingInOwn_reverses": {
    "module": "Becoming.Weightings",
@@ -3497,11 +3487,6 @@
    "category": "model-witness",
    "reason": "the witness read from the loss: its line under favouring ends at the first step, computed on the witness"
   },
-  "Becoming.«续无外则族无外»": {
-   "module": "Becoming.GrammarScope",
-   "category": "general-structure",
-   "reason": "the condition along the net gives it in families: a law of every relation and class on any carrier; the base states no center's continuing under a class yet, so nothing on it uses this law"
-  },
   "Becoming.«续无外之粗化»": {
    "module": "Becoming.GrammarScope",
    "category": "general-structure",
@@ -3536,11 +3521,6 @@
    "module": "Becoming.GrammarScope",
    "category": "model-witness",
    "reason": "the core of descent goes on for good from each birth: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
-  },
-  "Becoming.LineOfDescent.Endless.descent_no_outside": {
-   "module": "Becoming.GrammarScope",
-   "category": "model-witness",
-   "reason": "with the first birth as the only center the condition holds under the one: computed on a line of descent in Becoming.GrammarScope, a witness of the reach past one's own end"
   },
   "Becoming.LineOfDescent.Endless.member_outside": {
    "module": "Becoming.GrammarScope",
@@ -3617,11 +3597,6 @@
    "category": "model-witness",
    "reason": "two family lines: the family core going on through each birth: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
   },
-  "Becoming.TwoLines.other_line_outside": {
-   "module": "Becoming.GrammarCases",
-   "category": "model-witness",
-   "reason": "two family lines: the other family not reached: a small witness of a test system of the source texts, computed on its supplied net (Becoming.GrammarCases, GS3)"
-  },
   "Becoming.SharedCondition.affecting_reaches_other": {
    "module": "Becoming.GrammarCases",
    "category": "model-witness",
@@ -3646,11 +3621,6 @@
    "module": "Becoming.GrammarScope",
    "category": "general-structure",
    "reason": "a line under the core of the class of being joined reaches what the one reaches: a law of every relation on any carrier; the base states no class of being joined yet, so nothing on it uses this law"
-  },
-  "Becoming.ThirdThing.fixed_class": {
-   "module": "Becoming.GrammarCases",
-   "category": "model-witness",
-   "reason": "joined to nothing, outside the class of being joined: a witness of a third thing joined to two families and their shared condition (Becoming.GrammarCases, GS5)"
   },
   "Becoming.ThirdThing.fixed_class_reaches": {
    "module": "Becoming.GrammarCases",
@@ -4357,11 +4327,6 @@
    "category": "general-structure",
    "reason": "widening over a listing goes one way, from the grammar's «广不可逆»: a law of any finite listing, with no world (OU3b)"
   },
-  "Becoming.Weighting.WidensOn.trans": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "widening over a listing is transitive, from the grammar's «广之传递»: a law of any finite listing, with no world (OU3b)"
-  },
   "Becoming.Weighting.mixedOn_iff": {
    "module": "Becoming.Weightings",
    "category": "support",
@@ -4756,11 +4721,6 @@
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
    "reason": "«合成之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
-  },
-  "Becoming.«同族之对应»": {
-   "module": "Becoming.GrammarTransport",
-   "category": "general-structure",
-   "reason": "«同族之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
   },
   "Becoming.«复生之对应»": {
    "module": "Becoming.GrammarTransport",
@@ -6496,6 +6456,56 @@
    "module": "Becoming.BlanketCouplings",
    "category": "model-witness",
    "reason": "BlanketCouplings.injective_converse_fails: a fact about one constructed model: a run, a pair of courses or the threshold witness's web (UE27)"
+  },
+  "Becoming.LineOfDescent.Endless.later_outside": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "the endless line fails the condition along 缘 from every later member's occurrence, computed on the supplied net"
+  },
+  "Becoming.TwoLines.first_line_reach_iff": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "two family lines: the first birth reaches exactly its own family, the exact reading of its marking, computed on the supplied net"
+  },
+  "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "general-structure",
+   "reason": "the two coincide from every standpoint exactly where the condition held de se holds: a law of every relation on any carrier, the base supplying no reading"
+  },
+  "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "general-structure",
+   "reason": "where the condition held de se holds the two coincide on any listing: a law of every relation on any carrier"
+  },
+  "Becoming.Weighting.increasing_iff_by_one": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "general-structure",
+   "reason": "an order transitive on courses is increasing in admission exactly when it ranks every one-item widening higher: a law of any finite listing and order, with no world"
+  },
+  "Becoming.increasingInOwn_with_net": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "self-concern and being increasing in admission coincide on the endless line of descent and part on two family lines, along 缘: the general joins read on the supplied nets"
+  },
+  "Becoming.increasingInOwn_with_net_converse": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "the same along the converse of 缘: coincide in descent that ends, part on the endless line from every center, on the supplied nets"
+  },
+  "Becoming.«族无外随网»": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "the condition in families met on the line of descent and failed by a third thing apart: computed on the supplied nets, a witness that no law of every net settles it"
+  },
+  "Becoming.«续无外随网»": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "the condition on the root along the net met at the endless line of descent's first birth and failed on two family lines with no condition between them: computed on the supplied nets of Becoming.GrammarScope and Becoming.GrammarCases, a witness that no law of every net settles it"
+  },
+  "Becoming.«逆缘续无外随网»": {
+   "module": "Becoming.PremiseWitnesses",
+   "category": "model-witness",
+   "reason": "the condition along the converse of 缘 met at the last occurrence of descent that ends and failed on the endless line from every center: computed on the supplied nets"
   }
  },
  "instances": {

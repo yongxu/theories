@@ -2,18 +2,18 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3152 nodes, 6000 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3160 nodes, 6024 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
-| The root: relation, condition, class, continuation, core | 31 | 85 | 73 | 0 |
+| The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 75 | 0 |
 | Knowing and testing | 0 | 108 | 85 | 0 |
 | Life and evolution | 0 | 42 | 18 | 0 |
 | Collectives and selection | 0 | 66 | 21 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
-| Significance and alignment | 0 | 80 | 60 | 0 |
-| Method and the formal core | 0 | 20 | 24 | 0 |
+| Significance and alignment | 0 | 81 | 60 | 0 |
+| Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
 
@@ -51,7 +51,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The root: relation, condition, class, continuation, core
 
-Results (85):
+Results (86):
 
 - [A configuration is how it relates](records/configurations-alike-by-relation.md) (recorded-checked)
 - [A negation's change, and cases into a stable conclusion](records/negation-change-and-stable-cases.md) (recorded-checked)
@@ -107,6 +107,7 @@ Results (85):
 - [Requirement as response where several exchanges are open](records/requirement-over-open-exchanges.md) (recorded-checked)
 - [Rising and falling in one exchange](records/rising-and-falling-in-one-exchange.md) (recorded-checked)
 - [Separation loses exactly the relation](records/separation-loses-the-relation.md) (recorded-checked)
+- [Standings not read off the occurrence model, even up to a unit](records/standings-not-read-off-the-occurrence-model.md) (recorded-checked)
 - [Step laws and endpoint traces](records/trace-law-equivalence.md) (recorded-checked)
 - [Step-preserving maps transport finite traces](records/finite-trace-transport.md) (recorded-checked)
 - [Test systems of the source texts as small witnesses](records/the-source-texts-test-systems.md) (recorded-checked)
@@ -139,7 +140,7 @@ Results (85):
 - [Where a run goes on](records/where-a-run-goes-on.md) (recorded-checked)
 - [Which links a closure needs](records/which-links-a-closure-needs.md) (recorded-checked)
 
-Modules (73, 21 stated on the grammar): `BalanceRegions`, `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarCrossing`, `GrammarLaws`, `GrammarRegularity`, `GrammarTransport`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `ModelStatements`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presence`, `Presentations`, `ProcessRepresentation`, `Reading`, `Readings`, `Regions`, `Renewal`, `ReorderingGrowth`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `UnitMatchings`, `World`, `WorldRepresentation`
+Modules (74, 22 stated on the grammar): `BalanceRegions`, `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarCrossing`, `GrammarLaws`, `GrammarRegularity`, `GrammarTransport`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `ModelStatements`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presence`, `Presentations`, `ProcessRepresentation`, `Reading`, `Readings`, `Regions`, `Renewal`, `ReorderingGrowth`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `UnitMatchings`, `UnreadStandings`, `World`, `WorldRepresentation`
 
 
 ## The map: generation, keeping, degeneration, orders
@@ -506,7 +507,7 @@ Modules (9, 3 stated on the grammar): `GrammarCandidates`, `GrammarCourse`, `Gra
 
 ## Significance and alignment
 
-Results (80):
+Results (81):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -551,6 +552,7 @@ Results (80):
 - [Reserved shutdown during incomplete recovery](records/reserved-shutdown-during-recovery.md) (recorded-checked)
 - [Rivals bounded in time](records/rivals-bounded-in-time.md) (recorded-checked)
 - [Rule revision and actual generation with open forms](records/open-form-realization-under-revision.md) (recorded-checked)
+- [Self-concern and C under the condition](records/self-concern-and-c-under-the-condition.md) (recorded-checked)
 - [Self-concern through dependence](records/self-concern-through-dependence.md) (recorded-checked)
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Significance through a common condition](records/significance-through-a-common-condition.md) (recorded-checked)
@@ -594,7 +596,7 @@ Modules (60, 9 stated on the grammar): `Acceptance`, `ActivationCapacity`, `Acti
 
 ## Method and the formal core
 
-Results (20):
+Results (21):
 
 - [Common interpretation of a finite basis](records/finite-basis-common-interpretation.md) (recorded-checked)
 - [Contraction is admissible exactly where duplication is reachable](records/contraction-where-duplication-is-reachable.md) (recorded-checked)
@@ -605,6 +607,7 @@ Results (20):
 - [Listing once is decided identity](records/listing-once-is-decided-identity.md) (recorded-checked)
 - [One root to its edge: where each central declaration stands](records/one-root-to-its-edge.md) (recorded-checked)
 - [Premise-tracked derivation soundness](records/derivation-soundness.md) (recorded-checked)
+- [Premises met and failed: the condition on the root, C and L](records/premises-met-and-failed.md) (recorded-checked)
 - [Relata counted through relations](records/relata-counted-up-to-indiscernibility.md) (recorded-checked)
 - [Self-reference does not certify itself](records/self-reference-does-not-certify-itself.md) (recorded-checked)
 - [The last change of a run](records/the-last-change-of-a-run.md) (recorded-checked)
@@ -617,7 +620,7 @@ Results (20):
 - [What one move ensures, and covering of moves](records/one-move-covering.md) (recorded-checked)
 - [When the runs of a process settle](records/when-the-runs-of-a-process-settle.md) (recorded-checked)
 
-Modules (24, 1 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
+Modules (25, 2 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PremiseWitnesses`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
 
 
 ## To retire
@@ -640,4 +643,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-304 of 366 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+304 of 368 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
