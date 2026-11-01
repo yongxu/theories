@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue28/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/review-lean/tree",
+  "modules": 94,
+  "ran": [
+    "Becoming.UE28LeanReviewProbe",
+    "BecomingUE28LeanReviewProbeAxiomAudit"
+  ],
+  "reused": 93,
+  "unclean": [],
+  "audits": {
+    "Becoming.UE28LeanReviewProbe": {
+      "theorems": 19,
+      "declarations": 41,
+      "with_axioms": {}
+    }
+  }
+}

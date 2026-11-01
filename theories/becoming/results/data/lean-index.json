@@ -19,18 +19,18 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2263,
-    "distinct_byte_contents": 1793,
+    "lean_paths": 2266,
+    "distinct_byte_contents": 1796,
     "byte_identical_duplicate_groups": 197,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1267,
+      "development-attempt": 1270,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 957
     },
-    "working_named_theorem_lemma_occurrences": 30293,
-    "working_explicit_named_declaration_occurrences": 44311,
+    "working_named_theorem_lemma_occurrences": 30320,
+    "working_explicit_named_declaration_occurrences": 44375,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 364,
@@ -7623,6 +7623,33 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/review-lean/tree/Becoming/UE28LeanReviewProbe.lean",
+      "sha256": "095de20e3d206c1fc8db5020cd6a950edfffaa88f48a67ede66feb2a798962be",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/review-probes/tree/Becoming/UE28ReviewProbe.lean",
+      "sha256": "fc4d8bada266a72cddf1b4d4f1365cc350eb26a9a894d9d6ed7efb71281e02b4",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/tree/Becoming/BlanketCouplings.lean",
+      "sha256": "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/tree/Becoming/EventualWidening.lean",
       "sha256": "f2e6ee1758c511708da0051023a3d9a7dea1aa17044e767938d23b7891c408cb",
       "role": "development-attempt",
@@ -8714,7 +8741,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
-      "sha256": "b009fff548ebd2a0d9f87a579d6375ad1699a14ba0b9428397e026b2baa55950",
+      "sha256": "5077a8aefcab373fb6d4a62e994dd8f6868da2cd6e639e9d14e84a2701ab0370",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -8957,7 +8984,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
-      "sha256": "fd162b69886bb1afce3a26c7247959ac82be1fd0fd33a531d7b527a76a098f73",
+      "sha256": "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -41451,6 +41478,273 @@
       "declaration_counts": {
         "def": 1,
         "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "095de20e3d206c1fc8db5020cd6a950edfffaa88f48a67ede66feb2a798962be": {
+      "byte_size": 11211,
+      "line_count": 283,
+      "imports": [
+        "Becoming.BlanketCouplings"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "clockValue",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.clockValue",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "clockValue_values",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.clockValue_values",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "clock_agentDetermined",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.clock_agentDetermined",
+          "line": 41
+        },
+        {
+          "kind": "theorem",
+          "name": "clock_admitted",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.clock_admitted",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "clockAct_admitted",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.clockAct_admitted",
+          "line": 59
+        },
+        {
+          "kind": "def",
+          "name": "ValuesAcross",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.ValuesAcross",
+          "line": 75
+        },
+        {
+          "kind": "theorem",
+          "name": "ValuesAcross.through",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.ValuesAcross.through",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "listed_valuesAcross",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.listed_valuesAcross",
+          "line": 87
+        },
+        {
+          "kind": "theorem",
+          "name": "levelRun_admitted_iff_records",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.levelRun_admitted_iff_records",
+          "line": 110
+        },
+        {
+          "kind": "theorem",
+          "name": "steadyFeed_any",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.steadyFeed_any",
+          "line": 132
+        },
+        {
+          "kind": "def",
+          "name": "phase",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.phase",
+          "line": 144
+        },
+        {
+          "kind": "def",
+          "name": "gLevel",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.gLevel",
+          "line": 148
+        },
+        {
+          "kind": "def",
+          "name": "hLevel",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.hLevel",
+          "line": 152
+        },
+        {
+          "kind": "def",
+          "name": "hTakesG",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.hTakesG",
+          "line": 156
+        },
+        {
+          "kind": "def",
+          "name": "hGivesG",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.hGivesG",
+          "line": 160
+        },
+        {
+          "kind": "def",
+          "name": "hTakesH",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.hTakesH",
+          "line": 164
+        },
+        {
+          "kind": "def",
+          "name": "hGivesH",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.hGivesH",
+          "line": 168
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.take",
+          "line": 173
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.give",
+          "line": 179
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.flow",
+          "line": 185
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.level",
+          "line": 187
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.web",
+          "line": 191
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_g",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.balance_g",
+          "line": 194
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_h",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.balance_h",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.balances",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "uncoupled",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.uncoupled",
+          "line": 208
+        },
+        {
+          "kind": "def",
+          "name": "value",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.value",
+          "line": 213
+        },
+        {
+          "kind": "def",
+          "name": "act",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.act",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "gLevel_inj",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.gLevel_inj",
+          "line": 217
+        },
+        {
+          "kind": "theorem",
+          "name": "repeats",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.repeats",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "agentDetermined",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.Alternating.agentDetermined",
+          "line": 227
+        },
+        {
+          "kind": "def",
+          "name": "gTakesH",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.gTakesH",
+          "line": 239
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.take",
+          "line": 244
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.flow",
+          "line": 250
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.web",
+          "line": 252
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.balances",
+          "line": 256
+        },
+        {
+          "kind": "theorem",
+          "name": "absent",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.absent",
+          "line": 258
+        },
+        {
+          "kind": "def",
+          "name": "value",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.value",
+          "line": 260
+        },
+        {
+          "kind": "def",
+          "name": "act",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.act",
+          "line": 262
+        },
+        {
+          "kind": "theorem",
+          "name": "not_agentDetermined",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.not_agentDetermined",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "constant_agentDetermined",
+          "qualified_name_hint": "Becoming.UE28LeanReviewProbe.AbsentRow.constant_agentDetermined",
+          "line": 274
+        }
+      ],
+      "declaration_counts": {
+        "def": 22,
+        "theorem": 19
       },
       "textual_markers": {
         "sorry": [],
@@ -163261,6 +163555,870 @@
       },
       "print_axioms_commands": 0
     },
+    "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639": {
+      "byte_size": 65451,
+      "line_count": 1246,
+      "imports": [
+        "Becoming.Blanket",
+        "Becoming.Histories",
+        "Becoming.IdentificationRuns"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "parts_eq",
+          "qualified_name_hint": "Becoming.BlanketCouplings.parts_eq",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "pair_eq",
+          "qualified_name_hint": "Becoming.BlanketCouplings.pair_eq",
+          "line": 135
+        },
+        {
+          "kind": "theorem",
+          "name": "unit_eq",
+          "qualified_name_hint": "Becoming.BlanketCouplings.unit_eq",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "agentReads",
+          "qualified_name_hint": "Becoming.BlanketCouplings.agentReads",
+          "line": 143
+        },
+        {
+          "kind": "def",
+          "name": "agentParts",
+          "qualified_name_hint": "Becoming.BlanketCouplings.agentParts",
+          "line": 146
+        },
+        {
+          "kind": "def",
+          "name": "worldReads",
+          "qualified_name_hint": "Becoming.BlanketCouplings.worldReads",
+          "line": 149
+        },
+        {
+          "kind": "def",
+          "name": "worldParts",
+          "qualified_name_hint": "Becoming.BlanketCouplings.worldParts",
+          "line": 152
+        },
+        {
+          "kind": "def",
+          "name": "PartDependsOnlyOn",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PartDependsOnlyOn",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "partDependsOnlyOn_id_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.partDependsOnlyOn_id_iff",
+          "line": 170
+        },
+        {
+          "kind": "def",
+          "name": "PartConsistentFamily",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PartConsistentFamily",
+          "line": 179
+        },
+        {
+          "kind": "theorem",
+          "name": "shownBy_partDependsOnlyOn_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "PartDependsOnlyOn.of_le",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "PartConsistentFamily.mono",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PartConsistentFamily.mono",
+          "line": 204
+        },
+        {
+          "kind": "def",
+          "name": "BlanketDetermined",
+          "qualified_name_hint": "Becoming.BlanketCouplings.BlanketDetermined",
+          "line": 219
+        },
+        {
+          "kind": "def",
+          "name": "BlanketConsistentFamily",
+          "qualified_name_hint": "Becoming.BlanketCouplings.BlanketConsistentFamily",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "shownBy_blanketDetermined_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff",
+          "line": 229
+        },
+        {
+          "kind": "theorem",
+          "name": "BlanketDetermined.of_le",
+          "qualified_name_hint": "Becoming.BlanketCouplings.BlanketDetermined.of_le",
+          "line": 235
+        },
+        {
+          "kind": "theorem",
+          "name": "BlanketConsistentFamily.mono",
+          "qualified_name_hint": "Becoming.BlanketCouplings.BlanketConsistentFamily.mono",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "admitted_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.admitted_iff",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "BlanketDetermined.determined",
+          "qualified_name_hint": "Becoming.BlanketCouplings.BlanketDetermined.determined",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "blanketed_determined",
+          "qualified_name_hint": "Becoming.BlanketCouplings.blanketed_determined",
+          "line": 264
+        },
+        {
+          "kind": "theorem",
+          "name": "blanketed_step_alike",
+          "qualified_name_hint": "Becoming.BlanketCouplings.blanketed_step_alike",
+          "line": 283
+        },
+        {
+          "kind": "theorem",
+          "name": "blanketed_courses_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.blanketed_courses_consistent",
+          "line": 294
+        },
+        {
+          "kind": "def",
+          "name": "couplingLaw",
+          "qualified_name_hint": "Becoming.BlanketCouplings.couplingLaw",
+          "line": 323
+        },
+        {
+          "kind": "def",
+          "name": "startAt",
+          "qualified_name_hint": "Becoming.BlanketCouplings.startAt",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "clock",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clock",
+          "line": 334
+        },
+        {
+          "kind": "def",
+          "name": "ownLevels",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ownLevels",
+          "line": 340
+        },
+        {
+          "kind": "theorem",
+          "name": "sensory_course",
+          "qualified_name_hint": "Becoming.BlanketCouplings.sensory_course",
+          "line": 345
+        },
+        {
+          "kind": "theorem",
+          "name": "blanket_iff_through",
+          "qualified_name_hint": "Becoming.BlanketCouplings.blanket_iff_through",
+          "line": 356
+        },
+        {
+          "kind": "theorem",
+          "name": "internal_through_couplings",
+          "qualified_name_hint": "Becoming.BlanketCouplings.internal_through_couplings",
+          "line": 387
+        },
+        {
+          "kind": "def",
+          "name": "levelsAt",
+          "qualified_name_hint": "Becoming.BlanketCouplings.levelsAt",
+          "line": 401
+        },
+        {
+          "kind": "def",
+          "name": "levelsStay",
+          "qualified_name_hint": "Becoming.BlanketCouplings.levelsStay",
+          "line": 405
+        },
+        {
+          "kind": "def",
+          "name": "openLoop",
+          "qualified_name_hint": "Becoming.BlanketCouplings.openLoop",
+          "line": 409
+        },
+        {
+          "kind": "theorem",
+          "name": "open_external",
+          "qualified_name_hint": "Becoming.BlanketCouplings.open_external",
+          "line": 413
+        },
+        {
+          "kind": "theorem",
+          "name": "open_levels",
+          "qualified_name_hint": "Becoming.BlanketCouplings.open_levels",
+          "line": 419
+        },
+        {
+          "kind": "theorem",
+          "name": "internal_selectsThrough",
+          "qualified_name_hint": "Becoming.BlanketCouplings.internal_selectsThrough",
+          "line": 426
+        },
+        {
+          "kind": "def",
+          "name": "value",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.value",
+          "line": 451
+        },
+        {
+          "kind": "def",
+          "name": "lev",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.lev",
+          "line": 454
+        },
+        {
+          "kind": "def",
+          "name": "env",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.env",
+          "line": 457
+        },
+        {
+          "kind": "def",
+          "name": "update",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.update",
+          "line": 460
+        },
+        {
+          "kind": "def",
+          "name": "policy",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.policy",
+          "line": 463
+        },
+        {
+          "kind": "theorem",
+          "name": "band_congr",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.band_congr",
+          "line": 465
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
+          "line": 468
+        },
+        {
+          "kind": "theorem",
+          "name": "values",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.values",
+          "line": 474
+        },
+        {
+          "kind": "theorem",
+          "name": "corr",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.corr",
+          "line": 486
+        },
+        {
+          "kind": "theorem",
+          "name": "own_eq",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.own_eq",
+          "line": 505
+        },
+        {
+          "kind": "theorem",
+          "name": "threshold_case",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ThresholdCase.threshold_case",
+          "line": 511
+        },
+        {
+          "kind": "def",
+          "name": "clocked",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clocked",
+          "line": 552
+        },
+        {
+          "kind": "theorem",
+          "name": "clocked_course",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clocked_course",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "clocked_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clocked_consistent",
+          "line": 565
+        },
+        {
+          "kind": "def",
+          "name": "parting",
+          "qualified_name_hint": "Becoming.BlanketCouplings.parting",
+          "line": 572
+        },
+        {
+          "kind": "theorem",
+          "name": "clocked_witness",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clocked_witness",
+          "line": 579
+        },
+        {
+          "kind": "def",
+          "name": "partingLate",
+          "qualified_name_hint": "Becoming.BlanketCouplings.partingLate",
+          "line": 589
+        },
+        {
+          "kind": "theorem",
+          "name": "clock_only_fails",
+          "qualified_name_hint": "Becoming.BlanketCouplings.clock_only_fails",
+          "line": 596
+        },
+        {
+          "kind": "def",
+          "name": "shift",
+          "qualified_name_hint": "Becoming.BlanketCouplings.shift",
+          "line": 606
+        },
+        {
+          "kind": "def",
+          "name": "suffix",
+          "qualified_name_hint": "Becoming.BlanketCouplings.suffix",
+          "line": 609
+        },
+        {
+          "kind": "theorem",
+          "name": "suffix_apply",
+          "qualified_name_hint": "Becoming.BlanketCouplings.suffix_apply",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "suffix_zero",
+          "qualified_name_hint": "Becoming.BlanketCouplings.suffix_zero",
+          "line": 617
+        },
+        {
+          "kind": "def",
+          "name": "future",
+          "qualified_name_hint": "Becoming.BlanketCouplings.future",
+          "line": 623
+        },
+        {
+          "kind": "theorem",
+          "name": "future_course",
+          "qualified_name_hint": "Becoming.BlanketCouplings.future_course",
+          "line": 630
+        },
+        {
+          "kind": "def",
+          "name": "readFamily",
+          "qualified_name_hint": "Becoming.BlanketCouplings.readFamily",
+          "line": 649
+        },
+        {
+          "kind": "theorem",
+          "name": "const_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.const_consistent",
+          "line": 654
+        },
+        {
+          "kind": "theorem",
+          "name": "injective_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.injective_consistent",
+          "line": 661
+        },
+        {
+          "kind": "def",
+          "name": "whole",
+          "qualified_name_hint": "Becoming.BlanketCouplings.whole",
+          "line": 677
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.whole_iff",
+          "line": 681
+        },
+        {
+          "kind": "inductive",
+          "name": "Three",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.Three",
+          "line": 706
+        },
+        {
+          "kind": "def",
+          "name": "next",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.next",
+          "line": 712
+        },
+        {
+          "kind": "def",
+          "name": "isFirst",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.isFirst",
+          "line": 718
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.step",
+          "line": 724
+        },
+        {
+          "kind": "def",
+          "name": "start",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.start",
+          "line": 728
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.run",
+          "line": 731
+        },
+        {
+          "kind": "theorem",
+          "name": "internal_course",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.internal_course",
+          "line": 734
+        },
+        {
+          "kind": "theorem",
+          "name": "not_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.not_consistent",
+          "line": 741
+        },
+        {
+          "kind": "theorem",
+          "name": "not_blanketed",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
+          "line": 748
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_consistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ReadsExternal.whole_consistent",
+          "line": 757
+        },
+        {
+          "kind": "theorem",
+          "name": "injective_converse_fails",
+          "qualified_name_hint": "Becoming.BlanketCouplings.injective_converse_fails",
+          "line": 769
+        },
+        {
+          "kind": "def",
+          "name": "stepExternal",
+          "qualified_name_hint": "Becoming.BlanketCouplings.stepExternal",
+          "line": 786
+        },
+        {
+          "kind": "def",
+          "name": "AgentConsistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.AgentConsistent",
+          "line": 794
+        },
+        {
+          "kind": "theorem",
+          "name": "stepExternal_consistent_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.stepExternal_consistent_iff",
+          "line": 801
+        },
+        {
+          "kind": "theorem",
+          "name": "stepExternal_admitted_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.stepExternal_admitted_iff",
+          "line": 825
+        },
+        {
+          "kind": "def",
+          "name": "stepLaw",
+          "qualified_name_hint": "Becoming.BlanketCouplings.stepLaw",
+          "line": 837
+        },
+        {
+          "kind": "theorem",
+          "name": "stepLaw_course",
+          "qualified_name_hint": "Becoming.BlanketCouplings.stepLaw_course",
+          "line": 848
+        },
+        {
+          "kind": "theorem",
+          "name": "next_level_alike_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.next_level_alike_iff",
+          "line": 868
+        },
+        {
+          "kind": "def",
+          "name": "levelParts",
+          "qualified_name_hint": "Becoming.BlanketCouplings.levelParts",
+          "line": 895
+        },
+        {
+          "kind": "def",
+          "name": "rowAct",
+          "qualified_name_hint": "Becoming.BlanketCouplings.rowAct",
+          "line": 900
+        },
+        {
+          "kind": "def",
+          "name": "presentRow",
+          "qualified_name_hint": "Becoming.BlanketCouplings.presentRow",
+          "line": 905
+        },
+        {
+          "kind": "def",
+          "name": "DecidesPresence",
+          "qualified_name_hint": "Becoming.BlanketCouplings.DecidesPresence",
+          "line": 912
+        },
+        {
+          "kind": "theorem",
+          "name": "agentConsistent_iff_exchange",
+          "qualified_name_hint": "Becoming.BlanketCouplings.agentConsistent_iff_exchange",
+          "line": 919
+        },
+        {
+          "kind": "def",
+          "name": "ValuesAcross",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ValuesAcross",
+          "line": 936
+        },
+        {
+          "kind": "theorem",
+          "name": "ValuesAcross.through",
+          "qualified_name_hint": "Becoming.BlanketCouplings.ValuesAcross.through",
+          "line": 941
+        },
+        {
+          "kind": "theorem",
+          "name": "listed_valuesAcross",
+          "qualified_name_hint": "Becoming.BlanketCouplings.listed_valuesAcross",
+          "line": 948
+        },
+        {
+          "kind": "theorem",
+          "name": "levelParts_admitted_iff",
+          "qualified_name_hint": "Becoming.BlanketCouplings.levelParts_admitted_iff",
+          "line": 973
+        },
+        {
+          "kind": "inductive",
+          "name": "TwoRelata",
+          "qualified_name_hint": "Becoming.BlanketCouplings.TwoRelata",
+          "line": 994
+        },
+        {
+          "kind": "theorem",
+          "name": "TwoRelata.g_not_mem_h",
+          "qualified_name_hint": "Becoming.BlanketCouplings.TwoRelata.g_not_mem_h",
+          "line": 999
+        },
+        {
+          "kind": "def",
+          "name": "phase",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.phase",
+          "line": 1010
+        },
+        {
+          "kind": "def",
+          "name": "gLevel",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.gLevel",
+          "line": 1013
+        },
+        {
+          "kind": "def",
+          "name": "hLevel",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.hLevel",
+          "line": 1019
+        },
+        {
+          "kind": "def",
+          "name": "hTakesG",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.hTakesG",
+          "line": 1024
+        },
+        {
+          "kind": "def",
+          "name": "hGivesG",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.hGivesG",
+          "line": 1029
+        },
+        {
+          "kind": "def",
+          "name": "hTakesH",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.hTakesH",
+          "line": 1034
+        },
+        {
+          "kind": "def",
+          "name": "hGivesH",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.hGivesH",
+          "line": 1039
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.take",
+          "line": 1045
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.give",
+          "line": 1053
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.flow",
+          "line": 1060
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.level",
+          "line": 1062
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.web",
+          "line": 1067
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_g",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.balance_g",
+          "line": 1070
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_h",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.balance_h",
+          "line": 1076
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.balances",
+          "line": 1083
+        },
+        {
+          "kind": "theorem",
+          "name": "uncoupled",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.uncoupled",
+          "line": 1088
+        },
+        {
+          "kind": "theorem",
+          "name": "one_value",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.one_value",
+          "line": 1095
+        },
+        {
+          "kind": "theorem",
+          "name": "values",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.values",
+          "line": 1102
+        },
+        {
+          "kind": "def",
+          "name": "presence",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.presence",
+          "line": 1107
+        },
+        {
+          "kind": "theorem",
+          "name": "presence_decides",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.presence_decides",
+          "line": 1109
+        },
+        {
+          "kind": "def",
+          "name": "act",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.act",
+          "line": 1113
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admitted",
+          "qualified_name_hint": "Becoming.BlanketCouplings.PhasedDrain.not_admitted",
+          "line": 1118
+        },
+        {
+          "kind": "def",
+          "name": "phase",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.phase",
+          "line": 1132
+        },
+        {
+          "kind": "def",
+          "name": "gLevel",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.gLevel",
+          "line": 1137
+        },
+        {
+          "kind": "def",
+          "name": "hLevel",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.hLevel",
+          "line": 1142
+        },
+        {
+          "kind": "def",
+          "name": "hTakesG",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.hTakesG",
+          "line": 1146
+        },
+        {
+          "kind": "def",
+          "name": "hGivesG",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.hGivesG",
+          "line": 1150
+        },
+        {
+          "kind": "def",
+          "name": "hTakesH",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.hTakesH",
+          "line": 1154
+        },
+        {
+          "kind": "def",
+          "name": "hGivesH",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.hGivesH",
+          "line": 1158
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.take",
+          "line": 1163
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.give",
+          "line": 1170
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.flow",
+          "line": 1177
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.level",
+          "line": 1179
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.web",
+          "line": 1184
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_g",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.balance_g",
+          "line": 1187
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_h",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.balance_h",
+          "line": 1191
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.balances",
+          "line": 1196
+        },
+        {
+          "kind": "theorem",
+          "name": "uncoupled",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.uncoupled",
+          "line": 1201
+        },
+        {
+          "kind": "theorem",
+          "name": "values",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.values",
+          "line": 1207
+        },
+        {
+          "kind": "def",
+          "name": "presence",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.presence",
+          "line": 1212
+        },
+        {
+          "kind": "theorem",
+          "name": "presence_decides",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.presence_decides",
+          "line": 1214
+        },
+        {
+          "kind": "def",
+          "name": "act",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.act",
+          "line": 1218
+        },
+        {
+          "kind": "theorem",
+          "name": "gLevel_inj",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.gLevel_inj",
+          "line": 1220
+        },
+        {
+          "kind": "theorem",
+          "name": "recurs",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.recurs",
+          "line": 1227
+        },
+        {
+          "kind": "theorem",
+          "name": "agentConsistent",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.agentConsistent",
+          "line": 1231
+        },
+        {
+          "kind": "theorem",
+          "name": "admitted",
+          "qualified_name_hint": "Becoming.BlanketCouplings.Alternating.admitted",
+          "line": 1237
+        }
+      ],
+      "declaration_counts": {
+        "def": 68,
+        "inductive": 2,
+        "theorem": 70
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01": {
       "byte_size": 17534,
       "line_count": 338,
@@ -193177,6 +194335,396 @@
       "declaration_counts": {
         "theorem": 26
       },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "5077a8aefcab373fb6d4a62e994dd8f6868da2cd6e639e9d14e84a2701ab0370": {
+      "byte_size": 390350,
+      "line_count": 4564,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.GrammarReadings",
+        "Becoming.GrammarMap",
+        "Becoming.GrammarTesting",
+        "Becoming.GrammarCandidates",
+        "Becoming.MapInstances",
+        "Becoming.MapRegions",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarTransport",
+        "Becoming.ShownOrder",
+        "Becoming.World",
+        "Becoming.Witnesses",
+        "Becoming.Frame",
+        "Becoming.Laws",
+        "Becoming.Labelled",
+        "Becoming.Inquiry",
+        "Becoming.Derivation",
+        "Becoming.ClassifiedBeliefProcesses",
+        "Becoming.MoveOutcomeProcesses",
+        "Becoming.Recurrence",
+        "Becoming.Diagonal",
+        "Becoming.Context",
+        "Becoming.ContextArrivalTraces",
+        "Becoming.Quantum",
+        "Becoming.Renewal",
+        "Becoming.Dependence",
+        "Becoming.Restoration",
+        "Becoming.Horizon",
+        "Becoming.Joint",
+        "Becoming.Experiment",
+        "Becoming.Mechanism",
+        "Becoming.Unfolding",
+        "Becoming.LawAlongRun",
+        "Becoming.Irreversibility",
+        "Becoming.Histories",
+        "Becoming.Branching",
+        "Becoming.Listing",
+        "Becoming.Stuttering",
+        "Becoming.Reordering",
+        "Becoming.IdleRemoval",
+        "Becoming.OrderNormal",
+        "Becoming.OneStep",
+        "Becoming.Weighted",
+        "Becoming.Transmission",
+        "Becoming.Succession",
+        "Becoming.Attraction",
+        "Becoming.Substitution",
+        "Becoming.Arising",
+        "Becoming.Flow",
+        "Becoming.Stock",
+        "Becoming.Change",
+        "Becoming.Population",
+        "Becoming.Identity",
+        "Becoming.Persistence",
+        "Becoming.ContinuedClasses",
+        "Becoming.WorldRepresentation",
+        "Becoming.Wholes",
+        "Becoming.Dissipation",
+        "Becoming.Locality",
+        "Becoming.Seeking",
+        "Becoming.Roles",
+        "Becoming.LabelledRoles",
+        "Becoming.Reserve",
+        "Becoming.Evolution",
+        "Becoming.Capture",
+        "Becoming.SelectionTerm",
+        "Becoming.Reproduction",
+        "Becoming.SelectionLevels",
+        "Becoming.GroupEnding",
+        "Becoming.RootForms",
+        "Becoming.Founding",
+        "Becoming.Drift",
+        "Becoming.Space",
+        "Becoming.Premises",
+        "Becoming.Sampling",
+        "Becoming.Tower",
+        "Becoming.Openness",
+        "Becoming.Decidedness",
+        "Becoming.Refinement",
+        "Becoming.CensusTable",
+        "Becoming.Counting",
+        "Becoming.Standing",
+        "Becoming.Resolution",
+        "Becoming.Amounts",
+        "Becoming.LeastLoss",
+        "Becoming.WholeAmounts",
+        "Becoming.InAmounts",
+        "Becoming.Entropy",
+        "Becoming.SelectionPace",
+        "Becoming.Units",
+        "Becoming.Imbalance",
+        "Becoming.Continuity",
+        "Becoming.Continuation",
+        "Becoming.RenewalFlow",
+        "Becoming.Admission",
+        "Becoming.Exclusion",
+        "Becoming.Exhaustion",
+        "Becoming.Regions",
+        "Becoming.EventualWidening",
+        "Becoming.EventualWideningInstances",
+        "Becoming.ComparingCourses",
+        "Becoming.ReachableRanges",
+        "Becoming.HeldPossible",
+        "Becoming.Tasks",
+        "Becoming.CausalGrowth",
+        "Becoming.Presence",
+        "Becoming.ReorderingGrowth",
+        "Becoming.FreeEnergyGuarantees",
+        "Becoming.Blanket",
+        "Becoming.BlanketWeights",
+        "Becoming.BlanketCouplings",
+        "Becoming.LumpedSeeking",
+        "Becoming.FreeEnergyCounting",
+        "Becoming.ModelStatements",
+        "Becoming.Growth",
+        "Becoming.Retaining",
+        "Becoming.OwnWidening",
+        "Becoming.Clearing",
+        "Becoming.Extension",
+        "Becoming.Metaethics",
+        "Becoming.Lifting",
+        "Becoming.Ranking",
+        "Becoming.ActiveReading",
+        "Becoming.LossMatching",
+        "Becoming.StrictTransport",
+        "Becoming.MatchedCourses",
+        "Becoming.Correspondence",
+        "Becoming.Descent",
+        "Becoming.Standpoints",
+        "Becoming.Significance",
+        "Becoming.ValuationFrames",
+        "Becoming.RelativePosition",
+        "Becoming.Interdependence",
+        "Becoming.Feeding",
+        "Becoming.Feedback",
+        "Becoming.BoundedSignificance",
+        "Becoming.Cuts",
+        "Becoming.EdgeClosure",
+        "Becoming.SeedReach",
+        "Becoming.ScopedReach",
+        "Becoming.Boundaries",
+        "Becoming.ConveyanceBoundaries",
+        "Becoming.BalanceRegions",
+        "Becoming.Weightings",
+        "Becoming.Relevance",
+        "Becoming.Testing",
+        "Becoming.Runaway",
+        "Becoming.Response",
+        "Becoming.TimedResponse",
+        "Becoming.Latency",
+        "Becoming.Centers",
+        "Becoming.Counterfactual",
+        "Becoming.Regrouping",
+        "Becoming.Selection",
+        "Becoming.Learning",
+        "Becoming.Unread",
+        "Becoming.Cascade",
+        "Becoming.RevisionRoutes",
+        "Becoming.ReadStages",
+        "Becoming.PropositionIdentity",
+        "Becoming.Hexagrams",
+        "Becoming.HexagramPlaces",
+        "Becoming.HexagramLaws",
+        "Becoming.HexagramSites",
+        "Becoming.HexagramSequences",
+        "Becoming.Withholding",
+        "Becoming.LoopReturn",
+        "Becoming.Pace",
+        "Becoming.RuleCapture",
+        "Becoming.ClosedCapture",
+        "Becoming.RuleShaping",
+        "Becoming.ChoiceCountCapture",
+        "Becoming.DrawnShaping",
+        "Becoming.ReadInTime",
+        "Becoming.PatternPassing",
+        "Becoming.JointKeeping",
+        "Becoming.Undecided",
+        "Becoming.Junctures",
+        "Becoming.Commuting",
+        "Becoming.WeightedCommuting",
+        "Becoming.HexagramCommuting",
+        "Becoming.Tolerance",
+        "Becoming.Revision",
+        "Becoming.Contacts",
+        "Becoming.RegroupingSelection",
+        "Becoming.ReferencePlan",
+        "Becoming.ContinuingRevision",
+        "Becoming.Description",
+        "Becoming.Identification",
+        "Becoming.Learnable",
+        "Becoming.Assurance",
+        "Becoming.AssurancePlans",
+        "Becoming.Integers",
+        "Becoming.Segmentation",
+        "Becoming.Readout",
+        "Becoming.Dephasing",
+        "Becoming.ProjectedLaws",
+        "Becoming.JointPhase",
+        "Becoming.SummaryFutures",
+        "Becoming.Gated",
+        "Becoming.Viability",
+        "Becoming.Keeping",
+        "Becoming.ReflexivePrediction",
+        "Becoming.Prelude",
+        "Becoming.Ideals",
+        "Becoming.ContingentPlans",
+        "Becoming.Actuation",
+        "Becoming.TreeSearch",
+        "Becoming.Dispatch",
+        "Becoming.FaultEnvelopes",
+        "Becoming.Transactions",
+        "Becoming.Reconfiguration",
+        "Becoming.PooledEnvelopes",
+        "Becoming.WitnessRefinement",
+        "Becoming.WitnessRefinementRuns",
+        "Becoming.ChanceFloors",
+        "Becoming.IntegerOrder",
+        "Becoming.Acceptance",
+        "Becoming.GuardHorizon",
+        "Becoming.OpenedCorrection",
+        "Becoming.Countdown",
+        "Becoming.Lasting",
+        "Becoming.Copying",
+        "Becoming.Retrodiction",
+        "Becoming.CrossSituational",
+        "Becoming.Likeness",
+        "Becoming.Distinguishing",
+        "Becoming.JointPlans",
+        "Becoming.Composition",
+        "Becoming.Joining",
+        "Becoming.Granularity",
+        "Becoming.HistoryLanguages",
+        "Becoming.HistoryIdeals",
+        "Becoming.HistoryIdealsTraces",
+        "Becoming.Verification",
+        "Becoming.Coverage",
+        "Becoming.Presentations",
+        "Becoming.Carriers",
+        "Becoming.BranchingCorrespondence",
+        "Becoming.JointCorrespondence",
+        "Becoming.ListFootprints",
+        "Becoming.Fragments",
+        "Becoming.LocalUnits",
+        "Becoming.JoiningContexts",
+        "Becoming.JoiningCodes",
+        "Becoming.JoiningRoles",
+        "Becoming.Postponement",
+        "Becoming.Novelty",
+        "Becoming.Reading",
+        "Becoming.PlaceTransitionNets",
+        "Becoming.SharedCodes",
+        "Becoming.CountedCodes",
+        "Becoming.ExchangePremises",
+        "Becoming.OverExchange",
+        "Becoming.Readings",
+        "Becoming.MoveFormation",
+        "Becoming.Sensitivity",
+        "Becoming.Tail",
+        "Becoming.Courses",
+        "Becoming.Parting",
+        "Becoming.Onward",
+        "Becoming.Typicality",
+        "Becoming.ConditionalWeights",
+        "Becoming.Situations",
+        "Becoming.Propagation",
+        "Becoming.Regulation",
+        "Becoming.ReadingSchedule",
+        "Becoming.RegimeMargin",
+        "Becoming.ListingRefutations",
+        "Becoming.Loops",
+        "Becoming.Remainder",
+        "Becoming.Routes",
+        "Becoming.Closing",
+        "Becoming.Thresholds",
+        "Becoming.Observation",
+        "Becoming.Frequency",
+        "Becoming.MutualDependence",
+        "Becoming.Gain",
+        "Becoming.KeepingWidening",
+        "Becoming.LineDegeneration",
+        "Becoming.SelectionShift",
+        "Becoming.LineageRegions",
+        "Becoming.LineageRegimes",
+        "Becoming.WideningOnTheMap",
+        "Becoming.Gluing",
+        "Becoming.Runs",
+        "Becoming.CourseWorlds",
+        "Becoming.LearnableRuns",
+        "Becoming.PartialReadout",
+        "Becoming.CodeAcquisition",
+        "Becoming.RouteFormation",
+        "Becoming.ResponseLearning",
+        "Becoming.LearnedGrouping",
+        "Becoming.ParityReadings",
+        "Becoming.FinerTraces",
+        "Becoming.HistorySums",
+        "Becoming.FormedLoops",
+        "Becoming.AttractionRuns",
+        "Becoming.ContactCourses",
+        "Becoming.ContextualRuns",
+        "Becoming.ContinuingRuns",
+        "Becoming.CopyCourses",
+        "Becoming.CounterfactualRuns",
+        "Becoming.CouplingTraces",
+        "Becoming.CourseRoles",
+        "Becoming.HorizonWebs",
+        "Becoming.IdentificationRuns",
+        "Becoming.LastingRuns",
+        "Becoming.LearningRuns",
+        "Becoming.ListedWebs",
+        "Becoming.ReferencePlanTraces",
+        "Becoming.RouteTraces",
+        "Becoming.SeekingRuns",
+        "Becoming.SelectionRuns",
+        "Becoming.SensitivityWebs",
+        "Becoming.SituationTraces",
+        "Becoming.StrengthFlows",
+        "Becoming.TypicalRuns",
+        "Becoming.WeightedTraces",
+        "Becoming.LevelCoupling",
+        "Becoming.Interleavings",
+        "Becoming.CensusCounts",
+        "Becoming.CensusBinding",
+        "Becoming.Unrolling",
+        "Becoming.Labels",
+        "Becoming.Enough",
+        "Becoming.Settling",
+        "Becoming.LastChange",
+        "Becoming.LimitVerification",
+        "Becoming.SelectionGap",
+        "Becoming.SelectionReach",
+        "Becoming.UnitMatchings",
+        "Becoming.UnreadStandings",
+        "Becoming.DrawnBeyond",
+        "Becoming.WindowedWaiting",
+        "Becoming.PairSelection",
+        "Becoming.JointDraw",
+        "Becoming.Optimum",
+        "Becoming.OptimumSeason",
+        "Becoming.SetPointOptimum",
+        "Becoming.SelectionPool",
+        "Becoming.PoolResponse",
+        "Becoming.Training",
+        "Becoming.PoolCourse",
+        "Becoming.Rejoining",
+        "Becoming.Lexical",
+        "Becoming.Frontier",
+        "Becoming.FrontierFrames",
+        "Becoming.FrontierWorlds",
+        "Becoming.Direction",
+        "Becoming.ScoreRepresentation",
+        "Becoming.Alternatives",
+        "Becoming.Bundles",
+        "Becoming.ActivationCapacity",
+        "Becoming.Narrowing",
+        "Becoming.NarrowingRuns",
+        "Becoming.ReadingLoop",
+        "Becoming.RevisionPlans",
+        "Becoming.HeldForReading",
+        "Becoming.ListingValuation",
+        "Becoming.SecuredContent",
+        "Becoming.ProfileReach",
+        "Becoming.RenewalBound",
+        "Becoming.Handoff",
+        "Becoming.RuleHandoff",
+        "Becoming.GrammarCourse",
+        "Becoming.GrammarRegularity",
+        "Becoming.ProcessRepresentation",
+        "Becoming.GrammarScope",
+        "Becoming.GrammarCases",
+        "Becoming.GrammarCrossing",
+        "Becoming.PremiseWitnesses",
+        "Becoming.GrammarPath",
+        "Becoming.SignificanceStatements"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -381569,396 +383117,6 @@
       },
       "print_axioms_commands": 24
     },
-    "b009fff548ebd2a0d9f87a579d6375ad1699a14ba0b9428397e026b2baa55950": {
-      "byte_size": 389606,
-      "line_count": 4557,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.GrammarReadings",
-        "Becoming.GrammarMap",
-        "Becoming.GrammarTesting",
-        "Becoming.GrammarCandidates",
-        "Becoming.MapInstances",
-        "Becoming.MapRegions",
-        "Becoming.GrammarLaws",
-        "Becoming.GrammarTransport",
-        "Becoming.ShownOrder",
-        "Becoming.World",
-        "Becoming.Witnesses",
-        "Becoming.Frame",
-        "Becoming.Laws",
-        "Becoming.Labelled",
-        "Becoming.Inquiry",
-        "Becoming.Derivation",
-        "Becoming.ClassifiedBeliefProcesses",
-        "Becoming.MoveOutcomeProcesses",
-        "Becoming.Recurrence",
-        "Becoming.Diagonal",
-        "Becoming.Context",
-        "Becoming.ContextArrivalTraces",
-        "Becoming.Quantum",
-        "Becoming.Renewal",
-        "Becoming.Dependence",
-        "Becoming.Restoration",
-        "Becoming.Horizon",
-        "Becoming.Joint",
-        "Becoming.Experiment",
-        "Becoming.Mechanism",
-        "Becoming.Unfolding",
-        "Becoming.LawAlongRun",
-        "Becoming.Irreversibility",
-        "Becoming.Histories",
-        "Becoming.Branching",
-        "Becoming.Listing",
-        "Becoming.Stuttering",
-        "Becoming.Reordering",
-        "Becoming.IdleRemoval",
-        "Becoming.OrderNormal",
-        "Becoming.OneStep",
-        "Becoming.Weighted",
-        "Becoming.Transmission",
-        "Becoming.Succession",
-        "Becoming.Attraction",
-        "Becoming.Substitution",
-        "Becoming.Arising",
-        "Becoming.Flow",
-        "Becoming.Stock",
-        "Becoming.Change",
-        "Becoming.Population",
-        "Becoming.Identity",
-        "Becoming.Persistence",
-        "Becoming.ContinuedClasses",
-        "Becoming.WorldRepresentation",
-        "Becoming.Wholes",
-        "Becoming.Dissipation",
-        "Becoming.Locality",
-        "Becoming.Seeking",
-        "Becoming.Roles",
-        "Becoming.LabelledRoles",
-        "Becoming.Reserve",
-        "Becoming.Evolution",
-        "Becoming.Capture",
-        "Becoming.SelectionTerm",
-        "Becoming.Reproduction",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.RootForms",
-        "Becoming.Founding",
-        "Becoming.Drift",
-        "Becoming.Space",
-        "Becoming.Premises",
-        "Becoming.Sampling",
-        "Becoming.Tower",
-        "Becoming.Openness",
-        "Becoming.Decidedness",
-        "Becoming.Refinement",
-        "Becoming.CensusTable",
-        "Becoming.Counting",
-        "Becoming.Standing",
-        "Becoming.Resolution",
-        "Becoming.Amounts",
-        "Becoming.LeastLoss",
-        "Becoming.WholeAmounts",
-        "Becoming.InAmounts",
-        "Becoming.Entropy",
-        "Becoming.SelectionPace",
-        "Becoming.Units",
-        "Becoming.Imbalance",
-        "Becoming.Continuity",
-        "Becoming.Continuation",
-        "Becoming.RenewalFlow",
-        "Becoming.Admission",
-        "Becoming.Exclusion",
-        "Becoming.Exhaustion",
-        "Becoming.Regions",
-        "Becoming.EventualWidening",
-        "Becoming.EventualWideningInstances",
-        "Becoming.ComparingCourses",
-        "Becoming.ReachableRanges",
-        "Becoming.HeldPossible",
-        "Becoming.Tasks",
-        "Becoming.CausalGrowth",
-        "Becoming.Presence",
-        "Becoming.ReorderingGrowth",
-        "Becoming.FreeEnergyGuarantees",
-        "Becoming.Blanket",
-        "Becoming.BlanketWeights",
-        "Becoming.BlanketCouplings",
-        "Becoming.LumpedSeeking",
-        "Becoming.FreeEnergyCounting",
-        "Becoming.ModelStatements",
-        "Becoming.Growth",
-        "Becoming.Retaining",
-        "Becoming.OwnWidening",
-        "Becoming.Clearing",
-        "Becoming.Extension",
-        "Becoming.Metaethics",
-        "Becoming.Lifting",
-        "Becoming.Ranking",
-        "Becoming.ActiveReading",
-        "Becoming.LossMatching",
-        "Becoming.StrictTransport",
-        "Becoming.MatchedCourses",
-        "Becoming.Correspondence",
-        "Becoming.Descent",
-        "Becoming.Standpoints",
-        "Becoming.Significance",
-        "Becoming.ValuationFrames",
-        "Becoming.RelativePosition",
-        "Becoming.Interdependence",
-        "Becoming.Feeding",
-        "Becoming.Feedback",
-        "Becoming.BoundedSignificance",
-        "Becoming.Cuts",
-        "Becoming.EdgeClosure",
-        "Becoming.SeedReach",
-        "Becoming.ScopedReach",
-        "Becoming.Boundaries",
-        "Becoming.ConveyanceBoundaries",
-        "Becoming.BalanceRegions",
-        "Becoming.Weightings",
-        "Becoming.Relevance",
-        "Becoming.Testing",
-        "Becoming.Runaway",
-        "Becoming.Response",
-        "Becoming.TimedResponse",
-        "Becoming.Latency",
-        "Becoming.Centers",
-        "Becoming.Counterfactual",
-        "Becoming.Regrouping",
-        "Becoming.Selection",
-        "Becoming.Learning",
-        "Becoming.Unread",
-        "Becoming.Cascade",
-        "Becoming.RevisionRoutes",
-        "Becoming.ReadStages",
-        "Becoming.PropositionIdentity",
-        "Becoming.Hexagrams",
-        "Becoming.HexagramPlaces",
-        "Becoming.HexagramLaws",
-        "Becoming.HexagramSites",
-        "Becoming.HexagramSequences",
-        "Becoming.Withholding",
-        "Becoming.LoopReturn",
-        "Becoming.Pace",
-        "Becoming.RuleCapture",
-        "Becoming.ClosedCapture",
-        "Becoming.RuleShaping",
-        "Becoming.ChoiceCountCapture",
-        "Becoming.DrawnShaping",
-        "Becoming.ReadInTime",
-        "Becoming.PatternPassing",
-        "Becoming.JointKeeping",
-        "Becoming.Undecided",
-        "Becoming.Junctures",
-        "Becoming.Commuting",
-        "Becoming.WeightedCommuting",
-        "Becoming.HexagramCommuting",
-        "Becoming.Tolerance",
-        "Becoming.Revision",
-        "Becoming.Contacts",
-        "Becoming.RegroupingSelection",
-        "Becoming.ReferencePlan",
-        "Becoming.ContinuingRevision",
-        "Becoming.Description",
-        "Becoming.Identification",
-        "Becoming.Learnable",
-        "Becoming.Assurance",
-        "Becoming.AssurancePlans",
-        "Becoming.Integers",
-        "Becoming.Segmentation",
-        "Becoming.Readout",
-        "Becoming.Dephasing",
-        "Becoming.ProjectedLaws",
-        "Becoming.JointPhase",
-        "Becoming.SummaryFutures",
-        "Becoming.Gated",
-        "Becoming.Viability",
-        "Becoming.Keeping",
-        "Becoming.ReflexivePrediction",
-        "Becoming.Prelude",
-        "Becoming.Ideals",
-        "Becoming.ContingentPlans",
-        "Becoming.Actuation",
-        "Becoming.TreeSearch",
-        "Becoming.Dispatch",
-        "Becoming.FaultEnvelopes",
-        "Becoming.Transactions",
-        "Becoming.Reconfiguration",
-        "Becoming.PooledEnvelopes",
-        "Becoming.WitnessRefinement",
-        "Becoming.WitnessRefinementRuns",
-        "Becoming.ChanceFloors",
-        "Becoming.IntegerOrder",
-        "Becoming.Acceptance",
-        "Becoming.GuardHorizon",
-        "Becoming.OpenedCorrection",
-        "Becoming.Countdown",
-        "Becoming.Lasting",
-        "Becoming.Copying",
-        "Becoming.Retrodiction",
-        "Becoming.CrossSituational",
-        "Becoming.Likeness",
-        "Becoming.Distinguishing",
-        "Becoming.JointPlans",
-        "Becoming.Composition",
-        "Becoming.Joining",
-        "Becoming.Granularity",
-        "Becoming.HistoryLanguages",
-        "Becoming.HistoryIdeals",
-        "Becoming.HistoryIdealsTraces",
-        "Becoming.Verification",
-        "Becoming.Coverage",
-        "Becoming.Presentations",
-        "Becoming.Carriers",
-        "Becoming.BranchingCorrespondence",
-        "Becoming.JointCorrespondence",
-        "Becoming.ListFootprints",
-        "Becoming.Fragments",
-        "Becoming.LocalUnits",
-        "Becoming.JoiningContexts",
-        "Becoming.JoiningCodes",
-        "Becoming.JoiningRoles",
-        "Becoming.Postponement",
-        "Becoming.Novelty",
-        "Becoming.Reading",
-        "Becoming.PlaceTransitionNets",
-        "Becoming.SharedCodes",
-        "Becoming.CountedCodes",
-        "Becoming.ExchangePremises",
-        "Becoming.OverExchange",
-        "Becoming.Readings",
-        "Becoming.MoveFormation",
-        "Becoming.Sensitivity",
-        "Becoming.Tail",
-        "Becoming.Courses",
-        "Becoming.Parting",
-        "Becoming.Onward",
-        "Becoming.Typicality",
-        "Becoming.ConditionalWeights",
-        "Becoming.Situations",
-        "Becoming.Propagation",
-        "Becoming.Regulation",
-        "Becoming.ReadingSchedule",
-        "Becoming.RegimeMargin",
-        "Becoming.ListingRefutations",
-        "Becoming.Loops",
-        "Becoming.Remainder",
-        "Becoming.Routes",
-        "Becoming.Closing",
-        "Becoming.Thresholds",
-        "Becoming.Observation",
-        "Becoming.Frequency",
-        "Becoming.MutualDependence",
-        "Becoming.Gain",
-        "Becoming.KeepingWidening",
-        "Becoming.LineDegeneration",
-        "Becoming.SelectionShift",
-        "Becoming.LineageRegions",
-        "Becoming.LineageRegimes",
-        "Becoming.WideningOnTheMap",
-        "Becoming.Gluing",
-        "Becoming.Runs",
-        "Becoming.CourseWorlds",
-        "Becoming.LearnableRuns",
-        "Becoming.PartialReadout",
-        "Becoming.CodeAcquisition",
-        "Becoming.RouteFormation",
-        "Becoming.ResponseLearning",
-        "Becoming.LearnedGrouping",
-        "Becoming.ParityReadings",
-        "Becoming.FinerTraces",
-        "Becoming.HistorySums",
-        "Becoming.FormedLoops",
-        "Becoming.AttractionRuns",
-        "Becoming.ContactCourses",
-        "Becoming.ContextualRuns",
-        "Becoming.ContinuingRuns",
-        "Becoming.CopyCourses",
-        "Becoming.CounterfactualRuns",
-        "Becoming.CouplingTraces",
-        "Becoming.CourseRoles",
-        "Becoming.HorizonWebs",
-        "Becoming.IdentificationRuns",
-        "Becoming.LastingRuns",
-        "Becoming.LearningRuns",
-        "Becoming.ListedWebs",
-        "Becoming.ReferencePlanTraces",
-        "Becoming.RouteTraces",
-        "Becoming.SeekingRuns",
-        "Becoming.SelectionRuns",
-        "Becoming.SensitivityWebs",
-        "Becoming.SituationTraces",
-        "Becoming.StrengthFlows",
-        "Becoming.TypicalRuns",
-        "Becoming.WeightedTraces",
-        "Becoming.LevelCoupling",
-        "Becoming.Interleavings",
-        "Becoming.CensusCounts",
-        "Becoming.CensusBinding",
-        "Becoming.Unrolling",
-        "Becoming.Labels",
-        "Becoming.Enough",
-        "Becoming.Settling",
-        "Becoming.LastChange",
-        "Becoming.LimitVerification",
-        "Becoming.SelectionGap",
-        "Becoming.SelectionReach",
-        "Becoming.UnitMatchings",
-        "Becoming.UnreadStandings",
-        "Becoming.DrawnBeyond",
-        "Becoming.WindowedWaiting",
-        "Becoming.PairSelection",
-        "Becoming.JointDraw",
-        "Becoming.Optimum",
-        "Becoming.OptimumSeason",
-        "Becoming.SetPointOptimum",
-        "Becoming.SelectionPool",
-        "Becoming.PoolResponse",
-        "Becoming.Training",
-        "Becoming.PoolCourse",
-        "Becoming.Rejoining",
-        "Becoming.Lexical",
-        "Becoming.Frontier",
-        "Becoming.FrontierFrames",
-        "Becoming.FrontierWorlds",
-        "Becoming.Direction",
-        "Becoming.ScoreRepresentation",
-        "Becoming.Alternatives",
-        "Becoming.Bundles",
-        "Becoming.ActivationCapacity",
-        "Becoming.Narrowing",
-        "Becoming.NarrowingRuns",
-        "Becoming.ReadingLoop",
-        "Becoming.RevisionPlans",
-        "Becoming.HeldForReading",
-        "Becoming.ListingValuation",
-        "Becoming.SecuredContent",
-        "Becoming.ProfileReach",
-        "Becoming.RenewalBound",
-        "Becoming.Handoff",
-        "Becoming.RuleHandoff",
-        "Becoming.GrammarCourse",
-        "Becoming.GrammarRegularity",
-        "Becoming.ProcessRepresentation",
-        "Becoming.GrammarScope",
-        "Becoming.GrammarCases",
-        "Becoming.GrammarCrossing",
-        "Becoming.PremiseWitnesses",
-        "Becoming.GrammarPath",
-        "Becoming.SignificanceStatements"
-      ],
-      "declarations": [],
-      "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "b062315f1166b61ea22a0b6c5b1f832378dad9ae05810b98df271639c409afc8": {
       "byte_size": 19827,
       "line_count": 357,
@@ -536412,6 +537570,473 @@
       },
       "print_axioms_commands": 29
     },
+    "fc4d8bada266a72cddf1b4d4f1365cc350eb26a9a894d9d6ed7efb71281e02b4": {
+      "byte_size": 17783,
+      "line_count": 493,
+      "imports": [
+        "Becoming.BlanketCouplings",
+        "Becoming.Testing"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "sameStepLaw",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.sameStepLaw",
+          "line": 41
+        },
+        {
+          "kind": "theorem",
+          "name": "sameStep_sensory",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.sameStep_sensory",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "value",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.value",
+          "line": 60
+        },
+        {
+          "kind": "def",
+          "name": "lev",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.lev",
+          "line": 62
+        },
+        {
+          "kind": "def",
+          "name": "env",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.env",
+          "line": 65
+        },
+        {
+          "kind": "def",
+          "name": "own",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.own",
+          "line": 68
+        },
+        {
+          "kind": "def",
+          "name": "policy",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.policy",
+          "line": 70
+        },
+        {
+          "kind": "def",
+          "name": "flips",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.flips",
+          "line": 73
+        },
+        {
+          "kind": "def",
+          "name": "sameStep",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.sameStep",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "lag",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.LagWitness.lag",
+          "line": 85
+        },
+        {
+          "kind": "theorem",
+          "name": "next_alike_iff_net_alike",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.next_alike_iff_net_alike",
+          "line": 101
+        },
+        {
+          "kind": "inductive",
+          "name": "Two",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.Two",
+          "line": 126
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.take",
+          "line": 134
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.give",
+          "line": 137
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.flow",
+          "line": 143
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.level",
+          "line": 145
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.web",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.balances",
+          "line": 153
+        },
+        {
+          "kind": "theorem",
+          "name": "h_uncoupled",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.h_uncoupled",
+          "line": 158
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.run",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "law",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.law",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "course_eq",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.course_eq",
+          "line": 174
+        },
+        {
+          "kind": "theorem",
+          "name": "fed_blanketed",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.fed_blanketed",
+          "line": 180
+        },
+        {
+          "kind": "theorem",
+          "name": "fed_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SteadyFeed.fed_consistent",
+          "line": 187
+        },
+        {
+          "kind": "def",
+          "name": "pulse",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.pulse",
+          "line": 201
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.take",
+          "line": 206
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.flow",
+          "line": 212
+        },
+        {
+          "kind": "def",
+          "name": "hLevel",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.hLevel",
+          "line": 214
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.level",
+          "line": 219
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.web",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.balances",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "level_moves_through",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.level_moves_through",
+          "line": 233
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.run",
+          "line": 235
+        },
+        {
+          "kind": "theorem",
+          "name": "not_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.ActUnread.not_consistent",
+          "line": 240
+        },
+        {
+          "kind": "def",
+          "name": "phase",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.phase",
+          "line": 252
+        },
+        {
+          "kind": "def",
+          "name": "drawn",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.drawn",
+          "line": 254
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.take",
+          "line": 260
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.flow",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "phase_three",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.phase_three",
+          "line": 268
+        },
+        {
+          "kind": "theorem",
+          "name": "drained",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.drained",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "no_balanced_history",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.DrainOnly.no_balanced_history",
+          "line": 294
+        },
+        {
+          "kind": "def",
+          "name": "phase",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.phase",
+          "line": 305
+        },
+        {
+          "kind": "def",
+          "name": "gLevel",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.gLevel",
+          "line": 308
+        },
+        {
+          "kind": "def",
+          "name": "hLevel",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.hLevel",
+          "line": 314
+        },
+        {
+          "kind": "def",
+          "name": "hTakesG",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.hTakesG",
+          "line": 319
+        },
+        {
+          "kind": "def",
+          "name": "hGivesG",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.hGivesG",
+          "line": 324
+        },
+        {
+          "kind": "def",
+          "name": "hTakesH",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.hTakesH",
+          "line": 329
+        },
+        {
+          "kind": "def",
+          "name": "hGivesH",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.hGivesH",
+          "line": 334
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.take",
+          "line": 339
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.give",
+          "line": 345
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.flow",
+          "line": 351
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.level",
+          "line": 353
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.web",
+          "line": 357
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_g",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.balance_g",
+          "line": 360
+        },
+        {
+          "kind": "theorem",
+          "name": "balance_h",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.balance_h",
+          "line": 366
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.balances",
+          "line": 372
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.run",
+          "line": 376
+        },
+        {
+          "kind": "theorem",
+          "name": "not_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.not_consistent",
+          "line": 382
+        },
+        {
+          "kind": "def",
+          "name": "readNext",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.readNext",
+          "line": 388
+        },
+        {
+          "kind": "def",
+          "name": "nextOfLevel",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.nextOfLevel",
+          "line": 392
+        },
+        {
+          "kind": "theorem",
+          "name": "readNext_of_level",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.readNext_of_level",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "world_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.PhasedDrain.world_consistent",
+          "line": 403
+        },
+        {
+          "kind": "def",
+          "name": "gLevel",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.gLevel",
+          "line": 422
+        },
+        {
+          "kind": "def",
+          "name": "drawn",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.drawn",
+          "line": 428
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.take",
+          "line": 433
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.flow",
+          "line": 439
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.level",
+          "line": 441
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.web",
+          "line": 445
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.balances",
+          "line": 448
+        },
+        {
+          "kind": "def",
+          "name": "own",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.own",
+          "line": 455
+        },
+        {
+          "kind": "theorem",
+          "name": "moves",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.moves",
+          "line": 460
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.run",
+          "line": 465
+        },
+        {
+          "kind": "theorem",
+          "name": "agent_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.agent_consistent",
+          "line": 469
+        },
+        {
+          "kind": "theorem",
+          "name": "world_not_consistent",
+          "qualified_name_hint": "Becoming.UE28ReviewProbe.SpentDrain.world_not_consistent",
+          "line": 481
+        }
+      ],
+      "declaration_counts": {
+        "def": 49,
+        "inductive": 1,
+        "theorem": 24
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "fcfab786b4d7b9f1bd038401128e57aec33cf88d33d7f995c5ff50c9ece05e59": {
       "byte_size": 9896,
       "line_count": 198,
@@ -544327,6 +545952,10 @@
       "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/g1-selection-gap/Becoming/SelectionGap.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean"
     ],
+    "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/tree/Becoming/BlanketCouplings.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean"
+    ],
     "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01": [
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/Regions.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean"
@@ -545111,10 +546740,6 @@
     "f9087252c4c7d2d74e7f2288f4c3b089ac3fbe3da4c98af7126da9a16002d42c": [
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/tree/Becoming/FreeEnergyCounting.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean"
-    ],
-    "fd162b69886bb1afce3a26c7247959ac82be1fd0fd33a531d7b527a76a098f73": [
-      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue27-which-blanket-a-thing-has/tree/Becoming/BlanketCouplings.lean",
-      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean"
     ]
   }
 }

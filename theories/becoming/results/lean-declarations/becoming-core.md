@@ -889,7 +889,7 @@ Definitions and types:
 <a id="module-bacb75708c65"></a>
 
 <details>
-<summary>BlanketCouplings.lean — 76 explicit declarations</summary>
+<summary>BlanketCouplings.lean — 140 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -899,85 +899,149 @@ Imports: `Becoming.Blanket`, `Becoming.Histories`, `Becoming.IdentificationRuns`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.BlanketCouplings.parts_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L99) | 99 |
-| [Becoming.BlanketCouplings.pair_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L104) | 104 |
-| [Becoming.BlanketCouplings.unit_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L108) | 108 |
-| [Becoming.BlanketCouplings.partDependsOnlyOn_id_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L139) | 139 |
-| [Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L154) | 154 |
-| [Becoming.BlanketCouplings.PartDependsOnlyOn.of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L167) | 167 |
-| [Becoming.BlanketCouplings.PartConsistentFamily.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L173) | 173 |
-| [Becoming.BlanketCouplings.shownBy_blanketDetermined_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L198) | 198 |
-| [Becoming.BlanketCouplings.BlanketDetermined.of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L204) | 204 |
-| [Becoming.BlanketCouplings.BlanketConsistentFamily.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L209) | 209 |
-| [Becoming.BlanketCouplings.admitted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L215) | 215 |
-| [Becoming.BlanketCouplings.BlanketDetermined.determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L223) | 223 |
-| [Becoming.BlanketCouplings.blanketed_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L233) | 233 |
-| [Becoming.BlanketCouplings.blanketed_step_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L252) | 252 |
-| [Becoming.BlanketCouplings.blanketed_courses_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L263) | 263 |
-| [Becoming.BlanketCouplings.clock](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L303) | 303 |
-| [Becoming.BlanketCouplings.sensory_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L314) | 314 |
-| [Becoming.BlanketCouplings.blanket_iff_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L325) | 325 |
-| [Becoming.BlanketCouplings.internal_through_couplings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L356) | 356 |
-| [Becoming.BlanketCouplings.open_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L382) | 382 |
-| [Becoming.BlanketCouplings.open_levels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L388) | 388 |
-| [Becoming.BlanketCouplings.internal_selectsThrough](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L395) | 395 |
-| [Becoming.BlanketCouplings.ThresholdCase.band_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L434) | 434 |
-| [Becoming.BlanketCouplings.ThresholdCase.admits_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L437) | 437 |
-| [Becoming.BlanketCouplings.ThresholdCase.values](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L443) | 443 |
-| [Becoming.BlanketCouplings.ThresholdCase.corr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L455) | 455 |
-| [Becoming.BlanketCouplings.ThresholdCase.own_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L474) | 474 |
-| [Becoming.BlanketCouplings.ThresholdCase.threshold_case](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L480) | 480 |
-| [Becoming.BlanketCouplings.clocked_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L528) | 528 |
-| [Becoming.BlanketCouplings.clocked_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L534) | 534 |
-| [Becoming.BlanketCouplings.clocked_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L548) | 548 |
-| [Becoming.BlanketCouplings.clock_only_fails](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L565) | 565 |
-| [Becoming.BlanketCouplings.suffix_apply](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L582) | 582 |
-| [Becoming.BlanketCouplings.suffix_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L586) | 586 |
-| [Becoming.BlanketCouplings.future_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L599) | 599 |
-| [Becoming.BlanketCouplings.const_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L623) | 623 |
-| [Becoming.BlanketCouplings.injective_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L630) | 630 |
-| [Becoming.BlanketCouplings.whole_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L650) | 650 |
-| [Becoming.BlanketCouplings.ReadsExternal.internal_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L703) | 703 |
-| [Becoming.BlanketCouplings.ReadsExternal.not_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L710) | 710 |
-| [Becoming.BlanketCouplings.ReadsExternal.not_blanketed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L717) | 717 |
-| [Becoming.BlanketCouplings.ReadsExternal.whole_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L726) | 726 |
-| [Becoming.BlanketCouplings.injective_converse_fails](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L738) | 738 |
+| [Becoming.BlanketCouplings.parts_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L130) | 130 |
+| [Becoming.BlanketCouplings.pair_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L135) | 135 |
+| [Becoming.BlanketCouplings.unit_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L139) | 139 |
+| [Becoming.BlanketCouplings.partDependsOnlyOn_id_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L170) | 170 |
+| [Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L185) | 185 |
+| [Becoming.BlanketCouplings.PartDependsOnlyOn.of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L198) | 198 |
+| [Becoming.BlanketCouplings.PartConsistentFamily.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L204) | 204 |
+| [Becoming.BlanketCouplings.shownBy_blanketDetermined_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L229) | 229 |
+| [Becoming.BlanketCouplings.BlanketDetermined.of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L235) | 235 |
+| [Becoming.BlanketCouplings.BlanketConsistentFamily.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L240) | 240 |
+| [Becoming.BlanketCouplings.admitted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L246) | 246 |
+| [Becoming.BlanketCouplings.BlanketDetermined.determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L254) | 254 |
+| [Becoming.BlanketCouplings.blanketed_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L264) | 264 |
+| [Becoming.BlanketCouplings.blanketed_step_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L283) | 283 |
+| [Becoming.BlanketCouplings.blanketed_courses_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L294) | 294 |
+| [Becoming.BlanketCouplings.clock](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L334) | 334 |
+| [Becoming.BlanketCouplings.sensory_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L345) | 345 |
+| [Becoming.BlanketCouplings.blanket_iff_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L356) | 356 |
+| [Becoming.BlanketCouplings.internal_through_couplings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L387) | 387 |
+| [Becoming.BlanketCouplings.open_external](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L413) | 413 |
+| [Becoming.BlanketCouplings.open_levels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L419) | 419 |
+| [Becoming.BlanketCouplings.internal_selectsThrough](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L426) | 426 |
+| [Becoming.BlanketCouplings.ThresholdCase.band_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L465) | 465 |
+| [Becoming.BlanketCouplings.ThresholdCase.admits_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L468) | 468 |
+| [Becoming.BlanketCouplings.ThresholdCase.values](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L474) | 474 |
+| [Becoming.BlanketCouplings.ThresholdCase.corr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L486) | 486 |
+| [Becoming.BlanketCouplings.ThresholdCase.own_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L505) | 505 |
+| [Becoming.BlanketCouplings.ThresholdCase.threshold_case](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L511) | 511 |
+| [Becoming.BlanketCouplings.clocked_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L559) | 559 |
+| [Becoming.BlanketCouplings.clocked_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L565) | 565 |
+| [Becoming.BlanketCouplings.clocked_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L579) | 579 |
+| [Becoming.BlanketCouplings.clock_only_fails](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L596) | 596 |
+| [Becoming.BlanketCouplings.suffix_apply](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L613) | 613 |
+| [Becoming.BlanketCouplings.suffix_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L617) | 617 |
+| [Becoming.BlanketCouplings.future_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L630) | 630 |
+| [Becoming.BlanketCouplings.const_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L654) | 654 |
+| [Becoming.BlanketCouplings.injective_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L661) | 661 |
+| [Becoming.BlanketCouplings.whole_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L681) | 681 |
+| [Becoming.BlanketCouplings.ReadsExternal.internal_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L734) | 734 |
+| [Becoming.BlanketCouplings.ReadsExternal.not_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L741) | 741 |
+| [Becoming.BlanketCouplings.ReadsExternal.not_blanketed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L748) | 748 |
+| [Becoming.BlanketCouplings.ReadsExternal.whole_consistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L757) | 757 |
+| [Becoming.BlanketCouplings.injective_converse_fails](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L769) | 769 |
+| [Becoming.BlanketCouplings.stepExternal_consistent_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L801) | 801 |
+| [Becoming.BlanketCouplings.stepExternal_admitted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L825) | 825 |
+| [Becoming.BlanketCouplings.stepLaw_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L848) | 848 |
+| [Becoming.BlanketCouplings.next_level_alike_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L868) | 868 |
+| [Becoming.BlanketCouplings.agentConsistent_iff_exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L919) | 919 |
+| [Becoming.BlanketCouplings.ValuesAcross.through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L941) | 941 |
+| [Becoming.BlanketCouplings.listed_valuesAcross](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L948) | 948 |
+| [Becoming.BlanketCouplings.levelParts_admitted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L973) | 973 |
+| [Becoming.BlanketCouplings.TwoRelata.g_not_mem_h](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L999) | 999 |
+| [Becoming.BlanketCouplings.PhasedDrain.balance_g](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1070) | 1070 |
+| [Becoming.BlanketCouplings.PhasedDrain.balance_h](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1076) | 1076 |
+| [Becoming.BlanketCouplings.PhasedDrain.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1083) | 1083 |
+| [Becoming.BlanketCouplings.PhasedDrain.uncoupled](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1088) | 1088 |
+| [Becoming.BlanketCouplings.PhasedDrain.one_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1095) | 1095 |
+| [Becoming.BlanketCouplings.PhasedDrain.values](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1102) | 1102 |
+| [Becoming.BlanketCouplings.PhasedDrain.presence_decides](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1109) | 1109 |
+| [Becoming.BlanketCouplings.PhasedDrain.not_admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1118) | 1118 |
+| [Becoming.BlanketCouplings.Alternating.balance_g](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1187) | 1187 |
+| [Becoming.BlanketCouplings.Alternating.balance_h](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1191) | 1191 |
+| [Becoming.BlanketCouplings.Alternating.balances](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1196) | 1196 |
+| [Becoming.BlanketCouplings.Alternating.uncoupled](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1201) | 1201 |
+| [Becoming.BlanketCouplings.Alternating.values](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1207) | 1207 |
+| [Becoming.BlanketCouplings.Alternating.presence_decides](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1214) | 1214 |
+| [Becoming.BlanketCouplings.Alternating.gLevel_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1220) | 1220 |
+| [Becoming.BlanketCouplings.Alternating.recurs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1227) | 1227 |
+| [Becoming.BlanketCouplings.Alternating.agentConsistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1231) | 1231 |
+| [Becoming.BlanketCouplings.Alternating.admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1237) | 1237 |
 
 Definitions and types:
 
-- `def` [Becoming.BlanketCouplings.agentReads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L112) (L112)
-- `def` [Becoming.BlanketCouplings.agentParts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L115) (L115)
-- `def` [Becoming.BlanketCouplings.worldReads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L118) (L118)
-- `def` [Becoming.BlanketCouplings.worldParts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L121) (L121)
-- `def` [Becoming.BlanketCouplings.PartDependsOnlyOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L135) (L135)
-- `def` [Becoming.BlanketCouplings.PartConsistentFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L148) (L148)
-- `def` [Becoming.BlanketCouplings.BlanketDetermined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L188) (L188)
-- `def` [Becoming.BlanketCouplings.BlanketConsistentFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L193) (L193)
-- `def` [Becoming.BlanketCouplings.couplingLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L292) (L292)
-- `def` [Becoming.BlanketCouplings.startAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L299) (L299)
-- `def` [Becoming.BlanketCouplings.ownLevels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L309) (L309)
-- `def` [Becoming.BlanketCouplings.levelsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L370) (L370)
-- `def` [Becoming.BlanketCouplings.levelsStay](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L374) (L374)
-- `def` [Becoming.BlanketCouplings.openLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L378) (L378)
-- `def` [Becoming.BlanketCouplings.ThresholdCase.value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L420) (L420)
-- `def` [Becoming.BlanketCouplings.ThresholdCase.lev](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L423) (L423)
-- `def` [Becoming.BlanketCouplings.ThresholdCase.env](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L426) (L426)
-- `def` [Becoming.BlanketCouplings.ThresholdCase.update](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L429) (L429)
-- `def` [Becoming.BlanketCouplings.ThresholdCase.policy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L432) (L432)
-- `def` [Becoming.BlanketCouplings.clocked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L521) (L521)
-- `def` [Becoming.BlanketCouplings.parting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L541) (L541)
-- `def` [Becoming.BlanketCouplings.partingLate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L558) (L558)
-- `def` [Becoming.BlanketCouplings.shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L575) (L575)
-- `def` [Becoming.BlanketCouplings.suffix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L578) (L578)
-- `def` [Becoming.BlanketCouplings.future](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L592) (L592)
-- `def` [Becoming.BlanketCouplings.readFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L618) (L618)
-- `def` [Becoming.BlanketCouplings.whole](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L646) (L646)
-- `inductive` [Becoming.BlanketCouplings.ReadsExternal.Three](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L675) (L675)
-- `def` [Becoming.BlanketCouplings.ReadsExternal.next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L681) (L681)
-- `def` [Becoming.BlanketCouplings.ReadsExternal.isFirst](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L687) (L687)
-- `def` [Becoming.BlanketCouplings.ReadsExternal.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L693) (L693)
-- `def` [Becoming.BlanketCouplings.ReadsExternal.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L697) (L697)
-- `def` [Becoming.BlanketCouplings.ReadsExternal.run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L700) (L700)
+- `def` [Becoming.BlanketCouplings.agentReads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L143) (L143)
+- `def` [Becoming.BlanketCouplings.agentParts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L146) (L146)
+- `def` [Becoming.BlanketCouplings.worldReads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L149) (L149)
+- `def` [Becoming.BlanketCouplings.worldParts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L152) (L152)
+- `def` [Becoming.BlanketCouplings.PartDependsOnlyOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L166) (L166)
+- `def` [Becoming.BlanketCouplings.PartConsistentFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L179) (L179)
+- `def` [Becoming.BlanketCouplings.BlanketDetermined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L219) (L219)
+- `def` [Becoming.BlanketCouplings.BlanketConsistentFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L224) (L224)
+- `def` [Becoming.BlanketCouplings.couplingLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L323) (L323)
+- `def` [Becoming.BlanketCouplings.startAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L330) (L330)
+- `def` [Becoming.BlanketCouplings.ownLevels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L340) (L340)
+- `def` [Becoming.BlanketCouplings.levelsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L401) (L401)
+- `def` [Becoming.BlanketCouplings.levelsStay](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L405) (L405)
+- `def` [Becoming.BlanketCouplings.openLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L409) (L409)
+- `def` [Becoming.BlanketCouplings.ThresholdCase.value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L451) (L451)
+- `def` [Becoming.BlanketCouplings.ThresholdCase.lev](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L454) (L454)
+- `def` [Becoming.BlanketCouplings.ThresholdCase.env](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L457) (L457)
+- `def` [Becoming.BlanketCouplings.ThresholdCase.update](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L460) (L460)
+- `def` [Becoming.BlanketCouplings.ThresholdCase.policy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L463) (L463)
+- `def` [Becoming.BlanketCouplings.clocked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L552) (L552)
+- `def` [Becoming.BlanketCouplings.parting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L572) (L572)
+- `def` [Becoming.BlanketCouplings.partingLate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L589) (L589)
+- `def` [Becoming.BlanketCouplings.shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L606) (L606)
+- `def` [Becoming.BlanketCouplings.suffix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L609) (L609)
+- `def` [Becoming.BlanketCouplings.future](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L623) (L623)
+- `def` [Becoming.BlanketCouplings.readFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L649) (L649)
+- `def` [Becoming.BlanketCouplings.whole](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L677) (L677)
+- `inductive` [Becoming.BlanketCouplings.ReadsExternal.Three](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L706) (L706)
+- `def` [Becoming.BlanketCouplings.ReadsExternal.next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L712) (L712)
+- `def` [Becoming.BlanketCouplings.ReadsExternal.isFirst](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L718) (L718)
+- `def` [Becoming.BlanketCouplings.ReadsExternal.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L724) (L724)
+- `def` [Becoming.BlanketCouplings.ReadsExternal.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L728) (L728)
+- `def` [Becoming.BlanketCouplings.ReadsExternal.run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L731) (L731)
+- `def` [Becoming.BlanketCouplings.stepExternal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L786) (L786)
+- `def` [Becoming.BlanketCouplings.AgentConsistent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L794) (L794)
+- `def` [Becoming.BlanketCouplings.stepLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L837) (L837)
+- `def` [Becoming.BlanketCouplings.levelParts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L895) (L895)
+- `def` [Becoming.BlanketCouplings.rowAct](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L900) (L900)
+- `def` [Becoming.BlanketCouplings.presentRow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L905) (L905)
+- `def` [Becoming.BlanketCouplings.DecidesPresence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L912) (L912)
+- `def` [Becoming.BlanketCouplings.ValuesAcross](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L936) (L936)
+- `inductive` [Becoming.BlanketCouplings.TwoRelata](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L994) (L994)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.phase](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1010) (L1010)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.gLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1013) (L1013)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.hLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1019) (L1019)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.hTakesG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1024) (L1024)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.hGivesG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1029) (L1029)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.hTakesH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1034) (L1034)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.hGivesH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1039) (L1039)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1045) (L1045)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.give](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1053) (L1053)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1060) (L1060)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1062) (L1062)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1067) (L1067)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.presence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1107) (L1107)
+- `def` [Becoming.BlanketCouplings.PhasedDrain.act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1113) (L1113)
+- `def` [Becoming.BlanketCouplings.Alternating.phase](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1132) (L1132)
+- `def` [Becoming.BlanketCouplings.Alternating.gLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1137) (L1137)
+- `def` [Becoming.BlanketCouplings.Alternating.hLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1142) (L1142)
+- `def` [Becoming.BlanketCouplings.Alternating.hTakesG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1146) (L1146)
+- `def` [Becoming.BlanketCouplings.Alternating.hGivesG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1150) (L1150)
+- `def` [Becoming.BlanketCouplings.Alternating.hTakesH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1154) (L1154)
+- `def` [Becoming.BlanketCouplings.Alternating.hGivesH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1158) (L1158)
+- `def` [Becoming.BlanketCouplings.Alternating.take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1163) (L1163)
+- `def` [Becoming.BlanketCouplings.Alternating.give](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1170) (L1170)
+- `def` [Becoming.BlanketCouplings.Alternating.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1177) (L1177)
+- `def` [Becoming.BlanketCouplings.Alternating.level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1179) (L1179)
+- `def` [Becoming.BlanketCouplings.Alternating.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1184) (L1184)
+- `def` [Becoming.BlanketCouplings.Alternating.presence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1212) (L1212)
+- `def` [Becoming.BlanketCouplings.Alternating.act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean#L1218) (L1218)
 
 </details>
 

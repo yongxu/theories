@@ -1767,9 +1767,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   determined, a law determined part by part (`BlanketCouplings.const_consistent`,
   `BlanketCouplings.whole_iff`), any injective reading only those and not always
   (`BlanketCouplings.injective_converse_fails`); a sparse partition fixed apart from the family, on a law
-  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`). A
-  leaf importing `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board item
-  UE27).
+  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`).
+  Along one balanced run with the step as the external part, a formation's own level, read with a
+  value across steps of what couples into it (`BlanketCouplings.ValuesAcross`) and its act, is the
+  internal part of a law determined part by part exactly where, at any two steps alike on its level,
+  its admission, the levels coupled into it and its act, what is given to it at one step plus what is
+  taken from it at the other is the same with the steps exchanged and its next acts agree
+  (`BlanketCouplings.levelParts_admitted_iff`), tested only where these recur; a drain in three phases fails it (`BlanketCouplings.PhasedDrain.not_admitted`), a drain and
+  feed in two phases meets it (`BlanketCouplings.Alternating.admitted`). A leaf importing
+  `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board items UE27 and
+  UE28).
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
