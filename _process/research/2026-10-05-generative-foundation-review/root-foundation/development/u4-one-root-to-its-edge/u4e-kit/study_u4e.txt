@@ -26,8 +26,11 @@ Delta:
 Checked: core receipt {RECEIPT}, every axiom report empty; Becoming.Identity (IDENTITY), Becoming.Persistence
        (PERSISTENCE), Becoming.RootForms (ROOTFORMS). The signature audit (u4e-kit/u4e_signatures.py, main's side read at the main merged in): the
        five statements are main's with exactly the dropped binders removed, and some_depends main's less its double
-       negation; every other statement of the three modules unchanged; nothing added, gone or moved. UnusedDecisions.lean: on main the five laws held ten
-       decision binders used by neither statement nor proof; on the change none is left in the two modules.
+       negation; every other statement of the three modules unchanged; nothing added, gone or moved. UnusedDecisions.lean (u4e-kit/unused_decisions.py): on main, of
+       Identity's and Persistence's 68 decision binders, five were used by neither statement nor proof (the two
+       from-a-step laws' and persisting_census' decided continuation), and five more only to pass them on (the census
+       laws' and persisting_census' decided activity and the other direction's continuation); the change drops the
+       ten, and none of the 58 left is unused.
 Standing: proved, as the records state.
 Boundary: the balance across a step (Web.Census.balanceFrom and its kin) keeps decided activity and both decisions
        of the continuation, which its count by marks uses; which decision the exact forms need least stays open
