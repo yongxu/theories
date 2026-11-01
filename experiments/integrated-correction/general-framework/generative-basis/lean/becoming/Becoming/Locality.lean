@@ -470,23 +470,6 @@ def ListsAt (p : α → Nat → Prop) (L : List α) (N : Nat) : Prop :=
 def NoneComes (p : α → Nat → Prop) (N n : Nat) : Prop :=
   ∀ s a, N ≤ s → s < N + n → ¬ ComesToBe (p a) s
 
-/-- Where a quantity is positive at arbitrarily late steps unless a proposition holds, its
-totals over stretches from any step exceed every bound, or the proposition holds. -/
-theorem accumulates_or {q : Nat → Nat} {R : Prop}
-    (recurs : ∀ N, ∃ t, N ≤ t ∧ (0 < q t ∨ R)) (N : Nat) :
-    ∀ K, R ∨ ∃ n, K ≤ total (steps N n) q
-  | 0 => .inr ⟨0, Nat.zero_le _⟩
-  | K + 1 => match accumulates_or recurs N K with
-    | .inl holds => .inl holds
-    | .inr ⟨n, many⟩ => match recurs (N + n) with
-      | ⟨_, _, .inr holds⟩ => .inl holds
-      | ⟨_, later, .inl positive⟩ => match le_dest later with
-        | ⟨m, same⟩ => .inr ⟨n + m + 1, Nat.le_trans
-            (Nat.add_le_add (Nat.le_trans many (steps_mono q N n m))
-              (Nat.lt_of_lt_of_le positive
-                (Nat.le_of_eq (congrArg q (same.trans (Nat.add_assoc N n m))))))
-            (Nat.le_of_eq (steps_last q N (n + m)).symm)⟩
-
 /-- What fails at `S` and comes to be at none of the `n` steps from `S` fails at each step
 up to `S + n`; no decidability is needed. -/
 theorem stays_failing_within {q : Nat → Prop} {S : Nat} (fails : ¬ q S) :
@@ -498,6 +481,47 @@ theorem stays_failing_within {q : Nat → Prop} {S : Nat} (fails : ¬ q S) :
       ⟨stays_failing_within fails (n := n)
         (fun j below => still j (Nat.lt_succ_of_lt below)) k (Nat.le_of_succ_le_succ within),
        holds⟩
+
+/-! ### A relatum's occurrences along its steps
+
+The census laws below are the root's covering laws (`«所覆后亡屡则有生»`, `«所覆后亡屡则生未否»`,
+`«间无生则间亡不过所覆»`) at the relata's occurrences `(t, a)` where `p a t` holds, each step one
+stage on along `Steps.along` within the class of the determination, where coming to be and ceasing
+to be are a beginning and an ending (`comesToBe_iff_sheng_along`, `ceasesToBe_iff_wang_along`). -/
+
+section Occurrences
+
+variable {p : α → Nat → Prop}
+
+/-- Each step along the steps is one stage on. -/
+theorem Steps.along_stage :
+    ∀ x y : Nat × α, «续» Steps.along (Steps.alikeAt p) x y → y.1 = x.1 + 1 :=
+  fun _ _ ⟨⟨next, _⟩, _⟩ => next
+
+/-- What holds of a relatum's occurrence is a region nothing outside continues into: the class of
+its determination is two-valued. -/
+theorem Steps.along_back :
+    «闭» («逆» («续» Steps.along (Steps.alikeAt p))) (fun x : Nat × α => p x.2 x.1) :=
+  fun _ _ h ⟨_, alike⟩ => alike.mpr h
+
+/-- No occurrence continues as two along the steps (`Steps.along_fixed`), in any region. -/
+theorem Steps.along_noSplit {P : Nat × α → Prop} :
+    ∀ v b b' : Nat × α, P b → P b' → «续» Steps.along (Steps.alikeAt p) v b →
+      «续» Steps.along (Steps.alikeAt p) v b' → b = b' :=
+  fun v b b' _ _ c c' => «定后之逐点».mp (Steps.along_fixed (Steps.alikeAt p)) v b b' c c'
+
+/-- A list covering what holds at `N` gives a list covering the occurrences at stage `N`. -/
+theorem Covers.occurrences {L : List α} {N : Nat} (covers : Covers p L N) :
+    ∀ x : Nat × α, p x.2 x.1 → x.1 = N → x ∈ L.map (fun a => (N, a))
+  | (_, a), h, rfl => ListTests.mem_map_of (covers a h)
+
+/-- Ceasing to be at arbitrarily late steps is an ending at arbitrarily late stages. -/
+theorem Steps.along_ending (ceasing : ∀ M, ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) :
+    ∀ M, ∃ x : Nat × α, M ≤ x.1 ∧ p x.2 x.1 ∧ «亡» Steps.along (Steps.alikeAt p) x :=
+  fun M => match ceasing M with
+  | ⟨t, a, later, ceases⟩ => ⟨(t, a), later, ceasesToBe_iff_wang_along.mp ceases⟩
+
+end Occurrences
 
 section Decided
 
@@ -549,29 +573,30 @@ theorem ceasing_needs_arising {L : List α} {N n : Nat} (lists : ListsAt p L N)
       (steps_within mem)).trans
      ((total_congr_on fun a mem => mark_one ((lists.2 a).mpr mem)).trans (total_ones L))⟩
 
+/-- Under a decided determination, an occurrence that holds begins or has a predecessor along the
+steps: at step `0` it begins (`Steps.along_sheng_zero`); after it, it has one where the relatum held
+a step before, and comes to be where not. -/
+theorem Steps.along_decided :
+    ∀ y : Nat × α, p y.2 y.1 →
+      «生» Steps.along (Steps.alikeAt p) y ∨ «有前» Steps.along (Steps.alikeAt p) y
+  | (0, a), _ => .inl (Steps.along_sheng_zero _ a)
+  | (t + 1, a), h =>
+    if held : p a t then .inr (Steps.along_hasPred_iff.mpr ⟨fun _ => h, fun _ => held⟩)
+    else .inl (comesToBe_iff_sheng_along.mp ⟨held, h⟩).2
+
 /-- Ceasing at arbitrarily late steps, with a list covering step `N`, needs coming to be at
-some step from `N`: past the members of the list, ceasings are of relata that came to be
-after `N`, or of members that came to be again. -/
+some step from `N`: the root's `«所覆后亡屡则有生»` at the relata's occurrences, whether a relatum
+held a step before decided. A beginning after stage `N` lies at a step `t + 1` with `N ≤ t`, coming
+to be across the step from `t`. -/
 theorem Covers.coming_from_of_ceasing {L : List α} {N : Nat} (covers : Covers p L N)
     (ceasing : ∀ M, ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) :
     ∃ s a, N ≤ s ∧ ComesToBe (p a) s :=
-  match accumulates_or (q := ceasings L p) (R := ∃ s a, N ≤ s ∧ ComesToBe (p a) s)
-      (fun K => match ceasing (K + N) with
-        | ⟨t, a, later, ceases⟩ =>
-          ⟨t, Nat.le_trans (Nat.le_add_right K N) later,
-           if held : p a N then
-             .inl (total_pos_of_mem (covers a held) (mark_pos.mpr ceases))
-           else match came_between (Nat.le_trans (Nat.le_add_left N K) later) held ceases.1 with
-             | ⟨s, from_, _, comes⟩ => .inr ⟨s, a, from_, comes⟩⟩)
-      N (L.length + 1) with
-  | .inl found => found
-  | .inr ⟨n, many⟩ =>
-    match total_pos (steps N n) (pos_of_exceeds many
-        (Nat.le_trans (Nat.le_add_left _ _) (Nat.le_trans
-          (Nat.le_of_eq (held_over_stretch N n))
-          (Nat.add_le_add_right (marks_within N) _)))) with
-    | ⟨s, mem, came⟩ => match total_pos L came with
-      | ⟨a, _, comes⟩ => ⟨s, a, steps_mem mem, mark_pos.mp comes⟩
+  match «所覆后亡屡则有生» (τ := Prod.fst) (P := fun x : Nat × α => p x.2 x.1)
+      Steps.along_stage Steps.along_back Steps.along_noSplit covers.occurrences
+      (fun y h _ => Steps.along_decided y h) (Steps.along_ending ceasing) with
+  | ⟨(0, _), late, _, _⟩ => absurd late (Nat.not_lt_zero N)
+  | ⟨(t + 1, a), late, h, b⟩ =>
+    ⟨t, a, Nat.le_of_lt_succ late, comesToBe_iff_sheng_along.mpr ⟨h, b⟩⟩
 
 /-- Where some list covers what holds at arbitrarily late steps, ceasing at arbitrarily
 late steps needs coming to be at arbitrarily late steps. -/
@@ -596,49 +621,30 @@ section Undecided
 
 variable {p : α → Nat → Prop}
 
-/-- While nothing comes to be across a stretch, each relatum ceases at most once in it: no
-decidability is needed. -/
-theorem ceases_once {N n : Nat} (none : NoneComes p N n) {a : α} {t t' : Nat}
-    (from_ : N ≤ t) (below' : t' < N + n) (before : t < t')
-    (ceases : CeasesToBe (p a) t) : ¬ p a t' :=
-  match le_dest before with
-  | ⟨k, same⟩ =>
-    have far : t + 1 + k = t' := same.symm
-    Eq.subst (motive := fun s => ¬ p a s) far
-      (stays_failing_within (S := t + 1) ceases.2 (n := k)
-        (fun j below => none (t + 1 + j) a
-          (Nat.le_trans from_ (Nat.le_trans (Nat.le_succ t) (Nat.le_add_right _ _)))
-          (Nat.lt_of_lt_of_le (Nat.add_lt_add_left below _) (Nat.le_of_lt (far ▸ below'))))
-        k (Nat.le_refl k))
-
 /-- With a list covering what holds at `N` and nothing coming to be across a stretch from
-`N`, no more steps of the stretch see something cease than the list has members. No
-decidability is needed: each relatum ceasing there held at `N` unless refuted, and each
-ceases at most once. -/
+`N`, no more steps of the stretch see something cease than the list has members: the root's
+`«间无生则间亡不过所覆»` at the relata's occurrences, each ceasing step read as an occurrence that ends
+there (`exists_pairs_over`), distinct steps giving distinct occurrences. No decidability is
+needed. -/
 theorem Covers.ceasing_steps_within {L : List α} {N n : Nat} (covers : Covers p L N)
     (none : NoneComes p N n) {E : List Nat} (distinct : Distinct E)
     (ceasing : ∀ t, t ∈ E → N ≤ t ∧ t < N + n ∧ ∃ a, CeasesToBe (p a) t) :
     E.length ≤ L.length :=
-  match Nat.decLe E.length L.length with
-  | isTrue within => within
-  | isFalse beyond => absurd
-      (fun matched => beyond (length_le_of_matched (S := fun t a => CeasesToBe (p a) t)
-        distinct matched fun t t' _ mem mem' ceases ceases' =>
-          match Nat.lt_or_ge t t' with
-          | .inl before => absurd ceases'.1
-              (ceases_once none (ceasing t mem).1 (ceasing t' mem').2.1 before ceases)
-          | .inr after => match Nat.lt_or_ge t' t with
-            | .inl before => absurd ceases.1
-                (ceases_once none (ceasing t' mem').1 (ceasing t mem).2.1 before ceases')
-            | .inr after' => Nat.le_antisymm after' after))
-      (not_not_all fun t mem => match ceasing t mem with
-        | ⟨from_, below, a, ceases⟩ => fun unmatched => match le_dest from_ with
-          | ⟨k, same⟩ =>
-            stays_failing_within (S := N) (q := p a)
-              (fun held => unmatched ⟨a, covers a held, ceases⟩) (n := k)
-              (fun j short => none (N + j) a (Nat.le_add_right N j)
-                (Nat.lt_trans (Nat.add_lt_add_left short N) (same ▸ below)))
-              k (Nat.le_refl k) (Eq.subst (motive := fun s => p a s) same ceases.1))
+  match exists_pairs_over (Q := fun t a => N ≤ t ∧ t < N + n ∧ CeasesToBe (p a) t)
+      (fun t mem => match ceasing t mem with
+        | ⟨from_, below, a, ceases⟩ => ⟨a, from_, below, ceases⟩) with
+  | ⟨D, same, all⟩ =>
+    Nat.le_trans (Nat.le_of_eq ((congrArg List.length same).symm.trans (length_map Prod.fst D)))
+      (Nat.le_trans («间无生则间亡不过所覆» (τ := Prod.fst) (P := fun x : Nat × α => p x.2 x.1)
+          (U := N + n) Steps.along_stage Steps.along_back Steps.along_noSplit covers.occurrences
+          (fun z hz late below b => match z, hz, late, below, b with
+            | (0, _), _, late, _, _ => Nat.not_lt_zero N late
+            | (s + 1, c), hz, late, below, b => none s c (Nat.le_of_lt_succ late)
+                (Nat.lt_trans (Nat.lt_succ_self s) below) (comesToBe_iff_sheng_along.mpr ⟨hz, b⟩))
+          (distinct_of_map (Eq.subst (motive := Distinct) same.symm distinct))
+          fun x mx => ⟨(all x mx).1, (all x mx).2.1, (all x mx).2.2.1,
+            (ceasesToBe_iff_wang_along.mp (all x mx).2.2).2⟩)
+        (Nat.le_of_eq (length_map _ L)))
 
 /-- Where something ceases at arbitrarily late steps, any number of distinct steps from `N`
 see something cease, all before some step. -/
@@ -661,53 +667,37 @@ theorem ceasing_steps_found (ceasing : ∀ M, ∃ t a, M ≤ t ∧ CeasesToBe (p
                Nat.lt_of_lt_of_le (all s mem).2.1 (Nat.le_trans later (Nat.le_succ t)),
                (all s mem).2.2⟩⟩
 
-/-- Where after every step a later ceasing is not refuted, that any number of distinct steps
-from `N` see something cease, all before some step, is not refuted. -/
-theorem ceasing_steps_unrefuted (ceasing : ∀ M, ¬ ¬ ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) (N : Nat) :
-    ∀ k, ¬ ¬ ∃ E U, Distinct E ∧ E.length = k ∧ N ≤ U ∧
-      ∀ t, t ∈ E → N ≤ t ∧ t < U ∧ ∃ a, CeasesToBe (p a) t
-  | 0 => fun no => no ⟨[], N, trivial, rfl, Nat.le_refl N, fun _ mem => nomatch mem⟩
-  | k + 1 => fun no =>
-    ceasing_steps_unrefuted ceasing N k fun ⟨E, U, distinct, length, from_, all⟩ =>
-    ceasing U fun ⟨t, a, later, ceases⟩ => no
-      ⟨t :: E, t + 1,
-       ⟨fun mem => Nat.lt_irrefl t (Nat.lt_of_lt_of_le (all t mem).2.1 later), distinct⟩,
-       congrArg Nat.succ length,
-       Nat.le_trans from_ (Nat.le_trans later (Nat.le_succ t)),
-       fun s mem => match mem_cons_cases mem with
-         | .inl same => Eq.subst (motive := fun x => N ≤ x ∧ x < t + 1 ∧
-               ∃ a, CeasesToBe (p a) x) same.symm
-             ⟨Nat.le_trans from_ later, Nat.lt_succ_self t, a, ceases⟩
-         | .inr mem => ⟨(all s mem).1,
-             Nat.lt_of_lt_of_le (all s mem).2.1 (Nat.le_trans later (Nat.le_succ t)),
-             (all s mem).2.2⟩⟩
+/-- With a list covering what holds at `N`, a later ceasing left unrefuted after every step
+refutes that nothing comes to be from `N` on: `Covers.coming_from_of_ceasing` doubly negated, with no
+decidability, the root's `«所覆后亡屡则生未否»` at the relata's occurrences. Ceasing at arbitrarily
+late steps is the case it was first stated for. -/
+theorem Covers.not_not_coming_from {L : List α} {N : Nat} (covers : Covers p L N)
+    (ceasing : ∀ M, ¬ ¬ ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) :
+    ¬ ¬ ∃ s a, N ≤ s ∧ ComesToBe (p a) s :=
+  fun nothing => «所覆后亡屡则生未否» (τ := Prod.fst) (P := fun x : Nat × α => p x.2 x.1)
+    Steps.along_stage Steps.along_back Steps.along_noSplit covers.occurrences
+    (fun M no => ceasing M fun ⟨t, a, later, ceases⟩ =>
+      no ⟨(t, a), later, ceasesToBe_iff_wang_along.mp ceases⟩)
+    fun ⟨y, late, h, b⟩ => match y, late, h, b with
+      | (0, _), late, _, _ => Nat.not_lt_zero N late
+      | (t + 1, a), late, h, b =>
+        nothing ⟨t, a, Nat.le_of_lt_succ late, comesToBe_iff_sheng_along.mpr ⟨h, b⟩⟩
 
 /-- With a list covering what holds at `N` and nothing coming to be from `N` on, that ceasing
 stops from some step on cannot be refuted: it is not the case that after every step a later
-ceasing stays unrefuted (`stop_unrefuted_iff` reads it). No decidability is needed. -/
+ceasing stays unrefuted (`stop_unrefuted_iff` reads it), by `Covers.not_not_coming_from`. No
+decidability is needed. -/
 theorem Covers.ceasing_stops_unrefuted {L : List α} {N : Nat} (covers : Covers p L N)
     (none : ∀ n, NoneComes p N n) : ¬ ∀ M, ¬ ¬ ∃ t a, M ≤ t ∧ CeasesToBe (p a) t :=
-  fun ceasing => ceasing_steps_unrefuted ceasing N (L.length + 1)
-    fun ⟨_, _, distinct, length, from_, all⟩ => match le_dest from_ with
-    | ⟨n, same⟩ => Nat.not_succ_le_self L.length (Nat.le_trans (Nat.le_of_eq length.symm)
-        (covers.ceasing_steps_within (none n) distinct fun t mem =>
-          ⟨(all t mem).1, Nat.lt_of_lt_of_le (all t mem).2.1 (Nat.le_of_eq same),
-           (all t mem).2.2⟩))
+  fun ceasing => covers.not_not_coming_from ceasing fun ⟨s, a, from_, comes⟩ =>
+    none (s + 1) s a from_
+      (Nat.lt_of_lt_of_le (Nat.lt_succ_self s) (Nat.le_add_left (s + 1) N)) comes
 
 /-- With a list covering what holds at `N` and nothing coming to be from `N` on, ceasing does
 not recur: the weaker form of `Covers.ceasing_stops_unrefuted`. No decidability is needed. -/
 theorem Covers.ceasing_not_recurring {L : List α} {N : Nat} (covers : Covers p L N)
     (none : ∀ n, NoneComes p N n) : ¬ ∀ M, ∃ t a, M ≤ t ∧ CeasesToBe (p a) t :=
   fun ceasing => covers.ceasing_stops_unrefuted none fun M no => no (ceasing M)
-
-/-- So with a list covering what holds at `N`, a later ceasing left unrefuted after every step
-refutes that nothing comes to be from `N` on: `Covers.coming_from_of_ceasing` doubly negated,
-with no decidability. Ceasing at arbitrarily late steps is the case it was first stated for. -/
-theorem Covers.not_not_coming_from {L : List α} {N : Nat} (covers : Covers p L N)
-    (ceasing : ∀ M, ¬ ¬ ∃ t a, M ≤ t ∧ CeasesToBe (p a) t) :
-    ¬ ¬ ∃ s a, N ≤ s ∧ ComesToBe (p a) s :=
-  fun nothing => covers.ceasing_stops_unrefuted
-    (fun _ s a from_ _ comes => nothing ⟨s, a, from_, comes⟩) ceasing
 
 end Undecided
 

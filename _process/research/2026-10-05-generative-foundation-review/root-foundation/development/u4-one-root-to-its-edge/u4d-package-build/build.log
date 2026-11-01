@@ -1,0 +1,161 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/u4d-tree-2",
+  "modules": 78,
+  "ran": [
+    "Becoming.Prelude",
+    "Becoming.GrammarLaws",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
+    "Becoming.Frame",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Arising",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Population",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Evolution",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.Recurrence",
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Decidedness",
+    "Becoming.Identity",
+    "Becoming.ListedWebs",
+    "Becoming.Premises",
+    "Becoming.Sampling",
+    "Becoming.Openness",
+    "Becoming.Resolution",
+    "Becoming.Listing",
+    "Becoming.Inquiry",
+    "Becoming.Labelled",
+    "Becoming.MoveOutcomeProcesses",
+    "Becoming.Laws",
+    "Becoming.Joint",
+    "Becoming.Experiment",
+    "Becoming.Mechanism",
+    "Becoming.Unfolding",
+    "Becoming.Persistence",
+    "Becoming.Horizon",
+    "Becoming.Attraction",
+    "Becoming.Capture",
+    "Becoming.Branching",
+    "Becoming.Diagonal",
+    "Becoming.Context",
+    "Becoming.Admission",
+    "Becoming.Continuation",
+    "Becoming.Regions",
+    "Becoming.Retaining",
+    "Becoming.Clearing",
+    "Becoming.Interdependence",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Selection",
+    "Becoming.Learning",
+    "Becoming.Description",
+    "Becoming.Refinement",
+    "Becoming.Identification",
+    "Becoming.Histories",
+    "Becoming.Likeness",
+    "Becoming.Distinguishing",
+    "Becoming.CommonResponse",
+    "Becoming.Viability",
+    "Becoming.Lasting",
+    "Becoming.Parting",
+    "Becoming.Onward",
+    "Becoming.LawAlongRun",
+    "Becoming.Extension",
+    "Becoming.Lexical",
+    "Becoming.Bundles",
+    "Becoming.ContinuedClasses",
+    "Becoming.EventualWidening",
+    "Becoming.ReachableRanges",
+    "BecomingPreludeAxiomAudit",
+    "BecomingGrammarLawsAxiomAudit",
+    "BecomingPopulationAxiomAudit",
+    "BecomingLocalityAxiomAudit",
+    "BecomingDecidednessAxiomAudit",
+    "BecomingIdentityAxiomAudit",
+    "BecomingInAmountsAxiomAudit",
+    "BecomingListedWebsAxiomAudit",
+    "BecomingListingAxiomAudit",
+    "BecomingMoveOutcomeProcessesAxiomAudit",
+    "BecomingOpennessAxiomAudit",
+    "BecomingPersistenceAxiomAudit",
+    "BecomingReachableRangesAxiomAudit"
+  ],
+  "reused": 6,
+  "unclean": [],
+  "audits": {
+    "Becoming.Prelude": {
+      "theorems": 143,
+      "declarations": 153,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarLaws": {
+      "theorems": 223,
+      "declarations": 252,
+      "with_axioms": {}
+    },
+    "Becoming.Population": {
+      "theorems": 116,
+      "declarations": 143,
+      "with_axioms": {}
+    },
+    "Becoming.Locality": {
+      "theorems": 47,
+      "declarations": 54,
+      "with_axioms": {}
+    },
+    "Becoming.Decidedness": {
+      "theorems": 74,
+      "declarations": 81,
+      "with_axioms": {}
+    },
+    "Becoming.Identity": {
+      "theorems": 162,
+      "declarations": 227,
+      "with_axioms": {}
+    },
+    "Becoming.InAmounts": {
+      "theorems": 91,
+      "declarations": 127,
+      "with_axioms": {}
+    },
+    "Becoming.ListedWebs": {
+      "theorems": 6,
+      "declarations": 6,
+      "with_axioms": {}
+    },
+    "Becoming.Listing": {
+      "theorems": 89,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.MoveOutcomeProcesses": {
+      "theorems": 28,
+      "declarations": 34,
+      "with_axioms": {}
+    },
+    "Becoming.Openness": {
+      "theorems": 78,
+      "declarations": 110,
+      "with_axioms": {}
+    },
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.ReachableRanges": {
+      "theorems": 135,
+      "declarations": 196,
+      "with_axioms": {}
+    }
+  }
+}
+exit 0

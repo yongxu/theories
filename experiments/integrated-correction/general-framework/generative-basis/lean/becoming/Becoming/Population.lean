@@ -373,10 +373,6 @@ def beginTest (p : α → Nat → Prop) [∀ a t, Decidable (p a t)] : Nat × α
   | (0, _) => true
   | (t + 1, a) => !decide (p a t)
 
-/-- The endings' test on occurrences: an occurrence at `t` ends where its member fails at `t + 1`. -/
-def endTest (p : α → Nat → Prop) [∀ a t, Decidable (p a t)] (x : Nat × α) : Bool :=
-  !decide (p x.2 (x.1 + 1))
-
 end Occurrences
 
 /-- The total of marks is the count of their decisions. -/
@@ -582,16 +578,14 @@ theorem coming_iff_excess (listed : Listed p l) :
 late steps needs coming to be at arbitrarily late steps. It is the root's census of a run
 (`«定后前者在前则亡屡者生屡»`) at a member's occurrences along its steps (`Steps.along`), under the
 two-valued class of its determination, where coming to be and ceasing to be are a beginning and an
-ending (`comesToBe_iff_sheng_along`, `ceasesToBe_iff_wang_along`): the occurrences listed at each
-step are listed once, each one's predecessor is listed before it, and nothing splits along the
-steps (`Steps.along_fixed`). -/
+ending (`comesToBe_iff_sheng_along`, `ceasesToBe_iff_wang_along`): each listed occurrence's
+predecessor is listed before it, and nothing splits along the steps (`Steps.along_fixed`). -/
 theorem coming_of_ceasing (listed : Listed p l)
     (ceasing : ∀ N, ∃ t a, N ≤ t ∧ CeasesToBe (p a) t) :
     ∀ N, ∃ t a, N ≤ t ∧ ComesToBe (p a) t :=
   fun N =>
     match «定后前者在前则亡屡者生屡» (R := Steps.along) (E := Steps.alikeAt p)
-        (u := listedOccurrences l) (T := 0) (b := beginTest p) (e := endTest p)
-        (fun t _ => distinct_map_on (fun _ _ _ _ same => congrArg Prod.snd same) (listed (t + 1)).1)
+        (u := listedOccurrences l) (T := 0) (b := beginTest p)
         (fun t _ x y my c => by
           obtain ⟨h1, h2⟩ := mem_map_prodMk my
           obtain ⟨⟨e1, e2⟩, alike⟩ := c
@@ -612,14 +606,6 @@ theorem coming_of_ceasing (listed : Listed p l)
           show (!decide (p a t)) = true ↔ _
           exact not_decide_iff.trans ⟨fun was => (comesToBe_iff_sheng_along.mp ⟨was, holds⟩).2,
             fun begins was => (comesToBe_iff_sheng_along.mpr ⟨holds, begins⟩).1 was⟩)
-        (fun t _ x mx => by
-          obtain ⟨h1, h2⟩ := mem_map_prodMk mx
-          obtain ⟨t', a⟩ := x
-          dsimp only at h1 h2
-          subst h1
-          have held : p a t' := ((listed t').2 a).mpr h2
-          exact not_decide_iff.trans ⟨fun gone => (ceasesToBe_iff_wang_along.mp ⟨held, gone⟩).2,
-            fun ends next => (ceasesToBe_iff_wang_along.mpr ⟨held, ends⟩).2 next⟩)
         (fun M => match ceasing M with
           | ⟨t, a, later, ceases⟩ =>
             ⟨t, later, (t, a), prodMk_mem_map (((listed t).2 a).mp ceases.1),

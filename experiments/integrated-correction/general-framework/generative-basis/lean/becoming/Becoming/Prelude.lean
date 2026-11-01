@@ -20,9 +20,11 @@ or a law: the module imports only Init, and every module of the core reaches it 
 * **Lists without repetition, matched** (U4c, moved from Population): removing one occurrence keeps
   the rest (`mem_remove`), a list without repetition matched one to one into another is no longer
   (`length_le_of_matched`), and a double negation for each member of a list is one for all
-  (`not_not_all`), each in every universe; a positive total has a positive member (`total_pos`,
-  from Flow); a list paired with a step (`mem_map_prodMk`, `prodMk_mem_map`) and a negated decision
-  (`not_decide_iff`).
+  (`not_not_all`), each in every universe; mapping one to one keeps a list without repetition and
+  an image without repetition comes from one (`distinct_map_on`, `distinct_of_map`), and a partner
+  for each member gives a list of pairs over it (`exists_pairs_over`); a positive total has a
+  positive member (`total_pos`, from Flow); a list paired with a step (`mem_map_prodMk`,
+  `prodMk_mem_map`) and a negated decision (`not_decide_iff`).
 * **Stretches of steps and recurrence** (U4c, moved from Change and Population): the members and
   totals of a stretch (`steps_mem`, `steps_last`, `steps_mono`), totals of a recurring quantity
   exceeding every bound (`recurring_accumulates`, `pos_of_exceeds`), and the counting steps from
@@ -814,6 +816,22 @@ theorem distinct_map_on {β : Type} {g : α → β} :
           (inj b a (.tail a listed) (.head l) same) listed),
      distinct_map_on (fun x y first second => inj x y (.tail a first) (.tail a second))
        distinct⟩
+
+/-- A list whose image has no repetition has none. -/
+theorem distinct_of_map {f : α → β} : ∀ {l : List α}, Distinct (l.map f) → Distinct l
+  | [], _ => trivial
+  | _ :: _, ⟨fresh, rest⟩ => ⟨fun mem => fresh (ListTests.mem_map_of mem), distinct_of_map rest⟩
+
+/-- A partner for each member of a list gives a list of pairs over it, each pair related. -/
+theorem exists_pairs_over {Q : α → β → Prop} : ∀ {l : List α}, (∀ a, a ∈ l → ∃ b, Q a b) →
+    ∃ D : List (α × β), D.map Prod.fst = l ∧ ∀ x, x ∈ D → Q x.1 x.2
+  | [], _ => ⟨[], rfl, fun _ mem => nomatch mem⟩
+  | a :: l, each =>
+    match each a (.head l), exists_pairs_over (l := l) (fun c mem => each c (.tail a mem)) with
+    | ⟨b, qb⟩, ⟨D, same, all⟩ => ⟨(a, b) :: D, congrArg (a :: ·) same, fun x mem =>
+        match mem_cons_cases mem with
+        | .inl e => Eq.subst (motive := fun y : α × β => Q y.1 y.2) e.symm qb
+        | .inr mem => all x mem⟩
 
 /-- A positive total has a positive member. -/
 theorem total_pos {q : α → Nat} : ∀ as : List α, 0 < total as q → ∃ a, a ∈ as ∧ 0 < q a
