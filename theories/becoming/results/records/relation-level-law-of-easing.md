@@ -65,7 +65,7 @@ The comparison laws are the theory's own. The three readings of living now each 
   - Output: stepwise, Eases, ExtendsUnder, stepwise_unranked, absent_sustains.
   - Input: The relation-level reading on courses and its comparisons.
   - Preserved conditions: The two-part family for the unranked instance. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
-- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.
+- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [basic-priority-step-by-step](basic-priority-step-by-step.md)
 

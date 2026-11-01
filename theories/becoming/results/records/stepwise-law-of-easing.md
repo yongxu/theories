@@ -63,7 +63,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
   - Input: The exact stepwise law of easing and restraint over any number of drawers under it.
   - Preserved conditions: Easing; the gating of activity; for restraint, balanced flows taking within what they give. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 - related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.
-- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.
+- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [relation-level-law-of-easing](relation-level-law-of-easing.md)
 
