@@ -131,7 +131,7 @@ Markets go to 05; the map's capture section links there.
 1. *Joint consumption and joint excess.* Joint difference-making; takers each within what is given can together exceed it (`own-count-misses-joint-excess`); a whole drawing its parts' arising beyond its renewal ends; what taking all excludes; the rest outruns the renewal.
 2. *Mutual dependence.* `mutual-dependence-and-its-pace`; sharing, dependence and the feeding hierarchy.
 3. *Position.* Relative position is zero-sum (`relative-position-is-zero-sum`); position does not protect; a race for position draws everything.
-4. *Conditions kept together.* The viability kernel and choice points; the social-viability constraints as laws, in one table.
+4. *Conditions kept together.* The invariance kernel and choice points; the social-viability constraints as laws, in one table.
 5. *Giving that waits on giving.* Withholding absorbs or returns; restoring from the worst start; tolerance absorbs without restoring.
 6. *What a rise draws from beyond.* Raising what couples in draws from beyond, graded by inflow; what a rise breaks beyond; the joint draw.
 7. *The optimum: one law, its cases.* State the master law once (the optimum lowers what lies beyond as far as any outcome does; `Optimum.Next`, `kept_returns`), then one table of its cases: room read off the exchange, several optimizers, courses over a horizon, keeping forgoes, step couplings, met steps, weighted draws, rebuilding, valuing what is left, drawers in turn, at once, floors and capacities, whom restraint pays. The superseded records are named in the table as cases subsumed, not restated. (T3, with CG1, CG2, CG3, MQ1, IN1, SE1.)

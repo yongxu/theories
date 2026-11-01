@@ -20886,7 +20886,7 @@
     },
     {
       "path": "experiments/market-generativity/formal/MarketInstances.lean",
-      "sha256": "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da",
+      "sha256": "86b275f08cada1194264e82fb8bd052b82e15a25dcc35edd8f864f0cf46e1b3a",
       "role": "working-source",
       "group": "other",
       "package_readme": "experiments/market-generativity/formal/README.md",
@@ -306741,6 +306741,350 @@
       },
       "print_axioms_commands": 0
     },
+    "86b275f08cada1194264e82fb8bd052b82e15a25dcc35edd8f864f0cf46e1b3a": {
+      "byte_size": 39842,
+      "line_count": 719,
+      "imports": [
+        "Becoming.Viability",
+        "Becoming.Lasting",
+        "MarketGenerativity",
+        "FiniteSupportObstruction",
+        "PartialRegimeTransition"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "history_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.history_eq",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "guardedStep_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.guardedStep_eq",
+          "line": 77
+        },
+        {
+          "kind": "theorem",
+          "name": "guardedHistory_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.guardedHistory_eq",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "worst_admissible",
+          "qualified_name_hint": "Becoming.MarketInstances.worst_admissible",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "never_fails_iff",
+          "qualified_name_hint": "Becoming.MarketInstances.never_fails_iff",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "safe_closed",
+          "qualified_name_hint": "Becoming.MarketInstances.safe_closed",
+          "line": 122
+        },
+        {
+          "kind": "theorem",
+          "name": "safe_never_fails",
+          "qualified_name_hint": "Becoming.MarketInstances.safe_never_fails",
+          "line": 129
+        },
+        {
+          "kind": "theorem",
+          "name": "safe_within_kernel",
+          "qualified_name_hint": "Becoming.MarketInstances.safe_within_kernel",
+          "line": 136
+        },
+        {
+          "kind": "theorem",
+          "name": "example_never_fails",
+          "qualified_name_hint": "Becoming.MarketInstances.example_never_fails",
+          "line": 142
+        },
+        {
+          "kind": "def",
+          "name": "scheduled",
+          "qualified_name_hint": "Becoming.MarketInstances.scheduled",
+          "line": 151
+        },
+        {
+          "kind": "abbrev",
+          "name": "floor",
+          "qualified_name_hint": "Becoming.MarketInstances.floor",
+          "line": 155
+        },
+        {
+          "kind": "theorem",
+          "name": "floor_of_stock",
+          "qualified_name_hint": "Becoming.MarketInstances.floor_of_stock",
+          "line": 157
+        },
+        {
+          "kind": "theorem",
+          "name": "stock_of_floor",
+          "qualified_name_hint": "Becoming.MarketInstances.stock_of_floor",
+          "line": 162
+        },
+        {
+          "kind": "theorem",
+          "name": "run_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.run_eq",
+          "line": 165
+        },
+        {
+          "kind": "theorem",
+          "name": "guarded_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.guarded_eq",
+          "line": 173
+        },
+        {
+          "kind": "def",
+          "name": "growth",
+          "qualified_name_hint": "Becoming.MarketInstances.growth",
+          "line": 188
+        },
+        {
+          "kind": "theorem",
+          "name": "orbit_growth",
+          "qualified_name_hint": "Becoming.MarketInstances.orbit_growth",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "forces_failure_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.forces_failure_instance",
+          "line": 201
+        },
+        {
+          "kind": "def",
+          "name": "covered",
+          "qualified_name_hint": "Becoming.MarketInstances.covered",
+          "line": 241
+        },
+        {
+          "kind": "theorem",
+          "name": "support_antitone",
+          "qualified_name_hint": "Becoming.MarketInstances.support_antitone",
+          "line": 245
+        },
+        {
+          "kind": "theorem",
+          "name": "cover_ladder",
+          "qualified_name_hint": "Becoming.MarketInstances.cover_ladder",
+          "line": 252
+        },
+        {
+          "kind": "theorem",
+          "name": "history_scheduled",
+          "qualified_name_hint": "Becoming.MarketInstances.history_scheduled",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "guardedHistory_scheduled",
+          "qualified_name_hint": "Becoming.MarketInstances.guardedHistory_scheduled",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "supported_prefix_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.supported_prefix_instance",
+          "line": 284
+        },
+        {
+          "kind": "theorem",
+          "name": "pulse_prefix_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.pulse_prefix_instance",
+          "line": 301
+        },
+        {
+          "kind": "theorem",
+          "name": "partial_prefix_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.partial_prefix_instance",
+          "line": 312
+        },
+        {
+          "kind": "def",
+          "name": "worstSupport",
+          "qualified_name_hint": "Becoming.MarketInstances.worstSupport",
+          "line": 323
+        },
+        {
+          "kind": "theorem",
+          "name": "cover_exact",
+          "qualified_name_hint": "Becoming.MarketInstances.cover_exact",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "path_eq",
+          "qualified_name_hint": "Becoming.MarketInstances.path_eq",
+          "line": 346
+        },
+        {
+          "kind": "theorem",
+          "name": "never_lands_iff",
+          "qualified_name_hint": "Becoming.MarketInstances.never_lands_iff",
+          "line": 353
+        },
+        {
+          "kind": "theorem",
+          "name": "margin_iff",
+          "qualified_name_hint": "Becoming.MarketInstances.margin_iff",
+          "line": 369
+        },
+        {
+          "kind": "theorem",
+          "name": "lands_iff_margin",
+          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_margin",
+          "line": 375
+        },
+        {
+          "kind": "theorem",
+          "name": "lands_iff_no_closed",
+          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_no_closed",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "fixed_point_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.fixed_point_instance",
+          "line": 407
+        },
+        {
+          "kind": "theorem",
+          "name": "rising_funnel",
+          "qualified_name_hint": "Becoming.MarketInstances.rising_funnel",
+          "line": 433
+        },
+        {
+          "kind": "theorem",
+          "name": "rising_reaches",
+          "qualified_name_hint": "Becoming.MarketInstances.rising_reaches",
+          "line": 460
+        },
+        {
+          "kind": "def",
+          "name": "Settled",
+          "qualified_name_hint": "Becoming.MarketInstances.Settled",
+          "line": 472
+        },
+        {
+          "kind": "theorem",
+          "name": "share_kept",
+          "qualified_name_hint": "Becoming.MarketInstances.share_kept",
+          "line": 476
+        },
+        {
+          "kind": "theorem",
+          "name": "influence_le",
+          "qualified_name_hint": "Becoming.MarketInstances.influence_le",
+          "line": 482
+        },
+        {
+          "kind": "theorem",
+          "name": "settled_kept",
+          "qualified_name_hint": "Becoming.MarketInstances.settled_kept",
+          "line": 489
+        },
+        {
+          "kind": "def",
+          "name": "ShareHigh",
+          "qualified_name_hint": "Becoming.MarketInstances.ShareHigh",
+          "line": 500
+        },
+        {
+          "kind": "def",
+          "name": "InfluenceLow",
+          "qualified_name_hint": "Becoming.MarketInstances.InfluenceLow",
+          "line": 504
+        },
+        {
+          "kind": "theorem",
+          "name": "settled_reaches_share",
+          "qualified_name_hint": "Becoming.MarketInstances.settled_reaches_share",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "share_reaches_influence",
+          "qualified_name_hint": "Becoming.MarketInstances.share_reaches_influence",
+          "line": 533
+        },
+        {
+          "kind": "theorem",
+          "name": "influence_reaches_landing",
+          "qualified_name_hint": "Becoming.MarketInstances.influence_reaches_landing",
+          "line": 566
+        },
+        {
+          "kind": "theorem",
+          "name": "settled_reaches_landing",
+          "qualified_name_hint": "Becoming.MarketInstances.settled_reaches_landing",
+          "line": 596
+        },
+        {
+          "kind": "theorem",
+          "name": "seed_reaches_settled",
+          "qualified_name_hint": "Becoming.MarketInstances.seed_reaches_settled",
+          "line": 608
+        },
+        {
+          "kind": "theorem",
+          "name": "seed_reaches_landing",
+          "qualified_name_hint": "Becoming.MarketInstances.seed_reaches_landing",
+          "line": 626
+        },
+        {
+          "kind": "theorem",
+          "name": "landing_side_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.landing_side_instance",
+          "line": 641
+        },
+        {
+          "kind": "theorem",
+          "name": "rescue_landing_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.rescue_landing_instance",
+          "line": 650
+        },
+        {
+          "kind": "theorem",
+          "name": "landing_boundary_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.landing_boundary_instance",
+          "line": 658
+        },
+        {
+          "kind": "theorem",
+          "name": "lands_iff_funnel",
+          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_funnel",
+          "line": 673
+        },
+        {
+          "kind": "theorem",
+          "name": "obstructed_seeds_instance",
+          "qualified_name_hint": "Becoming.MarketInstances.obstructed_seeds_instance",
+          "line": 694
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 7,
+        "theorem": 45
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "86ff096d42b7246b74242ba0e68ec90d3624392f14303b0dcd6e8a9c59e42fcd": {
       "byte_size": 12257,
       "line_count": 257,
@@ -438881,350 +439225,6 @@
         "def": 22,
         "inductive": 1,
         "theorem": 88
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da": {
-      "byte_size": 39840,
-      "line_count": 719,
-      "imports": [
-        "Becoming.Viability",
-        "Becoming.Lasting",
-        "MarketGenerativity",
-        "FiniteSupportObstruction",
-        "PartialRegimeTransition"
-      ],
-      "declarations": [
-        {
-          "kind": "theorem",
-          "name": "history_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.history_eq",
-          "line": 71
-        },
-        {
-          "kind": "theorem",
-          "name": "guardedStep_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.guardedStep_eq",
-          "line": 77
-        },
-        {
-          "kind": "theorem",
-          "name": "guardedHistory_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.guardedHistory_eq",
-          "line": 84
-        },
-        {
-          "kind": "theorem",
-          "name": "worst_admissible",
-          "qualified_name_hint": "Becoming.MarketInstances.worst_admissible",
-          "line": 94
-        },
-        {
-          "kind": "theorem",
-          "name": "never_fails_iff",
-          "qualified_name_hint": "Becoming.MarketInstances.never_fails_iff",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "safe_closed",
-          "qualified_name_hint": "Becoming.MarketInstances.safe_closed",
-          "line": 122
-        },
-        {
-          "kind": "theorem",
-          "name": "safe_never_fails",
-          "qualified_name_hint": "Becoming.MarketInstances.safe_never_fails",
-          "line": 129
-        },
-        {
-          "kind": "theorem",
-          "name": "safe_within_kernel",
-          "qualified_name_hint": "Becoming.MarketInstances.safe_within_kernel",
-          "line": 136
-        },
-        {
-          "kind": "theorem",
-          "name": "example_never_fails",
-          "qualified_name_hint": "Becoming.MarketInstances.example_never_fails",
-          "line": 142
-        },
-        {
-          "kind": "def",
-          "name": "scheduled",
-          "qualified_name_hint": "Becoming.MarketInstances.scheduled",
-          "line": 151
-        },
-        {
-          "kind": "abbrev",
-          "name": "floor",
-          "qualified_name_hint": "Becoming.MarketInstances.floor",
-          "line": 155
-        },
-        {
-          "kind": "theorem",
-          "name": "floor_of_stock",
-          "qualified_name_hint": "Becoming.MarketInstances.floor_of_stock",
-          "line": 157
-        },
-        {
-          "kind": "theorem",
-          "name": "stock_of_floor",
-          "qualified_name_hint": "Becoming.MarketInstances.stock_of_floor",
-          "line": 162
-        },
-        {
-          "kind": "theorem",
-          "name": "run_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.run_eq",
-          "line": 165
-        },
-        {
-          "kind": "theorem",
-          "name": "guarded_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.guarded_eq",
-          "line": 173
-        },
-        {
-          "kind": "def",
-          "name": "growth",
-          "qualified_name_hint": "Becoming.MarketInstances.growth",
-          "line": 188
-        },
-        {
-          "kind": "theorem",
-          "name": "orbit_growth",
-          "qualified_name_hint": "Becoming.MarketInstances.orbit_growth",
-          "line": 190
-        },
-        {
-          "kind": "theorem",
-          "name": "forces_failure_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.forces_failure_instance",
-          "line": 201
-        },
-        {
-          "kind": "def",
-          "name": "covered",
-          "qualified_name_hint": "Becoming.MarketInstances.covered",
-          "line": 241
-        },
-        {
-          "kind": "theorem",
-          "name": "support_antitone",
-          "qualified_name_hint": "Becoming.MarketInstances.support_antitone",
-          "line": 245
-        },
-        {
-          "kind": "theorem",
-          "name": "cover_ladder",
-          "qualified_name_hint": "Becoming.MarketInstances.cover_ladder",
-          "line": 252
-        },
-        {
-          "kind": "theorem",
-          "name": "history_scheduled",
-          "qualified_name_hint": "Becoming.MarketInstances.history_scheduled",
-          "line": 260
-        },
-        {
-          "kind": "theorem",
-          "name": "guardedHistory_scheduled",
-          "qualified_name_hint": "Becoming.MarketInstances.guardedHistory_scheduled",
-          "line": 266
-        },
-        {
-          "kind": "theorem",
-          "name": "supported_prefix_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.supported_prefix_instance",
-          "line": 284
-        },
-        {
-          "kind": "theorem",
-          "name": "pulse_prefix_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.pulse_prefix_instance",
-          "line": 301
-        },
-        {
-          "kind": "theorem",
-          "name": "partial_prefix_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.partial_prefix_instance",
-          "line": 312
-        },
-        {
-          "kind": "def",
-          "name": "worstSupport",
-          "qualified_name_hint": "Becoming.MarketInstances.worstSupport",
-          "line": 323
-        },
-        {
-          "kind": "theorem",
-          "name": "cover_exact",
-          "qualified_name_hint": "Becoming.MarketInstances.cover_exact",
-          "line": 328
-        },
-        {
-          "kind": "theorem",
-          "name": "path_eq",
-          "qualified_name_hint": "Becoming.MarketInstances.path_eq",
-          "line": 346
-        },
-        {
-          "kind": "theorem",
-          "name": "never_lands_iff",
-          "qualified_name_hint": "Becoming.MarketInstances.never_lands_iff",
-          "line": 353
-        },
-        {
-          "kind": "theorem",
-          "name": "margin_iff",
-          "qualified_name_hint": "Becoming.MarketInstances.margin_iff",
-          "line": 369
-        },
-        {
-          "kind": "theorem",
-          "name": "lands_iff_margin",
-          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_margin",
-          "line": 375
-        },
-        {
-          "kind": "theorem",
-          "name": "lands_iff_no_closed",
-          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_no_closed",
-          "line": 383
-        },
-        {
-          "kind": "theorem",
-          "name": "fixed_point_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.fixed_point_instance",
-          "line": 407
-        },
-        {
-          "kind": "theorem",
-          "name": "rising_funnel",
-          "qualified_name_hint": "Becoming.MarketInstances.rising_funnel",
-          "line": 433
-        },
-        {
-          "kind": "theorem",
-          "name": "rising_reaches",
-          "qualified_name_hint": "Becoming.MarketInstances.rising_reaches",
-          "line": 460
-        },
-        {
-          "kind": "def",
-          "name": "Settled",
-          "qualified_name_hint": "Becoming.MarketInstances.Settled",
-          "line": 472
-        },
-        {
-          "kind": "theorem",
-          "name": "share_kept",
-          "qualified_name_hint": "Becoming.MarketInstances.share_kept",
-          "line": 476
-        },
-        {
-          "kind": "theorem",
-          "name": "influence_le",
-          "qualified_name_hint": "Becoming.MarketInstances.influence_le",
-          "line": 482
-        },
-        {
-          "kind": "theorem",
-          "name": "settled_kept",
-          "qualified_name_hint": "Becoming.MarketInstances.settled_kept",
-          "line": 489
-        },
-        {
-          "kind": "def",
-          "name": "ShareHigh",
-          "qualified_name_hint": "Becoming.MarketInstances.ShareHigh",
-          "line": 500
-        },
-        {
-          "kind": "def",
-          "name": "InfluenceLow",
-          "qualified_name_hint": "Becoming.MarketInstances.InfluenceLow",
-          "line": 504
-        },
-        {
-          "kind": "theorem",
-          "name": "settled_reaches_share",
-          "qualified_name_hint": "Becoming.MarketInstances.settled_reaches_share",
-          "line": 510
-        },
-        {
-          "kind": "theorem",
-          "name": "share_reaches_influence",
-          "qualified_name_hint": "Becoming.MarketInstances.share_reaches_influence",
-          "line": 533
-        },
-        {
-          "kind": "theorem",
-          "name": "influence_reaches_landing",
-          "qualified_name_hint": "Becoming.MarketInstances.influence_reaches_landing",
-          "line": 566
-        },
-        {
-          "kind": "theorem",
-          "name": "settled_reaches_landing",
-          "qualified_name_hint": "Becoming.MarketInstances.settled_reaches_landing",
-          "line": 596
-        },
-        {
-          "kind": "theorem",
-          "name": "seed_reaches_settled",
-          "qualified_name_hint": "Becoming.MarketInstances.seed_reaches_settled",
-          "line": 608
-        },
-        {
-          "kind": "theorem",
-          "name": "seed_reaches_landing",
-          "qualified_name_hint": "Becoming.MarketInstances.seed_reaches_landing",
-          "line": 626
-        },
-        {
-          "kind": "theorem",
-          "name": "landing_side_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.landing_side_instance",
-          "line": 641
-        },
-        {
-          "kind": "theorem",
-          "name": "rescue_landing_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.rescue_landing_instance",
-          "line": 650
-        },
-        {
-          "kind": "theorem",
-          "name": "landing_boundary_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.landing_boundary_instance",
-          "line": 658
-        },
-        {
-          "kind": "theorem",
-          "name": "lands_iff_funnel",
-          "qualified_name_hint": "Becoming.MarketInstances.lands_iff_funnel",
-          "line": 673
-        },
-        {
-          "kind": "theorem",
-          "name": "obstructed_seeds_instance",
-          "qualified_name_hint": "Becoming.MarketInstances.obstructed_seeds_instance",
-          "line": 694
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 1,
-        "def": 7,
-        "theorem": 45
       },
       "textual_markers": {
         "sorry": [],
