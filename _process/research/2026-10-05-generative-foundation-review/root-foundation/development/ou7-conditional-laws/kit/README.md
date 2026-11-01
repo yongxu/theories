@@ -97,7 +97,7 @@ Run from the checkout root of the landing worktree, with `LOG` a folder outside 
 
 Every edit asserts that it applies exactly once or is already in place, so a stage can be rerun after main moves.
 
-**Before the re-point,** read each changed source with the records that pin it. On main at a91c84d35 the dry run's re-point takes exactly the registry's drift: 31 pairs in 24 records. With `10-u4c` in place, on main at 73b86ad76, it takes 295 pairs in 150 records. With both stages, on main at 5382b2435, it takes 419 pairs in 191 records: the kit's, as below, and those pinning what the stages change. Each stage's owner read theirs, and the pass joins their reasons.
+**Before the re-point,** read each changed source with the records that pin it. On main at a91c84d35 the dry run's re-point takes exactly the registry's drift: 31 pairs in 24 records. With `10-u4c` in place, on main at 73b86ad76, it takes 295 pairs in 150 records. With both stages, the text review's merge and the front refresh, on main at 7c90d62ef, it takes 429 pairs in 199 records: the kit's, as below, those pinning what the stages change, and those pinning the front pages. Each stage's owner read theirs, and the pass joins their reasons and the front pages'.
 
 | source | pinned by, drifting | bound by |
 |---|---|---|
@@ -185,13 +185,14 @@ All checks ran on 1 November.
   - the record stage counted its law in master-laws-on-the-grammar's scope, at 180 theorems in 209 declarations;
   - the register took its root, the study section its paragraph, and the joined re-point reason its line;
   - `integrate_ou7.py stages` named it alone, and 0 findings were left on the 26 records.
-- **Dry run with both stages.** The dry run ran again on main at 5382b2435 (EL at the head of the queue), with `10-u4c` from branch `u4c` at d5d034614 and `20-nd` from branch `nd-stage` at 24d4aef64. Before the first `apply`, the dry run wrote a record of every stage in place, as an earlier apply on a tree since reset would leave it:
+- **Dry run with both stages.** The dry run ran again on main at 7c90d62ef (the principle's page's reading time landed), merged into this branch. It took `10-u4c` from branch `u4c` at 4642e67e3, `20-nd` from branch `nd-stage` at 24d4aef64 with patch 25 re-cut ([stages](stages/README.md)), the text review's merge and the front refresh. Before the first `apply`, the dry run wrote a record of every stage in place, as an earlier apply on a tree since reset would leave it:
   - `apply` cleared that record when it applied the kit's own patches, then applied the stages' 33 and 43 patches one by one. Run again, it applied nothing and found both stages in place from the tree's record;
   - the audit took both `EXPECTED.json` files: `10-u4c`'s additions in seven modules, two cases, 15 declarations moved, 11 restated and four roots; `20-nd`'s 24 renames with three binders, four roots and four now used;
-  - `record` filled the history notes of the stages' 33 records (1 November 2026, 2026年11月1日, study section 490) and set their `reviewed_at_utc`. Run again, it found nothing left to fill, and no record held a placeholder. master-laws-on-the-grammar's scope came to 192 theorems in 221 declarations;
-  - the re-point took exactly the registry's drift, 419 pairs in 191 records, with 29 Lean files rebound. No drift was left;
-  - `register` took 40 roots, four from each stage with the kit's 32, and dropped 16 entries now used, four of them `20-nd`'s. `study` wrote section 490 once;
-  - the 195 records went through the registry's validation and the lint with no findings.
+  - `record` filled the history notes of the stages' 33 records (1 November 2026, 2026年11月1日, study section 492) and set their `reviewed_at_utc`. Run again, it found nothing left to fill, and no record held a placeholder. master-laws-on-the-grammar's scope came to 192 theorems in 221 declarations;
+  - the front refresh checked item 2's figures against the record as written, then made items 1–3 in both editions, READING-BUDGETS' two rows and the recount. Run again, it found every edit in place. With the overview's bullet changed, it stopped and wrote nothing. The recount: the one page 1,168 words, 1,173 budget-words, 73 over its 1,100, 9.0 to 11.7 minutes; the overview 6,208 words, 6,224 budget-words, 224 over its 6,000, 47.9 to 62.2 minutes; both Chinese editions within budget;
+  - the re-point took exactly the registry's drift, 429 pairs in 199 records, with 30 Lean files rebound. No drift was left;
+  - `register` took 40 roots, four from each stage with the kit's 32, and dropped 16 entries now used, four of them `20-nd`'s. `study` wrote section 492 once;
+  - the 203 records went through the registry's validation and the lint with no findings.
 
   With `10-u4c` alone, on main at 73b86ad76, the same steps passed: 22 records filled, 295 pairs in 150 records re-pointed, 36 roots registered, and no finding on 152 records. `stage_check.py` ran in each tree, after the real stages, and all 13 checks passed both times: the throwaway stages were found in place from the tree's record even after the record stage and the re-point had edited the stages' records.
 
@@ -211,11 +212,7 @@ All checks ran on 1 November.
 ## What waits
 
 - **The run.** No Lean runs for the rebuild until OU's owner says. The slot is last in the core round.
-- **What changes after the full rehearsal.** Each is built alone at the landing, reusing the rehearsal's steps:
-  - owner patch 05, GrammarScope's comments;
-  - U4c's re-cut of `10-u4c` after its documents slot, record side only, so any Lean it changes is reported first;
-  - main's Lean after 9a01af14e, UE28 first.
-
-  `20-nd`'s patch 25 no longer applies on main: the collective page's text-review fixes (50655604a) rewrote the line under its §8 hunk, so its owner re-cuts it. The dry run then runs again on the main the landing merges.
+- **What the landing's core run compiles.** Main's Lean after the full rehearsal's base, 9a01af14e, changed 14 modules: UE28's BlanketCouplings, the quick Lean review's docstrings in twelve, GrammarCrossing and GrammarScope among them, and the root. Patches 02 and 05 change those two again, in comments. In the landing's tree, 34 of the 376 targets are among the 14 or downstream of them, and the core run compiles those. The other 342 have the bytes and imports they had in the rehearsal, and reuse its steps. U4c's re-cuts changed no Lean, and patch 05 was built on the rehearsal's tree ([above](#checked)).
+- **Patch 02's docstring hunk.** Its last hunk words `«不出皆闭当且仅当排中»`'s docstring as 08 §2 states the law's standing ([why](patches/README.md#the-grammars-owners-patches)). The grammar's owner had accepted the review's wording, so the hunk waits for their read. Kept, it lands with the patch. Dropped, that hunk and the re-point reason's clause on it go, and the module's doc and the docstring keep disagreeing.
 - **The stages.** Each stage is its owner's series, made against the tree that this kit's `apply` and the stages before it leave. U4c's census laws are here as `10-u4c/` and ND's names as `20-nd/`, and the dry run and `stage_check.py` take both ([above](#checked)). If main moves under a stage before the landing, its owner re-cuts it on the main the landing merges. OU's owner tells the coordinator. The rename of master-laws-on-the-grammar's id is not a stage: it comes after the rebuild, last, in ND's own landing.
 - **The landing's texts.** The commit message and the board's landed clause name the owner's items with the kit's: the two theorems new in GrammarLaws are BD2's text, `«不出»`, `«闭则不出»` and `«所闭不出»` move there, and `Flow.Cut` is defined as `«不出»`.
