@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T22:16:00+00:00",
+  "reviewed_at_utc": "2026-11-01T03:12:56+00:00",
   "statement": {
     "en": "Over finitely many relata, transfers between related relata that balance a step exist exactly where the total is conserved on every family the relation closes, and a law reading only related relata that conserves its total gives that conservation.",
     "zh": "在有限多个关系项上，只在相关关系项之间移动、使一步平衡的转移，恰在总量于关系封闭的每个家族上守恒时存在；只读相关关系项、守恒总量的规律给出这一守恒。"
@@ -102,12 +102,34 @@
         "Becoming.Continuity.balancing_iff_notGoingOut",
         "Becoming.Continuity.balancesOn_iff_notGoingOut"
       ]
+    },
+    {
+      "en": "With equality decided, each relatum's closure under the listed adjacency, «所闭», is decided by a test and is the least family the relation closes holding it. So, relata listed without repetition, transfers along the relation balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently, by «类之对当且仅当类类等数», where the units before pair one to one with those after under the closure; on a web, at every step likewise.",
+      "zh": "关系项之相等可判定时，所列相邻下每个关系项之闭包（«所闭»）可判定为一检验，且为关系所封闭、含此项之最小家族。故关系项不重复列出时，沿关系使一步平衡的转移，恰在总量于每个所列关系项之闭包上守恒时存在，亦即（由 «类之对当且仅当类类等数»）恰在前之单位与后之单位于闭包下一一成对时存在；网在每一步亦然。",
+      "declarations": [
+        "Becoming.Continuity.closureListed",
+        "Becoming.Continuity.closureListed_iff",
+        "Becoming.Continuity.closureListed_closed",
+        "Becoming.Continuity.closureListed_closes",
+        "Becoming.Continuity.closureListed_self",
+        "Becoming.Continuity.closureListed_inside",
+        "Becoming.Continuity.conservedOn_iff_closures",
+        "Becoming.Continuity.balancing_iff_closures",
+        "Becoming.Continuity.balancesOn_iff_closures",
+        "Becoming.Continuity.pairing_iff_closure_counts",
+        "Becoming.Continuity.pairing_iff_closures",
+        "Becoming.Continuity.unitsOn",
+        "Becoming.Continuity.count_unitsOn",
+        "Becoming.Continuity.conservedOn_iff_units_paired",
+        "Becoming.Continuity.balancing_iff_units_paired",
+        "Becoming.Continuity.balancesOn_iff_units_paired"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "Finitely many relata listed without repetition; equality of relata decided and the relation a Bool test, so the transfers are computed; levels are whole numbers.",
-      "zh": "有限多个不重复列出的关系项；关系项的相等可判定，关系是布尔检验，故转移可计算；水平是整数。"
+      "en": "Finitely many relata listed without repetition; equality of relata decided, a modelling hypothesis, and the relation a Bool test, so the transfers and the closures are computed; levels are whole numbers.",
+      "zh": "有限多个不重复列出的关系项；关系项的相等可判定（建模假设），关系是布尔检验，故转移与闭包可计算；水平是整数。"
     },
     {
       "en": "For the law: its next level at a listed relatum reads only that relatum and the listed relata adjacent to it, and it conserves the total from every configuration, the configuration with nothing anywhere included.",
@@ -142,9 +164,15 @@
       "kind": "scope"
     },
     {
-      "en": "That conservation on each closure under the listed adjacency (the «所闭» form) is enough: a region not gone out of is the union of its members' closures, but no closure is decided as a test here, nor a total summed over closures.",
-      "zh": "在所列相邻下每个闭包（«所闭» 形式）上守恒即足：不出之域是其成员闭包之并，但此处未把闭包判定为检验，也未在闭包上求总量之和。",
+      "en": "Transfers within capacities: conservation on each closure is the uncapacitated, undirected case of the feasibility conditions of Gale (1957) and Hoffman (1960); their capacitated case is not stated.",
+      "zh": "容量之内的转移：每个闭包上的守恒是 Gale（1957）与 Hoffman（1960）可行性条件的无容量、无向情形；有容量情形未陈述。",
       "kind": "scope"
+    },
+    {
+      "en": "That counts kept on each closure give a pairing along one step of the adjacency: on the path 0 — 1 — 2, [0] and [2] keep every closure's count and no step joins 0 to 2, as an amount may pass through a relatum within the step.",
+      "zh": "每个闭包计数相守即给出沿相邻一步之配对：在路径 0 — 1 — 2 上，[0] 与 [2] 在每个闭包上计数相守，而无一步连接 0 与 2，正如一量可在一步内经过一个关系项。",
+      "kind": "non-implication",
+      "witness": "Becoming.Continuity.PathOfThree.counts_kept_not_along_step"
     }
   ],
   "counterexamples": [
@@ -162,15 +190,15 @@
     "no-ethical-premise"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, and Becoming.BalanceRegions (the seventh law) at receipt 20261031T225858.600119Z, 7 declarations (6 theorems), each with an empty axiom report. No independent review of Becoming.Continuity; Becoming.BalanceRegions and the seventh law read by an independent AI reader, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions（第七律），回执 20261031T225858.600119Z，7 个声明中 6 条定理；公理报告均为空。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 与第七律经一独立 AI 读者审读，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, and Becoming.BalanceRegions (the seventh and eighth laws) at receipt PENDING, 48 declarations (43 theorems), each with an empty axiom report, decided equality taken as an argument: an instance supplied at use carries its own report. No independent review of Becoming.Continuity; Becoming.BalanceRegions and its two laws read by independent AI readers, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions（第七、八律），回执 PENDING，48 个声明中 43 条定理；公理报告均为空，可判定相等作为参数取入，使用时所给实例自带其报告。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI 读者审读，所提各点皆已采纳。"
   },
   "next_delta": {
     "en": "A flux chosen local, depending only on the levels near each related pair, for laws that read within a bounded neighbourhood, as for cellular automata on lattices; and transfers within what stands on their source where the law moves units, as particle displacements do.",
     "zh": "对只在有界邻域内读取的规律，选取局部的通量（只依赖每对相关关系项附近的水平），如格点上的元胞自动机；以及在规律移动单位处，不超过来源所立者的转移，如粒子位移表示。"
   },
   "correspondence": {
-    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component; balancing_iff is that fact stated with the spine's families and computed. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case."
+    "en": "Network flows: a flow on a finite graph with prescribed divergence exists exactly where the divergence sums to zero on each connected component, the uncapacitated, undirected case of the feasibility conditions of Gale (1957) for supplies and demands and, through the usual reduction to a circulation, of Hoffman (1960); balancing_iff is that fact stated with the spine's families and computed, balancing_iff_closures states it on each component, the grammar's «所闭» along the listed adjacency, and balancing_iff_units_paired reads it at the grain of units. Cellular automata: a conserved additive quantity of a local rule on a lattice has a flux depending on a finite window (Hattori and Takesue 1991; Pivato 2002, Proposition 12), and number-conserving rules have particle-displacement representations in one dimension (Fukś 2000; Moreira, Boccara and Goles 2004) and two (Kari and Taati 2008). Physics: the continuity equation of a locally conserved quantity, of which thermodynamics' first law with locality (FL1) is the energy case."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
   "aliases": [
@@ -220,7 +248,29 @@
     "Becoming.Continuity.closes_iff_notGoingOut",
     "Becoming.Continuity.closes_iff_notComingIn",
     "Becoming.Continuity.balancing_iff_notGoingOut",
-    "Becoming.Continuity.balancesOn_iff_notGoingOut"
+    "Becoming.Continuity.balancesOn_iff_notGoingOut",
+    "Becoming.Continuity.closureListed",
+    "Becoming.Continuity.closureListed_iff",
+    "Becoming.Continuity.closureListed_closed",
+    "Becoming.Continuity.closureListed_closes",
+    "Becoming.Continuity.closureListed_self",
+    "Becoming.Continuity.closureListed_inside",
+    "Becoming.Continuity.conservedOn_iff_closures",
+    "Becoming.Continuity.balancing_iff_closures",
+    "Becoming.Continuity.balancesOn_iff_closures",
+    "Becoming.Continuity.pairing_iff_closure_counts",
+    "Becoming.Continuity.pairing_iff_closures",
+    "Becoming.Continuity.unitsOn",
+    "Becoming.Continuity.count_unitsOn",
+    "Becoming.Continuity.conservedOn_iff_units_paired",
+    "Becoming.Continuity.balancing_iff_units_paired",
+    "Becoming.Continuity.balancesOn_iff_units_paired",
+    "Becoming.Continuity.paired_single",
+    "Becoming.Continuity.PathOfThree.rel",
+    "Becoming.Continuity.PathOfThree.paired_within",
+    "Becoming.Continuity.PathOfThree.not_paired_along_step",
+    "Becoming.Continuity.PathOfThree.counts_kept_not_along_step",
+    "Becoming.Continuity.closureListed_unlisted"
   ],
   "dependencies": [
     {
@@ -243,8 +293,8 @@
       "id": "master-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
-        "en": "GrammarLaws.uncrossed_of_closed: a region closed under a relation and under its converse is one the relation crosses neither way; closes_iff_closed reads Continuity's closed family through it, the adjacency being symmetric.",
-        "zh": "复用 GrammarLaws.uncrossed_of_closed：在关系及其逆下皆闭之域，关系两向皆不越；closes_iff_closed 借之读 Continuity 之封闭家族，相邻对称。"
+        "en": "GrammarLaws.uncrossed_of_closed: a region closed under a relation and under its converse is one the relation crosses neither way; closes_iff_closed reads Continuity's closed family through it, the adjacency being symmetric. The eighth law reuses the closure's laws («所闭之自反», «所闭之传递», «所闭之对称», «缘在所闭», «闭含所闭»), the count «计» and the count law of a class «类之对当且仅当类类等数».",
+        "zh": "复用 GrammarLaws.uncrossed_of_closed：在关系及其逆下皆闭之域，关系两向皆不越；closes_iff_closed 借之读 Continuity 之封闭家族，相邻对称。第八律复用闭包之律（«所闭之自反»、«所闭之传递»、«所闭之对称»、«缘在所闭»、«闭含所闭»）、计数 «计» 与类之计数律 «类之对当且仅当类类等数»。"
       }
     }
   ],
@@ -348,7 +398,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
       "role": "proof",
-      "sha256": "cc33480fece6eba885d95f1109da463c0582d1f788a98844ef5dbbede8c40501",
+      "sha256": "4b41761516d99896f90764629e222e8646f96c06173c9d7df69a6b6e2f148f1e",
       "declarations": [
         "Becoming.Continuity.adjacentListed",
         "Becoming.Continuity.adjacentListed_symm",
@@ -356,7 +406,48 @@
         "Becoming.Continuity.closes_iff_notGoingOut",
         "Becoming.Continuity.closes_iff_notComingIn",
         "Becoming.Continuity.balancing_iff_notGoingOut",
-        "Becoming.Continuity.balancesOn_iff_notGoingOut"
+        "Becoming.Continuity.balancesOn_iff_notGoingOut",
+        "Becoming.Continuity.cond_le_cond",
+        "Becoming.Continuity.count_le_count",
+        "Becoming.Continuity.count_lt_count",
+        "Becoming.Continuity.count_true",
+        "Becoming.Continuity.counted_of_count",
+        "Becoming.Continuity.count_append",
+        "Becoming.Continuity.count_replicate_true",
+        "Becoming.Continuity.count_replicate_false",
+        "Becoming.Continuity.closes_and_not",
+        "Becoming.Continuity.within_split",
+        "Becoming.Continuity.conserved_of_absent",
+        "Becoming.Continuity.reachedListed",
+        "Becoming.Continuity.closureListed",
+        "Becoming.Continuity.reachedListed_within",
+        "Becoming.Continuity.reachedListed_add",
+        "Becoming.Continuity.closureListed_self",
+        "Becoming.Continuity.reachedListed_stays",
+        "Becoming.Continuity.reachedListed_grows_or_stays",
+        "Becoming.Continuity.closureListed_closed",
+        "Becoming.Continuity.closureListed_iff",
+        "Becoming.Continuity.closureListed_closes",
+        "Becoming.Continuity.closureListed_unlisted",
+        "Becoming.Continuity.closureListed_inside",
+        "Becoming.Continuity.conserved_of_fewer",
+        "Becoming.Continuity.conserved_of_closures",
+        "Becoming.Continuity.conservedOn_iff_closures",
+        "Becoming.Continuity.balancing_iff_closures",
+        "Becoming.Continuity.balancesOn_iff_closures",
+        "Becoming.Continuity.pairing_iff_closure_counts",
+        "Becoming.Continuity.pairing_iff_closures",
+        "Becoming.Continuity.unitsOn",
+        "Becoming.Continuity.count_unitsOn",
+        "Becoming.Continuity.closures_iff_unit_counts",
+        "Becoming.Continuity.conservedOn_iff_units_paired",
+        "Becoming.Continuity.balancing_iff_units_paired",
+        "Becoming.Continuity.balancesOn_iff_units_paired",
+        "Becoming.Continuity.paired_single",
+        "Becoming.Continuity.PathOfThree.rel",
+        "Becoming.Continuity.PathOfThree.paired_within",
+        "Becoming.Continuity.PathOfThree.not_paired_along_step",
+        "Becoming.Continuity.PathOfThree.counts_kept_not_along_step"
       ]
     },
     {
@@ -376,7 +467,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T225858.600119Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BalanceRegions",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -394,6 +485,10 @@
     {
       "en": "1 November 2026, board item BD3: a seventh law reads the record on the grammar's «不出» (Becoming.BalanceRegions): a family the relation closes is exactly a region not gone out of along adjacency among the listed relata, not come into, and closed under it, proved through the grammar's laws, so transfers balancing a step exist exactly where the total is conserved on every such region; dependencies on not-going-out-of-a-region and master-laws-on-the-grammar; one item on what is not shown, the «所闭» form. No earlier statement, law or declaration changed.",
       "zh": "2026年11月1日，工作板条目 BD3：第七律于文法之 «不出» 上读本记录（Becoming.BalanceRegions）：关系所封闭之家族恰是沿所列关系项间之相邻不出之域，亦恰是不入之域与在其下闭之域，皆由文法之律证得，故使一步平衡之转移恰在总量于每一此域上守恒时存在；增对 not-going-out-of-a-region 与 master-laws-on-the-grammar 之依赖；所不示者增一项，即 «所闭» 形式。先前之陈述、规律与声明皆未变。"
+    },
+    {
+      "en": "1 November 2026, board item BD4: an eighth law reads the record on the grammar's «所闭» (Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test and is the least family the relation closes holding it, so transfers balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently where the units before pair one to one with the units after under the closure. The sixth item on what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step, with a witness on the path 0 — 1 — 2. Gale and Hoffman named in the correspondence; the first hypothesis names decided equality a modelling hypothesis. No earlier statement, law or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个闭包可判定为一检验，且为关系所封闭、含此项之最小家族，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在前之单位与后之单位于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman；第一条假设注明可判定相等为建模假设。先前之陈述、规律与声明皆未变。"
     }
   ]
 }

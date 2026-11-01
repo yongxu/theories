@@ -7,6 +7,8 @@ stale entry, which BD4's change (BD3's leaf extended, no other module changed) d
   through balancesOn_iff_conserved, so nothing on the base uses it (general structure); likewise the web form.
 * pairing_iff_closures and pairing_iff_closure_counts are the unit grain's case of the count law of a class; nothing on
   the base uses them (general structure).
+* balancing_iff_units_paired and balancesOn_iff_units_paired join the two grains: balance along the relation read on
+  units paired under the closure; nothing on the base uses them (general structure).
 * PathOfThree.counts_kept_not_along_step is the witness of a non-implication on the record, a fact about one
   constructed relation (model witness); its two steps likewise, and paired_single, the inversion it uses, is support.
 * The other new declarations (the counting lemmas, the reach and its closure, the decomposition) are steps of these
@@ -63,13 +65,32 @@ REASONS = {
     C + 'closes_and_not': ('support', STEP),
     C + 'within_split': ('support', STEP),
     C + 'conserved_of_absent': ('support', STEP),
-    C + 'conserved_peel': ('support', STEP),
+    C + 'conserved_of_fewer': ('support', STEP),
     C + 'conserved_of_closures': ('support', STEP),
     C + 'cond_le_cond': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'count_le_count': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'count_lt_count': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'count_true': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
     C + 'counted_of_count': ('support', 'a count lemma on the grammar\'s «计», a step of the closure laws (BD4)'),
+    C + 'count_append': ('support', 'a count lemma on the grammar\'s «计», a step of the units\' count (BD4)'),
+    C + 'count_replicate_true': ('support', 'a count lemma on the grammar\'s «计», a step of the units\' count (BD4)'),
+    C + 'count_replicate_false': ('support', 'a count lemma on the grammar\'s «计», a step of the units\' count (BD4)'),
+    C + 'count_unitsOn': ('support', 'a quantity\'s units counted on a family as its total there, a step of the join of '
+                                     'the two grains (BD4)'),
+    C + 'closureListed_unlisted': ('support', STEP),
+    C + 'closures_iff_unit_counts': ('support', 'a step of the join of the two grains, for any type (BD4)'),
+    C + 'conservedOn_iff_units_paired': ('general-structure',
+                                         'conservation on every family the relation closes is the units before paired '
+                                         'one to one with the units after under the closure along the listed '
+                                         'adjacency: ' + GENERAL),
+    C + 'balancing_iff_units_paired': ('general-structure',
+                                       'relata listed without repetition and equality decided, transfers balancing a '
+                                       'step exist exactly where the units before pair one to one with the units '
+                                       'after under the closure: ' + GENERAL),
+    C + 'balancesOn_iff_units_paired': ('general-structure',
+                                        'on a web, transfers balancing every step exist exactly where at every step the '
+                                        'units before pair one to one with the units after under the closure: '
+                                        + GENERAL),
     C + 'PathOfThree.counts_kept_not_along_step': (
         'model-witness',
         'On the path 0 — 1 — 2, [0] and [2] keep the count on every closure along the listed adjacency, and no '
