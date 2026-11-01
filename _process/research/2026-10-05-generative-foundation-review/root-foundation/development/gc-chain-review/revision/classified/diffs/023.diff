@@ -1,0 +1,213 @@
+--- 89199e2cc:theories/becoming/results/records/incidence-common-refinement.json
++++ theories/becoming/results/records/incidence-common-refinement.json
+@@ -1,3 +1,3 @@
+ {
+-  "schema_version": 1,
++  "schema_version": 2,
+   "id": "incidence-common-refinement",
+@@ -10,7 +10,83 @@
+   "family": "F22",
+-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
+-  "claim": {
+-    "zh": "两侧局部有限且在所声明范围内关系连通，根片段对全部关联问题同测时，所有同测片段对构成共同细化，其两投影覆盖相应范围、保留接合并提升固定一个参与位置的接合。",
+-    "en": "For locally finite, incidence-connected declared scopes with equal root answers, all equally answering fragment pairs form a common refinement whose projections cover those scopes, preserve joins and lift joins fixing one participant."
++  "reviewed_at_utc": "2026-10-28T11:58:14+00:00",
++  "statement": {
++    "en": "For two joinings connected from roots alike through their role frames, the alike fragment pairs form a common refinement whose projections keep joins, lift each join at one participant and cover both; with excluded middle and both locally finite, roots passing the same branching tests suffice.",
++    "zh": "两个接合从经角色框架相似的根连通时，相似的片段对构成共同细化，其投影保留接合、在一个参与位置提升每个接合并覆盖两侧；有排中律且两侧局部有限时，根通过相同的分支检验即足够。"
+   },
++  "laws": [
++    {
++      "en": "A joining read through roles is the frame whose places are fragments and occurrences of joining: a fragment enters an occurrence by a role it holds there, and an occurrence is left by a role to the fragment holding it. A joining is connected from a fragment where every fragment is reached from it through roles.",
++      "zh": "经角色读出的接合是这样的框架：其位置为片段与接合的发生；片段以它在某发生中所持的角色进入该发生，发生以某角色离开到持该角色的片段。接合从某片段连通，是指每个片段都经角色从它可达。",
++      "declarations": [
++        "Becoming.Joining.roleFrame",
++        "Becoming.Joining.ConnectedFrom"
++      ]
++    },
++    {
++      "en": "An open map of joinings keeps the joining, and lifts every occurrence holding a fragment's image in a role to an occurrence holding that fragment in that role, mapped onto it role by role; it lifts pairs where every joining of two images comes from a joining of the two fragments.",
++      "zh": "接合的开映射保持接合，并把每个在某角色上持某片段之像的发生，提升为在该角色上持该片段、逐角色映到它的发生；它提升对，是指两像的每个接合都来自两片段的接合。",
++      "declarations": [
++        "Becoming.Joining.Keeps",
++        "Becoming.Joining.OpenMap",
++        "Becoming.Joining.PairLifting"
++      ]
++    },
++    {
++      "en": "For any two joinings, the pairs of fragments alike through their role frames, joined pair by pair, form a joining whose two projections are open maps of joinings, with no premise.",
++      "zh": "对任意两个接合，经其角色框架相似的片段对逐对接合，构成一个接合，其两个投影都是接合的开映射，不加前提。",
++      "declarations": [
++        "Becoming.Joining.Matched",
++        "Becoming.Joining.span",
++        "Becoming.Joining.span_first_open",
++        "Becoming.Joining.span_second_open"
++      ]
++    },
++    {
++      "en": "For two joinings connected from roots alike through their role frames, every fragment of either is alike to some fragment of the other, so the joining of alike pairs is a common refinement: both projections are open and every fragment of each joining is a projection of an alike pair; no finiteness and no decision is used.",
++      "zh": "对两个从经角色框架相似的根连通的接合，任一方的每个片段都与另一方某片段相似，故相似对的接合是共同细化：两个投影都是开的，每个接合的每个片段都是某相似对的投影；不用有限性，也不用判定。",
++      "declarations": [
++        "Becoming.Joining.covers",
++        "Becoming.Joining.common_refinement"
++      ]
++    },
++    {
++      "en": "With excluded middle as a named hypothesis, configurations of two frames passing the same branching tests match each step where the second frame lists the outcomes of each move, and passing the same tests is a bisimulation where both frames list them.",
++      "zh": "以排中律为具名假设：两框架中通过相同分支检验的构形，在第二个框架列出每个动作的结果时逐步相配；两个框架都列出时，通过相同检验是一个双模拟。",
++      "declarations": [
++        "Becoming.SameBranchingTests.step_of_em",
++        "Becoming.SameBranchingTests.bisimulation_of_em"
++      ]
++    },
++    {
++      "en": "With excluded middle as a named hypothesis, where each fragment of two joinings holds each role in listed occurrences, places are alike through the role frames exactly where they pass the same branching tests.",
++      "zh": "以排中律为具名假设：凡两个接合的每个片段在列出的发生中持每个角色，位置经角色框架相似，恰当它们通过相同的分支检验。",
++      "declarations": [
++        "Becoming.Joining.LocallyFinite",
++        "Becoming.Joining.LocallyFinite.alike_iff"
++      ]
++    },
++    {
++      "en": "With excluded middle as a named hypothesis and each fragment of the second joining holding each role in listed occurrences: where fragments x and y pass the same tests of roles, an occurrence of the first holding x in a role is matched by one of the second holding y in that role, their fragments in every role passing the same tests; with both so listed, roots passing the same tests cover what they connect.",
++      "zh": "以排中律为具名假设，且第二个接合的每个片段在列出的发生中持每个角色：凡片段 x 与 y 通过相同的角色检验，第一个接合中在某角色上持 x 的发生，由第二个中在该角色上持 y 的发生相配，两者每个角色上的片段都通过相同检验；两侧都如此列出时，通过相同检验的根覆盖其所连通者。",
++      "declarations": [
++        "Becoming.Joining.match_incident_of_em",
++        "Becoming.Joining.covers_of_em"
++      ]
++    },
++    {
++      "en": "With excluded middle as a named hypothesis, for two joinings in which each fragment holds each role in listed occurrences, connected from roots passing the same branching tests of roles, the joining of alike pairs is a common refinement whose projections are open and cover both.",
++      "zh": "以排中律为具名假设：对两个每个片段都在列出的发生中持每个角色、且从通过相同角色分支检验的根连通的接合，相似对的接合是共同细化，其投影是开的并覆盖两侧。",
++      "declarations": [
++        "Becoming.Joining.common_refinement_of_em"
++      ]
++    },
++    {
++      "en": "Where every fragment takes every role and some fragment cannot join itself, the map onto the one-fragment joining is open, every fragment passing the tests of roles of the one fragment, and does not lift pairs; for the process that moves once, the map of its traced fragments onto that joining is open and does not lift pairs.",
++      "zh": "凡每个片段取每个角色、而某片段不能与自身接合，到单片段接合的映射是开的，每个片段都通过单一片段的角色检验，但它不提升对；对只动一次的过程，其被追踪片段到该接合的映射是开的，且不提升对。",
++      "declarations": [
++        "Becoming.Joining.RoleTotal.open_not_pairLifting",
++        "Becoming.Fragment.once_open_not_pairLifting"
++      ]
++    }
++  ],
+   "hypotheses": [
+@@ -21,6 +97,41 @@
+     {
+-      "zh": "每个片段／角色只有有限关联接合；两根 Related；两边 ConnectedFrom。",
+-      "en": "Finitely many incident joins per fragment/role; Related roots and ConnectedFrom on both sides."
+-    }
+-  ],
++      "zh": "两个接合都从其根连通（两边 ConnectedFrom），两根经角色框架相似；或在检验形式中，两根通过相同分支检验，且每个片段／角色只有有限关联接合。",
++      "en": "Both joinings are connected from their roots (ConnectedFrom on both sides), the roots alike through the role frames or, for the tests form, passing the same branching tests with finitely many incident joins per fragment and role."
++    },
++    {
++      "en": "The form with roots passing the same branching tests takes excluded middle as a named hypothesis (em : ∀ p : Prop, Decided p) and both joinings locally finite; the form with alike roots takes neither.",
++      "zh": "根通过相同分支检验的形式以排中律为具名假设（em : ∀ p : Prop, Decided p），并要求两个接合局部有限；根相似的形式两者都不要。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "Lifting each join at one participant does not give lifting at a fixed pair: an open map of joinings can fail to lift pairs.",
++      "zh": "在一个参与位置提升每个接合，不给出在固定一对上的提升：接合的开映射可以不提升对。",
++      "kind": "non-implication",
++      "witness": "Becoming.Fragment.once_open_not_pairLifting"
++    },
++    {
++      "en": "Read through roles alone, a joining with local units collapses: every traced fragment of a process passes the tests of the one fragment.",
++      "zh": "只经角色读出时，有局部单位的接合会退化：过程的每个被追踪片段都通过单一片段的检验。",
++      "kind": "scope",
++      "witness": "Becoming.Fragment.traces_collapse"
++    },
++    {
++      "en": "It shows neither one actual provenance shared by the two descriptions nor a universal ontology.",
++      "zh": "它既不表明两种说明有同一实际来源，也不表明普遍本体。",
++      "kind": "correspondence"
++    }
++  ],
++  "counterexamples": [],
++  "standard_boundaries": [
++    "no-ethical-premise"
++  ],
++  "validation_scope": {
++    "en": "Machine-checked: core receipts under becoming-checks (check_becoming.py, Lean 4.29.1) bind the current bytes of Becoming.Joining, Becoming.JoiningRoles, Becoming.Granularity and Becoming.BranchingCorrespondence, every declaration the laws cite with an empty axiom report. The periphery modules the laws were ported from are provenance, their receipt under explanatory-joining-refinement-checks keeping its earlier scope. No independent review.",
++    "zh": "机器检查：becoming-checks 下的核心回执（check_becoming.py，Lean 4.29.1）绑定 Becoming.Joining、Becoming.JoiningRoles、Becoming.Granularity 与 Becoming.BranchingCorrespondence 的当前字节，规律所引声明公理报告皆空。规律所移植自的外围模块是来源，其 explanatory-joining-refinement-checks 下的回执保持原范围。无独立审查。"
++  },
++  "next_delta": {
++    "en": "Establish a warranted translation of residuals, guards and formations between descriptions with different internal syntax, distinguishing what semantic tests decide from what is actually acquired.",
++    "zh": "在内部语法不同的说明之间建立余项、判断与形成关系的有据翻译，区分语义检验所判定者与实际取得者。"
++  },
+   "correspondence": {
+@@ -97,19 +208,2 @@
+   ],
+-  "counterexamples": [
+-    {
+-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+-      "detail": {
+-        "zh": "仅固定一个参与位置；未推出固定两个输入的提升。无引用语言在有局部单位时会退化；不是同一实际来源或普遍本体的证明。",
+-        "en": "Only one participant is fixed; fixed-pair lifting does not follow. The unanchored language collapses for local-unit structures. This proves neither identical actual provenance nor universal ontology."
+-      }
+-    }
+-  ],
+-  "limitations": {
+-    "zh": "仅固定一个参与位置；未推出固定两个输入的提升。无引用语言在有局部单位时会退化；不是同一实际来源或普遍本体的证明。",
+-    "en": "Only one participant is fixed; fixed-pair lifting does not follow. The unanchored language collapses for local-unit structures. This proves neither identical actual provenance nor universal ontology."
+-  },
+-  "validation_scope": {
+-    "zh": "Lean 4.29.1 实查：本次43项新声明，213项继承审计，共256项；新9空依赖、34标准，7项含经典选择。冻结源码、日志与回执逐字绑定；非独立 agent 验收。",
+-    "en": "Lean 4.29.1 checks 43 new declarations and 213 inherited audits, 256 total; new 9 empty and 34 standard dependency lists, 7 with classical choice. Frozen source/logs bind to the receipt; no independent-agent acceptance."
+-  },
+   "references": [
+@@ -134,3 +228,4 @@
+         "Becoming.Joining.covers_of_em",
+-        "Becoming.Fragment.once_open_not_pairLifting"
++        "Becoming.Fragment.once_open_not_pairLifting",
++        "Becoming.Fragment.traces_collapse"
+       ]
+@@ -192,3 +287,12 @@
+         "Becoming.Joining.LocallyFinite.alike_iff",
+-        "Becoming.Joining.span_second_open"
++        "Becoming.Joining.span_second_open",
++        "Becoming.Joining.Keeps",
++        "Becoming.Joining.OpenMap",
++        "Becoming.Joining.PairLifting",
++        "Becoming.Joining.Matched",
++        "Becoming.Joining.span",
++        "Becoming.Joining.ConnectedFrom",
++        "Becoming.Joining.covers",
++        "Becoming.Joining.LocallyFinite",
++        "Becoming.Joining.RoleTotal.open_not_pairLifting"
+       ]
+@@ -278,6 +382,2 @@
+   ],
+-  "next_delta": {
+-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+-  },
+   "history": [
+@@ -310,2 +410,24 @@
+       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryBranching, ExplanatoryJoiningAnchors, ExplanatoryJoiningIncidence and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.BranchingCorrespondence, Becoming.Granularity, Becoming.Joining and Becoming.JoiningRoles）。退役模块的内容也陈述于 Becoming.Labelled and Becoming.Likeness，本记录未以声明引用它们。主张不变。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the home section; the claim split into nine laws, each read against its declarations in Joining.lean, JoiningRoles.lean, Granularity.lean and BranchingCorrespondence.lean (the role frame and connection, open maps and pair lifting, the span, the common refinement with alike roots, the tests lemmas under excluded middle, the form with roots passing the same tests, and the pair-lifting failure); the limitations, and the counterexample that repeated them and cited no declaration, to three does-not-show items, two with witnesses; a hypothesis added naming excluded middle, which the Lean takes and the record had not listed, and saying that only the tests form takes it and local finiteness, the second hypothesis reworded to the same effect; the standard boundary no-ethical-premise cited; Keeps, OpenMap, PairLifting, Matched, span, ConnectedFrom, covers, LocallyFinite and RoleTotal.open_not_pairLifting added to Joining.lean's references and Fragment.traces_collapse to JoiningRoles.lean's; no premise, status or source hash changed. Every earlier sentence is mapped in [incidence-common-refinement.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/incidence-common-refinement.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in hypotheses, the evidence paragraph, each read against the Lean it cites.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依本节写出陈述；主张拆为九条规律，各条对照 Joining.lean、JoiningRoles.lean、Granularity.lean 与 BranchingCorrespondence.lean 中的声明核读（角色框架与连通、开映射与对的提升、配对接合、根相似时的共同细化、排中律下的检验引理、根通过相同检验的形式、对提升的失败）；限制，以及重复限制且未引声明的反例，改为三条“未表明”，其中两条有见证；新增一条前提，写明排中律（Lean 取之，记录原未列出），并说明只有检验形式取它与局部有限，第二条前提按同样意思改写；引用通用边界 no-ethical-premise；Keeps、OpenMap、PairLifting、Matched、span、ConnectedFrom、covers、LocallyFinite 与 RoleTotal.open_not_pairLifting 加入 Joining.lean 的引用，Fragment.traces_collapse 加入 JoiningRoles.lean 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [incidence-common-refinement.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/incidence-common-refinement.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及前提、证据段，各条对照所引 Lean 核读。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/e0ab31cb558b30d3/incidence-common-refinement.json",
++      "sha256": "e0ab31cb558b30d382ea358aec4b17d71629038d4011d9c5a63c5a0496de3b75",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/25e9548f75068689/incidence-common-refinement.json",
++      "sha256": "25e9548f7506868934de05683868cfbbbe358573ecbdb4b64ae03f97f068ea42",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
+     }

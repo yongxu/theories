@@ -1,0 +1,32 @@
+--- 1c704bc70:theories/becoming/results/records/acquired-revision-of-pending-task.md
++++ theories/becoming/results/records/acquired-revision-of-pending-task.md
+@@ -13,9 +13,17 @@
+ 1. For any partial law with counted work (while a task is pending, a tick does one unit of remaining work for one unit of fuel, finishes it when no work remains and fuel is left, and stalls without fuel): from a pending configuration, the remaining work plus one ticks finish the task exactly when the fuel covers them, and every run of at most the remaining work leaves it pending, its work lowered by the ticks taken. (`Becoming.Countdown.CountedWork`, `Becoming.Countdown.completes_iff`, `Becoming.Countdown.pending_before`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 2. For counted work where pending and finished exclude each other, no run of at most the remaining work finishes the task; work advancing by one unit per tick, with no fuel, finishes after its remaining work plus one tick. (`Becoming.Countdown.not_done_before`, `Becoming.Countdown.Advances`, `Becoming.Countdown.Advances.completes`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 3. In the versioned task protocol, the head of the queue is work advancing by one unit per tick: while it is pending (route and request kept, banks and active route unchanged, its remainder still delivering the request) a tick does one hop of its remaining path, and with none left it delivers the request and leaves the rest of the queue. (`Becoming.VersionedTaskInstances.head_advances`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 4. For an installation valid under the protocol's bank and queue invariant with a pending head, rewriting the head's encoding for a new request keeps its route, progress and the rest of the queue: the revised head is pending for the new request with the same remaining work, and after that work plus one tick it delivers the new request, the other work, banks and active route unchanged. (`Becoming.VersionedTaskInstances.retarget_pending`, `Becoming.VersionedTaskInstances.revised_head_instance`, `CommonTaskRevision.revised_head_completes`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 5. For every condition and every installation valid under the invariant with a pending head, acquisition, revision, reform, the rewrite of the head, which uses one unit of work, and its delivery run exactly under access loss with kept transition maintenance; the endpoint then enacts the learning practice, keeps the one earlier loss and adds none, and ends with three records and work, reserve and used units 2, 6 and 10. (`Becoming.VersionedTaskInstances.continuation_of_completed`, `Becoming.VersionedTaskInstances.continuation_eq`, `Becoming.VersionedTaskInstances.continuation_isSome_iff`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 6. At the harmful conditions, for every installation valid under the protocol's invariant with a pending head, the inherited comparison of what each practice protects and gains ranks learning above attendance, and the continuation enacts learning with one loss, three records and units 2, 6 and 10: the earlier composition is the continuation law's instance there. (`CommonTaskRevision.warranted_revision_and_pending_delivery`, `Becoming.VersionedTaskInstances.harmful_continuation_instance`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 7. In the versioned task protocol, wherever the rewrite of the head runs it keeps the records and the loss count and conserves the total of work, reserve and used units. (`CommonTaskRevision.paid_retarget_keeps_history`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 8. In the witnesses, without the rewrite the old route faithfully delivers the outdated request and the attendance practice adds a second loss; relabelling the request without rewriting the encoding, or writing the new value unencoded, does not deliver it; and conditions changed after acquisition, with transition maintenance lost, make the revised practice add a loss. (`CommonTaskRevision.old_route_faithfully_executes_outdated_task`, `CommonTaskRevision.declaration_only_fails`, `CommonTaskRevision.unencoded_replacement_fails`, `CommonTaskRevision.stale_conditions_defeat_the_new_practice`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 
+@@ -38,3 +46,3 @@
+ 
+-Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261020T161926.448088Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).
++Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261031T132223.713396Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).
+ 
+@@ -88,2 +96,3 @@
+ | receipt | [verification.json](·) | — |
++| receipt | [verification.json](·) | — |
+ 
+@@ -113,2 +122 @@
+ Documentary review UTC: `2026-10-28T12:06:07+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+-

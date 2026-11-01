@@ -1,0 +1,34 @@
+--- c05d509af:experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean
++++ experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean
+@@ -490,3 +490,6 @@
+ along an orbit are held by a list `l`, the orbit read through any map repeats, from some step
+-`i` on, with some period `q + 1`, where `i + q + 1 ≤ l.length` (from `revisits_within`). -/
++`i` on, with some period `q + 1`, where `i + q + 1 ≤ l.length`. The bound is pigeonhole
++(`revisits_within`); the repetition is the grammar's law of steps, as `Law.orbit_mul` is: a loop
++of `q + 1` steps then `d` steps is `d + q + 1` steps (`«迭之接»`), and with a fixed successor
++those lead where `d` steps lead (`«迭之定»`). -/
+ theorem lasso_of_held {S : Type v} {next : S → S} {s : S} {l : List S}
+@@ -498,9 +501,20 @@
+     (congrArg (Law.orbit next s) at_j).symm.trans same.symm
++  have loop : «迭» (fun x y => (Law.process next).step x () y) (q + 1)
++      (Law.orbit next s i) (Law.orbit next s i) :=
++    Eq.subst (motive := fun w =>
++        «迭» (fun x y => (Law.process next).step x () y) (q + 1) (Law.orbit next s i) w)
++      ((Law.orbit_add next s i (q + 1)).symm.trans back_to)
++      (Law.steps_orbit next (q + 1) (Law.orbit next s i))
+   ⟨i, q, Eq.subst (motive := fun n => n ≤ l.length) at_j within, fun _ later =>
+     let ⟨d, at_u⟩ := le_dest later
++    have again : Law.orbit next (Law.orbit next s i) (d + (q + 1)) =
++        Law.orbit next (Law.orbit next s i) d :=
++      «迭之定» (Law.step_fixed next) (d + (q + 1))
++        (Law.steps_orbit next (d + (q + 1)) (Law.orbit next s i))
++        («迭之接» (q + 1) d loop (Law.steps_orbit next d (Law.orbit next s i)))
+     congrArg reg
+       ((congrArg (fun n => Law.orbit next s (n + (q + 1))) at_u).trans
+-        ((congrArg (Law.orbit next s) (Nat.add_right_comm i d (q + 1))).trans
+-          ((Law.orbit_add next s (i + (q + 1)) d).trans
+-            ((congrArg (fun x => Law.orbit next x d) back_to).trans
++        ((congrArg (Law.orbit next s) (Nat.add_assoc i d (q + 1))).trans
++          ((Law.orbit_add next s i (d + (q + 1))).trans
++            (again.trans
+               ((Law.orbit_add next s i d).symm.trans
