@@ -7,8 +7,9 @@ land: the closures, and the landed clause in place of the head clause, ending wi
       given verbatim in CLOSE_ORDER:
   - EC, U1b, RN and UE6, landed, titled done and moved to the history file after the last landed row, links rebased;
   - OU's row stays open and states what is left after the gate;
-  - WHAT-REMAINS names what rides the next near-full rebuild of the grammar: BD4's three pieces and the quick Lean
-    review's open findings in the grammar and six leaves.
+  - WHAT-REMAINS names what rides the next near-full rebuild of the grammar: BD4's three pieces, the quick Lean
+    review's open findings in the grammar and six leaves, and one docstring in KeepingWidening;
+  - three stale lines: the board's count of commits ahead, the push WHAT-REMAINS names, the central declarations' number.
 usage (from the checkout root): python3 -B close_rows.py head | land"""
 import os
 import re
@@ -27,8 +28,9 @@ LANDED = ("OU's owner's board closures landed (documents only: no Lean, no recor
           "items 3 and 6, UE6 as stated); OU's row open, stating what is left after the gate (plan §十三 items 6, 8, "
           "11 and item 9's institution, each to be claimed on its own, on Ren's word to go past the gate); "
           "WHAT-REMAINS naming what rides the next near-full "
-          "rebuild of the grammar (BD4's three pieces and the quick Lean review's open findings in the grammar and "
-          "six leaves); render, strict check, links, tests and both dossier checks pass. ")
+          "rebuild of the grammar (BD4's three pieces, the quick Lean review's open findings in the grammar and six "
+          "leaves, and one docstring in KeepingWidening); three stale lines brought current (the board's count of "
+          "commits ahead, the push WHAT-REMAINS names, 117 central declarations since DU); render, strict check, links, tests and both dossier checks pass. ")
 CLOSE = {
     '| **EC: an elegant completion**':
         '; closed 2 November 2026: EC6 then took the gaps from 13 to 4 (`994c9d10f`), and OU3c to OU3e closed the '
@@ -56,11 +58,25 @@ A change to Grammar, GrammarMap or GrammarLaws recompiles nearly every module, s
   - in Grammar, `«火薪相须»`, `«四相无自立»`'s docstring and `«不复生则息»`;
   - in GrammarMap, `Endless.generation` and its siblings' identity-class witnesses, `«有终则粗不有常»` and `«不穷有终之定当且仅当排中»`;
   - in GrammarLaws, `«无后者不入亦不返»` and `«止而不入之例»`.
+- **KeepingWidening's `Flow.whole_not_keepsWidening`**: its docstring's bold headline says nothing keeps widening, where its body and its statement say by name.
 - **The review's six optional statement or name changes in leaves**: PremiseWitnesses, UnitMatchings, RevisionPlans, ReadStages, CountedCodes and Wholes. They ride the same rebuild so that one core run carries them.
 
 The review's docstring-only findings outside the grammar ride UE29.
 
 '''
+
+# Stale lines the coordinator confirmed on main 2fd433b2d: a count of commits ahead that drifts, the push superseded,
+# and the central declarations' number since DU.
+AHEAD = ('main was 75 commits ahead of it when this line was written on 1 November (`git rev-list --count '
+         'origin/main..main` gives the number now)',
+         'main is ahead of it (`git rev-list --count origin/main..main` gives by how much)')
+STALE = [
+    ('A working version went out to GitHub at `d00f1724d` on 31 October 2026.',
+     'A working version went out to GitHub on 31 October 2026, last at `74e2c9a69` (a push at `d00f1724d` that day '
+     'came first).'),
+    ('(全二). Of the 118 distinct central declarations, 44 reach the grammar',
+     '(全二). Of the 118 distinct central declarations then (117 since DU took `Web.paths_comparison_widens` off its row), 44 reach the grammar'),
+]
 
 
 def queue(lines):
@@ -105,7 +121,9 @@ def land():
     assert len(cells) == 5 and 'left after the gate' not in cells[2]
     cells[2] = cells[2].rstrip() + OU_LEFT
     lines[ou[0]] = ' | '.join(cells)
-    BOARD.write_text('\n'.join(lines), encoding='utf-8')
+    lines = '\n'.join(lines)
+    assert lines.count(AHEAD[0]) == 1
+    BOARD.write_text(lines.replace(*AHEAD), encoding='utf-8')
 
     hist = HISTORY.read_text(encoding='utf-8').split('\n')
     k = hist.index('## Lapsed claims (18 October 2026)') - 1
@@ -117,7 +135,11 @@ def land():
     t = REMAINS.read_text(encoding='utf-8')
     a = '## What this note does not do\n'
     assert t.count(a) == 1 and 'What rides the next near-full rebuild of the grammar' not in t
-    REMAINS.write_text(t.replace(a, REBUILD + a), encoding='utf-8')
+    t = t.replace(a, REBUILD + a)
+    for a, b in STALE:
+        assert t.count(a) == 1, a[:60]
+        t = t.replace(a, b)
+    REMAINS.write_text(t, encoding='utf-8')
     print('closed', len(moved), 'rows after history line', k + 1)
 
 
