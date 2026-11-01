@@ -36,6 +36,8 @@ def git(*a):
     return subprocess.run(['git', *a], cwd=ROOT, capture_output=True, text=True, check=True).stdout
 
 
+KIT_MAP = [(r'(?<![\w-])master_laws\.py', 'shared_laws.py'), (r'(?<![\w-])test_master_laws', 'test_shared_laws'),
+           (r'(?<![\w-])master-laws\.json', 'shared-laws.json')]
 BASE = git('merge-base', 'HEAD', 'main').strip()
 mine = set(git('diff', '--name-only', BASE, '--').split()) | set(git('ls-files', '--others', '--exclude-standard').split())
 # Each changed text the stage writes by hand or by rename-id, with the names mapped, equals its old text; a record
@@ -62,6 +64,15 @@ for path in sorted(mine):
         old = old.replace(a, b)
     raw = old
     record = path.startswith('theories/becoming/results/records/')
+    # a kit script on main takes the paths only (nd_final.py's KIT_MAP); the measure and connectivity scripts all names
+    kit = path.endswith(('.sh', '.py', '.js')) and ('/development/' in path or '/architecture/' in path) \
+        and not path.endswith(('measure_grammar.py', 'ec-elegant-completion/measure.py'))
+    if kit:
+        for a, b in KIT_MAP:
+            old = re.sub(a, b, old)
+        if old != new:
+            beyond.append((path, ''.join(list(difflib.unified_diff(old.splitlines(True), new.splitlines(True), n=0))[:12])))
+        continue
     keep = re.compile(r'formerly|主律|replaced')   # a line telling the former name keeps it, as nd_final.py's GUARD
     old = ''.join(line if keep.search(line) else
                   functools.reduce(lambda s, ab: re.sub(ab[0], ab[1], s), NAMES[:4] if record else NAMES, line)

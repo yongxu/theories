@@ -115,6 +115,30 @@ text, k = re.subn(r'(?<![\w-])master-laws-on-the-grammar(?![\w-])', 'shared-laws
 assert k >= 1, k
 json.loads(text)
 p.write_text(text, encoding='utf-8')
+# Every kit script on main that calls the generator, its test or its data by path follows the move (paths only:
+# a kit's prose is of its time), so EL6's, OG's, U4d's and SJ's kits, which reuse these steps, run on the new names;
+# U4's make_record_u4.py writes one-root-to-its-edge's text and 08 §7's sentence, which name the generator. No shim
+# is left under the old names. Data files, drift lists and review results keep the paths of their time.
+KIT_MAP = [(r'(?<![\w-])master_laws\.py', 'shared_laws.py'), (r'(?<![\w-])test_master_laws', 'test_shared_laws'),
+           (r'(?<![\w-])master-laws\.json', 'shared-laws.json')]
+KIT_ROOTS = ['_process/research/2026-10-05-generative-foundation-review/root-foundation/development',
+             '_process/research/2026-10-05-repository-reconciliation/architecture']
+kits = []
+for root in KIT_ROOTS:
+    for p in sorted((T / root).rglob('*')):
+        rel = p.relative_to(T).as_posix()
+        if p.suffix not in ('.sh', '.py', '.js') or '/history/' in rel or 'nd-nondual-names/' in rel or not p.is_file():
+            continue
+        text = p.read_text(encoding='utf-8')
+        new = text
+        for a, b in KIT_MAP:
+            new = re.sub(a, b, new)
+        if new != text:
+            p.write_text(new, encoding='utf-8')
+            kits.append(rel)
+changed.append(f'{len(kits)} kit scripts (paths only)')
+print('\n'.join('  kit: ' + k for k in kits))
+
 # AJ4's failure-mode map links the view's data, which moved; its prose on master laws is its owner's
 exact(RF + 'development/aj4-alignment-readers/FAILURE-MODE-MAP.md',
       [('the master-laws view ([`master-laws.json`](../../../../../../theories/becoming/results/data/master-laws.json), '

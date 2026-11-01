@@ -32,6 +32,12 @@ Delta:
     THEOREM-CONNECTIVITY.json's), 'master law' → 'shared law', 'no master law' → 'no shared law',
     resting_on_no_master_law → resting_on_no_shared_law. The renderer's labels were already "shared law" (§486),
     so no record page reads differently.
+  - Paths, old → new: tools/research/master_laws.py → tools/research/shared_laws.py; tools/research/tests/
+    test_master_laws.py → test_shared_laws.py; theories/becoming/results/data/master-laws.json → shared-laws.json;
+    records/master-laws-on-the-grammar.json → shared-laws-on-the-grammar.json. Every kit script on main that runs or
+    reads them by path (the land and rehearse scripts, integrate and board scripts, U4's make_record_u4.py, which
+    writes one-root-to-its-edge's text, and boundary_table.py) names the new paths, in paths only; a kit's prose is
+    of its time. No shim is left under the old names.
   - Regenerated, not edited: THEOREM-CONNECTIVITY.json and data/shared-laws.json from the checker's cache (no core
     run); each equals the old one with every key and string mapped, but for the commit and receipt the
     connectivity was written at, the inputs' digests (the renamed and edited scripts) and boundary_check.lean's
