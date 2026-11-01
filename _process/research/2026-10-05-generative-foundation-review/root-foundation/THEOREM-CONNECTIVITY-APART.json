@@ -145,7 +145,7 @@
   "Becoming.RegimeMargin.Concave.roots": {
    "module": "Becoming.RegimeMargin",
    "category": "model-witness",
-   "reason": "The least levels meeting the draws 4 and 8 under one constructed giving law, min(2z, z + 2): a fact about one constructed model showing harms_superadditive strict."
+   "reason": "The least levels meeting the draws 4 and 8 under one constructed giving law, min(2z, z + 2): a fact about one constructed model showing rises_superadditive strict."
   },
   "Becoming.Apart.not_enough": {
    "module": "Becoming.Standpoints",
@@ -4290,7 +4290,7 @@
   "Becoming.«入而返之例»": {
    "module": "Becoming.GrammarLaws",
    "category": "model-witness",
-   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a shared law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
   },
   "Becoming.«则逾之定当且仅当排中»": {
    "module": "Becoming.GrammarLaws",
@@ -4300,7 +4300,7 @@
   "Becoming.«同行于迭»": {
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
-   "reason": "a law of every relation on any carrier (a master law on the grammar, OU3b); the models use the forms they need, and this one nothing on the base uses"
+   "reason": "a law of every relation on any carrier (a shared law on the grammar, OU3b); the models use the forms they need, and this one nothing on the base uses"
   },
   "Becoming.«同行当且仅当有常»": {
    "module": "Becoming.GrammarLaws",
@@ -4360,7 +4360,7 @@
   "Becoming.«等长而不对之例»": {
    "module": "Becoming.GrammarLaws",
    "category": "model-witness",
-   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a shared law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
   },
   "Becoming.«类同行遍后则含于核»": {
    "module": "Becoming.GrammarLaws",
@@ -4370,7 +4370,7 @@
   "Becoming.«非定后返而不入之例»": {
    "module": "Becoming.GrammarLaws",
    "category": "model-witness",
-   "reason": "a fact about one constructed relation: a witness that a hypothesis of a master law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
+   "reason": "a fact about one constructed relation: a witness that a hypothesis of a shared law on the grammar cannot be omitted, or that two of its notions differ (OU3b)"
   },
   "Becoming.«齐即谓»": {
    "module": "Becoming.GrammarLaws",
@@ -6635,12 +6635,12 @@
   "Becoming.GrammarLaws.uncrossed_iff_closed": {
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
-   "reason": "GrammarLaws.uncrossed_iff_closed: a region a relation does not cross is one closed under it and under its converse, for every relation on any carrier, the converse of GrammarLaws.uncrossed_of_closed; master-laws-on-the-grammar, law 4"
+   "reason": "GrammarLaws.uncrossed_iff_closed: a region a relation does not cross is one closed under it and under its converse, for every relation on any carrier, the converse of GrammarLaws.uncrossed_of_closed; shared-laws-on-the-grammar, law 4"
   },
   "Becoming.GrammarLaws.uncrossed_iff_notGoingOut": {
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
-   "reason": "GrammarLaws.uncrossed_iff_notGoingOut: a region a relation does not cross is one not gone out of either way, for every relation on any carrier and every region read as a test; master-laws-on-the-grammar's law 4 reads its two count laws on it as one law"
+   "reason": "GrammarLaws.uncrossed_iff_notGoingOut: a region a relation does not cross is one not gone out of either way, for every relation on any carrier and every region read as a test; shared-laws-on-the-grammar's law 4 reads its two count laws on it as one law"
   },
   "Becoming.Listed.coming_iff_excess": {
    "module": "Becoming.Population",

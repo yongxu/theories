@@ -15,7 +15,7 @@ from pathlib import Path
 NOTE = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/'
             'ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md')
 RECEIPTS = Path('experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks')
-MASTER = 'theories/becoming/results/data/master-laws.json'
+MASTER = 'theories/becoming/results/data/shared-laws.json'
 RECORD = Path('theories/becoming/results/records/conditional-laws-of-the-corpus.json')
 NEXT = '## What this note does not do'
 ITEM4_END = 'That is what lets a reader check a law\'s hypotheses against a situation without reading the Lean.'

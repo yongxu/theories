@@ -1,7 +1,7 @@
 {
- "commit": "e20c16b66ec41cde6d33e5db67fd848f1cece46d",
+ "commit": "5cca243cc531ce444cbe56e1df3456a565f60e9e",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261101T105110.951913Z",
+ "core_receipt_at_commit": "20261101T112708.430596Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 382,
  "constants": 55331,
@@ -1336,9 +1336,9 @@
    ]
   }
  ],
- "master_laws": {
+ "shared_laws": {
   "central_declarations": 126,
-  "resting_on_no_master_law": 40,
+  "resting_on_no_shared_law": 40,
   "by_law": {
    "closure": 41,
    "balance": 54,

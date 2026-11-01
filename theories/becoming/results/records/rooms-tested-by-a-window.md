@@ -91,7 +91,7 @@ Thermal equilibrium with the surroundings and on-off thermostatic regulation (ne
   - Output: «有常则往不穷».
   - Input: Y where Z holds in the conditional law, and in heated_unended.
   - Preserved conditions: None beyond the grammar. [RoomNet.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean)
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). Closure carried along a reach gives what each room reaches.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). Closure carried along a reach gives what each room reaches.
   - Output: «闭», «闭之及».
   - Input: The reach invariants of each room.
   - Preserved conditions: None beyond the grammar. [RoomNet.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean)

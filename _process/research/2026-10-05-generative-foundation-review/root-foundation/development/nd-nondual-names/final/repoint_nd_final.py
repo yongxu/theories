@@ -65,7 +65,7 @@ for path in sorted(mine):
     raw = old
     record = path.startswith('theories/becoming/results/records/')
     # a kit script on main takes the paths only (nd_final.py's KIT_MAP); the measure and connectivity scripts all names
-    kit = path.endswith(('.sh', '.py', '.js')) and ('/development/' in path or '/architecture/' in path) \
+    kit = path.endswith(('.sh', '.py')) and ('/development/' in path or '/architecture/' in path) \
         and not path.endswith(('measure_grammar.py', 'ec-elegant-completion/measure.py'))
     if kit:
         for a, b in KIT_MAP:

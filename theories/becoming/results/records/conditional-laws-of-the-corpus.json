@@ -250,7 +250,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "GrammarLaws' pigeonhole and finite-line laws («线有限不并则返», «有限遍后定前则皆返», «定前») and the image of a relation («像», «保之像»).",

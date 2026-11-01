@@ -60,7 +60,7 @@ In graph terms a region nothing goes out of has no edge leaving it, and a closed
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «闭», «所闭», «闭之及» and «所闭之界» from the closure law, «所闭不出» being «所闭之界» read through «不出».
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «闭», «所闭», «闭之及» and «所闭之界» from the closure law, «所闭不出» being «所闭之界» read through «不出».
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «逆», «则», «相续含于及» and the mark law «两端分则中有标».
 - related, not a proved adapter: [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md). Its cut is not going out at a valuation's relation, by definition, with closed regions cuts, stable cuts closed and conveyance's relation symmetric (its seventh law); its sixth law reads the crossing on a self's boundaries.
 - related, not a proved adapter: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). Its «所经必同» is proved from «定则内至外之线有出步»: a step going out of the region lands in the set.

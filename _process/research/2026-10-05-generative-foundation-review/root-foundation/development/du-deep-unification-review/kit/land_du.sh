@@ -78,7 +78,7 @@ print('receipt', sys.argv[1].split('/')[-2], len(v['modules']), 'modules, every 
     for m in ('Becoming.PremiseWitnesses', 'Becoming.UnreadStandings')))
 EOF
   step record; python3 -B $K/integrate_du.py record $V $N > $LOG/record.log 2>&1 || fail record; cut -c1-200 $LOG/record.log
-  step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
+  step mv; python3 -B tools/research/shared_laws.py > $LOG/mv.log 2>&1 || fail mv
   python3 -B $K/integrate_du.py check > $LOG/ducheck.log 2>&1 || fail "DU's check"; cut -c1-240 $LOG/ducheck.log
   step register; M=$RF/THEOREM-CONNECTIVITY.py
   python3 -B $M --check > $LOG/conn-pre.log 2>&1
@@ -91,8 +91,8 @@ EOF
   # (08 §3's sentence matches again, the homes are skipped, regions and COVERAGE are unchanged).
   step "record again"; python3 -B $K/integrate_du.py record $V $N > $LOG/record2.log 2>&1 || fail "record after the texts"
   cut -c1-200 $LOG/record2.log
-  # The boundary record's history note and make_record_u4.py change after master_laws.py read them: read again.
-  python3 -B tools/research/master_laws.py > $LOG/mv2.log 2>&1 || fail "mv after the texts"
+  # The boundary record's history note and make_record_u4.py change after shared_laws.py read them: read again.
+  python3 -B tools/research/shared_laws.py > $LOG/mv2.log 2>&1 || fail "mv after the texts"
   python3 -B $K/integrate_du.py check > $LOG/ducheck2.log 2>&1 || fail "DU's check after the texts"
   # Render exits non-zero while records drift, which they do until the re-points; accept that only with no error.
   step "render (for the re-points)"; python3 -B tools/research/research.py render > $LOG/render-pre.log 2>&1 || \

@@ -23,7 +23,7 @@ post)
   [ -z "${2:-}" ] || [ "$2" = "$N" ] || fail "N given as $2, but the study's next free section is $N"
   echo "study section $N"
   step amend; python3 -B $K/amend_u4b.py $N > $LOG/amend.log 2>&1 || fail amend; cat $LOG/amend.log
-  step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
+  step mv; python3 -B tools/research/shared_laws.py > $LOG/mv.log 2>&1 || fail mv
   python3 -B $K/integrate_u4.py check > $LOG/u4check.log 2>&1 || fail "U4's check"; cut -c1-200 $LOG/u4check.log
   step connectivity; python3 -B $RF/THEOREM-CONNECTIVITY.py --check > $LOG/conn.log 2>&1 || fail "connectivity check"
   step render; python3 -B tools/research/research.py render > $LOG/render.log 2>&1 || fail render

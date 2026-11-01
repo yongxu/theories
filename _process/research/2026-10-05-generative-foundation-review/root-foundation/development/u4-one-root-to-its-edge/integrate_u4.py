@@ -7,7 +7,7 @@ module paragraph, its README rows and its place in the checker's core list):
                                                           every count read from the receipt; regions.json's two entries
   python3 -B <dir>/integrate_u4.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's log:
                                                           the leaf's roots with their reasons; others printed
-  python3 -B <dir>/integrate_u4.py check                  after master_laws.py: the data reads this record, nothing is
+  python3 -B <dir>/integrate_u4.py check                  after shared_laws.py: the data reads this record, nothing is
                                                           unverified or unplaced, and its counts are the home section's
   python3 -B <dir>/integrate_u4.py study N RECEIPT        the study's section N (the next free one), from the receipt
                                                           and the record's counts
@@ -16,7 +16,7 @@ Before `record`, rerun boundary_table.py on the landing's core run (the rule's l
 boundary-table.json, computed before HE2), and keep `check` as the gate.
 
 Run from the checkout root of the landing worktree. Each edit asserts that it applies exactly once, or that it is
-already applied. After it: master_laws.py (its four boundary lists must be empty), render, check, links, tests.
+already applied. After it: shared_laws.py (its four boundary lists must be empty), render, check, links, tests.
 """
 import importlib.util
 import json
@@ -164,7 +164,7 @@ Supplied premises / correspondence: none added beyond each form's hypotheses. Th
        rows, the nine Lean tests for row 17) and does not show it. Modelling choices: lists for offspring, as the
        row lists them; regions and relations as Prop-valued predicates on any carrier.
 Evidence: core receipt `{stamp}`; Becoming.RootForms ({m['theorems']} theorems in {len(m['declarations'])} declarations),
-       a core leaf importing Grammar, Transmission and GroupEnding; every axiom report empty. master_laws.py on
+       a core leaf importing Grammar, Transmission and GroupEnding; every axiom report empty. shared_laws.py on
        that run: the boundary report reads the record, nothing unverified or unplaced, the Lean check ran.
 Standing: near-definitional; each form is a few lines of logic, none of it claimed new as mathematics. What it
        adds is the placing: every central declaration has one standing and its reason, checked where a check
@@ -232,7 +232,7 @@ def register(log_path):
 
 
 def check():
-    data = json.loads((ROOT / 'theories/becoming/results/data/master-laws.json').read_text(encoding='utf-8'))
+    data = json.loads((ROOT / 'theories/becoming/results/data/shared-laws.json').read_text(encoding='utf-8'))
     b = data.get('boundary') or {}
     assert b.get('record') == mr.RID, ('the data has not read the record', b.get('record'), b.get('error'))
     problems = []

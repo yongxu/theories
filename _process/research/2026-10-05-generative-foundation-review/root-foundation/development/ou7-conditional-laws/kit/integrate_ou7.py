@@ -62,7 +62,7 @@ law 4).
                                                            leaves and patches now use dropped (part B's six among
                                                            them), and a moved root's entry naming its new module
                                                            («所闭不出»'s); any other stops it
-  python3 -B <dir>/integrate_ou7.py check                  after master_laws.py: the data is the landing run's, reads
+  python3 -B <dir>/integrate_ou7.py check                  after shared_laws.py: the data is the landing run's, reads
                                                            both records' laws as they stand, and U4's boundary report
                                                            and the central figures are unchanged from the merged main
   python3 -B <dir>/integrate_ou7.py study N RECEIPT        the study's section N (the next free one), from the receipt,
@@ -118,7 +118,7 @@ HOME = ROOT / mr.CHAPTER
 HOME_B = ROOT / mb.CHAPTER
 METHOD = ROOT / 'theories/becoming/chapters/08-METHOD.md'
 REGIONS = ROOT / 'theories/becoming/results/data/regions.json'
-MASTER = 'theories/becoming/results/data/master-laws.json'
+MASTER = 'theories/becoming/results/data/shared-laws.json'
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 APART = ROOT / (RF + 'THEOREM-CONNECTIVITY-APART.json')
 STUDY = ROOT / (RF + 'BECOMING-RENEWAL-READING.md')
@@ -1598,7 +1598,7 @@ def register(log_path):
 # ---------------------------------------------------------------------------------------------------------- check
 
 def head_master():
-    """master-laws.json as the merged main has it (the landing worktree's HEAD, before the landing commit)."""
+    """shared-laws.json as the merged main has it (the landing worktree's HEAD, before the landing commit)."""
     return json.loads(git('show', 'HEAD:' + MASTER).stdout)
 
 

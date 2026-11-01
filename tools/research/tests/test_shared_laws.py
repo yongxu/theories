@@ -1,4 +1,4 @@
-"""MV: the line under each law from data/master-laws.json, and the check's report of how far the data still matches."""
+"""MV: the line under each law from data/shared-laws.json, and the check's report of how far the data still matches."""
 import hashlib
 import json
 import re
@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from tools.research import master_laws, registry
+from tools.research import shared_laws, registry
 
 NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'order'}
 LABEL = '*Shared laws, by Lean dependency:* '
@@ -21,39 +21,39 @@ def law(*names):
     return {'en': 'A law.', 'zh': '一条律。', 'declarations': list(names)}
 
 
-class MasterLawNote(unittest.TestCase):
+class SharedLawNote(unittest.TestCase):
     def note(self, e, i=1, names=('X.a',)):
-        return registry.master_law_note({'_master_laws': measured({'law': i, 'declarations': list(names), **e})}, i, law(*names))
+        return registry.shared_law_note({'_shared_laws': measured({'law': i, 'declarations': list(names), **e})}, i, law(*names))
 
     def test_each_dependence(self):
         cases = [
-            ({'master_laws': ['closure', 'return'], 'grammar': True, 'dependence': 'grammar'},
+            ({'shared_laws': ['closure', 'return'], 'grammar': True, 'dependence': 'grammar'},
              'closure and finite runs; its declarations reach the grammar.'),
-            ({'master_laws': [], 'grammar': True, 'dependence': 'grammar'},
+            ({'shared_laws': [], 'grammar': True, 'dependence': 'grammar'},
              "no shared law's anchor; its declarations reach the grammar."),
-            ({'master_laws': ['order'], 'grammar': True, 'grammar_vocabulary_only': True, 'dependence': 'grammar'},
+            ({'shared_laws': ['order'], 'grammar': True, 'grammar_vocabulary_only': True, 'dependence': 'grammar'},
              "order; its declarations reach the grammar's vocabulary only."),
-            ({'master_laws': ['balance', 'lumping', 'order'], 'grammar': False, 'dependence': 'balance, represented'},
+            ({'shared_laws': ['balance', 'lumping', 'order'], 'grammar': False, 'dependence': 'balance, represented'},
              'balance, lumping and order; its declarations do not reach the grammar, which represents balance and cannot '
              'state it without amounts.'),
-            ({'master_laws': ['order'], 'grammar': False, 'dependence': 'anchor, not reached'},
+            ({'shared_laws': ['order'], 'grammar': False, 'dependence': 'anchor, not reached'},
              'order; its declarations do not reach the grammar.'),
-            ({'master_laws': [], 'grammar': False, 'dependence': 'no master law'},
+            ({'shared_laws': [], 'grammar': False, 'dependence': 'no shared law'},
              "no shared law's anchor among the constants its declarations use."),
         ]
         for e, text in cases:
             self.assertEqual(self.note(e), LABEL + text)
 
     def test_an_unknown_dependence_is_shown_as_it_is(self):
-        e = {'master_laws': ['closure'], 'grammar': True, 'dependence': 'reach by representation'}
+        e = {'shared_laws': ['closure'], 'grammar': True, 'dependence': 'reach by representation'}
         self.assertEqual(self.note(e), LABEL + 'closure; its declarations: reach by representation.')
 
     def test_central_defines_and_outside(self):
-        e = {'master_laws': ['balance'], 'grammar': False, 'dependence': 'balance, represented', 'defines': ['X.a'],
-             'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'anchor, not reached', 'master_laws': ['order'],
+        e = {'shared_laws': ['balance'], 'grammar': False, 'dependence': 'balance, represented', 'defines': ['X.a'],
+             'central': [{'declaration': 'X.a', 'category': 'shared law', 'dependence': 'anchor, not reached', 'shared_laws': ['order'],
                           'reason': "a law of its model (OU3d's review)"},
                          {'declaration': 'X.c', 'category': 'premise of the account', 'dependence': 'balance, represented',
-                          'master_laws': ['balance'], 'reason': 'support'}],
+                          'shared_laws': ['balance'], 'reason': 'support'}],
              'outside': ['Y.b']}
         text = self.note(e, names=('X.a', 'Y.b', 'X.c'))
         self.assertEqual(text, LABEL + 'its declarations include the anchor `X.a` itself; balance; its declarations do not reach the grammar, '
@@ -64,32 +64,32 @@ class MasterLawNote(unittest.TestCase):
                          '1 of its declarations is not in the spine run and not measured, so this holds of the others only.')
         self.assertNotIn('OU3d', text)
         only_outside = {'law': 1, 'declarations': ['Y.b'], 'outside': ['Y.b']}
-        self.assertEqual(registry.master_law_note({'_master_laws': measured(only_outside)}, 1, law('Y.b')),
+        self.assertEqual(registry.shared_law_note({'_shared_laws': measured(only_outside)}, 1, law('Y.b')),
                          LABEL + 'not measured: none of its declarations is in the spine run the measure reads.')
 
     def test_nothing_where_the_data_does_not_match_or_there_is_nothing_to_measure(self):
-        e = {'law': 1, 'declarations': ['X.a'], 'master_laws': [], 'grammar': False, 'dependence': 'no master law'}
-        r = {'_master_laws': measured(e)}
-        self.assertEqual(registry.master_law_note(r, 1, law('X.a', 'X.b')), '')  # declarations changed
-        self.assertEqual(registry.master_law_note(r, 2, law('X.a')), '')  # a law the data has not read
-        self.assertEqual(registry.master_law_note({}, 1, law('X.a')), '')  # a record it has not read
+        e = {'law': 1, 'declarations': ['X.a'], 'shared_laws': [], 'grammar': False, 'dependence': 'no shared law'}
+        r = {'_shared_laws': measured(e)}
+        self.assertEqual(registry.shared_law_note(r, 1, law('X.a', 'X.b')), '')  # declarations changed
+        self.assertEqual(registry.shared_law_note(r, 2, law('X.a')), '')  # a law the data has not read
+        self.assertEqual(registry.shared_law_note({}, 1, law('X.a')), '')  # a record it has not read
         empty = {'law': 1, 'declarations': []}
-        self.assertEqual(registry.master_law_note({'_master_laws': measured(empty)}, 1, law()), '')  # no declarations
+        self.assertEqual(registry.shared_law_note({'_shared_laws': measured(empty)}, 1, law()), '')  # no declarations
 
-    def test_same_dependence_other_master_laws_and_the_grammar_reason(self):
-        e = {'master_laws': ['closure', 'balance'], 'grammar': True, 'dependence': 'grammar',
-             'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'grammar', 'master_laws': []}]}
+    def test_same_dependence_other_shared_laws_and_the_grammar_reason(self):
+        e = {'shared_laws': ['closure', 'balance'], 'grammar': True, 'dependence': 'grammar',
+             'central': [{'declaration': 'X.a', 'category': 'shared law', 'dependence': 'grammar', 'shared_laws': []}]}
         self.assertTrue(self.note(e).endswith("the measure counts central declaration `X.a` (taken alone: no shared law's anchor; reaching "
                                               "the grammar) as following from a shared law (by reaching the grammar)."))
-        d = {'master_laws': [], 'grammar': False, 'dependence': 'no master law',
-             'central': [{'declaration': 'X.a', 'category': 'definitional or representational', 'dependence': 'no master law',
-                          'master_laws': [], 'reason': 'Iff.rfl'}]}
+        d = {'shared_laws': [], 'grammar': False, 'dependence': 'no shared law',
+             'central': [{'declaration': 'X.a', 'category': 'definitional or representational', 'dependence': 'no shared law',
+                          'shared_laws': [], 'reason': 'Iff.rfl'}]}
         self.assertTrue(self.note(d).endswith('as following from its definitions (definitional or representational: Iff.rfl).'))
 
     def test_the_note_is_a_child_of_its_item(self):
         recs, _ = registry.load_records()
-        r = next((x for x in recs if len(x.get('laws', [])) >= 10 and x.get('_master_laws')
-                  and registry.master_law_note(x, 10, x['laws'][9])), None)
+        r = next((x for x in recs if len(x.get('laws', [])) >= 10 and x.get('_shared_laws')
+                  and registry.shared_law_note(x, 10, x['laws'][9])), None)
         if r is None:
             self.skipTest('no record with ten laws and data')
         lines = registry.render_record_v2(r).split('\n')
@@ -102,7 +102,7 @@ class MasterLawNote(unittest.TestCase):
         self.assertIn(4, widths)
 
 
-class MasterLawsStatus(unittest.TestCase):
+class SharedLawsStatus(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.TemporaryDirectory()
         self.root = Path(self.dir.name)
@@ -116,8 +116,8 @@ class MasterLawsStatus(unittest.TestCase):
     def status(self, data, records, receipt_sources):
         self.receipt.write_text(json.dumps({'utc': 'R', 'status': self.receipt_status, 'source_sha256': receipt_sources}))
         with patch.object(registry, 'ROOT', self.root), patch.object(registry, 'CORE_RECEIPT', 'receipt.json'), \
-                patch.object(registry, 'master_laws', return_value=data):
-            return registry.master_laws_status(records)
+                patch.object(registry, 'shared_laws', return_value=data):
+            return registry.shared_laws_status(records)
 
     def data(self, sources, inputs=None):
         return {'core_receipt': 'R', 'names': NAMES, 'inputs_sha256': inputs or {'measure.py': registry.digest(self.root / 'measure.py')},
@@ -125,7 +125,7 @@ class MasterLawsStatus(unittest.TestCase):
                 'records': {'a': [{'law': 1, 'declarations': ['X.a']}]}}
 
     def record(self, *laws_):
-        return {'id': 'a', 'laws': list(laws_), '_master_laws': {'names': NAMES, 'laws': {1: {'law': 1, 'declarations': ['X.a']}}}}
+        return {'id': 'a', 'laws': list(laws_), '_shared_laws': {'names': NAMES, 'laws': {1: {'law': 1, 'declarations': ['X.a']}}}}
 
     def test_current_when_sources_inputs_and_laws_match(self):
         s = {'Becoming.A': 'h1'}
@@ -242,7 +242,7 @@ class StatementsAtModelVerified(unittest.TestCase):
         self.M = M
 
     def verify(self, declaration, of, models=('occurrence',), law_names=(), central=frozenset(), others=frozenset()):
-        return master_laws.verify(self.C, at_model(declaration, of, models), list(law_names), set(central), set(others))
+        return shared_laws.verify(self.C, at_model(declaration, of, models), list(law_names), set(central), set(others))
 
     def test_a_reading_through_a_lemma_with_the_model_two_definitions_down(self):
         failed, terms, kept = self.verify(f'{self.M}.reading', 'Becoming.row')
@@ -264,12 +264,12 @@ class StatementsAtModelVerified(unittest.TestCase):
     def test_which_items_block_the_walk(self):
         x1, x2, x3, x4 = (at_model(f'M.t{k}', of) for k, of in ((1, 'R'), (2, 'R'), (3, 'R'), (4, 'R2')))
         declared = [('a', 2, x1), ('a', 2, x2), ('a', 3, x3), ('b', 2, x4)]
-        self.assertEqual(master_laws.blocked(declared, 'a', 2, x1), {'M.t3', 'M.t4'})  # x2: the same law and the same row
+        self.assertEqual(shared_laws.blocked(declared, 'a', 2, x1), {'M.t3', 'M.t4'})  # x2: the same law and the same row
 
     def test_an_item_the_check_refuses_is_unverified_not_a_crash(self):
         def failures(item, r=None, more=()):
             r = r or carrying_record(item)
-            return master_laws.shape_failures(r, 2, item, [(r['id'], 2, item), *more])
+            return shared_laws.shape_failures(r, 2, item, [(r['id'], 2, item), *more])
         shape, rules = ['not in the shape the check requires'], ["its record breaks the check's rules"]
         good = at_model('M.reading', 'X.row')
         for bad in ({**good, 'models': 'occurrence'}, {**good, 'models': ['world']}, {**good, 'declaration': ['M.reading']},
@@ -294,23 +294,23 @@ class StatementsAtModelVerified(unittest.TestCase):
 
 def item_data(declaration='M.reading', of='X.row', verified=True, models=('occurrence',), **extra):
     return {**at_model(declaration, of, models), 'verified': verified, 'grammar_terms': ['Becoming.«则»', 'Becoming.«而»'],
-            'other_terms': ['Becoming.Web'], 'row_dependence': 'no master law', **extra}
+            'other_terms': ['Becoming.Web'], 'row_dependence': 'no shared law', **extra}
 
 
 class StatementsAtModelLines(unittest.TestCase):
     """F5's lines on a record page (F5-MODEL-STATEMENTS.md §5), through the real render."""
     def page(self, items_declared, items_data, elsewhere=()):
         recs, _ = registry.load_records()
-        r = next(x for x in recs if len(x.get('laws', [])) >= 2 and x.get('_master_laws'))
-        r = json.loads(json.dumps({k: v for k, v in r.items() if k != '_master_laws'}))
+        r = next(x for x in recs if len(x.get('laws', [])) >= 2 and x.get('_shared_laws'))
+        r = json.loads(json.dumps({k: v for k, v in r.items() if k != '_shared_laws'}))
         r['laws'] = [law('X.row'), {**law('M.reading'), 'statements_at_model': items_declared}] + r['laws'][2:]
-        e1 = {'law': 1, 'declarations': ['X.row'], 'master_laws': [], 'grammar': False, 'dependence': 'no master law',
+        e1 = {'law': 1, 'declarations': ['X.row'], 'shared_laws': [], 'grammar': False, 'dependence': 'no shared law',
               'stated_at_model': [{'of': 'X.row', 'record': r['id'], 'law': 2, 'declaration': 'M.reading',
                                    'models': items_data[0]['models'], 'review': REVIEW}, *elsewhere]}
-        e2 = {'law': 2, 'declarations': ['M.reading'], 'master_laws': ['closure'], 'grammar': True, 'dependence': 'grammar',
+        e2 = {'law': 2, 'declarations': ['M.reading'], 'shared_laws': ['closure'], 'grammar': True, 'dependence': 'grammar',
               'statements_at_model': items_data}
         matched = [f'{r["id"]}:2'] if registry.declared_items(e2) == items_declared else []
-        r['_master_laws'] = {'names': NAMES, 'laws': {1: e1, 2: e2}, 'matched_at_model': matched + ['b:3']}
+        r['_shared_laws'] = {'names': NAMES, 'laws': {1: e1, 2: e2}, 'matched_at_model': matched + ['b:3']}
         json.dumps(r, ensure_ascii=False)  # records are dumped as JSON by the check
         return registry.render_record_v2(r)
 
@@ -343,26 +343,26 @@ class StatementsAtModelLines(unittest.TestCase):
         e = {'law': 1, 'declarations': ['M.reading'], 'statements_at_model': [item_data(verified=False, failed=['not in the spine run'])]}
         data = {'core_receipt': 'R', 'names': NAMES, 'inputs_sha256': {}, 'core_sources_sha256': '', 'records': {'a': [e]}}
         r = {'id': 'a', 'laws': [{**law('M.reading'), 'statements_at_model': [at_model('M.reading', 'X.other')]}],
-             '_master_laws': {'names': NAMES, 'laws': {1: e}}}
-        with patch.object(registry, 'master_laws', return_value=data):
-            status = registry.master_laws_status([r])
+             '_shared_laws': {'names': NAMES, 'laws': {1: e}}}
+        with patch.object(registry, 'shared_laws', return_value=data):
+            status = registry.shared_laws_status([r])
         self.assertEqual((status['laws_not_matched'], status['first_not_matched']), (1, ['a:1']))
         self.assertEqual(status['statements_at_model_unverified'], ['a:1:M.reading (not in the spine run)'])
 
 
 class TheRepositoryFile(unittest.TestCase):
     def test_it_reads(self):
-        data = registry.master_laws()
+        data = registry.shared_laws()
         if not data:
-            self.skipTest('no data/master-laws.json')
+            self.skipTest('no data/shared-laws.json')
         self.assertNotIn('error', data)
         self.assertEqual(list(data['names']), list(NAMES))
         for ident, entries in data['records'].items():
             for e in entries:
                 self.assertIn('declarations', e)
                 if 'dependence' in e:
-                    self.assertIn(e['dependence'], ('grammar', 'balance, represented', 'anchor, not reached', 'no master law'))
-                    self.assertEqual(e['master_laws'], [k for k in NAMES if k in e['master_laws']])
+                    self.assertIn(e['dependence'], ('grammar', 'balance, represented', 'anchor, not reached', 'no shared law'))
+                    self.assertEqual(e['shared_laws'], [k for k in NAMES if k in e['shared_laws']])
                     self.assertEqual(e['grammar'], e['dependence'] == 'grammar')
                 for x in e.get('statements_at_model', []):
                     self.assertEqual(set(x) - {'failed'}, {'declaration', 'of', 'models', 'review', 'verified', 'grammar_terms',

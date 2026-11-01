@@ -127,7 +127,8 @@ kits = []
 for root in KIT_ROOTS:
     for p in sorted((T / root).rglob('*')):
         rel = p.relative_to(T).as_posix()
-        if p.suffix not in ('.sh', '.py', '.js') or '/history/' in rel or 'nd-nondual-names/' in rel or not p.is_file():
+        # review prompts (.js, raw/) are records of what reviewers were given, not kits
+        if p.suffix not in ('.sh', '.py') or '/history/' in rel or '/raw/' in rel or 'nd-nondual-names/' in rel or not p.is_file():
             continue
         text = p.read_text(encoding='utf-8')
         new = text
