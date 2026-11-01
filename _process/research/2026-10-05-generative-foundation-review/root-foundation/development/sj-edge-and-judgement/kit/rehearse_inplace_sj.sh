@@ -23,7 +23,8 @@ git status --porcelain --untracked-files=all | sed -n 's/^?? //p' | sort > "$ASI
 git checkout -q --detach sj-claim || exit 2
 "$ASIDE/kit/rehearse_sj.sh" "$W" "$ASIDE" > "$ASIDE/rehearse.out" 2>&1; rc=$?
 cat "$ASIDE/rehearse.out"
-git diff --binary > "$ASIDE/rehearsal.diff"; git diff --stat > "$ASIDE/rehearsal.diffstat"
+git rev-parse HEAD > "$ASIDE/rehearsal-merge.txt"
+git diff --binary sj-claim > "$ASIDE/rehearsal.diff"; git diff --stat sj-claim > "$ASIDE/rehearsal.diffstat"
 git status --porcelain --untracked-files=all | sed -n 's/^?? //p' | sort > "$ASIDE/untracked-after.txt"
 comm -13 "$ASIDE/untracked-before.txt" "$ASIDE/untracked-after.txt" > "$ASIDE/untracked-new.txt"
 while IFS= read -r p; do mkdir -p "$ASIDE/untracked/$(dirname "$p")" && mv "$p" "$ASIDE/untracked/$p"; done < "$ASIDE/untracked-new.txt"

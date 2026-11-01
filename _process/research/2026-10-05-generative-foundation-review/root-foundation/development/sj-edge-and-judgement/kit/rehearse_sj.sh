@@ -1,7 +1,7 @@
 #!/bin/bash
 # SJ1's landing rehearsed in a scratch worktree (rehearse_el.sh's pattern): detached at SJ1's branch, main merged in
-# without a commit, the receipt written outside the repository (BECOMING_OUT) and copied in, then every later step of
-# the landing as it will run, the board's head and landed clauses included. Nothing is committed.
+# on the detached HEAD (no branch moves), the receipt written outside the repository (BECOMING_OUT) and copied in, then every later step of
+# the landing as it will run, the board's head and landed clauses included. Nothing is committed to a branch.
 # usage: rehearse_sj.sh WORKTREE ASIDE   (WORKTREE a scratch worktree detached at sj-claim and clean, ASIDE a
 #        folder outside the repository)
 set -u
@@ -16,7 +16,9 @@ step() { echo "== $1: exit $2"; [ "$2" = 0 ] || exit "$2"; }
 [ -z "$(git status --porcelain --untracked-files=no)" ]; step clean $?
 mkdir -p "$ASIDE/out"
 git rev-parse main > "$ASIDE/main-at-merge.txt"
-git merge --no-commit --no-ff -q main > "$ASIDE/merge.log" 2>&1; step merge $?
+# the merge is committed on the detached HEAD (no branch moves): while a merge is in progress HEAD lacks main's
+# reviewed versions and research.py reports false drift (RESULT-WORKFLOW, "Markdown drift")
+git merge --no-edit -q main > "$ASIDE/merge.log" 2>&1; step merge $?
 (cd $PKG && LEAN_TIMEOUT=2400 BECOMING_OUT="$ASIDE/out" python3 -B check_becoming.py > "$ASIDE/check.log" 2>&1); step checker $?
 ID=$(ls "$ASIDE/out/becoming-checks" | grep -v '^_' | tail -1)
 cp -Rp "$ASIDE/out/becoming-checks/$ID" $PKG/becoming-checks/ \
