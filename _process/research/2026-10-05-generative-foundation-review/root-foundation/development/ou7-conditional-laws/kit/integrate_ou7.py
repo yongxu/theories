@@ -736,7 +736,9 @@ def renamed_only(before, after, tokens):
     replaced by its new one, where no new token already stood in `before` (so no two names could have been swapped)."""
     if before == after or not tokens:
         return before == after
-    pattern = r"(?<![\w'.])(%s)(?![\w'])"
+    # A token stands alone or after a dot that follows a name, a closing bracket or a prime (`w.CountsObey`,
+    # `(0).CountsObey`, generalized field notation); a bare leading `.X` is not mapped.
+    pattern = r"(?:(?<=[\w')⟩\]]\.)|(?<![\w'.]))(%s)(?![\w'])"
     olds = sorted(tokens, key=len, reverse=True)
     news = sorted(set(tokens.values()) - set(tokens), key=len, reverse=True)
     if news and re.search(pattern % '|'.join(map(re.escape, news)), before):
