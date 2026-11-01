@@ -103,7 +103,7 @@ That definable properties are kept by isomorphisms of structures is standard mod
 - related, not a proved adapter: [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md). The interleavings are one aspect of the World's representation: the occurrence model reads the shared index, which a world's reorderings change while keeping the order of joined exchanges.
 - related, not a proved adapter: [processes-represented-both-ways](processes-represented-both-ways.md). Processes are represented in the grammar both ways by their moves' relations, faithful up to correspondence with the move inside and both classes; the World's representation reads its terms through the same GrammarTransport.
 
-**Used by:** [processes-represented-both-ways](processes-represented-both-ways.md)
+**Used by:** [processes-represented-both-ways](processes-represented-both-ways.md) · [standings-not-read-off-the-occurrence-model](standings-not-read-off-the-occurrence-model.md)
 
 <a id="sources--来源"></a>
 ### Sources

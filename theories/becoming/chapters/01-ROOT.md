@@ -385,6 +385,24 @@ Natural-number amounts in one unit commensurable across conditions; discrete ste
 - line laws across steps (unique origin over many steps, the stretch law for selected matchings, residence): which unit goes where is the matching's, and lines are not World data;
 - that unit continuation projects onto the World's conservation, or that renaming, re-pairing and forgetting exhaust the matchings over one World: these are the conclusions of [U1's design](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md), not theorems here.
 
+<a id="r-standings-not-read-off-the-occurrence-model"></a>
+**Theorem** (World; the grammar's transport for the keeping theorems). *Standings not read off the occurrence model, even up to a unit.*
+
+The World's representation reads a World through its occurrence model and a stated selection of its relations ([above](#r-the-world-represented-both-ways)). Read through `World.ModelRelations`, nine of the ten relations that selection makes (all but the same-step class, one term for every world) with falling and the order of standings added, each relation reads amounts only through sign, through comparing two amounts counted in one unit, and through conservation's equation, which is homogeneous and linear. The laws below hold because of that.
+
+- **A finer unit.** For `0 < k`, the world counted in a unit `k` times finer (`World.atFinerUnit`) has `k` times every standing, need, take and give, and the same relata, activity, requirements, drawing and presence (`World.atFinerUnit_level`, `World.atFinerUnit_taken`, `World.atFinerUnit_given`). Conservation across a step is the same relation (`World.atFinerUnit_conserves`), so it balances exactly where the world does (`World.atFinerUnit_balanced_iff`).
+- **The relations agree.** For `0 < k`, every relation of `World.ModelRelations` agrees pointwise at the finer unit (`World.atFinerUnit_agree`), each carried by the identity correspondence in `Becoming.GrammarTransport`'s sense (`World.atFinerUnit_carried`). The continuation family, beginning and ending under conservation and the class of activity read alike as a pattern (`World.atFinerUnit_family`, `World.atFinerUnit_begins`, `World.atFinerUnit_ends`).
+- **No reading gives the count.** For every world, every `k` with `0 < k` and `k ≠ 1`, and every occurrence of positive standing, no reading of those relations that keeps pointwise agreement returns the standing both in the world and at the finer unit (`World.standing_not_read`). F1 ([above](#r-the-world-represented-both-ways)) shows this for one family of still worlds on one relatum.
+- **More than the unit is free.** In a still world, where nothing takes part, requires, needs, draws or is active (`World.stillAt`; F1's worlds are such, `World.standingAt_eq_stillAt`), every relabelling of the standings keeping their sign and their order keeps every such relation (`World.stillAt_relabel_agree`), squaring among them (`World.stillAt_squared_agree`). Standings 1, 2 and 1, 4 on two relata agree with no common factor (`World.oneTwo_not_scaled`). So no reading keeping agreement has, for every world, positive whole factors `p` and `q`, chosen world by world, with `q` times every standing equal to `p` times what it reads (`World.standing_not_read_up_to_unit`); this covers a reading in a finer unit and one in a coarser unit.
+
+Natural-number amounts; one common factor `k` for every amount of a world at every step; discrete steps; the occurrence model and its selection as `Becoming.WorldRepresentation` fixes them; for the relabelling, still worlds only. The multiplication lemmas are proved in the module, since `Init`'s `Nat.mul_assoc` and `Nat.mul_left_comm` report `propext` ([record](../results/records/standings-not-read-off-the-occurrence-model.md); [`Becoming.UnreadStandings`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean)).
+
+**What is not shown:**
+- what conservation's equation fixes of the standings in worlds with exchange: the worlds that refute a reading up to a unit are still worlds on two relata, and a reading up to a unit on worlds with exchange, or on any class without those two worlds, is not ruled out;
+- relations that read a value or a difference of amounts, such as "standing is `n`", which every re-identification carries and which read the count: a selection adding one does not agree at a finer unit;
+- every relation a World carries, the grammar root itself, another model of the World, or a unit changing from step to step;
+- a root in which unit occurrences and their residence are fixed by relations independent of the counts (on a carrier whose occurrences are the units, counts are lengths of supplied lists, and balance is a bijection of supplied units, [above](#r-amounts-by-unit-matchings)).
+
 <a id="test-systems"></a>
 ### 8.7 Test systems of the source texts
 
