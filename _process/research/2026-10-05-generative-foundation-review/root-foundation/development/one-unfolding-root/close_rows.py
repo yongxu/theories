@@ -7,7 +7,6 @@ land: the closures, and the landed clause in place of the head clause, ending wi
       given verbatim in CLOSE_ORDER:
   - EC, U1b, RN and UE6, landed, titled done and moved to the history file after the last landed row, links rebased;
   - OU's row stays open and states what is left after the gate;
-  - the overview's budget row reads 208 over, its own count (6,208 words against 6,000), not 224;
   - WHAT-REMAINS names what rides the next near-full rebuild of the grammar: BD4's three pieces and the quick Lean
     review's open findings in the grammar and six leaves.
 usage (from the checkout root): python3 -B close_rows.py head | land"""
@@ -19,17 +18,15 @@ from pathlib import Path
 BOARD = Path('_process/BECOMING-WORKBOARD.md')
 HISTORY = Path('_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md')
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/'
-BUDGETS = Path(RF + 'aj4-alignment-readers/READING-BUDGETS.md')
 REMAINS = Path(RF + 'ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md')
 HEAD = ("OU's owner's board closures at the head of the queue (landing now: EC, U1b, RN and UE6 closed into the "
-        "history file, OU's row stating what is left after the gate, the overview's budget row at its own count, and "
-        "WHAT-REMAINS naming what rides the next near-full rebuild of the grammar; documents only, no Lean, no record "
+        "history file, OU's row stating what is left after the gate, and WHAT-REMAINS naming what rides the next near-full rebuild of the grammar; documents only, no Lean, no record "
         "and no core run; then render, strict check, links, tests and both dossier checks, then the fast-forward); ")
 LANDED = ("OU's owner's board closures landed (documents only: no Lean, no record and no core run): EC, U1b, RN and UE6 "
           "closed into the history file, each done (EC's measure closed by EC6 and OU3c to OU3e, U1b and RN the gate's "
           "items 3 and 6, UE6 as stated); OU's row open, stating what is left after the gate (plan §十三 items 6, 8, "
-          "11 and item 9's institution, each to be claimed on its own, on Ren's word to go past the gate); the "
-          "overview's budget row at its own count, 208 over; WHAT-REMAINS naming what rides the next near-full "
+          "11 and item 9's institution, each to be claimed on its own, on Ren's word to go past the gate); "
+          "WHAT-REMAINS naming what rides the next near-full "
           "rebuild of the grammar (BD4's three pieces and the quick Lean review's open findings in the grammar and "
           "six leaves); render, strict check, links, tests and both dossier checks pass. ")
 CLOSE = {
@@ -116,11 +113,6 @@ def land():
         k -= 1
     hist[k + 1:k + 1] = moved
     HISTORY.write_text('\n'.join(hist), encoding='utf-8')
-
-    t = BUDGETS.read_text(encoding='utf-8')
-    a = '| An hour | Done: 224 over, which OU\'s owner judged'
-    assert t.count(a) == 1
-    BUDGETS.write_text(t.replace(a, '| An hour | Done: 208 over, which OU\'s owner judged'), encoding='utf-8')
 
     t = REMAINS.read_text(encoding='utf-8')
     a = '## What this note does not do\n'
