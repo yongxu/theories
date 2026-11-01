@@ -21,7 +21,7 @@ import Becoming.ValuationFrames
 /-!
 # Definitions and model laws stated at the grammar's models
 
-Central declarations that rest on no master law, each stated where its terms are the grammar's. A
+Central declarations that rest on no shared law, each stated where its terms are the grammar's. A
 statement is made at a World's occurrence model (`Becoming.WorldRepresentation`), at a process's model
 of its moves' relations (`Becoming.ProcessRepresentation`), or on the row's own carrier. Every term of
 such a statement is one of these:

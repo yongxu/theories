@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T12:02:59+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "On families chosen step by step, a run is shown under no condition, balance or closure exactly when each step obeys its law; running down, whose family holds what stands before and after its step, adds that what stands continues up to order, in place of following position by position.",
-    "zh": "在逐步选定的家族上，无条件、平衡或封闭之下，运行被显示，恰当每一步服从其律；耗减的家族持有一步前后所立者，它还要求所立者不计次序地延续，以代替逐位跟随。"
+    "en": "On families chosen step by step, a run is shown under no condition, balance or closure exactly when each step satisfies its law; running down, whose family holds what stands before and after its step, adds that what stands continues up to order, in place of following position by position.",
+    "zh": "在逐步选定的家族上，无条件、平衡或封闭之下，运行被显示，恰当每一步满足其律；耗减的家族持有一步前后所立者，它还要求所立者不计次序地延续，以代替逐位跟随。"
   },
   "laws": [
     {
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "en": "On families chosen step by step, a run with its givers is shown under no condition, under balance on each step's list, or under its closure, exactly where each step obeys the law of every step, of balance or of closure respectively, and the law of the givers (at least one giver where anything is given, at most what is given): these conditions join no step to the next.",
-      "zh": "在逐步选定的家族上，无条件、每步列表上平衡、或其封闭之下，连同给予者的运行被显示，恰当每一步分别服从每一步之律、平衡之律或封闭之律，以及给予者之律（有所给处至少一个给予者，至多为所给之量）：这些条件不把一步连到下一步。",
+      "en": "On families chosen step by step, a run with its givers is shown under no condition, under balance on each step's list, or under its closure, exactly where each step satisfies the law of every step, of balance or of closure respectively, and the law of the givers (at least one giver where anything is given, at most what is given): these conditions join no step to the next.",
+      "zh": "在逐步选定的家族上，无条件、每步列表上平衡、或其封闭之下，连同给予者的运行被显示，恰当每一步分别满足每一步之律、平衡之律或封闭之律，以及给予者之律（有所给处至少一个给予者，至多为所给之量）：这些条件不把一步连到下一步。",
       "declarations": [
         "Becoming.OneStep.step_every_iff",
         "Becoming.OneStep.step_balance_iff",
@@ -45,8 +45,8 @@
       ]
     },
     {
-      "en": "Without the givers, under balance alone, a run is shown on families chosen step by step exactly where each step obeys the law of balance.",
-      "zh": "不计给予者，只在平衡之下，运行在逐步选定的家族上被显示，恰当每一步服从平衡之律。",
+      "en": "Without the givers, under balance alone, a run is shown on families chosen step by step exactly where each step satisfies the law of balance.",
+      "zh": "不计给予者，只在平衡之下，运行在逐步选定的家族上被显示，恰当每一步满足平衡之律。",
       "declarations": [
         "Becoming.OneStep.stepRun_balance_iff"
       ]
@@ -59,16 +59,16 @@
       ]
     },
     {
-      "en": "On families chosen step by step each running down, a run with its givers is shown exactly where what stands continues up to order and each step obeys the law of running down and the law of the givers, with the givers at most the takers; with each list also closed, likewise with the law of running down closed.",
-      "zh": "在逐步选定、每个都耗减的家族上，连同给予者的运行被显示，恰当所立者不计次序地延续，且每一步服从耗减之律与给予者之律，给予者不多于取用者；每个列表又封闭时，同样，以耗减且封闭之律代之。",
+      "en": "On families chosen step by step each running down, a run with its givers is shown exactly where what stands continues up to order and each step satisfies the law of running down and the law of the givers, with the givers at most the takers; with each list also closed, likewise with the law of running down closed.",
+      "zh": "在逐步选定、每个都耗减的家族上，连同给予者的运行被显示，恰当所立者不计次序地延续，且每一步满足耗减之律与给予者之律，给予者不多于取用者；每个列表又封闭时，同样，以耗减且封闭之律代之。",
       "declarations": [
         "Becoming.OneStep.step_runsDown_iff",
         "Becoming.OneStep.step_runsDownClosed_iff"
       ]
     },
     {
-      "en": "Without the givers, on families chosen step by step each running down, or running down and closed, a run is shown exactly where what stands continues up to order and each step obeys the law of running down, or of running down closed.",
-      "zh": "不计给予者，在逐步选定、每个都耗减（或耗减且封闭）的家族上，运行被显示，恰当所立者不计次序地延续，且每一步服从耗减之律（或耗减且封闭之律）。",
+      "en": "Without the givers, on families chosen step by step each running down, or running down and closed, a run is shown exactly where what stands continues up to order and each step satisfies the law of running down, or of running down closed.",
+      "zh": "不计给予者，在逐步选定、每个都耗减（或耗减且封闭）的家族上，运行被显示，恰当所立者不计次序地延续，且每一步满足耗减之律（或耗减且封闭之律）。",
       "declarations": [
         "Becoming.OneStep.stepRun_runsDown_iff",
         "Becoming.OneStep.stepRun_runsDownClosed_iff"
@@ -205,7 +205,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
       "role": "proof",
-      "sha256": "a3573dad850874daa486c38d69f7ae02201572aac6f019785653bfdc45a4f10a",
+      "sha256": "f8785cad86ad3b58a2334dc2b3728d89ad168ec1f0b485b3f3ceddf6ca5e8d89",
       "declarations": [
         "Becoming.OneStep.Continues",
         "Becoming.OneStep.Chained.continues",
@@ -302,12 +302,18 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OneStep",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -371,6 +377,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement rewritten to what the Lean proves, the old “only a condition holding what stands joins one step to the next” narrowed to the conditions the Lean treats (no condition, balance, closure; running down with or without closure); the claim split into nine laws, each read against its declarations in OneStep.lean, the givers' law and the bound of givers by takers written in where the Lean has them; OneStep.Chained and OneStep.Givers added to the references of OneStep.lean; the limitations to three does-not-show items and the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the reading's label kept in the correspondence; the side the hypothesis left untreated moved to a does-not-show item, the hypotheses written out with the conditions and representation; the next step stated positively; the correspondence's work-board items cut; no premise, status or source hash changed. Every earlier sentence is mapped in [runs-on-families-chosen-step-by-step.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/runs-on-families-chosen-step-by-step.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 所证重写，旧的“只有持有所立者的条件把一步连到下一步”收窄到 Lean 所处理的条件（无条件、平衡、封闭；耗减，封闭与否）；主张拆为九条规律，各条对照 OneStep.lean 中的声明核读，Lean 带有之处写入给予者之律与给予者不多于取用者；OneStep.Chained 与 OneStep.Givers 加入 OneStep.lean 的引用；限制改为三条“未表明”与通用边界 no-evaluation、no-ethical-premise、discrete-steps，读法的标注留在对应说明中；前提未处理的一侧移为一条“未表明”，前提写出各条件与表示；下一步改为正面陈述；对应说明中的工作板条目删去；前提、状态与来源哈希均未改变。每句旧文本的去向见 [runs-on-families-chosen-step-by-step.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/runs-on-families-chosen-step-by-step.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
     }
   ],
   "text_versions": [

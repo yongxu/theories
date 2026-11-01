@@ -150,7 +150,9 @@ def FrameMatchings.canonical {L : Flow F C} {W : Web F C} (b : L.Balances W) :
     (FrameMatch.id (W.level t c + L.given t c))
 
 /-- **Frame matchings, both ways**: a flow has selected matchings of every frame exactly where it
-balances; the converse needs no choice. -/
+balances; the converse needs no choice. A frame match exists exactly where the two counts are equal
+(`FrameMatch.eq`, `FrameMatch.id`), so that matchings exist restates the balance equation; what a
+matching adds is the bijection itself, as data. -/
 theorem frameMatchings_iff_balances {L : Flow F C} {W : Web F C} :
     Nonempty (FrameMatchings L W) ↔ L.Balances W :=
   ⟨fun ⟨U⟩ => U.balances, fun b => ⟨FrameMatchings.canonical b⟩⟩
@@ -322,7 +324,8 @@ theorem residual_pos_of_dissipates {L : Flow F C} {cs : List C} {t : Nat} {f : F
     exact excess_pos.mpr (Nat.lt_of_succ_le d)
 
 /-- **Lossless storage through a dissipating formation is excluded**: a present formation that
-takes from a family exactly what it gives it, and takes something, does not dissipate on it. -/
+takes from a family exactly what it gives it, and takes something, does not dissipate on it. Close
+to the definition: with `same`, dissipating would ask more than the take of the take. -/
 theorem lossless_not_dissipative {L : Flow F C} {cs : List C} {t : Nat} {f : F}
     (present : f ∈ L.present t) (same : total cs (L.give t f) = total cs (L.take t f))
     (takes : 0 < total cs (L.take t f)) : ¬ L.DissipatesOn cs t := fun d => by

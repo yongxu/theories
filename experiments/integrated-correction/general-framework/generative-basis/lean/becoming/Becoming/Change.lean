@@ -207,27 +207,6 @@ theorem risen_within {q : α → Nat → Nat} {as : List α} {B : Nat}
     (Nat.le_of_eq (family_over_stretch q S n as).symm)
     (Nat.add_le_add_right (total_le as fun a mem => bounded a (S + n) mem) _))
 
-/-! ## Stretches of steps -/
-
-theorem steps_mem : ∀ {T n t : Nat}, t ∈ steps T n → T ≤ t
-  | _, 0, _, mem => nomatch mem
-  | _, _ + 1, _, .head _ => Nat.le_refl _
-  | _, _ + 1, _, .tail _ mem => Nat.le_of_succ_le (steps_mem mem)
-
-theorem steps_last (q : Nat → Nat) :
-    ∀ T n, total (steps T (n + 1)) q = total (steps T n) q + q (T + n)
-  | T, 0 => Nat.add_comm (q T) 0
-  | T, n + 1 =>
-    (congrArg (q T + ·) ((steps_last q (T + 1) n).trans
-      (congrArg (_ + ·) (congrArg q (Nat.add_right_comm T 1 n))))).trans
-      (Nat.add_assoc _ _ _).symm
-
-theorem steps_mono (q : Nat → Nat) (T n : Nat) :
-    ∀ m, total (steps T n) q ≤ total (steps T (n + m)) q
-  | 0 => Nat.le_refl _
-  | m + 1 => Nat.le_trans (steps_mono q T n m)
-      (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (steps_last q T (n + m)).symm))
-
 /-! ## Recurrence -/
 
 /-- Something holds of some member of a finite family at arbitrarily late steps.
@@ -241,20 +220,6 @@ theorem Recurs.mono {as : List α} {e e' : α → Nat → Prop} (imp : ∀ a t, 
   fun N => match recurs N with
   | ⟨t, a, later, mem, holds⟩ => ⟨t, a, later, mem, imp a t holds⟩
 
-/-- Where a quantity is positive at arbitrarily late steps, its totals over stretches from
-any step exceed every bound. -/
-theorem recurring_accumulates {q : Nat → Nat} (recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < q t)
-    (N : Nat) : ∀ K, ∃ n, K ≤ total (steps N n) q
-  | 0 => ⟨0, Nat.zero_le _⟩
-  | K + 1 => match recurring_accumulates recurs N K with
-    | ⟨n, many⟩ => match recurs (N + n) with
-      | ⟨_, later, positive⟩ => match le_dest later with
-        | ⟨m, same⟩ => ⟨n + m + 1, Nat.le_trans
-            (Nat.add_le_add (Nat.le_trans many (steps_mono q N n m))
-              (Nat.lt_of_lt_of_le positive
-                (Nat.le_of_eq (congrArg q (same.trans (Nat.add_assoc N n m))))))
-            (Nat.le_of_eq (steps_last q N (n + m)).symm)⟩
-
 /-- So where a quantity is positive at some member of a finite family at arbitrarily late
 steps, the family's totals over stretches from any step exceed every bound. -/
 theorem Recurs.accumulates {as : List α} {r : α → Nat → Nat}
@@ -262,12 +227,6 @@ theorem Recurs.accumulates {as : List α} {r : α → Nat → Nat}
     ∀ K, ∃ n, K ≤ total (steps N n) fun t => total as fun a => r a t :=
   recurring_accumulates (fun M => match recurs M with
     | ⟨t, _, later, mem, positive⟩ => ⟨t, later, total_pos_of_mem mem positive⟩) N
-
-/-- What exceeds `K` and is at most `K` and `R` together leaves `R` positive. -/
-theorem pos_of_exceeds {K X R : Nat} (many : K + 1 ≤ X) (within : X ≤ K + R) : 0 < R :=
-  match R, within with
-  | 0, within => absurd (Nat.le_trans many within) (Nat.not_succ_le_self K)
-  | R + 1, _ => Nat.succ_pos R
 
 /-- In a finite family whose members fall at arbitrarily late steps, they also rise at
 arbitrarily late steps. -/

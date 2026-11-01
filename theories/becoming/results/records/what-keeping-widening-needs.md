@@ -117,7 +117,7 @@ Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evoluti
 - related, not a proved adapter: [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md). Comparing two courses on what they admit, which no law here does.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.
 
-**Used by:** [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md)
+**Used by:** [degeneration-from-a-horizon](degeneration-from-a-horizon.md) · [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -147,6 +147,7 @@ Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evoluti
 | integration | [signatures.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/signatures.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | review | [REVIEW-HE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/review/REVIEW-HE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要什么，以及承载它者`, `the gain bridge`, `renewers multiply`, `opened by the opened within a recency bound`, `the exclusion along passing of support`, `Becoming.Flow.OpenedByOpenedWithin`, `Becoming.Web.KeepsWidening.passes_every_bound`, `the law of beginnings`, `the kind relay`, `起始之律`, `种类接力`
 

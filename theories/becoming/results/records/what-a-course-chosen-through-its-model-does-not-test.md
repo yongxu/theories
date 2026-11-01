@@ -91,6 +91,7 @@ A deterministic case of a model right along the course its own choices take and 
 | integration | [PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) | — |
 | integration | [REVIEW-ROUND2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `a model its course never refutes`, `其历程永不驳之模型`, `self-confirmation`, `自证`, `keeping the floor`, `守底`, `Becoming.ReadingLoop.alike_of_kept`, `Becoming.ReadingLoop.Loop.rests_of_unrefuted`, `Becoming.ReadingLoop.Untested.floor_forgoes`
 

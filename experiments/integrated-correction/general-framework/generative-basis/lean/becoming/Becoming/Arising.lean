@@ -679,6 +679,19 @@ theorem along_hasPred_iff {F : Type} {E : «际» (Nat × F)} {t : Nat} {f : F} 
 theorem along_sheng_zero {F : Type} (E : «际» (Nat × F)) (f : F) : «生» along E (0, f) :=
   fun ⟨⟨_, _⟩, ⟨h₁, _⟩, _⟩ => Nat.noConfusion h₁
 
+/-- The two-valued class of a determination on occurrences (二值之类): two occurrences are alike
+when the determination holds at one exactly when it holds at the other. `Steps.alike` is the same
+class on the steps of one determination. -/
+def alikeAt {F : Type} (p : F → Nat → Prop) : «际» (Nat × F) := fun x y => p x.2 x.1 ↔ p y.2 y.1
+
+/-- Along a relatum nothing splits, under every class: each occurrence continues as at most one. -/
+theorem along_fixed {F : Type} (E : «际» (Nat × F)) : «定后» («续» along E) :=
+  «定后之逐点».mpr fun x y z ⟨⟨y1, y2⟩, _⟩ ⟨⟨z1, z2⟩, _⟩ => by
+    obtain ⟨y₁, y₂⟩ := y
+    obtain ⟨z₁, z₂⟩ := z
+    dsimp only at y1 y2 z1 z2
+    subst y1; subst y2; subst z1; subst z2; rfl
+
 end Steps
 
 namespace Web
@@ -691,6 +704,9 @@ def activityClass : «际» (Nat × F) := fun x y => W.active x.1 x.2 ↔ W.acti
 
 theorem activityClass_class : «类» W.activityClass :=
   ⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
+
+/-- The class of activity is the two-valued class of activity on occurrences. -/
+theorem activityClass_eq_alikeAt : W.activityClass = Steps.alikeAt (fun f t => W.active t f) := rfl
 
 variable {W}
 

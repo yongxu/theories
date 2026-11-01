@@ -6,6 +6,7 @@ import Becoming.GrammarCandidates
 import Becoming.MapInstances
 import Becoming.MapRegions
 import Becoming.GrammarLaws
+import Becoming.GrammarConditionals
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
 import Becoming.World
@@ -266,6 +267,8 @@ import Becoming.Propagation
 import Becoming.Regulation
 import Becoming.ReadingSchedule
 import Becoming.RegimeMargin
+import Becoming.RoomNet
+import Becoming.RoomRuns
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -277,6 +280,10 @@ import Becoming.Frequency
 import Becoming.MutualDependence
 import Becoming.Gain
 import Becoming.KeepingWidening
+import Becoming.LineDegeneration
+import Becoming.SelectionShift
+import Becoming.LineageRegions
+import Becoming.LineageRegimes
 import Becoming.WideningOnTheMap
 import Becoming.Gluing
 import Becoming.Runs
@@ -328,6 +335,8 @@ import Becoming.SelectionReach
 import Becoming.UnitMatchings
 import Becoming.UnreadStandings
 import Becoming.DrawnBeyond
+import Becoming.WindowedWaiting
+import Becoming.PairSelection
 import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.OptimumSeason
@@ -570,7 +579,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   no concrete undecidable-idleness world is given. The sides of reordering remain supplied;
   continuous-time correspondence remains open. The readings are the AI’s, adopted on Ren's
   delegation of 15 October 2026.
-* `Becoming.OneStep` (L1): All laws of one step and of families chosen step by step (P79). A pattern of one step is realized by a world exactly where it obeys the law of every step and the law of each named local condition (`OneStep.every_iff`, `OneStep.laws`); nonzero taking needs a taker and nonzero giving a giver. Givers, capacity and activity are characterized exactly. Runs on one family add chaining; for families chosen step by step, running down adds continuity counted at positive levels (`OneStep.step_runsDown_iff`), strictly weaker than tracking positions.
+* `Becoming.OneStep` (L1): All laws of one step and of families chosen step by step (P79). A pattern of one step is realized by a world exactly where it satisfies the law of every step and the law of each named local condition (`OneStep.every_iff`, `OneStep.laws`); nonzero taking needs a taker and nonzero giving a giver. Givers, capacity and activity are characterized exactly. Runs on one family add chaining; for families chosen step by step, running down adds continuity counted at positive levels (`OneStep.step_runsDown_iff`), strictly weaker than tracking positions.
 * `Becoming.Weighted` (L1): Weighted histories and their losses (P82). Given weights with their laws and finite lists of moves and configurations, the sum of histories over a finite horizon is exactly stepwise transfer (`Weights.sum_courses`). Possibility is the core's trace relation, and counting preserves possibility. For a description with representatives, exact preservation at every horizon is exactly one-step lumpability (`Weights.lumped_iff`); truncation, cancellation, unkept memory and loops have explicit boundary witnesses.
 * `Becoming.Transmission` (L1): The exact conditions and boundary of transmission (P84). Transmission is exactly inheritance with a need bound (`Flow.transmitsWithin_iff`); where no dependence was held before, inheritance is the forming law, while the general forming/holding split uses decidedness. Dropping one dependence of a giver keeps the other premises and breaks binding transmission (`World.drop_but`). Under the named finite, balance, dissipation, embodiment and support conditions, a reading of drawing together with drawing being depending derives transmission (`World.transmitting_of_drawn`).
   A dependence forms anew exactly where the descendant depends on what its giver did not draw on;
@@ -896,6 +905,57 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the assortment the share of the spread among groups). Witnesses: two groups of two with one
   member holding back, the whole going either way; the same returns either way by how the groups
   are founded; assortment below one losing where assortment one would win.
+* `Becoming.SelectionShift` (L1): what the selection term proper does and does not decide, the
+  counting layer of EL1 (no ethical predicate). A common shift of offspring numbers leaves
+  concordance and discordance unchanged and enlarges the next generation by the shift for each
+  member (`SelectionShift.Generations.shift_step`), so the term does not fix the next generation's
+  size; a positive term makes the next generation nonempty, and at a step whose next generation is
+  empty both terms are zero (`SelectionShift.Generations.next_of_selection`,
+  `SelectionShift.Generations.last_term_zero`). A term positive at unboundedly many steps keeps
+  every generation nonempty (`SelectionShift.Generations.never_empties_of_unbounded`); with exact
+  transmission of offspring number at every step from `t`, a positive term at `t` does
+  (`SelectionShift.Generations.goes_on`), and exactness at `t` alone does not
+  (`SelectionShift.ExactOnce.exact_once_ends`). Within any horizon, the terms through it of a course
+  nonempty there are shared by a course that goes on and one that ends
+  (`SelectionShift.Horizon.same_terms_two_fates`, `SelectionShift.Horizon.two_fates_of_nonempty`),
+  and, from a nonempty first cohort, terms zero after some step by a course nonempty at every cohort
+  and one that ends (`SelectionShift.Horizon.eventually_zero_two_fates`); a term can be positive at
+  every step but the last while the family ends
+  (`SelectionShift.Shrinking.positive_then_empty`). A leaf.
+* `Becoming.LineageRegions` (L2, through `Becoming.KeepingWidening`): generations of descent read
+  on the map's regions, EL1's join (no ethical predicate). Descent within a kind is a lineage
+  continuation (`LineageRegions.continuation`), the carrier the fine class and a kind the coarse
+  one, activity read by the web's own activity or by support. Where only active formations give,
+  every listed offspring born within the kind and embodied is a carrying renewal from its parent
+  (`LineageRegions.descended_carries`; at the grain of support, with offspring unsupported the step
+  before, `LineageRegions.descended_carries_supported`); a revival counts as a birth at both grains,
+  and the grain decides a region where support does not track standing
+  (`LineageRegions.StandingRelay.grain_decides_region`). Where listed offspring continue their
+  parents, a whole cohort degenerating makes some later cohort empty
+  (`LineageRegions.empty_of_degenerates`), and with the census holding every continuation exactly so
+  (`LineageRegions.generation_degenerates_iff`); so, from a nonempty cohort, a term positive at
+  every nonempty cohort from it on leaves not every member of that cohort degenerating
+  (`LineageRegions.not_all_degenerate_while`), while at a kind grain separating offspring from
+  parents the term is positive at every step and every member degenerates
+  (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every horizon, two courses
+  with the same terms through it, the marked line generating in one and the lineage degenerating in
+  the other (`LineageRegions.Courses.same_terms_two_fates`); the census premise of ending cannot be
+  dropped (`LineageRegions.Lasting.lasting`). A leaf importing `Becoming.SelectionShift` and
+  `Becoming.LineDegeneration`.
+* `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
+  ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
+  under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on
+  what it renews, run past what it gives (`LineageRegimes.degeneration_of_family_excess`; at need
+  one the horizon is the stock, `LineageRegimes.degeneration_at_stock_horizon`), dissipation within
+  the family (`LineageRegimes.dissipation_degenerates_every_member`), and a draw on a condition
+  given nothing (`LineageRegimes.draw_doubling_needs`, of which `Flow.Balances.doubling_needs` is a
+  case; takers at least doubling, each drawing a unit, each active one taking from the condition and
+  no cohort listing a member twice, stop within `log₂ (level + 1)` cohorts,
+  `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every positive
+  stock a handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
+  `LineageRegimes.stock_forces_neither`); under renewal from outside no gated premise holds
+  (`LineageRegimes.FromOutside.not_gated`). A leaf; that every decider of a lineage's region is one
+  of the three is not shown.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -1519,8 +1579,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`RaisedRule.whole_every`, `CopyDown.whole_every`) and every moment ceases under what is held
   (`RaisedRule.ceases`, `CopyDown.ceases`); with the rule raised at every other step, renewal without
   end holds as well (`RaisedEveryOther.both`). Each law is near-definitional or a witness. Imported
-  by `Becoming.Tasks`, `Becoming.CausalGrowth` and `Becoming.WideningOnTheMap` (board items UE11,
-  GW).
+  by `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.WideningOnTheMap` and `Becoming.RoomRuns`
+  (board items UE11, GW, OU7).
 * `Becoming.Tasks` (L1): constructor theory's tasks and what performs them, read on any process
   divided into a performing part (`part`) and a substrate (`sub`), a task a relation on the
   substrate (`Tasks.Input`). A region `K` of the part performs a task (`Tasks.Performs`) where it is
@@ -1710,9 +1770,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   determined, a law determined part by part (`BlanketCouplings.const_consistent`,
   `BlanketCouplings.whole_iff`), any injective reading only those and not always
   (`BlanketCouplings.injective_converse_fails`); a sparse partition fixed apart from the family, on a law
-  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`). A
-  leaf importing `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board item
-  UE27).
+  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`).
+  Along one balanced run with the step as the external part, a formation's own level, read with a
+  value across steps of what couples into it (`BlanketCouplings.ValuesAcross`) and its act, is the
+  internal part of a law determined part by part exactly where, at any two steps alike on its level,
+  its admission, the levels coupled into it and its act, what is given to it at one step plus what is
+  taken from it at the other is the same with the steps exchanged and its next acts agree
+  (`BlanketCouplings.levelParts_admitted_iff`), tested only where these recur; a drain in three phases fails it (`BlanketCouplings.PhasedDrain.not_admitted`), a drain and
+  feed in two phases meets it (`BlanketCouplings.Alternating.admitted`). A leaf importing
+  `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board items UE27 and
+  UE28).
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
@@ -1736,7 +1803,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   on the support, is the periphery's `FreeEnergyReals`.
   A leaf importing `Becoming.ConditionalWeights` (board item UE21).
 * `Becoming.ModelStatements` (L1): definitions and model laws stated at the grammar's models. Twenty
-  central declarations that rest on no master law are each stated at a World's occurrence model, at a
+  central declarations that rest on no shared law are each stated at a World's occurrence model, at a
   process's model of its moves' relations or on the row's own carrier. Every term of each statement is
   a relation or region of the model, a named comparison of its given amounts or a supplied parameter,
   and each is proved through its row: a representation, not a derivation. Support and dependence
@@ -2621,6 +2688,41 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   upstream less `k` (`web_tolerating`), and with `k` all upstream it is `Becoming.Withholding`'s
   law without memory (`web_answers`).
   More tolerance gives no less at every step, for every structure of waiting.
+* `Becoming.WindowedWaiting` (L1): answering within a window, and the one-step laws of a pair, EL4a
+  (no ethical predicate). Of the eight decided one-step laws keeping mutual giving, five keep
+  inclusion (`WindowedWaiting.pairKeepsInclusion_table_iff`), and each of these either never
+  restores after one withholding or never answers a constant withholder
+  (`WindowedWaiting.keeps_split`); restoring and answering hold together exactly for agreement,
+  which does not keep inclusion (`WindowedWaiting.restores_and_answers_iff`,
+  `WindowedWaiting.agreement_not_keeps`), while answering within a window of two, on the pair's last
+  two steps, keeps inclusion and does both (`WindowedWaiting.windowTwo_keeps`,
+  `WindowedWaiting.windowTwo_restores`, `WindowedWaiting.windowTwo_answers`). Under `answers` a pair
+  echoes one withholding at every step (`WindowedWaiting.Pair.echo`). On configurations over
+  `α × Nat`, a window of one is `answers` (`WindowedWaiting.window_one`), windowed laws keep
+  inclusion (`WindowedWaiting.answersWithin_keeps`), a constant withholder is answered within the
+  window (`WindowedWaiting.withholder_answered`), errors never `w` in a row are absorbed and `w + 1`
+  in a row are answered (`WindowedWaiting.gives_unless_errs`, `WindowedWaiting.errs_answered`), and
+  no window both absorbs one error and answers within an error pattern in which no formation errs at
+  two consecutive steps (`WindowedWaiting.Pair.not_absorbs_and_answers_spaced`). A leaf; the
+  readings as tit-for-tat and its kin are the chapter's.
+* `Becoming.PairSelection` (L1): offspring read from what a pair's run gives, and where a gift's
+  surplus comes from, EL4b and EL4c (no ethical predicate). The counts a pair's run gives each
+  place, steps received and steps withheld, are theorems of the runs at every length, with and
+  without errors (`PairSelection.counts_windowed_error`, `PairSelection.counts_answering_error`,
+  `PairSelection.counts_windowed_spaced`). With offspring `a + β · received + γ · withheld` and
+  `β ≤ γ`, no kind rises against withholders in a cohort listed as pairs, whatever its laws and
+  errors (`PairSelection.never_rises_in_pairs`); under complete assortment, over at least one step, answering and the window
+  are weakly favoured exactly where `γ ≤ β` (`PairSelection.assorted_favours_iff`,
+  `PairSelection.window_echo_favours_iff`), and after one error, with at least one step after it, a
+  window pair leaves strictly more than an answerer pair exactly where `γ < β`
+  (`PairSelection.window_echo_lt_iff`); without withholding nothing is selected
+  (`PairSelection.neutral`). On the World's webs, need asymmetry within a pair is the slack bound
+  read with the pair split into family and beyond (`PairSelection.Needs.asymmetric_within_slack`,
+  `PairSelection.Needs.symmetric_breaks`), a gift may be carried by an inflow
+  (`PairSelection.Renewed.renewal_carried`), and a factor read as a line's rise is bounded by the
+  slack beyond and the inflow (`PairSelection.Place.received_factor_le`, a bound under a supplied
+  reading). A leaf; a model of the pair's run as a flow on a web, from which the factors would
+  follow, is not shown.
 * `Becoming.Revision` (L1): Selection when the lumping itself changes.
 * `Becoming.Undecided` (L1): the third value and revision, with no premise. With values true,
   undecided and false, undecided below the decided ones in information, a term with no constant
@@ -2785,7 +2887,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   every member's event has its closure along conveyance within the family
   (`Flow.closures_not_within_region`); in the clearing the resource's region is no boundary along
   conveyance nor along living on (`Clearing.resource_no_boundary`). A leaf, the World's case of the
-  crossing laws; the cut keeps its definition in `Becoming.Standpoints`.
+  crossing laws; the cut is defined in `Becoming.Standpoints` as `«不出»` at the valuation's relation.
 * `Becoming.BalanceRegions` (L1): balance region by region, `Becoming.Continuity` read on the root
   (board item BD3). Adjacency among the listed relata is a symmetric relation of the grammar
   (`Continuity.adjacentListed`, `Continuity.adjacentListed_symm`); a family the relation closes,
@@ -3174,12 +3276,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`«化为有缘之成坏»`); the 墨经's 同 is a class where each belongs to one and one only (sufficient,
   `«同于为类»`) and otherwise need not be transitive (`«同于不必传递»`); a returning occurrence
   abides (`«复者住»`); 通 is going along 缘 and coming along its converse without end: under a
-  constant class a line with a past never ends going (`«有常则往不穷»`), what abides passes through
-  where a class is constant both ways (`«两向有常则通»`), and constancy one way is not enough
-  (`«有常而不通»`); in a net without self-conditioning,
+  constant class a line with a past never ends going (`«有常则往不穷»`), what has a predecessor passes
+  through where a class is constant both ways (`«两向有常有前则通»`, what abides being its
+  case), and constancy one way is not enough (`«有常而不通»`); in a net without self-conditioning,
   continuation is neither identity nor mere difference (`«非一非异»`), and the 中论's 「因即為斷滅」
   holds under identity while the line continues under a coarser class (`«因灭而续»`). Imported by
-  `Becoming.GrammarCandidates`.
+  `Becoming.GrammarCandidates` and `Becoming.RoomNet`.
 * `Becoming.GrammarMap` (L0): the map of generation, keeping and degeneration, read at two
   grains, a fine class of parts and a coarse class of the pattern they make up, and on branches.
   A carrying renewal (`«传»`) continues the pattern while a part begins, an alteration (`«传则异»`,
@@ -3197,9 +3299,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exactly the later numbers (`Map.step_reached_le`, `Map.step_reaches_of_le`), stated here below every
   module that reads such a line. Imported by `Becoming.GrammarLaws`,
   `Becoming.GrammarScope`, `Becoming.GrammarPath`, `Becoming.MapInstances` and `Becoming.MapRegions`.
-* `Becoming.MapRegions` (L1): the map's regions, laws of `Becoming.GrammarMap` kept in a leaf, since
-  most of the package depends on it. A carrying renewal begins no line of the pattern (`«传则粗不生»`), and a beginning of a
-  part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal
+* `Becoming.MapRegions` (L1): the map's regions, laws of `Becoming.GrammarMap` kept in a module
+  of their own, since most of the package depends on it. A carrying renewal begins no line of the
+  pattern (`«传则粗不生»`), and a beginning of a part is, as far as can be refuted, a beginning of
+  the pattern or the end of a carrying renewal
   (`«生则或粗生或传»`). Keeping from some point on (`«后守»`) follows from keeping and from 全守
   (`«守则后守»`, `«全守则后守»`), excludes degeneration (`«后守退化不并»`) and, on a single line,
   generation (`«单行则生成后守不并»`); with excluded middle every point is 生成, 后守 or 退化
@@ -3211,7 +3314,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Map.keepsAfter_iff_settles`); deciding 后守 for one sequence gives LPO for it, deciding 生成 only
   WLPO (`Map.«后守之定则LPO»`, `Map.«生成之定则WLPO»`), and placing every sequence in one of them gives
   LPO (`Map.«生成后守之定则LPO»`): to tell whether a line keeps from some point on is to decide
-  whether it stops renewing. Near-definitional. A leaf (board item GW).
+  whether it stops renewing. Near-definitional. Imported by `Becoming.RoomNet` (board items GW, OU7).
 * `Becoming.MapInstances` (L1): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
@@ -3221,12 +3324,30 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   still held, a family drawn beyond renewal and passing that stops refute going on every branch
   (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
   the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.
+* `Becoming.LineDegeneration` (L2, through `Becoming.KeepingWidening`): degeneration on the base,
+  constructively (board item EL, its part EL3; no ethical predicate). Along any class, where
+  everything the line from an occurrence reaches at a step `N` not before it ends on every branch,
+  the line ends on every branch (`Web.ends_of_ends_at`, by induction on the steps left, with no
+  excluded middle and no premise of one continuation); so at every class within activity, from an
+  active occurrence where nothing the line reaches at `N` is active, the pattern degenerates
+  (`«退化»`, `Web.every_branch_ends_of_gone`), activity and the kind grain of
+  `Becoming.KeepingWidening` being instances (`Web.kind_every_branch_ends_of_gone`). The three
+  regimes of `Becoming.MapInstances` degenerate through one step each
+  (`Web.consumed_held_degenerates`, `Web.family_excess_degenerates`, `Web.stopped_degenerates`),
+  with witnesses whose lines take a step first. Ending on every branch reaches an end where going
+  on is decided at the points of the line (`Map.end_of_ends_decided`), and that every line meeting
+  the law's premise reaches an end is exactly excluded middle
+  (`Map.end_of_gone_iff_excluded_middle`; on the grammar, `Map.end_of_ends_iff_excluded_middle`):
+  the decision premise of `Web.degenerates_of_gone`, which concludes an end (`«有终»`), is as
+  strong as excluded middle. A leaf; `Web.Restated` derives the landed laws from degeneration and
+  is no result.
 * `Becoming.GrammarTesting` (L1): testing within the net (验). The core of a class is approximated
   by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
   apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
   calibration and is not stated. A room in balance and a room held by a thermostat share a core
   class while no window opens and are told apart once the window's opening is in the net
-  (`«恒温与平衡»`): no intervener outside the net. Imported by `Becoming.GrammarCases`.
+  (`«恒温与平衡»`): no intervener outside the net. Imported by
+  `Becoming.GrammarCases` and `Becoming.RoomNet`.
 * `Becoming.GrammarCandidates` (L1): the corpus's 59 candidate theorems of the grammar, tested
   (the OU2c kit's `outcomes.tsv`: 38 proved, 15 needing a premise, 3
   refuted, 2 misclassified, 1 not expressible). Correlatives that are the two ends of one relation
@@ -3235,7 +3356,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   an occurrence's position depends on the class exactly where it is not its own condition
   (`«定性之判»`), and everything ends under identity exactly where nothing is its own condition
   (`«念念灭当且仅当无自缘»`); every condition precedes its result exactly where the net has no cycle
-  (`«缘先果后当且仅当无环»`). A leaf.
+  (`«缘先果后当且仅当无环»`). Imported by `Becoming.GrammarConditionals`.
 * `Becoming.Prelude` (L0): the lemmas on numbers, truth values, lists and options that the layers
   use, each stated once (no premise; it imports only Init): cancellation, subtraction and products
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,
@@ -3244,13 +3365,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
   over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
   from which the stretch balances of flows, amounts, courses and censuses are derived.
-* `Becoming.GrammarLaws` (L0): the five master laws of 08 §7 on the grammar, for every carrier and
+* `Becoming.GrammarLaws` (L0): the five shared laws of 08 §7 on the grammar, for every carrier and
   relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
   itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
   keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
   `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`, `Becoming.PatternPassing` and
   `Becoming.Persistence` that keep a region along the steps by their own induction being its cases
-  (board items OU3f, HE). Under the converse the closure is the closure read backward
+  (board items OU3f, HE). Nothing in a region goes out of it along a relation (`«不出»`) where no
+  member bears the relation to something outside: a closed region is not gone out of (`«闭则不出»`),
+  an occurrence's closure among them, the closure law `«所闭之界»` read through `«不出»`
+  (`«所闭不出»`; board items BD2, OU7). Under the converse the closure is the closure read backward
   (`«所闭之逆»`); a closure through borrowed steps, each a step of the relation or one from `a`
   taken at `o`, lies within `o`'s or `a`'s closure (`«借步之所闭在二所闭»`), and the two lie within
   `o`'s closure under a larger relation where `a` lies within it (`«二所闭在借步之所闭»`; board item
@@ -3260,8 +3384,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   closure (`«对之接»`, `«对之并»`, `«对之族»`, `«对之程»`), and the count law at a step and over a
   stretch is exactly a pairing of units (`«守数当且仅当可对»`, `«程守数当且仅当可对»`): an exact
   cardinality representation, near-definitional, the pairing supplied. Counting a region's units
-  (`«计»`, the region read as a test), a pairing keeps the count on every region the relation does
-  not cross (`«对则不越域守数»`), and under a class decided by a test it is exactly equal count in
+  (`«计»`, the region read as a test), a pairing keeps the count on every region not gone out of
+  either way, which is exactly one the relation does not cross and one closed both ways
+  (`«对则不越域守数»`, `GrammarLaws.uncrossed_iff_notGoingOut`, `GrammarLaws.uncrossed_iff_closed`;
+  board items BD2, OU7), and under a class decided by a test it is exactly equal count in
   every class (`«类之对当且仅当类类等数»`); the census of a step pairs the units before with those
   arising to the units after with those ceasing, each pair a continuation or the same unit
   (`«定后定前则前并生对后并亡»`; board item HE2). Finite runs: drawn in is
@@ -3315,6 +3441,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and `Becoming.ReachableRanges` by `strictJoin_trans` (board item OU3c). Balance is represented both ways in `Becoming.Flow`
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
+* `Becoming.GrammarConditionals` (L1): the corpus's conditional laws (丙一) in the grammar, each
+  family written as "Y 当且仅当 Z" or "Z 则 Y" with a net where Z fails and Y fails with it (06 §四, board
+  item OU7). Where everything goes on under a coarse class and every step is parted by a fine one, every
+  occurrence is generating (`«皆有后而步皆分则全生成»`; day and night, `«昼夜全生成»`); a line none of
+  whose places comes back to itself is shorter than any list holding its places (`«线不返则短于所列»`), so
+  in bounded room it is not endless (`«不返而有限则非不穷»`); what a class's core puts with an occurrence
+  whose line never ends has a line that never ends (`«核同则同不穷»`), as an ending is kept along the core
+  (`«亡于核下不变»`) and a beginning along the converse net's (`«生于逆核下不变»`); a dependence (`«依»`) is
+  one-way, and where nothing is depended on nothing depends (`«所依无则依者无»`, `«依之传»`). Three
+  definitional laws state families exactly (`«亡者异当且仅当有后»`, `«无异当且仅当不分续»`,
+  `«皆不生当且仅当皆非无缘»`), and 27 witnesses (`…之例`) give the nets the other modules do not. Which unit
+  states which law is an AI reconstruction (the OU7 study's `data/groups.tsv`). A leaf.
 * `Becoming.GrammarTransport` (L1): the grammar kept by one-to-one correspondence of models, for
   the terms the World's instance theorems and `Becoming.WorldRepresentation` read. A correspondence
   (`«一一对应»`) carrying the relations a listed term reads carries the term (`«生之对应»`,
@@ -3819,7 +3957,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   counting layer, with no premise beyond the weighting each statement names. The weighting
   restricted to a record gives an event the weight of the courses meeting it and the record, its
   whole the record's weight (`restrict`, `mass_restrict`, `whole_restrict`); shares compared by
-  cross-multiplication obey Bayes's rule as a ratio identity (`restrict_two_ways`); a generative
+  cross-multiplication satisfy Bayes's rule as a ratio identity (`restrict_two_ways`); a generative
   model's posterior share is the prior weight times the likelihood weight over their sum
   (`posterior_single`), a prior weight being the prior share where the likelihood totals agree
   (`prior_share`); shares of independent parts and of step events over independent steps multiply
@@ -3952,6 +4090,29 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   a recent giving, each condition holding its level and what it gave last: under mutual support
   its thresholds fall as any level or recent giving rises; the plain web and the adjusted regime
   are its cases.
+* `Becoming.RoomNet` (L1): rooms tested by a window, the one-unfolding plan's model examples of 验.
+  One rule makes the nets of an unheated room and two thermostats, the window's opening in the net
+  as an alternative and the rooms compared as rules side by side (`Rooms.joint`). While no window
+  opens every room at its set level is one core class at the level (`Rooms.«不开窗则同核»`); with the
+  window in the net and a positive margin the level's first stage tells the unheated room from every
+  heated one (`Rooms.«开窗则一层可分»`), warm or not first tells them apart at the stage of the margin
+  (`Rooms.«开窗以温层如其余乃分»`), and two heated rooms stay one class (`Rooms.«有给之室以温不可分»`). At a margin of
+  three the overshooting thermostat is a model case of the mixed region (`Rooms.«给过所取则生守相杂»`), and
+  the unheated room keeps and reaches an end, degenerating while renewing once open
+  (`Rooms.«平衡守而有终»`, `Rooms.«开窗则平衡新而尽»`); at every positive margin the matched thermostat is 全守
+  (`Rooms.«给如所取则全守»`). At every positive margin warmth is a constant class exactly where the heater
+  gives (`Rooms.«温有常当且仅当有给»`) and, from a margin of two, no line of it from the set level ends
+  exactly there (`Rooms.«温不穷当且仅当有给»`). The branches `«恒温与平衡»` stipulates are the rule's at a margin
+  of one draw, and its verdict follows (`Rooms.toy_branches`, `Rooms.toy_verdict`).
+* `Becoming.RoomRuns` (L1): the rooms' window courses as runs. With the window open the rule is
+  `RegimeMargin.step` with the heater's giving (`Rooms.next_open`, `Rooms.window_line`), so the
+  unheated room is cold from its margin's step (`Rooms.Unheated.window_cold`), at a positive margin
+  the matched thermostat holds its set level (`Rooms.Matched.window_held`), and at a margin of three
+  the overshooting course is `RegimeMargin.Alternation`'s run shifted by two
+  (`Rooms.Overshooting.alternation_shifted`); none of these courses keeps widening; the overshooting
+  course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
+  positive margin, is (`Rooms.Overshooting.generation_at_moments`); a coarse line is the possible
+  with warmth held (`Rooms.line_iff_held`).
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
@@ -4342,9 +4503,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
-* `Becoming.GrammarCrossing` (L1): not going out of a region (`«不出»`), for every carrier, relation
-  and region (board item BD2). A closed region is not gone out of (`«闭则不出»`), an occurrence's closure
-  among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going out of a
+* `Becoming.GrammarCrossing` (L1): not going out of a region (the grammar's `«不出»`, in
+  `Becoming.GrammarLaws` with `«闭则不出»` and `«所闭不出»`), for every carrier, relation and region
+  (board item BD2). Not going out of a
   region is exactly the closedness of what is not outside it, with no decision
   (`«不出当且仅当不外者闭»`); the two coincide where membership is stable (`«不外者内则不出当且仅当闭»`),
   and that they coincide for every relation and region is exactly excluded middle, a lemma of that

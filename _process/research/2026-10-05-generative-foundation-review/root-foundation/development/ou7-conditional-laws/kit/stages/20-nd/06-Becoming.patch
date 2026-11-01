@@ -1,0 +1,40 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+index 38e379783..aded5e95c 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+@@ -573,7 +573,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   no concrete undecidable-idleness world is given. The sides of reordering remain supplied;
+   continuous-time correspondence remains open. The readings are the AI’s, adopted on Ren's
+   delegation of 15 October 2026.
+-* `Becoming.OneStep` (L1): All laws of one step and of families chosen step by step (P79). A pattern of one step is realized by a world exactly where it obeys the law of every step and the law of each named local condition (`OneStep.every_iff`, `OneStep.laws`); nonzero taking needs a taker and nonzero giving a giver. Givers, capacity and activity are characterized exactly. Runs on one family add chaining; for families chosen step by step, running down adds continuity counted at positive levels (`OneStep.step_runsDown_iff`), strictly weaker than tracking positions.
++* `Becoming.OneStep` (L1): All laws of one step and of families chosen step by step (P79). A pattern of one step is realized by a world exactly where it satisfies the law of every step and the law of each named local condition (`OneStep.every_iff`, `OneStep.laws`); nonzero taking needs a taker and nonzero giving a giver. Givers, capacity and activity are characterized exactly. Runs on one family add chaining; for families chosen step by step, running down adds continuity counted at positive levels (`OneStep.step_runsDown_iff`), strictly weaker than tracking positions.
+ * `Becoming.Weighted` (L1): Weighted histories and their losses (P82). Given weights with their laws and finite lists of moves and configurations, the sum of histories over a finite horizon is exactly stepwise transfer (`Weights.sum_courses`). Possibility is the core's trace relation, and counting preserves possibility. For a description with representatives, exact preservation at every horizon is exactly one-step lumpability (`Weights.lumped_iff`); truncation, cancellation, unkept memory and loops have explicit boundary witnesses.
+ * `Becoming.Transmission` (L1): The exact conditions and boundary of transmission (P84). Transmission is exactly inheritance with a need bound (`Flow.transmitsWithin_iff`); where no dependence was held before, inheritance is the forming law, while the general forming/holding split uses decidedness. Dropping one dependence of a giver keeps the other premises and breaks binding transmission (`World.drop_but`). Under the named finite, balance, dissipation, embodiment and support conditions, a reading of drawing together with drawing being depending derives transmission (`World.transmitting_of_drawn`).
+   A dependence forms anew exactly where the descendant depends on what its giver did not draw on;
+@@ -1739,7 +1739,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   on the support, is the periphery's `FreeEnergyReals`.
+   A leaf importing `Becoming.ConditionalWeights` (board item UE21).
+ * `Becoming.ModelStatements` (L1): definitions and model laws stated at the grammar's models. Twenty
+-  central declarations that rest on no master law are each stated at a World's occurrence model, at a
++  central declarations that rest on no shared law are each stated at a World's occurrence model, at a
+   process's model of its moves' relations or on the row's own carrier. Every term of each statement is
+   a relation or region of the model, a named comparison of its given amounts or a supplied parameter,
+   and each is proved through its row: a representation, not a derivation. Support and dependence
+@@ -3237,7 +3237,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
+   over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
+   from which the stretch balances of flows, amounts, courses and censuses are derived.
+-* `Becoming.GrammarLaws` (L0): the five master laws of 08 §7 on the grammar, for every carrier and
++* `Becoming.GrammarLaws` (L0): the five shared laws of 08 §7 on the grammar, for every carrier and
+   relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
+   itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
+   keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
+@@ -3829,7 +3829,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   counting layer, with no premise beyond the weighting each statement names. The weighting
+   restricted to a record gives an event the weight of the courses meeting it and the record, its
+   whole the record's weight (`restrict`, `mass_restrict`, `whole_restrict`); shares compared by
+-  cross-multiplication obey Bayes's rule as a ratio identity (`restrict_two_ways`); a generative
++  cross-multiplication satisfy Bayes's rule as a ratio identity (`restrict_two_ways`); a generative
+   model's posterior share is the prior weight times the likelihood weight over their sum
+   (`posterior_single`), a prior weight being the prior share where the likelihood totals agree
+   (`prior_share`); shares of independent parts and of step events over independent steps multiply

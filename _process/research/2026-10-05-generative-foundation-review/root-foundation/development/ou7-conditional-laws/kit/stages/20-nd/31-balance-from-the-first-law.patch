@@ -1,0 +1,26 @@
+diff --git a/theories/becoming/results/records/balance-from-the-first-law.json b/theories/becoming/results/records/balance-from-the-first-law.json
+index 8954b8e94..d17c13d83 100644
+--- a/theories/becoming/results/records/balance-from-the-first-law.json
++++ b/theories/becoming/results/records/balance-from-the-first-law.json
+@@ -15,8 +15,8 @@
+   },
+   "laws": [
+     {
+-      "en": "A quantity held on the conditions obeys a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance.",
+-      "zh": "条件上所持的量服从局部平衡：每一步中，条件上所立者的变化，等于在场交换从它带出的，加上条件自身产生的。以单位 u > 0 读水平与交换，条件所产生的，正是 u 乘以它偏离平衡之数。",
++      "en": "A quantity held on the conditions satisfies a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance.",
++      "zh": "条件上所持的量满足局部平衡：每一步中，条件上所立者的变化，等于在场交换从它带出的，加上条件自身产生的。以单位 u > 0 读水平与交换，条件所产生的，正是 u 乘以它偏离平衡之数。",
+       "declarations": [
+         "Becoming.EntropyProduction.LocalBalance",
+         "Becoming.EntropyProduction.ReadsLevels",
+@@ -385,6 +385,10 @@
+     {
+       "en": "26 October 2026, board item DF1b (study section 422): 'The first law' here is thermodynamics' first law, named in full apart from the spine's first law (Flow.Gainless), which thermodynamics' second law gives read in available work; title, statement, laws 4 and 5, a limit, the correspondence, a dependency and two related notes. Where a related note means the spine's first law, it says so.",
+       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：这里的“第一定律”是热力学第一定律，与脊柱的第一律（Flow.Gainless，以可用功读出时由热力学第二定律给出）分开，写出全名；标题、陈述、第 4、5 条规律、一条限度、对应、一项依赖与两条相关说明。一条相关说明的英文版中指脊柱之第一律处写明为脊柱的。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ]
+ }

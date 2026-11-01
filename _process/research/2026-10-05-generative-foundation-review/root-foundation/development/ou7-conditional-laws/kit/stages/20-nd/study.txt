@@ -1,0 +1,30 @@
+Board item ND, names that state relations, not rule, part 2 (part 1, the documents, is §486: [the design](development/nd-nondual-names/DESIGN.md) and [its cold read](development/nd-nondual-names/COLD-READ.md)). 08 §10 renames a landed name only where it states a wrong meaning, and four kinds did. *Obey* states a command and its compliance, where a predicate holds of counts, as `ListingHolds` beside it already says: `ListingObeys`, `CountsObey`, `StandsObey`, `DependsObey`, `CountsHold.obey` and their lemmas become `ListingMarksHold`, `CensusMarksHold`, `StandingMarksHold`, `DependenceMarksHold`, `CountsHold.marks`, and the binders `obeys` become `marks`. *Good* states a value, where `ReadingLoop.Good` is successor safety, an act leading only where the task holds from every world a reading admits: it becomes `LeadsInto` (`LeadsIntoEnabled`, `keeps_of_leadsInto`, `leadsInto_of_keeps`, `keeps_iff_leadsInto`, `everything_leadsInto_iff`, `nothing_leadsInto`), and the witness's predicate, an act differing from the act a world names, becomes `PairwiseShared.leads`, what it is in the witness: an act leading into the task at that world. The design named it `avoids`, after its body `x ≠ w`; `leads` was taken instead because the audit reads a rename as one map on the statement's tokens, and the binders `good` in the same module become `leads`, so one old token keeps one new one, and because in the witness that is what the predicate stands for. *Harm* calls a loss a harm, a word no law of the map uses: `RegimeMargin.harms_superadditive` becomes `rises_superadditive`, after the rises at the point it bounds. *Belongs to* states ownership: `Pool.difference_belongs_to_the_joint` becomes `difference_only_together`, after what its witness shows, a difference made only by the drawers together. In comments, "master law" becomes "shared law" (GrammarLaws' header, Amounts, ModelStatements, the root module) and a case satisfies a law rather than obeying it; Ren's words quoted in Parting and Situations stay as he wrote them. The records whose fields said a case obeys a law now say it satisfies it, as their home sections have read since part 1.
+
+```text
+Result(s): no new result. Names only: a-reading-kept-by-its-update (laws 2 to 6 and the counterexample in the new
+       words: an act leads into the task from a reading, or at a world), counting-standing-and-dependence,
+       counting-under-enclosure, counting-where-the-counts-exist, joint-difference-making, margin-of-a-regime,
+       whole-law-of-counting; "obeys" → "satisfies" in balance-from-the-first-law, conditioning-by-restriction,
+       counting-standing-and-dependence, finite-aggregation-within-restorable-basic-losses,
+       laws-of-one-step-complete, laws-of-one-step, one-step-missing-laws, runs-on-families-chosen-step-by-step.
+Delta:
+  - 24 declarations renamed in seven modules, and 65 statements changed only by the renamed names and binders inside them; no statement,
+    definition body or proof changes otherwise, and nothing is added or removed.
+  - Ten modules and the root module changed in comments only.
+Supplied premises / correspondence: none added.
+Evidence: the audit (every rename, and every statement changed only by the renames and the binders EXPECTED.json
+       lists); the scratch build of the 16 changed modules' closure (149 modules, nothing unclean, every axiom report
+       empty); this core run.
+Standing: unchanged for every result.
+Boundary:
+  - The record id master-laws-on-the-grammar, the view's category values ('master law', 'no master law') and the
+    names of master-laws.json and master_laws.py are renamed after this landing, in ND's own, last.
+  - The register's four renamed roots go by `now_used` and return under their new names by `roots`; the reason of
+    `Concave.roots`'s entry, which names harms_superadditive, is corrected in that last landing too.
+  - Kept on purpose: "the good regulator" (Conant and Ashby), I. J. Good's value of evidence, Frontier's "transfer
+    harms", HeldForReading's system obeying a stop, the Chinese 遵从 for Flow.Follows; `class_belongs_to_the_run`
+    is not renamed here.
+  - No person's review.
+Output → input: the lean index and the declarations page; the decidability inventory's next render; MV's input
+       after the final stage.
+```

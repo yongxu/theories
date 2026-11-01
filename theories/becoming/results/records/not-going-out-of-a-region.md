@@ -41,7 +41,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261031T202201.956842Z): Becoming.GrammarCrossing, 12 declarations (11 theorems), in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261101T094230.205342Z): Becoming.GrammarCrossing, 9 declarations (9 theorems), with «不出», «闭则不出» and «所闭不出» in Becoming.GrammarLaws, in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.
 
 Canonical source: [GrammarCrossing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean)
 
@@ -74,11 +74,15 @@ In graph terms a region nothing goes out of has no edge leaving it, and a closed
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [GrammarCrossing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean) | `Becoming.«不出»`, `Becoming.«闭则不出»`, `Becoming.«所闭不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不外者内则不出当且仅当闭»`, `Becoming.«不出皆闭当且仅当排中»`, `Becoming.«逆之不出当且仅当外者不出»`, `Becoming.«对称则不出当且仅当逆不出»`, `Becoming.«闭而有入之例»`, `Becoming.«内至外之线则非不出»`, `Becoming.«内至外之线有出步»`, `Becoming.«定则内至外之线有出步»` |
+| proof | [GrammarCrossing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean) | `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不外者内则不出当且仅当闭»`, `Becoming.«不出皆闭当且仅当排中»`, `Becoming.«逆之不出当且仅当外者不出»`, `Becoming.«对称则不出当且仅当逆不出»`, `Becoming.«闭而有入之例»`, `Becoming.«内至外之线则非不出»`, `Becoming.«内至外之线有出步»`, `Becoming.«定则内至外之线有出步»` |
+| proof | [GrammarLaws.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) | `Becoming.«不出»`, `Becoming.«所闭不出»`, `Becoming.«闭则不出»` |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/bd-boundaries/NOTE.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | provenance | [2026-10-31-close-the-formal-gap.md](../../../../sources/15-codex-theory-conversations/2026-10-31-close-the-formal-gap.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `not going out of a region`, `不出一域`, `不出`, `nothing comes in where nothing goes out of the outside`, `Becoming.«不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不出皆闭当且仅当排中»`, `Becoming.«内至外之线有出步»`
 
@@ -86,7 +90,8 @@ Aliases: `not going out of a region`, `不出一域`, `不出`, `nothing comes i
 ### History
 
 - 31 October 2026, board item BD2: created. The formal gap BD's reading of boundaries left (the World's cut defined apart from the grammar's closed region) closed by the grammar's not going out (Becoming.GrammarCrossing): its laws against the closed region, going out and coming in, and the step going out on a line, with the excluded-middle lemma as a witness of what it does not show; the World's cut read as it by definition in conveyance-crosses-the-boundary's seventh law; «所经必同» proved from the step going out. Home 01 §9.9.
+- 1 November 2026, board item OU7 (study section 492): «不出», «闭则不出» and «所闭不出» are now stated in GrammarLaws, after «所闭之界» (the grammar's owner's item held from BD2, patches/owner/02), unchanged: they move from the GrammarCrossing reference to a GrammarLaws reference and proof binding, and the validation scope's receipt and GrammarCrossing's counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-31T12:15:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "一个部分只经由在所需条件上的净汲取关闭能形成者，只经由净给予打开它。扣留它而其余交换不变，每个水平加上它累计取走的，等于扣留后的水平（存在时唯一）加上它累计给予的；形成恰在部分的净汲取不超出余量时被支持。",
     "en": "A part closes what can form only by a net draw on a required condition, and opens it only by a net give. With it withheld, the rest unchanged, each level with what it took equals the unique level without it with what it gave; a formation is supported exactly while its net draw is within the margin."
@@ -272,7 +272,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.taken",
@@ -295,17 +295,10 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
       "declarations": [
         "Becoming.add_right_cancel",
-        "Becoming.le_of_add_le_add_right"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
-      "declarations": [
+        "Becoming.le_of_add_le_add_right",
         "Becoming.steps_last"
       ]
     },
@@ -441,6 +434,12 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -453,7 +452,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -466,15 +465,8 @@
       "success_value": "passed"
     },
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.Change",
-      "success_pointer": "/status",
-      "success_value": "passed"
-    },
-    {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -561,6 +553,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'the author's reading', the author being the AI, reads 'a reading (an AI argument)'; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：“作者的读法”中的作者是 AI，改为“读法（AI 论证）”；主张不变。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: steps_last to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; the Change.lean reference, which cited only steps_last, goes with its proof binding, nothing the record says resting on that file. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：steps_last 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；Change.lean 之引用只引 steps_last，与其证明绑定一并去掉，记录所言无一依于该文件。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

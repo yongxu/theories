@@ -5,7 +5,7 @@
 
 `a-pool-read-by-its-majority` · **recorded-checked** · theorem · F01 · [record](a-pool-read-by-its-majority.json) · [register](../../../../RESULTS.md)
 
-> Taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool; where more than half read alike on two histories it goes alike on them, however many members tell them apart: shares decide what it separates.
+> Taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool; where more than half read alike on two histories it goes alike on them, though the fewer than half left may tell them apart: shares decide what it separates.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -66,6 +66,8 @@ Majority aggregation: a minority distinction is outvoted (Condorcet-style aggreg
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T140440.478623Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `A pool read by its majority`, `按多数读取之池`, `Becoming.Web.holdsCount`
 
@@ -73,7 +75,13 @@ Aliases: `A pool read by its majority`, `按多数读取之池`, `Becoming.Web.h
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.
+- 1 November 2026: the statement's "however many members tell them apart" corrected to "though the fewer than half left may tell them apart": the premise has more than half reading alike, so fewer than half can tell the histories apart (quick Lean review; the docstring of Web.majority_outvoted corrected with it). No law, declaration or scope changed.
+
+<a id="earlier-text--早期文本"></a>
+### Earlier text
+
+- [a-pool-read-by-its-majority.json](../../../../_process/architecture/history/6161007efaf14479/a-pool-read-by-its-majority.json) (sha256 `6161007efaf14479…`): Exact record bytes before the statement's "however many members" was corrected.
 
 </details>
 
-Documentary review UTC: `2026-10-22T06:48:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T03:48:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

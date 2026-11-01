@@ -1,0 +1,24 @@
+diff --git a/theories/becoming/results/records/one-step-missing-laws.json b/theories/becoming/results/records/one-step-missing-laws.json
+index aa92c62a4..d82523b05 100644
+--- a/theories/becoming/results/records/one-step-missing-laws.json
++++ b/theories/becoming/results/records/one-step-missing-laws.json
+@@ -53,7 +53,7 @@
+       ]
+     },
+     {
+-      "en": "One condition at level one before and after the step, taken from by one and given one, with no relatum taking and nothing exchanging, obeys every stated law for a family running down closed, and no world shows this pattern across any step on any family, each relatum taking part listed once.",
++      "en": "One condition at level one before and after the step, taken from by one and given one, with no relatum taking and nothing exchanging, satisfies every stated law for a family running down closed, and no world shows this pattern across any step on any family, each relatum taking part listed once.",
+       "zh": "一个条件步前步后都在水平一，被取一、被给一，没有取用者，也没有交换：它满足耗减且封闭家族的每条所陈述规律，而没有世界在任何一步、任何家族上显示这个模式（每个参与的关系项列出一次）。",
+       "declarations": [
+         "Becoming.OneStep.stated_not_realized"
+@@ -320,6 +320,10 @@
+     {
+       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement narrowed to the condition the Lean takes for the second law, balance at the condition (Flow.BalancesOn.taken_le), as the home section has it; the claim split into eight laws, each read against its declarations in OneStep.lean and Locality.lean, laws 1 and 2 also stating referenced declarations the claim did not name (taking and giving are exchange; exchange across a closed step); the limitations to the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the reading's label kept in the correspondence; one does-not-show item on the scope of the two completeness laws; the hypothesis written out with the conditions and representation; the next step replaced by one no other record completes; the correspondence's process marker (the work-board item) cut; no premise, status, reference or source hash changed. Every earlier sentence is mapped in [one-step-missing-laws.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/one-step-missing-laws.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 为第二条规律所取的条件，即该条件处的平衡（Flow.BalancesOn.taken_le），收窄，与归属节一致；主张拆为八条规律，各条对照 OneStep.lean 与 Locality.lean 中的声明核读，第一、二条还陈述了主张未提而已引用的声明（取与给即交换；封闭一步上的交换）；限制改为通用边界 no-evaluation、no-ethical-premise 与 discrete-steps，读法的标注留在对应说明中；新增一条“未表明”，说明两条完备性规律的范围；前提写出各条件与表示；下一步换为其他记录未完成的一步；对应说明中的过程标记（工作板条目）删去；前提、状态、引用与来源哈希均未改变。每句旧文本的去向见 [one-step-missing-laws.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/one-step-missing-laws.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ],
+   "text_versions": [

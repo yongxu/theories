@@ -580,8 +580,9 @@ theorem given_record_eq_iff {α β : Type} (prior : α → Nat) (lik : α → β
   rw [record_total prior lik hs os rec]
   exact bound_eq_iff n (joint prior lik os rec) hs
 
-/-- **Where the record weighs nothing, every count belief is at the bound**: both sides are nothing,
-with no share given the record to be in proportion to. -/
+/-- **Where the record weighs nothing, every count belief is at the bound**: both sides are equal,
+with no share given the record to be in proportion to. With a positive total both are nothing; with
+the total nothing both are `1`, since `0 ^ 0 = 1`. -/
 theorem nothing_record_reach_all {α β : Type} (prior : α → Nat) (lik : α → β → Nat) (hs : List α)
     (os : List β) (rec : β → Bool) (n : α → Nat)
     (nothing : mass (openSteps hs os) (pairWeight prior lik) (fun c => rec c.2) = 0) :

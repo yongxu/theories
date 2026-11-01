@@ -86,7 +86,7 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). The joint excess and the gap between own and joint draw, derived for optimizers along a course.
 - related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). Risk minimization on a shared renewal: joint excess read on foragers of one model with alike preferences, against shared preferences making a group goal.
 
-**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md) · [what-a-set-point-optimum-does-beyond](what-a-set-point-optimum-does-beyond.md)
+**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md) · [what-a-set-point-optimum-does-beyond](what-a-set-point-optimum-does-beyond.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -115,6 +115,7 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.joint_keeps`, `Becoming.Flow.excess_lowers`, `Becoming.Flow.excess_bounded`, `Becoming.Flow.stays_below`, `Becoming.Flow.ends_below`, `Becoming.Flow.joint_excess_ends`, `Becoming.Pair.no_web`, `Becoming.Exceeding.all_end`, `Becoming.Alone.all_continue`
 

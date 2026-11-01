@@ -62,7 +62,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: Carriers brief for d. [Wholes.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean)
 - related, not a proved adapter: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). The passing premise plays the role transmission plays in evolution: supplied, not derived.
 
-**Used by:** [what-keeping-widening-needs](what-keeping-widening-needs.md)
+**Used by:** [degeneration-from-a-horizon](degeneration-from-a-horizon.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -83,6 +83,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | integration | [REVIEW-GW-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 
 Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one empty step ends it`, `Becoming.Web.ByPassing.ends_within`, `forming the next members (reading)`, `Becoming.Web.passingContinuation`, `Becoming.Web.sameFormation`, `Becoming.Web.carrierClass_class`, `Becoming.Web.carrierClass_finer`, `Becoming.Web.byPassing_iff_continues`, `Becoming.Web.arises_iff_sheng_carrier`, `Becoming.Web.ceases_iff_wang_carrier`, `Becoming.Web.ceases_of_pattern_ends`, `Becoming.Web.passesAt_of_alters`, `Becoming.Web.alters_of_passes`, `Becoming.Web.ByPassing.line_back`, `Becoming.PatternRelay.shifted_fire`
 

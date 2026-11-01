@@ -5,23 +5,20 @@ import Becoming.GrammarLaws
 
 A region is delimited from the rest by what it holds, and a relation crosses that delimitation where
 it bears a member to something outside (the root chapter's reading of boundaries, 01 §9.9). The
-grammar states the closed region (`«闭»`): whatever a member bears the relation to is a member. This
-module states not going out (`«不出»`) for every carrier, relation and region, how it differs from
-being closed, how going out and coming in are related, and where on a line a crossing lies. It adds
-one definition and changes no definition of an earlier module.
+grammar states the closed region (`«闭»`), whatever a member bears the relation to being a member,
+and not going out of a region (`«不出»`), no member bearing the relation to something outside, with
+a closed region not gone out of (`«闭则不出»`) and an occurrence's closure among them (`«所闭不出»`,
+the closure law `«所闭之界»` read through `«不出»`), in `Becoming.GrammarLaws`. This module states,
+for every carrier, relation and region, how not going out differs from being closed, how going out
+and coming in are related, and where on a line a crossing lies. It adds no definition and changes no
+definition of an earlier module.
 
-| name | reading |
-|---|---|
-| `«不出»` | nothing in a region goes out of it along a relation: no member bears it to something outside |
-
-* **Closed, and not gone out of.** A closed region is not gone out of (`«闭则不出»`), an occurrence's
-  closure among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`). Not going out
-  of a region is exactly the closedness of what is not outside it (`«不出当且仅当不外者闭»`): its
-  members bear the relation only to what is not outside. No decision is used. Where membership is
-  stable, whatever is not outside the region lying in it, the two coincide
-  (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is exactly excluded
-  middle (`«不出皆闭当且仅当排中»`), a lemma of that law, not a calibration: the need comes from
-  membership being any proposition, not from the relation.
+* **Closed, and not gone out of.** Not going out of a region is exactly the closedness of what is not
+  outside it (`«不出当且仅当不外者闭»`): its members bear the relation only to what is not outside. No
+  decision is used. Where membership is stable, whatever is not outside the region lying in it, the
+  two coincide (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is
+  exactly excluded middle (`«不出皆闭当且仅当排中»`), a lemma of that law, not a calibration: the need
+  comes from membership being any proposition, not from the relation.
 * **Going out and coming in.** Nothing comes into a region along a relation, nothing outside bearing it
   to a member, where the region is not gone out of along the converse (`«逆»`), and that is exactly
   that nothing outside the region goes out of what lies outside it (`«逆之不出当且仅当外者不出»`), with
@@ -38,7 +35,7 @@ one definition and changes no definition of an earlier module.
   line under a class leaving a decided region only into a set passes a member of the set this way
   (`«所经必同»`, `Becoming.GrammarPath`).
 
-The World's cut is this module's `«不出»` at a valuation's relation, by definition, and 04 §1's law of
+The World's cut is the grammar's `«不出»` at a valuation's relation, by definition, and 04 §1's law of
 crossing is read on 07 §4.1's boundaries in `Becoming.ConveyanceBoundaries`. What is not shown: a
 graded boundary, and which relation a self's boundary is drawn along (07 §4.2). Every declaration has
 an empty axiom report.
@@ -53,19 +50,6 @@ universe u
 section NotGoingOut
 
 variable {α : Type u}
-
-/-- Nothing in a region goes out of it along a relation (不出): no member bears the relation to
-something outside. -/
-def «不出» (R : «际» α) (P : α → Prop) : Prop := ∀ x y, P x → ¬ P y → ¬ R x y
-
-/-- **A closed region is not gone out of.** -/
-theorem «闭则不出» {R : «际» α} {P : α → Prop} (closed : «闭» R P) : «不出» R P :=
-  fun x y inside outside related => outside (closed x y inside related)
-
-/-- **An occurrence's closure is not gone out of**, as every closed region: nothing within it bears the
-relation to what lies beyond it. It is the closure law `«所闭之界»` read through `«不出»`. -/
-theorem «所闭不出» (R : «际» α) (x : α) : «不出» R («所闭» R x) :=
-  fun _ _ within beyond => «所闭之界» within beyond
 
 /-- **Not going out of a region is the closedness of what is not outside it.** Nothing in `P` bears
 `R` to something outside `P` exactly where the region of what is not outside `P` is closed under `R`.
@@ -85,8 +69,9 @@ theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Pr
 
 /-- **That not going out is always being closed is exactly excluded middle.** That every region nothing
 goes out of, along every relation on every carrier in `Type`, is closed is exactly excluded middle. It
-is a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, not a calibration: the need comes
-from membership being any proposition. -/
+is a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, not a calibration (08 §2), and is
+not proved from that law: it gives excluded middle by its own witness on `Bool`, and excluded middle
+gives it by deciding membership. The need comes from membership being any proposition. -/
 theorem «不出皆闭当且仅当排中» :
     (∀ (α : Type) (R : «际» α) (P : α → Prop), «不出» R P → «闭» R P) ↔ ∀ Q : Prop, Q ∨ ¬ Q := by
   constructor
@@ -129,7 +114,9 @@ theorem «对称则不出当且仅当逆不出» {R : «际» α} {P : α → Pr
 /-- **A closed region come into: a witness.** Some relation that is not symmetric has a region closed
 under it with something outside bearing it to a member: on two occurrences, the relation from the
 first to the second, and the region of the second. Along a symmetric relation no closed region is
-come into (`«闭则不出»`, `«对称则不出当且仅当逆不出»`). -/
+come into: a closed region does not go out (`«闭则不出»`), and along a symmetric relation not going
+out is not going out along the converse (`«对称则不出当且仅当逆不出»`); the two are not joined in one
+declaration here. -/
 theorem «闭而有入之例» :
     ∃ (R : «际» Bool) (P : Bool → Prop),
       «闭» R P ∧ (∃ x y, ¬ P x ∧ P y ∧ R x y) ∧ ¬ «则» R («逆» R) :=

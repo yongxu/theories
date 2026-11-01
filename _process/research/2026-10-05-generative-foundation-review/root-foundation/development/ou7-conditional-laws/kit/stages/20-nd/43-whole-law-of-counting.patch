@@ -1,0 +1,24 @@
+diff --git a/theories/becoming/results/records/whole-law-of-counting.json b/theories/becoming/results/records/whole-law-of-counting.json
+index fbf07a6ab..4075e39cb 100644
+--- a/theories/becoming/results/records/whole-law-of-counting.json
++++ b/theories/becoming/results/records/whole-law-of-counting.json
+@@ -852,7 +852,7 @@
+       "role": "proof",
+       "sha256": "3a8e3ed452a4f0989c2917dbb13ab785fca79e5c4089d29b052fd1f71f8629e8",
+       "declarations": [
+-        "Becoming.World.CountsObey"
++        "Becoming.World.CensusMarksHold"
+       ]
+     },
+     {
+@@ -1361,6 +1361,10 @@
+     {
+       "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: steps_last, steps_mem, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+       "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：steps_last, steps_mem, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold. The statements are kept but for the names; the claim is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsObey → CensusMarksHold。陈述除名外不变；论断不变。"
+     }
+   ],
+   "text_versions": [

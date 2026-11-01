@@ -1,0 +1,9 @@
+import Becoming.Unread
+#check @Becoming.Learning.free_lumped
+#check @Becoming.Learning.twin_selected
+#check @Becoming.Learning.determines_iff_not_not
+#check @Becoming.Learning.state_apart_of_acts_apart
+#check @Becoming.Learning.coupling_apart_of_state_apart
+#check @Becoming.Learning.Cue.seen_twin
+#check @Becoming.Learning.Cue.unseen_fixed
+#check @Becoming.Learning.Cue.apart_with_content_alike

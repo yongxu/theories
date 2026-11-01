@@ -1,0 +1,35 @@
+@Becoming.DistinctUnder.mono : ∀ {X : Type u_1} {R R' : X → X → Prop},
+  (∀ (x y : X), R' x y → R x y) → ∀ {s : List X}, Becoming.DistinctUnder R s → Becoming.DistinctUnder R' s
+@Becoming.DistinctUnder.unique : ∀ {X : Type u_1} {R : X → X → Prop},
+  (∀ {x y : X}, R x y → R y x) → ∀ {s : List X} {x y : X}, Becoming.DistinctUnder R s → x ∈ s → y ∈ s → R x y → x = y
+@Becoming.remove_mem : ∀ {X : Type u_1} {l : List X} {x : X},
+  x ∈ l → ∃ l', l'.length + 1 = l.length ∧ ∀ (y : X), y ∈ l → y = x ∨ y ∈ l'
+@Becoming.DistinctUnder.length_le : ∀ {X : Type u_1} {R : X → X → Prop},
+  (∀ (x : X), R x x) → ∀ {s l : List X}, Becoming.DistinctUnder R s → (∀ (x : X), x ∈ s → x ∈ l) → s.length ≤ l.length
+@Becoming.not_not_within : ∀ {X : Type u_1} {P : X → Prop},
+  (∀ (x : X), ¬¬P x) → ∀ (l : List X), ¬¬∀ (x : X), x ∈ l → P x
+@Becoming.Refining.grow : ∀ {X : Type u_1} {R : Nat → X → X → Prop} {l : List X},
+  Becoming.Refining R →
+    (∀ (k : Nat) (x y : X), x ∈ l → y ∈ l → Becoming.Decided (R k x y)) →
+      ∀ {j : Nat} {r : List X},
+        Becoming.DistinctUnder (R j) r →
+          (∀ (x : X), x ∈ r → x ∈ l) →
+            ∀ {x y : X},
+              x ∈ l → y ∈ l → R j x y → ¬R (j + 1) x y → ∃ z, z ∈ l ∧ Becoming.DistinctUnder (R (j + 1)) (z :: r)
+@Becoming.Refining.steady_or_grown : ∀ {X : Type u_1} {R : Nat → X → X → Prop} {l : List X},
+  Becoming.Refining R →
+    (∀ (k : Nat) (x y : X), x ∈ l → y ∈ l → Becoming.Decided (R k x y)) →
+      ∀ {s : List X},
+        Becoming.DistinctUnder (R 0) s →
+          (∀ (x : X), x ∈ s → x ∈ l) →
+            ∀ (j : Nat),
+              (∃ k, k + s.length ≤ l.length ∧ Becoming.SteadyAt R l k) ∨
+                ∃ r, Becoming.DistinctUnder (R j) r ∧ (∀ (x : X), x ∈ r → x ∈ l) ∧ s.length + j ≤ r.length
+@Becoming.Refining.steady_within : ∀ {X : Type u_1} {R : Nat → X → X → Prop} {l : List X},
+  Becoming.Refining R →
+    (∀ (k : Nat) (x y : X), x ∈ l → y ∈ l → Becoming.Decided (R k x y)) →
+      ∀ {s : List X},
+        Becoming.DistinctUnder (R 0) s →
+          (∀ (x : X), x ∈ s → x ∈ l) → ∃ k, k + s.length ≤ l.length ∧ Becoming.SteadyAt R l k
+@Becoming.DistinctUnder.single : ∀ {X : Type u_1} {R : X → X → Prop} (x : X), Becoming.DistinctUnder R [x]
+@Becoming.le_pred_of_succ_le : ∀ {k n : Nat}, k + 1 ≤ n → k ≤ n - 1

@@ -1,0 +1,231 @@
+{
+ "about": "OU7's record, part A: the prose fields (AI-written, 31 October 2026, revised 1 November so that the two general laws are stated in the records of the laws they generalize, not here). make_record_ou7.py adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with declarations, proof bindings to the landing's core receipt, history) and the counts read from the receipt.",
+ "id": "conditional-laws-of-the-corpus",
+ "title": {
+  "en": "The corpus's conditional laws in the grammar, each with a net where its condition fails",
+  "zh": "语料之有条件之律写入文法，各有其条件不成立之网"
+ },
+ "statement": {
+  "en": "Of the corpus's 219 conditional units, 128 fall into 22 families of laws, each written as Y iff Z or Z then Y with a net where Z fails and Y with it: 103 state laws that hold, 6 laws false as read, 19 premises. Of the rest, 33 turn on a valuation, 53 are not expressible, 5 are definitions.",
+  "zh": "语料归为丙一之 219 条中，128 条入 22 族，每律写成“Y 当且仅当 Z”或“Z 则 Y”，各有 Z 不成立而 Y 亦不成立之网：103 条之律成立，6 条依读法不成立，19 条是前提；其余 33 条转于评价，53 条表达不了，5 条是定义。"
+ },
+ "laws": [
+  {
+   "en": "Where everything goes on under a coarse class and every step of 缘 is parted by a fine class, every occurrence is generating (全生成): the coarse line never ends and a carrying renewal lies ahead of every point it reaches; day and night are an instance. Sufficient, the converse not claimed: a line that ends, and a step that keeps the class, do not generate.",
+   "zh": "凡事于粗类皆有后，且缘之每步皆为细类所分，则每事全生成：粗线不穷，其所及之每处之后皆有传；昼夜为其例。充分，其逆不论：有终之线与不分之步皆不全生成。",
+   "declarations": [
+    "Becoming.«皆有后而步皆分则全生成»",
+    "Becoming.«昼夜全生成»",
+    "Becoming.«有亡而不全生成之例»",
+    "Becoming.«步不分而不全生成之例»"
+   ]
+  },
+  {
+   "en": "Bounded room on the line itself: a line none of whose places comes back to itself is shorter than any list holding its places, so where a list holds the line from an occurrence, that line is not endless, though no end is exhibited. A line that comes back, or one no list holds, may never end; a merge, or no bound, keeps a line from coming back to its start.",
+   "zh": "线上有界之室：线上之处皆不返于自身者，短于任一列其处之表；故有一表列自某事之线时，此线非不穷，然不示一终。返者或无表者可不穷；有并或无界，则线不返其始。",
+   "declarations": [
+    "Becoming.«线不返则短于所列»",
+    "Becoming.«不返而有限则非不穷»",
+    "Becoming.counting_reach_lt",
+    "Becoming.«返而不穷之例»",
+    "Becoming.«无环而不穷之例»",
+    "Becoming.«有限遍后而不返之例»",
+    "Becoming.«遍后定前而无环之例»"
+   ]
+  },
+  {
+   "en": "前際 and 後際 mirror each other under the converse. What a class's core puts with an occurrence whose line never ends has a line that never ends, so an endless line and one that ends lie apart under the core, as ending is kept along the core and beginning along the core of the converse net. The forward core does not keep a beginning, the converse core relates pairs the core does not, and a line without beginning can end.",
+   "zh": "前际与后际于逆下相映：类之核所合于线不穷之事者，其线亦不穷，故不穷之线与有终之线于核下相分；如亡沿核不变，生沿逆缘之核不变。前向之核不保生，逆缘之核合核所不合者，无始之线可有终。",
+   "declarations": [
+    "Becoming.«类内有常则线相随»",
+    "Becoming.«核同则同不穷»",
+    "Becoming.«不穷与亡不同核之例»",
+    "Becoming.«生于核下可变之例»",
+    "Becoming.«逆核不含于核之例»",
+    "Becoming.«无始而有终之例»"
+   ]
+  },
+  {
+   "en": "Dependence along 缘 (依: every occurrence with Q has a condition with P) is one-way. Where nothing is P, nothing is Q, and dependences compose along «而», so a chain of them is one law. Where Q has no P-condition, Q stands though nothing is P.",
+   "zh": "沿缘之依（每一有 Q 之事皆有一有 P 之缘）单向。无 P 则无 Q；依沿「而」相传，故一串依是一律。Q 无 P 之缘时，无 P 而 Q 仍立。",
+   "declarations": [
+    "Becoming.«依»",
+    "Becoming.«所依无则依者无»",
+    "Becoming.«依之传»",
+    "Becoming.«不依之例»"
+   ]
+  },
+  {
+   "en": "Passing through: where a class is constant under 缘 and its converse, whatever has a predecessor passes through, altered or not, as the grammar's reading of 通 has it. The condition is sufficient, not necessary: under a class that is not constant an occurrence can end, alter and pass through. With no predecessor it does not pass through, though the class be constant both ways.",
+   "zh": "通：类于缘与其逆两向有常时，有前者通，不论异否，如文法对通之读。此条件充分而非必要：不有常之类下，一事可亡、异而通。无前则不通，虽类两向有常。",
+   "declarations": [
+    "Becoming.«不有常而通之例»",
+    "Becoming.«两向有常而无前不通之例»"
+   ]
+  },
+  {
+   "en": "Three definitional laws state families exactly: what ends under a class alters, continued under another, exactly where it has a successor there, and with none ceases without altering; nothing alters under E and F (continued under E, told apart by F) exactly where F holds of the ends of every continuation under E; nothing begins under the one exactly where nothing lacks a condition, both up to double negation.",
+   "zh": "三条定义之律确切陈述其族：亡于一类者，恰于他类有后处异（他类续之），无后则息而不异；无 E 下之续其两端为 F 所分者（无异），恰当 F 于 E 下每一续之两端成立；无事无缘，恰在“一”之下无事生；后二者皆在双重否定之下。",
+   "declarations": [
+    "Becoming.«亡者异当且仅当有后»",
+    "Becoming.«亡而息之例»",
+    "Becoming.«无异当且仅当不分续»",
+    "Becoming.«静分续而有异之例»",
+    "Becoming.«皆不生当且仅当皆非无缘»"
+   ]
+  },
+  {
+   "en": "Each family whose law the grammar's modules already state has a net where Z fails and Y fails with it: a lone occurrence, with no condition and no result, begins and ends under the one; counting at one ends under identity and abides under the one; a net without cycles has nothing co-present; the empty net has nothing conditioning. A joint class on three bits joining two distinct points witnesses 相须.",
+   "zh": "文法诸模块已陈其律之族，各有 Z 不成立而 Y 亦不成立之网：孤事无缘无果，在“一”之下生且亡；计数于一，在同一之类下亡而在“一”之下住；无环之网无俱有；空网无能。三位之合类合二异点，为相须之见证。",
+   "declarations": [
+    "Becoming.«生亡并之例»",
+    "Becoming.«亡于静而住于一之例»",
+    "Becoming.«无环则无俱有»",
+    "Becoming.«无能无所之例»",
+    "Becoming.«非有常之类不含于核之例»",
+    "Becoming.«有前不有常而亡之例»",
+    "Becoming.«无相而非亦无相之例»",
+    "Becoming.«像不保之例»",
+    "Becoming.«相须之例»"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "Each reading of a unit as a law is an AI reconstruction, and each count counts readings: groups.tsv keeps every unit's family, disposition, labelled reading and the classifier's confidence. The classical text decides nothing; Lean checks only the derivation.",
+   "zh": "每条读作一律，是 AI 之重构，计数是读法之计数：groups.tsv 存每条之族、处置、带标之读法与归类者之信度。古文不判，Lean 只检推导。"
+  },
+  {
+   "en": "The grammar's modelling choices: one carrier for every kind (perceivers and percepts fall under one class); 缘 a necessary relation between places of the net, with no predicate of presence; classes as relations; discrete steps.",
+   "zh": "文法之模型选择：诸种共一载体（知者与所知落于一类）；缘为网中处所间之必要关系，无“在”之谓词；类为关系；离散之步。"
+  },
+  {
+   "en": "G03 and G04 add a bound the texts do not state: a list holding the line's places, bounded room.",
+   "zh": "G03 与 G04 另设文本未陈之界：一表列线之处，即有界之室。"
+  },
+  {
+   "en": "G08 (what occurs has conditions) and G20 (同類同情 as constancy) are premises of the model, not theorems. G13 assumes the occurrence is not its own condition; G21's converse assumes that being told apart at no stage is constant and the class symmetric.",
+   "zh": "G08（凡事有缘）与 G20（同類同情为有常）是模型之前提，不是定理。G13 设此事不自缘；G21 之逆设“无一层能分”有常且类对称。"
+  },
+  {
+   "en": "Each net where Z fails is one constructed model on a small carrier (Unit, Bool, Option, Nat), or a model the package already has.",
+   "zh": "每张 Z 不成立之网，是小载体（Unit、Bool、Option、Nat）上之一构造模型，或包中已有之模型。"
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "That the texts state these laws or their authors meant them: a reading stands or is revised by its place in one account, and no person has reviewed these readings.",
+   "zh": "文本陈述此诸律，或其作者意谓之：读法以其在一说明中之位而立或改，且无人审之。",
+   "kind": "non-implication"
+  },
+  {
+   "en": "An order 穷 → 变 → 通: with 變 read as one alteration the three are a conjunction, constancy and not alteration giving passing through; which 變 the text means stays open.",
+   "zh": "穷 → 变 → 通之序：读變为一次之异，三者是合取，给通者是有常而非异；文本所言何變仍未决。",
+   "kind": "non-implication"
+  },
+  {
+   "en": "Production or sufficiency: 生 as producing an occurrence not yet there is not expressible, since 缘 is a necessary relation between places of the net.",
+   "zh": "生产与充足：以生为产出尚未在之事，不可表达，因缘是网中处所间之必要关系。",
+   "kind": "scope"
+  },
+  {
+   "en": "That constancy is necessary for never ending or for passing through: both laws give sufficient conditions, with nets where the condition fails and the conclusion holds.",
+   "zh": "有常为不穷或通之必要：二律皆给充分条件，有其条件不成立而结论成立之网。",
+   "kind": "converse"
+  },
+  {
+   "en": "That what depends on the beginningless is beginningless (JS-324 read through 故): what depends on a line without beginning can begin.",
+   "zh": "依于无始者亦无始（JS-324 读故为依）：依于无始之线者可以有始。",
+   "kind": "non-implication"
+  },
+  {
+   "en": "The 91 units outside the families: the 33 that turn on a valuation and the 53 not expressible are kept with their reasons in groups.tsv, not forced in.",
+   "zh": "族外之 91 条：转于评价者 33 条、表达不了者 53 条，皆以其由存于 groups.tsv，不强入。",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples_draft": [
+  {
+   "declaration": "«不有常而不穷之例»",
+   "en": "CWS-P6+P7+P8-020, G11, read as the converse of 相须: a class that is not constant, under which a line never ends.",
+   "zh": "CWS-P6+P7+P8-020（G11）读作相须之逆：类不有常，其下之线不穷。"
+  },
+  {
+   "declaration": "«亡于静而住于一之例»",
+   "en": "ZL-21-113, G13: counting at one ends under identity and abides under the one, so not abiding under identity is not 斷.",
+   "zh": "ZL-21-113（G13）：计数于一，在同一之类下亡而在“一”之下住，故不住于同一之类非断。"
+  },
+  {
+   "declaration": "«无缘不住而他有后之例»",
+   "en": "ZL-17-051, G13: a result with no deed among its conditions abides under no class, so not 常, while the deed may go on, so not 斷.",
+   "zh": "ZL-17-051（G13）：无业为缘之果于任何类下不住，非常；而业可续，非断。"
+  },
+  {
+   "declaration": "«生亡并之例»",
+   "en": "ZL-01-099, G16: what has no condition can end, and it abides under no class, so it is not 常.",
+   "zh": "ZL-01-099（G16）：无缘者可亡，且于任何类下不住，非常。"
+  },
+  {
+   "declaration": "«自缘而不生之例»",
+   "en": "ZL-02-070, G16: own position read as own condition gives no beginning under any class; the unit is the premise of a reductio.",
+   "zh": "ZL-02-070（G16）：读定性为自缘，则于任何类下不生；此条是归谬之前提。"
+  },
+  {
+   "declaration": "«依于无始而有始之例»",
+   "en": "QXL-JS-324, G15, read through dependence: what depends on a line without beginning can begin, given a class that tells the two kinds apart.",
+   "zh": "QXL-JS-324（G15）读故为依：依于无始之线者可以有始，须一类分开二种。"
+  }
+ ],
+ "validation_scope_draft": {
+  "en": "Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings.",
+  "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之。二族所依之两条一般之律，陈于其所推广之律之记录：相对于类的续与古文之定义。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。"
+ },
+ "next_delta": {
+  "en": "Review of the readings by a person (classicists, Buddhist scholars, logicians); the three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明); which 變 G01's text means; the 181 candidates of the three added texts.",
+  "zh": "人审读法（古文、佛学、逻辑学者）；三条未决之读（G22 衡不正、JS-326 相應、JS-318 無明）；G01 文本所言何變；后加三部文本之 181 条候选。"
+ },
+ "correspondence": {
+  "en": "Units, families, dispositions and labelled readings in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv: law 103, false as read 6, premise 19, 丁 33, not expressible 53, 甲 5. Each family's Z, Y, laws, net where Z fails and standing are tabled in 06 §四, and argued in the study's DESIGN.md.",
+  "zh": "逐条之族、处置与带标之读法见 groups.tsv：律 103，依读法不成立 6，前提 19，丁 33，表达不了 53，甲 5。每族之 Z、Y、律、Z 不成立之网与地位，列于第六章 §四，论于其研究之 DESIGN.md。"
+ },
+ "home": "06 §四, at its end: the section replaces the sentence that left the 丙一 laws unwritten",
+ "dependencies_draft": [
+  {
+   "id": "candidate-theorems-of-the-corpus",
+   "relation": "formal-reuse",
+   "detail_en": "Twelve families' laws come from GrammarCandidates («相由则俱有», «四相俱时», «自缘则常», «定性之判», «有相则非亦有相», «能所相待», «不可致诘而有常则混而为一», «尺与端或尽或不尽» and others); its «从缘生非文法之律», «致诘不尽», «有生不必有亡» and «尺与尺可相尽» are nets where Z fails.",
+   "detail_zh": "十二族之律出于 GrammarCandidates（«相由则俱有»、«四相俱时»、«自缘则常»、«定性之判»、«有相则非亦有相»、«能所相待»、«不可致诘而有常则混而为一»、«尺与端或尽或不尽» 等）；其 «从缘生非文法之律»、«致诘不尽»、«有生不必有亡»、«尺与尺可相尽» 是 Z 不成立之网。"
+  },
+  {
+   "id": "classical-definitions-in-the-grammar",
+   "relation": "formal-reuse",
+   "detail_en": "«通», «有常则往不穷», «非一非异», «有常而不通» and «昼夜往来不穷»; its law 4, generalized at this landing: under a class constant both ways what has a predecessor passes through («两向有常有前则通»), what abides being its case («两向有常则通»). The family of 通 rests on it.",
+   "detail_zh": "«通»、«有常则往不穷»、«非一非异»、«有常而不通»、«昼夜往来不穷»；其律 4 于此次落地推广：类两向有常时，有前者通（«两向有常有前则通»），住者为其一例（«两向有常则通»）。通之族依之。"
+  },
+  {
+   "id": "continuation-relative-to-a-class",
+   "relation": "formal-reuse",
+   "detail_en": "The four marks, constancy, the core and the two-way core, «息» and «无环»; its law 5, generalized at this landing: beginning is kept along the core of the converse net («生于逆核下不变»), which holds the two-way core («位核含于逆核»), «生于位核下不变» its case. The family of 前際 and 後際 rests on it.",
+   "detail_zh": "四相、有常、核与双向之核、«息»、«无环»；其律 5 于此次落地推广：生沿逆缘之核不变（«生于逆核下不变»），此核含双向之核（«位核含于逆核»），«生于位核下不变» 为其一例。前际后际之族依之。"
+  },
+  {
+   "id": "master-laws-on-the-grammar",
+   "relation": "formal-reuse",
+   "detail_en": "GrammarLaws' pigeonhole and finite-line laws («线有限不并则返», «有限遍后定前则皆返», «定前») and the image of a relation («像», «保之像»).",
+   "detail_zh": "GrammarLaws 之鸽笼与有限之线之律（«线有限不并则返»、«有限遍后定前则皆返»、«定前»）与关系之像（«像»、«保之像»）。"
+  },
+  {
+   "id": "generation-and-degeneration-at-two-grains",
+   "relation": "formal-reuse",
+   "detail_en": "«全生成», «传» and «所及», the short line and the still occurrence (Map.short, Map.still), and «全生成全守不并».",
+   "detail_zh": "«全生成»、«传» 与 «所及»，短线与静事（Map.short、Map.still），及 «全生成全守不并»。"
+  },
+  {
+   "id": "testing-within-the-net",
+   "relation": "formal-reuse",
+   "detail_en": "G21's «可分则不在核», with GrammarTesting's stages; the home section states the stagings of inquiry and of testing as one relation.",
+   "detail_zh": "G21 之 «可分则不在核» 与 GrammarTesting 之层；家节陈诘之层与验之层为一关系。"
+  }
+ ],
+ "related_draft": []
+}

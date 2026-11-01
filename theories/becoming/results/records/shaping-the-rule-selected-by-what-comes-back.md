@@ -77,7 +77,7 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.
 - related, not a proved adapter: [when-complying-when-read-is-best](when-complying-when-read-is-best.md). Complying when read so that the law is kept, which RF's plan first read as this shaping by analogy: there a strict comparison of expected values in two stages.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
 <a id="sources--来源"></a>
 ### Sources

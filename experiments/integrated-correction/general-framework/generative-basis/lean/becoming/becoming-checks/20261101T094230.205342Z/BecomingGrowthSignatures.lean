@@ -1,0 +1,13 @@
+import Becoming.Growth
+#check @Becoming.Web.includesAlong_id_iff
+#check @Becoming.Web.exceedsAlong_id_iff
+#check @Becoming.Web.widensAlong_id_iff
+#check @Becoming.Web.IncludesAlong.comp
+#check @Becoming.Web.IncludesAlong.widensAlong_comp
+#check @Becoming.Web.WidensAlong.comp
+#check @Becoming.Web.grow_admits_old
+#check @Becoming.Web.grow_includesAlong_iff
+#check @Becoming.Web.grow_widensAlong_iff
+#check @Becoming.Web.grow_widensAlong_iff_new
+#check @Becoming.Web.grow_widens_unregistered
+#check @Becoming.Web.attach_widensAlong_iff

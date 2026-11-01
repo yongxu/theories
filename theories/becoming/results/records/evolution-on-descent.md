@@ -100,7 +100,7 @@ The unification plan asks for transmission, variation and selection through desc
 - related, not a proved adapter: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). The exact form of transmission: inheritance with the need within a bound; the evolution bounds at one descent, needing only some supported giver.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The selection term proper in counting form, the mean's course over generations, and support never selected against.
 
-**Used by:** [learned-procedure-transmission](learned-procedure-transmission.md) · [map-of-premises](map-of-premises.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [selection-term-over-generations](selection-term-over-generations.md) · [space-and-its-parts](space-and-its-parts.md) · [target-capture](target-capture.md) · [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md)
+**Used by:** [learned-procedure-transmission](learned-procedure-transmission.md) · [map-of-premises](map-of-premises.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [selection-term-over-generations](selection-term-over-generations.md) · [space-and-its-parts](space-and-its-parts.md) · [target-capture](target-capture.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md) · [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md) · [what-giving-that-waits-draws-on](what-giving-that-waits-draws-on.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -133,6 +133,7 @@ The unification plan asks for transmission, variation and selection through desc
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.price`, `Becoming.offspring`, `Becoming.selected`, `Becoming.raised`, `Becoming.lowered`, `Becoming.Flow.DescendsAt`, `Becoming.Flow.DescendsAt.supported`, `Becoming.Flow.unsupported_childless`, `Becoming.Flow.never_supported_childless`, `Becoming.Flow.selected_le`, `Becoming.Flow.selection_within`, `Becoming.Flow.TransmitsWithin`, `Becoming.Flow.transmitted_supported`, `Becoming.Flow.transmitted_within`, `Becoming.Drawdown.drawdown`, `Becoming.Unchecked.unchecked`, `Becoming.selected_uniform`, `Becoming.unselected`, `Becoming.Slack.slack`
 

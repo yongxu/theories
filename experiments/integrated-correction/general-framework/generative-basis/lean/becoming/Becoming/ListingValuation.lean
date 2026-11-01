@@ -1528,7 +1528,8 @@ keep the worth. One refinement per pair of sets decides it: whether a candidate 
 refined to which (`splitsKeep_of_refined_le`). The factoring on the reading formation's listing is
 needed: a candidate it alone lists can turn its answer at a cell the holding formation weighs. A
 criterion of monotonicity under refinement, not of agreement with the reference: it holds wherever
-the reading formation's value of switching off is nowhere above that of going on. -/
+the reading formation's value of switching off is nowhere above that of going on
+(`splitsKeep_of_off_le_go`). -/
 theorem refining_never_lowers_iff (m pm : Model C) (gain loss g l : C → Nat) :
     (∀ (K L : Type) [DecidableEq K] [DecidableEq L] (π : C → K) (π' : C → L) (f : L → K)
         (zs : List K) (zs' : List L),

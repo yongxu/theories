@@ -6,8 +6,7 @@ import Becoming.GrammarCrossing
 
 `Becoming.Continuity` reads closure by families, tests on the relata: a family the relation closes
 is one whose adjacent listed relata lie both in it or both outside it (`Continuity.Closes`). This
-module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`) and on its closure,
-`«所闭»`.
+module reads that on the grammar's `«不出»` and on its closure, `«所闭»` (`Becoming.GrammarLaws`).
 
 * **Adjacency among the listed relata is a relation of the grammar** (`Continuity.adjacentListed`):
   both listed, and adjacent under the relation. It is symmetric (`Continuity.adjacentListed_symm`).

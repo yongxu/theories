@@ -1,0 +1,698 @@
+@Becoming.factors_imageUnder : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process S A) (π : S → K)
+  {E : K → K → Prop}, Equivalence E → Becoming.FactorsThrough P π (Becoming.imageUnder P π E)
+@Becoming.imageUnder_bisimulation : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  (P : Generative.Process S A) (π : S → K) {claims : K → D → Prop} {E : K → K → Prop},
+  Equivalence E →
+    Becoming.RespectsClaims claims E →
+      Becoming.Bisimulation { P := Becoming.imageUnder P π E, realized := claims }
+        { P := Becoming.imageUnder P π E, realized := claims } E
+@Becoming.imageUnder_determinedAt : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  (P : Generative.Process S A) (π : S → K) {claims : K → D → Prop} {E : K → K → Prop},
+  Equivalence E →
+    Becoming.RespectsClaims claims E →
+      Becoming.GoAlikeUnder P π E →
+        ∀ (k : K), Becoming.DeterminedAt { P := Becoming.imageUnder P π E, realized := claims } k
+@Becoming.alike_equivalence : ∀ {A : Type u_1} {K : Type u_2} {D : Type u_3} (F : Becoming.Frame K A D),
+  Equivalence (Becoming.Alike F F)
+@Becoming.alike_respectsClaims : ∀ {A : Type u_1} {K : Type u_2} {D : Type u_3} (F : Becoming.Frame K A D),
+  Becoming.RespectsClaims F.realized (Becoming.Alike F F)
+@Becoming.carries_law_alike_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  {P : Generative.Process S A} {π : S → K} {claims : K → D → Prop},
+  (∃ Q, (∀ (k : K), Becoming.DeterminedAt { P := Q, realized := claims } k) ∧ Becoming.FactorsThrough P π Q) ↔
+    ∃ E, Equivalence E ∧ Becoming.RespectsClaims claims E ∧ Becoming.GoAlikeUnder P π E
+@Becoming.eq_equivalence : ∀ {K : Type u_1}, Equivalence fun k k' => k = k'
+@Becoming.carries_law_named_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K},
+  (∃ Q,
+      (∀ (k : K), Becoming.DeterminedAt { P := Q, realized := fun k k' => k = k' } k) ∧ Becoming.FactorsThrough P π Q) ↔
+    Becoming.GoAlike P π
+@Becoming.image_determinedAt_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  {P : Generative.Process S A} {π : S → K} {claims : K → D → Prop},
+  (∀ (k : K), Becoming.DeterminedAt { P := Becoming.Image P π, realized := claims } k) ↔
+    Becoming.GoAlikeUnder P π
+      (Becoming.Alike { P := Becoming.Image P π, realized := claims } { P := Becoming.Image P π, realized := claims })
+Becoming.Likeness.Parting.going_not_stopped : ¬Becoming.Alike
+    { P := Becoming.Image Becoming.Likeness.Parting.process id, realized := Becoming.Likeness.Parting.claims }
+    { P := Becoming.Image Becoming.Likeness.Parting.process id, realized := Becoming.Likeness.Parting.claims }
+    Becoming.Likeness.Parting.Pos.going Becoming.Likeness.Parting.Pos.stopped
+Becoming.Likeness.Parting.image_not_determinedAt : ¬Becoming.DeterminedAt
+    { P := Becoming.Image Becoming.Likeness.Parting.process id, realized := Becoming.Likeness.Parting.claims }
+    Becoming.Likeness.Parting.Pos.start
+Becoming.Likeness.Parting.carries : ∃ Q,
+  (∀ (k : Becoming.Likeness.Parting.Pos),
+      Becoming.DeterminedAt { P := Q, realized := Becoming.Likeness.Parting.claims } k) ∧
+    Becoming.FactorsThrough Becoming.Likeness.Parting.process id Q
+@Becoming.Run.not_fixesAlike_other_of_new : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (x : S), Becoming.DeterminedAt F x) →
+    ∀ (r : Becoming.Run F.P),
+      (∀ (i j : Nat), i < j → ¬Becoming.Alike F F (r.state i) (r.state j)) →
+        ∀ {n t : Nat} {b : A},
+          b ≠ r.act n →
+            ∀ {x y : S} {c : C}, F.realized x c → ¬F.realized y c → ¬∃ u, r.FixesAlike F.realized t (r.state n) b u
+@Becoming.Run.new_of_newAlike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  (r : Becoming.Run F.P),
+  (∀ (i j : Nat), i < j → ¬Becoming.Alike F F (r.state i) (r.state j)) → ∀ (i j : Nat), i < j → r.state i ≠ r.state j
+@Becoming.Run.not_fixesThroughAlike_of_untaken : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  {P : Generative.Process S A} (r : Becoming.Run P) {π : S → K} {claims : K → D → Prop} {Q : Generative.Process K A},
+  (∀ (k : K), Becoming.DeterminedAt { P := Q, realized := claims } k) →
+    ∀ {t : Nat},
+      r.StepsThrough π Q t →
+        ∀ {k : K} {a : A},
+          ¬r.TakesThroughAlike π Q claims t k a →
+            ∀ {x y : K} {d : D}, claims x d → ¬claims y d → ¬∃ κ, r.FixesThroughAlike π claims t k a κ
+@Becoming.Run.not_fixesThroughAlike_of_goAlikeUnder : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {D : Type u_4}
+  {P : Generative.Process S A} (r : Becoming.Run P) {π : S → K} {claims : K → D → Prop} {E : K → K → Prop},
+  Equivalence E →
+    Becoming.RespectsClaims claims E →
+      Becoming.GoAlikeUnder P π E →
+        ∀ {t : Nat} {k : K} {a : A},
+          ¬r.TakesThroughAlike π (Becoming.imageUnder P π E) claims t k a →
+            ∀ {x y : K} {d : D}, claims x d → ¬claims y d → ¬∃ κ, r.FixesThroughAlike π claims t k a κ
+@Becoming.Decided.exists_of_listed : ∀ {β : Type u_1} {P : β → Prop} {l : List β},
+  (∀ (b : β), b ∈ l) → (∀ (b : β), Becoming.Decided (P b)) → Becoming.Decided (∃ b, P b)
+@Becoming.Decided.forall_of_listed : ∀ {β : Type u_1} {P : β → Prop} {l : List β},
+  (∀ (b : β), b ∈ l) → (∀ (b : β), Becoming.Decided (P b)) → Becoming.Decided (∀ (b : β), P b)
+@Becoming.Decided.exists_not_of_listed : ∀ {β : Type u_1} {P : β → Prop} {l : List β},
+  (∀ (b : β), b ∈ l) → (∀ (b : β), Becoming.Decided (P b)) → (¬∀ (b : β), P b) → ∃ b, ¬P b
+@Becoming.Decided.imp : ∀ {p q : Prop}, Becoming.Decided p → Becoming.Decided q → Becoming.Decided (p → q)
+@Becoming.Decided.iff : ∀ {p q : Prop}, Becoming.Decided p → Becoming.Decided q → Becoming.Decided (p ↔ q)
+@Becoming.mem_pairedWith_left : ∀ {β : Type u_1} {γ : Type u_2} {b : β} {c : γ} {rest : List (β × γ)} {m : List γ},
+  c ∈ m → (b, c) ∈ Becoming.pairedWith b m rest
+@Becoming.mem_pairedWith_right : ∀ {β : Type u_1} {γ : Type u_2} {b : β} {x : β × γ} {rest : List (β × γ)} (m : List γ),
+  x ∈ rest → x ∈ Becoming.pairedWith b m rest
+@Becoming.mem_pairsOf : ∀ {β : Type u_1} {γ : Type u_2} {b : β} {c : γ} {l : List β} {m : List γ},
+  b ∈ l → c ∈ m → (b, c) ∈ Becoming.pairsOf l m
+@Becoming.length_pairedWith : ∀ {β : Type u_1} {γ : Type u_2} {b : β} {rest : List (β × γ)} (m : List γ),
+  (Becoming.pairedWith b m rest).length = rest.length + m.length
+@Becoming.length_pairsOf : ∀ {β : Type u_1} {γ : Type u_2} (m : List γ) (l : List β),
+  (Becoming.pairsOf l m).length = m.length * l.length
+@Becoming.holds_below : ∀ {X : Type u_1} {P : Nat → X → Prop},
+  (∀ (k : Nat) (x : X), P (k + 1) x → P k x) → ∀ {x : X} {b a : Nat}, b ≤ a → P a x → P b x
+@Becoming.drops_somewhere : ∀ {X : Type u_1} {P : Nat → X → Prop} {x : X},
+  (∀ (k : Nat), Becoming.Decided (P k x)) → P 0 x → ∀ (N : Nat), ¬P N x → ∃ m, P m x ∧ ¬P (m + 1) x
+Becoming.skip_side : ∀ (m j : Nat), Becoming.skipAt m j < m ∨ m + 1 ≤ Becoming.skipAt m j
+Becoming.skip_succ : ∀ (m j : Nat),
+  Becoming.skipAt m (j + 1) = Becoming.skipAt m j + 1 ∨ Becoming.skipAt m (j + 1) = Becoming.skipAt m j + 2
+@Becoming.stops_decreasing : ∀ {X : Type u_1} (l : List X) (P : Nat → X → Prop),
+  (∀ (k : Nat) (x : X), P (k + 1) x → P k x) →
+    (∀ (k : Nat) (x : X), Becoming.Decided (P k x)) → ∃ k, k ≤ l.length ∧ ∀ (x : X), x ∈ l → P k x → P (k + 1) x
+@Becoming.MatchesParts.transport : ∀ {S : Type u_1} {S' : Type u_2} {J : S → S → S → Prop} {K : S' → S' → S' → Prop}
+  {B B' : S → S' → Prop},
+  (∀ (s : S) (s' : S'), B s s' ↔ B' s s') → Becoming.MatchesParts J K B → Becoming.MatchesParts J K B'
+@Becoming.MatchesParts.comp : ∀ {S : Type u_1} {S' : Type u_2} {S'' : Type u_3} {J : S → S → S → Prop}
+  {K : S' → S' → S' → Prop} {L : S'' → S'' → S'' → Prop} {B : S → S' → Prop} {B' : S' → S'' → Prop},
+  Becoming.MatchesParts J K B →
+    Becoming.MatchesParts K L B' → Becoming.MatchesParts J L fun s s'' => ∃ s', B s s' ∧ B' s' s''
+@Becoming.BisimulationWith.eq : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {I : Type u_4} (F : Becoming.Frame S A C)
+  (J : I → S → S → S → Prop), Becoming.BisimulationWith F F J J fun s s' => s = s'
+@Becoming.BisimulationWith.converse : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {B : S → S' → Prop}, Becoming.BisimulationWith F G J K B → Becoming.BisimulationWith G F K J fun s' s => B s s'
+@Becoming.BisimulationWith.comp : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {S'' : Type u_5}
+  {I : Type u_6} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C}
+  {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop} {L : I → S'' → S'' → S'' → Prop} {B : S → S' → Prop}
+  {B' : S' → S'' → Prop},
+  Becoming.BisimulationWith F G J K B →
+    Becoming.BisimulationWith G H K L B' → Becoming.BisimulationWith F H J L fun s s'' => ∃ s', B s s' ∧ B' s' s''
+@Becoming.AlikeWith.refl : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {I : Type u_4} (F : Becoming.Frame S A C)
+  (J : I → S → S → S → Prop) (s : S), Becoming.AlikeWith F F J J s s
+@Becoming.AlikeWith.symm : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'}, Becoming.AlikeWith F G J K s s' → Becoming.AlikeWith G F K J s' s
+@Becoming.AlikeWith.trans : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {S'' : Type u_5}
+  {I : Type u_6} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C}
+  {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop} {L : I → S'' → S'' → S'' → Prop} {s : S} {s' : S'}
+  {s'' : S''}, Becoming.AlikeWith F G J K s s' → Becoming.AlikeWith G H K L s' s'' → Becoming.AlikeWith F H J L s s''
+@Becoming.AlikeWith.alike : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'}, Becoming.AlikeWith F G J K s s' → Becoming.Alike F G s s'
+@Becoming.alikeWith_empty_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : Empty → S → S → S → Prop}
+  {K : Empty → S' → S' → S' → Prop} {s : S} {s' : S'}, Becoming.AlikeWith F G J K s s' ↔ Becoming.Alike F G s s'
+@Becoming.AlikeWith.realized : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'}, Becoming.AlikeWith F G J K s s' → ∀ (c : C), F.realized s c ↔ G.realized s' c
+@Becoming.AlikeWith.step : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'},
+  Becoming.AlikeWith F G J K s s' →
+    ∀ {a : A} {t : S}, F.P.step s a t → ∃ t', G.P.step s' a t' ∧ Becoming.AlikeWith F G J K t t'
+@Becoming.AlikeWith.parts : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'},
+  Becoming.AlikeWith F G J K s s' →
+    ∀ (i : I) {l r : S},
+      J i s l r → ∃ l' r', K i s' l' r' ∧ Becoming.AlikeWith F G J K l l' ∧ Becoming.AlikeWith F G J K r r'
+@Becoming.AlikeWith.matchesParts : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {I : Type u_4}
+  (F : Becoming.Frame S A C) (J : I → S → S → S → Prop) (i : I),
+  Becoming.MatchesParts (J i) (J i) (Becoming.AlikeWith F F J J)
+@Becoming.AlikeWith.functional : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop},
+  (∀ (t t' : S'), Becoming.AlikeWith G G K K t t' → t = t') →
+    ∀ {s : S} {t t' : S'}, Becoming.AlikeWith F G J K s t → Becoming.AlikeWith F G J K s t' → t = t'
+@Becoming.SameTestsWith.refl : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {I : Type u_4} (F : Becoming.Frame S A C)
+  (J : I → S → S → S → Prop) (s : S), Becoming.SameTestsWith F F J J s s
+@Becoming.SameTestsWith.symm : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'}, Becoming.SameTestsWith F G J K s s' → Becoming.SameTestsWith G F K J s' s
+@Becoming.SameTestsWith.trans : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {S'' : Type u_5}
+  {I : Type u_6} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C}
+  {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop} {L : I → S'' → S'' → S'' → Prop} {s : S} {s' : S'}
+  {s'' : S''},
+  Becoming.SameTestsWith F G J K s s' → Becoming.SameTestsWith G H K L s' s'' → Becoming.SameTestsWith F H J L s s''
+@Becoming.SameTestsWith.functional : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop},
+  (∀ (t t' : S'), Becoming.SameTestsWith G G K K t t' → t = t') →
+    ∀ {s : S} {t t' : S'}, Becoming.SameTestsWith F G J K s t → Becoming.SameTestsWith F G J K s t' → t = t'
+@Becoming.AlikeWith.holds_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  (φ : Becoming.TestWith I A C) {s : S} {s' : S'},
+  Becoming.AlikeWith F G J K s s' → (Becoming.TestWith.Holds F J s φ ↔ Becoming.TestWith.Holds G K s' φ)
+@Becoming.AlikeWith.sameTestsWith : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {I : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop} {K : I → S' → S' → S' → Prop}
+  {s : S} {s' : S'}, Becoming.AlikeWith F G J K s s' → Becoming.SameTestsWith F G J K s s'
+@Becoming.BranchingTest.holds_toWith : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {I : Type u_4}
+  {F : Becoming.Frame S A C} {J : I → S → S → S → Prop} (φ : Becoming.BranchingTest A C) (s : S),
+  Becoming.BranchingTest.Holds F s φ ↔ Becoming.TestWith.Holds F J s φ.toWith
+@Becoming.SameTestsWith.sameBranchingTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {I : Type u_5} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {J : I → S → S → S → Prop}
+  {K : I → S' → S' → S' → Prop} {s : S} {s' : S'},
+  Becoming.SameTestsWith F G J K s s' → Becoming.SameBranchingTests F G s s'
+@Becoming.Alike.holds_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} (φ : Becoming.BranchingTest A C) {s : S} {s' : S'},
+  Becoming.Alike F G s s' → (Becoming.BranchingTest.Holds F s φ ↔ Becoming.BranchingTest.Holds G s' φ)
+@Becoming.Alike.sameBranchingTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {s : S} {s' : S'},
+  Becoming.Alike F G s s' → Becoming.SameBranchingTests F G s s'
+@Becoming.Alike.functional : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∀ (t t' : S'), Becoming.Alike G G t t' → t = t') →
+    ∀ {s : S} {t t' : S'}, Becoming.Alike F G s t → Becoming.Alike F G s t' → t = t'
+@Becoming.SameBranchingTests.functional : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (t t' : S'), Becoming.SameBranchingTests G G t t' → t = t') →
+    ∀ {s : S} {t t' : S'}, Becoming.SameBranchingTests F G s t → Becoming.SameBranchingTests F G s t' → t = t'
+@Becoming.AlikeTo.realized : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'} {k : Nat},
+  Becoming.AlikeTo F G k s s' → ∀ (c : C), F.realized s c ↔ G.realized s' c
+@Becoming.AlikeTo.of_succ : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {k : Nat} {s : S} {s' : S'},
+  Becoming.AlikeTo F G (k + 1) s s' → Becoming.AlikeTo F G k s s'
+@Becoming.AlikeTo.down_to : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {s : S} {s' : S'} {b a : Nat},
+  b ≤ a → Becoming.AlikeTo F G a s s' → Becoming.AlikeTo F G b s s'
+@Becoming.Alike.alikeTo : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} (k : Nat) {s : S} {s' : S'}, Becoming.Alike F G s s' → Becoming.AlikeTo F G k s s'
+@Becoming.sameClaims_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (c : C), c ∈ l) →
+    Becoming.FiniteDecided F →
+      Becoming.FiniteDecided G → ∀ (s : S) (s' : S'), Becoming.Decided (∀ (c : C), F.realized s c ↔ G.realized s' c)
+@Becoming.forth_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {R : S → S' → Prop},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    Becoming.FiniteDecided F →
+      Becoming.FiniteDecided G →
+        (∀ (t : S) (t' : S'), Becoming.Decided (R t t')) →
+          ∀ (s : S) (s' : S'), Becoming.Decided (∀ (a : A) (t : S), F.P.step s a t → ∃ t', G.P.step s' a t' ∧ R t t')
+@Becoming.unmatched_of_not_forth : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {R : S → S' → Prop},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    Becoming.FiniteDecided F →
+      Becoming.FiniteDecided G →
+        (∀ (t : S) (t' : S'), Becoming.Decided (R t t')) →
+          ∀ {s : S} {s' : S'},
+            (¬∀ (a : A) (t : S), F.P.step s a t → ∃ t', G.P.step s' a t' ∧ R t t') →
+              ∃ a t, F.P.step s a t ∧ ∀ (t' : S'), G.P.step s' a t' → ¬R t t'
+@Becoming.AlikeTo.decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G → ∀ (k : Nat) (s : S) (s' : S'), Becoming.Decided (Becoming.AlikeTo F G k s s')
+@Becoming.BranchingTest.apart_from_listed : ∀ {A : Type u_2} {C : Type u_3} {S : Type u_1} {S' : Type u_4}
+  (F : Becoming.Frame S A C) (G : Becoming.Frame S' A C) {x : S} {q : S' → Prop},
+  (∀ (y : S'), Becoming.Decided (q y)) →
+    (∀ (y : S'), q y → ∃ φ, Becoming.BranchingTest.Holds F x φ ∧ ¬Becoming.BranchingTest.Holds G y φ) →
+      ∀ (l : List S'),
+        ∃ φ, Becoming.BranchingTest.Holds F x φ ∧ ∀ (y : S'), y ∈ l → q y → ¬Becoming.BranchingTest.Holds G y φ
+@Becoming.apart_of_claims : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (c : C), c ∈ l) →
+    Becoming.FiniteDecided F →
+      Becoming.FiniteDecided G →
+        ∀ {s : S} {s' : S'},
+          (¬∀ (c : C), F.realized s c ↔ G.realized s' c) →
+            ∃ φ, Becoming.BranchingTest.Holds F s φ ∧ ¬Becoming.BranchingTest.Holds G s' φ
+@Becoming.apart_of_not_alikeTo : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ (k : Nat) {s : S} {s' : S'},
+            ¬Becoming.AlikeTo F G k s s' →
+              ∃ φ, Becoming.BranchingTest.Holds F s φ ∧ ¬Becoming.BranchingTest.Holds G s' φ
+@Becoming.SameBranchingTests.alikeTo : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {s : S} {s' : S'}, Becoming.SameBranchingTests F G s s' → ∀ (k : Nat), Becoming.AlikeTo F G k s s'
+@Becoming.AlikeTo.steady_within : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {l : List S} {l' : List S'},
+            (∀ (s : S), s ∈ l) →
+              (∀ (s' : S'), s' ∈ l') →
+                ∃ N,
+                  N ≤ l'.length * l.length ∧
+                    ∀ (s : S) (s' : S'), Becoming.AlikeTo F G N s s' → Becoming.AlikeTo F G (N + 1) s s'
+@Becoming.AlikeTo.steady : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∃ N, ∀ (s : S) (s' : S'), Becoming.AlikeTo F G N s s' → Becoming.AlikeTo F G (N + 1) s s'
+@Becoming.AlikeTo.bisimulation : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {N : Nat},
+  (∀ (s : S) (s' : S'), Becoming.AlikeTo F G N s s' → Becoming.AlikeTo F G (N + 1) s s') →
+    Becoming.Bisimulation F G (Becoming.AlikeTo F G N)
+@Becoming.alike_iff_sameBranchingTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G → ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.SameBranchingTests F G s s'
+@Becoming.Alike.decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G → ∀ (s : S) (s' : S'), Becoming.Decided (Becoming.Alike F G s s')
+@Becoming.alike_iff_alikeTo : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ ∀ (k : Nat), Becoming.AlikeTo F G k s s'
+@Becoming.alike_iff_alikeTo_pairs : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {l : List S} {l' : List S'},
+            (∀ (s : S), s ∈ l) →
+              (∀ (s' : S'), s' ∈ l') →
+                ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.AlikeTo F G (l'.length * l.length) s s'
+@Becoming.AlikeTo.self : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (k : Nat) (s : S),
+  Becoming.AlikeTo F F k s s
+@Becoming.AlikeTo.symm : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {k : Nat} {s : S} {s' : S'}, Becoming.AlikeTo F G k s s' → Becoming.AlikeTo G F k s' s
+@Becoming.AlikeTo.trans : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {S'' : Type u_5}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C} {k : Nat} {s : S} {s' : S'}
+  {s'' : S''}, Becoming.AlikeTo F G k s s' → Becoming.AlikeTo G H k s' s'' → Becoming.AlikeTo F H k s s''
+@Becoming.AlikeTo.refining : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C),
+  Becoming.Refining (Becoming.AlikeTo F F)
+@Becoming.AlikeAcross.refining : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  (F : Becoming.Frame S A C) (G : Becoming.Frame S' A C), Becoming.Refining (Becoming.AlikeAcross F G)
+@Becoming.length_rightsOf : ∀ {β : Type u_1} {γ : Type u_2} (l' : List γ), (Becoming.rightsOf l').length = l'.length
+@Becoming.length_bothOf : ∀ {β : Type u_1} {γ : Type u_2} (l' : List γ) (l : List β),
+  (Becoming.bothOf l' l).length = l.length + l'.length
+@Becoming.mem_rightsOf : ∀ {β : Type u_1} {γ : Type u_2} {c : γ} {l' : List γ},
+  c ∈ l' → Sum.inr c ∈ Becoming.rightsOf l'
+@Becoming.mem_bothOf_right : ∀ {β : Type u_1} {γ : Type u_2} {c : γ} {l' : List γ},
+  c ∈ l' → ∀ (l : List β), Sum.inr c ∈ Becoming.bothOf l' l
+@Becoming.mem_bothOf_left : ∀ {β : Type u_1} {γ : Type u_2} {l' : List γ} {b : β} {l : List β},
+  b ∈ l → Sum.inl b ∈ Becoming.bothOf l' l
+@Becoming.AlikeAcross.decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G → ∀ (k : Nat) (x y : S ⊕ S'), Becoming.Decided (Becoming.AlikeAcross F G k x y)
+@Becoming.AlikeTo.steady_within_classes : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        ∀ {l : List S},
+          (∀ (s : S), s ∈ l) →
+            ∀ {apart : List S},
+              Becoming.DistinctUnder (Becoming.AlikeTo F F 0) apart →
+                ∃ N,
+                  N + apart.length ≤ l.length ∧
+                    ∀ (s s' : S), Becoming.AlikeTo F F N s s' → Becoming.AlikeTo F F (N + 1) s s'
+@Becoming.alike_iff_alikeTo_classes : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        ∀ {l : List S},
+          (∀ (s : S), s ∈ l) → ∀ {s s' : S}, Becoming.Alike F F s s' ↔ Becoming.AlikeTo F F (l.length - 1) s s'
+@Becoming.AlikeTo.steady_within_across : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {l : List S} {l' : List S'},
+            (∀ (s : S), s ∈ l) →
+              (∀ (s' : S'), s' ∈ l') →
+                ∀ {apart : List (S ⊕ S')},
+                  Becoming.DistinctUnder (Becoming.AlikeAcross F G 0) apart →
+                    ∃ N,
+                      N + apart.length ≤ l.length + l'.length ∧
+                        ∀ (s : S) (s' : S'), Becoming.AlikeTo F G N s s' → Becoming.AlikeTo F G (N + 1) s s'
+@Becoming.alike_iff_alikeTo_across : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.FiniteDecided F →
+        Becoming.FiniteDecided G →
+          ∀ {l : List S} {l' : List S'},
+            (∀ (s : S), s ∈ l) →
+              (∀ (s' : S'), s' ∈ l') →
+                ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.AlikeTo F G (l.length + l'.length - 1) s s'
+@Becoming.alikeTo_frameBy_iff : ∀ {S : Type u_1} {S' : Type u_3} {R : Type u_2} {next : S → S} {next' : S' → S'}
+  {o : S → R} {o' : S' → R} {k : Nat} {s : S} {s' : S'},
+  Becoming.AlikeTo (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next' o') k s s' ↔
+    ∀ (n : Nat), n ≤ k → o (Becoming.Law.orbit next s n) = o' (Becoming.Law.orbit next' s' n)
+Becoming.length_finBelow : ∀ (n k : Nat) (le : k ≤ n), (Becoming.finBelow n k le).length = k
+@Becoming.mem_finBelow : ∀ {n : Nat} (i : Fin n) (k : Nat) (le : k ≤ n), ↑i < k → i ∈ Becoming.finBelow n k le
+@Becoming.room_after : ∀ {a k n : Nat}, a + (k + 1) ≤ n → a + 1 + k ≤ n
+Becoming.EndOfPath.finite : ∀ (M : Nat), Becoming.FiniteDecided (Becoming.EndOfPath.frame M)
+Becoming.EndOfPath.alikeTo_room : ∀ (M k : Nat) (s t : Fin (M + 2)),
+  ↑s + k ≤ M + 1 → ↑t + k ≤ M + 1 → Becoming.AlikeTo (Becoming.EndOfPath.frame M) (Becoming.EndOfPath.frame M) k s t
+Becoming.EndOfPath.not_alikeTo_past : ∀ (M k : Nat) (s t : Fin (M + 2)),
+  ↑s + k < M + 1 →
+    ↑t + k = M + 1 → ¬Becoming.AlikeTo (Becoming.EndOfPath.frame M) (Becoming.EndOfPath.frame M) (k + 1) s t
+Becoming.EndOfPath.classes_exact : ∀ (M : Nat),
+  Becoming.FiniteDecided (Becoming.EndOfPath.frame M) ∧
+    (Becoming.finBelow (M + 2) (M + 2) ⋯).length = M + 2 ∧
+      Becoming.AlikeTo (Becoming.EndOfPath.frame M) (Becoming.EndOfPath.frame M) M (Becoming.EndOfPath.first M)
+          (Becoming.EndOfPath.second M) ∧
+        ¬Becoming.Alike (Becoming.EndOfPath.frame M) (Becoming.EndOfPath.frame M) (Becoming.EndOfPath.first M)
+            (Becoming.EndOfPath.second M)
+Becoming.OneLoop.alike_iff : ∀ (p : Prop),
+  Becoming.Alike (Becoming.OneLoop.frame p) (Becoming.OneLoop.frame True) () () ↔ p
+Becoming.alike_decided_iff_em : (∀ (F G : Becoming.Frame Unit Unit Empty),
+    Becoming.Decided (Becoming.Alike F G () ())) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.EitherThroughout.of_em : (∀ (p : Prop), Becoming.Decided p) → Becoming.EitherThroughout
+Becoming.eitherThroughout_iff_eitherNever : Becoming.EitherThroughout ↔ Becoming.EitherNever
+Becoming.EitherNever.of_nowhereDecided : Becoming.NowhereDecided → Becoming.EitherNever
+Becoming.NowhereDecided.of_em : (∀ (p : Prop), Becoming.Decided p) → Becoming.NowhereDecided
+Becoming.EitherThroughout.of_nowhereDecided : Becoming.NowhereDecided → Becoming.EitherThroughout
+@Becoming.LLPO.succ_inj : ∀ {m n : Nat}, m + 1 = n + 1 → m = n
+Becoming.LLPO.two_mul_ne_succ : ∀ (m n : Nat), 2 * m ≠ 2 * n + 1
+Becoming.LLPO.two_mul_inj : ∀ (m n : Nat), 2 * m = 2 * n → m = n
+Becoming.LLPO.decided_true : ∀ (b : Bool), Becoming.Decided (b = true)
+Becoming.LLPO.eq_false_of_not : ∀ (b : Bool), ¬b = true → b = false
+Becoming.LLPO.of_lpo : Becoming.LPO → Becoming.LLPO
+Becoming.LLPO.of_forDecided : Becoming.LLPOForDecided → Becoming.LLPO
+Becoming.LLPO.decidable : Becoming.LLPO →
+  ∀ (γ : Nat → Prop) (dec : (n : Nat) → Decidable (γ n)),
+    (∀ (m n : Nat), γ m → γ n → m = n) → (∀ (n : Nat), ¬γ (2 * n)) ∨ ∀ (n : Nat), ¬γ (2 * n + 1)
+@Becoming.LLPO.FirstAt.decided : ∀ {α : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) → ∀ (k : Nat), Becoming.Decided (Becoming.LLPO.FirstAt α k)
+@Becoming.LLPO.FirstAt.unique : ∀ {α : Nat → Prop} {i j : Nat},
+  Becoming.LLPO.FirstAt α i → Becoming.LLPO.FirstAt α j → i = j
+@Becoming.LLPO.FirstAt.of_holds : ∀ {α : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) → ∀ (N k : Nat), k < N → α k → ∃ i, Becoming.LLPO.FirstAt α i
+@Becoming.LLPO.Interleave.even : ∀ {α β : Nat → Prop} {k : Nat}, Becoming.LLPO.Interleave α β (2 * k) ↔ α k
+@Becoming.LLPO.Interleave.odd : ∀ {α β : Nat → Prop} {k : Nat}, Becoming.LLPO.Interleave α β (2 * k + 1) ↔ β k
+@Becoming.LLPO.Interleave.decided : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) →
+    (∀ (k : Nat), Becoming.Decided (β k)) → ∀ (n : Nat), Becoming.Decided (Becoming.LLPO.Interleave α β n)
+Becoming.eitherNever_iff_llpoForDecided : Becoming.EitherNever ↔ Becoming.LLPOForDecided
+Becoming.eitherThroughout_iff_llpoForDecided : Becoming.EitherThroughout ↔ Becoming.LLPOForDecided
+Becoming.LLPO.of_eitherThroughout : Becoming.EitherThroughout → Becoming.LLPO
+@Becoming.Decided.forall_in : ∀ {β : Type u_1} {P : β → Prop} {l : List β},
+  (∀ (b : β), b ∈ l → Becoming.Decided (P b)) → Becoming.Decided (∀ (b : β), b ∈ l → P b)
+Becoming.EitherThroughout.list : Becoming.EitherThroughout →
+  ∀ {β : Type u_1} {P : Nat → β → Prop},
+    (∀ (k : Nat) (b : β), Becoming.Decided (P k b)) →
+      (∀ (k : Nat) (b : β), P (k + 1) b → P k b) →
+        ∀ (l : List β), (∀ (k : Nat), ∃ b, b ∈ l ∧ P k b) → ∃ b, b ∈ l ∧ ∀ (k : Nat), P k b
+@Becoming.OutcomesListed.sameClaims_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (c : C), c ∈ l) →
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G → ∀ (s : S) (s' : S'), Becoming.Decided (∀ (c : C), F.realized s c ↔ G.realized s' c)
+@Becoming.OutcomesListed.matched_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {G : Becoming.Frame S' A C} {R : S → S' → Prop},
+  Becoming.OutcomesListed G →
+    (∀ (t : S) (t' : S'), Becoming.Decided (R t t')) →
+      ∀ (s' : S') (a : A) (t : S), Becoming.Decided (∃ t', G.P.step s' a t' ∧ R t t')
+@Becoming.OutcomesListed.forth_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {R : S → S' → Prop},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G →
+        (∀ (t : S) (t' : S'), Becoming.Decided (R t t')) →
+          ∀ (s : S) (s' : S'), Becoming.Decided (∀ (a : A) (t : S), F.P.step s a t → ∃ t', G.P.step s' a t' ∧ R t t')
+@Becoming.OutcomesListed.unmatched : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {R : S → S' → Prop},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G →
+        (∀ (t : S) (t' : S'), Becoming.Decided (R t t')) →
+          ∀ {s : S} {s' : S'},
+            (¬∀ (a : A) (t : S), F.P.step s a t → ∃ t', G.P.step s' a t' ∧ R t t') →
+              ∃ a t, F.P.step s a t ∧ ∀ (t' : S'), G.P.step s' a t' → ¬R t t'
+@Becoming.OutcomesListed.alikeTo_decided : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.OutcomesListed F →
+        Becoming.OutcomesListed G → ∀ (k : Nat) (s : S) (s' : S'), Becoming.Decided (Becoming.AlikeTo F G k s s')
+@Becoming.BranchingTest.apart_from_list : ∀ {A : Type u_2} {C : Type u_3} {S : Type u_1} {S' : Type u_4}
+  (F : Becoming.Frame S A C) (G : Becoming.Frame S' A C) {x : S} (l : List S'),
+  (∀ (y : S'), y ∈ l → ∃ φ, Becoming.BranchingTest.Holds F x φ ∧ ¬Becoming.BranchingTest.Holds G y φ) →
+    ∃ φ, Becoming.BranchingTest.Holds F x φ ∧ ∀ (y : S'), y ∈ l → ¬Becoming.BranchingTest.Holds G y φ
+@Becoming.OutcomesListed.apart_of_claims : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (c : C), c ∈ l) →
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G →
+        ∀ {s : S} {s' : S'},
+          (¬∀ (c : C), F.realized s c ↔ G.realized s' c) →
+            ∃ φ, Becoming.BranchingTest.Holds F s φ ∧ ¬Becoming.BranchingTest.Holds G s' φ
+@Becoming.OutcomesListed.apart_of_not_alikeTo : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.OutcomesListed F →
+        Becoming.OutcomesListed G →
+          ∀ (k : Nat) {s : S} {s' : S'},
+            ¬Becoming.AlikeTo F G k s s' →
+              ∃ φ, Becoming.BranchingTest.Holds F s φ ∧ ¬Becoming.BranchingTest.Holds G s' φ
+@Becoming.OutcomesListed.alikeTo_of_same : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∃ l, ∀ (a : A), a ∈ l) →
+    (∃ l, ∀ (c : C), c ∈ l) →
+      Becoming.OutcomesListed F →
+        Becoming.OutcomesListed G →
+          ∀ {s : S} {s' : S'}, Becoming.SameBranchingTests F G s s' → ∀ (k : Nat), Becoming.AlikeTo F G k s s'
+@Becoming.OutcomesListed.alikeTo_bisimulation : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  Becoming.EitherThroughout →
+    (∃ l, ∀ (a : A), a ∈ l) →
+      (∃ l, ∀ (c : C), c ∈ l) →
+        Becoming.OutcomesListed F →
+          Becoming.OutcomesListed G → Becoming.Bisimulation F G fun s s' => ∀ (k : Nat), Becoming.AlikeTo F G k s s'
+@Becoming.OutcomesListed.alike_iff_sameBranchingTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  Becoming.EitherThroughout →
+    (∃ l, ∀ (a : A), a ∈ l) →
+      (∃ l, ∀ (c : C), c ∈ l) →
+        Becoming.OutcomesListed F →
+          Becoming.OutcomesListed G →
+            ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.SameBranchingTests F G s s'
+@Becoming.apart_of_not_sameBranchingTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {s : S} {s' : S'},
+      ¬Becoming.SameBranchingTests F G s s' →
+        ∃ φ, Becoming.BranchingTest.Holds F s φ ∧ ¬Becoming.BranchingTest.Holds G s' φ
+@Becoming.alike_of_sameBranchingTests_of_em : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {s : S} {s' : S'}, Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s'
+@Becoming.alike_iff_sameBranchingTests_of_em : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  (∀ (p : Prop), Becoming.Decided p) →
+    (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+      (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+        ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.SameBranchingTests F G s s'
+Becoming.EitherStep.listed : ∀ (s : Becoming.EitherStep.Pos),
+  s ∈
+    [Becoming.EitherStep.Pos.three, Becoming.EitherStep.Pos.two, Becoming.EitherStep.Pos.goes,
+      Becoming.EitherStep.Pos.halts, Becoming.EitherStep.Pos.either, Becoming.EitherStep.Pos.after]
+@Becoming.EitherStep.settled_decided : ∀ {p : Prop} (φ : Becoming.BranchingTest Unit Empty),
+  Becoming.Decided (Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.goes φ) ∧
+    Becoming.Decided (Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.halts φ) ∧
+      Becoming.Decided (Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.after φ)
+@Becoming.EitherStep.either_holds_of : ∀ {p : Prop},
+  p →
+    ∀ (φ : Becoming.BranchingTest Unit Empty),
+      Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.either φ ↔
+        Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.goes φ
+@Becoming.EitherStep.either_holds_of_not : ∀ {p : Prop},
+  ¬p →
+    ∀ (φ : Becoming.BranchingTest Unit Empty),
+      Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.either φ ↔
+        Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.halts φ
+@Becoming.EitherStep.either_settles : ∀ {p : Prop} (φ : Becoming.BranchingTest Unit Empty),
+  Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.either φ →
+    Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.goes φ ∨
+      Becoming.BranchingTest.Holds (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.halts φ
+@Becoming.EitherStep.sameBranchingTests : ∀ {p : Prop},
+  Becoming.SameBranchingTests (Becoming.EitherStep.frame p) (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.three
+    Becoming.EitherStep.Pos.two
+@Becoming.EitherStep.decided_of_alike : ∀ {p : Prop},
+  Becoming.Alike (Becoming.EitherStep.frame p) (Becoming.EitherStep.frame p) Becoming.EitherStep.Pos.three
+      Becoming.EitherStep.Pos.two →
+    Becoming.Decided p
+Becoming.EitherClaim.listed : ∀ (s : Becoming.EitherClaim.Pos),
+  s ∈
+    [Becoming.EitherClaim.Pos.three, Becoming.EitherClaim.Pos.two, Becoming.EitherClaim.Pos.marked,
+      Becoming.EitherClaim.Pos.unmarked, Becoming.EitherClaim.Pos.either]
+Becoming.EitherClaim.step_decided : ∀ (s t : Becoming.EitherClaim.Pos), Becoming.Decided (Becoming.EitherClaim.Step s t)
+@Becoming.EitherClaim.settled_decided : ∀ {p : Prop} (φ : Becoming.BranchingTest Unit Unit),
+  Becoming.Decided (Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.marked φ) ∧
+    Becoming.Decided (Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.unmarked φ)
+@Becoming.EitherClaim.either_holds_of : ∀ {p : Prop},
+  p →
+    ∀ (φ : Becoming.BranchingTest Unit Unit),
+      Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.either φ ↔
+        Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.marked φ
+@Becoming.EitherClaim.either_holds_of_not : ∀ {p : Prop},
+  ¬p →
+    ∀ (φ : Becoming.BranchingTest Unit Unit),
+      Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.either φ ↔
+        Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.unmarked φ
+@Becoming.EitherClaim.either_settles : ∀ {p : Prop} (φ : Becoming.BranchingTest Unit Unit),
+  Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.either φ →
+    Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.marked φ ∨
+      Becoming.BranchingTest.Holds (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.unmarked φ
+@Becoming.EitherClaim.sameBranchingTests : ∀ {p : Prop},
+  Becoming.SameBranchingTests (Becoming.EitherClaim.frame p) (Becoming.EitherClaim.frame p)
+    Becoming.EitherClaim.Pos.three Becoming.EitherClaim.Pos.two
+@Becoming.EitherClaim.decided_of_alike : ∀ {p : Prop},
+  Becoming.Alike (Becoming.EitherClaim.frame p) (Becoming.EitherClaim.frame p) Becoming.EitherClaim.Pos.three
+      Becoming.EitherClaim.Pos.two →
+    Becoming.Decided p
+Becoming.alike_of_sameBranchingTests_iff_em : (∀ (S : Type) (F G : Becoming.Frame S Unit Empty) (s s' : S),
+    (∃ l, ∀ (x : S), x ∈ l) → Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s') ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.alike_of_sameBranchingTests_decided_steps_iff_em : (∀ (S : Type) (F G : Becoming.Frame S Unit Unit) (s s' : S),
+    (∃ l, ∀ (x : S), x ∈ l) →
+      (∀ (x : S) (a : Unit) (y : S), Becoming.Decided (F.P.step x a y)) →
+        (∀ (x : S) (a : Unit) (y : S), Becoming.Decided (G.P.step x a y)) →
+          Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s') ↔
+  ∀ (p : Prop), Becoming.Decided p
+@Becoming.Chains.outcomes : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) →
+    (∀ (k : Nat), Becoming.Decided (β k)) →
+      ∀ (s : Becoming.Chains.Pos), ∃ l, ∀ (t : Becoming.Chains.Pos), Becoming.Chains.Step α β s t ↔ t ∈ l
+@Becoming.Chains.outcomesListed : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), Becoming.Decided (α k)) →
+    (∀ (k : Nat), Becoming.Decided (β k)) → Becoming.OutcomesListed (Becoming.Chains.frame α β)
+@Becoming.Chains.on_holds_iff : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), α (k + 1) → α k) →
+    (∀ (k : Nat), β (k + 1) → β k) →
+      ∀ (b : Bool) (φ : Becoming.BranchingTest Unit Empty) (n : Nat),
+        Becoming.Chains.Side α β b (n + Becoming.Chains.depth φ) →
+          (Becoming.BranchingTest.Holds (Becoming.Chains.frame α β) (Becoming.Chains.Pos.on b n) φ ↔
+            Becoming.BranchingTest.Holds (Becoming.Chains.frame α β) (Becoming.Chains.Pos.endless n) φ)
+@Becoming.Chains.sameBranchingTests : ∀ {α β : Nat → Prop},
+  (∀ (k : Nat), α (k + 1) → α k) →
+    (∀ (k : Nat), β (k + 1) → β k) →
+      (∀ (k : Nat), α k ∨ β k) →
+        Becoming.SameBranchingTests (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) Becoming.Chains.Pos.three
+          Becoming.Chains.Pos.two
+@Becoming.Chains.endless_alike_on : ∀ {α β : Nat → Prop} {b : Bool} {n : Nat},
+  Becoming.Alike (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) (Becoming.Chains.Pos.endless n)
+      (Becoming.Chains.Pos.on b n) →
+    Becoming.Chains.Side α β b n ∧
+      Becoming.Alike (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) (Becoming.Chains.Pos.endless (n + 1))
+        (Becoming.Chains.Pos.on b (n + 1))
+@Becoming.Chains.side_throughout : ∀ {α β : Nat → Prop} {b : Bool},
+  Becoming.Alike (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) (Becoming.Chains.Pos.endless 0)
+      (Becoming.Chains.Pos.on b 0) →
+    ∀ (n : Nat),
+      Becoming.Chains.Side α β b n ∧
+        Becoming.Alike (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) (Becoming.Chains.Pos.endless (n + 1))
+          (Becoming.Chains.Pos.on b (n + 1))
+@Becoming.Chains.throughout_of_alike : ∀ {α β : Nat → Prop},
+  Becoming.Alike (Becoming.Chains.frame α β) (Becoming.Chains.frame α β) Becoming.Chains.Pos.three
+      Becoming.Chains.Pos.two →
+    (∀ (k : Nat), α k) ∨ ∀ (k : Nat), β k
+Becoming.Unbounded.rest_holds_iff : ∀ (φ : Becoming.BranchingTest Unit Empty) (k : Nat),
+  Becoming.Chains.depth φ ≤ k →
+    (Becoming.BranchingTest.Holds Becoming.Unbounded.frame (Becoming.Unbounded.Pos.rest k) φ ↔
+      Becoming.BranchingTest.Holds Becoming.Unbounded.frame Becoming.Unbounded.Pos.endless φ)
+Becoming.Unbounded.sameBranchingTests : Becoming.SameBranchingTests Becoming.Unbounded.frame Becoming.Unbounded.frame
+  Becoming.Unbounded.Pos.bounded Becoming.Unbounded.Pos.unbounded
+Becoming.Unbounded.endless_not_alike_rest : ∀ (k : Nat),
+  ¬Becoming.Alike Becoming.Unbounded.frame Becoming.Unbounded.frame Becoming.Unbounded.Pos.endless
+      (Becoming.Unbounded.Pos.rest k)
+Becoming.Unbounded.not_alike : ¬Becoming.Alike Becoming.Unbounded.frame Becoming.Unbounded.frame
+    Becoming.Unbounded.Pos.bounded Becoming.Unbounded.Pos.unbounded
+Becoming.alike_of_sameBranchingTests_outcomes_iff : (∀ (S : Type) (F G : Becoming.Frame S Unit Empty) (s s' : S),
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G → Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s') ↔
+  Becoming.EitherThroughout
+Becoming.Choosing.branching_apart : Becoming.BranchingTest.Holds Becoming.Choosing.late Becoming.Choosing.Pos.p0
+    Becoming.Choosing.bothOpen ∧
+  ¬Becoming.BranchingTest.Holds Becoming.Choosing.early Becoming.Choosing.Pos.p0 Becoming.Choosing.bothOpen
+@Becoming.Dependence.dichotomy_of_same_level : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {P : Generative.Process S A} {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F}
+  {c : C},
+  (∀ (t t' : S), P.step (withhold f s) a t → P.step (withhold f s) a t' → K.level t c = K.level t' c) →
+    K.BreaksBy P s a g c →
+      ∀ {t₀ : S},
+        P.step (withhold f s) a t₀ →
+          K.requires (withhold f s) g c →
+            K.need (withhold f s) g c ≤ K.level (withhold f s) c →
+              K.MakesDifference P withhold f s a g c ∨ K.BreaksBy P (withhold f s) a g c
+@Becoming.Dependence.dichotomy_of_determinedAt : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  {K : Becoming.Dependence S F C} {D : Type u_3} {P : Generative.Process S A} {claims : S → D → Prop}
+  {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F} {c : C},
+  (∀ (x y : S), (∀ (d : D), claims x d ↔ claims y d) → K.level x c = K.level y c) →
+    Becoming.DeterminedAt { P := P, realized := claims } (withhold f s) →
+      K.BreaksBy P s a g c →
+        ∀ {t₀ : S},
+          P.step (withhold f s) a t₀ →
+            K.requires (withhold f s) g c →
+              K.need (withhold f s) g c ≤ K.level (withhold f s) c →
+                K.MakesDifference P withhold f s a g c ∨ K.BreaksBy P (withhold f s) a g c
+@Becoming.Dependence.level_registers : ∀ {S : Type u_1} {F C : Type} {K : Becoming.Dependence S F C} (c : C) (x y : S),
+  (∀ (n : Nat), K.level x c = n ↔ K.level y c = n) → K.level x c = K.level y c
+Becoming.ListedOutcomeFrames.sameBranchingTests_fix_iff_llpoForDecided : (∀ (S : Type)
+    (F G : Becoming.Frame S Unit Empty) (s s' : S),
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G → Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s') ↔
+  Becoming.LLPOForDecided
+Becoming.ListedOutcomeFrames.llpo_of_sameBranchingTests_fix : (∀ (S : Type) (F G : Becoming.Frame S Unit Empty)
+    (s s' : S),
+    Becoming.OutcomesListed F →
+      Becoming.OutcomesListed G → Becoming.SameBranchingTests F G s s' → Becoming.Alike F G s s') →
+  Becoming.LLPO
+@Becoming.ListedOutcomeFrames.alike_iff_sameBranchingTests_of_nowhereDecided : ∀ {S : Type u_1} {S' : Type u_2}
+  {A : Type u_3} {C : Type u_4} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C},
+  Becoming.NowhereDecided →
+    (∃ l, ∀ (a : A), a ∈ l) →
+      (∃ l, ∀ (c : C), c ∈ l) →
+        Becoming.OutcomesListed F →
+          Becoming.OutcomesListed G →
+            ∀ {s : S} {s' : S'}, Becoming.Alike F G s s' ↔ Becoming.SameBranchingTests F G s s'

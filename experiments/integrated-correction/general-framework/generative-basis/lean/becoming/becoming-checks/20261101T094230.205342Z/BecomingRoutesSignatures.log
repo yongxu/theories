@@ -1,0 +1,135 @@
+@Becoming.Weights.within_exact : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (j n : Nat),
+  n ≤ j →
+    ∀ (s : S),
+      W.within ground response moves all f j n s =
+        W.transfer (fun s a t => W.add (ground s a t) (response s a t)) moves all f n s
+@Becoming.Weights.Hom.within : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2} {T : Type u_4}
+  {V : Becoming.Weights T} (h : W.Hom V) (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R)
+  (j n : Nat) (s : S),
+  h.map (W.within ground response moves all f j n s) =
+    V.within (fun s a t => h.map (ground s a t)) (fun s a t => h.map (response s a t)) moves all (fun s => h.map (f s))
+      j n s
+@Becoming.Routes.counting_sum : ∀ {α : Type} (f : α → Nat) (l : List α), Becoming.counting.sum l f = Becoming.total l f
+@Becoming.counting_within_le_succ : ∀ {S A : Type} (ground response : S → A → S → Nat) (moves : List A) (all : List S)
+  (f : S → Nat) (j n : Nat) (s : S),
+  Becoming.counting.within ground response moves all f j n s ≤
+    Becoming.counting.within ground response moves all f (j + 1) n s
+@Becoming.counting_within_le_transfer : ∀ {S A : Type} (ground response : S → A → S → Nat) (moves : List A)
+  (all : List S) (f : S → Nat) (j n : Nat) (s : S),
+  Becoming.counting.within ground response moves all f j n s ≤
+    Becoming.counting.transfer (fun s a t => ground s a t + response s a t) moves all f n s
+Becoming.Routes.SelfLoop.within_eq : ∀ (M j n : Nat),
+  Becoming.counting.within (fun x x_1 x_2 => 1) (fun x x_1 x_2 => M) [()] [()] (fun x => 1) j n () =
+    Becoming.Loops.orderSum M j n
+Becoming.Routes.SelfLoop.transfer_eq : ∀ (M n : Nat),
+  Becoming.counting.transfer (fun x x_1 x_2 => 1 + M) [()] [()] (fun x => 1) n () = (1 + M) ^ n
+Becoming.Routes.SelfLoop.within_exact : ∀ (M n : Nat), Becoming.Loops.orderSum M n n = (1 + M) ^ n
+@Becoming.Routes.total_joinMap : ∀ {α β : Type} (g : α → List β) (q : β → Nat) (l : List α),
+  Becoming.total (Becoming.joinMap g l) q = Becoming.total l fun a => Becoming.total (g a) q
+@Becoming.Routes.total_routeCells : ∀ {C : Type} (cs : List C) (T : Nat) (q : Becoming.RoutePoint C → Nat),
+  Becoming.total (Becoming.routeCells cs T) q =
+    Becoming.total (Becoming.steps 0 T) fun s => Becoming.total cs fun d => q (Becoming.RoutePoint.level s d)
+@Becoming.Routes.transfer_unit : ∀ {S : Type} (weight : S → Unit → S → Nat) (all : List S) (f : S → Nat) (n : Nat)
+  (x : S),
+  Becoming.counting.transfer weight [()] all f (n + 1) x =
+    Becoming.total all fun m => weight x () m * Becoming.counting.transfer weight [()] all f n m
+@Becoming.Routes.total_cond : ∀ {α : Type} (b : Bool) (q : α → Nat) (as : List α),
+  (Becoming.total as fun a => bif b then q a else 0) = bif b then Becoming.total as q else 0
+Becoming.Routes.cond_mul : ∀ (b : Bool) (r l : Nat), (bif b then r else 0) * l = bif b then r * l else 0
+Becoming.Routes.cond_zero_mul : ∀ (b : Bool) (r l : Nat), (bif b then 0 else r) * l = bif b then 0 else r * l
+Becoming.Routes.total_upto : ∀ (g : Nat → Nat) (τ m : Nat),
+  (Becoming.total (Becoming.steps 0 (τ + 1 + m)) fun s => bif s.ble τ then g s else 0) =
+    Becoming.total (Becoming.steps 0 (τ + 1)) g
+Becoming.Routes.total_upto_of_le : ∀ (g : Nat → Nat) {τ T : Nat},
+  τ + 1 ≤ T →
+    (Becoming.total (Becoming.steps 0 T) fun s => bif s.ble τ then g s else 0) =
+      Becoming.total (Becoming.steps 0 (τ + 1)) g
+@Becoming.give_split : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} (l : Nat → C → Nat) (t : Nat) (c : C),
+  (Becoming.total (present t) fun h => Becoming.carriedGive cs part σ k t h c l) =
+    (Becoming.total (present t) fun h => Becoming.carriedGive cs part σ k t h c fun x x_1 => 0) +
+      Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+        Becoming.total cs fun d => Becoming.respondAt part k present t c s d * l s d
+@Becoming.carriedFrom_eq_routes : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (l : Nat → C → Nat) {T : Nat} (τ : Nat),
+  τ ≤ T →
+    ∀ (c : C),
+      Becoming.carriedFrom cs part σ k present δ l τ c =
+        Becoming.carriedWithin cs part σ k present δ 0 τ c +
+          Becoming.total (Becoming.steps 0 T) fun s =>
+            Becoming.total cs fun d => Becoming.responseWeight part k present τ c s d * l s d
+@Becoming.routeSum_source : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (T n : Nat),
+  Becoming.routeSum cs part σ k present δ T n Becoming.RoutePoint.source = 1
+@Becoming.routeSum_level : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (T n τ : Nat) (c : C),
+  Becoming.routeSum cs part σ k present δ T (n + 1) (Becoming.RoutePoint.level τ c) =
+    Becoming.carriedWithin cs part σ k present δ 0 τ c +
+      Becoming.total (Becoming.steps 0 T) fun s =>
+        Becoming.total cs fun d =>
+          Becoming.responseWeight part k present τ c s d *
+            Becoming.routeSum cs part σ k present δ T n (Becoming.RoutePoint.level s d)
+@Becoming.routeSum_eq_carriedWithin : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T : Nat} (j τ : Nat),
+  τ ≤ T →
+    ∀ (c : C),
+      Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c) =
+        Becoming.carriedWithin cs part σ k present δ j τ c
+@Becoming.carriedWithin_eq_courses : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T : Nat} (j τ : Nat),
+  τ ≤ T →
+    ∀ (c : C),
+      Becoming.carriedWithin cs part σ k present δ j τ c =
+        Becoming.counting.sum (Becoming.courses [()] (Becoming.routePoints cs T) (j + 1))
+          (Becoming.counting.along (Becoming.routeWeight cs part σ k present δ) Becoming.routeRead
+            (Becoming.RoutePoint.level τ c))
+@Becoming.carried_eq_courses : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carried cs part σ k present δ t c =
+    Becoming.counting.sum (Becoming.courses [()] (Becoming.routePoints cs t) (t + 1))
+      (Becoming.counting.along (Becoming.routeWeight cs part σ k present δ) Becoming.routeRead
+        (Becoming.RoutePoint.level t c))
+@Becoming.routeSum_exact : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T : Nat} (j τ : Nat),
+  τ ≤ T →
+    τ ≤ j →
+      ∀ (c : C),
+        Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c) =
+          Becoming.carried cs part σ k present δ τ c
+@Becoming.routeSum_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T j j' : Nat},
+  j ≤ j' →
+    ∀ (τ : Nat),
+      τ ≤ T →
+        ∀ (c : C),
+          Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c) ≤
+            Becoming.routeSum cs part σ k present δ T (j' + 1) (Becoming.RoutePoint.level τ c)
+@Becoming.routeSum_le_carried : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {T : Nat} (j τ : Nat),
+  τ ≤ T →
+    ∀ (c : C),
+      Becoming.routeSum cs part σ k present δ T (j + 1) (Becoming.RoutePoint.level τ c) ≤
+        Becoming.carried cs part σ k present δ τ c
+@Becoming.carried_le_routeSum_add : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D T : Nat},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      ∀ (j t : Nat),
+        t ≤ T →
+          ∀ (c : C),
+            Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤
+              Becoming.routeSum cs part (fun x x_1 x_2 => 0) k present δ T (j + 1) (Becoming.RoutePoint.level t c) +
+                Becoming.Loops.missBound M D j t
+@Becoming.finite_horizon_iff_no_loop : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ (K : F → C → C → Nat) (hs : List F) (c : C),
+      (∀ (δ : C → Nat),
+          ∃ j,
+            ∀ (t : Nat),
+              Becoming.routeSum cs part σ (Becoming.stationary K) (fun x => hs) δ t (j + 1)
+                  (Becoming.RoutePoint.level t c) =
+                Becoming.carried cs part σ (Becoming.stationary K) (fun x => hs) δ t c) ↔
+        ∀ (e : C),
+          Becoming.Upstream cs part (Becoming.stationary K) (fun x => hs) e c →
+            ¬Becoming.OnLoop cs part (Becoming.stationary K) (fun x => hs) e

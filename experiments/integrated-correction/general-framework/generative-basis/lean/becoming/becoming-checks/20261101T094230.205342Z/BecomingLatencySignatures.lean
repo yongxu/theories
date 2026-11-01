@@ -1,0 +1,12 @@
+import Becoming.Latency
+#check @Becoming.TimedResponse.Linked.one_le
+#check @Becoming.TimedResponse.Spread.linked
+#check @Becoming.TimedResponse.reachedBy_linked
+#check @Becoming.TimedResponse.not_reached_of_far
+#check @Becoming.TimedResponse.answer_alike_far
+#check @Becoming.TimedResponse.Relay.late
+#check @Becoming.TimedResponse.Relay.source_not_second
+#check @Becoming.TimedResponse.Relay.reader_far
+#check @Becoming.TimedResponse.Relay.not_reached_at_two
+#check @Becoming.TimedResponse.Relay.reached_at_three
+#check @Becoming.TimedResponse.Relay.answers_two_and_three

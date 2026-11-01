@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-23T04:06:08+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "Definitions of the frozen corpus written in the grammar hold for every carrier and relation: the 墨经's and 荀子's 化 are one form and are 成坏 along 缘, 同 is a class where each belongs to one and one only (shown sufficient; necessity is not shown), and continuation is neither identity nor mere difference.",
     "zh": "冻结语料中的定义写入文法后，对每个载体与关系成立：墨经与荀子之化同形，是沿缘之成坏；同在各属唯一时为类（只证其为充分）；续非一非异。"
@@ -40,14 +40,15 @@
       ]
     },
     {
-      "en": "复, read from the 老子 (「復命曰常」), is a line returning to where it was; what returns abides. 通, read from the 系辞 (「往來不窮謂之通」) with 往來 read as a relation and its converse, is going and coming without end: the line from an occurrence never ends along 缘, nor along its converse. Under a constant class a line with a past never ends going; an occurrence that abides passes through where the class is constant both ways; constancy one way is not enough (counting up from zero); under the one, day and night go and come without end.",
-      "zh": "老子之复（「復命曰常」）是线之返其所始；复者住。系辞之通（「往來不窮謂之通」），以往来为一关系与其逆：往与来皆不穷，即自一事起之线沿缘不终，沿其逆亦不终。有常之类下，有前之线往而不穷；类于缘与其逆两向皆有常时，住者通；一向有常不足（自零计数）；在“一”之下，昼夜往来不穷。",
+      "en": "复, read from the 老子 (「復命曰常」), is a line returning to where it was; what returns abides. 通, read from the 系辞 (「往來不窮謂之通」) with 往來 read as a relation and its converse, is going and coming without end: the line from an occurrence never ends along 缘, nor along its converse. Under a constant class a line with a past never ends going; where the class is constant both ways, an occurrence with a predecessor passes through, what abides being a case; constancy one way is not enough (counting up from zero); under the one, day and night go and come without end.",
+      "zh": "老子之复（「復命曰常」）是线之返其所始；复者住。系辞之通（「往來不窮謂之通」），以往来为一关系与其逆：往与来皆不穷，即自一事起之线沿缘不终，沿其逆亦不终。有常之类下，有前之线往而不穷；类于缘与其逆两向皆有常时，有前者通，住者是其一例；一向有常不足（自零计数）；在“一”之下，昼夜往来不穷。",
       "declarations": [
         "Becoming.«复»",
         "Becoming.«相续之末有前»",
         "Becoming.«复者住»",
         "Becoming.«通»",
         "Becoming.«有常则往不穷»",
+        "Becoming.«两向有常有前则通»",
         "Becoming.«两向有常则通»",
         "Becoming.«有常而不通»",
         "Becoming.«昼夜往来不穷»"
@@ -104,8 +105,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 12 theorems in 17 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarReadings，17 个声明中 12 条定理，公理报告皆空。句子来自冻结之第一批语料，经四位 Opus 编者分类；无人审。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 13 theorems in 18 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarReadings，18 个声明中 13 条定理，公理报告皆空。句子来自冻结之第一批语料，经四位 Opus 编者分类；无人审。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Write the rest of the corpus's 517 definitional units in the grammar where they read relationally, and prove the 59 grammar-theorem candidates or show where they fail.",
@@ -164,7 +165,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
       "role": "proof",
-      "sha256": "6a370047dcceda88ddee1c90fddbfb96f9ec3801184ff4f0c71b08d66d8cca41",
+      "sha256": "23bff2015b58fb271f207b917be41e1b9b3a68a234d9af60d4b66804be5e0cc8",
       "declarations": [
         "Becoming.«两向有常则通»",
         "Becoming.«化»",
@@ -179,6 +180,7 @@
         "Becoming.«成坏»",
         "Becoming.«昼夜往来不穷»",
         "Becoming.«有常则往不穷»",
+        "Becoming.«两向有常有前则通»",
         "Becoming.«有常而不通»",
         "Becoming.«相续之末有前»",
         "Becoming.«通»",
@@ -200,12 +202,18 @@
       "role": "receipt",
       "sha256": "e68755a739bf1219288f3192f7a182617c75421baf4458633ef2f17ce3d61318",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarReadings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -219,6 +227,10 @@
     {
       "en": "25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): 通 defined with its 往來, going along 缘 and coming along its converse, so that constancy one way no longer gives it («有常则通» renamed «有常则往不穷», for what it shows); the statement and the sentence on 同 narrowed to the sufficiency the theorem shows. The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.",
       "zh": "2026年10月25日，工作板条目 OU6（据对文法与其来源之审所作之更正，研究第 400 节）：通依其往来而定义，往沿缘、来沿其逆，故一向有常不再得通（«有常则通» 依其所示改名为 «有常则往不穷»）；陈述与同之一句收窄为定理所示之充分。凡名或读法说过了 Lean 者，论断收窄；新定理增入；其余之律不变。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): law 4 generalized, as the corpus's family of 通 needed (conditional-laws-of-the-corpus): where a class is constant both ways, what has a predecessor passes through («两向有常有前则通»); «两向有常则通», for what abides, is proved as its case, its statement unchanged. The law and the GrammarReadings.lean reference gain 1 declaration; the validation scope's counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：律 4 推广，为语料之通之族所需（conditional-laws-of-the-corpus）：类两向有常时，有前者通（«两向有常有前则通»）；«两向有常则通»（住者）证为其一例，陈述不变。律与 GrammarReadings.lean 之引用增 1 声明；验证范围之数目为收据 20261101T094230.205342Z 者。记录所述余无改变。"
     }
   ]
 }

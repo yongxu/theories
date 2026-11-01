@@ -113,6 +113,7 @@ Open classes of ideals are the Scott-open sets, on runs the open sets of the top
 | review | [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `what a finite stretch verifies`, `有限片段所证实者`, `open classes of histories`, `safety and liveness`, `Becoming.split`, `Becoming.insulates_iff_dense`, `systematic insulation (reading)`
 

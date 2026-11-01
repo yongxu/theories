@@ -1,0 +1,60 @@
+diff --git a/theories/becoming/results/records/coming-and-ceasing-keep-pace.json b/theories/becoming/results/records/coming-and-ceasing-keep-pace.json
+index ae33a05c8..a65af03f0 100644
+--- a/theories/becoming/results/records/coming-and-ceasing-keep-pace.json
++++ b/theories/becoming/results/records/coming-and-ceasing-keep-pace.json
+@@ -384,13 +384,9 @@
+         "Becoming.family_over_stretch",
+         "Becoming.fallen_within",
+         "Becoming.risen_within",
+-        "Becoming.steps_mem",
+-        "Becoming.steps_last",
+-        "Becoming.steps_mono",
+         "Becoming.Recurs",
+         "Becoming.Recurs.mono",
+         "Becoming.Recurs.accumulates",
+-        "Becoming.pos_of_exceeds",
+         "Becoming.rising_recurs",
+         "Becoming.falling_recurs",
+         "Becoming.ComesToBe",
+@@ -420,7 +416,6 @@
+         "Becoming.Attrition.web",
+         "Becoming.Attrition.ceasing",
+         "Becoming.Attrition.nothing_arises",
+-        "Becoming.recurring_accumulates",
+         "Becoming.Web.unceasing_iff_covering"
+       ]
+     },
+@@ -432,7 +427,6 @@
+         "Becoming.total_zero",
+         "Becoming.total_add",
+         "Becoming.total_le",
+-        "Becoming.total_pos",
+         "Becoming.total_pos_of_mem",
+         "Becoming.total_congr",
+         "Becoming.total_ones",
+@@ -475,7 +469,13 @@
+       "declarations": [
+         "Becoming.le_dest",
+         "Becoming.steps",
+-        "Becoming.total"
++        "Becoming.total",
++        "Becoming.steps_mem",
++        "Becoming.steps_last",
++        "Becoming.steps_mono",
++        "Becoming.pos_of_exceeds",
++        "Becoming.recurring_accumulates",
++        "Becoming.total_pos"
+       ]
+     },
+     {
+@@ -711,6 +711,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): 'The author' in the correspondence, meaning the AI, now says so, so the reading keeps its AI label.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中意指 AI 的“作者”改为 AI，使读法保持其 AI 标签。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: steps_mem, steps_last, steps_mono, pos_of_exceeds, recurring_accumulates, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：steps_mem, steps_last, steps_mono, pos_of_exceeds, recurring_accumulates, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

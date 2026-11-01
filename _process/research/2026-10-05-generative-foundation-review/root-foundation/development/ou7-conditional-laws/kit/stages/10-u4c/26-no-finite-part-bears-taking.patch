@@ -1,0 +1,33 @@
+diff --git a/theories/becoming/results/records/no-finite-part-bears-taking.json b/theories/becoming/results/records/no-finite-part-bears-taking.json
+index 4706e6cb6..a890298b3 100644
+--- a/theories/becoming/results/records/no-finite-part-bears-taking.json
++++ b/theories/becoming/results/records/no-finite-part-bears-taking.json
+@@ -496,7 +496,6 @@
+         "Becoming.total_swap",
+         "Becoming.total_add",
+         "Becoming.total_le",
+-        "Becoming.total_pos",
+         "Becoming.total_pos_of_mem",
+         "Becoming.total_zero",
+         "Becoming.sign_le",
+@@ -565,7 +564,8 @@
+         "Becoming.le_of_add_le_add_right",
+         "Becoming.steps",
+         "Becoming.total",
+-        "Becoming.Distinct"
++        "Becoming.Distinct",
++        "Becoming.total_pos"
+       ]
+     },
+     {
+@@ -807,6 +807,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): 'the author' of the analogy, the argument, the reading and the interpretation in a boundary, a related detail and the correspondence reads 'the AI', so each keeps its AI label. No law changed.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条边界、一条相关说明与对应中类比、论证、读法与诠释的“作者”改为 AI，使其各保留 AI 标签。规律未变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

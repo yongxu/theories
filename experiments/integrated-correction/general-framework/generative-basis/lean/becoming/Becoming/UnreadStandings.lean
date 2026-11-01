@@ -356,8 +356,9 @@ theorem atFinerUnit_ends (pos : 0 < k) (x : Nat × w.Relatum) :
   «亡之对应» (e := identityOnOccurrences w.Relatum) (atFinerUnit_carried pos).1
     atFinerUnit_activityClass x
 
-/-- **No reading of the model gives the count, at any occurrence of positive standing of any
-world.** Let `Ψ` read a number at each occurrence from a world's model relations, the same wherever
+/-- **No reading of the selected relations gives the count, at any occurrence of positive standing
+of any world.** Let `Ψ` read a number at each occurrence from a world's model relations as selected
+(`World.ModelRelations`, which leave out what reads a standing's value), the same wherever
 two readings agree pointwise. For every world `w`, every factor `k` with `0 < k` and `k ≠ 1`, and
 every occurrence of positive standing, `Ψ` does not return the standing both in `w` and in `w`
 counted in a unit `k` times finer. -/
@@ -452,8 +453,9 @@ theorem ratio_apart {p q p' q' a b : Nat} (pp : 0 < p) (qq' : 0 < q')
     left.symm.trans (mid.trans (assoc_mul p q' 4).symm)
   absurd (Nat.eq_of_mul_eq_mul_left (Nat.mul_pos pp qq') two_four) (by decide)
 
-/-- **No single reading of the model gives the standings of every world even up to a unit.** No `Ψ`
-that reads a number at each occurrence from a world's model relations, the same wherever two
+/-- **No single reading of the selected relations gives the standings of every world even up to a
+unit.** No `Ψ` that reads a number at each occurrence from a world's model relations as selected,
+the same wherever two
 readings agree pointwise, has, for every world, positive whole factors `p` and `q` with `q` times
 every standing equal to `p` times what `Ψ` reads. The factors are chosen world by world;
 `q = k`, `p = 1` is a reading in a unit `k` times finer than the count's, and `q = 1`, `p = k` one

@@ -435,7 +435,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
       "role": "proof",
-      "sha256": "f9087252c4c7d2d74e7f2288f4c3b089ac3fbe3da4c98af7126da9a16002d42c"
+      "sha256": "7467874bbb55895ad831aef7f0bf129d45a94238b833a4d9b78dee2912de9962"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
@@ -467,6 +467,18 @@
       "role": "receipt",
       "sha256": "fd2eaac4db131cff1dc110b19cff002bbc1ca4e57fd69a4a9a9134696d09b507",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",
+      "role": "receipt",
+      "sha256": "2809b8b512ad9cbd6d1a3a238bed12b2f723cae2b4873b3498a279c518682ecc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "role": "receipt",
+      "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -486,7 +498,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T210603.495422Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FreeEnergyCounting",
       "success_pointer": "/status",
       "success_value": "passed"

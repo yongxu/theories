@@ -38,7 +38,7 @@
 ## Does not show
 
 - Densities, the Helmholtz decomposition, nonequilibrium steady states, or that statistical and dynamical blankets coincide.
-- A formation's own record as the internal part of a blanketed law: for any formation the agent is a model fed by what couples in (a-formations-couplings-as-its-blanket).
+- A formation's other records, or its level across a family of runs, as the internal part of a blanketed law; along one run, a blanketed law for its level from the consistency condition alone (a-formations-couplings-as-its-blanket).
 - Any free energy, or that a threshold-reading policy cannot draw on a larger supply.
 - That the principle is wrong: no sentence of its literature is forbidden here.
 - **Counterexample:** From a supply of three and of four or more, with any model and policy, the internal courses agree up to step four and at step five the first has ended (ThresholdDrain.any_model). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
@@ -56,7 +56,7 @@ Canonical source: [Blanket.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A formation's own record as the internal part of a blanketed law; the threshold-reading policy unable to draw on a larger supply; review by a person.
+A formation's records other than its level as the internal part of a blanketed law; its level as that part across a family of runs, or along one run from the consistency condition alone, without functions given; the threshold-reading policy unable to draw on a larger supply; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -100,6 +100,7 @@ Aliases: `The Markov blanket as a coupling structure`, `马尔可夫毯作为耦
 - 29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.
 - 1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.
 - 1 November 2026, board item UE27 (study section 488): the World formation in general, not shown, narrowed to a formation's own record as the internal part, any model fed by a formation's couplings being the agent of a blanketed law by construction (a-formations-couplings-as-its-blanket); next step brought to it; related to a-formations-couplings-as-its-blanket; no statement, law or declaration changed.
+- 1 November 2026, board item UE28 (study section 491): a formation's own record as the internal part, not shown, narrowed to its records other than its level and its level across a family of runs, its level along one run being the internal part of a law determined part by part exactly where its next level and act agree wherever its level, what couples in and its act agree (a-formations-couplings-as-its-blanket); next step brought to it; no statement, law or declaration changed.
 
 </details>
 

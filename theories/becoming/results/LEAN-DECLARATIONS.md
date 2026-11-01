@@ -12,8 +12,8 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 358 | 17,272 |
-| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 365 | 17,989 |
+| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 16 | 890 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -429,6 +429,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Grammar.lean](lean-declarations/becoming-core.md#module-6f8602838f87) | Becoming pure core |
 | [GrammarCandidates.lean](lean-declarations/becoming-core.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core.md#module-eb5da91cd5d4) | Becoming pure core |
+| [GrammarConditionals.lean](lean-declarations/becoming-core.md#module-a4c1ca9cdf38) | Becoming pure core |
 | [GrammarCourse.lean](lean-declarations/becoming-core.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core.md#module-9ff25be30275) | Becoming pure core |
@@ -542,8 +543,11 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Lifting.lean](lean-declarations/becoming-core.md#module-d94bf165cf48) | Becoming pure core |
 | [Likeness.lean](lean-declarations/becoming-core.md#module-b00054b2fe2f) | Becoming pure core |
 | [LimitVerification.lean](lean-declarations/becoming-core.md#module-39b79d5784de) | Becoming pure core |
+| [LineDegeneration.lean](lean-declarations/becoming-core.md#module-f4e18e81a25d) | Becoming pure core |
 | [LineageAudit.lean](lean-declarations/valuation.md#module-7d1b924b40d2) | Valuation development and liangzhi |
 | [LineageInProcess.lean](lean-declarations/valuation.md#module-45b450e65721) | Valuation development and liangzhi |
+| [LineageRegimes.lean](lean-declarations/becoming-core.md#module-aee8fdbd9169) | Becoming pure core |
+| [LineageRegions.lean](lean-declarations/becoming-core.md#module-312a8e4b92b4) | Becoming pure core |
 | [LinearBlankets.lean](lean-declarations/core.md#module-4cd0718b9ba1) | Generative core and relational structure |
 | [ListFootprints.lean](lean-declarations/becoming-core.md#module-a533b5c5cf26) | Becoming pure core |
 | [ListedWebs.lean](lean-declarations/becoming-core.md#module-aea2194ee2b8) | Becoming pure core |
@@ -629,6 +633,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PaidArchiveReader.lean](lean-declarations/shared.md#module-dacef2fbbee5) | Organizational formation through revisable evaluation |
 | [PaidPreImport.lean](lean-declarations/shared.md#module-72d53bbb0ddb) | Organizational formation through revisable evaluation |
 | [PaidRecipientReasons.lean](lean-declarations/shared.md#module-c2e841f7d5e2) | Organizational formation through revisable evaluation |
+| [PairSelection.lean](lean-declarations/becoming-core.md#module-d55633e90703) | Becoming pure core |
 | [PairedPlasticity.lean](lean-declarations/shared.md#module-0f653cfbf240) | Organizational formation through revisable evaluation |
 | [ParityReadings.lean](lean-declarations/becoming-core.md#module-fa188c889ab1) | Becoming pure core |
 | [PartialReadout.lean](lean-declarations/becoming-core.md#module-177cad249c62) | Becoming pure core |
@@ -839,6 +844,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RiskConditioning.lean](lean-declarations/ethics.md#module-bb2d76a79061) | Normative grounding and generative direction |
 | [RiskPriority.lean](lean-declarations/ethics.md#module-40a0f60d9f91) | Normative grounding and generative direction |
 | [Roles.lean](lean-declarations/becoming-core.md#module-33c3f51ffbf2) | Becoming pure core |
+| [RoomNet.lean](lean-declarations/becoming-ring.md#module-d0e385090546) | Becoming instances and applications |
+| [RoomRuns.lean](lean-declarations/becoming-ring.md#module-ce6c44bcae24) | Becoming instances and applications |
 | [RootBridge.lean](lean-declarations/shared.md#module-6ab582d74d00) | Organizational formation through revisable evaluation |
 | [RootForms.lean](lean-declarations/becoming-core.md#module-e386d841be45) | Becoming pure core |
 | [RootGrounding.lean](lean-declarations/concern.md#module-c86f0b363b70) | Concern and shared activity |
@@ -875,6 +882,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SelectionReach.lean](lean-declarations/becoming-core.md#module-fbecd7401f01) | Becoming pure core |
 | [SelectionRelabelCorrespondence.lean](lean-declarations/abstraction.md#module-d28f30cfca89) | Abstraction, applicability and constitution |
 | [SelectionRuns.lean](lean-declarations/becoming-core.md#module-2670a1458719) | Becoming pure core |
+| [SelectionShift.lean](lean-declarations/becoming-core.md#module-08132097baa5) | Becoming pure core |
 | [SelectionTerm.lean](lean-declarations/becoming-core.md#module-f3d60309aa92) | Becoming pure core |
 | [SelectiveRevision.lean](lean-declarations/inquiry.md#module-2ce080a6f0f1) | Attainable inquiry, contact and process laws |
 | [SelectiveRevisionCases.lean](lean-declarations/inquiry.md#module-c0729e377475) | Attainable inquiry, contact and process laws |
@@ -992,6 +1000,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [WholeTheoryDischarge.lean](lean-declarations/inquiry.md#module-ca1aed5ff8a7) | Attainable inquiry, contact and process laws |
 | [Wholes.lean](lean-declarations/becoming-core.md#module-708cbc7816ed) | Becoming pure core |
 | [WideningOnTheMap.lean](lean-declarations/becoming-core.md#module-4c62d912982c) | Becoming pure core |
+| [WindowedWaiting.lean](lean-declarations/becoming-core.md#module-a4e5251ffe09) | Becoming pure core |
 | [WisdomFallibleJudgment.lean](lean-declarations/core.md#module-782abba8ef08) | Generative core and relational structure |
 | [WisdomGoalGrounds.lean](lean-declarations/ethics.md#module-3bd6cb85aa59) | Normative grounding and generative direction |
 | [WisdomResponseStructure.lean](lean-declarations/core.md#module-25c8adeade56) | Generative core and relational structure |

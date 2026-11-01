@@ -913,7 +913,7 @@ Where: the eight chapters of the restructured account ([01](../../../../theories
 21. **Omission, fault and informed harm** (07 §3.3). Kept apart: an omission of the representation, a fault in organized relations, and informed harm.
 22. **Mixed endings** (07 §3.4). Predation, apoptosis and ending a cancer read as mixed: losing something and opening something; telling harm from non-harm among them needs a measure.
 23. **Conscious experience** (07 §3.4). It differentiates significance within the living whole without being the only admission condition (carried from ETHICAL-LEARNING).
-24. **J1's defence** (07 §5). Basic priority defended by non-substitution, at the cost of compensation across layers (carried from PRACTICAL-JUDGMENT).
+24. **J2's defence** (07 §5). Basic priority defended by non-substitution, at the cost of compensation across layers (carried from PRACTICAL-JUDGMENT).
 25. **Symmetry names no one** (07 §5). Under exact symmetry, undertakings, rotations or a warranted procedure must differentiate who contributes.
 26. **Diagnosing closure first** (07 §6). Factual error, lack of capacity, evaluative or practical closure and real conflict are told apart before assessment.
 27. **Options that disempower** (07 §6). Keeping one's options open disempowers others exactly where the net draw goes beyond the margin for a formation outside one's region.

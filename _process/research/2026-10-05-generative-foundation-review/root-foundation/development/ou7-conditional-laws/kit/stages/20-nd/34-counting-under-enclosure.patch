@@ -1,0 +1,35 @@
+diff --git a/theories/becoming/results/records/counting-under-enclosure.json b/theories/becoming/results/records/counting-under-enclosure.json
+index acf1fe72e..5d9a64412 100644
+--- a/theories/becoming/results/records/counting-under-enclosure.json
++++ b/theories/becoming/results/records/counting-under-enclosure.json
+@@ -496,8 +496,8 @@
+       "id": "whole-law-of-counting",
+       "relation": "formal-reuse",
+       "detail": {
+-        "zh": "复用计数表与队列（Tally、Queue.holds、Queue.line、Queue.listed、Queue.counts、Queue.ceasings_eq、Queue.comings_eq、Queue.kept_end）、逐点、World.CountsObey、counting_binds_jointly 与队首的引理（OpenQueue.front、OpenQueue.occupied）。",
+-        "en": "Reuses tallies and queues (Tally, Queue.holds, Queue.line, Queue.listed, Queue.counts, Queue.ceasings_eq, Queue.comings_eq, Queue.kept_end), Pointwise, World.CountsObey, counting_binds_jointly and the front lemmas (OpenQueue.front, OpenQueue.occupied)."
++        "zh": "复用计数表与队列（Tally、Queue.holds、Queue.line、Queue.listed、Queue.counts、Queue.ceasings_eq、Queue.comings_eq、Queue.kept_end）、逐点、World.CensusMarksHold、counting_binds_jointly 与队首的引理（OpenQueue.front、OpenQueue.occupied）。",
++        "en": "Reuses tallies and queues (Tally, Queue.holds, Queue.line, Queue.listed, Queue.counts, Queue.ceasings_eq, Queue.comings_eq, Queue.kept_end), Pointwise, World.CensusMarksHold, counting_binds_jointly and the front lemmas (OpenQueue.front, OpenQueue.occupied)."
+       },
+       "interface": {
+         "output": {
+@@ -941,7 +941,7 @@
+       "declarations": [
+         "Becoming.comesToBe_congr",
+         "Becoming.ceasesToBe_congr",
+-        "Becoming.World.CountsObey"
++        "Becoming.World.CensusMarksHold"
+       ]
+     },
+     {
+@@ -1404,6 +1404,10 @@
+     {
+       "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: steps_last, steps_mem, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+       "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：steps_last, steps_mem, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold. The statements are kept but for the names; the claim is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsObey → CensusMarksHold。陈述除名外不变；论断不变。"
+     }
+   ],
+   "text_versions": [

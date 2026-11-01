@@ -1,0 +1,13 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean
+index 3a6e6e56b..e90359180 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean
+@@ -469,7 +469,7 @@ with two others the loss is overdetermined and it does not, while withholding tw
+ keeps the dependence. Each test takes the run's own move. In both runs the relational
+ reading counts the first drawer as consuming; in the first it counts the third, which
+ takes nothing, as not consuming. -/
+-theorem difference_belongs_to_the_joint :
++theorem difference_only_together :
+     (pairRun.state 0).level = (allRun.state 0).level ∧
+     (pairRun.state 0).drawing.first = (allRun.state 0).drawing.first ∧
+     dependence.MakesDifference process withhold .first (pairRun.state 0) (pairRun.act 0)
