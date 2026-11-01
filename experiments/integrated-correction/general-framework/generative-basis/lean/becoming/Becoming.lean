@@ -3422,6 +3422,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
   lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
   OU3f).
+  Ends on lines: occurrences listed once that end on lines from a list, the successor fixed where
+  the lines could part, number at most the list, with no decision (`«线终不过所列»`); at stages a
+  list covering one stage bounds the endings over a stretch with nothing beginning, and a list
+  covering its end the beginnings with nothing ending (`«间无生则间亡不过所覆»`,
+  `«间无亡则间生不过所覆»`); so, with lists at arbitrarily late stages, endings recurring need
+  beginnings recurring and, with bounded lists, conversely (`«有覆而亡屡则生屡»`, `«有界覆而生屡则亡屡»`,
+  and their undecided forms). The census of a run is their case (`«定后前者在前则亡屡者生屡»`), and
+  so are the covering laws of `Becoming.Locality`, `Becoming.Decidedness` and `Becoming.Identity`
+  (board item U4d).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
