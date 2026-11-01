@@ -233,7 +233,7 @@
         "Becoming.Viability.Kernel.mono",
         "Becoming.Viability.Kernel.run"
       ],
-      "sha256": "83fa2be908e4412c877f839c4fcf4763e7e2f36349eb0ccfe844d04bcb75556b"
+      "sha256": "ca83c0ad2fdf750d673a39ead5025f609429423b80e3605b6f2f296764ce9c69"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
@@ -290,7 +290,7 @@
         "Becoming.ModelStatements.kernel_and_reading",
         "Becoming.ModelStatements.kernel_iff"
       ],
-      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+      "sha256": "33088444032f3660972fbc92a8575eec4dc5a4efa846011b15a9301c6d2bc021"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
@@ -306,6 +306,12 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
       "role": "receipt",
       "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -325,7 +331,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"

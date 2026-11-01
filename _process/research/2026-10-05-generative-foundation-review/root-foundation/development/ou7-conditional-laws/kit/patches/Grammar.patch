@@ -1,0 +1,41 @@
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean
+@@ -498,6 +498,11 @@
+ theorem «位核含于核» (R E : «际» α) : «则» («位核» R E) («核» R E) :=
+   fun _ _ ⟨S, hSE, hs, hc, _, h⟩ => ⟨S, hSE, hs, hc, h⟩
+ 
++/-- Read both ways, the core is finer than the core of the converse net: sharing a position implies
++sharing a past. -/
++theorem «位核含于逆核» (R E : «际» α) : «则» («位核» R E) («核» («逆» R) E) :=
++  fun _ _ ⟨S, hSE, hs, _, hc', h⟩ => ⟨S, hSE, hs, hc', h⟩
++
+ /-- Ending does not tell apart what the core does not: for a class `E`, an occurrence that ends
+ under `E` has every occurrence of its core class ending too. -/
+ theorem «亡于核下不变» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «核» R E y y')
+@@ -508,15 +513,23 @@
+       | ⟨z, hrz, hzz⟩ =>
+         hy ⟨z, hrz, hE.trans (hE.trans (hSE y y' hyy) he) (hSE z' z hzz)⟩
+ 
+-/-- Beginning does not tell apart what the two-way core does not. -/
+-theorem «生于位核下不变» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y')
++/-- Beginning does not tell apart what the core of the converse net does not: for a class `E`, an
++occurrence that begins under `E` has every occurrence of its class in the core of `«逆» R` beginning
++too. The mirror of `«亡于核下不变»`; no constancy under 缘 itself is needed. -/
++theorem «生于逆核下不变» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «核» («逆» R) E y y')
+     (hy : «生» R E y) : «生» R E y' :=
+   fun ⟨w', hr, he⟩ => match hk with
+-    | ⟨S, hSE, hs, _, hc', hyy⟩ =>
++    | ⟨S, hSE, hs, hc', hyy⟩ =>
+       match («有常之逐点» («逆» R) S).mp hc' y' y (hs y y' hyy) w' hr with
+       | ⟨w, hrw, hww⟩ =>
+         hy ⟨w, hrw, hE.trans (hE.trans (hE.symm (hSE w' w hww)) he) (hE.symm (hSE y y' hyy))⟩
+ 
++/-- Beginning does not tell apart what the two-way core does not: the case of `«生于逆核下不变»` on the
++two-way core, which lies within the core of the converse net (`«位核含于逆核»`). -/
++theorem «生于位核下不变» {R E : «际» α} (hE : «类» E) {y y' : α} (hk : «位核» R E y y')
++    (hy : «生» R E y) : «生» R E y' :=
++  «生于逆核下不变» hE («位核含于逆核» R E y y' hk) hy
++
+ /-- So beginning and ending are read off the two-way core: for a class `E`, what its two-way core
+ relates shares beginning and shares ending. Abiding carries over too (`«位同则住同»`); altering is a
+ relation between two occurrences with a finer class, not a mark of one occurrence. -/

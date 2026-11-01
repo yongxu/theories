@@ -1,0 +1,42 @@
+{
+  "about": "Part B's entries for THEOREM-CONNECTIVITY-APART.json, for the landing's register stage (U1b's pattern: REASONS and NOW_USED). The roots below are predicted from the two modules' sources (comments stripped, names resolved by namespace; RoomRuns reaches the base through Law.run, so whatever it uses is not apart): 28 roots, each a fact about the rooms' rule, one constructed family of models. The rehearsal's connectivity check gives the exact list; a root it names that is not here, or a name here it does not list, stops for reading. The landing's run named one more, read and added at the landing (1 November 2026): Overshooting.heater_shifted, which nothing uses, since Overshooting.in_phase follows each step itself; 29 roots. now_used: the six register roots, all general-structure, that RoomNet uses and that so stop being roots; their entries go.",
+  "roots": {
+    "Becoming.Rooms.Matched.rows": ["model-witness", "The matched thermostat's rows of the map at every positive margin: at its set level and once its window opens it keeps, and keeps from some point on, and is neither 生成 nor 全生成 nor 有终 nor 退化. A fact about one constructed family of models (OU7)"],
+    "Becoming.Rooms.Matched.start_kept": ["model-witness", "The matched thermostat's opening step at every positive margin, from its set level shut to its set level open: a step of one constructed family of models (OU7)"],
+    "Becoming.Rooms.Overshooting.generation_strong": ["model-witness", "The overshooting thermostat at a margin of three is 全生成 at its set level and at both open occurrences it reaches: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.Overshooting.heater_shifted": ["model-witness", "From two on, the overshooting heater gives as RegimeMargin.Alternation's giving shifted by two: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.Overshooting.renewing_steps": ["model-witness", "In the overshooting thermostat at a margin of three, the opening and every open step are carrying renewals and the shut step is not: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.Overshooting.rows": ["model-witness", "The overshooting thermostat's rows of the map at a margin of three: at its set level neither 全守 nor 有终 nor 退化; once open it generates and is in no other region. A fact about one constructed model (OU7)"],
+    "Becoming.Rooms.Overshooting.single_line_tested": ["model-witness", "«单行则生成后守不并» tested both ways on one constructed model: on the open window's single line generating excludes keeping from some point on, and where the net branches the two hold together (OU7)"],
+    "Becoming.Rooms.Unheated.b1_b0": ["model-witness", "The unheated room's last open step at a margin of three, from 1 to 0: a step of one constructed model (OU7)"],
+    "Becoming.Rooms.Unheated.rows": ["model-witness", "The unheated room's rows of the map at a margin of three: at its set level it keeps from some point on and is in neither strong form, warmth not constant; once open it is in no region of generation or keeping and reaches an end. A fact about one constructed model (OU7)"],
+    "Becoming.Rooms.alike_in_core_iff": ["model-witness", "Within one room of the constructed family, warmth lies in its own core exactly where the heater gives: «温有常当且仅当有给» read through «类有常当且仅当含于核» (OU7)"],
+    "Becoming.Rooms.before_at_one": ["model-witness", "The rule read before the exchange takes a heated room at a margin of one out of warmth: a computation on one constructed model (OU7)"],
+    "Becoming.Rooms.before_pos": ["model-witness", "Read before the exchange, every step of a heated room lands warm from a margin of two on: a fact about one constructed family of models (OU7)"],
+    "Becoming.Rooms.before_unheated": ["support", "Without a heater the two reading orders are one rule: a one-line unpacking of the rooms' own definitions (OU7)"],
+    "Becoming.Rooms.before_window_moves": ["model-witness", "Read before the exchange at a margin of three, the window moves both heated rooms' levels: a computation on one constructed model (OU7)"],
+    "Becoming.Rooms.cold_rests": ["model-witness", "Once cold, the unheated room's open occurrence at 0 is 全守 at every margin: a fact about one constructed family of models (OU7)"],
+    "Becoming.Rooms.heated_unended": ["model-witness", "In a heated room of the constructed family no line of warmth from the set level ends, and none reaches an end, by «有常则往不穷» (OU7)"],
+    "Becoming.Rooms.heaters_told_apart": ["model-witness", "At a margin of three the first stage of the level tells the two heaters apart: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.joint_converse": ["model-witness", "A counterexample on the constructed rooms side by side: warmth is not constant under the joint net, yet no line of warmth from a heated room's set level ends, so the converse of «有常则往不穷» fails (OU7)"],
+    "Becoming.Rooms.shut_one_class_alike": ["model-witness", "While no window opens, the constructed rooms at their set level are one core class at warm or not, by «核之单调» (OU7)"],
+    "Becoming.Rooms.shut_rests": ["model-witness", "While no window opens, every room of the constructed family is 全守 at its set level, whatever its heater (OU7)"],
+    "Becoming.Rooms.toy_verdict": ["model-witness", "«恒温与平衡»'s verdict derived from the rooms' rule at a margin of one draw, through toy_branches and «开窗以温层如其余乃分» (OU7)"],
+    "Becoming.Rooms.unended_at_one": ["model-witness", "At a margin of one no line of warmth from the set level ends, heater or not: the counterexample showing that «温不穷当且仅当有给» needs a margin of two (OU7)"],
+    "Becoming.Rooms.«平衡守而有终»": ["model-witness", "The unheated room at a margin of three keeps, reaches an end and renews on the way, and is neither 生成 nor 退化: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.«开窗则一层可分»": ["model-witness", "With the window in the net, at every positive margin, the first stage of the level tells the unheated room from every heated one: a fact about one constructed family of models (OU7)"],
+    "Becoming.Rooms.«开窗则平衡新而尽»": ["model-witness", "Once its window opens, the unheated room at a margin of three degenerates while renewing: a fact about one constructed model (OU7)"],
+    "Becoming.Rooms.«有给之室以温不可分»": ["model-witness", "Warm or not does not tell two heated rooms of the constructed family apart: one core class at every positive margin (OU7)"],
+    "Becoming.Rooms.«温不穷当且仅当有给»": ["model-witness", "From a margin of two on, no line of warmth from the set level ends exactly where the heater gives: a law of one constructed family of models (OU7)"],
+    "Becoming.Rooms.«给如所取则全守»": ["model-witness", "The matched thermostat is 全守 before and after its window opens, at every positive margin: a fact about one constructed family of models (OU7)"],
+    "Becoming.Rooms.«给过所取则生守相杂»": ["model-witness", "The overshooting thermostat at a margin of three generates and keeps at its set level, a model case of Map.«生守相杂»: a fact about one constructed model (OU7)"]
+  },
+  "now_used": [
+    "Becoming.«全守有终不并»",
+    "Becoming.«全生成全守不并»",
+    "Becoming.«守退化不并»",
+    "Becoming.«有终则粗不有常»",
+    "Becoming.«后守退化不并»",
+    "Becoming.«守则后守»"
+  ]
+}

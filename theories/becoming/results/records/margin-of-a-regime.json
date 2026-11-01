@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T13:50:25+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -65,7 +65,7 @@
       "zh": "汲取相加，其于该点之升高为超可加，至多差一。联合汲取下的所给在需求之上次可加且不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
       "declarations": [
         "Becoming.RegimeMargin.SubadditiveAbove",
-        "Becoming.RegimeMargin.harms_superadditive"
+        "Becoming.RegimeMargin.rises_superadditive"
       ]
     },
     {
@@ -185,7 +185,7 @@
     "harms super-additive",
     "Becoming.RegimeMargin.ends_iff_below",
     "Becoming.RegimeMargin.beyond_draw_iff",
-    "Becoming.RegimeMargin.harms_superadditive"
+    "Becoming.RegimeMargin.rises_superadditive"
   ],
   "dependencies": [],
   "related": [
@@ -256,7 +256,7 @@
         "Becoming.RegimeMargin.ends_iff_below",
         "Becoming.RegimeMargin.falls_or_bound",
         "Becoming.RegimeMargin.falls_within",
-        "Becoming.RegimeMargin.harms_superadditive",
+        "Becoming.RegimeMargin.rises_superadditive",
         "Becoming.RegimeMargin.holds",
         "Becoming.RegimeMargin.keeps_of_below",
         "Becoming.RegimeMargin.lowered_raises",
@@ -277,7 +277,7 @@
         "Becoming.RegimeMargin.step_ge",
         "Becoming.RegimeMargin.Adjusted.step_holds"
       ],
-      "sha256": "2dd51c42ead8ceceaa1be0d80704a84597e51b7630ad8a3c41c30a451a1fb707"
+      "sha256": "8969413f28246ba831f13cc98b429d67c81e0fa734bf0f9d6dc30edb96e222e8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -381,12 +381,18 @@
       "role": "receipt",
       "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -440,6 +446,10 @@
     {
       "en": "1 November 2026, board item ND: law 5's lead sentence reworded as its home section 02 §5 now reads, \"harms\" being an evaluative word no law of the map uses; what the law states is unchanged, and its declaration RegimeMargin.harms_superadditive is renamed rises_superadditive at part 2.",
       "zh": "2026年11月1日，工作板条目 ND：第五律之首句依其本节 02 §5 之新文改写；“损害”为评价之词，图中无律用之。律所言不变；其声明 RegimeMargin.harms_superadditive 于第二部分更名为 rises_superadditive。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: harms_superadditive → rises_superadditive. The statements are kept but for the names; the claim is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：harms_superadditive → rises_superadditive。陈述除名外不变；论断不变。"
     }
   ]
 }

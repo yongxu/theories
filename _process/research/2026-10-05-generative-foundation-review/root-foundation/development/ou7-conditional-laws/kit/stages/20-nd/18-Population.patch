@@ -1,0 +1,13 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+index 3feed4b7d..c1690cbbf 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+@@ -41,7 +41,7 @@ many formations are active at each step, and ties the flow's count to the web's.
+   those active at the start with those that arose (`Web.Census.over_stretch`), ceasing
+   recurring needs arising recurring (`Listed.coming_of_ceasing`), and under a census
+   bounded from some step on arising recurs exactly when ceasing recurs
+-  (`Web.unceasing_iff_bounded`). Read of dependence, forming and dissolving obey the
++  (`Web.unceasing_iff_bounded`). Read of dependence, forming and dissolving satisfy the
+   same balance and laws (`Web.DependenceCensus.over_stretch`,
+   `Web.DependenceCensus.forming_of_dissolving`,
+   `Web.DependenceCensus.forming_iff_dissolving`); `Becoming.Openness` reads them of

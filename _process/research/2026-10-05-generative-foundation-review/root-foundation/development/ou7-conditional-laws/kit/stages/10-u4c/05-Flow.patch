@@ -1,0 +1,19 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean
+index 6bdf963ad..58c3394d2 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean
+@@ -179,14 +179,6 @@ theorem le_total_of_mem {q : α → Nat} {a : α} : ∀ {as : List α}, a ∈ as
+   | _ :: _, .head _ => Nat.le_add_right _ _
+   | b :: _, .tail _ mem => Nat.le_trans (le_total_of_mem mem) (Nat.le_add_left _ (q b))
+ 
+-/-- A positive total has a positive member. -/
+-theorem total_pos {q : α → Nat} : ∀ as : List α, 0 < total as q → ∃ a, a ∈ as ∧ 0 < q a
+-  | a :: as, pos => match h : q a with
+-    | 0 => match total_pos as (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
+-        ((congrArg (· + total as q) h).trans (Nat.zero_add (total as q))))) with
+-      | ⟨b, mem, positive⟩ => ⟨b, .tail a mem, positive⟩
+-    | n + 1 => ⟨a, .head as, h ▸ Nat.succ_pos n⟩
+-
+ theorem count_le (q : α → Nat) (as : List α) : count as q ≤ total as q :=
+   total_le as fun a _ => sign_le (q a)
+ 

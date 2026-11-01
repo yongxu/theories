@@ -12,8 +12,8 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 364 | 17,923 |
-| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 366 | 18,063 |
+| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 16 | 890 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -138,6 +138,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CollectiveDestruction.lean](lean-declarations/other.md#module-2b8dee3aab5f) | Other formal studies |
 | [CommonCauseDiscovery.lean](lean-declarations/other.md#module-7ef37aae8095) | Other formal studies |
 | [CommonOrganization.lean](lean-declarations/other.md#module-4501154a9279) | Other formal studies |
+| [CommonResponse.lean](lean-declarations/becoming-core.md#module-f861b0ecf2af) | Becoming pure core |
 | [CommonTaskRevision.lean](lean-declarations/other.md#module-f3a330415bf8) | Other formal studies |
 | [Commuting.lean](lean-declarations/becoming-core.md#module-135f427c041b) | Becoming pure core |
 | [ComparingCourses.lean](lean-declarations/becoming-core.md#module-8f4ea8f7874b) | Becoming pure core |
@@ -429,6 +430,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Grammar.lean](lean-declarations/becoming-core.md#module-6f8602838f87) | Becoming pure core |
 | [GrammarCandidates.lean](lean-declarations/becoming-core.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core.md#module-eb5da91cd5d4) | Becoming pure core |
+| [GrammarConditionals.lean](lean-declarations/becoming-core.md#module-a4c1ca9cdf38) | Becoming pure core |
 | [GrammarCourse.lean](lean-declarations/becoming-core.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core.md#module-9ff25be30275) | Becoming pure core |
@@ -843,6 +845,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RiskConditioning.lean](lean-declarations/ethics.md#module-bb2d76a79061) | Normative grounding and generative direction |
 | [RiskPriority.lean](lean-declarations/ethics.md#module-40a0f60d9f91) | Normative grounding and generative direction |
 | [Roles.lean](lean-declarations/becoming-core.md#module-33c3f51ffbf2) | Becoming pure core |
+| [RoomNet.lean](lean-declarations/becoming-ring.md#module-d0e385090546) | Becoming instances and applications |
+| [RoomRuns.lean](lean-declarations/becoming-ring.md#module-ce6c44bcae24) | Becoming instances and applications |
 | [RootBridge.lean](lean-declarations/shared.md#module-6ab582d74d00) | Organizational formation through revisable evaluation |
 | [RootForms.lean](lean-declarations/becoming-core.md#module-e386d841be45) | Becoming pure core |
 | [RootGrounding.lean](lean-declarations/concern.md#module-c86f0b363b70) | Concern and shared activity |

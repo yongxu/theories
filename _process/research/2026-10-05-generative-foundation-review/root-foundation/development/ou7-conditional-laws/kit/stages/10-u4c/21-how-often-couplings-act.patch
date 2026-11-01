@@ -1,0 +1,33 @@
+diff --git a/theories/becoming/results/records/how-often-couplings-act.json b/theories/becoming/results/records/how-often-couplings-act.json
+index 1db74823b..ab0175c2b 100644
+--- a/theories/becoming/results/records/how-often-couplings-act.json
++++ b/theories/becoming/results/records/how-often-couplings-act.json
+@@ -563,7 +563,8 @@
+         "Becoming.ListTests.and_right",
+         "Becoming.cond_le_one",
+         "Becoming.steps",
+-        "Becoming.total"
++        "Becoming.total",
++        "Becoming.total_pos"
+       ]
+     },
+     {
+@@ -662,7 +663,6 @@
+       "declarations": [
+         "Becoming.Flow.Balances",
+         "Becoming.total_congr",
+-        "Becoming.total_pos",
+         "Becoming.total_pos_of_mem",
+         "Becoming.le_total_of_mem"
+       ]
+@@ -1015,6 +1015,10 @@
+     {
+       "en": "22 October 2026: related to a-coupling-saturated-by-what-it-has-carried (study section 334); its statements are unchanged.",
+       "zh": "2026年10月22日：与 a-coupling-saturated-by-what-it-has-carried 相关（研究第 334 节）；其陈述不变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

@@ -1,0 +1,123 @@
+diff --git a/theories/becoming/results/records/census-balance.json b/theories/becoming/results/records/census-balance.json
+index 112822fd3..bdaeb6388 100644
+--- a/theories/becoming/results/records/census-balance.json
++++ b/theories/becoming/results/records/census-balance.json
+@@ -15,12 +15,12 @@
+   },
+   "laws": [
+     {
+-      "zh": "一个规定每步的成立者被不重复地列出且可判定时，跨过每一步，步后的列表长度加上跨步不再成立的成员数，等于步前的列表长度加上跨步开始成立的成员数：跨步保持成立的成员在两张列表上计数相同。",
+-      "en": "Where the members of which a determination holds are listed at each step, each once, and the determination is decided, across each step the length of the list after it with the number of members that ceased to be across it equals the length of the list before it with the number that came to be: the members kept across the step are counted alike on both lists.",
++      "zh": "一个规定每步的成立者被不重复地列出且可判定时，跨过每一步，步后的列表长度加上跨步不再成立的成员数，等于步前的列表长度加上跨步开始成立的成员数（Listed.across，根上一步之清点之例，第 8 条）；跨步保持成立的成员在两张列表上计数相同（Listed.keeps）。",
++      "en": "Where the members of which a determination holds are listed at each step, each once, and the determination is decided, across each step the length of the list after it with the number of members that ceased to be across it equals the length of the list before it with the number that came to be (Listed.across, a case of the root's census of a step, law 8); the members kept across the step are counted alike on both lists (Listed.keeps).",
+       "declarations": [
+         "Becoming.Listed",
+         "Becoming.Listed.across",
+-        "Becoming.marks_le_of_sub"
++        "Becoming.Listed.keeps"
+       ]
+     },
+     {
+@@ -52,8 +52,8 @@
+       ]
+     },
+     {
+-      "zh": "读于复现，平衡是精确的：不再成立复现，恰当从每一步起某个后来的列表短于起点的列表连同其间开始成立的；开始成立复现，恰当起点的列表长于某个后来的列表连同其间不再成立的。普查定律与有界定律由此推出（ceasing-needs-arising、bounded-census-keeps-pace）。",
+-      "en": "Read of recurrence the balance is exact: ceasing to be recurs exactly when, from each step, some later list is shorter than the list at the start with what came to be between, and coming to be recurs exactly when the list at the start is longer than some later list with what ceased to be between. The census law and the bounded law follow from it (ceasing-needs-arising, bounded-census-keeps-pace).",
++      "zh": "读于复现，平衡是精确的：不再成立复现，恰当从每一步起某个后来的列表短于起点的列表连同其间开始成立的；开始成立复现，恰当起点的列表长于某个后来的列表连同其间不再成立的。有界定律由此推出（bounded-census-keeps-pace）；普查定律（ceasing-needs-arising）至 U4c 由此证明，U4c 改经根上一程之清点证明，它仍由此推出。",
++      "en": "Read of recurrence the balance is exact: ceasing to be recurs exactly when, from each step, some later list is shorter than the list at the start with what came to be between, and coming to be recurs exactly when the list at the start is longer than some later list with what ceased to be between. The bounded law follows from it (bounded-census-keeps-pace); the census law (ceasing-needs-arising) was proved from it until U4c, which proved it through the root's census of a run, and still follows from it.",
+       "declarations": [
+         "Becoming.Listed.ceasing_iff_shortfall",
+         "Becoming.Listed.coming_iff_excess"
+@@ -82,6 +82,7 @@
+       "declarations": [
+         "Becoming.balance_over_stretch_on",
+         "Becoming.Listed.across_at",
++        "Becoming.total_mark_eq_count",
+         "Becoming.Listed.over_stretch_on",
+         "Becoming.Web.StandingCensus.over_stretch_on"
+       ]
+@@ -234,8 +235,8 @@
+     {
+       "id": "ceasing-needs-arising",
+       "detail": {
+-        "zh": "普查定律由本平衡推出（P30）。",
+-        "en": "The census law follows from this balance (P30)."
++        "zh": "普查定律自 P30 至 U4c 由本平衡证明，U4c 改经根上一程的清点证明；它仍由本平衡推出。",
++        "en": "The census law was proved from this balance from P30 until U4c, which proved it through the root's census of a run; it still follows from it."
+       }
+     },
+     {
+@@ -258,6 +259,13 @@
+         "zh": "计数作为关系时，计数之间的普查不用可判定性，段内各步也不用。",
+         "en": "With counting as a relation, the census between counts needs no decidedness, not even at the steps inside the stretch."
+       }
++    },
++    {
++      "id": "master-laws-on-the-grammar",
++      "detail": {
++        "en": "The root's census of a step and its mirror («定后则后并亡不过前并生», «定前则前并生不过后并亡»), of which Listed.across_at is the case at the step's relation on members, each continuing only itself where it holds at both ends (law 8).",
++        "zh": "根上一步的清点及其镜像（«定后则后并亡不过前并生»、«定前则前并生不过后并亡»），Listed.across_at 是它们在该步成员间关系上的情形，每个成员在两端都成立处只延续自身（第 8 条）。"
++      }
+     }
+   ],
+   "references": [
+@@ -273,7 +281,7 @@
+         "Becoming.Listed.comings_within",
+         "Becoming.Web.Census",
+         "Becoming.Web.Census.over_stretch",
+-        "Becoming.marks_le_of_sub",
++        "Becoming.Listed.keeps",
+         "Becoming.mark_one",
+         "Becoming.mark_zero",
+         "Becoming.mark_add_not",
+@@ -285,6 +293,7 @@
+         "Becoming.Web.DependenceCensus",
+         "Becoming.Web.DependenceCensus.over_stretch",
+         "Becoming.Listed.across_at",
++        "Becoming.total_mark_eq_count",
+         "Becoming.Listed.over_stretch_on",
+         "Becoming.Listed.ceasing_iff_shortfall_from",
+         "Becoming.Listed.coming_iff_excess_from"
+@@ -325,7 +334,11 @@
+         "Becoming.total",
+         "Becoming.steps",
+         "Becoming.balance_over_stretch",
+-        "Becoming.balance_over_stretch_on"
++        "Becoming.balance_over_stretch_on",
++        "Becoming.steps_last",
++        "Becoming.steps_mem",
++        "Becoming.pos_of_exceeds",
++        "Becoming.total_pos"
+       ]
+     },
+     {
+@@ -348,9 +361,6 @@
+         "Becoming.Attrition.web",
+         "Becoming.Attrition.ceasing",
+         "Becoming.Attrition.nothing_arises",
+-        "Becoming.steps_last",
+-        "Becoming.steps_mem",
+-        "Becoming.pos_of_exceeds",
+         "Becoming.mark_pos"
+       ]
+     },
+@@ -377,7 +387,6 @@
+         "Becoming.total_ones",
+         "Becoming.total_append",
+         "Becoming.Web.ComesToStand",
+-        "Becoming.total_pos",
+         "Becoming.total_pos_of_mem"
+       ]
+     },
+@@ -726,6 +735,10 @@
+     {
+       "en": "28 October 2026, EC6d (EC6's audit): a law added, the census read of activity on a web, counted with no decidedness (CensusWebs.keep_pace, CountsAcross.keep_pace, Counts.over_stretch), so that COVERAGE's dissolution row cites a declaration this record states; Counts.over_stretch now follows from the prelude's stretch balance (EC6b). The statement is unchanged.",
+       "zh": "2026年10月28日，EC6d（EC6 之审计）：增一律，即网上以活动读、不假定可判定而计数之普查（CensusWebs.keep_pace、CountsAcross.keep_pace、Counts.over_stretch），使 COVERAGE 之止息行所引之声明为本记录所述；Counts.over_stretch 今出于序章之跨段平衡（EC6b）。陈述不变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): Listed.across_at is re-proved as a case of the root's census of a step, its statement unchanged, and the root's census joins related. Law 1 says Listed.across is that case and declares Listed.keeps, whose counting of the members kept the text names, in place of marks_le_of_sub, which Listed.across no longer goes through; law 5 and the related note on ceasing-needs-arising say the census law was proved from the balance until U4c and still follows from it; law 8 declares total_mark_eq_count, by which Listed.across_at reads marks as the root's count. Declarations moved with their full names: steps_last, steps_mem, pos_of_exceeds, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：Listed.across_at 改证为根上一步之清点之例，其陈述不变；根上之清点入相关。第 1 条言 Listed.across 为其例，并声明 Listed.keeps（其文所言保持成员之计数）以代 marks_le_of_sub，Listed.across 已不经后者；第 5 条与关于 ceasing-needs-arising 之相关说明言普查定律至 U4c 由平衡证明，今仍由之推出；第 8 条声明 total_mark_eq_count，Listed.across_at 以之将标记读作根上之计。声明以完整名称移动：steps_last, steps_mem, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

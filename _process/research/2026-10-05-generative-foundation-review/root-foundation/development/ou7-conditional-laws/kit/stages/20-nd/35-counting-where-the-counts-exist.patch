@@ -1,0 +1,39 @@
+diff --git a/theories/becoming/results/records/counting-where-the-counts-exist.json b/theories/becoming/results/records/counting-where-the-counts-exist.json
+index 4b35525bc..a28ed67d9 100644
+--- a/theories/becoming/results/records/counting-where-the-counts-exist.json
++++ b/theories/becoming/results/records/counting-where-the-counts-exist.json
+@@ -63,8 +63,8 @@
+         "Becoming.World.ceasings_exist_iff_listed",
+         "Becoming.World.comings_exist_iff_listed",
+         "Becoming.World.countsOf_decided",
+-        "Becoming.World.CountsHold.obey",
+-        "Becoming.World.countsHold_of_obey"
++        "Becoming.World.CountsHold.marks",
++        "Becoming.World.countsHold_of_marks"
+       ]
+     },
+     {
+@@ -246,10 +246,10 @@
+         "Becoming.FamilyCounts",
+         "Becoming.FamilyCounts.tally",
+         "Becoming.World.CountsHold",
+-        "Becoming.World.CountsHold.obey",
++        "Becoming.World.CountsHold.marks",
+         "Becoming.World.CountsOf",
+         "Becoming.World.CountsOf.tally",
+-        "Becoming.World.countsHold_of_obey",
++        "Becoming.World.countsHold_of_marks",
+         "Becoming.World.countsOf_decided",
+         "Becoming.tally_step",
+         "Becoming.FamilyCounts.of_eq"
+@@ -425,6 +425,10 @@
+     {
+       "en": "20 October 2026, R37b (B11 of the twentieth review: one census table for any listing, the laws of counting what is active, what stands and what depends its instances, the counted and decided forms from one soundness and one witness): Moved with their full names: from CensusBinding.lean to Counting.lean, World.CountsOf.active_pos, World.CountsOf.acts_of_binding, World.CountsOf.arising_pos, World.CountsOf.company_binding, World.CountsOf.joint_of_binding, World.binds_arising_counted; from CensusCounts.lean to CensusTable.lean, FamilyCounts, FamilyCounts.tally, World.CountsHold, World.CountsHold.obey, World.CountsOf, World.CountsOf.tally, World.countsHold_of_obey, World.countsOf_decided, tally_step; from CensusCounts.lean to Counting.lean, World.active_of_coming_enclosed, World.active_of_coming_jointly, World.active_of_coming_taking, World.enclosure_bounds_change_counted. Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/r37b/RENAME-TABLE.json): World.countsOf_eq (now FamilyCounts.of_eq). Proof bindings (CensusBinding.lean, CensusCounts.lean) rebound to core receipt 20261020T060542.295041Z. Re-pointed after reading the change: CensusBinding.lean: each counted binding law the census table of its decided form in Counting; the binding steps moved to Counting; kept statements unchanged; CensusCounts.lean: each counted law the census table of its decided form in Counting; the census of activity moved to CensusTable, the binding steps to Counting; helpers left unused removed; kept statements unchanged. The claim is unchanged.",
+       "zh": "2026年10月20日，R37b（第二十次评审的 B11：任一列举的一个普查表，计数所活动、所立与所依的规律为其实例，计数式与判定式由一个可靠性与一个见证给出）：连同完整名称移动：从 CensusBinding.lean 到 Counting.lean：World.CountsOf.active_pos、World.CountsOf.acts_of_binding、World.CountsOf.arising_pos、World.CountsOf.company_binding、World.CountsOf.joint_of_binding、World.binds_arising_counted；从 CensusCounts.lean 到 CensusTable.lean：FamilyCounts、FamilyCounts.tally、World.CountsHold、World.CountsHold.obey、World.CountsOf、World.CountsOf.tally、World.countsHold_of_obey、World.countsOf_decided、tally_step；从 CensusCounts.lean 到 Counting.lean：World.active_of_coming_enclosed、World.active_of_coming_jointly、World.active_of_coming_taking、World.enclosure_bounds_change_counted。以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/r37b/RENAME-TABLE.json）：World.countsOf_eq（现为 FamilyCounts.of_eq）。证明绑定（CensusBinding.lean、CensusCounts.lean）改到核心回执 20261020T060542.295041Z。读过改动后重新指向：CensusBinding.lean：每条计数式约束规律为 Counting 中其判定形式的普查表；约束步骤移至 Counting；保留的陈述不变；CensusCounts.lean：每条计数式规律为 Counting 中其判定形式的普查表；活动普查移至 CensusTable，约束步骤移至 Counting；不再使用的辅助引理删去；保留的陈述不变。论断不变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsHold.obey → CountsHold.marks, countsHold_of_obey → countsHold_of_marks. The statements are kept but for the names; the claim is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsHold.obey → CountsHold.marks, countsHold_of_obey → countsHold_of_marks。陈述除名外不变；论断不变。"
+     }
+   ],
+   "text_versions": [

@@ -1,0 +1,19 @@
+@Becoming.nodup_append_of_apart : ∀ {α : Type u_1} {l m : List α},
+  l.Nodup → m.Nodup → (∀ (a : α), a ∈ l → a ∈ m → False) → (l ++ m).Nodup
+@Becoming.JointPlan.within_of_realizes : ∀ {S : Type u_1} {R : Type u_2} {footprint : S → R → Prop}
+  {J : S → S → S → Prop},
+  Becoming.PartsWithin footprint J →
+    ∀ (p : Becoming.JointPlan (List R)) (s : S),
+      Becoming.JointPlan.Realizes J (Becoming.Supports footprint) s p → ∀ (a : R), a ∈ p.draws → footprint s a
+@Becoming.JointPlan.nodup_of_realizes : ∀ {S : Type u_1} {R : Type u_2} {footprint : S → R → Prop}
+  {J : S → S → S → Prop},
+  Becoming.PartsWithin footprint J →
+    Becoming.PartsApart footprint J →
+      ∀ (p : Becoming.JointPlan (List R)) (s : S),
+        Becoming.JointPlan.Realizes J (Becoming.Supports footprint) s p → p.draws.Nodup
+@Becoming.JointPlan.supports_of_realizes : ∀ {S : Type u_1} {R : Type u_2} {footprint : S → R → Prop}
+  {J : S → S → S → Prop},
+  Becoming.PartsWithin footprint J →
+    Becoming.PartsApart footprint J →
+      ∀ (p : Becoming.JointPlan (List R)) (s : S),
+        Becoming.JointPlan.Realizes J (Becoming.Supports footprint) s p → Becoming.Supports footprint s p.draws

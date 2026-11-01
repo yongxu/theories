@@ -1,0 +1,24 @@
+diff --git a/theories/becoming/results/records/conditioning-by-restriction.json b/theories/becoming/results/records/conditioning-by-restriction.json
+index d88e27d93..7830faff9 100644
+--- a/theories/becoming/results/records/conditioning-by-restriction.json
++++ b/theories/becoming/results/records/conditioning-by-restriction.json
+@@ -10,7 +10,7 @@
+   "family": "F01",
+   "reviewed_at_utc": "2026-10-25T16:34:54+00:00",
+   "statement": {
+-    "en": "On a natural weighting of listed courses, restricting to a record is conditioning: an event weighs what the courses meeting it and the record weigh. Shares compared by cross-multiplication obey Bayes's rule, give a generative model's posterior and multiply under independence.",
++    "en": "On a natural weighting of listed courses, restricting to a record is conditioning: an event weighs what the courses meeting it and the record weigh. Shares compared by cross-multiplication satisfy Bayes's rule, give a generative model's posterior and multiply under independence.",
+     "zh": "于所列历程之自然数权重，限于一记录即条件化：一事件之重为兼合该事件与该记录之历程之重。以交叉相乘比较之份额合贝叶斯法则，给生成模型之后验，独立时相乘，皆为计数之恒等。"
+   },
+   "laws": [
+@@ -426,6 +426,10 @@
+     {
+       "en": "30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the correspondence names the bound in counts in the core; no statement, next step or declaration changed.",
+       "zh": "2026年10月30日，工作板条目 UE21（研究第 460 节）：与 free-energy-bound-in-counts 相关联；对应指明核心中计数之界；无一陈述、下一步或声明改变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ]
+ }

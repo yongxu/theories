@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "每条规律对每个世界成立，证明所用的条件写在规律之内，是该世界在所用步与关系项上的事实：一步上的平衡定下开始立着与不再立着，下降定下并约束变化，覆盖成立者的列表把不再成立连到开始成立。",
     "en": "Each law holds of every world, with the condition its proof uses stated inside it as a fact about that world at the steps and relata used: balance at a step fixes coming to stand and ceasing to stand, running down fixes and bounds change, and a list covering what holds ties ceasing to arising."
@@ -221,8 +221,8 @@
     "en": "Restate the remaining localizable laws (dependence, reserve and support) locally; real-valued time; the representation decisions of class (b) and the names."
   },
   "correspondence": {
-    "zh": "各取舍下的定理问的是：在八个前提的某种取舍之下，计数服从哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，各取舍下的结果因此是推论。读法（AI，依 Ren 的交托采用）：不用条件的理论中前提约束的规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
-    "en": "The theorems on choices of premises ask which laws the counts obey under a choice of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the results for each choice are corollaries. Reading (AI, adopted on Ren's delegation): the laws that the premises bound in the theory without the condition are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
+    "zh": "各取舍下的定理问的是：在八个前提的某种取舍之下，计数满足哪些规律。按 Ren 的转向，本结果改问：每条规律在世界的哪些步与关系项上需要什么。证明表明所需的条件都是局部的：一步的规律只用该步、该条件上的平衡；停息只用跨过那些步、包含所立者的家族的下降，不需要封闭；下降约束变化对所立者不需要体现；不再存在需要生起只用覆盖成立者的列表，不需要普查。前提对每一步成立时，这些条件在每一步成立，各取舍下的结果因此是推论。读法（AI，依 Ren 的交托采用）：不用条件的理论中前提约束的规律，是每一步及其关系项的规律；前提是使它们的条件处处成立的一种方式。",
+    "en": "The theorems on choices of premises ask which laws the counts satisfy under a choice of the eight premises. Following Ren's redirect, this result asks instead what each law needs, at which steps and relata of the world. The proofs show the conditions are local: the laws of one step use balance only at that step and condition; rest uses only a family holding what stands running down across those steps, with no closure; running down bounds the change of what stands with no embodiment; ceasing needs arising uses only a list covering what holds, with no census. Where the premises hold at every step, these conditions hold at every step, so the results for each choice are corollaries. Reading (AI, adopted on Ren's delegation): the laws that the premises bound in the theory without the condition are laws of each step and its relata, and the premises are one way of making their conditions hold everywhere."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
   "aliases": [
@@ -396,7 +396,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
       "role": "proof",
-      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
       "declarations": [
         "Becoming.pos_iff_lt",
         "Becoming.exists_lt_of_total_lt",
@@ -479,7 +479,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
       "role": "proof",
-      "sha256": "2692f00f1534f3a09614292b3673b01b396618535e2cc39260d8e7292d50cfc4",
+      "sha256": "33b1c443d5a77f1d3c55a2b2f34b5cf44c4949a5f74e1579bb45135018f7ac05",
       "declarations": [
         "Becoming.World.enclosure_bounds_change",
         "Becoming.World.taking_binds_counting",
@@ -489,7 +489,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
       "role": "proof",
-      "sha256": "b3991260454611c4c8fa7f36b5e5ca25489ed5b9126b9be0522fb92df74354c9",
+      "sha256": "a552ea48d790ad377a6b21350794fd9dc153c7c3ed54e5cf1981abe15ff9d213",
       "declarations": [
         "Becoming.World.enclosure_bounds_standing",
         "Becoming.World.enclosed_binds_standing",
@@ -516,7 +516,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.lt_iff_pos",
@@ -532,7 +532,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "0d89f7c0d8f1f11639e84816fd8696cd924200cc89f55b8c3f937b4ccea2bd83",
+      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d",
       "declarations": [
         "Becoming.ComesToBe",
         "Becoming.CeasesToBe",
@@ -543,12 +543,19 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
+      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
       "declarations": [
         "Becoming.Listed",
         "Becoming.came_between",
-        "Becoming.not_not_all",
         "Becoming.came_between_from"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+      "declarations": [
+        "Becoming.not_not_all"
       ]
     },
     {
@@ -716,12 +723,24 @@
       "role": "receipt",
       "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
+      "role": "receipt",
+      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Locality",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -742,14 +761,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T075104.511517Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Counting",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T060542.295041Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Standing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -763,22 +782,29 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -879,6 +905,14 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the representation premise states what the sign term does (a formation that takes from the family gives back less than it takes) instead of naming who chose it; the scope item on closure no longer attributes the phrase ‘closure bounds change’, whose provenance is kept in the decision record (D45 (5)); the laws are unchanged. Also, the retired label Part I in the correspondence (AI text) reads the theory without the condition, and in a law and the correspondence a subset of the premises is called a choice, not a selection: selection is the word for what goes through couplings.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：表示前提写明 sign 项所作（从家族取用的形成归还给家族的少于所取），不再写选定者；关于封闭的范围项不再标注“封闭约束变化”一语之归属，其来历留在决定记录中（D45 (5)）；规律不变。另，对应中（AI 文字）的退役标签“第一部分”改为“不用条件的理论”；一条规律与对应中前提之子集称取舍，不称选择：“选择”一词留给经耦合而行者。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: not_not_all to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; not_not_all generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：not_not_all 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；not_not_all 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
     }
   ],
   "text_versions": [

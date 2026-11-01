@@ -1,0 +1,464 @@
+@Becoming.SelectionLevels.whole_total : ∀ {α : Type} (gs : List (List α)) (q : α → Nat),
+  Becoming.total (Becoming.SelectionLevels.whole gs) q = Becoming.total gs fun g => Becoming.total g q
+@Becoming.SelectionLevels.whole_weighted : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat),
+  Becoming.SelectionTerm.weighted (Becoming.SelectionLevels.whole gs) w a =
+    Becoming.total gs fun g => Becoming.SelectionTerm.weighted g w a
+@Becoming.SelectionLevels.whole_length : ∀ {α : Type} (gs : List (List α)),
+  (Becoming.SelectionLevels.whole gs).length = Becoming.total gs fun g => g.length
+@Becoming.SelectionLevels.total_eq_of_mem : ∀ {α : Type} {p q : α → Nat} {as : List α},
+  (∀ (a : α), a ∈ as → p a = q a) → Becoming.total as p = Becoming.total as q
+@Becoming.SelectionLevels.whole_length_of_equal : ∀ {α : Type} {gs : List (List α)} {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) → (Becoming.SelectionLevels.whole gs).length = gs.length * m
+@Becoming.SelectionLevels.context_total : ∀ {α : Type} (q : List α → Nat) (gs : List (List α)),
+  Becoming.total (Becoming.SelectionLevels.context gs) q = Becoming.total gs fun g => g.length * q g
+@Becoming.SelectionLevels.context_length : ∀ {α : Type} (gs : List (List α)),
+  (Becoming.SelectionLevels.context gs).length = (Becoming.SelectionLevels.whole gs).length
+@Becoming.SelectionLevels.mem_of_mem_context : ∀ {α : Type} {gs : List (List α)} {x : List α},
+  x ∈ Becoming.SelectionLevels.context gs → x ∈ gs
+Becoming.SelectionLevels.shuffle_left : ∀ (c dw d' q s p : Nat),
+  c + (dw + d') + (q + (s + p)) = q + c + (s + dw + (p + d'))
+Becoming.SelectionLevels.shuffle_right : ∀ (s d p cw q c' : Nat),
+  s + d + (p + cw + (q + c')) = d + (cw + c') + (q + (s + p))
+@Becoming.SelectionLevels.meet : ∀ {s d q c dw p cw d' c' : Nat},
+  s + d = q + c → s + dw = p + cw → p + d' = q + c' → c + (dw + d') = d + (cw + c')
+Becoming.SelectionLevels.square_split : ∀ (n x y : Nat), n * x * (n * y) = n * n * (x * y)
+@Becoming.SelectionLevels.levels_sized : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) (c : List α → Nat) {n : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    n * n * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a +
+        (n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.discordWithinBy gs c w a +
+          Becoming.SelectionLevels.discordMeans gs c w a) =
+      n * n * Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a +
+        (n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.concordWithinBy gs c w a +
+          Becoming.SelectionLevels.concordMeans gs c w a)
+@Becoming.SelectionLevels.pairs_context : ∀ {α : Type} {gs : List (List α)} {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    ∀ (F : List α → List α → Nat),
+      (Becoming.total (Becoming.SelectionLevels.context gs) fun x =>
+          Becoming.total (Becoming.SelectionLevels.context gs) (F x)) =
+        m * m * Becoming.total gs fun g => Becoming.total gs (F g)
+@Becoming.SelectionLevels.within_by_one : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat),
+  Becoming.SelectionLevels.concordWithinBy gs (fun x => 1) w a = Becoming.SelectionLevels.concordWithin gs w a ∧
+    Becoming.SelectionLevels.discordWithinBy gs (fun x => 1) w a = Becoming.SelectionLevels.discordWithin gs w a
+@Becoming.SelectionLevels.among_by_one : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat),
+  (Becoming.SelectionTerm.concord gs (fun g => 1 * Becoming.total g w) fun g => 1 * Becoming.total g a) =
+      Becoming.SelectionLevels.concordAmong gs w a ∧
+    (Becoming.SelectionTerm.discord gs (fun g => 1 * Becoming.total g w) fun g => 1 * Becoming.total g a) =
+      Becoming.SelectionLevels.discordAmong gs w a
+@Becoming.SelectionLevels.nil_of_length_zero : ∀ {α : Type} {g : List α}, g.length = 0 → g = []
+@Becoming.SelectionLevels.whole_nil : ∀ {α : Type} {gs : List (List α)},
+  (∀ (g : List α), g ∈ gs → g.length = 0) → Becoming.SelectionLevels.whole gs = []
+@Becoming.SelectionLevels.levels : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a +
+        (gs.length * Becoming.SelectionLevels.discordWithin gs w a + Becoming.SelectionLevels.discordAmong gs w a) =
+      Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a +
+        (gs.length * Becoming.SelectionLevels.concordWithin gs w a + Becoming.SelectionLevels.concordAmong gs w a)
+@Becoming.SelectionLevels.rises_iff : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+      gs.length * Becoming.SelectionLevels.discordWithin gs w a + Becoming.SelectionLevels.discordAmong gs w a <
+        gs.length * Becoming.SelectionLevels.concordWithin gs w a + Becoming.SelectionLevels.concordAmong gs w a)
+@Becoming.SelectionLevels.none_iff : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a =
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+      gs.length * Becoming.SelectionLevels.discordWithin gs w a + Becoming.SelectionLevels.discordAmong gs w a =
+        gs.length * Becoming.SelectionLevels.concordWithin gs w a + Becoming.SelectionLevels.concordAmong gs w a)
+@Becoming.SelectionLevels.square_lt_iff : ∀ {n x y : Nat}, 0 < n → (n * n * x < n * n * y ↔ x < y)
+@Becoming.SelectionLevels.square_eq_iff : ∀ {n x y : Nat}, 0 < n → (n * n * x = n * n * y ↔ x = y)
+@Becoming.SelectionLevels.rises_iff_sized : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+  {n : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    0 < n →
+      (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+        n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.discordWithinBy gs c w a +
+            Becoming.SelectionLevels.discordMeans gs c w a <
+          n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.concordWithinBy gs c w a +
+            Becoming.SelectionLevels.concordMeans gs c w a)
+@Becoming.SelectionLevels.none_iff_sized : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+  {n : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    0 < n →
+      (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a =
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+        n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.discordWithinBy gs c w a +
+            Becoming.SelectionLevels.discordMeans gs c w a =
+          n * (Becoming.SelectionLevels.whole gs).length * Becoming.SelectionLevels.concordWithinBy gs c w a +
+            Becoming.SelectionLevels.concordMeans gs c w a)
+@Becoming.SelectionLevels.means_none_of_alike : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {c : List α → Nat}
+  {d : Nat},
+  (∀ (g : List α), g ∈ gs → c g * Becoming.total g a = d) →
+    Becoming.SelectionLevels.concordMeans gs c w a = 0 ∧ Becoming.SelectionLevels.discordMeans gs c w a = 0
+@Becoming.SelectionLevels.rises_iff_within_of_alike : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat)
+  (c : List α → Nat) {n d : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    0 < n * (Becoming.SelectionLevels.whole gs).length →
+      (∀ (g : List α), g ∈ gs → c g * Becoming.total g a = d) →
+        (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+          Becoming.SelectionLevels.discordWithinBy gs c w a < Becoming.SelectionLevels.concordWithinBy gs c w a)
+@Becoming.SelectionLevels.among_for_of_rises : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.SelectionLevels.concordWithin gs w a ≤ Becoming.SelectionLevels.discordWithin gs w a →
+      Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a →
+        Becoming.SelectionLevels.discordAmong gs w a < Becoming.SelectionLevels.concordAmong gs w a
+@Becoming.SelectionLevels.within_for_of_rises : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.SelectionLevels.concordAmong gs w a ≤ Becoming.SelectionLevels.discordAmong gs w a →
+      Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a →
+        Becoming.SelectionLevels.discordWithin gs w a < Becoming.SelectionLevels.concordWithin gs w a
+@Becoming.SelectionLevels.within_none_of_uniform : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat},
+  (∀ (g : List α), g ∈ gs → ∃ c, ∀ (p : α), p ∈ g → a p = c) →
+    Becoming.SelectionLevels.concordWithin gs w a = 0 ∧ Becoming.SelectionLevels.discordWithin gs w a = 0
+@Becoming.SelectionLevels.levels_of_uniform : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∃ c, ∀ (p : α), p ∈ g → a p = c) →
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a +
+          Becoming.SelectionLevels.discordAmong gs w a =
+        Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a +
+          Becoming.SelectionLevels.concordAmong gs w a
+@Becoming.SelectionLevels.among_none_of_alike : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {c : Nat},
+  (∀ (g : List α), g ∈ gs → Becoming.total g a = c) →
+    Becoming.SelectionLevels.concordAmong gs w a = 0 ∧ Becoming.SelectionLevels.discordAmong gs w a = 0
+@Becoming.SelectionLevels.levels_of_alike : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {m c : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → Becoming.total g a = c) →
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a +
+          gs.length * Becoming.SelectionLevels.discordWithin gs w a =
+        Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a +
+          gs.length * Becoming.SelectionLevels.concordWithin gs w a
+@Becoming.SelectionLevels.rises_exact_iff_levels : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t m : Nat}
+  (gs : List (List α)),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length = m) →
+      Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+        (G.Raises t ↔
+          gs.length * Becoming.SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) +
+              Becoming.SelectionLevels.discordAmong gs (G.offspringNumber t) (G.amount t) <
+            gs.length * Becoming.SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) +
+              Becoming.SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t))
+@Becoming.SelectionLevels.rises_exact_iff_sized : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t n : Nat}
+  (gs : List (List α)) (c : List α → Nat),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+      0 < n →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (G.Raises t ↔
+            n * (Becoming.SelectionLevels.whole gs).length *
+                  Becoming.SelectionLevels.discordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+                Becoming.SelectionLevels.discordMeans gs c (G.offspringNumber t) (G.amount t) <
+              n * (Becoming.SelectionLevels.whole gs).length *
+                  Becoming.SelectionLevels.concordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+                Becoming.SelectionLevels.concordMeans gs c (G.offspringNumber t) (G.amount t))
+@Becoming.SelectionLevels.rises_exact_iff_within_of_alike : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {t n d : Nat} (gs : List (List α)) (c : List α → Nat),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+      0 < n * (Becoming.SelectionLevels.whole gs).length →
+        (∀ (g : List α), g ∈ gs → c g * Becoming.total g (G.amount t) = d) →
+          Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+            (G.Raises t ↔
+              Becoming.SelectionLevels.discordWithinBy gs c (G.offspringNumber t) (G.amount t) <
+                Becoming.SelectionLevels.concordWithinBy gs c (G.offspringNumber t) (G.amount t))
+@Becoming.SelectionLevels.among_for_of_raises : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {t m : Nat}
+  (gs : List (List α)),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length = m) →
+      Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+        Becoming.SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) ≤
+            Becoming.SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) →
+          G.Raises t →
+            Becoming.SelectionLevels.discordAmong gs (G.offspringNumber t) (G.amount t) <
+              Becoming.SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t)
+@Becoming.SelectionLevels.within_by_none_of_uniform : ∀ {α : Type} {gs : List (List α)} {c : List α → Nat}
+  {w a : α → Nat},
+  (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → a p = v) →
+    Becoming.SelectionLevels.concordWithinBy gs c w a = 0 ∧ Becoming.SelectionLevels.discordWithinBy gs c w a = 0
+@Becoming.SelectionLevels.rises_iff_means_of_uniform : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat)
+  (c : List α → Nat) {n : Nat},
+  (∀ (g : List α), g ∈ gs → g.length * c g = n) →
+    0 < n →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → a p = v) →
+        (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+          Becoming.SelectionLevels.discordMeans gs c w a < Becoming.SelectionLevels.concordMeans gs c w a)
+@Becoming.SelectionLevels.whole_map : ∀ {α β : Type} (f : β → List α) (gs : List β),
+  Becoming.SelectionLevels.whole (List.map f gs) = List.flatMap f gs
+@Becoming.SelectionLevels.flatMap_flatMap : ∀ {α β : Type} (F : β → List α) (k : α → List α) (gs : List β),
+  List.flatMap k (List.flatMap F gs) = List.flatMap (fun g => List.flatMap k (F g)) gs
+@Becoming.SelectionLevels.lineages_family : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    ∀ (t : Nat), List.flatMap (fun g => Becoming.SelectionLevels.lineage G g t) gs = G.family t
+@Becoming.SelectionLevels.lineages_whole : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    ∀ (t : Nat), Becoming.SelectionLevels.whole (Becoming.SelectionLevels.lineages G gs t) = G.family t
+@Becoming.SelectionLevels.lineage_within : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {g : List α},
+  (∀ (p : α), p ∈ g → p ∈ G.family 0) → ∀ (t : Nat) (p : α), p ∈ Becoming.SelectionLevels.lineage G g t → p ∈ G.family t
+@Becoming.SelectionLevels.lineage_keeps : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {g : List α}
+  {v : Nat},
+  (∀ (p : α), p ∈ g → p ∈ G.family 0) →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      (∀ (p : α), p ∈ g → G.amount 0 p = v) →
+        ∀ (t : Nat) (p : α), p ∈ Becoming.SelectionLevels.lineage G g t → G.amount t p = v
+@Becoming.SelectionLevels.lineage_total : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {g : List α}
+  {v : Nat},
+  (∀ (p : α), p ∈ g → p ∈ G.family 0) →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      (∀ (p : α), p ∈ g → G.amount 0 p = v) →
+        ∀ (t : Nat),
+          Becoming.total (Becoming.SelectionLevels.lineage G g t) (G.amount t) =
+            (Becoming.SelectionLevels.lineage G g t).length * v
+@Becoming.SelectionLevels.lineage_value : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      ∀ {v : List α → Nat},
+        (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → G.amount 0 p = v g) →
+          ∀ {g : List α}, g ∈ gs → ∀ (t : Nat) {p : α}, p ∈ Becoming.SelectionLevels.lineage G g t → G.amount t p = v g
+@Becoming.SelectionLevels.lineages_uniform : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → G.amount 0 p = v) →
+        ∀ (t : Nat) (h : List α),
+          h ∈ Becoming.SelectionLevels.lineages G gs t → ∃ v, ∀ (p : α), p ∈ h → G.amount t p = v
+@Becoming.SelectionLevels.lineages_within_none : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → G.amount 0 p = v) →
+        ∀ (t : Nat) (w : α → Nat),
+          Becoming.SelectionLevels.concordWithin (Becoming.SelectionLevels.lineages G gs t) w (G.amount t) = 0 ∧
+            Becoming.SelectionLevels.discordWithin (Becoming.SelectionLevels.lineages G gs t) w (G.amount t) = 0
+@Becoming.SelectionLevels.rises_iff_lineages : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {gs : List (List α)},
+  Becoming.SelectionLevels.whole gs = G.family 0 →
+    (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → G.amount 0 p = v) →
+        ∀ {t n : Nat} (c : List α → Nat),
+          (∀ (h : List α), h ∈ Becoming.SelectionLevels.lineages G gs t → h.length * c h = n) →
+            0 < n →
+              (G.Raises t ↔
+                Becoming.SelectionLevels.discordMeans (Becoming.SelectionLevels.lineages G gs t) c (G.offspringNumber t)
+                    (G.amount t) <
+                  Becoming.SelectionLevels.concordMeans (Becoming.SelectionLevels.lineages G gs t) c
+                    (G.offspringNumber t) (G.amount t))
+@Becoming.SelectionLevels.balance_add : ∀ {x p y q x' p' y' q' : Nat},
+  x + p = y + q → x' + p' = y' + q' → x + x' + (p + p') = y + y' + (q + q')
+Becoming.SelectionLevels.balance_mul : ∀ (k : Nat) {x p y q : Nat}, x + p = y + q → k * x + k * p = k * y + k * q
+@Becoming.SelectionLevels.returns_total : ∀ {α : Type} {ps : List α} {w a o : α → Nat} {B b k : Nat},
+  (∀ (p : α), p ∈ ps → w p + k * a p = B + b * o p) →
+    Becoming.total ps w + k * Becoming.total ps a = ps.length * B + b * Becoming.total ps o
+@Becoming.SelectionLevels.returns_weighted : ∀ {α : Type} {ps : List α} {w a o : α → Nat} {B b k : Nat},
+  (∀ (p : α), p ∈ ps → w p + k * a p = B + b * o p) →
+    Becoming.SelectionTerm.weighted ps w a + k * Becoming.SelectionTerm.weighted ps a a =
+      B * Becoming.total ps a + b * Becoming.SelectionTerm.weighted ps o a
+@Becoming.SelectionLevels.returns_balance : ∀ {α : Type} (ps : List α) (w a o : α → Nat) {B b k : Nat},
+  (∀ (p : α), p ∈ ps → w p + k * a p = B + b * o p) →
+    Becoming.SelectionTerm.concord ps w a + k * Becoming.SelectionTerm.concord ps a a +
+        b * Becoming.SelectionTerm.discord ps o a =
+      Becoming.SelectionTerm.discord ps w a + b * Becoming.SelectionTerm.concord ps o a
+@Becoming.SelectionLevels.rises_iff_reading : ∀ {α : Type} (ps : List α) (w a o : α → Nat) {B b k : Nat},
+  (∀ (p : α), p ∈ ps → w p + k * a p = B + b * o p) →
+    (Becoming.SelectionTerm.discord ps w a < Becoming.SelectionTerm.concord ps w a ↔
+      k * Becoming.SelectionTerm.concord ps a a + b * Becoming.SelectionTerm.discord ps o a <
+        b * Becoming.SelectionTerm.concord ps o a)
+@Becoming.SelectionLevels.spread_levels : ∀ {α : Type} (gs : List (List α)) (a : α → Nat) {m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a =
+      gs.length * Becoming.SelectionLevels.concordWithin gs a a + Becoming.SelectionLevels.concordAmong gs a a
+@Becoming.SelectionLevels.within_returns : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {B b c : Nat},
+  (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+    Becoming.SelectionLevels.discordWithin gs w a =
+      Becoming.SelectionLevels.concordWithin gs w a + (b + c) * Becoming.SelectionLevels.concordWithin gs a a
+@Becoming.SelectionLevels.within_against : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {B b c : Nat},
+  (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+    0 < b + c →
+      0 < Becoming.SelectionLevels.concordWithin gs a a →
+        Becoming.SelectionLevels.concordWithin gs w a < Becoming.SelectionLevels.discordWithin gs w a
+@Becoming.SelectionLevels.among_returns : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {B b c m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+      Becoming.SelectionLevels.concordAmong gs w a + (b + c) * Becoming.SelectionLevels.concordAmong gs a a =
+        Becoming.SelectionLevels.discordAmong gs w a + m * b * Becoming.SelectionLevels.concordAmong gs a a
+@Becoming.SelectionLevels.among_for_iff : ∀ {α : Type} {gs : List (List α)} {w a : α → Nat} {B b c m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+      (Becoming.SelectionLevels.discordAmong gs w a < Becoming.SelectionLevels.concordAmong gs w a ↔
+        (b + c) * Becoming.SelectionLevels.concordAmong gs a a < m * b * Becoming.SelectionLevels.concordAmong gs a a)
+@Becoming.SelectionLevels.rises_iff_returns : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {B b c m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+      (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+        (b + c) * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a <
+          m * b * Becoming.SelectionLevels.concordAmong gs a a)
+@Becoming.SelectionLevels.rises_iff_returns_of_uniform : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat)
+  {B b c m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (p : α), p ∈ g → a p = v) →
+        0 < Becoming.SelectionLevels.concordAmong gs a a →
+          (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a ↔
+            b + c < m * b)
+@Becoming.SelectionLevels.not_rises_of_alike : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {B b c m d : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + (b + c) * a p = B + b * Becoming.total g a) →
+      (∀ (g : List α), g ∈ gs → Becoming.total g a = d) →
+        ¬Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a
+@Becoming.SelectionLevels.rises_exact_iff_returns : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  {t m B b c : Nat} (gs : List (List α)),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length = m) →
+      (∀ (g : List α),
+          g ∈ gs →
+            ∀ (p : α), p ∈ g → G.offspringNumber t p + (b + c) * G.amount t p = B + b * Becoming.total g (G.amount t)) →
+        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+          (G.Raises t ↔
+            (b + c) * Becoming.SelectionTerm.concord (G.family t) (G.amount t) (G.amount t) <
+              m * b * Becoming.SelectionLevels.concordAmong gs (G.amount t) (G.amount t))
+Becoming.SelectionLevels.equal : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.groups → g.length = 2
+Becoming.SelectionLevels.AmongWins.among_wins : Becoming.SelectionLevels.concordWithin Becoming.SelectionLevels.groups
+      Becoming.SelectionLevels.AmongWins.offspring Becoming.SelectionLevels.holds =
+    0 ∧
+  Becoming.SelectionLevels.discordWithin Becoming.SelectionLevels.groups Becoming.SelectionLevels.AmongWins.offspring
+        Becoming.SelectionLevels.holds =
+      1 ∧
+    Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.groups Becoming.SelectionLevels.AmongWins.offspring
+          Becoming.SelectionLevels.holds =
+        5 ∧
+      Becoming.SelectionLevels.discordAmong Becoming.SelectionLevels.groups Becoming.SelectionLevels.AmongWins.offspring
+            Becoming.SelectionLevels.holds =
+          0 ∧
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+              Becoming.SelectionLevels.AmongWins.offspring Becoming.SelectionLevels.holds =
+            4 ∧
+          Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+                Becoming.SelectionLevels.AmongWins.offspring Becoming.SelectionLevels.holds =
+              1 ∧
+            Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+                Becoming.SelectionLevels.AmongWins.offspring Becoming.SelectionLevels.holds <
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+                Becoming.SelectionLevels.AmongWins.offspring Becoming.SelectionLevels.holds
+Becoming.SelectionLevels.WithinWins.within_wins : Becoming.SelectionLevels.concordWithin Becoming.SelectionLevels.groups
+      Becoming.SelectionLevels.WithinWins.offspring Becoming.SelectionLevels.holds =
+    0 ∧
+  Becoming.SelectionLevels.discordWithin Becoming.SelectionLevels.groups Becoming.SelectionLevels.WithinWins.offspring
+        Becoming.SelectionLevels.holds =
+      1 ∧
+    Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.groups Becoming.SelectionLevels.WithinWins.offspring
+          Becoming.SelectionLevels.holds =
+        0 ∧
+      Becoming.SelectionLevels.discordAmong Becoming.SelectionLevels.groups
+            Becoming.SelectionLevels.WithinWins.offspring Becoming.SelectionLevels.holds =
+          1 ∧
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+              Becoming.SelectionLevels.WithinWins.offspring Becoming.SelectionLevels.holds =
+            0 ∧
+          Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.groups)
+              Becoming.SelectionLevels.WithinWins.offspring Becoming.SelectionLevels.holds =
+            3
+Becoming.SelectionLevels.ByMeans.common : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.ByMeans.unequal → g.length * Becoming.SelectionLevels.ByMeans.factor g = 3
+Becoming.SelectionLevels.ByMeans.by_means : Becoming.SelectionLevels.concordAmong
+      Becoming.SelectionLevels.ByMeans.unequal Becoming.SelectionLevels.ByMeans.offspring
+      Becoming.SelectionLevels.ByMeans.holding =
+    0 ∧
+  Becoming.SelectionLevels.discordAmong Becoming.SelectionLevels.ByMeans.unequal
+        Becoming.SelectionLevels.ByMeans.offspring Becoming.SelectionLevels.ByMeans.holding =
+      0 ∧
+    Becoming.SelectionLevels.concordWithinBy Becoming.SelectionLevels.ByMeans.unequal
+          Becoming.SelectionLevels.ByMeans.factor Becoming.SelectionLevels.ByMeans.offspring
+          Becoming.SelectionLevels.ByMeans.holding =
+        0 ∧
+      Becoming.SelectionLevels.discordWithinBy Becoming.SelectionLevels.ByMeans.unequal
+            Becoming.SelectionLevels.ByMeans.factor Becoming.SelectionLevels.ByMeans.offspring
+            Becoming.SelectionLevels.ByMeans.holding =
+          0 ∧
+        Becoming.SelectionLevels.concordMeans Becoming.SelectionLevels.ByMeans.unequal
+              Becoming.SelectionLevels.ByMeans.factor Becoming.SelectionLevels.ByMeans.offspring
+              Becoming.SelectionLevels.ByMeans.holding =
+            36 ∧
+          Becoming.SelectionLevels.discordMeans Becoming.SelectionLevels.ByMeans.unequal
+                Becoming.SelectionLevels.ByMeans.factor Becoming.SelectionLevels.ByMeans.offspring
+                Becoming.SelectionLevels.ByMeans.holding =
+              0 ∧
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.ByMeans.unequal)
+                  Becoming.SelectionLevels.ByMeans.offspring Becoming.SelectionLevels.ByMeans.holding =
+                4 ∧
+              Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.ByMeans.unequal)
+                  Becoming.SelectionLevels.ByMeans.offspring Becoming.SelectionLevels.ByMeans.holding =
+                0
+Becoming.SelectionLevels.Founding.assorted_equal : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.Founding.assorted → g.length = 2
+Becoming.SelectionLevels.Founding.mixed_equal : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.Founding.mixed → g.length = 2
+Becoming.SelectionLevels.Founding.assorted_returns : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.Founding.assorted →
+    ∀ (p : Becoming.SelectionLevels.Member),
+      p ∈ g →
+        Becoming.SelectionLevels.Founding.assortedOffspring p + (2 + 1) * Becoming.SelectionLevels.Founding.keeps p =
+          1 + 2 * Becoming.total g Becoming.SelectionLevels.Founding.keeps
+Becoming.SelectionLevels.Founding.mixed_returns : ∀ (g : List Becoming.SelectionLevels.Member),
+  g ∈ Becoming.SelectionLevels.Founding.mixed →
+    ∀ (p : Becoming.SelectionLevels.Member),
+      p ∈ g →
+        Becoming.SelectionLevels.Founding.mixedOffspring p + (2 + 1) * Becoming.SelectionLevels.Founding.keeps p =
+          1 + 2 * Becoming.total g Becoming.SelectionLevels.Founding.keeps
+Becoming.SelectionLevels.Founding.either_verdict : Becoming.SelectionTerm.discord
+      (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+      Becoming.SelectionLevels.Founding.assortedOffspring Becoming.SelectionLevels.Founding.keeps <
+    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+      Becoming.SelectionLevels.Founding.assortedOffspring Becoming.SelectionLevels.Founding.keeps ∧
+  (2 + 1) *
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+          Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+      12 ∧
+    2 * 2 *
+          Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Founding.assorted
+            Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+        16 ∧
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.mixed)
+            Becoming.SelectionLevels.Founding.mixedOffspring Becoming.SelectionLevels.Founding.keeps <
+          Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.mixed)
+            Becoming.SelectionLevels.Founding.mixedOffspring Becoming.SelectionLevels.Founding.keeps ∧
+        Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Founding.mixed
+              Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+            0 ∧
+          Becoming.SelectionLevels.concordWithin Becoming.SelectionLevels.Founding.mixed
+              Becoming.SelectionLevels.Founding.mixedOffspring Becoming.SelectionLevels.Founding.keeps <
+            Becoming.SelectionLevels.discordWithin Becoming.SelectionLevels.Founding.mixed
+              Becoming.SelectionLevels.Founding.mixedOffspring Becoming.SelectionLevels.Founding.keeps
+Becoming.SelectionLevels.Partly.equal : ∀ (g : List Nat), g ∈ Becoming.SelectionLevels.Partly.groups → g.length = 2
+Becoming.SelectionLevels.Partly.returns : ∀ (g : List Nat),
+  g ∈ Becoming.SelectionLevels.Partly.groups →
+    ∀ (p : Nat),
+      p ∈ g →
+        Becoming.SelectionLevels.Partly.offspring p + (3 + 2) * Becoming.SelectionLevels.Partly.keeps p =
+          2 + 3 * Becoming.total g Becoming.SelectionLevels.Partly.keeps
+Becoming.SelectionLevels.Partly.below_one : 3 + 2 < 2 * 3 ∧
+  3 *
+        Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Partly.groups
+          Becoming.SelectionLevels.Partly.keeps Becoming.SelectionLevels.Partly.keeps =
+      2 *
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Partly.groups)
+          Becoming.SelectionLevels.Partly.keeps Becoming.SelectionLevels.Partly.keeps ∧
+    (3 + 2) *
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Partly.groups)
+            Becoming.SelectionLevels.Partly.keeps Becoming.SelectionLevels.Partly.keeps =
+        45 ∧
+      2 * 3 *
+            Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Partly.groups
+              Becoming.SelectionLevels.Partly.keeps Becoming.SelectionLevels.Partly.keeps =
+          36 ∧
+        ¬Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Partly.groups)
+              Becoming.SelectionLevels.Partly.offspring Becoming.SelectionLevels.Partly.keeps <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Partly.groups)
+              Becoming.SelectionLevels.Partly.offspring Becoming.SelectionLevels.Partly.keeps

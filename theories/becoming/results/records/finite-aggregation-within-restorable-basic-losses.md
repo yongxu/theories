@@ -10,7 +10,7 @@
 <a id="exact-statement--确切陈述"></a>
 ## Exact statement
 
-Strict loss matching obeys the laws below on every frame (Becoming.LossMatching). On these laws FR proposes that, within an independently specified family of same-kind recoverable basic losses, a fixed graver loss should not retain sufficient priority over arbitrarily many fixed lesser basic protections solely through its gravity difference. Where support, burdens and historical conditions persist under scale expansion, some finite scale of joint protection should acquire sufficient grounds for choice. This is an additional normative candidate beyond LR’s neighborhood, with affirmative defense and author counterreview, not a consequence of existing axioms; the laws state its exact formal content, not its warrant. One repair process is an instance (laws 7–9).
+Strict loss matching satisfies the laws below on every frame (Becoming.LossMatching). On these laws FR proposes that, within an independently specified family of same-kind recoverable basic losses, a fixed graver loss should not retain sufficient priority over arbitrarily many fixed lesser basic protections solely through its gravity difference. Where support, burdens and historical conditions persist under scale expansion, some finite scale of joint protection should acquire sufficient grounds for choice. This is an additional normative candidate beyond LR’s neighborhood, with affirmative defense and author counterreview, not a consequence of existing axioms; the laws state its exact formal content, not its warrant. One repair process is an instance (laws 7–9).
 
 <a id="laws--规律"></a>
 ## Laws
@@ -149,6 +149,7 @@ Aliases: `FR finite responsiveness to aggregation`, `有限合并回应 FR`, `Be
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (StrictTransport.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: StrictTransport.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (GenerativeLossComparison and RepairComparison) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Frame, Becoming.LossMatching, Becoming.MatchedCourses and Becoming.StrictTransport). The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the first premise restated in the current terms (living significance as a stated condition; the theory without the condition) in place of the retired labels G0, Part I and the second axiom. The Chinese of a hypothesis no longer uses the retired Part I rendering (不含条件的理论, as the English reads).
+- 1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](finite-aggregation-within-restorable-basic-losses.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -159,4 +160,4 @@ Aliases: `FR finite responsiveness to aggregation`, `有限合并回应 FR`, `Be
 
 </details>
 
-Documentary review UTC: `2026-10-25T14:50:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

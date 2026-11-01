@@ -1,0 +1,13 @@
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
+index 514c22af5..a2545e8e9 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/integrate_ou7.py
+@@ -736,7 +736,7 @@ def renamed_only(before, after, tokens):
+     replaced by its new one, where no new token already stood in `before` (so no two names could have been swapped)."""
+     if before == after or not tokens:
+         return before == after
+-    pattern = r"(?<![\w'.])(%s)(?![\w'])"
++    pattern = r"(?:(?<=[\w')⟩\]]\.)|(?<![\w'.]))(%s)(?![\w'])"
+     olds = sorted(tokens, key=len, reverse=True)
+     news = sorted(set(tokens.values()) - set(tokens), key=len, reverse=True)
+     if news and re.search(pattern % '|'.join(map(re.escape, news)), before):

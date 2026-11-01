@@ -1,0 +1,70 @@
+{
+ "added": {
+  "Becoming.CensusBinding": [],
+  "Becoming.CensusTable": [],
+  "Becoming.Counting": [],
+  "Becoming.Joint": [],
+  "Becoming.ReadingLoop": [],
+  "Becoming.RegimeMargin": [],
+  "Becoming.Standing": []
+ },
+ "renamed": {
+  "Becoming.CountsHold.obey": "Becoming.CountsHold.marks",
+  "Becoming.CountsObey": "Becoming.CensusMarksHold",
+  "Becoming.ListingObeys": "Becoming.ListingMarksHold",
+  "Becoming.census_table_obeys": "Becoming.census_table_marks_hold",
+  "Becoming.census_table_obeys_free": "Becoming.census_table_marks_hold_free",
+  "Becoming.census_table_obeys₂": "Becoming.census_table_marks_hold₂",
+  "Becoming.census_table_obeys₃": "Becoming.census_table_marks_hold₃",
+  "Becoming.countsHold_of_obey": "Becoming.countsHold_of_marks",
+  "Becoming.listingObeys_of_obeys": "Becoming.listingMarksHold_of_marksHold",
+  "Becoming.table_obeys": "Becoming.table_marks_hold",
+  "Becoming.table_obeys_free": "Becoming.table_marks_hold_free",
+  "Becoming.difference_belongs_to_the_joint": "Becoming.difference_only_together",
+  "Becoming.Good": "Becoming.LeadsInto",
+  "Becoming.GoodEnabled": "Becoming.LeadsIntoEnabled",
+  "Becoming.everything_good_iff": "Becoming.everything_leadsInto_iff",
+  "Becoming.good_of_keeps": "Becoming.leadsInto_of_keeps",
+  "Becoming.keeps_iff_good": "Becoming.keeps_iff_leadsInto",
+  "Becoming.keeps_of_good": "Becoming.keeps_of_leadsInto",
+  "Becoming.nothing_good": "Becoming.nothing_leadsInto",
+  "Becoming.harms_superadditive": "Becoming.rises_superadditive",
+  "Becoming.DependsObey": "Becoming.DependenceMarksHold",
+  "Becoming.Embodied.standsObey_iff": "Becoming.Embodied.standingMarksHold_iff",
+  "Becoming.StandsObey": "Becoming.StandingMarksHold",
+  "Becoming.good": "Becoming.leads"
+ },
+ "binders": {
+  "obeys": "marks",
+  "obey": "marks",
+  "good": "leads"
+ },
+ "roots": {
+  "Becoming.ReadingLoop.everything_leadsInto_iff": [
+   "Becoming.ReadingLoop",
+   "general-structure",
+   "ReadingLoop.everything_leadsInto_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  ],
+  "Becoming.ReadingLoop.keeps_iff_leadsInto": [
+   "Becoming.ReadingLoop",
+   "general-structure",
+   "ReadingLoop.keeps_iff_leadsInto: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  ],
+  "Becoming.ReadingLoop.nothing_leadsInto": [
+   "Becoming.ReadingLoop",
+   "general-structure",
+   "ReadingLoop.nothing_leadsInto: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  ],
+  "Becoming.RegimeMargin.rises_superadditive": [
+   "Becoming.RegimeMargin",
+   "support",
+   "Arithmetic of subadditive giving: the rises of the least levels meeting two draws and their sum satisfy a + b <= c + 1. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  ]
+ },
+ "now_used": [
+  "Becoming.ReadingLoop.everything_good_iff",
+  "Becoming.ReadingLoop.keeps_iff_good",
+  "Becoming.ReadingLoop.nothing_good",
+  "Becoming.RegimeMargin.harms_superadditive"
+ ]
+}

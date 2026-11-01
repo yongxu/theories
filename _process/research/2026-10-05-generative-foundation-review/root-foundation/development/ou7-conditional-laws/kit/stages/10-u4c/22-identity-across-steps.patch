@@ -1,0 +1,33 @@
+diff --git a/theories/becoming/results/records/identity-across-steps.json b/theories/becoming/results/records/identity-across-steps.json
+index 5beadf253..b260ecdc1 100644
+--- a/theories/becoming/results/records/identity-across-steps.json
++++ b/theories/becoming/results/records/identity-across-steps.json
+@@ -873,7 +873,6 @@
+         "Becoming.Flow.More.unceasing",
+         "Becoming.Flow.More.grows",
+         "Becoming.search",
+-        "Becoming.length_le_of_matched",
+         "Becoming.Expansion.census",
+         "Becoming.Expansion.counted",
+         "Becoming.Cycle.census",
+@@ -891,7 +890,8 @@
+       "declarations": [
+         "Becoming.mem_cons_cases",
+         "Becoming.total",
+-        "Becoming.Distinct"
++        "Becoming.Distinct",
++        "Becoming.length_le_of_matched"
+       ]
+     },
+     {
+@@ -1378,6 +1378,10 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): the statement and two laws (one step, and over a run) worded as the Lean states them: under every continuation without splits, not every formation after a step continues one before it, a refutation rather than a named arising formation, exactly where more are listed after than before (the Chinese statement had read the condition as 'no split'); the identity hypothesis and the correspondence label their readings as the AI's instead of the author's or 'on Ren's delegation'. No law changed in content.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与两条规律（一步的与整段的）按 Lean 的陈述改写：在每个没有分裂的延续下，并非步后每个形成都延续步前某个形成，这是否证而不是指出某个生起的形成，恰当步后所列多于步前（中文陈述原把条件误读为“没有分裂”）；同一假设与对应把读法标为 AI 的，不再写“作者的”或“依 Ren 的交托”。规律内容未变。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: length_le_of_matched to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; length_le_of_matched generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：length_le_of_matched 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；length_le_of_matched 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

@@ -620,6 +620,18 @@
    "page": "theories/becoming/results/records/a-regularity-kept-and-changed.md"
   },
   {
+   "id": "record:a-response-common-over-a-reading",
+   "type": "result",
+   "record": "a-response-common-over-a-reading",
+   "title": "A response common over a reading",
+   "title_zh": "读之共应",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/a-response-common-over-a-reading.md"
+  },
+  {
    "id": "record:a-revision-that-opens-a-correction",
    "type": "result",
    "record": "a-revision-that-opens-a-correction",
@@ -1434,6 +1446,18 @@
    "region": "retire",
    "base": "none",
    "page": "theories/becoming/results/records/conditional-foundation-assessment.md"
+  },
+  {
+   "id": "record:conditional-laws-of-the-corpus",
+   "type": "result",
+   "record": "conditional-laws-of-the-corpus",
+   "title": "The corpus's conditional laws in the grammar, each with a net where its condition fails",
+   "title_zh": "语料之有条件之律写入文法，各有其条件不成立之网",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "classical",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/conditional-laws-of-the-corpus.md"
   },
   {
    "id": "record:conditioning-by-restriction",
@@ -4736,6 +4760,18 @@
    "page": "theories/becoming/results/records/room-read-off-the-exchange.md"
   },
   {
+   "id": "record:rooms-tested-by-a-window",
+   "type": "result",
+   "record": "rooms-tested-by-a-window",
+   "title": "Rooms tested by a window: regulation and equilibrium on the net of the possible",
+   "title_zh": "以窗验室：可能之网上的调节与平衡",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/rooms-tested-by-a-window.md"
+  },
+  {
    "id": "record:rules-that-change-themselves-in-the-grammar",
    "type": "result",
    "record": "rules-that-change-themselves-in-the-grammar",
@@ -6624,7 +6660,7 @@
    "type": "module",
    "name": "Becoming.Grammar",
    "level": "L0",
-   "theorems": 70,
+   "theorems": 72,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6635,7 +6671,7 @@
    "type": "module",
    "name": "Becoming.GrammarReadings",
    "level": "L1",
-   "theorems": 12,
+   "theorems": 13,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,
@@ -6701,8 +6737,30 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 175,
+   "theorems": 192,
    "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GrammarConditionals",
+   "type": "module",
+   "name": "Becoming.GrammarConditionals",
+   "level": "L1",
+   "theorems": 40,
+   "region": "classical",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.CommonResponse",
+   "type": "module",
+   "name": "Becoming.CommonResponse",
+   "level": "L1",
+   "theorems": 36,
+   "region": "knowing",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -7141,7 +7199,7 @@
    "type": "module",
    "name": "Becoming.Arising",
    "level": "L1",
-   "theorems": 44,
+   "theorems": 46,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -7152,7 +7210,7 @@
    "type": "module",
    "name": "Becoming.Flow",
    "level": "L1",
-   "theorems": 103,
+   "theorems": 102,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -7174,7 +7232,7 @@
    "type": "module",
    "name": "Becoming.Change",
    "level": "L1",
-   "theorems": 90,
+   "theorems": 85,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7185,10 +7243,10 @@
    "type": "module",
    "name": "Becoming.Population",
    "level": "L1",
-   "theorems": 122,
+   "theorems": 116,
    "region": "life",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8035,7 +8093,7 @@
    "theorems": 21,
    "region": "significance",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8186,7 +8244,7 @@
    "type": "module",
    "name": "Becoming.BalanceRegions",
    "level": "L1",
-   "theorems": 6,
+   "theorems": 43,
    "region": "root",
    "base": "old-base",
    "on_grammar": true,
@@ -8824,10 +8882,10 @@
    "type": "module",
    "name": "Becoming.Viability",
    "level": "L1",
-   "theorems": 24,
+   "theorems": 25,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8857,7 +8915,7 @@
    "type": "module",
    "name": "Becoming.Prelude",
    "level": "L0",
-   "theorems": 123,
+   "theorems": 141,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -9565,6 +9623,28 @@
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RoomNet",
+   "type": "module",
+   "name": "Becoming.RoomNet",
+   "level": "L1",
+   "theorems": 94,
+   "region": "knowing",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RoomRuns",
+   "type": "module",
+   "name": "Becoming.RoomRuns",
+   "level": "L1",
+   "theorems": 24,
+   "region": "knowing",
+   "base": "frame",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10694,7 +10774,7 @@
    "type": "module",
    "name": "Becoming.GrammarCrossing",
    "level": "L1",
-   "theorems": 11,
+   "theorems": 9,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -29132,6 +29212,12 @@
    "anchor": "r-testing-within-the-net"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-rooms-tested-by-a-window",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-rooms-tested-by-a-window"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-testing-within-couplings",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -29688,6 +29774,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-a-reading-informed-and-revalued"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-response-common-over-a-reading"
   },
   {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
@@ -30378,6 +30470,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
    "anchor": "r-candidate-theorems-of-the-corpus"
+  },
+  {
+   "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "anchor": "r-conditional-laws-of-the-corpus"
   },
   {
    "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine",
@@ -31477,6 +31575,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.CommonResponse",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Commuting",
    "to": "module:Becoming.Junctures",
    "type": "imports"
@@ -32289,6 +32392,16 @@
   {
    "from": "module:Becoming.GrammarCases",
    "to": "module:Becoming.GrammarTesting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarConditionals",
+   "to": "module:Becoming.GrammarCandidates",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GrammarConditionals",
+   "to": "module:Becoming.GrammarLaws",
    "type": "imports"
   },
   {
@@ -34357,6 +34470,41 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.RoomNet",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomNet",
+   "to": "module:Becoming.GrammarReadings",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomNet",
+   "to": "module:Becoming.GrammarTesting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomNet",
+   "to": "module:Becoming.MapRegions",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomRuns",
+   "to": "module:Becoming.HeldPossible",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomRuns",
+   "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoomRuns",
+   "to": "module:Becoming.RoomNet",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.RootForms",
    "to": "module:Becoming.Grammar",
    "type": "imports"
@@ -35029,6 +35177,11 @@
   {
    "from": "module:Becoming.Verification",
    "to": "module:Becoming.HistoryIdeals",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Viability",
+   "to": "module:Becoming.CommonResponse",
    "type": "imports"
   },
   {
@@ -36002,6 +36155,51 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "module:Becoming.CommonResponse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "module:Becoming.Viability",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:finite-continuation-plans",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:generalization-through-lumping",
+   "type": "related"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:market-protected-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:readings-a-response-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:testing-within-couplings",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
+   "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "related"
+  },
+  {
    "from": "record:a-revision-that-opens-a-correction",
    "to": "module:Becoming.GuardHorizon",
    "type": "proved-in"
@@ -36713,6 +36911,11 @@
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:amounts-by-unit-matchings",
+   "type": "related"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
    "to": "record:balance-from-the-first-law",
    "type": "interpretive"
   },
@@ -37348,6 +37551,11 @@
   },
   {
    "from": "record:bounded-census-keeps-pace",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:bounded-census-keeps-pace",
    "to": "module:Becoming.Premises",
    "type": "proved-in"
   },
@@ -37648,6 +37856,11 @@
   },
   {
    "from": "record:ceasing-needs-arising",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ceasing-needs-arising",
    "to": "module:Becoming.InAmounts",
    "type": "proved-in"
   },
@@ -37668,6 +37881,11 @@
   },
   {
    "from": "record:ceasing-needs-arising",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ceasing-needs-arising",
    "to": "module:Becoming.Premises",
    "type": "proved-in"
   },
@@ -37680,11 +37898,6 @@
    "from": "record:ceasing-needs-arising",
    "to": "record:bounded-census-keeps-pace",
    "type": "related"
-  },
-  {
-   "from": "record:ceasing-needs-arising",
-   "to": "record:census-balance",
-   "type": "formal-reuse"
   },
   {
    "from": "record:ceasing-needs-arising",
@@ -37710,6 +37923,11 @@
    "from": "record:ceasing-needs-arising",
    "to": "record:map-of-premises",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:ceasing-needs-arising",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "related"
   },
   {
    "from": "record:ceasing-needs-arising",
@@ -37808,6 +38026,11 @@
   },
   {
    "from": "record:census-balance",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "related"
+  },
+  {
+   "from": "record:census-balance",
    "to": "record:more-needs-renewers",
    "type": "formal-reuse"
   },
@@ -37824,6 +38047,11 @@
   {
    "from": "record:census-balance-under-continuation",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:census-balance-under-continuation",
+   "to": "module:Becoming.GrammarLaws",
    "type": "proved-in"
   },
   {
@@ -37870,6 +38098,11 @@
    "from": "record:census-balance-under-continuation",
    "to": "record:laws-of-one-step",
    "type": "related"
+  },
+  {
+   "from": "record:census-balance-under-continuation",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:census-balance-under-continuation",
@@ -38454,11 +38687,6 @@
   {
    "from": "record:closing-needs-net-draw",
    "to": "module:Becoming.Admission",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:closing-needs-net-draw",
-   "to": "module:Becoming.Change",
    "type": "proved-in"
   },
   {
@@ -39155,6 +39383,41 @@
    "from": "record:conditional-foundation-assessment",
    "to": "record:wisdom-root",
    "type": "related"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "module:Becoming.GrammarConditionals",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:candidate-theorems-of-the-corpus",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:classical-definitions-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conditional-laws-of-the-corpus",
+   "to": "record:testing-within-the-net",
+   "type": "formal-reuse"
   },
   {
    "from": "record:conditioning-by-restriction",
@@ -44898,6 +45161,11 @@
   },
   {
    "from": "record:laws-of-one-step",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:laws-of-one-step",
    "to": "module:Becoming.Roles",
    "type": "proved-in"
   },
@@ -47188,6 +47456,11 @@
   },
   {
    "from": "record:not-going-out-of-a-region",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:not-going-out-of-a-region",
    "to": "record:continuation-relative-to-a-class",
    "type": "formal-reuse"
   },
@@ -47670,11 +47943,6 @@
    "from": "record:order-of-exchanges-sharing-a-relatum",
    "to": "record:the-step-index-from-own-courses",
    "type": "formal-reuse"
-  },
-  {
-   "from": "record:orders-as-a-sum-over-histories",
-   "to": "module:Becoming.Change",
-   "type": "proved-in"
   },
   {
    "from": "record:orders-as-a-sum-over-histories",
@@ -51278,6 +51546,11 @@
   },
   {
    "from": "record:rising-and-falling-in-one-exchange",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:rising-and-falling-in-one-exchange",
    "to": "module:Becoming.Roles",
    "type": "proved-in"
   },
@@ -51485,6 +51758,56 @@
    "from": "record:room-read-off-the-exchange",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
    "type": "related"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "module:Becoming.RoomNet",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "module:Becoming.RoomRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:classical-definitions-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:testing-within-the-net",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:rooms-tested-by-a-window",
+   "to": "record:where-the-possible-grows",
+   "type": "formal-reuse"
   },
   {
    "from": "record:rules-that-change-themselves-in-the-grammar",
@@ -52949,6 +53272,11 @@
   {
    "from": "record:support-from-the-supported",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:support-from-the-supported",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -59742,6 +60070,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+   "to": "record:a-response-common-over-a-reading",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
    "to": "record:a-revision-that-opens-a-correction",
    "type": "states"
@@ -60044,6 +60377,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-risk-certificate-outcome-distinction",
    "to": "record:risk-certificate-outcome-distinction",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-rooms-tested-by-a-window",
+   "to": "record:rooms-tested-by-a-window",
    "type": "states"
   },
   {
@@ -60839,6 +61177,11 @@
   {
    "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
    "to": "record:classical-definitions-in-the-grammar",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+   "to": "record:conditional-laws-of-the-corpus",
    "type": "states"
   },
   {

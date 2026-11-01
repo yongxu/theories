@@ -1,0 +1,147 @@
+{
+ "added": {
+  "Becoming.Prelude": [
+   "Becoming.mem_map_prodMk",
+   "Becoming.prodMk_mem_map",
+   "Becoming.not_decide_iff"
+  ],
+  "Becoming.GrammarLaws": [
+   "Becoming.GrammarLaws.length_keep",
+   "Becoming.GrammarLaws.count_add_not",
+   "Becoming.GrammarLaws.distinct_keep",
+   "Becoming.GrammarLaws.count_pos_of_mem",
+   "Becoming.GrammarLaws.eq_true_of_not_false",
+   "Becoming.GrammarLaws.census_le",
+   "Becoming.«定后则后并亡不过前并生»",
+   "Becoming.GrammarLaws.census_le_converse",
+   "Becoming.«定前则前并生不过后并亡»",
+   "Becoming.GrammarLaws.census_count",
+   "Becoming.«定后定前则前并生与后并亡同数»",
+   "Becoming.GrammarLaws.census_run",
+   "Becoming.«定后前者在前则亡屡者生屡»"
+  ],
+  "Becoming.Arising": [
+   "Becoming.alikeAt",
+   "Becoming.along_fixed",
+   "Becoming.activityClass_eq_alikeAt"
+  ],
+  "Becoming.Population": [
+   "Becoming.comesToBe_iff_sheng_along",
+   "Becoming.ceasesToBe_iff_wang_along",
+   "Becoming.listedOccurrences",
+   "Becoming.beginTest",
+   "Becoming.endTest",
+   "Becoming.total_mark_eq_count"
+  ],
+  "Becoming.Change": [],
+  "Becoming.Flow": [],
+  "Becoming.Identity": []
+ },
+ "cases": {
+  "Becoming.Population": {
+   "Becoming.coming_of_ceasing": "«定后前者在前则亡屡者生屡» (R := Steps.along) (E := Steps.alikeAt p)",
+   "Becoming.across_at": "«定后则后并亡不过前并生» (R := fun a b => a = b)"
+  },
+  "Becoming.Identity": {
+   "Becoming.Census.balanceFrom_at": "«定后则后并亡不过前并生» (R := R t)"
+  }
+ },
+ "moved": {
+  "Becoming.mem_remove": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.length_le_of_matched": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.not_not_all": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.gaining_of_losing": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.losing_of_gaining": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.recurs_shift": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.recurs_unshift": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.gaining_of_losing_from": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.losing_of_gaining_from": [
+   "Becoming.Population",
+   "Becoming.Prelude"
+  ],
+  "Becoming.steps_mem": [
+   "Becoming.Change",
+   "Becoming.Prelude"
+  ],
+  "Becoming.steps_last": [
+   "Becoming.Change",
+   "Becoming.Prelude"
+  ],
+  "Becoming.steps_mono": [
+   "Becoming.Change",
+   "Becoming.Prelude"
+  ],
+  "Becoming.recurring_accumulates": [
+   "Becoming.Change",
+   "Becoming.Prelude"
+  ],
+  "Becoming.pos_of_exceeds": [
+   "Becoming.Change",
+   "Becoming.Prelude"
+  ],
+  "Becoming.total_pos": [
+   "Becoming.Flow",
+   "Becoming.Prelude"
+  ]
+ },
+ "restated": {
+  "Becoming.mem_remove": "generalized from Type to every universe as it moves into the prelude (U4c), so that the census laws at Type u can use it; every earlier use is an instance",
+  "Becoming.length_le_of_matched": "generalized from Type to every universe as it moves into the prelude (U4c), so that the census laws at Type u can use it; every earlier use is an instance",
+  "Becoming.not_not_all": "generalized from Type to every universe as it moves into the prelude (U4c), so that the census laws at Type u can use it; every earlier use is an instance",
+  "Becoming.Census.balanceFrom_at": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.balanceFrom": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.balanceFrom_eq_at": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.balanceFrom_eq": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.arisingFrom_of_ceasingFrom_from": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.arisingFrom_of_ceasingFrom": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.ceasingFrom_of_arisingFrom_from": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes",
+  "Becoming.Census.ceasingFrom_of_arisingFrom": "the instance deciding the continuation is deleted from Identity's Counting section's variable line (U4c): none of the section's eight census laws uses it once balanceFrom_at is the root's census of a step, so each loses one instance argument and is strictly more general; no caller changes"
+ },
+ "roots": {
+  "Becoming.«定后定前则前并生与后并亡同数»": [
+   "Becoming.GrammarLaws",
+   "general-structure",
+   "«定后定前则前并生与后并亡同数»: the count of HE2's census of a step, its two halves meeting under HE2's hypotheses, the tests read off the decision (U4c, beside «定后定前则前并生对后并亡»); a law of every continuation decided by a test on any carrier, and nothing on the base uses it"
+  ],
+  "Becoming.mark_le_total": [
+   "Becoming.Population",
+   "support",
+   "mark_le_total: a lemma of marks and totals on a list, through which Identity's census balance went until U4c re-proved Web.Census.balanceFrom_at through the root's census of a step"
+  ],
+  "Becoming.total_le_mark": [
+   "Becoming.Population",
+   "support",
+   "total_le_mark: a lemma of marks and totals on a list, through which Identity's census balance went until U4c re-proved Web.Census.balanceFrom_at through the root's census of a step"
+  ],
+  "Becoming.Listed.coming_iff_excess": [
+   "Becoming.Population",
+   "general-structure",
+   "Listed.coming_iff_excess: the census law read by excess, for every listing of what holds on any carrier; Listed.coming_of_ceasing went through it until U4c re-proved it through the root's census of a run, and nothing on the base uses it"
+  ]
+ },
+ "now_used": []
+}

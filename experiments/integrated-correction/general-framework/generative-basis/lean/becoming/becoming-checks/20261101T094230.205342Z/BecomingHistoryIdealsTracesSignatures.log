@@ -1,0 +1,26 @@
+@Becoming.HistoryIdealsTraces.classification : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S)
+  {I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)},
+  Becoming.Ideals.Within (Becoming.HistoryIdeals.prefixOrder A) (Generative.Feasible P s) I →
+    (Becoming.HistoryIdeals.HasLongest I ∨ ∃ pick, (∀ (n : Nat), I.mem (pick n)) ∧ ∀ (n : Nat), n < (pick n).length) →
+      ∃ h, I.Same (Becoming.HistoryIdeals.historyIdeal h) ∧ Becoming.HistoryIdealsTraces.HistoryOf P s h
+@Becoming.HistoryIdealsTraces.course_settles : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S)
+  {w : List A},
+  Generative.Feasible P s w →
+    Becoming.HistoryIdeals.HasLongest (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) w) ∧
+      Becoming.HistoryIdealsTraces.HistoryOf P s (Becoming.HistoryIdeals.History.finite w)
+@Becoming.HistoryIdealsTraces.run_initial_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) (k n : Nat) (a : Nat → A),
+  (∀ (m : Nat), a m = r.act (n + m)) →
+    Generative.Trace P (r.state n) (Becoming.HistoryIdeals.initialWord a k) (r.state (n + k))
+@Becoming.HistoryIdealsTraces.run_goesOn : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P),
+  Becoming.HistoryIdeals.GoesOn (Becoming.HistoryIdeals.traceIdeal r.act) ∧
+    Becoming.HistoryIdealsTraces.HistoryOf P (r.state 0) (Becoming.HistoryIdeals.History.infinite r.act)
+Becoming.HistoryIdealsTraces.countdown_down : ∀ (k : Nat),
+  Generative.Trace Becoming.HistoryIdealsTraces.countdown (some k) (Becoming.HistoryIdeals.initialWord (fun x => ()) k)
+    (some 0)
+Becoming.HistoryIdealsTraces.countdown_ends : ∀ (r : Becoming.Run Becoming.HistoryIdealsTraces.countdown) (k m : Nat),
+  r.state m ≠ some k
+Becoming.HistoryIdealsTraces.history_without_run : Becoming.HistoryIdealsTraces.HistoryOf
+    Becoming.HistoryIdealsTraces.countdown none (Becoming.HistoryIdeals.History.infinite fun x => ()) ∧
+  ¬∃ r, r.state 0 = none

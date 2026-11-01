@@ -1,0 +1,137 @@
+@Becoming.TimedResponse.coupledIntoAt_coupledInto : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {s : Nat} {c : C}, Becoming.TimedResponse.CoupledIntoAt W obs g s c → W.CoupledInto obs g c
+@Becoming.TimedResponse.not_spread_zero : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} (c : C), ¬Becoming.TimedResponse.Spread L L' W obs source 0 c
+@Becoming.TimedResponse.Spread.has_earlier_source : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {t : Nat} {c : C},
+  Becoming.TimedResponse.Spread L L' W obs source t c → ∃ s h, s < t ∧ source s h
+@Becoming.TimedResponse.not_reached_before_source : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {g : F} {T : Nat},
+  (∀ (s : Nat) (h : F), s < T → ¬source s h) → ¬Becoming.TimedResponse.ReachedBy L L' W obs source g T
+@Becoming.TimedResponse.reachedBy_mono : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {g : F} {T U : Nat},
+  T ≤ U →
+    Becoming.TimedResponse.ReachedBy L L' W obs source g T → Becoming.TimedResponse.ReachedBy L L' W obs source g U
+@Becoming.TimedResponse.coupling_of_levels : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {h : F}
+  {l l' : Nat → C → Nat} {t : Nat},
+  (∀ (c : C), Becoming.TimedResponse.CoupledIntoAt W obs h t c → l t c = l' t c) → W.AlikeThrough obs h l l' t
+@Becoming.TimedResponse.levels_alike_before : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ (t : Nat),
+              t ≤ D → ∀ (c : C), ¬Becoming.TimedResponse.Spread L L' W obs source t c → W.level t c = W'.level t c
+@Becoming.TimedResponse.coupling_alike_before : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ {g : F},
+              ¬Becoming.TimedResponse.ReachedBy L L' W obs source g D → W.AlikeThroughUpTo obs g W.level W'.level D
+@Becoming.TimedResponse.answer_alike_before : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ {A : Type} {g : F} (read : (Nat → C → Nat) → A),
+              (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' D → read l = read l') →
+                ¬Becoming.TimedResponse.ReachedBy L L' W obs source g D → read W.level = read W'.level
+@Becoming.TimedResponse.different_answers_not_unreached : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {source : Nat → F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ {A : Type} {g : F} (read : (Nat → C → Nat) → A),
+              (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' D → read l = read l') →
+                read W.level ≠ read W'.level → ¬¬Becoming.TimedResponse.ReachedBy L L' W obs source g D
+@Becoming.TimedResponse.different_answers_require_reached : ∀ {F C : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {source : Nat → F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ {A : Type} {g : F} [decided : Decidable (Becoming.TimedResponse.ReachedBy L L' W obs source g D)]
+              (read : (Nat → C → Nat) → A),
+              (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' D → read l = read l') →
+                read W.level ≠ read W'.level → Becoming.TimedResponse.ReachedBy L L' W obs source g D
+@Becoming.TimedResponse.touches_coupled_edge : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {g h : F} {t : Nat} {c : C},
+  L.present t = L'.present t →
+    W.CoupledInto obs g c → Becoming.TimedResponse.TouchesAt L L' t h c → L.CoupledFromEither W L' obs g h
+@Becoming.TimedResponse.Spread.within_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {part : F → Bool},
+  (∀ (t : Nat), L.present t = L'.present t) →
+    (∀ (t : Nat) (h : F), source t h → part h = true) →
+      ∀ {t : Nat} {c : C},
+        Becoming.TimedResponse.Spread L L' W obs source t c →
+          ∀ {g : F}, W.CoupledInto obs g c → L.WithinResponse L' W obs part g
+@Becoming.TimedResponse.reachedBy_within_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {part : F → Bool},
+  (∀ (t : Nat), L.present t = L'.present t) →
+    (∀ (t : Nat) (h : F), source t h → part h = true) →
+      ∀ {g : F} {T : Nat}, Becoming.TimedResponse.ReachedBy L L' W obs source g T → L.WithinResponse L' W obs part g
+Becoming.TimedResponse.Delayed.balanced : ∀ (b : Bool),
+  (Becoming.TimedResponse.Delayed.flow b).Balances (Becoming.TimedResponse.Delayed.web b)
+Becoming.TimedResponse.Delayed.responds : ∀ (t : Nat) (h : Bool),
+  ¬Becoming.TimedResponse.Delayed.sourceAt t h →
+    (Becoming.TimedResponse.Delayed.web false).AlikeThroughUpTo (fun x x_1 => True) h
+        (Becoming.TimedResponse.Delayed.web false).level (Becoming.TimedResponse.Delayed.web true).level t →
+      ∀ (c : Unit),
+        (Becoming.TimedResponse.Delayed.flow false).take t h c = (Becoming.TimedResponse.Delayed.flow true).take t h c ∧
+          (Becoming.TimedResponse.Delayed.flow false).give t h c = (Becoming.TimedResponse.Delayed.flow true).give t h c
+Becoming.TimedResponse.Delayed.read_through : ∀ (t : Nat) (l l' : Nat → Unit → Nat),
+  (Becoming.TimedResponse.Delayed.web false).AlikeThroughUpTo (fun x x_1 => True) false l l' t →
+    Becoming.TimedResponse.Delayed.readAt t l = Becoming.TimedResponse.Delayed.readAt t l'
+Becoming.TimedResponse.Delayed.structurally_connected : (Becoming.TimedResponse.Delayed.flow false).WithinResponse
+  (Becoming.TimedResponse.Delayed.flow true) (Becoming.TimedResponse.Delayed.web false) (fun x x_1 => True) (fun h => h)
+  false
+Becoming.TimedResponse.Delayed.not_reached_at_one : ¬Becoming.TimedResponse.ReachedBy
+    (Becoming.TimedResponse.Delayed.flow false) (Becoming.TimedResponse.Delayed.flow true)
+    (Becoming.TimedResponse.Delayed.web false) (fun x x_1 => True) Becoming.TimedResponse.Delayed.sourceAt false 1
+Becoming.TimedResponse.Delayed.reached_at_two : Becoming.TimedResponse.ReachedBy
+  (Becoming.TimedResponse.Delayed.flow false) (Becoming.TimedResponse.Delayed.flow true)
+  (Becoming.TimedResponse.Delayed.web false) (fun x x_1 => True) Becoming.TimedResponse.Delayed.sourceAt false 2
+Becoming.TimedResponse.Delayed.answers_before_and_after : Becoming.TimedResponse.Delayed.readAt 1
+      (Becoming.TimedResponse.Delayed.web false).level =
+    Becoming.TimedResponse.Delayed.readAt 1 (Becoming.TimedResponse.Delayed.web true).level ∧
+  Becoming.TimedResponse.Delayed.readAt 2 (Becoming.TimedResponse.Delayed.web false).level ≠
+    Becoming.TimedResponse.Delayed.readAt 2 (Becoming.TimedResponse.Delayed.web true).level
+Becoming.TimedResponse.Delayed.constant_read_ignores : (∀ (l l' : Nat → Unit → Nat),
+    (Becoming.TimedResponse.Delayed.web false).AlikeThroughUpTo (fun x x_1 => True) false l l' 2 →
+      (fun x => false) l = (fun x => false) l') ∧
+  (fun x => false) (Becoming.TimedResponse.Delayed.web true).level ≠ true

@@ -211,10 +211,11 @@ the regime's and not the level's alone.
   where the lowered giving falls short of the draw at the old least level (`lowered_raises`,
   `lowered_raises_strictly`). A margin, a level's distance above this point, is a quantity of the
   level under the standing draws, not of the level alone.
-* **Draws add; harms do not.** Where giving under the joint draw is subadditive above the need
-  (`SubadditiveAbove`) and no greater than under either draw alone, the rise of the point of no
+* **Draws add, and their rises at the point are superadditive up to one.** Where giving under the
+  joint draw is subadditive above the need (`SubadditiveAbove`) and no greater than under either draw
+  alone, the rise of the point of no
   return under two draws together is at least the sum of the rises under each, less one whole unit
-  (`harms_superadditive`). `Concave` is a giving law under which it is
+  (`rises_superadditive`). `Concave` is a giving law under which it is
   strictly more (`Concave.roots`). `Peaked` has two draws each of which the condition holds alone
   from a band of levels (`Peaked.each_holds`) and which together end it from every level
   (`Peaked.together_ends`), by the law that a draw beyond all giving ends the condition from every
@@ -223,7 +224,7 @@ the regime's and not the level's alone.
   `b + H n ≤ x` (`not_before`). Where giving is at most `Y` at every level and `Y ≤ H ≤ b`, the level
   falls below `b` within any `n` with `x < b + (H - Y) n` (`falls_within`).
 
-Two statements carry the whole numbers: `harms_superadditive` loses one unit to rounding, and the
+Two statements carry the whole numbers: `rises_superadditive` loses one unit to rounding, and the
 band's ends are whole steps. Harvesting theory states the same structure over the reals
 (depensation, the fold of the harvested equilibrium, the cost of joint harvest from a concave
 renewal; Clark 1976, May 1977); this module states it on the spine, with an empty axiom report, so
@@ -809,15 +810,15 @@ theorem lowered_raises_strictly {g g' : Nat → Nat} {H y y' : Nat} (root : Root
    fun short_at => Nat.lt_of_le_of_ne (lowered_raises root root' lowered)
      (fun same => Nat.lt_irrefl H (Nat.lt_of_le_of_lt (same ▸ root'.1) short_at))⟩
 
-/-! ## Draws add; harms do not -/
+/-! ## Draws add, and their rises at the point are superadditive up to one -/
 
-/-- **Harms are super-additive up to one unit.** Under the draws `H₁`, `H₂` and `H₁ + H₂` the
+/-- **The rises of the point are super-additive up to one unit.** Under the draws `H₁`, `H₂` and `H₁ + H₂` the
 condition gives by `g₁`, `g₂` and `g`, with `g` subadditive above the need `m` and no greater than
 `g₁` or `g₂`. Where the least levels meeting the three draws lie `a`, `b` and `c` above the need,
 `a + b ≤ c + 1`: the point of no return under the joint draw rises above the need by at least the
 sum of the rises under each, `(H₁ + a) + (H₂ + b)`, less one. With one giving law for all three,
 `g₁ = g₂ = g`. -/
-theorem harms_superadditive {g₁ g₂ g : Nat → Nat} {m H₁ H₂ a b c : Nat}
+theorem rises_superadditive {g₁ g₂ g : Nat → Nat} {m H₁ H₂ a b c : Nat}
     (sub : SubadditiveAbove g m) (low₁ : Lowered g g₁) (low₂ : Lowered g g₂)
     (r₁ : Root g₁ H₁ (m + a)) (r₂ : Root g₂ H₂ (m + b))
     (r : Root g (H₁ + H₂) (m + c)) : a + b ≤ c + 1 := by

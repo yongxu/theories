@@ -1,0 +1,225 @@
+@Becoming.Net.Loses.of_lt : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {ps : List P} {f : T},
+  ((Becoming.total ps fun p => y p * N.post f p) < Becoming.total ps fun p => y p * N.pre f p) → N.Loses y ps f
+@Becoming.Net.StrictSubinvariant.loses : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {ps : List P},
+  N.StrictSubinvariant y ps → ∀ (f : T), N.Loses y ps f
+@Becoming.Net.flow_taken : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} (t : Nat) (p : P),
+  (N.flow y σ).taken t p = y p * N.consumes (σ t) p
+@Becoming.Net.flow_given : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} (t : Nat) (p : P),
+  (N.flow y σ).given t p = y p * N.produces (σ t) p
+@Becoming.Net.law_nonanticipating : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat}, (N.law y).Nonanticipating
+@Becoming.Net.course_eq : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} (start : P → Nat),
+  (N.law y).course σ start = N.flow y σ
+@Becoming.Net.fire_add_back : ∀ {M k g : Nat}, k ≤ M → M - k + g + k = M + g
+@Becoming.Net.le_of_fire_add_back : ∀ {M k g : Nat}, M - k + g + k = M + g → k ≤ M
+@Becoming.Net.fire_scaled : ∀ {u M k g : Nat}, k ≤ M → u * M + u * g - u * k = u * (M - k + g)
+@Becoming.Net.balance_at_iff : ∀ {u M k g : Nat}, 0 < u → (u * (M - k + g) + u * k = u * M + u * g ↔ k ≤ M)
+@Becoming.Net.balance_at_iff' : ∀ {u M k g : Nat}, k ≤ M → u * (M - k + g) + u * k = u * M + u * g
+@Becoming.Net.Fires.balances : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ → ∀ (y : P → Nat), (N.flow y σ).Balances (N.web y σ M₀)
+@Becoming.Net.balances_iff : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat},
+  (∀ (p : P), 0 < y p) → ((N.flow y σ).Balances (N.web y σ M₀) ↔ N.Fires σ M₀)
+@Becoming.Net.levels_eq_of_enabled : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  {M₀ : P → Nat} (t : Nat),
+  (∀ (s : Nat), s < t → N.Enabled (σ s) (N.marking σ M₀ s)) →
+    ∀ (p : P), (N.law y).levels σ (fun p => y p * M₀ p) t p = y p * N.marking σ M₀ t p
+@Becoming.Net.Fires.levels_eq : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ →
+    ∀ (y : P → Nat) (t : Nat) (p : P), (N.law y).levels σ (fun p => y p * M₀ p) t p = y p * N.marking σ M₀ t p
+@Becoming.Net.Fires.feasible : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ → ∀ (y : P → Nat), (N.law y).Feasible σ fun p => y p * M₀ p
+@Becoming.Net.Fires.course_balances : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ →
+    ∀ (y : P → Nat) (W : Becoming.Web T P),
+      ((N.law y).course σ fun p => y p * M₀ p).Balances (W.withLevel ((N.law y).levels σ fun p => y p * M₀ p))
+@Becoming.Net.enabled_of_within : ∀ {T P : Type} {N : Becoming.Net T P},
+  N.Pure →
+    ∀ {s : List T},
+      (s = [] ∨ ∃ f, s = [f]) → ∀ {M : P → Nat}, (∀ (p : P), N.consumes s p ≤ M p + N.produces s p) → N.Enabled s M
+@Becoming.Net.fires_iff_feasible : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  {M₀ : P → Nat},
+  N.Pure → Becoming.Net.Sequential σ → (∀ (p : P), 0 < y p) → (N.Fires σ M₀ ↔ (N.law y).Feasible σ fun p => y p * M₀ p)
+Becoming.Net.relay_pure : Becoming.Net.relay.Pure
+Becoming.Net.catalyst_levels : ∀ (t : Nat) (c : Unit),
+  (Becoming.Net.catalyst.law Becoming.Net.one).levels (fun x => [()]) (fun p => Becoming.Net.one p * (fun x => 0) p) t
+      c =
+    0
+Becoming.Net.relay_levels : ∀ (t : Nat) (c : Unit),
+  (Becoming.Net.relay.law Becoming.Net.one).levels (fun x => [true, false])
+      (fun p => Becoming.Net.one p * (fun x => 0) p) t c =
+    0
+Becoming.Net.catalyst_feasible_not_fires : ((Becoming.Net.catalyst.law Becoming.Net.one).Feasible (fun x => [()])
+    fun p => Becoming.Net.one p * (fun x => 0) p) ∧
+  ¬Becoming.Net.catalyst.Fires (fun x => [()]) fun x => 0
+Becoming.Net.relay_feasible_not_fires : Becoming.Net.relay.Pure ∧
+  ((Becoming.Net.relay.law Becoming.Net.one).Feasible (fun x => [true, false]) fun p =>
+      Becoming.Net.one p * (fun x => 0) p) ∧
+    ¬Becoming.Net.relay.Fires (fun x => [true, false]) fun x => 0
+@Becoming.Net.acting : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat},
+  (N.flow y σ).Acting (N.web y σ M₀)
+@Becoming.Net.taking : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat},
+  (N.flow y σ).Taking (N.web y σ M₀)
+@Becoming.Net.Fires.dependent : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ → ∀ (y : P → Nat), (N.web y σ M₀).Dependent
+@Becoming.Net.total_eq_closed : ∀ {P : Type} [DecidableEq P] {ps cs : List P},
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) →
+      Becoming.Distinct cs → ∀ {q : P → Nat}, (∀ (c : P), ¬c ∈ cs → q c = 0) → Becoming.total cs q = Becoming.total ps q
+@Becoming.Net.dissipative_iff : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} [DecidableEq P]
+  {ps : List P},
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) → ((N.flow y σ).Dissipative ↔ ∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f)
+@Becoming.Net.StrictSubinvariant.dissipative : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  [DecidableEq P] {ps : List P},
+  Becoming.Distinct ps → (∀ (p : P), p ∈ ps) → N.StrictSubinvariant y ps → (N.flow y σ).Dissipative
+@Becoming.Net.enclosed : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {ps : List P},
+  Becoming.Distinct ps → (∀ (p : P), p ∈ ps) → ∀ (t : Nat), (N.flow y σ).Enclosed t
+@Becoming.Net.rise_with_fall : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P},
+  N.Fires σ M₀ →
+    ∀ {t : Nat},
+      (∀ (f : T), f ∈ σ t → N.Loses y ps f) →
+        ∀ {p : P},
+          p ∈ ps →
+            y p * N.marking σ M₀ t p < y p * N.marking σ M₀ (t + 1) p →
+              ∃ q, q ∈ ps ∧ q ≠ p ∧ y q * N.marking σ M₀ (t + 1) q < y q * N.marking σ M₀ t q
+@Becoming.Net.rise_with_fall_tokens : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P},
+  N.Fires σ M₀ →
+    ∀ {t : Nat},
+      (∀ (f : T), f ∈ σ t → N.Loses Becoming.Net.one ps f) →
+        ∀ {p : P},
+          p ∈ ps →
+            N.marking σ M₀ t p < N.marking σ M₀ (t + 1) p →
+              ∃ q, q ∈ ps ∧ q ≠ p ∧ N.marking σ M₀ (t + 1) q < N.marking σ M₀ t q
+@Becoming.Net.takers_eq : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {ps : List P}
+  (t : Nat), (N.flow y σ).takers ps t = Becoming.count (σ t) fun f => Becoming.total ps fun p => y p * N.pre f p
+@Becoming.Net.takers_within : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P},
+  N.Fires σ M₀ →
+    (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) →
+      ∀ (n : Nat), Becoming.total (Becoming.steps 0 n) ((N.flow y σ).takers ps) ≤ Becoming.total ps fun p => y p * M₀ p
+@Becoming.Net.taking_not_recurring : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  {M₀ : P → Nat} {ps : List P} [DecidableEq P],
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) →
+      N.Fires σ M₀ →
+        (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) → ¬∀ (n : Nat), ∃ t, n ≤ t ∧ 0 < (N.flow y σ).takers ps t
+@Becoming.Net.marked_census : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P}, Becoming.Distinct ps → (∀ (p : P), p ∈ ps) → (N.web y σ M₀).StandingCensus (N.marked y σ M₀ ps)
+@Becoming.Net.change_stops_unrefuted : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  {M₀ : P → Nat} {ps : List P} [DecidableEq P],
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) →
+      N.Fires σ M₀ →
+        (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) →
+          ¬∀ (n : Nat), 0 ≤ n → ¬¬∃ t p, n ≤ t ∧ ((N.web y σ M₀).Rises t p ∨ (N.web y σ M₀).Falls t p)
+@Becoming.Net.marking_stops_unrefuted : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T}
+  {M₀ : P → Nat} {ps : List P} [DecidableEq P],
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) →
+      (∀ (p : P), 0 < y p) →
+        N.Fires σ M₀ →
+          (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) →
+            ¬∀ (n : Nat), ¬¬∃ t p, n ≤ t ∧ N.marking σ M₀ (t + 1) p ≠ N.marking σ M₀ t p
+@Becoming.Net.one_pos_of : ∀ {P : Type} {p : P} {n : Nat}, 0 < Becoming.Net.one p * n → 0 < n
+@Becoming.Net.Gated.gates : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat} {p : P} {m : Nat},
+  N.Gated p m →
+    ∀ (t : Nat) (f : T),
+      f ∈ (N.flow Becoming.Net.one σ).present t →
+        0 < (N.flow Becoming.Net.one σ).give t f p →
+          (N.web Becoming.Net.one σ M₀).requires t f p ∧ m ≤ (N.web Becoming.Net.one σ M₀).need t f p
+@Becoming.Net.gated_ends : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ →
+    ∀ {p : P} {m : Nat},
+      N.Gated p m →
+        ∀ {T₀ n : Nat},
+          (∀ (k : Nat), k < n → N.produces (σ (T₀ + k)) p < N.consumes (σ (T₀ + k)) p) →
+            N.marking σ M₀ T₀ p < n + m → ∀ (k : Nat) (g : T), 0 < N.pre g p → m ≤ N.pre g p → ¬g ∈ σ (T₀ + n + k)
+@Becoming.Net.siphon_empty : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ →
+    ∀ {p : P},
+      N.Gated p 1 →
+        ∀ {T₀ : Nat},
+          N.marking σ M₀ T₀ p = 0 →
+            ∀ (k : Nat), N.marking σ M₀ (T₀ + k) p = 0 ∧ ∀ (g : T), 0 < N.pre g p → ¬g ∈ σ (T₀ + k)
+@Becoming.Net.inl_not_mem_inr : ∀ {T P : Type} {f : T} {l : List P}, ¬Sum.inl f ∈ List.map Sum.inr l
+@Becoming.Net.world_taken : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  (t : Nat) (x : (N.world y σ M₀).Relatum),
+  (N.world y σ M₀).flow.taken t x =
+    match x with
+    | Sum.inl val => 0
+    | Sum.inr p => (N.flow y σ).taken t p
+@Becoming.Net.world_given : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  (t : Nat) (x : (N.world y σ M₀).Relatum),
+  (N.world y σ M₀).flow.given t x =
+    match x with
+    | Sum.inl val => 0
+    | Sum.inr p => (N.flow y σ).given t p
+@Becoming.Net.Fires.world_balanced : ∀ {T P : Type} {N : Becoming.Net T P} {σ : Nat → List T} {M₀ : P → Nat},
+  N.Fires σ M₀ → ∀ (y : P → Nat), (N.world y σ M₀).Balanced
+@Becoming.Net.world_embodied : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat},
+  (N.world y σ M₀).Embodied
+@Becoming.Net.world_counted : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ts : List T} {ps : List P},
+  Becoming.Distinct ts → (∀ (f : T), f ∈ ts) → Becoming.Distinct ps → (∀ (p : P), p ∈ ps) → (N.world y σ M₀).Counted
+@Becoming.Net.world_total_eq : ∀ {T P : Type} {ps : List P} [DecidableEq T] [DecidableEq P],
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) →
+      ∀ {cs : List (T ⊕ P)},
+        Becoming.Distinct cs →
+          ∀ {q : T ⊕ P → Nat},
+            (∀ (g : T), q (Sum.inl g) = 0) →
+              (∀ (c : T ⊕ P), ¬c ∈ cs → q c = 0) → Becoming.total cs q = Becoming.total ps fun p => q (Sum.inr p)
+@Becoming.Net.world_dissipative : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P} [DecidableEq T] [DecidableEq P],
+  Becoming.Distinct ps →
+    (∀ (p : P), p ∈ ps) → (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) → (N.world y σ M₀).Dissipative
+@Becoming.Net.world_enclosed : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ps : List P}, Becoming.Distinct ps → (∀ (p : P), p ∈ ps) → ∀ (t : Nat), (N.world y σ M₀).flow.Enclosed t
+@Becoming.Net.rests_unrefuted : ∀ {T P : Type} {N : Becoming.Net T P} {y : P → Nat} {σ : Nat → List T} {M₀ : P → Nat}
+  {ts : List T} {ps : List P} [DecidableEq T] [DecidableEq P],
+  Becoming.Distinct ts →
+    (∀ (f : T), f ∈ ts) →
+      Becoming.Distinct ps →
+        (∀ (p : P), p ∈ ps) →
+          N.Fires σ M₀ → (∀ (t : Nat) (f : T), f ∈ σ t → N.Loses y ps f) → ¬¬∃ n, (N.world y σ M₀).RestsFrom n
+Becoming.Net.cycle_step : ∀ (b p : Bool),
+  Becoming.Net.cycle.pre b p - (Becoming.Net.cycle.pre b p + 0) + (Becoming.Net.cycle.post b p + 0) =
+    Becoming.Net.cycle.pre (!b) p
+Becoming.Net.cycle_marking : ∀ (n : Nat) (p : Bool),
+  Becoming.Net.cycle.marking Becoming.Net.cycleRun Becoming.Net.cycleStart n p =
+    Becoming.Net.cycle.pre (Becoming.Net.turn n) p
+Becoming.Net.cycle_fires : Becoming.Net.cycle.Fires Becoming.Net.cycleRun Becoming.Net.cycleStart
+Becoming.Net.cycle_premises : (Becoming.Net.cycle.world Becoming.Net.one Becoming.Net.cycleRun
+      Becoming.Net.cycleStart).Balanced ∧
+  (Becoming.Net.cycle.world Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).Counted ∧
+    (Becoming.Net.cycle.world Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).Embodied ∧
+      ∀ (t : Nat),
+        (Becoming.Net.cycle.world Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).flow.Enclosed t
+Becoming.Net.cycle_not_dissipative : ¬(Becoming.Net.cycle.flow Becoming.Net.one Becoming.Net.cycleRun).Dissipative
+Becoming.Net.cycle_flips : ∀ (t : Nat),
+  Becoming.Net.cycle.marking Becoming.Net.cycleRun Becoming.Net.cycleStart t true = 1 ∧
+      Becoming.Net.cycle.marking Becoming.Net.cycleRun Becoming.Net.cycleStart (t + 1) true = 0 ∨
+    Becoming.Net.cycle.marking Becoming.Net.cycleRun Becoming.Net.cycleStart t true = 0 ∧
+      Becoming.Net.cycle.marking Becoming.Net.cycleRun Becoming.Net.cycleStart (t + 1) true = 1
+Becoming.Net.cycle_changes : ∀ (n : Nat),
+  0 ≤ n →
+    ¬¬∃ t p,
+          n ≤ t ∧
+            ((Becoming.Net.cycle.web Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).Rises t p ∨
+              (Becoming.Net.cycle.web Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).Falls t p)
+Becoming.Net.cycle_never_rests : ¬∃ n,
+    (Becoming.Net.cycle.world Becoming.Net.one Becoming.Net.cycleRun Becoming.Net.cycleStart).RestsFrom n
+Becoming.Net.fed_fires : Becoming.Net.fed.Fires Becoming.Net.fedRun fun x => 1
+Becoming.Net.fed_refills : (Becoming.Net.fed.flow Becoming.Net.one Becoming.Net.fedRun).Balances
+    (Becoming.Net.fed.web Becoming.Net.one Becoming.Net.fedRun fun x => 1) ∧
+  ¬Becoming.Net.fed.Gated true 1 ∧
+    (∀ (k : Nat),
+        k < 1 →
+          (Becoming.Net.fed.flow Becoming.Net.one Becoming.Net.fedRun).given (0 + k) true <
+            (Becoming.Net.fed.flow Becoming.Net.one Becoming.Net.fedRun).taken (0 + k) true) ∧
+      (Becoming.Net.fed.web Becoming.Net.one Becoming.Net.fedRun fun x => 1).level 0 true < 1 + 1 ∧
+        ¬∀ (k : Nat) (g : Bool),
+            (Becoming.Net.fed.web Becoming.Net.one Becoming.Net.fedRun fun x => 1).requires (0 + 1 + k) g true →
+              1 ≤ (Becoming.Net.fed.web Becoming.Net.one Becoming.Net.fedRun fun x => 1).need (0 + 1 + k) g true →
+                ¬(Becoming.Net.fed.web Becoming.Net.one Becoming.Net.fedRun fun x => 1).active (0 + 1 + k) g

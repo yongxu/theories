@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "A region kept along every reach is closed; for a reading its update keeps under every act, a policy keeps a task and goes on exactly where each state's act is enabled at every world the reading admits and leads only where the task holds.",
     "zh": "沿每一及而守之域即闭域；于其更新于每一行下所守之读，策略守务且不止，恰当每态之行于其读所容之每一世皆可行且唯通务成之处。"
@@ -32,49 +32,49 @@
       ]
     },
     {
-      "en": "Successor safety: an act leads, from every world a reading admits, only where the task holds, which an act no world can take meets; good and enabled adds that it can be taken at each; a policy keeps a task where it holds at every configuration reached from a sound one, and goes on where each sound one has a successor.",
-      "zh": "后继之安：一行自其读所容之每一世唯通务成之处，无世可行之行亦合之；善且可行又加于每一世皆可行；策略于自合读之形态所及之每一形态务皆成则守务，每一合读之形态皆有后继则不止。",
+      "en": "Successor safety: an act leads, from every world a reading admits, only where the task holds, which an act no world can take meets; leading into the task and enabled adds that it can be taken at each; a policy keeps a task where it holds at every configuration reached from a sound one, and goes on where each sound one has a successor.",
+      "zh": "后继之安：一行自其读所容之每一世唯通务成之处，无世可行之行亦合之；通务且可行又加于每一世皆可行；策略于自合读之形态所及之每一形态务皆成则守务，每一合读之形态皆有后继则不止。",
       "declarations": [
-        "Becoming.ReadingLoop.Good",
-        "Becoming.ReadingLoop.GoodEnabled",
+        "Becoming.ReadingLoop.LeadsInto",
+        "Becoming.ReadingLoop.LeadsIntoEnabled",
         "Becoming.ReadingLoop.Keeps",
         "Becoming.ReadingLoop.Continues"
       ]
     },
     {
-      "en": "Where the reading is a closed region of the policy's loop and each state's act is good for its reading, the task holds at every configuration reached from a sound one; a policy keeping the task is good for every state's reading, with no hypothesis; with the reading kept by the update, the two are equivalent.",
-      "zh": "读为策略之环之闭域，且每态之行于其读为善，则自合读之形态所及之每一形态务皆成；守务之策略于每态之读皆善，无需前提；读为更新所守，则二者相等。",
+      "en": "Where the reading is a closed region of the policy's loop and each state's act leads into the task from its reading, the task holds at every configuration reached from a sound one; a policy keeping the task leads into it from every state's reading, with no hypothesis; with the reading kept by the update, the two are equivalent.",
+      "zh": "读为策略之环之闭域，且每态之行自其读通务，则自合读之形态所及之每一形态务皆成；守务之策略自每态之读皆通务，无需前提；读为更新所守，则二者相等。",
       "declarations": [
-        "Becoming.ReadingLoop.keeps_of_good",
-        "Becoming.ReadingLoop.good_of_keeps",
-        "Becoming.ReadingLoop.keeps_iff_good"
+        "Becoming.ReadingLoop.keeps_of_leadsInto",
+        "Becoming.ReadingLoop.leadsInto_of_keeps",
+        "Becoming.ReadingLoop.keeps_iff_leadsInto"
       ]
     },
     {
-      "en": "With the reading kept by the update, a policy keeps the task and goes on from every sound configuration exactly where its act is good and enabled for every state's reading; given choice over the states, such a policy exists exactly where each state has one such act.",
-      "zh": "读为更新所守，则策略守务且自每一合读之形态不止，恰当其行于每态之读皆善且可行；于诸态有择，则此策略存在，恰当每态有一此行。",
+      "en": "With the reading kept by the update, a policy keeps the task and goes on from every sound configuration exactly where its act leads into the task and is enabled for every state's reading; given choice over the states, such a policy exists exactly where each state has one such act.",
+      "zh": "读为更新所守，则策略守务且自每一合读之形态不止，恰当其行自每态之读皆通务且可行；于诸态有择，则此策略存在，恰当每态有一此行。",
       "declarations": [
         "Becoming.ReadingLoop.keeps_continues_iff",
         "Becoming.ReadingLoop.keeping_policy_iff"
       ]
     },
     {
-      "en": "The reading admitting every world is kept by every update, an act good for it only where good at every world; the reading admitting none is kept by every update, every act is good for it, and no configuration is sound for it: being kept is not being informative.",
-      "zh": "容每一世之读为每一更新所守，行于其为善唯当于每一世为善；无所容之读为每一更新所守，每一行于其皆善，而无形态合之：被守非即有所告。",
+      "en": "The reading admitting every world is kept by every update, an act leading into the task from it only where it does so from every world; the reading admitting none is kept by every update, every act leads into the task from it, and no configuration is sound for it: being kept is not being informative.",
+      "zh": "容每一世之读为每一更新所守，行自其通务唯当自每一世通务；无所容之读为每一更新所守，每一行自其皆通务，而无形态合之：被守非即有所告。",
       "declarations": [
         "Becoming.ReadingLoop.everything_kept",
-        "Becoming.ReadingLoop.everything_good_iff",
+        "Becoming.ReadingLoop.everything_leadsInto_iff",
         "Becoming.ReadingLoop.nothing_kept",
-        "Becoming.ReadingLoop.nothing_good",
+        "Becoming.ReadingLoop.nothing_leadsInto",
         "Becoming.ReadingLoop.nothing_sound"
       ]
     },
     {
-      "en": "Witness: three worlds and three acts, an act good at a world where it is not the act that world names; every two worlds share a good act and no act is good at all three, so acts good pairwise need not be one act good for all.",
-      "zh": "例：三世三行，一行于一世为善当其非该世所名之行；每二世共一善行，而无行于三者皆善，故两两皆善之行未必为一于全体皆善之行。",
+      "en": "Witness: three worlds and three acts, an act leads into the task at a world where it is not the act that world names; every two worlds share an act leading into it at both and no act does at all three, so acts leading into the task pairwise need not be one act leading into it from all.",
+      "zh": "例：三世三行，一行于一世通务当其非该世所名之行；每二世共一于二者皆通务之行，而无行于三者皆通务，故两两通务之行未必为一自全体通务之行。",
       "declarations": [
         "Becoming.ReadingLoop.PairwiseShared.Point",
-        "Becoming.ReadingLoop.PairwiseShared.good",
+        "Becoming.ReadingLoop.PairwiseShared.leads",
         "Becoming.ReadingLoop.PairwiseShared.two_share",
         "Becoming.ReadingLoop.PairwiseShared.none_for_all"
       ]
@@ -144,8 +144,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
       "detail": {
-        "en": "Acts good pairwise, none for all: three worlds read alike, each act good at the worlds it differs from (ReadingLoop.PairwiseShared.two_share, ReadingLoop.PairwiseShared.none_for_all).",
-        "zh": "两两皆善而无全善：三世同读，每行于其所异之世为善（ReadingLoop.PairwiseShared.two_share、ReadingLoop.PairwiseShared.none_for_all）。"
+        "en": "Acts leading into the task pairwise, none for all: three worlds read alike, each act leading into the task at the worlds it differs from (ReadingLoop.PairwiseShared.two_share, ReadingLoop.PairwiseShared.none_for_all).",
+        "zh": "两两通务而无全通：三世同读，每行于其所异之世通务（ReadingLoop.PairwiseShared.two_share、ReadingLoop.PairwiseShared.none_for_all）。"
       }
     },
     {
@@ -171,8 +171,8 @@
     "zh": "历策略之存在为沿其所生之历之择；外围之概率信念；冻结之检验：语言模型之行者是否为由其可见之历而行之策略，于每一历后可能之诸世审之，及其所陈之读之二桥（计划之 TR5）；人之审查。"
   },
   "correspondence": {
-    "en": "A safety composition related to possibilistic belief interpretations of regulation (Virgo, Biehl, Baltieri and Capucci 2025), whose closure is under the policy chosen, as keeps_of_good takes it, where KeptBy asks it under every act; with GuardHorizon's choice from readings it is requisite variety along a loop. AI reading: the history form says what a regulator acting from what couples in must meet: safety and enabledness at every world compatible with its own history and the starts, the least reading kept by recording; a coarser reading can suffice where its further worlds ask compatible acts, and verifying a given policy is not finding one. The good regulator theorem (Conant and Ashby 1970) concerns simplest optimal regulation and is not reproduced. These are readings, not containments.",
-    "zh": "此为安之合成，近于以可能性之信读调节（Virgo、Biehl、Baltieri 与 Capucci 2025），彼之闭于所择之策略下，如 keeps_of_good 所取，KeptBy 则于每一行下求之；与 GuardHorizon 之由读择行并，为沿环之必要变异。AI 解读：历之形言依所耦合入者而行之调节者须合者：于与其己历及起点相容之每一世皆安且可行，此即为记录所守之最小之读；较粗之读于其所增之世所求之行相容处亦可足，验一给定之策略非即得之。善调节者定理（Conant 与 Ashby 1970）关最简之最优调节，此未重现。皆为读，非包含。"
+    "en": "A safety composition related to possibilistic belief interpretations of regulation (Virgo, Biehl, Baltieri and Capucci 2025), whose closure is under the policy chosen, as keeps_of_leadsInto takes it, where KeptBy asks it under every act; with GuardHorizon's choice from readings it is requisite variety along a loop. AI reading: the history form says what a regulator acting from what couples in must meet: safety and enabledness at every world compatible with its own history and the starts, the least reading kept by recording; a coarser reading can suffice where its further worlds ask compatible acts, and verifying a given policy is not finding one. The good regulator theorem (Conant and Ashby 1970) concerns simplest optimal regulation and is not reproduced. These are readings, not containments.",
+    "zh": "此为安之合成，近于以可能性之信读调节（Virgo、Biehl、Baltieri 与 Capucci 2025），彼之闭于所择之策略下，如 keeps_of_leadsInto 所取，KeptBy 则于每一行下求之；与 GuardHorizon 之由读择行并，为沿环之必要变异。AI 解读：历之形言依所耦合入者而行之调节者须合者：于与其己历及起点相容之每一世皆安且可行，此即为记录所守之最小之读；较粗之读于其所增之世所求之行相容处亦可足，验一给定之策略非即得之。善调节者定理（Conant 与 Ashby 1970）关最简之最优调节，此未重现。皆为读，非包含。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
   "aliases": [
@@ -217,30 +217,30 @@
       "declarations": [
         "Becoming.ReadingLoop.Continues",
         "Becoming.ReadingLoop.Generated",
-        "Becoming.ReadingLoop.Good",
-        "Becoming.ReadingLoop.GoodEnabled",
+        "Becoming.ReadingLoop.LeadsInto",
+        "Becoming.ReadingLoop.LeadsIntoEnabled",
         "Becoming.ReadingLoop.Keeps",
         "Becoming.ReadingLoop.KeptBy",
         "Becoming.ReadingLoop.PairwiseShared.Point",
-        "Becoming.ReadingLoop.PairwiseShared.good",
+        "Becoming.ReadingLoop.PairwiseShared.leads",
         "Becoming.ReadingLoop.PairwiseShared.none_for_all",
         "Becoming.ReadingLoop.PairwiseShared.two_share",
         "Becoming.ReadingLoop.Possible",
         "Becoming.ReadingLoop.Sound",
         "Becoming.ReadingLoop.closed_of_keptBy",
-        "Becoming.ReadingLoop.everything_good_iff",
+        "Becoming.ReadingLoop.everything_leadsInto_iff",
         "Becoming.ReadingLoop.everything_kept",
         "Becoming.ReadingLoop.generated_closed",
-        "Becoming.ReadingLoop.good_of_keeps",
+        "Becoming.ReadingLoop.leadsInto_of_keeps",
         "Becoming.ReadingLoop.history_continues_iff",
         "Becoming.ReadingLoop.history_keeps_iff",
         "Becoming.ReadingLoop.joint",
         "Becoming.ReadingLoop.keeping_policy_iff",
         "Becoming.ReadingLoop.keeps_continues_iff",
-        "Becoming.ReadingLoop.keeps_iff_good",
-        "Becoming.ReadingLoop.keeps_of_good",
+        "Becoming.ReadingLoop.keeps_iff_leadsInto",
+        "Becoming.ReadingLoop.keeps_of_leadsInto",
         "Becoming.ReadingLoop.kept_iff_closed",
-        "Becoming.ReadingLoop.nothing_good",
+        "Becoming.ReadingLoop.nothing_leadsInto",
         "Becoming.ReadingLoop.nothing_kept",
         "Becoming.ReadingLoop.nothing_sound",
         "Becoming.ReadingLoop.possible_kept",
@@ -249,7 +249,7 @@
         "Becoming.ReadingLoop.reached_of_possible",
         "Becoming.ReadingLoop.record"
       ],
-      "sha256": "5ca0f323c689c19d56edeb317a3eb371d715bd74533d5edad32429433db71812"
+      "sha256": "b7df34884f4bb98d605586c47d9477736a2a0ef617145c3e038cd1fe050fbe3a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
@@ -279,13 +279,19 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadingLoop",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -299,6 +305,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR5 in experiments/formations-that-read, which can refute at most the correspondence that an agent acts as a policy from its visible history, and two bridges for a reading it states, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR5，至多能驳行者为由其可见之历而行之策略之对应，及其所陈之读之二桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: GoodEnabled → LeadsIntoEnabled, PairwiseShared.good → PairwiseShared.leads, ReadingLoop.Good → ReadingLoop.LeadsInto, everything_good_iff → everything_leadsInto_iff, good_of_keeps → leadsInto_of_keeps, keeps_iff_good → keeps_iff_leadsInto, keeps_of_good → keeps_of_leadsInto, nothing_good → nothing_leadsInto. The statements are kept but for the names, and laws 2 to 6 and the counterexample follow them: an act leads into the task from a reading, or at a world, where they said it is good for it, a value the definition does not state; the claim is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：GoodEnabled → LeadsIntoEnabled, PairwiseShared.good → PairwiseShared.leads, ReadingLoop.Good → ReadingLoop.LeadsInto, everything_good_iff → everything_leadsInto_iff, good_of_keeps → leadsInto_of_keeps, keeps_iff_good → keeps_iff_leadsInto, keeps_of_good → keeps_of_leadsInto, nothing_good → nothing_leadsInto。陈述除名外不变；第二至第六律与反例随名而改：行自一读或于一世通务，原言其于之为善，而定义不言此价值；论断不变。"
     }
   ]
 }

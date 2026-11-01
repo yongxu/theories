@@ -23779,3 +23779,294 @@ Output→input: a-formations-couplings-as-its-blanket (BlanketCouplings, UE27), 
 **Decisions at landing.** No new record and no new module: UE28 extends UE27's module by a last part and amends UE27's record, homed in 03 §1, since it is one more reading in the classification of which blanket a thing has, and the record counts one result, not its theorems. The record's statement is rewritten compactly within its cap to cover the level; UE27's clause that the sensory course is the formation's own course leaves the statement and stays in its first law. The correspondence takes the clause on single runs, which UE27's sentence that a single run constrains nothing under the time-unrolled blanket needed beside the phased drain, and the state-machine remark, shortening author lists and dropping UE27's closing sentences that the join forbids nothing (kept in does_not_show) and that the readings are in the design (kept in the references), the "AI reading" label staying. 03 §1's reading says "folds" for "keeps", which removes the clash with the glossary's keeping, and its open clause narrows to runs taken together, the step off the world's side and the other records. UE27's home sentence that the agent is a model, not the formation's own record, now points to the level's two paragraphs, which follow the three levels rather than the home sentence. The page narrows §5's item and states the level in In brief, the claim table, §1 and §4; its Standing is unchanged, the level's condition being near-definitional and elementary. 08 §8 gains the correspondence clause. The blanket's record narrows its open item and changes nothing it states.
 
 **Readings** [AI reading, D45]. A formation's own level is the internal part of its blanket where its next level and act are fixed by its level, what couples into it and what it does: then the level itself, with no model beside it, folds what couples in, the formation's other records staying outside. Where something that does not couple into it moves it on a period its level does not carry, a model fed by its couplings can still be the agent, but its level is not the internal part; the two halves of 03 §1's reading come apart there. What decides is not whether what moves the level couples in, but whether the level, what couples in and the act fix the next step.
+
+## 492. The corpus's conditional laws, family by family, and rooms tested by a window (OU7)
+
+Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design](development/ou7-conditional-laws/DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review](development/ou7-conditional-laws/review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design](development/ou7-conditional-laws/check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check](development/ou7-conditional-laws/check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation. Every text that lists the ring's members names the rooms; 08 §3's count of leaf applications, six there though the checker has listed seven since RF6.1 added OpenedCorrection (30 October), is now counted from the checker's list. The grammar's owner's three items held from BD2 land with it ([the patches](development/ou7-conditional-laws/kit/patches/README.md)): «不出», «闭则不出» and «所闭不出» moved into GrammarLaws after «所闭之界», unchanged, «所闭不出» being that law read through «不出»; `Flow.Cut` defined as «不出» at a valuation's relation, which unfolds to its old body; and a region not crossed read two ways (BD2's two equivalences), so that master-laws-on-the-grammar's two count laws read as one law on regions not gone out of either way.
+
+```text
+Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end); continuation-relative-to-a-class (law 5,
+       home 01 §4) and classical-definitions-in-the-grammar (law 4, home 06 §三), each generalized;
+       master-laws-on-the-grammar (law 4 read as one law, home 01 §7, with the owner's two readings) and
+       not-going-out-of-a-region («不出», «闭则不出» and «所闭不出» now GrammarLaws'). Reused:
+       candidate-theorems-of-the-corpus, master-laws-on-the-grammar, generation-and-degeneration-at-two-grains,
+       testing-within-the-net.
+Delta:
+  - The 219 units classed 丙一 (162 of the first batch, 25 of 中论 chapters 10, 17, 19 and 24, 32 of 成唯识论):
+    128 in 22 families (103 state a law that holds, 6 one false as read with its countermodel, 19 a premise);
+    33 back to 丁, 53 not expressible with their reasons, 5 definitions. Each reading AI-labelled in groups.tsv.
+  - New laws: 相推 gives 全生成 (G02, sufficient); bounded room on the line itself (G03: a line that does not come
+    back is shorter than any list holding it, so not endless); the core keeps never ending (G15, «核同则同不穷»);
+    dependence, one-way, with its two definitional laws (G09).
+  - Two general laws, by patch, each stated where the law it generalizes is: beginning kept along the core of the
+    converse net («生于逆核下不变», with «位核含于逆核»; «生于位核下不变» its case), in Grammar, law 5 of
+    continuation-relative-to-a-class and 01 §4; what has a predecessor passes through under two-way constancy
+    («两向有常有前则通»; «两向有常则通» its case), in GrammarReadings, law 4 of the classical definitions and 06 §三.
+    Every old statement kept. 前際 and 後際 mirror each other under the converse; constancy is sufficient for 通,
+    not necessary.
+  - The grammar's owner's items held from BD2 (patches/owner/02-04): «不出», «闭则不出» and «所闭不出» moved from
+    GrammarCrossing into GrammarLaws after «所闭之界», unchanged, «所闭不出» that law read through «不出»; Flow.Cut
+    defined as «不出» at a valuation's relation, which unfolds to its old body; a region not crossed is exactly one
+    not gone out of either way and one closed both ways (BD2's two equivalences), so master-laws-on-the-grammar's
+    law 4 reads its two count laws as one law.
+  - 穷 → 变 → 通 is a conjunction where 變 is one alteration, not an order; G01's conjunction is text in 06, and
+    06's open item is restated as which 變 the text means.
+  - 27 witnesses, so that every family's net where Z fails is in the core; the 17 compositions the home section
+    states as text stay in scratch.
+Supplied premises / correspondence: the readings (AI reconstructions); G03's and G04's bound; G08 and G20 premises
+       of the model; G13's not its own condition; G21's converse under its premise. Modelling choices: one carrier,
+       缘 a necessary relation with no predicate of presence, discrete steps.
+Evidence: core receipt `20261101T094230.205342Z`; Becoming.GrammarConditionals (40 theorems in 41 declarations), a
+       core leaf importing GrammarCandidates and GrammarLaws, nothing importing it; Grammar 120 declarations,
+       GrammarReadings 18 declarations; GrammarLaws 192 theorems in 221 declarations, GrammarCrossing 9 theorems in 9
+       declarations; every axiom report empty. The patches' audit: the kit's add only their three laws, every other
+       statement unchanged; the owner's move three declarations unchanged, add two and define Flow.Cut as what unfolds
+       to its old body.
+Standing: three families new (G02, G03, G15), dependence definitional; the rest are existing laws given exact form
+       and nets. None of it says what a text means.
+Boundary:
+  - That the texts state these laws; no person has reviewed the readings.
+  - An order 穷 → 变 → 通; production and sufficiency (not expressible); constancy as necessary.
+  - The three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明), each with its AI label in 06's open items.
+  - The 181 乙 candidates of the three added texts.
+Output → input: 06 §四's home section, its thesis, §三's 通 (its table row and reading) and two open items; 01 §4's
+       paragraph on the two-way core; 01 §7's sentence on balance on a region; the OU plan's line on beginning; the
+       record's next step (review by a person; the open readings).
+```
+
+```text
+Result(s): rooms-tested-by-a-window (new, home 03 §3, after testing-within-the-net). Reused: testing-within-the-net,
+       continuation-relative-to-a-class, generation-and-degeneration-at-two-grains,
+       classical-definitions-in-the-grammar, master-laws-on-the-grammar, margin-of-a-regime, where-the-possible-grows.
+Delta:
+  - One rule makes the nets of a family of rooms (Becoming.RoomNet): a level in whole units moves one unit a step
+    toward surroundings at the set level m while the window is shut and at 0 once it opens; a heater reading the
+    level after the exchange gives c wherever it is below m. The unheated room (c = 0) is thermal equilibrium, the
+    matched thermostat (c = 1) gives what the window draws, the overshooting one (c = 2) more. The window's opening
+    is in the net as an alternative; rooms are compared as rules on a carrier tagging each occurrence with its
+    heater.
+  - Testing: while no window opens every room at its set level is one core class at the level, at every margin
+    («不开窗则同核»); with the window in the net the level's first stage tells the unheated room from every heated
+    one at every positive margin («开窗则一层可分»), and under warm or not, at a margin of n + 1 draws, stage n
+    holds and stage n + 1 tells them apart («开窗以温层如其余乃分»); two heated rooms stay one core class
+    («有给之室以温不可分»). «恒温与平衡»'s stipulated branches are the rule's at a margin of one draw, and its
+    verdict follows from the stage law there (toy_branches, toy_verdict): the toy stays and is derived.
+  - Regions: at a margin of three the overshooting thermostat is 全生成 and keeps at its set level, a model case
+    of Map.«生守相杂» («给过所取则生守相杂»); the unheated room keeps and reaches an end, and degenerates while
+    renewing once open («平衡守而有终», «开窗则平衡新而尽»); at every positive margin the matched thermostat is
+    全守 («给如所取则全守»), as every room is while no window opens (shut_rests). The single-line law tested both
+    ways (Overshooting.single_line_tested).
+  - A conditional law: at every positive margin warmth is constant under the net exactly where the heater gives
+    («温有常当且仅当有给»); from a margin of two on, no line of warmth from the set level ends exactly there
+    («温不穷当且仅当有给»); at a margin of one none ends (unended_at_one); across rooms the converse of «有常则往不穷»
+    fails (joint_converse).
+  - The bridge (Becoming.RoomRuns): with the window open the rule is RegimeMargin's step with the heater's giving,
+    so stays_ended and holds apply as they stand (holds at a positive margin); at a margin of three the overshooting
+    course is RegimeMargin.Alternation's run shifted by two; none of the three window courses keeps widening; the
+    overshooting course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
+    positive margin, is; a coarse line is the possible with warmth held (HeldPossible).
+Supplied premises / correspondence: the modelling choices are the record's hypotheses (whole-unit levels,
+       surroundings switched by the window, a window that never closes, warm as a level of at least 1, the
+       heater reading after the exchange, the nets read on the possible, rooms compared as rules); the
+       variants of the window, the threshold and the reading order are checked by hand (DESIGN §2). The
+       correspondence to thermostats, equilibrium, bisimulation and testing equivalence is the record's.
+Evidence: core receipt `20261101T094230.205342Z`; Becoming.RoomNet (94 theorems in 120 declarations) and
+       Becoming.RoomRuns (24 in 27), every axiom report empty. One independent AI review (18 findings) and its
+       re-check, every point taken; heated_unended, the two theorems on moments where the level stops
+       changing, and the renames and module docs written after the re-check were not reviewed again.
+Standing: model examples of 验 on the grammar; each law is a short proof on one constructed family, none
+       claimed new as mathematics. What they add is one mechanism placing the stipulated witnesses
+       (Map.«生守相杂», «恒温与平衡», RegimeMargin.Alternation) and the tests between them.
+Boundary:
+  - That the rooms are the World's flows: 02 §8's laws of regulation are read against their definitions only.
+  - That regulation has a region of its own: matched regulation is 全守, as rest is.
+  - The regions at margins other than three; gusts; a heater that reads late; the Hennessy–Milner direction.
+Output → input: the record's next step, an instance on the World's flows, by which 02 §8's laws apply formally.
+```
+
+**Stage 10-u4c**, in the same core run. Board item U4c, the census on the root: the next step the record one-root-to-its-edge named first, a root form for the census rows ([the design](development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md); one independent AI review, all thirteen findings taken, and the reviewer's re-check, all ten taken ([the review](development/u4-one-root-to-its-edge/REVIEW-U4C.md)); the record texts read in [a second review](development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md), all five should-fix and eight minor findings taken). GrammarLaws gains the census counted, with no decision of identity: the census of a step, one side, under a continuation fixing successors (`«定后则后并亡不过前并生»`); its mirror (`«定前则前并生不过后并亡»`); the two meeting in the count of HE2's census, the tests read off its decision (`«定后定前则前并生与后并亡同数»`), so the new law generalizes HE2's count below it; and the census of a run (`«定后前者在前则亡屡者生屡»`), endings recurring among listed units needing beginnings recurring. Each of the four is the corollary of a local form beside it asking no split, or no merge, only among the listed units (`GrammarLaws.census_le`, `census_le_converse`, `census_count`, `census_run`), as the module's other global forms are. `Listed.coming_of_ceasing` is re-proved as the run law at a member's occurrences along its steps and moves from counting to derived; `Listed.across_at` and `Web.Census.balanceFrom_at` are re-proved as cases of the two halves. Decided 1 November: the move into the prelude is a pure move, names, namespaces and statements kept, no caller changed; the only statements that change are three lemmas generalized to `Type u` as they move (`mem_remove`, `length_le_of_matched`, `not_not_all`), plus eight statements in Identity's `Counting` section each losing the decidability instance (`balanceFrom_at`, `balanceFrom`, `balanceFrom_eq_at`, `balanceFrom_eq` and the four recurrence laws), each strictly more general. The occurrence class and the no-split law along a relatum (`Steps.alikeAt`, `Steps.along_fixed`) sit in Arising beside `Steps.along`.
+
+```text
+Result(s): one-root-to-its-edge (Listed.coming_of_ceasing derived; CensusWebs.keep_pace's basis; the next step;
+       home 08 §7); master-laws-on-the-grammar (law 4 gains the four laws with their local forms, law 3 five list
+       lemmas and the census of a run, hypothesis 3 the counted census's tests, home 01 §7);
+       ceasing-needs-arising (law 2's route, home 01 §9.5); census-balance-under-continuation (laws 3 and 4, the
+       second hypotheses entry and the home row in 01 §9.5, the root's census a dependency); census-balance
+       (Listed.across_at a case, laws 1 and 5 on the routes); twenty records citing a moved lemma, each moved to a
+       Prelude reference.
+Delta:
+  - Fifteen lemmas move to the prelude with their names: nine from Population, five from Change, total_pos from
+    Flow. GrammarLaws gains five list lemmas and the four laws' local forms in its namespace; Arising Steps.alikeAt and Steps.along_fixed;
+    Population the two bridges, listedOccurrences, the two tests and total_mark_eq_count.
+  - Listed.coming_of_ceasing goes through the census of a run alone, with no balance anchor in its closure (D5).
+    Counts: 11 derived, 1 under a stated hypothesis, 6 counting, 99 at a distance.
+  - CensusWebs.keep_pace stays counting: a two-sided bound over a stretch on a fixed family that may list a member
+    twice, it would need both halves summed over a stretch, read on positions, and a proof off the balance anchor.
+Supplied premises / correspondence: the tests on listed units, the modelling choice by which «计» counts; the
+       hypotheses of each law (listed once, nothing splitting, predecessors listed before), each needed by a
+       witness in scratch (U4cCensus.Needed).
+Evidence: the scratch (U4cCensus, U4cCases: 44 theorems, every axiom report empty); the stage's closure built on
+       the tree after the kit's apply, before the grammar owner's patches came into the kit (39 modules, every
+       axiom report empty, no warning), GrammarLaws rebuilt there with the local forms (191 theorems in 220
+       declarations, the same); OU7's full rehearsal with both stages and the owner's patches (the kit's
+       REHEARSAL.json: 383 modules, none unclean, GrammarLaws 192 theorems in 221 declarations, its axiom report
+       empty); this core run.
+Standing: the census row derived; the other census laws rest on the root's census of a step; HE2's census is the
+       two halves' corollary in its count.
+Boundary:
+  - That any world meets the hypotheses; that the census is a law of how anything comes to be in every universe.
+  - The covering laws (Locality's and Identity's), which go by a covering list or lineages, are not cases; their
+    root form is the record's next step, with a stretch form of the census on positions, of which keep_pace
+    would be a case.
+  - No person's review.
+Output → input: 01 §7's balance line and root theorem, 01 §9.5's row; 08 §7's standings and connectivity figures;
+       DESIGN-BOUNDARY §9; the record's next step; the release gate's line on the census rows (WHAT-REMAINS).
+```
+
+**Stage 20-nd**, in the same core run. Board item ND, names that state relations, not rule, part 2 (part 1, the documents, is §486: [the design](development/nd-nondual-names/DESIGN.md) and [its cold read](development/nd-nondual-names/COLD-READ.md)). 08 §10 renames a landed name only where it states a wrong meaning, and four kinds did. *Obey* states a command and its compliance, where a predicate holds of counts, as `ListingHolds` beside it already says: `ListingObeys`, `CountsObey`, `StandsObey`, `DependsObey`, `CountsHold.obey` and their lemmas become `ListingMarksHold`, `CensusMarksHold`, `StandingMarksHold`, `DependenceMarksHold`, `CountsHold.marks`, and the binders `obeys` become `marks`. *Good* states a value, where `ReadingLoop.Good` is successor safety, an act leading only where the task holds from every world a reading admits: it becomes `LeadsInto` (`LeadsIntoEnabled`, `keeps_of_leadsInto`, `leadsInto_of_keeps`, `keeps_iff_leadsInto`, `everything_leadsInto_iff`, `nothing_leadsInto`), and the witness's predicate, an act differing from the act a world names, becomes `PairwiseShared.leads`, what it is in the witness: an act leading into the task at that world. The design named it `avoids`, after its body `x ≠ w`; `leads` was taken instead because the audit reads a rename as one map on the statement's tokens, and the binders `good` in the same module become `leads`, so one old token keeps one new one, and because in the witness that is what the predicate stands for. *Harm* calls a loss a harm, a word no law of the map uses: `RegimeMargin.harms_superadditive` becomes `rises_superadditive`, after the rises at the point it bounds. *Belongs to* states ownership: `Pool.difference_belongs_to_the_joint` becomes `difference_only_together`, after what its witness shows, a difference made only by the drawers together. In comments, "master law" becomes "shared law" (GrammarLaws' header, Amounts, ModelStatements, the root module) and a case satisfies a law rather than obeying it; Ren's words quoted in Parting and Situations stay as he wrote them. The records whose fields said a case obeys a law now say it satisfies it, as their home sections have read since part 1.
+
+```text
+Result(s): no new result. Names only: a-reading-kept-by-its-update (laws 2 to 6 and the counterexample in the new
+       words: an act leads into the task from a reading, or at a world), counting-standing-and-dependence,
+       counting-under-enclosure, counting-where-the-counts-exist, joint-difference-making, margin-of-a-regime,
+       whole-law-of-counting; "obeys" → "satisfies" in balance-from-the-first-law, conditioning-by-restriction,
+       counting-standing-and-dependence, finite-aggregation-within-restorable-basic-losses,
+       laws-of-one-step-complete, laws-of-one-step, one-step-missing-laws, runs-on-families-chosen-step-by-step.
+Delta:
+  - 24 declarations renamed in seven modules, and 65 statements changed only by the renamed names and binders inside them; no statement,
+    definition body or proof changes otherwise, and nothing is added or removed.
+  - Ten modules and the root module changed in comments only.
+Supplied premises / correspondence: none added.
+Evidence: the audit (every rename, and every statement changed only by the renames and the binders EXPECTED.json
+       lists); the scratch build of the 16 changed modules' closure (149 modules, nothing unclean, every axiom report
+       empty); this core run.
+Standing: unchanged for every result.
+Boundary:
+  - The record id master-laws-on-the-grammar, the view's category values ('master law', 'no master law') and the
+    names of master-laws.json and master_laws.py are renamed after this landing, in ND's own, last.
+  - The register's four renamed roots go by `now_used` and return under their new names by `roots`; the reason of
+    `Concave.roots`'s entry, which names harms_superadditive, is corrected in that last landing too.
+  - Kept on purpose: "the good regulator" (Conant and Ashby), I. J. Good's value of evidence, Frontier's "transfer
+    harms", HeldForReading's system obeying a stop, the Chinese 遵从 for Flow.Follows; `class_belongs_to_the_run`
+    is not renamed here.
+  - No person's review.
+Output → input: the lean index and the declarations page; the decidability inventory's next render; MV's input
+       after the final stage.
+```
+
+## 493. Balance on each closure, on the root (BD4)
+
+Board item BD4 is the second half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. BD3 (section 487) read Continuity's closed families as regions not gone out of. It left the «所闭» form open: balance on each closure under the listed adjacency, the components of network flows. Here each closure is decided as a test, and balance reads on the closures. Each relatum's closure is the least family the relation closes that holds it, a region, membership a test, not gone out of. At the unit grain the same closures keep the count, by the count law of a class, and the two grains are joined: transfers balance a step exactly where the units before pair one to one with the units after under the closure. OU's owner, which owns GrammarLaws and, by rule 3, Continuity, agreed on all three of the proposal's questions. This session takes BD4. The laws go in BD3's leaf, since nothing below uses the decided closure. The unit grain is included, as a case. An independent AI reviewer read the Lean and its texts, and read them again once its findings were taken; every finding is taken ([the review](development/bd-boundaries/REVIEW-BD4.md)), and the join of the grains came from it.
+
+```text
+Result(s): balance-from-conservation-along-a-relation (an eighth law: each closure under the listed adjacency decided
+       as a test and least among the families the relation closes, balance from conservation on each closure, and
+       the same balance read on units paired under the closure, by the count law of a class; the sixth item on what
+       is not shown replaced by two; the first hypothesis names decided equality a modelling hypothesis, and the
+       transfers and the closures computable).
+Delta:
+  - The closure decided. With equality decided, a relatum's closure under adjacency among the listed relata, the
+    grammar's «所闭», is what is reached from it within as many steps of that adjacency as relata are listed
+    (Continuity.closureListed, closureListed_iff). Counted by «计», the listed relata reached grow at each step
+    until a step reaches nothing new, after which none does (reachedListed_stays), and they cannot outnumber the
+    list (reachedListed_grows_or_stays, closureListed_closed). An unlisted relatum's closure holds nothing
+    but itself (closureListed_unlisted). The test is built to decide, not to be evaluated.
+  - Balance on each closure. Conservation on every family the relation closes is conservation on each closure
+    (conservedOn_iff_closures). A closed family holding a relatum holds its closure (closureListed_inside, by
+    «闭含所闭»), so each relatum's closure is the least family the relation closes that holds it. What a closed
+    family holds beyond a listed relatum's closure the relation closes (closes_and_not), and it holds fewer listed
+    relata (conserved_of_fewer, conserved_of_closures). So, relata listed without repetition and equality decided,
+    transfers along the relation that balance a step exist exactly where the total is conserved on the closure of
+    each listed relatum (balancing_iff_closures); on a web, likewise at every step (balancesOn_iff_closures).
+  - The unit grain. The closure of a symmetric relation is a class (by «所闭之自反», «所闭之对称» and
+    «所闭之传递»). So, where a test decides the closure, a pairing under it is the count kept on each closure: a
+    case of «类之对当且仅当类类等数» (pairing_iff_closure_counts). Symmetry is needed: a region closed one way only
+    does not keep the count («对而单闭域不守数之例»). Along the listed adjacency the closures are those of every
+    relatum, listed or not (pairing_iff_closures).
+  - The two grains joined. Read a level as units on its relata, each listed relatum repeated as often as its
+    level, gathered by the grammar's «聚» (unitsOn): a test counts them on its family as the level's total there
+    (count_unitsOn). So, with equality decided, conservation on every family the relation closes is the units
+    before paired one to one with the units after under the closure (closures_iff_unit_counts,
+    conservedOn_iff_units_paired), and transfers balance a step exactly where the units are so paired
+    (balancing_iff_units_paired; on a web, balancesOn_iff_units_paired): the closure-local reading of
+    Flow.balances_iff_units, the closure taking the place of the transfers.
+  - Not along one step. On the path 0 — 1 — 2, [0] and [2] keep every closure's count, and no pairing along one
+    step of the adjacency joins them (PathOfThree.counts_kept_not_along_step, by paired_single: a pairing with a
+    single entry is a single related entry), as an amount may pass through a relatum within the step.
+Supplied premises / correspondence: for the amount grain and the join, none beyond balancing_iff's own (relata
+       listed without repetition, decided equality, the relation and membership as Bool tests). The general unit-grain
+       law, pairing_iff_closure_counts, takes symmetry and the closure's decision as hypotheses; the listed adjacency
+       meets both. Decided equality is a modelling hypothesis, taken as an argument; the reports cover these
+       declarations, and an instance supplied at use carries its own report. Conservation on each connected part is
+       the uncapacitated, undirected case of the feasibility conditions for flows (Gale 1957; Hoffman 1960, through
+       the usual reduction to a circulation). Modelling choices are those of Becoming.Continuity (finitely many
+       listed relata, natural-number levels, discrete steps).
+Evidence: core receipt `20261101T105110.951913Z`; Becoming.BalanceRegions (43 theorems in 48 declarations), the core leaf BD3 began, extended;
+       every axiom report empty; no other module changed.
+Standing: proved. The closure's decision by a counting bound, the decomposition by induction on what a family
+       holds, and the count of units on a family are the new pieces. The rest is Continuity's law and the grammar's
+       laws applied to them; the unit grain is a case of a grammar law. Read [AI reading]: the regions balance is
+       kept on are the relation's own closures, at both grains, so locality is the relation's own: what it holds
+       together keeps its count, and its units may be paired anywhere within it.
+Boundary:
+  - Transfers within capacities, the capacitated case of the same conditions: not stated.
+  - A pairing along one step of the adjacency where each closure keeps its count: not implied (the path witness
+    above). The unit-grain laws pair within a closure, whose entries need not be adjacent.
+  - Infinitely many relata, levels other than natural numbers, and a local choice of flux (Continuity's own
+    boundary) are not reached.
+  - Re-pairing (OU's condition on lever 1's test): the amount-grain laws quantify over no pairing. The unit-grain
+    laws, and the join, hold for every pairing under the closure one way and are existence statements the other, so
+    each is invariant. They read only what the counts on each closure read, so U4's verdict stands: lever 1's round
+    trip still fails, and this is locality, not the lift.
+Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of what is not shown); 01 §9.9 (one
+       sentence of the reading of boundaries: balance kept on the closures of the relation read both ways);
+       balance-from-conservation-along-a-relation's eighth law, its first hypothesis, its two items on what is not
+       shown, its correspondence, its dependency on master-laws-on-the-grammar, its link to
+       amounts-by-unit-matchings, its scope and its history; the root
+       module's bullet, the checker's scope, both package READMEs; regions.json; the connectivity register; the
+       board's BD4 row.
+```
+
+**Self-review.**
+1. `BalanceRegions` stays a leaf. Nothing imports it, and no other module changes, so only it rebuilds.
+2. No classical principle enters. The closure is a Bool test computed by iteration, and no proof splits on an undecided proposition: each case split is on a Bool's two values (`Bool.eq_false_or_eq_true`), a decided comparison of counts (`Nat.lt_or_ge`), a list, a pairing's constructors, or a disjunction already proved. `DecidableEq` enters only as an argument.
+3. The unit grain is a case of a grammar law, not a separate proof. Its two hypotheses, symmetry and the decision, are named in the law. The join is that case with the count of units on a family.
+4. The counting lemmas (`cond_le_cond`, `count_le_count`, `count_lt_count`, `count_true`, `counted_of_count`, `count_append`, `count_replicate_true`, `count_replicate_false`) and `paired_single` are laws of «计» and «对» with nothing of Continuity in them: candidates for GrammarLaws at its next planned near-full rebuild, OU's owner's call. `unitsOn` is «聚» of repeated entries; `Weightings.unitsOf` reads a quantity as units the same way, in a module this leaf does not import, and a merge of the two is for a rebuild that touches both.
+5. Not done: the items in Boundary.
+
+## 494. A response common over a reading, on the root (SJ1)
+
+Board item SJ, from the request to map the edge where situation, value, perception and other uncertainties have to come in, and to extend the root into situational judgement ([the source](../../../../sources/15-codex-theory-conversations/2026-11-01-the-edge-and-situational-judgement.md)). The design ([DESIGN](development/sj-edge-and-judgement/DESIGN.md)) was reviewed in four lenses on the design ([REVIEW-1](development/sj-edge-and-judgement/REVIEW-1.md)) and in three on the Lean and the map ([REVIEW-2](development/sj-edge-and-judgement/REVIEW-2.md), 4 blocking, 11 major and 15 minor findings), every finding taken; its landing texts were read in four lenses, each with a verifier ([REVIEW-3](development/sj-edge-and-judgement/REVIEW-3.md), 34 of 41 findings confirmed and taken). This section lands SJ1, the leaf; the map of the edge (08 §7) and the texts at 07 §5 follow, and GuardHorizon's bridge in a ring slot.
+
+```text
+Result(s): a-response-common-over-a-reading (SJ1, home 03 §12). New. market-protected-continuation: its two
+       kernel laws re-proved from the leaf, statements unchanged, its proof binding re-pointed.
+Delta:
+  - The kernel on the grammar: the occurrences whose closure under a relation stays in a region («承» along the
+    converse of «所闭») form its largest part closed under the relation («所闭之承最大»), for every carrier and relation. At a
+    process's steps it is the invariance kernel (Viability.kernel_iff_held), and Viability.Certificate.kernel and
+    Viability.kernel_certificate are proved from it with their statements unchanged.
+  - Covering: for every reading and requirement, a response common over the reading within the requirement («共应»:
+    a region for each act, inside its requirement, closed under the reading, covering the situations) exists
+    exactly where the acts' kernels cover the situations («共应当且仅当所闭之承遍»), with no choice and no decision.
+    Judgment, 03 §3's common response over the class alike through the couplings, is viability indexed by acts.
+  - Along the reading without its closure: exactly reflexivity and transitivity, each needed by a witness.
+  - Exactly one act per situation: on a carrier keeping situations and acts apart, a common response over a map's
+    sameness exists exactly where the image of the response relation along the map has a fixed successor (through
+    «像定后当且仅当同行»); at an act map its condition is that situations read alike get the same act
+    («映应共应当且仅当同读同应»), which is Learning.Lumped unfolded (the identification checked by .symm in the
+    study's scratch; no theorem naming Learning.Lumped lands, the leaf importing GrammarLaws only).
+  - A rule from what a map reads gives one with no choice; the converse asks for a choice over the readings, which
+    plans are shown to need (Viability.plans_iff_choice, cited by analogy), not proved needed here.
+Supplied premises / correspondence: the reading a relation on situations, supplied; the requirement supplied and
+  fixed before the outcome, the act an index outside «际»; no separate reader.
+Evidence: core receipt 20261101T112708.430596Z: Becoming.CommonResponse (36 theorems in 50 declarations), Becoming.Viability (25 theorems in 33 declarations), every
+  axiom report empty.
+Boundary: which requirement is right is not stated; an act at every situation, or one shared by every two, need
+  not give a common response; the witnesses keep the work of the closure, covering, one act and the sum carrier.
+  The kernel at a process's steps quantifies over every course: Aubin's invariance kernel.
+Integration: the root module's import and bullets, the checker's core list and scope, both package READMEs,
+  regions.json, 03's bases line, §12 and 05 §10's row; the records citing the changed texts re-pointed, nothing they say changed.
+```
+
+**Not changed.** No definition of an earlier module changes. GuardHorizon, ReadingLoop and AssurancePlans keep their proofs; `GuardHorizon.statewise_not_uniform`'s re-proof from the leaf's witness and the bridge `uniform_policy_iff_common` are built in the study's scratch and land in a ring slot. The names are provisional for the grammar's owner.

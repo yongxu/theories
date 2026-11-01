@@ -22,7 +22,7 @@ and across a list of steps the counts at each step sum (`CountsAcross`).
   number (`Counts.unique`), and where a procedure decides, its marks are the count
   (`counts_total`, `counts_total`, `counts_total`). So the yes or no is needed only at what
   is counted, and only for the count to exist.
-* **Counts obey the census with no premise.** Over a stretch, wherever the counts exist, the
+* **Counts satisfy the census with no premise.** Over a stretch, wherever the counts exist, the
   members holding at the end with those that ceased across it are those holding at the start
   with those that came to be (`Counts.over_stretch`). No decidedness is assumed, not even at the
   steps inside the stretch: decided there, the census holds (`Counts.over_stretch_decided`), that

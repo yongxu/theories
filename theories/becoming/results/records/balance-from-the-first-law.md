@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. A quantity held on the conditions obeys a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance. (`Becoming.EntropyProduction.LocalBalance`, `Becoming.EntropyProduction.ReadsLevels`, `Becoming.EntropyProduction.ReadsTransfers`, `Becoming.EntropyProduction.ReadsTransfers.carried`, `Becoming.EntropyProduction.LocalBalance.produced`)
+1. A quantity held on the conditions satisfies a local balance when, across each step, what stands on a condition changes by what the exchanges present carry out of it and by what the condition itself produces. Read at a unit u > 0 on the levels and the exchanges, what a condition produces is u times its departure from balance. (`Becoming.EntropyProduction.LocalBalance`, `Becoming.EntropyProduction.ReadsLevels`, `Becoming.EntropyProduction.ReadsTransfers`, `Becoming.EntropyProduction.ReadsTransfers.carried`, `Becoming.EntropyProduction.LocalBalance.produced`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Balance is local conservation: the levels balance exactly where no condition produces the quantity, so a quantity conserved locally and carried only by the exchanges taking part, as energy, the mass of an element or a count of individuals, balances the levels it is read on. (`Becoming.EntropyProduction.balances_iff_unproduced`, `Becoming.EntropyProduction.balances_of_conserved`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
@@ -99,7 +99,8 @@ Aliases: `Becoming.EntropyProduction.rtotal`, `Becoming.EntropyProduction.cast_t
 - 22 October 2026, board item FL1: added for the question whether balance should come from conservation of energy, as dissipation comes from the second law; balance and the exchanges' exergy balance derived from the first law and the entropy balance in one reading of amounts as available work.
 - 22 October 2026, FL2 (study section 354): related to balance-from-conservation-along-a-relation, which derives the transfers this record assumes. The claim is unchanged.
 - 26 October 2026, board item DF1b (study section 422): 'The first law' here is thermodynamics' first law, named in full apart from the spine's first law (Flow.Gainless), which thermodynamics' second law gives read in available work; title, statement, laws 4 and 5, a limit, the correspondence, a dependency and two related notes. Where a related note means the spine's first law, it says so.
+- 1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-22T18:00:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

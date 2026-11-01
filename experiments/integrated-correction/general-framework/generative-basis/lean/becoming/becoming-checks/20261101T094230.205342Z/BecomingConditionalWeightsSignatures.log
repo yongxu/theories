@@ -1,0 +1,354 @@
+Becoming.ConditionalWeights.entry_and : ∀ (a b : Bool) (n : Nat),
+  (if a = true then if b = true then n else 0 else 0) = if (a && b) = true then n else 0
+Becoming.ConditionalWeights.entry_swap : ∀ (a b : Bool) (n : Nat),
+  (if b = true then if a = true then n else 0 else 0) = if a = true then if b = true then n else 0 else 0
+Becoming.ConditionalWeights.entry_split : ∀ (a b : Bool) (n : Nat),
+  ((if (a && b) = true then n else 0) + if (a && !b) = true then n else 0) = if a = true then n else 0
+Becoming.ConditionalWeights.entry_test_le : ∀ (a : Bool) (n : Nat), (if a = true then n else 0) ≤ n
+Becoming.ConditionalWeights.entry_mul_left : ∀ (a : Bool) (c n : Nat),
+  (if a = true then c * n else 0) = c * if a = true then n else 0
+Becoming.ConditionalWeights.entry_and_true : ∀ (a : Bool) (n : Nat),
+  (if (a && true) = true then n else 0) = if a = true then n else 0
+Becoming.ConditionalWeights.entry_and_comm : ∀ (a b : Bool) (n : Nat),
+  (if (a && b) = true then n else 0) = if (b && a) = true then n else 0
+Becoming.ConditionalWeights.entry_restrict_le : ∀ (a b : Bool) (n : Nat),
+  (if a = true then if b = true then n else 0 else 0) ≤ if a = true then n else 0
+@Becoming.ConditionalWeights.mass_eq_sum : ∀ {Ω : Type u_1} (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l w e = Becoming.counting.sum l fun x => if e x = true then w x else 0
+@Becoming.ConditionalWeights.mass_congr_mem : ∀ {Ω : Type u_1} {w w' : Ω → Nat} {e e' : Ω → Bool} {l : List Ω},
+  (∀ (x : Ω), x ∈ l → (if e x = true then w x else 0) = if e' x = true then w' x else 0) →
+    Becoming.mass l w e = Becoming.mass l w' e'
+@Becoming.ConditionalWeights.mass_congr : ∀ {Ω : Type u_1} {w w' : Ω → Nat} {e e' : Ω → Bool},
+  (∀ (x : Ω), (if e x = true then w x else 0) = if e' x = true then w' x else 0) →
+    ∀ (l : List Ω), Becoming.mass l w e = Becoming.mass l w' e'
+@Becoming.ConditionalWeights.mass_le_of_entries : ∀ {Ω : Type u_1} {w w' : Ω → Nat} {e e' : Ω → Bool},
+  (∀ (x : Ω), (if e x = true then w x else 0) ≤ if e' x = true then w' x else 0) →
+    ∀ (l : List Ω), Becoming.mass l w e ≤ Becoming.mass l w' e'
+@Becoming.ConditionalWeights.mass_none : ∀ {Ω : Type u_1} (w : Ω → Nat) (l : List Ω),
+  (Becoming.mass l w fun x => false) = 0
+@Becoming.ConditionalWeights.mass_append : ∀ {Ω : Type u_1} (w : Ω → Nat) (e : Ω → Bool) (l l' : List Ω),
+  Becoming.mass (l ++ l') w e = Becoming.mass l w e + Becoming.mass l' w e
+@Becoming.ConditionalWeights.mass_map : ∀ {Ω : Type u_1} {β : Type u_2} (g : β → Ω) (w : Ω → Nat) (e : Ω → Bool)
+  (l : List β), Becoming.mass (List.map g l) w e = Becoming.mass l (fun b => w (g b)) fun b => e (g b)
+@Becoming.ConditionalWeights.mass_joinMap : ∀ {α : Type u_1} {β : Type u_2} (g : α → List β) (w : β → Nat)
+  (e : β → Bool) (l : List α),
+  Becoming.mass (Becoming.joinMap g l) w e = Becoming.mass l (fun a => Becoming.mass (g a) w e) fun x => true
+@Becoming.ConditionalWeights.mass_mul_left : ∀ {Ω : Type u_1} (c : Nat) (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l (fun x => c * w x) e = c * Becoming.mass l w e
+@Becoming.ConditionalWeights.mass_mul_right : ∀ {Ω : Type u_1} (c : Nat) (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l (fun x => w x * c) e = Becoming.mass l w e * c
+@Becoming.ConditionalWeights.whole_of_entries : ∀ {Ω : Type u_1} (v : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  (Becoming.mass l (fun x => if e x = true then v x else 0) fun x => true) = Becoming.mass l v e
+@Becoming.ConditionalWeights.mass_eq_total : ∀ {Ω : Type} (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l w e = Becoming.total l fun x => if e x = true then w x else 0
+@Becoming.ConditionalWeights.mass_and_comm : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → Nat) (a b : Ω → Bool),
+  (Becoming.mass l w fun x => a x && b x) = Becoming.mass l w fun x => b x && a x
+@Becoming.ConditionalWeights.mass_and_true : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → Nat) (a : Ω → Bool),
+  (Becoming.mass l w fun x => a x && true) = Becoming.mass l w a
+@Becoming.ConditionalWeights.mass_restrict : ∀ {Ω : Type u_1} (r : Ω → Bool) (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l (Becoming.ConditionalWeights.restrict r w) e = Becoming.mass l w fun x => e x && r x
+@Becoming.ConditionalWeights.whole_restrict : ∀ {Ω : Type u_1} (r : Ω → Bool) (w : Ω → Nat) (l : List Ω),
+  (Becoming.mass l (Becoming.ConditionalWeights.restrict r w) fun x => true) = Becoming.mass l w r
+@Becoming.ConditionalWeights.mass_split : ∀ {Ω : Type u_1} (r : Ω → Bool) (w : Ω → Nat) (e : Ω → Bool) (l : List Ω),
+  Becoming.mass l w e = (Becoming.mass l w fun x => e x && r x) + Becoming.mass l w fun x => e x && !r x
+@Becoming.ConditionalWeights.restrict_le : ∀ {Ω : Type u_1} (r : Ω → Bool) (w : Ω → Nat) (x : Ω),
+  Becoming.ConditionalWeights.restrict r w x ≤ w x
+@Becoming.ConditionalWeights.mass_restrict_le : ∀ {Ω : Type u_1} (r : Ω → Bool) (w : Ω → Nat) (e : Ω → Bool)
+  (l : List Ω), Becoming.mass l (Becoming.ConditionalWeights.restrict r w) e ≤ Becoming.mass l w e
+@Becoming.ConditionalWeights.restrict_restrict : ∀ {Ω : Type u_1} (r₁ r₂ : Ω → Bool) (w : Ω → Nat) (x : Ω),
+  Becoming.ConditionalWeights.restrict r₂ (Becoming.ConditionalWeights.restrict r₁ w) x =
+    Becoming.ConditionalWeights.restrict (fun y => r₁ y && r₂ y) w x
+@Becoming.ConditionalWeights.restrict_comm : ∀ {Ω : Type u_1} (r₁ r₂ : Ω → Bool) (w : Ω → Nat) (x : Ω),
+  Becoming.ConditionalWeights.restrict r₂ (Becoming.ConditionalWeights.restrict r₁ w) x =
+    Becoming.ConditionalWeights.restrict r₁ (Becoming.ConditionalWeights.restrict r₂ w) x
+Becoming.ConditionalWeights.Share.le_refl : ∀ (a : Becoming.ConditionalWeights.Share), a.le a
+@Becoming.ConditionalWeights.Share.le_trans : ∀ {a b c : Becoming.ConditionalWeights.Share},
+  0 < b.whole → a.le b → b.le c → a.le c
+Becoming.ConditionalWeights.Share.zero_whole : ∀ (a : Becoming.ConditionalWeights.Share),
+  { part := 0, whole := 0 }.le a ∧ a.le { part := 0, whole := 0 } ∧ { part := 0, whole := 0 }.Same a
+Becoming.ConditionalWeights.Share.le_iff_reciprocal : ∀ (a b : Becoming.ConditionalWeights.Share),
+  a.le b ↔ b.reciprocal.le a.reciprocal
+@Becoming.ConditionalWeights.Share.mul_le_mul : ∀ {a a' b b' : Becoming.ConditionalWeights.Share},
+  a.le a' → b.le b' → (a.mul b).le (a'.mul b')
+Becoming.ConditionalWeights.Share.mul_le_left : ∀ (a : Becoming.ConditionalWeights.Share)
+  {b : Becoming.ConditionalWeights.Share}, b.part ≤ b.whole → (a.mul b).le a
+@Becoming.ConditionalWeights.share_le_of_included : ∀ {Ω : Type u_1} {l : List Ω} (w : Ω → Nat) {e e' : Ω → Bool},
+  Becoming.IncludedOn l e e' → (Becoming.ConditionalWeights.share l w e).le (Becoming.ConditionalWeights.share l w e')
+@Becoming.ConditionalWeights.share_within : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → Nat) (e : Ω → Bool),
+  (Becoming.ConditionalWeights.share l w e).part ≤ (Becoming.ConditionalWeights.share l w e).whole
+@Becoming.ConditionalWeights.share_zero_whole : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → Nat) (e : Ω → Bool),
+  (Becoming.ConditionalWeights.share l w e).whole = 0 →
+    Becoming.ConditionalWeights.share l w e = { part := 0, whole := 0 }
+@Becoming.ConditionalWeights.restrict_two_ways : ∀ {Ω : Type u_1} (l : List Ω) (w : Ω → Nat) (h r : Ω → Bool),
+  ((Becoming.ConditionalWeights.share l (Becoming.ConditionalWeights.restrict r w) h).mul
+        (Becoming.ConditionalWeights.share l w r)).Same
+    ((Becoming.ConditionalWeights.share l (Becoming.ConditionalWeights.restrict h w) r).mul
+      (Becoming.ConditionalWeights.share l w h))
+@Becoming.ConditionalWeights.mass_scaled_event : ∀ {β : Type u_1} (k : Bool) (c : Nat) (v : β → Nat) (e : β → Bool)
+  (bs : List β),
+  (Becoming.mass bs (fun m => c * v m) fun m => k && e m) = if k = true then c * Becoming.mass bs v e else 0
+@Becoming.ConditionalWeights.mass_pairs : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : α → β → Nat)
+  (e₁ : α → Bool) (e₂ : β → Bool) (bs : List β) (as : List α),
+  (Becoming.mass (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.fst c.snd) fun c => e₁ c.fst && e₂ c.snd) =
+    Becoming.mass as (fun a => w₁ a * Becoming.mass bs (w₂ a) e₂) e₁
+@Becoming.ConditionalWeights.mass_product : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat)
+  (e₁ : α → Bool) (e₂ : β → Bool) (as : List α) (bs : List β),
+  (Becoming.mass (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst && e₂ c.snd) =
+    Becoming.mass as w₁ e₁ * Becoming.mass bs w₂ e₂
+@Becoming.ConditionalWeights.share_product : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat)
+  (e₁ : α → Bool) (e₂ : β → Bool) (as : List α) (bs : List β),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c =>
+      e₁ c.fst && e₂ c.snd) =
+    (Becoming.ConditionalWeights.share as w₁ e₁).mul (Becoming.ConditionalWeights.share bs w₂ e₂)
+@Becoming.ConditionalWeights.share_product_le : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat)
+  (e₁ : α → Bool) (e₂ : β → Bool) (as : List α) (bs : List β),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c =>
+        e₁ c.fst && e₂ c.snd).le
+    (Becoming.ConditionalWeights.share as w₁ e₁)
+@Becoming.ConditionalWeights.share_product_le_right : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat)
+  (e₁ : α → Bool) (e₂ : β → Bool) (as : List α) (bs : List β),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c =>
+        e₁ c.fst && e₂ c.snd).le
+    (Becoming.ConditionalWeights.share bs w₂ e₂)
+@Becoming.ConditionalWeights.mass_first : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat) (e₁ : α → Bool)
+  (as : List α) (bs : List β),
+  (Becoming.mass (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst) =
+    Becoming.mass as w₁ e₁ * Becoming.mass bs w₂ fun x => true
+@Becoming.ConditionalWeights.restrict_independent : ∀ {α : Type u_1} {β : Type u_2} (w₁ : α → Nat) (w₂ : β → Nat)
+  (e₁ : α → Bool) (r : β → Bool) (as : List α) (bs : List β),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps as bs)
+        (Becoming.ConditionalWeights.restrict (fun c => r c.snd) fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst).Same
+    (Becoming.ConditionalWeights.share (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst)
+@Becoming.ConditionalWeights.mass_pairWeight : ∀ {α : Type u_1} {β : Type u_2} (prior : α → Nat) (lik : α → β → Nat)
+  (hs : List α) (os : List β) (hyp : α → Bool) (rec : β → Bool),
+  (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+      hyp c.fst && rec c.snd) =
+    Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) hyp
+@Becoming.ConditionalWeights.evidence : ∀ {α : Type u_1} {β : Type u_2} (prior : α → Nat) (lik : α → β → Nat)
+  (hs : List α) (os : List β) (rec : β → Bool),
+  (Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) =
+    Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) fun x => true
+@Becoming.ConditionalWeights.posterior_le_iff : ∀ {α : Type u_1} {β : Type u_2} (prior : α → Nat) (lik : α → β → Nat)
+  (hs : List α) (os : List β) (rec : β → Bool) (hyp₁ hyp₂ : α → Bool),
+  (0 < Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c => rec c.snd) →
+    ((Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+            (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+              (Becoming.ConditionalWeights.pairWeight prior lik))
+            fun c => hyp₁ c.fst).le
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+          (Becoming.ConditionalWeights.restrict (fun c => rec c.snd) (Becoming.ConditionalWeights.pairWeight prior lik))
+          fun c => hyp₂ c.fst) ↔
+      Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) hyp₁ ≤
+        Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) hyp₂)
+@Becoming.ConditionalWeights.mass_absent : ∀ {α : Type u_1} [inst : DecidableEq α] (f : α → Nat) {x : α} {hs : List α},
+  ¬x ∈ hs → (Becoming.mass hs f fun h => decide (h = x)) = 0
+@Becoming.ConditionalWeights.mass_single : ∀ {α : Type u_1} [inst : DecidableEq α] (f : α → Nat) (x : α) {hs : List α},
+  Becoming.Distinct hs → x ∈ hs → (Becoming.mass hs f fun h => decide (h = x)) = f x
+@Becoming.ConditionalWeights.prior_share : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → Nat)
+  (lik : α → β → Nat) {hs : List α} (os : List β) (L : Nat),
+  (∀ (h : α), h ∈ hs → (Becoming.mass os (lik h) fun x => true) = L) →
+    Becoming.Distinct hs →
+      ∀ {h₀ : α},
+        h₀ ∈ hs →
+          (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+              (Becoming.ConditionalWeights.pairWeight prior lik) fun c => decide (c.fst = h₀)) =
+            { part := prior h₀ * L, whole := (Becoming.mass hs prior fun x => true) * L }
+@Becoming.ConditionalWeights.posterior_single : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α] (prior : α → Nat)
+  (lik : α → β → Nat) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₀ : α},
+      h₀ ∈ hs →
+        (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+            (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+              (Becoming.ConditionalWeights.pairWeight prior lik))
+            fun c => decide (c.fst = h₀)) =
+          { part := prior h₀ * Becoming.mass os (lik h₀) rec,
+            whole := Becoming.mass hs (fun h => prior h * Becoming.mass os (lik h) rec) fun x => true }
+@Becoming.ConditionalWeights.posterior_le_iff_single : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq α]
+  (prior : α → Nat) (lik : α → β → Nat) {hs : List α} (os : List β) (rec : β → Bool),
+  Becoming.Distinct hs →
+    ∀ {h₁ h₂ : α},
+      h₁ ∈ hs →
+        h₂ ∈ hs →
+          (0 <
+              Becoming.mass (Becoming.openSteps hs os) (Becoming.ConditionalWeights.pairWeight prior lik) fun c =>
+                rec c.snd) →
+            ((Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                    (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                      (Becoming.ConditionalWeights.pairWeight prior lik))
+                    fun c => decide (c.fst = h₁)).le
+                (Becoming.ConditionalWeights.share (Becoming.openSteps hs os)
+                  (Becoming.ConditionalWeights.restrict (fun c => rec c.snd)
+                    (Becoming.ConditionalWeights.pairWeight prior lik))
+                  fun c => decide (c.fst = h₂)) ↔
+              prior h₁ * Becoming.mass os (lik h₁) rec ≤ prior h₂ * Becoming.mass os (lik h₂) rec)
+@Becoming.ConditionalWeights.mass_meetsEach : ∀ {S : Type u_1} {A : Type u_2} (w : A × S → Nat) (moves : List A)
+  (all : List S) (es : List (A × S → Bool)) (s : S),
+  Becoming.mass (Becoming.courses moves all es.length) (Becoming.ConditionalWeights.independentWeight w s)
+      (Becoming.ConditionalWeights.meetsEach es) =
+    List.foldr (fun e acc => Becoming.mass (Becoming.openSteps moves all) w e * acc) 1 es
+@Becoming.ConditionalWeights.whole_courses : ∀ {S : Type u_1} {A : Type u_2} (w : A × S → Nat) (moves : List A)
+  (all : List S) (n : Nat) (s : S),
+  (Becoming.mass (Becoming.courses moves all n) (Becoming.ConditionalWeights.independentWeight w s) fun x => true) =
+    (Becoming.mass (Becoming.openSteps moves all) w fun x => true) ^ n
+@Becoming.ConditionalWeights.foldr_whole : ∀ {α : Type u_1} (l : List α) (w : α → Nat) (es : List (α → Bool)),
+  (List.foldr (fun e acc => (Becoming.ConditionalWeights.share l w e).mul acc) Becoming.ConditionalWeights.Share.one
+        es).whole =
+    (Becoming.mass l w fun x => true) ^ es.length
+@Becoming.ConditionalWeights.foldr_part : ∀ {α : Type u_1} (l : List α) (w : α → Nat) (es : List (α → Bool)),
+  (List.foldr (fun e acc => (Becoming.ConditionalWeights.share l w e).mul acc) Becoming.ConditionalWeights.Share.one
+        es).part =
+    List.foldr (fun e acc => Becoming.mass l w e * acc) 1 es
+@Becoming.ConditionalWeights.share_meetsEach : ∀ {S : Type u_1} {A : Type u_2} (w : A × S → Nat) (moves : List A)
+  (all : List S) (es : List (A × S → Bool)) (s : S),
+  Becoming.ConditionalWeights.share (Becoming.courses moves all es.length)
+      (Becoming.ConditionalWeights.independentWeight w s) (Becoming.ConditionalWeights.meetsEach es) =
+    List.foldr (fun e acc => (Becoming.ConditionalWeights.share (Becoming.openSteps moves all) w e).mul acc)
+      Becoming.ConditionalWeights.Share.one es
+Becoming.ConditionalWeights.fallsTo_succ : ∀ (p q m : Nat) (w : List Bool),
+  Becoming.ConditionalWeights.fallsTo p q (m + 1) w =
+    decide (Becoming.Typicality.ahead q w + m < Becoming.Typicality.behind p w)
+Becoming.ConditionalWeights.deviates_offBy : ∀ (p q m : Nat) (w : List Bool),
+  (if Becoming.ConditionalWeights.deviates p q m w = true then Becoming.Typicality.weight p q w else 0) ≤
+    Becoming.Typicality.offBy p q (m * m) w
+Becoming.ConditionalWeights.whole_typical : ∀ (p q n : Nat),
+  (Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q) fun x => true) = (p + q) ^ n
+Becoming.ConditionalWeights.deviates_bound : ∀ (p q m n : Nat),
+  Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.deviates p q m) *
+      (m * m) ≤
+    n * (p * q * (p + q) ^ n)
+@Becoming.ConditionalWeights.fallsWithin_of_end : ∀ {p q m : Nat} {w : List Bool},
+  Becoming.ConditionalWeights.fallsTo p q m w = true → Becoming.ConditionalWeights.fallsWithin p q m w = true
+Becoming.ConditionalWeights.fallsWithin_reachesBy : ∀ (p q m : Nat) {w : List Bool},
+  Becoming.ConditionalWeights.fallsWithin p q m w = true → Becoming.Typicality.reachesBy p q (m * m) w = true
+Becoming.ConditionalWeights.fallsWithin_entry : ∀ (p q m : Nat) (w : List Bool),
+  (if Becoming.ConditionalWeights.fallsWithin p q m w = true then Becoming.Typicality.weight p q w else 0) ≤
+    Becoming.Typicality.offByWithin p q (m * m) w
+Becoming.ConditionalWeights.fallsWithin_bound : ∀ (p q m n : Nat),
+  Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.fallsWithin p q m) *
+      (m * m) ≤
+    n * (p * q * (p + q) ^ n)
+Becoming.ConditionalWeights.fallsTo_bound : ∀ (p q m n : Nat),
+  Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.fallsTo p q m) *
+      (m * m) ≤
+    n * (p * q * (p + q) ^ n)
+Becoming.ConditionalWeights.fallsWithin_share : ∀ (p q m n : Nat),
+  (Becoming.ConditionalWeights.share (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.fallsWithin p q m)).le
+    { part := n * (p * q), whole := m * m }
+Becoming.ConditionalWeights.fallsWithin_reciprocal : ∀ (p q m n : Nat),
+  { part := n * (p * q), whole := m * m }.reciprocal.le
+    (Becoming.ConditionalWeights.share (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.fallsWithin p q m)).reciprocal
+@Becoming.ConditionalWeights.joinMap_congr : ∀ {α : Type u_1} {β : Type u_2} {g g' : α → List β},
+  (∀ (a : α), g a = g' a) → ∀ (l : List α), Becoming.joinMap g l = Becoming.joinMap g' l
+@Becoming.ConditionalWeights.joinMap_single : ∀ {α : Type u_1} (l : List α), Becoming.joinMap (fun a => [a]) l = l
+Becoming.ConditionalWeights.extend_append : ∀ (l l' : List (List Bool)),
+  Becoming.Typicality.extend (l ++ l') = Becoming.Typicality.extend l ++ Becoming.Typicality.extend l'
+@Becoming.ConditionalWeights.extend_joinMap : ∀ {α : Type u_1} (g : α → List (List Bool)) (l : List α),
+  Becoming.Typicality.extend (Becoming.joinMap g l) = Becoming.joinMap (fun a => Becoming.Typicality.extend (g a)) l
+Becoming.ConditionalWeights.extend_map_append : ∀ (u : List Bool) (ws : List (List Bool)),
+  Becoming.Typicality.extend (List.map (fun x => x ++ u) ws) =
+    List.map (fun x => x ++ u) (Becoming.Typicality.extend ws)
+Becoming.ConditionalWeights.courses_add : ∀ (k n : Nat),
+  Becoming.Typicality.courses (k + n) =
+    Becoming.joinMap (fun u => List.map (fun x => x ++ u) (Becoming.Typicality.courses n))
+      (Becoming.Typicality.courses k)
+Becoming.ConditionalWeights.drop_append_length : ∀ (v u : List Bool), List.drop v.length (v ++ u) = u
+Becoming.ConditionalWeights.weight_append : ∀ (p q : Nat) (u v : List Bool),
+  Becoming.Typicality.weight p q (v ++ u) = Becoming.Typicality.weight p q v * Becoming.Typicality.weight p q u
+Becoming.ConditionalWeights.ones_append : ∀ (u v : List Bool),
+  Becoming.Typicality.ones (v ++ u) = Becoming.Typicality.ones v + Becoming.Typicality.ones u
+Becoming.ConditionalWeights.zeros_append : ∀ (u v : List Bool),
+  Becoming.Typicality.zeros (v ++ u) = Becoming.Typicality.zeros v + Becoming.Typicality.zeros u
+@Becoming.ConditionalWeights.margin_shift : ∀ {xv yv xu yu m m' : Nat},
+  m + xu = m' + yu → (xv + xu + m ≤ yv + yu ↔ xv + m' ≤ yv)
+Becoming.ConditionalWeights.fallsTo_append : ∀ (p q m m' : Nat) {u : List Bool},
+  m + Becoming.Typicality.ahead q u = m' + Becoming.Typicality.behind p u →
+    ∀ (v : List Bool), Becoming.ConditionalWeights.fallsTo p q m (v ++ u) = Becoming.ConditionalWeights.fallsTo p q m' v
+Becoming.ConditionalWeights.fallsWithin_append : ∀ (p q m m' : Nat) {u : List Bool},
+  m + Becoming.Typicality.ahead q u = m' + Becoming.Typicality.behind p u →
+    ∀ (v : List Bool),
+      Becoming.ConditionalWeights.fallsWithin p q m (v ++ u) =
+        (Becoming.ConditionalWeights.fallsWithin p q m u || Becoming.ConditionalWeights.fallsWithin p q m' v)
+Becoming.ConditionalWeights.mass_record : ∀ (p q k n : Nat) (R E F : List Bool → Bool),
+  (∀ (u v : List Bool), u.length = k → R u = true → v.length = n → E (v ++ u) = F v) →
+    (Becoming.mass (Becoming.Typicality.courses (k + n)) (Becoming.Typicality.weight p q) fun w =>
+        R (List.drop n w) && E w) =
+      Becoming.mass (Becoming.Typicality.courses k) (Becoming.Typicality.weight p q) R *
+        Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q) F
+Becoming.ConditionalWeights.record_fallsWithin : ∀ (p q m m' k n : Nat) (R : List Bool → Bool),
+  (∀ (u : List Bool),
+      u.length = k →
+        R u = true →
+          m + Becoming.Typicality.ahead q u = m' + Becoming.Typicality.behind p u ∧
+            Becoming.ConditionalWeights.fallsWithin p q m u = false) →
+    (Becoming.mass (Becoming.Typicality.courses (k + n)) (Becoming.Typicality.weight p q) fun w =>
+        R (List.drop n w) && Becoming.ConditionalWeights.fallsWithin p q m w) =
+      Becoming.mass (Becoming.Typicality.courses k) (Becoming.Typicality.weight p q) R *
+        Becoming.mass (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+          (Becoming.ConditionalWeights.fallsWithin p q m')
+Becoming.ConditionalWeights.record_share : ∀ (p q m m' k n : Nat) (R : List Bool → Bool),
+  (∀ (u : List Bool),
+      u.length = k →
+        R u = true →
+          m + Becoming.Typicality.ahead q u = m' + Becoming.Typicality.behind p u ∧
+            Becoming.ConditionalWeights.fallsWithin p q m u = false) →
+    (Becoming.ConditionalWeights.share (Becoming.Typicality.courses (k + n))
+          (Becoming.ConditionalWeights.restrict (fun w => R (List.drop n w)) (Becoming.Typicality.weight p q))
+          (Becoming.ConditionalWeights.fallsWithin p q m)).Same
+      (Becoming.ConditionalWeights.share (Becoming.Typicality.courses n) (Becoming.Typicality.weight p q)
+        (Becoming.ConditionalWeights.fallsWithin p q m'))
+Becoming.ConditionalWeights.record_bound : ∀ (p q m m' k n : Nat) (R : List Bool → Bool),
+  (∀ (u : List Bool),
+      u.length = k →
+        R u = true →
+          m + Becoming.Typicality.ahead q u = m' + Becoming.Typicality.behind p u ∧
+            Becoming.ConditionalWeights.fallsWithin p q m u = false) →
+    (Becoming.ConditionalWeights.share (Becoming.Typicality.courses (k + n))
+          (Becoming.ConditionalWeights.restrict (fun w => R (List.drop n w)) (Becoming.Typicality.weight p q))
+          (Becoming.ConditionalWeights.fallsWithin p q m)).le
+      { part := n * (p * q), whole := m' * m' }
+Becoming.ConditionalWeights.Witness.le_not_transitive : { part := 1, whole := 1 }.le { part := 0, whole := 0 } ∧
+  { part := 0, whole := 0 }.le { part := 0, whole := 1 } ∧ ¬{ part := 1, whole := 1 }.le { part := 0, whole := 1 }
+Becoming.ConditionalWeights.Witness.positive_part_zero_whole : { part := 0, whole := 1 }.le { part := 1, whole := 0 } ∧
+  ¬{ part := 1, whole := 0 }.le { part := 0, whole := 1 }
+Becoming.ConditionalWeights.Witness.within_exceeds_end : Becoming.mass (Becoming.Typicality.courses 2)
+      (Becoming.Typicality.weight 1 1) (Becoming.ConditionalWeights.fallsTo 1 1 1) =
+    1 ∧
+  Becoming.mass (Becoming.Typicality.courses 2) (Becoming.Typicality.weight 1 1)
+      (Becoming.ConditionalWeights.fallsWithin 1 1 1) =
+    2
+Becoming.ConditionalWeights.Witness.prior_not_share : (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+      (Becoming.ConditionalWeights.pairWeight (fun x => 1) Becoming.ConditionalWeights.Witness.likUneven) fun c =>
+      !c.fst) =
+    1 ∧
+  (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+      (Becoming.ConditionalWeights.pairWeight (fun x => 1) Becoming.ConditionalWeights.Witness.likUneven) fun c =>
+      c.fst) =
+    3
+Becoming.ConditionalWeights.Witness.record_reverses : (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+      (Becoming.ConditionalWeights.pairWeight Becoming.ConditionalWeights.Witness.prior
+        Becoming.ConditionalWeights.Witness.lik)
+      fun c => !c.fst) =
+    15 ∧
+  (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+        (Becoming.ConditionalWeights.pairWeight Becoming.ConditionalWeights.Witness.prior
+          Becoming.ConditionalWeights.Witness.lik)
+        fun c => c.fst) =
+      5 ∧
+    (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+          (Becoming.ConditionalWeights.restrict (fun c => c.snd)
+            (Becoming.ConditionalWeights.pairWeight Becoming.ConditionalWeights.Witness.prior
+              Becoming.ConditionalWeights.Witness.lik))
+          fun c => !c.fst) =
+        3 ∧
+      (Becoming.mass (Becoming.openSteps [false, true] [false, true])
+          (Becoming.ConditionalWeights.restrict (fun c => c.snd)
+            (Becoming.ConditionalWeights.pairWeight Becoming.ConditionalWeights.Witness.prior
+              Becoming.ConditionalWeights.Witness.lik))
+          fun c => c.fst) =
+        5

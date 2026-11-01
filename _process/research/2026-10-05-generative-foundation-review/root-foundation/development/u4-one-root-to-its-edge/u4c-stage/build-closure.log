@@ -1,0 +1,117 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/u4c-stage-build",
+  "modules": 39,
+  "ran": [
+    "Becoming.Prelude",
+    "Becoming.GrammarLaws",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
+    "Becoming.Frame",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Arising",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Population",
+    "Becoming.Identity",
+    "Becoming.Recurrence",
+    "Becoming.Labelled",
+    "Becoming.Laws",
+    "Becoming.Joint",
+    "Becoming.Experiment",
+    "Becoming.Mechanism",
+    "Becoming.Evolution",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Unfolding",
+    "Becoming.Persistence",
+    "Becoming.Decidedness",
+    "Becoming.Premises",
+    "Becoming.Sampling",
+    "Becoming.Openness",
+    "Becoming.Resolution",
+    "Becoming.Listing",
+    "BecomingPreludeAxiomAudit",
+    "BecomingGrammarLawsAxiomAudit",
+    "BecomingArisingAxiomAudit",
+    "BecomingChangeAxiomAudit",
+    "BecomingFlowAxiomAudit",
+    "BecomingPopulationAxiomAudit",
+    "BecomingIdentityAxiomAudit",
+    "BecomingPersistenceAxiomAudit",
+    "BecomingDecidednessAxiomAudit",
+    "BecomingDissipationAxiomAudit",
+    "BecomingLocalityAxiomAudit",
+    "BecomingListingAxiomAudit"
+  ],
+  "reused": 4,
+  "unclean": [],
+  "audits": {
+    "Becoming.Prelude": {
+      "theorems": 141,
+      "declarations": 151,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarLaws": {
+      "theorems": 187,
+      "declarations": 216,
+      "with_axioms": {}
+    },
+    "Becoming.Arising": {
+      "theorems": 46,
+      "declarations": 82,
+      "with_axioms": {}
+    },
+    "Becoming.Change": {
+      "theorems": 85,
+      "declarations": 103,
+      "with_axioms": {}
+    },
+    "Becoming.Flow": {
+      "theorems": 102,
+      "declarations": 140,
+      "with_axioms": {}
+    },
+    "Becoming.Population": {
+      "theorems": 116,
+      "declarations": 144,
+      "with_axioms": {}
+    },
+    "Becoming.Identity": {
+      "theorems": 152,
+      "declarations": 217,
+      "with_axioms": {}
+    },
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.Decidedness": {
+      "theorems": 70,
+      "declarations": 77,
+      "with_axioms": {}
+    },
+    "Becoming.Dissipation": {
+      "theorems": 111,
+      "declarations": 135,
+      "with_axioms": {}
+    },
+    "Becoming.Locality": {
+      "theorems": 44,
+      "declarations": 51,
+      "with_axioms": {}
+    },
+    "Becoming.Listing": {
+      "theorems": 89,
+      "declarations": 106,
+      "with_axioms": {}
+    }
+  }
+}

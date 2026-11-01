@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T12:15:00+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "Nothing in a region goes out of it along a relation exactly where what is not outside is closed under it; a closed region is not gone out of, and the two are one where membership is stable. Where each step keeps to the region or leaves it, a line from inside to outside has a step out, placed on it.",
     "zh": "一域沿一关系不出，恰是不外于域者在此关系下闭；闭之域不出，凡不外者皆内处二者为一。每步或守于域或出之，则自内至外之线上有一出步，定其所在。"
@@ -111,8 +111,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261031T202201.956842Z): Becoming.GrammarCrossing, 12 declarations (11 theorems), in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261031T202201.956842Z）：Becoming.GrammarCrossing 12 项声明（11 条定理），属核心，公理报告皆空，本记录全引。为本记录对照 Lean 审读，并经一独立 AI 读者审读，所见皆采纳。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261101T094230.205342Z): Becoming.GrammarCrossing, 9 declarations (9 theorems), with «不出», «闭则不出» and «所闭不出» in Becoming.GrammarLaws, in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261101T094230.205342Z）：Becoming.GrammarCrossing 9 项声明（9 条定理）及 Becoming.GrammarLaws 之 «不出»、«闭则不出»、«所闭不出»，属核心，公理报告皆空，本记录全引。为本记录对照 Lean 审读，并经一独立 AI 读者审读，所见皆采纳。"
   },
   "next_delta": {
     "en": "State a graded boundary on the grammar: nested regions along one relation, the steps by which one line goes out of each, and how they lie along it.",
@@ -185,11 +185,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
       "role": "proof",
-      "sha256": "14f593eb57b0a88594d8e17e92c2e21c515b3182884e18dbb519a99b84e929be",
+      "sha256": "f742d777e41cde30361efa6f9d6fd2c8589c4bf3b37f26ce5f2c8f38e23974ed",
       "declarations": [
-        "Becoming.«不出»",
-        "Becoming.«闭则不出»",
-        "Becoming.«所闭不出»",
         "Becoming.«不出当且仅当不外者闭»",
         "Becoming.«不外者内则不出当且仅当闭»",
         "Becoming.«不出皆闭当且仅当排中»",
@@ -199,6 +196,16 @@
         "Becoming.«内至外之线则非不出»",
         "Becoming.«内至外之线有出步»",
         "Becoming.«定则内至外之线有出步»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "declarations": [
+        "Becoming.«不出»",
+        "Becoming.«所闭不出»",
+        "Becoming.«闭则不出»"
       ]
     },
     {
@@ -233,13 +240,26 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCrossing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -248,6 +268,10 @@
     {
       "en": "31 October 2026, board item BD2: created. The formal gap BD's reading of boundaries left (the World's cut defined apart from the grammar's closed region) closed by the grammar's not going out (Becoming.GrammarCrossing): its laws against the closed region, going out and coming in, and the step going out on a line, with the excluded-middle lemma as a witness of what it does not show; the World's cut read as it by definition in conveyance-crosses-the-boundary's seventh law; «所经必同» proved from the step going out. Home 01 §9.9.",
       "zh": "2026年10月31日，工作板条目 BD2：创建。BD 之边界读法所留之形式缺口（世界的切口与文法之闭域分别定义）以文法之不出（Becoming.GrammarCrossing）补之：其对闭域之诸律、出与入，及线上之出步，以排中之引理为其所不示者之见证；世界的切口依定义读作不出，见 conveyance-crosses-the-boundary 第七律；«所经必同» 由出步证得。归于 01 §9.9。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): «不出», «闭则不出» and «所闭不出» are now stated in GrammarLaws, after «所闭之界» (the grammar's owner's item held from BD2, patches/owner/02), unchanged: they move from the GrammarCrossing reference to a GrammarLaws reference and proof binding, and the validation scope's receipt and GrammarCrossing's counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：«不出»、«闭则不出» 与 «所闭不出» 今陈于 GrammarLaws，在 «所闭之界» 之后（文法之主人于 BD2 所留之项，patches/owner/02），原样不变：三者自 GrammarCrossing 之引用移至 GrammarLaws 之引用与证明绑定，验证范围之回执与 GrammarCrossing 之数目为收据 20261101T094230.205342Z 者。记录所述余无改变。"
     }
   ]
 }

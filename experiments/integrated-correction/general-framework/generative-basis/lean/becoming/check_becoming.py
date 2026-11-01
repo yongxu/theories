@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.MapRegions", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.MapRegions", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarConditionals", "Becoming.CommonResponse", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -84,11 +84,11 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
         "Becoming.Correspondence", "Becoming.Descent", "Becoming.Standpoints", "Becoming.ListingRefutations",
         "Becoming.Significance", "Becoming.ValuationFrames", "Becoming.RelativePosition", "Becoming.Interdependence", "Becoming.Feeding", "Becoming.Feedback", "Becoming.BoundedSignificance", "Becoming.Cuts", "Becoming.EdgeClosure", "Becoming.Testing", "Becoming.Runaway", "Becoming.Response", "Becoming.TimedResponse", "Becoming.Latency", "Becoming.Centers", "Becoming.Counterfactual", "Becoming.Regrouping", "Becoming.Selection", "Becoming.SelectionGap", "Becoming.SelectionReach", "Becoming.DrawnBeyond", "Becoming.JointDraw", "Becoming.Optimum", "Becoming.OptimumSeason", "Becoming.SelectionPool", "Becoming.PoolResponse", "Becoming.Training", "Becoming.PoolCourse", "Becoming.Rejoining", "Becoming.Learning", "Becoming.Unread", "Becoming.Cascade", "Becoming.RevisionRoutes", "Becoming.ReadStages", "Becoming.PropositionIdentity", "Becoming.Withholding", "Becoming.LoopReturn", "Becoming.Pace", "Becoming.RuleCapture", "Becoming.ClosedCapture", "Becoming.RuleShaping", "Becoming.ChoiceCountCapture", "Becoming.DrawnShaping", "Becoming.ReadInTime", "Becoming.PatternPassing", "Becoming.JointKeeping", "Becoming.Undecided", "Becoming.UnitMatchings", "Becoming.UnreadStandings", "Becoming.Junctures", "Becoming.Commuting", "Becoming.WeightedCommuting", "Becoming.Tolerance", "Becoming.Revision", "Becoming.Contacts", "Becoming.RegroupingSelection", "Becoming.ReferencePlan", "Becoming.ContinuingRevision", "Becoming.Description", "Becoming.Identification", "Becoming.Learnable", "Becoming.Assurance", "Becoming.AssurancePlans", "Becoming.Integers", "Becoming.Segmentation", "Becoming.Readout", "Becoming.SummaryFutures", "Becoming.Dephasing", "Becoming.ProjectedLaws", "Becoming.JointPhase", "Becoming.Gated", "Becoming.Viability", "Becoming.Keeping", "Becoming.ReflexivePrediction", "Becoming.Ideals", "Becoming.ContingentPlans", "Becoming.Actuation", "Becoming.TreeSearch", "Becoming.FaultEnvelopes", "Becoming.Transactions", "Becoming.Reconfiguration", "Becoming.PooledEnvelopes", "Becoming.WitnessRefinement", "Becoming.WitnessRefinementRuns", "Becoming.ChanceFloors", "Becoming.IntegerOrder", "Becoming.Acceptance", "Becoming.Countdown", "Becoming.Lasting", "Becoming.Copying", "Becoming.Retrodiction", "Becoming.CrossSituational", "Becoming.SharedCodes", "Becoming.CountedCodes", "Becoming.Likeness", "Becoming.Distinguishing", "Becoming.JointPlans", "Becoming.Composition", "Becoming.Joining", "Becoming.Granularity", "Becoming.HistoryLanguages", "Becoming.HistoryIdeals", "Becoming.HistoryIdealsTraces", "Becoming.Verification", "Becoming.Presentations", "Becoming.Carriers", "Becoming.BranchingCorrespondence", "Becoming.JointCorrespondence", "Becoming.ListFootprints", "Becoming.Fragments", "Becoming.LocalUnits", "Becoming.JoiningContexts", "Becoming.JoiningCodes", "Becoming.JoiningRoles", "Becoming.Postponement", "Becoming.Boundaries", "Becoming.ConveyanceBoundaries", "Becoming.BalanceRegions", "Becoming.LineDegeneration", "Becoming.SelectionShift", "Becoming.LineageRegions", "Becoming.LineageRegimes", "Becoming.WindowedWaiting", "Becoming.PairSelection", "Becoming.Weightings", "Becoming.Novelty", "Becoming.Reading", "Becoming.ExchangePremises", "Becoming.OverExchange", "Becoming.Readings", "Becoming.MoveFormation", "Becoming.Sensitivity", "Becoming.Tail", "Becoming.Courses", "Becoming.Parting", "Becoming.Onward", "Becoming.Typicality", "Becoming.ConditionalWeights", "Becoming.Situations", "Becoming.Propagation", "Becoming.Regulation", "Becoming.ReadingSchedule", "Becoming.RegimeMargin", "Becoming.SetPointOptimum", "Becoming.Loops", "Becoming.Remainder", "Becoming.Routes", "Becoming.Closing", "Becoming.Thresholds", "Becoming.Observation", "Becoming.LevelCoupling", "Becoming.Interleavings", "Becoming.CensusCounts", "Becoming.CensusBinding", "Becoming.Frequency", "Becoming.MutualDependence", "Becoming.Gain", "Becoming.KeepingWidening", "Becoming.WideningOnTheMap", "Becoming.Gluing", "Becoming.Relevance", "Becoming.Lexical", "Becoming.Frontier", "Becoming.FrontierFrames", "Becoming.FrontierWorlds", "Becoming.Direction", "Becoming.ScoreRepresentation", "Becoming.Alternatives", "Becoming.Bundles", "Becoming.ActivationCapacity", "Becoming.Narrowing", "Becoming.NarrowingRuns", "Becoming.ReadingLoop", "Becoming.RevisionPlans", "Becoming.HeldForReading", "Becoming.ListingValuation", "Becoming.SecuredContent", "Becoming.ProfileReach", "Becoming.RenewalBound", "Becoming.Handoff", "Becoming.RuleHandoff", "Becoming.Runs", "Becoming.CourseWorlds", "Becoming.LearnableRuns", "Becoming.PartialReadout", "Becoming.CodeAcquisition", "Becoming.RouteFormation", "Becoming.LearnedGrouping", "Becoming.Unrolling", "Becoming.Labels", "Becoming.ParityReadings", "Becoming.FinerTraces", "Becoming.HistorySums", "Becoming.FormedLoops", "Becoming.AttractionRuns", "Becoming.ContactCourses", "Becoming.ContextualRuns", "Becoming.ContinuingRuns", "Becoming.CopyCourses", "Becoming.CounterfactualRuns", "Becoming.CouplingTraces", "Becoming.CourseRoles", "Becoming.HorizonWebs", "Becoming.IdentificationRuns", "Becoming.LastingRuns", "Becoming.LearningRuns", "Becoming.ListedWebs", "Becoming.ReferencePlanTraces", "Becoming.RouteTraces", "Becoming.SeekingRuns", "Becoming.Enough", "Becoming.Settling", "Becoming.LastChange", "Becoming.LimitVerification", "Becoming.SelectionRuns", "Becoming.SensitivityWebs", "Becoming.SituationTraces", "Becoming.StrengthFlows", "Becoming.TypicalRuns", "Becoming.WeightedTraces", "Becoming.GrammarCourse", "Becoming.GrammarRegularity", "Becoming.GrammarScope", "Becoming.GrammarCases", "Becoming.PremiseWitnesses", "Becoming.GrammarCrossing", "Becoming.GrammarPath", "Becoming.SignificanceStatements", "Becoming"]
 # The instance and applications ring (R35b, 20 October 2026). Instances read general laws of the core
-# on one named carrier (the Changes, place/transition nets); applications are leaves nothing in the
-# core imports. Both are held to the core's conditions (prelude only, empty axiom reports) and sit
-# outside it by direction: no core module but the root `Becoming` imports a ring module, and no
-# instance imports an application (`ring_direction`).
-INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets"]
+# on one named carrier (the Changes, place/transition nets, rooms tested by a window); applications
+# are leaves nothing in the core imports. Both are held to the core's conditions (prelude only, empty
+# axiom reports) and sit outside it by direction: no core module but the root `Becoming` imports a
+# ring module, and no instance imports an application (`ring_direction`).
+INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns"]
 APPLICATIONS = ["Becoming.Dispatch", "Becoming.GuardHorizon", "Becoming.ResponseLearning", "Becoming.Coverage", "Becoming.SeedReach", "Becoming.ScopedReach", "Becoming.OpenedCorrection"]
 RING = INSTANCES + APPLICATIONS
 # The bridge: emptied by the F3 sweep (19 October 2026). Every bridge and pure join module is in
@@ -189,12 +189,14 @@ RETAINED = HERE / "becoming-checks"
 SCOPE = (
     "GrammarLaws: the five master laws on the grammar, for every carrier and relation: closure is being the "
     "occurrence itself or reached, and a region of the steps of time every step keeps holds from where it holds "
-    "on, the closure under the converse is the closure read backward, a closure through borrowed steps lies "
+    "on, a closed region is not gone out of, an occurrence's closure among them, the closure under the "
+    "converse is the closure read backward, a closure through borrowed steps lies "
     "within o's or a's closure, and the two lie within o's under a larger relation where a lies within it; "
     "perfect pairings of finite lists under a relation conserve count, are exactly "
     "equal count under the one, compose, join, gather over a family and carry over a stretch under the closure, so "
     "the count law at a step and over a stretch is exactly a pairing of units, near-definitional; counting a "
-    "region, a pairing keeps the count on every region the relation does not cross and under a class decided by "
+    "region, a pairing keeps the count on every region not gone out of either way, which is one the relation "
+    "does not cross and one closed both ways, and under a class decided by "
     "a test is exactly equal count in every class, and the census of a step pairs the units before with those "
     "arising to the units after with those ceasing; an occurrence is "
     "drawn exactly where it reaches something that does not reach back, with the successor fixed at what it reaches "
@@ -219,6 +221,16 @@ SCOPE = (
     "irreflexive where the first is. Frame's "
     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
     "balance is represented both ways in Flow and not derived. "
+    "CommonResponse: the occurrences at which a region holds throughout their closure under a relation form "
+    "the largest region closed under the relation inside it, the invariance kernel at a process's steps, whose two laws in Viability are proved from "
+    "it; a response common over a reading within a requirement exists exactly where the acts' kernels cover the "
+    "situations, and for a reflexive and transitive reading along the reading itself; finer readings keep it, "
+    "under staying the same it is the requirement covering, under the reading that tells nothing apart, on an "
+    "inhabited carrier, one act everywhere; a rule from what a map reads gives one with no choice; where the requirement gives exactly one act "
+    "at each situation, one common over a map's sameness exists exactly where the image of the response relation along the map has a fixed "
+    "successor, on a carrier keeping situations and acts apart; witnesses that reflexivity, transitivity, "
+    "covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by "
+    "every two, need not give one. "
     "GrammarTransport: the grammar's listed terms are kept by a one-to-one correspondence of models carrying the "
     "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
     "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "
@@ -234,8 +246,8 @@ SCOPE = (
     "choices required only to be maximal force no positive comparison; one search run with either of two orders "
     "according with one choice chooses alike on the menu met and apart on a menu met after. "
     "GrammarCrossing: for every carrier, relation and region, nothing in a region goes out of it along the "
-    "relation exactly where what is not outside it is closed under the relation; a closed region is not gone out "
-    "of, an occurrence's closure among them; the two coincide where membership is stable, and that they coincide "
+    "relation exactly where what is not outside it is closed under the relation; not going out and being closed "
+    "coincide where membership is stable, and that they coincide "
     "for every relation and region is exactly excluded middle, a lemma of that law; nothing comes into a region "
     "along a relation exactly where nothing goes out of what lies outside it, along a symmetric relation nothing "
     "goes out exactly where nothing comes in, and some relation that is not symmetric has a closed region come "
@@ -311,6 +323,12 @@ SCOPE = (
     "where nothing is its own condition; conditions precede results exactly where the net has no cycle; "
     "the core is never separated at a finite stage and the converse fails in an infinitely branching "
     "net. "
+    "GrammarConditionals: the corpus's conditional laws in the grammar, each family with a net where its "
+    "condition fails and its conclusion with it; where everything goes on under a coarse class and every "
+    "step is parted by a fine one, every occurrence is generating; a line none of whose places comes back "
+    "to itself is shorter than any list holding them, so in bounded room it is not endless; what a class's "
+    "core puts with an occurrence whose line never ends has a line that never ends; where nothing is "
+    "depended on nothing depends, and dependences compose. "
     "GrammarTesting: the core of a class lies in every stage of its approximation, so what a finite "
     "stage tells apart is not in the core; a room in balance and a room held by a thermostat share a "
     "core class under the closed net and are told apart under the net with the window's opening. "
@@ -344,9 +362,9 @@ SCOPE = (
     "GrammarReadings: the corpus's definitions in the grammar: alteration read from the 墨经 and the "
     "荀子 is one form and is 成坏 along 缘; sameness in belonging is a class where each thing belongs to one "
     "and to one only, and otherwise need not be transitive; what returns abides; under a constant class a "
-    "line with a past never ends going, what abides passes through (通), going and coming, where a class is "
-    "constant both ways, and constancy one way is not enough; continuation is neither identity nor mere "
-    "difference; the conditioning occurrence "
+    "line with a past never ends going and, where a class is constant both ways, passes through (通), "
+    "going and coming, what abides being a case, and constancy one way is not enough; continuation is "
+    "neither identity nor mere difference; the conditioning occurrence "
     "ends under identity while the line continues under a coarser class. "
     "Grammar: for every carrier and relation, continuation is 缘 met with a class; beginning and "
     "abiding, abiding and ending exclude each other; the positions depend on the class, the same "
@@ -2312,6 +2330,25 @@ SCOPE = (
     "keeps the order under mutual support, the plain web and the adjusted regime its cases, and a "
     "giving ramping with what was given has its threshold fall from four to three as its last giving "
     "rises. "
+    "RoomNet: one rule makes the nets of an unheated room and two thermostats: a level in whole units moves "
+    "one unit a step toward its surroundings, at the set level m while the window is shut and at 0 once it "
+    "opens, and a heater reading the level after that exchange gives c wherever it is below m; the window's "
+    "opening is in the net as an alternative, and the rooms are compared as rules side by side. While no "
+    "window opens every room at its set level is one core class at the level, at every margin; with the "
+    "window in the net, at every positive margin, the level's first stage tells the unheated room from every "
+    "heated one; under warm or not, at a margin of n + 1 draws, stage n holds and stage n + 1 tells them "
+    "apart, and two heated rooms stay one core class; the branches the toy of testing stipulates are the "
+    "rule's at a margin of one, and its verdict follows. At a margin of three the overshooting thermostat is "
+    "a model case of the mixed region, and the unheated room keeps and reaches an end and, once open, "
+    "degenerates while renewing; at every positive margin the matched thermostat is 全守, as every room is "
+    "while no window opens, and warmth is constant exactly where the heater gives and, from a margin of two, "
+    "unended exactly there; across rooms the converse of «有常则往不穷» fails. "
+    "RoomRuns: with the window open the rooms' rule is RegimeMargin's step with the heater's giving, so "
+    "the unheated room is cold from its margin's step on, at a positive margin the matched thermostat holds "
+    "its set level, and at a margin of three the overshooting course is Alternation's run shifted by two "
+    "though holds's condition fails for it; none of these three courses keeps widening; read on its moments "
+    "the overshooting course is 全生成 and no moment of the unheated course, or of the matched one at a positive "
+    "margin, is; a coarse line is the possible with warmth held. "
     "Regulation: with balance, the joint exchange is within the gap to m on both sides exactly "
     "where the next level lies between m and the level; within the gap and opposing on both sides "
     "the level settles at m within its gap; beyond it an opposing exchange crosses m, a witness "
@@ -3600,7 +3637,12 @@ SCOPE = (
     "Bool test, that a Bool relation closes is exactly a region closed under that adjacency, one not gone out of "
     "along it and one not come into, through the grammar's laws; over relata listed without repetition, with "
     "decided equality, transfers along the relation that balance a step exist exactly where the total is "
-    "conserved on every region not gone out of along that adjacency, and on a web at every step likewise. "
+    "conserved on every region not gone out of along that adjacency, and on a web at every step likewise; "
+    "each closure under that adjacency, the grammar's «所闭», is decided as a test by a counting bound, and "
+    "the transfers exist exactly where the total is conserved on the closure of each listed relatum, and "
+    "exactly where the levels, read as units on their relata, pair one to one, before with after, under "
+    "the closure; at the unit grain a pairing under the closure of a symmetric relation whose closure a "
+    "test decides is the count kept on each closure, a case of the count law of a class. "
     "Relevance: on the level paths of a web the continuation condition is living significance over "
     "admission, an extension over admission is a widening, and under the condition widening is "
     "retaining and adding, so the three read one predicate; the stepwise reading is the living of "
@@ -3630,7 +3672,7 @@ SCOPE = (
     "SignificanceStatements: the significance rows stated on the root, each proved through its row, rows 5 and 7 "
     "on their own carrier and rows 1, 8 and 9 specialized at the own-closure reading, a restatement and not a "
     "derivation: on the level paths of a web, at that reading, "
-    "the continuation condition is that nothing lies outside every center's line under the one of a relation and "
+    "the continuation condition is that everything lies on every center's line under the one of a relation and "
     "holds exactly when living significance does over admission; an extension with every claim counted is the "
     "grammar's widening of what the paths admit; C holds with better read as that widening, its being better "
     "supplied; where nothing lies outside, widening is retaining and adding within one's own line; and these read "
