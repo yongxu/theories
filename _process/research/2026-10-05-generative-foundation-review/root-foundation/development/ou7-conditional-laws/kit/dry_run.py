@@ -343,7 +343,7 @@ assert not left, ('a placeholder left in records after the record stage', left)
 # OU's owner's front refresh, after the record stage, as post takes it before the re-point: then again, every edit in
 # place; then, with one sentence it replaces moved, it stops and writes nothing.
 front = ['python3', '-B', KIT + 'front-refresh/front_refresh.py']
-show('front refresh', run(*front), 16)
+show('front refresh', run(*front), 20)
 second = run(*front)
 assert ': applies' not in second.stdout and 'already in place' in second.stdout, second.stdout
 show('front refresh, a second time: every edit in place', second, 1)
