@@ -137,7 +137,8 @@ extract(paths)
 extra = set()
 for f in sorted((TREE / 'theories/becoming/results/records').glob('*.json')):
     rec = json.loads(f.read_text(encoding='utf-8'))
-    if any(x.get('sha256') and (TREE / x['path']).is_file() for x in rec.get('references', [])):
+    if f.relative_to(TREE).as_posix() in STAGE_TOUCHED or \
+            any(x.get('sha256') and (TREE / x['path']).is_file() for x in rec.get('references', [])):
         extra |= {x['path'] for x in rec.get('references', []) + rec.get('text_versions', [])
                   if not (TREE / x['path']).exists()}
 extra = held_by_main(sorted(extra))
@@ -278,12 +279,25 @@ def synthetic_receipt():
             if entry['kind'] == 'theorem':
                 by[source]['theorems'] -= 1
                 by[target]['theorems'] += 1
+        # A renamed declaration keeps its namespace: found in each module whose code the stage changes by its name in
+        # HEAD's source with the namespaces open at its line (or by its name as written, as a field is), it takes the
+        # new name there, and so does each declaration under it (a structure's constructor and fields).
         for old, new in data.get('renamed', {}).items():
-            for module in by.values():
-                entry = next((d for d in module['declarations'] if d['name'] == old), None)
-                if entry:
-                    entry['name'] = new
-                    module['axiom_dependencies'][new] = module['axiom_dependencies'].pop(old, [])
+            short_old, short_new = old.split('.', 1)[1], new.split('.', 1)[1]
+            for module in data.get('added', {}):
+                head = run('git', 'show', 'HEAD:' + kit.source_of(module), ok=False).stdout
+                decls = by[module]['declarations']
+                entry = next((d for d in decls if d['name'] in (old, in_namespace(head, old))), None) or \
+                    next((d for d in decls if d['name'].endswith('.' + short_old)), None)
+                if not entry:
+                    continue
+                full_old = entry['name']
+                full_new = full_old[:len(full_old) - len(short_old)] + short_new
+                for d in decls:
+                    if d['name'] == full_old or d['name'].startswith(full_old + '.'):
+                        name = full_new + d['name'][len(full_old):]
+                        by[module]['axiom_dependencies'][name] = by[module]['axiom_dependencies'].pop(d['name'], [])
+                        d['name'] = name
     leaves = [(mr.MODULE, mr.SOURCE, mr.LEAF, mr.THEOREMS, 'core', 'core_modules')] + \
              [(m, p, mb.LEAVES[m], mb.THEOREMS[m], 'instance', 'instance_modules') for m, p in mb.MODULES.items()]
     for module, path, names, theorems, layer, listed in leaves:

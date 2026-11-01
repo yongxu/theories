@@ -2,7 +2,7 @@
 
 Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a directory here, `NN-name/`, and stages are taken in name order: U4c's census on the root as `10-u4c/`, then ND's names that state relations as `20-nd/`.
 
-`10-u4c/` is its owner's final series, copied unchanged from branch `u4c` at d5d034614 and cut on main at 4a86127e4. If main moves under it before the landing, its owner re-cuts the patches from 09 on against the main the landing merges, with `cut_u4c_patches.py` in the stage's design folder.
+`10-u4c/` is its owner's final series, copied unchanged from branch `u4c` at d5d034614 and cut on main at 4a86127e4. If main moves under it before the landing, its owner re-cuts the patches from 09 on against the main the landing merges, with `cut_u4c_patches.py` in the stage's design folder. `20-nd/` came from branch `nd-stage` at 24d4aef64.
 
 | file | what it is |
 |---|---|
@@ -43,9 +43,9 @@ Every name is written as the audit keys it: `Becoming.` and the name as written 
 ## The dry run
 
 [dry_run.py](../dry_run.py) takes every stage the landing takes:
-- its tree holds the files the series changes;
+- its tree holds the files the series changes and every file the stage's records reference;
 - the land script's `apply` tries and applies each series there, as in the landing; a stage that stops it is dropped and named, and the run goes on with the stages left;
-- its synthetic receipt holds the declarations `EXPECTED.json` names;
+- its synthetic receipt holds the declarations `EXPECTED.json` names, under the names Lean gives them (the namespaces open at their lines), a renamed structure's constructor and fields renamed with it;
 - the records the series changes are re-pointed and validated with the rest.
 
 A module a stage adds is not modelled in the synthetic receipt. The dry run builds nothing: a stage's Lean is checked by the rehearsal's `scratch_build.py` on the tree the earlier stages leave.
