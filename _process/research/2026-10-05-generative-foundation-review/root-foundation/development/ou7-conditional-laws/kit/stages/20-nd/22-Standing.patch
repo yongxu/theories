@@ -1,0 +1,217 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean
+index 59ba23ca7..2506695ae 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean
+@@ -11,7 +11,7 @@ many cease to stand and come to stand across it, and the counts of what depends
+ form across it.
+ 
+ * **Counting what stands.** Where every relatum is embodied, what stands is what is active,
+-  so the counts of the two censuses obey the same properties (`World.Embodied.standsObey_iff`).
++  so the counts of the two censuses satisfy the same properties (`World.Embodied.standingMarksHold_iff`).
+   Where embodiment is not selected, a queue whose members stand while in it and are never
+   active, fed by a ground relatum active throughout and standing at nothing, which exchanges
+   a unit each way with every ground relatum, meets every other premise whatever its counts
+@@ -61,7 +61,7 @@ form across it.
+   relatum depends on supports it, and bounded transmission only that what a descendant depends
+   on as it comes to stand its parent depended on, within a bound.
+ 
+-Each law is a census table of `Becoming.CensusTable` (`World.table_obeys`) for the listing of
++Each law is a census table of `Becoming.CensusTable` (`World.table_marks_hold`) for the listing of
+ what stands (`fun w x t => 0 < w.web.level t x`) or of what depends (pairs of relata,
+ `requires`): a counted soundness (`World.standing_counting_under_sound`,
+ `World.enclosed_standing_counting_under_sound`, `World.finite_standing_counting_under_sound`,
+@@ -99,7 +99,7 @@ namespace World
+ 
+ /-- `Q` holds of the counts of every census of what stands in the world: how many relata
+ stand at each step, how many cease to stand and how many come to stand across it. -/
+-def StandsObey (w : World) (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop) : Prop :=
++def StandingMarksHold (w : World) (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop) : Prop :=
+   ∀ stand, w.web.StandingCensus stand → Q (fun t => (stand t).length)
+     (fun t => ceasings (stand t) (fun x s => 0 < w.web.level s x) t)
+     (fun t => comings (stand (t + 1)) (fun x s => 0 < w.web.level s x) t)
+@@ -109,10 +109,10 @@ def Embodied.decided (embodied : w.Embodied) : ∀ t x, Decidable (w.web.active
+   fun t x => decidable_of_iff _ (embodied x t).symm
+ 
+ /-- Where every relatum is embodied, what stands is what is active: a census of what stands
+-is a census of activity and conversely, with the same counts, so the counts of the two obey
++is a census of activity and conversely, with the same counts, so the counts of the two satisfy
+ the same properties. -/
+-theorem Embodied.standsObey_iff [decided : ∀ t x, Decidable (w.web.active t x)]
+-    (embodied : w.Embodied) (pointwise : Pointwise Q) : w.StandsObey Q ↔ w.CountsObey Q :=
++theorem Embodied.standingMarksHold_iff [decided : ∀ t x, Decidable (w.web.active t x)]
++    (embodied : w.Embodied) (pointwise : Pointwise Q) : w.StandingMarksHold Q ↔ w.CensusMarksHold Q :=
+   have same : ∀ (l : Nat → List w.Relatum) t,
+       ceasings (l t) (fun x s => 0 < w.web.level s x) t =
+         ceasings (l t) (fun x s => w.web.active s x) t ∧
+@@ -120,11 +120,11 @@ theorem Embodied.standsObey_iff [decided : ∀ t x, Decidable (w.web.active t x)
+         comings (l (t + 1)) (fun x s => w.web.active s x) t := fun _ t =>
+     ⟨ceasings_congr _ fun x => ⟨(embodied x t).symm, (embodied x (t + 1)).symm⟩,
+      comings_congr _ fun x => ⟨(embodied x t).symm, (embodied x (t + 1)).symm⟩⟩
+-  ⟨fun obeys alive census => pointwise (fun t => ⟨rfl, (same alive t).1, (same alive t).2⟩)
+-      (obeys alive (standingCensus census embodied)),
+-   fun obeys stand standing => pointwise
++  ⟨fun marks alive census => pointwise (fun t => ⟨rfl, (same alive t).1, (same alive t).2⟩)
++      (marks alive (standingCensus census embodied)),
++   fun marks stand standing => pointwise
+       (fun t => ⟨rfl, (same stand t).1.symm, (same stand t).2.symm⟩)
+-      (obeys stand fun t => ⟨(standing t).1, fun x => (embodied x t).trans ((standing t).2 x)⟩)⟩
++      (marks stand fun t => ⟨(standing t).1, fun x => (embodied x t).trans ((standing t).2 x)⟩)⟩
+ 
+ end World
+ 
+@@ -248,23 +248,23 @@ step at which nothing stands. Where embodiment is selected, what stands is what
+ where it is not, a queue fed from a source counts every tally. -/
+ theorem standing_counting_under (S : Premise → Bool) (pointwise : Pointwise Q) :
+     (∀ n c a, Tally n c a → (BindsCounting S → ∀ t, 0 < a t → 0 < n t) → Q n c a) ↔
+-      ∀ w : World, w.Meets S → w.StandsObey Q :=
+-  have table := table_obeys pointwise (standing_counting_under_sound S)
++      ∀ w : World, w.Meets S → w.StandingMarksHold Q :=
++  have table := table_marks_hold pointwise (standing_counting_under_sound S)
+     (standing_counting_under_witnessed S)
+   ⟨fun law w meets => table.mp law w meets,
+-   fun law => table.mpr fun _ _ meets => listingObeys_of_obeys pointwise (law _ meets)⟩
++   fun law => table.mpr fun _ _ meets => listingMarksHold_of_marksHold pointwise (law _ meets)⟩
+ 
+ /-- So under each selection, a property holds of the counts of what stands in every world
+ meeting it exactly when it holds of the counts of what is active in every such world. -/
+ theorem standing_iff_counting (S : Premise → Bool) (pointwise : Pointwise Q) :
+-    (∀ w : World, w.Meets S → w.StandsObey Q) ↔
+-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.CountsObey Q :=
++    (∀ w : World, w.Meets S → w.StandingMarksHold Q) ↔
++      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.CensusMarksHold Q :=
+   (standing_counting_under S pointwise).symm.trans (counting_under S pointwise)
+ 
+ /-- Nothing coming to stand across a step at which nothing stands is a law of counting what
+ stands under a selection exactly when the selection binds counting. -/
+ theorem standing_binds_iff (S : Premise → Bool) :
+-    (∀ w : World, w.Meets S → w.StandsObey fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔
++    (∀ w : World, w.Meets S → w.StandingMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔
+       BindsCounting S :=
+   (standing_iff_counting S fun same law t pos => Nat.lt_of_lt_of_le (law t
+     (Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).2.2.symm))) (Nat.le_of_eq (same t).1)).trans
+@@ -479,13 +479,13 @@ theorem enclosed_standing_counting_under (S : Premise → Bool) (pointwise : Poi
+     (∀ n c a, Tally n c a → (BindsCounting S → ∀ t, 0 < a t → 0 < n t) →
+       (BoundsStanding S → ∃ T B, ChangeBound T B n c a ∧ ∀ t, T ≤ t → 0 < a t → 0 < n t) →
+         Q n c a) ↔
+-      ∀ w : World, w.Meets S → (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.StandsObey Q :=
+-  have table := table_obeys pointwise (enclosed_standing_counting_under_sound S)
++      ∀ w : World, w.Meets S → (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.StandingMarksHold Q :=
++  have table := table_marks_hold pointwise (enclosed_standing_counting_under_sound S)
+     (enclosed_standing_counting_under_witnessed S)
+   ⟨fun law w meets enclosed => table.mp (fun n c a tally ⟨quiet, bounded⟩ =>
+       law n c a tally quiet bounded) w ⟨meets, enclosed⟩,
+    fun law n c a tally quiet bounded => table.mpr (fun _ _ ⟨meets, enclosed⟩ =>
+-      listingObeys_of_obeys pointwise (law _ meets enclosed)) n c a tally ⟨quiet, bounded⟩⟩
++      listingMarksHold_of_marksHold pointwise (law _ meets enclosed)) n c a tally ⟨quiet, bounded⟩⟩
+ 
+ /-- So in worlds enclosed from some step on, a change bound from some step is a law of
+ counting what stands under a selection exactly when it selects balance and dissipation:
+@@ -493,7 +493,7 @@ embodiment, which a change bound of activity needs (`enclosed_change_bound_iff`)
+ needed for what stands. -/
+ theorem enclosed_standing_bound_iff (S : Premise → Bool) :
+     (∀ w : World, w.Meets S → (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) →
+-      w.StandsObey fun n c a => ∃ T B, ChangeBound T B n c a) ↔ BoundsStanding S :=
++      w.StandingMarksHold fun n c a => ∃ T B, ChangeBound T B n c a) ↔ BoundsStanding S :=
+   have pointwise : Pointwise fun n (_ _ : Nat → Nat) => ∃ T B, ∀ t, T ≤ t → n t ≤ B :=
+     fun same ⟨T, B, bounded⟩ => ⟨T, B, fun t later =>
+       Nat.le_trans (Nat.le_of_eq (same t).1.symm) (bounded t later)⟩
+@@ -633,26 +633,26 @@ theorem finite_standing_counting_under (S : Premise → Bool) (pointwise : Point
+     (∀ n c a, Tally n c a → (∃ M, ∀ t, n t ≤ M) →
+       (BindsCounting S ∨ BoundsStanding S → ∀ t, 0 < a t → 0 < n t) →
+       (BoundsStanding S → ∃ B, ChangeBound 0 B n c a) → Q n c a) ↔
+-      ∀ w : World, w.Meets S → w.Finite → w.StandsObey Q :=
+-  have table := table_obeys pointwise (finite_standing_counting_under_sound S)
++      ∀ w : World, w.Meets S → w.Finite → w.StandingMarksHold Q :=
++  have table := table_marks_hold pointwise (finite_standing_counting_under_sound S)
+     (finite_standing_counting_under_witnessed S)
+   ⟨fun law w meets finite => table.mp (fun n c a tally ⟨bounded, quiet, bound⟩ =>
+       law n c a tally bounded quiet bound) w ⟨meets, finite⟩,
+    fun law n c a tally bounded quiet bound => table.mpr (fun _ _ ⟨meets, finite⟩ =>
+-      listingObeys_of_obeys pointwise (law _ meets finite)) n c a tally ⟨bounded, quiet, bound⟩⟩
++      listingMarksHold_of_marksHold pointwise (law _ meets finite)) n c a tally ⟨bounded, quiet, bound⟩⟩
+ 
+ /-- So in finite worlds, nothing coming to stand across a step at which nothing stands is a law
+ of counting what stands under a selection exactly when the selection binds counting or selects
+ balance and dissipation. -/
+ theorem finite_standing_binds_iff (S : Premise → Bool) :
+     (∀ w : World, w.Meets S → w.Finite →
+-      w.StandsObey fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔
++      w.StandingMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔
+       BindsCounting S ∨ BoundsStanding S :=
+   have pointwise : Pointwise fun n (_ : Nat → Nat) a => ∀ t, 0 < a t → 0 < n t :=
+     fun same law t pos => Nat.lt_of_lt_of_le (law t (Nat.lt_of_lt_of_le pos
+       (Nat.le_of_eq (same t).2.2.symm))) (Nat.le_of_eq (same t).1)
+   have unbound : ¬ (BindsCounting S ∨ BoundsStanding S) → ¬ ∀ w : World, w.Meets S →
+-      w.Finite → w.StandsObey fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
++      w.Finite → w.StandingMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
+     Nat.lt_irrefl 0 ((finite_standing_counting_under S pointwise).mpr law _ _ _ Queue.lone_tally
+       ⟨1, fun | 0 => Nat.zero_le 1 | _ + 1 => Nat.le_refl 1⟩
+       (fun binds => absurd binds free) (fun bounds => absurd (.inr bounds) free)
+@@ -680,7 +680,7 @@ every step is counted by a finite world meeting any other selection, and change
+ there. -/
+ theorem finite_standing_bound_iff (S : Premise → Bool) :
+     (∀ w : World, w.Meets S → w.Finite →
+-      w.StandsObey fun n c a => ∃ B, ChangeBound 0 B n c a) ↔ BoundsStanding S :=
++      w.StandingMarksHold fun n c a => ∃ B, ChangeBound 0 B n c a) ↔ BoundsStanding S :=
+   have pointwise : Pointwise fun (_ c a : Nat → Nat) => ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < c t + a t :=
+     fun {_ _ a _ c' _} same settles recurs => settles fun N => match recurs N with
+       | ⟨t, later, changes⟩ => ⟨t, later, Nat.lt_of_lt_of_le changes (Nat.le_of_eq
+@@ -704,7 +704,7 @@ namespace World
+ 
+ /-- `Q` holds of the counts of every census of the dependences of the world: how many hold at
+ each step, how many dissolve and how many form across it. -/
+-def DependsObey (w : World) [∀ t f c, Decidable (w.web.requires t f c)]
++def DependenceMarksHold (w : World) [∀ t f c, Decidable (w.web.requires t f c)]
+     (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop) : Prop :=
+   ∀ deps, w.web.DependenceCensus deps → Q (fun t => (deps t).length)
+     (fun t => ceasings (deps t) (fun d s => w.web.requires s d.1 d.2) t)
+@@ -804,24 +804,24 @@ property of the counts holds of every census of the dependences of every world m
+ exactly when it holds of every tally. -/
+ theorem dependence_counting (S : Premise → Bool) (pointwise : Pointwise Q) :
+     (∀ n c a, Tally n c a → Q n c a) ↔
+-      ∀ (w : World) [∀ t f c, Decidable (w.web.requires t f c)], w.Meets S → w.DependsObey Q :=
+-  have table := table_obeys_free pointwise
++      ∀ (w : World) [∀ t f c, Decidable (w.web.requires t f c)], w.Meets S → w.DependenceMarksHold Q :=
++  have table := table_marks_hold_free pointwise
+     (fun n c a tally _ => match dependence_witnessed S n c a tally trivial with
+       | ⟨w, decided, l, within, listed, counts⟩ => ⟨w, decided, l, within.1, listed, counts⟩)
+   ⟨fun law w inst meets =>
+-    have obeys := table.mp law
+-    @obeys w (fun d t => inst t d.1 d.2) meets,
++    have marks := table.mp law
++    @marks w (fun d t => inst t d.1 d.2) meets,
+    fun law => table.mpr fun w inst meets => @law w (fun t f c => inst (f, c) t) meets⟩
+ 
+ /-- Nor does enclosure: the depending queue has every step enclosed. -/
+ theorem enclosed_dependence_counting (S : Premise → Bool) (pointwise : Pointwise Q) :
+     (∀ n c a, Tally n c a → Q n c a) ↔
+       ∀ (w : World) [∀ t f c, Decidable (w.web.requires t f c)], w.Meets S →
+-        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.DependsObey Q :=
+-  have table := table_obeys_free pointwise (dependence_witnessed S)
++        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.DependenceMarksHold Q :=
++  have table := table_marks_hold_free pointwise (dependence_witnessed S)
+   ⟨fun law w inst meets enclosed =>
+-    have obeys := table.mp law
+-    @obeys w (fun d t => inst t d.1 d.2) ⟨meets, enclosed⟩,
++    have marks := table.mp law
++    @marks w (fun d t => inst t d.1 d.2) ⟨meets, enclosed⟩,
+    fun law => table.mpr fun w inst ⟨meets, enclosed⟩ =>
+     @law w (fun t f c => inst (f, c) t) meets enclosed⟩
+ 
+@@ -926,12 +926,12 @@ in a finite world. -/
+ theorem finite_dependence_counting (S : Premise → Bool) (pointwise : Pointwise Q) :
+     (∀ n c a, Tally n c a → (∃ M, ∀ t, n t ≤ M) → Q n c a) ↔
+       ∀ (w : World) [∀ t f c, Decidable (w.web.requires t f c)], w.Meets S → w.Finite →
+-        w.DependsObey Q :=
+-  have table := table_obeys pointwise (finite_dependence_counting_sound S)
++        w.DependenceMarksHold Q :=
++  have table := table_marks_hold pointwise (finite_dependence_counting_sound S)
+     (finite_dependence_counting_witnessed S)
+   ⟨fun law w inst meets finite =>
+-    have obeys := table.mp law
+-    @obeys w (fun d t => inst t d.1 d.2) ⟨meets, finite⟩,
++    have marks := table.mp law
++    @marks w (fun d t => inst t d.1 d.2) ⟨meets, finite⟩,
+    fun law => table.mpr fun w inst ⟨meets, finite⟩ =>
+     @law w (fun t f c => inst (f, c) t) meets finite⟩
+ 

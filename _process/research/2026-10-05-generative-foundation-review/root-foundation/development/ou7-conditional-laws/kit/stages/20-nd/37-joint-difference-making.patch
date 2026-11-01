@@ -1,0 +1,62 @@
+diff --git a/theories/becoming/results/records/joint-difference-making.json b/theories/becoming/results/records/joint-difference-making.json
+index ff3d5bad3..7e5adb764 100644
+--- a/theories/becoming/results/records/joint-difference-making.json
++++ b/theories/becoming/results/records/joint-difference-making.json
+@@ -89,7 +89,7 @@
+       "declarations": [
+         "Becoming.Pool.determined",
+         "Becoming.Shock.determined",
+-        "Becoming.Pool.difference_belongs_to_the_joint",
++        "Becoming.Pool.difference_only_together",
+         "Becoming.Pool.all_overdetermined",
+         "Becoming.Pool.first_two_only_together"
+       ]
+@@ -98,7 +98,7 @@
+       "zh": "两次运行中，关系读法都把第一个汲取者计为消耗，一个什么也不取的形成不计为消耗。",
+       "en": "In both runs the relational reading counts the first drawer as consuming, and a formation that takes nothing is not.",
+       "declarations": [
+-        "Becoming.Pool.difference_belongs_to_the_joint",
++        "Becoming.Pool.difference_only_together",
+         "Becoming.Web.ConsumingIn"
+       ]
+     },
+@@ -212,8 +212,8 @@
+     {
+       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
+       "detail": {
+-        "zh": "多重决定（Pool.difference_belongs_to_the_joint 的三方运行）：每一方单独都不造成差别，共同活动造成了损失。在一个形成的各事件之间，整段层面没有哪个有限的事件集合造成差别（Renewable.depletion_is_joint、Renewable.no_finite_segment_makes_difference），而断裂事件造成步层面的差别（Renewable.breaking_event_makes_step_difference；独立审查 F7）。",
+-        "en": "Overdetermination (the three-drawer run of Pool.difference_belongs_to_the_joint): no party alone makes the difference, while the joint activity makes the loss. Across a formation's own events no finite set of events makes the run-level difference (Renewable.depletion_is_joint, Renewable.no_finite_segment_makes_difference), while the breaking event makes the step-level difference (Renewable.breaking_event_makes_step_difference; independent review F7)."
++        "zh": "多重决定（Pool.difference_only_together 的三方运行）：每一方单独都不造成差别，共同活动造成了损失。在一个形成的各事件之间，整段层面没有哪个有限的事件集合造成差别（Renewable.depletion_is_joint、Renewable.no_finite_segment_makes_difference），而断裂事件造成步层面的差别（Renewable.breaking_event_makes_step_difference；独立审查 F7）。",
++        "en": "Overdetermination (the three-drawer run of Pool.difference_only_together): no party alone makes the difference, while the joint activity makes the loss. Across a formation's own events no finite set of events makes the run-level difference (Renewable.depletion_is_joint, Renewable.no_finite_segment_makes_difference), while the breaking event makes the step-level difference (Renewable.breaking_event_makes_step_difference; independent review F7)."
+       }
+     },
+     {
+@@ -280,7 +280,7 @@
+     "Becoming.Dependence.along_kept",
+     "Becoming.Dependence.along_broken",
+     "Becoming.Dependence.Overdetermined.no_difference",
+-    "Becoming.Pool.difference_belongs_to_the_joint",
++    "Becoming.Pool.difference_only_together",
+     "Becoming.Renewable.overdraw_consumes",
+     "Becoming.Renewable.depletion_is_joint",
+     "Becoming.Shock.move_decides",
+@@ -399,7 +399,7 @@
+         "Becoming.Pool.process",
+         "Becoming.Pool.withhold",
+         "Becoming.Pool.dependence",
+-        "Becoming.Pool.difference_belongs_to_the_joint",
++        "Becoming.Pool.difference_only_together",
+         "Becoming.sub_self_add",
+         "Becoming.Renewable.drawing",
+         "Becoming.Renewable.overdraw_consumes",
+@@ -728,6 +728,10 @@
+     {
+       "en": "30 October 2026 (U2, study section 461): 2 laws at the model added, stating `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 2 条，于其项为文法之处陈述 `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): declarations renamed so that each name states what it means, not a command, a value or an ownership: difference_belongs_to_the_joint → difference_only_together. The statements are kept but for the names; the claim is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：声明更名，使名言其所指，不言命令、价值或所有：difference_belongs_to_the_joint → difference_only_together。陈述除名外不变；论断不变。"
+     }
+   ],
+   "text_versions": [

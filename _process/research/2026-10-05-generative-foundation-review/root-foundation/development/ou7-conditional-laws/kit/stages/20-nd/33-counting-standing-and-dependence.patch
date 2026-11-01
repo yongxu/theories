@@ -1,0 +1,120 @@
+diff --git a/theories/becoming/results/records/counting-standing-and-dependence.json b/theories/becoming/results/records/counting-standing-and-dependence.json
+index fa0691829..b361577ac 100644
+--- a/theories/becoming/results/records/counting-standing-and-dependence.json
++++ b/theories/becoming/results/records/counting-standing-and-dependence.json
+@@ -10,8 +10,8 @@
+   "family": "F01",
+   "reviewed_at_utc": "2026-10-25T14:44:41+00:00",
+   "statement": {
+-    "zh": "在前提的每种取舍之下，所立者服从活动的计数规律；被围住时，平衡与耗散单独为所立者的变化定界，不需要体现；前提不给依存的计数加任何规律。",
+-    "en": "Under each choice of the premises, what stands obeys the laws of counting what is active; under enclosure, balance and dissipation alone bound the change of what stands, with no embodiment; and the premises add no law to counting dependences."
++    "zh": "在前提的每种取舍之下，所立者满足活动的计数规律；被围住时，平衡与耗散单独为所立者的变化定界，不需要体现；前提不给依存的计数加任何规律。",
++    "en": "Under each choice of the premises, what stands satisfies the laws of counting what is active; under enclosure, balance and dissipation alone bound the change of what stands, with no embodiment; and the premises add no law to counting dependences."
+   },
+   "laws": [
+     {
+@@ -19,14 +19,14 @@
+       "en": "Read of standing: a census of what stands lists at each step, once each, the relata standing there; its counts are how many stand at each step and how many cease to stand and come to stand across it.",
+       "declarations": [
+         "Becoming.Web.StandingCensus",
+-        "Becoming.World.StandsObey"
++        "Becoming.World.StandingMarksHold"
+       ]
+     },
+     {
+       "zh": "关系项都体现时，所立者就是活跃者：所立者的普查就是活动的普查，反之亦然，计数相同，所以两者的计数满足同样的性质。",
+-      "en": "Where every relatum is embodied, what stands is what is active: a census of what stands is a census of activity and conversely, with the same counts, so the two obey the same properties.",
++      "en": "Where every relatum is embodied, what stands is what is active: a census of what stands is a census of activity and conversely, with the same counts, so the two satisfy the same properties.",
+       "declarations": [
+-        "Becoming.World.Embodied.standsObey_iff"
++        "Becoming.World.Embodied.standingMarksHold_iff"
+       ]
+     },
+     {
+@@ -119,7 +119,7 @@
+       "en": "Read of dependence: with requiring decided, the premises add nothing to the law of counting dependences: under each choice, in every world, with every step from some step on enclosed and, with at most some number holding at each step, in finite worlds, a property of the counts of a census of dependences holds exactly when it holds of every tally.",
+       "declarations": [
+         "Becoming.Web.DependenceCensus",
+-        "Becoming.World.DependsObey",
++        "Becoming.World.DependenceMarksHold",
+         "Becoming.World.dependence_counting",
+         "Becoming.World.enclosed_dependence_counting",
+         "Becoming.World.finite_dependence_counting"
+@@ -214,8 +214,8 @@
+     "en": "Restate locally, following the zero-premise plan, the laws of dependence and the other laws of what stands."
+   },
+   "correspondence": {
+-    "zh": "活动的计数规律（whole-law-of-counting、counting-under-enclosure）读的是什么活跃；本结果读同一个展开中什么立着、什么依存。不被围住时，所立者与活跃者服从相同的计数规律：体现使两者相同，不纳入体现时两者都只受计数表约束。被围住时两者分开：流所取用与给予的是水平，所以平衡与耗散单独就为所立者定下变化界，体现所做的是把这个界从所立者带到活跃者。依存的计数不受前提约束，因为前提只在依存与活动、水平与世系一起时约束它：活动需要支持只要求活跃者所依存的支持它，有界传递只要求后代开始立着时所依存的，其亲代也依存，所需在一个界之内。读法（AI 论证）：被围住的展开所耗去的是立着的东西，活动只在体现时随之受约束；这是不用条件的理论中不加公理的计数规律在三个读法上的完整陈述，其中什么起约束（所纳入前提都起约束时）只对活动陈述。它不评价立起、不再立着、形成或消解。",
+-    "en": "The laws of counting activity (whole-law-of-counting, counting-under-enclosure) read what is active; this result reads what stands and what depends in the same unfolding. Where nothing is enclosed what stands and what is active obey the same laws of counting: embodiment makes them one, and without it both are bound by the tally alone. Under enclosure they part: what the flow takes and gives is standing, so balance and dissipation alone bound the change of what stands, and what embodiment does is carry that bound from what stands to what is active. The counts of dependence are not bound by the premises, since the premises bear on dependence only together with activity, standing and descent: activity needing support asks only that what an active relatum depends on supports it, and bounded transmission only that what a descendant depends on as it comes to stand its parent depended on, within a bound. A reading (an AI argument): what an enclosed unfolding spends is what stands, activity being bound with it only where embodied; this completes the statement of the laws of counting of the theory without the condition, with no axiom, in the three readings, where binding (each chosen premise binding) is stated for activity only. It does not evaluate coming to stand, ceasing to stand, forming or dissolving."
++    "zh": "活动的计数规律（whole-law-of-counting、counting-under-enclosure）读的是什么活跃；本结果读同一个展开中什么立着、什么依存。不被围住时，所立者与活跃者满足相同的计数规律：体现使两者相同，不纳入体现时两者都只受计数表约束。被围住时两者分开：流所取用与给予的是水平，所以平衡与耗散单独就为所立者定下变化界，体现所做的是把这个界从所立者带到活跃者。依存的计数不受前提约束，因为前提只在依存与活动、水平与世系一起时约束它：活动需要支持只要求活跃者所依存的支持它，有界传递只要求后代开始立着时所依存的，其亲代也依存，所需在一个界之内。读法（AI 论证）：被围住的展开所耗去的是立着的东西，活动只在体现时随之受约束；这是不用条件的理论中不加公理的计数规律在三个读法上的完整陈述，其中什么起约束（所纳入前提都起约束时）只对活动陈述。它不评价立起、不再立着、形成或消解。",
++    "en": "The laws of counting activity (whole-law-of-counting, counting-under-enclosure) read what is active; this result reads what stands and what depends in the same unfolding. Where nothing is enclosed what stands and what is active satisfy the same laws of counting: embodiment makes them one, and without it both are bound by the tally alone. Under enclosure they part: what the flow takes and gives is standing, so balance and dissipation alone bound the change of what stands, and what embodiment does is carry that bound from what stands to what is active. The counts of dependence are not bound by the premises, since the premises bear on dependence only together with activity, standing and descent: activity needing support asks only that what an active relatum depends on supports it, and bounded transmission only that what a descendant depends on as it comes to stand its parent depended on, within a bound. A reading (an AI argument): what an enclosed unfolding spends is what stands, activity being bound with it only where embodied; this completes the statement of the laws of counting of the theory without the condition, with no axiom, in the three readings, where binding (each chosen premise binding) is stated for activity only. It does not evaluate coming to stand, ceasing to stand, forming or dissolving."
+   },
+   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
+   "aliases": [
+@@ -232,8 +232,8 @@
+     "Becoming.World.dependence_counting",
+     "Becoming.World.enclosed_dependence_counting",
+     "Becoming.World.finite_dependence_counting",
+-    "Becoming.World.StandsObey",
+-    "Becoming.World.DependsObey",
++    "Becoming.World.StandingMarksHold",
++    "Becoming.World.DependenceMarksHold",
+     "Becoming.World.BoundsStanding",
+     "Becoming.World.sourcedQueue",
+     "Becoming.World.waitingQueue",
+@@ -246,8 +246,8 @@
+       "id": "whole-law-of-counting",
+       "relation": "formal-reuse",
+       "detail": {
+-        "zh": "复用计数表与队列（Tally、Listed.tally、Queue.holds、Queue.line、Queue.listed、Queue.counts）、逐点、World.CountsObey、World.counting_under 与 World.counting_binds_iff、开放与被驱动的队列（World.openQueue_census、World.openQueue_counts、World.drivenQueue_holds、OpenQueue.driven）。",
+-        "en": "Reuses tallies and queues (Tally, Listed.tally, Queue.holds, Queue.line, Queue.listed, Queue.counts), Pointwise, World.CountsObey, World.counting_under and World.counting_binds_iff, and the open and driven queues (World.openQueue_census, World.openQueue_counts, World.drivenQueue_holds, OpenQueue.driven)."
++        "zh": "复用计数表与队列（Tally、Listed.tally、Queue.holds、Queue.line、Queue.listed、Queue.counts）、逐点、World.CensusMarksHold、World.counting_under 与 World.counting_binds_iff、开放与被驱动的队列（World.openQueue_census、World.openQueue_counts、World.drivenQueue_holds、OpenQueue.driven）。",
++        "en": "Reuses tallies and queues (Tally, Listed.tally, Queue.holds, Queue.line, Queue.listed, Queue.counts), Pointwise, World.CensusMarksHold, World.counting_under and World.counting_binds_iff, and the open and driven queues (World.openQueue_census, World.openQueue_counts, World.drivenQueue_holds, OpenQueue.driven)."
+       },
+       "interface": {
+         "output": {
+@@ -375,9 +375,9 @@
+       "declarations": [
+         "Becoming.pairs",
+         "Becoming.mem_pairs",
+-        "Becoming.World.StandsObey",
++        "Becoming.World.StandingMarksHold",
+         "Becoming.World.Embodied.decided",
+-        "Becoming.World.Embodied.standsObey_iff",
++        "Becoming.World.Embodied.standingMarksHold_iff",
+         "Becoming.OpenQueue.sourced",
+         "Becoming.World.sourcedQueue",
+         "Becoming.World.sourcedQueue_holds",
+@@ -407,7 +407,7 @@
+         "Becoming.World.finite_standing_counting_under",
+         "Becoming.World.finite_standing_binds_iff",
+         "Becoming.World.finite_standing_bound_iff",
+-        "Becoming.World.DependsObey",
++        "Becoming.World.DependenceMarksHold",
+         "Becoming.Queue.depending",
+         "Becoming.World.dependingQueue",
+         "Becoming.World.still_premised",
+@@ -431,7 +431,7 @@
+       "declarations": [
+         "Becoming.ceasings_congr",
+         "Becoming.comings_congr",
+-        "Becoming.World.CountsObey",
++        "Becoming.World.CensusMarksHold",
+         "Becoming.ceasesToBe_congr",
+         "Becoming.comesToBe_congr"
+       ]
+@@ -816,6 +816,14 @@
+     {
+       "en": "25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings. The laws and their scope are unchanged. Also, 'the author's reading (AI argument)' reads 'a reading (an AI argument)', and the retired label Part I in the correspondence and a related detail reads the theory without the condition.",
+       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：八个前提的一个子集今称“前提之取舍”，不称“选择”（动词作“纳入”），见于每个现行字段：“选择”一词留给经耦合而行者。规律及其范围不变。另，“作者的读法（AI 论证）”改为“读法（AI 论证）”，对应与一条关联说明中的退役标签“第一部分”改为“不用条件的理论”。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold, DependsObey → DependenceMarksHold, StandsObey → StandingMarksHold, standsObey_iff → standingMarksHold_iff. The statements are kept but for the names; the claim is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsObey → CensusMarksHold, DependsObey → DependenceMarksHold, StandsObey → StandingMarksHold, standsObey_iff → standingMarksHold_iff。陈述除名外不变；论断不变。"
++    },
++    {
++      "en": "{DAY}, board item ND (study section {N}): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
++      "zh": "{DAY_ZH}，工作板条目 ND（研究第 {N} 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+     }
+   ],
+   "text_versions": [
