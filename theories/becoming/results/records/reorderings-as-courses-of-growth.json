@@ -462,7 +462,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d"
+      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T083434.601834Z/verification.json",

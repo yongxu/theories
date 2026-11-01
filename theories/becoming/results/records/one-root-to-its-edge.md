@@ -169,14 +169,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. master_laws.py checks the standings on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.
+Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py checks the standings on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.
 
 Canonical source: [RootForms.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-The covering laws' root form (lines traced back to a covering list, no splits); a stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
+A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -188,7 +188,7 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). The grammar laws the derived rows are cases of, and the measure that gives the rule its reach.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). The grammar laws the derived rows are cases of, and the measure that gives the rule its reach.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). GroupEnding.Flow.all_end, row 17 of lever 2's table, under a stated hypothesis here.
 - related, not a proved adapter: [transmission-is-inheritance-and-need](transmission-is-inheritance-and-need.md). Flow.no_new_dependence, row 5 of lever 2's table, at balance in its statement, with its relational part here.
 
@@ -214,6 +214,8 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 | review | [REVIEW-U4C-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md) | — |
 | review | [REVIEW-U4C.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md) | — |
 | integration | [CENSUS-ON-THE-ROOT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md) | — |
+| integration | [COVERING-ON-THE-ROOT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md) | — |
+| review | [REVIEW-U4D.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4D.md) | — |
 
 Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `边上之所立`, `Becoming.RootForms.outside_leaves_no_offspring`, `Becoming.RootForms.descent_forms_no_dependence`
 
@@ -225,6 +227,8 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 - 1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.
 - 1 November 2026, after DU (study section 489): C's entry among the premises of the ethics names Becoming.ReadsNoOrder.not_entails as its theorem of not being entailed: a statement whose truth does not change with the order, entailing C at a datum on a frame with an extension, fails there at every order, the pattern of ReadsOnlyDynamics.not_entails with the order in the place of the significance. Its reason for absence is dropped, the basis states the condition, and the non-implication on the premises' warrant says that neither is entailed by statements of the dynamics, each under its condition (REVIEW-U4-PREMISE-C.md).
 - 1 November 2026, U4c (study section 492): Listed.coming_of_ceasing moved from counting to derived, a case of the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, through two bridges (comesToBe_iff_sheng_along, ceasesToBe_iff_wang_along) and the support of Steps.along; its statement is unchanged and still reads as counting, the row placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived. CensusWebs.keep_pace stays counting, its basis saying why it is not a case of the root's census of a step. The next step names the covering laws' root form and a stretch form of the census on positions, of which keep_pace would be a case, in place of a root form for the census rows (CENSUS-ON-THE-ROOT.md, reviewed in REVIEW-U4C.md, its record texts in REVIEW-U4C-RECORD.md, both among the references); DESIGN-BOUNDARY gains a dated §9 saying what differs from lever 1's census candidate.
+- 1 November 2026, board item ND (study section 495): the generator that checks the standings is named shared_laws.py (was master_laws.py), and its data shared-laws.json; the check and the claim are unchanged.
+- 1 November 2026, U4d (study section 498): the covering laws' root form, the first next step, is done. The covering laws at Locality, Decidedness and Identity and the root's census of a run are cases of one count on the root, ends on lines from a list (shared-laws-on-the-grammar, law 19): U4c's boundary, that the covering laws are not cases of the census, stands, and both are now cases of the count. The census of a run is stronger, two hypotheses dropped; Identity gains the exact forms from covering lists. What reaches the grammar does not change, so the standings and 08 §7's figures are unchanged (the measure rerun on the landing build). The next step drops the covering laws' root form (COVERING-ON-THE-ROOT.md, reviewed in REVIEW-U4D.md, both among the references).
 
 </details>
 

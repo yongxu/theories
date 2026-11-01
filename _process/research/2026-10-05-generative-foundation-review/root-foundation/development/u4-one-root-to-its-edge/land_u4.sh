@@ -45,7 +45,7 @@ EOF
   step table; python3 -B $K/boundary_table.py . --json $K/boundary-table.json > $LOG/bt.log 2>&1 || fail "boundary table"
   git diff --stat -- $K/boundary-table.json | tail -1
   step record; python3 -B $K/integrate_u4.py record $V $N > $LOG/record.log 2>&1 || fail record; tail -1 $LOG/record.log | cut -c1-200
-  step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
+  step mv; python3 -B tools/research/shared_laws.py > $LOG/mv.log 2>&1 || fail mv
   python3 -B $K/integrate_u4.py check > $LOG/u4check.log 2>&1 || fail "U4's check"; cut -c1-200 $LOG/u4check.log
   step register; M=$RF/THEOREM-CONNECTIVITY.py
   python3 -B $M --check > $LOG/conn-pre.log 2>&1

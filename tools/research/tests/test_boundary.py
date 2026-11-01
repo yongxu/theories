@@ -12,7 +12,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from tools.research import boundary, master_laws, registry
+from tools.research import boundary, shared_laws, registry
 
 REVIEW = '_process/review.md'
 SCOPE = {'role': 'scope', 'name': {'en': 'the continuation condition'}, 'premise': 'Becoming.Unrestricted',
@@ -418,11 +418,11 @@ class TheRule(unittest.TestCase):
     def test_every_branch(self):
         occurrence, own = [{'models': ['occurrence', 'own']}], [{'models': ['own']}]
         self.assertEqual(boundary.rule('grammar', {**self.NONE, 'anchor_in_statement': ['Becoming.Flow.Balances']}, []), 'balance in its statement')
-        self.assertEqual(boundary.rule('no master law', {**self.NONE, 'written_out': True}, occurrence), 'balance in its statement')
+        self.assertEqual(boundary.rule('no shared law', {**self.NONE, 'written_out': True}, occurrence), 'balance in its statement')
         self.assertEqual(boundary.rule('grammar', {**self.NONE, 'proof_only': ['Becoming.Flow.Balances']}, occurrence), 'connected')
         self.assertEqual(boundary.rule('anchor, not reached', self.NONE, occurrence), 'at a represented model')
-        self.assertEqual(boundary.rule('no master law', self.NONE, [{'models': ['process']}]), 'at a represented model')
-        self.assertEqual(boundary.rule('no master law', self.NONE, own), 'own carrier')
+        self.assertEqual(boundary.rule('no shared law', self.NONE, [{'models': ['process']}]), 'at a represented model')
+        self.assertEqual(boundary.rule('no shared law', self.NONE, own), 'own carrier')
         self.assertEqual(boundary.rule('balance, represented', self.NONE, []), 'unplaced')
 
     def test_the_facts(self):
@@ -437,11 +437,11 @@ class TheRule(unittest.TestCase):
         self.assertTrue(boundary.has_fact('balance in its statement', set(), {**self.NONE, 'anchor_in_statement': ['Becoming.Flow.Balances']}, []))
 
 
-CENTRAL = {n: {'category': 'master law', 'dependence': d} for n, d in (
+CENTRAL = {n: {'category': 'shared law', 'dependence': d} for n, d in (
     ('Becoming.Flow.row', 'grammar'), ('Becoming.Flow.steps', 'grammar'), ('Becoming.Flow.balanced', 'grammar'),
-    ('Becoming.Flow.written', 'no master law'), ('Becoming.Flow.proof_balance', 'grammar'), ('Becoming.Flow.via_helper', 'grammar'),
-    ('Becoming.Flow.forwarder', 'grammar'), ('Becoming.Flow.counted', 'no master law'), ('Becoming.Flow.modelled', 'anchor, not reached'),
-    ('Becoming.Flow.own', 'no master law'), ('Becoming.Flow.two', 'no master law'), ('Becoming.Flow.absent', 'no master law'))}
+    ('Becoming.Flow.written', 'no shared law'), ('Becoming.Flow.proof_balance', 'grammar'), ('Becoming.Flow.via_helper', 'grammar'),
+    ('Becoming.Flow.forwarder', 'grammar'), ('Becoming.Flow.counted', 'no shared law'), ('Becoming.Flow.modelled', 'anchor, not reached'),
+    ('Becoming.Flow.own', 'no shared law'), ('Becoming.Flow.two', 'no shared law'), ('Becoming.Flow.absent', 'no shared law'))}
 AT_MODEL = {'Becoming.Flow.modelled': [{'of': 'Becoming.Flow.modelled', 'record': 'm', 'law': 2, 'declaration': 'Becoming.M.reading',
                                         'models': ['occurrence'], 'review': REVIEW}],
             'Becoming.Flow.own': [{'of': 'Becoming.Flow.own', 'record': 'm', 'law': 3, 'declaration': 'Becoming.M.own',
@@ -557,7 +557,7 @@ class TheReport(unittest.TestCase):
 
     def test_the_lean_checks_kinds_for_d2(self):
         # an auxiliary of Init's declaration, realized in a package module: D2 takes the kind before it from the check
-        central = {**CENTRAL, 'Becoming.Flow.unfolds': {'category': 'master law', 'dependence': 'grammar'}}
+        central = {**CENTRAL, 'Becoming.Flow.unfolds': {'category': 'shared law', 'dependence': 'grammar'}}
         f5 = {**F5, 'Becoming.Flow.unfolds': 'reaching the grammar'}
         def kinds(given):
             def run(query, modules):
@@ -655,10 +655,10 @@ class TheReport(unittest.TestCase):
         self.assertEqual(rep['premises_of_the_ethics'][0]['failed'], ['Becoming.Comparison is not a theorem of the run'])
 
     def test_the_counts_of_the_boundary_record(self):
-        self.assertEqual(master_laws.counted_in('edge', 1, ['edge'], {('edge', 1)}), 'counts_at_boundary_record')
-        self.assertEqual(master_laws.counted_in('m', 2, ['edge'], {('m', 2)}), 'counts_at_model')
-        self.assertEqual(master_laws.counted_in('m', 1, ['edge'], {('m', 2)}), 'counts')
-        self.assertEqual(master_laws.counted_in('m', 1, [], set()), 'counts')
+        self.assertEqual(shared_laws.counted_in('edge', 1, ['edge'], {('edge', 1)}), 'counts_at_boundary_record')
+        self.assertEqual(shared_laws.counted_in('m', 2, ['edge'], {('m', 2)}), 'counts_at_model')
+        self.assertEqual(shared_laws.counted_in('m', 1, ['edge'], {('m', 2)}), 'counts')
+        self.assertEqual(shared_laws.counted_in('m', 1, [], set()), 'counts')
         # the generator's tables: each law in one, the boundary record's laws apart, one carrying items there only
         loaded = [{'id': 'edge', 'laws': [{'declarations': ['Becoming.Leaf.form']}, {'declarations': ['Becoming.Leaf.part']}]},
                   {'id': 'm', 'laws': [{'declarations': ['Becoming.Flow.row']}, {'declarations': ['Becoming.Flow.own']}]}]
@@ -666,20 +666,20 @@ class TheReport(unittest.TestCase):
         def above(n):
             return True, True, frozenset({'balance'} if n == 'Becoming.Leaf.part' else ())
         for carrying, laws in ((['edge'], [1, 1, 2]), ([], [2, 2, 0])):
-            records, tables = master_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, carrying)
-            self.assertEqual([tables[k]['laws'] for k in master_laws.COUNTED], laws, carrying)
+            records, tables = shared_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, carrying)
+            self.assertEqual([tables[k]['laws'] for k in shared_laws.COUNTED], laws, carrying)
             self.assertEqual(list(tables['counts']), list(tables['counts_at_boundary_record']))
         self.assertEqual((tables['counts_at_model']['grammar'], tables['counts_at_model']['balance']), (2, 1))
-        _, two = master_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, ['edge', 'm'])
-        self.assertEqual([two[k]['laws'] for k in master_laws.COUNTED], [0, 0, 4])  # with two carriers, both records' laws apart
+        _, two = shared_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, ['edge', 'm'])
+        self.assertEqual([two[k]['laws'] for k in shared_laws.COUNTED], [0, 0, 4])  # with two carriers, both records' laws apart
         self.assertEqual(records['edge'][1]['statements_at_model'], checked['edge', 2])
         # the data's boundary: the report for one carrier, an error naming both for two, nothing for none
-        self.assertEqual(master_laws.boundary_data(['edge'], lambda rid: {'record': rid}), {'record': 'edge'})
-        self.assertEqual(master_laws.boundary_data(['edge', 'm'], lambda rid: self.fail('no report for two carriers')),
+        self.assertEqual(shared_laws.boundary_data(['edge'], lambda rid: {'record': rid}), {'record': 'edge'})
+        self.assertEqual(shared_laws.boundary_data(['edge', 'm'], lambda rid: self.fail('no report for two carriers')),
                          {'error': 'the boundary field is carried by more than one record', 'records': ['edge', 'm']})
-        self.assertIsNone(master_laws.boundary_data([], lambda rid: self.fail('no report without a carrier')))
-        ec = type('EC', (), {'__file__': str(master_laws.MEASURE), 'COVERAGE': master_laws.MEASURE})
-        self.assertLessEqual({'tools/research/boundary.py', 'tools/research/boundary_check.lean'}, set(master_laws.hashed_inputs(ec)))
+        self.assertIsNone(shared_laws.boundary_data([], lambda rid: self.fail('no report without a carrier')))
+        ec = type('EC', (), {'__file__': str(shared_laws.MEASURE), 'COVERAGE': shared_laws.MEASURE})
+        self.assertLessEqual({'tools/research/boundary.py', 'tools/research/boundary_check.lean'}, set(shared_laws.hashed_inputs(ec)))
 
 
 class ThroughTheCheck(unittest.TestCase):
@@ -805,7 +805,7 @@ class ThePages(unittest.TestCase):
         self.assertEqual(list(records[1]['_standings']['rows']), ['Becoming.Flow.row'])
         r = json.loads(json.dumps({**next(x for x in registry.load_records()[0] if x.get('schema_version') == 2 and x.get('laws')),
                                    'laws': records[0]['laws'], '_standings': records[0]['_standings']}, ensure_ascii=False))
-        r.pop('_master_laws', None)
+        r.pop('_shared_laws', None)
         page = registry.render_record_v2(r)
         self.assertEqual(page.count('   - *Standing of `Becoming.Flow.row`:*'), 1)  # a child of law 1, once though named twice
         self.assertEqual(page.count('   - *Standing of `Becoming.Flow.counted`:*'), 1)
@@ -909,12 +909,12 @@ class ThePages(unittest.TestCase):
                     'laws': [{'declarations': ['Becoming.Flow.row']}]},
                    {'id': 'other', '_record_path': 'theories/becoming/results/records/other.json', 'references': [], 'dependencies': [],
                     'laws': [{'declarations': ['Becoming.Flow.fact']}]}]
-        with patch.object(registry, 'master_laws', return_value=self.data):
+        with patch.object(registry, 'shared_laws', return_value=self.data):
             self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/edge.json'}), {'edge', 'naming'})
             self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/other.json'}), {'other'})
             # the data changed: every record with laws, and the boundary record, which has none here
-            self.assertEqual(registry.affected_ids(records, {registry.MASTER_LAWS}), {'edge', 'naming', 'other'})
-        with patch.object(registry, 'master_laws', return_value=self.data):
+            self.assertEqual(registry.affected_ids(records, {registry.SHARED_LAWS}), {'edge', 'naming', 'other'})
+        with patch.object(registry, 'shared_laws', return_value=self.data):
             # the boundary record deleted: the data's record, though it is gone
             self.assertEqual(registry.affected_ids(records[1:], {'theories/becoming/results/records/edge.json'}), {'naming'})
             # an F5 carrier changed: the rule's lines citing its laws show or hide
@@ -923,7 +923,7 @@ class ThePages(unittest.TestCase):
                       'laws': [{'declarations': ['Becoming.Flow.modelled']}]}]
             self.assertEqual(registry.affected_ids(records + cited, {'theories/becoming/results/records/m.json'}), {'m', 'shows'})
         unread = {'records': {'naming': [{'law': 1, 'central': [{'declaration': 'Becoming.Flow.row'}]}]}}  # U4's first landing
-        with patch.object(registry, 'master_laws', return_value=unread):
+        with patch.object(registry, 'shared_laws', return_value=unread):
             self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/edge.json'}), {'edge', 'naming'})
 
 
@@ -948,8 +948,8 @@ class TheStatus(unittest.TestCase):
         self.dir.cleanup()
 
     def status(self, data, records):
-        with patch.object(registry, 'master_laws', return_value=data):
-            return registry.master_laws_status(records)
+        with patch.object(registry, 'shared_laws', return_value=data):
+            return registry.shared_laws_status(records)
 
     def base(self, boundary_data):
         return {'core_receipt': 'R', 'names': {}, 'inputs_sha256': {}, 'records': {},
@@ -1473,7 +1473,7 @@ class TheLeanCheck(unittest.TestCase):
 
 class TheRepositoryFile(unittest.TestCase):
     def test_the_boundary_report_when_present(self):
-        data = registry.master_laws()
+        data = registry.shared_laws()
         if not data or 'boundary' not in data:
             self.skipTest('no record carries the boundary field')
         b = data['boundary']

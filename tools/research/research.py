@@ -37,7 +37,7 @@ def render_lock():
 def input_snapshot():
     """Bind a render to the exact metadata/source inventory it began reading."""
     config = navigation.read(navigation.CONFIG)
-    paths = {navigation.CONFIG, navigation.HISTORY, ROOT / registry.MASTER_LAWS, ROOT / registry.LAW_FAMILIES}  # both render on record pages
+    paths = {navigation.CONFIG, navigation.HISTORY, ROOT / registry.SHARED_LAWS, ROOT / registry.LAW_FAMILIES}  # both render on record pages
     for key in ('readme_first_screen', 'readme_opening', 'readme_lead', 'readme_repository'):
         if isinstance(config.get(key), str):
             paths.add(ROOT / config[key])
@@ -331,8 +331,8 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
               # Directory indexes and catalogues that differ from what render would write; they
               # follow chapters, studies and sources and are refreshed by make research-render.
               'stale_indexes': stale_indexes,
-              # MV: how far the computed view of master laws still matches the records and the core receipt.
-              'master_laws': registry.master_laws_status(records)}
+              # MV: how far the computed view of shared laws still matches the records and the core receipt.
+              'shared_laws': registry.shared_laws_status(records)}
     if ids or base:
         result['selected_style_warnings'] = [f for f in warnings if f['id'] in selected]
     result['scope'] = 'Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation.'

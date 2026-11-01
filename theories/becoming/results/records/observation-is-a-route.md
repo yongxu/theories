@@ -130,6 +130,7 @@ P124 left open how a formation comes to observe a stock it depends on; Ren answe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 
 Aliases: `observation is a route`, `观察是路线`, `a difference goes only downstream`, `差别只往下游去`, `registering is being downstream`, `所识即在下游`, `reading into each condition`, `读入每个条件`, `apart only downstream`, `只在下游不同`, `a route forms by closing`, `路线由闭合而形成`, `measurement witness`, `量度的见证`
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """U2 texts. 08's receipt counts, read from the receipt (as texts_wrp2.py); 08 §7's account of the rows on no master
-law, one sentence after its count of the 36, with F5's figures read from MV's master-laws.json; and the study section,
-from study_u2.txt, its figures read from the receipt and from master-laws.json. Run after the checker, after
-make_records_u2.py and after tools/research/master_laws.py. Every edit is asserted to apply exactly once.
+law, one sentence after its count of the 36, with F5's figures read from MV's shared-laws.json; and the study section,
+from study_u2.txt, its figures read from the receipt and from shared-laws.json. Run after the checker, after
+make_records_u2.py and after tools/research/shared_laws.py. Every edit is asserted to apply exactly once.
 usage (from the checkout root): python3 -B texts_u2.py RECEIPT N"""
 import json
 import re
@@ -16,8 +16,8 @@ PKG = 'experiments/integrated-correction/general-framework/generative-basis/lean
 CH = ROOT / 'theories/becoming/chapters'
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation'
 STUDY = ROOT / RF / 'BECOMING-RENEWAL-READING.md'
-MV = json.loads((ROOT / 'theories/becoming/results/data/master-laws.json').read_text(encoding='utf-8'))
-assert MV['core_receipt'] == RECEIPT, ('master-laws.json is not on this receipt', MV['core_receipt'])
+MV = json.loads((ROOT / 'theories/becoming/results/data/shared-laws.json').read_text(encoding='utf-8'))
+assert MV['core_receipt'] == RECEIPT, ('shared-laws.json is not on this receipt', MV['core_receipt'])
 reach = MV['central_reach']['counts']
 REACH, AT_MODEL = reach['reaching the grammar'], reach['stated at a represented model']
 OWN, REST = reach['stated on its own carrier only'], reach['the rest']

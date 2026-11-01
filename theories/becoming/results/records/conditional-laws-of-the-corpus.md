@@ -77,7 +77,7 @@ Units, families, dispositions and labelled readings in _process/research/2026-10
 - **formal-reuse**: [candidate-theorems-of-the-corpus](candidate-theorems-of-the-corpus.md). Twelve families' laws come from GrammarCandidates («相由则俱有», «四相俱时», «自缘则常», «定性之判», «有相则非亦有相», «能所相待», «不可致诘而有常则混而为一», «尺与端或尽或不尽» and others); its «从缘生非文法之律», «致诘不尽», «有生不必有亡» and «尺与尺可相尽» are nets where Z fails.
 - **formal-reuse**: [classical-definitions-in-the-grammar](classical-definitions-in-the-grammar.md). «通», «有常则往不穷», «非一非异», «有常而不通» and «昼夜往来不穷»; its law 4, generalized at this landing: under a class constant both ways what has a predecessor passes through («两向有常有前则通»), what abides being its case («两向有常则通»). The family of 通 rests on it.
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). The four marks, constancy, the core and the two-way core, «息» and «无环»; its law 5, generalized at this landing: beginning is kept along the core of the converse net («生于逆核下不变»), which holds the two-way core («位核含于逆核»), «生于位核下不变» its case. The family of 前際 and 後際 rests on it.
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). GrammarLaws' pigeonhole and finite-line laws («线有限不并则返», «有限遍后定前则皆返», «定前») and the image of a relation («像», «保之像»).
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). GrammarLaws' pigeonhole and finite-line laws («线有限不并则返», «有限遍后定前则皆返», «定前») and the image of a relation («像», «保之像»).
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «全生成», «传» and «所及», the short line and the still occurrence (Map.short, Map.still), and «全生成全守不并».
 - **formal-reuse**: [testing-within-the-net](testing-within-the-net.md). G21's «可分则不在核», with GrammarTesting's stages; the home section states the stagings of inquiry and of testing as one relation.
 
@@ -92,6 +92,7 @@ Units, families, dispositions and labelled readings in _process/research/2026-10
 | review | [FINDINGS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/review/FINDINGS.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md) | — |
 | statement | [06-CLASSICAL-TEXTS.md](../../chapters/06-CLASSICAL-TEXTS.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json) | — |
 
 Aliases: `the corpus's conditional laws`, `丙一之律`, `conditional laws of the corpus, family by family`, `Becoming.«皆有后而步皆分则全生成»`, `Becoming.«线不返则短于所列»`, `Becoming.«不返而有限则非不穷»`, `Becoming.«核同则同不穷»`, `Becoming.«所依无则依者无»`, `Becoming.«依之传»`, `Becoming.«亡者异当且仅当有后»`
 

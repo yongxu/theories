@@ -45,13 +45,17 @@
       ]
     },
     {
-      "zh": "跨步的平衡与经过它的各律（第 3、6、9 条）经过根上一步的清点（«定后则后并亡不过前并生»，其镜像«定前则前并生不过后并亡»），取步上两端都活跃的形成之间的关系：没有分裂时用前者，没有合并时用镜像。检验判定生起与止息，以标记计数；延续本身不需判定。覆盖之律（第 10、11 条）经由谱系。",
-      "en": "The balance across a step and the laws through it (laws 3, 6 and 9) go through the root's census of a step («定后则后并亡不过前并生», its mirror «定前则前并生不过后并亡») at the step's relation between formations active at both ends: without splits the first, without merges the mirror. The tests decide arising and ceasing, counted by marks; the continuation itself is not decided. The covering laws (laws 10 and 11) go by lineages.",
+      "zh": "跨步的平衡（第 3、9 条）经过根上一步的清点（«定后则后并亡不过前并生»，其镜像«定前则前并生不过后并亡»），取步上两端都活跃的形成之间的关系：没有分裂时用前者，没有合并时用镜像。检验判定生起与止息，以标记计数；延续本身不需判定。复现定律（第 6、9 条）是确切形式（第 12 条）的特例；覆盖之律（第 10 至 12 条）经由根上的覆盖之律（«所覆后亡屡则生未否»、«有界覆而生屡则亡不止»、«有覆而亡屡则生屡»、«有界覆而生屡则亡屡»），取活跃之内各形成自某步起的出现，延续的每一步进一阶。",
+      "en": "The balance across a step (laws 3 and 9) goes through the root's census of a step («定后则后并亡不过前并生», its mirror «定前则前并生不过后并亡») at the step's relation between formations active at both ends: without splits the first, without merges the mirror. The tests decide arising and ceasing, counted by marks; the continuation itself is not decided. The recurrence laws (laws 6 and 9) are cases of the exact forms (law 12), and the covering laws (laws 10 to 12) go through the root's covering laws («所覆后亡屡则生未否», «有界覆而生屡则亡不止», «有覆而亡屡则生屡», «有界覆而生屡则亡屡») at the formations' occurrences within activity onward, each step of the continuation one stage on.",
       "declarations": [
         "Becoming.Web.Census.balanceFrom_at",
         "Becoming.«定后则后并亡不过前并生»",
         "Becoming.«定前则前并生不过后并亡»",
-        "Becoming.total_mark_eq_count"
+        "Becoming.total_mark_eq_count",
+        "Becoming.«所覆后亡屡则生未否»",
+        "Becoming.«有界覆而生屡则亡不止»",
+        "Becoming.«有覆而亡屡则生屡»",
+        "Becoming.«有界覆而生屡则亡屡»"
       ]
     },
     {
@@ -65,8 +69,8 @@
       ]
     },
     {
-      "zh": "所以没有分裂时，止息在任意晚的步出现需要生起在任意晚的步出现；没有合并且从某步起至多 B 个活跃时，生起在任意晚的步出现需要止息在任意晚的步出现。",
-      "en": "So without splits, ceasing at arbitrarily late steps needs arising at arbitrarily late steps; without merges, with at most B formations active from some step on, arising at arbitrarily late steps needs ceasing at arbitrarily late steps.",
+      "zh": "没有分裂时，止息在任意晚的步出现需要生起在任意晚的步出现；没有合并且从某步起至多 B 个活跃时，生起在任意晚的步出现需要止息在任意晚的步出现。",
+      "en": "Without splits, ceasing at arbitrarily late steps needs arising at arbitrarily late steps; without merges, with at most B formations active from some step on, arising at arbitrarily late steps needs ceasing at arbitrarily late steps.",
       "declarations": [
         "Becoming.Web.UnceasingFrom",
         "Becoming.Web.Census.arisingFrom_of_ceasingFrom",
@@ -115,6 +119,14 @@
       "en": "The converse from one covering list too, with no census and no decision: where one list covers the active formations from some step on, nothing merges from that step on, and arising under the continuation recurs, ceasing under it does not stop from any step on.",
       "declarations": [
         "Becoming.Web.ceasingFrom_not_stopping_covered"
+      ]
+    },
+    {
+      "zh": "确切形式，延续已判定，不用普查，不用活跃之判定：有覆盖任意晚之步之活跃者的列表、自某步起不分裂、一形成是否延续前一活跃者已判定时，止息于延续之下复现需要生起于其下复现；有长度至多 B 的列表覆盖自某步起每步之活跃者、自那步起不合并、一形成是否为后一活跃者所延续已判定时，生起复现需要止息复现。延续之下的普查律（第 6、9 条）是其特例，普查在每步的列出覆盖该步。判定之需是一种归约，不是反例：在一个每步都有两个形成活跃、建于任一命题 Q 的网上，其余假设皆成立，一形成是否延续恰在 Q ∨ ¬Q 处可判定，生起复现恰当 ¬Q ∨ ¬¬Q（研究中之草稿见证，COVERING-ON-THE-ROOT）；故无此判定的确切形式将对每一命题给出弱排中律。何种判定最少仍开放。",
+      "en": "Exact, the continuation decided, with no census and no decision of activity: with lists covering what is active at arbitrarily late steps, no splits from some step on, and whether a formation continues one active before it decided, ceasing under the continuation recurring needs arising under it recurring; with lists of at most B covering what is active at each step from some step on, no merges from that step on, and whether a formation is continued by one active after it decided, arising recurring needs ceasing recurring. The census laws under a continuation (laws 6 and 9) are their cases, a census's listing at each step covering it. The decision is needed as a reduction, not a countermodel: on a web with two formations active at every step, built on any proposition Q, every other hypothesis holds, whether a formation continues is decided exactly where Q ∨ ¬Q, and arising recurs exactly where ¬Q ∨ ¬¬Q (a scratch witness in the study, COVERING-ON-THE-ROOT); so the exact form without it would give weak excluded middle for every proposition. Which decision is least is open.",
+      "declarations": [
+        "Becoming.Web.arisingFrom_of_ceasingFrom_covered",
+        "Becoming.Web.ceasingFrom_of_arisingFrom_covered"
       ]
     }
   ],
@@ -170,8 +182,8 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Identity by receipt 20261013T204910.042715Z; Becoming.Population, Flow and Change by receipt 20261013T094743.528770Z, which checked Identity's statements under former names, tabulated in the unification plan (periphery 20261013T095049.338744Z passed). Their theorems, this record's local laws included, have empty axiom reports, and the checker verifies core purity. Author counterreview in the integration note; no independent review yet."
   },
   "next_delta": {
-    "zh": "两个方向的确切存在形式仍需在每步后列出活跃者：反方向（生起复现需要止息复现）以覆盖列表加界的形式，以及确切存在形式所需的判定，仍开放；形成的类、任期与侵蚀在延续下的读法；整段上对延续关系的条件（单步的刻画见 identity-across-steps）；带比率的版本。",
-    "en": "The exact existential forms of both directions still need listings after each step: the converse (arising recurring needs ceasing recurring) from covering lists with a bound, and the decision the exact form needs, remain open; formation classes, tenure and undermining under a continuation; conditions on continuations over a run (one step: identity-across-steps); a version with rates."
+    "zh": "确切形式最少需何种判定（见证处弱排中律已足）；从延续之下的普查律去掉其证明已不用的判定（活跃之判定，与另一方向延续之判定）；形成的类、任期与侵蚀在延续下的读法；整段上对延续关系的条件（单步的刻画见 identity-across-steps）；比率。",
+    "en": "Which decision the exact forms need least (weak excluded middle suffices at the witnesses); dropping from the census laws under a continuation the decisions their proofs no longer use (of activity, and of the other direction's continuation); formation classes, tenure and undermining under a continuation; conditions on continuations over a run (one step: identity-across-steps); rates."
   },
   "correspondence": {
     "zh": "identity-across-steps 表明，追随形成的读法（生起、不息）依赖谁延续谁，而计数（更多）不依赖。本结果说明普查定律在谁延续谁改变时怎样保持：止息需要生起这一半在每个没有分裂的读法下保持，生起需要止息（计数有界时）这一半在每个没有合并的读法下保持；能抹去生起的恰是分裂，能抹去止息的恰是合并（Tandem）。读法（AI 的论证）：同一个展开读出的生起与止息随读法而变，但不能任意变：在没有分裂、没有合并的读法之间，两者的差恰是活跃者数目的变化。这是活动的计数；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；萌出与合并在生物中有其例（分裂繁殖、融合），那是应用，不是定理的内容。",
@@ -218,8 +230,8 @@
       "id": "census-balance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用标记的计数（total_mark_eq_count，以根上之计读之）与平衡的累加形式（balance_over_stretch 的不等式版本：le_over_stretch、ge_over_stretch，经 gaining_of_losing_from 与 losing_of_gaining_from）。",
-        "en": "Reuses counting by marks (total_mark_eq_count, which reads it as the root's count) and the stretch form of the balance (balance_over_stretch, here as inequalities: le_over_stretch, ge_over_stretch, through gaining_of_losing_from and losing_of_gaining_from)."
+        "zh": "复用标记的计数（total_mark_eq_count，以根上之计读之）；平衡的累加形式（balance_over_stretch 的不等式版本：le_over_stretch、ge_over_stretch）陈于其旁（第 5 条），复现定律今经确切形式。",
+        "en": "Reuses counting by marks (total_mark_eq_count, which reads it as the root's count); the stretch form of the balance (balance_over_stretch, as inequalities: le_over_stretch, ge_over_stretch) is stated beside it (law 5), the recurrence laws now going through the exact forms."
       },
       "interface": {
         "output": {
@@ -307,7 +319,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用根上一步的清点及其镜像（«定后则后并亡不过前并生»、«定前则前并生不过后并亡»）：Web.Census.balanceFrom_at 是它们在该步两端都活跃的形成之间的关系上的情形（第 4 条）。",
@@ -348,8 +360,8 @@
     {
       "id": "laws-of-one-step",
       "detail": {
-        "zh": "规律 2 的覆盖列表形式（Covers.not_not_coming_from）在延续之下的读法：Web.not_not_arisingFrom_covered。两者共用 not_not_all（为此移入 Becoming.Population，U4c 时移入 Becoming.Prelude），其余证明不互相引用。",
-        "en": "The continuation reading of law 2's covering-list form (Covers.not_not_coming_from): Web.not_not_arisingFrom_covered. They share not_not_all (moved into Becoming.Population for this, and with U4c into Becoming.Prelude); otherwise neither proof cites the other."
+        "zh": "规律 2 的覆盖列表形式（Covers.not_not_coming_from）在延续之下的读法：Web.not_not_arisingFrom_covered。两者今皆为根上覆盖之律 «所覆后亡屡则生未否» 的特例，Locality 的取一过程之步，此处取活跃之内各形成自某步起的出现。",
+        "en": "The continuation reading of law 2's covering-list form (Covers.not_not_coming_from): Web.not_not_arisingFrom_covered. Both are now cases of the root's covering law «所覆后亡屡则生未否», Locality's at a process's steps and this one at the formations' occurrences within activity onward."
       }
     }
   ],
@@ -357,7 +369,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a",
+      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65",
       "declarations": [
         "Becoming.Web.Continues",
         "Becoming.Web.ArisesFrom",
@@ -391,24 +403,22 @@
         "Becoming.Web.Lineage",
         "Becoming.Web.Lineage.unique",
         "Becoming.Web.Lineage.through",
-        "Becoming.Web.Lineage.ends",
         "Becoming.Web.Lineage.back",
-        "Becoming.Web.ceasingFrom_found",
         "Becoming.Web.not_not_arisingFrom_covered",
         "Becoming.Web.arisingFrom_not_stopping_covered",
         "Becoming.Web.Lineage.active",
         "Becoming.Web.Lineage.split",
         "Becoming.Web.Lineage.origin",
         "Becoming.Web.Lineage.onward",
-        "Becoming.Web.arisingFrom_found",
-        "Becoming.Web.lineages_apart",
-        "Becoming.Web.ceasingFrom_not_stopping_covered"
+        "Becoming.Web.ceasingFrom_not_stopping_covered",
+        "Becoming.Web.arisingFrom_of_ceasingFrom_covered",
+        "Becoming.Web.ceasingFrom_of_arisingFrom_covered"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
+      "sha256": "c64c39ac2e8d46be6599dbeab7c4f947892d7e2aeadfc305d0a84966e09f740c",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.decideSome",
@@ -419,7 +429,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
       "declarations": [
         "Becoming.Distinct",
         "Becoming.le_over_stretch",
@@ -455,10 +465,14 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
       "declarations": [
         "Becoming.«定后则后并亡不过前并生»",
-        "Becoming.«定前则前并生不过后并亡»"
+        "Becoming.«定前则前并生不过后并亡»",
+        "Becoming.«所覆后亡屡则生未否»",
+        "Becoming.«有界覆而生屡则亡不止»",
+        "Becoming.«有覆而亡屡则生屡»",
+        "Becoming.«有界覆而生屡则亡屡»"
       ]
     },
     {
@@ -587,19 +601,31 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md",
+      "role": "integration",
+      "sha256": "43d1c698228fd79b45413bb951a36e6de323d32063c79703b4c07e6a4b8a8784",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -620,14 +646,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -727,6 +753,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): Web.Census.balanceFrom_at is re-proved through the root's census of a step, and the instance deciding the continuation is dropped from the eight census laws of Identity's Counting section, none of which uses it; law 4 restated for the new route and laws 10 and 11 left on theirs, law 3, the second hypotheses entry and the home row in 01 §9.5 no longer saying the continuation is decided, nor the identity dependency's conditions; the root's census joins the dependencies, law 4 reusing its two halves, and the related note on not_not_all names the prelude. The census balance's dependency names the counting now reused (total_mark_eq_count, the stretch form as inequalities), and the declarations no law here uses any more leave the Population and Flow references (mark_add_not, marks_le_of_sub, mark_le_total, total_le_mark, total_swap, total_le). Each statement is unchanged or more general. Declarations moved with their full names: gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：Web.Census.balanceFrom_at 改经根上一步的清点证明，判定延续的实例从 Identity 的 Counting 一节的八条普查律中去掉，它们都不用它；第 4 条按新路径重述，第 10、11 条留在其原路径，第 3 条、第二条假设、01 §9.5 的本行与同一性依赖之条件不再说延续可判定；根上之清点入依赖，第 4 条复用其两半；关于 not_not_all 之相关说明名序章。普查平衡之依赖名今所复用之计数（total_mark_eq_count、跨段形之不等式），此处已无律所用之声明离开 Population 与 Flow 之引用（mark_add_not、marks_le_of_sub、mark_le_total、total_le_mark、total_swap、total_le）。各陈述不变或更一般。声明以完整名称移动：gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section 498): a new law 12 states the exact forms from covering lists (Web.arisingFrom_of_ceasingFrom_covered, Web.ceasingFrom_of_arisingFrom_covered), the root's «有覆而亡屡则生屡» and «有界覆而生屡则亡屡» at the formations' occurrences, with the decision each needs read as a reduction (the study's scratch witness); the census recurrence laws (laws 6 and 9) are re-proved as their cases, statements unchanged, their decisions written as binders, and the covering laws (laws 10 and 11) through the root's covering laws instead of by lineages, statements unchanged. Law 4 restated for the routes, law 6 no longer read as following from law 5, and the dependency on census-balance no longer naming the stretch inequalities as a route (gaining_of_losing_from and losing_of_gaining_from now have no use in the package); the Next drops the exact forms and the converse from covering lists, now closed, and names the decisions the census laws keep unused; the related note on laws-of-one-step says both covering forms are cases of one root law. Identity's helpers with no consumer left leave the Identity reference (Lineage.ends, ceasingFrom_found, arisingFrom_found, lineages_apart); the exact forms join it, and the design joins the references (COVERING-ON-THE-ROOT.md).",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述，第 6 条不再读作由第 5 条而来，对 census-balance 之依赖不再以跨段不等式为路径（gaining_of_losing_from 与 losing_of_gaining_from 今在包中无用）；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
     }
   ],
   "text_versions": [

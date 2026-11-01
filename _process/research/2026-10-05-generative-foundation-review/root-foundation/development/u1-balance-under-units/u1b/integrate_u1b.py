@@ -11,12 +11,12 @@ the checker's core list after Undecided, with its scope sentence):
   python3 -B <dir>/integrate_u1b.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's
                                                            log: the leaf's roots with their reasons (REASONS below); a
                                                            root of the leaf with no reason stops it; others printed
-  python3 -B <dir>/integrate_u1b.py check                  after master_laws.py: the data is the landing run's, reads the
+  python3 -B <dir>/integrate_u1b.py check                  after shared_laws.py: the data is the landing run's, reads the
                                                            record's four laws as they stand, and U4's boundary report
                                                            and the central figures are unchanged from the merged main
   python3 -B <dir>/integrate_u1b.py study N RECEIPT        the study's section N (the next free one), from the receipt
 
-Run from the checkout root of the landing worktree, in that order (record, master_laws.py, check, register with the
+Run from the checkout root of the landing worktree, in that order (record, shared_laws.py, check, register with the
 connectivity write, study). Each edit asserts that it applies exactly once, or that it is already applied, so a stage
 can be rerun after main moves. After it: render, check --strict-fresh, links, the record's lint, tests.
 """
@@ -36,7 +36,7 @@ spec.loader.exec_module(mr)
 HOME = ROOT / mr.CHAPTER
 METHOD = ROOT / 'theories/becoming/chapters/08-METHOD.md'
 REGIONS = ROOT / 'theories/becoming/results/data/regions.json'
-MASTER = 'theories/becoming/results/data/master-laws.json'
+MASTER = 'theories/becoming/results/data/shared-laws.json'
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 APART = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json'
 STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md'
@@ -195,7 +195,7 @@ def register(log_path):
 
 
 def head_master():
-    """master-laws.json as the merged main has it (the landing worktree's HEAD, before the landing commit)."""
+    """shared-laws.json as the merged main has it (the landing worktree's HEAD, before the landing commit)."""
     out = subprocess.run(['git', 'show', 'HEAD:' + MASTER], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
@@ -293,7 +293,7 @@ Supplied premises / correspondence: none beyond the hypotheses of each theorem. 
        lists are any lists of exchange occurrences.
 Evidence: core receipt `{stamp}`; Becoming.UnitMatchings ({m['theorems']} theorems in {len(m['declarations'])} declarations),
        a core leaf importing GrammarLaws, Flow, SelectionReach and Undecided, nothing importing it; every axiom
-       report empty. master_laws.py on that run reads the record's four laws, and U4's boundary report and the
+       report empty. shared_laws.py on that run reads the record's four laws, and U4's boundary report and the
        central figures are unchanged (no central declaration is the leaf's).
 Standing: near-definitional; pigeonhole and counting at one formation, none of it claimed new as mathematics. What
        it adds is the interface itself, in the package: what amounts have in place of a derivation, with U1's

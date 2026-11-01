@@ -283,7 +283,7 @@
   ],
   "dependencies": [
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "«历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».",
@@ -513,7 +513,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
       "declarations": [
         "Becoming.«保之像»"
       ]
@@ -536,7 +536,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "0e1c6605d855aa42e5ea057d784725c1474218dbeb9b8df212eab3d26c2b7f80"
+      "sha256": "fdaf0eaa349d7abd7b6160016e387a1ff60e7f764b97e10ac121a438f2d5647c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
@@ -639,6 +639,12 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -658,7 +664,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"

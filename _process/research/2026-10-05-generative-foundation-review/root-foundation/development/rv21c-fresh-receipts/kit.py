@@ -36,7 +36,7 @@ RF = "_process/research/2026-10-05-generative-foundation-review/root-foundation"
 STUDY = RF + "/BECOMING-RENEWAL-READING.md"
 CHAPTER = "theories/becoming/chapters/08-METHOD.md"
 # Every path RV21c rewrites that a record may pin: its texts, the pointers its checkers rewrite, the generated data.
-MINE = {CHAPTER, STUDY, CORE_POINTER, *RECEIPTS, "theories/becoming/results/data/master-laws.json",
+MINE = {CHAPTER, STUDY, CORE_POINTER, *RECEIPTS, "theories/becoming/results/data/shared-laws.json",
         RF + "/THEOREM-CONNECTIVITY.json", RF + "/THEOREM-CONNECTIVITY-APART.json"}
 # The home sections axiom_texts.py brought to a renewed receipt's reports are RV21c's edits too.
 if (OUT / "axiom_texts.json").exists():

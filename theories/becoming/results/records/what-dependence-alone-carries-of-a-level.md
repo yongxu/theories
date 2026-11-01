@@ -93,6 +93,7 @@ Settles, at the step of the exchange, the conjecture observation-is-a-route kept
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 
 Aliases: `what dependence alone carries of a level`, `observation from dependence`, `the complement`, `单凭依存承载一个水平的什么`, `Becoming.carried_iff_rising`, `Becoming.Complement.carry`, `Becoming.ExchangeLaw.Through.rises_at_step`
 

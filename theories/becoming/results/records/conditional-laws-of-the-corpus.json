@@ -250,7 +250,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "GrammarLaws' pigeonhole and finite-line laws («线有限不并则返», «有限遍后定前则皆返», «定前») and the image of a relation («像», «保之像»).",
@@ -322,7 +322,7 @@
         "Becoming.«依于无始而有始之例»",
         "Becoming.«相须之例»"
       ],
-      "sha256": "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729"
+      "sha256": "5421cba74bb67c9895b5d72780166765f65306ef11936733e90484fd58d31da5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
@@ -353,12 +353,18 @@
       "role": "statement",
       "sha256": "803bc7bb3f54533aa88f56a3c8dddd89ec3d49bd69274bdaa2f461431851e163",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarConditionals",
       "success_pointer": "/status",
       "success_value": "passed"

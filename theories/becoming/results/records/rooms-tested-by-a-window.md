@@ -91,7 +91,7 @@ Thermal equilibrium with the surroundings and on-off thermostatic regulation (ne
   - Output: «有常则往不穷».
   - Input: Y where Z holds in the conditional law, and in heated_unended.
   - Preserved conditions: None beyond the grammar. [RoomNet.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean)
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). Closure carried along a reach gives what each room reaches.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). Closure carried along a reach gives what each room reaches.
   - Output: «闭», «闭之及».
   - Input: The reach invariants of each room.
   - Preserved conditions: None beyond the grammar. [RoomNet.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean)
@@ -104,6 +104,8 @@ Thermal equilibrium with the surroundings and on-off thermostatic regulation (ne
   - Input: A coarse line as the possible with warmth held; none of the three rooms' window courses keeping widening; the moments of each course.
   - Preserved conditions: A room read as a process whose act opens the window. [RoomRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean)
 - related, not a proved adapter: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). The rooms are not built as the World's flows; read against these definitions, the shut room's exchange opposes the level's departure within the gap, and a heater reading late would let the window lower the level before it answers.
+
+**Used by:** [the-stock-buys-time-where-the-rebuild-draws-on-it](the-stock-buys-time-where-the-rebuild-draws-on-it.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -2,14 +2,14 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3188 nodes, 6137 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3190 nodes, 6144 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 92 | 76 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 92 | 75 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
-| Life and evolution | 0 | 44 | 21 | 0 |
+| Life and evolution | 0 | 45 | 22 | 0 |
 | Collectives and selection | 0 | 69 | 23 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 81 | 60 | 0 |
@@ -125,7 +125,7 @@ Results (86):
 - [The move alone does not fix the outcome](records/the-move-alone-underdetermines.md) (recorded-checked)
 - [The order of exchanges as the invariant](records/order-of-exchanges-is-the-invariant.md) (recorded-checked)
 - [The present on causal-set growth](records/the-present-on-causal-set-growth.md) (recorded-checked)
-- [The shared laws on the grammar](records/master-laws-on-the-grammar.md) (recorded-checked)
+- [The shared laws on the grammar](records/shared-laws-on-the-grammar.md) (recorded-checked) ·
 - [The step index read off the relata's own courses](records/the-step-index-from-own-courses.md) (recorded-checked)
 - [The tally is the whole law of counting](records/whole-law-of-counting.md) (recorded-checked)
 - [The whole and its parts](records/space-and-its-parts.md) (recorded-checked)
@@ -240,7 +240,7 @@ Results (92):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (76, 14 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LineDegeneration`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (75, 13 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -363,7 +363,7 @@ Modules (88, 14 stated on the grammar): `Blanket`, `BlanketCouplings`, `BlanketW
 
 ## Life and evolution
 
-Results (44):
+Results (45):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
@@ -406,11 +406,12 @@ Results (44):
 - [The same carrier need not fix the same response](records/same-carrier-need-not-fix-the-response.md) (recorded-checked)
 - [The selection term and a lineage's fate](records/the-selection-term-and-a-lineages-fate.md) (recorded-checked)
 - [The selection term proper, over generations](records/selection-term-over-generations.md) (recorded-checked)
+- [The stock buys time where the rebuild draws on it](records/the-stock-buys-time-where-the-rebuild-draws-on-it.md) (recorded-checked)
 - [The updater line: development, memory, replacement and margins of a learning network](records/the-updater-line.md) (recorded-checked)
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (21, 6 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
+Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `ReaderRebuilding`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
@@ -629,7 +630,7 @@ Results (21):
 - [What one move ensures, and covering of moves](records/one-move-covering.md) (recorded-checked)
 - [When the runs of a process settle](records/when-the-runs-of-a-process-settle.md) (recorded-checked)
 
-Modules (25, 2 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PremiseWitnesses`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
+Modules (25, 4 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PremiseWitnesses`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
 
 
 ## To retire
@@ -652,4 +653,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-303 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+301 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

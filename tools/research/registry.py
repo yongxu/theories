@@ -564,21 +564,21 @@ def law_families():
     return json.loads(path.read_text()).get('families', []) if path.is_file() else []
 
 
-MASTER_LAWS = 'theories/becoming/results/data/master-laws.json'
+SHARED_LAWS = 'theories/becoming/results/data/shared-laws.json'
 CORE_RECEIPT = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
 
 
-def master_laws():
-    """MV: the master laws each law of a record rests on, by Lean dependency (data/master-laws.json, written by
-    tools/research/master_laws.py from the measure and the checker cache; it is not rendered here). A file that
+def shared_laws():
+    """MV: the shared laws each law of a record rests on, by Lean dependency (data/shared-laws.json, written by
+    tools/research/shared_laws.py from the measure and the checker cache; it is not rendered here). A file that
     does not parse is reported by the check, not raised."""
-    path = ROOT / MASTER_LAWS
+    path = ROOT / SHARED_LAWS
     if not path.is_file():
         return {}
     try:
         return json.loads(path.read_text())
     except ValueError as e:
-        return {'error': f'{MASTER_LAWS} does not parse: {e}'}
+        return {'error': f'{SHARED_LAWS} does not parse: {e}'}
 
 
 def _listed(names):
@@ -586,48 +586,48 @@ def _listed(names):
 
 
 # What the measure's category of a central declaration says it follows from, and a declaration's own dependence.
-FOLLOWS = {'master law': 'a shared law', 'balance, represented': 'balance, which the grammar represents',
+FOLLOWS = {'shared law': 'a shared law', 'balance, represented': 'balance, which the grammar represents',
            'premise of the account': 'a premise of the account', 'counting identity': 'a counting identity',
            'law of its model': 'a law of its model', 'single application': 'a single application',
            'definitional or representational': 'its definitions', 'derivation pending': 'a shared law, its derivation pending',
            'no reason given': 'nothing named'}
 ALONE = {'grammar': 'reaching the grammar', 'balance, represented': 'on balance, not reaching the grammar',
-         'anchor, not reached': 'on an anchor, not reaching the grammar', 'no master law': "on no shared law's anchor"}
+         'anchor, not reached': 'on an anchor, not reaching the grammar', 'no shared law': "on no shared law's anchor"}
 MARKER = re.compile(r"\s*\([A-Z]{2,4}\d+[a-z]?(?:'s review)?\)")  # a work item in the measure's reason, kept off the page
 
 
-def master_law_note(r, i, law):
+def shared_law_note(r, i, law):
     """The line under law i on a record page, where the data was computed for exactly these declarations."""
-    m = r.get('_master_laws')
+    m = r.get('_shared_laws')
     e = m['laws'].get(i) if m else None
     if not e or e.get('declarations') != law.get('declarations', []) or not e['declarations']:
         return ''
     label = '*Shared laws, by Lean dependency:* '
     if 'dependence' not in e:
         return label + 'not measured: none of its declarations is in the spine run the measure reads.'
-    names = [m['names'].get(k, k) for k in e['master_laws']]
+    names = [m['names'].get(k, k) for k in e['shared_laws']]
     held = (_listed(names) if names else "no shared law's anchor") + '; its declarations'
     reach = "reach the grammar's vocabulary only" if e.get('grammar_vocabulary_only') else 'reach the grammar'
     text = {'grammar': f'{held} {reach}',
             'balance, represented': f'{held} do not reach the grammar, which represents balance and cannot state it without amounts',
             'anchor, not reached': f'{held} do not reach the grammar',
-            'no master law': "no shared law's anchor among the constants its declarations use"}.get(e['dependence'], f'{held}: {e["dependence"]}')
+            'no shared law': "no shared law's anchor among the constants its declarations use"}.get(e['dependence'], f'{held}: {e["dependence"]}')
     if e.get('defines'):
         a = _listed(['`' + x + '`' for x in e['defines']])
         text = (f'its declarations include the anchor {a} itself; ' if len(e['defines']) == 1
                 else f'its declarations include the anchors {a} themselves; ') + text
     for c in e.get('central', []):
         why = MARKER.sub('', c.get('reason', ''))
-        if why and c['category'] == 'master law':
+        if why and c['category'] == 'shared law':
             why = 'not reaching the grammar: ' + why
-        if c['category'] == 'master law' and c.get('dependence') == 'grammar' and not why:
+        if c['category'] == 'shared law' and c.get('dependence') == 'grammar' and not why:
             why = 'by reaching the grammar'
         if c['category'] == 'definitional or representational':
             why = 'definitional or representational' + (': ' + why if why else '')
         if c['category'] == 'no reason given':
             why = 'no reason given'
-        own = c.get('master_laws')
-        if c.get('dependence') and (c['dependence'] != e['dependence'] or (own is not None and own != e['master_laws'])):
+        own = c.get('shared_laws')
+        if c.get('dependence') and (c['dependence'] != e['dependence'] or (own is not None and own != e['shared_laws'])):
             on = _listed([m['names'].get(k, k) for k in own]) if own else "no shared law's anchor"
             alone = f' (taken alone: {on}; ' + ('reaching' if c['dependence'] == 'grammar' else 'not reaching') + ' the grammar)'
         else:
@@ -651,7 +651,7 @@ def at_model_notes(r, i, law, result_link, base):
     of its rows, wherever they are carried. Each appears only while the carrying record declares exactly the items the
     data read; an item the data did not verify shows nothing. Both mark what is declared and name its review, and an
     item only on its row's own carrier is not labelled as at a model."""
-    m = r.get('_master_laws')
+    m = r.get('_shared_laws')
     e = m['laws'].get(i) if m else None
     if not e or e.get('declarations') != law.get('declarations', []):
         return []
@@ -754,7 +754,7 @@ def boundary_section(r, base):
                  'since the data read it, so no entry of the field is matched' if 'the field' in b['not_matched']
                  else 'the data read another version of this field')
         return lines + [f'*Not matched:* {cause} (' + _listed(what[:5]) + (' and others' if len(what) > 5 else '')
-                        + '); rerun `python3 -B tools/research/master_laws.py`, then make research-render.', '']
+                        + '); rerun `python3 -B tools/research/shared_laws.py`, then make research-render.', '']
     c, parts = b['counts'], []
     for group, labels in boundary.GROUPS.items():
         inner = ', '.join(f'{label} {c[label]}' for label in labels if c[label])
@@ -854,17 +854,17 @@ def boundary_status(records, data):
             'boundary_not_matched': boundary_matching(records, data)[1]}
 
 
-def master_laws_status(records):
-    """How far data/master-laws.json still matches: laws whose declarations changed or that it has not read, whether
+def shared_laws_status(records):
+    """How far data/shared-laws.json still matches: laws whose declarations changed or that it has not read, whether
     the core sources it was computed on are still the latest receipt's, and whether the measure, its coverage, the
     dump or the generator changed. Reported by the check, never an error: rerunning needs the checker's cache."""
-    data = master_laws()
+    data = shared_laws()
     if not data:
         return {'measured': False}
     if 'error' in data:
         return {'measured': False, 'error': data['error']}
     unmatched = [f'{r["id"]}:{i}' for r in records for i, law in enumerate(r.get('laws', []), 1)
-                 if law.get('declarations') and (not r.get('_master_laws') or (e := r['_master_laws']['laws'].get(i)) is None
+                 if law.get('declarations') and (not r.get('_shared_laws') or (e := r['_shared_laws']['laws'].get(i)) is None
                                                  or e.get('declarations') != law.get('declarations', [])
                                                  or declared_items(e) != declared_items(law))]
     unverified = [f'{ident}:{e["law"]}:{x.get("declaration")} ({"; ".join(x.get("failed", []))})'
@@ -880,7 +880,7 @@ def master_laws_status(records):
             and not edge['boundary_not_matched'] and 'boundary_error' not in edge,
             'laws_not_matched': len(unmatched), 'first_not_matched': unmatched[:10],
             'statements_at_model_unverified': unverified, **edge,
-            'refresh': 'python3 -B tools/research/master_laws.py, then make research-render'}
+            'refresh': 'python3 -B tools/research/shared_laws.py, then make research-render'}
 
 
 def law_family_errors(records):
@@ -1192,7 +1192,7 @@ def render_record_v2(r):
         for i, law in enumerate(r['laws'], 1):
             names = ', '.join('`' + d + '`' for d in law.get('declarations', []))
             lines += [f'{i}. ' + en(law) + (f' ({names})' if names else '')]
-            note = master_law_note(r, i, law)
+            note = shared_law_note(r, i, law)
             standings = r.get('_standings', {})
             edge = [standing_line(d, standings['rows'][d], standings['record'], result_link, base)
                     for d in dict.fromkeys(law.get('declarations', [])) if d in standings.get('rows', {})]
@@ -1370,20 +1370,20 @@ def load_records():
     for r in records:
         if r['id'] in family:
             r['_law_family'] = family[r['id']]
-    measured = master_laws()
+    measured = shared_laws()
     for r in records:
         if isinstance(measured.get('records'), dict) and r['id'] in measured['records']:
-            r['_master_laws'] = {'names': measured.get('names', {}), 'laws': {e['law']: e for e in measured['records'][r['id']]}}
+            r['_shared_laws'] = {'names': measured.get('names', {}), 'laws': {e['law']: e for e in measured['records'][r['id']]}}
     # F5: the laws whose statements at a model the data read exactly as their records now declare them; the lines of
     # an item, under its own law and under its row's laws in any record, are shown only for these.
-    matched = {f'{r["id"]}:{i}' for r in records if '_master_laws' in r and isinstance(r.get('laws'), list)
+    matched = {f'{r["id"]}:{i}' for r in records if '_shared_laws' in r and isinstance(r.get('laws'), list)
                for i, law in enumerate(r['laws'], 1)
                if isinstance(law, dict) and law.get('statements_at_model') is not None
-               and (e := r['_master_laws']['laws'].get(i)) is not None and e.get('statements_at_model') is not None
+               and (e := r['_shared_laws']['laws'].get(i)) is not None and e.get('statements_at_model') is not None
                and e.get('declarations') == law.get('declarations', []) and declared_items(e) == declared_items(law)}
     for r in records:
-        if '_master_laws' in r:
-            r['_master_laws']['matched_at_model'] = sorted(matched)  # a list: records are dumped as JSON elsewhere
+        if '_shared_laws' in r:
+            r['_shared_laws']['matched_at_model'] = sorted(matched)  # a list: records are dumped as JSON elsewhere
     attach_standings(records, measured, matched)
     return sorted(records, key=lambda r: r['id']), errors
 
@@ -1391,10 +1391,10 @@ def load_records():
 def affected_ids(records, changed):
     shared = standard_boundaries_path() in changed  # its text renders on every citing page
     families = LAW_FAMILIES in changed  # its text renders on every member's page
-    measured = MASTER_LAWS in changed  # it renders under the laws of every record it reads
+    measured = SHARED_LAWS in changed  # it renders under the laws of every record it reads
     # A change to the boundary record changes the standing lines under every law naming a central declaration.
     from tools.research import boundary
-    data = master_laws()
+    data = shared_laws()
     b = data.get('boundary') if isinstance(data.get('boundary'), dict) else {}
     holders = {b.get('record')} | {r['id'] for r in boundary.carriers(records)}
     paths = {str(record_path(r).relative_to(ROOT)) for r in records if r['id'] in holders}

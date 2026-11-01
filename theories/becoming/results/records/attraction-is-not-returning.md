@@ -98,7 +98,7 @@ Ren asked “hows cause–effect system comparing to our theory?” and pasted a
 - related, not a proved adapter: [support-from-the-supported](support-from-the-supported.md). Admission's absorbing end (Flow.unsupported_stays) is, on flows and webs and under its premises, the absorption of the region in which no member is supported; instance theorems between the two representations are not given.
 - related, not a proved adapter: [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md). The main law for every process: necessarily drawn is exactly not returning, possibly drawn allows return on another course; Captured's rule region is an absorbing region.
 
-**Used by:** [basins-of-a-determined-law](basins-of-a-determined-law.md) · [hexagram-world-laws](hexagram-world-laws.md) · [hexagrams-on-the-spine](hexagrams-on-the-spine.md) · [master-laws-on-the-grammar](master-laws-on-the-grammar.md) · [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md)
+**Used by:** [basins-of-a-determined-law](basins-of-a-determined-law.md) · [hexagram-world-laws](hexagram-world-laws.md) · [hexagrams-on-the-spine](hexagrams-on-the-spine.md) · [necessarily-drawn-is-not-returning](necessarily-drawn-is-not-returning.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md)
 
 <a id="sources--来源"></a>
 ### Sources

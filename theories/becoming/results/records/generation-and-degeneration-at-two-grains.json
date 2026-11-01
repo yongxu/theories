@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
+  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
   "statement": {
     "en": "At a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; with keeping from some point on, excluded middle makes the regions cover; telling going on from ending is excluded middle.",
     "zh": "以细类与粗类同读、按分支读，样式或沿某支而延，或于诸支皆尽；生成与守皆排斥退化，且可共处一点；以守读为自某点起之守，排中使诸域周遍；分辨延与尽即排中。"
@@ -156,7 +156,7 @@
         "Becoming.Map.Still.keeps",
         "Becoming.Map.short",
         "Becoming.Map.short_end",
-        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.reaches_end",
         "Becoming.Map.Short.ends",
         "Becoming.Map.Short.renews_and_ends",
         "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -186,7 +186,7 @@
         "Becoming.Web.keeping_of_carried_on",
         "Becoming.Web.itself_not_generation",
         "Becoming.Web.always_keeps",
-        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.end_of_gone",
         "Becoming.Web.consumed_held_not_endless",
         "Becoming.Web.family_excess_not_endless",
         "Becoming.Web.stopped_not_endless",
@@ -280,7 +280,7 @@
     "Becoming.Map.Branch",
     "Becoming.Map.Endless.generates",
     "Becoming.Map.Endless.generation",
-    "Becoming.Map.Short.degeneration",
+    "Becoming.Map.Short.reaches_end",
     "Becoming.Map.Short.ends",
     "Becoming.Map.Short.renews_and_ends",
     "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -300,7 +300,7 @@
     "Becoming.Web.always_keeps",
     "Becoming.Web.carries_iff",
     "Becoming.Web.consumed_held_not_endless",
-    "Becoming.Web.degenerates_of_gone",
+    "Becoming.Web.end_of_gone",
     "Becoming.Web.family_excess_not_endless",
     "Becoming.Web.generation_arises_late",
     "Becoming.Web.generation_renews_late",
@@ -384,12 +384,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "0e1c6605d855aa42e5ea057d784725c1474218dbeb9b8df212eab3d26c2b7f80",
+      "sha256": "fdaf0eaa349d7abd7b6160016e387a1ff60e7f764b97e10ac121a438f2d5647c",
       "declarations": [
         "Becoming.Map.Branch",
         "Becoming.Map.Endless.generates",
         "Becoming.Map.Endless.generation",
-        "Becoming.Map.Short.degeneration",
+        "Becoming.Map.Short.reaches_end",
         "Becoming.Map.Short.ends",
         "Becoming.Map.Short.renews_and_ends",
         "Becoming.Map.Short.renews_and_ends_everywhere",
@@ -452,7 +452,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
-      "sha256": "681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5",
+      "sha256": "32f9effbcd2cf460b10b5a3a343597f840dcf1166237c2abd14e4f14f15cdd6b",
       "declarations": [
         "Becoming.Map.outside_of_not_endless",
         "Becoming.Map.relay_after_two",
@@ -465,7 +465,7 @@
         "Becoming.Web.always_keeps",
         "Becoming.Web.carries_iff",
         "Becoming.Web.consumed_held_not_endless",
-        "Becoming.Web.degenerates_of_gone",
+        "Becoming.Web.end_of_gone",
         "Becoming.Web.ends_or_reaches",
         "Becoming.Web.family_excess_not_endless",
         "Becoming.Web.generation_arises_late",
@@ -590,19 +590,25 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "role": "receipt",
+      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapInstances",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -651,6 +657,10 @@
     {
       "en": "1 November 2026, board item OU7 (study section 492): Becoming.RoomNet imports Becoming.MapRegions, so the validation scope calls MapRegions a core module, not a leaf, as its module doc now does. Nothing else the record states changed.",
       "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：Becoming.RoomNet 导入 Becoming.MapRegions，故验证范围称 MapRegions 为核心模块而非叶，与其模块说明今之所言同。记录所述余无改变。"
+    },
+    {
+      "en": "1 November 2026, board item EL6: Web.degenerates_of_gone renamed Web.end_of_gone and Map.Short.degeneration renamed Map.Short.reaches_end, on their owner's yes: each law concludes an end (有终), not «退化»; nothing the record says changes. Web.end_of_gone and the laws that a line is not without end are now proved in Becoming.MapInstances from degeneration (record degeneration-from-a-horizon), their statements unchanged.",
+      "zh": "2026年11月1日，工作板条目 EL6：经所属者同意，Web.degenerates_of_gone 改名为 Web.end_of_gone，Map.Short.degeneration 改名为 Map.Short.reaches_end：两律所推出的是有终，不是 «退化»；记录所说无一改变。Web.end_of_gone 与\"线非不穷\"诸律今在 Becoming.MapInstances 中由退化证明（记录 degeneration-from-a-horizon），陈述不变。"
     }
   ]
 }

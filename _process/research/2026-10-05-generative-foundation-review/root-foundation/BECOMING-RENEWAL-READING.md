@@ -24070,3 +24070,190 @@ Integration: the root module's import and bullets, the checker's core list and s
 ```
 
 **Not changed.** No definition of an earlier module changes. GuardHorizon, ReadingLoop and AssurancePlans keep their proofs; `GuardHorizon.statewise_not_uniform`'s re-proof from the leaf's witness and the bridge `uniform_policy_iff_common` are built in the study's scratch and land in a ring slot. The names are provisional for the grammar's owner.
+
+## 495. Names that state relations, not rule: the record id and the view (ND, final stage)
+
+Board item ND's last part, after part 1 (§486, the documents) and stage 20-nd in OU7's rebuild (§492, the core's
+names and docstrings). What part 1 kept because it is matched, not read, while four items edited the record, and
+what 20-nd could not reach from inside a core rebuild: the record id, the view's names, keys and category values.
+08 §10's criterion holds for each: "master" states rank where 08 §7 measures only proof dependence
+([study](development/nd-nondual-names/final/)).
+
+```text
+Result(s): no new result. master-laws-on-the-grammar renamed shared-laws-on-the-grammar by research.py rename-id
+       (receipt _process/architecture/renames/nd-shared-laws-id.json): the old id in former_ids, records/
+       master-laws-on-the-grammar.md a generated redirect, links and mentions in the live texts and the records'
+       dependencies rewritten; a history note on it and on one-root-to-its-edge.
+Delta:
+  - The view: tools/research/master_laws.py, data/master-laws.json and tests/test_master_laws.py are
+    shared_laws.py, shared-laws.json and test_shared_laws.py (git mv). In the research tools, the two measure
+    scripts (measure_grammar.py, EC's measure.py) and the connectivity script, every key, identifier and category
+    value naming a master law names a shared law: master_laws → shared_laws (also the coverage file's key and
+    THEOREM-CONNECTIVITY.json's), 'master law' → 'shared law', 'no master law' → 'no shared law',
+    resting_on_no_master_law → resting_on_no_shared_law. The renderer's labels were already "shared law" (§486),
+    so no record page reads differently.
+  - Paths, old → new: tools/research/master_laws.py → tools/research/shared_laws.py; tools/research/tests/
+    test_master_laws.py → test_shared_laws.py; theories/becoming/results/data/master-laws.json → shared-laws.json;
+    records/master-laws-on-the-grammar.json → shared-laws-on-the-grammar.json. Every kit script on main that runs or
+    reads them by path (the land and rehearse scripts, integrate and board scripts, U4's make_record_u4.py, which
+    writes one-root-to-its-edge's text, and boundary_table.py) names the new paths, in paths only; a kit's prose is
+    of its time. No shim is left under the old names.
+  - Regenerated, not edited: THEOREM-CONNECTIVITY.json and data/shared-laws.json from the checker's cache (no core
+    run); each equals the old one with every key and string mapped, but for the commit and receipt the
+    connectivity was written at, the inputs' digests (the renamed and edited scripts) and boundary_check.lean's
+    digest, whose comment names the generator (nd_final_verify.py).
+  - Texts: 08 §7 and one-root-to-its-edge's validation scope name shared_laws.py; 08 §10's sentence on where the
+    old name stays, which rename-id had turned into naming the new id, now reads where it is matched, not read
+    (the former id, anchors kept beside the new ones, the studies' paths); the glossary's note likewise; the
+    workflow's section on the view; the Lean README's two rows; two notes in regions.json; one item in
+    arguments-a-l.json; the connectivity register's reasons (the record id, "a shared law on the grammar", and
+    Concave.roots naming rises_superadditive, 20-nd's name).
+  - Kept, with reasons: the study folders' paths (ou3b-master-laws-on-the-grammar, ec6-no-master-law), receipts,
+    reviews, the board's and the study's past entries, history notes; the anchors master-laws and
+    7-master-laws-and-connectivity beside the new ones; the record's aliases; "one master law of optimization"
+    (arguments-a-l.json), which names what a collective's activity is not.
+Supplied premises / correspondence: none; no statement's content changed.
+Evidence: every change beyond a mapped name listed above and checked by repoint_nd_final.py (the old text with
+       the names mapped equals the new one elsewhere); render, strict check, links, the tests and both dossier
+       checks pass; the records citing the changed texts re-pointed, each read against the new text, nothing it
+       says changed.
+Standing: naming only.
+Boundary:
+  - Left for the next core landing: check_becoming.py's scope text says "the five master laws" and "rest on no
+    master law" (proposed-checker-scope.patch). The scope is written into each core receipt, so edited without a
+    core run it would stand apart from the latest receipt's; the next core landing carries it.
+  - Passed to its owner, not edited: AJ4's failure-mode map says "master law" in its prose (its link to the view
+    and the generator's name follow here).
+  - After this stage a live text names a master law only as an alias, a former id, an old anchor, in history, in
+    the checker's scope until that landing, or on AJ4's map until its owner's edit.
+```
+
+## 496. EL3 placed in its owners' modules (EL6)
+
+Board item EL6, from EL's landing (§490), which proposed each part's home, each on its owner's yes after OU7's rebuild. Read against main after OU7 landed, the proposals went to the owners: OU's owner said yes to all three parts (GrammarMap, MapInstances and the renames) and UE's owner said yes to the kind instance, each on stated terms. Reading GrammarMap against main found one more name stating a wrong meaning, `Map.Short.degeneration`, which concludes an end (有终); OU's owner took its rename too. No theorem's statement changes; one definition, `Map.StepWhere.relation`, is restated with an equivalent body; nothing is stated twice.
+
+```text
+Result(s): degeneration-from-a-horizon (home 02 §1), its references and bindings moved to the three modules and its
+       law of restatements dropped; generation-and-degeneration-at-two-grains (two renames);
+       ending-laws-as-regimes-on-a-lineage and the-selection-term-and-a-lineages-fate (the reused laws' modules
+       named). No new result.
+Delta:
+  - GrammarMap: «尽则非无终» and «尽而续可定则有终» beside «尽则非不穷», and «尽则有终当且仅当排中» after the witness
+    it uses, formerly Map.not_not_end_of_ends, Map.end_of_ends_decided and Map.end_of_ends_iff_excluded_middle;
+    Map.StepWhere, its relation now Map.short gated by P; Map.Short.degeneration renamed Map.Short.reaches_end
+    (GrammarConditionals' one use follows). The module's notes state how «有终» stands to «退化», which they had
+    called not stated.
+  - MapInstances: the constructive law (Web.ends_of_ends_at, Web.every_branch_ends_of_gone and its activity
+    instance), the regimes' gone lemmas and degeneration laws, and the witnesses Map.Depleted, Map.coupled_*,
+    Map.stopped_relay_*, Map.Undecided and Map.end_of_gone_iff_excluded_middle. Web.not_endless_of_gone and the
+    three regimes' ¬«不穷» laws are proved in place from degeneration through «尽则非不穷», and Web.end_of_gone
+    (formerly Web.degenerates_of_gone) through «尽而续可定则有终» (board rule 9), their statements unchanged;
+    Web.Restated is dropped. Web.ends_or_reaches, whose one use was the old proof, stays as an apart root.
+  - KeepingWidening: Web.kind_every_branch_ends_of_gone after Web.kindClass_within, Map.Undecided.kind_degenerates
+    in its own section after KindRelay, and a header bullet, on UE's owner's terms.
+  - Becoming.LineDegeneration retired to the Lean history folder (research.py move, batch EL6-history, the
+    package's pin lifted for the move only); LineageRegions imports the laws through KeepingWidening.
+Checked: core receipt 20261101T134343.981701Z, every axiom report empty; Becoming.GrammarMap (48 theorems in 68 declarations),
+       Becoming.GrammarConditionals (40 theorems in 41 declarations), Becoming.MapInstances (54 theorems in 58 declarations),
+       Becoming.KeepingWidening (250 theorems in 308 declarations), Becoming.LineageRegions (129 theorems in 174 declarations). The signature audit
+       (el6_signatures.py, main's side read at the main merged in): every theorem's statement unchanged; the moves,
+       the five renames and Web.Restated's five gone as expected; one definition rewritten, Map.StepWhere.relation,
+       its body equivalent to the old one at every P, x and y but not definitionally equal (checked in Lean,
+       el6/scratch/EL6CheckGM.lean.txt). Before the rebuild, the moved and re-derived proofs compiled in scratch
+       modules against main's modules, each axiom report empty; the edited KeepingWidening, GrammarConditionals and
+       LineageRegions were first compiled in place by the core run itself.
+Standing: proved, as the records state; the placement and the names are the modules' owners' decisions.
+Boundary: as degeneration-from-a-horizon's record states; nothing here widens it.
+Output → input: 02 §1; the root module's bullets, the checker's core list and scope, both package READMEs and
+       regions.json; the connectivity register; 08's counts; the EL study note; the board's EL6 row, moved to the
+       history file.
+```
+
+**Self-review.**
+1. GrammarMap sits under most of the package, so the change rebuilds nearly every module; it rides one rebuild of the map modules, by readiness, on the coordinator's word.
+2. The re-derivations add no hypothesis: each landed law keeps its printed statement and now follows from the stronger every-branch law, so the core proves each fact once.
+3. The renames follow 08 §10: each old name said degeneration (`«退化»`) where the statement concludes only an end (有终); the gap is exactly excluded middle (`«尽则有终当且仅当排中»`, `Map.end_of_gone_iff_excluded_middle`).
+
+## 497. Where a reader is rebuilt from: an organism's minimal model (OG)
+
+Board item OG, plan §十三 item 9: each test system of plan §六 with its model. The one page named an organism and an institution as having none. The rooms (§492) tell regulation from equilibrium with a given heater, and nothing keeps the heater. This item asks what tells an organism from a thermostat and a flame on the root ([study](development/og-organism/): DESIGN.md, REVIEW-1.md, REVIEW-2.md, sim/).
+
+```text
+Result(s): the-stock-buys-time-where-the-rebuild-draws-on-it (new, home 04 §8), Becoming.ReaderRebuilding,
+       an instance of the ring, 48 declarations (32 theorems), every axiom report empty (receipt 20261101T151111.914612Z).
+Delta:
+  - One rule makes a family of four readers by the rebuild's source: given (not ageing), from the supply,
+    from the level, none. The supply is chosen at each step.
+  - Where the rebuild draws on the level: kept while supplied, from every level; under a cut, present after
+    k + 1 steps from every level of at least 2 (k + 1); its end at an empty stock, closed under the net.
+    Rebuilt from the supply or never: gone at its span from every level. The family law: the stock buys
+    time exactly where the rebuild draws on the level, at every span of at least one.
+  - Decided only: one unit's horizon at spans two and three for small levels; the step law, each further
+    s + 1 units buying s steps, is a conjecture those cases check.
+Design history: three drafts. The first draft's central law, a cycle at the kind grain, held by definition,
+       and the thermostat and the flame had the cycle too (REVIEW-1). The second draft's horizon was not
+       strictly increasing, as runs of the rule showed (REVIEW-1's re-check, sim/). The Lean reading's eight
+       findings narrowed five statements and three names (REVIEW-2): the turnover does not separate the
+       members, the rebuild's source does.
+Not modelled: the flame and the equilibrium; the supply's and the sink's amounts; the turnover read as
+       carrying; the organism's class ending where its matter goes on. These wait for part 2, the family on
+       the World's flows, after which an institution is read as a rule rebuilt from the members it regulates.
+Carried: ND's checker-scope patch (two lines of check_becoming.py's scope: "master law" → ND's names).
+Register: nine apart roots, eight model witnesses of the one family and one arithmetic lemma (register_og.py);
+       the laws the others use are not roots.
+Rehearsal: the whole landing ran dry on a scratch receipt (20261101T135208.604453Z): render, strict check,
+       tests and both dossier checks passed, and links once the kit's own four were fixed.
+```
+
+## 498. The covering laws on the root (U4d)
+
+Board item U4d, the next step that one-root-to-its-edge named first after U4c (§492): "the covering laws' root form (lines traced back to a covering list, no splits)". U4c's design had left the covering laws out as not cases of the census of a run. The design ([COVERING-ON-THE-ROOT](development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md)) was checked first in scratch Lean outside the package (106 theorems, every axiom report empty), then read by an independent AI review ([REVIEW-U4D](development/u4-one-root-to-its-edge/REVIEW-U4D.md)), every finding taken; GrammarLaws' owner answered the design's questions and gave the names, and the package Lean was written on the branch. The covering laws and the census of a run turn out to be cases of one count on the root: units ending on lines traced back to a list number at most the list.
+
+```text
+Result(s): shared-laws-on-the-grammar (home 01 §7): a new law 19, ends on lines, and law 7's line lemmas; the
+       census of a run moved from law 4 into law 19, stronger. census-balance-under-continuation (home 01 §9.5): a
+       new law 12, the exact forms from covering lists. Routes named in ceasing-needs-arising,
+       recurrence-without-decidedness, laws-of-one-step, continued-change-needs-openness and space-and-its-parts;
+       one-root-to-its-edge's next step drops the covering laws' root form. No new record.
+Delta:
+  - GrammarLaws: "Lines from a list" before «迭之定于»: «所闭当且仅当有迭», «分处定后则迭之定于» (of which «迭之定于»
+    is now the case), «亡者不在长迭», «定后则线至多一亡», the count «线终不过所列» on any relation, and on the grammar
+    «线亡不过所列» and its mirror «线生不过所列», each with its not-refuted form. "Ends on lines at stages" before the
+    census of a run: the stretch form «间无生则间亡不过所覆» and its mirror «间无亡则间生不过所覆», the decided and
+    undecided run forms and their converses, ten helpers. GrammarLaws.census_run and «定后前者在前则亡屡者生屡» are
+    proved through the stretch form, stronger: the units after each step listed once and the test of endings
+    dropped; the finite search by the count (GrammarLaws.stage_search).
+  - Prelude: exists_pairs_over and distinct_of_map.
+  - Locality: Covers.coming_from_of_ceasing, Covers.ceasing_steps_within, Covers.not_not_coming_from and
+    Covers.ceasing_stops_unrefuted re-proved as the root's covering laws at a relatum's occurrences, statements
+    unchanged, with six supports (Steps.along_*, Covers.occurrences); accumulates_or, ceases_once and
+    ceasing_steps_unrefuted gone, no consumer left.
+  - Decidedness: ceasing_steps_within and coming_steps_within re-proved as the stretch form and its mirror at the
+    family's occurrences, statements unchanged, with four supports.
+  - Identity: Web.not_not_arisingFrom_covered, Web.arisingFrom_not_stopping_covered and
+    Web.ceasingFrom_not_stopping_covered re-proved through the root's covering laws, no longer by lineages,
+    statements unchanged; the exact forms Web.arisingFrom_of_ceasingFrom_covered and
+    Web.ceasingFrom_of_arisingFrom_covered new, the census recurrence laws re-proved as their cases (their
+    decisions written as binders, the statements unchanged); twelve supports; Web.Lineage.ends,
+    Web.ceasingFrom_found, Web.arisingFrom_found and Web.lineages_apart gone.
+  - Population: coming_of_ceasing passes two fewer arguments; endTest gone.
+Checked: core receipt 20261101T161537.177111Z, every axiom report empty; Becoming.Prelude (143 theorems in 153 declarations), Becoming.GrammarLaws
+       (223 theorems in 252 declarations), Becoming.Population (116 theorems in 143 declarations), Becoming.Locality (47 theorems in 54 declarations), Becoming.Decidedness
+       (74 theorems in 81 declarations), Becoming.Identity (162 theorems in 227 declarations). The signature audit (u4d-kit/u4d_signatures.py, main's side read
+       at the main merged in): the census of a run's two laws stronger, every other statement unchanged; eight
+       declarations gone and 57 added, as the design lists. The scratch witnesses (U4dNeeded, 20 theorems, one more
+       at Identity in U4dCases) show each hypothesis of the new laws needed, and the two decisions needed as
+       reductions to weak excluded middle.
+Standing: proved, as the records state; the names and the placement are GrammarLaws' owner's.
+Boundary: the decided covering form is not a case of the census of a run, both being cases of the stretch form;
+       CensusWebs.keep_pace stays counting; which decision is least is open; the census recurrence laws keep
+       decisions their proofs no longer use, left to Identity's laws' next change.
+Output → input: 01 §7 (the ends-on-lines bullet) and 01 §9.5; the root module's bullet and both package READMEs;
+       the connectivity register; the shared laws' view rerun (08 §7's figures unchanged); 08's counts; the board's
+       U4d row, moved to the history file.
+```
+
+**Self-review.**
+1. One count does the work of separate proofs: the covering laws had their own at Locality, Decidedness and Identity, Identity's by lineages, and each now reads the root's count on lines at its own occurrences, as the census of a run does.
+2. The census of a run is stronger for it, and no hypothesis is added anywhere: every re-proved law keeps its printed statement, and the two that change drop hypotheses.
+3. The decisions the new run forms ask are shown needed only as reductions, not as countermodels; that this decision is the least one is not claimed.

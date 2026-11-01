@@ -167,7 +167,7 @@
   ],
   "dependencies": [
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel and the one-act law are proved from them.",

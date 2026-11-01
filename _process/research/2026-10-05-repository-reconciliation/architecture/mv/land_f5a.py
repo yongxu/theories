@@ -3,7 +3,7 @@
 
 python3 -B _process/research/2026-10-05-repository-reconciliation/architecture/mv/land_f5a.py
 
-It appends the study section with the next number and the figures of data/master-laws.json, marks the
+It appends the study section with the next number and the figures of data/shared-laws.json, marks the
 spec and the kit landed, and moves the board's claim to landed with a queue entry. Each edit is checked to
 apply exactly once; nothing is written unless all of them apply.
 """
@@ -16,7 +16,7 @@ STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-f
 BOARD = ROOT / '_process/BECOMING-WORKBOARD.md'
 SPEC = KIT / 'F5-MODEL-STATEMENTS.md'
 README = KIT / 'README.md'
-DATA = ROOT / 'theories/becoming/results/data/master-laws.json'
+DATA = ROOT / 'theories/becoming/results/data/shared-laws.json'
 
 
 def once(text, old, new, where):
@@ -50,7 +50,7 @@ def main():
                 f"**Status:** MV's part landed (study §{n}); U2's Lean fills the field.", 'spec')
     readme = README.read_text().rstrip('\n') + (
         f"\n\n**F5's field (landed, study §{n}).** `statements_at_model` on a law declares a theorem that states a row of the "
-        "same record at a model, with its models and review; the check enforces its rules, `master_laws.py` verifies it from "
+        "same record at a model, with its models and review; the check enforces its rules, `shared_laws.py` verifies it from "
         "the checker cache and counts laws carrying items apart, and the record pages show it marked as declared. Design, "
         "reviews and re-checks: [F5-MODEL-STATEMENTS.md](F5-MODEL-STATEMENTS.md), [reports/](reports/).\n")
 
@@ -61,7 +61,7 @@ def main():
         f"F5's field, MV's part, landed 30 October 2026 (study §{n}, "
         "[spec](research/2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md)): `statements_at_model` on a "
         "law, a theorem stating a row of the same record at a model with its models and review, checked by the registry, verified "
-        "by `master_laws.py` from the checker cache (counted apart in `counts_at_model`; `central_reach`), and shown on the record "
+        "by `shared_laws.py` from the checker cache (counted apart in `counts_at_model`; `central_reach`), and shown on the record "
         "pages marked as declared; U2's Lean fills it."))
     queue = '- **Queue:** '
     assert board.count(queue) == 1, 'board: the queue line'

@@ -4,7 +4,7 @@
 python3 -B probe.py CONSTANTS.pickle MEASURE.json MASTER_LAWS.json [--equivalences CHECK.json] [--json OUT]
 
 CONSTANTS is `measure_grammar.py --save`'s dump of the spine run's constants, MEASURE its `--json` report, and
-MASTER_LAWS the run's master-laws.json (F5's verified items, for the rule's third clause). CHECK is the output of
+MASTER_LAWS the run's shared-laws.json (F5's verified items, for the rule's third clause). CHECK is the output of
 tools/research/boundary_check.lean with the eight derived rows' closed sets queried as `equivalences`: where given,
 each closed set splits into bridges (equivalences) and support.
 

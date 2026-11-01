@@ -270,6 +270,7 @@ import Becoming.ReadingSchedule
 import Becoming.RegimeMargin
 import Becoming.RoomNet
 import Becoming.RoomRuns
+import Becoming.ReaderRebuilding
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -281,7 +282,6 @@ import Becoming.Frequency
 import Becoming.MutualDependence
 import Becoming.Gain
 import Becoming.KeepingWidening
-import Becoming.LineDegeneration
 import Becoming.SelectionShift
 import Becoming.LineageRegions
 import Becoming.LineageRegimes
@@ -941,8 +941,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every horizon, two courses
   with the same terms through it, the marked line generating in one and the lineage degenerating in
   the other (`LineageRegions.Courses.same_terms_two_fates`); the census premise of ending cannot be
-  dropped (`LineageRegions.Lasting.lasting`). A leaf importing `Becoming.SelectionShift` and
-  `Becoming.LineDegeneration`.
+  dropped (`LineageRegions.Lasting.lasting`). Importing `Becoming.SelectionShift` and
+  `Becoming.KeepingWidening`, through which EL3's laws in `Becoming.MapInstances` and
+  `Becoming.KeepingWidening` arrive; imported by `Becoming.LineageRegimes`.
 * `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
   ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
   under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on
@@ -1437,11 +1438,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   condition is dissipated on, nothing keeps opening or widening
   (`Flow.not_keepsWidening_of_dissipated_requirements`). Within a kind the two hold together: the
   kind relay keeps widening within kinds with 全生成 at orders 0 and 1 while what it can form by name
-  only returns (`KindRelay.Runs.generation_two_orders`, `KindRelay.returns`). Witnesses show each
+  only returns (`KindRelay.Runs.generation_two_orders`, `KindRelay.returns`). Wherever a uniform
+  horizon is known, the kind grain degenerates (`Web.kind_every_branch_ends_of_gone`, the kind
+  instance of MapInstances' law, witnessed by `Map.Undecided.kind_degenerates`), the other side of
+  its generation laws; the horizon is a modelling choice. Witnesses show each
   premise needed (`Ladder`, `ClosedCycle`, `OpeningChain`, `Loosening`, `Source`, `Saturated`). Each
   law is a restatement or near-definitional, or a witness, and none compares two courses. It joins
   EventualWidening with Gain, Flow and the map (board items UE7, GW); imported by
-  `Becoming.WideningOnTheMap`.
+  `Becoming.WideningOnTheMap` and `Becoming.LineageRegions`.
 * `Becoming.WideningOnTheMap` (L2, through `Becoming.KeepingWidening`): keeping widening read on
   the map. On a course's moments, with what is held at each as a chain of predicates, read with
   nothing lost (`Steps.includes`, a preorder) in the coarse place and the same possible
@@ -3296,6 +3300,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   whole coarse line (`«全生成»`, `«全守»`, and `«有终»`, reaching an end, which is not
   degeneration). Renewal does not decide the region (`Map.Short.renews_and_ends_everywhere`);
   telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
+  ending on every branch reaches an end up to double negation (`«尽则非无终»`) and where going on is
+  decided (`«尽而续可定则有终»`), and that it always does is exactly excluded middle
+  (`«尽则有终当且仅当排中»`, witnessed by the short life gated by a proposition, `Map.StepWhere`);
   a sequence of classes, no order between them assumed, reads generation at every order
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
   branch of renewing into (`«生生即延»`, `«息即尽»`). Along the successor (`Map.step`) a line reaches
@@ -3323,27 +3330,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
   did not carry on as itself (`Web.carries_iff`); under passing, generation makes carriers arise at
   arbitrarily late steps (`Web.generation_arises_late`); read by names alone nothing generates and
-  an always-active formation keeps (`Web.itself_not_generation`, `Web.always_keeps`); consumption
-  still held, a family drawn beyond renewal and passing that stops refute going on every branch
-  (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
-  the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.
-* `Becoming.LineDegeneration` (L2, through `Becoming.KeepingWidening`): degeneration on the base,
-  constructively (board item EL, its part EL3; no ethical predicate). Along any class, where
+  an always-active formation keeps (`Web.itself_not_generation`, `Web.always_keeps`). Degeneration,
+  constructively (board item EL, its part EL3, placed here by EL6): along any class, where
   everything the line from an occurrence reaches at a step `N` not before it ends on every branch,
   the line ends on every branch (`Web.ends_of_ends_at`, by induction on the steps left, with no
   excluded middle and no premise of one continuation); so at every class within activity, from an
   active occurrence where nothing the line reaches at `N` is active, the pattern degenerates
-  (`«退化»`, `Web.every_branch_ends_of_gone`), activity and the kind grain of
-  `Becoming.KeepingWidening` being instances (`Web.kind_every_branch_ends_of_gone`). The three
-  regimes of `Becoming.MapInstances` degenerate through one step each
-  (`Web.consumed_held_degenerates`, `Web.family_excess_degenerates`, `Web.stopped_degenerates`),
-  with witnesses whose lines take a step first. Ending on every branch reaches an end where going
-  on is decided at the points of the line (`Map.end_of_ends_decided`), and that every line meeting
-  the law's premise reaches an end is exactly excluded middle
-  (`Map.end_of_gone_iff_excluded_middle`; on the grammar, `Map.end_of_ends_iff_excluded_middle`):
-  the decision premise of `Web.degenerates_of_gone`, which concludes an end (`«有终»`), is as
-  strong as excluded middle. A leaf; `Web.Restated` derives the landed laws from degeneration and
-  is no result.
+  (`«退化»`, `Web.every_branch_ends_of_gone`; at activity `Web.activity_every_branch_ends_of_gone`,
+  at the kind grain in `Becoming.KeepingWidening`). Read coarser the line does not go on
+  (`Web.not_endless_of_gone`) and, where going on is decided, reaches an end (`Web.end_of_gone`),
+  both proved from degeneration; that every line meeting the law's premise reaches an end is
+  exactly excluded middle (`Map.end_of_gone_iff_excluded_middle`, witnessed by `Map.Undecided`).
+  Consumption still held, a family drawn beyond renewal and passing that stops degenerate the line
+  through one step each (`Web.consumed_held_degenerates`, `Web.family_excess_degenerates`,
+  `Web.stopped_degenerates`), so they refute going on every branch
+  (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`),
+  with witnesses whose lines take a step first; the relay renews and still ends
+  (`Map.relay_renews_and_ends`). Imported by `Becoming.KeepingWidening`.
 * `Becoming.GrammarTesting` (L1): testing within the net (验). The core of a class is approximated
   by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
   apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a
@@ -3419,6 +3422,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
   lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
   OU3f).
+  Ends on lines: occurrences listed once that end on lines from a list, the successor fixed where
+  the lines could part, number at most the list, with no decision (`«线终不过所列»`); at stages a
+  list covering one stage bounds the endings over a stretch with nothing beginning, and a list
+  covering its end the beginnings with nothing ending (`«间无生则间亡不过所覆»`,
+  `«间无亡则间生不过所覆»`); so, with lists at arbitrarily late stages, endings recurring need
+  beginnings recurring and, with bounded lists, conversely (`«有覆而亡屡则生屡»`, `«有界覆而生屡则亡屡»`,
+  and their undecided forms). The census of a run is their case (`«定后前者在前则亡屡者生屡»`), and
+  so are the covering laws of `Becoming.Locality`, `Becoming.Decidedness` and `Becoming.Identity`
+  (board item U4d).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
@@ -4128,6 +4140,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
   positive margin, is (`Rooms.Overshooting.generation_at_moments`); a coarse line is the possible
   with warmth held (`Rooms.line_iff_held`).
+* `Becoming.ReaderRebuilding` (L1): where a reader is rebuilt from, a family of nets from one rule
+  (board item OG, plan §十三 item 9's organism). A level and a reader of units by age; each step a
+  draw, a read in turn while supplied, ageing to a span and a rebuild from the rule's source. Kept
+  while supplied where the rebuild draws on the level (`ReaderRebuilding.«供则读者不绝»`); under a
+  cut, present after `k + 1` steps from every level of at least `2 (k + 1)`
+  (`ReaderRebuilding.«断而有储则读者存»`), while a reader rebuilt from the supply or never rebuilt
+  ends at its span from every level; the end at an empty stock, closed under the net
+  (`ReaderRebuilding.«取于储者绝而不复»`); the stock buys time exactly where the rebuild draws on
+  the level (`ReaderRebuilding.«以储买时当且仅当取于储»`). A leaf.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

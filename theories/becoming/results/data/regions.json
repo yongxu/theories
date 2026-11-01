@@ -614,7 +614,7 @@
   "degeneration-from-a-horizon": {
    "region": "map",
    "base": "old-base",
-   "note": "LineDegeneration EL3: a uniform horizon gives 尽/退化 constructively at every class within activity; an end (有终) from it is exactly excluded middle"
+   "note": "EL3, in MapInstances, GrammarMap and KeepingWidening (EL6): a uniform horizon gives 尽/退化 constructively at every class within activity; an end (有终) from it is exactly excluded middle"
   },
   "dependence-formed-from-drawing": {
    "region": "life",
@@ -1286,10 +1286,10 @@
    "base": "frame",
    "note": "ladder for lasting n steps; market instance"
   },
-  "master-laws-on-the-grammar": {
+  "shared-laws-on-the-grammar": {
    "region": "root",
    "base": "grammar",
-   "note": "GrammarLaws OU3b: the five master laws on the grammar, the models' laws proved from them"
+   "note": "GrammarLaws OU3b: the five shared laws on the grammar, the models' laws proved from them"
   },
   "material-preparation-output": {
    "region": "life",
@@ -2630,6 +2630,11 @@
    "region": "root",
    "base": "old-base",
    "note": "World = run of its law"
+  },
+  "the-stock-buys-time-where-the-rebuild-draws-on-it": {
+   "region": "life",
+   "base": "grammar",
+   "note": "ReaderRebuilding OG: a reader rebuilt from the level it reads, the test system of an organism"
   }
  },
  "modules": {
@@ -3231,7 +3236,7 @@
   "Becoming.GrammarLaws": {
    "region": "root",
    "base": "grammar",
-   "note": "the master laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, order; below the frame"
+   "note": "the shared laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, order; below the frame"
   },
   "Becoming.GrammarMap": {
    "region": "map",
@@ -3593,11 +3598,6 @@
    "base": "frame",
    "note": "limit verification; Markov's principle named (O2)"
   },
-  "Becoming.LineDegeneration": {
-   "region": "map",
-   "base": "old-base",
-   "note": "EL3 a horizon ends the line on every branch (尽, 退化) constructively; an end (有终) needs the decision, as strong as excluded middle (02 §1)"
-  },
   "Becoming.LineageRegimes": {
    "region": "life",
    "base": "old-base",
@@ -3666,7 +3666,7 @@
   "Becoming.MapInstances": {
    "region": "map",
    "base": "old-base",
-   "note": "old base's regimes on the map"
+   "note": "old base's regimes on the map, and degeneration from a horizon (EL3, placed by EL6)"
   },
   "Becoming.MapRegions": {
    "region": "map",
@@ -4522,6 +4522,11 @@
    "region": "root",
    "base": "grammar",
    "note": "WRT2 the World as a model of the grammar, both ways (01 §8.6)"
+  },
+  "Becoming.ReaderRebuilding": {
+   "region": "life",
+   "base": "grammar",
+   "note": "OG: where a reader is rebuilt from; the stock buys time under a cut exactly where the rebuild draws on the level; an organism's minimal model"
   }
  }
 }

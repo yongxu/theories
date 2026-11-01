@@ -337,7 +337,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "Closure carried along a reach gives what each room reaches.",

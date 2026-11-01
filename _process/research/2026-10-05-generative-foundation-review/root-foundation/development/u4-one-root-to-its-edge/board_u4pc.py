@@ -5,14 +5,14 @@ checkout root of a worktree on main's tip (the board is edited in one's own work
   python3 -B <dir>/board_u4pc.py head            the head clause at the start of the Queue line
   python3 -B <dir>/board_u4pc.py landed RECEIPT  the head clause replaced by the landed clause and the coordinator's
                                                  order, and the row after the history table's last row (RECEIPT: the
-                                                 core receipt master_laws.py was rerun on)
+                                                 core receipt shared_laws.py was rerun on)
 
 `head` refuses while any clause says "(landing now"; each step asserts that it applies once.
 
 The slot, in the coordinator's order (1 November 2026): after EL, the collective page's fixes, OPENING's follow-up,
 UE28 and TX have landed, and no "(landing now" clause stands.
   1. On main's tip: `head`; commit the board alone, re-read the Queue line, fast-forward main.
-  2. On branch u4-premise-c: merge main; rerun tools/research/master_laws.py (the core receipt current then); render.
+  2. On branch u4-premise-c: merge main; rerun tools/research/shared_laws.py (the core receipt current then); render.
   3. In a clean detached worktree of the branch: render (no change), check --strict-fresh, links, lint on the record,
      the tests, and both dossier checks (review-packet/check_dossiers.py, default and on ue8's SCIENCES.md).
   4. `landed RECEIPT`; render; commit; re-read the Queue line; fast-forward main.
@@ -28,7 +28,7 @@ NAME = "U4's C line"
 HEAD = (f"{NAME} at the head of the queue (landing now: the record one-root-to-its-edge only, no Lean, no chapter change "
         "and no core run: C's entry among the premises of the ethics names `ReadsNoOrder.not_entails` as its theorem "
         "of not being entailed, and the non-implication on the premises' warrant says neither is entailed by "
-        "statements of the dynamics, each under its condition; master_laws.py rerun on the current core receipt; "
+        "statements of the dynamics, each under its condition; shared_laws.py rerun on the current core receipt; "
         "render, strict check, links, tests and the dossier checks, then the fast-forward)")
 # The coordinator's order sentence for this landed clause, verbatim (1 November 2026).
 ORDER = ("Then, in the coordinator's order: core items, by readiness: SJ's leaf, then OU7's rebuild with U4c's and ND's "
@@ -43,7 +43,7 @@ def landed(receipt):
             "an extension, fails there at every order; the reason for its absence dropped and the basis stating the "
             "condition; the non-implication on the premises' warrant says neither is entailed by statements of the "
             "dynamics, the condition given a standpoint and a formation, C given a frame with an extension, and each "
-            f"warrant is open; master_laws.py rerun on core receipt `{receipt}` (C: not entailed); the row in the "
+            f"warrant is open; shared_laws.py rerun on core receipt `{receipt}` (C: not entailed); the row in the "
             f"history file). {ORDER}")
 
 
@@ -84,7 +84,7 @@ def land(receipt):
         "the basis stating the condition; the non-implication on the premises' warrant brought into line",
         'Claude Code desktop session "time moves fast, for all our" (U4\'s owner), 1 November 2026',
         f"landed 2026-11-01 (a record correction, no Lean, no chapter change and no core run): an AI reading, "
-        f"REVIEW-U4-PREMISE-C.md; master_laws.py rerun on core receipt `{receipt}`, C's result not entailed; render, "
+        f"REVIEW-U4-PREMISE-C.md; shared_laws.py rerun on core receipt `{receipt}`, C's result not entailed; render, "
         "strict check, links, the record's lint, tests and both dossier checks pass on the landing tree",
         f"[development/u4-one-root-to-its-edge/](../../{STUDY}/REVIEW-U4-PREMISE-C.md)",
         "DU (`Becoming.PremiseWitnesses`), LN (its note), U4c (its stage re-cut on top) |",

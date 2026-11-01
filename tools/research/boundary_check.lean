@@ -5,7 +5,7 @@ import Lean
 
 MV's boundary field (BOUNDARY-FIELD.md) records, for a central declaration "on the root under a stated
 hypothesis", a form F on the root, F's hypotheses with a countermodel and a fit for each, and the row recovered
-through F with a certificate. The constants dump holds names, not terms, so `master_laws.py` runs this check in
+through F with a certificate. The constants dump holds names, not terms, so `shared_laws.py` runs this check in
 the environment of the core run, restored from the checker's cache. It is U4's scratch check
 (`U4BoundaryCheck.lean`), generalized to read its entries from JSON and to report every failure of every entry
 instead of raising the first.

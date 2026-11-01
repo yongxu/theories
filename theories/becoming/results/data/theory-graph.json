@@ -3428,18 +3428,6 @@
    "page": "theories/becoming/results/records/market-supported-finite-transition.md"
   },
   {
-   "id": "record:master-laws-on-the-grammar",
-   "type": "result",
-   "record": "master-laws-on-the-grammar",
-   "title": "The shared laws on the grammar",
-   "title_zh": "文法上的共律",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "root",
-   "base": "grammar",
-   "page": "theories/becoming/results/records/master-laws-on-the-grammar.md"
-  },
-  {
    "id": "record:material-preparation-output",
    "type": "result",
    "record": "material-preparation-output",
@@ -5048,6 +5036,18 @@
    "page": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md"
   },
   {
+   "id": "record:shared-laws-on-the-grammar",
+   "type": "result",
+   "record": "shared-laws-on-the-grammar",
+   "title": "The shared laws on the grammar",
+   "title_zh": "文法上的共律",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/shared-laws-on-the-grammar.md"
+  },
+  {
    "id": "record:significance-retained-within-margin",
    "type": "result",
    "record": "significance-retained-within-margin",
@@ -5526,6 +5526,18 @@
    "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/the-step-index-from-own-courses.md"
+  },
+  {
+   "id": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "type": "result",
+   "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "title": "The stock buys time where the rebuild draws on it",
+   "title_zh": "取于储者以储买时",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "life",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-stock-buys-time-where-the-rebuild-draws-on-it.md"
   },
   {
    "id": "record:the-test-season-meets-the-optimum-laws",
@@ -6682,7 +6694,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 42,
+   "theorems": 48,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6715,7 +6727,7 @@
    "type": "module",
    "name": "Becoming.MapInstances",
    "level": "L1",
-   "theorems": 27,
+   "theorems": 54,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -6737,7 +6749,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 192,
+   "theorems": 223,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7254,7 +7266,7 @@
    "type": "module",
    "name": "Becoming.Identity",
    "level": "L1",
-   "theorems": 152,
+   "theorems": 162,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7320,10 +7332,10 @@
    "type": "module",
    "name": "Becoming.Locality",
    "level": "L1",
-   "theorems": 44,
+   "theorems": 47,
    "region": "method",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -7529,10 +7541,10 @@
    "type": "module",
    "name": "Becoming.Decidedness",
    "level": "L1",
-   "theorems": 70,
+   "theorems": 74,
    "region": "method",
    "base": "old-base",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8915,7 +8927,7 @@
    "type": "module",
    "name": "Becoming.Prelude",
    "level": "L0",
-   "theorems": 141,
+   "theorems": 143,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -9648,6 +9660,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ReaderRebuilding",
+   "type": "module",
+   "name": "Becoming.ReaderRebuilding",
+   "level": "L1",
+   "theorems": 32,
+   "region": "life",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.ListingRefutations",
    "type": "module",
    "name": "Becoming.ListingRefutations",
@@ -9762,19 +9785,8 @@
    "type": "module",
    "name": "Becoming.KeepingWidening",
    "level": "L2",
-   "theorems": 248,
+   "theorems": 250,
    "region": "significance",
-   "base": "old-base",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.LineDegeneration",
-   "type": "module",
-   "name": "Becoming.LineDegeneration",
-   "level": "L2",
-   "theorems": 40,
-   "region": "map",
    "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
@@ -30016,6 +30028,12 @@
    "anchor": "r-organizational-rule-inheritance"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-the-stock-buys-time-where-the-rebuild-draws-on-it"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -33225,11 +33243,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.LineDegeneration",
-   "to": "module:Becoming.KeepingWidening",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.LineageRegimes",
    "to": "module:Becoming.Continuation",
    "type": "imports"
@@ -33252,11 +33265,6 @@
   {
    "from": "module:Becoming.LineageRegions",
    "to": "module:Becoming.KeepingWidening",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.LineageRegions",
-   "to": "module:Becoming.LineDegeneration",
    "type": "imports"
   },
   {
@@ -34067,6 +34075,11 @@
   {
    "from": "module:Becoming.ReadStages",
    "to": "module:Becoming.Unread",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReaderRebuilding",
+   "to": "module:Becoming.GrammarLaws",
    "type": "imports"
   },
   {
@@ -36121,7 +36134,7 @@
   },
   {
    "from": "record:a-reading-kept-by-its-update",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -36181,13 +36194,13 @@
   },
   {
    "from": "record:a-response-common-over-a-reading",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
+   "to": "record:readings-a-response-needs",
+   "type": "related"
   },
   {
    "from": "record:a-response-common-over-a-reading",
-   "to": "record:readings-a-response-needs",
-   "type": "related"
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-response-common-over-a-reading",
@@ -36801,7 +36814,7 @@
   },
   {
    "from": "record:amounts-by-unit-matchings",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -36921,11 +36934,6 @@
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:balance-from-conservation-along-a-relation",
    "to": "record:not-going-out-of-a-region",
    "type": "formal-reuse"
   },
@@ -36933,6 +36941,11 @@
    "from": "record:balance-from-conservation-along-a-relation",
    "to": "record:premises-read-off-the-exchange",
    "type": "related"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:balance-from-the-first-law",
@@ -37926,13 +37939,13 @@
   },
   {
    "from": "record:ceasing-needs-arising",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "related"
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
   },
   {
    "from": "record:ceasing-needs-arising",
-   "to": "record:more-needs-renewers",
-   "type": "formal-reuse"
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "related"
   },
   {
    "from": "record:ceasing-needs-arising",
@@ -38026,13 +38039,13 @@
   },
   {
    "from": "record:census-balance",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "related"
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
   },
   {
    "from": "record:census-balance",
-   "to": "record:more-needs-renewers",
-   "type": "formal-reuse"
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "related"
   },
   {
    "from": "record:census-balance",
@@ -38101,12 +38114,12 @@
   },
   {
    "from": "record:census-balance-under-continuation",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:more-needs-renewers",
    "type": "formal-reuse"
   },
   {
    "from": "record:census-balance-under-continuation",
-   "to": "record:more-needs-renewers",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -39411,7 +39424,7 @@
   },
   {
    "from": "record:conditional-laws-of-the-corpus",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -40101,6 +40114,11 @@
   },
   {
    "from": "record:continued-change-needs-openness",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continued-change-needs-openness",
    "to": "module:Becoming.InAmounts",
    "type": "proved-in"
   },
@@ -40396,17 +40414,17 @@
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:conveyance-crosses-the-boundary",
    "to": "record:metaethical-core-characterization",
    "type": "related"
   },
   {
    "from": "record:conveyance-crosses-the-boundary",
    "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:conveyance-crosses-the-boundary",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -40976,7 +40994,17 @@
   },
   {
    "from": "record:degeneration-from-a-horizon",
-   "to": "module:Becoming.LineDegeneration",
+   "to": "module:Becoming.GrammarMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "module:Becoming.KeepingWidening",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:degeneration-from-a-horizon",
+   "to": "module:Becoming.MapInstances",
    "type": "proved-in"
   },
   {
@@ -45146,6 +45174,11 @@
   },
   {
    "from": "record:laws-of-one-step",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:laws-of-one-step",
    "to": "module:Becoming.Locality",
    "type": "proved-in"
   },
@@ -46650,241 +46683,6 @@
    "type": "formal-reuse"
   },
   {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Admission",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Amounts",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Attraction",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Exclusion",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Flow",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Frame",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.GrammarLaws",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.GrammarRegularity",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.GrammarScope",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.IdentificationRuns",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Identity",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.InAmounts",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Junctures",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Labelled",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Laws",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Learning",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.LearningRuns",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.MapInstances",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Mechanism",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.PatternPassing",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Persistence",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.ReachableRanges",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Recurrence",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Regions",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Reserve",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Response",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Retaining",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.SelectionPool",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Weightings",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Wholes",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.Withholding",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:attraction-is-not-returning",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:balance-from-conservation-along-a-relation",
-   "type": "related"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:census-balance",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:continuation-relative-to-a-class",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:four-cases-of-a-part",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:generation-and-degeneration-at-two-grains",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:least-loss-rest",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:levels-of-closure",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:more-needs-renewers",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:projection-carrying-a-law",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:recurrence-without-premise",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:rest-exactly-where-falls-stop",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:rules-that-change-themselves-in-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:the-continuation-condition-on-the-root",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:where-a-run-goes-on",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
-   "to": "record:widening-as-what-every-weighting-ranks",
-   "type": "formal-reuse"
-  },
-  {
    "from": "record:material-preparation-output",
    "to": "module:Becoming.Copying",
    "type": "proved-in"
@@ -47476,13 +47274,13 @@
   },
   {
    "from": "record:not-going-out-of-a-region",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
+   "to": "record:reach-from-a-seed",
+   "type": "related"
   },
   {
    "from": "record:not-going-out-of-a-region",
-   "to": "record:reach-from-a-seed",
-   "type": "related"
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:not-going-out-of-a-region",
@@ -47681,13 +47479,13 @@
   },
   {
    "from": "record:one-root-to-its-edge",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
+   "to": "record:selection-among-groups-by-ending",
+   "type": "related"
   },
   {
    "from": "record:one-root-to-its-edge",
-   "to": "record:selection-among-groups-by-ending",
-   "type": "related"
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:one-root-to-its-edge",
@@ -49256,11 +49054,6 @@
   },
   {
    "from": "record:processes-represented-both-ways",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:processes-represented-both-ways",
    "to": "record:process-and-frame-as-readings",
    "type": "formal-reuse"
   },
@@ -49272,6 +49065,11 @@
   {
    "from": "record:processes-represented-both-ways",
    "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -49977,6 +49775,11 @@
   {
    "from": "record:recurrence-without-decidedness",
    "to": "module:Becoming.Decidedness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:recurrence-without-decidedness",
+   "to": "module:Becoming.GrammarLaws",
    "type": "proved-in"
   },
   {
@@ -51791,7 +51594,7 @@
   },
   {
    "from": "record:rooms-tested-by-a-window",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -52845,6 +52648,241 @@
    "type": "related"
   },
   {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Admission",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Amounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Attraction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Exclusion",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.IdentificationRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Identity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.InAmounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Junctures",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Labelled",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Laws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.LearningRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.MapInstances",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.PatternPassing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Persistence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Recurrence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Regions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Reserve",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Response",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Retaining",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.SelectionPool",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Wholes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Withholding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:attraction-is-not-returning",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:balance-from-conservation-along-a-relation",
+   "type": "related"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:census-balance",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:four-cases-of-a-part",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:least-loss-rest",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:more-needs-renewers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:projection-carrying-a-law",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:rest-exactly-where-falls-stop",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:significance-retained-within-margin",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -52952,6 +52990,11 @@
   {
    "from": "record:space-and-its-parts",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:space-and-its-parts",
+   "to": "module:Becoming.GrammarLaws",
    "type": "proved-in"
   },
   {
@@ -53726,7 +53769,7 @@
   },
   {
    "from": "record:the-blanket-at-a-steady-state",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -54285,6 +54328,16 @@
    "type": "related"
   },
   {
+   "from": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "module:Becoming.ReaderRebuilding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "record:rooms-tested-by-a-window",
+   "type": "interpretive"
+  },
+  {
    "from": "record:the-test-season-meets-the-optimum-laws",
    "to": "module:Becoming.OptimumSeason",
    "type": "proved-in"
@@ -54441,11 +54494,6 @@
   },
   {
    "from": "record:the-world-represented-both-ways",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:the-world-represented-both-ways",
    "to": "record:processes-represented-both-ways",
    "type": "related"
   },
@@ -54458,6 +54506,11 @@
    "from": "record:the-world-represented-both-ways",
    "to": "record:reorderings-as-courses-of-growth",
    "type": "related"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:the-world-represented-both-ways",
@@ -55876,12 +55929,12 @@
   },
   {
    "from": "record:what-a-course-keeps-reachable",
-   "to": "record:master-laws-on-the-grammar",
+   "to": "record:relational-generative-comparison",
    "type": "formal-reuse"
   },
   {
    "from": "record:what-a-course-keeps-reachable",
-   "to": "record:relational-generative-comparison",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {
@@ -58096,11 +58149,6 @@
   },
   {
    "from": "record:where-the-possible-grows",
-   "to": "record:master-laws-on-the-grammar",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:where-the-possible-grows",
    "to": "record:projection-carrying-a-law",
    "type": "formal-reuse"
   },
@@ -58113,6 +58161,11 @@
    "from": "record:where-the-possible-grows",
    "to": "record:rules-that-change-themselves-in-the-grammar",
    "type": "related"
+  },
+  {
+   "from": "record:where-the-possible-grows",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
   },
   {
    "from": "record:where-the-possible-grows",
@@ -59352,11 +59405,6 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-map-of-premises",
    "to": "record:map-of-premises",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/01-ROOT.md#r-master-laws-on-the-grammar",
-   "to": "record:master-laws-on-the-grammar",
    "type": "states"
   },
   {
@@ -60787,6 +60835,11 @@
   {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
    "to": "record:the-selection-term-and-a-lineages-fate",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "to": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
    "type": "states"
   },
   {

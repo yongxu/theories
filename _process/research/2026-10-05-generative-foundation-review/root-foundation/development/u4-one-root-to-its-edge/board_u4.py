@@ -53,7 +53,7 @@ def landed(receipt, n, order):
     assert run['utc'] == stamp, (run['utc'], stamp)
     steps = run['lean_steps']
     ran = [x for x in steps['ran'] if x in steps['keys']]
-    data = json.loads(Path('theories/becoming/results/data/master-laws.json').read_text(encoding='utf-8'))['boundary']
+    data = json.loads(Path('theories/becoming/results/data/shared-laws.json').read_text(encoding='utf-8'))['boundary']
     c = data['counts']
     assert data['record'] == 'one-root-to-its-edge' and not data['unverified'] and c['unplaced'] == 0
     dist = sum(v for k, v in c.items() if k not in ('derived', 'under a stated hypothesis', 'premise', 'counting',

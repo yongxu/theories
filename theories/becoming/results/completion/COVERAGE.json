@@ -1019,7 +1019,7 @@
       }
     ]
   },
-  "master_laws": [
+  "shared_laws": [
     {
       "id": "closure",
       "name": "Closure",
