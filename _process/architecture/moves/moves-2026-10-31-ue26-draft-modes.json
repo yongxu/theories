@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-31-ue26-draft-modes",
+  "date": "2026-10-31T04:53:26+00:00",
+  "base_commit": "c89f552b42e9d34e3bd9a6f8f63ae1daf6f3d8b5",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/kit/periphery/DraftModes.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history/DraftModes.lean",
+      "sha256": "b9b67bfcc1152dfe07f72735b88416d6102128c32481e1170398fbd230be35f0",
+      "blob": "949f35ac68fe09bda61fe4ca24fb6d503b5c0424",
+      "reason": "the periphery draft of the modes and the map between them; law 9 dropped after the review (F7, F11), the rest merged into LinearBlankets.lean",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/kit/periphery/DraftModes.lean"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

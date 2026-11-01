@@ -11,35 +11,35 @@
 ## Laws
 
 1. A course is a sequence of values; its prefix before step t lists its t values before t, latest first, and depends only on them. An extrapolation is any map from a prefix to a proposed value or silence; a proposal misses a value where a value is proposed and the value that comes differs; an extrapolation accords with a course where it misses at no step. (`Becoming.Learning.prefixOf`, `Becoming.Learning.prefix_length`, `Becoming.Learning.prefix_congr`, `Becoming.Learning.Misses`, `Becoming.Learning.MissesAt`, `Becoming.Learning.Accords`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For every extrapolation, course and step t, and two different values: the courses that keep the course before t and hold one value or the other from t on share its prefix before t, and a value proposed from that prefix is not right on both; with equality of values decided, it misses on one of them. (`Becoming.Learning.holdFrom`, `Becoming.Learning.no_prefix_fixes_next`, `Becoming.Learning.claim_missed_on_one`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A course repeats from step i with period q + 1 where its values at u + q + 1 and at u agree for every u ≥ i. For every extrapolation, course, step t and two different values, the two courses held at one value or the other from t on repeat from t with period 1, share the prefix before t, and a value proposed from it is not right on both. (`Becoming.Learning.Lasso`, `Becoming.Learning.holdFrom_lasso`, `Becoming.Learning.no_prefix_fixes_next_finite`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. For every extrapolation and every map moving each value, the diagonal course, the latest value of the orbit of the law that adds to the prefix the value set against each proposal, makes each value proposed miss at its step, so there is no step from which on the extrapolation proposes the coming value at every step; whatever the map, no list holds that law's configurations. (`Becoming.Learning.answerTo`, `Becoming.Learning.answerStep`, `Becoming.Learning.diagonal`, `Becoming.Learning.prefix_diagonal`, `Becoming.Learning.diagonal_misses`, `Becoming.Learning.diagonal_unrested`, `Becoming.Learning.diagonal_open`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 5. With two different values x and y and equality of values decided, the map sending x to y and every other value to x moves every value. (`Becoming.Learning.swapTo`, `Becoming.Learning.swapTo_moves`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. With equality of values decided, extrapolation by elimination over candidates H takes them in order, moving to the next exactly where the current one misses, and proposes the current one's value. Where candidate j accords with a course, the current candidate never passes j, so it misses at most j times, and it is not the case that it misses at arbitrarily late steps. (`Becoming.Learning.indexOn`, `Becoming.Learning.byElimination`, `Becoming.Learning.index`, `Becoming.Learning.index_le_of_accords`, `Becoming.Learning.misses_not_recurring`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. With equality of values decided, under elimination over any candidates on any course, every candidate passed before step t missed, while current, at some earlier step; two courses with the same prefix before t give the same current candidate and the same proposed value at t. (`Becoming.Learning.missed_before`, `Becoming.Learning.byElimination_through_prefix`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Under a determined law whose orbit is held by a list l, the orbit read through any map repeats from some step i with some period q + 1, i + q + 1 at most the length of l; every course repeating from i with period q + 1 is the course, read through it, of the law on positions 0 to i + q stepping each to the next and the last to i, held by the list of its positions. (`Becoming.Learning.lasso_of_held`, `Becoming.Learning.lassoNext`, `Becoming.Learning.lasso_realized`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 9. The lasso candidate (i, q) proposes, from step i + q + 1 on, the value q + 1 steps back, and is silent before; it accords with every course repeating from i with period q + 1. In the diagonal order of pairs, (i, q) stands at place tri (i + q) + q, tri being the triangular numbers. (`Becoming.Learning.lasso`, `Becoming.Learning.lasso_accords`, `Becoming.Learning.pairAt`, `Becoming.Learning.tri`, `Becoming.Learning.pairAt_place`, `Becoming.Learning.lassos`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. With equality of values decided, on a course repeating from i with period q + 1, elimination over the lasso candidates in diagonal order, given neither i nor q, misses at most tri (i + q) + q times, proposes at every step from i + q + 1 on, and it is not the case that it misses at arbitrarily late steps; that from some step on it proposes and is right is not refuted. (`Becoming.Learning.lasso_byElimination_bounded`, `Becoming.Learning.rest_unrefuted`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 11. With equality of values decided, where elimination over the lasso candidates proposes the coming value at every step from some step on, the course repeats from some step with some period; for any map moving each value, its own diagonal course repeats from no step with any period. (`Becoming.Learning.lasso_of_rest`, `Becoming.Learning.diagonal_not_lasso`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 12. With equality of values decided, under a determined law whose orbit is held by a list l, read through any map: elimination over the lasso candidates misses fewer than tri (length of l) times, proposes at every step from the length of l on, and it is not the case that it misses at arbitrarily late steps; that it comes to rest is not refuted. (`Becoming.Learning.held_byElimination_bounded`, `Becoming.Learning.held_rest_unrefuted`)
-    - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 13. A sequence of natural numbers that never falls and stays within a bound K is not refuted to be constant from some step on. (`Becoming.Learning.stable_unrefuted`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 14. With equality of values decided, for classes of candidates G c merged along the pairs into one enumeration: where candidate j of class c accords with a course, elimination over the merged enumeration never passes place tri (c + j) + j; for any map moving each value, on its own diagonal course there is no step from which on it proposes the coming value at every step. (`Becoming.Learning.merged`, `Becoming.Learning.merged_bound`, `Becoming.Learning.merged_unrested`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 15. On the alternating course false, true, false, …, which repeats from step 0 with period 2, elimination over the lasso candidates has missed twice by step 3 and from step 3 on proposes the coming value at every step. (`Becoming.Learning.Alternate.course`, `Becoming.Learning.Alternate.repeats`, `Becoming.Learning.Alternate.index_three`, `Becoming.Learning.Alternate.rests`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

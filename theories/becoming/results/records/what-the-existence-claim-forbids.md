@@ -11,13 +11,13 @@
 ## Laws
 
 1. The point weighting on an outcome is the counting weighting restricted to the record of being it: read off a course of a determined law, the existence claim's model is conditioning on the course itself (point, isAt, point_is_restrict). (`Becoming.Blanket.point`, `Becoming.Blanket.isAt`, `Becoming.Blanket.point_is_restrict`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Under the point weighting a listed outcome weighs something, its share is the whole and no event's is greater, so it is of least surprisal, and every event not holding at it weighs nothing (point_whole, least_surprisal, point_forbids_rest, le_mass_of_mem). (`Becoming.Blanket.point_whole`, `Becoming.Blanket.least_surprisal`, `Becoming.Blanket.point_forbids_rest`, `Becoming.Blanket.le_mass_of_mem`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The occupation weighting read off a run gives every visited, listed state a positive share, ending included, and every unvisited state no weight (visits and four more). (`Becoming.Blanket.visits`, `Becoming.Blanket.visits_le_succ`, `Becoming.Blanket.visits_pos`, `Becoming.Blanket.visits_zero`, `Becoming.Blanket.read_off_admits`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A listed outcome has the share nothing exactly where its weight is nothing: forbidding a course needs a weighting fixed apart from it (unweighted_share, forbids_iff). (`Becoming.Blanket.unweighted_share`, `Becoming.Blanket.forbids_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -59,6 +59,8 @@ The existence claim (Friston 2013; 2019, arXiv:1906.10184): whatever persists ap
 
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). restrict, share, mass_congr, mass_none and share_within: conditioning by restriction and shares.
 - related, not a proved adapter: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). The free-energy principle's blanket and existence claim, stated in the same module.
+
+**Used by:** [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -11,11 +11,11 @@
 ## Laws
 
 1. Inclusion and strict inclusion carry over to claims held alike, and so does Above on either side. (`Becoming.Lexical.Included.congr`, `Becoming.Lexical.StrictIncluded.congr`, `Becoming.Lexical.Above.congr_left`, `Becoming.Lexical.Above.congr_right`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Under BasicPriority, alternatives realizing the same basic claims and gains: neither better, and each better or worse than a third exactly where the other is. (`Becoming.Lexical.BasicPriority.same_claims_alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A fresh basic claim held by the self-borne alternative and not the imposed one puts the self-borne above, where it holds the imposed one's old basic claims. (`Becoming.Lexical.Above.agent_adjoined`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

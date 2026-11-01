@@ -420,7 +420,7 @@
     {
       "path": "theories/becoming/OPENING.md",
       "role": "statement",
-      "sha256": "68149963f3e7663c88bdb2c8a37e615ca9db502919fa0fd0ca7257af73aa6167"
+      "sha256": "25438059dfc7b947c7151af4406f6e449f13e89faa18e7e68ba8ef01a790ef97"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",

@@ -11,13 +11,13 @@
 ## Laws
 
 1. Where a part and a rest together tell configurations apart, k configurations no two of which coincide, their parts held by ps and their rests by es, number at most ps.length times es.length. (`Becoming.Law.distinct_within`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. Under a law that merges nothing, possibilities no two alike are, any number of steps on, still no two alike; so at every step k of them number at most the count of a list holding their parts times that of a list holding their rests. Narrowed to one part, every list holding their rests has at least k members; in a rest of N, the parts need a list of at least k / N. (`Becoming.Law.Lossless.keeps_apart`, `Becoming.Law.Lossless.narrowing_spreads`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 3. Where a law merges nothing and after every step a part reads one configuration, then if any configuration has another part no list holds every configuration: a part reset at every step passes what it loses into a rest that grows without bound. (`Becoming.Law.Lossless.reset_unlisted`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 4. Witness Reset: a one-bit part set to false at every step, the bit it held passing onto a kept list. The whole merges nothing, the part merges at every step, and the rest grows by one at every step, so no list holds it along any run and none holds the whole: the kept history (withHistory) restricted to the part. (`Becoming.Reset.next`, `Becoming.Reset.lossless`, `Becoming.Reset.part_merges`, `Becoming.Reset.rest_length`, `Becoming.Reset.kept_by_rest`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,15 +11,15 @@
 ## Laws
 
 1. Present at every step from T on, its carriers brief for d, no d consecutive steps pass without a carrier beginning (an instance of Covered.arises_within, in double-negation form: with activity undecided it does not name the carrier; under the passing premise ByPassing.passes_within finds the passing). (`Becoming.Web.carrying`, `Becoming.Web.carrying_iff`, `Becoming.Web.Present`, `Becoming.Web.begins_within`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Under the passing premise every beginning is a passing, and the pattern is passed across one of every d consecutive steps from T on; PatternRelay attains the bound. (`Becoming.Web.PassesAt`, `Becoming.Web.ByPassing`, `Becoming.Web.ByPassing.begins_passed`, `Becoming.Web.ByPassing.trace`, `Becoming.Web.ByPassing.passes_within`, `Becoming.PatternRelay.shifts`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Under the passing premise a step with no carrier is followed by none with one; with carriers brief for d and no passing from T on, no formation carries it from T + d on, attained in PatternRelay. (`Becoming.Web.ByPassing.present_back`, `Becoming.Web.ByPassing.empty_stays`, `Becoming.Web.ByPassing.ends_within`, `Becoming.PatternRelay.relay`, `Becoming.PatternRelay.stopped_relay`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. On the grammar the passing premise says exactly that every occurrence carrying the pattern after a step continues, under the passing continuation, one carrying it before: it has a predecessor (有前) under the pattern's class. A carrier begins (生) and ends (亡) under the carrier class exactly where it arises and ceases, and a carrying occurrence nothing continues under the pattern's class ends under the carrier class. (`Becoming.Web.passingContinuation`, `Becoming.Web.sameFormation`, `Becoming.Web.carrierClass`, `Becoming.Web.carrierClass_class`, `Becoming.Web.carrierClass_finer`, `Becoming.Web.byPassing_iff_continues`, `Becoming.Web.byPassing_iff_hasPred`, `Becoming.Web.arises_iff_sheng_carrier`, `Becoming.Web.ceases_iff_wang_carrier`, `Becoming.Web.ceases_of_pattern_ends`, `Becoming.Web.begins_of_arises`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 5. An alteration (异) of a carrying occurrence is a passing, and a passing to another formation is an alteration, not conversely: passing the pattern to itself alters nothing. Under the passing premise every carrying occurrence lies on a line (相续) under the pattern's class from one at each earlier step, and both statements of the second law and the ending of the third are proved from grammar laws; in the relay witness's shifts every odd step is 火传. (`Becoming.Web.passesAt_of_alters`, `Becoming.Web.alters_of_passes`, `Becoming.Web.passing_fire`, `Becoming.Web.ByPassing.line_back`, `Becoming.Web.ByPassing.passes_within`, `Becoming.Web.ByPassing.begins_passed`, `Becoming.Web.ByPassing.ends_within`, `Becoming.PatternRelay.shifted_fire`, `Becoming.PatternRelay.fire_shape`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

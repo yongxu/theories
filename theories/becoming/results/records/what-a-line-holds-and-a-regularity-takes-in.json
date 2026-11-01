@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
+  "reviewed_at_utc": "2026-10-31T12:15:00+00:00",
   "statement": {
     "en": "A line under a class leaving a region only through a set holds a member of it; under a constant class, or one constant up to the net's end, all downstream of a member whose effects the class holds is alike to it and on its line, which is equivalent to holding the effects.",
     "zh": "一类下唯经一集出一域之线，含其一员；于有常或至网之终有常之类下，类持其所缘之员之后皆与之同类而在其线上，与持其所缘等价。"
@@ -172,6 +172,14 @@
         "en": "«续», «相续», «及», «类», «有常», «有常之逐点», «亡», «线内同类», «一»; «所及» from the map.",
         "zh": "«续»、«相续»、«及»、«类»、«有常»、«有常之逐点»、«亡»、«线内同类»、«一»；«所及» 出自图。"
       }
+    },
+    {
+      "id": "not-going-out-of-a-region",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«所经必同» is proved from «定则内至外之线有出步»: a step going out of the region, given by it, lands in the set.",
+        "zh": "«所经必同» 由 «定则内至外之线有出步» 证得：其所给出域之一步落于该集。"
+      }
     }
   ],
   "related": [
@@ -260,7 +268,7 @@
         "Becoming.«至终常闭则所缘同类»",
         "Becoming.«至终有常»"
       ],
-      "sha256": "3eb48672dc17b1e2d8c61975dcb0a8f147cb56b6415aa8d125962c042da0c098"
+      "sha256": "430e1887d6e5829e39efa7633bce673c997c34230ce0e6a5e731727cbd9b9493"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T060618.754321Z/verification.json",
@@ -311,12 +319,18 @@
       "role": "receipt",
       "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "role": "receipt",
+      "sha256": "40ef6bb6514661fbb3ed7b705b45d28871fe14f6a9c1c5162c385ac7ff506117",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -342,6 +356,10 @@
     {
       "en": "31 October 2026, board item HE2, items 6 and 7 (study section 474): wording only in title (zh): 理 written for a regularity, there a constant class, becomes 规律, as the package README's cell now writes; the old title stays among the aliases; no statement's content changes.",
       "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：仅措辞，title (zh)：写作理之规律（此为有常之类）改为规律，如包 README 之格今所写；旧题仍在别名中；所述之义皆不变。"
+    },
+    {
+      "en": "31 October 2026, board item BD2: «所经必同»'s direct proof by induction on the line replaced by a derivation from a step going out of a region on a line («定则内至外之线有出步», Becoming.GrammarCrossing), that step's end being the member of the set; the dependency added. No statement, premise, law or declaration changed.",
+      "zh": "2026年10月31日，工作板条目 BD2：«所经必同» 之直接证明（于线上归纳）改为由线上出域之步（«定则内至外之线有出步»，Becoming.GrammarCrossing）推得，步之终即该集之员；增此依赖。陈述、前提、规律与声明皆未变。"
     }
   ]
 }

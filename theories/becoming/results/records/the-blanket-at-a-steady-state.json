@@ -1,0 +1,487 @@
+{
+  "schema_version": 2,
+  "id": "the-blanket-at-a-steady-state",
+  "title": {
+    "en": "The blanket at a steady state: conditional independence and what holds it",
+    "zh": "稳态之毯：条件独立及其所以成立"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T18:39:50+00:00",
+  "statement": {
+    "en": "Independence given the blanket is the cross form on states each listed once; positive weights with the internal moves in detailed balance, joined by moves present at every external state whose rate ratios read none, give it; circulation can lose it and need not.",
+    "zh": "于每态列一次之列，予毯之独立即交叉形式；权皆正，内部诸移细致平衡，由每一外部态皆在、率比不读外部态之移相连，则予之；环流能失之，亦未必失之。"
+  },
+  "laws": [
+    {
+      "en": "The cross form: at each blanket state, two internal states' weights with two external states cross-multiply equally; detailed balance of the internal moves, at each blanket and external state. For a move in detailed balance at two external states, equal rate ratios give the cross form at its ends given positive rates, and back given positive weights; it passes through positive weight (cross_of_move and five more).",
+      "zh": "交叉形式：于每一毯态，二内部态与二外部态之权交叉相乘相等。内部诸移于每一毯态与外部态细致平衡。一移于二外部态细致平衡时，所需之率为正则率比相等予其两端之交叉形式，所需之权为正则反之；交叉形式经正权之态而传（cross_of_move 等六项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.CrossForm",
+        "Becoming.BlanketWeights.DetailedBalance",
+        "Becoming.BlanketWeights.cross_of_move",
+        "Becoming.BlanketWeights.ratio_of_cross",
+        "Becoming.BlanketWeights.cross_trans",
+        "Becoming.BlanketWeights.pos_of_mul_eq"
+      ]
+    },
+    {
+      "en": "With positive weights, internal states at each blanket state within one closure of moves at positive rate at every external state, each move's rate ratio reading no external state, internal detailed balance gives the cross form, no steady state assumed; rates reading none qualify. Conversely, positive weights in detailed balance and cross form have ratios reading none (crossForm_of_detailedBalance and three more).",
+      "zh": "内部诸移之细致平衡予交叉形式：权皆正，每一毯态之内部诸态处于每一外部态皆以正率在之诸移之一闭包（«所闭»）内，每移之率比不读外部态；不设稳态；不读外部态之率满足率比之条件；反之，细致平衡之正权成交叉形式，则每一率比不读外部态（crossForm_of_detailedBalance 等四项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.cross_of_closure",
+        "Becoming.BlanketWeights.crossForm_of_detailedBalance",
+        "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread",
+        "Becoming.BlanketWeights.ratio_of_crossForm"
+      ]
+    },
+    {
+      "en": "On listed states the joint weight factors given the blanket where each pair's weight times the blanket state's is the internal weight there times the external weight; that is the cross form on the listed states, repeated states and blanket states weighing nothing included; the cross form over the types gives it on any listings and follows on listings covering the types (factorsGiven_of_crossFormOn and eleven more).",
+      "zh": "于所列之态：每一所列之对之权乘毯态之权，等于彼处内部态之权乘外部态之权，则联合之权予毯而分解；此即所列诸态之交叉形式，重复之态与权为零之毯态皆含；类型上之交叉形式于任一列予之，于涵盖类型之列由之而得（factorsGiven_of_crossFormOn 等十二项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.internalWeight",
+        "Becoming.BlanketWeights.externalWeight",
+        "Becoming.BlanketWeights.blanketWeight",
+        "Becoming.BlanketWeights.FactorsGiven",
+        "Becoming.BlanketWeights.CrossFormOn",
+        "Becoming.BlanketWeights.crossFormOn_of_crossForm",
+        "Becoming.BlanketWeights.crossForm_of_crossFormOn",
+        "Becoming.BlanketWeights.total_congr_mem",
+        "Becoming.BlanketWeights.total_mul_total",
+        "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
+        "Becoming.BlanketWeights.whole_zero_entry",
+        "Becoming.BlanketWeights.crossFormOn_of_factorsGiven"
+      ]
+    },
+    {
+      "en": "Independence given the blanket on the theory's conditioning: at each blanket state, an internal event's share under the weighting restricted to an external record is its share, as ratios. Factoring gives it on any listings and follows from it where each state is listed once, so it is the cross form there, given by detailed balance under the second law's conditions (independentGiven_of_crossFormOn and nine more).",
+      "zh": "依理论之条件化予毯之条件独立：于每一毯态，内部之一事于限于外部之一记录之权下之份额即其份额（以比计）。分解之形于任一列予之，于每态列一次之列由之而得，故即所列诸态之交叉形式，内部诸移之细致平衡依第二律之条件予之（independentGiven_of_crossFormOn 等十项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.atBlanket",
+        "Becoming.BlanketWeights.IndependentGiven",
+        "Becoming.BlanketWeights.mass_whole",
+        "Becoming.BlanketWeights.mass_atBlanket",
+        "Becoming.BlanketWeights.scaled_of_factorsGiven",
+        "Becoming.BlanketWeights.independentGiven_of_factorsGiven",
+        "Becoming.BlanketWeights.factorsGiven_of_independentGiven",
+        "Becoming.BlanketWeights.independentGiven_of_crossFormOn",
+        "Becoming.BlanketWeights.crossFormOn_of_independentGiven",
+        "Becoming.BlanketWeights.independentGiven_of_detailedBalance"
+      ]
+    },
+    {
+      "en": "Product weights at one blanket state are in cross form, and independence given the blanket there is the product law of conditioning by restriction (ConditionalWeights.restrict_independent), which the law generalizes (restrict_independent_case, crossForm_product).",
+      "zh": "一毯态处之积权成交叉形式，彼处予毯之独立即限制之条件化之积律（ConditionalWeights.restrict_independent），本律推广之（restrict_independent_case、crossForm_product）。",
+      "declarations": [
+        "Becoming.BlanketWeights.crossForm_product",
+        "Becoming.BlanketWeights.restrict_independent_case"
+      ]
+    },
+    {
+      "en": "Witness, a lag relay: external, blanket and internal bits each flip alone, the blanket towards the external bit and the internal bit towards the blanket at rate 3, away at 1, the internal rates reading no external state; its weights 31, 15, 9, 17, 17, 9, 15, 31 are steady and not independent given the blanket, so its internal moves are not in detailed balance (LagRelay.not_independentGiven and ten more).",
+      "zh": "见证（滞后之传递）：外部、毯与内部之位各自独翻，毯趋外部之位、内部之位趋毯以率 3，离之以 1，内部之率不读外部态；其权 31, 15, 9, 17, 17, 9, 15, 31 为稳态而予毯不独立，故内部诸移不细致平衡（LagRelay.not_independentGiven 等十一项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.LagRelay.State",
+        "Becoming.BlanketWeights.LagRelay.rate",
+        "Becoming.BlanketWeights.LagRelay.fullRate",
+        "Becoming.BlanketWeights.LagRelay.weight",
+        "Becoming.BlanketWeights.LagRelay.w",
+        "Becoming.BlanketWeights.LagRelay.flips",
+        "Becoming.BlanketWeights.LagRelay.inflow",
+        "Becoming.BlanketWeights.LagRelay.outflow",
+        "Becoming.BlanketWeights.LagRelay.steady",
+        "Becoming.BlanketWeights.LagRelay.not_independentGiven",
+        "Becoming.BlanketWeights.LagRelay.circulates"
+      ]
+    },
+    {
+      "en": "Witness, a turning chain: the internal part turns through three states one way only, reading nothing, while the blanket and external bits flip; the uniform weights are steady and independent given the blanket on any listings, and the internal moves are not in detailed balance: circulation need not lose the blanket (Turning.independentGiven and eleven more).",
+      "zh": "见证（转动之链）：内部部分单向转过三态而不读任何，毯与外部之位各翻；均匀之权为稳态，于任一列予毯独立，而内部诸移不细致平衡：环流未必失毯（Turning.independentGiven 等十二项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.Turning.Phase",
+        "Becoming.BlanketWeights.Turning.rate",
+        "Becoming.BlanketWeights.Turning.same",
+        "Becoming.BlanketWeights.Turning.State",
+        "Becoming.BlanketWeights.Turning.fullRate",
+        "Becoming.BlanketWeights.Turning.w",
+        "Becoming.BlanketWeights.Turning.states",
+        "Becoming.BlanketWeights.Turning.inflow",
+        "Becoming.BlanketWeights.Turning.outflow",
+        "Becoming.BlanketWeights.Turning.steady",
+        "Becoming.BlanketWeights.Turning.circulates",
+        "Becoming.BlanketWeights.Turning.independentGiven"
+      ]
+    },
+    {
+      "en": "Witness, rates reading the external state: the internal bit flips at 1 where the external bit is off and at 2 where it is on, in detailed balance with uniform weights, which are in cross form: a rate reading the external state does not by itself lose the blanket (ReadsDirectly.crossForm and four more).",
+      "zh": "见证（读外部态之率）：外部之位为关时内部之位以 1 翻，为开时以 2，与均匀之权细致平衡，其权成交叉形式：读外部态之率不自失毯（ReadsDirectly.crossForm 等五项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.ReadsDirectly.rate",
+        "Becoming.BlanketWeights.ReadsDirectly.w",
+        "Becoming.BlanketWeights.ReadsDirectly.balanced",
+        "Becoming.BlanketWeights.ReadsDirectly.crossForm",
+        "Becoming.BlanketWeights.ReadsDirectly.reads_external"
+      ]
+    },
+    {
+      "en": "Witness, moves reading the external state: a positive weighting whose internal moves are in detailed balance, joined at each external state by different moves, those present at both having one rate ratio at both, is not in cross form: the moves present at every external state cannot be dropped, what remains of Kelly's condition (ii) (MovesReadExternal.not_crossForm and five more).",
+      "zh": "见证（读外部态之移）：正权，内部诸移细致平衡，于每一外部态由相异之移相连，二外部态皆在之移于二者率比相同，则不成交叉形式：每一外部态皆在之移不可去，即 Kelly 条件 (ii) 之余（MovesReadExternal.not_crossForm 等六项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.MovesReadExternal.rate",
+        "Becoming.BlanketWeights.MovesReadExternal.w",
+        "Becoming.BlanketWeights.MovesReadExternal.balanced",
+        "Becoming.BlanketWeights.MovesReadExternal.joined",
+        "Becoming.BlanketWeights.MovesReadExternal.ratio",
+        "Becoming.BlanketWeights.MovesReadExternal.not_crossForm"
+      ]
+    },
+    {
+      "en": "Witness, a synchronous blanket: all parts move at once, each by a factor reading what the blanketed law lets it read, by construction; the external bit stays at 3 and flips at 1, the sensory bit copies it, the internal bit copies the sensory bit. With the copy exact the steady weights are independent given the blanket; with a miss in four, not (SynchronousCopy.noisy_not_independentGiven and twelve more).",
+      "zh": "见证（同步之毯）：诸部分同时而移，各依一因子，依核之构造只读毯化之律所许者；外部之位以 3 留、以 1 翻，感官之位复制之，内部之位复制感官之位。复制精确时稳态之权予毯独立；四中有一失则否（SynchronousCopy.noisy_not_independentGiven 等十三项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.SynchronousCopy.externalStep",
+        "Becoming.BlanketWeights.SynchronousCopy.sensoryStep",
+        "Becoming.BlanketWeights.SynchronousCopy.internalStep",
+        "Becoming.BlanketWeights.SynchronousCopy.kernel",
+        "Becoming.BlanketWeights.SynchronousCopy.states",
+        "Becoming.BlanketWeights.SynchronousCopy.exactWeight",
+        "Becoming.BlanketWeights.SynchronousCopy.noisyWeight",
+        "Becoming.BlanketWeights.SynchronousCopy.exactW",
+        "Becoming.BlanketWeights.SynchronousCopy.noisyW",
+        "Becoming.BlanketWeights.SynchronousCopy.exact_steady",
+        "Becoming.BlanketWeights.SynchronousCopy.noisy_steady",
+        "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven",
+        "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven"
+      ]
+    },
+    {
+      "en": "Witness, a determined blanketed run: the sensory part reads the upper bit of a four-state external counter and the internal part copies it; the occupation weighting over one period is not in cross form, while the coupling form holds on every run (Cycle.not_crossForm and five more).",
+      "zh": "见证（确定之毯化运行）：感官部分读四态外部计数之高位，内部部分复制之；一周期之占据之权不成交叉形式，而耦合之形于每一运行皆成（Cycle.not_crossForm 等六项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.Cycle.law",
+        "Becoming.BlanketWeights.Cycle.start",
+        "Becoming.BlanketWeights.Cycle.run",
+        "Becoming.BlanketWeights.Cycle.w",
+        "Becoming.BlanketWeights.Cycle.periodic",
+        "Becoming.BlanketWeights.Cycle.not_crossForm"
+      ]
+    },
+    {
+      "en": "Witness, listings not covering the types: a weighting in cross form on listings of one state is not in cross form over the types (Uncovered.not_crossForm and two more).",
+      "zh": "见证（不涵盖类型之列）：于一态之列成交叉形式之权，于类型上不成交叉形式（Uncovered.not_crossForm 等三项）。",
+      "declarations": [
+        "Becoming.BlanketWeights.Uncovered.w",
+        "Becoming.BlanketWeights.Uncovered.crossFormOn",
+        "Becoming.BlanketWeights.Uncovered.not_crossForm"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Natural weights on internal, blanket and external states of any types, read on listed states; conditioning by restriction (ConditionalWeights).",
+      "zh": "不加公理。任意类型之内部、毯与外部诸态上之自然数之权，于所列之态而读；以限制为条件化（ConditionalWeights）。"
+    },
+    {
+      "en": "For the sufficient condition: positive weights; the internal moves in detailed balance at each blanket and external state; at each blanket state a relation of moves present at positive rate at every external state, whose closure holds the internal states; each such move's rate ratio reading no external state. No steady state is assumed.",
+      "zh": "充分条件：权皆正；内部诸移于每一毯态与外部态细致平衡；于每一毯态，有于每一外部态皆以正率在之诸移之关系，其闭包含诸内部态；每移之率比不读外部态。不设稳态。"
+    },
+    {
+      "en": "Modelling choices: discrete states; the asynchronous chain, one part moving at a time, read through its rates with no clock, a model beside the blanketed law, whose parts move at once; steady weights by global balance, or for the synchronous law carried to themselves by one step; the blanket one part.",
+      "zh": "建模之选择：离散之态；异步之链，一时一部分移，以其率读之而无时钟，为毯化之律（诸部分同时而移）旁之模型；稳态之权依全局平衡，同步之律则为一步所保；毯为一部分。"
+    },
+    {
+      "en": "The steady weights of the lag relay and the synchronous copy are proved steady; their uniqueness up to scale is a correspondence, checked by exact solves in the study's probes.",
+      "zh": "滞后之传递与同步复制之稳态之权证为稳态；其于比例下之唯一为对应，以研究之探针精确求解而核。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That independence given the blanket needs detailed balance: circulation can keep it (Turning.independentGiven).",
+      "zh": "予毯之独立需细致平衡：环流能保之（Turning.independentGiven）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Densities, Langevin flows, continuous states or time; the linear case is the sibling record's.",
+      "zh": "密度、Langevin 流、连续之态或时间；线性情形属同辈之记录。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a chain's steady weights are unique, or how to compute them from its rates.",
+      "zh": "一链之稳态之权唯一，或如何自其率求之。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the synchronous copy's kernel is a blanketed law by a theorem: its factor structure is by construction.",
+      "zh": "同步复制之核以定理为毯化之律：其因子之结构出于构造。",
+      "kind": "scope"
+    },
+    {
+      "en": "A discrete law for footnote 13's set of internal and active states.",
+      "zh": "脚注 13 之内部与主动诸态之集之离散之律。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "detail": {
+        "en": "The lag relay's steady weights are not independent given the blanket, its internal rates reading no external state (LagRelay.not_independentGiven).",
+        "zh": "滞后之传递之稳态之权予毯不独立，其内部之率不读外部态（LagRelay.not_independentGiven）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "detail": {
+        "en": "Moves present at both external states with one rate ratio, the joining moves differing, give no cross form (MovesReadExternal.not_crossForm).",
+        "zh": "二外部态皆在之移率比相同，而相连之移相异，不予交叉形式（MovesReadExternal.not_crossForm）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "detail": {
+        "en": "A synchronous copy with a miss in four: steady weights not independent given the blanket (SynchronousCopy.noisy_not_independentGiven).",
+        "zh": "同步复制四中有一失：稳态之权予毯不独立（SynchronousCopy.noisy_not_independentGiven）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "detail": {
+        "en": "A determined blanketed run's occupation weighting is not in cross form (Cycle.not_crossForm).",
+        "zh": "确定之毯化运行之占据之权不成交叉形式（Cycle.not_crossForm）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.",
+    "zh": "纯核，公理报告皆空（核心回执 20261031T183655.254131Z）：BlanketWeights 引 Blanket 与 Flow，为叶；见证以 decide 于完整之嵌套匹配求值。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "Entropy production of the lag relay, joining EntropyProduction; a discrete law for footnote 13's set of internal and active states; a chain's steady weights computed from its rates; review by a person.",
+    "zh": "滞后之传递之熵产生，接于 EntropyProduction；脚注 13 之内部与主动诸态之集之离散之律；自一链之率求其稳态之权；人之审查。"
+  },
+  "correspondence": {
+    "en": "The principle's statistical blanket (Friston 2019; Friston, Da Costa, Sajid, Heins, Ueltzhöffer, Pavliotis and Parr 2023, Physics Reports, §4): internal and external states independent given the present blanket state at a steady state. The sufficient condition is Kelly's proof that the equilibrium of a reversible spatial process is a Markov field (Kelly 1979, Theorem 9.3; Liggett 1985, §IV.2) at the internal site, with rate ratios: the closure is his condition (iii), the moves present at every external state what remains of (ii). The relay's loss: sparse coupling without the statistical blanket is known (Biehl, Pollock and Kanai 2021, Observation 1; Aguilera, Millidge, Tschantz and Buckley 2022), and the relay is a witness of it. The coupling form is the deterministic case of the time-unrolled blanket (Virgo, Rosas and Biehl 2022). AI reading: the theory's agent laws need only the coupling form; the principle's inference reading needs the statistical form, which holds under conditions each of which is known. The readings are the AI's, in development/ue26-blankets-at-a-steady-state/DESIGN.md.",
+    "zh": "原理之统计之毯（Friston 2019；Friston、Da Costa、Sajid、Heins、Ueltzhöffer、Pavliotis、Parr 2023，Physics Reports，§4）：稳态时予当下毯态内部与外部诸态独立。充分条件即 Kelly 证可逆空间过程之平衡为 Markov 场（Kelly 1979，定理 9.3；Liggett 1985，§IV.2）于内部之位、以率比而行：闭包即其条件 (iii)，每一外部态皆在之移即 (ii) 之余。传递之失：稀疏耦合而无统计之毯已知（Biehl、Pollock、Kanai 2021，观察 1；Aguilera 等 2022），传递为其见证。耦合之形即时间展开之毯之确定情形（Virgo、Rosas、Biehl 2022）。AI 之读：理论之主体之律唯需耦合之形；原理之推断之读需统计之形，其成立之条件皆已知。读法皆 AI 之读，载于 DESIGN.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+  "aliases": [
+    "The blanket at a steady state",
+    "稳态之毯",
+    "statistical blanket",
+    "conditional independence given the blanket",
+    "detailed balance of the internal moves",
+    "Becoming.BlanketWeights.crossForm_of_detailedBalance",
+    "Becoming.BlanketWeights.independentGiven_of_crossFormOn"
+  ],
+  "dependencies": [
+    {
+      "id": "conditioning-by-restriction",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ConditionalWeights.restrict, share, Share.Same, total and restrict_independent: independence given the blanket stated on the theory's conditioning, the product law its case at one blanket state.",
+        "zh": "ConditionalWeights.restrict、share、Share.Same、total 与 restrict_independent：予毯之独立依理论之条件化而陈，积律为其一毯态之情形。"
+      }
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«所闭»: the closure of the internal moves on the grammar.",
+        "zh": "«所闭»：内部诸移于语法上之闭包。"
+      }
+    },
+    {
+      "id": "the-markov-blanket-as-a-coupling-structure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Blanket.Blanketed and its course: the determined blanketed law whose occupation weighting the witness Cycle reads.",
+        "zh": "Blanket.Blanketed 及其历程：见证 Cycle 所读其占据之权之确定之毯化之律。"
+      }
+    },
+    {
+      "id": "what-the-existence-claim-forbids",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Blanket.visits: the occupation weighting read off a run.",
+        "zh": "Blanket.visits：自运行读出之占据之权。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-blanket-in-a-linear-steady-state",
+      "detail": {
+        "en": "The linear case over the reals: the Helmholtz form, footnote 13 as a law and the synchronous scheme.",
+        "zh": "实数上之线性情形：Helmholtz 之形、脚注 13 为律与同步之法。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.BlanketWeights.CrossForm",
+        "Becoming.BlanketWeights.CrossFormOn",
+        "Becoming.BlanketWeights.Cycle.law",
+        "Becoming.BlanketWeights.Cycle.not_crossForm",
+        "Becoming.BlanketWeights.Cycle.periodic",
+        "Becoming.BlanketWeights.Cycle.run",
+        "Becoming.BlanketWeights.Cycle.start",
+        "Becoming.BlanketWeights.Cycle.w",
+        "Becoming.BlanketWeights.DetailedBalance",
+        "Becoming.BlanketWeights.FactorsGiven",
+        "Becoming.BlanketWeights.IndependentGiven",
+        "Becoming.BlanketWeights.LagRelay.State",
+        "Becoming.BlanketWeights.LagRelay.circulates",
+        "Becoming.BlanketWeights.LagRelay.flips",
+        "Becoming.BlanketWeights.LagRelay.fullRate",
+        "Becoming.BlanketWeights.LagRelay.inflow",
+        "Becoming.BlanketWeights.LagRelay.not_independentGiven",
+        "Becoming.BlanketWeights.LagRelay.outflow",
+        "Becoming.BlanketWeights.LagRelay.rate",
+        "Becoming.BlanketWeights.LagRelay.steady",
+        "Becoming.BlanketWeights.LagRelay.w",
+        "Becoming.BlanketWeights.LagRelay.weight",
+        "Becoming.BlanketWeights.MovesReadExternal.balanced",
+        "Becoming.BlanketWeights.MovesReadExternal.joined",
+        "Becoming.BlanketWeights.MovesReadExternal.not_crossForm",
+        "Becoming.BlanketWeights.MovesReadExternal.rate",
+        "Becoming.BlanketWeights.MovesReadExternal.ratio",
+        "Becoming.BlanketWeights.MovesReadExternal.w",
+        "Becoming.BlanketWeights.ReadsDirectly.balanced",
+        "Becoming.BlanketWeights.ReadsDirectly.crossForm",
+        "Becoming.BlanketWeights.ReadsDirectly.rate",
+        "Becoming.BlanketWeights.ReadsDirectly.reads_external",
+        "Becoming.BlanketWeights.ReadsDirectly.w",
+        "Becoming.BlanketWeights.SynchronousCopy.exactW",
+        "Becoming.BlanketWeights.SynchronousCopy.exactWeight",
+        "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven",
+        "Becoming.BlanketWeights.SynchronousCopy.exact_steady",
+        "Becoming.BlanketWeights.SynchronousCopy.externalStep",
+        "Becoming.BlanketWeights.SynchronousCopy.internalStep",
+        "Becoming.BlanketWeights.SynchronousCopy.kernel",
+        "Becoming.BlanketWeights.SynchronousCopy.noisyW",
+        "Becoming.BlanketWeights.SynchronousCopy.noisyWeight",
+        "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven",
+        "Becoming.BlanketWeights.SynchronousCopy.noisy_steady",
+        "Becoming.BlanketWeights.SynchronousCopy.sensoryStep",
+        "Becoming.BlanketWeights.SynchronousCopy.states",
+        "Becoming.BlanketWeights.Turning.Phase",
+        "Becoming.BlanketWeights.Turning.State",
+        "Becoming.BlanketWeights.Turning.circulates",
+        "Becoming.BlanketWeights.Turning.fullRate",
+        "Becoming.BlanketWeights.Turning.independentGiven",
+        "Becoming.BlanketWeights.Turning.inflow",
+        "Becoming.BlanketWeights.Turning.outflow",
+        "Becoming.BlanketWeights.Turning.rate",
+        "Becoming.BlanketWeights.Turning.same",
+        "Becoming.BlanketWeights.Turning.states",
+        "Becoming.BlanketWeights.Turning.steady",
+        "Becoming.BlanketWeights.Turning.w",
+        "Becoming.BlanketWeights.Uncovered.crossFormOn",
+        "Becoming.BlanketWeights.Uncovered.not_crossForm",
+        "Becoming.BlanketWeights.Uncovered.w",
+        "Becoming.BlanketWeights.atBlanket",
+        "Becoming.BlanketWeights.blanketWeight",
+        "Becoming.BlanketWeights.crossFormOn_of_crossForm",
+        "Becoming.BlanketWeights.crossFormOn_of_factorsGiven",
+        "Becoming.BlanketWeights.crossFormOn_of_independentGiven",
+        "Becoming.BlanketWeights.crossForm_of_crossFormOn",
+        "Becoming.BlanketWeights.crossForm_of_detailedBalance",
+        "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread",
+        "Becoming.BlanketWeights.crossForm_product",
+        "Becoming.BlanketWeights.cross_of_closure",
+        "Becoming.BlanketWeights.cross_of_move",
+        "Becoming.BlanketWeights.cross_trans",
+        "Becoming.BlanketWeights.externalWeight",
+        "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
+        "Becoming.BlanketWeights.factorsGiven_of_independentGiven",
+        "Becoming.BlanketWeights.independentGiven_of_crossFormOn",
+        "Becoming.BlanketWeights.independentGiven_of_detailedBalance",
+        "Becoming.BlanketWeights.independentGiven_of_factorsGiven",
+        "Becoming.BlanketWeights.internalWeight",
+        "Becoming.BlanketWeights.mass_atBlanket",
+        "Becoming.BlanketWeights.mass_whole",
+        "Becoming.BlanketWeights.pos_of_mul_eq",
+        "Becoming.BlanketWeights.ratio_of_cross",
+        "Becoming.BlanketWeights.ratio_of_crossForm",
+        "Becoming.BlanketWeights.restrict_independent_case",
+        "Becoming.BlanketWeights.scaled_of_factorsGiven",
+        "Becoming.BlanketWeights.total_congr_mem",
+        "Becoming.BlanketWeights.total_mul_total",
+        "Becoming.BlanketWeights.whole_zero_entry"
+      ],
+      "sha256": "2104babd7a37063208a6ba2ad244119b45bc7e42ef82fd0f230f549c170ce917"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
+      "role": "receipt",
+      "sha256": "6804eeb6c1f2c55b6e1cea1bcf732db5fc11379402cd52e86d0a39f8f238e321"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "25b917a6a85afb9c6b4d25a1bedca69ac1afb991cbfcbde79b5a748fa4858a7d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md",
+      "role": "integration",
+      "sha256": "a718291668b2ef827d5cbb7caa6fd819e8c59348bbc99cec7e6456b01e1bf43f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-DESIGN.md",
+      "role": "integration",
+      "sha256": "18caf3627b93576c85f9c4e902de825fd5aaa7b6fda5d5cc35ed425bf7e619d9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/LITERATURE-CHECK.md",
+      "role": "integration",
+      "sha256": "5bcd7c98f52dc0639c59c8c986f5896f48e015393baff05588d9b4870bc9838f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/RECHECK-UE26.md",
+      "role": "integration",
+      "sha256": "ee92ba84ae5cd30316f70c6c7fe8e7f6fb2dba179a54e84124ee7e142b87c41a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-LANDING.md",
+      "role": "integration",
+      "sha256": "cf89bf5c12302a61064605f3e832298f4d924216488d534e0fe564eb8b0a8671"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "79d9f42f3d270a4f87e56be1bfa9224f405ea0db8880a1d51297ff4e2e3436d0"
+    },
+    {
+      "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+      "role": "integration",
+      "sha256": "de38818b768012ae34da191cbffd3e34fb7543bf0f3fcb4996217f50d049a8ab"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BlanketWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026: added (UE26), the principle's statistical blanket on the theory's conditioning: independence given the blanket as the cross form on listings listing each state once; detailed balance of the internal moves with positive weights, within one closure of moves present at every external state, each such move's rate ratio reading no external state, gives it, Kelly's proof at the internal site; witnesses on either side, a synchronous copy among them; after a review, a literature check, a recheck and a review of the landing texts, every finding taken; study section 484.",
+      "zh": "2026年11月1日：新增（UE26），依理论之条件化之原理之统计之毯：予毯之独立即于每态列一次之列之交叉形式；权皆正，内部诸移于每一外部态皆在之移之一闭包内细致平衡，每移之率比不读外部态，则予之，即 Kelly 之证于内部之位；两侧之见证，同步复制在其中；经审查、文献核对、复核与落地文本之审查，凡所见皆取；研究第 484 节。"
+    }
+  ]
+}

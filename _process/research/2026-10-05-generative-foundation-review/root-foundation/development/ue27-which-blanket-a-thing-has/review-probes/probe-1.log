@@ -1,0 +1,41 @@
+Becoming/UE27ReviewProbe.lean:59:33: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.108 = ?m.108
+but is expected to have type
+  g (i + 1) = y
+in the application
+  ⟨by_a, rfl⟩
+Becoming/UE27ReviewProbe.lean:78:6: error: Type mismatch
+  rfl
+has type
+  ?m.21 = ?m.21
+but is expected to have type
+  (Assurance.ofMap fun x x_1 => b.step x).step x x✝ y
+Becoming/UE27ReviewProbe.lean:183:6: error: Type mismatch
+  Blanketed.internal_through_blanket (couplingLaw update policy value) rfl k fun j lt => ?m.72
+has type
+  ((couplingLaw update policy value).course ?m.61 k).internal =
+    ((couplingLaw update policy value).course ?m.61 k).internal
+but is expected to have type
+  ((couplingLaw update policy value).course (startAt m o a l) k).internal =
+    ((couplingLaw update policy value).course (startAt m o a l') k).internal
+Becoming/UE27ReviewProbe.lean:234:6: error: Type mismatch
+  rfl
+has type
+  ?m.26 = ?m.26
+but is expected to have type
+  h = run
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue27/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue27-which-blanket-a-thing-has/review-probes/tree",
+  "modules": 93,
+  "ran": [
+    "Becoming.UE27ReviewProbe"
+  ],
+  "reused": 92,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.UE27ReviewProbe"
+}
+python3 -B scratch_build.py $P/tree Becoming.UE27ReviewProbe  2.20s user 0.90s system 55% cpu 5.633 total

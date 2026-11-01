@@ -57,6 +57,15 @@
       "plan_entry": "drafts/2026-10-10-opening/OPENING-V12.md"
     },
     {
+      "old_path": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md",
+      "new_path": "drafts/2026-10-10-opening/history/OPENING-V13-PROPOSAL.md",
+      "sha256": "461c06ee3d4fe04ac474cb70b1520bc0d2cd8ce573b7e73fe7f55b6e965b7ddc",
+      "blob": "79f7dd36f290b8a23b623169ff1455799bfc2f97",
+      "batch": "opening-v13",
+      "reason": "applied: the version 13 proposal; the applied text is theories/becoming/OPENING.md, revised in place (1 November 2026)",
+      "plan_entry": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md"
+    },
+    {
       "old_path": "drafts/2026-10-10-opening/OPENING-V2.md",
       "new_path": "drafts/2026-10-10-opening/history/OPENING-V2.md",
       "sha256": "3e767a2b36245a7b18f414ad9df00ffcb347380236c7e35120bec2ef3b07808c",

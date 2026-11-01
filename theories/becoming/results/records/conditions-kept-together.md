@@ -11,18 +11,18 @@
 ## Laws
 
 1. No course leaves two guards together exactly where no course leaves either, and for a list exactly where no course leaves any. (`Becoming.Viability.kernel_and_iff`, `Becoming.Viability.AllOf`, `Becoming.Viability.kernel_allOf_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Viability.kernel_and_iff` as following from its definitions (definitional or representational: logic: for all reached, and).
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Viability.kernel_and_iff` as following from its definitions (definitional or representational: logic: for all reached, and).
    - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.Viability.kernel_and_iff` is stated at a process's model by `Becoming.ModelStatements.kernel_and_reading` (law 5 of this record).
    - *Standing of `Becoming.Viability.kernel_and_iff`, by the rule:* at a represented model (F5's verified items at the process model).
 2. A guard is keepable where some run stays within it; keepable together gives keepable each, and the converse fails in ChoicePoint; where either guard lies in the kernel, keeping both is keeping the other; likewise for n steps. (`Becoming.Viability.Keepable`, `Becoming.Viability.Keepable.each`, `Becoming.Onward.KeepsMoving.run`, `Becoming.Viability.keepable_and_iff_of_kernel_left`, `Becoming.Viability.keepable_and_iff_of_kernel_right`, `Becoming.Viability.KeptFor.each`, `Becoming.Viability.ChoicePoint.each_not_joint`, `Becoming.Viability.ChoicePoint.keptFor_each_not_joint`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. No rule on the separate answers decides the joint one: on ChoicePoint two configurations have both guards keepable and only one has them together; decisions exist, and for every F : Bool → Bool → Bool the joint decision is not F of the separate ones. (`Becoming.Viability.ChoicePoint.joint_differs`, `Becoming.Viability.ChoicePoint.decisions_exist`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Viability.ChoicePoint.no_respecting_rule_decides_joint`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Keeping a part decides neither renewal nor what the run does to others: in Renewable no course leaves the guard "the focal formation is active" from the starting configuration, while from that configuration one run renews and another consumes the sustaining formation's condition, which ends. (`Becoming.Renewable.kept_part_not_renewal`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. At a process's model, a kernel is the closure of the steps from a configuration lying within the guard; it lies within a meet of guards exactly where it lies within each, a law of logic for any relation. (`Becoming.ModelStatements.kernel_and_reading`, `Becoming.ModelStatements.kernel_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
-   - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.ModelStatements.kernel_and_reading` states `Becoming.Viability.kernel_and_iff` at a process's model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, `Becoming.«所闭»`; it keeps `Generative.Process` in other terms. The row taken alone: on no master law's anchor.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.ModelStatements.kernel_and_reading` states `Becoming.Viability.kernel_and_iff` at a process's model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, `Becoming.«所闭»`; it keeps `Generative.Process` in other terms. The row taken alone: on no shared law's anchor.
 
 <a id="conditions--条件"></a>
 ## Conditions

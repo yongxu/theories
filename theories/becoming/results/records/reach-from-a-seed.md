@@ -11,13 +11,13 @@
 ## Laws
 
 1. What a process reaches from its seeds (some seed, then a finite course of steps) holds at the seeds, is kept by every step, and is the seed–edge closure under its moves. It is the least such property: a configuration is reached exactly where every property holding at the seeds and kept by every step holds there, and every target is reached exactly when every such property holds at every target. (`Becoming.SeedReachProcesses.Moves`, `Becoming.SeedReachProcesses.FromSeed`, `Becoming.SeedReachProcesses.FromSeed.step`, `Becoming.SeedReachProcesses.fromSeed_invariant`, `Becoming.SeedReachProcesses.fromSeed_iff_closure`, `Becoming.SeedReachProcesses.fromSeed_iff_invariant`, `Becoming.SeedReachProcesses.covers_iff_invariant`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Seeds reached from other seeds add nothing to what is reached; with no move at all, exactly the seeds are reached. (`Becoming.SeedReachProcesses.substitute_seeds`, `Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. A configuration is separated from the seeds where some property holds at the seeds, is kept by every step and fails there. It is separated exactly where it is not reached, being reached being itself such a property; it is not separated exactly where that it is unreached is refuted; where its reach is decided, it is reached exactly where it is not separated. (`Becoming.SeedReachProcesses.Separated`, `Becoming.SeedReachProcesses.unreached_has_invariant`, `Becoming.SeedReachProcesses.separated_iff_not_fromSeed`, `Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated`, `Becoming.SeedReachProcesses.not_separated_iff`, `Becoming.SeedReachProcesses.fromSeed_iff_not_separated_of_decidable`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Calibration. That every process (configurations and moves in one universe) reaches every configuration not separated from its seeds is exactly double-negation elimination. For each condition, one process needs it: one step under exactly that condition, its end not separated where the condition's double negation is given and reached only where it holds. Refuting every separation refutes only being unreached. (`Becoming.SeedReach.conditional`, `Becoming.SeedReach.conditional_not_separated`, `Becoming.SeedReach.conditional_reach`, `Becoming.SeedReachProcesses.fromSeed_of_not_separated_iff_dne`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,17 +11,17 @@
 ## Laws
 
 1. A derivation is a finite proof tree from a basis, a family of claims on configurations of any type, under a list of local premises, by introducing and eliminating implication and conjunction and instantiating a claim about every natural number; basis claims and local premises enter by different rules; a list holds where all its claims do, and a claim holds throughout a domain where it holds at all its configurations. (`Becoming.Derivation.Derives`, `Becoming.Derivation.Holds`, `Becoming.Derivation.Throughout`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Soundness: a claim derived from a basis under local premises holds at every configuration where every basis claim and every premise holds. (`Becoming.Derivation.Derives.sound`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Over a domain where every basis claim holds throughout, every claim derived with no premise holds throughout, every claim derived under premises holds at each configuration of the domain where the premises hold, and premises holding throughout the domain are discharged. (`Becoming.Derivation.closed_throughout`, `Becoming.Derivation.relative_throughout`, `Becoming.Derivation.discharged_throughout`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Every claim derived with no premise holds throughout a domain exactly when every basis claim does; and where the basis holds throughout, a configuration of the domain at which a claim fails excludes that claim from what derives with no premise. (`Becoming.Derivation.closure_throughout_iff`, `Becoming.Derivation.countermodel_excludes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In the witness, with the trivial basis on the Booleans, the claim w = true derives with itself as a local premise and, the premise discharged, as an implication with no premise; it fails at false, so it does not hold throughout and does not derive with no premise. (`Becoming.Derivation.claim_under_itself`, `Becoming.Derivation.claim_implies_itself`, `Becoming.Derivation.claim_not_throughout`, `Becoming.Derivation.claim_not_closed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. On the scope of a policy, the configurations its actual executions reach from believed configurations: where the policy is sound for a goal, every claim derived from that goal with no premise holds at every configuration of the scope. (`Becoming.Derivation.Scope.goal_closure`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

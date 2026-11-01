@@ -11,22 +11,22 @@
 ## Laws
 
 1. Amounts with a draw are the core's amounts linearly ordered, with what is left once a draw is taken, as much as there is; the adjusted step reads in them, what is left rises with the level, and in whole numbers the step, its rising adjustments and its order are the adjusted step's. (`Becoming.RegimeMargin.Drawn.step`, `Becoming.RegimeMargin.Drawn.add_cancel`, `Becoming.RegimeMargin.Drawn.sub_mono`, `Becoming.RegimeMargin.Drawn.whole`, `Becoming.RegimeMargin.Drawn.whole_run`, `Becoming.RegimeMargin.Drawn`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the adjustment rises with what is left and with the recent giving, the step keeps the order of states, so a run that raises or lowers both the level and the recent giving at one step does so at every later step. (`Becoming.RegimeMargin.Drawn.Rises`, `Becoming.RegimeMargin.Drawn.Below`, `Becoming.RegimeMargin.Drawn.step_mono`, `Becoming.RegimeMargin.Drawn.rising_on`, `Becoming.RegimeMargin.Drawn.falling_on`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. From the first step on, a step that neither raises nor lowers both climbs (the level up strictly, the recent giving down strictly toward the draw from above) or sinks (the mirror, from below), whatever the adjustment, and the next such step is of the same kind. (`Becoming.RegimeMargin.Drawn.Climbs`, `Becoming.RegimeMargin.Drawn.Sinks`, `Becoming.RegimeMargin.Drawn.given_le_level`, `Becoming.RegimeMargin.Drawn.level_up_iff`, `Becoming.RegimeMargin.Drawn.level_down_iff`, `Becoming.RegimeMargin.Drawn.level_of_low`, `Becoming.RegimeMargin.Drawn.climbs_or_sinks`, `Becoming.RegimeMargin.Drawn.climbs_next`, `Becoming.RegimeMargin.Drawn.sinks_next`, `Becoming.RegimeMargin.Drawn.run_shape`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Drawn.run_shape` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Drawn.run_shape` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.RegimeMargin.Drawn.run_shape`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 4. A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal. (`Becoming.RegimeMargin.Drawn.Band`, `Becoming.RegimeMargin.Drawn.run_within`, `Becoming.RegimeMargin.Drawn.rest_iff`, `Becoming.RegimeMargin.Drawn.still_iff`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. Over the non-negative reals, amounts with a draw, every run of a rising adjustment from a state within a band converges: its level and recent giving are each monotone from some step on and bounded. (`Becoming.RegimeMargin.Drawn.reals`, `Becoming.RegimeMargin.Drawn.reals_step`, `Becoming.RegimeMargin.Drawn.tendsto_of_rising`, `Becoming.RegimeMargin.Drawn.tendsto_of_falling`, `Becoming.RegimeMargin.Drawn.converges`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Where the adjustment is continuous, the limit is a rest: the regime's point, or within the draw with level and recent giving equal. (`Becoming.RegimeMargin.Drawn.limit_rest`, `Becoming.RegimeMargin.Drawn.limit_fates`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. Limits keep the order of the states run from, so a state at or below one whose run converges below the draw converges below it too, and at one level a larger recent giving never turns a fall into a hold. (`Becoming.RegimeMargin.Drawn.limits_below`, `Becoming.RegimeMargin.Drawn.Falls`, `Becoming.RegimeMargin.Drawn.falls_of_below`, `Becoming.RegimeMargin.Drawn.falls_given`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. Witness: giving moving halfway from the recent giving to a draw of one rises in both and keeps a band up to one, and the run from nothing converges and is still from no step. (`Becoming.RegimeMargin.Drawn.Relaxation.giving`, `Becoming.RegimeMargin.Drawn.Relaxation.rises`, `Becoming.RegimeMargin.Drawn.Relaxation.step_low`, `Becoming.RegimeMargin.Drawn.Relaxation.band`, `Becoming.RegimeMargin.Drawn.Relaxation.course`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

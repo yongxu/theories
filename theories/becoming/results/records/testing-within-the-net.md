@@ -11,9 +11,9 @@
 ## Laws
 
 1. The core of a class is approximated by stages: stage zero is the class, and at the next stage each step from either end is matched by a step from the other at the stage before. The core lies in every stage, so what a finite stage tells apart is not in the core. (`Becoming.«层»`, `Becoming.«核在每层之内»`, `Becoming.«可分则不在核»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. A room in balance and a room held by a thermostat share a core class of 'warm or not' while no window opens; with the window's opening in the net, the balanced room's cooling has no warm match from the held room, and the first stage tells them apart. (`Becoming.Room`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.warm`, `Becoming.Room.alike`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_symm`, `Becoming.Room.same_constant`, `Becoming.«恒温与平衡»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

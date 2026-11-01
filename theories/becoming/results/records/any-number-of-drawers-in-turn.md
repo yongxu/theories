@@ -11,15 +11,15 @@
 ## Laws
 
 1. At each step k drawers draw in turn, each leaving part of what it is given to the next; a profile is perfect where each leaves at most what it is given and every drawer, of whatever it is given, leaves what draws it the most. (`Becoming.Optimum.InTurn.Many.pass`, `Becoming.Optimum.InTurn.Many.next`, `Becoming.Optimum.InTurn.Many.drawn`, `Becoming.Optimum.InTurn.Many.BestAt`, `Becoming.Optimum.InTurn.Many.Perfect`, `Becoming.Optimum.InTurn.Many.levels`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. With at least two drawers, backward from the horizon every drawer after the first draws nothing later and leaves nothing, and then so does the first: every perfect profile has every drawer leave nothing at every step, the base standing at what stands at nothing. (`Becoming.Optimum.InTurn.Many.pass_zero`, `Becoming.Optimum.InTurn.Many.pass_of_first`, `Becoming.Optimum.InTurn.Many.step_ends`, `Becoming.Optimum.InTurn.Many.ends_at`, `Becoming.Optimum.InTurn.Many.perfect_ends`, `Becoming.Optimum.InTurn.Many.perfect_levels`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. Drawing everything is perfect for every number of drawers from two. (`Becoming.Optimum.InTurn.Many.zero_drawn`, `Becoming.Optimum.InTurn.Many.perfect_of_zero`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Two drawers are the case k = 2: their draws, levels and perfect profiles are those of drawers 0 and 1, and their laws are derived from these. (`Becoming.Optimum.InTurn.Many.pair`, `Becoming.Optimum.InTurn.Many.drawn_first`, `Becoming.Optimum.InTurn.Many.drawn_second`, `Becoming.Optimum.InTurn.Many.levels_pair`, `Becoming.Optimum.InTurn.Many.perfect_pair`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. On a web, along every perfect profile of two or more drawers a dependence above what stands at nothing is broken at the first step; under the gate, every perfect profile of any number from two breaks the dweller. (`Becoming.Web.turns_broken`, `Becoming.Optimum.Holding.gated_turns`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

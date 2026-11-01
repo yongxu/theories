@@ -11,19 +11,19 @@
 ## Laws
 
 1. Under a continuation R, f at u continues g at t where each step goes from a formation active before it to one active after it that R reads as its continuation. Renewing along R from g at t: every relation taken part in by a formation continuing it is renewed; consuming along R: a formation continuing it draws on a consumed condition. The two exclude each other. (`Becoming.Web.Continuing`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`, `Becoming.Web.renewingAlong_not_consumingAlong`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The split law: renewing along an event holds exactly where its own relations are renewed and renewing holds along every formation continuing it across the next step, so renewing passes into every branch of a split. The merge law: consuming along an event holds exactly where it draws on a consumed condition or consuming holds along some formation continuing it, so consuming along a merged formation is consuming along every formation merged into it. (`Becoming.Web.renewingAlong_iff`, `Becoming.Web.RenewingAlong.branch`, `Becoming.Web.consumingAlong_iff`, `Becoming.Web.ConsumingAlong.merged`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Carrying a continuation through a re-identification, what continues what is unchanged, and so are both classes: no renaming changes a class read along a continuation. (`Becoming.Reidentify.carry`, `Becoming.Web.Continuing.of_reidentify`, `Becoming.Web.Continuing.to_reidentify`, `Becoming.Web.continuing_reidentify`, `Becoming.Web.renewingAlong_reidentify`, `Becoming.Web.consumingAlong_reidentify`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where each formation continues only itself and f is active at every step, the classes along that continuation from step 0 are the name classes RenewingIn and ConsumingIn. (`Becoming.Web.itself`, `Becoming.Web.Continuing.itself_same`, `Becoming.Web.Continuing.itself_onward`, `Becoming.Web.Continuing.itself_from_zero`, `Becoming.Web.renewingAlong_itself_iff`, `Becoming.Web.consumingAlong_itself_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A merge decides a class: a formation drawing only on a condition kept at its need renews as named, and, merged with one drawing on a spent condition into a formation that draws on it, consumes along the merge and does not renew along it. (`Becoming.MergeClass.web`, `Becoming.MergeClass.merge`, `Becoming.MergeClass.first_renews`, `Becoming.MergeClass.first_consumes_along`, `Becoming.MergeClass.readings`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Tenure and undermining along a continuation: a dependence's tenure is read along links across which it holds, with nothing asked of activity, and undermining along a continuation is drawing after which a condition is below a dependence's present need and below a need met along the continuation while it held. Along each formation continuing itself they are tenure and undermining as named. (`Becoming.Web.Linked`, `Becoming.Web.holdingOn`, `Becoming.Web.MetAboveAlong`, `Becoming.Web.UnderminingAlong`, `Becoming.Web.Linked.itself_held`, `Becoming.Web.Linked.itself_onward`, `Becoming.Web.exists_steps_between`, `Becoming.Web.metAboveAlong_itself_iff`, `Becoming.Web.underminingAlong_itself_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Tenure and undermining along a continuation are unchanged by every re-identification carrying it; more links never remove undermining or consuming, and fewer never remove renewing. (`Becoming.Web.Linked.of_carry`, `Becoming.Web.Linked.to_carry`, `Becoming.Web.metAboveAlong_reidentify`, `Becoming.Web.underminingAlong_reidentify`, `Becoming.Web.Linked.mono`, `Becoming.Web.Continuing.mono`, `Becoming.Web.underminingAlong_mono`, `Becoming.Web.consumingAlong_mono`, `Becoming.Web.renewingAlong_mono`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

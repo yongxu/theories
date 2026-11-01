@@ -107,6 +107,8 @@ import Becoming.Presence
 import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
+import Becoming.BlanketWeights
+import Becoming.BlanketCouplings
 import Becoming.LumpedSeeking
 import Becoming.FreeEnergyCounting
 import Becoming.ModelStatements
@@ -137,6 +139,8 @@ import Becoming.EdgeClosure
 import Becoming.SeedReach
 import Becoming.ScopedReach
 import Becoming.Boundaries
+import Becoming.ConveyanceBoundaries
+import Becoming.BalanceRegions
 import Becoming.Weightings
 import Becoming.Relevance
 import Becoming.Testing
@@ -358,6 +362,7 @@ import Becoming.GrammarRegularity
 import Becoming.ProcessRepresentation
 import Becoming.GrammarScope
 import Becoming.GrammarCases
+import Becoming.GrammarCrossing
 import Becoming.PremiseWitnesses
 import Becoming.GrammarPath
 import Becoming.SignificanceStatements
@@ -1669,6 +1674,45 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   conditioning on it (`Blanket.point_is_restrict`), under which it is of least surprisal
   (`Blanket.least_surprisal`); a listed outcome is forbidden exactly where its weight is nothing
   (`Blanket.forbids_iff`). A leaf importing `Becoming.ConditionalWeights` (board item UE18).
+* `Becoming.BlanketWeights` (L1): the free-energy principle's statistical blanket, conditional
+  independence given the blanket at a steady state, and what holds it. On natural weights of internal,
+  blanket and external states, independence given the blanket on the theory's conditioning
+  (`BlanketWeights.IndependentGiven`) is the cross form on the listed states, the converse on listings
+  listing each state once (`BlanketWeights.independentGiven_of_crossFormOn`,
+  `BlanketWeights.crossFormOn_of_independentGiven`),
+  `ConditionalWeights.restrict_independent` its case at one blanket state
+  (`BlanketWeights.restrict_independent_case`). Where the internal moves are in detailed balance with a
+  positive weighting, within one closure (`«所闭»`) of moves present at every external state, each such
+  move's rate ratio reading no external state, the weighting is in cross form
+  (`BlanketWeights.crossForm_of_detailedBalance`), Kelly's proof at the internal site, no steady state
+  assumed. Witnesses: a lag relay whose steady weights are not independent given the blanket
+  (`BlanketWeights.LagRelay.not_independentGiven`), a turning chain circulating with them independent
+  (`BlanketWeights.Turning.independentGiven`), moves reading the external state
+  (`BlanketWeights.MovesReadExternal.not_crossForm`), a synchronous kernel whose factors read, by its
+  construction, what the blanketed law lets them read, independent when exact and not with a miss (`BlanketWeights.SynchronousCopy.exact_independentGiven`,
+  `BlanketWeights.SynchronousCopy.noisy_not_independentGiven`), and a blanketed run's occupation
+  weighting (`BlanketWeights.Cycle.not_crossForm`). A leaf importing `Becoming.Blanket` and
+  `Becoming.Flow` (board item UE26); the linear case is the periphery's `LinearBlankets`.
+* `Becoming.BlanketCouplings` (L1): which blanket a thing has, and a formation's couplings as its
+  blanket. Where a formation's couplings give the values of what couples into it, any model fed by them,
+  with any policy and any environment, is the agent of a blanketed law whose sensory course is the
+  formation's own course through its couplings (`BlanketCouplings.sensory_course`), two of its courses
+  from one start alike on the blanket before step n + 2 exactly where their level histories are alike
+  through the couplings up to n (`BlanketCouplings.blanket_iff_through`), and in the open loop every
+  reading of its internal course a selection through them (`BlanketCouplings.internal_selectsThrough`);
+  a construction, not a test, the threshold witness's join its case
+  (`BlanketCouplings.ThresholdCase.threshold_case`). The law a family shows is determined part by part
+  exactly where the family is consistent part by part (`BlanketCouplings.shownBy_blanketDetermined_iff`).
+  When a blanket's existence constrains, at three levels: with parts reading the course every family of
+  courses is the course family of a blanketed law (`BlanketCouplings.clocked_course`,
+  `BlanketCouplings.future_course`), the step alone not enough (`BlanketCouplings.clock_only_fails`); a
+  degenerate reading of the configuration gives every family, or exactly the families whose law is
+  determined, a law determined part by part (`BlanketCouplings.const_consistent`,
+  `BlanketCouplings.whole_iff`), any injective reading only those and not always
+  (`BlanketCouplings.injective_converse_fails`); a sparse partition fixed apart from the family, on a law
+  the same at every step, can be refuted by one run (`BlanketCouplings.ReadsExternal.not_blanketed`). A
+  leaf importing `Becoming.Blanket`, `Becoming.Histories` and `Becoming.IdentificationRuns` (board item
+  UE27).
 * `Becoming.LumpedSeeking` (L1): what seeking cannot separate. Two hypotheses a likelihood ties keep
   their prior order given every record weighing something under them
   (`LumpedSeeking.posterior_le_iff_prior`, `LumpedSeeking.order_kept`); a course of seeking, each
@@ -2730,6 +2774,30 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   N_std. Sub-true along affecting, the presupposition compares every part within the reach
   closure as the continuation condition does, with no invariance. Covering, sub-truth and invariance are
   hypotheses. The readings are the AI's, adopted on Ren's delegation of 15 October 2026.
+* `Becoming.ConveyanceBoundaries` (L2): the World's cut on the root, and 04 §1's law of crossing on
+  07 §4.1's boundaries (board item BD2). `Flow.Cut` is the grammar's `«不出»` at a valuation's
+  relation, by definition (`Flow.cut_iff_notGoingOut`), so a region closed under the relation is a
+  cut and a cut is closed where membership is stable (`Flow.cut_of_closedUnder`,
+  `Flow.closedUnder_of_cut`); conveyance's relation is symmetric, so along it nothing goes out of a
+  region exactly where nothing comes in (`Flow.conveyance_symm`, `Flow.cut_iff_notComingIn`). Under
+  the premises of `Flow.region_not_a_cut` a continuing family's
+  region is no boundary of any event's self along conveyance (`Flow.region_no_boundary`), and not
+  every member's event has its closure along conveyance within the family
+  (`Flow.closures_not_within_region`); in the clearing the resource's region is no boundary along
+  conveyance nor along living on (`Clearing.resource_no_boundary`). A leaf, the World's case of the
+  crossing laws; the cut keeps its definition in `Becoming.Standpoints`.
+* `Becoming.BalanceRegions` (L1): balance region by region, `Becoming.Continuity` read on the root
+  (board item BD3). Adjacency among the listed relata is a symmetric relation of the grammar
+  (`Continuity.adjacentListed`, `Continuity.adjacentListed_symm`); a family the relation closes,
+  membership a test, is exactly a region closed under that adjacency, one not gone out of along it
+  and one not come into (`Continuity.closes_iff_closed`, `Continuity.closes_iff_notGoingOut`,
+  `Continuity.closes_iff_notComingIn`), proved through `GrammarLaws.uncrossed_of_closed`,
+  `«不外者内则不出当且仅当闭»` and `«对称则不出当且仅当逆不出»`. So, over relata listed without repetition, equality
+  decided, transfers along the relation that balance a step exist exactly where the total is
+  conserved on every region not gone out of along that adjacency
+  (`Continuity.balancing_iff_notGoingOut`), and on a web at every step likewise
+  (`Continuity.balancesOn_iff_notGoingOut`). A leaf; balance from conservation on each closure under
+  the adjacency (the `«所闭»` form) is not shown.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
@@ -4262,6 +4330,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
+* `Becoming.GrammarCrossing` (L1): not going out of a region (`«不出»`), for every carrier, relation
+  and region (board item BD2). A closed region is not gone out of (`«闭则不出»`), an occurrence's closure
+  among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going out of a
+  region is exactly the closedness of what is not outside it, with no decision
+  (`«不出当且仅当不外者闭»`); the two coincide where membership is stable (`«不外者内则不出当且仅当闭»`),
+  and that they coincide for every relation and region is exactly excluded middle, a lemma of that
+  law (`«不出皆闭当且仅当排中»`). Nothing comes into a region along a relation exactly where nothing
+  goes out of what lies outside it (`«逆之不出当且仅当外者不出»`); along a symmetric relation nothing
+  goes out exactly where nothing comes in (`«对称则不出当且仅当逆不出»`), and some relation that is not
+  symmetric has a closed region come into (`«闭而有入之例»`). A line under any class from a member to
+  something outside means the region is not one nothing goes out of (`«内至外之线则非不出»`); where
+  every step keeps to the region or goes from a member to something outside, the line has a step going
+  out, placed on the line: `«两端分则中有标»` with keeping to the region as what the ends fail
+  (`«内至外之线有出步»`), every step being of one kind or the other where membership is decided
+  (`«定则内至外之线有出步»`). `«所经必同»` (`Becoming.GrammarPath`) is proved from the last.
 * `Becoming.PremiseWitnesses` (L2, through `Becoming.GrammarCases`): premises met and failed (board
   item DU). The condition on the root varies with the net: at the one, the endless line of descent
   meets `«续无外»` at its first birth and two family lines with nothing between them fail it
@@ -4283,7 +4366,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
-  start (`«所经必同»`, `«所经不同则不及»`). Under a constant class, everything downstream of anything
+  start (`«所经必同»`, proved from a step going out of the region, `Becoming.GrammarCrossing`;
+  `«所经不同则不及»`). Under a constant class, everything downstream of anything
   alike to a member whose effects the class holds (`«所缘同于»`) is alike to it and on a line under the
   class (`«常闭则后皆续»`), and, given constancy, holding the effects is equivalent to that
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,

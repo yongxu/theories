@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T152525.956467Z",
- "core_sources_sha256": "81a218fdccc677e00e3409a7d63e3cec738ee94da4e2ca3aaa3e175cd02803e4",
+ "core_receipt": "20261031T231958.020578Z",
+ "core_sources_sha256": "b0efba00cd716571626a0cabcd2b8654ea0f83c3dfcf9f6c09bfbee85efb348c",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,17 +58,17 @@
   ]
  },
  "counts": {
-  "laws": 3949,
+  "laws": 3993,
   "no_declarations": 9,
-  "outside": 377,
-  "grammar": 766,
+  "outside": 391,
+  "grammar": 777,
   "balance, represented": 646,
   "anchor, not reached": 134,
-  "no master law": 2017,
-  "vocabulary_only": 66,
-  "closure": 479,
-  "balance": 817,
-  "return": 252,
+  "no master law": 2036,
+  "vocabulary_only": 69,
+  "closure": 485,
+  "balance": 819,
+  "return": 253,
   "lumping": 83,
   "order": 80
  },
@@ -945,6 +945,172 @@
      "Becoming.Saturation.course_stops_by",
      "Becoming.Saturation.course_stops_iff",
      "Becoming.Saturation.wearing_stops"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "a-formations-couplings-as-its-blanket": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.BlanketCouplings.couplingLaw",
+     "Becoming.BlanketCouplings.startAt",
+     "Becoming.BlanketCouplings.clock",
+     "Becoming.BlanketCouplings.ownLevels",
+     "Becoming.BlanketCouplings.sensory_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.BlanketCouplings.blanket_iff_through",
+     "Becoming.BlanketCouplings.internal_through_couplings"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.BlanketCouplings.levelsAt",
+     "Becoming.BlanketCouplings.levelsStay",
+     "Becoming.BlanketCouplings.openLoop",
+     "Becoming.BlanketCouplings.open_external",
+     "Becoming.BlanketCouplings.open_levels",
+     "Becoming.BlanketCouplings.internal_selectsThrough"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.BlanketCouplings.ThresholdCase.value",
+     "Becoming.BlanketCouplings.ThresholdCase.lev",
+     "Becoming.BlanketCouplings.ThresholdCase.env",
+     "Becoming.BlanketCouplings.ThresholdCase.update",
+     "Becoming.BlanketCouplings.ThresholdCase.policy",
+     "Becoming.BlanketCouplings.ThresholdCase.band_congr",
+     "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
+     "Becoming.BlanketCouplings.ThresholdCase.values",
+     "Becoming.BlanketCouplings.ThresholdCase.corr",
+     "Becoming.BlanketCouplings.ThresholdCase.own_eq",
+     "Becoming.BlanketCouplings.ThresholdCase.threshold_case"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.BlanketCouplings.PartDependsOnlyOn",
+     "Becoming.BlanketCouplings.partDependsOnlyOn_id_iff",
+     "Becoming.BlanketCouplings.PartConsistentFamily",
+     "Becoming.BlanketCouplings.shownBy_partDependsOnlyOn_iff",
+     "Becoming.BlanketCouplings.PartDependsOnlyOn.of_le",
+     "Becoming.BlanketCouplings.PartConsistentFamily.mono"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.BlanketCouplings.BlanketDetermined",
+     "Becoming.BlanketCouplings.BlanketConsistentFamily",
+     "Becoming.BlanketCouplings.shownBy_blanketDetermined_iff",
+     "Becoming.BlanketCouplings.BlanketDetermined.of_le",
+     "Becoming.BlanketCouplings.BlanketConsistentFamily.mono",
+     "Becoming.BlanketCouplings.admitted_iff",
+     "Becoming.BlanketCouplings.BlanketDetermined.determined"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.BlanketCouplings.blanketed_determined",
+     "Becoming.BlanketCouplings.blanketed_step_alike",
+     "Becoming.BlanketCouplings.blanketed_courses_consistent"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.BlanketCouplings.parts_eq",
+     "Becoming.BlanketCouplings.pair_eq",
+     "Becoming.BlanketCouplings.unit_eq",
+     "Becoming.BlanketCouplings.agentReads",
+     "Becoming.BlanketCouplings.agentParts",
+     "Becoming.BlanketCouplings.worldReads",
+     "Becoming.BlanketCouplings.worldParts"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.BlanketCouplings.clocked",
+     "Becoming.BlanketCouplings.clocked_course",
+     "Becoming.BlanketCouplings.clocked_consistent",
+     "Becoming.BlanketCouplings.parting",
+     "Becoming.BlanketCouplings.clocked_witness",
+     "Becoming.BlanketCouplings.partingLate",
+     "Becoming.BlanketCouplings.clock_only_fails",
+     "Becoming.BlanketCouplings.shift",
+     "Becoming.BlanketCouplings.suffix",
+     "Becoming.BlanketCouplings.suffix_apply",
+     "Becoming.BlanketCouplings.suffix_zero",
+     "Becoming.BlanketCouplings.future",
+     "Becoming.BlanketCouplings.future_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.BlanketCouplings.readFamily",
+     "Becoming.BlanketCouplings.const_consistent",
+     "Becoming.BlanketCouplings.injective_consistent",
+     "Becoming.BlanketCouplings.whole",
+     "Becoming.BlanketCouplings.whole_iff",
+     "Becoming.BlanketCouplings.injective_converse_fails"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.BlanketCouplings.ReadsExternal.Three",
+     "Becoming.BlanketCouplings.ReadsExternal.next",
+     "Becoming.BlanketCouplings.ReadsExternal.isFirst",
+     "Becoming.BlanketCouplings.ReadsExternal.step",
+     "Becoming.BlanketCouplings.ReadsExternal.start",
+     "Becoming.BlanketCouplings.ReadsExternal.run",
+     "Becoming.BlanketCouplings.ReadsExternal.internal_course",
+     "Becoming.BlanketCouplings.ReadsExternal.not_consistent",
+     "Becoming.BlanketCouplings.ReadsExternal.not_blanketed",
+     "Becoming.BlanketCouplings.ReadsExternal.whole_consistent"
     ],
     "master_laws": [],
     "grammar": false,
@@ -4534,6 +4700,23 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Continuity.adjacentListed",
+     "Becoming.Continuity.adjacentListed_symm",
+     "Becoming.Continuity.closes_iff_closed",
+     "Becoming.Continuity.closes_iff_notGoingOut",
+     "Becoming.Continuity.closes_iff_notComingIn",
+     "Becoming.Continuity.balancing_iff_notGoingOut",
+     "Becoming.Continuity.balancesOn_iff_notGoingOut"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "balance-from-the-first-law": [
@@ -11789,6 +11972,34 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Flow.region_no_boundary",
+     "Becoming.Flow.closures_not_within_region",
+     "Becoming.Clearing.resource_no_boundary"
+    ],
+    "master_laws": [
+     "closure",
+     "balance",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Flow.cut_iff_notGoingOut",
+     "Becoming.Flow.cut_of_closedUnder",
+     "Becoming.Flow.closedUnder_of_cut",
+     "Becoming.Flow.conveyance_symm",
+     "Becoming.Flow.cut_iff_notComingIn"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "copied-witnesses-change-nothing": [
@@ -31834,6 +32045,53 @@
     "dependence": "no master law"
    }
   ],
+  "not-going-out-of-a-region": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«不出»",
+     "Becoming.«闭则不出»",
+     "Becoming.«所闭不出»",
+     "Becoming.«不出当且仅当不外者闭»",
+     "Becoming.«不外者内则不出当且仅当闭»"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«逆之不出当且仅当外者不出»",
+     "Becoming.«对称则不出当且仅当逆不出»",
+     "Becoming.«闭而有入之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«内至外之线则非不出»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.«内至外之线有出步»",
+     "Becoming.«定则内至外之线有出步»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "observation-is-a-route": [
    {
     "law": 1,
@@ -46506,6 +46764,489 @@
     "dependence": "no master law"
    }
   ],
+  "the-blanket-at-a-steady-state": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.BlanketWeights.CrossForm",
+     "Becoming.BlanketWeights.DetailedBalance",
+     "Becoming.BlanketWeights.cross_of_move",
+     "Becoming.BlanketWeights.ratio_of_cross",
+     "Becoming.BlanketWeights.cross_trans",
+     "Becoming.BlanketWeights.pos_of_mul_eq"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.BlanketWeights.cross_of_closure",
+     "Becoming.BlanketWeights.crossForm_of_detailedBalance",
+     "Becoming.BlanketWeights.crossForm_of_detailedBalance_unread",
+     "Becoming.BlanketWeights.ratio_of_crossForm"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.BlanketWeights.internalWeight",
+     "Becoming.BlanketWeights.externalWeight",
+     "Becoming.BlanketWeights.blanketWeight",
+     "Becoming.BlanketWeights.FactorsGiven",
+     "Becoming.BlanketWeights.CrossFormOn",
+     "Becoming.BlanketWeights.crossFormOn_of_crossForm",
+     "Becoming.BlanketWeights.crossForm_of_crossFormOn",
+     "Becoming.BlanketWeights.total_congr_mem",
+     "Becoming.BlanketWeights.total_mul_total",
+     "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
+     "Becoming.BlanketWeights.whole_zero_entry",
+     "Becoming.BlanketWeights.crossFormOn_of_factorsGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.BlanketWeights.atBlanket",
+     "Becoming.BlanketWeights.IndependentGiven",
+     "Becoming.BlanketWeights.mass_whole",
+     "Becoming.BlanketWeights.mass_atBlanket",
+     "Becoming.BlanketWeights.scaled_of_factorsGiven",
+     "Becoming.BlanketWeights.independentGiven_of_factorsGiven",
+     "Becoming.BlanketWeights.factorsGiven_of_independentGiven",
+     "Becoming.BlanketWeights.independentGiven_of_crossFormOn",
+     "Becoming.BlanketWeights.crossFormOn_of_independentGiven",
+     "Becoming.BlanketWeights.independentGiven_of_detailedBalance"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.BlanketWeights.crossForm_product",
+     "Becoming.BlanketWeights.restrict_independent_case"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.BlanketWeights.LagRelay.State",
+     "Becoming.BlanketWeights.LagRelay.rate",
+     "Becoming.BlanketWeights.LagRelay.fullRate",
+     "Becoming.BlanketWeights.LagRelay.weight",
+     "Becoming.BlanketWeights.LagRelay.w",
+     "Becoming.BlanketWeights.LagRelay.flips",
+     "Becoming.BlanketWeights.LagRelay.inflow",
+     "Becoming.BlanketWeights.LagRelay.outflow",
+     "Becoming.BlanketWeights.LagRelay.steady",
+     "Becoming.BlanketWeights.LagRelay.not_independentGiven",
+     "Becoming.BlanketWeights.LagRelay.circulates"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.BlanketWeights.Turning.Phase",
+     "Becoming.BlanketWeights.Turning.rate",
+     "Becoming.BlanketWeights.Turning.same",
+     "Becoming.BlanketWeights.Turning.State",
+     "Becoming.BlanketWeights.Turning.fullRate",
+     "Becoming.BlanketWeights.Turning.w",
+     "Becoming.BlanketWeights.Turning.states",
+     "Becoming.BlanketWeights.Turning.inflow",
+     "Becoming.BlanketWeights.Turning.outflow",
+     "Becoming.BlanketWeights.Turning.steady",
+     "Becoming.BlanketWeights.Turning.circulates",
+     "Becoming.BlanketWeights.Turning.independentGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.BlanketWeights.ReadsDirectly.rate",
+     "Becoming.BlanketWeights.ReadsDirectly.w",
+     "Becoming.BlanketWeights.ReadsDirectly.balanced",
+     "Becoming.BlanketWeights.ReadsDirectly.crossForm",
+     "Becoming.BlanketWeights.ReadsDirectly.reads_external"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.BlanketWeights.MovesReadExternal.rate",
+     "Becoming.BlanketWeights.MovesReadExternal.w",
+     "Becoming.BlanketWeights.MovesReadExternal.balanced",
+     "Becoming.BlanketWeights.MovesReadExternal.joined",
+     "Becoming.BlanketWeights.MovesReadExternal.ratio",
+     "Becoming.BlanketWeights.MovesReadExternal.not_crossForm"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.BlanketWeights.SynchronousCopy.externalStep",
+     "Becoming.BlanketWeights.SynchronousCopy.sensoryStep",
+     "Becoming.BlanketWeights.SynchronousCopy.internalStep",
+     "Becoming.BlanketWeights.SynchronousCopy.kernel",
+     "Becoming.BlanketWeights.SynchronousCopy.states",
+     "Becoming.BlanketWeights.SynchronousCopy.exactWeight",
+     "Becoming.BlanketWeights.SynchronousCopy.noisyWeight",
+     "Becoming.BlanketWeights.SynchronousCopy.exactW",
+     "Becoming.BlanketWeights.SynchronousCopy.noisyW",
+     "Becoming.BlanketWeights.SynchronousCopy.exact_steady",
+     "Becoming.BlanketWeights.SynchronousCopy.noisy_steady",
+     "Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven",
+     "Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.BlanketWeights.Cycle.law",
+     "Becoming.BlanketWeights.Cycle.start",
+     "Becoming.BlanketWeights.Cycle.run",
+     "Becoming.BlanketWeights.Cycle.w",
+     "Becoming.BlanketWeights.Cycle.periodic",
+     "Becoming.BlanketWeights.Cycle.not_crossForm"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.BlanketWeights.Uncovered.w",
+     "Becoming.BlanketWeights.Uncovered.crossFormOn",
+     "Becoming.BlanketWeights.Uncovered.not_crossForm"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "the-blanket-in-a-linear-steady-state": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+     "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+     "Becoming.LinearBlankets.helmholtz_unique",
+     "Becoming.LinearBlankets.entry_symm",
+     "Becoming.LinearBlankets.entry_anti"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.helmholtz_of_lyapunov",
+     "Becoming.LinearBlankets.lyapunov_of_helmholtz",
+     "Becoming.LinearBlankets.helmholtz_unique",
+     "Becoming.LinearBlankets.entry_symm",
+     "Becoming.LinearBlankets.entry_anti"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LinearBlankets.row_zero_iff",
+     "Becoming.LinearBlankets.drift_zero_iff",
+     "Becoming.LinearBlankets.zero_iff_solenoidal"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.row_zero_iff",
+     "Becoming.LinearBlankets.drift_zero_iff",
+     "Becoming.LinearBlankets.zero_iff_solenoidal"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LinearBlankets.quad_antisymm",
+     "Becoming.LinearBlankets.precision_zero_of_autonomous",
+     "Becoming.LinearBlankets.precision_zero_of_footnote13"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.quad_antisymm",
+     "Becoming.LinearBlankets.precision_zero_of_autonomous",
+     "Becoming.LinearBlankets.precision_zero_of_footnote13"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.LinearBlankets.TermwiseUnread",
+     "Becoming.LinearBlankets.unread_zero",
+     "Becoming.LinearBlankets.reverse_through_third",
+     "Becoming.LinearBlankets.reads_nothing_of_unread"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.TermwiseUnread",
+     "Becoming.LinearBlankets.unread_zero",
+     "Becoming.LinearBlankets.reverse_through_third",
+     "Becoming.LinearBlankets.reads_nothing_of_unread"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.LinearBlankets.LagRelay.B",
+     "Becoming.LinearBlankets.LagRelay.BT",
+     "Becoming.LinearBlankets.LagRelay.S",
+     "Becoming.LinearBlankets.LagRelay.P",
+     "Becoming.LinearBlankets.LagRelay.Q",
+     "Becoming.LinearBlankets.LagRelay.transpose_B",
+     "Becoming.LinearBlankets.LagRelay.lyapunov",
+     "Becoming.LinearBlankets.LagRelay.inverse",
+     "Becoming.LinearBlankets.LagRelay.helmholtz",
+     "Becoming.LinearBlankets.LagRelay.sparse",
+     "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+     "Becoming.LinearBlankets.LagRelay.circulates",
+     "Becoming.LinearBlankets.LagRelay.not_termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.LagRelay.B",
+     "Becoming.LinearBlankets.LagRelay.BT",
+     "Becoming.LinearBlankets.LagRelay.S",
+     "Becoming.LinearBlankets.LagRelay.P",
+     "Becoming.LinearBlankets.LagRelay.Q",
+     "Becoming.LinearBlankets.LagRelay.transpose_B",
+     "Becoming.LinearBlankets.LagRelay.lyapunov",
+     "Becoming.LinearBlankets.LagRelay.inverse",
+     "Becoming.LinearBlankets.LagRelay.helmholtz",
+     "Becoming.LinearBlankets.LagRelay.sparse",
+     "Becoming.LinearBlankets.LagRelay.precision_nonzero",
+     "Becoming.LinearBlankets.LagRelay.circulates",
+     "Becoming.LinearBlankets.LagRelay.not_termwise"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LinearBlankets.Circulating.P",
+     "Becoming.LinearBlankets.Circulating.Q",
+     "Becoming.LinearBlankets.Circulating.B",
+     "Becoming.LinearBlankets.Circulating.helmholtz",
+     "Becoming.LinearBlankets.Circulating.antisymmetric",
+     "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+     "Becoming.LinearBlankets.Circulating.not_termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Circulating.P",
+     "Becoming.LinearBlankets.Circulating.Q",
+     "Becoming.LinearBlankets.Circulating.B",
+     "Becoming.LinearBlankets.Circulating.helmholtz",
+     "Becoming.LinearBlankets.Circulating.antisymmetric",
+     "Becoming.LinearBlankets.Circulating.circulates_and_precision_zero",
+     "Becoming.LinearBlankets.Circulating.not_termwise"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.LinearBlankets.Unsparse.P",
+     "Becoming.LinearBlankets.Unsparse.Q",
+     "Becoming.LinearBlankets.Unsparse.B",
+     "Becoming.LinearBlankets.Unsparse.helmholtz",
+     "Becoming.LinearBlankets.Unsparse.antisymmetric",
+     "Becoming.LinearBlankets.Unsparse.precision_zero_and_read"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Unsparse.P",
+     "Becoming.LinearBlankets.Unsparse.Q",
+     "Becoming.LinearBlankets.Unsparse.B",
+     "Becoming.LinearBlankets.Unsparse.helmholtz",
+     "Becoming.LinearBlankets.Unsparse.antisymmetric",
+     "Becoming.LinearBlankets.Unsparse.precision_zero_and_read"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.LinearBlankets.mode",
+     "Becoming.LinearBlankets.mode_stationary",
+     "Becoming.LinearBlankets.mode_unread_iff"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.mode",
+     "Becoming.LinearBlankets.mode_stationary",
+     "Becoming.LinearBlankets.mode_unread_iff"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.LinearBlankets.Part",
+     "Becoming.LinearBlankets.SparseCoupling",
+     "Becoming.LinearBlankets.euler",
+     "Becoming.LinearBlankets.euler_congr",
+     "Becoming.LinearBlankets.Coords",
+     "Becoming.LinearBlankets.glue",
+     "Becoming.LinearBlankets.split",
+     "Becoming.LinearBlankets.eulerLaw",
+     "Becoming.LinearBlankets.glue_split_of_ne_external",
+     "Becoming.LinearBlankets.glue_split_of_ne_internal",
+     "Becoming.LinearBlankets.split_euler",
+     "Becoming.LinearBlankets.split_euler_iterate",
+     "Becoming.LinearBlankets.euler_agent_through_sensory"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Part",
+     "Becoming.LinearBlankets.SparseCoupling",
+     "Becoming.LinearBlankets.euler",
+     "Becoming.LinearBlankets.euler_congr",
+     "Becoming.LinearBlankets.Coords",
+     "Becoming.LinearBlankets.glue",
+     "Becoming.LinearBlankets.split",
+     "Becoming.LinearBlankets.eulerLaw",
+     "Becoming.LinearBlankets.glue_split_of_ne_external",
+     "Becoming.LinearBlankets.glue_split_of_ne_internal",
+     "Becoming.LinearBlankets.split_euler",
+     "Becoming.LinearBlankets.split_euler_iterate",
+     "Becoming.LinearBlankets.euler_agent_through_sensory"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.LinearBlankets.emRun",
+     "Becoming.LinearBlankets.em_agent_through_sensory"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.emRun",
+     "Becoming.LinearBlankets.em_agent_through_sensory"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.LinearBlankets.em_steady",
+     "Becoming.LinearBlankets.precision_zero_of_drift",
+     "Becoming.LinearBlankets.em_keeps_four_part",
+     "Becoming.LinearBlankets.em_active_external"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.em_steady",
+     "Becoming.LinearBlankets.precision_zero_of_drift",
+     "Becoming.LinearBlankets.em_keeps_four_part",
+     "Becoming.LinearBlankets.em_active_external"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.LinearBlankets.Autonomous.part",
+     "Becoming.LinearBlankets.Autonomous.P",
+     "Becoming.LinearBlankets.Autonomous.Q",
+     "Becoming.LinearBlankets.Autonomous.B",
+     "Becoming.LinearBlankets.Autonomous.helmholtz",
+     "Becoming.LinearBlankets.Autonomous.antisymmetric",
+     "Becoming.LinearBlankets.Autonomous.sparse",
+     "Becoming.LinearBlankets.Autonomous.autonomous",
+     "Becoming.LinearBlankets.Autonomous.precision_zero",
+     "Becoming.LinearBlankets.Autonomous.circulates",
+     "Becoming.LinearBlankets.Autonomous.termwise"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Autonomous.part",
+     "Becoming.LinearBlankets.Autonomous.P",
+     "Becoming.LinearBlankets.Autonomous.Q",
+     "Becoming.LinearBlankets.Autonomous.B",
+     "Becoming.LinearBlankets.Autonomous.helmholtz",
+     "Becoming.LinearBlankets.Autonomous.antisymmetric",
+     "Becoming.LinearBlankets.Autonomous.sparse",
+     "Becoming.LinearBlankets.Autonomous.autonomous",
+     "Becoming.LinearBlankets.Autonomous.precision_zero",
+     "Becoming.LinearBlankets.Autonomous.circulates",
+     "Becoming.LinearBlankets.Autonomous.termwise"
+    ]
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+     "Becoming.LinearBlankets.Autonomous.emA",
+     "Becoming.LinearBlankets.Autonomous.emS",
+     "Becoming.LinearBlankets.Autonomous.emM",
+     "Becoming.LinearBlankets.Autonomous.emS_steady",
+     "Becoming.LinearBlankets.Autonomous.emS_inverse",
+     "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+     "Becoming.LinearBlankets.Autonomous.still_sparse",
+     "Becoming.LinearBlankets.Autonomous.em_keeps",
+     "Becoming.LinearBlankets.Autonomous.em_loses_active_external"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.Autonomous.em_coupling_form",
+     "Becoming.LinearBlankets.Autonomous.emA",
+     "Becoming.LinearBlankets.Autonomous.emS",
+     "Becoming.LinearBlankets.Autonomous.emM",
+     "Becoming.LinearBlankets.Autonomous.emS_steady",
+     "Becoming.LinearBlankets.Autonomous.emS_inverse",
+     "Becoming.LinearBlankets.Autonomous.em_loses_internal_external",
+     "Becoming.LinearBlankets.Autonomous.still_sparse",
+     "Becoming.LinearBlankets.Autonomous.em_keeps",
+     "Becoming.LinearBlankets.Autonomous.em_loses_active_external"
+    ]
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.LinearBlankets.ThreePart.P",
+     "Becoming.LinearBlankets.ThreePart.S",
+     "Becoming.LinearBlankets.ThreePart.symm",
+     "Becoming.LinearBlankets.ThreePart.inverse",
+     "Becoming.LinearBlankets.ThreePart.inverse'",
+     "Becoming.LinearBlankets.ThreePart.steady",
+     "Becoming.LinearBlankets.ThreePart.no_four_part",
+     "Becoming.LinearBlankets.ThreePart.em_loses_zero"
+    ],
+    "outside": [
+     "Becoming.LinearBlankets.ThreePart.P",
+     "Becoming.LinearBlankets.ThreePart.S",
+     "Becoming.LinearBlankets.ThreePart.symm",
+     "Becoming.LinearBlankets.ThreePart.inverse",
+     "Becoming.LinearBlankets.ThreePart.inverse'",
+     "Becoming.LinearBlankets.ThreePart.steady",
+     "Becoming.LinearBlankets.ThreePart.no_four_part",
+     "Becoming.LinearBlankets.ThreePart.em_loses_zero"
+    ]
+   }
+  ],
   "the-boundary-of-enough-under-undetermined-laws": [
    {
     "law": 1,
@@ -60117,33 +60858,33 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, exact and moved are counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
      "standing": "amounts",
      "basis": {
-      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening, read at the model off giving and level only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each offspring's value its parent's, is counting, while inactive makes the members of groups lower in the trait inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate's premise that only active relata give (K3) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
-     "standing": "amounts",
+     "standing": "counting",
      "basis": {
-      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+      "en": "Price's partition over listed generations with exact transmission of an arbitrary trait map: its statement reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of SelectionLevels.levels_sized equates each group's length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
     },
     {
      "declaration": "Becoming.Reproduction.Flow.number_within_take",
@@ -60312,7 +61053,8 @@
    "reviews": [
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY-SECOND.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
    ],
    "laws": [
     "Becoming.RootForms.GivenTo",
@@ -60362,11 +61104,11 @@
   "counts": {
    "derived": 10,
    "under a stated hypothesis": 1,
-   "counting": 6,
+   "counting": 7,
    "connected": 22,
    "witnessed at its model": 0,
    "balance in its statement": 32,
-   "amounts": 19,
+   "amounts": 18,
    "at a represented model": 16,
    "own carrier": 7,
    "at its model": 2,
@@ -60375,8 +61117,8 @@
   },
   "groups": {
    "on the edge": 11,
-   "below the grammar": 6,
-   "distances": 101,
+   "below the grammar": 7,
+   "distances": 100,
    "unplaced": 0
   },
   "derived_by_forwarder": [],
@@ -60397,7 +61139,7 @@
     "reaching the grammar": 0,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
-    "the rest": 6
+    "the rest": 7
    },
    "connected": {
     "reaching the grammar": 22,
@@ -60421,7 +61163,7 @@
     "reaching the grammar": 0,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
-    "the rest": 19
+    "the rest": 18
    },
    "at a represented model": {
     "reaching the grammar": 0,
@@ -60483,7 +61225,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "929b1afc3f1afa8de06504aff8d814b268e3f89c1d318f327f4ba2e45168a664",
+   "modules_sha256": "445667e607a02d976327ea7cce2aa6dbf32e8bcce7063bb030d0e8620e31e6c4",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },
@@ -61432,9 +62174,9 @@
      "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
      "standing": "amounts",
      "basis": {
-      "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+      "en": "The gate and descent stand as two inclusions in lever 2's weakening, read at the model off giving and level only (positive giving, coming to stand). Of its hypotheses on the trait, exact transmission at the step, each offspring's value its parent's, is counting, while inactive makes the members of groups lower in the trait inactive and so ties its values to the dynamics. Its list facts are counting. It is not counting, since it uses the gate's premise that only active relata give (K3) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation and inactive keep its lever 2 scratch form rises_iff_inactive_on_root (LEVER-2-AUDIT §4; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62096,7 +62838,7 @@
     }
    },
    "Becoming.SelectionLevels.rises_exact_iff_levels": {
-    "label": "amounts",
+    "label": "counting",
     "placed": "reading",
     "rule": "unplaced",
     "f5": "the rest",
@@ -62109,11 +62851,11 @@
     },
     "entry": {
      "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
-     "standing": "amounts",
+     "standing": "counting",
      "basis": {
-      "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
+      "en": "Price's partition over listed generations with exact transmission of an arbitrary trait map: its statement reaches nothing of the dynamics, and exact transmission equates values of that map, as the common multiple of SelectionLevels.levels_sized equates each group's length times its factor with n (U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62133,9 +62875,9 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, exact and moved are counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
@@ -62155,9 +62897,9 @@
      "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
      "standing": "amounts",
      "basis": {
-      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
+      "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of an arbitrary trait map over generations. Of its hypotheses on the trait, unlowered is counting, while top orders the trait at the supported members and so ties its values to the dynamics. It is not counting, since it uses the gate (K3's premises) and descent in the flow as hypotheses; its hypotheses on the trait's values keep it off standing 2, as cancellation keeps lever 2's scratch form rises_cancel_iff_levels (LEVER-2-AUDIT §3; U4b, COUNTING-AND-AMOUNTS.md)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
      "verified": true
     }
    },
