@@ -2899,8 +2899,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   decided, transfers along the relation that balance a step exist exactly where the total is
   conserved on every region not gone out of along that adjacency
   (`Continuity.balancing_iff_notGoingOut`), and on a web at every step likewise
-  (`Continuity.balancesOn_iff_notGoingOut`). A leaf; balance from conservation on each closure under
-  the adjacency (the `«所闭»` form) is not shown.
+  (`Continuity.balancesOn_iff_notGoingOut`). Each closure under that adjacency, the grammar's
+  `«所闭»`, is decided as a test among the listed relata by a counting bound
+  (`Continuity.closureListed`, `Continuity.closureListed_iff`), and the transfers exist exactly
+  where the total is conserved on the closure of each listed relatum
+  (`Continuity.balancing_iff_closures`, on a web `Continuity.balancesOn_iff_closures`; board item
+  BD4), the uncapacitated, undirected case of the feasibility conditions for flows. At the unit
+  grain, a pairing under the closure of a symmetric relation whose closure a test decides is the
+  count kept on each closure (`Continuity.pairing_iff_closure_counts`), a case of
+  `«类之对当且仅当类类等数»`; along the listed adjacency, on the closure of each relatum, listed or
+  not (`Continuity.pairing_iff_closures`). So, the levels read as units on their relata, each
+  listed relatum repeated as often as its level (`Continuity.unitsOn`), the transfers exist exactly
+  where the units before pair one to one with the units after under the closure
+  (`Continuity.balancing_iff_units_paired`), though not always along one step of the adjacency
+  (`Continuity.PathOfThree.counts_kept_not_along_step`). A leaf.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
