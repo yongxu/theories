@@ -1,83 +1,100 @@
 # OG: an organism on the root — design
 
-AI-written design, 1 November 2026, by OU's owner. Nothing here is proved yet. Every reading is an AI reading until its Lean is checked. Reading time: about 12 minutes.
+AI-written design, 1 November 2026, by OU's owner. Second draft, after one independent reading ([REVIEW-1.md](REVIEW-1.md)), all ten of whose findings are taken. Nothing here is proved yet. Every reading is an AI reading until its Lean is checked. Reading time: about 12 minutes.
 
 ## 0. Why this item
 
-Plan §十三 item 9 asks that each test system of plan §六 have its model, on which the grammar's 续 and 时 give the right distinctions, or that the shortfall be written. The one page names two systems with no model yet: an organism and an institution. 01 §8.7 has small witnesses for decay and for overlapping identities, and narrower stand-ins for descent and belief. The rooms (OU7 part B, 03 §3, `rooms-tested-by-a-window`) tell regulation from equilibrium. Under a draw, the thermostat answers and the unheated room does not.
+Plan §十三 item 9 asks that each test system of plan §六 have its model, on which the grammar's 续 and 时 give the right distinctions, or that the shortfall be written. The one page names two systems with no model yet: an organism and an institution.
 
-The rooms do not tell an organism from a thermostat. The heater lies outside the room: nothing in the room keeps it. And the grammar's flame (`«以核为判据则火无续»`, `«火薪相须»`) keeps by being fed and reads nothing. This item asks what the root tells apart among a flame, a room at equilibrium, a thermostat and an organism. It also asks whether those distinctions come from laws the package already has.
+What the package already has, which this item builds on and does not repeat:
 
-## 1. The guess, to be tested
+- **03 §3, the rooms** (`rooms-tested-by-a-window`, landing with OU7): they tell regulation from equilibrium by a draw. The heater is a parameter of the rule, not a part of the net, and nothing keeps it.
+- **04 §8** (`LivingOrganizationCorrespondence`): a closed pool of recipes with gate laws, distinguishing an organism from its supporting relations within one history.
+- **02's feeding closure** (`r-feeding-closure`) and **03's** `where-a-formations-acts-return`: the loops by which a formation conditions itself. The thermostat meets the second, since the room's temperature conditions the reading at the next step (01-ROOT line 35).
+- **The grammar's flame** (`«火薪相须»`, `«以核为判据则火无续»`): fire and fuel need each other, both ways. So a cycle between a part and what it feeds on does not mark an organism off from a flame.
 
-**Guess** [AI reading]. What an organism has, and a flame and a thermostat lack, is **a reader kept by what it reads**. The coupling that answers a draw on the level is itself renewed from the level. So the reader and the level condition each other.
+## 1. The guess, restated
 
-On the root that is a cycle of 缘 at the kind grain (`«粗»`, the coarse net between classes). Where the coarse net has a cycle, reach is not a strict order there (`«无环则及为序»` needs no cycle). The reader's kind and the level's kind are one co-present cluster, which 时 reads as simultaneous. On this guess an organism is one formation at that grain, not a regulator plus what it regulates.
+**Guess** [AI reading]. What an organism has, and a flame and a thermostat lack, is **a reader with its own continuation, turned over and rebuilt from the level it reads**. Its units each last a span longer than one step and then end; new units are made only from the level.
 
-**Correspondences** (named, not warrant): autopoiesis (Maturana and Varela), closure of constraints (Montévil and Mossio 2015), and Rosen's closure to efficient causation. Each says that an organism produces the constraints that keep it. The guess is the root's form of that claim. Whether it is the same claim is a correspondence duty, not shown here.
+What this changes in the course is the guess's whole content. Under a cut in the supply, the reader's end comes at a horizon set by the stock, and once the reader has ended, the organism does not begin again, whether the supply returns or not. A cycle at the kind grain is not the criterion. The flame and the thermostat have cycles too.
 
-## 2. One rule, four nets
+**Correspondences** (named, not warrant). The family's organism is a minimal case of self-maintenance: one constraint, with turnover, regenerated from the flow it regulates. It lies below each of these, and is not their form on the root:
 
-Everything is in whole units with discrete steps, on the pattern of the rooms: one rule makes a family, and the members are compared as rules, side by side.
+- **Closure of constraints** (Montévil and Mossio 2015) asks for at least two constraints that depend on each other. The level is a flow, not a constraint.
+- **Autopoiesis** (Maturana and Varela) asks for a boundary the network produces. Here the boundary is given.
+- **Closure to efficient causation** (Rosen) asks that every efficient cause be produced within. Here the rebuild rule is given.
 
-- **State:** a level `L`, which is the stock within the region; a reader count `r`; a supply across the boundary, available or cut.
-- **One step:**
-  1. A draw takes one unit of `L`. That is dissipation, and an open window draws one more.
-  2. Each reader unit takes one unit from the supply wherever `L` is below its set level `m`. This is the reading.
-  3. Reader turnover:
-     - each reader unit ends after a fixed span;
-     - where `L ≥ 1` and `r` is below its set count, one unit of `L` becomes a reader unit.
+## 2. One rule, a family of nets
 
-Four members of the family, by parameter:
+Everything is in whole units with discrete steps.
 
-| member | reader | what keeps the reader |
+**Occurrences are states.** A state holds:
+- the level `L`;
+- the reader as a list of unit ages, each below the span `s`, so units are tracked one by one and a fixed span is exact;
+- the supply's phase, on or cut.
+
+**The net of the possible branches** at each step on whether the supply is cut, or returns once cut. The return is a branch of the net, not a parameter. This is the rooms' device of the window as an alternative.
+
+**One step, in this order** (the order is stated because the rooms show that it matters, `before_window_moves`):
+1. **Draw.** One unit of `L` is lost to a sink, a listed relatum with its own amount.
+2. **Read.** While the supply is on, each reader unit takes one unit from the supply wherever `L` is below its set level `m`.
+3. **Age.** Every unit ages by one, and a unit at age `s` ends.
+4. **Rebuild.** Where the reader is below its set count `n`, one new unit is made from the rebuild's source.
+
+The members differ only in step 4's source, and in the flame's intake:
+
+| member | reader | rebuild source |
 |---|---|---|
-| (a) flame | none; it takes a fixed amount from the supply while `L > 0`, reading nothing | — |
-| (b) room at equilibrium | none, and no intake | — |
-| (c) thermostat | fixed count, with no turnover and no rebuild | nothing in the net; given |
-| (d) organism | turned over, and rebuilt from `L` | the level's own draw on the supply |
+| (a) flame | none; intake a fixed `f` from the supply while `L > 0` | — |
+| (b) equilibrium | none; the draw and an intake of one balance at `m`, so the level rests while the supply is on | — |
+| (c) given reader | span unbounded | none needed |
+| (c′) rebuilt from the supply | span `s` | the supply, one unit, while it is on |
+| (c″) never rebuilt | span `s` | none |
+| (d) organism | span `s` | the level, one unit, where `L ≥ 1` |
 
-## 3. The distinctions to derive
+The rooms' `exchange` is not reused. In this rule the draw is one way, toward the sink, and (b) is at rest only through its intake. The rooms are cited as the analogue. Their stage law is not claimed as an instance.
 
-Each is a theorem target. Each names the law of the package it instantiates. Where it needs a new law, it says so.
+## 3. The laws to prove
 
-- **T1 Turnover** (02's thesis "an organism through its cells"): in (d), at every positive margin with supply, the line under the organism's class goes on while every reader unit's line ends. This is continuation without carrier identity: carrying, `PatternPassing`, `Web.carrying`.
-- **T2 The window answered:** (c) and (d) restore after every draw within the margin, and (a) and (b) do not. This is the rooms' stage law, read on the family. New only in member (d).
-- **T3 The supply cut:**
-  - (d) degenerates within a horizon its stock sets, and the reader ends with it. This instantiates EL3's horizon law (`degeneration-from-a-horizon`) and EL2's regime of a draw on a condition given nothing (`ending-laws-as-regimes-on-a-lineage`).
-  - (c)'s reader outlasts the cut. Once the supply returns, (c) recovers, and (d) does not after its reader has ended: with no reader there is no uptake.
-  - At the organism's class (d) does not come back, while its units go on at a coarser class. That is an instance of `«亡于细者不必亡于粗»`, with the organism's class as the finer grain.
-- **T4 Closure, the conditional law** (new; the item's centre):
-  - In (d), the reader's kind and the level's kind condition each other: a cycle in the coarse net.
-  - In (c), the coarse net has the reader's kind conditioning the level's kind and not the converse.
-  - On the family: **the reader is kept by the level's draw exactly where the coarse net has a cycle through the reader's kind and the level's kind.** This is "Y 当且仅当 Z", with Z in the grammar, and (c) is a net where Z fails and Y fails with it.
-  - In (d) the two kinds are then co-present at that grain; in (c) the reader's kind is before the level's.
-- **T5 The boundary crossed:**
-  - The organism's region along conveyance is crossed at every step from some step on: 04 §1's law, `conveyance-crosses-the-boundary`, as an instance.
-  - Its amount is not kept on its own region. It is kept only on a closure that holds the supply. That is BD4's balance on two-way closures (01 §9.9, §8.4), as an instance.
-- **T6 Division** (part 2, only if T1–T5 land cleanly): where `L ≥ 2m`, the organism divides. The offspring is a birth at the organism's class and a continuation at the lineage's class: EL1's reading of a revival as a birth at both grains, and 01's line of descent generating at two grains.
+- **L1, the horizon set by the stock (centre, new).** Take any member whose units have a span `s > 1` and whose rebuild draws only on the level. Under a cut of length `k` from a state with level `L₀` and a full reader, the reader's line ends exactly where `k ≥ h(L₀, s)`. Here `h` is given in closed form and is strictly increasing in `L₀`.
+  - Proof by induction on the steps.
+  - **Where the condition fails, so does the law:** (c) never ends; (c′) ends at `k ≥ s`, whatever `L₀` is; (c″) ends with the supply on.
+- **L2, the end is absorbing at the organism's class (new).** In such a member, once the reader's line has ended, the class "reader present and level held" begins again on no branch of the net, the supply returned or not.
+  - **Where it fails:** (c′) recovers after the return, because its rebuild draws on the supply. And (a), with no reader, is absorbing too. So absorption does not mark (d) off from the flame. The pair L1 with L2 does: the flame's going out has no horizon set by a stock of its own maker.
+- **Together, the conditional law on the family.** A member meets L1 and L2 together exactly where its reader has a span above one and is rebuilt from the level alone. Each other member is a net where the condition fails and the conclusion fails with it.
+  - This is a law over the stated family, proved member by member and by the general induction of L1 and L2 on the class of rules the condition picks out. It is not a law of every net.
+- **L3, turnover (an instance).** In (d), at every positive margin with the supply on, the line under the organism's class goes on while every reader unit's line ends. It is reported as an instance of carrying (`PatternPassing`, `Web.carrying`), only if the state net can be read as a `Web`. Otherwise it is a witness on the grammar, and is reported as such.
+- **The window (re-proved, parameter-dependent).** An extra draw of one, as an alternative in the net: (c), (c′) and (d) restore after every draw within the margin. (b) does not. (a) holds exactly where `f` is at least the draw. Stated with its parameters, not as the rooms' law.
+- **Grain, a witness.** The organism's class ends where its matter, counted at the sink, goes on at the coarser class "units of amount". That is a further witness of the existence statement `«亡于细者不必亡于粗»`, not an instance of a universal law.
+
+**Reading of the kind grain** [AI reading]. In (d) the reader's kind and the level's kind form one cluster at the kind grain, with no precedence defined between them (`«俱有»` on `«粗»`, GrammarCandidates). In (c) the same holds, through the reading. So the grain does not tell (c) from (d), and nothing here calls the kinds simultaneous. L1 and L2 tell them apart.
 
 ## 4. What would refute the guess
 
-- **T4's converse fails:** a member with the cycle whose reader is not kept by the draw, or the reverse. The guess is then wrong as stated, and T4's counterexample is the result.
-- **No course tells (c) from (d)** except the cycle: no test on the net, no draw, cut or window, separates them. Then the root tells an organism from a thermostat only structurally, and that shortfall is written as the item's finding. T3's recovery after a cut is the test expected to separate them.
-- **An existing law needs a hypothesis the family fails:** EL3's horizon or BD4's listing, say. The instance is then not available, and the gap is written.
+- **L1 fails for some member meeting the condition:** the horizon does not grow with the stock, say, because the reading order lets the rebuild outrun the drain. The guess is then wrong as stated, and the counterexample is the result.
+- **No course separates (c′) from (d) in the window and the cut together.** Then the root tells the organism from a reader rebuilt from outside only by its rule, and that shortfall is written.
 
-## 5. What is new and what is reused
+## 5. Not claimed now: the World
 
-- **Reused:** the rooms' rule and stage law, which land with OU7; EL2 and EL3; BD4 (after its landing); `PatternPassing`; the grammar's `«粗»`, `«无环则及为序»` and `«亡于细者不必亡于粗»`.
-- **New:** member (d), T4's conditional law and T3's irreversibility. A wrapper of an existing law is not a result. T1, T2 and T5 are instances, reported as instances, and the record counts only T3, T4 and (if it lands) T6 as its laws.
+Three readings would place the family on the World's flows. Each needs the state net embedded there first. The rooms list the same embedding as open.
+
+- **EL3's horizon law** (`degeneration-from-a-horizon`).
+- **04 §1's conveyance** (`conveyance-crosses-the-boundary`). Its conclusion is that the region is from no step on left uncrossed, which is weaker than crossed at every step from some step on. It needs a family taken from at arbitrarily late steps, which the cut branch fails.
+- **BD4's balance on two-way closures.** It needs listed relata and conserved transfers. The rule gives the supply and the sink amounts for that reason, but BD4 has not landed.
+
+EL2's regime of a draw on a condition given nothing does not apply: its draws double, and here the draw is constant. The closer law is the gated run-down at its horizon (EL2 laws 2 and 9). Whether L1 is an instance of it is checked at the Lean, and said either way. All of this is OG's part 2, after the embedding.
 
 ## 6. What it does not do
 
 - **An actual organism:** that (d) describes a cell is a correspondence duty, not a theorem.
-- **Not in the model:** chemistry, real amounts, continuous time.
-- **Development, and more than one reader kind:** not modelled.
-- **An institution:** next, as a separate item. Its guess is that an institution is a rule kept by the members it regulates, the same closure with members as the reader's units. Whether T4 carries over is that item's question.
+- **Not in the model:** chemistry, real amounts, continuous time, development, a produced boundary, two constraints that depend on each other.
+- **Division** (a birth at the organism's class and a continuation at the lineage's) waits for part 2.
+- **An institution:** a separate item. Its guess is a rule turned over and re-made from the members it regulates. Whether L1 and L2 carry over is that item's question.
 
 ## 7. Lean plan
 
-- One pure-core leaf, `Becoming.OrganismNet` (name at claim time). It imports the rooms' module once OU7 has landed, so it starts after OU7. It imports `Init` and the package only, and every axiom report is empty.
-- **Small instances:** decided by `decide` at small margins, as the rooms do. **General laws:** proved by induction on steps.
-- **Record:** `an-organism-kept-by-its-own-reader` (name at claim time), with its home in 04 §8 (Organization within organisms) and a line in 01 §8.7's test systems.
-- **Before any Lean:** one independent reader on this design. Then claim on the board with the head free, scratch Lean, a review of the Lean, and a landing on the coordinator's word.
+- One pure-core leaf, `Becoming.SelfRebuiltReader` (name fixed at claim time). It imports the grammar, not the rooms' module, so it needs nothing from OU7. Every axiom report is empty.
+- **Small members:** decided by `decide` at small spans and stocks. **L1 and L2:** proved by induction on the class of rules the condition picks out.
+- **Record:** `a-reader-rebuilt-from-what-it-reads` (name fixed at claim time), with its home in 04 §8 beside `LivingOrganizationCorrespondence`, and a line in 01 §8.7's test systems.
+- **Then:** claim on the board with the head free; scratch Lean; one reader on the Lean; landing on the coordinator's word.
