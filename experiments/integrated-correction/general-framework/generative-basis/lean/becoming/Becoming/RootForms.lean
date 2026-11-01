@@ -14,7 +14,8 @@ each hypothesis is a named definition that names no model and no amount. Beside 
   hold there and the conclusion fails, and `H` with them.
 
 A recovery, stated at the row's own type (`type_of%`), proves the row through the form at its
-model, and a certificate ties the two by `rfl`.
+model; the type ascription is the check. A certificate equating the two by `rfl` holds by proof
+irrelevance and adds no check of its own.
 
 **What a form shows.** The row's conclusion follows by logic alone from its hypotheses read as
 relations, and none of them can be dropped. It does not show that the row uses the grammar's
@@ -175,7 +176,9 @@ theorem no_new_dependence_at_model : type_of% @Flow.no_new_dependence := by
     (fun _ g ⟨at_x, descent⟩ dependsAfter => inherits g descent (at_x ▸ dependsAfter))
     (fun _ g ⟨_, descent⟩ => none g descent.1) ⟨x, ⟨rfl, comes⟩, depends⟩
 
-/-- The certificate: the recovery states exactly the row. -/
+/-- The certificate: the two sides are proofs of one proposition, so `rfl` closes it by proof
+irrelevance and it cannot fail; that the recovery states exactly the row is checked by its type
+ascription (`type_of%`), not by this equation. -/
 theorem no_new_dependence_certified : @Flow.no_new_dependence = @no_new_dependence_at_model := rfl
 
 /-! ## `GroupEnding.Flow.all_end`: a listing outside the giving region has no offspring -/
@@ -283,7 +286,9 @@ theorem all_end_at_model : type_of% @GroupEnding.Flow.all_end := by
     (fun p k listed => ⟨(descended t p k listed.1 listed.2).1, (descended t p k listed.1 listed.2).2.1⟩)
     inactive
 
-/-- The certificate: the recovery states exactly the row. -/
+/-- The certificate: the two sides are proofs of one proposition, so `rfl` closes it by proof
+irrelevance and it cannot fail; that the recovery states exactly the row is checked by its type
+ascription (`type_of%`), not by this equation. -/
 theorem all_end_certified : @GroupEnding.Flow.all_end = @all_end_at_model := rfl
 
 end RootForms
