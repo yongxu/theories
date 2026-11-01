@@ -1,0 +1,15 @@
+import Becoming.Imbalance
+#check @Becoming.le_of_sub_eq_zero
+#check @Becoming.mem_of_some_mem
+#check @Becoming.Flow.withImbalance_taken
+#check @Becoming.Flow.withImbalance_given
+#check @Becoming.Flow.withImbalance_balances
+#check @Becoming.Flow.withImbalance_balancesOn
+#check @Becoming.Flow.balancesOn_iff_idle
+#check @Becoming.Flow.balances_iff_idle
+#check @Becoming.Flow.withImbalance_acting_at_iff
+#check @Becoming.Flow.withImbalance_taking_at_iff
+#check @Becoming.Flow.withImbalance_acting_taking_on_iff
+#check @Becoming.Flow.withImbalance_acting_iff
+#check @Becoming.Flow.withImbalance_taking_iff
+#check @Becoming.Flow.withImbalance_acting_taking_iff

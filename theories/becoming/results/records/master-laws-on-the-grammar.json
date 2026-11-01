@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "The five shared laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
     "zh": "五条共律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "en": "Lemmas on numbers and lists that the line laws use, each proved once here, below the frame: pigeonhole with no decidability (a list holding the first l.length + 1 values of a sequence holds two at one place), the numbers other than a given one, splitting a joined list, a value put in front of a sequence, totals that agree pointwise, and the filters, searches and counts the census of a step and the count laws need.",
-      "zh": "诸线律所用的数与列表之引理，各于此（框架之下）证一次：无须可判定的鸽笼（持一序列前 l.length + 1 个值之列表在同一位持其二）、异于某一给定数之诸数、拆分相接之列表、置于序列之前的一值、逐点相同之总和，及步之清点与计数之律所需之筛、查与计。",
+      "en": "Lemmas on numbers and lists that the line laws use, each proved once here, below the frame: pigeonhole with no decidability (a list holding the first l.length + 1 values of a sequence holds two at one place), the numbers other than a given one, splitting a joined list, a value put in front of a sequence, totals that agree pointwise, and the filters, searches and counts the census of a step, the census of a run and the count laws need.",
+      "zh": "诸线律所用的数与列表之引理，各于此（框架之下）证一次：无须可判定的鸽笼（持一序列前 l.length + 1 个值之列表在同一位持其二）、异于某一给定数之诸数、拆分相接之列表、置于序列之前的一值、逐点相同之总和，及步之清点、程之清点与计数之律所需之筛、查与计。",
       "declarations": [
         "Becoming.GrammarLaws.length_insert",
         "Becoming.GrammarLaws.length_replicate",
@@ -86,12 +86,17 @@
         "Becoming.GrammarLaws.count_go",
         "Becoming.GrammarLaws.count_eq_countP",
         "Becoming.GrammarLaws.uncrossed_of_closed",
-        "Becoming.GrammarLaws.class_test_congr"
+        "Becoming.GrammarLaws.class_test_congr",
+        "Becoming.GrammarLaws.length_keep",
+        "Becoming.GrammarLaws.count_add_not",
+        "Becoming.GrammarLaws.distinct_keep",
+        "Becoming.GrammarLaws.count_pos_of_mem",
+        "Becoming.GrammarLaws.eq_true_of_not_false"
       ]
     },
     {
-      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional. Counting a region's units (a region read as a test, a modelling choice), a pairing keeps the count on every region the relation does not cross, so on every region closed under it and its converse, closed one way not being enough; under a class decided by a test a pairing is exactly equal count in every class, and the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation relative to such a class keeps the count in every class. The census of a step: units listed once before and after it, under a continuation fixing successors and predecessors, pair those before with those arising to those after with those ceasing, each pair a continuation or the same unit, and where the predecessors of the units after stand before and the successors of the units before stand after, arising and ceasing are beginning and ending. The listing and the test are supplied.",
-      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。计一域之单位（域读作一判别，此为建模之择），配对守其关系所不越之每一域之数，故守对关系及其逆皆封闭之每一域之数，单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。列表与判别皆为所给。",
+      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional. Counting a region's units (a region read as a test, a modelling choice), a pairing keeps the count on every region not gone out of either way, which is exactly a region the relation does not cross and one closed under it and its converse, closed one way not being enough; under a class decided by a test a pairing is exactly equal count in every class, and the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation relative to such a class keeps the count in every class. The census of a step: units listed once before and after it, under a continuation fixing successors and predecessors, pair those before with those arising to those after with those ceasing, each pair a continuation or the same unit, and where the predecessors of the units after stand before and the successors of the units before stand after, arising and ceasing are beginning and ending. Counted, the census needs no decision of identity: under a continuation fixing successors, the units listed once after a step with those a test marks as ceasing are at most the units before with those a test marks as arising, the tests asking only, as far as can be refuted, that a unit marked as ceasing has no successor after and that a unit after not marked as arising has a predecessor before; its mirror holds under a continuation fixing predecessors, and where both are fixed the two meet in the census's count, the tests read off its decision. Along a run, from some step on, the units after each step listed once, nothing splitting and every predecessor of a unit listed after a step listed before it, endings recurring among the listed units need beginnings recurring among the units listed after a step, the beginnings and endings decided by tests. Each is the corollary of a local form beside it that asks no split (no merge) only among the listed units. The listing and the test are supplied.",
+      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。计一域之单位（域读作一判别，此为建模之择），配对守两向皆不出之每一域之数，此域恰是关系所不越者，亦恰是对关系及其逆皆封闭者，单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。计之，清点不须同一之判定：在定后之续下，一步后各列一次之单位并判别所标为亡者，不过步前之单位并判别所标为生者；判别所问，于可驳之限内，唯标为亡者在后无后者、后列未标为生者在前有前者；定前之续下其镜像亦然；两者皆定之处，二者相会于清点之数，判别读自其判定。沿一程，自某步起，各步后之单位各列一次、无分裂、步后所列单位之前者皆列于其前，所列单位中亡屡则步后所列单位中生屡，生与亡由判别所定。每一律为其旁一局部之形之推论，后者只在所列单位之中要求无分裂（无合并）。列表与判别皆为所给。",
       "declarations": [
         "Becoming.«对»",
         "Becoming.«对之长»",
@@ -106,6 +111,8 @@
         "Becoming.«计»",
         "Becoming.«对则不越域守数»",
         "Becoming.«对则双闭域守数»",
+        "Becoming.GrammarLaws.uncrossed_iff_notGoingOut",
+        "Becoming.GrammarLaws.uncrossed_iff_closed",
         "Becoming.«对而单闭域不守数之例»",
         "Becoming.«类之对当且仅当类类等数»",
         "Becoming.«续之对则类类等数»",
@@ -116,7 +123,15 @@
         "Becoming.GrammarLaws.arising",
         "Becoming.GrammarLaws.ceasing",
         "Becoming.GrammarLaws.census_pairs",
-        "Becoming.GrammarLaws.pair_of_class_counts"
+        "Becoming.GrammarLaws.pair_of_class_counts",
+        "Becoming.GrammarLaws.census_le",
+        "Becoming.«定后则后并亡不过前并生»",
+        "Becoming.GrammarLaws.census_le_converse",
+        "Becoming.«定前则前并生不过后并亡»",
+        "Becoming.GrammarLaws.census_count",
+        "Becoming.«定后定前则前并生与后并亡同数»",
+        "Becoming.GrammarLaws.census_run",
+        "Becoming.«定后前者在前则亡屡者生屡»"
       ]
     },
     {
@@ -466,8 +481,8 @@
       "zh": "诸桥于其模型之关系上读每一锚：过程之步、律之映射、水平路径或所列进程之所纳（作为余自反关系）、流之水平与取给（作为单位列表）、量之不升与最小之降（作为步）。"
     },
     {
-      "en": "Counting reads a region, the class counted in and a continuation each as a test to Bool (a modelling choice; a proposition enters by decide), and the census of a step lists the units before and after once each.",
-      "zh": "计数读所计之域、所计之类与续各为取真假值之测（建模之择；命题经判定而入），一步之清点所列前后之单位各只一次。"
+      "en": "Counting reads a region, the class counted in and a continuation each as a test to Bool (a modelling choice; a proposition enters by decide), and the census of a step lists the units before and after once each; counted, the census reads arising and ceasing (along a run, beginnings and endings) by tests on the listed units in place of a test of the continuation.",
+      "zh": "计数读所计之域、所计之类与续各为取真假值之测（建模之择；命题经判定而入），一步之清点所列前后之单位各只一次；计之，清点以所列单位上生起与止息（沿一程则生与亡）之测代续之测。"
     }
   ],
   "does_not_show": [
@@ -559,8 +574,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Lean 4.29.1 core run (receipt 20261031T054654.692180Z): Becoming.GrammarLaws, 175 theorems in 203 declarations; 40 representation and bridge declarations in 14 models; the derivations of OU3c, OU3e and OU3f in 14 more, of HE in Mechanism and of HE2 in Response and SelectionPool; every axiom report empty, all cited. Changed modules' statements as before but for OU3b's two relation laws at any universe, HE2's renames and one law widened. Read-only AI reviews, every finding taken: OU3b and OU3f three each, HE2 two, OU3c to OU3e and HE one each, three with a second pass; no person's review.",
-    "zh": "Lean 4.29.1（回执 20261031T054654.692180Z）：GrammarLaws 203 项声明中 175 条定理；十四模型 40 项表示桥接声明；另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。改动模块陈述如前，唯 OU3b 二关系律推至任一宇宙、HE2 改名与一律之设放宽。只读 AI 审查，所见皆采：OU3b、OU3f 各三，HE2 二，余各一，三项经复审；未经人审。"
+    "en": "Lean 4.29.1 core run (receipt 20261101T094230.205342Z): Becoming.GrammarLaws, 192 theorems in 221 declarations; 40 representation and bridge declarations in 14 models; the derivations of OU3c, OU3e and OU3f in 14 more, of HE in Mechanism and of HE2 in Response and SelectionPool; every axiom report empty, all cited. Changed modules' statements as before but where the history notes say: laws taken to any universe, renames, one law widened, an instance dropped from eight laws. Read-only AI reviews of each item, every finding taken, five with a second pass; no person's review.",
+    "zh": "Lean 4.29.1（回执 20261101T094230.205342Z）：GrammarLaws 221 项声明中 192 条定理；十四模型 40 项表示桥接声明；另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。改动模块陈述如前，唯历史说明所言：推至任一宇宙、改名、放宽一律、八律去一实例。只读 AI 审查各项，所见皆采，五项经复审；未经人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -906,6 +921,8 @@
         "Becoming.GrammarLaws.count_go",
         "Becoming.GrammarLaws.count_eq_countP",
         "Becoming.GrammarLaws.uncrossed_of_closed",
+        "Becoming.GrammarLaws.uncrossed_iff_notGoingOut",
+        "Becoming.GrammarLaws.uncrossed_iff_closed",
         "Becoming.GrammarLaws.class_test_congr",
         "Becoming.«计»",
         "Becoming.«对则不越域守数»",
@@ -921,12 +938,25 @@
         "Becoming.GrammarLaws.ceasing",
         "Becoming.GrammarLaws.census_pairs",
         "Becoming.GrammarLaws.pair_of_class_counts",
+        "Becoming.GrammarLaws.length_keep",
+        "Becoming.GrammarLaws.count_add_not",
+        "Becoming.GrammarLaws.distinct_keep",
+        "Becoming.GrammarLaws.count_pos_of_mem",
+        "Becoming.GrammarLaws.eq_true_of_not_false",
+        "Becoming.GrammarLaws.census_le",
+        "Becoming.«定后则后并亡不过前并生»",
+        "Becoming.GrammarLaws.census_le_converse",
+        "Becoming.«定前则前并生不过后并亡»",
+        "Becoming.GrammarLaws.census_count",
+        "Becoming.«定后定前则前并生与后并亡同数»",
+        "Becoming.GrammarLaws.census_run",
+        "Becoming.«定后前者在前则亡屡者生屡»",
         "Becoming.«定后则类之核同行»",
         "Becoming.«遍后则其内同行之类含于核»",
         "Becoming.«定后遍后则核为其内最粗同行之类»",
         "Becoming.«后不定则核可不同行»"
       ],
-      "sha256": "c0d3b94cd4f95b5602cd69be45b65f655010cfa4c279a259ba148e52b72a5f2d"
+      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -1038,7 +1068,7 @@
         "Becoming.withinClosure_iff_reached",
         "Becoming.withinClosure_of_line"
       ],
-      "sha256": "74f5517bf43f0cc33be0d201f3806e32e97ad14611935d123267cfe8f6987a81"
+      "sha256": "2eb49182ff70b10dfa08581049e06fac198dfef55ba1878149e57ca10405543b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -1081,7 +1111,7 @@
         "Becoming.Flow.over_iff_units",
         "Becoming.total_congr"
       ],
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8"
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -1090,7 +1120,7 @@
         "Becoming.Amounts.falls_end",
         "Becoming.Amounts.rests_unrefuted"
       ],
-      "sha256": "6025329d5dc58597e6feb76454ed4475a58b85b8da981f2ad8143b0153dfddd5"
+      "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
@@ -1247,7 +1277,7 @@
         "Becoming.Web.Lineage.line",
         "Becoming.Web.line_lineage"
       ],
-      "sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4"
+      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
@@ -1490,12 +1520,36 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md",
+      "role": "integration",
+      "sha256": "f77b26a382879ea8b1e50c5f1b1c710d61df74277e16dfb3da0a921747b38213",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md",
+      "role": "review",
+      "sha256": "559323115c7caf7e91171051d85e82425e65d04f92ce4ff95d92fa2db8018774",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
+      "role": "review",
+      "sha256": "6bb6b7a45a7a77c1bab16c7eb4e71f1525a1fc7d84a9f879147ec04e68d03d65",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1551,7 +1605,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1572,14 +1626,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Amounts",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1691,7 +1745,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1755,6 +1809,14 @@
     {
       "en": "1 November 2026, board item ND: renamed from \"the master laws on the grammar\" (文法上的主律), a name stating rank where 08 §7 measures only proof dependence, to \"the shared laws on the grammar\" (文法上的共律); the old names kept as aliases and the id kept as a key; no law, hypothesis or binding changed.",
       "zh": "2026年11月1日，工作板条目 ND：由“文法上的主律”更名为“文法上的共律”；旧名言等级，而 08 §7 所量唯证明之依赖。旧名留为别名，编号留为键；律、假设与绑定皆未改。"
+    },
+    {
+      "en": "1 November 2026, U4c (study section 492): law 4, balance at one step, gains the census counted: the root's census of a step, one side («定后则后并亡不过前并生»), its mirror («定前则前并生不过后并亡»), the two meeting in the count of the paired census («定后定前则前并生与后并亡同数»), and the census of a run («定后前者在前则亡屡者生屡»), each the corollary of a local form asking no split (no merge) only among the listed units (GrammarLaws.census_le, census_le_converse, census_count, census_run), as the first hypothesis says of every global form; law 3 and the GrammarLaws reference gain the five list lemmas they use, in GrammarLaws' namespace, law 3 naming the census of a run, and the third hypothesis says what the counted census tests. U4c's derivations: Listed.coming_of_ceasing, Listed.across_at and Web.Census.balanceFrom_at, re-proved as cases in Population and Identity; its changed statements: three list lemmas moved to the prelude at any universe, and eight census laws of Identity without the instance deciding the continuation; its design and reviews join the references (CENSUS-ON-THE-ROOT.md; REVIEW-U4C.md and REVIEW-U4C-RECORD.md, each with a second pass). The validation scope, at its length, now leaves the list of changed statements to these notes and counts the reviews without listing them by item, each referenced from its item's records. Nothing else the record states changed.",
+      "zh": "2026年11月1日，U4c（研究第 492 节）：律 4（一步之平衡）增计之清点：根上一步之清点之一边（«定后则后并亡不过前并生»）、其镜像（«定前则前并生不过后并亡»）、二者相会于成对清点之数（«定后定前则前并生与后并亡同数»）、一程之清点（«定后前者在前则亡屡者生屡»），各为一局部之形之推论，后者只在所列单位之中要求无分裂（无合并）（GrammarLaws.census_le、census_le_converse、census_count、census_run），如第一假设之言每一全局之形；律 3 与 GrammarLaws 之引用增其所用之五列表引理，在 GrammarLaws 之名下，律 3 名一程之清点，第三假设言计之清点所测。U4c 之推导：Listed.coming_of_ceasing、Listed.across_at 与 Web.Census.balanceFrom_at 改证为其例，在 Population 与 Identity；其所改之陈述：三列表引理移入序章、推至任一宇宙，Identity 八条清点之律去判定延续之实例；其设计与审查入引用（CENSUS-ON-THE-ROOT.md；REVIEW-U4C.md 与 REVIEW-U4C-RECORD.md，皆经复审）。验证范围限于其长，今以改动陈述之列交此诸说明，审查只计其数而不逐项列之，各见引于其项之记录。记录所述余无改变。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): the grammar's owner's items held from BD2 (patches/owner/02-04). «不出», «闭则不出» and «所闭不出» move from GrammarCrossing into GrammarLaws, after «所闭之界», unchanged; not-going-out-of-a-region states them, and here only the validation scope's counts hold them. A region not crossed is exactly one not gone out of either way and one closed both ways (GrammarLaws.uncrossed_iff_notGoingOut, GrammarLaws.uncrossed_iff_closed, BD2's text), so law 4 reads its two count laws as one law on regions not gone out of either way, and its home in 01 §7 says the same: law 4 and the GrammarLaws reference gain the two. The validation scope's receipt and counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：文法之主人于 BD2 所留之项（patches/owner/02-04）。«不出»、«闭则不出» 与 «所闭不出» 自 GrammarCrossing 移入 GrammarLaws，在 «所闭之界» 之后，原样不变；陈之者为 not-going-out-of-a-region，于此唯验证范围之数目含之。关系所不越之域恰是两向皆不出者，亦恰是两向皆闭者（GrammarLaws.uncrossed_iff_notGoingOut、GrammarLaws.uncrossed_iff_closed，BD2 之文），故律 4 读其二守数之律为两向皆不出之域上之一律，其归处 01 §7 亦如是言：律 4 与 GrammarLaws 之引用增此二者。验证范围之回执与数目为收据 20261101T094230.205342Z 者。记录所述余无改变。"
     }
   ]
 }

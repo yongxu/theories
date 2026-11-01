@@ -154,7 +154,8 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/formal/development/prospective-contract/": "The prospective contract as frozen; PROVENANCE.json hashes it.",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/transport/calibration/pre-import/HANDOFF.md": "Handoff before the import; the study's PREIMPORT-EVIDENCE-INTEGRATION and FIXED-FINISH-LINE snapshots hash it.",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/route-diagnostics/revision/formal/development/initial-no-keep/README.original.md": "Original README of the first attempt; provenance.json and ROUTE-REVISION-INTEGRITY.json hash it.",
-      "theories/evolving-community-swarms/context/": "Byte copies of source records in sources/15-codex-theory-conversations/ (the 2026-09-05 and 2026-09-07 evolving-community-swarms records), as the records state."
+      "theories/evolving-community-swarms/context/": "Byte copies of source records in sources/15-codex-theory-conversations/ (the 2026-09-05 and 2026-09-07 evolving-community-swarms records), as the records state.",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/front-refresh/TEXTS.md": "OU's owner's texts for OU7's front refresh, kept as sent: front_refresh.py reads them, and their links are written from theories/becoming/, where the texts land."
     }
   },
   "move_receipts": "_process/architecture/moves",

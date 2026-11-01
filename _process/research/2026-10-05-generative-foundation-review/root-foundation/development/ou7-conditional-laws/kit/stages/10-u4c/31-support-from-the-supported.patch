@@ -1,0 +1,65 @@
+diff --git a/theories/becoming/results/records/support-from-the-supported.json b/theories/becoming/results/records/support-from-the-supported.json
+index c7415c891..343b726aa 100644
+--- a/theories/becoming/results/records/support-from-the-supported.json
++++ b/theories/becoming/results/records/support-from-the-supported.json
+@@ -360,7 +360,6 @@
+         "Becoming.Flow.Acting",
+         "Becoming.Flow.Balances.rise_given",
+         "Becoming.Flow.Balances.renewedBy",
+-        "Becoming.total_pos",
+         "Becoming.Flow.GiversSupported",
+         "Becoming.Flow.Acting.giversSupported",
+         "Becoming.Flow.BalancesOn",
+@@ -393,6 +392,14 @@
+         "Becoming.Flow.still"
+       ]
+     },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
++      "role": "proof",
++      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
++      "declarations": [
++        "Becoming.total_pos"
++      ]
++    },
+     {
+       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+       "role": "receipt",
+@@ -538,6 +545,12 @@
+       "role": "receipt",
+       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
++      "role": "receipt",
++      "sha256": "454895a70d8426e9be5bb054e882f122e77cf257b6071265906122ef7c49f48b",
++      "declarations": []
+     }
+   ],
+   "proof_bindings": [
+@@ -582,6 +595,13 @@
+       "sha256_pointer": "/source_sha256/Becoming.Space",
+       "success_pointer": "/status",
+       "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Prelude",
++      "success_pointer": "/status",
++      "success_value": "passed"
+     }
+   ],
+   "history": [
+@@ -669,6 +689,10 @@
+     {
+       "en": "26 October 2026, board item UE7 (study section 419): a law added, the local gaining law's one first step (Flow.gain_given_by_supported_at), from which gains_from_supported_at is re-proved, its statement unchanged (board rule 9).",
+       "zh": "2026年10月26日，工作板条目 UE7（研究第 419 节）：加入一律，即局部获得之律的第一步（Flow.gain_given_by_supported_at），gains_from_supported_at 由之重证，陈述不变（工作板规则 9）。"
++    },
++    {
++      "en": "{DAY}, U4c (study section {N}): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
++      "zh": "{DAY_ZH}，U4c（研究第 {N} 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+     }
+   ],
+   "text_versions": [

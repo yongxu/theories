@@ -22,16 +22,6 @@
    "category": "general-structure",
    "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
   },
-  "Becoming.«后守退化不并»": {
-   "module": "Becoming.MapRegions",
-   "category": "general-structure",
-   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
-  },
-  "Becoming.«守则后守»": {
-   "module": "Becoming.MapRegions",
-   "category": "general-structure",
-   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
-  },
   "Becoming.«三域之定当且仅当排中»": {
    "module": "Becoming.MapRegions",
    "category": "calibration",
@@ -151,11 +141,6 @@
    "module": "Becoming.RegimeMargin",
    "category": "support",
    "reason": "Arithmetic of two giving laws under one draw: lowered giving raises the least level meeting it, strictly exactly where it falls short at the old one. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
-  },
-  "Becoming.RegimeMargin.harms_superadditive": {
-   "module": "Becoming.RegimeMargin",
-   "category": "support",
-   "reason": "Arithmetic of subadditive giving: the rises of the least levels meeting two draws and their sum satisfy a + b <= c + 1. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
   },
   "Becoming.RegimeMargin.Concave.roots": {
    "module": "Becoming.RegimeMargin",
@@ -2872,11 +2857,6 @@
    "category": "general-structure",
    "reason": "what abides under a finer class abides under a coarser; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
   },
-  "Becoming.«生住不并»": {
-   "module": "Becoming.Grammar",
-   "category": "general-structure",
-   "reason": "beginning and abiding exclude each other; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet (OU3 lifts the continuation family onto it)"
-  },
   "Becoming.«住亡不并»": {
    "module": "Becoming.Grammar",
    "category": "general-structure",
@@ -3122,11 +3102,6 @@
    "category": "model-witness",
    "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
   },
-  "Becoming.Map.Still.keeping": {
-   "module": "Becoming.GrammarMap",
-   "category": "model-witness",
-   "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
-  },
   "Becoming.Map.Still.keeps": {
    "module": "Becoming.GrammarMap",
    "category": "model-witness",
@@ -3197,17 +3172,7 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«全守有终不并»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
   "Becoming.«全生成之所及亦全生成»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
-  "Becoming.«全生成全守不并»": {
    "module": "Becoming.GrammarMap",
    "category": "general-structure",
    "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
@@ -3237,11 +3202,6 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«四相俱时»": {
-   "module": "Becoming.GrammarCandidates",
-   "category": "general-structure",
-   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
-  },
   "Becoming.«因果互即»": {
    "module": "Becoming.GrammarCandidates",
    "category": "general-structure",
@@ -3251,11 +3211,6 @@
    "module": "Becoming.GrammarCandidates",
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
-  },
-  "Becoming.«守退化不并»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
   },
   "Becoming.«尺与尺可相尽»": {
    "module": "Becoming.GrammarCandidates",
@@ -3342,11 +3297,6 @@
    "category": "general-structure",
    "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
   },
-  "Becoming.«有终则粗不有常»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
   "Becoming.«有自不必有他»": {
    "module": "Becoming.GrammarCandidates",
    "category": "model-witness",
@@ -3422,11 +3372,6 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«自缘则常»": {
-   "module": "Becoming.GrammarCandidates",
-   "category": "general-structure",
-   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
-  },
   "Becoming.«至于无共然后止»": {
    "module": "Becoming.GrammarCandidates",
    "category": "general-structure",
@@ -3443,11 +3388,6 @@
    "reason": "a fact about one constructed model: a witness or counterexample of the grammar's laws"
   },
   "Becoming.«薪尽火传»": {
-   "module": "Becoming.GrammarCandidates",
-   "category": "general-structure",
-   "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
-  },
-  "Becoming.«遍而无相»": {
    "module": "Becoming.GrammarCandidates",
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
@@ -3686,11 +3626,6 @@
    "module": "Becoming.GrammarMap",
    "category": "general-structure",
    "reason": "ceasing is ending on every branch of renewing into, read under the one; a law of every relation on any carrier; the base supplies no reading of continuation relative to a class yet"
-  },
-  "Becoming.«昼夜往来不穷»": {
-   "module": "Becoming.GrammarReadings",
-   "category": "model-witness",
-   "reason": "day and night go and come without end"
   },
   "Becoming.«有常而不通»": {
    "module": "Becoming.GrammarReadings",
@@ -5132,11 +5067,6 @@
    "category": "model-witness",
    "reason": "ReadingLoop.Untested.worst_le: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
   },
-  "Becoming.ReadingLoop.everything_good_iff": {
-   "module": "Becoming.ReadingLoop",
-   "category": "general-structure",
-   "reason": "ReadingLoop.everything_good_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
-  },
   "Becoming.ReadingLoop.everything_kept": {
    "module": "Becoming.ReadingLoop",
    "category": "general-structure",
@@ -5157,20 +5087,10 @@
    "category": "general-structure",
    "reason": "ReadingLoop.keeping_policy_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
   },
-  "Becoming.ReadingLoop.keeps_iff_good": {
-   "module": "Becoming.ReadingLoop",
-   "category": "general-structure",
-   "reason": "ReadingLoop.keeps_iff_good: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
-  },
   "Becoming.ReadingLoop.kept_iff_closed": {
    "module": "Becoming.ReadingLoop",
    "category": "general-structure",
    "reason": "ReadingLoop.kept_iff_closed: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
-  },
-  "Becoming.ReadingLoop.nothing_good": {
-   "module": "Becoming.ReadingLoop",
-   "category": "general-structure",
-   "reason": "ReadingLoop.nothing_good: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
   },
   "Becoming.ReadingLoop.nothing_kept": {
    "module": "Becoming.ReadingLoop",
@@ -6408,7 +6328,7 @@
    "reason": "a region a line leaves is not one nothing goes out of, with no decision: a law of every relation and region on any carrier; the base states its cut as «不出» (Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)"
   },
   "Becoming.«所闭不出»": {
-   "module": "Becoming.GrammarCrossing",
+   "module": "Becoming.GrammarLaws",
    "category": "general-structure",
    "reason": "an occurrence's closure is not gone out of, the closure law «所闭之界» read through «不出» and proved as it: a law of every relation and region on any carrier; the base states its cut as «不出» (Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)"
   },
@@ -6711,6 +6631,381 @@
    "module": "Becoming.BlanketCouplings",
    "category": "general-structure",
    "reason": "BlanketCouplings.stepLaw_course: a law of any course read with the step as the external part, or of any web, flow and formation along one balanced run (a formation's level as the internal part); the base supplies no such reading of a formation yet (UE28)"
+  },
+  "Becoming.GrammarLaws.uncrossed_iff_closed": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "GrammarLaws.uncrossed_iff_closed: a region a relation does not cross is one closed under it and under its converse, for every relation on any carrier, the converse of GrammarLaws.uncrossed_of_closed; master-laws-on-the-grammar, law 4"
+  },
+  "Becoming.GrammarLaws.uncrossed_iff_notGoingOut": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "GrammarLaws.uncrossed_iff_notGoingOut: a region a relation does not cross is one not gone out of either way, for every relation on any carrier and every region read as a test; master-laws-on-the-grammar's law 4 reads its two count laws on it as one law"
+  },
+  "Becoming.Listed.coming_iff_excess": {
+   "module": "Becoming.Population",
+   "category": "general-structure",
+   "reason": "Listed.coming_iff_excess: the census law read by excess, for every listing of what holds on any carrier; Listed.coming_of_ceasing went through it until U4c re-proved it through the root's census of a run, and nothing on the base uses it"
+  },
+  "Becoming.ReadingLoop.everything_leadsInto_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.everything_leadsInto_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.keeps_iff_leadsInto": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.keeps_iff_leadsInto: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.nothing_leadsInto": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.nothing_leadsInto: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.RegimeMargin.rises_superadditive": {
+   "module": "Becoming.RegimeMargin",
+   "category": "support",
+   "reason": "Arithmetic of subadditive giving: the rises of the least levels meeting two draws and their sum satisfy a + b <= c + 1. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  },
+  "Becoming.Rooms.Matched.rows": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The matched thermostat's rows of the map at every positive margin: at its set level and once its window opens it keeps, and keeps from some point on, and is neither 生成 nor 全生成 nor 有终 nor 退化. A fact about one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.Matched.start_kept": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The matched thermostat's opening step at every positive margin, from its set level shut to its set level open: a step of one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.Overshooting.generation_strong": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The overshooting thermostat at a margin of three is 全生成 at its set level and at both open occurrences it reaches: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.Overshooting.heater_shifted": {
+   "module": "Becoming.RoomRuns",
+   "category": "model-witness",
+   "reason": "From two on, the overshooting heater gives as RegimeMargin.Alternation's giving shifted by two: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.Overshooting.renewing_steps": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "In the overshooting thermostat at a margin of three, the opening and every open step are carrying renewals and the shut step is not: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.Overshooting.rows": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The overshooting thermostat's rows of the map at a margin of three: at its set level neither 全守 nor 有终 nor 退化; once open it generates and is in no other region. A fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.Overshooting.single_line_tested": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "«单行则生成后守不并» tested both ways on one constructed model: on the open window's single line generating excludes keeping from some point on, and where the net branches the two hold together (OU7)"
+  },
+  "Becoming.Rooms.Unheated.b1_b0": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The unheated room's last open step at a margin of three, from 1 to 0: a step of one constructed model (OU7)"
+  },
+  "Becoming.Rooms.Unheated.rows": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The unheated room's rows of the map at a margin of three: at its set level it keeps from some point on and is in neither strong form, warmth not constant; once open it is in no region of generation or keeping and reaches an end. A fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.alike_in_core_iff": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Within one room of the constructed family, warmth lies in its own core exactly where the heater gives: «温有常当且仅当有给» read through «类有常当且仅当含于核» (OU7)"
+  },
+  "Becoming.Rooms.before_at_one": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The rule read before the exchange takes a heated room at a margin of one out of warmth: a computation on one constructed model (OU7)"
+  },
+  "Becoming.Rooms.before_pos": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Read before the exchange, every step of a heated room lands warm from a margin of two on: a fact about one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.before_unheated": {
+   "module": "Becoming.RoomNet",
+   "category": "support",
+   "reason": "Without a heater the two reading orders are one rule: a one-line unpacking of the rooms' own definitions (OU7)"
+  },
+  "Becoming.Rooms.before_window_moves": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Read before the exchange at a margin of three, the window moves both heated rooms' levels: a computation on one constructed model (OU7)"
+  },
+  "Becoming.Rooms.cold_rests": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Once cold, the unheated room's open occurrence at 0 is 全守 at every margin: a fact about one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.heated_unended": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "In a heated room of the constructed family no line of warmth from the set level ends, and none reaches an end, by «有常则往不穷» (OU7)"
+  },
+  "Becoming.Rooms.heaters_told_apart": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "At a margin of three the first stage of the level tells the two heaters apart: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.joint_converse": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "A counterexample on the constructed rooms side by side: warmth is not constant under the joint net, yet no line of warmth from a heated room's set level ends, so the converse of «有常则往不穷» fails (OU7)"
+  },
+  "Becoming.Rooms.shut_one_class_alike": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "While no window opens, the constructed rooms at their set level are one core class at warm or not, by «核之单调» (OU7)"
+  },
+  "Becoming.Rooms.shut_rests": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "While no window opens, every room of the constructed family is 全守 at its set level, whatever its heater (OU7)"
+  },
+  "Becoming.Rooms.toy_verdict": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "«恒温与平衡»'s verdict derived from the rooms' rule at a margin of one draw, through toy_branches and «开窗以温层如其余乃分» (OU7)"
+  },
+  "Becoming.Rooms.unended_at_one": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "At a margin of one no line of warmth from the set level ends, heater or not: the counterexample showing that «温不穷当且仅当有给» needs a margin of two (OU7)"
+  },
+  "Becoming.Rooms.«平衡守而有终»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The unheated room at a margin of three keeps, reaches an end and renews on the way, and is neither 生成 nor 退化: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.«开窗则一层可分»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "With the window in the net, at every positive margin, the first stage of the level tells the unheated room from every heated one: a fact about one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.«开窗则平衡新而尽»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Once its window opens, the unheated room at a margin of three degenerates while renewing: a fact about one constructed model (OU7)"
+  },
+  "Becoming.Rooms.«有给之室以温不可分»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "Warm or not does not tell two heated rooms of the constructed family apart: one core class at every positive margin (OU7)"
+  },
+  "Becoming.Rooms.«温不穷当且仅当有给»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "From a margin of two on, no line of warmth from the set level ends exactly where the heater gives: a law of one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.«给如所取则全守»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The matched thermostat is 全守 before and after its window opens, at every positive margin: a fact about one constructed family of models (OU7)"
+  },
+  "Becoming.Rooms.«给过所取则生守相杂»": {
+   "module": "Becoming.RoomNet",
+   "category": "model-witness",
+   "reason": "The overshooting thermostat at a margin of three generates and keeps at its set level, a model case of Map.«生守相杂»: a fact about one constructed model (OU7)"
+  },
+  "Becoming.mark_le_total": {
+   "module": "Becoming.Population",
+   "category": "support",
+   "reason": "mark_le_total: a lemma of marks and totals on a list, through which Identity's census balance went until U4c re-proved Web.Census.balanceFrom_at through the root's census of a step"
+  },
+  "Becoming.total_le_mark": {
+   "module": "Becoming.Population",
+   "category": "support",
+   "reason": "total_le_mark: a lemma of marks and totals on a list, through which Identity's census balance went until U4c re-proved Web.Census.balanceFrom_at through the root's census of a step"
+  },
+  "Becoming.«不依之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«不依之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«不有常而不穷之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«不有常而不穷之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«不有常而通之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«不有常而通之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«不穷与亡不同核之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«不穷与亡不同核之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«不返而有限则非不穷»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«不返而有限则非不穷»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«两向有常而无前不通之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«两向有常而无前不通之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«亡于静而住于一之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«亡于静而住于一之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«亡者异当且仅当有后»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«亡者异当且仅当有后»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«亡而息之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«亡而息之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«依之传»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«依之传»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«依于无始而有始之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«依于无始而有始之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«像不保之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«像不保之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«定后定前则前并生与后并亡同数»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "«定后定前则前并生与后并亡同数»: the count of HE2's census of a step, its two halves meeting under HE2's hypotheses, the tests read off the decision (U4c, beside «定后定前则前并生对后并亡»); a law of every continuation decided by a test on any carrier, and nothing on the base uses it"
+  },
+  "Becoming.«所依无则依者无»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«所依无则依者无»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无始而有终之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«无始而有终之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«无异当且仅当不分续»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«无异当且仅当不分续»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无环则无俱有»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«无环则无俱有»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«无环而不穷之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«无环而不穷之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«无相而非亦无相之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«无相而非亦无相之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«无缘不住而他有后之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«无缘不住而他有后之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«无能无所之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«无能无所之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«昼夜全生成»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«昼夜全生成»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«有亡而不全生成之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«有亡而不全生成之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«有前不有常而亡之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«有前不有常而亡之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«有限遍后而不返之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«有限遍后而不返之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«核同则同不穷»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«核同则同不穷»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«步不分而不全生成之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«步不分而不全生成之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«生于核下可变之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«生于核下可变之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«生亡并之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«生亡并之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«皆不生当且仅当皆非无缘»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "«皆不生当且仅当皆非无缘»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
+  },
+  "Becoming.«相须之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«相须之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«自缘而不生之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«自缘而不生之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«返而不穷之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«返而不穷之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«逆核不含于核之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«逆核不含于核之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«遍后定前而无环之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«遍后定前而无环之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«静分续而有异之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«静分续而有异之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
+  },
+  "Becoming.«非有常之类不含于核之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "«非有常之类不含于核之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
   }
  },
  "instances": {

@@ -1,0 +1,26 @@
+@Becoming.Continuity.adjacentListed_symm : ∀ {R : Type} (rel : R → R → Bool) (us : List R),
+  Becoming.«则» (Becoming.Continuity.adjacentListed rel us) (Becoming.«逆» (Becoming.Continuity.adjacentListed rel us))
+@Becoming.Continuity.closes_iff_closed : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔ Becoming.«闭» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true
+@Becoming.Continuity.closes_iff_notGoingOut : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔ Becoming.«不出» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true
+@Becoming.Continuity.closes_iff_notComingIn : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔
+    Becoming.«不出» (Becoming.«逆» (Becoming.Continuity.adjacentListed rel us)) fun x => p x = true
+@Becoming.Continuity.balancing_iff_notGoingOut : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct us →
+    ((∃ move, Becoming.Continuity.Balancing rel us prev next move) ↔
+      ∀ (p : R → Bool),
+        (Becoming.«不出» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true) →
+          Becoming.total us (Becoming.Continuity.within p next) = Becoming.total us (Becoming.Continuity.within p prev))
+@Becoming.Continuity.balancesOn_iff_notGoingOut : ∀ {R : Type} [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
+  {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    ((∃ move,
+        (∀ (t : Nat) (a b : R), 0 < move t a b → Becoming.Continuity.adj (rel t) a b = true ∧ a ∈ us ∧ b ∈ us) ∧
+          ∀ (t : Nat), (Becoming.Continuity.flow us move).BalancesOn W us t) ↔
+      ∀ (t : Nat) (p : R → Bool),
+        (Becoming.«不出» (Becoming.Continuity.adjacentListed (rel t) us) fun x => p x = true) →
+          Becoming.total us (Becoming.Continuity.within p (W.level (t + 1))) =
+            Becoming.total us (Becoming.Continuity.within p (W.level t)))

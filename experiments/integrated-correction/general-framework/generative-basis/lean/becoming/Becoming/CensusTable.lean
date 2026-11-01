@@ -18,7 +18,7 @@ stated here once for any class of worlds and any listing a world has, a determin
   (`FamilyCounts.tally`), and where a procedure decides they are its marks
   (`familyCounts_decided`). A property holds of a listing of a world where it holds of every
   listed family and every counts of it (`World.ListingHolds`), and of the marks of every listed
-  family where a procedure decides (`World.ListingObeys`).
+  family where a procedure decides (`World.ListingMarksHold`).
 * **A census table.** A class of worlds and a condition on the counts form a table where every
   listed family of every world of the class has counts meeting the condition (soundness, stated
   for counts as relations) and every tally meeting the condition is the marks of some listed
@@ -26,18 +26,18 @@ stated here once for any class of worlds and any listing a world has, a determin
   property of the counts holds of every listing of every world of the class exactly when it holds
   of every tally meeting the condition: for every property, with counts as relations
   (`World.table_holds`), and for every pointwise property, with the marks a procedure gives
-  (`World.table_obeys`). So the decided form of each law of counting is a corollary of the
+  (`World.table_marks_hold`). So the decided form of each law of counting is a corollary of the
   counted soundness and the same witness, and needs no proof of its own; the condition `True`
-  gives the laws with no added condition (`World.table_holds_free`, `World.table_obeys_free`).
+  gives the laws with no added condition (`World.table_holds_free`, `World.table_marks_hold_free`).
 * **Agreeing listings.** Determinations agreeing at each step list, count and decide alike
   (`Listed.congr`, `FamilyCounts.congr`, `ceasings_congr`, `comings_congr`), so a witness under
   one listing is one under any listing agreeing with it in the worlds of the class
   (`World.witnessedAt_of`, `World.WitnessedAt.congr`), and the marks of two procedures deciding
-  one listing obey the same pointwise properties (`World.listingObeys_of_obeys`). Where whatever
+  one listing satisfy the same pointwise properties (`World.listingMarksHold_of_marksHold`). Where whatever
   comes to be across a step needs something held at it, nothing comes to be across a step at
   which nothing is counted (`FamilyCounts.company`).
-* **The census of activity** is the listing `fun w x t => w.web.active t x`: `World.CountsObey`,
-  `World.CountsOf` and `World.CountsHold` are its forms, and `World.census_table_obeys`,
+* **The census of activity** is the listing `fun w x t => w.web.active t x`: `World.CensusMarksHold`,
+  `World.CountsOf` and `World.CountsHold` are its forms, and `World.census_table_marks_hold`,
   `World.census_table_holds₂` and their forms for two and three hypotheses state the table for
   it (read by `Becoming.Counting`, `Becoming.CensusCounts` and `Becoming.CensusBinding`). What
   stands (`fun w x t => 0 < w.web.level t x`) and what depends (pairs of relata, `requires`) are
@@ -169,7 +169,7 @@ def ListingHolds (w : World) (Q : (Nat → Nat) → (Nat → Nat) → (Nat → N
 
 /-- `Q` holds of the marks of every listed family of the world `w`, where a procedure decides
 what is listed. -/
-def ListingObeys (w : World) [∀ x t, Decidable (L w x t)]
+def ListingMarksHold (w : World) [∀ x t, Decidable (L w x t)]
     (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop) : Prop :=
   ∀ l, Listed (L w) l → Q (fun t => (l t).length) (fun t => ceasings (l t) (L w) t)
     (fun t => comings (l (t + 1)) (L w) t)
@@ -217,15 +217,15 @@ theorem WitnessedAt.congr {L' : (w : World) → X w → Nat → Prop} {Class : W
   | ⟨w, decided, l, within, listed, counts⟩ =>
     @witnessedAt_of _ L L' Class n c a w decided l within (same w within) listed counts
 
-/-- Where `Q` is pointwise, what one procedure's marks obey another's obey: marks deciding the
+/-- Where `Q` is pointwise, what one procedure's marks satisfy another's satisfy: marks deciding the
 same listing agree. -/
-theorem listingObeys_of_obeys (pointwise : Pointwise Q) {w : World}
+theorem listingMarksHold_of_marksHold (pointwise : Pointwise Q) {w : World}
     {decided decided' : ∀ x t, Decidable (L w x t)}
-    (obeys : @ListingObeys X L w decided Q) : @ListingObeys X L w decided' Q :=
+    (marks : @ListingMarksHold X L w decided Q) : @ListingMarksHold X L w decided' Q :=
   fun l listed => pointwise (fun t =>
     ⟨rfl, @ceasings_congr _ (L w) (L w) decided decided' (l t) t fun _ => ⟨Iff.rfl, Iff.rfl⟩,
      @comings_congr _ (L w) (L w) decided decided' (l (t + 1)) t fun _ => ⟨Iff.rfl, Iff.rfl⟩⟩)
-    (obeys l listed)
+    (marks l listed)
 
 /-- **A census table, with counts as relations.** Where every listed family of every world of the
 class has counts meeting `C`, and every tally meeting `C` is witnessed in the class, a property
@@ -243,10 +243,10 @@ theorem table_holds (sound : ∀ w, Class w → w.ListingHolds L C)
 /-- **A census table, with the marks a procedure gives.** The same table gives the law for every
 pointwise property of the marks: the decided form is a corollary of the counted soundness and the
 same witness. -/
-theorem table_obeys (pointwise : Pointwise Q) (sound : ∀ w, Class w → w.ListingHolds L C)
+theorem table_marks_hold (pointwise : Pointwise Q) (sound : ∀ w, Class w → w.ListingHolds L C)
     (witnessed : Witnessed L Class C) :
     (∀ n c a, Tally n c a → C n c a → Q n c a) ↔
-      ∀ (w : World) [∀ x t, Decidable (L w x t)], Class w → w.ListingObeys L Q :=
+      ∀ (w : World) [∀ x t, Decidable (L w x t)], Class w → w.ListingMarksHold L Q :=
   ⟨fun law w _ within l listed => law _ _ _ ((familyCounts_decided l).tally listed)
     (sound w within l _ _ _ listed (familyCounts_decided l)),
    fun law n c a tally condition => match witnessed n c a tally condition with
@@ -261,10 +261,10 @@ theorem table_holds_free (witnessed : Witnessed L Class fun _ _ _ => True) :
    fun law n c a tally => table.mpr law n c a tally trivial⟩
 
 /-- So for the marks a procedure gives, for every pointwise property. -/
-theorem table_obeys_free (pointwise : Pointwise Q) (witnessed : Witnessed L Class fun _ _ _ => True) :
+theorem table_marks_hold_free (pointwise : Pointwise Q) (witnessed : Witnessed L Class fun _ _ _ => True) :
     (∀ n c a, Tally n c a → Q n c a) ↔
-      ∀ (w : World) [∀ x t, Decidable (L w x t)], Class w → w.ListingObeys L Q :=
-  have table := table_obeys pointwise (fun _ _ _ _ _ _ _ _ => trivial) witnessed
+      ∀ (w : World) [∀ x t, Decidable (L w x t)], Class w → w.ListingMarksHold L Q :=
+  have table := table_marks_hold pointwise (fun _ _ _ _ _ _ _ _ => trivial) witnessed
   ⟨fun law => table.mp fun n c a tally _ => law n c a tally,
    fun law n c a tally => table.mpr law n c a tally trivial⟩
 
@@ -276,7 +276,7 @@ variable {w : World}
 
 /-- `Q` holds of the counts of every census of the world: how many are active at each step,
 how many cease and how many arise across it. -/
-def CountsObey (w : World) [∀ t x, Decidable (w.web.active t x)]
+def CensusMarksHold (w : World) [∀ t x, Decidable (w.web.active t x)]
     (Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop) : Prop :=
   ∀ alive, w.web.Census alive → Q (fun t => (alive t).length)
     (fun t => ceasings (alive t) (fun x s => w.web.active s x) t)
@@ -305,42 +305,42 @@ theorem countsOf_decided [∀ t x, Decidable (w.web.active t x)] (alive : Nat �
   familyCounts_decided alive
 
 /-- What holds of every counted census holds of the census counts a procedure gives. -/
-theorem CountsHold.obey [∀ t x, Decidable (w.web.active t x)]
+theorem CountsHold.marks [∀ t x, Decidable (w.web.active t x)]
     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (holds : w.CountsHold Q) :
-    w.CountsObey Q :=
+    w.CensusMarksHold Q :=
   fun alive census => holds alive _ _ _ census (countsOf_decided alive)
 
 /-- For a pointwise property, what holds of the census counts a procedure gives holds of every
 counted census. -/
-theorem countsHold_of_obey [∀ t x, Decidable (w.web.active t x)]
+theorem countsHold_of_marks [∀ t x, Decidable (w.web.active t x)]
     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q)
-    (obeys : w.CountsObey Q) : w.CountsHold Q :=
+    (marks : w.CensusMarksHold Q) : w.CountsHold Q :=
   fun alive _ _ _ census counted => pointwise (fun t =>
     match counted t, countsOf_decided (w := w) alive t with
     | ⟨length, ceased, came⟩, ⟨_, ceased', came'⟩ =>
-      ⟨length.symm, ceased'.unique ceased, came'.unique came⟩) (obeys alive census)
+      ⟨length.symm, ceased'.unique ceased, came'.unique came⟩) (marks alive census)
 
-/-- The table for the census of activity, with the marks a procedure gives (`table_obeys`). -/
-theorem census_table_obeys {Class : World → Prop}
+/-- The table for the census of activity, with the marks a procedure gives (`table_marks_hold`). -/
+theorem census_table_marks_hold {Class : World → Prop}
     {C Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q)
     (sound : ∀ w, Class w → w.CountsHold C)
     (witnessed : Witnessed (fun w x t => w.web.active t x) Class C) :
     (∀ n c a, Tally n c a → C n c a → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], Class w → w.CountsObey Q :=
-  have table := table_obeys pointwise sound witnessed
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], Class w → w.CensusMarksHold Q :=
+  have table := table_marks_hold pointwise sound witnessed
   ⟨fun law w inst within =>
-    have obeys := table.mp law
-    @obeys w (fun x t => inst t x) within,
+    have marks := table.mp law
+    @marks w (fun x t => inst t x) within,
    fun law => table.mpr fun w inst within => @law w (fun t x => inst x t) within⟩
 
 /-- The table for the census of activity with no added condition, with the marks a procedure
 gives. -/
-theorem census_table_obeys_free {Class : World → Prop}
+theorem census_table_marks_hold_free {Class : World → Prop}
     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q)
     (witnessed : Witnessed (fun w x t => w.web.active t x) Class fun _ _ _ => True) :
     (∀ n c a, Tally n c a → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], Class w → w.CountsObey Q :=
-  have table := census_table_obeys (Q := Q) pointwise (fun _ _ _ _ _ _ _ _ => trivial) witnessed
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], Class w → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold (Q := Q) pointwise (fun _ _ _ _ _ _ _ _ => trivial) witnessed
   ⟨fun law => table.mp fun n c a tally _ => law n c a tally,
    fun law n c a tally => table.mpr law n c a tally trivial⟩
 
@@ -359,14 +359,14 @@ theorem census_table_holds₂ {A B : World → Prop}
      tally ⟨first, second⟩⟩
 
 /-- So with the marks a procedure gives, for every pointwise property. -/
-theorem census_table_obeys₂ {A B : World → Prop}
+theorem census_table_marks_hold₂ {A B : World → Prop}
     {C D Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q)
     (sound : ∀ w, A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a)
     (witnessed : Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w)
       fun n c a => C n c a ∧ D n c a) :
     (∀ n c a, Tally n c a → C n c a → D n c a → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], A w → B w → w.CountsObey Q :=
-  have table := census_table_obeys (Q := Q) pointwise (fun w within => sound w within.1 within.2)
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], A w → B w → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold (Q := Q) pointwise (fun w within => sound w within.1 within.2)
     witnessed
   ⟨fun law w _ a b => table.mp (fun n c a tally both => law n c a tally both.1 both.2) w ⟨a, b⟩,
    fun law n c a tally first second => table.mpr (fun w _ within => law w within.1 within.2) n c a
@@ -388,14 +388,14 @@ theorem census_table_holds₃ {A B : World → Prop}
      n c a tally ⟨first, second, third⟩⟩
 
 /-- So with the marks a procedure gives, for every pointwise property. -/
-theorem census_table_obeys₃ {A B : World → Prop}
+theorem census_table_marks_hold₃ {A B : World → Prop}
     {C D E Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q)
     (sound : ∀ w, A w → B w → w.CountsHold fun n c a => C n c a ∧ D n c a ∧ E n c a)
     (witnessed : Witnessed (fun w x t => w.web.active t x) (fun w => A w ∧ B w)
       fun n c a => C n c a ∧ D n c a ∧ E n c a) :
     (∀ n c a, Tally n c a → C n c a → D n c a → E n c a → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], A w → B w → w.CountsObey Q :=
-  have table := census_table_obeys (Q := Q) pointwise (fun w within => sound w within.1 within.2)
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], A w → B w → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold (Q := Q) pointwise (fun w within => sound w within.1 within.2)
     witnessed
   ⟨fun law w _ a b => table.mp (fun n c a tally all => law n c a tally all.1 all.2.1 all.2.2) w
       ⟨a, b⟩,

@@ -112,6 +112,7 @@ Following Ren's “move towards 100%” of 12 October 2026, the zero-premise pla
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.Stutter`, `Becoming.World.stutter_premises_iff`, `Becoming.stutter_total`, `Becoming.World.stutter_arisingRecurs_iff`, `Becoming.Flow.sample_not_more`, `Becoming.Expansion.more_step_relative`, `Becoming.Lapse.reserve_step_relative`, `stuttering`, `停顿`, `idle step`, `空步`, `step index`, `步序号`, `Becoming.World.withoutIdle`, `Becoming.World.IdleAt`, `Becoming.Stutter.Moves`, `Becoming.Stutter.moving_unique`, `Becoming.World.withoutIdle_premises`, `Becoming.World.withoutIdle_transmits`, `Becoming.World.withoutIdle_counted`, `Becoming.World.withoutIdle_totals`, `Becoming.World.withoutIdle_counts`, `removing idle steps`, `移除空步`
 

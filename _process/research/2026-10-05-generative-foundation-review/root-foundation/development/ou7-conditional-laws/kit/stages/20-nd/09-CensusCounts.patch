@@ -1,0 +1,15 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusCounts.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusCounts.lean
+index 027e6bf7d..7829493f2 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusCounts.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusCounts.lean
+@@ -48,8 +48,8 @@ count to exist.
+   `World.active_of_coming_enclosed`).
+ * **Agreement.** Where a procedure decides activity, its marks are counts of every census
+   (`World.countsOf_decided`): what holds of every counted census holds of the census counts of
+-  `Becoming.Counting` (`World.CountsHold.obey`), and for pointwise properties conversely
+-  (`World.countsHold_of_obey`).
++  `Becoming.Counting` (`World.CountsHold.marks`), and for pointwise properties conversely
++  (`World.countsHold_of_marks`).
+ 
+ Each law here is a census table (`World.table_holds`, `Becoming.CensusTable`): its
+ counted soundness and its witness lemma are those of the decided law of `Becoming.Counting`

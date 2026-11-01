@@ -17,7 +17,7 @@
 
 ## Standings on the edge
 
-**Counts** of the 117 central declarations: on the edge 11 (derived 10, under a stated hypothesis 1); below the grammar 7; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
+**Counts** of the 117 central declarations: on the edge 12 (derived 11, under a stated hypothesis 1); below the grammar 6; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
 
 - **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 - **For order**, C, calling widening better: `Becoming.Comparison`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
@@ -31,6 +31,7 @@
 - `Becoming.Law.drawn_iff_not_returns`: derived (a checked entry): a case of `Becoming.«定后有后则入当且仅当不返»`; bridges `Becoming.Branching.law_reach_iff`, `Becoming.Branching.law_trace_iff`, `Becoming.Law.absorbing_iff_closed`, `Becoming.Law.drawn_iff_drawnIn`, `Becoming.Law.reaches_iff_orbit`, `Becoming.Law.returns_iff` and `Becoming.Law.returns_iff_reaches`; support `Becoming.Branching.law_trace_of`, `Becoming.Branching.units_length`, `Becoming.Law.next_fixed`, `Becoming.Law.next_total`, `Becoming.Law.orbit_add`, `Becoming.Law.orbit_shift` and `Becoming.Law.reaches_of_orbit`.
 - `Becoming.Law.lossless_iff_returns`: derived (a checked entry): a case of `Becoming.«有限遍后定后则定前当且仅当皆返»`; bridges `Becoming.Branching.law_reach_iff`, `Becoming.Branching.law_trace_iff`, `Becoming.Law.lossless_iff`, `Becoming.Law.lossless_iff_fixedBefore`, `Becoming.Law.reaches_iff_orbit`, `Becoming.Law.returns_iff` and `Becoming.Law.returns_iff_reaches`; support `Becoming.Branching.law_trace_of`, `Becoming.Branching.units_length`, `Becoming.Law.next_fixed`, `Becoming.Law.next_total`, `Becoming.Law.orbit_add`, `Becoming.Law.orbit_shift` and `Becoming.Law.reaches_of_orbit`.
 - `Becoming.Learning.goAlike_iff_lumped`: derived (a checked entry): a case of `Becoming.«像定后当且仅当同行»`; bridges `Becoming.Learning.lumped_iff_fixed_image` and `Becoming.goAlikeUnder_iff_alike`.
+- `Becoming.Listed.coming_of_ceasing`: derived (a checked entry): a case of `Becoming.«定后前者在前则亡屡者生屡»`; bridges `Becoming.comesToBe_iff_sheng_along` and `Becoming.ceasesToBe_iff_wang_along`; support `Becoming.Steps.along_fixed`, `Becoming.Steps.along_hasPred_iff` and `Becoming.Steps.along_hasSucc_iff`.
 - `Becoming.Tolerance.answers_restores_iff`: derived (a checked entry): a case of `Becoming.«承之迭»`; bridges `Becoming.Tolerance.worst_start`, `Becoming.Withholding.answers_closed` and `Becoming.Withholding.chain_iff_steps`; support `Becoming.Tolerance.KeepsInclusion.course`, `Becoming.Tolerance.KeepsInclusionInto.course`, `Becoming.Tolerance.answers_keeps`, `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`.
 - `Becoming.Withholding.withholding_spreads`: derived (a checked entry): a case of `Becoming.«存承之迭»`; bridges `Becoming.Withholding.chain_iff_steps`, `Becoming.Withholding.waitsAll_closed` and `Becoming.Withholding.within_iff_withinSteps`; support `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`.
 - `Becoming.WithinMoves.after_course`: derived (a checked entry): a case of `Becoming.«迭内之接»`; bridges `Becoming.trace_iff_steps` and `Becoming.withinMoves_iff_withinSteps`; support `Becoming.trace_steps`.
@@ -40,7 +41,6 @@
 
 - `Becoming.CensusWebs.keep_pace`: counting (a reading; the rule gives unplaced).
 - `Becoming.Drift.falls_back`: counting (a reading; the rule gives unplaced).
-- `Becoming.Listed.coming_of_ceasing`: counting (a reading; the rule gives unplaced).
 - `Becoming.RelativePosition.rise_needs_fall`: counting (a reading; the rule gives unplaced).
 - `Becoming.SelectionLevels.levels_sized`: counting (a reading; the rule gives unplaced).
 - `Becoming.SelectionLevels.rises_exact_iff_levels`: counting (a reading; the rule gives unplaced).
@@ -176,7 +176,7 @@ Canonical source: [RootForms.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-A root form for the census rows; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
+The covering laws' root form (lines traced back to a covering list, no splits); a stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -211,6 +211,9 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 | integration | [COUNTING-AND-AMOUNTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COUNTING-AND-AMOUNTS.md) | — |
 | integration | [counting_test.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/counting_test.py) | — |
 | review | [REVIEW-U4-PREMISE-C.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md) | — |
+| review | [REVIEW-U4C-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md) | — |
+| review | [REVIEW-U4C.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md) | — |
+| integration | [CENSUS-ON-THE-ROOT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md) | — |
 
 Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `边上之所立`, `Becoming.RootForms.outside_leaves_no_offspring`, `Becoming.RootForms.descent_forms_no_dependence`
 
@@ -221,7 +224,8 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 - 1 November 2026, board item U4b (study section 483): SelectionLevels.rises_exact_iff_levels moved from amounts to counting. Its statement says nothing of the dynamics and holds for every carrier, listing, map and parameter it quantifies over, as SelectionTerm.covariation, SelectionLevels.levels_sized and Drift.falls_back do. SelectionTerm.Flow.support_not_lower, SelectionTerm.Flow.support_moved_rises and GroupEnding.Flow.rises_iff_inactive stay at amounts, using the gate and descent as hypotheses and constraining an arbitrary trait's values, with their bases rewritten on that line (COUNTING-AND-AMOUNTS.md, reviewed in REVIEW-U4B.md).
 - 1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.
 - 1 November 2026, after DU (study section 489): C's entry among the premises of the ethics names Becoming.ReadsNoOrder.not_entails as its theorem of not being entailed: a statement whose truth does not change with the order, entailing C at a datum on a frame with an extension, fails there at every order, the pattern of ReadsOnlyDynamics.not_entails with the order in the place of the significance. Its reason for absence is dropped, the basis states the condition, and the non-implication on the premises' warrant says that neither is entailed by statements of the dynamics, each under its condition (REVIEW-U4-PREMISE-C.md).
+- 1 November 2026, U4c (study section 492): Listed.coming_of_ceasing moved from counting to derived, a case of the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, through two bridges (comesToBe_iff_sheng_along, ceasesToBe_iff_wang_along) and the support of Steps.along; its statement is unchanged and still reads as counting, the row placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived. CensusWebs.keep_pace stays counting, its basis saying why it is not a case of the root's census of a step. The next step names the covering laws' root form and a stretch form of the census on positions, of which keep_pace would be a case, in place of a root form for the census rows (CENSUS-ON-THE-ROOT.md, reviewed in REVIEW-U4C.md, its record texts in REVIEW-U4C-RECORD.md, both among the references); DESIGN-BOUNDARY gains a dated §9 saying what differs from lever 1's census candidate.
 
 </details>
 
-Documentary review UTC: `2026-11-01T02:46:41+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

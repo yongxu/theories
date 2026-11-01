@@ -1,0 +1,217 @@
+@Becoming.Weights.sum_eq_zero : ∀ {R : Type u_2} {W : Becoming.Weights R} {α : Type u_1} {f : α → R} (l : List α),
+  (∀ (a : α), a ∈ l → f a = W.zero) → W.sum l f = W.zero
+@Becoming.Weights.add_add_add_comm : ∀ {R : Type u_1} {W : Becoming.Weights R},
+  (∀ (a b : R), W.add a b = W.add b a) → ∀ (a b c d : R), W.add (W.add a b) (W.add c d) = W.add (W.add a c) (W.add b d)
+@Becoming.Weights.sum_add : ∀ {R : Type u_2} {W : Becoming.Weights R},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ {α : Type u_1} (f g : α → R) (l : List α), (W.sum l fun a => W.add (f a) (g a)) = W.add (W.sum l f) (W.sum l g)
+@Becoming.Weights.sum_comm : ∀ {R : Type u_3} {W : Becoming.Weights R},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ {α : Type u_1} {β : Type u_2} (F : α → β → R) (l' : List β) (l : List α),
+      (W.sum l fun a => W.sum l' (F a)) = W.sum l' fun b => W.sum l fun a => F a b
+@Becoming.Weights.cond_mul : ∀ {R : Type u_1} {W : Becoming.Weights R} (b : Bool) (c y : R),
+  (bif b then W.mul c y else W.zero) = W.mul c (bif b then y else W.zero)
+@Becoming.Weights.sum_openSteps : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (moves : List A) (all : List S) (H : A × S → R),
+  W.sum (Becoming.openSteps moves all) H = W.sum moves fun a => W.sum all fun m => H (a, m)
+Becoming.HistorySums.steps_shift : ∀ (T N : Nat), Becoming.steps (T + 1) N = List.map Nat.succ (Becoming.steps T N)
+@Becoming.Weights.sum_steps_succ : ∀ {R : Type u_1} {W : Becoming.Weights R} (F : Nat → R) (j : Nat),
+  W.sum (Becoming.steps 0 (j + 1)) F = W.add (F 0) (W.sum (Becoming.steps 0 j) fun i => F (i + 1))
+@Becoming.HistorySums.possibility_sum_false : ∀ {α : Type u_1} {g : α → Bool} {l : List α},
+  Becoming.possibility.sum l g = false → ∀ (a : α), a ∈ l → g a = false
+@Becoming.Weights.transfer_zero_of_impossible : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (weight : S → A → S → R) (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = false → weight s a t = W.zero) →
+    ∀ (g : S → Bool) (f : S → R),
+      (∀ (s : S), g s = false → f s = W.zero) →
+        ∀ (moves : List A) (all : List S) (n : Nat) (s : S),
+          Becoming.possibility.transfer step moves all g n s = false → W.transfer weight moves all f n s = W.zero
+@Becoming.Weights.transfer_split : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (weight : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n m : Nat) (s : S),
+  W.transfer weight moves all f (n + m) s = W.transfer weight moves all (W.transfer weight moves all f n) m s
+@Becoming.Weights.along_append : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (weight : S → A → S → R) (f : S → R) (s : S) (h h' : List (A × S)),
+  W.along weight f s (h ++ h') = W.along weight (fun t => W.along weight f t h') s h
+@Becoming.Weights.exactly_above : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (i n : Nat),
+  n < i → ∀ (s : S), W.exactly ground response moves all f i n s = W.zero
+@Becoming.Weights.within_zero_eq_exactly : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n : Nat) (s : S),
+  W.within ground response moves all f 0 n s = W.exactly ground response moves all f 0 n s
+@Becoming.Weights.regroup : ∀ {R : Type u_1} {W : Becoming.Weights R},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ (c r : R) (E : Nat → R) (l : List Nat),
+      W.add (W.mul c (W.add (E 0) (W.sum l fun i => E (i + 1)))) (W.mul r (W.sum l E)) =
+        W.add (W.mul c (E 0)) (W.sum l fun i => W.add (W.mul c (E (i + 1))) (W.mul r (E i)))
+@Becoming.Weights.within_eq_sum_exactly : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (j n : Nat) (s : S),
+      W.within ground response moves all f j n s =
+        W.sum (Becoming.steps 0 (j + 1)) fun i => W.exactly ground response moves all f i n s
+@Becoming.Weights.transfer_eq_sum_exactly : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n : Nat) (s : S),
+      W.transfer (fun s a t => W.add (ground s a t) (response s a t)) moves all f n s =
+        W.sum (Becoming.steps 0 (n + 1)) fun i => W.exactly ground response moves all f i n s
+@Becoming.Weights.Hom.exactly : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2} {T : Type u_4}
+  {V : Becoming.Weights T} (h : W.Hom V) (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R)
+  (i n : Nat) (s : S),
+  h.map (W.exactly ground response moves all f i n s) =
+    V.exactly (fun s a t => h.map (ground s a t)) (fun s a t => h.map (response s a t)) moves all (fun s => h.map (f s))
+      i n s
+@Becoming.Weights.sum_courses_labelled : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (moves : List A) (all : List S) (n : Nat) (F : List ((A × Bool) × S) → R),
+  W.sum (Becoming.courses (Becoming.HistorySums.labelled moves) all (n + 1)) F =
+    W.add
+      (W.sum moves fun a =>
+        W.sum all fun m =>
+          W.sum (Becoming.courses (Becoming.HistorySums.labelled moves) all n) fun h => F (((a, false), m) :: h))
+      (W.sum moves fun a =>
+        W.sum all fun m =>
+          W.sum (Becoming.courses (Becoming.HistorySums.labelled moves) all n) fun h => F (((a, true), m) :: h))
+@Becoming.Weights.transfer_labelled : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n : Nat) (s : S),
+      W.transfer (Becoming.HistorySums.part ground response) (Becoming.HistorySums.labelled moves) all f n s =
+        W.transfer (fun s a t => W.add (ground s a t) (response s a t)) moves all f n s
+@Becoming.Weights.exactly_eq_courses : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2},
+  (∀ (a b : R), W.add a b = W.add b a) →
+    ∀ (ground response : S → A → S → R) (moves : List A) (all : List S) (f : S → R) (n i : Nat) (s : S),
+      W.exactly ground response moves all f i n s =
+        W.sum (Becoming.courses (Becoming.HistorySums.labelled moves) all n) fun h =>
+          bif (Becoming.HistorySums.responses h).beq i then W.along (Becoming.HistorySums.part ground response) f s h
+          else W.zero
+Becoming.Routes.SelfLoop.exactly_eq : ∀ (M i n : Nat),
+  Becoming.counting.exactly (fun x x_1 x_2 => 1) (fun x x_1 x_2 => M) [()] [()] (fun x => 1) i n () =
+    Becoming.Loops.binom n i * M ^ i
+Becoming.HistorySums.firstListed_not_comm : ¬∀ (a b : Option Nat),
+    Becoming.HistorySums.firstListed.add a b = Becoming.HistorySums.firstListed.add b a
+Becoming.HistorySums.grouping_needs_commuting : Becoming.HistorySums.firstListed.transfer
+    (fun s a t =>
+      Becoming.HistorySums.firstListed.add (Becoming.HistorySums.firstGround s a t)
+        (Becoming.HistorySums.firstResponse s a t))
+    [false, true] [()] (fun x => some 0) 1 () ≠
+  Becoming.HistorySums.firstListed.sum (Becoming.steps 0 2) fun i =>
+    Becoming.HistorySums.firstListed.exactly Becoming.HistorySums.firstGround Becoming.HistorySums.firstResponse
+      [false, true] [()] (fun x => some 0) i 1 ()
+@Becoming.Weights.transfer_between : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (weight weight' : S → A → S → R) (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = false → weight s a t = W.zero) →
+    (∀ (s : S) (a : A) (t : S), step s a t = false → weight' s a t = W.zero) →
+      ∀ (g : S → Bool) (f : S → R),
+        (∀ (s : S), g s = false → f s = W.zero) →
+          ∀ (moves : List A) (all : List S) (n : Nat) (a : S),
+            (∀ (d e : Nat) (x : S) (b : A) (y : S),
+                d + 1 + e = n →
+                  Becoming.HistorySums.Leads step moves all a d x →
+                    b ∈ moves →
+                      y ∈ all →
+                        step x b y = true →
+                          Becoming.possibility.transfer step moves all g e y = true → weight x b y = weight' x b y) →
+              W.transfer weight moves all f n a = W.transfer weight' moves all f n a
+@Becoming.HistorySums.le_sum_of_mem : ∀ {α : Type u_1} {F : α → Nat} {x : α} {l : List α},
+  x ∈ l → F x ≤ Becoming.counting.sum l F
+Becoming.HistorySums.mem_steps : ∀ (N T i : Nat), T ≤ i → i < T + N → i ∈ Becoming.steps T N
+@Becoming.HistorySums.cond_nonzero : ∀ {b : Bool} {x : Nat},
+  Becoming.nonzero (bif b then x else 0) = true → b = true ∧ Becoming.nonzero x = true
+@Becoming.HistorySums.along_trace : ∀ {S : Type u_1} {A : Type u_2} (weight : S → A → S → Nat) (f : S → Nat) (s : S)
+  (h : List (A × S)),
+  Becoming.nonzero (Becoming.counting.along weight f s h) = true →
+    Generative.Trace { step := fun s a t => Becoming.nonzero (weight s a t) = true } s (List.map Prod.fst h)
+        (Becoming.HistorySums.last s h) ∧
+      Becoming.nonzero (f (Becoming.HistorySums.last s h)) = true
+@Becoming.HistorySums.Leads.trace : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  {step : S → A → S → Bool},
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ {moves : List A} {all : List S} {a : S} {d : Nat} {x : S},
+      Becoming.HistorySums.Leads step moves all a d x → ∃ as, as.length = d ∧ Generative.Trace P a as x
+@Becoming.HistorySums.trace_split_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (g : S → Bool) (n m : Nat) (s : S),
+            (∃ as t, as.length = n + m ∧ Generative.Trace P s as t ∧ g t = true) ↔
+              ∃ bs u,
+                bs.length = m ∧
+                  Generative.Trace P s bs u ∧ ∃ cs t, cs.length = n ∧ Generative.Trace P u cs t ∧ g t = true
+@Becoming.HistorySums.exactly_le_transfer : ∀ {S : Type u_1} {A : Type u_2} (ground response : S → A → S → Nat)
+  (moves : List A) (all : List S) (f : S → Nat) (i n : Nat) (s : S),
+  Becoming.counting.exactly ground response moves all f i n s ≤
+    Becoming.counting.transfer (fun s a t => ground s a t + response s a t) moves all f n s
+@Becoming.HistorySums.exactly_trace : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (ground response : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (ground s a t + response s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (i n : Nat) (s : S),
+            Becoming.nonzero (Becoming.counting.exactly ground response moves all f i n s) = true →
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+@Becoming.HistorySums.possibility_exactly_trace : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (ground response : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (ground s a t + response s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (i n : Nat) (s : S),
+            Becoming.possibility.exactly (fun s a t => Becoming.nonzero (ground s a t))
+                  (fun s a t => Becoming.nonzero (response s a t)) moves all (fun s => Becoming.nonzero (f s)) i n s =
+                true →
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+@Becoming.HistorySums.exactly_responses_trace : ∀ {S : Type u_1} {A : Type u_2} (ground response : S → A → S → Nat)
+  (moves : List A) (all : List S) (f : S → Nat) (i n : Nat) (s : S),
+  Becoming.nonzero (Becoming.counting.exactly ground response moves all f i n s) = true →
+    ∃ h,
+      h ∈ Becoming.courses (Becoming.HistorySums.labelled moves) all n ∧
+        Becoming.HistorySums.responses h = i ∧
+          Generative.Trace (Becoming.HistorySums.partProcess ground response) s (List.map Prod.fst h)
+              (Becoming.HistorySums.last s h) ∧
+            Becoming.nonzero (f (Becoming.HistorySums.last s h)) = true
+@Becoming.HistorySums.mem_labelled : ∀ {A : Type u_1} {moves : List A},
+  (∀ (a : A), a ∈ moves) → ∀ (ab : A × Bool), ab ∈ Becoming.HistorySums.labelled moves
+@Becoming.HistorySums.labelled_trace_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (ground response : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (ground s a t + response s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (n : Nat) (s : S),
+            (∃ as t,
+                as.length = n ∧
+                  Generative.Trace (Becoming.HistorySums.partProcess ground response) s as t ∧
+                    Becoming.nonzero (f t) = true) ↔
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+@Becoming.Weights.transfer_zero_of_no_trace : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (P : Generative.Process S A) (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (weight : S → A → S → R),
+            (∀ (s : S) (a : A) (t : S), step s a t = false → weight s a t = W.zero) →
+              ∀ (g : S → Bool) (f : S → R),
+                (∀ (s : S), g s = false → f s = W.zero) →
+                  ∀ (n : Nat) (s : S),
+                    (¬∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ g t = true) →
+                      W.transfer weight moves all f n s = W.zero
+@Becoming.Weights.transfer_between_traces : ∀ {R : Type u_3} {W : Becoming.Weights R} {S : Type u_1} {A : Type u_2}
+  (P : Generative.Process S A) (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (weight weight' : S → A → S → R),
+            (∀ (s : S) (a : A) (t : S), step s a t = false → weight s a t = W.zero) →
+              (∀ (s : S) (a : A) (t : S), step s a t = false → weight' s a t = W.zero) →
+                ∀ (g : S → Bool) (f : S → R),
+                  (∀ (s : S), g s = false → f s = W.zero) →
+                    ∀ (n : Nat) (a : S),
+                      (∀ (d e : Nat) (x : S) (b : A) (y : S),
+                          d + 1 + e = n →
+                            (∃ as, as.length = d ∧ Generative.Trace P a as x) →
+                              P.step x b y →
+                                (∃ cs t, cs.length = e ∧ Generative.Trace P y cs t ∧ g t = true) →
+                                  weight x b y = weight' x b y) →
+                        W.transfer weight moves all f n a = W.transfer weight' moves all f n a

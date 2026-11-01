@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. 同, read from the 墨经 (「同，異而俱於之一也」), is sameness in belonging to one; it is a class where each belongs to one and one only (shown sufficient; necessity is not shown), and otherwise need not be transitive. (`Becoming.«同于»`, `Becoming.«同于为类»`, `Becoming.«同于不必传递»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
-4. 复, read from the 老子 (「復命曰常」), is a line returning to where it was; what returns abides. 通, read from the 系辞 (「往來不窮謂之通」) with 往來 read as a relation and its converse, is going and coming without end: the line from an occurrence never ends along 缘, nor along its converse. Under a constant class a line with a past never ends going; an occurrence that abides passes through where the class is constant both ways; constancy one way is not enough (counting up from zero); under the one, day and night go and come without end. (`Becoming.«复»`, `Becoming.«相续之末有前»`, `Becoming.«复者住»`, `Becoming.«通»`, `Becoming.«有常则往不穷»`, `Becoming.«两向有常则通»`, `Becoming.«有常而不通»`, `Becoming.«昼夜往来不穷»`)
+4. 复, read from the 老子 (「復命曰常」), is a line returning to where it was; what returns abides. 通, read from the 系辞 (「往來不窮謂之通」) with 往來 read as a relation and its converse, is going and coming without end: the line from an occurrence never ends along 缘, nor along its converse. Under a constant class a line with a past never ends going; where the class is constant both ways, an occurrence with a predecessor passes through, what abides being a case; constancy one way is not enough (counting up from zero); under the one, day and night go and come without end. (`Becoming.«复»`, `Becoming.«相续之末有前»`, `Becoming.«复者住»`, `Becoming.«通»`, `Becoming.«有常则往不穷»`, `Becoming.«两向有常有前则通»`, `Becoming.«两向有常则通»`, `Becoming.«有常而不通»`, `Becoming.«昼夜往来不穷»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 5. Neither one nor other: in a net without self-conditioning there is no continuation under identity, and every 缘 is a continuation under some class while identity tells its ends apart. The 中论's 「滅更不生故，因即為斷滅」 holds under identity while the same 缘 is a continuation under a coarser class. (`Becoming.«非一非异»`, `Becoming.«因灭而续»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 12 theorems in 17 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 13 theorems in 18 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
 
 Canonical source: [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean)
 
@@ -64,17 +64,18 @@ Units: 墨经 MJ-J-045, MJ-J-039; 荀子 XZ-ZM-063, XZ-ZM-064; 金师子章 JSZ-
   - Input: Definitions read from the corpus.
   - Preserved conditions: A net without self-conditioning where identity is the class. [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean)
 
-**Used by:** [candidate-theorems-of-the-corpus](candidate-theorems-of-the-corpus.md)
+**Used by:** [candidate-theorems-of-the-corpus](candidate-theorems-of-the-corpus.md) · [conditional-laws-of-the-corpus](conditional-laws-of-the-corpus.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md)
 
 <a id="sources--来源"></a>
 ### Sources
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean) | `Becoming.«两向有常则通»`, `Becoming.«化»`, `Becoming.«化为有缘之成坏»`, `Becoming.«化之二说同形»`, `Becoming.«同于»`, `Becoming.«同于不必传递»`, `Becoming.«同于为类»`, `Becoming.«因灭而续»`, `Becoming.«复»`, `Becoming.«复者住»`, `Becoming.«成坏»`, `Becoming.«昼夜往来不穷»`, `Becoming.«有常则往不穷»`, `Becoming.«有常而不通»`, `Becoming.«相续之末有前»`, `Becoming.«通»`, `Becoming.«非一非异»` |
+| proof | [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean) | `Becoming.«两向有常则通»`, `Becoming.«化»`, `Becoming.«化为有缘之成坏»`, `Becoming.«化之二说同形»`, `Becoming.«同于»`, `Becoming.«同于不必传递»`, `Becoming.«同于为类»`, `Becoming.«因灭而续»`, `Becoming.«复»`, `Becoming.«复者住»`, `Becoming.«成坏»`, `Becoming.«昼夜往来不穷»`, `Becoming.«有常则往不穷»`, `Becoming.«两向有常有前则通»`, `Becoming.«有常而不通»`, `Becoming.«相续之末有前»`, `Becoming.«通»`, `Becoming.«非一非异»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
 | statement | [REPORT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/classify/REPORT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.«两向有常则通»`, `Becoming.«化»`, `Becoming.«化为有缘之成坏»`, `Becoming.«化之二说同形»`, `Becoming.«同于»`, `Becoming.«同于不必传递»`, `Becoming.«同于为类»`, `Becoming.«因灭而续»`, `Becoming.«复»`, `Becoming.«复者住»`, `Becoming.«成坏»`, `Becoming.«昼夜往来不穷»`, `Becoming.«有常则往不穷»`, `Becoming.«有常而不通»`, `Becoming.«相续之末有前»`, `Becoming.«通»`, `Becoming.«非一非异»`
 
@@ -83,7 +84,8 @@ Aliases: `Becoming.«两向有常则通»`, `Becoming.«化»`, `Becoming.«化�
 
 - 23 October 2026, board item OU2 (study section 372): the first definitions of the frozen corpus written in the grammar, after the classification of the first batch.
 - 25 October 2026, board item OU6 (corrections to the grammar from the review of its sources, study section 400): 通 defined with its 往來, going along 缘 and coming along its converse, so that constancy one way no longer gives it («有常则通» renamed «有常则往不穷», for what it shows); the statement and the sentence on 同 narrowed to the sufficiency the theorem shows. The claim is narrowed where a name or a reading said more than the Lean, and the new theorems are added; no other law changes.
+- 1 November 2026, board item OU7 (study section 492): law 4 generalized, as the corpus's family of 通 needed (conditional-laws-of-the-corpus): where a class is constant both ways, what has a predecessor passes through («两向有常有前则通»); «两向有常则通», for what abides, is proved as its case, its statement unchanged. The law and the GrammarReadings.lean reference gain 1 declaration; the validation scope's counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-23T04:06:08+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

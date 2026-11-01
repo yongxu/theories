@@ -1332,6 +1332,191 @@ Definitions and types:
 
 </details>
 
+<a id="module-d0e385090546"></a>
+
+<details>
+<summary>RoomNet.lean — 120 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean`
+
+Imports: `Becoming.GrammarTesting`, `Becoming.GrammarLaws`, `Becoming.GrammarReadings`, `Becoming.MapRegions`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Rooms.alike_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L102) | 102 |
+| [Becoming.Rooms.next_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L105) | 105 |
+| [Becoming.Rooms.warms_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L115) | 115 |
+| [Becoming.Rooms.rest_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L120) | 120 |
+| [Becoming.Rooms.opens](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L123) | 123 |
+| [Becoming.Rooms.net_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L126) | 126 |
+| [Becoming.Rooms.net_shut](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L132) | 132 |
+| [Becoming.Rooms.shut_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L138) | 138 |
+| [Becoming.Rooms.begins_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L143) | 143 |
+| [Becoming.Rooms.not_begins_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L147) | 147 |
+| [Becoming.Rooms.warm_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L150) | 150 |
+| [Becoming.Rooms.warm_of_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L155) | 155 |
+| [Becoming.Rooms.next_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L160) | 160 |
+| [Becoming.Rooms.heated_warm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L171) | 171 |
+| [Becoming.Rooms.exchange_ge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L176) | 176 |
+| [Becoming.Rooms.heater_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L186) | 186 |
+| [Becoming.Rooms.next_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L189) | 189 |
+| [Becoming.Rooms.cools](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L193) | 193 |
+| [Becoming.Rooms.cold_after](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L197) | 197 |
+| [Becoming.Rooms.cold_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L202) | 202 |
+| [Becoming.Rooms.Unheated.s3_b2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L213) | 213 |
+| [Becoming.Rooms.Unheated.b2_b1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L214) | 214 |
+| [Becoming.Rooms.Unheated.b1_b0](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L215) | 215 |
+| [Becoming.Rooms.Unheated.begins_b2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L217) | 217 |
+| [Becoming.Rooms.Unheated.begins_b1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L218) | 218 |
+| [Becoming.Rooms.Unheated.b1_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L221) | 221 |
+| [Becoming.Rooms.Unheated.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L225) | 225 |
+| [Becoming.Rooms.Unheated.reach](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L232) | 232 |
+| [Becoming.Rooms.Unheated.keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L238) | 238 |
+| [Becoming.Rooms.Unheated.ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L243) | 243 |
+| [Becoming.Rooms.Unheated.not_generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L248) | 248 |
+| [Becoming.Rooms.Unheated.ends_b1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L264) | 264 |
+| [Becoming.Rooms.Unheated.ends_b2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L266) | 266 |
+| [Becoming.Rooms.Unheated.rows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L272) | 272 |
+| [Becoming.Rooms.«平衡守而有终»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L290) | 290 |
+| [Becoming.Rooms.«开窗则平衡新而尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L300) | 300 |
+| [Becoming.Rooms.Matched.open_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L313) | 313 |
+| [Becoming.Rooms.Matched.start_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L318) | 318 |
+| [Becoming.Rooms.Matched.kept_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L321) | 321 |
+| [Becoming.Rooms.Matched.not_begins_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L324) | 324 |
+| [Becoming.Rooms.Matched.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L328) | 328 |
+| [Becoming.Rooms.Matched.reach](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L334) | 334 |
+| [Becoming.Rooms.Matched.no_renewal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L340) | 340 |
+| [Becoming.Rooms.Matched.keeping](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L346) | 346 |
+| [Becoming.Rooms.Matched.not_generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L353) | 353 |
+| [Becoming.Rooms.Matched.keeps_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L358) | 358 |
+| [Becoming.Rooms.Matched.rows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L371) | 371 |
+| [Becoming.Rooms.«给如所取则全守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L390) | 390 |
+| [Becoming.Rooms.Overshooting.s3_o4](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L402) | 402 |
+| [Becoming.Rooms.Overshooting.o4_o3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L403) | 403 |
+| [Becoming.Rooms.Overshooting.o3_o4](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L404) | 404 |
+| [Becoming.Rooms.Overshooting.begins_o4](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L406) | 406 |
+| [Becoming.Rooms.Overshooting.begins_o3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L407) | 407 |
+| [Becoming.Rooms.Overshooting.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L413) | 413 |
+| [Becoming.Rooms.Overshooting.reach](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L420) | 420 |
+| [Becoming.Rooms.Overshooting.renews](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L426) | 426 |
+| [Becoming.Rooms.Overshooting.renewing_steps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L432) | 432 |
+| [Becoming.Rooms.Overshooting.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L448) | 448 |
+| [Becoming.Rooms.Overshooting.generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L452) | 452 |
+| [Becoming.Rooms.Overshooting.keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L457) | 457 |
+| [Becoming.Rooms.Overshooting.generation_strong](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L463) | 463 |
+| [Becoming.Rooms.Overshooting.openNet_single](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L469) | 469 |
+| [Becoming.Rooms.Overshooting.begins_open_line](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L474) | 474 |
+| [Becoming.Rooms.Overshooting.generates_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L478) | 478 |
+| [Becoming.Rooms.Overshooting.single_line_tested](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L493) | 493 |
+| [Becoming.Rooms.Overshooting.closed_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L504) | 504 |
+| [Becoming.Rooms.Overshooting.not_keepsAfter_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L510) | 510 |
+| [Becoming.Rooms.Overshooting.rows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L531) | 531 |
+| [Becoming.Rooms.«给过所取则生守相杂»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L559) | 559 |
+| [Becoming.Rooms.shut_rest_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L565) | 565 |
+| [Becoming.Rooms.shut_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L570) | 570 |
+| [Becoming.Rooms.cold_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L587) | 587 |
+| [Becoming.Rooms.«温有常当且仅当有给»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L606) | 606 |
+| [Becoming.Rooms.alike_in_core_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L619) | 619 |
+| [Becoming.Rooms.cools_to](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L625) | 625 |
+| [Becoming.Rooms.«温不穷当且仅当有给»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L632) | 632 |
+| [Becoming.Rooms.heated_unended](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L652) | 652 |
+| [Becoming.Rooms.unended_at_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L661) | 661 |
+| [Becoming.Rooms.«不开窗则同核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L698) | 698 |
+| [Becoming.Rooms.shut_one_class_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L710) | 710 |
+| [Becoming.Rooms.«开窗则一层可分»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L716) | 716 |
+| [Becoming.Rooms.heaters_told_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L732) | 732 |
+| [Becoming.Rooms.unheated_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L740) | 740 |
+| [Becoming.Rooms.lasts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L748) | 748 |
+| [Becoming.Rooms.empties](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L769) | 769 |
+| [Becoming.Rooms.«开窗以温层如其余乃分»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L781) | 781 |
+| [Becoming.Rooms.«有给之室以温不可分»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L793) | 793 |
+| [Becoming.Rooms.joint_converse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L808) | 808 |
+| [Becoming.Rooms.before_window_moves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L831) | 831 |
+| [Becoming.Rooms.before_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L838) | 838 |
+| [Becoming.Rooms.before_at_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L851) | 851 |
+| [Becoming.Rooms.before_unheated](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L854) | 854 |
+| [Becoming.Rooms.toy_branches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L874) | 874 |
+| [Becoming.Rooms.toy_verdict](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L927) | 927 |
+
+Definitions and types:
+
+- `structure` [Becoming.Rooms.Occurrence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L58) (L58)
+- `def` [Becoming.Rooms.surroundings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L63) (L63)
+- `def` [Becoming.Rooms.exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L66) (L66)
+- `def` [Becoming.Rooms.heater](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L70) (L70)
+- `def` [Becoming.Rooms.next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L73) (L73)
+- `def` [Becoming.Rooms.shut](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L76) (L76)
+- `def` [Becoming.Rooms.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L81) (L81)
+- `def` [Becoming.Rooms.openNet](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L85) (L85)
+- `def` [Becoming.Rooms.sameLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L88) (L88)
+- `def` [Becoming.Rooms.warm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L91) (L91)
+- `def` [Becoming.Rooms.alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L97) (L97)
+- `def` [Becoming.Rooms.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L100) (L100)
+- `def` [Becoming.Rooms.Unheated.b2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L209) (L209)
+- `def` [Becoming.Rooms.Unheated.b1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L210) (L210)
+- `def` [Becoming.Rooms.Unheated.b0](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L211) (L211)
+- `def` [Becoming.Rooms.Matched.kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L310) (L310)
+- `def` [Becoming.Rooms.Overshooting.o4](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L399) (L399)
+- `def` [Becoming.Rooms.Overshooting.o3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L400) (L400)
+- `def` [Becoming.Rooms.Overshooting.Reached](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L410) (L410)
+- `abbrev` [Becoming.Rooms.Tagged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L682) (L682)
+- `def` [Becoming.Rooms.joint](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L685) (L685)
+- `def` [Becoming.Rooms.jointShut](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L688) (L688)
+- `def` [Becoming.Rooms.jointLevel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L691) (L691)
+- `def` [Becoming.Rooms.jointAlike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L694) (L694)
+- `def` [Becoming.Rooms.nextBefore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L825) (L825)
+- `def` [Becoming.Rooms.toy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomNet.lean#L864) (L864)
+
+</details>
+
+<a id="module-ce6c44bcae24"></a>
+
+<details>
+<summary>RoomRuns.lean — 27 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean`
+
+Imports: `Becoming.RoomNet`, `Becoming.RegimeMargin`, `Becoming.HeldPossible`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Rooms.next_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L40) | 40 |
+| [Becoming.Rooms.windowAt_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L54) | 54 |
+| [Becoming.Rooms.window_line](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L59) | 59 |
+| [Becoming.Rooms.Unheated.window_cold](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L70) | 70 |
+| [Becoming.Rooms.matched_meets](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L78) | 78 |
+| [Becoming.Rooms.matched_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L82) | 82 |
+| [Becoming.Rooms.Matched.window_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L89) | 89 |
+| [Becoming.Rooms.Overshooting.alternates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L94) | 94 |
+| [Becoming.Rooms.Overshooting.not_widening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L104) | 104 |
+| [Becoming.Rooms.Overshooting.generation_at_moments](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L114) | 114 |
+| [Becoming.Rooms.Matched.no_generation_at_moments](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L125) | 125 |
+| [Becoming.Rooms.Unheated.no_generation_at_moments](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L134) | 134 |
+| [Becoming.Rooms.Overshooting.holds_one_way](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L148) | 148 |
+| [Becoming.Rooms.Overshooting.heater_shifted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L161) | 161 |
+| [Becoming.Rooms.Overshooting.in_phase](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L170) | 170 |
+| [Becoming.Rooms.Overshooting.alternation_shifted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L187) | 187 |
+| [Becoming.Rooms.Unheated.not_widening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L195) | 195 |
+| [Becoming.Rooms.Matched.not_widening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L203) | 203 |
+| [Becoming.Rooms.steps_of_net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L217) | 217 |
+| [Becoming.Rooms.net_of_steps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L225) | 225 |
+| [Becoming.Rooms.line_iff_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L231) | 231 |
+| [Becoming.Rooms.Unheated.cold_not_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L246) | 246 |
+| [Becoming.Rooms.heated_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L262) | 262 |
+| [Becoming.Rooms.heated_possible_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L270) | 270 |
+
+Definitions and types:
+
+- `abbrev` [Becoming.Rooms.windowRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L46) (L46)
+- `def` [Becoming.Rooms.windowAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L50) (L50)
+- `def` [Becoming.Rooms.process](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean#L213) (L213)
+
+</details>
+
 <a id="module-9d70361ccdb8"></a>
 
 <details>

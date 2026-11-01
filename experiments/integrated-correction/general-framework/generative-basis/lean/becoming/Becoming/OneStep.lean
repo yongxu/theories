@@ -15,13 +15,13 @@ witness world for each pattern the law allows.
   passages of its members in order, how many relata take from it (`Flow.takers`), and whether
   something taking part exchanges at all (`Flow.ExchangesAt`). Coming and ceasing to stand,
   the fall of the total and the totals taken and given are read off the passages.
-* **The law of every step.** Every step obeys it (`Flow.Realizes.every`): the relata taking
+* **The law of every step.** Every step satisfies it (`Flow.Realizes.every`): the relata taking
   from a family are at least one where anything is taken from it and at most what is taken,
   and something exchanges where anything is taken or given. Its lower bound is a law the
   spine had not stated: something taken from a family has a relatum taking it
   (`Flow.sign_uptake_le_takers`).
 * **Each condition adds exactly its law.** A pattern is shown by some world across some step
-  on some family, listing each relatum taking part once, exactly when it obeys the law of
+  on some family, listing each relatum taking part once, exactly when it satisfies the law of
   every step (`OneStep.every_iff`); on a family balanced on, exactly when each passage also
   balances (`OneStep.balance_iff`); on a family running down, exactly when moreover the total
   falls by at least the relata taking (`OneStep.runsDown_iff`); on a family closed across the
@@ -30,13 +30,13 @@ witness world for each pattern the law allows.
   (`OneStep.runsDownClosed_iff`). Whatever the count, a family's passages can run down
   exactly when they balance and the total falls by one wherever anything is taken
   (`OneStep.runsDown_passages_iff`). So a property of patterns holds of every step where a
-  condition holds exactly when it holds of every pattern obeying that condition's law
+  condition holds exactly when it holds of every pattern satisfying that condition's law
   (`OneStep.laws`).
 * **Runs.** Across every step of one family the same holds with one more law: the passages
   follow one another, what stands after each step being what stands before the next
   (`OneStep.Chained`). A run of patterns is shown by some world on one family across every
   step, the condition holding at each, exactly when its passages follow one another and each
-  step obeys the condition's law (`OneStep.run_every_iff`, `OneStep.run_balance_iff`,
+  step satisfies the condition's law (`OneStep.run_every_iff`, `OneStep.run_balance_iff`,
   `OneStep.run_runsDown_iff`, `OneStep.run_closed_iff`, `OneStep.run_runsDownClosed_iff`;
   `OneStep.run_laws`).
 * **What the stated laws miss.** For a family running down closed, the laws as stated in
@@ -59,7 +59,7 @@ witness world for each pattern the law allows.
   web are read with one kind of relatum (`World.ofRoles`), so the witness is a world of the
   spine.
 * **The givers.** The pattern now also counts the relata giving to the family
-  (`Flow.renewers`, `Flow.RealizesGivers`). Every step obeys the law of the givers
+  (`Flow.renewers`, `Flow.RealizesGivers`). Every step satisfies the law of the givers
   (`OneStep.Givers`): they are at least one where anything is given and at most what is given
   (`Flow.renewers_le_replenishment`). Its lower bound is again a law the spine had not stated:
   something given to a family has a relatum giving it (`Flow.sign_replenishment_le_renewers`).
@@ -86,7 +86,7 @@ witness world for each pattern the law allows.
   `OneStep.run_closed_givers_iff`, `OneStep.run_runsDownClosed_givers_iff`).
 * **Families chosen step by step.** Where the family may change at each step
   (`OneStep.StepRealized`; without the givers `OneStep.StepRunRealized`), no condition, balance
-  and closure join one step to the next: the run is shown exactly when each step obeys its law
+  and closure join one step to the next: the run is shown exactly when each step satisfies its law
   (`OneStep.step_every_iff`, `OneStep.step_balance_iff`, `OneStep.step_closed_iff`,
   `OneStep.stepRun_balance_iff`); what stands after a step need not be listed before the next
   (`OneStep.vanishing_steps`). Running down holds in its family all that stands before and
@@ -274,7 +274,7 @@ theorem RunsDownOn.taken_iff {es : List C} {t : Nat} (runs : L.RunsDownOn W es t
      fun lower => match exists_lt_of_total_lt lower with
       | ⟨c, mem, falls⟩ => ⟨c, mem, balances.fall_taken mem falls⟩⟩
 
-/-! ## What a shown pattern obeys -/
+/-! ## What a shown pattern satisfies -/
 
 variable {t : Nat} {es : List C} {P : List Passage} {k : Nat} {e : Prop}
 
@@ -324,7 +324,7 @@ def Balance (P : List Passage) (k : Nat) (e : Prop) : Prop :=
 /-- The law of running down: the law of balance, the family's total falling by at least the
 number of relata taking from it. This is read on a pattern of passages; `Flow.RunsDown` of
 `Becoming.Locality` says it of a world's flow across a step, and a pattern is shown on a family
-running down exactly where it obeys this law (`Flow.Realizes.runsDown`, `runsDown_iff`). -/
+running down exactly where it satisfies this law (`Flow.Realizes.runsDown`, `runsDown_iff`). -/
 def RunsDown (P : List Passage) (k : Nat) (e : Prop) : Prop :=
   Balance P k e ∧ total P Passage.after + k ≤ total P Passage.before
 
@@ -354,14 +354,14 @@ theorem fall_iff_given {P : List Passage} {k : Nat} (balanced : ∀ p, p ∈ P �
 
 end OneStep
 
-/-! ## What a shown pattern obeys, under each condition -/
+/-! ## What a shown pattern satisfies, under each condition -/
 
 namespace Flow
 
 variable {L : Flow F C} {W : Web F C} {t : Nat} {es : List C} {P : List Passage} {k : Nat}
   {e : Prop}
 
-/-- Every shown pattern obeys the law of every step. -/
+/-- Every shown pattern satisfies the law of every step. -/
 theorem Realizes.every (realizes : L.Realizes W t es P k e) : OneStep.Every P k e :=
   ⟨Nat.le_trans (Nat.le_of_eq (congrArg sign realizes.uptake))
       (Nat.le_trans (sign_uptake_le_takers es t) (Nat.le_of_eq realizes.2.1)),
@@ -373,13 +373,13 @@ theorem Realizes.every (realizes : L.Realizes W t es P k e) : OneStep.Every P k 
      | .inr given => exchangesAt_of_replenishment
          (Nat.lt_of_lt_of_le given (Nat.le_of_eq realizes.replenishment)))⟩
 
-/-- A pattern shown with balance on the family obeys the law of balance. -/
+/-- A pattern shown with balance on the family satisfies the law of balance. -/
 theorem Realizes.balance (realizes : L.Realizes W t es P k e) (balances : L.BalancesOn W es t) :
     OneStep.Balance P k e :=
   ⟨realizes.every, fun _ mem => match realizes.member mem with
     | ⟨c, inside, same⟩ => Eq.subst (motive := Passage.Balanced) same (balances c inside)⟩
 
-/-- A pattern shown on a family running down obeys the law of running down. -/
+/-- A pattern shown on a family running down satisfies the law of running down. -/
 theorem Realizes.runsDown (realizes : L.Realizes W t es P k e) (runs : L.RunsDownOn W es t) :
     OneStep.RunsDown P k e :=
   match runs with
@@ -388,14 +388,14 @@ theorem Realizes.runsDown (realizes : L.Realizes W t es P k e) (runs : L.RunsDow
       (Nat.le_of_eq (congr (congrArg (· + ·) realizes.stock_after) realizes.2.1.symm))
       (Nat.le_trans (balances.runs_down dissipates) (Nat.le_of_eq realizes.stock_before.symm))⟩
 
-/-- A pattern shown on a family closed across the step obeys the law of closure. -/
+/-- A pattern shown on a family closed across the step satisfies the law of closure. -/
 theorem Realizes.closed (realizes : L.Realizes W t es P k e) (closed : L.ClosedAt es t) :
     OneStep.Closed P k e :=
   ⟨realizes.every, fun holds => match (realizes.2.2.mpr holds).closed closed with
     | .inl up => .inl (Nat.lt_of_lt_of_le up (Nat.le_of_eq realizes.uptake.symm))
     | .inr given => .inr (Nat.lt_of_lt_of_le given (Nat.le_of_eq realizes.replenishment.symm))⟩
 
-/-- A pattern shown on a family running down closed obeys the law of running down closed. -/
+/-- A pattern shown on a family running down closed satisfies the law of running down closed. -/
 theorem Realizes.runsDownClosed (realizes : L.Realizes W t es P k e)
     (runs : L.RunsDownOn W es t) (closed : L.ClosedAt es t) : OneStep.RunsDownClosed P k e :=
   ⟨realizes.runsDown runs, (realizes.closed closed).2⟩
@@ -1115,7 +1115,7 @@ theorem exchange_closed {X Y : Nat} {e : Prop} (law : e ↔ 0 < X ∨ 0 < Y) :
     | .inl taken => .inl taken
     | .inr given => .inr (.inl given)⟩
 
-/-- The witness shows a pattern obeying the law of every step across its first step, on a
+/-- The witness shows a pattern satisfying the law of every step across its first step, on a
 family where the condition holds. -/
 theorem Witness.realizedOnce {P : List Passage} {k : Nat} {e : Prop} (every : Every P k e)
     (o : Prop) (exchange : (0 < total P Passage.taken ∨ 0 < total P Passage.given ∨ o) ↔ e)
@@ -1128,7 +1128,7 @@ theorem Witness.realizedOnce {P : List Passage} {k : Nat} {e : Prop} (every : Ev
     ⟨_, 0, _, holds, distinct, realizes.1, realizes.2.1, realizes.2.2.trans exchange⟩
 
 /-- **The law of every step is all the law of one step.** A pattern is shown by some world
-across some step on some family exactly when it obeys the law of every step. -/
+across some step on some family exactly when it satisfies the law of every step. -/
 theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :
     Realized (fun _ _ _ => True) P k e ↔ Every P k e :=
   ⟨fun ⟨_, _, _, _, _, realizes⟩ => realizes.every,
@@ -1136,7 +1136,7 @@ theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :
      (cond := fun _ _ _ => True) trivial⟩
 
 /-- **Balance adds exactly balance at each member.** A pattern is shown on a family balanced
-on across the step exactly when it obeys the law of balance. -/
+on across the step exactly when it satisfies the law of balance. -/
 theorem balance_iff (P : List Passage) (k : Nat) (e : Prop) :
     Realized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔ Balance P k e :=
   ⟨fun ⟨_, _, _, balances, _, realizes⟩ => realizes.balance balances,
@@ -1146,7 +1146,7 @@ theorem balance_iff (P : List Passage) (k : Nat) (e : Prop) :
        balanced).roles⟩
 
 /-- **Running down adds exactly the fall by the takers.** A pattern is shown on a family running
-down across the step exactly when it obeys the law of running down. -/
+down across the step exactly when it satisfies the law of running down. -/
 theorem runsDown_iff (P : List Passage) (k : Nat) (e : Prop) :
     Realized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔ RunsDown P k e :=
   ⟨fun ⟨_, _, _, runs, _, realizes⟩ => realizes.runsDown runs,
@@ -1156,7 +1156,7 @@ theorem runsDown_iff (P : List Passage) (k : Nat) (e : Prop) :
        (Witness.once_chain P) balanced every.1 ((fall_iff_given balanced).mp fall)).roles⟩
 
 /-- **Closure adds exactly that exchange is with the family.** A pattern is shown on a family
-closed across the step exactly when it obeys the law of closure. -/
+closed across the step exactly when it satisfies the law of closure. -/
 theorem closed_iff (P : List Passage) (k : Nat) (e : Prop) :
     Realized (fun w t es => w.flow.ClosedAt es t) P k e ↔ Closed P k e :=
   ⟨fun ⟨_, _, _, closed, _, realizes⟩ => realizes.closed closed,
@@ -1164,7 +1164,7 @@ theorem closed_iff (P : List Passage) (k : Nat) (e : Prop) :
      (exchange_closed ⟨inward, every.2.2⟩) (cond := fun w t es => w.flow.ClosedAt es t)
      (Witness.closedAt (Witness.once P) _ (fun _ => False) 0 id).roles⟩
 
-/-- A pattern is shown on a family running down closed across the step exactly when it obeys
+/-- A pattern is shown on a family running down closed across the step exactly when it satisfies
 the law of running down closed. -/
 theorem runsDownClosed_iff (P : List Passage) (k : Nat) (e : Prop) :
     Realized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
@@ -1200,7 +1200,7 @@ def Respects (Q : List Passage → Nat → Prop → Prop) : Prop :=
 
 /-- **No law of one step beyond the law.** Where a law is exact for a condition, a property of
 patterns holds of what every step shows where the condition holds exactly when it holds of
-every pattern obeying the law. -/
+every pattern satisfying the law. -/
 theorem laws {cond : (w : World) → Nat → List w.Relatum → Prop}
     {Law : List Passage → Nat → Prop → Prop} (exact : ∀ P k e, Realized cond P k e ↔ Law P k e)
     {Q : List Passage → Nat → Prop → Prop} (respects : Respects Q) :
@@ -1241,7 +1241,7 @@ theorem RunRealized.exchange {cond : (w : World) → Nat → List w.Relatum → 
   | ⟨w, es, holds⟩ => ⟨w, es, fun t => ⟨(holds t).1, (holds t).2.1, (holds t).2.2.1,
       (holds t).2.2.2.1, (holds t).2.2.2.2.trans (same t)⟩⟩
 
-/-- The witness shows a run whose passages follow one another and obey the law of every step,
+/-- The witness shows a run whose passages follow one another and satisfy the law of every step,
 on one family, where the condition holds of it at every step. -/
 theorem Witness.showsRun {P : Nat → List Passage} {k : Nat → Nat} (chain : Chained P)
     (every : ∀ t, sign (total (P t) Passage.taken) ≤ k t ∧ k t ≤ total (P t) Passage.taken)
@@ -1259,7 +1259,7 @@ theorem Witness.showsRun {P : Nat → List Passage} {k : Nat → Nat} (chain : C
 
 /-- **The law of every step is all the law of a run.** A run of patterns is shown by some world
 across every step on one family exactly when its passages follow one another and each step
-obeys the law of every step. -/
+satisfies the law of every step. -/
 theorem run_every_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → Prop) :
     RunRealized (fun _ _ _ => True) P k e ↔ Chained P ∧ ∀ t, Every (P t) (k t) (e t) :=
   ⟨fun realized => ⟨realized.chained, match realized with
@@ -1269,7 +1269,7 @@ theorem run_every_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → 
       fun t => exchange_open (every t).2.2⟩
 
 /-- A run is shown on one family balanced on across every step exactly when its passages
-follow one another and each step obeys the law of balance. -/
+follow one another and each step satisfies the law of balance. -/
 theorem run_balance_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → Prop) :
     RunRealized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔
       Chained P ∧ ∀ t, Balance (P t) (k t) (e t) :=
@@ -1281,7 +1281,7 @@ theorem run_balance_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat �
       fun t => exchange_open (law t).1.2.2⟩
 
 /-- A run is shown on one family running down across every step exactly when its passages
-follow one another and each step obeys the law of running down. -/
+follow one another and each step satisfies the law of running down. -/
 theorem run_runsDown_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → Prop) :
     RunRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔
       Chained P ∧ ∀ t, RunsDown (P t) (k t) (e t) :=
@@ -1294,7 +1294,7 @@ theorem run_runsDown_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat �
       fun t => exchange_open (law t).1.1.2.2⟩
 
 /-- A run is shown on one family closed across every step exactly when its passages follow one
-another and each step obeys the law of closure. -/
+another and each step satisfies the law of closure. -/
 theorem run_closed_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → Prop) :
     RunRealized (fun w t es => w.flow.ClosedAt es t) P k e ↔
       Chained P ∧ ∀ t, Closed (P t) (k t) (e t) :=
@@ -1306,7 +1306,7 @@ theorem run_closed_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat →
       fun t => exchange_closed ⟨(law t).2, (law t).1.2.2⟩⟩
 
 /-- A run is shown on one family running down closed across every step exactly when its
-passages follow one another and each step obeys the law of running down closed. -/
+passages follow one another and each step satisfies the law of running down closed. -/
 theorem run_runsDownClosed_iff (P : Nat → List Passage) (k : Nat → Nat) (e : Nat → Prop) :
     RunRealized (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k e ↔
       Chained P ∧ ∀ t, RunsDownClosed (P t) (k t) (e t) :=
@@ -1329,7 +1329,7 @@ def RunRespects (Q : (Nat → List Passage) → (Nat → Nat) → (Nat → Prop)
 /-- **No law of runs beyond the law.** Where a law of one step is exact for a condition held
 across a run, a property of runs holds of what every world shows across its steps on a family
 where the condition holds at every step exactly when it holds of every run whose passages
-follow one another and whose steps obey the law. -/
+follow one another and whose steps satisfy the law. -/
 theorem run_laws {cond : (w : World) → Nat → List w.Relatum → Prop}
     {Law : List Passage → Nat → Prop → Prop}
     (exact : ∀ P k e, RunRealized cond P k e ↔ Chained P ∧ ∀ t, Law (P t) (k t) (e t))
@@ -1400,7 +1400,7 @@ theorem runsDownClosed_iff_stated (P : List Passage) (k : Nat) (e : Prop) :
 
 /-- **A pattern the stated laws allow and no world shows.** One condition standing at one,
 taken from by one and given one across the step: passed through with no change, nothing
-taking from it and nothing exchanging. It obeys every stated law of one step for a family
+taking from it and nothing exchanging. It satisfies every stated law of one step for a family
 running down closed, and no world shows it under any condition: something taken from a family
 has a relatum taking it. -/
 theorem stated_not_realized :
@@ -1885,7 +1885,7 @@ namespace Flow
 variable {L : Flow F C} {W : Web F C} {t : Nat} {es : List C} {P : List Passage} {k r : Nat}
   {e : Prop}
 
-/-- Every shown pattern obeys the law of the givers. -/
+/-- Every shown pattern satisfies the law of the givers. -/
 theorem RealizesGivers.givers (realizes : L.RealizesGivers W t es P k r e) : OneStep.Givers P r :=
   ⟨Nat.le_trans (Nat.le_of_eq (congrArg sign realizes.1.replenishment))
       (Nat.le_trans (sign_replenishment_le_renewers es t) (Nat.le_of_eq realizes.2)),
@@ -2924,7 +2924,7 @@ theorem Chain.realizedRunning {P : List Passage} {k r : Nat} {e : Prop} (runs : 
       Chain.realizedOnce sumd sumg countd countg o exchange (holds _ _ sumd sumg bounded shares)
 
 /-- **The givers in the law of every step.** A pattern with its givers is shown by some world
-across some step on some family exactly when it obeys the law of every step and the givers are
+across some step on some family exactly when it satisfies the law of every step and the givers are
 at least one where anything is given and at most what is given. -/
 theorem every_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
     RealizedGivers (fun _ _ _ => True) P k r e ↔ Every P k e ∧ Givers P r :=
@@ -2932,7 +2932,7 @@ theorem every_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
    fun ⟨every, givers⟩ => Chain.realizedOpen every givers (Chain.self_le_mul givers.1) e
      (exchange_open every.2.2) fun _ _ _ _ _ => trivial⟩
 
-/-- A pattern with its givers is shown on a family balanced on exactly when it obeys the law of
+/-- A pattern with its givers is shown on a family balanced on exactly when it satisfies the law of
 balance and the law of the givers. -/
 theorem balance_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
     RealizedGivers (fun w t es => w.flow.BalancesOn w.web es t) P k r e ↔
@@ -2943,7 +2943,7 @@ theorem balance_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
      fun _ _ sumd sumg _ => Chain.solo_balancesOn sumd sumg balanced⟩
 
 /-- **Running down adds that every giver takes.** A pattern with its givers is shown on a family
-running down exactly when it obeys the law of running down and the law of the givers, and the
+running down exactly when it satisfies the law of running down and the law of the givers, and the
 givers are at most the takers. -/
 theorem runsDown_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
     RealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
@@ -2954,7 +2954,7 @@ theorem runsDown_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
      (Chain.self_le_mul givers.1) e (exchange_open runs.1.1.2.2)
      fun _ _ sumd sumg _ shares => Chain.solo_runsDownOn sumd sumg runs.1.2 shares⟩
 
-/-- A pattern with its givers is shown on a family closed across the step exactly when it obeys
+/-- A pattern with its givers is shown on a family closed across the step exactly when it satisfies
 the law of closure and the law of the givers. -/
 theorem closed_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
     RealizedGivers (fun w t es => w.flow.ClosedAt es t) P k r e ↔ Closed P k e ∧ Givers P r :=
@@ -2963,7 +2963,7 @@ theorem closed_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
      (Chain.self_le_mul givers.1) False (exchange_closed ⟨inward, every.2.2⟩)
      fun _ _ _ _ _ => Chain.solo_closedAt P _ _⟩
 
-/-- A pattern with its givers is shown on a family running down closed exactly when it obeys the
+/-- A pattern with its givers is shown on a family running down closed exactly when it satisfies the
 law of running down closed and the law of the givers, and the givers are at most the takers. -/
 theorem runsDownClosed_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
     RealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t) P k r e ↔
@@ -2978,7 +2978,7 @@ theorem runsDownClosed_givers_iff (P : List Passage) (k r : Nat) (e : Prop) :
 /-! ### With the capacity of each giver -/
 
 /-- **The capacity law is the whole law of capacity.** With each relatum giving the family at
-most `cap` across the step, a pattern with its givers is shown exactly when it obeys the law of
+most `cap` across the step, a pattern with its givers is shown exactly when it satisfies the law of
 every step, the law of the givers, and what is given is at most `cap` for each giver
 (`Flow.CapacityAt.replenishment_le`). -/
 theorem every_capacity_iff (cap : Nat) (P : List Passage) (k r : Nat) (e : Prop) :
@@ -3084,7 +3084,7 @@ def RespectsGivers (Q : List Passage → Nat → Nat → Prop → Prop) : Prop :
 
 /-- **No law of one step beyond the law, with the givers.** Where a law is exact for a
 condition, a property of patterns with their givers holds of what every step shows where the
-condition holds exactly when it holds of every pattern obeying the law. -/
+condition holds exactly when it holds of every pattern satisfying the law. -/
 theorem laws_givers {cond : (w : World) → Nat → List w.Relatum → Prop}
     {Law : List Passage → Nat → Nat → Prop → Prop}
     (exact : ∀ P k r e, RealizedGivers cond P k r e ↔ Law P k r e)
@@ -3253,7 +3253,7 @@ variable (P : Nat → List Passage) (k r : Nat → Nat) (e : Nat → Prop)
 open Chain in
 /-- **The law of every step with its givers is all the law of a run.** A run of patterns with
 their givers is shown on one family across every step exactly when its passages follow one
-another and each step obeys the law of every step and the law of the givers. -/
+another and each step satisfies the law of every step and the law of the givers. -/
 theorem run_every_givers_iff :
     RunRealizedGivers (fun _ _ _ => True) P k r e ↔
       Chained P ∧ ∀ t, Every (P t) (k t) (e t) ∧ Givers (P t) (r t) :=
@@ -3268,7 +3268,7 @@ theorem run_every_givers_iff :
 
 open Chain in
 /-- A run with its givers is shown on one family balanced on across every step exactly when its
-passages follow one another and each step obeys the law of balance and the law of the givers. -/
+passages follow one another and each step satisfies the law of balance and the law of the givers. -/
 theorem run_balance_givers_iff :
     RunRealizedGivers (fun w t es => w.flow.BalancesOn w.web es t) P k r e ↔
       Chained P ∧ ∀ t, Balance (P t) (k t) (e t) ∧ Givers (P t) (r t) :=
@@ -3285,7 +3285,7 @@ theorem run_balance_givers_iff :
 
 open Chain in
 /-- **Running down on one family, with the givers.** A run with its givers is shown on one family
-running down across every step exactly when its passages follow one another and each step obeys
+running down across every step exactly when its passages follow one another and each step satisfies
 the law of running down, the law of the givers, and the givers are at most the takers. -/
 theorem run_runsDown_givers_iff :
     RunRealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
@@ -3306,7 +3306,7 @@ theorem run_runsDown_givers_iff :
 
 open Chain in
 /-- A run with its givers is shown on one family closed across every step exactly when its
-passages follow one another and each step obeys the law of closure and the law of the givers. -/
+passages follow one another and each step satisfies the law of closure and the law of the givers. -/
 theorem run_closed_givers_iff :
     RunRealizedGivers (fun w t es => w.flow.ClosedAt es t) P k r e ↔
       Chained P ∧ ∀ t, Closed (P t) (k t) (e t) ∧ Givers (P t) (r t) :=
@@ -3323,7 +3323,7 @@ theorem run_closed_givers_iff :
 
 open Chain in
 /-- A run with its givers is shown on one family running down closed across every step exactly
-when its passages follow one another and each step obeys the law of running down closed, the law
+when its passages follow one another and each step satisfies the law of running down closed, the law
 of the givers, and the givers are at most the takers. -/
 theorem run_runsDownClosed_givers_iff :
     RunRealizedGivers (fun w t es => w.flow.RunsDownOn w.web es t ∧ w.flow.ClosedAt es t)
@@ -3349,7 +3349,7 @@ theorem run_runsDownClosed_givers_iff :
 
 open Chain in
 /-- **Without a condition holding what stands, nothing joins the steps.** A run with its givers
-is shown on families chosen step by step exactly when each step obeys the law of every step and
+is shown on families chosen step by step exactly when each step satisfies the law of every step and
 the law of the givers: what stands after one step need not be what stands before the next. -/
 theorem step_every_iff :
     StepRealized (fun _ _ _ => True) P k r e ↔ ∀ t, Every (P t) (k t) (e t) ∧ Givers (P t) (r t) :=
@@ -3395,7 +3395,7 @@ open Chain in
 /-- **Running down on families chosen step by step: continuity up to order replaces following
 position by position.** A run with its givers is shown on families chosen step by step, each
 running down, exactly when what stands after each step is what stands before the next up to
-order (`OneStep.Continues`) and each step obeys the law of running down, the law of the givers,
+order (`OneStep.Continues`) and each step satisfies the law of running down, the law of the givers,
 and the givers are at most the takers. -/
 theorem step_runsDown_iff :
     StepRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k r e ↔
@@ -3470,7 +3470,7 @@ theorem RunsDown.sign_given_le {Q : List Passage} {k' : Nat} {e' : Prop} (runs :
 
 /-- **Running down on families chosen step by step, without the givers.** A run is shown on
 families chosen step by step, each running down, exactly when what stands continues up to order
-and each step obeys the law of running down. -/
+and each step satisfies the law of running down. -/
 theorem stepRun_runsDown_iff :
     StepRunRealized (fun w t es => w.flow.RunsDownOn w.web es t) P k e ↔
       Continues P ∧ ∀ t, RunsDown (P t) (k t) (e t) :=
@@ -3491,7 +3491,7 @@ theorem stepRun_runsDownClosed_iff :
         ⟨continues, fun t => ⟨law t, givers_sign _, (law t).1.sign_given_le⟩⟩⟩⟩
 
 /-- Under balance alone, a run is shown on families chosen step by step exactly when each step
-obeys the law of balance. -/
+satisfies the law of balance. -/
 theorem stepRun_balance_iff :
     StepRunRealized (fun w t es => w.flow.BalancesOn w.web es t) P k e ↔
       ∀ t, Balance (P t) (k t) (e t) :=
@@ -3553,7 +3553,7 @@ theorem steps_not_run :
      (congrArg Witness.first (((run_runsDown_givers_iff _ _ _ _).mp realized).1 0))⟩
 
 /-- **Continuity is needed where what stands is held.** A condition standing at one before the
-first step and at one after it, gone from the list after: each step obeys the law of running
+first step and at one after it, gone from the list after: each step satisfies the law of running
 down, and balance shows the run on families chosen step by step, but no world shows it on
 families each running down, since what stands after the first step is not what stands before the
 next. -/
@@ -3607,9 +3607,9 @@ family shows it (`OneStep.Realized`, `OneStep.RunRealized`). This section states
 steps of flows and of the worlds showing patterns, and proves them through the laws of patterns.
 
 * **The stated laws are the whole law of a world's step.** A pattern is shown by some world across
-  some step on a family running down closed exactly when it obeys the stated laws and the law that
+  some step on a family running down closed exactly when it satisfies the stated laws and the law that
   something taken has a taker (`runsDownClosed_realized_iff`). Across a step of a flow at which a
-  family runs down closed, the pattern the step shows obeys the stated laws
+  family runs down closed, the pattern the step shows satisfies the stated laws
   (`stated_of_runsDownClosed`).
 * **What a flow shows on one family continues.** The passages a flow shows on one family across
   every step continue, at every positive level, as many members standing at it after each step as
@@ -3629,7 +3629,7 @@ variable {F C : Type}
 
 /-- **The stated laws with the taker law are the whole law of a world's step.** A pattern of
 passages, takers and exchange is shown by some world across some step on a family running down
-closed, listing each relatum taking part once, exactly when it obeys the laws of one step as
+closed, listing each relatum taking part once, exactly when it satisfies the laws of one step as
 `Becoming.Locality` states them together with the law that something taken from the family has a
 relatum taking it. -/
 theorem runsDownClosed_realized_iff (P : List Passage) (k : Nat) (e : Prop) :
@@ -3637,9 +3637,9 @@ theorem runsDownClosed_realized_iff (P : List Passage) (k : Nat) (e : Prop) :
       Stated P k e ∧ sign (total P Passage.taken) ≤ k :=
   (runsDownClosed_iff P k e).trans (runsDownClosed_iff_stated P k e)
 
-/-- **A flow's step running down closed obeys the stated laws.** Across a step at which a family
+/-- **A flow's step running down closed satisfies the stated laws.** Across a step at which a family
 runs down and is closed, the passages of its members, the number of relata taking from it and
-whether something exchanges obey the laws of one step as `Becoming.Locality` states them. -/
+whether something exchanges satisfy the laws of one step as `Becoming.Locality` states them. -/
 theorem stated_of_runsDownClosed {L : Flow F C} {W : Web F C} {es : List C} {t : Nat}
     (runs : L.RunsDownOn W es t) (closed : L.ClosedAt es t) :
     Stated (es.map (L.passage W t)) (L.takers es t) (L.ExchangesAt t) :=

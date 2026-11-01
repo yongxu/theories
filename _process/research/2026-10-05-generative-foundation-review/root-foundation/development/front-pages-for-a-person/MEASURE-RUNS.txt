@@ -49,3 +49,11 @@ Over budget, amendment 1 (never-cut: each claim's standing; a failure as it fell
    172 words  10559 chars      5452 budget-words  41.9–54.5 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
 
 Over budget: the one page by 6 budget-words, in its first open item, each central declaration's standing (never-cut, amendment 1). The overview by 106. About 40 are in T3's row: its second forbidden case proved in expectation, and its first wording failing where the learner reads the condition (a failure as it fell, never-cut). About 6 restore the reading in time's deciding hypothesis, that only those the rule disfavours read the loss (never-cut). About 60 restore the critical-mass loop of shaping read by the selected. The drafts had dropped it with no line in the note, and its record cites the overview as a place where it is stated, so its omission would leave that citation false. OU's owner judged the excess within amendment 1's intent and made no offsetting cut of settled prose. Both Chinese editions are within budget.
+
+## OU7's landing (on main fd44a3d66: the text review's front-page fixes merged, then OU's owner's refresh, step 5's conditional laws in the one page's first open item and in the overview's bullet, and the overview's sentences on the root folded into one clause)
+  1151 words     10 chars      1156 budget-words  8.9–11.6 min  theories/becoming/ONE-PAGE.md
+    51 words   1938 chars      1020 budget-words  7.8–10.2 min  theories/becoming/ONE-PAGE.zh.md
+  6208 words     32 chars      6224 budget-words  47.9–62.2 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   180 words  10740 chars      5550 budget-words  42.7–55.5 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 56 budget-words and the overview by 224, for the reasons READING-BUDGETS gives (amendment 1). Both Chinese editions are within budget.

@@ -62,7 +62,7 @@ Outcomes per unit in _process/research/2026-10-05-generative-foundation-review/r
   - Input: Candidate sentences of class 乙.
   - Preserved conditions: None beyond the grammar. [GrammarCandidates.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean)
 
-**Used by:** [processes-represented-both-ways](processes-represented-both-ways.md)
+**Used by:** [conditional-laws-of-the-corpus](conditional-laws-of-the-corpus.md) · [processes-represented-both-ways](processes-represented-both-ways.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -3,10 +3,10 @@ import Becoming.GrammarMap
 /-!
 # The map's regions: their coverage, and the split of a beginning (地图之域：周与生之分)
 
-Laws of the map of `Becoming.GrammarMap`, kept in a leaf that imports it, since most of the package
-depends on GrammarMap and no module below needs these laws. They hold for every carrier and
-relation, read at two grains as there: a fine class `E` (the parts) and a coarse class `L` (the
-pattern).
+Laws of the map of `Becoming.GrammarMap`, kept in a module of their own that imports it, since most
+of the package depends on GrammarMap and no module below needs these laws. They hold for every
+carrier and relation, read at two grains as there: a fine class `E` (the parts) and a coarse class
+`L` (the pattern).
 
 * **The split of a beginning.** A carrying renewal begins no line of the pattern (`«传则粗不生»`).
   Where the pattern has a predecessor, a beginning of a part is the end of a carrying renewal
@@ -41,7 +41,7 @@ pattern).
   need is not of the logic alone: to tell whether a line keeps from some point on is to decide
   whether it stops renewing. The nearest landed calibration is `Settling.OneWay.lpo_of_settles`;
   the conclusion is `Becoming.LPO` written out. The coding repeats `Settling`'s first-hit search,
-  which this leaf does not import.
+  which this module does not import.
 
 Every declaration has an empty axiom report.
 -/

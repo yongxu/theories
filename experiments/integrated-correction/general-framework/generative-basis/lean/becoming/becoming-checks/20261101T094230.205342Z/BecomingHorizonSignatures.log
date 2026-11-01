@@ -1,0 +1,98 @@
+Becoming.Renewable.prefix_does_not_decide : ∀ (h : Nat),
+  ∃ renewing consuming,
+    Becoming.Run.AgreeUpTo h renewing consuming ∧
+      (∀ (t : Nat), t < h → consuming.act t = 2) ∧
+        (∀ (t : Nat),
+            t < h →
+              Becoming.Web.RenewingAt t Becoming.Renewable.Formation.focal ∧
+                Becoming.Web.RenewingAt t Becoming.Renewable.Formation.focal) ∧
+          (Becoming.Renewable.conditions.dependence.along renewing).RenewingIn Becoming.Renewable.Formation.focal ∧
+            (Becoming.Renewable.conditions.dependence.along consuming).ConsumingIn Becoming.Renewable.Formation.focal
+Becoming.Renewable.finite_reading_includes_consumption : ∀ (h : Nat)
+  (reading : Becoming.Run Becoming.Renewable.process → Prop),
+  (∀ (r r' : Becoming.Run Becoming.Renewable.process), Becoming.Run.AgreeUpTo h r r' → reading r → reading r') →
+    (∀ (r : Becoming.Run Becoming.Renewable.process),
+        (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal → reading r) →
+      ∃ r, (Becoming.Renewable.conditions.dependence.along r).ConsumingIn Becoming.Renewable.Formation.focal ∧ reading r
+Becoming.Renewable.whole_run_includes_overdraw : ∀ (h : Nat),
+  ∃ r,
+    (∀ (t : Nat), t < h → r.act t = 2) ∧
+      (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal ∧
+        ∀ (t : Nat),
+          (Becoming.Renewable.conditions.along r).active t Becoming.Renewable.Formation.focal ∧
+            ¬RelationalRenewal.ConsumingIn (Becoming.Renewable.conditions.along r) Becoming.Renewable.Formation.focal
+Becoming.Renewable.amount_reading : ∀ (h : Nat),
+  (∀ (t : Nat) (r r' : Becoming.Run Becoming.Renewable.process),
+      Becoming.Run.AgreeUpTo (t + 1) r r' → (r.act t ≤ 1 ↔ r'.act t ≤ 1)) ∧
+    (∀ (t : Nat), Becoming.Renewable.withinRenewal.act t ≤ 1) ∧
+      ∃ r c,
+        (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal ∧
+          (Becoming.Renewable.conditions.dependence.along c).ConsumingIn Becoming.Renewable.Formation.focal ∧
+            ∀ (t : Nat), t < h → ¬r.act t ≤ 1 ∧ ¬c.act t ≤ 1
+Becoming.Renewable.cycle_reading_not_finite : ∀ (h p : Nat),
+  0 < p →
+    ¬∀ (r r' : Becoming.Run Becoming.Renewable.process),
+        Becoming.Run.AgreeUpTo h r r' →
+          (Becoming.Renewable.conditions.dependence.along r).RenewingInWithin p Becoming.Renewable.Formation.focal →
+            (Becoming.Renewable.conditions.dependence.along r').RenewingInWithin p Becoming.Renewable.Formation.focal
+@Becoming.Run.AgreeUpTo.refl : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (h : Nat), Becoming.Run.AgreeUpTo h r r
+@Becoming.Run.AgreeUpTo.symm : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {h : Nat}
+  {r r' : Becoming.Run P}, Becoming.Run.AgreeUpTo h r r' → Becoming.Run.AgreeUpTo h r' r
+@Becoming.Run.AgreeUpTo.trans : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {h : Nat}
+  {r r' r'' : Becoming.Run P},
+  Becoming.Run.AgreeUpTo h r r' → Becoming.Run.AgreeUpTo h r' r'' → Becoming.Run.AgreeUpTo h r r''
+@Becoming.Run.AgreeUpTo.mono : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {h h' : Nat}
+  {r r' : Becoming.Run P}, h' ≤ h → Becoming.Run.AgreeUpTo h r r' → Becoming.Run.AgreeUpTo h' r r'
+@Becoming.refutable_iff_refutableBy : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Refutable K ↔ Becoming.Ideals.RefutableBy Becoming.Run.stretches K
+@Becoming.adheres_iff_adheresBy : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Adheres K r ↔ Becoming.Ideals.AdheresBy Becoming.Run.stretches K r
+@Becoming.Adheres.of : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, K r → Becoming.Adheres K r
+@Becoming.Adheres.mono : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K L : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, (∀ (r : Becoming.Run P), K r → L r) → Becoming.Adheres K r → Becoming.Adheres L r
+@Becoming.Adheres.adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, Becoming.Adheres (Becoming.Adheres K) r → Becoming.Adheres K r
+@Becoming.Refutable.not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, Becoming.Refutable K → Becoming.Adheres K r → ¬¬K r
+@Becoming.Refutable.adheres_least : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K L : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Refutable L → (∀ (r : Becoming.Run P), K r → L r) → Becoming.Adheres K r → ¬¬L r
+@Becoming.Refutable.adheres_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Refutable K → (∀ (r : Becoming.Run P), ¬¬K r → K r) → (Becoming.Adheres K r ↔ K r)
+@Becoming.not_refutable_of_adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.Adheres K r → ¬K r → ¬Becoming.Refutable K
+@Becoming.not_verifiable_of_adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.Adheres (fun r => ¬K r) r → K r → ¬Becoming.Verifiable K
+@Becoming.Adheres.closed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P} {h : Nat},
+  (¬∃ r', K r' ∧ Becoming.Run.AgreeUpTo h r r') →
+    ∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬Becoming.Adheres K r'
+@Becoming.refutable_adheres_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  Becoming.Refutable (Becoming.Adheres K) ↔
+    ∀ (r : Becoming.Run P), ¬Becoming.Adheres K r → ∃ h, ¬∃ r', K r' ∧ Becoming.Run.AgreeUpTo h r r'
+@Becoming.refutable_adheres_of_em : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (p : Prop), p ∨ ¬p) → ∀ (K : Becoming.Run P → Prop), Becoming.Refutable (Becoming.Adheres K)
+@Becoming.adheres_passes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {fails : Nat → Becoming.Run P → Bool} {r : Becoming.Run P},
+  Becoming.ByPrefixes fails → Becoming.Adheres (Becoming.Passes fails) r → Becoming.Passes fails r
+@Becoming.refutable_passes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {fails : Nat → Becoming.Run P → Bool},
+  Becoming.Markov → Becoming.ByPrefixes fails → Becoming.Refutable (Becoming.Passes fails)
+Becoming.false_below_or_true : ∀ (s : Nat → Bool) (h : Nat), (∀ (t : Nat), t < h → s t = false) ∨ ∃ t, s t = true
+@Becoming.Sequences.agree_iff : ∀ {A : Type u_1} {h : Nat} {r r' : Becoming.Run (Becoming.Sequences.process A)},
+  Becoming.Run.AgreeUpTo h r r' ↔ ∀ (t : Nat), t < h → r.act t = r'.act t
+@Becoming.Sequences.splice_agree : ∀ {A : Type u_1} (s : Nat → A) (h : Nat) (c : A),
+  Becoming.Run.AgreeUpTo h (Becoming.Sequences.run s) (Becoming.Sequences.splice s h c)
+@Becoming.Sequences.splice_after : ∀ {A : Type u_1} (s : Nat → A) {h t : Nat} (c : A),
+  h ≤ t → (Becoming.Sequences.splice s h c).act t = c
+Becoming.Sequences.recurs_not_refutable : ¬Becoming.Refutable Becoming.Sequences.Recurs
+Becoming.Sequences.eventually_not_refutable : ¬Becoming.Refutable Becoming.Sequences.Eventually
+Becoming.Sequences.never_not_verifiable : ¬Becoming.Verifiable fun r => ¬Becoming.Sequences.Eventually r
+Becoming.refutable_passes_iff_markov : (∀ (S A : Type) (P : Generative.Process S A)
+    (fails : Nat → Becoming.Run P → Bool), Becoming.ByPrefixes fails → Becoming.Refutable (Becoming.Passes fails)) ↔
+  Becoming.Markov

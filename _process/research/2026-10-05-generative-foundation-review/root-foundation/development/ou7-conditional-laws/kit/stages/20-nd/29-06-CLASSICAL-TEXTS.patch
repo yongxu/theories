@@ -1,0 +1,13 @@
+diff --git a/theories/becoming/chapters/06-CLASSICAL-TEXTS.md b/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
+index 26e29d6e0..eca480258 100644
+--- a/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
++++ b/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
+@@ -363,7 +363,7 @@
+ | 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | 一方位置之升须有他方之降（`RelativePosition.rise_needs_fall`，[第五章](05-COLLECTIVES.md#r-relative-position-is-zero-sum)）；所施之码使诸形成一致，不偏任何形成（`SharedCodes.impose_agrees`、`impose_keeps_exchange`），各形成所失恰是其码所分而所施之码所并者（`SharedCodes.impose_loses_iff`） |
+ 
+ <a id="laozi-51"></a>
+-**读法** [AI reading, D54]。**老子第五十一章。**最强之一例是「生而不有，为而不恃，长而不宰」。两处结构相合：动作是部分的，恰当它是部分自身的策略，其余以之为输入时即受其驱动，这是“宰”的结构；一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_belongs_to_the_joint`）：差别可以只由共同者造成，这是“不恃”。“不有”在脊柱上没有可读之结构：脊柱不立占有之关系，这只是未表示，不是相合。从“不宰”到“应当不宰”，还需要两个前提：延续之条件（含不变性一步，即条件在自身之预设以外的内容）定范围（谁的损失算数），以广为愈（C）定次序（[第七章](07-SIGNIFICANCE.md)）。经文与脊柱都没有自行给出它们，理论也不断言它们。
++**读法** [AI reading, D54]。**老子第五十一章。**最强之一例是「生而不有，为而不恃，长而不宰」。两处结构相合：动作是部分的，恰当它是部分自身的策略，其余以之为输入时即受其驱动，这是“宰”的结构；一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_only_together`）：差别可以只由共同者造成，这是“不恃”。“不有”在脊柱上没有可读之结构：脊柱不立占有之关系，这只是未表示，不是相合。从“不宰”到“应当不宰”，还需要两个前提：延续之条件（含不变性一步，即条件在自身之预设以外的内容）定范围（谁的损失算数），以广为愈（C）定次序（[第七章](07-SIGNIFICANCE.md)）。经文与脊柱都没有自行给出它们，理论也不断言它们。
+ 
+ <a id="ro-gaps"></a>
+ **对应所揭之缺口。** 映射中 17 段指出脊柱缺一条律，合为七项：

@@ -138,7 +138,7 @@ FORMS = {
 }
 
 # Why a statement depends on decidedness: the decidability-taking definitions it mentions (Lean's `ment` column).
-COUNTING_DEFS = {'mark', 'comings', 'ceasings', 'World.CountsObey', 'Web.decideForms', 'Web.decideDissolves',
+COUNTING_DEFS = {'mark', 'comings', 'ceasings', 'World.CensusMarksHold', 'Web.decideForms', 'Web.decideDissolves',
                  'instDecidableComesToBe', 'instDecidableCeasesToBe', 'Web.instDecidableArises',
                  'Web.instDecidableCeases', 'Web.instDecidableArisesFrom', 'Web.instDecidableCeasesFrom'}
 CONSTRUCTIONS = {

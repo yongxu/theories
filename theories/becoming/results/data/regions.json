@@ -456,6 +456,11 @@
    "base": "none",
    "note": "superseded five-condition review"
   },
+  "conditional-laws-of-the-corpus": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "GrammarConditionals OU7: 219 丙一 units, 128 in 22 families, each law with a net where its condition fails; 6 false as read, 19 premises; new laws G02, G03, G15 and 依"
+  },
   "conditioning-by-restriction": {
    "region": "knowing",
    "base": "general",
@@ -1831,6 +1836,11 @@
    "base": "old-base",
    "note": "SG2"
   },
+  "rooms-tested-by-a-window": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "RoomNet, RoomRuns OU7: rooms tested by a window, regulation and equilibrium on the net of the possible"
+  },
   "rules-that-change-themselves-in-the-grammar": {
    "region": "map",
    "base": "grammar",
@@ -3193,6 +3203,11 @@
    "base": "grammar",
    "note": "test systems of the source texts as small witnesses (GS3)"
   },
+  "Becoming.GrammarConditionals": {
+   "region": "classical",
+   "base": "grammar",
+   "note": "the corpus's conditional laws (丙一): 相推 gives 全生成, bounded room on a line, the core keeps never ending, dependence; 27 witnesses (OU7)"
+  },
   "Becoming.GrammarCourse": {
    "region": "classical",
    "base": "grammar",
@@ -4072,6 +4087,16 @@
    "region": "root",
    "base": "old-base",
    "note": "formations and conditions as roles of one relatum; two-kind embeds"
+  },
+  "Becoming.RoomNet": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "rooms on the net of the possible: one rule, testing, regions, a conditional law, the toy derived"
+  },
+  "Becoming.RoomRuns": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "the rooms' window courses as RegimeMargin runs; the possible with warmth held"
   },
   "Becoming.RootForms": {
    "region": "method",

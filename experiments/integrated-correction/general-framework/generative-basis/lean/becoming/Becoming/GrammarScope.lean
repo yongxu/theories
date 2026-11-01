@@ -3,7 +3,7 @@ import Becoming.GrammarMap
 import Becoming.Weightings
 
 /-!
-# The continuation condition on the root: nothing outside a line's continuing (续无外)
+# The continuation condition on the root: everything on every center's continuing (续无外)
 
 The continuation condition says, in its source, that for anything its continuation into the future
 has significance. `Becoming.Significance` states it with significance as a free parameter beside the
@@ -83,7 +83,7 @@ section Root
 variable {Pos : Type} {α : Type u}
 
 /-- **The condition on the root, along the net (续无外).** Every occurrence is reached on the line of
-every center under `E`: nothing lies outside every center's continuing. -/
+every center under `E`: everything lies on every center's continuing. -/
 def «续无外» (R E : «际» α) (center : Pos → α) : Prop := ∀ p x, «所及» R E (center p) x
 
 /-- **The condition on the root, in families (族无外).** Every occurrence lies in every center's family

@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T062217.665179Z",
- "core_sources_sha256": "51e5f25361babbfad50ce2d1a237ca13a2fb85f87b1a0a8efcb8c9823f84d4dd",
+ "core_receipt": "20261101T094230.205342Z",
+ "core_sources_sha256": "ffd73363635afd39ab4b20a9ef699d62cd3966eaf8072c9b419b7343f206c0ca",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4072,
+  "laws": 4087,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 810,
-  "balance, represented": 656,
+  "grammar": 854,
+  "balance, represented": 634,
   "anchor, not reached": 135,
-  "no master law": 2071,
-  "vocabulary_only": 77,
-  "closure": 490,
-  "balance": 841,
+  "no master law": 2064,
+  "vocabulary_only": 79,
+  "closure": 491,
+  "balance": 840,
   "return": 253,
   "lumping": 83,
   "order": 85
@@ -127,10 +127,10 @@
  },
  "central_reach": {
   "counts": {
-   "reaching the grammar": 44,
+   "reaching the grammar": 45,
    "stated at a represented model": 16,
    "stated on its own carrier only": 6,
-   "the rest": 51
+   "the rest": 50
   },
   "rows": {
    "Becoming.Dependence.Overdetermined.only_together": [
@@ -3186,8 +3186,8 @@
    {
     "law": 3,
     "declarations": [
-     "Becoming.ReadingLoop.Good",
-     "Becoming.ReadingLoop.GoodEnabled",
+     "Becoming.ReadingLoop.LeadsInto",
+     "Becoming.ReadingLoop.LeadsIntoEnabled",
      "Becoming.ReadingLoop.Keeps",
      "Becoming.ReadingLoop.Continues"
     ],
@@ -3199,9 +3199,9 @@
    {
     "law": 4,
     "declarations": [
-     "Becoming.ReadingLoop.keeps_of_good",
-     "Becoming.ReadingLoop.good_of_keeps",
-     "Becoming.ReadingLoop.keeps_iff_good"
+     "Becoming.ReadingLoop.keeps_of_leadsInto",
+     "Becoming.ReadingLoop.leadsInto_of_keeps",
+     "Becoming.ReadingLoop.keeps_iff_leadsInto"
     ],
     "master_laws": [],
     "grammar": true,
@@ -3223,9 +3223,9 @@
     "law": 6,
     "declarations": [
      "Becoming.ReadingLoop.everything_kept",
-     "Becoming.ReadingLoop.everything_good_iff",
+     "Becoming.ReadingLoop.everything_leadsInto_iff",
      "Becoming.ReadingLoop.nothing_kept",
-     "Becoming.ReadingLoop.nothing_good",
+     "Becoming.ReadingLoop.nothing_leadsInto",
      "Becoming.ReadingLoop.nothing_sound"
     ],
     "master_laws": [],
@@ -3236,7 +3236,7 @@
     "law": 7,
     "declarations": [
      "Becoming.ReadingLoop.PairwiseShared.Point",
-     "Becoming.ReadingLoop.PairwiseShared.good",
+     "Becoming.ReadingLoop.PairwiseShared.leads",
      "Becoming.ReadingLoop.PairwiseShared.two_share",
      "Becoming.ReadingLoop.PairwiseShared.none_for_all"
     ],
@@ -6330,8 +6330,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -6342,8 +6342,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -6353,8 +6353,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -6364,8 +6364,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -6377,8 +6377,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -6389,8 +6389,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -6417,8 +6417,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 9,
@@ -6429,8 +6429,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 10,
@@ -6451,8 +6451,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 12,
@@ -6465,8 +6465,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "branching-target-uniqueness": [
@@ -6974,34 +6974,31 @@
      "Becoming.Listed",
      "Becoming.Listed.coming_of_ceasing"
     ],
-    "master_laws": [
-     "balance"
-    ],
-    "grammar": false,
-    "dependence": "balance, represented",
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar",
     "central": [
      {
       "declaration": "Becoming.Listed.coming_of_ceasing",
-      "category": "balance, represented",
-      "dependence": "balance, represented",
-      "master_laws": [
-       "balance"
-      ]
+      "category": "master law",
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    },
    {
     "law": 2,
     "declarations": [
-     "Becoming.recurring_accumulates",
-     "Becoming.Listed.over_stretch",
-     "Becoming.Listed.coming_iff_excess"
+     "Becoming.«定后前者在前则亡屡者生屡»",
+     "Becoming.comesToBe_iff_sheng_along",
+     "Becoming.ceasesToBe_iff_wang_along",
+     "Becoming.Steps.along_fixed",
+     "Becoming.listedOccurrences",
+     "Becoming.gaining_of_losing_from"
     ],
-    "master_laws": [
-     "balance"
-    ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -7014,16 +7011,14 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented",
+    "grammar": true,
+    "dependence": "grammar",
     "central": [
      {
       "declaration": "Becoming.Listed.coming_of_ceasing",
-      "category": "balance, represented",
-      "dependence": "balance, represented",
-      "master_laws": [
-       "balance"
-      ]
+      "category": "master law",
+      "dependence": "grammar",
+      "master_laws": []
      }
     ]
    },
@@ -7038,8 +7033,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -7111,19 +7106,20 @@
      "Becoming.Web.Census.balanceFrom_eq"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
     "declarations": [
-     "Becoming.mark_le_total",
-     "Becoming.total_le_mark",
-     "Becoming.total_swap"
+     "Becoming.Web.Census.balanceFrom_at",
+     "Becoming.«定后则后并亡不过前并生»",
+     "Becoming.«定前则前并生不过后并亡»",
+     "Becoming.total_mark_eq_count"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -7145,8 +7141,8 @@
      "Becoming.Web.Census.ceasingFrom_of_arisingFrom"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -7180,8 +7176,8 @@
      "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 10,
@@ -7211,11 +7207,11 @@
     "declarations": [
      "Becoming.Listed",
      "Becoming.Listed.across",
-     "Becoming.marks_le_of_sub"
+     "Becoming.Listed.keeps"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -7228,8 +7224,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -7242,8 +7238,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -7254,8 +7250,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -7266,8 +7262,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -7309,14 +7305,15 @@
     "declarations": [
      "Becoming.balance_over_stretch_on",
      "Becoming.Listed.across_at",
+     "Becoming.total_mark_eq_count",
      "Becoming.Listed.over_stretch_on",
      "Becoming.Web.StandingCensus.over_stretch_on"
     ],
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented",
+    "grammar": true,
+    "dependence": "grammar",
     "defines": [
      "Becoming.balance_over_stretch_on"
     ]
@@ -7330,8 +7327,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "census-read-off-the-exchange": [
@@ -7964,6 +7961,7 @@
      "Becoming.«复者住»",
      "Becoming.«通»",
      "Becoming.«有常则往不穷»",
+     "Becoming.«两向有常有前则通»",
      "Becoming.«两向有常则通»",
      "Becoming.«有常而不通»",
      "Becoming.«昼夜往来不穷»"
@@ -9939,6 +9937,101 @@
     "dependence": "no master law"
    }
   ],
+  "conditional-laws-of-the-corpus": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«皆有后而步皆分则全生成»",
+     "Becoming.«昼夜全生成»",
+     "Becoming.«有亡而不全生成之例»",
+     "Becoming.«步不分而不全生成之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«线不返则短于所列»",
+     "Becoming.«不返而有限则非不穷»",
+     "Becoming.counting_reach_lt",
+     "Becoming.«返而不穷之例»",
+     "Becoming.«无环而不穷之例»",
+     "Becoming.«有限遍后而不返之例»",
+     "Becoming.«遍后定前而无环之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«类内有常则线相随»",
+     "Becoming.«核同则同不穷»",
+     "Becoming.«不穷与亡不同核之例»",
+     "Becoming.«生于核下可变之例»",
+     "Becoming.«逆核不含于核之例»",
+     "Becoming.«无始而有终之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.«依»",
+     "Becoming.«所依无则依者无»",
+     "Becoming.«依之传»",
+     "Becoming.«不依之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.«不有常而通之例»",
+     "Becoming.«两向有常而无前不通之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.«亡者异当且仅当有后»",
+     "Becoming.«亡而息之例»",
+     "Becoming.«无异当且仅当不分续»",
+     "Becoming.«静分续而有异之例»",
+     "Becoming.«皆不生当且仅当皆非无缘»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.«生亡并之例»",
+     "Becoming.«亡于静而住于一之例»",
+     "Becoming.«无环则无俱有»",
+     "Becoming.«无能无所之例»",
+     "Becoming.«非有常之类不含于核之例»",
+     "Becoming.«有前不有常而亡之例»",
+     "Becoming.«无相而非亦无相之例»",
+     "Becoming.«像不保之例»",
+     "Becoming.«相须之例»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "conditioning-by-restriction": [
    {
     "law": 1,
@@ -11437,7 +11530,9 @@
      "Becoming.«位核»",
      "Becoming.«位根»",
      "Becoming.«位核含于核»",
+     "Becoming.«位核含于逆核»",
      "Becoming.«亡于核下不变»",
+     "Becoming.«生于逆核下不变»",
      "Becoming.«生于位核下不变»",
      "Becoming.«位同则生亡同»",
      "Becoming.«位同则住同»"
@@ -12314,8 +12409,9 @@
      "Becoming.Clearing.resource_not_cut_living_on"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -12754,7 +12850,7 @@
     "law": 1,
     "declarations": [
      "Becoming.Web.StandingCensus",
-     "Becoming.World.StandsObey"
+     "Becoming.World.StandingMarksHold"
     ],
     "master_laws": [],
     "grammar": false,
@@ -12763,7 +12859,7 @@
    {
     "law": 2,
     "declarations": [
-     "Becoming.World.Embodied.standsObey_iff"
+     "Becoming.World.Embodied.standingMarksHold_iff"
     ],
     "master_laws": [],
     "grammar": false,
@@ -12896,7 +12992,7 @@
     "law": 13,
     "declarations": [
      "Becoming.Web.DependenceCensus",
-     "Becoming.World.DependsObey",
+     "Becoming.World.DependenceMarksHold",
      "Becoming.World.dependence_counting",
      "Becoming.World.enclosed_dependence_counting",
      "Becoming.World.finite_dependence_counting"
@@ -13438,8 +13534,8 @@
      "Becoming.World.ceasings_exist_iff_listed",
      "Becoming.World.comings_exist_iff_listed",
      "Becoming.World.countsOf_decided",
-     "Becoming.World.CountsHold.obey",
-     "Becoming.World.countsHold_of_obey"
+     "Becoming.World.CountsHold.marks",
+     "Becoming.World.countsHold_of_marks"
     ],
     "master_laws": [],
     "grammar": false,
@@ -24564,8 +24660,8 @@
     "master_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 27,
@@ -25466,7 +25562,7 @@
     "declarations": [
      "Becoming.Pool.determined",
      "Becoming.Shock.determined",
-     "Becoming.Pool.difference_belongs_to_the_joint",
+     "Becoming.Pool.difference_only_together",
      "Becoming.Pool.all_overdetermined",
      "Becoming.Pool.first_two_only_together"
     ],
@@ -25477,7 +25573,7 @@
    {
     "law": 10,
     "declarations": [
-     "Becoming.Pool.difference_belongs_to_the_joint",
+     "Becoming.Pool.difference_only_together",
      "Becoming.Web.ConsumingIn"
     ],
     "master_laws": [],
@@ -28731,11 +28827,9 @@
      "Becoming.Listed.of_listing",
      "Becoming.Web.arising_of_ceasing_listing"
     ],
-    "master_laws": [
-     "balance"
-    ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 12,
@@ -29935,7 +30029,7 @@
     "law": 5,
     "declarations": [
      "Becoming.RegimeMargin.SubadditiveAbove",
-     "Becoming.RegimeMargin.harms_superadditive"
+     "Becoming.RegimeMargin.rises_superadditive"
     ],
     "master_laws": [],
     "grammar": false,
@@ -30711,7 +30805,12 @@
      "Becoming.GrammarLaws.count_go",
      "Becoming.GrammarLaws.count_eq_countP",
      "Becoming.GrammarLaws.uncrossed_of_closed",
-     "Becoming.GrammarLaws.class_test_congr"
+     "Becoming.GrammarLaws.class_test_congr",
+     "Becoming.GrammarLaws.length_keep",
+     "Becoming.GrammarLaws.count_add_not",
+     "Becoming.GrammarLaws.distinct_keep",
+     "Becoming.GrammarLaws.count_pos_of_mem",
+     "Becoming.GrammarLaws.eq_true_of_not_false"
     ],
     "master_laws": [],
     "grammar": true,
@@ -30733,6 +30832,8 @@
      "Becoming.«计»",
      "Becoming.«对则不越域守数»",
      "Becoming.«对则双闭域守数»",
+     "Becoming.GrammarLaws.uncrossed_iff_notGoingOut",
+     "Becoming.GrammarLaws.uncrossed_iff_closed",
      "Becoming.«对而单闭域不守数之例»",
      "Becoming.«类之对当且仅当类类等数»",
      "Becoming.«续之对则类类等数»",
@@ -30743,7 +30844,15 @@
      "Becoming.GrammarLaws.arising",
      "Becoming.GrammarLaws.ceasing",
      "Becoming.GrammarLaws.census_pairs",
-     "Becoming.GrammarLaws.pair_of_class_counts"
+     "Becoming.GrammarLaws.pair_of_class_counts",
+     "Becoming.GrammarLaws.census_le",
+     "Becoming.«定后则后并亡不过前并生»",
+     "Becoming.GrammarLaws.census_le_converse",
+     "Becoming.«定前则前并生不过后并亡»",
+     "Becoming.GrammarLaws.census_count",
+     "Becoming.«定后定前则前并生与后并亡同数»",
+     "Becoming.GrammarLaws.census_run",
+     "Becoming.«定后前者在前则亡屡者生屡»"
     ],
     "master_laws": [
      "balance"
@@ -42643,6 +42752,129 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "rooms-tested-by-a-window": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Rooms.«不开窗则同核»",
+     "Becoming.Rooms.shut_one_class_alike",
+     "Becoming.Rooms.«开窗则一层可分»",
+     "Becoming.Rooms.heaters_told_apart",
+     "Becoming.Rooms.«开窗以温层如其余乃分»",
+     "Becoming.Rooms.«有给之室以温不可分»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Rooms.toy",
+     "Becoming.Rooms.toy_branches",
+     "Becoming.Rooms.toy_verdict"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Rooms.«给过所取则生守相杂»",
+     "Becoming.Rooms.Overshooting.generation_strong",
+     "Becoming.Rooms.Overshooting.rows",
+     "Becoming.Rooms.Overshooting.renewing_steps",
+     "Becoming.Rooms.«平衡守而有终»",
+     "Becoming.Rooms.«开窗则平衡新而尽»",
+     "Becoming.Rooms.Unheated.rows",
+     "Becoming.Rooms.«给如所取则全守»",
+     "Becoming.Rooms.Matched.rows",
+     "Becoming.Rooms.shut_rests",
+     "Becoming.Rooms.cold_rests"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Rooms.Overshooting.single_line_tested",
+     "Becoming.Rooms.Overshooting.not_keepsAfter_open"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Rooms.«温有常当且仅当有给»",
+     "Becoming.Rooms.alike_in_core_iff",
+     "Becoming.Rooms.heated_unended",
+     "Becoming.Rooms.«温不穷当且仅当有给»",
+     "Becoming.Rooms.unended_at_one",
+     "Becoming.Rooms.joint_converse"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Rooms.next_open",
+     "Becoming.Rooms.window_line",
+     "Becoming.Rooms.windowAt_level",
+     "Becoming.Rooms.Unheated.window_cold",
+     "Becoming.Rooms.Matched.window_held",
+     "Becoming.Rooms.Overshooting.alternates",
+     "Becoming.Rooms.Overshooting.holds_one_way",
+     "Becoming.Rooms.Overshooting.alternation_shifted",
+     "Becoming.Rooms.Unheated.not_widening",
+     "Becoming.Rooms.Matched.not_widening",
+     "Becoming.Rooms.Overshooting.not_widening"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Rooms.Overshooting.generation_at_moments",
+     "Becoming.Rooms.Matched.no_generation_at_moments",
+     "Becoming.Rooms.Unheated.no_generation_at_moments",
+     "Becoming.Rooms.line_iff_held",
+     "Becoming.Rooms.heated_possible_held",
+     "Becoming.Rooms.Unheated.cold_not_held"
+    ],
+    "master_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Rooms.nextBefore",
+     "Becoming.Rooms.before_window_moves",
+     "Becoming.Rooms.before_at_one",
+     "Becoming.Rooms.next_pos",
+     "Becoming.Rooms.before_pos",
+     "Becoming.Rooms.before_unheated"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "rules-that-change-themselves-in-the-grammar": [
@@ -61053,8 +61285,8 @@
      "Becoming.Listed.across"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -61077,8 +61309,8 @@
      "Becoming.balance_not_tally"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -62365,9 +62597,9 @@
      "declaration": "Becoming.CensusWebs.keep_pace",
      "standing": "counting",
      "basis": {
-      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing."
+      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing. It is not a case of the root's census of a step (U4c): a two-sided bound over a stretch on a fixed family that may list a member twice, it would need both halves summed over a stretch, read on positions, and a proof off the balance anchor; its counts as relations are not the obstacle, its conclusion being decided."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md"
     },
     {
      "declaration": "Becoming.Drift.falls_back",
@@ -62379,11 +62611,23 @@
     },
     {
      "declaration": "Becoming.Listed.coming_of_ceasing",
-     "standing": "counting",
+     "standing": "derived",
      "basis": {
-      "en": "For any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the statement unfolds to the prelude's Distinct and Init and names no amount."
+      "en": "A case of «定后前者在前则亡屡者生屡» at a member's occurrences along its steps (Steps.along), under the two-valued class of its determination (Steps.alikeAt), the run being the occurrences listed at each step (listedOccurrences). The bridges read coming to be and ceasing to be as the root's beginning and ending there, through an occurrence's one predecessor and one successor along its relatum (Steps.along_hasPred_iff, Steps.along_hasSucc_iff); nothing splits along a relatum under any class (Steps.along_fixed). The law's other hypotheses are met inline: the listing's Distinct, mapped; a listed occurrence's predecessor is the same member one step earlier, holding by the class, so listed; the tests decide the determination at a step and nothing else, no decision of identity being used. Its statement still reads as counting on U4b's line; it is placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived (DESIGN-BOUNDARY §2, rule 2)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
+     "law": [
+      "Becoming.«定后前者在前则亡屡者生屡»"
+     ],
+     "bridges": [
+      "Becoming.comesToBe_iff_sheng_along",
+      "Becoming.ceasesToBe_iff_wang_along"
+     ],
+     "support": [
+      "Becoming.Steps.along_fixed",
+      "Becoming.Steps.along_hasPred_iff",
+      "Becoming.Steps.along_hasSucc_iff"
+     ]
     },
     {
      "declaration": "Becoming.RelativePosition.rise_needs_fall",
@@ -62639,7 +62883,9 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md"
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4B.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C.md"
    ],
    "laws": [
     "Becoming.RootForms.GivenTo",
@@ -62687,9 +62933,9 @@
    ]
   },
   "counts": {
-   "derived": 10,
+   "derived": 11,
    "under a stated hypothesis": 1,
-   "counting": 7,
+   "counting": 6,
    "connected": 22,
    "witnessed at its model": 0,
    "balance in its statement": 32,
@@ -62701,15 +62947,15 @@
    "unplaced": 0
   },
   "groups": {
-   "on the edge": 11,
-   "below the grammar": 7,
+   "on the edge": 12,
+   "below the grammar": 6,
    "distances": 99,
    "unplaced": 0
   },
   "derived_by_forwarder": [],
   "against_f5": {
    "derived": {
-    "reaching the grammar": 10,
+    "reaching the grammar": 11,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
     "the rest": 0
@@ -62724,7 +62970,7 @@
     "reaching the grammar": 0,
     "stated at a represented model": 0,
     "stated on its own carrier only": 0,
-    "the rest": 7
+    "the rest": 6
    },
    "connected": {
     "reaching the grammar": 22,
@@ -62807,7 +63053,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "3a61821ba2073b009c048925eae6692673c4a8b308af6f57070e7f684d39bfcf",
+   "modules_sha256": "af27c09e90ed9a82bfad60b517e7e6d809be67a4843c4ef00a60d93cc155f932",
    "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
    "ran": true
   },
@@ -62865,9 +63111,9 @@
      "declaration": "Becoming.CensusWebs.keep_pace",
      "standing": "counting",
      "basis": {
-      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing."
+      "en": "The counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing. It is not a case of the root's census of a step (U4c): a two-sided bound over a stretch on a fixed family that may list a member twice, it would need both halves summed over a stretch, read on positions, and a proof off the balance anchor; its counts as relations are not the obstacle, its conclusion being decided."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
      "verified": true
     }
    },
@@ -64000,27 +64246,54 @@
     }
    },
    "Becoming.Listed.coming_of_ceasing": {
-    "label": "counting",
-    "placed": "reading",
-    "rule": "unplaced",
-    "f5": "the rest",
+    "label": "derived",
+    "placed": "checked entry",
+    "rule": "connected",
+    "f5": "reaching the grammar",
     "at_model": [],
-    "grammar_laws_reached": [],
+    "grammar_laws_reached": [
+     "Becoming.«定后之逐点»",
+     "Becoming.«定后前者在前则亡屡者生屡»"
+    ],
     "balance": {
      "anchor_in_statement": [],
      "written_out": false,
-     "proof_only": [
-      "Becoming.balance_over_stretch_on"
-     ]
+     "proof_only": []
     },
     "entry": {
      "declaration": "Becoming.Listed.coming_of_ceasing",
-     "standing": "counting",
+     "standing": "derived",
      "basis": {
-      "en": "For any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the statement unfolds to the prelude's Distinct and Init and names no amount."
+      "en": "A case of «定后前者在前则亡屡者生屡» at a member's occurrences along its steps (Steps.along), under the two-valued class of its determination (Steps.alikeAt), the run being the occurrences listed at each step (listedOccurrences). The bridges read coming to be and ceasing to be as the root's beginning and ending there, through an occurrence's one predecessor and one successor along its relatum (Steps.along_hasPred_iff, Steps.along_hasSucc_iff); nothing splits along a relatum under any class (Steps.along_fixed). The law's other hypotheses are met inline: the listing's Distinct, mapped; a listed occurrence's predecessor is the same member one step earlier, holding by the class, so listed; the tests decide the determination at a step and nothing else, no decision of identity being used. Its statement still reads as counting on U4b's line; it is placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived (DESIGN-BOUNDARY §2, rule 2)."
      },
-     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
-     "verified": true
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md",
+     "law": [
+      "Becoming.«定后前者在前则亡屡者生屡»"
+     ],
+     "bridges": [
+      "Becoming.comesToBe_iff_sheng_along",
+      "Becoming.ceasesToBe_iff_wang_along"
+     ],
+     "support": [
+      "Becoming.Steps.along_fixed",
+      "Becoming.Steps.along_hasPred_iff",
+      "Becoming.Steps.along_hasSucc_iff"
+     ],
+     "verified": true,
+     "report": {
+      "laws_used_also": [
+       "Becoming.«定后之逐点»"
+      ],
+      "root_theorems_named": [
+       "Becoming.distinct_map_on",
+       "Becoming.mem_cons_cases",
+       "Becoming.mem_map_prodMk",
+       "Becoming.not_decide_iff",
+       "Becoming.preimage_of_mem_map",
+       "Becoming.prodMk_mem_map"
+      ],
+      "forwarder": null
+     }
     }
    },
    "Becoming.Optimum.mutual_beyond": {

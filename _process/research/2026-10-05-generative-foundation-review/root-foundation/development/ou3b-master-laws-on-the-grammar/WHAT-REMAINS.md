@@ -198,7 +198,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 1. **The ethics on the root** (全四: U3's documents, then its Lean items 1 and 2). Readers from alignment read the ethics first. Today none of the five significance rows reaches the root, and 全四 is designed, not met. It is met when the five rows are stated in the root's terms in the package, with the condition and C still named premises.
 2. **Generation and widening** (全三: GW6 on GW's line, claimed with GW1 and GW2 at `6376f0da3`). The account's direction, 生生 compared by widening, needs the map's generation and the ethics' widening joined both ways, or their split stated as a central result. Today they are joined one way: keeping widening gives 全生成, and the converse does not hold. Either outcome meets the item. It is new mathematics, not restatement.
 3. **Every central declaration placed** (全二). Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier and 54 are the rest. The item is met when each of the 54 is lifted, or its not entering is written with its reason. U1's seven interface laws for amounts must also be in the package (its §6 leaf), not only in scratch.
-4. **Plan §八 step 5** (丙一与验). Each conditional law is written as "Y 当且仅当 Z", with Z in the grammar and a counterexample where Z fails. That is what lets a reader check a law's hypotheses against a situation without reading the Lean.
+4. **Plan §八 step 5** (丙一与验). Each conditional law is written as "Y 当且仅当 Z", with Z in the grammar and a counterexample where Z fails. That is what lets a reader check a law's hypotheses against a situation without reading the Lean. **Met** with OU7 (see "OU7 landed" below).
 
 **What lets an outside reader check it.**
 
@@ -340,7 +340,7 @@ This section was added by U4's taker. It edits no earlier section, but it supers
 - lever 3, on U3's and GW's lines;
 - the boundary record, last.
 
-The two census rows, `Listed.coming_of_ceasing` and `CensusWebs.keep_pace`, are where the census pairing reaches most directly. They are a candidate item of their own.
+The two census rows, `Listed.coming_of_ceasing` and `CensusWebs.keep_pace`, are where the census pairing reaches most directly. U4c took them up: `Listed.coming_of_ceasing` is derived, a case of the root's census of a run; `CensusWebs.keep_pace` stays counting, a stretch form of the census on positions being the boundary record's next step.
 
 ## U3 landed: the release gate's item 1, and the figures (30 October 2026)
 
@@ -449,6 +449,14 @@ DU landed (study §489, core receipt `20261101T000137.132110Z`, every axiom repo
   - Item 1, the ethics on the root. The significance row now lists four declarations, not five. The one that left unfolds C and is C's witness, so the item stays met by the four, with the condition and C still named premises. The second record locates where self-concern gives what C asks, one way: where the condition held de se holds, admission is decided and the paths compared are listed, courses whose admissions end. Elsewhere C alone orders.
   - Item 3, every central declaration placed. The third record shows that the occurrence model's selected relations, which read amounts only through sign, comparison in one unit and conservation's equation, do not fix the standings: not their unit in any world, and in still worlds not even up to a unit; worlds with exchange are open. That stands beside "a derivation of balance", which does not hold a release.
   - Item 6, the front pages current. It stays met with the six lines above; each page keeps the time it states, the recount in READING-BUDGETS.
+
+## OU7 landed: the release gate's item 4 (1 November 2026)
+
+OU7 landed (study §492, core receipt `20261101T094230.205342Z`, every core and ring axiom report empty). Plan §八 step 5 (丙一与验) is done. The classical corpus's 219 conditional statements are read on the grammar: 128 fall into 22 families of laws, each with its condition in the grammar's words and a net where the condition fails and the conclusion fails with it. Six statements are false as read, each with a countermodel. The rest state a premise, turn on a valuation, define, or are not expressible, each with its reason ([record](../../../../../../theories/becoming/results/records/conditional-laws-of-the-corpus.md), 06 §四). 验's model examples are one rule of rooms tested by a window ([record](../../../../../../theories/becoming/results/records/rooms-tested-by-a-window.md), 03 §3). The unheated room is thermal equilibrium, and the thermostats are its heated members. They rest alike until the window draws, and warm or not first tells them apart at the stage the margin sets. GrammarLaws has 192 theorems in 221 declarations, and F5 counts 45, 16, 6 and 50 (reaching the grammar, stated at a represented model, stated on its own carrier only, the rest), against 44, 16, 6 and 51 before, `Listed.coming_of_ceasing` now derived by U4c's census on the root.
+
+- **The release gate's item 4 is met.** Items 1 to 6 are now met. Item 7, the freeze and the sending decisions, comes last and is not this note's.
+- **What item 4 leaves.** The models' conditional laws are each stated with their hypotheses at their homes; they are not yet each given a net where the condition fails. That does not hold a release. It is the kind of work plan §十三 items 6, 8, 9 and 11 still ask for, after the gate.
+- **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model, the organism and the institution named on the one page as having none (9); and the three minimalities' report, with MDL and Pareto not yet done (11). The organism is next, as OG, with its design in review.
 
 ## What this note does not do
 

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-14T03:30:00+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "zh": "固定实际所取的动作，but-for 检验由一方的部分推广到一同扣除的若干部分，一条定律确切说明若干部分何时只有一同才造成差别。多重决定下 but-for 与关系参与分离：一个汲取者的部分不造成差别，关系读法仍把它计为消耗。",
     "en": "With the move held fixed, the but-for test extends to parts withheld together, and a law states exactly when parts make a difference only together. Under overdetermination, but-for and participation come apart: a drawer's part makes no difference, yet the relational reading counts it as consuming."
@@ -89,7 +89,7 @@
       "declarations": [
         "Becoming.Pool.determined",
         "Becoming.Shock.determined",
-        "Becoming.Pool.difference_belongs_to_the_joint",
+        "Becoming.Pool.difference_only_together",
         "Becoming.Pool.all_overdetermined",
         "Becoming.Pool.first_two_only_together"
       ]
@@ -98,7 +98,7 @@
       "zh": "两次运行中，关系读法都把第一个汲取者计为消耗，一个什么也不取的形成不计为消耗。",
       "en": "In both runs the relational reading counts the first drawer as consuming, and a formation that takes nothing is not.",
       "declarations": [
-        "Becoming.Pool.difference_belongs_to_the_joint",
+        "Becoming.Pool.difference_only_together",
         "Becoming.Web.ConsumingIn"
       ]
     },
@@ -212,8 +212,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
       "detail": {
-        "zh": "多重决定（Pool.difference_belongs_to_the_joint 的三方运行）：每一方单独都不造成差别，共同活动造成了损失。在一个形成的各事件之间，整段层面没有哪个有限的事件集合造成差别（Renewable.depletion_is_joint、Renewable.no_finite_segment_makes_difference），而断裂事件造成步层面的差别（Renewable.breaking_event_makes_step_difference；独立审查 F7）。",
-        "en": "Overdetermination (the three-drawer run of Pool.difference_belongs_to_the_joint): no party alone makes the difference, while the joint activity makes the loss. Across a formation's own events no finite set of events makes the run-level difference (Renewable.depletion_is_joint, Renewable.no_finite_segment_makes_difference), while the breaking event makes the step-level difference (Renewable.breaking_event_makes_step_difference; independent review F7)."
+        "zh": "多重决定（Pool.difference_only_together 的三方运行）：每一方单独都不造成差别，共同活动造成了损失。在一个形成的各事件之间，整段层面没有哪个有限的事件集合造成差别（Renewable.depletion_is_joint、Renewable.no_finite_segment_makes_difference），而断裂事件造成步层面的差别（Renewable.breaking_event_makes_step_difference；独立审查 F7）。",
+        "en": "Overdetermination (the three-drawer run of Pool.difference_only_together): no party alone makes the difference, while the joint activity makes the loss. Across a formation's own events no finite set of events makes the run-level difference (Renewable.depletion_is_joint, Renewable.no_finite_segment_makes_difference), while the breaking event makes the step-level difference (Renewable.breaking_event_makes_step_difference; independent review F7)."
       }
     },
     {
@@ -280,7 +280,7 @@
     "Becoming.Dependence.along_kept",
     "Becoming.Dependence.along_broken",
     "Becoming.Dependence.Overdetermined.no_difference",
-    "Becoming.Pool.difference_belongs_to_the_joint",
+    "Becoming.Pool.difference_only_together",
     "Becoming.Renewable.overdraw_consumes",
     "Becoming.Renewable.depletion_is_joint",
     "Becoming.Shock.move_decides",
@@ -385,7 +385,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
       "role": "proof",
-      "sha256": "6c54aea85b715cac11048f19fcc0f41cb4219276fb015d6ed12e466e90c8616b",
+      "sha256": "f00f55338b2185622319a740c153d44fe0e66ee8cd30eda26565335e370b0e8f",
       "declarations": [
         "Becoming.Dependence.Keeps",
         "Becoming.Dependence.Breaks",
@@ -399,7 +399,7 @@
         "Becoming.Pool.process",
         "Becoming.Pool.withhold",
         "Becoming.Pool.dependence",
-        "Becoming.Pool.difference_belongs_to_the_joint",
+        "Becoming.Pool.difference_only_together",
         "Becoming.sub_self_add",
         "Becoming.Renewable.drawing",
         "Becoming.Renewable.overdraw_consumes",
@@ -595,7 +595,7 @@
         "Becoming.ModelStatements.overdetermined_iff",
         "Becoming.ModelStatements.withholdAll_iff_li"
       ],
-      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+      "sha256": "33088444032f3660972fbc92a8575eec4dc5a4efa846011b15a9301c6d2bc021"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
@@ -611,12 +611,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
       "role": "receipt",
       "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Joint",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -644,7 +650,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -728,6 +734,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): 2 laws at the model added, stating `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 2 条，于其项为文法之处陈述 `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: difference_belongs_to_the_joint → difference_only_together. The statements are kept but for the names; the claim is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：difference_belongs_to_the_joint → difference_only_together。陈述除名外不变；论断不变。"
     }
   ],
   "text_versions": [

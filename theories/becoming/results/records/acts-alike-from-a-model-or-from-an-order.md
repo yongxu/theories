@@ -73,6 +73,7 @@ One observed course can leave an unresolved model and a reversed ranking indisti
 | integration | [PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) | — |
 | integration | [REVIEW-ROUND2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `not knowing or not wanting`, `不知或不欲`, `a model or an order`, `模型或序`, `Becoming.ReadingLoop.observed_alike`, `Becoming.ReadingLoop.Untested.model_or_order`
 

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T22:16:00+00:00",
+  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
     "en": "Over finitely many relata, transfers between related relata that balance a step exist exactly where the total is conserved on every family the relation closes, and a law reading only related relata that conserves its total gives that conservation.",
     "zh": "在有限多个关系项上，只在相关关系项之间移动、使一步平衡的转移，恰在总量于关系封闭的每个家族上守恒时存在；只读相关关系项、守恒总量的规律给出这一守恒。"
@@ -235,8 +235,8 @@
       "id": "not-going-out-of-a-region",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«不出» from Becoming.GrammarCrossing and its laws «不外者内则不出当且仅当闭» and «对称则不出当且仅当逆不出»: a family the relation closes is read as a region not gone out of along adjacency among the listed relata and not come into; the seventh law rests on them.",
-        "zh": "复用 Becoming.GrammarCrossing 的 «不出» 及其律 «不外者内则不出当且仅当闭»、«对称则不出当且仅当逆不出»：关系封闭的家族读作沿列出关系项之间的相邻不出且不入的域；第七律以之为据。"
+        "en": "«不出» from Becoming.GrammarLaws and its laws «不外者内则不出当且仅当闭» and «对称则不出当且仅当逆不出» from Becoming.GrammarCrossing: a family the relation closes is read as a region not gone out of along adjacency among the listed relata and not come into; the seventh law rests on them.",
+        "zh": "复用 Becoming.GrammarLaws 的 «不出» 及 Becoming.GrammarCrossing 中其律 «不外者内则不出当且仅当闭»、«对称则不出当且仅当逆不出»：关系封闭的家族读作沿列出关系项之间的相邻不出且不入的域；第七律以之为据。"
       }
     },
     {
@@ -337,7 +337,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "statement",
-      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.BalancesOn",
@@ -348,7 +348,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
       "role": "proof",
-      "sha256": "cc33480fece6eba885d95f1109da463c0582d1f788a98844ef5dbbede8c40501",
+      "sha256": "d6328049ce00faf200397756db841634d2090f77178b7a59dba48bb749346716",
       "declarations": [
         "Becoming.Continuity.adjacentListed",
         "Becoming.Continuity.adjacentListed_symm",
@@ -364,6 +364,12 @@
       "role": "receipt",
       "sha256": "d68a9f3d148d91b05457ec36826b4ee730f3719420b926cdef98ed7c873bfe82",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -376,7 +382,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T225858.600119Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BalanceRegions",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -394,6 +400,10 @@
     {
       "en": "1 November 2026, board item BD3: a seventh law reads the record on the grammar's «不出» (Becoming.BalanceRegions): a family the relation closes is exactly a region not gone out of along adjacency among the listed relata, not come into, and closed under it, proved through the grammar's laws, so transfers balancing a step exist exactly where the total is conserved on every such region; dependencies on not-going-out-of-a-region and master-laws-on-the-grammar; one item on what is not shown, the «所闭» form. No earlier statement, law or declaration changed.",
       "zh": "2026年11月1日，工作板条目 BD3：第七律于文法之 «不出» 上读本记录（Becoming.BalanceRegions）：关系所封闭之家族恰是沿所列关系项间之相邻不出之域，亦恰是不入之域与在其下闭之域，皆由文法之律证得，故使一步平衡之转移恰在总量于每一此域上守恒时存在；增对 not-going-out-of-a-region 与 master-laws-on-the-grammar 之依赖；所不示者增一项，即 «所闭» 形式。先前之陈述、规律与声明皆未变。"
+    },
+    {
+      "en": "1 November 2026, board item OU7 (study section 492): «不出» is now stated in Becoming.GrammarLaws (the grammar's owner's item held from BD2, patches/owner/02), so the reuse of not-going-out-of-a-region names the module of each declaration it reuses. Nothing else the record states changed.",
+      "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：«不出» 今陈于 Becoming.GrammarLaws（文法之主人于 BD2 所留之项，patches/owner/02），故对 not-going-out-of-a-region 之复用各言其所复用之声明所在之模块。记录所述余无改变。"
     }
   ]
 }

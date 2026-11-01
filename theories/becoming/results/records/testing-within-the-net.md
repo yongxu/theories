@@ -56,6 +56,8 @@ Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985
   - Input: Two nets on one carrier, one wider.
   - Preserved conditions: None beyond the grammar. [GrammarTesting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean)
 
+**Used by:** [conditional-laws-of-the-corpus](conditional-laws-of-the-corpus.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -63,6 +65,7 @@ Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985
 |---|---|---|
 | proof | [GrammarTesting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean) | `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»`
 

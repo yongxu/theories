@@ -1,0 +1,290 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+index e68f38221..3feed4b7d 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean
+@@ -115,39 +115,6 @@ theorem distinct_map {g : α → β} (inj : ∀ a b, g a = g b → a = b) :
+   | [], _ => trivial
+   | _ :: _, ⟨fresh, distinct⟩ => ⟨fun mem => fresh (mem_of_map inj mem), distinct_map inj distinct⟩
+ 
+-/-- Removing one occurrence of `a` keeps every other member. -/
+-theorem mem_remove {a b : α} (other : ¬ b = a) : ∀ {p q : List α}, b ∈ p ++ a :: q → b ∈ p ++ q
+-  | [], _, mem => match mem_cons_cases mem with
+-    | .inl same => absurd same other
+-    | .inr mem => mem
+-  | c :: _, _, mem => match mem_cons_cases mem with
+-    | .inl same => Eq.subst (motive := fun x => x ∈ c :: _) same.symm (.head _)
+-    | .inr mem => .tail _ (mem_remove other mem)
+-
+-/-- A list without repetition, each member of which is matched to a member of another
+-list, no member of which is matched to two: the first list is no longer. -/
+-theorem length_le_of_matched {S : α → β → Prop} : ∀ {l : List α} {m : List β}, Distinct l →
+-    (∀ a, a ∈ l → ∃ b, b ∈ m ∧ S a b) →
+-    (∀ a a' b, a ∈ l → a' ∈ l → S a b → S a' b → a = a') → l.length ≤ m.length
+-  | [], _, _, _, _ => Nat.zero_le _
+-  | a :: l, m, ⟨fresh, distinct⟩, matched, once => match matched a (.head l) with
+-    | ⟨b, mem, paired⟩ => match List.append_of_mem mem with
+-      | ⟨p, q, split⟩ =>
+-        have inner : l.length ≤ (p ++ q).length :=
+-          length_le_of_matched distinct
+-            (fun a' mem' => match matched a' (.tail a mem') with
+-              | ⟨b', mem_b', paired'⟩ =>
+-                have other : ¬ b' = b := fun same =>
+-                  fresh (Eq.subst (motive := fun x => x ∈ l)
+-                    (once a' a b' (.tail a mem') (.head l) paired'
+-                      (Eq.subst (motive := fun x => S a x) same.symm paired)) mem')
+-                ⟨b', mem_remove other (split ▸ mem_b'), paired'⟩)
+-            (fun x y b' mx my => once x y b' (.tail a mx) (.tail a my))
+-        have whole : m.length = (p ++ q).length + 1 :=
+-          (congrArg List.length split).trans ((ListTests.length_append p (b :: q)).trans
+-            ((Nat.add_succ _ _).trans (congrArg Nat.succ (ListTests.length_append p q).symm)))
+-        whole ▸ Nat.succ_le_succ inner
+-
+ /-- **Counted from below.** A list without repetition, each member of which belongs to another
+ list and has a positive quantity there, is no longer than the count of the other list's entries at
+ which the quantity is positive. The lower bound beside `count_le_of_sub`. No decision of equality
+@@ -251,17 +218,6 @@ theorem mark_one {p : Prop} [Decidable p] (holds : p) : mark p = 1 :=
+ theorem mark_zero {p : Prop} [Decidable p] (fails : ¬ p) : mark p = 0 :=
+   eq_zero_of_not_pos fun pos => fails (mark_pos.mp pos)
+ 
+-/-- Doubly negated for each member of a list, doubly negated for all of them. -/
+-theorem not_not_all {β : Type} {P : β → Prop} :
+-    ∀ {E : List β}, (∀ b, b ∈ E → ¬ ¬ P b) → ¬ ¬ ∀ b, b ∈ E → P b
+-  | [], _ => fun none => none fun _ mem => nomatch mem
+-  | b :: E, each => fun none =>
+-    each b (.head E) fun head =>
+-      not_not_all (E := E) (fun c mem => each c (.tail b mem)) fun rest =>
+-        none fun c mem => match mem_cons_cases mem with
+-          | .inl same => Eq.subst (motive := P) same.symm head
+-          | .inr mem => rest c mem
+-
+ /-- What fails at `N` and holds at a later step `T` came to be across some step between,
+ where it is decided at the steps from `S` on, `S` no later than `N`: only those steps are
+ consulted. -/
+@@ -380,64 +336,58 @@ theorem total_le_mark {P : Prop} [Decidable P] {q : α → Prop} [∀ a, Decidab
+         (total_le_mark distinct (fun b b' mem mem' => once b b' (.tail a mem) (.tail a mem'))
+           fun b mem => makes b (.tail a mem))
+ 
+-/-- Where a count, at each step, ends with what it loses at most where it started with what
+-it gains, losses at arbitrarily late steps need gains at arbitrarily late steps: losses
+-recurring accumulate past the count at the start, and only gains make up the
+-difference. -/
+-theorem gaining_of_losing {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t ≤ q t + y t)
+-    (losing : ∀ N, ∃ t, N ≤ t ∧ 0 < x t) : ∀ N, ∃ t, N ≤ t ∧ 0 < y t :=
+-  fun N => match recurring_accumulates losing N (q N + 1) with
+-  | ⟨n, many⟩ => match total_pos (steps N n) (pos_of_exceeds many
+-      (Nat.le_trans (Nat.le_add_left _ _) (le_over_stretch across N n))) with
+-    | ⟨t, mem, gained⟩ => ⟨t, steps_mem mem, gained⟩
+-
+-/-- Where a count, at each step, starts with what it gains at most where it ends with what
+-it loses, and from some step on is at most `B`, gains at arbitrarily late steps need losses
+-at arbitrarily late steps. -/
+-theorem losing_of_gaining {q x y : Nat → Nat} (across : ∀ t, q t + y t ≤ q (t + 1) + x t)
+-    {T B : Nat} (bounded : ∀ t, T ≤ t → q t ≤ B) (gaining : ∀ N, ∃ t, N ≤ t ∧ 0 < y t) :
+-    ∀ N, ∃ t, N ≤ t ∧ 0 < x t :=
+-  fun N => match recurring_accumulates gaining (N + T) (B + 1) with
+-  | ⟨n, many⟩ => match total_pos (steps (N + T) n) (pos_of_exceeds many
+-      (Nat.le_trans (Nat.le_trans (Nat.le_add_left _ _) (ge_over_stretch across (N + T) n))
+-        (Nat.add_le_add_right (bounded _ (Nat.le_trans (Nat.le_add_left T N)
+-          (Nat.le_add_right _ n))) _))) with
+-    | ⟨t, mem, lost⟩ => ⟨t, Nat.le_trans (Nat.le_add_right N T) (steps_mem mem), lost⟩
+-
+-/-- A recurrence read from a step `T` on: what recurs recurs at `T + m` for arbitrarily large
+-`m`. -/
+-theorem recurs_shift {r : Nat → Prop} (T : Nat) (recurs : ∀ N, ∃ t, N ≤ t ∧ r t) :
+-    ∀ N, ∃ m, N ≤ m ∧ r (T + m) :=
+-  fun N => match recurs (N + T) with
+-  | ⟨_, later, holds⟩ => match le_dest (Nat.le_trans (Nat.le_add_left T N) later) with
+-    | ⟨m, same⟩ => ⟨m, le_of_add_le_add_right T
+-        (Nat.le_trans later (Nat.le_of_eq (same.trans (Nat.add_comm T m)))), same ▸ holds⟩
+-
+-/-- And back: what holds at `T + m` for arbitrarily large `m` recurs. -/
+-theorem recurs_unshift {r : Nat → Prop} (T : Nat) (recurs : ∀ N, ∃ m, N ≤ m ∧ r (T + m)) :
+-    ∀ N, ∃ t, N ≤ t ∧ r t :=
+-  fun N => match recurs N with
+-  | ⟨m, later, holds⟩ => ⟨T + m, Nat.le_trans later (Nat.le_add_left m T), holds⟩
+-
+-/-- Losses at arbitrarily late steps need gains at arbitrarily late steps, where the count at
+-each step from `T` on ends with what it loses at most where it starts with what it gains:
+-nothing is asked of the steps before `T`. -/
+-theorem gaining_of_losing_from {q x y : Nat → Nat} {T : Nat}
+-    (across : ∀ t, T ≤ t → q (t + 1) + x t ≤ q t + y t)
+-    (losing : ∀ N, ∃ t, N ≤ t ∧ 0 < x t) : ∀ N, ∃ t, N ≤ t ∧ 0 < y t :=
+-  recurs_unshift T (gaining_of_losing (q := fun m => q (T + m)) (x := fun m => x (T + m))
+-    (y := fun m => y (T + m)) (fun m => across (T + m) (Nat.le_add_right T m))
+-    (recurs_shift T losing))
+-
+-/-- Gains at arbitrarily late steps need losses at arbitrarily late steps, where from `T` on
+-the count is at most `B` and at each step starts with what it gains at most where it ends
+-with what it loses. -/
+-theorem losing_of_gaining_from {q x y : Nat → Nat} {T B : Nat}
+-    (across : ∀ t, T ≤ t → q t + y t ≤ q (t + 1) + x t) (bounded : ∀ t, T ≤ t → q t ≤ B)
+-    (gaining : ∀ N, ∃ t, N ≤ t ∧ 0 < y t) : ∀ N, ∃ t, N ≤ t ∧ 0 < x t :=
+-  recurs_unshift T (losing_of_gaining (q := fun m => q (T + m)) (x := fun m => x (T + m))
+-    (y := fun m => y (T + m)) (T := 0) (B := B) (fun m => across (T + m) (Nat.le_add_right T m))
+-    (fun m _ => bounded (T + m) (Nat.le_add_right T m)) (recurs_shift T gaining))
++/-! ## Occurrences of what holds -/
++
++section Occurrences
++
++variable {p : α → Nat → Prop}
++
++/-- **Coming to be is a beginning (生) along a member's occurrences.** A member comes to be across
++the step from `t` exactly where it holds after the step and its occurrence after the step begins,
++along its steps under the class of its determination. Change's `comesToBe_iff_sheng` reads one
++determination along `Steps.next`; this reads a member's along `Steps.along`. -/
++theorem comesToBe_iff_sheng_along {t : Nat} {a : α} :
++    ComesToBe (p a) t ↔ p a (t + 1) ∧ «生» Steps.along (Steps.alikeAt p) (t + 1, a) :=
++  ⟨fun ⟨before, after⟩ =>
++    ⟨after, fun hp => before (Iff.mpr (Steps.along_hasPred_iff.mp hp) after)⟩,
++   fun ⟨after, begins⟩ =>
++    ⟨fun was => begins (Steps.along_hasPred_iff.mpr ⟨fun _ => after, fun _ => was⟩), after⟩⟩
++
++/-- **Ceasing to be is an ending (亡) along a member's occurrences.** A member ceases to be across
++the step from `t` exactly where it holds before the step and its occurrence before the step ends. -/
++theorem ceasesToBe_iff_wang_along {t : Nat} {a : α} :
++    CeasesToBe (p a) t ↔ p a t ∧ «亡» Steps.along (Steps.alikeAt p) (t, a) :=
++  ⟨fun ⟨held, gone⟩ =>
++    ⟨held, fun hs => gone (Iff.mp (Steps.along_hasSucc_iff.mp hs) held)⟩,
++   fun ⟨held, ends⟩ =>
++    ⟨held, fun next => ends (Steps.along_hasSucc_iff.mpr ⟨fun _ => next, fun _ => held⟩)⟩⟩
++
++/-- The occurrences listed at a step: each listed member paired with the step. -/
++def listedOccurrences (l : Nat → List α) (t : Nat) : List (Nat × α) := (l t).map fun a => (t, a)
++
++variable [∀ a t, Decidable (p a t)]
++
++/-- The beginnings' test on occurrences: an occurrence after the step from `t` begins where its
++member failed at `t`. -/
++def beginTest (p : α → Nat → Prop) [∀ a t, Decidable (p a t)] : Nat × α → Bool
++  | (0, _) => true
++  | (t + 1, a) => !decide (p a t)
++
++/-- The endings' test on occurrences: an occurrence at `t` ends where its member fails at `t + 1`. -/
++def endTest (p : α → Nat → Prop) [∀ a t, Decidable (p a t)] (x : Nat × α) : Bool :=
++  !decide (p x.2 (x.1 + 1))
++
++end Occurrences
++
++/-- The total of marks is the count of their decisions. -/
++theorem total_mark_eq_count {P : α → Prop} [∀ a, Decidable (P a)] :
++    ∀ l : List α, total l (fun a => mark (P a)) = «计» (fun a => decide (P a)) l
++  | [] => rfl
++  | x :: l => by
++    show mark (P x) + total l (fun a => mark (P a)) = cond (decide (P x)) 1 0 + «计» _ l
++    rw [total_mark_eq_count l]
++    exact congrArg (· + _) (mark_cases (q := fun n => n = cond (decide (P x)) 1 0)
++      (fun h => by rw [decide_eq_true h]; rfl) (fun h => by rw [decide_eq_false h]; rfl))
+ 
+ /-! ## Listing what holds -/
+ 
+@@ -487,13 +437,38 @@ theorem keeps (listed : Listed p l) (t : Nat) :
+ 
+ /-- The census balance across a step, where what holds is listed at its two ends: the list
+ after it with the members that ceased to be is the list before it with the members that came
+-to be. The members kept across the step are counted alike on both lists. -/
++to be. It is the root's census of a step, both halves (`«定后则后并亡不过前并生»`,
++`«定前则前并生不过后并亡»`), at the step's relation on members: each continues only itself, holding
++at both ends. -/
+ theorem across_at {t : Nat} (now : Distinct (l t) ∧ ∀ a, p a t ↔ a ∈ l t)
+     (next : Distinct (l (t + 1)) ∧ ∀ a, p a (t + 1) ↔ a ∈ l (t + 1)) :
+     (l (t + 1)).length + ceasings (l t) p t = (l t).length + comings (l (t + 1)) p t :=
+-  match keeps_at now next with
+-  | ⟨_, before, after⟩ => (congrArg (· + _) after).trans
+-      ((Nat.add_right_comm _ _ _).trans (congrArg (· + _) before.symm))
++  have one := «定后则后并亡不过前并生» (R := fun a b => a = b) (E := fun a b => p a t ∧ p b (t + 1))
++    (b := fun a => decide (ComesToBe (p a) t)) (e := fun a => decide (CeasesToBe (p a) t))
++    (before := l t) (after := l (t + 1)) next.1
++    («定后之逐点».mpr fun _ _ _ c c' => c.1.symm.trans c'.1)
++    (fun y my off none =>
++      have holds : p y (t + 1) := (next.2 y).mpr my
++      (fun np : ¬ p y t => of_decide_eq_false off ⟨np, holds⟩)
++        fun held => none ⟨y, (now.2 y).mp held, rfl, held, holds⟩)
++    (fun x _ on y _ c => match c with
++      | ⟨same, _, after⟩ => (of_decide_eq_true on).2 (same ▸ after))
++  have other := «定前则前并生不过后并亡» (R := fun a b => a = b)
++    (E := fun a b => p a t ∧ p b (t + 1))
++    (b := fun a => decide (ComesToBe (p a) t)) (e := fun a => decide (CeasesToBe (p a) t))
++    (before := l t) (after := l (t + 1)) now.1
++    («定前之逐点».mpr fun _ _ _ c c' => c.1.trans c'.1.symm)
++    (fun x mx off none =>
++      have held : p x t := (now.2 x).mpr mx
++      (fun nn : ¬ p x (t + 1) => of_decide_eq_false off ⟨held, nn⟩)
++        fun next' => none ⟨x, (next.2 x).mp next', rfl, held, next'⟩)
++    (fun y _ on x _ c => match c with
++      | ⟨same, before, _⟩ => (of_decide_eq_true on).1 (same.symm ▸ before))
++  by
++    show (l (t + 1)).length + total (l t) (fun a => mark (CeasesToBe (p a) t)) =
++      (l t).length + total (l (t + 1)) (fun a => mark (ComesToBe (p a) t))
++    rw [total_mark_eq_count, total_mark_eq_count]
++    exact Nat.le_antisymm one other
+ 
+ /-- The census balance across a step: the list after it with the members that ceased to be
+ is the list before it with the members that came to be. -/
+@@ -604,18 +579,58 @@ theorem coming_iff_excess (listed : Listed p l) :
+     ⟨fun excess N => excess N (Nat.zero_le N), fun excess N _ => excess N⟩
+ 
+ /-- The census law: where what holds is listed at each step, ceasing to be at arbitrarily
+-late steps needs coming to be at arbitrarily late steps. Ceasings recurring accumulate past
+-any list at the start, and only comings make up the difference. -/
++late steps needs coming to be at arbitrarily late steps. It is the root's census of a run
++(`«定后前者在前则亡屡者生屡»`) at a member's occurrences along its steps (`Steps.along`), under the
++two-valued class of its determination, where coming to be and ceasing to be are a beginning and an
++ending (`comesToBe_iff_sheng_along`, `ceasesToBe_iff_wang_along`): the occurrences listed at each
++step are listed once, each one's predecessor is listed before it, and nothing splits along the
++steps (`Steps.along_fixed`). -/
+ theorem coming_of_ceasing (listed : Listed p l)
+     (ceasing : ∀ N, ∃ t a, N ≤ t ∧ CeasesToBe (p a) t) :
+     ∀ N, ∃ t a, N ≤ t ∧ ComesToBe (p a) t :=
+-  listed.coming_iff_excess.mpr fun N =>
+-    match recurring_accumulates (q := fun t => ceasings (l t) p t) (fun M =>
+-        match ceasing M with
+-        | ⟨t, a, later, ceases⟩ =>
+-          ⟨t, later, total_pos_of_mem (((listed t).2 a).mp ceases.1) (mark_pos.mpr ceases)⟩)
+-        N ((l N).length + 1) with
+-    | ⟨n, many⟩ => ⟨n, Nat.lt_of_lt_of_le many (Nat.le_add_left _ _)⟩
++  fun N =>
++    match «定后前者在前则亡屡者生屡» (R := Steps.along) (E := Steps.alikeAt p)
++        (u := listedOccurrences l) (T := 0) (b := beginTest p) (e := endTest p)
++        (fun t _ => distinct_map_on (fun _ _ _ _ same => congrArg Prod.snd same) (listed (t + 1)).1)
++        (fun t _ x y my c => by
++          obtain ⟨h1, h2⟩ := mem_map_prodMk my
++          obtain ⟨⟨e1, e2⟩, alike⟩ := c
++          obtain ⟨s, b⟩ := x
++          obtain ⟨t', a⟩ := y
++          dsimp only at h1 h2 e1 e2 alike
++          subst h1
++          have es : s = t := (Nat.succ.inj e1).symm
++          subst es; subst e2
++          exact prodMk_mem_map (((listed s).2 a).mp (alike.mpr (((listed (s + 1)).2 a).mpr h2))))
++        (Steps.along_fixed _)
++        (fun t _ y my => by
++          obtain ⟨h1, h2⟩ := mem_map_prodMk my
++          obtain ⟨t', a⟩ := y
++          dsimp only at h1 h2
++          subst h1
++          have holds : p a (t + 1) := ((listed (t + 1)).2 a).mpr h2
++          show (!decide (p a t)) = true ↔ _
++          exact not_decide_iff.trans ⟨fun was => (comesToBe_iff_sheng_along.mp ⟨was, holds⟩).2,
++            fun begins was => (comesToBe_iff_sheng_along.mpr ⟨holds, begins⟩).1 was⟩)
++        (fun t _ x mx => by
++          obtain ⟨h1, h2⟩ := mem_map_prodMk mx
++          obtain ⟨t', a⟩ := x
++          dsimp only at h1 h2
++          subst h1
++          have held : p a t' := ((listed t').2 a).mpr h2
++          exact not_decide_iff.trans ⟨fun gone => (ceasesToBe_iff_wang_along.mp ⟨held, gone⟩).2,
++            fun ends next => (ceasesToBe_iff_wang_along.mpr ⟨held, ends⟩).2 next⟩)
++        (fun M => match ceasing M with
++          | ⟨t, a, later, ceases⟩ =>
++            ⟨t, later, (t, a), prodMk_mem_map (((listed t).2 a).mp ceases.1),
++              (ceasesToBe_iff_wang_along.mp ceases).2⟩)
++        N with
++    | ⟨t, later, y, my, begins⟩ => by
++        obtain ⟨h1, h2⟩ := mem_map_prodMk my
++        obtain ⟨t', a⟩ := y
++        dsimp only at h1 h2
++        subst h1
++        exact ⟨t, a, later, comesToBe_iff_sheng_along.mpr ⟨((listed (t + 1)).2 a).mpr h2, begins⟩⟩
+ 
+ /-- Where at most `K` are listed at arbitrarily late steps, coming to be at arbitrarily late
+ steps needs ceasing to be at arbitrarily late steps: comings recurring accumulate past `K`,

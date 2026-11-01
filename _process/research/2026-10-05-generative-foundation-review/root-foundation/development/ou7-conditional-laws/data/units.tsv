@@ -1,0 +1,220 @@
+id	source	section	text	form	terms	commentary	confidence	note
+CWS-P1-007	chengweishi	卷第一	是故我執皆緣無常五取蘊相，妄執為我。	Z=緣五取蘊相，Y=妄執為我		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P1-018	chengweishi	卷第一	然諸有情，各有本識，一類相續，任持種子，與一切法更互為因，熏習力故，得有如是憶、識等事。	Z=本識一類相續、任持種子、與一切法更互為因、熏習力，Y=有憶識等事	本識=阿赖耶识；一類相續=同类之相续；任持=执持不失；更互為因=互为因	none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。续之据：二者并有——“一類相續”“更互為因”为关系之读（类与互缘），“本識……任持種子”以一持者为据。对外道之实我，以本识之一类相续代之：持者从“常一之我”换为“一类相续之识”。计划可读为：类=一類，缘=更互為因；而“任持”之持者为计划所无，登记
+CWS-P1-024	chengweishi	卷第一	然諸有情心、心所法因緣力故，相續無斷，造業、受果，於理無違。	Z=心心所法因緣力，Y=相續無斷、造業受果	因緣力=缘之力	none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。续之据：关系——心心所法依因缘力相续无断，无须实我；此句最近计划（续由缘立，不立持者）
+CWS-P1-030	chengweishi	卷第一	然有情類，身、心相續，煩惱、業力輪迴諸趣，厭患苦故，求趣涅槃。	Z=身心相續、煩惱業力，Y=輪迴諸趣；Z=厭患苦，Y=求涅槃		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。续之据：关系（身心之相续与业力）；兼丁（求涅槃）
+CWS-P1-031	chengweishi	卷第一	由此故知定無實我，但有諸識無始時來前滅後生，因果相續，由妄熏習，似我相現，愚者於中妄執為我。	Z=諸識前滅後生、因果相續、妄熏習，Y=似我相現	前滅後生=刹那生灭相继；似=显似	none（论文本身即护法等之释论，玄奘译；未用疏）	高	core 之后。“但有諸識無始時來前滅後生，因果相續”——相续为前灭后生之关系，我为其显似；计划：续=缘∧类，我为依类之读（假名）；合。“由妄熏習”则为评价方向（妄）
+CWS-P2-006	chengweishi	卷第二	等流習氣，由七識中善、惡、無記熏令生長；	Z=七識中善惡無記熏，Y=等流習氣生長		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P2-007	chengweishi	卷第二	異熟習氣由六識中有漏善、惡熏令生長。	Z=六識中有漏善惡熏，Y=異熟習氣生長		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P3-002	chengweishi	卷第二	依障建立種姓別者，意顯無漏種子有無，謂：若全無無漏種者，彼二障種永不可害，即立彼為非涅槃法；	Z=全無無漏種，Y=立為非涅槃法		none（论文本身即护法等之释论，玄奘译；未用疏）	中	context，种姓之分；兼戊（种姓之别）
+CWS-P3-003	chengweishi	卷第二	若唯有二乘無漏種者，彼所知障種永不可害，一分立為聲聞種姓，一分立為獨覺種姓；	Z=唯二乘無漏種，Y=聲聞、獨覺種姓		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P3-004	chengweishi	卷第二	若亦有佛無漏種者，彼二障種俱可永害，即立彼為如來種姓。	Z=有佛無漏種，Y=如來種姓		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P3-008	chengweishi	卷第二	若本全無無漏法種，則諸聖道永不得生，誰當能害二障種子，而說依障立種姓別？	Z=本全無無漏種，Y=聖道永不得生		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P3-039	chengweishi	卷第二	內種必由熏習生長，親能生果，是因緣性。	Z=熏習，Y=內種生長；內種親生果 = 因緣性		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[core] 
+CWS-P3-040	chengweishi	卷第二	外種熏習或有、或無，為增上緣，辦所生果。	Z=外種，Y=為增上緣辦果		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[core] 
+CWS-P3-074	chengweishi	卷第二	如是能熏與所熏識，俱生俱滅，熏習義成。	Z=能熏與所熏 俱生俱滅，Y=熏習義成		none（论文本身即护法等之释论，玄奘译；未用疏）	高	[core] 
+CWS-P3-077	chengweishi	卷第二	能熏生種，種起現行，如俱有因得士用果；	Z=能熏生種、種起現行，Y=俱有因得士用果		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[core] 同时之一支
+CWS-P3-078	chengweishi	卷第二	種子前後自類相生，如同類因引等流果。	Z=種子前後自類相生，Y=同類因引等流果		none（论文本身即护法等之释论，玄奘译；未用疏）	高	[core] 前后之一支：种生种为同类之续（类=一类，缘=前后）；即计划之续
+CWS-P4-019	chengweishi	卷第三	又如瀑流，雖風等擊，起諸波浪而流不斷，此識亦爾，雖遇眾緣，起眼識等而恒相續。	Z=遇眾緣（風擊），Y=起波浪（眼識等）而流不斷		none（论文本身即护法等之释论，玄奘译；未用疏）	高	[core] 缘起波而流不断：粗类之续不因细类之起伏而断
+CWS-P4-062	chengweishi	卷第三	阿羅漢位方究竟捨。	Z=阿羅漢位，Y=究竟捨（藏识之续亡）		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。藏识之续有尽：至阿罗汉位舍（其名位）。于计划：此续在“染藏”之类下有亡，故此类不对缘有常（Grammar «有亡之续则不有常»）；所谓“恒”非 «有常»，而是“至究竟位前无间断”
+CWS-P5-006	chengweishi	卷第三	由此本識具諸種子，故能攝藏諸雜染法。	Z=本識具諸種子，Y=能攝藏雜染法		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P5-017	chengweishi	卷第三	是一切法真實種子，緣擊便生轉識波浪，恒無間斷，猶如瀑流。	Z=緣擊，Y=（種子）生轉識波浪，恒無間斷，猶如瀑流		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。缘击则起浪而流不断：粗类续、细类起伏；续之据：二者（缘击为关系，种子为所持）
+CWS-P5-021	chengweishi	卷第三	《入楞伽經》亦作是說：「如海遇風緣，起種種波浪，現前作用轉，無有間斷時。	Z=風緣，Y=海起波浪，無有間斷（引《入楞伽經》）		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core
+CWS-P5-022	chengweishi	卷第三	藏識海亦然，境等風所擊，恒起諸識浪，現前作用轉。」	Z=境風擊，Y=藏識海恒起識浪		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core。海/浪之喻：藏识为不断之体，诸识为浪——续之据：所依（海）。与《起信论》水波之喻同型（PLAN §5.4 起信论之所依不对称）
+CWS-P6+P7+P8-003	chengweishi	卷第三	謂五色根及彼依處，唯現在世是有執受，彼定由有能執受心，唯異熟心，先業所引，非善、染等，一類、能遍、相續執受有色根身；	Z=異熟心（一類、能遍、相續），Y=執受有色根身		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] “一類、能遍、相續”为执受者之条件
+CWS-P6+P7+P8-015	chengweishi	卷第三	唯異熟識無間、無轉，猶如壽、煖，有恒持用，故可立為持壽、煖識。	Z=無間無轉，Y=有恒持用		none（论文本身即护法等之释论，玄奘译；未用疏）	高	[core] 唯异熟识“無間、無轉”：注意此处说藏识“无转”，与 CWS-P4-016“轉表非常”不同层（此为“不转易为他识”，彼为“念念生灭”）；记多义：轉
+CWS-P6+P7+P8-019	chengweishi	卷第三	謂若是處具有三法無間轉者，可恒相持。	Z=三法無間轉，Y=恒相持		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[core] 互持只在三者皆无间时成立：相须之环要求各项皆续
+CWS-P6+P7+P8-020	chengweishi	卷第三	不爾，便無恒相持用。	Z=¬（三法無間），Y=無恒相持		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[core] 
+CWS-P6+P7+P8-043	chengweishi	卷第三	又將死時，由善、惡業，下、上身分，冷觸漸起，若無此識，彼事不成。	Z=將死，Y=冷觸漸起		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P6+P7+P8-048	chengweishi	卷第三	唯異熟心，由先業力，恒、遍、相續執受身分。	Z=異熟心（先業力），Y=恒遍相續執受身分		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 
+CWS-P6+P7+P8-049	chengweishi	卷第三	捨執受處，冷觸便生，壽、煖識三不相離故。	Z=捨執受處，Y=冷觸生		none（论文本身即护法等之释论，玄奘译；未用疏）	中	[context] 执受之续于身之一处亡，则冷触生：一续在局部之类下有亡
+CWS-P6+P7+P8-072	chengweishi	卷第四	謂有漏識由段、觸、思勢力增長，能為食事。	Z=段觸思勢力，Y=有漏識增長能為食		none（论文本身即护法等之释论，玄奘译；未用疏）	中	core
+CWS-P6+P7+P8-073	chengweishi	卷第四	此識雖通諸識自體，而第八識食義偏勝，一類相續執持勝故。	Z=一類相續執持勝，Y=第八識食義偏勝		none（论文本身即护法等之释论，玄奘译；未用疏）	高	core：“一類相續執持勝故”：一类相续与执持并举；续之据：二者（以执持为主）
+CWS-P9-016	chengweishi	卷第四	應知此意但緣藏識見分非餘，彼無始來一類相續似常、一故，恒與諸法為所依故。	Z=藏識見分 無始一類相續，似常、一，為諸法所依，Y=末那緣之執為內我	似常一=显得常一	none（论文本身即护法等之释论，玄奘译；未用疏）	高	core 要句：“彼無始來一類相續似常、一故”——一类相续“似常一”，是我执之所缘：续本身（一类之续）被误读为常一之我。于计划：粗类下之续若被当作自性之一，即是我执；计划之续须说明不是“常一”。与《起信论》以念念相续为无明（PLAN §5.4）同向，登记为对续之评价方向之一（续之误读，非续之破）
+JSZ-P-01-003	jinshizizhang	第一、明緣起者	隨巧匠之緣，遂有師子相起。	Z=巧匠之緣（及金無自性），Y=師子相起	緣=助成之條件；起=生起	承遷 JSZ-C-018	高	arising by a 缘 (an agent as condition)
+JSZ-P-07-007	jinshizizhang	第七、勒十玄	第三、祕密隱顯俱成門者，謂若看師子，唯見師子無金，則師子顯金隱。	Z=看師子，Y=師子顯金隱	看=以某一读法观；顯隱=现与隐	承遷 JSZ-C-086	中	key: what is manifest is relative to the reading: the plan's relativity to class; 看 is an observer word, to be read as a class (§4.1)
+JSZ-P-07-008	jinshizizhang	第七、勒十玄	若看金，唯金無師子，則金顯師子隱。	Z=看金，Y=金顯師子隱		承遷 JSZ-C-087	中	converse of P-07-007
+JSZ-P-07-009	jinshizizhang	第七、勒十玄	若兩處看，俱顯俱顯，隱則祕密，顯則顯著，故名祕密隱顯俱成門。	Z=兩處看，Y=俱隱俱顯		none	低	file reads 俱顯俱顯 (both FO2-KS-P and FO2-KS); the Taishō reading 俱隱俱顯 is from memory, not checked; confidence lowered
+JSZ-P-07-014	jinshizizhang	第七、勒十玄	第五、諸藏純雜具德門者，謂若以眼收師子盡，則一切純是眼。	Z=以眼收師子，Y=一切純是眼	收=以之为读	承遷 JSZ-C-091	低	the whole read under one part; Y is a reading, not an event
+JSZ-P-07-015	jinshizizhang	第七、勒十玄	若耳收師子盡，則一切純是耳。	Z=以耳收師子，Y=一切純是耳		none	低	
+JSZ-P-07-016	jinshizizhang	第七、勒十玄	若諸根同時相收，悉皆具足，一一皆純、一一皆雜，是圓滿藏。	Z=諸根同時相收，Y=一一皆純一一皆雜	純=一读；雜=多读	承遷 JSZ-C-092	低	
+JSZ-P-07-032	jinshizizhang	第七、勒十玄	第九、由心迴轉善成門者，謂金與師子或顯或隱、或一或多，各無自性，由心迴轉。	Z=心迴轉，Y=金與師子顯隱一多；各無自性	迴轉=转变	承遷 JSZ-C-103	低	
+JSZ-C-005	jinshizizhang	承遷注	萬像本空，假緣方有。	Z=假緣，Y=萬像有	緣=缘	本单元为承遷注；所注之本文：JSZ-P-000	中	承遷 couplet on gate 1 (明緣起)
+JSZ-C-015	jinshizizhang	承遷注	謂萬法無體，假緣成立，若無因緣，法即不生。	Z=無因緣，Y=法不生；萬法無體，假緣成立	因緣=缘	本单元为承遷注；所注之本文：JSZ-P-01-001	高	承遷 on P-01-001
+JSZ-C-016	jinshizizhang	承遷注	故經云：「諸法從緣起，無緣即不起。」	Z=無緣，Y=不起		本单元为承遷注；所注之本文：JSZ-P-01-001	高	承遷 quoting a sutra
+JSZ-C-044	jinshizizhang	承遷注	釋曰：法與自心為緣，心法方起。	Z=法與自心為緣，Y=心法方起	緣=缘（互）	本单元为承遷注；所注之本文：JSZ-P-03-004	中	承遷; 法 and 心 condition each other (mutual 缘), but 法 as object is the 所缘 sense
+JSZ-C-064	jinshizizhang	承遷注	然生與無生互成互奪，奪則無生，成乃緣生。	Z=成（以缘读），Y=缘生；Z=奪，Y=无生	成=成立；奪=夺	本单元为承遷注；所注之本文：JSZ-P-05-005	低	key: 承遷 makes 生 and 無生 relative to two operations (成/奪); close to the plan's relativity to class
+JSZ-C-067	jinshizizhang	承遷注	喻一切事法從緣有故，各無自性，無有停息。	Z=從緣有，Y=無自性，無有停息	停息=住、止	本单元为承遷注；所注之本文：JSZ-P-06-003	低	承遷 on P-06-003: 無有停息 denies 住
+JSZ-C-069	jinshizizhang	承遷注	喻師子無體，全假真金成工匠緣，師子相顯。	Z=真金 與 工匠緣，Y=師子相顯		本单元为承遷注；所注之本文：JSZ-P-06-005	中	承遷 on P-06-005: joint 缘
+LZ-01-001	laozi	一章	道可道，非常道，名可名，非常名；	丙一：Z=可道/可名，Y=非常道/非常名	常=恒常（不系于一形）；道=言说/道路（双关）	王弼（“可道之道，可名之名，指事造形，非其常也”）	低	王弼: what is fixed by pointing to a form is not constant; bounds 立言 (§三): what the grammar can name is not the 常道; the plan does not claim the 常道, so a strain, not a rejection; 常 polysemy against §4.4 有常
+LZ-05-004	laozi	五章	虛而不屈，動而愈出。	丙一：Z=虛，Y=不屈；Z=動，Y=愈出	屈=竭（王弼：窮屈）	王弼（“虛而不得窮屈，動而不可竭盡也”）	低	a model law of the bellows: emptiness never exhausted; unending continuation in a model
+LZ-07-002	laozi	七章	天地所以能長且久者，以其不自生，故能長生。	丙一：Z=不自生，Y=能長生（長且久）	自生=自营其生（王弼：自生則與物爭）	王弼（“自生則與物爭，不自生則物歸也”）	低	continuation conditioned on not living for oneself; 王弼 reads it relationally (爭 vs 歸); 自生 needs reflexive agency the grammar lacks
+LZ-11-004	laozi	十一章	故有之以為利，無之以為用。	丙一：Z=有一无（空处）可资之器，Y=有之為利、無之為用	利/用=所利/所用	王弼（“言無者，有之所以為利，皆賴無以為用也”）	低	mutual dependence of 有 and 无 in artifacts (the 相须 shape, §4.5); a model law over the examples LZ-11-001..003, not analytic
+LZ-15-004	laozi	十五章	孰能濁以靜之徐清？	丙一（王弼）：Z=濁而靜之，Y=徐清	徐=详慎（王弼）	王弼（“濁以靜物則得清，安以動物則得生，此自然之道也”）	低	base is a rhetorical question; the law is 王弼's
+LZ-15-005	laozi	十五章	孰能安以久動之徐生？	丙一（王弼）：Z=安而久動之，Y=徐生	生=生动、生长	王弼（同上）	低	as LZ-15-004
+LZ-16-003	laozi	十六章	夫物芸芸，各復歸其根。	丙一：Z=凡物（芸芸），Y=各復歸其根	根=本	王弼	低	universal return claim; holds only in models where every course closes into a loop (环); courses that end without return (LZ-30-008 不道早已) are counterexamples unless 歸根 is read as ending
+LZ-18-001	laozi	十八章	大道廢，有仁義；	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）	低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-002	laozi	十八章	智慧出，有大偽；	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）	低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-003	laozi	十八章	六親不和，有孝慈；	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）	低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-18-004	laozi	十八章	國家昏亂，有忠臣。	丙一：Z=大道廢（智慧出、六親不和、國家昏亂），Y=有仁義（大偽、孝慈、忠臣）	有=出现其名	王弼（“甚美之名生於大惡，所謂美惡同門”）	低	the name of a virtue appears upon the loss of what it names: 相待 (王弼 美惡同門, link LZ-02-001) in a degeneration order (link LZ-38-006); evaluative terms
+LZ-22-001	laozi	二十二章	曲則全，枉則直，窪則盈，敝則新，少則得，多則惑。	丙一（反）：曲則全，枉則直，窪則盈，敝則新，少則得，多則惑	新=更新；惑=迷	王弼（“轉多轉遠其根，轉少轉得其本”）	低	reversal laws; 敝則新 = renewal after wear (§4.6 复生); 物壯則老 (LZ-30-008) runs the other way; 多則惑 is evaluative
+LZ-23-002	laozi	二十三章	故飄風不終朝，驟雨不終日。	丙一：Z=飄風、驟雨（暴疾），Y=不終朝、不終日	終=尽	王弼（“言暴疾美興不長也”）	低	ending of a continuation under intensity; needs magnitude (暴/驟) the grammar lacks; 王弼 links LZ-30-008
+LZ-28-006	laozi	二十八章	樸散則為器，聖人用之，則為官長，故大制不割。	丙一：Z=樸散，Y=為器	樸=真（王弼）；器=殊类之成形	王弼（“真散則百行出，殊類生，若器也”）	中	classes (殊類) arise from the dispersal of an undivided whole: a generative account of classes, where the plan takes 类 as given relations (§4.1); 聖人用之……大制不割 is 丁
+LZ-30-003	laozi	三十章	師之所處，荊棘生焉。	丙一：Z=師之所處，Y=荊棘生焉	生=生长	王弼（“無有所濟，必有所傷”）	低	model terms; 生 intransitive
+LZ-30-008	laozi	三十章	物壯則老，是謂不道，不道早已。	丙一：Z=物壯，Y=老；Z=不道，Y=早已	壯=（王弼）武力暴兴；已=止、终	王弼（“飄風不終朝，驟雨不終日，故暴興必不道早已也”）	中	the plan's example (物壮则老). 已 = end (cf. 墨经 已 polysemy). 是謂不道 is evaluative (丁 second). No counterexample in this corpus; LZ-22-001 敝則新 is the reverse direction, not a counterexample; repeated LZ-55-009
+LZ-32-003	laozi	三十二章	天地相合，以降甘露，民莫之令而自均。	丙一：Z=天地相合，Y=降甘露；民莫之令而自均	相合=相交合；自均=自然均平	王弼（“天地相合，則甘露不求而自降”）	低	self-equalization without command (no external agent)
+LZ-33-005	laozi	三十三章	不失其所者久。	丙一：Z=不失其所，Y=久	所=处所、所当	王弼（“以明自察，量力而行，不失其所，必獲久長矣”）	低	continuation conditioned on keeping one's place: in the plan's terms a continuation under the class of 所 (cf. 荀子 一实 以所计); agentive in 王弼; link XCX-06-019 (困 彖 “困而不失其所”), XCX-06-020
+LZ-36-001	laozi	三十六章	將欲歙之，必固張之；	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）	低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-002	laozi	三十六章	將欲弱之，必固強之；	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）	低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-003	laozi	三十六章	將欲廢之，必固興之；	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）	低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-004	laozi	三十六章	將欲奪之，必固與之。	丙一（反）：將欲 Y，必固 Z（歙←張，弱←強，廢←興，奪←與）	固=先、姑且	王弼（“因物之性，令其自戮”）	低	structural reading: a reversal presupposes the prior state (cf. LZ-40-001 反者道之動); 王弼 reads a strategy against tyrants
+LZ-36-006	laozi	三十六章	柔弱勝剛強。	丙一：Z=柔弱與剛強相遇，Y=柔弱勝		none	低	model law; counterexample across texts: 系辞 XCX-08-004 “其柔危，其剛勝邪”; repeated LZ-78-002
+LZ-38-006	laozi	三十八章	故失道而後德，失德而後仁，失仁而後義，失義而後禮。	丙一（退化之序）：失道而後德，失德而後仁，失仁而後義，失義而後禮	失 X 而後 Y=X 失则 Y 出	王弼（“夫大之極也，其唯道乎……所謂失道而後德也”；“守母以存其子，崇本以舉其末”）	低	a degeneration chain (§七 map), each term appearing after the loss of the former; ranking 道>德>仁>義>禮; 王弼's 本/末, 母/子 frame is a hierarchy not registered in §5.4
+LZ-39-001	laozi	三十九章	昔之得一者，天得一以清，地得一以寧，神得一以靈，谷得一以盈，萬物得一以生，侯王得一以為天下貞。	丙一：Z=得一，Y=天清、地寧、神靈、谷盈、萬物生、侯王貞	一=数之始而物之极（王弼）	王弼（“物皆各得此一以成，既成而舍以居成，居成則失其母，故皆裂發歇竭滅蹶也”）	中	each thing keeps its character only through its relation to the one; settling into the achieved state (居成) leads to ending: consonant with §4.4 (有常 is compatibility, not ground)
+LZ-39-002	laozi	三十九章	其致之，天無以清將恐裂，地無以寧將恐發，神無以靈將恐歇，谷無以盈將恐竭，萬物無以生將恐滅，侯王無以貴高將恐蹶。	丙一：Z=無以清（寧、靈、盈、生、貴高），Y=將恐裂（發、歇、竭、滅、蹶）	裂……滅=各种终了	王弼（“用一以致清耳，非用清以清也。守一則清不失，用清則恐裂也”）	中	converse of LZ-39-001: a property does not keep itself (非用清以清); cf. §4.5 自持/因于
+LZ-43-001	laozi	四十三章	天下之至柔，馳騁天下之至堅。	丙一：Z=至柔，Y=馳騁至堅	至柔=（王弼）气、水	王弼（“氣無所不入，水無所不出於經”）	低	model terms
+LZ-45-006	laozi	四十五章	躁勝寒，靜勝熱。	丙一：躁勝寒，靜勝熱		王弼	低	model terms
+LZ-55-009	laozi	五十五章	物壯則老，謂之不道，不道早已。	丙一：Z=物壯，Y=老；不道 → 早已		none	中	repeat of LZ-30-008
+LZ-63-004	laozi	六十三章	天下難事必作於易，天下大事必作於細。	丙一：Z=天下難事、大事，Y=必作於易、細	作=起始	none	低	every large course starts small (a small 生); needs magnitude; instances LZ-64-004..006
+LZ-75-001	laozi	七十五章	民之饑，以其上食稅之多，是以饑。	丙一：Z=上食稅之多，Y=民饑		王弼（“皆由上不由其下也，民從上也”）	低	model terms (social); 王弼 adds an asymmetric dependence (民從上)
+LZ-75-002	laozi	七十五章	民之難治，以其上之有為，是以難治。	丙一：Z=上之有為，Y=民難治		王弼	低	as LZ-75-001
+LZ-75-003	laozi	七十五章	民之輕死，以其上求生之厚，是以輕死。	丙一：Z=上求生之厚，Y=民輕死	求生之厚=厚其生（cf. LZ-50-006）	王弼	低	生 polysemy as in LZ-50-006
+LZ-76-001	laozi	七十六章	人之生也柔弱，其死也堅強。	丙一：Z=生，Y=柔弱；Z=死，Y=堅強	生/死=活/死之状态（非 §4.3 之位）	none	中	correlation of states, model predicates
+LZ-76-002	laozi	七十六章	萬物草木之生也柔脆，其死也枯槁。	丙一：Z=草木之生/死，Y=柔脆/枯槁		none	中	as LZ-76-001
+LZ-76-003	laozi	七十六章	故堅強者死之徒，柔弱者生之徒。	丙一（概括）：堅強者死之徒，柔弱者生之徒	徒=类	none	中	classes by state (徒 = 类)
+LZ-76-004	laozi	七十六章	是以兵強則不勝，木強則兵。	丙一：Z=兵強，Y=不勝；Z=木強，Y=兵（伐）	兵=（王弼）物所加	王弼	低	木強則兵 sense uncertain
+LZ-77-004	laozi	七十七章	天之道，損有餘而補不足。	丙一：Z=天之道，Y=損有餘而補不足（均平）		王弼（“與天地合德，乃能包之，如天之道”）	中	an equalizing law, conditional on its domain: counterexample in the same chapter LZ-77-005
+LZ-77-005	laozi	七十七章	人之道則不然，損不足以奉有餘。	丙一：Z=人之道，Y=損不足以奉有餘		王弼（“如人之量，則各有其身，不得相均”）	中	the opposite law for 人之道: two laws for two domains (戊 second: 天/人 split; 丁 context)
+LZ-78-001	laozi	七十八章	天下莫柔弱於水，而攻堅強者，莫之能勝，其無以易之。	丙一：Z=水之柔弱，Y=攻堅強者莫之能勝	易=替代	王弼（“言用水之柔弱，無物可以易之也”）	低	model terms
+LZ-78-002	laozi	七十八章	弱之勝強，柔之勝剛，天下莫不知莫能行。	丙一：弱之勝強，柔之勝剛		none	低	repeat of LZ-36-006; 天下莫不知莫能行 is 丁; contradicts XCX-08-004 across texts
+QXL-JS-012	qixinlun	解釋分	所謂心性不生不滅，一切諸法唯依妄念而有差別，若離妄念則無一切境界之相。	Z=離妄念，Y=無一切境界之相；差別 依 妄念	差別=分殊；妄念=迷妄之念	none	中	戊 aspect: 心性不生不滅 (unchanging) against 差別 from 妄念; strains plan's 类: distinction is produced by deluded thought (the reason 分别 was renamed 类, §4.1)
+QXL-JS-028	qixinlun	解釋分	乃至總說，依一切眾生以有妄心念念分別，皆不相應故說為空，若離妄心實無可空故。	Z=有妄心念念分別，Y=說為空；若離妄心則無可空	分別=妄念之分（非类）	none	中	空 is predicated relative to a standpoint (妄心): a predicate relative to a reading, as positions are relative to class in the plan; the standpoint is 妄
+QXL-JS-048	qixinlun	解釋分	若得無念者，則知心相生住異滅。	Z=得無念，Y=知心相生住異滅	心相=心之四相；生住異滅=四相（相=標記）	none	中	the four marks are known only from 無念, i.e. from outside the continuation; epistemic, not a law of the marks
+QXL-JS-058	qixinlun	解釋分	若無明滅相續則滅，智性不壞故。	Z=無明滅，Y=相續滅；智性不壞	相續=念念相續（無明）；不壞=不毀	none	高	key: the continuation ends when its 缘 (無明) ends; plan-compatible as a conditional (§4.3 灭); valuation reversed; 戊 aspect (智性不壞)
+QXL-JS-074	qixinlun	解釋分	復次，依不覺故生三種相，與彼不覺相應不離。	Z=不覺，Y=生三種相；相應不離	依=缘（单向）；生=起	none	中	chain JS-077..085 (三細)
+QXL-JS-078	qixinlun	解釋分	覺則不動。	Z=覺，Y=不動		none	中	with JS-077: 動 holds iff 不覺
+QXL-JS-079	qixinlun	解釋分	動則有苦，果不離因故。	Z=動，Y=有苦；果不離因	苦=苦受	none	中	丁 aspect (苦); 果不離因 as reason
+QXL-JS-081	qixinlun	解釋分	以依動故能見；	Z=動，Y=能見	依=缘	none	中	
+QXL-JS-082	qixinlun	解釋分	不動則無見。	Z=不動，Y=無見		none	中	converse of JS-081
+QXL-JS-084	qixinlun	解釋分	以依能見故境界妄現；	Z=能見，Y=境界妄現	現=顯現；妄=不實	none	中	
+QXL-JS-085	qixinlun	解釋分	離見則無境界。	Z=離見，Y=無境界		none	中	with JS-084: 境界 holds iff 見; one-way dependence 不覺→動→見→境界
+QXL-JS-086	qixinlun	解釋分	以有境界緣故，復生六種相。	Z=有境界緣，Y=生六種相	緣=境界為緣（所緣義）	none	中	strain: 緣 here is the object as condition (所緣緣), the sense the plan excludes (§4.1)
+QXL-JS-100	qixinlun	解釋分	當知無明能生一切染法，以一切染法皆是不覺相故。	Z=無明，Y=生一切染法；染法皆不覺相	生=能生；染=不淨	none	低	丁 aspect (染)
+QXL-JS-119	qixinlun	解釋分	是故三界虛偽唯心所作，離心則無六塵境界。	Z=離心，Y=無六塵境界；三界唯心所作	唯心=唯是心作	none	高	key: §5.4 registers 唯心 as 定域; 戊 aspect: one-way 境 依 心, against mutual 缘
+QXL-JS-122	qixinlun	解釋分	當知世間一切境界，皆依眾生無明妄心而得住持，是故一切法，如鏡中像無體可得，唯心虛妄。	Z=無明妄心，Y=境界住持；一切法如鏡中像無體	住持=得以存續	none	中	the persistence (住持) of 境界 depends on 妄心
+QXL-JS-123	qixinlun	解釋分	以心生則種種法生，心滅則種種法滅故。	Z=心生，Y=種種法生；Z=心滅，Y=種種法滅	生、滅=起、息	none	高	key: 生/滅 of dharmas indexed by those of 心; within 唯心 scope
+QXL-JS-156	qixinlun	解釋分	此二種生滅，依於無明熏習而有，所謂依因、依緣。	Z=無明熏習，Y=二種生滅；依因、依緣	因=親因；緣=助緣	none	中	
+QXL-JS-159	qixinlun	解釋分	若因滅則緣滅，因滅故不相應心滅，緣滅故相應心滅。	Z=因滅，Y=緣滅；因滅則不相應心滅，緣滅則相應心滅	滅=息	none	高	the 緣 here depends on the 因; ending propagates (cf. §4.3 灭与补)
+QXL-JS-166	qixinlun	解釋分	無明亦爾，依心體而動，若心體滅，則眾生斷絕無所依止。	Z=心體滅，Y=眾生斷絕無所依止（反事實）	依止=所依	none	中	counterfactual; Z is denied by the text
+QXL-JS-167	qixinlun	解釋分	以體不滅，心得相續，唯癡滅故心相隨滅，非心智滅。」	Z=體不滅，Y=心得相續；Z=癡滅，Y=心相隨滅	相續=心之相續（非無明義）	none	高	key: a second sense of 相續, not ignorance: the mind continues because its 體 does not cease; compare the plan's 有常则续不尽 (steady_continues, §4.3), but grounded in a substance, not a class
+QXL-JS-168	qixinlun	解釋分	復次，有四種法熏習義故，染法、淨法起不斷絕。	Z=四法熏習，Y=染法淨法起不斷絕	熏習=相互薰染；不斷絕=續不盡	none	中	key: 熏習 (mutual conditioning) as what keeps both 染 and 淨 going
+QXL-JS-175	qixinlun	解釋分	此亦如是，真如淨法實無於染，但以無明而熏習故則有染相。	Z=無明熏習（真如），Y=有染相；真如實無於染	熏習=缘（相互）	none	中	mutual 熏習 is a mutual 缘 (§4.1 缘可以互相); 實無於染 keeps a 相分 aspect
+QXL-JS-176	qixinlun	解釋分	無明染法實無淨業，但以真如而熏習故則有淨用。	Z=真如熏習（無明），Y=有淨用		none	中	converse of JS-175
+QXL-JS-178	qixinlun	解釋分	所謂以依真如法故有於無明，以有無明染法因故即熏習真如；	依真如有無明；無明熏習真如	依=所依；熏習=缘	none	中	first half of the cycle (with JS-179)
+QXL-JS-179	qixinlun	解釋分	以熏習故則有妄心，以有妄心即熏習無明。	Z=熏習，Y=有妄心；妄心熏習無明（成环）		none	中	key: a closed cycle of 缘 (真如→無明→妄心→無明…) keeps 染法 不斷: a cycle sustains the continuation (§4.5 环)
+QXL-JS-180	qixinlun	解釋分	不了真如法故，不覺念起現妄境界。	Z=不了真如，Y=不覺念起現妄境界		none	中	
+QXL-JS-181	qixinlun	解釋分	以有妄境界染法緣故，即熏習妄心，令其念著造種種業，受於一切身心等苦。	Z=妄境界染法緣，Y=熏習妄心，念著造業受苦		none	中	丁 aspect (苦)
+QXL-JS-194	qixinlun	解釋分	所謂以有真如法故能熏習無明，以熏習因緣力故，則令妄心厭生死苦、樂求涅槃。	Z=真如熏習無明，Y=妄心厭生死樂涅槃		none	中	丁 aspect
+QXL-JS-195	qixinlun	解釋分	以此妄心有厭求因緣故，即熏習真如。	Z=妄心厭求因緣，Y=熏習真如		none	中	the reverse direction: the 淨 cycle
+QXL-JS-196	qixinlun	解釋分	自信己性，知心妄動無前境界，修遠離法，以如實知無前境界故，種種方便起隨順行，不取不念，乃至久遠熏習力故，無明則滅。	Z=久遠熏習力，Y=無明則滅		none	中	丁 aspect (修遠離法, prescriptive)
+QXL-JS-197	qixinlun	解釋分	以無明滅故心無有起，以無起故境界隨滅，以因緣俱滅故心相皆盡，名得涅槃成自然業。	Z=無明滅，Y=心無起；Z=無起，Y=境界滅；因緣俱滅，心相皆盡	盡=盡（亡）	none	高	key: the chain of endings; the end (亡) of the continuation is the goal (涅槃): valuation reversed
+QXL-JS-206	qixinlun	解釋分	依此二義恒常熏習，以有力故，能令眾生厭生死苦、樂求涅槃，自信己身有真如法，發心修行。	Z=二義恒常熏習，Y=眾生厭生死、發心修行		none	中	丁 aspect
+QXL-JS-212	qixinlun	解釋分	又諸佛法有因有緣，因緣具足乃得成辦。	Z=因緣具足，Y=成辦	因=正因；緣=助緣	none	高	key: joint sufficiency of many 缘 (§4.1 缘多对多)
+QXL-JS-214	qixinlun	解釋分	眾生亦爾，雖有正因熏習之力，若不值遇諸佛菩薩善知識等以之為緣，能自斷煩惱入涅槃者，則無是處。	Z=不值遇緣，Y=不能自斷煩惱		none	中	丁 aspect
+QXL-JS-215	qixinlun	解釋分	若雖有外緣之力，而內淨法未有熏習力者，亦不能究竟厭生死苦、樂求涅槃。	Z=有外緣而無內熏習，Y=不能究竟厭苦		none	中	丁 aspect
+QXL-JS-216	qixinlun	解釋分	若因緣具足者，所謂自有熏習之力，又為諸佛菩薩等慈悲願護故，能起厭苦之心，信有涅槃，修習善根。	Z=因緣具足，Y=能起厭苦之心，信有涅槃		none	中	丁 aspect
+QXL-JS-217	qixinlun	解釋分	以修善根成熟故，則值諸佛菩薩示教利喜，乃能進趣，向涅槃道。」	Z=修善根成熟，Y=值諸佛菩薩，進趣涅槃		none	低	丁 aspect
+QXL-JS-238	qixinlun	解釋分	復次，染法從無始已來熏習不斷，乃至得佛後則有斷。	Z=得佛，Y=染法熏習斷；染法無始熏習不斷	無始=無生（无前际）	none	中	key: a continuation without 生 (無始) that has a 亡; with JS-239 the two continuations are asymmetric
+QXL-JS-241	qixinlun	解釋分	以真如法常熏習故，妄心則滅、法身顯現，起用熏習，故無有斷。	Z=真如常熏習，Y=妄心滅，法身顯現，起用熏習無斷	常=恒常	none	中	key: an endless continuation because of a constant (常熏習): compare §4.3 有常则续不尽
+QXL-JS-252	qixinlun	解釋分	以依業識，生滅相示。	Z=依業識，Y=差別（生滅相）得示	示=顯示	none	中	key: difference is relative to a reading (業識); compare positions relative to class; the reading is 妄
+QXL-JS-256	qixinlun	解釋分	若心起見，則有不見之相。	Z=心起見，Y=有不見之相		none	低	乙 possibility: any seeing sets up a complement (cf. 有無相生)
+QXL-JS-258	qixinlun	解釋分	若心有動，非真識知，無有自性，非常、非樂、非我、非淨，熱惱衰變則不自在，乃至具有過恒沙等妄染之義。	Z=心有動，Y=非常樂我淨，衰變不自在	衰變=衰而變	none	中	丁 aspect: motion valued negatively
+QXL-JS-259	qixinlun	解釋分	對此義故，心性無動則有過恒沙等諸淨功德相義示現。	Z=心性無動，Y=淨功德相示現		none	中	丁 aspect
+QXL-JS-260	qixinlun	解釋分	若心有起，更見前法可念者則有所少。	Z=心有起更見前法可念，Y=有所少		none	低	
+QXL-JS-281	qixinlun	解釋分	若離業識則無見相，以諸佛法身無有彼此色相迭相見故。	Z=離業識，Y=無見相		none	中	
+QXL-JS-293	qixinlun	解釋分	對治邪執者，一切邪執皆依我見，若離於我則無邪執。	Z=離我（見），Y=無邪執；邪執依我見		none	中	丁 aspect
+QXL-JS-304	qixinlun	解釋分	所謂一切境界唯心妄起故有，若心離於妄動則一切境界滅，唯一真心無所不遍。	Z=心離於妄動，Y=一切境界滅		none	中	
+QXL-JS-313	qixinlun	解釋分	以唯依真如義說故，因生滅染義示現說差別故。	Z=因生滅染義，Y=說差別；唯依真如義說		none	低	difference relative to a reading (cf. JS-252)
+QXL-JS-324	qixinlun	解釋分	以如來藏無前際故，無明之相亦無有始。	Z=如來藏無前際，Y=無明之相亦無有始	前際=始	none	中	key: no 生 (無始) of 無明: a model property (cf. JS-046)
+QXL-JS-326	qixinlun	解釋分	又如來藏無有後際，諸佛所得涅槃與之相應則無後際故。	Z=如來藏無後際，Y=涅槃與之相應無後際	後際=終	none	中	
+QXL-JS-406	qixinlun	解釋分	答曰：「一切境界，本來一心離於想念，以眾生妄見境界故心有分齊，以妄起想念不稱法性故不能決了。	Z=眾生妄見境界，Y=心有分齊；一切境界本來一心	分齊=界限、分隔	none	中	key: boundaries (分齊) come from deluded seeing; strains the plan's neutral classes
+QXL-JS-414	qixinlun	解釋分	如是眾生心若有垢，法身不現故。」	Z=眾生心有垢，Y=法身不現		none	低	application of the simile
+XCS-01-003	xici	繫辭上·第一章	動靜有常，剛柔斷矣。	丙一：Z=動靜有常，Y=剛柔斷	有常=动静有其常度；斷=分判	none	中	plan §5.4 registers it with XCS-01-001 as 相分 (kept). Read alone it is a conditional whose Z is the text's own 有常: a class split (剛/柔) is fixed where motion and rest are regular; the text's 有常 is of 动静, the plan's of a class under 缘 (§4.4) — the word has a textual source, its sense differs; AI reading; second function 戊
+XCS-02-002	xici	繫辭上·第二章	剛柔相推而生變化。	相 X 而 Y 生：Z=剛柔相推，Y=變化	相推=交互推移；變化=change	none	中	the text's “Z 而 Y 生” form; 剛/柔 as two poles of one alternation (相合); same law XCX-01-003; no counterexample in this corpus
+XCS-04-004	xici	繫辭上·第四章	精氣為物，遊魂為變，是故知鬼神之情狀。	丙一（韩注）：Z=精氣聚，Y=成物；Z=聚極，Y=散（遊魂為變）	精氣=阴阳精灵之气（孔疏）；變=生变为死、成变为败、或变为异类（孔疏）	韩注·孔疏（H4）	低	base gives only “X 為 Y”; the condition 聚極 is 韩's, not the text's. 孔疏 reads 變 as 死, 敗, or 變為異類: 亡 and 异 of a course relative to a class (§4.3), the closest commentary match to the plan's positions; AI reading
+XCS-06-004	xici	繫辭上·第六章	夫乾，其靜也專，其動也直，是以大生焉。	乾：靜專、動直 → 大生	專=专一；直=刚正（韩）；生=生物（及物）	韩注·孔疏（H5）	低	“是以 Y” after 乾's two states (动/静); 生 = to produce (transitive), not §4.3 生 (start position)
+XCS-06-005	xici	繫辭上·第六章	夫坤，其靜也翕，其動也闢，是以廣生焉。	坤：靜翕、動闢 → 廣生	翕=敛；闢=开以生物（韩）	韩注·孔疏（H5：“乾以專直言乎其材，坤以翕辟言乎其形”）	低	the 阖/辟 pattern inside 坤 alone (link XCS-11-009); 孔疏 “對則乾為物始，坤為物生，散則始亦為生” = 始/生 differ only in contrast (相待)
+XCS-10-006	xici	繫辭上·第十章	易，无思也，无為也，寂然不動，感而遂通天下之故。	丙一：Z=感，Y=遂通天下之故（寂然不動，感而遂通）	感=被感；通=通达	none	低	no activity without being affected: response only through relation (感 ~ 缘); agentive reading also possible; no commentary in repo
+XCS-12-012	xici	繫辭上·第十二章	乾坤毀，則无以見易，易不可見，則乾坤或幾乎息矣。	丙一：Z=乾坤毀，Y=无以見易；Z=易不可見，Y=乾坤或幾乎息	毀=缺坏；息=止息；幾=近（孔疏）	韩注·孔疏（H12）；外传第12章（“《幹》《坤》與《易》相為保合而不可破。破而毀，毀而息矣”）	高	two-way dependence of 乾坤 and 易: the 相须 shape (§4.5) as a pair of conditionals. 孔疏's image (根株 = 乾坤, 枝幹 = 易) adds an asymmetry, while the text's second clause runs from 易 back to 乾坤. 息 = ceasing (sense for §4.6 息). No counterexample in corpus
+XCX-01-003	xici	繫辭下·第一章	剛柔相推，變在其中矣；	丙一：Z=剛柔相推，Y=變在其中	相推=交互推移	none	中	same law as XCS-02-002
+XCX-02-008	xici	繫辭下·第二章	易窮則變，變則通，通則久；	丙一（链）：Z=窮，Y=變；Z=變，Y=通；Z=通，Y=久	窮=穷尽、至极；變=变；通=通达（往来不穷，XCS-11-010）；久=持续	韩注·孔疏（H12 at XCS-12-009 引此句）	高	plan's example (穷则变). The chain ends in 久: continuation conditioned on 通. The plan's counterexample XCX-06-019 (困，窮而通) does not contradict the chain: 而 marks sequence/concession and 困's 彖 (sources/zhouyi-yizhuan/hexagrams/47.json) reads “困而不失其所，亨”, i.e. 通 = 亨 kept by not losing one's place; a counterexample would need 窮 without 變. No counterexample in this corpus
+XCX-04-004	xici	繫辭下·第四章	日往則月來，月往則日來，日月相推而明生焉。	相推而 Y 生：Z=日月相推（日往則月來），Y=明生	往/來=一关系与其逆；相推=交替；生=出现	none	高	alternation at the fine grain yields 明 at a coarser one: one relation read at two grains (§4.6); §4.2 往来
+XCX-04-005	xici	繫辭下·第四章	寒往則暑來，暑往則寒來，寒暑相推而歲成焉。	相推而 Y 成：Z=寒暑相推，Y=歲成	歲=由交替而成之粗单位	none	高	as XCX-04-004; 歲 is a coarse unit made of the alternation (§4.6 粗网)
+XCX-04-050	xici	繫辭下·第四章	天地絪縕，萬物化醇；	丙一：Z=天地絪縕，Y=萬物化醇	絪縕=交密；化=变化而成	none	低	generation from the mutual intermingling of a pair (相合)
+XCX-04-051	xici	繫辭下·第四章	男女構精，萬物化生。	丙一：Z=男女構精，Y=萬物化生	化生=化而生	none	低	as XCX-04-050; 化 polysemy (化醇 / 化生)
+XCX-05-004	xici	繫辭下·第五章	陰陽合德，而剛柔有體，以體天地之撰，以通神明之德。」	丙一：Z=陰陽合德，Y=剛柔有體	合德=合其德；體=形体	none	低	體 polysemy (形体 here vs 易无體 XCS-04-009)
+XZ-ZM-016	xunzi-zhengming	正名篇第二十二	故王者之制名，名定而实辨，道行而志通，则慎率民而一焉。	Z=名定，Y=实辨；Z=道行，Y=志通		none	低	"王者制名之后果；后半""慎率民而一焉""为规范（丁为第二功能）"
+XZ-ZM-026	xunzi-zhengming	正名篇第二十二	若有王者起，必将有循于旧名，有作于新名。	Z=王者起，Y=循于旧名 ∧ 作于新名	循=沿续；作=新生	none	低	名本身有续（循旧）与生（作新）
+XZ-ZM-034	xunzi-zhengming	正名篇第二十二	凡同类同情者，其天官之意物也同。	Z=同类同情（二知者），Y=其天官之意物也同	意物=感物而有所意	none	中	知者属同一类，则其感物之读相同：类之读依于知者之类
+XZ-ZM-043	xunzi-zhengming	正名篇第二十二	征知，则缘耳而知声可也，缘目而知形可也。	Z=征知，Y=缘耳而知声可、缘目而知形可	缘=通过	none	中	心之知经由官之读：关系之合（心 ∘ 天官）
+XZ-ZM-044	xunzi-zhengming	正名篇第二十二	然而征知必将待天官之当簿其类，然后可也。	Y=征知可 仅当 Z=天官当簿其类	簿=登记；类=种类	none	中	必要条件：心之知要先有官之登记其类
+XZ-ZM-143	xunzi-zhengming	正名篇第二十二	以所欲为可得而求之，情之所必不免也。	Z=以所欲为可得，Y=求之（必不免）		none	低	
+XZ-ZM-144	xunzi-zhengming	正名篇第二十二	以为可而道之，知所必出也。	Z=以为可，Y=道之（知所必出）		none	低	
+XZ-ZM-152	xunzi-zhengming	正名篇第二十二	凡人莫不从其所可，而去其所不可。	凡人：Z=所可，Y=从之；Z=所不可，Y=去之		none	低	"全称之律；若""所可""以所从定义，则近分析"
+XZ-ZM-164	xunzi-zhengming	正名篇第二十二	衡不正，则重县于仰，而人以为轻；	Z=衡不正，Y=重者显轻而人以为轻	衡=秤	none	中	读数相对于标准：标准偏则读误
+XZ-ZM-165	xunzi-zhengming	正名篇第二十二	轻县于俛，而人以为重；	Z=衡不正，Y=轻者显重而人以为重		none	中	同 XZ-164
+XZ-ZM-179	xunzi-zhengming	正名篇第二十二	有尝试深观其隐而难者：志轻理而不重物者，无之有也；	Z=志轻理，Y=重物	理=道理	none	低	"形为""无 Z 而不 Y 者""；链 XZ-179–182"
+XZ-ZM-180	xunzi-zhengming	正名篇第二十二	外重物而不内忧者，无之有也；	Z=外重物，Y=内忧		none	低	
+XZ-ZM-181	xunzi-zhengming	正名篇第二十二	行离理而不外危者，无之有也；	Z=行离理，Y=外危		none	低	
+XZ-ZM-182	xunzi-zhengming	正名篇第二十二	外危而不内恐者，无之有也。	Z=外危，Y=内恐		none	低	
+XZ-ZM-183	xunzi-zhengming	正名篇第二十二	心忧恐，则口衔刍豢而不知其味，耳听钟鼓而不知其声，目视黼黻而不知其状，轻暖平簟而体不知其安。	Z=心忧恐，Y=感官不知其味其声其状其安		none	低	
+XZ-ZM-191	xunzi-zhengming	正名篇第二十二	心平愉，则色不及佣而可以养目，声不及佣而可以养耳，蔬食菜羹而可以养口，麤布之衣，麤𬘓之履，而可以养体。	Z=心平愉，Y=粗物可以养目耳口体		none	低	丁为第二功能
+XZ-ZM-192	xunzi-zhengming	正名篇第二十二	局室、芦帘、稿蓐、敝机筵，而可以养形。	Z=心平愉（承上），Y=陋居可以养形		none	低	承 XZ-191
+ZL-10-009	zhonglun-2	觀燃可燃品第十	世間眼見實有事，而後可思惟。	对方：Z=眼見實有事，Y=可思惟	實有=见所及之有	青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方之认识论条件（先有而后可思）；龙树以世俗言说答（ZL-10-014）
+ZL-10-043	zhonglun-2	觀燃可燃品第十	是功現有，是故知火不異可燃。	Z=人功現有，Y=火不異可燃		青目（本单元即青目释，非龙树本文）	中	由经验之事（人功）推不异；内容为条件之推；主功能为破异，次属己
+ZL-17-002	zhonglun-2	觀業品第十七	如經說，一切眾生皆隨業而生，惡者入地獄、修福者生天、行道者得涅槃，是故一切法不應空。	对方：Z=隨業，Y=生（地獄/天/涅槃）	生=受生	青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方引经之律；内容含评价（恶/修福），归丙一，次属丁
+ZL-17-013	zhonglun-2	觀業品第十七	因是思故起外身口業。	对方：Z=思，Y=起身口業		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；
+ZL-17-024	zhonglun-2	觀業品第十七	復有從用生福德，如施主施受者，若受者受用，施主得二種福：一從施生；	对方：Z=受者受用，Y=施主得福（從用生）		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方之例；兼丁
+ZL-17-026	zhonglun-2	觀業品第十七	如人以箭射人，若箭殺人，有二種罪：一者從射生；	对方：Z=箭殺人，Y=二罪		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；兼丁
+ZL-17-028	zhonglun-2	觀業品第十七	若射不殺，射者但得射罪，無殺罪。	对方：Z=射而不殺，Y=唯射罪		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；兼丁
+ZL-17-040	zhonglun-2	觀業品第十七	「如芽等相續，皆從種子生，從是而生果，離種無相續。	对方：Z=種子，Y=芽等相續→果；離種無相續	相續=从种至果之一系列；離=无此缘	青目释（随后之释单元）；偈在问之轮次，为龙树所引对方之偈	高	对方之偈（正量部或经量部之说，承旧说；部派归属凭记忆，低）：种子—相续—果，计划之续最近之古文表述之一；内容为条件之律，归丙一；被龙树破（ZL-17-059 起）
+ZL-17-042	zhonglun-2	觀業品第十七	如是從初心，心法相續生，從是而有果，離心無相續。	对方：Z=初心，Y=心法相續→果；離心無相續		青目释（随后之释单元）；偈在问之轮次，为龙树所引对方之偈	高	对方：心之相续，业果之律
+ZL-17-045	zhonglun-2	觀業品第十七	離種無相續生，是故從穀子有相續，從相續有果。	对方：Z=穀子，Y=相續→果		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；
+ZL-17-049	zhonglun-2	觀業品第十七	因是心，餘心心數法相續生，乃至果報。	对方：Z=初心，Y=餘心心數法相續生至果報	心數法=心所	青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；
+ZL-17-051	zhonglun-2	觀業品第十七	若離業有果報，則有斷常。	对方：Z=離業有果報，Y=斷常		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方之反面之律
+ZL-17-056	zhonglun-2	觀業品第十七	從身口意生是果報者，得今世名利，後世天人中貴處生。	对方：Z=身口意善業，Y=今世名利、後世貴處生		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方；兼丁
+ZL-17-076	zhonglun-2	觀業品第十七	見諦所不斷，但思惟所斷，以是不失法，諸業有果報。	对方：Z=不失法（思惟所斷），Y=諸業有果報		青目释（随后之释单元）；偈在问之轮次，为龙树所引对方之偈	中	对方；
+ZL-17-077	zhonglun-2	觀業品第十七	若見諦所斷，而業至相似，則得破業等，如是之過咎。	对方：Z=見諦所斷 ∧ 業至相似，Y=破業之過		青目释（随后之释单元）；偈在问之轮次，为龙树所引对方之偈	低	对方之偈，义不甚明
+ZL-17-086	zhonglun-2	觀業品第十七	是以諸業，以不失法故果生。	对方：Z=不失法，Y=果生		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	中	对方之律：以持者生果。与计划（以类）相对
+ZL-17-090	zhonglun-2	觀業品第十七	是業有二種，隨重而受報。	对方：Z=業重，Y=先受報		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	低	对方；
+ZL-17-101	zhonglun-2	觀業品第十七	顛倒因緣故，往來生死亦不常。	Z=顛倒因緣，Y=往來生死亦不常		青目（本单元即青目释，非龙树本文）	中	
+ZL-17-135	zhonglun-2	觀業品第十七	諸賢聖說煩惱及業是身因緣，是中愛能潤生，業能生上中下好醜貴賤等果報。	Z=愛，Y=潤生；Z=業，Y=上中下好醜貴賤果報		青目（本单元即青目释，非龙树本文）	中	青目引贤圣之说；兼相分（贵贱）
+ZL-17-162	zhonglun-2	觀業品第十七	如化人，無有實事但可眼見，又化人口業說法、身業布施等，是業雖無實而可眼見。	Z=化人之業，Y=無實而可眼見		青目（本单元即青目释，非龙树本文）	中	无实而可见：近计划“相对于类之说法”之可读而无自性
+ZL-19-002	zhonglun-2	觀時品第十九	因有過去時，則有未來、現在時；	对方：Z=過去時，Y=未來、現在時		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	高	对方：三时相待
+ZL-19-003	zhonglun-2	觀時品第十九	因現在時，有過去、未來時；	对方：Z=現在時，Y=過去、未來時		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	高	对方；
+ZL-19-004	zhonglun-2	觀時品第十九	因未來時，有過去、現在時。	对方：Z=未來時，Y=過去、現在時		青目（本单元即青目释，非龙树本文）；问之轮次，述对方之说	高	对方；
+ZL-24-041	zhonglun-2	觀四諦品第二十四	「若不依俗諦，不得第一義；不得第一義，則不得涅槃。」	Z=依俗諦，Y=得第一義；Z=得第一義，Y=得涅槃		青目释（随后之释单元）；偈为龙树本文	高	龙树偈：二谛相须（不依俗则不得真）——二谛不是相分之上下，而是定域且相须，与 ZL-24-033 之相分之形相拉，记下
+ZL-24-185	zhonglun-2	觀四諦品第二十四	而現見萬物各有變異相生滅變易，是故不應有定性。	Z=現見萬物變異生滅，Y=不應有定性		青目（本单元即青目释，非龙树本文）	高	青目：由现见之生灭变易推无定性；即 Grammar «有亡之续则不有常» 之古文形（有亡则类不对缘有常）
+ZL-01-040	zhonglun	觀因緣品第一	若離劫初穀有今穀者則應有生；	Z=離劫初穀有今穀，Y=有生	生=无前者而起	青目（本单元即青目释，非龙树本文）	中	青目：若离劫初谷有今谷则应有生。与计划之生（无续之前者，§4.3）几乎同形：生 ⇔ ¬∃x 续 x y。相合。条件为反事实
+ZL-01-047	zhonglun	觀因緣品第一	若滅，今不應有穀；	Z=滅（劫初穀之续亡），Y=今不應有穀	滅=续之尽	青目（本单元即青目释，非龙树本文）	中	"青目：若灭，今不应有谷。形同计划""亡 x ⇔ ¬∃y 续 x y""之逆否：有后之谷则前者在谷之类下未亡。相合"
+ZL-01-065	zhonglun	觀因緣品第一	若穀作芽、芽作穀者應是一；	Z=穀作芽∧芽作穀，Y=一	一=同一	青目（本单元即青目释，非龙树本文）	低	"青目：若互作则应是一；形为""互相成为 ⇒ 同一""，近于类之对称而传递"
+ZL-01-079	zhonglun	觀因緣品第一	若來者，芽應從餘處來，如鳥來栖樹；	Z=來，Y=芽從餘處來		青目（本单元即青目释，非龙树本文）	低	青目：若来，芽应从余处来，如鸟来栖树；譬喻为主
+ZL-01-086	zhonglun	觀因緣品第一	若有出，應見芽從穀出，如蛇從穴出；	Z=有出，Y=見芽從穀出		青目（本单元即青目释，非龙树本文）	低	青目：若有出应见芽从谷出，如蛇从穴出；譬喻
+ZL-01-099	zhonglun	觀因緣品第一	若無因而有萬物者，是則為常。	Z=無因而有萬物，Y=常	常	青目（本单元即青目释，非龙树本文）	低	青目：若无因而有万物则是常；次为己
+ZL-02-010	zhonglun	觀去來品第二	「動處則有去，此中有去時，非已去未去，是故去時去。」	Z=動處，Y=有去	動處	青目释（随后之释单元；偈为龙树本文或其所引对方之偈，见 note）	中	对方之偈：动处则有去，去时去。对方之律
+ZL-02-070	zhonglun	觀去來品第二	復次，若決定有去、有去者，應有初發。	Z=決定有去∧去者，Y=有初發	發=始	青目（本单元即青目释，非龙树本文）	中	青目：若决定有去应有初发；次为己（ZL-02-071）。初发即续之始（计划之生）
+ZL-02-091	zhonglun	觀去來品第二	因去法滅故有住，無去則無住。	Z=去法滅，Y=住；¬去 → ¬住	因=由	青目（本单元即青目释，非龙树本文）	中	"青目：因去法灭故有住，无去则无住。住与去相待；近计划""静""之为变之一测试"
+ZL-07-127	zhonglun	觀三相品第七	法若未生則不應與生緣和合，若不與生緣和合則無法生。	Z=未與生緣和合，Y=無法生	生緣	青目（本单元即青目释，非龙树本文）	中	"青目：法未生则不应与生缘和合，不和合则无法生。条件之律""无缘之合则无生""与计划之续必经缘（§4.3 修正 2）相合；在此用以破未生生"
+ZL-07-133	zhonglun	觀三相品第七	若有緣、有作、有作者、有時、有方等和合故，未生法生。	Z=緣∧作∧作者∧時∧方 和合，Y=未生法生	和合	青目（本单元即青目释，非龙树本文）	中	对方之律（青目述）：诸缘和合则未生法生。与计划之缘网读法最近；为龙树/青目所破（ZL-07-135）
+ZL-07-162	zhonglun	觀三相品第七	若縷自有定相，不應從麻出。	Z=縷自有定相，Y=¬從麻出	定相	青目（本单元即青目释，非龙树本文）	中	青目：若缕有定相，不应从麻出（有自性则不能有缘）
+ZL-07-163	zhonglun	觀三相品第七	若布自有定相，不應從縷出。	Z=布自有定相，Y=¬從縷出		青目（本单元即青目释，非龙树本文）	中	青目：同上
+ZL-07-170	zhonglun	觀三相品第七	未來世法得生，因緣即生。	Z=因緣（於未來法），Y=生		青目（本单元即青目释，非龙树本文）	中	对方之律：未来世法得生，因缘即生
+ZL-07-235	zhonglun	觀三相品第七	若自相住，則為是常。	Z=自相住，Y=常		青目（本单元即青目释，非龙树本文）	中	青目：自相住则为常；次为己
+ZL-21-022	zhonglun	觀成壞品第二十一	若離壞共壞無有成者，若離壞有成，成則為常，常是不壞相。	Z=離壞有成，Y=成為常	常=不坏相	青目（本单元即青目释，非龙树本文）	中	青目：若离坏有成则成为常；次为己
+ZL-21-031	zhonglun	觀成壞品第二十一	若成中常有壞，則不應有住法；	Z=成中常有壞，Y=¬住法	住法	青目（本单元即青目释，非龙树本文）	中	"青目：若成中常有坏则不应有住法。计划之张力：计划之住（续之中）与续中之异并存（§4.3），故""成中常有坏""与""有住""在计划中相容；青目以二者相违为前提"
+ZL-21-058	zhonglun	觀成壞品第二十一	離成壞無法者，若法無成無壞，是法應或無或常。	Z=法無成無壞，Y=或無或常		青目（本单元即青目释，非龙树本文）	中	青目
+ZL-21-069	zhonglun	觀成壞品第二十一	若諸法性不空，不空則決定有，亦不應有成壞。	Z=性不空，Y=決定有 ∧ ¬成壞	決定有	青目（本单元即青目释，非龙树本文）	中	青目：不空则决定有，不应有成坏；次为己
+ZL-21-113	zhonglun	觀成壞品第二十一	若常即墮常邊，若無常即墮斷邊。	Z=常，Y=墮常邊；Z=無常，Y=墮斷邊	邊=边见	青目（本单元即青目释，非龙树本文）	中	青目
+ZL-21-115	zhonglun	觀成壞品第二十一	「所有受法者，不墮於斷常，因果相續故，不斷亦不常。」	Z=因果相續，Y=不斷∧不常	相續=因果之续	青目释（随后之释单元；偈为龙树本文或其所引对方之偈，见 note）	中	"对方之偈（PLAN §一、§5.2 已登记为对方之说）：""因果相續故，不斷亦不常""。内容为丙一，且与计划之续最近；为龙树所破（ZL-21-122）。区分：此为对方之立，非龙树之说"
+ZL-21-120	zhonglun	觀成壞品第二十一	是法因果常生滅相續故往來不絕，生滅故不常，相續故不斷。	Z=生滅，Y=不常；Z=相續，Y=不斷；因果常生滅相續 → 往來不絕	生滅=细粒上之起灭；相續=粗粒上之续；往來不絕	青目（本单元即青目释，非龙树本文）	高	"对方（青目述）：""生滅故不常，相續故不斷""。这在结构上就是计划之答：在细类 F 下生灭（异）故不常，在类 E 下相续故不断。最重要之相合，而它在本文中是被破之说（ZL-21-122 至 141）。计划须承认其答即本品之对方"
+ZZ-YSZ-016	zhuangzi-yangshengzhu	養生主	彼節者有間，而刀刃者无厚，以无厚入有間，恢恢乎其於遊刃必有餘地矣，是以十九年而刀刃若新發於硎。	Z=以无厚入有间，Y=游刃必有余地	无厚=无广延；有间=有空隙	none	中	Z 与 Y 作为测试可写，其内容（厚、间）要量，文法缺之；墨经 J-056、J-063、J-064 定义厚与间

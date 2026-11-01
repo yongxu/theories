@@ -116,6 +116,7 @@ This is one path for Ren's question of 11 October 2026, ‘if "lossless exist", 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `Becoming.revisits_within`, `Becoming.unlisted_of_new`, `Becoming.Marks.change_not_recurring`, `Becoming.Law.lost_stays`, `Becoming.Law.merged_stays`, `Becoming.Law.lossless_iff_returns`, `Becoming.Law.returns_iff_keeps`, `Becoming.Law.Merges.loses`, `Becoming.Law.Lossless.no_rise`, `Becoming.Law.rise_not_lossless`, `Becoming.Law.succ_open`, `Becoming.Law.pred_open`, `Becoming.Law.withHistory_lossless`, `Becoming.Law.withHistory_loses_beginning`, `Becoming.Law.withHistory_unlisted`, `Becoming.Law.return_keeps_history`, `Becoming.Law.present_forgets`, `Becoming.Law.Returns.undo`, `Becoming.Reach.lost_stays`
 

@@ -1,0 +1,13 @@
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/DECIDABILITY-INVENTORY.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/DECIDABILITY-INVENTORY.py
+index ff0eb0259..9c436c1bc 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/DECIDABILITY-INVENTORY.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/DECIDABILITY-INVENTORY.py
+@@ -138,7 +138,7 @@ FORMS = {
+ }
+ 
+ # Why a statement depends on decidedness: the decidability-taking definitions it mentions (Lean's `ment` column).
+-COUNTING_DEFS = {'mark', 'comings', 'ceasings', 'World.CountsObey', 'Web.decideForms', 'Web.decideDissolves',
++COUNTING_DEFS = {'mark', 'comings', 'ceasings', 'World.CensusMarksHold', 'Web.decideForms', 'Web.decideDissolves',
+                  'instDecidableComesToBe', 'instDecidableCeasesToBe', 'Web.instDecidableArises',
+                  'Web.instDecidableCeases', 'Web.instDecidableArisesFrom', 'Web.instDecidableCeasesFrom'}
+ CONSTRUCTIONS = {

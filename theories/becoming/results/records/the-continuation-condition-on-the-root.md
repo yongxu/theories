@@ -51,7 +51,7 @@ Beyond the three stated at the own-closure reading on a web's level paths (U3), 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's "for anything, its continuation into the future has significance" read as "nothing lies outside every center's continuing".
+SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's "for anything, its continuation into the future has significance" read as "everything lies on every center's continuing".
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -77,6 +77,7 @@ SW §3's structural reading (what counts for a center is what lies within its co
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 
 Aliases: `The continuation condition on the root`, `根上之续存条件`, `Becoming.«续无外»`
 
@@ -85,7 +86,8 @@ Aliases: `The continuation condition on the root`, `根上之续存条件`, `Bec
 
 - 24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.
 - 25 October 2026, board item DF (study section 418): the retired label S0 in the third law reads self-significance; the law is unchanged.
+- 1 November 2026, board item OU7 (study section 492): the correspondence's English reading of the source restated so that its quantifiers match the definition of «续无外» (every center, every occurrence), as GrammarScope's docstrings now word it (the grammar's owner's patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes. Nothing else the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-30T13:31:03+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-01T09:47:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -189,7 +189,7 @@ rings counting each such tally being the witnesses.
   (`Tally.occupied_from`), has its front shed a spare unit there
   (`World.sheddingQueue_binding`).
 
-Every law of counting here is a census table (`World.census_table_obeys`,
+Every law of counting here is a census table (`World.census_table_marks_hold`,
 `Becoming.CensusTable`): a counted soundness, the steps the class of worlds forces on every
 counted census, and a witness lemma, the queues and rings counting each tally meeting them
 (`World.counting_under_sound` and `World.counting_under_witnessed`, and so for each law:
@@ -308,19 +308,19 @@ but balance. -/
 theorem counting_free {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop}
     (pointwise : Pointwise Q) :
     ((∀ n c a, Tally n c a → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.CountsObey Q) ∧
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.CensusMarksHold Q) ∧
     ((∀ n c a, Tally n c a → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Dependent → w.Balanced →
-        w.Acting → w.Taking → w.Dissipative → w.Transmitting → w.CountsObey Q) ∧
+        w.Acting → w.Taking → w.Dissipative → w.Transmitting → w.CensusMarksHold Q) ∧
     ((∀ n c a, Tally n c a → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Dependent → w.Acting →
-        w.Taking → w.Dissipative → w.Embodied → w.Transmitting → w.CountsObey Q) :=
-  ⟨(census_table_obeys_free pointwise counting_free_witnessed.1).trans
+        w.Taking → w.Dissipative → w.Embodied → w.Transmitting → w.CensusMarksHold Q) :=
+  ⟨(census_table_marks_hold_free pointwise counting_free_witnessed.1).trans
       ⟨fun law w _ => law w trivial, fun law w _ _ => law w⟩,
-   (census_table_obeys_free pointwise counting_free_witnessed.2.1).trans
+   (census_table_marks_hold_free pointwise counting_free_witnessed.2.1).trans
       ⟨fun law w _ d b ac tk ds tr => law w ⟨d, b, ac, tk, ds, tr⟩,
        fun law w _ ⟨d, b, ac, tk, ds, tr⟩ => law w d b ac tk ds tr⟩,
-   (census_table_obeys_free pointwise counting_free_witnessed.2.2).trans
+   (census_table_marks_hold_free pointwise counting_free_witnessed.2.2).trans
       ⟨fun law w _ d ac tk ds e tr => law w ⟨d, ac, tk, ds, e, tr⟩,
        fun law w _ ⟨d, ac, tk, ds, e, tr⟩ => law w d ac tk ds e tr⟩⟩
 
@@ -332,9 +332,9 @@ counted by a queue meeting every premise but embodiment, and by one meeting ever
 but balance. -/
 theorem counting_binds_jointly :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Balanced → w.Acting →
-      w.ArisingEmbodied → w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t) ∧
-    ¬ (queue Queue.lone fun _ => 0).CountsObey (fun n _ a => ∀ t, 0 < a t → 0 < n t) ∧
-    ¬ (embodiedQueue Queue.lone fun _ => 0).CountsObey
+      w.ArisingEmbodied → w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t) ∧
+    ¬ (queue Queue.lone fun _ => 0).CensusMarksHold (fun n _ a => ∀ t, 0 < a t → 0 < n t) ∧
+    ¬ (embodiedQueue Queue.lone fun _ => 0).CensusMarksHold
       (fun n _ a => ∀ t, 0 < a t → 0 < n t) :=
   ⟨fun _ _ balanced acting embodied alive census t arising =>
     match total_pos _ arising with
@@ -342,11 +342,11 @@ theorem counting_binds_jointly :
         (embodied t x (mark_pos.mp comes)) (mark_pos.mp comes) with
       | ⟨f, active, _⟩ => Nat.lt_of_lt_of_le (total_pos_of_mem (((census t).2 f).mp active)
           Nat.zero_lt_one) (Nat.le_of_eq (total_ones (alive t))),
-   fun obeys => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le (obeys _ Queue.listed 0
+   fun marks => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le (marks _ Queue.listed 0
       (Nat.lt_of_lt_of_le Nat.zero_lt_one (Nat.le_of_eq
         (Queue.comings_eq Queue.lone_tally 0).symm)))
       (Nat.le_of_eq (Queue.counts Queue.lone_tally 0).1)),
-   fun obeys => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le (obeys _ Queue.listed 0
+   fun marks => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le (marks _ Queue.listed 0
       (Nat.lt_of_lt_of_le Nat.zero_lt_one (Nat.le_of_eq
         (Queue.comings_eq Queue.lone_tally 0).symm)))
       (Nat.le_of_eq (Queue.counts Queue.lone_tally 0).1))⟩
@@ -576,8 +576,8 @@ only across a step at which something is active. -/
 theorem premised_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop}
     (pointwise : Pointwise Q) :
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.CountsObey Q :=
-  census_table_obeys pointwise premised_counting_sound premised_counting_witnessed
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.CensusMarksHold Q :=
+  census_table_marks_hold pointwise premised_counting_sound premised_counting_witnessed
 
 /-- In an open queue dissipation, activity needing support and bounded transmission hold
 vacuously. Nothing taking part takes from a closed family: where something is taken the
@@ -601,7 +601,7 @@ theorem openQueue_not_binds {n c : Nat → Nat} :
 /-- Where embodiment binds, every census counts something arising: embodiment binds only
 where something arises (the thirteenth review's probe). -/
 theorem binds_arising (w : World) [∀ t x, Decidable (w.web.active t x)]
-    (binds : Premise.embodied.Binds w) : w.CountsObey fun _ _ a => ∃ t, 0 < a t :=
+    (binds : Premise.embodied.Binds w) : w.CensusMarksHold fun _ _ a => ∃ t, 0 < a t :=
   fun _ census => match binds with
   | ⟨t, x, arises⟩ =>
     ⟨t, Nat.lt_of_lt_of_le (mark_pos.mpr arises)
@@ -614,7 +614,7 @@ shows; where every premise binds it is one (`binds_arising`). The laws of
 review's probe). -/
 theorem binds_adds :
     ¬ ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised →
-      w.CountsObey fun _ _ a => ∃ t, 0 < a t :=
+      w.CensusMarksHold fun _ _ a => ∃ t, 0 < a t :=
   fun law => match (premised_counting (Q := fun _ _ a => ∃ t, 0 < a t)
       (fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).2.2)⟩)).mpr
       law (fun _ => 0) (fun _ => 0) (fun _ => 0) (fun _ => ⟨0, rfl, rfl⟩) (fun _ no => no) with
@@ -677,7 +677,7 @@ a closed family, to which dissipation lets nothing be given without taking
 (`Flow.DissipatesOn.still_untaken`). -/
 theorem taking_binds_counting (w : World) [∀ t x, Decidable (w.web.active t x)]
     (balanced : w.Balanced) (taking : w.Taking) (dissipative : w.Dissipative)
-    (embodied : w.Embodied) : w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t :=
+    (embodied : w.Embodied) : w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t :=
   fun alive census t arising => match Nat.eq_zero_or_pos (alive t).length with
     | .inr pos => pos
     | .inl empty =>
@@ -853,19 +853,19 @@ taking with dissipation are selected. -/
 theorem counting_under (S : Premise → Bool)
     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} (pointwise : Pointwise Q) :
     (∀ n c a, Tally n c a → (BindsCounting S → ∀ t, 0 < a t → 0 < n t) → Q n c a) ↔
-      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.CountsObey Q :=
-  census_table_obeys pointwise (counting_under_sound S) (counting_under_witnessed S)
+      ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.CensusMarksHold Q :=
+  census_table_marks_hold pointwise (counting_under_sound S) (counting_under_witnessed S)
 
 /-- Nothing arising across a step at which nothing is active is a law of counting under a
 selection exactly when the selection binds counting. -/
 theorem counting_binds_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-      w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔ BindsCounting S :=
+      w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔ BindsCounting S :=
   have pointwise : Pointwise fun n (_ : Nat → Nat) a => ∀ t, 0 < a t → 0 < n t :=
     fun same law t pos => Nat.lt_of_lt_of_le (law t (Nat.lt_of_lt_of_le pos
       (Nat.le_of_eq (same t).2.2.symm))) (Nat.le_of_eq (same t).1)
   have unbound : ¬ BindsCounting S → ¬ ∀ (w : World) [∀ t x, Decidable (w.web.active t x)],
-      w.Meets S → w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
+      w.Meets S → w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
     Nat.lt_irrefl 0 ((counting_under S pointwise).mpr law _ _ _ Queue.lone_tally
       (fun binds => absurd binds free) 0 Nat.zero_lt_one)
   ⟨fun law => match hb : S .balanced, he : S .embodied, ha : S .acting, ht : S .taking,
@@ -1305,8 +1305,8 @@ theorem enclosed_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat)
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → (∃ B, ChangeBound 0 B n c a) →
       Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised →
-        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CountsObey Q :=
-  census_table_obeys₂ pointwise enclosed_counting_sound enclosed_counting_witnessed
+        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CensusMarksHold Q :=
+  census_table_marks_hold₂ pointwise enclosed_counting_sound enclosed_counting_witnessed
 
 end World
 
@@ -1506,17 +1506,17 @@ theorem finite_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) �
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → (∃ B, ChangeBound 0 B n c a) →
       Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.Finite →
-        w.CountsObey Q :=
-  census_table_obeys₂ pointwise finite_counting_sound finite_counting_witnessed
+        w.CensusMarksHold Q :=
+  census_table_marks_hold₂ pointwise finite_counting_sound finite_counting_witnessed
 
 /-- So under the eight premises, worlds enclosed from some step on and finite worlds have
 the same laws of counting (the thirteenth review's probe). -/
 theorem enclosed_iff_finite_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop}
     (pointwise : Pointwise Q) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised →
-      (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CountsObey Q) ↔
+      (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CensusMarksHold Q) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.Finite →
-        w.CountsObey Q :=
+        w.CensusMarksHold Q :=
   (enclosed_counting pointwise).symm.trans (finite_counting pointwise)
 
 /-- One member replaced across the first step, in a finite queue. -/
@@ -1743,8 +1743,8 @@ theorem enclosed_counting_under (S : Premise → Bool)
       (BoundsChange S → ∃ T B, ChangeBound T B n c a ∧ ∀ t, T ≤ t → 0 < a t → 0 < n t) →
         Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CountsObey Q :=
-  census_table_obeys₂ pointwise (enclosed_counting_under_sound S) (enclosed_counting_under_witnessed S)
+        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CensusMarksHold Q :=
+  census_table_marks_hold₂ pointwise (enclosed_counting_under_sound S) (enclosed_counting_under_witnessed S)
 
 /-- So in worlds enclosed from some step on, a change bound from some step is a law of
 counting under a selection exactly when the selection bounds change: a count growing by one
@@ -1753,7 +1753,7 @@ no bound (the fourteenth review's probe). -/
 theorem enclosed_change_bound_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
       (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) →
-        w.CountsObey fun n c a => ∃ T B, ChangeBound T B n c a) ↔ BoundsChange S :=
+        w.CensusMarksHold fun n c a => ∃ T B, ChangeBound T B n c a) ↔ BoundsChange S :=
   have pointwise : Pointwise fun n (_ _ : Nat → Nat) => ∃ T B, ∀ t, T ≤ t → n t ≤ B :=
     fun same ⟨T, B, bounded⟩ => ⟨T, B, fun t later =>
       Nat.le_trans (Nat.le_of_eq (same t).1.symm) (bounded t later)⟩
@@ -2155,21 +2155,21 @@ theorem finite_counting_under (S : Premise → Bool)
       (BindsCounting S ∨ BoundsChange S → ∀ t, 0 < a t → 0 < n t) →
       (BoundsChange S → ∃ B, ChangeBound 0 B n c a) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-        w.CountsObey Q :=
-  census_table_obeys₃ pointwise (finite_counting_under_sound S) (finite_counting_under_witnessed S)
+        w.CensusMarksHold Q :=
+  census_table_marks_hold₃ pointwise (finite_counting_under_sound S) (finite_counting_under_witnessed S)
 
 /-- So in finite worlds, nothing arising across a step at which nothing is active is a law of
 counting under a selection exactly when the selection selects balance and embodiment, and
 only active relata giving or dissipation. -/
 theorem finite_counting_binds_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔ BindsCounting S ∨ BoundsChange S :=
+      w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t) ↔ BindsCounting S ∨ BoundsChange S :=
   have pointwise : Pointwise fun n (_ : Nat → Nat) a => ∀ t, 0 < a t → 0 < n t :=
     fun same law t pos => Nat.lt_of_lt_of_le (law t (Nat.lt_of_lt_of_le pos
       (Nat.le_of_eq (same t).2.2.symm))) (Nat.le_of_eq (same t).1)
   have unbound : ¬ (BindsCounting S ∨ BoundsChange S) → ¬ ∀ (w : World)
       [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-        w.CountsObey fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
+        w.CensusMarksHold fun n _ a => ∀ t, 0 < a t → 0 < n t := fun free law =>
     Nat.lt_irrefl 0 ((finite_counting_under S pointwise).mpr law _ _ _ Queue.lone_tally
       ⟨1, fun | 0 => Nat.zero_le 1 | _ + 1 => Nat.le_refl 1⟩
       (fun binds => absurd binds free) (fun bounds => absurd (.inr bounds) free)
@@ -2195,7 +2195,7 @@ selection exactly when the selection bounds change: one member replaced at every
 counted by a finite world meeting any other selection. -/
 theorem finite_change_bound_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      w.CountsObey fun n c a => ∃ B, ChangeBound 0 B n c a) ↔ BoundsChange S :=
+      w.CensusMarksHold fun n c a => ∃ B, ChangeBound 0 B n c a) ↔ BoundsChange S :=
   have replaced : Tally (fun _ => 1) (fun _ => 1) (fun _ => 1) := fun _ => ⟨0, rfl, rfl⟩
   have bounded : ∀ t, (fun _ => 1 : Nat → Nat) t ≤ 1 := fun _ => Nat.le_refl 1
   have recurring : ¬ ∃ B, ChangeBound 0 B
@@ -2285,9 +2285,9 @@ world. -/
 theorem enclosed_iff_finite_counting_under (S : Premise → Bool) :
     (∀ Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop, Pointwise Q →
       ((∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-          (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CountsObey Q) ↔
+          (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.CensusMarksHold Q) ↔
         ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-          w.CountsObey Q)) ↔
+          w.CensusMarksHold Q)) ↔
       BoundsChange S ∧ BindsCounting S :=
   Iff.trans ⟨fun law Q pointwise => (enclosed_counting_under S pointwise).trans
       ((law Q pointwise).trans (finite_counting_under S pointwise).symm),
@@ -2629,8 +2629,8 @@ theorem binding_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) 
     (pointwise : Pointwise Q) :
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → (∃ t, 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.Binds →
-        w.CountsObey Q :=
-  census_table_obeys₂ pointwise binding_counting_sound binding_counting_witnessed
+        w.CensusMarksHold Q :=
+  census_table_marks_hold₂ pointwise binding_counting_sound binding_counting_witnessed
 
 /-- Every premise binding decides neither rest nor change without end: in `hatch` every
 premise binds and arising does not recur (`hatch_rests_unrefuted`); in a queue closed once in which
@@ -3309,8 +3309,8 @@ theorem binding_counting_under (S : Premise → Bool)
       (S .embodied = true → S .acting = true → S .transmitting = true →
         ∃ t, 0 < n t ∧ 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-        (∀ p, S p = true → p.Binds w) → w.CountsObey Q :=
-  have table := census_table_obeys pointwise (binding_counting_under_sound S)
+        (∀ p, S p = true → p.Binds w) → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold pointwise (binding_counting_under_sound S)
     (binding_counting_under_witnessed S)
   ⟨fun law w _ meets binds => table.mp (fun n c a tally ⟨quiet, acts, arises, joint⟩ =>
       law n c a tally quiet acts arises joint) w ⟨meets, binds⟩,
@@ -3325,7 +3325,7 @@ instance (S : Premise → Bool) : Decidable (BindsCounting S) :=
 active relata giving, only active relata taking or embodiment is selected. -/
 theorem binding_activity_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun n _ _ => ∃ t, 0 < n t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun n _ _ => ∃ t, 0 < n t) ↔
       S .dependent = true ∨ S .acting = true ∨ S .taking = true ∨ S .embodied = true :=
   have pointwise : Pointwise fun n (_ _ : Nat → Nat) => ∃ t, 0 < n t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).1)⟩
@@ -3355,7 +3355,7 @@ theorem binding_activity_iff (S : Premise → Bool) :
 /-- Binding adds that something arises exactly where embodiment is selected. -/
 theorem binding_arising_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun _ _ a => ∃ t, 0 < a t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun _ _ a => ∃ t, 0 < a t) ↔
       S .embodied = true :=
   have pointwise : Pointwise fun (_ _ : Nat → Nat) a => ∃ t, 0 < a t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).2.2)⟩
@@ -3376,7 +3376,7 @@ and bounded transmission are selected: there what arises descends from a relatum
 the step. -/
 theorem binding_joint_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
       S .embodied = true ∧ (BindsCounting S ∨ S .acting = true ∧ S .transmitting = true) :=
   have pointwise : Pointwise fun n (_ : Nat → Nat) a => ∃ t, 0 < n t ∧ 0 < a t :=
     fun same ⟨t, active, arising⟩ => ⟨t, Nat.lt_of_lt_of_le active (Nat.le_of_eq (same t).1),
@@ -3502,8 +3502,8 @@ theorem finite_binding_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat �
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → (∃ B, ChangeBound 0 B n c a) →
       (∃ t, 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised → w.Finite →
-        (∀ p : Premise, p ≠ .counted → p.Binds w) → w.CountsObey Q :=
-  have table := census_table_obeys pointwise finite_binding_counting_sound
+        (∀ p : Premise, p ≠ .counted → p.Binds w) → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold pointwise finite_binding_counting_sound
     finite_binding_counting_witnessed
   ⟨fun law w _ premised finite binds => table.mp (fun n c a tally ⟨company, bound, arises⟩ =>
       law n c a tally company bound arises) w ⟨premised, finite, binds⟩,
@@ -3598,8 +3598,8 @@ theorem enclosed_binding_counting {Q : (Nat → Nat) → (Nat → Nat) → (Nat 
     (∀ n c a, Tally n c a → (∀ t, 0 < a t → 0 < n t) → (∃ B, ChangeBound 0 B n c a) →
       (∃ t, 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Premised →
-        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.Binds → w.CountsObey Q :=
-  have table := census_table_obeys pointwise enclosed_binding_counting_sound
+        (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → w.Binds → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold pointwise enclosed_binding_counting_sound
     enclosed_binding_counting_witnessed
   ⟨fun law w _ premised enclosed binds => table.mp (fun n c a tally ⟨company, bound, arises⟩ =>
       law n c a tally company bound arises) w ⟨premised, enclosed, binds⟩,
@@ -4034,7 +4034,7 @@ of the counts is a law in finite worlds where the selected premises bind. -/
 theorem finite_binding_census {S : Premise → Bool} (counted : S .counted = true)
     {Q : (Nat → Nat) → (Nat → Nat) → (Nat → Nat) → Prop} :
     ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey Q :=
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold Q :=
   fun _ _ _ finite binds => absurd finite (binds _ counted)
 
 /-- **The steps in finite worlds where the premises of each selection without the census bind,
@@ -4173,8 +4173,8 @@ theorem finite_binding_counting_under (S : Premise → Bool) (uncounted : S .cou
       (S .embodied = true → S .acting = true ∨ S .taking = true ∧ S .dissipative = true →
         S .transmitting = true → ∃ t, 0 < n t ∧ 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-        (∀ p, S p = true → p.Binds w) → w.CountsObey Q :=
-  have table := census_table_obeys pointwise (finite_binding_counting_under_sound S)
+        (∀ p, S p = true → p.Binds w) → w.CensusMarksHold Q :=
+  have table := census_table_marks_hold pointwise (finite_binding_counting_under_sound S)
     (finite_binding_counting_under_witnessed S uncounted)
   ⟨fun law w _ meets finite binds => table.mp (fun n c a tally ⟨bounded, quiet, bounds, acts, arises, joint⟩ =>
       law n c a tally bounded quiet bounds acts arises joint) w ⟨meets, finite, binds⟩,
@@ -4186,7 +4186,7 @@ is active exactly where activity needing support, only active relata giving, onl
 relata taking or embodiment is selected. -/
 theorem finite_binding_activity_iff (S : Premise → Bool) (uncounted : S .counted = false) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun n _ _ => ∃ t, 0 < n t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun n _ _ => ∃ t, 0 < n t) ↔
       S .dependent = true ∨ S .acting = true ∨ S .taking = true ∨ S .embodied = true :=
   have pointwise : Pointwise fun n (_ _ : Nat → Nat) => ∃ t, 0 < n t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).1)⟩
@@ -4217,7 +4217,7 @@ theorem finite_binding_activity_iff (S : Premise → Bool) (uncounted : S .count
 /-- Something arises exactly where embodiment is selected. -/
 theorem finite_binding_arising_iff (S : Premise → Bool) (uncounted : S .counted = false) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun _ _ a => ∃ t, 0 < a t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun _ _ a => ∃ t, 0 < a t) ↔
       S .embodied = true :=
   have pointwise : Pointwise fun (_ _ : Nat → Nat) a => ∃ t, 0 < a t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).2.2)⟩
@@ -4239,7 +4239,7 @@ is selected with only active relata giving or with both only active relata takin
 dissipation: there what arises descends from a relatum active at the step. -/
 theorem finite_binding_joint_iff (S : Premise → Bool) (uncounted : S .counted = false) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S → w.Finite →
-      (∀ p, S p = true → p.Binds w) → w.CountsObey fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+      (∀ p, S p = true → p.Binds w) → w.CensusMarksHold fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
       S .embodied = true ∧ (BindsCounting S ∨ BoundsChange S ∨
         (S .acting = true ∨ S .taking = true ∧ S .dissipative = true) ∧
           S .transmitting = true) :=
@@ -4901,8 +4901,8 @@ theorem enclosed_binding_counting_under (S : Premise → Bool)
         ∃ t, 0 < n t ∧ 0 < a t) → Q n c a) ↔
       ∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
         (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → (∀ p, S p = true → p.Binds w) →
-          w.CountsObey Q :=
-  have table := census_table_obeys pointwise (enclosed_binding_counting_under_sound S)
+          w.CensusMarksHold Q :=
+  have table := census_table_marks_hold pointwise (enclosed_binding_counting_under_sound S)
     (enclosed_binding_counting_under_witnessed S)
   ⟨fun law w _ meets enclosed binds => table.mp (fun n c a tally ⟨quiet, bounded, acts, arises, joint⟩ =>
       law n c a tally quiet bounded acts arises joint) w ⟨meets, enclosed, binds⟩,
@@ -4915,7 +4915,7 @@ relata taking or embodiment is selected. -/
 theorem enclosed_binding_activity_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
       (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → (∀ p, S p = true → p.Binds w) →
-        w.CountsObey fun n _ _ => ∃ t, 0 < n t) ↔
+        w.CensusMarksHold fun n _ _ => ∃ t, 0 < n t) ↔
       S .dependent = true ∨ S .acting = true ∨ S .taking = true ∨ S .embodied = true :=
   have pointwise : Pointwise fun n (_ _ : Nat → Nat) => ∃ t, 0 < n t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).1)⟩
@@ -4947,7 +4947,7 @@ theorem enclosed_binding_activity_iff (S : Premise → Bool) :
 theorem enclosed_binding_arising_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
       (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → (∀ p, S p = true → p.Binds w) →
-        w.CountsObey fun _ _ a => ∃ t, 0 < a t) ↔
+        w.CensusMarksHold fun _ _ a => ∃ t, 0 < a t) ↔
       S .embodied = true :=
   have pointwise : Pointwise fun (_ _ : Nat → Nat) a => ∃ t, 0 < a t :=
     fun same ⟨t, pos⟩ => ⟨t, Nat.lt_of_lt_of_le pos (Nat.le_of_eq (same t).2.2)⟩
@@ -4970,7 +4970,7 @@ dissipation does not force it, since what arises may arise from nothing before e
 theorem enclosed_binding_joint_iff (S : Premise → Bool) :
     (∀ (w : World) [∀ t x, Decidable (w.web.active t x)], w.Meets S →
       (∃ T, ∀ t, T ≤ t → w.flow.Enclosed t) → (∀ p, S p = true → p.Binds w) →
-        w.CountsObey fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
+        w.CensusMarksHold fun n _ a => ∃ t, 0 < n t ∧ 0 < a t) ↔
       S .embodied = true ∧ (BindsCounting S ∨ S .acting = true ∧ S .transmitting = true) :=
   have pointwise : Pointwise fun n (_ : Nat → Nat) a => ∃ t, 0 < n t ∧ 0 < a t :=
     fun same ⟨t, active, arising⟩ => ⟨t, Nat.lt_of_lt_of_le active (Nat.le_of_eq (same t).1),
