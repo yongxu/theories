@@ -83,6 +83,25 @@ def u4c_row(board_row):
     ])
 
 
+def figures_row(board_row):
+    """This landing's own row."""
+    return ' | '.join([
+        f"| **{NAME}: 08 §7's reach figures read off OU7's core run (documents)** (U4c's census moved "
+        "`Listed.coming_of_ceasing` from counting to derived, and 08 §7's connectivity paragraph still gave the counts "
+        "from before it). Of the 126 central rows 86 rest on a shared law and 46 reach the grammar, 16 of 54 on "
+        "balance and 4 on no anchor, `Listed.coming_of_ceasing` the fourth through the root's census of a run; of the "
+        "117 distinct declarations 45 reach the grammar and 30 rest on balance; F5's report 45, 16, 6 and 50. U4c's "
+        "and U4b's landed rows moved here (board rule 4)",
+        board_row.split(' | ')[1],
+        "landed 2026-11-01 (documents only, no Lean, no record and no core run): the figures as "
+        "`measure_grammar.py` and `master_laws.py` give them on main `e5951932b` at core receipt "
+        f"`{RECEIPT}`; no record cites the paragraph; render, strict check, links, tests and both dossier checks "
+        "pass on the landing tree",
+        f"[development/u4-one-root-to-its-edge/](../../{STUDY}/board_u4cf.py)",
+        "U4c (landed with OU7), OU3b's measure |",
+    ])
+
+
 def land(order):
     assert order.startswith('Then') and order.endswith('.'), 'ORDER is the coordinator\'s sentence, verbatim'
     rows = BOARD.read_text(encoding='utf-8').split('\n')
@@ -93,7 +112,7 @@ def land(order):
     b = [k for k, x in enumerate(rows) if x.startswith(U4B)]
     c = [k for k, x in enumerate(rows) if x.startswith(U4C)]
     assert len(b) == 1 and len(c) == 1 and c[0] == b[0] + 1, (b, c)
-    moved = [for_history(rows[b[0]]), u4c_row(rows[c[0]])]
+    moved = [for_history(rows[b[0]]), u4c_row(rows[c[0]]), figures_row(rows[c[0]])]
     del rows[b[0]:c[0] + 1]
     BOARD.write_text('\n'.join(rows), encoding='utf-8')
     h = HISTORY.read_text(encoding='utf-8').split('\n')
