@@ -80,7 +80,11 @@ paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
           'tools/research', '_process/architecture/rebinds.jsonl', '_process/architecture/moves',
-          'theories/becoming/review/PHILOSOPHY.md']
+          'theories/becoming/review/PHILOSOPHY.md', 'theories/becoming/ONE-PAGE.md', 'theories/becoming/ONE-PAGE.zh.md',
+          'theories/becoming/THE-THEORY-OF-BECOMING.md', 'theories/becoming/THE-THEORY-OF-BECOMING.zh.md',
+          RF + 'development/aj4-alignment-readers/READING-BUDGETS.md',
+          RF + 'development/aj4-alignment-readers/kit/measure_layers.py',
+          RF + 'development/front-pages-for-a-person/MEASURE-RUNS.txt']
 
 
 def patch_paths(patches):
@@ -336,6 +340,25 @@ show('record, a second time', second, 6)
 left = [p.name for p in sorted((TREE / 'theories/becoming/results/records').glob('*.json'))
         if any(t in p.read_text(encoding='utf-8') for t in kit.PLACEHOLDERS)]
 assert not left, ('a placeholder left in records after the record stage', left)
+# OU's owner's front refresh, after the record stage, as post takes it before the re-point: then again, every edit in
+# place; then, with one sentence it replaces moved, it stops and writes nothing.
+front = ['python3', '-B', KIT + 'front-refresh/front_refresh.py']
+show('front refresh', run(*front), 16)
+second = run(*front)
+assert ': applies' not in second.stdout and 'already in place' in second.stdout, second.stdout
+show('front refresh, a second time: every edit in place', second, 1)
+OVERVIEW = TREE / 'theories/becoming/THE-THEORY-OF-BECOMING.md'
+kept = OVERVIEW.read_text(encoding='utf-8')
+OVERVIEW.write_text(kept.replace('- **Conditional laws.**', '- **Conditional law.**', 1), encoding='utf-8')
+for path in sorted(TREE.glob('theories/becoming/*.md')):
+    if path != OVERVIEW and path.name.startswith(('ONE-PAGE', 'THE-THEORY')):
+        run('git', 'checkout', '-q', 'HEAD', '--', path.relative_to(TREE).as_posix())
+before = run('git', 'status', '--porcelain').stdout
+refused = run(*front, ok=False)
+assert refused.returncode and run('git', 'status', '--porcelain').stdout == before, refused.stdout[-600:]
+show('front refresh refuses a moved sentence, nothing written', refused, 2)
+OVERVIEW.write_text(kept, encoding='utf-8')
+assert 'already in place' in run(*front).stdout
 
 # The post stage re-points exactly the registry's drift, the Lean files the patches changed rebound to the receipt;
 # here the synthetic one, as the landing binds them to the run's.

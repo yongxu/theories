@@ -508,11 +508,12 @@ def show_stages():
 
 
 def reason(n):
-    """The one re-point pass's reason: the kit's, then each selected stage's repoint_reason.txt, {N} the study
-    section."""
+    """The one re-point pass's reason: the kit's, then each selected stage's repoint_reason.txt, then the front
+    pages' (the text review's merge and OU's owner's refresh), {N} the study section."""
     texts = [(HERE / 'repoint_reason.txt').read_text(encoding='utf-8').strip()]
     texts += [(s / 'repoint_reason.txt').read_text(encoding='utf-8').strip() for s in selected_stages()
               if (s / 'repoint_reason.txt').exists()]
+    texts.append((HERE / 'front-refresh/repoint_reason.txt').read_text(encoding='utf-8').strip())
     return ' '.join(texts).replace('{N}', str(n))
 
 

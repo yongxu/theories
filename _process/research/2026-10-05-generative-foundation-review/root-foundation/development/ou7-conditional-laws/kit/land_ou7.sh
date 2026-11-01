@@ -3,10 +3,12 @@
 # parts). The head claim, the board's landed clause and the fast-forward are run by hand, each with its guard (re-read
 # the Queue line before --ff-only). The near-full rebuild comes last in the core round: no stage runs before OU's owner
 # says.
-#   LOG=DIR zsh land_ou7.sh prepare    merge main (refs/heads/main), with no tracked change left before it; the kit's
-#                                      patches checked against the merged tree as one series, in the order apply takes
-#                                      them; no leaf yet in the package; every anchor of the joins and the two home
-#                                      sections found once (integrate_ou7.py anchors, nothing written)
+#   LOG=DIR zsh land_ou7.sh prepare    merge main (refs/heads/main), with no tracked change left before it, then the
+#                                      text review's commit (front-refresh/MERGE, its ref unmoved); the kit's patches
+#                                      checked against the merged tree as one series, in the order apply takes them; no
+#                                      leaf yet in the package; every anchor of the joins and the two home sections
+#                                      found once (integrate_ou7.py anchors, nothing written); the front refresh's
+#                                      sentences found once or in place (front_refresh.py --check, nothing written)
 #   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, MapRegions, OU plan and GrammarTesting patches,
 #                                      then patches/owner/ in name order; the three leaves and their joins; then each
 #                                      stage in stages/, in name order, patch by patch (a SKIP file or OU7_STAGES leaves
@@ -18,9 +20,10 @@
 #                                      general laws in 01 §4, 06 §三 and their two records; one record's words; the
 #                                      stages' records' dates and study section ({DAY}, {DAY_ZH}, {N}); OU7's two
 #                                      records; MV's data and OU7's check; the apart register; the study's section N
-#                                      (the next free one, read after main is merged; a given N must match); the
-#                                      re-point of the records whose sources the patches changed; render, checks,
-#                                      links, lint, tests
+#                                      (the next free one, read after main is merged; a given N must match); the front
+#                                      refresh (OU's owner's texts on the four front files, READING-BUDGETS' two rows
+#                                      from one recount); the re-point of the records whose sources the patches, the
+#                                      text review and the refresh changed; render, checks, links, lint, tests
 # LOG holds every log (outside the repository). Each stage stops at the first failure and says where. No stage commits.
 # The re-point is one pass for the kit and every stage in place, its reason the kit's and theirs (integrate_ou7.py
 # reason N); the receipt line, the study section and the commit name only the stages in place.
@@ -37,6 +40,15 @@ prepare)
   [ -z "$(git status --porcelain --untracked-files=no)" ] || fail "tracked changes: $(git status --short | head -3)"
   step merge; git merge --no-edit refs/heads/main > $LOG/merge.log 2>&1 || fail "merge (resolve, then rerun prepare)"
   tail -1 $LOG/merge.log
+  # The text review's front-page fixes, merged after main and before apply, since a merge cannot run over the record
+  # stage's edits to 01 and 08; its ref must not have moved from the commit OU's owner named.
+  read TR TR_REF < $K/front-refresh/MERGE
+  if git rev-parse -q --verify $TR_REF > /dev/null; then
+    [ "$(git rev-parse $TR_REF)" = "$TR" ] || fail "$TR_REF has moved from $TR: ask OU's owner"
+  fi
+  step text-review; git merge --no-edit -m "Merge the text review ($TR_REF at ${TR[1,9]}) into OU7's landing" $TR \
+    > $LOG/merge-text-review.log 2>&1 || fail "the text review's merge (resolve, then rerun prepare)"
+  tail -1 $LOG/merge-text-review.log
   step patches
   P=($K/patches/*.patch $K/../check/kit/GrammarTesting.patch $K/patches/owner/*.patch(N))
   git apply --check $P > $LOG/check-patches.log 2>&1 || fail "the patches do not apply to the merged tree, in order"
@@ -46,6 +58,8 @@ prepare)
   done
   step anchors; python3 -B $K/integrate_ou7.py anchors > $LOG/anchors.log 2>&1 || fail anchors; tail -1 $LOG/anchors.log
   step stages; python3 -B $K/integrate_ou7.py stages > $LOG/stages.log 2>&1 || fail stages; head -1 $LOG/stages.log
+  step front; python3 -B $K/front-refresh/front_refresh.py --check > $LOG/front-check.log 2>&1 \
+    || fail "the front refresh's sentences"; tail -1 $LOG/front-check.log
   echo "each stage's series is checked at apply, after the joins it is made against" ;;
 apply)
   step apply; python3 -B $K/integrate_ou7.py apply > $LOG/apply.log 2>&1 || { tail -12 $LOG/apply.log; fail apply; }
@@ -93,6 +107,10 @@ EOF
   python3 -B $M --write > $LOG/conn-write.log 2>&1 || fail "connectivity write"
   python3 -B $M --check > $LOG/conn.log 2>&1 || fail "connectivity check"
   step study; python3 -B $K/integrate_ou7.py study $N $V > $LOG/study.log 2>&1 || fail study; cat $LOG/study.log
+  # OU's owner's refresh of the four front files and READING-BUDGETS' two rows, after the record stage wrote the
+  # record and the anchors it checks; nothing is written unless every sentence it replaces is found.
+  step front; python3 -B $K/front-refresh/front_refresh.py > $LOG/front.log 2>&1 || fail "the front refresh (nothing written)"
+  cat $LOG/front.log
   # The records pinning a source the patches changed (Grammar, GrammarReadings, GrammarTesting, MapRegions, the OU
   # plan, and whatever the owner's patches and the stages change): read with each source before this stage, then
   # re-pointed as bookkeeping in one pass, the Lean files' proof bindings rebound to this receipt. What the record
