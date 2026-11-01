@@ -11,27 +11,27 @@
 ## Laws
 
 1. A formation gains support across the step from t when it is not supported at t and is supported at t+1; it loses support in the converse case. (`Becoming.Web.Supported`, `Becoming.Web.GainsSupport`, `Becoming.Web.LosesSupport`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Its requirements do not loosen across the step when each requirement it has at t it still has at t+1, at no lower need; they do not tighten when each requirement it has at t+1 it had at t, at no greater need. (`Becoming.Web.Unloosened`, `Becoming.Web.Untightened`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Where its requirements do not loosen, it cannot gain support with no condition it requires rising; where they do not tighten, it cannot lose support with no condition it requires after the step falling (picking out the condition uses classical logic). (`Becoming.Web.Rises`, `Becoming.Web.Falls`, `Becoming.Web.GainsSupport.rises`, `Becoming.Web.LosesSupport.falls`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In a balanced flow where only active formations give and activity needs support, every rise is given by a supported formation taking part in the step. (`Becoming.Flow.Balances`, `Becoming.Flow.Acting`, `Becoming.Web.Dependent`, `Becoming.Flow.rise_given_by_supported`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. So a formation whose requirements do not loosen across a step cannot gain support while no supported formation taking part gives to a condition it requires. (`Becoming.Flow.gains_from_supported`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Under the same premises, if no member of a family is supported at T, the members' requirements do not loosen from T on, and only members give to what members require, then no member is supported at T or any later step. (`Becoming.Flow.unsupported_stays`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Of the whole: under the same premises, once nothing is supported, while requirements do not loosen, nothing is supported or active again. (`Becoming.Flow.nothing_supported_stays`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. The four laws above (on rises, gaining support and the absorbing end) hold in every world with the local condition inside the law: balance only at the conditions concerned (the condition that rises, or those the members require) across the steps used, and whatever gives to them there supported; for the whole, a formation is not active where it is active only while supported. The global forms are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.GiversSupported`, `Becoming.Flow.Acting.giversSupported`, `Becoming.Flow.rise_given_by_supported_at`, `Becoming.Flow.gains_from_supported_at`, `Becoming.Flow.unsupported_stays_at`, `Becoming.Flow.nothing_supported_stays_at`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. Each premise of the absorbing end is needed, with a witness for each in which a formation unsupported at step zero is supported at step one. In Adapting a requirement dissolves (requirements loosen); in Inflow something beyond the family gives: a giver requiring nothing gives to the required condition. (`Becoming.Restoring.flow`, `Becoming.Restoring.need`, `Becoming.Restoring.balances_unitStep`, `Becoming.Restoring.Adapting.web`, `Becoming.Restoring.Adapting.restores`, `Becoming.Restoring.Inflow.web`, `Becoming.Restoring.Inflow.restores`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 10. In Idle a giver is not active (Acting fails); in Carried an active giver is not supported (Dependent fails); in Spontaneous a rise is given by nothing (balance fails). (`Becoming.Restoring.flow`, `Becoming.Restoring.need`, `Becoming.Restoring.balances_unitStep`, `Becoming.Restoring.Idle.web`, `Becoming.Restoring.Idle.restores`, `Becoming.Restoring.Carried.web`, `Becoming.Restoring.Carried.restores`, `Becoming.Restoring.Spontaneous.web`, `Becoming.Restoring.Spontaneous.restores`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. One first step for the local gaining law: with balance at the conditions the gainer requires and those giving to them supported, a formation whose requirements do not loosen across a step and that gains support there is given, up to double negation, on a rising required condition by a supported formation taking part. The local gaining law follows from it. (`Becoming.Flow.gain_given_by_supported_at`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

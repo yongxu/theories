@@ -128,8 +128,8 @@
     {
       "id": "selection-within-and-among-groups-of-any-sizes",
       "detail": {
-        "en": "The master law reads any listing; this result derives one listing, connected positions, from bonds.",
-        "zh": "主律读任何列表；此结果由键导出一种列表，即相连的位置。"
+        "en": "The general law reads any listing; this result derives one listing, connected positions, from bonds.",
+        "zh": "通律读任何列表；此结果由键导出一种列表，即相连的位置。"
       }
     }
   ],
@@ -165,7 +165,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "sha256": "e1ae074d995eb67222a39d9fb3a9f53b916424f06e6e2f0720f99c104a552192",
       "declarations": []
     },
     {

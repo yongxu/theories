@@ -11,13 +11,13 @@
 ## Laws
 
 1. A configuration's footprint supports a list where the list repeats nothing and each member lies within the footprint; footprints are within where each part a whole holds has its footprint within the whole's, and apart where the two parts a whole holds share nothing of their footprints. What a plan's leaves draw on is joined leaf by leaf, in order. (`Becoming.Supports`, `Becoming.PartsWithin`, `Becoming.PartsApart`, `Becoming.JointPlan.draws`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For any ternary joint relation, footprint and description: where configurations the description identifies match parts into ones it identifies, footprints are within and apart, and leaves are read through the description exactly as support, a plan realized at a configuration's description, under the joint relation read through it, has what its leaves draw on supported by that configuration's footprint. (`Becoming.JointPlan.supports_of_image`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. In a joint frame, through a code reading the joint tests exactly and giving one code to configurations passing the same ones: where the pairs of parts held are compact for the joint tests, each joint test holds wherever it cannot fail, footprints are within and apart, and leaves are read through the code exactly as support, a plan realized at a configuration's code has its leaves' draws supported by its footprint. (`Becoming.JointPlan.supports_of_code`, `Becoming.JointFrame.JointCompact`, `Becoming.JointFrame.TestsStable`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Support at the root need not give realization, in a witness: where no whole holds any part, the footprint of the one configuration supports what a plan of two empty leaves draws on, and the plan is not realized. (`Becoming.Unjoined.supports_not_realizes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,21 +11,21 @@
 ## Laws
 
 1. The law whose moves are the situations is determined and takes exactly the steps of positive weight: a law whose steps are those of positive weight is it with the situation forgotten. (`Becoming.Situations.finerLaw`, `Becoming.Situations.finerLaw_determined`, `Becoming.Situations.finerLaw_step_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For every process with listed moves and configurations and natural weights of steps, summing any reading of the courses over the finer courses of n steps is summing it over the courses, each times its weight; so the finer courses number the sum over histories. (`Becoming.Undecided.upto`, `Becoming.Situations.sum_upto`, `Becoming.Situations.sum_one`, `Becoming.Situations.finerSteps`, `Becoming.Situations.finer`, `Becoming.Situations.coarse`, `Becoming.Situations.sum_finer`, `Becoming.Situations.finer_count`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. On two values with p and q situations a step, there are (p + q)ⁿ finer courses; the weight of a course is the number of finer courses taking it, each course occurring once among the courses. (`Becoming.Situations.sum_courses_values`, `Becoming.Situations.situations_count`, `Becoming.Situations.mul_indicator`, `Becoming.Situations.total_only`, `Becoming.Situations.situations_of_course`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. The law of large numbers counts situations: the finer courses whose course deviates by at least d number, times d, at most n·p·q·(p + q)ⁿ. (`Becoming.Situations.far`, `Becoming.Situations.weight_far`, `Becoming.Situations.situations_typical`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Through an event, any number of values counts as two: summing over the courses of values, each by its natural weight, is summing over two-valued courses with the event's weight and the rest's; so the law of large numbers and exponential concentration count situations for every event, of (P + Q)ⁿ finer courses. (`Becoming.Situations.keep`, `Becoming.Situations.drop`, `Becoming.Situations.inside`, `Becoming.Situations.outside`, `Becoming.Situations.keep_drop`, `Becoming.Situations.sum_split`, `Becoming.Situations.inside_add_outside`, `Becoming.Situations.valueWeight`, `Becoming.Situations.seen`, `Becoming.Situations.sum_event`, `Becoming.Situations.event_typical`, `Becoming.Situations.event_concentrated`, `Becoming.Situations.event_count`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. For every process, the finer courses taking a course number its weight times how often the course is listed; where every move and configuration is listed once, they number its weight. (`Becoming.Situations.occ`, `Becoming.Situations.sum_only`, `Becoming.Situations.situations_take`, `Becoming.Situations.occ_map_cons`, `Becoming.Situations.occ_map_pair`, `Becoming.Situations.occ_openSteps`, `Becoming.Situations.occ_courses`, `Becoming.Situations.occ_courses_once`, `Becoming.Situations.situations_of_course_listed`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In any weights, steps weighing the sum over their situations are counted by them; a signed step (P, N) is P situations that add and N that subtract, and the signed transfer is the pair of the numbers of finer courses composing to adding and to subtracting; where signed weights cancel, the situations do not. (`Becoming.Situations.signs`, `Becoming.Situations.sum_mul_right`, `Becoming.Situations.sum_finer_weights`, `Becoming.Situations.sign`, `Becoming.Situations.both`, `Becoming.Situations.sum_adding`, `Becoming.Situations.sum_signed`, `Becoming.Situations.signed_sums`, `Becoming.Situations.signed_situations`, `Becoming.Situations.signs_unit`, `Becoming.Situations.sum_units`, `Becoming.Situations.signed_counts`, `Becoming.Situations.cancels_situations`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. The finer courses are the finer law's traces: a list of situations is a finer course of n steps from s exactly where it has n steps, is a finer-law trace from s and takes listed moves to listed configurations; on two values every such trace is listed. The positive-weight law is the finer law with the situation forgotten, traces passing both ways; all listed, finer courses exist where it has a trace of n moves. (`Becoming.FinerTraces.mem_finer_iff`, `Becoming.FinerTraces.two_values_mem_iff`, `Becoming.ListTests.mem_bools`, `Becoming.FinerTraces.supportLaw`, `Becoming.FinerTraces.trace_forget`, `Becoming.FinerTraces.trace_lift`, `Becoming.FinerTraces.nonzero_iff`, `Becoming.FinerTraces.finer_exists_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,31 +11,31 @@
 ## Laws
 
 1. For records and meanings of any types, meanings compared decidedly, and any Boolean reading of which records bear on a form and what each offers: for a repertoire without repeats, a form's candidates (the meanings every bearing record offers) are exactly e, and the form resolves to e, exactly when e is in the repertoire, every bearing record offers it and every other meaning is missing from some bearing record. (`Becoming.CrossSituational.candidates`, `Becoming.CrossSituational.unique`, `Becoming.CrossSituational.candidates_eq_iff`, `Becoming.CrossSituational.resolves_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the target is in the repertoire and every record bearing on the form offers it, any unique candidate is the target. (`Becoming.CrossSituational.resolved_is_target`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. With a repeated meaning the separation conditions can hold while the candidates are that meaning twice, not once; one record omitting the target and offering only another meaning leaves that meaning as the only candidate. (`Becoming.CrossSituational.Repeated.separated`, `Becoming.CrossSituational.Repeated.not_resolved`, `Becoming.CrossSituational.Omitted.wrong_unique`, `Becoming.CrossSituational.Omitted.target_uncovered`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. For every process, meanings compared decidedly and a repertoire without repeats, a form resolves to e after the first n moves of a run exactly when e is in the repertoire, every bearing move among them offers it, and every other meaning is missing from some bearing move. (`Becoming.Courses.run_resolves_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. For meanings compared decidedly and a repertoire without repeats, where every word is a course of a process from s back to s and grouping by adjacency recovers the words of every encoded sequence, reading each group by resolution gives the meanings of the words of every such course exactly when, for each word, its bearing records separate its meaning. (`Becoming.Courses.course_resolves_every_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. In the acquired-binding machines, for every lexicon whose repertoire has no repeats, the word of an atom resolves to it exactly when its admitted records separate it; where the lexicon's record of transitions also groups the two-word encoding, every encoded sequence is interpreted as the assembly of its atoms exactly when each word's records separate its atom. (`Becoming.MachineInstances.resolve_iff`, `Becoming.MachineInstances.interprets_every_iff_separated`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. In an enacted scene whose record of transitions groups the two-word encoding, every move adds exactly the record heard, naming the site of an atom recording its word with the alternatives accessible where the learner stands; along every history the records are the earlier ones and those heard. (`Becoming.MachineInstances.step_records`, `Becoming.MachineInstances.enact_records`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. From every situation whose record of transitions groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history separate its atom. (`Becoming.MachineInstances.scene_interprets_every_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. The coordinated history, with 37 units of support, is an instance: its record groups the encoding, each word resolves to its atom, and every encoded sequence is interpreted as the assembly of its atoms. (`Becoming.MachineInstances.coordinated_groups`, `Becoming.MachineInstances.coordinated_resolves`, `Becoming.MachineInstances.coordinated_interprets_every`, `Becoming.MachineInstances.coordinated_from_history`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 10. Naming from one place fails separation, the other atom being accessible at every naming, and naming a site from where its atom is not accessible fails coverage: in both histories not every encoded sequence is interpreted as the assembly of its atoms. (`Becoming.MachineInstances.stationary_fails`, `Becoming.MachineInstances.mistimed_fails`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 11. On natural-number positions with Manhattan range two, the coordinated history yields exactly the interpretation inputs of the earlier acquired-binding history (log, repertoire, records, exclusions), every encoded sequence is interpreted as its atoms, and the utterance runs to the response [true, false, true], leaving no support with 30 units used. (`Generative.EnactedScene.enacted_scenes_supply_the_previous_binding_inputs`, `Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation`, `Generative.EnactedScene.enacted_access_reaches_actual_response`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 12. Mistimed naming ends at the position and support of the coordinated history and hears each word twice, yet binds each word to the other atom and gives the inverted response; naming after moving where only the extra site is in view binds the first word to it; access without retained records binds nothing; with 36 units of support the utterance is interpreted but not executed. (`Generative.EnactedScene.unchanged_position_and_name_counts_do_not_establish_coordination`, `Generative.EnactedScene.mistimed_naming_produces_an_actual_inverted_response`, `Generative.EnactedScene.a_clear_view_can_omit_the_named_target`, `Generative.EnactedScene.access_without_recording_does_not_acquire_the_bindings`, `Generative.EnactedScene.movement_support_can_run_out_before_a_response`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 13. In the enacted scene from 24 units of support, a move to (2, 2) is not made: the learner stays at (1, 0) and the same two sites stay in view. (`Generative.EnactedScene.impossible_movement_does_not_invent_a_new_scene`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

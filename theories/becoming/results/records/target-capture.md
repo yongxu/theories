@@ -11,22 +11,22 @@
 ## Laws
 
 1. The offspring of a list of parents are counted as the sum, over the parents, of the lengths of their listed offspring. Where each parent on the list leaves at least a offspring, the count is at least a times the list's length; where each leaves at most b, it is at most b times the list's length. (`Becoming.offspringCount`, `Becoming.le_offspringCount`, `Becoming.offspringCount_le`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For a list ms of carriers of a target and a list es of other parents: where each carrier leaves at least a offspring, each other parent at most b, and b ≤ a, the length of ms times the others' offspring count is at most the carriers' offspring count times the length of es. Where offspring carry their parents' target, a premise, the target's share among offspring is not below its share among parents. (`Becoming.share_not_lower`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. For nonempty lists ms of carriers of a target and es of other parents: where each carrier leaves at least a offspring, each other parent at most b, and b < a, the length of ms times the others' offspring count is below the carriers' offspring count times the length of es. Where offspring carry their parents' target, a premise, the target's share among offspring is above its share among parents. (`Becoming.share_rises`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. For lists of carriers of a target and of other parents, in a world's flow where only active formations give and activity needs support: other parents unsupported at a step, whose listed offspring descend from them across it, list none. So the carriers' offspring stand to the others' at least as the carriers to the others, and strictly more where each carrier lists at least a > 0 offspring and both lists are nonempty. (`Becoming.CaptureWorlds.unsupported_leave_none`, `Becoming.CaptureWorlds.share_not_lower_of_unsupported`, `Becoming.CaptureWorlds.share_rises_of_unsupported`, `Becoming.Flow.DescendsAt`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In a world's flow where what stands at each step is listed, each once, descent (a parent taking part in a step and giving to a relatum that comes to stand across it, a rise) at arbitrarily late steps needs, at arbitrarily late steps, steps across which what stands does not run down; it runs down where some family without repetition holding all that stands before or after the step is balanced and dissipated on. (`Becoming.Flow.descent_needs_unrun`, `Becoming.Web.StandingCensus`, `Becoming.Flow.RunsDown`, `Becoming.Web.ComesToStand.rises`, `Becoming.Flow.change_recurs_iff`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.change_recurs_iff` as following from balance, which the grammar represents.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.change_recurs_iff` as following from balance, which the grammar represents.
    - *Standing of `Becoming.Flow.change_recurs_iff`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 6. In a world's flow where what stands at each step is listed, each once, and runs down across every step from step T on, descent does not occur at arbitrarily late steps. (`Becoming.Flow.descent_exhausted`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. For any law on configurations of a state and a rule whose next configuration depends on the rule and not on the state, two configurations with the same rule have the same orbit from the next step on. It is the instance, with the rule as the projection, of the law that a determined law depending only on a projection gives configurations alike under it the same orbit from the next step on. (`Becoming.Law.perturbation_reabsorbed`, `Becoming.Law.reabsorbed`, `Becoming.Law.orbit`)
-   - *Master laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
 8. In Captured, on pairs of Booleans whose next state is the rule and whose rule keeps itself, the next configuration does not depend on the state: a state perturbed against the rule is at the rule's configuration from the next step on, so its run is the unperturbed run from then on, while from a perturbed rule the state follows the new rule and the run differs at every step from the next on. (`Becoming.Captured.next`, `Becoming.Captured.byRule`, `Becoming.Captured.state_perturbation_returns`, `Becoming.Captured.rule_perturbation_changes`, `Becoming.SeekingRuns.captured_state_returns`, `Becoming.SeekingRuns.captured_rule_changes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

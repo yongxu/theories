@@ -11,19 +11,19 @@
 ## Laws
 
 1. Read with one kind of relatum and events read stepwise, an event living where its relatum is active and not undermining, two events at a common step are related by conveyance where some formation taking part in the step takes from one's relatum and gives to the other's. A relatum nothing is taken from or given to across a step is related to nothing at that step. (`Becoming.Flow.Conveys`, `Becoming.Flow.conveyance`, `Becoming.Flow.conveyance_idle`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A region's boundary is a cut where no formed relation leaves the region. Under balance and dissipation, with decided equality, for a finite family without repetition, enclosed around from some step on and taken from at arbitrarily late steps, it is not the case that from some step on nothing beyond it feeds it, so its boundary is from no step on left uncrossed by conveyance, and its region is not a cut. (`Becoming.Flow.Cut`, `Becoming.Flow.fed_from_beyond`, `Becoming.Flow.boundary_crossed`, `Becoming.Flow.region_not_a_cut`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 3. Under relational neutrality for conveyance, where something is conveyed from c to d across a step, d's event at that step is significant from a standpoint and c's event is living, c's event is significant from that standpoint too: valuing a relatum's event reaches the living source conveyed into it. (`Becoming.Flow.valuing_reaches_source`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In the embedding of a two-kind model, where conditions take no part and are never listed among formations, something conveyed between two conditions relates their events at that step, while interaction, living on and descent relate no two events of conditions at any steps. (`Becoming.Flow.roles`, `Becoming.Web.roles`, `Becoming.inr_not_mem`, `Becoming.Flow.roles_conveyance`, `Becoming.Flow.roles_conditions_unrelated`, `Becoming.Web.Interacts`, `Becoming.Web.interaction`, `Becoming.Web.LivesOn`, `Becoming.Web.sustenance`, `Becoming.Flow.descent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In the clearing witness, read with one kind of relatum, conveyance relates each step's fuel to the resource at every step, so the resource's region is not a cut, and neither interaction, living on nor descent relates them; under living on the resource's region is not a cut either, the clearer living on the resource. (`Becoming.Clearing.crossed`, `Becoming.Clearing.resource_not_cut`, `Becoming.Clearing.conveyance_only`, `Becoming.Clearing.resource_not_cut_living_on`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Read on a self's boundaries along a relation, regions holding it and closed under the relation: under the second law's premises the region of a continuing family's events is no boundary of any event's self along conveyance, so not every member's event has its closure along conveyance within the family; in the clearing the resource's region is no boundary along conveyance nor along living on. (`Becoming.Flow.region_no_boundary`, `Becoming.Flow.closures_not_within_region`, `Becoming.Clearing.resource_no_boundary`)
-   - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 7. The cut is not going out (the grammar's «不出») at a valuation's relation, by definition, so a region closed under the relation is a cut, and a cut is closed where membership is stable. Conveyance's relation is symmetric, so along it nothing goes out of a region exactly where nothing comes in. (`Becoming.Flow.cut_iff_notGoingOut`, `Becoming.Flow.cut_of_closedUnder`, `Becoming.Flow.closedUnder_of_cut`, `Becoming.Flow.conveyance_symm`, `Becoming.Flow.cut_iff_notComingIn`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

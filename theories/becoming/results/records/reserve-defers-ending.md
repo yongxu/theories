@@ -11,38 +11,38 @@
 ## Laws
 
 1. A reserve on a web is an amount for each formation that does not rise across a step at which the formation is unsupported, and falls if the formation is active there; the zero reserve is exactly Dependent, so relaxing ‘activity only where supported’ means allowing a positive reserve, not activity outside dependence. (`Becoming.Web.Carries`, `Becoming.Web.carries_zero`, `Becoming.Web.Dependent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A reserve can be a held condition: in a balanced flow, a condition nothing gives to at steps at which its holder is unsupported, and which is taken from, by whatever takes part, when the holder is active there, has its standing as the holder's reserve; where the holder itself takes part and takes from it, the reserve is the holder's own use, as a fox burns its fat. (`Becoming.Flow.carries_of_held`, `Becoming.Flow.carries_of_own`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Where no held condition is represented, the reserve is supplied: no condition of the two seeds' webs carries them. (`Becoming.Seed.no_held`, `Becoming.Viable.no_held`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. An active formation whose dependences fail has a positive reserve, so where a held condition carries the formations, each unsupported dependence can be moved onto the held condition at need one, keeping levels, activity and drawing, and the web so read meets Dependent by construction: lag is dependence transformed onto the held condition. (`Becoming.Web.Carries.pos`, `Becoming.Web.redirect`, `Becoming.Web.redirect_dependent`, `Becoming.Famine.transformed_dependent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. The two readings differ in which events undermine: the fox's event at step one undermines as published and not when its dependence is moved onto its fat, so the choice of reading bears on the stepwise valuation. (`Becoming.Famine.living_differs`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. A reserve defers the end and does not escape it: a formation unsupported from some step on is not active at arbitrarily late steps, and over any stretch is active at most as often as its reserve at the start (at most k with capacity k). (`Becoming.Web.Carries.active_not_recurring`, `Becoming.Web.Carries.lasts`, `Becoming.Web.Carries.lasts_within`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Web.Carries.active_not_recurring` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Web.Carries.active_not_recurring` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.Web.Carries.active_not_recurring`, by the rule:* connected (it reaches `Becoming.«尽则不或屡»` among its reasons; not declared a case of one).
 7. So after a loss without return with the dependence unchanged, and after the end of an embodied relatum it depends on at a positive need, a formation is active beyond its support at most as often as its reserve: lagged ending and lagged coextinction; with the zero reserve they are ending when fixed and coextinction. (`Becoming.Web.Carries.consumed_lasts`, `Becoming.Web.Carries.coextinct_lasts`, `Becoming.Web.consumed_ends_when_fixed`, `Becoming.Web.coextinct`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 8. Dormancy defers in the same way: unsupported, a formation does not arise at arbitrarily late steps; where the reserve also decays while dormant (a seed's viability), dormancy is bounded in time as well: a formation unsupported from some step on is not active once as many steps have passed as its reserve. (`Becoming.Web.Carries.arising_not_recurring`, `Becoming.Web.Decays`, `Becoming.Web.Carries.ends_within`)
-   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 9. Where the reserve so decays, coextinction runs down a chain of dependence of any length link by link: in a chain of n links whose relata depended on are embodied, each depending at a positive need on the one before it from step T on, the first inactive from T, each relatum up to the nth is inactive once the reserves of the links before it, each read where the link before ended, have passed. (`Becoming.Web.Carries.chain_ends`, `Becoming.Web.chainEnd`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. With the zero reserve every link ends at T, coextinction at once; without decay, with excluded middle as a hypothesis, each relatum of the chain is still inactive from some step, with no bound. (`Becoming.Web.chainEnd_zero`, `Becoming.Web.Carries.chain_ends_of_em`)
-    - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 11. A food chain is a finite chain; where dependences climb a bounded rank, as in every finite web without a cycle of dependence, no chain goes on without end, an unending chain being the case of every length. (`Becoming.Web.climbs`, `Becoming.Web.no_unending_chain`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 12. Without excluded middle that end step does not follow in general: if every formation never supported, with a carried reserve and decided activity, had a step after which it is never active, even one active at most once, the limited principle of omniscience would hold. (`Becoming.Web.lpo_of_ending`, `Becoming.Once.once`, `Becoming.LPO`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 13. Witnesses: a seed in the dark wakes twice on its reserve and never again, awake exactly as often as its reserve at the start, its reserve not decaying; a seed with a viability of three wakes at step 2 and never after, attaining the bound in time. (`Becoming.Seed.seed`, `Becoming.Seed.not_decays`, `Becoming.Viable.viable`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 14. A fox depending on the embodied hare outlives it by exactly two steps on its fat, a condition in the flow that the fox burns itself, and read with the fox's dependence moved onto the fat, with the same levels, activity, drawing and flow, it meets Dependent. (`Becoming.Famine.famine`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 15. In a chain in which each relatum depends at need one on the one before it, the bound along the chain is attained: each relatum outlives the one before it by exactly one step on its reserve, while without the reserve relatum 1 would be active unsupported; the same cascade cut to three relata has relatum 2 inactive from chainEnd 2 = 3 by the finite form, attaining the bound, while no unending chain runs through it. (`Becoming.Cascade.cascade`, `Becoming.short_cascade`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 16. Each law holds of every world in a local form: the reserve carries and decays only for the formation and at the steps used, the zero reserve at one step and formation being exactly being supported while active there, and the held condition balanced only at that step and condition; the global forms above are its corollaries. (`Becoming.Web.CarriesAcross`, `Becoming.Web.DecaysAcross`, `Becoming.Web.carries_zero_across`, `Becoming.Web.CarriesAcross.pos`, `Becoming.Web.active_not_recurring_from`, `Becoming.Web.CarriesAcross.step`, `Becoming.Web.lasts_on`, `Becoming.Web.arising_not_recurring_from`, `Becoming.Web.decays_by_from`, `Becoming.Web.ends_within_from`, `Becoming.Web.chain_ends_from`, `Becoming.Web.chain_ends_of_em_from`, `Becoming.Web.redirect_supported_at`, `Becoming.Flow.carriesAcross_of_held`)
-    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

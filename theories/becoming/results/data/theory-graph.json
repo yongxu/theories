@@ -392,6 +392,18 @@
    "page": "theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md"
   },
   {
+   "id": "record:a-formations-couplings-as-its-blanket",
+   "type": "result",
+   "record": "a-formations-couplings-as-its-blanket",
+   "title": "A formation's couplings as its blanket, and when a blanket constrains",
+   "title_zh": "形成之耦合为其毯，及毯何时有所约束",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-formations-couplings-as-its-blanket.md"
+  },
+  {
    "id": "record:a-formations-own-course",
    "type": "result",
    "record": "a-formations-own-course",
@@ -3359,8 +3371,8 @@
    "id": "record:master-laws-on-the-grammar",
    "type": "result",
    "record": "master-laws-on-the-grammar",
-   "title": "The master laws on the grammar",
-   "title_zh": "文法上的主律",
+   "title": "The shared laws on the grammar",
+   "title_zh": "文法上的共律",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "root",
@@ -3882,6 +3894,18 @@
    "region": "knowing",
    "base": "frame",
    "page": "theories/becoming/results/records/prefix-observation-loss.md"
+  },
+  {
+   "id": "record:premises-met-and-failed",
+   "type": "result",
+   "record": "premises-met-and-failed",
+   "title": "Premises met and failed: the condition on the root, C and L",
+   "title_zh": "前提之成与不成：根上之条件、C 与 L",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "method",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/premises-met-and-failed.md"
   },
   {
    "id": "record:premises-read-off-the-exchange",
@@ -4844,6 +4868,18 @@
    "page": "theories/becoming/results/records/selection-within-and-among-groups-of-any-sizes.md"
   },
   {
+   "id": "record:self-concern-and-c-under-the-condition",
+   "type": "result",
+   "record": "self-concern-and-c-under-the-condition",
+   "title": "Self-concern and C under the condition",
+   "title_zh": "条件之下之自关切与 C",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/self-concern-and-c-under-the-condition.md"
+  },
+  {
    "id": "record:self-concern-through-dependence",
    "type": "result",
    "record": "self-concern-through-dependence",
@@ -4986,6 +5022,18 @@
    "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/space-and-its-parts.md"
+  },
+  {
+   "id": "record:standings-not-read-off-the-occurrence-model",
+   "type": "result",
+   "record": "standings-not-read-off-the-occurrence-model",
+   "title": "Standings not read off the occurrence model, even up to a unit",
+   "title_zh": "立度不由出现模型读出，虽至一单位亦然",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/standings-not-read-off-the-occurrence-model.md"
   },
   {
    "id": "record:steps-met-again-after-a-fall",
@@ -7710,6 +7758,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.BlanketCouplings",
+   "type": "module",
+   "name": "Becoming.BlanketCouplings",
+   "level": "L1",
+   "theorems": 43,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.LumpedSeeking",
    "type": "module",
    "name": "Becoming.LumpedSeeking",
@@ -8046,6 +8105,17 @@
    "level": "L2",
    "theorems": 8,
    "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.BalanceRegions",
+   "type": "module",
+   "name": "Becoming.BalanceRegions",
+   "level": "L1",
+   "theorems": 6,
+   "region": "root",
    "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
@@ -10086,6 +10156,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.UnreadStandings",
+   "type": "module",
+   "name": "Becoming.UnreadStandings",
+   "level": "L1",
+   "theorems": 32,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.DrawnBeyond",
    "type": "module",
    "name": "Becoming.DrawnBeyond",
@@ -10477,6 +10558,17 @@
    "level": "L1",
    "theorems": 11,
    "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PremiseWitnesses",
+   "type": "module",
+   "name": "Becoming.PremiseWitnesses",
+   "level": "L2",
+   "theorems": 35,
+   "region": "method",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -27900,6 +27992,12 @@
    "anchor": "r-amounts-by-unit-matchings"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-standings-not-read-off-the-occurrence-model",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-standings-not-read-off-the-occurrence-model"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -28828,6 +28926,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-the-markov-blanket-as-a-coupling-structure"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-couplings-as-its-blanket",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-formations-couplings-as-its-blanket"
   },
   {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-the-blanket-at-a-steady-state",
@@ -30384,6 +30488,12 @@
    "anchor": "r-whole-first-and-bounded-centers"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-self-concern-and-c-under-the-condition"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-continuation-condition-decomposition",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -30768,6 +30878,12 @@
    "anchor": "r-one-root-to-its-edge"
   },
   {
+   "id": "section:theories/becoming/chapters/08-METHOD.md#r-premises-met-and-failed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-premises-met-and-failed"
+  },
+  {
    "id": "section:theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
    "type": "section",
    "chapter": "theories/becoming/chapters/08-METHOD.md",
@@ -30932,8 +31048,33 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.BalanceRegions",
+   "to": "module:Becoming.Continuity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BalanceRegions",
+   "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.Histories",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.IdentificationRuns",
    "type": "imports"
   },
   {
@@ -33372,6 +33513,21 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.PremiseWitnesses",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremiseWitnesses",
+   "to": "module:Becoming.GrammarCases",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremiseWitnesses",
+   "to": "module:Becoming.Lifting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Premises",
    "to": "module:Becoming.Space",
    "type": "imports"
@@ -34592,6 +34748,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.UnreadStandings",
+   "to": "module:Becoming.WorldRepresentation",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Unrolling",
    "to": "module:Becoming.LearnableRuns",
    "type": "imports"
@@ -34905,6 +35066,41 @@
    "from": "record:a-coupling-saturated-by-what-it-has-carried",
    "to": "record:what-a-cut-loses",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "module:Becoming.BlanketCouplings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:a-formations-own-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:hexagram-arrangements-and-laws",
+   "type": "related"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:the-blanket-at-a-steady-state",
+   "type": "related"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:what-the-existence-claim-forbids",
+   "type": "related"
   },
   {
    "from": "record:a-formations-own-course",
@@ -36223,6 +36419,11 @@
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",
+   "to": "module:Becoming.BalanceRegions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
    "to": "module:Becoming.Continuity",
    "type": "proved-in"
   },
@@ -36230,6 +36431,16 @@
    "from": "record:balance-from-conservation-along-a-relation",
    "to": "record:balance-from-the-first-law",
    "type": "interpretive"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "record:not-going-out-of-a-region",
+   "type": "formal-reuse"
   },
   {
    "from": "record:balance-from-conservation-along-a-relation",
@@ -47892,6 +48103,41 @@
    "type": "related"
   },
   {
+   "from": "record:premises-met-and-failed",
+   "to": "module:Becoming.PremiseWitnesses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:a-narrowing-above-its-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:becoming-spine-instances",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:one-root-to-its-edge",
+   "type": "related"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:the-source-texts-test-systems",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "related"
+  },
+  {
    "from": "record:premises-read-off-the-exchange",
    "to": "module:Becoming.Counterfactual",
    "type": "proved-in"
@@ -51532,6 +51778,41 @@
    "type": "related"
   },
   {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "module:Becoming.PremiseWitnesses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:comparison-by-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:eventual-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:premises-met-and-failed",
+   "type": "related"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:what-self-concern-alone-ranks",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:widening-as-what-every-weighting-ranks",
+   "type": "related"
+  },
+  {
    "from": "record:self-concern-through-dependence",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
@@ -52055,6 +52336,21 @@
    "from": "record:space-and-its-parts",
    "to": "record:theory-of-becoming-foundation",
    "type": "related"
+  },
+  {
+   "from": "record:standings-not-read-off-the-occurrence-model",
+   "to": "module:Becoming.UnreadStandings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:standings-not-read-off-the-occurrence-model",
+   "to": "record:amounts-by-unit-matchings",
+   "type": "related"
+  },
+  {
+   "from": "record:standings-not-read-off-the-occurrence-model",
+   "to": "record:the-world-represented-both-ways",
+   "type": "formal-reuse"
   },
   {
    "from": "record:steps-met-again-after-a-fall",
@@ -52925,6 +53221,11 @@
    "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "module:Becoming.Testing",
    "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "record:a-formations-couplings-as-its-blanket",
+   "type": "related"
   },
   {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
@@ -58382,6 +58683,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-standings-not-read-off-the-occurrence-model",
+   "to": "record:standings-not-read-off-the-occurrence-model",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-sum-over-histories-exact",
    "to": "record:sum-over-histories-exact",
    "type": "states"
@@ -58929,6 +59235,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-whole-persists-through-generation",
    "to": "record:whole-persists-through-generation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-formations-couplings-as-its-blanket",
+   "to": "record:a-formations-couplings-as-its-blanket",
    "type": "states"
   },
   {
@@ -60337,6 +60648,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
+   "to": "record:self-concern-and-c-under-the-condition",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
    "to": "record:self-concern-through-dependence",
    "type": "states"
@@ -60529,6 +60845,11 @@
   {
    "from": "section:theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
    "to": "record:one-root-to-its-edge",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/08-METHOD.md#r-premises-met-and-failed",
+   "to": "record:premises-met-and-failed",
    "type": "states"
   },
   {

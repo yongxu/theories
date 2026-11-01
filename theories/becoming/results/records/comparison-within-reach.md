@@ -11,27 +11,27 @@
 ## Laws
 
 1. Let the flow balance and l be the levels with a part withheld. Two significances that agree, from standpoint p, at each step on what the part has reached before it make the same four comparisons of the levels with and without the part: retaining and not adding carry over from one to another that has no more significance where the part has reached. (`Becoming.Flow.ReachesBefore`, `Becoming.Web.Retains`, `Becoming.Web.Adds`, `Becoming.Flow.Balances.retains_transfer`, `Becoming.Flow.Balances.not_adds_transfer`, `Becoming.Flow.Balances.comparison_local`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. For any significance covering what the part has reached before each step, the levels with the part retain what has significance along those without it exactly when they include them, and the reverse, and neither adds a continuation with significance exactly when neither exceeds the other: the comparisons under the continuation condition. (`Becoming.Web.Includes`, `Becoming.Web.Exceeds`, `Becoming.Flow.Balances.comparison_within_reach`, `Becoming.Web.retains_iff_includes`, `Becoming.Web.adds_iff_exceeds`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. For such a covering significance, adding is exceeding where the significance is decidable; for every covering significance, exceeding gives adding up to double negation. (`Becoming.Flow.Balances.adds_iff_exceeds_of_decidable`, `Becoming.Flow.Balances.not_not_adds_of_exceeds`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Without the continuation condition, significance bounded by a region closed under affecting that holds the members of a part compares the part as inclusion does; the reach closure is the least such region holding a center, and the system is one. (`Becoming.Flow.Balances.closed_comparison`, `Becoming.bounded`, `Becoming.Flow.WithinReach`, `Becoming.closedUnder_withinClosure`, `Becoming.Flow.withinSystem_closed`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 5. Where the levels of two balanced flows from one start differ at a step, their taking from or giving to that condition differed at an earlier step; any significance covering what the difference has reached before each step compares the two flows as the continuation condition does. (`Becoming.Flow.DiffersBefore`, `Becoming.Flow.Balances.differs_before`, `Becoming.Flow.Balances.comparison_within_difference`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. In Clearing, from the clearer's standpoint, significance bounded by each system judges the clearer's part to lose a continuation with significance (the dweller's) and bounded by each influence closure to retain; significance bounded by each reach closure is not the continuation condition, yet judges the part as the continuation condition does, retaining exactly where inclusion holds, so losing it too. (`Becoming.Clearing.clearerPart`, `Becoming.Clearing.system_counts_dweller`, `Becoming.Clearing.reach_counts_dweller`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 7. In Clearing the source gives what the clearer takes, and with the rest of the exchange fixed no levels balance the flow without the source's part, so that comparison does not exist. (`Becoming.Clearing.sourcePart`, `Becoming.Clearing.no_levels_without_source`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. In Margin the taker's part reaches a formation beyond the taker's influence closure while the levels with and without the part include each other, so every significance retains both ways: covering what a part reaches is enough and not needed. (`Becoming.Margin.flow`, `Becoming.Margin.web`, `Becoming.Margin.takerPart`, `Becoming.Margin.reach_without_misjudgment`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar's vocabulary only.
 9. In Trophic, a trophic cascade, the wolves' part does not reach the forest; with the rest of the exchange fixed the forest is admitted alike with and without it at every step, and the part narrows, closing the deer, so under the continuation condition it does not retain from any standpoint. (`Becoming.Trophic.wolvesPart`, `Becoming.Trophic.withoutWolves`, `Becoming.Trophic.wolves_unreached`, `Becoming.Trophic.deer_without_wolves`, `Becoming.Trophic.mediated_uncoupled`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 10. In Trophic, against the flow in which the deer respond the same taking is mixed, and under the continuation condition neither level path retains along the other; the wolves' part does not reach the forest while the difference between the two flows reaches it before the third step. (`Becoming.Trophic.responsive_mixed`, `Becoming.Trophic.difference_reaches_forest`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 11. In Trophic the far formation's system holds only itself, and from its standpoint significance bounded by each system judges the joint part of the far formation and the wolves to retain, while under the continuation condition the part does not retain (it loses the deer). (`Becoming.Trophic.farWolvesPart`, `Becoming.Trophic.far_system`, `Becoming.Trophic.mixed_part`)
-    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
+    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 
 <a id="conditions--条件"></a>
 ## Conditions

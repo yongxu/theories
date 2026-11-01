@@ -11,15 +11,15 @@
 ## Laws
 
 1. Decay: in a net where no occurrence reaches itself, the decay is an alteration under the one; in the net of possibilities, both stay and decay open at every intact moment, "intact or not" is constant and every two intact moments are alike in its core; a history within that net, decaying at its second step, has its two intact moments apart in that core. (`Becoming.Decay.Occ`, `Becoming.Decay.both_open`, `Becoming.Decay.decay_alters`, `Becoming.Decay.history`, `Becoming.Decay.history_apart`, `Becoming.Decay.history_within`, `Becoming.Decay.intactAlike`, `Becoming.Decay.intactAlike_class`, `Becoming.Decay.possible`, `Becoming.Decay.possible_acyclic`, `Becoming.Decay.possible_constant`, `Becoming.Decay.reach_rises`, `Becoming.Decay.time_not_in_core`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. No clear boundary: two overlapping identities, each a class; an occurrence ends under one and begins under the other; their union is not a class, and its line from the first occurrence reaches the third with its ends apart. (`Becoming.Overlap.Occ`, `Becoming.Overlap.b_positions`, `Becoming.Overlap.continues_each`, `Becoming.Overlap.either`, `Becoming.Overlap.first`, `Becoming.Overlap.second`, `Becoming.Overlap.step`, `Becoming.Overlap.tolerance_line_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 3. A line of descent generates at two grains: on the endless line of descent, the line under the one never ends and ahead of every point a member begins. (`Becoming.LineOfDescent.Endless.generates`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 4. Two family lines: the class of one family line lies strictly between a member's class and the one, is constant, and its core goes on through each birth while the member's line ends; from one family's first birth no member of the other family is reached, even under the one. (`Becoming.TwoLines.Occ`, `Becoming.TwoLines.between`, `Becoming.TwoLines.core_through_birth`, `Becoming.TwoLines.family`, `Becoming.TwoLines.family_class`, `Becoming.TwoLines.family_constant`, `Becoming.TwoLines.line_in_family`, `Becoming.TwoLines.member`, `Becoming.TwoLines.other_line_outside`, `Becoming.TwoLines.step`, `Becoming.TwoLines.total`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 5. A belief whose rate of spread grows with its number: on the step one holder at rate 0 goes to one holder at rate 1, and one holder at rates 0 and 1 lie apart in the core of same number. (`Becoming.Belief.grow`, `Becoming.Belief.rate_changes_on_step`, `Becoming.Belief.rate_read_in_regularity`, `Becoming.Belief.spread`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -63,6 +63,8 @@ The test systems of the first source text (§7): decay and the system with no cl
 - **formal-reuse**: [reach-past-ones-own-end](reach-past-ones-own-end.md). LineOfDescent.Endless.
 - **formal-reuse**: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). moveRel, adaptive_core_apart.
 - related, not a proved adapter: [testing-within-the-net](testing-within-the-net.md). The thermostat witness, of which an institution kept by consent or by penalty is a social reading.
+
+**Used by:** [premises-met-and-failed](premises-met-and-failed.md)
 
 <a id="sources--来源"></a>
 ### Sources

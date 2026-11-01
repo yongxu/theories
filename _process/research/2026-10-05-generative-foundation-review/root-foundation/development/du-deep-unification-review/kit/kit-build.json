@@ -1,0 +1,22 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/du-claim/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/kit",
+  "modules": 123,
+  "ran": [
+    "Becoming.UnreadStandings",
+    "BecomingUnreadStandingsAxiomAudit"
+  ],
+  "reused": 123,
+  "unclean": [],
+  "audits": {
+    "Becoming.PremiseWitnesses": {
+      "theorems": 35,
+      "declarations": 37,
+      "with_axioms": {}
+    },
+    "Becoming.UnreadStandings": {
+      "theorems": 32,
+      "declarations": 40,
+      "with_axioms": {}
+    }
+  }
+}

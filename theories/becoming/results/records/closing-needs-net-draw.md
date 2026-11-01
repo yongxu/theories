@@ -11,19 +11,19 @@
 ## Laws
 
 1. Levels l admit a formation f at t when they meet every requirement f then has; support is admission by the levels that stand, and levels no lower admit whatever lower levels admit. (`Becoming.Web.Admits`, `Becoming.Web.Supported`, `Becoming.Web.supported_iff_admits`, `Becoming.Web.Admits.mono`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A part is a decided family of formations (part : F → Bool), a single formation or a system of them. In the flow with the part withheld its members take and give nothing and the rest of the exchange is as it was; the levels without the part are the level path that balances this flow from the same start, unique where it exists. (`Becoming.Flow.withhold`, `Becoming.Flow.WithheldLevels`, `Becoming.Flow.WithheldLevels.unique`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Each step's taking and giving split into the rest's and the part's. In a balanced flow the difference is exact: at every step, each condition's level with everything the part has taken from it so far equals the level without the part with everything the part has given it so far. (`Becoming.Flow.taken`, `Becoming.Flow.given`, `Becoming.Flow.partTaken`, `Becoming.Flow.partGiven`, `Becoming.Flow.split_at`, `Becoming.Flow.taken_withhold`, `Becoming.Flow.given_withhold`, `Becoming.Flow.Balances`, `Becoming.Flow.Balances.withheld`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. So the boundary is exact: f is supported at t exactly when, on every condition it requires, its need with what the part has taken from the condition so far is at most the level without the part with what the part has given it so far; the part's cumulative net draw must stay within the margin by which the levels without it meet the need. (`Becoming.Flow.Balances.supported_iff_within_margin`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Hence where, up to t, the part has given each condition f requires at least what it took from it, f is supported at t wherever the levels without the part admit it; where the part has taken from each such condition at least what it gave, the levels without the part admit f at t wherever f is supported. (`Becoming.Flow.Balances.supported_of_net_give`, `Becoming.Flow.Balances.admits_of_net_draw`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. A part closes a formation that could form without it only through a net draw beyond the margin on a condition that formation requires (negating the equivalence; finding that condition uses classical logic), and opens one only through a net give. (`Becoming.Flow.Balances.supported_iff_within_margin`, `Becoming.Flow.Balances.admits_of_net_draw`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. The difference and the boundary hold in every world with the local condition inside the law: balance only at the condition compared, or at the conditions the formation requires, across the steps before t; the boundary stays an exact iff, and the forms with balance everywhere are their corollaries. (`Becoming.Flow.BalancesOn`, `Becoming.Flow.Balances.on`, `Becoming.Flow.withheld_at`, `Becoming.Flow.supported_of_net_give_at`, `Becoming.Flow.admits_of_net_draw_at`, `Becoming.Flow.supported_iff_within_margin_at`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.BalancesOn` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

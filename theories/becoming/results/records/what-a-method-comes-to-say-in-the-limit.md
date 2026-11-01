@@ -11,23 +11,23 @@
 ## Laws
 
 1. A method guesses yes or no at each horizon of a run; fixed by the record, its guess at k is the same on runs agreeing up to k. It verifies a reading in the limit where it converges to yes exactly inside, and refutes it in the limit where its yes recurs exactly inside; converging to no puts a run outside. (`Becoming.Limit.Method`, `Becoming.Limit.ByRecord`, `Becoming.Limit.Converges`, `Becoming.Limit.YesFrom`, `Becoming.Limit.YesAfter`, `Becoming.Limit.YesRecurs`, `Becoming.Limit.Verifies`, `Becoming.Limit.Refutes`, `Becoming.Limit.converges_unique`, `Becoming.Limit.not_recurs_of_no`, `Becoming.Limit.Verifies.outside_of_no`, `Becoming.Limit.Refutes.outside_of_no`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. A reading verified in the limit by a method fixed by the record is the union of closed readings "from n on the guess is yes"; one refuted in the limit is the meet of verifiable readings "a yes comes at or after n". (`Becoming.Limit.verifies_iff_union`, `Becoming.Limit.yesFrom_closed`, `Becoming.Limit.refutes_iff_meet`, `Becoming.Limit.yesAfter_verifiable`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A reading of tests is verified and refuted in the limit by "no test has failed so far", and "some test succeeds" by "some test has succeeded so far", each fixed by the record for tests fixed by prefixes. (`Becoming.Limit.noneFailed`, `Becoming.Limit.noneFailed_byRecord`, `Becoming.Limit.noneFailed_verifies`, `Becoming.Limit.noneFailed_refutes`, `Becoming.Limit.Succeeds`, `Becoming.Limit.someSucceeded`, `Becoming.Limit.someSucceeded_byRecord`, `Becoming.Limit.someSucceeded_verifies`, `Becoming.Limit.someSucceeded_refutes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. The meet of two readings verified in the limit is verified by the conjunction of the guesses; the meet of two refuted in the limit is refuted by the joint guess, yes where each guess has said yes since the last joint yes. (`Becoming.Limit.both`, `Becoming.Limit.both_byRecord`, `Becoming.Limit.both_verifies`, `Becoming.Limit.pending`, `Becoming.Limit.jointly`, `Becoming.Limit.jointly_byRecord`, `Becoming.Limit.jointly_refutes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A guess of values converging on each run to the run's hypothesis verifies and refutes in the limit each reading "the hypothesis is v". (`Becoming.Limit.Identifies`, `Becoming.Limit.says`, `Becoming.Limit.says_byRecord`, `Becoming.Limit.identifies_verifies`, `Becoming.Limit.identifies_refutes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. With configurations told apart, "the last step changed nothing" is fixed by the record and verifies settling in the limit. (`Becoming.Limit.still`, `Becoming.Limit.still_byRecord`, `Becoming.Limit.still_verifies`, `Becoming.Limit.Free.settles_verified`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. On the free process settling and its complement are dense; settling is neither verifiable nor refutable; under Markov's principle no method fixed by the record refutes it in the limit (the run changing where it says yes). (`Becoming.Limit.Free.settles_dense`, `Becoming.Limit.Free.unsettled_dense`, `Becoming.Limit.Free.settles_not_verifiable`, `Becoming.Limit.Free.settles_not_refutable`, `Becoming.Limit.Free.against`, `Becoming.Limit.Free.against_state`, `Becoming.Limit.Free.settles_not_refuted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. On the sequences of moves "the last move was true" refutes recurrence in the limit and its negation verifies that from some step on every move is false; under Markov's principle no method fixed by the record verifies recurrence in the limit. (`Becoming.Limit.Sequences.lastMove`, `Becoming.Limit.Sequences.lastMove_byRecord`, `Becoming.Limit.Sequences.lastMove_refutes`, `Becoming.Limit.Sequences.EventuallyFalse`, `Becoming.Limit.Sequences.notLastMove_verifies`, `Becoming.Limit.Sequences.not_recurs_of_eventuallyFalse`, `Becoming.Limit.Sequences.against`, `Becoming.Limit.Sequences.against_act`, `Becoming.Limit.Sequences.recurs_not_verified`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. Saying from a run's not recurring that from some step on its moves are false, and saying which of two guesses recurs from their disjunction recurring, each give the limited principle of omniscience. (`Becoming.Limit.Sequences.eventuallyFalse_lpo`, `Becoming.Limit.Sequences.either_recurs_lpo`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

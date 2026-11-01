@@ -11,17 +11,17 @@
 ## Laws
 
 1. Sampled generations: a population of N, h of the first kind, each next generation N draws from the last weighted by its counts; over the histories of k generations, each weighed by its ways of drawing, the total of a reading of the final count is linear and monotone in the reading, and the histories weigh (N^N)^k together. (`Becoming.Drift.sampled`, `Becoming.Drift.sampled_succ`, `Becoming.Drift.ones_le`, `Becoming.Drift.sampled_le`, `Becoming.Drift.sampled_add`, `Becoming.Drift.sampled_mul`, `Becoming.Drift.sampled_one`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. No direction without selection: summed over the histories the final count is h (N^N)^k, its start times the whole weight. (`Becoming.Drift.weighted_ones`, `Becoming.Drift.sampled_count`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The ends absorb: from none or from all of the first kind every history stays there. (`Becoming.Drift.from_none`, `Becoming.Drift.from_all`, `Becoming.Drift.sub_self_zero`, `Becoming.Drift.sampled_none`, `Becoming.Drift.sampled_all`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Drift ends variation: from a varied population the samplings fixing and losing the first kind weigh at least one each, so the histories still varied after k generations weigh at most r^k with r + 2 = N^N. (`Becoming.Drift.whole`, `Becoming.Drift.whole_true`, `Becoming.Drift.whole_false`, `Becoming.Drift.whole_weight`, `Becoming.Drift.varied`, `Becoming.Drift.varied_zero`, `Becoming.Drift.varied_self`, `Becoming.Drift.varied_step`, `Becoming.Drift.one_le_pow`, `Becoming.Drift.varied_vanishes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it: finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability. (`Becoming.Drift.fixed`, `Becoming.Drift.count_le`, `Becoming.Drift.fixed_le`, `Becoming.Drift.fixation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Witness: two members, one of each kind, one generation: of the four histories one fixes, one loses and two stay varied. (`Becoming.Drift.TwoMembers.one_generation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

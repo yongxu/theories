@@ -10,7 +10,7 @@ from unittest.mock import patch
 from tools.research import master_laws, registry
 
 NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'order'}
-LABEL = '*Master laws, by Lean dependency:* '
+LABEL = '*Shared laws, by Lean dependency:* '
 
 
 def measured(*entries):
@@ -30,7 +30,7 @@ class MasterLawNote(unittest.TestCase):
             ({'master_laws': ['closure', 'return'], 'grammar': True, 'dependence': 'grammar'},
              'closure and finite runs; its declarations reach the grammar.'),
             ({'master_laws': [], 'grammar': True, 'dependence': 'grammar'},
-             "no master law's anchor; its declarations reach the grammar."),
+             "no shared law's anchor; its declarations reach the grammar."),
             ({'master_laws': ['order'], 'grammar': True, 'grammar_vocabulary_only': True, 'dependence': 'grammar'},
              "order; its declarations reach the grammar's vocabulary only."),
             ({'master_laws': ['balance', 'lumping', 'order'], 'grammar': False, 'dependence': 'balance, represented'},
@@ -39,7 +39,7 @@ class MasterLawNote(unittest.TestCase):
             ({'master_laws': ['order'], 'grammar': False, 'dependence': 'anchor, not reached'},
              'order; its declarations do not reach the grammar.'),
             ({'master_laws': [], 'grammar': False, 'dependence': 'no master law'},
-             "no master law's anchor among the constants its declarations use."),
+             "no shared law's anchor among the constants its declarations use."),
         ]
         for e, text in cases:
             self.assertEqual(self.note(e), LABEL + text)
@@ -58,7 +58,7 @@ class MasterLawNote(unittest.TestCase):
         text = self.note(e, names=('X.a', 'Y.b', 'X.c'))
         self.assertEqual(text, LABEL + 'its declarations include the anchor `X.a` itself; balance; its declarations do not reach the grammar, '
                          'which represents balance and cannot state it without amounts; the measure counts central declaration `X.a` '
-                         '(taken alone: order; not reaching the grammar) as following from a master law (not reaching the grammar: a law '
+                         '(taken alone: order; not reaching the grammar) as following from a shared law (not reaching the grammar: a law '
                          'of its model); '
                          'the measure counts central declaration `X.c` as following from a premise of the account (support); '
                          '1 of its declarations is not in the spine run and not measured, so this holds of the others only.')
@@ -79,8 +79,8 @@ class MasterLawNote(unittest.TestCase):
     def test_same_dependence_other_master_laws_and_the_grammar_reason(self):
         e = {'master_laws': ['closure', 'balance'], 'grammar': True, 'dependence': 'grammar',
              'central': [{'declaration': 'X.a', 'category': 'master law', 'dependence': 'grammar', 'master_laws': []}]}
-        self.assertTrue(self.note(e).endswith("the measure counts central declaration `X.a` (taken alone: no master law's anchor; reaching "
-                                              "the grammar) as following from a master law (by reaching the grammar)."))
+        self.assertTrue(self.note(e).endswith("the measure counts central declaration `X.a` (taken alone: no shared law's anchor; reaching "
+                                              "the grammar) as following from a shared law (by reaching the grammar)."))
         d = {'master_laws': [], 'grammar': False, 'dependence': 'no master law',
              'central': [{'declaration': 'X.a', 'category': 'definitional or representational', 'dependence': 'no master law',
                           'master_laws': [], 'reason': 'Iff.rfl'}]}
@@ -96,7 +96,7 @@ class MasterLawNote(unittest.TestCase):
         widths = []
         for i, line in enumerate(lines[:-1]):
             m = re.match(r'\d+\. ', line)
-            if m and '*Master laws' in lines[i + 1]:
+            if m and '*Shared laws' in lines[i + 1]:
                 widths.append(len(m.group(0)))
                 self.assertTrue(lines[i + 1].startswith(' ' * len(m.group(0)) + '- '), lines[i + 1][:40])
         self.assertIn(4, widths)
@@ -321,7 +321,7 @@ class StatementsAtModelLines(unittest.TestCase):
         self.assertIn("   - *At a model (declared; reviewed in [review.md](", page)
         self.assertIn("):* `M.reading` states `X.row` at a World's occurrence model. Computed: its proof reaches the row; its "
                       "statement names, directly or through its module's definitions, `Becoming.«则»` and `Becoming.«而»`; it keeps "
-                      "`Becoming.Web` in other terms. The row taken alone: on no master law's anchor.", page)
+                      "`Becoming.Web` in other terms. The row taken alone: on no shared law's anchor.", page)
         self.assertIn("):* `X.row` is stated at a World's occurrence model by `M.reading` (law 2 of this record).", page)
         self.assertIn("):* `X.row` is stated at the row's own carrier and a process's model by `N.reading` ([b](", page)
         self.assertEqual(page.count('*At a model (declared; reviewed in'), 3)  # every line marks what is declared

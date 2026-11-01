@@ -11,27 +11,27 @@
 ## Laws
 
 1. Let F and G be frames on configurations S and S′ with the same moves A and claims C. A relation B is a bisimulation between them where related configurations realize the same claims and each step of either is matched by a step of the other by the same move into related configurations; s and s′ are alike where some bisimulation relates them. (`Becoming.Frame`, `Becoming.Bisimulation`, `Becoming.Alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Equality is a bisimulation, the converse of a bisimulation is one, and two compose; so likeness is reflexive, symmetric and transitive, stated as a relation since a quotient needs Quot.sound. (`Becoming.Bisimulation.eq`, `Becoming.Bisimulation.converse`, `Becoming.Bisimulation.comp`, `Becoming.Alike.refl`, `Becoming.Alike.symm`, `Becoming.Alike.trans`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Alike configurations realize the same claims, match each other's steps by the same move into alike configurations and every course of moves into alike configurations, and pass the same tests, a course of moves followed by a claim. (`Becoming.Alike.realized`, `Becoming.Alike.step`, `Becoming.Bisimulation.trace`, `Becoming.Alike.trace`, `Becoming.Alike.tests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A frame is determined up to likeness at s where any two outcomes of one move at s are alike; a determined frame is so everywhere; determinacy up to likeness passes along likeness, and where it holds the same move takes alike configurations to alike ones. (`Becoming.Determined`, `Becoming.DeterminedAt`, `Becoming.Determined.at`, `Becoming.DeterminedAt.transfer`, `Becoming.DeterminedAt.goAlike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. In Twins a start has two successors by one move: they are alike, the frame is not determined, and its start is alike to the start of a frame with one successor, which is determined, so the twins are determined up to likeness at the start. (`Becoming.Twins.Config`, `Becoming.Twins.frame`, `Becoming.Twins.one`, `Becoming.Twins.not_determined`, `Becoming.Twins.one_determined`, `Becoming.Twins.bisimulation`, `Becoming.Twins.left_alike_right`, `Becoming.Twins.successor_not_start`, `Becoming.Twins.bisimulation_one`, `Becoming.Twins.alike_one`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Under the law of exchange read through the claims that a relatum stands at an amount, agreeing at every relatum is a bisimulation; standings are alike exactly where they agree at every relatum, and the law is determined up to likeness at every standing. (`Becoming.exchangeFrame`, `Becoming.exchange_pointwise_bisimulation`, `Becoming.exchange_alike_of_pointwise`, `Becoming.exchange_pointwise_of_alike`, `Becoming.exchange_alike_iff`, `Becoming.exchange_determinedAt`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. A description π of configurations makes sense where it identifies exactly the alike configurations; it does exactly where being identified by it is a bisimulation and it identifies every alike pair; descriptions that make sense identify the same configurations. (`Becoming.IdentifiesAlike`, `Becoming.identifiesAlike_iff`, `Becoming.IdentifiesAlike.unique`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Where the frame is determined up to likeness everywhere, a description that makes sense carries a law (through carries_law_iff of Becoming.Mechanism); naming the configurations makes sense exactly where alike configurations are one, and the twins' naming does not. (`Becoming.FactorsThrough`, `Becoming.carries_law_iff`, `Becoming.IdentifiesAlike.carries`, `Becoming.identifiesAlike_id_iff`, `Becoming.Twins.naming_not_identifiesAlike`)
-   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 9. For a determined law read through a map, the claims being the map's value, configurations are alike exactly where their futures through the map are the same, and there a description that makes sense carries a law. (`Becoming.Law.orbit`, `Becoming.Law.orbit_shift`, `Becoming.Law.process`, `Becoming.Law.frameBy`, `Becoming.Law.frameBy_determined`, `Becoming.Law.SameFuture`, `Becoming.Law.alike_future`, `Becoming.Law.sameFuture_bisimulation`, `Becoming.Law.alike_iff_sameFuture`, `Becoming.Law.IdentifiesAlike.carries`)
-   - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 10. In the periphery bridge, Deeper.Bisimulation of RelationalDynamics is the core's bisimulation of frames with no claims, so in static and toggle every configuration of one is alike to every configuration of the other. (`Becoming.Frame.bare`, `Becoming.deeper_bisimulation_iff`, `Becoming.static_toggle_alike`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 11. In the periphery bridge, ExplanatoryBranching.Bisimulation is the core's bisimulation of frames whose claims are a model's conditions, and alike configurations pass every branching test, negation and conjunction included (through bisimulation_implies_same). (`Becoming.Frame.ofModel`, `Becoming.branching_bisimulation_iff`, `Becoming.Alike.same`)
-    - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

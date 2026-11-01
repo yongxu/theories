@@ -11,19 +11,19 @@
 ## Laws
 
 1. For any function F : X → U → E → X on any types, the standard model is the process on X whose move is a pair of input and noise, x going by (u, e) to F x u e; it is determined. The trajectory from x₀ under inputs u and noise e is a run of it whose moves are (u n, e n). (`Becoming.inputs`, `Becoming.inputs_determined`, `Becoming.trajectory`, `Becoming.inputsRun`, `Becoming.Determined`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For any run of the standard model, where the run has not taken (u′, e′) at x before step t and X has two different elements, the record up to t fixes no outcome of (u′, e′) at x: no configuration is where every determined process admitting the run's steps before t sends it. This is the instance of the law that in a determined process a move not taken is not fixed. (`Becoming.inputs_intervention_unfixed`, `Becoming.Run.Takes`, `Becoming.Run.Fixes`, `Becoming.Run.not_fixes_of_untaken`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Run.not_fixes_of_untaken` as following from a law of its model (an untaken move retargeted).
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Run.not_fixes_of_untaken` as following from a law of its model (an untaken move retargeted).
    - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.Run.not_fixes_of_untaken` is stated at a process's model by `Becoming.ModelStatements.not_fixes_reading` ([experiment-needs-return](experiment-needs-return.md), law 9).
    - *Standing of `Becoming.Run.not_fixes_of_untaken`, by the rule:* at a represented model (F5's verified items at the process model).
 3. The standard model sends (u′, e′) at x to F x u′ e′ and nowhere else, by its definition. (`Becoming.inputs_model_fixes`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. For any process whose moves are pairs, forgetting the second part gives the process in which u goes from s to s′ where (u, e) does for some e; each run of the process gives a run of it, with the first parts of its moves. (`Becoming.forget`, `Becoming.Run.forget`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. With the noise forgotten, the standard model of any F is determined exactly where F x u e = F x u e′ for every x, u, e and e′: both directions hold. (`Becoming.forget_inputs_determined_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. In Joint's witnesses, with the shock as a move the process is determined; with the shock written into the step relation rather than the move, the move does not determine the step, and the lone drawer's loss is overdetermined, its part making no difference. (`Becoming.Shock.determined`, `Becoming.Hidden.shock_in_the_step`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

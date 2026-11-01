@@ -11,21 +11,21 @@
 ## Laws
 
 1. For any alphabet, words, adjacency relation r, reading of groups and meanings: where grouping by r recovers the words of every encoded sequence, reading every encoded sequence group by group gives the meanings of its words exactly where each word is read as its meaning; for any list of words, reading their groups gives their meanings exactly where each word of the list is so read. (`Becoming.Segmentation.readAll`, `Becoming.Segmentation.readAll_map_iff`, `Becoming.Segmentation.reads_every_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For any process and configuration s where every word is a course from s back to s: every sequence of words written out is such a course, and, where grouping recovers the words, every course of words is read as its words' meanings exactly where each word is read as its meaning. (`Becoming.Courses.encode_course`, `Becoming.Courses.course_reads_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. For every acquired lexicon whose transition record bonds a to b and c to d and none of b to a, b to c, d to a and d to c, grouping recovers the two words of every encoded sequence, its reading of forms is the core's reading of groups, and every encoded sequence is interpreted as the assembly of its atoms exactly where each word form resolves to its atom. (`Becoming.MachineInstances.Groups`, `Becoming.MachineInstances.segments_of_groups`, `Becoming.MachineInstances.readForms_eq`, `Becoming.MachineInstances.interprets_every_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. One encounter offering two operations leaves the form with both candidates, unresolved; the history learned 32, four encounters each offering two operations, records the bonds that group the encoding and resolves both word forms to their atoms, so it interprets every encoded sequence as the assembly of its atoms. (`Generative.AcquiredBinding.single_ambiguous_encounter_does_not_choose_a_meaning`, `Generative.AcquiredBinding.actual_encounters_acquire_both_bindings`, `Becoming.MachineInstances.learned_groups`, `Becoming.MachineInstances.learned_interprets_every`, `Generative.AcquiredBinding.acquired_binding_and_grouping_compose`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. For any lexicon, form and target: where the target is in the repertoire and offered in every admitted encounter with the form, a form that resolves uniquely resolves to the target. (`Generative.AcquiredBinding.unique_resolution_is_correct_under_coverage`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. Executing the three-word utterance with learned 32 gives the response true, false, true, with its support used up (none left, 25 used in all) and four records; with learned 31 the utterance is interpreted as intended but not executed. (`Generative.AcquiredBinding.acquired_bindings_reach_actual_compositional_response`, `Generative.AcquiredBinding.interpretation_can_outlast_affordable_execution`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. An encounter offering only a wrong operation resolves the form wrongly and executes it; two identical ambiguous encounters leave both candidates; contrary encounters suspend the form instead of relabelling it, and excluding the sound encounters' source then keeps the wrong binding. (`Generative.AcquiredBinding.omitted_target_can_produce_a_wrong_unique_binding`, `Generative.AcquiredBinding.repeated_ambiguity_does_not_resolve_reference`, `Generative.AcquiredBinding.contrary_encounters_suspend_instead_of_silently_relabeling`, `Generative.AcquiredBinding.excluding_the_sound_encounters_preserves_the_wrong_binding`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. After contrary encounters, a supplied judgment excluding the wrong source resolves the form correctly and executes the utterance as intended, with every earlier record kept. (`Generative.AcquiredBinding.corrected_admission_repairs_use_without_erasing_history`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

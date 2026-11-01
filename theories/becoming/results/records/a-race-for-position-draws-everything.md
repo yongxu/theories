@@ -11,15 +11,15 @@
 ## Laws
 
 1. Drawers in turn with no floor, each leaving at most what it is given, rank what they leave by position over the steps that remain: k times their own draw against what all draw from them on. A profile revises another for position, and is perfect for position where it revises itself. (`Becoming.Optimum.InTurn.drawnAll`, `Becoming.Optimum.InTurn.whole`, `Becoming.Optimum.InTurn.RevisesPosition`, `Becoming.Optimum.InTurn.PerfectPosition`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. What a drawer keeps for position it keeps for nothing: where its own later draw is the same, what passes on of it is at most it and all draw no less later, keeping lowers k times its own draw by k times what it keeps and what all draw by at most once that, so among two drawers or more a best response keeps nothing; drawing everything then places it no lower. (`Becoming.Optimum.InTurn.position_keeps_nothing`, `Becoming.Optimum.InTurn.position_nothing_best`, `Becoming.Optimum.InTurn.pass_le`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. At the last step every best response for position draws everything, whatever stands next; at a step after which every drawer draws everything, a drawer after the first draws everything where what stands from nothing is least. (`Becoming.Optimum.InTurn.drawn_first_none`, `Becoming.Optimum.InTurn.drawn_other_none`, `Becoming.Optimum.InTurn.drawnAll_none`, `Becoming.Optimum.InTurn.later_same`, `Becoming.Optimum.InTurn.drawnAll_grows`, `Becoming.Optimum.InTurn.position_step`, `Becoming.Optimum.InTurn.position_last`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where what stands from nothing is at most what stands from anything left and there are at least two drawers, every profile perfect for position draws everything at every step before the horizon, the base stands at what stands from nothing, a dependence above it met at the start breaking at the first step, and drawing everything is perfect. (`Becoming.Optimum.InTurn.position_perfect_ends`, `Becoming.Optimum.InTurn.position_perfect_draws`, `Becoming.Optimum.InTurn.position_levels`, `Becoming.Optimum.InTurn.zero_position_perfect`, `Becoming.Web.position_broken`, `Becoming.Web.drain_position_broken`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Each premise binds: with one drawer every profile is perfect; in Stopping, where anything left stops what stands next, drawing everything is not perfect and every perfect profile has the second drawer keep the unit it is given at the first step. (`Becoming.Optimum.InTurn.position_one`, `Becoming.Optimum.InTurn.stopping`, `Becoming.Optimum.InTurn.Stopping.not_least`, `Becoming.Optimum.InTurn.Stopping.zero_not_perfect`, `Becoming.Optimum.InTurn.Stopping.perfect_keeps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
