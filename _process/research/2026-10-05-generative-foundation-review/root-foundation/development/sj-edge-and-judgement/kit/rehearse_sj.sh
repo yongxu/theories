@@ -39,6 +39,8 @@ python3 -B "$K/board_sj.py" head > "$ASIDE/board-head.log" 2>&1; step board-head
 # the coordinator sends the order sentence with its word; the rehearsal writes a placeholder in its place
 SJ_ORDER="${SJ_ORDER:-the order the coordinator sends with its word (rehearsal placeholder)}" \
   python3 -B "$K/board_sj.py" landed "$ID" "$N" > "$ASIDE/board.log" 2>&1; step board-landed $?
+SJ_HISTORY_ROW="${SJ_HISTORY_ROW:-| **SJ rehearsal row (placeholder)** | the rehearsal | rehearsed at core receipt \`{RECEIPT}\`, study §{N}, {DATE} | the kit | none |}" \
+  python3 -B "$K/board_sj.py" history "$ID" "$N" > "$ASIDE/history.log" 2>&1; step board-history $?
 make research-render > "$ASIDE/render2.log" 2>&1; step render $?
 for t in research-check-strict research-links research-test; do make $t > "$ASIDE/$t.log" 2>&1; step $t $?; done
 git status --porcelain --untracked-files=all > "$ASIDE/paths.txt"
