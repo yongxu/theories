@@ -3,7 +3,11 @@
 
 usage: python3 -B board_gc2.py claim BOARD
        python3 -B board_gc2.py head BOARD
-       python3 -B board_gc2.py landed BOARD HISTORY ORDER_FILE CHECKED_ON
+       python3 -B board_gc2.py landed BOARD HISTORY ORDER_FILE CHECKED_ON ROWS_FILE ROWS_NAMED
+
+ORDER_FILE holds the coordinator's order sentence verbatim (it ends the landed clause). ROWS_FILE holds the history
+rows missing for earlier landings, one per line, inserted after the last landed row and before GC2's; ROWS_NAMED
+names them in the landed clause.
 """
 import sys
 
@@ -39,8 +43,8 @@ LANDED = ("GC2 landed (documents only, no Lean, no new record and no core run): 
           "other registration words), G0 use by use, each entry's route to the live statement, and the relabelling "
           "page's move to history. Every pending source read and recorded, the table rendered from the data, an "
           "independent AI read taken (37 findings, every blocker and fix taken); the records the renames' rewrites "
-          "drift re-pointed after reading; render, strict check, links (0 broken), the 305 tests and both dossier "
-          "checks pass on {checked}. Then, in the coordinator's order: {order}")
+          "drift re-pointed after reading; GC2's row in the history file, with the rows missing there for {rows}; "
+          "render, strict check, links (0 broken), the 305 tests and both dossier checks pass on {checked}. {order}")
 
 ROW = ("| **GC2: the chain's open proposals decided, in one revision through its maintenance record** (the coordinator's "
        "word, 2 November 2026; DF's LEFT). A1–A8, batch B's option, the retired labels' key with both senses of G0, "
@@ -82,11 +86,13 @@ def main():
         lines[i] = PREFIX + HEAD + '; ' + rest
     elif mode == 'landed':
         history, order, checked = sys.argv[3], open(sys.argv[4]).read().strip(), sys.argv[5]
+        extra = [l for l in open(sys.argv[6]).read().split('\n') if l.strip()]
+        named = sys.argv[7]
+        assert order.startswith("Then, in the coordinator's order") and order.endswith('.'), order
         i = queue_index(lines)
         rest = lines[i][len(PREFIX):]
         assert rest.startswith(HEAD + '; '), 'our head clause is not first'
-        order = order if order.endswith('.') else order + '.'
-        lines[i] = PREFIX + LANDED.format(checked=checked, order=order) + ' ' + rest[len(HEAD) + 2:]
+        lines[i] = PREFIX + LANDED.format(checked=checked, order=order, rows=named) + ' ' + rest[len(HEAD) + 2:]
         claim = [k for k, l in enumerate(lines) if l.startswith(ITEM)]
         assert len(claim) == 1, claim
         del lines[claim[0]]
@@ -99,7 +105,11 @@ def main():
         while last + 1 < len(h) and h[last + 1].startswith('| '):
             last += 1
         print('history row after line', last + 1, ':', h[last][:90])
-        h.insert(last + 1, ROW.format(checked=checked))
+        for row in extra:
+            assert row.startswith('| **') and '{' not in row, row[:80]
+            assert not any(l.startswith(row[:60]) for l in h), 'row already present: ' + row[:60]
+        h[last + 1:last + 1] = extra + [ROW.format(checked=checked)]
+        print('inserted', len(extra), 'rows and GC2\'s after', h[last][:60])
         open(history, 'w').write('\n'.join(h))
     else:
         raise SystemExit(__doc__)
