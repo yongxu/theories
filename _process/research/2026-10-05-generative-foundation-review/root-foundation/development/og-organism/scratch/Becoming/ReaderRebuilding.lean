@@ -1,53 +1,67 @@
 import Becoming.GrammarLaws
 
 /-!
-# A reader rebuilt from what it reads (OG)
+# Where a reader is rebuilt from (OG)
 
-One rule makes a family of nets. Each holds a level, in whole units, and a reader, a list of units
-by age. The members differ only in where a spent reader unit is rebuilt from. Plan §十三 item 9
-asks for a model of each of plan §六's test systems; this family is the model of an organism, and
-its other members are the nets where the organism's condition fails.
+One rule makes a family of nets. Each holds a level, in whole units, which the Chinese names call
+its stock (储), and a reader, a list of units by age. The members differ only in where a spent
+reader unit is rebuilt from: nowhere needed (a given reader, which does not age), the supply, the
+level, or nothing. Plan §十三 item 9 asks for a model of each of plan §六's test systems; the member
+rebuilt from the level is this family's model of an organism, and the other members are the nets
+where its condition fails.
 
 One step, in this order:
 
-1. **Draw.** One unit of the level goes to a sink; at `0` nothing is drawn.
+1. **Draw.** One unit of the level goes out; at `0` nothing is drawn.
 2. **Read.** While the supply is on, the units read in turn, and each takes one unit from the supply
    while the level is below its set level `m`. So the level rises by the units' count, to at most `m`.
 3. **Age.** Every unit ages by one, and a unit reaching the span `s` ends. A given reader does not age.
 4. **Rebuild.** Where fewer than `n` units remain, one unit of age `0` is made from the rule's
    source: the level (one unit of it, where there is one), the supply (while it is on), or nothing.
+   The rebuild is the rule's: from the level it makes a unit even where none is left.
 
-Whether the supply is on is chosen at each step, so the net of the possible (`net`) branches on it.
-A cut is a run of steps with the supply off.
+Whether the supply is on is chosen at each step, so the net of the possible (`net`) branches on it,
+every sequence of on and off being a course. A cut is a run of steps with the supply off.
 
 * **Kept while supplied** (L0). Where the reader is rebuilt from the level, with `n ≥ 1` and
-  `m ≥ 1`, the region where the reader is present is closed under the supplied step, still with
-  one more unit drawn at each step (`«供则读者不绝»`, `«供而多取读者不绝»`).
-* **The stock buys time** (L1). Under a cut, a reader rebuilt from the level is present after
-  `k + 1` steps from every level of at least `2 (k + 1)`, whatever the reader was at the start
-  (`«断而有储则读者存»`). A reader rebuilt from the supply, and one never rebuilt, started as `n` new
-  units, is gone after `s` steps of cut from every level (`«断则自供者尽»`, `«不复建者尽»`).
-* **The end absorbing** (L2). Where the reader rebuilt from the level ends, the level is `0`
-  (`«读者绝则无储»`), and that state is closed under the net, the supply on or off
-  (`«绝而不复»`). A reader rebuilt from the supply comes back once the supply returns (`«自供者复»`).
-* **One unit's horizon, decided.** At a span of two, a reader of one unit rebuilt from the level
-  ends under a cut at step `2 (l / 3 + 1)` from the level `l`, and at a span of three at
-  `3 (l / 4 + 1)`: each further `s + 1` units buy `s` steps. Rebuilt from the supply, it ends at
-  step three from every level (`«一读者之时»`, `«一读者之时三»`, `«自供者之时»`; decided for the
-  levels below fifteen or sixteen, the general law not proved).
-* **The family law.** Over the four members with a reader, the stock buys time under a cut, with
-  none bought by an empty stock, exactly where the reader is rebuilt from the level
-  (`«以储买时当且仅当取于储»`).
+  `m ≥ 1`, a present reader is present after a supplied step from every level, so the region where
+  it is present is closed under the supplied step (`«供则读者不绝»`, `«供则读者之域闭»`). With the
+  supply on, the level before the step plays no part: the read lifts it to at least one.
+* **A lower bound that grows with the stock** (L1). Under a cut, a reader rebuilt from the level is
+  present after `k + 1` steps from every level of at least `2 (k + 1)`, whatever the reader was at
+  the start (`«断而有储则读者存»`): a cut step takes at most two units. A reader rebuilt from the
+  supply, and one never rebuilt, started as `n` new units, are gone after `s` steps of cut from every
+  level (`«断则取于供者尽»`, `«不复建者尽»`).
+* **The end absorbing** (L2). Where the reader rebuilt from the level is gone after a step, the
+  level is `0` (`«读者绝则无储»`), and that state is closed under the net, the supply on or off
+  (`«取于储者绝而不复»`): the read needs a unit, and the rebuild a stock. A reader rebuilt from the
+  supply is present again after one supplied step (`«取于供者复»`).
+* **The family law.** Over the four members, at `n ≥ 1` and `s ≥ 1`, the stock buys time under a cut,
+  with an end from an empty stock, exactly where the rebuild draws on the level
+  (`«以储买时当且仅当取于储»`). It holds at a span of one too, so the turnover is not what separates
+  the members: the rebuild's source is.
+* **One unit's horizon, decided.** At `m = 2` (under a cut the read, the only use of `m`, does not
+  run), a reader of one unit rebuilt from the level ends under a cut at step `2 (l / 3 + 1)` from the
+  level `l` at a span of two, and at step `3 (l / 4 + 1)` at a span of three; rebuilt from the
+  supply, at a span of three, it ends at step three from every level (`«一元二期之时»`,
+  `«一元三期之时»`, `«取于供者之时»`). These are decided for the levels below fifteen or sixteen.
+  That each further `s + 1` units buy `s` steps at every span and level is a conjecture they check,
+  not proved here.
+
+**Not proved here:** that the reader rebuilt from the level ends under a cut from every stock; that
+its horizon never decreases in the stock; any rate for `n ≥ 2`. **Not modelled:** the flame and the
+equilibrium of the design's family, the supply's and the sink's amounts, the turnover read as
+carrying, and the organism's class ending where its matter goes on.
 
 The model's assumptions are its rule: whole units, discrete steps, one draw a step, units read in
-turn, the order above. An AI reading takes the family's organism as a minimal case of
+turn, the order above. An AI reading takes the member rebuilt from the level as a minimal case of
 self-maintenance, one constraint with turnover regenerated from the flow it regulates; that it
 describes a cell is a correspondence duty, not shown here.
 -/
 
 namespace Becoming
 
-namespace SelfRebuiltReader
+namespace ReaderRebuilding
 
 /-- Where a spent reader unit is rebuilt from. A `given` reader does not age. -/
 inductive Source where
@@ -111,9 +125,6 @@ def net (r : Rule) : «际» St := fun x y => ∃ on, y = step r on x
 
 /-- The supplied step. -/
 def supplied (r : Rule) : «际» St := fun x y => y = step r true x
-
-/-- The supplied step with one more unit drawn first: a window. -/
-def drawn (r : Rule) : «际» St := fun x y => y = step r true ⟨x.level - 1, x.ages⟩
 
 /-- `k` steps, the supply on or off throughout. -/
 def run (r : Rule) (on : Bool) : Nat → St → St
@@ -180,26 +191,24 @@ theorem rebuild_zero {r : Rule} (hs : r.source = .level) (on : Bool) (as : List 
 /-! ## Kept while supplied (L0) -/
 
 /-- **Kept while supplied (供则读者不绝).** Where the reader is rebuilt from the level, with
-`n ≥ 1` and `m ≥ 1`, the region where the reader is present is closed under the supplied step:
-the read leaves a unit to rebuild from wherever a unit read. -/
+`n ≥ 1` and `m ≥ 1`, a present reader is present after a supplied step from every level: the read
+leaves a unit to rebuild from wherever a unit read, whatever the level was before the step. -/
 theorem «供则读者不绝» {r : Rule} (hs : r.source = .level) (hn : 1 ≤ r.count)
-    (hm : 1 ≤ r.setLevel) : «闭» (supplied r) Present := by
-  intro x y present e
-  rw [e]
-  cases hx : x.ages with
-  | nil => exact absurd hx present
+    (hm : 1 ≤ r.setLevel) (l : Nat) {as : List Nat} (present : as ≠ []) :
+    Present (step r true ⟨l, as⟩) := by
+  cases as with
+  | nil => exact absurd rfl present
   | cons a as =>
-    show Present (rebuild r true (if true then read r.setLevel x.ages.length (x.level - 1)
-      else x.level - 1) (age r x.ages))
+    show Present (rebuild r true (if true then read r.setLevel (a :: as).length (l - 1)
+      else l - 1) (age r (a :: as)))
     rw [if_pos rfl]
-    have hk : 1 ≤ x.ages.length := by rw [hx]; exact Nat.succ_le_succ (Nat.zero_le _)
-    exact rebuild_present hs hn (read_pos hm hk) _
+    exact rebuild_present hs hn (read_pos hm (Nat.succ_le_succ (Nat.zero_le _))) _
 
-/-- **Kept under a window too (供而多取读者不绝).** With one more unit drawn at each step, the
-region where the reader is present is still closed. -/
-theorem «供而多取读者不绝» {r : Rule} (hs : r.source = .level) (hn : 1 ≤ r.count)
-    (hm : 1 ≤ r.setLevel) : «闭» (drawn r) Present :=
-  fun x y present e => «供则读者不绝» hs hn hm ⟨x.level - 1, x.ages⟩ y present e
+/-- **The region where the reader is present is closed under the supplied step
+(供则读者之域闭).** -/
+theorem «供则读者之域闭» {r : Rule} (hs : r.source = .level) (hn : 1 ≤ r.count)
+    (hm : 1 ≤ r.setLevel) : «闭» (supplied r) Present :=
+  fun x _ present e => e ▸ «供则读者不绝» hs hn hm x.level present
 
 /-! ## The stock buys time (L1) -/
 
@@ -342,9 +351,9 @@ theorem quiet_end {r : Rule} {on : Bool} :
     · apply quiet_empty (k + 1) _ h.2
       rw [h.1, e, older_replicate, if_neg hj]
 
-/-- **Rebuilt from the supply, it ends at its span under a cut (断则自供者尽).** A reader of `n` new
+/-- **Rebuilt from the supply, it ends at its span under a cut (断则取于供者尽).** A reader of `n` new
 units rebuilt from the supply is gone after `s` steps of cut, from every level. -/
-theorem «断则自供者尽» {r : Rule} (hs : r.source = .supply) (hspan : 1 ≤ r.span) (l : Nat) :
+theorem «断则取于供者尽» {r : Rule} (hs : r.source = .supply) (hspan : 1 ≤ r.span) (l : Nat) :
     (run r false r.span (fresh r.count l)).ages = [] := by
   match h : r.span, hspan with
   | 0, h' => exact absurd h' (Nat.not_succ_le_zero 0)
@@ -390,9 +399,9 @@ theorem read_zero (m : Nat) : read m 0 0 = 0 := by
   · rw [if_pos h, if_pos (show 0 + 0 < m from h)]
   · rw [if_neg h]
 
-/-- **Gone, it does not return (绝而不复).** For the reader rebuilt from the level, the empty
+/-- **Gone, it does not return (取于储者绝而不复).** For the reader rebuilt from the level, the empty
 state is closed under the net: no branch, the supply returned or not, brings the reader back. -/
-theorem «绝而不复» {r : Rule} (hs : r.source = .level) :
+theorem «取于储者绝而不复» {r : Rule} (hs : r.source = .level) :
     «闭» (net r) (fun x => x = ⟨0, []⟩) := by
   intro x y hx ⟨on, e⟩
   rw [e, hx]
@@ -409,9 +418,9 @@ theorem «绝而不复» {r : Rule} (hs : r.source = .level) :
     show rebuild r false 0 (age r []) = _
     rw [ha, rebuild_zero hs]
 
-/-- **Rebuilt from the supply, it returns (自供者复).** A reader rebuilt from the supply, gone,
+/-- **Rebuilt from the supply, it returns (取于供者复).** A reader rebuilt from the supply, gone,
 is present again after one supplied step, at every level. -/
-theorem «自供者复» {r : Rule} (hs : r.source = .supply) (hn : 1 ≤ r.count) (l : Nat) :
+theorem «取于供者复» {r : Rule} (hs : r.source = .supply) (hn : 1 ≤ r.count) (l : Nat) :
     Present (step r true ⟨l, []⟩) := by
   have ha : age r [] = [] := by unfold age; rw [hs]; rfl
   show Present (rebuild r true (if true then read r.setLevel 0 (l - 1) else l - 1) (age r []))
@@ -445,10 +454,11 @@ def BuysTime (r : Rule) : Prop :=
   (∀ k, ∃ l, Present (run r false (k + 1) (fresh r.count l))) ∧
     ∃ k, (run r false k (fresh r.count 0)).ages = []
 
-/-- **The stock buys time exactly where the reader is rebuilt from the level
-(以储买时当且仅当取于储).** Over the four members with a reader, at `n ≥ 1` and `s ≥ 1`: the
-given reader never ends, the reader rebuilt from the supply and the one never rebuilt end at
-their span from every level, and only the reader rebuilt from the level is carried by its stock. -/
+/-- **The stock buys time exactly where the rebuild draws on the level
+(以储买时当且仅当取于储).** Over the four members, at `n ≥ 1` and `s ≥ 1`: the given reader never
+ends, the reader rebuilt from the supply and the one never rebuilt end at their span from every
+level, and only the reader rebuilt from the level is carried by its stock. It holds at a span of
+one, so the turnover is not what separates the members. -/
 theorem «以储买时当且仅当取于储» {r : Rule} (hn : 1 ≤ r.count) (hspan : 1 ≤ r.span) :
     BuysTime r ↔ r.source = .level := by
   have hrep : List.replicate r.count 0 ≠ [] := by
@@ -465,7 +475,7 @@ theorem «以储买时当且仅当取于储» {r : Rule} (hn : 1 ≤ r.count) (h
       | ⟨k, e⟩ => exact absurd ((given_run hs false k _ rfl).symm.trans e) hrep
     | .supply =>
       match buys (r.span - 1) with
-      | ⟨l, p⟩ => rw [hk] at p; exact absurd («断则自供者尽» hs hspan l) p
+      | ⟨l, p⟩ => rw [hk] at p; exact absurd («断则取于供者尽» hs hspan l) p
     | .none =>
       match buys (r.span - 1) with
       | ⟨l, p⟩ => rw [hk] at p; exact absurd («不复建者尽» hs hspan false l) p
@@ -481,19 +491,19 @@ abbrev EndsAt (r : Rule) (l h : Nat) : Prop :=
   0 < (run r false (h - 1) (fresh r.count l)).ages.length ∧
     (run r false h (fresh r.count l)).ages.length = 0
 
-/-- **One unit's horizon, at a span of two (一读者之时).** A reader of one unit, span two, rebuilt
+/-- **One unit's horizon, at a span of two (一元二期之时).** A reader of one unit, span two, rebuilt
 from the level: under a cut from the level `l`, it ends at step `2 (l / 3 + 1)`, so each further
 three units of stock buy two steps; decided for every level below fifteen. -/
-theorem «一读者之时» : ∀ l, l < 15 → EndsAt ⟨2, 1, 2, .level⟩ l (2 * (l / 3 + 1)) := by decide
+theorem «一元二期之时» : ∀ l, l < 15 → EndsAt ⟨2, 1, 2, .level⟩ l (2 * (l / 3 + 1)) := by decide
 
 /-- At a span of three: it ends at step `3 (l / 4 + 1)`, each further four units buying three
 steps; decided for every level below sixteen. -/
-theorem «一读者之时三» : ∀ l, l < 16 → EndsAt ⟨3, 1, 2, .level⟩ l (3 * (l / 4 + 1)) := by decide
+theorem «一元三期之时» : ∀ l, l < 16 → EndsAt ⟨3, 1, 2, .level⟩ l (3 * (l / 4 + 1)) := by decide
 
 /-- Rebuilt from the supply, at a span of three, it ends at step three from every level below
 sixteen: its stock buys nothing. -/
-theorem «自供者之时» : ∀ l, l < 16 → EndsAt ⟨3, 1, 2, .supply⟩ l 3 := by decide
+theorem «取于供者之时» : ∀ l, l < 16 → EndsAt ⟨3, 1, 2, .supply⟩ l 3 := by decide
 
-end SelfRebuiltReader
+end ReaderRebuilding
 
 end Becoming

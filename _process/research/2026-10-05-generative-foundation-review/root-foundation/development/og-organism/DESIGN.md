@@ -1,6 +1,6 @@
 # OG: an organism on the root — design
 
-AI-written design, 1 November 2026, by OU's owner. Third draft, after one independent reading and its re-check ([REVIEW-1.md](REVIEW-1.md)), every finding taken. Nothing here is proved yet. Every reading is an AI reading until its Lean is checked. Reading time: about 12 minutes.
+AI-written design, 1 November 2026, by OU's owner. Third draft, after one independent reading and its re-check ([REVIEW-1.md](REVIEW-1.md)), every finding taken. The Lean is in scratch, and its reading ([REVIEW-2.md](REVIEW-2.md)) narrowed what it proves: §8 says what it proves, and where §2–§7 promise more, §8 holds. Every reading is an AI reading. Reading time: about 12 minutes.
 
 ## 0. Why this item
 
@@ -109,7 +109,24 @@ EL2's regime of a draw on a condition given nothing does not apply: its draws do
 
 ## 7. Lean plan
 
-- One pure-core leaf, `Becoming.SelfRebuiltReader` (name fixed at claim time). It imports the grammar, not the rooms' module, so it needs nothing from OU7. Every axiom report is empty.
+- One pure-core leaf, `Becoming.ReaderRebuilding` (named after its Lean reading: the rule rebuilds, not the reader). It imports the grammar, not the rooms' module, so it needs nothing from OU7. Every axiom report is empty.
 - **Small members:** decided by `decide` at small spans and stocks. **L0, L1 and L2:** proved by induction on the steps of (d), at every `s` and `n`; the step law for `n = 1` by induction on `L₀`.
-- **Record:** `a-reader-rebuilt-from-what-it-reads` (name fixed at claim time), with its home in 04 §8 beside `LivingOrganizationCorrespondence`, and a line in 01 §8.7's test systems.
+- **Record:** `the-stock-buys-time-where-the-rebuild-draws-on-it`, with its home in 04 §8 beside `LivingOrganizationCorrespondence`, and a line in 01 §8.7's test systems.
 - **Then:** claim on the board with the head free; scratch Lean; one reader on the Lean; landing on the coordinator's word.
+
+## 8. What the Lean proves
+
+`Becoming.ReaderRebuilding` ([scratch](scratch/Becoming/ReaderRebuilding.lean)): 32 theorems in 48 declarations, every axiom report empty ([build.log](build.log)). It models four members, the given reader (c), the reader rebuilt from the supply (c′), the one never rebuilt (c″) and the one rebuilt from the level (d). The supply is a choice at every step, so every sequence of on and off is a course.
+
+- **L0, proved in general.** In (d), at `n ≥ 1` and `m ≥ 1`, a present reader is present after a supplied step from every level, and its region is closed under the supplied step. With the supply on, the level before the step plays no part. So a window tests nothing in this rule, and the window theorem of the scratch's first build is folded into L0.
+- **L1, a lower bound that grows with the stock.** In (d), under a cut, the reader is present after `k + 1` steps from every level of at least `2 (k + 1)`, whatever it was at the start, an empty reader included, since the rule's rebuild makes a unit from the level. (c′) and (c″), from `n` new units, are gone after `s` steps of cut from every level.
+  - **Not proved:** that (d) ends from every stock; that its horizon never decreases in the stock; any rate for `n ≥ 2`.
+  - **Decided only:** the one-unit step law, `h(L₀ + s + 1) = h(L₀) + s`, at spans two and three, `m = 2`, levels below fifteen or sixteen. It is a conjecture those cases check. The flat stretch is `h(0) = … = h(s) = s`.
+- **L2.** In (d), a reader gone after a step leaves the level at `0`, and that state is closed under the net, because the read needs a unit and the rebuild a stock. It is closure of that one state, which is every end a step reaches. (c′) is present again after one supplied step.
+- **The family law.** Over the four members, at `n ≥ 1` and `s ≥ 1`, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level. It holds at a span of one, so the turnover, the guess's "span longer than one step", is not what separates the members: the rebuild's source is. §1's guess is narrowed to that.
+- **Not modelled:**
+  - the flame (a) and the equilibrium (b);
+  - the supply's and the sink's amounts;
+  - L3's turnover read as carrying, and the grain witness.
+
+  These wait for part 2.

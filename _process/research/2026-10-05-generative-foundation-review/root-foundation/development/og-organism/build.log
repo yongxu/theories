@@ -2,15 +2,15 @@
   "tree": "/Users/ren/theories/.claude/worktrees/og-organism/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/scratch",
   "modules": 5,
   "ran": [
-    "Becoming.SelfRebuiltReader",
-    "BecomingSelfRebuiltReaderAxiomAudit"
+    "Becoming.ReaderRebuilding",
+    "BecomingReaderRebuildingAxiomAudit"
   ],
   "reused": 4,
   "unclean": [],
   "audits": {
-    "Becoming.SelfRebuiltReader": {
+    "Becoming.ReaderRebuilding": {
       "theorems": 32,
-      "declarations": 49,
+      "declarations": 48,
       "with_axioms": {}
     }
   }
