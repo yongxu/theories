@@ -1,5 +1,5 @@
 diff --git a/theories/becoming/results/records/master-laws-on-the-grammar.json b/theories/becoming/results/records/master-laws-on-the-grammar.json
-index 93d20cab3..774578806 100644
+index 2b480e6ee..dd3956ddf 100644
 --- a/theories/becoming/results/records/master-laws-on-the-grammar.json
 +++ b/theories/becoming/results/records/master-laws-on-the-grammar.json
 @@ -50,8 +50,8 @@
@@ -93,15 +93,15 @@ index 93d20cab3..774578806 100644
          "Becoming.«定后则类之核同行»",
          "Becoming.«遍后则其内同行之类含于核»",
          "Becoming.«定后遍后则核为其内最粗同行之类»",
-@@ -1478,6 +1504,24 @@
-       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/review/REVIEW-HE2.md",
-       "role": "review",
-       "sha256": "6fa1a390da3a57be93c12c61c2872bb4bfe1e91902d76bc50c44cefb6ec913ba"
+@@ -1490,6 +1516,24 @@
+       "role": "receipt",
+       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
+       "declarations": []
 +    },
 +    {
 +      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md",
 +      "role": "integration",
-+      "sha256": "2315bd39b74514e6fb26d580be88c52563c3037052bc64d4949f708f4c59554c",
++      "sha256": "f77b26a382879ea8b1e50c5f1b1c710d61df74277e16dfb3da0a921747b38213",
 +      "declarations": []
 +    },
 +    {
@@ -118,7 +118,7 @@ index 93d20cab3..774578806 100644
      }
    ],
    "proof_bindings": [
-@@ -1743,6 +1787,10 @@
+@@ -1755,6 +1799,10 @@
      {
        "en": "1 November 2026, board item ND: renamed from \"the master laws on the grammar\" (文法上的主律), a name stating rank where 08 §7 measures only proof dependence, to \"the shared laws on the grammar\" (文法上的共律); the old names kept as aliases and the id kept as a key; no law, hypothesis or binding changed.",
        "zh": "2026年11月1日，工作板条目 ND：由“文法上的主律”更名为“文法上的共律”；旧名言等级，而 08 §7 所量唯证明之依赖。旧名留为别名，编号留为键；律、假设与绑定皆未改。"

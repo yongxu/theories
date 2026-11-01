@@ -3186,9 +3186,80 @@
  "invalid_first_run": "A first build, started at 2026-11-01T03:34:38Z, is not this rehearsal: its tree was copied after stage_check.py had applied a throwaway stage, so its GrammarLaws held the test theorems «试甲» and «试乙» (194 theorems in 223 declarations, not 192 in 221). Its result is not used. The throwaway patches were reversed, the tree rebuilt and checked, and rehearsal_tree.py now refuses any file the receipt does not record.",
  "not_in_it": [
   "U4c's re-cut of 10-u4c after its documents slot: record side only, as the coordinator was told; any Lean it changes is built alone, reusing these steps.",
-  "Owner patch 05-scope-wording: GrammarScope's comments, a small incremental run after this one.",
   "The text-review merge (dd95b4ba7) and the front refresh: documents only.",
   "Main's next Lean (UE28, at the head of the queue): the landing's merge brings it, and the landing's core run builds what it changes."
  ],
- "next": "The landing's core run on main with the kit and both stages applied reuses these steps; the incremental build of patch 05 first."
+ "next": "The landing's core run on main with the kit, the owner's patches 01-05 and both stages applied reuses these steps, and builds what main's Lean changes after 9a01af14e (UE28's BlanketCouplings) and any Lean of a stage's re-cut.",
+ "patch_05": {
+  "what": "The grammar's owner's patch 05 (GrammarScope's docstrings, comments only), built on the full rehearsal's tree: the 33 files with GrammarScope.lean as the patch leaves main's, and every module downstream of GrammarScope with the root as targets, every other step reused.",
+  "started_utc": "2026-11-01T06:22:02Z",
+  "finished_utc": "2026-11-01T06:22:18Z",
+  "gate_at_start": {
+   "load_1_5_15": "{ 5.64 23.27 39.01 }",
+   "load_5min": 23.27,
+   "memory_free_percent": 54,
+   "lean_runs": 0,
+   "polls": 35
+  },
+  "patch": {
+   "path": "patches/owner/05-scope-wording.patch",
+   "sha256": "1a793fdf47be9bf7d41988c47ebd5cadd0952f663e7f2b1ef930dba76e8cd781"
+  },
+  "tree_added": {
+   "path": "Becoming/GrammarScope.lean",
+   "sha256": "de007e88390199dd047f302ac16d4dd718ac6ef327a8e358de1bd88d324d5fd6"
+  },
+  "targets": [
+   "Becoming.GrammarCases",
+   "Becoming.GrammarScope",
+   "Becoming.PremiseWitnesses",
+   "Becoming.SignificanceStatements",
+   "Becoming"
+  ],
+  "build": {
+   "modules": 381,
+   "ran": [
+    "Becoming.GrammarScope",
+    "Becoming.GrammarCases",
+    "Becoming.PremiseWitnesses",
+    "Becoming.SignificanceStatements",
+    "Becoming",
+    "BecomingGrammarCasesAxiomAudit",
+    "BecomingGrammarScopeAxiomAudit",
+    "BecomingPremiseWitnessesAxiomAudit",
+    "BecomingSignificanceStatementsAxiomAudit",
+    "BecomingAxiomAudit"
+   ],
+   "reused": 376,
+   "unclean": [],
+   "audits": {
+    "Becoming.GrammarCases": {
+     "theorems": 40,
+     "declarations": 68,
+     "with_axioms": {}
+    },
+    "Becoming.GrammarScope": {
+     "theorems": 38,
+     "declarations": 45,
+     "with_axioms": {}
+    },
+    "Becoming.PremiseWitnesses": {
+     "theorems": 35,
+     "declarations": 37,
+     "with_axioms": {}
+    },
+    "Becoming.SignificanceStatements": {
+     "theorems": 5,
+     "declarations": 5,
+     "with_axioms": {}
+    },
+    "Becoming": {
+     "theorems": 0,
+     "declarations": 0,
+     "with_axioms": {}
+    }
+   }
+  },
+  "axioms": "every audited module's report empty"
+ }
 }

@@ -1,5 +1,5 @@
 diff --git a/theories/becoming/results/records/one-root-to-its-edge.json b/theories/becoming/results/records/one-root-to-its-edge.json
-index 279ca5ce6..865733a34 100644
+index fa54041d3..b7e75641a 100644
 --- a/theories/becoming/results/records/one-root-to-its-edge.json
 +++ b/theories/becoming/results/records/one-root-to-its-edge.json
 @@ -125,8 +125,8 @@
@@ -22,9 +22,9 @@ index 279ca5ce6..865733a34 100644
        "declarations": []
      },
      {
-@@ -288,6 +288,24 @@
-       "role": "integration",
-       "sha256": "d69e181c4fa97ab6fcb4f491275a3f0a057d7b4273f17cd90c41140b3ec61149",
+@@ -294,6 +294,24 @@
+       "role": "review",
+       "sha256": "fbcc338af1af03b0c9adb0cf2af84272903631d9d1d86f457adda1cf55e80b2a",
        "declarations": []
 +    },
 +    {
@@ -42,15 +42,15 @@ index 279ca5ce6..865733a34 100644
 +    {
 +      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md",
 +      "role": "integration",
-+      "sha256": "2315bd39b74514e6fb26d580be88c52563c3037052bc64d4949f708f4c59554c",
++      "sha256": "f77b26a382879ea8b1e50c5f1b1c710d61df74277e16dfb3da0a921747b38213",
 +      "declarations": []
      }
    ],
    "proof_bindings": [
-@@ -311,6 +329,10 @@
+@@ -321,6 +339,10 @@
      {
-       "en": "1 November 2026, board item DU: the home section's sentence on the ethics' two premises now names ReadsNoOrder.not_entails, C entailed by no statement reading no order where it holds (immediate), «续无外随网», the condition's root form varying with the net, and Web.extension_ranked_of_increasingInOwn, where self-concern gives what C asks, one way, between two level paths whose admissions are listed and end; Web.paths_comparison_widens left COVERAGE's significance row, so the section counts one declaration fewer, on its own carrier. The standings and the premises' entries are unchanged.",
-       "zh": "2026年11月1日，工作板条目 DU：家节言伦理二前提之句，今名 ReadsNoOrder.not_entails（不读次序之陈述唯于其不成处蕴含 C，直接可得）、«续无外随网»（条件之根形随网而变）与 Web.extension_ranked_of_increasingInOwn（自关切单向给出 C 于二所列且接纳有终之层径间之所求处）；Web.paths_comparison_widens 离 COVERAGE 之意义行，故家节少计一在其自身载体上之声明。所立与前提之条目不变。"
+       "en": "1 November 2026, after DU (study section 489): C's entry among the premises of the ethics names Becoming.ReadsNoOrder.not_entails as its theorem of not being entailed: a statement whose truth does not change with the order, entailing C at a datum on a frame with an extension, fails there at every order, the pattern of ReadsOnlyDynamics.not_entails with the order in the place of the significance. Its reason for absence is dropped, the basis states the condition, and the non-implication on the premises' warrant says that neither is entailed by statements of the dynamics, each under its condition (REVIEW-U4-PREMISE-C.md).",
+       "zh": "2026年11月1日，DU 之后（研究第 489 节）：伦理前提中 C 之条目，以 Becoming.ReadsNoOrder.not_entails 为其不被蕴涵之定理：一陈述之真不随次序而变，若于一框架有扩展处之某数据蕴涵 C，则于该处于任一次序皆不成，即 ReadsOnlyDynamics.not_entails 之式，以次序代意义。其缺失之由删去，理据言其条件；言前提之据之非蕴涵条，今言二者皆不为动力之陈述所蕴涵，各于其条件下（REVIEW-U4-PREMISE-C.md）。"
 +    },
 +    {
 +      "en": "{DAY}, U4c (study section {N}): Listed.coming_of_ceasing moved from counting to derived, a case of the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, through two bridges (comesToBe_iff_sheng_along, ceasesToBe_iff_wang_along) and the support of Steps.along; its statement is unchanged and still reads as counting, the row placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived. CensusWebs.keep_pace stays counting, its basis saying why it is not a case of the root's census of a step. The next step names the covering laws' root form and a stretch form of the census on positions, of which keep_pace would be a case, in place of a root form for the census rows (CENSUS-ON-THE-ROOT.md, reviewed in REVIEW-U4C.md, its record texts in REVIEW-U4C-RECORD.md, both among the references); DESIGN-BOUNDARY gains a dated §9 saying what differs from lever 1's census candidate.",
@@ -58,7 +58,7 @@ index 279ca5ce6..865733a34 100644
      }
    ],
    "boundary": {
-@@ -550,9 +572,9 @@
+@@ -560,9 +582,9 @@
          "declaration": "Becoming.CensusWebs.keep_pace",
          "standing": "counting",
          "basis": {
@@ -70,7 +70,7 @@ index 279ca5ce6..865733a34 100644
        },
        {
          "declaration": "Becoming.Drift.falls_back",
-@@ -564,11 +586,23 @@
+@@ -574,11 +596,23 @@
        },
        {
          "declaration": "Becoming.Listed.coming_of_ceasing",

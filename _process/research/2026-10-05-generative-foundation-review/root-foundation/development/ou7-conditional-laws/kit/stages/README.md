@@ -2,7 +2,7 @@
 
 Extra patch sets that ride in OU7's rebuild, each its owner's. A stage is a directory here, `NN-name/`, and stages are taken in name order: U4c's census on the root as `10-u4c/`, then ND's names that state relations as `20-nd/`.
 
-`10-u4c/` is its owner's final series, copied unchanged from branch `u4c` at d5d034614 and cut on main at 4a86127e4. If main moves under it before the landing, its owner re-cuts the patches from 09 on against the main the landing merges, with `cut_u4c_patches.py` in the stage's design folder. `20-nd/` came from branch `nd-stage` at 24d4aef64.
+`10-u4c/` is its owner's series, copied unchanged from branch `u4c` at 4642e67e3 and cut on main at c211d8780. If main moves under it before the landing, its owner re-cuts the patches from 08 on against the main the landing merges, with `cut_u4c_patches.py` in the stage's design folder. `20-nd/` came from branch `nd-stage` at 24d4aef64. Its patch 25, on the collective page, was re-cut on that page as main had it at 0249ba3fe, as a mechanical rename: the two names the stage renames there, and nothing else.
 
 | file | what it is |
 |---|---|
