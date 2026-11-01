@@ -100,7 +100,7 @@ print('receipt', sys.argv[1].split('/')[-2], len(v['modules']), 'modules, every 
 EOF
   python3 -B $K/integrate_ou7.py stages | tail -1
   step record; python3 -B $K/integrate_ou7.py record $V $N > $LOG/record.log 2>&1 || fail record; cut -c1-200 $LOG/record.log
-  step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
+  step mv; python3 -B tools/research/shared_laws.py > $LOG/mv.log 2>&1 || fail mv
   python3 -B $K/integrate_ou7.py check > $LOG/ou7check.log 2>&1 || fail "OU7's check"; cut -c1-200 $LOG/ou7check.log
   step register; M=$RF/THEOREM-CONNECTIVITY.py
   python3 -B $M --check > $LOG/conn-pre.log 2>&1

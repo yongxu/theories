@@ -1,0 +1,1521 @@
+diff --git a/_process/architecture/history/81f10ca51894c85b/market-partial-correction-boundary.json b/_process/architecture/history/81f10ca51894c85b/market-partial-correction-boundary.json
+new file mode 100644
+index 000000000..c0c3f71ad
+--- /dev/null
++++ b/_process/architecture/history/81f10ca51894c85b/market-partial-correction-boundary.json
+@@ -0,0 +1,686 @@
++{
++  "schema_version": 2,
++  "id": "market-partial-correction-boundary",
++  "title": {
++    "zh": "部分纠正的精确到达边界",
++    "en": "Exact arrival boundary under partial correction"
++  },
++  "kind": "theorem",
++  "status": "recorded-checked",
++  "family": "F06",
++  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
++  "statement": {
++    "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
++    "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
++  },
++  "laws": [
++    {
++      "en": "For a law of change with admissible disturbances and a target, a start reaches the target within n steps when it is in the target or, with steps left, every admissible disturbance takes it to one reaching it within one step fewer. A funnel has level 0 in the target and level k + 1 in the target or sent to level k by every admissible disturbance; a start reaches within n exactly when some funnel holds it at level n.",
++      "zh": "对带可容许扰动的变化之律与目标：起点 n 步之内到达目标，是指它在目标中，或尚有步数而每个可容许扰动都把它带到少一步之内到达者。漏斗的第 0 级在目标内，第 k+1 级在目标内或被每个可容许扰动带到第 k 级；起点 n 步之内到达，恰当某个漏斗在第 n 级含有它。",
++      "declarations": [
++        "Becoming.Lasting.Reaches",
++        "Becoming.Lasting.Funnel",
++        "Becoming.Lasting.reaches_iff_funnel"
++      ]
++    },
++    {
++      "en": "A basin holds the target at every level, and at level k + 1 whatever every admissible disturbance takes to level k; a start reaches within n exactly when every basin holds it at level n, and a family both a funnel and a basin is exactly reaching. Reaching composes: a start reaching a region within m, each member of which reaches the target within k, reaches it within k + m.",
++      "zh": "汇聚族在每一级都含目标，且凡每个可容许扰动都带到第 k 级者都在第 k+1 级；起点 n 步之内到达，恰当每个汇聚族在第 n 级含有它；兼为漏斗与汇聚族的族恰是到达。到达可复合：m 步之内到达某区域、而区域每个成员 k 步之内到达目标的起点，k+m 步之内到达目标。",
++      "declarations": [
++        "Becoming.Lasting.Basin",
++        "Becoming.Lasting.reaches_iff_basin",
++        "Becoming.Lasting.reaches_iff_of_exact",
++        "Becoming.Lasting.Reaches.trans"
++      ]
++    },
++    {
++      "en": "What reaches within n meets the target within the first n steps of every admissible history; given one admissible disturbance and a decided target, the converse holds; and for one law, that converse asked of a family of targets given by Boolean sequences yields the limited principle of omniscience.",
++      "zh": "n 步之内到达者，在每段可容许历史的前 n 步之内遇到目标；给定一个可容许扰动且目标可判定时，逆命题成立；对一条律，对由布尔序列给出的一族目标都要求这一逆命题，即得有限全知原理。",
++      "declarations": [
++        "Becoming.Lasting.Reaches.histories",
++        "Becoming.Lasting.reaches_iff_histories",
++        "Becoming.Lasting.Search.histories_need_decision"
++      ]
++    },
++    {
++      "en": "A numeric variant for n is a level in the natural numbers such that a configuration at a level at most n is in the target, or at a positive level that every admissible disturbance lowers; a start at a level at most n reaches within n. Where some disturbance is admissible, reaching within n and lasting n steps outside the target exclude each other.",
++      "zh": "n 的数值变式是自然数层级：层级至多为 n 的构型在目标内，或处于正层级且每个可容许扰动都使其下降；层级至多为 n 的起点 n 步之内到达。有可容许扰动时，n 步之内到达与在目标之外持续 n 步互相排斥。",
++      "declarations": [
++        "Becoming.Lasting.Variant",
++        "Becoming.Lasting.Variant.reaches",
++        "Becoming.Lasting.Reaches.not_lasts"
++      ]
++    },
++    {
++      "en": "For a determined law, reaching within n is meeting the target on the orbit within n steps; the orbit meets it within n exactly when some funnel holds the start at level n, with no decision used, and, the target decided, exactly when some level in the natural numbers, at most n at the start, is lowered by every step from a configuration outside the target at a level at most n.",
++      "zh": "对确定的律，n 步之内到达即轨道 n 步之内遇到目标；轨道 n 步之内遇到目标，恰当某个漏斗在第 n 级含起点，不用判定；目标可判定时，也恰当有自然数层级在起点至多为 n，且目标之外、层级至多为 n 的构型每走一步都使它下降。",
++      "declarations": [
++        "Becoming.Lasting.reaches_iff_orbit",
++        "Becoming.Lasting.orbit_reaches_iff_funnel",
++        "Becoming.Lasting.orbit_reaches_iff_variant"
++      ]
++    },
++    {
++      "en": "With the target decided, reaching within n under a determined law is not lasting n steps outside the target. The decisions are needed: if not lasting outside every target gave reaching it with no step, double negation would be eliminated; if every determined law meeting a target within n had a numeric variant, equality of configurations would be decided.",
++      "zh": "目标可判定时，确定的律下 n 步之内到达，就是不在目标之外持续 n 步。这些判定是需要的：若对每个目标，不在其外持续即给出零步之内到达，双重否定即可消去；若每条 n 步之内遇到目标的确定律都有数值变式，构型的相等即可判定。",
++      "declarations": [
++        "Becoming.Lasting.reaches_iff_not_lasts",
++        "Becoming.Lasting.dual_needs_decision",
++        "Becoming.Lasting.numeric_needs_decision"
++      ]
++    },
++    {
++      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the viability kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
++      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的生存核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
++      "declarations": [
++        "Becoming.Lasting.avoids_iff_closed",
++        "Becoming.Lasting.avoids_iff_kernel",
++        "Becoming.Lasting.some_avoids_iff",
++        "Becoming.Lasting.none_avoid_iff"
++      ]
++    },
++    {
++      "en": "Reaching the target from every seed rules out every such closed set containing a seed, and a fixed configuration outside the target is such a set by itself, so its orbit never reaches the target.",
++      "zh": "每个种子都到达目标，就排除了每个含种子的这种封闭集；目标之外的不动构型自身就是这样的集合，所以其轨道永不到达目标。",
++      "declarations": [
++        "Becoming.Lasting.reaches_excludes",
++        "Becoming.Lasting.fixed_avoids"
++      ]
++    },
++    {
++      "en": "On the courses of a determined law's process, what it reaches from a configuration is its orbit; so nothing it reaches from s is in the target exactly when such a closed set contains s, some seed reaches nothing in it exactly when such a set holds a seed, and a fixed configuration outside the target reaches nothing in it.",
++      "zh": "在确定的律之过程的历程上，从一个构型所到达者就是其轨道；所以从 s 所到达者都不在目标中，恰当这样的封闭集含 s；某个种子所到达者都不在其中，恰当这样的集合含种子；目标之外的不动构型到达不了目标中的构型。",
++      "declarations": [
++        "Becoming.Branching.law_reach_iff",
++        "Becoming.Courses.avoids_iff_closed_reach",
++        "Becoming.Courses.some_avoids_iff_reach",
++        "Becoming.Courses.fixed_avoids_reach"
++      ]
++    },
++    {
++      "en": "A course of the determined law's process ends on the orbit at its length, and the orbit at k is where the course of k moves ends; so a course of at most n moves reaches the target exactly when the orbit meets it within n steps, exactly when a funnel holds the start at level n, and, the target decided, exactly when a numeric variant is at most n at the start.",
++      "zh": "确定的律之过程的历程，在其长度处终于轨道上，轨道在第 k 步就是 k 步历程的终点；所以至多 n 步的历程到达目标，恰当轨道 n 步之内遇到目标，恰当某个漏斗在第 n 级含起点；目标可判定时，也恰当某个数值变式在起点至多为 n。",
++      "declarations": [
++        "Becoming.Courses.trace_orbit",
++        "Becoming.Courses.orbit_trace",
++        "Becoming.Courses.course_reaches_iff_orbit",
++        "Becoming.Courses.course_reaches_iff_funnel",
++        "Becoming.Courses.course_reaches_iff_variant"
++      ]
++    },
++    {
++      "en": "What reaches within n, what a funnel holds at level n, and what every basin holds at level n each meet the target within n steps on every run of the disturbed process.",
++      "zh": "n 步之内到达者、漏斗在第 n 级所含者、每个汇聚族在第 n 级所含者，都在受扰过程的每次运行上 n 步之内遇到目标。",
++      "declarations": [
++        "Becoming.Courses.Reaches.runs",
++        "Becoming.Courses.Funnel.runs",
++        "Becoming.Courses.basin_runs"
++      ]
++    },
++    {
++      "en": "In the market model the regime law with correction strength b and no extra quality error is a determined law; some physical seed with positive share never lands exactly when some set closed under the law and avoiding landing contains such a seed; and the quality margin at the fixed quality 3/8 under the worst influence 1 is nonnegative exactly when b ≤ 5/12.",
++      "zh": "市场模型中，纠正强度为 b、无额外品质误差的体制律是确定的律；某个份额为正的物理种子永不着陆，恰当某个对律封闭、避开着陆的集合含这样的种子；固定品质 3/8、最坏影响 1 处的品质余量非负，恰当 b ≤ 5/12。",
++      "declarations": [
++        "Becoming.MarketInstances.path_eq",
++        "Becoming.MarketInstances.never_lands_iff",
++        "Becoming.MarketInstances.margin_iff"
++      ]
++    },
++    {
++      "en": "For 0 ≤ b ≤ 3/4, every physical seed with positive share lands under the regime law exactly when b ≤ 5/12, exactly when that margin is nonnegative, and exactly when no closed set avoiding landing contains such a seed; for 5/12 < b ≤ 3/4 the fixed configuration is a physical seed with positive share that never lands.",
++      "zh": "对 0 ≤ b ≤ 3/4，每个份额为正的物理种子在体制律下着陆，恰当 b ≤ 5/12，恰当该余量非负，也恰当没有避开着陆的封闭集含这样的种子；对 5/12 < b ≤ 3/4，不动构型是份额为正、永不着陆的物理种子。",
++      "declarations": [
++        "PartialRegimeTransition.exact_universal_landing_boundary",
++        "Becoming.MarketInstances.lands_iff_margin",
++        "Becoming.MarketInstances.lands_iff_no_closed",
++        "Becoming.MarketInstances.fixed_point_instance",
++        "Becoming.MarketInstances.landing_boundary_instance"
++      ]
++    },
++    {
++      "en": "For every determined law, a rational quantity at most a top on a region that every step from outside the target keeps, rising there by at least a fixed gain a step, gives a funnel into the target. For 0 ≤ b ≤ 5/12 and 0 ≤ a ≤ 1/2 the settled region for share 2a is kept, and three such funnels (share, then influence, then quality) land every settled configuration within 28 + n steps whenever 7/8 < n·a²/160.",
++      "zh": "对每条确定律，在目标之外每步都保持的区域上至多为某上界、每步至少升高固定增益的有理量，给出通向目标的漏斗。对 0 ≤ b ≤ 5/12 与 0 ≤ a ≤ 1/2，份额 2a 的安定区域被保持；三个这样的漏斗（份额、影响、质量依次）使每个安定构型在 28 + n 步之内着陆，只要 7/8 < n·a²/160。",
++      "declarations": [
++        "Becoming.MarketInstances.rising_funnel",
++        "Becoming.MarketInstances.settled_kept",
++        "Becoming.MarketInstances.settled_reaches_landing"
++      ]
++    },
++    {
++      "en": "For 0 ≤ b ≤ 5/12 every physical seed with positive share comes into the settled region for half its share and so reaches landing; and for every b, every positive physical seed lands exactly when each is held by some funnel into landing.",
++      "zh": "对 0 ≤ b ≤ 5/12，每个份额为正的物理种子都进入其份额一半的安定区域，从而到达着陆；对每个 b，每个正的物理种子都着陆，恰当每个都被某个通向着陆的漏斗所含。",
++      "declarations": [
++        "Becoming.MarketInstances.seed_reaches_settled",
++        "Becoming.MarketInstances.seed_reaches_landing",
++        "Becoming.MarketInstances.landing_side_instance",
++        "Becoming.MarketInstances.lands_iff_funnel"
++      ]
++    },
++    {
++      "en": "With extra support consumption κ ≥ 0 a step, for 0 ≤ b ≤ 5/12 and a physical seed with positive share there is N such that, from every initial stock at least the cover for N steps, the guarded history at correction strength b agrees with the operating history for its first N steps, the state at N is safe for the original parameters, and from it the original guarded history with no shock never fails.",
++      "zh": "每步额外支持耗用 κ ≥ 0 时，对 0 ≤ b ≤ 5/12 与份额为正的物理种子，有 N 使得：初始存量至少为 N 步覆盖时，纠正强度 b 下的受守卫历史在前 N 步与运行历史一致，第 N 步的状态对原参数安全，由此出发、无冲击的原受守卫历史永不失败。",
++      "declarations": [
++        "PartialRegimeTransition.supported_partial_transition",
++        "Becoming.MarketInstances.partial_prefix_instance"
++      ]
++    },
++    {
++      "en": "The cover bounds the support: for κ ≥ 0 it is at least 5 at every horizon; a stock at least the cover for n + 1 steps leaves, after one step of consumption κ at a nonnegative share, at least the cover for n; and a landed state with stock at least 5 is safe for the original parameters.",
++      "zh": "覆盖界定支持：κ ≥ 0 时它在每个步数都至少为 5；至少为 n+1 步覆盖的存量，在非负份额下经一步耗用 κ 后，仍至少为 n 步覆盖；存量至少为 5 的已着陆状态对原参数安全。",
++      "declarations": [
++        "RegimeTransition.cover_floor",
++        "RegimeTransition.cover_step",
++        "RegimeTransition.landing_supplies_safety"
++      ]
++    },
++    {
++      "en": "At the boundary: for 0 ≤ b ≤ 5/12 the share of every physical seed stays at least half its start; for 5/12 < b ≤ 3/4 some certified low box of states, holding states with positive share, never lands; and for every ε > 0 some constant adverse quality error e with 0 < e < ε at b = 5/12 leaves a physical seed with positive share that never lands.",
++      "zh": "在边界处：对 0 ≤ b ≤ 5/12，每个物理种子的份额都至少保持起始的一半；对 5/12 < b ≤ 3/4，某个有低区证书、含正份额状态的状态盒永不着陆；对每个 ε > 0，b = 5/12 时某个常数不利品质误差 0 < e < ε 留下一个份额为正、永不着陆的物理种子。",
++      "declarations": [
++        "PartialRegimeTransition.uniform_seed_floor",
++        "PartialRegimeTransition.supercritical_low_box_never_lands",
++        "PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing"
++      ]
++    }
++  ],
++  "hypotheses": [
++    {
++      "zh": "物理有理初态x,q,w∈[0,1]且x>0；有限干预阶段β固定，其余参数沿原例；额外责任误差为零。",
++      "en": "Physical rational x,q,w in [0,1], x>0; beta remains fixed during the finite intervention, other example parameters persist, and additional quality error is zero."
++    },
++    {
++      "zh": "实际运行另需每步κ≥0额外支持耗用及初始C₀≥K_N；货币预算先付后收入，交接后β=1/2，撤除κ，无其他冲击。",
++      "en": "Actual execution additionally requires nonnegative per-step support consumption kappa and C0>=K_N; monetary payment precedes receipts, beta returns to 1/2 after handoff, kappa is withdrawn and there are no other shocks."
++    },
++    {
++      "en": "The core laws hold for any type of configurations and disturbances; a decided target is used only in the laws that name the decision (the converse on histories, the numeric variant, reaching as not lasting); one admissible disturbance is given where a law says so.",
++      "zh": "核心规律对任意类型的构型与扰动成立；目标可判定只用在写明判定的规律中（历史上的逆命题、数值变式、到达即不持续）；给定一个可容许扰动只在规律写明之处。"
++    },
++    {
++      "en": "The market model's quantities and parameters are rational numbers, with histories indexed by natural times from 0.",
++      "zh": "市场模型的量与参数是有理数，历史以从 0 起的自然时刻为索引。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "The exact boundary is for the property that every physical positive state lands with zero extra quality error; it is not a complete basin of landing.",
++      "zh": "精确边界针对每个物理正状态在无额外品质误差下着陆这一性质；它不是完整的着陆盆。",
++      "kind": "scope"
++    },
++    {
++      "en": "No bifurcation over all parameters and no recovery range with quality error follow; at the boundary arbitrarily small constant adverse error leaves a positive seed that never lands.",
++      "zh": "推不出全参数分岔，也推不出含品质误差的恢复范围；在边界处，任意小的常数不利误差都留下永不着陆的正种子。",
++      "kind": "non-implication",
++      "witness": "PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing"
++    },
++    {
++      "en": "The threshold 5/12 is the model's, not a threshold measured in any market.",
++      "zh": "阈值 5/12 属于模型，不是在任何市场中测得的阈值。",
++      "kind": "correspondence"
++    },
++    {
++      "en": "The intervention, with β held fixed and the support supplied, is assumed: no entry mechanism and no formation of the intervention follow from the laws.",
++      "zh": "干预（β 固定、支持给定）是假设的：规律推不出进入机制，也推不出干预的形成。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "The core laws do not supply the market's funnels: the gain estimates that give them are facts about this one rational law.",
++      "zh": "核心规律不提供市场的漏斗：给出这些漏斗的增益估计是这一条有理律的事实。",
++      "kind": "scope"
++    }
++  ],
++  "counterexamples": [
++    {
++      "path": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
++      "detail": {
++        "zh": "超临界存在正维护固定点及有宽度的未到达低区；临界处任意小持续不利误差有正维护固定反例，未证明其稳定性。",
++        "en": "Above criticality there is a positive fixed obstruction and a positive-width nonarrival box. At criticality arbitrarily small constant adverse error has positive fixed obstructions; their stability is not claimed."
++      }
++    }
++  ],
++  "standard_boundaries": [
++    "no-ethical-premise-core-axiom-free",
++    "discrete-steps",
++    "decidability"
++  ],
++  "validation_scope": {
++    "en": "Machine-checked with Lean 4.29.1. The core modules Becoming.Lasting, Becoming.Courses and Becoming.Recurrence by the consolidated checker (becoming-checks/), with empty axiom reports; the periphery PartialRegimeTransition and RegimeTransition by the partial-transition check (partial-transition-verification.json: 26 new theorems, 31 declaration audits; 123 inherited theorems, 153 audits) and MarketInstances by its instance checker (market-instances-checks/), reporting propext, Quot.sound and Classical.choice. Author counterreview integrated; no independent review or new market observation.",
++    "zh": "Lean 4.29.1 实查：核心 Lasting、Courses、Recurrence 由合并检查器（becoming-checks/）检查，公理报告皆空；外围 PartialRegimeTransition 与 RegimeTransition 由部分转变检查（新定理26、审计31，继承定理123、审计153）、MarketInstances 由其实例检查器检查，报告 propext、Quot.sound、Classical.choice。有作者反审；无独立审查或新市场观察。"
++  },
++  "next_delta": {
++    "en": "Connect actually formed changes in provision, dependence or renewal expansion to the model's share and correction strength, and find the recovery ranges under quality error.",
++    "zh": "把实际形成的供给、依存或维护扩展的改变接到模型的份额与纠正强度上，并求出含品质误差时的恢复范围。"
++  },
++  "correspondence": {
++    "zh": "临界恢复依赖维护活动实际改变后续影响；参数、比例、支持及责任读取的现实对应须核实。现有形成结果尚未正式映射为市场份额或β变化。",
++    "en": "Critical recovery depends on renewal actually changing subsequent influence; parameter, share, support and quality-reading correspondence must be established. Existing formation results are not yet formally mapped to market shares or beta change."
++  },
++  "canonical_source": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
++  "aliases": [
++    "PartialRegimeTransition.exact_universal_landing_boundary",
++    "Becoming.Lasting.avoids_iff_closed",
++    "Becoming.Lasting.some_avoids_iff",
++    "Becoming.Lasting.fixed_avoids",
++    "Becoming.MarketInstances.never_lands_iff",
++    "Becoming.MarketInstances.lands_iff_margin",
++    "Becoming.MarketInstances.lands_iff_no_closed",
++    "Becoming.Lasting.reaches_iff_funnel",
++    "Becoming.Lasting.reaches_iff_basin",
++    "Becoming.Lasting.orbit_reaches_iff_funnel",
++    "Becoming.Lasting.orbit_reaches_iff_variant",
++    "Becoming.MarketInstances.landing_side_instance",
++    "Becoming.MarketInstances.landing_boundary_instance",
++    "Becoming.MarketInstances.lands_iff_funnel",
++    "Becoming.Courses.avoids_iff_closed_reach",
++    "Becoming.Courses.some_avoids_iff_reach",
++    "Becoming.Courses.fixed_avoids_reach",
++    "Becoming.Courses.Funnel.runs",
++    "Becoming.Courses.basin_runs",
++    "Becoming.Courses.course_reaches_iff_funnel",
++    "Becoming.Courses.course_reaches_iff_variant"
++  ],
++  "dependencies": [
++    {
++      "id": "market-supported-finite-transition",
++      "relation": "formal-reuse",
++      "detail": {
++        "zh": "复用其已检查的支持界组件与到达—安全适配，不将β=0的到达证明直接用于β>0。",
++        "en": "Reuses its checked stock-cover components and landing-to-safety adapter; the beta=0 arrival proof is not applied to beta>0."
++      },
++      "interface": {
++        "output": {
++          "zh": "cover_step、cover_floor、landing_supplies_safety 提供逐步支持界及保护证书输入。",
++          "en": "cover_step, cover_floor and landing_supplies_safety provide per-step stock bounds and the safety-certificate input."
++        },
++        "input": {
++          "zh": "partial_remaining_cover 与 supported_partial_transition 在新β历史中使用这些组件。",
++          "en": "partial_remaining_cover and supported_partial_transition use these components on the new beta history."
++        },
++        "conditions": {
++          "zh": "支持律、额外耗用、底线与Landing定义保持相同，新的有限到达另行证明。",
++          "en": "The support law, extra burden, floor and Landing definition are unchanged; finite arrival is proved anew."
++        },
++        "evidence": "experiments/market-generativity/formal/PartialRegimeTransition.lean"
++      }
++    },
++    {
++      "id": "market-protected-continuation",
++      "relation": "formal-reuse",
++      "detail": {
++        "zh": "以实际到达的完整状态调用原全时守卫保护，无支持重置。",
++        "en": "Applies original all-time guarded protection to the actual arrived full state without a stock reset."
++      },
++      "interface": {
++        "output": {
++          "zh": "Safe与容许扰动下的原全时守卫不失败。",
++          "en": "Inherited all-time guarded nonfailure from Safe and admissible disturbances."
++        },
++        "input": {
++          "zh": "supported_partial_transition 提供到达Safe状态并调用 safe_history_never_fails。",
++          "en": "supported_partial_transition supplies the arrived Safe state and calls safe_history_never_fails."
++        },
++        "conditions": {
++          "zh": "同一完整State、剩余支持和预算；后继为原β=1/2与noShock。",
++          "en": "Same full State, remaining stock and budget; successor uses original beta=1/2 and noShock."
++        },
++        "evidence": "experiments/market-generativity/formal/PartialRegimeTransition.lean"
++      }
++    }
++  ],
++  "related": [
++    {
++      "id": "alignment-direction-under-widening",
++      "detail": {
++        "zh": "机制解释供既有规范比较使用，动力学阈值不另立义务或普遍伦理。",
++        "en": "Mechanism informs the existing normative comparison; a dynamical threshold supplies no new duty or universal ethic."
++      }
++    },
++    {
++      "id": "material-preparation-output",
++      "detail": {
++        "zh": "形成材料的实际输出是候选接口，尚无到市场维护份额的已证适配。",
++        "en": "Actual prepared material is a candidate interface, with no proved adapter to a market renewal share."
++      }
++    },
++    {
++      "id": "market-finite-support-obstruction",
++      "detail": {
++        "zh": "已完成的有限支持阻碍，保留本记录较窄结论。",
++        "en": "Completed finite-support obstruction preserving this record’s narrower result."
++      }
++    }
++  ],
++  "references": [
++    {
++      "path": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
++      "role": "proof",
++      "sha256": "2ae6d489b9692387cc7cedbc45eb62bfe70bb7de7a657b8eded3627b50f09092",
++      "declarations": [
++        "PartialRegimeTransition.exact_universal_landing_boundary",
++        "PartialRegimeTransition.supported_partial_transition",
++        "PartialRegimeTransition.uniform_seed_floor",
++        "PartialRegimeTransition.supercritical_low_box_never_lands",
++        "PartialRegimeTransition.arbitrarily_small_error_blocks_universal_landing"
++      ]
++    },
++    {
++      "path": "experiments/market-generativity/formal/RegimeTransition.lean",
++      "role": "proof",
++      "sha256": "9e76cc787e363e0c4ad75e34adc94bf1fe7983076e76a367850d72f65e7bf518",
++      "declarations": [
++        "RegimeTransition.cover_step",
++        "RegimeTransition.cover_floor",
++        "RegimeTransition.landing_supplies_safety"
++      ]
++    },
++    {
++      "path": "experiments/market-generativity/formal/partial-transition-verification.json",
++      "role": "receipt",
++      "sha256": "5d0c86821db7fa30020a829b624b7ebde50f3127892816f8875031ea8fd8df8d",
++      "declarations": []
++    },
++    {
++      "path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
++      "role": "review",
++      "sha256": "75fee116ec006410ab9f97667b32efecbbb795d56b5ef8f0493ea24bb7ed75e0",
++      "declarations": []
++    },
++    {
++      "path": "theories/becoming/history/MARKETS-AND-GENERATIVE-REGIMES.md",
++      "role": "integration",
++      "sha256": "1b5e9b2651532c1bd7326dd173010b554d28fa23557a5701237240b399fc4af3",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
++      "role": "proof",
++      "sha256": "183b3977568e27a00d1a1e542e4981019bcd6b908d265693fd791851abe1c7b1",
++      "declarations": [
++        "Becoming.Lasting.avoids_iff_closed",
++        "Becoming.Lasting.avoids_iff_kernel",
++        "Becoming.Lasting.some_avoids_iff",
++        "Becoming.Lasting.none_avoid_iff",
++        "Becoming.Lasting.reaches_excludes",
++        "Becoming.Lasting.fixed_avoids",
++        "Becoming.Lasting.Reaches",
++        "Becoming.Lasting.Funnel",
++        "Becoming.Lasting.Basin",
++        "Becoming.Lasting.reaches_iff_funnel",
++        "Becoming.Lasting.reaches_iff_basin",
++        "Becoming.Lasting.reaches_iff_of_exact",
++        "Becoming.Lasting.Reaches.trans",
++        "Becoming.Lasting.Reaches.histories",
++        "Becoming.Lasting.reaches_iff_histories",
++        "Becoming.Lasting.Reaches.not_lasts",
++        "Becoming.Lasting.Variant",
++        "Becoming.Lasting.Variant.reaches",
++        "Becoming.Lasting.reaches_iff_orbit",
++        "Becoming.Lasting.orbit_reaches_iff_funnel",
++        "Becoming.Lasting.orbit_reaches_iff_variant",
++        "Becoming.Lasting.reaches_iff_not_lasts",
++        "Becoming.Lasting.dual_needs_decision",
++        "Becoming.Lasting.numeric_needs_decision",
++        "Becoming.Lasting.Search.histories_need_decision"
++      ]
++    },
++    {
++      "path": "experiments/market-generativity/formal/MarketInstances.lean",
++      "role": "proof",
++      "sha256": "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da",
++      "declarations": [
++        "Becoming.MarketInstances.path_eq",
++        "Becoming.MarketInstances.never_lands_iff",
++        "Becoming.MarketInstances.margin_iff",
++        "Becoming.MarketInstances.lands_iff_margin",
++        "Becoming.MarketInstances.lands_iff_no_closed",
++        "Becoming.MarketInstances.fixed_point_instance",
++        "Becoming.MarketInstances.partial_prefix_instance",
++        "Becoming.MarketInstances.rising_funnel",
++        "Becoming.MarketInstances.settled_kept",
++        "Becoming.MarketInstances.settled_reaches_landing",
++        "Becoming.MarketInstances.seed_reaches_settled",
++        "Becoming.MarketInstances.seed_reaches_landing",
++        "Becoming.MarketInstances.landing_side_instance",
++        "Becoming.MarketInstances.landing_boundary_instance",
++        "Becoming.MarketInstances.lands_iff_funnel"
++      ]
++    },
++    {
++      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
++      "role": "integration",
++      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
++      "role": "receipt",
++      "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
++      "role": "proof",
++      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
++      "declarations": [
++        "Becoming.Courses.avoids_iff_closed_reach",
++        "Becoming.Courses.some_avoids_iff_reach",
++        "Becoming.Courses.fixed_avoids_reach",
++        "Becoming.Courses.Funnel.runs",
++        "Becoming.Courses.basin_runs",
++        "Becoming.Courses.course_reaches_iff_funnel",
++        "Becoming.Courses.course_reaches_iff_variant",
++        "Becoming.Courses.trace_orbit",
++        "Becoming.Courses.orbit_trace",
++        "Becoming.Courses.Reaches.runs",
++        "Becoming.Courses.course_reaches_iff_orbit"
++      ]
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
++      "role": "proof",
++      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0",
++      "declarations": [
++        "Becoming.Branching.law_reach_iff"
++      ]
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
++      "role": "receipt",
++      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T190408.610189Z/verification.json",
++      "role": "receipt",
++      "sha256": "47259fe19127209f0f481b03f8ab92ae59c7864e4d7f0ea578afc8520eb625f6"
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
++      "role": "receipt",
++      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
++      "role": "receipt",
++      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
++      "role": "receipt",
++      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
++      "role": "receipt",
++      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
++      "role": "receipt",
++      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
++      "role": "receipt",
++      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
++      "role": "receipt",
++      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
++      "role": "receipt",
++      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
++      "role": "receipt",
++      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
++      "role": "receipt",
++      "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
++      "role": "receipt",
++      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
++      "role": "receipt",
++      "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
++      "role": "receipt",
++      "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
++      "declarations": []
++    }
++  ],
++  "proof_bindings": [
++    {
++      "source": "experiments/market-generativity/formal/PartialRegimeTransition.lean",
++      "receipt": "experiments/market-generativity/formal/partial-transition-verification.json",
++      "sha256_pointer": "/sources/PartialRegimeTransition.lean",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/market-generativity/formal/RegimeTransition.lean",
++      "receipt": "experiments/market-generativity/formal/partial-transition-verification.json",
++      "sha256_pointer": "/sources/RegimeTransition.lean",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Lasting",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/market-generativity/formal/MarketInstances.lean",
++      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
++      "sha256_pointer": "/source_sha256/MarketInstances",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Courses",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    }
++  ],
++  "history": [
++    {
++      "zh": "2026-10-08：由β=0足够条件推进至0≤β≤5/12及其精确全初态边界，保留临界误差与超临界反例；旧证书和支持结果直接复用。",
++      "en": "2026-10-08: strengthened beta=0 sufficiency to 0<=beta<=5/12 and the exact universal-state boundary, retaining critical-error and supercritical counterexamples; original certificates and stock results are reused."
++    },
++    {
++      "zh": "2026-10-09：核读既有研究§§41–46的LibreOffice形成对应；原定理、条件和回执均保留，新历史评估另记formed-software-continuation，未作数值映射。",
++      "en": "2026-10-09: reconciled study sections 41–46 on LibreOffice formation; original theorem, hypotheses and receipt remain, with the new historical assessment in formed-software-continuation and no numerical mapping."
++    },
++    {
++      "zh": "2026-10-09：核读同一研究§§47–52的API接续与保留依存评估；先前正文原字节前缀保留。此对应未改变本条数学命题、前提或回执，也未提供数量化参数。",
++      "en": "2026-10-09: reconciles sections 47–52 on API continuation and retained dependence; original study/chapter byte prefixes remain. The assessment changes no mathematical claim, hypothesis or receipt and supplies no quantitative parameters."
++    },
++    {
++      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。新核心模块 Becoming.Lasting：确定的律永不到达目标恰当某个避开目标的封闭集含起点，即目标补集的生存核；经外围 MarketInstances，5/12 边界读作固定质量处的余量非负，也读作没有避开着陆的封闭集含正状态，边界之上的不动点是 fixed_avoids 的实例。着陆一侧的增益估计仍是该市场律的。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
++      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Lasting: a determined law never reaches a target exactly when a closed set avoiding it contains the start, the viability kernel of the complement; through the periphery MarketInstances the 5/12 boundary reads as a nonnegative margin at the fixed quality and as no closed set avoiding landing containing a positive state, the fixed point above it being an instance of fixed_avoids. The gain estimate on the landing side remains the market law's. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
++    },
++    {
++      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：确定之律的过程所到达者就是其轨道（reach_iff_orbit）。所以其过程从 s 所到达的构型都不在目标中，恰当某个含 s、避开目标且在律下封闭的集合存在（avoids_iff_closed_reach）；某个种子永不到达，恰当一个避开目标的封闭集含有某个种子（some_avoids_iff_reach）；目标之外的不动构型不到达目标（fixed_avoids_reach）。漏斗或每个盆在第 n 级所含的起点，在受扰过程的每个运行上 n 步之内到达目标（Funnel.runs、basin_runs）；对确定之律，至多 n 步的历程到达目标恰当一个漏斗含起点，目标判定时恰当一个数值变式在起点至多为 n（course_reaches_iff_funnel、course_reaches_iff_variant）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
++      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: what a determined law's process reaches is its orbit (reach_iff_orbit). So no configuration its process reaches from s is in the target exactly when some set holding s, avoiding the target and closed under the law exists (avoids_iff_closed_reach); some seed never reaches it exactly when a closed set avoiding the target holds a seed (some_avoids_iff_reach); a fixed configuration outside the target never reaches it (fixed_avoids_reach). A start that a funnel, or every basin, holds at level n meets the target within n steps on every run of the disturbed process (Funnel.runs, basin_runs); for a determined law, a course of at most n moves reaches the target exactly when a funnel holds the start, and, with the target decided, exactly when a numeric variant is at most n there (course_reaches_iff_funnel, course_reaches_iff_variant). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
++    },
++    {
++      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
++    },
++    {
++      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
++    },
++    {
++      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
++      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
++    },
++    {
++      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
++      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
++    },
++    {
++      "en": "2026-10-20: 24 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json and in git.",
++      "zh": "2026-10-20：24 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json 和 git 中。"
++    },
++    {
++      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
++      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 18 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, Becoming.Recurrence, MarketInstances, PartialRegimeTransition and RegimeTransition, with the conditions the Lean takes written in (the decided target where a law uses it, one admissible disturbance, 0 ≤ b ≤ 3/4 or b ≤ 5/12, κ ≥ 0, the cover); the referenced decision calibrations, course and run forms and boundary witnesses each have their law; the limitations became five does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two added hypotheses (the core laws' decisions, the rational quantities); the next step's completed part went to history and the related entry; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 18 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、Becoming.Recurrence、MarketInstances、PartialRegimeTransition 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（规律用到之处的目标可判定、一个可容许扰动、0 ≤ b ≤ 3/4 或 b ≤ 5/12、κ ≥ 0、覆盖）；已引用的判定校准、历程与运行形式以及边界见证各有其规律；限制改为五条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，并加两条前提（核心规律的判定、有理数量）；下一步中已完成的部分移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/dc0b3719c391e6a8/market-partial-correction-boundary.json",
++      "sha256": "dc0b3719c391e6a80bf7e39d408708b469700a75dd5ffb6770d9501026ab4150",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/d806134e99e7584a/market-partial-correction-boundary.json",
++      "sha256": "d806134e99e7584a8b9688d948970fa1035bd4dc29f0a563b3d689b5d0ab81b2",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
++    }
++  ]
++}
+diff --git a/_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json b/_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json
+new file mode 100644
+index 000000000..93e53e5f3
+--- /dev/null
++++ b/_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json
+@@ -0,0 +1,349 @@
++{
++  "schema_version": 2,
++  "id": "market-protected-continuation",
++  "title": {
++    "zh": "市场保护证书下的持续运行",
++    "en": "Continued market operation under a protection certificate"
++  },
++  "kind": "theorem",
++  "status": "recorded-checked",
++  "family": "F06",
++  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
++  "statement": {
++    "en": "For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.",
++    "zh": "对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。"
++  },
++  "laws": [
++    {
++      "en": "For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
++      "zh": "对每个过程与守卫：生存核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
++      "declarations": [
++        "Becoming.Viability.Kernel",
++        "Becoming.Viability.Certificate",
++        "Becoming.Viability.kernel_iff_certificate",
++        "Becoming.Viability.kernel_largest",
++        "Becoming.Viability.kernel_step_iff"
++      ]
++    },
++    {
++      "en": "For a law of change driven by disturbances with an admissibility condition, given one admissible disturbance, no history driven by admissible disturbances ever leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance.",
++      "zh": "对带可容许条件的扰动所驱动的变化之律，给定一个可容许扰动：由可容许扰动驱动的历史永不离开守卫，恰当有某个含起点的集合在守卫之内，且对每个可容许扰动封闭。",
++      "declarations": [
++        "Becoming.Viability.never_leaves_iff_certificate"
++      ]
++    },
++    {
++      "en": "With the guard decided, the guarded history stops at the first step beginning or ending outside the guard; it agrees with the history at every time exactly when the history stays within the guard, so, given one admissible disturbance, no guarded history driven by admissible disturbances stops exactly when such a closed set contains the start.",
++      "zh": "守卫可判定时，受守卫的历史在第一个始于或终于守卫之外的步停止；它在每个时刻与历史一致，恰当历史留在守卫之内；所以给定一个可容许扰动，由可容许扰动驱动的受守卫历史都不停止，恰当这样的封闭集含起点。",
++      "declarations": [
++        "Becoming.Viability.guarded_iff",
++        "Becoming.Viability.guarded_never_fails_iff"
++      ]
++    },
++    {
++      "en": "Two witnesses: in a two-configuration process the guard holds at a configuration from which one step leaves it, so the guard alone need not be a certificate; and with no admissible disturbance every history condition holds vacuously while no set within an empty guard contains the start, so the given admissible disturbance is needed.",
++      "zh": "两个见证：在两个构型的过程中，守卫在某构型处成立，而一步就离开它，故守卫本身未必是证书；没有可容许扰动时，每个历史条件空真成立，而空守卫之内没有集合含起点，故所给的可容许扰动是需要的。",
++      "declarations": [
++        "Becoming.Viability.Leaves.within_not_kernel",
++        "Becoming.Viability.needs_admissible"
++      ]
++    },
++    {
++      "en": "In the market model, for every parameter set, bound set and start, the market's history and guarded history are the core's, with the essential floors as guard, and the worst disturbance a bound admits is admissible; so no admissible guarded history fails the essential floors exactly when some set of states containing the start lies within them and is closed under every admissible disturbance.",
++      "zh": "在市场模型中，对每组参数、界与起点：市场的历史与受守卫历史就是核心的历史与受守卫历史，以必要底线为守卫；界所容许的最坏扰动是可容许的；所以没有可容许的受守卫历史违反必要底线，恰当有含起点、在底线之内且对每个可容许扰动封闭的状态集。",
++      "declarations": [
++        "Becoming.MarketInstances.history_eq",
++        "Becoming.MarketInstances.guardedHistory_eq",
++        "Becoming.MarketInstances.worst_admissible",
++        "Becoming.MarketInstances.never_fails_iff"
++      ]
++    },
++    {
++      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard.",
++      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的生存核中。",
++      "declarations": [
++        "Becoming.MarketInstances.safe_closed",
++        "Becoming.MarketInstances.safe_never_fails",
++        "Becoming.MarketInstances.safe_within_kernel",
++        "MarketGenerativity.safe_history_never_fails"
++      ]
++    },
++    {
++      "en": "The model's numerical example, with one essential support of floor 5, satisfies the protection certificate's conditions.",
++      "zh": "模型的数值例（一项必要支持，底线为 5）满足保护证书的条件。",
++      "declarations": [
++        "MarketGenerativity.example_certificate"
++      ]
++    }
++  ],
++  "hypotheses": [
++    {
++      "zh": "Certificate、Safe、Admissible 的全部公开条件，包括选择、责任、影响、资金及各支持底线；不是只检查维护份额。",
++      "en": "All public Certificate, Safe and Admissible conditions, including selection, accountability, influence, funding and every support floor; renewal share alone is insufficient."
++    },
++    {
++      "en": "The core laws: any process and guard; for laws driven by disturbances, one admissible disturbance given, and for guarded histories a decided guard, each written into the laws that use it.",
++      "zh": "核心规律：任意过程与守卫；对扰动驱动之律给定一个可容许扰动，对受守卫历史要求守卫可判定，各自只写在用到它的规律中。"
++    },
++    {
++      "en": "The market model's quantities and parameters are rational numbers, and its histories are indexed by natural times from 0.",
++      "zh": "市场模型的量与参数是有理数，其历史以从 0 起的自然时刻为索引。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "No law gives entry from unsafe states: the certificate says where histories never fail, not how a state outside every certificate comes into one.",
++      "zh": "没有一条规律给出从不安全状态的进入：证书说明历史在何处永不失败，而不说明一切证书之外的状态怎样进入证书。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "The safe rectangle is one certificate within the kernel; the market's kernel itself, the complete region of nonfailure, is not computed.",
++      "zh": "安全矩形是核之内的一个证书；市场的生存核本身，即完整的不失败区域，没有算出。",
++      "kind": "scope",
++      "witness": "Becoming.MarketInstances.safe_within_kernel"
++    },
++    {
++      "en": "Apart from the numerical example, no law says that given parameters and bounds satisfy the protection certificate, or that some certificate holds a given start; the protection certificate is a supplied condition.",
++      "zh": "除数值例之外，没有一条规律说给定的参数与界满足保护证书，或说某个证书含给定的起点；保护证书是给定的条件。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "Nothing in the model makes actual markets satisfy its laws or comply with its certificate.",
++      "zh": "模型中没有什么使实际市场满足其规律或服从其证书。",
++      "kind": "correspondence"
++    }
++  ],
++  "counterexamples": [
++    {
++      "path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
++      "detail": {
++        "zh": "有限支持下低端吸引历史失败，表明一般物理初态不自动满足保护证书；保护范围也不是全体伦理后果。",
++        "en": "Low-attractor histories fail with finite support: a physical initial state does not automatically satisfy the certificate, nor does protection cover every ethical consequence."
++      }
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
++      "detail": {
++        "zh": "Leaves.within_not_kernel：守卫本身未必是证书；needs_admissible：没有可容许扰动时历史条件空真而律不成立。",
++        "en": "Leaves.within_not_kernel: the guard alone need not be a certificate; needs_admissible: with no admissible disturbance the history condition holds vacuously and the law fails."
++      }
++    }
++  ],
++  "standard_boundaries": [
++    "no-ethical-premise-core-axiom-free",
++    "discrete-steps",
++    "decidability"
++  ],
++  "validation_scope": {
++    "en": "Machine-checked with Lean 4.29.1. The core module Becoming.Viability by the consolidated checker (receipts under becoming-checks/), every declaration with an empty axiom report; the periphery MarketInstances by its instance checker (market-instances-checks/) and MarketGenerativity by the finite-transition check (transition-verification.json), reporting only propext, Quot.sound and Classical.choice. The claim comes from the original 39 results; the transition check rebuilt and audited its source without counting it as new.",
++    "zh": "Lean 4.29.1 实查。核心模块 Becoming.Viability 由合并检查器检查（becoming-checks/），公理报告皆空；外围 MarketInstances 由实例检查器（market-instances-checks/）、MarketGenerativity 由有限转变检查（transition-verification.json）检查，只报告 propext、Quot.sound 与 Classical.choice。主张来自原 39 项结果；转变检查重编并审计源码，不计为新结果。"
++  },
++  "next_delta": {
++    "en": "Identify actual market parameters and bounds that satisfy the protection certificate, with an actual state in the safe rectangle, or establish the law at another scope, such as entry from unsafe states or the market's whole kernel.",
++    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个生存核。"
++  },
++  "correspondence": {
++    "zh": "量表示指定市场中的运行关系与支持，必要支持由 essential 指定；其正确性、伦理范围和真实参数另需对应。",
++    "en": "Quantities represent the specified market relations and supports; essential designates necessary supports. Correct mapping, ethical scope and actual parameters remain separate."
++  },
++  "canonical_source": "experiments/market-generativity/formal/MarketGenerativity.lean",
++  "aliases": [
++    "MarketGenerativity.safe_history_never_fails",
++    "Becoming.Viability.kernel_iff_certificate",
++    "Becoming.Viability.never_leaves_iff_certificate",
++    "Becoming.Viability.guarded_never_fails_iff",
++    "Becoming.MarketInstances.never_fails_iff",
++    "Becoming.MarketInstances.safe_never_fails"
++  ],
++  "dependencies": [],
++  "related": [
++    {
++      "id": "market-partial-correction-boundary",
++      "detail": {
++        "zh": "新增结果放宽纠正参数，原范围继续保留和复用。",
++        "en": "The new result relaxes the correction parameter; the original scope remains preserved and reusable."
++      }
++    },
++    {
++      "id": "market-finite-support-obstruction",
++      "detail": {
++        "zh": "已完成的有限支持阻碍，保留本记录较窄结论。",
++        "en": "Completed finite-support obstruction preserving this record’s narrower result."
++      }
++    }
++  ],
++  "references": [
++    {
++      "path": "experiments/market-generativity/formal/MarketGenerativity.lean",
++      "role": "proof",
++      "sha256": "db7cf7f120e8759aebc1e280e9dc1bbd10b30a6b7004a835015624f85f8d49b1",
++      "declarations": [
++        "MarketGenerativity.safe_history_never_fails",
++        "MarketGenerativity.example_certificate"
++      ]
++    },
++    {
++      "path": "experiments/market-generativity/formal/transition-verification.json",
++      "role": "receipt",
++      "sha256": "94eb627cc38494b3347b7c5046e20b1e79bb41d35d6c01342d62241ef513c683",
++      "declarations": []
++    },
++    {
++      "path": "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md",
++      "role": "integration",
++      "sha256": "75fee116ec006410ab9f97667b32efecbbb795d56b5ef8f0493ea24bb7ed75e0",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
++      "role": "proof",
++      "sha256": "83fa2be908e4412c877f839c4fcf4763e7e2f36349eb0ccfe844d04bcb75556b",
++      "declarations": [
++        "Becoming.Viability.Kernel",
++        "Becoming.Viability.Certificate",
++        "Becoming.Viability.kernel_iff_certificate",
++        "Becoming.Viability.kernel_largest",
++        "Becoming.Viability.kernel_step_iff",
++        "Becoming.Viability.never_leaves_iff_certificate",
++        "Becoming.Viability.guarded_iff",
++        "Becoming.Viability.guarded_never_fails_iff",
++        "Becoming.Viability.Leaves.within_not_kernel",
++        "Becoming.Viability.needs_admissible"
++      ]
++    },
++    {
++      "path": "experiments/market-generativity/formal/MarketInstances.lean",
++      "role": "proof",
++      "sha256": "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da",
++      "declarations": [
++        "Becoming.MarketInstances.history_eq",
++        "Becoming.MarketInstances.guardedHistory_eq",
++        "Becoming.MarketInstances.worst_admissible",
++        "Becoming.MarketInstances.never_fails_iff",
++        "Becoming.MarketInstances.safe_closed",
++        "Becoming.MarketInstances.safe_never_fails",
++        "Becoming.MarketInstances.safe_within_kernel"
++      ]
++    },
++    {
++      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
++      "role": "integration",
++      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T044840.291323Z/verification.json",
++      "role": "receipt",
++      "sha256": "6d4711df073c8ece68a00ef4097ad5b149adb2ef04c8832a145ef90d02b10e98",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
++      "role": "receipt",
++      "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
++      "role": "receipt",
++      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
++      "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
++      "role": "receipt",
++      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
++      "role": "receipt",
++      "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72",
++      "declarations": []
++    },
++    {
++      "path": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
++      "role": "receipt",
++      "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
++      "declarations": []
++    }
++  ],
++  "proof_bindings": [
++    {
++      "source": "experiments/market-generativity/formal/MarketGenerativity.lean",
++      "receipt": "experiments/market-generativity/formal/transition-verification.json",
++      "sha256_pointer": "/sources/MarketGenerativity.lean",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
++      "sha256_pointer": "/source_sha256/Becoming.Viability",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    },
++    {
++      "source": "experiments/market-generativity/formal/MarketInstances.lean",
++      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
++      "sha256_pointer": "/source_sha256/MarketInstances",
++      "success_pointer": "/status",
++      "success_value": "passed"
++    }
++  ],
++  "history": [
++    {
++      "zh": "2026-10-08：随有限转变的正式复用迁移既有成果身份；原源码和历史回执保留。",
++      "en": "2026-10-08: migrated the inherited result identity for formal reuse by finite transition; original source and historical receipts remain."
++    },
++    {
++      "zh": "2026-10-09：核读既有研究§§41–46的LibreOffice形成对应；原定理、条件和回执均保留，新历史评估另记formed-software-continuation，未作数值映射。",
++      "en": "2026-10-09: reconciled study sections 41–46 on LibreOffice formation; original theorem, hypotheses and receipt remain, with the new historical assessment in formed-software-continuation and no numerical mapping."
++    },
++    {
++      "zh": "2026-10-09：核读同一研究§§47–52的API接续与保留依存评估；先前正文原字节前缀保留。此对应未改变本条数学命题、前提或回执，也未提供数量化参数。",
++      "en": "2026-10-09: reconciles sections 47–52 on API continuation and retained dependence; original study/chapter byte prefixes remain. The assessment changes no mathematical claim, hypothesis or receipt and supplies no quantitative parameters."
++    },
++    {
++      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。新核心模块 Becoming.Viability：生存核恰是含起点的证书之并，扰动律下历史永不离开守卫恰当存在封闭于每个可容许扰动的证书；市场律经外围 MarketInstances 对每组参数、界与起点成为实例，safe_history_never_fails 由安全矩形得出。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
++      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Viability: no course leaves the guard exactly when a certificate contains the start, and under disturbances exactly when a set within the guard is closed under every admissible disturbance; the market law becomes an instance for every parameter set, bound set and start through the periphery MarketInstances, and safe_history_never_fails follows from the safe rectangle. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
++    },
++    {
++      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
++    },
++    {
++      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
++      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
++    },
++    {
++      "en": "2026-10-20: 20 bookkeeping notes condensed from 2026-10-08 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json and in git.",
++      "zh": "2026-10-20：20 条记账性说明合并（2026-10-08 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json 和 git 中。"
++    },
++    {
++      "en": "25 October 2026, board item DF (study section 418): statement added: the core law and its market instance, as the claim states them (the claim is unchanged).",
++      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增陈述：核心规律及其市场实例，如主张所述（主张不变）。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 7 laws, each read against its declarations in Becoming.Viability, MarketInstances and MarketGenerativity, with every condition the Lean takes written in (one admissible disturbance given, a decided guard for guarded histories, the protection certificate); the example certificate, already referenced, has its own law; the limitations became four does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two hypotheses stating the core laws' conditions and the rational quantities; the evidence paragraph names the checkers and receipt folders, the next step is stated positively; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the next step, each read against the Lean it cites.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 7 条规律，各条对照其在 Becoming.Viability、MarketInstances 与 MarketGenerativity 中的声明核读，Lean 所取的每个条件都写入（给定一个可容许扰动、受守卫历史要求守卫可判定、保护证书）；已引用的数值例证书单列一条规律；限制改为四条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，以及说明核心规律条件与有理数量的两条前提；证据段写明检查器与回执目录，下一步以正面陈述；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、下一步，各条对照所引 Lean 核读。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/e41907ebbf4c9b9b/market-protected-continuation.json",
++      "sha256": "e41907ebbf4c9b9bf41eb2b7f670bb3284ba92503c99239cc3d7a4ac4256bdb9",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/a67e2a7ff5606344/market-protected-continuation.json",
++      "sha256": "a67e2a7ff5606344dc45bdf8ecadcf4222f0b09d9f7557d3a51d421014e1920c",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
++    }
++  ]
++}
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/board_sj.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/board_sj.py
+index 1b8bad1bc..dce2b0053 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/board_sj.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/board_sj.py
+@@ -44,7 +44,7 @@ def landed(receipt, n):
+     assert line.startswith('- **Queue:** ' + HEAD), 'SJ1 does not hold the head'
+     clause = (f"SJ1 landed (§{n}, core receipt `{receipt}`, every axiom report empty, one incremental core run: one "
+               "core leaf, `Becoming.CommonResponse`: the occurrences whose closure under a relation stays in a region "
+-              "form its largest part closed under the relation, the viability kernel at a process's steps, and a response common over "
++              "form its largest part closed under the relation, the invariance kernel at a process's steps, and a response common over "
+               "a reading within a requirement exists exactly where the acts' kernels cover the situations, so judgment "
+               "is viability indexed by acts; with exactly one act at each situation, one common over a map's sameness "
+               "exists exactly where the image of the response relation along the map has a fixed successor; `Viability.Certificate.kernel` and "
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/land_sj.sh b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/land_sj.sh
+index 3d7eda042..dc9c2b859 100755
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/land_sj.sh
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/land_sj.sh
+@@ -42,7 +42,7 @@ for t in research-check-strict research-links research-test; do make $t > "$ASID
+ git status --porcelain --untracked-files=all | cut -c4- > "$ASIDE/paths.txt"
+ git add --pathspec-from-file="$ASIDE/paths.txt"; step add $?
+ git commit -q -F - --pathspec-from-file="$ASIDE/paths.txt" <<MSG
+-SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt $ID, every axiom report empty, study §$N; Viability's two kernel laws re-proved from it with their statements unchanged). \`Becoming.CommonResponse\`, importing GrammarLaws only: the occurrences whose closure under a relation stays in a region, the grammar's «承» along the converse of «所闭», form its largest part closed under the relation («所闭之承最大»), for every carrier and relation; at a process's steps it is the viability kernel (\`Viability.kernel_iff_held\`), and \`Viability.Certificate.kernel\` and \`Viability.kernel_certificate\` are proved from it, so \`kernel_iff_certificate\`, \`kernel_largest\` and everything above them follow unedited. A response common over a reading within a requirement («共应»: a region for each act, inside its requirement, closed under the reading, covering the situations) exists exactly where the acts' kernels cover the situations («共应当且仅当所闭之承遍»), with no choice and no decision: 03 §3's judgment is viability indexed by acts. Along the reading without its closure exactly reflexivity and transitivity are needed, each by a witness; finer readings keep a common response; under staying the same it is the requirement covering, under the reading that tells nothing apart, on an inhabited carrier, one act everywhere; a rule from what a map reads gives one with no choice, the converse asking for a choice over the readings, which plans are shown to need (\`Viability.plans_iff_choice\`, cited by analogy), not proved needed here. With exactly one act at each situation, on a carrier keeping situations and acts apart, a common response over a map's sameness exists exactly where the image of the response relation along the map has a fixed successor, through the lumping law; at an act map the condition is \`Learning.Lumped\`, unfolded; witnesses that covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one (none under the reading that tells nothing apart). One new record, a-response-common-over-a-reading (home 03 §12, the section's opening counting its laws, 03's bases line naming it); 05 §10's row names the kernel's home; 08's counts; the root module's import and bullets, the checker's core list and scope, both package READMEs and regions.json; three reviews, of the design, of the Lean and the map, and of the landing texts (REVIEW-3: 8 agents, 34 of 41 findings confirmed and taken), every confirmed finding taken; the names provisional for the grammar's owner; GuardHorizon's bridge and re-proof left to a ring slot after ND; the connectivity register's new apart roots each with a reason; the records citing the changed texts re-pointed and Viability's proof bindings rebound, nothing they say changed. Render, strict check, links and tests pass.
++SJ1 landed: a response common over a reading, on the root (one core leaf, core receipt $ID, every axiom report empty, study §$N; Viability's two kernel laws re-proved from it with their statements unchanged). \`Becoming.CommonResponse\`, importing GrammarLaws only: the occurrences whose closure under a relation stays in a region, the grammar's «承» along the converse of «所闭», form its largest part closed under the relation («所闭之承最大»), for every carrier and relation; at a process's steps it is the invariance kernel (\`Viability.kernel_iff_held\`), and \`Viability.Certificate.kernel\` and \`Viability.kernel_certificate\` are proved from it, so \`kernel_iff_certificate\`, \`kernel_largest\` and everything above them follow unedited. A response common over a reading within a requirement («共应»: a region for each act, inside its requirement, closed under the reading, covering the situations) exists exactly where the acts' kernels cover the situations («共应当且仅当所闭之承遍»), with no choice and no decision: 03 §3's judgment is viability indexed by acts. Along the reading without its closure exactly reflexivity and transitivity are needed, each by a witness; finer readings keep a common response; under staying the same it is the requirement covering, under the reading that tells nothing apart, on an inhabited carrier, one act everywhere; a rule from what a map reads gives one with no choice, the converse asking for a choice over the readings, which plans are shown to need (\`Viability.plans_iff_choice\`, cited by analogy), not proved needed here. With exactly one act at each situation, on a carrier keeping situations and acts apart, a common response over a map's sameness exists exactly where the image of the response relation along the map has a fixed successor, through the lumping law; at an act map the condition is \`Learning.Lumped\`, unfolded; witnesses that covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one (none under the reading that tells nothing apart). One new record, a-response-common-over-a-reading (home 03 §12, the section's opening counting its laws, 03's bases line naming it); 05 §10's row names the kernel's home; 08's counts; the root module's import and bullets, the checker's core list and scope, both package READMEs and regions.json; three reviews, of the design, of the Lean and the map, and of the landing texts (REVIEW-3: 8 agents, 34 of 41 findings confirmed and taken), every confirmed finding taken; the names provisional for the grammar's owner; GuardHorizon's bridge and re-proof left to a ring slot after ND; the connectivity register's new apart roots each with a reason; the records citing the changed texts re-pointed and Viability's proof bindings rebound, nothing they say changed. Render, strict check, links and tests pass.
+ MSG
+ step commit $?
+ git log --oneline -1 | cut -c1-120
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/make_record_sj.py b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/make_record_sj.py
+index b01795352..020c6d638 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/make_record_sj.py
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/make_record_sj.py
+@@ -53,15 +53,15 @@ d = {
+         "The occurrences whose closure under a relation stays in a region form its largest closed part, the viability "
+         "kernel at a process's steps. A response common over a reading within a requirement exists exactly where the "
+         "acts' kernels cover the situations: judgment is viability indexed by acts.",
+-        '依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即生存核。读之共应在要求之内存在，'
+-        '当且仅当诸行之生存核遍盖诸情境：判断即以行为索引的生存性。'),
++        '依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即不变核。读之共应在要求之内存在，'
++        '当且仅当诸行之不变核遍盖诸情境：判断即以行为索引的生存性。'),
+     'laws': [
+         {**t("The kernel: for every carrier, relation and region, the occurrences at which the region holds "
+              "throughout their closure under the relation lie inside the region, form a region closed under the "
+              "relation, and include every region inside it closed under the relation. At a process's steps it is the viability "
+              "kernel, and the kernel's two laws, every certificate inside it and it a certificate, are proved from it.",
+-             '生存核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内'
+-             '每一对该关系封闭的区域。在一过程之步即生存核，生存核之二律（每一证书在生存核内、生存核为证书）由之证出。'),
++             '不变核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内'
++             '每一对该关系封闭的区域。在一过程之步即不变核，不变核之二律（每一证书在不变核内、不变核为证书）由之证出。'),
+          'declarations': [B + '«所闭之承最大»', B + '«所闭之承在内»', B + '«所闭之承闭»', B + '«闭在内则在所闭之承»',
+                           'Becoming.Viability.kernel_iff_held', 'Becoming.Viability.Certificate.kernel',
+                           'Becoming.Viability.kernel_certificate']},
+@@ -149,7 +149,7 @@ d = {
+         "empty axiom report; built in scratch, its Lean and map read by three independent AI reviewers and its "
+         "landing texts by four, each with a verifier, every confirmed finding taken.",
+         '由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse，回执 PENDING，CR_DECLS 个声明（CR_THMS 条定理），'
+-        '以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条生存核之律由此叶证出、陈述不变，公理报告均为空；'
++        '以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条不变核之律由此叶证出、陈述不变，公理报告均为空；'
+         '先在草稿中构建，其 Lean 与图经三位独立 AI 审阅者阅读，其落地文本经四位（各有一位核验者）阅读，所核实者皆采纳。'),
+     'next_delta': t(
+         "The rule form with choice, GuardHorizon's uniform policy, stated as this law with choice over the readings "
+@@ -157,15 +157,14 @@ d = {
+         '带选择的规则形式（GuardHorizon 之一致策略）表为本律加读数上的选择与每一读数皆被给出，其例由本记录之见证重证。'),
+     'correspondence': t(
+         "At a process's steps the kernel is what discrete-time viability theory (Aubin 1991) calls the invariance "
+-        "kernel of the constraint set, the largest subset that every evolution keeps, which the repository names the "
+-        "viability kernel; where each configuration has exactly one successor it is Aubin's viability kernel, from "
+-        "which some evolution stays. A common response over a reading is the relational, set-valued form of a policy "
++        "kernel of the constraint set, the largest subset that every evolution keeps; where each configuration has "
++        "exactly one successor it is also Aubin's viability kernel, from which some evolution stays. A common response over a reading is the relational, set-valued form of a policy "
+         "measurable with respect to an observation partition: the partition replaced by any relation and its "
+         "closure, the policy by an admissible relation closed under the reading; one act chosen in each class gives "
+         "the policy. Requisite variety (Ashby 1956) reads the covering law's failure: a reading too coarse for the "
+         "requirement.",
+-        '在一过程之步，生存核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集，本库称之为生存核；'
+-        '每一构型恰有一后继时，即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：'
++        '在一过程之步，此核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集；'
++        '每一构型恰有一后继时，亦即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：'
+         '分划换为任一关系及其闭包，策略换为对读封闭的可接受关系；于每一类择一行，即得此策略。必要多样性（Ashby 1956）读出'
+         '遍盖律之不成立：读对要求过粗。'),
+     'canonical_source': LEAF,
+@@ -175,11 +174,11 @@ d = {
+         {'id': 'master-laws-on-the-grammar', 'relation': 'formal-reuse', 'detail': t(
+             "Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel "
+             "and the one-act law are proved from them.",
+-            '复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：生存核与每一情境一行之律由之证出。')},
++            '复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：不变核与每一情境一行之律由之证出。')},
+         {'id': 'market-protected-continuation', 'relation': 'formal-reuse', 'detail': t(
+             "Reuses Viability's kernel and a process's steps: kernel_iff_held reads the kernel as the grammar's, and "
+             "that record's two kernel laws are proved from this record's first law, their statements unchanged.",
+-            '复用 Viability 之生存核与过程之步：kernel_iff_held 把生存核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条生存核之律由本记录第一律证出，陈述不变。')},
++            '复用 Viability 之不变核与过程之步：kernel_iff_held 把不变核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条不变核之律由本记录第一律证出，陈述不变。')},
+         {'id': 'finite-continuation-plans', 'relation': 'interpretive', 'detail': t(
+             "A rule fixed in advance from a common response asks for a choice over the readings; "
+             "Viability.plans_iff_choice shows that such choice cannot be dropped for plans, cited by analogy and not "
+@@ -221,7 +220,7 @@ d = {
+         "verifier), every confirmed finding taken; Viability's two kernel laws re-proved "
+         "from it with their statements unchanged; GuardHorizon's bridge left to a ring slot.",
+         '2026年11月1日，工作板条目 SJ（SJ1）：据 SJ 的设计新增，经三轮审阅（REVIEW-1 以四个视角审设计；REVIEW-2 以三个视角审 Lean '
+-        '与图；REVIEW-3 以四个视角审落地文本，各有核验者），所核实者皆采纳；Viability 的两条生存核之律由之重证，陈述不变；GuardHorizon 之桥留待环之槽位。')],
++        '与图；REVIEW-3 以四个视角审落地文本，各有核验者），所核实者皆采纳；Viability 的两条不变核之律由之重证，陈述不变；GuardHorizon 之桥留待环之槽位。')],
+ }
+ OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+ print('written', OUT.name)
+diff --git a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/study_sj.txt b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/study_sj.txt
+index c89e6266f..76e93c038 100644
+--- a/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/study_sj.txt
++++ b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/kit/study_sj.txt
+@@ -8,7 +8,7 @@ Result(s): a-response-common-over-a-reading (SJ1, home 03 §12). New. market-pro
+ Delta:
+   - The kernel on the grammar: the occurrences whose closure under a relation stays in a region («承» along the
+     converse of «所闭») form its largest part closed under the relation («所闭之承最大»), for every carrier and relation. At a
+-    process's steps it is the viability kernel (Viability.kernel_iff_held), and Viability.Certificate.kernel and
++    process's steps it is the invariance kernel (Viability.kernel_iff_held), and Viability.Certificate.kernel and
+     Viability.kernel_certificate are proved from it with their statements unchanged.
+   - Covering: for every reading and requirement, a response common over the reading within the requirement («共应»:
+     a region for each act, inside its requirement, closed under the reading, covering the situations) exists
+@@ -28,8 +28,7 @@ Evidence: core receipt {RECEIPT}: Becoming.CommonResponse (COMMONRESPONSE), Beco
+   axiom report empty.
+ Boundary: which requirement is right is not stated; an act at every situation, or one shared by every two, need
+   not give a common response; the witnesses keep the work of the closure, covering, one act and the sum carrier.
+-  The kernel at a process's steps quantifies over every course: Aubin's invariance kernel, which the repository
+-  names the viability kernel.
++  The kernel at a process's steps quantifies over every course: Aubin's invariance kernel.
+ Integration: the root module's import and bullets, the checker's core list and scope, both package READMEs,
+   regions.json, 03's bases line, §12 and 05 §10's row; the records citing the changed texts re-pointed, nothing they say changed.
+ ```
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+index 970bac4c7..3b58861f4 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean
+@@ -3213,7 +3213,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+   law is exactly double-negation elimination.
+ * `Becoming.Viability` (L1): where no course leaves a guard, with no premise. No course from a
+   configuration leaves the guard exactly when some certificate (a set within the guard that every
+-  step keeps) contains it; the viability kernel is the largest certificate. For a law of change
++  step keeps) contains it; the invariance kernel is the largest certificate. For a law of change
+   driven by admissible disturbances, given one admissible disturbance, no history ever leaves the
+   guard exactly when some set containing the start lies within the guard and is closed under
+   every admissible disturbance; a guarded history stops exactly where the history leaves it. The
+@@ -3418,7 +3418,7 @@ every module importing one of them; L1 holds the rest. No module imports one of
+ * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
+   carrier, reading and requirement, with no premise. The occurrences at which a region holds
+   throughout their closure under a relation form the largest region closed under the relation
+-  inside it (`«所闭之承最大»`), the viability kernel at a process's steps; a response common over a reading within a requirement, one region
++  inside it (`«所闭之承最大»`), the invariance kernel at a process's steps; a response common over a reading within a requirement, one region
+   per act, inside the act's requirement and closed under the reading, exists exactly where the
+   acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed
+   by acts. Where the requirement gives exactly one act at each situation, a response common over a
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean
+index 82db8b969..cf7991f6d 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean
+@@ -138,7 +138,7 @@ theorem «闭在内则在所闭之承» {E : «际» α} {P Q : α → Prop} (in
+ 
+ /-- **The kernel.** What holds throughout the reading's closure is the largest region inside `P`
+ closed under the reading: inside, closed, and holding every other such region. For every relation;
+-at a process's steps it is the viability kernel. -/
++at a process's steps it is the invariance kernel. -/
+ theorem «所闭之承最大» (E : «际» α) (P : α → Prop) :
+     (∀ s, «承» («逆» («所闭» E)) P s → P s) ∧ «闭» E («承» («逆» («所闭» E)) P) ∧
+       ∀ Q : α → Prop, (∀ s, Q s → P s) → «闭» E Q → ∀ s, Q s → «承» («逆» («所闭» E)) P s :=
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean
+index d7afa8779..423e099f9 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean
+@@ -39,7 +39,7 @@ values kept.
+   move leading, whatever value is kept, into the family, keeps each of its classes for every
+   horizon (`keptFor_of_closed`). A certificate of `Viability` with a move allowed and enabled
+   throughout it is such a family: every class within it is kept for every horizon
+-  (`Certificate.keptFor`), the viability kernel among them (`Kernel.keptFor`).
++  (`Certificate.keptFor`), the invariance kernel among them (`Kernel.keptFor`).
+ * **What a step keeps matters.** In `Matching`, a hidden bit must be matched by the second
+   move. Where the step keeps the bit, the starts are kept for two steps; where it keeps nothing,
+   they are not (`Matching.keeping_matters`).
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean
+index 415894b9e..f6e950cdc 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean
+@@ -37,9 +37,10 @@ law never reaches a target, and, dually, when a law reaches a target within `n`
+   leaves the guard within `n` steps on every admissible history (`exhausts`).
+ * **Never reaching.** A determined law's orbit never reaches a target exactly when some set
+   containing the start avoids the target and is closed under the law (`avoids_iff_closed`).
+-  This is the viability kernel of the target's complement (`avoids_iff_kernel`). Some seed
+-  never reaches the target exactly when such a set contains a seed (`some_avoids_iff`). No seed
+-  avoids the target exactly when no such set contains a seed (`none_avoid_iff`); read with
++  This is the invariance kernel of the target's complement (`avoids_iff_kernel`); for a determined
++  law, one course from each configuration, it is also the viability kernel, the two coinciding.
++  Some seed never reaches the target exactly when such a set contains a seed
++  (`some_avoids_iff`). No seed avoids the target exactly when no such set contains a seed (`none_avoid_iff`); read with
+   excluded middle, which the core does not use, the left side says every seed reaches the
+   target. A fixed configuration outside the target is such a set by itself (`fixed_avoids`).
+ * **Reaching.** `Reaches f adm target n s`: `s` is in the target, or every admissible disturbance
+@@ -471,7 +472,7 @@ theorem orbit_eq_history (next : S → S) (s : S) (d : Nat → Unit) :
+   | n + 1 => congrArg next (orbit_eq_history next s d n)
+ 
+ /-- **Never reaching a target is never leaving its complement**: the orbit never reaches the
+-target exactly when the start is in the viability kernel of the target's complement. -/
++target exactly when the start is in the invariance kernel of the target's complement. -/
+ theorem avoids_iff_kernel {s : S} :
+     (∀ n, ¬ target (Law.orbit next s n)) ↔
+       Kernel (disturbed (determined next) (fun _ => True)) (fun x => ¬ target x) s :=
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean
+index 190e507b6..46c330b46 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean
+@@ -9,7 +9,7 @@ A guard `guard : S → Prop` marks the configurations in which an activity can g
+ states, for every process, exactly where no course leaves the guard, and reads the statement on
+ laws of change driven by admissible disturbances.
+ 
+-* **The kernel and its certificates.** The viability kernel of a guard holds the configurations
++* **The kernel and its certificates.** The invariance kernel of a guard holds the configurations
+   from which no course leaves it (`Kernel`). A certificate is a set of configurations within the
+   guard that every step keeps (`Certificate`: within, and a `Frame` invariant). No course from
+   `s` leaves the guard exactly when some certificate contains `s` (`kernel_iff_certificate`);
+@@ -51,7 +51,7 @@ variable {S : Type u} {A : Type v}
+ 
+ /-! ## The kernel and its certificates -/
+ 
+-/-- The **viability kernel** of a guard: the configurations from which no course leaves it. -/
++/-- The **invariance kernel** of a guard: the configurations from which no course leaves it. -/
+ def Kernel (P : Process S A) (guard : S → Prop) (s : S) : Prop :=
+   ∀ t, Reach P s t → guard t
+ 
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
+index dcc18c71e..b79623962 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md
+@@ -33,7 +33,7 @@ Core purity is [Ren's requirement](../../../../../../sources/15-codex-theory-con
+ | L1 | [`Becoming.MapRegions`](Becoming/MapRegions.lean) | the map's regions: a carrying renewal begins no line of the pattern, and a beginning of a part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal (`«传则粗不生»`, `«生则或粗生或传»`); keeping from some point on (`«后守»`) follows from keeping and 全守, excludes degeneration and, on a single line, generation (`«单行则生成后守不并»`); with excluded middle every point is 生成, 后守 or 退化 (`«三域之周»`), which in every model is exactly excluded middle (`«三域之定当且仅当排中»`); a line renewing once and then staying is in none of 生成, 守, 退化 and is 后守 (`Map.Once`); telling 生成 from 后守 on a line gives LPO (`Map.«生成后守之定则LPO»`); near-definitional, every axiom report empty. A leaf (board item GW) |
+ | L0 | [`Becoming.Prelude`](Becoming/Prelude.lean) | the lemmas on numbers, truth values, lists and options that the layers use, each stated once (no premise; it imports only Init): cancellation, subtraction and products of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`, `contains`, `filter`, `find?`, `bind` and `map` test (`ListTests.all_true_iff`, `ListTests.find_none_iff`), and membership in joined and mapped lists (`mem_append_cases`, `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; the one balance over a stretch (`balance_over_stretch_on`), whose cases are the stretch balances of flows, amounts, courses and censuses |
+ | L0 | [`Becoming.GrammarLaws`](Becoming/GrammarLaws.lean) | the five master laws on the grammar, for every carrier and relation (no premise): closure is being the occurrence itself or reached (`«所闭当且仅当同一或及»`), a region every step keeps holding from where it holds on (`kept_onward`), the closure under the converse being the closure read backward (`«所闭之逆»`), a closure through borrowed steps lying within `o`'s or `a`'s closure, and the two within `o`'s under a larger relation where `a` lies within it (`«借步之所闭在二所闭»`, `«二所闭在借步之所闭»`); perfect pairings of lists (`«对»`) conserve count, are equal count under the one (`«一之对»`), compose, join, gather over a family and carry over a stretch (`«对之接»`, `«对之族»`, `«对之程»`), so the count law is exactly a pairing of units (`«守数当且仅当可对»`, `«程守数当且仅当可对»`), near-definitional; counting a region (`«计»`), a pairing keeps the count on every region the relation does not cross (`«对则不越域守数»`) and, under a class decided by a test, is exactly equal count in every class (`«类之对当且仅当类类等数»`), and the census of a step pairs the units before with those arising to the units after with those ceasing (`«定后定前则前并生对后并亡»`); drawn in is reaching what does not reach back (`«入当且仅当有不返»`), and with the successor fixed at what it reaches an occurrence reaching itself is not drawn (`«定后于则返者不入»`); a listed line merging nothing returns to its start (`«线有限不并则返»`); falls whose courses end do not recur (`«尽则不或屡»`), rest no case of being drawn (`«止而不入之例»`, `«入而屡之例»`); within `n` steps composing (`«迭内之接»`), and a course each of whose rounds holds what every condition held holding at round `n` where everything reaching in `n` steps held at the start, with memory within `n` (`«承之迭»`, `«存承之迭»`); steps splitting as they compose and an unending line having steps of every length (`«迭之分»`, `«不穷则迭»`); passing through a word's relations in turn (`«历»`), `«迭»` its case for one relation repeated (`«迭即历»`), six laws of `«迭»` the cases of its laws (`«历之接»`, `«历之逆»`, `«同行之历»` and the others); going alike and constancy (`«局定后则有常当且仅当同行可续»`), a map's image with a fixed successor exactly where sameness under it goes alike (`«像定后当且仅当同行»`), a map preserving a relation exactly where its image lies within the other (`«保之像»`); with a fixed successor a class's core going alike, and with a successor everywhere too the coarsest class inside the class that does (`«定后则类之核同行»`, `«定后遍后则核为其内最粗同行之类»`), off a fixed successor not always (`«后不定则核可不同行»`); widening a strict order of relations (`«广不可逆»`, `«广之传递»`), and a transitive relation joined to the strict part of a transitive relation containing it transitive (`strictJoin_trans`). Frame imports it; the models' laws of closure, finite runs, lumping and order are proved from it, and balance is represented in Flow, not derived |
+-| L1 | [`Becoming.CommonResponse`](Becoming/CommonResponse.lean) | a response common over a reading (共应), on the grammar (no premise): the occurrences at which a region holds throughout their closure under a relation form the largest region closed under the relation inside it (`«所闭之承最大»`), the viability kernel at a process's steps (`Viability.kernel_iff_held`); a response common over a reading within a requirement exists exactly where the acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed by acts; with exactly one act at each situation, a response common over a map's sameness exists exactly where the image of the response relation along the map, on a carrier keeping situations and acts apart, has a fixed successor (`«遍定应共应当且仅当像定后»`); a rule from what a map reads gives one with no choice (`«依读而应则共应»`); witnesses that the closure, covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one (none under the reading that tells nothing apart; `«共应之例»`) |
++| L1 | [`Becoming.CommonResponse`](Becoming/CommonResponse.lean) | a response common over a reading (共应), on the grammar (no premise): the occurrences at which a region holds throughout their closure under a relation form the largest region closed under the relation inside it (`«所闭之承最大»`), the invariance kernel at a process's steps (`Viability.kernel_iff_held`); a response common over a reading within a requirement exists exactly where the acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed by acts; with exactly one act at each situation, a response common over a map's sameness exists exactly where the image of the response relation along the map, on a carrier keeping situations and acts apart, has a fixed successor (`«遍定应共应当且仅当像定后»`); a rule from what a map reads gives one with no choice (`«依读而应则共应»`); witnesses that the closure, covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one (none under the reading that tells nothing apart; `«共应之例»`) |
+ | L1 | [`Becoming.GrammarTransport`](Becoming/GrammarTransport.lean) | the grammar kept by one-to-one correspondence (no premise): a correspondence (`«一一对应»`) carrying what a listed term reads carries the term (`«生之对应»`, `«核之对应»` and the others), carrying read through the grammar's image (`«对应之像»`) and kept by its operations, a predicate carried as its partial identity (`«部分恒等之像»`); ending on every branch pulled back along a homomorphism (`«尽之拉回»`), going on along some branch along a map lifting continuation (`«延之拉回»`); steps, words, closed regions, determination and going alike kept (`«迭之对应»`, `«历之对应»`, `«同行之对应»` and the others), correspondences side by side (`«一一对应».prod`); lemmas of the World's representation and the processes' |
+ | L1 | [`Becoming.ShownOrder`](Becoming/ShownOrder.lean) | what choices show of the order they come from (no premise, on the grammar): every transitive relation according with the choices contains the shown reach (`ChoiceOccasions.reach_within`); a strict order accords exactly where nothing shown returns (`ChoiceOccasions.accorded_iff_noCycle`); then the positive comparisons every such order shares are exactly the shown reach (`ChoiceOccasions.above_in_every_iff_reach`), a narrower class making at least those (`ChoiceOccasions.above_in_class_of_every`), and none is forced beyond it (`ChoiceOccasions.above_in_some_of_unreached`, `ChoiceOccasions.both_ways_of_unreached`); choices required only to be maximal force no positive comparison (`ChoiceOccasions.weakly_forces_no_comparison`); one search with two orders, alike on the menu met and apart after (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`); near-definitional |
+ | L0 | [`Becoming.Frame`](Becoming/Frame.lean) | a frame is a process with realized claims; runs, the one closure of a relation (`WithinClosure`, the grammar's `«所闭»`), reach as the closure of the steps, invariants as regions closed under them, novel realization |
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+index 292cde463..f0602248a 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
+@@ -220,7 +220,7 @@ SCOPE = (
+     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
+     "balance is represented both ways in Flow and not derived. "
+     "CommonResponse: the occurrences at which a region holds throughout their closure under a relation form "
+-    "the largest region closed under the relation inside it, the viability kernel at a process's steps, whose two laws in Viability are proved from "
++    "the largest region closed under the relation inside it, the invariance kernel at a process's steps, whose two laws in Viability are proved from "
+     "it; a response common over a reading within a requirement exists exactly where the acts' kernels cover the "
+     "situations, and for a reflexive and transitive reading along the reading itself; finer readings keep it, "
+     "under staying the same it is the requirement covering, under the reading that tells nothing apart, on an "
+diff --git a/theories/becoming/chapters/03-KNOWING.md b/theories/becoming/chapters/03-KNOWING.md
+index 6debd4d55..ce5e4cd22 100644
+--- a/theories/becoming/chapters/03-KNOWING.md
++++ b/theories/becoming/chapters/03-KNOWING.md
+@@ -534,7 +534,7 @@ A formation that senses, predicts, chooses, acts and revises is one law within t
+ **Reading** [AI reading, new]. Informing and revaluing are two ways one part of a loop can move what another part's reading answers: the first changes what the reading formation tells apart, the second what it values. By a reference on the holding formation's model, the least shortfall is fixed by the map and the residual is what the deciding adds through it, so revaluing moves the residual alone, while a finer map never raises the least shortfall and can move the residual either way; in the witnesses each move turns an answer the other leaves. For a holding formation evaluating by the reading formation's own current valuation, with a shared model, and for this decision, no revaluation raises the worth of holding for its answer, one that decides a listed cell against the current strict weighted preference lowers it, and informing never lowers it: by that worth, no reason to revise the valuation, a reason to keep it from such a revision, and none against informing it. This is a one-decision counterpart, in counts, of evaluating by the current reward function (Everitt, Hutter, Kumar and Krakovna 2021), with the holding formation in the evaluating agent's place: the answer held for is the revised valuation's, as their agent that anticipates time inconsistency anticipates its later self, and, as in the preservation incentive their Claim 2 permits that agent, revising gains nothing; their causal influence diagrams, the agent that ignores time inconsistency, several steps and the reward input are not represented. Under a reference the valuation does not share, holding for it uninformed or revalued can be worth more than holding for it informed, and, with a shared model, some replacement valuation gains exactly where the current answer decides a listed cell against the reference's strict weighted preference, whether the supplied update reaches it not asserted: read as incentives to withhold and to revise, in counts and before costs, with no choice by the holding formation among them represented, only the comparisons with amounts forgone and the four one-decision alternatives. Read so, this is a deterministic-partition comparison related to Bayesian persuasion (Kamenica and Gentzkow 2011): with a shared model, the criterion over every refinement is the counterpart, along the cells of the listing's partitions, of their convexity condition for full disclosure, whatever the objectives, identical objectives one sufficient case; their receiver breaks ties in the sender's favour, where the answer here releases; their prior is common, so the weights apart lie outside their model (Alonso and Câmara 2016), and no optimal signal or equilibrium is represented. It differs from coarse equilibrium communication under preference differences (Crawford and Sobel 1982), where coarseness is the cost of a privately informed sender's credibility, not a gain from withholding; here the holding formation reads only its own state and the answer, not the world, and a demonstration shows the world through a supplied map fixed in advance, as a committed experiment does. No path-specific objective is constructed (Farquhar, Carey and Everitt 2022): evaluating by the current valuation fixes the evaluation, not the path from the valuation through the answer held for. An answer whose course is alike at the candidate worlds gives holding no strict advantage over the better committed move before any amount forgone, the off-switch game's Equation 1 for a deterministic policy constant in the utility (Hadfield-Menell, Dragan, Abbeel and Russell 2017), here because nothing the reading formation senses tells the candidate worlds apart, where their human observes the utility; whether the move it gives is the better one is not fixed, and an informative answer can give a strict advantage, under [the threshold of holding](#r-what-holding-for-a-reading-is-worth). The routes and the current valuation's evaluation relate to induced preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022), who call frozen initial preferences a very crude baseline: evaluated by the current valuation on a shared model, a revision deciding a listed cell against its strict weighted preference counts as a loss, wanted or not, and no criterion of legitimate, desired or autonomous change is supplied here. The witness shows only that, across two starts, the answers and the final state do not determine whether the valuation changed, while the record with the start does; a case of one start is not reached. What a reader of the answers alone leaves open is how the state that answered came to be, the route form of [§11](#what-the-acts-show)'s obstruction. Independence from the unread, capture and late correction stay readings on their own laws.
+ 
+ <a id="r-a-response-common-over-a-reading"></a>
+-**Theorem** (root: any carrier, reading and requirement, the requirement supplied and fixed before the outcome; no premise and no choice). *A response common over a reading.* The occurrences at which a given region holds throughout their closure under a relation form the largest region inside it closed under the relation (`«所闭之承最大»`); at a process's steps it is the viability kernel (`Viability.kernel_iff_held`), whose two laws are proved from it. A judgment through the couplings is a common response over the class alike through them ([§3](#r-testing-within-couplings)): one region for each act, inside that act's requirement and closed under the reading, the regions covering the situations. For every reading and requirement such a response exists exactly where every situation has an act whose requirement holds throughout its closure under the reading (`«共应当且仅当所闭之承遍»`): the acts' kernels cover the situations, the reading standing where a process's steps stand, so judgment is viability indexed by acts. Where the reading is a map's sameness and the requirement gives exactly one act at each situation, a common response exists exactly where the image of the response relation along the map has a fixed successor (`«遍定应共应当且仅当像定后»`), the lumping law on a carrier keeping situations and acts apart. A rule from what a map reads gives one with no choice (`«依读而应则共应»`). A rule from a common response asks for one act chosen for each reading, which [§9](#r-when-to-inquire-and-when-to-respond)'s uniform policy has with choice over the readings as a hypothesis; that such choice cannot be dropped is shown for plans ([§9](#r-finite-continuation-plans)), not for this rule. Witnesses show that the closure, covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one: under the reading that tells nothing apart they give none (`«共应之例»`) ([record](../results/records/a-response-common-over-a-reading.md)).
++**Theorem** (root: any carrier, reading and requirement, the requirement supplied and fixed before the outcome; no premise and no choice). *A response common over a reading.* The occurrences at which a given region holds throughout their closure under a relation form the largest region inside it closed under the relation (`«所闭之承最大»`); at a process's steps it is the invariance kernel (`Viability.kernel_iff_held`), whose two laws are proved from it. A judgment through the couplings is a common response over the class alike through them ([§3](#r-testing-within-couplings)): one region for each act, inside that act's requirement and closed under the reading, the regions covering the situations. For every reading and requirement such a response exists exactly where every situation has an act whose requirement holds throughout its closure under the reading (`«共应当且仅当所闭之承遍»`): the acts' kernels cover the situations, the reading standing where a process's steps stand, so judgment is viability indexed by acts. Where the reading is a map's sameness and the requirement gives exactly one act at each situation, a common response exists exactly where the image of the response relation along the map has a fixed successor (`«遍定应共应当且仅当像定后»`), the lumping law on a carrier keeping situations and acts apart. A rule from what a map reads gives one with no choice (`«依读而应则共应»`). A rule from a common response asks for one act chosen for each reading, which [§9](#r-when-to-inquire-and-when-to-respond)'s uniform policy has with choice over the readings as a hypothesis; that such choice cannot be dropped is shown for plans ([§9](#r-finite-continuation-plans)), not for this rule. Witnesses show that the closure, covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by every two, need not give one: under the reading that tells nothing apart they give none (`«共应之例»`) ([record](../results/records/a-response-common-over-a-reading.md)).
+ 
+ **Reading** [AI reading, new]. The law says what a reading must carry for a requirement to be met by one response; which requirement is right it does not say. A reading too coarse for the requirement is the covering's failure, requisite variety (Ashby 1956) read on relations; a finer reading keeps every common response.
+ 
+diff --git a/theories/becoming/chapters/05-COLLECTIVES.md b/theories/becoming/chapters/05-COLLECTIVES.md
+index b91275112..ab46380e8 100644
+--- a/theories/becoming/chapters/05-COLLECTIVES.md
++++ b/theories/becoming/chapters/05-COLLECTIVES.md
+@@ -346,7 +346,7 @@ Computations in the model refute overstrong readings: profits coexist with suppo
+ 
+ | Law | Market instance | Scope |
+ |---|---|---|
+-| <a id="r-market-protected-continuation"></a>*Never leaving.* For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it (a set within the guard that every step keeps; the viability kernel is the largest, its two laws proved on the grammar in [03 §12](03-KNOWING.md#r-a-response-common-over-a-reading)); for a law driven by admissible disturbances, given one, no history leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance (`Viability.never_leaves_iff_certificate`). | For every parameter set, bound set and start, no admissible guarded history fails the essential floors exactly when such a set exists, and under a valid protection certificate the safe rectangle is one (`MarketInstances.never_fails_iff`, `MarketInstances.safe_never_fails`). | no entry from unsafe states, no compliance by actual markets. [Record](../results/records/market-protected-continuation.md). |
++| <a id="r-market-protected-continuation"></a>*Never leaving.* For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it (a set within the guard that every step keeps; the invariance kernel is the largest, its two laws proved on the grammar in [03 §12](03-KNOWING.md#r-a-response-common-over-a-reading)); for a law driven by admissible disturbances, given one, no history leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance (`Viability.never_leaves_iff_certificate`). | For every parameter set, bound set and start, no admissible guarded history fails the essential floors exactly when such a set exists, and under a valid protection certificate the safe rectangle is one (`MarketInstances.never_fails_iff`, `MarketInstances.safe_never_fails`). | no entry from unsafe states, no compliance by actual markets. [Record](../results/records/market-protected-continuation.md). |
+ | <a id="r-market-partial-correction-boundary"></a>*Reaching.* For every law with admissible disturbances and every target, a start reaches the target within `n` steps on every admissible disturbance exactly when some funnel holds it at level `n` (level 0 in the target; level `k + 1` in the target or sent by every admissible step to level `k`); for a determined law it never reaches the target exactly when some set containing the start avoids the target and is closed under the law (`Lasting.reaches_iff_funnel`, `Lasting.avoids_iff_closed`). | For physical rational states with positive renewing share, `0 ≤ β ≤ 3/4` fixed during the intervention and no extra quality error, every such state reaches the protection region in finite time exactly when `β ≤ 5/12`, equivalently when the margin at threshold `3/8` under the worst influence is nonnegative; above `5/12` the fixed configuration is a closed set avoiding landing (`MarketInstances.lands_iff_margin`); for `β ≤ 5/12` each such state has a landing time `N`, and, with extra support consumption `κ ≥ 0` a step, initial stock at least the cover `K_N` carries its guarded run through the landing into the original protection (`PartialRegimeTransition.supported_partial_transition`). | not a complete basin or a measured threshold. [Record](../results/records/market-partial-correction-boundary.md). |
+ | <a id="r-market-supported-finite-transition"></a>*Lasting.* For every law with admissible disturbances and a guard, a start lasts `n` steps exactly when some ladder holds it at level `n` (levels within the guard, every admissible step from level `k + 1` landing at level `k`), and exactly when every necessary family holds it there (`Lasting.lasts_iff_ladder`). | With `β = 0` actually holding during the pulse, then `β = 1/2`, extra support consumption `κ ≥ 0` a step and no other shocks, the support cover `K₀ = 5`, `K(n+1) = (10/9)(K(n) + 1 + κ)` is a ladder for the essential floor, exact at the worst share (`MarketInstances.cover_ladder`, `MarketInstances.cover_exact`), so each positive state has a horizon `N` at which initial support at least `K_N` carries it through a finite correction into the original protection (`RegimeTransition.supported_finite_transition`; no single `N` serves every positive share, `RegimeTransition.no_uniform_pulse_duration`). | sufficient hypotheses, not least; support during the transition cannot be paid for with the improvement it brings. [Record](../results/records/market-supported-finite-transition.md). |
+ | <a id="r-market-finite-support-obstruction"></a>*Draining.* For every law with admissible disturbances and every family of levels its steps drain, from a start below level `n` no admissible history satisfies the guard at every step through `n`, and being at level `n` does not suffice (`Lasting.Drains.leaves`). | Under the original rational laws and floor 5, initial share and quality in [0, 1], `β` and quality error varying arbitrarily each step, nonnegative support shocks and no injection, entry or change of expansion: for every rational `C₀ ≥ 5` and integer `N > C₀ − 5`, every positive seed `0 < x₀ ≤ (2/3)^N/6` fails by step `N` (`MarketInstances.forces_failure_instance`). | a conservative obstruction, not an exact viability boundary; actual provision, entry or faster formation may move it. [Record](../results/records/market-finite-support-obstruction.md). |
+diff --git a/theories/becoming/results/data/regions.json b/theories/becoming/results/data/regions.json
+index c84da5921..a53c255a4 100644
+--- a/theories/becoming/results/data/regions.json
++++ b/theories/becoming/results/data/regions.json
+@@ -1274,7 +1274,7 @@
+   "market-protected-continuation": {
+    "region": "collective",
+    "base": "frame",
+-   "note": "viability kernel = largest certificate"
++   "note": "invariance kernel = largest certificate"
+   },
+   "market-supported-finite-transition": {
+    "region": "collective",
+diff --git a/theories/becoming/results/records/a-response-common-over-a-reading.json b/theories/becoming/results/records/a-response-common-over-a-reading.json
+index 18c19fce5..a28f6bbe8 100644
+--- a/theories/becoming/results/records/a-response-common-over-a-reading.json
++++ b/theories/becoming/results/records/a-response-common-over-a-reading.json
+@@ -10,13 +10,13 @@
+   "family": "F02",
+   "reviewed_at_utc": "REVIEWED_AT",
+   "statement": {
+-    "en": "The occurrences whose closure under a relation stays in a region form its largest closed part, the viability kernel at a process's steps. A response common over a reading within a requirement exists exactly where the acts' kernels cover the situations: judgment is viability indexed by acts.",
+-    "zh": "依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即生存核。读之共应在要求之内存在，当且仅当诸行之生存核遍盖诸情境：判断即以行为索引的生存性。"
++    "en": "The occurrences whose closure under a relation stays in a region form its largest closed part, the invariance kernel at a process's steps. A response common over a reading within a requirement exists exactly where the acts' kernels cover the situations: judgment is viability indexed by acts.",
++    "zh": "依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即不变核。读之共应在要求之内存在，当且仅当诸行之不变核遍盖诸情境：判断即以行为索引的生存性。"
+   },
+   "laws": [
+     {
+-      "en": "The kernel: for every carrier, relation and region, the occurrences at which the region holds throughout their closure under the relation lie inside the region, form a region closed under the relation, and include every region inside it closed under the relation. At a process's steps it is the viability kernel, and the kernel's two laws, every certificate inside it and it a certificate, are proved from it.",
+-      "zh": "生存核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内每一对该关系封闭的区域。在一过程之步即生存核，生存核之二律（每一证书在生存核内、生存核为证书）由之证出。",
++      "en": "The kernel: for every carrier, relation and region, the occurrences at which the region holds throughout their closure under the relation lie inside the region, form a region closed under the relation, and include every region inside it closed under the relation. At a process's steps it is the invariance kernel, and the kernel's two laws, every certificate inside it and it a certificate, are proved from it.",
++      "zh": "不变核：对每一载体、关系与区域，该区域依该关系之闭包处处成立之诸事，在该区域之内，对该关系封闭，且含该区域之内每一对该关系封闭的区域。在一过程之步即不变核，不变核之二律（每一证书在不变核内、不变核为证书）由之证出。",
+       "declarations": [
+         "Becoming.«所闭之承最大»",
+         "Becoming.«所闭之承在内»",
+@@ -146,15 +146,15 @@
+   ],
+   "validation_scope": {
+     "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt PENDING, CR_DECLS declarations (CR_THMS theorems), and Becoming.Viability, VIA_DECLS declarations (VIA_THMS theorems), whose two kernel laws are proved from the leaf with their statements unchanged, each with an empty axiom report; built in scratch, its Lean and map read by three independent AI reviewers and its landing texts by four, each with a verifier, every confirmed finding taken.",
+-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse，回执 PENDING，CR_DECLS 个声明（CR_THMS 条定理），以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条生存核之律由此叶证出、陈述不变，公理报告均为空；先在草稿中构建，其 Lean 与图经三位独立 AI 审阅者阅读，其落地文本经四位（各有一位核验者）阅读，所核实者皆采纳。"
++    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse，回执 PENDING，CR_DECLS 个声明（CR_THMS 条定理），以及 Becoming.Viability，VIA_DECLS 个声明（VIA_THMS 条定理），其两条不变核之律由此叶证出、陈述不变，公理报告均为空；先在草稿中构建，其 Lean 与图经三位独立 AI 审阅者阅读，其落地文本经四位（各有一位核验者）阅读，所核实者皆采纳。"
+   },
+   "next_delta": {
+     "en": "The rule form with choice, GuardHorizon's uniform policy, stated as this law with choice over the readings and every reading given, and its example re-proved from this record's witness.",
+     "zh": "带选择的规则形式（GuardHorizon 之一致策略）表为本律加读数上的选择与每一读数皆被给出，其例由本记录之见证重证。"
+   },
+   "correspondence": {
+-    "en": "At a process's steps the kernel is what discrete-time viability theory (Aubin 1991) calls the invariance kernel of the constraint set, the largest subset that every evolution keeps, which the repository names the viability kernel; where each configuration has exactly one successor it is Aubin's viability kernel, from which some evolution stays. A common response over a reading is the relational, set-valued form of a policy measurable with respect to an observation partition: the partition replaced by any relation and its closure, the policy by an admissible relation closed under the reading; one act chosen in each class gives the policy. Requisite variety (Ashby 1956) reads the covering law's failure: a reading too coarse for the requirement.",
+-    "zh": "在一过程之步，生存核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集，本库称之为生存核；每一构型恰有一后继时，即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：分划换为任一关系及其闭包，策略换为对读封闭的可接受关系；于每一类择一行，即得此策略。必要多样性（Ashby 1956）读出遍盖律之不成立：读对要求过粗。"
++    "en": "At a process's steps the kernel is what discrete-time viability theory (Aubin 1991) calls the invariance kernel of the constraint set, the largest subset that every evolution keeps; where each configuration has exactly one successor it is also Aubin's viability kernel, from which some evolution stays. A common response over a reading is the relational, set-valued form of a policy measurable with respect to an observation partition: the partition replaced by any relation and its closure, the policy by an admissible relation closed under the reading; one act chosen in each class gives the policy. Requisite variety (Ashby 1956) reads the covering law's failure: a reading too coarse for the requirement.",
++    "zh": "在一过程之步，此核即离散时间生存理论（Aubin 1991）所谓约束集之不变核：为每一演化所保的最大子集；每一构型恰有一后继时，亦即 Aubin 之生存核（有某演化留于其中）。读之共应是相对观察分划可测之策略的关系形式（集值）：分划换为任一关系及其闭包，策略换为对读封闭的可接受关系；于每一类择一行，即得此策略。必要多样性（Ashby 1956）读出遍盖律之不成立：读对要求过粗。"
+   },
+   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean",
+   "aliases": [
+@@ -171,7 +171,7 @@
+       "relation": "formal-reuse",
+       "detail": {
+         "en": "Reuses the grammar's closure, «承», «闭» and «闭含所闭», and the lumping law «像定后当且仅当同行»: the kernel and the one-act law are proved from them.",
+-        "zh": "复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：生存核与每一情境一行之律由之证出。"
++        "zh": "复用文法之闭包、«承»、«闭» 与 «闭含所闭»，以及归并律 «像定后当且仅当同行»：不变核与每一情境一行之律由之证出。"
+       }
+     },
+     {
+@@ -179,7 +179,7 @@
+       "relation": "formal-reuse",
+       "detail": {
+         "en": "Reuses Viability's kernel and a process's steps: kernel_iff_held reads the kernel as the grammar's, and that record's two kernel laws are proved from this record's first law, their statements unchanged.",
+-        "zh": "复用 Viability 之生存核与过程之步：kernel_iff_held 把生存核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条生存核之律由本记录第一律证出，陈述不变。"
++        "zh": "复用 Viability 之不变核与过程之步：kernel_iff_held 把不变核读作文法上沿诸步之闭包处处所承者（«所闭之承»），该记录的两条不变核之律由本记录第一律证出，陈述不变。"
+       }
+     },
+     {
+diff --git a/theories/becoming/results/records/market-partial-correction-boundary.json b/theories/becoming/results/records/market-partial-correction-boundary.json
+index c0c3f71ad..69b9a3041 100644
+--- a/theories/becoming/results/records/market-partial-correction-boundary.json
++++ b/theories/becoming/results/records/market-partial-correction-boundary.json
+@@ -8,7 +8,7 @@
+   "kind": "theorem",
+   "status": "recorded-checked",
+   "family": "F06",
+-  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
++  "reviewed_at_utc": "2026-11-01T08:49:20+00:00",
+   "statement": {
+     "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
+     "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
+@@ -70,8 +70,8 @@
+       ]
+     },
+     {
+-      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the viability kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
+-      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的生存核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
++      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the invariance kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
++      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的不变核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
+       "declarations": [
+         "Becoming.Lasting.avoids_iff_closed",
+         "Becoming.Lasting.avoids_iff_kernel",
+@@ -663,6 +663,10 @@
+     {
+       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 18 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, Becoming.Recurrence, MarketInstances, PartialRegimeTransition and RegimeTransition, with the conditions the Lean takes written in (the decided target where a law uses it, one admissible disturbance, 0 ≤ b ≤ 3/4 or b ≤ 5/12, κ ≥ 0, the cover); the referenced decision calibrations, course and run forms and boundary witnesses each have their law; the limitations became five does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two added hypotheses (the core laws' decisions, the rational quantities); the next step's completed part went to history and the related entry; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites.",
+       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 18 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、Becoming.Recurrence、MarketInstances、PartialRegimeTransition 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（规律用到之处的目标可判定、一个可容许扰动、0 ≤ b ≤ 3/4 或 b ≤ 5/12、κ ≥ 0、覆盖）；已引用的判定校准、历程与运行形式以及边界见证各有其规律；限制改为五条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，并加两条前提（核心规律的判定、有理数量）；下一步中已完成的部分移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。"
++    },
++    {
++      "en": "1 November 2026: \"viability kernel\" corrected to \"invariance kernel\" in law 7: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).",
++      "zh": "2026年11月1日：「生存核」更正为「不变核」：Viability.Kernel 成立于每一进程皆留在守卫之内处，即 Aubin 之不变核；生存核只要求某一进程留于其中（于确定之律二者重合）。此为名称所陈之义有误；法、声明与范围皆未改（随 SJ 之落地，其重证该核之律）。"
+     }
+   ],
+   "text_versions": [
+@@ -681,6 +685,14 @@
+         "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+       }
++    },
++    {
++      "path": "_process/architecture/history/81f10ca51894c85b/market-partial-correction-boundary.json",
++      "sha256": "81f10ca51894c85bbd3309b2bc26bc5347068e695db17af84c1eaaa4baf75822",
++      "note": {
++        "en": "Exact record bytes before \"viability kernel\" was corrected to \"invariance kernel\".",
++        "zh": "「生存核」更正为「不变核」之前的记录原始字节。"
++      }
+     }
+   ]
+ }
+diff --git a/theories/becoming/results/records/market-protected-continuation.json b/theories/becoming/results/records/market-protected-continuation.json
+index 93e53e5f3..873a49f1d 100644
+--- a/theories/becoming/results/records/market-protected-continuation.json
++++ b/theories/becoming/results/records/market-protected-continuation.json
+@@ -8,15 +8,15 @@
+   "kind": "theorem",
+   "status": "recorded-checked",
+   "family": "F06",
+-  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
++  "reviewed_at_utc": "2026-11-01T08:49:20+00:00",
+   "statement": {
+     "en": "For a law driven by admissible disturbances, given one, no history from a start leaves the guard exactly when some set containing the start lies within the guard and is closed under every admissible disturbance; in the market the safe rectangle is such a set under a valid protection certificate.",
+     "zh": "对由可容许扰动驱动的律（给定一个可容许扰动），从某起点出发的历史都不离开守卫，恰当有包含该起点、在守卫之内、对每个可容许扰动封闭的集合；在市场模型中，有效保护证书之下的安全矩形就是这样的集合。"
+   },
+   "laws": [
+     {
+-      "en": "For every process and guard, the viability kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
+-      "zh": "对每个过程与守卫：生存核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
++      "en": "For every process and guard, the invariance kernel holds the configurations from which no course leaves the guard, and a certificate is a set within the guard that every step keeps. A configuration is in the kernel exactly when some certificate contains it; the kernel is itself a certificate and contains every other; and a configuration is in it exactly when it is within the guard and every successor is in it.",
++      "zh": "对每个过程与守卫：不变核含没有进程从其离开守卫的构型；证书是守卫之内、每一步都保持的集合。构型在核中，恰当某个证书含有它；核本身是证书，且包含其他每个证书；构型在核中，恰当它在守卫之内且每个后继都在核中。",
+       "declarations": [
+         "Becoming.Viability.Kernel",
+         "Becoming.Viability.Certificate",
+@@ -59,8 +59,8 @@
+       ]
+     },
+     {
+-      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the viability kernel of the essential guard.",
+-      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的生存核中。",
++      "en": "Where the protection certificate's conditions hold, the safe rectangle lies within the essential floors and every admissible disturbance keeps it; so from a safe start every guarded history under admissible disturbances agrees with the operating history at every time, and every safe state lies in the invariance kernel of the essential guard.",
++      "zh": "保护证书的条件成立时，安全矩形在必要底线之内，且每个可容许扰动都保持它；所以从安全起点出发，可容许扰动下的每个受守卫历史在每个时刻都与运行历史一致，每个安全状态都在必要守卫的不变核中。",
+       "declarations": [
+         "Becoming.MarketInstances.safe_closed",
+         "Becoming.MarketInstances.safe_never_fails",
+@@ -98,7 +98,7 @@
+     },
+     {
+       "en": "The safe rectangle is one certificate within the kernel; the market's kernel itself, the complete region of nonfailure, is not computed.",
+-      "zh": "安全矩形是核之内的一个证书；市场的生存核本身，即完整的不失败区域，没有算出。",
++      "zh": "安全矩形是核之内的一个证书；市场的不变核本身，即完整的不失败区域，没有算出。",
+       "kind": "scope",
+       "witness": "Becoming.MarketInstances.safe_within_kernel"
+     },
+@@ -140,7 +140,7 @@
+   },
+   "next_delta": {
+     "en": "Identify actual market parameters and bounds that satisfy the protection certificate, with an actual state in the safe rectangle, or establish the law at another scope, such as entry from unsafe states or the market's whole kernel.",
+-    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个生存核。"
++    "zh": "确定满足保护证书的实际市场参数与界，以及安全矩形中的实际状态，或在另一范围确立规律，例如从不安全状态的进入，或市场的整个不变核。"
+   },
+   "correspondence": {
+     "zh": "量表示指定市场中的运行关系与支持，必要支持由 essential 指定；其正确性、伦理范围和真实参数另需对应。",
+@@ -326,6 +326,10 @@
+     {
+       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 7 laws, each read against its declarations in Becoming.Viability, MarketInstances and MarketGenerativity, with every condition the Lean takes written in (one admissible disturbance given, a decided guard for guarded histories, the protection certificate); the example certificate, already referenced, has its own law; the limitations became four does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two hypotheses stating the core laws' conditions and the rational quantities; the evidence paragraph names the checkers and receipt folders, the next step is stated positively; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, the next step, each read against the Lean it cites.",
+       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 7 条规律，各条对照其在 Becoming.Viability、MarketInstances 与 MarketGenerativity 中的声明核读，Lean 所取的每个条件都写入（给定一个可容许扰动、受守卫历史要求守卫可判定、保护证书）；已引用的数值例证书单列一条规律；限制改为四条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，以及说明核心规律条件与有理数量的两条前提；证据段写明检查器与回执目录，下一步以正面陈述；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-protected-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-protected-continuation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项、下一步，各条对照所引 Lean 核读。"
++    },
++    {
++      "en": "1 November 2026: \"viability kernel\" corrected to \"invariance kernel\" in laws 1 and 6, the scope and the next step: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).",
++      "zh": "2026年11月1日：「生存核」更正为「不变核」：Viability.Kernel 成立于每一进程皆留在守卫之内处，即 Aubin 之不变核；生存核只要求某一进程留于其中（于确定之律二者重合）。此为名称所陈之义有误；法、声明与范围皆未改（随 SJ 之落地，其重证该核之律）。"
+     }
+   ],
+   "text_versions": [
+@@ -344,6 +348,14 @@
+         "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+       }
++    },
++    {
++      "path": "_process/architecture/history/bd4e6e9a1ccd178e/market-protected-continuation.json",
++      "sha256": "bd4e6e9a1ccd178e81a6ddf5b35d07cf9093b5e6c790deca6cf311440f1ab2e5",
++      "note": {
++        "en": "Exact record bytes before \"viability kernel\" was corrected to \"invariance kernel\".",
++        "zh": "「生存核」更正为「不变核」之前的记录原始字节。"
++      }
+     }
+   ]
+ }

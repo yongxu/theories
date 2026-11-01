@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F06",
-  "reviewed_at_utc": "2026-10-28T05:53:06+00:00",
+  "reviewed_at_utc": "2026-11-01T08:49:20+00:00",
   "statement": {
     "en": "A start reaches a target within n steps on every admissible disturbance exactly when a funnel holds it at level n, and for a determined law never does exactly when a closed set off the target holds it; in the error-free market with 0 ≤ β ≤ 3/4 all physical positive states land exactly when β ≤ 5/12.",
     "zh": "一个起点在每个可容许扰动下 n 步之内到达目标，恰当有某个漏斗在第 n 层容纳它；对确定的律，它永不到达目标，恰当有包含它、避开目标的封闭集合。在无误差的市场中，对 0 ≤ β ≤ 3/4，一切物理正状态皆着陆恰当 β ≤ 5/12。"
@@ -70,8 +70,8 @@
       ]
     },
     {
-      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the viability kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
-      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的生存核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
+      "en": "A determined law's orbit never reaches a target exactly when some set containing the start avoids the target and is closed under the law, that is, exactly when the start lies in the invariance kernel of the target's complement; some seed never reaches it exactly when such a set contains a seed, and no seed avoids it exactly when no such set contains one.",
+      "zh": "确定的律的轨道永不到达目标，恰当有含起点、避开目标且对律封闭的集合，即恰当起点在目标补集的不变核中；某个种子永不到达，恰当这样的集合含某个种子；没有种子避开目标，恰当没有这样的集合含种子。",
       "declarations": [
         "Becoming.Lasting.avoids_iff_closed",
         "Becoming.Lasting.avoids_iff_kernel",
@@ -394,7 +394,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
       "role": "proof",
-      "sha256": "183b3977568e27a00d1a1e542e4981019bcd6b908d265693fd791851abe1c7b1",
+      "sha256": "57ab5efb7dd2f3db313eb984a6caf04618334b6d799ff8ae40d32ac9332e911b",
       "declarations": [
         "Becoming.Lasting.avoids_iff_closed",
         "Becoming.Lasting.avoids_iff_kernel",
@@ -426,7 +426,7 @@
     {
       "path": "experiments/market-generativity/formal/MarketInstances.lean",
       "role": "proof",
-      "sha256": "c669ced370edfca820dfaabff4b7e037aad8452213d55f0727d8b00ad02344da",
+      "sha256": "86b275f08cada1194264e82fb8bd052b82e15a25dcc35edd8f864f0cf46e1b3a",
       "declarations": [
         "Becoming.MarketInstances.path_eq",
         "Becoming.MarketInstances.never_lands_iff",
@@ -571,6 +571,18 @@
       "role": "receipt",
       "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
+      "role": "receipt",
+      "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/formal/market-instances-checks/20261101T114325.150839Z/verification.json",
+      "role": "receipt",
+      "sha256": "45428887d8b0de1ca52d6a826e3f0ce218779d2e14376637fd04f90dd97530ed",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -590,14 +602,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Lasting",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/market-generativity/formal/MarketInstances.lean",
-      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
+      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261101T114325.150839Z/verification.json",
       "sha256_pointer": "/source_sha256/MarketInstances",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -663,6 +675,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 18 laws, each read against its declarations in Becoming.Lasting, Becoming.Courses, Becoming.Recurrence, MarketInstances, PartialRegimeTransition and RegimeTransition, with the conditions the Lean takes written in (the decided target where a law uses it, one admissible disturbance, 0 ≤ b ≤ 3/4 or b ≤ 5/12, κ ≥ 0, the cover); the referenced decision calibrations, course and run forms and boundary witnesses each have their law; the limitations became five does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps and decidability and two added hypotheses (the core laws' decisions, the rational quantities); the next step's completed part went to history and the related entry; no condition of a law, status, reference, proof binding or source hash changed, the added hypotheses stating conditions the Lean already takes. Every earlier sentence is mapped in [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 18 条规律，各条对照其在 Becoming.Lasting、Becoming.Courses、Becoming.Recurrence、MarketInstances、PartialRegimeTransition 与 RegimeTransition 中的声明核读，Lean 所取的条件都写入（规律用到之处的目标可判定、一个可容许扰动、0 ≤ b ≤ 3/4 或 b ≤ 5/12、κ ≥ 0、覆盖）；已引用的判定校准、历程与运行形式以及边界见证各有其规律；限制改为五条“未表明”，加通用边界 no-ethical-premise-core-axiom-free、discrete-steps 与 decidability，并加两条前提（核心规律的判定、有理数量）；下一步中已完成的部分移入沿革与相关条目；规律的条件、状态、引用、证明绑定与来源哈希均未改变，所加前提陈述的是 Lean 已取的条件。每句旧文本的去向见 [market-partial-correction-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/market-partial-correction-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "1 November 2026: \"viability kernel\" corrected to \"invariance kernel\" in law 7: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).",
+      "zh": "2026年11月1日：「生存核」更正为「不变核」：Viability.Kernel 成立于每一进程皆留在守卫之内处，即 Aubin 之不变核；生存核只要求某一进程留于其中（于确定之律二者重合）。此为名称所陈之义有误；法、声明与范围皆未改（随 SJ 之落地，其重证该核之律）。"
     }
   ],
   "text_versions": [
@@ -680,6 +696,14 @@
       "note": {
         "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
         "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
+    },
+    {
+      "path": "_process/architecture/history/81f10ca51894c85b/market-partial-correction-boundary.json",
+      "sha256": "81f10ca51894c85bbd3309b2bc26bc5347068e695db17af84c1eaaa4baf75822",
+      "note": {
+        "en": "Exact record bytes before \"viability kernel\" was corrected to \"invariance kernel\".",
+        "zh": "「生存核」更正为「不变核」之前的记录原始字节。"
       }
     }
   ]

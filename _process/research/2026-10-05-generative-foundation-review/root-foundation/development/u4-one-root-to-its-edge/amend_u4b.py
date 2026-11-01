@@ -7,7 +7,7 @@
                                     DESIGN-BOUNDARY's hash for its dated §8, a history line; 08 §7's home paragraph
                                     from the new counts; the study's section N (the next free one)
 
-Each edit asserts that it applies exactly once, or that it is already applied. After it: master_laws.py,
+Each edit asserts that it applies exactly once, or that it is already applied. After it: shared_laws.py,
 integrate_u4.py check, render, strict check, links, lint, tests. No core run: no Lean changes.
 """
 import hashlib
@@ -133,7 +133,7 @@ Delta:
 Supplied premises / correspondence: none; DYNAMICS and AMOUNT are the theory's vocabulary for the dynamics, stated in
        the script, not measured. The first boundary review's finding B1 (no hypothesis of a root form constrains an
        amount) stands for standing 2; it no longer draws the distance from counting.
-Evidence: the test's output on main's core receipt `20261031T152525.956467Z`, in the note; master_laws.py reads the
+Evidence: the test's output on main's core receipt `20261031T152525.956467Z`, in the note; shared_laws.py reads the
        amended record, nothing unverified or unplaced (U4's check gates the landing); an independent review, its
        re-check and a third look, every finding taken. No Lean changes and no core run.
 Standing: a reading made exact, with a computed test where the vocabulary allows one.

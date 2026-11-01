@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""OU3b measure: which central declarations reach the grammar, and through which master law.
+"""OU3b measure: which central declarations reach the grammar, and through which shared law.
 
 python3 -B measure_grammar.py [--dump PICKLE] [--save PICKLE] [--json OUT]
 
@@ -7,28 +7,28 @@ Uses EC's measure (../ec-elegant-completion/measure.py) to restore the spine's c
 checker cache (nothing is compiled), then, for every declaration COVERAGE.json lists as central,
 reports whether its type or proof reaches a grammar constant (a declaration of a module named
 Becoming.Grammar*, recognised by its «» name or by the grammar's instance names listed below),
-and, for each master law, whether the law's anchors themselves reach the grammar. A law's anchors are
+and, for each shared law, whether the law's anchors themselves reach the grammar. A law's anchors are
 EC's (ec.LAWS) and its statement on the grammar (08 §7; `GRAMMAR_FORMS`, joined in `ANCHORS`). A measurement of
 Lean dependency only: reaching the grammar says a grammar law is among the declaration's reasons.
 
 Each central declaration also gets one category (OU3c, 28 October 2026): `grammar` where it reaches the
 grammar; `balance, represented` where it does not and rests on balance, whose grammar form represents
 it both ways but which the grammar cannot state without amounts (OU3b's decision F13), so its
-consumers are not a gap; `anchor, not reached` where it rests on another master law's anchor and does
-not reach the grammar; `no master law` where it rests on none. That four-way split is kept as each
+consumers are not a gap; `anchor, not reached` where it rests on another shared law's anchor and does
+not reach the grammar; `no shared law` where it rests on none. That four-way split is kept as each
 row's `dependence`.
 
 Each row's `category` says what it follows from (EC6, 28 October 2026; the coordinating note's
-decisions, ../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md, "After EC6's audit"): `master law`
-where it reaches the grammar, or rests on another master law's anchor with a reason it does not reach
-it (`REASONS`); `balance, represented`; and, for a declaration on no master law, the reason EC6's audit
+decisions, ../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md, "After EC6's audit"): `shared law`
+where it reaches the grammar, or rests on another shared law's anchor with a reason it does not reach
+it (`REASONS`); `balance, represented`; and, for a declaration on no shared law, the reason EC6's audit
 gives it (`NO_LAW`, ../ec6-no-master-law/AUDIT.md): `premise of the account` (support, dissipation),
 `counting identity` (Price's), `law of its model`, `single application` or `definitional or
-representational`, none a gap; or `derivation pending`, a case of a master law whose derivation is a
-named item (EC6b, EC6c, OU3d), or, on another master law's anchor, a case of the grammar's law not yet
+representational`, none a gap; or `derivation pending`, a case of a shared law whose derivation is a
+named item (EC6b, EC6c, OU3d), or, on another shared law's anchor, a case of the grammar's law not yet
 derived (`PENDING_ANCHOR`). The headline counts what is a gap, among distinct declarations (nine
 stand in two rows of COVERAGE): `derivation pending`, and any declaration with no reason given. A
-pending derivation that lands moves its row to `master law` with no change here.
+pending derivation that lands moves its row to `shared law` with no change here.
 """
 import importlib.util, json, sys
 from pathlib import Path
@@ -38,7 +38,7 @@ spec = importlib.util.spec_from_file_location('ec', HERE.parent / 'ec-elegant-co
 ec = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ec)
 
-# Each master law's statement on the grammar (08 §7, column "On the grammar"; 29 October 2026) is among
+# Each shared law's statement on the grammar (08 §7, column "On the grammar"; 29 October 2026) is among
 # its anchors: a declaration resting on it rests on the law, stated at the lowest layer (board rule 9).
 # Where 08 §7 says an anchor is a grammar term by definition («所闭», «同行», «广»), that term is an anchor
 # too. Balance's forms are listed although the grammar represents balance and does not derive it: a
@@ -75,8 +75,8 @@ REASONS = {
 }
 
 
-# Why each central declaration on no master law rests on none, or which item derives it (EC6's audit,
-# reviewed twice). An entry is read only where the declaration's dependence is `no master law`.
+# Why each central declaration on no shared law rests on none, or which item derives it (EC6's audit,
+# reviewed twice). An entry is read only where the declaration's dependence is `no shared law`.
 PENDING = 'derivation pending'
 NO_LAW = {
     'Becoming.RuleCapture.favouring_locks': (PENDING, 'closure, invariance along a run (EC6b)'),
@@ -127,11 +127,11 @@ NO_LAW = {
     'Becoming.Web.significance_undetermined': ('definitional or representational', 'a free slot shown free'),
     'Becoming.ExchangeLaw.response_not_fixed_by_coupling': ('definitional or representational', 'two laws through one coupling'),
 }
-# A declaration on another master law's anchor that is a case of the grammar's law, its derivation not yet given
+# A declaration on another shared law's anchor that is a case of the grammar's law, its derivation not yet given
 # (EC6d, 28 October 2026: the actor row cites the law PartForms.goAlike in place of partForms_iff).
 PENDING_ANCHOR = {}  # OU3d, 28 October 2026: PartForms.goAlike has its reason in REASONS (a law of its model)
 NO_REASON = 'no reason given'
-CATEGORIES = ('master law', 'balance, represented', 'premise of the account', 'counting identity', 'law of its model',
+CATEGORIES = ('shared law', 'balance, represented', 'premise of the account', 'counting identity', 'law of its model',
               'single application', 'definitional or representational', PENDING, NO_REASON)
 
 
@@ -167,15 +167,15 @@ def main():
                 by_law[k][0] += 1
                 by_law[k][1] += 1 if g else 0
             dependence = ('grammar' if g else 'balance, represented' if 'balance' in hit
-                          else 'anchor, not reached' if hit else 'no master law')
+                          else 'anchor, not reached' if hit else 'no shared law')
             dependences[dn] = dependence
             row = {'row': r['id'], 'declaration': dn, 'grammar': g, 'laws': hit, 'dependence': dependence}
             if dependence == 'grammar':
-                category = 'master law'
+                category = 'shared law'
             elif dependence == 'balance, represented':
                 category = 'balance, represented'
             elif dependence == 'anchor, not reached':
-                category = 'master law' if dn in REASONS else PENDING if dn in PENDING_ANCHOR else NO_REASON
+                category = 'shared law' if dn in REASONS else PENDING if dn in PENDING_ANCHOR else NO_REASON
                 row['reason'] = REASONS.get(dn, PENDING_ANCHOR.get(dn, 'NO REASON GIVEN'))
             else:
                 category, reason = NO_LAW.get(dn, (NO_REASON, 'NO REASON GIVEN'))
@@ -184,7 +184,7 @@ def main():
             row['category'] = category
             rows.append(row)
     by_dependence = {c: sum(1 for v in dependences.values() if v == c)
-                     for c in ('grammar', 'balance, represented', 'anchor, not reached', 'no master law')}
+                     for c in ('grammar', 'balance, represented', 'anchor, not reached', 'no shared law')}
     by_category = {c: sum(1 for v in categories.values() if v == c) for c in CATEGORIES}
     pending = {dn: NO_LAW[dn][1] if dn in NO_LAW else PENDING_ANCHOR[dn] for dn, c in categories.items() if c == PENDING}
     report = {'central_declarations': total, 'reaching_the_grammar': len(reach),
@@ -194,7 +194,7 @@ def main():
               'pending_derivations': pending,
               'anchor_not_reached_reasons': {dn: REASONS.get(dn, PENDING_ANCHOR.get(dn, 'NO REASON GIVEN'))
                                              for dn, c in dependences.items() if c == 'anchor, not reached'},
-              'by_master_law_resting_and_reaching_grammar': by_law, 'anchors_reach_grammar': anchor_reach,
+              'by_shared_law_resting_and_reaching_grammar': by_law, 'anchors_reach_grammar': anchor_reach,
               'rows': rows}
     if '--json' in sys.argv:
         Path(sys.argv[sys.argv.index('--json') + 1]).write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n')
@@ -202,7 +202,7 @@ def main():
                                              'distinct_central_declarations', 'distinct_by_dependence',
                                              'distinct_by_category', 'distinct_gaps', 'pending_derivations',
                                              'anchor_not_reached_reasons',
-                                             'by_master_law_resting_and_reaching_grammar',
+                                             'by_shared_law_resting_and_reaching_grammar',
                                              'anchors_reach_grammar')},
                      ensure_ascii=False))
 

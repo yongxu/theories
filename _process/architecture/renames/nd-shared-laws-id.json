@@ -1,0 +1,124 @@
+{
+ "batch": "nd-shared-laws-id",
+ "date": "2026-11-01",
+ "renames": [
+  {
+   "old": "master-laws-on-the-grammar",
+   "new": "shared-laws-on-the-grammar",
+   "reason": "board item ND: the id states rank (\"master\"), where the five laws are shared by every carrier and relation and rule nothing (08 §7, 共律); the record was retitled in ND part 1"
+  }
+ ],
+ "files": [
+  {
+   "path": "theories/becoming/chapters/01-ROOT.md",
+   "sha256_before": "260e647fa2d84e523cb438e42c4d7941b76a6c6e3afe48f325acc74a5bfb9b2c",
+   "sha256_after": "37cfac07b4ca6883808b8d43b747e171a684194f0398e7dfa73506c09cb19990"
+  },
+  {
+   "path": "theories/becoming/chapters/08-METHOD.md",
+   "sha256_before": "4947f7cfba4dd862a1a86154d6cbca8d8645879bf1d3df0a146790a6eaa9e7f4",
+   "sha256_after": "53d723dcbc855c7792d57b7aa9a8e784e447f8a48cc925b819f80bd51330c3f6"
+  },
+  {
+   "path": "theories/becoming/results/data/master-laws.json",
+   "sha256_before": "281c75b62453c1f0c70281de9ada4f24320124bd91cb5b85b756b757bb6f9ba6",
+   "sha256_after": "1a17381cb57d90a3bc446770c39e504f952478dafd52d2b28c0e0613c38f8bce"
+  },
+  {
+   "path": "theories/becoming/results/data/regions.json",
+   "sha256_before": "81576fed5ec24dd23c84e2641d362923b788fbaaa39053ea6277dec26eabd332",
+   "sha256_after": "8bc637b6f47f00d32c1968dd3df0cd4b6acde4d7c39d44efd08df2a2bd23aff7"
+  },
+  {
+   "path": "theories/becoming/results/records/a-reading-kept-by-its-update.json",
+   "sha256_before": "1df890b6d7a1f7716fb4d5d6d1b60f26ae6efbe8231e261d35e59c8be1e9dd21",
+   "sha256_after": "24a87d8d001fd393fe58baf4481a6d59431a405ab9ee19335bca869b2b24b555"
+  },
+  {
+   "path": "theories/becoming/results/records/a-response-common-over-a-reading.json",
+   "sha256_before": "7b14103f0aaf1e58ae0e620aae1d6e06b8e6f26630abb43859d880aa19d34300",
+   "sha256_after": "7b844a394dc91d7e4a58c9d9dee8bfcc5f1cee5681034018203b94553050f543"
+  },
+  {
+   "path": "theories/becoming/results/records/amounts-by-unit-matchings.json",
+   "sha256_before": "c7d9e2a431333bfd7248c653ad9ae09e6471d7b8344d0c96f4943e24d501ebfb",
+   "sha256_after": "ac0e368d4de740fa1905887ed8ad1130710c94f6aead9ff1ea5a72f56f2277c4"
+  },
+  {
+   "path": "theories/becoming/results/records/balance-from-conservation-along-a-relation.json",
+   "sha256_before": "acc943b469643e18a11e42f3bc4125a89e203f941a3be360d2b9287516cfd585",
+   "sha256_after": "74564208674b96fb07518fdbe405665a707b16d516ad0ae6293e2db6e2f4cced"
+  },
+  {
+   "path": "theories/becoming/results/records/ceasing-needs-arising.json",
+   "sha256_before": "211ceba618401fa05d6d11212c2e5d4d5a315590dd248a7211f9f8c3de097cd9",
+   "sha256_after": "8998ac18353be24ee82846818c7544fc4136beb59af64844bce9a7af93cb298e"
+  },
+  {
+   "path": "theories/becoming/results/records/census-balance-under-continuation.json",
+   "sha256_before": "0fcd6286935aa6043688d614bacc06d4fef0c402e5452352d91578db94885655",
+   "sha256_after": "91af6f0052d7f373137ae063caa1a53645d8652a3c948736ef68a4f6bc42d3e2"
+  },
+  {
+   "path": "theories/becoming/results/records/census-balance.json",
+   "sha256_before": "e97d26c1555bd4bd82436b28dc4adc36bab007adfcfeb7e5df8d45a73628c3bd",
+   "sha256_after": "83a63696ecc94f65f48a555c3d51d05e34886941c7a164e0ce7d3fabd655e194"
+  },
+  {
+   "path": "theories/becoming/results/records/conditional-laws-of-the-corpus.json",
+   "sha256_before": "a56b769da8f24c0125006abf1f51baa75c549d3680a03e76ddcbd0c4ca3f8a96",
+   "sha256_after": "8814b5befa7c33a0423eef0b15a04792a867766ca69989acfb452945134c8932"
+  },
+  {
+   "path": "theories/becoming/results/records/conveyance-crosses-the-boundary.json",
+   "sha256_before": "e20786d82e291fe44f79e3c9cd6251f7153a5475defc69e55fa19ec4b217682d",
+   "sha256_after": "69a852d96b20aa6f5d1ddde0d3cfd5f976d996faf67582f857eb4919802fafee"
+  },
+  {
+   "path": "theories/becoming/results/records/not-going-out-of-a-region.json",
+   "sha256_before": "8a06ac3f16e5648c4e328a2e91b7f1fb2e2185d4cf09564dcb99b50de756a0a9",
+   "sha256_after": "71f720de936eb81f75545958f7fe4d284280e110f9ea7eeb59ad8e3b5a675549"
+  },
+  {
+   "path": "theories/becoming/results/records/one-root-to-its-edge.json",
+   "sha256_before": "f2bbd28d64a2970cd9c44a6bee0048db7e9378cb423db4f245268b80759cb2aa",
+   "sha256_after": "d8ac9353699aa832d3449ad93934c74bf8bc6cb0431991920abd86135143d46b"
+  },
+  {
+   "path": "theories/becoming/results/records/processes-represented-both-ways.json",
+   "sha256_before": "9d3e0bee957aa92bf2b51d000d960399703eccbb314b2a9cb88438143fa0340b",
+   "sha256_after": "ac1198f6a0636ec9c15bd9e1759d310ff00b0991492fca8498d78a51e5a91413"
+  },
+  {
+   "path": "theories/becoming/results/records/rooms-tested-by-a-window.json",
+   "sha256_before": "b0599926b51fc94947d2e87765aaee43b1128605088e916adab146a8859c5b50",
+   "sha256_after": "d40facf5b314890f7248734f7cafed0c165b8e53c52106d853cc51325bd2b846"
+  },
+  {
+   "path": "theories/becoming/results/records/the-blanket-at-a-steady-state.json",
+   "sha256_before": "fb9cff0b2641b2fc9ddeb47711a5a8ccec9d502743f4f5928cbefdf657efa0db",
+   "sha256_after": "4bca5389e510de08c8440b19e8b617bf5f80f5a0f683214179c963f6cdbcb04a"
+  },
+  {
+   "path": "theories/becoming/results/records/the-world-represented-both-ways.json",
+   "sha256_before": "79987f2a0b91a0805d661f54cd5269b0baa134005194815e345c2af5896bd431",
+   "sha256_after": "160429272d3d042b32f2f3a4a06e35d05cc17463111f57d4d819bf8d5caef5d4"
+  },
+  {
+   "path": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+   "sha256_before": "c68bef5f472abd9f5c85c9407c297f2ef25a1d7ac31329f310ec8e2b77392771",
+   "sha256_after": "ec5a4a4d65497db9fbc25de4efda9b0243fc86591dd8b97710fc7a040dce4599"
+  },
+  {
+   "path": "theories/becoming/results/records/where-the-possible-grows.json",
+   "sha256_before": "0690ec6bbb3c4669b412b2cf78023c85d7ad221ee5cbae83e9151d0706d53d77",
+   "sha256_after": "c286d4dc79d81c8331559d8e1b28050282e8f35d0f9f44f342e79650011ada03"
+  },
+  {
+   "path": "theories/becoming/results/records/shared-laws-on-the-grammar.json",
+   "former_path": "theories/becoming/results/records/master-laws-on-the-grammar.json",
+   "sha256_after": "1812126fde3f6747afe7ef485d0a656fb255d0f1c35ec58e8cdefdf4b56c9866"
+  }
+ ],
+ "scope": "Record ids renamed with former_ids kept; live references rewritten; history, evidence and sources keep the old ids, and records/OLD.md is a generated redirect page."
+}

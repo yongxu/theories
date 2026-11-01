@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""U3's texts at landing (from the checkout root, after make_records_u3.py and master_laws.py): the live lines that say
+"""U3's texts at landing (from the checkout root, after make_records_u3.py and shared_laws.py): the live lines that say
 the significance rows wait for the root, or count one instance of the condition on it, and F5's counts. Each edit is a
 current passage and its replacement; every current passage must occur exactly once. F5's counts are read from
-theories/becoming/results/data/master-laws.json and must be the projected ones (from the report before U3: the three
+theories/becoming/results/data/shared-laws.json and must be the projected ones (from the report before U3: the three
 central declarations U3 restates on their own carrier, resting on order's anchor without reaching it, move from "the
 rest" to "stated on its own carrier only"); otherwise the script stops, to be read and the texts redrafted. The receipt
 is filled into FU's PROPOSAL. One record's next step changes with 07 §4.5, its home section.
@@ -147,7 +147,7 @@ NEXT_NEW = {'en': "Beyond the three stated at the own-closure reading on a web's
                   "theorems that take the condition stated as instances through the root's;",
             'zh': "除于网之水平路径上、自闭包读下所述之三条（U3）外，本章以条件为前提之其他定理，经根之条件述为其例；"}
 
-counts = json.loads((ROOT / B / 'results/data/master-laws.json').read_text(encoding='utf-8'))['central_reach']['counts']
+counts = json.loads((ROOT / B / 'results/data/shared-laws.json').read_text(encoding='utf-8'))['central_reach']['counts']
 assert counts == PROJECTED, ('F5 counts differ from the projected ones: read the report and redraft', counts)
 for label, path, old, new in EDITS:
     text = (ROOT / path).read_text(encoding='utf-8')

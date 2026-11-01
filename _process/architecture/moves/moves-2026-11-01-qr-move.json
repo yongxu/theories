@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-11-01-qr-move",
+  "date": "2026-11-01T09:09:39+00:00",
+  "base_commit": "fd44a3d66d8a5675f2ebe983993e4efc91de7228",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/handoffs/2026-11-01-quick-lean-review.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/qr-quick-lean-review/FINDINGS.md",
+      "sha256": "fd234c52954280363019c0224f590360f8ef023d78c8b5aa1ba9e737c86ef1cb",
+      "blob": "4320061af4ecb63a288766b9745f24b2b0aeceb5",
+      "reason": "The quick Lean review's findings into its study folder: _process/handoffs/ is not a place REPOSITORY-LAYOUT names (coordinator, 1 November 2026)",
+      "plan_entry": "_process/handoffs/2026-11-01-quick-lean-review.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/BECOMING-WORKBOARD.md",
+      "old_sha256": "b619a1a8e2ffe9157b3d6657fa1748f9599e91b9cb848d21d3f7491700dc5e27",
+      "new_sha256": "5ba7f4990f240d115f447afc62ef88a571923dbb838c241f3b9a22cdc9069791",
+      "references": 1
+    }
+  ],
+  "history_roots": [],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

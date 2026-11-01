@@ -209,7 +209,7 @@
         "Becoming.Viability.ChoiceOver",
         "Becoming.Viability.choiceOver_fin"
       ],
-      "sha256": "8911dc0d19d975ee30a0b1a2dbc4d013fe9fe5db846abc88e4d49219f12983b4"
+      "sha256": "5a237a74ffab31f61d1fcb07875ce1499e970d0a3b80cc26dcbd235ddb788044"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
@@ -247,12 +247,18 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
       "sha256": "803d652a75fbb960e4c46bd34732b68ea7ce2aaa3aa9a98ff9257bed266495bb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
+      "role": "receipt",
+      "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -265,7 +271,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Keeping",
       "success_pointer": "/status",
       "success_value": "passed"

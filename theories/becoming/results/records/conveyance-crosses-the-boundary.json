@@ -287,7 +287,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses closedUnder_iff_closed, by which Flow.cut_of_closedUnder and Flow.closedUnder_of_cut read being closed under a valuation's relation as the grammar's «闭», and «缘在所闭», by which Flow.closures_not_within_region puts each related event in the closure.",

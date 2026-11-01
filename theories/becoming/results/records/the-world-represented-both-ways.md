@@ -93,7 +93,7 @@ That definable properties are kept by isomorphisms of structures is standard mod
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). The grammar's continuation family, Steps.along, Web.activityClass, Web.continuationStep and the instance theorems Web.unceasing_iff_late_beginnings and Web.ceases_iff_wang.
 - **formal-reuse**: [identity-across-steps](identity-across-steps.md). Reidentify, World.reidentify, World.Conserves, reidentify_taken and reidentify_given, Reidentify.mem_map and World.balanced_iff_conserves.
 - **formal-reuse**: [classes-along-a-continuation](classes-along-a-continuation.md). Web.itself, the names' continuation, and Reidentify.carry.
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «像», «闭» and «所闭», and Amounts.falls_end, the amounts' law of falls ending.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «像», «闭» and «所闭», and Amounts.falls_end, the amounts' law of falls ending.
 - **formal-reuse**: [least-loss-rest](least-loss-rest.md). Amounts.whole_within: in whole numbers every stock lies within its count of least losses.
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). The map's terms: «所及», «尽», «尽则非不穷», «传», «全生成», «全守» and «有终».
 - **formal-reuse**: [readings-within-what-they-read](readings-within-what-they-read.md). Diagonal.claims_incomplete, the diagonal lemma.

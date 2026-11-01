@@ -116,7 +116,7 @@ The held law restates open-ended novelty's innovation, novelty that changes the 
 - **formal-reuse**: [where-a-run-goes-on](where-a-run-goes-on.md). Onward.within, an instance of the moves holding a part.
 - **formal-reuse**: [every-loss-passes-a-juncture](every-loss-passes-a-juncture.md). Branching.keeping, an instance of the moves holding a part.
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «类», «粗化», «及之单调», «线内同类», «不穷», «生», «复生», «息», «生生», «自不复生则息», «生生不息» and Steps.next: the held moves as continuations, what they reach as a line, and the course read on its moments, where they renew, cease or renew without end.
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «所闭当且仅当同一或及»: reach is the start or a reach of the steps.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «所闭当且仅当同一或及»: reach is the start or a reach of the steps.
 - **formal-reuse**: [levels-of-closure](levels-of-closure.md). reach_iff_withinClosure: reach under a process read as the closure of its steps.
 - **formal-reuse**: [rest-by-balance](rest-by-balance.md). Amounts.unmarked_or_marked: the bounded search behind the located forms.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). Its third law, nothing added to the whole possible along a course of one process, read on a part held, a rule changing its own rule and a tower of rules with no top.

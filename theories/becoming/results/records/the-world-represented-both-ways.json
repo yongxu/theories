@@ -347,7 +347,7 @@
       }
     },
     {
-      "id": "master-laws-on-the-grammar",
+      "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
         "en": "«像», «闭» and «所闭», and Amounts.falls_end, the amounts' law of falls ending.",

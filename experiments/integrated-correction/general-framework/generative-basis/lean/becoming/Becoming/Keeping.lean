@@ -39,7 +39,7 @@ values kept.
   move leading, whatever value is kept, into the family, keeps each of its classes for every
   horizon (`keptFor_of_closed`). A certificate of `Viability` with a move allowed and enabled
   throughout it is such a family: every class within it is kept for every horizon
-  (`Certificate.keptFor`), the viability kernel among them (`Kernel.keptFor`).
+  (`Certificate.keptFor`), the invariance kernel among them (`Kernel.keptFor`).
 * **What a step keeps matters.** In `Matching`, a hidden bit must be matched by the second
   move. Where the step keeps the bit, the starts are kept for two steps; where it keeps nothing,
   they are not (`Matching.keeping_matters`).

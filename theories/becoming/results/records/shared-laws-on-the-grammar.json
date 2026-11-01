@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "id": "master-laws-on-the-grammar",
+  "id": "shared-laws-on-the-grammar",
   "title": {
     "en": "The shared laws on the grammar",
     "zh": "文法上的共律"
@@ -1334,7 +1334,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "8264bbf7251b6fd400a1e8e60d3ba459552b506db129d86d432aadb2ffd1cfa5"
+      "sha256": "37cfac07b4ca6883808b8d43b747e171a684194f0398e7dfa73506c09cb19990"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
@@ -1817,6 +1817,13 @@
     {
       "en": "1 November 2026, board item OU7 (study section 492): the grammar's owner's items held from BD2 (patches/owner/02-04). «不出», «闭则不出» and «所闭不出» move from GrammarCrossing into GrammarLaws, after «所闭之界», unchanged; not-going-out-of-a-region states them, and here only the validation scope's counts hold them. A region not crossed is exactly one not gone out of either way and one closed both ways (GrammarLaws.uncrossed_iff_notGoingOut, GrammarLaws.uncrossed_iff_closed, BD2's text), so law 4 reads its two count laws as one law on regions not gone out of either way, and its home in 01 §7 says the same: law 4 and the GrammarLaws reference gain the two. The validation scope's receipt and counts are receipt 20261101T094230.205342Z's. Nothing else the record states changed.",
       "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：文法之主人于 BD2 所留之项（patches/owner/02-04）。«不出»、«闭则不出» 与 «所闭不出» 自 GrammarCrossing 移入 GrammarLaws，在 «所闭之界» 之后，原样不变；陈之者为 not-going-out-of-a-region，于此唯验证范围之数目含之。关系所不越之域恰是两向皆不出者，亦恰是两向皆闭者（GrammarLaws.uncrossed_iff_notGoingOut、GrammarLaws.uncrossed_iff_closed，BD2 之文），故律 4 读其二守数之律为两向皆不出之域上之一律，其归处 01 §7 亦如是言：律 4 与 GrammarLaws 之引用增此二者。验证范围之回执与数目为收据 20261101T094230.205342Z 者。记录所述余无改变。"
+    },
+    {
+      "en": "1 November 2026, board item ND (study section 495): the id is shared-laws-on-the-grammar (was master-laws-on-the-grammar, kept in former_ids), following the title of ND part 1; the claim is unchanged.",
+      "zh": "2026年11月1日，工作板条目 ND（研究第 495 节）：标识为 shared-laws-on-the-grammar（原 master-laws-on-the-grammar，存于 former_ids），从 ND 第一部分之题；论断不变。"
     }
+  ],
+  "former_ids": [
+    "master-laws-on-the-grammar"
   ]
 }

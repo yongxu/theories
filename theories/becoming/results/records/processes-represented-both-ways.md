@@ -80,7 +80,7 @@ A process is a labelled transition system, and its moves' relations are its labe
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».
 - **formal-reuse**: [the-world-represented-both-ways](the-world-represented-both-ways.md). «一一对应», «对应之像» with its pointwise and back readings, the carrying of «静», «而» and inclusion, «续之对应», and «尽之拉回»'s pattern.
 - **formal-reuse**: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). moveRel, a move of a process read as a relation.
 - **formal-reuse**: [process-and-frame-as-readings](process-and-frame-as-readings.md). withMove, withMove_open and unlabelled.

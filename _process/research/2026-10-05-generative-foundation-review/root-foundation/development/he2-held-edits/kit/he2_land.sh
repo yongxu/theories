@@ -92,7 +92,7 @@ EOF
   head -3 $LOG/repoint.log
   step study; python3 -B $K/he2_texts.py $ID $N $LOG/repoint.log $LOG/sig.log $LOG/conn.log --check > $LOG/texts-check.log 2>&1 || fail "study check"
   python3 -B $K/he2_texts.py $ID $N $LOG/repoint.log $LOG/sig.log $LOG/conn.log > $LOG/texts.log 2>&1 || fail study; tail -1 $LOG/texts.log
-  step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
+  step mv; python3 -B tools/research/shared_laws.py > $LOG/mv.log 2>&1 || fail mv
   grep -o '"central_reach": {[^}]*}' $LOG/mv.log | tail -1
   step render; python3 -B tools/research/research.py render > $LOG/render.log 2>&1 || fail render
   step strict; python3 -B tools/research/research.py check --strict-fresh > $LOG/strict.log 2>&1 || fail strict

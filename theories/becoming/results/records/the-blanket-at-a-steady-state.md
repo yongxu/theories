@@ -81,7 +81,7 @@ The principle's statistical blanket (Friston 2019; Friston, Da Costa, Sajid, Hei
 ### Dependencies
 
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). ConditionalWeights.restrict, share, Share.Same, total and restrict_independent: independence given the blanket stated on the theory's conditioning, the product law its case at one blanket state.
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). «所闭»: the closure of the internal moves on the grammar.
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «所闭»: the closure of the internal moves on the grammar.
 - **formal-reuse**: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). Blanket.Blanketed and its course: the determined blanketed law whose occupation weighting the witness Cycle reads.
 - **formal-reuse**: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). Blanket.visits: the occupation weighting read off a run.
 - related, not a proved adapter: [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md). The linear case over the reals: the Helmholtz form, footnote 13 as a law and the synchronous scheme.

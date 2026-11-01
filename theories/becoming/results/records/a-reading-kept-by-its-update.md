@@ -71,7 +71,7 @@ A safety composition related to possibilistic belief interpretations of regulati
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [master-laws-on-the-grammar](master-laws-on-the-grammar.md). The grammar's closure «闭» and «闭之及».
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). The grammar's closure «闭» and «闭之及».
 - **formal-reuse**: [when-to-inquire-and-when-to-respond](when-to-inquire-and-when-to-respond.md). Choice over the states, Viability.ChoiceOver, as in GuardHorizon.uniform_policy_iff_fiber_feasible.
 - related, not a proved adapter: [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md). The loop of a formation keeping candidate laws: for a candidate faithful throughout a region of worlds every move keeps, the configurations where it is kept, agrees with the answer pending and the world is in that region form a closed region.
 

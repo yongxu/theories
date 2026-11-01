@@ -14,9 +14,9 @@ eight derived rows' laws, bridges and support). Two rows depend on HE2's items 3
 closure laws their model lemmas are now proved as; before, they are readings at connected, as the rule gives. One row
 depends on U4c: once GrammarLaws states the root's census of a run («定后前者在前则亡屡者生屡»), `Listed.coming_of_ceasing`
 is declared derived, a case of it, and `CensusWebs.keep_pace`'s basis says why it is not; before, the first is counting
-(CENSUS-ON-THE-ROOT.md, REVIEW-U4C-RECORD.md). The generator checks nothing about the Lean: master_laws.py does (D1 to D6, the Lean check), and the landing requires its
+(CENSUS-ON-THE-ROOT.md, REVIEW-U4C-RECORD.md). The generator checks nothing about the Lean: shared_laws.py does (D1 to D6, the Lean check), and the landing requires its
 four lists empty. Counts in the statement are computed from the standings and the rule's labels in boundary-table.json
-and checked against master-laws.json's boundary report when it reads this record.
+and checked against shared-laws.json's boundary report when it reads this record.
 """
 import hashlib
 import json
@@ -414,7 +414,7 @@ def home(c):
             'holds and admission is decided, a self-concerned order ranks every extension between two level paths whose '
             'admissions are listed, as C asks there, one way and only for paths whose admissions end '
             '(`Web.extension_ranked_of_increasingInOwn`); '
-            'elsewhere C alone orders ([premises](#r-premises-met-and-failed)). `master_laws.py` checks on the core '
+            'elsewhere C alone orders ([premises](#r-premises-met-and-failed)). `shared_laws.py` checks on the core '
             'run what the Lean can '
             'show of each entry (the derived entries by D1 to D6, the entry under a stated hypothesis by the Lean '
             'check, the premises by Q1, readings of computed labels against the rule); the other readings and the '
@@ -509,13 +509,13 @@ def record(receipt=None, study=None, reviewed=None):
         'standard_boundaries': ['no-ethical-premise', 'no-evaluation', 'formal-not-empirical', 'names-provisional'],
         'validation_scope': {
             'en': 'Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and '
-                  'GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. master_laws.py '
+                  'GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py '
                   'checks the standings on the core run: derived entries by D1 to D6 on the dump and in Lean, the '
                   'entry under a stated hypothesis by boundary_check.lean\'s nine tests, the premises by Q1, readings '
                   'of computed labels against the rule\'s facts. The landing requires none unverified, unplaced or '
                   'unmatched.',
             'zh': '纯核，每一公理报告皆空：Becoming.RootForms 导入 Grammar、Transmission 与 GroupEnding，其根形唯名文法之词、'
-                  'Init 与其自身之假设。master_laws.py 于核心运行上验诸所立：推出之条目以 D1 至 D6 于转储与 Lean 中验，'
+                  'Init 与其自身之假设。shared_laws.py 于核心运行上验诸所立：推出之条目以 D1 至 D6 于转储与 Lean 中验，'
                   '在所述假设下之条目以 boundary_check.lean 之九试验，前提以 Q1 验，所计之标之读法对照规则之事实。'
                   '落地要求无未验、无未置、无未合。'},
         'next_delta': {

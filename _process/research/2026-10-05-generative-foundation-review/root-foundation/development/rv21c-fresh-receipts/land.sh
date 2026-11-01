@@ -105,7 +105,7 @@ sys.exit(0 if left == failed and older_left == older_failed else 1)
 PY
 python3 -B "$K/texts.py" "$ID" "$RUNBASE" "$N" > "$ASIDE/texts.log" 2>&1; T=$?
 tail -3 "$ASIDE/texts.log"; step texts $T
-python3 -B tools/research/master_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
+python3 -B tools/research/shared_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
 python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; CC=$?
 echo "== connectivity check: exit $CC"
 if [ $CC != 0 ]; then
@@ -206,7 +206,7 @@ print(f"RV21c landed: fresh receipts, the twenty-first review's §6 item 9 as th
       + rulings + "The records binding a renewed run are "
       "re-pointed to it with tools/research/repoint.py (rebinds.jsonl), and check_repoint.py confirms nothing else in "
       f"them changed{' but the axiom sentences and swaps named next' if axioms else ' but the swaps named next' if changed else ''}. "
-      f"{sentences}{swaps}Then {chapter}; the study section; master-laws.json and the generated views rerun; the records "
+      f"{sentences}{swaps}Then {chapter}; the study section; shared-laws.json and the generated views rerun; the records "
       "drifting by those texts re-pointed, repoint_texts.py having checked section by section that only 08 §3, "
       f"the new study section{' and those home sections' if homes else ''} changed; the board's landed clause and RV21c's row in the history "
       "file. No Lean and no statement changed. Render, strict check, links and tests pass.")

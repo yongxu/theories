@@ -8,7 +8,7 @@
                                                      after it (ORDER: a file holding the coordinator's sentence),
                                                      earlier clauses kept as they are, and U4b's row
 
-Each edit asserts that it applies exactly once. The counts come from MV's boundary report, which master_laws.py writes
+Each edit asserts that it applies exactly once. The counts come from MV's boundary report, which shared_laws.py writes
 from the amended record.
 """
 import json
@@ -46,7 +46,7 @@ def landed(n, k, order):
     assert rows[i].startswith(QUEUE + HEAD), 'the head clause is not first'
     order = Path(order).read_text(encoding='utf-8').strip()
     assert order.startswith("Then, in the coordinator's order: ") and order.endswith('ask the coordinator for a slot.')
-    data = json.loads(Path('theories/becoming/results/data/master-laws.json').read_text(encoding='utf-8'))['boundary']
+    data = json.loads(Path('theories/becoming/results/data/shared-laws.json').read_text(encoding='utf-8'))['boundary']
     c = data['counts']
     assert data['record'] == 'one-root-to-its-edge' and not data['unverified'] and c['unplaced'] == 0
     assert c['counting'] == 7 and c['amounts'] == 18, c
