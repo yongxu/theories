@@ -262,6 +262,74 @@ theorem U4d.ceasingFrom_not_stopping_covered {T : Nat} {L : List F}
       | (t, g), late, h, en => quiet t g (Nat.le_trans (Nat.le_add_right N T) late)
           (U4d.cont_ceases (Nat.le_trans (Nat.le_add_left T N) late) h en)⟩
 
+/-! ### New at Identity: the exact forms from covering lists, the continuation decided -/
+
+theorem U4d.cont_decided_begin {T : Nat} [∀ t f, Decidable (W.Continues R t f)] :
+    ∀ y : Nat × F, W.active y.1 y.2 →
+      «生» (continuationStep R) (W.activityOnward T) y ∨
+        «有前» (continuationStep R) (W.activityOnward T) y
+  | (0, _), _ => .inl fun ⟨_, ⟨next, _⟩, _⟩ => Nat.noConfusion next
+  | (t + 1, f), h => match Nat.decLe T t with
+    | isFalse below => .inl fun ⟨_, ⟨next, _⟩, _, from_, _⟩ =>
+        below (Eq.subst (motive := (T ≤ ·)) (Nat.succ.inj next.symm) from_)
+    | isTrue from_ => if continues : W.Continues R t f then
+        match continues with
+        | ⟨g, act, cont⟩ => .inr ⟨(t, g), ⟨rfl, cont⟩, ⟨fun _ => h, fun _ => act⟩, from_, act⟩
+      else .inl (U4d.cont_begins ⟨h, continues⟩)
+
+theorem U4d.cont_decided_end {T : Nat} [∀ t g, Decidable (W.Continued R t g)] :
+    ∀ x : Nat × F, W.active x.1 x.2 →
+      «亡» (continuationStep R) (W.activityOnward T) x ∨
+        «有后» (continuationStep R) (W.activityOnward T) x
+  | (t, g), h => match Nat.decLe T t with
+    | isFalse below => .inl fun ⟨_, _, _, from_, _⟩ => below from_
+    | isTrue from_ => if continued : W.Continued R t g then
+        match continued with
+        | ⟨f, act, cont⟩ => .inr ⟨(t + 1, f), ⟨rfl, cont⟩, ⟨fun _ => act, fun _ => h⟩, from_, h⟩
+      else .inl fun ⟨y, ⟨next, cont⟩, alike, _, _⟩ =>
+        continued ⟨y.2, Eq.subst (motive := fun s => W.active s y.2) next (alike.mp h), cont⟩
+
+/-- **New: the census law under a continuation from covering lists, exact.** With covering lists
+at arbitrarily late steps, no splits from step `T` on, and whether a formation continues one active
+before decided, ceasing under the continuation recurring needs arising under it recurring. -/
+theorem U4d.arisingFrom_of_ceasingFrom_covered [∀ t f, Decidable (W.Continues R t f)] {T : Nat}
+    (covered : ∀ N, ∃ M, ∃ l : List F, N ≤ M ∧ ∀ f, W.active M f → f ∈ l)
+    (noSplit : ∀ s, T ≤ s → ∀ g f f', W.active s g → R s g f → R s g f' →
+      W.active (s + 1) f → W.active (s + 1) f' → f = f')
+    (ceasing : ∀ N, ∃ t g, N ≤ t ∧ W.CeasesFrom R t g) : W.UnceasingFrom R :=
+  fun N => match U4d.cover_run (R := continuationStep R) (E := W.activityOnward T)
+      (τ := Prod.fst) (here := fun x => W.active x.1 x.2)
+      U4d.cont_stage U4d.cont_keeps (U4d.cont_noSplit noSplit)
+      (fun K => match covered K with
+        | ⟨M, l, later, covers⟩ => ⟨M, l.map (fun f => (M, f)), later, U4d.cont_covers covers⟩)
+      U4d.cont_decided_begin (U4d.cont_ending ceasing) (N + T) with
+  | ⟨(0, _), late, _, _⟩ => absurd late (Nat.not_lt_zero _)
+  | ⟨(t + 1, f), late, h, b⟩ =>
+    ⟨t, f, Nat.le_trans (Nat.le_add_right N T) (Nat.le_of_lt_succ late),
+      U4d.cont_arises (Nat.le_trans (Nat.le_add_left T N) (Nat.le_of_lt_succ late)) h b⟩
+
+/-- **New: its converse, exact.** With lists of at most `B` covering the active formations at each
+step from `T` on, no merges from `T` on, and whether a formation is continued decided, arising under
+the continuation recurring needs ceasing under it recurring. -/
+theorem U4d.ceasingFrom_of_arisingFrom_covered [∀ t g, Decidable (W.Continued R t g)] {T B : Nat}
+    (covers : ∀ t, T ≤ t → ∃ l : List F, l.length ≤ B ∧ ∀ f, W.active t f → f ∈ l)
+    (noMerge : ∀ s, T ≤ s → ∀ g g' f, W.active s g → W.active s g' → R s g f → R s g' f →
+      W.active (s + 1) f → g = g')
+    (arising : W.UnceasingFrom R) : ∀ N, ∃ t g, N ≤ t ∧ W.CeasesFrom R t g :=
+  fun N => match U4d.cover_converse_run (R := continuationStep R) (E := W.activityOnward T)
+      (τ := Prod.fst) (here := fun x => W.active x.1 x.2) (K := B) (T := T)
+      U4d.cont_stage U4d.cont_keepsOn (U4d.cont_noMerge noMerge)
+      (fun S from_ => match covers S from_ with
+        | ⟨l, short, covers⟩ => ⟨l.map (fun f => (S, f)),
+            Nat.le_trans (Nat.le_of_eq (length_map _ l)) short, U4d.cont_covers covers⟩)
+      U4d.cont_decided_end
+      (fun K => match arising K with
+        | ⟨t, f, later, arises⟩ =>
+          ⟨(t + 1, f), Nat.le_succ_of_le later, arises.1, U4d.cont_begins arises⟩)
+      (N + T) with
+  | ⟨(t, g), late, h, en⟩ => ⟨t, g, Nat.le_trans (Nat.le_add_right N T) late,
+      U4d.cont_ceases (Nat.le_trans (Nat.le_add_left T N) late) h en⟩
+
 end U4dIdentity
 
 end Web

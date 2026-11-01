@@ -16,4 +16,22 @@ theorem U4d.same_arisingFrom_not_stopping_covered : type_of% @Web.arisingFrom_no
 theorem U4d.same_ceasingFrom_not_stopping_covered : type_of% @Web.ceasingFrom_not_stopping_covered :=
   @Web.U4d.ceasingFrom_not_stopping_covered
 
+namespace Web
+
+/-- Identity's census recurrence laws, with the decisions their section carries, are cases of the
+new exact forms from covering lists. -/
+theorem U4d.census_case : type_of% @Census.arisingFrom_of_ceasingFrom_from :=
+  fun {_ _} W R _ _ _ alive T listing noSplit ceasing =>
+    U4d.arisingFrom_of_ceasingFrom_covered (W := W) (R := R) (T := T)
+      (fun N => ⟨N + T, alive (N + T), Nat.le_add_right N T,
+        fun f h => ((listing (N + T) (Nat.le_add_left T N)).2 f).mp h⟩) noSplit ceasing
+
+theorem U4d.census_converse_case : type_of% @Census.ceasingFrom_of_arisingFrom_from :=
+  fun {_ _} W R _ _ _ alive T B listing noMerge bounded arising =>
+    U4d.ceasingFrom_of_arisingFrom_covered (W := W) (R := R) (T := T) (B := B)
+      (fun t from_ => ⟨alive t, bounded t from_, fun f h => ((listing t from_).2 f).mp h⟩)
+      noMerge arising
+
+end Web
+
 end Becoming

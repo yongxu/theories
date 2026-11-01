@@ -387,6 +387,55 @@ theorem U4d.cover_converse (stage : ∀ x y, «续» R E x y → τ y = τ x + 1
                     U4d.closure_of_steps steps⟩)
             fun x mx => (all x mx).2.2.2) short))
 
+/-- **Tracing on, decided.** From a unit here at a stage from `N`, ending or successor decided:
+an ending from `N` on, or `k` steps. -/
+theorem U4d.trace_on (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (keepsOn : ∀ x y, «续» R E x y → here x → here y) {N : Nat}
+    (decided : ∀ x, here x → «亡» R E x ∨ «有后» R E x) :
+    ∀ k x, here x → N ≤ τ x →
+      (∃ z, N ≤ τ z ∧ here z ∧ «亡» R E z) ∨ ∃ y, «迭» («续» R E) k x y
+  | 0, x, _, _ => .inr ⟨x, rfl⟩
+  | k + 1, x, h, from_ => match decided x h with
+    | .inl en => .inl ⟨x, from_, h, en⟩
+    | .inr ⟨w, c⟩ =>
+      match U4d.trace_on stage keepsOn decided k w (keepsOn x w c h)
+          (Nat.le_trans from_ (Nat.le_of_lt (Eq.subst (motive := (τ x < ·)) (stage x w c).symm
+            (Nat.lt_succ_self _)))) with
+      | .inl found => .inl found
+      | .inr ⟨y, steps⟩ => .inr ⟨y, w, c, steps⟩
+
+/-- **The converse, decided.** With ending or successor decided, beginnings recurring need
+endings recurring. -/
+theorem U4d.cover_converse_run (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (keepsOn : ∀ x y, «续» R E x y → here x → here y)
+    (noMerge : ∀ v a a', here a → here a' → «续» R E a v → «续» R E a' v → a = a')
+    {K T : Nat}
+    (bounded : ∀ S, T ≤ S → ∃ L : List α, L.length ≤ K ∧ ∀ x, here x → τ x = S → x ∈ L)
+    (decided : ∀ x, here x → «亡» R E x ∨ «有后» R E x)
+    (beginning : ∀ M, ∃ x, M ≤ τ x ∧ here x ∧ «生» R E x) :
+    ∀ N, ∃ x, N ≤ τ x ∧ here x ∧ «亡» R E x :=
+  fun N =>
+    match U4d.found (marks := fun x => here x ∧ «生» R E x) beginning (K + 1) (N + T) with
+    | ⟨D, U, dD, len, from_, all⟩ => match bounded U (Nat.le_trans (Nat.le_add_left T N) from_) with
+      | ⟨L, short, covers⟩ =>
+        match U4d.found_or_all (A := ∃ z, N ≤ τ z ∧ here z ∧ «亡» R E z)
+            (B := fun x => ∃ m, m ∈ L ∧ «所闭» («续» R E) x m) (D := D)
+            (fun x mx => match le_dest (Nat.le_of_lt (all x mx).2.1) with
+              | ⟨k, at_⟩ => match U4d.trace_on stage keepsOn decided k x (all x mx).2.2.1
+                  (Nat.le_trans (Nat.le_add_right N T) (all x mx).1) with
+                | .inl found => .inl found
+                | .inr ⟨y, steps⟩ => .inr ⟨y, covers y
+                    (U4d.keeps_on keepsOn (U4d.closure_of_steps steps) (all x mx).2.2.1)
+                    ((U4d.stage_steps stage k steps).trans at_.symm),
+                    U4d.closure_of_steps steps⟩) with
+        | .inl found => found
+        | .inr reaching => (Nat.not_succ_le_self K (Nat.le_trans (Nat.le_of_eq len.symm)
+            (Nat.le_trans (U4d.begins_le dD
+              (fun v a a' _ ⟨x, mx, toA⟩ ⟨x', mx', toA'⟩ => noMerge v a a'
+                (U4d.keeps_on keepsOn toA (all x mx).2.2.1)
+                (U4d.keeps_on keepsOn toA' (all x' mx').2.2.1))
+              reaching fun x mx => (all x mx).2.2.2) short))).elim
+
 end Run
 
 end U4dCover
