@@ -14,3 +14,17 @@ An AI reader (one agent, read-only, given the first draft at 02877ea2c and the s
 | 8 | medium | the correspondences are overstated | "a minimal case of self-maintenance below each", with each one's missing part named |
 | 9 | medium | 04 §8's `LivingOrganizationCorrespondence`, 02's feeding closure and 03's acts-return are missed | placed in §0 |
 | 10 | low | the "new" column is too generous | only L1 and L2 (and the family law they give) are counted as new |
+
+## Re-check of the second draft
+
+The same reader re-checked the second draft, and simulated the rule as written by hand-sized runs ([sim/sim.py](sim/sim.py), [sim/alt.py](sim/alt.py)). Findings 2 and 4–10 were resolved; 3 was resolved in structure, its horizon wrong. Every new point is taken in the third draft:
+
+| # | severity | finding | taken as |
+|---|---|---|---|
+| R1 | high | L1's "strictly increasing in L₀" is false: h never decreases but rises in jumps, h(0) = h(1) | h nondecreasing and unbounded; for n = 1, h(L₀ + s + 1) = h(L₀) + s, checked by OU's owner on s = 2..5, L₀ < 30, to be proved; (c′)'s horizon s, whatever L₀ is, named as the separating content |
+| R2 | high | h depends on n and on the starting ages | every start fixed: n units of age 0; h(L₀, s, n) |
+| R3 | medium | the rebuild replaces the last unit in the same step | the line ends at the first state with an empty list; L2 a one-step invariant |
+| R4 | high | (d) never holds its set level with the supply on, which breaks "level held", L3 and the window claim; moving the read after the rebuild kills every member | the class is "reader present"; L0 (kept while supplied, even under an extra draw each step, checked by OU's owner in runs) added; the window claim dropped |
+| R5 | medium | L2 does no separating work in the family law | the family law on L1; L2 a fact of (d), its contrast with (c′); (c″) and (a) absorbing too |
+| R6 | medium | the read step is ambiguous; the draw at L = 0, cut timing and (b)'s intake unstated | units read in turn; nothing drawn at 0; a cut or return before step 2; (b) takes in only where L < m |
+| R7 | low | Z is a parameter of the rule, so "exactly where" holds over the listed members | said so |
