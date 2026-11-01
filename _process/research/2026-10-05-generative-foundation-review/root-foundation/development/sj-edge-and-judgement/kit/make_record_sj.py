@@ -137,6 +137,7 @@ d = {
              "requirement and no more.",
              '读如何形成或修订，或回应之结果价值几何：共应只合乎要求，不多于此。'), 'kind': 'scope'},
     ],
+    'counterexamples': [],
     'standard_boundaries': ['no-evaluation', 'no-ethical-premise', 'formal-not-empirical', 'names-provisional',
                             'omission-not-refutation'],
     'validation_scope': t(
