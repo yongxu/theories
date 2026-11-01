@@ -23,4 +23,8 @@ Not modelled: the flame and the equilibrium; the supply's and the sink's amounts
        carrying; the organism's class ending where its matter goes on. These wait for part 2, the family on
        the World's flows, after which an institution is read as a rule rebuilt from the members it regulates.
 Carried: ND's checker-scope patch (two lines of check_becoming.py's scope: "master law" → ND's names).
+Register: nine apart roots, eight model witnesses of the one family and one arithmetic lemma (register_og.py);
+       the laws the others use are not roots.
+Rehearsal: the whole landing ran dry on a scratch receipt (20261101T135208.604453Z): render, strict check,
+       tests and both dossier checks passed, and links once the kit's own four were fixed.
 ```
