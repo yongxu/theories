@@ -116,6 +116,11 @@
    "base": "grammar",
    "note": "GrammarRegularity: core always admits continuation; last step into an end leaves it"
   },
+  "a-response-common-over-a-reading": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "CommonResponse SJ1: judgment is viability indexed by acts; the kernel on the grammar, Viability's kernel laws proved from it"
+  },
   "a-revision-that-opens-a-correction": {
    "region": "knowing",
    "base": "frame",
@@ -2802,6 +2807,11 @@
    "region": "knowing",
    "base": "general",
    "note": "two-primitive code from probes"
+  },
+  "Becoming.CommonResponse": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "共应 on the grammar: the kernel, covering by the acts' kernels, the one-act lumping law, witnesses"
   },
   "Becoming.Commuting": {
    "region": "map",

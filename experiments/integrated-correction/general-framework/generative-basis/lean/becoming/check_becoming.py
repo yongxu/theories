@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.MapRegions", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.MapRegions", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.CommonResponse", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -219,6 +219,16 @@ SCOPE = (
     "irreflexive where the first is. Frame's "
     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
     "balance is represented both ways in Flow and not derived. "
+    "CommonResponse: what holds throughout a relation's closure is the largest region inside a region closed "
+    "under the relation, the viability kernel at a process's steps, whose two laws in Viability are proved from "
+    "it; a response common over a reading within a requirement exists exactly where the acts' kernels cover the "
+    "situations, and for a reflexive and transitive reading along the reading itself; finer readings keep it, "
+    "under staying the same it is the requirement covering, under the reading that tells nothing apart one act "
+    "everywhere; a rule from what a map reads gives one with no choice; where the requirement gives one act at "
+    "each situation it exists exactly where the image of the response relation along the map has a fixed "
+    "successor, on a carrier keeping situations and acts apart; witnesses that reflexivity, transitivity, "
+    "covering, one act and the sum carrier each do work, and that an act at every situation, or one shared by "
+    "every two, does not give one. "
     "GrammarTransport: the grammar's listed terms are kept by a one-to-one correspondence of models carrying the "
     "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
     "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "

@@ -6,6 +6,7 @@ import Becoming.GrammarCandidates
 import Becoming.MapInstances
 import Becoming.MapRegions
 import Becoming.GrammarLaws
+import Becoming.CommonResponse
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
 import Becoming.World
@@ -3215,7 +3216,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   step keeps) contains it; the viability kernel is the largest certificate. For a law of change
   driven by admissible disturbances, given one admissible disturbance, no history ever leaves the
   guard exactly when some set containing the start lies within the guard and is closed under
-  every admissible disturbance; a guarded history stops exactly where the history leaves it.
+  every admissible disturbance; a guarded history stops exactly where the history leaves it. The
+  kernel is what holds throughout the closure of the steps (`Viability.kernel_iff_held`), and its two
+  laws are proved from the grammar's kernel (`Becoming.CommonResponse`).
 * `Becoming.Keeping` (L1): a guard kept through what is registered, with no premise. A class is
   kept for `n` steps where the guard holds throughout it and, with steps to go, some move usable
   from it leaves, whatever the step registers, a class kept for one step fewer. A plan whose later
@@ -3412,6 +3415,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and `Becoming.ReachableRanges` by `strictJoin_trans` (board item OU3c). Balance is represented both ways in `Becoming.Flow`
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
+* `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
+  carrier, reading and requirement, with no premise. What holds throughout a relation's closure is
+  the largest region inside a region closed under the relation (`«所闭之承最大»`), the viability
+  kernel at a process's steps; a response common over a reading within a requirement, one region
+  per act, inside the act's requirement and closed under the reading, exists exactly where the
+  acts' kernels cover the situations (`«共应当且仅当所闭之承遍»`), so judgment is viability indexed
+  by acts. Where the requirement gives one act at each situation, a response common over a map's
+  sameness exists exactly where the image of the response relation along the map has a fixed
+  successor (`«遍定应共应当且仅当像定后»`), on a carrier keeping situations and acts apart. A rule
+  from what a map reads gives one with no choice (`«依读而应则共应»`); the closure, covering, one act
+  and the sum carrier each do work, and an act at every situation, or one shared by every two, does
+  not give one (`«共应之例»`).
 * `Becoming.GrammarTransport` (L1): the grammar kept by one-to-one correspondence of models, for
   the terms the World's instance theorems and `Becoming.WorldRepresentation` read. A correspondence
   (`«一一对应»`) carrying the relations a listed term reads carries the term (`«生之对应»`,

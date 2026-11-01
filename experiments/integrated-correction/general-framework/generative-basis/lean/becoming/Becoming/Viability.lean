@@ -1,5 +1,6 @@
 import Becoming.Frame
 import Becoming.Witnesses
+import Becoming.CommonResponse
 
 /-!
 # Viability: where no course leaves a guard
@@ -13,8 +14,11 @@ laws of change driven by admissible disturbances.
   guard that every step keeps (`Certificate`: within, and a `Frame` invariant). No course from
   `s` leaves the guard exactly when some certificate contains `s` (`kernel_iff_certificate`);
   the kernel is itself a certificate (`kernel_certificate`) and contains every other
-  (`Certificate.kernel`), so it is the largest. One step: a configuration is in the kernel
-  exactly when it is within the guard and every successor is in the kernel (`kernel_step_iff`).
+  (`Certificate.kernel`), so it is the largest. The kernel is what holds throughout the closure of
+  the steps (`kernel_iff_held`), so these two laws are the grammar's law of the largest closed
+  region inside a region (`«所闭之承最大»`) at a process's steps, and are proved from it. One step: a
+  configuration is in the kernel exactly when it is within the guard and every successor is in the
+  kernel (`kernel_step_iff`).
   The guard alone need not be a certificate (`Leaves.within_not_kernel`).
 * **Laws of change under disturbances.** A law `f : S → A → S` with an admissibility condition
   `adm` on disturbances is a process (`disturbed`): its traces are the admissible courses,
@@ -56,16 +60,26 @@ structure Certificate (P : Process S A) (guard : S → Prop) (K : S → Prop) : 
   within : ∀ s, K s → guard s
   closed : Invariant P K
 
-/-- **Every certificate lies within the kernel.** -/
+/-- **The kernel is what holds throughout the closure of the steps**: the grammar's `«承»` along
+the converse of `«所闭»` at the process's steps. -/
+theorem kernel_iff_held {P : Process S A} {guard : S → Prop} {s : S} :
+    Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s :=
+  ⟨fun kept t within => kept t (reach_iff_withinClosure.mpr within),
+   fun held t reach => held t (reach_iff_withinClosure.mp reach)⟩
+
+/-- **Every certificate lies within the kernel**: a region inside the guard and closed under the
+steps lies within what holds throughout their closure (`«闭在内则在所闭之承»`). -/
 theorem Certificate.kernel {P : Process S A} {guard K : S → Prop} (cert : Certificate P guard K)
     {s : S} (held : K s) : Kernel P guard s :=
-  fun t reach => cert.within t (cert.closed.reach reach held)
+  kernel_iff_held.mpr («闭在内则在所闭之承» cert.within (invariant_iff_closedUnder.mp cert.closed) held)
 
-/-- **The kernel is a certificate.** -/
+/-- **The kernel is a certificate**: what holds throughout the closure of the steps lies inside the
+guard and is closed under them (`«所闭之承在内»`, `«所闭之承闭»`). -/
 theorem kernel_certificate (P : Process S A) (guard : S → Prop) :
     Certificate P guard (Kernel P guard) :=
-  ⟨fun s kept => kept s (Reach.refl P s),
-   fun _ _ _ step kept u reach => kept u (Reach.trans (Reach.of_step step) reach)⟩
+  ⟨fun _ kept => «所闭之承在内» (Steps P) (kernel_iff_held.mp kept),
+   invariant_iff_closedUnder.mpr fun x y kept step =>
+     kernel_iff_held.mpr («所闭之承闭» (Steps P) guard x y (kernel_iff_held.mp kept) step)⟩
 
 /-- **No course from `s` leaves the guard exactly when some certificate contains `s`.** -/
 theorem kernel_iff_certificate {P : Process S A} {guard : S → Prop} {s : S} :
