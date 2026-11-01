@@ -69,8 +69,8 @@
       ]
     },
     {
-      "zh": "所以没有分裂时，止息在任意晚的步出现需要生起在任意晚的步出现；没有合并且从某步起至多 B 个活跃时，生起在任意晚的步出现需要止息在任意晚的步出现。",
-      "en": "So without splits, ceasing at arbitrarily late steps needs arising at arbitrarily late steps; without merges, with at most B formations active from some step on, arising at arbitrarily late steps needs ceasing at arbitrarily late steps.",
+      "zh": "没有分裂时，止息在任意晚的步出现需要生起在任意晚的步出现；没有合并且从某步起至多 B 个活跃时，生起在任意晚的步出现需要止息在任意晚的步出现。",
+      "en": "Without splits, ceasing at arbitrarily late steps needs arising at arbitrarily late steps; without merges, with at most B formations active from some step on, arising at arbitrarily late steps needs ceasing at arbitrarily late steps.",
       "declarations": [
         "Becoming.Web.UnceasingFrom",
         "Becoming.Web.Census.arisingFrom_of_ceasingFrom",
@@ -230,8 +230,8 @@
       "id": "census-balance",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用标记的计数（total_mark_eq_count，以根上之计读之）与平衡的累加形式（balance_over_stretch 的不等式版本：le_over_stretch、ge_over_stretch，经 gaining_of_losing_from 与 losing_of_gaining_from）。",
-        "en": "Reuses counting by marks (total_mark_eq_count, which reads it as the root's count) and the stretch form of the balance (balance_over_stretch, here as inequalities: le_over_stretch, ge_over_stretch, through gaining_of_losing_from and losing_of_gaining_from)."
+        "zh": "复用标记的计数（total_mark_eq_count，以根上之计读之）；平衡的累加形式（balance_over_stretch 的不等式版本：le_over_stretch、ge_over_stretch）陈于其旁（第 5 条），复现定律今经确切形式。",
+        "en": "Reuses counting by marks (total_mark_eq_count, which reads it as the root's count); the stretch form of the balance (balance_over_stretch, as inequalities: le_over_stretch, ge_over_stretch) is stated beside it (law 5), the recurrence laws now going through the exact forms."
       },
       "interface": {
         "output": {
@@ -745,8 +745,8 @@
       "zh": "2026年11月1日，U4c（研究第 492 节）：Web.Census.balanceFrom_at 改经根上一步的清点证明，判定延续的实例从 Identity 的 Counting 一节的八条普查律中去掉，它们都不用它；第 4 条按新路径重述，第 10、11 条留在其原路径，第 3 条、第二条假设、01 §9.5 的本行与同一性依赖之条件不再说延续可判定；根上之清点入依赖，第 4 条复用其两半；关于 not_not_all 之相关说明名序章。普查平衡之依赖名今所复用之计数（total_mark_eq_count、跨段形之不等式），此处已无律所用之声明离开 Population 与 Flow 之引用（mark_add_not、marks_le_of_sub、mark_le_total、total_le_mark、total_swap、total_le）。各陈述不变或更一般。声明以完整名称移动：gaining_of_losing, losing_of_gaining, recurs_shift, recurs_unshift, gaining_of_losing_from, losing_of_gaining_from, recurring_accumulates, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): a new law 12 states the exact forms from covering lists (Web.arisingFrom_of_ceasingFrom_covered, Web.ceasingFrom_of_arisingFrom_covered), the root's «有覆而亡屡则生屡» and «有界覆而生屡则亡屡» at the formations' occurrences, with the decision each needs read as a reduction (the study's scratch witness); the census recurrence laws (laws 6 and 9) are re-proved as their cases, statements unchanged, their decisions written as binders, and the covering laws (laws 10 and 11) through the root's covering laws instead of by lineages, statements unchanged. Law 4 restated for the routes; the Next drops the exact forms and the converse from covering lists, now closed, and names the decisions the census laws keep unused; the related note on laws-of-one-step says both covering forms are cases of one root law. Identity's helpers with no consumer left leave the Identity reference (Lineage.ends, ceasingFrom_found, arisingFrom_found, lineages_apart); the exact forms join it, and the design joins the references (COVERING-ON-THE-ROOT.md).",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
+      "en": "1 November 2026, U4d (study section U4D_SECTION): a new law 12 states the exact forms from covering lists (Web.arisingFrom_of_ceasingFrom_covered, Web.ceasingFrom_of_arisingFrom_covered), the root's «有覆而亡屡则生屡» and «有界覆而生屡则亡屡» at the formations' occurrences, with the decision each needs read as a reduction (the study's scratch witness); the census recurrence laws (laws 6 and 9) are re-proved as their cases, statements unchanged, their decisions written as binders, and the covering laws (laws 10 and 11) through the root's covering laws instead of by lineages, statements unchanged. Law 4 restated for the routes, law 6 no longer read as following from law 5, and the dependency on census-balance no longer naming the stretch inequalities as a route (gaining_of_losing_from and losing_of_gaining_from now have no use in the package); the Next drops the exact forms and the converse from covering lists, now closed, and names the decisions the census laws keep unused; the related note on laws-of-one-step says both covering forms are cases of one root law. Identity's helpers with no consumer left leave the Identity reference (Lineage.ends, ceasingFrom_found, arisingFrom_found, lineages_apart); the exact forms join it, and the design joins the references (COVERING-ON-THE-ROOT.md).",
+      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述，第 6 条不再读作由第 5 条而来，对 census-balance 之依赖不再以跨段不等式为路径（gaining_of_losing_from 与 losing_of_gaining_from 今在包中无用）；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
     }
   ],
   "text_versions": [

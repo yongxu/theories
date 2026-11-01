@@ -31,7 +31,6 @@
         "Becoming.ceasesToBe_iff_wang_along",
         "Becoming.Steps.along_fixed",
         "Becoming.listedOccurrences",
-        "Becoming.gaining_of_losing_from",
         "Becoming.«所覆后亡屡则有生»",
         "Becoming.«间无生则间亡不过所覆»"
       ]
@@ -796,8 +795,8 @@
       "zh": "2026年11月1日，U4c（研究第 492 节）：第 2 条重述：Listed.coming_of_ceasing 改经根上一程的清点证明，不再经 Listed.over_stretch 与 Listed.coming_iff_excess；其陈述不变，第 2 条的声明随证明，并及载之之引用。普查的平衡离开依赖，其相关说明言其至何时为证明；根上之清点入相关。声明以完整名称移动：recurring_accumulates 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；第 2 条今所声明之 gaining_of_losing_from 亦引于彼；论断不变。"
     },
     {
-      "en": "1 November 2026, U4d (study section U4D_SECTION): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws. What the record states is unchanged.",
-      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 2 条按路径重述：根上一程之清点不再要求出现各列一次；世界与立的读法所经之覆盖之律（第 6 条）今经根上覆盖之律取一成员之出现而达于根（Covers.coming_from_of_ceasing 重证，陈述不变）；一程之清点本身是根上线上之终之计的情形。第 2 条之声明增二根律。记录所述不变。"
+      "en": "1 November 2026, U4d (study section U4D_SECTION): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws and lose gaining_of_losing_from, which the proof no longer uses. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 U4D_SECTION 节）：第 2 条按路径重述：根上一程之清点不再要求出现各列一次；世界与立的读法所经之覆盖之律（第 6 条）今经根上覆盖之律取一成员之出现而达于根（Covers.coming_from_of_ceasing 重证，陈述不变）；一程之清点本身是根上线上之终之计的情形。第 2 条之声明增二根律，去证明已不用之 gaining_of_losing_from。记录所述不变。"
     }
   ],
   "text_versions": [
