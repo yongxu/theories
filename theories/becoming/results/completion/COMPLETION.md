@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261101T134343.981701Z` and the connectivity measure of `1c74777b3` (core receipt `20261101T112708.430596Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261101T161537.177111Z` and the connectivity measure of `6cf7292da` (core receipt `20261101T151111.914612Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -101,20 +101,19 @@ No finding.
 <a id="shared-laws"></a>
 ## The shared laws (EC, not a criterion)
 
-Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the shared laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `shared_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 86 of 126 central declarations rest on at least one shared law.
+Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the shared laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `shared_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 87 of 126 central declarations rest on at least one shared law.
 
 | Law | Statement | Anchors | Central declarations resting on it |
 |---|---|---|---:|
-| Closure | what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it | `WithinClosure`, `«所闭当且仅当同一或及»`, `«所闭»` | 41 |
+| Closure | what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it | `WithinClosure`, `«所闭当且仅当同一或及»`, `«所闭»` | 42 |
 | Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `Flow.BalancesBetween`, `balance_over_stretch_on`, `«守数当且仅当可对»`, `«程守数当且仅当可对»` | 54 |
 | Finite runs | within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop`, `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»` | 14 |
 | Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder`, `«像定后当且仅当同行»`, `«同行»` | 2 |
 | Order | widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
 
-Resting on no shared law (40), by row:
+Resting on no shared law (39), by row:
 
 - Maintenance: `Tolerance.answers_restores_iff`, `Viability.kernel_and_iff`
-- Dissolution: `Listed.coming_of_ceasing`
 - Actor: `Web.roles_supported`, `Dependence.differenceOnlyTogether_iff`
 - Patient: `Web.roles_dependent`, `responses_le_missBound`
 - Knowing: `Run.not_fixes_of_untaken`, `Ideals.verifiableBy_iff_interior`, `carried_iff_rising`

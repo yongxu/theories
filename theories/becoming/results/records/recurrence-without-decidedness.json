@@ -23,13 +23,15 @@
       ]
     },
     {
-      "en": "With no decision: a determination coming to be at one step and ceasing at none strictly between it and a later step does not come to be at the later one, and likewise with ceasing and coming to be exchanged; so where nothing of a listed family ceases across a stretch, no more distinct steps of it see a member come to be than the list has members, and likewise for ceasing where nothing comes to be.",
-      "zh": "不用判定：一个在某步开始成立、在它与更晚一步之间没有一步不再成立的规定，不在那更晚一步再开始成立；不再成立与开始成立互换亦然。所以有列表的家族在一段中没有东西不再成立时，见到成员开始成立的不同步数不多于列表的成员数；没有东西开始成立时，不再成立亦然。",
+      "en": "With no decision: a determination coming to be at one step and ceasing at none strictly between it and a later step does not come to be at the later one, and likewise with ceasing and coming to be exchanged; and where nothing of a listed family ceases across a stretch, no more distinct steps of it see a member come to be than the list has members, and likewise for ceasing where nothing comes to be: the root's stretch form and its mirror («间无亡则间生不过所覆», «间无生则间亡不过所覆») at the family's occurrences, each step one stage on.",
+      "zh": "不用判定：一个在某步开始成立、在它与更晚一步之间没有一步不再成立的规定，不在那更晚一步再开始成立；不再成立与开始成立互换亦然。有列表的家族在一段中没有东西不再成立时，见到成员开始成立的不同步数不多于列表的成员数；没有东西开始成立时，不再成立亦然：即根上之段之形及其镜像（«间无亡则间生不过所覆»、«间无生则间亡不过所覆»）取家族之出现，每步进一阶。",
       "declarations": [
         "Becoming.comes_once",
         "Becoming.ceases_once_of",
         "Becoming.coming_steps_within",
-        "Becoming.ceasing_steps_within"
+        "Becoming.ceasing_steps_within",
+        "Becoming.«间无亡则间生不过所覆»",
+        "Becoming.«间无生则间亡不过所覆»"
       ]
     },
     {
@@ -232,7 +234,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "bd4eab52277543cf8645b0753279714a7927bf8653089bf89a0151fad85a515d",
+      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca",
       "declarations": [
         "Becoming.holds_on",
         "Becoming.comes_once",
@@ -424,12 +426,27 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
+      "declarations": [
+        "Becoming.«间无亡则间生不过所覆»",
+        "Becoming.«间无生则间亡不过所覆»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Decidedness",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -459,6 +476,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -547,6 +571,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept; the claim split into seven laws, each read against its declarations in Decidedness.lean, Change.lean and Space.lean (holding on and recurring events, coming at most once, the forms that never stop, the forms finding a step, the decided family and web, finite worlds, covering lists), its last sentence the shared boundary no-ethical-premise; the limitations to one does-not-show item, the counterexample (unchanged), which carries the need for decidedness, the correspondence and the standard boundaries discrete-steps (the hypothesis \"Discrete steps.\") and decidability; the correspondence's attribution of the proposal and its delegation wording restated as provenance and an AI reading; no premise's content, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [recurrence-without-decidedness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-decidedness.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为七条规律，各条对照 Decidedness.lean、Change.lean 与 Space.lean 中的声明核读（持续与复现的事件、至多开始一次、不终止的形式、找到一步的形式、已定的家族与网、有限世界、覆盖列表），其末句即通用边界 no-ethical-premise；限制改为一条“未表明”、承载可判定性之需的反例（不变）、对应说明，以及通用边界 discrete-steps（即前提“离散的步”）与 decidability；对应说明中提议的归属与交托措辞改述为来源与 AI 的读法；前提的内容、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [recurrence-without-decidedness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-decidedness.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section 498): law 2's counts (coming_steps_within, ceasing_steps_within) are re-proved as the root's stretch form and its mirror at the family's occurrences, statements unchanged; law 2 names the route, its counts no longer read as following from coming at most once (comes_once and ceases_once_of stand as laws of their own), and its declarations gain the two root laws. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：第 2 条之计数（coming_steps_within、ceasing_steps_within）重证为根上之段之形及其镜像取家族之出现，陈述不变；第 2 条指明路径，其计数不再读作由至多一次之生而来（comes_once 与 ceases_once_of 自为其律），其声明增二根律。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
     }
   ],
   "text_versions": [

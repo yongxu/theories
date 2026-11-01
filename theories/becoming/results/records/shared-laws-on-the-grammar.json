@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "The five shared laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
-    "zh": "五条共律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
+    "en": "The five shared laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest, ends on lines), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
+    "zh": "五条共律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止、线上之终）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
   },
   "laws": [
     {
@@ -95,8 +95,8 @@
       ]
     },
     {
-      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional. Counting a region's units (a region read as a test, a modelling choice), a pairing keeps the count on every region not gone out of either way, which is exactly a region the relation does not cross and one closed under it and its converse, closed one way not being enough; under a class decided by a test a pairing is exactly equal count in every class, and the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation relative to such a class keeps the count in every class. The census of a step: units listed once before and after it, under a continuation fixing successors and predecessors, pair those before with those arising to those after with those ceasing, each pair a continuation or the same unit, and where the predecessors of the units after stand before and the successors of the units before stand after, arising and ceasing are beginning and ending. Counted, the census needs no decision of identity: under a continuation fixing successors, the units listed once after a step with those a test marks as ceasing are at most the units before with those a test marks as arising, the tests asking only, as far as can be refuted, that a unit marked as ceasing has no successor after and that a unit after not marked as arising has a predecessor before; its mirror holds under a continuation fixing predecessors, and where both are fixed the two meet in the census's count, the tests read off its decision. Along a run, from some step on, the units after each step listed once, nothing splitting and every predecessor of a unit listed after a step listed before it, endings recurring among the listed units need beginnings recurring among the units listed after a step, the beginnings and endings decided by tests. Each is the corollary of a local form beside it that asks no split (no merge) only among the listed units. The listing and the test are supplied.",
-      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。计一域之单位（域读作一判别，此为建模之择），配对守两向皆不出之每一域之数，此域恰是关系所不越者，亦恰是对关系及其逆皆封闭者，单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。计之，清点不须同一之判定：在定后之续下，一步后各列一次之单位并判别所标为亡者，不过步前之单位并判别所标为生者；判别所问，于可驳之限内，唯标为亡者在后无后者、后列未标为生者在前有前者；定前之续下其镜像亦然；两者皆定之处，二者相会于清点之数，判别读自其判定。沿一程，自某步起，各步后之单位各列一次、无分裂、步后所列单位之前者皆列于其前，所列单位中亡屡则步后所列单位中生屡，生与亡由判别所定。每一律为其旁一局部之形之推论，后者只在所列单位之中要求无分裂（无合并）。列表与判别皆为所给。",
+      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional. Counting a region's units (a region read as a test, a modelling choice), a pairing keeps the count on every region not gone out of either way, which is exactly a region the relation does not cross and one closed under it and its converse, closed one way not being enough; under a class decided by a test a pairing is exactly equal count in every class, and the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation relative to such a class keeps the count in every class. The census of a step: units listed once before and after it, under a continuation fixing successors and predecessors, pair those before with those arising to those after with those ceasing, each pair a continuation or the same unit, and where the predecessors of the units after stand before and the successors of the units before stand after, arising and ceasing are beginning and ending. Counted, the census needs no decision of identity: under a continuation fixing successors, the units listed once after a step with those a test marks as ceasing are at most the units before with those a test marks as arising, the tests asking only, as far as can be refuted, that a unit marked as ceasing has no successor after and that a unit after not marked as arising has a predecessor before; its mirror holds under a continuation fixing predecessors, and where both are fixed the two meet in the census's count, the tests read off its decision. Each is the corollary of a local form beside it that asks no split (no merge) only among the listed units. The listing and the test are supplied.",
+      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。计一域之单位（域读作一判别，此为建模之择），配对守两向皆不出之每一域之数，此域恰是关系所不越者，亦恰是对关系及其逆皆封闭者，单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。计之，清点不须同一之判定：在定后之续下，一步后各列一次之单位并判别所标为亡者，不过步前之单位并判别所标为生者；判别所问，于可驳之限内，唯标为亡者在后无后者、后列未标为生者在前有前者；定前之续下其镜像亦然；两者皆定之处，二者相会于清点之数，判别读自其判定。每一律为其旁一局部之形之推论，后者只在所列单位之中要求无分裂（无合并）。列表与判别皆为所给。",
       "declarations": [
         "Becoming.«对»",
         "Becoming.«对之长»",
@@ -129,9 +129,7 @@
         "Becoming.GrammarLaws.census_le_converse",
         "Becoming.«定前则前并生不过后并亡»",
         "Becoming.GrammarLaws.census_count",
-        "Becoming.«定后定前则前并生与后并亡同数»",
-        "Becoming.GrammarLaws.census_run",
-        "Becoming.«定后前者在前则亡屡者生屡»"
+        "Becoming.«定后定前则前并生与后并亡同数»"
       ]
     },
     {
@@ -163,8 +161,8 @@
       ]
     },
     {
-      "en": "Steps: the successor fixed, the predecessor fixed (merging nothing, a fixed successor read backward), n steps as the n-fold composite, reaching as some positive number of steps, steps composing, a loop of p steps a loop of every multiple; with the successor fixed at what x reaches, n steps from x lead to one place, and merging nothing, n steps to one place come from one.",
-      "zh": "诸步：定后、定前（不并，即逆读之定后）、n 步即 n 重复合、及即若干正数步、步可接、p 步之环即其每一倍数步之环；于 x 所及处定后，自 x 之 n 步至于一处；不并时，至一处之 n 步来自一处。",
+      "en": "Steps: the successor fixed, the predecessor fixed (merging nothing, a fixed successor read backward), n steps as the n-fold composite, reaching as some positive number of steps, the closure as some number of steps, steps composing, a loop of p steps a loop of every multiple; where two successors of a place x reaches, each leading on to one of two places, are one, n steps from x lead to one place, the successor fixed at what x reaches being its case, so what ends lies on no longer line from the same place and a line ends at most once; and merging nothing, n steps to one place come from one.",
+      "zh": "诸步：定后、定前（不并，即逆读之定后）、n 步即 n 重复合、及即若干正数步、所闭即若干步、步可接、p 步之环即其每一倍数步之环；凡 x 所及之处之二后、各通于二处之一者为一，则自 x 之 n 步至于一处，于 x 所及处定后为其一例，故亡者不在自同处之更长之线上，一线至多一亡；不并时，至一处之 n 步来自一处。",
       "declarations": [
         "Becoming.«定后»",
         "Becoming.«定前»",
@@ -179,6 +177,11 @@
         "Becoming.«定后于»",
         "Becoming.«定后则定后于»",
         "Becoming.«定后于之后»",
+        "Becoming.«所闭当且仅当有迭»",
+        "Becoming.«分处定后则迭之定于»",
+        "Becoming.GrammarLaws.reorder",
+        "Becoming.«亡者不在长迭»",
+        "Becoming.«定后则线至多一亡»",
         "Becoming.«迭之定于»",
         "Becoming.«迭之定»",
         "Becoming.«迭之定前»"
@@ -381,6 +384,40 @@
       ]
     },
     {
+      "en": "Ends on lines. Occurrences listed once, each without a successor and within the closure of a member of a list, number at most the list where two successors of an occurrence a member reaches, each leading to a listed occurrence, are one, with no decision; on the grammar, endings on lines from a list and, at the converse, beginnings on lines to a list number at most the list, the reaching only not refuted where it must be. At stages, each step of the continuation one stage on and the units a region nothing outside continues into: with a list covering the units at one stage (holding every unit of the region there), no unit continuing as two units and nothing beginning over a stretch after the stage, the units ending in the stretch number at most the list, with no decision; mirrored, in a region nothing in it continues out of, with nothing merging and nothing ending in a stretch, the units beginning in it number at most a list covering its end. Through them, with lists covering arbitrarily late stages, endings recurring leave beginnings never stopping, and with each unit after the list's stage decided to begin or to have a predecessor, endings recurring give beginnings recurring; with lists of a bounded length covering every stage from some stage on and nothing merging, beginnings recurring leave endings never stopping, and with each unit decided to end or to have a successor, endings recur. The census of a run is a case: from some step on, nothing splitting and every predecessor of a unit listed after a step listed before it, endings recurring among the listed units need beginnings recurring among the units listed after a step, the beginnings decided by a test; its units read as occurrences at stages, the list at a stage covers it, and the test decides a finite search by the count. Stronger: two hypotheses dropped, the units after each step listed once and a test of endings.",
+      "zh": "线上之终。各列一次、各无后且各在一列表某成员之所闭中之处，凡成员所及之处之二后、各通于一所列之处者为一，则其数不过列表，不用判定；在文法上，自一列表之线上之亡，与逆读之，至一列表之线上之生，其数皆不过列表，所及须时只须不可驳。于诸阶上，续之每步进一阶，单位为外无续入之域：一列表覆一阶之单位（含此阶上域之每一单位），无单位续为二，此阶后一段内无生，则此段内亡之单位不过列表，不用判定；其镜像，于内无续出之域，无并，一段内无亡，则此段内生之单位不过覆其末之列表。由之，列表覆任意晚之阶，则亡屡而生不止；列表之阶后每单位之生或有前已判定，则亡屡则生屡；有界长之列表覆自某阶起之每阶而无并，则生屡而亡不止；每单位之亡或有后已判定，则亡屡。一程之清点为其一例：自某步起，无分裂、步后所列单位之前者皆列于其前，所列单位中亡屡则步后所列单位中生屡，生由一判别所定；其单位读作各阶之处，一阶之列表覆之，判别以计数决一有限之搜。更强：去二前提，即步后之单位各列一次与亡之判别。",
+      "declarations": [
+        "Becoming.«线终不过所列»",
+        "Becoming.GrammarLaws.line_ends_unrefuted",
+        "Becoming.«线亡不过所列»",
+        "Becoming.«线亡不过所列之未否»",
+        "Becoming.«线生不过所列»",
+        "Becoming.«线生不过所列之未否»",
+        "Becoming.GrammarLaws.stage_steps",
+        "Becoming.GrammarLaws.fixed_of_noSplit",
+        "Becoming.GrammarLaws.found_cons",
+        "Becoming.GrammarLaws.found",
+        "Becoming.GrammarLaws.found_unrefuted",
+        "Becoming.GrammarLaws.found_or_all",
+        "Becoming.GrammarLaws.trace",
+        "Becoming.GrammarLaws.trace_unrefuted",
+        "Becoming.«间无生则间亡不过所覆»",
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«有覆而亡屡则生屡»",
+        "Becoming.«所覆后亡屡则生未否»",
+        "Becoming.«有覆而亡屡则生不止»",
+        "Becoming.GrammarLaws.onward_within",
+        "Becoming.«间无亡则间生不过所覆»",
+        "Becoming.«有界覆而生屡则亡不止»",
+        "Becoming.GrammarLaws.trace_on",
+        "Becoming.«有界覆而生屡则亡屡»",
+        "Becoming.GrammarLaws.pair_eq",
+        "Becoming.GrammarLaws.stage_search",
+        "Becoming.GrammarLaws.census_run",
+        "Becoming.«定后前者在前则亡屡者生屡»"
+      ]
+    },
+    {
       "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof. Among them: structure and change are one lumping, the image law on a determined law's one move; the case split of the step back of a returning configuration, the grammar's decomposition of reach, by which every loss passes a juncture; the repetition of the lasso of a world a list holds, a loop then d steps leading where d steps lead under a fixed successor, its bound pigeonhole; and the lagged orders of courses and of what can be reached, from the relation laws. And the models' step-indexed laws: giving that waits on giving, with memory and without, from the laws of taking on, a chain of waits read as the grammar's steps; and a course carrying every bound on realizing a bundle together, from the composition of within, a trace read as the grammar's steps; and an unending line reaching an occurrence at every later step, from its steps of every length, k steps advancing the index by k; and the inductions over steps that keep a region, from a region every step keeps holding from where it holds on: never arising from an inactive start being never active, activity and presence kept back, an ending kept, a name kept over a held stretch, and a carrier and the pattern's line traced back; and the lineage laws under a continuation, a lineage read as the grammar's steps of the continuation within activity: reaching at most one formation at each step without splits and starting from one without merges, splitting as its steps split, going on where nothing ceases and back where nothing arises, as far as can be refuted, and a lineage being a line under activity and a line from an active occurrence a lineage; and the image of a step along a projection the least process the step factors through, from preserving read through the image.",
       "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。其中：结构与变化同为一种归并，即像之律施于定律之一步；返者之退一步之分情，即文法对所及之分解，由之每一失皆经一岔口；列表所持之世之套索之重复：定后之下，一环之后 d 步至于 d 步所至，其界则为鸽笼；进程与所可及者之滞后之序，出自关系之律。又诸模型计步之律：待施之施，有记忆与无记忆，出自承之律，待之链读为文法之步；进程携同时实现一束之每一界，出自以内之接，迹读为文法之步；不穷之线于其后每一步皆有所及，出自其任意长之步，k 步则指标增 k；又守一域之逐步归纳，出自每步皆守之域自其所守处以后皆守：自不活跃之始而永不生则永不活跃、活跃与在场之回溯、终之所守、持守之段上之一名，以及载者与样式之线之回溯；又续之下之谱系诸律，谱系读为活跃之内续之文法之步：无分则每步所及至多一者，无合则所出唯一，随其步之分而分，无止则或续往，无生则或回溯；谱系即活跃之下之线，自活跃者出之线即谱系；又步沿投影之像为步所经之最小进程，出自沿像读之保。",
       "declarations": [
@@ -481,8 +518,12 @@
       "zh": "诸桥于其模型之关系上读每一锚：过程之步、律之映射、水平路径或所列进程之所纳（作为余自反关系）、流之水平与取给（作为单位列表）、量之不升与最小之降（作为步）。"
     },
     {
-      "en": "Counting reads a region, the class counted in and a continuation each as a test to Bool (a modelling choice; a proposition enters by decide), and the census of a step lists the units before and after once each; counted, the census reads arising and ceasing (along a run, beginnings and endings) by tests on the listed units in place of a test of the continuation.",
-      "zh": "计数读所计之域、所计之类与续各为取真假值之测（建模之择；命题经判定而入），一步之清点所列前后之单位各只一次；计之，清点以所列单位上生起与止息（沿一程则生与亡）之测代续之测。"
+      "en": "Counting reads a region, the class counted in and a continuation each as a test to Bool (a modelling choice; a proposition enters by decide), and the census of a step lists the units before and after once each; counted, the census reads arising and ceasing (along a run, beginnings) by tests on the listed units in place of a test of the continuation.",
+      "zh": "计数读所计之域、所计之类与续各为取真假值之测（建模之择；命题经判定而入），一步之清点所列前后之单位各只一次；计之，清点以所列单位上生起与止息（沿一程则生）之测代续之测。"
+    },
+    {
+      "en": "The forms at stages read the units at stages, each step of the continuation one stage on (discrete steps, a modelling choice), and the units a region whose conditions are closed regions: nothing outside it continuing into it, and for the mirror nothing in it continuing out of it; a list covers a stage where it holds every unit of the region there.",
+      "zh": "诸阶之形读单位于各阶，续之每步进一阶（离散之步，建模之择），单位为一域，其条件为闭域：外无续入，镜像则内无续出；一列表覆一阶，谓其含此阶上域之每一单位。"
     }
   ],
   "does_not_show": [
@@ -574,8 +615,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Lean 4.29.1 core run (receipt 20261101T094230.205342Z): Becoming.GrammarLaws, 192 theorems in 221 declarations; 40 representation and bridge declarations in 14 models; the derivations of OU3c, OU3e and OU3f in 14 more, of HE in Mechanism and of HE2 in Response and SelectionPool; every axiom report empty, all cited. Changed modules' statements as before but where the history notes say: laws taken to any universe, renames, one law widened, an instance dropped from eight laws. Read-only AI reviews of each item, every finding taken, five with a second pass; no person's review.",
-    "zh": "Lean 4.29.1（回执 20261101T094230.205342Z）：GrammarLaws 221 项声明中 192 条定理；十四模型 40 项表示桥接声明；另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。改动模块陈述如前，唯历史说明所言：推至任一宇宙、改名、放宽一律、八律去一实例。只读 AI 审查各项，所见皆采，五项经复审；未经人审。"
+    "en": "Lean 4.29.1 core receipt 20261101T161537.177111Z: GrammarLaws, 223 theorems in 252 declarations; 40 representation and bridge declarations in 14 models; derivations in 14 more (OU3c, OU3e, OU3f) and in Mechanism, Response, SelectionPool, Locality, Decidedness and Identity (HE, HE2, U4d); axiom reports empty, all cited. Statements unchanged but, per the history, laws taken to any universe, renames, one law widened, an instance dropped from eight laws, two hypotheses dropped from the census of a run. Read-only AI reviews of each item, all findings taken, five reviewed twice; no person's review.",
+    "zh": "Lean 4.29.1 回执 20261101T161537.177111Z：GrammarLaws 252 项声明中 223 条定理；十四模型 40 项表示桥接声明；另十四模块（OU3c、OU3e、OU3f）与 Mechanism、Response、SelectionPool、Locality、Decidedness、Identity（HE、HE2、U4d）之推导；公理报告皆空，皆引。陈述不变，唯历史所言：推至任一宇宙、改名、放宽一律、八律去一实例、一程清点去二前提。只读 AI 审查各项，皆采，五项复审；无人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -954,9 +995,40 @@
         "Becoming.«定后则类之核同行»",
         "Becoming.«遍后则其内同行之类含于核»",
         "Becoming.«定后遍后则核为其内最粗同行之类»",
-        "Becoming.«后不定则核可不同行»"
+        "Becoming.«后不定则核可不同行»",
+        "Becoming.«所闭当且仅当有迭»",
+        "Becoming.«分处定后则迭之定于»",
+        "Becoming.GrammarLaws.reorder",
+        "Becoming.«亡者不在长迭»",
+        "Becoming.«定后则线至多一亡»",
+        "Becoming.«线终不过所列»",
+        "Becoming.GrammarLaws.line_ends_unrefuted",
+        "Becoming.«线亡不过所列»",
+        "Becoming.«线亡不过所列之未否»",
+        "Becoming.«线生不过所列»",
+        "Becoming.«线生不过所列之未否»",
+        "Becoming.GrammarLaws.stage_steps",
+        "Becoming.GrammarLaws.fixed_of_noSplit",
+        "Becoming.GrammarLaws.found_cons",
+        "Becoming.GrammarLaws.found",
+        "Becoming.GrammarLaws.found_unrefuted",
+        "Becoming.GrammarLaws.found_or_all",
+        "Becoming.GrammarLaws.trace",
+        "Becoming.GrammarLaws.trace_unrefuted",
+        "Becoming.«间无生则间亡不过所覆»",
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«有覆而亡屡则生屡»",
+        "Becoming.«所覆后亡屡则生未否»",
+        "Becoming.«有覆而亡屡则生不止»",
+        "Becoming.GrammarLaws.onward_within",
+        "Becoming.«间无亡则间生不过所覆»",
+        "Becoming.«有界覆而生屡则亡不止»",
+        "Becoming.GrammarLaws.trace_on",
+        "Becoming.«有界覆而生屡则亡屡»",
+        "Becoming.GrammarLaws.pair_eq",
+        "Becoming.GrammarLaws.stage_search"
       ],
-      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20"
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -1277,7 +1349,7 @@
         "Becoming.Web.Lineage.line",
         "Becoming.Web.line_lineage"
       ],
-      "sha256": "bbc95a9ab5588660df3994c967749671e515a633aa2672796e6aebe75bb2a93a"
+      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
@@ -1550,12 +1622,30 @@
       "role": "receipt",
       "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md",
+      "role": "integration",
+      "sha256": "43d1c698228fd79b45413bb951a36e6de323d32063c79703b4c07e6a4b8a8784",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4D.md",
+      "role": "review",
+      "sha256": "380497dfa83d767b26ef049da8ba03e390e22c411c75b99fd82d611cfa5809c5",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1751,7 +1841,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1827,6 +1917,10 @@
     {
       "en": "1 November 2026, board item ND (study section 495): the id is shared-laws-on-the-grammar (was master-laws-on-the-grammar, kept in former_ids), following the title of ND part 1; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 495 节）：标识为 shared-laws-on-the-grammar（原 master-laws-on-the-grammar，存于 former_ids），从 ND 第一部分之题；论断不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section 498): a new law 19, ends on lines, before the models' law, now law 20. It holds the count of ends on lines from a list («线终不过所列»), endings and, at the converse, beginnings on lines («线亡不过所列», «线生不过所列», each with its not-refuted form), the stretch form at stages and its mirror («间无生则间亡不过所覆», «间无亡则间生不过所覆»), and the run forms («所覆后亡屡则有生», «有覆而亡屡则生屡», «所覆后亡屡则生未否», «有覆而亡屡则生不止», «有界覆而生屡则亡不止», «有界覆而生屡则亡屡»). The census of a run (GrammarLaws.census_run, «定后前者在前则亡屡者生屡») moves into it from law 4 and is proved through the stretch form, stronger: two hypotheses dropped, the units after each step listed once and the test of endings; its finite search is by the count (GrammarLaws.stage_search). Law 7 gains the line lemmas («所闭当且仅当有迭», «分处定后则迭之定于», of which «迭之定于» is now the case, «亡者不在长迭», «定后则线至多一亡»). The statement names ends on lines among the finite runs; the third hypothesis drops the test of endings along a run, and a fourth states the forms at stages. U4d's derivations, re-proved as cases with statements unchanged: Locality's Covers.coming_from_of_ceasing, Covers.ceasing_steps_within, Covers.not_not_coming_from and Covers.ceasing_stops_unrefuted, Decidedness' ceasing_steps_within and coming_steps_within, and Identity's Web.not_not_arisingFrom_covered and Web.ceasingFrom_not_stopping_covered, with Identity's census recurrence laws through its new exact forms. Its design and review join the references (COVERING-ON-THE-ROOT.md, REVIEW-U4D.md). The GrammarLaws reference and the validation scope's receipt and counts are receipt 20261101T161537.177111Z's. Nothing else the record states changed.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：新律 19，线上之终，在诸模型之律之前，后者今为律 20。其含自一列表之线上之终之计（«线终不过所列»）、线上之亡与逆读之线上之生（«线亡不过所列»、«线生不过所列»，各有其不可驳之形）、诸阶上之段之形及其镜像（«间无生则间亡不过所覆»、«间无亡则间生不过所覆»），与程之诸形（«所覆后亡屡则有生»、«有覆而亡屡则生屡»、«所覆后亡屡则生未否»、«有覆而亡屡则生不止»、«有界覆而生屡则亡不止»、«有界覆而生屡则亡屡»）。一程之清点（GrammarLaws.census_run、«定后前者在前则亡屡者生屡»）自律 4 移入，经段之形而证，更强：去二前提，即步后之单位各列一次与亡之判别；其有限之搜以计数行之（GrammarLaws.stage_search）。律 7 增线之引理（«所闭当且仅当有迭»、«分处定后则迭之定于»，«迭之定于» 今为其一例，«亡者不在长迭»、«定后则线至多一亡»）。陈述于有限运行中增线上之终；第三前提去沿一程之亡之判别，第四前提陈诸阶之形。U4d 之推导，皆作为例重证，陈述不变：Locality 之 Covers.coming_from_of_ceasing、Covers.ceasing_steps_within、Covers.not_not_coming_from 与 Covers.ceasing_stops_unrefuted，Decidedness 之 ceasing_steps_within 与 coming_steps_within，Identity 之 Web.not_not_arisingFrom_covered 与 Web.ceasingFrom_not_stopping_covered，Identity 之清点递现之律经其新确切之形。其设计与审查入引用（COVERING-ON-THE-ROOT.md、REVIEW-U4D.md）。GrammarLaws 之引用与验证范围之回执与数目为收据 20261101T161537.177111Z 者。记录所述余无改变。"
     }
   ],
   "former_ids": [

@@ -270,6 +270,7 @@ import Becoming.ReadingSchedule
 import Becoming.RegimeMargin
 import Becoming.RoomNet
 import Becoming.RoomRuns
+import Becoming.ReaderRebuilding
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -3421,6 +3422,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
   lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
   OU3f).
+  Ends on lines: occurrences listed once that end on lines from a list, the successor fixed where
+  the lines could part, number at most the list, with no decision (`«线终不过所列»`); at stages a
+  list covering one stage bounds the endings over a stretch with nothing beginning, and a list
+  covering its end the beginnings with nothing ending (`«间无生则间亡不过所覆»`,
+  `«间无亡则间生不过所覆»`); so, with lists at arbitrarily late stages, endings recurring need
+  beginnings recurring and, with bounded lists, conversely (`«有覆而亡屡则生屡»`, `«有界覆而生屡则亡屡»`,
+  and their undecided forms). The census of a run is their case (`«定后前者在前则亡屡者生屡»`), and
+  so are the covering laws of `Becoming.Locality`, `Becoming.Decidedness` and `Becoming.Identity`
+  (board item U4d).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
@@ -4130,6 +4140,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
   positive margin, is (`Rooms.Overshooting.generation_at_moments`); a coarse line is the possible
   with warmth held (`Rooms.line_iff_held`).
+* `Becoming.ReaderRebuilding` (L1): where a reader is rebuilt from, a family of nets from one rule
+  (board item OG, plan §十三 item 9's organism). A level and a reader of units by age; each step a
+  draw, a read in turn while supplied, ageing to a span and a rebuild from the rule's source. Kept
+  while supplied where the rebuild draws on the level (`ReaderRebuilding.«供则读者不绝»`); under a
+  cut, present after `k + 1` steps from every level of at least `2 (k + 1)`
+  (`ReaderRebuilding.«断而有储则读者存»`), while a reader rebuilt from the supply or never rebuilt
+  ends at its span from every level; the end at an empty stock, closed under the net
+  (`ReaderRebuilding.«取于储者绝而不复»`); the stock buys time exactly where the rebuild draws on
+  the level (`ReaderRebuilding.«以储买时当且仅当取于储»`). A leaf.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

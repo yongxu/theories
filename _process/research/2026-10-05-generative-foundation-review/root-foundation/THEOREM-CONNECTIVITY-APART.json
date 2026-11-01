@@ -3007,11 +3007,6 @@
    "category": "support",
    "reason": "the first step begins: a one-line unpacking"
   },
-  "Becoming.Steps.along_sheng_zero": {
-   "module": "Becoming.Arising",
-   "category": "support",
-   "reason": "along a relatum the first step begins: a one-line unpacking"
-  },
   "Becoming.Web.begins_at_zero": {
    "module": "Becoming.Identity",
    "category": "support",
@@ -7161,6 +7156,81 @@
    "module": "Becoming.MapInstances",
    "category": "general-structure",
    "reason": "where going on is decided at the points of a line, the line reaches an end or an occurrence at every later step: a law of the base's lines along any class; its one use was the old proof of Web.end_of_gone, which now follows from degeneration (EL6)"
+  },
+  "Becoming.ReaderRebuilding.one_le_of_lt": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "support",
+   "reason": "an arithmetic lemma on the natural numbers, a statement using only the prelude (OG)"
+  },
+  "Becoming.ReaderRebuilding.«一元三期之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "One unit's horizon under a cut at a span of three, decided for small levels: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«一元二期之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "One unit's horizon under a cut at a span of two, decided for the levels below fifteen: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The family law: over the four readers, at one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«供则读者之域闭»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The region where the reader rebuilt from the level is present is closed («闭») under the supplied step: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于供者之时»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "A reader of one unit rebuilt from the supply, at a span of three, ends at step three from every level, decided: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于供者复»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "A reader rebuilt from the supply is present again after one supplied step: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«取于储者绝而不复»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "The reader rebuilt from the level, gone at an empty level, stays gone on every branch of the net, the supply on or off («闭» of that state): a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.ReaderRebuilding.«读者绝则无储»": {
+   "module": "Becoming.ReaderRebuilding",
+   "category": "model-witness",
+   "reason": "Where the reader rebuilt from the level is gone after a step, the level is empty: a fact about one constructed family of models, the readers by where they are rebuilt from (OG)"
+  },
+  "Becoming.Covers.ceasing_steps_within": {
+   "module": "Becoming.Locality",
+   "category": "general-structure",
+   "reason": "with a list covering what holds at a step and nothing coming to be across a stretch from it, no more steps of the stretch see something cease than the list has members, with no decision: the root's «间无生则间亡不过所覆» at a relatum's occurrences (laws-of-one-step); since the covering laws became the root's cases (U4d) nothing in the package uses it"
+  },
+  "Becoming.ceases_once_of": {
+   "module": "Becoming.Decidedness",
+   "category": "general-structure",
+   "reason": "while a determination does not come to be, what ceased does not cease again, with no decision (recurrence-without-decidedness, law 2); its one use was the direct proof of the family's count, now the root's stretch form (U4d)"
+  },
+  "Becoming.comes_once": {
+   "module": "Becoming.Decidedness",
+   "category": "general-structure",
+   "reason": "while a determination does not cease, what came to be does not come to be again, with no decision (recurrence-without-decidedness, law 2); its one use was the direct proof of the family's count, now the root's stretch form (U4d)"
+  },
+  "Becoming.gaining_of_losing_from": {
+   "module": "Becoming.Prelude",
+   "category": "support",
+   "reason": "an arithmetic lemma: from a step on, a count ending each step with what it loses at most where it started with what it gains has losses recurring only with gains recurring; its uses were the old proofs of the census of a run and of the census recurrence laws, which now go through the root's count on lines (U4d)"
+  },
+  "Becoming.losing_of_gaining_from": {
+   "module": "Becoming.Prelude",
+   "category": "support",
+   "reason": "an arithmetic lemma, the mirror of gaining_of_losing_from with the count bounded; its use was the old proof of the census recurrence law's converse, which now goes through the root's count on lines (U4d)"
+  },
+  "Becoming.«有覆而亡屡则生不止»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "a law of every relation on any carrier (a shared law on the grammar, U4d): with lists covering arbitrarily late stages and nothing splitting, endings recurring leave beginnings never stopping, with no decision; Identity's arisingFrom_not_stopping_covered reaches the same through «所覆后亡屡则生未否» at one covering list, and nothing on the base uses this form"
   }
  },
  "instances": {

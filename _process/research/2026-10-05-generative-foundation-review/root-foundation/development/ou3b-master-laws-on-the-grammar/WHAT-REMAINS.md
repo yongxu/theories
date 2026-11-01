@@ -456,7 +456,20 @@ OU7 landed (study §492, core receipt `20261101T094230.205342Z`, every core and 
 
 - **The release gate's item 4 is met.** Items 1 to 6 are now met. Item 7, the freeze and the sending decisions, comes last and is not this note's.
 - **What item 4 leaves.** The models' conditional laws are each stated with their hypotheses at their homes; they are not yet each given a net where the condition fails. That does not hold a release. It is the kind of work plan §十三 items 6, 8, 9 and 11 still ask for, after the gate.
-- **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model, the organism and the institution named on the one page as having none (9); and the three minimalities' report, with MDL and Pareto not yet done (11). The organism is next, as OG, with its design in review.
+- **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model, the institution named on the one page as having none (9); and the three minimalities' report, with MDL and Pareto not yet done (11). OG landed (study §497): a reader rebuilt from the level it reads, its stock buying time under a cut exactly where the rebuild draws on the level; the institution is next.
+
+## BD3 and BD4 landed: lever 1 (a), balance on closures (1 November 2026)
+
+Lever 1 (a) asked for the locality law restated with «所闭», a grammar-wide law that was to ride the near-full rebuild ("Shared definitions" above). It is met in two halves, both as laws of the record [balance-from-conservation-along-a-relation](../../../../../../theories/becoming/results/records/balance-from-conservation-along-a-relation.md) (01 §8.4). Both are proved in the core leaf `Becoming.BalanceRegions`, which imports GrammarCrossing, and both have empty axiom reports.
+
+- **The region form** (BD3, `07c945c41`, study §487, core receipt `20261031T225858.600119Z`). On the grammar, adjacency among the listed relata is symmetric. A family the relation closes, membership a test, is exactly a region not gone out of along that adjacency (`«不出»`), not come into, and closed under it.
+- **The «所闭» form** (BD4, `440fa6979`, study §493, core receipt `20261101T105110.951913Z`).
+  - With equality decided, each relatum's closure under the listed adjacency is decided by a test, and it is the least family the relation closes that holds the relatum.
+  - Relata listed without repetition and equality decided, transfers along the relation that balance a step exist exactly where the total is conserved on each listed relatum's closure.
+  - At the unit grain, the same transfers exist exactly where the levels, read as units on their relata, pair one to one, before with after, under the closure. Such a pairing is the count kept on each closure, a case of `«类之对当且仅当类类等数»`, and the join is the closure-local reading of `Flow.balances_iff_units`.
+  - 01 §9.9's reading of boundaries now carries it: amounts keep to the boundaries the relation crosses neither way, and balance is kept on the closures of the relation read both ways; a region closed under the relation one way only need not keep the count (`«对而单闭域不守数之例»`).
+- **Where it sits.** The law stays in its leaf. GrammarLaws needs nothing from it, and the leaf states it on the grammar's `«不出»` and `«所闭»`. Three pieces of BD4 ride the next near-full rebuild of GrammarLaws: the counting lemmas of `«计»`, `paired_single`, and the merge of `unitsOn` with `Weightings.unitsOf`.
+- **What it does not change.** Balance is localized to closures, not derived, so U1's verdict stands and lever 1's round trip still fails its second test: amounts remain the root's second sort, with their interface in `Becoming.UnitMatchings`. No central declaration is BD3's or BD4's, so 08 §7's figures are unchanged, and no gate item moves.
 
 ## What this note does not do
 

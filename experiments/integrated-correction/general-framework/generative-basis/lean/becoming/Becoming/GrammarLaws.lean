@@ -133,8 +133,8 @@ their consumers' stay arithmetic, since each needs only the count.
   (`«历之逆»`); where no letter's relation merges, it merges nothing (`«历之定前»`), and where each
   goes alike under `E`, it keeps `E`-alike occurrences alike (`«同行之历»`). Six laws of `«迭»` are
   these laws' cases for one relation (`«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»`
-  and `«同行之迭»`). The others keep their proofs, each for its reason: `«迭则及»`, `«及即迭»`,
-  `«迭则同一或及»` and `«迭之定于»` read one relation's closure, and `«或有后则或迭»` and `«不穷则迭»`
+  and `«同行之迭»`). The others keep their proofs, each for its reason: `«迭则及»`, `«及即迭»` and
+  `«迭则同一或及»` read one relation's closure, and `«或有后则或迭»` and `«不穷则迭»`
   its successors along one line; `«迭之周»` repeats a loop; `«迭内即静或缘之迭»` relates steps of
   different lengths and `«承之迭»` a course of regions round by round, which no law of `«历»` states;
   and `«迭内之接»`, `«存承之迭»`, `«迭之定»` and `«同行于迭»` follow from laws above with no induction
@@ -145,6 +145,15 @@ their consumers' stay arithmetic, since each needs only the count.
   (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`) from `«迭之定»`,
   `«迭之定前»`, `«迭之分»` and `«或有后则或迭»` with `«迭之逆»`, a lineage read as the steps of the
   continuation within activity (`Web.steps_iff_lineage`).
+* **Lines from a list.** The closure is some number of steps (`«所闭当且仅当有迭»`). Where the
+  successor is fixed only where two lines could part, `n` steps lead to one occurrence
+  (`«分处定后则迭之定于»`; `«迭之定于»` is its case with the successor fixed throughout), so what ends
+  lies on no longer line from the same occurrence (`«亡者不在长迭»`) and a line ends at most once
+  (`«定后则线至多一亡»`). Hence, on any relation, occurrences listed once that end on lines from a
+  list number at most the list (`«线终不过所列»`): endings (`«亡»`) on lines from a list, and at the
+  converse beginnings (`«生»`) on lines to it, number at most the list (`«线亡不过所列»`,
+  `«线生不过所列»`), with no decision, the reaching only not refuted where it must be
+  (`«线亡不过所列之未否»`, `«线生不过所列之未否»`).
 * **Finite runs: rest.** A line is at rest where its steps of `F` (a least fall, say) stop
   recurring (`«屡»`, `«或屡»`) while its steps are steps of `Q` (no rise, say). Where every course
   of `Q` steps then an `F` step ends from the line's place (`«尽» («而» («所闭» Q) F) «一»`, the
@@ -165,6 +174,21 @@ their consumers' stay arithmetic, since each needs only the count.
   beginnings recurring (`«定后前者在前则亡屡者生屡»`). Each is the corollary of a local form that asks
   no split (no merge) only among the listed units (`GrammarLaws.census_le`, `census_le_converse`,
   `census_count`, `census_run`). The listing and the tests are supplied.
+* **Ends on lines at stages.** With each step one stage on and the units a region nothing outside
+  continues into, the lines traced back to a list covering a stage (所覆: containing every unit of
+  the region at that stage) carry the count of ends on lines to the region: with nothing beginning
+  in a stretch after the stage, the units ending in it number at most the list
+  (`«间无生则间亡不过所覆»`); mirrored, with the region closed forward, nothing merging and nothing
+  ending in a stretch, the units beginning in it number at most a list covering its end
+  (`«间无亡则间生不过所覆»`). No decision is used. Through them, with lists covering arbitrarily late
+  stages, endings recurring leave beginnings never stopping (`«所覆后亡屡则生未否»`,
+  `«有覆而亡屡则生不止»`), and with each unit after the list's stage decided to begin or have a
+  predecessor, give beginnings recurring (`«所覆后亡屡则有生»`, `«有覆而亡屡则生屡»`); with bounded
+  covering lists, beginnings recurring leave endings never stopping (`«有界覆而生屡则亡不止»`), and with
+  each unit decided to end or have a successor, give endings recurring (`«有界覆而生屡则亡屡»`). The
+  census of a run is a case: its listed units read as occurrences at stages, the list at a stage
+  covers it, and the test of beginnings decides a finite search by the count (`«计»`); it asks
+  neither that the units after each step be listed once nor a test of endings.
 * **Lumping.** `«同行» R E` (`R˘;E;R ⊆ E`) says that `E`-alike occurrences go to `E`-alike
   occurrences (`«同行之逐点»`). Constancy (`«有常»`) gives it where the successor is fixed at the
   occurrences `E` leads to (`«有常局定后则同行»`); it gives constancy where a successor exists at
@@ -1328,14 +1352,171 @@ theorem «定后于之后» {R : «际» α} {x y : α} (fixed : «定后于» R
     «定后于» R y :=
   fun a reach => fixed a («所闭之传递» within reach)
 
-/-- With the successor fixed at what `x` reaches, `n` steps from `x` lead to one occurrence. -/
+/-! #### Lines from a list
+
+A line is the steps from an occurrence. Under a successor fixed where it matters, a line ends at most
+once, so occurrences that end on lines from a list number at most the list. No decision is used. -/
+
+/-- **The closure is some number of steps (所闭当且仅当有迭).** -/
+theorem «所闭当且仅当有迭» {R : «际» α} {x y : α} : «所闭» R x y ↔ ∃ n, «迭» R n x y :=
+  ⟨fun within => match «所闭当且仅当同一或及».mp within with
+    | .inl same => ⟨0, same⟩
+    | .inr reach => match «及即迭».mp reach with
+      | ⟨n, steps⟩ => ⟨n + 1, steps⟩,
+   fun ⟨n, steps⟩ => «所闭当且仅当同一或及».mpr («迭则同一或及» n steps)⟩
+
+/-- **Fixed where the lines part, `n` steps lead to one occurrence (分处定后则迭之定于).** Where two
+successors of an occurrence `a` reaches, each leading to `y` or to `z`, are one, `n` steps from `a`
+lead to one occurrence: the successor is asked to be fixed only where the two lines could part. -/
+theorem «分处定后则迭之定于» {R : «际» α} : ∀ (n : Nat) {a y z : α},
+    (∀ v b b', «所闭» R a v → («所闭» R b y ∨ «所闭» R b z) → («所闭» R b' y ∨ «所闭» R b' z) →
+      R v b → R v b' → b = b') →
+    «迭» R n a y → «迭» R n a z → y = z
+  | 0, _, _, _, _, e₁, e₂ => Eq.trans (Eq.symm e₁) e₂
+  | n + 1, a, _, z, fixed, ⟨w, r, rest⟩, ⟨w', r', rest'⟩ =>
+    have same : w = w' := fixed a w w' («所闭之自反» R a)
+      (.inl («所闭当且仅当有迭».mpr ⟨n, rest⟩)) (.inr («所闭当且仅当有迭».mpr ⟨n, rest'⟩)) r r'
+    «分处定后则迭之定于» n
+      (fun v b b' within => fixed v b b' («所闭之传递» («缘在所闭» r) within)) rest
+      (Eq.subst (motive := fun u => «迭» R n u z) same.symm rest')
+
+theorem GrammarLaws.reorder (k d : Nat) : k + 1 + d = d + 1 + k :=
+  (Nat.add_comm (k + 1) d).trans
+    ((congrArg (d + ·) (Nat.add_comm 1 k)).symm.trans (Nat.add_assoc d 1 k).symm)
+
+/-- **What ends lies on no longer line from the same occurrence (亡者不在长迭)**, the successor fixed
+as in `«分处定后则迭之定于»`. -/
+theorem «亡者不在长迭» {R : «际» α} {k k' : Nat} {m x x' : α} (below : k < k')
+    (fixed : ∀ v b b', «所闭» R m v → («所闭» R b x ∨ «所闭» R b x') →
+      («所闭» R b' x ∨ «所闭» R b' x') → R v b → R v b' → b = b')
+    (steps : «迭» R k m x) (steps' : «迭» R k' m x') (ends : ¬ ∃ w, R x w) : False :=
+  match le_dest below with
+  | ⟨d, more⟩ =>
+    match «迭之分» k (b := d + 1)
+        (Eq.subst (motive := fun j => «迭» R j m x') (more.trans (GrammarLaws.reorder k d)) steps') with
+    | ⟨y, first, second⟩ =>
+      have toX' : «所闭» R y x' := «所闭当且仅当有迭».mpr ⟨_, second⟩
+      have same : x = y := «分处定后则迭之定于» k
+        (fun v b b' within before before' => fixed v b b' within
+          (match before with
+            | .inl toX => .inl toX
+            | .inr toY => .inr («所闭之传递» toY toX'))
+          (match before' with
+            | .inl toX => .inl toX
+            | .inr toY => .inr («所闭之传递» toY toX')))
+        steps first
+      match second with
+      | ⟨w, r, _⟩ => ends ⟨w, Eq.subst (motive := fun v => R v w) same.symm r⟩
+
+/-- **A line under a fixed successor ends at most once (定后则线至多一亡).** Two occurrences that `m`
+reaches and that end are one, where two successors of an occurrence `m` reaches, each leading to
+either, are one. -/
+theorem «定后则线至多一亡» {R : «际» α} {m x x' : α}
+    (fixed : ∀ v b b', «所闭» R m v → («所闭» R b x ∨ «所闭» R b x') →
+      («所闭» R b' x ∨ «所闭» R b' x') → R v b → R v b' → b = b')
+    (reach : «所闭» R m x) (reach' : «所闭» R m x')
+    (ends : ¬ ∃ w, R x w) (ends' : ¬ ∃ w, R x' w) : x = x' :=
+  match «所闭当且仅当有迭».mp reach, «所闭当且仅当有迭».mp reach' with
+  | ⟨k, steps⟩, ⟨k', steps'⟩ =>
+    match Nat.lt_or_ge k k' with
+    | .inl below => («亡者不在长迭» below fixed steps steps' ends).elim
+    | .inr above => match Nat.eq_or_lt_of_le above with
+      | .inl same => «分处定后则迭之定于» k fixed steps
+          (Eq.subst (motive := fun j => «迭» R j m x') same steps')
+      | .inr beyond => («亡者不在长迭» beyond
+          (fun v b b' within before before' => fixed v b b' within before.symm before'.symm)
+          steps' steps ends').elim
+
+/-- **Ends on lines from a list number at most the list (线终不过所列)**, on any relation.
+Occurrences listed once, each without a successor and each within the closure of a member of a list,
+where two successors of an occurrence a member reaches, each leading to a listed occurrence, are one:
+no more of them than members. -/
+theorem «线终不过所列» {R : «际» α} {L D : List α} (dD : Distinct D)
+    (fixed : ∀ v b b', (∃ m, m ∈ L ∧ «所闭» R m v) →
+      (∃ x, x ∈ D ∧ «所闭» R b x) → (∃ x, x ∈ D ∧ «所闭» R b' x) → R v b → R v b' → b = b')
+    (reached : ∀ x, x ∈ D → ∃ m, m ∈ L ∧ «所闭» R m x)
+    (ends : ∀ x, x ∈ D → ¬ ∃ w, R x w) : D.length ≤ L.length :=
+  length_le_of_matched (S := fun x m => m ∈ L ∧ «所闭» R m x) dD
+    (fun x mx => match reached x mx with
+      | ⟨m, mm, r⟩ => ⟨m, mm, mm, r⟩)
+    fun x x' m mx mx' ⟨mm, r⟩ ⟨_, r'⟩ =>
+      «定后则线至多一亡» (fun v b b' within before before' => fixed v b b' ⟨m, mm, within⟩
+          (match before with
+            | .inl toX => ⟨x, mx, toX⟩
+            | .inr toX' => ⟨x', mx', toX'⟩)
+          (match before' with
+            | .inl toX => ⟨x, mx, toX⟩
+            | .inr toX' => ⟨x', mx', toX'⟩))
+        r r' (ends x mx) (ends x' mx')
+
+/-- The count where each listed occurrence's being reached from the list is only not refuted: the
+count's comparison is decidable, so the double negation lifts. -/
+theorem GrammarLaws.line_ends_unrefuted {R : «际» α} {L D : List α} (dD : Distinct D)
+    (fixed : ∀ v b b', (∃ m, m ∈ L ∧ «所闭» R m v) →
+      (∃ x, x ∈ D ∧ «所闭» R b x) → (∃ x, x ∈ D ∧ «所闭» R b' x) → R v b → R v b' → b = b')
+    (reached : ∀ x, x ∈ D → ¬¬ ∃ m, m ∈ L ∧ «所闭» R m x)
+    (ends : ∀ x, x ∈ D → ¬ ∃ w, R x w) : D.length ≤ L.length :=
+  match Nat.decLe D.length L.length with
+  | isTrue within => within
+  | isFalse beyond => absurd (fun all => beyond («线终不过所列» dD fixed all ends))
+      (not_not_all reached)
+
+/-- **Endings on lines from a list number at most the list (线亡不过所列).** Units listed once, each
+ending (`«亡»`) and each on the line of the continuation from a member of a list, where two
+successors of a unit a member reaches, each leading to a listed unit, are one: no more of them than
+members. -/
+theorem «线亡不过所列» {R E : «际» α} {L D : List α} (dD : Distinct D)
+    (fixed : ∀ v b b', (∃ m, m ∈ L ∧ «所闭» («续» R E) m v) →
+      (∃ x, x ∈ D ∧ «所闭» («续» R E) b x) → (∃ x, x ∈ D ∧ «所闭» («续» R E) b' x) →
+      «续» R E v b → «续» R E v b' → b = b')
+    (reached : ∀ x, x ∈ D → ∃ m, m ∈ L ∧ «所闭» («续» R E) m x)
+    (ends : ∀ x, x ∈ D → «亡» R E x) : D.length ≤ L.length :=
+  «线终不过所列» dD fixed reached ends
+
+/-- The count of endings where each one's being reached from the list is only not refuted
+(线亡不过所列之未否). -/
+theorem «线亡不过所列之未否» {R E : «际» α} {L D : List α} (dD : Distinct D)
+    (fixed : ∀ v b b', (∃ m, m ∈ L ∧ «所闭» («续» R E) m v) →
+      (∃ x, x ∈ D ∧ «所闭» («续» R E) b x) → (∃ x, x ∈ D ∧ «所闭» («续» R E) b' x) →
+      «续» R E v b → «续» R E v b' → b = b')
+    (reached : ∀ x, x ∈ D → ¬¬ ∃ m, m ∈ L ∧ «所闭» («续» R E) m x)
+    (ends : ∀ x, x ∈ D → «亡» R E x) : D.length ≤ L.length :=
+  GrammarLaws.line_ends_unrefuted dD fixed reached ends
+
+/-- **Its mirror: beginnings on lines to a list number at most the list (线生不过所列)**, the count
+at the converse (`«逆»`), two units continuing as one occurrence only where it does not matter. -/
+theorem «线生不过所列» {R E : «际» α} {L D : List α} (dD : Distinct D)
+    (merges : ∀ v a a', (∃ m, m ∈ L ∧ «所闭» («续» R E) v m) →
+      (∃ x, x ∈ D ∧ «所闭» («续» R E) x a) → (∃ x, x ∈ D ∧ «所闭» («续» R E) x a') →
+      «续» R E a v → «续» R E a' v → a = a')
+    (reaching : ∀ x, x ∈ D → ∃ m, m ∈ L ∧ «所闭» («续» R E) x m)
+    (begins : ∀ x, x ∈ D → «生» R E x) : D.length ≤ L.length :=
+  «线终不过所列» (R := «逆» («续» R E)) dD
+    (fun v a a' ⟨m, mm, within⟩ ⟨x, mx, toX⟩ ⟨x', mx', toX'⟩ => merges v a a'
+      ⟨m, mm, «所闭之逆».mp within⟩ ⟨x, mx, «所闭之逆».mp toX⟩ ⟨x', mx', «所闭之逆».mp toX'⟩)
+    (fun x mx => match reaching x mx with
+      | ⟨m, mm, r⟩ => ⟨m, mm, «所闭之逆».mpr r⟩)
+    begins
+
+/-- The mirror where each beginning's reaching the list is only not refuted (线生不过所列之未否). -/
+theorem «线生不过所列之未否» {R E : «际» α} {L D : List α} (dD : Distinct D)
+    (merges : ∀ v a a', (∃ m, m ∈ L ∧ «所闭» («续» R E) v m) →
+      (∃ x, x ∈ D ∧ «所闭» («续» R E) x a) → (∃ x, x ∈ D ∧ «所闭» («续» R E) x a') →
+      «续» R E a v → «续» R E a' v → a = a')
+    (reaching : ∀ x, x ∈ D → ¬¬ ∃ m, m ∈ L ∧ «所闭» («续» R E) x m)
+    (begins : ∀ x, x ∈ D → «生» R E x) : D.length ≤ L.length :=
+  GrammarLaws.line_ends_unrefuted (R := «逆» («续» R E)) dD
+    (fun v a a' ⟨m, mm, within⟩ ⟨x, mx, toX⟩ ⟨x', mx', toX'⟩ => merges v a a'
+      ⟨m, mm, «所闭之逆».mp within⟩ ⟨x, mx, «所闭之逆».mp toX⟩ ⟨x', mx', «所闭之逆».mp toX'⟩)
+    (fun x mx no => reaching x mx fun ⟨m, mm, r⟩ => no ⟨m, mm, «所闭之逆».mpr r⟩)
+    begins
+
+/-- With the successor fixed at what `x` reaches, `n` steps from `x` lead to one occurrence, the case
+of `«分处定后则迭之定于»` where the successor is fixed throughout what `x` reaches. -/
 theorem «迭之定于» {R : «际» α} : ∀ (n : Nat) {x y z : α}, «定后于» R x →
-    «迭» R n x y → «迭» R n x z → y = z
-  | 0, _, _, _, _, e₁, e₂ => e₁.symm.trans e₂
-  | n + 1, x, _, _, fixed, ⟨w, r, first⟩, ⟨w', r', second⟩ => by
-    have e : w = w' := fixed x («所闭之自反» R x) w w' r r'
-    subst e
-    exact «迭之定于» n («定后于之后» fixed («缘在所闭» r)) first second
+    «迭» R n x y → «迭» R n x z → y = z :=
+  fun n _ _ _ fixed first second =>
+    «分处定后则迭之定于» n (fun v b b' within _ _ r r' => fixed v within b b' r r') first second
 
 /-- With a fixed successor, `n` steps lead to one occurrence. -/
 theorem «迭之定» {R : «际» α} (fixed : «定后» R) : ∀ (n : Nat) {x y z : α},
@@ -2025,56 +2206,403 @@ theorem «定后定前则前并生与后并亡同数» (dec : ∀ x y, «续» R
     (fun x y y' _ _ _ c c' => «定后之逐点».mp fixedAfter x y y' c c')
     (fun x x' y _ _ _ c c' => «定前之逐点».mp fixedBefore x x' y c c')
 
+/-! #### Ends on lines at stages
+
+The units are occurrences at stages: a region `P`, each step of the continuation one stage on
+(`τ y = τ x + 1`). A list covers the units at a stage (所覆) where it contains every unit of the
+region at that stage. Traced back from a list covering a stage, the lines of the region's units
+carry the count of ends on lines (`«线亡不过所列»`) to the region: with nothing beginning in a
+stretch after the list's stage, the units ending in it number at most the list. Its mirror traces
+on to a list covering a later stage. No decision is used in either; the decided and run forms decide
+beginnings (endings) only after (from) the list's stage. -/
+
+section Stages
+
+variable {τ : α → Nat} {P : α → Prop}
+
+/-- The stage grows by the number of steps. -/
+theorem GrammarLaws.stage_steps (stage : ∀ x y, «续» R E x y → τ y = τ x + 1) :
+    ∀ (n : Nat) {x y : α}, «迭» («续» R E) n x y → τ y = τ x + n
+  | 0, _, _, same => Eq.symm (congrArg τ same)
+  | n + 1, x, _, ⟨w, c, rest⟩ =>
+    (GrammarLaws.stage_steps stage n rest).trans
+      ((congrArg (· + n) (stage x w c)).trans (Nat.succ_add (τ x) n))
+
+/-- In a region nothing outside continues into, no unit continuing as two units of the region fixes
+successors on the lines to listed units. -/
+theorem GrammarLaws.fixed_of_noSplit (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    {L D : List α} (inD : ∀ x, x ∈ D → P x) :
+    ∀ v b b', (∃ m, m ∈ L ∧ «所闭» («续» R E) m v) →
+      (∃ x, x ∈ D ∧ «所闭» («续» R E) b x) → (∃ x, x ∈ D ∧ «所闭» («续» R E) b' x) →
+      «续» R E v b → «续» R E v b' → b = b' :=
+  fun v b b' _ ⟨x, mx, toX⟩ ⟨x', mx', toX'⟩ =>
+    noSplit v b b' («闭含所闭» back (inD x mx) («所闭之逆».mpr toX))
+      («闭含所闭» back (inD x' mx') («所闭之逆».mpr toX'))
+
+/-- Any number of marked units at distinct stages from `M`, all before some stage. -/
+theorem GrammarLaws.found_cons {marks : α → Prop} {M U : Nat} {x : α} {D : List α}
+    (from_ : M ≤ U) (later : U ≤ τ x) (mx : marks x) (dD : Distinct D)
+    (all : ∀ y, y ∈ D → M ≤ τ y ∧ τ y < U ∧ marks y) :
+    Distinct (x :: D) ∧ M ≤ τ x + 1 ∧ ∀ y, y ∈ x :: D → M ≤ τ y ∧ τ y < τ x + 1 ∧ marks y :=
+  ⟨⟨fun mem => Nat.lt_irrefl (τ x) (Nat.lt_of_lt_of_le (all x mem).2.1 later), dD⟩,
+   Nat.le_trans from_ (Nat.le_trans later (Nat.le_succ _)),
+   fun y mem => match ListTests.mem_cons_iff.mp mem with
+    | .inl same => Eq.subst (motive := fun v => M ≤ τ v ∧ τ v < τ x + 1 ∧ marks v) same.symm
+        ⟨Nat.le_trans from_ later, Nat.lt_succ_self _, mx⟩
+    | .inr mem => ⟨(all y mem).1,
+        Nat.lt_of_lt_of_le (all y mem).2.1 (Nat.le_trans later (Nat.le_succ _)), (all y mem).2.2⟩⟩
+
+/-- Units marked at arbitrarily late stages give any number of them at distinct stages from any
+stage, all before some stage. -/
+theorem GrammarLaws.found {marks : α → Prop} (each : ∀ M, ∃ x, M ≤ τ x ∧ marks x) :
+    ∀ n M, ∃ D : List α, ∃ U, Distinct D ∧ D.length = n ∧ M ≤ U ∧
+      ∀ x, x ∈ D → M ≤ τ x ∧ τ x < U ∧ marks x
+  | 0, M => ⟨[], M, trivial, rfl, Nat.le_refl M, fun _ mem => nomatch mem⟩
+  | n + 1, M => match GrammarLaws.found each n M with
+    | ⟨D, U, dD, len, from_, all⟩ => match each U with
+      | ⟨x, later, mx⟩ => match GrammarLaws.found_cons from_ later mx dD all with
+        | ⟨dD', from_', all'⟩ => ⟨x :: D, τ x + 1, dD', congrArg Nat.succ len, from_', all'⟩
+
+/-- The same where after every stage a later marked unit is only not refuted. -/
+theorem GrammarLaws.found_unrefuted {marks : α → Prop} (each : ∀ M, ¬¬ ∃ x, M ≤ τ x ∧ marks x) :
+    ∀ n M, ¬¬ ∃ D : List α, ∃ U, Distinct D ∧ D.length = n ∧ M ≤ U ∧
+      ∀ x, x ∈ D → M ≤ τ x ∧ τ x < U ∧ marks x
+  | 0, M => fun no => no ⟨[], M, trivial, rfl, Nat.le_refl M, fun _ mem => nomatch mem⟩
+  | n + 1, M => fun no => GrammarLaws.found_unrefuted each n M fun ⟨D, U, dD, len, from_, all⟩ =>
+    each U fun ⟨x, later, mx⟩ => match GrammarLaws.found_cons from_ later mx dD all with
+      | ⟨dD', from_', all'⟩ => no ⟨x :: D, τ x + 1, dD', congrArg Nat.succ len, from_', all'⟩
+
+/-- Found once, or found for every member of a list. -/
+theorem GrammarLaws.found_or_all {A : Prop} {B : α → Prop} :
+    ∀ {D : List α}, (∀ x, x ∈ D → A ∨ B x) → A ∨ ∀ x, x ∈ D → B x
+  | [], _ => .inr fun _ mem => nomatch mem
+  | x :: D, each => match each x (.head D) with
+    | .inl a => .inl a
+    | .inr bx => match GrammarLaws.found_or_all (D := D) (fun y mem => each y (.tail x mem)) with
+      | .inl a => .inl a
+      | .inr all => .inr fun y mem => match ListTests.mem_cons_iff.mp mem with
+        | .inl same => Eq.subst (motive := B) same.symm bx
+        | .inr mem => all y mem
+
+/-- Tracing back, decided: a unit `k` stages after `N`, beginning or predecessor decided after `N`,
+gives a beginning after `N` or the line from a member of a list covering the units at `N`. -/
+theorem GrammarLaws.trace (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    {N : Nat} {L : List α} (covers : ∀ x, P x → τ x = N → x ∈ L)
+    (decided : ∀ y, P y → N < τ y → «生» R E y ∨ «有前» R E y) :
+    ∀ k y, P y → τ y = N + k →
+      (∃ z, N < τ z ∧ P z ∧ «生» R E z) ∨ ∃ m, m ∈ L ∧ «所闭» («续» R E) m y
+  | 0, y, h, at_ => .inr ⟨y, covers y h at_, «所闭之自反» _ y⟩
+  | k + 1, y, h, at_ =>
+    have late : N < τ y := Eq.subst (motive := (N < ·)) at_.symm
+      (Nat.lt_succ_of_le (Nat.le_add_right N k))
+    match decided y h late with
+    | .inl b => .inl ⟨y, late, h, b⟩
+    | .inr ⟨x, c⟩ =>
+      match GrammarLaws.trace stage back covers decided k x (back y x h c)
+          (Nat.succ.inj ((stage x y c).symm.trans at_)) with
+      | .inl found => .inl found
+      | .inr ⟨m, mm, r⟩ => .inr ⟨m, mm, «所闭之传递» r («缘在所闭» c)⟩
+
+/-- Tracing back, undecided: where nothing begins after `N` up to its stage, a unit's line from a
+member of a list covering the units at `N` is not refuted. -/
+theorem GrammarLaws.trace_unrefuted (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    {N : Nat} {L : List α} (covers : ∀ x, P x → τ x = N → x ∈ L) :
+    ∀ k y, P y → τ y = N + k →
+      (∀ z, P z → N < τ z → τ z ≤ N + k → ¬ «生» R E z) →
+      ¬¬ ∃ m, m ∈ L ∧ «所闭» («续» R E) m y
+  | 0, y, h, at_, _ => fun no => no ⟨y, covers y h at_, «所闭之自反» _ y⟩
+  | k + 1, y, h, at_, quiet => fun no =>
+    quiet y h (Eq.subst (motive := (N < ·)) at_.symm (Nat.lt_succ_of_le (Nat.le_add_right N k)))
+      (Nat.le_of_eq at_) fun ⟨x, c⟩ =>
+      GrammarLaws.trace_unrefuted stage back covers k x (back y x h c)
+        (Nat.succ.inj ((stage x y c).symm.trans at_))
+        (fun z hz late upto => quiet z hz late (Nat.le_succ_of_le upto))
+        fun ⟨m, mm, r⟩ => no ⟨m, mm, «所闭之传递» r («缘在所闭» c)⟩
+
+/-- **With nothing beginning in a stretch, what ends in it is at most what covers its start
+(间无生则间亡不过所覆).** In a region nothing outside continues into, each step one stage on, no
+unit continuing as two units of the region, with a list covering the units at stage `N` (所覆) and
+no unit beginning at a stage in `(N, U)`: distinct units ending at stages in `[N, U)` number at most
+the list. No decision is used. -/
+theorem «间无生则间亡不过所覆» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    {N U : Nat} {L : List α} (covers : ∀ x, P x → τ x = N → x ∈ L)
+    (quiet : ∀ z, P z → N < τ z → τ z < U → ¬ «生» R E z)
+    {D : List α} (dD : Distinct D)
+    (ends : ∀ x, x ∈ D → N ≤ τ x ∧ τ x < U ∧ P x ∧ «亡» R E x) : D.length ≤ L.length :=
+  «线亡不过所列之未否» dD (GrammarLaws.fixed_of_noSplit back noSplit fun x mx => (ends x mx).2.2.1)
+    (fun x mx => match le_dest (ends x mx).1 with
+      | ⟨k, at_⟩ => GrammarLaws.trace_unrefuted stage back covers k x (ends x mx).2.2.1 at_
+          fun z hz late upto => quiet z hz late
+            (Nat.lt_of_le_of_lt upto (Eq.subst (motive := (· < U)) at_ (ends x mx).2.1)))
+    fun x mx => (ends x mx).2.2.2
+
+/-- **Endings recurring after a covered stage give a beginning after it (所覆后亡屡则有生).** In the
+frame of `«间无生则间亡不过所覆»`, with beginning or predecessor decided after `N`: where endings
+recur, something begins after `N`. -/
+theorem «所覆后亡屡则有生» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    {N : Nat} {L : List α} (covers : ∀ x, P x → τ x = N → x ∈ L)
+    (decided : ∀ y, P y → N < τ y → «生» R E y ∨ «有前» R E y)
+    (ending : ∀ M, ∃ x, M ≤ τ x ∧ P x ∧ «亡» R E x) :
+    ∃ y, N < τ y ∧ P y ∧ «生» R E y :=
+  match GrammarLaws.found (marks := fun x => P x ∧ «亡» R E x) ending (L.length + 1) N with
+  | ⟨_, _, dD, len, _, all⟩ =>
+    match GrammarLaws.found_or_all (A := ∃ z, N < τ z ∧ P z ∧ «生» R E z)
+        (B := fun x => ∃ m, m ∈ L ∧ «所闭» («续» R E) m x)
+        (fun x mx => match le_dest (all x mx).1 with
+          | ⟨k, at_⟩ => GrammarLaws.trace stage back covers decided k x (all x mx).2.2.1 at_) with
+    | .inl found => found
+    | .inr reached => (Nat.not_succ_le_self L.length (Nat.le_trans (Nat.le_of_eq len.symm)
+        («线亡不过所列» dD (GrammarLaws.fixed_of_noSplit back noSplit fun x mx => (all x mx).2.2.1)
+          reached fun x mx => (all x mx).2.2.2))).elim
+
+/-- **With covered stages arbitrarily late, endings recurring give beginnings recurring
+(有覆而亡屡则生屡).** Lists covering the units at arbitrarily late stages, beginning or predecessor
+decided after `T`. -/
+theorem «有覆而亡屡则生屡» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    (covered : ∀ M, ∃ N, ∃ L : List α, M ≤ N ∧ ∀ x, P x → τ x = N → x ∈ L)
+    {T : Nat} (decided : ∀ y, P y → T < τ y → «生» R E y ∨ «有前» R E y)
+    (ending : ∀ M, ∃ x, M ≤ τ x ∧ P x ∧ «亡» R E x) :
+    ∀ M, ∃ y, M < τ y ∧ P y ∧ «生» R E y :=
+  fun M => match covered (M + T) with
+  | ⟨_, _, later, covers⟩ => match «所覆后亡屡则有生» stage back noSplit covers
+      (fun y h late => decided y h
+        (Nat.lt_of_le_of_lt (Nat.le_trans (Nat.le_add_left T M) later) late)) ending with
+    | ⟨z, late, h, b⟩ =>
+      ⟨z, Nat.lt_of_le_of_lt (Nat.le_trans (Nat.le_add_right M T) later) late, h, b⟩
+
+/-- **Endings recurring after a covered stage leave a beginning after it unrefuted
+(所覆后亡屡则生未否).** With a list covering the units at `N` and endings at arbitrarily late
+stages each not refuted, a beginning after `N` is not refuted: `«间无生则间亡不过所覆»`, endings
+found at distinct stages. No decision is used. -/
+theorem «所覆后亡屡则生未否» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    {N : Nat} {L : List α} (covers : ∀ x, P x → τ x = N → x ∈ L)
+    (ending : ∀ M, ¬¬ ∃ x, M ≤ τ x ∧ P x ∧ «亡» R E x) :
+    ¬¬ ∃ y, N < τ y ∧ P y ∧ «生» R E y :=
+  fun none => GrammarLaws.found_unrefuted (marks := fun x => P x ∧ «亡» R E x) ending
+    (L.length + 1) N fun ⟨_, _, dD, len, _, all⟩ =>
+    Nat.not_succ_le_self L.length (Nat.le_trans (Nat.le_of_eq len.symm)
+      («间无生则间亡不过所覆» stage back noSplit covers (fun z hz late _ b => none ⟨z, late, hz, b⟩)
+        dD all))
+
+/-- **With covered stages arbitrarily late, endings recurring do not let beginnings stop
+(有覆而亡屡则生不止)**, endings recurring as far as can be refuted. No decision is used. -/
+theorem «有覆而亡屡则生不止» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (back : «闭» («逆» («续» R E)) P)
+    (noSplit : ∀ v b b', P b → P b' → «续» R E v b → «续» R E v b' → b = b')
+    (covered : ∀ M, ∃ N, ∃ L : List α, M ≤ N ∧ ∀ x, P x → τ x = N → x ∈ L)
+    (ending : ∀ M, ¬¬ ∃ x, M ≤ τ x ∧ P x ∧ «亡» R E x) :
+    ¬ ∃ M, ∀ y, M < τ y → P y → ¬ «生» R E y :=
+  fun ⟨M, quiet⟩ => match covered M with
+  | ⟨_, _, later, covers⟩ => «所覆后亡屡则生未否» stage back noSplit covers ending
+      fun ⟨y, late, h, b⟩ => quiet y (Nat.lt_of_le_of_lt later late) h b
+
+/-- Tracing on, undecided: in a region nothing in it continues out of, with nothing ending at a
+stage in `[N, U)`, a unit at a stage from `N` has `k` steps after it wherever its stage with `k` is
+at most `U`, as far as can be refuted. -/
+theorem GrammarLaws.onward_within (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (on : «闭» («续» R E) P)
+    {N U : Nat} (quiet : ∀ z, P z → N ≤ τ z → τ z < U → ¬ «亡» R E z)
+    {x : α} (from_ : N ≤ τ x) (h : P x) : ∀ k, τ x + k ≤ U → ¬¬ ∃ y, «迭» («续» R E) k x y :=
+  fun k upto => «或有后则或迭» k fun j y below steps =>
+    have at_ : τ y = τ x + j := GrammarLaws.stage_steps stage j steps
+    quiet y («闭含所闭» on h («所闭当且仅当有迭».mpr ⟨j, steps⟩))
+      (Nat.le_trans from_ (Eq.subst (motive := (τ x ≤ ·)) at_.symm (Nat.le_add_right _ _)))
+      (Eq.subst (motive := (· < U)) at_.symm
+        (Nat.lt_of_lt_of_le (Nat.add_lt_add_left below _) upto))
+
+/-- **Its mirror: with nothing ending in a stretch, what begins in it is at most what covers its
+end (间无亡则间生不过所覆).** In a region nothing in it continues out of, each step one stage on, no
+two units of the region continuing as one, with a list covering the units at stage `U` and no unit
+ending at a stage in `[N, U)`: distinct units beginning at stages in `[N, U]` number at most the
+list. No decision is used. -/
+theorem «间无亡则间生不过所覆» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (on : «闭» («续» R E) P)
+    (noMerge : ∀ v a a', P a → P a' → «续» R E a v → «续» R E a' v → a = a')
+    {N U : Nat} {L : List α} (covers : ∀ x, P x → τ x = U → x ∈ L)
+    (quiet : ∀ z, P z → N ≤ τ z → τ z < U → ¬ «亡» R E z)
+    {D : List α} (dD : Distinct D)
+    (begins : ∀ x, x ∈ D → N ≤ τ x ∧ τ x ≤ U ∧ P x ∧ «生» R E x) : D.length ≤ L.length :=
+  «线生不过所列之未否» dD
+    (fun v a a' _ ⟨x, mx, toA⟩ ⟨x', mx', toA'⟩ => noMerge v a a'
+      («闭含所闭» on (begins x mx).2.2.1 toA) («闭含所闭» on (begins x' mx').2.2.1 toA'))
+    (fun x mx no => match le_dest (begins x mx).2.1 with
+      | ⟨k, at_⟩ => GrammarLaws.onward_within stage on quiet (begins x mx).1 (begins x mx).2.2.1 k
+          (Nat.le_of_eq at_.symm) fun ⟨y, steps⟩ => no ⟨y, covers y
+            («闭含所闭» on (begins x mx).2.2.1 («所闭当且仅当有迭».mpr ⟨k, steps⟩))
+            ((GrammarLaws.stage_steps stage k steps).trans at_.symm),
+            «所闭当且仅当有迭».mpr ⟨k, steps⟩⟩)
+    fun x mx => (begins x mx).2.2.2
+
+/-- **With bounded covers, beginnings recurring do not let endings stop (有界覆而生屡则亡不止).**
+Lists of at most `K` covering the units at every stage from `T`, beginnings at arbitrarily late
+stages: `«间无亡则间生不过所覆»`, beginnings found at distinct stages. No decision is used. -/
+theorem «有界覆而生屡则亡不止» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (on : «闭» («续» R E) P)
+    (noMerge : ∀ v a a', P a → P a' → «续» R E a v → «续» R E a' v → a = a')
+    {K T : Nat}
+    (bounded : ∀ S, T ≤ S → ∃ L : List α, L.length ≤ K ∧ ∀ x, P x → τ x = S → x ∈ L)
+    (beginning : ∀ M, ∃ x, M ≤ τ x ∧ P x ∧ «生» R E x) :
+    ¬ ∃ N, ∀ x, N ≤ τ x → P x → ¬ «亡» R E x :=
+  fun ⟨N, quiet⟩ =>
+    match GrammarLaws.found (marks := fun x => P x ∧ «生» R E x) beginning (K + 1) (N + T) with
+    | ⟨_, U, dD, len, from_, all⟩ => match bounded U (Nat.le_trans (Nat.le_add_left T N) from_) with
+      | ⟨_, short, covers⟩ => Nat.not_succ_le_self K (Nat.le_trans (Nat.le_of_eq len.symm)
+          (Nat.le_trans («间无亡则间生不过所覆» (N := N + T) stage on noMerge covers
+            (fun z hz late _ => quiet z (Nat.le_trans (Nat.le_add_right N T) late) hz) dD
+            fun x mx => ⟨(all x mx).1, Nat.le_of_lt (all x mx).2.1, (all x mx).2.2⟩) short))
+
+/-- Tracing on, decided: from a unit at a stage from `N`, ending or successor decided from `N`, an
+ending from `N` on, or `k` steps. -/
+theorem GrammarLaws.trace_on (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (on : «闭» («续» R E) P)
+    {N : Nat} (decided : ∀ x, P x → N ≤ τ x → «亡» R E x ∨ «有后» R E x) :
+    ∀ k x, P x → N ≤ τ x →
+      (∃ z, N ≤ τ z ∧ P z ∧ «亡» R E z) ∨ ∃ y, «迭» («续» R E) k x y
+  | 0, x, _, _ => .inr ⟨x, rfl⟩
+  | k + 1, x, h, from_ => match decided x h from_ with
+    | .inl en => .inl ⟨x, from_, h, en⟩
+    | .inr ⟨w, c⟩ =>
+      match GrammarLaws.trace_on stage on decided k w (on x w h c)
+          (Nat.le_trans from_ (Nat.le_of_lt (Eq.subst (motive := (τ x < ·)) (stage x w c).symm
+            (Nat.lt_succ_self _)))) with
+      | .inl found => .inl found
+      | .inr ⟨y, steps⟩ => .inr ⟨y, w, c, steps⟩
+
+/-- **With bounded covers, beginnings recurring give endings recurring (有界覆而生屡则亡屡)**, ending
+or successor decided from `T`. -/
+theorem «有界覆而生屡则亡屡» (stage : ∀ x y, «续» R E x y → τ y = τ x + 1)
+    (on : «闭» («续» R E) P)
+    (noMerge : ∀ v a a', P a → P a' → «续» R E a v → «续» R E a' v → a = a')
+    {K T : Nat}
+    (bounded : ∀ S, T ≤ S → ∃ L : List α, L.length ≤ K ∧ ∀ x, P x → τ x = S → x ∈ L)
+    (decided : ∀ x, P x → T ≤ τ x → «亡» R E x ∨ «有后» R E x)
+    (beginning : ∀ M, ∃ x, M ≤ τ x ∧ P x ∧ «生» R E x) :
+    ∀ N, ∃ x, N ≤ τ x ∧ P x ∧ «亡» R E x :=
+  fun N =>
+    match GrammarLaws.found (marks := fun x => P x ∧ «生» R E x) beginning (K + 1) (N + T) with
+    | ⟨D, U, dD, len, from_, all⟩ => match bounded U (Nat.le_trans (Nat.le_add_left T N) from_) with
+      | ⟨L, short, covers⟩ =>
+        match GrammarLaws.found_or_all (A := ∃ z, N + T ≤ τ z ∧ P z ∧ «亡» R E z)
+            (B := fun x => ∃ m, m ∈ L ∧ «所闭» («续» R E) x m) (D := D)
+            (fun x mx => match le_dest (Nat.le_of_lt (all x mx).2.1) with
+              | ⟨k, at_⟩ => match GrammarLaws.trace_on (N := N + T) stage on
+                  (fun x h from_ => decided x h (Nat.le_trans (Nat.le_add_left T N) from_))
+                  k x (all x mx).2.2.1 (all x mx).1 with
+                | .inl found => .inl found
+                | .inr ⟨y, steps⟩ => .inr ⟨y, covers y
+                    («闭含所闭» on (all x mx).2.2.1 («所闭当且仅当有迭».mpr ⟨k, steps⟩))
+                    ((GrammarLaws.stage_steps stage k steps).trans at_.symm),
+                    «所闭当且仅当有迭».mpr ⟨k, steps⟩⟩) with
+        | .inl ⟨z, from_, h, en⟩ => ⟨z, Nat.le_trans (Nat.le_add_right N T) from_, h, en⟩
+        | .inr reaching => (Nat.not_succ_le_self K (Nat.le_trans (Nat.le_of_eq len.symm)
+            (Nat.le_trans («线生不过所列» dD
+              (fun v a a' _ ⟨x, mx, toA⟩ ⟨x', mx', toA'⟩ => noMerge v a a'
+                («闭含所闭» on (all x mx).2.2.1 toA) («闭含所闭» on (all x' mx').2.2.1 toA'))
+              reaching fun x mx => (all x mx).2.2.2) short))).elim
+
+end Stages
+
+theorem GrammarLaws.pair_eq {β : Type u} : ∀ {x y : Nat × β}, x.1 = y.1 → x.2 = y.2 → x = y
+  | (_, _), (_, _), rfl, rfl => rfl
+
+/-- A test over the units listed after each stage of a stretch: some unit passes after some stage,
+or none after any. The count (`«计»`) decides each stage. -/
+theorem GrammarLaws.stage_search (b : α → Bool) (u : Nat → List α) (M : Nat) : ∀ n,
+    (∃ t, M ≤ t ∧ t < M + n ∧ ∃ y, y ∈ u (t + 1) ∧ b y = true) ∨
+      ∀ t, M ≤ t → t < M + n → ∀ y, y ∈ u (t + 1) → b y ≠ true
+  | 0 => .inr fun t lo hi _ _ _ => Nat.lt_irrefl t (Nat.lt_of_lt_of_le hi lo)
+  | n + 1 => match GrammarLaws.stage_search b u M n with
+    | .inl ⟨t, lo, hi, found⟩ => .inl ⟨t, lo, Nat.lt_succ_of_lt hi, found⟩
+    | .inr nothing => match h : «计» b (u (M + n + 1)) with
+      | 0 => .inr fun t lo hi y my passes => match Nat.lt_or_ge t (M + n) with
+        | .inl below => nothing t lo below y my passes
+        | .inr above => Nat.lt_irrefl 0 (Eq.subst (motive := fun c => 0 < c) h
+            (GrammarLaws.count_pos_of_mem (Eq.subst (motive := fun s => y ∈ u (s + 1))
+              (Nat.le_antisymm (Nat.le_of_lt_succ hi) above) my) passes))
+      | k + 1 => match GrammarLaws.split_of_count_pos
+          (Eq.subst (motive := fun c => 0 < c) h.symm (Nat.zero_lt_succ k)) with
+        | ⟨b₁, y, b₂, split, passes⟩ => .inl ⟨M + n, Nat.le_add_right M n, Nat.lt_succ_self _, y,
+            split ▸ GrammarLaws.mem_middle y b₂ b₁, passes⟩
+
 /-- **The census of a run**, asking only what its proof uses. Units listed at each step of a run
-under a continuation, from step `T` on: the units after each step listed once, no unit listed
-before a step continuing as two units listed after it, every predecessor of a unit listed after a
-step listed before it, and the root's beginnings (`«生»`) and endings (`«亡»`) decided on the listed
-units by tests. Where endings recur among the listed units (`«屡»`), beginnings recur among the
-units listed after a step. At each step the census of a step applies, and the counting step from
-losing to gaining (`gaining_of_losing_from`) sums it over a stretch. -/
-theorem GrammarLaws.census_run {b e : α → Bool} {u : Nat → List α} {T : Nat}
-    (once : ∀ t, T ≤ t → Distinct (u (t + 1)))
+under a continuation, from step `T` on: no unit listed before a step continuing as two units listed
+after it, every predecessor of a unit listed after a step listed before it, and the root's beginnings
+(`«生»`) decided on the units listed after a step by a test. Where endings recur among the listed
+units (`«屡»`), beginnings recur among the units listed after a step. The units read as occurrences
+`(t, x)` at stages, each step one stage on; the list at a stage covers it, so
+`«间无生则间亡不过所覆»` applies, and the test decides a finite search (`GrammarLaws.stage_search`). -/
+theorem GrammarLaws.census_run {b : α → Bool} {u : Nat → List α} {T : Nat}
     (noSplit : ∀ t, T ≤ t → ∀ x y y', x ∈ u t → y ∈ u (t + 1) → y' ∈ u (t + 1) →
       «续» R E x y → «续» R E x y' → y = y')
     (predecessorsBefore : ∀ t, T ≤ t → ∀ x y, y ∈ u (t + 1) → «续» R E x y → x ∈ u t)
     (begins : ∀ t, T ≤ t → ∀ y, y ∈ u (t + 1) → (b y = true ↔ «生» R E y))
-    (ends : ∀ t, T ≤ t → ∀ x, x ∈ u t → (e x = true ↔ «亡» R E x))
     (ending : «屡» (fun before _ => ∃ x, x ∈ before ∧ «亡» R E x) u) :
     «屡» (fun _ after => ∃ y, y ∈ after ∧ «生» R E y) u :=
   fun N =>
-    match gaining_of_losing_from (T := T) (q := fun t => (u t).length)
-        (x := fun t => «计» e (u t)) (y := fun t => «计» b (u (t + 1)))
-        (fun t from_ => GrammarLaws.census_le (once t from_) (noSplit t from_)
-          (fun y my off none =>
-            (fun begins' : «生» R E y =>
-              Bool.noConfusion (((begins t from_ y my).mpr begins').symm.trans off))
-            fun ⟨x, c⟩ => none ⟨x, predecessorsBefore t from_ x y my c, c⟩)
-          (fun x mx on y _ c => (ends t from_ x mx).mp on ⟨y, c⟩))
-        (fun M => match ending (M + T) with
-          | ⟨t, later, x, mx, en⟩ =>
-            ⟨t, Nat.le_trans (Nat.le_add_right M T) later, GrammarLaws.count_pos_of_mem mx
-              ((ends t (Nat.le_trans (Nat.le_add_left T M) later) x mx).mpr en)⟩)
-        (N + T) with
-    | ⟨t, later, pos⟩ =>
-      match GrammarLaws.split_of_count_pos pos with
-      | ⟨b₁, y, b₂, split, tested⟩ =>
-        have my : y ∈ u (t + 1) := split ▸ GrammarLaws.mem_middle y b₂ b₁
-        ⟨t, Nat.le_trans (Nat.le_add_right N T) later, y, my,
-          (begins t (Nat.le_trans (Nat.le_add_left T N) later) y my).mp tested⟩
+  let R' : «际» (Nat × α) := fun x y => y.1 = x.1 + 1 ∧ «续» R E x.2 y.2
+  let E' : «际» (Nat × α) := fun x y => T ≤ x.1 ∧ x.2 ∈ u x.1 ∧ y.2 ∈ u y.1
+  let P' : Nat × α → Prop := fun x => T ≤ x.1 ∧ x.2 ∈ u x.1
+  let N' := N + T
+  let L := (u N').map (fun x => (N', x))
+  have stage : ∀ x y, «续» R' E' x y → y.1 = x.1 + 1 := fun _ _ c => c.1.1
+  have back : «闭» («逆» («续» R' E')) P' := fun _ _ _ c => ⟨c.2.1, c.2.2.1⟩
+  have split : ∀ v b b', P' b → P' b' → «续» R' E' v b → «续» R' E' v b' → b = b' :=
+    fun v b b' _ _ c c' => GrammarLaws.pair_eq (c.1.1.trans c'.1.1.symm)
+      (noSplit v.1 c.2.1 v.2 b.2 b'.2 c.2.2.1
+        (Eq.subst (motive := fun s => b.2 ∈ u s) c.1.1 c.2.2.2)
+        (Eq.subst (motive := fun s => b'.2 ∈ u s) c'.1.1 c'.2.2.2) c.1.2 c'.1.2)
+  have covers : ∀ x : Nat × α, P' x → x.1 = N' → x ∈ L :=
+    fun x h at_ => Eq.subst (motive := (· ∈ L))
+      (GrammarLaws.pair_eq (x := (N', x.2)) (y := x) at_.symm rfl)
+      (ListTests.mem_map_of (f := fun x => (N', x)) (Eq.subst (motive := fun s => x.2 ∈ u s) at_ h.2))
+  have endings : ∀ M, ∃ x : Nat × α, M ≤ x.1 ∧ (P' x ∧ «亡» R' E' x) :=
+    fun M => match ending (M + T) with
+    | ⟨t, later, x, mx, en⟩ => ⟨(t, x), Nat.le_trans (Nat.le_add_right M T) later,
+        ⟨Nat.le_trans (Nat.le_add_left T M) later, mx⟩, fun ⟨y, c⟩ => en ⟨y.2, c.1.2⟩⟩
+  match GrammarLaws.found (τ := Prod.fst) (marks := fun x => P' x ∧ «亡» R' E' x) endings
+      (L.length + 1) N' with
+  | ⟨_, _, dD, len, from_, all⟩ =>
+    match le_dest from_ with
+    | ⟨n, atU⟩ =>
+      match GrammarLaws.stage_search b u N' n with
+      | .inl ⟨t, lo, _, y, my, passes⟩ =>
+        ⟨t, Nat.le_trans (Nat.le_add_right N T) lo, y, my,
+          (begins t (Nat.le_trans (Nat.le_add_left T N) lo) y my).mp passes⟩
+      | .inr nothing => (Nat.not_succ_le_self L.length (Nat.le_trans (Nat.le_of_eq len.symm)
+          («间无生则间亡不过所覆» (τ := Prod.fst) (P := P') stage back split covers
+            (fun z hz late below beg => match z, hz, late, below, beg with
+              | (0, _), _, late, _, _ => Nat.not_lt_zero _ late
+              | (t + 1, y), hz, late, below, beg =>
+                have from_t : N' ≤ t := Nat.le_of_lt_succ late
+                have fromT : T ≤ t := Nat.le_trans (Nat.le_add_left T N) from_t
+                nothing t from_t (Nat.lt_of_lt_of_le (Nat.lt_succ_self t)
+                    (Nat.le_of_lt (Eq.subst (motive := (t + 1 < ·)) atU below))) y hz.2
+                  ((begins t fromT y hz.2).mpr fun ⟨x, c⟩ =>
+                    beg ⟨(t, x), ⟨rfl, c⟩, fromT, predecessorsBefore t fromT x y hz.2 c, hz.2⟩))
+            dD all))).elim
 
 /-- **The census of a run** under a continuation that fixes successors (`GrammarLaws.census_run`,
 the fixed successor read at the listed units). -/
-theorem «定后前者在前则亡屡者生屡» {b e : α → Bool} {u : Nat → List α} {T : Nat}
-    (once : ∀ t, T ≤ t → Distinct (u (t + 1)))
+theorem «定后前者在前则亡屡者生屡» {b : α → Bool} {u : Nat → List α} {T : Nat}
     (predecessorsBefore : ∀ t, T ≤ t → ∀ x y, y ∈ u (t + 1) → «续» R E x y → x ∈ u t)
     (fixedAfter : «定后» («续» R E))
     (begins : ∀ t, T ≤ t → ∀ y, y ∈ u (t + 1) → (b y = true ↔ «生» R E y))
-    (ends : ∀ t, T ≤ t → ∀ x, x ∈ u t → (e x = true ↔ «亡» R E x))
     (ending : «屡» (fun before _ => ∃ x, x ∈ before ∧ «亡» R E x) u) :
     «屡» (fun _ after => ∃ y, y ∈ after ∧ «生» R E y) u :=
-  GrammarLaws.census_run once
+  GrammarLaws.census_run
     (fun _ _ x y y' _ _ _ c c' => «定后之逐点».mp fixedAfter x y y' c c')
-    predecessorsBefore begins ends ending
+    predecessorsBefore begins ending
 
 end Census
 

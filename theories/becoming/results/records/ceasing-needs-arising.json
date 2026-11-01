@@ -23,15 +23,16 @@
       ]
     },
     {
-      "zh": "证明经过根上一程的清点（«定后前者在前则亡屡者生屡»）：单位是一成员沿其各步的出现，以其判定的二值之类为类，开始成立与不再成立在那里是生与亡；出现各列一次，前者列在其前，无分裂。列举、清点与依存的读法经过该律；世界与立的读法经过覆盖之律（第 6 条），它不是根上一程之清点的情形。",
-      "en": "The proof goes through the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, under the two-valued class of its determination, where coming to be and ceasing to be are beginning and ending; the occurrences are listed once, each predecessor before, nothing splitting. The listing, census and dependence readings go through it; the world and standing readings through the covering law (law 6), not a case of it.",
+      "zh": "证明经过根上一程的清点（«定后前者在前则亡屡者生屡»）：单位是一成员沿其各步的出现，以其判定的二值之类为类，开始成立与不再成立在那里是生与亡；出现有列，前者列在其前，无分裂。列举、清点与依存的读法经过该律；世界与立的读法经过覆盖之律（第 6 条），它经根上的覆盖之律（«所覆后亡屡则有生»）取一成员之出现而达于根。一程之清点本身是根上线上之终之计（«间无生则间亡不过所覆»）的情形，故两路会于一条根律。",
+      "en": "The proof goes through the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, under the two-valued class of its determination, where coming to be and ceasing to be are beginning and ending; the occurrences are listed, each predecessor before, nothing splitting. The listing, census and dependence readings go through it; the world and standing readings through the covering law (law 6), which reaches the root through the root's covering law («所覆后亡屡则有生») at a member's occurrences. The census of a run is itself a case of the root's count of ends on lines («间无生则间亡不过所覆»), so the two routes meet in one root law.",
       "declarations": [
         "Becoming.«定后前者在前则亡屡者生屡»",
         "Becoming.comesToBe_iff_sheng_along",
         "Becoming.ceasesToBe_iff_wang_along",
         "Becoming.Steps.along_fixed",
         "Becoming.listedOccurrences",
-        "Becoming.gaining_of_losing_from"
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«间无生则间亡不过所覆»"
       ]
     },
     {
@@ -315,7 +316,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
+      "sha256": "c64c39ac2e8d46be6599dbeab7c4f947892d7e2aeadfc305d0a84966e09f740c",
       "declarations": [
         "Becoming.Listed",
         "Becoming.Listed.coming_of_ceasing",
@@ -346,7 +347,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
       "role": "proof",
-      "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
+      "sha256": "caa8f852c555caa3bf9cbe09b4bc008ae6e3c576f2fe0884e8ca276b078d4aa8",
       "declarations": [
         "Becoming.Web.StandingCensus",
         "Becoming.coming_of_ceasing_covered",
@@ -417,7 +418,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
       "declarations": [
         "Becoming.recurring_accumulates",
         "Becoming.gaining_of_losing_from"
@@ -426,9 +427,11 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "09bcaab153ffe763a67e19824537d5619e2c64911ebad39b09d4c7fbfc2e6c20",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
       "declarations": [
-        "Becoming.«定后前者在前则亡屡者生屡»"
+        "Becoming.«定后前者在前则亡屡者生屡»",
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«间无生则间亡不过所覆»"
       ]
     },
     {
@@ -603,12 +606,18 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -664,7 +673,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Locality",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -678,14 +687,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -792,6 +801,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): law 2 restated: Listed.coming_of_ceasing is re-proved through the root's census of a run, no longer through Listed.over_stretch and Listed.coming_iff_excess; its statement is unchanged, and law 2's declarations follow the proof, with the references that hold them. The census balance leaves the dependencies, its related note saying until when it was the proof, and the root's census joins related. Declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; gaining_of_losing_from, which law 2 now declares, is cited there too; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：第 2 条重述：Listed.coming_of_ceasing 改经根上一程的清点证明，不再经 Listed.over_stretch 与 Listed.coming_iff_excess；其陈述不变，第 2 条的声明随证明，并及载之之引用。普查的平衡离开依赖，其相关说明言其至何时为证明；根上之清点入相关。声明以完整名称移动：recurring_accumulates 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；第 2 条今所声明之 gaining_of_losing_from 亦引于彼；论断不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section 498): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws and lose gaining_of_losing_from, which the proof no longer uses. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：第 2 条按路径重述：根上一程之清点不再要求出现各列一次；世界与立的读法所经之覆盖之律（第 6 条）今经根上覆盖之律取一成员之出现而达于根（Covers.coming_from_of_ceasing 重证，陈述不变）；一程之清点本身是根上线上之终之计的情形。第 2 条之声明增二根律，去证明已不用之 gaining_of_losing_from。记录所述不变。"
     }
   ],
   "text_versions": [

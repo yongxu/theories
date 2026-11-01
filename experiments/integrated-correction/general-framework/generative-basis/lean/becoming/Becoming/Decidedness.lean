@@ -37,11 +37,12 @@ and across a list of steps the counts at each step sum (`CountsAcross`).
   equally long (`length_eq_of_same`).
 * **Recurrence with no premise.** In a finite family, while nothing of it ceases each member
   comes to be at most once (`comes_once`), and while nothing comes to be each ceases at most
-  once (`ceases_once_of`); so no more steps of a stretch see a member come to be, or cease, than
-  the family has members (`coming_steps_within`, `ceasing_steps_within`). Hence, where coming to
-  be recurs, from any step there is a stretch in which something ceasing cannot be refuted
-  (`Recurs.ceasing_within`), and ceasing never stops for good (`Recurs.ceasing_not_stopping`);
-  and conversely (`Recurs.coming_within`, `Recurs.coming_not_stopping`). No decidedness is used.
+  once (`ceases_once_of`). No more steps of a stretch see a member come to be, or cease, than the
+  family has members (`coming_steps_within`, `ceasing_steps_within`), the root's stretch form and
+  its mirror at the family's occurrences (`«间无亡则间生不过所覆»`, `«间无生则间亡不过所覆»`). Hence,
+  where coming to be recurs, from any step there is a stretch in which something ceasing cannot be
+  refuted (`Recurs.ceasing_within`), and ceasing never stops for good
+  (`Recurs.ceasing_not_stopping`); and conversely (`Recurs.coming_within`, `Recurs.coming_not_stopping`). No decidedness is used.
 * **Decided where it is found.** With the states of that stretch decided, the step is found
   (`Recurs.ceasing_found`, `Recurs.coming_found`). Decided from some step on, coming to be
   recurs in a finite family exactly where ceasing does (`coming_recurs_iff_decided`), with no
@@ -608,45 +609,94 @@ theorem ceases_once_of {q : Nat → Prop} {t t' : Nat} (before : t < t') (ceases
 
 variable {as : List α} {p : α → Nat → Prop}
 
+/-! The two counts are the root's stretch form and its mirror (`«间无生则间亡不过所覆»`,
+`«间无亡则间生不过所覆»`) at the family's occurrences `(t, a)`, `a ∈ as` with `p a t`, each step one
+stage on along `Steps.along`: a member's occurrences stay with the member, so the region is closed
+both ways, and the family's list covers every stage. -/
+
+/-- What holds of a member of the family is a region nothing outside continues into. -/
+theorem Steps.along_family_back : «闭» («逆» («续» Steps.along (Steps.alikeAt p)))
+    (fun x : Nat × α => x.2 ∈ as ∧ p x.2 x.1) :=
+  fun _ _ ⟨mem, h⟩ ⟨⟨_, same⟩, alike⟩ => ⟨Eq.subst (motive := (· ∈ as)) same mem, alike.mpr h⟩
+
+/-- And nothing in it continues out of it. -/
+theorem Steps.along_family_on : «闭» («续» Steps.along (Steps.alikeAt p))
+    (fun x : Nat × α => x.2 ∈ as ∧ p x.2 x.1) :=
+  fun _ _ ⟨mem, h⟩ ⟨⟨_, same⟩, alike⟩ => ⟨Eq.subst (motive := (· ∈ as)) same.symm mem, alike.mp h⟩
+
+/-- No two occurrences continue as one along the steps, in any region. -/
+theorem Steps.along_noMerge {P : Nat × α → Prop} :
+    ∀ v a a' : Nat × α, P a → P a' →
+      «续» Steps.along (Steps.alikeAt p) a v → «续» Steps.along (Steps.alikeAt p) a' v → a = a' :=
+  fun _ _ _ _ _ ⟨⟨n, s⟩, _⟩ ⟨⟨n', s'⟩, _⟩ => GrammarLaws.pair_eq (Nat.succ.inj (n.symm.trans n'))
+    (s.symm.trans s')
+
+/-- The family's list covers its occurrences at every stage. -/
+theorem Steps.family_occurrences (S : Nat) :
+    ∀ x : Nat × α, (x.2 ∈ as ∧ p x.2 x.1) → x.1 = S → x ∈ as.map (fun a => (S, a))
+  | (_, _), ⟨mem, _⟩, rfl => ListTests.mem_map_of mem
+
 /-- In a finite family, while nothing of it ceases across a stretch, no more steps of the stretch
-see a member come to be than the family has members. No decidedness is needed. -/
+see a member come to be than the family has members: `«间无亡则间生不过所覆»` at the family's
+occurrences, the beginnings the occurrences a step after each coming to be. No decidedness is
+needed. -/
 theorem coming_steps_within {M U : Nat}
     (still : ∀ s a, M ≤ s → s < U → a ∈ as → ¬ CeasesToBe (p a) s) {E : List Nat}
     (distinct : Distinct E)
     (coming : ∀ t, t ∈ E → M ≤ t ∧ t < U ∧ ∃ a, a ∈ as ∧ ComesToBe (p a) t) :
     E.length ≤ as.length :=
-  length_le_of_matched (S := fun t a => a ∈ as ∧ ComesToBe (p a) t) distinct
-    (fun t mem => match (coming t mem).2.2 with
-      | ⟨a, member, comes⟩ => ⟨a, member, member, comes⟩)
-    fun t t' a mem mem' ⟨member, comes⟩ ⟨_, comes'⟩ => match Nat.lt_or_ge t t' with
-      | .inl before => absurd comes' (comes_once before comes fun s after below =>
-          still s a (Nat.le_trans (coming t mem).1 (Nat.le_of_lt after))
-            (Nat.lt_trans below (coming t' mem').2.1) member)
-      | .inr after => match Nat.lt_or_ge t' t with
-        | .inl before => absurd comes (comes_once before comes' fun s after' below =>
-            still s a (Nat.le_trans (coming t' mem').1 (Nat.le_of_lt after'))
-              (Nat.lt_trans below (coming t mem).2.1) member)
-        | .inr after' => Nat.le_antisymm after' after
+  match exists_pairs_over (Q := fun t a => M ≤ t ∧ t < U ∧ a ∈ as ∧ ComesToBe (p a) t)
+      (fun t mem => match coming t mem with
+        | ⟨from_, below, a, member, comes⟩ => ⟨a, from_, below, member, comes⟩) with
+  | ⟨D, same, all⟩ =>
+    have next : ∀ x : Nat × α, x ∈ D.map (fun x => (x.1 + 1, x.2)) →
+        M ≤ x.1 ∧ x.1 ≤ U ∧ (x.2 ∈ as ∧ p x.2 x.1) ∧ «生» Steps.along (Steps.alikeAt p) x :=
+      fun _ mx => match ListTests.mem_map_iff.mp mx with
+      | ⟨y, my, e⟩ => Eq.subst (motive := fun x : Nat × α => M ≤ x.1 ∧ x.1 ≤ U ∧
+            (x.2 ∈ as ∧ p x.2 x.1) ∧ «生» Steps.along (Steps.alikeAt p) x) e
+          ⟨Nat.le_succ_of_le (all y my).1, (all y my).2.1, ⟨(all y my).2.2.1, (all y my).2.2.2.2⟩,
+            (comesToBe_iff_sheng_along.mp (all y my).2.2.2).2⟩
+    Nat.le_trans (Nat.le_of_eq ((congrArg List.length same).symm.trans (length_map Prod.fst D)))
+      (Nat.le_trans (Nat.le_of_eq (length_map _ D).symm)
+        (Nat.le_trans («间无亡则间生不过所覆» (τ := Prod.fst)
+            (P := fun x : Nat × α => x.2 ∈ as ∧ p x.2 x.1) (N := M) (U := U)
+            Steps.along_stage Steps.along_family_on Steps.along_noMerge (Steps.family_occurrences U)
+            (fun z hz from_ below en => match z, hz, from_, below, en with
+              | (s, c), hz, from_, below, en => still s c from_ below hz.1
+                  (ceasesToBe_iff_wang_along.mpr ⟨hz.2, en⟩))
+            (distinct_map_on (g := fun x : Nat × α => (x.1 + 1, x.2)) (fun x y _ _ same' =>
+                GrammarLaws.pair_eq
+                  (Nat.succ.inj (congrArg (a₁ := (x.1 + 1, x.2)) (a₂ := (y.1 + 1, y.2)) Prod.fst same'))
+                  (congrArg (a₁ := (x.1 + 1, x.2)) (a₂ := (y.1 + 1, y.2)) Prod.snd same'))
+              (distinct_of_map (Eq.subst (motive := Distinct) same.symm distinct)))
+            next)
+          (Nat.le_of_eq (length_map _ as))))
 
 /-- In a finite family, while nothing of it comes to be across a stretch, no more steps of the
-stretch see a member cease than the family has members. No decidedness is needed. -/
+stretch see a member cease than the family has members: `«间无生则间亡不过所覆»` at the family's
+occurrences. No decidedness is needed. -/
 theorem ceasing_steps_within {M U : Nat}
     (still : ∀ s a, M ≤ s → s < U → a ∈ as → ¬ ComesToBe (p a) s) {E : List Nat}
     (distinct : Distinct E)
     (ceasing : ∀ t, t ∈ E → M ≤ t ∧ t < U ∧ ∃ a, a ∈ as ∧ CeasesToBe (p a) t) :
     E.length ≤ as.length :=
-  length_le_of_matched (S := fun t a => a ∈ as ∧ CeasesToBe (p a) t) distinct
-    (fun t mem => match (ceasing t mem).2.2 with
-      | ⟨a, member, ceases⟩ => ⟨a, member, member, ceases⟩)
-    fun t t' a mem mem' ⟨member, ceases⟩ ⟨_, ceases'⟩ => match Nat.lt_or_ge t t' with
-      | .inl before => absurd ceases' (ceases_once_of before ceases fun s after below =>
-          still s a (Nat.le_trans (ceasing t mem).1 (Nat.le_of_lt after))
-            (Nat.lt_trans below (ceasing t' mem').2.1) member)
-      | .inr after => match Nat.lt_or_ge t' t with
-        | .inl before => absurd ceases (ceases_once_of before ceases' fun s after' below =>
-            still s a (Nat.le_trans (ceasing t' mem').1 (Nat.le_of_lt after'))
-              (Nat.lt_trans below (ceasing t mem).2.1) member)
-        | .inr after' => Nat.le_antisymm after' after
+  match exists_pairs_over (Q := fun t a => M ≤ t ∧ t < U ∧ a ∈ as ∧ CeasesToBe (p a) t)
+      (fun t mem => match ceasing t mem with
+        | ⟨from_, below, a, member, ceases⟩ => ⟨a, from_, below, member, ceases⟩) with
+  | ⟨D, same, all⟩ =>
+    Nat.le_trans (Nat.le_of_eq ((congrArg List.length same).symm.trans (length_map Prod.fst D)))
+      (Nat.le_trans («间无生则间亡不过所覆» (τ := Prod.fst)
+          (P := fun x : Nat × α => x.2 ∈ as ∧ p x.2 x.1) (U := U)
+          Steps.along_stage Steps.along_family_back Steps.along_noSplit (Steps.family_occurrences M)
+          (fun z hz late below b => match z, hz, late, below, b with
+            | (0, _), _, late, _, _ => Nat.not_lt_zero M late
+            | (s + 1, c), hz, late, below, b => still s c (Nat.le_of_lt_succ late)
+                (Nat.lt_trans (Nat.lt_succ_self s) below) hz.1
+                (comesToBe_iff_sheng_along.mpr ⟨hz.2, b⟩))
+          (distinct_of_map (Eq.subst (motive := Distinct) same.symm distinct))
+          fun x mx => ⟨(all x mx).1, (all x mx).2.1, ⟨(all x mx).2.2.1, (all x mx).2.2.2.1⟩,
+            (ceasesToBe_iff_wang_along.mp (all x mx).2.2.2).2⟩)
+        (Nat.le_of_eq (length_map _ as)))
 
 /-- Where an event of a finite family recurs, any number of distinct steps from `M` see it, all
 before some step. -/

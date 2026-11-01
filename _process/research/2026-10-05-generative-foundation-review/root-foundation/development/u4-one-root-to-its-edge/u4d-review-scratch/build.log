@@ -1,0 +1,37 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/review-u4d/tree",
+  "modules": 25,
+  "ran": [
+    "Becoming.U4dReview",
+    "BecomingU4dReviewAxiomAudit"
+  ],
+  "reused": 28,
+  "unclean": [],
+  "audits": {
+    "Becoming.U4dCases": {
+      "theorems": 30,
+      "declarations": 30,
+      "with_axioms": {}
+    },
+    "Becoming.U4dCover": {
+      "theorems": 30,
+      "declarations": 30,
+      "with_axioms": {}
+    },
+    "Becoming.U4dNeeded": {
+      "theorems": 18,
+      "declarations": 25,
+      "with_axioms": {}
+    },
+    "Becoming.U4dReview": {
+      "theorems": 12,
+      "declarations": 17,
+      "with_axioms": {}
+    },
+    "Becoming.U4dSame": {
+      "theorems": 10,
+      "declarations": 10,
+      "with_axioms": {}
+    }
+  }
+}

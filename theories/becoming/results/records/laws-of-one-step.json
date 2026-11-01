@@ -109,19 +109,21 @@
       ]
     },
     {
-      "zh": "只要在任意晚的步有列表覆盖成立者，不再成立的复现就需要开始成立的复现；普查是覆盖每一步的情形。",
-      "en": "Ceasing recurring needs coming to be recurring wherever some list covers what holds at arbitrarily late steps, a census being the case of covering every step.",
+      "zh": "只要在任意晚的步有列表覆盖成立者，不再成立的复现就需要开始成立的复现；普查是覆盖每一步的情形：即根上覆盖之律（«所覆后亡屡则有生»）取一关系项之出现，每步进一阶。",
+      "en": "Ceasing recurring needs coming to be recurring wherever some list covers what holds at arbitrarily late steps, a census being the case of covering every step: the root's covering law («所覆后亡屡则有生») at a relatum's occurrences, each step one stage on.",
       "declarations": [
         "Becoming.coming_of_ceasing_covered",
-        "Becoming.Listed.covered"
+        "Becoming.Listed.covered",
+        "Becoming.«所覆后亡屡则有生»"
       ]
     },
     {
-      "zh": "不用判定时，列表覆盖第 N 步、此后没有开始成立，不再成立就不复现。",
-      "en": "With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur.",
+      "zh": "不用判定时，列表覆盖第 N 步、此后没有开始成立，不再成立就不复现：不再成立复现时，自 N 起有开始成立这一点不被否定，即根上之 «所覆后亡屡则生未否» 取一关系项之出现。",
+      "en": "With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur: it is not refuted that something comes to be from N on where ceasing recurs, the root's «所覆后亡屡则生未否» at a relatum's occurrences.",
       "declarations": [
         "Becoming.Covers.ceasing_not_recurring",
-        "Becoming.Covers.not_not_coming_from"
+        "Becoming.Covers.not_not_coming_from",
+        "Becoming.«所覆后亡屡则生未否»"
       ]
     },
     {
@@ -396,7 +398,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
       "role": "proof",
-      "sha256": "14348374b545d14d90e40311adfef480a1cda5a2f0979f2947abfa7700ce3210",
+      "sha256": "caa8f852c555caa3bf9cbe09b4bc008ae6e3c576f2fe0884e8ca276b078d4aa8",
       "declarations": [
         "Becoming.pos_iff_lt",
         "Becoming.exists_lt_of_total_lt",
@@ -434,7 +436,6 @@
         "Becoming.Covers",
         "Becoming.ListsAt",
         "Becoming.NoneComes",
-        "Becoming.accumulates_or",
         "Becoming.stays_failing_within",
         "Becoming.Covers.within",
         "Becoming.cohort_closes_iff",
@@ -442,10 +443,8 @@
         "Becoming.Covers.coming_from_of_ceasing",
         "Becoming.coming_of_ceasing_covered",
         "Becoming.Listed.covered",
-        "Becoming.ceases_once",
         "Becoming.Covers.ceasing_steps_within",
         "Becoming.ceasing_steps_found",
-        "Becoming.ceasing_steps_unrefuted",
         "Becoming.Covers.ceasing_stops_unrefuted",
         "Becoming.Covers.ceasing_not_recurring",
         "Becoming.Covers.not_not_coming_from"
@@ -543,7 +542,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "ae45d71f4cd560934090ccd645b9a941cbab6f7651c1a591f68e06fc18a1dd4b",
+      "sha256": "c64c39ac2e8d46be6599dbeab7c4f947892d7e2aeadfc305d0a84966e09f740c",
       "declarations": [
         "Becoming.Listed",
         "Becoming.came_between",
@@ -553,7 +552,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "2cfa6d1b73d094f426fdcfadde20053a6478115e4b38804dd1bbd5530add9049",
+      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
       "declarations": [
         "Becoming.not_not_all"
       ]
@@ -735,12 +734,27 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9",
+      "declarations": [
+        "Becoming.«所覆后亡屡则有生»",
+        "Becoming.«所覆后亡屡则生未否»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "role": "receipt",
+      "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Locality",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -796,15 +810,22 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -913,6 +934,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+    },
+    {
+      "en": "1 November 2026, U4d (study section 498): the covering laws of laws 13 and 14 (Covers.coming_from_of_ceasing, Covers.not_not_coming_from, with Covers.ceasing_steps_within and Covers.ceasing_stops_unrefuted) are re-proved as the root's covering laws at a relatum's occurrences, statements unchanged; laws 13 and 14 name the route and their declarations gain the root laws. Locality's helpers with no consumer left (accumulates_or, ceases_once, ceasing_steps_unrefuted) leave the Locality reference. The GrammarLaws source joins the references with its proof binding. What the record states is unchanged.",
+      "zh": "2026年11月1日，U4d（研究第 498 节）：第 13、14 条之覆盖之律（Covers.coming_from_of_ceasing、Covers.not_not_coming_from，及 Covers.ceasing_steps_within 与 Covers.ceasing_stops_unrefuted）重证为根上覆盖之律取一关系项之出现，陈述不变；第 13、14 条指明路径，其声明增根律。Locality 中无人再用的辅助（accumulates_or、ceases_once、ceasing_steps_unrefuted）离开 Locality 之引用。GrammarLaws 之源连同其证明绑定加入引用。记录所述不变。"
     }
   ],
   "text_versions": [

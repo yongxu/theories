@@ -24176,3 +24176,87 @@ Output → input: 02 §1; the root module's bullets, the checker's core list and
 1. GrammarMap sits under most of the package, so the change rebuilds nearly every module; it rides one rebuild of the map modules, by readiness, on the coordinator's word.
 2. The re-derivations add no hypothesis: each landed law keeps its printed statement and now follows from the stronger every-branch law, so the core proves each fact once.
 3. The renames follow 08 §10: each old name said degeneration (`«退化»`) where the statement concludes only an end (有终); the gap is exactly excluded middle (`«尽则有终当且仅当排中»`, `Map.end_of_gone_iff_excluded_middle`).
+
+## 497. Where a reader is rebuilt from: an organism's minimal model (OG)
+
+Board item OG, plan §十三 item 9: each test system of plan §六 with its model. The one page named an organism and an institution as having none. The rooms (§492) tell regulation from equilibrium with a given heater, and nothing keeps the heater. This item asks what tells an organism from a thermostat and a flame on the root ([study](development/og-organism/): DESIGN.md, REVIEW-1.md, REVIEW-2.md, sim/).
+
+```text
+Result(s): the-stock-buys-time-where-the-rebuild-draws-on-it (new, home 04 §8), Becoming.ReaderRebuilding,
+       an instance of the ring, 48 declarations (32 theorems), every axiom report empty (receipt 20261101T151111.914612Z).
+Delta:
+  - One rule makes a family of four readers by the rebuild's source: given (not ageing), from the supply,
+    from the level, none. The supply is chosen at each step.
+  - Where the rebuild draws on the level: kept while supplied, from every level; under a cut, present after
+    k + 1 steps from every level of at least 2 (k + 1); its end at an empty stock, closed under the net.
+    Rebuilt from the supply or never: gone at its span from every level. The family law: the stock buys
+    time exactly where the rebuild draws on the level, at every span of at least one.
+  - Decided only: one unit's horizon at spans two and three for small levels; the step law, each further
+    s + 1 units buying s steps, is a conjecture those cases check.
+Design history: three drafts. The first draft's central law, a cycle at the kind grain, held by definition,
+       and the thermostat and the flame had the cycle too (REVIEW-1). The second draft's horizon was not
+       strictly increasing, as runs of the rule showed (REVIEW-1's re-check, sim/). The Lean reading's eight
+       findings narrowed five statements and three names (REVIEW-2): the turnover does not separate the
+       members, the rebuild's source does.
+Not modelled: the flame and the equilibrium; the supply's and the sink's amounts; the turnover read as
+       carrying; the organism's class ending where its matter goes on. These wait for part 2, the family on
+       the World's flows, after which an institution is read as a rule rebuilt from the members it regulates.
+Carried: ND's checker-scope patch (two lines of check_becoming.py's scope: "master law" → ND's names).
+Register: nine apart roots, eight model witnesses of the one family and one arithmetic lemma (register_og.py);
+       the laws the others use are not roots.
+Rehearsal: the whole landing ran dry on a scratch receipt (20261101T135208.604453Z): render, strict check,
+       tests and both dossier checks passed, and links once the kit's own four were fixed.
+```
+
+## 498. The covering laws on the root (U4d)
+
+Board item U4d, the next step that one-root-to-its-edge named first after U4c (§492): "the covering laws' root form (lines traced back to a covering list, no splits)". U4c's design had left the covering laws out as not cases of the census of a run. The design ([COVERING-ON-THE-ROOT](development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md)) was checked first in scratch Lean outside the package (106 theorems, every axiom report empty), then read by an independent AI review ([REVIEW-U4D](development/u4-one-root-to-its-edge/REVIEW-U4D.md)), every finding taken; GrammarLaws' owner answered the design's questions and gave the names, and the package Lean was written on the branch. The covering laws and the census of a run turn out to be cases of one count on the root: units ending on lines traced back to a list number at most the list.
+
+```text
+Result(s): shared-laws-on-the-grammar (home 01 §7): a new law 19, ends on lines, and law 7's line lemmas; the
+       census of a run moved from law 4 into law 19, stronger. census-balance-under-continuation (home 01 §9.5): a
+       new law 12, the exact forms from covering lists. Routes named in ceasing-needs-arising,
+       recurrence-without-decidedness, laws-of-one-step, continued-change-needs-openness and space-and-its-parts;
+       one-root-to-its-edge's next step drops the covering laws' root form. No new record.
+Delta:
+  - GrammarLaws: "Lines from a list" before «迭之定于»: «所闭当且仅当有迭», «分处定后则迭之定于» (of which «迭之定于»
+    is now the case), «亡者不在长迭», «定后则线至多一亡», the count «线终不过所列» on any relation, and on the grammar
+    «线亡不过所列» and its mirror «线生不过所列», each with its not-refuted form. "Ends on lines at stages" before the
+    census of a run: the stretch form «间无生则间亡不过所覆» and its mirror «间无亡则间生不过所覆», the decided and
+    undecided run forms and their converses, ten helpers. GrammarLaws.census_run and «定后前者在前则亡屡者生屡» are
+    proved through the stretch form, stronger: the units after each step listed once and the test of endings
+    dropped; the finite search by the count (GrammarLaws.stage_search).
+  - Prelude: exists_pairs_over and distinct_of_map.
+  - Locality: Covers.coming_from_of_ceasing, Covers.ceasing_steps_within, Covers.not_not_coming_from and
+    Covers.ceasing_stops_unrefuted re-proved as the root's covering laws at a relatum's occurrences, statements
+    unchanged, with six supports (Steps.along_*, Covers.occurrences); accumulates_or, ceases_once and
+    ceasing_steps_unrefuted gone, no consumer left.
+  - Decidedness: ceasing_steps_within and coming_steps_within re-proved as the stretch form and its mirror at the
+    family's occurrences, statements unchanged, with four supports.
+  - Identity: Web.not_not_arisingFrom_covered, Web.arisingFrom_not_stopping_covered and
+    Web.ceasingFrom_not_stopping_covered re-proved through the root's covering laws, no longer by lineages,
+    statements unchanged; the exact forms Web.arisingFrom_of_ceasingFrom_covered and
+    Web.ceasingFrom_of_arisingFrom_covered new, the census recurrence laws re-proved as their cases (their
+    decisions written as binders, the statements unchanged); twelve supports; Web.Lineage.ends,
+    Web.ceasingFrom_found, Web.arisingFrom_found and Web.lineages_apart gone.
+  - Population: coming_of_ceasing passes two fewer arguments; endTest gone.
+Checked: core receipt 20261101T161537.177111Z, every axiom report empty; Becoming.Prelude (143 theorems in 153 declarations), Becoming.GrammarLaws
+       (223 theorems in 252 declarations), Becoming.Population (116 theorems in 143 declarations), Becoming.Locality (47 theorems in 54 declarations), Becoming.Decidedness
+       (74 theorems in 81 declarations), Becoming.Identity (162 theorems in 227 declarations). The signature audit (u4d-kit/u4d_signatures.py, main's side read
+       at the main merged in): the census of a run's two laws stronger, every other statement unchanged; eight
+       declarations gone and 57 added, as the design lists. The scratch witnesses (U4dNeeded, 20 theorems, one more
+       at Identity in U4dCases) show each hypothesis of the new laws needed, and the two decisions needed as
+       reductions to weak excluded middle.
+Standing: proved, as the records state; the names and the placement are GrammarLaws' owner's.
+Boundary: the decided covering form is not a case of the census of a run, both being cases of the stretch form;
+       CensusWebs.keep_pace stays counting; which decision is least is open; the census recurrence laws keep
+       decisions their proofs no longer use, left to Identity's laws' next change.
+Output → input: 01 §7 (the ends-on-lines bullet) and 01 §9.5; the root module's bullet and both package READMEs;
+       the connectivity register; the shared laws' view rerun (08 §7's figures unchanged); 08's counts; the board's
+       U4d row, moved to the history file.
+```
+
+**Self-review.**
+1. One count does the work of separate proofs: the covering laws had their own at Locality, Decidedness and Identity, Identity's by lineages, and each now reads the root's count on lines at its own occurrences, as the census of a run does.
+2. The census of a run is stronger for it, and no hypothesis is added anywhere: every re-proved law keeps its printed statement, and the two that change drop hypotheses.
+3. The decisions the new run forms ask are shown needed only as reductions, not as countermodels; that this decision is the least one is not claimed.
