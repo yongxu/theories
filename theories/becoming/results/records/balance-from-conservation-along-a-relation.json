@@ -190,8 +190,8 @@
     "no-ethical-premise"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, and Becoming.BalanceRegions (the seventh and eighth laws) at receipt PENDING, 48 declarations (43 theorems), each with an empty axiom report, decided equality taken as an argument: an instance supplied at use carries its own report. No independent review of Becoming.Continuity; Becoming.BalanceRegions and its two laws read by independent AI readers, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions（第七、八律），回执 PENDING，48 个声明中 43 条定理；公理报告均为空，可判定相等作为参数取入，使用时所给实例自带其报告。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI 读者审读，所提各点皆已采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Continuity, 43 theorems in 64 declarations, and Becoming.BalanceRegions (the seventh and eighth laws) at receipt 20261101T105110.951913Z, 48 declarations (43 theorems), each with an empty axiom report, decided equality taken as an argument: an instance supplied at use carries its own report. No independent review of Becoming.Continuity; Becoming.BalanceRegions and its two laws read by independent AI readers, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Continuity，64 个声明中 43 条定理；Becoming.BalanceRegions（第七、八律），回执 20261101T105110.951913Z，48 个声明中 43 条定理；公理报告均为空，可判定相等作为参数取入，使用时所给实例自带其报告。Becoming.Continuity 没有独立审查；Becoming.BalanceRegions 及其两律经独立 AI 读者审读，所提各点皆已采纳。"
   },
   "next_delta": {
     "en": "A flux chosen local, depending only on the levels near each related pair, for laws that read within a bounded neighbourhood, as for cellular automata on lattices; and transfers within what stands on their source where the law moves units, as particle displacements do.",
@@ -468,6 +468,12 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T105110.951913Z/verification.json",
+      "role": "receipt",
+      "sha256": "1a9451b892ce1e899d36fa636b55ca7ea796d191447c3c8cf660501deadc8e5d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -480,7 +486,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T105110.951913Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BalanceRegions",
       "success_pointer": "/status",
       "success_value": "passed"
