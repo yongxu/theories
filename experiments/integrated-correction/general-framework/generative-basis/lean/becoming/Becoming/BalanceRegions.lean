@@ -168,6 +168,43 @@ theorem counted_of_count {p : R → Bool} {l : List R} (all : l.length ≤ «计
     (count_lt_count (q := fun _ => true) (fun _ _ => rfl) h rfl m)
     (Nat.le_trans (Nat.le_of_eq (count_true l)) all))).elim
 
+/-! ## Splitting a family -/
+
+/-- What one family the relation closes holds and another does not, the relation closes. -/
+theorem closes_and_not {rel : R → R → Bool} {us : List R} {p q : R → Bool}
+    (closesP : Closes rel us p) (closesQ : Closes rel us q) :
+    Closes rel us (fun y => p y && !q y) := fun x y mx my near => by
+  show (p x && !q x) = (p y && !q y)
+  rw [closesP x y mx my near, closesQ x y mx my near]
+
+/-- The part of a quantity on a family is its part on what the family holds outside a subfamily,
+with its part on the subfamily. -/
+theorem within_split {p q : R → Bool} (le : ∀ x, q x = true → p x = true) (f : R → Nat) (x : R) :
+    within p f x = within (fun y => p y && !q y) f x + within q f x :=
+  (Bool.eq_false_or_eq_true (q x)).elim
+    (fun hq =>
+      have hp := le x hq
+      have rest : (p x && !q x) = false :=
+        (congrArg (fun b => p x && !b) hq).trans (Bool.and_false (p x))
+      (within_true f hp).trans ((Nat.zero_add (f x)).symm.trans (Naturals.add_congr
+        (within_false (p := fun y => p y && !q y) f rest).symm (within_true f hq).symm)))
+    fun hq => (Bool.eq_false_or_eq_true (p x)).elim
+      (fun hp =>
+        have rest : (p x && !q x) = true :=
+          (congrArg (fun b => b && !q x) hp).trans (congrArg (fun b => true && !b) hq)
+        (within_true f hp).trans (Naturals.add_congr
+          (within_true (p := fun y => p y && !q y) f rest).symm (within_false f hq).symm))
+      fun hp =>
+        have rest : (p x && !q x) = false := congrArg (fun b => b && !q x) hp
+        (within_false f hp).trans (Naturals.add_congr
+          (within_false (p := fun y => p y && !q y) f rest).symm (within_false f hq).symm)
+
+/-- A family holding no listed relatum has total nothing, before and after. -/
+theorem conserved_of_absent {us : List R} {p : R → Bool} {prev next : R → Nat}
+    (absent : ∀ x, x ∈ us → p x = false) : total us (within p next) = total us (within p prev) :=
+  (total_eq_zero fun x m => within_false next (absent x m)).trans
+    (total_eq_zero fun x m => within_false prev (absent x m)).symm
+
 /-! ## Each closure decided
 
 The closure of a relatum, in this section and the next, is the grammar's `«所闭»` along adjacency
@@ -307,41 +344,6 @@ theorem closureListed_inside {rel : R → R → Bool} {us : List R} {p : R → B
     (within : closureListed rel us a x = true) : p x = true :=
   «闭含所闭» (closes_iff_closed.mp closes) holds (closureListed_iff.mp within)
 
-/-- What one family the relation closes holds and another does not, the relation closes. -/
-theorem closes_and_not {rel : R → R → Bool} {us : List R} {p q : R → Bool}
-    (closesP : Closes rel us p) (closesQ : Closes rel us q) :
-    Closes rel us (fun y => p y && !q y) := fun x y mx my near => by
-  show (p x && !q x) = (p y && !q y)
-  rw [closesP x y mx my near, closesQ x y mx my near]
-
-/-- The part of a quantity on a family is its part on what the family holds outside a subfamily,
-with its part on the subfamily. -/
-theorem within_split {p q : R → Bool} (le : ∀ x, q x = true → p x = true) (f : R → Nat) (x : R) :
-    within p f x = within (fun y => p y && !q y) f x + within q f x :=
-  (Bool.eq_false_or_eq_true (q x)).elim
-    (fun hq =>
-      have hp := le x hq
-      have rest : (p x && !q x) = false :=
-        (congrArg (fun b => p x && !b) hq).trans (Bool.and_false (p x))
-      (within_true f hp).trans ((Nat.zero_add (f x)).symm.trans (Naturals.add_congr
-        (within_false (p := fun y => p y && !q y) f rest).symm (within_true f hq).symm)))
-    fun hq => (Bool.eq_false_or_eq_true (p x)).elim
-      (fun hp =>
-        have rest : (p x && !q x) = true :=
-          (congrArg (fun b => b && !q x) hp).trans (congrArg (fun b => true && !b) hq)
-        (within_true f hp).trans (Naturals.add_congr
-          (within_true (p := fun y => p y && !q y) f rest).symm (within_false f hq).symm))
-      fun hp =>
-        have rest : (p x && !q x) = false := congrArg (fun b => b && !q x) hp
-        (within_false f hp).trans (Naturals.add_congr
-          (within_false (p := fun y => p y && !q y) f rest).symm (within_false f hq).symm)
-
-/-- A family holding no listed relatum has total nothing, before and after. -/
-theorem conserved_of_absent {us : List R} {p : R → Bool} {prev next : R → Nat}
-    (absent : ∀ x, x ∈ us → p x = false) : total us (within p next) = total us (within p prev) :=
-  (total_eq_zero fun x m => within_false next (absent x m)).trans
-    (total_eq_zero fun x m => within_false prev (absent x m)).symm
-
 /-- One step of the decomposition. A family the relation closes is conserved where each closure,
 along `adjacentListed rel us`, is, and so is every family the relation closes holding fewer listed
 relata: a family holding no listed relatum has total nothing; one holding a listed relatum holds its
@@ -362,7 +364,8 @@ theorem conserved_peel {rel : R → R → Bool} {us : List R} {prev next : R →
       have split : ∀ f : R → Nat, total us (within p f) =
           total us (within (fun y => p y && !closureListed rel us a y) f) +
             total us (within (closureListed rel us a) f) := fun f =>
-        (total_congr (within_split (closureListed_inside closes pa) f) us).trans (total_add _ _ us)
+        (total_congr (within_split (fun _ h => closureListed_inside closes pa h) f) us).trans
+          (total_add _ _ us)
       have fewer : «计» (fun y => p y && !closureListed rel us a y) us < «计» p us :=
         count_lt_count (p := fun y => p y && !closureListed rel us a y) (q := p)
           (fun _ h => (ListTests.and_true_iff.mp h).1)
