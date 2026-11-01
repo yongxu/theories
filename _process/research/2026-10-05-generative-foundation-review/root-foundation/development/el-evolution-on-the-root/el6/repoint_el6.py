@@ -25,7 +25,7 @@ LEAN = [f'{PKG}/Becoming/{m}.lean' for m in ('GrammarMap', 'GrammarConditionals'
 CH = 'theories/becoming/chapters'
 OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{PKG}/check_becoming.py',
          f'{PKG}/becoming-verification.json', f'{CH}/02-MAP.md', f'{CH}/08-METHOD.md',
-         'theories/becoming/results/data/regions.json', 'theories/becoming/results/data/master-laws.json',
+         'theories/becoming/results/data/regions.json', 'theories/becoming/results/data/master-laws.json', 'theories/becoming/results/data/shared-laws.json',
          f'{RF}/BECOMING-RENEWAL-READING.md', f'{RF}/THEOREM-CONNECTIVITY.json', f'{RF}/THEOREM-CONNECTIVITY-APART.json',
          f'{RF}/development/el-evolution-on-the-root/NOTE.md',
          'experiments/integrated-correction/general-framework/generative-basis/lean/history/INDEX.md',

@@ -10,7 +10,11 @@ python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity before re
 python3 -B "$K/register_el6.py" "$ASIDE/conn1.log" > "$ASIDE/register.log" 2>&1; step register $?
 python3 -B $C --write > "$ASIDE/conn2.log" 2>&1; step connectivity-write $?
 python3 -B $C --check > "$ASIDE/conn3.log" 2>&1; step connectivity-check $?
-python3 -B tools/research/master_laws.py > "$ASIDE/master.log" 2>&1; step master-laws $?
+# the shared-law view's tool: tools/research/shared_laws.py on main after ND's final renames (formerly master_laws.py);
+# exactly one of the two stands
+SL=$(ls tools/research/shared_laws.py tools/research/master_laws.py 2>/dev/null)
+[ "$(printf '%s\n' $SL | grep -c .)" = 1 ]; step shared-laws-tool $?
+python3 -B $SL > "$ASIDE/shared-laws.log" 2>&1; step shared-laws $?
 make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-pointing: exit $?"
 python3 -B "$K/repoint_el6.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_el6.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?

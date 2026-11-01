@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path.cwd()
-OU3B = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/kit/signatures_ou3b.py'
+OU3B = next((ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development').glob('*/kit/signatures_ou3b.py'))  # the OU3b study, by whatever name ND leaves it
 spec = importlib.util.spec_from_file_location('s3b', OU3B)
 s3b = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(s3b)
