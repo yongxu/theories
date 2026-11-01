@@ -11,17 +11,17 @@
 ## Laws
 
 1. At a worth v of at least one, what is drawn with v times what is left is what is drawn with what is left and v - 1 times what is left; so an open course leaving at most e draws with v times what it leaves at most the start with what is given there, r a step after and v - 1 times e, and where v > 1 reaches it exactly where it holds a level of greatest renewal at every step to the horizon and leaves e. (`Becoming.Optimum.valued_eq`, `Becoming.Optimum.eq_of_add_eq_of_le`, `Becoming.Optimum.mul_left_cancel_of_pos`, `Becoming.Optimum.open_valued_le_most`, `Becoming.Optimum.valued_of_most`, `Becoming.Optimum.valued_most_iff`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. The order by what is drawn with v for each unit left. The steps of a course holding y and ending at any e within y with r, those ending at most at y their case; the course holding y and regrowing to y + r at the last step, drawing nothing after, is open and reaches the bound, and where no open course leaves more than y + r it is an optimum at every worth of at least one. (`Becoming.Optimum.byDrawnLeftAt`, `Becoming.Optimum.holdingTo_steps_of`, `Becoming.Optimum.regrowing_valued`, `Becoming.Optimum.regrowing_frontier`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Where v > 1, every optimum of every order rising with that worth holds a level of greatest renewal at every step to the horizon and leaves y + r, regrown at the last step, and these are exactly the optima of the order by it. (`Becoming.Optimum.frontier_holds_valued`, `Becoming.Optimum.frontier_valued_iff`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. At every worth of at least one, a coupling w of keeping a need at or above which at most q is given leaves only optima falling below the need within the horizon where w + q n < r n: keeping forgoes (r - q) n against the course regrowing at the end, whatever the worth. (`Becoming.Optimum.lt_of_valued_below`, `Becoming.Optimum.frontier_breaks_valued`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. On a web: above one, a dependence above every level of greatest renewal is broken at the first step, unmet through the horizon and met again only at its end; at every worth of at least one, a coupling short of (r - q) n leaves it broken within the horizon. (`Becoming.Web.frontier_rebuilt_valued`, `Becoming.Web.frontier_breaks_valued`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Witness: under the logistic law from the dweller's need two, no open course stands above two; at every worth the course drawing the source to one and regrowing it to two at the last step is an optimum, above one the only kind, the dweller broken at the first step and restored at the end; a coupling below the horizon is outweighed. (`Becoming.Optimum.Holding.logistic_within`, `Becoming.Optimum.Holding.logistic_open_le`, `Becoming.Optimum.Holding.logistic_valued`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

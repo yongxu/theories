@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/du-claim/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/tree",
+  "modules": 115,
+  "ran": [],
+  "reused": 116,
+  "unclean": [],
+  "audits": {
+    "Becoming.PremiseWitnesses": {
+      "theorems": 29,
+      "declarations": 31,
+      "with_axioms": {}
+    }
+  }
+}

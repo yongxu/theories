@@ -11,17 +11,17 @@
 ## Laws
 
 1. With the stock within a bound K from T on, the configurations lie in the finite list of those totalling at most K, so from every step on two steps have the same configuration; a stock that never rises is bounded by its value at T; changing without end, never revisiting is refuted. (`Becoming.Web.revisits_of_bounded`, `Becoming.Web.revisits_of_nonrising`, `Becoming.Web.returns_of_bounded`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. A family whose configurations at the steps T, …, T + N all differ, N the number of configurations within the bound, has its stock above the bound at one of those steps, found by checking finitely many inequalities, deciding nothing infinite. So what is new at every step exceeds every bound arbitrarily late, and what changes without end and never revisits stays within no bound; in Web.counting the level is the step. (`Becoming.upto_or_fails`, `Becoming.Web.exceeds_of_new`, `Becoming.Web.unbounded_of_new`, `Becoming.Web.unbounded_of_never_revisits`, `Becoming.Web.counting`, `Becoming.Web.counting_new`, `Becoming.Web.counting_gains`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. No reading of a bounded family's configuration gives a record that never repeats or a count without bound; so a bounded family exchanged with at arbitrarily late steps does not carry the count of its exchanges, whatever the flow, and nor does the whole where finitely many relata are all there is. (`Becoming.Web.unread_of_new_record`, `Becoming.Web.unread_of_unbounded`, `Becoming.Flow.uncarried_of_bounded`, `Becoming.World.forgets_of_bounded`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 4. With the stock never rising and falling across each change of configuration, the family never revisits, the changes over a stretch with the stock at its end are at most the stock at its start, and change does not recur without end. (`Becoming.Web.never_revisits_of_loses`, `Becoming.Web.changes_le_stock`, `Becoming.Web.rests_of_loses`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Balanced and gaining nothing, the stock is bounded by its value at T; with that bound the laws above give Becoming.Entropy's returning, resting and forgetting under the first law. With the rest counted no balance is supposed: a family gaining nothing with its rest counted is bounded by its stock at T. (`Becoming.Flow.Balances.bounded`, `Becoming.first_law_cases`, `Becoming.Flow.bounded_counting_rest`)
-   - *Master laws, by Lean dependency:* balance and finite runs; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and finite runs; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. The list form: at any listed steps, in any order, with pairwise distinct configurations, more of them than the configurations within a bound, the stock exceeds the bound at one; with such lists of every length from every step on, at arbitrarily late steps. Steps whose configurations differ pairwise give such a list. The laws on consecutive steps are its case. (`Becoming.Web.exceeds_of_distinct_configs`, `Becoming.Web.unbounded_of_distinct_configs`, `Becoming.Web.distinct_configs_of_apart`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

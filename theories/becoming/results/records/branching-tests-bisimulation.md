@@ -11,17 +11,17 @@
 ## Laws
 
 1. A branching test is truth, a claim, a test's failure, two tests together, or that some step by a move leads to where a test holds; two configurations pass the same branching tests where every such test holds at the one exactly where it holds at the other. (`Becoming.BranchingTest`, `Becoming.BranchingTest.Holds`, `Becoming.SameBranchingTests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. With no premise, alike configurations, related by some bisimulation of their frames, pass the same branching tests. (`Becoming.Alike.sameBranchingTests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Under excluded middle as a named hypothesis, two configurations not passing the same branching tests are told apart by one test, which holds at the first and fails at the second. (`Becoming.apart_of_not_sameBranchingTests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Under excluded middle as a named hypothesis, where each move from each configuration of both frames has listed outcomes, configurations passing the same branching tests are alike, so they are alike exactly where they pass the same branching tests; neither the moves, nor the claims, nor the configurations need be listed. (`Becoming.alike_of_sameBranchingTests_of_em`, `Becoming.alike_iff_sameBranchingTests_of_em`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Without excluded middle, where the moves and claims are listed, the claims decided and each move's outcomes listed in both frames, the configurations possibly infinitely many, configurations are alike exactly where they pass the same branching tests, given that of two decided families, each holding at a step where it holds at the next and one of them holding at each step, one holds at every step. (`Becoming.EitherThroughout`, `Becoming.OutcomesListed`, `Becoming.OutcomesListed.alike_iff_sameBranchingTests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. That configurations passing the same branching tests are alike, for every pair of frames with one move and no claims whose moves have listed outcomes, holds exactly where, of two decided families each holding at a step where it holds at the next and one of which holds at each step, one holds at every step. (`Becoming.alike_of_sameBranchingTests_outcomes_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

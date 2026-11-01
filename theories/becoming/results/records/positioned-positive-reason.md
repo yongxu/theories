@@ -11,21 +11,21 @@
 ## Laws
 
 1. A response secures new content where every admitted outcome of it holds relevant content absent before it; the positioned articulation D says that access to a response securing new content supplies a reason for it, endorsement not occurring in it. (`Becoming.SecuresNewContent`, `Becoming.PositionedArticulation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where each admitted continuation realizes living content absent before, living significance gives each some relevant content absent before it. (`Becoming.LivingSignificance`, `Becoming.SecuredContent.contingent_newContent`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Under living significance and D, where the response realizes in every admitted continuation living content absent before, every position with access to it has the reason D articulates; no endorsement, culture, identity or substrate hypothesis occurs. (`Becoming.SecuredContent.every_situated_position_has_reason`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. The route reason, access together with secured new content, satisfies D and is contained in every reason satisfying D; positions alike in access are alike in it, whatever else differs. (`Becoming.SecuredContent.RouteReason`, `Becoming.SecuredContent.route_reason_is_least`, `Becoming.SecuredContent.route_reason_depends_only_on_access`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Under the continuation condition, with D read on the relevance that significance gives, where the response realizes in every admitted continuation living content absent before, every position with access to it has the reason D articulates. (`Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. In a witness of one response, two future branches and formation models narrowed by acquired evidence, living significance holds, the barren model is no longer live, every live model is productive, and each admitted continuation of the response realizes a fresh claim absent before. (`Becoming.SecuredContent.wholeFrame`, `Becoming.SecuredContent.admittedAfter`, `Becoming.SecuredContent.livingSignificance_holds`, `Becoming.SecuredContent.barren_not_live`, `Becoming.SecuredContent.live_productive`, `Becoming.SecuredContent.respond_formation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. In the witness of one response, two future branches and the formation models still live, a non-endorsing artificial position with access has the route reason, through the same theorem that gives it to every position with access, while an endorsing human position without access does not have it. (`Becoming.SecuredContent.Position`, `Becoming.SecuredContent.access`, `Becoming.SecuredContent.nonendorsing_position_with_access_has_reason`, `Becoming.SecuredContent.endorsement_without_access_gets_no_route_reason`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Endorsement independence is D's content: in the one-response witness, where living significance and the response's formation hold, some endorsement-conditional articulation (access, endorsement and secured new content supply the reason) holds and withholds the reason from the non-endorsing artificial position with access. (`Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

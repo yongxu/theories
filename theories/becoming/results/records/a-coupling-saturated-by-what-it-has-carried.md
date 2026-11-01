@@ -11,13 +11,13 @@
 ## Laws
 
 1. What has passed from d into c before a step is defined by recursion, each step's strengths read off what had passed before it; strengths read off it read the levels before, so the carrying law with them generates a course, and what has passed never falls. (`Becoming.Saturation.passingAt`, `Becoming.Saturation.passed`, `Becoming.Saturation.strengths`, `Becoming.Saturation.Antitone`, `Becoming.Saturation.ZeroFrom`, `Becoming.Saturation.scaled`, `Becoming.Saturation.Antitone.zeroFrom`, `Becoming.Saturation.passingAt_congr`, `Becoming.Saturation.passed_congr`, `Becoming.Saturation.readsBefore`, `Becoming.Saturation.passed_le_succ`, `Becoming.Saturation.passed_le_add`, `Becoming.Saturation.passed_mono`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the strengths are zero once A has passed and A has passed by step N, the coupling stops by N: it does not recur, nothing more passes, and where every coupling has so saturated a finite order is exact. Where no step passes more than m, what passes in all is below A + m. (`Becoming.Saturation.passingAt_zero`, `Becoming.Saturation.stops`, `Becoming.Saturation.not_recurs`, `Becoming.Saturation.exact`, `Becoming.Saturation.passed_from`, `Becoming.Saturation.passed_lt`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A coupling acting at each step until saturated, from a level that stands, passes one more at each step, so it has passed A by step A and stops by step A. With strengths f a times a coupling acting at each step, f not rising, it stops by step A where f is zero at A, and exactly where f reaches zero; floored at one it recurs, and coupled into itself leaves every finite order inexact. (`Becoming.Saturation.one_le_passingAt`, `Becoming.Saturation.climbs`, `Becoming.Saturation.stops_by`, `Becoming.Saturation.stops_by_zero`, `Becoming.Saturation.stops_iff`, `Becoming.Saturation.floored`, `Becoming.Saturation.floored_inexact`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. In the formed course, what the formations give splits into the part's gaps and what passes through each coupling, so what has passed is what the course carries through the coupling; a level standing at the start stands throughout; the coupling stops by its threshold as a step and does not recur, stops exactly where its response reaches zero, and with the response A - a stops by step A. (`Becoming.Saturation.carriedGive_split`, `Becoming.Saturation.total_carriedGive`, `Becoming.Saturation.course_succ`, `Becoming.Saturation.course_stands`, `Becoming.Saturation.course_stops_by`, `Becoming.Saturation.course_stops_iff`, `Becoming.Saturation.wearing_stops`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

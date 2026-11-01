@@ -11,23 +11,23 @@
 ## Laws
 
 1. For a law of change with admissible disturbances and a guard, a family of levels is drained when the guard gives level 0 and a configuration within the guard that one admissible step takes to level k was at level k + 1. Along every admissible history within the guard for its first n steps a drained family holds the start at level n, so from below level n no admissible history stays within the guard through step n. (`Becoming.Lasting.Drains`, `Becoming.Lasting.Drains.along`, `Becoming.Lasting.Drains.leaves`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Being at level n does not suffice: where every step goes to false, the family 'is true' is drained for the guard 'is true' and holds true at level 1, yet true does not last one step. (`Becoming.Lasting.Collapse.level_not_lasting`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. For a transitive relation and a monotone map, a sequence starting at or below v whose growth the map bounds stays below the orbit of v; with the relation also reflexive, every such sequence stays at or below θ for its first n steps exactly when the orbit of v does. (`Becoming.Lasting.below_orbit`, `Becoming.Lasting.stays_below_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Exhaustion by bounded growth: let admissible steps keep a region R in which a monotone map bounds the growth of a quantity q, let the guard give level 0, and let an admissible step from R within the guard reach level k only from level k + 1 while the orbit of q k + 1 steps on is at or below θ. A start in R, its orbit at n at or below θ, not at level n, has no admissible history within the guard through step n. (`Becoming.Lasting.exhausts`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. With the guard decided, from within it a guarded history stops by n exactly when the history leaves the guard by n. A run of the disturbed process is the admissible history of its moves, every admissible history is a run, and both exhaustion laws hold on every run. (`Becoming.Lasting.guarded_none_iff`, `Becoming.Courses.run_history`, `Becoming.Courses.run_admissible`, `Becoming.Courses.historyRun`, `Becoming.Courses.Drains.leaves_run`, `Becoming.Courses.exhausts_run`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 6. In the market model with the correction strength chosen at each step, the run and the guarded run are the core's history and guarded history, with the essential floor 5 as guard; the β = 0 rescue raises a physical share by at most 3/2, and the share's orbit under growth by 3/2 a step is the share times (3/2)^n. (`Becoming.MarketInstances.scheduled`, `Becoming.MarketInstances.run_eq`, `Becoming.MarketInstances.guarded_eq`, `Becoming.MarketInstances.orbit_growth`, `RegimeTransition.share_growth_upper`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. For a physical pair with stock at least 5, nonnegative support shocks, share times (3/2)^N at most 1/6 and stock below 5 + N, the guarded run stops by step N under every correction schedule and quality error; equivalently, a guarded run of such a pair lasting N steps needs stock at least 5 + N. (`Becoming.MarketInstances.forces_failure_instance`, `FiniteSupportObstruction.finite_support_forces_failure`, `FiniteSupportObstruction.support_required_for_small_prefix`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. So every stock C₀ ≥ 5 has some N > 0 and a positive seed limit 1/(6(3/2)^N) such that every seed with positive share at most the limit and quality in [0, 1] fails by step N under every correction schedule, quality error and nonnegative support shocks. (`FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds`, `Becoming.MarketInstances.obstructed_seeds_instance`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 9. Projection and full history differ: for every stock C₀ ≥ 5 some physical state with positive share lands under the β = 0 rescue with its support coordinate omitted, while its full guarded pulse history stops; and with no shock, under the original parameters, the same stock carries the state of share 1, quality 1 and influence 0 without failure. (`FiniteSupportObstruction.projected_recovery_and_actual_failure`, `FiniteSupportObstruction.same_stock_can_support_high_seed`, `RegimeTransition.positive_seed_finite_landing`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

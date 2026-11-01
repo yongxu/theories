@@ -11,21 +11,21 @@
 ## Laws
 
 1. A prediction, published and read by the response, is right where the outcome, the response to it, is itself. (`Becoming.ReflexivePrediction.Right`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where the response moves every value, no published prediction is right, and no predictor is right on every admitted response once one admitted response moves every value, even one reading the response itself; on two values negation moves every value. (`Becoming.ReflexivePrediction.none_right_of_moves`, `Becoming.ReflexivePrediction.no_predictor_right`, `Becoming.ReflexivePrediction.not_moves`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Given choice over the admitted responses, a predictor right on every one exists exactly where each leaves some value. (`Becoming.ReflexivePrediction.predictor_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Publishing at each step the outcome of the step before, a step's prediction is right exactly where the next step publishes it again, and a right prediction, once published or once the outcome, is published at every later step. (`Becoming.ReflexivePrediction.rests_iff_right`, `Becoming.ReflexivePrediction.right_rests`, `Becoming.ReflexivePrediction.reached_rests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. On the values 0 to n with a response keeping them and their order, repeated publication from the bottom stays on the chain, rises, stays at or below every right prediction, and is right by step n: the least right prediction, reached within the chain's length. (`Becoming.ReflexivePrediction.on_chain`, `Becoming.ReflexivePrediction.rises`, `Becoming.ReflexivePrediction.below_right`, `Becoming.ReflexivePrediction.stays_from`, `Becoming.ReflexivePrediction.again_or_risen`, `Becoming.ReflexivePrediction.bottom_rests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. Witness, a threshold response on 0, 1, 2, two where anything is predicted and zero where nothing is: it keeps the chain and its order, zero and two are both right, and publication from zero stays zero while from one it reaches two after one step and stays there. (`Becoming.ReflexivePrediction.ThresholdResponse.threshold`, `Becoming.ReflexivePrediction.ThresholdResponse.within`, `Becoming.ReflexivePrediction.ThresholdResponse.keeps`, `Becoming.ReflexivePrediction.ThresholdResponse.both_right`, `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Witness, Boolean negation: it leaves no value fixed, so no published prediction is right, and repeated publication alternates for ever. (`Becoming.ReflexivePrediction.Negating.negate`, `Becoming.ReflexivePrediction.Negating.none_right`, `Becoming.ReflexivePrediction.Negating.alternates`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Witness, the reflection 2 − v on 0, 1, 2: subtracting more leaves no more, so it reverses the order, and it leaves 1 fixed: a response reversing the order can have a right prediction. (`Becoming.ReflexivePrediction.Reflecting.reflect`, `Becoming.ReflexivePrediction.Reflecting.sub_antitone`, `Becoming.ReflexivePrediction.Reflecting.reverses`, `Becoming.ReflexivePrediction.Reflecting.middle_right`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

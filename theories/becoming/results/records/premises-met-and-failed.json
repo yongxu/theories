@@ -1,0 +1,258 @@
+{
+  "schema_version": 2,
+  "id": "premises-met-and-failed",
+  "title": {
+    "en": "Premises met and failed: the condition on the root, C and L",
+    "zh": "前提之成与不成：根上之条件、C 与 L"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
+  "statement": {
+    "en": "The condition on the root holds on one net and fails on another, along the net, in families and along its converse. A statement reading no order fails wherever it entails C on a frame with an extension. Lifting holds of one pair of moves, not the reverse. Widening on a listing chains one-item steps.",
+    "zh": "根上之条件于一网成、于他网不成，沿网、于族、沿其逆皆然。不读次序之陈述，凡于有扩展之框上蕴含 C 处皆不成。提升于一对动成，于其逆不成。列表上之扩大，即逐一项扩大之链。"
+  },
+  "laws": [
+    {
+      "en": "At the one, the endless line of descent meets the condition along the net from its first birth, and fails it from every later member; two family lines with nothing between them fail it from the first family's first birth. In families the line meets it and a third thing apart from two joined families fails it. Along the converse, descent that ends meets it from its last occurrence, the endless line from no center.",
+      "zh": "于一，无尽传承之线自其初生沿网满足此条件，自每一后来之员则不满足；其间无条件之二族线自第一族之初生不满足之。于族，此线满足之，而离二相连之族之第三者不满足之。沿其逆，有终之传承自其末出现满足之，无尽之线自无一中心满足之。",
+      "declarations": [
+        "Becoming.TwoLines.other_center_outside",
+        "Becoming.ThirdThing.first_member_outside",
+        "Becoming.«续无外随网»",
+        "Becoming.«族无外随网»",
+        "Becoming.LineOfDescent.Last.converse_no_outside",
+        "Becoming.LineOfDescent.Endless.step_member_le",
+        "Becoming.LineOfDescent.Endless.converse_line_le",
+        "Becoming.LineOfDescent.Endless.converse_later_outside",
+        "Becoming.LineOfDescent.Endless.line_member_le",
+        "Becoming.LineOfDescent.Endless.later_outside",
+        "Becoming.LineOfDescent.Endless.converse_outside",
+        "Becoming.«逆缘续无外随网»"
+      ]
+    },
+    {
+      "en": "A statement about some data and an order reads no order where its truth does not change with the order. If such a statement entails C at a datum on a frame with an extension, it fails at that datum for every order: holding at one, it would hold at the order relating nothing, where C fails at the extension. Immediate, since \"better\" is free.",
+      "zh": "关于某资料与一次序之陈述，其真不随次序变者，为不读次序。此陈述若于有扩展之框上于一资料处蕴含 C，则于该资料处对每一次序皆不成：若于一次序成，则于无所关之次序亦成，而 C 于该扩展处不成。直接可得，因「更好」为自由。",
+      "declarations": [
+        "Becoming.ReadsNoOrder",
+        "Becoming.ReadsNoOrder.not_entails"
+      ]
+    },
+    {
+      "en": "On LiftModel's frame, from configuration 0, the move reaching 3 is lifted above the move reaching 1 by the larger configuration, and the move reaching 1 is not lifted above it.",
+      "zh": "于 LiftModel 之框，自构型 0，至 3 之动依较大之构型被提升于至 1 之动之上，而至 1 之动不被提升于其上。",
+      "declarations": [
+        "Becoming.LiftModel.met_and_failed"
+      ]
+    },
+    {
+      "en": "With equality of items decided, one course widens another on a listing exactly when a chain of widenings, each by one listed item alone, leads from the second up to the first. So an order transitive on courses is increasing in admission exactly when it ranks every widening by one item above what it widens.",
+      "zh": "项之相等可判定，则列表上一进程扩大另一进程，恰当自后者至前者有一扩大之链，每步唯以一所列之项扩大。故于进程上可传递之次序，恰当其把每一以一项之扩大排于其所扩大者之上时，于接纳上递增。",
+      "declarations": [
+        "Becoming.Weighting.WidensByOne",
+        "Becoming.Weighting.reach_of_beyond",
+        "Becoming.Weighting.widensOn_iff_reach",
+        "Becoming.Weighting.increasing_iff_by_one"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No premise beyond each net's own: the nets are the supplied models of the line of descent (Becoming.GrammarScope), two family lines and a third thing (Becoming.GrammarCases), each read at the one or the class stated, with the center stated.",
+      "zh": "除各网所带者外不加前提：诸网为传承之线（Becoming.GrammarScope）、二族线与第三者（Becoming.GrammarCases）之所予模型，各于一或所述之类读之，中心如所述。"
+    },
+    {
+      "en": "For C: a frame with an extension, a statement about some data and an order, and the order free, as C (Comparison) leaves \"better\" free. For L: LiftModel's frame and its order by the larger configuration.",
+      "zh": "就 C：有扩展之框、关于某资料与一次序之陈述，次序自由，如 C（Comparison）令「更好」自由。就 L：LiftModel 之框及其依较大构型之次序。"
+    },
+    {
+      "en": "For widening: a finite listing, two-valued admission, decided equality of items (a modelling assumption); for the item-by-item reading, an order transitive on courses.",
+      "zh": "就扩大：有限之列表、二值之接纳、项之相等可判定（建模之假设）；就逐项之读，于进程上可传递之次序。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the condition on the root holds of any actual net, or of a net beyond these witnesses.",
+      "zh": "根上之条件于任一实际之网成立，或于此等见证之外之网成立。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That C or L is warranted or unwarranted: a frame fixes no order, and meeting and failing say what each asks of an order.",
+      "zh": "C 或 L 有据或无据：框不定次序，成与不成只言其对次序之所求。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That no statement reading the dynamics entails the free condition: that is ReadsOnlyDynamics.not_entails, for the condition's free form.",
+      "zh": "无读动力之陈述蕴含自由之条件：此为 ReadsOnlyDynamics.not_entails，就条件之自由形。",
+      "kind": "scope"
+    },
+    {
+      "en": "Widening over an infinite listing, or with equality of items undecided.",
+      "zh": "无穷列表上之扩大，或项之相等未判定者。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "decidability",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: PremiseWitnesses imports GrammarCases, Lifting and EventualWideningInstances, a leaf nothing imports. Most witnesses are models the package already had (GrammarScope's line of descent, GrammarCases' nets, LiftModel); the leaf states the pairs. The non-entailment of C is immediate and labelled so. Two independent AI reviews of the leaf and a third look, every finding taken. The record's 19 declarations (17 theorems) compile with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：PremiseWitnesses 引 GrammarCases、Lifting 与 EventualWideningInstances，为无引之者之叶。多数见证为本包已有之模型（GrammarScope 之传承线、GrammarCases 之诸网、LiftModel）；此叶陈其成对。C 之不被蕴含为直接可得，并如此标明。此叶经二独立之 AI 审阅与第三次复读，所见皆取。此记录 19 声明（定理 17）与全包同编译于记录所系收据之核心运行。"
+  },
+  "next_delta": {
+    "en": "The premise card's J1–J4 read as a rule of choosing on definitions, with a rival rule as its witness; the witnesses moved beside the models they use at those modules' next change; review by a person.",
+    "zh": "前提卡之 J1–J4 读为依定义选择之规则，以对立之规则为见证；诸见证于其模块下次变更时移至所用模型旁；人之审查。"
+  },
+  "correspondence": {
+    "en": "Meeting and failing a premise in models is the standard way to show it independent of the rest, here of the root's laws: a law holding of every net cannot settle a statement true on one net and false on another. The non-entailment of C follows ReadsOnlyDynamics.not_entails for the condition, with the order in the place of the significance.",
+    "zh": "以模型示一前提之成与不成，为示其独立于其余之常法，此处独立于根之律：于每网皆成之律，不能定一于此网真、于彼网假之陈述。C 之不被蕴含，依 ReadsOnlyDynamics.not_entails 于条件之例，以次序代意义。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+  "aliases": [
+    "the condition on the root varies with the net",
+    "根上之条件随网而变",
+    "C entailed by no statement reading no order where it holds",
+    "Becoming.«续无外随网»",
+    "Becoming.«族无外随网»",
+    "Becoming.«逆缘续无外随网»",
+    "Becoming.ReadsNoOrder.not_entails",
+    "Becoming.LiftModel.met_and_failed",
+    "Becoming.Weighting.widensOn_iff_reach"
+  ],
+  "dependencies": [
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«续无外», «族无外», «续无外则族无外» and LineOfDescent's models, with LineOfDescent.Endless.descent_no_outside, which the first pair takes as its meeting witness.",
+        "zh": "«续无外»、«族无外»、«续无外则族无外» 与 LineOfDescent 之模型，及首对用为成之见证之 LineOfDescent.Endless.descent_no_outside。"
+      }
+    },
+    {
+      "id": "the-source-texts-test-systems",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "TwoLines and ThirdThing, with TwoLines.other_line_outside and ThirdThing.fixed_class, which give the failing witnesses.",
+        "zh": "TwoLines 与 ThirdThing，及予不成之见证之 TwoLines.other_line_outside 与 ThirdThing.fixed_class。"
+      }
+    },
+    {
+      "id": "becoming-spine-instances",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "LiftModel's frame and LiftModel.lift_needs_live_middle, whose last part is L's failure here.",
+        "zh": "LiftModel 之框与 LiftModel.lift_needs_live_middle，其末部即此处 L 之不成。"
+      }
+    },
+    {
+      "id": "a-narrowing-above-its-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Weighting.WidensBy and Weighting.widensOn_of_widensBy, a widening by one item alone being a widening.",
+        "zh": "Weighting.WidensBy 与 Weighting.widensOn_of_widensBy：唯以一项之扩大为扩大。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "one-root-to-its-edge",
+      "detail": {
+        "en": "The edge of one root lists the ethics' two premises apart, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.",
+        "zh": "一根之边另列伦理之二前提，条件定范围、C 定序；此记录予条件之根形与 C 以见证。"
+      }
+    },
+    {
+      "id": "what-the-dynamics-leave-open",
+      "detail": {
+        "en": "The pattern of the non-entailment: ReadsOnlyDynamics.not_entails for the condition, here with the order in the place of the significance.",
+        "zh": "不被蕴含之模式：ReadsOnlyDynamics.not_entails 就条件，此处以次序代意义。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TwoLines.other_center_outside",
+        "Becoming.ThirdThing.first_member_outside",
+        "Becoming.«续无外随网»",
+        "Becoming.«族无外随网»",
+        "Becoming.ReadsNoOrder",
+        "Becoming.ReadsNoOrder.not_entails",
+        "Becoming.LiftModel.met_and_failed",
+        "Becoming.Weighting.WidensByOne",
+        "Becoming.Weighting.reach_of_beyond",
+        "Becoming.Weighting.widensOn_iff_reach",
+        "Becoming.Weighting.increasing_iff_by_one",
+        "Becoming.LineOfDescent.Last.converse_no_outside",
+        "Becoming.LineOfDescent.Endless.step_member_le",
+        "Becoming.LineOfDescent.Endless.converse_line_le",
+        "Becoming.LineOfDescent.Endless.converse_later_outside",
+        "Becoming.LineOfDescent.Endless.line_member_le",
+        "Becoming.LineOfDescent.Endless.later_outside",
+        "Becoming.LineOfDescent.Endless.converse_outside",
+        "Becoming.«逆缘续无外随网»"
+      ],
+      "sha256": "598477b5c4493f79e24055da1038da25817221a6cab9db2c625dd79bf7e87541"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7103f56757260cda5b197be47af651293159a57060b48aa48043efdd0b3c686",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW-LEAF.md",
+      "role": "review",
+      "sha256": "948a25eeb510d629bd00d2496ab776fea17d466786d816717bd1efa2aa7a660b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW-LEAF-2.md",
+      "role": "review",
+      "sha256": "a138c3a82b0315a5c9c9ed0c741dd29d446c88b81d508a095764b59ae8971d97",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md",
+      "role": "integration",
+      "sha256": "9e9ae79067833a186e73f0b358fd37b68e9cbf1168094d1ea94394512a7fad11",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/texts/TEXTS.md",
+      "role": "integration",
+      "sha256": "d003dcfa4385eaad522e881633dd4cf2df02a3c4671ebc709d93bf11854d2458",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "85f8a7374841c786f6a66f84db0a3de0cd6a3378762fbd28deb25ce2d6d4dac0",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PremiseWitnesses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item DU (study section 489): added. The premise card's pairs for the condition's root form, C and L, and the law of widening by one item, from the deeper unification review's leaf, Becoming.PremiseWitnesses; two independent AI reviews of the leaf and a third look, every finding taken.",
+      "zh": "2026年11月1日，工作板条目 DU（研究第 489 节）：增。前提卡就条件之根形、C 与 L 之成对见证，及以一项扩大之律，出自更深统一审阅之叶 Becoming.PremiseWitnesses；此叶经二独立之 AI 审阅与第三次复读，所见皆取。"
+    }
+  ]
+}

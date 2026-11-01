@@ -11,11 +11,11 @@
 ## Laws
 
 1. A condition lies within one coupling link of the source where a source formation exchanges with it, and within n + 1 where a formation coupled into a condition within n links exchanges with it; every such condition lies within at least one link. (`Becoming.TimedResponse.Linked`, `Becoming.TimedResponse.Linked.one_le`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where every source step is at S or later, a potential route reaches a condition at step t only within t − S links; whatever reaches a reader by T came through a condition coupled into it within T − S links, and where none lies so near nothing reaches it by T; under the deadline premises, no answer it gives through its couplings differs by T otherwise. (`Becoming.TimedResponse.Spread.linked`, `Becoming.TimedResponse.reachedBy_linked`, `Becoming.TimedResponse.not_reached_of_far`, `Becoming.TimedResponse.answer_alike_far`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The bound is attained: with a source, a relay and a reader, the reader's answer is alike at step 2 and differs at step 3. (`Becoming.TimedResponse.Relay.reader_far`, `Becoming.TimedResponse.Relay.not_reached_at_two`, `Becoming.TimedResponse.Relay.reached_at_three`, `Becoming.TimedResponse.Relay.answers_two_and_three`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

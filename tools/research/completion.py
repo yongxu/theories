@@ -649,18 +649,18 @@ def render_report(result: dict) -> str:
         names = {r['id']: r['name'] for r in result['rows']}
         total = sum(len(r['declarations']) for r in rows)
         none = [(names.get(r['row'], r['row']), e['declaration']) for r in rows for e in r['declarations'] if not e['laws']]
-        out += ['', '<a id="master-laws"></a>', '## The master laws (EC, not a criterion)', '',
+        out += ['', '<a id="master-laws"></a>', '<a id="shared-laws"></a>', '## The shared laws (EC, not a criterion)', '',
                 'Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central '
-                'result following from them (board rule 9). For each central declaration of the coverage file, the master '
+                'result following from them (board rule 9). For each central declaration of the coverage file, the shared '
                 'laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, '
                 'directly or through other constants, as the connectivity measure of the commit above records it '
                 '(`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. '
-                f'Counted per row: {total - len(none)} of {total} central declarations rest on at least one master law.', '',
+                f'Counted per row: {total - len(none)} of {total} central declarations rest on at least one shared law.', '',
                 '| Law | Statement | Anchors | Central declarations resting on it |', '|---|---|---|---:|']
         for law in ml['laws']:
             n = sum(1 for r in rows for e in r['declarations'] if e['laws'] and law['id'] in e['laws'])
             out.append(f'| {law["name"]} | {law["statement"]} | ' + ', '.join('`' + a.removeprefix('Becoming.') + '`' for a in law['anchors']) + f' | {n} |')
-        out += ['', f'Resting on no master law ({len(none)}), by row:', '']
+        out += ['', f'Resting on no shared law ({len(none)}), by row:', '']
         by_row = collections.defaultdict(list)
         for r, d in none:
             by_row[r].append(d)

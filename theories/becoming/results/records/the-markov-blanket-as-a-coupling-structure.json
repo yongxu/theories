@@ -119,8 +119,8 @@
       "kind": "scope"
     },
     {
-      "en": "A World formation in general as the agent of a blanketed law: the join is proved for the witness only.",
-      "zh": "一般之世界形成作为毯化之律之主体：相接只于例中得证。",
+      "en": "A formation's own record as the internal part of a blanketed law: for any formation the agent is a model fed by what couples in (a-formations-couplings-as-its-blanket).",
+      "zh": "形成自身之记录为毯化之律之内部部分：于任一形成，主体乃以耦合入者为食之模型（a-formations-couplings-as-its-blanket）。",
       "kind": "scope"
     },
     {
@@ -162,8 +162,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 35 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
   },
   "next_delta": {
-    "en": "A World formation in general as the agent of a blanketed law, its sensory course its own course; the threshold-reading policy unable to draw on a larger supply; review by a person.",
-    "zh": "一般之世界形成作为毯化之律之主体，其感官历程即其自身历程；以阈读之策略不能取用更大之供给；人之审查。"
+    "en": "A formation's own record as the internal part of a blanketed law; the threshold-reading policy unable to draw on a larger supply; review by a person.",
+    "zh": "形成自身之记录为毯化之律之内部部分；以阈读之策略不能取用更大之供给；人之审查。"
   },
   "correspondence": {
     "en": "The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, Friston and Kiverstein 2018) on a determined law: the deterministic case of the time-unrolled Markov blanket (Virgo, Rosas and Biehl 2022, Behavioral and Brain Sciences 45), the sensory and active courses Pearl's blanket (1988) of the internal course in the unrolled graph, the partition what Bruineberg, Dołęga, Dewhurst and Baltieri (2022) call a Friston blanket. Statistical and dynamical blankets need not coincide (Biehl, Pollock and Kanai 2021; Aguilera, Millidge, Tschantz and Buckley 2022). Self-evidencing blind to its break coming is T6's invisible half (runaway-distance-uncoupled) on a blanketed agent. Graded in UE18's NOTE.",
@@ -217,6 +217,13 @@
       "detail": {
         "en": "The linear case: the Euler step of a sparsely coupled drift as a blanketed law, with noise, and the synchronous scheme against the statistical form.",
         "zh": "线性情形：稀疏耦合之漂移之 Euler 步为毯化之律（含噪声），及同步之法与统计之形之关系。"
+      }
+    },
+    {
+      "id": "a-formations-couplings-as-its-blanket",
+      "detail": {
+        "en": "A formation's couplings as its blanket, any model fed by them the agent by construction, the witness's join its case; and when a blanket's existence constrains.",
+        "zh": "形成之耦合为其毯，以之为食之任一模型依构造为主体，例之相接为其一例；及毯之存在何时有所约束。"
       }
     }
   ],
@@ -301,7 +308,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "d083a9944c815157e09ca66dbe510c33f7bbef15dffefe50c7b651903cc2210f"
     }
   ],
   "proof_bindings": [
@@ -321,6 +328,10 @@
     {
       "en": "1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.",
       "zh": "2026年11月1日，工作板条目 UE26（研究第 484 节）：与 the-blanket-at-a-steady-state、the-blanket-in-a-linear-steady-state 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "1 November 2026, board item UE27 (study section 488): the World formation in general, not shown, narrowed to a formation's own record as the internal part, any model fed by a formation's couplings being the agent of a blanketed law by construction (a-formations-couplings-as-its-blanket); next step brought to it; related to a-formations-couplings-as-its-blanket; no statement, law or declaration changed.",
+      "zh": "2026年11月1日，工作板条目 UE27（研究第 488 节）：一般之世界形成（未示）收窄为形成自身之记录为内部部分，以形成之耦合为食之任一模型依构造为一毯化之律之主体（a-formations-couplings-as-its-blanket）；下一步随之；与 a-formations-couplings-as-its-blanket 相关联；无一陈述、律或声明改变。"
     }
   ]
 }

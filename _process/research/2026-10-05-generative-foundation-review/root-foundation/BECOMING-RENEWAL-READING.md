@@ -22906,7 +22906,7 @@ Delta: (1) _process/navigation/README-FIRST-SCREEN.md (readme_first_screen), pla
        class, which 07 says P2 does not ask; [^own] stating self-significance outright, which the account does not
        assert; the line before the notes, until those two were fixed), 6 refuted
        ([reports/opening-notes-check.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/opening-notes-check.json)).
-       (5) drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
+       (5) drafts/2026-10-10-opening/history/OPENING-V13-PROPOSAL.md, for Ren's decision, and the drafts README, which places
        the opening after the first screen and names the proposal.
        (6) a link into the page it is placed in stays on the page (navigation.adapt_links), so the screen's links to
        the opening and its notes are written to README.md's anchors, which the link check reads, and render as bare
@@ -23332,3 +23332,308 @@ Output→input: the-markov-blanket-as-a-coupling-structure, conditioning-by-rest
 **Decisions at landing.** Two records, one for the core law and one for the periphery's linear case, both homed in 03 §1 after the blanket, since one is a statement in counts in the pure core and the other a statement over the reals with its own checker. The blanket's own record names both and changes nothing it states. The page narrows three items of §5's first entry to what lies beyond the linear case, stated algebraically, and adds a fourth further law that forbids no sentence of the literature: the blanket's statistical form holds under the sufficient conditions, need not hold with circulation, and in a witness the theory's synchronous steps lose it, a loss of the discrete step.
 
 **Readings** [AI reading, D45]. What the theory states of agents through the blanket needs only the coupling form, so it holds whether or not the steady weights are independent given the blanket. The principle's reading of internal states as beliefs about external ones needs the statistical form, which holds under conditions each of which is known; the losses are where sparse coupling is read as a zero drift entry, and in the theory's synchronous steps, where with circulation the four-part blanket can be lost.
+
+## 485. Not going out of a region, on the root (BD2)
+
+Board item BD2, the formal gap BD's reading of boundaries left ([note §6](development/bd-boundaries/NOTE.md#6-not-going-out-on-the-root-board-item-bd2)). The World's cut, a region no formed relation leaves, was defined apart from the grammar's closed region, and the reading's account of a line crossing a region rested on a hand argument. Both are now in the core: the grammar's not going out (`«不出»`), its laws against the closed region and on a line, the World's cut as its case by definition, and 04 §1's law of crossing read on 07 §4.1's boundaries. An independent AI reader reviewed the kit (twelve findings) and re-checked it, and the grammar's owner made three notes, every one taken ([the review](development/bd-boundaries/REVIEW.md)).
+
+```text
+Result(s): not-going-out-of-a-region (new, home 01 §9.9); conveyance-crosses-the-boundary (a sixth law: the crossing
+       read on a self's boundaries along conveyance; a seventh: its cut as not going out, closed regions as cuts,
+       stable cuts as closed, conveyance's relation symmetric); what-a-line-holds-and-a-regularity-takes-in
+       («所经必同» proved from the step going out, its statement unchanged).
+Delta:
+  - Not going out (Becoming.GrammarCrossing): «不出» R P, no member of P bearing R to something outside P. A closed
+    region is not gone out of, an occurrence's closure among them («闭则不出»; «所闭不出», the closure law «所闭之界»
+    read through «不出» and proved as it); not going out is exactly the closedness of what is not outside, with no
+    decision («不出当且仅当不外者闭»); where membership is stable, whatever is not outside lying inside, it is being
+    closed («不外者内则不出当且仅当闭»).
+  - That every region nothing goes out of is closed, for every carrier in the lowest universe, relation and region,
+    is exactly excluded middle («不出皆闭当且仅当排中»; witness on Bool): a lemma of «不外者内则不出当且仅当闭», the law
+    that needs it, not a calibration, the need coming from membership being any proposition (08's rule, as for
+    World.law_iff_em).
+  - Going out and coming in: nothing comes in along R (not going out along «逆» R) exactly where nothing goes out of
+    what lies outside, with no decision («逆之不出当且仅当外者不出»); along a symmetric relation the two coincide
+    («对称则不出当且仅当逆不出»); some relation that is not symmetric has a closed region come into («闭而有入之例»,
+    a witness in the positive form, its relation shown not symmetric).
+  - On a line: a line under any class from inside to outside means the region is not one nothing goes out of, with
+    no decision, naming no step («内至外之线则非不出»); where each step keeps to the region (its end a member
+    wherever its start is) or goes from a member to something outside, the line has a step going out, placed on
+    it: the mark law with keeping to the region, transitive and not symmetric, as what the ends fail
+    («内至外之线有出步»), every step of one kind or the other where membership is decided («定则内至外之线有出步»).
+  - The World (Becoming.ConveyanceBoundaries, a leaf, the World's case of the crossing laws): Flow.Cut is «不出» at a
+    valuation's relation (cut_iff_notGoingOut, Iff.rfl); a closed region is a cut, a cut with stable membership
+    closed (cut_of_closedUnder, closedUnder_of_cut); conveyance's relation is symmetric, so along it not going out
+    is not coming in (conveyance_symm, cut_iff_notComingIn). Under region_not_a_cut's premises a continuing
+    family's region is no boundary of any event's self along conveyance, and not every member's event has its
+    closure along conveyance within the family (region_no_boundary, closures_not_within_region); the clearing's
+    resource region likewise, along conveyance and along living on (Clearing.resource_no_boundary).
+  - GrammarPath: «所经必同» from «定则内至外之线有出步» and «线内同类», its direct induction gone (rule 9).
+  - Connectivity: Frame's closedUnder_iff_closed («闭» by definition) is no longer apart from the base, the World's
+    cut laws using it (its register entry removed); BD2's own apart roots are registered, each with a reason.
+Supplied premises / correspondence: none beyond each theorem's own hypotheses (stable or decided membership, the
+       split of steps, symmetry, and region_not_a_cut's balance, dissipation, no repetition, decided equality,
+       enclosure and recurring taking). Modelling choices: Prop-valued regions; lines as finite chains of
+       continuation under a class.
+Evidence: core receipt `20261031T202201.956842Z`; Becoming.GrammarCrossing (11 theorems in 12 declarations), a core module importing only
+       Becoming.GrammarLaws, imported by Becoming.GrammarPath (102 theorems in 152 declarations) and Becoming.ConveyanceBoundaries
+       (8 theorems in 8 declarations), which imports Becoming.Boundaries; every axiom report empty.
+Standing: near-definitional on the grammar; the excluded-middle lemma is the familiar gap between a set with no
+       leaving edge and a closed set, constructively the closedness of the double negation. Read [AI reading]: a
+       membrane is a place of crossing, both ways along a symmetric relation such as conveyance.
+Boundary:
+  - A graded boundary (nested regions along one relation and the order of a line's steps out of them); which
+    relation a self's boundary is drawn along (07 §4.2); a World formation as the inside of a blanketed law.
+  - «所闭之界» and «所闭不出» are one law, stated twice (unfolded in GrammarLaws, here through «不出»); the grammar's
+    owner holds «不出»'s move into GrammarLaws for its near-full rebuild after RV21c, when the restatement goes
+    and, as it agreed, it defines Flow.Cut in Standpoints as «不出» with no new import, cut_iff_notGoingOut
+    staying as Iff.rfl; one law then reaches the grammar, conveyance's fifth, through vocabulary alone, and no
+    master law's count or central reach moves.
+  - A stronger line law, asking only that every step from a member land decidedly inside or outside, holds by
+    induction from the start; the mark law as stated asks the split of every step.
+Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the reading citing it); 04 §1 (the cut as not
+       going out, conveyance's symmetry, the crossing on a self's boundaries); 07 (the line record's home
+       sentence); the glossary's boundary row; regions.json; the root module's bullets, the checker's core list
+       and scope, both package READMEs (the Chinese Boundaries row brought to the English, the checker's
+       Boundaries scope to the continuation condition); the board's BD2 row.
+```
+
+**Self-review.**
+1. `GrammarCrossing` imports only `GrammarLaws`, so `GrammarPath` can import it; what imports `GrammarPath` (`GrammarCases`) only rebuilds. `ConveyanceBoundaries` is a leaf; no definition of an earlier module changes, so `Standpoints` and `Boundaries` do not rebuild.
+2. The laws use no classical principle: stability («不外者内则不出当且仅当闭», closedUnder_of_cut) and decision («定则内至外之线有出步») enter only as hypotheses, and «不出皆闭当且仅当排中» states exactly what dropping stability for every relation and region needs.
+3. Two names changed before landing: «内至外之线则出» became «内至外之线则非不出», the law refuting not going out and naming no step (the review's finding 1), and «闭而有入» became «闭而有入之例», the grammar's naming of witnesses.
+4. Not done: the items in Boundary.
+
+## 486. Names that state relations, not rule: documents (ND, part 1)
+
+Board item ND, asked in conversation on 1 November 2026: "what are master laws? why should laws be master? or why laws? are we being too dualistic?", then "make sure our repo doesn't have wrong non-dual concepts" ([design](development/nd-nondual-names/DESIGN.md)). A sweep of the live texts for 45 loaded words, each hit outside a technical sense read in its sentence, and one independent cold read in both directions (dualist smuggling, and nondualism erasing a real difference), each finding checked against the text by the owner ([cold read](development/nd-nondual-names/COLD-READ.md)). The account was relational where it matters already (08 §1's distinctions with their basis, nonduality a method and not a proof, no cosmic subject); what was wrong was in names and a few sentences.
+
+```text
+Result(s): no new result. master-laws-on-the-grammar retitled "The shared laws on the grammar" (文法上的共律), its
+       statement "the five shared laws", the old names kept as aliases, a history note; continuation-relative-to-
+       a-class's next step and groups-formed-by-bonds-share-a-founder's related note reworded.
+Delta:
+  - "Master law" (主律) becomes "shared law" (共律): 08 §7's heading and definition ("it ranks no law above another
+    and rules nothing"), 01 §7, the overview and 《总览》, 01 and 07's open lists, the renderer's labels on every
+    record page, COMPLETION's section. 04 §2's "the master law" of selection levels becomes "the general law".
+  - Law's three senses get a home, 08 §10 (a statement of the theory, read off what it holds of, with content only
+    through its hypotheses; `Law`, a determined step, one relation; a science's law, named with its science), and
+    the glossary rows law and shared law; 08 §10 records the renaming beside "couples into".
+  - Command words: "obeys" read as "satisfies" (01 §9, twice), "obey Chebyshev's bound" as "stay within" (02 §5),
+    "the history it governs" as "the history it holds of" and "a law outside what it governs" as "a law standing
+    outside what it holds of" (08 §9).
+  - From the cold read: 08 §9's thesis states why Twins.retarget_breaks is no refutation (the intervention needs
+    equality on the carrier, a commitment of the model); 07 §1 reads a standpoint as a center, and "some relation
+    of the unfolding"; 07 §2's withheld part is a region, the rest's response left out; 07 §4 and the overview
+    "at some admissible region" for "the boundary is drawn somewhere"; 02 §5's "harms" read as rises superadditive
+    up to one; the glossary's view as 08's reading, and the condition with "from every standpoint"; on the
+    collective page, "made by no part alone", "adds to the question … who restrains stays contested", "the
+    widening course".
+  - Kept, with reasons: record id, anchors, data fields and category values, master_laws.py (its bytes are an
+    input of MV's view), dated history entries, and Chinese 主律 where it means a record's main law. New anchors
+    beside the old: shared-laws-and-connectivity, COMPLETION's shared-laws.
+Supplied premises / correspondence: none; no statement's content changed.
+Evidence: render, check, check --strict-fresh, links (0 broken) and the 305 tests pass on the merged tree; MV's
+       view current against core receipt 20261031T202201.956842Z; five records re-pointed (one rebinds line),
+       each read against the new text, nothing it says changed.
+Standing: naming and wording only.
+Boundary:
+  - Part 2, in OU7's rebuild: ReadingLoop.Good and GoodEnabled (successor safety under a value name) become
+    LeadsInto and LeadsIntoEnabled; the …Obey… names of CensusTable, Standing and their uses …Hold…;
+    RegimeMargin.harms_superadditive rises_superadditive; Pool.difference_belongs_to_the_joint
+    difference_only_together; GrammarLaws', Amounts', ModelStatements' and Becoming.lean's docstrings.
+  - The final stage, after OU7's landing: the record id by research.py rename-id (shared-laws-on-the-grammar,
+    with a redirect and former_ids), the category values ('master law', 'no master law'), master-laws.json's and
+    master_laws.py's names, MV's input hash re-pointed with its reason, so that no live "master law" remains but as
+    an alias or in history. Until then the id, anchors, data keys and tool keep the old name: a key is matched, not
+    read, and renaming it while four items edit the record would send each round a rename.
+  - Passed to their owners, not edited: the one page and the overview's "the condition is a law of the root" (DU);
+    the one page's short form of the condition (the front pages kit); the collective page's title (its owner);
+    AGENTS.md's short form.
+```
+
+## 487. Balance region by region, on the root (BD3)
+
+Board item BD3, the first half of [WHAT-REMAINS](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), locality on the grammar. Continuity's balance law (board item FL2, section 354) states its closed families in its own terms: a family is closed where no two adjacent listed relata lie one in it and one outside (`Continuity.Closes`). BD2 gave the grammar's not going out (`«不出»`, section 485). The two are one: a family the relation closes is exactly a region not gone out of along adjacency among the listed relata, so the balance law reads on the grammar with no new premise, and no existing module changes. An independent AI reader read the leaf and its texts (a layer tag, two docstring sentences that overclaimed, precision fixes, and the proofs moved onto the grammar's own laws), every finding taken ([the reading](development/bd-boundaries/REVIEW-BD3.md)).
+
+```text
+Result(s): balance-from-conservation-along-a-relation (a seventh law: its closed families read as regions not gone
+       out of along adjacency among the listed relata, not come into and closed under it, and the balance law read
+       on them; one item on what is not shown).
+Delta:
+  - Adjacency among the listed relata as a relation of the grammar (Continuity.adjacentListed: both relata listed
+    and the relation holding one way or the other), symmetric (adjacentListed_symm, a «则» into its «逆»).
+  - A family the relation closes, membership a Bool test, is exactly a region closed under that adjacency
+    (closes_iff_closed: closed under a symmetric adjacency is closed under its converse, and a region closed both
+    ways is one the adjacency crosses neither way, GrammarLaws.uncrossed_of_closed); exactly one not gone out of
+    along it (closes_iff_notGoingOut: membership a test is stable, and there not going out is being closed,
+    «不外者内则不出当且仅当闭»); and exactly one not come into (closes_iff_notComingIn, by «对称则不出当且仅当逆不出»).
+  - So, relata listed without repetition and equality decided, transfers along the relation that balance a step
+    exist exactly where the total is conserved on every region not gone out of along that adjacency
+    (balancing_iff_notGoingOut, from balancing_iff), and on a web at every step likewise
+    (balancesOn_iff_notGoingOut, from balancesOn_iff_conserved).
+Supplied premises / correspondence: none beyond balancing_iff's own (relata listed without repetition, decided
+       equality, the relation and membership as Bool tests). Modelling choices: those of Becoming.Continuity
+       (finitely many listed relata, natural-number levels, discrete steps).
+Evidence: core receipt `20261031T225858.600119Z`; Becoming.BalanceRegions (6 theorems in 7 declarations), a core leaf importing
+       Becoming.Continuity and Becoming.GrammarCrossing; every axiom report empty; no existing module changed.
+Standing: near-definitional: Continuity's Closes is the grammar's region the listed adjacency crosses neither way,
+       and the proofs are the grammar's laws applied to it. Read [AI reading]: balance is kept region by region, on
+       the regions the relation crosses neither way among the listed relata, so the locality of the balance law is
+       the relation's, not a premise added to it.
+Boundary:
+  - Balance from conservation on each closure under the listed adjacency (the «所闭» form), the components of
+    network flows: a region not gone out of holds its members' closures («闭含所闭», «所闭之自反») and is their
+    union, but no closure is decided as a test among the listed relata, nor a region's total summed over the
+    closures it holds. It stays with lever 1 (a)'s owner.
+  - The two GrammarLaws equivalences of the same proposal (a region the relation does not cross either way is one
+    not gone out of either way, and one closed both ways) are held for OU7's rebuild on ou5-design, where «不出»
+    moves into GrammarLaws.
+  - Infinitely many relata, and levels other than natural numbers, are not reached (Continuity's own boundary).
+Output → input: 01 §8.4 (the theorem paragraph's sentence); balance-from-conservation-along-a-relation's seventh
+       law, its item on what is not shown, its dependencies on not-going-out-of-a-region and
+       master-laws-on-the-grammar, and its history; the root module's bullet, the checker's core list and scope,
+       both package READMEs; regions.json; the board's BD3 row.
+```
+
+**Self-review.**
+1. `BalanceRegions` is a leaf: it imports `Continuity` and `GrammarCrossing`, nothing imports it, and no definition of an earlier module changes, so only it rebuilds.
+2. No classical principle enters: membership is a `Bool` test, so its stability is a match on `Bool`, and `DecidableEq` enters only as `balancing_iff`'s own hypothesis.
+3. The reading moved the proofs onto the grammar's laws (`GrammarLaws.uncrossed_of_closed`, `«不外者内则不出当且仅当闭»`, `«对称则不出当且仅当逆不出»`) in place of a case split that re-proved them, and `closes_iff_notComingIn` was added so that the module's remark on coming in is proved.
+4. Not done: the items in Boundary.
+
+## 488. Which blanket a thing has, and a formation's couplings as its blanket (UE27)
+
+Board item UE27 ([design](development/ue27-which-blanket-a-thing-has/DESIGN.md)). The theory's blanket (§452, `Becoming.Blanket`) is a coupling structure on a determined law, joined to the World at one witness, `ThresholdDrain`, whose sensory part is the World's admission at need one. Two items were left out: which blanket a thing has, which `Blanket`'s header lists among what the model leaves out, and a World formation in general as the agent of a blanketed law, which the blanket's record gave as its next delta and the principle's page listed in §5. The criticism of the principle turns on the first: how a blanket is fixed and what its existence says. This section states both in the pure core, with what each says and does not.
+
+```text
+Result(s): a-formations-couplings-as-its-blanket (new, homed in 03 §1 after the blanket's reading), its eleven laws
+       citing all 76 declarations of BlanketCouplings, each once; the-markov-blanket-as-a-coupling-structure amended:
+       its does_not_show entry on a World formation in general narrowed to a formation's own record as the internal
+       part, its next step brought to it, a related entry; no statement, law or declaration changed.
+Delta: (1) the general join, by construction: where a formation's couplings give the values of what couples into it
+       (Web.ValuesThrough), any model fed by them, with any policy and any environment, which may read the act, is the
+       agent of a blanketed law (couplingLaw) whose sensory course is the formation's own course through its
+       couplings under its own level history (sensory_course); two of its courses from one agent are alike on the
+       blanket before n + 2 exactly where their level histories are alike through the couplings up to n
+       (blanket_iff_through), their internal courses then agreeing up to n + 2 (internal_through_couplings); in the
+       open loop every reading of the internal course up to n + 2 is a selection through the couplings up to n
+       (internal_selectsThrough). ThresholdDrain.blanket_iff_through follows from it through a course correspondence
+       (ThresholdCase.threshold_case). A construction, not a test: wherever the couplings give the values the law
+       exists, the agent a model and not the formation's own record, and having it forbids nothing of its course.
+       (2) the law a family shows, part by part: a part depending only on a reading (PartDependsOnlyOn), DependsOnlyOn
+       and GoAlike its cases by definition, Determined equivalent to the case where both maps are the identity
+       (partDependsOnlyOn_id_iff); the law a family
+       shows has such a part exactly where the family is consistent under the two maps
+       (shownBy_partDependsOnlyOn_iff); a law determined part by part (BlanketDetermined), moves kept, partial or not,
+       admits a family exactly where it is consistent part by part (admitted_iff) and is determined
+       (BlanketDetermined.determined); a blanketed law's courses form a family consistent part by part
+       (blanketed_courses_consistent).
+       (3) when a blanket's existence constrains, at three levels: readings of the course, with which course and the
+       step in the external part (clocked_course, clocked_witness) or the course's future (future_course), give
+       every family a blanketed law, the step alone not enough (clock_only_fails); readings of the configuration: a
+       degenerate one gives every family a law determined part by part (const_consistent), or exactly the families
+       whose law is determined (whole_iff), so it refutes no family whose law is determined, and any injective
+       reading gives one only to those and not always (injective_consistent, injective_converse_fails); a
+       sparse partition fixed apart from the family, on a law the same at every step, can be refuted by one run
+       (ReadsExternal.not_consistent, ReadsExternal.not_blanketed), the whole configuration reading the same run in
+       the blanket's form (ReadsExternal.whole_consistent).
+Premises: discrete synchronous steps; determined laws, as Blanketed is; the four parts of types in Type; a law the same
+       at every step, read by one map at every step; the blanket as sparse coupling, not conditional independence;
+       in the join, admission given by the web and the couplings by level supplied, as in Testing; which map a thing's
+       partition is read by is not derived.
+Evidence: core receipt 20261031T231958.020578Z; BlanketCouplings (43 theorems in 76 declarations), every axiom report empty, a leaf importing Blanket,
+       Histories and IdentificationRuns; an independent review of the design (REVIEW-UE27-DESIGN, fifteen findings,
+       with its probe in review-probes/), of the scratch Lean (REVIEW-UE27-LEAN, fifteen findings, with its probe
+       in review-lean/) and of the landing texts and records (REVIEW-UE27-LANDING, twenty-two findings), every
+       finding taken.
+Boundary: a formation's own record as the internal part, the design's A6, not done: the agent is a model fed by what
+       couples in, so 03 §1's reading is a theorem for its first half only; the World's own exchange is not written as
+       an environment, the closed loop a model beside the World; a blanketed law for every family consistent part by
+       part, which needs a choice at the readings no course shows; branching laws.
+Output→input: the-markov-blanket-as-a-coupling-structure, a-formations-own-course, histories-fix-law-up-to-dead-ends
+       → BlanketCouplings → 03 §1, 08 §8, the principle's page (In brief, the claim table, §1, §2, §4, §5, Standing),
+       UE, FEP-INTEGRATION.
+```
+
+**Its standing.** One result in three parts, each near-definitional. The join is the threshold witness's join made general: the sensory part's next state is the coupling value by definition, `Web.ValuesThrough` is the hypothesis that the value is a complete invariant of being alike through the couplings, and the backward direction is `Blanket`'s `agent_through_sensory`; in the closed loop both sides are read off one course, so there it says that the sensory part carries exactly the coupling values and that the agent follows its sensory course. The part-by-part laws are `shownBy_determined_iff` read part by part. The witnesses are built to show what they show, and the single-run witness is of the kind of `Hexagram.runsOrder_reads`. The point that a blanket depends on the partition chosen is the principle's critics' in words (Bruineberg, Dołęga, Dewhurst and Baltieri 2022). New is the classification: readings of the course give every family a blanket; a degenerate reading of the configuration gives every family, or exactly the families whose law is determined, a law determined part by part, so for a family whose law is determined it is never refuted, and any injective reading requires determinedness without giving it; a sparse partition fixed apart from the family can be refuted, even by one run. No theorem says that every reading which fails is sparse: among families whose law is not determined, the whole configuration refutes too. The line between the second and third levels is the partition's content, not when it is chosen, since the constant and whole-configuration readings are fixed apart from every family too; "chosen after the family" is the reason the first two constrain nothing.
+
+**The reviews.** An independent review of the design (REVIEW-UE27-DESIGN) found fifteen points, three high: the first design answered a weaker question, with the couplings on the wrong side, and the join was rebuilt on the formation's own couplings; trivial readings always give a blanket, which became the second level; and a sixth statement of the literature failing did not belong in the page's §3. A review of the scratch Lean (REVIEW-UE27-LEAN) built a probe and found fifteen more, one high: the join is a construction, not a test, and sits at the first level, not the third, so no text says that a formation's couplings are a partition that forbids; the World's coverage holds narrowly, the agent a model, the World's own case the open loop and the couplings by level supplied; the second level was misstated as an existence claim, and the line it draws is sparsity, not timing; "read the step" became "read the course", the step alone failing and the future sufficing; two theorems were one step weaker than the Lean gives; and names, docstrings and standing. Every point was taken (DESIGN §7 and §8), the module rebuilt with 43 theorems in 76 declarations, every axiom report empty. A review of the landing texts and records (REVIEW-UE27-LANDING) found twenty-two more, two high: the page made the formation itself the agent, where the agent is any model fed by what couples in and the couplings must give the values; and several texts said a blanket's existence can be refuted "only" under a sparse partition, which `whole_iff` contradicts for families whose law is not determined and no theorem states. The rest named the hypothesis wherever the join is summarized, drew the line at sparsity, not timing, credited only Bruineberg and others with the partition's dependence on a model, put the injective reading beside the degenerate ones rather than among them, stated the single-run witness of its one run, and glossed the blanket's form as a law determined part by part. Every point was taken (DESIGN §9); the module's header changed in wording only and was rebuilt.
+
+**Decisions at landing.** One record, homed in 03 §1 after the blanket's reading, since the join, the part-by-part laws and the classification answer one question, which blanket a thing has, and the record counts one result, not its theorems. The blanket's record narrows its open item to a formation's own record as the internal part and changes nothing it states. `Blanket.lean`'s header, a landed module's docstring, still lists both items as left out; it changes at that module's next change, by its owner, as does whether `ThresholdDrain`'s direct proof goes now that it is a case. The page gains no entry in §3: the classification forbids no sentence of the literature, and the principle fixes its partition on a given state space, not off courses (Ramstead and others 2023); the "In brief" count of further laws goes from four to five, and §5's item narrows.
+
+**Readings** [AI reading, D45]. Which blanket a thing has is a question of how its parts are read. The couplings give one reading, not derived: what couples into a formation as its sensory part, under which, by construction, whatever a model fed by it tells apart passes through the couplings. That reading constrains nothing of the formation's course, as the existence claim alone forbids nothing. What can be refuted is a claim that a given sparse partition of a thing's own states, fixed apart from its course, on a law the same at every step, is a blanket: there a single run can show a part reading what it is barred from reading.
+
+## 489. Premises met and failed, self-concern and C under the condition, standings not read off (DU)
+
+Board item DU, the deeper review of the unification ([review](development/du-deep-unification-review/REVIEW.md)): its one small Lean item, and a second leaf from its units scratch. The review's governing finding is kept as the method's: a law provable from the root alone holds of every relation and forbids nothing, so every law with content is a conditional whose hypotheses are contingent, and "no unproven premise" is met by standing, not by derivation. The first leaf gives the premise card's pairs for the condition's root form, C and L, and joins self-concern to the condition; the second states what the World's occurrence model, through its selected relations, leaves free in the standings. Two independent AI reviews of the first leaf and a third look ([first](development/du-deep-unification-review/REVIEW-LEAF.md), [second and third](development/du-deep-unification-review/REVIEW-LEAF-2.md)) and one of the second ([review](development/du-deep-unification-review/scratch/units/REVIEW.md)), every finding taken; the texts with their owners' word ([texts](development/du-deep-unification-review/texts/TEXTS.md)).
+
+```text
+Result(s): premises-met-and-failed (new, home 08 §7, after one-root-to-its-edge);
+       self-concern-and-c-under-the-condition (new, home 07 §4, scope and order);
+       standings-not-read-off-the-occurrence-model (new, home 01 §8.6, after amounts-by-unit-matchings).
+       Reused: the-continuation-condition-on-the-root («续无外», «族无外», withinClosure_iff_reached,
+       ownClosure_unrestricted_iff_noOutside, LineOfDescent), the-source-texts-test-systems (TwoLines,
+       ThirdThing), becoming-spine-instances (LiftModel), what-self-concern-alone-ranks
+       (Weighting.IncreasingInOwn, increasingInOwn_iff_increasing), comparison-by-widening and eventual-widening
+       (Web.paths_extension_iff_widens, Web.ListsAdmitted, Web.stepBound), the-world-represented-both-ways (the
+       occurrence model, F1, GrammarTransport's keeping theorems).
+Delta:
+  - The condition on the root varies with the net: at the one, met on the endless line of descent from its first
+    birth and failed on two family lines with nothing between them («续无外随网»); in families, met and failed by a
+    third thing apart («族无外随网»); along the converse of 缘, met in descent that ends and failed on the endless line
+    from every center («逆缘续无外随网»); along 缘 the endless line fails it from every later member.
+  - A statement reading no order fails, for every order, at a datum where it entails C on a frame with an extension
+    (ReadsNoOrder.not_entails; immediate, better being free). L met and failed (LiftModel.met_and_failed). With equality
+    decided, widening on a listing is a chain of one-item widenings (Weighting.widensOn_iff_reach), so a transitive
+    order is increasing in admission exactly when it ranks every one-item widening higher (increasing_iff_by_one).
+  - Self-concern and being increasing in admission coincide on every listing and for every order exactly where the
+    marking marks everything (increasingInOwn_iff_increasing_iff_marks, the witness exists_increasingInOwn_not_increasing),
+    from every standpoint exactly where the relation read holds of everything (_iff_all), at reach from a center exactly
+    where «续无外» holds (_iff_noOutside) and along a relation exactly where the condition held de se does
+    (_iff_unrestricted): near-definitional, locating where they coincide. On the nets: coincide on the endless line,
+    part on two family lines (increasingInOwn_with_net); along the converse, the reverse (_with_net_converse).
+  - One way to C: with admission decided and two level paths' admissions listed, an order increasing in admission,
+    and where the de se condition holds a self-concerned one, ranks every extension between them
+    (Web.extension_ranked_of_increasing, Web.extension_ranked_of_increasingInOwn). Listed paths admit nothing from
+    some step on (Web.admits_nothing_from_of_listed); once there is a formation no list holds every level path's
+    admissions (Web.not_listsAdmitted_every), so that form would be vacuous (Web.no_extension_of_listsAdmitted_every):
+    the third look replaced it by the pairwise one. Failed candidate, kept on record: Web.comparison_of_increasingInOwn,
+    stated before the third look and never landed, said that where the de se condition holds every self-concerned
+    order meets C (Comparison) on all of a web's level paths, given that every level path's admissions are listed;
+    that hypothesis cannot hold once there is a formation (Web.not_listsAdmitted_every), so the statement held only
+    vacuously (REVIEW-LEAF-2, third look). Web.extension_ranked_of_increasingInOwn replaced it.
+  - The World's occurrence model, nine of its ten selected relations with falling and the order of standings added,
+    agrees at a unit k times finer, 0 < k (World.atFinerUnit_agree, carried by the identity correspondence), where the
+    world balances exactly as before (atFinerUnit_balanced_iff); so for k ≠ 1 no reading of it returns a positive
+    standing in both (standing_not_read). In still worlds every relabelling keeping sign and order keeps it (stillAt_relabel_agree),
+    standings 1, 2 and 1, 4 agree with no common factor (oneTwo_not_scaled), and no reading returns every world's
+    standings even up to a unit (standing_not_read_up_to_unit).
+  - Texts: 08 §7's two figures labelled (rows against distinct declarations) and recomputed, the edge paragraph's
+    sentence on the two premises (with its generator); 04's Bases and Open from the boundary record; COVERAGE's
+    significance row without Web.paths_comparison_widens, and witnesses for C, finite and L; WHAT-REMAINS' sections
+    (the unit grain is balance, not atomism; DU landed); the front pages' six lines calling the condition held de se
+    a statement on the root, met by some nets and failed by others, and READING-BUDGETS' recount. F5 now 44, 16, 6, 51.
+Supplied premises / correspondence: none beyond each net's own and each theorem's hypotheses. Self-concern and the
+       condition (on the root or held de se) are hypotheses where named; C is not derived: the ethics rests on the
+       continuation condition for scope and C for order, and C still alone orders in general. Modelling choices:
+       finite listings, two-valued admission, decided equality of items for the one-item law, admission decided by a
+       supplied reading on a web; natural-number amounts with one common factor at every step, discrete steps, the
+       occurrence model's selection as WorldRepresentation fixes it, and still worlds for the relabelling.
+Evidence: core receipt `20261101T000137.132110Z`; Becoming.PremiseWitnesses (35 theorems in 37 declarations),
+       a core leaf importing GrammarCases, Lifting and EventualWideningInstances, and Becoming.UnreadStandings
+       (32 theorems in 40 declarations), a core leaf importing WorldRepresentation, nothing
+       importing either; every axiom report empty. master_laws.py on that run reads the three records' laws; the
+       boundary report is merged main's less the row COVERAGE dropped.
+Standing: witnesses and near-definitional joins, labelled so; the one-item law and the pairwise ranking are small
+       proofs. What they add is the premises' standings: each premise named is met and failed, or not entailed, and
+       where self-concern gives what C asks, one way and between level paths whose
+       admissions are listed and end, is located, not assumed. The units leaf is a boundary of the
+       World's representation, not a law of becoming.
+Boundary:
+  - That any premise is warranted, or C derived; C on all of a web's level paths from self-concern.
+  - The converse link (C on level paths to an order on a listing); the other half on webs.
+  - What conservation fixes of the standings in worlds with exchange; relations reading values or differences.
+Output -> input: the J1–J4 reading for the premise card; the witnesses moved beside their models at those modules'
+       next change; worlds with exchange for the units; review by a person.
+```

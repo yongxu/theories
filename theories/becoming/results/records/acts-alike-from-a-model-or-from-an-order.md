@@ -11,13 +11,13 @@
 ## Laws
 
 1. For two blanketed laws reading one kind of value and act, a relation between their configurations that their steps keep, under which the values sensed and the acts are one, gives from related starts the same values sensed and acts at every step, so no selection through those tells the two apart. (`Becoming.ReadingLoop.observed_alike`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Witness, on the worlds of the untried act: a second ranking, the middle above high above low; a training occasion with the middle and the low value open and the middle chosen; both rankings, read as orders, accord with it, and they rank high and the middle oppositely. (`Becoming.ReadingLoop.Untested.rank'`, `Becoming.ReadingLoop.Untested.training`, `Becoming.ReadingLoop.Untested.above`, `Becoming.ReadingLoop.Untested.both_accord`, `Becoming.ReadingLoop.Untested.apart_beyond`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
 3. In the first world, each started with no answer pending, the middle value and the known act, the formation keeping both candidates with the first ranking and the one keeping the true candidate with the second have the same acts and values sensed at every step, the second resting at once on the known act. (`Becoming.ReadingLoop.Untested.orderRest`, `Becoming.ReadingLoop.Untested.order_rests`, `Becoming.ReadingLoop.Untested.model_or_order`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Started the same way with the true candidate alone, the first ranking turns: from step three on the formation takes the untried act and senses high; the second, already so started, keeps the known act. (`Becoming.ReadingLoop.Untested.informed_turns`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

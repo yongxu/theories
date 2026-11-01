@@ -1,0 +1,252 @@
+{
+  "schema_version": 2,
+  "id": "standings-not-read-off-the-occurrence-model",
+  "title": {
+    "en": "Standings not read off the occurrence model, even up to a unit",
+    "zh": "立度不由出现模型读出，虽至一单位亦然"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
+  "statement": {
+    "en": "For k > 1, a world counted in a unit k times finer balances where it does and agrees on the occurrence model's selected relations, so no reading of them returns a positive standing in both. In still worlds relabellings keeping sign and order keep them: none gives all worlds' standings up to a unit.",
+    "zh": "于 k > 1，以细 k 倍之单位所计之世界恰于原世界平衡处平衡，且于出现模型所选之关系皆与之一致，故无对此等关系之读法于二者皆返一为正之立度。于静止之世界，保号保序之每一重标皆保之，故无读法返每一世界之立度，虽至一单位亦然。"
+  },
+  "laws": [
+    {
+      "en": "For 0 < k, the world counted in a unit k times finer has k times every standing, need, take and give of the world and the same relata, activity, requirements, drawing and presence; conservation across a step is the same relation, so it balances exactly where the world does.",
+      "zh": "于 0 < k，以细 k 倍之单位所计之世界，其每一立度、所需、所取与所予皆为原世界之 k 倍，关系项、活动、所要求、汲取与在场皆同；跨步之守恒为同一关系，故其恰于原世界平衡处平衡。",
+      "declarations": [
+        "Becoming.UnreadStandings.total_scaled",
+        "Becoming.UnreadStandings.sum_eq_scaled",
+        "Becoming.World.atFinerUnit",
+        "Becoming.World.atFinerUnit_level",
+        "Becoming.World.atFinerUnit_taken",
+        "Becoming.World.atFinerUnit_given",
+        "Becoming.World.atFinerUnit_conserves",
+        "Becoming.World.atFinerUnit_balanced_iff"
+      ]
+    },
+    {
+      "en": "For 0 < k, nine of the ten relations the occurrence model selects, all but the same-step class, with falling and the order of standings added, agree pointwise at the finer unit, each carried by the identity correspondence; so the continuation family, beginning and ending under conservation and the class of activity read alike.",
+      "zh": "于 0 < k，出现模型所选十关系之九（同步之类除外），加以下降与立度之序，于较细之单位逐点一致，各由恒等之对应所承；故于守恒与活动之类下，延续之族、生与亡读之皆同。",
+      "declarations": [
+        "Becoming.UnreadStandings.pos_scaled",
+        "Becoming.UnreadStandings.le_scaled",
+        "Becoming.UnreadStandings.lt_scaled",
+        "Becoming.World.standingOrder",
+        "Becoming.World.ModelRelations",
+        "Becoming.World.ModelRelations.Agree",
+        "Becoming.World.modelRelations",
+        "Becoming.World.atFinerUnit_agree",
+        "Becoming.World.identityOnOccurrences",
+        "Becoming.World.carried_of_same",
+        "Becoming.World.atFinerUnit_carried",
+        "Becoming.World.atFinerUnit_activityClass",
+        "Becoming.World.atFinerUnit_family",
+        "Becoming.World.atFinerUnit_begins",
+        "Becoming.World.atFinerUnit_ends"
+      ]
+    },
+    {
+      "en": "No reading of those relations that keeps pointwise agreement returns, at an occurrence of positive standing of any world, the standing both in the world and in the world counted in a unit k times finer, for 0 < k and k ≠ 1.",
+      "zh": "对此等关系之读法，凡保逐点之一致者，于任一世界立度为正之出现处，皆不能于原世界与以细 k 倍之单位所计之世界二者皆返其立度，于 0 < k 且 k ≠ 1。",
+      "declarations": [
+        "Becoming.World.standing_not_read"
+      ]
+    },
+    {
+      "en": "In a still world every relabelling of the standings keeping sign and order keeps every such relation, squaring among them; standings 1, 2 and 1, 4 on two relata agree with no common factor; so no reading keeping agreement has, for every world, positive whole factors p and q with q times every standing equal to p times what it reads.",
+      "zh": "于静止之世界，保号保序之每一立度重标皆保每一此等关系，平方为其一；二关系项上立度 1、2 与 1、4 一致而无公因子；故无保一致之读法，对每一世界皆有正整因子 p 与 q，使 q 乘每一立度等于 p 乘其所读。",
+      "declarations": [
+        "Becoming.UnreadStandings.eq_relabelled",
+        "Becoming.UnreadStandings.lt_relabelled",
+        "Becoming.UnreadStandings.pos_squared",
+        "Becoming.UnreadStandings.le_squared",
+        "Becoming.UnreadStandings.assoc_mul",
+        "Becoming.UnreadStandings.left_comm_mul",
+        "Becoming.UnreadStandings.factor_of_one",
+        "Becoming.World.stillAt",
+        "Becoming.World.standingAt_eq_stillAt",
+        "Becoming.World.stillAt_conserves",
+        "Becoming.World.stillAt_relabel_agree",
+        "Becoming.World.stillAt_squared_agree",
+        "Becoming.World.oneTwo",
+        "Becoming.World.oneTwo_not_scaled",
+        "Becoming.World.ratio_apart",
+        "Becoming.World.standing_not_read_up_to_unit"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number amounts; one common factor k for every amount of a world at every step; discrete steps; the occurrence model and its selection as Becoming.WorldRepresentation fixes them, with falling and the order of standings added; for the relabelling, still worlds only.",
+      "zh": "自然数之数量；一世界于每步之每一数量共一因子 k；离散之步；出现模型及其所选如 Becoming.WorldRepresentation 所定，加以下降与立度之序；就重标，唯静止之世界。"
+    },
+    {
+      "en": "A reading is any map from a world's model relations to a number at each occurrence, the same wherever two readings of the relations agree pointwise; the factors p and q may be chosen world by world.",
+      "zh": "读法为自一世界之模型关系至每一出现处一数之任一映射，凡二关系之读逐点一致处皆同；因子 p 与 q 可逐世界而择。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "What conservation's equation fixes of the standings in worlds with exchange: a reading up to a unit there, or on any class without the two still worlds, is not ruled out.",
+      "zh": "于有交换之世界，守恒之方程定立度至何程度：于彼处，或于无此二静止世界之任一类，至一单位之读法未被排除。",
+      "kind": "scope"
+    },
+    {
+      "en": "Relations that read a value or a difference of amounts, such as \"standing is n\", which a re-identification carries and which read the count.",
+      "zh": "读数量之值或其差之关系，如「立度为 n」，其为重新认同所承且读出计数者。",
+      "kind": "scope"
+    },
+    {
+      "en": "Every relation a World carries, the grammar root itself, another model of the World, or a unit that changes from step to step.",
+      "zh": "世界所承之每一关系、文法之根本身、世界之他模型，或逐步而变之单位。",
+      "kind": "scope"
+    },
+    {
+      "en": "A root in which unit occurrences and their residence are fixed by relations independent of the counts.",
+      "zh": "一根，其中单位之出现及其驻留由独立于计数之关系所定。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: UnreadStandings imports WorldRepresentation, a leaf nothing imports. Its multiplication lemmas are proved in the module because Init's Nat.mul_assoc and Nat.mul_left_comm report propext. An independent AI review of the leaf, every finding taken. The record's 40 declarations (32 theorems) compile with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：UnreadStandings 引 WorldRepresentation，为无引之者之叶。其乘法引理于本模块中证之，因 Init 之 Nat.mul_assoc 与 Nat.mul_left_comm 报 propext。此叶经一独立之 AI 审阅，所见皆取。此记录 40 声明（定理 32）与全包同编译于记录所系收据之核心运行。"
+  },
+  "next_delta": {
+    "en": "What conservation's equation fixes of the standings in worlds with exchange, up to a unit or to what else; review by a person.",
+    "zh": "于有交换之世界，守恒之方程定立度至一单位或至他何；人之审查。"
+  },
+  "correspondence": {
+    "en": "That a selection of relations reading amounts only through sign, comparison in one unit and a homogeneous linear equation cannot fix the unit is the familiar fact that such measurement is at best of ratio scale; in still worlds the selection reads only order and sign, an ordinal scale, so not even the ratio is fixed.",
+    "zh": "仅经正负、一单位内之比较与齐次线性方程读数量之关系选择，不能定单位，为熟知之事：此等度量至多为比例尺度；于静止之世界，所选只读序与号，为序数尺度，故比例亦不定。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean",
+  "aliases": [
+    "the unit is not read off the occurrence model",
+    "单位不由出现模型读出",
+    "a world at a finer unit",
+    "Becoming.World.atFinerUnit_agree",
+    "Becoming.World.standing_not_read",
+    "Becoming.World.standing_not_read_up_to_unit",
+    "Becoming.World.stillAt_relabel_agree"
+  ],
+  "dependencies": [
+    {
+      "id": "the-world-represented-both-ways",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The occurrence model (World.conservationStep, Web.partialIdentity, World.withinStep), F1's worlds (World.standingAt, Witnesses.unrequired, Flow.still) and Becoming.GrammarTransport's keeping theorems («对应之像», «同族之对应», «生之对应», «亡之对应»).",
+        "zh": "出现模型（World.conservationStep、Web.partialIdentity、World.withinStep）、F1 之世界（World.standingAt、Witnesses.unrequired、Flow.still）与 Becoming.GrammarTransport 之保持定理（«对应之像»、«同族之对应»、«生之对应»、«亡之对应»）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "amounts-by-unit-matchings",
+      "detail": {
+        "en": "Balance by selected unit matchings: what amounts have in place of a derivation; this record states what the occurrence model leaves free in them.",
+        "zh": "以所选单位配对之平衡：数量所代推出者；此记录陈出现模型于其中所留之自由。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.UnreadStandings.total_scaled",
+        "Becoming.UnreadStandings.pos_scaled",
+        "Becoming.UnreadStandings.le_scaled",
+        "Becoming.UnreadStandings.lt_scaled",
+        "Becoming.UnreadStandings.sum_eq_scaled",
+        "Becoming.UnreadStandings.eq_relabelled",
+        "Becoming.UnreadStandings.lt_relabelled",
+        "Becoming.UnreadStandings.pos_squared",
+        "Becoming.UnreadStandings.le_squared",
+        "Becoming.UnreadStandings.assoc_mul",
+        "Becoming.UnreadStandings.left_comm_mul",
+        "Becoming.UnreadStandings.factor_of_one",
+        "Becoming.World.atFinerUnit",
+        "Becoming.World.atFinerUnit_level",
+        "Becoming.World.atFinerUnit_taken",
+        "Becoming.World.atFinerUnit_given",
+        "Becoming.World.atFinerUnit_conserves",
+        "Becoming.World.atFinerUnit_balanced_iff",
+        "Becoming.World.standingOrder",
+        "Becoming.World.ModelRelations",
+        "Becoming.World.ModelRelations.Agree",
+        "Becoming.World.modelRelations",
+        "Becoming.World.atFinerUnit_agree",
+        "Becoming.World.identityOnOccurrences",
+        "Becoming.World.carried_of_same",
+        "Becoming.World.atFinerUnit_carried",
+        "Becoming.World.atFinerUnit_activityClass",
+        "Becoming.World.atFinerUnit_family",
+        "Becoming.World.atFinerUnit_begins",
+        "Becoming.World.atFinerUnit_ends",
+        "Becoming.World.standing_not_read",
+        "Becoming.World.stillAt",
+        "Becoming.World.standingAt_eq_stillAt",
+        "Becoming.World.stillAt_conserves",
+        "Becoming.World.stillAt_relabel_agree",
+        "Becoming.World.stillAt_squared_agree",
+        "Becoming.World.oneTwo",
+        "Becoming.World.oneTwo_not_scaled",
+        "Becoming.World.ratio_apart",
+        "Becoming.World.standing_not_read_up_to_unit"
+      ],
+      "sha256": "63d60d4bb036af02e994e3f20abf21bf44c7e52a895b8607d42fce421dbade9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7103f56757260cda5b197be47af651293159a57060b48aa48043efdd0b3c686",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/scratch/units/REVIEW.md",
+      "role": "review",
+      "sha256": "e568327003f0647b448cccf67ab41490fb1fe687a09e48d25f681c3ecf75ef18",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md",
+      "role": "integration",
+      "sha256": "9e9ae79067833a186e73f0b358fd37b68e9cbf1168094d1ea94394512a7fad11",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "2eb2b975fbf43fab2a10bbd658e342ff02d9f3f4cb096dd9b3b595d0ad9e86d8",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.UnreadStandings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item DU (study section 489): added. What the occurrence model leaves free in the standings, the unit in every world and more in still worlds, from the review's units scratch, ported as Becoming.UnreadStandings, its helper lemmas' namespace renamed to the module's at the kit review and every other declaration unchanged; an independent AI review, every finding taken.",
+      "zh": "2026年11月1日，工作板条目 DU（研究第 489 节）：增。出现模型于立度所留之自由：每一世界之单位，静止世界中更多；出自审阅之单位草稿，移为 Becoming.UnreadStandings，其辅助引理之命名空间于套件审阅时改为模块之名，余声明不变；经一独立之 AI 审阅，所见皆取。"
+    }
+  ]
+}

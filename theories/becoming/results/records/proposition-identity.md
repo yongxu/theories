@@ -11,15 +11,15 @@
 ## Laws
 
 1. propext is a lumping of every reading: a reading of propositions is lumped (Learning.Lumped) by interderivability, read through the two ends of an interderivation, exactly where it takes one value at both ends of every one; propext, as a proposition (Extensional), holds exactly where every reading into propositions is so lumped, and then every reading into any type is. (`Becoming.PropositionIdentity.Extensional`, `Becoming.PropositionIdentity.Interderivation`, `Becoming.PropositionIdentity.endOf`, `Becoming.PropositionIdentity.relation`, `Becoming.PropositionIdentity.lumped_iff`, `Becoming.PropositionIdentity.extensional_iff_lumped`, `Becoming.PropositionIdentity.lumped_of_extensional`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Readings built from relations need no axiom: a formula built from atoms, the two constants, conjunction, disjunction, implication and quantifiers over any type takes interderivable atoms to interderivable propositions, so a reading of one proposition through a formula, the other atoms fixed, respects interderivability, with iff, not equality. (`Becoming.PropositionIdentity.Formula`, `Becoming.PropositionIdentity.Formula.eval`, `Becoming.PropositionIdentity.Formula.eval_congr`, `Becoming.PropositionIdentity.Formula.atoms`, `Becoming.PropositionIdentity.Formula.read`, `Becoming.PropositionIdentity.Formula.read_congr`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The reading that needs propext reads by name: the identity reading is lumped by interderivability exactly where propext holds, and where it is, every reading is. (`Becoming.PropositionIdentity.byName`, `Becoming.PropositionIdentity.byName_lumped_iff`, `Becoming.PropositionIdentity.lumped_of_byName`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. What a derivation carries: any two witnesses of a ↔ b are equal, as are any two derivations of b from a, so the identification forgets no witness; between types it would, since Bool has two different self-inverse maps, the identity and negation. (`Becoming.PropositionIdentity.iff_witness_unique`, `Becoming.PropositionIdentity.derivation_unique`, `Becoming.PropositionIdentity.flip`, `Becoming.PropositionIdentity.two_equivalences`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. What is lost is the course: transport along any equation of propositions with a constant motive keeps the value, and along rfl it is the identity by computation. That along propext it does not reduce is a kernel observation (Lean 4.29.1), not a theorem. (`Becoming.PropositionIdentity.transport_const`, `Becoming.PropositionIdentity.transport_refl`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

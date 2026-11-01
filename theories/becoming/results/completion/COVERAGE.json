@@ -556,7 +556,6 @@
       "declarations": [
         "Becoming.unrestricted_iff_livingSignificance",
         "Becoming.Web.widens_iff_retains_adds",
-        "Becoming.Web.paths_comparison_widens",
         "Becoming.Web.paths_one_object",
         "Becoming.Weighting.widens_iff_every_positive"
       ],
@@ -704,8 +703,11 @@
       {
         "name": "finite",
         "pattern": "World\\.Finite\\b",
-        "witnesses": [],
-        "note": "witnesses exist in the records (accretion, attrition) but are not listed here"
+        "witnesses": [
+          "Becoming.World.strained_finite",
+          "Becoming.World.throughput_world"
+        ],
+        "note": "meets: the strained world is finite (World.strained_finite); fails: the throughput world is balanced, dissipative and arising-embodied, its arising recurring, and not finite (the last conjunct of World.throughput_world); more witnesses in the records (accretion, attrition)"
       },
       {
         "name": "enclosed",
@@ -759,15 +761,19 @@
         "pattern": "\\bComparison\\b",
         "witnesses": [
           "Becoming.Web.paths_comparison_widens",
-          "Becoming.Regimes.no_comparison_through_marginals"
+          "Becoming.Regimes.no_comparison_through_marginals",
+          "Becoming.ReadsNoOrder.not_entails"
         ],
-        "note": "meets: on level paths, better read as widening satisfies C; fails: no comparison read off marginals satisfies C where retaining a joint possibility extends releasing it. Meeting and failing C says what C asks of a comparison, not that C is warranted"
+        "note": "meets: on level paths, better read as widening satisfies C (Web.paths_comparison_widens, an unfolding of C with better read as widening, a trivial model: consistency only; it left the significance row's central declarations); fails: no comparison read off marginals satisfies C where retaining a joint possibility extends releasing it; no statement reading no order, and holding at a datum with an extension, entails it (ReadsNoOrder.not_entails, immediate: better is free). Meeting and failing C says what C asks of a comparison, not that C is warranted"
       },
       {
         "name": "L, lifting",
         "pattern": "\\bLiftBetter\\b",
-        "witnesses": [],
-        "note": "an order premise: no theorem exhibits a lifting meeting and one failing it"
+        "witnesses": [
+          "Becoming.LiftModel.met_and_failed",
+          "Becoming.LiftModel.some_outcome_does_not_lift"
+        ],
+        "note": "met and failed on LiftModel's frame (the move reaching 3 lifted above the move reaching 1, not the reverse, LiftModel.met_and_failed); the choice of the rule is substantive (a response with a better and a worse outcome is comparable by neither direction, LiftModel.some_outcome_does_not_lift)"
       }
     ],
     "tying": [

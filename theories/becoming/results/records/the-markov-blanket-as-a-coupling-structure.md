@@ -11,21 +11,21 @@
 ## Laws
 
 1. A blanketed law has four parts of one law, told apart by which part reads which: the internal and active parts read the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts; its step moves all four, its course is the orbit (Blanketed, Parts, step, course, congr3). (`Becoming.Blanket.Blanketed`, `Becoming.Blanket.Parts`, `Becoming.Blanket.Blanketed.step`, `Becoming.Blanket.Blanketed.course`, `Becoming.Blanket.congr3`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The agent is driven by its sensory course: from one internal and one active state, courses alike on the sensory part have one internal and one active course; the world is driven by the active course (agent_through_sensory, world_through_active). (`Becoming.Blanket.Blanketed.agent_through_sensory`, `Becoming.Blanket.Blanketed.world_through_active`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Each side's course is fixed by its start and the blanket's course, and every reading of the internal course is a selection through the blanket: the deterministic case of the time-unrolled blanket (BlanketAlike, internal_through_blanket, external_through_blanket, reads_through_blanket). (`Becoming.Blanket.Blanketed.BlanketAlike`, `Becoming.Blanket.Blanketed.internal_through_blanket`, `Becoming.Blanket.Blanketed.external_through_blanket`, `Becoming.Blanket.Blanketed.reads_through_blanket`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Where the sensory part reads the external part only through a map, two courses from one agent and sensory start whose external parts are alike through it have one internal, sensory and active course: generalization through a lumping on every blanketed law (through_reading). (`Becoming.Blanket.Blanketed.through_reading`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A reading through the blanket separates at most what the blanket tells apart: an internal part reading nothing has one course while the blankets differ (Deaf.law, Deaf.lumps). (`Becoming.Blanket.Deaf.law`, `Becoming.Blanket.Deaf.lumps`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. The threshold witness: the internal part whether the system goes on, the sensory part reading the supply only by threshold, the supply draining by one; the blankets agree before step four, at step four the sensory parts differ while the internal parts agree, at step five one has ended, and the ended course rests (law and eight more). (`Becoming.Blanket.ThresholdDrain.law`, `Becoming.Blanket.ThresholdDrain.short`, `Becoming.Blanket.ThresholdDrain.long`, `Becoming.Blanket.ThresholdDrain.reads_threshold`, `Becoming.Blanket.ThresholdDrain.alike_before_four`, `Becoming.Blanket.ThresholdDrain.sensed_at_break`, `Becoming.Blanket.ThresholdDrain.ended`, `Becoming.Blanket.ThresholdDrain.ended_rests`, `Becoming.Blanket.ThresholdDrain.short_rests`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. The witness's blanket is the World's coupling by threshold: its sensory part is the World's admission at need one, and its courses are blanket-alike before step n + 2 exactly where the supply histories are alike through the formation's couplings up to n (web and five more). (`Becoming.Blanket.ThresholdDrain.web`, `Becoming.Blanket.ThresholdDrain.sensory_is_admission`, `Becoming.Blanket.ThresholdDrain.external_course`, `Becoming.Blanket.ThresholdDrain.sensory_succ`, `Becoming.Blanket.ThresholdDrain.bool_eq_of_iff`, `Becoming.Blanket.ThresholdDrain.blanket_iff_through`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. With any model updated by any rule and any policy, from a supply of three and every supply of four or more, every reading of the internal course up to step four is alike, the sensory parts differing first at step four, while at step five the first has ended (modelLaw and five more). (`Becoming.Blanket.ThresholdDrain.modelLaw`, `Becoming.Blanket.ThresholdDrain.start`, `Becoming.Blanket.ThresholdDrain.sensed_alike`, `Becoming.Blanket.ThresholdDrain.blanket_alike`, `Becoming.Blanket.ThresholdDrain.any_model`, `Becoming.Blanket.ThresholdDrain.sensory_apart_at_four`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -38,7 +38,7 @@
 ## Does not show
 
 - Densities, the Helmholtz decomposition, nonequilibrium steady states, or that statistical and dynamical blankets coincide.
-- A World formation in general as the agent of a blanketed law: the join is proved for the witness only.
+- A formation's own record as the internal part of a blanketed law: for any formation the agent is a model fed by what couples in (a-formations-couplings-as-its-blanket).
 - Any free energy, or that a threshold-reading policy cannot draw on a larger supply.
 - That the principle is wrong: no sentence of its literature is forbidden here.
 - **Counterexample:** From a supply of three and of four or more, with any model and policy, the internal courses agree up to step four and at step five the first has ended (ThresholdDrain.any_model). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
@@ -56,7 +56,7 @@ Canonical source: [Blanket.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A World formation in general as the agent of a blanketed law, its sensory course its own course; the threshold-reading policy unable to draw on a larger supply; review by a person.
+A formation's own record as the internal part of a blanketed law; the threshold-reading policy unable to draw on a larger supply; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -73,8 +73,9 @@ The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, 
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). The free-energy principle's blanket and existence claim, stated in the same module.
 - related, not a proved adapter: [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md). The blanket at a steady state: the statistical form, conditional independence given the blanket, which detailed balance of the internal moves gives with positive weights, moves present at every external state and rate ratios reading none; the coupling form holds on every run.
 - related, not a proved adapter: [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md). The linear case: the Euler step of a sparsely coupled drift as a blanketed law, with noise, and the synchronous scheme against the statistical form.
+- related, not a proved adapter: [a-formations-couplings-as-its-blanket](a-formations-couplings-as-its-blanket.md). A formation's couplings as its blanket, any model fed by them the agent by construction, the witness's join its case; and when a blanket's existence constrains.
 
-**Used by:** [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
+**Used by:** [a-formations-couplings-as-its-blanket](a-formations-couplings-as-its-blanket.md) · [a-reading-informed-and-revalued](a-reading-informed-and-revalued.md) · [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md) · [the-blanket-in-a-linear-steady-state](the-blanket-in-a-linear-steady-state.md) · [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +99,7 @@ Aliases: `The Markov blanket as a coupling structure`, `马尔可夫毯作为耦
 
 - 29 October 2026: added (UE18), the Markov blanket as a coupling structure: the agent driven by its sensory course on a blanketed law, bounded by what the sensory part reads (lumping); with any model and policy a threshold-read supply unseen before the break registers, the witness joined to the World's coupling; after a review whose probe the revision adopted, and a re-check; study section 452.
 - 1 November 2026, board item UE26 (study section 484): related to the-blanket-at-a-steady-state and the-blanket-in-a-linear-steady-state; no statement, next step or declaration changed.
+- 1 November 2026, board item UE27 (study section 488): the World formation in general, not shown, narrowed to a formation's own record as the internal part, any model fed by a formation's couplings being the agent of a blanketed law by construction (a-formations-couplings-as-its-blanket); next step brought to it; related to a-formations-couplings-as-its-blanket; no statement, law or declaration changed.
 
 </details>
 

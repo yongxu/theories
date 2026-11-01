@@ -11,29 +11,29 @@
 ## Laws
 
 1. Flow.Commuted L L' t: L' takes the exchanges of L across the steps from t and t+1 in the other order and every other exchange as L does; Web.Commuted W W' t: each standing, activity, dependence, need and drawing of W changes across at most one of the two steps, and W' makes that change across the other (Moved). (`Becoming.Flow.Commuted`, `Becoming.Flow.SameExchange`, `Becoming.Web.Commuted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Both relations are symmetric and are realized by Flow.swap and Web.commute wherever sides say which relata change across which step and split the two steps. (`Becoming.Flow.Commuted.symm`, `Becoming.Web.Commuted.symm`, `Becoming.Flow.swap`, `Becoming.Web.commute`, `Becoming.Web.Split`, `Becoming.Flow.swap_commuted`, `Becoming.Web.commute_commuted`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Balance, dissipation and embodiment hold of the commuted world exactly where they hold of the world: the standing amounts exchange (Exchanged), their rises and falls changing places. (`Becoming.World.commute`, `Becoming.World.commute_laws`, `Becoming.Flow.Commuted.balances_iff`, `Becoming.Flow.Commuted.dissipative_iff`, `Becoming.Web.Commuted.embodied`, `Becoming.Flow.Balances`, `Becoming.Flow.Dissipative`, `Becoming.Web.Embodied`)
-   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Flow.Balances` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Over any stretch holding both steps, the counts of a finite family's arising and ceasing (with activity decided in both worlds), the rises and falls of a family's total standing and the steps at which it falls are those of the world. (`Becoming.World.commute_counts`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. Repeated, the commutations generate Reorders, which keeps balance, dissipation and embodiment and, over a stretch holding every commuted pair, the totals: Mazurkiewicz trace equivalence, with independence of two consecutive exchanges taken as sides splitting them. (`Becoming.Reorders`, `Becoming.Reorders.laws`, `Becoming.Reorders.totals`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. The order shows through dependence and through a shared relatum, each with a witness. Activity needing support holds after commuting where no dependence crosses the sides; in Crossing the two exchanges share no relatum and the sides split them, yet a relatum depends on a condition the other exchange ends, and in the other order it is active without support. (`Becoming.Web.Dependent`, `Becoming.Web.commute_dependent`, `Becoming.Order.Crossing.world`, `Becoming.Order.Crossing.split`, `Becoming.Order.Crossing.order_registers`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Only active relata giving holds after commuting where no relatum giving has its activity begun by the first step or ended by the second; in Arising the relatum arising across the first step gives across the second, and in the other order gives before it is active. (`Becoming.Flow.Acting`, `Becoming.Flow.Commuted.acting`, `Becoming.Order.Arising.world`, `Becoming.Order.Arising.split`, `Becoming.Order.Arising.order_registers`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. With a footprint saying which relata each exchange touches and containing the exchanges, commuting neighbouring exchanges not joined is a step of Reorders with the footprint as sides, and any number of such commutations keeps every premise in both directions, activity needing support, only active relata giving and taking and bounded transmission with the same bound among them. (`Becoming.Footprinted`, `Becoming.Footprinted.Contains`, `Becoming.Footprinted.Joined`, `Becoming.Footprinted.split`, `Becoming.Footprinted.reorder_premises`, `Becoming.Flow.Taking`, `Becoming.Flow.TransmitsWithin`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 9. Along any Reorders, joined commutations included, the counts of arising and ceasing over a stretch holding every commuted pair are kept where activity is decided in both worlds. (`Becoming.Reorders.counts`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. Plain Reorders, its sides given without a footprint, can commute exchanges that every containing footprint joins, and doing so breaks activity needing support and only active relata giving: these two premises carry exactly along commutations of exchanges not joined. No premise is added. (`Becoming.Order.Crossing.joined`, `Becoming.Order.Crossing.reorders_joined`, `Becoming.Order.Arising.joined`, `Becoming.Order.Arising.reorders_joined`)
-    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. listed_splice constructs the intermediate list from sides of the censuses before and after a commutation. Every commutation preserves activity and standing censuses forward; the reverse direction requires split sides. (`Becoming.spliceAt`, `Becoming.listed_splice`, `Becoming.Web.commute_census`, `Becoming.Web.commute_standingCensus`, `Becoming.Web.commute_census_back`, `Becoming.Web.commute_standingCensus_back`, `Becoming.World.commute_counted`, `Becoming.World.commute_counted_iff`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 12. Thus every Reorders, joined pairs included, preserves existence of both censuses in both directions. Arbitrary Footprinted.reorder preserves them forward; independent reorderings with a containing footprint preserve them both ways. (`Becoming.Reorders.census`, `Becoming.Footprinted.counted_reorder`, `Becoming.Footprinted.standing_reorder`, `Becoming.Footprinted.reorder_census`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

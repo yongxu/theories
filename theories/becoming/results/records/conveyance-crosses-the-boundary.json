@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-28T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-31T12:15:00+00:00",
   "statement": {
     "en": "Read with one kind of relatum, conveyance is a candidate reading of related. A continuing family's boundary is from no step on left uncrossed, so its region is no cut; in the embedding of a two-kind model, conveyance relates two conditions, which interaction, living on and descent never do.",
     "zh": "以一类关系项读，输送是 related 的一种候选读法。延续家族的边界不会从某步起再无穿越，其区域不是切口；在两类模型的嵌入中，输送使两个条件相关，交互、以之为生与世系从不如此。"
@@ -64,6 +64,26 @@
         "Becoming.Clearing.resource_not_cut",
         "Becoming.Clearing.conveyance_only",
         "Becoming.Clearing.resource_not_cut_living_on"
+      ]
+    },
+    {
+      "en": "Read on a self's boundaries along a relation, regions holding it and closed under the relation: under the second law's premises the region of a continuing family's events is no boundary of any event's self along conveyance, so not every member's event has its closure along conveyance within the family; in the clearing the resource's region is no boundary along conveyance nor along living on.",
+      "zh": "读于自身沿一关系之边界（含之且于此关系下闭之域）：在第二律之前提下，延续家族之事件之域沿输送不是任何事件之自身之边界，故并非每个成员之事件沿输送之闭包皆在家族之内；在清除者之见证中，资源之域沿输送、沿以之为生皆非边界。",
+      "declarations": [
+        "Becoming.Flow.region_no_boundary",
+        "Becoming.Flow.closures_not_within_region",
+        "Becoming.Clearing.resource_no_boundary"
+      ]
+    },
+    {
+      "en": "The cut is not going out (the grammar's «不出») at a valuation's relation, by definition, so a region closed under the relation is a cut, and a cut is closed where membership is stable. Conveyance's relation is symmetric, so along it nothing goes out of a region exactly where nothing comes in.",
+      "zh": "切口依定义即一赋值之关系下之不出（文法之 «不出»），故于此关系下闭之域是切口，凡不外者皆内处切口即闭。输送之关系对称，故沿之不出恰是不入。",
+      "declarations": [
+        "Becoming.Flow.cut_iff_notGoingOut",
+        "Becoming.Flow.cut_of_closedUnder",
+        "Becoming.Flow.closedUnder_of_cut",
+        "Becoming.Flow.conveyance_symm",
+        "Becoming.Flow.cut_iff_notComingIn"
       ]
     }
   ],
@@ -130,16 +150,16 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker, all core: Becoming.Standpoints bound to receipt becoming-checks/20261020T005554.047169Z, Becoming.Continuation to 20261022T054058.112616Z, Becoming.Roles and Becoming.Correspondence to 20261020T051144.879480Z, Becoming.Descent to 20261019T231053.882924Z; every cited declaration has an empty axiom report. The author's counterreview is in the integration note; the independent review (CONTINUATION-GROUNDING-REVIEW.md) accepts its Lean, its corrections taken in the integration note.",
-    "zh": "4.29.1 合并检查器实查，全为核心：Standpoints 绑定 becoming-checks/20261020T005554.047169Z，Continuation 绑定 20261022T054058.112616Z，Roles、Correspondence 绑定 20261020T051144.879480Z，Descent 绑定 20261019T231053.882924Z；所引声明公理报告皆空。作者反审见整合文档；独立审查接受其 Lean，更正已处理。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker, all core: Standpoints bound to receipt 20261020T005554.047169Z, Continuation to 20261022T054058.112616Z, Roles and Correspondence to 20261020T051144.879480Z, Descent to 20261019T231053.882924Z, ConveyanceBoundaries to 20261031T202201.956842Z; every cited declaration has an empty axiom report. The author's counterreview is in the integration note; the independent review (CONTINUATION-GROUNDING-REVIEW.md) accepts its Lean, its corrections taken there; an independent AI reader read the last two laws.",
+    "zh": "合并检查器实查，皆核心：Standpoints 20261020T005554.047169Z，Continuation 20261022T054058.112616Z，Roles、Correspondence 20261020T051144.879480Z，Descent 20261019T231053.882924Z，ConveyanceBoundaries 20261031T202201.956842Z；公理报告皆空。作者反审见整合文档；独立审查接受其 Lean，已更正；末二律经独立 AI 审读。"
   },
   "next_delta": {
     "en": "State an ordered conveyance sensitive to whether what is conveyed sustains the receiver, the same relation on the whole-run reading, and conveyance combined with living on.",
     "zh": "陈述排定时间、对所输送者是否维持接受者敏感的输送，整段读法上的同一关系，以及输送与以之为生的组合。"
   },
   "correspondence": {
-    "zh": "Ren 的提议说，整体依视角而定：“how much does one consider something to be a part of its system dynamics”。continuing-self-fed-from-beyond 说，延续的家族从其外得到供给；本结果把这一输送读作关系：以输送为 related 时，延续家族的边界是形成的、实在的，却不是关系的切口。相比交互（一方汲取、另一方依存）、以之为生（汲取并依存）与世系（给予使其开始作为条件而在），输送关联的是一个形成所携带的两端：它取用的与它给予的。读法（AI 的论证）：一个系统的边界由它所依存者的流穿越，所以以输送为关系时，珍视自身的延续就到达向它输送的来源（在关系中立下）。这是关系的读法，不是公理；它不使无人持有的来源被持有。既然以之为生之下区域也不是切口，区域不是切口本身不新；新的是条件之间的关系，region_not_a_cut 的独特之处在流入的方向（AI 的读法）。名称（conveyance、Cut 等）是 AI 的表述。",
-    "en": "Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. continuing-self-fed-from-beyond says that a continuing family is fed from beyond; this result reads that conveyance as a relation: with conveyance as related, a continuing family's boundary is formed and real but no cut in the relations. Unlike interaction (one draws, the other depends), living on (drawing and depending) and descent (giving as something comes to stand), conveyance relates the two ends a formation carries between: what it takes from and what it gives to. A reading (the AI's argument): a system's boundary is crossed by the flow of what it depends on, so with conveyance as a relation, valuing one's own continuation reaches the source conveyed into it (under relational neutrality). This is a reading of relations, not an axiom; it does not make an unheld source held. As under living on a region is no cut either, a region being no cut is not itself new; what is new is the relation between conditions, and region_not_a_cut is distinctive in the direction of inflow (an AI reading). The names (conveyance, Cut and others) are an AI wording."
+    "zh": "Ren 的提议说，整体依视角而定：“how much does one consider something to be a part of its system dynamics”。continuing-self-fed-from-beyond 说，延续的家族从其外得到供给；本结果把这一输送读作关系：以输送为 related 时，延续家族之域是形成的，却不是切口，故沿输送不是边界。相比交互（一方汲取、另一方依存）、以之为生（汲取并依存）与世系（给予使其开始作为条件而在），输送关联的是一个形成所携带的两端：它取用的与它给予的。读法（AI 的论证）：一个系统的边界由它所依存者的流穿越，所以以输送为关系时，珍视自身的延续就到达向它输送的来源（在关系中立下）。这是关系的读法，不是公理；它不使无人持有的来源被持有。既然以之为生之下区域也不是切口，区域不是切口本身不新；新的是条件之间的关系，region_not_a_cut 的独特之处在流入的方向（AI 的读法）。名称（conveyance、Cut 等）是 AI 的表述。",
+    "en": "Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. continuing-self-fed-from-beyond says that a continuing family is fed from beyond; this result reads that conveyance as a relation: with conveyance as related, a continuing family's region is formed but no cut, so no boundary along conveyance. Unlike interaction (one draws, the other depends), living on (drawing and depending) and descent (giving as something comes to stand), conveyance relates the two ends a formation carries between: what it takes from and what it gives to. A reading (the AI's argument): a system's boundary is crossed by the flow of what it depends on, so with conveyance as a relation, valuing one's own continuation reaches the source conveyed into it (under relational neutrality). This is a reading of relations, not an axiom; it does not make an unheld source held. As under living on a region is no cut either, being no cut is not itself new; what is new is the relation between conditions, and region_not_a_cut is distinctive in the direction of inflow (an AI reading). The names (conveyance, Cut and others) are an AI wording."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean",
   "aliases": [
@@ -154,7 +174,16 @@
     "Becoming.Clearing.crossed",
     "Becoming.Clearing.resource_not_cut",
     "Becoming.Clearing.conveyance_only",
-    "Becoming.Clearing.resource_not_cut_living_on"
+    "Becoming.Clearing.resource_not_cut_living_on",
+    "Becoming.Flow.region_no_boundary",
+    "Becoming.Flow.closures_not_within_region",
+    "Becoming.Clearing.resource_no_boundary",
+    "a cut is not going out",
+    "Becoming.Flow.cut_iff_notGoingOut",
+    "Becoming.Flow.cut_of_closedUnder",
+    "Becoming.Flow.closedUnder_of_cut",
+    "Becoming.Flow.conveyance_symm",
+    "Becoming.Flow.cut_iff_notComingIn"
   ],
   "dependencies": [
     {
@@ -248,6 +277,22 @@
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean"
       }
+    },
+    {
+      "id": "not-going-out-of-a-region",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The cut is «不出» at a valuation's relation by definition; «闭则不出», «不外者内则不出当且仅当闭» and «对称则不出当且仅当逆不出» give the seventh law, and «闭则不出», through Flow.cut_of_closedUnder, the sixth.",
+        "zh": "切口依定义即一赋值之关系下之 «不出»；«闭则不出»、«不外者内则不出当且仅当闭» 与 «对称则不出当且仅当逆不出» 给出第七律，«闭则不出» 经 Flow.cut_of_closedUnder 给出第六律。"
+      }
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses closedUnder_iff_closed, by which Flow.cut_of_closedUnder and Flow.closedUnder_of_cut read being closed under a valuation's relation as the grammar's «闭», and «缘在所闭», by which Flow.closures_not_within_region puts each related event in the closure.",
+        "zh": "复用 closedUnder_iff_closed（Flow.cut_of_closedUnder 与 Flow.closedUnder_of_cut 借之把于一赋值之关系下闭读作文法之 «闭»）与 «缘在所闭»（Flow.closures_not_within_region 借之使每一相关事件在所闭之内）。"
+      }
     }
   ],
   "related": [
@@ -263,6 +308,13 @@
       "detail": {
         "zh": "关系中立（transmits）与 Neutral 的定义。",
         "en": "The definitions of relational neutrality (transmits) and Neutral."
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "detail": {
+        "en": "A self's least boundary along a relation is its closure; the sixth law says a continuing family's conveyance closure is not within the family.",
+        "zh": "自身沿一关系之最小边界是其闭包；第六律说延续家族沿输送之闭包不在家族之内。"
       }
     }
   ],
@@ -322,6 +374,21 @@
       "declarations": [
         "Becoming.Web.Interacts",
         "Becoming.Web.interaction"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean",
+      "role": "proof",
+      "sha256": "3d099e164fbcac7ff236b87149acb76cf5dce5878636aba6b8afb0be76efd60c",
+      "declarations": [
+        "Becoming.Flow.cut_iff_notGoingOut",
+        "Becoming.Flow.cut_of_closedUnder",
+        "Becoming.Flow.closedUnder_of_cut",
+        "Becoming.Flow.conveyance_symm",
+        "Becoming.Flow.cut_iff_notComingIn",
+        "Becoming.Flow.region_no_boundary",
+        "Becoming.Flow.closures_not_within_region",
+        "Becoming.Clearing.resource_no_boundary"
       ]
     },
     {
@@ -432,6 +499,12 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "role": "receipt",
+      "sha256": "40ef6bb6514661fbb3ed7b705b45d28871fe14f6a9c1c5162c385ac7ff506117",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -467,6 +540,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Correspondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConveyanceBoundaries.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConveyanceBoundaries",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -525,6 +605,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement kept, its last clause narrowed to the embedding of a two-kind model, where roles_conditions_unrelated holds (in a general one-kind web a condition can also be active), as the home section says; the claim split into 5 laws, each read against its declarations in Becoming.Standpoints, Continuation, Roles, Descent and Correspondence, with the conditions the Lean takes written in (balance, dissipation, decided equality, no repetition, enclosure, recurring taking; relational neutrality and a living source for reaching it), boundary_crossed stated as the negated universal it proves; in the second counterexample's Chinese 免费 (free of charge) became 无需流动, a word of exchange in a live field; the claim's reading that a region being no cut is not new went to the correspondence, labelled an AI reading; the limitations became four does-not-show items, with the standard boundaries significance-related-not-asserted, discrete-steps, decidability and names-provisional and one added hypothesis (relational neutrality, which the claim named a hypothesis); no premise's content, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [conveyance-crosses-the-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/conveyance-crosses-the-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the counterexamples, hypotheses, each read against the Lean it cites. A cold read of the applied record was taken in hypotheses.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，其末一分句按主章收窄到两类模型的嵌入（roles_conditions_unrelated 在此成立；在一般的一类网中条件也可能活跃）；主张拆为 5 条规律，各条对照 Becoming.Standpoints、Continuation、Roles、Descent 与 Correspondence 中的声明核读，Lean 所取的条件都写入（平衡、耗散、相等可判定、不重复、被围住、取用复现；到达来源需要关系中立与活的来源），boundary_crossed 按其所证的否定全称写；第二条反例中文的“免费”改为“无需流动”（交换词）；主张中“区域不是切口本身不新”的读法移入对应，标为 AI 的读法；限制改为四条“未表明”，并引用通用边界 significance-related-not-asserted、discrete-steps、decidability、names-provisional，加一条前提（主张称为假设的关系中立）；前提内容、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [conveyance-crosses-the-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/conveyance-crosses-the-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及反例、前提，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及前提。"
+    },
+    {
+      "en": "31 October 2026, board item BD2: a sixth law reads the crossing on a self's boundaries along a relation (Becoming.ConveyanceBoundaries): a continuing family's region is no boundary along conveyance, and not every member's closure lies within the family; in the clearing the resource's region is no boundary along conveyance or living on. A seventh law reads the cut as the grammar's not going out by definition, closed regions as cuts and stable cuts as closed, and conveyance's relation as symmetric, so that along it not going out is not coming in. Dependencies on not-going-out-of-a-region and on master-laws-on-the-grammar name the laws the sixth and seventh laws reuse. No earlier law, premise or declaration changed.",
+      "zh": "2026年10月31日，工作板条目 BD2：第六律把穿越读于自身沿一关系之边界（Becoming.ConveyanceBoundaries）：延续家族之域沿输送非边界，且非每个成员之闭包皆在家族之内；在清除者之见证中，资源之域沿输送或以之为生皆非边界。第七律依定义把切口读作文法之不出，闭域是切口，凡不外者皆内之切口闭，并读输送之关系为对称，故沿之不出即不入。所依之 not-going-out-of-a-region 与 master-laws-on-the-grammar 指明第六、七律所复用之律。先前规律、前提与声明皆未变。"
     }
   ],
   "text_versions": [

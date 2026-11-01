@@ -1,0 +1,257 @@
+{
+  "schema_version": 2,
+  "id": "self-concern-and-c-under-the-condition",
+  "title": {
+    "en": "Self-concern and C under the condition",
+    "zh": "条件之下之自关切与 C"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
+  "statement": {
+    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: as a center's reach, where the root's condition holds; held de se, where the continuation condition does. There, admission decided, it ranks extensions between listed paths, one way.",
+    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合：于自中心之所及，即根上之条件成立处；于自承，即延续条件成立处。彼成立且接纳可判定处，自关切把二所列层径间之每一扩展皆排定。"
+  },
+  "laws": [
+    {
+      "en": "On a listing, every order is increasing in its own continuation exactly when it is increasing in admission if and only if the marking marks every listed item: a listed item left unmarked gives a self-concerned order not increasing in admission. Read from standpoints, for any relation the markings read, the two coincide everywhere exactly where it holds of every standpoint and item.",
+      "zh": "于一列表，每一次序于其自身延续上递增恰当其于接纳上递增，当且仅当标记标出每一所列之项：一所列而未标之项，给出一自关切而不于接纳上递增之次序。自诸立场读，对标记所读之任一关系，二者处处相合，恰当此关系于每一立场与项皆成。",
+      "declarations": [
+        "Becoming.Weighting.exists_increasingInOwn_not_increasing",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all"
+      ]
+    },
+    {
+      "en": "With each marking reading what the line under a class from the standpoint's center reaches along a relation, the two coincide everywhere exactly where the condition on the root holds; with it reading the center's closure along a relation, exactly where the condition held de se does. Near-definitional: the schema above at those readings. One half each: where it holds they coincide; an item outside parts them.",
+      "zh": "各标记读自立场之中心于一类下沿一关系之线所及者，则二者处处相合，恰当根上之条件成立；读中心沿一关系之闭包，则恰当自承之延续条件成立。近乎定义：即上之模式于此等读法。各半：条件成立处二者相合；一在外之项使之分。",
+      "declarations": [
+        "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside",
+        "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted"
+      ]
+    },
+    {
+      "en": "With admission decided and what two level paths admit listed, an order increasing in admission ranks every extension between them, every claim counted as living; where the de se condition holds, so does an order increasing in the own continuation, each item marked by its formation. Listed paths admit nothing from some step on, and once there is a formation no list holds what every level path admits.",
+      "zh": "接纳可判定，且二层径所接纳者已列，则于接纳上递增之次序把其间每一扩展皆排定，每一主张皆计为活；自承之条件成立处，于自身延续上递增之次序亦然，每项以其构成标之。所列之径自某步起无所接纳；一有构成，即无一列表含每一层径之所接纳。",
+      "declarations": [
+        "Becoming.Web.admits_need",
+        "Becoming.Web.admits_nothing_from_of_listed",
+        "Becoming.Web.not_listsAdmitted_every",
+        "Becoming.Web.no_extension_of_listsAdmitted_every",
+        "Becoming.Web.extension_ranked_of_increasing",
+        "Becoming.Web.extension_ranked_of_increasingInOwn"
+      ]
+    },
+    {
+      "en": "Along the net, self-concern and being increasing in admission coincide on the endless line of descent and part on two family lines with no condition between them, whose first birth reaches exactly its own family; along the net's converse they coincide in descent that ends and part on the endless line from every center.",
+      "zh": "沿网，自关切与于接纳上递增于无尽传承之线相合，于其间无条件之二族线相分，其初生所及恰为己族；沿网之逆，于有终之传承相合，于无尽之线自每一中心相分。",
+      "declarations": [
+        "Becoming.TwoLines.first_line_reaches_both",
+        "Becoming.TwoLines.first_line_reach_iff",
+        "Becoming.increasingInOwn_with_net",
+        "Becoming.increasingInOwn_with_net_converse"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A finite listing; two-valued admission; an order a relation on courses, not assumed complete or transitive; each standpoint's marking supplied, read as each law states (where a law uses one half of a reading, only that half).",
+      "zh": "不加公理。有限之列表；二值之接纳；次序为进程上之关系，不设其完备或可传递；各立场之标记为所予，依各律所述读之（律只用读法之一半者，只此一半）。"
+    },
+    {
+      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses: neither is asserted, and the condition varies with the net, the class and the direction.",
+      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：皆不被断言，且条件随网、类与方向而变。"
+    },
+    {
+      "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
+      "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
+    },
+    {
+      "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. C still alone orders in general; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
+      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。一般而言仍唯 C 定序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That C follows from self-concern on all of a web's level paths: the link holds between two listed paths, courses whose admissions end.",
+      "zh": "C 于网之全部层径上自自关切得出：此联系唯于二所列之径间成立，即其接纳有终之进程。",
+      "kind": "scope",
+      "witness": "Becoming.Web.not_listsAdmitted_every"
+    },
+    {
+      "en": "The converse, that C on level paths makes an order increasing in admission on a listing: a course on a listing need not be what any level path admits.",
+      "zh": "其逆：层径上之 C 使列表上之次序于接纳上递增；列表上之进程未必为任一层径之所接纳。",
+      "kind": "converse"
+    },
+    {
+      "en": "That self-concern fails to rank an extension on a web where the condition fails: that half is proved on listings only.",
+      "zh": "条件不成处，自关切于网上不能排定一扩展：此半唯于列表上证之。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any property of reach: the joins to the root are near-definitional, and locate where the two coincide.",
+      "zh": "所及之任一性质：与根之相接近乎定义，只指出二者相合之处。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C's warrant is open.",
+      "zh": "条件成立、自关切有据，或 C 被推出：条件与 C 仍为伦理之前提，自关切为假设；C 之依据仍开放。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "decidability",
+    "conditional-not-universal",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: the laws are in Becoming.PremiseWitnesses, a leaf importing GrammarCases, Lifting and EventualWideningInstances. The joins to the root compose withinClosure_iff_reached and ownClosure_unrestricted_iff_noOutside; the ranking composes Web.paths_extension_iff_widens and Web.widens_iff_every_weighting. Two AI reviews and a third look, every finding taken. The record's 18 declarations (18 theorems) compile with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：诸律在 Becoming.PremiseWitnesses，引 GrammarCases、Lifting 与 EventualWideningInstances 之叶。与根之相接合成 withinClosure_iff_reached 与 ownClosure_unrestricted_iff_noOutside；排序经 paths_extension_iff_widens 等。此记录 18 声明（定理 18）与全包同编译于记录所系收据之核心运行。"
+  },
+  "next_delta": {
+    "en": "The other half on webs, where level paths admit the witness's courses; a bridge at a finite horizon for courses that admit something at every step; review by a person.",
+    "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
+  },
+  "correspondence": {
+    "en": "Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so there self-concern gives what C asks between listed level paths, one way; on all of a web's level paths it gives nothing this way. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+    "zh": "自关切为于自身延续所标者上递增之次序；于接纳上递增为帕累托式之单调，单向给出 C 于所列层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切单向给出 C 于所列层径间之所求；于网之全部层径上，此路不给出任何东西。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+  "aliases": [
+    "self-concern gives what C asks between listed level paths, one way",
+    "自关切于所列层径间单向给出 C 之所求",
+    "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
+    "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
+    "Becoming.Web.extension_ranked_of_increasingInOwn",
+    "Becoming.increasingInOwn_with_net"
+  ],
+  "dependencies": [
+    {
+      "id": "what-self-concern-alone-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Weighting.IncreasingInOwn, Weighting.AddsOwn and Weighting.increasingInOwn_iff_increasing, whose converse this record proves.",
+        "zh": "Weighting.IncreasingInOwn、Weighting.AddsOwn 与 Weighting.increasingInOwn_iff_increasing，此记录证其逆。"
+      }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«续无外», withinClosure_iff_reached, ownClosure_unrestricted_iff_noOutside and ownClosure_unrestricted_iff, and the line of descent's models.",
+        "zh": "«续无外»、withinClosure_iff_reached、ownClosure_unrestricted_iff_noOutside 与 ownClosure_unrestricted_iff，及传承线之模型。"
+      }
+    },
+    {
+      "id": "comparison-by-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.paths_extension_iff_widens, an extension on a web's level paths a widening of what is admitted.",
+        "zh": "Web.paths_extension_iff_widens：网之层径上之扩展即所接纳者之扩大。"
+      }
+    },
+    {
+      "id": "eventual-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.ListsAdmitted, Web.DecidesAdmission, Web.stepBound and Web.lt_stepBound, with Web.widens_iff_every_weighting.",
+        "zh": "Web.ListsAdmitted、Web.DecidesAdmission、Web.stepBound 与 Web.lt_stepBound，及 Web.widens_iff_every_weighting。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "premises-met-and-failed",
+      "detail": {
+        "en": "The nets on which the condition on the root holds and fails, which the fourth law reads for self-concern.",
+        "zh": "根上之条件于其上成与不成之诸网，第四律就自关切读之。"
+      }
+    },
+    {
+      "id": "widening-as-what-every-weighting-ranks",
+      "detail": {
+        "en": "Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.",
+        "zh": "扩大即每一正权重所排高者；经之，于接纳上递增之次序把所列径间之每一扩展皆排定。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Weighting.exists_increasingInOwn_not_increasing",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_all",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside",
+        "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
+        "Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted",
+        "Becoming.Web.admits_need",
+        "Becoming.Web.admits_nothing_from_of_listed",
+        "Becoming.Web.not_listsAdmitted_every",
+        "Becoming.Web.no_extension_of_listsAdmitted_every",
+        "Becoming.Web.extension_ranked_of_increasing",
+        "Becoming.Web.extension_ranked_of_increasingInOwn",
+        "Becoming.TwoLines.first_line_reaches_both",
+        "Becoming.TwoLines.first_line_reach_iff",
+        "Becoming.increasingInOwn_with_net",
+        "Becoming.increasingInOwn_with_net_converse"
+      ],
+      "sha256": "598477b5c4493f79e24055da1038da25817221a6cab9db2c625dd79bf7e87541"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7103f56757260cda5b197be47af651293159a57060b48aa48043efdd0b3c686",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW-LEAF.md",
+      "role": "review",
+      "sha256": "948a25eeb510d629bd00d2496ab776fea17d466786d816717bd1efa2aa7a660b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW-LEAF-2.md",
+      "role": "review",
+      "sha256": "a138c3a82b0315a5c9c9ed0c741dd29d446c88b81d508a095764b59ae8971d97",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md",
+      "role": "integration",
+      "sha256": "9e9ae79067833a186e73f0b358fd37b68e9cbf1168094d1ea94394512a7fad11",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "f11e85cdde8d0a2859511cb02d7c0209f9fbaf5758f805fd97eab45256ceabc7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PremiseWitnesses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "1 November 2026, board item DU (study section 489): added. Self-concern joined to the condition on the root and held de se, and one way to C between listed level paths, from Becoming.PremiseWitnesses; the vacuous form on every level path replaced at the third look by the pairwise one, its vacuity proved; every finding of the leaf's reviews taken.",
+      "zh": "2026年11月1日，工作板条目 DU（研究第 489 节）：增。自关切与根上之条件及自承之条件相接，并单向接于所列层径间之 C，出自 Becoming.PremiseWitnesses；于全部层径上之空真形于第三次复读时代以成对之形，其空真已证；此叶审阅所见皆取。"
+    }
+  ]
+}
