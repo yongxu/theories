@@ -69,7 +69,8 @@ def landed(receipt, n):
     assert steps, "EL_ORDER, the coordinator's order sentence sent with its word, is required"
     assert not re.search(r'\bEL\b', steps), steps
     print('landed: order after EL:', steps)
-    clause += f"Then, in the coordinator's order: {steps}; ask the coordinator for a slot. "
+    # the sentence is the coordinator's, verbatim: it carries its own "Then, in the coordinator's order:" and its end
+    clause += steps + ' '
     lines[i] = '- **Queue:** ' + clause + rest
     rows = [k for k, l in enumerate(lines) if l.startswith(TITLE)]
     assert len(rows) == 1, rows

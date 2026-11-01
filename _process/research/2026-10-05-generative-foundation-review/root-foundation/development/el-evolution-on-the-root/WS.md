@@ -1,6 +1,6 @@
 # EL4: giving that waits on giving, under selection
 
-Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the core Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`, landed as core leaves at receipt EL_RECEIPT, study section EL_SECTION), which is not landed ([EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
+Design, 31 October 2026. AI-written. Part 4 of [EL](NOTE.md), whose board row claims it. Every target states its standing; proved means proved in the core Lean (`Becoming.WindowedWaiting`, `Becoming.PairSelection`, landed as core leaves at receipt 20261101T024359.312453Z, study section 490), which is not landed ([EL's State of the Lean](NOTE.md#state-of-the-lean)). It was first drafted as board item WS and held on branch `ws-claim` (`c72dee114`). That item was never claimed on main and is superseded by this text; the branch's board line is not to be merged. Revised after [EL's review](REVIEW-1.md), every finding on this part taken:
 - the windowed law is named for what it is, not "memory", which in 05 means withholding that stays;
 - the alternator that defeats a window is added;
 - the offspring counts hold only while a formation is supported;
@@ -338,7 +338,7 @@ Delta: windows on the whole-history carrier, errors as a clock; absorption as an
   factor read on a web under a supplied reading.
 Supplied premises / correspondence: §6; β and γ supplied (EL4c's witnesses are not joined to them).
 Evidence: core Lean, Becoming.WindowedWaiting and Becoming.PairSelection, landed at receipt
-  EL_RECEIPT (EL's State of the Lean); the records a-pair-tolerates-only-within-a-window,
+  20261101T024359.312453Z (EL's State of the Lean); the records a-pair-tolerates-only-within-a-window,
   offspring-read-from-giving-that-waits and what-giving-that-waits-draws-on; the scratch enumeration and counts in scratch/, for the design only.
 Boundary: §7.
 Integration: 04 Open "offspring numbers tied to what a formation gives" (advanced: pairs, supplied

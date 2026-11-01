@@ -310,8 +310,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.WindowedWaiting at receipt PENDING, 181 declarations (130 theorems), each with an empty axiom report; recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.WindowedWaiting，回执 PENDING，181 个声明（130 条定理），公理报告均为空；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.WindowedWaiting at receipt 20261101T024359.312453Z, 181 declarations (130 theorems), each with an empty axiom report; recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.WindowedWaiting，回执 20261101T024359.312453Z，181 个声明（130 条定理），公理报告均为空；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
   },
   "next_delta": {
     "en": "Errors with a probability, so that the window meets generous tit-for-tat's forgiveness; laws of giving with amounts; how a pairing and its waiting form.",
@@ -560,12 +560,18 @@
         "Becoming.WindowedWaiting.withholder_answered",
         "Becoming.WindowedWaiting.withholder_answered_clocked"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.WindowedWaiting",
       "success_pointer": "/status",
       "success_value": "passed"

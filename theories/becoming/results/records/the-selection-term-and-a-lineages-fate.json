@@ -513,8 +513,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.SelectionShift, 105 declarations (83 theorems), and Becoming.LineageRegions, 174 declarations (129 theorems), at receipt PENDING, each with an empty axiom report; the modules recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.SelectionShift，105 个声明（83 条定理），与 Becoming.LineageRegions，174 个声明（129 条定理），回执 PENDING，公理报告均为空；两模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.SelectionShift, 105 declarations (83 theorems), and Becoming.LineageRegions, 174 declarations (129 theorems), at receipt 20261101T024359.312453Z, each with an empty axiom report; the modules recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.SelectionShift，105 个声明（83 条定理），与 Becoming.LineageRegions，174 个声明（129 条定理），回执 20261101T024359.312453Z，公理报告均为空；两模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
   },
   "next_delta": {
     "en": "Two fates for every course of terms through a horizon on Descended courses read on the map's regions; and the suicide witness joined to an amount that draws past the family's gated renewal, so that ending by a drain meets selection on the same lineage.",
@@ -917,19 +917,25 @@
         "Becoming.LineageRegions.supported_carries_iff",
         "Becoming.LineageRegions.unsupportedBefore_of_first"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionShift",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegions",
       "success_pointer": "/status",
       "success_value": "passed"

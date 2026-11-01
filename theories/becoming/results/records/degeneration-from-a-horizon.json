@@ -173,8 +173,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineDegeneration at receipt PENDING, 45 declarations (40 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineDegeneration，回执 PENDING，45 个声明（40 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineDegeneration at receipt 20261101T024359.312453Z, 45 declarations (40 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineDegeneration，回执 20261101T024359.312453Z，45 个声明（40 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
   },
   "next_delta": {
     "en": "Placing the parts in their owners' modules: the grammar part in GrammarMap beside «尽则非不穷», the rest in MapInstances, where the laws that a regime's line is not without end would be re-derived from degeneration in place, and the kind instance in KeepingWidening; with Web.degenerates_of_gone renamed for the end it concludes.",
@@ -285,12 +285,18 @@
         "Becoming.Web.stopped_degenerates",
         "Becoming.Web.stopped_gone"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineDegeneration.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineDegeneration",
       "success_pointer": "/status",
       "success_value": "passed"

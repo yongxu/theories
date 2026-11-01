@@ -1,6 +1,6 @@
 # EL: evolution read on the root's map
 
-Design, 31 October 2026. Revised the same day after an independent review in three lenses (Lean correctness, coordination, substance; 65 findings, 21 major, every one taken). Then four rounds of scratch Lean followed, each module recompiled by an independent verifier, and two independent text reviews of the design after round 3 (§10). Every target states its standing: proved, proved in a stronger or weaker form (and how), refuted (with its witness), or open. Proved means proved in the core Lean: the six modules landed as core leaves at receipt EL_RECEIPT (study section EL_SECTION; [State of the Lean](#state-of-the-lean)). Board item EL claims it. AI-written. Provenance: [Ren, 31 October 2026](../../../../../../sources/15-codex-theory-conversations/2026-10-31-evolution-and-becoming-one.md). Part 4 is the draft first written as WS, now [WS.md](WS.md).
+Design, 31 October 2026. Revised the same day after an independent review in three lenses (Lean correctness, coordination, substance; 65 findings, 21 major, every one taken). Then four rounds of scratch Lean followed, each module recompiled by an independent verifier, and two independent text reviews of the design after round 3 (§10). Every target states its standing: proved, proved in a stronger or weaker form (and how), refuted (with its witness), or open. Proved means proved in the core Lean: the six modules landed as core leaves at receipt 20261101T024359.312453Z (study section 490; [State of the Lean](#state-of-the-lean)). Board item EL claims it. AI-written. Provenance: [Ren, 31 October 2026](../../../../../../sources/15-codex-theory-conversations/2026-10-31-evolution-and-becoming-one.md). Part 4 is the draft first written as WS, now [WS.md](WS.md).
 
 ## In brief
 
@@ -37,13 +37,13 @@ Readings and instances, counted as evidence for existing records, not as results
 
 ## State of the Lean
 
-Landed: the six modules below joined the core as leaves at receipt EL_RECEIPT (study section EL_SECTION), every axiom report empty, no existing module changed. They are the modules of round 4 with the verifiers' docstring fixes listed at the end of this section, and with `LineageRegions`' copies of EL3's laws and of `SelectionShift`'s counting dropped for imports.
+Landed: the six modules below joined the core as leaves at receipt 20261101T024359.312453Z (study section 490), every axiom report empty, no existing module changed. They are the modules of round 4 with the verifiers' docstring fixes listed at the end of this section, and with `LineageRegions`' copies of EL3's laws and of `SelectionShift`'s counting dropped for imports.
 - *Recompiled.* In round 4 each module was recompiled from source with Lean 4.29.1 by an independent verifier, not restored from a cache.
 - *Axiom reports.* Every source declaration has an empty axiom report. An environment scan of every constant each module adds finds one that depends on an axiom: `PairSelection`'s `Place.mk.injEq`, on `propext`, which Lean generates and nothing uses. `check_becoming.py`'s environment audit admits such generated `injEq` lemmas and lists them.
 - *Imports.* Each module imports only core modules and the EL modules below it.
 - *Dependents.* `LineageRegimes` and `PairSelection` were recompiled against the final `LineageRegions` and `WindowedWaiting`: by round 4's verifiers, and again for the kit's commit `4fd5b45d7`.
 - *The kit* is on branch `el-kit`, in this study's `kit/` folder; it is not on this branch. It holds the six modules, byte for byte as below, together with the builders' and verifiers' reports of rounds 1–4 (`kit/reviews/round1.json` to `round4.json`, the two text reviews in `round3.json`) and the verifiers' probes (`kit/probes/`).
-- *Checked.* `check_becoming.py` ran with all six registered in its core list, at receipt EL_RECEIPT.
+- *Checked.* `check_becoming.py` ran with all six registered in its core list, at receipt 20261101T024359.312453Z.
 
 | Module | Lines | Imports | Carries |
 |---|---|---|---|
@@ -366,10 +366,10 @@ An empty axiom report says nothing of these; each law names those it uses.
   - The scratch Lean stays in a worktree off main; a `.lean` file in a study folder on main is picked up by the catalogue.
   - EL3 lands first, so that `LineageRegions` drops its copies of EL3's laws. Then `SelectionShift`, so that `LineageRegions` imports its counting lemmas instead of repeating them.
   - Then `LineageRegions`, with the verifiers' fixes; then `LineageRegimes`; then `WindowedWaiting` and `PairSelection`.
-  - Core landing came after RV21c's fresh run, by readiness with UE26, BD2 and OU7 (the conditional-laws item; this note first named it OU5, an id taken on 23 October), on a slot from the coordinator, after a rehearsal; it landed at receipt EL_RECEIPT (study section EL_SECTION). RR2, HE2, U4's leaf and AJ4's documents, named here before, are landed (1721c70ef, 467f075ec, cdeb6b1e8, 3ada8819f).
+  - Core landing came after RV21c's fresh run, by readiness with UE26, BD2 and OU7 (the conditional-laws item; this note first named it OU5, an id taken on 23 October), on a slot from the coordinator, after a rehearsal; it landed at receipt 20261101T024359.312453Z (study section 490). RR2, HE2, U4's leaf and AJ4's documents, named here before, are landed (1721c70ef, 467f075ec, cdeb6b1e8, 3ada8819f).
   - The branch `el-design` was brought up to main and its texts landed (e4f578584).
 - **The release gate.** EL adds central declarations, which the gate's item 3 and U4's boundary record must place, and a core landing after RV21c makes the latest receipt incremental (item 5). So EL lands after the freeze, or before it with each new central declaration placed on the boundary record and a fresh receipt rerun. The coordinator and OU's owner decide, on the board.
-- **Checks.** Each module is registered in `check_becoming.py`'s core list and the full check is run, every axiom report empty, the generated `injEq` lemmas listed. Done at the landing, for all six (receipt EL_RECEIPT).
+- **Checks.** Each module is registered in `check_becoming.py`'s core list and the full check is run, every axiom report empty, the generated `injEq` lemmas listed. Done at the landing, for all six (receipt 20261101T024359.312453Z).
 
 ## 10. The review, the Lean rounds, and what changed
 
@@ -466,7 +466,7 @@ Delta: EL1, the selection-region boundary: at the counting layer, on the landed 
   three regimes degenerate; 有终 from the premise is exactly excluded middle, on the grammar and on
   the base. EL4 as in WS.md.
 Supplied premises / correspondence: §8.
-Evidence: core Lean, six leaves landed at receipt EL_RECEIPT after four rounds (State of the Lean): each
+Evidence: core Lean, six leaves landed at receipt 20261101T024359.312453Z after four rounds (State of the Lean): each
   recompiled by an independent verifier, every source declaration's axiom report empty (one
   generated injEq on propext in PairSelection); check_becoming.py run with them; the records degeneration-from-a-horizon,
   the-selection-term-and-a-lineages-fate and ending-laws-as-regimes-on-a-lineage; the kit

@@ -285,8 +285,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt PENDING, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 PENDING，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt 20261101T024359.312453Z, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 20261101T024359.312453Z，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
   },
   "next_delta": {
     "en": "Whether every decider of a lineage's region is one of the three regimes, or a further regime with its own horizon; a lineage reading of joint excess ending a renewal; and multiplying takers read on the map beyond the witness.",
@@ -496,12 +496,18 @@
         "Becoming.LineageRegimes.sizes_double",
         "Becoming.LineageRegimes.stock_forces_neither"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "role": "receipt",
+      "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegimes",
       "success_pointer": "/status",
       "success_value": "passed"
