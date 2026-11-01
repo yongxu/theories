@@ -1394,6 +1394,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: length_le_of_matched to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; length_le_of_matched generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：length_le_of_matched 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；length_le_of_matched 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "2 November 2026, U4e (study section U4E_SECTION): Web.persisting_census drops the decisions its proof does not use, of holding activity and of the continuation itself, keeping whether a formation continues or is continued; the statement is more general and the law unchanged.",
+      "zh": "2026年11月2日，U4e（研究第 U4E_SECTION 节）：Web.persisting_census 去掉其证明不用的判定，即保持之活跃之判定与延续本身之判定，留一形成是否延续与是否被延续之判定；陈述更一般，规律不变。"
     }
   ],
   "text_versions": [
