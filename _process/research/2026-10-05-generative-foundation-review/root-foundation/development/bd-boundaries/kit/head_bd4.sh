@@ -14,7 +14,7 @@ branch=$(git branch --show-current)
 git checkout -q --detach "$base" || exit 2
 python3 -B "$K/board_bd4.py" head || { git checkout -q "$branch"; exit 2; }
 [ "$(git diff --name-only)" = "$B" ] || { echo "UNEXPECTED PATHS"; git diff --name-only; git checkout -q -- $B; git checkout -q "$branch"; exit 2; }
-git commit -q -m "Board: BD4 at the head of the queue (landing now: Becoming.BalanceRegions extended, each closure under adjacency among the listed relata, the grammar's «所闭», decided as a test, the balance law read on each closure, and at the unit grain a case of «类之对当且仅当类类等数», the two grains joined; a core leaf, no other module changed; one incremental core run; an eighth law on balance-from-conservation-along-a-relation; 01 §8.4's sentence; render, strict check, links and tests, then the fast-forward)" -- $B
+git commit -q -m "Board: BD4 at the head of the queue (landing now: Becoming.BalanceRegions extended, each closure under adjacency among the listed relata, the grammar's «所闭», decided as a test, the balance law read on each closure, and at the unit grain a case of «类之对当且仅当类类等数», the two grains joined; a core leaf, no other module changed; one incremental core run; an eighth law on balance-from-conservation-along-a-relation; 01 §8.4's sentence and one of 01 §9.9's reading of boundaries; render, strict check, links and tests, then the fast-forward)" -- $B
 new=$(git rev-parse HEAD)
 git checkout -q "$branch"
 cd "$R"

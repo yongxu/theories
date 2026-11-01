@@ -32,13 +32,18 @@ OWN = {'balance-from-conservation-along-a-relation'}
 EXPECTED = {
     'theories/becoming/chapters/01-ROOT.md': {'8.4 Balance from physics', '84-balance-from-physics',
                                               'balance-from-physics', 'r-balance-from-conservation-along-a-relation',
-                                              '8. The models', '8-the-models', 'models'},
+                                              '8. The models', '8-the-models', 'models',
+                                              '9.9 Wholes, parts and closures', '99-wholes-parts-and-closures',
+                                              'wholes-and-closures', 'boundaries',
+                                              '9. Laws on every model, each with its hypotheses',
+                                              '9-laws-on-every-model-each-with-its-hypotheses', 'laws-on-every-model'},
     'theories/becoming/chapters/08-METHOD.md': {'3. The pure core and the periphery', '3-the-pure-core-and-the-periphery',
                                                 'pure-core-and-periphery'},
 }
 REASON = ("BD4: Becoming.BalanceRegions extended in the core, no other module changed (the root module's bullet, "
           "the checker's scope, the package README rows EN and ZH); 01 §8.4 (the theorem paragraph's "
-          "sentence reading balance on each closure, «所闭», and its list of what is not shown); 08's "
+          "sentence reading balance on each closure, «所闭», and its list of what is not shown); 01 §9.9 (one "
+          "sentence of the reading of boundaries: balance kept on the closures of the relation read both ways); 08's "
           "counts; regions.json; the study; the connectivity; read before re-pointing")
 
 

@@ -62,7 +62,8 @@ Boundary:
     laws, and the join, hold for every pairing under the closure one way and are existence statements the other, so
     each is invariant. They read only what the counts on each closure read, so U4's verdict stands: lever 1's round
     trip still fails, and this is locality, not the lift.
-Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of what is not shown);
+Output → input: 01 §8.4 (the theorem paragraph's sentence and its list of what is not shown); 01 §9.9 (one
+       sentence of the reading of boundaries: balance kept on the closures of the relation read both ways);
        balance-from-conservation-along-a-relation's eighth law, its first hypothesis, its two items on what is not
        shown, its correspondence, its dependency on master-laws-on-the-grammar, its link to
        amounts-by-unit-matchings, its scope and its history; the root

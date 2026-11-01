@@ -1,6 +1,6 @@
 # BD4: the independent reading
 
-1 November 2026. Board item BD4, balance on each closure, the `«所闭»` form: `Becoming.BalanceRegions`, BD3's core leaf, extended ([the board](../../../../../BECOMING-WORKBOARD.md), [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), [the design](DESIGN-BD4.md)). Reading time: about seven minutes.
+1 November 2026. Board item BD4, balance on each closure, the `«所闭»` form: `Becoming.BalanceRegions`, BD3's core leaf, extended ([the board](../../../../../BECOMING-WORKBOARD.md), [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md) lever 1 (a), [the design](DESIGN-BD4.md)). Reading time: about eight minutes.
 
 ## The reading
 
@@ -44,6 +44,15 @@ The same reader read the branch again once the findings were taken (at `1544a986
 | 16 | The comparison with `Flow.balances_iff_units` is loose: that law's units carry no relatum and hold what is given and taken, while here no transfer is among the units | the join named, as OU's owner asked, the closure-local reading of `Flow.balances_iff_units`, the difference said: the closure takes the place of the transfers (the module, the docstring, the design, the study and the correspondence); that it reads only the counts on each closure, in the correspondence and in a link to amounts-by-unit-matchings |
 
 The eighth law at 458 characters was judged acceptable: its cap only warns, and every clause carries a declaration the home section cites.
+
+## The sentence in the reading of boundaries
+
+One sentence was then added to 01 §9.9's reading of boundaries, and the same reader read it alone. Both points are taken.
+
+| # | Finding | Taken |
+|---|---|---|
+| 17 | Medium: the sentence takes the paragraph's boundaries, regions closed under the relation one way, where the law takes regions closed under adjacency among the listed relata, the relation read both ways. On one-way regions the claim is false: with the relation holding only from 0 to 1, a move from 1 to 0 is along adjacency, and the region {1}, closed under the relation, loses its amount. "It" in "not gone out of along it" was unclear, and "among the listed relata" was dropped | The sentence now says which boundaries amounts keep to, those the relation crosses neither way: transfers move between listed relata it relates one way or the other, and balance is kept on each listed relatum's closure under the relation and its converse among the listed relata, the least region holding it that the relation crosses neither way among them, membership a test |
+| 18 | Low: the relation as a computable test is not named, and "an amount leaves a region only where…" holds of the transfers, not of amounts in general | The hypothesis named; the clause on leaving dropped, the sentence stating what the law states |
 
 ## After the findings
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """BD4's texts on its branch (apply_bd3.py's pattern): the leaf's bullet in the root module, the checker's scope, both
 README rows, regions.json's note, the eighth law, its items and its hypothesis on
-balance-from-conservation-along-a-relation, and 01 §8.4's sentence. The leaf itself is edited on the branch. The receipt
+balance-from-conservation-along-a-relation, 01 §8.4's sentence, and one sentence of 01 §9.9's reading of boundaries. The leaf itself is edited on the branch. The receipt
 is left `PENDING` (three places: the scope in both languages and the leaf's proof binding), for reland_bd4.py; the
 leaf's reference carries the leaf's digest now and every declaration of the leaf, read from its source, and sha_bd4.py
 refreshes the digest after any later edit of the leaf. Run from the worktree root on a tree with no other change to
@@ -283,6 +283,18 @@ def main():
         "Not shown: local fluxes in the lattice sense, or infinitely many relata ([record]",
         "Not shown: local fluxes in the lattice sense, transfers within capacities, or infinitely many relata "
         "([record]")
+    # 01 §9.9's reading of boundaries: what amounts do at a boundary drawn along a relation
+    rep('theories/becoming/chapters/01-ROOT.md',
+        "and the last holds everything wherever every formation takes part in one condition. Whether the self's "
+        "presupposition",
+        "and the last holds everything wherever every formation takes part in one condition. Amounts keep to the "
+        "boundaries the relation crosses neither way. Over finitely many relata listed without repetition, with "
+        "equality decided and the relation a computable test, transfers along the relation move only between listed "
+        "relata it relates one way or the other, and transfers balancing a step exist exactly where the total is "
+        "conserved on each listed relatum's closure under the relation and its converse among the listed relata, the "
+        "least region holding it that the relation crosses neither way among them, membership a test "
+        "([§8.4](#r-balance-from-conservation-along-a-relation)): balance is kept on the closures of the relation "
+        "read both ways. Whether the self's presupposition")
 
 
 try:

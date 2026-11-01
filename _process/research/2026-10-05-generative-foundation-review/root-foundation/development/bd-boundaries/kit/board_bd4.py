@@ -22,7 +22,7 @@ HEAD = ("BD4 at the head of the queue (landing now: `Becoming.BalanceRegions` ex
         "closure, and at the unit grain a case of `«类之对当且仅当类类等数»`, the two grains joined; a core leaf, no "
         "other module changed; "
         "one incremental core run; an eighth law on balance-from-conservation-along-a-relation; 01 §8.4's "
-        "sentence; then render, strict check, links and tests, then the fast-forward); ")
+        "sentence and one of 01 §9.9's reading of boundaries; then render, strict check, links and tests, then the fast-forward); ")
 
 
 def queue(text):
@@ -61,7 +61,7 @@ def landed(receipt, n):
               "hypothesis's wording, Gale and Hoffman and the closure-local reading in the correspondence, a link to "
               "amounts-by-unit-matchings and a history note on "
               "balance-from-conservation-along-a-relation, "
-              "home 01 §8.4; the root module's bullet, the checker's scope, both package READMEs and "
+              "home 01 §8.4, and a sentence of 01 §9.9's reading of boundaries; the root module's bullet, the checker's scope, both package READMEs and "
               "regions.json; an independent AI review and its re-check, every finding taken; the connectivity register's new "
               "apart roots each with a reason; BD4's row in the history file; render, strict check, links and "
               "tests pass). ")
