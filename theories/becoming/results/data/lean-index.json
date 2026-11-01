@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2257,
-    "distinct_byte_contents": 1787,
+    "lean_paths": 2260,
+    "distinct_byte_contents": 1790,
     "byte_identical_duplicate_groups": 197,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1267,
+      "development-attempt": 1270,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 951
@@ -6593,6 +6593,39 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/scratch/sj1-checks/Bridges.lean",
+      "sha256": "67cdbdf9515a12a28e6e98f0d93e6e0ab03c9dac7e02ec6b704b34197489b996",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/DESIGN.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/scratch/sj1/Becoming/CommonResponse.lean",
+      "sha256": "6c94125c572ac9a4cc158c96ab4720864f1d9a1c79fad1e7bc204199e9d94c67",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/DESIGN.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/scratch/sj1/Becoming/GuardHorizon.lean",
+      "sha256": "b14cd9e1586b22c4befd0fc414d3b3630f89a5c27b838a09bde70699a9d30216",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/DESIGN.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -233578,6 +233611,33 @@
       },
       "print_axioms_commands": 14
     },
+    "67cdbdf9515a12a28e6e98f0d93e6e0ab03c9dac7e02ec6b704b34197489b996": {
+      "byte_size": 483,
+      "line_count": 13,
+      "imports": [
+        "Becoming.LearningRuns",
+        "Becoming.CommonResponse"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "lumped_iff_common_check",
+          "qualified_name_hint": "Becoming.lumped_iff_common_check",
+          "line": 9
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 1
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "67d04821a9d763968a945923e89006bceb5250b353d5b3a57ae49f11e7232f49": {
       "byte_size": 9722,
       "line_count": 246,
@@ -245341,6 +245401,274 @@
       ],
       "declaration_counts": {
         "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "6c94125c572ac9a4cc158c96ab4720864f1d9a1c79fad1e7bc204199e9d94c67": {
+      "byte_size": 20526,
+      "line_count": 429,
+      "imports": [
+        "Becoming.GrammarLaws"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«共应»",
+          "qualified_name_hint": "Becoming.«共应»",
+          "line": 72
+        },
+        {
+          "kind": "theorem",
+          "name": "«自反则承在内»",
+          "qualified_name_hint": "Becoming.«自反则承在内»",
+          "line": 78
+        },
+        {
+          "kind": "theorem",
+          "name": "«承皆在内当且仅当自反»",
+          "qualified_name_hint": "Becoming.«承皆在内当且仅当自反»",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "«传递则承闭»",
+          "qualified_name_hint": "Becoming.«传递则承闭»",
+          "line": 90
+        },
+        {
+          "kind": "theorem",
+          "name": "«承皆闭当且仅当传递»",
+          "qualified_name_hint": "Becoming.«承皆闭当且仅当传递»",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "«闭在内则在承»",
+          "qualified_name_hint": "Becoming.«闭在内则在承»",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "«所闭之承在内»",
+          "qualified_name_hint": "Becoming.«所闭之承在内»",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "«所闭之承闭»",
+          "qualified_name_hint": "Becoming.«所闭之承闭»",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "«共应当且仅当所闭之承遍»",
+          "qualified_name_hint": "Becoming.«共应当且仅当所闭之承遍»",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "«序则共应当且仅当承遍»",
+          "qualified_name_hint": "Becoming.«序则共应当且仅当承遍»",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "«共应之细»",
+          "qualified_name_hint": "Becoming.«共应之细»",
+          "line": 146
+        },
+        {
+          "kind": "theorem",
+          "name": "«静之共应当且仅当遍»",
+          "qualified_name_hint": "Becoming.«静之共应当且仅当遍»",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "«则之共应»",
+          "qualified_name_hint": "Becoming.«则之共应»",
+          "line": 164
+        },
+        {
+          "kind": "def",
+          "name": "«应际»",
+          "qualified_name_hint": "Becoming.«应际»",
+          "line": 181
+        },
+        {
+          "kind": "def",
+          "name": "«读应»",
+          "qualified_name_hint": "Becoming.«读应»",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "«应际同行当且仅当同读同应»",
+          "qualified_name_hint": "Becoming.«应际同行当且仅当同读同应»",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "«定应共应当且仅当同读同应»",
+          "qualified_name_hint": "Becoming.«定应共应当且仅当同读同应»",
+          "line": 207
+        },
+        {
+          "kind": "theorem",
+          "name": "«定应共应当且仅当像定后»",
+          "qualified_name_hint": "Becoming.«定应共应当且仅当像定后»",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "«映应共应当且仅当同读同应»",
+          "qualified_name_hint": "Becoming.«映应共应当且仅当同读同应»",
+          "line": 233
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "Becoming.«共应之例».NotReflexive.E",
+          "line": 250
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».NotReflexive.G",
+          "line": 251
+        },
+        {
+          "kind": "theorem",
+          "name": "held_each",
+          "qualified_name_hint": "Becoming.«共应之例».NotReflexive.held_each",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.«共应之例».NotReflexive.none",
+          "line": 258
+        },
+        {
+          "kind": "inductive",
+          "name": "Point",
+          "qualified_name_hint": "Becoming.«共应之例».NotTransitive.Point",
+          "line": 268
+        },
+        {
+          "kind": "def",
+          "name": "E",
+          "qualified_name_hint": "Becoming.«共应之例».NotTransitive.E",
+          "line": 274
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».NotTransitive.G",
+          "line": 292
+        },
+        {
+          "kind": "theorem",
+          "name": "held_each",
+          "qualified_name_hint": "Becoming.«共应之例».NotTransitive.held_each",
+          "line": 299
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.«共应之例».NotTransitive.none",
+          "line": 322
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».EachNotCommon.G",
+          "line": 339
+        },
+        {
+          "kind": "theorem",
+          "name": "each",
+          "qualified_name_hint": "Becoming.«共应之例».EachNotCommon.each",
+          "line": 341
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.«共应之例».EachNotCommon.none",
+          "line": 343
+        },
+        {
+          "kind": "inductive",
+          "name": "Point",
+          "qualified_name_hint": "Becoming.«共应之例».PairsNotCommon.Point",
+          "line": 357
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».PairsNotCommon.G",
+          "line": 363
+        },
+        {
+          "kind": "theorem",
+          "name": "pairs",
+          "qualified_name_hint": "Becoming.«共应之例».PairsNotCommon.pairs",
+          "line": 374
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.«共应之例».PairsNotCommon.none",
+          "line": 385
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».NotCovering.G",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "fixed",
+          "qualified_name_hint": "Becoming.«共应之例».NotCovering.fixed",
+          "line": 399
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.«共应之例».NotCovering.none",
+          "line": 406
+        },
+        {
+          "kind": "def",
+          "name": "G",
+          "qualified_name_hint": "Becoming.«共应之例».NotOne.G",
+          "line": 416
+        },
+        {
+          "kind": "theorem",
+          "name": "common",
+          "qualified_name_hint": "Becoming.«共应之例».NotOne.common",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "differ",
+          "qualified_name_hint": "Becoming.«共应之例».NotOne.differ",
+          "line": 421
+        }
+      ],
+      "declaration_counts": {
+        "def": 11,
+        "inductive": 2,
+        "theorem": 28
       },
       "textual_markers": {
         "sorry": [],
@@ -382483,6 +382811,337 @@
         "def": 45,
         "inductive": 3,
         "theorem": 108
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "b14cd9e1586b22c4befd0fc414d3b3630f89a5c27b838a09bde70699a9d30216": {
+      "byte_size": 26006,
+      "line_count": 466,
+      "imports": [
+        "Becoming.Acceptance",
+        "Becoming.Viability",
+        "Becoming.Keeping",
+        "Becoming.CommonResponse"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.Viable",
+          "line": 71
+        },
+        {
+          "kind": "def",
+          "name": "Admissible",
+          "qualified_name_hint": "Becoming.GuardHorizon.Admissible",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "viable_succ_iff",
+          "qualified_name_hint": "Becoming.GuardHorizon.viable_succ_iff",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "viable_guard",
+          "qualified_name_hint": "Becoming.GuardHorizon.viable_guard",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "not_enabled_not_admissible",
+          "qualified_name_hint": "Becoming.GuardHorizon.not_enabled_not_admissible",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "shielded_choice",
+          "qualified_name_hint": "Becoming.GuardHorizon.shielded_choice",
+          "line": 97
+        },
+        {
+          "kind": "def",
+          "name": "Closed",
+          "qualified_name_hint": "Becoming.GuardHorizon.Closed",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.closed_viable",
+          "line": 112
+        },
+        {
+          "kind": "theorem",
+          "name": "certificate_closed",
+          "qualified_name_hint": "Becoming.GuardHorizon.certificate_closed",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "certificate_viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.certificate_viable",
+          "line": 128
+        },
+        {
+          "kind": "theorem",
+          "name": "kernel_viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.kernel_viable",
+          "line": 134
+        },
+        {
+          "kind": "def",
+          "name": "DViable",
+          "qualified_name_hint": "Becoming.GuardHorizon.DViable",
+          "line": 145
+        },
+        {
+          "kind": "def",
+          "name": "DAllowed",
+          "qualified_name_hint": "Becoming.GuardHorizon.DAllowed",
+          "line": 150
+        },
+        {
+          "kind": "def",
+          "name": "Return",
+          "qualified_name_hint": "Becoming.GuardHorizon.Return",
+          "line": 155
+        },
+        {
+          "kind": "def",
+          "name": "PathSafe",
+          "qualified_name_hint": "Becoming.GuardHorizon.PathSafe",
+          "line": 160
+        },
+        {
+          "kind": "def",
+          "name": "Bellman",
+          "qualified_name_hint": "Becoming.GuardHorizon.Bellman",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "pathSafe_dViable",
+          "qualified_name_hint": "Becoming.GuardHorizon.pathSafe_dViable",
+          "line": 172
+        },
+        {
+          "kind": "theorem",
+          "name": "bellman_bounds_safe",
+          "qualified_name_hint": "Becoming.GuardHorizon.bellman_bounds_safe",
+          "line": 179
+        },
+        {
+          "kind": "theorem",
+          "name": "recomputed_composition",
+          "qualified_name_hint": "Becoming.GuardHorizon.recomputed_composition",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "recomputed_choice_accepts",
+          "qualified_name_hint": "Becoming.GuardHorizon.recomputed_choice_accepts",
+          "line": 220
+        },
+        {
+          "kind": "theorem",
+          "name": "dViable_iff",
+          "qualified_name_hint": "Becoming.GuardHorizon.dViable_iff",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "safe_path_viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.safe_path_viable",
+          "line": 241
+        },
+        {
+          "kind": "inductive",
+          "name": "Kept",
+          "qualified_name_hint": "Becoming.GuardHorizon.Kept",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "Kept.trace",
+          "qualified_name_hint": "Becoming.GuardHorizon.Kept.trace",
+          "line": 254
+        },
+        {
+          "kind": "theorem",
+          "name": "Kept.start",
+          "qualified_name_hint": "Becoming.GuardHorizon.Kept.start",
+          "line": 260
+        },
+        {
+          "kind": "def",
+          "name": "moves",
+          "qualified_name_hint": "Becoming.GuardHorizon.moves",
+          "line": 265
+        },
+        {
+          "kind": "def",
+          "name": "last",
+          "qualified_name_hint": "Becoming.GuardHorizon.last",
+          "line": 270
+        },
+        {
+          "kind": "theorem",
+          "name": "pathSafe_iff",
+          "qualified_name_hint": "Becoming.GuardHorizon.pathSafe_iff",
+          "line": 276
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_return_le",
+          "qualified_name_hint": "Becoming.GuardHorizon.kept_return_le",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "recomputed_kept",
+          "qualified_name_hint": "Becoming.GuardHorizon.recomputed_kept",
+          "line": 297
+        },
+        {
+          "kind": "theorem",
+          "name": "recomputed_accepts",
+          "qualified_name_hint": "Becoming.GuardHorizon.recomputed_accepts",
+          "line": 313
+        },
+        {
+          "kind": "def",
+          "name": "UniformPolicy",
+          "qualified_name_hint": "Becoming.GuardHorizon.UniformPolicy",
+          "line": 326
+        },
+        {
+          "kind": "def",
+          "name": "FiberFeasible",
+          "qualified_name_hint": "Becoming.GuardHorizon.FiberFeasible",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "fiber_of_uniform",
+          "qualified_name_hint": "Becoming.GuardHorizon.fiber_of_uniform",
+          "line": 334
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_iff_held_throughout",
+          "qualified_name_hint": "Becoming.GuardHorizon.rule_iff_held_throughout",
+          "line": 342
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_policy_iff_fiber_feasible",
+          "qualified_name_hint": "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible",
+          "line": 351
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_policy_iff_common",
+          "qualified_name_hint": "Becoming.GuardHorizon.uniform_policy_iff_common",
+          "line": 361
+        },
+        {
+          "kind": "theorem",
+          "name": "ungiven_reading_not_uniform",
+          "qualified_name_hint": "Becoming.GuardHorizon.ungiven_reading_not_uniform",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "statewise_not_uniform",
+          "qualified_name_hint": "Becoming.GuardHorizon.statewise_not_uniform",
+          "line": 386
+        },
+        {
+          "kind": "theorem",
+          "name": "discriminating_reading_uniform",
+          "qualified_name_hint": "Becoming.GuardHorizon.discriminating_reading_uniform",
+          "line": 392
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_finer",
+          "qualified_name_hint": "Becoming.GuardHorizon.uniform_finer",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_viable",
+          "qualified_name_hint": "Becoming.GuardHorizon.uniform_viable",
+          "line": 407
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_iff",
+          "qualified_name_hint": "Becoming.GuardHorizon.uniform_iff",
+          "line": 415
+        },
+        {
+          "kind": "def",
+          "name": "Covers",
+          "qualified_name_hint": "Becoming.GuardHorizon.Covers",
+          "line": 423
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_requirement_hides_loss",
+          "qualified_name_hint": "Becoming.GuardHorizon.empty_requirement_hides_loss",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "coverage_transports",
+          "qualified_name_hint": "Becoming.GuardHorizon.coverage_transports",
+          "line": 433
+        },
+        {
+          "kind": "def",
+          "name": "RouteAccess",
+          "qualified_name_hint": "Becoming.GuardHorizon.RouteAccess",
+          "line": 439
+        },
+        {
+          "kind": "def",
+          "name": "PrefixAccess",
+          "qualified_name_hint": "Becoming.GuardHorizon.PrefixAccess",
+          "line": 442
+        },
+        {
+          "kind": "theorem",
+          "name": "endpoint_access_hides_gap",
+          "qualified_name_hint": "Becoming.GuardHorizon.endpoint_access_hides_gap",
+          "line": 445
+        },
+        {
+          "kind": "theorem",
+          "name": "overlapping_handoff_keeps_access",
+          "qualified_name_hint": "Becoming.GuardHorizon.overlapping_handoff_keeps_access",
+          "line": 453
+        },
+        {
+          "kind": "theorem",
+          "name": "route_retirement_allowed",
+          "qualified_name_hint": "Becoming.GuardHorizon.route_retirement_allowed",
+          "line": 461
+        }
+      ],
+      "declaration_counts": {
+        "def": 15,
+        "inductive": 1,
+        "theorem": 35
       },
       "textual_markers": {
         "sorry": [],
