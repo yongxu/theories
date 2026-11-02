@@ -131,67 +131,69 @@ Definitions and types:
 <a id="module-de2c4a4581b2"></a>
 
 <details>
-<summary>GuardHorizon.lean — 48 explicit declarations</summary>
+<summary>GuardHorizon.lean — 50 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean`
 
-Imports: `Becoming.Acceptance`, `Becoming.Viability`, `Becoming.Keeping`
+Imports: `Becoming.Acceptance`, `Becoming.Viability`, `Becoming.Keeping`, `Becoming.CommonResponse`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.GuardHorizon.viable_succ_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L76) | 76 |
-| [Becoming.GuardHorizon.viable_guard](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L80) | 80 |
-| [Becoming.GuardHorizon.not_enabled_not_admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L85) | 85 |
-| [Becoming.GuardHorizon.shielded_choice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L91) | 91 |
-| [Becoming.GuardHorizon.closed_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L106) | 106 |
-| [Becoming.GuardHorizon.certificate_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L115) | 115 |
-| [Becoming.GuardHorizon.certificate_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L122) | 122 |
-| [Becoming.GuardHorizon.kernel_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L128) | 128 |
-| [Becoming.GuardHorizon.pathSafe_dViable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L166) | 166 |
-| [Becoming.GuardHorizon.bellman_bounds_safe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L173) | 173 |
-| [Becoming.GuardHorizon.recomputed_composition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L187) | 187 |
-| [Becoming.GuardHorizon.recomputed_choice_accepts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L214) | 214 |
-| [Becoming.GuardHorizon.dViable_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L224) | 224 |
-| [Becoming.GuardHorizon.safe_path_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L235) | 235 |
-| [Becoming.GuardHorizon.Kept.trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L248) | 248 |
-| [Becoming.GuardHorizon.Kept.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L254) | 254 |
-| [Becoming.GuardHorizon.pathSafe_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L270) | 270 |
-| [Becoming.GuardHorizon.kept_return_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L281) | 281 |
-| [Becoming.GuardHorizon.recomputed_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L291) | 291 |
-| [Becoming.GuardHorizon.recomputed_accepts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L307) | 307 |
-| [Becoming.GuardHorizon.fiber_of_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L328) | 328 |
-| [Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L335) | 335 |
-| [Becoming.GuardHorizon.statewise_not_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L343) | 343 |
-| [Becoming.GuardHorizon.discriminating_reading_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L349) | 349 |
-| [Becoming.GuardHorizon.uniform_finer](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L353) | 353 |
-| [Becoming.GuardHorizon.uniform_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L364) | 364 |
-| [Becoming.GuardHorizon.uniform_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L372) | 372 |
-| [Becoming.GuardHorizon.empty_requirement_hides_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L384) | 384 |
-| [Becoming.GuardHorizon.coverage_transports](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L390) | 390 |
-| [Becoming.GuardHorizon.endpoint_access_hides_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L402) | 402 |
-| [Becoming.GuardHorizon.overlapping_handoff_keeps_access](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L410) | 410 |
-| [Becoming.GuardHorizon.route_retirement_allowed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L418) | 418 |
+| [Becoming.GuardHorizon.viable_succ_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L82) | 82 |
+| [Becoming.GuardHorizon.viable_guard](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L86) | 86 |
+| [Becoming.GuardHorizon.not_enabled_not_admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L91) | 91 |
+| [Becoming.GuardHorizon.shielded_choice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L97) | 97 |
+| [Becoming.GuardHorizon.closed_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L112) | 112 |
+| [Becoming.GuardHorizon.certificate_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L121) | 121 |
+| [Becoming.GuardHorizon.certificate_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L128) | 128 |
+| [Becoming.GuardHorizon.kernel_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L134) | 134 |
+| [Becoming.GuardHorizon.pathSafe_dViable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L172) | 172 |
+| [Becoming.GuardHorizon.bellman_bounds_safe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L179) | 179 |
+| [Becoming.GuardHorizon.recomputed_composition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L193) | 193 |
+| [Becoming.GuardHorizon.recomputed_choice_accepts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L220) | 220 |
+| [Becoming.GuardHorizon.dViable_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L230) | 230 |
+| [Becoming.GuardHorizon.safe_path_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L241) | 241 |
+| [Becoming.GuardHorizon.Kept.trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L254) | 254 |
+| [Becoming.GuardHorizon.Kept.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L260) | 260 |
+| [Becoming.GuardHorizon.pathSafe_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L276) | 276 |
+| [Becoming.GuardHorizon.kept_return_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L287) | 287 |
+| [Becoming.GuardHorizon.recomputed_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L297) | 297 |
+| [Becoming.GuardHorizon.recomputed_accepts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L313) | 313 |
+| [Becoming.GuardHorizon.fiber_of_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L334) | 334 |
+| [Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L341) | 341 |
+| [Becoming.GuardHorizon.uniform_policy_iff_common](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L351) | 351 |
+| [Becoming.GuardHorizon.ungiven_reading_not_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L369) | 369 |
+| [Becoming.GuardHorizon.statewise_not_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L382) | 382 |
+| [Becoming.GuardHorizon.discriminating_reading_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L391) | 391 |
+| [Becoming.GuardHorizon.uniform_finer](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L395) | 395 |
+| [Becoming.GuardHorizon.uniform_viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L406) | 406 |
+| [Becoming.GuardHorizon.uniform_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L414) | 414 |
+| [Becoming.GuardHorizon.empty_requirement_hides_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L426) | 426 |
+| [Becoming.GuardHorizon.coverage_transports](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L432) | 432 |
+| [Becoming.GuardHorizon.endpoint_access_hides_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L444) | 444 |
+| [Becoming.GuardHorizon.overlapping_handoff_keeps_access](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L452) | 452 |
+| [Becoming.GuardHorizon.route_retirement_allowed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L460) | 460 |
 
 Definitions and types:
 
-- `def` [Becoming.GuardHorizon.Viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L65) (L65)
-- `def` [Becoming.GuardHorizon.Admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L70) (L70)
-- `def` [Becoming.GuardHorizon.Closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L102) (L102)
-- `def` [Becoming.GuardHorizon.DViable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L139) (L139)
-- `def` [Becoming.GuardHorizon.DAllowed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L144) (L144)
-- `def` [Becoming.GuardHorizon.Return](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L149) (L149)
-- `def` [Becoming.GuardHorizon.PathSafe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L154) (L154)
-- `def` [Becoming.GuardHorizon.Bellman](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L160) (L160)
-- `inductive` [Becoming.GuardHorizon.Kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L241) (L241)
-- `def` [Becoming.GuardHorizon.moves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L259) (L259)
-- `def` [Becoming.GuardHorizon.last](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L264) (L264)
-- `def` [Becoming.GuardHorizon.UniformPolicy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L320) (L320)
-- `def` [Becoming.GuardHorizon.FiberFeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L324) (L324)
-- `def` [Becoming.GuardHorizon.Covers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L380) (L380)
-- `def` [Becoming.GuardHorizon.RouteAccess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L396) (L396)
-- `def` [Becoming.GuardHorizon.PrefixAccess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L399) (L399)
+- `def` [Becoming.GuardHorizon.Viable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L71) (L71)
+- `def` [Becoming.GuardHorizon.Admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L76) (L76)
+- `def` [Becoming.GuardHorizon.Closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L108) (L108)
+- `def` [Becoming.GuardHorizon.DViable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L145) (L145)
+- `def` [Becoming.GuardHorizon.DAllowed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L150) (L150)
+- `def` [Becoming.GuardHorizon.Return](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L155) (L155)
+- `def` [Becoming.GuardHorizon.PathSafe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L160) (L160)
+- `def` [Becoming.GuardHorizon.Bellman](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L166) (L166)
+- `inductive` [Becoming.GuardHorizon.Kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L247) (L247)
+- `def` [Becoming.GuardHorizon.moves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L265) (L265)
+- `def` [Becoming.GuardHorizon.last](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L270) (L270)
+- `def` [Becoming.GuardHorizon.UniformPolicy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L326) (L326)
+- `def` [Becoming.GuardHorizon.FiberFeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L330) (L330)
+- `def` [Becoming.GuardHorizon.Covers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L422) (L422)
+- `def` [Becoming.GuardHorizon.RouteAccess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L438) (L438)
+- `def` [Becoming.GuardHorizon.PrefixAccess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean#L441) (L441)
 
 </details>
 
