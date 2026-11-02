@@ -451,6 +451,58 @@ Steps:
 
 The argument is set out with its history in [PW's note](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md#6f-where-pw-stands-24-october-2026-ai-reading) and a first round of philosophical work in [PF's study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md).
 
+<a id="crux"></a>
+### 4.7 The crux, argued: are one's effects one's own?
+
+An AI reading throughout: argued, not proved. It cites the laws of §4.6 and adds none. P1 to P4 here are those of §4.6, not of §4.2's argument for the step.
+
+**The question.** When one acts for one's own future, which continuation is one's own: this organism's, what one intends, or everything one's acts condition? Asked of scope: *are all of one's effects one's own, in the sense of whose losses count, not of what one answers for?* That is P4, *holding one's effects*. It is a question of warrant, about what acting presupposes. The laws do not answer it. Everything downstream of one's acts lies on one's line exactly where it is alike to oneself (`«后皆续当且仅当后皆同类»`), so the theorem moves the whole question into the class, and a class drawn to hold everything downstream meets it nearly by definition. No law of the dynamics singles that class out.
+
+**What each premise does.**
+
+| The self drawn as | A regularity of its own (P2) | Holds its effects (P4) | Its line reaches |
+|---|---|---|---|
+| this organism | fails where its last stage still conditions anything (`«亡而网续则本类不至终有常»`) | fails wherever an effect leaves it | its own stages, to its end |
+| what one intends (nothing in the Lean marks an intended effect) | can hold (`FiniteWake`) | fails by construction | only what is alike to it (`«线内同类»`), never what it leaves out |
+| everything one conditions | holds in the finite witnesses (`FiniteFamilies`, `FiniteSharedCondition`), not shown in general | holds by construction | everything downstream of one's acts (`«本类常闭则所及皆及»`) |
+
+P2 excludes the organism and not the intended self, so P4 carries the crux. What the path needs of the two is one thing, that the class hold the effects of oneself and of each stage of one's line (`«后皆续当且仅当自与线皆闭»`); P2 is one regularity that carries P4 on, and the reach can hold without it (`OtherLeaves.reach_without_condition`).
+
+**For.**
+
+- *One goes on only through what one conditions.* A line under a class goes on only into what is alike under it, so a self holding none of its effects ends at once.
+- *A narrower line has a cost.* The organism's line ends while what it conditions goes on. The intended self, if it is a regularity of its own, has something outside it follow every alike step that goes on (`«本类出类随行»`), though that says only as much as the class divides what lies outside.
+- *Acts aimed past one's death.* Wills, planted trees and children raised presuppose that an outcome after one's end has significance (Scheffler 2013). Either the self they presuppose extends past death, or they presuppose something that is not one's continuation, which is the step, held if only contingently. The narrow de se reading explains neither.
+- *Moral luck does not touch it.* Scope is not blame. Someone who poisons a river they did not know fed a village may be blameless, and the village's loss still counts.
+
+**Against.**
+
+- *From some to all.* That one goes on only through what one conditions shows that some effects are one's own, not that all are. No argument above closes this gap.
+- *A narrower line need not be circular.* §4.6 replies that a partial holding decides by the very identity in question. That holds only if no criterion stands apart from that identity. Bodily organization, psychological connectedness (Parfit's R, 1984) and intention (Anscombe 1957) each pick out some effects by a relation stated on its own terms, and no law of the dynamics rules them out.
+- *A self need not be a regularity.* Lumpability is a criterion for good models, not shown to be one for selves. A finite, dependent being's going-on is exactly what its being does not fix.
+- *The word may not survive.* The reference of "my" is set by use, and in use it picks out a person. Stretched to everything downstream, "my continuation" keeps the word and can lose the concern: reductionism can dissolve concern as easily as extend it (Wolf 1986, and Parfit's Extreme Claim).
+- *Content, not self.* One may value what comes after as not oneself (Williams's categorical desires, 1976). Then acts aimed past death support the step held contingently, and the path's reach would be the step under another name.
+- *The poison with the river.* A class holding all one's effects holds what one ruins as well as what one keeps. Scope ranks nothing and significance is not goodness, so this is no contradiction; it is a reason to doubt that "one's own" is the right word.
+
+**A middle candidate: what one can foresee.** The doctrine of double effect weighs a *foreseen* side effect, so it supports a scope reaching what one foresees, and no further. That self is narrower than P4 and wider than what one intends, and it fails P4 wherever an effect lies beyond it; nothing in the Lean marks a foreseen effect. What one can foresee depends on what [couples in](03-KNOWING.md#r-selection-through-couplings). So under this scope a narrower coupling shrinks whose losses count, and not looking removes a loss from scope. For a person that rewards ignorance. For a selection it is the drain [thesis T3](05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in) names, taken as a rule. Its defender can answer that scope is for those who weigh, and only what is known can be weighed. Whether scope may depend on what couples in is open.
+
+**What follows either way.**
+
+- *The laws stand.* Each is a conditional, and none rests on P4 being true of anyone.
+- *If all one's effects are held*, with P1, each stage's effects held, and P3 for other lines: concern for one's own continuation reaches everything downstream of what one conditions, past one's end and across lines, with no step of invariance. That would warrant part of scope, not the condition: what §4.6 lists as not reached stays the step's.
+- *If only some are held*: an effect not alike to oneself lies on no line from oneself (`«后皆续则所缘同于»`, `«线内同类»`), so on this path concern for one's own continuation reaches at most what the class holds; for a family's class where lines share no condition, its own line of descent (§4.6, step 2). Self-concern still reaches [what one depends on](#r-self-concern-through-dependence) and [ranks one case with no C](#r-what-self-concern-alone-ranks). The rest of the future goes back to the step, argued and coherently denied ([§4.2](#step)).
+- *The ethics keeps its form.* It does not rest on this path and does not derive from the condition. The continuation condition fixes scope and C alone orders, each a hypothesis wherever used. If P4 fails, one route toward warranting part of scope is gone, and order is untouched, since P4 ranks nothing. [T8](#theses) names this as open.
+- *Alignment.* What a selection reaches ([§6](#alignment-without-premise)) needs no P4. Read as a correspondence not shown, an optimizer whose scope is its objective is the intended self, and "does a system's scope hold its effects?" is what work on side effects asks ([PF's second round](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md#5-the-wake-and-alignment)).
+
+**Warrant, recognition, motivation.** P4 is asked as warrant only. Recognition is apart: an effect that does not couple into a selector is one it cannot separate, so a scope can hold what its holder cannot know. Motivation is apart: that a loss counts from one's standpoint moves no one by itself. Nor does P4 say what one answers for or must do, or whether anyone complies.
+
+**Where it stands.** The case against each narrow candidate as a boundary of scope is stronger than the case for all. Those candidates have a principled place in permissibility and responsibility, and none has yet been given a reason for scope; none has been ruled out, and P4 itself is not shown. Besides §4.6's two questions, for philosophers:
+
+1. What could carry the argument from some of one's effects to all of them?
+2. Is there a criterion of "one's own", narrower than all one's effects and stated apart from identity, that bears on whose losses count and not only on what is permitted?
+3. May scope depend on what one can foresee, given that what couples in would then fix whose losses count?
+4. Is the path's reach the step under another name?
+
 <a id="practical-judgment"></a>
 ## 5. Practical judgment
 
@@ -708,6 +760,7 @@ No objection is shown to defeat the step, nor the step shown ([record](../result
 <a id="open"></a>
 ## Open
 
+- **The crux** ([§4.7](#crux)): whether all of one's effects are one's own, in the sense of whose losses count, argued for and against and not settled.
 - **The de se question** ([§4.2](#step)), asked on the root of classes: which class a center's own line runs under, and whether a core that goes on without end carries it past a member's end ([§4.5](#r-reach-past-ones-own-end)).
 - **The centers and covering**: which formations hold standpoints, and does every formation lie within some standpoint's closure? Along need, whether actual centers depend on one another.
 - **Status** ([§4.4](#r-graded-significance-and-priority)): invariant and equal, or only a positive grade?

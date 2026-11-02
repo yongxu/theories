@@ -712,7 +712,7 @@ With D65 the register again lists none open; a reading added later is decided th
 - **Whether a universal practical warrant exists**: whether practical reasons have a warrant binding every possible mind, with zero substantive premises; it stays open, and the ethics, life's stance, does not wait on it ([07](07-SIGNIFICANCE.md#r-universal-practical-warrant), T8).
 - **The relational foundation of scientific inquiry**: the indispensability of the theory's central commitments, tested from independently stated achievements.
 - **The grounds of living significance, A and the neutralities**, none independently reviewed; under the condition living significance is an instantiation, so its ground is the condition's.
-- **Calling widening better, P2 and P4 of 07 §4.6, and the step of invariance** (item 12; [07](07-SIGNIFICANCE.md#scope-and-order), [§4.6](07-SIGNIFICANCE.md#future-path)): C's no-loss extension is widening by definition, so the definition carries no warrant; P2 and P4 are the crux of the path that carries concern for one's own continuation past one's own end without the step.
+- **Calling widening better, P2 and P4 of 07 §4.6, and the step of invariance** (item 12; [07](07-SIGNIFICANCE.md#scope-and-order), [§4.6](07-SIGNIFICANCE.md#future-path)): C's no-loss extension is widening by definition, so the definition carries no warrant; P2 and P4 are the crux of the path that carries concern for one's own continuation past one's own end without the step, argued for and against in [§4.7](07-SIGNIFICANCE.md#crux).
 - **The scope of representation**: whether every becoming has a local law with finite courses (items 1 and 6).
 
 <a id="support-for-living-significance"></a>
