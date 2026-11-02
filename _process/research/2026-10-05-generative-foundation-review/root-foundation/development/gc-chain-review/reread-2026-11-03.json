@@ -1,0 +1,46 @@
+{
+  "about": "The parts of GC's sources that the 28 October 2026 reading did not read in full, read on 3 November 2026 (the index record's correction under gc-chain-review-28-october-2026). Each change is read from the version the chain's fingerprint recorded (reading.json's recorded_commit and recorded_path) to the version GC refreshed it at (6c84c2d90). Counts are git diff --numstat between those two versions. Author reading, not independent acceptance.",
+  "reviewed_at": "6c84c2d90",
+  "sources": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "entries": ["M15", "M26"],
+      "change": "+504 -79",
+      "read_28_october": "The D43 section M15 and M26 link, and D45's adoption of where-a-level-couples.",
+      "read_3_november": "The whole change.",
+      "found": "D43's section changed in two lines, both link targets moved to the study's history. The register gained D46-D68, the Ren-as-trigger wording was replaced, terms were restated (R21, R36) and links moved to history. The one change bearing on an entry is the parenthesis added under D45 to D43's conjecture on observation: answered at the step of the exchange on 21 October 2026 by OB1 (what-dependence-alone-carries-of-a-level, carried_iff_rising). That is proposal A3, held on observation-is-a-route.md and applied by GC2; reading.json's basis named it A2 by mistake. The refresh stands."
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ (17 modules: Counterfactual, ContinuingRevision, Experiment, FallibleInquiry, Histories, Learning, Mechanism, Observation, Parting, ReferencePlan, Regrouping, Relevance, Response, Revision, Selection, TimedResponse, Unfolding)",
+      "entries": ["M15", "M20", "M21", "M24", "M26"],
+      "change": "+1056 -1054 in all",
+      "read_28_october": "That every Lean name the chain cites in backticks is declared, or is a module, in the live tree; the kinds of pass that changed the files.",
+      "read_3_november": "The whole change, line by line.",
+      "found": "No theorem an entry names changed its statement (among them selects_not_right_of_parted, selects_right_through, Relabel.selected_alike_iff, Parting.free_unbounded, leastBound_right, not_right_on_both, unparted_of_determined, world_right_iff, apart_only_downstream, exchange_alike_off_downstream). Declarations were removed by R29, R32 and R37 (forwarders and same-statement copies, for example Revision's History and history_keeps, ReferencePlan's Alike and first_installed_choice, Counterfactual's worldRun and act_not_taken, Learning's GoAlikeAt and upto, Mechanism's GoAlike and trajectory, Unfolding's SameFuture) or renamed by R30 (Relevance's g0_* names). Of the removed names the only one any entry uses is g0_of_unrestricted, now livingSignificance_of_unrestricted, in M15's unrendered connection note, named there as the original and reported in the 28 October record. The refreshes stand."
+    },
+    {
+      "path": "GOALS.md",
+      "entries": ["M20"],
+      "change": "+88 -34",
+      "read_28_october": "The section M20 links (generative-alignment).",
+      "read_3_november": "The whole change.",
+      "found": "Besides that section's rewrite to the alignment of the joint selection (AJ, 24 October 2026), the changes are new goals, links moved to history and the record ids R35 E4 renamed. M20 cites the section for active directions and completed results and states none of its wording. The refresh stands."
+    },
+    {
+      "path": "RESULTS.md",
+      "entries": ["E06"],
+      "change": "+299 -52",
+      "read_28_october": "As a generated page, each line generated from its record.",
+      "read_3_november": "The whole change, each row id gone from the register traced through R35 E4's receipt (_process/architecture/renames/R35-E4-renames.json).",
+      "found": "The register went from 244 records to 478. 17 row ids are gone, and each was renamed to a record that exists: alignment-direction-g0-j -> alignment-direction-under-widening, axiom-decomposition -> continuation-condition-decomposition, closure-verdict-meets-axiom -> closure-verdict-meets-continuation-condition, contextual-registration -> claims-shown-in-context, held-lives-g0-is-centering -> living-significance-on-held-lives, learnable-through-registration -> learnable-through-a-map, one-axiom-yields-g0 -> continuation-condition-yields-living-significance, only-the-order-of-change-registers -> only-the-order-of-change-shows, practical-judgment-g0-j -> practical-judgment-under-living-significance, registration-within-what-it-registers -> readings-within-what-they-read, runaway-distance-unregistered -> runaway-distance-uncoupled, selection-through-registration -> selection-through-couplings, self-good-reachable-g0 -> own-good-to-reachable-living-significance, sensitivity-is-the-least-registration -> sensitivity-is-the-least-coupling, subthreshold-registration -> differences-below-threshold, testing-within-registration -> testing-within-couplings, wisdom-root-part-one -> wisdom-root-without-axiom. No row was lost. E06 cites the register as its results register and rests on the evidence studies it links; it holds. The refresh stands."
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "entries": ["C01", "C03"],
+      "change": "+1438 -1273",
+      "read_28_october": "The anchor C03 links (now opening section 6.4, with 6.5), and the label of C01's link ('current chapter and formal spine').",
+      "read_3_november": "The preface, section 1.1, section 2.5, the opening of section 9 and section 11: the parts bearing on C01's claim (one unfolding; formation, generative and degenerative alike; systems identified through actual relations; closures and boundaries).",
+      "found": "They agree with C01. The theorem map, the theses, the open programme and the glossary were not read against C01; C01 links the file as the version it was reviewed against, and its live home is in 01. Held on 28 October for A1; GC2 recorded the fingerprint after reading the change from 6c84c2d90 on (none), so the fingerprint rests on these readings."
+    }
+  ]
+}
