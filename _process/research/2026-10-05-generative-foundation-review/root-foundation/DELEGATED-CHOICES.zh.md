@@ -245,7 +245,7 @@
 <a id="d14-损的层次与形成的个体化--the-level-of-harm-and-the-individuation-of-formations"></a>
 ### D14. 损的层次与形成的个体化
 
-所在：第 8 节第十一、十二项；计划 §6 第 2 项；[held-lives-g0-is-centering](../../../../theories/becoming/results/records/living-significance-on-held-lives.md)、[derived-extent-limits](../../../../theories/becoming/results/records/derived-extent-limits.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)。
+所在：第 8 节第十一、十二项；计划 §6 第 2 项；[held-lives-g0-is-centering](../../../../theories/becoming/results/records/living-significance-on-held-lives.md)、[derived-extent-limits](../../../../theories/becoming/results/records/derived-extent-limits.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)。
 
 **层次（AI 的读法；Ren 2026-10-10 的话是其来源）。** 损读在整体的层次，较弱的版本在所在的系统之内，然后是自身（Ren 2026-10-10，见 §0），“整体”是实际的整体，从不是任何中心对它的模型，以包含比较从不许可强加的终结。§6.8 把这一次序给作判断有多完整的次序（`Web.Retains.within`）。整体上的比较就是同时在每个区域内的比较（`Web.includes_iff_within_every`），所以在整体的层次读损，不漏掉任何部分的损失：在任何区域内缩小的，就在整体上缩小。
 **决定（AI 的）：形成的个体化**，它定出什么算作一次损失（§6.8）。形成在 `Becoming.Identity` 所给的两个层次上个体化，各有其用：一、给一个部分归类为退化、中性或生成（D2）时，形成以谱系计，即更新的种类：在更新之内的取用于是不是损，更新的余量就是 D13 的相变边界；二、一个成员的终结仍是那个成员之延续的损失：任何以包含的比较都不许可它；一个部分加上自身的延续而终结一个成员时，是混合的，没有度量就不排序。
@@ -265,7 +265,7 @@
 <a id="d16-读出公理a-与-g0"></a>
 ### D16. 读出条件、A 与生命意义
 
-所在：第 8 节第十二项；[one-axiom-yields-g0](../../../../theories/becoming/results/records/continuation-condition-yields-living-significance.md)、[significance-retained-within-margin](../../../../theories/becoming/results/records/significance-retained-within-margin.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)、[comparison-within-reach](../../../../theories/becoming/results/records/comparison-within-reach.md)、[closure-verdict-meets-axiom](../../../../theories/becoming/results/records/closure-verdict-meets-continuation-condition.md)。
+所在：第 8 节第十二项；[one-axiom-yields-g0](../../../../theories/becoming/results/records/continuation-condition-yields-living-significance.md)、[significance-retained-within-margin](../../../../theories/becoming/results/records/significance-retained-within-margin.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)、[comparison-within-reach](../../../../theories/becoming/results/records/comparison-within-reach.md)、[closure-verdict-meets-axiom](../../../../theories/becoming/results/records/closure-verdict-meets-continuation-condition.md)。
 
 **决定。** 一、`Unrestricted` 读出公理：形成的索引读“anything”，一个形成在一步的延续读“its continuation into the future”，立场的索引不加限定地读“has significance”，没有中心特殊。二、A 读在活的内容上：这一读法是被迫的（`BareSignificance.bare_forces_reason`），如此读，A 给出 D 与普遍理由（`universal_reason_of_unrestricted`）。三、重述是否替代 G0，已由 Ren 的折叠回答（2026-10-11）：G0 不再是公理，第一部分把它作为条件陈述，第二部分断言公理时它是定理。
 **理由。** 一、逐字合 Ren 的句子，并且它就是对任何东西的 G0（`unrestricted_iff_livingSignificance`）；二、见证迫使它。
@@ -299,7 +299,7 @@
 <a id="d18-路线-b-与公理"></a>
 ### D18. 路线 (b) 与条件
 
-所在：第 8 节第十三项；[closure-verdict-meets-axiom](../../../../theories/becoming/results/records/closure-verdict-meets-continuation-condition.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)、[loss-beyond-a-region](../../../../theories/becoming/results/records/loss-beyond-a-region.md)、[represented-boundary-against-dependence](../../../../theories/becoming/results/records/represented-boundary-against-dependence.md)。
+所在：第 8 节第十三项；[closure-verdict-meets-axiom](../../../../theories/becoming/results/records/closure-verdict-meets-continuation-condition.md)、[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)、[loss-beyond-a-region](../../../../theories/becoming/results/records/loss-beyond-a-region.md)、[represented-boundary-against-dependence](../../../../theories/becoming/results/records/represented-boundary-against-dependence.md)。
 
 **决定。** 路线 (b) 不足以达到 G0 的辖域，两者照现状都保留：到达自身及其所依存者的路线 (b) 属第一部分（不用公理）；那一条公理是第二部分的断言。在 `Clearing` 中闭包的判决与公理的判决分开：所表示的边界恰是其依存的中心仍许可搭便车者（`Clearing.clearer_loses_dweller`），所以路线 (b) 只在整体是一个供给闭包处到达整体。
 **理由。** 已检查的反例决定它；Ren 2026-10-10：“let's aim for a first, then try to archive b”；2026-10-11：先第一部分，再一条公理的情形。
@@ -488,7 +488,7 @@
 - **两个动作的世界**（P130 第二读法，[two-act-worlds-carry-the-difference](../../../../theories/becoming/results/records/two-act-worlds-carry-the-difference.md)）：保留：反事实是同一律所生成的进程（P80），不是第二个实在。
 - **接合**（U 与 U2，[研究 §166](BECOMING-RENEWAL-READING.md#166-every-spine-theorem-on-the-base-u) 与 [§167](BECOMING-RENEWAL-READING.md#167-the-unification-follow-through-u2)）：其读法与按设计分开的分类保留；检查器要求每个分开的根有类别与理由。被标为可能空洞的两条迹之律（`ProbeRunsInherited.empty_candidates_trace_fails` 与 `slow_trace_misses_deadline` 的慢查询一半）是检查，不是读法。检查（工作板 U2c，[研究 §167](BECOMING-RENEWAL-READING.md#167-the-unification-follow-through-u2)）发现两条迹都存在，所以两律都不空洞；各律现在把它的迹作为一个合取项陈述，与该模块其余计算情形一样。
 - **有限分支处的提升**（I4b-4，[lifting-where-branching-is-finite](../../../../theories/becoming/results/records/lifting-where-branching-is-finite.md)）：按 2026-10-16 所取保留，现予确认。
-- **整体优先**（[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)）：保留，读作判断有多完整的次序，不读作生命所做的（Ren：“not saying this is what life does”）；记录现在称延续条件，不称 P128 以来已退役的“公理”。
+- **整体优先**（[whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)）：保留，读作判断有多完整的次序，不读作生命所做的（Ren：“not saying this is what life does”）；记录现在称延续条件，不称 P128 以来已退役的“公理”。
 - **“the situation makes it true”**（审查第 46 项）：被引用时，其形式部分，即以情境为移动之律的确定性，按构造成立，因为情境命名它所通向的构形；内容是计数（`Situations.sum_finer`）。
 - **新与不变**（审查第 49 项，所见 D-e）：[unity-of-readings](../../../../theories/becoming/results/records/unity-of-readings.md) 中 P107 的读法只作为类比保留：`Novelty` 对每个家族的量化不是 `BoundaryInvariant`，所以不支持不变之步，其根据仍开放（理论 §8.5）。
 - **生成链**（审查第 51 项）：Ren 取了建议：把 `Selection`（选择经选择者的模型起作用）、`Observation`（观察在下游之内）与 `Parting`（运行分开处，记录与律都不固定去路）加入其学习与智慧的链接，各带确切范围。生成链是 Ren 所编的论证，所以改动经其[维护记录](GENERATIVITY-CHAIN-INDEX-RECORD.md)。

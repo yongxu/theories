@@ -61,7 +61,7 @@ The UE plan's purpose for item 7, a result no neighbouring field states, is not 
 **Dependencies** (formal reuse).
 - The widening records: `Web.Widens`, its laws, and `Web.IncludesAcross` and `Web.ExceedsAcross` from [widening along a reading](../../../../../../theories/becoming/results/records/widening-along-a-reading.md).
 - [What a finite stretch verifies](../../../../../../theories/becoming/results/records/what-a-finite-stretch-verifies.md): `Dense`, `insulates_iff_dense`, and from `Becoming.Horizon`, `not_verifiable_of_adheres` and `not_refutable_of_adheres`.
-- [Widening as what every weighting ranks](../../../../../../theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.md): `Web.ListsAdmitted`.
+- [Widening as what every weighting ranks](../../../../../../theories/becoming/results/records/widening-as-what-every-weighting-ranks.md): `Web.ListsAdmitted`.
 - The support laws for `Flow.OpenedByOpened`'s vocabulary (`Web.GainsSupport`, `Web.Rises`).
 
 **Draft text for the home section, 07 §2** (for the lander to adapt; the chapter is not edited here).
