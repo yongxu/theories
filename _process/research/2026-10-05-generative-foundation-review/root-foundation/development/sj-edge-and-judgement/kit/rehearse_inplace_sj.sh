@@ -4,7 +4,8 @@
 # 40%) and for at least MINFREE GiB of disk, detaches the worktree at sj-claim, runs rehearse_sj.sh in it, and then
 # puts the worktree back exactly: the rehearsal's tracked changes saved as a diff and its new untracked files moved
 # (not deleted) into ASIDE/untracked, the merge aborted, the branch checked out again. Nothing is committed.
-# usage: rehearse_inplace_sj.sh WORKTREE ASIDE [MINFREE]   (ASIDE a folder outside the repository)
+# usage: [REHEARSE=rehearse_sj2.sh] rehearse_inplace_sj.sh WORKTREE ASIDE [MINFREE]   (ASIDE a folder outside the
+#        repository; REHEARSE the kit's rehearsal script, rehearse_sj.sh by default)
 set -u
 W=$1; ASIDE=$2; MINFREE=${3:-5}
 K=$(cd "$(dirname "$0")" && pwd)
@@ -21,7 +22,7 @@ done
 echo "$(date +%H:%M:%S) starting: load5=$l mem=$m% free=${f}GiB" | tee -a "$ASIDE/wait.log"
 git status --porcelain --untracked-files=all | sed -n 's/^?? //p' | sort > "$ASIDE/untracked-before.txt"
 git checkout -q --detach sj-claim || exit 2
-"$ASIDE/kit/rehearse_sj.sh" "$W" "$ASIDE" > "$ASIDE/rehearse.out" 2>&1; rc=$?
+"$ASIDE/kit/${REHEARSE:-rehearse_sj.sh}" "$W" "$ASIDE" > "$ASIDE/rehearse.out" 2>&1; rc=$?
 cat "$ASIDE/rehearse.out"
 git rev-parse HEAD > "$ASIDE/rehearsal-merge.txt"
 git diff --binary sj-claim > "$ASIDE/rehearsal.diff"; git diff --stat sj-claim > "$ASIDE/rehearsal.diffstat"
