@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-11-02-moves-gc4",
+  "date": "2026-11-02T16:18:46+00:00",
+  "base_commit": "8b3cfcbb29b669cc5b62449bd7c48124e9b7cc1c",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CHAIN-RELABELLING-PENDING-REN.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CHAIN-RELABELLING-PENDING-REN.md",
+      "sha256": "72ea5718dc64669079739aea8d782351a004be71bd1a10603a48efb3890f2967",
+      "blob": "20653d522b075e2ca0a1ee00ae4f0ec24fd19135",
+      "reason": "GC4: the relabelling proposal is decided; the chain now carries its result, so the page keeps its bytes in the study history",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CHAIN-RELABELLING-PENDING-REN.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md",
+      "old_sha256": "74c70fc409f089e1ace4d7e0e6b177b590395ab61ac1267692dd3878153385f5",
+      "new_sha256": "ccc1fe35fa8a8a55dab7ea1df50f8424fb6a6ce46e3f80aa1adeff6e0dc886cf",
+      "references": 3
+    },
+    {
+      "path": "theories/becoming/results/data/generativity-chain.json",
+      "old_sha256": "de960e543665947962bf1c00d36e50814c09aff8c04d7a963ceba75dd33f736c",
+      "new_sha256": "4be9b7c70dcd5886df6170d7dc29326001fa357ed57697d360ed3a03ffe433e6",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/history"
+  ],
+  "generated_pages_to_rerender": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md"
+  ],
+  "verification_errors": []
+}
