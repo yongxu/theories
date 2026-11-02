@@ -88,7 +88,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
 # are leaves nothing in the core imports. Both are held to the core's conditions (prelude only, empty
 # axiom reports) and sit outside it by direction: no core module but the root `Becoming` imports a
 # ring module, and no instance imports an application (`ring_direction`).
-INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns", "Becoming.ReaderRebuilding"]
+INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns", "Becoming.ReaderRebuilding", "Becoming.RuleRebuilding"]
 APPLICATIONS = ["Becoming.Dispatch", "Becoming.GuardHorizon", "Becoming.ResponseLearning", "Becoming.Coverage", "Becoming.SeedReach", "Becoming.ScopedReach", "Becoming.OpenedCorrection"]
 RING = INSTANCES + APPLICATIONS
 # The bridge: emptied by the F3 sweep (19 October 2026). Every bridge and pure join module is in
@@ -2356,6 +2356,13 @@ SCOPE = (
     "from every level of at least 2 (k + 1), and its end is at an empty stock and closed under the net; "
     "rebuilt from the supply or never rebuilt it ends at its span from every level; the stock buys time "
     "under a cut exactly where the rebuild draws on the level. "
+    "RuleRebuilding: one rule makes a family of nets of a quota, a level and holders and others by cohort, "
+    "the rule taught by members, from outside or not at all, others entering past a door of a strength per "
+    "teacher; from the steady state the rule is held at every step exactly where teaching fits a tenure, "
+    "the quota is at least one and the take fits the renewal; a region is closed under a revision inside it; "
+    "no holder comes from no holder; the steady state and open entry are two tests, each its own; and at a "
+    "teaching age of one less than the tenure, held and empty cohorts rotate and the rule is held exactly "
+    "where their joint take fits the renewal. "
     "Regulation: with balance, the joint exchange is within the gap to m on both sides exactly "
     "where the next level lies between m and the level; within the gap and opposing on both sides "
     "the level settles at m within its gap; beyond it an opposing exchange crosses m, a witness "
