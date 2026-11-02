@@ -135,7 +135,7 @@ Positions form within the one unfolding, and nothing outside it owns value. A *c
 **Two premises, two roles.** The ethics rests on two premises, and the theory asserts neither; each is a hypothesis wherever used, and its warrant is open.
 
 - The *continuation condition*, that from every standpoint, for anything, its continuation into the future has significance, fixes *scope*, whose losses count. Its content beyond the self's own presupposition, the step of invariance, extends that scope to losses that return to no one, and it ranks nothing.
-- *C*, that widening what can form is better, fixes *order*: it ranks a course above every course it widens and leaves mixed comparisons unranked. A ranking of courses needs C or a premise in its place.
+- *C*, that widening what can form is better, fixes *order*: it ranks a course above every course it widens and decides no mixed comparison. A ranking of courses needs C or a premise in its place.
 
 Under the condition, every living claim has significance from every standpoint (*living significance*), its case for life (conditional; [what it yields](chapters/07-SIGNIFICANCE.md#r-continuation-condition-yields-living-significance)).
 
