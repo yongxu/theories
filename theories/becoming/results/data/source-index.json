@@ -2016,6 +2016,23 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/ue30-hang-off/WHAT-WOULD-DEFEAT-THE-READING.md": {
+      "title": "What would defeat the central reading",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-2026-11-02.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/ue30-hang-off/walk_continuation.py",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-2-ROOT.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+        "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+        "theories/becoming/chapters/01-ROOT.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/03-KNOWING.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md": {
       "title": "UE1 review: the free-energy principle as a case (25 October 2026)",
       "local_links": [
@@ -5575,6 +5592,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r30-names/RENAME-TABLE.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/ue30-hang-off/WHAT-WOULD-DEFEAT-THE-READING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",

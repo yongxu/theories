@@ -621,7 +621,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "10914b0375a615a4b5204c5f3d50bdd2214bb7cdb39e16a8097c0e57165a9af5"
+      "sha256": "9a0ede895d2df94d04b13c439fa14bd54685adc28611a5090b6daec57298a781"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
