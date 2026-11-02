@@ -1,0 +1,67 @@
+| item | FIRST | SECOND | CLOSED | note |
+|---|---|---|---|---|
+| 1.1 | P | P | P | No stage gives all four phases; passing away or arising missing. |
+| 1.2 | R | R | R | |
+| 1.3 | P | P | P | Formed-standard gap unstated; SECOND gives supplied or read significance. |
+| 1.4 | P | P | A | Not assumed good; degeneration's equal place unstated. |
+| 1.5 | P | P | P | Stages lack AI authorship, no-person review; closed lacks further AI review. |
+| 1.6 | P | R | R | FIRST does not name readings as a kind. |
+| 1.7 | R | R | R | |
+| 2.1 | P | P | P | Continuation only, no generation excluding degeneration; closed lacks theorem standing. |
+| 2.2 | R | R | A | |
+| 2.3 | R | R | A | |
+| 2.4 | P | R | P | FIRST, closed: model results, nothing on not yet restated on grammar. |
+| 2.5 | A | A | A | |
+| 2.6 | R | R | P | Closed gives the commons, says no proof identified. |
+| 2.7 | P | P | P | Selector premise's force absent; closed also lacks proved standing. |
+| 2.8 | R | R | A | |
+| 2.9 | R | R | A | |
+| 2.10 | P | R | P | FIRST, closed: underived from dynamics; free parameter and caveat absent. |
+| 2.11 | P | R | P | FIRST, closed: C stated; widening as proved premise-free order absent. |
+| 2.12 | P | P | P | T8 not tied to both premises; closed lacks 生生 and argued. |
+| 2.13 | P | P | P | Interpretive standing partial; FIRST only quotes tag; no-theorem-changed never stated. |
+| 2.14 | P | P | P | Eight and "each" unstated; closed gives only mixed tests. |
+| 2.15 | A | P | A | Detection plus commitments; no-premise first step unstated. |
+| 3.1 | R | R | R | |
+| 3.2 | R | R | R | |
+| 3.3 | R | R | R | |
+| 3.4 | R | R | A | |
+| 3.5 | R | R | R | |
+| 3.6 | R | R | R | |
+| 3.7 | R | R | P | Closed: not asserted as established; hypothesis, warrant open absent. |
+| 3.8 | P | P | A | Follows from no-ranking and two premises; non-derivation not stated. |
+| 3.9 | R | R | A | |
+| 3.10 | P | P | A | Ranked case quoted, lost track; reason-not-warrant absent. |
+| 4.1 | R | R | P | Closed: premises underived from dynamics; no law evaluates unstated. |
+| 4.2 | R | R | R | |
+| 4.3 | P | P | P | Mixed cases only; duty and compliance absent. |
+| 4.4 | R | R | R | |
+| 4.5 | P | P | P | Proofs don't establish premises; axiom report, modelling choices unstated. |
+| 4.6 | R | R | R | |
+| 4.7 | A | P | P | Texts supply names; not-shown of grammar and authors unstated. |
+| 4.8 | A | A | A | |
+| 4.9 | A | R | A | |
+| 5.1 | R | R | P | Closed: application refutable by evidence; no forbidden case stated. |
+| 5.2 | P | R | P | FIRST: failures, not frozen; closed: mixed results only. |
+| 5.3 | P | P | A | FIRST "local defeats"; SECOND theorem survives; frozen-rule limit absent. |
+| 5.4 | P | P | P | Check or counterexample defeats; forbidding through hypotheses unstated. |
+| 5.5 | P | P | A | Quotes "forbid no relation"; what can fail not linked. |
+| 5.6 | A | P | A | No observation, defeat by argument; measurements' role unstated. |
+| 5.7 | P | P | P | Premises not empirical; perspectivist, failing argument unstated. |
+| 5.8 | A | A | A | |
+| 6.1 | R | R | P | Closed: no new mathematics; near-definitional or restated unstated. |
+| 6.2 | A | A | A | |
+| 6.3 | R | R | P | Closed: ledger of assumptions and tests; holding-and-failing witnesses absent. |
+| 6.4 | R | R | P | Closed: scope and order in Q3; not offered as addition. |
+| 6.5 | A | P | P | Shared vocabulary or relational language; not the three fields. |
+| 7.1 | R | R | - | |
+| 7.2 | R | R | - | |
+| 7.3 | R | R | - | |
+| 7.4 | P | R | - | FIRST: tests named; failing without touching theorems absent. |
+| 7.5 | A | P | - | Supply names; not supplying operations unstated. |
+| 7.6 | P | P | - | Names what stays open; standing per claim not shown. |
+| 7.7 | P | R | - | FIRST: root-to-models not shown as a joint. |
+
+2. None found.
+
+3. Opened 08 §7, §8 verdict, §9 through §10's law, philosophical warrant, review status and does-not-show; 07 §1, what forms, §4 opening, §4.4's self-concern theorem, T8, does-not-show and open; the opening lines of 02's generation law and 03's selection law; T3 in 05 by search only; searched the one page, overview and README for quoted phrases and the 496 of 527 count; did not check 01, 04, 06, the rest of 05, 07 §2, §3, §4.2 and §6, 08 §2 to §6, or every reader quotation against its source; marked from the .txt files.
