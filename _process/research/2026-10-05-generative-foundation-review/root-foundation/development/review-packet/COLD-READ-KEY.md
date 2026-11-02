@@ -49,7 +49,7 @@ It is written from the account (the chapters), not from the fronts, so that what
 | 3.3 Its role is scope, whose losses count | ★ | [07 §4](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
 | 3.4 By itself it ranks nothing | ★ | [07 §4](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
 | 3.5 C: widening what can form is better | ★ | [07 §4](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
-| 3.6 Its role is order; C gives order, in general alone (self-concern ranks one stated case under a narrower premise); it leaves mixed comparisons unranked | ★ | [07 §4](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
+| 3.6 Its role is order; C gives order, and a ranking needs it or a premise in its place (self-concern ranks one stated case under a narrower premise); it leaves mixed comparisons unranked | ★ | [07 §4](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
 | 3.7 Neither is asserted; each is a hypothesis wherever used; their warrant is open | ★ | [07, what this chapter does not show](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show) |
 | 3.8 The ethics does not derive from the condition | ★ | [07, what this chapter does not show](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show) |
 | 3.9 The step of invariance: the condition's content beyond what acting for oneself presupposes, extending scope to losses that return to no one | | [07 §4.2](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
@@ -78,7 +78,7 @@ It is written from the account (the chapters), not from the fronts, so that what
 | 5.3 A refuted thesis removes no theorem, and a frozen rule fixes how a verdict is scored, not that it measures what the thesis names | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) |
 | 5.4 Theorems hold under their hypotheses and answer to the Lean check; a law with content forbids through its hypotheses, and what can fail of it is that a system meets them | ★ | [08 §10](../../../../../../theories/becoming/chapters/08-METHOD.md#law) |
 | 5.5 The root's laws hold of every carrier, relation and class, so they forbid no relation: no observation refutes them; what can fail is that the grammar explains (argued) and represents (open) | ★ | [08 §10](../../../../../../theories/becoming/chapters/08-METHOD.md#law), [01](../../../../../../theories/becoming/chapters/01-ROOT.md#expressible-and-derived) |
-| 5.6 The philosophical thesis of one relational unfolding forbids explanations, not observations: an argument could defeat it and no measurement could | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#one-relational-unfolding) |
+| 5.6 The philosophical thesis of one relational unfolding forbids explanations, not observations: no observation is named and it is argued none could; an argument could defeat it, which measurements can support and cannot replace | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#one-relational-unfolding) |
 | 5.7 The premises are not refuted by the dynamics: a perspectivist denies the condition consistently; what can fail is the argument for them | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#philosophical-warrant) |
 
 ## Q6. What is new
