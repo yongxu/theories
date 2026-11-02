@@ -39,6 +39,7 @@ N=$(( $(grep -E '^## [0-9]+\. ' $STUDY | tail -1 | sed -E 's/^## ([0-9]+)\..*/\1
 echo "receipt $ID, study section $N"
 python3 -B "$K/land_og2.py" "$ID" "$N" > "$ASIDE/land_og.log" 2>&1; step land-texts $?
 python3 -B "$K/fronts_og2.py" > "$ASIDE/fronts.log" 2>&1; step fronts $?
+python3 -B "$K/budgets_og2.py" > "$ASIDE/budgets.log" 2>&1; step budgets $?
 python3 -B tools/research/repoint.py --reason "OG2's status sentence in the overview's section 10 now names one kind of institution's model beside the organism's; the overview names these three results elsewhere and links to 02 for their statements, restating none of them in the sentence changed and contradicting none; read against the records, nothing they say changed." --paths theories/becoming/THE-THEORY-OF-BECOMING.md --ids loss-read-in-time-by-the-others readers-drawn-from-the-selected shaping-read-by-readers-drawn-from-the-selected --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
 python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity before registering: exit $?"
 python3 -B "$K/register_og2.py" "$ASIDE/conn1.log" > "$ASIDE/register.log" 2>&1; step register $?
