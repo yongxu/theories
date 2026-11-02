@@ -102,3 +102,25 @@ This is board item RP2b: the release gate's item 6 as amended on 31 October ([WH
   - the provenance named the release gate.
 
   Every finding was taken. Cuts elsewhere kept the part near its budget: a repetition, and the population-ethics clause of question 2, which P-07 keeps in full.
+
+## The re-sync of 2 November 2026
+
+The dossier was read against what had moved around its citations since `33d06e9b7` (31 October), the first dossier re-synced by the freeze's rehearsal ([the steps](../review-packet/FREEZE-STEPS.md)), at `2cab11114`. [`resync_report.py`](../review-packet/resync_report.py) flagged 11 of 27 items, 15 of 135 quotations and 9 of 29 linked sections, and every check had passed through all of it.
+
+- **What changed.**
+  - P-16 gained the result on self-concern and C (`increasingInOwn_iff_increasing_iff_unrestricted`, `Web.extension_ranked_of_increasingInOwn`), with its limits as known weaknesses and a second question, and the front a line on it, since item 3 would otherwise understate what self-concern reaches.
+  - P-02 gained what a standpoint is on the theory's reading (`forced_iff_center`).
+  - P-08 and Terms follow chapter 7's wording of *sub-true* and *super-true*, and the scope bullet states the condition as chapter 7 does.
+- **Left out, on reading.** `r-when-holding-for-a-reading-stands-above-a-route`: the alignment dossier carries it, and it adds nothing to what this dossier asks.
+- **Measures.** The kit's counting, on this text:
+  - The part: 1,156 words and 2 characters, 8.9 to 11.6 minutes, 57 over the budget of 1,100 with a character counted as half a word. The excess is the earlier 16 and the new line. Amendment 1 protects the line's hypotheses, not the line: keeping it is a judgement, which the measure warns of and does not block (amendment 2).
+  - The hour: 4,428 words and 177 characters, 34.7 to 45.2 minutes.
+  - The whole: 13,721 words and 261 characters, 106.5 to 138.5 minutes, stated as 105 to 140.
+  - After PF3 landed the same day, on the merge: the part 1,173 words and 2 characters, 9.0 to 11.7 minutes, 74 over; the whole 13,981 words and 261 characters, 108.5 to 141.1 minutes, stated as 105 to 145; the hour 4,603 words and 177 characters, 36.1 to 46.9 minutes.
+- **Review.** One independent AI reader, read-only and with no part in the writing, read the changes against chapter 7, the Lean and AGENTS.md. It confirmed that `Extension` there is exactly the page's widening (`Web.paths_extension_iff_widens`), so that "the wider of two courses as C asks" says what the theorem says. It found:
+  - in P-16, two hypotheses dropped (every claim counted as living; each item marked by its formation), and chapter 7's third not-shown left out;
+  - P-16's second question saying "courses whose admissions end" where listing implies ending and not conversely, with admission decided dropped too;
+  - in the front, "such an order" with no antecedent, and "listed courses", which can read as courses on a list;
+  - the standing lacking its base and "conditional", a result assuming the condition sitting unmarked in a part called "without the step", and *drawn* left without a gloss.
+
+  Every finding was taken. Its findings on the kit are taken in [the steps](../review-packet/FREEZE-STEPS.md).

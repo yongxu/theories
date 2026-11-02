@@ -15,9 +15,9 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-04-integrated-evolution/` | — | 2 | — | 0 |
 | `2026-10-05-causal-foundations/` | — | 1 | `outputs/ (1)` | 0 |
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
-| `2026-10-05-generative-foundation-review/` | — | 6610 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6505)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4401 |
+| `2026-10-05-generative-foundation-review/` | — | 6651 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6546)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4402 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
-| `2026-10-05-repository-reconciliation/` | — | 333 | `architecture/ (315)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
+| `2026-10-05-repository-reconciliation/` | — | 335 | `architecture/ (317)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
 | `2026-10-05-support-and-shared-generativity/` | — | 24 | `completion/ (24)` | 0 |
 
@@ -73,7 +73,7 @@ Retired study material, bytes unchanged. Each history folder has a `MANIFEST.jso
 
 | History folder | Files | Manifest |
 |---|---:|---|
-| `2026-10-05-generative-foundation-review/history/` | 4364 | [MANIFEST.json](2026-10-05-generative-foundation-review/history/MANIFEST.json) |
+| `2026-10-05-generative-foundation-review/history/` | 4365 | [MANIFEST.json](2026-10-05-generative-foundation-review/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history/` | 3 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/lw-the-way-for-life/history/` | 2 | — |
 | `2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/MANIFEST.json) |

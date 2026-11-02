@@ -1,0 +1,173 @@
+{
+ "findings": [
+  {
+   "severity": "blocker",
+   "where": "the section, G0 item (en line 22, zh line 9)",
+   "quote": "Four stated as present what was the route then taken, with no note in the entry saying so ... C24's claim has the same form, but its scope carries the note, so it stays.",
+   "problem": "False of M20. M20 carries the same note as C24, in the same field, and its claim says 'under the G0 route then taken' twice. C24's reason for staying would keep M20 too, so the section's one test does not separate the four from the rest. M20 changes for a different reason: 'retains ... in the unified account' says the interface persists now, against the note beside it.",
+   "evidence": "/Users/ren/theories/theories/becoming/results/data/generativity-chain.json, M20 scope_en: 'G0 then a starting point; in the current account ...'; M20 claim_en: 'under the G0 route then taken'",
+   "fix": "Say that three (F14, M25, C23) had no note, and that M20 changes although it has the note, because 'retains' contradicts it."
+  },
+  {
+   "severity": "blocker",
+   "where": "the section, C item (en line 20, zh line 7); M21 claim_en and claim_zh, unchanged",
+   "quote": "M21's \"a count that rests on C\" stays: that one case concerns a coupling's ending, not new living counted as positive.",
+   "problem": "The reason misdescribes the result. It is not confined to a coupling's ending: any course adding to one's own continuation ranks above another exactly where the other keeps nothing beyond it, and any ending qualifies; the coupled ending is one joined theorem. The higher course ranks higher because it adds to that continuation, so living added there counts above its absence, with no C. M21 therefore stays unqualified where 07 §4 now says 'C or a premise in its place'. The sentence can stand for new living beyond the ranker's own continuation, but neither it nor the section says so. The script's closing assert misses it by punctuation: it looks for 'rests on C, ' and M21 has 'rests on C (07'.",
+   "evidence": "pf3-crux:theories/becoming/results/records/what-self-concern-alone-ranks.md:8, :15, :17, :19 ('exactly where the other keeps nothing beyond it'); pf3-crux:theories/becoming/chapters/07-SIGNIFICANCE.md:358 ('adding to that continuation, with no C'), :232",
+   "fix": "Either write en 'a count that rests, in general, on C (07 §4)' and zh '此计一般依于 C（07 §4）' and drop the section's sentence, or keep the text and give the true reason: new living in general is not confined to what a ranker's own continuation marks."
+  },
+  {
+   "severity": "fix",
+   "where": "M21 claim_en, the script's second M21 edit; the section, line 21",
+   "quote": "under balance, alike initial levels and complete readouts ... as timely-response-necessity does",
+   "problem": "This sentence is P92's bound (§12), whose premise is restricted to what couples into formations beyond the responsive reach. The new text says all initial levels are alike, a stronger premise than the Lean takes. The record cited for the wording is P104's, whose condition really is 'All initial levels agree', and M21's next sentence already states P104. The unchanged zh '相同初始所识' keeps the restriction, so en and zh now differ.",
+   "evidence": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:33 (`start`, beyond reach and coupled in); /Users/ren/theories/theories/becoming/results/records/finite-fallible-inquiry-necessity.md:27 ('alike initial levels on what couples into formations beyond the part's responsive reach'); /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md:465; /Users/ren/theories/theories/becoming/results/records/timely-response-necessity.md:35",
+   "fix": "en: 'under balance, alike initial levels on what couples in beyond responsive reach and complete readouts'. In the section, cite finite-fallible-inquiry-necessity and state the premise with its restriction."
+  },
+  {
+   "severity": "fix",
+   "where": "the section, line 22 and zh line 9; M20 scope_en; the script's comment at its lines 46-47",
+   "quote": "the source's Chinese says what was folded, the conditional interface after folding into significance",
+   "problem": "Neither Chinese source says the interface was folded; both say G0 was. The named source line belongs to P96 and has no 条件接口, while the chain's clause belongs to P95. P95's home says two separate things: the G0/J conditional interface is kept, and G0 is folded. '折入意义后的条件接口' is the chain's own zh. The new zh is right. The new en hangs 'folded' on the interface and says G0 where the source says G0/J.",
+   "evidence": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-ARGUMENT.zh.md:110 ('当前统一结构将 G0 折入意义'); /Users/ren/theories/theories/becoming/history/PRACTICAL-JUDGMENT.zh.md:53 ('沿用已完成成果的 G0/J 条件接口 ... G0 已折入意义')",
+   "fix": "en: 'the conditional interface of G0/J then taken, with G0 folded into significance, stays unchanged'. In the section, attribute the sentence to P95's home (PRACTICAL-JUDGMENT §2.1) and to the chain's zh."
+  },
+  {
+   "severity": "fix",
+   "where": "M21 claim_zh, new '此前所识' and kept '识'; the section, lines 8 and 21",
+   "quote": "so it says \"an earlier coupling\", in Chinese 此前所识",
+   "problem": "C14 and M24 take their new zh from the records' words, but M21 does not, though it reads the same way. The record §11's row now links has the zh title 耦合之内的检验, the live zh overview and one page use 耦合 and never 所识, and the section's own zh writes 耦合的终结 and 读者的耦合. 所识 is not the source's word at this point either: the source has 此前的识.",
+   "evidence": "/Users/ren/theories/theories/becoming/results/records/testing-within-couplings.md:1; /Users/ren/theories/theories/becoming/THE-THEORY-OF-BECOMING.zh.md (耦合 on 15 lines, 所识 on 0); /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md:769",
+   "fix": "Use 此前的耦合, and 耦合 at the first M21 edit, as GC2 took the live zh editions' words. Otherwise keep the source's 此前的识 and say that the zh stays in the source's word."
+  },
+  {
+   "severity": "fix",
+   "where": "the section, labels item (line 23) and Left (line 27)",
+   "quote": "Four receipts of 8 October (C01, C09, M15, F01) are no longer labelled current.",
+   "problem": "True of those four, but the same defect remains unlisted. F01 has a fifth 8 October receipt, 'Frozen pilot receipt' / 本轮冻结回执. C26 has 'Current focus directive' / 本次聚焦原话 on a source of 13 October. C01 has 本次原话 and 本次更强要求, C20 has 本会话方法纠正, and M24 has 'Current definition' / 当前定义. M15's 'Original realization and ranking-boundary proofs' pairs with 当前实现及排序边界的原证明, where en and zh disagree in tense.",
+   "evidence": "/Users/ren/theories/theories/becoming/results/data/generativity-chain.json, link labels of F01 (path .../generated-contraction-checks/20261008T101759.536385Z/receipt.json), C26, C01, C20, M24, M15",
+   "fix": "Change at least F01's and C26's labels with these, and list the rest under Left."
+  },
+  {
+   "severity": "fix",
+   "where": "the section, opening and Left (lines 18, 27)",
+   "quote": "This section reads what the two sections above left ... Left. Each entry's route to the live statement",
+   "problem": "GC3's 'Not changed, and left' also leaves the steps that never stood on the name: 'the others are not read one by one for this'. The key's last sentence still says such steps have not been read. This section does not read them, and Left omits them, so the list reads as complete when it is not.",
+   "evidence": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md:1526; data scope_en, last sentence",
+   "fix": "Add one clause to Left: the steps neither argued nor marked stay unread for this, as the key says."
+  },
+  {
+   "severity": "fix",
+   "where": "the section, G0 item (line 22)",
+   "quote": "Each of the 108 names what G0 stated: a premise a result then stood under (G0/J, G0/J/E), a route, or what was not proved of it.",
+   "problem": "The list is not exhaustive and 'each' overclaims. F08 names the Lean `def G0` of its module, the sense the key maps by name. C18 speaks of what Lean checks from G0. M20's use is the folded form. The status sentences themselves ('G0 is no premise', 'that G0 stated') fit none of the three classes.",
+   "evidence": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean:29, :52; F08 and C18 scope_en; C03 scope_en",
+   "fix": "Say: each names what G0 stated or its Lean form of that time (F08), a premise a result stood under, a route, what was not proved of it, or the note's own account of G0."
+  },
+  {
+   "severity": "fix",
+   "where": "the section, Left (line 27)",
+   "quote": "82 entries still link only retired texts, sources, receipts and Lean",
+   "problem": "The count is right (94 entries, 12 linking a record). 'Only' is false: E06 links the live register RESULTS.md; C09, C23, C26, M23, F18, F23, F26, F27 and F28 link studies still in root-foundation, not history; F12 links a README. Inherited from GC2, but restated here as a finding.",
+   "evidence": "/Users/ren/theories/theories/becoming/results/data/generativity-chain.json, links of those entries; none has a path under results/records or chapters",
+   "fix": "Write: 82 entries link no record or chapter; their links are retired texts, studies, sources, receipts and Lean (E06 the register)."
+  },
+  {
+   "severity": "note",
+   "where": "the section, line 21, on §11 and the third M21 edit",
+   "quote": "SCIENTIFIC-INQUIRY-CONDITIONS §11's row is now testing-within-couplings",
+   "problem": "Only the row's link path is. Its visible text and the reuse list still read testing-within-registration; the script's comment is more exact than the section. For 'an earlier coupling', the stated reason (answers read through couplings) is true but not the ground. The ground is that a future requirement creates no earlier edge.",
+   "evidence": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md:363, :330, :715; /Users/ren/theories/theories/becoming/results/records/timely-response-necessity.md:13 ('at some s ≤ t')",
+   "fix": "'§11's row links the record now named testing-within-couplings'; for the third edit, cite law 1 or line 715."
+  },
+  {
+   "severity": "note",
+   "where": "M21 claim_en, 'necessity correspondence for coupling'",
+   "quote": "the necessity correspondence for coupling, generalization,",
+   "problem": "The glossary's row for 'coupling' gives 'how strongly one level responds to another'. The sense meant here is its 'couples into' row. The bare noun reads as the first.",
+   "evidence": "/Users/ren/theories/GLOSSARY.md:37, :45",
+   "fix": "'for testing within couplings, generalization, ...', which is the record's own title."
+  },
+  {
+   "severity": "note",
+   "where": "C23, M25, F14 en",
+   "quote": "G0, the route then taken, with disclosed J1–J4; Explicit G0/J grounds, the route then taken",
+   "problem": "The en apposition says G0, or the grounds, is the route; the zh says 当时所取路线的 G0, and 08 §10's label is 'the G0/J route'. M20 already has a settled form.",
+   "evidence": "M20 claim_en: 'under the G0 route then taken'; /Users/ren/theories/theories/becoming/chapters/08-METHOD.md:639 and its table",
+   "fix": "'Under the G0 route then taken, G0 with disclosed J1–J4 ... support'; 'Under the G0/J route then taken, explicit G0/J grounds appraise'."
+  },
+  {
+   "severity": "note",
+   "where": "the section, G0 item, the exclusions from the count",
+   "quote": "not counting the five parentheticals that name the Lean `G0` under its present name",
+   "problem": "Units are mixed: 53 and 55 count uses per language, but the excluded form is 10 uses in 5 entries, and in C03, C17 and M15 it is an appositive, not a parenthetical. The count's exclusions also omit M15's connection fields, en and zh, which say 'Existing g0_of_unrestricted', a Lean name renamed since.",
+   "evidence": "the regex count on the data: 108 plus 10 backticked; /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r30-names/RENAME-TABLE.json:3995",
+   "fix": "'not counting the 10 uses (5 entries) naming the Lean `G0`, nor M15's old Lean name g0_of_unrestricted'."
+  },
+  {
+   "severity": "note",
+   "where": "kept G0 uses nearest the line (question 3)",
+   "quote": "the ethical extension discloses G0 and further commitments (C14); G0/J and P89 stay complete (C26); Within the G0 route, candidate K gives (C19)",
+   "problem": "These are present-tense, in entries with no note, and share the grammar of the changed sentences. None states what the current account denies: C14 reports a disclosure, C26 a route's completion at its scope, C19 is scoped to the route. Keeping them is defensible, but only on a test the section does not state.",
+   "evidence": "C14, C26, C19 in /Users/ren/theories/theories/becoming/results/data/generativity-chain.json",
+   "fix": "State the actual test: the sentence presents the premise itself as supporting or superseding something now, with no route named."
+  },
+  {
+   "severity": "note",
+   "where": "the section's zh, lines 5 and 10",
+   "quote": "2 November 的冷读; 8 October 的四个回执 ... 不再标为“当前”或“本轮”",
+   "problem": "English dates sit in Chinese sentences, where GC2's zh and this revision's own labels write 10 月 8 日. C09's old zh label was 本次, so the list of words is short by one.",
+   "evidence": "the script's LABELS, C09: '本次源码绑定实查'",
+   "fix": "11 月 2 日, 10 月 8 日; “当前”“本次”或“本轮”."
+  },
+  {
+   "severity": "note",
+   "where": "the section, Left and opening",
+   "quote": "the coordinator holds it for Ren's return; Board item GC4",
+   "problem": "Line 19 and its wording are right on main and on pf3-crux. I found no record of the hold on the board or in the cold-read report, whose row names AGENTS.md among the places to correct. main's board has no GC4 row at 5a3a7fd61, and no commit names it.",
+   "evidence": "/Users/ren/theories/AGENTS.md:19; /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-2026-11-02.md:107; git grep GC4 on main's board finds nothing",
+   "fix": "Put the hold and the GC4 row on the board before landing, and cite the board."
+  },
+  {
+   "severity": "note",
+   "where": "the section, line 24, the move",
+   "quote": "takes it to its sibling `history/`",
+   "problem": "root-foundation/history does not exist; the study's history root is ../history/root-foundation. The phrase is GC2's, but a plan written from it could create a new directory.",
+   "evidence": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/history/root-foundation exists; root-foundation/history does not",
+   "fix": "Name the target: history/root-foundation/CHAIN-RELABELLING-PENDING-REN.md."
+  },
+  {
+   "severity": "note",
+   "where": "the script, line 98, a comment that lands with the kit",
+   "quote": "What remains of the retired word is the plain sense only (the pin) and the register's own label (E06).",
+   "problem": "The regex below it matches 'registration' only. It prints the pin and two path fragments (formed-registration-…, copying-registration-…), and cannot print E06's 'Results register'.",
+   "evidence": "run on a copy: registration left: ['N.md#formed-registration-chang', 'ics/copying-registration-verif', 'on with pin registration, life']",
+   "fix": "Say: the pin in prose, and two link paths kept as they are."
+  },
+  {
+   "severity": "note",
+   "where": "the key, 'in general alone'",
+   "quote": "and C gives order, in general alone, neither premise asserted",
+   "problem": "The wording is exact to 07 §4, but no text in the chain says what 'in general' excepts. The glossary row does, and the key is where the chain explains things once.",
+   "evidence": "pf3-crux:GLOSSARY.md:62 ('self-concern ranks one case with no C')",
+   "fix": "Optional: add that parenthesis to the key only."
+  },
+  {
+   "severity": "note",
+   "where": "labels this revision touches or sits beside",
+   "quote": "Affected-build receipt of 8 October / 10 月 8 日的完整构建回执",
+   "problem": "The en and zh already disagreed and the rewrite keeps it, though M20's pair was aligned for the same fault. The receipt lists 32 modules, like C01's 完整构建. M20's 'Adequacy protocol' / 份额接续范围 and 'Formal continuation protocol' / 形式接续范围 keep the mismatch 研究方案 removes from their neighbour. I did not establish which M15 word is right.",
+   "evidence": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/inquiry-repair-verification.json (module_count 32); M20 link labels",
+   "fix": "Align them or list them under Left."
+  },
+  {
+   "severity": "note",
+   "where": "checked, nothing found",
+   "quote": "",
+   "problem": "(1) C's splice reads correctly in the key and in C03, C17, C24, M15 and M20, en and zh; it matches 07 §4's words and the zh overview's. (2) 108 / 53 / 55 / 15 are right, before and after the script, and the key's own uses are outside the count as the section says. (3) F14's past tense is right on its source, and C23's and M25's changes are right apart from the apposition noted above. (4) After the script no retired 'registration' sense remains in prose: a search for regist, 登记, 配准 and 注册 over every entry field except paths finds only the pin in C33, F29 and M23 and E06's register label. 'Plain word' is right. (5) The four receipts are of 8 October UTC: 09:59, 18:54 (9 October local), 09:39, and a pointer to 20261008T103919. (6) New labels C14 and M24 follow the records and Revision.lean. (7) 03 line 272 is in §6, its only live use of the words; the anchor exists. (8) The four opening anchors exist on pf3-crux, and what the key says of them agrees. (9) The cold read does report C overstated. (10) The script changes 41 lines and reformats nothing. No name is given as warrant and no 'derives' appears in the new text.",
+   "evidence": "pf3-crux:theories/becoming/chapters/07-SIGNIFICANCE.md:232, :148; /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/history/root-foundation/VERSIONED-CORRECTION-INTEGRATION.md:27, :31; /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATIVE-LOSS-COMPARISON-INTEGRATION.md:3; /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-2026-11-02.md:107",
+   "fix": ""
+  }
+ ],
+ "after": "Uses read: all 108, each in a window of about 150 characters either side, with whole fields read only for C14 (start), C18, C19, C23, C26, F08, F14, M25 (start) and M21's claim.\n\nNot checked: render, `generative_chain.py --check`, research-check or the move's dry run; the records' re-points after the 03 edit; the 82 entries' routes; text in M20 and M21 outside the windows and edited sentences; the hold's existence outside the repository. The script ran only on a copy at /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/gc4-read/after.json; the repository is untouched."
+}

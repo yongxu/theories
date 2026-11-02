@@ -2,7 +2,7 @@
 
 AI-authored. Readers never see this. It marks [the cold read](COLD-READ-2026-11-02.md)'s later rounds, which keep that round's two stages and questions so that they compare with it. The first round was marked afterwards; this is fixed by its commit before any later read. A correction after that is made in the run's marks, with its reason, and never here for that run.
 
-It is written from the account (the chapters), not from the fronts, so that what a front leaves out shows as a gap. It was first written on 2 November 2026 for a second measure that never ran, then checked against the chapters when taken here, which changed four items: 1.3 and 5.6 to what their owners have since decided, 3.6 to what 07's own theorem on self-concern allows, and 5.1 and 7.7 added for what the first round found.
+It is written from the account (the chapters), not from the fronts, so that what a front leaves out shows as a gap. It was first written on 2 November 2026 for a second measure that never ran, then checked against the chapters when taken here, which changed four items: 1.3 and 5.6 to what their owners have since decided, 3.6 to what 07's own theorem on self-concern allows, and 5.1 and 7.7 added for what the first round found. Before the second round 1.3 took its owner's corrected wording and 5.8 was added from 08 §9, which the first round's fronts did not yet have; the first round's marks do not change.
 
 **Marks.** R: stated right, at the right standing. P: partly. A: absent. W: stated wrong, or stated at a stronger or weaker standing than its home gives. ★ marks what should survive a 300-word note, which is what the closed-book answers are read for.
 
@@ -14,7 +14,7 @@ It is written from the account (the chapters), not from the fronts, so that what
 |---|---|---|
 | 1.1 An account of how anything comes to be, lasts, changes and passes away | ★ | [08 §1](../../../../../../theories/becoming/chapters/08-METHOD.md#one-relational-unfolding) |
 | 1.2 Within one relational unfolding, beginning from relations | ★ | [01](../../../../../../theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class) |
-| 1.3 Life, knowing and standards take shape within it; that any of it has significance is not shown: significance is supplied or read | ★ | [07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
+| 1.3 Life and knowing take shape within it, and evaluation only so far: that a standard which formed is a significance is not shown; significance is a free parameter or read along a relation no law here picks | ★ | [07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied) |
 | 1.4 Becoming is not assumed good; degeneration belongs to it as fully as generation | ★ | [02](../../../../../../theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains) |
 | 1.5 Made with AI; the proofs machine-checked, everything else only by further AI review; no person has reviewed it | ★ | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#review-status) |
 | 1.6 Of mixed kind: proofs, readings, theses about actual systems and premises, each at a stated standing | ★ | [08 §2](../../../../../../theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
@@ -80,6 +80,7 @@ It is written from the account (the chapters), not from the fronts, so that what
 | 5.5 The root's laws hold of every carrier, relation and class, so they forbid no relation: no observation refutes them; what can fail is that the grammar explains (argued) and represents (open) | ★ | [08 §10](../../../../../../theories/becoming/chapters/08-METHOD.md#law), [01](../../../../../../theories/becoming/chapters/01-ROOT.md#expressible-and-derived) |
 | 5.6 The philosophical thesis of one relational unfolding forbids explanations, not observations: no observation is named and it is argued none could; an argument could defeat it, which measurements can support and cannot replace | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#one-relational-unfolding) |
 | 5.7 The premises are not refuted by the dynamics: a perspectivist denies the condition consistently; what can fail is the argument for them | | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#philosophical-warrant) |
+| 5.8 The explanatory reading can be defeated only in stated senses: as a language by nothing, as an explanation by a rival deriving the same laws from fewer patterns, where a first count ties | | [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading) |
 
 ## Q6. What is new
 

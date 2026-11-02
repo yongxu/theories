@@ -268,7 +268,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "bec2e4d8f99c7a2731de0c7a99af60feb9f402f0d772d38ede7f7a158daf75e4",
+      "sha256": "e741b8c298e83100bbd5e51bfd6d4765aec87dc330391842f54c4e50a8b17465",
       "declarations": []
     },
     {
@@ -373,6 +373,10 @@
     {
       "en": "2 November 2026, U4e (study section 500): the Next drops a theorem that no statement reading only the dynamics entails C. DU gave it (ReadsNoOrder.not_entails: a statement reading no order, as one reading only the dynamics does, entails C at a datum on a frame with an extension only where it fails), and the home section already names it. RootForms.some_depends states its witness instead of only that it is not refuted, so law 2's witnesses read directly; its statement is stronger, the law unchanged. No standing or count changed.",
       "zh": "2026年11月2日，U4e（研究第 500 节）：下一步去掉“无一仅读动力之陈述蕴涵 C 之定理”。DU 已给出之（ReadsNoOrder.not_entails：不读次序之陈述——仅读动力者即是——于有延伸之框架上之一数据处，唯于其不成处蕴含 C），家节已名之。RootForms.some_depends 径陈其见证，不再只言其不被否证，第 2 条之见证遂直读；其陈述更强，规律不变。无一立处或计数改变。"
+    },
+    {
+      "en": "2 November 2026, board item PF3: a basis corrected to say what ranks lies in C in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
+      "zh": "2026年11月2日，看板条目 PF3：更正一条依据，说排序一般而言唯在 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
     }
   ],
   "boundary": {
@@ -884,7 +888,7 @@
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "What ranks lies in C alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+          "en": "What ranks lies in C, in general alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

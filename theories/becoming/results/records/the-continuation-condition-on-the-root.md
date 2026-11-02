@@ -30,7 +30,7 @@
 - That any actual net meets the condition at any class, which class a center's own line runs under, or which occurrences are centers.
 - That the relations a self is drawn along run with 缘: feeding and influence run to conditions, so read along them the condition reaches what one depends on, not what follows.
 - The free significance parameter of the condition, on the root: it is not lifted, and its non-entailment holds by construction of that parameter.
-- The warrant of the condition, or anything about C, which alone orders.
+- The warrant of the condition, or anything about C, which gives order, in general alone.
 
 **Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -87,6 +87,7 @@ Aliases: `The continuation condition on the root`, `根上之续存条件`, `Bec
 - 24 October 2026: added (GS2), from the review of the root against its two source texts, with SW's proposal 3 and PW's item 3; study section 392.
 - 25 October 2026, board item DF (study section 418): the retired label S0 in the third law reads self-significance; the law is unchanged.
 - 1 November 2026, board item OU7 (study section 492): the correspondence's English reading of the source restated so that its quantifiers match the definition of «续无外» (every center, every occurrence), as GrammarScope's docstrings now word it (the grammar's owner's patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes. Nothing else the record states changed.
+- 2 November 2026, board item PF3: corrected to say C gives order in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.
 
 </details>
 
