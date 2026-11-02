@@ -3,8 +3,9 @@
 # main merged in, the checker writing its run into the repository, the record, 08's counts, the study section and
 # WHAT-REMAINS' line filled in (land_og2.py), the connectivity register's apart roots (register_og2.py), the
 # connectivity and shared laws, the board's landed clause, and one commit of every changed path. The rehearsal's
-# dry run (scratch receipt 20261101T135208.604453Z) drifted no record, so there is no re-pointing step: a strict check
-# failing on drift stops the script, to be read and settled by hand. The fast-forward is ff_og2.sh's.
+# dry run (scratch receipt 20261102T152701.560288Z) drifted three records bound to the overview, by the status sentence;
+# read against them, nothing they say changed, so they are re-pointed here. Any other drift stops the strict check, to
+# be read and settled by hand. The fast-forward is ff_og2.sh's.
 # usage: OG2_ORDER="…" land_og2.sh WORKTREE ASIDE   (ASIDE a folder outside the repository, for logs; OG2_ORDER the
 #        coordinator's order sentence for the landed clause, sent with its word, verbatim; required)
 #        land_og2.sh WORKTREE ASIDE rehearse       (on a throwaway branch: no head check, no board edit, no commit)
@@ -38,6 +39,7 @@ N=$(( $(grep -E '^## [0-9]+\. ' $STUDY | tail -1 | sed -E 's/^## ([0-9]+)\..*/\1
 echo "receipt $ID, study section $N"
 python3 -B "$K/land_og2.py" "$ID" "$N" > "$ASIDE/land_og.log" 2>&1; step land-texts $?
 python3 -B "$K/fronts_og2.py" > "$ASIDE/fronts.log" 2>&1; step fronts $?
+python3 -B tools/research/repoint.py --reason "OG2's status sentence in the overview's section 10 now names one kind of institution's model beside the organism's; the overview names these three results elsewhere and links to 02 for their statements, restating none of them in the sentence changed and contradicting none; read against the records, nothing they say changed." --paths theories/becoming/THE-THEORY-OF-BECOMING.md --ids loss-read-in-time-by-the-others readers-drawn-from-the-selected shaping-read-by-readers-drawn-from-the-selected --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
 python3 -B $C --check > "$ASIDE/conn1.log" 2>&1; echo "== connectivity before registering: exit $?"
 python3 -B "$K/register_og2.py" "$ASIDE/conn1.log" > "$ASIDE/register.log" 2>&1; step register $?
 python3 -B $C --write > "$ASIDE/conn2.log" 2>&1; step connectivity-write $?

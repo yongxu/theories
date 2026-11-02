@@ -7,8 +7,8 @@
   "family": "F01",
   "reviewed_at_utc": "FILL at landing",
   "statement": {
-    "en": "In one rule's family of nets, a rule of entry on a shared level, held by members who also draw on it and whose count turns others away, is held at every step from its steady state exactly where teaching fits a tenure, the quota is at least one and the steady state's take fits the renewal. Whether its level goes on and whether the level goes on with no holder are two tests, each its own, and where cohorts are empty the count of held ones weighs one take against the other.",
-    "zh": "在一条规则所成之网族中，一条关于进入共享之位的规则，其持者亦取于此位，其数拒他者于外：自稳态起，此规则每步皆得持，恰当传授合于一任、额至少为一、稳态之取合于所生。其位是否存续，与无持者时此位是否存续，是两个各自独立的检验；而有空队列时，持规之队列数在此二取之间加权。"
+    "en": "In one rule's family of nets, a rule of entry on a shared level, held by members who draw on it and whose count turns others away, stays held from its steady state exactly where teaching fits a tenure, the quota is at least one and the steady state's take fits the renewal.",
+    "zh": "在一条规则所成之网族中，一条关于进入共享之位的规则，其持者亦取于此位，其数拒他者于外：自稳态起，此规则每步皆得持，恰当传授合于一任、额至少为一、稳态之取合于所生。"
   },
   "laws": [
     {"en": "A family with a constant take of A, closed under the steps that do not end: where A is at most the renewal the family is kept and the level does not fall from a level of at least one; where A is the renewal plus d, the level falls by d a step and the family ends in level zero with no member.",
