@@ -31,6 +31,12 @@ def squash(s):
     return re.sub(r'\s+', '', s)
 
 
+def inlined(body):
+    """Reference-style links written inline, so that every use is read where it stands. Offsets move; only items matter."""
+    defs = dict(re.findall(r'^\[([^\]]+)\]:[ \t]*(\S+)[ \t]*$', body, re.M))
+    return re.sub(r'\]\[([^\]]+)\]', lambda m: f']({defs[m.group(1)]})' if m.group(1) in defs else m.group(0), body)
+
+
 def plain(s):
     s = re.sub(r'-\{([^{}]*)\}-', r'\1', s)
     return re.sub(r'\[\[(?:[^\]|]*\|)?([^\]]*)\]\]', r'\1', s)
@@ -126,7 +132,7 @@ def main():
     out = Path(sys.argv[sys.argv.index('--out') + 1]) if '--out' in sys.argv else None
     if out:
         args = args[:2]
-    body = dossier.read_text(encoding='utf-8')
+    body = inlined(dossier.read_text(encoding='utf-8'))
     heads = [(m.start(), m.group(1)) for m in ITEM.finditer(body)]
 
     def item_at(pos):
