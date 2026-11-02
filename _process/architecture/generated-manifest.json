@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "99a665bdb1e3ead15544e4d8ca1e67db209b1a6ab8fe2f895425eed2d60ed474",
+    "README.md": "b0681e9c48c12a2ade6533adc6201663810705634e9c600c2313ebfef6d4048e",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "0bc2f0be3f9a35cbff2aa18509ebfffe7caca3368013fc5f2156fbb5f16e46fb",
     "GOALS.md": "859fa8e89bf5d2651b2febfd1f70bc9baff835f22390b6c3c0520182fdabc95b",
@@ -244,7 +244,7 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "2990ff22e01aac6c7e959677a38bb834c5501502fa3897d889d078bda2161af2",
     "theories/becoming/results/records/worlds-are-runs.md": "bd3764698851c0eb76b515e8f7db81b4a67a5a131280bfc883a94773525a032f",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "525988656119cec1f7795f8a2d37d48b84d01aa3e112e08037263cbbd51d0adb",
+    "_process/research/README.md": "d8b5aac47ee2798e4c61197070c40d9c5be4d126899079c6eef9c5f7752ad883",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "73a6f99c39cead2e816842ba82534dbd78c6a08a402b61639bebc725fcb1a27d",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "48cb3226ec8e3c1b1da52839d8995b76f9ad88f1284d32db5e27d9ab4bd2dbd3",

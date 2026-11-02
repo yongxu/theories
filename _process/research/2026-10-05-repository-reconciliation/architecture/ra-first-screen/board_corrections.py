@@ -2,7 +2,7 @@
 """The board texts of README's three first-screen corrections: the head clause, and at landing the landed clause and the history row.
 
 usage: python3 -B board_corrections.py head BOARD
-       python3 -B board_corrections.py landed BOARD HISTORY ORDER_FILE CHECKED_ON TESTS
+       python3 -B board_corrections.py landed BOARD HISTORY ORDER_FILE CHECKED_ON TESTS BUDGET
 """
 import sys
 
@@ -19,12 +19,14 @@ LANDED = ("README's three first-screen corrections landed (documents only, no Le
           "condition's gloss has \"from every standpoint\" and \"into the future\" as the glossary does, and the condition "
           "fixes scope and ranks nothing. C gives order, and a ranking needs it or a premise in its place, where \"alone "
           "gives order\" said more than 07 §4's theorem on an order rising with one's own continuation. The screen's pin "
-          "follows the first line, PF3 having relaxed the one on C; {budget} The row in the history file; render, strict "
+          "follows the first line, PF3 having relaxed the one on C. With them, \"Start with\" names the one path, the one "
+          "page then the overview, with the opening set apart. {budget} The row in the history file; render, strict "
           "check, links (0 broken), the {tests} tests and both dossier checks pass on {checked}. {order}")
 
 ROW = ("| **README's three first-screen corrections, done** (the cold read of 2 November, on the coordinator's word, behind "
        "PF3). The first line without \"evaluation included\"; the continuation condition's gloss whole, ranking nothing; C "
-       "gives order and a ranking needs it or a premise in its place. No Lean, no record changed, no core run "
+       "gives order and a ranking needs it or a premise in its place. With them, \"Start with\" names the one path. No Lean, "
+       "no record changed, no core run "
        "| Claude Code desktop session \"Theory status and claims\" (2 November 2026) "
        "| landed 2026-11-02 (documents only): render, strict check, links (0 broken), the {tests} tests and both dossier "
        "checks pass on {checked} "
