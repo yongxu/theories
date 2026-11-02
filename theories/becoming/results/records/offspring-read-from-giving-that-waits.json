@@ -206,8 +206,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Which sign β − γ has: both factors are supplied, and the sign decides every verdict here.",
-      "zh": "β − γ 的符号：两因子皆为给定，而此符号决定此处每个结论。",
+      "en": "Which sign β − γ has: both factors are supplied. Most verdicts here turn on it; the window beside alternators and `neutral` hold whatever the factors.",
+      "zh": "β − γ 的符号：两因子皆为给定。此处多数结论取决于它；窗口与交替者相配时以及 `neutral`，不论因子如何皆成立。",
       "kind": "scope"
     },
     {
@@ -535,6 +535,10 @@
     {
       "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on counts and selection among pairs; its parts on what a gift draws on are a separate record; the lemmas of counting are listed in references only.",
       "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 的设计新增，即 Becoming.PairSelection 中关于计数与对间选择的部分；关于给出所汲取者的部分另立一条记录；计数的引理只列在 references 中。"
+    },
+    {
+      "en": "2 November 2026, correction: the sign does not decide every verdict, since window_never_rises_beside_alternators and neutral hold whatever the factors; the laws are unchanged.",
+      "zh": "2026年11月2日，更正：此符号并不决定每个结论，因 window_never_rises_beside_alternators 与 neutral 不论因子如何皆成立；诸律不变。"
     }
   ]
 }
