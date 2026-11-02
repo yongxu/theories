@@ -53,7 +53,9 @@ This page changes by argument like any other text, with a before-copy kept. Only
 
 ## Working together
 
-- Main stays one consistent head. Claim before new Lean or a new result, never reprove another session's item, and land through [the queue](_process/BECOMING-WORKBOARD.md#landing-queue).
+- Main stays one head. Claim on [the board](_process/BECOMING-WORKBOARD.md) before new Lean or a new result, and never reprove another session's item.
+- A landing claims the head with a clause on the board's [Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue), re-reads that line, and fast-forwards main. While a clause stands, nothing else commits to main, claim rows included. The coordinator orders slots.
+- Before landing, render, then run the strict check, links and `research-test` on the merged tree, with any checks the landing's area names, and land only when they pass. A commit that adds files the views count, scratch Lean included, renders and commits them.
 - Commit only owned paths, with `git commit -m … -- <paths>`. Commit messages name no person or AI and carry no co-author trailer. Re-read a shared file before editing it, and check every hunk before committing.
 - Never `git prune`, `gc --prune` or `git clean`, and never delete what the repository cannot regenerate. Unreachable commits get a `refs/salvage/…` ref first.
 - Propose any large agent fan-out with its count before running it.
