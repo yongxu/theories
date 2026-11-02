@@ -8,13 +8,13 @@ One account of how things form, persist, change and end, none assumed good, in w
 
 ## What moves it
 
-By [its own verdict](theories/becoming/chapters/08-METHOD.md#known-results), none of the account's central results is new mathematics, and better text cannot change that. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker can. So, in order:
+By [its own verdict](theories/becoming/chapters/08-METHOD.md#known-results) so far, none of the account's central results is new mathematics, and better text cannot change that. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker can. So, in order:
 
 1. What is false or misleading in what a reader is told, where it would change what they believe.
 2. What lets the account be wrong: tests designed and frozen, refuters that can be met, [the crux](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) argued.
 3. What people who have read it report. That measures the fronts; AI cold reads check for errors.
 
-With no such error left and item 2's designs frozen, the text is ready for readers; sending it is Ren's decision, and polish waits for what readers report. A law lifted onto the root, a new model or a wording pass waits unless it changes what a reader is told or what could fail. [The release gate](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) is the floor.
+With no such error left and item 2's designs frozen, the text is ready for readers; sending it is Ren's decision, and polish comes after what readers report. A law lifted onto the root, a new model or a wording pass comes after these unless it changes what a reader is told or what could fail. [The release gate](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) is the floor.
 
 <a id="begin-with-one-relational-unfolding"></a>
 ## Method
@@ -25,9 +25,11 @@ Keep real losses, conflict and counterexamples; one found in a weaker model stan
 
 A law admitting every outcome explains nothing; root laws [forbid no relation](theories/becoming/chapters/08-METHOD.md#law), and content comes through hypotheses. A local result does not complete a universal claim, and "zero axiom" never shrinks to "no ethical axiom".
 
+A limit is either proved, standing within its hypotheses, or holds so far, dated, with its reason, and then it lapses when its reason does. No limit forbids the work that would change it, here or in the account.
+
 ## The ethics
 
-Two unasserted premises carry it. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count; C (widening what can form is better) gives order, and a ranking of courses needs C or a premise in its place. Name both wherever the ethics is summarized, never write that it derives from the condition, and hide no weight or obligation in a definition. Their warrant is open; none binding every possible mind is claimed.
+Two unasserted premises carry it. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count; C (widening what can form is better) gives order, and a ranking of courses needs C or a premise in its place. Name both wherever the ethics is summarized, never write that it derives from the condition (nothing that reads no order entails C, `Becoming.ReadsNoOrder.not_entails`, immediate; deriving C from a weaker premise is open work), and hide no weight or obligation in a definition. Their warrant is open; none binding every possible mind is claimed.
 
 生生 is life in the whole and its continuing generation, not any new organization. Use each term in the [glossary](GLOSSARY.md)'s one sense, keeping warrant, recognition, motivation, compliance and implementation apart, and direction, continuing capacity, per-step growth and maximization.
 
