@@ -275,6 +275,7 @@ code { font-family: Menlo, "PingFang SC", monospace; font-size: .86em; backgroun
 pre { background: #f7f3ea; border-left: 2px solid var(--rule); padding: 2.5mm 3mm; font-size: 8.2pt; line-height: 1.45; white-space: pre-wrap; page-break-inside: avoid; }
 pre code { background: none; padding: 0; font-size: inherit; }
 table { width: 100%%; border-collapse: collapse; margin: 3mm 0 5mm; font-size: .9em; }
+tr { break-inside: avoid; }
 th, td { text-align: left; vertical-align: top; padding: 1.6mm 2mm; border-bottom: .5px solid #d9d0c0; }
 th { font-family: var(--sans); font-weight: 600; color: var(--muted); border-bottom: .8px solid var(--rule); }
 hr { border: none; border-top: .6px solid var(--rule); margin: 7mm 0; }
