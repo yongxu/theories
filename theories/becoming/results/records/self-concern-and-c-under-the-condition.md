@@ -11,13 +11,13 @@
 ## Laws
 
 1. On a listing, every order is increasing in its own continuation exactly when it is increasing in admission if and only if the marking marks every listed item: a listed item left unmarked gives a self-concerned order not increasing in admission. Read from standpoints, for any relation the markings read, the two coincide everywhere exactly where it holds of every standpoint and item. (`Becoming.Weighting.exists_increasingInOwn_not_increasing`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_marks`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_all`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 2. With each marking reading what the line under a class from the standpoint's center reaches along a relation, the two coincide everywhere exactly where the condition on the root holds; with it reading the center's closure along a relation, exactly where the condition held de se does. Near-definitional: the schema above at those readings. One half each: where it holds they coincide; an item outside parts them. (`Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside`, `Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Weighting.increasingInOwn_iff_increasing_of_unrestricted`)
-   - *Shared laws, by Lean dependency:* closure and order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and widening; its declarations reach the grammar.
 3. With admission decided and what two level paths admit listed, an order increasing in admission ranks every extension between them, every claim counted as living; where the de se condition holds, so does an order increasing in the own continuation, each item marked by its formation. Listed paths admit nothing from some step on, and once there is a formation no list holds what every level path admits. (`Becoming.Web.admits_need`, `Becoming.Web.admits_nothing_from_of_listed`, `Becoming.Web.not_listsAdmitted_every`, `Becoming.Web.no_extension_of_listsAdmitted_every`, `Becoming.Web.extension_ranked_of_increasing`, `Becoming.Web.extension_ranked_of_increasingInOwn`)
-   - *Shared laws, by Lean dependency:* closure and order; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* closure and widening; its declarations reach the grammar's vocabulary only.
 4. Along the net, self-concern and being increasing in admission coincide on the endless line of descent and part on two family lines with no condition between them, whose first birth reaches exactly its own family; along the net's converse they coincide in descent that ends and part on the endless line from every center. (`Becoming.TwoLines.first_line_reaches_both`, `Becoming.TwoLines.first_line_reach_iff`, `Becoming.increasingInOwn_with_net`, `Becoming.increasingInOwn_with_net_converse`)
-   - *Shared laws, by Lean dependency:* order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -65,7 +65,7 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 - **formal-reuse**: [comparison-by-widening](comparison-by-widening.md). Web.paths_extension_iff_widens, an extension on a web's level paths a widening of what is admitted.
 - **formal-reuse**: [eventual-widening](eventual-widening.md). Web.ListsAdmitted, Web.DecidesAdmission, Web.stepBound and Web.lt_stepBound, with Web.widens_iff_every_weighting.
 - related, not a proved adapter: [premises-met-and-failed](premises-met-and-failed.md). The nets on which the condition on the root holds and fails, which the fourth law reads for self-concern.
-- related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.
 
 <a id="sources--来源"></a>
 ### Sources

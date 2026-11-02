@@ -11,17 +11,17 @@
 ## Laws
 
 1. In a balanced flow where only active formations take, and only from what they draw on, let every condition a member of a part draws on at some step be renewed over the run (every dependence on it kept at every step). Then the levels with the part include those without it, so the part does not narrow; a part of formations renewing over the run is a case. (`Becoming.Flow.Balances.includes_of_renewed`, `Becoming.Flow.Balances.not_narrows_of_renewed`, `Becoming.Flow.Balances.includes_of_renewingIn`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations reach the grammar.
 2. Let a dependence held at T be met at no step after it, let the part give each condition at every step no more than it takes, and let the levels without the part admit at a later step the formation whose dependence it was, held there at no smaller need. Then the levels without the part widen those with it. (`Becoming.Flow.Balances.narrows_of_consumed`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. The stepwise class does not decide: in Preemption the drawer's event at the first step is within renewal, the drawer is consuming over the run and does not renew over it, and the levels without its part widen those with it. (`Becoming.Preemption.renewingAt_consuming_narrows`, `Becoming.Preemption.within_renewal_yet_loses`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. The consuming class alone does not narrow: in Untaken a formation draws on a condition that stays at zero below its need, so it is consuming over the run, yet nothing is taken or given, the flow balances, and the levels with and without its part keep what can form the same. (`Becoming.Untaken.flow`, `Becoming.Untaken.web`, `Becoming.Untaken.part`, `Becoming.Untaken.consuming_keeps`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Arising is where a part's place in the order begins. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active. (`Becoming.Web.inactive_of_not_arising`, `Becoming.Flow.Balances.keeps_of_inactive`, `Becoming.Flow.Balances.keeps_of_not_arising`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 6. The arising class does not decide the order: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver). (`Becoming.ArisingDrawer.flow`, `Becoming.ArisingDrawer.web`, `Becoming.ArisingDrawer.arises_narrows`, `Becoming.ArisingGiver.flow`, `Becoming.ArisingGiver.web`, `Becoming.ArisingGiver.arises_widens`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

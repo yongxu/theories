@@ -15,7 +15,7 @@
 2. Witness: two standpoints grading their own formation two and the other one. Standing is invariant, grades are not, and the two standpoints rank a mixed comparison opposite ways. (`Becoming.Partial.grade`, `Becoming.Partial.standing`, `Becoming.Partial.not_gradeInvariant`, `Becoming.Partial.ranks_differ`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A formation's level in a course is how many of its listed items the course admits. Inclusion never lowers a level, and a sum of a strictly increasing transform of the listed formations' levels ranks every widening higher where every item belongs to a listed formation. (`Becoming.Weighting.level`, `Becoming.Weighting.level_le_of_includes`, `Becoming.Weighting.level_lt_of_includes_at`, `Becoming.Weighting.prior`, `Becoming.Weighting.prior_lt_of_widens`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 4. A transform strictly concave up to a bound ranks higher a course that moves one step of continuation from a formation to one at least two levels below it, the higher level within the bound and every other level the same; no whole-number transform is strictly concave everywhere. (`Becoming.Weighting.ConcaveTo`, `Becoming.Weighting.concave_gap`, `Becoming.Weighting.prior_transfer`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. A transform that rises no further from a threshold weighs alike two courses whose levels differ only at or above it. (`Becoming.Weighting.SufficientAt`, `Becoming.Weighting.sufficient_ties`)
@@ -60,7 +60,7 @@ Standing and status are Kagan's and Sebo's distinction (How to Count Animals, mo
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Reuses the weighted count, inclusion and widening on listed items (Weighting.weighed, IncludesOn, WidensOn, weighed_le_of_includes).
+- **formal-reuse**: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Reuses the weighted count, inclusion and widening on listed items (Weighting.weighed, IncludesOn, WidensOn, weighed_le_of_includes).
   - Output: Inclusion never lowers a weighted count, whatever the weights.
   - Input: Levels as weighted counts of a formation's items; priority as a sum over them.
   - Preserved conditions: None. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)

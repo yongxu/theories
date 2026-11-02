@@ -5,7 +5,7 @@
 
 `stepwise-law-of-easing` · **recorded-checked** · theorem · F01 · [record](stepwise-law-of-easing.json) · [register](../../../../RESULTS.md)
 
-> Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading too.
+> Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading too, and C ranks it above.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -90,6 +90,7 @@ Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `
 - 21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.
 - 21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 318); what this record does not show and its next step say so. Its laws are unchanged.
 - 21 October 2026, J1S: whether J1 yields "better without malignant growth" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.
+- 3 November 2026, CD (board item CD): the statement says that restraint extends overdraw, which needs no premise, and that C ranks it above, as its home row in 07 §5 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
 
 </details>
 

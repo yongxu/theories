@@ -131,7 +131,7 @@ The goal is an alignment of the joint selection, humans, institutions and traine
 
 [shaping-the-rule-selected-by-what-comes-back](theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md): `recorded-checked`
 
-[widening-as-what-every-weighting-ranks](theories/becoming/results/records/widening-as-what-every-weighting-ranks.md): `recorded-checked`
+[widening-as-what-every-positive-weighting-ranks](theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.md): `recorded-checked`
 
 <a id="generative-foundation"></a>
 <a id="生成基础与持续研究--generative-foundation-and-continuity"></a>
