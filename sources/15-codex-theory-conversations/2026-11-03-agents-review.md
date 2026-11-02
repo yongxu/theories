@@ -23,7 +23,7 @@ The rules on proof, premises, data, hashes and what stays Ren's held up and were
 
 ## What was done (AI-authored)
 
-AGENTS.md was rewritten: [before](../../_process/history/2026-11-03-instructions/AGENTS-before-review.md). It states the purpose and 08 §8's verdict, and orders the work: what is false in what a reader is told, then what lets the account be wrong, then what a person who has read it reports. It corrects the false lines, states one relational unfolding as a thesis, lets a counterexample stand until the full account is shown to remove it, cuts the reading list, and lets the page change by argument, with only Ren changing the list of what is his.
+AGENTS.md was rewritten: [before](../../_process/history/2026-11-03-instructions/AGENTS-before-review.md). It states the purpose and 08 §8's verdict, and orders the work: what is false in what a reader is told, then what lets the account be wrong, then what a person who has read it reports. It corrects the false lines (C's in 07 §4's own sentence, the root's in 08 §10's sense, the two corrections the branch `agents-c-line` was waiting to land, whose [source record](2026-11-03-not-my-decision-word-for-word.md) lands with this one), states one relational unfolding as a thesis, lets a counterexample stand until the full account is shown to remove it, cuts the reading list, and lets the page change by argument, with only Ren changing the list of what is his.
 
 The session disagreed with the order of 31 October, which put reviews after the elegant finish, and said so: a person's reading is the one test of the fronts left, and one reader needs neither the packet nor the freeze.
 

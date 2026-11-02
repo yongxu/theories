@@ -19,6 +19,7 @@ A law lifted onto the root, a new model, or a pass over wording waits unless it 
 
 Before starting, read [the one page](theories/becoming/ONE-PAGE.md), the home section of what you will touch, and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Read further as the work needs it.
 
+<a id="begin-with-one-relational-unfolding"></a>
 ## Method
 
 Begin with how relations form, persist and change, then show how actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. Each analytic split (subject/object, action/condition, fact/value) states its relational basis, scope and omissions. No name or variable smuggles in separate entities.
@@ -31,7 +32,7 @@ A law admitting every outcome explains nothing. A law of the root [forbids no re
 
 ## The ethics
 
-It rests on two unasserted premises. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope: whose losses count. C (widening what can form is better) gives order, in general alone. Name both wherever the ethics is summarized, and never write that it derives from the condition. Their warrant is open, and no warrant binding every possible mind is claimed. Hide no weight or obligation in a definition.
+It rests on two unasserted premises. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope: whose losses count. C (widening what can form is better) gives order; a ranking of courses needs it or a premise in its place. Name both wherever the ethics is summarized, and never write that it derives from the condition. Their warrant is open, and no warrant binding every possible mind is claimed. Hide no weight or obligation in a definition.
 
 生生 names life in the whole and its continuing generation; "generative" never means just any new organization. Keep warrant, recognition, motivation, compliance and implementation distinct, and direction, continuing capacity, per-step growth and maximization. Use each term in the [glossary](GLOSSARY.md)'s one sense.
 
