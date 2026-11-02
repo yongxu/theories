@@ -77,7 +77,7 @@ Activity, return, method, apparatus, support and response are differentiated rol
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [selection-under-registration-revision](selection-under-registration-revision.md). old_selections_remain directly invokes the exact preservation criterion on the same relation
+- **formal-reuse**: [selection-when-the-lumping-changes](selection-when-the-lumping-changes.md). old_selections_remain directly invokes the exact preservation criterion on the same relation
   - Output: Learning.Training.keeps_through_iff and Keeps
   - Input: old_selections_remain directly invokes the exact preservation criterion on the same relation
   - Preserved conditions: The old lumping is an equivalence; an added contact preserves old address distinctions [ReferencePlan.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReferencePlan.lean)

@@ -50,7 +50,7 @@ Landed: the six modules below joined the core as leaves at receipt 20261101T0243
 - *Axiom reports.* Every source declaration has an empty axiom report. An environment scan of every constant each module adds finds one that depends on an axiom: `PairSelection`'s `Place.mk.injEq`, on `propext`, which Lean generates and nothing uses. `check_becoming.py`'s environment audit admits such generated `injEq` lemmas and lists them.
 - *Imports.* Each module imports only core modules and the EL modules below it.
 - *Dependents.* `LineageRegimes` and `PairSelection` were recompiled against the final `LineageRegions` and `WindowedWaiting`: by round 4's verifiers, and again for the kit's commit `4fd5b45d7`.
-- *The kit* is on branch `el-kit`, in this study's `kit/` folder; it is not on this branch. It holds the six modules, byte for byte as below, together with the builders' and verifiers' reports of rounds 1–4 (`kit/reviews/round1.json` to `round4.json`, the two text reviews in `round3.json`) and the verifiers' probes (`kit/probes/`).
+- *The kit* was on branch `el-kit`, in this study's `kit/` folder, and is kept since 2 November 2026 as `refs/salvage/branches/el-kit` (commit `10f1b33bc`): the six modules, byte for byte as below, and the verifiers' probes (`kit/probes/`). The builders' and verifiers' reports of rounds 1–4 are in this study's [reviews](reviews/) (`round1.json` to `round4.json`, the two text reviews in `round3.json`).
 - *Checked.* `check_becoming.py` ran with all six registered in its core list, at receipt 20261101T024359.312453Z.
 
 | Module | Lines | Imports | Carries |
@@ -478,7 +478,7 @@ Evidence: core Lean, six leaves landed at receipt 20261101T024359.312453Z after 
   recompiled by an independent verifier, every source declaration's axiom report empty (one
   generated injEq on propext in PairSelection); check_becoming.py run with them; the records degeneration-from-a-horizon,
   the-selection-term-and-a-lineages-fate and ending-laws-as-regimes-on-a-lineage; the kit
-  on branch el-kit. EL4's scratch enumeration and counts in scratch/, for its design only.
+  kept as refs/salvage/branches/el-kit, its reports in reviews/. EL4's scratch enumeration and counts in scratch/, for its design only.
 Boundary: §7; regions decided only where excluded middle is assumed; reaching an end only where
   continuation is decided; amounts stay off the root (World laws read on the map's regions).
 Integration: 02 Open and GW's "the some-branch regions read on the World" (degeneration, by EL3;

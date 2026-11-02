@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "selection-under-registration-revision",
+      "id": "selection-when-the-lumping-changes",
       "detail": {
         "zh": "复用同一活动内归并改变及可表达选择的既有范围，不从区分保持推出伦理。",
         "en": "Reuses lumping change and expressible-choice scope within one activity, without inferring ethics from preserved discrimination."

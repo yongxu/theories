@@ -60,7 +60,7 @@ Fixing an affine channel by readings at two known references is calibration in t
 - none
 - related, not a proved adapter: [experiment-needs-return](experiment-needs-return.md). What one's act would have done otherwise is fixed only where the configuration returns; a reference intervention is such a return.
 - related, not a proved adapter: [the-updater-line](the-updater-line.md). The updater constructions whose overwritten matrix renewed references repair here.
-- related, not a proved adapter: [selection-under-registration-revision](selection-under-registration-revision.md). Selection when the lumping changes, which cites the renewal construction.
+- related, not a proved adapter: [selection-when-the-lumping-changes](selection-when-the-lumping-changes.md). Selection when the lumping changes, which cites the renewal construction.
 
 <a id="sources--来源"></a>
 ### Sources

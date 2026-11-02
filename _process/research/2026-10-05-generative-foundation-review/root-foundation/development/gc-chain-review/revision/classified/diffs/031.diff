@@ -1,0 +1,21 @@
+--- 1c704bc70:theories/becoming/results/records/retrospective-source-binding.json
++++ theories/becoming/results/records/retrospective-source-binding.json
+@@ -161,3 +161,3 @@
+   "validation_scope": {
+-    "en": "Core, by check_becoming.py (Lean 4.29.1): Becoming.CrossSituational and Becoming.Courses bound to becoming-checks/20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery, Lean 4.29.1: MachineInstances bound to machine-instances-checks/20261020T161859.257200Z (check_machine_instances.py), RetrospectiveBinding and SourceReliance to inquiry-root/retrospective-binding-verification.json (check_retrospective_binding.py); cited periphery declarations use at most propext and Quot.sound, inherited modules Classical.choice. Primary-source comparison and author counter-review.",
++    "en": "Core, by check_becoming.py (Lean 4.29.1): Becoming.CrossSituational and Becoming.Courses bound to becoming-checks/20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery, Lean 4.29.1: MachineInstances bound to machine-instances-checks/20261031T131812.213702Z (check_machine_instances.py), RetrospectiveBinding and SourceReliance to inquiry-root/retrospective-binding-verification.json (check_retrospective_binding.py); cited periphery declarations use at most propext and Quot.sound, inherited modules Classical.choice. Primary-source comparison and author counter-review.",
+     "zh": "核心 CrossSituational、Courses（check_becoming.py，Lean 4.29.1，becoming-checks）：所引声明公理为空。外围（Lean 4.29.1）：MachineInstances 回执在 machine-instances-checks，RetrospectiveBinding、SourceReliance 在 inquiry-root；所引外围声明至多用 propext、Quot.sound，继承模块有 Classical.choice。原典比较与作者反审。"
+@@ -382,2 +382,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
++      "role": "receipt",
++      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
++      "declarations": []
+     }
+@@ -401,3 +407,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+       "sha256_pointer": "/source_sha256/MachineInstances",

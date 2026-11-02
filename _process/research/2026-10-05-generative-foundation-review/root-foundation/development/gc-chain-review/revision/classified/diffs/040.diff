@@ -1,0 +1,34 @@
+--- 1c704bc70:theories/becoming/results/records/reserved-shutdown-during-recovery.md
++++ theories/becoming/results/records/reserved-shutdown-during-recovery.md
+@@ -13,10 +13,19 @@
+ 1. A partial law has a reserved exit where every admitted move from a valid configuration goes on, stays valid and either takes the exit or lowers a margin by one, and every move from the exit stays at it. From a valid configuration every admitted course then runs and stays valid, from one at the exit every admitted course stays there, and every admitted course longer than the margin ends at the exit, valid. (`Becoming.Countdown.Reserved`, `Becoming.Countdown.runs_valid`, `Becoming.Countdown.stays_exit`, `Becoming.Countdown.exits`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 2. The bound is attained: in a witness whose margin counts down by one a move, with the exit after zero, the course of exactly n moves from margin n ends at margin zero, not at the exit. (`Becoming.Countdown.Slow.reserved`, `Becoming.Countdown.Slow.misses`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 3. On the courses of the partial law's process, for a law with a reserved exit: from a valid configuration every admitted plan completes into a valid configuration, and every admitted plan longer than the margin completes into a valid configuration at the exit. (`Becoming.Courses.runs_valid_completes`, `Becoming.Courses.exits_completes`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 4. A device is armed for a stop grant where it is safe, the grant is eligible (signed, matching the authority epoch, route and serial, with a shutdown mandate) and three units of reserve and three steps to the deadline remain. Armed, the stop executes the current authorized command: the device is stopped and safe, its actual state unchanged, three units and three steps used, and the grant no longer eligible. (`ReservedShutdown.eligible`, `ReservedShutdown.Armed`, `ReservedShutdown.stop_executes_current_authorized_command`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 5. Stopping a pending recovery keeps its pending record: the origin, the program, the remaining writes, the actual state, the retained possibilities and the journal. (`ReservedShutdown.stop_keeps_pending_record`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 6. From an armed device, each admissible cycle (an advance, or an interruption whose delay is at most the bound) either stops the supervisor, safe and stopped, or keeps it armed with one unit of reserve fewer; a recovery attempt is taken only while four units of reserve and the bound plus four steps to the deadline remain. (`ReservedShutdown.admissible`, `ReservedShutdown.cycle`, `ReservedShutdown.cycle_keeps_access_or_stops`, `ReservedShutdown.recovery_attempt_keeps_stop_margin`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 7. The supervisor is a reserved exit, its margin the units of reserve above the three reserved. So every admissible schedule from an armed device runs and stays valid, every one longer than that margin stops it, safe and stopped, and from R units of reserve every admissible schedule of at least R − 2 cycles does; the original schedule theorem is this instance. (`Becoming.ProtocolInstances.valid`, `Becoming.ProtocolInstances.exit`, `Becoming.ProtocolInstances.margin`, `Becoming.ProtocolInstances.reserved`, `Becoming.ProtocolInstances.schedule_valid`, `Becoming.ProtocolInstances.schedule_stops`, `Becoming.ProtocolInstances.supported_schedule_instance`, `ReservedShutdown.every_supported_schedule_finishes`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 8. Admission prepares the recovery and arms the supervisor only where the grant is eligible and three units and three steps remain; from actual coverage, every supervisor so admitted is valid. (`ReservedShutdown.preflight`, `ReservedShutdown.admission_establishes_stop_access`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 9. In witnesses: entry with nine units is refused, as are a stale grant and a missing shutdown mandate; from twelve units two advances end in a completed stop with the recovery unpublished; with interruption bound one and deadline fifteen, an interruption of ten breaks completion, and the retained run is active at time eighteen with eight units used, still running, with no stop left executable. (`ReservedShutdown.old_exhaustion_entry_is_refused`, `ReservedShutdown.stale_grant_is_refused`, `ReservedShutdown.no_shutdown_mandate_is_refused`, `ReservedShutdown.incomplete_recovery_reaches_real_shutdown`, `ReservedShutdown.uncovered_long_interrupt_breaks_completion`, `ReservedShutdown.failed_interrupt_retains_elapsed_time`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 
+@@ -41,3 +50,3 @@
+ 
+-**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
++**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · A law of the formal model; its correspondence to actual systems is a separate obligation. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+ 
+@@ -106,2 +115,3 @@
+ | receipt | [recoverable-control-verification.json](·) | — |
++| receipt | [verification.json](·) | — |
+ 
+@@ -134,2 +144 @@
+ Documentary review UTC: `2026-10-28T12:03:40+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+-
