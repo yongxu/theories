@@ -14,7 +14,7 @@ It is written from the account (the chapters), not from the fronts, so that what
 |---|---|---|
 | 1.1 An account of how anything comes to be, lasts, changes and passes away | ★ | [08 §1](../../../../../../theories/becoming/chapters/08-METHOD.md#one-relational-unfolding) |
 | 1.2 Within one relational unfolding, beginning from relations | ★ | [01](../../../../../../theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class) |
-| 1.3 Life, knowing and standards take shape within it; that any of it has significance is not shown: significance is supplied or read | ★ | [07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
+| 1.3 Life and knowing take shape within it, and evaluation only so far: that a standard which formed is what has significance is not shown; significance is a free parameter or read along a relation no law here picks | ★ | [07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | 1.4 Becoming is not assumed good; degeneration belongs to it as fully as generation | ★ | [02](../../../../../../theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains) |
 | 1.5 Made with AI; the proofs machine-checked, everything else only by further AI review; no person has reviewed it | ★ | [08](../../../../../../theories/becoming/chapters/08-METHOD.md#review-status) |
 | 1.6 Of mixed kind: proofs, readings, theses about actual systems and premises, each at a stated standing | ★ | [08 §2](../../../../../../theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
