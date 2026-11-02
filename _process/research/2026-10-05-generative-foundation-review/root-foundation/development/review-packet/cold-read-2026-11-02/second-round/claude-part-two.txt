@@ -1,0 +1,145 @@
+## R1. Q1 to Q6, where changed
+
+**Q1. Changed (sure).** A standard relational calculus with terms named from classical Chinese texts, plus a discrete resource model on which known results are re-proved in Lean: the commons, proxy limits, Zhuang and Hadfield-Menell's optimum theorem, population-genetics identities. Around these sit frozen empirical tests, several failed, and a conditional ethics of two unasserted premises, scope and order, leading to a conditional direction for aligning AI. No person has reviewed it.
+
+Changed by §6: "The grammar is a standard relational calculus whose terms are named and read from classical Chinese texts". I had not known it was standard.
+
+**Q2. Changed in every item.**
+1. Root: standing unchanged, meaning clearer. The two grains are a fine class of parts and a coarse class of the pattern (§2). The tie is now specified: "a rival with no word for continuation ties it". (now sure)
+2. One unfolding: harder standing. "No observation is named, and it is argued none could." §9 adds "by that section's measure it has no strength". The labels do map in order onto the five items, per the overview's fuller wording of that cell. (now sure)
+3. Overdraw: weaker support. "the simulated yeast's passes testing the measured quantities and not the thesis". (sure)
+4. Selection limits: "room" is now defined. The optimum is "Zhuang and Hadfield-Menell's Theorem 1 in discrete, conserved form". The couplings law "holds by construction; its force lies in the premise that a selector selects through just those couplings". (now sure)
+5. Lock-in: T7's record is now given in the T7 row: a forbidden case "at that reading", with the frozen rule not supporting it. (sure what happened, unsure why it stays conjectured)
+6. No law evaluates: "by construction" is explained. "This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined". (sure)
+7. Self-concern law: standing now "proved on the World model, under hypotheses the chapter states". It has a limit: "where the ending course keeps an item the other does not, some such order ranks it higher." (now sure)
+8. T8: it now visibly joins both premises: "counted for everything (scope: the continuation condition) and ranked by what every valuer counting everything shares (order: C)". What 生生 adds is still "open". (unsure, was guessing)
+
+Claims I did not have, all from §7 and §9:
+- Widening equals unanimity across positive weightings ("Proved for every type on finite listings").
+- T4, that the scope can be installed: "one model of two".
+- T5, that the order is shared: "the first frozen test failed every rule and the second passed two of four".
+- The alignment direction, conditional.
+
+**Q3. Changed.**
+- The step is now locatable: "this locates the contested step, invariance across drawings, and derives nothing more." Its status: "the step to invariance is argued, and its soundness is not shown". (sure)
+- C rests further down: "calling the shared order better is C, whose premise is so relocated to monotonicity at each standpoint, weaker and still a premise". (sure)
+- The further premises are named: "a reading of "living", a lifting from outcomes to responses, and the practical commitments J1–J4". (sure on names, unsure on content)
+- Standpoint and formation are now defined, in §1 and §7: "A *center* is a formation taken as a standpoint." (sure)
+- "Admits" is now tied to margins, in the widening passage. (unsure)
+- What the condition excludes: the text still does not say.
+
+**Q4. Changed.** I would add these (all sure):
+- "no duty, compliance or complete ranking of mixed comparisons is shown"
+- "it is not 生生" (of the map's generation)
+- "The reconstruction does not show that the texts state this grammar or that their authors meant these laws"
+- "Nonduality is a requirement of method; it proves neither the ontology nor an ethical necessity"
+- "These are language models told what to do, not systems trained."
+
+**Q5. Changed.**
+- The §9 table now says outright that the answer differs by kind of claim, so there is no single defeater for the whole. (sure)
+- I would replace T6 in my five with the prior-art row: "A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker". (sure)
+- My note on T1 is partly answered: the failures appear not to be the forbidden case, since "no field test of a need measured in advance". (unsure)
+- "Moves" is still unexplained. [would follow: ONE-ARGUMENT step 4]
+
+**Q6. Changed (sure on what the text says, unsure on its worth).** The novelty shrinks.
+- The order half is known: "This is Sen's intersection approach and Pareto unanimity".
+- A third survivor is added: "one vocabulary for conservation, selection limited by observation and the comparison of opportunity sets".
+- The couplings law is "stated more weakly than its known quantitative form".
+- Whether the scope half and its decomposition are known, the text does not say.
+- My own: the AI-fisher tests look like the only new data, though the text does not offer them as a contribution.
+
+## R2. The structure
+```
+SHARED LANGUAGE (true of any relation; forbids nothing)
+  relation as condition -> class -> continuation
+  begin / end / abide / alter; core; generate / keep / degenerate
+      | names, a few cases, some proof steps; most central results use none of its laws
+MODELS (the premises do the work)
+  World: whole-number levels, discrete steps, eight independent premises
+  general results for any type or process
+      |
+LAWS, four clusters
+  draw: point of no return, joint excess, fed from beyond
+  reach: couplings, lumping, pooling, early warning, optimum drains the unread
+  lock-in: a rule read from its own share holds itself
+  descent: Price, Fisher, Hamilton, drift, bounded by the flow
+      |      \-> T1-T3, T6, T7: do real systems fit? (failures move theses, spare laws)
+== NOT ENTAILED, by construction ==
+      |
+ETHICS (all hypothetical)
+  widening: no premise; same as every positive weighting agreeing
+  scope: condition = the self's presupposition + invariance across drawings
+         <- possible shortcut: what I condition is mine (crux; correspondence not shown)
+  order: C, calling the unanimous order "better"
+  J1-J4, "living", lifting -> actual choices
+      -> T4 installable, T5 shared, T8 life's way (argued)
+      |
+ALIGNMENT
+  premise-free part: what selection can reach (straight from the reach laws, skips the ethics)
+  conditional part: the ethics + a correspondence -> align AI with further generation
+
+BESIDE THE STACK: one-unfolding thesis; classical texts (names, confirm nothing); method (ledger, Lean, frozen tests)
+```
+
+**One thing? Partly, and I am surer why.** One line does hold as one thing: the fishery case, running from draw to what is seen, what selection reaches, whether the loss counts, and whether care for it can be installed. The whole does not.
+- By the text's own statements, the root is mostly not used by the central results, and the names "come from the texts, the operations do not".
+- The evolution laws "restate known results".
+- §10 lists "The root and the ethics as one account" among what is not shown.
+- What remains as unity is a vocabulary, a set of books and one through-line. I could remove the root, the classical texts or the evolution laws and leave that line standing.
+
+## R3. Where I got lost, stopped believing or reread
+1. "Of the declarations 08 §7 takes as central, a few are cases of the root, more use its laws in their proofs and most use none, each with its standing and reason (§10)." This is where I stopped believing "root" means what the word suggests.
+2. "This changes the interpretation and derives nothing from the first treatment: the condition becomes a different statement under the same name, one about relations." After this I had to keep checking which condition later passages meant, especially the path and the crux.
+3. "That no law fixes the boundary does not by itself carry significance across it: the weight lies on the first and the last: a relation the facts privilege, such as an organism's life, denies the first, and the last is coherently denied." I reread to find which premises "first" and "last" are, and the "strongest argument" ends up conceding them both.
+4. "the first five tests read as its evidence ran before its first wording, their frozen predictions their own" This is where "partly supported" stopped meaning anything to me, since those tests were not frozen for T3.
+5. "A direction follows only conditionally: under the condition for scope, C for order, J1–J4 and a correspondence, align AI formation, learning, action and revision with actual living and further generation within the whole." I cannot see why this direction follows rather than another. C is silent on mixed cases, and J1–J4 are only named here.
+
+## R4. New terms
+- **Ethics:** "living claim", "lifting from outcomes to responses", "admissible region", "whether status is invariant and equal", "that one's own line is a regularity its own kind fixes, up to where the net ends", and 生发 used to gloss 生生.
+- **Theses and tests:** "the bound" (T5), "a drive on a choice" and "sharing no units" (T3), "the judge" and "nine readers" (T7), "S-14".
+- **Models:** "a census under conditions" and "a revision must complete". "Margin to a fold" I can read only from my own knowledge of bifurcations.
+- **Named, not explained:** Cheng weishi lun, Middle Treatise, store consciousness.
+
+## R5. Does it agree with the shorter texts?
+I found no flat contradiction. The differences are of strength, and in most of them the shorter text claims more.
+
+1. **T3.** One page: "T3, on trained systems: conjectured, partly supported", with a defeater about optimality gaps. Overview: "No test yet varies how near a trained system comes to its optimum".
+2. **T1.** One page: "T1: three settings passed, four failed". Overview adds that one setting's passes were "testing the measured quantities and not the thesis".
+3. **The root.** One page: "most laws below add amounts and a model's premises". Overview: "most use none".
+4. **Frozen tests.** First screen: "Empirical theses face tests frozen before scoring". Overview, T3 row: "ran before its first wording". The overview's own §9 also says "T1 to T7 have tests frozen before scoring".
+5. **The condition's wording.** Shorter texts: "for anything, its continuation into the future". Overview: "the continuation of anything has significance at every step", while significance is defined "for a standpoint, a step and a formation". So "anything" may be narrower than it sounds.
+6. **Authorship.** One page: "Made with AI, the Lean proofs included". The overview mentions AI review and AI classification but never says who made the theory or the proofs.
+
+Here the overview claims more, or the shorter text is harsher on itself:
+
+7. **Commons.** The overview's table says takers can "end it". The one page keeps "enough such steps in a row from a low enough level", as does §5 with "from a level below `n + m`".
+8. **T7.** One page: "a further case it forbids occurred". Overview: "a case it forbids at that reading, though the frozen rule for it, which reads the end, did not support it".
+
+Within the overview itself:
+
+9. **Lock-in's standing.** "Each claim carries one standing", yet the lock is "Proved in the model" in the table and "Proved for any type" in §2.
+10. **Order.** "An order with no premise" sits beside "Order: C". "A ranking of courses needs C or a premise in its place" sits beside "in general C alone orders".
+
+## R6. What I would change so the whole shows sooner
+1. **Open with the verdict.** Put §8's "finds none of the central results new mathematics" and "What survives is the premise ledger", plus the one page's "Made with AI", above everything.
+2. **Put "One case, start to finish" before the table.** It was the first place I could hold anything. The table leans on T-numbers and joins not yet explained.
+3. **Say what the root does before §1.** Move "most use none" and §10's "The root and the ethics as one account" up front, so nobody reads the laws expecting a derivation.
+4. **Cut to the chapters.** "Proved for a pair whose giving waits on giving" and "Every class has a *core*" feed nothing later in this text.
+5. **Reorder §7.** Open with "Two premises, two roles". At present "What the dynamics leave open" uses the condition before stating it. Give the second reading's statement its own name.
+
+## R7. Would I read on?
+**Yes**, and more narrowly than before. This text changed my Q10.
+- Q10 items 2 and 3 are partly answered.
+- Item 5 now reads as answered no, by the text's own audit. It has become what would change my mind rather than what I hope to find.
+
+What I would want next, in order:
+1. ONE-ARGUMENT, which is what I asked for. [would follow]
+2. The direction-installation test: the design, and why the first round failed. [would follow]
+3. One entry from the premise ledger, which I still have not seen.
+4. J1–J4 at their home, to see whether they do the deciding that the two headline premises do not.
+5. The step and the crux in chapter 07.
+
+I would skip the classical chapter, the evolution laws and the pair laws.
+
+## R8. In two sentences
+It might matter because it sets out, in machine-checked statements with unusually candid books, exactly which added premises turn "an optimiser loses what it cannot read" into "that loss is bad", and it has small frozen tests of whether AI agents protect what they were not told about (they did not; told, one model of two mostly did). It might not matter because by its own audit nothing in it is new mathematics, most central results do not use its root, its ethics stands on premises with no warrant, no person has reviewed it, and the one live question it opens, whether one's effects are one's own, is argued in prose and not moved by the formal work.

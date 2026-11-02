@@ -1,0 +1,70 @@
+| item | FIRST | SECOND | CLOSED | note |
+|---|---|---|---|---|
+| 1.1 | R | R | R | |
+| 1.2 | R | R | R | |
+| 1.3 | P | P | W | 07 what-forms: CLOSED's 'evaluation take shape' flat; others lack formed-standard limit. |
+| 1.4 | P | P | P | Not assumed good stated; degeneration's equal belonging not stated. |
+| 1.5 | P | P | R | FIRST, SECOND: non-Lean material checked only by AI review unstated. |
+| 1.6 | R | R | P | CLOSED: readings marginal; each claim's stated standing not given as feature. |
+| 1.7 | R | R | R | |
+| 2.1 | P | P | P | Generation excluding degeneration absent; CLOSED has continuation only, as definition. |
+| 2.2 | R | R | A | |
+| 2.3 | R | R | A | |
+| 2.4 | P | R | P | FIRST, CLOSED: model proof stated; not-yet-restated-on-grammar absent. |
+| 2.5 | A | A | A | |
+| 2.6 | P | P | P | FIRST, SECOND: near-definitional, dependents' ending unstated; CLOSED: commons only named. |
+| 2.7 | P | R | P | FIRST, CLOSED: premise carrying the law's force not stated. |
+| 2.8 | P | R | P | FIRST: 'evolution in counts' only; CLOSED: only Price, as restated. |
+| 2.9 | R | R | A | |
+| 2.10 | P | R | P | FIRST: limit on 'undetermined' absent; CLOSED: laws silent, no non-entailment. |
+| 2.11 | P | R | P | FIRST: 'needs no premise', not proved; CLOSED: C's premise only. |
+| 2.12 | P | R | P | FIRST: both premises only implied; CLOSED: 'only argued', content missing. |
+| 2.13 | P | P | P | AI labels noted; changing no theorem, unchecked classical readings not stated. |
+| 2.14 | P | P | P | 'Each names what refutes it' never stated; FIRST names five of eight. |
+| 2.15 | A | R | A | |
+| 3.1 | R | R | R | |
+| 3.2 | P | P | R | FIRST, SECOND: wording in fragments; 'from every standpoint' never stated. |
+| 3.3 | R | R | R | |
+| 3.4 | R | R | R | |
+| 3.5 | R | R | R | |
+| 3.6 | R | R | P | CLOSED: order, mixed cases right; 'or a premise in its place' absent. |
+| 3.7 | R | R | R | |
+| 3.8 | P | P | P | From the condition, only implied: it ranks nothing or gives no order. |
+| 3.9 | R | R | A | |
+| 3.10 | P | P | A | Stated case ranked; 'a reason, not a warrant' and 'no C' absent. |
+| 4.1 | R | R | R | |
+| 4.2 | R | R | A | |
+| 4.3 | P | R | W | FIRST: mixed only. 07 does-not-show: 'mixed cases can be ranked'; some are. |
+| 4.4 | R | R | R | |
+| 4.5 | A | A | A | |
+| 4.6 | R | R | R | |
+| 4.7 | A | R | A | |
+| 4.8 | A | R | A | |
+| 4.9 | A | A | A | |
+| 5.1 | R | R | P | CLOSED: frozen tests can fail theses; no forbidden case with condition. |
+| 5.2 | R | R | R | |
+| 5.3 | R | R | A | |
+| 5.4 | P | P | P | Failures spare proofs, premises may fail; forbidding through hypotheses, Lean answerability unstated. |
+| 5.5 | R | R | P | CLOSED: definitions leave facts little; root laws, explaining, representing absent. |
+| 5.6 | A | P | A | SECOND: no observation, argued; 'forbids explanations', defeat by argument absent. |
+| 5.7 | P | P | P | Dynamics don't settle them; perspectivist's denial, failing argument not stated. |
+| 5.8 | R | R | A | |
+| 6.1 | R | R | R | |
+| 6.2 | R | R | R | |
+| 6.3 | R | R | P | CLOSED: ledger named; holding in one model, failing in another absent. |
+| 6.4 | R | R | R | |
+| 6.5 | P | R | P | FIRST: 'shared language' as unifier only; CLOSED: vocabulary, no domains. |
+| 7.1 | R | R | - | |
+| 7.2 | R | R | - | |
+| 7.3 | R | R | - | |
+| 7.4 | R | R | - | |
+| 7.5 | A | R | - | |
+| 7.6 | P | P | - | Some layers tagged open or argued; not every claim's standing shown. |
+| 7.7 | R | P | - | SECOND: all three shown; root-to-models read as late disappointment (R3.1, R6.3). |
+
+2. Other statements wrong against the chapters:
+
+- "one possible path to part of the warrant", with "the only path offered toward a warrant" (`claude-part-one.txt`, Q3 and Q10). Home: 07 §4.7. The path extends scope from what acting presupposes, and "Whether that presupposition is warranted is a further question". The reader's own Q7 has it right, as "part of scope".
+- "premises with no warrant" (`claude-part-two.txt`, R8). Home: 07 does-not-show and T8, and 08 philosophical warrant. The warrant is open, not absent, and the laws and logic "do not show that none exists". Key item 3.7 touches this, but I kept 3.7 at R because part one's "warrant open" stands.
+
+3. Homes opened: 07 (§1, what-forms, §3, §4, §4.1, §4.4, §4.7 in part, §8, does-not-show), 08 (§7 standings, §8, §9, both philosophical theses, §10 law, philosophical warrant, review status), 05 (joint excess, T3), 02 (T1), plus searches of 01 and 08 for premise independence and of the root `README.md` and `RESULTS.md` for the receipt count; not checked: homes in 01, 03, 04 and 06, thesis records beyond 08's table apart from T1 and T3, `ONE-ARGUMENT.md`, and whether the reader's quotes match the overview and one page, and I did not open the existing marks files.

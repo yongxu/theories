@@ -1,0 +1,102 @@
+**S.** This is the landing page of an unfinished, self-published theory that tries to give one relational account of how anything comes to be, lasts and ends, adds an ethics resting on two premises it openly does not assert, and is backed by Lean proofs of its internal steps but has had no human review.
+
+Quotes below drop link markup but are otherwise exact. "[would follow: X]" marks a link I would have opened; none resolve here. "Self-published" in S was my inference, and the text does not say it. File 1 did not tell me the work was made with AI; file 2 did.
+
+## Q1. What is it? (sure)
+A work-in-progress formal framework, AI-written, with its proofs machine-checked in Lean and no human reviewer yet. It builds continuation and generation on one relational primitive and restates known results in it. It shows selection can succeed while losing what it cannot read. It then keeps an ethics apart from the laws, as two unasserted premises: whose losses count, and which course is better.
+
+Rests on: "An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life and knowing take shape within it, and how far evaluation does, without assuming that becoming is good."
+
+## Q2. What does it claim?
+The text labels its own through-line "[AI reading]": "a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts."
+
+1. **Root.** Continuation relative to a class, and generate, keep or degenerate at two grains, hold for any relation. "Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open". (sure)
+2. **One unfolding.** Taker and drawn-on, knower and known, standpoint, capacity and responsibility all sit within relations. "A modelling choice, a representation with laws on it, a reading, a law, a commitment. One unfolding: a thesis, argued". (unsure: I assume the five labels map in order onto the five items)
+3. **Overdraw.** Takers each within what a renewal gives can jointly exceed it, and if the renewal depends on what it renews, enough such steps from a low level end it. "Proved on models; restates the commons. T1: three settings passed, four failed". (sure)
+4. **Selection limits.** Selections reach exactly what couples in, and, given "room", an optimum drains what lies beyond. "Proved, near-definitional" and "Proved; a known theorem restated". T6 is "conjectured" and T3 "conjectured, partly supported". (unsure on "room")
+5. **Lock-in.** A rule read from the share it raises can lock and outlive a loss it does not read. "Proved in the model." T7 is "conjectured". (sure on the claim, unsure on T7's state)
+6. **No law evaluates.** "No law evaluates: none says a loss is a harm or restraint better." The dynamics entail neither premise, "by construction". (sure)
+7. **Self-concern law.** On the fished stock, an order increasing in the boats' own continuation ranks a course that ends with them below any that agrees until then and adds to that continuation. The text's only standing here is "a law of the World model". [would follow: 07 §4.4] (unsure)
+8. **T8.** "for life, the way is 生生, life in the whole and its continuing generation [AI reading], compared by widening". "Argued; no verdict binding every possible mind". (guessing what it adds to C)
+
+## Q3. What does its ethics rest on?
+It rests on nothing the text asserts. The ethics is conditional: "The ethics adds two premises, each a hypothesis wherever used". (sure)
+
+- **Continuation condition: for scope, whose losses count.** "It ranks nothing". Its part beyond self-concern, the step of invariance, "counts losses that return to no one". "For anything" leaves me unable to see what scope excludes; the text does not say. (sure on role, unsure on the step)
+- **C: for order, which course is better.** "C gives order; a ranking needs it or a premise in its place." It leaves mixed cases unranked. (sure)
+- **Widening: the comparison C uses.** "Widening itself needs no premise". (sure on role, unsure what is "admitted")
+- **Standpoint and formation: what the condition is indexed to and what C is about.** Neither is explained on this page. (guessing)
+- **Further premises: for actual choices.** "Choices take further premises, each named". The page does not name them. [would follow: 07 §5] (sure)
+- **The river question: one possible path to part of the warrant.** It is "argued and not proved". (sure)
+
+## Q4. What does it not claim? (all sure)
+1. That becoming is good: "without assuming that becoming is good".
+2. That the premises are true: "A premise, not asserted; warrant open".
+3. New mathematics: "finds none of the central results new mathematics".
+4. That real systems fit the models: "That actual systems meet these premises is open, a correspondence not shown."
+5. That the river proposal settles anything: "The laws stand either way, and the condition and C stay premises".
+6. That a frozen test measures its target: "a frozen rule fixes how a verdict is scored, not that it measures what the thesis names."
+
+## Q5. What would show it wrong?
+Each of the first four defeats one thesis, not the account.
+
+1. **T1.** "a condition below a need measured in advance returning with nothing given from beyond". (sure) Whether its four failed settings were this event, the text does not say.
+2. **T3.** With outcomes, couplings and reward fixed, a system with a smaller optimality gap leaves the condition higher on average. (sure)
+3. **T7.** "such a metric dropped by its selectors on evidence alone". (sure)
+4. **T6.** A stock's own course gives early warnings that separate runs crossing a dependent's need from runs that do not. (unsure)
+5. **T8, or the root as explanation.** "A mixed case argued better from every standpoint counting everything positively, with no further premise; a pure closing argued good for life", or "a rival deriving the laws from fewer patterns; on a first count, a tie". (sure, though these are arguments, not observations) [would follow: 08 §9]
+
+The text does not let me say what would show the whole wrong. As language, the root's defeater is "nothing". The premises face "Nothing in the dynamics". And "A failure moves a thesis and removes no theorem". What "moves" means, the text does not say.
+
+## Q6. What is new in it? (sure on what the text says, unsure on its worth)
+By its own account, little: "what survives, none of it a discovery, is a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart". The page shows no ledger entry, so I cannot judge it. That review is by AI and "not exhaustive".
+
+My own, not from the text:
+- The optimum result resembles published work on optimising over a subset of attributes.
+- The lock-in result resembles Goodhart and lock-in discussions.
+- The split between laws and ethics is the old is/ought distinction.
+- Scope versus order is familiar from welfare ethics.
+
+A single machine-checked formalism across these would be a real artifact, but the text does not claim that as its novelty.
+
+## Q7. The whole
+```
+relation-as-condition + class of sameness
+   -> continuation -> generate / keep / degenerate   (true of any relation; excludes nothing)
+   == gap 1: amounts and model premises are added ==
+model laws: overdrawn renewal; selection limited to what couples in;
+            optimum drains the rest; metric lock-in; evolution in counts
+   -> side branch: T1, T3, T6, T7 (does the world match? open; failures spare the theorems)
+   -> upshot: selection succeeds while the unread is lost; laws silent on whether it counts
+   == gap 2: closed to derivation, by construction ==
+added premises: scope (continuation condition) + order (C, using widening)
+   <- river question: possible route from self-concern to part of scope; unproved
+   -> further named premises -> choices
+   -> T8: for life, compare by widening
+```
+The lower layers pass vocabulary upward (standpoint, course, widening) but no warrant across gap 2.
+
+**One thing? Partly.** I can hold it as one stack with two declared gaps, and the "centre" sentence gives a through-line. I cannot hold it as one theory whose parts need each other. The root forbids nothing, so the laws get their content from what is added at gap 1. The ethics is explicitly not derived. What unifies it is shared language, a ledger, and "one unfolding", whose argument is not on this page. What would break if the root were swapped, the text does not say.
+
+## Q8. Where I got lost, stopped believing or reread
+1. "With *room* (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does". I had to rebuild this in my own terms, and I am still unsure of "room".
+2. "T7, on actual metrics: conjectured; in one trained system a further case it forbids occurred". If something forbidden occurred, I cannot see why the label is still "conjectured". This is where I stopped trusting the standing labels without seeing the record.
+3. "With significance and "better" left free, and given a standpoint, a formation and a course widening another, the represented dynamics entail neither premise below, by construction, so restating laws on the root cannot close this join." I reread this. "By construction" makes the independence look built in rather than found.
+4. "It ranks nothing; its content beyond what acting for oneself presupposes, the *step of invariance*, counts losses that return to no one." The step is named but not explained, and I do not know what acting for oneself presupposes here.
+5. "If all of one's effects are one's own, in the sense of whose losses count, then on one proposal concern for one's own future alone reaches everything downstream, with no step of invariance; if only some, at most those, and the rest needs the step." "In the sense of whose losses count" seems to build in the conclusion, and I stopped believing it here. The text concedes the objection one sentence later.
+
+## Q9. Terms I could not understand from the text alone
+- **Key to the ethics:** "formation" and "what can form" (C depends on them, and they are never defined), "admits", and "step of invariance" (invariant under what?).
+- **Also key:** "read" and "read along", as in "which relation significance is read along".
+- **Formal terms:** "two grains", "reading loop", "a center", "the World model", "eligible outcome", "couples in" (inferred only).
+- **Record-keeping:** "Lean receipt", "pure core's empty axiom report" (my own guess: Lean's axiom listing for a proof), "T2", "T4" and "T5" (never mentioned on this page).
+- **Voices:** "[AI reading]" as applied to the theory's own centre (is it the theory's centre, or one reader's guess at it?), "a perspectivist", and whose first person "a first-person conviction" is, which the text does not say.
+
+## Q10. Would I read on?
+**Yes**, narrowly, and not the 55–71 minute overview or the opening first. The candour about standing earned one more look, but the page also says nothing here is a discovery, so the next pages have to show what the framework is for. I would want, in order:
+
+1. One ledger entry end to end, with a premise holding in one model and failing in another. If the ledger only lists the premises of known theorems, I would stop.
+2. The fished stock fully worked: the relation, class, grains, what couples in, and what a course "admits".
+3. T1's four failures and T7's forbidden case, and what "moved" in each.
+4. 07 §4.7, the river question with its objections, since it is the only path offered toward a warrant, plus a reason for C if one exists.
+5. One distinction or prediction this language gives that the commons, Goodhart and side-effects literatures do not, along with the "first count" tie with rivals.

@@ -1,0 +1,67 @@
+| item | FIRST | SECOND | CLOSED | note |
+|---|---|---|---|---|
+| 1.1 | R | R | P | CLOSED omits how things come to be. |
+| 1.2 | R | R | R | |
+| 1.3 | P | P | P | Formation-to-significance gap omitted; SECOND identifies supplied and relational readings. |
+| 1.4 | P | P | A | FIRST/SECOND reject inherent goodness but omit degeneration’s equal place. |
+| 1.5 | P | P | P | FIRST/SECOND omit AI authorship and review status; CLOSED omits AI review. |
+| 1.6 | R | R | R | |
+| 1.7 | R | R | R | |
+| 2.1 | P | P | P | Universal scope and generation’s exclusion of degeneration are missing. |
+| 2.2 | R | R | A | |
+| 2.3 | R | R | A | |
+| 2.4 | P | P | P | Model qualifications incomplete; discrete steps and whole-number amounts omitted. |
+| 2.5 | A | A | A | |
+| 2.6 | P | P | P | World hypotheses omitted; CLOSED also lacks the theorem’s standing. |
+| 2.7 | P | P | A | Supplied coupling premise’s role in the theorem’s force omitted. |
+| 2.8 | R | R | A | |
+| 2.9 | R | R | A | |
+| 2.10 | P | R | P | FIRST/CLOSED omit qualifications separating represented dynamics from becoming generally. |
+| 2.11 | P | R | P | FIRST/CLOSED omit the premise-free theorem standing of widening’s order. |
+| 2.12 | R | R | A | |
+| 2.13 | P | P | P | Readings’ status, theorem independence, and review limits are incompletely stated. |
+| 2.14 | P | P | P | Eight theses, each with its refutation condition, not fully identified. |
+| 2.15 | A | P | A | SECOND connects alignment’s components but omits the premise-free starting claim. |
+| 3.1 | R | R | R | |
+| 3.2 | R | R | R | |
+| 3.3 | R | R | R | |
+| 3.4 | R | R | A | |
+| 3.5 | R | R | R | |
+| 3.6 | R | R | P | CLOSED omits alternative ranking premises and the self-concern exception. |
+| 3.7 | R | R | P | CLOSED leaves unconditional assertion unsettled rather than affirming neither is asserted. |
+| 3.8 | R | R | R | |
+| 3.9 | R | R | A | |
+| 3.10 | P | P | A | Ranking case quoted; self-concern’s reason-versus-warrant distinction omitted. |
+| 4.1 | R | R | P | CLOSED denies deriving premises, without stating that no law evaluates. |
+| 4.2 | R | R | R | |
+| 4.3 | P | P | P | Mixed comparisons addressed; duty and compliance omitted. |
+| 4.4 | R | R | R | |
+| 4.5 | A | A | A | |
+| 4.6 | R | R | R | |
+| 4.7 | A | P | P | Names and interpretations distinguished; authors’ intentions and grammar claims unaddressed. |
+| 4.8 | A | A | A | |
+| 4.9 | A | R | A | |
+| 5.1 | R | R | P | CLOSED identifies empirical vulnerability but supplies no conditioned forbidden case. |
+| 5.2 | P | R | P | FIRST/CLOSED report mixed results without freezing before scoring. |
+| 5.3 | A | P | A | SECOND preserves mathematics after failure; scoring-versus-measurement distinction omitted. |
+| 5.4 | P | P | P | Conditional proof addressed; hypotheses’ observational role not fully explained. |
+| 5.5 | P | P | A | Root forbids no relation; explanatory and representational failure not specified. |
+| 5.6 | A | P | A | SECOND distinguishes argumentative defeat; measurements’ supporting role omitted. |
+| 5.7 | P | P | P | Empirical independence recognized; consistent perspectivist denial and argumentative defeat omitted. |
+| 5.8 | A | A | A | |
+| 6.1 | R | R | P | CLOSED denies novelty without classifying central results as restatements or near-definitional. |
+| 6.2 | A | A | A | |
+| 6.3 | R | R | P | CLOSED’s ledger omits models exhibiting each premise holding and failing. |
+| 6.4 | R | R | R | |
+| 6.5 | P | P | P | Shared relational language identified; the three specified domains not connected. |
+| 7.1 | P | R | - | FIRST names relational continuation but omits classes. |
+| 7.2 | P | P | - | Model mechanisms outlined; joint activity and coupling formulation incompletely represented. |
+| 7.3 | R | R | - | |
+| 7.4 | P | R | - | FIRST connects applications to tests without stating theorem survival after failure. |
+| 7.5 | A | P | - | SECOND identifies names and interpretations without excluding supplied operations. |
+| 7.6 | P | P | - | Open connections identified; standing attached to every claim not stated. |
+| 7.7 | P | R | - | FIRST identifies empirical and ethical gaps, omitting the root-to-model gap. |
+
+- none found
+
+Opened homes: 01-ROOT.md, 02-MAP.md, 03-KNOWING.md, 04-LIFE.md, 05-COLLECTIVES.md, 06-CLASSICAL-TEXTS.md, 07-SIGNIFICANCE.md, 08-METHOD.md; checked relevant passages, not every chapter claim, README, linked proofs, test records, receipt totals, or source literature.

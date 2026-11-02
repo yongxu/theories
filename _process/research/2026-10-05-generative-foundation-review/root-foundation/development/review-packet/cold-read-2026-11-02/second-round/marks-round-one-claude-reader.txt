@@ -1,0 +1,67 @@
+| item | FIRST | SECOND | note |
+|---|---|---|---|
+| 1.1 | R | R | |
+| 1.2 | P | R | FIRST omits the single unfolding. |
+| 1.3 | P | P | Does not distinguish formed standards from significance at the stated standing. |
+| 1.4 | P | P | Does not state degeneration belongs as fully as generation. |
+| 1.5 | P | P | Omits AI-only review status of non-proof material. |
+| 1.6 | R | R | |
+| 1.7 | R | R | |
+| 2.1 | R | R | |
+| 2.2 | R | R | |
+| 2.3 | R | R | |
+| 2.4 | R | R | |
+| 2.5 | W | R | 01-ROOT: FIRST “Proved on models” understates the any-type result. |
+| 2.6 | P | P | Does not identify joint-excess arithmetic as near-definitional. |
+| 2.7 | W | P | 03-KNOWING: FIRST “exactly” overstates; SECOND omits the supplied selection premise. |
+| 2.8 | W | R | 04-LIFE: FIRST “Proved on models” understates the any-type result. |
+| 2.9 | P | R | FIRST omits the known theorem restated in discrete form. |
+| 2.10 | P | R | FIRST omits non-entailment’s limit: no conclusion about becoming itself. |
+| 2.11 | R | R | |
+| 2.12 | R | R | |
+| 2.13 | P | R | FIRST identifies AI readings but omits their inability to change theorems. |
+| 2.14 | R | R | |
+| 2.15 | P | R | FIRST omits premise-free standing and conditional alignment direction. |
+| 3.1 | R | R | |
+| 3.2 | A | A | |
+| 3.3 | R | R | |
+| 3.4 | R | R | |
+| 3.5 | R | R | |
+| 3.6 | R | R | |
+| 3.7 | R | R | |
+| 3.8 | R | R | |
+| 3.9 | R | R | |
+| 3.10 | P | R | FIRST gives the ranking but omits reason versus warrant. |
+| 4.1 | R | R | |
+| 4.2 | R | R | |
+| 4.3 | P | R | FIRST excludes complete mixed rankings, but omits duty and compliance. |
+| 4.4 | R | R | |
+| 4.5 | P | R | FIRST limits axiom reports without locating real assumptions in modelling. |
+| 4.6 | A | R | |
+| 4.7 | A | A | |
+| 4.8 | R | R | |
+| 4.9 | A | A | |
+| 5.1 | W | W | 05-COLLECTIVES: “does not drain”/“do not drain” overstates T3’s comparative refuter. |
+| 5.2 | R | R | |
+| 5.3 | P | R | FIRST explains frozen scoring but omits theorem survival after refutation. |
+| 5.4 | P | P | Omits how observations test hypothesis-fit rather than theorems. |
+| 5.5 | P | P | Omits root laws’ observational irrefutability. |
+| 5.6 | A | W | 08-METHOD rejects “go on differently would refute it” as observational refutation. |
+| 5.7 | A | P | SECOND gives consistent denial; omits failure of the justificatory argument. |
+| 5.8 | A | A | |
+| 6.1 | P | R | FIRST denies novelty without classifying each result as definitional or restated. |
+| 6.2 | R | R | |
+| 6.3 | R | R | |
+| 6.4 | R | R | |
+| 6.5 | A | R | |
+| 7.1 | R | R | |
+| 7.2 | P | R | FIRST outlines model laws without their hypotheses. |
+| 7.3 | R | R | |
+| 7.4 | P | R | FIRST mentions testing theses, without their bridge or theorem independence. |
+| 7.5 | R | R | |
+| 7.6 | P | R | FIRST labels some standings but leaves several outline claims unclassified. |
+| 7.7 | P | R | FIRST omits the models-to-actual-systems joint. |
+
+- “T5 failed every frozen rule” — `claude-part-one.txt`, Q5. Home: `07-SIGNIFICANCE.md`, §8, T5. Every frozen rule failed in VD1; VD2 passed in part.
+
+Homes opened, in relevant passages: `01-ROOT.md`, `02-MAP.md`, `03-KNOWING.md`, `04-LIFE.md`, `05-COLLECTIVES.md`, `06-CLASSICAL-TEXTS.md`, `07-SIGNIFICANCE.md`, `08-METHOD.md`; not checked: README, original front texts, Lean code, linked records, or underlying tests.
