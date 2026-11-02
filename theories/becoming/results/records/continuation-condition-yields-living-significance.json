@@ -233,7 +233,7 @@
       "witness": "Becoming.Web.significance_undetermined"
     },
     {
-      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count, and what ranks lies in C alone (the step of invariance is part of that scope).",
+      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count, and what ranks lies in C, in general alone (the step of invariance is part of that scope).",
       "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数，排序只在于 C（不变的一步属于这个范围）。",
       "kind": "non-implication"
     }
@@ -1279,6 +1279,10 @@
     {
       "en": "30 October 2026 (U3, study section 465): a law on the root added, specializing `Becoming.unrestricted_iff_livingSignificance` at the own-closure reading of significance, through the row (no F5 item: a specialization states less than its row); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律，于意义之自闭包读法下特化 `Becoming.unrestricted_iff_livingSignificance`，经其本行（无 F5 项：特化所述少于本行）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "2 November 2026, board item PF3: corrected to say C gives order in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
+      "zh": "2026年11月2日，看板条目 PF3：更正为 C 给出次序，一般而言唯有 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
     }
   ],
   "text_versions": [
