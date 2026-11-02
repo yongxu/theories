@@ -7202,11 +7202,6 @@
    "category": "support",
    "reason": "an arithmetic lemma, the mirror of gaining_of_losing_from with the count bounded; its use was the old proof of the census recurrence law's converse, which now goes through the root's count on lines (U4d)"
   },
-  "Becoming.«有覆而亡屡则生不止»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "general-structure",
-   "reason": "a law of every relation on any carrier (a shared law on the grammar, U4d): with lists covering arbitrarily late stages and nothing splitting, endings recurring leave beginnings never stopping, with no decision; Identity's arisingFrom_not_stopping_covered reaches the same through «所覆后亡屡则生未否» at one covering list, and nothing on the base uses this form"
-  },
   "Becoming.GuardHorizon.ungiven_reading_not_uniform": {
    "module": "Becoming.GuardHorizon",
    "category": "model-witness",
