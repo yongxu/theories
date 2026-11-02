@@ -13,18 +13,22 @@ The third round on the open question of [07 §4.6](../../../../../../theories/be
 
 The first two rounds read more strongly for P4 than they support [AI reading].
 
-1. **From some to all.** "One goes on only through what one conditions" shows that some effects are one's own. Round 1 treated it as support for all. §4.7 states the gap.
-2. **The circularity reply.** §4.6 says a partial holding decides by the very identity in question. That needs no criterion to stand apart from that identity, and bodily organization, psychological connectedness and intention each state one on its own terms. The sentence stays in §4.6, which the dossier quotes; §4.7 gives the answer to it.
-3. **Double effect.** Round 2 says the tradition "weighs the wake". It weighs a foreseen side effect, which supports a scope reaching what one foresees, not all one's effects. §4.7 gives this middle candidate, and the argument against it: under it, what couples in fixes whose losses count.
-4. **Near-definition.** The reach is exactly that everything downstream is alike to oneself. So the theorem moves the question into the class, and says so.
-5. **What follows if P4 fails** is stated for the first time, each part apart: the laws, the reach, the step, the two premises, alignment.
+1. **From some to all.** "One goes on only through what one conditions" shows that some effects are one's own. Round 1 saw the gap and answered it with circularity. §4.7 keeps the gap open.
+2. **The circularity reply.** It holds only if no criterion stands apart from the identity in question. Bodily organization and Parfit's R are each stated on their own terms. §4.6 now calls it one reply and points to §4.7.
+3. **Double effect.** It concerns what is permitted, and is silent on scope, as round 2's verdict says. §4.7 gives what can be foreseen as a candidate on its own, in two forms, the negligence standard the stronger.
+4. **New objections, from the independent read.** The wrong bearer: a loss counted on my line counts as mine. Losses are not effects: what a harm forecloses occurs nowhere, so it lies on no line. Touching: a scope following effects leaves out what one never touches. Opacity: P1 held de se does not transfer to the class without a de re reading. Degree: R is no class.
+5. **New support, from the same read.** Agent-regret: ownership wider than intention and fault, and not all effects.
+6. **P2 is no test of the widest self.** Read under the split, a class closed under what it conditions meets it wherever a predicate decides the class. This application is argued; no Lean states it.
+7. **Acts aimed past death** support neither side alone, and a contingent value is not the step.
+8. **T8 is exposed.** "Of whatever substrate" rests on P2 and P4, so the ethics' form survives P4's failure and that clause needs another ground.
+9. **Near-definition, and what follows if P4 fails,** are stated for the first time, each part apart.
 
 ## Boundaries
 
 - Nothing in the Lean marks an intended or a foreseen effect. Those readings are the AI's.
-- "A scope that depends on what couples in" is stated in words only. If a sentence of §4.7 came to need a law, it would be a new item, not this one.
-- The references are those the dossier checked, with Anscombe (1957) and Wolf (1986) from the earlier rounds and the study of the step; each is to be verified again before it is cited to a reader of the dossier.
+- No sentence of §4.7 claims a law beyond §4.6's. Item 6's application is labelled as argument. A law for it would be a new item, not this one.
+- Scheffler (2013), Parfit (1984) and Williams's "Persons, Character and Morality" (1976) are in the dossier's checked references. Williams's "Moral Luck" (1976) and Rawls (1971) are from the reader's and the author's knowledge, and each is to be checked against the publication's record before the dossier relies on it.
 
 ## Review
 
-Taken from the independent read when it reports.
+An independent AI reader (read-only, not the author) read the draft as a moral philosopher and against the Lean, 2 November 2026, without compiling it. It made ten major and twelve minor findings. All are taken, with these judgements of the author's: its "wrong bearer" and "losses are not effects" are kept as objections and not answered, since §4.7 has no answer that would not be another premise; the river case is added to the fronts so the question parses for a newcomer.

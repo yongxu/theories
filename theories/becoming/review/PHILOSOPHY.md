@@ -437,7 +437,7 @@ The conclusion: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under P1
 
 **Known weaknesses.**
 - Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Denying P2 is coherent, since one can presuppose the significance of a line that ends while its last stage still conditions something."
-- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Denying P4 is also coherent: one can hold only some of one's effects as one's own." The chapter's reply is a labelled reading: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "so a holding of only some effects must decide which effects are one's own by the very identity in question".
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Denying P4 is also coherent: one can hold only some of one's effects as one's own." The chapter's reply is a labelled reading: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "so a holding of only some effects must decide which effects are one's own by the very identity in question". [07 §4.7](../chapters/07-SIGNIFICANCE.md#crux) answers that reply: a criterion can stand apart from that identity.
 - Constancy demands endlessness, and the chapter's answer: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "P2 asks for constancy up to the net's end instead. That condition does tell a family's class, and the class holding the families with their condition, from the organism's."
 - [this dossier, AI] Constancy up to the net's end lets a line end where the net ends, so it is a weaker regularity than constancy. Whether a self of its own in this weaker sense is what one presupposes in acting is part of the question, not settled by the theorem.
 - [this dossier, AI] P4 makes everything one conditions one's own for scope. The chapter separates this from responsibility (whose losses count, not what one answers for); whether the separation holds is for the reviewer.
@@ -453,8 +453,9 @@ The conclusion: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under P1
 6. The path needs less than P2 and P4 together: that the class of one's line hold the effects of oneself and of each stage of one's line (`«后皆续当且仅当后皆同类»`, `«后皆续当且仅当自与线皆闭»`). P2 alone does not give that, even where one acts: a class can meet P2 without holding one's effects (`FiniteWake.constant_to_end`, `FiniteWake.not_held`). Given P4 and acting, P2 gives that and more: the class then holds the effects of every occurrence alike to oneself, off one's line included (`«本类常闭则所缘同类»`); and a class can meet the path's need without P2 (`OtherLeaves.reach_without_condition`). Like P2 (`«亡而网续则本类不至终有常»`), the path's need lets one's line, once it takes a step, end only where the net does (`«亡而网续则后不皆续»`), so the first question's alternative does not by itself separate them. If what one presupposes is a regularity of one's own, must it hold of the occurrences alike to oneself that lie off one's own line, or only along that line?
 7. That one goes on only through what one conditions shows that some of one's effects are one's own. What could carry the argument to all of them?
 8. Is there a criterion of "one's own", narrower than all one's effects and stated apart from identity, that bears on whose losses count and not only on what is permitted?
-9. Double effect weighs a foreseen side effect. May scope depend on what one can foresee, given that what couples in would then fix whose losses count?
-10. If one values what comes after as not oneself, is the path's reach the step under another name?
+9. May scope depend on what can be foreseen, given that what can couple in would then fix whose losses count? Is the negligence standard its strongest form?
+10. If one values what comes after as not oneself, is the path's reach only a contingent value, held beyond the self?
+11. Does a loss counted on one's own line count as the other's (Rawls's separateness of persons), and can a scope that follows occurrences count what a harm forecloses, which occurs nowhere?
 
 ---
 
