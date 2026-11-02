@@ -551,7 +551,7 @@
         "significance-retained-within-margin",
         "comparison-by-widening",
         "continuation-condition-decomposition",
-        "widening-as-what-every-weighting-ranks"
+        "widening-as-what-every-positive-weighting-ranks"
       ],
       "declarations": [
         "Becoming.unrestricted_iff_livingSignificance",
