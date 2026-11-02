@@ -1,0 +1,12 @@
+Now read one more file, whole: PART_TWO_DIR/3-overview.md. It is the longer text the first two lead to. The same rules hold: open nothing else, answer from the text, be neither kind nor harsh.
+
+Then:
+
+R1. Q1 to Q6 again, in the same form, but only where your answer changed. Say what changed and which passage changed it. Where nothing changed, write "unchanged".
+R2. Q7 again in full: the structure of the account, in your own words, its main parts and what depends on what. Then say again whether you hold it as one thing (yes, partly or no), and why.
+R3. Where did you get lost, stop believing it, or have to reread in this text? Quote up to 5 sentences exactly, with one line of why for each.
+R4. Any new term you could not understand from the text.
+R5. Does the longer text agree with the shorter ones? Quote any place where they seem to say different things, or where one claims more than the other. If you found none, say so.
+R6. What would you cut, move or say first, so that a reader sees the whole sooner? At most 5 changes, each tied to a passage.
+R7. Would you read on now? Yes or no, what specifically you would want to see next, and whether this text changed your answer to Q10.
+R8. If you had to tell someone in two sentences why this might matter, or why it might not, what would you say?

@@ -1,0 +1,106 @@
+**S.** This is the landing text of an unfinished, not yet human-reviewed theoretical project, which offers a general account of how anything comes to be and passes away, adds an ethics resting on two explicitly unasserted premises, and backs its formal results with Lean proofs and its empirical theses with pre-registered tests.
+
+**Q1. What is it? (sure)**
+An AI-made, not yet human-reviewed framework modelling becoming as occurrences conditioning occurrences, with persistence defined as continuation under a chosen sameness class. Lean-checked theorems, mostly on discrete models, cover renewal, collapse from joint over-taking, what a selector can reach, evolution and optimisation. An ethics is added conditionally through two unasserted premises: one for whose losses count, one for ranking courses. Empirical theses got mixed test results. By its own report, no central result is new mathematics.
+
+Rests on: "It was made with AI, the Lean proofs included."
+
+**Q2. What does it claim?**
+
+| # | Claim | Standing in the text | Mark |
+|---|---|---|---|
+| 1 | At two grains a course can generate, keep or degenerate, and generation never overlaps degeneration. | "These are theorems for every relation and class" | sure |
+| 2 | The grammar explains how things go on, and every becoming can be represented in it. | "argued, not proved"; "open" | sure |
+| 3 | A determined, non-merging law on finitely many configurations returns each one. Takers each within a renewal can jointly end it and what depends on it. | Proved on models, "each under hypotheses its home section states". I would follow that link; it does not resolve here. | sure of the standing, unsure of the scope |
+| 4 | Selections through a selector's couplings reach exactly what couples in. | Proved; "Near-definitional" | sure |
+| 5 | Price, Fisher (exact case), Hamilton and drift "hold in counting form". | Proved on models | sure of the standing, unsure what "counting form" means |
+| 6 | Where there is room, optima of such an order drain what lies beyond as far as any eligible outcome does. | Proved; "That trained systems drain so is thesis T3, conjectured" | unsure |
+| 7 | The dynamics do not entail the continuation condition. | "by construction" | sure |
+| 8 | For life, the way is 生生, compared by widening. | Thesis T8, under both premises; the gloss is "[AI reading, D1]" | unsure |
+
+The whole "line of the argument" is also labelled "[AI reading]".
+
+**Q3. What does its ethics rest on?**
+- **The continuation condition (sure).** It is for scope, meaning whose losses count. "by itself it ranks nothing."
+- **The step of invariance (unsure).** This is the condition's content beyond what acting for oneself presupposes. It is what counts losses that return to no one.
+- **C (sure).** It is for order, meaning which course is better. The widening relation needs no premise. "calling it better is C". Mixed cases stay unranked.
+- **Acting for oneself, a possible third support (unsure).** The boats example ranks a collapse below keeping the stock "with no C", using the boats' own continuation. The text does not count this as a premise. It also sits oddly with the first screen's "alone gives order".
+- **Further premises (unsure).** "Choices need further premises, named". This page does not name them.
+
+**Q4. What does it not claim? (all sure)**
+- That becoming is good: "without assuming that becoming is good".
+- That either premise is true: "the theory asserts neither".
+- A universal verdict: "no verdict binding every possible mind is claimed".
+- That the axiom reports support the modelling: "That concerns logic only".
+- New mathematics: "finds none of the central results new mathematics".
+- That passing a frozen test measures the thesis: "A frozen rule fixes how a verdict is scored, not that it measures what the thesis names".
+
+**Q5. What would show it wrong?**
+1. **The theses: the text does not let me say.** It asserts "Eight theses about actual systems name what refutes them", but gives no refuter on these pages. I would follow the theses link; it does not resolve here. (sure)
+2. **Failed tests.** T1 failed in four settings and T5 failed every frozen rule. The text does not say what those failures did to the account, so I cannot tell what a failure costs it. (sure)
+3. **T3.** A trained system with room that does not drain what lies beyond its couplings. This is my inversion of the thesis, not the text's test. (guessing)
+4. **Reach of the formal work.** A becoming shown not representable in the grammar, or laws that vanish without discrete steps and whole-number amounts. The text does not say either would count as refutation. (unsure)
+5. **The ethics: the text does not let me say.** The premises are unasserted and their warrant is open. The text does not say what would refute T8, or whether T8 is one of the eight theses "about actual systems". (sure)
+
+**Q6. What is new in it? (sure of what the text says, unsure of its worth)**
+"the work adds a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart". So the new thing is bookkeeping plus a separation, not results. The prior-work check was AI-run and "not exhaustive".
+
+My own remarks, from outside the text:
+- Separating who counts from how to rank is familiar in moral philosophy.
+- The recurrence law looks like the elementary fact that an injective map on a finite set is a permutation.
+
+**Q7. The whole**
+
+```
+relation-as-condition + class of sameness
+  -> continuation -> generate / keep / degenerate   [theorems, general]
+       | joint only partial: most laws not yet restated on the grammar
+       v
+discrete models -> laws: return; joint excess ends a renewal;
+                   selection reach; evolution; optimum drains beyond reach
+       |
+       v
+gap: what ends a renewal can lie beyond what a selection reaches;
+     the dynamics leave open whose losses count
+       | not derived, added
+       v
+premise: continuation condition -> scope
+premise: C + widening (premise-free order) -> order
+       v
+T8: direction for life (生生) -> choices need further premises
+
+Beside this: Lean checks the logic; frozen tests check the theses;
+classical texts give the terms' names only.
+```
+
+Do I hold it as one thing? **Partly.**
+- I can retell one thread: continuation, collapse, limited reach, an open question, then premises.
+- The text itself says "one account only in part", and most laws are not on the root. The ethics is added by design.
+- The laws seem to supply the ethics' description of losses, not its values.
+- The opening promises how "evaluation" forms within the unfolding, yet no law on this page addresses that.
+- The evolution results feel like a catalogue beside the thread rather than a load-bearing part of it.
+
+**Q8. Where I got lost, stopped believing or had to reread**
+1. "So whose losses count turns on how far what each continues with reaches, which the dynamics leave open and the continuation condition, a premise, fixes; calling the wider course better is a second premise, C." The "So" did not feel earned, and I had to parse the middle clause several times.
+2. "In a fished stock, the boats' own continuation ranks a collapse that ends them below keeping the stock, with no C; the condition adds losses that return to no boat, such as the seabirds'; ranking courses where the boats are not at stake needs C." This is the clearest sentence on the ethics, but it shows a ranking without C, against the first screen's "alone gives order".
+3. "With significance a free parameter, no satisfiable statement reading only the represented dynamics entails the condition, by construction" If significance is left free by stipulation, this restates the is/ought gap rather than finding anything. I discounted it.
+4. "The root and the ethics are one account only in part: held de se (each center of itself), the condition is a statement on the root, met by some nets and failed by others: everything lies on every center's line under the one of that relation (`«续无外»`); along a net with no cycle it holds only with one center" I lost the meaning here entirely.
+5. "Under both premises the ethics argues one direction, thesis T8: for life, the way is 生生, life in the whole and its continuing generation (生发, not the map's generation) [AI reading, D1], compared by widening; no verdict binding every possible mind is claimed" The ethical conclusion is a labelled AI gloss on a Chinese term. Mixed cases are unranked and I expect most real choices to be mixed, so I stopped believing it gives "one direction" of any use. The text does not show the step from the premises to T8.
+
+**Q9. Terms I could not understand from the text alone**
+- **Central terms:** "significance", "from every standpoint", and "step of invariance" (invariant under what?).
+- **The optimisation claim, the sentence I most wanted to understand:** "where there is room", "an order rising with what couples in", "drains", "eligible outcome".
+- **Partly guessed:** "takers", "couples into", "net", and what "admits" and "can form" range over.
+- **Not understood:** "center", "line", "the one of that relation", `«续无外»`, "D1", "P2/P3/P4", "correspondence", "the map's generation", "pure core".
+- **T1 and T5:** the page gives their results but not their content.
+- **生生 and 生发:** glossed only in part. "de se" I know from elsewhere (my own knowledge).
+
+**Q10. Would I read on?**
+**Yes, but selectively**, and not the 48–62 minute overview or the first-person opening first. The labelling of standings is careful enough to earn a little time. The ethics and the admitted lack of new mathematics would not earn much more on their own.
+
+I would want to see:
+- The exact optimisation theorem, with T3's test, its refuter and its status.
+- What changed in the account after T1 and T5 failed.
+- One real mixed case worked through T8.
+- 07 §6, to see whether "alignment is first what a selection can reach" says more than that you cannot select on what you cannot see.
+- A review by a person.

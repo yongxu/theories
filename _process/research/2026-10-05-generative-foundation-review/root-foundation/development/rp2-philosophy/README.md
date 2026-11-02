@@ -116,6 +116,7 @@ The dossier was read against what had moved around its citations since `33d06e9b
   - The part: 1,156 words and 2 characters, 8.9 to 11.6 minutes, 57 over the budget of 1,100 with a character counted as half a word. The excess is the earlier 16 and the new line. Amendment 1 protects the line's hypotheses, not the line: keeping it is a judgement, which the measure warns of and does not block (amendment 2).
   - The hour: 4,428 words and 177 characters, 34.7 to 45.2 minutes.
   - The whole: 13,721 words and 261 characters, 106.5 to 138.5 minutes, stated as 105 to 140.
+  - After PF3 landed the same day, on the merge: the part 1,173 words and 2 characters, 9.0 to 11.7 minutes, 74 over; the whole 13,981 words and 261 characters, 108.5 to 141.1 minutes, stated as 105 to 145; the hour 4,603 words and 177 characters, 36.1 to 46.9 minutes.
 - **Review.** One independent AI reader, read-only and with no part in the writing, read the changes against chapter 7, the Lean and AGENTS.md. It confirmed that `Extension` there is exactly the page's widening (`Web.paths_extension_iff_widens`), so that "the wider of two courses as C asks" says what the theorem says. It found:
   - in P-16, two hypotheses dropped (every claim counted as living; each item marked by its formation), and chapter 7's third not-shown left out;
   - P-16's second question saying "courses whose admissions end" where listing implies ending and not conversely, with admission decided dropped too;

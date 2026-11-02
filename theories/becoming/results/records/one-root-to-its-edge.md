@@ -176,7 +176,7 @@ Canonical source: [RootForms.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
+A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -216,6 +216,7 @@ Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 
 | integration | [CENSUS-ON-THE-ROOT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CENSUS-ON-THE-ROOT.md) | — |
 | integration | [COVERING-ON-THE-ROOT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/COVERING-ON-THE-ROOT.md) | — |
 | review | [REVIEW-U4D.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4D.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json) | — |
 
 Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `边上之所立`, `Becoming.RootForms.outside_leaves_no_offspring`, `Becoming.RootForms.descent_forms_no_dependence`
 
@@ -229,6 +230,8 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 - 1 November 2026, U4c (study section 492): Listed.coming_of_ceasing moved from counting to derived, a case of the root's census of a run («定后前者在前则亡屡者生屡») at a member's occurrences along its steps, through two bridges (comesToBe_iff_sheng_along, ceasesToBe_iff_wang_along) and the support of Steps.along; its statement is unchanged and still reads as counting, the row placed by its proof's reach, as were the eight connected rows the reading of connected rows took as derived. CensusWebs.keep_pace stays counting, its basis saying why it is not a case of the root's census of a step. The next step names the covering laws' root form and a stretch form of the census on positions, of which keep_pace would be a case, in place of a root form for the census rows (CENSUS-ON-THE-ROOT.md, reviewed in REVIEW-U4C.md, its record texts in REVIEW-U4C-RECORD.md, both among the references); DESIGN-BOUNDARY gains a dated §9 saying what differs from lever 1's census candidate.
 - 1 November 2026, board item ND (study section 495): the generator that checks the standings is named shared_laws.py (was master_laws.py), and its data shared-laws.json; the check and the claim are unchanged.
 - 1 November 2026, U4d (study section 498): the covering laws' root form, the first next step, is done. The covering laws at Locality, Decidedness and Identity and the root's census of a run are cases of one count on the root, ends on lines from a list (shared-laws-on-the-grammar, law 19): U4c's boundary, that the covering laws are not cases of the census, stands, and both are now cases of the count. The census of a run is stronger, two hypotheses dropped; Identity gains the exact forms from covering lists. What reaches the grammar does not change, so the standings and 08 §7's figures are unchanged (the measure rerun on the landing build). The next step drops the covering laws' root form (COVERING-ON-THE-ROOT.md, reviewed in REVIEW-U4D.md, both among the references).
+- 2 November 2026, U4e (study section 500): the Next drops a theorem that no statement reading only the dynamics entails C. DU gave it (ReadsNoOrder.not_entails: a statement reading no order, as one reading only the dynamics does, entails C at a datum on a frame with an extension only where it fails), and the home section already names it. RootForms.some_depends states its witness instead of only that it is not refuted, so law 2's witnesses read directly; its statement is stronger, the law unchanged. No standing or count changed.
+- 2 November 2026, board item PF3: a basis corrected to say what ranks lies in C in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.
 
 </details>
 

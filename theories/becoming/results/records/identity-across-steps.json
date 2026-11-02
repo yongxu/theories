@@ -652,7 +652,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65",
+      "sha256": "5a617820b47f86d60548bb5fab125a2589157aa14f14e5c1c9948444cb1af506",
       "declarations": [
         "Becoming.Reidentify",
         "Becoming.Reidentify.rename",
@@ -945,7 +945,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
+      "sha256": "9a5156a05e5fdde26c3ec70b4bae5b02a7b1ec2d7bdd742f49cb8079e3283a7a",
       "declarations": [
         "Becoming.Web.Holds",
         "Becoming.Web.persisting",
@@ -1228,19 +1228,25 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "role": "receipt",
+      "sha256": "aff98eb35b5a97f2ef930e7fd37561f486423c917f988e34d671c38f32297317",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1394,6 +1400,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: length_le_of_matched to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; length_le_of_matched generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：length_le_of_matched 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；length_le_of_matched 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "2 November 2026, U4e (study section 500): Web.persisting_census drops the decisions its proof does not use, of holding activity and of the continuation itself, keeping whether a formation continues or is continued; the statement is more general and the law unchanged.",
+      "zh": "2026年11月2日，U4e（研究第 500 节）：Web.persisting_census 去掉其证明不用的判定，即保持之活跃之判定与延续本身之判定，留一形成是否延续与是否被延续之判定；陈述更一般，规律不变。"
     }
   ],
   "text_versions": [

@@ -130,10 +130,12 @@ Results:
 * Covering lists. The census law under a continuation from one covering list, and its converse,
   are the root's covering laws at the formations' occurrences within activity onward
   (`not_not_arisingFrom_covered`, `ceasingFrom_not_stopping_covered`, from `«所覆后亡屡则生未否»`
-  and `«有界覆而生屡则亡不止»`). With whether a formation continues (is continued) decided, their
-  exact forms conclude recurrence (`arisingFrom_of_ceasingFrom_covered`,
-  `ceasingFrom_of_arisingFrom_covered`, from `«有覆而亡屡则生屡»` and `«有界覆而生屡则亡屡»`), and the
-  census laws under a continuation are their cases (`Census.arisingFrom_of_ceasingFrom_from`,
+  and `«有界覆而生屡则亡不止»`); from lists at arbitrarily late steps, arising does not stop
+  (`arisingFrom_not_stopping_covered`, from `«有覆而亡屡则生不止»`). With whether a formation
+  continues (is continued) decided, their exact forms conclude recurrence
+  (`arisingFrom_of_ceasingFrom_covered`, `ceasingFrom_of_arisingFrom_covered`, from
+  `«有覆而亡屡则生屡»` and `«有界覆而生屡则亡屡»`), and the census laws under a continuation are
+  their cases, each taking that one decision (`Census.arisingFrom_of_ceasingFrom_from`,
   `Census.ceasingFrom_of_arisingFrom_from`).
 * Part and whole. A lineage and its members are two levels of one unfolding. Named as a
   formation beside its members, the lineage is active at every step while its members
@@ -1165,21 +1167,27 @@ theorem not_not_arisingFrom_covered {M : Nat} {l : List F}
       | (s + 1, f), late, h, b =>
         nothing ⟨s, f, Nat.le_of_lt_succ late, continuation_arises (Nat.le_of_lt_succ late) h b⟩
 
-/-- So, with covering lists at arbitrarily late steps and no splits from some step on,
-ceasing under the continuation recurring leaves no step from which nothing arises under
-it. -/
+/-- With covering lists at arbitrarily late steps and no splits from `T` on, ceasing under the
+continuation recurring leaves no step from which nothing arises under it. No census and no
+decision is used: it is the root's `«有覆而亡屡则生不止»` at the formations' occurrences within
+activity onward from `T`. -/
 theorem arisingFrom_not_stopping_covered {T : Nat}
     (covered : ∀ N, ∃ M, ∃ l : List F, N ≤ M ∧ ∀ f, W.active M f → f ∈ l)
     (noSplit : ∀ s, T ≤ s → ∀ g f f', W.active s g → R s g f → R s g f' →
       W.active (s + 1) f → W.active (s + 1) f' → f = f')
     (ceasing : ∀ N, ∃ t g, N ≤ t ∧ W.CeasesFrom R t g) :
     ¬ ∃ N, ∀ t f, N ≤ t → ¬ W.ArisesFrom R t f :=
-  fun ⟨N, quiet⟩ => match covered (N + T) with
-  | ⟨_, _, later, covers⟩ =>
-    not_not_arisingFrom_covered covers
-      (fun s from_ => noSplit s (Nat.le_trans (Nat.le_trans (Nat.le_add_left T N) later) from_))
-      ceasing fun ⟨s, f, from_, arises⟩ =>
-        quiet s f (Nat.le_trans (Nat.le_trans (Nat.le_add_right N T) later) from_) arises
+  fun ⟨N, quiet⟩ => «有覆而亡屡则生不止» (R := continuationStep R) (E := W.activityOnward T)
+    (τ := Prod.fst) (P := fun x => W.active x.1 x.2)
+    continuation_stage continuation_back (continuation_noSplit noSplit)
+    (fun K => match covered K with
+      | ⟨M, l, later, covers⟩ => ⟨M, l.map (fun f => (M, f)), later, continuation_covers covers⟩)
+    (fun K no => no (continuation_ending ceasing K))
+    ⟨N + T, fun y late h b => match y, late, h, b with
+      | (0, _), late, _, _ => Nat.not_lt_zero _ late
+      | (t + 1, f), late, h, b =>
+        quiet t f (Nat.le_trans (Nat.le_add_right N T) (Nat.le_of_lt_succ late))
+          (continuation_arises (Nat.le_trans (Nat.le_add_left T N) (Nat.le_of_lt_succ late)) h b)⟩
 
 /-! ### The converse: arising recurring needs ceasing -/
 
@@ -1295,11 +1303,11 @@ theorem ceasingFrom_of_arisingFrom_covered [∀ t g, Decidable (W.Continued R t 
       continuation_ceases (Nat.le_trans (Nat.le_add_left T N) late) h en⟩
 
 /-- The census law under a continuation, from a step on: where from `T` on the active
-formations are listed at each step and no formation continues as two, ceasing at arbitrarily
-late steps needs arising at arbitrarily late steps. Nothing is asked of the steps before
-`T`. The listing at each step covers it (`arisingFrom_of_ceasingFrom_covered`). -/
-theorem Census.arisingFrom_of_ceasingFrom_from [∀ t f, Decidable (W.active t f)]
-    [∀ t f, Decidable (W.Continues R t f)] [∀ t g, Decidable (W.Continued R t g)]
+formations are listed at each step and no formation continues as two, with whether a formation
+continues one active before decided, ceasing at arbitrarily late steps needs arising at
+arbitrarily late steps. Nothing is asked of the steps before `T`. The listing at each step
+covers it (`arisingFrom_of_ceasingFrom_covered`). -/
+theorem Census.arisingFrom_of_ceasingFrom_from [∀ t f, Decidable (W.Continues R t f)]
     {alive : Nat → List F} {T : Nat}
     (listing : ∀ s, T ≤ s → Distinct (alive s) ∧ ∀ f, W.active s f ↔ f ∈ alive s)
     (noSplit : ∀ s, T ≤ s → ∀ g f f', W.active s g → R s g f → R s g f' →
@@ -1312,19 +1320,17 @@ theorem Census.arisingFrom_of_ceasingFrom_from [∀ t f, Decidable (W.active t f
 /-- The census law under a continuation: under a census and a continuation in which no
 formation continues as two, ceasing at arbitrarily late steps needs arising at arbitrarily
 late steps (`arising_of_ceasing`). -/
-theorem Census.arisingFrom_of_ceasingFrom [∀ t f, Decidable (W.active t f)]
-    [∀ t f, Decidable (W.Continues R t f)] [∀ t g, Decidable (W.Continued R t g)]
+theorem Census.arisingFrom_of_ceasingFrom [∀ t f, Decidable (W.Continues R t f)]
     {alive : Nat → List F} (census : W.Census alive)
     (noSplit : W.NoSplit R) (ceasing : ∀ N, ∃ t g, N ≤ t ∧ W.CeasesFrom R t g) :
     W.UnceasingFrom R :=
   arisingFrom_of_ceasingFrom_from (T := 0) (fun s _ => census s) (fun s _ => noSplit s) ceasing
 
 /-- And from a step on: where from `T` on the active formations are listed at each step, at
-most `B` of them, and no formation continues two, arising at arbitrarily late steps needs
-ceasing at arbitrarily late steps. The listings cover each step from `T`
-(`ceasingFrom_of_arisingFrom_covered`). -/
-theorem Census.ceasingFrom_of_arisingFrom_from [∀ t f, Decidable (W.active t f)]
-    [∀ t f, Decidable (W.Continues R t f)] [∀ t g, Decidable (W.Continued R t g)]
+most `B` of them, and no formation continues two, with whether a formation is continued by one
+active after decided, arising at arbitrarily late steps needs ceasing at arbitrarily late
+steps. The listings cover each step from `T` (`ceasingFrom_of_arisingFrom_covered`). -/
+theorem Census.ceasingFrom_of_arisingFrom_from [∀ t g, Decidable (W.Continued R t g)]
     {alive : Nat → List F} {T B : Nat}
     (listing : ∀ s, T ≤ s → Distinct (alive s) ∧ ∀ f, W.active s f ↔ f ∈ alive s)
     (noMerge : ∀ s, T ≤ s → ∀ g g' f, W.active s g → W.active s g' → R s g f → R s g' f →
@@ -1338,8 +1344,7 @@ theorem Census.ceasingFrom_of_arisingFrom_from [∀ t f, Decidable (W.active t f
 /-- And under a census and a continuation in which no formation continues two, with at
 most `B` formations active at each step from some step on, arising at arbitrarily late
 steps needs ceasing at arbitrarily late steps (`ceasing_of_arising`). -/
-theorem Census.ceasingFrom_of_arisingFrom [∀ t f, Decidable (W.active t f)]
-    [∀ t f, Decidable (W.Continues R t f)] [∀ t g, Decidable (W.Continued R t g)]
+theorem Census.ceasingFrom_of_arisingFrom [∀ t g, Decidable (W.Continued R t g)]
     {alive : Nat → List F} (census : W.Census alive)
     (noMerge : W.NoMerge R) {T B : Nat} (bounded : ∀ t, T ≤ t → (alive t).length ≤ B)
     (arising : W.UnceasingFrom R) : ∀ N, ∃ t g, N ≤ t ∧ W.CeasesFrom R t g :=

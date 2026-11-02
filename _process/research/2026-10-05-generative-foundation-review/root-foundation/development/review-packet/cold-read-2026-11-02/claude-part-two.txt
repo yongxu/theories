@@ -1,0 +1,134 @@
+**R1. Q1 to Q6, where changed**
+
+**Q1. Changed (sure).** It now reads:
+
+An AI-made framework, reviewed by no person: a relational grammar where persistence is continuation under a sameness class, plus a discrete, conserved "World" model. There, known results (commons, proxy problem, Price, Fisher, Hamilton, off-switch, Zhuang and Hadfield-Menell) are restated with named premises. An ethics is added conditionally on two unasserted premises. Eight theses about actual systems have mixed or missing tests. Its stated contribution is a premise ledger, a scope-and-order ethics, and one vocabulary.
+
+Changed by §5, §3 and §8: "None of the central results is new mathematics".
+
+**Q2. Changed, except claim 2.**
+
+| Claim | What changed | Passage | Mark |
+|---|---|---|---|
+| 1 | The two exclusions are mutual only in part, and the trichotomy needs a hypothesis. | "with excluded middle as a hypothesis every point lies in one of three strong forms" | sure |
+| 2 | Unchanged. | | |
+| 3 | Recurrence is "proved for every type", not on the World. The commons has named limits. | "renewal from outside, such as a sun, is not covered" | sure |
+| 4 | Weaker than the one page suggested. | "It is the proxy problem, stated more weakly than its known quantitative form." | sure |
+| 5 | "Counting form" means whole numbers. The standing is "proved for every type". | "These laws restate known results" | sure |
+| 6 | Was unsure. "Rising" and "room" are now defined, and I can follow the theorem. T3 has failed predictions. | "Zhuang and Hadfield-Menell's Theorem 1 in discrete, conserved form" | sure |
+| 7 | Standing is "Proved for every type". The text states the limit I had charged it with. | "This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined" | sure |
+| 8 | Standing is "argued". | "how far 生生, read as generation generating generation, exceeds what widening counts is open" | sure of the standing, unsure what 生生 adds |
+
+Two claims are new. To stay at eight I would merge 3, 4 and 5 as "known laws restated", since the text treats them alike.
+- **One unfolding.** "there is one unfolding, and whatever is, is how it relates within it". Standing: argued. (sure)
+- **Alignment laws.** Training installs a law only along the learner's courses, and there are exact conditions for complying when read and for holding for a reading. Proved on the World or in counts, and read as deceptive alignment and the off-switch game [AI reading]. (sure)
+
+**Q3. Changed.**
+- **Self-concern is now named, which resolves my third support.** "Self-concern also ranks one case with no C". It gives "a reason of its own, not a warrant". (sure)
+- **C is clearer.** It amounts to unanimity across positive weightings: "This is Sen's intersection approach and Pareto unanimity". Its premise is "relocated to monotonicity at each standpoint, weaker and still a premise". (sure)
+- **Further premises are now named.** "a reading of "living", a lifting from outcomes to responses, and the practical commitments J1–J4". They are for choices. (sure)
+- **Invariance now has an object.** "invariance across drawings" means going from some admissible region of the self to every one, at every standpoint. (unsure)
+
+**Q4. Changed.** Two additions replace the axiom-report and frozen-rule items, which still hold. (sure)
+- "That actual unfoldings meet the World's or the regime's premises is not shown"
+- "no duty, compliance or complete ranking of mixed comparisons is shown"
+
+**Q5. Changed.**
+1. **Theses.** The table now gives their claims. Their refuters are still at their homes, and those links do not resolve here. New: "it adds no theorem, and a refutation removes none". What a failure does to the account is still unsaid, beyond T3's rewording. (sure)
+2. **T3.** Trained systems near their reward's optimum that do not drain. This is still my inversion, but on a stated claim: "actual trained systems drain so as they near their reward's optimum". (unsure)
+3. **One unfolding.** The text gives a refuter, quoted at R3 no. 2. I doubt it can be instanced (my own reasoning). (sure of the text, unsure of my doubt)
+4. **Modelling.** One case now shows the cost of a modelling choice: "with real amounts it fails". Fit to actual systems is "not shown". The text still does not call these refutations. (unsure)
+5. **The ethics.** The text still does not let me say. "a perspectivist denies the condition consistently", and the step's "soundness is not shown". T8 is listed as a thesis, so its home should give a refuter, but this text does not. (sure)
+
+**Q6. Changed (sure).** A third item appears: "one vocabulary for conservation, selection limited by observation and the comparison of opportunity sets". The negative is also stronger: "each near-definitional or a known result restated". Some restatements are weaker than the originals. The case for novelty is narrower but easier to believe.
+
+**R2. The whole**
+
+```
+STANCE     one unfolding (argued); nonduality as method (proves nothing)
+   :  motivates only
+ROOT       condition relation + class -> continuation, lines, core
+           two grains -> generate / keep / degenerate
+   :  instance theorems; five laws restated; most not lifted; no amounts yet
+MODELS     process and type laws; World (eight independent premises)
+   |-- DRAW    renewal, joint excess, point of no return
+   |-- REACH   selection through couplings, testing, lumping, pools,
+   |           optimum drains, locks
+   |      DRAW + REACH: a loss can lie where no taker selects on it
+   |-- LIFE    embodiment, transmission, population genetics (side branch)
+   |-- ORDER   widening = what every positive weighting ranks higher (no value)
+   :  gap, by construction: the dynamics do not entail scope
+VALUE      condition -> scope; C -> calls widening better
+           self-concern -> one collapse case, reason not warrant
+   |
+DIRECTION  T8 for life; for AI also J1-J4 + a correspondence
+
+BESIDE     theses hang from laws, touch no theorem
+           alignment: premise-free part under REACH, conditional part under DIRECTION
+           classical texts: names and readings, no operations
+           Lean: logic; AI readings: change no theorem
+```
+
+The real dependence runs from DRAW and REACH to the problem, and from the VALUE premises to the direction. The laws describe what is lost but do not supply why it counts.
+
+Do I hold it as one thing? **Partly.** I can now retell it, and it has a real centre: "here the excess of §2 and the limit of §3 meet". But it has three stated joints:
+- **Root to models:** "not yet restated on the grammar".
+- **Models to the world:** "not shown".
+- **Dynamics to ethics:** premises, with significance "not lifted onto the root".
+
+What ties it together is a shared vocabulary, the ledger discipline and a line of argument labelled [AI reading]. Dropping §4 or §6 would change nothing in §7, and much of the root looks like vocabulary for the type-level and World laws (my inference, unsure). So I hold it as one organised audit, not as one deduction.
+
+**R3. Where I got lost or stopped believing** (links omitted)
+1. "Where the rule's readers are drawn from those it selects and only those it disfavours read the loss, the same reading of the loss turns the lock when it comes in time and leaves it once the selection has left those readers no more than its carriers" I lost this completely, and the next sentence as well.
+2. "A philosophical thesis stands beside them, argued: there is one unfolding, and whatever is, is how it relates within it; two configurations no relation tells apart that go on differently would refute it" If they go on differently, that difference already looks like a relation telling them apart, so the refuter may be impossible to meet.
+3. "The theory starts from zero premises and states each premise where it uses it, all gathered in one premise card." I stopped believing "zero", given a chosen reading of relation as condition, eight World premises and the statement that "The real assumptions lie in the modelling".
+4. "Read instead as lying within what a center continues with along a relation, the condition is a statement about relations: held de se (each center of itself), it holds exactly where every center's closure along that relation is the whole, and is a statement on the root, met by some nets and failed by others" I reread this. "Has significance" has become a connectivity fact, so this looks like a different proposition under the same name.
+5. "So held de se along such a line, the presupposition of one's continuation reaches what one conditions and what that conditions in turn, with no step of invariance" This may be the most interesting move in the ethics, but it reads to me as redefining the self, not as an argument. I would need the path it links to.
+
+**R4. New terms I could not understand**
+- **Used throughout, never defined:** "formation", "net", "the spine", "the one of that relation".
+- **Unexplained:** "a clearer", "a conveyor", "lifting from outcomes to responses", "whether status is invariant and equal", "the necessity of the whole".
+- **"Correspondence":** §6 defines it as a relation to passages, but in the alignment direction and T8 it seems to mean something else.
+- **Referring to things not introduced:** "Step 5", "The five shared laws", "the root's edge", "One rule of rooms, tested by a window", "the toy thermostat".
+- **Test codes:** MQ1, MQ2, CG1's C2, CG2, VD1, VD2, X1s, X1, X2, X3, LA2. Also "every frozen verdict passed, the conjecture failed for that judge".
+- **Tags:** D1, D65, P3. P2 and P4 are glossed; P3 only as "a correspondence".
+- **LPO:** used, not defined. I know it from elsewhere as the limited principle of omniscience (my own).
+- **"Significance":** formally defined now, as a proposition "with no number or valence", but what it means is still not given.
+
+Resolved from Q9: "room", "rising", "drains", "center", "line", "takers", "pure core".
+
+**R5. Do they agree?** Mostly, in fact down to the T1 and T5 details. I found these differences:
+1. **A flat contradiction.** One page: "An institution has no model yet, an organism one minimal model". Overview: "an organism and an institution have no model yet".
+2. **C.** First screen: "alone gives order". Overview: "Self-concern also ranks one case with no C", "in general C alone orders" and "needs C or a premise in its place". The first screen claims more.
+3. **Two premises.** First screen: "rests on two unasserted premises". Overview's direction needs "the condition for scope, C for order, J1–J4 and a correspondence". The one page admits further premises, but the headline understates what anything action-guiding rests on.
+4. **Selection.** One page: "reach exactly what couples into it". Overview states only the invisible half. It also has "with no premise" one sentence before "its force lies in the premise".
+5. **T3.** One page: "conjectured". Overview's table: "partly supported; CG1's C2 and CG2's two predicted keeps failed". Overview §10 lists "T3 on trained systems" as still to run. I cannot square the last two.
+6. **Ledger.** One page: "each shown holding in one model and failing in another". Overview: "The models' conditional laws are not yet each given a net where the condition fails". These may differ in subject, but they read close to conflict. The one page's "do not yet" is also stronger than "not yet each".
+7. **Corpus.** One page: conditional laws "each have a net". Overview: that holds for 128 of 219 statements, while "the rest turn on a valuation, define, or are not expressible".
+8. **Evaluation.** Openings: how evaluation "take[s] shape" or "comes to be". §7: "the one evaluative parameter supplied". §10: "significance's central laws are not derived from it". The openings claim more than the body delivers.
+9. **Tests.** One page: "their tests were frozen before scoring", said of eight theses. Overview lists no test for T6 or T8. Only the overview says T5's test was "on role-played judgments".
+10. **The condition's wording.** The first screen omits "from every standpoint". The overview also adds "the ethics does not wait on one", which the shorter texts do not say.
+
+**R6. What I would change**
+1. **Say first:** move "None of the central results is new mathematics... What survives is the premise ledger..." from §8 to directly under the title, before the label table. Add a one-line map from results here to their known names, which are now scattered across §§3, 5 and 7.
+2. **Replace the line of the argument** with a small dependency picture showing the three joints. "Lifting" and "Fit to actual systems" now appear only in §10, so the reader sees the gaps last.
+3. **Gather the fishery into one early paragraph.** "A fished stock runs through §§2, 3, 5 and 7" is the most graspable thing in the text, and it is split into pieces.
+4. **Move to the chapters** the material the line does not use: "Every class has a core", the "keeping pace" law, the rest and LPO sentence, and the reader-capture sentences in §2.
+5. **Move §6 after §9.** It interrupts the laws-to-ethics join, and by its own account touches no operations. Its "strongest test" also sits badly with agreement that "confirms nothing" and divergence that "does not make it wrong".
+
+**R7. Would I read on now?**
+**Yes, narrowly.** This text changed my answer to Q10 by narrowing it. It answered several of my questions:
+- The optimisation theorem is a known result restated.
+- T8 and C do not rank mixed cases.
+- Much of the alignment part restates known results.
+
+I would no longer read it for new results, or read the chapters in order. I would read it as a premise audit and for one argument. Next I would want:
+- 07 "the step" and §4.6: the argument for going past self-concern, and whether P2 and P4 can hold.
+- 07 "practical judgment" and "the direction": J1–J4, since all the action-guiding force seems to live there.
+- T3's and T4's homes: the test records, what "the scope can be installed" means, and how a failure is scored.
+- One central law compared side by side in prose and Lean, to check that the wording matches the statement.
+- A review by a person, which matters more to me now than before.
+
+**R8. In two sentences**
+
+It might matter because it puts commons collapse, proxy failure, optimizers draining what they cannot see, off-switch incentives and Pareto unanimity into one machine-checked vocabulary with every premise listed, and it keeps what the dynamics show strictly apart from the value premises an ethics must add, which could make it a useful audit tool for alignment arguments. It might not matter because, by its own account, it has no new mathematics, no human review and no shown fit to real systems, several of its predictions failed, and its ethics rests on premises it declines to assert and goes silent on mixed cases, so what it adds may be only a tidy vocabulary.
