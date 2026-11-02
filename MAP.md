@@ -16,10 +16,12 @@ The work is not licensed: [knowledge is a common good](COMMONS.md).
 
 The theory is written in four layers, each of which can be read through on its own:
 
-1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): what the theory is, what it claims, where the evidence is and what is not yet done.
-2. [The Theory of Becoming](theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)): the overview, the whole argument in one account, each paragraph linking to the chapter that states it.
+1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two premises, the open question, the evidence and what is not yet done.
+2. [The Theory of Becoming](theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)): the overview, the whole argument in one account, with one case start to finish, each paragraph linking to the chapter that states it.
 3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
 4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (every concept, result, Lean module and text, with how they connect), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
+
+Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-five to thirty minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md).
 
 Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, and a blind re-coding of a sample of the corpus classification.
 
