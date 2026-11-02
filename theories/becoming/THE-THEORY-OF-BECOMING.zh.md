@@ -8,7 +8,7 @@
 
 ## 怎样读本文
 
-本总览按八章的顺序，把本理论的主张作为一个论证说出来，供不读 Lean 的读者使用。它借助 AI 做成，Lean 之证明也在内；证明由机器检验，其余一切只经过 AI 的复审，迄今无人审查。这个论证并不是把一切都从根推出：[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge) 所取的核心声明中，少数是根的情形，较多在证明中用到根之律，多数不用（§10）。它只作概述：每一项结果都只陈述一次，连同其假设、Lean 名称与记录，在[各章](chapters/01-ROOT.md)中它的所属一节，下文的链接通到那里；这里没有一句比它的所属一节更强。为带着某个问题或领域而来的读者所设的页面挂在这条路径上，不增加任何结果：[一个论证，从头到尾](ONE-ARGUMENT.md)（英文），把一条线从它的假设，经定理和可能使它不成立的检验，带到一个混合情形（约二十五到三十五分钟）；[自由能原理](FREE-ENERGY-PRINCIPLE.md)、[一个集体的进程](COLLECTIVE-DIRECTION.md)、[诸科学](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md)与[各份审查材料](review/README.zh.md)。
+本总览按八章的顺序，把本理论的主张作为一个论证说出来，供不读 Lean 的读者使用。它借助 AI 做成，Lean 之证明也在内；证明由机器检验，其余一切只经过 AI 的复审，迄今无人审查。这个论证并不是把一切都从根推出：[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge) 所取的核心声明中，少数是根的情形，较多在证明中用到根之律，多数不用（§10）。它只作概述：每一项结果都只陈述一次，连同其假设、Lean 名称与记录，在[各章](chapters/01-ROOT.md)中它的所属一节；这里没有一句比它的所属一节更强。为带着某个问题或领域而来的读者所设的页面挂在这条路径上，不增加任何结果：[一个论证，从头到尾](ONE-ARGUMENT.md)（英文），把一条线从它的假设，经定理和可能使它不成立的检验，带到一个混合情形（约二十五到三十五分钟）；[自由能原理](FREE-ENERGY-PRINCIPLE.md)、[一个集体的进程](COLLECTIVE-DIRECTION.md)、[诸科学](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md)与[各份审查材料](review/README.zh.md)。
 
 ## 一个情形，从头到尾
 
