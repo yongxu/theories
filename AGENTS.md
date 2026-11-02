@@ -1,6 +1,6 @@
 # Working in the theory repository
 
-[Earlier versions](_process/history/2026-11-03-instructions/AGENTS-before-review.md). [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) and [the work board](_process/BECOMING-WORKBOARD.md) say how and where things stand. Start from [the one page](theories/becoming/ONE-PAGE.md), the home section of what you touch and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Each rule here serves the account and those who use it; where one stops serving, say so and change it by argument, keeping a before-copy. Three do not bend to the situation: proof claims are checked, nothing unrecoverable is deleted, and what is Ren's stays his.
+[Earlier versions](_process/history/2026-11-03-instructions/AGENTS-before-review.md). [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) and [the work board](_process/BECOMING-WORKBOARD.md) say how and where things stand. Start from [the one page](theories/becoming/ONE-PAGE.md), the home section of what you touch and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Each rule here serves the account and those who use it; where one stops serving, say so and change it by argument, keeping a before-copy. Three do not bend to the situation: proof claims are checked, nothing the repository cannot regenerate is deleted, and what is Ren's stays his.
 
 ## What the work is for
 
