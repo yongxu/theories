@@ -8,7 +8,7 @@
 
 ## What the theory is
 
-An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life, knowing and evaluation take shape inside it, without first assuming that becoming is good. Its root is a small relational grammar, standard relation algebra, whose terms are named and read from classical Chinese texts: one relation read as condition (缘), one class read as sameness (类), and continuation (续) as their meet. The names come from the texts; the operations do not, and the classical-texts and logic dossiers say how much of each reading is the texts' and how much the theory's. [The one page](../ONE-PAGE.md) says the whole in a page; [the overview](../THE-THEORY-OF-BECOMING.md) gives the argument with every result linked to its chapter.
+An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life, knowing and standards take shape inside it, without first assuming that becoming is good. Its root is a small relational grammar, standard relation algebra, whose terms are named and read from classical Chinese texts: one relation read as condition (缘), one class read as sameness (类), and continuation (续) as their meet. The names come from the texts; the operations do not, and the classical-texts and logic dossiers say how much of each reading is the texts' and how much the theory's. [The one page](../ONE-PAGE.md) says the whole in a page; [the overview](../THE-THEORY-OF-BECOMING.md) gives the argument with every result linked to its chapter.
 
 ## What is asked
 
