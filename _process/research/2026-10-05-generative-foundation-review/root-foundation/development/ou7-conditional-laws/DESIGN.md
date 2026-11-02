@@ -621,3 +621,12 @@ Each is listed in [groups.tsv](data/groups.tsv). The kit's earlier output is in 
 - [tree/Becoming/GrammarConditionalsChecks.lean](tree/Becoming/GrammarConditionalsChecks.lean): the checks, which stay in scratch.
 - [tree/BUILD.json](tree/BUILD.json): the build of the patched modules with both scratch modules.
 - [review/](review/): the independent review's report and its scratch Lean.
+
+## Corrections of 3 November 2026
+
+Independent readers of the classical and Buddhist dossiers found three sentences that said more than the study shows. The chapter, the table's row and the record were corrected on the dossiers' re-sync; the text above stays as designed.
+
+- **ZL-17-051.** "A result with no deed among its conditions abides under no class" is not what `«无缘不住而他有后之例»` states: its result has no condition at all, and a result with another condition can abide. The witness shows only that such a line need not be 常 or 斷.
+- **JS-318.** "Denies the premise JS-326's reading uses" reads as undermining JS-326, whose premise is about 涅槃. JS-318 is about the 染法: if 無明 is among them, 無明 never 相應 with 如來藏, so JS-326's reading cannot be carried over to JS-324.
+- **The 219.** Only the 128 units in families are written as laws; the chapter's opening and home section had said it of all 219, where the record's statement already said 128.
+- **LZ-30-008, left as it stands.** Rule 1 says a structural reading against the commentary is noted, not placed. This unit is placed, with 王弼's 暴 not read, and under his note it looks not expressible like LZ-23-002, which that note cites. No count was changed: the classical dossier's C-39 now says so and asks the reader.
