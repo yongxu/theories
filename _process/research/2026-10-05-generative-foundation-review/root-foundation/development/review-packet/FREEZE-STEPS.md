@@ -1,6 +1,6 @@
 # The freeze: steps for its owner
 
-*AI-written, 2 November 2026, from a rehearsal on a scratch copy of main at `2cab11114`. An independent AI reader read a draft and its findings were taken; no person has reviewed it. About twenty minutes to read. Each step says whether it was run. [What was run](#how-long-it-takes) ends in a release build of a scratch commit; no frozen commit exists yet.*
+*AI-written, 2 November 2026, from a rehearsal on a scratch copy of main at `2cab11114`. An independent AI reader read a draft and its findings were taken; no person has reviewed it. Twenty to twenty-five minutes to read. Each step says whether it was run. [What was run](#how-long-it-takes) ends in a release build of a scratch commit; no frozen commit exists yet.*
 
 The release gate's [item 7](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) asks for one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions. The commands take under an hour. The re-sync is the work.
 
@@ -22,7 +22,7 @@ Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what i
 ## Before starting
 
 1. The way now's items 1 to 4 have landed. Each changes what readers are told, so a re-sync before them is done twice.
-2. Ren has decided the two things that would change the frozen commit; [the board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation for each. [`COMMONS.md`](../../../../../../COMMONS.md) says the work is not licensed; a change to that goes in before the freeze. And whether the sciences dossier joins the packet ([`SCIENCES.md`](../ue8-sciences-dossier/SCIENCES.md)): if it does, it moves into the review folder, it is re-synced with the others, and the cover's table, the builder's `PARTS`, the codebook's count of the dossiers, step 9's second path, the measure's lists and this page's table of what each reader is sent all change.
+2. Ren has decided what would change the frozen commit; [the board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation for each. [`COMMONS.md`](../../../../../../COMMONS.md) says the work is not licensed; a change to that goes in before the freeze. Whether one person tries the codebook first: a fix that shows comes before the freeze. And whether the sciences dossier joins the packet ([`SCIENCES.md`](../ue8-sciences-dossier/SCIENCES.md)): if it does, in this edition or a later one, it moves into the review folder, it is re-synced with the others, and the cover's table, the builder's `PARTS`, the codebook's count of the dossiers, step 9's second path, the measure's lists and this page's table of what each reader is sent all change.
 3. The coordinator has given the slot. As set on 2 November: logic is re-synced by RP's owner, alignment by AJ4's, the sciences dossier, if it joins, by UE8's; classical, Buddhist, the cover and what has moved under philosophy since its pin by the holder of this page. An owner no longer active hands over: check, then take it.
 
 ## The steps
@@ -108,12 +108,12 @@ It refuses a dirty tree, a failing dossier check and an earlier release of anoth
 
 [The board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation and its reason for each of these.
 
-Ren's, before D: `COMMONS.md`, if it is to change, and whether the sciences dossier joins.
+Ren's, before D: `COMMONS.md`, if it is to change; whether the sciences dossier joins; and whether one person tries the codebook first. The codebook says that its five to eight hours have not been tried by anyone, and asks coders to time twenty units. A trial takes twenty units outside the sample, on a small sheet made from the corpus, since [the codebook](../../../../../../theories/becoming/review/recoding/CODEBOOK.md) says its rules avoided the sample's units and a rule changed after trying them would make that false.
 
 Ren's, after D and before anything is sent:
 
 - **The covering letter.** The packet relies on it. [An AI draft](COVERING-LETTER-DRAFT.md) exists for his decision, one form for a reader and one for a coder, with [what the packet promises of it](COVERING-LETTER-DRAFT.md#what-the-letter-has-to-carry). Who signs it, its date and its terms are his, and nothing has been sent.
-- **The recipients,** and whether one person tries the codebook first. It says that its five to eight hours have not been tried by anyone, and asks coders to time their first twenty units.
+- **The recipients.** 146 of the 237 sampled units are from Buddhist texts, so a coder has to read those as well.
 - **The push.** The remote's main, as last fetched, is at `74e2c9a69` (31 October), behind main by what `git rev-list --count origin/main..main` gives. An older review folder and `recoding-key.tsv` are already on it, so a coder's blindness rests on being asked not to look, as the codebook asks, and on not being sent a link. A letter must not name a tag the remote lacks.
 
 What each reader is sent, from `output/pdf/review-packet/`:
