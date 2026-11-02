@@ -27,7 +27,7 @@ The first two rounds read more strongly for P4 than they support [AI reading].
 
 - Nothing in the Lean marks an intended or a foreseen effect. Those readings are the AI's.
 - No sentence of §4.7 claims a law beyond §4.6's. Item 6's application is labelled as argument. A law for it would be a new item, not this one.
-- Scheffler (2013), Parfit (1984) and Williams's "Persons, Character and Morality" (1976) are in the dossier's checked references. Williams's "Moral Luck" (1976) and Rawls (1971) are from the reader's and the author's knowledge, and each is to be checked against the publication's record before the dossier relies on it.
+- Scheffler (2013), Parfit (1984) and Williams's "Persons, Character and Morality" (1976) are in the dossier's checked references. Rawls (1971) was added there on 2 November 2026, checked against scholarly citations of the work, not its text. Williams's "Moral Luck" (*Aristotelian Society Supplementary Volume* 50, 1976, 115–135, in a symposium with Nagel) is cited in 07 §4.7 only; its record was checked by secondary bibliographic entries, which differ on the range (115–152 for the whole symposium), not at the publisher.
 
 ## Review
 

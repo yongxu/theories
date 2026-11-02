@@ -591,6 +591,7 @@ The works cited above, each checked on 24 October 2026 against the publication's
 - John Perry (1979). The problem of the essential indexical. *Noûs* 13(1), 3–21.
 - Douglas W. Portmore (2011). *Commonsense Consequentialism: Wherein Morality Meets Rationality*. New York: Oxford University Press.
 - A. N. Prior (1960). The autonomy of ethics. *Australasian Journal of Philosophy* 38(3), 199–206.
+- John Rawls (1971). *A Theory of Justice*. Cambridge, MA: Harvard University Press. (§5, on classical utilitarianism and the distinction between persons. Checked on 2 November 2026 against scholarly citations of the work, not its text, for P-20's question 11.)
 - Joseph Raz (2005). The myth of instrumental rationality. *Journal of Ethics and Social Philosophy* 1(1).
 - Greg Restall and Gillian Russell (2010). Barriers to implication. In Charles R. Pigden (ed.), *Hume on Is and Ought*, Basingstoke: Palgrave Macmillan, 243–259.
 - T. M. Scanlon (1998). *What We Owe to Each Other*. Cambridge, MA: Harvard University Press.
