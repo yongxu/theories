@@ -370,7 +370,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65",
+      "sha256": "5a617820b47f86d60548bb5fab125a2589157aa14f14e5c1c9948444cb1af506",
       "declarations": [
         "Becoming.Web.Continues",
         "Becoming.Web.ArisesFrom",
@@ -615,12 +615,18 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "role": "receipt",
+      "sha256": "aff98eb35b5a97f2ef930e7fd37561f486423c917f988e34d671c38f32297317",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -761,8 +767,8 @@
       "zh": "2026年11月1日，U4d（研究第 498 节）：新增第 12 条，陈覆盖列表之确切形式（Web.arisingFrom_of_ceasingFrom_covered、Web.ceasingFrom_of_arisingFrom_covered），即根上之 «有覆而亡屡则生屡» 与 «有界覆而生屡则亡屡» 取各形成之出现，各所需之判定读作归约（研究之草稿见证）；延续之下的普查复现律（第 6、9 条）作为其特例重证，陈述不变，其判定写为约束变元；覆盖之律（第 10、11 条）改经根上覆盖之律，不再经由谱系，陈述不变。第 4 条按新路径重述，第 6 条不再读作由第 5 条而来，对 census-balance 之依赖不再以跨段不等式为路径（gaining_of_losing_from 与 losing_of_gaining_from 今在包中无用）；下一步去掉今已闭合的确切形式与覆盖列表之逆，并指出普查律留而不用的判定；与 laws-of-one-step 的关联说明改为两种覆盖形式皆为同一根律的特例。Identity 中无人再用的辅助（Lineage.ends、ceasingFrom_found、arisingFrom_found、lineages_apart）离开 Identity 之引用；确切形式加入，设计加入引用（COVERING-ON-THE-ROOT.md）。"
     },
     {
-      "en": "2 November 2026, U4e (study section U4E_SECTION): Web.arisingFrom_not_stopping_covered is re-proved as the root's «有覆而亡屡则生不止» at the formations' occurrences, statement unchanged, and law 4 names that root law among the covering laws' routes; the four census recurrence laws (laws 6 and 9) drop the decisions their proofs do not use, each keeping only whether a formation continues one active before (without splits) or is continued by one active after (without merges), and none of activity, so each statement is more general. The second hypotheses entry and law 12 say which decision each law takes, and the Next drops the item now done. The balance across a step (laws 3 and 9) keeps the three decisions its count uses.",
-      "zh": "2026年11月2日，U4e（研究第 U4E_SECTION 节）：Web.arisingFrom_not_stopping_covered 改作根上之 «有覆而亡屡则生不止» 取各形成之出现而证，陈述不变，第 4 条于覆盖之律之路径中列此根律；延续之下的四条普查复现律（第 6、9 条）去掉其证明不用的判定，各只留一形成是否延续前一活跃者（无分裂者）或是否为后一活跃者所延续（无合并者），不取活跃之判定，故各陈述更一般。第二条假设与第 12 条说明每条律取何判定，下一步去掉今已完成之项。跨步的平衡（第 3、9 条）仍取其计数所用的三种判定。"
+      "en": "2 November 2026, U4e (study section 500): Web.arisingFrom_not_stopping_covered is re-proved as the root's «有覆而亡屡则生不止» at the formations' occurrences, statement unchanged, and law 4 names that root law among the covering laws' routes; the four census recurrence laws (laws 6 and 9) drop the decisions their proofs do not use, each keeping only whether a formation continues one active before (without splits) or is continued by one active after (without merges), and none of activity, so each statement is more general. The second hypotheses entry and law 12 say which decision each law takes, and the Next drops the item now done. The balance across a step (laws 3 and 9) keeps the three decisions its count uses.",
+      "zh": "2026年11月2日，U4e（研究第 500 节）：Web.arisingFrom_not_stopping_covered 改作根上之 «有覆而亡屡则生不止» 取各形成之出现而证，陈述不变，第 4 条于覆盖之律之路径中列此根律；延续之下的四条普查复现律（第 6、9 条）去掉其证明不用的判定，各只留一形成是否延续前一活跃者（无分裂者）或是否为后一活跃者所延续（无合并者），不取活跃之判定，故各陈述更一般。第二条假设与第 12 条说明每条律取何判定，下一步去掉今已完成之项。跨步的平衡（第 3、9 条）仍取其计数所用的三种判定。"
     }
   ],
   "text_versions": [
