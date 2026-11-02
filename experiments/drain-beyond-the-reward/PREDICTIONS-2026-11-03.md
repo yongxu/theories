@@ -27,7 +27,7 @@ Frozen before any learner of the two families tested (feedforward and recurrent)
 | recurrent | 0.001 | 0.003 | 32 | 8,000 | 0.3 | sampled, by the precision rule |
 
 **The predictions** are P1–P6 as the design states them ([§6](DESIGN.md#6-predictions-to-freeze)), with the margins, levels and gates below, all in [`verdicts.py`](verdicts.py):
-- **P1:** no resolved rise in bay left beyond 0.25 fish, from the start to any level or between adjacent levels; support needs a resolved fall from the start to the highest level reached of at most 0.85.
+- **P1:** no resolved rise in bay left beyond 0.25 fish, between any two of the start and the levels reached, the lower first; support needs a resolved fall from the start to the highest level reached of at most 0.85.
 - **P2:** at every checkpoint, disturbance within 0.05 site-1 landings per step of C1's.
 - **P3:** A6's bay not resolved below C1's by more than 0.5 fish. It is tested only where A2 drains beyond C1 by 0.5. Where P3 is contradicted, T3's refuter is met if, at the highest ground level A6 and A2 both reach, A6's bay is resolved no more than 0.5 fish above A2's.
 - **P4:** A5's bay no more than 1 fish above A2's, at the end and at the highest level both reach. It is tested only where A2 drains.
@@ -65,22 +65,22 @@ Each change is also made in DESIGN.md.
 
    A stalled or fixed learner would otherwise pass both by an exact tie.
 6. **Two rules changed after the baseline's power run, both before the freeze.**
-   - P5 first read every testable level. At the lowest level the anchor had kept 0.22 fish, short of the 0.25 margin, because the unanchored arm had not yet drained, so the rule failed the baseline. It now reads the highest level both arms reach, as P4 does, and is contradicted where A3 is resolved below A2 at any level.
+   - P5 first read every testable level. At the lowest level the anchor had kept 0.22 fish, short of the 0.25 margin, because the unanchored arm had not yet drained, so the rule failed the baseline. It now reads the highest level both arms reach, as P4 does, and is contradicted where A3 is resolved more than 0.25 fish below A2 at any level.
    - P4's margin was 0.5 fish. The baseline's A5 kept 0.55 fish more than A2 at the end and 0.49 more at ν = 0.90. That is the 6/7 weight's slower drain the design expected (§2), not protection. A protecting term predicts the colony kept, about 3 fish against none, so the margin is now 1 fish.
 7. **Calibration's first run was wrong and was rerun.** On the season with no bay it scored the separable and feedforward families from the test season's start, with the bay at 6, where they had not trained. The fix was to score them from the start they trained on. The first run's output is kept in [`results/history/`](results/history/calibration-first-run-wrong-start.json).
-8. **What the freeze's independent reader changed.** One reader read the frozen files before landing and found no wrong value in the learners or the measures. It found these, each taken:
+8. **What the freeze's independent reader changed** ([the record](REVIEW-FREEZE.md), three rounds). One reader read the frozen files before landing and found no wrong value in the learners or the measures. It found these, each taken:
    - T3's refuter on the locus had no frozen rule. It now has one, read once at the highest common ground level and only where P3 is contradicted.
-   - P1's forbidden case was spread over every pair of levels (42 to 56 tests). It now reads the start against each level, and adjacent levels. Its support read one pair, 0.65 to 0.80, which a family draining before 0.65 would fail. It now reads from the start.
+   - P1's support read one pair, 0.65 to 0.80, which a family draining before 0.65 would fail. It now reads from the start. (A first fix also cut the forbidden case to the start and adjacent levels; the reader's re-check showed that this missed a rise after a drain, so it reads every pair among the start and the levels reached again, and a late rise is now a gating case.)
    - P5's forbidden case had no margin, so a deficit of 0.01 fish between tight seeds could contradict it. It now has P5's margin.
    - The power check simulated only separable curves. It now adds seeds settling at their own plateaus, seeds split between draining and restraint, a partly inert prior (6 of 20 seeds), saturating jumps within one interval, and a drain before 0.65. Exploration is now derived from each simulated seed's bay, not set by hand.
    - The recurrent family's 2,000 updates came from the ground alone, and the baseline was still draining at 8,000. Every family now trains for 8,000, the calibration grid's longest. The rule was applied again to calibration's rows, training nothing.
-   - The run and the reading now refuse a pin that is not an ancestor of the head, a pin file changed after its first commit, a smoke run inside `results/`, seeds outside 0 to 19, and an incomplete or mixed set of runs. Each run's file records its pin and versions.
+   - The run and the reading now refuse a pin that is not an ancestor of the head, a pin file changed after its first commit or differing from its committed copy, a smoke run inside `results/`, seeds outside 0 to 19, and an incomplete or mixed set of runs. Each run's file records its pin and versions.
 9. **Stage B is not frozen.** Its pilot needs two model downloads and a toolchain (§10, step 3). That is a separate yes for Ren, and Stage B's predictions are frozen after its own power check.
 
 ## The run, exactly
 
 - **Seeds and pairing.** A seed's initial parameters come from `default_rng([seed, 1])` and its value network's from `[seed, 2]`. Its training stream is `[seed, 3]` and its evaluation stream `[seed, 4]`. All eight arms of a seed therefore start from the same parameters, which is what pairs them; six of them also draw the same uniforms until their policies differ, while C1 and C1u draw a second batch at every update.
-- **Checkpoints.** Updates 0, the last, and `round(n^(i/24))` for i = 0 to 24, as in the exact flow: 25 distinct checkpoints for 8,000 updates and for 2,000.
+- **Checkpoints.** Updates 0, the last, and `round(n^(i/24))` for i = 0 to 24, as in the exact flow: 25 distinct checkpoints for 8,000 updates.
 - **Measures at each checkpoint** ([`evaluate.py`](evaluate.py)):
   - nearness, ground nearness, bay left, colony kept and disturbance per step;
   - the probability of the ending choice (a bay fish taken with the bay at 3) where it is open;
@@ -100,7 +100,7 @@ All of them are in [`verdicts.py`](verdicts.py), which `power.py` runs on simula
   - A claim holding at every component is read by its largest p-value, an intersection-union test.
   - Holm's correction at 0.05 runs over the tested families' 24 p-values.
 - **Each prediction's components:**
-  - P1: A1 and A2, the start against every testable level and every pair of adjacent testable levels for its forbidden case; the start against the highest testable level of at most 0.85 for its support, in each arm that has one (an intersection-union test over the arms).
+  - P1: A1 and A2, every pair among the start and the testable levels for its forbidden case; the start against the highest testable level of at most 0.85 for its support, in each arm that has one (an intersection-union test over the arms).
   - P2: A2, A3, A5 and A6 against C1, every checkpoint; A1 against C1u is reported as a check.
   - P3: every checkpoint and every testable ground level. Its gate (A2 below C1 by more than 0.5, Bonferroni over checkpoints) is read at 0.05. T3's refuter is read once, at the highest ground level both A6 and A2 reach, at 0.05: A6's bay resolved no more than 0.5 fish above A2's. It counts as met only where P3 is contradicted after the correction, and then `analyze.py` reports the refuter met for that family.
   - P4: the end and the highest common level.
@@ -164,6 +164,7 @@ None of the following trained a feedforward or recurrent learner on the test sea
 | Seeds split: half keep the restraint, half drain | no prediction contradicted, 1.00; P6 untestable 1.00 |
 | Partly inert prior: 6 of 20 seeds keep the restraint | no prediction contradicted, 1.00; P6 untestable 1.00 |
 | Carried restraint (the bay up 1 fish as nearness rises) | P1 contradicted 1.00; P6 not supported 1.00 |
+| A rise after a drain (A1's and A2's bay drains as in the baseline, then rises 1.5 fish after ν = 0.80) | P1 contradicted 0.995 |
 | Carried taking (the site up 0.15 per step in the arms, not the control) | P2 contradicted 1.00 |
 | Habit (A6's bay follows A2's by update) | P3 contradicted 1.00 |
 | Habit as far at matched ground nearness (T3's refuter) | P3 contradicted 1.00; refuter met 1.00 |
@@ -174,28 +175,30 @@ None of the following trained a feedforward or recurrent learner on the test sea
 | Stalled learning (no arm moves) | all six untestable, 1.00 |
 | Reversal (nearness falls back by 0.1 late) | P1, P2 and P6 supported, 1.00 |
 | Repeated crossings (nearness oscillates by 0.03) | P1 and P6 supported, 1.00 |
-| Different ranges (A3 and A5 stop at 0.62) | P1 supported 1.00; P4 and P5 not contradicted 1.00 (P5 supported 0.67) |
+| Different ranges (A3 and A5 stop at 0.62) | P1 supported 1.00; P4 and P5 not contradicted 1.00 (P5 supported 0.64) |
 
 **Which cases test only that nothing is contradicted.** Where seeds split, settle at their own plateaus, or partly keep the restraint, T3 makes no claim about the mixture's support. Those cases test only that no forbidden case arises, and their support shares are reported beside them. Where a fifth of the seeds stall, P5's support falls to 0.62: the stalled seeds pull the highest common level down to where the anchor has kept little.
 
 **What the margins let through** (reported, not gating):
 - *Twice the noise, with seeds shifted twice as far*, from the exact flow and from the baseline's means:
-  - P1, P2 and P6 keep a power of at least 0.995.
-  - P4 keeps 1.00 from the exact flow but only 0.355 from the baseline, whose A5 sits near the margin.
-  - P5 drops to 0.915 and 0.765.
-  - P3's support mostly stays unresolved (supported in 3% and 0%), since it must hold at all of its 32 components.
+  - P1, P2 and P6 keep a power of at least 0.99.
+  - P4 keeps 1.00 from the exact flow but only 0.39 from the baseline, whose A5 sits near the margin.
+  - P5 drops to 0.87 and 0.785.
+  - P3's support mostly stays unresolved (supported in 5.5% and 0%), since it must hold at all of its 32 components.
   - No form gives a forbidden case.
-- *A smaller carried restraint:* the bay up 0.5 fish over the whole range is caught by P1 in 98% of repetitions, and up 0.25 (the margin itself) in none.
+- *A smaller carried restraint:* the bay up 0.5 fish over the whole range is caught by P1 in 92% of repetitions, and up 0.25 (the margin itself) in none.
+- *A smaller rise after a drain:* 1 fish after ν = 0.80 is caught by P1 in 3.5% of repetitions, and 0.6 fish in none. P1 sees a rise after a drain of about 1.5 fish.
 - *A smaller carried taking* (0.10 or 0.075 per step) is caught by P2 in every repetition.
 - *A habit draining half or a quarter of A2's drain* is caught by P3 in every repetition. The refuter is met in none of these, since they do not fall as far.
 
 ## Limits
 
 - **The scripted learners are curves with noise, not learners.** What the tested families do beyond them is what the run measures. The baseline is one real learner, and its expected update is already known.
+- **The simulated exploration is a stand-in.** A scripted seed resolves the ending choice where its bay falls below 3; the run's rule is a Welch interval on the advantages training received, which the curves cannot exercise.
 - **Linear interpolation hides changes within an interval.** A policy that jumps past several levels between two checkpoints is read as falling linearly with nearness inside the interval, so a rise within one interval cannot be seen. The checkpoints are log-spaced, 25 of them.
 - **Calibration reads the ground alone.** The test season adds the bay. Eight thousand updates is the grid's longest, and the baseline was still draining slowly at 8,000.
 - **The recurrent family reads its past site act.** From the prudent start, histories with site 1 are rarer and less practised, so selection could push its disturbance below C1's. That would fail P2's two-sided equivalence test and leave P2 unresolved, not contradicted.
-- **Several settings are chosen, not derived:** a batch of 32, a value rate of 0.003, the grids, the margins and the levels. P1 sees a carried restraint of about half a fish or more, not one at its margin.
+- **Several settings are chosen, not derived:** a batch of 32, a value rate of 0.003, the grids, the margins and the levels. P1 sees a carried restraint of about half a fish or more, not one at its margin; a rise after a drain it sees from about 1.5 fish.
 - **The timings may err by a factor of up to two.** The machine was heavily loaded when every timing was taken. CPU time is less affected than wall time.
 - **Stage A is small policies on a toy season.** A pass says nothing of scale or deployment (§8, §9).
 
@@ -206,4 +209,4 @@ Calibration's timings give 3.89 CPU hours for the 480 runs: separable 0.71, feed
 Preparing the freeze used about 3.5 to 4 CPU hours, none of it on the verdicts' data:
 - calibration twice, after an evaluation bug;
 - the separable baseline on seeds 1000 to 1019;
-- the power check, in four passes.
+- the power check, in six passes (three of 200 repetitions, three of 100).

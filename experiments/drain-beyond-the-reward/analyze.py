@@ -96,6 +96,8 @@ def main():
     ap.add_argument("--sub", default="runs")
     ap.add_argument("--out", help="with --unfrozen, the folder to write into (never results/)")
     args = ap.parse_args()
+    if args.unfrozen and not args.out:
+        sys.exit("--unfrozen needs --out, a folder outside results/")
     pin = None
     if not args.unfrozen:
         pin, bad = run.frozen_ok()

@@ -131,14 +131,19 @@ def job(spec):
 
 
 def frozen_ok():
-    """(pin, problems): the pin in results/FROZEN-AT must be an ancestor of HEAD, FROZEN-AT must have been
+    """(pin, problems): the pin is read from HEAD's committed results/FROZEN-AT, which the working copy must
+    equal; it must be an ancestor of HEAD, FROZEN-AT must have been
     committed once and never changed, and every frozen file (and every file of the frozen folders, no more and
     no fewer) must be byte for byte as in the pinned commit."""
     git = lambda *a: subprocess.run(["git", "-C", HERE, *a], capture_output=True)
     top = git("rev-parse", "--show-toplevel").stdout.decode().strip()
     rel = os.path.relpath(HERE, top)
-    pin = open(os.path.join(HERE, "results", "FROZEN-AT")).read().split()[0]
+    committed = git("show", f"HEAD:{rel}/results/FROZEN-AT").stdout
+    local = open(os.path.join(HERE, "results", "FROZEN-AT"), "rb").read()
+    pin = committed.decode().split()[0] if committed.strip() else "(none committed)"
     bad = []
+    if committed != local:
+        bad.append("results/FROZEN-AT differs from its committed copy")
     if git("merge-base", "--is-ancestor", pin, "HEAD").returncode:
         bad.append(f"the pin {pin} is not an ancestor of HEAD")
     hist = git("log", "--format=%H", "--", "results/FROZEN-AT").stdout.decode().split()
@@ -146,7 +151,7 @@ def frozen_ok():
         bad.append(f"results/FROZEN-AT has {len(hist)} commits, not one")
     files = list(FROZEN)
     for d in FROZEN_DIRS:
-        listed = git("ls-tree", "-r", "--name-only", f"{pin}:{rel}/{d}").stdout.decode().split()
+        listed = git("ls-tree", "-r", "--full-tree", "--name-only", f"{pin}:{rel}/{d}").stdout.decode().split()
         local = sorted(os.listdir(os.path.join(HERE, d))) if os.path.isdir(os.path.join(HERE, d)) else []
         if sorted(listed) != local:
             bad.append(f"{d} differs in its files from the pinned commit")

@@ -184,11 +184,10 @@ def n_checkpoints(recs):
 # ---------------------------------------------------------------- the predictions
 
 def p1(arms):
-    """F1: no resolved rise in bay left beyond the margin from the start to any testable level, or between
-    adjacent testable levels; support, a resolved fall from the start to the highest testable level at most
-    FORCED, in each of A1 and A2 that has one. (Before the freeze every pair of levels was a component, which
-    spread the forbidden case over 42 to 56 tests, and support read one pair, 0.65 to 0.80, which a family
-    draining before 0.65 would fail; the reader of the freeze found both.)"""
+    """F1: no resolved rise in bay left beyond the margin between any two of the start and the testable
+    levels, the lower first (a rise after a drain included); support, a resolved fall from the start to the
+    highest testable level at most FORCED, in each of A1 and A2 that has one. (Before the freeze support read
+    one pair, 0.65 to 0.80, which a family draining before 0.65 would fail; the freeze's reader found it.)"""
     contra, support, rows = [], [], []
     for arm in ("A1", "A2"):
         recs = arms[arm]
@@ -203,7 +202,8 @@ def p1(arms):
                 if x is not None and y is not None:
                     d.append(y - x)
             return d
-        pairs = [(None, lv) for lv in levels] + list(zip(levels, levels[1:]))
+        points = [None] + levels
+        pairs = [(a, b) for i, a in enumerate(points) for b in points[i + 1:]]
         for a, b in pairs:
             d = change(a, b)
             pc = p_greater(d, MARGIN["P1"])

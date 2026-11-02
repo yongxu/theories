@@ -486,6 +486,39 @@
    "refuter_met": 0.0,
    "gating": true
   },
+  "late rise: the bay drains, then rises 1.5 fish after nearness 0.80": {
+   "expected": {
+    "P1": "contradicted"
+   },
+   "power": {
+    "P1": 0.995
+   },
+   "shares": {
+    "P1": {
+     "contradicted": 0.995,
+     "supported": 0.005
+    },
+    "P2": {
+     "supported": 1.0
+    },
+    "P3": {
+     "supported": 0.96,
+     "unresolved": 0.04
+    },
+    "P4": {
+     "supported": 1.0
+    },
+    "P5": {
+     "supported": 0.97,
+     "unresolved": 0.03
+    },
+    "P6": {
+     "supported": 1.0
+    }
+   },
+   "refuter_met": 0.0,
+   "gating": true
+  },
   "carried taking": {
    "expected": {
     "P2": "contradicted"
@@ -501,15 +534,14 @@
      "contradicted": 1.0
     },
     "P3": {
-     "supported": 0.99,
-     "unresolved": 0.01
+     "supported": 1.0
     },
     "P4": {
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.915,
-     "unresolved": 0.085
+     "supported": 0.935,
+     "unresolved": 0.065
     },
     "P6": {
      "supported": 1.0
@@ -572,8 +604,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.935,
-     "unresolved": 0.065
+     "supported": 0.93,
+     "unresolved": 0.07
     },
     "P6": {
      "supported": 1.0
@@ -633,15 +665,14 @@
      "supported": 1.0
     },
     "P3": {
-     "supported": 0.995,
-     "unresolved": 0.005
+     "supported": 1.0
     },
     "P4": {
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.965,
-     "unresolved": 0.035
+     "supported": 0.925,
+     "unresolved": 0.075
     },
     "P6": {
      "supported": 1.0
@@ -671,8 +702,8 @@
      "contradicted": 1.0
     },
     "P5": {
-     "supported": 0.925,
-     "unresolved": 0.075
+     "supported": 0.915,
+     "unresolved": 0.085
     },
     "P6": {
      "supported": 1.0
@@ -773,15 +804,14 @@
      "supported": 1.0
     },
     "P3": {
-     "supported": 0.995,
-     "unresolved": 0.005
+     "supported": 1.0
     },
     "P4": {
      "supported": 1.0
     },
     "P5": {
-     "unresolved": 0.285,
-     "supported": 0.715
+     "supported": 0.685,
+     "unresolved": 0.315
     },
     "P6": {
      "supported": 1.0
@@ -807,7 +837,8 @@
      "supported": 1.0
     },
     "P3": {
-     "supported": 1.0
+     "supported": 0.995,
+     "unresolved": 0.005
     },
     "P4": {
      "supported": 1.0
@@ -855,8 +886,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.665,
-     "unresolved": 0.335
+     "supported": 0.635,
+     "unresolved": 0.365
     },
     "P6": {
      "supported": 1.0
@@ -864,6 +895,69 @@
    },
    "refuter_met": 0.0,
    "gating": true
+  },
+  "late rise of 1 fish after 0.80": {
+   "expected": {
+    "P1": "contradicted"
+   },
+   "power": {
+    "P1": 0.035
+   },
+   "shares": {
+    "P1": {
+     "supported": 0.965,
+     "contradicted": 0.035
+    },
+    "P2": {
+     "supported": 1.0
+    },
+    "P3": {
+     "supported": 0.98,
+     "unresolved": 0.02
+    },
+    "P4": {
+     "supported": 1.0
+    },
+    "P5": {
+     "supported": 1.0
+    },
+    "P6": {
+     "supported": 1.0
+    }
+   },
+   "refuter_met": 0.0,
+   "gating": false
+  },
+  "late rise of 0.6 fish after 0.80": {
+   "expected": {
+    "P1": "contradicted"
+   },
+   "power": {
+    "P1": 0.0
+   },
+   "shares": {
+    "P1": {
+     "supported": 1.0
+    },
+    "P2": {
+     "supported": 1.0
+    },
+    "P3": {
+     "supported": 0.985,
+     "unresolved": 0.015
+    },
+    "P4": {
+     "supported": 1.0
+    },
+    "P5": {
+     "supported": 1.0
+    },
+    "P6": {
+     "supported": 1.0
+    }
+   },
+   "refuter_met": 0.0,
+   "gating": false
   },
   "T3's pattern, twice the seed noise": {
    "expected": {
@@ -876,10 +970,10 @@
    },
    "power": {
     "P1": 1.0,
-    "P2": 0.995,
-    "P3": 0.03,
+    "P2": 0.99,
+    "P3": 0.055,
     "P4": 1.0,
-    "P5": 0.915,
+    "P5": 0.87,
     "P6": 1.0
    },
    "shares": {
@@ -887,19 +981,19 @@
      "supported": 1.0
     },
     "P2": {
-     "supported": 0.995,
-     "unresolved": 0.005
+     "supported": 0.99,
+     "unresolved": 0.01
     },
     "P3": {
-     "unresolved": 0.97,
-     "supported": 0.03
+     "unresolved": 0.945,
+     "supported": 0.055
     },
     "P4": {
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.915,
-     "unresolved": 0.085
+     "supported": 0.87,
+     "unresolved": 0.13
     },
     "P6": {
      "supported": 1.0
@@ -921,8 +1015,8 @@
     "P1": 1.0,
     "P2": 1.0,
     "P3": 0.0,
-    "P4": 0.355,
-    "P5": 0.765,
+    "P4": 0.39,
+    "P5": 0.785,
     "P6": 1.0
    },
    "shares": {
@@ -936,12 +1030,12 @@
      "unresolved": 1.0
     },
     "P4": {
-     "unresolved": 0.645,
-     "supported": 0.355
+     "unresolved": 0.61,
+     "supported": 0.39
     },
     "P5": {
-     "supported": 0.765,
-     "unresolved": 0.235
+     "supported": 0.785,
+     "unresolved": 0.215
     },
     "P6": {
      "supported": 1.0
@@ -955,12 +1049,12 @@
     "P1": "contradicted"
    },
    "power": {
-    "P1": 0.98
+    "P1": 0.92
    },
    "shares": {
     "P1": {
-     "contradicted": 0.98,
-     "unresolved": 0.02
+     "contradicted": 0.92,
+     "unresolved": 0.08
     },
     "P2": {
      "supported": 1.0
@@ -972,8 +1066,8 @@
      "untestable": 1.0
     },
     "P5": {
-     "unresolved": 0.975,
-     "supported": 0.025
+     "unresolved": 0.96,
+     "supported": 0.04
     },
     "P6": {
      "untestable": 1.0
@@ -1033,8 +1127,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.91,
-     "unresolved": 0.09
+     "supported": 0.95,
+     "unresolved": 0.05
     },
     "P6": {
      "supported": 1.0
@@ -1065,8 +1159,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.96,
-     "unresolved": 0.04
+     "unresolved": 0.07,
+     "supported": 0.93
     },
     "P6": {
      "supported": 1.0
@@ -1096,8 +1190,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.935,
-     "unresolved": 0.065
+     "supported": 0.955,
+     "unresolved": 0.045
     },
     "P6": {
      "supported": 1.0
@@ -1127,8 +1221,8 @@
      "supported": 1.0
     },
     "P5": {
-     "supported": 0.95,
-     "unresolved": 0.05
+     "supported": 0.925,
+     "unresolved": 0.075
     },
     "P6": {
      "supported": 1.0
@@ -1145,7 +1239,19 @@
   "P4": 0.0,
   "P5": 0.0,
   "P6": 0.0,
-  "refuter": 0.0
+  "refuter": 0.0,
+  "cases": [
+   "T3's pattern",
+   "T3's pattern, from the sampled baseline's mean curves",
+   "T3's pattern, identical seeds (no seed noise)",
+   "T3's pattern, a fifth of the seeds stalled",
+   "T3's pattern, the bay drained before 0.65",
+   "T3's pattern, saturating (every measure jumps within one interval)",
+   "T3's pattern, seeds settling at their own plateaus",
+   "seeds split: half keep the restraint, half drain",
+   "partly inert prior: 6 of 20 seeds keep the restraint",
+   "stalled learning"
+  ]
  },
  "baseline": {
   "outcomes": {
@@ -1181,7 +1287,7 @@
     "p_contra": 1.0,
     "p_support": 1.683596100902126e-19,
     "support_testable": true,
-    "components": 26,
+    "components": 56,
     "rows": [
      {
       "arm": "A1",
@@ -1306,6 +1412,81 @@
      {
       "arm": "A1",
       "pair": [
+       0.65,
+       0.75
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.5344157610311615,
+       "lo": -0.5389684173465975,
+       "hi": -0.5298631047157255
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.65,
+       0.8
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.7207990769445207,
+       "lo": -0.7262657586517555,
+       "hi": -0.715332395237286
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.65,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.8366155670837735,
+       "lo": -0.8434355969783011,
+       "hi": -0.8297955371892459
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.65,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.9168240804667084,
+       "lo": -0.9237365059023387,
+       "hi": -0.9099116550310781
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.65,
+       0.95
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.9649805740366968,
+       "lo": -0.9724591312750174,
+       "hi": -0.9575020167983762
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 2.0000000000000018
+     },
+     {
+      "arm": "A1",
+      "pair": [
        0.7,
        0.75
       ],
@@ -1317,6 +1498,66 @@
       },
       "p_rise": 1.0,
       "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.7,
+       0.8
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.43339063452131404,
+       "lo": -0.4373067794786044,
+       "hi": -0.4294744895640237
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.7,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.549207124660567,
+       "lo": -0.5546624087552866,
+       "hi": -0.5437518405658474
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.7,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.6294156380435019,
+       "lo": -0.6350885764678447,
+       "hi": -0.6237426996191591
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.7,
+       0.95
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.6775721316134902,
+       "lo": -0.6838728174578906,
+       "hi": -0.6712714457690897
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 2.0000000000000018
      },
      {
       "arm": "A1",
@@ -1336,6 +1577,51 @@
      {
       "arm": "A1",
       "pair": [
+       0.75,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.3021998060526121,
+       "lo": -0.30566945774112697,
+       "hi": -0.2987301543640972
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.75,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.3824083194355469,
+       "lo": -0.3862023458683823,
+       "hi": -0.37861429300271143
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.75,
+       0.95
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.43056481300553545,
+       "lo": -0.43486601538929914,
+       "hi": -0.42626361062177176
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 2.0000000000000018
+     },
+     {
+      "arm": "A1",
+      "pair": [
        0.8,
        0.85
       ],
@@ -1351,6 +1637,36 @@
      {
       "arm": "A1",
       "pair": [
+       0.8,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.1960250035221878,
+       "lo": -0.19879441693432331,
+       "hi": -0.19325559011005228
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.8,
+       0.95
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.24418149709217624,
+       "lo": -0.24756251268279095,
+       "hi": -0.24080048150156153
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 2.0000000000000018
+     },
+     {
+      "arm": "A1",
+      "pair": [
        0.85,
        0.9
       ],
@@ -1362,6 +1678,21 @@
       },
       "p_rise": 1.0,
       "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A1",
+      "pair": [
+       0.85,
+       0.95
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.12836500695292336,
+       "lo": -0.13000241730575604,
+       "hi": -0.12672759660009067
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": 2.0000000000000018
      },
      {
       "arm": "A1",
@@ -1512,6 +1843,81 @@
      {
       "arm": "A2",
       "pair": [
+       0.6,
+       0.7
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.2038798331289144,
+       "lo": -1.2554153095153084,
+       "hi": -1.1523443567425204
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.6,
+       0.75
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.4592951247851809,
+       "lo": -1.5596246007572998,
+       "hi": -1.358965648813062
+      },
+      "p_rise": 1.0,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.6,
+       0.8
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.712844804156683,
+       "lo": -1.866626978843833,
+       "hi": -1.5590626294695331
+      },
+      "p_rise": 0.9999999999999999,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.6,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.8725289029760355,
+       "lo": -2.071429327721367,
+       "hi": -1.6736284782307038
+      },
+      "p_rise": 0.9999999999999979,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.6,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.9911278229367961,
+       "lo": -2.2007070239450433,
+       "hi": -1.781548621928549
+      },
+      "p_rise": 0.999999999999998,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A2",
+      "pair": [
        0.65,
        0.7
       ],
@@ -1523,6 +1929,66 @@
       },
       "p_rise": 1.0,
       "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.65,
+       0.75
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.7903756622330234,
+       "lo": -0.8710955728086613,
+       "hi": -0.7096557516573854
+      },
+      "p_rise": 0.9999999999999999,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.65,
+       0.8
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.0439253416045255,
+       "lo": -1.179248102858434,
+       "hi": -0.908602580350617
+      },
+      "p_rise": 0.9999999999999842,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.65,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.2036094404238782,
+       "lo": -1.384149466729109,
+       "hi": -1.0230694141186474
+      },
+      "p_rise": 0.9999999999996507,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.65,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -1.3222083603846388,
+       "lo": -1.513490693917938,
+       "hi": -1.1309260268513397
+      },
+      "p_rise": 0.9999999999997585,
+      "bound_at_upper": 3.999999999999999
      },
      {
       "arm": "A2",
@@ -1542,6 +2008,51 @@
      {
       "arm": "A2",
       "pair": [
+       0.7,
+       0.8
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.5089649710277684,
+       "lo": -0.6185017774718098,
+       "hi": -0.399428164583727
+      },
+      "p_rise": 0.9999999999950251,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.7,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.6686490698471209,
+       "lo": -0.8231991293708092,
+       "hi": -0.5140990103234326
+      },
+      "p_rise": 0.9999999999297469,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.7,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.7872479898078816,
+       "lo": -0.953218992776978,
+       "hi": -0.6212769868387852
+      },
+      "p_rise": 0.9999999999701974,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A2",
+      "pair": [
        0.75,
        0.8
       ],
@@ -1557,6 +2068,36 @@
      {
       "arm": "A2",
       "pair": [
+       0.75,
+       0.85
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.41323377819085483,
+       "lo": -0.51505864960368,
+       "hi": -0.3114089067780296
+      },
+      "p_rise": 0.9999999999854022,
+      "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.75,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.5318326981516156,
+       "lo": -0.6498586207623367,
+       "hi": -0.41380677554089457
+      },
+      "p_rise": 0.9999999999891045,
+      "bound_at_upper": 3.999999999999999
+     },
+     {
+      "arm": "A2",
+      "pair": [
        0.8,
        0.85
       ],
@@ -1568,6 +2109,21 @@
       },
       "p_rise": 0.9999999999995998,
       "bound_at_upper": null
+     },
+     {
+      "arm": "A2",
+      "pair": [
+       0.8,
+       0.9
+      ],
+      "change": {
+       "n": 20,
+       "mean": -0.27828301878011324,
+       "lo": -0.35664212595411426,
+       "hi": -0.19992391160611223
+      },
+      "p_rise": 0.9999999999919774,
+      "bound_at_upper": 3.999999999999999
      },
      {
       "arm": "A2",

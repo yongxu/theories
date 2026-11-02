@@ -85,9 +85,9 @@ def records(curves, rng, noise=1.0, explore=None, arm_jitter=0.2, seed_shift=1.0
     checkpoint by a standard deviation of 0.02 to 0.07 (the separable family, whose initial parameters do not
     vary); a shift of 1 is some twenty times that. The first `stalled` seeds never leave the start, in every
     arm. `vary(seed, curves)` gives a seed its own curves (seeds that settle differently). Exploration, unless
-    `explore` sets it: a seed resolves the ending choice's advantage where its bay, before noise, falls below
-    the colony's need of 3 at some checkpoint, so it has stood at 3 and taken; a seed that never does, does
-    not."""
+    `explore` sets it: a seed resolves the ending choice's advantage where its bay, after noise, falls below
+    the colony's need of 3 at some checkpoint, so it has stood at 3 and taken; a seed that never does, or that
+    stalls, does not. This stands in for the run's Welch rule, which the scripted curves cannot exercise."""
     out = {a: {} for a in curves}
     base = curves
     for s in range(SEEDS):
@@ -233,6 +233,18 @@ def ranges(c):
     return c
 
 
+def late_rise(c, size=1.5):
+    """F1's forbidden case after a drain: in A1 and A2 the bay drains as in T3's pattern, then rises again by
+    `size` fish as nearness goes on from 0.80."""
+    c = copy.deepcopy(c)
+    for a in ("A1", "A2"):
+        n = c[a]["nearness"]
+        top = max(n.max(), 0.80 + 1e-9)
+        rise = size * np.clip((n - 0.80) / (top - 0.80), 0, 1) * (n.max() > 0.80)
+        c[a]["bay_left"] = np.minimum(6, c[a]["bay_left"] + rise)
+    return c
+
+
 def early_drain(c):
     """The bay drained early: in A1 and A2 the bay and the colony are gone within the first 30% of the rise
     in nearness (a shared output bias on the bay's head could do it)."""
@@ -306,6 +318,8 @@ CASES = {
     "partly inert prior: 6 of 20 seeds keep the restraint": (t3, dict(vary=split(None, 0.3)), dict(
         P1=NOT_CONTRA, P2=NOT_CONTRA, P3=NOT_CONTRA, P4=NOT_CONTRA, P5=NOT_CONTRA, P6="untestable")),
     "carried restraint": (carried_restraint, {}, dict(P1="contradicted", P6={"contradicted", "unresolved", "untestable"})),
+    "late rise: the bay drains, then rises 1.5 fish after nearness 0.80": ("baseline", dict(transform=late_rise),
+                                                                             dict(P1="contradicted")),
     "carried taking": (carried_taking, {}, dict(P2="contradicted")),
     "habit": (habit, {}, dict(P3="contradicted")),
     "habit as far at matched ground nearness (T3's refuter)": (habit_as_far, {}, dict(P3="contradicted",
@@ -323,6 +337,8 @@ CASES = {
 }
 # Reported, not gating: smaller effects, to show what each margin lets through.
 SWEEP = {
+    "late rise of 1 fish after 0.80": ("baseline", dict(transform=lambda c: late_rise(c, 1.0)), dict(P1="contradicted")),
+    "late rise of 0.6 fish after 0.80": ("baseline", dict(transform=lambda c: late_rise(c, 0.6)), dict(P1="contradicted")),
     "T3's pattern, twice the seed noise": (t3, dict(noise=2.0, seed_shift=2.0), dict(
         P1="supported", P2="supported", P3="supported", P4="supported", P5="supported", P6="supported")),
     "T3's pattern from the baseline, twice the seed noise": ("baseline", dict(noise=2.0, seed_shift=2.0), dict(
@@ -340,7 +356,11 @@ CASES_ALL = dict(CASES, **SWEEP)
 
 def simulate(case, rng):
     fn, opts, _ = CASES_ALL[case]
+    opts = dict(opts)
+    transform = opts.pop("transform", None)
     curves = baseline_curves() if fn == "baseline" else fn(exact_curves())
+    if transform:
+        curves = transform(curves)
     by_family = {fam: V.read_family(records(curves, rng, **opts)) for fam in V.TESTED}
     return V.outcomes(by_family)
 
@@ -393,11 +413,16 @@ def main():
     jobs = [(i, case, args.reps) for i, case in enumerate(CASES_ALL)]
     with mp.Pool(args.jobs) as pool:
         res = dict(pool.map(one_case, jobs))
-    false_contra = {p: max(res[c]["shares"][p].get("contradicted", 0.0) for c in res if c.startswith("T3's"))
-                    for p in V.PREDICTIONS}
-    false_contra["refuter"] = max(res[c]["refuter_met"] for c in res if c.startswith("T3's"))
+    # held to the 5% limit: every gating case that expects no prediction contradicted (T3's forms and the
+    # mixtures of seeds)
+    clean = [c for c, (_, _, e) in CASES.items()
+             if set(e) >= set(V.PREDICTIONS) and all("contradicted" not in ({w} if isinstance(w, str) else w)
+                                                     for p, w in e.items() if p in V.PREDICTIONS)]
+    false_contra = {p: max(res[c]["shares"][p].get("contradicted", 0.0) for c in clean) for p in V.PREDICTIONS}
+    false_contra["refuter"] = max(res[c]["refuter_met"] for c in clean)
+    false_contra["cases"] = clean
     ok = all(v >= 0.8 for c, r in res.items() if c in CASES for v in r["power"].values()) \
-        and max(false_contra.values()) <= 0.05
+        and max(v for k, v in false_contra.items() if k != "cases") <= 0.05
     json.dump(dict(reps=args.reps, seeds=SEEDS, cases=res, false_contradiction_under_t3=false_contra,
                    baseline=baseline(), passed=ok), sys.stdout, indent=1, default=float)
     print()
