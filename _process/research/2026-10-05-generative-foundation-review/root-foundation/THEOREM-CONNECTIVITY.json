@@ -1,11 +1,11 @@
 {
- "commit": "6cf7292daec4424a02b233de3e97ec245922d4c7",
+ "commit": "27cf69f86c0408c8bf9405f47a4009d25c1e39e4",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261101T151111.914612Z",
+ "core_receipt_at_commit": "20261101T161537.177111Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 382,
- "constants": 55570,
- "spine_theorems": 18956,
+ "constants": 55580,
+ "spine_theorems": 18958,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 221,
   "used by a theorem on the base": 6126,
   "instance on the base recorded": 161,
-  "apart: own vocabulary": 2636,
+  "apart: own vocabulary": 2638,
   "apart: prelude-only statement": 191
  },
- "apart": 2827,
- "apart_general_structure_by_design": 1091,
- "apart_otherwise": 1736,
+ "apart": 2829,
+ "apart_general_structure_by_design": 1092,
+ "apart_otherwise": 1737,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 128,
   "of them on the base": 81,
@@ -77,11 +77,11 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1443,
- "apart_roots": 1443,
+ "apart_used_by_nothing": 1440,
+ "apart_roots": 1440,
  "apart_roots_by_category": {
-  "model-witness": 688,
-  "support": 152,
+  "model-witness": 687,
+  "support": 150,
   "general-structure": 552,
   "calibration": 25,
   "restates": 14,
@@ -444,6 +444,10 @@
    10,
    143
   ],
+  "Becoming.GuardHorizon": [
+   10,
+   34
+  ],
   "Becoming.Quantum": [
    9,
    35
@@ -495,10 +499,6 @@
   "Becoming.SecuredContent": [
    8,
    30
-  ],
-  "Becoming.GuardHorizon": [
-   8,
-   32
   ],
   "Becoming.Derivation": [
    7,
@@ -948,8 +948,8 @@
   },
   "applications": {
    "modules": 7,
-   "theorems": 191,
-   "apart": 16,
+   "theorems": 193,
+   "apart": 18,
    "classes": {
     "statement on both families": 0,
     "statement on Process/Frame/Run/Trace": 100,
@@ -958,7 +958,7 @@
     "proof through a base family": 0,
     "used by a theorem on the base": 75,
     "instance on the base recorded": 0,
-    "apart: own vocabulary": 15,
+    "apart: own vocabulary": 17,
     "apart: prelude-only statement": 1
    }
   }
@@ -20977,6 +20977,8 @@
   "Becoming.GuardHorizon.recomputed_accepts": "statement on Process/Frame/Run/Trace",
   "Becoming.GuardHorizon.fiber_of_uniform": "used by a theorem on the base",
   "Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible": "used by a theorem on the base",
+  "Becoming.GuardHorizon.uniform_policy_iff_common": "apart: own vocabulary",
+  "Becoming.GuardHorizon.ungiven_reading_not_uniform": "apart: own vocabulary",
   "Becoming.GuardHorizon.statewise_not_uniform": "apart: own vocabulary",
   "Becoming.GuardHorizon.discriminating_reading_uniform": "apart: own vocabulary",
   "Becoming.GuardHorizon.uniform_finer": "apart: own vocabulary",
