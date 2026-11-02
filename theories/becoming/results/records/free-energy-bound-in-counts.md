@@ -106,6 +106,7 @@ In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 182
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
 
 Aliases: `The free-energy bound in counts`, `计数之自由能界`, `free-energy bound in counting form`, `arithmetic-geometric mean inequality in counts`, `multinomial likelihood at the observed frequencies`, `Becoming.FreeEnergyCounting.bound`, `Becoming.FreeEnergyCounting.bound_eq_iff`, `Becoming.FreeEnergyCounting.given_record_eq_iff_share`
 
