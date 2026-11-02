@@ -107,19 +107,19 @@ class ResyncReportTest(unittest.TestCase):
     def test_every_change_it_counts_gets_a_line(self):
         section = ('# S\n\n<a id="named"></a>\n## Named\n\nNamed {0}.\n\n## A `plain` heading\n\nPlain {0}.\n\n'
                    'Paragraph with alpha and beta, {0}.\n')
-        before = {'docs/one.md': 'one\n', 'docs/two.md': 'two\n', 'docs/same.md': 'same\n', 'data/t.tsv': 'a\t1\n',
+        before = {'docs/one.md': 'one\n', 'docs/two.md': 'two\n', 'docs/same.md': 'same\n', 'docs/ref.md': 'ref\n', 'data/t.tsv': 'a\t1\n',
                   'docs/s.md': section.format('old')}
-        after = {'docs/one.md': 'one now\n', 'docs/two.md': 'two now\n', 'data/t.tsv': 'a\t2\n', 'docs/s.md': section.format('new'),
+        after = {'docs/one.md': 'one now\n', 'docs/two.md': 'two now\n', 'docs/ref.md': 'ref now\n', 'data/t.tsv': 'a\t2\n', 'docs/s.md': section.format('new'),
                  'docs/new.md': 'new\n'}
         dossier = ('# X\n\n## A-1 First\n\n[one](../docs/one.md), [two](../docs/two.md), [same](../docs/same.md), '
-                   '[table](../data/t.tsv), [folder](../data), [a URL](https://example.org/url.md).\n'
+                   '[table](../data/t.tsv), [folder](../data), [a URL](https://example.org/url.md), [a reference][ref].\n'
                    '[named](../docs/s.md#named), [plain](../docs/s.md#a-plain-heading).\n'
                    '引〔docs/s.md〕：「alpha」 and Quote [docs/s.md]: "beta"\n\n'
                    '## A-2 Second\n\n[one again](../docs/one.md), [new](../docs/new.md), [lost](../docs/s.md#nowhere).\n\n'
-                   '```lean\nexample : arr[i](j) = 0\n```\n')
+                   '```lean\nexample : arr[i](j) = 0\n```\n\n[ref]: ../docs/ref.md\n')
         summary, text = self.report(before, after, dossier)
         first, _, second = text.partition('\n## A-2')
-        for name in ('one.md', 'two.md', 't.tsv', 'data'):
+        for name in ('one.md', 'two.md', 'ref.md', 't.tsv', 'data'):
             self.assertRegex(first, r'whole file changed[^\n]*, ' + name + r' \(.*\):\n', name)
         self.assertRegex(first, r'section changed\*\*, s\.md \(named\)')
         self.assertRegex(first, r'section changed\*\*, s\.md \(a-plain-heading\)')
@@ -129,7 +129,7 @@ class ResyncReportTest(unittest.TestCase):
         self.assertRegex(second, r'anchor not found[^\n]*, s\.md \(nowhere\)')
         for absent in ('same.md', 'url.md', '(j'):
             self.assertNotIn(absent, text)
-        self.assertIn('linked files 6: 4 changed, 1 new since the pin, 0 gone', summary)
+        self.assertIn('linked files 7: 5 changed, 1 new since the pin, 0 gone', summary)
         self.assertIn('1 anchors not found', summary)
         self.assertIn('items to re-read 2 of 2', summary)
 
