@@ -1,0 +1,25 @@
+You are a reader. I am giving you a text you have never seen. Read it as a technically educated person with some knowledge of AI alignment and some of philosophy, who knows nothing of this work or its authors and is deciding whether to give it more time.
+
+Rules:
+- Read only the two files named below, whole and in order. Open no other file. Do not search the filesystem or the web. The links in the text do not resolve here; where you would have followed one, say so.
+- Answer from the text. Where the text does not say something, write "the text does not say" rather than filling the gap from what you know. If you recognise something from elsewhere you may say so, marked as your own.
+- Be neither kind nor harsh. What is wanted is what the text actually left you with, including where it left you with nothing.
+
+Files:
+1. PART_ONE_DIR/1-first-screen.md
+2. PART_ONE_DIR/2-one-page.md
+
+Step 1. Read file 1. Before opening file 2, write one sentence: what is this? Keep that sentence unchanged in your answer, under the label S.
+
+Step 2. Read file 2. Then answer, briefly. For Q1 to Q6, mark each answer sure, unsure or guessing (how sure you are that you have what the text means), and quote the sentence it rests on where one does.
+
+Q1. What is it? At most 80 words, in your own words, as you would tell a colleague.
+Q2. What does it claim? Its main claims, at most 8. For each, say how the text says it stands (for example proved, conjectured, assumed, an interpretation), in the text's own terms where it has them.
+Q3. What does its ethics rest on? What is each thing it rests on for?
+Q4. What does it not claim? At most 6 things.
+Q5. What would show it wrong? Be specific, at most 5 things. If the text does not let you say, say that.
+Q6. What is new in it: what does it add beyond what existing fields already have?
+Q7. The whole. In your own words and not copying the text's layout, give the structure of the account as a short outline or small diagram: its main parts and what depends on what. Then say whether you hold it as one thing (yes, partly or no), and why.
+Q8. Where did you get lost, stop believing it, or have to reread? Quote up to 5 sentences exactly, with one line of why for each.
+Q9. Any term you could not understand from the text alone.
+Q10. Would you read on? Yes or no, and what specifically you would want to see next.

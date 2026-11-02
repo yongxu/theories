@@ -164,7 +164,7 @@ Lean 包的纯核只引入 Lean 的前奏，其中每一个源声明的公理报
 - **根与伦理作为一个说明。** 以从己方式沿一个关系持有，该条件是根上的一个陈述，有的网满足它，有的不满足：在该关系的全类之下，一切都位于每一个中心的相续之上（`«续无外»`），而沿一个无环的网，它只在只有一个中心时成立。但自由的意义尚未提升到根上；意义的核心之律不由根推出，延续条件（定范围）与 C（定次序）仍为前提（[08 §7](chapters/08-METHOD.md#shared-laws-and-connectivity)，[07](chapters/07-SIGNIFICANCE.md#open)）。
 - **根据。** 不主张对一切可能的心智都有约束力的根据，伦理也不等待它：为该条件奠基的根据既不单从动力学之律而来，也不单从逻辑而来，因为一个视角主义者可以一致地否认该条件。尚需论证的是：[07 §4.6](chapters/07-SIGNIFICANCE.md#future-path) 的 P2 与 P4（自身之相续是其自身的一种常规；其类涵摄自己的后果），它们使对自身延续的关切越过自己的终结而无需不变之步，而 P3 是一个未得到表明的对应；不变之步（就其所不及者而言）；C 的理由；自我的预设是否以从己方式持有；地位是否不变且平等（[08](chapters/08-METHOD.md#philosophical-warrant)）。
 - **评价。** §§1–5 中没有任何律进行评价：耗竭是一种伤害、克制更好，这只在延续条件（范围）与 C（次序）之下才被问及；也没有表明任何义务、遵从，或对混合比较的完整排序（[07](chapters/07-SIGNIFICANCE.md#does-not-show)）。
-- **对实际系统的适配。** 实际的展开满足世界模型或体制的前提，这一点未表明；一个有机体与一个制度尚无模型（[01 §8](chapters/01-ROOT.md#r-the-source-texts-test-systems)）。尚待进行的论题检验包括：以事先测得之需要检验 T1，在训练出的系统上检验 T3，T4 的迁移，以人类评价者检验 T5，以及对 T7 之改革事件的实地检验（[08](chapters/08-METHOD.md#theses)）。
+- **对实际系统的适配。** 实际的展开满足世界模型或体制的前提，这一点未表明；一个制度尚无模型，一个有机体有一个最小模型，这是如此读出的［AI 读法］（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)）。尚待进行的论题检验包括：以事先测得之需要检验 T1，在训练出的系统上检验 T3，T4 的迁移，以人类评价者检验 T5，以及对 T7 之改革事件的实地检验（[08](chapters/08-METHOD.md#theses)）。
 - **人工审查。** 迄今没有任何审查出自人：证明的读法、古文的归类、诸对应与诸名都未经人审，对前人工作的检索并不穷尽（[审查包](review/README.zh.md)，[08](chapters/08-METHOD.md#review-status)）。
 - **其他未决问题。** 整体的必然性（每一种生灭变化都有一条带有有限进程的交换之律）；具体的律，其中有一个实际系统作出哪一种归并、池如何形成、实数的量与连续时间；语料中未经检查的候选（[08](chapters/08-METHOD.md#r-theory-of-becoming-foundation)，[02](chapters/02-MAP.md#open)，[03](chapters/03-KNOWING.md#open)，[06](chapters/06-CLASSICAL-TEXTS.md#open)）。
 - **完成。** 完成性检查支持、但不能担保每一个前提都已指名（[08](chapters/08-METHOD.md#completion-criterion)）。
