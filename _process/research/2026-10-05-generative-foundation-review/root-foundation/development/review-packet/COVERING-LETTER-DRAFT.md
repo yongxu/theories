@@ -15,7 +15,7 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 >
 > I am [name, and one line on who you are]. [Why this reader: a sentence that could be written to no one else, naming the work of theirs this touches.]
 >
-> The Theory of Becoming is an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life, knowing and evaluation take shape inside it, without first assuming that becoming is good. No law in it evaluates. Its ethics adds two premises that it names and does not assert: the continuation condition fixes whose losses count, and C, that widening what can form is better, gives order, in general alone. Whether either can be warranted is open. It also has laws and readings that bear on AI alignment. [Why you made it and why you want it reviewed, in your own sentence.]
+> The Theory of Becoming is an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life and knowing take shape within it, and how far evaluation does, without assuming that becoming is good. No law in it evaluates. Its ethics adds two premises that it names and does not assert: the continuation condition fixes whose losses count, and C, that widening what can form is better, gives order, in general alone. Whether either can be warranted is open. It also has laws and readings that bear on AI alignment. [Why you made it and why you want it reviewed, in your own sentence.]
 >
 > It was written with AI, the proofs included, which are in the proof language Lean. [Your part: what you directed, and what you yourself have read.] The proofs are checked by machine. Everything else has been checked only by further AI reviews, and no person has reviewed any of it. So I am asking for what a machine cannot give. [The paragraph for this reader.]
 >
@@ -93,6 +93,6 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 ## Before it goes
 
 - Every bracket is filled, the notes on this page are gone, and the letter says nothing he would not say. It makes promises in his name: to report back; to read a reply himself if asked, and pass on only his own note of it; not to report a reply as endorsing the work; to keep a reply out of the repository unless told otherwise; and any payment. Each stays only if he means it.
-- Its description of the theory is read again against the frozen edition's one page and cover, which the way now's items 1 to 4 are still changing.
+- Its description of the theory is read again against the frozen edition's one page and cover, since the fronts may still change before the freeze.
 - The remote has the commit and the tag the letter offers. The push is his.
 - A reply to be kept goes into `sources/` verbatim, in its own language, with its source. A reply to stay out is kept in a path [`.gitignore`](../../../../../../.gitignore) lists, as private conversations are, and AI sessions read it there unless the reader asked otherwise.
