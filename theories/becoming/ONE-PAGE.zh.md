@@ -12,7 +12,7 @@
 
 | | 本说明说什么 | [地位](chapters/08-METHOD.md#standings-and-bases) | 什么会表明它错 |
 |---|---|---|---|
-| **什么使一个东西继续下去？** | 相对于一个类的续，以两种粒度（[01](chapters/01-ROOT.md#r-continuation-relative-to-a-class)，[02](chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)） | 对一切关系与类成立的定理，所以它们不禁止任何关系。这能说明事物如何继续下去：已论证。每一种生灭变化都合于此：未决 | 一次失败的检查。就说明而言，尚未指名什么能击败它 |
+| **什么使一个东西继续下去？** | 相对于一个类的续，以两种粒度（[01](chapters/01-ROOT.md#r-continuation-relative-to-a-class)，[02](chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)） | 对一切关系与类成立的定理，所以它们不禁止任何关系。这能说明事物如何继续下去：已论证。每一种生灭变化都合于此：未决 | 一次失败的检查。作为语言，没有什么能。作为说明，一个从更少的模式推出诸律的对手；按初步计数，是平局（[08 §9](chapters/08-METHOD.md#what-would-defeat-the-reading)） |
 | | 在关系之内，只到已表明之处：取者与被取者，同一关系项的两种角色（[01](chapters/01-ROOT.md#models)）；知者与所知，同一个[读取之环](chapters/03-KNOWING.md#the-reading-loop)；一个立场，依本理论的读法是一个形成，即一个中心（[07](chapters/07-SIGNIFICANCE.md#evaluation)）；[容量](chapters/02-MAP.md#r-effective-capacity-and-eventual-reachability)，还能一起实现什么；责任，出自已指名、各有限度的来源，未被表明是这样分化出来的（[07 §5](chapters/07-SIGNIFICANCE.md#practical-judgment)） | 一个建模选择、一个带有诸律的表示、一种读法、一条律、一项承诺。展开是一个：论题，已论证（[08](chapters/08-METHOD.md#one-relational-unfolding)） | 一个论证，测量可以支持它；未曾指出任何观察。它禁止需要某种无任何关系承载之规定的解释 |
 | *接缝* | *根之律不禁止任何关系，所以下面多数律加上了量与模型的前提；其中的核心声明各有相对于根的地位（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。* | | |
 | **什么维持它，什么能看见它的失去？** | 各个取用者各自都在更新所给之内，合起来却可以超出它；在更新依存于其所更新者之处，从足够低的水平接连经足够多这样的步，便终结它以及同样依存于该缘者（[05](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)） | 在模型上证明；重述公地问题。T1：三种情形通过，四种未通过 | T1：一个缘低于事先测得的需要，没有任何来自外部的给予却回升 |
