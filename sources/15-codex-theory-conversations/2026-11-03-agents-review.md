@@ -8,6 +8,10 @@
 
 After the review below, with the proposed text in hand, the session asked whether to land the rewrite once UE29 cleared the head. Ren chose "Yes, land it", the text of a button the session offered.
 
+Later that night, while the rewrite waited for the head, Ren wrote in the coordinator's Claude Code desktop session ("Merge coordination and main branch maintenance"):
+
+> please work with the agents.md review session - you keep being the coordinator, and make it more concise, shorter, and reasonable - according to the full picture we want, the direction we want, the goals we want - but if they were wrong, and we see what is needed, we deal with the situation elegantly, not dogmatic
+
 ## What the review found (AI-authored)
 
 Read against the repository at `ed67c3e4e`. The figures come from commit subjects and timestamps and are estimates of their kind.
@@ -24,6 +28,8 @@ The rules on proof, premises, data, hashes and what stays Ren's held up and were
 ## What was done (AI-authored)
 
 AGENTS.md was rewritten: [before](../../_process/history/2026-11-03-instructions/AGENTS-before-review.md). It states the purpose and 08 §8's verdict, and orders the work: what is false in what a reader is told, then what lets the account be wrong, then what a person who has read it reports. It corrects the false lines (C's in 07 §4's own sentence, the root's in 08 §10's sense, the two corrections the branch `agents-c-line` was waiting to land, whose [source record](2026-11-03-not-my-decision-word-for-word.md) lands with this one), states one relational unfolding as a thesis, lets a counterexample stand until the full account is shown to remove it, cuts the reading list, and lets the page change by argument, with only Ren changing the list of what is his.
+
+**The shorter text (AI-authored).** On Ren's second message the coordinator sent a shorter draft built on the branch's text. It took status out of the page (the board's "The way now" holds it), set a point where the text is ready for readers, so that item 1 cannot become endless polish, let slots go by readiness with the coordinator settling conflicts, took a dead head clause off, and made the page's rules answer to whether they serve, changed by argument with a before-copy. It cut rules another page already holds. This session read it against the before-copy and restored seven things whose loss would mislead: C's exact scope (a ranking of courses), the roles' names, the note on OPENING linking his own text, "not authority" and "in their own language", freezing designs without waiting on him, that sending is his decision, and the three rules that do not bend to the situation (proof claims checked, nothing unrecoverable deleted, what is his stays his). The landed text is about 1,010 words, against 1,191 before.
 
 The session disagreed with the order of 31 October, which put reviews after the elegant finish, and said so: a person's reading is the one test of the fronts left, and one reader needs neither the packet nor the freeze.
 

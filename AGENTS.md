@@ -1,68 +1,56 @@
 # Working in the theory repository
 
-[The version before this one](_process/history/2026-11-03-instructions/AGENTS-before-review.md) lists the earlier ones. Standing rules live here; [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) and [the work board](_process/BECOMING-WORKBOARD.md) say how, and where they disagree with this page, this page holds.
+[Earlier versions](_process/history/2026-11-03-instructions/AGENTS-before-review.md). [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) and [the work board](_process/BECOMING-WORKBOARD.md) say how and where things stand. Start from [the one page](theories/becoming/ONE-PAGE.md), the home section of what you touch and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Each rule here serves the account and those who use it; where one stops serving, say so and change it by argument, keeping a before-copy. Three do not bend to the situation: proof claims are checked, nothing unrecoverable is deleted, and what is Ren's stays his.
 
 ## What the work is for
 
-One account of how things form, persist, change and end, in which people and AI can predict, come to share an understanding and coordinate. It covers generation, maintenance, transformation, degeneration and disappearance, none assumed good.
+One account of how things form, persist, change and end, none assumed good, in which people and AI can predict, come to share an understanding and coordinate.
 
-## Where it stands, and what moves it
+## What moves it
 
-The formal core passes its own bar, and readers given the text can say what the account is. By [its own verdict](theories/becoming/chapters/08-METHOD.md#known-results), none of its central results is new mathematics. Better text cannot move that verdict. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker can.
+By [its own verdict](theories/becoming/chapters/08-METHOD.md#known-results), none of the account's central results is new mathematics, and better text cannot change that. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker can. So, in order:
 
-So work in this order:
-1. What is false or misleading in what a reader is told now.
-2. What lets the account be wrong: tests designed and frozen, each thesis with a refuter that can be met, [the crux](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) argued.
-3. What a person who has read it reports. Their reading is the measure of the fronts. AI cold reads check for errors and do not stand in for it.
+1. What is false or misleading in what a reader is told, where it would change what they believe.
+2. What lets the account be wrong: tests designed and frozen, refuters that can be met, [the crux](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) argued.
+3. What people who have read it report. That measures the fronts; AI cold reads check for errors.
 
-A law lifted onto the root, a new model, or a pass over wording waits unless it changes what a reader is told or what could fail. Root counts are a diagnostic. [The release gate](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) is the floor for a release.
-
-Before starting, read [the one page](theories/becoming/ONE-PAGE.md), the home section of what you will touch, and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Read further as the work needs it.
+With no such error left and item 2's designs frozen, the text is ready for readers; sending it is Ren's decision, and polish waits for what readers report. A law lifted onto the root, a new model or a wording pass waits unless it changes what a reader is told or what could fail. [The release gate](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) is the floor.
 
 <a id="begin-with-one-relational-unfolding"></a>
 ## Method
 
-Begin with how relations form, persist and change, then show how actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. Each analytic split (subject/object, action/condition, fact/value) states its relational basis, scope and omissions. No name or variable smuggles in separate entities.
+Begin with how relations form, persist and change, and let actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. Each analytic split (subject/object, fact/value) states its relational basis, scope and omissions; no name smuggles in separate entities. One relational unfolding is [a thesis, argued](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding), and nonduality a method, not a proof: record the cases it distorts.
 
-One relational unfolding is [a thesis, argued](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding), not a premise of this page. Nonduality is a method, not a proof. Where the method distorts a case, record the case.
+Keep real losses, conflict and counterexamples; one found in a weaker model stands until the full account is shown to remove it. Joint activity starts from actual relations, not opposed interests or a fixed common utility, and asks how their change supports, enriches or damages 生生.
 
-Keep real losses, real conflict and genuine counterexamples. A counterexample in a weaker model stands until the work shows what in the full account removes it. Joint activity starts from actual relations and asks how the whole relation's change supports, enriches or damages 生生. Opposed interests and common utilities are cases to represent, not starting points.
-
-A law admitting every outcome explains nothing. A law of the root [forbids no relation](theories/becoming/chapters/08-METHOD.md#law); a law with content forbids through its hypotheses. A local result does not complete a universal claim. "Zero axiom" never shrinks to "no ethical axiom".
+A law admitting every outcome explains nothing; root laws [forbid no relation](theories/becoming/chapters/08-METHOD.md#law), and content comes through hypotheses. A local result does not complete a universal claim, and "zero axiom" never shrinks to "no ethical axiom".
 
 ## The ethics
 
-It rests on two unasserted premises. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope: whose losses count. C (widening what can form is better) gives order; a ranking of courses needs it or a premise in its place. Name both wherever the ethics is summarized, and never write that it derives from the condition. Their warrant is open, and no warrant binding every possible mind is claimed. Hide no weight or obligation in a definition.
+Two unasserted premises carry it. The [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count; C (widening what can form is better) gives order, and a ranking of courses needs C or a premise in its place. Name both wherever the ethics is summarized, never write that it derives from the condition, and hide no weight or obligation in a definition. Their warrant is open; none binding every possible mind is claimed.
 
-生生 names life in the whole and its continuing generation; "generative" never means just any new organization. Keep warrant, recognition, motivation, compliance and implementation distinct, and direction, continuing capacity, per-step growth and maximization. Use each term in the [glossary](GLOSSARY.md)'s one sense.
+生生 is life in the whole and its continuing generation, not any new organization. Use each term in the [glossary](GLOSSARY.md)'s one sense, keeping warrant, recognition, motivation, compliance and implementation apart, and direction, continuing capacity, per-step growth and maximization.
 
 ## Proof and naming
 
-- Every proof claim needs Lean and an actual check, and says exactly what the Lean proves. Keep premises, proofs, empirical support, philosophical warrant and conjecture distinct.
-- New formal results extend the Becoming spine, stated on the root where that is their simplest statement.
-- [The pure core](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) imports only `Init` and has empty axiom reports, enforced by `check_becoming.py`. That covers logic only: state each modelling choice where a law depends on it. A law the core cannot yet prove lands in the periphery with its axioms reported.
-- Names are structural and exact. Rename later only a name that states a wrong meaning.
+A proof claim has Lean and an actual check, and says exactly what the Lean proves; premises, proofs, empirical support, philosophical warrant and conjecture stay distinct. New results extend the Becoming spine, on the root where that is simplest. [The pure core](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) imports only `Init` with empty axiom reports, which covers logic only: state the modelling choices a law depends on. What it cannot yet prove goes to the periphery, axioms reported. Names are structural and exact; rename only one that states a wrong meaning.
 
 ## Words and decisions
 
-Ren's words are provenance, not authority: kept verbatim in `sources/`, in their own language, and never the warrant for a claim or the order of the work. Live text gives the argument. Where his words seem wrong, say so. His yes settles that a change is wanted, not its wording, form or carrier: land the best version and say what differs and why. OPENING's first-person body is revised in place, with a note at its top naming each passage revised since his own last text and linking it. The generativity chain changes through its maintenance record. AI-written text keeps its AI label.
+Ren's words are provenance, not authority, kept verbatim in `sources/` in their own language, never the warrant for a claim or the order of the work; where they seem wrong, say so. His yes settles that a change is wanted, not its form: land the best version and say what differs. OPENING's first person is revised in place under a note naming what changed and linking his own last text; AI-written text keeps its label.
 
-Still his: pushing to the public remote, the licence, who is sent what, and money or machine time for runs. Prepare these fully, freezing designs included, without waiting on him. Only their release waits.
-
-This page changes by argument like any other text, with a before-copy kept. Only he changes the list above.
+Still his: pushing to the public remote, the licence, who is sent what, and money or machine time for runs. Prepare them fully, freezing designs included; only their release waits for him, and only he changes this list.
 
 ## Working together
 
-- Main stays one head. Claim on [the board](_process/BECOMING-WORKBOARD.md) before new Lean or a new result, and never reprove another session's item.
-- A landing claims the head with a clause on the board's [Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue), re-reads that line, and fast-forwards main. While a clause stands, nothing else commits to main, claim rows included. The coordinator orders slots.
-- Before landing, render, then run the strict check, links and `research-test` on the merged tree, with any checks the landing's area names, and land only when they pass. A commit that adds files the views count, scratch Lean included, renders and commits them.
-- Commit only owned paths, with `git commit -m … -- <paths>`. Commit messages name no person or AI and carry no co-author trailer. Re-read a shared file before editing it, and check every hunk before committing.
-- Never `git prune`, `gc --prune` or `git clean`, and never delete what the repository cannot regenerate. Unreachable commits get a `refs/salvage/…` ref first.
-- Propose any large agent fan-out with its count before running it.
+- Main is one head. Claim on the board before new Lean or a new result; never reprove another session's item.
+- A landing puts a clause on the board's [Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue), re-reads it and fast-forwards main; while it stands, nothing else commits to main. Slots go by readiness in the board's order, the coordinator settling conflicts; a clause with nothing running behind it comes off.
+- Before landing, render and commit the generated pages, then pass the strict check, links, `research-test` and the area's own checks on the merged tree.
+- Commit only owned paths (`git commit -m … -- <paths>`), naming no person or AI, with no co-author trailer. Re-read a shared file before editing it, and check every hunk.
+- Never `git prune`, `gc --prune` or `git clean`, or delete what cannot be regenerated; salvage unreachable commits to `refs/salvage/…` first. Propose a large agent fan-out, with its count, before running it.
 
 ## Records and text
 
-- A result's statement lives in its record and its home section (anchor `r-<record id>`). A change goes to both. Follow [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), starting with `make research-find QUERY=…`. A wrapper, recheck or rename is not another result, and corrections keep completed results, failed candidates and counterexamples.
-- Never hand-edit generated pages. Never refresh a source hash to silence a failure.
-- One text, not two: superseded material moves to a sibling `history/` with `research.py move`. Each live document is in one language, or English with a `NAME.zh.md` edition. Each front states its reading time, with a ten-minute part and an hour's path.
-- Use repository-relative links in documents. Save unique scratch work into the repository.
+- A result is stated in its record and its home section (anchor `r-<record id>`), and a change goes to both. [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), from `make research-find QUERY=…`, says what counts as a result and how failures are kept.
+- Never hand-edit generated pages, or refresh a source hash to silence a failure.
+- One live text; the superseded moves to a sibling `history/` by `research.py move`. One language per document, or English with a `NAME.zh.md` edition. Fronts state their reading time, with a ten-minute part and an hour's path. Links are repository-relative; scratch worth keeping goes into the repository.
