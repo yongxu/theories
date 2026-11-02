@@ -44,17 +44,17 @@ python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/CLASSICAL-TE
 
 The report gives, item by item, each quotation whose paragraph changed, each linked section that changed as its changed spans, each linked file or folder that changed or is new since the pin, and the results new in the dossier's main chapters that it does not link. Whatever its summary counts gets a line, under each item that links it. An anchor it cannot follow is listed: read those by hand. The cover and the codebook cite little: read them whole.
 
-**2. Read every flagged item against its chapter (run for philosophy only).** The dossier says what the chapter now says and no more. Three rules from the rehearsal:
+**2. Read every flagged item against its chapter (run for philosophy, logic, classical and Buddhist).** The dossier says what the chapter now says and no more. Three rules from the rehearsal:
 
 - A report line is not a fault. Open the chapter and decide. A long insertion is cut in the report, so never judge one from the report alone.
 - A new result goes in only where it bears on what the item asks this reader. Philosophy took the result on self-concern and C; it left holding for a reading to alignment, which already carries it. State every hypothesis the chapter states: the independent read of this step found two dropped.
 - If a chapter has answered a dossier's question or removed a known weakness, say so in the item, with the date. Do not delete it silently.
 
-Copy new Lean statements by script ([`lean_statements.py`](../rp2-philosophy/lean_statements.py); `Web.*` names need their full dotted form), since the checker compares every declaration in a Lean block with the sources, a definition whole and a theorem up to its proof. Run `python3 -B $KIT/check_dossiers.py` after each dossier. Record the pass in the dossier's *How this dossier was made* where it has one (philosophy, alignment), and move its pin in this page's table.
+Copy new Lean statements by script ([`lean_statements.py`](../rp2-philosophy/lean_statements.py); `Web.*` names need their full dotted form), since the checker compares every declaration in a Lean block with the sources, a definition whole and a theorem up to its proof. Run `python3 -B $KIT/check_dossiers.py` after each dossier. Record the pass in the dossier's *How this dossier was made* where it has one (philosophy, alignment), and record its new pin in the paragraph under this page's table and in step 1, whose counts stay as the rehearsal measured them.
 
-**3. An independent read of each changed dossier (run for philosophy).** One AI reader per dossier, read-only and with no part in the writing, given the diff, the chapter and the Lean; every finding taken or its refusal recorded. That is up to five agents, so state the count to the coordinator first. Check a reader's findings against the sources before taking them.
+**3. An independent read of each changed dossier (run for the same four).** One AI reader per dossier, read-only and with no part in the writing, given the diff, the chapter and the Lean; every finding taken or its refusal recorded. That is up to five agents, so state the count to the coordinator first. Check a reader's findings against the sources before taking them.
 
-**4. Re-measure, and correct what the dossiers state (run for philosophy).**
+**4. Re-measure, and correct what the dossiers state (run for the same four).**
 
 ```bash
 python3 -B _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/kit/measure_layers.py
@@ -62,9 +62,9 @@ python3 -B _process/research/2026-10-05-generative-foundation-review/root-founda
 
 A moved time changes in three places: the dossier's own statement of its time, the row in `README.md` and in `README.zh.md`, and [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md) lines 32 and 35. A front over budget keeps what amendment 1 says may not be cut and moves the rest down a layer; what it keeps beyond that it records, with the reason.
 
-**5. If main has moved, merge it and re-run step 1 with the last C as the pin (not run).** The commit of main it brought is the new C. Repeat until nothing landed since is unread. The coordinator can shorten this by holding landings that change the chapters.
+**5. If main has moved, merge it and re-run step 1 with the last C as the pin (run at the landing of 3 November 2026).** The commit of main it brought is the new C. Repeat until nothing landed since is unread. The coordinator can shorten this by holding landings that change the chapters.
 
-**6. Set the one pin a dossier states (not run).** `CLASSICAL-TEXTS.md` line 5 names the version it was checked against. Set it to C, with C's date. No other dossier states a commit it was checked against, and this goes last because C can move.
+**6. Set the one pin a dossier states (run at the same landing; it comes again at the freeze).** `CLASSICAL-TEXTS.md` line 5 names the version it was checked against. Set it to C, with C's date. No other dossier states a commit it was checked against, and this goes last because C can move.
 
 **7. Freeze which sampled units the dossiers quote (run).** This reads the final dossiers, so it comes after them, and its file belongs to the frozen commit.
 
