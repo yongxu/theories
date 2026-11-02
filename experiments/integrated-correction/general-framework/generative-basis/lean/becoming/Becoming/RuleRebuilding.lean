@@ -9,9 +9,7 @@ members of the family differ in where the rule is taught from: the members, outs
 Plan §十三 item 9 asks for a model of each of plan §六's test systems; the member taught by members is
 this family's model of one kind of institution, an entry rule on a shared stock, passed through
 members who also keep it, with no compliance and no records. It is not a definition of an
-institution. What ends a shared stock is `Flow`'s and is cited, not reproved: takers each within what
-is renewed can together exceed it (`Flow.joint_excess_ends`, `Flow.outrun_ends`, 05 §1). No bridge to
-those statements is proved here.
+institution.
 
 Write `s` for the tenure, `l` the teaching age, `g` the renewal, `f` the count who would come
 untaught, `c` the strength of the door. One step, given whether entrants are on offer and a
@@ -19,7 +17,10 @@ revision, both chosen at each step, in this order:
 
 1. **The end, and the step stops.** Each member draws one unit, so the take is the count of members.
    Where the level is `0`, or the take exceeds the level and the renewal, the state becomes level
-   `0` with no member, its quota kept. Nothing renews from empty.
+   `0` with no member, its quota kept. Nothing renews from empty. This clause is a modelling choice
+   with the form of `Flow`'s gated ending (`Flow.joint_excess_ends`, 05 §1), and no law here uses
+   `Flow`. The take conditions below (L1's end, L2's third conjunct, L8's end, L9, L13) exist because
+   of it.
 2. **Draw and renew.** The level becomes `level + g − take`.
 3. **Teachers.** `T` is the count of holders of age at least `l`, read before ageing.
 4. **Enter**, as a new cohort, zero in both lists without entrants on offer. Others: `f − c · T`,
@@ -30,12 +31,16 @@ revision, both chosen at each step, in this order:
    outside, the quota becomes the revision.
 
 **The split and its basis.** Holder and other are not two kinds of thing. They differ in one
-relation: whether the rule has passed to this member through another who held it, and that member
-then passes it and turns others away. Both draw alike; a keeper's cost is its own draw on what it
-keeps, added by nothing else. The level is what they share, read here only by how much of it is
-drawn. Nothing here is a utility, and no interest is assumed, opposed or common. So "holder" is a
-count and the door a formula: recognition, compliance and implementation are one bit here, and the
-laws say nothing of them.
+relation: whether a member's cohort entered holding the rule. Taught by members, a cohort enters
+holding only where holders of at least the teaching age stand; no pair of teacher and pupil is
+modelled, only that count. The same count sets the door. Both draw alike, so a keeper draws on what it
+keeps, added by nothing else, and nothing here is a cost of keeping beyond that. The quota is a fill
+and not a limit: holders enter at the quota wherever any teacher stands, even where no one would come
+untaught, and the door reads the teachers and never the quota. What limits is the teachers' count.
+The level is what the members share, read here only by how much of it is drawn. Nothing here is a
+utility, and no interest is assumed, opposed or common. So "holder" is a count and the door a
+formula: recognition, compliance and implementation are one bit here, and the laws say nothing of
+them.
 
 Write `e q := f − c · q · (s − l)`, the leak at a quota, and `steady q L` for the state with `q`
 holders and `e q` others in each of `s` cohorts.
@@ -45,13 +50,14 @@ holders and `e q` others in each of `s` cohorts.
   `A = g + d` spends `d` a step (`«恒取逾生则减»`) and ends in `gone` (`«恒取逾生则尽»`).
 * **The band** (L2). `.members`, entrants on offer at every step, no revision, `1 ≤ L`: from `steady q
   L` the rule is held at every step exactly where `l < s`, `1 ≤ q` and `(q + e q) · s ≤ g`
-  (`«稳者恒持当且仅当在带»`); the same taught from outside wherever `l < s` (`«外授之稳同带»`). This
-  is the steady state's law and not the rule's: see the gaps.
-* **Closed form** (L3). With `C := c · (s − l)`, `(q + e q) · s ≤ g` exactly where `q · s ≤ g` and
-  `(f + q) · s ≤ g + C · q · s` (`«带之闭式»`). A quota can be too small only at `C ≥ 2`, where a
-  keeper turns away more than itself (`«额小而不足者门必过一»`). The band at `1, 0, 2, 4, 2` is
-  `q = 2` (`«带唯二»`), at `4, 2, 20, 6, 1` it is `1 ≤ q ≤ 5` (`«带一至五»`), and at `4, 3, 20, 6, 1`
-  it is empty though `l < s` (`«带无»`).
+  (`«稳者恒持当且仅当在带»`); the same taught from outside wherever `l < s` (`«外授之稳同带»`). `Held`
+  reads the level only through step 1's clause, so the third conjunct is that clause at this take.
+  This is the steady state's law and not the rule's: see the gaps.
+* **Without the truncation** (L3). With `C := c · (s − l)`, `(q + e q) · s ≤ g` exactly where
+  `q · s ≤ g` and `(f + q) · s ≤ g + C · q · s` (`«带之二式»`). A quota can be too small only at
+  `C ≥ 2`, where a keeper turns away more than itself (`«额小而不足者门必过一»`). The band at
+  `1, 0, 2, 4, 2` is `q = 2` (`«带唯二»`), at `4, 2, 20, 6, 1` it is `1 ≤ q ≤ 5` (`«带一至五»`), and at
+  `4, 3, 20, 6, 1` it is empty though `l < s` (`«带无»`).
 * **The region** (L4). `Within P Q` is closed under every step with entrants on offer and a revision
   in `[P, Q]`, and the level does not fall (`«域闭»`, `«域中储不减»`). The steady state is a case
   (`«稳为域之例»`), and such a region exists with room for revision (`«域可得»`).
@@ -64,38 +70,49 @@ holders and `e q` others in each of `s` cohorts.
   then read by nothing.
 * **The end is closed** (L7). Every source (`«尽而不复»`). This is the model's choice that nothing
   renews from empty.
-* **Open entry** (L8). No holder, entrants on offer, `1 ≤ s`: where `f · s ≤ g`, `1 ≤ f` and the
-  others fit, others are present after every step and the level does not fall
-  (`«无持而门开不逾生则存»`); where `g < f · s`, it is `gone` at some step, from every level and any
-  others (`«无持而门开逾生则尽»`).
-* **What the rule does** (L9). Comparing `steady q L` with no holder and `f` others in each cohort,
-  the two tests make four cases: both go on, the rule saves the level, the rule ends the level, both
-  end (`«门之四境»`), and each case occurs (`«四境皆有»`). Saving needs `C ≥ 2` (`«救储者门必过一»`);
-  ending needs `f < q + e q`, so the rule admits more than would have come or turns no one away
-  (`«毁储者所入过来者»`).
-* **Self-revision** (L10). A revision in `[P, Q]` stays in the region (L4). A revision to `0` drains
-  (`«改额为零则尽»`). Outside the band no law holds of a revision: below it and above it, both reach
-  level `0` from the band's one quota at L3's first witness (`«改于带外则尽»`).
+* **Open entry** (L8). No holder, entrants on offer: where `f · s ≤ g`, a level of at least one and
+  the others fit, the level does not fall (`«无持而门开不逾生则存»`), and with `1 ≤ s`, `1 ≤ f` others
+  are present after every step (`«无持而门开众在»`). Where `1 ≤ s` and `g < f · s`, it is `gone` at
+  some step, from every level and any others (`«无持而门开逾生则尽»`).
+* **Two starts compared** (L9). `steady q L`, and no holder with `f` others in each cohort at the same
+  level, are two separately started states; the second is not reached from the first by this course.
+  The first's level goes on exactly where `(q + e q) · s ≤ g`, the second's exactly where
+  `f · s ≤ g`, and otherwise each is `gone` at some step (`«稳开二试»`, `«存尽相斥»`). So there are two
+  tests, each its own. All four combinations of their arithmetic occur (`«四境皆有»`). Where only the
+  steady state's holds, `2 ≤ C` (`«稳存而开不存则门过一»`); where only open entry's holds, the quota
+  alone exceeds those who would come or the door turns no one away (`«开存而稳不存之式»`, from
+  `«入过来者之式»`).
+* **Self-revision** (L10). A revision in `[P, Q]` stays in the region (L4). A revision to `0` empties
+  the holders (`«改额为零则持尽»`). The band does not settle what follows a revision, at the witnesses
+  of `«带不定改后»`: below it and above it level `0` follows at one rule, below it the level is still
+  present at step 20 at another, and between two quotas in the band level `0` follows at a third, where
+  they make no region. The law of a revision is the region, not the band.
 * **The family** (L11). After an empty membership, taught from outside the rule has holders after one
-  step, and otherwise not (`«三源之表»`); taught from outside it enters at every step that does not
-  end, also at `s ≤ l` (`«外授者即入»`).
+  step, and otherwise not (`«三源之表»`); taught from outside the new cohort is the quota at every step
+  that does not end, also at `s ≤ l` (`«外授者即入»`).
 * **Replaced** (L12, definitional). After `s` steps with no end every holder cohort is one entered in
   those steps (`«任满皆新»`); in the region the rule is held, at the quotas then standing, with
   nothing of the start among the holders (`«域中任满皆新»`).
 * **Gaps** (L13). At `l = s − 1` each cohort teaches exactly the one that replaces it, so `k ≥ 1` held
   cohorts and `z` empty ones only rotate, and the rule is held at every step exactly where
-  `k · (q + e) + z · f ≤ g`, with `e := f − c · q` (`«隙之律»`). `k` sets both how many pass the rule
-  and how many keep the door. It can hold where the steady state cannot (`«隙存而稳不存»`), and end
-  the level while held where the steady state would not (`«稳存而隙不存»`, reached by a revision in
-  `«改而成隙则尽»`).
-* **The same rule, read at a class.** A step with a revision continues under "held or not" and not
-  under "the same quota" (`«同规随类»`): 01 §2's `«任一缘可为续»` with these occurrences. Whether it
-  is the same institution is read at a class, as of everything; nothing new is claimed.
+  `k · (q + e) + z · f ≤ g`, with `e := f − c · q` (`«隙之律»`); over that bound it is held to the last
+  state before `gone` (`«隙过生持至尽»`). Passing needs only `k ≥ 1`. `k` sets on how many of the `s`
+  steps, in rotation, the door is kept and the rule passed, so the take is the steady state's on `k`
+  cohorts and open entry's on `z`. Gaps hold where the steady state does not only where a cohort of it
+  exceeds open entry's, and open entry would go on too (`«隙存而稳不存之式»`, a witness
+  `«隙存而稳不存»`); the steady state goes on where gaps do not only where a keeper turns away more than
+  itself, and open entry would end (`«稳存而隙不存之式»`, a witness `«稳存而隙不存»`, reached by a
+  revision in `«改而成隙则尽»`).
+* **The same rule, read at a class.** A step with a revision inside the region continues under the
+  class "held or not" and not under the class "the same quota" (`«同规随类»`, at one rule): 01 §2's
+  `«任一缘可为续»` with these occurrences. Whether it is the same institution is read at a class, as of
+  everything; nothing new is claimed.
 
-**Not proved here:** a classification of the ends; laws for states with gaps at `l < s − 1`; a bridge
-to `Flow`. **Not modelled:** why a teacher turns anyone away or what it costs beyond its draw, conduct
-other than entry, sanctions, who decides a revision, mixed tenures, schism, records, partial passing,
-purposes, and capture (the revision is a free branch, not chosen by those it favours).
+**Not proved here:** a classification of the ends; laws for states with gaps at `l < s − 1`; the
+interval of quotas `«带之二式»` solves to; a bridge to `Flow`. **Not modelled:** why a teacher turns
+anyone away, conduct other than entry, sanctions, who decides a revision, mixed tenures, schism,
+records, partial passing, purposes, and capture (the revision is a free branch, not chosen by those it
+favours).
 
 The model's assumptions are its rule: whole units, discrete steps, one unit a member a step, one
 quota in common, one tenure, one age from which a holder both teaches and keeps the door, a constant
@@ -229,7 +246,8 @@ def Gone (x : St) : Prop := x.level = 0 ∧ sumL x.holders = 0 ∧ sumL x.others
 def leak (r : Rule) (q : Nat) : Nat :=
   r.untaught - r.strength * q * (r.tenure - r.teachingAge)
 
-/-- The state whose next step is itself with another level. -/
+/-- `q` holders and the leak's others in each of `s` cohorts. Where `l < s` and `1 ≤ q`, a step with
+entrants on offer that does not end returns it with another level (`onward_steady`). -/
 def steady (r : Rule) (q L : Nat) : St :=
   ⟨q, L, List.replicate r.tenure q, List.replicate r.tenure (leak r q)⟩
 
@@ -1018,9 +1036,10 @@ theorem leak_eq (r : Rule) (q : Nat) :
   rw [mul_assoc' r.strength q, mul_assoc' r.strength (r.tenure - r.teachingAge),
     Nat.mul_comm q]
 
-/-- **The band in closed form (L3).** With `C := c · (s − l)`: `(q + e q) · s ≤ g` exactly where
-`q · s ≤ g` and `(f + q) · s ≤ g + C · q · s`. -/
-theorem «带之闭式» (r : Rule) (q : Nat) :
+/-- **The band's take without its truncation (L3).** With `C := c · (s − l)`: `(q + e q) · s ≤ g`
+exactly where `q · s ≤ g` and `(f + q) · s ≤ g + C · q · s`. `q` stays on both sides: the interval of
+quotas it solves to is not stated. -/
+theorem «带之二式» (r : Rule) (q : Nat) :
     (q + leak r q) * r.tenure ≤ r.renewal ↔
       q * r.tenure ≤ r.renewal ∧
         (r.untaught + q) * r.tenure ≤
@@ -1081,8 +1100,11 @@ def rB : Rule := ⟨4, 2, 20, 6, 1, .members⟩
 /-- The rule of L3's third witness. -/
 def rC : Rule := ⟨4, 3, 20, 6, 1, .members⟩
 
+/-- A rule with room for its steady state and for open entry. -/
+def rF : Rule := ⟨2, 1, 10, 2, 1, .members⟩
+
 theorem band_bound {r : Rule} {q : Nat} (h : Band r q) : q * r.tenure ≤ r.renewal :=
-  ((«带之闭式» r q).mp h.2.2).1
+  ((«带之二式» r q).mp h.2.2).1
 
 /-- **Only one quota (L3's witness).** At `s, l, g, f, c = 1, 0, 2, 4, 2` the band is `q = 2`: a
 quota of one is too small, and a keeper here turns away more than itself. -/
@@ -1256,6 +1278,10 @@ theorem «稳为域之例» {r : Rule} (hm : r.source = .members) {q L : Nat} (h
     Nat.le_of_eq (length_replicate' _ _), each_replicate (p := (· ≤ leak r q)) (Nat.le_refl _) _,
     Nat.le_refl q, Nat.le_refl q, hL⟩
 
+/-- **A region with room for revision (L4's premise met).** At `4, 2, 20, 6, 1` the quotas from `3` to
+`5` make a region. -/
+theorem «域可得» : Fits rB 3 5 := ⟨rfl, by decide, by decide, by decide, by decide⟩
+
 /-! ## Open entry after the rule (L8) -/
 
 theorem door_no_holder {r : Rule} {x : St} (hx : NoHolder x) : door r true x = r.untaught := by
@@ -1270,46 +1296,48 @@ theorem sum_keep_cons_pos {s a : Nat} (xs : List Nat) (hs : 1 ≤ s) (ha : 1 ≤
     show 0 < a + sumL (keep s xs)
     exact Nat.lt_of_lt_of_le ha (Nat.le_add_right _ _)
 
+theorem open_not_ends {r : Rule} (hA : r.untaught * r.tenure ≤ r.renewal) {y : St} (hy : NoHolder y)
+    (hl : y.others.length ≤ r.tenure) (he : Each (· ≤ r.untaught) y.others) (hl1 : 1 ≤ y.level) :
+    ¬ Ends r y ∧ take y ≤ r.renewal := by
+  have ht : take y ≤ r.renewal := by
+    show sumL y.holders + sumL y.others ≤ r.renewal
+    rw [show sumL y.holders = 0 from hy, Nat.zero_add]
+    have h1 : sumL y.others ≤ r.tenure * r.untaught := sum_le_of_each he hl
+    rw [Nat.mul_comm] at h1
+    exact Nat.le_trans h1 hA
+  exact ⟨not_ends hl1 (Nat.le_trans ht (Nat.le_add_left _ _)), ht⟩
+
 /-- **Open entry within the renewal goes on (L8).** No holder, taught by members or not at all,
-entrants on offer at every step, `1 ≤ s`, `1 ≤ f`, `f · s ≤ g`, a level of at least one, at most `s`
-other cohorts each at most `f`: the level does not fall, and others are present after every step. -/
+entrants on offer at every step, `f · s ≤ g`, a level of at least one, at most `s` other cohorts each
+at most `f`: the level does not fall, and the others stay as they were bounded. -/
 theorem «无持而门开不逾生则存» {r : Rule} (hs : r.source = .members ∨ r.source = .none)
-    {c : Nat → Move} (hon : ∀ i, (c i).on = true) (hsp : 1 ≤ r.tenure) (hf : 1 ≤ r.untaught)
+    {c : Nat → Move} (hon : ∀ i, (c i).on = true)
     (hA : r.untaught * r.tenure ≤ r.renewal) {x : St} (hx : NoHolder x)
     (hlen : x.others.length ≤ r.tenure) (he : Each (· ≤ r.untaught) x.others) (hL : 1 ≤ x.level) :
     ∀ k, x.level ≤ (run r c k x).level ∧ (run r c k x).others.length ≤ r.tenure ∧
-      Each (· ≤ r.untaught) (run r c k x).others ∧ 0 < sumL (run r c (k + 1) x).others := by
-  have hne : ∀ y : St, NoHolder y → y.others.length ≤ r.tenure → Each (· ≤ r.untaught) y.others →
-      1 ≤ y.level → ¬ Ends r y ∧ take y ≤ r.renewal := by
-    intro y hy hl he hl1
-    have ht : take y ≤ r.renewal := by
-      show sumL y.holders + sumL y.others ≤ r.renewal
-      rw [show sumL y.holders = 0 from hy, Nat.zero_add]
-      have h1 : sumL y.others ≤ r.tenure * r.untaught := sum_le_of_each he hl
-      rw [Nat.mul_comm] at h1
-      exact Nat.le_trans h1 hA
-    exact ⟨not_ends hl1 (Nat.le_trans ht (Nat.le_add_left _ _)), ht⟩
-  have base : ∀ k, x.level ≤ (run r c k x).level ∧ (run r c k x).others.length ≤ r.tenure ∧
-      Each (· ≤ r.untaught) (run r c k x).others := by
-    intro k
-    induction k with
-    | zero => exact ⟨Nat.le_refl _, hlen, he⟩
-    | succ k ih =>
-      obtain ⟨h1, h2, h3⟩ := ih
-      obtain ⟨hn, ht⟩ := hne _ (run_no_holder hs c hx k) h2 h3 (Nat.le_trans hL h1)
-      show x.level ≤ (step r (c k) (run r c k x)).level ∧
-        (step r (c k) (run r c k x)).others.length ≤ r.tenure ∧
-        Each (· ≤ r.untaught) (step r (c k) (run r c k x)).others
-      rw [step_onward _ hn]
-      refine ⟨Nat.le_trans h1 (level_onward_kept _ ht), length_keep_le _ _, ?_⟩
-      apply each_keep
-      show door r (c k).on (run r c k x) ≤ r.untaught ∧ _
-      rw [hon k, door_no_holder (run_no_holder hs c hx k)]
-      exact ⟨Nat.le_refl _, h3⟩
-  intro k
-  obtain ⟨h1, h2, h3⟩ := base k
-  refine ⟨h1, h2, h3, ?_⟩
-  obtain ⟨hn, _⟩ := hne _ (run_no_holder hs c hx k) h2 h3 (Nat.le_trans hL h1)
+      Each (· ≤ r.untaught) (run r c k x).others
+  | 0 => ⟨Nat.le_refl _, hlen, he⟩
+  | k + 1 => by
+    obtain ⟨h1, h2, h3⟩ := «无持而门开不逾生则存» hs hon hA hx hlen he hL k
+    obtain ⟨hn, ht⟩ := open_not_ends hA (run_no_holder hs c hx k) h2 h3 (Nat.le_trans hL h1)
+    show x.level ≤ (step r (c k) (run r c k x)).level ∧
+      (step r (c k) (run r c k x)).others.length ≤ r.tenure ∧
+      Each (· ≤ r.untaught) (step r (c k) (run r c k x)).others
+    rw [step_onward _ hn]
+    refine ⟨Nat.le_trans h1 (level_onward_kept _ ht), length_keep_le _ _, ?_⟩
+    apply each_keep
+    show door r (c k).on (run r c k x) ≤ r.untaught ∧ _
+    rw [hon k, door_no_holder (run_no_holder hs c hx k)]
+    exact ⟨Nat.le_refl _, h3⟩
+
+/-- **Others are present after every step of open entry (L8).** With `1 ≤ s` and `1 ≤ f` besides. -/
+theorem «无持而门开众在» {r : Rule} (hs : r.source = .members ∨ r.source = .none)
+    {c : Nat → Move} (hon : ∀ i, (c i).on = true) (hsp : 1 ≤ r.tenure) (hf : 1 ≤ r.untaught)
+    (hA : r.untaught * r.tenure ≤ r.renewal) {x : St} (hx : NoHolder x)
+    (hlen : x.others.length ≤ r.tenure) (he : Each (· ≤ r.untaught) x.others) (hL : 1 ≤ x.level)
+    (k : Nat) : 0 < sumL (run r c (k + 1) x).others := by
+  obtain ⟨h1, h2, h3⟩ := «无持而门开不逾生则存» hs hon hA hx hlen he hL k
+  obtain ⟨hn, _⟩ := open_not_ends hA (run_no_holder hs c hx k) h2 h3 (Nat.le_trans hL h1)
   show 0 < sumL (step r (c k) (run r c k x)).others
   rw [step_onward _ hn]
   show 0 < sumL (keep r.tenure (door r (c k).on (run r c k x) :: _))
@@ -1369,7 +1397,7 @@ theorem «无持而门开逾生则尽» {r : Rule} (hs : r.source = .members ∨
       ⟨run_no_holder hs c hx _, hO⟩
     exact ⟨r.tenure + (k + 1), by rw [run_add]; exact hg⟩
 
-/-! ## What the rule does (L9) -/
+/-! ## Two starts compared (L9) -/
 
 /-- The level is present at every step. -/
 def Goes (r : Rule) (x : St) : Prop := ∀ k, 1 ≤ (run r always k x).level
@@ -1377,51 +1405,47 @@ def Goes (r : Rule) (x : St) : Prop := ∀ k, 1 ≤ (run r always k x).level
 /-- It is `gone` at some step. -/
 def EndsUp (r : Rule) (x : St) : Prop := ∃ k, Gone (run r always k x)
 
+/-- A level present at every step is never `gone`. -/
+theorem «存尽相斥» {r : Rule} {x : St} (h : Goes r x) : ¬ EndsUp r x := by
+  intro he
+  obtain ⟨k, hg⟩ := he
+  have h1 := h k
+  rw [hg.1] at h1
+  exact Nat.not_succ_le_zero 0 h1
+
 theorem nobody_no_holder (r : Rule) (q L : Nat) : NoHolder (nobody r q L) := by
   show sumL (List.replicate r.tenure 0) = 0
   rw [sumL_replicate, Nat.mul_zero]
 
-theorem nobody_goes {r : Rule} (hs : r.source = .members ∨ r.source = .none) (hsp : 1 ≤ r.tenure)
-    (hf : 1 ≤ r.untaught) (hA : r.untaught * r.tenure ≤ r.renewal) {q L : Nat} (hL : 1 ≤ L) :
-    Goes r (nobody r q L) := fun k =>
-  Nat.le_trans hL («无持而门开不逾生则存» hs (fun _ => rfl) hsp hf hA (nobody_no_holder r q L)
-    (Nat.le_of_eq (length_replicate' _ _)) (each_replicate (p := (· ≤ r.untaught)) (Nat.le_refl _) _) hL k).1
-
-theorem nobody_ends {r : Rule} (hs : r.source = .members ∨ r.source = .none) (hsp : 1 ≤ r.tenure)
-    (hA : r.renewal < r.untaught * r.tenure) (q L : Nat) : EndsUp r (nobody r q L) :=
-  «无持而门开逾生则尽» hs (fun _ => rfl) hsp hA (nobody_no_holder r q L)
-
-/-- **What the rule does (L9).** `.members`, `l < s`, `1 ≤ q`, `1 ≤ L`, `1 ≤ f`. Compare the steady
-state with no holder, `f` others in `s` cohorts and the same level. Neither the rule's being present
-nor its being held decides: where both take within the renewal both go on; where the steady state
-alone does, the rule saves the level; where open entry alone does, the rule ends the level; and
-where neither does, both end. -/
-theorem «门之四境» {r : Rule} (hm : r.source = .members) (hl : r.teachingAge < r.tenure) {q L : Nat}
-    (hq : 1 ≤ q) (hL : 1 ≤ L) (hf : 1 ≤ r.untaught) :
-    ((q + leak r q) * r.tenure ≤ r.renewal → r.untaught * r.tenure ≤ r.renewal →
-      Goes r (steady r q L) ∧ Goes r (nobody r q L)) ∧
-    ((q + leak r q) * r.tenure ≤ r.renewal → r.renewal < r.untaught * r.tenure →
-      Goes r (steady r q L) ∧ EndsUp r (nobody r q L)) ∧
-    (r.renewal < (q + leak r q) * r.tenure → r.untaught * r.tenure ≤ r.renewal →
-      EndsUp r (steady r q L) ∧ Goes r (nobody r q L)) ∧
-    (r.renewal < (q + leak r q) * r.tenure → r.renewal < r.untaught * r.tenure →
-      EndsUp r (steady r q L) ∧ EndsUp r (nobody r q L)) := by
+/-- **Two tests, each its own (L9).** `.members`, `l < s`, `1 ≤ q`, `1 ≤ L`. Compare two separately
+started states: `steady q L`, and no holder with `f` others in each of `s` cohorts at the same level.
+The first's level goes on exactly where `(q + e q) · s ≤ g`, and otherwise it is `gone` at some step.
+The second's goes on exactly where `f · s ≤ g`, and otherwise likewise. The second state is not reached
+from the first by this course. Both tests turn on step 1's clause, that all members leave where the
+take exceeds what the level and the renewal can give. -/
+theorem «稳开二试» {r : Rule} (hm : r.source = .members) (hl : r.teachingAge < r.tenure) {q L : Nat}
+    (hq : 1 ≤ q) (hL : 1 ≤ L) :
+    (Goes r (steady r q L) ↔ (q + leak r q) * r.tenure ≤ r.renewal) ∧
+    (Goes r (nobody r q L) ↔ r.untaught * r.tenure ≤ r.renewal) ∧
+    (r.renewal < (q + leak r q) * r.tenure → EndsUp r (steady r q L)) ∧
+    (r.renewal < r.untaught * r.tenure → EndsUp r (nobody r q L)) := by
   have hsp : 1 ≤ r.tenure := Nat.lt_of_le_of_lt (Nat.zero_le _) hl
-  have hS : (q + leak r q) * r.tenure ≤ r.renewal → Goes r (steady r q L) := fun h k =>
-    Nat.le_trans hL (steady_kept (Or.inl hm) hl hq h hL k).2
   have hE : r.renewal < (q + leak r q) * r.tenure → EndsUp r (steady r q L) := fun h => by
     obtain ⟨k, hg, _⟩ := steady_ends (Or.inl hm) hl hq h L
     exact ⟨k + 1, hg⟩
-  have hN : r.untaught * r.tenure ≤ r.renewal → Goes r (nobody r q L) := fun h =>
-    nobody_goes (Or.inl hm) hsp hf h hL
   have hO : r.renewal < r.untaught * r.tenure → EndsUp r (nobody r q L) := fun h =>
-    nobody_ends (Or.inl hm) hsp h q L
-  exact ⟨fun a b => ⟨hS a, hN b⟩, fun a b => ⟨hS a, hO b⟩,
-    fun a b => ⟨hE a, hN b⟩, fun a b => ⟨hE a, hO b⟩⟩
+    «无持而门开逾生则尽» (Or.inl hm) (fun _ => rfl) hsp h (nobody_no_holder r q L)
+  refine ⟨⟨fun h => Nat.le_of_not_lt fun hA => «存尽相斥» h (hE hA), fun h k =>
+      Nat.le_trans hL (steady_kept (Or.inl hm) hl hq h hL k).2⟩,
+    ⟨fun h => Nat.le_of_not_lt fun hA => «存尽相斥» h (hO hA), fun h k =>
+      Nat.le_trans hL («无持而门开不逾生则存» (Or.inl hm) (fun _ => rfl) h (nobody_no_holder r q L)
+        (Nat.le_of_eq (length_replicate' _ _))
+        (each_replicate (p := (· ≤ r.untaught)) (Nat.le_refl _) _) hL k).1⟩, hE, hO⟩
 
-/-- **A rule saves the level only where a keeper turns away more than itself (L9).** Where the steady
-state takes within the renewal and open entry does not, `2 ≤ c · (s − l)`. -/
-theorem «救储者门必过一» {r : Rule} {q : Nat} (hA : (q + leak r q) * r.tenure ≤ r.renewal)
+/-- **The steady state alone going on needs a door of more than one (L9).** Where the steady state
+takes within the renewal and open entry does not, `2 ≤ c · (s − l)`: a keeper turns away more than
+itself. -/
+theorem «稳存而开不存则门过一» {r : Rule} {q : Nat} (hA : (q + leak r q) * r.tenure ≤ r.renewal)
     (hf : r.renewal < r.untaught * r.tenure) : 2 ≤ r.strength * (r.tenure - r.teachingAge) := by
   apply Nat.lt_of_not_le
   intro hC
@@ -1434,13 +1458,47 @@ theorem «救储者门必过一» {r : Rule} {q : Nat} (hA : (q + leak r q) * r.
     exact le_add_sub_of_le _ ht
   exact Nat.lt_irrefl _ (Nat.lt_of_lt_of_le hf (Nat.le_trans (Nat.mul_le_mul_right _ h1) hA))
 
-/-- **A rule ends the level only by admitting more than would have come (L9).** Where open entry
-takes within the renewal and the steady state does not, `f < q + e q`: it admits more than would
-have come, or turns no one away. -/
-theorem «毁储者所入过来者» {r : Rule} {q : Nat} (hA : r.renewal < (q + leak r q) * r.tenure)
-    (hf : r.untaught * r.tenure ≤ r.renewal) : r.untaught < q + leak r q := by
-  apply Nat.lt_of_not_le
-  intro h
+/-- With `1 ≤ q`, a cohort of the steady state is larger than those who would come untaught exactly
+where the quota alone exceeds them or the door turns no one away. -/
+theorem «入过来者之式» (r : Rule) {q : Nat} (hq : 1 ≤ q) :
+    r.untaught < q + leak r q ↔
+      r.untaught < q ∨ r.strength * (r.tenure - r.teachingAge) = 0 := by
+  rw [leak_eq]
+  generalize r.strength * (r.tenure - r.teachingAge) = C
+  generalize r.untaught = f
+  constructor
+  · intro h
+    cases C with
+    | zero => exact Or.inr rfl
+    | succ n =>
+      refine Or.inl (Nat.lt_of_not_le fun hqf => ?_)
+      obtain ⟨k, e⟩ := exists_of_le hqf
+      have hqt : q ≤ (n + 1) * q := by
+        rw [Nat.succ_mul]
+        exact Nat.le_add_left _ _
+      have h1 : f - (n + 1) * q ≤ f - q := sub_le_sub_left' f hqt
+      have h2 : f - q = k := by
+        rw [e, Nat.add_comm]
+        exact add_sub_cancel' k q
+      rw [h2] at h1
+      have h3 : q + (f - (n + 1) * q) ≤ f := by
+        rw [e] at h1 ⊢
+        exact Nat.add_le_add_left h1 q
+      exact Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h h3)
+  · intro h
+    cases h with
+    | inl h => exact Nat.lt_of_lt_of_le h (Nat.le_add_right _ _)
+    | inr h =>
+      rw [h, Nat.zero_mul, Nat.sub_zero, Nat.add_comm]
+      exact Nat.add_le_add_left hq f
+
+/-- **The steady state alone ending, from what it admits (L9).** Where open entry takes within the
+renewal and the steady state does not, with `1 ≤ q`: the quota alone exceeds those who would come
+untaught, or the door turns no one away. -/
+theorem «开存而稳不存之式» {r : Rule} {q : Nat} (hq : 1 ≤ q)
+    (hA : r.renewal < (q + leak r q) * r.tenure) (hf : r.untaught * r.tenure ≤ r.renewal) :
+    r.untaught < q ∨ r.strength * (r.tenure - r.teachingAge) = 0 := by
+  refine («入过来者之式» r hq).mp (Nat.lt_of_not_le fun h => ?_)
   exact Nat.lt_irrefl _ (Nat.lt_of_lt_of_le hA (Nat.le_trans (Nat.mul_le_mul_right _ h) hf))
 
 /-! ## Self-revision (L10) -/
@@ -1451,10 +1509,10 @@ theorem reviseHeld_some {n : Nat} (h : 0 < n) (q v : Nat) :
   | zero => exact absurd h (Nat.lt_irrefl 0)
   | succ n => rfl
 
-/-- **A revision to nothing drains (L10).** `.members`, a holder standing, holders of at most `s`
-cohorts: a revision to `0` with no revision to a nonzero quota after it leaves no holder `s` steps
-after it. So the rule can take itself out by the route of L5. -/
-theorem «改额为零则尽» {r : Rule} (hm : r.source = .members) {x : St} (hx : Held x) (on : Bool)
+/-- **A revision to nothing drains (L10).** `.members`, a holder standing: a revision to `0` with no
+revision to a nonzero quota after it leaves no holder `s` steps after it, on or off. So the rule can
+take itself out by the route of L5. -/
+theorem «改额为零则持尽» {r : Rule} (hm : r.source = .members) {x : St} (hx : Held x) (on : Bool)
     {c : Nat → Move} (hrev : ∀ i v, (c i).rev = Option.some v → v = 0) :
     ∀ k, r.tenure ≤ k →
       sumL (run r c k (step r ⟨on, Option.some 0⟩ x)).holders = 0 := by
@@ -1474,13 +1532,19 @@ def onceAt (v : Nat) : Nat → Move
   | 0 => ⟨true, Option.some v⟩
   | _ + 1 => ⟨true, Option.none⟩
 
-/-- **Outside the band, on either side, no law holds of a revision (L10's witnesses).** At L3's first
-witness, the steady state at the band's one quota, level one, revised once to a quota below the band
-or to one above it, reaches level `0`: a stricter rule ends the level here. -/
-theorem «改于带外则尽» :
+/-- **The band does not settle what follows a revision (L10's witnesses).** Each at one rule, from the
+steady state at level one, with one revision at the first step. Below the band and above it, level
+`0` follows at `rA`; below the band, the level is still present at step 20 at `rF`; from one quota in
+the band to another, level `0` follows at `rB`, where those quotas make no region. The law of a
+revision is the region (`«域闭»`), not the band. -/
+theorem «带不定改后» :
     (run rA (onceAt 1) 5 (steady rA 2 1)).level = 0 ∧
-      (run rA (onceAt 3) 3 (steady rA 2 1)).level = 0 := by
-  decide
+      (run rA (onceAt 3) 3 (steady rA 2 1)).level = 0 ∧
+      1 ≤ (run rF (onceAt 0) 20 (steady rF 1 1)).level ∧
+      Band rB 1 ∧ Band rB 5 ∧ ¬ Fits rB 1 5 ∧ (run rB (onceAt 5) 4 (steady rB 1 1)).level = 0 := by
+  refine ⟨by decide, by decide, by decide, by decide, by decide, ?_, by decide⟩
+  intro h
+  exact absurd h.2.2.2.2 (by decide)
 
 /-! ## The family (L11) -/
 
@@ -1490,13 +1554,21 @@ theorem not_held_of_no_holder {x : St} (h : NoHolder x) : ¬ Held x := by
   rw [show sumL x.holders = 0 from h] at h'
   exact Nat.lt_irrefl 0 h'
 
-/-- **Taught from outside, the rule enters at every step that does not end (L11).** At every teaching
-age, so also at `s ≤ l`, where a rule taught only by members drains (`«不及任则持尽»`). -/
+/-- **Taught from outside, the rule enters at every step that does not end (L11).** The new cohort of
+holders is the quota, at every teaching age, so also at `s ≤ l`, where a rule taught only by members
+drains (`«不及任则持尽»`); so with `1 ≤ s` and `1 ≤ q` it is held after the step. -/
 theorem «外授者即入» {r : Rule} (ho : r.source = .outside) (hsp : 1 ≤ r.tenure) {x : St}
-    (hq : 1 ≤ x.quota) (hne : ¬ Ends r x) (rev : Option Nat) : Held (step r ⟨true, rev⟩ x) := by
+    (hq : 1 ≤ x.quota) (hne : ¬ Ends r x) (rev : Option Nat) :
+    (step r ⟨true, rev⟩ x).holders = keep r.tenure (x.quota :: x.holders) ∧
+      Held (step r ⟨true, rev⟩ x) := by
   rw [step_onward _ hne]
-  show 0 < sumL (keep r.tenure (taught r.source x.quota (teachers r x) :: x.holders))
-  rw [ho]
+  have h : entrant r true x = x.quota := by
+    show taught r.source x.quota (teachers r x) = x.quota
+    rw [ho]
+    rfl
+  refine ⟨congrArg (fun a => keep r.tenure (a :: x.holders)) h, ?_⟩
+  show 0 < sumL (keep r.tenure (entrant r true x :: x.holders))
+  rw [h]
   exact sum_keep_cons_pos _ hsp hq
 
 /-- **The family, a table of three rows (L11).** After an empty membership, at a level of at least
@@ -1512,7 +1584,7 @@ theorem «三源之表» {r : Rule} (hsp : 1 ≤ r.tenure) {x : St} (hq : 1 ≤ 
     show sumL x.holders + sumL x.others ≤ _
     rw [h0, o0]
     exact Nat.zero_le _
-  exact ⟨fun ho => «外授者即入» ho hsp hq hne rev,
+  exact ⟨fun ho => («外授者即入» ho hsp hq hne rev).2,
     fun hm => not_held_of_no_holder («无持者不复» (Or.inl hm) x _ h0 ⟨_, rfl⟩),
     fun hn => not_held_of_no_holder («无持者不复» (Or.inr hn) x _ h0 ⟨_, rfl⟩)⟩
 
@@ -1721,39 +1793,50 @@ theorem onward_strands {r : Rule} (hm : r.source = .members)
       strandO r q (lastOf b) :: (keep r.teachingAge b).map (strandO r q)⟩
   rw [keep_map, keep_map]
 
+/-- The states with the held and empty cohorts of `b`, in any rotation. -/
+def Strands (r : Rule) (q : Nat) (b : List Bool) (y : St) : Prop :=
+  ∃ b' L', b'.length = r.tenure ∧ heldCount b' = heldCount b ∧ emptyCount b' = emptyCount b ∧
+    y = strands r q b' L'
+
+theorem strands_closed {r : Rule} {q : Nat} {b : List Bool} (hm : r.source = .members)
+    (hs : r.tenure = r.teachingAge + 1) (hq : 1 ≤ q) : Closed r always (Strands r q b) := by
+  intro _ y hy _
+  obtain ⟨b', L', h1, h2, h3, rfl⟩ := hy
+  have hl : b'.length = r.teachingAge + 1 := h1.trans hs
+  refine ⟨_, _, ?_, ?_, ?_, onward_strands hm hs hq h1 L'⟩
+  · show (keep r.teachingAge b').length + 1 = r.tenure
+    rw [length_keep_eq _ _ (by rw [hl]; exact Nat.le_succ _), hs]
+  · exact (countW_rot isHeld _ _ hl).trans h2
+  · exact (countW_rot isEmpty _ _ hl).trans h3
+
+theorem strands_take {r : Rule} {q : Nat} {b : List Bool} : ∀ y, Strands r q b y → take y =
+    heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught := by
+  intro y hy
+  obtain ⟨b', L', _, h2, h3, rfl⟩ := hy
+  rw [take_strands, h2, h3]
+
+theorem strands_held {r : Rule} {q : Nat} {b : List Bool} (hq : 1 ≤ q) (hk : 1 ≤ heldCount b) :
+    ∀ y, Strands r q b y → Held y := by
+  intro y hy
+  obtain ⟨b', L', _, h2, _, rfl⟩ := hy
+  show 0 < sumL (b'.map (strandH q))
+  rw [sum_strandH, h2]
+  exact Nat.mul_pos hk hq
+
 /-- **Gaps: where passing and limiting meet (L13).** At `l = s − 1`, each cohort teaches exactly the
 one that replaces it, so the held cohorts form separate strands, and the cohorts only rotate.
 `.members`, entrants on offer at every step, no revision, `1 ≤ q`, `1 ≤ L`: from `k ≥ 1` held cohorts
 and `z` empty ones, the rule is held at every step exactly where
-`k · (q + e) + z · f ≤ g`, with `e := f − c · q`. So `k` sets both how many pass the rule and how many
-keep the door. L2 is the steady state's law and not the rule's. -/
+`k · (q + e) + z · f ≤ g`, with `e := f − c · q`. Passing needs only `k ≥ 1`. `k` sets on how many of
+the `s` steps, in rotation, the door is kept and the rule passed, so the take is the steady state's
+on `k` cohorts and open entry's on `z`. L2 is the steady state's law and not the rule's. -/
 theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1) {q L : Nat}
     (hq : 1 ≤ q) (hL : 1 ≤ L) {b : List Bool} (hb : b.length = r.tenure) (hk : 1 ≤ heldCount b) :
     (∀ n, Held (run r always n (strands r q b L))) ↔
       heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught ≤ r.renewal := by
-  let F : St → Prop := fun y => ∃ b' L', b'.length = r.tenure ∧ heldCount b' = heldCount b ∧
-    emptyCount b' = emptyCount b ∧ y = strands r q b' L'
-  have hc : Closed r always F := by
-    intro _ y hy _
-    obtain ⟨b', L', h1, h2, h3, rfl⟩ := hy
-    have hl : b'.length = r.teachingAge + 1 := h1.trans hs
-    refine ⟨_, _, ?_, ?_, ?_, onward_strands hm hs hq h1 L'⟩
-    · show (keep r.teachingAge b').length + 1 = r.tenure
-      rw [length_keep_eq _ _ (by rw [hl]; exact Nat.le_succ _), hs]
-    · exact (countW_rot isHeld _ _ hl).trans h2
-    · exact (countW_rot isEmpty _ _ hl).trans h3
-  have ht : ∀ y, F y → take y =
-      heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught := by
-    intro y hy
-    obtain ⟨b', L', _, h2, h3, rfl⟩ := hy
-    rw [take_strands, h2, h3]
-  have hF : F (strands r q b L) := ⟨b, L, hb, rfl, rfl, rfl⟩
-  have hheld : ∀ y, F y → Held y := by
-    intro y hy
-    obtain ⟨b', L', _, h2, _, rfl⟩ := hy
-    show 0 < sumL (b'.map (strandH q))
-    rw [sum_strandH, h2]
-    exact Nat.mul_pos hk hq
+  have hc := strands_closed (b := b) hm hs hq
+  have ht := strands_take (r := r) (q := q) (b := b)
+  have hF : Strands r q b (strands r q b L) := ⟨b, L, hb, rfl, rfl, rfl⟩
   constructor
   · intro h
     apply Nat.le_of_not_lt
@@ -1762,24 +1845,101 @@ theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.t
     obtain ⟨k, hg, _⟩ := «恒取逾生则尽» hc (fun y hy => (ht y hy).trans e) hd hF
     exact not_held_of_gone hg (h (k + 1))
   · intro hA n
-    exact hheld _ («恒取不逾生则存» hc ht hA hF hL n).1
+    exact strands_held hq hk _ («恒取不逾生则存» hc ht hA hF hL n).1
+
+/-- **Over the bound the rule is held to the last state (L13).** With the hypotheses of `«隙之律»`:
+where `g` is below the gaps' take, the rule is held at every step up to some `k`, and the next is
+`gone`. -/
+theorem «隙过生持至尽» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1)
+    {q : Nat} (hq : 1 ≤ q) (L : Nat) {b : List Bool} (hb : b.length = r.tenure)
+    (hk : 1 ≤ heldCount b)
+    (hA : r.renewal <
+      heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught) :
+    ∃ k, Gone (run r always (k + 1) (strands r q b L)) ∧
+      ∀ i, i ≤ k → Held (run r always i (strands r q b L)) := by
+  have hc := strands_closed (b := b) hm hs hq
+  have ht := strands_take (r := r) (q := q) (b := b)
+  obtain ⟨d, e, hd⟩ := excess hA
+  obtain ⟨k, hg, hF⟩ := «恒取逾生则尽» hc (fun y hy => (ht y hy).trans e) hd
+    (x := strands r q b L) ⟨b, L, hb, rfl, rfl, rfl⟩
+  exact ⟨k, hg, fun i hi => strands_held hq hk _ (hF i hi)⟩
+
+theorem count_total : ∀ b : List Bool, heldCount b + emptyCount b = b.length
+  | [] => rfl
+  | true :: t => by
+    show 1 + heldCount t + (0 + emptyCount t) = t.length + 1
+    rw [Nat.zero_add, Nat.add_assoc, count_total t, Nat.add_comm]
+  | false :: t => by
+    show 0 + heldCount t + (1 + emptyCount t) = t.length + 1
+    rw [Nat.zero_add, Nat.add_left_comm, count_total t, Nat.add_comm]
+
+theorem mul_lt_of {z a b : Nat} (h : z * a < z * b) : a < b :=
+  Nat.lt_of_not_le fun hba => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h (Nat.mul_le_mul_left z hba))
+
+theorem split_mul (k z X : Nat) : (k + z) * X = k * X + z * X := right_distrib' k z X
+
+theorem lt_of_add_lt_add_left' {a b c : Nat} (h : a + b < a + c) : b < c :=
+  Nat.lt_of_not_le fun hcb => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h (Nat.add_le_add_left hcb a))
+
+theorem mul_lt_mul_of_pos' {k a b : Nat} (hk : 1 ≤ k) (h : a < b) : k * a < k * b := by
+  cases k with
+  | zero => exact absurd hk (Nat.not_succ_le_zero 0)
+  | succ k =>
+    rw [Nat.succ_mul, Nat.succ_mul]
+    exact Nat.lt_of_le_of_lt (Nat.add_le_add_right (Nat.mul_le_mul_left k (Nat.le_of_lt h)) a)
+      (Nat.add_lt_add_left h _)
+
+/-- **Where gaps hold and the steady state does not (L13).** Write `X` for a held cohort's members,
+`k` and `z` for the held and empty cohorts, so that `k + z = s` (`count_total`). Where `k · X + z · f`
+is within `g` and `X · s` is not: `f < X` and `f · s < g`. So on this side a cohort of the steady state
+exceeds open entry's, and open entry would go on too; the door has no part in it. -/
+theorem «隙存而稳不存之式» {f X g k z : Nat} (hk : 1 ≤ k) (h1 : k * X + z * f ≤ g)
+    (h2 : g < X * (k + z)) : f < X ∧ f * (k + z) < g := by
+  have h2' : g < k * X + z * X := by
+    rw [← split_mul, Nat.mul_comm]
+    exact h2
+  have hfX : f < X := mul_lt_of (lt_of_add_lt_add_left' (Nat.lt_of_le_of_lt h1 h2'))
+  refine ⟨hfX, ?_⟩
+  rw [Nat.mul_comm, split_mul]
+  exact Nat.lt_of_lt_of_le (Nat.add_lt_add_right (mul_lt_mul_of_pos' hk hfX) _) h1
+
+/-- **Where the steady state goes on and gaps do not (L13).** With `t` turned away at a held cohort
+(`t = c · q` at the gaps) and `e := f − t`. Where `(q + e) · s` is within `g` and `k · (q + e) + z · f`
+is not: `q + e < f`, `g < f · s` and `q < t`. So on this side a keeper turns away more than itself:
+the door keeps the level at full cohorts, and open entry would end it. -/
+theorem «稳存而隙不存之式» {f q t g k z : Nat}
+    (h1 : (q + (f - t)) * (k + z) ≤ g) (h2 : g < k * (q + (f - t)) + z * f) :
+    q + (f - t) < f ∧ g < f * (k + z) ∧ q < t := by
+  have h1' : k * (q + (f - t)) + z * (q + (f - t)) ≤ g := by
+    rw [← split_mul, Nat.mul_comm]
+    exact h1
+  have hlt : q + (f - t) < f := Nat.lt_of_not_le fun hfX =>
+    Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h2
+      (Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul_left z hfX) _) h1'))
+  refine ⟨hlt, ?_, ?_⟩
+  · rw [Nat.mul_comm, split_mul]
+    exact Nat.lt_of_lt_of_le h2
+      (Nat.add_le_add_right (Nat.mul_le_mul_left k (Nat.le_of_lt hlt)) _)
+  · exact Nat.lt_of_not_le fun htq =>
+      Nat.lt_irrefl _ (Nat.lt_of_lt_of_le hlt (le_add_sub_of_le f htq))
 
 /-- The rule of L13's first witness. -/
-def rD : Rule := ⟨2, 1, 5, 1, 0, .members⟩
+def rD : Rule := ⟨2, 1, 4, 1, 1, .members⟩
 
 /-- The rule of L13's second witness. -/
 def rE : Rule := ⟨3, 2, 6, 4, 2, .members⟩
 
-/-- **A rule can hold on a fraction of its cohorts where its steady state cannot (L13's witness).** -/
+/-- **Gaps can hold where the steady state cannot (L13's witness).** At one rule with a door. -/
 theorem «隙存而稳不存» :
     (∀ n, Held (run rD always n (strands rD 3 [true, false] 1))) ∧ ¬ Band rD 3 :=
   ⟨(«隙之律» rfl rfl (by decide) (by decide) rfl (by decide)).mpr (by decide), by decide⟩
 
-/-- **A rule can end the level while held where its steady state would not (L13's witness).** -/
+/-- **Gaps can end the level, the rule held to the last state, where the steady state goes on (L13's
+witness).** At one rule. -/
 theorem «稳存而隙不存» :
-    Band rE 2 ∧ ¬ ∀ n, Held (run rE always n (strands rE 2 [true, false, false] 1)) :=
-  ⟨by decide, fun h =>
-    absurd ((«隙之律» rfl rfl (by decide) (by decide) rfl (by decide)).mp h) (by decide)⟩
+    Band rE 2 ∧ ∃ k, Gone (run rE always (k + 1) (strands rE 2 [true, false, false] 1)) ∧
+      ∀ i, i ≤ k → Held (run rE always i (strands rE 2 [true, false, false] 1)) :=
+  ⟨by decide, «隙过生持至尽» rfl rfl (by decide) 1 rfl (by decide) (by decide)⟩
 
 /-- A revision to `0` at the second step and back at the fourth. -/
 def outAndBack : Nat → Move
@@ -1787,35 +1947,46 @@ def outAndBack : Nat → Move
   | 3 => ⟨true, Option.some 2⟩
   | _ => ⟨true, Option.none⟩
 
-/-- **A state with gaps is reached by a revision and overdrawn while held.** At `3, 2, 6, 4, 2`,
-`q = 2`, `L = 30`, in the band, revised to `0` at the second step and back at the fourth: held at
-step 17, and gone at step 18. -/
+/-- **A state with gaps is reached by a revision, and overdrawn with the rule held (a witness).** At
+`3, 2, 6, 4, 2`, `q = 2`, `L = 30`, in the band, revised to `0` at the second step and back at the
+fourth: at step 8 the state is one held cohort and two empty, held at every step to step 17, and `gone`
+at step 18. -/
 theorem «改而成隙则尽» :
-    Band rE 2 ∧ 0 < sumL (run rE outAndBack 17 (steady rE 2 30)).holders ∧
-      Gone (run rE outAndBack 18 (steady rE 2 30)) := by
-  refine ⟨by decide, by decide, ?_⟩
-  exact ⟨by decide, by decide, by decide⟩
+    Band rE 2 ∧ run rE outAndBack 8 (steady rE 2 30) = strands rE 2 [true, false, false] 36 ∧
+      (∀ i, i < 18 → 0 < sumL (run rE outAndBack i (steady rE 2 30)).holders) ∧
+      Gone (run rE outAndBack 18 (steady rE 2 30)) :=
+  ⟨by decide, rfl, by decide, ⟨by decide, by decide, by decide⟩⟩
 
 /-! ## The same rule, read at a class -/
 
-/-- **The same rule, read at a class.** On `«续»`, a step with a revision continues under "held or
-not" and not under "the same quota": which is 01 §2's `«任一缘可为续»` with these occurrences. -/
+/-- **The same rule, read at a class.** On `«续»`, a step with a revision inside the region continues
+under the class "held or not" and not under the class "the same quota": 01 §2's `«任一缘可为续»` with
+these occurrences. At one rule. -/
 theorem «同规随类» :
-    «续» (net rA) (fun x y => Held x ↔ Held y) (steady rA 2 1)
-        (step rA ⟨true, Option.some 3⟩ (steady rA 2 1)) ∧
-      ¬ «续» (net rA) (fun x y => x.quota = y.quota) (steady rA 2 1)
-        (step rA ⟨true, Option.some 3⟩ (steady rA 2 1)) := by
-  refine ⟨⟨⟨_, rfl⟩, ?_⟩, fun h => absurd h.2 (by decide)⟩
-  have h0 : Held (steady rA 2 1) := by
-    show 0 < sumL _
-    decide
-  have h1 : Held (step rA ⟨true, Option.some 3⟩ (steady rA 2 1)) := by
-    show 0 < sumL _
-    decide
-  exact ⟨fun _ => h1, fun _ => h0⟩
+    «类» (fun x y : St => Held x ↔ Held y) ∧ «类» (fun x y : St => x.quota = y.quota) ∧
+      Within rB 3 5 (steady rB 3 1) ∧ onIn rB 3 5 (steady rB 3 1)
+        (step rB ⟨true, Option.some 5⟩ (steady rB 3 1)) ∧
+      «续» (net rB) (fun x y => Held x ↔ Held y) (steady rB 3 1)
+        (step rB ⟨true, Option.some 5⟩ (steady rB 3 1)) ∧
+      ¬ «续» (net rB) (fun x y => x.quota = y.quota) (steady rB 3 1)
+        (step rB ⟨true, Option.some 5⟩ (steady rB 3 1)) := by
+  have hb : Band rB 3 := by decide
+  have hw : Within rB 3 5 (steady rB 3 1) :=
+    ⟨length_replicate' _ _, ⟨⟨by decide, by decide⟩, ⟨by decide, by decide⟩, ⟨by decide, by decide⟩,
+        ⟨by decide, by decide⟩, trivial⟩,
+      Nat.le_of_eq (length_replicate' _ _), ⟨by decide, by decide, by decide, by decide, trivial⟩,
+      by decide, by decide, by decide⟩
+  have hon : onIn rB 3 5 (steady rB 3 1) (step rB ⟨true, Option.some 5⟩ (steady rB 3 1)) :=
+    ⟨Option.some 5, fun v e => by
+      cases e
+      exact ⟨by decide, by decide⟩, rfl⟩
+  have h0 : Held (steady rB 3 1) := held_steady (by decide) (by decide) 1
+  have h1 := within_held «域可得» («域闭» «域可得» _ _ hw hon)
+  refine ⟨⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩, ⟨fun _ => rfl, Eq.symm, Eq.trans⟩, hw, hon,
+    ⟨⟨_, rfl⟩, ⟨fun _ => h1, fun _ => h0⟩⟩, fun h => absurd h.2 (by decide)⟩
 
-/-- **Abandoned (§4's row, a witness).** With no one who would come untaught, a quota of nothing and
-a renewal of at least one: after a tenure there is no member, and the level has risen. -/
+/-- **Abandoned (§4's row, a witness at one rule).** With no one who would come untaught, a quota of
+nothing and a renewal: after a tenure there is no member, and the level has risen. -/
 theorem «弃而储增» :
     let r : Rule := ⟨2, 1, 3, 0, 1, .members⟩
     let x : St := ⟨0, 2, [1, 1], []⟩
@@ -1824,13 +1995,6 @@ theorem «弃而储增» :
   decide
 
 /-! ## That the premises can be met -/
-
-/-- **A region with room for revision (L4's premise met).** At `4, 2, 20, 6, 1` the quotas from `3` to
-`5` make a region. -/
-theorem «域可得» : Fits rB 3 5 := ⟨rfl, by decide, by decide, by decide, by decide⟩
-
-/-- The rule of L9's first case. -/
-def rF : Rule := ⟨2, 1, 10, 2, 1, .members⟩
 
 /-- The rule of L9's third case. -/
 def rG : Rule := ⟨2, 1, 5, 2, 1, .members⟩
@@ -1855,9 +2019,9 @@ theorem «四境皆有» :
       rH.renewal < rH.untaught * rH.tenure) := by
   decide
 
-/-- **The drain's premise met.** Held at the start however large the quota and the level, no holder
-after a tenure. -/
-theorem «及任之前皆亡» : Held (steady rI 5 50) ∧ NoHolder (run rI always 2 (steady rI 5 50)) :=
+/-- **The drain's premise met (a witness at one rule).** Held at the start, no holder after a tenure.
+The general law is `«不及任则持尽»`. -/
+theorem «及任之前持尽之例» : Held (steady rI 5 50) ∧ NoHolder (run rI always 2 (steady rI 5 50)) :=
   ⟨show 0 < sumL (steady rI 5 50).holders by decide,
     show sumL (run rI always 2 (steady rI 5 50)).holders = 0 by decide⟩
 
