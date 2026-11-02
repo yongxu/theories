@@ -1,0 +1,23 @@
+--- 1c704bc70:theories/becoming/results/records/finite-fallible-inquiry-necessity.json
++++ theories/becoming/results/records/finite-fallible-inquiry-necessity.json
+@@ -251,4 +251,4 @@
+   "validation_scope": {
+-    "en": "Machine-checked, periphery. The current bytes of ScientificInquiryNecessity are bound to receipt 20261008T135418.446592Z (check_scientific_inquiry_necessity.py), those of the bridge Becoming.FallibleInquiry to receipt 20261020T161546.707477Z (check_fallible_inquiry.py), both Lean 4.29.1. The cited declarations use at most propext and Quot.sound, some none; the pure core imports neither module. No empirical experiment or independent review.",
+-    "zh": "机器检查，外围。ScientificInquiryNecessity 当前字节绑定回执 20261008T135418.446592Z（check_scientific_inquiry_necessity.py），桥接 Becoming.FallibleInquiry 绑定回执 20261020T161546.707477Z（check_fallible_inquiry.py），均为 Lean 4.29.1。所引声明至多用 propext 与 Quot.sound，部分不用；纯核心不导入二者。无经验实验或独立审查。"
++    "en": "Machine-checked, periphery. The current bytes of ScientificInquiryNecessity are bound to receipt 20261008T135418.446592Z (check_scientific_inquiry_necessity.py), those of the bridge Becoming.FallibleInquiry to receipt 20261031T130828.999853Z (check_fallible_inquiry.py), both Lean 4.29.1. The cited declarations use at most propext and Quot.sound, some none; the pure core imports neither module. No empirical experiment or independent review.",
++    "zh": "机器检查，外围。ScientificInquiryNecessity 当前字节绑定回执 20261008T135418.446592Z（check_scientific_inquiry_necessity.py），桥接 Becoming.FallibleInquiry 绑定回执 20261031T130828.999853Z（check_fallible_inquiry.py），均为 Lean 4.29.1。所引声明至多用 propext 与 Quot.sound，部分不用；纯核心不导入二者。无经验实验或独立审查。"
+   },
+@@ -497,2 +497,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json",
++      "role": "receipt",
++      "sha256": "65df2d39e6fd1bc697e7f03e939c098dab5e6ba37a08dbe2b4a977e6e4229e0c",
++      "declarations": []
+     }
+@@ -509,3 +515,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json",
+       "sha256_pointer": "/source_sha256/Becoming.FallibleInquiry",

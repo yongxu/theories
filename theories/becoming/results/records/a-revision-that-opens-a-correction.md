@@ -64,7 +64,7 @@ AI reading: for an institution, the link is its rule of reading what its members
 ### Dependencies
 
 - **formal-reuse**: [when-to-inquire-and-when-to-respond](when-to-inquire-and-when-to-respond.md). GuardHorizon.UniformPolicy and uniform_policy_iff_fiber_feasible.
-- **formal-reuse**: [selection-under-registration-revision](selection-under-registration-revision.md). Revising's process P, its reading read and its acts.
+- **formal-reuse**: [selection-when-the-lumping-changes](selection-when-the-lumping-changes.md). Revising's process P, its reading read and its acts.
 - related, not a proved adapter: [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md). Acts good and enabled for a reading the update keeps; here correctability is compared along a course of a process, where the reading in force, executability, or both may change.
 
 <a id="sources--来源"></a>

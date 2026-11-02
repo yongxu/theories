@@ -381,7 +381,7 @@
       }
     },
     {
-      "id": "selection-under-registration-revision",
+      "id": "selection-when-the-lumping-changes",
       "detail": {
         "zh": "P93 完成归并改变时的选择保留／损失条件及实际局部重构；配方自身取得和更一般捕获仍开放。",
         "en": "P93 completes choice preservation/loss when the lumping changes, and local executed reconstruction; acquired recipes and general capture remain open."

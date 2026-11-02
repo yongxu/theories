@@ -1,0 +1,23 @@
+--- 1c704bc70:theories/becoming/results/records/transition-grouping-word-partition.json
++++ theories/becoming/results/records/transition-grouping-word-partition.json
+@@ -192,4 +192,4 @@
+   "validation_scope": {
+-    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.Segmentation, Becoming.Courses and Becoming.LearnedGrouping by the consolidated core checker (becoming-checks/20261013T221720.428753Z, 20261020T051144.879480Z and 20261018T204907.920360Z bind their current bytes), every cited declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext and Quot.sound. The earlier AcquiredSegmentation check (23 theorems, 51 audits) is provenance.",
+-    "zh": "Lean 4.29.1 实查：核心 Segmentation、Courses、LearnedGrouping 由合并核心检查器检查（becoming-checks/ 下所列三份回执绑定其当前字节），所引声明公理报告皆空；外围 MachineInstances 由实例检查器检查（machine-instances-checks/20261020T161859.257200Z），报告至多 propext、Quot.sound。原 AcquiredSegmentation 检查（23 项定理、51 项审计）为来源。"
++    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.Segmentation, Becoming.Courses and Becoming.LearnedGrouping by the consolidated core checker (becoming-checks/20261013T221720.428753Z, 20261020T051144.879480Z and 20261018T204907.920360Z bind their current bytes), every cited declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261031T131812.213702Z), reporting at most propext and Quot.sound. The earlier AcquiredSegmentation check (23 theorems, 51 audits) is provenance.",
++    "zh": "Lean 4.29.1 实查：核心 Segmentation、Courses、LearnedGrouping 由合并核心检查器检查（becoming-checks/ 下所列三份回执绑定其当前字节），所引声明公理报告皆空；外围 MachineInstances 由实例检查器检查（machine-instances-checks/20261031T131812.213702Z），报告至多 propext、Quot.sound。原 AcquiredSegmentation 检查（23 项定理、51 项审计）为来源。"
+   },
+@@ -424,2 +424,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
++      "role": "receipt",
++      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
++      "declarations": []
+     }
+@@ -436,3 +442,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+       "sha256_pointer": "/source_sha256/MachineInstances",

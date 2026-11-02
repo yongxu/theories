@@ -1,0 +1,21 @@
+--- 1c704bc70:theories/becoming/results/records/binding-preserving-substitution.json
++++ theories/becoming/results/records/binding-preserving-substitution.json
+@@ -131,3 +131,3 @@
+   "validation_scope": {
+-    "en": "Core, by check_becoming.py (Lean 4.29.1): Readout bound to becoming-checks/20261019T185632.962707Z and Courses to 20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery: InferentialSubstitution and InferentialGrounds to inferential-substitution-checks/20261008T181823.552825Z (check_inferential_substitution.py, Lean 4.29.1; 13 of 19 audits empty, 6 only Quot.sound); SubstitutionCorrespondence to substitution-correspondence-checks/20261020T161957.579185Z (check_substitution_correspondence.py, Lean 4.30.0-rc2; three cited use Quot.sound). Author counter-review only.",
++    "en": "Core, by check_becoming.py (Lean 4.29.1): Readout bound to becoming-checks/20261019T185632.962707Z and Courses to 20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery: InferentialSubstitution and InferentialGrounds to inferential-substitution-checks/20261008T181823.552825Z (check_inferential_substitution.py, Lean 4.29.1; 13 of 19 audits empty, 6 only Quot.sound); SubstitutionCorrespondence to substitution-correspondence-checks/20261031T133836.069337Z (check_substitution_correspondence.py, Lean 4.30.0-rc2; three cited use Quot.sound). Author counter-review only.",
+     "zh": "核心 Readout、Courses（check_becoming.py，Lean 4.29.1，回执在 becoming-checks）：所引声明公理为空。外围：代入与根据模块（inferential-substitution-checks，Lean 4.29.1）19 项审计 13 空、6 仅 Quot.sound；SubstitutionCorrespondence（substitution-correspondence-checks，Lean 4.30.0-rc2）三项用 Quot.sound。仅作者反审。"
+@@ -330,2 +330,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json",
++      "role": "receipt",
++      "sha256": "d80c6566e4888e4d3d8e474a28eabbae622da02d4f7b476ae7ba0d310a9a3c6d",
++      "declarations": []
+     }
+@@ -356,3 +362,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json",
+       "sha256_pointer": "/source_sha256/SubstitutionCorrespondence",

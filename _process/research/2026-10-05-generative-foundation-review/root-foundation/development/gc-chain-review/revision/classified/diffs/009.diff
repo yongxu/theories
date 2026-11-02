@@ -1,0 +1,16 @@
+--- 1c704bc70:theories/becoming/results/records/acquired-binding-compositional-use.json
++++ theories/becoming/results/records/acquired-binding-compositional-use.json
+@@ -328,2 +328,8 @@
+       "declarations": []
++    },
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
++      "role": "receipt",
++      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
++      "declarations": []
+     }
+@@ -347,3 +353,3 @@
+       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
++      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+       "sha256_pointer": "/source_sha256/MachineInstances",

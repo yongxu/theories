@@ -199,7 +199,7 @@ Complete the authorized theoretical integration and required validation, then co
 
 [selection-through-couplings](theories/becoming/results/records/selection-through-couplings.md): `recorded-checked`
 
-[selection-under-registration-revision](theories/becoming/results/records/selection-under-registration-revision.md): `recorded-checked`
+[selection-when-the-lumping-changes](theories/becoming/results/records/selection-when-the-lumping-changes.md): `recorded-checked`
 
 <a id="normative-grounding"></a>
 <a id="普遍规范根据的持续方向--continuing-normative-grounding-direction"></a>

@@ -1,0 +1,65 @@
+  0 split+edits      C17,C18,C19,C23,C24,M14,M20    theories/becoming/history/PRACTICAL-JUDGMENT.md
+  1 split+edits      M15,M21                        theories/becoming/history/KNOWLEDGE.md
+  2 split+edits      M20                            theories/becoming/history/ALIGNMENT-DIRECTION.md
+  3 other            M21                            theories/becoming/history/PHILOSOPHICAL-ACCOUNT.md
+  4 generated                                       theories/becoming/results/ROADMAP.md
+  5 split+edits      M20                            theories/becoming/history/ETHICAL-LEARNING.md
+  6 split+edits      M20                            theories/becoming/history/BASIC-CONFLICT-JUDGMENT.md
+  7 split+edits      M15                            theories/becoming/history/WISDOM-AND-CONTEXT.md
+  8 other                                           theories/becoming/results/records/transition-grouping-word-partition.json
+  9 record-bindings                                 theories/becoming/results/records/acquired-binding-compositional-use.json
+ 10 generated        M26                            theories/becoming/results/records/acquired-binding-compositional-use.md
+ 11 other                                           theories/becoming/results/records/enacted-scene-binding.json
+ 12 generated        M26                            theories/becoming/results/records/enacted-scene-binding.md
+ 14 other            M20                            theories/becoming/results/records/open-form-realization-under-revision.json
+ 15 other            C14                            theories/becoming/results/records/recurrent-chain-assembly.json
+ 16 generated        M20                            theories/becoming/results/records/classification-robust-generative-comparison.md
+ 17 other                                           theories/becoming/results/records/encounter-selection-and-revision.json
+ 18 generated        M26                            theories/becoming/results/records/encounter-selection-and-revision.md
+ 19 generated        M20                            theories/becoming/results/records/market-partial-correction-boundary.md
+ 20 generated        M26                            theories/becoming/results/records/retrospective-source-binding.md
+ 21 other            C30,F22                        theories/becoming/results/records/finite-granularity-question-recovery.json
+ 23 other            C30,F22                        theories/becoming/results/records/incidence-common-refinement.json
+ 24 other            C30,F22                        theories/becoming/results/records/multivalued-joining-common-structure.json
+ 25 other            C30,F22                        theories/becoming/results/records/retained-reference-joining-recovery.json
+ 26 other            F01                            theories/becoming/results/records/binding-preserving-substitution.json
+ 27 generated        M24                            theories/becoming/results/records/acquired-revision-of-pending-task.md
+ 28 record-bindings                                 theories/becoming/results/records/mediated-evidence-transport.json
+ 31 other                                           theories/becoming/results/records/retrospective-source-binding.json
+ 32 record-bindings                                 theories/becoming/results/records/historical-source-binding.json
+ 33 generated        M26                            theories/becoming/results/records/historical-source-binding.md
+ 34 other            C14                            theories/becoming/results/records/joint-practice-forms-continuation.json
+ 35 other            C30,F22                        theories/becoming/results/records/residual-continuation-correspondence.json
+ 36 other            C14                            theories/becoming/results/records/inherited-structural-copying.json
+ 38 generated                                       theories/becoming/results/records/mediated-evidence-transport.md
+ 39 record-bindings                                 theories/becoming/results/records/reserved-shutdown-during-recovery.json
+ 40 generated        F30,M25                        theories/becoming/results/records/reserved-shutdown-during-recovery.md
+ 41 other            C14                            theories/becoming/results/records/formed-copying-registration.json
+ 43 other            C14                            theories/becoming/results/records/formed-copying-correction.json
+ 44 record-bindings                                 theories/becoming/results/records/learned-procedure-transmission.json
+ 45 generated        M26                            theories/becoming/results/records/learned-procedure-transmission.md
+ 46 generated                                       theories/becoming/results/records/finite-fallible-inquiry-necessity.md
+ 47 generated        M24                            theories/becoming/results/records/selection-under-registration-revision.md
+ 48 generated        M24                            theories/becoming/results/records/consequence-revised-reference-plan.md
+ 49 generated        M21                            theories/becoming/results/records/timely-response-necessity.md
+ 50 generated        M24                            theories/becoming/results/records/recurring-reference-revision.md
+ 51 other            M15                            theories/becoming/results/records/finite-fallible-inquiry-necessity.json
+ 52 other            M15                            theories/becoming/results/records/timely-response-necessity.json
+ 53 other            M15                            experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean
+ 54 other            M15                            experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean
+ 55 split+edits      C01,C03                        theories/becoming/history/THE-THEORY-OF-BECOMING.md
+ 56 generated        M20                            theories/becoming/results/records/organizational-formation-from-generative-comparison.md
+ 57 generated        M26                            theories/becoming/results/records/transition-grouping-word-partition.md
+ 59 other            M15                            experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean
+ 60 generated        M26                            theories/becoming/results/records/identification-where-runs-part.md
+ 61 generated        M26                            theories/becoming/results/records/observation-is-a-route.md
+ 62 generated        M15                            theories/becoming/results/records/selection-through-a-model-of-the-options.md
+ 63 other            E06                            RESULTS.md
+ 64 other            M20                            GOALS.md
+{
+ "split+edits": 7,
+ "other": 24,
+ "generated": 22,
+ "record-bindings": 5,
+ "version-not-found": 7
+}

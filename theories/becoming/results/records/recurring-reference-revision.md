@@ -79,7 +79,7 @@ Observation, method, response, production and carriers are roles in one unfoldin
   - Input: Native operations, method change and successor use in continuing activity
   - Preserved conditions: Identical inner state and native costs, with additional return, succession and task laws disclosed [ContinuingRevision.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean)
 - **formal-reuse**: [process-and-frame-as-readings](process-and-frame-as-readings.md). Trace composition through actual boundary configurations and stepwise Run, not a renamed model.
-- related, not a proved adapter: [selection-under-registration-revision](selection-under-registration-revision.md). New contact and retirement show why continuing activity cannot substitute for the exact selection-preservation criterion.
+- related, not a proved adapter: [selection-when-the-lumping-changes](selection-when-the-lumping-changes.md). New contact and retirement show why continuing activity cannot substitute for the exact selection-preservation criterion.
 
 **Used by:** [wisdom-root](wisdom-root.md) (interpretive)
 

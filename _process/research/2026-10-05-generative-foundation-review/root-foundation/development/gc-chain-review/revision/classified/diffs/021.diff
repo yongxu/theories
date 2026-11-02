@@ -1,0 +1,256 @@
+--- 89199e2cc:theories/becoming/results/records/finite-granularity-question-recovery.json
++++ theories/becoming/results/records/finite-granularity-question-recovery.json
+@@ -1,37 +1,3 @@
+ {
+-  "schema_version": 1,
+-  "kind": "theorem",
+-  "status": "recorded-checked",
+-  "family": "F22",
+-  "reviewed_at_utc": "2026-10-08T18:20:02.495493+00:00",
+-  "validation_scope": {
+-    "zh": "Lean 4.29.1 实查23项新声明／279项闭包审计；新23标准依赖，3含经典选择；继承256项另列。冻结源码、日志及检查器哈希绑定。作者反审，非独立 agent 验收。",
+-    "en": "Lean 4.29.1: 23 new declarations / 279 closure audits; all 23 new use standard dependencies, 3 include classical choice; 256 inherited audits separate. Frozen source/log/checker hashes are bound. Author counterreview, no independent-agent acceptance."
+-  },
+-  "next_delta": {
+-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+-  },
+-  "history": [
+-    {
+-      "zh": "2026-10-09：在既有接合情境研究中完成有限粒度接通与具体边界检验；不另开研究副本。",
+-      "en": "2026-10-09: finite-granularity connection and concrete boundary test completed within the existing joining-context study."
+-    },
+-    {
+-      "zh": "2026-10-09接续：研究新增有限条件程序、余项恢复及35项实查声明；原成果的主张、假设和证明绑定保持，见原研究§27—32。",
+-      "en": "2026-10-09 continuation: finite guarded programs, residual recovery and 35 checked declarations added in the same study §§27–32; this result retains its claim, assumptions and proof bindings."
+-    },
+-    {
+-      "zh": "2026-10-15，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述（新核心模块 Becoming.Granularity，新桥接 Becoming.GranularityBridge）。块是同一展开的有限路径（Frame.blocks），块的历史即写出的较细历史（Frame.blocks_trace_iff）；块的每个分支检验都是较细检验，在相同配置成立，不加前提（Frame.holds_blocks）。在较细粒度相同或同测的配置在块中亦然（Alike.blocks、SameBranchingTests.blocks）；每个较细动作自成一块时，块的检验恢复每个较细检验（Frame.blocks_sameBranchingTests_iff，充分非必要），两种描述的核相同（Frame.blocks_kernel_iff）。以另一粒度读同一展开的一般律：两框架的检验各自译入较细框架、译文在两配置处一致、接收侧每步结果列出时，前者的每段历史由后者以相同步匹配，终点译文仍一致（Translates.history_matches_of_em）；排中律为具名假设 em，外围的经典推理正在此处；列出的结果给出每段有限路径的终点，不用选择（outcomes_of_trace）。保留引用的块保持起点并计入其中每次形成（Joining.retained_blocks_extend，外围的登记模型编译后用 propext，故在核心的保留框架上重述）。桥接表明外围的块即核心的（blocks_ofModel，按定义），编译问题即较细检验（BranchingTest.toTest_finer）：compile_correct、blocks_trace_iff、singleton_coverage_recovers_questions、full_and_block_reduced_kernels 逐字成立，不加假设；finite_trace_endpoints 与 blocks_image_finite 外围以经典选择证明，核心不用选择；cross_granularity_history_matches 以 em 为假设。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
+-      "en": "15 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine (new core module Becoming.Granularity, new bridge Becoming.GranularityBridge). A block is a finite course of the same unfolding (Frame.blocks), and a history of blocks is the finer history written out (Frame.blocks_trace_iff); every branching test of blocks is a finer test holding at the same configurations, with no premise (Frame.holds_blocks). Configurations alike, or passing the same tests, at the finer grain are so in blocks (Alike.blocks, SameBranchingTests.blocks); where every finer move is a block of its own, the tests of blocks recover every finer test (Frame.blocks_sameBranchingTests_iff, sufficient, not necessary) and two descriptions have one kernel (Frame.blocks_kernel_iff). The general law of reading one unfolding at another grain: where the tests of two frames translate into finer frames, the translations agree at two configurations and each move of the receiving side has listed outcomes, every history of the first is matched by one of the second by the same steps, ending where the translations agree again (Translates.history_matches_of_em); excluded middle is the named hypothesis em, which is where the periphery reasoned classically, and listed outcomes give the endpoints of every finite course with no choice (outcomes_of_trace). Blocks of retained references keep where the course started and count every formation within (Joining.retained_blocks_extend, restated on the core’s retained frame because the periphery’s register model compiles through propext). The bridge shows the periphery’s blocks are the core’s (blocks_ofModel, by definition) and its compiled questions the finer tests (BranchingTest.toTest_finer): compile_correct, blocks_trace_iff, singleton_coverage_recovers_questions and full_and_block_reduced_kernels hold as stated with no added hypothesis; finite_trace_endpoints and blocks_image_finite, chosen classically in the periphery, need no choice in the core; cross_granularity_history_matches holds with em. Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proofs and their receipts keep their scope."
+-    },
+-    {
+-      "en": "2026-10-20: 8 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ff89413324fa6362/finite-granularity-question-recovery.json and in git.",
+-      "zh": "2026-10-20：8 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ff89413324fa6362/finite-granularity-question-recovery.json 和 git 中。"
+-    },
+-    {
+-      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryGranularity and GranularityBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity). The retired modules' content is also stated in Becoming.Grains, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+-      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryGranularity and GranularityBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity）。退役模块的内容也陈述于 Becoming.Grains，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+-    }
+-  ],
++  "schema_version": 2,
+   "id": "finite-granularity-question-recovery",
+@@ -41,16 +7,133 @@
+   },
+-  "claim": {
+-    "zh": "有限宏步骤的全部分支问题精确翻译为原生问题；两边展开方案可用不同事件及步数，初始翻译问答一致且接收侧有限分支，即可匹配任意有限宏历史并保留终点问答。保留引用的原配置及内部形成数得到保持；单步覆盖接通原生／宏约简编码核。",
+-    "en": "All finite-block branch questions translate exactly into native questions. Expansions may use different events and lengths; complete initial translated-answer agreement and receiving-side finite branching match every finite block history with final answers preserved. Retained configurations keep original references and internal formation counts; singleton coverage aligns full/block reduced encoding kernels."
+-  },
++  "kind": "theorem",
++  "status": "recorded-checked",
++  "family": "F22",
++  "reviewed_at_utc": "2026-10-28T11:48:01+00:00",
++  "statement": {
++    "en": "Every branching test of blocks, finite courses of one unfolding named as single steps, is a finer test holding at the same configurations; under excluded middle, where every block test agrees at two starts and the receiving side's moves have listed outcomes, every finite block history is matched.",
++    "zh": "块是同一展开中被命名为一步的有限历程；块的每个分支检验都是在相同构型成立的较细检验；在排中律下，若每个块检验在两个起点一致且接收侧动作结果已列出，每段有限块历史都得到匹配。"
++  },
++  "laws": [
++    {
++      "en": "For any frame and any naming of blocks by finite words of moves, the frame of blocks has the same configurations and claims, a block going from s to t exactly where the course of its word does; a history of blocks goes from s to t exactly where the words written out do, through the same boundaries.",
++      "zh": "对任一框架与以有限动作之词命名的块：块框架有相同的构型与断言，块从 s 到 t 恰当其词的历程如此；一段块历史从 s 到 t，恰当写出的诸词如此，经过相同的边界。",
++      "declarations": [
++        "Becoming.Frame.blocks",
++        "Becoming.Frame.blocks_trace_iff"
++      ]
++    },
++    {
++      "en": "For any frame and any naming of blocks by finite words, every branching test of blocks is a finer branching test, each block read as the course of its word, holding at the same configurations, with no premise: the frame of blocks translates into the finer frame.",
++      "zh": "对任一框架与以有限词命名的块：块的每个分支检验都是一个较细的分支检验（每块读作其词的历程），在相同构型成立，无需前提：块框架可译入较细框架。",
++      "declarations": [
++        "Becoming.BranchingTest.finer",
++        "Becoming.Frame.holds_blocks",
++        "Becoming.Translates",
++        "Becoming.Frame.blocks_translates"
++      ]
++    },
++    {
++      "en": "For any two frames and any naming of blocks by finite words, configurations alike at the finer grain are alike in blocks, and configurations passing the same finer branching tests pass the same tests of blocks, with no premise.",
++      "zh": "对任两个框架与以有限词命名的块：在较细粒度上相同的构型在块中也相同，通过相同较细分支检验的构型也通过相同的块检验，无需前提。",
++      "declarations": [
++        "Becoming.Alike.blocks",
++        "Becoming.SameBranchingTests.blocks"
++      ]
++    },
++    {
++      "en": "Where every finer move is named by a block of that move alone, configurations pass the same tests of blocks exactly where they pass the same finer tests, and two descriptions whose kernels are passing the same finer tests and passing the same block tests identify the same configurations.",
++      "zh": "每个较细动作都由只含该动作的块命名时，构型通过相同块检验恰当它们通过相同较细检验；核分别为“通过相同较细检验”与“通过相同块检验”的两个描述，认同相同的构型。",
++      "declarations": [
++        "Becoming.Frame.blocks_sameBranchingTests_iff",
++        "Becoming.Frame.blocks_kernel_iff"
++      ]
++    },
++    {
++      "en": "For any process whose moves each have listed outcomes, the endpoints of each finite course from each configuration are listed, with no choice.",
++      "zh": "对任一过程，若每个动作的结果都已列出，则从每个构型出发的每个有限历程的终点都已列出，无需选择。",
++      "declarations": [
++        "Becoming.outcomes_of_trace"
++      ]
++    },
++    {
++      "en": "Under excluded middle, where the tests of G translate into F and those of G' into F', the translations agree at s and s', and each move of G' has listed outcomes, every history of G from s is matched by a history of G' from s' by the same moves, ending where the translations agree again.",
++      "zh": "在排中律下：G 的检验译入 F、G' 的检验译入 F'，译文在 s 与 s' 处一致，且 G' 的每个动作结果已列出时，G 从 s 出发的每段历史都由 G' 从 s' 出发、同样动作的一段历史匹配，终点处译文再次一致。",
++      "declarations": [
++        "Becoming.Translates.history_matches_of_em"
++      ]
++    },
++    {
++      "en": "Under excluded middle, for two frames, each reading blocks named alike in its own words of different moves and lengths, where the readings of every block test agree at s and s' and the second frame's moves have listed outcomes, every course of blocks written out from s is matched by the same blocks written out from s', ending where the readings agree again.",
++      "zh": "在排中律下，两个框架各以自己的、动作与长度不同的词读取同名的块：每个块检验的读法在 s 与 s' 处一致且第二框架的动作结果已列出时，从 s 写出的每个块历程都由从 s' 写出的同一串块匹配，终点处读法再次一致。",
++      "declarations": [
++        "Becoming.Frame.blocks_history_matches_of_em"
++      ]
++    },
++    {
++      "en": "For any joining read through retained references and any naming of blocks, a history of blocks extends the configuration it started from, by one fragment for each finer move written out, not for each block.",
++      "zh": "对任一经保留引用读取的接合与任一块命名：一段块历史延伸其起始构型，每写出一个较细动作就加一个片段，而不是每块一个。",
++      "declarations": [
++        "Becoming.Joining.retained_blocks_extend"
++      ]
++    }
++  ],
+   "hypotheses": [
+     {
+-      "zh": "给定过程、有限展开词、同一宏步骤及原子问题的解释；跨表述历史恢复需完整翻译问答一致与接收侧 ImageFinite。",
+-      "en": "Supplied processes, finite expansion words and interpretation of common block/atomic questions; cross-articulation history recovery needs complete translated-answer agreement and receiving-side ImageFinite."
+-    },
+-    {
+-      "zh": "引用保持应用使用原有追加式配置语义；核相等另需每个原生事件有单步名称及两份说明各自 Exact、Reduced。",
+-      "en": "Reference preservation uses existing append-only configuration semantics; kernel equality additionally needs singleton names for all native events and Exact/Reduced for each presentation."
+-    }
+-  ],
++      "en": "Supplied processes, finite expansion words and interpretation of common block/atomic questions; cross-articulation history recovery needs complete translated-answer agreement at the start, listed outcomes of the receiving side's moves and excluded middle.",
++      "zh": "给定过程、有限展开词、同一宏步骤及原子问题的解释；跨表述历史恢复需起点处完整翻译问答一致、接收侧动作结果已列出，以及排中律。"
++    },
++    {
++      "en": "Reference preservation uses the joining's retained-reference frame, append-only; kernel equality additionally needs each finer move named by a block of itself and each description's kernel to be exactly its sameness of tests.",
++      "zh": "引用保持使用接合的保留引用框架（只追加）；核相等另需每个较细动作由只含它的块命名，且每份说明的核恰为其检验相同。"
++    },
++    {
++      "en": "Excluded middle enters only as the named hypothesis of the matching laws; translation, sameness and listed endpoints use no premise.",
++      "zh": "排中律只作为匹配规律的明示前提出现；翻译、相同性与列出终点不用前提。"
++    }
++  ],
++  "does_not_show": [
++    {
++      "en": "That two actual descriptions agree on every block test at the start, which matching takes, is not shown.",
++      "zh": "两份实际说明在起点处每个块检验上都一致（匹配所取的条件）未被表明。",
++      "kind": "correspondence"
++    },
++    {
++      "en": "Blocks are fixed finite words; variable or unbounded protocols, probabilities and guaranteed completion are outside these laws.",
++      "zh": "块是固定的有限词；可变或无界的协议、概率与完成保证不在这些规律之内。",
++      "kind": "scope"
++    },
++    {
++      "en": "Matching relates the boundaries of blocks; matching of positions inside blocks, and execution with physical resources, do not follow.",
++      "zh": "匹配关联的是块的边界；块内位置的匹配以及以物理资源执行，都不由此得出。",
++      "kind": "non-implication"
++    },
++    {
++      "en": "That every finer move is a block of its own is shown sufficient for the block tests to recover every finer test; that it is necessary is not shown.",
++      "zh": "每个较细动作自成一块，被证明足以使块检验恢复每个较细检验；其必要性未被表明。",
++      "kind": "converse"
++    }
++  ],
++  "counterexamples": [
++    {
++      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGranularityBoundary.lean",
++      "detail": {
++        "en": "From one origin, two branches pass the same tests of completed blocks and of every nonempty prefix, while from one of them the continuation can be lost midway: no test of prefixes reads that loss.",
++        "zh": "自同一起点的两个分支通过相同的完成块检验与每个非空前缀检验，而其中一支的接续可在中途失去：没有前缀检验能读出这一损失。"
++      }
++    }
++  ],
++  "standard_boundaries": [
++    "no-ethical-premise",
++    "decidability",
++    "discrete-steps",
++    "zero-axiom-target-open"
++  ],
++  "validation_scope": {
++    "en": "Machine-checked with Lean 4.29.1: the core module Becoming.Granularity by the consolidated core checker, bound to becoming-checks/20261020T051144.879480Z, every cited declaration with an empty axiom report. The superseded periphery module ExplanatoryGranularity and the bridge GranularityBridge are provenance; their check (explanatory-granularity-checks/20261008T181446.359434Z: 279 declaration audits, 104 with standard axioms) keeps its scope. Author counterreview; no independent review.",
++    "zh": "Lean 4.29.1 实查：核心模块 Becoming.Granularity 由合并核心检查器检查，绑定 becoming-checks/20261020T051144.879480Z，所引声明公理报告皆空。已被取代的外围模块 ExplanatoryGranularity 与桥接 GranularityBridge 为来源；其检查（explanatory-granularity-checks/20261008T181446.359434Z：279 项审计，104 项用标准公理）保持原范围。作者反审；无独立审查。"
++  },
++  "next_delta": {
++    "en": "Match positions inside blocks between two articulations with different internal syntax, and derive the starting agreement of block tests from how the two descriptions formed instead of supplying it.",
++    "zh": "在内部语法不同的两种表述之间匹配块内的位置，并从两份说明如何形成推出起点处块检验的一致，而不是给定它。"
++  },
+   "correspondence": {
+@@ -134,15 +217,2 @@
+         "en": "New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation."
+-      }
+-    }
+-  ],
+-  "limitations": {
+-    "zh": "不证明实际两份说明必有完整对应、可变／无界协议、内部位置匹配、资源执行、概率、终止保证或零实质前提的普遍唯一性。单步覆盖是充分条件。",
+-    "en": "Does not prove actual accounts must have complete correspondence, variable/unbounded protocols, internal-position matching, physical resource execution, probabilities, guaranteed completion or universal zero-substantive-premise uniqueness. Singleton coverage is sufficient."
+-  },
+-  "counterexamples": [
+-    {
+-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGranularityBoundary.lean",
+-      "detail": {
+-        "zh": "不证明实际两份说明必有完整对应、可变／无界协议、内部位置匹配、资源执行、概率、终止保证或零实质前提的普遍唯一性。单步覆盖是充分条件。",
+-        "en": "Does not prove actual accounts must have complete correspondence, variable/unbounded protocols, internal-position matching, physical resource execution, probabilities, guaranteed completion or universal zero-substantive-premise uniqueness. Singleton coverage is sufficient."
+       }
+@@ -198,3 +268,4 @@
+         "Becoming.Frame.blocks_kernel_iff",
+-        "Becoming.Joining.retained_blocks_extend"
++        "Becoming.Joining.retained_blocks_extend",
++        "Becoming.Frame.blocks_translates"
+       ]
+@@ -250,2 +321,46 @@
+     }
++  ],
++  "history": [
++    {
++      "zh": "2026-10-09：在既有接合情境研究中完成有限粒度接通与具体边界检验；不另开研究副本。",
++      "en": "2026-10-09: finite-granularity connection and concrete boundary test completed within the existing joining-context study."
++    },
++    {
++      "zh": "2026-10-09接续：研究新增有限条件程序、余项恢复及35项实查声明；原成果的主张、假设和证明绑定保持，见原研究§27—32。",
++      "en": "2026-10-09 continuation: finite guarded programs, residual recovery and 35 checked declarations added in the same study §§27–32; this result retains its claim, assumptions and proof bindings."
++    },
++    {
++      "zh": "2026-10-15，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述（新核心模块 Becoming.Granularity，新桥接 Becoming.GranularityBridge）。块是同一展开的有限路径（Frame.blocks），块的历史即写出的较细历史（Frame.blocks_trace_iff）；块的每个分支检验都是较细检验，在相同配置成立，不加前提（Frame.holds_blocks）。在较细粒度相同或同测的配置在块中亦然（Alike.blocks、SameBranchingTests.blocks）；每个较细动作自成一块时，块的检验恢复每个较细检验（Frame.blocks_sameBranchingTests_iff，充分非必要），两种描述的核相同（Frame.blocks_kernel_iff）。以另一粒度读同一展开的一般律：两框架的检验各自译入较细框架、译文在两配置处一致、接收侧每步结果列出时，前者的每段历史由后者以相同步匹配，终点译文仍一致（Translates.history_matches_of_em）；排中律为具名假设 em，外围的经典推理正在此处；列出的结果给出每段有限路径的终点，不用选择（outcomes_of_trace）。保留引用的块保持起点并计入其中每次形成（Joining.retained_blocks_extend，外围的登记模型编译后用 propext，故在核心的保留框架上重述）。桥接表明外围的块即核心的（blocks_ofModel，按定义），编译问题即较细检验（BranchingTest.toTest_finer）：compile_correct、blocks_trace_iff、singleton_coverage_recovers_questions、full_and_block_reduced_kernels 逐字成立，不加假设；finite_trace_endpoints 与 blocks_image_finite 外围以经典选择证明，核心不用选择；cross_granularity_history_matches 以 em 为假设。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
++      "en": "15 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine (new core module Becoming.Granularity, new bridge Becoming.GranularityBridge). A block is a finite course of the same unfolding (Frame.blocks), and a history of blocks is the finer history written out (Frame.blocks_trace_iff); every branching test of blocks is a finer test holding at the same configurations, with no premise (Frame.holds_blocks). Configurations alike, or passing the same tests, at the finer grain are so in blocks (Alike.blocks, SameBranchingTests.blocks); where every finer move is a block of its own, the tests of blocks recover every finer test (Frame.blocks_sameBranchingTests_iff, sufficient, not necessary) and two descriptions have one kernel (Frame.blocks_kernel_iff). The general law of reading one unfolding at another grain: where the tests of two frames translate into finer frames, the translations agree at two configurations and each move of the receiving side has listed outcomes, every history of the first is matched by one of the second by the same steps, ending where the translations agree again (Translates.history_matches_of_em); excluded middle is the named hypothesis em, which is where the periphery reasoned classically, and listed outcomes give the endpoints of every finite course with no choice (outcomes_of_trace). Blocks of retained references keep where the course started and count every formation within (Joining.retained_blocks_extend, restated on the core’s retained frame because the periphery’s register model compiles through propext). The bridge shows the periphery’s blocks are the core’s (blocks_ofModel, by definition) and its compiled questions the finer tests (BranchingTest.toTest_finer): compile_correct, blocks_trace_iff, singleton_coverage_recovers_questions and full_and_block_reduced_kernels hold as stated with no added hypothesis; finite_trace_endpoints and blocks_image_finite, chosen classically in the periphery, need no choice in the core; cross_granularity_history_matches holds with em. Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proofs and their receipts keep their scope."
++    },
++    {
++      "en": "2026-10-20: 8 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ff89413324fa6362/finite-granularity-question-recovery.json and in git.",
++      "zh": "2026-10-20：8 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ff89413324fa6362/finite-granularity-question-recovery.json 和 git 中。"
++    },
++    {
++      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryGranularity and GranularityBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity). The retired modules' content is also stated in Becoming.Grains, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
++      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryGranularity and GranularityBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity）。退役模块的内容也陈述于 Becoming.Grains，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
++    },
++    {
++      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; a statement written from the home section and the claim; the claim split into 8 laws, each read against its declarations in Becoming.Granularity, with the conditions the Lean takes written in (listed outcomes of the receiving side, excluded middle for matching, each finer move named by a block of itself for the kernels); the hypotheses kept, with excluded middle named, the periphery's ImageFinite read as listed outcomes and Exact/Reduced as each kernel being its sameness of tests, and a third saying where excluded middle enters; the limitations to four does-not-show items and the standard boundaries no-ethical-premise, decidability, discrete-steps and zero-axiom-target-open; the counterexample, which only repeated the limitations, replaced by the case ExplanatoryGranularityBoundary.lean witnesses (two branches alike on completed-block and prefix tests, one able to lose its continuation midway), its sentences carried by those items; the evidence paragraph rewritten from the receipts; the next step's instruction to reuse dropped; Frame.blocks_translates added to Granularity.lean's references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [finite-granularity-question-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-granularity-question-recovery.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the counterexamples, each read against the Lean it cites.",
++      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；依主章与主张写出陈述；主张拆为 8 条规律，各条对照 Becoming.Granularity 中的声明核读，写入 Lean 所取的条件（接收侧结果已列出、匹配用排中律、核相等需每个较细动作自成一块）；前提保留，写明排中律，外围的 ImageFinite 读作结果已列出，Exact/Reduced 读作各核恰为检验相同，并加第三条说明排中律从何处进入；限制改为四条“未表明”与通用边界 no-ethical-premise、decidability、discrete-steps、zero-axiom-target-open；反例只重复限制，已换为 ExplanatoryGranularityBoundary.lean 所见证的情形（两个分支在完成块与前缀检验上相同，其一可在中途失去其接续），其句由这些条目承载；证据段按回执重写；删去下一步中复用的指示；Frame.blocks_translates 加入 Granularity.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [finite-granularity-question-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-granularity-question-recovery.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及反例，各条对照所引 Lean 核读。"
++    }
++  ],
++  "text_versions": [
++    {
++      "path": "_process/architecture/history/e82134b764ad29a4/finite-granularity-question-recovery.json",
++      "sha256": "e82134b764ad29a41f9e68c268a2c5b1a0c32db1d27c9b3c8fd89f6b88d87bd5",
++      "note": {
++        "zh": "迁移前的记录原始字节（schema 1）。",
++        "en": "Exact record bytes before the migration (schema 1)."
++      }
++    },
++    {
++      "path": "_process/architecture/history/ff89413324fa6362/finite-granularity-question-recovery.json",
++      "sha256": "ff89413324fa6362b83e9cb8c4480d5d1bfd5293c8c1825b935cc0739fe73c2a",
++      "note": {
++        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
++        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
++      }
++    }
+   ]

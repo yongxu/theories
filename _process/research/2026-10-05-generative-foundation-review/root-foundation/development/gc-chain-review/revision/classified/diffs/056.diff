@@ -1,0 +1,25 @@
+--- 64c11b8ed:theories/becoming/results/records/organizational-formation-from-generative-comparison.md
++++ theories/becoming/results/records/organizational-formation-from-generative-comparison.md
+@@ -13,4 +13,7 @@
+ 1. On an exactly listed nonempty eligible range with an irreflexive, transitive comparison, weakly decided, and the relation decided, where every eligible continuation lacking the relation has a strictly better eligible one, the undefeated choices are not empty and each includes the relation. (`Becoming.Requirement.required_of_bettered`, `Becoming.Requirement.frontier_exists`, `Becoming.Requirement.frontier_iff_undominated`, `Becoming.undominated_has`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 2. With no decidedness, under the same improvement witnesses, an undominated member does not lack the relation, a double negation; asked of every relation, possession without the double negation is exactly excluded middle. (`Becoming.Undominated`, `Becoming.Undominated.not_not_has`, `Becoming.undominated_has_iff_em`)
++   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+ 3. In the periphery classical excluded middle supplies both decisions, so on any exactly listed nonempty range, the comparison irreflexive and transitive and each eligible one lacking the relation bettered, the required organization holds with no decision hypothesis, and in the constructed history coordination is required; these two report Lean's three standard axioms, choice among them, the frontier's reading none. (`Becoming.OrganizationCorrespondence.frontier_iff_undominated`, `Becoming.OrganizationCorrespondence.formation_required_by_core`, `Becoming.OrganizationCorrespondence.coordination_is_required_by_core`)
++   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+ 
+@@ -30,3 +33,3 @@
+ 
+-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
++**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+ 
+@@ -102,2 +105,6 @@
+ | receipt | [verification.json](·) | — |
++| receipt | [verification.json](·) | — |
++| receipt | [verification.json](·) | — |
++| receipt | [verification.json](·) | — |
++| receipt | [verification.json](·) | — |
+ 
+@@ -132,2 +139 @@
+ Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+-
