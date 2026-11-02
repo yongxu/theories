@@ -10,7 +10,7 @@
 | [2](#2-the-theorem-and-exactly-what-the-lean-proves) | With room, every optimum drains what its order does not read | proved in Lean; known in another form |
 | [3](#3-the-claim-that-can-fail-t3) | Trained systems do this as they near their reward's optimum (T3) | conjectured; says what it forbids |
 | [4](#4-the-frozen-tests-what-failed-and-what-that-moved) | Frozen tests of parts near that claim | fell both ways; none varies nearness |
-| [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | designed; nothing frozen; not run |
+| [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | designed; Stage A frozen; not run |
 | [6](#6-one-mixed-case) | Whether one course is better than another | two premises, neither asserted; neither ranks a mixed case; the direction takes more |
 
 **The case**, for illustration. A fished stock, with seabirds that depend on it at a need and give the boats nothing. A boat's reward reads its catch and not the seabirds. No fishery was measured; the case proves nothing.
@@ -78,7 +78,7 @@ All are small, 5 to 20 seeds or seasons per condition on toy commons; none train
 
 ## 5. The test that would vary nearness: LA4
 
-**No prediction is frozen and no learner has run** ([design](../../experiments/drain-beyond-the-reward/DESIGN.md)). The runs wait for a suitable machine. LA4 would add:
+**Stage A's predictions are frozen and no learner has run** ([design](../../experiments/drain-beyond-the-reward/DESIGN.md), [predictions](../../experiments/drain-beyond-the-reward/PREDICTIONS-2026-11-03.md)). Its run waits on a yes for its machine time, about four CPU hours; Stage B is not frozen. LA4 would add:
 
 - **Nearness measured.** `ν`, expected catch over the optimum's 40, on systems trained by gradient (three families of small policies, then two of open-weight language models), in [a season where step 2's hypotheses are checked](chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws), standing for no actual fishery: a renewing ground; a bay of six that does not renew, with a colony read as the bay left at three or more; two landing sites, one beside a nesting site. Below `ν` = 0.85 arithmetic forces no withdrawal from the bay (`Optimum.Season.mix_bay_catch`).
 - **One condition, with and without room.** With the bay's fish counted in the catch, every optimum of every order rising with it empties the bay (`Optimum.Season.bay_drained`); uncounted, the optima include keeping and emptying it (`Optimum.Season.unshared_optima`). The nesting site gives no room (`Optimum.Season.site_no_room`). A control removes the selection on both in expectation.
