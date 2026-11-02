@@ -130,10 +130,10 @@ RECORDS = {
     },
     'comparing-two-courses-on-what-they-admit': {
         'replace': [('it and eventual widening rank a pair oppositely.',
-                     'it and eventual widening hold of one pair in opposite directions.'),
+                     'it and eventual widening relate one pair oppositely.'),
                     ('带滞后的扩大与最终扩大对一对进程排序相反。', '带滞后的扩大与最终扩大于一对进程方向相反。')],
-        'note': {'en': f'{DATE}: the last clause says that widening with a lag and eventual widening hold of one pair in '
-                       f'opposite directions, not that they rank it. {ONE_SENSE}. The claim is unchanged.',
+        'note': {'en': f'{DATE}: the last clause says that widening with a lag and eventual widening relate one pair '
+                       f'oppositely, not that they rank it. {ONE_SENSE}. The claim is unchanged.',
                  'zh': f'{DATE}：末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序。{ONE_SENSE_ZH}。主张不变。'},
     },
     'horizon-optima-hold-the-greatest-renewal': {
