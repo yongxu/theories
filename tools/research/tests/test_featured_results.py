@@ -250,7 +250,7 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
-        screen, lead = 'of how anything, evaluation included, comes to be', 'The account below says what is proved'
+        screen, lead = 'of how anything comes to be', 'The account below says what is proved'
         self.assertLess(root.index('> Ongoing work.'), root.index(screen))
         self.assertLess(root.index(screen), root.index('## Truth exists'))
         self.assertLess(root.index('Opening body.'), root.index(lead))  # the lead follows the opening
@@ -327,7 +327,7 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
         self.assertIn('fixes scope', screen)  # both premises with their roles
-        self.assertIn('alone gives order', screen)
+        self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
         self.assertNotRegex(screen, r'\b(AI|Ren|Claude)\b')  # a front page names no person and no AI
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0]

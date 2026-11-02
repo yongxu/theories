@@ -63143,7 +63143,7 @@
      "premise": "Becoming.Comparison",
      "not_entailed": "Becoming.ReadsNoOrder.not_entails",
      "basis": {
-      "en": "What ranks lies in C alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+      "en": "What ranks lies in C, in general alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
     }

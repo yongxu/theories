@@ -8,11 +8,11 @@
 
 *1–2 minutes to read.*
 
-**An account** of how anything, evaluation included, comes to be, lasts, changes and passes away within one relational unfolding, not assumed good.
+**An account** of how anything comes to be, lasts, changes and passes away within one relational unfolding, not assumed good.
 
-**Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
+**Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, and ranks nothing; C (widening what can form is better) gives order; a ranking needs it or a premise in its place. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (9–12 minutes), [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (48–62 minutes) or [the opening](#truth-exists), a first-person conviction (21–27 minutes), with [notes](#notes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (11–14 minutes), then [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (55–71 minutes). [The opening](#truth-exists) is a first-person conviction (21–27 minutes), with [notes](#notes).
 
 **Recorded Lean receipts** credit 496 of [527 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 

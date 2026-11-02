@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Check the review packet's dossiers: every quotation is the text it claims to be, every Lean name exists.
+"""Check the review packet's dossiers: every quotation is the text it claims to be, every Lean name exists, every
+Lean statement copied into a fenced block is still the source's.
 
 usage: python3 -B check_dossiers.py [DOSSIER.md ...]   (default: theories/becoming/review/*.md)
 
@@ -14,6 +15,10 @@ characters is reported (it can reverse a sense, as dropping 無 does). Whitespac
 Lean names: every backticked token of the form `«…»` or `A.b` / `a_b` that names a declaration is looked up in the
 core package (Becoming/*.lean) and the periphery directories the dossiers cite (physics, warning); a token not found is
 reported.
+
+Lean blocks: each declaration in a ```lean block, whitespace and comments aside, must occur in those sources, the older
+modules or the review scripts the dossiers name: a definition whole, to its last line, and a theorem whole or up to its
+proof. A name that still exists can have a statement that changed; this is what catches it.
 """
 import csv, re, sys
 from pathlib import Path
@@ -25,6 +30,9 @@ LEAN_DIRS = [ROOT / 'experiments/integrated-correction/general-framework/generat
              ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/warning']
 QUOTE = re.compile(r'(原文|引|Source|Quote)\s*[〔\[]([^〕\]]+)[〕\]]\s*[：:]\s*[「"“]([^」"”]+)[」"”]')
 TOKEN = re.compile(r'`([^`\s]+)`')
+BLOCK_DIRS = LEAN_DIRS + [ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/deeper',
+                          OUR.parent / 'review-checks']
+DECL = r'(?:@\[[^\]]*\]\s*)?(?:private\s+|protected\s+|noncomputable\s+|partial\s+|unsafe\s+)*(?:theorem|lemma|def|abbrev|structure|inductive|class|instance|axiom|opaque|example)\s'
 
 
 def units():
@@ -76,12 +84,58 @@ def declarations():
     return names
 
 
+MARGIN = '\x00'
+
+
+def uncommented(text):
+    text = re.sub(r'/-.*?-/', '', text, flags=re.S)
+    return '\n'.join(re.sub(r'(^|\s)--\s.*$', '', line) for line in text.split('\n'))
+
+
+def marked(text):
+    """Squashed, with a mark before each line that starts at the margin, so that a declaration's end can be seen."""
+    return squash(re.sub(r'\n(?=\S)', MARGIN, text))
+
+
+def lean_sources():
+    return marked('\n'.join(uncommented(p.read_text(encoding='utf-8', errors='replace'))
+                            for d in BLOCK_DIRS for p in d.rglob('*.lean')) + '\nend')
+
+
+def block_declarations(block):
+    """A fenced block's declarations, its comments taken out."""
+    block = uncommented(block)
+    starts = [m.start() for m in re.finditer(r'^\s*' + DECL, block, re.M)]
+    return [block[a:b].strip() for a, b in zip(starts, starts[1:] + [len(block)])]
+
+
+def stated_to_its_proof(decl, sources):
+    """A statement left whole and followed in the source by its proof, not a prefix of it. It may hold a `:=` of its own
+    (`let x := …`), so the text is not cut there."""
+    stated = decl.rstrip().removesuffix(':=').rstrip()
+    closed = all(stated.count(a) == stated.count(b) for a, b in ('()', '{}', '[]', '⟨⟩'))
+    return (closed and not re.search(r'\blet\s+\S+$', stated)
+            and any(marked(stated) + end in sources for end in (':=', '|', 'where')))
+
+
 def main(paths):
     text, order = units()
     decls = declarations()
+    sources = lean_sources()
     problems = 0
     for path in paths:
         body = Path(path).read_text(encoding='utf-8')
+        for m in re.finditer(r'```lean4?\n(.*?)```', body, re.S):
+            found = block_declarations(m.group(1))
+            if not found:
+                print(f'{path}: Lean block with no declaration: {m.group(1)[:50]!r}'); problems += 1
+            for decl in found:
+                head = re.search(DECL + r'\s*([^\s(:{\[]+)', decl)
+                holds = marked(decl) + MARGIN in sources  # whole, to its last line
+                if not holds and re.search(DECL, decl).group(0).split()[-1] in ('theorem', 'lemma'):
+                    holds = stated_to_its_proof(decl, sources)
+                if not holds:
+                    print(f'{path}: Lean block differs from the sources: {head.group(1) if head else decl[:50]}'); problems += 1
         for m in QUOTE.finditer(body):
             kind, ref, quote = m.groups()
             parts = [squash(x) for x in re.split(r'……|\.\.\.|…', quote) if squash(x)]
@@ -119,5 +173,6 @@ def main(paths):
 
 
 if __name__ == '__main__':
-    args = sys.argv[1:] or [str(p) for p in sorted((ROOT / 'theories/becoming/review').glob('*.md'))]
+    review = ROOT / 'theories/becoming/review'
+    args = sys.argv[1:] or [str(p) for p in sorted(review.glob('*.md')) + [review / 'recoding/CODEBOOK.md']]
     sys.exit(main(args))
