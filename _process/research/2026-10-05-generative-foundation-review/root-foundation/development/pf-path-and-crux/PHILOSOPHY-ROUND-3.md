@@ -23,6 +23,10 @@ The first two rounds read more strongly for P4 than they support [AI reading].
 8. **T8 is exposed.** "Of whatever substrate" rests on P2 and P4, so the ethics' form survives P4's failure and that clause needs another ground.
 9. **Near-definition, and what follows if P4 fails,** are stated for the first time, each part apart.
 
+## What the baseline cold read changed
+
+Two AI readers with no memory of this work read the fronts at main `486c895a9` on 2 November 2026. Neither saw an argument at this join; one read the path as redefining the self, and the other saw a change of interpretation that could be mistaken for a derivation. So the overview now separates the free treatment of significance from the second reading, states the step's premises in words and where the weight falls, and calls the path a proposal. The one page says the objection and drops the codes. §4.7 gains the objection. These readers were asked questions and share an idiom with the text, so this is a baseline, not a person's read.
+
 ## Boundaries
 
 - Nothing in the Lean marks an intended or a foreseen effect. Those readings are the AI's.
