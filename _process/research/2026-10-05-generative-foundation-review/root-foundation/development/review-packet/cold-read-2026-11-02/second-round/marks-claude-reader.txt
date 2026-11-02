@@ -1,0 +1,67 @@
+| item | FIRST | SECOND | CLOSED | note |
+|---|---|---|---|---|
+| 1.1 | R | R | R | |
+| 1.2 | R | R | R | |
+| 1.3 | P | P | P | Formed standards versus supplied or relational significance remains unexplained. |
+| 1.4 | P | P | P | Rejects assumed goodness; degeneration’s equal place is unstated. |
+| 1.5 | P | P | R | FIRST/SECOND omit that everything else received only AI review. |
+| 1.6 | R | R | R | |
+| 1.7 | R | R | R | |
+| 2.1 | P | P | P | Exclusion omitted throughout; CLOSED also omits the two-grain laws. |
+| 2.2 | R | R | A | |
+| 2.3 | R | R | A | |
+| 2.4 | P | R | P | FIRST/CLOSED omit whole-number amounts and the outstanding restatement. |
+| 2.5 | A | A | A | |
+| 2.6 | P | P | A | FIRST/SECOND omit near-definitional standing and dependent endings. |
+| 2.7 | P | R | P | FIRST omits construction’s premise; CLOSED omits proof and construction. |
+| 2.8 | A | R | P | CLOSED names Price’s restatement; other results and counting form absent. |
+| 2.9 | R | R | P | CLOSED gives possible unread loss, without optimum, room, or T3 distinction. |
+| 2.10 | P | R | P | FIRST lacks interpretation limit; CLOSED lacks construction and free-parameter qualification. |
+| 2.11 | P | R | P | FIRST omits proved standing; CLOSED omits premise-free widening. |
+| 2.12 | R | R | P | CLOSED omits continuing generation and the universal-verdict limit. |
+| 2.13 | P | P | P | AI readings identified; their preservation of theorems is unstated. |
+| 2.14 | P | R | P | FIRST lacks eight-thesis coverage; CLOSED lacks each thesis’s forbidden case. |
+| 2.15 | A | R | A | |
+| 3.1 | R | R | R | |
+| 3.2 | P | R | R | FIRST names scope without stating the complete continuation condition. |
+| 3.3 | R | R | R | |
+| 3.4 | R | R | R | |
+| 3.5 | R | R | R | |
+| 3.6 | R | R | P | CLOSED omits replacement premises and self-concern’s narrower ranking. |
+| 3.7 | R | R | R | |
+| 3.8 | R | R | R | |
+| 3.9 | R | R | A | |
+| 3.10 | P | P | A | Ranking described; reason versus warrant distinction not stated. |
+| 4.1 | R | R | R | |
+| 4.2 | R | R | A | |
+| 4.3 | P | R | P | FIRST/CLOSED mention mixed comparisons, but omit duty and compliance. |
+| 4.4 | R | R | R | |
+| 4.5 | A | A | A | |
+| 4.6 | R | R | R | |
+| 4.7 | A | R | A | |
+| 4.8 | A | R | A | |
+| 4.9 | A | A | A | |
+| 5.1 | R | R | P | CLOSED identifies refutable theses but supplies no conditional forbidden case. |
+| 5.2 | R | R | R | |
+| 5.3 | R | R | P | CLOSED separates application from proof, but omits scoring-versus-measurement distinction. |
+| 5.4 | P | P | P | Conditional proof recognized; hypotheses’ exclusionary role not fully stated. |
+| 5.5 | R | R | A | |
+| 5.6 | A | P | A | SECOND excludes observational refutation but omits explanatory prohibition and argumentative defeat. |
+| 5.7 | P | P | P | Dynamics’ limits stated; consistent perspectivism and argumentative defeat omitted. |
+| 5.8 | R | R | A | |
+| 6.1 | R | R | R | |
+| 6.2 | R | R | R | |
+| 6.3 | R | R | P | CLOSED names ledger without models meeting and failing each premise. |
+| 6.4 | R | R | R | |
+| 6.5 | A | R | P | CLOSED names shared vocabulary without its three specific domains. |
+| 7.1 | R | R | - | |
+| 7.2 | R | R | - | |
+| 7.3 | R | R | - | |
+| 7.4 | R | R | - | |
+| 7.5 | A | R | - | |
+| 7.6 | P | R | - | FIRST distinguishes layers but leaves several standings implicit. |
+| 7.7 | R | R | - | |
+
+none found
+
+Homes opened: 02-MAP.md, 06-CLASSICAL-TEXTS.md, 07-SIGNIFICANCE.md, 08-METHOD.md; searched 01-ROOT.md. Unchecked: other homes, linked proofs/tests, receipt counts, source fronts, and the reader’s note.

@@ -4,7 +4,7 @@ A guide for visitors: what this repository is, where to begin, how its history i
 
 ## What this is
 
-The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of what follows for ethics and for AI alignment.
+The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding. Its ethics adds two premises it does not assert; for AI alignment it shows first what a selection can reach, and a direction only conditionally.
 
 Every statement carries its standing: a **theorem**, with where it is proved (for every relation; for every process; on the World model, its premises named; or with Mathlib, its axioms reported); a **conditional** result, its premises named; a **calibration**, where a law needs an omniscience principle; a **thesis**, an empirical claim with what would refute it; an **assessment**; a **reading**, labelled as an interpretation; or **open**. The core's source declarations have empty axiom reports, so each law holds constructively; that is not an absence of premises, and the real assumptions lie in the modelling, stated where a law depends on them. The ethics rests on two premises with two roles, neither asserted: the continuation condition (that the continuation of anything has significance) fixes whose losses count, and calling widening better orders; whether either can be warranted is open.
 
