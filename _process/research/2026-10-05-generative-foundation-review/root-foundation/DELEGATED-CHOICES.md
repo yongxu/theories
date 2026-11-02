@@ -453,6 +453,8 @@ L1, S1 and S2 are D40-D42.
 
 **Answered on 19 October 2026.** Ren answered both: “integrate all, the theory is a whole, not stitched pieces, go ahead” ([words](../../../../sources/15-codex-theory-conversations/2026-10-19-integrate-all.md)). D45 records the answer: the register is decided as one account, and Part D within it.
 
+**Outgrown in part** (2 November 2026, board item GC3). The last sentence of the item on the generativity chain is history. Since 31 October the chain changes through its maintenance record on argument, not as a curated argument of one person (AGENTS.md); GC3 gave each step that stood on a name its argument, or marked it as resting on none yet ([the record](GENERATIVITY-CHAIN-INDEX-RECORD.md#gc3-steps-on-their-arguments-2-november-2026)). The rest of the decision is kept.
+
 <a id="7-从关系开始的重建--the-relation-first-re-founding"></a>
 ## 7. The relation-first re-founding
 

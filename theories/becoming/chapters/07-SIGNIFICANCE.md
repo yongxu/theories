@@ -29,6 +29,18 @@ That every World law reads only the dynamics is a fact about the representation:
 <a id="r-rivals-bounded-in-time"></a>
 **Theorem** (any type; World witness). A rule holding exactly within a region accepts the condition's rule there and is not the condition where something lies outside (`rival_of_outside`). A significance caring only for continuations up to a step is such a rival wherever there is a standpoint and a formation (`bounded_in_time_rival`). In the clearer's witness, caring for the first two steps only, the clearer's part loses nothing that has significance, while under the condition it loses the dweller (`Clearing.time_bounded_permits`). ([record](../results/records/rivals-bounded-in-time.md))
 
+<a id="what-forms-and-what-is-supplied"></a>
+**What forms, what is read, what is supplied, what is out of reach.** "How evaluation forms" covers four things with four standings ([the argument](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/HOW-EVALUATION-FORMS.md)).
+
+| Standing | What | Where |
+|---|---|---|
+| Shown, each under its stated conditions; none reads significance | how needs form, how standards are shaped and gain influence, and what a response within one takes: requirement fixed by the exchange, a dependence formed from drawing, the rule shaped by what comes back, what acts show, the law of a common response | [01](01-ROOT.md#r-requirement-is-the-weakest-sound-reading), [04](04-LIFE.md#r-dependence-formed-from-drawing), [02](02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back), [03 §11](03-KNOWING.md#r-what-choices-show-of-an-order), [03 §12](03-KNOWING.md#r-a-response-common-over-a-reading) |
+| Read | a significance tied to a center: what lies within its least boundary along a relation has significance from it; which relation is not derived | above; [§4.2](#r-what-the-step-across-standpoints-reaches) |
+| Supplied | the free `sig`; the requirement a response answers to, the task, the set level; for the ethics, the condition, C, a reading of `living`, L, J1–J4 and the weights | above; [§4](#scope-and-order), [§5](#practical-judgment), [the map](08-METHOD.md#what-a-response-takes-in) |
+| Out of reach of the represented dynamics, for the untied `sig` | excluding a rival or entailing the condition (`ReadsOnlyDynamics.admits_rival`, `ReadsOnlyDynamics.not_entails`) | [above](#r-what-the-dynamics-leave-open) |
+
+No law joins the first row to the second: that a standard which formed is a significance is a reading, not a theorem. Held de se along a relation, a standard is the condition exactly where every center's closure under that relation is the whole (`ownClosure_unrestricted_iff`), and a rival where something lies outside (`rival_of_outside`).
+
 <a id="order"></a>
 ## 2. The order with no premise
 
@@ -511,7 +523,7 @@ P2 excludes the organism, does not exclude the intended self and is no test of t
 <a id="practical-judgment"></a>
 ## 5. Practical judgment
 
-C ranks courses; choices take more, following from neither the condition nor C: a reading of `living` (which events a course includes), the lifting L and the commitments J1–J4.
+C ranks courses; choices take more, following from neither the condition nor C: a reading of `living` (which events a course includes), the lifting L and the commitments J1–J4. The law of a common response holds for every requirement supplied and fixed before the outcome, so also for one filled from these (a reading of `living`, L and J1–J4), with the condition for scope and C for order: a response common over a reading exists within it exactly where the acts' kernels cover the situations ([03 §12](03-KNOWING.md#r-a-response-common-over-a-reading)); that law says nothing of which requirement is better.
 
 <a id="r-ranking-under-readings"></a>
 **Conditional** (C; World). With two continuations as the configurations of a frame and the events a reading includes as its claims, C is a comparison on that frame. In every family, under the whole-run or the stepwise reading, a course renewing every condition extends another exactly when it is active at every event the other includes and at some event the other withholds (`Ranking.renewed_extends_iff`). What every comparison satisfying C ranks, in the *support-gated family* (the sustaining formation's need positive and met at the start, the focal need within it, the focal formation drawing beyond the renewal of the sustaining formation's condition from some step on):
