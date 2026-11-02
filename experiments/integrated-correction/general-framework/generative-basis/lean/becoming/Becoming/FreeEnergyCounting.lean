@@ -25,8 +25,10 @@ with no logarithm. This module proves it in the pure core, with its case of equa
 * **The bound** (`bound`): over any listed hypotheses, with `total` the core's sum over a listing
   and `powerProduct a n` the product of each `a ^ n`. It holds with no support condition: a count
   where the joint weight is nothing makes the left side nothing, as the free energy is infinite
-  there as usually defined (`Witness.off_support`), while the real form, under Mathlib's
-  `log 0 = 0`, fails there, so off the support the two modules' laws are not one law.
+  there as usually defined, and the bound is strict (`Witness.off_support`). Under Mathlib's
+  `log 0 = 0` the real form of the periphery module `FreeEnergyReals` is at equality at that
+  witness, and fails at counts one and one against the same weights, so off the support the two
+  modules' laws are not one law.
 * **Equality exactly in proportion** (`bound_eq_iff`): the bound holds with equality exactly where
   the counts are proportional to the weights, `n h * A = a h * N` at every listed hypothesis
   (`bound_eq_of_proportional`, `proportional_of_bound_eq`), and away from proportion it is strict
@@ -665,8 +667,10 @@ theorem scaled_reach :
 def secondOnly : Bool → Nat := fun b => if b then 0 else 1
 
 /-- **Off the support the bound still holds**: a belief all on a hypothesis of joint weight nothing
-makes the left side nothing, as the free energy is infinite there as usually defined (the real form
-of `FreeEnergyReals`, under Mathlib's `log 0 = 0`, fails there instead). -/
+makes the left side nothing, as the free energy is infinite there as usually defined, and the bound
+is strict. Under Mathlib's `log 0 = 0` the real form of `FreeEnergyReals` is at equality here
+instead, the free energy being the surprisal; it fails at counts one and one (`even`) against the
+same weights. -/
 theorem off_support :
     total [true, false] first ^ total [true, false] first * powerProduct secondOnly first [true, false] = 0 ∧
       0 < total [true, false] secondOnly ^ total [true, false] first * powerProduct first first [true, false] := by

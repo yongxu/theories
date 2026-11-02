@@ -578,7 +578,7 @@
         "Becoming.BlanketCouplings.worldParts",
         "Becoming.BlanketCouplings.worldReads"
       ],
-      "sha256": "41be3c22d454cc04586d02fae09eb2111fdd60bd63c0e28f023cb86e2ade8639"
+      "sha256": "86dbebdcf48613232ab37dc9effffed3b9211698503787b98637a76170bea3ea"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
@@ -639,12 +639,18 @@
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
       "sha256": "8bd07249aa0e8be783af873ea0fe95dc547ee2401960470b21e3f3edc152f121"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "role": "receipt",
+      "sha256": "58ba9213b37a9bb07551fb1fe5e0f5e49c60458002a28a3a55fb5faa0eda33a2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BlanketCouplings",
       "success_pointer": "/status",
       "success_value": "passed"

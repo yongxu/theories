@@ -108,6 +108,8 @@ Expected free energy as defined by Parr and Friston (2019, Biological Cybernetic
 | integration | [RECHECK-UE23.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/RECHECK-UE23.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261102T185502.239685Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261102T185516.297552Z/verification.json) | — |
 
 Aliases: `Expected free energy and its terms`, `期望自由能及其诸项`, `expected free energy`, `risk and ambiguity`, `epistemic and pragmatic value`, `expected information gain`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse`, `Becoming.ExpectedFreeEnergy.seeking_reads_profiles`
 
