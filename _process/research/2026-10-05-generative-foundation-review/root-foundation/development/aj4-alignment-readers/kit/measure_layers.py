@@ -52,7 +52,7 @@ LAYERS = [
 ]
 WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md']
 # A dossier's hour, as its "How long" paragraph names it: its ten minutes and these items.
-HOUR_PATHS = {'ALIGNMENT.md': ['a-02', 'a-07', 'a-10', 'a-12', 'a-14', 'a-18', 'a-19'],
+HOUR_PATHS = {'ALIGNMENT.md': ['a-02', 'a-07', 'a-10', 'a-12', 'a-18', 'a-19'],
               'PHILOSOPHY.md': ['p-04', 'p-05', 'p-07', 'p-10', 'p-11', 'p-20']}
 
 
