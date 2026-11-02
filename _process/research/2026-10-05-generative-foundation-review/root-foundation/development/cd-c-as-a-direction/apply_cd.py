@@ -136,6 +136,18 @@ RECORDS = {
                        f'oppositely, not that they rank it. {ONE_SENSE}. The claim is unchanged.',
                  'zh': f'{DATE}：末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序。{ONE_SENSE_ZH}。主张不变。'},
     },
+    'what-a-course-keeps-reachable': {
+        'replace': [('only with a lag does it rank a range', 'only with a lag does it put a range'),
+                    ('realized and reachable widening rank a pair oppositely.',
+                     'realized and reachable widening relate a pair oppositely.'),
+                    ('故仅带滞后时才把持续扩大的范围排在起进程且当下更宽者之上', '故仅带滞后时才把持续扩大的范围置于起进程且当下更宽者之上'),
+                    ('实现之扩大与可达之扩大对一对排序相反。', '实现之扩大与可达之扩大于一对进程方向相反。')],
+        'note': {'en': f'{DATE}: the statement says that covering with a lag puts a range above another, and that realized '
+                       f'and reachable widening relate a pair oppositely, not that they rank it, as its home section in 07 '
+                       f'§2 says. {ONE_SENSE}. The claim is unchanged.',
+                 'zh': f'{DATE}：陈述改说带滞后的覆盖把一个范围置于另一个之上，且实现之扩大与可达之扩大于一对进程方向相反，'
+                       f'而非对之排序，与 07 §2 的本节相同。{ONE_SENSE_ZH}。主张不变。'},
+    },
     'horizon-optima-hold-the-greatest-renewal': {
         'replace': [('"en": "Ranked over a horizon, what a course draws', '"en": "Over a horizon, what a course draws'),
                     ('"zh": "在视野上排序时，过程所汲取', '"zh": "在视野上，过程所汲取')],

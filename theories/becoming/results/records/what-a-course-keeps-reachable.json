@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-27T05:09:26+00:00",
   "statement": {
-    "en": "Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only with a lag does it rank a range that keeps widening above one wider now that starts a course, a verdict C leaves open. On a branching witness realized and reachable widening rank a pair oppositely.",
-    "zh": "覆盖即逐偏移比较进程保持可达者，它蕴含当下之包含，故仅带滞后时才把持续扩大的范围排在起进程且当下更宽者之上，此判定 C 不定。在一分支见证上，实现之扩大与可达之扩大对一对排序相反。"
+    "en": "Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only with a lag does it put a range that keeps widening above one wider now that starts a course, a verdict C leaves open. On a branching witness realized and reachable widening relate a pair oppositely.",
+    "zh": "覆盖即逐偏移比较进程保持可达者，它蕴含当下之包含，故仅带滞后时才把持续扩大的范围置于起进程且当下更宽者之上，此判定 C 不定。在一分支见证上，实现之扩大与可达之扩大于一对进程方向相反。"
   },
   "laws": [
     {
@@ -980,6 +980,10 @@
     {
       "en": "28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE13（研究第 431 节）：与 what-can-be-born-next 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the statement says that covering with a lag puts a range above another, and that realized and reachable widening relate a pair oppositely, not that they rank it, as its home section in 07 §2 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "3 November 2026, CD (board item CD)：陈述改说带滞后的覆盖把一个范围置于另一个之上，且实现之扩大与可达之扩大于一对进程方向相反，而非对之排序，与 07 §2 的本节相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ]
 }

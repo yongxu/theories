@@ -79,6 +79,14 @@ class ScopedDriftTests(unittest.TestCase):
         changed = STUDY.replace('Other line.', 'Other line, changed.')
         self.assertEqual(self.drift('elsewhere', changed), ['## 1. First'])
 
+    def test_renamed_record_is_located_by_its_former_id(self):
+        changed = STUDY.replace('Other line.', 'Other line, changed.')
+        renamed = {'id': 'one-renamed', 'former_ids': ['one']}
+        self.assertIsNone(self.drift('one-renamed', changed, renamed))
+        registry._comparisons.clear()
+        relinked = STUDY.replace('records/one.md', 'records/one-renamed.md')
+        self.assertEqual(self.drift('one-renamed', relinked, renamed), ['## 1. First'])
+
     def test_rewrite_before_first_heading_bears_on_every_record(self):
         self.assertEqual(self.drift('one', STUDY.replace('Intro.', 'Intro, changed.')), ['(before the first heading)'])
 
