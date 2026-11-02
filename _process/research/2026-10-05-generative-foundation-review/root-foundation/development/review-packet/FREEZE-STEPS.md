@@ -17,13 +17,13 @@ The release gate's [item 7](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#t
 | Alignment | `3ada8819f` | 0 of 109 | 8 of 20 | 2 of 13 | 3 of 20 | 11 |
 | Sciences, if it joins | `b7b36ab74` | 81 of 258 | 7 of 20 | 2 of 7 | 22 of 23 | 86 |
 
-Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what it found](../rp2-philosophy/README.md#the-re-sync-of-2-november-2026)), so its last read is now `2cab11114`: its 11 items gave one addition, one sentence on what a standpoint is, and a few changes of wording. Logic, the most of the packet's five with 25 of 29 items flagged, was re-synced on 2 November 2026, so its last read is now `515c0d953`: twelve items changed, the shared laws, one root to its edge and premises met and failed now linked, and two statements the chapters had overtaken corrected (L-09 said no theorem joins 延 to dependent choice; L-03 cited the wrong decision). One independent reader's nine findings were checked against the sources and taken. The sciences dossier's pin is its last re-sync as a whole, on 27 October; later commits there touched single quotations. The whole-file column counts Markdown files, as the report then did; it now counts every linked file and folder, so a re-run's totals are higher (classical 10, Buddhist 16).
+Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what it found](../rp2-philosophy/README.md#the-re-sync-of-2-november-2026)), so its last read is now `2cab11114`: its 11 items gave one addition, one sentence on what a standpoint is, and a few changes of wording. Logic, the most of the packet's five with 25 of 29 items flagged, was re-synced on 2 November 2026, so its last read is now `515c0d953`: twelve items changed, the shared laws, one root to its edge and premises met and failed now linked, and two statements the chapters had overtaken corrected (L-09 said no theorem joins 延 to dependent choice; L-03 cited the wrong decision). One independent reader's nine findings were checked against the sources and taken. Classical and Buddhist were re-synced on 3 November 2026, each with a new item for the corpus's conditional laws (C-39, B-36), and philosophy re-read since its pin, so their last read is now `2cce0560a`. Their independent readers' 13, 13 and 8 findings were checked against the sources and taken. They found what the report cannot show: sentences unchanged since the pin whose sources had moved without a link to them (C-30 on the record's wording), and three sentences in chapter 6, its table and its record that said more than the study shows, corrected with them; a fourth, LZ-30-008 placed against the study's own rule on commentary, is disclosed in C-39 and left to the reader. Alignment was re-synced the same day by AJ4's owner, so its last read is now `2b91abeff` ([its independent read](../aj4-alignment-readers/REVIEW-RESYNC.md)). The sciences dossier, if it joins, was re-synced as a whole the same day, so its last read is now `109c8d10f`: all 23 items flagged, most still true, what moved in S-01, S-02, S-03, S-05, S-07, S-21, S-22 and S-23, and its reader's fourteen findings checked against the sources and taken ([what it found](../ue8-sciences-dossier/README.md#the-re-sync-of-3-november-2026)). The whole-file column counts Markdown files, as the report then did; it now counts every linked file and folder, so a re-run's totals are higher (classical 10, Buddhist 16).
 
 ## Before starting
 
 1. The way now's items 1 to 4 have landed. Each changes what readers are told, so a re-sync before them is done twice.
 2. What would change the frozen commit has been put to Ren: [the board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation for each. None of it holds the freeze if he has not answered: [`COMMONS.md`](../../../../../../COMMONS.md), which says the work is not licensed, stays as it is; the first coder's twenty timed units stand in for a trial of the codebook; and the sciences dossier ([`SCIENCES.md`](../ue8-sciences-dossier/SCIENCES.md)) can join a later edition. If it joins, it moves into the review folder, it is re-synced with the others, and the cover's table, the builder's `PARTS`, the codebook's count of the dossiers, step 9's second path, the measure's lists and this page's table of what each reader is sent all change.
-3. The coordinator has given the slot. As set on 2 November: logic is re-synced by RP's owner, alignment by AJ4's, the sciences dossier, if it joins, by UE8's; classical, Buddhist, the cover and what has moved under philosophy since its pin by the holder of this page. An owner no longer active hands over: check, then take it.
+3. The coordinator has given the slot. As set on 2 November: logic is re-synced by RP's owner, alignment by AJ4's, the sciences dossier, if it joins, by UE8's, who handed it to this page's holder on 3 November 2026; classical, Buddhist, the cover and what has moved under philosophy since its pin by the holder of this page. An owner no longer active hands over: check, then take it.
 
 ## The steps
 
@@ -36,7 +36,7 @@ KIT=_process/research/2026-10-05-generative-foundation-review/root-foundation/de
 
 Call C the commit of main you read the dossiers against, at first this branch's start. Keep your reports outside the tree.
 
-**1. Report each dossier's drift (run).** The pin is the table's second column, philosophy's now `2cab11114` and logic's `515c0d953`. Under half a minute for all five.
+**1. Report each dossier's drift (run).** The pin is the table's second column, but for those re-read since: sciences' now `109c8d10f`, classical's, Buddhist's and philosophy's `2cce0560a`, alignment's `2b91abeff`, logic's `515c0d953`. Under half a minute for all five.
 
 ```bash
 python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/CLASSICAL-TEXTS.md --out <scratch>/CLASSICAL-TEXTS.md
@@ -44,17 +44,17 @@ python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/CLASSICAL-TE
 
 The report gives, item by item, each quotation whose paragraph changed, each linked section that changed as its changed spans, each linked file or folder that changed or is new since the pin, and the results new in the dossier's main chapters that it does not link. Whatever its summary counts gets a line, under each item that links it. An anchor it cannot follow is listed: read those by hand. The cover and the codebook cite little: read them whole.
 
-**2. Read every flagged item against its chapter (run for philosophy only).** The dossier says what the chapter now says and no more. Three rules from the rehearsal:
+**2. Read every flagged item against its chapter (run for all six).** The dossier says what the chapter now says and no more. Three rules from the rehearsal:
 
 - A report line is not a fault. Open the chapter and decide. A long insertion is cut in the report, so never judge one from the report alone.
 - A new result goes in only where it bears on what the item asks this reader. Philosophy took the result on self-concern and C; it left holding for a reading to alignment, which already carries it. State every hypothesis the chapter states: the independent read of this step found two dropped.
 - If a chapter has answered a dossier's question or removed a known weakness, say so in the item, with the date. Do not delete it silently.
 
-Copy new Lean statements by script ([`lean_statements.py`](../rp2-philosophy/lean_statements.py); `Web.*` names need their full dotted form), since the checker compares every declaration in a Lean block with the sources, a definition whole and a theorem up to its proof. Run `python3 -B $KIT/check_dossiers.py` after each dossier. Record the pass in the dossier's *How this dossier was made* where it has one (philosophy, alignment), and move its pin in this page's table.
+Copy new Lean statements by script ([`lean_statements.py`](../rp2-philosophy/lean_statements.py); `Web.*` names need their full dotted form), since the checker compares every declaration in a Lean block with the sources, a definition whole and a theorem up to its proof. Run `python3 -B $KIT/check_dossiers.py` after each dossier. Record the pass in the dossier's *How this dossier was made* where it has one (philosophy, alignment), and record its new pin in the paragraph under this page's table and in step 1, whose counts stay as the rehearsal measured them.
 
-**3. An independent read of each changed dossier (run for philosophy).** One AI reader per dossier, read-only and with no part in the writing, given the diff, the chapter and the Lean; every finding taken or its refusal recorded. That is up to five agents, so state the count to the coordinator first. Check a reader's findings against the sources before taking them.
+**3. An independent read of each changed dossier (run for the same six).** One AI reader per dossier, read-only and with no part in the writing, given the diff, the chapter and the Lean; every finding taken or its refusal recorded. That is up to five agents, so state the count to the coordinator first. Check a reader's findings against the sources before taking them.
 
-**4. Re-measure, and correct what the dossiers state (run for philosophy).**
+**4. Re-measure, and correct what the dossiers state (run for the same six).**
 
 ```bash
 python3 -B _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/kit/measure_layers.py
@@ -62,9 +62,9 @@ python3 -B _process/research/2026-10-05-generative-foundation-review/root-founda
 
 A moved time changes in three places: the dossier's own statement of its time, the row in `README.md` and in `README.zh.md`, and [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md) lines 32 and 35. A front over budget keeps what amendment 1 says may not be cut and moves the rest down a layer; what it keeps beyond that it records, with the reason.
 
-**5. If main has moved, merge it and re-run step 1 with the last C as the pin (not run).** The commit of main it brought is the new C. Repeat until nothing landed since is unread. The coordinator can shorten this by holding landings that change the chapters.
+**5. If main has moved, merge it and re-run step 1 with the last C as the pin (run at the landing of 3 November 2026).** The commit of main it brought is the new C. Repeat until nothing landed since is unread. The coordinator can shorten this by holding landings that change the chapters.
 
-**6. Set the one pin a dossier states (not run).** `CLASSICAL-TEXTS.md` line 5 names the version it was checked against. Set it to C, with C's date. No other dossier states a commit it was checked against, and this goes last because C can move.
+**6. Set the one pin a dossier states (run at the same landing; it comes again at the freeze).** `CLASSICAL-TEXTS.md` line 5 names the version it was checked against. Set it to C, with C's date. No other dossier states a commit it was checked against, and this goes last because C can move.
 
 **7. Freeze which sampled units the dossiers quote (run).** This reads the final dossiers, so it comes after them, and its file belongs to the frozen commit.
 
@@ -134,24 +134,24 @@ Measured on the scratch copy, three times, while other sessions ran Lean (machin
 
 | Step | Time |
 |---|---|
-| All five drift reports | under 10 s |
+| All five drift reports | under 30 s |
 | Philosophy's reading, edits and independent read | about two hours of one session (an estimate), the reader's part about 20 minutes |
-| The other four, at that rate | a few hours each for classical and Buddhist, under an hour for alignment (an estimate, not run); logic, run, about two hours of one session, the reader's part about 6 minutes; the sciences dossier, if it joins, about as long as logic |
+| The other four, at that rate | classical and Buddhist, run, roughly two hours of one session for the two with their kit pages, each reader about 16 minutes, taking its findings about half an hour; under an hour for alignment (an estimate, not run); logic, run, about two hours of one session, the reader's part about 6 minutes; the sciences dossier, run, about two hours of one session, its reader about 13 minutes |
 | Measure, `--write-quoted` | seconds |
 | Render | 119 to 334 s |
 | Secrets | 13 to 45 s |
 | Strict check | 121 to 262 s |
 | Links | 6 to 11 s |
 | The two dossier checks | 5 to 19 s together |
-| Full tests | 1,554 s (one run) |
+| Full tests | 366 s at load 6 to 13; 1,554 s at the rehearsal's load |
 | The edition, twelve parts | 38 to 60 s at release; drafts 26 to 187 s by load |
 
-So the head is held for 30 to 40 minutes at that load, 26 of them the full tests, and the whole freeze is a day or two of sessions if the owners work in parallel, plus whatever the queue holds. No Lean changes, so there is no core run.
+So the head is held for 30 to 40 minutes at that load, 26 of them the full tests, about 12 at low load, and the whole freeze is a day or two of sessions if the owners work in parallel, plus whatever the queue holds. No Lean changes, so there is no core run.
 
 ## What the rehearsal changed
 
-- [The builder](../../../../../../tools/publishing/build_review_packet.py). `--release` had no clean-tree guard and named no commit anywhere, so a reader could not tell which version they held. It now refuses as step 11 says, stamps each part with the commit, adds the one page, the overview and the codebook the cover sends readers to, drops dead navigation lines, sets quoted lines apart, and labels citations by what they are. It prints under its own Chrome profile and reads Chrome's own count of bytes written, because under load Chrome can write the file and then die in its teardown.
+- [The builder](../../../../../../tools/publishing/build_review_packet.py). `--release` had no clean-tree guard and named no commit anywhere, so a reader could not tell which version they held. It now refuses as step 11 says, stamps each part with the commit, adds the one page, the overview and the codebook the cover sends readers to, drops dead navigation lines, sets quoted lines apart, and labels citations by what they are. A table row no longer splits across sheets. It prints under its own Chrome profile and reads Chrome's own count of bytes written, because under load Chrome can write the file and then die in its teardown.
 - [The glyph map](../../../../../../tools/publishing/build_xiaokang_datong.py). The radicals supplement has no compatibility decomposition, so 见, 门, 长, 民 and others copied from a PDF as radicals. They no longer do.
 - [The checker](check_dossiers.py) now compares Lean blocks with the sources (none of 132 declarations was stale), and covers the codebook. [Its test](../../../../../../tools/research/tests/test_review_packet.py) has negative cases.
-- [`resync_report.py`](resync_report.py) is new. It was corrected on 3 November 2026, after alignment's reader found a changed file missing from its report. Rows with no text of their own shared one key, so only the first whole file that changed printed as itself. A later one in the same item got no line (six in classical, two in Buddhist, one in alignment), and one under a later item got only "as under" an item that showed nothing. The summary's counts were right throughout. It also read heading anchors as not found, and did not look at other linked files or at files new since the pin. Now whatever it counts gets a line, and [its test](../../../../../../tools/research/tests/test_review_packet.py) holds that. Alignment's re-run gained one row this way, the goal section of its plan.
+- [`resync_report.py`](resync_report.py) is new. It was corrected on 3 November 2026, after alignment's reader found a changed file missing from its report. Rows with no text of their own shared one key, so only the first whole file that changed printed as itself. A later one in the same item got no line (six in classical, two in Buddhist, one in alignment), and one under a later item got only "as under" an item that showed nothing. The summary's counts were right throughout. It also read heading anchors as not found, and did not look at other linked files or at files new since the pin. Now whatever it counts gets a line, and [its test](../../../../../../tools/research/tests/test_review_packet.py) holds that. Alignment's re-run gained one row this way, the goal section of its plan. Reference-style links, which classical alone uses, are read too since the same date.
 - Philosophy re-synced. In the classical and logic dossiers, the sentences that explained checker markup a reader never sees were reworded to read true in both forms; classical's said the repository held no 郭象注, which C-37 quotes from it. C-13's gloss of 生生 now matches chapter 6. The codebook's count of the dossiers is five, and it asks coders to time twenty units from across the sheet, since the sheet opens with 22 units of one text.
