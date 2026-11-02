@@ -52,7 +52,7 @@ This leaves both premises' warrant open: the continuation condition for scope, C
 
 ## 4. The sentences for the fronts
 
-> Under stated conditions, laws show where a new dependence comes from, how the shapers of a rule gain share, how a code comes to be shared, and what a response within a requirement takes. They do not show that a standard which formed is what has significance, or that one course is better than another. Significance is either a free parameter, which by construction no statement reading only the represented dynamics can fix, or read as what lies within a center's closure along a relation no law here picks. Scope is the continuation condition and order is C, both premises.
+> Under stated conditions, laws show where a new dependence comes from, how the shapers of a rule gain share, how a code comes to be shared, and what a response within a requirement takes. They do not show that a standard which formed is a significance, or that one course is better than another. Significance is either a free parameter, which by construction no satisfiable statement reading only the represented dynamics can fix, or read as what lies within a center's closure along a relation no law here picks. Scope is the continuation condition and order is C, both premises.
 
 The openings should change, not carry a caveat: "of how life and knowing take shape within it, and how far evaluation does". Narrowing *evaluation* to *standards* in the opening would promise again what §2 does not show. The same holds for "Positions and standards form" in the overview. 07 §1's title and first sentence keep their wording because records cite that section; the home block says how much the title covers.
 
