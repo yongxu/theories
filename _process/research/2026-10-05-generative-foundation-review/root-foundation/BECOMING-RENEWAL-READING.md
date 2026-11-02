@@ -1447,7 +1447,7 @@ Integration: 计划 P38（第一部分的总陈述：每个前提加了什么）
 
 - [one-axiom-yields-g0](../../../../theories/becoming/results/records/continuation-condition-yields-living-significance.md)
 - [significance-retained-within-margin](../../../../theories/becoming/results/records/significance-retained-within-margin.md)
-- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)
+- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)
 
 ```text
 Result(s): 复用 metaethical-core-characterization（Valuation、Significant、SelfGood、Seed、transmits、shares、Neutral、Within、

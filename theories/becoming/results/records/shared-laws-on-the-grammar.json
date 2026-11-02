@@ -756,7 +756,7 @@
       }
     },
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "relation": "formal-reuse",
       "detail": {
         "en": "Weighting.IncludesOn, ExceedsOn, WidensOn and MixedOn, read as the grammar's over the listed items.",

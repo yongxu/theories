@@ -2591,7 +2591,7 @@
    "base": "old-base",
    "note": "WE1 Wholes"
   },
-  "whole-first-and-bounded-centers": {
+  "whole-and-regions-and-bounded-centers": {
    "region": "significance",
    "base": "old-base",
    "note": "Regions retaining"
@@ -2611,7 +2611,7 @@
    "base": "old-base",
    "note": "R47 Growth"
   },
-  "widening-as-what-every-weighting-ranks": {
+  "widening-as-what-every-positive-weighting-ranks": {
    "region": "significance",
    "base": "general",
    "note": "Weightings"

@@ -1,0 +1,209 @@
+{
+ "batch": "cd-ranking-names",
+ "date": "2026-11-03",
+ "renames": [
+  {
+   "old": "widening-as-what-every-weighting-ranks",
+   "new": "widening-as-what-every-positive-weighting-ranks",
+   "reason": "board item CD: \"every weighting\" states a universal the record refutes (a zero weight ties); the theorem is on positive weightings, where C's premise is relocated"
+  },
+  {
+   "old": "whole-first-and-bounded-centers",
+   "new": "whole-and-regions-and-bounded-centers",
+   "reason": "board item CD: \"the whole first\" (优先) states a priority the record does not show; it shows that under the continuation condition what retains in the whole retains in every region, not conversely"
+  }
+ ],
+ "files": [
+  {
+   "path": "_process/goals/generative-alignment.json",
+   "sha256_before": "1a616be38c644bdbe2dd19ccfc92a94e16fb02eff74520f7cb867bacec76dbc7",
+   "sha256_after": "a72f53f06d068fe68c4d4edbcb3832af0988fb0de1e1849bf05722509a6aaabf"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+   "sha256_before": "e3f89cdd822f6b6135bc1c6190024d213665512c305fcaa89d9b3e3387558295",
+   "sha256_after": "13ae547f3c020264bd2c07c3e0e0688648e0f3b5529af73b57a746c7c9195728"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md",
+   "sha256_before": "11897c450dc4aff6e8d2e50437c126939b28c4b79a57f98d6a865d9cc805063d",
+   "sha256_after": "9f66fb7e0eb007b3b9ec8d19334ccdf8e48ae482833f0f354b9b6f17ab55c389"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+   "sha256_before": "b10c023f124627421780a96cbce9ac0819d774c4ad10d5841b1f1a6a427785d1",
+   "sha256_after": "242fc5175e5b27c0252aa6103bab02a2890d65ce4c5846a2b12f7d25f4267c3d"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.zh.md",
+   "sha256_before": "92f2f42f5cc7be3a2fab978a52586a3c54c57ab359cdd64e6683eef7619fdd62",
+   "sha256_after": "10f6756415cbffbfb71c7df2278d6721935465dc0fe7ae2d7230b3e2697dd965"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+   "sha256_before": "4d64c46946b28210283de5d3405c806929a3f658898367f224bb2a3243b063e0",
+   "sha256_after": "f37bc070c81dd57f0db2fdc7417d601a757731ecc4049f4f0503a29564226114"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/LANDING.md",
+   "sha256_before": "8a0ac04b344cc60cd5f428896e92cbe8daefeca38bfb43416149e3870eae9970",
+   "sha256_after": "76ae88fb43f986a183b0813ddfc15c523fe40167eeda0e5b724ddcf51c0d6609"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "sha256_before": "b88d8507218035a78db97b08001eb19414ede32f0044470bc5967be52cce2f07",
+   "sha256_after": "dc8355b788e7b48e3ba643109ef2ec461281ed83e6248c37c533e138ddb7d7ba"
+  },
+  {
+   "path": "theories/becoming/OPENING.md",
+   "sha256_before": "5c058fdd4276d643c5b2a6b92683e8a4630d691b103101f89284aa65fc720a20",
+   "sha256_after": "0913ed57a471f0067377ac63b58a0f3dc94172e6b4c21aabd792335ecdf2f0f2"
+  },
+  {
+   "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "sha256_before": "43fd223f91090e42bf7d5791808b807c3471da7e745a83e3452aa4cb3599c6fc",
+   "sha256_after": "d36941ff7b7e594fcb48bfb68931701ea6fa78a130fe966db0f7742c6ef57390"
+  },
+  {
+   "path": "theories/becoming/results/data/arguments-m-z.json",
+   "sha256_before": "961b6a40a3df68587c4b4d82862b05f82fca370c8dd31b48f430a1d17558bebd",
+   "sha256_after": "c9fcbe18e40eddcddefccace5aae5429e7f4998640e9f4b8848468d05b7fa116"
+  },
+  {
+   "path": "theories/becoming/results/data/regions.json",
+   "sha256_before": "792e9d5bb7169f606fd1b0c3658a2e1fec158f74d867b9371d9ed9f4f3856618",
+   "sha256_after": "41aab029155143921976d5842f8df9b6f982ed4e5222eed52b5a57ba790cd15c"
+  },
+  {
+   "path": "theories/becoming/results/data/shared-laws.json",
+   "sha256_before": "1ec61c947e028a9e39330b99bf2188fd5462a52ab991b0541f77f2935082e8b5",
+   "sha256_after": "e8f5da9bfe724788e1bd67636c1978d687573bad91f886d441fda3c472167689"
+  },
+  {
+   "path": "theories/becoming/results/records/a-narrowing-above-its-widening.json",
+   "sha256_before": "515e301491c0916525a5a21faa35b6d626fbc51ba7f5883820e82ace1130d248",
+   "sha256_after": "c9cc00ea28200ad09d78e5f9cd854a01acff826704958d3e3687593bc291c626"
+  },
+  {
+   "path": "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+   "sha256_before": "5a1d04f5dba3d4ef96adaeccb639022d7ea811dabd4695a31d7a50b8844f1e8f",
+   "sha256_after": "49403df3973d743a5c0f848042a101709123d471c1dcb7475d85e7db53f36d6f"
+  },
+  {
+   "path": "theories/becoming/results/records/closure-verdict-meets-continuation-condition.json",
+   "sha256_before": "2d5dbbd8dbcd3124e24762428380598467eb74e30da6692533b152d4c59f5c7d",
+   "sha256_after": "bbbd0a15759a76caa444341fe6320054c2711bd8c622f280381017e61e34c80e"
+  },
+  {
+   "path": "theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json",
+   "sha256_before": "e7aff34a548af2cabd1129124c40042bf0b35cbc1e5ca3625a0b97c5f91f3759",
+   "sha256_after": "51db8a4657b82d456164472d8c9186678e4fdb0123ea19df84e19677cf6173a5"
+  },
+  {
+   "path": "theories/becoming/results/records/comparison-within-reach.json",
+   "sha256_before": "38d637eff820a7a7e7edd06773dead52166506427ae2735d6cb3c00aa832999a",
+   "sha256_after": "9a22889dbb61d7c0ee330dd244eb8ac7eccb2086ae176695a949734491b17929"
+  },
+  {
+   "path": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+   "sha256_before": "ea8002fee192b83a830dfdbb42b2dcb9f611db68976771e7754599a9103c2b12",
+   "sha256_after": "e9060b45474a105e57bfbbdb24e9255aba3354e3631c9bc024807c7366d1453c"
+  },
+  {
+   "path": "theories/becoming/results/records/eventual-widening.json",
+   "sha256_before": "07a4e074a7846ec9e58c4da5ae54b1857faa976eefa706de53cd7a7e0cab01b5",
+   "sha256_after": "6c6072aaee7d48889e0d211fb5a816eda4152a93298db0a6a04adf319abe95f5"
+  },
+  {
+   "path": "theories/becoming/results/records/feeding-closure.json",
+   "sha256_before": "8c9de081a77049cf0bd4e6f62498156401bfbbc3b3a551323c710eddb06618cc",
+   "sha256_after": "fd3436458f67d60d37c9d519ffe65ea61bca9de08756009aa4438059fb42050d"
+  },
+  {
+   "path": "theories/becoming/results/records/graded-significance-and-priority.json",
+   "sha256_before": "14850b10dd118604d7eb91696139a96b7045da51aa1415efe41a88bb74cb958f",
+   "sha256_after": "6297ad3116eef683a413427af6b3f9e1c9bcb3bc8b3ac2c1beeeb7074ce0a4c1"
+  },
+  {
+   "path": "theories/becoming/results/records/levels-of-closure.json",
+   "sha256_before": "6c84c56c1ca89216b1fb1b6743b2a245a6166c8267bcaf52e200c2cbb0363b4b",
+   "sha256_after": "7f62a6baae648a06eb12b056e55258c0fc1dcdf2a001618e136bfd1aaa196f06"
+  },
+  {
+   "path": "theories/becoming/results/records/presupposition-scopes.json",
+   "sha256_before": "d78be9f59581b6ffef94939335e4f5d8c46ea074697da482d2e5c6e0826a17e0",
+   "sha256_after": "431fbce530af768ec5d858bb4f37a87992e254a6ccb71b5c5cc9563707a0e622"
+  },
+  {
+   "path": "theories/becoming/results/records/relative-position-is-zero-sum.json",
+   "sha256_before": "4154f35a41a690ed9b2de3dbfa9312d328c0d1ed0df02a3f2cc3d7bb984f1504",
+   "sha256_after": "1f3bfe080096bf8904572bb34b9f7b1063ee334ce6c584bbb0564d636f7663f0"
+  },
+  {
+   "path": "theories/becoming/results/records/rivals-bounded-in-time.json",
+   "sha256_before": "b069e3ce8e00beb0cc6a0c228f2d212042da50df2ce4d51760c0d00f3b0e1ff8",
+   "sha256_after": "45b8d017df947fd39ec4daf487465321c9df5860ee7efae9e52e5546edfcff47"
+  },
+  {
+   "path": "theories/becoming/results/records/self-concern-and-c-under-the-condition.json",
+   "sha256_before": "aef522137477cee90c72d90aec3e2cad412530be6c4d92c1f9692b9070565113",
+   "sha256_after": "5c8d5a87983b800ce384a65bd9e68a94be242f28d71d5348ea3878a69a62ebaf"
+  },
+  {
+   "path": "theories/becoming/results/records/shared-laws-on-the-grammar.json",
+   "sha256_before": "3439997cefc6141079fa99687f4096d136985f13818d281f0b9755ba06be6815",
+   "sha256_after": "549dcff9d514011dc9a7a2b685cdd87c594a90e1ea7e251612d9d67053a74e6e"
+  },
+  {
+   "path": "theories/becoming/results/records/unity-of-readings.json",
+   "sha256_before": "43a4b91262962763095ab09ba105988f1cb11e51979f917f37eb06ac6f9fb320",
+   "sha256_after": "e1754a4f618b01374bf71ad601d81dc1a4a419ff572c9744ef84431db2bccec5"
+  },
+  {
+   "path": "theories/becoming/results/records/weights-within-a-ratio-agree-past-it.json",
+   "sha256_before": "7660f53fcf2e11281483a8b43d49822d5f645e7256ab1550ba3b0c22e123cd52",
+   "sha256_after": "d9af261143178d1b7a73519a8662cbe649deb655a5adec6376bbcb7d8b70948a"
+  },
+  {
+   "path": "theories/becoming/results/records/what-a-center-can-know-by-a-step.json",
+   "sha256_before": "647b5fad09bbe0f1c5e21e3159d0291b3835103295852e45a9d67d354a77ae52",
+   "sha256_after": "3c7da5312911890d1079479b0ac9cb6853142b4b83b317cb85fbb073ad7eaf51"
+  },
+  {
+   "path": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+   "sha256_before": "e707217dc5ca425734d0b2f7a926af46ac2bf5293e6d610e005ab063feb14dbd",
+   "sha256_after": "a9fd7cbb52e88de7245fe5ee0b5c41f082c10f4b64149c34927cf73b73c3a4b7"
+  },
+  {
+   "path": "theories/becoming/results/records/what-position-reads.json",
+   "sha256_before": "e8383166f26a1040ef71d51fb570735da64a1bee6dec0397b723bcb543ecbb60",
+   "sha256_after": "6b99bd028458ff0f2da28b6c19fa7f1f1f4f0fdd19644244f33481a68175e450"
+  },
+  {
+   "path": "theories/becoming/results/records/what-self-concern-alone-ranks.json",
+   "sha256_before": "0bdd040cacd9fda8e9be35685f9d908b9776ef802a9878c23ac422ebe277b1a6",
+   "sha256_after": "26809ad82f76d5feeb1f4170fda29eae24aafba68382ebdb5963d47668b040b9"
+  },
+  {
+   "path": "theories/becoming/results/records/what-the-step-across-standpoints-reaches.json",
+   "sha256_before": "4ec1193576b0bc6d60c3cb106a73e4231f872d376d88a36add53d6af22472578",
+   "sha256_after": "a8ef5c8e90630da95f179d068994023e68f7553f911f54ca1f0b8e625af8085c"
+  },
+  {
+   "path": "theories/becoming/results/records/where-a-formations-acts-return.json",
+   "sha256_before": "763d741ea60e27f1bf2e4260372e847df9c03c1a28d368e8ed8a697d21068a38",
+   "sha256_after": "541199ebb8f192650e34f3016408dac28366649ed3dd70122653ffac3dace873"
+  },
+  {
+   "path": "theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.json",
+   "former_path": "theories/becoming/results/records/widening-as-what-every-weighting-ranks.json",
+   "sha256_after": "37c6cb0f4bee848b3d7e1604f0085fa1ac1c1c11ca16bc990461d996ed278a83"
+  },
+  {
+   "path": "theories/becoming/results/records/whole-and-regions-and-bounded-centers.json",
+   "former_path": "theories/becoming/results/records/whole-first-and-bounded-centers.json",
+   "sha256_after": "0c69b3ec33c1f3349afee931bde111a81f4ae6730782da009c5b40f7d9917e4a"
+  }
+ ],
+ "scope": "Record ids renamed with former_ids kept; live references rewritten; history, evidence and sources keep the old ids, and records/OLD.md is a generated redirect page."
+}

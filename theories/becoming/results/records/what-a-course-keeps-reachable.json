@@ -616,7 +616,7 @@
       }
     },
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
         "en": "C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.",
         "zh": "读作扩大的 C；可达之扩大即 C 于可达范围之框上之延展，此处无一序为 C 所采。"

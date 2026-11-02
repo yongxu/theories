@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "id": "widening-as-what-every-weighting-ranks",
+  "id": "widening-as-what-every-positive-weighting-ranks",
   "title": {
     "en": "Widening as what every positive weighting ranks",
     "zh": "扩大即每个正的加权所排者"
@@ -533,5 +533,8 @@
       "en": "3 November 2026, CD (board item CD): retitled \"Widening as what every positive weighting ranks\", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so \"every weighting\" stated a universal the record refutes; positivity is where C's premise is relocated. The claim is unchanged.",
       "zh": "3 November 2026, CD (board item CD)：标题改为“扩大即每个正的加权所排者”，标识改为 widening-as-what-every-positive-weighting-ranks，旧标识保留。加权是所列诸项上的任意自然数权重，零权持平，如陈述所言，故“每个加权”所说的全称为本记录所否；正性正是 C 之前提的移置之处。主张不变。"
     }
+  ],
+  "former_ids": [
+    "widening-as-what-every-weighting-ranks"
   ]
 }

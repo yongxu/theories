@@ -403,7 +403,7 @@
    "Becoming.Weighting.widens_iff_every_positive": [
     {
      "of": "Becoming.Weighting.widens_iff_every_positive",
-     "record": "widening-as-what-every-weighting-ranks",
+     "record": "widening-as-what-every-positive-weighting-ranks",
      "law": 10,
      "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
      "models": [
@@ -61479,7 +61479,7 @@
     "dependence": "balance, represented"
    }
   ],
-  "whole-first-and-bounded-centers": [
+  "whole-and-regions-and-bounded-centers": [
    {
     "law": 1,
     "declarations": [
@@ -62122,7 +62122,7 @@
     "dependence": "no shared law"
    }
   ],
-  "widening-as-what-every-weighting-ranks": [
+  "widening-as-what-every-positive-weighting-ranks": [
    {
     "law": 1,
     "declarations": [
@@ -62172,7 +62172,7 @@
     "stated_at_model": [
      {
       "of": "Becoming.Weighting.widens_iff_every_positive",
-      "record": "widening-as-what-every-weighting-ranks",
+      "record": "widening-as-what-every-positive-weighting-ranks",
       "law": 10,
       "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
       "models": [
@@ -65694,7 +65694,7 @@
     "f5": "stated on its own carrier only",
     "at_model": [
      {
-      "record": "widening-as-what-every-weighting-ranks",
+      "record": "widening-as-what-every-positive-weighting-ranks",
       "law": 10,
       "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
       "models": [

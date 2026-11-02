@@ -3238,7 +3238,7 @@ Ren 此后回答（[来源](../../../../sources/15-codex-theory-conversations/20
 本节是计划 P39（[计划 §10](../history/root-foundation/BECOMING-UNIFICATION-PLAN.md#10-第一部分与第二部分--part-i-and-part-ii)），由本会话完成；分工经另一会话同意。它在核心中新增模块 `Becoming.Significance`，27 项定理。成果记录新增三项：
 - [one-axiom-yields-g0](../../../../theories/becoming/results/records/continuation-condition-yields-living-significance.md)
 - [significance-retained-within-margin](../../../../theories/becoming/results/records/significance-retained-within-margin.md)
-- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)
+- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)
 
 ```text
 Result(s): 复用 metaethical-core-characterization（Valuation、Significant、SelfGood、Seed、transmits、shares、Neutral、Within、
@@ -3428,7 +3428,7 @@ AI 还提出两种不需要前提的机制：“selection between wholes: wholes
 
 另修订三项记录的界限与下一增量，断言不变：
 - [loss-beyond-a-region](../../../../theories/becoming/results/records/loss-beyond-a-region.md)：`alongDependence` 与沿供给推出的范围一致，原是逐项对照，现由 `Clearing.dependenceRegion_iff` 证明；
-- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)：以依存为界的区域恰是各形成的供给闭包，以它为意义的边界仍是选择；
+- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)：以依存为界的区域恰是各形成的供给闭包，以它为意义的边界仍是选择；
 - [represented-boundary-against-dependence](../../../../theories/becoming/results/records/represented-boundary-against-dependence.md)：多步的依存范围由供给闭包给出，并在 `Overshoot` 中与所表示的边界比较。
 
 ```text
@@ -3911,7 +3911,7 @@ AI 回答了 P39 与 P40 留下的问题（同一来源，AI 的话）：供给�
 
 另修订四项记录，断言不变：
 - [feeding-closure](../../../../theories/becoming/results/records/feeding-closure.md)、[consumption-ends-with-feeders](../../../../theories/becoming/results/records/consumption-ends-with-feeders.md)、[closure-verdict-meets-axiom](../../../../theories/becoming/results/records/closure-verdict-meets-continuation-condition.md)：撤回把供给闭包也读作 Ren 的“the system that one is in”，为它提供所及闭包；closure-verdict-meets-axiom 由 comparison-within-reach 推进；
-- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-first-and-bounded-centers.md)：下一增量中的“路线 (b) 到达自身与所在的系统”改为“自身及其所依存的”。
+- [whole-first-and-bounded-centers](../../../../theories/becoming/results/records/whole-and-regions-and-bounded-centers.md)：下一增量中的“路线 (b) 到达自身与所在的系统”改为“自身及其所依存的”。
 
 ```text
 Result(s): 复用 feeding-closure（Flow.FedBy、Flow.WithinFeeding、Flow.FedClosed、Clearing.dependenceRegion_iff）、

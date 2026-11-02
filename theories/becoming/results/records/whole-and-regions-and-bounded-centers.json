@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "id": "whole-first-and-bounded-centers",
+  "id": "whole-and-regions-and-bounded-centers",
   "title": {
     "zh": "整体与其区域，与以依存为界的中心",
     "en": "The whole and its regions, and centers bounded by dependence"
@@ -636,5 +636,8 @@
         "zh": "历史说明压缩前的记录原始字节（R35，E3）；每条被合并的说明都保存在这里。"
       }
     }
+  ],
+  "former_ids": [
+    "whole-first-and-bounded-centers"
   ]
 }
