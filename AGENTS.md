@@ -19,7 +19,7 @@ With no such error left and item 2's designs frozen, the text is ready for reade
 <a id="begin-with-one-relational-unfolding"></a>
 ## Method
 
-Begin with how relations form, persist and change, and let actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. Each analytic split (subject/object, fact/value) states its relational basis, scope and omissions; no name smuggles in separate entities. One relational unfolding is [a thesis, argued](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding), and nonduality a method, not a proof: record the cases it distorts.
+Begin with how relations form, persist and change, and let actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. Each analytic split (subject/object, fact/value) states its relational basis, scope and omissions; no name smuggles in separate entities. So does each comparison: better, higher, winning or optimal is a relation formed by whoever compares, among what they can tell apart, not a property of what is compared. Say what it reads and whose it is, take none from habit, and label a field's frame (a best response, an optimum) as that field's. One relational unfolding is [a thesis, argued](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding), and nonduality a method, not a proof: record the cases it distorts.
 
 Keep real losses, conflict and counterexamples; one found in a weaker model stands until the full account is shown to remove it. Joint activity starts from actual relations, not opposed interests or a fixed common utility, and asks how their change supports, enriches or damages 生生.
 
