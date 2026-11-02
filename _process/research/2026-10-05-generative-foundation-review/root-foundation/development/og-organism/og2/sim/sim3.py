@@ -166,6 +166,67 @@ for s, g, f, c, q, L in itertools.product(range(2, 5), range(0, 16), range(0, 4)
         want = k * (q + e) + (s - k) * f <= g
         if ok != want: B('strands', p, q, L, pat, ok)
 
+# L3's closed form, against the inequality
+for s, l, g, f, c, q in itertools.product(range(1, 6), range(0, 5), range(0, 22), range(0, 8), range(0, 5), range(1, 12)):
+    if l >= s: continue
+    C = c * (s - l); p = (s, l, g, f, c, 'members')
+    if ((q + leak(p, q)) * s <= g) != (q * s <= g and (f + q) * s <= g + C * q * s): B('closed-form', p, q)
+
+# L5 with off-steps: any on/off sequence, no revision
+for s, l, g, f, c, q, L in itertools.product(range(1, 4), range(0, 5), range(0, 4), range(0, 3), range(0, 2), range(0, 3), range(0, 4)):
+    if not (q == 0 or s <= l): continue
+    p = (s, l, g, f, c, 'members')
+    for ons in itertools.product((True, False), repeat=s):
+        for hs in ([], [1], [2] * s, [0, 1][:s]):
+            x = (q, L, list(hs), [])
+            for on in ons: x = step(p, x, on)
+            if sm(x[2]) != 0: B('drain-off', p, q, L, ons, hs, x)
+
+# L10: a revision to 0, then none: no holder s steps after it; the witness below the band
+for s, l, g, f, c, q, L in itertools.product(S, range(0, 4), range(0, 9), range(0, 3), range(0, 3), range(1, 4), range(0, 5)):
+    if l >= s: continue
+    p = (s, l, g, f, c, 'members')
+    x = step(p, steady(p, q, L), True, 0)
+    if sm(run(p, x, s)[2]) != 0: B('revise-0', p, q, L)
+p = (1, 0, 2, 4, 2, 'members'); x = step(p, steady(p, 2, 1), True, 1); t = 1
+while x[1] != 0 and t < 20: x = step(p, x); t += 1
+print('revised below the band: level 0 at step', t)
+p = (3, 2, 6, 4, 2, 'members'); x = steady(p, 2, 30)
+for t, rv in enumerate([None, 0, None, 2]): x = step(p, x, True, rv)
+t = 4
+while not gone(x) and t < 40:
+    if sm(x[2]) == 0: print('breach witness lost its holders at', t)
+    x = step(p, x); t += 1
+print('gapped over the bound: gone at step', t)
+
+# L11's second clause: at s <= l, outside keeps entering holders, members not, at every step
+for s, l, g, f, c, q, L in itertools.product(S, range(0, 7), range(0, 9), range(0, 3), range(0, 2), range(1, 3), range(1, 4)):
+    if s > l: continue
+    x = y = (q, L, [q] * s, [])
+    for _ in range(10):
+        if gone(x) or gone(y): break
+        x2, y2 = step((s, l, g, f, c, 'outside'), x), step((s, l, g, f, c, 'members'), y)
+        if not gone(x2) and x2[2][0] != q: B('outside-enters', s, l, q, L)
+        if not gone(y2) and y2[2][0] != 0: B('members-enters', s, l, q, L)
+        x, y = x2, y2
+
+# L12: after s steps with no end, the holders are exactly what entered, at the quota then standing
+import random
+rng = random.Random(7)
+for _ in range(20000):
+    s, l, g, f, c = rng.randint(1, 4), rng.randint(0, 3), rng.randint(0, 30), rng.randint(0, 3), rng.randint(0, 2)
+    p = (s, l, g, f, c, rng.choice(['members', 'outside']))
+    x = (rng.randint(0, 3), rng.randint(1, 30), [rng.randint(0, 3) for _ in range(s)], [])
+    ent = []; ended = False
+    for k in range(s):
+        on = rng.random() < 0.8; rv = rng.choice([None, None, 0, 1, 2])
+        t_ = teachers(x[2], l)
+        e_ = x[0] if on and (p[5] == 'outside' or t_ > 0) else 0
+        y = step(p, x, on, rv)
+        if y[1] == 0 and not y[2]: ended = True; break
+        ent.insert(0, e_); x = y
+    if not ended and x[2] != ent: B('replaced', p, x, ent)
+
 c_ = collections.Counter(b[0] for b in bad)
 print('counterexamples', len(bad), dict(c_))
 seen = set()

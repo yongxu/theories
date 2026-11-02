@@ -1,6 +1,6 @@
-# OG2: a rule rebuilt from the members it limits (AI-written design, third draft, 2 November 2026)
+# OG2: a rule rebuilt from the members it limits (AI-written design, fourth draft, 2 November 2026)
 
-About ten minutes to read. Earlier drafts are at commits `bdf09a1b4` and `72c83470e`; [REVIEW-1](REVIEW-1.md) and [REVIEW-2](REVIEW-2.md) are their independent reviews, and §9 says how each changed the model.
+About ten minutes to read. Earlier drafts are at commits `bdf09a1b4`, `72c83470e` and `4544cf2f2`; [REVIEW-1](REVIEW-1.md), [REVIEW-2](REVIEW-2.md) and [REVIEW-3](REVIEW-3.md) are their reviews, and §9 says how each changed the model.
 
 ## 1. What this answers
 
@@ -12,7 +12,11 @@ Three questions a reader would ask:
 2. What does the rule do, so that this is an institution and not any tradition? And how does it end?
 3. Is it the same institution after its people and its rule have changed?
 
-What ends a shared stock is already proved, on the World: takers each within what is renewed can together exceed it, and where the renewal depends on what it renews, that ends it (`Flow.joint_excess_ends`, `Flow.outrun_ends`, [05 §1](../../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)). This model does not restate that as new. Its own question is a joining: **a rule has to pass through the members it limits, and the same members are what keep it in force, and what they draw on is what they guard.** The first draft had the passing alone, and the second had passing and limiting as two independent conditions, which the second review showed were one queue lemma beside one switch. A door of a strength per teacher couples them.
+What ends a shared stock is already proved, on the World: takers each within what is renewed can together exceed it, and where the renewal depends on what it renews, that ends it (`Flow.joint_excess_ends`, `Flow.outrun_ends`, [05 §1](../../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)). This model does not restate that as new. Its own questions are two, and they meet in one place:
+
+- **Keeping and limiting.** Those who keep others from a stock draw on it too, so a rule can fail by keeping too few out as well as by letting too many in. This needs no passing: a guard force has the same band.
+- **Passing.** A rule held only by members has to pass through them, and from no holder it does not come back.
+- **Where they meet.** At the steady state they are two independent conditions. They meet where some cohorts are empty: the number of cohorts holding the rule sets both how many pass it and how many keep the door (Gaps). The first draft had passing alone, the second a switch, and the third claimed a joining of the two that its re-check refuted.
 
 ## 2. The rule
 
@@ -30,7 +34,7 @@ Write `s` tenure, `l` teaching age, `g` renewal, `f` untaught, `c` strength. A s
 2. **Draw and renew.** The level becomes `level + g − take`.
 3. **Teachers.** `T` is the count of holders of age at least `l`, read before ageing.
 4. **Enter**, as a new cohort of age `0` (zero in both lists without `on`):
-   - others: `f − c·T`, truncated at `0`. Each teacher turns away `c` of those who would come untaught. **One formula for every source.**
+   - others: `f − c·T`, truncated at `0`. Each teacher turns away `c` of those who would come untaught. One formula for every source.
    - holders: `quota`, where the source is `.outside`, or `.members` with `T > 0`; otherwise none. `.none` has no holder.
 5. **Age.** Each list keeps its first `s` cohorts; the oldest leaves.
 6. **Revise.** `rev = some r`, at least one holder before the step, and the source not `.outside`: the quota becomes `r`.
@@ -39,20 +43,20 @@ Write `s` tenure, `l` teaching age, `g` renewal, `f` untaught, `c` strength. A s
 
 **The split and its basis.** Holder and other are not two kinds of thing. They differ in one relation: whether the rule has passed to this member through another who held it, and that member then passes it and turns others away. The level is what they share, read here only by how much of it is drawn. Holders and others draw alike. A keeper's cost is its own draw on what it keeps, and that is added by nothing: it is only that keepers are members. Nothing is a utility, and no interest is assumed, opposed or common.
 
-**Modelling choices, stated where laws depend on them:** whole units, discrete steps, one unit a member a step, one quota in common, one tenure, a constant renewal while anything is left, the order above, all members leaving at the end, an entrant holding what it is taught at once, a rule limiting entry only. §5 says what each variant breaks.
+**Modelling choices, stated where laws depend on them:** whole units, discrete steps, one unit a member a step, one quota in common, one tenure, **one age from which a holder both teaches and keeps the door** (split them, and the band and the window become plainly independent: REVIEW-3, run), a constant renewal while anything is left, the order above, all members leaving at the end, an entrant holding what it is taught at once, a rule limiting entry only. §5 says what each variant breaks.
 
 ## 3. The laws
 
 Each was run on [sim/sim3.py](sim/sim3.py) with no counterexample, except where marked as a witness. Ranges and what each run covers are in its code. Statements are additive where Lean needs them (`r + k·d = L`, not `L / d`).
 
-- **L1. The inflow lemma.** At `l < s`, `1 ≤ q`, write `a := q + e q`. From `steady q L`: where `a·s ≤ g` and `1 ≤ L`, the next step is `steady q (L + g − a·s)`; where `a·s = g + d`, `1 ≤ d`, and `L = r + k·d`, `k` steps give `steady q r`, and from `r < d` one more gives `gone`. Every horizon below is this lemma at another `a`. It is `Flow`'s joint excess in this net, cited as such. A bridge to `Flow.joint_excess_ends` is the natural next statement and is not promised here.
-- **L2. The band (the central law).** `.members`, every step on, no revision, `1 ≤ L`: from `steady q L` the rule is held at every step exactly where `l < s`, `1 ≤ q` and `(q + e q)·s ≤ g`. So teaching must fit a tenure, and the rule must admit few enough for the level to carry and enough to keep the rest away.
-- **L3. The band is two-sided, and `s − l` counts.** Witnesses, decided: at `s,l,g,f,c = 1,0,2,4,2` only `q = 2` is admitted; at `4,2,20,6,1` every `q` in `[1,5]`, and at `4,3,20,6,1` none, though `l < s`, since those who can teach now keep the door for too little of a tenure. Cases, general: `c = 0` gives `(q + f)·s ≤ g`, no door at all; `f ≤ c·q·(s − l)` gives `q·s ≤ g`, a door that holds. A stricter rule can fail where a looser one holds, and a looser where a stricter holds. How often the middle case arises is a fact of the range and not claimed: of 3,640 parameter points run, 1,592 admit no quota, 1,938 admit one, and 110 admit only quotas above one.
+- **L1. The constant-take lemma.** Where a family of states has a constant `take` of `A` and is closed under the step while the step does not end: where `A ≤ g` and `1 ≤ L`, every step keeps the family and the level does not fall; where `A = g + d`, `1 ≤ d`, and `L = r + k·d`, `k` steps stay in the family with level `r`, and from `r < d` one more gives `gone`. `steady` at `A = (q + e q)·s`, full open entry at `A = f·s` and Gaps' strands are cases. It is `Flow`'s joint excess in this net, cited as such; a bridge to `Flow.joint_excess_ends` is the natural next statement and is not promised here.
+- **L2. The band (the central law).** `.members`, every step on, no revision, `1 ≤ L`: from `steady q L` the rule is held at every step exactly where `l < s`, `1 ≤ q` and `(q + e q)·s ≤ g`. So teaching must fit a tenure, and the rule must admit few enough for the level to carry and enough to keep the rest away. This is the steady state's law, and it holds alike of `.outside` wherever `l < s`.
+- **L3. The band in closed form.** Write `C := c·(s − l)`, `l < s`. Then `(q + e q)·s ≤ g` exactly where `q·s ≤ g` and `(f + q)·s ≤ g + C·q·s`. So with `A := g / s`: at `C ≥ 2` the integers from `max(1, ⌈(f − A)/(C − 1)⌉)` to `A`; at `C = 1`, `[1, A]` if `f ≤ A` and nothing otherwise; at `C = 0`, `[1, A − f]`. A quota can be too small only at `C ≥ 2`: **a keeper must turn away more than itself** for a larger rule to hold where a smaller fails. `s − l` counts through `C`. Witnesses, to be decided in Lean: at `s,l,g,f,c = 1,0,2,4,2` only `q = 2`; at `4,2,20,6,1` every `q` in `[1,5]`; at `4,3,20,6,1` none, though `l < s`.
 - **L4. The region.** `.members`, `l < s`, `1 ≤ P ≤ Q`, `E := f − c·P·(s − l)`, `(Q + E)·s ≤ g`: `Within P Q` (`s` holder cohorts each in `[P, Q]`, at most `s` other cohorts each at most `E`, quota in `[P, Q]`, level at least one) is closed under every on-step with a revision in `[P, Q]` (`«闭»`), and the level does not fall. This is what L2's steady state is a case of, and the revision is free inside it.
-- **L5. The drain.** `.members`, no revision to a nonzero quota: where `q = 0` or `s ≤ l`, from holders of at most `s` cohorts, no holder is left after `s` steps, on or off, from every level.
+- **L5. The drain.** `.members`, no revision to a nonzero quota, holders of at most `s` cohorts: where `q = 0` or `s ≤ l`, no holder is left after `s` steps, on or off, from every level.
 - **L6. No holder from no holder.** `.members`: no holder stays no holder under the whole net, and two such states differing only in quota have the same later levels and members. The quota then is a dead letter, read by nothing, and so no hidden entity.
 - **L7. The end is closed.** Every source: `gone` is closed under the net. This is the model's choice that nothing renews from empty, and §5 says what depends on it.
-- **L8. Open entry after the rule.** `.members`, no holder, every step on, `1 ≤ s`, `1 ≤ f`: where `f·s ≤ g` and `1 ≤ L`, from at most `s` other cohorts each at most `f`, others are present and the level does not fall at every step. Where `g < f·s`, it is `gone` at some step, from every level and any others.
+- **L8. Open entry after the rule.** `.members`, no holder, every step on, `1 ≤ s`, `1 ≤ f`: where `f·s ≤ g` and `1 ≤ L`, from at most `s` other cohorts each at most `f`, others are present after every step and the level does not fall. Where `g < f·s`, it is `gone` at some step, from every level and any others.
 - **L9. What the rule does.** At `l < s`, `1 ≤ q`, `1 ≤ L`, `1 ≤ f`, compare `steady q L` with the state of no holder, `f` others in `s` cohorts and the same level:
 
   | | `f·s ≤ g` | `g < f·s` |
@@ -60,36 +64,37 @@ Each was run on [sim/sim3.py](sim/sim3.py) with no counterexample, except where 
   | `(q + e q)·s ≤ g` | both go on | **the rule saves the level** |
   | `g < (q + e q)·s` | **the rule ends the level** | both end, each at its horizon |
 
-  Neither the rule's being present nor its being held decides. A rule can end what open entry would have kept: it brings in more than the level carries, and keeps out too few to matter. Where both go on, the rule can vanish with nothing here to show it, and a tradition is the case with nothing to limit.
-- **L10. Self-revision.** A revision in `[P, Q]` stays in L4's region. A revision to `0` with no revision after it drains by L5, in `s` steps. So the rule can take itself out by the route of L5 and return only while a holder of it stands. A general law for a revision above the band is not proved here; a witness shows it can end the level.
-- **L11. The family, a table of three rows.** After an empty membership, `1 ≤ s`, `1 ≤ L`, `1 ≤ q`, on: `.outside` has holders after one step, `.members` and `.none` do not. At `s ≤ l`, `.outside` still enters holders at every step, and `.members` not. `.none` has no holder at all and is L8 from the start.
-- **L12. Replaced (definitional, kept for question 3).** After `s` steps with no end, every holder cohort entered in those steps, at the quota then standing. With L4, the rule is held, nothing of the start is among the holders, and the quota may have moved anywhere in `[P, Q]`.
-- **Gaps (a witness, and a law only run).** L2 and L4 do not cover states with empty cohorts. At `l = s − 1` an empty cohort stays empty, since each cohort teaches exactly the one that replaces it, so the holders form `k` separate strands. Run, not proved: from `k ≥ 1` strands with their others, held at every step exactly where `k·(q + e) + (s − k)·f ≤ g`, with `e := f − c·q`. So a rule can hold, on a fraction of its cohorts, at parameters where its steady state cannot. A witness is decided in Lean. L2 is the steady state's law and not the rule's.
+  Neither the rule's being present nor its being held decides. Bottom left: it admits more than would have come, or turns no one away. Top right holds only at `C ≥ 2`, where a keeper turns away more than itself. Where both go on, the rule can vanish with nothing here to show it, and a tradition is the case with nothing to limit.
+- **L10. Self-revision.** A revision in `[P, Q]` stays in L4's region. A revision to `0` with no revision after it drains by L5, in `s` steps. So the rule can take itself out by the route of L5, and can be restored only while a holder stands. A revision outside the band, on either side, is not a law here. Witnesses: above it; and below it, `steady` at `1,0,2,4,2`, `q = 2`, `L = 1`, revised to `1`, a stricter rule, reaches level `0` at step 5.
+- **L11. The family, a table of three rows.** After an empty membership, `1 ≤ s`, `1 ≤ L`, `1 ≤ q`, on: `.outside` has holders after one step, `.members` and `.none` do not. At `s ≤ l`, with holders of at most `s` cohorts, `.outside` still enters holders at every step, and `.members` not. `.none` from no holder stays there, and is L8.
+- **L12. Replaced (definitional, kept for question 3).** `1 ≤ s`: after `s` steps with no end, every holder cohort entered in those steps, at the quota then standing. With L4, the rule is held, nothing of the start is among the holders, and the quota may have moved anywhere in `[P, Q]`.
+- **L13. Gaps: where passing and limiting meet.** L2 and L4 do not cover states with empty cohorts. At `l = s − 1`, `2 ≤ s`, each cohort teaches exactly the one that replaces it, so the holders form `k` separate strands, and the list of pairs (holders, others) only rotates. `.members`, every step on, no revision, `1 ≤ q`, `1 ≤ L`: from `k ≥ 1` strands with their others (a held cohort `(q, e)`, an empty one `(0, f)`, `e := f − c·q`), the rule is held at every step exactly where `k·(q + e) + (s − k)·f ≤ g`. So `k` sets both how many pass the rule and how many keep the door. A rule can hold on a fraction of its cohorts where its steady state cannot, and can end the level while held where its steady state would not. L2 is the steady state's law and not the rule's.
 - **The same rule, read at a class (one sentence and one witness, no law).** On `«续»`, a step with a revision inside the region continues under "held or not" and not under "the same quota"; this is 01 §2's `«任一缘可为续»` with these occurrences.
 
 ## 4. Against the three questions
 
-1. **Outliving.** L2 from the steady state and L4 from a region. Forbidden, in this net: a rule whose holders can teach only after a tenure outliving its founders, however many join (L5); a steady state outliving its level at a quota above its band (L1). The statement is of the steady state and the region, not of every state (Gaps).
+1. **Outliving.** L2 from the steady state and L4 from a region. Forbidden, in this net: a rule whose holders can teach only after a tenure outliving its founders, however many join (L5); a steady state outliving its level at a quota outside its band, on either side (L1). The statement is of the steady state and the region, not of every state (L13).
 2. **What it does, and how it ends.** L9. The ends found so far, as a list and not a proved classification:
 
    | | the rule | the members | the level |
    |---|---|---|---|
-   | Unpassed, `1 ≤ f`, `f·s ≤ g` | gone | others present | not falling |
+   | Unpassed, `1 ≤ f`, `f·s ≤ g`, and no end on the way (`(q + f)·s ≤ g` suffices) | gone | others present | not falling |
    | Unpassed, `g < f·s` | gone | gone | gone |
-   | Abandoned, `f = 0` or nobody comes | gone | none | rising |
-   | Overdrawn, by keepers and leak together | held to the end, or gone first where a revision or gaps intervene | gone | gone |
-   | Gapped | held on some cohorts, by a run law only | present | depends |
+   | Abandoned, `f = 0`, `1 ≤ g` | gone | none | rising |
+   | Overdrawn, by keepers and leak together | held to the last state | gone | gone |
+   | Gapped, within L13's bound | held on some cohorts | present | not falling |
+   | Gapped, over it (reached by off-steps or a revision to `0` and back; at `3,2,6,4,2`, `q = 2`, `L = 30`, revised to `0` at the second step and back at the fourth, gone at step 18) | held to the last state | gone | gone |
 
    The fourth row says a rule can be kept and still be the wrong rule. It ends in the same form as OG's `.level` member: a stock spent, and an end closed under the net.
 3. **Sameness.** Only the quota can change here; tenure, teaching age and source are fixed. So this answers for a rule's number and its people, not for purposes or for a rule of another form. With L12 and L4 a rule is still held, with nothing of its start among the holders and a moved quota. Whether that is "the same" is read at a class, which 01 §2 already says of everything; nothing new is claimed.
 
 ## 5. What it does not show, and what the laws depend on
 
-Variants of the door and the order were run by the second review's scripts ([review2-scripts](review2-scripts/)) against the second rule, and those of the end in `sim2.py`. The third rule's are not all re-run; §10 asks for that.
+Variants of the order, the end and the door were run against this rule by the re-check's scripts ([review3-scripts](review3-scripts/)).
 
 - **Nothing renewing from empty.** Let it renew and only the excess leave, and L7, L1's end, L8's ruin and L9's bottom row fail. So the rule matters here only where an overdraw does lasting damage. L9 survives a rationed draw in place of all leaving at once.
-- **The order.** `q·s` counts the cohorts that draw. Entering before the draw makes the threshold `q·(s + 1)`; ending after entering, or ageing before the draw, changes L1, L2, L3, L9 as stated; teaching after ageing narrows the window by one. Revising before entering changes nothing tested. With a pupil's time `d` before holding, the first review found `l + d < s`. So `l` is the age from which a holder can teach and not the time it takes to learn, and the exact thresholds hold of these orders.
-- **`c`.** The strength is given. Why a teacher turns anyone away, what it costs beyond its draw, and whether it would, are not here. Holder merges recognition, compliance and implementation, which AGENTS keeps distinct. So nothing here is normative: "holder" is a count, and the door is a formula. The fuller sense of a hollow institution, holders who do not comply, cannot be stated here; "no holder" is what is modelled.
+- **The order.** `q·s` counts the cohorts that draw. Entering before the draw makes the threshold `(q + e)·(s + 1)`; ending after entering, or ageing before the draw, changes L1, L2, L3, L9 as stated; teaching after ageing narrows the window by one and makes `e` read `s − l − 1`. Revising before entering changes nothing tested. With a pupil's time `d` before holding, the first review found `l + d < s`. So `l` is the age from which a holder can teach and not the time it takes to learn, and the exact thresholds hold of these orders.
+- **A door shut with no teacher** breaks L8's ruin and L9. **`c`.** The strength is given. Why a teacher turns anyone away, what it costs beyond its draw, and whether it would, are not here. Holder merges recognition, compliance and implementation, which AGENTS keeps distinct. So nothing here is normative: "holder" is a count, and the door is a formula. The fuller sense of a hollow institution, holders who do not comply, cannot be stated here; "no holder" is what is modelled.
 - **Conduct other than entry.** The rule limits who enters. Rules on how much a member draws, on who decides, and on sanctions are not modelled, and the quota does not read the level.
 - **Capture.** T7, MA3, MA4 read the rule's lock under selection; here the revision is a free branch, not chosen by those it favours.
 - **Mixed tenures** (the first review: the window reads the longest stay), **schism, records, partial passing, purposes.** 01's open item keeps purposes.
@@ -97,7 +102,7 @@ Variants of the door and the order were run by the second review's scripts ([rev
 
 ## 6. How much of this is definitional
 
-L6, L7 and L12 are close to the rule's definition and are stated as such. L11 is a table. L1 is one sum and one induction, and the same lemma as `Flow`'s joint excess in another net. L8 and L9 are L1 at other inflows, plus the ramp in L8's ruin. **The content is in L2, L3 and L4, which join the two sides through `e q`,** in L9's reading of the four quadrants, and in Gaps. A hostile reader may say that L2 is one inequality. It is; what it adds to joint excess is that the inflow is set by the keepers' own count and tenure.
+L6, L7 and L12 are close to the rule's definition and are stated as such. L11 is a table. L1 is one lemma, the same as `Flow`'s joint excess in another net, and L2, L8's tail, L9 and L13's take are it at other inflows. L3 is a closed form and L4 one sum bound. So the content is small, and it is this: enforcement drawing on what it guards (L3, L9), which needs no passing; and L13, the one place the passing and the limit are one number. L5 and L6 are the passing's own. A hostile reader may say that L2 is one inequality and is right; what it adds to joint excess is that the inflow is set by the keepers' own count and tenure.
 
 ## 7. Correspondence and prior art, unproved here
 
@@ -126,19 +131,18 @@ AI reading, each a neighbour and none proved, from limited searches; nothing her
 | R1: `learning` not learning | `teachingAge`; §5. |
 | R1: any tradition; quota one bit; quota held by nobody | R1's per-holder values not taken, since they would leave the rule limiting nothing; the rule limits draw through entry; L6 states the dead letter; L9 places a tradition. |
 | R1: identity as a law; overclaims; module | One sentence and a witness; "entrenchment", Hart, "hollow institution" gone; own leaf, `.outside`. |
-| R2 H1: `q·s > g` can outlive its level from gaps | L2 and §4.1 are now of the steady state; Gaps states the run law and a witness; L4 is the region. |
-| R2 H2: table incomplete | §4's list, stated as a list and not a classification; the abandoned row added. Breach is now within `e q`; as a transient under a revision it is still not a row of its own. |
-| R2 H3: one lemma and one bit | L1 is named as the lemma, and §6 counts it once; the door's strength joins the sides. Its own recommended change, tested by it from settled only, here re-run over all laws. |
+| R2 H1: `q·s > g` can outlive its level from gaps | L2 and §4.1 are now of the steady state; L13 is the law; L4 is the region. |
+| R2 H2: table incomplete | §4's list, stated as a list and not a classification; the abandoned row added. Breach under a revision is L13's over-bound row. |
+| R2 H3: one lemma and one bit | L1 is named as the lemma, and §6 counts it once. The door's strength taken; the re-check found it does not join passing to limiting (R3 H1). |
 | R2 M1: L9 one quadrant | L9 is the 2×2. |
 | R2 M2–M5: hypotheses, literal equality, order | L2, L5, L8, L11 corrected; `steady` has its others in full; the order is §5's. |
 | R2 M6: "limiting their draw", "an institution" | §8's sentences. |
-| R2 M7: "each was run" overclaims | sim3 runs L9 and the region, and §5 says what is not re-run. |
+| R2 M7: "each was run" overclaims | R3 found this again of the third draft; now sim3 runs every law named, L10's witnesses included. |
+| R3 H1: no join of passing and limiting at the steady state | §1, §2's choice of one age, §6, L13. |
+| R3 M1, M2, M4–M6, Low | L3's closed form; L9's glosses; §4.1, L10; §5; §4's first row; L8, L11, L12, L13 hypotheses. |
 | R2 Low | Step 1 stops the step; off-steps stated; §4.3 says only the quota changes. |
 | Landed laws (my own search after the second draft) | §1, L1, §7: joint excess is cited, not presented as new. |
 
-## 10. Questions for the short re-check
+## 10. No further review of the design
 
-1. Reimplement §2 from the prose. Do L1–L12 and Gaps hold, including off-steps and over-long lists, under `f − c·T`?
-2. Do the order variants, rationed draw and `door` variants still break what §5 says, under the third rule?
-3. Is L9's table exact, and is "keeps out too few to matter" a fair gloss of its bottom-left, where `e q` may be `0`?
-4. Is there another hidden queue lemma? Do L2 and L3 now say something a boundary on a commons with no passing would not?
+The re-check says none is needed if the statements change only as listed, and they did. Its reviewer was the door's proposer, so an independent reading of the Lean, as for OG, is the next reader, before landing.
