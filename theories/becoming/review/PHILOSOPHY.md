@@ -455,7 +455,7 @@ The conclusion: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under P1
 8. Is there a criterion of "one's own", narrower than all one's effects and stated apart from identity, that bears on whose losses count and not only on what is permitted?
 9. May scope depend on what can be foreseen, given that what can couple in would then fix whose losses count? Is the negligence standard its strongest form?
 10. If one values what comes after as not oneself, is the path's reach only a contingent value, held beyond the self?
-11. Does a loss counted on one's own line count as the other's (Rawls's separateness of persons), and can a scope that follows occurrences count what a harm forecloses, which occurs nowhere?
+11. Does a loss counted on one's own line count as the other's (Rawls's separateness of persons), and can a scope that follows occurrences count what a harm forecloses, which occurs nowhere on the course taken?
 
 ---
 

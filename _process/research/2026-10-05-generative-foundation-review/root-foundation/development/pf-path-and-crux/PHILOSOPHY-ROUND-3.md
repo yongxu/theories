@@ -14,7 +14,7 @@ The third round on the open question of [07 §4.6](../../../../../../theories/be
 The first two rounds read more strongly for P4 than they support [AI reading].
 
 1. **From some to all.** "One goes on only through what one conditions" shows that some effects are one's own. Round 1 saw the gap and answered it with circularity. §4.7 keeps the gap open.
-2. **The circularity reply.** It holds only if no criterion stands apart from the identity in question. Bodily organization and Parfit's R are each stated on their own terms. §4.6 now calls it one reply and points to §4.7.
+2. **The circularity reply.** It holds only if no criterion stands apart from the identity in question. Bodily organization, intention under a description, and Parfit's R are each stated on their own terms. §4.6 now calls it one reply and points to §4.7.
 3. **Double effect.** It concerns what is permitted, and is silent on scope, as round 2's verdict says. §4.7 gives what can be foreseen as a candidate on its own, in two forms, the negligence standard the stronger.
 4. **New objections, from the independent read.** The wrong bearer: a loss counted on my line counts as mine. Losses are not effects: what a harm forecloses occurs nowhere, so it lies on no line. Touching: a scope following effects leaves out what one never touches. Opacity: P1 held de se does not transfer to the class without a de re reading. Degree: R is no class.
 5. **New support, from the same read.** Agent-regret: ownership wider than intention and fault, and not all effects.
@@ -31,4 +31,4 @@ The first two rounds read more strongly for P4 than they support [AI reading].
 
 ## Review
 
-An independent AI reader (read-only, not the author) read the draft as a moral philosopher and against the Lean, 2 November 2026, without compiling it. It made ten major and twelve minor findings. All are taken, with these judgements of the author's: its "wrong bearer" and "losses are not effects" are kept as objections and not answered, since §4.7 has no answer that would not be another premise; the river case is added to the fronts so the question parses for a newcomer.
+An independent AI reader (read-only, not the author) read the draft as a moral philosopher and against the Lean, 2 November 2026, without compiling it. It made ten major and twelve minor findings, and its re-check of the second pass three findings not fully met and eight corrections, two of the eleven to wordings it had itself proposed. All are taken, with these judgements of the author's: its "wrong bearer" and "losses are not effects" are kept as objections and not answered, since §4.7 has no answer that would not be another premise; the river case is added to the fronts so the question parses for a newcomer.
