@@ -1,0 +1,24 @@
+You are marking a reader's answers against a fixed key. You did not write the texts or the answers, and nobody here wants a good or a bad result. Read only; change nothing.
+
+Paths (absolute):
+
+- The key: /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-KEY.md
+- The chapters the key's Home column links to: /Users/ren/theories/theories/becoming/chapters/ (08-METHOD.md, 07-SIGNIFICANCE.md and so on). Open a home only where you need it to decide a mark, above all before giving W.
+- This reader's answers, in the directory /private/tmp/claude-501/-Users-ren-theories/a6174cfd-3d37-4449-8d6a-4e52f87f7e8c/scratchpad/reread3/answers/ (READER is named below):
+  - READER-part-one.txt (or .raw): after reading a README's first screen and a one page. Questions Q1 to Q10.
+  - READER-part-two.txt (or .raw): after then reading a longer overview. R1 restates Q1 to Q6 only where they changed; R2 restates Q7. Everything not changed still stands from part one.
+  This run has no note and no closed-book pass.
+
+What to mark. For each key item under Q1 to Q6, two marks: FIRST (from part one alone) and SECOND (from part one with part two's changes); CLOSED is `-` throughout. For each item under Q7, two marks, FIRST and SECOND, from the reader's Q7 and R2 outlines, reading the rest of that stage's answer only to settle what the outline means.
+
+The marks are the key's: R stated right, at the right standing; P partly; A absent; W stated wrong, or stated at a stronger or weaker standing than its home gives. Mark what the reader's answer says, not what you think they meant, and do not give R for words that merely resemble the item. An item is about the account, so a reader who says "the text does not say" of something the key lists gets A. If a reader states an item in the course of answering a different question, count it.
+
+Answer with exactly these parts, in this order:
+
+1. A Markdown table, one row per item, every item from 1.1 through 7.7: `| item | FIRST | SECOND | CLOSED | note |`. Use `-` for CLOSED on every row. The note is empty unless a mark is P or W, then at most twelve words saying why; for W, name the home you checked and the words that are wrong.
+2. A list of anything else the reader states about the account that is wrong against the chapters though no key item covers it: quote it, say which file, and name the home. Write "none found" if none. Do not list opinions, or complaints about the text's clarity; those are the reader's to have.
+3. One line saying which homes you opened, and what you did not check.
+
+Keep to this. No summary, no advice on the texts.
+
+The reader for this run: READER = gpt
