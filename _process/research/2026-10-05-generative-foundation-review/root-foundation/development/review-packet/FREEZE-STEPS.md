@@ -23,7 +23,7 @@ Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what i
 
 1. The way now's items 1 to 4 have landed. Each changes what readers are told, so a re-sync before them is done twice.
 2. What would change the frozen commit has been put to Ren: [the board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation for each. None of it holds the freeze if he has not answered: [`COMMONS.md`](../../../../../../COMMONS.md), which says the work is not licensed, stays as it is; the first coder's twenty timed units stand in for a trial of the codebook; and the sciences dossier ([`SCIENCES.md`](../ue8-sciences-dossier/SCIENCES.md)) can join a later edition. If it joins, it moves into the review folder, it is re-synced with the others, and the cover's table, the builder's `PARTS`, the codebook's count of the dossiers, step 9's second path, the measure's lists and this page's table of what each reader is sent all change.
-3. The coordinator has given the slot. As set on 2 November: logic is re-synced by RP's owner, alignment by AJ4's, the sciences dossier, if it joins, by UE8's, its owner idle and so taken by this page's holder on 3 November 2026; classical, Buddhist, the cover and what has moved under philosophy since its pin by the holder of this page. An owner no longer active hands over: check, then take it.
+3. The coordinator has given the slot. As set on 2 November: logic is re-synced by RP's owner, alignment by AJ4's, the sciences dossier, if it joins, by UE8's, who handed it to this page's holder on 3 November 2026; classical, Buddhist, the cover and what has moved under philosophy since its pin by the holder of this page. An owner no longer active hands over: check, then take it.
 
 ## The steps
 
