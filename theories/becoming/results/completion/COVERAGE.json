@@ -1070,7 +1070,7 @@
     },
     {
       "id": "order",
-      "name": "Order",
+      "name": "Widening",
       "statement": "widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
       "anchors": [
         "Becoming.Web.Widens",

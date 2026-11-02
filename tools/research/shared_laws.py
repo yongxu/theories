@@ -83,7 +83,7 @@ TC = STUDY / 'THEOREM-CONNECTIVITY.py'
 OUT = ROOT / 'theories/becoming/results/data/shared-laws.json'
 CORE = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
 # The order of 08 §7 and the names it gives them.
-NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'order'}
+NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'widening'}
 DEPENDENCES = ('grammar', 'balance, represented', 'anchor, not reached', 'no shared law')
 AT_MODEL_KEYS = ('declaration', 'of', 'models', 'review')
 # The relations that evidence each model, split from U2Deps' modelRelations (U2's check); WRT's and WRP's designer

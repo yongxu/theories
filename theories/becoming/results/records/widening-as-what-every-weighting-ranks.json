@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "widening-as-what-every-weighting-ranks",
   "title": {
-    "en": "Widening as what every weighting ranks",
-    "zh": "扩大即每个加权所排者"
+    "en": "Widening as what every positive weighting ranks",
+    "zh": "扩大即每个正的加权所排者"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -528,6 +528,10 @@
     {
       "en": "30 October 2026 (U3, study section 465): a law on the root added, stating `Becoming.Weighting.widens_iff_every_positive` in the grammar's terms on its own carrier, through the row (F5's statements_at_model, model own); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律，于其自身之载体上以文法之项陈述 `Becoming.Weighting.widens_iff_every_positive`，经其本行（F5 之 statements_at_model，模型 own）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): retitled \"Widening as what every positive weighting ranks\", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so \"every weighting\" stated a universal the record refutes; positivity is where C's premise is relocated. The claim is unchanged.",
+      "zh": "3 November 2026, CD (board item CD)：标题改为“扩大即每个正的加权所排者”，标识改为 widening-as-what-every-positive-weighting-ranks，旧标识保留。加权是所列诸项上的任意自然数权重，零权持平，如陈述所言，故“每个加权”所说的全称为本记录所否；正性正是 C 之前提的移置之处。主张不变。"
     }
   ]
 }

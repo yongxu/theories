@@ -26,7 +26,7 @@ FILES = [
 ]
 EN = re.compile(r'\b(better|worse|best|worst|higher|highest|lower|lowest|rank\w*|optim\w*|superior\w*|inferior\w*|'
                 r'winners?|losers?|domina\w*|maximi\w*|minimi\w*|above|below|prefer\w*)\b', re.I)
-ZH = re.compile(r'(更好|更差|最好|最优|最佳|排序|排名|排得|排在|更高|更低|高于|低于|优于|劣于|胜者|赢家|输家|优越|最大化|支配|偏好)')
+ZH = re.compile(r'(更好|更差|最好|最优|最佳|排序|排名|排得|排在|排定|定序|更高|更低|高于|低于|优于|劣于|胜者|赢家|输家|优越|最大化|支配|偏好)')
 WINDOW = 140
 
 TEXTUAL = re.compile(r'(\[(above|below)\]|\((above|below)\)|(above|below)\]\(|\b(above|below)[:,;)]|\b(above|below)\.\s|'
@@ -66,7 +66,7 @@ def classify(word, ctx):
                                                                                           'preferences', 'preferring',
                                                                                           'prefers', 'prefer')):
         return 'field'
-    if low.startswith('rank') or low in ('above', 'below', 'higher', 'lower') or word in ('排序', '排名', '排得', '排在'):
+    if low.startswith('rank') or low in ('above', 'below', 'higher', 'lower') or word in ('排序', '排名', '排得', '排在', '排定', '定序'):
         if NAMED.search(ctx):
             return 'named'
     if low.startswith(('minimi', 'maximi')) and AMOUNT.search(ctx):

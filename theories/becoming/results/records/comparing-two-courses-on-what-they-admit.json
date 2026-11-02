@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T21:32:44+00:00",
   "statement": {
-    "en": "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag decides UE4's lag, as does a tail order; it and eventual widening rank a pair oppositely.",
-    "zh": "在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 的滞后，尾序亦然；带滞后的扩大与最终扩大对一对进程排序相反。"
+    "en": "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag decides UE4's lag, as does a tail order; it and eventual widening hold of one pair in opposite directions.",
+    "zh": "在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 的滞后，尾序亦然；带滞后的扩大与最终扩大于一对进程方向相反。"
   },
   "laws": [
     {
@@ -993,6 +993,10 @@
     {
       "en": "28 October 2026 (OU3c, study section 433): strictJoin_trans and strictJoin_irrefl moved into Becoming.GrammarLaws, beside widening's laws, by the decision of this record's owner; names and statements kept, but generalised to any universe; their proof reference and binding moved with them.",
       "zh": "2026年10月28日（OU3c，研究第 433 节）：经本记录之主决定，strictJoin_trans 与 strictJoin_irrefl 移入 Becoming.GrammarLaws，置于扩大之律旁；名与陈述不变，唯推广至任一宇宙；其证明之引用与绑定随之移动。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the last clause says that widening with a lag and eventual widening hold of one pair in opposite directions, not that they rank it. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "3 November 2026, CD (board item CD)：末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ]
 }

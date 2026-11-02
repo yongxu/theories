@@ -14,7 +14,7 @@ Labels: **Theorem** with its model in brackets (*any type*, *any process*, *Worl
 
 **No guarantee.** The theory's own laws, each on its stated model, show why (§3): a selection reaches only what couples into it, how far off a break is does not couple in through a threshold, no finite record certifies renewal, points of no return are exact, and where the rest outruns a renewal no weighting selects one member's restraint. What the theory does give is exact, and narrower:
 
-- **a direction**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed (§1);
+- **a criterion**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed; it is the title's generative direction only under the two premises (§1);
 - **exits** from the loops that lock a collective, each holding under stated hypotheses, several with the step at which its window closes (§2);
 - **a precise meaning for "enough situationality"**: six conditions, of which observation is only the first (§6);
 - **one law on keeping the future open**: along a course that makes only the moves of one fixed process from some step on, the possible under that process does not keep widening (§7).

@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "whole-first-and-bounded-centers",
   "title": {
-    "zh": "整体优先，与以依存为界的中心",
-    "en": "The whole first, and centers bounded by dependence"
+    "zh": "整体与其区域，与以依存为界的中心",
+    "en": "The whole and its regions, and centers bounded by dependence"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -613,6 +613,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the first hypothesis names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person's words or delegation as its standing; the correspondence keeps Ren's quoted words, drops 'which Ren then called an axiom', and labels its readings as AI readings (D16, D43) instead of 'adopted on Ren's delegation'; the related details likewise; a boundary's link updated from the former id closure-verdict-meets-axiom to closure-verdict-meets-continuation-condition. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人的话或交托为其地位；对应保留 Ren 的原话，删去“Ren 当时称之为公理”，读法标为 AI 的读法（D16、D43），不再写“依 Ren 的交托采用”；相关说明同此；一条界限的链接由旧 id closure-verdict-meets-axiom 改为 closure-verdict-meets-continuation-condition。规律未变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): retitled \"The whole and its regions, and centers bounded by dependence\", and the id renamed to whole-and-regions-and-bounded-centers, the old id kept. \"The whole first\" (优先) stated a priority; the record shows that under the continuation condition what retains in the whole retains in every region, not conversely, and no priority. The claim is unchanged.",
+      "zh": "3 November 2026, CD (board item CD)：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，旧标识保留。“整体优先”说的是一种优先；本记录所示是：延续条件之下在整体中保留的在每个区域内保留，反过来不成立，而非优先。主张不变。"
     }
   ],
   "text_versions": [
