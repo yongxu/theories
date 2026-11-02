@@ -57,3 +57,11 @@ Over budget: the one page by 6 budget-words, in its first open item, each centra
    180 words  10740 chars      5550 budget-words  42.7–55.5 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
 
 Over budget: the one page by 56 budget-words and the overview by 224, for the reasons READING-BUDGETS gives (amendment 1). Both Chinese editions are within budget.
+
+## The reader revision (the fronts after the cold read of 2 November: the root's paragraph, the whole at a glance with each part's standing and what would show it wrong, two joins, one case start to finish, the premises' definitions out of the table; independent reads against the chapters taken in both editions)
+  1372 words      4 chars    1374 budget-words  10.6–13.7 min  theories/becoming/ONE-PAGE.md
+    62 words   2395 chars    1259 budget-words  9.7–12.6 min  theories/becoming/ONE-PAGE.zh.md
+  6743 words     19 chars    6752 budget-words  51.9–67.5 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   193 words  11683 chars    6034 budget-words  46.4–60.3 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 274 budget-words (Chinese 159) and the overview by 752 (Chinese 34), for the reasons READING-BUDGETS gives (amendment 1).
