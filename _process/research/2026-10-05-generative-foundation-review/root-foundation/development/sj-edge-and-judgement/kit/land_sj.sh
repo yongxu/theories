@@ -4,7 +4,8 @@
 # connectivity and shared laws, the citing records re-pointed, the board's landed clause, and one commit of every
 # changed path. The fast-forward is ff_sj.sh's.
 # usage: SJ_ORDER="…" land_sj.sh WORKTREE ASIDE   (ASIDE a folder outside the repository, for logs; SJ_ORDER the
-#        coordinator's order sentence for the landed clause, sent with its word, verbatim; required)
+#        coordinator's order sentence for the landed clause, sent with its word, verbatim; required; SJ_HISTORY_ROW
+#        the landing's row for the board history, board_sj.py history's, required)
 set -u
 W=$1; ASIDE=$2
 K=$(cd "$(dirname "$0")" && pwd)
@@ -37,6 +38,7 @@ make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-poin
 python3 -B "$K/repoint_sj.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_sj.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
 python3 -B "$K/board_sj.py" landed "$ID" "$N" > "$ASIDE/board.log" 2>&1; step board $?
+python3 -B "$K/board_sj.py" history "$ID" "$N" > "$ASIDE/history.log" 2>&1; step board-history $?
 make research-render > "$ASIDE/render2.log" 2>&1; step render $?
 for t in research-check-strict research-links research-test; do make $t > "$ASIDE/$t.log" 2>&1; step $t $?; done
 git status --porcelain --untracked-files=all | cut -c4- > "$ASIDE/paths.txt"

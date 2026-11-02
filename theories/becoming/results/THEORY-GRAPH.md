@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3193 nodes, 6145 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3193 nodes, 6148 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -240,7 +240,7 @@ Results (92):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (75, 13 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (75, 14 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -653,4 +653,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-301 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+300 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
