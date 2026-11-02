@@ -118,6 +118,7 @@ The principle defines a thing by its Markov blanket (Friston 2013, 2019; Kirchho
 | integration | [REVIEW-UE28-LANDING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue28-a-formations-level-as-the-internal-part/REVIEW-UE28-LANDING.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [FREE-ENERGY-PRINCIPLE.md](../../FREE-ENERGY-PRINCIPLE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
 
 Aliases: `A formation's couplings as its blanket`, `形成之耦合为其毯`, `which blanket a thing has`, `when a blanket constrains`, `Becoming.BlanketCouplings.blanket_iff_through`, `Becoming.BlanketCouplings.ReadsExternal.not_blanketed`, `a formation's level as the internal part`, `Becoming.BlanketCouplings.levelParts_admitted_iff`
 

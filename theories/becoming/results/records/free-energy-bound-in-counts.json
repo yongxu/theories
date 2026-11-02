@@ -348,7 +348,7 @@
         "Becoming.FreeEnergyCounting.zero_of_total_zero",
         "Becoming.FreeEnergyCounting.zero_weights_reach"
       ],
-      "sha256": "7467874bbb55895ad831aef7f0bf129d45a94238b833a4d9b78dee2912de9962"
+      "sha256": "02621f3b01f7ced5818e004f95798dbdc76cb3da1d26f224092bb3c68a74fb50"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
@@ -406,12 +406,18 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "role": "receipt",
+      "sha256": "58ba9213b37a9bb07551fb1fe5e0f5e49c60458002a28a3a55fb5faa0eda33a2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FreeEnergyCounting",
       "success_pointer": "/status",
       "success_value": "passed"
