@@ -39,11 +39,19 @@ EXPECTED = {
                            'pure-core-and-periphery', '7. Shared laws and connectivity',
                            '7-shared-laws-and-connectivity', 'what-a-response-takes-in'},
 }
+# the seven records binding 08 as a whole file: only lines added in §7 and the counts sentence in §3 change, so most would
+# stay grown rather than drift; on the coordinator's word each is read and re-pointed here, as LN2 did, whether it drifts or not
+BIND_08 = {'contraction-where-duplication-is-reachable', 'one-move-covering', 'one-root-to-its-edge',
+           'premises-met-and-failed', 'self-reference-does-not-certify-itself', 'type-formation-gives-no-dynamics',
+           'what-a-summary-keeps'}
 REASON = ("SJ's last parts: GuardHorizon's bridge to the core's law of a common response in a ring module "
           "(uniform_policy_iff_common and its witness, statewise_not_uniform re-proved with its statement unchanged), "
           "the proof bindings to GuardHorizon.lean rebound to the receipt; the map of what a response takes in at "
           "08 §7; 07 §5's sentence; 03 §12's home naming the converse; the root module's bullet and the README row; "
-          "08's counts; the study; the connectivity; read before re-pointing")
+          "08's counts; the study; the connectivity; read before re-pointing. Each of the seven records binding 08 as a "
+          "whole file read against the new text: none cites the new block or §3's counts, one-root-to-its-edge cites §7's "
+          "figures, unchanged; each record binding 03 or 07 and drifting read against the new sentence: nothing they say "
+          "changes")
 
 
 def run_repoint(args):
@@ -70,6 +78,12 @@ for x in kept:
     sections = {sct.lstrip('#').strip() for sct in (x.get('changed_sections') or [])}
     if not sections or not sections <= EXPECTED[x['path']]:
         unexpected.append((x['id'], x['path'], sorted(sections)))
+have = {(x['id'], x['path']) for x in kept}
+M08 = f'{CH}/08-METHOD.md'
+for rid in sorted(BIND_08):
+    assert (ROOT / f'theories/becoming/results/records/{rid}.json').is_file(), rid
+    if (rid, M08) not in have:
+        kept.append({'id': rid, 'path': M08, 'changed_sections': ['(lines added only; read on the coordinator\'s word)']})
 print(f're-pointing {len(kept)} pairs in {len({x["id"] for x in kept})} records:')
 for x in kept:
     print('  ', x['id'], x['path'], x.get('changed_sections'))

@@ -14,7 +14,7 @@ branch=$(git branch --show-current)
 git checkout -q --detach "$base" || exit 2
 python3 -B "$K/board_sj2.py" head || { git checkout -q "$branch"; exit 2; }
 [ "$(git diff --name-only)" = "$B" ] || { echo "UNEXPECTED PATHS"; git diff --name-only; git checkout -q -- $B; git checkout -q "$branch"; exit 2; }
-git commit -q -m "Board: SJ's last parts at the head of the queue (landing now: GuardHorizon's bridge to the core's law of a common response in a ring module, with its witness and statewise_not_uniform re-proved from the leaf's witness; one incremental core run; the map at 08 §7, 07 §5's sentence and 03 §12's home; SJ's row closed into the history; then render, strict check, links, tests and both dossier checks, then the fast-forward)" -- $B
+git commit -q -m "Board: SJ's last parts at the head of the queue (landing now: GuardHorizon's bridge to the core's law of a common response in a ring module, with its witness and statewise_not_uniform re-proved from the leaf's witness; one incremental core run; the map at 08 §7, 07 §5's sentence and 03 §12's home; SJ's row closed into the history, with OU7b's, which its landing left out; then render, strict check, links, tests and both dossier checks, then the fast-forward)" -- $B
 new=$(git rev-parse HEAD)
 git checkout -q "$branch"
 cd "$R"
