@@ -57,6 +57,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | optimum, drawer, pool, shared code | as defined where each is introduced | [05](theories/becoming/chapters/05-COLLECTIVES.md) |
 | significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number; read de se, that it lies within what the center continues with along a relation |  [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | center | a formation as a standpoint | [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
+| standard | what something is read against, so that it can be met or missed: a requirement on a level, an acceptable set of acts, a task. A selection rule, a code or an order read off choices is one only under a reading. That a standard is met says nothing of whether meeting it has significance | [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied) |
 | widening | at every step admitting every formation the other admits, and at some step one more | [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |
 | the continuation condition (`Unrestricted`) | from every standpoint, for anything, its continuation into the future has significance; stated, not asserted; it fixes scope | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
 | C | the widening comparison: widening what can form is better; it alone orders | [07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
