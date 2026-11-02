@@ -25,7 +25,11 @@ The first two rounds read more strongly for P4 than they support [AI reading].
 
 ## What the baseline cold read changed
 
-Two AI readers with no memory of this work read the fronts at main `486c895a9` on 2 November 2026. Neither saw an argument at this join; one read the path as redefining the self, and the other saw a change of interpretation that could be mistaken for a derivation. So the overview now separates the free treatment of significance from the second reading, states the step's premises in words and where the weight falls, and calls the path a proposal. The one page says the objection and drops the codes. §4.7 gains the objection. These readers were asked questions and share an idiom with the text, so this is a baseline, not a person's read.
+Two AI readers with no memory of this work read the fronts at main `486c895a9` on 2 November 2026. Neither saw an argument at this join; one read the path as redefining the self, and the other saw a change of interpretation that could be mistaken for a derivation. So §4.7 gains the objection. The fronts' lines, which the reader revision carries since it shares their budget, do the same: the overview separates the free treatment of significance from the second reading, states the step's premises in words and where the weight falls, and calls the path a proposal, and the one page says the objection and drops the codes. These readers were asked questions and share an idiom with the text, so this is a baseline, not a person's read.
+
+## C's exact role
+
+The cold read found that "C alone gives order" claims more than 07's own theorem on what self-concern alone ranks, and 07 §4's "every ranking needs C" stood in the same section. The exact statement: the condition ranks nothing, and C gives order, in general alone. It is corrected in 07 §4, §4.7 and its list of what is not shown, 08, the glossary, the dossier, two records and the generator's sentence. The test that pinned "alone gives order" now pins "gives order", because the phrase it pinned was wrong, not to silence a failure. README's first screen and the instruction file's line are not changed here.
 
 ## Boundaries
 

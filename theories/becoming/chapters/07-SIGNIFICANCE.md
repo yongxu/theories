@@ -217,7 +217,7 @@ A self acting for its own continuation presupposes that some continuation has si
 | the continuation condition | **scope** | fixes whose losses count: every continuation's; its content beyond the self's presupposition, the step of invariance, extends scope to losses that return to no one | rank anything |
 | C: widening what can form is better | **order** | ranks a course above every course it widens | rank mixed comparisons |
 
-Neither is asserted. The condition alone ranks nothing: under it living significance follows, the reasons of [§3.2](#yields) only with A or D and correspondence, and every ranking needs C.
+Neither is asserted. The condition alone ranks nothing: under it living significance follows, the reasons of [§3.2](#yields) only with A or D and correspondence. A ranking of courses needs C or a premise in its place: C gives order, in general alone, and an order rising with one's own continuation ranks one case with no C ([§4.4](#r-what-self-concern-alone-ranks)).
 
 Read with time, what returns to no present center includes everything after every present center has ended; [§4.6](#future-path) gives one path by which part of that future is reached without the step.
 
@@ -495,7 +495,7 @@ P2 excludes the organism, does not exclude the intended self and is no test of t
 - *The laws stand.* None rests on P4 being true of anyone.
 - *If all one's effects, at any remove, are held*, with P1, and P3 for other lines: concern for one's own continuation reaches everything downstream of what one conditions, past the end of one's organism and across lines, with no step of invariance. That extends, from one's own standpoint, what one already presupposes. Whether that presupposition is warranted is a further question, since a presupposition can be false. It is not the condition: what §4.6 lists as not reached stays the step's, and if the objections above hold, what is reached is counted differently.
 - *If only some are held*: an effect not alike to oneself lies on no line from oneself (`«后皆续则所缘同于»`, `«线内同类»`), so on this path concern for one's own continuation reaches at most what the class holds; a family's class that some of a member's effects leave reaches at most its own line of descent. Self-concern still reaches [what one depends on](#r-self-concern-through-dependence) and [ranks one case with no C](#r-what-self-concern-alone-ranks). The rest of the future goes back to the step, argued and coherently denied ([§4.2](#step)).
-- *The ethics keeps its form, with one clause exposed.* It does not derive from the condition or from this path. The continuation condition fixes scope and C alone orders, each a hypothesis wherever used. P4 ranks nothing, so order is untouched. If P4 fails, one route toward part of scope is gone, and [T8](#theses)'s clause "of whatever substrate" loses its ground: it rests on P2 and P4, and for actors not themselves alive it would need another.
+- *The ethics keeps its form, with one clause exposed.* It does not derive from the condition or from this path. The continuation condition fixes scope and C gives order, in general alone, each a hypothesis wherever used. P4 ranks nothing, so order is untouched. If P4 fails, one route toward part of scope is gone, and [T8](#theses)'s clause "of whatever substrate" loses its ground: it rests on P2 and P4, and for actors not themselves alive it would need another.
 - *Alignment.* What a selection reaches ([§6](#alignment-without-premise)) needs no P4. An objective is a selector and an order, not a scope. Read as a correspondence not shown, an optimizer's objective resembles the intended self, and "does a system's scope hold its effects?" can be read as what work on side effects asks ([PF's second round](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md#5-the-wake-and-alignment)).
 
 **Warrant, recognition, motivation.** Two questions are asked here: what acting presupposes, and whether that is warranted. Only the second is warrant. Recognition is apart: an effect that does not couple into a selector is one it cannot separate, so a scope can hold what its holder cannot know. Motivation is apart: that a loss counts from one's standpoint moves no one by itself. Nor does P4 say what one answers for or must do, whether anyone complies, or how any of it would be implemented.
@@ -755,7 +755,7 @@ No objection is shown to defeat the step, nor the step shown ([record](../result
 ## What this chapter does not show
 
 - That the continuation condition, C or the step of invariance is warranted. No warrant binding every possible mind is claimed; what still needs argument is named under T8 ([§8](#theses)).
-- That the ethics derives from the condition: the condition fixes scope and orders nothing; C alone ranks.
+- That the ethics derives from the condition: the condition fixes scope and orders nothing; C gives order, in general alone.
 - Any duty, right, recognition, motivation or compliance, or an unconditional or complete ranking of mixed comparisons (priority and transfer rank some, under named premises).
 - Which reading of `living`, lifting rule or practical commitment is right.
 - **Seeing is not valuing**: enlarging what couples in changes what a selection can separate, not which differences matter.
