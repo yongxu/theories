@@ -8,7 +8,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
-| 2026-11-03 | [2026-11-03-not-my-decision-word-for-word.md](../sources/15-codex-theory-conversations/2026-11-03-not-my-decision-word-for-word.md) | decision | Ren: don't take my decision word for word; aim for the best decisions |  |
+| 2026-11-03 | [2026-11-03-not-my-decision-word-for-word.md](../sources/15-codex-theory-conversations/2026-11-03-not-my-decision-word-for-word.md) | decision | Ren: don't take my decision word for word; aim for the best decisions | yes |
 | 2026-11-03 | [2026-11-03-agents-review.md](../sources/15-codex-theory-conversations/2026-11-03-agents-review.md) | direction | Ren: review AGENTS.md, which seems outdated and is dragging the work | yes |
 | 2026-11-02 | [2026-11-02-keep-pushing-the-elegant-frontier.md](../sources/15-codex-theory-conversations/2026-11-02-keep-pushing-the-elegant-frontier.md) | conversation | Ren: keep pushing the elegant frontier, with the other sessions |  |
 | 2026-11-02 | [2026-11-02-a-finish-readers-can-see.md](../sources/15-codex-theory-conversations/2026-11-02-a-finish-readers-can-see.md) | record | Ren: stop measuring progress by root counts; an elegant finish readers can see, then people | yes |

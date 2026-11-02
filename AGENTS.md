@@ -45,7 +45,7 @@ It rests on two unasserted premises. The [continuation condition](theories/becom
 
 ## Words and decisions
 
-Ren's words are provenance, not authority: kept verbatim in `sources/`, in their own language, and never the warrant for a claim or the order of the work. Live text gives the argument. Where his words seem wrong, say so. OPENING's first-person body is revised in place, with a note at its top naming each passage revised since his own last text and linking it. The generativity chain changes through its maintenance record. AI-written text keeps its AI label.
+Ren's words are provenance, not authority: kept verbatim in `sources/`, in their own language, and never the warrant for a claim or the order of the work. Live text gives the argument. Where his words seem wrong, say so. His yes settles that a change is wanted, not its wording, form or carrier: land the best version and say what differs and why. OPENING's first-person body is revised in place, with a note at its top naming each passage revised since his own last text and linking it. The generativity chain changes through its maintenance record. AI-written text keeps its AI label.
 
 Still his: pushing to the public remote, the licence, who is sent what, and money or machine time for runs. Prepare these fully, freezing designs included, without waiting on him. Only their release waits.
 
