@@ -22,6 +22,8 @@
    - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 6. Witnesses: a situation with no act leaves the image determined and no response; two acts at one situation give a response with differing acts; situations and acts on one carrier leave the image determined and no response; an act at every situation, or one shared by every two of three, gives no common response under the reading that tells nothing apart. (`Becoming.«共应之例».NotCovering.fixed`, `Becoming.«共应之例».NotCovering.none`, `Becoming.«共应之例».NotOne.common`, `Becoming.«共应之例».NotOne.differ`, `Becoming.«共应之例».OneCarrier.fixed`, `Becoming.«共应之例».OneCarrier.none`, `Becoming.«共应之例».EachNotCommon.each`, `Becoming.«共应之例».EachNotCommon.none`, `Becoming.«共应之例».PairsNotCommon.pairs`, `Becoming.«共应之例».PairsNotCommon.none`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
+7. The rule's converse, at any type: given a choice over the readings and every reading given by some situation, a rule from readings meeting the requirement exists exactly where a response common over the reading's sameness does; with that choice, no situation and no act, a common response exists with no such rule, so the readings' being given cannot simply be dropped. (`Becoming.GuardHorizon.uniform_policy_iff_common`, `Becoming.GuardHorizon.ungiven_reading_not_uniform`)
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -29,12 +31,13 @@
 - A reading is a relation on situations, supplied; the situations are the grammar's occurrences of one carrier, and no separate reader is given. The reading's own formation is not represented here.
 - The requirement is supplied and fixed before the outcome: for each act, the region where it is acceptable and can be done. The act is an index outside the grammar's relations.
 - For the one-act law, situations and acts are held apart on a sum carrier; the requirement giving exactly one act at each situation is a premise, and each premise is shown to do work.
+- For the seventh law only: a choice over the readings (`Viability.ChoiceOver`) and every reading given by some situation, each named as a hypothesis; the second cannot simply be dropped, by a witness with no situation and no act.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - Which requirement is right or better: the requirement is supplied, and no law here ranks requirements.
-- A rule fixing one act for each reading from a common response: GuardHorizon has such a rule with choice over the readings named as a hypothesis; that the choice is needed for this rule is not proved here.
+- That a rule fixed for each reading from a common response needs the choice over the readings: the seventh law takes it as a hypothesis, and that such choice cannot be dropped is shown for plans (Viability.plans_iff_choice), not for this rule.
 - That every situation having an act whose requirement holds at every situation the reading relates to it gives a common response, for a reading that is not both reflexive and transitive (here reflexive and symmetric, not transitive). Witness: `Becoming.«共应之例».NotTransitive.none`.
 - That an act at every situation, or one shared by every two situations, gives a common response. Witness: `Becoming.«共应之例».PairsNotCommon.none`.
 - How a reading forms or is revised, or what a response's outcome is worth: a common response meets the requirement and no more.
@@ -44,14 +47,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt 20261101T112708.430596Z, 50 declarations (36 theorems), and Becoming.Viability, 33 declarations (25 theorems), whose two kernel laws are proved from the leaf with their statements unchanged, each with an empty axiom report; built in scratch, its Lean and map read by three independent AI reviewers and its landing texts by four, each with a verifier, every confirmed finding taken.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt 20261101T112708.430596Z (36 theorems) and Viability, whose two kernel laws are proved from the leaf with their statements unchanged; the seventh law in the ring module Becoming.GuardHorizon at receipt 20261102T051236.940686Z (34 theorems); every axiom report empty. Read by independent AI reviewers, the design, the Lean and the map, and the landing texts twice, each finding verified, every confirmed one taken.
 
 Canonical source: [CommonResponse.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-The rule form with choice, GuardHorizon's uniform policy, stated as this law with choice over the readings and every reading given, and its example re-proved from this record's witness.
+The models' examples of PairsNotCommon (ReadingLoop.PairwiseShared, AssurancePlans.Routes) re-proved from this record's witness on their owners' word, and the reading's own formation stated within the law.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -67,7 +70,7 @@ At a process's steps the kernel is what discrete-time viability theory (Aubin 19
 - **formal-reuse**: [market-protected-continuation](market-protected-continuation.md). Reuses Viability's kernel and a process's steps: kernel_iff_held reads the kernel as the grammar's, and that record's two kernel laws are proved from this record's first law, their statements unchanged.
 - **interpretive**: [finite-continuation-plans](finite-continuation-plans.md). A rule fixed in advance from a common response asks for a choice over the readings; Viability.plans_iff_choice shows that such choice cannot be dropped for plans, cited by analogy and not re-proved for this rule.
 - **interpretive**: [testing-within-couplings](testing-within-couplings.md). States on the grammar its sentence that a judgment through the couplings is a common response over the class alike through them.
-- related, not a proved adapter: [when-to-inquire-and-when-to-respond](when-to-inquire-and-when-to-respond.md). Its uniform policy from readings is the rule form of this law, with choice over the readings.
+- **formal-reuse**: [when-to-inquire-and-when-to-respond](when-to-inquire-and-when-to-respond.md). The seventh law reads that record's uniform policy: uniform_policy_iff_common is its uniform_policy_iff_fiber_feasible with, every reading given, the condition rearranged into this record's covering law, and its example statewise_not_uniform is re-proved from this record's witness, its statement unchanged.
 - related, not a proved adapter: [readings-a-response-needs](readings-a-response-needs.md). Its three routes, each pair with a common route and the three with none, are this record's pairs witness at a model.
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped of a map and an act map is the condition of the one-act law at an act map, unfolded.
 
@@ -78,10 +81,12 @@ At a process's steps the kernel is what discrete-time viability theory (Aubin 19
 |---|---|---|
 | proof | [CommonResponse.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean) | `Becoming.«共应»`, `Becoming.«自反则承在内»`, `Becoming.«诸承在内当且仅当自反»`, `Becoming.«传递则承闭»`, `Becoming.«诸承闭当且仅当传递»`, `Becoming.«闭在内则在承»`, `Becoming.«所闭之承在内»`, `Becoming.«所闭之承闭»`, `Becoming.«闭在内则在所闭之承»`, `Becoming.«所闭之承最大»`, `Becoming.«共应当且仅当所闭之承遍»`, `Becoming.«自反传递则共应当且仅当承遍»`, `Becoming.«共应之细»`, `Becoming.«静之共应当且仅当遍»`, `Becoming.«一之共应当且仅当一应遍»`, `Becoming.«依读而应则共应»`, `Becoming.«应际»`, `Becoming.«读应»`, `Becoming.«应际同行当且仅当同读同应»`, `Becoming.«遍定应共应当且仅当同读同应»`, `Becoming.«遍定应共应当且仅当像定后»`, `Becoming.«映应共应当且仅当同读同应»`, `Becoming.«共应之例».NotReflexive.trans`, `Becoming.«共应之例».NotReflexive.held_each`, `Becoming.«共应之例».NotReflexive.none`, `Becoming.«共应之例».NotTransitive.refl`, `Becoming.«共应之例».NotTransitive.symm`, `Becoming.«共应之例».NotTransitive.held_each`, `Becoming.«共应之例».NotTransitive.none`, `Becoming.«共应之例».EachNotCommon.each`, `Becoming.«共应之例».EachNotCommon.none`, `Becoming.«共应之例».PairsNotCommon.pairs`, `Becoming.«共应之例».PairsNotCommon.none`, `Becoming.«共应之例».NotCovering.fixed`, `Becoming.«共应之例».NotCovering.none`, `Becoming.«共应之例».NotOne.common`, `Becoming.«共应之例».NotOne.differ`, `Becoming.«共应之例».OneCarrier.fixed`, `Becoming.«共应之例».OneCarrier.none` |
 | proof | [Viability.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean) | `Becoming.Viability.kernel_iff_held`, `Becoming.Viability.Certificate.kernel`, `Becoming.Viability.kernel_certificate`, `Becoming.Viability.Kernel`, `Becoming.Viability.Certificate` |
+| proof | [GuardHorizon.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean) | `Becoming.GuardHorizon.uniform_policy_iff_common`, `Becoming.GuardHorizon.ungiven_reading_not_uniform`, `Becoming.GuardHorizon.statewise_not_uniform` |
 | provenance | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/DESIGN.md) | — |
 | review | [REVIEW-2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/REVIEW-2.md) | — |
 | review | [REVIEW-3.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/REVIEW-3.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json) | — |
 
 Aliases: `a response common over a reading`, `共应`, `judgment is viability indexed by acts`, `Becoming.«所闭之承最大»`, `Becoming.«共应当且仅当所闭之承遍»`, `Becoming.«遍定应共应当且仅当像定后»`
 
@@ -89,7 +94,8 @@ Aliases: `a response common over a reading`, `共应`, `judgment is viability in
 ### History
 
 - 1 November 2026, board item SJ (SJ1): added from SJ's design after three reviews (REVIEW-1, four lenses on the design; REVIEW-2, three on the Lean and the map; REVIEW-3, four on the landing texts, each with a verifier), every confirmed finding taken; Viability's two kernel laws re-proved from it with their statements unchanged; GuardHorizon's bridge left to a ring slot.
+- 2 November 2026, board item SJ's last parts: the seventh law, GuardHorizon's bridge (uniform_policy_iff_common and its witness ungiven_reading_not_uniform), with statewise_not_uniform re-proved from the sixth law's witness; checked at core receipt 20261102T051236.940686Z; the map of what a response takes in at 08 §7 and one sentence in 07 §5 land with it.
 
 </details>
 
-Documentary review UTC: `2026-11-01T11:27:32+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-02T05:15:44+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

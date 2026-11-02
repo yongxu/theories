@@ -13,7 +13,7 @@
 1. A choice of good moves made from a reading of the configurations always gives each reading one move good at every configuration giving it, with no premise; given a choice over the readings, the converse holds, so the two are equivalent. Finitely many listed readings have that choice with no premise. (`Becoming.GuardHorizon.UniformPolicy`, `Becoming.GuardHorizon.FiberFeasible`, `Becoming.GuardHorizon.fiber_of_uniform`, `Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible`, `Becoming.Viability.ChoiceOver`, `Becoming.Viability.choiceOver_fin`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Moves good configuration by configuration need not be such a choice: in the witness of two configurations under one reading, each good only with its own move, no choice from that reading is good at both, while the reading telling them apart has one; a choice from a reading gives one from every finer reading compatible with it. (`Becoming.GuardHorizon.statewise_not_uniform`, `Becoming.GuardHorizon.discriminating_reading_uniform`, `Becoming.GuardHorizon.uniform_finer`)
-   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. For keeping a guard n more steps, given a choice over the readings, a choice from readings of admissible moves exists exactly where each reading has one move admissible at every configuration giving it; such a choice keeps the guard n + 1 steps from every configuration within it. (`Becoming.GuardHorizon.Admissible`, `Becoming.GuardHorizon.uniform_iff`, `Becoming.GuardHorizon.uniform_viable`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Periphery, for any types and a nonempty type of actions: a policy reading an observation is allowed on every represented history exactly where every observation class admits a common allowed action; two histories alike under the observation with no common allowed action admit no such policy. (`InquiryChoice.observed_class_policy_iff`, `InquiryChoice.indistinguishable_conflict`)
@@ -69,8 +69,9 @@ Choosing from observation classes is an observation-based (memoryless) policy fo
 - related, not a proved adapter: [finite-continuation-plans](finite-continuation-plans.md). Viability for n steps is a plan branching on observations, and given a choice over observations the equivalence holds for any type; here the one-step choice from readings and its use for a guard.
 - related, not a proved adapter: [testing-within-couplings](testing-within-couplings.md). The judgment that a distinction matters where histories compatible with the evidence need incompatible responses.
 - related, not a proved adapter: [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md). A judgment through a projection is right only where it does not merge what must be told apart; here the same limit for choosing moves.
+- related, not a proved adapter: [a-response-common-over-a-reading](a-response-common-over-a-reading.md). Its seventh law reads law 1's equivalence, with every reading given by some configuration, with the condition as a response common over the reading's sameness.
 
-**Used by:** [a-prediction-read-by-what-it-predicts](a-prediction-read-by-what-it-predicts.md) · [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md) · [a-revision-that-opens-a-correction](a-revision-that-opens-a-correction.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
+**Used by:** [a-prediction-read-by-what-it-predicts](a-prediction-read-by-what-it-predicts.md) · [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md) · [a-response-common-over-a-reading](a-response-common-over-a-reading.md) · [a-revision-that-opens-a-correction](a-revision-that-opens-a-correction.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -85,6 +86,7 @@ Choosing from observation classes is an observation-based (memoryless) policy fo
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json) | — |
 
 Aliases: `when to inquire and when to respond`, `何时探究，何时回应`, `Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible`, `InquiryChoice.observed_class_policy_iff`
 
@@ -92,6 +94,7 @@ Aliases: `when to inquire and when to respond`, `何时探究，何时回应`, `
 ### History
 
 - 27 October 2026: added (DF2), choice of moves from readings in the core and the periphery, and the dosing witnesses on inquiry and immediate response; from DEFECTS-FOUND (triage row 94); study section 426.
+- 2 November 2026: statewise_not_uniform (law 2) re-proved from the core's witness «共应之例».EachNotCommon, its statement unchanged; GuardHorizon gains uniform_policy_iff_common: with every reading given by some configuration, law 1's equivalence with the condition read as a response common over the reading's sameness, recorded as the seventh law of a-response-common-over-a-reading.
 
 </details>
 
