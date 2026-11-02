@@ -1,0 +1,254 @@
+{
+ "edits": {
+  "findings": [
+   {
+    "severity": "fix",
+    "where": "M21 claim_en and claim_zh; section.md, C's role bullet",
+    "quote": "new living can count positively, a count that in general rests on C (07 §4) / 新的生也可计为正面，此计一般依于 C（07 §4）",
+    "problem": "\"In general\" comes from 07 §4's sentence about ranking, but M21's word is \"count\", and this is exact only if the count means a ranking. (a) A positive reason for new living content has no C among its premises, and 07 §4's preceding sentence routes that reason through A or D and correspondence. So self-concern is not the only case without C. (b) The exception the section gives reaches only additions to one's own continuation. M21's count in its source is further living with no existing beneficiary, and that case is where the front says C is needed. The hedge therefore names a case the sentence is not about and misses one it could be about. The section's \"a course adding living\" also says more than the record, whose law speaks of items a supplied marking marks. The zh and en agree with each other, and the exception itself is stated exactly (law 2). The reading that makes the sentence true is count = ranks above, which the sentence does not say.",
+    "evidence": "pf3-crux 07-SIGNIFICANCE.md:232 \"the reasons of §3.2 only with A or D and correspondence. A ranking of courses needs C or a premise in its place\"; records/positive-ground-open-futures.md:49 \"The theorem uses no C\"; M20 scope_en in this table \"C, global losslessness, full integration and omniscience are not gates\"; history/PHILOSOPHICAL-ACCOUNT.md:145 \"further living can count positively without improving an existing beneficiary\"; pf3-crux 07:220 \"can count with no existing beneficiary\"; pf3-crux ONE-PAGE.md:26 \"ranking courses where the boats are not at stake needs C\"; what-self-concern-alone-ranks law 2.",
+    "fix": "Say what rests on C. For example: \"new living can count positively: as a reason with a supplied articulation and correspondence (07 §3.2), and in a ranking of courses in general only under C (07 §4), without assigning a specific duty\". zh: \"新的生也可计为正面：作为理由，须有所给的表述与对应（07 §3.2）；在进程的排序中，一般只依于 C（07 §4），且不自动产生特定义务\". Then rewrite the section's sentence to match."
+   },
+   {
+    "severity": "fix",
+    "where": "F14 scope_zh; section.md, G0 bullet (both languages)",
+    "quote": "旧无前提受阻审计当时由明确 G0 方向取代",
+    "problem": "The English names the route (\"Under the G0 route then taken\"), but the Chinese only adds 当时 and keeps 方向. The section says F14, M25 and C23 all now name the route in M20's form (现都点明当时所取的路线，形式与 M20 既有的说法相同), which is not true of this field. 方向 is also the word for the direction of 生生, and the term rule asks for one sense. The source calls this the G0 路线. The English past tense is right against the source.",
+    "evidence": "M20 claim_zh \"在当时所取的 G0 路线之下\"; M25 and C23 claim_zh have 路线; _process/research/2026-10-05-generative-foundation-review/history/root-foundation/GENERATIVE-LOSS-COMPARISON-INTEGRATION.md:3 \"第8–10节保留为纠正前的失败路线\", §1 \"[G0 路线]\", §11 (line 164) \"取代前述停工判断\".",
+    "fix": "\"在当时所取的 G0 路线下，明确 G0 取代了旧无前提受阻审计，未执行 blocked 更新\"."
+   },
+   {
+    "severity": "fix",
+    "where": "C01 label pair, formation-compilation-verification.json",
+    "quote": "Formation-repair build of 8 October | 10 月 8 日的形成修复完整构建",
+    "problem": "The zh still says complete build and the en says build, which is the mismatch the section corrects in M15 for this reason: \"it lists 32 modules and says neither\". This receipt has the same shape and the same silence. The section's claim about pairs now agreeing is limited to F01 and M15, but this pair was edited in the same pass and left unaligned.",
+    "evidence": "formation-compilation-verification.json: module_count 32; no build wording with complete, whole, full or 完整 (those strings occur only inside Lean names). C01's sibling label for the receipt M15 links is \"Historical inquiry-repair build | 历史查询证明修复构建\", with no 完整.",
+    "fix": "zh: \"10 月 8 日的形成修复构建\". Add C01 to the section's sentence on M15's receipt."
+   },
+   {
+    "severity": "fix",
+    "where": "C09 label pair",
+    "quote": "Source-bound check of 8 October | 10 月 8 日的源码绑定实查",
+    "problem": "The date is right only in UTC. The receipt ran at 18:54Z on 8 October, which is 01:54 on 9 October in Asia/Bangkok, and the study reporting this receipt is dated 9 October. A reader following the label finds a different date. Every other newly dated label falls on the same day in both zones: the C01, M15 and F01 receipts ran at about 09:39–10:39Z, and the C20, C26 and M24 sources are dated in their own text.",
+    "evidence": "relational-reduction-checks/20261008T185413.598553Z/verification.json checked_at_utc \"2026-10-08T18:54:17\"; root-foundation/RELATIONAL-BECOMING-INTEGRATION.md:164 \"9 October 2026, Asia/Bangkok\", :172 cites this receipt.",
+    "fix": "Use the study's date, \"Source-bound check of 9 October | 10 月 9 日的源码绑定实查\", or mark the date as UTC."
+   },
+   {
+    "severity": "fix",
+    "where": "Key, scope_en and scope_zh",
+    "quote": "and C gives order, in general alone (self-concern ranks one case with no C), neither premise asserted / （自我关切无需 C 可给一种情形排序），两条前提都不断言",
+    "problem": "The parenthesis is verbatim the glossary's row, so it is exact, and the sentence reads. But \"neither premise\" must reach back past it to the continuation condition, and the nearest two candidates are now self-concern and C. Self-concern is itself a premise and is unasserted, so the sentence now has three premises and says \"neither\". The zh also drops 即, which the section's own zh keeps (无需 C 即可给一种情形排序).",
+    "evidence": "pf3-crux GLOSSARY.md:62 (verbatim parenthesis); what-self-concern-alone-ranks.md, Does not show: \"a premise, weaker than C's\"; pf3-crux 07 §4 \"self-concern and the condition both remain hypotheses\".",
+    "fix": "Name them: \"..., the condition and C both unasserted\" / \"延续条件与 C 都不断言\". zh parenthesis: \"自我关切无需 C 即可给一种情形排序\"."
+   },
+   {
+    "severity": "fix",
+    "where": "M23 label pair",
+    "quote": "Executable repair and a counterexample to a published corrigibility guarantee | 可执行修复与针对已发表可纠正性保证的反例",
+    "problem": "The label drops the source's scope. The zh line the script quotes says 已发表的有限权重可纠正性保证, and the source limits the counterexample to the finite weighted objective: it disappears under true lexicographic maximization. The label therefore says more than its source. The date-free form and the replacement of \"current-theorem\" are right, and the two languages agree with each other.",
+    "evidence": "history/root-foundation/CORRECTION-OBSERVATION-REPAIR.md:5 \"已发表的有限权重可纠正性保证\"; :64 \"this counterexample disappears\"; :73 \"It invalidates one finite-weight truthfulness/failure implication under the stated reading\".",
+    "fix": "\"Executable repair and a counterexample to a published finite-weight corrigibility guarantee | 可执行修复与针对已发表有限权重可纠正性保证的反例\"."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md, G0 bullet, on M20 (both languages)",
+    "quote": "P95's home (PRACTICAL-JUDGMENT §2.1) says two things, that the G0/J conditional interface is kept and that G0 is folded into significance",
+    "problem": "That holds of the Chinese edition only. The English §2.1 mentions neither the G0/J interface nor folding: it says the section reuses the conditional alignment route and that living significance follows under the continuation condition. M20's new sentence is right against the zh edition. Its \"it\" has the right antecedent (P95, the subject of the preceding clause, which is the board item whose home is §2.1), and \"of that time\" and \"then\" keep it dated. The statement about the source is what is off.",
+    "evidence": "theories/becoming/history/PRACTICAL-JUDGMENT.md:53 \"This section reuses the completed conditional alignment route\"; PRACTICAL-JUDGMENT.zh.md:53 \"本节沿用已完成成果的 G0/J 条件接口\" and \"G0 已折入意义\"; PRACTICAL-JUDGMENT.md:4 notes passages only in the zh edition.",
+    "fix": "Write \"P95's home in the Chinese edition (PRACTICAL-JUDGMENT.zh.md §2.1)\" and the same in the section's zh."
+   },
+   {
+    "severity": "note",
+    "where": "M21 claim_en, P92 sentence",
+    "quote": "under balance, alike initial levels on what couples in beyond responsive reach and complete readouts",
+    "problem": "The restriction is now exact and agrees with the zh, record law 10 and the Lean `start` binder. Two small things remain. The list can be misparsed as levels on \"what couples in ... and complete readouts\". It also still omits the same formations being present, which §12.2's first premise and law 10 require. That omission is older than this edit, but the sentence now reads as a careful list of premises.",
+    "evidence": "finite-fallible-inquiry-necessity.md law 10 \"the same formations present, alike initial levels on what couples in beyond the varying part's reach\"; FallibleInquiry.lean:33 `start : ∀ h, ¬ L.WithinResponse ... → ∀ c, W.CoupledInto obs h c → W.level 0 c = W'.level 0 c`.",
+    "fix": "\"under balance, the same formations present, alike initial levels on what couples in beyond responsive reach, and complete readouts\"; zh adds 在场相同."
+   },
+   {
+    "severity": "note",
+    "where": "section.md, Registration bullet; M21 claim_en",
+    "quote": "so the entry takes the record's title",
+    "problem": "The record's English title is \"Testing within the couplings\", and the entry writes \"testing within couplings\", which is the id's words. The zh is the title exactly. The sentence itself reads well, and the list stays a list of like things (four kinds of inquiry achievement, §11.2's rows 2–5 in order).",
+    "evidence": "records/testing-within-couplings.md:2 \"# Testing within the couplings\"; SCIENTIFIC-INQUIRY-CONDITIONS.md:363.",
+    "fix": "Either add \"the\" in the entry or say \"the record's id\" in the section."
+   },
+   {
+    "severity": "note",
+    "where": "M15 label pair",
+    "quote": "Original proofs of present realization and the ranking boundary | 当前实现及排序边界的原证明",
+    "problem": "The en now uses M15's connection word, as the script says. M15's other label renders the same English differently, so one English term has two Chinese forms in one entry. The zh's 当前 is a concept here, not a tense, but a reader of a section about removing 当前 will notice it.",
+    "evidence": "M15 links: \"Present realization and constitutive necessity | 当下实现与构成必要性\"; M15 connection_en \"supply present realization\", connection_zh \"供应当前实现\".",
+    "fix": "Pick one zh for the term when M15 is next read, or say in the section that this 当前 names a concept, as it does for C08."
+   },
+   {
+    "severity": "note",
+    "where": "section.md, link labels bullet",
+    "quote": "All labels are searched for words of tense.",
+    "problem": "I searched all 1,237 labels for the listed words and found no missed current, 本次, 本轮 or 本会话 label. C08 and M20's GOALS link are as the section says, and 本表 in E02 is accurate. But labels that call themselves new or fresh from the session they came from stay, and the sentence reads as if the whole class was treated. F22's pair is also still unaligned.",
+    "evidence": "F22 \"Fresh complete receipt | 完整实查回执\", \"New six-module receipt\"; F29 \"New proof receipt\", \"New check receipt\", \"New Lean proof\"; M21 \"New checked receipt\"; C26 \"New clarification of normative structure\".",
+    "fix": "Add a clause that \"new\" and \"fresh\" were not treated in this pass, or leave them to the next reading by name."
+   },
+   {
+    "severity": "note",
+    "where": "C26, M24 and M20 label pairs",
+    "quote": "Source: the focus of 13 October | 来源：10 月 13 日的聚焦原话; Source: the session of 8 October | 来源：10 月 8 日会话的原话; Adequacy protocol | 份额接续方案",
+    "problem": "These are loose pairs, not wrong ones. The zh of C26 and M24 says verbatim words (原话) and the en does not, while both files hold verbatim words and AI-written scope. 份额接续 is not a literal pair of \"adequacy\". The source title is \"Chance adequacy through a first common takeover\", and the chain elsewhere pairs 份额 with adequacy (\"Adequacy and transition sources | 份额与转型原典\").",
+    "evidence": "sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md:6,10; 2026-10-08-collective-destructive-attractors.md:3,9; history/root-foundation/CHANCE-ADEQUACY-PROTOCOL.md:1.",
+    "fix": "None needed unless the pairs are tightened: \"Source: the words of 13 October\" would match the zh."
+   }
+  ],
+  "read": "Read in full:\n- The script apply_next_reading.py and section.md.\n- The applied copy, compared field by field with main. I reran the script on a scratch copy of main, and the result is byte-identical to chain.copy.json.\n\nSources read against the edits:\n- SCIENTIFIC-INQUIRY-CONDITIONS.md §11, §12 and §16.\n- Records: testing-within-couplings, finite-fallible-inquiry-necessity, timely-response-necessity, what-self-concern-alone-ranks (pf3-crux), and the heads of positive-ground-open-futures and positioned-positive-reason.\n- Lean: FallibleInquiry.lean and TimedResponse.lean premises, Revision.lean and Relevance.lean heads.\n- pf3-crux: 07 §3–§4, GLOSSARY, and the C sentences in ONE-PAGE and the overview.\n- PRACTICAL-JUDGMENT.md and .zh.md §1–§2.1, ETHICAL-LEARNING-INTEGRATION §85, and PHILOSOPHICAL-ACCOUNT on the count.\n- GENERATIVE-LOSS-COMPARISON-INTEGRATION, SITUATED-WARRANT-INTEGRATION, ALIGNMENT-CONTINUITY-INTEGRATION, VERSIONED-CORRECTION-INTEGRATION, CORRECTION-OBSERVATION-REPAIR, the three CHANCE protocols, GENERATIVE-REGIMES, GROWN-FRAGMENTATION §Formed registration, and CORE-CONSTRAINT §8.\n- Every file a changed label points at, including the five receipts and five sources.\n\nClean, verified against source:\n- C_FIELDS: the five entries read whole in both languages, and the wording matches 07 §4 and the glossary.\n- C33, F29 and M23 \\\"pin registration\\\" and pin 登记 match VERSIONED-CORRECTION-INTEGRATION:27,31.\n- M21's first edit: the list is still of like things, and §11.2's row 2 is the row meant. Only the small title note applies.\n- M21's second edit: the zh is right and says the same as the en. 所耦合者 is attested in the Lean README.zh, though the fronts say 耦合进来者, and it covers the Lean `start` restriction.\n- M21's third edit matches law 1, lines 715 and 769, and the CoupledIntoAt docstring, in both languages.\n- M20's \\\"it\\\" has the right antecedent, P95.\n- F14's English: route rightly named, past tense right.\n- M25 and C23: route rightly named against their sources and 08 §10's \\\"the G0/J route\\\" row. Their zh \\\"路线下\\\" against M20's \\\"路线之下\\\" makes no difference in sense.\n- F14, M25 and C23 have no note: no status clause in any field, and G0 occurs only in the edited sentence.\n- The C24, C14, C26 and C19 calls in the section are right.\n- The section's 108 count holds on main (58−5 English, 60−5 Chinese, in 15 entries).\n- Labels clean on date and content: C01's two source labels, C14's two, C20, C26, M15's build and target labels, M20's three, M24's three, F01's two.\n- No blockers.",
+  "not_checked": "Not in my materials or lens:\n- The section's other claims: the text of 03 §6's link and the re-pointed records binding 03 (no gc4 branch exists to read), the move of the relabelling proposal's page, the four opening-scope links, and the count of 82 entries.\n- I did not run render, research-check, research-links, research-test or the dossier checks.\n- I did not check how pf3-crux merges with this revision.\n- I did not read the bodies of Relevance.lean's ranking theorems beyond the module head and the names that fit the label.\n- The tense search on labels was by listed words and regex, not an individual reading of all 1,237 labels.\n- I did not read the whole of any entry beyond the sentences around its edits, except F14, C23 and M21."
+ },
+ "section": {
+  "findings": [
+   {
+    "severity": "fix",
+    "where": "section.md lines 9 and 22 (G0 bullet); chain.copy.json F14.scope_zh, line 5882",
+    "quote": "现都点明当时所取的路线，形式与 M20 既有的说法相同 / they now name the route then taken, in the form M20 already has",
+    "problem": "False of F14's Chinese, and F14's two languages now differ. The English says 'Under the G0 route then taken, explicit G0 superseded…'. The Chinese says only '旧无前提受阻审计当时由明确 G0 方向取代', with 当时 and 方向 and no route. M25, C23 and M20 in Chinese all carry 在当时所取的 … 路线.",
+    "evidence": "chain.copy.json:5882 \"旧无前提受阻审计当时由明确 G0 方向取代\"; chain.copy.json:5883 \"Under the G0 route then taken, explicit G0 superseded\"; apply_next_reading.py, F14 scope_zh edit",
+    "fix": "F14 scope_zh: '在当时所取的 G0 路线下，旧无前提受阻审计由明确 G0 方向取代'."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md lines 9 and 22 (M20 / P95 sentence)",
+    "quote": "P95's home (PRACTICAL-JUDGMENT §2.1) says two things, that the G0/J conditional interface is kept and that G0 is folded into significance",
+    "problem": "True only of the Chinese edition. The English edition, which is the page M20's link and reviewed_sources hold, says neither in these terms. A reader following the citation from the English text will not find it. M20's new sentence is still right, because 08 §10 maps the labels ('the G0/J route' to the conditional alignment route, 'folding').",
+    "evidence": "theories/becoming/history/PRACTICAL-JUDGMENT.zh.md:53 \"本节沿用已完成成果的 G0/J 条件接口 … G0 已折入意义\"; theories/becoming/history/PRACTICAL-JUDGMENT.md:53 \"This section reuses the completed conditional alignment route.\"",
+    "fix": "Cite PRACTICAL-JUDGMENT.zh.md §2.1 and add that the English edition has the same under 08 §10's later labels. Say so in both languages."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md lines 9 and 22 (the stated test)",
+    "quote": "with no route named and no note in the entry",
+    "problem": "'Note' (说明) is used throughout the bullet and never defined, and 'the key' is a separate thing. The test's selection depends on it. Six entries carry a G0 status sentence: GC2's A1 clause in C03, C17, C24, M15 and M20, and a shorter one in M21's scope. F08 has its own 'this earlier explicit-premise route is not the current zero-assumption result'. M21's 'G0/J1/J4 can favor nonconscious living continuation' has C24's form and stays only because M21's short sentence counts as a note, but the section names C24 alone. Applied with note = those six, the test does select exactly F14, M25 and C23.",
+    "evidence": "chain.copy.json:4108 M21.claim_en \"shows how G0/J1/J4 can favor nonconscious living continuation\"; M21.scope_en \"its opposite, G0, which is no premise of the current account (07 §3–§4)\"",
+    "fix": "Define it once: the note is GC2's status clause (C03, C17, C24, M15, M20) or M21's scope sentence. Write 'C24's and M21's claims have the same form, but their entries carry the note'."
+   },
+   {
+    "severity": "fix",
+    "where": "chain.copy.json scope_en / scope_zh (the key), line 4; section.md lines 7 and 20",
+    "quote": "C gives order, in general alone (self-concern ranks one case with no C), neither premise asserted / （自我关切无需 C 可给一种情形排序），两条前提都不断言",
+    "problem": "A new failure from the revision. Before it, 'neither premise' had two antecedents, the condition and C. The parenthesis now places a third premise directly before those words, so the referent is open. Self-concern can be read as one of the two, or as no premise at all. 07 §4 and the record call it a hypothesis and a premise. What the key says of 07 §4 is otherwise true.",
+    "evidence": "07-SIGNIFICANCE.md on pf3-crux:248 \"self-concern and the condition both remain hypotheses\"; what-self-concern-alone-ranks.md on pf3-crux:31 \"a premise, weaker than C's\"; 07 on pf3-crux:232 \"Neither is asserted\"",
+    "fix": "End the clause 'neither the continuation condition nor C asserted' / '延续条件与 C 都不断言'."
+   },
+   {
+    "severity": "fix",
+    "where": "chain.copy.json C01 link 40, line 225; section.md lines 10 and 23",
+    "quote": "10 月 8 日的形成修复完整构建 / Formation-repair build of 8 October",
+    "problem": "The defect the section removes at M15 stays at C01, in a label this revision wrote. The Chinese says complete build and the English does not. C01's receipt has the same shape as M15's: module_count 32, and 'complete' or 'affected' appear only inside declaration names. The section's M15 reason (lists 32 modules, says neither) applies word for word.",
+    "evidence": "chain.copy.json:225-226; inquiry-root/formation-compilation-verification.json: module_count 32, scope \"Only the compiler option changes\"; apply_next_reading.py LABELS, C01 row",
+    "fix": "C01 zh: '10 月 8 日的形成修复构建'."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md lines 10 and 23 (label list)",
+    "quote": "C01 (three), C09, C20, C26, M15 (two), M23, M24 (two), F01 (two)",
+    "problem": "GC2 decided to keep M23's label, with a reason. This section changes it, files it under labels that 'called itself current from the session or receipt', and says nothing about undoing that decision. The new label is true of its source. The silence is the defect. M23's old Chinese, 前沿反例, also held no tense word.",
+    "evidence": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1467 \"One is kept: \\\"current-theorem counterexample\\\" names the frontier of its round, not a text's currency.\"; CORRECTION-OBSERVATION-REPAIR.md:7 \"a specified current corrigibility claim\"",
+    "fix": "Add one clause: M23's, which GC2 kept as naming its round's frontier, now says what the counterexample is against, in its source's words."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md line 23 (English only)",
+    "quote": "M15's receipt said affected build in English and complete build in Chinese; it lists 32 modules and says neither",
+    "problem": "Read literally this contradicts itself. The receipt is the subject of both 'said' and 'says neither', and it has no Chinese. The label said those things. The Chinese version (M15 回执的英文…, 回执列 32 个模块) is unambiguous, so the two languages differ here. The fact itself checks: module_count 32, and neither word occurs except in declaration names.",
+    "evidence": "experiments/…/inquiry-root/inquiry-repair-verification.json:974 \"module_count\": 32; apply_next_reading.py, M15 row \"Current affected-build receipt\" / \"当前完整构建回执\"",
+    "fix": "'M15's receipt link was labelled affected build in English and complete build in Chinese; the receipt lists 32 modules and says neither'."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md lines 9 and 22 (the count)",
+    "quote": "All 108 uses in 15 entries are read (53 in English, 55 in Chinese), not counting the 10 uses (5 entries) that name the Lean `G0`",
+    "problem": "The numbers reproduce by script on main's data: 108, 53, 55, 15, and 10 in 5. They hold only over the entries' _en and _zh fields, which the section does not say. Over all of an entry's strings the token occurs 121 times. Three are link paths (INQUIRY-PRIORITIES-AND-G0.md in C23 and M21, and one more M21 path), plus 8 in the key outside the entries. A recounter who follows the sentence gets 118. Nothing in the kit lists the per-use reading, so 'all are read' cannot be checked.",
+    "evidence": "recheck/g0.py on main: 121 hits; links/path 3; `G0` 10; en 58, zh 60 before excluding the 10; scope_en 4, scope_zh 4",
+    "fix": "Say 'in the entries' claims, scopes and connections', as GC3 names its fields, and put the count and a per-use list in the kit."
+   },
+   {
+    "severity": "fix",
+    "where": "section.md lines 16 and 29 (closing)",
+    "quote": "This is author reading checked by an independent AI read",
+    "problem": "The claim is the right size: no independent acceptance is claimed anywhere in the section. But it cannot be checked. GC2 and GC3 each give the read its own paragraph with counts and a link to the reports. Here there is no count, link or account of what was taken, although this revision already has a first read and this recheck.",
+    "evidence": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1489 and :1524 \"**The independent read.**\" with [reports] links",
+    "fix": "Add the paragraph: readers, findings (first read 2 blockers, 7 fixes, 12 notes; the recheck's), what was taken, and a link to the kit's reviews."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 10 and 23; chain.copy.json M15 link 46, line 2738",
+    "quote": "C08's \"current provision\" names a concept and is no tense, and M20's link to GOALS really is current, so those stay.",
+    "problem": "Both reasons are true. But a third stays and is unlisted: M15's link 46 keeps 当前实现, and this revision adds 'present' to its English. It too is a concept (M15's connection: 'supply present realization'). M15's link 45 renders the same phrase 当下实现.",
+    "evidence": "experiments/…/universal-ethics/LivingExpansion.lean:30 \"structure CurrentProvision\"; GOALS.md:98-102 \"A current primary direction\"; chain.copy.json:2738 \"Original proofs of present realization\"",
+    "fix": "Add M15's present realization to the sentence, and pick one of 当下实现 and 当前实现 for M15."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 10 and 23",
+    "quote": "All labels are searched for words of tense.",
+    "problem": "No label remains that calls itself current, 本次, 本轮 or 本会话 from its session or receipt. But other session-relative words stay, and the section does not say what it did with them: 'New checked receipt' (M21), 'Fresh complete receipt' and 'New six-module receipt' (F22), 'New Lean proof', 'New proof receipt' and 'New check receipt' (F29), among others. They are not in the two sections' lists, so this is not a silent drop of a listed item.",
+    "evidence": "chain.copy.json:4329 \"New checked receipt\"; chain.copy.json:6350 \"Fresh complete receipt\"; recheck/lab2.py",
+    "fix": "Say that 'new' and 'fresh' were read and stay as labels of their time, or date them at a later reading."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 14 and 27 (Left)",
+    "quote": "Each entry's route… the steps neither argued nor marked",
+    "problem": "The two Left items are complete against the lists above, but the tense sweep stops at labels. In entries' prose, 本轮/本次/本会话 occur 71 times in 19 entries and 'this round/this session' 31 times in 9. Neither section above lists this, so nothing is dropped. A reader who sees 'the labels' tense' closed may assume it covers these.",
+    "evidence": "recheck script over chain.copy.json: M20 28, C30 7, F22 7; M25.claim_zh \"本轮由明确共同原因\"; C23.scope_en \"does not extend to this round\"",
+    "fix": "One line under Left, or one clause saying the prose keeps them under the key."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 14 and 27; record line 1475",
+    "quote": "82 entries link no record or chapter… and a link from each needs each one read first",
+    "problem": "The count is right: 12 entries link a record, none of the 94 links a chapter, and 82 link neither. The kinds listed are right too, with E06's RESULTS.md and F12's README and output among the experiments. But adding 'or chapter' points the next reader at the targets GC2 declined, for a stated reason, without recalling it.",
+    "evidence": "GENERATIVITY-CHAIN-INDEX-RECORD.md:1475 \"A link from every entry to a chapter would make the chain pending at every chapter edit\"",
+    "fix": "Add that GC2 declined chapter links for that reason, so the route's form is itself open."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 5 and 18",
+    "quote": "No source changes.",
+    "problem": "Ambiguous beside GC3's sharper sentence, and the chain's own 'sources' are reviewed_sources. I checked both senses and the claim holds: reviewed_sources is unchanged in the copy, and none of the moved page's 19 citers is a reviewed source. But the same section edits 03, re-points records and moves a page, and that page's path sits in the data's known_discovery_paths, which the tool does not touch and the move will re-key.",
+    "evidence": "chain.copy.json known_discovery_paths includes …/root-foundation/CHAIN-RELABELLING-PENDING-REN.md; record's 20 October section: \"Discovery paths were re-keyed the same way\"",
+    "fix": "'The words in sources/ and every reviewed source are untouched; the move re-keys one discovery path.'"
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 7 and 20; apply_next_reading.py comment for M21",
+    "quote": "a course adding living to that continuation ranks above another that keeps nothing beyond it",
+    "problem": "This is correct against law 2, with two small stretches. The record speaks of items a continuation marks, and 'living' is this section's reading for M21's count, unmarked. 'It' can be read as the continuation, whereas the record's 'it' is the course. The Chinese 不保有任何超出之物 has no referent at all.",
+    "evidence": "what-self-concern-alone-ranks.md on pf3-crux:15 \"every such order ranks it above the other exactly where the other keeps nothing beyond it\"",
+    "fix": "'…above another that keeps nothing beyond that course (reading new living as what the continuation marks)'; 超出该进程之物."
+   },
+   {
+    "severity": "note",
+    "where": "apply_next_reading.py:47; section.md lines 8 and 21",
+    "quote": "P104's, in the next sentence of the entry, is not. / a requirement appearing only later creates no earlier edge",
+    "problem": "Two small citation slips. P104's sentence is not next in M21: 'Testing balance', P97 and P101 stand between. And the 'no earlier edge' half is not law 1's wording. It is §16's counterreview, which the section does not cite. The content is true.",
+    "evidence": "chain.copy.json:4108 M21.claim_en; SCIENTIFIC-INQUIRY-CONDITIONS.md:715 \"a requirement appearing only in a future step must not create an earlier registration edge\"",
+    "fix": "Comment: 'P104's, later in the entry'. Section: add SCIENTIFIC-INQUIRY-CONDITIONS §16."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 8 and 21",
+    "quote": "so the entry takes the record's title / 所以写“pin registration”",
+    "problem": "Two literal gaps. The record's English title is 'Testing within the couplings' and the entry drops 'the' (the Chinese title is exact). The Chinese section says the text now reads 'pin registration', where the Chinese data reads 'pin 登记'.",
+    "evidence": "testing-within-couplings.md:2 \"# Testing within the couplings\"; chain.copy.json C33.scope_zh \"保留原子取得与 pin 登记\"",
+    "fix": "Add 'the' in M21's English or say 'after the record's title'; add 'pin 登记' to the Chinese sentence."
+   },
+   {
+    "severity": "note",
+    "where": "section.md lines 5, 8, 11, 18, 21, 24",
+    "quote": "Board item GC4 / The text of 03 §6's link… now the record's title / receipt in `_process/architecture/moves/` / the cold read of 2 November",
+    "problem": "These cannot be checked yet from what is cited. GC4 is on no board or branch at 5a3a7fd61. 03:272 still reads 'selection under registration revision', and that edit, the re-pointing and the move are not in the kit. The move receipt has no filename, where GC2 named its receipts. The cold read has no link, though its report does support the claim, and PF3's corrected text says what the section says.",
+    "evidence": "theories/becoming/chapters/03-KNOWING.md:272 \"[selection under registration revision](#r-selection-when-the-lumping-changes)\"; review-packet/COLD-READ-2026-11-02.md:107 \"the first screen claims more than 07's own theorem\"; git grep GC4 main _process/BECOMING-WORKBOARD.md: no hit",
+    "fix": "At landing, name the move receipt and the rebinds line, and link COLD-READ-2026-11-02. Re-read the 03 sentence once it exists."
+   }
+  ],
+  "read": "Read in full:\n- gc4/section.md, both languages.\n- gc4/apply_next_reading.py. I reran it on a copy of main's data; its assertions pass and the output is byte-identical to chain.copy.json.\n- A field-by-field diff of main against the copy: 59 fields changed, all accounted for in the section, and no link path changed.\n- The record's GC2 and GC3 sections.\n- On pf3-crux: 07 §3, §3.1, §3.2 and §4; 08 §8 and §10; GLOSSARY's C row; what-self-concern-alone-ranks.\n\nRead in the parts needed:\n- SCIENTIFIC-INQUIRY-CONDITIONS §11.2, §12.2 and §16; finite-fallible-inquiry-necessity law 8; testing-within-couplings; timely-response-necessity law 1.\n- PRACTICAL-JUDGMENT.md and .zh.md §2.1; ETHICAL-LEARNING-INTEGRATION §85.\n- The five dated receipts; CORRECTION-OBSERVATION-REPAIR; GENERATIVE-REGIMES; VERSIONED-CORRECTION-INTEGRATION; LivingExpansion; Becoming/Revision.lean; GOALS; the r30 rename table; COLD-READ-2026-11-02.\n\nVerified clean:\n- There are no blockers.\n- Count: 108 / 53 / 55 / 15 and 10 in 5 reproduce on main over the _en and _zh fields, with lookaround regexes. `g0_of_unrestricted` is in 08 §10's r30 table, mapped to livingSignificance_of_unrestricted.\n- G0 test: applied to all 108 uses, it selects exactly F14, M25 and C23. No other use qualifies and none of the three fails. The accounts of M20, C24, C14, C26 and C19 are true. The one gap is that 'note' is undefined (see findings).\n- Label sweep over all 1,237 labels: none remains that calls itself current, 本次, 本轮 or 本会话 from its session or receipt. All stated dates match their paths or receipts. C08's and M20's reasons are true, and M15's receipt statement is true in fact.\n- 'Registration' and 配准/登记/所识: only pin registration and its 登记, two link paths, and E06's 'Results register' remain.\n- Each section claim about its own edits matches the tool: entries, field counts (12 C edits, 22 text edits, 20 label pairs), and the 13 tense labels. The two languages match except for the items in findings.\n- Left: it silently drops nothing from B7, B8, G0, the routes, the tense, the page or the four links. B7 was done by GC3. The 82 is right.\n- Opening scope: all four anchors stand on pf3-crux, and what the key says of 07 §3, §4 and 08 §8, §10 agrees, apart from 'neither premise'.\n- No name serves as warrant, 'derives' does not occur, and no independent acceptance is claimed.",
+  "not_checked": "- The landing-time work, which does not exist yet: the 03 §6 edit, the re-pointing of records that bind 03, the `research.py move`, and the kit path that the section's link names.\n- A render or `research-check` on the applied data. I ran `generative_chain.py --check` only on the repository's data; it writes nothing, and only the tail of its output was read.\n- The first reader's report.\n- Whether the sentences of the 108 G0 uses are true of their sources. I applied the stated test to them; I did not re-read each source.\n- The English and Chinese of entries beyond the edited fields."
+ }
+}

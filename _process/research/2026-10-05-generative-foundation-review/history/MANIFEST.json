@@ -1776,6 +1776,15 @@
       "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CALIBRATION-REVISION-REVIEW.md"
     },
     {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CHAIN-RELABELLING-PENDING-REN.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CHAIN-RELABELLING-PENDING-REN.md",
+      "sha256": "72ea5718dc64669079739aea8d782351a004be71bd1a10603a48efb3890f2967",
+      "blob": "20653d522b075e2ca0a1ee00ae4f0ec24fd19135",
+      "batch": "moves-2026-11-02-moves-gc4",
+      "reason": "GC4: the relabelling proposal is decided; the chain now carries its result, so the page keeps its bytes in the study history",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CHAIN-RELABELLING-PENDING-REN.md"
+    },
+    {
       "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CHANCE-ADEQUACY-ARGUMENT.md",
       "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CHANCE-ADEQUACY-ARGUMENT.md",
       "sha256": "5a4b9437f4347f86e2687e409869ea4312d6fa7cc181e53508224643aa937965",

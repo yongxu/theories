@@ -250,7 +250,7 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
-        screen, lead = 'of how anything, evaluation included, comes to be', 'The account below says what is proved'
+        screen, lead = 'of how anything comes to be', 'The account below says what is proved'
         self.assertLess(root.index('> Ongoing work.'), root.index(screen))
         self.assertLess(root.index(screen), root.index('## Truth exists'))
         self.assertLess(root.index('Opening body.'), root.index(lead))  # the lead follows the opening
