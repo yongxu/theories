@@ -40,7 +40,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Which sign β − γ has: both factors are supplied, and the sign decides every verdict here.
+- Which sign β − γ has: both factors are supplied. Most verdicts here turn on it; the window beside alternators and `neutral` hold whatever the factors.
 - Agreement against the alternator, and one error for the sparer, the withholder and the alternator, beyond n = 20. Witness: `Becoming.PairSelection.table_twenty`.
 - The exact condition for a mixed cohort of windows, answerers, withholders and alternators under a supplied error pattern beyond the mean law, or the four terms of the pair law in closed form on the cohort.
 - Any law over a horizon of cohorts, stability, mutual best responses or the known cycle as a course; each arc of the cycle is a law here, not the cycle.
@@ -94,6 +94,7 @@ Aliases: `offspring read from giving that waits`, `Becoming.PairSelection.never_
 ### History
 
 - 1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on counts and selection among pairs; its parts on what a gift draws on are a separate record; the lemmas of counting are listed in references only.
+- 2 November 2026, correction: the sign does not decide every verdict, since window_never_rises_beside_alternators and neutral hold whatever the factors; the laws are unchanged.
 
 </details>
 
