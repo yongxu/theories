@@ -1,0 +1,40 @@
+**Q1. What is it?** The Theory of Becoming is an unfinished philosophical project, made with AI, that attempts to describe persistence, change, life, knowledge and ethics within one relational unfolding. It combines philosophical interpretation, explicit mathematical models and empirical tests. It aims at a unified account and a direction for life.
+
+**Q2. What does it claim, and how far is it established?**
+
+1. **Something continues when it conditions something alike in a specified respect.** This is the project’s starting point; the note does not establish its truth or general applicability.
+2. **Considering a pattern separately from its parts distinguishes renewal sustaining that pattern from its eventual ending.** This is a conceptual distinction; the note does not say how it has been independently validated.
+3. **Selection can succeed while destroying conditions its selector cannot register.** This is its central concern, illustrated or applied through fisheries, evolution, markets and AI training. Correspondence with actual systems remains unestablished.
+4. **Individually sustainable demands can exhaust a shared resource.** The note presents this as a familiar problem connected to the project’s models; it does not identify a particular proof or empirical result establishing it.
+5. **A metric reinforced by its own results can persist despite losses it ignores.** Again, the note gives no claim-specific validation; empirical tests overall have mixed results.
+6. **Every thing’s continuation has significance from every standpoint.** This is the proposed “continuation condition,” an ethical premise, neither derived from the dynamics nor asserted as established.
+7. **A course is better if it preserves every possibility of formation another admits and adds more.** This is ethical premise C, with the same unestablished status. It leaves gains involving losses unresolved.
+8. **The formal framework yields conditional results.** The project reports Lean receipts for 496 of 527 registered results. These establish consequences of premises, not the premises’ truth or applicability; no human has reviewed the work.
+
+Whether everything affected by one’s actions belongs to one’s own continuation is posed as a question, not reported as an established claim.
+
+**Q3. What does its ethics rest on?**
+
+| Premise | Job it does | What it does not do | Does the theory assert it? |
+|---|---|---|---|
+| **Continuation condition:** every thing’s continuation has significance from every standpoint. | Determines whose losses count. | Does not follow from the dynamics. The note does not say that it supplies a ranking of losses or a decision procedure. | It is proposed as an ethical premise, but not asserted as established. Whether it is otherwise asserted unconditionally, **the note does not say**. |
+| **Premise C:** a course is better if it preserves all another’s possibilities of formation and adds more. | Supplies a comparison where possibilities expand without any being lost. | Does not follow from the dynamics and does not resolve gains involving losses. | It is proposed as an ethical premise, but not asserted as established. Whether it is otherwise asserted unconditionally, **the note does not say**. |
+
+The question about downstream effects belonging to one’s own continuation could extend self-concern. The note presents it as an open philosophical question, not an additional established premise.
+
+**Q4. What does it not claim?**
+
+It does not claim new mathematics, established correspondence with actual systems, or that formal proofs establish their premises’ truth or applicability. It does not present either ethical premise as established or derived from the dynamics, resolve tradeoffs through C, or claim an ethical verdict binding every possible mind. Classical Chinese texts supply names and interpretive connections, not mathematical operations.
+
+**Q5. What would refute it?**
+
+- **Conditional mathematical results:** A counterexample satisfying the premises but violating the conclusion would contradict such a result. The note does not give the individual statements or premises, so it does not identify concrete counterexamples.
+- **Applications to actual systems:** Evidence contradicting a model’s claimed correspondence or predictions could undermine that application. The note does not say what the specific predictions, tests or rejection criteria are. It reports mixed empirical results and unestablished correspondence.
+- **Ethical premises:** The dynamics and their formal verification do not establish these premises; a failed empirical application would therefore not, by itself, refute them. What would independently refute or justify them, **the note does not say**. It does not declare them immune to criticism.
+- **The downstream-continuation question:** As reported, this is an open question, so there is no asserted answer to refute.
+
+The note does not supply a single test that would refute the entire project.
+
+**Q6. What is new in it?**
+
+Its stated distinctive offering is a ledger separating assumptions, conditional results, interpretations and tests, together with an attempt to connect familiar problems through relational language and explicit models. It does not claim new mathematics. Whether that offering is historically unprecedented, **the note does not say**.

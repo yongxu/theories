@@ -17,7 +17,7 @@ The release gate's [item 7](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#t
 | Alignment | `3ada8819f` | 0 of 109 | 8 of 20 | 2 of 13 | 3 of 20 | 11 |
 | Sciences, if it joins | `b7b36ab74` | 81 of 258 | 7 of 20 | 2 of 7 | 22 of 23 | 86 |
 
-Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what it found](../rp2-philosophy/README.md#the-re-sync-of-2-november-2026)), so its last read is now `2cab11114`: its 11 items gave one addition, one sentence on what a standpoint is, and a few changes of wording. Logic will take the most of the packet's five. 25 of its 29 items are flagged, and it links neither the shared laws on the grammar, nor one root to its edge, nor premises met and failed. The sciences dossier's pin is its last re-sync as a whole, on 27 October; later commits there touched single quotations.
+Most flagged items stay true. Philosophy was re-synced in the rehearsal ([what it found](../rp2-philosophy/README.md#the-re-sync-of-2-november-2026)), so its last read is now `2cab11114`: its 11 items gave one addition, one sentence on what a standpoint is, and a few changes of wording. Logic, the most of the packet's five with 25 of 29 items flagged, was re-synced on 2 November 2026, so its last read is now `515c0d953`: twelve items changed, the shared laws, one root to its edge and premises met and failed now linked, and two statements the chapters had overtaken corrected (L-09 said no theorem joins 延 to dependent choice; L-03 cited the wrong decision). One independent reader's nine findings were checked against the sources and taken. The sciences dossier's pin is its last re-sync as a whole, on 27 October; later commits there touched single quotations. The whole-file column counts Markdown files, as the report then did; it now counts every linked file and folder, so a re-run's totals are higher (classical 10, Buddhist 16).
 
 ## Before starting
 
@@ -36,13 +36,13 @@ KIT=_process/research/2026-10-05-generative-foundation-review/root-foundation/de
 
 Call C the commit of main you read the dossiers against, at first this branch's start. Keep your reports outside the tree.
 
-**1. Report each dossier's drift (run).** The pin is the table's second column, philosophy's now `2cab11114`. Under ten seconds for all five.
+**1. Report each dossier's drift (run).** The pin is the table's second column, philosophy's now `2cab11114` and logic's `515c0d953`. Under half a minute for all five.
 
 ```bash
-python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/LOGIC.md --out <scratch>/LOGIC.md
+python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/CLASSICAL-TEXTS.md --out <scratch>/CLASSICAL-TEXTS.md
 ```
 
-The report gives, item by item, each quotation whose paragraph changed, each linked section that changed as its changed spans, each linked whole file that changed, and the results new in the dossier's main chapters that it does not link. It follows `<a id>` anchors and `.md` links: a link to a heading's implicit anchor is counted "not found" (3 in alignment), so read those by hand. The cover and the codebook cite little: read them whole.
+The report gives, item by item, each quotation whose paragraph changed, each linked section that changed as its changed spans, each linked file or folder that changed or is new since the pin, and the results new in the dossier's main chapters that it does not link. Whatever its summary counts gets a line, under each item that links it. An anchor it cannot follow is listed: read those by hand. The cover and the codebook cite little: read them whole.
 
 **2. Read every flagged item against its chapter (run for philosophy only).** The dossier says what the chapter now says and no more. Three rules from the rehearsal:
 
@@ -136,7 +136,7 @@ Measured on the scratch copy, three times, while other sessions ran Lean (machin
 |---|---|
 | All five drift reports | under 10 s |
 | Philosophy's reading, edits and independent read | about two hours of one session (an estimate), the reader's part about 20 minutes |
-| The other four, at that rate | a few hours each for classical and Buddhist, most of a day for logic, under an hour for alignment (an estimate, not run); the sciences dossier, if it joins, about as long as logic |
+| The other four, at that rate | a few hours each for classical and Buddhist, under an hour for alignment (an estimate, not run); logic, run, about two hours of one session, the reader's part about 6 minutes; the sciences dossier, if it joins, about as long as logic |
 | Measure, `--write-quoted` | seconds |
 | Render | 119 to 334 s |
 | Secrets | 13 to 45 s |
@@ -153,5 +153,5 @@ So the head is held for 30 to 40 minutes at that load, 26 of them the full tests
 - [The builder](../../../../../../tools/publishing/build_review_packet.py). `--release` had no clean-tree guard and named no commit anywhere, so a reader could not tell which version they held. It now refuses as step 11 says, stamps each part with the commit, adds the one page, the overview and the codebook the cover sends readers to, drops dead navigation lines, sets quoted lines apart, and labels citations by what they are. It prints under its own Chrome profile and reads Chrome's own count of bytes written, because under load Chrome can write the file and then die in its teardown.
 - [The glyph map](../../../../../../tools/publishing/build_xiaokang_datong.py). The radicals supplement has no compatibility decomposition, so 见, 门, 长, 民 and others copied from a PDF as radicals. They no longer do.
 - [The checker](check_dossiers.py) now compares Lean blocks with the sources (none of 132 declarations was stale), and covers the codebook. [Its test](../../../../../../tools/research/tests/test_review_packet.py) has negative cases.
-- [`resync_report.py`](resync_report.py) is new.
+- [`resync_report.py`](resync_report.py) is new. It was corrected on 3 November 2026, after alignment's reader found a changed file missing from its report. Rows with no text of their own shared one key, so only the first whole file that changed printed as itself. A later one in the same item got no line (six in classical, two in Buddhist, one in alignment), and one under a later item got only "as under" an item that showed nothing. The summary's counts were right throughout. It also read heading anchors as not found, and did not look at other linked files or at files new since the pin. Now whatever it counts gets a line, and [its test](../../../../../../tools/research/tests/test_review_packet.py) holds that. Alignment's re-run gained one row this way, the goal section of its plan.
 - Philosophy re-synced. In the classical and logic dossiers, the sentences that explained checker markup a reader never sees were reworded to read true in both forms; classical's said the repository held no 郭象注, which C-37 quotes from it. C-13's gloss of 生生 now matches chapter 6. The codebook's count of the dossiers is five, and it asks coders to time twenty units from across the sheet, since the sheet opens with 22 units of one text.

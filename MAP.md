@@ -4,7 +4,7 @@ A guide for visitors: what this repository is, where to begin, how its history i
 
 ## What this is
 
-The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of what follows for ethics and for AI alignment.
+The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding. Its ethics adds two premises it does not assert; for AI alignment it shows first what a selection can reach, and a direction only conditionally.
 
 Every statement carries its standing: a **theorem**, with where it is proved (for every relation; for every process; on the World model, its premises named; or with Mathlib, its axioms reported); a **conditional** result, its premises named; a **calibration**, where a law needs an omniscience principle; a **thesis**, an empirical claim with what would refute it; an **assessment**; a **reading**, labelled as an interpretation; or **open**. The core's source declarations have empty axiom reports, so each law holds constructively; that is not an absence of premises, and the real assumptions lie in the modelling, stated where a law depends on them. The ethics rests on two premises with two roles, neither asserted: the continuation condition (that the continuation of anything has significance) fixes whose losses count, and calling widening better orders; whether either can be warranted is open.
 
@@ -16,7 +16,7 @@ The work is not licensed: [knowledge is a common good](COMMONS.md).
 
 The theory is written in four layers, each of which can be read through on its own:
 
-1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two premises, the open question, the evidence and what is not yet done.
+1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): one case, the root, the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two premises, the open question, the evidence and what is not yet done.
 2. [The Theory of Becoming](theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)): the overview, the whole argument in one account, with one case start to finish, each paragraph linking to the chapter that states it.
 3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
 4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (every concept, result, Lean module and text, with how they connect), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.

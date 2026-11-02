@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "63c9f57c2944a9527d28346b8d77b56b160a919bcbf1a9506b766b8c32ef6252",
+    "README.md": "4e3fc2fad51a754b6b7cc0f4e81c44c43b8fba1c9bfc1bd0d36ce71aa45c5989",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "0bc2f0be3f9a35cbff2aa18509ebfffe7caca3368013fc5f2156fbb5f16e46fb",
     "GOALS.md": "859fa8e89bf5d2651b2febfd1f70bc9baff835f22390b6c3c0520182fdabc95b",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "2990ff22e01aac6c7e959677a38bb834c5501502fa3897d889d078bda2161af2",
     "theories/becoming/results/records/worlds-are-runs.md": "bd3764698851c0eb76b515e8f7db81b4a67a5a131280bfc883a94773525a032f",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "ada0f906863d026dc857f26da5e8789647acf5af0add96a995d1f8df433f2bca",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "3dabc0b5a70c68f82b9b22d3f490b14e85a7f78b4144a18042eb2d9fb4f259ab",
+    "_process/research/README.md": "87261b72a953a5bc594712ba05dcdd000bc890598e822d4fedd8ce1540a9b967",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "4fc748d351b30dbcdd44a15a04e9e5a4b886f2e80e7a527b2c21ac50173036d8",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "48cb3226ec8e3c1b1da52839d8995b76f9ad88f1284d32db5e27d9ab4bd2dbd3",
     "_process/DIRECTIVE-INDEX.md": "326ca661575e4d5a37d007990b043434e3860a40a1a45251371b66187641b23a",
@@ -579,7 +579,7 @@
     "theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md": "06f5fbbdca4a2141a0c0bec463dc94f15d288ef729504be4b869ec1e125ea956",
     "theories/becoming/results/records/degeneration-from-a-horizon.md": "27f953e0cbb5c5301aef0a3f551b3fd81537b140800d54a4dde6712659208df0",
     "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md": "dafb4867017a851721cbdc58abd4c5aadac40121038803c601c278ac6044cabf",
-    "theories/becoming/results/records/offspring-read-from-giving-that-waits.md": "81dec1600df9d0157a4fb02bc9b7f08c9b473535c281650d64f9d7d61aa225fc",
+    "theories/becoming/results/records/offspring-read-from-giving-that-waits.md": "a4f8c3fb0f45e5a3f8db98239060c843def724a5e373109501714e71b3475e49",
     "theories/becoming/results/records/the-selection-term-and-a-lineages-fate.md": "4e33eeb4607c59576918f773a7f809b7392a5ac706af8496c21630fc0f021ba2",
     "theories/becoming/results/records/what-giving-that-waits-draws-on.md": "5af8fefb5985771dd649f8722518c16886908e2d8b4ba37e97fedd8c5f775792",
     "theories/becoming/results/records/conditional-laws-of-the-corpus.md": "3904b7a13141fb71a4753bc82cfdbd3fcd761800305b77c9628028ff5358bef1",
