@@ -37,6 +37,6 @@ Read on a fished stock where every later boat depends on it, a law of the World 
 
 **What is not yet done.**
 
-- Which relation, if any, significance is read along: no law here picks one. Otherwise significance is a free parameter, which by construction no statement reading only the represented dynamics can fix ([what forms and what is supplied](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)).
+- Which relation, if any, significance is read along: no law here picks one. Otherwise significance is a free parameter, which by construction no satisfiable statement reading only the represented dynamics can fix ([what forms and what is supplied](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)).
 - Still to be argued for a warrant, among others: the open question above; that the actual unfolding joins lines through what one conditions, a correspondence not shown ([07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)); the step of invariance, for what these do not reach; and a reason for C.
 - An institution has no model yet, an organism one minimal model, read as such [AI reading] ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)), and several theses' tests are still to run.

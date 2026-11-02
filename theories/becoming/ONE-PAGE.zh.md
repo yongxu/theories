@@ -37,6 +37,6 @@
 
 **尚未完成之事。**
 
-- 若读出意义，是沿哪一个关系：这里没有律选定它。否则意义是一个自由参数，依构造任何只读取所表示的动力学的陈述都不能确定它（[什么形成、什么是所提供的](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)）。
+- 若读出意义，是沿哪一个关系：这里没有律选定它。否则意义是一个自由参数，依构造任何只读取所表示的动力学、且可满足的陈述都不能确定它（[什么形成、什么是所提供的](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)）。
 - 为一个根据尚需论证的，其中有：上面那个未决的问题；实际的展开经由自己所缘者把诸相续联结起来，这是一个未得到表明的对应（[07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)）；不变之步（就以上所不及者而言）；以及 C 的理由。
 - 一个制度尚无模型，一个有机体有一个最小模型，这是如此读出的［AI 读法］（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)），若干论题的检验还待进行。
