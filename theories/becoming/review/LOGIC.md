@@ -15,7 +15,7 @@
 - *Models.* A *process* (`Process S A`) is a labelled step relation `S → A → S → Prop` on configurations; a *frame* adds claims realized at configurations. The *World* is the richest model: relata that take from and give to one another's natural-number levels across discrete steps, each active or not, under eight named premises (balance, a census of what is active, and others) that a world may meet or fail ([01 §8](../chapters/01-ROOT.md#models)).
 - *Calibration*: a law proved equivalent to, or conditional on, an omniscience principle. By the theory's own criterion ([08 §5](../chapters/08-METHOD.md#calibrations)) it is a result only where it says what the need means for the unfolding: Quote [theories/becoming/chapters/08-METHOD.md]: "Only a calibration that says something of that kind is a result. One that concerns the logic alone is a lemma of its law."
 - *Record*: the work's entry for one result (statement, Lean declarations, premises, what it does not show), linked from the chapters.
-- *Readings and classes.* [AI reading, Dn] marks an interpretation made by AI, `Dn` its entry in the work's register of decisions; a reading changes no theorem. A quoted sentence of the classical texts (Source [ID]) carries the class an AI coder gave it, glossed with [the names](#the-names); its English translation is this dossier's (AI).
+- *Readings and classes.* [AI reading, Dn] marks an interpretation made by AI, `Dn` its entry in the work's register of decisions; a reading changes no theorem. A quoted sentence of the classical texts, given with its unit's id, carries the class an AI coder gave it, glossed with [the names](#the-names); its English translation is this dossier's (AI).
 
 **Reading the Lean blocks.** Each block is Lean 4 source copied from the file named under it; theorem statements stop where the proof begins (`:=`), definitions are given whole.
 
@@ -843,7 +843,7 @@ What the items use: how names are written, the classes of the quoted units, the 
 
 **How names are written.** Guillemets make a Chinese word one identifier: `«续» R E x y` reads "`y` continues `x` under `E`". A dotted name such as `Web.carries_iff` is a declaration in a namespace (`Web`); the line under each block names the file and, where needed, the namespace.
 
-**The classes of quoted units.** Each sentence of the classical texts the theory reads (a *unit*, quoted as Source [ID]) was classified by an AI coder into one of eight classes ([the re-coding codebook](recoding/CODEBOOK.md), §三); the three that occur here are 甲, a definition; 乙, a candidate theorem of the grammar, with its outcome in Lean (proved; proved under a premise; refuted); 己, a contrary reading, where the text rejects a thesis of the theory.
+**The classes of quoted units.** Each sentence of the classical texts the theory reads (a *unit*, quoted with its id) was classified by an AI coder into one of eight classes ([the re-coding codebook](recoding/CODEBOOK.md), §三); the three that occur here are 甲, a definition; 乙, a candidate theorem of the grammar, with its outcome in Lean (proved; proved under a premise; refuted); 己, a contrary reading, where the text rejects a thesis of the theory.
 
 **The grammar's vocabulary.**
 

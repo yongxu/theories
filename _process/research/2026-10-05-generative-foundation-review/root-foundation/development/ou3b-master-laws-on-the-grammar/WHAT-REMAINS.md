@@ -204,7 +204,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 5. **A fresh core receipt**, run with `BECOMING_FRESH=1`, with its logs kept in the repository. At the twenty-first review, 1,349 of 1,360 Lean steps were reused from a cache outside the repository ([review](../../BECOMING-TWENTY-FIRST-REVIEW.md) §3.1). FallibleInquiry's periphery receipt is rechecked too: it was stale at that review, with 19 of its 38 dependencies changed.
 6. **The front pages current.** The one page's counts are brought up to date (on `160a0f780` it says 481 registered results, and RESULTS registers 498). The twenty-first review's remaining §6 fixes go in the same pass.
-7. **Then the freeze** (the board's way now, item 3): one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions.
+7. **Then the freeze** (the board's way now, item 5; [the steps](../review-packet/FREEZE-STEPS.md)): one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions.
 
 **What does not hold a release.** These are named here so that none is read as a gap:
 
