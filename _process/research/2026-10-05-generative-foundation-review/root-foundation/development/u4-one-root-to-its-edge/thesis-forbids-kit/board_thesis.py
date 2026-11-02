@@ -10,15 +10,16 @@ from pathlib import Path
 BOARD = Path('_process/BECOMING-WORKBOARD.md')
 HISTORY = Path('_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md')
 HEAD = ("The philosophical thesis's statement at the head of the queue (landing now: 08 §9's one relational unfolding "
-        "says what it forbids, explanations and not observations, and what would defeat it, an argument and not a "
-        "measurement, in place of a refuter no observation could meet; documents only, no Lean, no record and no core "
+        "says what it forbids, explanations and not observations, and what would defeat it, an argument, in place of "
+        "a refuter whose cases cannot occur or do not touch it; documents only, no Lean, no record and no core "
         "run; render, strict check, links, tests and both dossier checks, then the fast-forward); ")
 LANDED = ("The philosophical thesis's statement landed (documents only: no Lean, no record and no core run): 08 §9's one "
           "relational unfolding said it would be refuted by two configurations that no test or relation tells apart "
-          "and that go on differently, which no observation could meet; a cold read's finding, checked against the "
-          "Lean. It now says the thesis forbids explanations and not observations, the argument for that, three cases "
+          "and that go on differently, whose cases cannot occur or do not touch it; a cold read's finding, checked "
+          "against the Lean. It now says the thesis forbids explanations and not observations, that none could refute it as argued and "
+          "not proved, three cases "
           "that look like refuters (`Alike.tests`, `DeterminedAt.goAlike` with the nucleus's `Decay` witnesses, "
-          "`Twins.retarget_breaks`), what would defeat it, an argument, with equality on the carrier the nearest case "
+          "`Twins.retarget_breaks`), what would defeat it, an argument measurements can support and cannot replace, with equality on the carrier the nearest case "
           "in the account, and that its content is a demand on explanations. No record cites the section, so nothing "
           "is re-pointed. The fronts' sentence is the reader revision's. Render, strict check, links, tests and both "
           "dossier checks pass. ")

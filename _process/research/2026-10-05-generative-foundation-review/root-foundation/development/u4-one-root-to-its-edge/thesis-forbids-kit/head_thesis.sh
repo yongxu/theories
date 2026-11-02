@@ -17,7 +17,7 @@ GIT_INDEX_FILE="$T/index" git read-tree "$base" || exit 2
 GIT_INDEX_FILE="$T/index" git update-index --cacheinfo "100644,$blob,$B" || exit 2
 tree=$(GIT_INDEX_FILE="$T/index" git write-tree) || exit 2
 [ "$(git diff-tree --name-only -r "$base" "$tree")" = "$B" ] || { echo "UNEXPECTED PATHS"; exit 2; }
-new=$(git commit-tree "$tree" -p "$base" -m "Board: the philosophical thesis's statement at the head of the queue (landing now: 08 §9's one relational unfolding says what it forbids, explanations and not observations, and what would defeat it, an argument and not a measurement; documents only, no Lean, no record and no core run; render, strict check, links, tests and both dossier checks, then the fast-forward)") || exit 2
+new=$(git commit-tree "$tree" -p "$base" -m "Board: the philosophical thesis's statement at the head of the queue (landing now: 08 §9's one relational unfolding says what it forbids, explanations and not observations, and what would defeat it, an argument; documents only, no Lean, no record and no core run; render, strict check, links, tests and both dossier checks, then the fast-forward)") || exit 2
 [ "$(git rev-parse main)" = "$base" ] || { echo "MAIN MOVED; $new not landed"; exit 4; }
 git show main:$B | grep -m1 '^- \*\*Queue:\*\*' | grep -q '(landing now' && { echo "HEAD HELD; $new not landed"; exit 3; }
 git diff --quiet -- "$B" && git diff --cached --quiet -- "$B" || { echo "BOARD CHANGED LOCALLY IN THE SHARED CHECKOUT"; exit 8; }
