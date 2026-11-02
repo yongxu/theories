@@ -124,3 +124,20 @@ The dossier was read against what had moved around its citations since `33d06e9b
   - the standing lacking its base and "conditional", a result assuming the condition sitting unmarked in a part called "without the step", and *drawn* left without a gloss.
 
   Every finding was taken. Its findings on the kit are taken in [the steps](../review-packet/FREEZE-STEPS.md).
+
+## The re-check of 3 November 2026
+
+The dossier was read against what had moved since `2cab11114`, PF3 above all. [`resync_report.py`](../review-packet/resync_report.py) flagged 11 of 27 items.
+
+- **What changed.**
+  - P-02 gained chapter 7 §1's sorting of what is shown, read and supplied, with *standard* in Terms and the one link through the relation (`Web.selfValuation_feeding_own`).
+  - P-21 gained the law of a common response, stated with its exact existence condition.
+  - P-04, the front and P-20 gained C's exact role: a ranking needs C or a premise in its place.
+  - P-20's known weaknesses gained the crux as chapter 7 §4.7 sharpens it (the theorem moves the question into the class; P2 excludes the organism, so P4 carries the crux; `selfAscribed` takes the de re reading); P-03, P-11, P-26 and P-20's fourth question gained what §4.7 says of them.
+- **Measures.** The kit's counting, on this text:
+  - The part: 1,180 words and 2 characters, 9.1 to 11.8 minutes, 81 over the budget of 1,100 with a character counted as half a word. The excess is the earlier 74 and the words C's exact role takes; those hypotheses are what amendment 1 protects.
+  - The whole: 14,535 words and 261 characters, 112.8 to 146.7 minutes, stated as 110 to 150, rounded out to five minutes.
+- **Review.** One independent AI reader, read-only and with no part in the writing, read the change and the other flagged items against chapter 7, chapter 3 and the Lean. Every finding was checked against the source and taken:
+  - errors: "Ranking still needs C" in the front and P-20, which 07 had replaced with "or a premise in its place", and which the front's own item 3 contradicted; "Chapter 7's newest section" for §4.6, since §4.7 is newer;
+  - misleading: my new sentence on §1's sorting stood in P-01, when P-02 is the item carrying §1's title unqualified; P-21's new sentence never stated the law; "That is a law, not only a reading of witnesses" lacked 07's own limit; P-04's quotation stopped before "in general alone"; §4.7's sharpenings were absent;
+  - minor: P-26's clause on actors of whatever substrate, P-20's fourth question, and P-03's "recorded nowhere else" where 07 now raises it.
