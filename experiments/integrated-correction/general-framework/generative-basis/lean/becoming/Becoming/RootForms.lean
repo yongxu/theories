@@ -14,7 +14,9 @@ each hypothesis is a named definition that names no model and no amount. Beside 
   hold there and the conclusion fails, and `H` with them.
 
 A recovery, stated at the row's own type (`type_of%`), proves the row through the form at its
-model, and a certificate ties the two by `rfl`.
+model. A certificate `@Row = @Recovery` names the pair for the boundary check: `Eq` takes one type,
+so stating it checks that the recovery states the row at the row's full generality, which the type
+ascription already ensures here; once stated, `rfl` closes it by proof irrelevance.
 
 **What a form shows.** The row's conclusion follows by logic alone from its hypotheses read as
 relations, and none of them can be dropped. It does not show that the row uses the grammar's
@@ -116,46 +118,46 @@ theorem undepended_nowhere : UndependedFrom allRelated nowhere :=
   fun _ _ _ before => before
 
 /-- Over the one point, something coming to stand depends after the step. -/
-theorem some_depends : ¬ ¬ ∃ x, everywhere x ∧ everywhere x :=
-  fun none => none ⟨(), trivial, trivial⟩
+theorem some_depends : ∃ x, everywhere x ∧ everywhere x :=
+  ⟨(), trivial, trivial⟩
 
 /-- "Given to" cannot be dropped: nothing descends, and the one point comes to stand and depends
 after the step. -/
 theorem descent_forms_no_dependence.needs_given :
     ¬ ∀ {X : Type} {comes before after : X → Prop} {descends : «际» X},
       Inherits descends before after → UndependedFrom descends before → ¬ ∃ x, comes x ∧ after x :=
-  fun h => some_depends (@h Unit everywhere nowhere everywhere noneRelated inherits_vacuous
-    undepended_vacuous)
+  fun h => @h Unit everywhere nowhere everywhere noneRelated inherits_vacuous undepended_vacuous
+    some_depends
 
 /-- The fit: at that witness "given to" fails, by the form. -/
 theorem descent_forms_no_dependence.given_needed : ¬ GivenTo everywhere noneRelated :=
-  fun given => some_depends (descent_forms_no_dependence given inherits_vacuous undepended_vacuous)
+  fun given => descent_forms_no_dependence given inherits_vacuous undepended_vacuous some_depends
 
 /-- Inheritance cannot be dropped: everything descends from everything, nothing depends before
 the step, and everything depends after it. -/
 theorem descent_forms_no_dependence.needs_inherits :
     ¬ ∀ {X : Type} {comes before after : X → Prop} {descends : «际» X},
       GivenTo comes descends → UndependedFrom descends before → ¬ ∃ x, comes x ∧ after x :=
-  fun h => some_depends (@h Unit everywhere nowhere everywhere allRelated given_everywhere
-    undepended_nowhere)
+  fun h => @h Unit everywhere nowhere everywhere allRelated given_everywhere undepended_nowhere
+    some_depends
 
 /-- The fit: at that witness inheritance fails, by the form. -/
 theorem descent_forms_no_dependence.inherits_needed : ¬ Inherits allRelated nowhere everywhere :=
-  fun inherits => some_depends (descent_forms_no_dependence given_everywhere inherits
-    undepended_nowhere)
+  fun inherits => descent_forms_no_dependence given_everywhere inherits undepended_nowhere
+    some_depends
 
 /-- "Nothing descended from depends" cannot be dropped: everything descends from everything and
 depends before and after the step. -/
 theorem descent_forms_no_dependence.needs_undepended :
     ¬ ∀ {X : Type} {comes before after : X → Prop} {descends : «际» X},
       GivenTo comes descends → Inherits descends before after → ¬ ∃ x, comes x ∧ after x :=
-  fun h => some_depends (@h Unit everywhere everywhere everywhere allRelated given_everywhere
-    inherits_everywhere)
+  fun h => @h Unit everywhere everywhere everywhere allRelated given_everywhere inherits_everywhere
+    some_depends
 
 /-- The fit: at that witness "nothing descended from depends" fails, by the form. -/
 theorem descent_forms_no_dependence.undepended_needed : ¬ UndependedFrom allRelated everywhere :=
-  fun undepended => some_depends (descent_forms_no_dependence given_everywhere inherits_everywhere
-    undepended)
+  fun undepended => descent_forms_no_dependence given_everywhere inherits_everywhere undepended
+    some_depends
 
 /-- **`Flow.no_new_dependence` at its model, its relational part.** The row is the form at its
 relatum `x`:
@@ -175,7 +177,9 @@ theorem no_new_dependence_at_model : type_of% @Flow.no_new_dependence := by
     (fun _ g ⟨at_x, descent⟩ dependsAfter => inherits g descent (at_x ▸ dependsAfter))
     (fun _ g ⟨_, descent⟩ => none g descent.1) ⟨x, ⟨rfl, comes⟩, depends⟩
 
-/-- The certificate: the recovery states exactly the row. -/
+/-- The certificate, the pair the boundary check reads: stating it checks that the recovery states
+exactly the row (`Eq` takes one type), as its type ascription (`type_of%`) already ensures; once
+stated, `rfl` closes it by proof irrelevance. -/
 theorem no_new_dependence_certified : @Flow.no_new_dependence = @no_new_dependence_at_model := rfl
 
 /-! ## `GroupEnding.Flow.all_end`: a listing outside the giving region has no offspring -/
@@ -283,7 +287,9 @@ theorem all_end_at_model : type_of% @GroupEnding.Flow.all_end := by
     (fun p k listed => ⟨(descended t p k listed.1 listed.2).1, (descended t p k listed.1 listed.2).2.1⟩)
     inactive
 
-/-- The certificate: the recovery states exactly the row. -/
+/-- The certificate, the pair the boundary check reads: stating it checks that the recovery states
+exactly the row (`Eq` takes one type), as its type ascription (`type_of%`) already ensures; once
+stated, `rfl` closes it by proof irrelevance. -/
 theorem all_end_certified : @GroupEnding.Flow.all_end = @all_end_at_model := rfl
 
 end RootForms

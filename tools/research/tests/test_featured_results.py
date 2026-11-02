@@ -327,7 +327,7 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
         self.assertIn('fixes scope', screen)  # both premises with their roles
-        self.assertIn('alone gives order', screen)
+        self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
         self.assertNotRegex(screen, r'\b(AI|Ren|Claude)\b')  # a front page names no person and no AI
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0]
