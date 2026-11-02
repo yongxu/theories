@@ -236,7 +236,7 @@ theorem Once.family {S : Stage → Prop} (s₁ : S .first)
       · exact sw
   ⟨s₂, s₃⟩
 
-/-- The pattern goes on from every occurrence. -/
+/-- The pattern goes on from its first occurrence, `.first`. -/
 theorem Once.endless : «不穷» once «一» .first := fun y _ => by
   cases y
   · exact ⟨.second, trivial, trivial⟩

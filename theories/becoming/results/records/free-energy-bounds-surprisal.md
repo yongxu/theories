@@ -111,6 +111,8 @@ Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951)
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261102T185502.239685Z/verification.json) | — |
 
 Aliases: `Variational free energy bounds surprisal`, `变分自由能为惊异之界`, `variational free energy`, `the free-energy bound`, `Gibbs inequality`, `perception as conditioning`, `Becoming.FreeEnergy.surprisal_le_freeEnergy`, `Becoming.FreeEnergy.minimizes_iff_givenShare`, `Becoming.FreeEnergy.gap_counts`
 
