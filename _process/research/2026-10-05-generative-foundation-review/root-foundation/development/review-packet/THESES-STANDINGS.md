@@ -1,6 +1,6 @@
 # The sciences front's theses given their standings
 
-*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 6.9 to 8.9 minutes to read; [the read](#the-read), 19.6 to 25.4 more.*
+*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.0 to 9.2 minutes to read; [the read](#the-read), 19.6 to 25.4 more.*
 
 The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)).
 
@@ -30,7 +30,7 @@ The front grew from 1,105 words to 1,179, 9.1 to 11.8 minutes, 79 over its ten m
 
 The hour for ecology, the front with S-11 to S-16, grew from 5,926 words to 6,000. That is still within the hour, at its budget exactly. A word more on the front or in S-11 to S-16 takes it past.
 
-The whole grew to 18,149 words and 27 characters, 139.7 to 181.6 minutes. That passes the stated 135 to 180 minutes, so the front and both covers now state 135 to 185. READING-BUDGETS' rows follow: the fronts, the hour, the wholes line, the stated times and the Chinese cover, which is one character longer.
+The whole grew to 18,178 words and 27 characters, 139.9 to 181.9 minutes. TS added 186 of those words, and IGF2's quotation and question in S-06, which landed the same evening, added 29. TS's words alone took the whole past the stated 135 to 180 minutes, so the front and both covers now state 135 to 185. READING-BUDGETS' rows follow: the fronts, the hour, the wholes line, the stated times and the Chinese cover, which is one character longer.
 
 ## Not done here
 
