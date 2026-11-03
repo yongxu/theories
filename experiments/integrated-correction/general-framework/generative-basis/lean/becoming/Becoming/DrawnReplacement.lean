@@ -271,7 +271,7 @@ end Drawn
 
 namespace Strong
 
-/-- **Risk dominant, and yet one other fixes first.** Five members, `a = 1`, nothing shared,
+/-- **Risk dominant, and yet one other fixes with more weight.** Five members, `a = 1`, nothing shared,
 `c = 9`, `hi = 20`, `lo = 0`: the shapers are risk dominant and the mass lies between the ends, yet
 the potential's first step, 6,215,625, falls short of its last, 6,250,000. -/
 theorem other_first :
