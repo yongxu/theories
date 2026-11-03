@@ -65,10 +65,12 @@ LEAN_ROOT = HERE.parent
 sys.path.insert(0, str(LEAN_ROOT / "universal-ethics" / "generative-capacity"))
 import check as audit_support  # noqa: E402
 
-# The foundation the core builds on (L0 and its two direct companions).
+# The foundation the core builds on: three modules, checked with the core and not counted in it, in
+# no layer (08 §3).
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
-# The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
-# frame; prelude only), the four core layers and their root. Compile order comes from the imports.
+# The package: its three layers, L0 the base (`Becoming.World`, the one unfolding's records, a world
+# being a run of the frame, with every module of the package it imports), L1 and L2, prelude only,
+# and their root. Compile order comes from the imports.
 CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.MapRegions", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarConditionals", "Becoming.CommonResponse", "Becoming.GrammarTransport", "Becoming.ShownOrder", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
