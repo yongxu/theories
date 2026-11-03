@@ -63,6 +63,14 @@ In the queue (19 October 2026; W1 landed as `711738736` and `ebdc971ef`, core re
 
 Landed since 15 October (full receipts, record counts and study sections are in the history file): I3c + P83d, P109, P83e + P83f, I3d, I3e + P83g, P113-P116, I4b-1 to I4b-4, P117, P110-P112, P119, P118, P120, P121-P122, P124, P123, P125, P126, P127 (core receipt `20261015T231055.702986Z`), then 16 October P128 (`d444664e`, docs), R18 (`1c5def5f`), I5 (`2b926929`), P129 (core `20261016T121942.514802Z`), P130 (core `20261016T124157.989030Z`), then 17 October R-restructure (docs, paths and tools) U (`e5716a7f8`, core `20261017T071851.986246Z`) and U2 (`f36a93aaa`, core `20261017T113233.209872Z`).
 
+## Batched precision pass, next edition
+
+Findings that only make a correct statement more exact, kept for one pass in the next edition, not landed one by one. A finding that would make a reader believe something false lands now instead, by the order on the Queue line. Add an entry in a board-only commit while no head clause stands.
+
+- **TS3, the sciences front's T1 cell and S-12 after T1P.** The cell in 08's words, with S-12's block named, `y` glossed and 08's appositive; S-12's `Meets` as the Lean states it, `0 < H + y`, "exact, at `H + y` where that is at most `hi`", and the rises with law 5's `Root` premises. An AI reader has read and re-checked it; it is ready on branch `t1-premises-follow` (Names session).
+- **02 §5's rises theorem** names no `Root` premises, and margin-of-a-regime's summary says "a least level" without the top (T1's home's owner).
+- **Two Lean docstrings gloss `Meets` as more than the Lean asks**: the `RegimeMargin` module's and `threshold_regime`'s. They go with the next edition's docstring pass and its core run.
+
 ## Decisions pending Ren
 
 **For Ren's day (kept by the coordinator; a line goes when it is answered).**
