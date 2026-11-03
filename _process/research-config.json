@@ -14,7 +14,7 @@
   "readme_opening": "theories/becoming/OPENING.md",
   "standard_boundaries": "theories/becoming/results/data/standard-boundaries.json",
   "record_snapshots": "_process/architecture/history",
-  "readme_status": "This is ongoing, unfinished work: the theory, its proofs and its readings are still being developed and revised.",
+  "readme_status": "This version is still being revised.",
   "readme_first_screen": "_process/navigation/README-FIRST-SCREEN.md",
   "readme_lead": "_process/navigation/README-LEAD.md",
   "readme_repository": "_process/navigation/REPOSITORY.md",

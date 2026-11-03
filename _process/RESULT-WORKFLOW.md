@@ -82,7 +82,7 @@ Maintain the ordered `readme_featured_results` list in `_process/research-config
 
 The optional ordered `readme_research_goals` list selects scoped goals for the README's ongoing-research section, each with an `overview` (`title`, `summary`, `next_step`), keeping its authorization, premises and completion criteria. Established-result links come from the goal's `result_ids`, limited to `recorded-checked` and `reviewed-scoped` results. Do not add a parallel scientific-status field to goals or present open targets as achievements; this navigation validates nothing.
 
-README's first screen is the file `readme_first_screen` names, placed before the opening, its reading times and counts filled at render (`navigation.first_screen`). It times the files its `{{time:PATH}}` fields name (the one page and the overview), so an edit to one of them needs `make research-render`, or the check finds README stale.
+README's first screen is the file `readme_first_screen` names, placed before the opening, its reading times and counts filled at render (`navigation.first_screen`). It times the files its `{{time:PATH}}` fields name (the one page), so an edit to one of them needs `make research-render`, or the check finds README stale.
 
 ## Writing a record (schema 2)
 
