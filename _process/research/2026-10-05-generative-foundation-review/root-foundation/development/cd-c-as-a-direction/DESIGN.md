@@ -47,16 +47,88 @@ Read at `ec825595f`. No new Lean is used.
 
 ## 3. Names
 
-[Filled from the names test: §3 of the final note.]
+The test is AGENTS.md's: rename only a name that states a wrong meaning. The meaning is the glossary's one sense, landed by the fronts' owner (5e7b118a9): *ranking, order (which course is better)* is a comparison of options as better or worse, *order* is the ethics' role word for it, and no law gives one; widening is one-way and transitive, a strict partial order in the mathematical sense, and says which course admits more, not which is better. Three finders (the Lean, the records, the prose) judged 162 names, and five refuters re-read 61 of them against their statements ([names-test.json](names-test.json)). What follows is what was decided on that reading.
+
+**Kept, with the reason.**
+- `Becoming.Ranking`, the module and namespace. Its subject is what C, a premise, ranks under each reading. Every declaration in it that concludes a ranking takes `ComparisonUnder … Better`, `∀ Better, ComparisonUnder …` or `BasicPriority` as a hypothesis (`whole_run_ranks`, `basic_first_ranks`, `readings_rank_differently`).
+- `ComparisonUnder`, `Comparison`, `Better`, `LiftBetter`. Each names C or a supplied comparison, a slot for whatever ranks.
+- The `_ranks` names, and the `_unranked` names (`stepwise_unranked`, `relational_unranked`). Each `_unranked` statement is `¬ ExtendsUnder r a b ∧ ¬ ExtendsUnder r b a`, which is exactly "C leaves them unranked".
+- The candidate orders that rank: the lagged order, the tail order, the lexical order, `ListedOrder`, `possibleFirst`, `RanksKeepingOverAlike`. Each is offered for the `Better` slot and decides pairs widening leaves mixed, and the text marks each as a premise.
+- "C gives order", "in general alone", and 07 §4's role table. These are the glossary's sense exactly.
+- The "strongest" labels of 07 §4.2 and the philosophy dossier's P-10 and P-11. They are the chapter's own judgment of arguments, with the basis linked (history §3 and §4.1), and the dossier exists to put that judgment to reviewers.
+- The record ids that name a ranking someone holds: `a-narrowing-above-its-widening`, `protection-priority-excludes-uniform-aggregation`, `what-self-concern-alone-ranks`, `relational-reading-comparison` ("comparison" there names C).
+- A field's frames: `Optimum.best`, `bestUpTo`, `MutualBest`, `ReadStages.choose_optimal`, `revaluing_best`, "its best outcomes" (the fisher's catch, a natural number, so its optima are its greatest outcomes), "ranks the risk of a break" (a measured quantity), `SharedCodes.preferred` (a preferred form, as in physics).
+
+**Renamed, with former ids kept** (`research.py rename-id`, receipt [cd-ranking-names](../../../../../architecture/renames/cd-ranking-names.json)).
+- `widening-as-what-every-weighting-ranks` became `widening-as-what-every-positive-weighting-ranks`. In the Lean a weighting is any `w : X → Nat`, and the record's statement says a zero weight ties. So "every weighting" stated a universal the record refutes. Positivity is where C's premise is relocated.
+- `whole-first-and-bounded-centers` became `whole-and-regions-and-bounded-centers`. "The whole first" (整体优先) states a priority, and a priority is a further premise. The record proves no priority: under the continuation condition, what retains in the whole retains in every region, and not conversely.
+- The shared law labelled "Order" (08 §7, 01 §7, the glossary's list, `shared_laws.py`, the coverage file) is now labelled "Widening". Its content is widening and its laws as a strict partial order. 08's own row used "order" both ways ("Order | … C for order"). The id `order` is kept, since ids are matched and not read.
+- 07 §2's heading "The order with no premise" is now "How two courses differ, with no premise", with the anchor `order` kept. The section gives inclusion, exceeding, widening, keeping the same and mixed, with no premise. So the old heading claimed what the glossary row says no law gives.
+
+**Restated, not renamed.** Where premise-free widening was said to rank, the sentence now says what it does: it widens, puts above, holds of a pair in opposite directions, or decides a pair. This covers 07's thesis line, §2, the open items list, five record statements and 08's C row. The names stay.
+
+**Left for the next edition**, since each needs a core run.
+- `Becoming.Ranking.readings_rank_presence`, which becomes `readings_presence_extends`. Its statement is two premise-free extensions with no `Better`, and the module's own convention gives premise-free laws `_extends` names. The verdict was contested and holds on the refuter's reading.
+- Twelve docstrings restated: `sharing_presence`, `possibleFirst`, `ThirdParty.stepwise_not_monotone`, `basic_first_stepwise` and `basic_first_relational`, `Web.paths_extension_iff_widens`, `Weighting.ended_below` (its headline drops the self-concern premise and the standpoint's condition), `Reaching.not_above_wider_now`, `CausalGrowth.no_order_contains_both`, and the record `ranking-under-readings`'s law 18. The refuters found four other docstrings exact as they stand: `paths_comparison_widens` ("with no axiom" is the empty axiom report), `ThirdParty.restraint_unranked_stepwise`, `Direction.extension_iff_widens` and `Lexical.Frame.comparison_of_decided`.
 
 ## 4. What changes, and when
 
-[Filled at the end.]
+**Lands now, documents only: no Lean, no core run.**
+- 07:
+  - the thesis line says what the laws give with no premise;
+  - §1's first sentence names the thesis it stands on, one relational unfolding, argued and not proved (08);
+  - §2's heading and its premise-free verbs;
+  - §5's "C ranks a course only above a course it widens";
+  - the open items list;
+  - the renamed records' anchors, beside the old ones.
+- 08: the C row's standing ("gives order, in general alone … warrant open"), the shared law's label and "1 of 8 on widening".
+- 01: the shared law's label.
+- The glossary's shared-law row.
+- The collective page: its first bullet calls widening "a criterion", and it is the title's generative direction only under the two premises.
+- Records:
+  - five statements restated, each with a history note: `shared-laws-on-the-grammar`, `stepwise-law-of-easing`, `comparing-two-courses-on-what-they-admit`, `horizon-optima-hold-the-greatest-renewal`, `what-a-course-keeps-reachable`;
+  - two titles and ids renamed.
+- `shared_laws.py`, the coverage file and RESULT-WORKFLOW's list.
+- The sciences dossier's two quotations of 07 §2, which now follow its text.
+- The registry, given a separate fix. A source that links a renamed record's former id still locates the record, because the former page redirects to it. Before the fix, every source left linking a former id drifted on any change. The study notes' links are left as they were, and the redirect resolves them.
+- 24 records re-pointed after reading, in three lines of the rebinds log. Nothing they say changed.
+
+**Already landed by the fronts' owner** (5e7b118a9): the glossary's one sense, and the fronts' lines on ranking ("the community's best course" given its basis, "An order with no premise" relabelled).
+
+**The next edition**, each with its carrier:
+- C's statement in pairwise form, *of two courses, one that widens the other is better than it*. It goes through the generativity chain's maintenance record and the fronts' owner. "Widening what can form is better" is accurate, but read alone it sounds like more is better, on a scale with a best. It does not land before the freeze: it changes no claim, and a front's change of C's wording is a decision for the edition.
+- The Lean rename and the twelve docstrings (§3), with a claim row of their own and a core run.
+- ONE-ARGUMENT:90's "fishes best where it has been" needs its basis, the catch it is rewarded by. That goes to its owner, the coordinator.
+- Low weight, for the glossary's owner:
+  - "two orders" (GLOSSARY:32) uses *order* for a level, not a ranking;
+  - "in general alone" may be read as "alone in general" rather than "in general, and alone";
+  - 07 §7's table row "a better alternative" has its basis only in the header (J1–J4).
 
 ## 5. The reads
 
-[Filled at the end.]
+All the readers were AI, and each read independently. Their reports are in [reviews/](reviews/).
+1. **A check against the Lean** ([lean-check.md](reviews/lean-check.md)). The draft's "yes, exactly" fails. The comparison sentence stands, but the direction sentence, "nothing is lost" and "derived" do not: taking a move needs L and J1–J4, and "derived" hides C's content.
+2. **A cold reader of C's wording** ([cold-reader.md](reviews/cold-reader.md)). It recommended none of the three proposed wordings as written, and the pairwise form most. "The direction to take" invites reading C as a choice rule.
+3. **A critic of the sweep** ([sweep-critic.md](reviews/sweep-critic.md)), whose findings are taken in §6.
+4. **The names test**: three finders, then five refuters (§3, [names-test.json](names-test.json)).
+
+The first draft's change list proposed "the direction to take" on every front. With the change list's builder, it is kept as a failed candidate in [history/](history/).
 
 ## 6. The sweep
 
-[Kept from the first draft, corrected by the sweep critic.]
+[sweep.py](sweep.py) found 697 comparison words in 07, the fronts, the glossary, ONE-ARGUMENT and the collective page ([hits.tsv](hits.tsv)):
+- 373 read in their sentence;
+- 144 named orders;
+- 76 a field's frame;
+- 67 places in the text;
+- 37 amounts with their basis.
+
+The critic read all 324 that a rule had sorted and found two that need action:
+- ONE-ARGUMENT:90, which goes to its owner (§4);
+- T8's "ranked by what every valuer counting everything shares (order: C)".
+
+The second is kept. C is the order premise, so under the one sense "ranked" is exact.
+
+The critic also searched for words the regex missed, and none stated a comparison with no basis. 排定 and 定序 were added to the regex. The critic's findings on the first change list (3a–3i) apply to a list that was dropped, except two that still apply:
+- 3g, the fisher's basis, total catch this season and after it, which the fronts' owner took;
+- 3d, change all of a phrase's uses or none. Under the one sense, "ranks nothing" and "self-concern ranks one case" are exact, since both speak of premises, so none changes.
