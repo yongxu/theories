@@ -26,7 +26,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That depletion is the only equilibrium: where the rest outruns, restraint by all may also be one; which is reached is a claim about learning, tested in CG2, not a theorem.
+- That depletion is the only equilibrium: where the rest outruns, restraint by all may also be one; what learners reach is a claim about learning, tested in CG2 and EM1, not a theorem.
 - Anything about stochastic regrowth: the laws hold course by course; whether the rest outruns in a stochastic environment is computed (exact best responses), not proved.
 - That restraint is better: the laws say where a reading cannot see it, not that seeing it is owed.
 
@@ -35,14 +35,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T113206.066061Z): the declarations of Becoming.Exclusion, these among them, have empty axiom reports; the checker verifies core purity. Tested on learners in CG2 (experiments/commons-outrun, predictions frozen at 8a049b4fb before any learning run; verdicts in its README and study section 250). Literature check in the significance review. One session; not independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T113206.066061Z): the declarations of Becoming.Exclusion, these among them, have empty axiom reports; the checker verifies core purity. Tested on learners in CG2 (experiments/commons-outrun, predictions frozen at 8a049b4fb before any learning run; verdicts in its README and study section 250), and in EM1 on learners that generalize across states (frozen at 42cf03228; study section 359). Literature check in the significance review. One session; not independently reviewed.
 
 Canonical source: [Exclusion.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist, now known to depend on the learner (EM1: learners that generalize reached restraint where tabular learners did not); a frozen test with every training episode starting at step 0; an independent review.
+A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); whether a profile with restraint is an equilibrium in the locked settings, where learners that generalize kept the stock in three of six and tabular learners in none (EM1, CG2); a frozen test with every training episode starting at step 0; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -93,6 +93,7 @@ Aliases: `the rest outruns the renewal`, `其余者超出更新`, `restraint inv
 - 20 October 2026: added (CG2), the condition on the rest that CG1's D2b failure turned on, after a literature check (significance review, "restraint as an equilibrium on a gated renewal"), and tested on learners with predictions frozen before any run; study section 250.
 - 22 October 2026: EM1's verdicts added to the correspondence and Next; study section 359.
 - 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
+- 3 November 2026, after the freeze (board item AF1, the coordinator's word; left by the kept settings' fix, `71fdd5c24`, for after the freeze): Next no longer presumes that an equilibrium with restraint exists in the locked settings, which no computation checked (the record's does-not-show says restraint by all may be one); it now asks whether a profile with restraint is an equilibrium there, naming what each kind of learner reached. The does-not-show item and the validation scope name EM1 beside CG2, and the home sentence links EM1. No law, hypothesis, declaration or proof changed.
 
 </details>
 

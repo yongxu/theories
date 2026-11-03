@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T14:52:46+00:00",
+  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Replacing one of M + 1 at a time, up with weight a and down with b, after (M + 1) m steps the fixing share is at most a potential's ratio and at least it less (1 − (a/(a + b))^(M + 1))^m, so for positive a tends to it: the starting share where a = b, above it from every mixed start where b < a.",
     "zh": "M + 1 个成员中一次替换一个、上升权重 a、下降 b 时，(M + 1) m 步后固定份额至多为势之比，至少为它减 (1 − (a/(a + b))^(M + 1))^m，故 a 为正时趋于此比：a = b 时为起始份额，b < a 时自每个混合起点高于它。"
@@ -81,6 +81,54 @@
       ]
     },
     {
+      "en": "With weights read from the count, up u(i), down d(i) and a weight of staying making every step weigh T, the histories compose as before; the potential's steps are the downs below a count times the ups above it, harmonic for the steps, and the constant case is the one above.",
+      "zh": "权读自计数，上 u(i)、下 d(i)，留之权使每步同权 T，历史如前相合；势之步为计数之下诸下权乘其上诸上权，于步为调和，常权之情形即上述者。",
+      "declarations": [
+        "Becoming.Drift.Replacement.valueBy",
+        "Becoming.Drift.Replacement.Steps",
+        "Becoming.Drift.Replacement.valueBy_mixed",
+        "Becoming.Drift.Replacement.valueBy_one_kind",
+        "Becoming.Drift.Replacement.valueBy_stays",
+        "Becoming.Drift.Replacement.valueBy_add",
+        "Becoming.Drift.Replacement.valueBy_mul",
+        "Becoming.Drift.Replacement.valueBy_le",
+        "Becoming.Drift.Replacement.valueBy_congr",
+        "Becoming.Drift.Replacement.valueBy_const",
+        "Becoming.Drift.Replacement.valueBy_comp",
+        "Becoming.Drift.Replacement.downs",
+        "Becoming.Drift.Replacement.ups",
+        "Becoming.Drift.Replacement.riseBy",
+        "Becoming.Drift.Replacement.potentialBy",
+        "Becoming.Drift.Replacement.riseBy_step",
+        "Becoming.Drift.Replacement.potentialBy_harmonic",
+        "Becoming.Drift.Replacement.valueBy_potential",
+        "Becoming.Drift.Replacement.steps_const",
+        "Becoming.Drift.Replacement.rise_closed"
+      ]
+    },
+    {
+      "en": "Where each up is at least a positive c the bounds hold with those weights, the varied histories vanishing over rounds and the fixing share tending to the potential's ratio; where each down is at least c the first kind is lost with weight at least c^i. Where the ups are at least the downs above s, losing the first kind from s + n weighs, times the ups crossed, at most the distance to the top times the downs crossed times the whole.",
+      "zh": "上权皆不小于正数 c 时诸界于此等权成立，尚变之历史逐轮递减，定之之份趋于势之比；下权皆不小于 c 时第一类以至少 c^i 之权失之。s 之上上权皆不小于下权时，自 s + n 失第一类之权乘所越之上权，至多为距顶之数乘所越之下权乘全权。",
+      "declarations": [
+        "Becoming.Drift.Replacement.valueBy_partition",
+        "Becoming.Drift.Replacement.fixedBy_below",
+        "Becoming.Drift.Replacement.potentialBy_within",
+        "Becoming.Drift.Replacement.fixationBy_bounds",
+        "Becoming.Drift.Replacement.climbsBy",
+        "Becoming.Drift.Replacement.varied_stepBy",
+        "Becoming.Drift.Replacement.varied_vanishesBy",
+        "Becoming.Drift.Replacement.fixationBy",
+        "Becoming.Drift.Replacement.lost_geBy",
+        "Becoming.Drift.Replacement.riseBy_shift",
+        "Becoming.Drift.Replacement.potentialBy_tail",
+        "Becoming.Drift.Replacement.potentialBy_head",
+        "Becoming.Drift.Replacement.lostBy_bounds",
+        "Becoming.Drift.Replacement.lostBy_favoured",
+        "Becoming.Drift.Replacement.fixedBy_disfavoured",
+        "Becoming.Drift.Replacement.riseBy_ends"
+      ]
+    },
+    {
       "en": "Witness: two members, up two and down one, the first kind fixing with share two of three.",
       "zh": "见证：两个成员，上升二、下降一，第一类以三分之二的份额固定。",
       "declarations": [
@@ -101,8 +149,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the common factor of the one-birth-one-death chain drops is read, with no fuller chain stated.",
-      "zh": "一生一死链的公因子可约去是读法，未陈述更完整的链。",
+      "en": "Weights that depend on more than the count, such as on time or the history, and mutation with drift.",
+      "zh": "依于计数之外者（如时间或历史）之权，及带漂变之突变。",
       "kind": "scope"
     },
     {
@@ -129,12 +177,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T145016.701975Z): every declaration of Becoming.Drift has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 368; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z）：Becoming.Drift 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 368 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipts 20261022T145016.701975Z and, for weights read from the count and the constant case derived from them, 20261103T102739.294112Z): every declaration of Becoming.Drift has an empty axiom report; the checker verifies core purity. Built and reviewed in one session each, with no separate reviewer; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T145016.701975Z，及权读自计数与由之导出之常权情形，回执 20261103T102739.294112Z）：Becoming.Drift 每一声明之公理报告皆空；检查器核验核心之纯。各于一会话中构建与审读，无另一审者；未经人之独立审查。"
   },
   "next_delta": {
-    "en": "Selection in sampled generations; mutation with drift; an independent review.",
-    "zh": "多代抽样中的选择；伴随漂变的突变；独立审查。"
+    "en": "Selection in sampled generations; mutation with drift; the time to fixation; an independent review.",
+    "zh": "抽样世代中之选择；带漂变之突变；至固定之时；独立审查。"
   },
   "correspondence": {
     "en": "The Moran process with selection (Moran 1958): fixation probability (1 - (b/a)^i) / (1 - (b/a)^N), here the potential's ratio with denominators cleared, by the harmonic-function argument for birth-death chains. Readings (the AI's): selection bends the potential the histories keep.",
@@ -187,6 +235,13 @@
         "en": "One sampled generation undoing selection.",
         "zh": "一代抽样撤销选择。"
       }
+    },
+    {
+      "id": "drawn-shaping-drawn-one-at-a-time",
+      "detail": {
+        "en": "A rule read at each count drawn one member at a time: the stag hunt of drawn shaping on this chain.",
+        "zh": "于每一计数处读之规则逐一而抽：抽取塑规之猎鹿局于此链上。"
+      }
     }
   ],
   "references": [
@@ -200,18 +255,33 @@
         "Becoming.Drift.Generations.raised_falls_back",
         "Becoming.Drift.OneDraw.falls_back",
         "Becoming.Drift.Replacement.Mixed",
+        "Becoming.Drift.Replacement.Steps",
         "Becoming.Drift.Replacement.climbs",
+        "Becoming.Drift.Replacement.climbsBy",
+        "Becoming.Drift.Replacement.downs",
         "Becoming.Drift.Replacement.favoured_share",
         "Becoming.Drift.Replacement.favoured_share_above",
         "Becoming.Drift.Replacement.fixation",
+        "Becoming.Drift.Replacement.fixationBy",
+        "Becoming.Drift.Replacement.fixationBy_bounds",
         "Becoming.Drift.Replacement.fixation_bounds",
         "Becoming.Drift.Replacement.fixed",
+        "Becoming.Drift.Replacement.fixedBy_below",
+        "Becoming.Drift.Replacement.fixedBy_disfavoured",
         "Becoming.Drift.Replacement.fixed_below",
         "Becoming.Drift.Replacement.lost",
+        "Becoming.Drift.Replacement.lostBy_bounds",
+        "Becoming.Drift.Replacement.lostBy_favoured",
         "Becoming.Drift.Replacement.lost_ge",
+        "Becoming.Drift.Replacement.lost_geBy",
         "Becoming.Drift.Replacement.neutral_share",
         "Becoming.Drift.Replacement.partition",
         "Becoming.Drift.Replacement.potential",
+        "Becoming.Drift.Replacement.potentialBy",
+        "Becoming.Drift.Replacement.potentialBy_harmonic",
+        "Becoming.Drift.Replacement.potentialBy_head",
+        "Becoming.Drift.Replacement.potentialBy_tail",
+        "Becoming.Drift.Replacement.potentialBy_within",
         "Becoming.Drift.Replacement.potential_above",
         "Becoming.Drift.Replacement.potential_beyond",
         "Becoming.Drift.Replacement.potential_from",
@@ -222,11 +292,30 @@
         "Becoming.Drift.Replacement.potential_neutral",
         "Becoming.Drift.Replacement.potential_within",
         "Becoming.Drift.Replacement.rise",
+        "Becoming.Drift.Replacement.riseBy",
+        "Becoming.Drift.Replacement.riseBy_ends",
+        "Becoming.Drift.Replacement.riseBy_shift",
+        "Becoming.Drift.Replacement.riseBy_step",
         "Becoming.Drift.Replacement.rise_antitone",
         "Becoming.Drift.Replacement.rise_antitone_le",
+        "Becoming.Drift.Replacement.rise_closed",
         "Becoming.Drift.Replacement.rise_neutral",
         "Becoming.Drift.Replacement.rise_step",
+        "Becoming.Drift.Replacement.steps_const",
+        "Becoming.Drift.Replacement.ups",
         "Becoming.Drift.Replacement.value",
+        "Becoming.Drift.Replacement.valueBy",
+        "Becoming.Drift.Replacement.valueBy_add",
+        "Becoming.Drift.Replacement.valueBy_comp",
+        "Becoming.Drift.Replacement.valueBy_congr",
+        "Becoming.Drift.Replacement.valueBy_const",
+        "Becoming.Drift.Replacement.valueBy_le",
+        "Becoming.Drift.Replacement.valueBy_mixed",
+        "Becoming.Drift.Replacement.valueBy_mul",
+        "Becoming.Drift.Replacement.valueBy_one_kind",
+        "Becoming.Drift.Replacement.valueBy_partition",
+        "Becoming.Drift.Replacement.valueBy_potential",
+        "Becoming.Drift.Replacement.valueBy_stays",
         "Becoming.Drift.Replacement.value_add",
         "Becoming.Drift.Replacement.value_comp",
         "Becoming.Drift.Replacement.value_congr",
@@ -240,7 +329,9 @@
         "Becoming.Drift.Replacement.value_stays",
         "Becoming.Drift.Replacement.varied",
         "Becoming.Drift.Replacement.varied_step",
+        "Becoming.Drift.Replacement.varied_stepBy",
         "Becoming.Drift.Replacement.varied_vanishes",
+        "Becoming.Drift.Replacement.varied_vanishesBy",
         "Becoming.Drift.TwoMembers.one_generation",
         "Becoming.Drift.count_le",
         "Becoming.Drift.expected_ones",
@@ -290,7 +381,7 @@
         "Becoming.Drift.whole_true",
         "Becoming.Drift.whole_weight"
       ],
-      "sha256": "97e50aedd8f289901cca75e33badc706109dd05e4cfa882c38513edfdb645b00"
+      "sha256": "068cdf7eb207723ea53a7be1709e74458dfcc807f81ae04ac11da5911cfbbcaf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
@@ -311,12 +402,28 @@
       "path": "theories/becoming/history/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
       "sha256": "952109cef534744b1d75f28e85eb30e5632f3a380ea3b051874aea2767735708"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md",
+      "role": "integration",
+      "sha256": "dc6db39b8122e866ebef953e1c599622f55034ec51881beb3caa047f069ad760"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "role": "receipt",
+      "sha256": "ae05228424e8c6ef53b9cc5686f5bb422fea35668443a84c7c5464a0f4084abd",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Drift",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -330,6 +437,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after (M + 1) m steps (Drift.Replacement.fixation, Drift.Replacement.varied_vanishes); the statement and law 3 give them and read the limit from them. The favoured kind lost with weight at least b^i stays in law 4 and the counterexample. The statement names the population of M + 1; the related note on drift and the neutral case give drift's bounds, not a limit.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Lean 给出 (M + 1) m 步之后有限的双侧界（Drift.Replacement.fixation、Drift.Replacement.varied_vanishes）；陈述与第 3 条规律给出这些界并由之读出极限。受青睐的一类以至少 b^i 的权重失去，仍见于第 4 条规律与反例。陈述写明 M + 1 个成员的种群；关于漂变的相关说明与中性情形给出漂变的界，而非极限。"
+    },
+    {
+      "en": "3 November 2026, board item AJ8 (study section 503): the chain stated with weights read from the count and a weight of staying, every bound proved there and the constant case derived from it; bounds across a stretch where one kind's weight is at least the other's added.",
+      "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：链以权读自计数与留之权陈述，诸界皆于彼处证之，常权之情形由之导出；增一类之权不小于他类之一段上之界。"
     }
   ]
 }

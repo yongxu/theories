@@ -361,12 +361,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
       "role": "proof",
-      "sha256": "d0a7a76938f92bb848fbc73d7ec940a79f97bfc1b3009ca7d6fd472904eda576"
+      "sha256": "f6264373f914de09e17599b58dd6d76065e184ebeed1d1c7b6f13166372f1e55"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72"
+      "sha256": "c6e709d6248a4eb9932f3bd4cbeaba8694edb0f52b448f89edb131140b4f9a56"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
@@ -426,7 +426,7 @@
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "3fdc218da45d1cb5ecff6ba160fbc6aa8e9566ac745c854d9bef207e6e0a1cfc"
+      "sha256": "d84fa49e44af30de19417bb3ee80aeb552b6368fe1185fc91a33c01bd73054e6"
     }
   ],
   "proof_bindings": [

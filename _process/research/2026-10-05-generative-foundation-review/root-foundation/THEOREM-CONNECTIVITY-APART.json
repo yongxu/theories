@@ -7386,6 +7386,221 @@
    "module": "Becoming.Optimum",
    "category": "general-structure",
    "reason": "a law of every level course on natural numbers: with the renewal exactly r at a positive need and k > r drawn before T, the need is met at T exactly where m + T (k - r) is at most the start; used by nothing on the base (Becoming.Optimum, ZH)"
+  },
+  "Becoming.Drift.Replacement.climbs": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "climbs, from climbsBy: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.fixation_bounds": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "fixation bounds, from fixationBy_bounds: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.fixed_below": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "fixed below, from fixedBy_below: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_beyond": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential beyond, from potentialBy_beyond: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_harmonic": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential harmonic, from potentialBy_harmonic: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_le_succ": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential le succ, from potentialBy_le_succ: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_le_top": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential le top, from potentialBy_le_top: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_mono": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential mono, from potentialBy_mono: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.potential_within": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "potential within, from potentialBy_within: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_add": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value add, from valueBy_add: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_comp": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value comp, from valueBy_comp: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_congr": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value congr, from valueBy_congr: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_const": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value const, from valueBy_const: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_le": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value le, from valueBy_le: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_mixed": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value mixed, from valueBy_mixed: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_mul": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value mul, from valueBy_mul: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_one_kind": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value one kind, from valueBy_one_kind: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_partition": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value partition, from valueBy_partition: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_potential": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value potential, from valueBy_potential: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.value_stays": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "value stays, from valueBy_stays: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.varied_step": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "varied step, from varied_stepBy: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.Drift.Replacement.varied_vanishes": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "varied vanishes, from varied_vanishesBy: a law of replacement one at a time between two kinds with constant weights, read in counts of weighted histories, with no world; the constant case of the chain with weights read from the count, derived from it (Becoming.Drift, AJ8)"
+  },
+  "Becoming.DrawnReplacement.favours_iff": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "where the rule read favours the shapers, the chain's steps favour them: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.fixation": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "fixation with drift: the histories fixing the shapers bounded by the potential: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.fixed_below": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "below the mass, fixing the shapers bounded across the distance: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.fixed_ge": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "from shapers present, fixing them weighs at least a ^ k: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.lost_above": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "above the mass, losing every shaper bounded across the distance: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.lost_ge": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "from every mixed count, losing every shaper weighs at least down ^ i: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.risk_dominant_iff": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "general-structure",
+   "reason": "at an even population the rule read favours the shapers strictly exactly where 2c < hi + lo: a law of DrawnShaping's rule read as replacement one at a time among M + 1 members, in counts of weighted histories; the base states no shaping of the rule, so nothing on it uses this law (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.Strong.other_first": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "model-witness",
+   "reason": "five members, the shapers risk dominant, and the others fixing with more weight; a fact about one constructed population, not a law of the unfolding (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.Weak.shapers_first": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "model-witness",
+   "reason": "the same costs with a larger base: the shapers fix with more weight; a fact about one constructed population, not a law of the unfolding (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.DrawnReplacement.Weak.shared_decides": {
+   "module": "Becoming.DrawnReplacement",
+   "category": "model-witness",
+   "reason": "the same costs with a larger part shared alike: the shapers fix with more weight; a fact about one constructed population, not a law of the unfolding (Becoming.DrawnReplacement, AJ8)"
+  },
+  "Becoming.RuleShaping.grouped_alike_iff": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "with groups alike in how many shape, the whole selects for shaping exactly where c < s: a law of selection on counts of two kinds listed as groups of equal size, for every rule after shaping whose shapers give their group a shared part; the base states no shaping of the rule, so nothing on it uses this law (Becoming.RuleShaping, AJ8)"
+  },
+  "Becoming.RuleShaping.grouped_kept_rises": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "where c < s the whole selects for shaping however the groups are formed: a law of selection on counts of two kinds listed as groups of equal size, for every rule after shaping whose shapers give their group a shared part; the base states no shaping of the rule, so nothing on it uses this law (Becoming.RuleShaping, AJ8)"
+  },
+  "Becoming.RuleShaping.grouped_uniform_iff": {
+   "module": "Becoming.RuleShaping",
+   "category": "general-structure",
+   "reason": "with the shapers together, the whole selects for shaping exactly where c < s + m q: a law of selection on counts of two kinds listed as groups of equal size, for every rule after shaping whose shapers give their group a shared part; the base states no shaping of the rule, so nothing on it uses this law (Becoming.RuleShaping, AJ8)"
+  },
+  "Becoming.RuleShaping.Assorting.either_verdict": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "a cost of two above one coming back alone, shaping selected with the shapers together and against with them apart; a fact about one constructed family, not a law of the unfolding (Becoming.RuleShaping, AJ8)"
+  },
+  "Becoming.RuleShaping.Assorting.mixed_grouped": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "the mixed founding, its rule after shaping listed in groups, meets the grouped premise; a fact about one constructed family, not a law of the unfolding (Becoming.RuleShaping, AJ8)"
+  },
+  "Becoming.Optimum.Coupled.perfect_uncoupled": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "general-structure",
+   "reason": "with no coupling the coupled notion of a perfect profile in turn is drawers in turn's own: a law of drawers whose worth counts c for each step a positive need m is met, over any law of what stands next or the gated renewal for every m, q and c; the base states no drawers or worth, so nothing on it uses this law (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.Optimum.Coupled.gated_threshold": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "general-structure",
+   "reason": "on the gated renewal, two drawers or more in turn and no floor, the threshold is the need, whatever the renewal: below it every perfect profile drains, above it every one keeps exactly the need: a law of drawers whose worth counts c for each step a positive need m is met, over any law of what stands next or the gated renewal for every m, q and c; the base states no drawers or worth, so nothing on it uses this law (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.Optimum.Coupled.one_keeps_several_drain": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "general-structure",
+   "reason": "on the gated renewal where c < m and 0 < c + q, over two steps, one drawer keeps the need at the first step where two or more in turn drain: a law of drawers whose worth counts c for each step a positive need m is met, over any law of what stands next or the gated renewal for every m, q and c; the base states no drawers or worth, so nothing on it uses this law (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "general-structure",
+   "reason": "drawing at once, where what is left returns nothing, drawing everything is perfect exactly where c ≤ m wherever a portion reaches the need: a law of drawers whose worth counts c for each step a positive need m is met, over any law of what stands next or the gated renewal for every m, q and c; the base states no drawers or worth, so nothing on it uses this law (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.Optimum.Coupled.one_perfect": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "model-witness",
+   "reason": "on the gated renewal with one drawer, keeping the need at the first of two steps and drawing everything at the last is perfect, so one_keeps_first holds of a profile that exists; a fact about one constructed profile, not a law of the unfolding (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect": {
+   "module": "Becoming.CoupledDrawers",
+   "category": "model-witness",
+   "reason": "two shores, each below the need and together reaching it, the level left as it is: drawing everything is perfect at every coupling and the need is met at no step, though leaving all they reach would meet it; a fact about one constructed pair of portions, not a law of the unfolding (Becoming.CoupledDrawers, CDR)"
   }
  },
  "instances": {

@@ -173,6 +173,7 @@ import Becoming.ClosedCapture
 import Becoming.RuleShaping
 import Becoming.ChoiceCountCapture
 import Becoming.DrawnShaping
+import Becoming.DrawnReplacement
 import Becoming.ReadInTime
 import Becoming.PatternPassing
 import Becoming.JointKeeping
@@ -342,6 +343,7 @@ import Becoming.PairSelection
 import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.OptimumSeason
+import Becoming.CoupledDrawers
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
@@ -2291,6 +2293,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   alone, give no room, and the orders by the catch alone and by the ground's have optima keeping
   and ending. Over seasons with natural-number weights the bay left is at most `40(1 − ν)` and
   `ν ≤ 1 − 3p/40`. A leaf (board item LA4).
+* `Becoming.CoupledDrawers` (L1): several drawers over a horizon, each with `c` in its worth for
+  each step at which what all leave meets a positive need `m`. In turn, with two drawers or more and no
+  floor, where `c < m` every perfect profile leaves nothing at every step before the horizon,
+  whatever the renewal (`Optimum.Coupled.drains_below`); under the gate, where `m < c` every
+  perfect profile leaves exactly the need of an amount meeting it and nothing of a smaller one
+  (`Optimum.Coupled.kept_above`), so on a gated renewal the threshold is the need, not the renewal
+  forgone a step nor the joint capacity (`Optimum.Coupled.gated_threshold`); there, where `c < m`
+  and `0 < c + q`, one drawer keeps the need at the first of two steps where several in turn drain
+  (`Optimum.Coupled.one_keeps_several_drain`). At once, the
+  drain is perfect exactly where no drawer alone gains more than it leaves
+  (`Optimum.Coupled.AtOnce.drain_perfect_iff`), at every `c` where no portion reaches the need and
+  none returns more than one for one (`Optimum.Coupled.AtOnce.unpivotal_drain_perfect`). A leaf
+  (board item CDR).
 * `Becoming.SetPointOptimum` (L1): what an order with a set point does beyond what couples in. An
   order nearing a set point of the family ranks above every outcome lying, at each condition,
   between the set point and the other and nearer at one (`Nearing`, by `Regulation.Between`):
@@ -2610,7 +2625,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.RuleShaping` (L1): the capacity to shape the rule, selected by what comes back to it.
   On `RuleCapture`'s counts the carriers are shapers: each leaves `a + s + p` offspring and each
   other `a + c + p`, `s` what comes back to the shapers alone, `p` what comes to every member alike,
-  `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`;
+  `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`
+  comes to every member alike; listed in groups whose shapers give the group's shared part, the whole
+  selects for shaping exactly where `c` times the spread falls short of `s` times it with `m q` times
+  the spread among groups (`grouped_rises_iff`), read over the rationals as `c < s + m q ρ`;
   a larger `p` pulls the rule toward even; a smaller cost gives a rule not lower, a strictly smaller
   one a strictly higher rule; with nothing coming back and a cost the shapers' share falls at every
   step, the shapers present, and with no cost and nothing coming back it stays. Selection by rules
@@ -2652,6 +2670,22 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   mass and falling strictly below it, the shapers present (`drawn_rises`, `drawn_falls`). A leaf: the
   join of `RuleShaping`'s shaping with `ClosedCapture`'s readers, which nothing below needs (board
   item MA4).
+* `Becoming.DrawnReplacement` (L1): the stag hunt of drawn shaping, drawn one member at a time. The
+  rule read at `i` shapers among `M + 1` gives the weights of `Drift.Replacement`'s chain with weights
+  read from the count: up the shapers' count of the rule read (`up`), down the others' (`down`), and
+  a step leaving the count weighed so every step weighs alike (`steps`). Favouring at a count is
+  `down ≤ up` there (`favours_iff`), and with `lo ≤ hi` the shapers' weight does not fall with their
+  count (`up_mono`). Drift's fixation bounds hold (`fixation`); losing every shaper weighs at least
+  `down ^ i` times every later history, above the critical mass too (`lost_ge`), and fixing them at
+  least `a ^ k` (`fixed_ge`); above a count favouring the shapers, the histories losing them from
+  `s + n` weigh, times the shapers' weights across the stretch, at most `t · down ^ n` times the whole
+  (`lost_above`), and below one favouring the others likewise for fixing them (`fixed_below`). The
+  potential's first step is the shapers' weights at the mixed counts multiplied and its last
+  `down ^ M` (`one_each`); at an even population the rule read favours the shapers strictly exactly
+  where `2 · c < hi + lo` (`risk_dominant_iff`). Witnesses: five members, the shapers risk dominant
+  and one other fixing with more weight (`Strong.other_first`), reversed by the base or by the part shared alike
+  (`Weak.shapers_first`, `Weak.shared_decides`). A leaf: the join of `DrawnShaping`'s critical mass
+  with 04 §6's replacement chain, which nothing below needs (board item AJ8).
 * `Becoming.ReadInTime` (L1): the loss read in time by the others, joined to the critical mass. The
   rule read is `ClosedCapture.Thinned.lossPool` over three of `RuleShaping`'s rules after shaping:
   the shapers among the readers read `hi` coming back to the shapers, whatever the loss, and the

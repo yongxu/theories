@@ -71,7 +71,7 @@ The optimality condition of dynamic programming (Bellman 1957); the common-prope
 - related, not a proved adapter: [drawers-in-turn-within-capacities](drawers-in-turn-within-capacities.md). Superseded by this record, its laws now cases of the one model.
 - related, not a proved adapter: [any-number-of-drawers-in-turn](any-number-of-drawers-in-turn.md). Superseded by this record, its laws now cases of the one model.
 
-**Used by:** [a-race-for-position-draws-everything](a-race-for-position-draws-everything.md)
+**Used by:** [a-race-for-position-draws-everything](a-race-for-position-draws-everything.md) · [coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it](coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md)
 
 <a id="sources--来源"></a>
 ### Sources

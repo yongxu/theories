@@ -1,0 +1,157 @@
+@Becoming.Web.splice_before : ∀ {C : Type} {h t : Nat} {l m : Nat → C → Nat}, t < h → Becoming.Web.splice h l m t = l t
+@Becoming.Web.splice_from : ∀ {C : Type} {h t : Nat} {l m : Nat → C → Nat}, h ≤ t → Becoming.Web.splice h l m t = m t
+@Becoming.Web.eventually_dense : ∀ {F C : Type} {W : Becoming.Web F C} {l' m : Nat → C → Nat},
+  W.EventuallyWidens m l' → Becoming.Dense fun r => W.EventuallyWidens r.act l'
+@Becoming.Web.not_eventually_dense : ∀ {F C : Type} {W : Becoming.Web F C} {l' : Nat → C → Nat},
+  Becoming.Dense fun r => ¬W.EventuallyWidens r.act l'
+@Becoming.Web.eventually_neither : ∀ {F C : Type} {W : Becoming.Web F C} {l' m : Nat → C → Nat},
+  W.EventuallyWidens m l' →
+    (¬Becoming.Verifiable fun r => W.EventuallyWidens r.act l') ∧
+      ¬Becoming.Refutable fun r => W.EventuallyWidens r.act l'
+@Becoming.Web.eventually_insulated : ∀ {F C : Type} {W : Becoming.Web F C} {l' m : Nat → C → Nat},
+  W.EventuallyWidens m l' → ∃ V, Becoming.ByRecord V ∧ Becoming.Insulates V fun r => W.EventuallyWidens r.act l'
+@Becoming.Web.lt_stepBound : ∀ {F : Type} {ps : List (Nat × F)} {p : Nat × F},
+  p ∈ ps → p.fst < Becoming.Web.stepBound ps
+@Becoming.Web.not_eventually_of_listed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {items : List (Nat × F)}, W.ListsAdmitted items l → ¬W.EventuallyWidens l l'
+@Becoming.Flow.OpenedByOpened.not_of_unsupported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {T : Nat}, (∀ (t : Nat) (f : F), T ≤ t → ¬W.Supported t f) → ∀ (T' : Nat), ¬L.OpenedByOpened W T'
+@Becoming.OwnCondition.rung_pos : ∀ {c t : Nat}, c ≤ t → 0 < Becoming.OwnCondition.rung c t
+@Becoming.OwnCondition.le_of_rung_pos : ∀ {c t : Nat}, 0 < Becoming.OwnCondition.rung c t → c ≤ t
+Becoming.OwnCondition.rung_mono : ∀ (c t : Nat), Becoming.OwnCondition.rung c t ≤ Becoming.OwnCondition.rung c (t + 1)
+@Becoming.OwnCondition.rung_zero : ∀ {c t : Nat}, t < c → Becoming.OwnCondition.rung c t = 0
+@Becoming.OwnCondition.admits_iff : ∀ {m : Nat → Nat} {t n : Nat}, Becoming.OwnCondition.web.Admits m t n ↔ 0 < m n
+@Becoming.OwnCondition.rising_iff : ∀ {t n : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.OwnCondition.rising t) t n ↔ n ≤ t
+@Becoming.OwnCondition.burst_zero_iff : ∀ {n : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.OwnCondition.burst 0) 0 n ↔ n ≤ 1
+@Becoming.OwnCondition.burst_later : ∀ {t n : Nat},
+  ¬Becoming.OwnCondition.web.Admits (Becoming.OwnCondition.burst (t + 1)) (t + 1) n
+@Becoming.OwnCondition.full_admits : ∀ {t n : Nat}, Becoming.OwnCondition.web.Admits (Becoming.OwnCondition.full t) t n
+@Becoming.OwnCondition.zero_of_le_zero : ∀ {t : Nat}, t ≤ 0 → t = 0
+Becoming.OwnCondition.burst_widens_now : Becoming.OwnCondition.web.WidensUpTo 0 Becoming.OwnCondition.burst
+  Becoming.OwnCondition.rising
+Becoming.OwnCondition.mixed : Becoming.OwnCondition.web.Mixed Becoming.OwnCondition.rising Becoming.OwnCondition.burst
+Becoming.OwnCondition.rising_eventually_widens_burst : Becoming.OwnCondition.web.EventuallyWidens
+  Becoming.OwnCondition.rising Becoming.OwnCondition.burst
+Becoming.OwnCondition.rising_keeps_widening : Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself
+  Becoming.OwnCondition.rising 0
+Becoming.OwnCondition.burst_not_opening : ∀ (T : Nat),
+  ¬Becoming.OwnCondition.web.KeepsOpening Becoming.Web.itself Becoming.OwnCondition.burst T
+Becoming.OwnCondition.burst_not_keeps_widening : ∀ (T : Nat),
+  ¬Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.OwnCondition.burst T
+Becoming.OwnCondition.disagreement : Becoming.OwnCondition.web.WidensUpTo 0 Becoming.OwnCondition.burst
+    Becoming.OwnCondition.rising ∧
+  Becoming.OwnCondition.web.Mixed Becoming.OwnCondition.rising Becoming.OwnCondition.burst ∧
+    Becoming.OwnCondition.web.EventuallyWidens Becoming.OwnCondition.rising Becoming.OwnCondition.burst ∧
+      Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.OwnCondition.rising 0 ∧
+        ∀ (T : Nat), ¬Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.OwnCondition.burst T
+Becoming.OwnCondition.full_widens_rising : Becoming.OwnCondition.web.Widens Becoming.OwnCondition.full
+  Becoming.OwnCondition.rising
+Becoming.OwnCondition.full_eventually_widens_rising : Becoming.OwnCondition.web.EventuallyWidens
+  Becoming.OwnCondition.full Becoming.OwnCondition.rising
+Becoming.OwnCondition.full_not_opening : ∀ (T : Nat),
+  ¬Becoming.OwnCondition.web.KeepsOpening Becoming.Web.itself Becoming.OwnCondition.full T
+Becoming.OwnCondition.not_monotone : Becoming.OwnCondition.web.Widens Becoming.OwnCondition.full
+    Becoming.OwnCondition.rising ∧
+  Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.OwnCondition.rising 0 ∧
+    ∀ (T : Nat), ¬Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.OwnCondition.full T
+Becoming.OwnCondition.not_opened : ∀ (L : Becoming.Flow Nat Nat) (T : Nat),
+  ¬L.OpenedByOpened Becoming.OwnCondition.web T
+@Becoming.LagWitness.lagging_iff : ∀ {t n : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.LagWitness.lagging t) t n ↔ n < t
+@Becoming.LagWitness.travelling_iff : ∀ {t n : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.LagWitness.travelling t) t n ↔ n = t
+Becoming.LagWitness.lagging_keeps_widening : Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself
+  Becoming.LagWitness.lagging 0
+@Becoming.LagWitness.kept_later : ∀ {t u n : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.LagWitness.travelling t) t n →
+    t < u → Becoming.OwnCondition.web.Admits (Becoming.LagWitness.lagging u) u n
+Becoming.LagWitness.not_eventually_lagging : ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.lagging
+    Becoming.LagWitness.travelling
+Becoming.LagWitness.not_eventually_travelling : ¬Becoming.OwnCondition.web.EventuallyWidens
+    Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.LagWitness.lag : Becoming.OwnCondition.web.KeepsWidening Becoming.Web.itself Becoming.LagWitness.lagging 0 ∧
+  (∀ (t u n : Nat),
+      Becoming.OwnCondition.web.Admits (Becoming.LagWitness.travelling t) t n →
+        t < u → Becoming.OwnCondition.web.Admits (Becoming.LagWitness.lagging u) u n) ∧
+    ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.lagging Becoming.LagWitness.travelling ∧
+      ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.MergedWitness.admits : ∀ (m : Unit → Nat) (t : Nat) (f : Bool), Becoming.MergedWitness.web.Admits m t f
+@Becoming.MergedWitness.into_true_aux : ∀ {s : Nat} {g : Bool} {u : Nat} {h : Bool},
+  Becoming.Web.Linked Becoming.MergedWitness.merge s g u h → h = true → s = u ∧ g = true
+@Becoming.MergedWitness.into_true : ∀ {s : Nat} {g : Bool} {u : Nat},
+  Becoming.Web.Linked Becoming.MergedWitness.merge s g u true → s = u ∧ g = true
+Becoming.MergedWitness.to_false : ∀ (k s : Nat) (g : Bool),
+  Becoming.Web.Linked Becoming.MergedWitness.merge s g (s + 1 + k) false
+Becoming.MergedWitness.keeps_widening_along_merge : Becoming.MergedWitness.web.KeepsWidening
+  Becoming.MergedWitness.merge Becoming.MergedWitness.steady 0
+Becoming.MergedWitness.listed : ∀ (f : Bool), f ∈ [false, true]
+Becoming.MergedWitness.not_keeps_widening_by_name : ∀ (T : Nat),
+  ¬Becoming.MergedWitness.web.KeepsWidening Becoming.Web.itself Becoming.MergedWitness.steady T
+Becoming.OpeningChain.level_rising : Becoming.OpeningChain.web.level = Becoming.OwnCondition.rising
+@Becoming.OpeningChain.supported_iff : ∀ {t n : Nat}, Becoming.OpeningChain.web.Supported t n ↔ n ≤ t
+@Becoming.OpeningChain.gains_iff : ∀ {t f : Nat}, Becoming.OpeningChain.web.GainsSupport t f ↔ f = t + 1
+Becoming.OpeningChain.rises_next : ∀ (t : Nat), Becoming.OpeningChain.web.Rises t (t + 1)
+Becoming.OpeningChain.opening_pos : ∀ (t : Nat), 0 < Becoming.OpeningChain.opening t (t + 1)
+Becoming.OpeningChain.balanced_step : ∀ (t c : Nat),
+  Becoming.OwnCondition.rung c (t + 1) = Becoming.OwnCondition.rung c t + Becoming.OpeningChain.opening t c
+Becoming.OpeningChain.relay_balances : Becoming.OpeningChain.relay.Balances Becoming.OpeningChain.web
+Becoming.OpeningChain.oneGiver_balances : Becoming.OpeningChain.oneGiver.Balances Becoming.OpeningChain.web
+Becoming.OpeningChain.relay_acting : Becoming.OpeningChain.relay.Acting Becoming.OpeningChain.web
+Becoming.OpeningChain.oneGiver_acting : Becoming.OpeningChain.oneGiver.Acting Becoming.OpeningChain.web
+Becoming.OpeningChain.dependent : Becoming.OpeningChain.web.Dependent
+Becoming.OpeningChain.relay_opened : Becoming.OpeningChain.relay.OpenedByOpened Becoming.OpeningChain.web 0
+Becoming.OpeningChain.oneGiver_not_opened : ¬Becoming.OpeningChain.oneGiver.OpenedByOpened Becoming.OpeningChain.web 0
+Becoming.OpeningChain.carried : Becoming.OpeningChain.relay.Balances Becoming.OpeningChain.web ∧
+  Becoming.OpeningChain.oneGiver.Balances Becoming.OpeningChain.web ∧
+    Becoming.OpeningChain.relay.Acting Becoming.OpeningChain.web ∧
+      Becoming.OpeningChain.oneGiver.Acting Becoming.OpeningChain.web ∧
+        Becoming.OpeningChain.web.Dependent ∧
+          Becoming.OpeningChain.relay.OpenedByOpened Becoming.OpeningChain.web 0 ∧
+            ¬Becoming.OpeningChain.oneGiver.OpenedByOpened Becoming.OpeningChain.web 0
+Becoming.Saturated.level_full : Becoming.Saturated.web.level = Becoming.OwnCondition.full
+Becoming.Saturated.still_balances : Becoming.Saturated.still.Balances Becoming.Saturated.web
+Becoming.Saturated.still_not_opened : ∀ (T : Nat), ¬Becoming.Saturated.still.OpenedByOpened Becoming.Saturated.web T
+Becoming.Saturated.reverses : Becoming.OpeningChain.relay.OpenedByOpened Becoming.OpeningChain.web 0 ∧
+  Becoming.OpeningChain.web.level = Becoming.OwnCondition.rising ∧
+    (∀ (T : Nat), ¬Becoming.Saturated.still.OpenedByOpened Becoming.Saturated.web T) ∧
+      Becoming.Saturated.web.level = Becoming.OwnCondition.full ∧
+        Becoming.OwnCondition.web.Widens Becoming.OwnCondition.full Becoming.OwnCondition.rising
+@Becoming.ClosedCycle.mark_pos_iff : ∀ {a b : Bool}, 0 < Becoming.ClosedCycle.mark a b ↔ a = b
+Becoming.ClosedCycle.mark_self : ∀ (a : Bool), Becoming.ClosedCycle.mark a a = 1
+Becoming.ClosedCycle.mark_not_left : ∀ (a : Bool), Becoming.ClosedCycle.mark (!a) a = 0
+Becoming.ClosedCycle.not_ne : ∀ (a : Bool), (!a) ≠ a
+@Becoming.ClosedCycle.supported_iff : ∀ {t : Nat} {f : Bool},
+  Becoming.ClosedCycle.web.Supported t f ↔ f = Becoming.ClosedCycle.parity t
+@Becoming.ClosedCycle.gains_iff : ∀ {t : Nat} {f : Bool},
+  Becoming.ClosedCycle.web.GainsSupport t f ↔ f = Becoming.ClosedCycle.parity (t + 1)
+Becoming.ClosedCycle.balances : Becoming.ClosedCycle.flow.Balances Becoming.ClosedCycle.web
+Becoming.ClosedCycle.acting : Becoming.ClosedCycle.flow.Acting Becoming.ClosedCycle.web
+Becoming.ClosedCycle.dependent : Becoming.ClosedCycle.web.Dependent
+@Becoming.ClosedCycle.rises_at : ∀ {t : Nat} {f : Bool},
+  f = Becoming.ClosedCycle.parity (t + 1) → Becoming.ClosedCycle.web.Rises t f
+@Becoming.ClosedCycle.give_pos : ∀ {t : Nat} {f : Bool},
+  f = Becoming.ClosedCycle.parity (t + 1) → 0 < Becoming.ClosedCycle.flow.give t (Becoming.ClosedCycle.parity t) f
+Becoming.ClosedCycle.opened : Becoming.ClosedCycle.flow.OpenedByOpened Becoming.ClosedCycle.web 0
+Becoming.ClosedCycle.linked_parity : ∀ (k S : Nat),
+  Becoming.Web.Linked Becoming.ClosedCycle.passing S (Becoming.ClosedCycle.parity S) (S + k)
+    (Becoming.ClosedCycle.parity (S + k))
+@Becoming.ClosedCycle.linked_to : ∀ {S U : Nat},
+  S ≤ U →
+    Becoming.Web.Linked Becoming.ClosedCycle.passing S (Becoming.ClosedCycle.parity S) U (Becoming.ClosedCycle.parity U)
+Becoming.ClosedCycle.includes_across : Becoming.ClosedCycle.web.IncludesAcrossFrom Becoming.ClosedCycle.passing
+  Becoming.ClosedCycle.web.level 0
+Becoming.ClosedCycle.not_opening : ∀ (T : Nat),
+  ¬Becoming.ClosedCycle.web.KeepsOpening Becoming.ClosedCycle.passing Becoming.ClosedCycle.web.level T
+Becoming.ClosedCycle.listed : ∀ (f : Bool), f ∈ [false, true]
+Becoming.ClosedCycle.not_keeps_widening_by_name : ∀ (T : Nat),
+  ¬Becoming.ClosedCycle.web.KeepsWidening Becoming.Web.itself Becoming.ClosedCycle.web.level T
+Becoming.ClosedCycle.cycle : Becoming.ClosedCycle.flow.Balances Becoming.ClosedCycle.web ∧
+  Becoming.ClosedCycle.flow.Acting Becoming.ClosedCycle.web ∧
+    Becoming.ClosedCycle.web.Dependent ∧
+      Becoming.ClosedCycle.flow.OpenedByOpened Becoming.ClosedCycle.web 0 ∧
+        Becoming.ClosedCycle.web.IncludesAcrossFrom Becoming.ClosedCycle.passing Becoming.ClosedCycle.web.level 0 ∧
+          (∀ (T : Nat),
+              ¬Becoming.ClosedCycle.web.KeepsOpening Becoming.ClosedCycle.passing Becoming.ClosedCycle.web.level T) ∧
+            ∀ (T : Nat), ¬Becoming.ClosedCycle.web.KeepsWidening Becoming.Web.itself Becoming.ClosedCycle.web.level T

@@ -1,0 +1,303 @@
+{
+  "schema_version": 2,
+  "id": "drawn-shaping-drawn-one-at-a-time",
+  "title": {
+    "en": "The critical mass, drawn one member at a time",
+    "zh": "临界量，逐一而抽"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
+  "statement": {
+    "en": "Drawn one member at a time, the stag hunt of shapers and readers drawn from the selected leaves either lock by drift, at a weight whose bound falls across the distance from the critical mass; which state a member arising fixes more often is a product of weights that can part from risk dominance.",
+    "zh": "逐一而抽时，塑规者与取自被选者之读者之猎鹿局以漂变离开任一锁定，其权之界随距临界量之远而降；一新成员更常定于何态，为可与风险占优相离之权之积。"
+  },
+  "laws": [
+    {
+      "en": "Among M + 1 members with i shapers, a step replaces an other by a shaper's offspring with weight the shapers' count of the rule read at i, a shaper by an other's with the others' count, and stays with a weight that makes every step weigh alike; the rule read favours the shapers at a count exactly where their weight is at least the others', and with lo ≤ hi their weight does not fall as their count grows.",
+      "zh": "M + 1 成员中有 i 塑规者，一步以塑规者之后代替一他者，其权为 i 处所读规则中塑规者之计数，以他者之后代替一塑规者，其权为他者之计数，留而不变者之权使每步同权；某计数处所读之规则偏向塑规者恰当其权不小于他者之权，lo ≤ hi 时其权不随其数增而降。",
+      "declarations": [
+        "Becoming.DrawnReplacement.up",
+        "Becoming.DrawnReplacement.down",
+        "Becoming.DrawnReplacement.stay",
+        "Becoming.DrawnReplacement.whole",
+        "Becoming.DrawnReplacement.at_",
+        "Becoming.DrawnReplacement.sub_split",
+        "Becoming.DrawnReplacement.drawn_carrier",
+        "Becoming.DrawnReplacement.drawn_other",
+        "Becoming.DrawnReplacement.favours_iff",
+        "Becoming.DrawnReplacement.up_mono",
+        "Becoming.DrawnReplacement.steps"
+      ]
+    },
+    {
+      "en": "This is the replacement chain with weights read from the count, so its bounds hold: over rounds of M + 1 steps the histories still varied vanish geometrically, and the share fixing the shapers tends to the potential at the start over the potential at the top.",
+      "zh": "此即权读自计数之替换链，故其诸界成立：每 M + 1 步一轮，尚变之历史几何递减，定于塑规者之份趋于起点之势比顶点之势。",
+      "declarations": [
+        "Becoming.DrawnReplacement.up_ge",
+        "Becoming.DrawnReplacement.up_pos",
+        "Becoming.DrawnReplacement.a_le_whole",
+        "Becoming.DrawnReplacement.fixation"
+      ]
+    },
+    {
+      "en": "Noise leaves either lock: from every mixed count the histories losing every shaper weigh at least down^i times every later history, above the critical mass too, and those fixing them at least a^k within reach of the top, below it too.",
+      "zh": "噪声离开任一锁定：自每一混合计数，失尽塑规者之历史之权至少为 down^i 乘其后每一历史，临界量之上亦然；定于塑规者者于可及顶点处至少为 a^k，临界量之下亦然。",
+      "declarations": [
+        "Becoming.DrawnReplacement.lost_ge",
+        "Becoming.DrawnReplacement.fixed_ge"
+      ]
+    },
+    {
+      "en": "Across the distance: where the rule read at s favours the shapers, from s + n with t to the top, losing every shaper weighs, times the shapers' weights over s + 1 … s + n, at most t times down^n times the whole weight; below the mass, fixing them from j + 1 is bounded the other way.",
+      "zh": "跨距离：s 处所读之规则偏向塑规者时，自 s + n 起、距顶 t，失尽塑规者之权乘 s + 1 … s + n 处塑规者之权，至多为 t 乘 down^n 乘全权；临界量之下，自 j + 1 定于塑规者者反向为界。",
+      "declarations": [
+        "Becoming.DrawnReplacement.lost_above",
+        "Becoming.DrawnReplacement.fixed_below"
+      ]
+    },
+    {
+      "en": "From one member of either kind among the other, the potential's first step is the product of the shapers' weights over the mixed counts and its last down^M; at an even population the rule read favours the shapers strictly exactly where 2c < hi + lo, risk dominance in counts.",
+      "zh": "自一员处于他类之中，势之首步为诸混合计数上塑规者之权之积，末步为 down^M；人数均等时所读之规则严格偏向塑规者恰当 2c < hi + lo，即计数中之风险占优。",
+      "declarations": [
+        "Becoming.DrawnReplacement.one_each",
+        "Becoming.DrawnReplacement.risk_dominant_iff"
+      ]
+    },
+    {
+      "en": "Witnesses: five members, a = 1, nothing shared, c = 9, hi = 20, lo = 0: the shapers are risk dominant and the mass lies between the ends, yet the first step, 6,215,625, falls short of the last, 6,250,000; with a = 100, or with 99 to every member alike, the first exceeds the last.",
+      "zh": "见证：五成员，a = 1，无同得，c = 9，hi = 20，lo = 0：塑规者风险占优，临界量在两端之间，然首步 6,215,625 小于末步 6,250,000；a = 100，或每人同得 99 时，首步大于末步。",
+      "declarations": [
+        "Becoming.DrawnReplacement.Strong.other_first",
+        "Becoming.DrawnReplacement.Weak.shapers_first",
+        "Becoming.DrawnReplacement.Weak.shared_decides"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: DrawnShaping's model (readers counted as the population counts them, a positive, hi, lo, p and c constants, lo ≤ hi for the chain); offspring drawn one member at a time among M + 1, each member counted among its own readers; a step leaving the count weighed only to make every step weigh alike.",
+      "zh": "不加公理，除各律所带者外不加前提：DrawnShaping 之模型（读者如众之计数而计，a 为正，hi、lo、p、c 为常数，链需 lo ≤ hi）；M + 1 成员中逐一而抽后代，每成员计入其自身之读者；不改计数之步加权仅为使每步同权。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual rules are drawn one member at a time, or read by readers drawn from those they select: these are premises.",
+      "zh": "实有之规则逐一而抽，或由取自其所选者之读者读之：此皆前提。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The long-run state under rare mutation, the one with the larger fixation weight (Fudenberg and Imhof 2006), which is cited; mutation and a time to leave a lock beyond the geometric bound are not stated.",
+      "zh": "罕有突变下之长期之态，即固定权较大者（Fudenberg 与 Imhof 2006），仅引用；突变与几何界之外离开锁定之时未述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Sampled generations with selection (Wright-Fisher), readers who learn, and counts that accumulate instead of being drawn (ChoiceCountCapture).",
+      "zh": "带选择之抽样世代（Wright-Fisher）、会学之读者、累积而非抽取之计数（ChoiceCountCapture）。",
+      "kind": "scope"
+    },
+    {
+      "en": "That risk dominance decides which state one member arising fixes more often: the two can part under strong selection.",
+      "zh": "风险占优决定一新成员更常定于何态：强选择下二者可相离。",
+      "kind": "non-implication",
+      "witness": "Becoming.DrawnReplacement.Strong.other_first"
+    },
+    {
+      "en": "That the base and the part shared by all leave which state fixes more often alone: they move no critical mass, yet they decide it.",
+      "zh": "基数与众人同得之部不改何态更常被定：其不移临界量，然决定之。",
+      "kind": "non-implication",
+      "witness": "Becoming.DrawnReplacement.Weak.shared_decides"
+    },
+    {
+      "en": "That leaving a lock by drift is better or worse than keeping it: ranking courses needs C.",
+      "zh": "以漂变离开锁定优于或劣于守之：排序进程须 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T102739.294112Z): Becoming.DrawnReplacement and Becoming.Drift, every declaration cited here with an empty axiom report. Built in one session, the texts restating it read against their homes by the author; not reviewed by a person.",
+    "zh": "由核心检查器以 Lean 4.29.1 实查（回执 20261103T102739.294112Z）：Becoming.DrawnReplacement 与 Becoming.Drift，此处所引声明之公理报告皆空。于一会话中构建，复述之文由作者对照其主节读过；未经人审。"
+  },
+  "next_delta": {
+    "en": "Mutation with drift and the time to leave a lock; sampled generations; drift for counts that accumulate; an independent review by a person.",
+    "zh": "带漂变之突变与离开锁定之时；抽样世代；累积计数之漂变；人之独立审查。"
+  },
+  "correspondence": {
+    "en": "The Moran process (Moran 1958) of a two-strategy game in a finite population (Nowak, Sasaki, Taylor and Fudenberg 2004; Taylor, Fudenberg, Sasaki and Nowak 2004), with each member counted among its own readers; one_each, with fixation's limit, is the counting form of their ratio of fixation probabilities, the product of payoff ratios over the mixed counts. Under rare mutation the long-run shares stand as the fixation probabilities (Fudenberg and Imhof 2006). Kandori, Mailath and Rob (1993) and Young (1993) select the risk-dominant state (Harsanyi and Selten 1988), the larger basin, in their limit, which the Moran criterion approaches under weak selection (Nowak and others 2004). That a first step above the last implies 2c < hi + lo follows by pairing the counts k and M + 1 − k (the arithmetic–geometric mean inequality), an argument not checked in Lean. Read on the meta-attractor (theories/meta-attractor), its lock and its second order are one loop without noise only.",
+    "zh": "有限群体中二策略博弈之 Moran 过程（Moran 1958；Nowak、Sasaki、Taylor、Fudenberg 2004；Taylor、Fudenberg、Sasaki、Nowak 2004），每成员计入其自身之读者；one_each 合 fixation 之极限，为其固定概率之比之计数形式，即诸混合计数上收益比之积。罕有突变下长期份额如固定概率（Fudenberg 与 Imhof 2006）。Kandori、Mailath、Rob（1993）与 Young（1993）于其极限选风险占优之态（Harsanyi 与 Selten 1988），即吸引域较大者，Moran 准则于弱选择下趋之（Nowak 等 2004）。首步大于末步则 2c < hi + lo，由配对计数 k 与 M + 1 − k（算术—几何平均不等式）得之，此论证未经 Lean 检查。读于元吸引子（theories/meta-attractor），其锁定与其第二阶唯无噪声时为一回路。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
+  "history": [
+    {
+      "en": "3 November 2026, board item AJ8 (study section 503): added: DrawnShaping's stag hunt read as 04's replacement chain with weights read from the count; both exits bounded across the distance from the critical mass; risk dominance in counts and a witness where the Moran criterion parts from it.",
+      "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：新增：DrawnShaping 之猎鹿局读作 04 之权读自计数之替换链；二出口皆以距临界量之远为界；计数中之风险占优，及 Moran 准则与之相离之见证。"
+    }
+  ],
+  "aliases": [
+    "The critical mass, drawn one member at a time",
+    "临界量，逐一而抽",
+    "the stag hunt of drawn shaping with drift",
+    "Becoming.DrawnReplacement.one_each"
+  ],
+  "dependencies": [
+    {
+      "id": "fixation-with-selection",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "valueBy, Steps, riseBy, potentialBy, fixationBy, lost_geBy, climbsBy, lostBy_favoured, fixedBy_disfavoured, riseBy_ends, ups_const, downs_const.",
+        "zh": "valueBy、Steps、riseBy、potentialBy、fixationBy、lost_geBy、climbsBy、lostBy_favoured、fixedBy_disfavoured、riseBy_ends、ups_const、downs_const。"
+      }
+    },
+    {
+      "id": "shaping-read-by-readers-drawn-from-the-selected",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "drawn, drawn_split, drawn_favours_alike: the rule read at each count.",
+        "zh": "drawn、drawn_split、drawn_favours_alike：每一计数处所读之规则。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "shaping-selected-among-groups",
+      "detail": {
+        "en": "The other AJ condition read on 04's laws: shaping as a case of Hamilton's rule.",
+        "zh": "以 04 之律读之另一 AJ 条件：塑规作 Hamilton 法则之一例。"
+      }
+    },
+    {
+      "id": "loss-read-in-time-by-the-others",
+      "detail": {
+        "en": "After the loss is read the rule read is the drawn rule with lo′ for lo, so this chain applies by substitution, read at every step without the rule in force's lag; the joined course drawn is not stated.",
+        "zh": "损失既读之后所读之规则即以 lo′ 代 lo 之抽取规则，故以代入及之，每步皆读而无所行规则之滞；合并之进程逐一而抽者未述。"
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
+      "detail": {
+        "en": "Risk dominance does not decide which state one member arising fixes more often: with five members, a = 1, c = 9, hi = 20, lo = 0, the shapers are risk dominant and one other still fixes with more weight than one shaper (Strong.other_first); with a = 100 or p = 99 the order turns (Weak.shapers_first, Weak.shared_decides).",
+        "zh": "风险占优不决定一新成员更常定于何态：五成员、a = 1、c = 9、hi = 20、lo = 0，塑规者风险占优，而一他者仍较一塑规者以更大之权被定（Strong.other_first）；a = 100 或 p = 99 时次序相反（Weak.shapers_first、Weak.shared_decides）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
+      "role": "proof",
+      "sha256": "980bbbc3ec1ebced1b469f6b430c4d002cb20dfbd24b2c8d21abe447df0b0d16",
+      "declarations": [
+        "Becoming.DrawnReplacement.Strong.other_first",
+        "Becoming.DrawnReplacement.Weak.shapers_first",
+        "Becoming.DrawnReplacement.Weak.shared_decides",
+        "Becoming.DrawnReplacement.a_le_whole",
+        "Becoming.DrawnReplacement.at_",
+        "Becoming.DrawnReplacement.down",
+        "Becoming.DrawnReplacement.drawn_carrier",
+        "Becoming.DrawnReplacement.drawn_other",
+        "Becoming.DrawnReplacement.favours_iff",
+        "Becoming.DrawnReplacement.fixation",
+        "Becoming.DrawnReplacement.fixed_below",
+        "Becoming.DrawnReplacement.fixed_ge",
+        "Becoming.DrawnReplacement.lost_above",
+        "Becoming.DrawnReplacement.lost_ge",
+        "Becoming.DrawnReplacement.one_each",
+        "Becoming.DrawnReplacement.risk_dominant_iff",
+        "Becoming.DrawnReplacement.stay",
+        "Becoming.DrawnReplacement.steps",
+        "Becoming.DrawnReplacement.sub_split",
+        "Becoming.DrawnReplacement.up",
+        "Becoming.DrawnReplacement.up_ge",
+        "Becoming.DrawnReplacement.up_mono",
+        "Becoming.DrawnReplacement.up_pos",
+        "Becoming.DrawnReplacement.whole"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "role": "proof",
+      "sha256": "068cdf7eb207723ea53a7be1709e74458dfcc807f81ae04ac11da5911cfbbcaf",
+      "declarations": [
+        "Becoming.Drift.Replacement.Steps",
+        "Becoming.Drift.Replacement.climbsBy",
+        "Becoming.Drift.Replacement.downs",
+        "Becoming.Drift.Replacement.fixationBy",
+        "Becoming.Drift.Replacement.fixedBy_disfavoured",
+        "Becoming.Drift.Replacement.lostBy_favoured",
+        "Becoming.Drift.Replacement.lost_geBy",
+        "Becoming.Drift.Replacement.potentialBy",
+        "Becoming.Drift.Replacement.riseBy",
+        "Becoming.Drift.Replacement.riseBy_ends",
+        "Becoming.Drift.Replacement.ups",
+        "Becoming.Drift.Replacement.valueBy"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+      "role": "proof",
+      "sha256": "f6264373f914de09e17599b58dd6d76065e184ebeed1d1c7b6f13166372f1e55",
+      "declarations": [
+        "Becoming.DrawnShaping.drawn",
+        "Becoming.DrawnShaping.drawn_favours_alike"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md",
+      "role": "integration",
+      "sha256": "dc6db39b8122e866ebef953e1c599622f55034ec51881beb3caa047f069ad760"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "2014295e978d267eefc27cceddaa54eb50d14a38aab2d9a6423d7d55f8628790"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "91587dee64c530baec91b473d9821204518ed5988cfb96e018240b24acf82a6d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnReplacement",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Drift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnShaping",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261103T044249.876816Z",
- "core_sources_sha256": "59412efdfab6137cfff7887cddbe208a36bb1d94e569f0b21f4de3a9dfd9c9b8",
+ "core_receipt": "20261103T111154.021802Z",
+ "core_sources_sha256": "05fa33344b965183114a4be7ea1e4abe22de86be9fdcf3d50bf54d7f39f1ca01",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4113,
+  "laws": 4134,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 896,
   "balance, represented": 628,
   "anchor, not reached": 131,
-  "no shared law": 2058,
+  "no shared law": 2079,
   "vocabulary_only": 79,
   "closure": 528,
   "balance": 836,
@@ -14000,6 +14000,100 @@
     "dependence": "no shared law"
    }
   ],
+  "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Optimum.Coupled.stepCoupling",
+     "Becoming.Optimum.Coupled.drawn",
+     "Becoming.Optimum.Coupled.later",
+     "Becoming.Optimum.Coupled.Revises",
+     "Becoming.Optimum.Coupled.Perfect",
+     "Becoming.Optimum.Coupled.perfect_uncoupled"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Optimum.Coupled.drains_below",
+     "Becoming.Optimum.Coupled.drain_perfect"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Optimum.Coupled.keep",
+     "Becoming.Optimum.Coupled.kept_above",
+     "Becoming.Optimum.Coupled.keeping_perfect"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Optimum.Coupled.kept_levels"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Optimum.Coupled.gatedRenewal",
+     "Becoming.Optimum.Coupled.gated_threshold"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Optimum.Coupled.one_keeps_first",
+     "Becoming.Optimum.Coupled.one_perfect",
+     "Becoming.Optimum.Coupled.one_keeps_several_drain"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Optimum.Coupled.AtOnce.leftWith",
+     "Becoming.Optimum.Coupled.AtOnce.drawn",
+     "Becoming.Optimum.Coupled.AtOnce.later",
+     "Becoming.Optimum.Coupled.AtOnce.Revises",
+     "Becoming.Optimum.Coupled.AtOnce.Perfect",
+     "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff",
+     "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.upTo",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.shore",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "coupled-regimes": [
    {
     "law": 1,
@@ -15279,6 +15373,80 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "drawn-shaping-drawn-one-at-a-time": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.DrawnReplacement.up",
+     "Becoming.DrawnReplacement.down",
+     "Becoming.DrawnReplacement.stay",
+     "Becoming.DrawnReplacement.whole",
+     "Becoming.DrawnReplacement.at_",
+     "Becoming.DrawnReplacement.sub_split",
+     "Becoming.DrawnReplacement.drawn_carrier",
+     "Becoming.DrawnReplacement.drawn_other",
+     "Becoming.DrawnReplacement.favours_iff",
+     "Becoming.DrawnReplacement.up_mono",
+     "Becoming.DrawnReplacement.steps"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.DrawnReplacement.up_ge",
+     "Becoming.DrawnReplacement.up_pos",
+     "Becoming.DrawnReplacement.a_le_whole",
+     "Becoming.DrawnReplacement.fixation"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.DrawnReplacement.lost_ge",
+     "Becoming.DrawnReplacement.fixed_ge"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.DrawnReplacement.lost_above",
+     "Becoming.DrawnReplacement.fixed_below"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.DrawnReplacement.one_each",
+     "Becoming.DrawnReplacement.risk_dominant_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.DrawnReplacement.Strong.other_first",
+     "Becoming.DrawnReplacement.Weak.shapers_first",
+     "Becoming.DrawnReplacement.Weak.shared_decides"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "draws-on-a-shared-stock": [
@@ -19047,6 +19215,58 @@
    },
    {
     "law": 5,
+    "declarations": [
+     "Becoming.Drift.Replacement.valueBy",
+     "Becoming.Drift.Replacement.Steps",
+     "Becoming.Drift.Replacement.valueBy_mixed",
+     "Becoming.Drift.Replacement.valueBy_one_kind",
+     "Becoming.Drift.Replacement.valueBy_stays",
+     "Becoming.Drift.Replacement.valueBy_add",
+     "Becoming.Drift.Replacement.valueBy_mul",
+     "Becoming.Drift.Replacement.valueBy_le",
+     "Becoming.Drift.Replacement.valueBy_congr",
+     "Becoming.Drift.Replacement.valueBy_const",
+     "Becoming.Drift.Replacement.valueBy_comp",
+     "Becoming.Drift.Replacement.downs",
+     "Becoming.Drift.Replacement.ups",
+     "Becoming.Drift.Replacement.riseBy",
+     "Becoming.Drift.Replacement.potentialBy",
+     "Becoming.Drift.Replacement.riseBy_step",
+     "Becoming.Drift.Replacement.potentialBy_harmonic",
+     "Becoming.Drift.Replacement.valueBy_potential",
+     "Becoming.Drift.Replacement.steps_const",
+     "Becoming.Drift.Replacement.rise_closed"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Drift.Replacement.valueBy_partition",
+     "Becoming.Drift.Replacement.fixedBy_below",
+     "Becoming.Drift.Replacement.potentialBy_within",
+     "Becoming.Drift.Replacement.fixationBy_bounds",
+     "Becoming.Drift.Replacement.climbsBy",
+     "Becoming.Drift.Replacement.varied_stepBy",
+     "Becoming.Drift.Replacement.varied_vanishesBy",
+     "Becoming.Drift.Replacement.fixationBy",
+     "Becoming.Drift.Replacement.lost_geBy",
+     "Becoming.Drift.Replacement.riseBy_shift",
+     "Becoming.Drift.Replacement.potentialBy_tail",
+     "Becoming.Drift.Replacement.potentialBy_head",
+     "Becoming.Drift.Replacement.lostBy_bounds",
+     "Becoming.Drift.Replacement.lostBy_favoured",
+     "Becoming.Drift.Replacement.fixedBy_disfavoured",
+     "Becoming.Drift.Replacement.riseBy_ends"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
     "declarations": [
      "Becoming.Drift.Favoured.two_members"
     ],
@@ -43843,6 +44063,17 @@
    {
     "law": 5,
     "declarations": [
+     "Becoming.SelectionLevels.within_kept",
+     "Becoming.SelectionLevels.among_kept",
+     "Becoming.SelectionLevels.rises_iff_kept"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
      "Becoming.SelectionLevels.Founding.keeps",
      "Becoming.SelectionLevels.Founding.assorted",
      "Becoming.SelectionLevels.Founding.mixed",
@@ -45063,6 +45294,52 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   }
+  ],
+  "shaping-selected-among-groups": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.RuleShaping.Grouped",
+     "Becoming.RuleShaping.grouped_returns"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.RuleShaping.grouped_rises_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.RuleShaping.grouped_alike_iff",
+     "Becoming.RuleShaping.grouped_kept_rises",
+     "Becoming.RuleShaping.grouped_uniform_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.RuleShaping.Assorting.one_pos",
+     "Becoming.RuleShaping.Assorting.assortedOffspring",
+     "Becoming.RuleShaping.Assorting.mixedOffspring",
+     "Becoming.RuleShaping.Assorting.assorted_grouped",
+     "Becoming.RuleShaping.Assorting.mixed_grouped",
+     "Becoming.RuleShaping.Assorting.either_verdict"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "shaping-the-rule-selected-by-what-comes-back": [
@@ -63483,7 +63760,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "b5f27668b0f889e26ff98429cdc2c57196061e291fb73461870dd49e055ecd7e",
+   "modules_sha256": "dfff47c2d96738d309e849d87aa408405f91bec0365e7438cf26ca8bed5e386c",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

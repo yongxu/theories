@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. Shapers leave a + s + p offspring and others a + c + p, with s what comes back to the shapers alone, p what comes to every member alike, c the cost and a positive: at a step the rule favours the shapers (weakly) exactly where c ≤ s and disfavours them (weakly) exactly where s ≤ c, whatever p. (`Becoming.RuleShaping.shaped`, `Becoming.RuleShaping.eq_of_counts`, `Becoming.RuleShaping.favours_iff`, `Becoming.RuleShaping.disfavours_iff`, `Becoming.RuleShaping.favours_alike`)
+1. Shapers leave a + s + p offspring and others a + c + p, with s what comes back to the shapers alone, p what comes to every member alike, c the cost and a positive: at a step the rule favours the shapers (weakly) exactly where c ≤ s and disfavours them (weakly) exactly where s ≤ c, whatever p comes to every member alike. (`Becoming.RuleShaping.shaped`, `Becoming.RuleShaping.eq_of_counts`, `Becoming.RuleShaping.favours_iff`, `Becoming.RuleShaping.disfavours_iff`, `Becoming.RuleShaping.favours_alike`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. The shared part pulls the rule toward even: a larger one gives a rule not higher in the share order where c ≤ s, strictly lower where c < s and it is strictly larger, and not lower where s ≤ c; a smaller cost gives a rule not lower, and a strictly smaller one a strictly higher rule; the rule with a shared part p is the rule over the base a + p with nothing shared. (`Becoming.RuleShaping.shared_lowers`, `Becoming.RuleShaping.shared_lowers_strictly`, `Becoming.RuleShaping.shared_raises`, `Becoming.RuleShaping.lower_c_raises`, `Becoming.RuleShaping.lower_c_raises_strictly`, `Becoming.RuleShaping.shaped_shift`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -37,9 +37,9 @@
 
 - That actual practices, institutions or trained systems carry a capacity to shape their rule from parent to offspring, or that what comes back to them is read from their share: these are premises, and their calibration to the present world is not established.
 - That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.
-- Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares and noise; what comes back read through a pool of readers drawn from the selected is stated in shaping-read-by-readers-drawn-from-the-selected (board item MA4).
+- Graded capacities, returns growing with the domains captured or passing between them, real-valued shares; readers drawn from the selected are in shaping-read-by-readers-drawn-from-the-selected, drawing in drawn-shaping-drawn-one-at-a-time.
 - That the shared part leaves a stretch unchanged: it is part of the base (shaped_shift) and can turn the verdict (SharedFlips).
-- A gain made by the shapers and divided among all: s and p are constants of the rule, so the shared part reaches every member even with no shapers present and does not grow with their number; the cost is borne at every step, with what comes back or not.
+- That the direction holds where the shared part goes to those near the shapers: listed in groups it is a return to them through assortment, and the whole selects for shaping exactly where c < s + m q ρ (shaping-selected-among-groups).
 - That the timing law's verdict is fixed by c, s, m and n alone: it depends on the base a, and so on whether the cost is read as what the others leave more or what the shapers leave less (with 3 left before shaping, c = 1, s = 2, three steps before and four with what comes back fall, the case a = 2 here).
 - **Counterexample:** A large gain to each shaper does not select the capacity: with s + p = 5 to each shaper at a cost of one, the rule disfavours the shapers where none of the five comes back to them alone, and from one to one their share falls (Split.shared_disfavours, Split.falls), while two of the five coming back favours them (Split.favours, Split.rises). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 - **Counterexample:** What comes back exceeding the cost need not select the capacity across a stretch: with a = 2, c = 1, s = 2, one step before and two with it raise the shapers' share, while two before and two with it, or one and one, lower it (Timing.soon_rises, Timing.late_falls, Timing.shorter_falls). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
@@ -57,7 +57,7 @@ Canonical source: [RuleShaping.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.
+Graded capacities; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -76,8 +76,10 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.
 - related, not a proved adapter: [when-complying-when-read-is-best](when-complying-when-read-is-best.md). Complying when read so that the law is kept, which RF's plan first read as this shaping by analogy: there a strict comparison of expected values in two stages.
+- related, not a proved adapter: [shaping-selected-among-groups](shaping-selected-among-groups.md). This rule in groups whose shapers give the group's shared part: the direction at a step is its case without assortment.
+- related, not a proved adapter: [drawn-shaping-drawn-one-at-a-time](drawn-shaping-drawn-one-at-a-time.md). With hi = lo = s, this rule drawn one member at a time: its lock is left by drift, the others' weight positive.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -90,6 +92,9 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json) | — |
+| integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md) | — |
+| receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 
 Aliases: `The capacity to shape the rule, selected by what comes back to it`, `塑规之能，以独返于塑规者之所得被选`, `selection for control over selection`, `Becoming.RuleShaping.favours_iff`
 
@@ -100,7 +105,8 @@ Aliases: `The capacity to shape the rule, selected by what comes back to it`, `�
 - 25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say "a smaller cost gives a rule not lower" where they had said "raises it", and state "the shapers present" with nothing_back_falls and stretch_iff.
 - 26 October 2026 (MA4, study section 414): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.
 - 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; no statement, next step or declaration changed.
+- 3 November 2026, board item AJ8 (study section 503): the step's direction scoped to a shared part coming to every member alike, the gain divided among the shapers' groups now stated in shaping-selected-among-groups, and noise in drawn-shaping-drawn-one-at-a-time; the laws are otherwise unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-25T07:15:09+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-03T10:27:39+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

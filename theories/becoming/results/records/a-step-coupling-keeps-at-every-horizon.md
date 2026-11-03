@@ -82,6 +82,7 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 - related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
+- related, not a proved adapter: [coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it](coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md). Several drawers in turn, each with a coupling for each step met, drain the need where the coupling is below it, whatever the renewal, and under the gate keep it where it is above: the rate is the need itself, in another model.
 
 **Used by:** [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md)
 
@@ -136,6 +137,7 @@ Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling ad
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
+- 3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it, the case of several drawers in turn and at once this record's does-not-show leaves out; no law, hypothesis or declaration changed.
 
 </details>
 
