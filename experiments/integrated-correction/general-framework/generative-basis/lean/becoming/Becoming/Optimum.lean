@@ -51,6 +51,16 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   balanced step gaining nothing on the whole the family rises, with the loss, by exactly the slack
   (`Flow.keeping_optimum_takes_slack`). `Drain.kept_takes_slack` is the instance: the keeping
   optimum is `DrawnBeyond.WithinSlack`'s world.
+* **What every proxy's optima lack, exactly.** The optima of all orders rising with a family,
+  together, are the eligible outcomes no eligible outcome exceeds on the family
+  (`Optimum.rising_optimum_iff`), so every optimum of every such order lacks a property of outcomes
+  exactly where every such outcome lacks it (`Optimum.optima_lack_iff`). With room, where every
+  outcome with the property stands at a condition beyond at least `B` and some eligible outcome
+  stands there below `B`, no optimum of any rising order has it (`Optimum.optima_lack_of_bound`); at
+  that condition this holds of every eligible set with room reaching below `B` exactly where the
+  property bounds the condition below by `B` (`Optimum.optima_lack_iff_bounded`, its converse
+  near-definitional). On a web the need is the bound and keeping the dependence the property
+  (`Web.optimum_broken_iff`).
 * **Room, read off the exchange.** The outcomes open to a part across one step are the levels
   after every step that balances in which the formations outside the part exchange as they do and
   each member of the part takes from each condition at most its capacity there, gives only to a
@@ -123,6 +133,13 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   alone keeps (`Renewing.joint_course_lost`, `Renewing.alone_kept`), and hold less than the course
   in which one restrains, no step of which is a mutual best response
   (`Renewing.restrained_course_not_best`, `Renewing.restraint_holds_more`).
+* **A re-reading in time.** Where the draw stays above the renewal until a step `T` and from `T` on
+  every step keeps the need where it is met before it, as an optimum among the outcomes keeping it
+  does, the need is met at every step exactly where it is met at `T` (`Optimum.reread_kept_iff`);
+  with the draw `k` before `T` and the renewal exactly `r` at the need or above, exactly where the
+  level starts at least `T * (k - r)` above the need (`Optimum.reread_deadline_iff`). Where nothing
+  is given below the need, a level below it stays below at every later step, whatever is drawn
+  (`Optimum.gated_stays_below`): a re-reading after that is too late for good.
 * **Courses ranked over a horizon.** Where each step leaves at most the level with what is given
   and at most `r` is given at each step, what a course draws, what it leaves and everything the
   renewal falls short of `r` add to the starting level with `r` for each step
@@ -381,9 +398,22 @@ what lies beyond is assumed, the degradation being read as dependences broken an
 ended, exactly those some outcome breaks; and the conservation identity says by how much: the
 beyond with the loss falls by exactly what the family rises. Counting the beyond only after the
 proxy keeps nothing, and restricting to keeping outcomes uses the slack and no more, which is less
-than holding the beyond where it was (their Proposition 2). It does not reach their continuous
-setting, the compactness characterization of their Theorem 2, or the interactive improvement of
-their Theorem 3 and Propositions 4 and 5. Their Theorem 1 assumes a resource constraint shared by
+than holding the beyond where it was (their Proposition 2). Their Theorem 2, that for low enough
+floors every complete optimization of every such proxy is u-costly exactly where the feasible
+states of utility at least u form a compact set, has a discrete analogue at optima, not a
+restatement: `optima_lack_of_bound` is their Theorem 1 read against a property that bounds a
+condition beyond below, so it gives Theorem 2's first direction where an optimum is reached, not
+along paths that do not converge; a one-sided bound at one condition stands for compactness; and
+`optima_lack_iff_bounded`'s converse varies the eligible set, a single outcome among them, where
+theirs fixes the world and builds a proxy and a path, so it is near-definitional and not theirs.
+Their interactive remedy (Proposition 4: an efficient robot, its rate bounded, the proxy re-read at
+intervals with the unmentioned held at their current values) has an analogue in the re-reading's
+deadline on the level law (`reread_kept_iff`, `reread_deadline_iff`), a one-off change of regime
+at a step, and where nothing is given below the need, as a premise, no later re-reading restores
+it (`gated_stays_below`), which their reversible attributes leave open. It does not reach their
+continuous setting, the non-convergent case and converse of their Theorem 2, Proposition 1's
+sensitivities, or the improvement of the principal's utility in their Theorem 3 and Propositions
+4 and 5, which needs a utility over every attribute that the spine does not assume. Their Theorem 1 assumes a resource constraint shared by
 the attributes; read off the exchange it is conservation with capacity: what a part's members
 take they give, and what they may take is their capacity, so the drain lies exactly where the
 part shares units with what lies beyond, by the capacity, and nowhere else. With several
@@ -617,6 +647,69 @@ theorem least_of_shared [DecidableEq C] (rising : Rising ds better)
     (shared : Shared ds rest eligible) {o : C → Nat} (optimum : Frontier eligible better o) :
     Least rest eligible o :=
   least_of_room rising (shared.room apart inside) optimum
+
+/-! ## What every proxy's optima lack
+
+An order rising with what couples in is a proxy in the widest sense: it may be any order, scalar or
+not, so long as it ranks every outcome exceeding another on the family above it. What every such
+order's optima together are, and when none of them has a given property (acceptable to some
+valuation, say), is exact. -/
+
+/-- **The optima of every rising order, together, are the outcomes unexceeded on the family.** An
+outcome is an optimum of some order rising with the family exactly where it is eligible and no
+eligible outcome exceeds it on the family; exceeding on the family is itself such an order. -/
+theorem rising_optimum_iff {o : C → Nat} :
+    (∃ better, Rising ds better ∧ Frontier eligible better o) ↔
+      eligible o ∧ ∀ o', eligible o' → ¬ Exceeds ds o' o :=
+  ⟨fun ⟨_, rising, optimum⟩ => ⟨optimum.1, fun o' eligibleO' exceeds =>
+      optimum.2 o' eligibleO' (rising o o' exceeds)⟩,
+   fun unexceeded => ⟨Exceeds ds, fun _ _ exceeds => exceeds, unexceeded⟩⟩
+
+/-- **Every proxy's optima lack a property exactly where every unexceeded outcome does.** For any property of
+outcomes, every optimum of every order rising with the family lacks it exactly where every eligible
+outcome that no eligible outcome exceeds on the family lacks it. -/
+theorem optima_lack_iff {acceptable : (C → Nat) → Prop} :
+    (∀ better, Rising ds better → ∀ o, Frontier eligible better o → ¬ acceptable o) ↔
+      ∀ o, eligible o → (∀ o', eligible o' → ¬ Exceeds ds o' o) → ¬ acceptable o :=
+  ⟨fun lacking o eligibleO unexceeded =>
+      lacking (Exceeds ds) (fun _ _ exceeds => exceeds) o ⟨eligibleO, unexceeded⟩,
+   fun lacking _ rising o optimum => lacking o optimum.1 fun o' eligibleO' exceeds =>
+      optimum.2 o' eligibleO' (rising o o' exceeds)⟩
+
+/-- **A bound below beyond: no proxy's optimum has the property** (the discrete analogue, at
+optima, of the first direction of Zhuang and Hadfield-Menell's Theorem 2: their Theorem 1 read
+against a property that bounds the condition below). With room, where every outcome with a property stands
+at a condition beyond at least `B`, and some eligible outcome stands there below `B`, no optimum of
+any order rising with the family has the property. -/
+theorem optima_lack_of_bound (room : Room ds rest eligible) {c : C} (mem : c ∈ rest) {B : Nat}
+    {acceptable : (C → Nat) → Prop} (bounded : ∀ o, acceptable o → B ≤ o c) {low : C → Nat}
+    (eligibleLow : eligible low) (below : low c < B) :
+    ∀ better, Rising ds better → ∀ o, Frontier eligible better o → ¬ acceptable o :=
+  fun _ rising o optimum acceptableO => Nat.not_le_of_gt
+    (Nat.lt_of_le_of_lt (least_of_room rising room optimum c mem low eligibleLow) below)
+    (bounded o acceptableO)
+
+/-- **No optimum has the property wherever room holds and something lies below, exactly where the
+property is bounded below there.** At a condition beyond, every eligible set with room holding an outcome below `B`
+has no optimum, of any order rising with the family, with a given property exactly where every
+outcome with the property stands there at least `B`. The converse is near-definitional: the
+eligible sets range over all, a single outcome among them, where Zhuang and Hadfield-Menell's
+Theorem 2 fixes the world and varies the floor, so it is not their converse. -/
+theorem optima_lack_iff_bounded {c : C} (mem : c ∈ rest) {B : Nat}
+    {acceptable : (C → Nat) → Prop} :
+    (∀ eligible' : (C → Nat) → Prop, Room ds rest eligible' → (∃ o, eligible' o ∧ o c < B) →
+        ∀ better, Rising ds better → ∀ o, Frontier eligible' better o → ¬ acceptable o) ↔
+      ∀ o, acceptable o → B ≤ o c :=
+  ⟨fun lacking o acceptableO => Nat.ge_of_not_lt fun below =>
+      lacking (fun o' => o' = o)
+        (fun _ _ same same' _ _ lower => by
+          subst same; subst same'; exact absurd lower (Nat.lt_irrefl _))
+        ⟨o, rfl, below⟩ (Exceeds ds) (fun _ _ exceeds => exceeds) o
+        ⟨rfl, fun _ same exceeds => by
+          subst same; exact match exceeds with | ⟨_, _, _, lt⟩ => Nat.lt_irrefl _ lt⟩
+        acceptableO,
+   fun bounded _ room ⟨_, eligibleLow, below⟩ =>
+      optima_lack_of_bound room mem bounded eligibleLow below⟩
 
 end Optimum
 
@@ -2257,6 +2350,94 @@ theorem kept_iff_within (step : ∀ t, x (t + 1) = x t + g t - d t) {k : Nat}
     | .inr within => within,
    fun within t => (kept_at_need step renewing (fun t => Nat.le_trans (Nat.le_of_eq (draws t))
       within) start t).1⟩
+
+/-- **Below the need, a gated level stays below, whatever is drawn.** Where nothing is given to a
+level while it stands below `m`, a level below `m` at one step stands below it at every later step,
+whatever is taken, nothing included. -/
+theorem gated_stays_below (step : ∀ t, x (t + 1) = x t + g t - d t)
+    (unsupported : ∀ t, x t < m → g t = 0) {s : Nat} (below : x s < m) : ∀ j, x (s + j) < m
+  | 0 => below
+  | j + 1 =>
+    have earlier := gated_stays_below step unsupported below j
+    Nat.lt_of_le_of_lt (show x (s + j + 1) ≤ x (s + j) by
+      rw [step (s + j), unsupported (s + j) earlier, Nat.add_zero]; exact Nat.sub_le _ _) earlier
+
+/-- **A re-reading keeps the need exactly where it comes in time.** Before step `T` at most `r` is
+given and more than `r` taken at every step; from `T` on, every step keeps the need where it is met
+before it, as an optimum among the outcomes keeping it does (`Flow.keeping_optimum_takes_slack`).
+Then the need is met at every step exactly where it is met at `T`. -/
+theorem reread_kept_iff (step : ∀ t, x (t + 1) = x t + g t - d t) {T : Nat}
+    (renews : ∀ t, t < T → g t ≤ r) (over : ∀ t, t < T → r < d t) (keeps : ∀ t, T ≤ t → m ≤ x t → m ≤ x (t + 1)) :
+    (∀ t, m ≤ x t) ↔ m ≤ x T :=
+  have before : ∀ k t, t + k = T → x T ≤ x t := fun k => by
+    induction k with
+    | zero => intro t same; rw [← same]; exact Nat.le_refl _
+    | succ k ih =>
+      intro t same
+      have same' : t + 1 + k = T := (Nat.succ_add t k).trans same
+      have early : t < T :=
+        Eq.subst (motive := fun y => t + 1 ≤ y) same' (Nat.le_add_right (t + 1) k)
+      exact Nat.le_trans (ih (t + 1) same') (never_rises step (renews t early) (over t early))
+  ⟨fun kept => kept T, fun atT =>
+    have after : ∀ j, m ≤ x (T + j) := fun j => by
+      induction j with
+      | zero => exact atT
+      | succ j ih => exact keeps (T + j) (Nat.le_add_right T j) ih
+    fun t => match Nat.lt_or_ge t T with
+    | .inl early => match le_dest (Nat.le_of_lt early) with
+      | ⟨k, same⟩ => Nat.le_trans atT (before k t same.symm)
+    | .inr late => match le_dest late with
+      | ⟨j, same⟩ => Eq.subst (motive := fun y => m ≤ x y) same.symm (after j)⟩
+
+/-- **The deadline of a re-reading, exactly.** Where exactly `r` is given while the level stands at
+a positive need `m` or above, at most `r` everywhere, and `k > r` is taken at every step before
+`T`, the level meets the need at `T` exactly where it starts at least `T` times the draw's excess
+over the renewal above the need. -/
+theorem reread_deadline_iff (step : ∀ t, x (t + 1) = x t + g t - d t)
+    (renewing : ∀ t, m ≤ x t → g t = r) (renews : ∀ t, g t ≤ r) {k T : Nat}
+    (draws : ∀ t, t < T → d t = k) (over : r < k) (needs : 0 < m) :
+    m ≤ x T ↔ m + T * (k - r) ≤ x 0 :=
+  have split : r + (k - r) = k := Naturals.add_sub_of_le (Nat.le_of_lt over)
+  have drop : ∀ t, t < T → m ≤ x t → x (t + 1) = x t - (k - r) := fun t early atNeed => by
+    rw [step t, renewing t atNeed, draws t early]
+    exact (congrArg (x t + r - ·) split.symm).trans ((Naturals.sub_sub (x t + r) r (k - r)).symm.trans
+      (congrArg (· - (k - r)) (Naturals.add_sub_cancel (x t) r)))
+  have falls : ∀ t, t < T → x (t + 1) ≤ x t := fun t early =>
+    never_rises step (renews t) (Nat.lt_of_lt_of_le over (Nat.le_of_eq (draws t early).symm))
+  have more : ∀ t, (t + 1) * (k - r) = t * (k - r) + (k - r) := fun t => Nat.succ_mul t (k - r)
+  have along : ∀ t, t ≤ T → m ≤ x t → x t + t * (k - r) = x 0 := fun t => by
+    induction t with
+    | zero => intro _ _; exact (congrArg (x 0 + ·) (Nat.zero_mul (k - r))).trans (Nat.add_zero _)
+    | succ t ih =>
+      intro within next
+      have early : t < T := within
+      have atNeed : m ≤ x t := Nat.le_trans next (falls t early)
+      have stands : m ≤ x t - (k - r) :=
+        Eq.subst (motive := fun y => m ≤ y) (drop t early atNeed) next
+      have room : k - r ≤ x t := Nat.ge_of_not_lt fun less => Nat.not_le_of_gt needs
+        (Eq.subst (motive := fun y => m ≤ y) (sub_eq_zero_of_le (Nat.le_of_lt less)) stands)
+      rw [drop t early atNeed, more t, Nat.add_comm (t * (k - r)) (k - r), ← Nat.add_assoc,
+        Naturals.sub_add_cancel room]
+      exact ih (Nat.le_of_lt early) atNeed
+  have reached : ∀ t, t ≤ T → m + t * (k - r) ≤ x 0 → m ≤ x t := fun t => by
+    induction t with
+    | zero => intro _ start; exact Nat.le_trans (Nat.le_add_right m _) start
+    | succ t ih =>
+      intro within start
+      have early : t < T := within
+      have start' : m + t * (k - r) ≤ x 0 := Nat.le_trans
+        (Nat.add_le_add_left (Nat.le_trans (Nat.le_add_right _ (k - r))
+          (Nat.le_of_eq (more t).symm)) m) start
+      have atNeed : m ≤ x t := ih (Nat.le_of_lt early) start'
+      have whole : m + (k - r) + t * (k - r) ≤ x t + t * (k - r) := by
+        rw [Nat.add_assoc, Nat.add_comm (k - r), ← more t, along t (Nat.le_of_lt early) atNeed]
+        exact start
+      rw [drop t early atNeed]
+      exact Naturals.le_sub_of_add_le
+        (Nat.le_trans (Nat.le_of_eq (Nat.add_comm (k - r) m)) (le_of_add_le_add_right _ whole))
+  ⟨fun atT => Nat.le_trans (Nat.add_le_add_right atT _)
+      (Nat.le_of_eq (along T (Nat.le_refl T) atT)),
+   reached T (Nat.le_refl T)⟩
 
 /-- **What stands and what was drawn.** Where each step leaves at most the level with what is
 given, across `n` steps what stands after with everything drawn is the starting level with

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-03T04:29:29+00:00",
   "statement": {
     "en": "Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each takes the slack.",
     "zh": "每个随耦合入者升高的序，其最优恰在没有一个于之外高于另一者的合格结果在耦合入者上不被超过时处于之外最低水平（有余地即如此）；最优恰好打断某个结果所打断的之外依存；升高族即降低之外加损失；保持每个依存恰取余量。"
@@ -67,6 +67,16 @@
       "zh": "限于使之外每个依存保持在其需要的结果，若其中有余地且每个需要都被其中某个达到，则一个升高的序的最优不打断任何依存；在整体无所增益的平衡步中，族连同损失恰升高余量之多。",
       "declarations": [
         "Becoming.Flow.keeping_optimum_takes_slack"
+      ]
+    },
+    {
+      "en": "The optima of all orders rising with a family, together, are the eligible outcomes no eligible outcome exceeds on the family, so every optimum of every such order lacks a property exactly where all of these do. With room, where the property bounds a condition beyond below by B and an eligible outcome stands there below B, no optimum has it, and exactly so over every eligible set with room.",
+      "zh": "所有随一族升高之序的最优合起来，恰为在该族上不被任何合格结果超过的合格结果；故每个此类序的每个最优恰在这些结果皆缺某性质时缺之。有余地时，若该性质把之外某条件自下界定于 B，且有合格结果在那里低于 B，则无一最优具此性质；对每个有余地的合格集恰如此。",
+      "declarations": [
+        "Becoming.Optimum.rising_optimum_iff",
+        "Becoming.Optimum.optima_lack_iff",
+        "Becoming.Optimum.optima_lack_of_bound",
+        "Becoming.Optimum.optima_lack_iff_bounded"
       ]
     },
     {
@@ -136,9 +146,14 @@
       "kind": "scope"
     },
     {
-      "en": "Zhuang and Hadfield-Menell's continuous setting, their compactness characterization of guaranteed overoptimization, and their improvement by a proxy updated over time are not reached.",
-      "zh": "Zhuang 与 Hadfield-Menell 的连续情形、其对必然过度优化的紧性刻画，以及随时间更新代理的改进，均未达到。",
+      "en": "Zhuang and Hadfield-Menell's continuous setting and compactness characterization, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain an updated proxy brings to a principal's utility are not reached.",
+      "zh": "Zhuang 与 Hadfield-Menell 的连续情形、其紧性刻画、其定理 2 的不收敛情形与逆、其敏感度，以及更新代理给委托人效用带来的增益，均未达到。",
       "kind": "scope"
+    },
+    {
+      "en": "The bound's converse is near-definitional and not theirs: it ranges over every eligible set with room, a single outcome among them, where theirs fixes the world and builds a proxy and a path.",
+      "zh": "此界之逆近乎依定义，亦非其原逆：它遍历每个有余地的合格集（单一结果亦在其中），而其原式固定世界、构造代理与路径。",
+      "kind": "converse"
     },
     {
       "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the conditional direction's (alignment-direction-under-widening), under C and the continuation condition.",
@@ -177,8 +192,8 @@
     "zh": "一个过程中的余地，行动者每步重新选择、其余者回应（一步的情形：room-read-off-the-exchange）；一段运行上的最优，其中之外依其自身水平更新；独立审查。"
   },
   "correspondence": {
-    "en": "Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that references only some attributes drives the others to their lower bounds; here in discrete, conserved form over every order rising with what couples in, exact on any set of outcomes, with the degradation read as dependences broken. Mild optimization (Taylor 2016) is the satisficing witness: it neither drives nor protects. Reading (the AI's): blindness alone leaves the beyond unselected; with competition for the same units an optimum takes it to the floor.",
-    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）定理 1：优化只涉及部分属性的代理把其余属性压到下界；此处为离散、守恒的形式，对每个随耦合入者升高的序，在任何结果集上恰当成立，退化读作被打断的依存。温和优化（Taylor 2016）即满足式的见证：既不压低也不保护。读法（AI 的）：单是不见只让之外不被选择；与同一些单位相竞争时，最优把它压到底。"
+    "en": "Zhuang and Hadfield-Menell (2020). Their Theorem 1, optimizing a proxy that references only some attributes under a constraint every attribute shares leaves the others at their lower bounds at any limit, is the drive here in discrete, conserved form at optima rather than limits, over every order rising with what couples in, exact on any set of outcomes, the degradation read as dependences broken. Their Theorem 2 (for low enough floors every proxy u-costly exactly where the feasible states of utility at least u are compact) has a discrete analogue at optima, not a restatement: optima_lack_of_bound is the drive read against a property bounding a condition beyond below, giving their first direction where an optimum is reached, a one-sided bound at one condition standing for compactness; the converse here is not theirs. Their Proposition 2, the unmentioned held at the start, has the keeping restriction for its analogue, keeping the needs and taking exactly the slack. Mild optimization (Taylor 2016), the satisficing witness, neither drives nor protects. Reading (the AI's): blindness alone leaves the beyond unselected; competing for the same units, an optimum takes it to the floor.",
+    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）。其定理 1：在各属性共享的约束下，优化只涉及部分属性的代理，在任何极限处把其余属性留于下界；此处为离散、守恒的形式，在最优处而非路径极限处，对每个随耦合入者升高的序，在任何结果集上恰当成立，退化读作被打断的依存。其定理 2（下界足够低时，每个代理恰在效用至少 u 的可行状态成紧集时都 u-代价）在最优处有离散类比，而非重述：optima_lack_of_bound 是把压低读于一个自下界定之外某条件的性质，在达到最优处给出其第一方向，以一个条件上的单侧下界代紧性；此处之逆并非其原逆。其命题 2（未提及者保持在起点）以保持之限制为类比，它保持需要并恰取余量。温和优化（Taylor 2016）即满足式的见证：既不压低也不保护。读法（AI 的）：单是不见只让之外不被选择；与同一些单位相竞争时，最优把它压到底。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -307,6 +322,10 @@
         "Becoming.Optimum.least_iff",
         "Becoming.Optimum.least_of_room",
         "Becoming.Optimum.least_of_shared",
+        "Becoming.Optimum.optima_lack_iff",
+        "Becoming.Optimum.optima_lack_iff_bounded",
+        "Becoming.Optimum.optima_lack_of_bound",
+        "Becoming.Optimum.rising_optimum_iff",
         "Becoming.Optimum.rising_total",
         "Becoming.Optimum.transfer",
         "Becoming.Optimum.transfer_exceeds",
@@ -544,6 +563,10 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md",
+      "role": "integration"
     }
   ],
   "proof_bindings": [
@@ -592,6 +615,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Web.optimum_broken_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Web.optimum_broken_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "3 November 2026, board item ZH (study note zh-proxy-problem, reviewed in its REVIEW-1): a law added, the optima of all rising orders together and what they lack, with a discrete analogue at optima of Zhuang and Hadfield-Menell's Theorem 2 (four declarations in Becoming.Optimum); the scope boundary on their paper restated as what is still not reached, a converse boundary added, and the correspondence states their Theorems 1 and 2 and Proposition 2 with what maps and what does not. Every earlier law unchanged.",
+      "zh": "2026年11月3日，工作板条目 ZH（研究笔记 zh-proxy-problem，经其 REVIEW-1 审读）：增一律，所有升高之序的最优合起来及其所缺，含 Zhuang 与 Hadfield-Menell 定理 2 在最优处的离散类比（Becoming.Optimum 中四项声明）；关于其论文的范围界限改述为仍未达到者，增一条逆向界限，对应说明陈述其定理 1、2 与命题 2 何者对应、何者不对应。此前各律不变。"
     }
   ]
 }
