@@ -343,6 +343,7 @@ import Becoming.PairSelection
 import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.OptimumSeason
+import Becoming.CoupledDrawers
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
@@ -2292,6 +2293,19 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   alone, give no room, and the orders by the catch alone and by the ground's have optima keeping
   and ending. Over seasons with natural-number weights the bay left is at most `40(1 − ν)` and
   `ν ≤ 1 − 3p/40`. A leaf (board item LA4).
+* `Becoming.CoupledDrawers` (L1): several drawers over a horizon, each with `c` in its worth for
+  each step at which what all leave meets a positive need `m`. In turn, with two drawers or more and no
+  floor, where `c < m` every perfect profile leaves nothing at every step before the horizon,
+  whatever the renewal (`Optimum.Coupled.drains_below`); under the gate, where `m < c` every
+  perfect profile leaves exactly the need of an amount meeting it and nothing of a smaller one
+  (`Optimum.Coupled.kept_above`), so on a gated renewal the threshold is the need, not the renewal
+  forgone a step nor the joint capacity (`Optimum.Coupled.gated_threshold`); there, where `c < m`
+  and `0 < c + q`, one drawer keeps the need at the first of two steps where several in turn drain
+  (`Optimum.Coupled.one_keeps_several_drain`). At once, the
+  drain is perfect exactly where no drawer alone gains more than it leaves
+  (`Optimum.Coupled.AtOnce.drain_perfect_iff`), at every `c` where no portion reaches the need and
+  none returns more than one for one (`Optimum.Coupled.AtOnce.unpivotal_drain_perfect`). A leaf
+  (board item CDR).
 * `Becoming.SetPointOptimum` (L1): what an order with a set point does beyond what couples in. An
   order nearing a set point of the family ranks above every outcome lying, at each condition,
   between the set point and the other and nearer at one (`Nearing`, by `Regulation.Between`):

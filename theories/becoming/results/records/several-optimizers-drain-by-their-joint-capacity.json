@@ -119,8 +119,8 @@
     "zh": "在某个优化者族内、各承担一份的条件；相互最优回应的存在；带更新的一个过程；独立审查。"
   },
   "correspondence": {
-    "en": "The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use.",
-    "zh": "公地悲剧（Hardin 1968）、开放进入（Gordon 1954）与公共池塘资源博弈的过度占用（Ostrom、Gardner 与 Walker 1994），在该条件不耦合进任何优化者的极限：抽干是全部合计容量。读法（AI 的）：其使用者都不耦合入的公地，被它们的容量之和抽干，不论各自独行还是一起；保住它的是耦合入它或降低容量，即 Ostrom（1990）发现社群所用的手段。"
+    "en": "The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.",
+    "zh": "公地悲剧（Hardin 1968）、开放进入（Gordon 1954）与公共池塘资源博弈的过度占用（Ostrom、Gardner 与 Walker 1994），在该条件不耦合进任何优化者的极限：抽干是全部合计容量。读法（AI 的）：其使用者都不耦合入的公地，被它们的容量之和抽干，不论各自独行还是一起；保住它的是耦合入它或降低容量，即 Ostrom（1990）发现社群所用的手段；在视野上，对轮流的抽取者，需要每被满足一步的耦合只在不低于需要时保住它，同时抽取而无关键抽取者时抽尽在每个耦合下仍完美。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -207,6 +207,13 @@
       "detail": {
         "en": "Drawers in turn on one law of best response: where two drawers have no floor, every perfect profile is the floor profile and every sequence of revisions reaches it, which with no floor anywhere draws everything.",
         "zh": "轮流的抽取者依一条最优回应之律：两个抽取者无下限时，每个完美组合都是下限组合，每个修订序列都达到它；处处无下限时即全部抽取。"
+      }
+    },
+    {
+      "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+      "detail": {
+        "en": "Over a horizon, with a coupling for each step a need is met, drawers in turn keep it only where the coupling reaches the need, and drawing at once with no pivotal drawer the drain is perfect at every coupling.",
+        "zh": "在视野上，需要每被满足一步有耦合时，轮流的抽取者只在耦合不低于需要时留住它；同时抽取而无关键抽取者时，抽尽在每个耦合下都完美。"
       }
     }
   ],
@@ -607,6 +614,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'registers' replaced by 'couples into' in the boundary and the correspondence (the glossary's word); the superseded record drawers-in-turn-draw-everything replaced by drawers-in-turn among the related results.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：边界与对应中“记录”改为“耦合进”（词汇表之词）；相关结果中已被取代的记录 drawers-in-turn-draw-everything 换为 drawers-in-turn。"
+    },
+    {
+      "en": "3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it; the reading's clause on what keeps a commons qualified by it (over a horizon a coupling for each step met keeps the need, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling); no law, hypothesis or declaration changed.",
+      "zh": "2026年11月3日，工作板条目 CDR：与 coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it 相关联；读法中保住公地者一句据之限定（在视野上，对轮流的抽取者，需要每被满足一步的耦合只在不低于需要时留住它，同时抽取而无关键抽取者时抽尽在每个耦合下仍完美）；无一律、假设或声明改变。"
     }
   ]
 }

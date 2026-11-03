@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-530 registered results: 499 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1255 curated edges join 456 results to the results they draw on.
+531 registered results: 500 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1256 curated edges join 457 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -115,6 +115,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [counting-standing-and-dependence][] ← <a id="counting-standing-and-dependence--whole-law-of-counting"></a>[whole-law-of-counting][] · <a id="counting-standing-and-dependence--counting-under-enclosure"></a>[counting-under-enclosure][] · <a id="counting-standing-and-dependence--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="counting-standing-and-dependence--map-of-premises"></a>[map-of-premises][] · <a id="counting-standing-and-dependence--laws-of-one-step"></a>[laws-of-one-step][]
 - [counting-under-enclosure][] ← <a id="counting-under-enclosure--whole-law-of-counting"></a>[whole-law-of-counting][] · <a id="counting-under-enclosure--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="counting-under-enclosure--map-of-premises"></a>[map-of-premises][] · <a id="counting-under-enclosure--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="counting-under-enclosure--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="counting-under-enclosure--laws-of-one-step"></a>[laws-of-one-step][]
 - [counts-exist-where-decided][] ← <a id="counts-exist-where-decided--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
+- [coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it][] ← <a id="coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it--drawers-in-turn"></a>[drawers-in-turn][]
 - [coupled-regimes][] ← <a id="coupled-regimes--margin-of-a-regime"></a>[margin-of-a-regime][] · <a id="coupled-regimes--regime-in-any-amounts"></a>[regime-in-any-amounts][] · <a id="coupled-regimes--threshold-in-the-state-plane"></a>[threshold-in-the-state-plane][] · <a id="coupled-regimes--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="coupled-regimes--the-last-change-of-a-run"></a>[the-last-change-of-a-run][]
 - [coupled-webs][] ← <a id="coupled-webs--coupled-regimes"></a>[coupled-regimes][] · <a id="coupled-webs--regime-in-any-amounts"></a>[regime-in-any-amounts][]
 - [coupling-closures-of-training-pipelines][] ← <a id="coupling-closures-of-training-pipelines--alignment-approaches-under-the-selection-laws"></a>[alignment-approaches-under-the-selection-laws][] *(application)* · <a id="coupling-closures-of-training-pipelines--a-pool-that-recruits-through-itself"></a>[a-pool-that-recruits-through-itself][] *(application)*
@@ -579,6 +580,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [counting-standing-and-dependence]: theories/becoming/results/records/counting-standing-and-dependence.md
 [counting-under-enclosure]: theories/becoming/results/records/counting-under-enclosure.md
 [counts-exist-where-decided]: theories/becoming/results/records/counts-exist-where-decided.md
+[coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it]: theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md
 [coupled-regimes]: theories/becoming/results/records/coupled-regimes.md
 [coupled-webs]: theories/becoming/results/records/coupled-webs.md
 [coupling-closures-of-training-pipelines]: theories/becoming/results/records/coupling-closures-of-training-pipelines.md

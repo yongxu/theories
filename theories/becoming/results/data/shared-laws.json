@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261103T102739.294112Z",
- "core_sources_sha256": "1d30e4b64274a83a425e13a36f83749f3e3f4d478fc61fd0c198a320653c61b7",
+ "core_receipt": "20261103T111154.021802Z",
+ "core_sources_sha256": "05fa33344b965183114a4be7ea1e4abe22de86be9fdcf3d50bf54d7f39f1ca01",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4126,
+  "laws": 4134,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 896,
   "balance, represented": 628,
   "anchor, not reached": 131,
-  "no shared law": 2071,
+  "no shared law": 2079,
   "vocabulary_only": 79,
   "closure": 528,
   "balance": 836,
@@ -13994,6 +13994,100 @@
     "declarations": [
      "Becoming.Counts.listed_across",
      "Becoming.Counts.listed_over_stretch"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
+  "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Optimum.Coupled.stepCoupling",
+     "Becoming.Optimum.Coupled.drawn",
+     "Becoming.Optimum.Coupled.later",
+     "Becoming.Optimum.Coupled.Revises",
+     "Becoming.Optimum.Coupled.Perfect",
+     "Becoming.Optimum.Coupled.perfect_uncoupled"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Optimum.Coupled.drains_below",
+     "Becoming.Optimum.Coupled.drain_perfect"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Optimum.Coupled.keep",
+     "Becoming.Optimum.Coupled.kept_above",
+     "Becoming.Optimum.Coupled.keeping_perfect"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Optimum.Coupled.kept_levels"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Optimum.Coupled.gatedRenewal",
+     "Becoming.Optimum.Coupled.gated_threshold"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Optimum.Coupled.one_keeps_first",
+     "Becoming.Optimum.Coupled.one_perfect",
+     "Becoming.Optimum.Coupled.one_keeps_several_drain"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Optimum.Coupled.AtOnce.leftWith",
+     "Becoming.Optimum.Coupled.AtOnce.drawn",
+     "Becoming.Optimum.Coupled.AtOnce.later",
+     "Becoming.Optimum.Coupled.AtOnce.Revises",
+     "Becoming.Optimum.Coupled.AtOnce.Perfect",
+     "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff",
+     "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.upTo",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.shore",
+     "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -63666,7 +63760,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "c8c2d1047cc0b07efe43aba90f0092c3978949951ed234e68a8abbec06d4f0f3",
+   "modules_sha256": "dfff47c2d96738d309e849d87aa408405f91bec0365e7438cf26ca8bed5e386c",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

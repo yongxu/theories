@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 366 | 18,193 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 367 | 18,250 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,071 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -216,6 +216,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CounterfactualRuns.lean](lean-declarations/becoming-core.md#module-e19181a02e96) | Becoming pure core |
 | [Counting.lean](lean-declarations/becoming-core.md#module-ba004a622923) | Becoming pure core |
 | [CoupledConcernHistory.lean](lean-declarations/concern.md#module-8c7efefb404f) | Concern and shared activity |
+| [CoupledDrawers.lean](lean-declarations/becoming-core.md#module-8a4bbc3c68e9) | Becoming pure core |
 | [CoupledOccurrence.lean](lean-declarations/core.md#module-9f09dc9dc6b1) | Generative core and relational structure |
 | [CouplingOptima.lean](lean-declarations/abstraction.md#module-ad36cb089189) | Abstraction, applicability and constitution |
 | [CouplingTraces.lean](lean-declarations/becoming-core.md#module-c42eaea0efed) | Becoming pure core |
