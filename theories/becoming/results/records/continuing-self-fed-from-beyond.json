@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-03T12:57:04+00:00",
   "statement": {
     "zh": "延续者不能从某步起都不从其外得到供给，这是汲入律的输送形式。在可判定相等之下，从其外得到供给恰是该步不内向；必要的是得到供给，不必有哪个来源条件复现。",
     "en": "A continuing family cannot from any step on be fed from nothing beyond it, the conveyance form of the draw-in laws. With equality decided, being fed from beyond is exactly a step that is not inward; being fed is needed, and no source condition need recur."
@@ -76,8 +76,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "平衡（Flow.Balances）与耗散（Flow.Dissipative）：同 no-finite-part-bears-taking，是表示中的物理前提，各有满足与不满足它的世界。耗散在每个取用的步至少失去一个整单位；损失可以几何地缩小时这一论证不适用，如每步减半的二进存量每步都下降而从不停息（Halving.never_rests）；第二定律也不给每步的最小损失。",
-      "en": "Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; where losses can shrink geometrically the argument does not apply: a dyadic stock halving at every step never rests (Halving.never_rests); the second law gives no least loss per step."
+      "zh": "固定单位上的平衡（Flow.Balances）与耗散（Flow.Dissipative）：同 no-finite-part-bears-taking，是表示中的物理前提。耗散在每个取用的步至少失去一个整单位；损失可以几何地缩小时论证不适用（Halving.never_rests），单位无尽地细分时结论可能不成立（Asymptote）；第二定律不给每步的最小损失。",
+      "en": "Balance at a fixed unit (Flow.Balances) and dissipation (Flow.Dissipative): physical premises of the representation, as in no-finite-part-bears-taking. Dissipation loses at least one whole unit per taking step; where losses can shrink geometrically the argument does not apply (Halving.never_rests), and at a unit that splits without end the conclusion can fail (Asymptote); the second law gives no least loss per step."
     },
     {
       "zh": "家族不重复（Distinct），从某步起被围住（Around）；取用复现、成员上升复现或体现成员生起复现，三者各为一条定理的假设。",
@@ -128,6 +128,13 @@
       "detail": {
         "zh": "没有耗散时封闭的家族可以永远生成（Recycle），所以耗散是必要的前提；以喷洒交换的汇使耗散空成立时，家族开放而什么都不输送入（SprayShuttle，见 no-finite-part-bears-taking）。",
         "en": "Without dissipation a closed family can generate forever (Recycle), so dissipation is a needed premise; with a sink exchanging with ever new relata dissipation holds vacuously and the family opens while nothing flows into it (SprayShuttle, see no-finite-part-bears-taking)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "detail": {
+        "zh": "需要固定单位上的平衡：Asymptote 中单位在任意晚的步细分，一个汲取者从一个池取用而什么也不还；池每步封闭，所以没有东西从其外输送入，流耗散，在那一分辨率上平衡而在固定单位上不平衡，汲取者在任意晚的步从池取用（Becoming.rest_needs_quantum）。其余前提都成立而结论不成立，这由定义直接得出，但没有 Lean 声明陈述它：池封闭且不重复，所以每步都被围住；一个家族在跨某步时封闭，就不在那一步从其外得到供给。只有细分不会自某一步起停止给池任何东西时，从池的取用才复现（Flow.taking_needs_refinement）；把细分算作一个形成，它不会自某一步起停止给予（refinement_feeds_witnesses）。",
+        "en": "Balance at a fixed unit is needed: in Asymptote the unit splits at arbitrarily late steps and one drawer takes from a pool, giving nothing back; the pool is closed at every step, so nothing beyond it is conveyed in, the flow is dissipative and balanced at that resolution, not at the fixed unit, and the drawer takes from the pool at arbitrarily late steps (Becoming.rest_needs_quantum). Every other premise holds and the conclusion fails, at once from the definitions though no Lean declaration states it: closed and without repetition, the pool is enclosed around at every step, and a family closed across a step is not fed from beyond across it. Taking from the pool recurs only where the refinement stops giving to it from no step on (Flow.taking_needs_refinement), and, counted as a formation, it stops from no step on (refinement_feeds_witnesses)."
       }
     }
   ],
@@ -469,6 +476,30 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "role": "proof",
+      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
+      "declarations": [
+        "Becoming.Asymptote.flow",
+        "Becoming.Asymptote.web",
+        "Becoming.Asymptote.balances",
+        "Becoming.Asymptote.closed",
+        "Becoming.Asymptote.distinct",
+        "Becoming.Asymptote.dissipative",
+        "Becoming.Asymptote.taking_recurs",
+        "Becoming.Asymptote.not_balanced",
+        "Becoming.rest_needs_quantum",
+        "Becoming.Flow.taking_needs_refinement",
+        "Becoming.refinement_feeds_witnesses"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -511,6 +542,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Resolution",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -574,6 +612,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the dissipation hypothesis no longer says the conclusion fails with real-valued amounts, which no theorem shows (the laws are stated over whole-number flows): it says the argument does not apply where losses can shrink geometrically, with the halving stock that never rests as the witness of shrinking losses, now in the references (Becoming.Halving.never_rests, an alias of least-loss-rest, bound to a receipt in which its axiom report is empty); the rest that still holds over any amounts, for an amount read off configurations a list holds, is linked in related; the correspondence labels its reading as the AI's instead of the author's. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：耗散假设不再说量取实数时结论不成立（没有定理表明这一点，规律只对整数流陈述）：改为损失可以几何地缩小时这一论证不适用，以从不停息的减半存量为损失缩小的见证，并加入引用（Becoming.Halving.never_rests，为 least-loss-rest 的别名，绑定的回执中其公理报告为空）；在任何量上、读自列表所容纳之构形者仍有的停息，列于相关；对应把读法标为 AI 的，不再写“作者的”。规律未变。"
+    },
+    {
+      "en": "3 November 2026, board item IGF2 (IGF's leftovers, the coordinator's word): DF's wording stands, the argument not applying where losses can shrink geometrically, and the hypothesis now reads balance at a fixed unit and names a case in which the conclusion itself fails, at a unit that splits without end (its clause that the premises are met by some worlds and not by others is left to no-finite-part-bears-taking, which it cites): Asymptote of Becoming.Resolution, where a closed pool, dissipated on and balanced at that resolution, is taken from at arbitrarily late steps (Becoming.rest_needs_quantum, bound to receipt 20261019T231053.882924Z, its axiom report empty), added as a counterexample with the refinement that feeds it. No theorem states this law over real amounts; the home in 02 no longer says the law fails with them, and says this, naming the premise that the witness lacks as balance at a fixed unit, not natural-number amounts, which its counts also are. Three independent readers checked the change against the Lean, two the revision and one its last wordings. No law changed.",
+      "zh": "2026年11月3日，工作板条目 IGF2（IGF 的遗留项，按协调者所说）：DF 的措辞不变，损失可以几何地缩小时论证不适用；假设现在写作固定单位上的平衡，并举出结论本身不成立的一个情形，在单位无尽地细分时（“各有满足与不满足它的世界”一句留给它所引的 no-finite-part-bears-taking）：Becoming.Resolution 的 Asymptote 中，封闭的池被耗散、在那一分辨率上平衡，在任意晚的步被取用（Becoming.rest_needs_quantum，绑定回执 20261019T231053.882924Z，其公理报告为空），作为反例加入，并写明供给它的细分。没有定理在实数之量上陈述这一规律；02 中的归宿不再说该律在实数之量下不成立，而说明这一点，并把见证所缺的前提写作固定单位上的平衡，而非自然数之量（见证的计数也是自然数）。三位独立读者对照 Lean 核对了这一改动，两位核对了修订，一位核对了最后的措辞。规律未变。"
     }
   ],
   "text_versions": [
@@ -599,6 +641,14 @@
       "note": {
         "en": "Exact record bytes before its history was compacted (R35, E3); every condensed note is kept here.",
         "zh": "历史说明压缩前的记录原始字节（R35，E3）；每条被合并的说明都保存在这里。"
+      }
+    },
+    {
+      "path": "_process/architecture/history/ea2ae5d348bcfa4b/continuing-self-fed-from-beyond.json",
+      "sha256": "ea2ae5d348bcfa4b81ed2635cbc1172cd196725173b52950e8f6d407ca905181",
+      "note": {
+        "zh": "加入固定单位的反例之前的记录原始字节（schema 2）。",
+        "en": "Exact record bytes before the fixed-unit counterexample was added (schema 2)."
       }
     }
   ]

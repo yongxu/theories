@@ -81,3 +81,11 @@ Over budget: the one page by 249 budget-words (Chinese 134) and the overview by 
    217 words  12348 chars      6391 budget-words  49.2–63.9 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
 
 Over budget: the one page by 281 budget-words (Chinese 165) and the overview by 1150 (Chinese 391), for the reasons READING-BUDGETS gives (amendment 1).
+
+## IGF2: the self law's amounts (after the freeze: the overview's §2 says the law holds in whole numbers of a fixed unit and can fail where the unit of amount splits without end, both editions; the one page unchanged)
+  1378 words      6 chars      1381 budget-words  10.6–13.8 min  theories/becoming/ONE-PAGE.md
+    67 words   2396 chars      1265 budget-words  9.7–12.7 min  theories/becoming/ONE-PAGE.zh.md
+  7150 words     19 chars      7160 budget-words  55.1–71.6 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   217 words  12360 chars      6397 budget-words  49.2–64.0 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 281 budget-words (Chinese 165) and the overview by 1160 (Chinese 397), for the reasons READING-BUDGETS gives (amendment 1).

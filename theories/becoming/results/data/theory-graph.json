@@ -40439,6 +40439,11 @@
   },
   {
    "from": "record:continuing-self-fed-from-beyond",
+   "to": "module:Becoming.Resolution",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuing-self-fed-from-beyond",
    "to": "module:Becoming.Roles",
    "type": "proved-in"
   },

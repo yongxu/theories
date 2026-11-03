@@ -1,0 +1,605 @@
+{
+  "schema_version": 2,
+  "id": "continuing-self-fed-from-beyond",
+  "title": {
+    "zh": "延续者不能不从其外得到供给",
+    "en": "A continuing family cannot go unfed from beyond"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "statement": {
+    "zh": "延续者不能从某步起都不从其外得到供给，这是汲入律的输送形式。在可判定相等之下，从其外得到供给恰是该步不内向；必要的是得到供给，不必有哪个来源条件复现。",
+    "en": "A continuing family cannot from any step on be fed from nothing beyond it, the conveyance form of the draw-in laws. With equality decided, being fed from beyond is exactly a step that is not inward; being fed is needed, and no source condition need recur."
+  },
+  "laws": [
+    {
+      "zh": "跨从 t 起的一步，一个参与的形成从 c 取用并向 d 给予时，有东西从 c 输送到 d；有东西从家族之外的条件输送入它的某个成员时，家族在该步从其外得到供给。",
+      "en": "Across the step from t, something is conveyed from c to d when a formation taking part takes from c and gives to d; a family is fed from beyond across the step when something is conveyed from a condition outside it into one of its members.",
+      "declarations": [
+        "Becoming.Flow.Conveys",
+        "Becoming.Flow.FedFromBeyond"
+      ]
+    },
+    {
+      "zh": "家族在某步从其外得到供给时，该步不内向；相等可判定时，没有从其外得到供给的一步是内向的，所以二者恰相反，驳倒“从某步起每步都内向”的，也驳倒“从某步起都没有东西从其外输送入”。",
+      "en": "A step at which the family is fed from beyond is not inward; with equality decided, a step at which it is not fed from beyond is inward, so the two are exact opposites, and whatever refutes ‘inward at every step from some step on’ refutes ‘fed from nothing beyond from some step on’.",
+      "declarations": [
+        "Becoming.Flow.Inward",
+        "Becoming.Flow.not_inward_of_fed",
+        "Becoming.Flow.inward_of_not_fed",
+        "Becoming.Flow.inward_iff_not_fed",
+        "Becoming.Flow.fed_of_not_inward"
+      ]
+    },
+    {
+      "zh": "于是由汲入律，在平衡与耗散之下，从某步起被围住的、不重复的有限家族，若在任意晚的步有形成从它取用，或它的成员在任意晚的步上升，就不能从某步起都没有东西从其外输送入。",
+      "en": "So, by the draw-in laws, under balance and dissipation a finite family without repetition, enclosed around from some step on, cannot from any step on be fed from nothing beyond it, whether formations take from it at arbitrarily late steps or its members rise at arbitrarily late steps.",
+      "declarations": [
+        "Becoming.Flow.Dissipative",
+        "Becoming.Flow.Around",
+        "Becoming.Flow.taking_draws_in",
+        "Becoming.Flow.rising_draws_in",
+        "Becoming.Flow.fed_from_beyond",
+        "Becoming.Flow.rising_fed_from_beyond"
+      ]
+    },
+    {
+      "zh": "以一类关系项读，体现的成员在任意晚的步生起时，同样成立。",
+      "en": "Read with one kind of relatum, the same holds where embodied members arise at arbitrarily late steps.",
+      "declarations": [
+        "Becoming.Web.embodiedArising_draws_in",
+        "Becoming.Web.embodiedArising_fed_from_beyond"
+      ]
+    },
+    {
+      "zh": "取用与上升的两条规律在任一世界中成立，局部条件写在规律之内：从某步起，该家族平衡、被围住，且每步闭合的不重复家族被耗散；处处平衡与耗散之下的形式是它们的推论。",
+      "en": "The two laws for taking and rising hold in every world with the local condition inside the law: from some step on, the family balanced on and enclosed around, and every family without repetition closed across each step dissipated on; the forms under balance and dissipation everywhere are their corollaries.",
+      "declarations": [
+        "Becoming.Flow.BalancesOn",
+        "Becoming.Flow.Balances.on",
+        "Becoming.Flow.fed_from_beyond_from",
+        "Becoming.Flow.rising_fed_from_beyond_from"
+      ]
+    },
+    {
+      "zh": "必要的是得到供给，不必有哪个来源条件复现：在平衡、耗散、吃者每步取用的 Lone 中，池每步都从其外得到供给，而每份燃料只在它自己的那一步被输送出；输送的始终是同一个源。",
+      "en": "Being fed is needed, and no source condition need recur: in Lone, balanced and dissipative with an eater taking at every step, the pool is fed from beyond at every step while each fuel is conveyed from at its own step only; the one source does all the conveying.",
+      "declarations": [
+        "Becoming.Lone.lone",
+        "Becoming.Lone.fed",
+        "Becoming.Lone.each_fuel_once",
+        "Becoming.Lone.fed_not_recurring"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "平衡（Flow.Balances）与耗散（Flow.Dissipative）：同 no-finite-part-bears-taking，是表示中的物理前提，各有满足与不满足它的世界。耗散在每个取用的步至少失去一个整单位；损失可以几何地缩小时这一论证不适用，如每步减半的二进存量每步都下降而从不停息（Halving.never_rests）；第二定律也不给每步的最小损失。",
+      "en": "Balance (Flow.Balances) and dissipation (Flow.Dissipative): as in no-finite-part-bears-taking, physical premises of the representation, met by some worlds and not by others. Dissipation loses at least one whole unit per taking step; where losses can shrink geometrically the argument does not apply: a dyadic stock halving at every step never rests (Halving.never_rests); the second law gives no least loss per step."
+    },
+    {
+      "zh": "家族不重复（Distinct），从某步起被围住（Around）；取用复现、成员上升复现或体现成员生起复现，三者各为一条定理的假设。",
+      "en": "The family is without repetition (Distinct) and enclosed around from some step on (Around); recurring taking, recurring rising and recurring embodied arising are each the hypothesis of one theorem."
+    },
+    {
+      "zh": "相等可判定：inward_of_not_fed 及由它推出的定理需要它，是表示的逻辑承诺，同 Flow.Enclosed.around。",
+      "en": "Decided equality: inward_of_not_fed and the theorems drawn from it need it, a logical commitment of the representation, as in Flow.Enclosed.around."
+    },
+    {
+      "zh": "构造性的形式：结论是“不能从某步起都没有东西从其外输送入”，不给出输送入发生的某一步；由它得出“在任意晚的步得到供给”需要全知。",
+      "en": "The constructive form: the conclusion is that the family cannot from any step on be fed from nothing beyond it; it exhibits no step at which it is fed, and reading it as ‘fed at arbitrarily late steps’ needs omniscience."
+    },
+    {
+      "zh": "离散步、自然数的量与有限家族。",
+      "en": "Discrete steps, natural-number amounts and finite families."
+    }
+  ],
+  "does_not_show": [
+    {
+      "zh": "只说必须计入其外，不说应当。",
+      "en": "Says only that what lies beyond must be counted, not that it ought to be.",
+      "kind": "non-implication"
+    },
+    {
+      "zh": "不说输送来自哪个形成，也不说来源是否活着。",
+      "en": "Says neither which formation conveys nor whether the source is living.",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "detail": {
+        "zh": "不必有哪个来源条件复现：Lone 中池每步都从其外得到供给，而每份燃料只在它自己的那一步被输送出（Lone.fed_not_recurring）；输送的始终是同一个源，所以这不说明特定的来源形成不必要。",
+        "en": "No source condition need recur: in Lone the pool is fed from beyond at every step while each fuel is conveyed from at its own step only (Lone.fed_not_recurring); the one source does all the conveying, so this does not show that no particular source formation is needed."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Succession.lean",
+      "detail": {
+        "zh": "也不必有哪个来源形成复现：Successive 中每步有它自己的源，只在那一步在场并活跃，燃烧那一步的燃料，向池给予一份；吃者每步从池取用一份。流平衡、耗散，只有活跃的形成给予；池每步从其外得到供给，而没有哪个来源形成在两步参与，也没有哪个在两步活跃（Successive.relay，由 Successive.takes_part_once 推出）。每个源仍在它自己的那一步被需要：去掉它，那一步不被供给。",
+        "en": "No source formation need recur either: in Successive each step has its own source, present and active at that step only, which burns that step's fuel and gives the pool one unit; the eater takes one unit from the pool at every step. The flow balances, is dissipative and only active formations give; the pool is fed from beyond at every step, while no source formation takes part at two steps and none is active at two (Successive.relay, from Successive.takes_part_once). Each source is still needed at its own step: without it that step is not fed."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "detail": {
+        "zh": "没有耗散时封闭的家族可以永远生成（Recycle），所以耗散是必要的前提；以喷洒交换的汇使耗散空成立时，家族开放而什么都不输送入（SprayShuttle，见 no-finite-part-bears-taking）。",
+        "en": "Without dissipation a closed family can generate forever (Recycle), so dissipation is a needed premise; with a sink exchanging with ever new relata dissipation holds vacuously and the family opens while nothing flows into it (SprayShuttle, see no-finite-part-bears-taking)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器实查（Continuation 绑定回执 20261014T141427.442103Z；Dissipation、Roles、Flow 与 Succession 绑定 20261013T094743.528770Z）：Becoming.Continuation 的定理（含局部形式）公理报告为空；检查器并核对核心纯净；减半见证绑定 20261025T080929.528151Z，公理报告为空。作者反审见整合文档；独立审查接受其 Lean，其更正在整合文档中处理。",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261014T141427.442103Z for Becoming.Continuation; Dissipation, Roles, Flow and Succession bound to 20261013T094743.528770Z): the theorems of Becoming.Continuation, the local forms included, have empty axiom reports; core purity verified; the halving witness (Becoming.LeastLoss) is bound to 20261025T080929.528151Z, its axiom report empty. Author counterreview in the integration note; the independent review accepts its Lean, and its corrections are handled in the integration note."
+  },
+  "next_delta": {
+    "zh": "给出输送来自活着的来源时的读法；可移除的形式，即同一世界去掉一个来源形成后仍每步得到供给（去掉形成会改变水平，所以那是另一个流，以世界为单位的形式是它的位置）；整段与以世界为单位的形式。",
+    "en": "Read the case where what is conveyed comes from a living source; give the removable form, the same world still fed at every step with one source formation taken away (that is another flow, since taking a formation away changes the levels; the world-level form is its place); give whole-run and world-level forms."
+  },
+  "correspondence": {
+    "zh": "Ren 的提议说：“the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”。汲入律（no-finite-part-bears-taking、generation-is-replenishment）已说：被围住时，有形成向家族给予并从其外取用。本结果把同一规律陈述为从外输送入家族，并在可判定相等之下证明两种形式等价：输送的形式只加可判定相等，不丢失内容。读法（AI 论证）：延续的自我与其外之物一起延续；边界是形成的、实在的，而在其内延续的东西跨边界得到供给。这是动力学，不是伦理：它说一个延续者必须计入什么，不说它应当计入。Lone 说明必要的是得到供给，不必有哪个来源条件复现；它没有说明不需要特定的来源形成：输送的始终是同一个源。",
+    "en": "Ren's proposal says: “the pure \"self\" is an illusion, where only when outside exists, there is the system, if the system depends on external resources”. The draw-in laws (no-finite-part-bears-taking, generation-is-replenishment) said that, enclosed around, some formation gives to the family and takes from beyond it. This result states the same law as conveyance into the family from beyond and shows the two forms equivalent with equality decided: the conveyance form adds only decided equality and loses nothing. The reading (an AI argument): a self that continues does so together with what lies beyond it; the boundary is formed and real, while what continues within it is fed across it. This is dynamics, not ethics: it says what a continuing formation must count, not that it ought to count it. Lone shows that being fed is needed and no source condition need recur; it does not show that no particular source formation is needed, since the one source does all the conveying."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+  "aliases": [
+    "Becoming.Flow.Conveys",
+    "Becoming.Flow.FedFromBeyond",
+    "Becoming.Flow.inward_iff_not_fed",
+    "Becoming.Flow.fed_of_not_inward",
+    "Becoming.Flow.fed_from_beyond",
+    "Becoming.Flow.rising_fed_from_beyond",
+    "Becoming.Web.embodiedArising_fed_from_beyond",
+    "Becoming.Lone.fed_not_recurring",
+    "Becoming.Successive.relay",
+    "Becoming.Successive.takes_part_once"
+  ],
+  "dependencies": [
+    {
+      "id": "no-finite-part-bears-taking",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 taking_draws_in、Inward、Around、Distinct 与 Lone；fed_from_beyond 由 taking_draws_in 经 fed_of_not_inward 推出。",
+        "en": "Reuses taking_draws_in, Inward, Around, Distinct and Lone; fed_from_beyond follows from taking_draws_in through fed_of_not_inward."
+      },
+      "interface": {
+        "output": {
+          "zh": "在耗散之下，取用复现、从某步起被围住的有限家族汲入：不是从某步起每步都内向。",
+          "en": "Under dissipation a finite family from which taking recurs, enclosed around from some step on, draws in: it is not inward at every step from some step on."
+        },
+        "input": {
+          "zh": "在可判定相等之下，不内向恰是从其外得到供给。",
+          "en": "With equality decided, not being inward is exactly being fed from beyond."
+        },
+        "conditions": {
+          "zh": "平衡；耗散；不重复；被围住；取用复现；可判定相等。",
+          "en": "Balance; dissipation; no repetition; enclosure around; recurring taking; decided equality."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean"
+      }
+    },
+    {
+      "id": "generation-is-replenishment",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 rising_draws_in 与 Web.embodiedArising_draws_in，得到上升与体现生起的输送形式。",
+        "en": "Reuses rising_draws_in and Web.embodiedArising_draws_in for the conveyance forms of rising and embodied arising."
+      },
+      "interface": {
+        "output": {
+          "zh": "上升或体现生起复现的有限家族，被围住时汲入。",
+          "en": "A finite family in which rising or embodied arising recurs, enclosed around, draws in."
+        },
+        "input": {
+          "zh": "它不能从某步起都没有东西从其外输送入。",
+          "en": "It cannot from any step on be fed from nothing beyond it."
+        },
+        "conditions": {
+          "zh": "平衡；耗散；不重复；被围住；可判定相等；生起的形式还需一类读法与体现。",
+          "en": "Balance; dissipation; no repetition; enclosure around; decided equality; the arising form also needs the one-kind reading and embodiment."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean"
+      }
+    },
+    {
+      "id": "laws-of-one-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "局部规律只在所用的步与家族上假定 laws-of-one-step 的 Flow.BalancesOn；全局前提给出它，所以原定理是推论。",
+        "en": "The local laws assume Flow.BalancesOn of laws-of-one-step only at the steps and families they use; the global premises give it, so the original theorems are corollaries."
+      },
+      "interface": {
+        "output": {
+          "zh": "跨一步对一个有限家族的平衡（Flow.BalancesOn）与下降（Flow.RunsDown）。",
+          "en": "Balance on a finite family across one step (Flow.BalancesOn) and running down (Flow.RunsDown)."
+        },
+        "input": {
+          "zh": "本记录的局部规律在所用各步对所用家族假定它。",
+          "en": "This record's local laws assume it at the families and steps they use."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "continued-change-needs-openness",
+      "detail": {
+        "zh": "被围住所立者时交换归于停息；本结果说的是被围住一个家族时，延续需要从其外输送入。",
+        "en": "Enclosed around what stands, exchange comes to rest; this result says that, enclosed around a family, continuation needs conveyance from beyond it."
+      }
+    },
+    {
+      "id": "conveyance-crosses-the-boundary",
+      "detail": {
+        "zh": "以输送为 related 时，延续家族的区域不是关系的切口。",
+        "en": "With conveyance read as related, a continuing family's region is no cut in the relations."
+      }
+    },
+    {
+      "id": "rest-from-a-finite-reading",
+      "detail": {
+        "zh": "在任何量上，读自列表所容纳之构形的量从某步起不上升时，其严格下降不复现；从不停息的减半存量，其值没有列表能容纳。本结果的规律只对整数流陈述。",
+        "en": "Over any amounts, where an amount read off configurations a list holds does not rise from some step on, its strict falls do not recur; no list holds the values of the halving stock, which never rests. This result's laws are stated over whole-number flows."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439",
+      "declarations": [
+        "Becoming.Flow.Conveys",
+        "Becoming.Flow.FedFromBeyond",
+        "Becoming.Flow.not_inward_of_fed",
+        "Becoming.Flow.inward_of_not_fed",
+        "Becoming.Flow.inward_iff_not_fed",
+        "Becoming.Flow.fed_of_not_inward",
+        "Becoming.Flow.fed_from_beyond",
+        "Becoming.Flow.rising_fed_from_beyond",
+        "Becoming.Web.embodiedArising_fed_from_beyond",
+        "Becoming.Lone.fed",
+        "Becoming.Lone.each_fuel_once",
+        "Becoming.Lone.fed_not_recurring",
+        "Becoming.Flow.fed_from_beyond_from",
+        "Becoming.Flow.rising_fed_from_beyond_from"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "role": "proof",
+      "sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "declarations": [
+        "Becoming.Flow.taking_draws_in",
+        "Becoming.Flow.rising_draws_in",
+        "Becoming.Flow.Inward",
+        "Becoming.Flow.Around",
+        "Becoming.Flow.Dissipative",
+        "Becoming.Lone.lone"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "role": "proof",
+      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "declarations": [
+        "Becoming.Web.embodiedArising_draws_in"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
+      "declarations": [
+        "Becoming.Flow.BalancesOn",
+        "Becoming.Flow.Balances.on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Succession.lean",
+      "role": "proof",
+      "sha256": "f0fbe7d9cba55064c53cbd0550dc3edfdc5aa06fa7b6afe8df0c96dd76143ccf",
+      "declarations": [
+        "Becoming.Successive.flow",
+        "Becoming.Successive.web",
+        "Becoming.Successive.balances",
+        "Becoming.Successive.dissipative",
+        "Becoming.Successive.acting",
+        "Becoming.Successive.fed",
+        "Becoming.Successive.takes_part_once",
+        "Becoming.Successive.relay"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CONTINUATION-GROUNDING-PLAN.md",
+      "role": "statement",
+      "sha256": "0c86a8d756b82a62f8d14733e21714fb3ac38a175ea2cabaa645974f61d3b63f"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
+      "role": "provenance",
+      "sha256": "bf0ff40c2dcd72f581645b6a67d5aa4a1af92958b6ef6248f39881a640c95b37"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CONTINUATION-GROUNDING-REVIEW.md",
+      "role": "review",
+      "sha256": "13da1ebc8b8e4e40008f73616b8c9a55c89e44783542cc148aa62907f7f38f3f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json",
+      "role": "receipt",
+      "sha256": "eb3ccaec5f33b5a6ff7fc20e10ef491a130fbdc013a03bd0c5b3f399a7eaad7f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json",
+      "role": "receipt",
+      "sha256": "790a8973dbabe58f9bc5f4c27d39589c8827b6fab3fe08a8d342f6ef02bca4a8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "role": "proof",
+      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c",
+      "declarations": [
+        "Becoming.Halving.never_rests"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "role": "receipt",
+      "sha256": "f399061e1e9af72fb012a69861653f1a5496c6907982a2723399bcee788614ae",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "role": "receipt",
+      "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "role": "receipt",
+      "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dissipation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Roles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Succession.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Succession",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "zh": "2026-10-10：作为延续奠基计划（CONTINUATION-GROUNDING-PLAN）W1新增，按 Ren“commit them, then start implementation all the way to full completion”；实现 Ren 2026-10-10 的提议（从想要延续者重述普遍元伦理核心）；见整合文档 §47。",
+      "en": "2026-10-10: added as W1 of the continuation-grounding plan (CONTINUATION-GROUNDING-PLAN), following Ren's ‘commit them, then start implementation all the way to full completion’; implements Ren's proposal of 10 October 2026 (restating the Universal Metaethical Core from what wants its continuation); see §47 of the integration note."
+    },
+    {
+      "zh": "2026-10-10 W8：按独立审查（CONTINUATION-GROUNDING-REVIEW.md）更正，见整合文档 §47.1–47.4；验证范围指向合并检查器回执 20261009T231934.987085Z 与外围回执 20261010T073508.393062Z。C3、C9、C10：“不是哪个特定来源”改为“不必有哪个来源条件复现”，写明输送的始终是同一个太阳；中文的输送一律用“输送”；“输送的形式不加前提”改为“只加可判定相等”；Lone 的引用补 Lone.lone。定理不变。",
+      "en": "2026-10-10 W8: corrected after the independent review (CONTINUATION-GROUNDING-REVIEW.md), see §47.1–47.4 of the integration note; validation scope points to consolidated receipt 20261009T231934.987085Z and periphery receipt 20261010T073508.393062Z. C3, C9, C10: ‘no particular source is’ becomes ‘no source condition need recur’, noting that the one sun does all the conveying; the Chinese text uses 输送 for conveying throughout; ‘the conveyance form adds no premise’ becomes ‘adds only decided equality’; Lone is cited through Lone.lone. The theorems are unchanged."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“延续者从其外得到供给：汲入律的输送形式；在可判定相等之下，从其外得到供给恰是该步不内向；必要的是得到供给，不必有哪个来源条件复现”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “A continuing family is fed from beyond: the conveyance form of the draw-in laws; with equality decided, being fed from beyond is exactly a step that is not inward; being fed is needed, and no source condition need recur”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-14 可读性迁移到 schema 2（开放问题计划：迁移 lint 发现最多的 schema-1 记录）：标题、陈述、四项前提、反例与对应不变；主张拆为 6 条规律；下一步中已完成的局部规律成为第 5 条规律，已完成的 Successive 一项由 counterexamples[1] 承载；限制分入“未表明”、通用边界、前提（重复者，以及关于自然数的量与有限家族的第五项前提）与反例；验证范围与下一步中的轮次标签 P57 移出（保留在沿革与快照）。前提、状态、证明绑定与来源哈希均未改变。验证范围按证明绑定写明当前绑定。每句旧文本的去向见迁移对照表 [continuing-self-fed-from-beyond.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/migrations/continuing-self-fed-from-beyond.md)；迁移前的完整记录为 text_versions 末项。",
+      "en": "14 October 2026 readability migration to schema 2 (open-issues plan: migration of the schema-1 records with the most lint findings): title, statement, the four hypotheses, counterexamples and correspondence are kept; the claim was split into 6 laws; the next step's completed local laws became law 5, and its completed Successive item is carried by counterexamples[1]; limitations went to does-not-show items, standard boundaries, the hypotheses (where they repeated them, and a fifth for natural-number amounts and finite families) and the counterexamples; the round label P57 left the validation scope and next step (it stays in history and the snapshot). No premise, status, proof binding or source hash changed. The validation scope names the current bindings from the proof bindings. Every earlier sentence is mapped in the migration table [continuing-self-fed-from-beyond.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/migrations/continuing-self-fed-from-beyond.md); the exact earlier record is the last text_versions entry."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D12）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D12): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 A4 项：标题与陈述原说延续者“从其外得到供给”；Flow.fed_from_beyond 与 generation_fed_from_beyond 的结论是 ¬∀t≥N, ¬FedFromBeyond，规律 3 已如此陈述，标题与陈述改为同一强度。原文见 text_versions。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item A4: the title and statement said a continuing family \"is fed from beyond\"; Flow.fed_from_beyond and generation_fed_from_beyond conclude ¬∀t≥N, ¬FedFromBeyond, as law 3 already says, so the title and statement now have that strength. Earlier text in text_versions."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, A4 (Ren 19 October: \"integrate all, the theory is a whole, not stitched pieces, go ahead\"): The rest family's Chinese term in the live Chinese fields is now 停息 (1 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.",
+      "zh": "2026年10月19日，A4（Ren 10月19日的回答：“integrate all, the theory is a whole, not stitched pieces, go ahead”）：中文字段中停息家族的用语由“静止”改为“停息”（1 处），与理论章一致（DELEGATED-CHOICES D45 (4)）；英文不变。论断不变。"
+    },
+    {
+      "en": "19 October 2026, R20(b) (chapter and Lean wording say exactly what the Lean shows): the dissipation hypothesis now names the whole unit lost per taking step on which the law depends. The claim is unchanged.",
+      "zh": "2026年10月19日，R20(b)（理论章与 Lean 文字恰说 Lean 所表明的）：耗散的假设现在指明这一规律所依赖的每个取用之步失去的整单位。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Web.generation_draws_in (now Web.embodiedArising_draws_in); Web.generation_fed_from_beyond (now Web.embodiedArising_fed_from_beyond). Proof bindings (Continuation.lean, Dissipation.lean, Flow.lean, Roles.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Dissipation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Roles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Web.generation_draws_in（现为 Web.embodiedArising_draws_in）；Web.generation_fed_from_beyond（现为 Web.embodiedArising_fed_from_beyond）。证明绑定（Continuation.lean、Dissipation.lean、Flow.lean、Roles.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Continuation.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Dissipation.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Flow.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Roles.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 61 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/f365a8f85951eec6/continuing-self-fed-from-beyond.json and in git.",
+      "zh": "2026-10-20：61 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/f365a8f85951eec6/continuing-self-fed-from-beyond.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the dissipation hypothesis no longer says the conclusion fails with real-valued amounts, which no theorem shows (the laws are stated over whole-number flows): it says the argument does not apply where losses can shrink geometrically, with the halving stock that never rests as the witness of shrinking losses, now in the references (Becoming.Halving.never_rests, an alias of least-loss-rest, bound to a receipt in which its axiom report is empty); the rest that still holds over any amounts, for an amount read off configurations a list holds, is linked in related; the correspondence labels its reading as the AI's instead of the author's. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：耗散假设不再说量取实数时结论不成立（没有定理表明这一点，规律只对整数流陈述）：改为损失可以几何地缩小时这一论证不适用，以从不停息的减半存量为损失缩小的见证，并加入引用（Becoming.Halving.never_rests，为 least-loss-rest 的别名，绑定的回执中其公理报告为空）；在任何量上、读自列表所容纳之构形者仍有的停息，列于相关；对应把读法标为 AI 的，不再写“作者的”。规律未变。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/55de6e2d567deed9/continuing-self-fed-from-beyond.json",
+      "sha256": "55de6e2d567deed9568749b8003c4f8613e52cbfd794b2c4e4ae071fc09aa3d6",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/5fad8737542e6813/continuing-self-fed-from-beyond.json",
+      "sha256": "5fad8737542e6813ddd3be02242d26bc56056a975a71d9e7d032ceeeb30edcce",
+      "note": {
+        "zh": "全库审查（2026年10月16–17日）把措辞对齐 Lean 陈述之前的记录原始字节（schema 2）。",
+        "en": "Exact record bytes before the wording was scoped to the Lean statements (whole-repository review of 16–17 October 2026, schema 2)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f365a8f85951eec6/continuing-self-fed-from-beyond.json",
+      "sha256": "f365a8f85951eec6caab5a5829142857c1bcb9276711378e5f1b165fa85b7cef",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35, E3); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35，E3）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
+}
