@@ -120,11 +120,12 @@ change with the share, and the readers are counted exactly as the population cou
 under the rule read there; a rule in force against the reading can carry the share across the mass
 (`RuleCapture.Reversed.not_absorbed`). There is no noise here, so the critical mass and the locks
 bound courses without noise only. Drawn one member at a time (`Becoming.DrawnReplacement`), either
-lock is left by drift alone, with weight positive at every count and falling across the distance
-from the mass, and which state one member arising fixes more often is decided by the product of the
-weights across the mixed counts, in which `a` and `p` enter; it is the risk-dominant state of
-Kandori, Mailath and Rob (1993) and Young (1993), here the shapers' where `lo < c < hi` and
-`2 * c < hi + lo`, only under weak selection. A loss read by part of the readers
+lock is left by drift alone, with weight positive at every count and a bound on it shrinking across
+the distance from the mass, and which state one member arising fixes with more weight is decided by
+the product of the weights across the mixed counts, in which `a` and `p` enter. That is not the
+risk-dominant state in general (Kandori, Mailath and Rob 1993; Young 1993; here the shapers' where
+`2 * c < hi + lo`): the Moran criterion approaches it under weak selection (Nowak and others 2004),
+and under strong selection in a small population the two can part (`DrawnReplacement`). A loss read by part of the readers
 (`ClosedCapture.Thinned`) is not joined here. The representation commits to discrete steps, natural
 counts and others present. Nothing here says that capture damages or supports 生生: ranking courses
 needs C. No ethical predicate, ranking or axiom occurs.

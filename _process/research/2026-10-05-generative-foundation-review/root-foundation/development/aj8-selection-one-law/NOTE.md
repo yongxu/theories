@@ -15,15 +15,16 @@ AI-written study note (one session, 3 November 2026), board item AJ8. Reading ti
    So "whatever `p`" and "`p` never changes that direction" are true where the shared part reaches every member alike. They are false where it goes to those near the shapers.
 2. **Condition 2's lock holds without noise only, and how noise leaves it is bounded.** 04 §6's Moran chain is restated with weights read from the count (`Drift.Replacement.valueBy`), and every bound is proved there; the constant chain is now a case. DrawnShaping's stag hunt, drawn one member at a time, is a case of that chain (`DrawnReplacement`).
    - From every mixed count, either lock is left by drift with positive weight: losing every shaper at least `down ^ i` (`lost_ge`), fixing them at least `a ^ k` (`fixed_ge`).
-   - The weight of leaving falls across the distance from the critical mass, bounded by the product of `down / up` over the counts crossed (`lost_above`, `fixed_below`).
-   - Which state one member arising fixes more often is the product of the shapers' weights over the mixed counts against `down ^ M` (`one_each`). That depends on the base `a` and on the part `p` that comes to every member alike, which move nothing without noise.
+   - A bound on the weight of leaving falls across the distance from the critical mass: `t` times the product of `down / up` over the counts crossed, where the rule read favours (`lost_above`, `fixed_below`). The weight itself is not shown monotone.
+   - Which state one member arising fixes with more weight is, in the limit, the product of the shapers' weights over the mixed counts against `down ^ M` (`one_each` with `fixation`). That depends on the base `a` and on the part `p` that comes to every member alike, which move nothing without noise.
    - At an even population the rule read strictly favours the shapers exactly where `2c < hi + lo` (`risk_dominant_iff`), risk dominance in counts. With five members, `a = 1`, `c = 9`, `hi = 20` and `lo = 0`, the shapers are risk dominant, yet one shaper fixes with less weight than one other: 6,215,625 against 6,250,000 (`Strong.other_first`). With `a = 100`, or with `p = 99` to every member, the order turns (`Weak.shapers_first`, `Weak.shared_decides`).
 
-   So the texts' "under rare mutation the long-run state is the risk-dominant one" is the limit of Kandori, Mailath and Rob and of Young. It is not this chain's verdict at a small population under strong selection. "An exit would need a change of `hi`, `lo` or `c`" is false with drawing.
+   So the texts' "under rare mutation the long-run state is the risk-dominant one" does not hold in general. Risk dominance is what Kandori, Mailath and Rob and Young select in their limit, and the Moran criterion approaches it under weak selection; in a small population under strong selection the two can part. "An exit would need a change of `hi`, `lo` or `c`" is false with drawing.
 3. **T7 gets its noise case.** A drop by drift alone is a drop with nothing read changed. T7's refuter therefore needs a population and a distance from the mass at which drift alone would rarely leave the lock. Its new forbidden case is such a lock left by its selectors, with nothing read changed, more often than that bound allows.
 4. **The §9 models sorted.**
-   - *Left by noise (proved):* DrawnShaping and its critical mass. RuleShaping at a step is the case `hi = lo = s`. ReadInTime's course after the loss is read is the case `lo′` for `lo`.
-   - *Left by noise (a reading, not stated as instances):* RuleCapture's favouring rule, and any rule that leaves the disfavoured kind a positive weight at every mixed count. Each reads as the chain with its counts as weights, by `Drift.Replacement.lost_geBy`.
+   - *Left by noise (proved):* DrawnShaping and its critical mass. RuleShaping at a step is the case `hi = lo = s`.
+   - *By substitution:* ReadInTime's rule after the loss is read is the case `lo′` for `lo`, read at every step without the rule in force's lag; the joined course drawn is not stated.
+   - *Left by noise (a reading, not stated as instances):* RuleCapture's favouring rule, and any rule that leaves the disfavoured kind a positive weight at every mixed count. Each reads as the chain with its counts as weights, by `Drift.Replacement.lost_geBy`, losing the favoured kind with weight at least `c ^ i`, `c` the least weight of the disfavoured kind at a mixed count.
    - *Not left:* a rule that leaves the disfavoured kind nothing, because the bound is then zero and no history goes down. Also counts that accumulate instead of being drawn (`ChoiceCountCapture`): read with noisy choices they are an urn with increasing returns, whose lock-in with probability one under strong enough returns is cited (Arthur, Ermoliev and Kaniovski 1987; Arthur 1989), not stated.
 
 ## 2. Condition 1 in detail
@@ -91,7 +92,7 @@ The witness reuses `SelectionLevels.Founding`'s two groups of two (`keeps`, `ass
 
 ## 4. T7
 
-T7 (02 §9) says a measure read from what it selects is dropped only through a change in what the loop reads, not on evidence alone. Its *in the model* clause proves invariance and the lock outliving an unread loss, both without noise. With drawing, a lock is left by drift alone with positive weight. That is a drop with no new reader, no change in the reading and no loss entering the share, which is exactly T7's refuter. So T7 holds for courses without noise, and its refuter must exclude what drift alone accounts for. The bound across the distance from the mass (`lost_above`) gives the exclusion: a lock in a population large enough, at a share far enough above its critical mass, for drift alone to leave it rarely. The new forbidden case is the converse: such a lock left by its selectors with nothing read changed, more often than that bound allows. Both are stated in 02 §9 and in 08's thesis row. Neither is frozen. T7's frozen test is still the field test of reform events, now coded with a population size and a distance from the mass.
+T7 (02 §9) says a measure read from what it selects is dropped only through a change in what the loop reads, not on evidence alone. Its *in the model* clause proves invariance and the lock outliving an unread loss, both without noise. With drawing, a lock is left by drift alone with positive weight. That is a drop with no new reader, no change in the reading and no loss entering the share, which is exactly T7's refuter. So T7 holds for courses without noise, and its refuter must exclude what drift alone accounts for. The bound across the distance from the mass (`lost_above`) gives the exclusion: a lock in a population large enough, at a share far enough above its critical mass, for drift alone to leave it rarely. The new forbidden case is the converse: such a lock left by its selectors with nothing read changed, more often than the drawn model's bound allows, its premises read on the case. The bound is a weight of histories in the model, not a frequency of actual cases, so reading it on cases is part of the test's coding. The thesis sentence itself now says "drift aside", and the earlier fourth forbidden case and "for good" carry the noise scope. Both are stated in 02 §9 and in 08's thesis row. Neither is frozen. T7's frozen test is still the field test of reform events, now coded with a population size and a distance from the mass.
 
 ## 5. Texts narrowed
 
@@ -132,4 +133,20 @@ T7 (02 §9) says a measure read from what it selects is dropped only through a c
 - Wright–Fisher with selection.
 - Assortment formed by the share.
 - A frozen test of T7 with its new exclusion.
-- A reader other than the author: the texts' restatements against their homes are still to be checked by someone else.
+## 8. The independent reading
+
+One independent AI reader (read-only, 3 November 2026) checked every restatement against its home and the Lean. It confirmed the witness arithmetic, the group witness, the homes of `grouped_*` and `rises_iff_kept`, the cited standings and the Chinese texts. It found twelve faults, and all twelve were taken:
+1. A weight said to fall where Lean bounds it above by a product that falls.
+2. T7 and 08's row generalising drift from the critical mass to every lock.
+3. A weight of histories read as a frequency of cases.
+4. T7's fourth forbidden case and "for good" without the noise scope.
+5. The sorting paragraph contradicting its own not-left case, and misstating `lost_geBy`'s bound; it has no standing tag.
+6. ReadInTime's `lo′` case filed as proved where it is a substitution.
+7. The fixation ratio credited to `one_each` alone.
+8. "Only in the limit" claimed where one witness shows only that the two can part.
+9. The cited standing of the rare-mutation limit dropped in A-10b.
+10. A wrong hypothesis for `lost_geBy` in 04's row and the kit.
+11. The `ρ` form attributed to the theorem, which is in spreads.
+12. Four unchanged lines still unscoped (AJ's plan, the failure-mode map, the meta-attractor page twice).
+
+It also noted that 08's T7 row lists only some of 02's forbidden cases; the row now says so.

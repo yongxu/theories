@@ -2606,7 +2606,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   other `a + c + p`, `s` what comes back to the shapers alone, `p` what comes to every member alike,
   `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`
   comes to every member alike; listed in groups whose shapers give the group's shared part, the whole
-  selects for shaping exactly where `c < s + m q ρ` over the rationals (`grouped_rises_iff`);
+  selects for shaping exactly where `c` times the spread falls short of `s` times it with `m q` times
+  the spread among groups (`grouped_rises_iff`), read over the rationals as `c < s + m q ρ`;
   a larger `p` pulls the rule toward even; a smaller cost gives a rule not lower, a strictly smaller
   one a strictly higher rule; with nothing coming back and a cost the shapers' share falls at every
   step, the shapers present, and with no cost and nothing coming back it stays. Selection by rules
@@ -2661,7 +2662,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   potential's first step is the shapers' weights at the mixed counts multiplied and its last
   `down ^ M` (`one_each`); at an even population the rule read favours the shapers strictly exactly
   where `2 · c < hi + lo` (`risk_dominant_iff`). Witnesses: five members, the shapers risk dominant
-  and one other fixing first (`Strong.other_first`), reversed by the base or by the part shared alike
+  and one other fixing with more weight (`Strong.other_first`), reversed by the base or by the part shared alike
   (`Weak.shapers_first`, `Weak.shared_decides`). A leaf: the join of `DrawnShaping`'s critical mass
   with 04 §6's replacement chain, which nothing below needs (board item AJ8).
 * `Becoming.ReadInTime` (L1): the loss read in time by the others, joined to the critical mass. The

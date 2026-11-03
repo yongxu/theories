@@ -33,7 +33,7 @@ premise beyond the hypotheses each statement names:
   (`DrawnShaping.drawn_locks`); and those fixing them weigh at least `a ^ k` within reach of the top
   (`fixed_ge`), below the mass too, where without noise it never rises above its start
   (`DrawnShaping.drawn_from_below`).
-* **But at a price falling across the distance to the mass.** Where the rule read at `s` favours the
+* **But at a price whose bound falls across the distance to the mass.** Where the rule read at `s` favours the
   shapers, from `s + n` with `t` to the top, the histories over any number of steps losing every
   shaper weigh, times the shapers' weights at `s + 1 … s + n`, at most `t` times `down ^ n` times the
   whole weight (`lost_above`): as a share, at most `t` times the product of `down / up` across the
@@ -43,7 +43,7 @@ premise beyond the hypotheses each statement names:
   (`fixed_below`).
 * **One of each kind arising.** The potential's first step is the shapers' weights at `1 … M`
   multiplied and its last `down ^ M` (`one_each`): from one shaper among the others, fixing them stands
-  to the whole as the first to the potential at the top, and from one other among the shapers, losing
+  to the whole, in the limit of `fixation`, as the first to the potential at the top, and from one other among the shapers, losing
   them as the last. So one shaper fixes with more weight than one other exactly where the product of
   the shapers' weights at the mixed counts exceeds `down ^ M`.
 * **Risk dominance, in counts.** At an even population the rule read favours the shapers strictly
@@ -58,7 +58,8 @@ premise beyond the hypotheses each statement names:
   three (`DrawnShaping.drawn_favours_alike`).
 
 So with drawing the capacity to shape the rule is never locked for good: either lock is left by drift
-alone, with weight positive at every count and falling across the distance from the critical mass.
+alone, with weight positive at every count and a bound on it falling across the distance from the
+critical mass.
 What decides which state one member arising fixes more often is the product of the weights across
 every mixed count, and so the base `a` and the part `p` that comes to every member alike, which move
 nothing without noise.

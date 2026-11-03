@@ -3342,7 +3342,7 @@ SCOPE = (
     "times the whole, below one favouring the others the fixing histories likewise, the potential's "
     "first step is the shapers' weights at the mixed counts multiplied and its last down^M, and at an "
     "even population the rule read favours the shapers strictly exactly where 2c < hi + lo; witnesses "
-    "with five members where the shapers are risk dominant and one other fixes first, and where the base "
+    "with five members where the shapers are risk dominant and one other fixes with more weight, and where the base "
     "or the part shared alike reverses it. "
     "ReadInTime: ClosedCapture's Thinned.lossPool over three of RuleShaping's rules after shaping, the shapers "
     "among the readers reading hi, the others lo below the bound N and lo' from then on: where every step adds at "
