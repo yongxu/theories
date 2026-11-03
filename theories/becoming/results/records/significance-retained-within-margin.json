@@ -338,8 +338,8 @@
     {
       "id": "the-run-classes-and-widening",
       "detail": {
-        "en": "The whole-run classes (renewing, consuming, arising) related to the order on what can form: a part drawing only on renewed conditions does not narrow, and the stepwise class of Preemption's drawer does not decide.",
-        "zh": "整段类别（更新、消耗、生起）与能形成者之序的关系：只汲取被更新条件的部分不缩小，Preemption 中汲取者的逐步类别不起决定作用。"
+        "en": "The whole-run classes (renewing, consuming, arising) and how a part changes what can form: a part drawing only on renewed conditions does not narrow, and the stepwise class of Preemption's drawer does not decide.",
+        "zh": "整段类别（更新、消耗、生起）与部分如何改变能形成者：只汲取被更新条件的部分不缩小，Preemption 中汲取者的逐步类别不起决定作用。"
       }
     }
   ],
@@ -763,6 +763,10 @@
     {
       "en": "30 October 2026 (U3, study section 465): a law on the root added, specializing `Becoming.Web.widens_iff_retains_adds` at the own-closure reading of significance, through the row (no F5 item: a specialization states less than its row); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律，于意义之自闭包读法下特化 `Becoming.Web.widens_iff_retains_adds`，经其本行（无 F5 项：特化所述少于本行）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): a related line on the-run-classes-and-widening says how a part changes what can form, as that record and its home section in 07 §2 now say, not the order on what can form. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：一条关于 the-run-classes-and-widening 的相关说明改说部分如何改变能形成者，与该记录及 07 §2 的本节现今所说相同，而非能形成者之序。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ],
   "text_versions": [

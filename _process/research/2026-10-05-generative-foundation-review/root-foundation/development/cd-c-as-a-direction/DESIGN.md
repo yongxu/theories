@@ -72,6 +72,7 @@ The test is AGENTS.md's: rename only a name that states a wrong meaning. The mea
 - `Becoming.Ranking.readings_rank_presence`, which becomes `readings_presence_extends`. Its statement is two premise-free extensions with no `Better`, and the module's own convention gives premise-free laws `_extends` names. The verdict was contested and holds on the refuter's reading.
 - `Web.widens_iff_every_weighting`, which becomes `Web.widens_iff_every_positive`, matching its sibling `Weighting.widens_iff_every_positive`. Positivity sits inside its conclusion (`∀ w, Weighting.Positive items w → …`), so the name states the universal the renamed record no longer states. The names test kept it for another reason, and the independent check found the gap (§7). The record's citation and 07 §4.4's follow it in that edition.
 - Twelve docstrings restated: `sharing_presence`, `possibleFirst`, `ThirdParty.stepwise_not_monotone`, `basic_first_stepwise` and `basic_first_relational`, `Web.paths_extension_iff_widens`, `Weighting.ended_below` (its headline drops the self-concern premise and the standpoint's condition), `Reaching.not_above_wider_now`, `CausalGrowth.no_order_contains_both`, and the record `ranking-under-readings`'s law 18. The refuters found four other docstrings exact as they stand: `paths_comparison_widens` ("with no axiom" is the empty axiom report), `ThirdParty.restraint_unranked_stepwise`, `Direction.extension_iff_widens` and `Lexical.Frame.comparison_of_decided`.
+- Four docstrings labelled "The whole first", found by the second check (§8): `Web.Retains.within` ("the whole's judgment decides every narrower one") and Significance.lean's module bullet, and Regions.lean's module bullet and `Web.includes_iff_within_every`. Each states a priority over what is a one-way retention or an equivalence of comparisons, as the renamed record no longer does.
 
 ## 4. What changes, and when
 
@@ -81,27 +82,31 @@ The test is AGENTS.md's: rename only a name that states a wrong meaning. The mea
   - §1's first sentence names the thesis it stands on: "On the thesis of one relational unfolding, argued and not proved (08), positions, regions and standards form within the unfolding";
   - §2's heading and its premise-free verbs, the lagged and tail orders included (§3);
   - §2's "at two orders of grain" for the kind relay, 02 §1's phrase. One 全生成 already reads two grains, and the relay's law gives it at orders 0 and 1 over three. A first fix, "at two grains", dropped the second order (§7);
-  - §2's causal-set reading names the start its laws need, from the empty set;
+  - §2's causal-set reading names the start its laws need, from the empty set, and so does the Theorem paragraph above it, `what-can-be-born-next`'s home (§8);
+  - §2's four cases: wherever inclusion or exceeding is decided both ways one of them holds, a root law (`«四比之周»`, §8);
+  - §6's first sentence names the thesis, as §1's does: "On the thesis of one relational unfolding (§1), a person, an AI system and a training process are formations within the unfolding";
   - §5's sentence on what C ranks: "On a reading of `living`, C ranks a course above each course it extends there, including every event the other includes and one more, and decides no other pair; read on what a course admits, as the possibility reading is, those are the courses it widens". The first round's "each course it widens" was false for the stepwise and whole-run readings (§7);
-  - §5's easing table: restraint extends overdraw exactly where it includes an event (or relation) overdraw withholds, an iff in the Lean;
+  - §5's easing table: restraint extends overdraw exactly where it includes an event (or relation) overdraw withholds, an iff in the Lean; abstaining restraint is not shown to extend overdraw under the relation-level reading, as its record says, not "not ranked" (§8);
   - the open items list;
   - the renamed records' anchors, beside the old ones.
-- 08: the C row's standing ("gives order, in general alone … warrant open"), the shared law's label, statement and "1 of 8 on widening"; the known-results row and the third-parts item on how two courses differ in what can form; §8's two lines on tasks and causal sets; "generation at two orders of grain".
-- 01: the shared law's label, and "two orders of grain".
+- 08: the C row's standing ("gives order, in general alone … warrant open"), the shared law's label, statement and "1 of 8 on widening"; the known-results row, on how two courses differ in what can form, and the third-parts item, on how a part changes what can form; §8's two lines on tasks and causal sets; "generation at two orders of grain".
+- 01: the shared law's label, and "two orders of grain"; the Widening bullet's two root laws it had left out, keeping the same excludes being mixed (`«齐则非杂»`) and the four cases where decided (`«四比之周»`) (§8).
+- ONE-ARGUMENT:110: restraint is ranked stepwise where it includes an event overdraw withholds, the condition of `Ranking.restraint_ranks_stepwise` (§8).
 - The glossary: the shared-law row, and "two orders of grain".
 - The collective page: its first bullet calls widening "a criterion", which is the question's generative direction only under the two premises, and "two orders of grain".
 - Records:
   - five statements restated in the first round, each with a history note: `shared-laws-on-the-grammar`, `stepwise-law-of-easing`, `comparing-two-courses-on-what-they-admit`, `horizon-optima-hold-the-greatest-renewal`, `what-a-course-keeps-reachable`;
-  - in the second round (§7), the laws, counterexamples and related lines that still said premise-free widening or a lagged order ranks, in `what-a-course-keeps-reachable`, `tasks-and-what-performs-them`, `eventual-widening`, `the-run-classes-and-widening`, `what-can-be-born-next`, `comparing-two-courses-on-what-they-admit`, `stepwise-law-of-easing`, `relation-level-law-of-easing` and `ranking-under-readings`, each with a history note; `what-can-be-born-next`'s statement; `what-keeping-widening-needs`'s grain wording; the renamed `whole-and-regions-and-bounded-centers`'s dependency input, which still said "the whole first", and an alias of `widening-as-what-every-positive-weighting-ranks`;
+  - in the second round (§7), the laws, counterexamples and related lines that still said premise-free widening or a lagged order ranks, in `what-a-course-keeps-reachable`, `tasks-and-what-performs-them`, `eventual-widening`, `the-run-classes-and-widening`, `what-can-be-born-next`, `comparing-two-courses-on-what-they-admit`, `stepwise-law-of-easing`, `relation-level-law-of-easing` and `ranking-under-readings`, each with a history note; `what-can-be-born-next`'s statement; `what-a-course-keeps-reachable`'s statement again, which had made covering, a preorder, the subject that puts (only the lagged order puts); `what-keeping-widening-needs`'s grain wording and its related line on the lagged order; the renamed `whole-and-regions-and-bounded-centers`'s dependency input, which still said "the whole first", and an alias of `widening-as-what-every-positive-weighting-ranks`;
+  - in the third round (§8), the restraint lines' "exactly where" in both languages, a run-class law's grammar, a related line on the run classes, a history note's account of covering, the renamed record's law 3 and a dependency input that still said the whole's judgment decides every narrower one, and `four-cases-of-a-part`'s hypothesis that the split into four cases is no Lean theorem, each with a history note where its claim's wording changed;
   - two titles and ids renamed;
   - every CD history note opens in Chinese in its Chinese text.
-- `shared_laws.py` (its display name and docstring), the regenerated shared-laws view, the coverage file, RESULT-WORKFLOW's list and the curated region note of `Becoming.GrammarLaws`.
+- `shared_laws.py` (its display name and docstring), the regenerated shared-laws view, the coverage file, RESULT-WORKFLOW's list and the curated region notes of `Becoming.GrammarLaws` and of `what-can-be-born-next` ("the inclusion reverses", §8).
 - The sciences dossier's two quotations of 07 §2 and its paraphrase of 08's third-parts item; the philosophy dossier's P-02 quotation of 07 §1's first sentence, which now matches it; the logic dossier's link to 07 §4.4's new anchor.
 - The reading register's paraphrase of 07's thesis line (`arguments-a-l.json`). Its source hash is left as it was, for the register's own reread of 07.
 - The registry, given a separate fix. A source that links a renamed record's former id still locates the record, because the former page redirects to it. Before the fix, every source left linking a former id drifted on any change. The study notes' links are left as they were, and the redirect resolves them. The rename receipt says so in its note, since its `sha256_after` for those six notes is not the landed state.
-- 24 records re-pointed after reading, in nine lines of the rebinds log (394 to 402): all 24 in the first three lines, and some again after each later change, four after merging main, three after the second round (§7), two after its last wording fix and three after merging main before landing. Nothing they say changed. Two of the lines are inexact, and are corrected here, since the log is not rewritten:
-  - in the overview, only the link to 07 §4.4 changed, moved to the new anchor by hand (4a6fd746b). `rename-id` rewrote only OPENING's record link. The first and fourth lines credit both to the tool;
-  - the re-point of the 19 records bound to 07 also moved them past 07 §1's block as rewritten in 2f539c959, the evaluation note's correction. That block lies outside every part of 07 these records cite or are linked from, and it was read.
+- 24 records re-pointed after reading, in nine lines of the rebinds log (394 to 402): all 24 in the first three lines, and some again after each later change, four after merging main, three after the second round (§7), two after its last wording fix and three after merging main before landing. Nothing they say changed. Three of the lines are inexact, and are corrected here, since the log is not rewritten:
+  - in the overview, only the link to 07 §4.4 changed, moved to the new anchor by hand (4a6fd746b). `rename-id` rewrote only OPENING's record link. The second line (395) credits both to the tool, and the fourth (397) the overview's;
+  - the first line's (394) re-point of the 19 records bound to 07 also moved them past 07 §1's block as rewritten in 2f539c959, the evaluation note's correction. That block lies outside every part of 07 these records cite or are linked from, and it was read.
 
 **Already landed by the fronts' owner** (5e7b118a9): the glossary's one sense, and the fronts' lines on ranking ("the community's best course" given its basis, "An order with no premise" relabelled).
 
@@ -109,7 +114,7 @@ The test is AGENTS.md's: rename only a name that states a wrong meaning. The mea
 - C's statement in pairwise form, *of two courses, one that widens the other is better than it*. It goes through the generativity chain's maintenance record and the fronts' owner. "Widening what can form is better" is accurate, but read alone it sounds like more is better, on a scale with a best. It does not land before the freeze: it changes no claim, and a front's change of C's wording is a decision for the edition.
 - The Lean rename and the twelve docstrings (§3), with a claim row of their own and a core run.
 - ONE-ARGUMENT:90's "fishes best where it has been" needs its basis, the catch it is rewarded by. The coordinator passed it to its owner.
-- For the philosophy dossier's owner, at the freeze: P-07's "With no premise, widening is an order" says what 07's thesis line no longer says. A wording the check proposed: "With no premise, widening says which of two courses admits more: it is one-way and transitive, a strict partial order in the mathematical sense, and not a ranking; that the wider is better is C." P-07's link to 07 §4.4's old anchor, and P-02's paraphrase "Positions, regions and standards form within the one unfolding", which could take the thesis as 07 §1 now does.
+- For the philosophy dossier's owner, at the freeze: P-07's "With no premise, widening is an order" says what 07's thesis line no longer says. A wording the check proposed: "With no premise, widening says which of two courses admits more: it is one-way and transitive, a strict partial order in the mathematical sense, and not a ranking; that the wider is better is C." P-07's link to 07 §4.4's old anchor; P-02's paraphrase "Positions, regions and standards form within the one unfolding", which could take the thesis as 07 §1 now does; and P-25's "A person, an AI system and a training process are formations within one unfolding", which could take it as 07 §6 now does ("On the thesis of one relational unfolding, a person, an AI system and a training process are formations within the unfolding").
 - For the fronts' owner: the overview's "Positions form within the one unfolding, and nothing outside it owns value" (both editions, §8), which 07 §1 now states on the argued thesis (§9 of the overview).
 - For the reader measure's owner: the cold read's key, item 2.11, "Widening as an order of courses: proved, needing no premise". For the next round it could read "How two courses differ in what they admit (one widens the other, the same, or mixed): proved, needing no premise; calling the wider better is C". A run already fixed keeps its key, and its marks can say that "an order of courses" was marked against 07 before CD.
 - Low weight, for the glossary's owner:
@@ -125,6 +130,7 @@ All the readers were AI, and each read independently. Their reports are in [revi
 3. **A critic of the sweep** ([sweep-critic.md](reviews/sweep-critic.md)), whose findings are taken in §6.
 4. **The names test**: three finders, then five refuters (§3, [names-test.json](names-test.json)).
 5. **The independent check of the whole change**: three lenses, each verified, and a completeness critic (§7, [independent-check.json](reviews/independent-check.json)).
+6. **The second check, of the second round**: the same three lenses on what the second round changed, each verified (§8, [second-round-check.txt](reviews/second-round-check.txt)).
 
 The first draft's change list proposed "the direction to take" on every front. With the change list's builder, it is kept as a failed candidate in [history/](history/).
 
@@ -165,7 +171,8 @@ Before landing, a check independent of this study read the whole change ([review
 7. *Smaller things:*
    - 07 §1's "within it", which had two antecedents;
    - 07 §2's run-class sentence, which left out the mixed case and now names the question ("how a part changes what can form");
-   - 07 §2:94's lagged-order verb, and 08's three lines saying "the order of what can form" or that widening ranks;
+   - 07 §2:94's lagged-order verb, and 08's four lines saying "the order of what can form" or that widening ranks;
+   - 07 §6's first sentence, on the thesis as §1's; `what-a-course-keeps-reachable`'s statement, since covering is a preorder and only the lagged order puts (the Lean lens's finding 9);
    - the collective page's pointer, which now says "the question's" generative direction, not the title's;
    - the renamed record's dependency input, which still said "the whole first", and an alias stating the refuted universal;
    - the rename receipt's six reverted study notes;
@@ -182,4 +189,25 @@ Before landing, a check independent of this study read the whole change ([review
 - The two records' "relate a pair oppositely" need not take 07's longer "hold of a pair in opposite directions". The statement cap of 300 characters forbids it, and the history note's claim is about content.
 - The verifiers also rejected parts of three proposed fixes: changing 07 §4's role table, requalifying the collective page's §1 heading, and an appended rebinds line that would re-point nothing.
 
-**Passed to their owners** (§4): P-07, and P-02's paraphrase, to the philosophy dossier's owner at the freeze; the overview's flat sentence to the fronts' owner; the cold read's key item 2.11 to the reader measure's owner.
+**Passed to their owners** (§4): P-07, and P-02's and P-25's paraphrases, to the philosophy dossier's owner at the freeze; the overview's flat sentence to the fronts' owner; the cold read's key item 2.11 to the reader measure's owner.
+
+## 8. The second check
+
+Before the fast-forward, the second round was checked the same way: the Lean, the records' and texts' consistency, and completeness, each finding verified by an adversarial reader ([reviews/second-round-check.txt](reviews/second-round-check.txt), AI-written). All its findings were minor, and none was a claim the Lean refutes outright. Two were places the second round's own rule covered and it missed. The third round is [apply_verify.py](apply_verify.py), run after apply_check.py.
+
+**Taken.**
+1. *The start in the home.* 07 §2's causal-set Theorem paragraph, `what-can-be-born-next`'s home, still said the antichain is above every course with a pair and that two courses differing by a pair are mixed. Both hold only from the empty set (`CausalGrowth.antichain_rangeWidens` takes the start; `Starts.mixed_of_pair_needs_starts`). Both clauses now name it, and "is above" reads "widens", as the reading below it does.
+2. *Restraint, exactly.* The stepwise statement and the related lines in English said "where", and their Chinese and the history notes said "exactly where" (恰在). Both laws are iffs, so the English now says "exactly where" too. The statement fits its cap by opening "Read stepwise", as its sibling's "Read relation by relation" does.
+3. *Abstaining restraint.* The second round wrote that the relation-level record does not show abstaining restraint extends overdraw. 07 §5 still said it is "not ranked", which no declaration states, and now says what the record says.
+4. *The whole first, in a law.* The renamed record's law 3 and its dependency on `continuation-condition-yields-living-significance` still said that the whole's judgment decides every narrower one. That holds of retaining only: a losing verdict of the whole decides nothing narrower (laws 4 to 6). They now say that what retains in the whole retains in every region. The four Lean docstrings saying the same go to the next edition (§3).
+5. *ONE-ARGUMENT:110* said restraint "is ranked stepwise too", unconditionally. The cited theorem needs restraint to include an event overdraw withholds, and the sentence now says so. ONE-ARGUMENT was in the sweep, and the critic had sorted this sentence as a named order.
+6. *Smaller things:*
+   - a run-class law that did not parse ("Arising is where it begins how …"), now "where a part not active at the start can begin to change what can form": arising is needed for that, not sufficient;
+   - a related line still calling the run classes' question "the order on what can form";
+   - `what-a-course-keeps-reachable`'s history note, which made covering a subject that puts;
+   - the curated region note of `what-can-be-born-next` ("the inclusion reverses");
+   - this note's rebinds corrections (three lines inexact, not two, and which), its count of 08's lines (four), and what §4 and §7 left out: 07 §6's first sentence, `what-a-course-keeps-reachable`'s statement, `what-keeping-widening-needs`'s related line, and P-25 for the philosophy dossier's owner.
+
+**Refuted by their verifiers**, and not taken: that `what-can-be-born-next`'s "ordered by widening" (a non-implication about a quantity) ranks courses, and that the reachable-range related line in `eventual-widening` and `what-keeping-widening-needs` makes covering the subject that puts (its "only read with a lag" restricts the verb, as its Chinese says).
+
+**From the fronts' owner**, two places that stated less than the Lean proves, both taken: 01's Widening bullet left out that keeping the same excludes being mixed (`«齐则非杂»`) and that wherever inclusion or exceeding is decided both ways one of the four cases holds (`«四比之周»`), both root laws for every relation; and `four-cases-of-a-part`'s hypothesis said the split into four cases is "not a Lean theorem". Only deciding it for every pair is excluded middle (`«则逾之定当且仅当排中»`). 07 §2, the record's home, now says so too. The cold read key's item 2.11, on the fronts' branch, states both as the Lean does.

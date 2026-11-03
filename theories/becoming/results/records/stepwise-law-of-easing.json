@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T13:56:15+00:00",
   "statement": {
-    "en": "Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers where it includes an event overdraw withholds, and C ranks it above.",
-    "zh": "在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件，所以所取不超过所给的节制对任意多个汲取者扩展过度汲取，在它记入过度汲取扣下的某个事件之处，C 把它排在其上。"
+    "en": "Read stepwise, easing withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and C ranks it above.",
+    "zh": "在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件，所以所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，C 把它排在其上。"
   },
   "laws": [
     {
@@ -144,7 +144,7 @@
     {
       "id": "relation-level-law-of-easing",
       "detail": {
-        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too where it includes a relation overdraw withholds, and C ranks it above.",
+        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and C ranks it above.",
         "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
       }
     },

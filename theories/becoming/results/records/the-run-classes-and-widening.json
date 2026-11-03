@@ -49,8 +49,8 @@
       ]
     },
     {
-      "en": "Arising is where it begins how a part changes what can form. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active.",
-      "zh": "生起是一个部分如何改变能形成者的开始。在平衡的流中，只有活动的形成取（且只从其所汲取者取）、只有活动的形成给时，成员在起点不活动、任何一步都不生起的部分不取不给，有它与无它的水平接纳相同；起点不活动且从不生起的形成从不活动。",
+      "en": "Arising is where a part not active at the start can begin to change what can form. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active.",
+      "zh": "生起是起点不活动的部分得以开始改变能形成者之处。在平衡的流中，只有活动的形成取（且只从其所汲取者取）、只有活动的形成给时，成员在起点不活动、任何一步都不生起的部分不取不给，有它与无它的水平接纳相同；起点不活动且从不生起的形成从不活动。",
       "declarations": [
         "Becoming.Web.inactive_of_not_arising",
         "Becoming.Flow.Balances.keeps_of_inactive",
