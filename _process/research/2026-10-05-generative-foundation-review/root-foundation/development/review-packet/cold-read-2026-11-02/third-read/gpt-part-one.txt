@@ -1,0 +1,124 @@
+**S:** This is an unfinished relational theory of how things arise and change, with an ethics conditional on two unasserted premises and a mix of formal proofs and empirical claims.
+
+**Q1 — Sure.** It is a proposed common language for persistence, life, knowledge and selection, joined to a conditional ethics about which continuations count and when enabling more possibilities is better.
+
+> “An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good.”
+
+**Q2 — Sure about the stated standings; unsure about some technical content.**
+
+1. **Persistence can be described through continuation relative to a class, distinguishing parts from patterns.** The formal results are theorems; their explanatory reach is argued, their universality open.  
+   > “That this explains how things go on: argued. That every becoming fits it: open”
+
+2. **Reality is one relational unfolding.** This is an argued thesis, not established by the formal results.  
+   > “One unfolding is a thesis, argued: within relations, as far as shown, taker and drawn-on are two roles of one relatum and knower and known one [loop](chapters/03-KNOWING.md#the-reading-loop), and responsibility is [not shown to differentiate](chapters/07-SIGNIFICANCE.md#practical-judgment).”
+
+3. **Individually sustainable taking can collectively destroy its renewing condition.** Proved on models, explicitly a restatement of the commons; empirical T1 has mixed results.  
+   > “Proved on models; restates the commons. T1: three settings passed, four failed”
+
+4. **A selector reaches only what couples into it.** Proved but near-definitional, dependent on the restriction built into the selector.  
+   > “Proved, near-definitional; its force is the premise that a selector selects through just those”
+
+5. **Under the specified ‘room’ condition, optimizing what couples in exhausts what lies beyond as far as eligible alternatives allow.** A known theorem restated; its extension to trained systems is conjectural.  
+   > “Proved; a known theorem restated. T3, on trained systems: conjectured, partly supported, earlier tests later read as evidence”
+
+6. **A locally rewarded rule can persist despite increasing losses it does not register.** Formally proved; its application to actual metrics is conjectured and faces reported contrary evidence.  
+   > “A rule read from the share it raises can lock and outlive a growing loss it does not read”
+
+7. **Under its ethical premises, continuing and widening life is proposed as life’s way.** T8 is argued, with an expressly limited claim to authority.  
+   > “Argued; no verdict binding every possible mind”
+
+**Q3 — Sure.** Its ethics rests on two additional hypotheses, not on the descriptive laws:
+
+- **Continuation condition:** establishes scope—everything’s continuation has significance from every standpoint. It includes losses that benefit or injure no observer. It supplies no ranking.  
+  > “The continuation condition fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future has significance.”
+- **C:** supplies an ordering where one course permits everything another permits, plus something more.  
+  > “C: widening what can form is better.”
+
+The **step of invariance** is the extension of concern beyond what self-concern already requires; I understand its intended function, but its warrant is unfinished. Decisions between mixed alternatives require further premises:
+
+> “Choices take further premises, each named ([07 §5](chapters/07-SIGNIFICANCE.md#practical-judgment)); alignment is first what a selection can reach, and a direction follows only conditionally ([07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)).”
+
+Which further premises those are, the text does not say.
+
+**Q4 — Sure.** It does not claim:
+
+1. That becoming is inherently good: “without assuming that becoming is good.”
+2. That descriptive laws establish value: “No law evaluates: none says a loss is a harm or restraint better.”
+3. That its ethics binds every possible mind: “no verdict binding every possible mind.”
+4. That actual systems satisfy the mathematical premises: “That actual systems meet these premises is open.”
+5. That the central results are new mathematics: “An AI review of prior work, not exhaustive, finds none of the central results new mathematics”.
+6. That human review has validated it: “no person has yet reviewed it”.
+
+**Q5 — Sure about the listed tests; unsure how to operationalize them from these files.**
+
+1. **Formal results:** a failed proof check. The table says: “A failed check.”
+2. **T1:** a depleted condition recovering without external contribution: “a condition below a need measured in advance returning with nothing given from beyond”.
+3. **T3:** with its conditions satisfied and outcomes, couplings and reward fixed, closer optimization leaving the outside condition higher on average: “a system with a smaller measured optimality gap leaving such a condition higher on average”.
+4. **T7:** selectors abandoning the relevant metric solely because of evidence: “such a metric dropped by its selectors on evidence alone”.
+5. **The root as explanation:** a rival deriving the laws more economically: “a rival deriving the laws from fewer patterns”.
+
+These target different components. There is no single stated test that defeats the whole account. The ethical premises cannot be refuted by the dynamics, according to the text. Their independent rejection criteria—the text does not say.
+
+**Q6 — Unsure.** The proposed addition seems to be an organized accounting of assumptions and their limits, alongside a separation between ethical scope and ethical ordering:
+
+> “what survives is a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart”.
+
+That could be useful synthesis. Whether either contribution is new beyond existing philosophy or alignment work, the text does not establish. It explicitly disclaims new central mathematics and describes its literature review as incomplete.
+
+**Q7.** I reconstruct it this way:
+
+```text
+Relations + classes
+    → vocabulary and laws of continuation
+    → proposed reading of reality as one unfolding
+
+Additional model assumptions
+    → results about renewal, selection, optimization and persistent rules
+    → empirical theses about actual systems
+    → tests of those applications
+
+Neither descriptive branch determines value.
+
+Continuation condition → whose losses count
+C + comparison of admitted formations → some rankings
+Further premises → decisions where alternatives are mixed
+
+Together → a conditional ethical direction for life and alignment
+```
+
+The broad account also places life and knowing within this picture; their development is barely visible here. The question about whether downstream effects constitute one’s own continuation offers a possible route from self-concern to wider concern, not a completed foundation.
+
+**Partly.** I hold it together around one problem: successful continuation or selection can coincide with unnoticed losses, and acknowledging those losses requires an evaluative commitment. I do not yet hold its root, mathematics and ethics as one explanatory theory. The admission that most central results use none of the root’s laws makes their deeper dependence unclear.
+
+**Q8.** These were my main rereading points:
+
+> “Where one occurrence conditions another alike under the class, the second continues it.”
+
+I need a worked example to distinguish this relation from resemblance, succession or causal dependence.
+
+> “It forbids explanations, not observations ([08](chapters/08-METHOD.md#one-relational-unfolding)).”
+
+I cannot tell which explanations are excluded or what makes that exclusion warranted.
+
+> “With room (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does ([05](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in))”
+
+The compressed language makes me work hard to determine how much of the conclusion is already supplied by “room”.
+
+> “If thirty a month loses nothing fifty admits, adding the bed, it widens fifty and C ranks it higher; widening does not weigh the lost catch [AI reading].”
+
+I need to know what qualifies as a formation before accepting that the reduced catch introduces no loss relevant to this comparison.
+
+> “Proved for any type. T7, on actual metrics: conjectured; a note of the loss turned one trained judge at one reading, which it forbids ([02](chapters/02-MAP.md#t7))”
+
+I stopped to ask whether T7 has already failed; the text reports an apparently forbidden result without making its present standing clear to me.
+
+**Q9.** Terms I could not make sufficiently precise from these files alone:
+
+- **“Relatum”**, particularly how two roles are one relatum.
+- **“Responsibility … differentiate”**—differentiate what, by what criterion?
+- **“Formation” / “admits”**—enough informal definition to follow the intention, insufficient guidance to classify disputed examples.
+- **生生 and 生发**—English glosses are supplied, but their additional conceptual content remains unclear.
+- **“Significance”**—I understand its role, but not what counting a loss positively requires in practice.
+
+**Q10.** **Yes.** I would read one detailed derivation and application before committing to the whole overview: the optimization result, its “room” premise, and T3’s proposed test. I would also follow the T7 link to resolve its apparent counterexample, and the ethics links on practical judgment and the warrant for C. Those would show whether the careful distinctions here support useful reasoning in difficult cases.
+

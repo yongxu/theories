@@ -36,7 +36,8 @@ to which a formation's level along one run adds a World case.
   an agent. The World's own case is the open loop at `w.web.level`; the closed loop is a model
   beside the World, whose own exchange is not written as an environment. The internal part is a
   model; a formation's own level as the internal part, along one run, is the last item
-  below. `ThresholdDrain`'s join is the case of the witness's web,
+  below. `ThresholdDrain`'s join is the case of the witness's web with no couplings (the set of
+  couplings empty, `ThresholdCase.values`),
   the supply as the environment state beside the step, the two courses corresponding part by part
   (`ThresholdCase.threshold_case`).
 * **The law a family shows, part by part.** A part of the next configuration depends only on a

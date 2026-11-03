@@ -19,17 +19,17 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,295 `.lean` paths and 1,839 distinct byte contents**, including 187 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,296 `.lean` paths and 1,842 distinct byte contents**, including 185 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 1,295 |
+| Development attempt | 1,296 |
 | Historical draft | 3 |
 | Imported archive | 23 |
 | Working source | 961 |
 
-The working-source and audit entries contain **30,655 explicit theorem/lemma occurrences** and 44,777 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **30,657 explicit theorem/lemma occurrences** and 44,779 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -441,7 +441,7 @@ Conceptual entry: [08-METHOD §pure](../chapters/08-METHOD.md#pure-core-and-peri
 |---|---:|---:|---|
 | [Coverage](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Coverage.lean) · [Names](lean-declarations/becoming-ring.md#module-94b92804d399) | 22 | 12 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked |
 | [Dispatch](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dispatch.lean) · [Names](lean-declarations/becoming-ring.md#module-6ec3e0664f2f) | 33 | 12 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked |
-| [GuardHorizon](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean) · [Names](lean-declarations/becoming-ring.md#module-de2c4a4581b2) | 32 | 16 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked |
+| [GuardHorizon](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean) · [Names](lean-declarations/becoming-ring.md#module-de2c4a4581b2) | 34 | 16 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked |
 | [HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean) · [Names](lean-declarations/becoming-ring.md#module-20b1a3f4f3b4) | 7 | 0 | [Theory](../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked |
 | [HexagramLaws](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramLaws.lean) · [Names](lean-declarations/becoming-ring.md#module-ae9481400f7c) | 129 | 57 | [Theory](../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked |
 | [HexagramPlaces](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean) · [Names](lean-declarations/becoming-ring.md#module-50edc7c0a315) | 121 | 62 | [Theory](../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked |

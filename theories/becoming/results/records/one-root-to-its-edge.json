@@ -125,8 +125,8 @@
     "zh": "纯核，每一公理报告皆空：Becoming.RootForms 导入 Grammar、Transmission 与 GroupEnding，其根形唯名文法之词、Init 与其自身之假设。shared_laws.py 于核心运行上验诸所立：推出之条目以 D1 至 D6 于转储与 Lean 中验，在所述假设下之条目以 boundary_check.lean 之九试验，前提以 Q1 验，所计之标之读法对照规则之事实。落地要求无未验、无未置、无未合。"
   },
   "next_delta": {
-    "en": "A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; a theorem that no statement reading only the dynamics entails C; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.",
-    "zh": "清点于位置上之跨段形，CensusWebs.keep_pace 将为其例；无一仅读动力之陈述蕴涵 C 之定理；第七章所留之意义根读，为保意义自由之三行；于更多相连之行读 HE2 之律为其例。"
+    "en": "A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.",
+    "zh": "清点于位置上之跨段形，CensusWebs.keep_pace 将为其例；第七章所留之意义根读，为保意义自由之三行；于更多相连之行读 HE2 之律为其例。"
   },
   "correspondence": {
     "en": "Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 1975; Simpson 2009). Here the base is a grammar of relations, one row is placed by a form whose hypotheses are each shown non-redundant (no reversal is proved), and the measure is dependence in the compiled terms.",
@@ -215,7 +215,7 @@
         "Becoming.RootForms.all_end_at_model",
         "Becoming.RootForms.all_end_certified"
       ],
-      "sha256": "f7a7188312c125cd7f0f4e1811773a7f27df2055a43665276915965489318f39"
+      "sha256": "e4215ff34010425f312366e0dde622b91f2786ba2fde316cd852413d3606d3f8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T123637.207595Z/verification.json",
@@ -268,7 +268,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "a5fed3136fba6df3163b4047df53680dee7bd65a0395e383b7f95cbb27ebf973",
+      "sha256": "5f2b0e9eafff36cdaaa054fc8355c17100e9cb5f33b9daf12cc49b4e6da0bf36",
       "declarations": []
     },
     {
@@ -324,12 +324,18 @@
       "role": "review",
       "sha256": "380497dfa83d767b26ef049da8ba03e390e22c411c75b99fd82d611cfa5809c5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "role": "receipt",
+      "sha256": "aff98eb35b5a97f2ef930e7fd37561f486423c917f988e34d671c38f32297317",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T123637.207595Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RootForms",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -363,6 +369,14 @@
     {
       "en": "1 November 2026, U4d (study section 498): the covering laws' root form, the first next step, is done. The covering laws at Locality, Decidedness and Identity and the root's census of a run are cases of one count on the root, ends on lines from a list (shared-laws-on-the-grammar, law 19): U4c's boundary, that the covering laws are not cases of the census, stands, and both are now cases of the count. The census of a run is stronger, two hypotheses dropped; Identity gains the exact forms from covering lists. What reaches the grammar does not change, so the standings and 08 §7's figures are unchanged (the measure rerun on the landing build). The next step drops the covering laws' root form (COVERING-ON-THE-ROOT.md, reviewed in REVIEW-U4D.md, both among the references).",
       "zh": "2026年11月1日，U4d（研究第 498 节）：覆盖之律之根形，即下一步之首项，已成。Locality、Decidedness 与 Identity 之覆盖之律与根上一程之清点，皆为根上一计之例，即自一列表之线上之终（shared-laws-on-the-grammar 律 19）：U4c 之界，即覆盖之律非清点之例，仍立，而二者今皆为此计之例。一程之清点更强，去二前提；Identity 增覆盖列表之确切形式。达于文法者不变，故诸立与 08 §7 之数不变（落地之构建上重算其度）。下一步去覆盖之律之根形（COVERING-ON-THE-ROOT.md，经 REVIEW-U4D.md 审阅，二者皆在引用中）。"
+    },
+    {
+      "en": "2 November 2026, U4e (study section 500): the Next drops a theorem that no statement reading only the dynamics entails C. DU gave it (ReadsNoOrder.not_entails: a statement reading no order, as one reading only the dynamics does, entails C at a datum on a frame with an extension only where it fails), and the home section already names it. RootForms.some_depends states its witness instead of only that it is not refuted, so law 2's witnesses read directly; its statement is stronger, the law unchanged. No standing or count changed.",
+      "zh": "2026年11月2日，U4e（研究第 500 节）：下一步去掉“无一仅读动力之陈述蕴涵 C 之定理”。DU 已给出之（ReadsNoOrder.not_entails：不读次序之陈述——仅读动力者即是——于有延伸之框架上之一数据处，唯于其不成处蕴含 C），家节已名之。RootForms.some_depends 径陈其见证，不再只言其不被否证，第 2 条之见证遂直读；其陈述更强，规律不变。无一立处或计数改变。"
+    },
+    {
+      "en": "2 November 2026, board item PF3: a basis corrected to say what ranks lies in C in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
+      "zh": "2026年11月2日，看板条目 PF3：更正一条依据，说排序一般而言唯在 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
     }
   ],
   "boundary": {
@@ -874,7 +888,7 @@
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "What ranks lies in C alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+          "en": "What ranks lies in C, in general alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

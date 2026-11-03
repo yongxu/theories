@@ -24260,3 +24260,88 @@ Output → input: 01 §7 (the ends-on-lines bullet) and 01 §9.5; the root modul
 1. One count does the work of separate proofs: the covering laws had their own at Locality, Decidedness and Identity, Identity's by lineages, and each now reads the root's count on lines at its own occurrences, as the census of a run does.
 2. The census of a run is stronger for it, and no hypothesis is added anywhere: every re-proved law keeps its printed statement, and the two that change drop hypotheses.
 3. The decisions the new run forms ask are shown needed only as reductions, not as countermodels; that this decision is the least one is not claimed.
+
+## 499. The edge where acting meets the situation: the map, 07 §5 and GuardHorizon's bridge (SJ's last parts)
+
+Board item SJ's last parts, after SJ1 (§494; [the source](../../../../sources/15-codex-theory-conversations/2026-11-01-the-edge-and-situational-judgement.md), [DESIGN](development/sj-edge-and-judgement/DESIGN.md)). SJ1 landed the leaf; this section lands what the design left for later: the map of what a response takes in (08 §7), one sentence in 07 §5, and GuardHorizon's bridge to the leaf in a ring slot. The bridge and the map were read in REVIEW-2 (three lenses on the Lean and the map, every finding taken); the map was read again by U4's owner, and the landing texts by [REVIEW-4](development/sj-edge-and-judgement/REVIEW-4.md). With this landing SJ's row closes.
+
+```text
+Result(s): a-response-common-over-a-reading (SJ1's record): a seventh law, the rule's converse with choice over
+       the readings and every reading given, at any type in a ring module.
+       when-to-inquire-and-when-to-respond: its witness statewise_not_uniform re-proved from the leaf's
+       witness, its statement unchanged.
+Delta:
+  - GuardHorizon.uniform_policy_iff_common: given choice over the readings and every reading given by some
+    configuration, a choice from readings meeting the requirement exists exactly where a response common over the
+    reading's sameness does, through the core's «自反传递则共应当且仅当承遍» and the pointwise rearrangement of
+    uniform_policy_iff_fiber_feasible, which keeps its direct proof.
+  - GuardHorizon.ungiven_reading_not_uniform: with that choice, no configuration and no move, the one reading
+    given by none, a common response exists with no choice from readings, so the second hypothesis cannot simply
+    be dropped (with some move it might be weakened to the moves' being inhabited; not proved here).
+  - GuardHorizon.statewise_not_uniform re-proved from «共应之例».EachNotCommon through «依读而应则共应» and
+    «共应之细», its statement unchanged.
+  - Becoming.GuardHorizon (34 theorems in 50 declarations), every axiom report empty, at core receipt 20261102T051236.940686Z.
+  - 08 §7: "What a response takes in", the law of a common response and each input it takes (sameness, the
+    requirement as acceptable and as executable, choice over the readings, the reading's timing, scope and order,
+    the choices between C and a requirement, weights and amounts, revision, and what the root's other laws take),
+    each with the law up to it, at most two witnesses that it is needed, its home and the edge record's rows
+    taking it, by label. No standing in the last column is a premise.
+  - 07 §5: one sentence. Where a requirement is filled from the practical choices, with the condition for scope
+    and C for order, and fixed before the outcome, a common response exists within it exactly where the acts'
+    kernels cover the situations; the law says nothing of which requirement is better.
+  - 03 §12: the home of SJ1's record names the converse; the root module's bullet and the package README's row
+    for GuardHorizon name the bridge.
+Not shown: that choice over the readings is needed for this rule (it is shown for plans, Viability.plans_iff_choice);
+       which requirement is right; how a reading forms (RF's loop represents it).
+Owners: GuardHorizon's record (DF2) gains a history line; the models' examples of PairsNotCommon
+       (ReadingLoop.PairwiseShared, AssurancePlans.Routes) stay with their owners.
+```
+
+## 500. Identity's covering laws finished (U4e)
+
+Board item U4e, what U4d's section (§498) left in its boundary: "the census recurrence laws keep decisions their proofs no longer use, left to Identity's laws' next change". With it the one covering law of Identity still on an older route: `Web.arisingFrom_not_stopping_covered` went through `not_not_arisingFrom_covered` at one covering list, while the root's «有覆而亡屡则生不止», its form for lists at arbitrarily late stages, was registered by U4d as an apart root with no use on the base. Nothing new is proved. One route is shortened, five statements are made more general and one stronger (RootForms.some_depends, which the Lean review found weakened needlessly); the change was built in scratch first (`u4e-kit/edit_lean.py`, `u4e-kit/edit_texts.py`), and `u4e-kit/UnusedDecisions.lean` read every decision binder of the two modules on main and on the change.
+
+```text
+Result(s): census-balance-under-continuation (home 01 §9.5): the second hypotheses entry and law 12 say which
+       decision each law takes; law 4 names «有覆而亡屡则生不止» among the covering laws' routes; the Next drops the
+       item now done. identity-across-steps: a history line for Web.persisting_census. one-root-to-its-edge: the
+       Next drops a theorem that no statement reading only the dynamics entails C, which DU's
+       ReadsNoOrder.not_entails gives and the home section already names, and a history line names some_depends.
+       No new record and no new declaration.
+Delta:
+  - Identity: Web.arisingFrom_not_stopping_covered re-proved as the root's «有覆而亡屡则生不止» at the formations'
+    occurrences within activity onward from T, its statement unchanged. The four census recurrence laws
+    (Web.Census.arisingFrom_of_ceasingFrom and its from-a-step form, Web.Census.ceasingFrom_of_arisingFrom and its
+    from-a-step form) drop the decision binders their proofs do not use: the arising direction keeps whether a
+    formation continues one active before, the ceasing direction whether one is continued by one active after, and
+    neither decides activity. The module's covering-lists bullet and the four docstrings say so.
+  - Persistence: Web.persisting_census drops decided holding activity and the decided continuation, which its proof
+    does not use, keeping the two decisions the census laws take.
+  - RootForms: some_depends states its witness (something over the one point comes to stand and depends after the
+    step) instead of only that it is not refuted, the Lean review's finding; its six uses apply the negations to it.
+    The two certificates' docstrings and the module's say what a certificate checks: stating `@Row = @Recovery`
+    checks that the recovery states exactly the row, which the type ascription already ensures, and `rfl` then
+    closes it by proof irrelevance (the Lean review's wording, kept with the certificates the boundary check reads).
+Checked: core receipt 20261102T083959.667661Z, every axiom report empty; Becoming.Identity
+       (162 theorems in 227 declarations), Becoming.Persistence (86 theorems in 106 declarations), Becoming.RootForms
+       (30 theorems in 42 declarations). The signature audit (u4e-kit/u4e_signatures.py, main's side read at the main
+       merged in): the five statements are main's with exactly the dropped binders removed, and some_depends main's
+       less its double negation; every other statement of the three modules unchanged; nothing added, gone or moved.
+       UnusedDecisions.lean (u4e-kit/unused_decisions.py): on main, of Identity's and Persistence's 68 decision
+       binders, five were used by neither statement nor proof (the two from-a-step laws' decided activity and decided
+       continuation of the other direction, and persisting_census' decided R), and five more only to pass the first
+       four on (the two census laws' same two, and persisting_census' decided holding activity); the change drops the
+       ten, and none of the 58 left is unused.
+Standing: proved, as the records state.
+Boundary: the balance across a step (Web.Census.balanceFrom and its kin) keeps decided activity and both decisions
+       of the continuation, which its count by marks uses; which decision the exact forms need least stays open
+       (weak excluded middle at the witnesses, the record's Next).
+Output → input: 01 §9.5's census row; the connectivity register (the root form's entry, stale, removed); the shared
+       laws' view rerun (08 §7's figures unchanged); 08's counts; the board's U4e row and U4's row, both moved to the
+       history file, what U4 leaves being the edge record's Next.
+```
+
+**Self-review.**
+1. The covering laws of Identity now each read one root law at the formations' occurrences: the not-refuted form «所覆后亡屡则生未否», the not-stopping form «有覆而亡屡则生不止», the converse «有界覆而生屡则亡不止» and the exact forms. The register holds no covering law of the root as an apart root any more.
+2. A law that takes a decision its proof does not use states less than it proves; each of the five now takes only what it uses, and the count of unused binders is read by Lean, not by eye.
+3. The decisions that stay are used: the recurrence laws need the continuation decided in their own direction (U4d's reduction to weak excluded middle), and the balance needs all three to count. That the continuation's decision is the least one is not claimed.

@@ -1,0 +1,93 @@
+{
+ "findings": [
+  {
+   "severity": "fix",
+   "where": "M21 claim_en and claim_zh; section.md, C's role bullet (both languages). Item 2.",
+   "quote": "and in a ranking of courses, in general, only under C (07 §4) / 在进程的排序中，一般只依于 C（07 §4）",
+   "problem": "Yes, 'only under C' is too strong. 07 §4 has two statements. A ranking needs C or a premise in its place, which is a necessary condition with an alternative. C gives order, in general alone, which says which of the two premises orders. M21 turns the second into a necessity and drops the alternative. 'In general' does not repair this, because the exception it carries (self-concern) is only one case of a premise standing in. The same chapter names a weaker premise that orders widenings. This is a new form of the overstatement GC4 exists to remove. The section's 'what rests on C, in general, is a ranking of courses' inherits it, although the same bullet quotes 'C or a premise in its place' correctly.",
+   "evidence": "pf3-crux:theories/becoming/chapters/07-SIGNIFICANCE.md:232 'A ranking of courses needs C or a premise in its place: C gives order, in general alone'. 07 §4.4 'Monotonicity at the standpoint is C's premise relocated: weaker, still a premise', with `Weighting.widens_iff_every_of_class`. GLOSSARY.md:62 says 'gives order', not 'only under'.",
+   "fix": "Use 07's first clause and drop the hedge. EN: 'and in a ranking of courses under C or a premise in its place (07 §4)'. ZH: '在进程的排序中，须有 C 或代替它的前提（07 §4）'. Section EN: 'and what needs C or a premise in its place is a ranking of courses'. Section ZH: '须有 C 或代替它的前提的，是进程的排序'. This also answers the recheck's objection that 'in general' names a case M21 is not about."
+  },
+  {
+   "severity": "fix",
+   "where": "M21 claim_en and claim_zh; section.md, C's role bullet (both languages). Item 2.",
+   "quote": "as a reason with a supplied articulation and correspondence (07 §3.2) / 作为理由，须有所给的表述与对应（07 §3.2）",
+   "problem": "The reason's premise list is incomplete. Living significance is a hypothesis of every reason in 07 §3.2, and the record calls it an explicit normative premise. As written, an articulation and correspondence read as sufficient, so the reason reads as resting on nothing unasserted. The entry's opening clause names living significance only as what consciousness differentiates, not as this reason's premise. The section's 'comes with a supplied articulation and correspondence and uses no C' has the same gap.",
+   "evidence": "07 §3.2 'Conditional (living significance, correspondence E; a supplied articulation for the reason)'. 07:232 'under it living significance follows, the reasons of §3.2 only with A or D and correspondence'. records/positive-ground-open-futures.md, Conditions 'Living significance (LivingSignificance) is an explicit normative premise', and law 3 'Under living significance'.",
+   "fix": "EN: 'as a reason under living significance with a supplied articulation and correspondence (07 §3.2)'. ZH: '作为理由，须有存活之意义、所给的表述与对应（07 §3.2）'. Add the same words to the section's sentence in both languages."
+  },
+  {
+   "severity": "fix",
+   "where": "F14 scope_zh. Item 4.",
+   "quote": "在当时所取的 G0 路线下，明确 G0 取代了旧无前提受阻审计，未执行 blocked 更新；",
+   "problem": "The revision to active voice introduced two faults. (a) 明确 can now be read as a verb: 'it is made clear that G0 superseded the old audit'. The old 由明确 G0 方向取代 forced the attributive reading. (b) After the comma, 明确 G0 is the default subject of 未执行 blocked 更新, so G0 appears not to have executed an update. In the old text the topic was the audit, and the English separates the clauses with a semicolon. The route wording and the past tense are right and match the English.",
+   "evidence": "Whole field read in chain.copy.json. Before: '旧无前提受阻审计已由明确 G0 方向取代，未执行 blocked 更新'. EN: 'explicit G0 superseded the earlier premise-free impasse audit; no blocked update was executed.'",
+   "fix": "'在当时所取的 G0 路线下，明确的 G0 取代了旧无前提受阻审计；未执行 blocked 更新；新的实践判断候选…'. M25's zh has the same 明确G0/J form after its new opening; I did not read M25 further."
+  },
+  {
+   "severity": "fix",
+   "where": "M21 claim_zh; section.md, Registration bullet, zh only. Item 3.",
+   "quote": "在场相同、回应可达之外所耦合者初始水平相同",
+   "problem": "The English is exact and the Chinese is looser than its source. 所耦合者 loses the direction of 'couples in', which is the restriction this edit exists to state. It can read as what is coupled to, out beyond the reach. 在场相同 drops 形成. The record's own Chinese gives both words.",
+   "evidence": "pf3-crux:theories/becoming/results/records/finite-fallible-inquiry-necessity.json, zh of law 8 '每步在场形成相同，耦合入部分回应所及之外形成者的初始水平相同', and of law 10 '在场形成相同，变化部分所及之外耦合入者初始水平相同'.",
+   "fix": "M21: '在平衡、在场形成相同、回应可达之外耦合入者初始水平相同和完整读数条件下'. Section: '§12.2 的前提限于回应可达之外耦合入者，并要求在场形成相同'."
+  },
+  {
+   "severity": "note",
+   "where": "M15 label pair on Becoming/Relevance.lean. Item 5.",
+   "quote": "Original proofs of present realization and the ranking boundary / 当下实现及排序边界的原证明",
+   "problem": "The two languages now agree, as the section says, and 当下实现 matches M15's other label. But the label says what M15 uses the file for, not what the file proves. M15's connection says these proofs 'supply' present realization. The file has no 'present' and no 'boundary'; it has realized living content and `Ranking.*`. Adding 'present' to the English makes 'proofs of' slightly stronger than before. M15's connection_zh still says 供应当前实现, so one entry now has both 当下实现 and 当前实现.",
+   "evidence": "pf3-crux Relevance.lean: grep counts present 0, boundary 0, rank 40; line 107 `livingSignificance_of_unrestricted`. M15 connection_en 'Existing g0_of_unrestricted and relevance_least supply present realization'.",
+   "fix": "Optional. EN: 'Original proofs supplying present realization, and the ranking boundary'. ZH: '供应当下实现的原证明及排序边界'."
+  },
+  {
+   "severity": "note",
+   "where": "section.md, G0 bullet (both languages); g0-uses.tsv. Items 6, 7.",
+   "quote": "all 108 uses in 15 entries are read (53 in English, 55 in Chinese)",
+   "problem": "108 is right for the text before this revision, and the section does not say so. The same regex on chain.copy.json gives 116, because F14, M25, C23 and M20 each gain one use per language. Only g0_uses.py's docstring states the basis, and the tsv windows show the old text.",
+   "evidence": "Recount with g0_uses.py's pattern: before.json 108 uses and 10 `G0`; chain.copy.json 116 uses and 10 `G0`.",
+   "fix": "Add 'as they stood before this revision' / '本次修订之前'."
+  },
+  {
+   "severity": "note",
+   "where": "section.md, G0 bullet (both languages). Item 6.",
+   "quote": "M15's old Lean name `g0_of_unrestricted`, read through 08 §10's rename table",
+   "problem": "The name is not in the table. 08 contains no 'g0_of'; the table's row maps G0 to `LivingSignificance`. The reader has to derive the theorem's present name. The reading is true, but the citation is looser than 'rename table' suggests.",
+   "evidence": "pf3-crux 08-METHOD.md:643 '| G0 (the label; Lean `G0`) | living significance (`LivingSignificance`) |'; grep -c 'g0_of' gives 0. Relevance.lean:107 `livingSignificance_of_unrestricted`.",
+   "fix": "'read through 08 §10's row for G0 (now `livingSignificance_of_unrestricted`)'; same in zh."
+  },
+  {
+   "severity": "note",
+   "where": "g0-uses.tsv, decided column; g0_uses.py. Item 7.",
+   "quote": "C19 scope_en | kept: scoped to the G0 route | G0/K alone do not supply an overall mixed comparison",
+   "problem": "The column is assigned per entry (`DECIDED.get(e['id'], NOTE)`), apart from M20's two rows, so it does not record a decision for each use. C19's two scope rows are negatives, 'what was not proved', rather than scoped to the route. The outcome is unaffected, and the section's test is itself by entry. But the heading 'use by use' and the column together suggest more than the column holds.",
+   "evidence": "g0_uses.py DECIDED; g0-uses.tsv rows C19 scope_en and scope_zh.",
+   "fix": "Optional: in the script's docstring or the tsv header, say the column is by entry."
+  },
+  {
+   "severity": "note",
+   "where": "key, scope_en and scope_zh. Item 1.",
+   "quote": "is compared by widening, and C gives order, in general alone (self-concern ranks one case with no C), neither the continuation condition nor C asserted",
+   "problem": "The sentence is exact and reads, with two small remaining points, neither new to this edit. (a) C occurs three times in the key and is never glossed, while the five entries now say 'C, widening what can form is better'. (b) The colon list separates items with commas that also sit inside items: 'further generation, 生生, the object of the direction, is compared' garden-paths, and this clause adds two more commas.",
+   "evidence": "chain.copy.json scope_en, all three occurrences of C; apply_next_reading.py C_EN_NEW.",
+   "fix": "Optional. EN: '…: no reading of living includes further generation; 生生, the object of the direction, is compared by widening; and C, widening what can form is better, gives order, in general alone (…), neither the continuation condition nor C asserted'. ZH: 'C，即扩大可形成者更好，给出次序，…'."
+  },
+  {
+   "severity": "note",
+   "where": "section.md, labels bullet; M23 label. Items 5, 6.",
+   "quote": "it now says what the counterexample is against, in its source's words",
+   "problem": "This is verbatim only for the source's Chinese line. The source's English line says 'a specified current corrigibility claim', so the English label is a rendering of the Chinese. The rendering is supported: the source has 'published workshop paper' and 'one finite-weight truthfulness/failure implication'. The label itself is accurate, so this is only about the phrase 'in its source's words'.",
+   "evidence": "CORRECTION-OBSERVATION-REPAIR.md:5 '针对已发表的有限权重可纠正性保证', :7, :11, :73.",
+   "fix": "None needed. Optional: 'in its source's words (its Chinese)'."
+  },
+  {
+   "severity": "note",
+   "where": "checked, nothing found",
+   "quote": "",
+   "problem": "Item 1: the parenthesis is the glossary's row verbatim and agrees with 07:232. 'Neither premise' is now unambiguous. The Chinese is a faithful pair, and 自我关切 / 无需 C / 给一种情形排序 match the live zh overview:124. Item 2, source: the sentence still says what PHILOSOPHICAL-ACCOUNT says. §18 has 'further living can count positively', §32 has 'does not alone establish… that someone must undertake it', and §32 has the valence belonging to the reading, matched by 'Read with the direction of 生生'. The split adds to the source and contradicts nothing in it. 所给的表述 is the record's zh; 进程 is the fronts' word. Item 3: laws 8 and 10 are the right numbers, identical at HEAD and pf3-crux. The English matches §12.2 premises 1 and 2. 'Complete readouts' is inherited and maps to premise 4. Timely law 1 and §16's counterreview are as the section says. Item 5: C01 is 2026-10-08T09:59Z. C09 is 18:54Z, and the study at the receipt is dated 9 October, Asia/Bangkok. C26's source is 13 October and is about the focus. M24's source is 8 October and holds the session's instructions. M24's 'Working definition' matches GENERATIVE-REGIMES.md:7. F01's receipt is 8 October. In both build receipts 'complete' and 'affected' occur only inside declaration names, with 32 modules, so 'says neither' is right. A search of all labels finds no tense word left except C08's concept name and M20's GOALS link, as the section says. Item 6: counts are right: 21 = 2+7+12 and 30 = 0+16+14 (12 and 18, some overlapping). All seven 'chiefly' clauses describe real findings; first-read's fix did offer 'rests, in general, on C'. Zh and en of that paragraph say the same. M20's account holds: zh §2.1 says both things, en §2.1 says 'conditional alignment route' and 'follows under the continuation condition', and 08:647 maps the first. Item 7: decided agrees with the section's bullet on all 8 changed rows (F14, M25, C23, M20) and on C14, C19, C24, C26, C18, C20, F08, M20 connection and M21 claim rows. F14, M25 and C23 carry no status sentence; C24 and M21 do. Tallies are right: 108, 53, 55, 15 entries, 10 uses of `G0` in 5.",
+   "evidence": "As cited in each clause, read with git show pf3-crux:<path> and chain.copy.json.",
+   "fix": "None."
+  }
+ ],
+ "not_checked": "Not read: the full sentences of C23 and M25 beyond their changed openings, and C03, C17, C24 and M15 beyond one spot-check of C03's C clause. Not checked: \"GC2 kept M23's label\" against GC2's own section; \"the rest are stated in this section\" note by note, though I sampled several; that \"formation-repair\" describes C01's receipt beyond its date and module count; the opening scope's four links; the C14 labels against `Becoming.Revision`. About 40 of the 108 tsv rows were read, not all. No Lean was rerun and nothing in the repository was changed. 07 has no Chinese edition I looked for, so Chinese terms were checked against the zh overview, ONE-PAGE.zh and the records' zh fields."
+}

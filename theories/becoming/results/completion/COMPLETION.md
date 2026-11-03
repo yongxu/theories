@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261101T161537.177111Z` and the connectivity measure of `6cf7292da` (core receipt `20261101T151111.914612Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261102T185431.953044Z` and the connectivity measure of `d0df999be` (core receipt `20261102T051236.940686Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|

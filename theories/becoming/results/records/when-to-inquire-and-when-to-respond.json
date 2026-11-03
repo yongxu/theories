@@ -182,6 +182,13 @@
         "en": "A judgment through a projection is right only where it does not merge what must be told apart; here the same limit for choosing moves.",
         "zh": "经投影之判断，只在不合并须分辨者处为对；此处是选择动作的同一界限。"
       }
+    },
+    {
+      "id": "a-response-common-over-a-reading",
+      "detail": {
+        "en": "Its seventh law reads law 1's equivalence, with every reading given by some configuration, with the condition as a response common over the reading's sameness.",
+        "zh": "其第七律在每一读数皆由某一配置给出时，把第 1 律之等价的条件读作对读之同的共应。"
+      }
     }
   ],
   "references": [
@@ -200,7 +207,7 @@
         "Becoming.GuardHorizon.uniform_iff",
         "Becoming.GuardHorizon.uniform_viable"
       ],
-      "sha256": "1043c114b33c1217dd61f0aa5a64ba30345ca787fd7da00963559fad9a47ac9b"
+      "sha256": "d1da445a4870aff1fcb57b277ec227105fca4d4f7eb91269df6eb9bb100627c9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
@@ -247,7 +254,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
+      "sha256": "4d31fc275e668e5be333efa04aec448a02d0dba2affb35e395ef3f66fb298852"
     },
     {
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
@@ -259,12 +266,18 @@
       "role": "receipt",
       "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json",
+      "role": "receipt",
+      "sha256": "5644fc6bc6aec86faeddc25df523bb1517a67772ebb8ea805426dce1935d4943",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GuardHorizon",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -288,6 +301,10 @@
     {
       "en": "27 October 2026: added (DF2), choice of moves from readings in the core and the periphery, and the dosing witnesses on inquiry and immediate response; from DEFECTS-FOUND (triage row 94); study section 426.",
       "zh": "2026年10月27日：新增（DF2），核心与外围中由读数选择动作，以及关于探究与即时回应的给药见证；出自 DEFECTS-FOUND（分诊第 94 行）；研究第 426 节。"
+    },
+    {
+      "en": "2 November 2026: statewise_not_uniform (law 2) re-proved from the core's witness «共应之例».EachNotCommon, its statement unchanged; GuardHorizon gains uniform_policy_iff_common: with every reading given by some configuration, law 1's equivalence with the condition read as a response common over the reading's sameness, recorded as the seventh law of a-response-common-over-a-reading.",
+      "zh": "2026年11月2日：statewise_not_uniform（第 2 律）由核心见证 «共应之例».EachNotCommon 重证，陈述不变；GuardHorizon 新增 uniform_policy_iff_common：每一读数皆由某一配置给出时，即第 1 律之等价，其条件读作对读之同的共应，记为 a-response-common-over-a-reading 之第七律。"
     }
   ]
 }

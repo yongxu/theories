@@ -1,0 +1,48 @@
+## {N}. Identity's covering laws finished (U4e)
+
+Board item U4e, what U4d's section (§498) left in its boundary: "the census recurrence laws keep decisions their proofs no longer use, left to Identity's laws' next change". With it the one covering law of Identity still on an older route: `Web.arisingFrom_not_stopping_covered` went through `not_not_arisingFrom_covered` at one covering list, while the root's «有覆而亡屡则生不止», its form for lists at arbitrarily late stages, was registered by U4d as an apart root with no use on the base. Nothing new is proved. One route is shortened, five statements are made more general and one stronger (RootForms.some_depends, which the Lean review found weakened needlessly); the change was built in scratch first (`u4e-kit/edit_lean.py`, `u4e-kit/edit_texts.py`), and `u4e-kit/UnusedDecisions.lean` read every decision binder of the two modules on main and on the change.
+
+```text
+Result(s): census-balance-under-continuation (home 01 §9.5): the second hypotheses entry and law 12 say which
+       decision each law takes; law 4 names «有覆而亡屡则生不止» among the covering laws' routes; the Next drops the
+       item now done. identity-across-steps: a history line for Web.persisting_census. one-root-to-its-edge: the
+       Next drops a theorem that no statement reading only the dynamics entails C, which DU's
+       ReadsNoOrder.not_entails gives and the home section already names, and a history line names some_depends.
+       No new record and no new declaration.
+Delta:
+  - Identity: Web.arisingFrom_not_stopping_covered re-proved as the root's «有覆而亡屡则生不止» at the formations'
+    occurrences within activity onward from T, its statement unchanged. The four census recurrence laws
+    (Web.Census.arisingFrom_of_ceasingFrom and its from-a-step form, Web.Census.ceasingFrom_of_arisingFrom and its
+    from-a-step form) drop the decision binders their proofs do not use: the arising direction keeps whether a
+    formation continues one active before, the ceasing direction whether one is continued by one active after, and
+    neither decides activity. The module's covering-lists bullet and the four docstrings say so.
+  - Persistence: Web.persisting_census drops decided holding activity and the decided continuation, which its proof
+    does not use, keeping the two decisions the census laws take.
+  - RootForms: some_depends states its witness (something over the one point comes to stand and depends after the
+    step) instead of only that it is not refuted, the Lean review's finding; its six uses apply the negations to it.
+    The two certificates' docstrings and the module's say what a certificate checks: stating `@Row = @Recovery`
+    checks that the recovery states exactly the row, which the type ascription already ensures, and `rfl` then
+    closes it by proof irrelevance (the Lean review's wording, kept with the certificates the boundary check reads).
+Checked: core receipt {RECEIPT}, every axiom report empty; Becoming.Identity
+       (IDENTITY), Becoming.Persistence (PERSISTENCE), Becoming.RootForms
+       (ROOTFORMS). The signature audit (u4e-kit/u4e_signatures.py, main's side read at the main
+       merged in): the five statements are main's with exactly the dropped binders removed, and some_depends main's
+       less its double negation; every other statement of the three modules unchanged; nothing added, gone or moved.
+       UnusedDecisions.lean (u4e-kit/unused_decisions.py): on main, of Identity's and Persistence's 68 decision
+       binders, five were used by neither statement nor proof (the two from-a-step laws' decided activity and decided
+       continuation of the other direction, and persisting_census' decided R), and five more only to pass the first
+       four on (the two census laws' same two, and persisting_census' decided holding activity); the change drops the
+       ten, and none of the 58 left is unused.
+Standing: proved, as the records state.
+Boundary: the balance across a step (Web.Census.balanceFrom and its kin) keeps decided activity and both decisions
+       of the continuation, which its count by marks uses; which decision the exact forms need least stays open
+       (weak excluded middle at the witnesses, the record's Next).
+Output → input: 01 §9.5's census row; the connectivity register (the root form's entry, stale, removed); the shared
+       laws' view rerun (08 §7's figures unchanged); 08's counts; the board's U4e row and U4's row, both moved to the
+       history file, what U4 leaves being the edge record's Next.
+```
+
+**Self-review.**
+1. The covering laws of Identity now each read one root law at the formations' occurrences: the not-refuted form «所覆后亡屡则生未否», the not-stopping form «有覆而亡屡则生不止», the converse «有界覆而生屡则亡不止» and the exact forms. The register holds no covering law of the root as an apart root any more.
+2. A law that takes a decision its proof does not use states less than it proves; each of the five now takes only what it uses, and the count of unused binders is read by Lean, not by eye.
+3. The decisions that stay are used: the recurrence laws need the continuation decided in their own direction (U4d's reduction to weak excluded middle), and the balance needs all three to count. That the continuation's decision is the least one is not claimed.

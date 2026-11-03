@@ -1,0 +1,207 @@
+{
+ "checked": [
+  "apply_steps.py: all 61 TEXT edits, each located in the current JSON and read in place with its neighbours, and all 22 LABELS pairs mapped to the file each reaches",
+  "GENERATIVITY-CHAIN-INDEX-RECORD.md: the GC3 section (lines 1493-1525) in both languages, and the section before it, including B7 (lines 1436, 1479) and the left-for-next list",
+  "git show HEAD~1 data against HEAD data: ids, changed fields, link paths; name recount; HEAD --stat (4 files, nothing under sources/)",
+  "AGENTS.md, 'The full picture, not anyone's words' and 'Begin with one relational unfolding'",
+  "theories/becoming/results/data/generativity-chain.json: C01, C03, C14, C17, C20, C26, C30, C33, E01, E02, F22, M15, M20, M21, M23, M26; opening scope in both languages; sweep of the remaining request words in en and zh fields",
+  "theories/becoming/chapters/08-METHOD.md: section headings, section 1 (lines 12-27), section 4 (lines 165-264)",
+  "theories/becoming/chapters/07-SIGNIFICANCE.md: section headings and T8 (line 680)",
+  "GLOSSARY.md: terms bearing on the edits",
+  "_process/research/.../root-foundation/DELEGATED-CHOICES.md: D43 (lines 431-456), the D45 dated line (653)",
+  "_process/research/.../history/root-foundation/READINGS-PENDING-REN.md: item 19 (lines 192-196)",
+  "_process/research/.../history/root-foundation/POSITIVE-GROUND-UNCERTAINTY-INTEGRATION.md: sections 1-3 and line 76",
+  "_process/research/.../history/root-foundation/SHENGSHENG-DIRECTION-RECONSTRUCTION.md: section 1",
+  "_process/research/.../root-foundation/CORE-CONSTRAINT-AND-WISDOM.md: line 8, section 14 opening and 14.1",
+  "_process/research/.../root-foundation/ETHICAL-LEARNING-INTEGRATION.md: lines 871-893",
+  "theories/becoming/history/ETHICAL-LEARNING.md: sections 75-77",
+  "theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md: line 63 section",
+  "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md: opening",
+  "sources/07-shengsheng-buxi/downloads-drafts-2026-05/生生不息论_v4.md: opening and the lines hit for 善 / 因为 (110-493)",
+  "sources/15-codex-theory-conversations: 2026-10-07-shengsheng-ethical-direction, 2026-10-08-foundation-deductive-necessity, 2026-10-09-becoming-whole-generative-manifold, 2026-10-13-universal-normative-grounding-focus, 2026-10-13-nondual-normative-grounding-correction, 2026-10-13-one-theory-normativity-meta-attractor, 2026-10-08-evolution-theoretical-focus, 2026-10-08-alignment-grounding-axiom-correction, 2026-10-08-zero-axiom-practical-judgment, 2026-10-08-generative-explanatory-necessity, 2026-10-08-wisdom-paper-direction, 2026-10-13-wisdom-within-one-theory, 2026-10-16-selection-through-a-model, 2026-10-08-g0-and-knowledge, 2026-10-13-scientific-foundation-as-testable-hypothesis, 2026-10-09-responsive-transformation, 2026-10-08-plural-systems-and-parent-correction, 2026-10-08-generative-alignment-priority (top, next-routes, continue, power sections), 2026-10-08-goal-formation-and-revision (future-understanding section), 2026-10-08-cognition-learning-evolution-goal, 2026-10-09-learning-recursive-selection, 2026-10-08-chance-adequacy-lean-continuation, 2026-10-06-project-wide-nondual-method, 2026-10-06-goodness-as-generativity",
+  "Not read: the 2 May conversation the C03 source cites (sources/12-claude-ai-chats does not exist in this checkout); the Chinese editions of chapters 07 and 08 (no 07 or 08 .zh.md in theories/becoming/chapters)"
+ ],
+ "findings": [
+  {
+   "id": "E1",
+   "severity": "blocker",
+   "entry": "C20, C26, record",
+   "field": "C20 claim_en/claim_zh; C26 claim_en/claim_zh; record bullet 'An argument, written into the entry'",
+   "text": "C20: \"a dualist regression against the account's method (08 §4)\" / \"违背本理论方法（08 §4）的二元回退\". C26: \"which the account's method does not begin from (08 §4)\" / \"而本理论的方法不从此开始（08 §4）\". Record: \"(the AI review in the source of 13 October, 08 §4; ...)\" / \"（来源 2026-10-13 的 AI 复查，08 §4；...）\"",
+   "problem": "The citation is to the wrong section. 08 §4 is the premise card and says nothing about fact and value, or about beginning apart. Both new arguments and the record rest on it.",
+   "evidence": "theories/becoming/chapters/08-METHOD.md line 165: '## 4. Premise card'. Its tables list commitments, hypotheses and 'Not assumed'. A search of the chapter for fact/value, neutral fact, external link and 事实 hits only line 16, in '## 1. Beginning within the one unfolding': 'Subject and object ... fact and value are each drawn within the unfolding ... Before two terms are treated as independently given, the relation said to join them is reconstructed.'",
+   "suggestion": "Cite 08 §1 in all six places."
+  },
+  {
+   "id": "E2",
+   "severity": "blocker",
+   "entry": "C03",
+   "field": "scope_en, scope_zh",
+   "text": "\"Stated first as a direction, with no argument given\" / \"最初作为方向提出，未给论证\"",
+   "problem": "That no argument was given holds of the 7 October answer. 'First' and 最初 make it a claim about the direction's first statement, which is false, and the earlier statement does carry reasons. The record's bullet looks only at the 7 October source.",
+   "evidence": "The 7 October source has no argument: '我的答案是生生不息 - ... 就是一个好的方向'. The same file says: 'The 2 May conversation contains earlier direct human statements ... at 21:05 about universal good taking the universe's 生 as its standard'. SHENGSHENG-DIRECTION-RECONSTRUCTION.md §1 calls it '这一既有伦理主张'. sources/07-shengsheng-buxi/downloads-drafts-2026-05/生生不息论_v4.md line 471 reads '善 = 与生生不息相合 —— 即扩张可能性空间...', and lines 485-493 give reasons ('因为提出鸿沟之主体本身即在桥之上', the arguments against convention and interest).",
+   "suggestion": "\"Stated on 7 October 2026 as a direction, in an answer that gives no argument; ...\" / \"2026-10-07 以回答的形式作为方向提出，未给论证；...\""
+  },
+  {
+   "id": "E3",
+   "severity": "blocker",
+   "entry": "record, C20",
+   "field": "record bullet 'An argument, written into the entry'",
+   "text": "\"the method proves no ground, as each scope already says\" / \"方法不证明任何根据，这一点已在各条范围中\"",
+   "problem": "False for C20. C20 now rests a step on the method and carries no such caveat, so the sentence the record relies on is missing from the entry that needs it.",
+   "evidence": "C20 scope_en in full: 'Universal grounding is neither proved nor shown impossible, so zero-axiom Practical judgment was later reopened, preserving the completed conditional route. On 30 October 2026 the record universal-practical-warrant was restated ...'; C20's claim has no such clause either. Only C26's scope has it: 'Method success, revisability and a genealogy of ends do not themselves establish ethical direction'. The C20 source says '一元方法不自动完成规范必要性证明'; AGENTS.md says 'Nonduality is a method, not a proof.'",
+   "suggestion": "Add the clause to C20's scope in both languages, then keep the record's sentence."
+  },
+  {
+   "id": "E4",
+   "severity": "blocker",
+   "entry": "record",
+   "field": "record, first paragraph",
+   "text": "\"(the section above's 26 and 22 missed the connection fields and a name set against a Chinese character)\" / \"（上一节的 26 与 22 少计了连接字段与紧贴汉字的名字）\"",
+   "problem": "The 22 of the section above is its count of link labels. That count was right and is the same 22 this section reports. It missed nothing, and it was never a Chinese count.",
+   "evidence": "Record line 1479: 'occurs 26 times in the titles, claims and scopes ... and in 22 link labels' (line 1436 the same). Recount on HEAD~1: English 28 (26 without M20's 2 connection occurrences); Chinese 30 (27 without connection; 16 of those by a word-boundary match); 22 label pairs in 11 entries; 13 entries; 102 occurrences in all. The section's own counts are right. Only this parenthesis is wrong.",
+   "suggestion": "\"(the section above's 26 counted English text only and missed the connection fields; it gave no Chinese count; its 22 labels stand)\"."
+  },
+  {
+   "id": "E5",
+   "severity": "fix",
+   "entry": "C01, C14, M20, E02, opening key",
+   "field": "C01 scope_zh; C14 scope_zh; M20 claim_zh; E02 claim_zh; scope_en/scope_zh key",
+   "text": "C01 \"本次自我奠基接续按用户指示到墙\" (en edited to \"reaches the requested wall\"). C14 \"聚焦说明现按用户选定范围完成\" (en \"complete at the selected scope\"). M20 \"按后续指示完成路线比较\" (en \"A subsequent route assessment prioritizes\"). E02 \"按当前要求继续更强的零公理理论\" (en \"while pursuing the stronger zero-axiom theory\")",
+   "problem": "The Chinese still rests these steps on a user's instruction and differs from the English. The script edited C01 in English only, and its final check looks only for the Latin name, so it could not catch 用户. These steps give no argument and carry no mark, so the new key ('an entry gives the step's argument, or says \"on request, with no argument given\"') is untrue of them. The record does not mention the C01 edit.",
+   "evidence": "apply_steps.py line 134 edits C01 scope_en only; lines 192-193 assert only on the Latin name. A sweep of the zh fields finds 用户 surviving only at C01 and C14. AGENTS.md: live text 'revises ... past directives'.",
+   "suggestion": "Bring the four Chinese sentences to the English. For C01 and C14, also say whether the step is argued or give the mark."
+  },
+  {
+   "id": "E6",
+   "severity": "fix",
+   "entry": "C17, C20, record",
+   "field": "C20 scope_en/scope_zh; C17 scope_en/scope_zh; record",
+   "text": "C20: \"Universal grounding is neither proved nor shown impossible, so zero-axiom Practical judgment was later reopened\" / \"普遍目标未证明也未证明不可能，所以后续重新开启零公理实践判断\". Record: \"C17, C20: ... so it reopens (each entry's preceding sentence)\"",
+   "problem": "The source of the reopening holds only a question, an AI answer and a request. That is exactly the record's test for 'no argument yet', yet this step is filed as argued, with a reason found in no source or home section. 'So' also says more than the fact supports: being unproved permits reopening and gives no reason for it, and it holds equally of the axiom route that was kept. In C20 the 'preceding sentence' is the same sentence. C17's 'With that starting point unproved' is true as a circumstance; the defect is mainly C20's 'so' and the record's filing.",
+   "evidence": "2026-10-08-zero-axiom-practical-judgment.md: 'Ren then instructed: > establish Zero-axiom Practical judgment', 'this newer direct request governs the present task', 'No proof of success or universal impossibility is implied by recording the goal.' history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md: 'The latest direct instruction reopens zero-axiom grounding for this chat.' That source is linked from C26 only, not from C17 or C20.",
+   "suggestion": "Mark it as a sixth step ('reopened on request, with no argument given'), or give a reason from a home section and cite it."
+  },
+  {
+   "id": "E7",
+   "severity": "fix",
+   "entry": "C20",
+   "field": "claim_en, claim_zh",
+   "text": "\"The question as then put separated neutral fact, value and independent positions of response and asked for an external link between them, a dualist regression against the account's method\" / \"当时的问法先分开中性事实、价值及独立的回应位置，再求其外部连接，这是违背本理论方法...的二元回退\"",
+   "problem": "Says more than the source and sits against the chapter it should cite. The source records a tendency in a wording. The entry states it as what the question did and calls that a breach of method, whereas 08 §1 says a separate question asserts no separation and that such a charge has to be shown in the case.",
+   "evidence": "2026-10-13-nondual-normative-grounding-correction.md: 'AI 承认该表述有先将中性事实、价值及独立回应位置分开，再要求外部连接的倾向'; Ren's words are a question, '感觉这个是不是太回归二元了？'. 08-METHOD.md line 16: 'A separate type, a local resource account or a separate question asserts no fundamental separation'; line 18: 'That it presupposes separate entities ... is a claim to be shown in the case, not an answer to it.'",
+   "suggestion": "\"The question as then put tended to separate ... and then ask for an external link; what the method asks (08 §1) is the relation reconstructed first, so ...\""
+  },
+  {
+   "id": "E8",
+   "severity": "fix",
+   "entry": "M15, M26, record",
+   "field": "M15 scope_en/scope_zh; M26 scope_en/scope_zh; two D43 labels",
+   "text": "\"This link adds no premise and changes no theorem; its place here rests on the laws stated (D43).\" / \"其位置依于所述规律（D43）\". \"Both links add no premise and change no theorem; their place here rests on the laws stated (D43).\" / \"其位置依于所述规律（D43）\". Labels \"This link's place (D43)\", \"These readings and links (D43)\"",
+   "problem": "The first half is D43's. The second is not. D43 gives no argument for the links' place in the chain, so '(D43)' attributes to it what it does not say. A reader who follows the link finds his taking of the proposal and 'The chain is Ren's curated argument', with no statement that the place rests on the laws. The record files this under 'An argument', but it names no reason why the link belongs in the chain.",
+   "evidence": "DELEGATED-CHOICES.md line 431: 'Each changes no theorem and adds no premise'. Line 447: 'Ren took the proposal to add `Selection` ... `Observation` ... `Parting` ... to its learning and wisdom links, each with its exact scope. The chain is Ren's curated argument'. D43's 'Reasons' concern readings and their theorems, not placement. READINGS-PENDING-REN.md item 19: 'so the AI proposes and Ren decides. Proposal: add ...', with no argument for the place.",
+   "suggestion": "Keep \"adds no premise and changes no theorem (D43)\" and either state why each law bears on the entry (for Selection, that a selection is as good as the model it goes through) or give the mark."
+  },
+  {
+   "id": "E9",
+   "severity": "fix",
+   "entry": "E01, record",
+   "field": "title_en/title_zh; claim_en/claim_zh; record bullet 'The provenance entry'",
+   "text": "\"The nondual method and the generative direction: their source directives\"; \"The directives asked for explaining differentiation within one unfolding, retaining multiple ranges of life/formation and investigating Shengsheng as a favorable direction.\" / \"原话请求从同一生成展开解释关系分化，保留多个“生”的研究范围，并正面研究生生的伦理方向。\"",
+   "problem": "'Asked for' says more than either linked file, and it contradicts the record's own C03 bullet ('the source reads \"my answer is…\"'). The 7 October file is a position stated in answer, not a request to investigate. Its scope options came from the assistant. In the nondual file, 'explaining differentiation' is the AI's operational reading; the direct request is that the view be understood across the project.",
+   "evidence": "2026-10-07-shengsheng-ethical-direction.md: 'the answer beginning “我的答案” is Ren's explicit position'; 'This is substantive positive input ... It is not merely an instruction to explain dynamics'; 'The assistant supplied these options, rather than Ren independently supplying their wording'. 2026-10-06-project-wide-nondual-method.md: 'please make sure this is understood by the whole project', under which comes 'AI-authored operational interpretation'.",
+   "suggestion": "\"The sources state the method as a correction and direction, and the generative direction as an answer; both are kept as provenance\" (and likewise in Chinese), and drop 'directives' for the second source."
+  },
+  {
+   "id": "E10",
+   "severity": "fix",
+   "entry": "record",
+   "field": "record, second paragraph",
+   "text": "\"An argument written here is the work's present reason for the step, taken from a source's AI-authored note or from a home section.\" / \"取自来源中标明 AI 撰写的说明或归属章节\"",
+   "problem": "The record's own bullets contradict this. Some arguments are from neither place. The entries also never carry the disclaimer that follows it ('It does not claim that the step was taken for that reason at the time'), so in the table 'since' and 'so' read as history.",
+   "evidence": "Record: 'C17, C20: ... (each entry's preceding sentence)'; 'agreement with maxims ... (the question in the source)', which is Ren's sentence in 2026-10-08-wisdom-paper-direction.md, '我们没有解释为什么我们的core...'. M15's morality argument is his line 91, '因为道德考虑的是变化之后的结果，因此它本身是对becoming的判断'; CORE-CONSTRAINT-AND-WISDOM §14.1 takes it '沿Ren的主张' and its AI part only expands the phrase. The opening key in the JSON says only 'an entry gives the step's argument'.",
+   "suggestion": "Say what is true: from an AI note, a home section, the source's own words restated as argument, or the entry itself. Add to the key that an argument is the present reason, not the history of the step."
+  },
+  {
+   "id": "E11",
+   "severity": "note",
+   "entry": "M15, M26, C01",
+   "field": "M15 scope_en; M26 scope_en; C01 scope_en/scope_zh",
+   "text": "M15 \"and setting it makes nothing so: establish constitutive necessity and connect the formation of wisdom.\" M15 \"...whether that difference matters; This link adds\". M26 \"shows, since that observation is no second relation beside dependence goes beyond the theorem (D43);\". C01 \"it says what this target asks\" / \"此目标\"",
+   "problem": "Neighbours left hanging. M15's colon used to introduce the objective's content and now follows 'makes nothing so', so the imperative reads as its expansion; the Chinese has 须建立, the English a bare imperative. M15 has a capital after a semicolon, kept from when the next word was a name. M26 is a garden path until 'goes beyond'. C01's 'this target' has no antecedent in its sentence or the one before it.",
+   "evidence": "Text as it stands in generativity-chain.json. The source calls C01's target 'this conversation's independently authorized assumption-free foundation' (2026-10-08-foundation-deductive-necessity.md).",
+   "suggestion": "M15: \"... makes nothing so; the target is to establish ...\". M15: \"; this link\". M26: \"since the claim that observation is no second relation ...\". C01: \"the foundation's target\"."
+  },
+  {
+   "id": "E12",
+   "severity": "note",
+   "entry": "C01, C03, M15",
+   "field": "C01 scope_en/scope_zh; opening key",
+   "text": "C01 \"was set on request, with no argument given\" against C03 \"with no argument given\"; key: 'or says \"on request, with no argument given\" where it rests on none yet'",
+   "problem": "All five no-argument claims are true at their sources. But C01's source is an answer to the assistant's question, the same kind as C03's, yet only C03 drops 'on request', and the only request in C01's file is the assistant's. M15's source is a stated aim ('我想证明的是'). The key quotes one form, which C03 does not use.",
+   "evidence": "2026-10-08-foundation-deductive-necessity.md: headed 'Assistant's clarification question' and 'Ren's answer'. Record: 'The mark reads \"on request, with no argument given\", or \"with no argument given\" at C03.'",
+   "suggestion": "Use \"with no argument given\" for C01 too, and have the key name both forms."
+  },
+  {
+   "id": "E13",
+   "severity": "note",
+   "entry": "C03, C17, C20",
+   "field": "links; opening key",
+   "text": "Key: \"The words that asked for a step stand in the linked sources\"; C20 \"on request\"",
+   "problem": "From these entries a reader cannot reach the words behind the marked or reopened step directly. C20's links omit the 13 October focus file, reachable only from C26 or one hop through C20's method-correction source. C03 has no sources/ link at all (E01 has it). C17's reopening source is linked only from C26. The new mark makes these missing links matter more.",
+   "evidence": "C20 links include 2026-10-13-nondual-normative-grounding-correction.md, not 2026-10-13-universal-normative-grounding-focus.md. C03's two links are both under theories/becoming/history/. C26 links 2026-10-08-zero-axiom-practical-judgment.md.",
+   "suggestion": "Add one source link to each. This changes a fingerprint set, so it goes through the record."
+  },
+  {
+   "id": "E14",
+   "severity": "note",
+   "entry": "M15",
+   "field": "scope_en, scope_zh",
+   "text": "\"does not explain why the core's inferences would find them\" / \"不能解释本核心的推论何以能找出它们\"",
+   "problem": "Presupposes that the inferences find the maxims, which the old sentence did not say and the source declines to record as shown. The English 'would' is weaker than the Chinese 能. A later sentence ('universal discovery ... remain unproved') limits the damage.",
+   "evidence": "2026-10-08-wisdom-paper-direction.md, editor's note: '它没有将“都找出来”或 reason 与 constraint 的完全同一记录为已证事实'.",
+   "suggestion": "\"does not explain whether or why the core's inferences would find them\" / \"不能解释本核心的推论是否以及何以能找出它们\"."
+  },
+  {
+   "id": "E15",
+   "severity": "note",
+   "entry": "C14",
+   "field": "claim_en, claim_zh",
+   "text": "\"A theoretical focus follows, since comparing premises and added explanation needs no new measurement\" / \"比较前提与额外解释不需要新的测量，所以转而聚焦理论\"",
+   "problem": "The source's AI note states this as a consequence of the redirection, and it shows the theoretical work can proceed, not why it should come first. The entry turns it into the reason for the focus.",
+   "evidence": "2026-10-08-evolution-theoretical-focus.md: 'These messages redirect ...: prioritize theoretical explanation ... New measurements and predictive superiority are not prerequisites for completing that theoretical work.'",
+   "suggestion": "\"A theoretical focus follows; comparing premises and added explanation needs no new measurement, so it can proceed without one\" (and likewise in Chinese), or give the mark."
+  },
+  {
+   "id": "E16",
+   "severity": "note",
+   "entry": "C17, C26, C33, M15, C20",
+   "field": "labels and prose",
+   "text": "Labels: C33 \"Source: the direction\" / \"来源：原话\"; C17 \"Source: the directive and its scope\" / \"来源：原话与执行范围\"; C26 \"Source: the later directive\" / \"来源：后续原话\". Prose: M15 \"Section 23 reuses rather than rebuilds\" / \"第23节直接连接P91...与P93...\"; M15 \"appraised through\" / \"支撑\"; M15 \"makes nothing so\" / \"不使之成立\"; C20 \"focuses\" / \"放回\"",
+   "problem": "The two languages differ in these places: directive or direction against 'the words', the §23 subject, and 'through' against 'supported by'. C20's 放回 ('back') has no English counterpart. Each label is true of its file. All 22 relabelled links were checked against what they reach and none is false. C30's pair was aligned to its English; C33, C17 and C26 were not.",
+   "evidence": "apply_steps.py LABELS, and the fields in generativity-chain.json. 2026-10-13-universal-normative-grounding-focus.md says 'selects ... as this chat's research focus', not a return.",
+   "suggestion": "Align the Chinese labels with the English, as was done for C30."
+  },
+  {
+   "id": "E17",
+   "severity": "note",
+   "entry": "record",
+   "field": "record, bullets",
+   "text": "\"Link labels. 22 pairs now say what the link holds (\\\"Source: …\\\", \\\"来源：…\\\")\"; the bullet list of edits",
+   "problem": "Small omissions. Two of the 22 labels are the D43 ones, without 'Source:'. Edits the record does not account for: C14's zh 10月9日 sentence, where the name is struck and neither argument nor mark is added (en: 'The 9 October systems/subsystems correction explains'); C01's 'requested wall'; M20's 本次应请求的接续; M20's new clause 'contraction is not good merely for reducing a controller's reach', whose words are not in §§75-77, although it is a fair paraphrase of §76's 'more power or less power cannot replace this comparison'. C14's correction is another step in the class the record promises to argue or mark.",
+   "evidence": "apply_steps.py lines 56, 109, 120, 134; history/ETHICAL-LEARNING.md §§75-77 (no 'controller'); record's M20 clause covers only the G0 route.",
+   "suggestion": "List these edits; argue or mark C14's 9 October step."
+  },
+  {
+   "id": "E18",
+   "severity": "note",
+   "entry": "record",
+   "field": "record, 'Not changed, and left'",
+   "text": "\"D43's 'The chain is Ren's curated argument' ... changing it would drift the sections it binds, and AGENTS.md now holds the rule, so it stays.\"",
+   "problem": "The reason is weaker than stated. The section above handled the same case in D45 with a dated line, without changing the original text. D43 can take the same line, and the new M15 and M26 labels now send readers straight to the outgrown sentence.",
+   "evidence": "DELEGATED-CHOICES.md line 653: 'Outgrown in part (2 November 2026, board item GC2). The last sentence of (6) is history...'. Lines 431-447 are D43.",
+   "suggestion": "Add a dated line below D43 as for D45, re-reading what binds it, or give the reason for not doing so."
+  }
+ ],
+ "summary": "The revision has 4 blockers, 6 fixes and 8 notes. The mechanics are sound, but several new sentences and record claims say more than their sources.\n\nWhat checks out:\n- All 61 text edits are in place, and only the 4 stated files changed.\n- No link path changed, and nothing under sources/ changed.\n- The name is gone from the data.\n- The record's main counts recount correctly: 13 entries, 28 English, 30 Chinese, 22 label pairs in 11 entries.\n- The 'left for next reading' list matches the section above.\n- All five 'no argument given' claims are true at their sources.\n- All 22 relabelled links say truly what their file holds.\n- Most arguments do come from the AI notes the record cites: C01, C14, §23, 16 October, M20's recovery point and M21.\n\nBlockers:\n1. '(08 §4)' in C20, C26 and the record cites the premise card; the text meant is 08 §1.\n2. C03's 'Stated first' / '最初' is false. The 7 October source itself names earlier statements, and the May draft of 生生不息论 states the direction with reasons.\n3. The record says 'as each scope already says', but C20's scope has no such clause.\n4. The record says the section above's 22 'missed' something. That 22 was its label count, which was right and is still 22.\n\nFixes:\n- The Chinese still says 按用户指示, 按用户选定范围 and 按后续指示 where the English does not, which also falsifies the new key.\n- C20's 'so ... was later reopened' rests on a source that holds only a request, the same class as the five marked steps.\n- C20's 'separated ... a dualist regression' overstates a source that says 倾向, and sits against 08 §1.\n- 'its place here rests on the laws stated (D43)' goes beyond D43.\n- E01's 'asked for' misdescribes a source that is an answer.\n- The record's statement of where arguments come from is contradicted by its own bullets.\n\nOne limit: the 2 May conversation the C03 source cites is not in this checkout, so I could not read it."
+}

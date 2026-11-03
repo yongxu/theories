@@ -534,12 +534,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7"
+      "sha256": "9a5156a05e5fdde26c3ec70b4bae5b02a7b1ec2d7bdd742f49cb8079e3283a7a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65"
+      "sha256": "5a617820b47f86d60548bb5fab125a2589157aa14f14e5c1c9948444cb1af506"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
@@ -614,7 +614,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+      "sha256": "9a0ede895d2df94d04b13c439fa14bd54685adc28611a5090b6daec57298a781"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",

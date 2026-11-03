@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261101T161537.177111Z",
- "core_sources_sha256": "bc73e3d3aac60c371038c5643cb94fbdd19a1efc692c85ab85562e95f9088ae3",
+ "core_receipt": "20261102T185431.953044Z",
+ "core_sources_sha256": "2c94c73f17073b5f18e360c969dc8ec92c72e29acf4a3973e68a460e672713c6",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4099,
+  "laws": 4100,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 883,
+  "grammar": 885,
   "balance, represented": 628,
   "anchor, not reached": 131,
-  "no shared law": 2057,
+  "no shared law": 2056,
   "vocabulary_only": 79,
   "closure": 528,
   "balance": 836,
@@ -3406,6 +3406,16 @@
      "Becoming.«共应之例».EachNotCommon.none",
      "Becoming.«共应之例».PairsNotCommon.pairs",
      "Becoming.«共应之例».PairsNotCommon.none"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.GuardHorizon.uniform_policy_iff_common",
+     "Becoming.GuardHorizon.ungiven_reading_not_uniform"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -7260,6 +7270,7 @@
      "Becoming.«定前则前并生不过后并亡»",
      "Becoming.total_mark_eq_count",
      "Becoming.«所覆后亡屡则生未否»",
+     "Becoming.«有覆而亡屡则生不止»",
      "Becoming.«有界覆而生屡则亡不止»",
      "Becoming.«有覆而亡屡则生屡»",
      "Becoming.«有界覆而生屡则亡屡»"
@@ -19178,117 +19189,6 @@
     "dependence": "no shared law"
    }
   ],
-  "formed-copying-correction": [
-   {
-    "law": 1,
-    "declarations": [
-     "Becoming.Copying.defects",
-     "Becoming.Copying.FaithfulAt"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 2,
-    "declarations": [
-     "Becoming.Copying.inspect",
-     "Becoming.Copying.inspect_le_iff"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 3,
-    "declarations": [
-     "Becoming.Copying.scan_le",
-     "Becoming.Courses.inspection",
-     "Becoming.Courses.inspection_le_iff",
-     "Becoming.Courses.inspection_course_le"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 4,
-    "declarations": [
-     "Becoming.Copying.inspect_matches_iff",
-     "Becoming.Copying.defects_zero_iff",
-     "Becoming.Copying.exchange_keeps_counts"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 5,
-    "declarations": [
-     "Becoming.CopyingInstances.exchange_view",
-     "Becoming.CopyingInstances.inspect_view",
-     "Becoming.CopyingInstances.scan_view",
-     "Becoming.CopyingInstances.inspect_le_iff_instance",
-     "Becoming.CopyingInstances.scan_le_from_law",
-     "Becoming.CopyingInstances.scan_faithful_instance",
-     "CopyingCorrection.inspection_scan_does_not_increase_defects"
-    ],
-    "outside": [
-     "Becoming.CopyingInstances.exchange_view",
-     "Becoming.CopyingInstances.inspect_view",
-     "Becoming.CopyingInstances.scan_view",
-     "Becoming.CopyingInstances.inspect_le_iff_instance",
-     "Becoming.CopyingInstances.scan_le_from_law",
-     "Becoming.CopyingInstances.scan_faithful_instance",
-     "CopyingCorrection.inspection_scan_does_not_increase_defects"
-    ]
-   },
-   {
-    "law": 6,
-    "declarations": [
-     "Becoming.CopyingInstances.matches_reference_from_law",
-     "CopyingCorrection.inspection_matches_reference_iff",
-     "Becoming.CopyingInstances.product_is_template_iff",
-     "CopyingCorrection.exchange_material",
-     "CopyingCorrection.history_accounts"
-    ],
-    "outside": [
-     "Becoming.CopyingInstances.matches_reference_from_law",
-     "CopyingCorrection.inspection_matches_reference_iff",
-     "Becoming.CopyingInstances.product_is_template_iff",
-     "CopyingCorrection.exchange_material",
-     "CopyingCorrection.history_accounts"
-    ]
-   },
-   {
-    "law": 7,
-    "declarations": [
-     "CopyingCorrection.formed_route_edits_actual_product",
-     "CopyingCorrection.corrected_daughter_enters_inheritance",
-     "CopyingCorrection.checking_can_exhaust_editing_support",
-     "CopyingCorrection.corrected_product_can_remain_unreleased"
-    ],
-    "outside": [
-     "CopyingCorrection.formed_route_edits_actual_product",
-     "CopyingCorrection.corrected_daughter_enters_inheritance",
-     "CopyingCorrection.checking_can_exhaust_editing_support",
-     "CopyingCorrection.corrected_product_can_remain_unreleased"
-    ]
-   },
-   {
-    "law": 8,
-    "declarations": [
-     "CopyingCorrection.shared_wrong_source_hides_error",
-     "CopyingCorrection.wrong_reference_damages_correct_product",
-     "Becoming.CopyingInstances.wrong_reference_unfaithful"
-    ],
-    "outside": [
-     "CopyingCorrection.shared_wrong_source_hides_error",
-     "CopyingCorrection.wrong_reference_damages_correct_product",
-     "Becoming.CopyingInstances.wrong_reference_unfaithful"
-    ]
-   }
-  ],
   "formed-contacts-change-copying-fidelity": [
    {
     "law": 1,
@@ -19449,6 +19349,117 @@
     "outside": [
      "CopyingRegistration.actual_contacts_are_formed",
      "CopyingRegistration.formed_registration_is_complete"
+    ]
+   }
+  ],
+  "formed-copying-correction": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Copying.defects",
+     "Becoming.Copying.FaithfulAt"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Copying.inspect",
+     "Becoming.Copying.inspect_le_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Copying.scan_le",
+     "Becoming.Courses.inspection",
+     "Becoming.Courses.inspection_le_iff",
+     "Becoming.Courses.inspection_course_le"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Copying.inspect_matches_iff",
+     "Becoming.Copying.defects_zero_iff",
+     "Becoming.Copying.exchange_keeps_counts"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.CopyingInstances.exchange_view",
+     "Becoming.CopyingInstances.inspect_view",
+     "Becoming.CopyingInstances.scan_view",
+     "Becoming.CopyingInstances.inspect_le_iff_instance",
+     "Becoming.CopyingInstances.scan_le_from_law",
+     "Becoming.CopyingInstances.scan_faithful_instance",
+     "CopyingCorrection.inspection_scan_does_not_increase_defects"
+    ],
+    "outside": [
+     "Becoming.CopyingInstances.exchange_view",
+     "Becoming.CopyingInstances.inspect_view",
+     "Becoming.CopyingInstances.scan_view",
+     "Becoming.CopyingInstances.inspect_le_iff_instance",
+     "Becoming.CopyingInstances.scan_le_from_law",
+     "Becoming.CopyingInstances.scan_faithful_instance",
+     "CopyingCorrection.inspection_scan_does_not_increase_defects"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.CopyingInstances.matches_reference_from_law",
+     "CopyingCorrection.inspection_matches_reference_iff",
+     "Becoming.CopyingInstances.product_is_template_iff",
+     "CopyingCorrection.exchange_material",
+     "CopyingCorrection.history_accounts"
+    ],
+    "outside": [
+     "Becoming.CopyingInstances.matches_reference_from_law",
+     "CopyingCorrection.inspection_matches_reference_iff",
+     "Becoming.CopyingInstances.product_is_template_iff",
+     "CopyingCorrection.exchange_material",
+     "CopyingCorrection.history_accounts"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "CopyingCorrection.formed_route_edits_actual_product",
+     "CopyingCorrection.corrected_daughter_enters_inheritance",
+     "CopyingCorrection.checking_can_exhaust_editing_support",
+     "CopyingCorrection.corrected_product_can_remain_unreleased"
+    ],
+    "outside": [
+     "CopyingCorrection.formed_route_edits_actual_product",
+     "CopyingCorrection.corrected_daughter_enters_inheritance",
+     "CopyingCorrection.checking_can_exhaust_editing_support",
+     "CopyingCorrection.corrected_product_can_remain_unreleased"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "CopyingCorrection.shared_wrong_source_hides_error",
+     "CopyingCorrection.wrong_reference_damages_correct_product",
+     "Becoming.CopyingInstances.wrong_reference_unfaithful"
+    ],
+    "outside": [
+     "CopyingCorrection.shared_wrong_source_hides_error",
+     "CopyingCorrection.wrong_reference_damages_correct_product",
+     "Becoming.CopyingInstances.wrong_reference_unfaithful"
     ]
    }
   ],
@@ -59833,8 +59844,8 @@
      "Becoming.GuardHorizon.uniform_finer"
     ],
     "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -63132,7 +63143,7 @@
      "premise": "Becoming.Comparison",
      "not_entailed": "Becoming.ReadsNoOrder.not_entails",
      "basis": {
-      "en": "What ranks lies in C alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+      "en": "What ranks lies in C, in general alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
     }
@@ -63317,7 +63328,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "c447910666b17072c39dcf42732c3f74e5cef327a9619b6701394496c791d743",
+   "modules_sha256": "4e068346d2541d9057e9b9ced3107468113c1e80d763fbdd2d1674d0ff71f9aa",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

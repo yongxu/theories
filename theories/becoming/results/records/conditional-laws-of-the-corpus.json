@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T09:47:35+00:00",
+  "reviewed_at_utc": "2026-11-02T18:53:19+00:00",
   "statement": {
     "en": "Of the corpus's 219 conditional units, 128 fall into 22 families of laws, each written as Y iff Z or Z then Y with a net where Z fails and Y with it: 103 state laws that hold, 6 laws false as read, 19 premises. Of the rest, 33 turn on a valuation, 53 are not expressible, 5 are definitions.",
     "zh": "语料归为丙一之 219 条中，128 条入 22 族，每律写成“Y 当且仅当 Z”或“Z 则 Y”，各有 Z 不成立而 Y 亦不成立之网：103 条之律成立，6 条依读法不成立，19 条是前提；其余 33 条转于评价，53 条表达不了，5 条是定义。"
@@ -166,8 +166,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean",
       "detail": {
-        "en": "ZL-17-051, G13: a result with no deed among its conditions abides under no class, so not 常, while the deed may go on, so not 斷. («无缘不住而他有后之例»)",
-        "zh": "ZL-17-051（G13）：无业为缘之果于任何类下不住，非常；而业可续，非断。（«无缘不住而他有后之例»）"
+        "en": "ZL-17-051, G13: on the witness a result with no condition at all, not only no deed, abides under no class, so not 常, while another occurrence, the deed, has a successor, so not 斷. («无缘不住而他有后之例»)",
+        "zh": "ZL-17-051（G13）：见证中果全无缘（不只无业），于任何类下不住，非常；另一事（业）有后，非断。（«无缘不住而他有后之例»）"
       }
     },
     {
@@ -333,7 +333,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv",
       "role": "statement",
-      "sha256": "dc75e1984444accf3a0a3c5f0687f168827c10809cfe52227997afa5cb5208cb",
+      "sha256": "cf48bd9771e905032f09f5523cfc9d7f38ded3b69a4fdf6cadb432f466b728c5",
       "declarations": []
     },
     {
@@ -351,7 +351,7 @@
     {
       "path": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
       "role": "statement",
-      "sha256": "803bc7bb3f54533aa88f56a3c8dddd89ec3d49bd69274bdaa2f461431851e163",
+      "sha256": "444fef0285dfa9f987f02e7ef001ca3b919e6a42af9426ace64fe93995cb41d5",
       "declarations": []
     },
     {
@@ -374,6 +374,10 @@
     {
       "en": "1 November 2026, board item OU7 (study section 492): added. The 219 units classed 丙一 read as laws of every carrier, relation and class, 128 of them in 22 families, each law with a net where its condition fails; the new laws and the witnesses in one core leaf, Becoming.GrammarConditionals; the two general laws two families rest on, in Grammar and GrammarReadings, stated in the records of the laws they generalize (continuation-relative-to-a-class, law 5; classical-definitions-in-the-grammar, law 4); one independent AI review of the design, every finding taken.",
       "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：增。归为丙一之 219 条读作对一切载体、关系与类之律，其中 128 条入 22 族，每律有其条件不成立之网；新律与见证在一核心之叶 Becoming.GrammarConditionals；二族所依之两条一般之律在 Grammar 与 GrammarReadings，陈于其所推广之律之记录（continuation-relative-to-a-class 律 5；classical-definitions-in-the-grammar 律 4）；设计经一次独立之 AI 审查，所见皆取。"
+    },
+    {
+      "en": "3 November 2026, the dossiers' re-sync: a correction. The first of the false-as-read witnesses for ZL-17-051 said more than the Lean states: its result has no condition at all, and a result with another condition can abide. The chapter's sentence and groups.tsv's row with it; the chapter's opening and home section now say, as this statement does, that 128 of the 219 are written as laws; its open list says what JS-318 denies, which is not JS-326's own premise. The statement and every count stand.",
+      "zh": "2026年11月3日，诸材料之再核：更正。ZL-17-051 之见证原说得比 Lean 所陈为多：其果全无缘，有他缘之果可住。章中之句与 groups.tsv 之行随之改；章之开头与本节今如本记录所陈，说 219 条中 128 条写成律；其未决之条说 JS-318 所否者，不是 JS-326 自己之前提。所陈与诸计数不变。"
     }
   ]
 }

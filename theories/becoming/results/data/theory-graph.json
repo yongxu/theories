@@ -9092,10 +9092,10 @@
    "type": "module",
    "name": "Becoming.GuardHorizon",
    "level": "L1",
-   "theorems": 32,
+   "theorems": 34,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -32577,6 +32577,11 @@
   },
   {
    "from": "module:Becoming.GuardHorizon",
+   "to": "module:Becoming.CommonResponse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GuardHorizon",
    "to": "module:Becoming.Keeping",
    "type": "imports"
   },
@@ -36192,6 +36197,11 @@
   },
   {
    "from": "record:a-response-common-over-a-reading",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-response-common-over-a-reading",
    "to": "module:Becoming.Viability",
    "type": "proved-in"
   },
@@ -36228,7 +36238,7 @@
   {
    "from": "record:a-response-common-over-a-reading",
    "to": "record:when-to-inquire-and-when-to-respond",
-   "type": "related"
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-revision-that-opens-a-correction",
@@ -57569,6 +57579,11 @@
    "from": "record:when-to-inquire-and-when-to-respond",
    "to": "module:Becoming.Keeping",
    "type": "proved-in"
+  },
+  {
+   "from": "record:when-to-inquire-and-when-to-respond",
+   "to": "record:a-response-common-over-a-reading",
+   "type": "related"
   },
   {
    "from": "record:when-to-inquire-and-when-to-respond",

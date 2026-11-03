@@ -7017,21 +7017,6 @@
    "category": "general-structure",
    "reason": "relata listed without repetition and equality decided, transfers balancing a step exist exactly where the units before pair one to one with the units after under the closure: for every Bool relation and list of relata on any type, equality decided; the base reads balance through balancesOn_iff_conserved, and nothing on it uses this law (BD4)"
   },
-  "Becoming.«依读而应则共应»": {
-   "module": "Becoming.CommonResponse",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's definitions and of this module's «共应» (SJ1)"
-  },
-  "Becoming.«共应之例».EachNotCommon.each": {
-   "module": "Becoming.CommonResponse",
-   "category": "model-witness",
-   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
-  },
-  "Becoming.«共应之例».EachNotCommon.none": {
-   "module": "Becoming.CommonResponse",
-   "category": "model-witness",
-   "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
-  },
   "Becoming.«共应之例».NotCovering.fixed": {
    "module": "Becoming.CommonResponse",
    "category": "model-witness",
@@ -7107,11 +7092,6 @@
    "category": "model-witness",
    "reason": "a fact about one constructed reading and requirement: a witness that a hypothesis of SJ1's laws does work (SJ1)"
   },
-  "Becoming.«共应之细»": {
-   "module": "Becoming.CommonResponse",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's definitions and of this module's «共应» (SJ1)"
-  },
   "Becoming.«共应当且仅当所闭之承遍»": {
    "module": "Becoming.CommonResponse",
    "category": "general-structure",
@@ -7126,11 +7106,6 @@
    "module": "Becoming.CommonResponse",
    "category": "general-structure",
    "reason": "at an act map, a common response exactly where situations read alike get the same act, Learning.Lumped unfolded: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
-  },
-  "Becoming.«自反传递则共应当且仅当承遍»": {
-   "module": "Becoming.CommonResponse",
-   "category": "general-structure",
-   "reason": "for a reflexive and transitive reading, along the reading itself: a law of every reading and requirement on any carrier (SJ1, 共应 on the grammar); the models state the rule form with choice or the one-act form at their own carriers, so nothing on the base uses this one"
   },
   "Becoming.«诸承在内当且仅当自反»": {
    "module": "Becoming.CommonResponse",
@@ -7227,10 +7202,15 @@
    "category": "support",
    "reason": "an arithmetic lemma, the mirror of gaining_of_losing_from with the count bounded; its use was the old proof of the census recurrence law's converse, which now goes through the root's count on lines (U4d)"
   },
-  "Becoming.«有覆而亡屡则生不止»": {
-   "module": "Becoming.GrammarLaws",
+  "Becoming.GuardHorizon.ungiven_reading_not_uniform": {
+   "module": "Becoming.GuardHorizon",
+   "category": "model-witness",
+   "reason": "a fact about one constructed reading no configuration gives: a common response with no choice from readings, a witness that the bridge's second hypothesis does work (SJ)"
+  },
+  "Becoming.GuardHorizon.uniform_policy_iff_common": {
+   "module": "Becoming.GuardHorizon",
    "category": "general-structure",
-   "reason": "a law of every relation on any carrier (a shared law on the grammar, U4d): with lists covering arbitrarily late stages and nothing splitting, endings recurring leave beginnings never stopping, with no decision; Identity's arisingFrom_not_stopping_covered reaches the same through «所覆后亡屡则生未否» at one covering list, and nothing on the base uses this form"
+   "reason": "a law of every reading of any type of configurations: given choice over the readings and every reading given, a choice from readings exists exactly where a response common over the reading's sameness does, through the core's «自反传递则共应当且仅当承遍» (SJ, GuardHorizon's bridge to the leaf); nothing on the base uses it"
   }
  },
  "instances": {

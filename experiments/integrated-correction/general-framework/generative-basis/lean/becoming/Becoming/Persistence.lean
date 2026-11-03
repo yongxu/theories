@@ -217,9 +217,8 @@ arbitrarily late steps; and, with at most `B` holding at each step from `T` on a
 continuing two, conversely. Both ends of the law are read through what holds (`Sleeper.held_readings`
 shows the law failing where its two ends are read differently). -/
 theorem persisting_census {R : Nat → F → F → Prop}
-    [∀ t f, Decidable ((W.persisting h).active t f)]
     [∀ t f, Decidable ((W.persisting h).Continues R t f)]
-    [∀ t g, Decidable ((W.persisting h).Continued R t g)] [∀ t g f, Decidable (R t g f)]
+    [∀ t g, Decidable ((W.persisting h).Continued R t g)]
     {alive : Nat → List F} (census : (W.persisting h).Census alive) :
     ((W.persisting h).NoSplit R → (∀ N, ∃ t g, N ≤ t ∧ (W.persisting h).CeasesFrom R t g) →
       (W.persisting h).UnceasingFrom R) ∧

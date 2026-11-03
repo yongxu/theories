@@ -1329,7 +1329,7 @@
       "declarations": [
         "Becoming.Web.steady_held"
       ],
-      "sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7"
+      "sha256": "9a5156a05e5fdde26c3ec70b4bae5b02a7b1ec2d7bdd742f49cb8079e3283a7a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
@@ -1349,7 +1349,7 @@
         "Becoming.Web.Lineage.line",
         "Becoming.Web.line_lineage"
       ],
-      "sha256": "c71c7ad5261a2e73d1321060f162cc11598bc5b3ac308378ca44569353c15c65"
+      "sha256": "5a617820b47f86d60548bb5fab125a2589157aa14f14e5c1c9948444cb1af506"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
@@ -1406,7 +1406,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "37cfac07b4ca6883808b8d43b747e171a684194f0398e7dfa73506c09cb19990"
+      "sha256": "9a0ede895d2df94d04b13c439fa14bd54685adc28611a5090b6daec57298a781"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
@@ -1640,6 +1640,12 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "role": "receipt",
+      "sha256": "aff98eb35b5a97f2ef930e7fd37561f486423c917f988e34d671c38f32297317",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1834,14 +1840,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"

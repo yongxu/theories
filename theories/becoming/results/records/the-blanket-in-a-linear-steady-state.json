@@ -466,12 +466,12 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
+      "sha256": "4d31fc275e668e5be333efa04aec448a02d0dba2affb35e395ef3f66fb298852"
     },
     {
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
-      "sha256": "e999cc8ff44283fe5b280f0cf1dd4aceca32409205a352801bd8c95e773cbc21"
+      "sha256": "8bd07249aa0e8be783af873ea0fe95dc547ee2401960470b21e3f3edc152f121"
     }
   ],
   "proof_bindings": [

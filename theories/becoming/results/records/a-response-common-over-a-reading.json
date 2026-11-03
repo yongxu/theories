@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-11-01T11:27:32+00:00",
+  "reviewed_at_utc": "2026-11-02T05:15:44+00:00",
   "statement": {
     "en": "The occurrences whose closure under a relation stays in a region form its largest closed part, the invariance kernel at a process's steps. A response common over a reading within a requirement exists exactly where the acts' kernels cover the situations: judgment is viability indexed by acts.",
     "zh": "依一关系之闭包留在一区域之内的诸事，构成该区域对该关系封闭的最大部分，在一过程之步即不变核。读之共应在要求之内存在，当且仅当诸行之不变核遍盖诸情境：判断即以行为索引的生存性。"
@@ -91,6 +91,14 @@
         "Becoming.«共应之例».PairsNotCommon.pairs",
         "Becoming.«共应之例».PairsNotCommon.none"
       ]
+    },
+    {
+      "en": "The rule's converse, at any type: given a choice over the readings and every reading given by some situation, a rule from readings meeting the requirement exists exactly where a response common over the reading's sameness does; with that choice, no situation and no act, a common response exists with no such rule, so the readings' being given cannot simply be dropped.",
+      "zh": "规则之逆，对任一类型：给定读数上的选择，且每一读数皆由某一情境给出，则合乎要求、由读数而定的规则存在，当且仅当对读之同的共应存在；有此选择而无情境亦无行时，共应存在而无此规则，故读数皆被给出不可径去。",
+      "declarations": [
+        "Becoming.GuardHorizon.uniform_policy_iff_common",
+        "Becoming.GuardHorizon.ungiven_reading_not_uniform"
+      ]
     }
   ],
   "hypotheses": [
@@ -105,6 +113,10 @@
     {
       "en": "For the one-act law, situations and acts are held apart on a sum carrier; the requirement giving exactly one act at each situation is a premise, and each premise is shown to do work.",
       "zh": "每一情境一行之律中，情境与行在和载体上分开；要求在每一情境恰给一行是前提，每一前提皆有见证表明其作用。"
+    },
+    {
+      "en": "For the seventh law only: a choice over the readings (`Viability.ChoiceOver`) and every reading given by some situation, each named as a hypothesis; the second cannot simply be dropped, by a witness with no situation and no act.",
+      "zh": "仅第七律：读数上的选择（`Viability.ChoiceOver`）与每一读数皆由某一情境给出，各列为前提；第二者不可径去，见证中既无情境亦无行。"
     }
   ],
   "does_not_show": [
@@ -114,8 +126,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "A rule fixing one act for each reading from a common response: GuardHorizon has such a rule with choice over the readings named as a hypothesis; that the choice is needed for this rule is not proved here.",
-      "zh": "由共应得出为每一读数确定一行的规则：GuardHorizon 在读数上的选择（列为前提）之下给出此规则；此规则需要该选择，此处未证。",
+      "en": "That a rule fixed for each reading from a common response needs the choice over the readings: the seventh law takes it as a hypothesis, and that such choice cannot be dropped is shown for plans (Viability.plans_iff_choice), not for this rule.",
+      "zh": "由共应为每一读数确定之规则需要读数上的选择：第七律以之为前提；此类选择不可免去，已就计划证之（Viability.plans_iff_choice），未就此规则证之。",
       "kind": "converse"
     },
     {
@@ -145,12 +157,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt 20261101T112708.430596Z, 50 declarations (36 theorems), and Becoming.Viability, 33 declarations (25 theorems), whose two kernel laws are proved from the leaf with their statements unchanged, each with an empty axiom report; built in scratch, its Lean and map read by three independent AI reviewers and its landing texts by four, each with a verifier, every confirmed finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse，回执 20261101T112708.430596Z，50 个声明（36 条定理），以及 Becoming.Viability，33 个声明（25 条定理），其两条不变核之律由此叶证出、陈述不变，公理报告均为空；先在草稿中构建，其 Lean 与图经三位独立 AI 审阅者阅读，其落地文本经四位（各有一位核验者）阅读，所核实者皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.CommonResponse at receipt 20261101T112708.430596Z (36 theorems) and Viability, whose two kernel laws are proved from the leaf with their statements unchanged; the seventh law in the ring module Becoming.GuardHorizon at receipt 20261102T051236.940686Z (34 theorems); every axiom report empty. Read by independent AI reviewers, the design, the Lean and the map, and the landing texts twice, each finding verified, every confirmed one taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.CommonResponse 于回执 20261101T112708.430596Z（36 条定理），以及 Viability，其两条不变核之律由此叶证出、陈述不变；第七律在环模块 Becoming.GuardHorizon，于回执 20261102T051236.940686Z（34 条定理）；公理报告均为空。经独立 AI 审阅者阅读设计、Lean 与图，以及两轮落地文本，各有核验，所核实者皆采纳。"
   },
   "next_delta": {
-    "en": "The rule form with choice, GuardHorizon's uniform policy, stated as this law with choice over the readings and every reading given, and its example re-proved from this record's witness.",
-    "zh": "带选择的规则形式（GuardHorizon 之一致策略）表为本律加读数上的选择与每一读数皆被给出，其例由本记录之见证重证。"
+    "en": "The models' examples of PairsNotCommon (ReadingLoop.PairwiseShared, AssurancePlans.Routes) re-proved from this record's witness on their owners' word, and the reading's own formation stated within the law.",
+    "zh": "模型中 PairsNotCommon 之例（ReadingLoop.PairwiseShared、AssurancePlans.Routes）经其所属者同意由本记录之见证重证，并在此律之内陈述读本身之形成。"
   },
   "correspondence": {
     "en": "At a process's steps the kernel is what discrete-time viability theory (Aubin 1991) calls the invariance kernel of the constraint set, the largest subset that every evolution keeps; where each configuration has exactly one successor it is also Aubin's viability kernel, from which some evolution stays. A common response over a reading is the relational, set-valued form of a policy measurable with respect to an observation partition: the partition replaced by any relation and its closure, the policy by an admissible relation closed under the reading; one act chosen in each class gives the policy. Requisite variety (Ashby 1956) reads the covering law's failure: a reading too coarse for the requirement.",
@@ -197,16 +209,17 @@
         "en": "States on the grammar its sentence that a judgment through the couplings is a common response over the class alike through them.",
         "zh": "在文法上陈述其一句：经耦合的判断是对经耦合相同之类的共应。"
       }
+    },
+    {
+      "id": "when-to-inquire-and-when-to-respond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The seventh law reads that record's uniform policy: uniform_policy_iff_common is its uniform_policy_iff_fiber_feasible with, every reading given, the condition rearranged into this record's covering law, and its example statewise_not_uniform is re-proved from this record's witness, its statement unchanged.",
+        "zh": "第七律读该记录之一致策略：uniform_policy_iff_common 即其 uniform_policy_iff_fiber_feasible，每一读数皆被给出时，条件改写为本记录之遍盖律；其例 statewise_not_uniform 由本记录之见证重证，陈述不变。"
+      }
     }
   ],
   "related": [
-    {
-      "id": "when-to-inquire-and-when-to-respond",
-      "detail": {
-        "en": "Its uniform policy from readings is the rule form of this law, with choice over the readings.",
-        "zh": "其由读数得出的一致策略是本律的规则形式，带读数上的选择。"
-      }
-    },
     {
       "id": "readings-a-response-needs",
       "detail": {
@@ -282,6 +295,16 @@
       ]
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "role": "proof",
+      "sha256": "d1da445a4870aff1fcb57b277ec227105fca4d4f7eb91269df6eb9bb100627c9",
+      "declarations": [
+        "Becoming.GuardHorizon.uniform_policy_iff_common",
+        "Becoming.GuardHorizon.ungiven_reading_not_uniform",
+        "Becoming.GuardHorizon.statewise_not_uniform"
+      ]
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/DESIGN.md",
       "role": "provenance",
       "sha256": "4f5dde63b468a9729d68dd9a21bf7b9d0f22a4a6cfa93fda506e82792709ab50",
@@ -304,6 +327,12 @@
       "role": "receipt",
       "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json",
+      "role": "receipt",
+      "sha256": "5644fc6bc6aec86faeddc25df523bb1517a67772ebb8ea805426dce1935d4943",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -320,12 +349,23 @@
       "sha256_pointer": "/source_sha256/Becoming.Viability",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GuardHorizon",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
     {
       "en": "1 November 2026, board item SJ (SJ1): added from SJ's design after three reviews (REVIEW-1, four lenses on the design; REVIEW-2, three on the Lean and the map; REVIEW-3, four on the landing texts, each with a verifier), every confirmed finding taken; Viability's two kernel laws re-proved from it with their statements unchanged; GuardHorizon's bridge left to a ring slot.",
       "zh": "2026年11月1日，工作板条目 SJ（SJ1）：据 SJ 的设计新增，经三轮审阅（REVIEW-1 以四个视角审设计；REVIEW-2 以三个视角审 Lean 与图；REVIEW-3 以四个视角审落地文本，各有核验者），所核实者皆采纳；Viability 的两条不变核之律由之重证，陈述不变；GuardHorizon 之桥留待环之槽位。"
+    },
+    {
+      "en": "2 November 2026, board item SJ's last parts: the seventh law, GuardHorizon's bridge (uniform_policy_iff_common and its witness ungiven_reading_not_uniform), with statewise_not_uniform re-proved from the sixth law's witness; checked at core receipt 20261102T051236.940686Z; the map of what a response takes in at 08 §7 and one sentence in 07 §5 land with it.",
+      "zh": "2026年11月2日，工作板条目 SJ 之余部：第七律，GuardHorizon 之桥（uniform_policy_iff_common 及其见证 ungiven_reading_not_uniform），statewise_not_uniform 由第六律之见证重证；由核心回执 20261102T051236.940686Z 检查；08 §7 之回应所取者之图与 07 §5 之一句随之落地。"
     }
   ]
 }

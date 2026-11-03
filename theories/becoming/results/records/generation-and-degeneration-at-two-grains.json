@@ -563,7 +563,7 @@
         "Becoming.«生则或粗生或传»",
         "Becoming.«粗有前则生为传»"
       ],
-      "sha256": "fd94d7ebc50f7facea8d5796339397d9e49860d0729c0ff63801cc2488cf84f4"
+      "sha256": "38fbdabaed8ca6396b323d6c23b3f7578e57af33c262e5f81d8421e75b28e0db"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
@@ -596,6 +596,12 @@
       "role": "receipt",
       "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "role": "receipt",
+      "sha256": "58ba9213b37a9bb07551fb1fe5e0f5e49c60458002a28a3a55fb5faa0eda33a2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -615,7 +621,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapRegions",
       "success_pointer": "/status",
       "success_value": "passed"

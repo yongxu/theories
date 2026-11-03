@@ -1,0 +1,81 @@
+**S:** This is an unfinished philosophical account of how things and evaluations arise and change within a relational process, with an ethics resting on two unasserted premises, some Lean-checked results, and empirical tests.
+
+**Q1 — Sure.** It proposes a common language for persistence, change, life and knowing, develops mathematical models using that language, and adds a conditional ethics about whose continuation matters and which possibilities should be preserved or enlarged. It also connects its vocabulary to Chinese classical texts. The account’s intended unity is clearer than its demonstrated unity.
+
+Basis: “The root and the ethics are one account only in part”.
+
+**Q2 — Sure about the stated status; unsure about the full meaning of the optimization claim.**
+
+1. **Persistence and renewal can be described through relations and sameness under a chosen classification.** Some distinctions are theorems; the explanatory reach is argued and universality remains open. “That this grammar explains how things go on is argued, not proved; that every becoming can be represented in it is open.”
+2. **Individually sustainable taking can collectively destroy a renewing system and its dependants.** Presented among laws proved on models under hypotheses. “Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps from a low enough level end it and what depends on it”.
+3. **Selection reaches only through its couplings.** Presented as a law, explicitly close to a definition. “Near-definitional: its force lies in the premise that a selector selects through just those couplings.”
+4. **Certain optimization conditions force maximal depletion outside what couples into the objective.** Presented as a model result; application to trained systems is conjectural. “That trained systems drain so is thesis T3, conjectured”.
+5. **The ethics requires separate premises for scope and preference.** Neither premise is asserted. “The ethics adds two premises with two roles, and the theory asserts neither; each is a hypothesis wherever used, its warrant open”.
+6. **Those premises support a proposed ethical direction for life.** This is thesis T8, marked “[AI reading, D1],” rather than a universal command: “Under both premises the ethics argues one direction, thesis T8: for life, the way is 生生, life in the whole and its continuing generation (生发, not the map's generation) [AI reading, D1], compared by widening; no verdict binding every possible mind is claimed”.
+
+**Q3 — Sure.** Its ethics rests on:
+
+- **The continuation condition:** establishes whose losses have significance, including losses with no consequences for the acting party. It supplies scope, not rankings. The relevant sentence begins: “*Scope*, whose losses count: the *continuation condition*, that from every standpoint, for anything, its continuation into the future has significance.”
+- **C:** turns a formal comparison of possibilities into an ethical preference. “That order needs no premise; calling it better is C, and mixed cases, something gained and something lost, stay unranked.”
+- **Further premises for particular decisions:** “Choices need further premises, named; alignment is first what a selection can reach”. What those additional premises are, the text does not say.
+
+The dynamics supply descriptions and consequences. They do not supply either ethical premise’s warrant.
+
+**Q4 — Sure.** It does not claim:
+
+1. Becoming is inherently good.
+2. Dynamics alone establish ethical significance or preference.
+3. Its ethics binds every possible mind.
+4. Every becoming has been shown representable in its grammar.
+5. Its central results are new mathematics.
+6. Machine verification establishes the truth of the modelling assumptions.
+
+Two especially clear sentences: “No law above evaluates: none says a loss is a harm or restraint better.” And: “An AI review of prior work, not exhaustive, finds none of the central results new mathematics; the work adds a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart”.
+
+**Q5 — Unsure.** I can identify some mathematical targets, but not precise empirical tests from these pages.
+
+- A relation and classification in which the defined generation and degeneration overlap would contradict the stated root theorem.
+- A finite, determined, nonmerging system with a configuration that never returns would contradict the recurrence claim.
+- An eligible optimum satisfying the optimization theorem’s hypotheses that leaves more beyond-coupling resources than another eligible outcome would contradict that theorem. However, the complete hypotheses and meaning of “where there is room” are not supplied here.
+- For the empirical theses, the text says: “Eight theses about actual systems name what refutes them; their tests were frozen before scoring, and some passed and some failed”. What those specific refuting observations are, the text does not say.
+
+Disagreeing with either ethical premise would reject the conditional ethics’ starting point; it would not expose a contradiction in a premise the work already declines to assert. The text does not say what would refute the account as a whole.
+
+**Q6 — Sure about the claimed addition; unsure about its originality.** The claimed contribution is an organized account of dependencies and limits, plus an ethics that separates whose losses count from how courses are ranked.
+
+Basis: “the work adds a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart”.
+
+Whether existing fields already contain comparable ledgers or that ethical separation, the text does not say. These pages establish what the authors present as their contribution, not that it is novel.
+
+**Q7.** I reconstruct it like this:
+
+- Relations plus a chosen respect of sameness define continuation.
+- Looking at parts and patterns yields distinctions between renewal, persistence without renewal, and ending.
+- More specific models support laws concerning recurrence, collective depletion, selection, evolution and optimization.
+- Those laws motivate questions about excluded consequences and losses.
+- Two additional ethical premises supply significance and preference; T8 interprets their direction for life.
+- Classical readings provide vocabulary and interpretation; the evidence ledger records the different kinds of support.
+
+**Partly** one thing. Continuation gives the parts a common subject, and collective depletion connects naturally to ethical scope. But the passage from grammar to models, and from either to significance, remains incomplete by the text’s own account. I hold it as a connected research programme more readily than as an integrated theory already established.
+
+**Q8.** These were my main rereading or stopping points:
+
+> “So whose losses count turns on how far what each continues with reaches, which the dynamics leave open and the continuation condition, a premise, fixes; calling the wider course better is a second premise, C.”
+
+I could not initially tell whether “reaches” described causal dependence, personal continuation or ethical concern.
+
+> “Where there is room, every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does.”
+
+“Where there is room” conceals a condition I need before I can assess this strong conclusion.
+
+> “In a fished stock, the boats' own continuation ranks a collapse that ends them below keeping the stock, with no C; the condition adds losses that return to no boat, such as the seabirds'; ranking courses where the boats are not at stake needs C.”
+
+I reread because the preceding account says continuation significance alone ranks nothing; the additional basis of the boats’ ranking is not explicit here.
+
+> “Still to be argued: that one's own line is a regularity of its own whose class holds one's effects (P2 and P4 of [07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)), which would carry concern for one's continuation past one's end, with P3 a correspondence not shown; the step of invariance, for what that does not reach; and a reason for C.”
+
+This compresses several missing arguments into vocabulary I cannot yet use to reconstruct any of them.
+
+**Q9.** From the text alone, I could not adequately understand “the one of that relation,” “everything lies on every center's line,” “root's edge,” or the exact technical force of “couples,” “admits” and “where there is room.” D1 and P2–P4 are unexplained references here.
+
+**Q10.** **Yes.** I would read one worked argument next. I would follow the optimization link to inspect its definitions, hypotheses and connection to T3; the ethics §4 link to understand the boats’ ranking and the two premises; and the empirical-theses link to see a failed test and what the failure changed. The unresolved links matter: those are precisely where this summary asks me to extend provisional interest into trust.

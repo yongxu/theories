@@ -42,11 +42,11 @@ Results:
   whole-run one (`relational_extends_iff_of_rising`); in the two-part family it includes the focal
   formation's relation where the stepwise reading includes its event, and leaves absence and
   occurrence unranked as that reading does (`relational_unranked`).
-* The priority of basic conditions step by step (J1, `Becoming.Lexical`): read in two tiers, the
+* The priority of basic conditions step by step (J1/J2, `Becoming.Lexical`): read in two tiers, the
   sustaining formation's included events basic and the focal formation's gains, the course without
   the focal formation is lexically above the course with it under the stepwise and the
   relation-level readings (`basic_first_stepwise`, `basic_first_relational`), so every comparison
-  meeting J1 ranks absence above malignant growth where C alone leaves them unranked
+  meeting J1/J2 ranks absence above malignant growth where C alone leaves them unranked
   (`basic_first_ranks`).
 * The course without a formation extends the course with it only if the reading
   withholds every event of that formation. This holds for every reading that includes
@@ -475,7 +475,7 @@ stepwise reading's premises in the two-part family, read in two tiers, the susta
 included events basic and the focal formation's gains, the course without the focal formation is
 lexically above the course with it: it keeps every basic event, the sustaining formation being active
 and drawing nothing at every step of it, and holds one the other loses after the loss. Where C alone
-leaves the two unranked (`stepwise_unranked`), every comparison meeting J1 ranks absence higher. -/
+leaves the two unranked (`stepwise_unranked`), every comparison meeting J1/J2 ranks absence higher. -/
 theorem basic_first_stepwise (L : Law) (positive : 0 < L.needG) (fWithin : L.needF ≤ L.needG)
     (gStart : L.needG ≤ L.start) {T0 : Nat}
     (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t) :
@@ -508,7 +508,7 @@ theorem basic_first_relational (L : Law) (positive : 0 < L.needG) (fWithin : L.n
       (.sustaining, (), T) ⟨rfl, absent_sustains L gStart T, Or.inl trivial, fun ⟨drawn, _⟩ => drawn⟩
       (fun ⟨_, included⟩ => lost T (Nat.le_refl T) included.1)
 
-/-- **Every comparison meeting J1 ranks absence above malignant growth, under either reading.** -/
+/-- **Every comparison meeting J1/J2 ranks absence above malignant growth, under either reading.** -/
 theorem basic_first_ranks (L : Law) (positive : 0 < L.needG) (fWithin : L.needF ≤ L.needG)
     (gStart : L.needG ≤ L.start) {T0 : Nat}
     (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t) {better better' : Course → Course → Prop}

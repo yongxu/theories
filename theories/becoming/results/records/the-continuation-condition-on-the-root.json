@@ -76,7 +76,7 @@
       "kind": "scope"
     },
     {
-      "en": "The warrant of the condition, or anything about C, which alone orders.",
+      "en": "The warrant of the condition, or anything about C, which gives order, in general alone.",
       "zh": "条件之根据，或关于唯一排序之 C 之任何事。",
       "kind": "non-implication"
     }
@@ -168,7 +168,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "cdc54fc98edd5c9c04ac24578f16bde719a11d8961d7ace8e173b06bf697d31b"
+      "sha256": "87ed67abeca8b83446b82a6941dfb2cd042c5ae36022e9c7522e403ee1c0be60"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",
@@ -234,6 +234,10 @@
     {
       "en": "1 November 2026, board item OU7 (study section 492): the correspondence's English reading of the source restated so that its quantifiers match the definition of «续无外» (every center, every occurrence), as GrammarScope's docstrings now word it (the grammar's owner's patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes. Nothing else the record states changed.",
       "zh": "2026年11月1日，工作板条目 OU7（研究第 492 节）：对应中来源之英文之读重述，使其量词合于 «续无外» 之定义（每一中心、每一事），与 GrammarScope 之文档今之所言同（文法之主人之 patches/owner/05）；中文「凡中心之续无外」不变，所证无改变。记录所述余无改变。"
+    },
+    {
+      "en": "2 November 2026, board item PF3: corrected to say C gives order in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
+      "zh": "2026年11月2日，看板条目 PF3：更正为 C 给出次序，一般而言唯有 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
     }
   ]
 }

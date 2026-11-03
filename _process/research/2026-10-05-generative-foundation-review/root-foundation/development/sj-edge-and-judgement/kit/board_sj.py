@@ -7,7 +7,11 @@ landed RECEIPT N: replace SJ1's head clause with the landed one, followed by the
       verbatim in SJ_ORDER (required: the coordinator sends it with its word, computed from what is still queued),
       and set the status cell of SJ's row to SJ1's landing and what is left. The row stays on the board: the map
       (08 §7), 07 §5's sentence and GuardHorizon's bridge are still to land.
-usage (from the checkout root): python3 -B board_sj.py head | landed RECEIPT N"""
+history RECEIPT N: add the landing's one row to the board history's landed table, after its last row, nothing else in
+      that file changed (the coordinator, 1 November 2026: each landing adds exactly one row there, as QR's 7c90d62ef
+      and SJ1's 7fc329fd9 did). The row is given in SJ_HISTORY_ROW (required: five cells, links relative to the
+      history file), with {RECEIPT}, {N} and {DATE} filled in here; a row with the same title stops the script.
+usage (from the checkout root): python3 -B board_sj.py head | landed RECEIPT N | history RECEIPT N"""
 import datetime
 import os
 import re
@@ -15,6 +19,8 @@ import sys
 from pathlib import Path
 
 BOARD = Path('_process/BECOMING-WORKBOARD.md')
+HISTORY = Path('_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md')
+LANDED_TABLE = '## Landed after the board was rewritten (17 October 2026)'
 TITLE = '| **SJ: the edge where acting meets the situation, and judgement from a reading on the root**'
 HEAD = ("SJ1 at the head of the queue (landing now: one core leaf, `Becoming.CommonResponse`, and `Becoming.Viability`'s "
         "two kernel laws re-proved from it with their statements unchanged; one incremental core run; one new record, "
@@ -74,10 +80,30 @@ def landed(receipt, n):
     print('landed: clause written, the row\'s status set')
 
 
+def history(receipt, n):
+    row = os.environ.get('SJ_HISTORY_ROW', '').strip()
+    assert row, 'SJ_HISTORY_ROW, the landing\'s history row, is required'
+    row = row.replace('{RECEIPT}', receipt).replace('{N}', str(n)).replace('{DATE}', datetime.date.today().isoformat())
+    assert row.startswith('| **') and row.endswith(' |') and len(row.split(' | ')) == 5, row[:80]
+    assert not re.search(r'\{[A-Z]+\}', row), 'a placeholder left'
+    text = HISTORY.read_text(encoding='utf-8')
+    lines = text.split('\n')
+    title = row.split('** ', 1)[0] + '**'
+    assert not any(l.startswith(title) for l in lines), ('the row is already there', title)
+    start = lines.index(LANDED_TABLE)
+    end = next(k for k in range(start + 1, len(lines)) if lines[k].startswith('## '))
+    last = max(k for k in range(start, end) if lines[k].startswith('| **'))
+    lines.insert(last + 1, row)
+    HISTORY.write_text('\n'.join(lines), encoding='utf-8')
+    print('history: row added after line', last + 1)
+
+
 if __name__ == '__main__':
     if sys.argv[1:] == ['head']:
         head()
     elif len(sys.argv) == 4 and sys.argv[1] == 'landed':
         landed(sys.argv[2], int(sys.argv[3]))
+    elif len(sys.argv) == 4 and sys.argv[1] == 'history':
+        history(sys.argv[2], int(sys.argv[3]))
     else:
         sys.exit(__doc__)

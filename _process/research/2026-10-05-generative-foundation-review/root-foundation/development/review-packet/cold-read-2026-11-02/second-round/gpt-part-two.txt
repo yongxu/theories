@@ -1,0 +1,113 @@
+**R1. Changes to Q1–Q6**
+
+**Q1 — Sure. Changed:** I now see the unity as less deductive than my earlier description suggested.
+
+It is a proposed unification of persistence, selection, knowledge, life and conditional ethics. A relational grammar supplies common language; additional models supply most substantive results, often without using the grammar’s laws. Experiments test proposed applications. Ethics adds separate premises about significance and improvement. The project’s main offered contribution is making those assumptions and connections explicit.
+
+The passage that changed this was: “a few are cases of the root, more use its laws in their proofs and most use none”.
+
+**Q2 — Sure. Three changes to my account of its claims:**
+
+1. **The ontology is stronger than merely placing things in one unfolding.** It says: “A philosophical thesis stands beside them, argued: there is one unfolding, and whatever is, is how it relates within it.” That is a claim about what things are, not just a useful way to describe them. Its status remains **argued**.
+2. **The limitation on deriving significance is specifically a limitation of the representation.** “This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined”. My previous answer did not emphasize that distinction enough.
+3. **I read T3’s ‘partly supported’ more narrowly now.** “No test yet varies how near a trained system comes to its optimum”. The central claim about approaching an optimum remains conjectured without that direct test. The overview also says its first five supporting tests preceded its first wording.
+
+The other claims and their stated statuses are unchanged.
+
+**Q3 — Sure about the distinctions; unsure about the proposed justification. Changed in three respects:**
+
+- I now know the additional practical commitments: “complete comparison with retained losses, priority of basic conditions, bounded responsibility, legitimate feasible choice”. These supply resources for decisions that scope and widening alone leave unresolved. Their detailed operation, the text does not say here.
+- Significance has two treatments. First it is a supplied predicate, “a proposition with no number or valence.” Then it is interpreted as membership in a center’s relational closure. Crucially: “This changes the interpretation and derives nothing from the first treatment: the condition becomes a different statement under the same name, one about relations.” I therefore no longer read every mention of the continuation condition as automatically the same claim.
+- C now has a mathematical characterization connecting it to positive weightings: “Proved for every type on finite listings: one course widens another exactly when every positive weighting ranks it higher, and a mixed comparison is decided both ways.” This explains the ordering more clearly. It still supplies no reason to adopt positive monotonic valuation; the text explicitly retains that premise.
+
+The basic answer—scope from the continuation condition, order from C—is unchanged.
+
+**Q4 — Sure. Added limits:**
+
+- It does not yet provide a scientific law of its own: “the account states no science's law of its own yet”.
+- Its account of life is not an established biological criterion: “a flame meets these laws too, so whether it is necessary or sufficient for biological life is open”.
+- Its deceptive-alignment result does not model a deceiver’s mental states: “installation, intention and belief are not represented”.
+
+My previous six exclusions remain unchanged.
+
+**Q5 — Sure about the distinction; unsure what specific argument would defeat the ontology. Changed:**
+
+- A machine-checked statement can fail to establish the advertised result because it formalizes something different. The overview adds: “A failed check, or a statement that does not say what the prose says.” That is an important addition to my earlier emphasis on failed checks.
+- For the ontology, the overview goes beyond saying that no refuting observation is named: “no observation that would refute it is named, and the argument is that none could.” It instead allows defeat by argument. What concrete argument would succeed, the text does not say.
+
+The empirical defeat conditions I previously listed are unchanged.
+
+**Q6 — Sure about the stated contribution, unsure about its distinctiveness: unchanged.**
+
+**R2. The structure, again**
+
+I now reconstruct it as several connected strands:
+
+- **Descriptive foundation:** choose relations and respects of sameness → define continuation → distinguish persistence of a pattern from replacement of its parts.
+- **Models of particular mechanisms:** add amounts, thresholds, exchange rules or selection rules → prove results about depletion, renewal, observation, learning and reproduction. These share vocabulary and some results; most central declarations do not depend on the root’s laws.
+- **Claims about actual systems:** propose that a model represents something real → test the resulting thesis. A failed correspondence does not invalidate the mathematical result.
+- **Evaluation:** describe which formations a course admits → compare courses by inclusion. Separately supply significance and the continuation condition to establish scope; add C to call widening better; add practical commitments to address choices.
+- **Alignment:** combine what a selector can detect, what it is asked to value, the additional decision commitments and a correspondence to actual AI.
+- **Philosophical interpretation:** one relational ontology is offered for the whole; classical texts supply names and interpretations. Neither establishes the models’ empirical fit or the ethical premises.
+
+**Partly.** The fishery example gives me one intelligible problem running through the account: a system can sustain its participants while destroying something outside their selection, and recognizing that destruction still does not settle what to do. But I now hold the formal work more as a connected collection than as consequences of one foundation. The detailed evolutionary identities and cooperation rules have a thematic place; their necessity to the central argument is not apparent to me.
+
+**R3. Where I had to reread or withheld assent**
+
+> “Every class has a *core* (核): the greatest sameness inside it that the relation itself carries and never tells apart.”
+
+I cannot reconstruct “carries and never tells apart” precisely enough to understand why the following constancy result holds; I would have followed **constancy and the core**.
+
+> “With natural-number weights, read as probabilities, complying when read and acting by its own law when not is uniquely best of a formation's four plans over two stages exactly where the weight complying adds to being kept, times the value, exceeds the loss of complying.”
+
+I had to translate this into an expected-payoff comparison, but the four plans and quantities are not specified here; I would have followed **when complying when read is best**.
+
+> “This changes the interpretation and derives nothing from the first treatment: the condition becomes a different statement under the same name, one about relations.”
+
+This clarified the distinction but interrupted my sense of one argument: I now need to track which condition later claims use.
+
+> “The strongest argument for the step runs: what is one's own is a region drawn along a relation no law of the dynamics fixes; a presupposition whose truth depends on a choice nothing privileges is relative to it or invariant across it; and what acting presupposes is that continuation has significance, not continuation under a description of its own drawing.”
+
+I do not accept the last clause from what precedes it: acting for this particular continuation seems precisely the alternative requiring an answer; I would have followed **the step**.
+
+> “That one goes on only through what one conditions shows that some are, not that all are.”
+
+I could not see why continuing through some effects already makes their losses one’s own in the ethical sense under discussion; I would have followed **the crux**.
+
+**R4. New terms I could not adequately understand**
+
+- **Core / constant class:** the prose gives definitions, but I cannot confidently apply them.
+- **“A census under conditions” / “states of its law”:** I cannot tell which World assumptions these phrases classify.
+- **“Net weightings”:** the thesis table uses this without enough explanation here.
+- **“A lifting from outcomes to responses”:** I see that it is an additional step, but not what it requires.
+- **“Living claim”:** the text does not say what qualifies as a claim in this expression.
+
+The overview does resolve much of my earlier uncertainty about **two grains**, **the World**, and the two roles of a relatum. Couplings are also substantially clearer.
+
+**R5. Agreement with the shorter texts**
+
+Mostly yes. I found no clear contradiction, but three passages materially change the impression:
+
+1. **The dependence on the root is weaker than the short presentation made apparent.** The one-page text says “most laws below add amounts and a model's premises”; the overview says of central declarations that “most use none” of the root’s laws. Those statements can agree, but the latter makes the structure look less like progressive derivation.
+
+2. **Frozen testing is not uniformly prospective testing of the subsequently stated thesis.** The short text says: “T1 to T7 have tests frozen before scoring, some passed and some failed”. The overview qualifies T3: “the first five tests read as its evidence ran before its first wording, their frozen predictions their own”. This is compatible with frozen scoring, but weaker evidence for the later formulation than I initially pictured.
+
+3. **The ontology becomes more explicit and more demanding.** “within one relational unfolding” becomes “whatever is, is how it relates within it”. The overview also says it excludes explanations requiring something no relation carries, “such as an intrinsic value”. The shorter description did not make that exclusion clear to me.
+
+**R6. Up to five changes to help a reader see the whole sooner**
+
+1. **Move “One case, start to finish” before the large table.** The mussel bed makes selection, excluded losses and ethical scope understandable before the reader meets their compressed technical formulations.
+2. **Say immediately how the mathematics is connected.** Move “a few are cases of the root, more use its laws in their proofs and most use none” into a plain opening paragraph. It changes how I interpret the promised “one argument”.
+3. **Separate the two meanings of significance visibly and keep their names distinct.** At “A second reading, not a derivation”, introduce stable names for the supplied predicate and relational-closure interpretation.
+4. **Move the detailed cooperation-law enumeration out of the main path.** The paragraph beginning “Proved for a pair whose giving waits on giving” interrupts the central argument; a sentence explaining its role would suffice here.
+5. **Consolidate the repeated inventories.** “The whole at a glance”, “The theses” and “What is not shown” repeatedly carry the same qualifications. Keep the opening to the argument and its unresolved connections, with the detailed evidence and limits together later.
+
+**R7. Would I read on?**
+
+**Yes, selectively.** The overview partly delivers the worked case I wanted. Next I would follow **one argument, end to end**, especially the exact formalization of what counts as a loss when catch falls by 40%, and the test records distinguishing a model failure from a thesis failure. I would also follow **C** to see whether there is a reason to accept it beyond the positive-weighting characterization.
+
+My answer to Q10 remains yes. What changed is that I want to inspect one complete connection closely before reading more of the account’s breadth.
+
+**R8. Two sentences**
+
+This might matter as a framework for exposing how a successful selector can destroy conditions it does not register, while keeping the assumptions needed to call that destruction bad explicit. It might add little if the common vocabulary neither improves explanation or prediction nor supplies a stronger argument for the ethical premises it organizes.

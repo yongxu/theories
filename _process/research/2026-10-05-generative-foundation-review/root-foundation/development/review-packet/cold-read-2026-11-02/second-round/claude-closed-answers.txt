@@ -1,0 +1,63 @@
+**Q1. What is it?**
+
+The Theory of Becoming is an unfinished, AI-made theoretical project that combines Lean proofs, an ethics and a set of theses. It gives an account of how anything comes to be, lasts, changes and ends within one web of relations, and of how life, knowing and evaluation take shape there, without assuming becoming is good. Its Lean proofs are machine-checked, with receipts covering 496 of 527 registered results. Everything else has had only AI review, and no person has reviewed any of it.
+
+**Q2. What does it claim?**
+
+The note does not say which claims fall among the 496 receipted results, so I can't mark any single claim below as machine-checked.
+
+1. **One account:** coming to be, lasting, changing and ending fit within one web of relations, and life, knowing and evaluation take shape there. *Status: the project's aim, and it is unfinished; the note does not say how far this is established.*
+2. **One base notion:** the base is a relation read as condition, and continuation is defined from it relative to a chosen sameness. *Status: a starting point and a definition, not a finding.*
+3. **Laws involving amounts:** these hold on a discrete model. *Status: proved on that model; whether actual systems meet the premises is not shown.*
+4. **Reach of selection:** a selection (knower, training run, market or optimizer) reaches only what couples into it. *Status: the central idea; the review treats central results as near-definitional or known, and application to actual systems is not shown.*
+5. **Success with loss:** a selection can succeed while what it cannot read is lost. *Status: same as claim 4.*
+6. **Silence on value:** the laws do not say whether that loss counts. *Status: stated; the note does not say whether it is proved.*
+7. **No new mathematics:** no central result is new; they are near-definitional or restated known results, such as the tragedy of the commons and Price's equation. *Status: a finding of its own prior-art review, done by AI and not exhaustive.*
+8. **Limit of proof:** a proof shows only that a statement follows from its premises. *Status: stated as a limit; the note gives no separate support for it.*
+9. **Scope premise:** from every standpoint, anything's continuation has significance. *Status: not asserted, warrant open.*
+10. **Order premise:** widening what can form is better. *Status: not asserted, warrant open.*
+11. **Seven theses:** these have tests frozen before scoring. *Status: some passed, some failed, and several are still to run; the note does not say what the theses are or which results went which way.*
+12. **Eighth thesis:** this ethics is life's way. *Status: only argued.*
+
+**Q3. What does its ethics rest on?**
+
+| Premise | Job | What it does not do | Asserted? |
+|---|---|---|---|
+| Scope: from every standpoint, anything's continuation has significance | Fixes whose losses count | Does not give order; the other premise does | No, warrant open |
+| Order: widening what can form is better | Gives order | Does not rank mixed cases; does not fix whose losses count | No, warrant open |
+
+The "does not" entries other than mixed cases are my reading of the note's statement that the ethics separates scope from order. The laws don't supply either premise's job, since they do not say whether a loss counts. What counts as a mixed case, and what warrant might be available: the note does not say.
+
+**Q4. What does it not claim?**
+
+- That becoming is good.
+- That its central results are new mathematics.
+- That actual systems meet the premises of its proofs.
+- That its two ethical premises are true; it does not assert them.
+- That the laws settle whether a loss counts.
+- That mixed cases can be ranked.
+- That it is finished, that all registered results have receipts (31 of 527 do not), or that any person has reviewed it.
+- That its prior-art review is exhaustive.
+- That the eighth thesis has been tested.
+
+Anything beyond these: the note does not say.
+
+**Q5. What would refute it?**
+
+The note does not state refutation conditions, so apart from the frozen tests, what follows is my inference from it.
+
+Parts that could be refuted:
+- **The seven theses:** their frozen tests can fail them, and some have already failed. What the tests are, and what a failure does to the rest of the theory: the note does not say.
+- **Application to real systems:** this is not shown, so a system could turn out not to meet a proof's premises. That would stop the result applying to that system, but it would not touch the proof.
+- **The prior-art finding:** the review is not exhaustive, so a further search could change it.
+- **The AI-reviewed material:** it has no machine check or human review behind it, so errors remain possible. By what specific route: the note does not say.
+
+Parts that could not be refuted, or have no stated route:
+- **Machine-checked proofs, by facts about the world:** a proof shows only that a statement follows from its premises. Whether a proof could fail in some other way: the note does not say.
+- **The two ethical premises, as claims of the theory:** the theory does not assert them, so showing them unwarranted would not refute something it claims. The laws can't settle them either. Whether they can be refuted in their own right: the note does not say.
+- **The eighth thesis:** it has no test, only argument, so it could at most be challenged as an argument. What would defeat it: the note does not say.
+- **Definitions and near-definitional results:** these leave facts little to contradict, though the note does not say this outright.
+
+**Q6. What is new in it?**
+
+By its own review, no central result is new mathematics, though that review was done by AI and is not exhaustive. What it offers instead is a ledger of premises, an ethics that separates scope from order, and one shared vocabulary, with terms named from classical Chinese texts as read by AI. Whether these offerings are new compared with earlier work: the note does not say.

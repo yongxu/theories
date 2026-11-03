@@ -193,7 +193,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
       "role": "proof",
-      "sha256": "1043c114b33c1217dd61f0aa5a64ba30345ca787fd7da00963559fad9a47ac9b"
+      "sha256": "d1da445a4870aff1fcb57b277ec227105fca4d4f7eb91269df6eb9bb100627c9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
@@ -223,7 +223,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "d169c66ef560f9a7ce61b707d93f529eb978a63e9976059f258837ac53b1280b"
+      "sha256": "4d31fc275e668e5be333efa04aec448a02d0dba2affb35e395ef3f66fb298852"
     }
   ],
   "proof_bindings": [
