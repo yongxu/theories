@@ -12,8 +12,8 @@
     "en": "A current primary direction for relevant research; other independent authorizations remain valid."
   },
   "objective": {
-    "en": "Align the joint selection, in which humans, institutions and trained systems select together, so that it falls into neither instrumental convergence nor a meta-attractor. It is aligned where three conditions hold: control of the selection's rule is not captured, that is, where shaping the rule is selected by what comes back to the shapers alone, the rule it shapes still reads what lies beyond their share, so that a loss there can turn it; a lock that forms is left in time, by a reading of what lies beyond the share before the loss passes its point of no return; and courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted. Within this, connect normative grounds across intelligence, evaluation of ends, and the formation of concern and wisdom.",
-    "zh": "使共同选择——人、机构与训练出的系统一同进行的选择——对齐，既不落入工具性趋同，也不落入元吸引子。三个条件成立之处它即对齐：选择之规则的控制不被捕获——塑造规则若由只归塑造者的所得而被选择，其所塑造的规则仍读取其份额之外者，使那里的损失能够扭转它；锁定形成时，在损失越过其不可回返之点以前，由对份额之外者的读取及时离开；进程以拓宽比较，延续条件定出谁的损失计入，C 给出次序，二者皆被指明而不被断言。在此之中，连接跨智能的规范根据、目的评价及关切与智慧的形成。"
+    "en": "Align the joint selection, in which humans, institutions and trained systems select together, so that it falls into neither instrumental convergence nor a meta-attractor. It is aligned where three conditions hold: control of the selection's rule is not captured, that is, where shaping the rule is selected by what comes back to the shapers, alone or through the groups they are in, the rule it shapes still reads what lies beyond their share, so that a loss there can turn it; a lock that forms is left in time, by a reading of what lies beyond the share before the loss passes its point of no return; and courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted. Within this, connect normative grounds across intelligence, evaluation of ends, and the formation of concern and wisdom.",
+    "zh": "使共同选择——人、机构与训练出的系统一同进行的选择——对齐，既不落入工具性趋同，也不落入元吸引子。三个条件成立之处它即对齐：选择之规则的控制不被捕获——塑造规则若由归塑造者的所得（独得或经其所在之群）而被选择，其所塑造的规则仍读取其份额之外者，使那里的损失能够扭转它；锁定形成时，在损失越过其不可回返之点以前，由对份额之外者的读取及时离开；进程以拓宽比较，延续条件定出谁的损失计入，C 给出次序，二者皆被指明而不被断言。在此之中，连接跨智能的规范根据、目的评价及关切与智慧的形成。"
   },
   "premises": {
     "zh": "沿条件对齐路线进行；另行公开附加的比较承诺、实际对应与推论。",
@@ -38,7 +38,9 @@
     "readers-drawn-from-the-selected",
     "widening-as-what-every-positive-weighting-ranks",
     "shaping-the-rule-selected-by-what-comes-back",
+    "shaping-selected-among-groups",
     "shaping-read-by-readers-drawn-from-the-selected",
+    "drawn-shaping-drawn-one-at-a-time",
     "loss-read-in-time-by-the-others"
   ],
   "overview": {

@@ -2604,7 +2604,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.RuleShaping` (L1): the capacity to shape the rule, selected by what comes back to it.
   On `RuleCapture`'s counts the carriers are shapers: each leaves `a + s + p` offspring and each
   other `a + c + p`, `s` what comes back to the shapers alone, `p` what comes to every member alike,
-  `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`;
+  `c` the cost. At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p`
+  comes to every member alike; listed in groups whose shapers give the group's shared part, the whole
+  selects for shaping exactly where `c < s + m q ρ` over the rationals (`grouped_rises_iff`);
   a larger `p` pulls the rule toward even; a smaller cost gives a rule not lower, a strictly smaller
   one a strictly higher rule; with nothing coming back and a cost the shapers' share falls at every
   step, the shapers present, and with no cost and nothing coming back it stays. Selection by rules
