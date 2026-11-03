@@ -551,7 +551,7 @@
         "significance-retained-within-margin",
         "comparison-by-widening",
         "continuation-condition-decomposition",
-        "widening-as-what-every-weighting-ranks"
+        "widening-as-what-every-positive-weighting-ranks"
       ],
       "declarations": [
         "Becoming.unrestricted_iff_livingSignificance",
@@ -1070,8 +1070,8 @@
     },
     {
       "id": "order",
-      "name": "Order",
-      "statement": "widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
+      "name": "Widening",
+      "statement": "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
       "anchors": [
         "Becoming.Web.Widens",
         "Becoming.Weighting.WidensOn",

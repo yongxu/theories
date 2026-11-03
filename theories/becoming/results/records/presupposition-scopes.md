@@ -97,12 +97,12 @@ In “Truth exist” Ren wrote: “There is a set of universal invariations, tha
   - Output: What retains does not add.
   - Input: The part not retaining in Clearing.own_presupposition.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Web.Retains.of_fewer: where fewer continuations have significance, more is retained.
+- **formal-reuse**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Reuses Web.Retains.of_fewer: where fewer continuations have significance, more is retained.
   - Output: Retaining carries over to fewer significances.
   - Input: The part retaining when drawn at the feeding closure in Clearing.own_presupposition.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - related, not a proved adapter: [continuation-condition-decomposition](continuation-condition-decomposition.md). The presupposition at wide scope is given by covering, sub-truth and boundary-invariance; invariance carries all of the continuation condition's content beyond the presupposition.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (an AI reading); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation.
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (an AI reading); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation.
 
 **Used by:** [continuation-condition-decomposition](continuation-condition-decomposition.md) · [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md)
 

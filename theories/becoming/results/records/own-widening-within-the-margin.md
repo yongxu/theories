@@ -11,20 +11,20 @@
 ## Laws
 
 1. Within a decided region of formations, one level path widens another where at every step it admits every member the other admits there and at some step one more. Such widening exceeds over the whole, so it neither keeps what can form the same nor is widened by the other path. (`Becoming.Web.WidensWithin`, `Becoming.Web.WidensWithin.exceeds`, `Becoming.Web.WidensWithin.not_keeps`, `Becoming.Web.WidensWithin.not_narrowed`)
-   - *Shared laws, by Lean dependency:* order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations reach the grammar.
 2. In a balanced flow, where the levels with a part admit within a region everything the levels without it admit there, they include the levels without it exactly when the part's net draw stays within the margin for every formation outside the region that the levels without it admit. (`Becoming.Flow.Balances.includes_iff_beyond_within`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Where a part's activity widens what can form within its own region, the levels with it widen those without it exactly when its net draw stays within the margin for every formation outside the region that the levels without it admit, and the two are mixed exactly when the draw goes beyond for one such formation. (`Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_iff_other_beyond`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.Balances.widens_iff_others_within` as following from balance, which the grammar represents.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.Balances.widens_iff_others_within` as following from balance, which the grammar represents.
    - *Standing of `Becoming.Flow.Balances.widens_iff_others_within`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 4. Zero margin: where a formation outside the own region, admitted without the part, needs a condition at exactly the level it stands at without the part's exchange, any net draw of the part on that condition makes own widening mixed. (`Becoming.Flow.Balances.mixed_of_tight`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then shows a change where nothing is closed: at some step the levels without the part do not admit within the own region what the levels with it admit there. (`Becoming.Flow.Balances.widens_of_untaken_beyond`, `Becoming.Flow.Balances.widens_yet_own_changed`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Any decided set of formations at each step, a reachable set included, is what the web reading each formation as its own condition, at need one, admits; nothing is conserved in that web. (`Becoming.Web.reachWeb`, `Becoming.Web.admits_reachWeb_iff`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Witness: a drawer takes one unit of a shared condition and gives one to its store, which its own option needs; another formation needs the shared condition at one. With one unit of slack the drawer's own widening widens the whole; with none it is mixed. (`Becoming.OwnDrawing.flow`, `Becoming.OwnDrawing.web`, `Becoming.OwnDrawing.balances`, `Becoming.OwnDrawing.withheld`, `Becoming.OwnDrawing.own_widens`, `Becoming.OwnDrawing.ample_widens`, `Becoming.OwnDrawing.tight_mixed`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

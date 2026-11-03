@@ -92,7 +92,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
   - Output: The dweller unsupported.
   - Input: The ending beyond the closure.
   - Preserved conditions: None. [Regions.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean)
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Clearing.dependenceRegion; there bounding significance by it is a choice, here the region is shown to be exactly each formation's feeding closure.
+- **formal-reuse**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Reuses Clearing.dependenceRegion; there bounding significance by it is a choice, here the region is shown to be exactly each formation's feeding closure.
   - Output: Each formation's region along dependence.
   - Input: Its equivalence with the feeding closure.
   - Preserved conditions: None. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)

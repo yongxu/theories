@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3196 nodes, 6153 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3198 nodes, 6153 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -579,7 +579,7 @@ Results (81):
 - [The run classes and widening](records/the-run-classes-and-widening.md) (recorded-checked)
 - [The stepwise law of easing, and restraint over any number of drawers under the stepwise reading](records/stepwise-law-of-easing.md) (recorded-checked)
 - [The stepwise reading](records/becoming-stepwise-reading.md) (recorded-checked)
-- [The whole first, and centers bounded by dependence](records/whole-first-and-bounded-centers.md) (recorded-checked)
+- [The whole and its regions, and centers bounded by dependence](records/whole-and-regions-and-bounded-centers.md) (recorded-checked)
 - [Two scopes of the self's presupposition](records/presupposition-scopes.md) (recorded-checked)
 - [Weights within a ratio agree past it](records/weights-within-a-ratio-agree-past-it.md) (recorded-checked)
 - [What a course keeps reachable](records/what-a-course-keeps-reachable.md) (recorded-checked)
@@ -599,7 +599,7 @@ Results (81):
 - [Where the verdict within the closure meets the continuation condition](records/closure-verdict-meets-continuation-condition.md) (recorded-checked)
 - [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (open)
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
-- [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
+- [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
 Modules (60, 10 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`

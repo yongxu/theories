@@ -9,7 +9,7 @@ not pass or did not check the current sources; with --dump it reads a saved dump
 check never reads such a file as current.
 
 It reads the measure, unchanged: measure_grammar.py in OU3b's study folder, and the EC measure.py it loads.
-From the measure it takes the anchors of the five shared laws (closure, balance, finite runs, lumping, order),
+From the measure it takes the anchors of the five shared laws (closure, balance, finite runs, lumping, widening),
 the grammar test, and the rows for the central declarations of COVERAGE.json, with their dependence, category
 and reason. For each law of each record, it follows the constants the law's declarations' types and values use
 (proofs, and the bodies of definitions), as the measure does. It writes theories/becoming/results/data/
@@ -83,7 +83,7 @@ TC = STUDY / 'THEOREM-CONNECTIVITY.py'
 OUT = ROOT / 'theories/becoming/results/data/shared-laws.json'
 CORE = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json'
 # The order of 08 §7 and the names it gives them.
-NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'order'}
+NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'widening'}
 DEPENDENCES = ('grammar', 'balance, represented', 'anchor, not reached', 'no shared law')
 AT_MODEL_KEYS = ('declaration', 'of', 'models', 'review')
 # The relations that evidence each model, split from U2Deps' modelRelations (U2's check); WRT's and WRP's designer

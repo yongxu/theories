@@ -122,7 +122,11 @@ def changed_lines(path, sha256, current):
 
 
 def links_record(record, text):
-    return bool(re.search(r'records/' + re.escape(record.get('id', '')) + r'\.(?:md|json)\b', text))
+    """Whether `text` links the record's page or file, at its id or a former id: a renamed
+    record's former page is a redirect to it, so a source left linking that page still links it."""
+    former = record.get('former_ids')
+    ids = [record.get('id', ''), *(former if isinstance(former, list) else [])]
+    return any(re.search(r'records/' + re.escape(i) + r'\.(?:md|json)\b', text) for i in ids if isinstance(i, str) and i)
 
 
 def cited_headings(record, path):

@@ -366,7 +366,7 @@
       }
     },
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用 Web.Retains.of_fewer：有意义者越少，保留越多。",
@@ -398,7 +398,7 @@
       }
     },
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "detail": {
         "zh": "Ren 的层级读作预设的三种读法：超真、沿影响次真、沿空关系次真（AI 的读法）；以自身为界的意义（bounded_rival，读作 Ren 的 belief）是沿空关系次真的预设。",
         "en": "Ren's levels read as three readings of the presupposition: super-true, sub-true along affecting, and sub-true along the empty relation (an AI reading); significance bounded by the self (bounded_rival, read as Ren's belief) is the presupposition sub-true along the empty relation."
