@@ -8777,6 +8777,8 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/SYSTEMS-LEAN-NOTES.md",
         "experiments/shared-renewal-capability/regulation/retention/formal/README.md",
@@ -16697,6 +16699,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
@@ -17446,6 +17450,8 @@
       "receipt_bytes_match": true,
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/README.md",
       "direct_documentation_links_from": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/README.md",
         "theories/becoming/history/FORMAL-CORE.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md"
