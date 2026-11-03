@@ -1,0 +1,67 @@
+| item | FIRST | SECOND | CLOSED | note |
+|---|---|---|---|---|
+| 1.1 | R | R | - | |
+| 1.2 | R | R | - | |
+| 1.3 | P | P | - | Second: "supplied" or closure reading; "formed standard not shown" missing |
+| 1.4 | P | P | - | Says not assumed good; degeneration's equal place missing |
+| 1.5 | P | P | - | Only "no person reviewed"; made with AI, AI review missing |
+| 1.6 | P | P | - | Proofs, empirical claims, premises; readings never named as a kind |
+| 1.7 | R | R | - | |
+| 2.1 | P | P | - | Generate/keep/degenerate and their exclusion never stated |
+| 2.2 | R | R | - | |
+| 2.3 | R | R | - | |
+| 2.4 | P | P | - | Models, "most use none"; discrete steps, whole numbers missing |
+| 2.5 | A | A | - | |
+| 2.6 | P | P | - | Near-definitional, World model, dependents' ending not stated |
+| 2.7 | R | R | - | |
+| 2.8 | A | A | - | |
+| 2.9 | R | R | - | |
+| 2.10 | P | R | - | First: only "neither branch determines value"; no construction, caveat |
+| 2.11 | P | P | - | Widening as a proved order needing no premise not stated |
+| 2.12 | R | R | - | |
+| 2.13 | A | P | - | Second: classical-text comparisons only; AI, theorem, review missing |
+| 2.14 | P | P | - | Gives three or four theses; eight, each with refuter, unstated |
+| 2.15 | P | P | - | "With no premise" for what a selection reaches missing |
+| 3.1 | R | R | - | |
+| 3.2 | R | R | - | |
+| 3.3 | R | R | - | |
+| 3.4 | R | R | - | |
+| 3.5 | R | R | - | |
+| 3.6 | P | P | - | A premise in C's place and the self-concern case missing |
+| 3.7 | P | R | - | First: warrant called unfinished only for the step |
+| 3.8 | P | P | - | Follows from the stated roles, never said as non-derivation |
+| 3.9 | R | R | - | |
+| 3.10 | A | A | - | |
+| 4.1 | R | R | - | |
+| 4.2 | R | R | - | |
+| 4.3 | P | P | - | Mixed choices need premises; duty, compliance missing |
+| 4.4 | R | R | - | |
+| 4.5 | A | A | - | |
+| 4.6 | R | R | - | |
+| 4.7 | A | P | - | Second: terminology rather than confirmation; "not shown" claim missing |
+| 4.8 | A | A | - | |
+| 4.9 | P | P | - | Actual-system claims as theses; "no science's law" missing |
+| 5.1 | R | R | - | |
+| 5.2 | P | P | - | T1 failures stated; "frozen before scoring" missing (second: T7 only) |
+| 5.3 | A | P | - | Second: pass despite contrary evidence; theorem untouched not stated |
+| 5.4 | P | P | - | Failed check stated; forbidding through hypotheses missing |
+| 5.5 | P | P | - | Argued/open stated; forbids no relation, no observation refutes, missing |
+| 5.6 | P | P | - | Forbids explanations, argued, no observational refuter; argument's role missing |
+| 5.7 | P | P | - | First: argument's failure "does not say"; second: perspectivist missing |
+| 5.8 | P | P | - | Rival from fewer patterns only; language sense, tie missing |
+| 6.1 | R | R | - | |
+| 6.2 | R | R | - | |
+| 6.3 | R | R | - | |
+| 6.4 | R | R | - | |
+| 6.5 | P | R | - | First: "common language" in Q1, other contents, not as addition |
+| 7.1 | P | P | - | Root shown as one branch, not the base for the rest |
+| 7.2 | P | R | - | First: renewal and selection only; life, descent, joint activity missing |
+| 7.3 | R | R | - | |
+| 7.4 | P | P | - | Theses reach actual systems; failing without touching a theorem missing |
+| 7.5 | A | R | - | |
+| 7.6 | A | P | - | Second: only correspondences named open; no standings throughout |
+| 7.7 | P | R | - | First: root-models and dynamics-ethics only; models-to-systems not a joint |
+
+2. None found.
+
+3. Homes I opened: 07 §1 (with "what forms and what is supplied"), §4, §4.2, §4.4, §6 to §8 and "what this chapter does not show"; 08 §7 and §8, with §10 "law" seen through a search; 03 "selection through couplings"; 05 "own count misses joint excess"; 02 T7. I also read the one page and searched the overview to see what the reader had in front of them. I did not check 01, 04, 06, 02's "two grains", or 08 §1, §2, §9, theses, philosophical warrant, review status, pure core and modelling commitments. No mark is W, so I verified no home for a wrong statement.
