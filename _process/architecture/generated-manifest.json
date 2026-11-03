@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "5d2d7877e1f2770e80c4120c36bda1545e1d3db4c67c7455b13662cdd5c44c1e",
+    "README.md": "2750cf2fb3f0f736d9cfa3cb49a0aa3da11dac8ef0505d8790e77004d5b99819",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "d70f01504b3eb375c5e084c695ab409ca7b9688eb333dc57f5852e330d73a91f",
-    "GOALS.md": "1d43c47c2d41672281abd2bf89f20049bf44ef44e77aab227ad0e6aecec1667f",
+    "GOALS.md": "c0dc5700895a908b95f24a6d434ef6104327282dbf0d5cb9cff1853be494020f",
     "DEPENDENCIES.md": "d28fb9696522bf993e3779891b4af49c0252a779d91fe3ca2e4fa2fc2f0d1e70",
     "_process/BRIEF.md": "386505a702fc12b2a938eaee1a39c11392629efe9204d845b50b114e6fbc7efa",
     "theories/becoming/README.md": "e996dd3d2edff265cb294f173690f66c90dd2ab08aef02da0f5dc1e4ee8302e2",
