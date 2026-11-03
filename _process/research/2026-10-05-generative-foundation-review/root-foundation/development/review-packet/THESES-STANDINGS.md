@@ -1,8 +1,8 @@
 # The sciences front's theses given their standings
 
-*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.0 to 9.2 minutes to read; [the read](#the-read), 19.6 to 25.4 more.*
+*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.3 to 9.5 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.0 to 29.9 more.*
 
-The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)).
+The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)). After T1S gave T1 its standing in its home, TS2 brought the front's T1 row, S-03 and S-14 to it ([after T1S](#after-t1s)).
 
 ## What changed
 
@@ -34,7 +34,7 @@ The whole grew to 18,178 words and 27 characters, 139.9 to 181.9 minutes. TS add
 
 ## Not done here
 
-**T1's standing beyond the model.** T1's home gives the thesis's standing only in the model: "*In the model*: that point is exact and, the draw positive, lies at least the draw above a need where giving stops below it, …, and joint excess over a gated renewal ends it whatever each drawer's own draw" ([02](../../../../../../theories/becoming/chapters/02-MAP.md#t1)). T2's *Standing*, T6's and T3's each say how far the thesis itself is established. T1's home does not say whether it is supported by its frozen tests or conjectured beyond the model. 08's row copies only the home's first clause, so the front, which copies 08, has neither the thesis's standing nor the joint-excess clause. Both belong in T1's home and 08's row first, and the front follows them. They went to the coordinator.
+**T1's standing beyond the model.** T1's home gives the thesis's standing only in the model: "*In the model*: that point is exact and, the draw positive, lies at least the draw above a need where giving stops below it, …, and joint excess over a gated renewal ends it whatever each drawer's own draw" ([02](../../../../../../theories/becoming/chapters/02-MAP.md#t1)). T2's *Standing*, T6's and T3's each say how far the thesis itself is established. T1's home does not say whether it is supported by its frozen tests or conjectured beyond the model. 08's row copies only the home's first clause, so the front, which copies 08, has neither the thesis's standing nor the joint-excess clause. Both belong in T1's home and 08's row first, and the front follows them. They went to the coordinator. T1S has since given both, and TS2 followed ([after T1S](#after-t1s)).
 
 **Findings left as they are,** each with its reason in [how each was taken](#how-each-was-taken):
 - UE31's contrary prediction for T2;
@@ -136,3 +136,145 @@ The dossier's "which went to its owner" also contradicts the record's "They went
 On the reasons:
 - **T3's statement.** Taken: T3's name on the front now links S-03, which states the thesis. The link is "`[T3's](#s-03)`", with the possessive inside it. Written "`[T3](#s-03)`'s", the measure would count "s" as a word of its own.
 - **"Point of no return".** Taken: T1's cell now links the term to its definition under *Reading the items*, at no words.
+
+## After T1S
+
+*Board item TS2, T1S's follow-on, 3 November 2026. AI-written; no person has reviewed it.*
+
+What TS passed on ([not done here](#not-done-here)), T1S gave in T1's home and in 08's row (main `dccb5b430`). The home's *Standing* now reads "in the model proved, on the regime and on the World model (*In the model*); beyond them conjectured, on the frozen tests above" ([02](../../../../../../theories/becoming/chapters/02-MAP.md#t1)), and 08's row copies it with the joint-excess clause. T1S's record lists what the sciences dossier should then do ([what follows](T1-STANDING.md#what-follows-with-their-owners)). TS2 did it, copying the home's words first. The same independent AI reader checked the change and then the fixes.
+
+### What TS2 changed
+
+- **T1's Standing cell** copies 08's row up to "beyond the model conjectured". The joint-excess clause's premises, "in a balanced flow where activity needs support and only active formations give" in 08 and the home, are named by the item that states them: "under the gate at need `m` and the premises [S-11](../../../../../../theories/becoming/review/SCIENCES.md#s-11) names".
+- **T1's tests cell** copies the rest of 08's row, from "of the three settings passed" to "so that what T1 forbids was not reached". It keeps the front's "failed in four", now naming two of them in 08's words: the fish stocks under held catches, a field test, and the salt shock. It had said "passed in three settings, the simulated one testing the measured quantities and not the thesis; failed in four".
+- **S-03's known weakness** again says "Their standings say so".
+- **S-14**:
+  - its standing says "Thesis, proved in the model and beyond it conjectured", the home's *Standing*, and quotes the home: "On yeast values not read before, no frozen test of the need or of the fates it separates has passed";
+  - its MQ1 bullet gives the two harvesters (A4) in 02's words, then "Its other passes", in 02's order;
+  - its salt-shock bullet quotes 02: "on the first reading, every population stood above the predicted need".
+- **The hour sentence** gives ecology's path its time: "which with this section take 45 to 65 minutes".
+- **The whole's stated time** is 140 to 190 minutes, on the front and both covers.
+- **How this dossier was made** ends with what TS2 did, in the past tense.
+
+### What TS2 cost
+
+The front grew from 1,179 words to 1,376, 10.6 to 13.8 minutes, 276 over its ten minutes. Ecology's path, the front with S-11 to S-16, grew from 6,000 words to 6,324, 48.6 to 63.2 minutes, 324 over the hour at the slower rate, so the front states its time, 45 to 65 minutes. The whole, with its 27 Chinese characters, grew from 18,178 words to 18,571, 143.0 to 185.8 minutes, past the stated 135 to 185, so the front and both covers state 140 to 190. What TS2 added is T1's standing and its tests as they fell, which [amendment 1](../aj4-alignment-readers/READING-BUDGETS.md) has a front keep, so the excess is recorded in READING-BUDGETS' rows, with the Chinese cover's count, two characters shorter.
+
+### Left to others
+
+- **"Exact" and its premises.** "The point of no return is exact" names none of S-12's premises, in 02 and 08 as on the front, which copies them. The reader found it, minor and older than TS2. It belongs in the home first, so it went to T1's home's owner.
+- **Alignment's hour sentence.** The alignment front says "With an hour, read" of a path READING-BUDGETS records as past the hour at the slower rate, the gap the reader found on this front. That dossier is not TS2's, so it went to the coordinator.
+
+### The read after T1S
+
+The same reader, read-only and with no part in the writing, read the change against T1's home, 08's row, S-11 and T1S's check ([T1-STANDING-CHECK.txt](T1-STANDING-CHECK.txt)). Its brief gave the check's two cautions: that adding A4 to S-14 "as bearing on the joint clause, would overstate", and that "the only tests with more than one drawer" invites a reader to infer that the joint clause passed two tests. It asked six questions:
+- whether the Standing cell is at the strength of 08 and the home, and says nothing beyond the Lean;
+- every qualifier the tests cell drops, and whether it changes what a reader believes;
+- whether S-03's sentence is true;
+- whether S-14's standing and the A4 sentence are true to the home, without the overstatement the check warned of;
+- whether the how-made sentence is true once the read is taken;
+- what else in lines 1 to 30 or S-14 the change leaves inconsistent or misleading.
+
+It also asked what in T1S's list the change does not do. Its report stands below verbatim, but for one of the dossier's links it quotes, set in code. Its line numbers are those of the change it read.
+
+I re-read the change against the new home, 08's row, S-11 and the T1S check. The Standing cell, S-03 and S-14 are sound. The tests cell has three substantive problems, the hour sentence no longer holds for ecology, and the new provenance sentence's link has no target.
+
+**What I read:** the wt2 diff; SCIENCES.md :18, :28, :112, S-11, S-14 and :694; 02-MAP.md:278; 08-METHOD.md:568; T1-STANDING.md in full; findings 1–3 of T1-STANDING-CHECK.txt (:51–106, :139–155, :259–290, found by grep); and THESES-STANDINGS.md's headings. The worktree changed while I read it (READING-BUDGETS.md, both READMEs, and SCIENCES.md:28), so I read its current state. The only git commands I ran were `diff`, `show` and `status`.
+
+**1. T1's Standing cell (:18): same strength as 08 and the home, and nothing beyond the Lean.**
+- "the premises `[S-11](#s-11)` names" stands in for 02's and 08's "in a balanced flow where activity needs support and only active formations give".
+- S-11 names exactly these, "(World: balance, only active giving, activity needing support; the gate local)" (:322), as do its block's `balances`, `acting`, `dependent` and `gated`.
+- "end every formation depending" is chapter 5's word for S-11's "leave inactive, at every later step, every formation that then requires `c` at a need of at least `m`".
+- The block assumes nothing about any single drawer's draw, so "whatever each drawer's own draw" holds.
+
+**2. The tests cell.**
+- **Substantive:** "the only tests with more than one drawer" is the wording the check found "false as worded": the fish stocks' catch comes from several drawers and is read as one. 02 and 08 now say "whose design has more than one drawer", so the front undoes a fix that was taken.
+- **Substantive:** "one scope prediction" drops "with one harvester" (08, 02). Coming after "more than one drawer", it reads as a pass on the joint draw, which is exactly the check's caution. "two harvesters' super-additive harms" does say what A4 tested, without implying the joint clause passed.
+- **Substantive:** 08's "on yeast values not read before no frozen test of the need or its fates has passed" is gone, and S-14 never states it either. "who had seen their fates separate post hoc" is also dropped, although the check's re-check point 2 took it. Left alone, "held out from the fit but not from the analyst" reads as a nearly clean pass.
+- **Minor:**
+  - "one yeast experiment" and "the dilution the only draw" are dropped.
+  - "on the first reading" is dropped, although re-check point 4 took it: the next day's reading did one population better than the null.
+  - "so that what T1 forbids was not reached" is dropped. That leaves "the letter of *Refuted by*" harsher than 02's "with none below the need the test could not reach what T1 forbids".
+
+**3. S-03 (:112): true.** T1's "beyond the model conjectured", T2's "untested outside fisheries" and T6's "conjectured" all say so.
+
+**4. S-14: true.**
+- :404 matches 02's "in the model proved …; beyond them conjectured".
+- :407 quotes 02 exactly, keeping "as follows in the deterministic limit once their draws add" and "which could have failed", so it does not overstate in the way the check warned.
+- Minor: the sentence before it, "its passes bearing on T1 (A2 …; A3 …)", now reads as if A4 were not among them. 02's "its other passes" would agree with the front.
+
+**5. The how-made sentence (:694).** "the same AI reader checked them against the home" is true; I also checked against 08, S-11 and the check. But unlike the TS sentence before it, it says nothing about what came of the findings, while asserting that the three changes "followed it". Its link, "THESES-STANDINGS.md#after-t1s", has no target in the file as I read it, so the link check will fail until that section exists.
+
+**6. Anything else.**
+- :28, "With an hour, read your field's items", is now false for ecology at the slower rate: 6,170 words, 61.7 minutes (READING-BUDGETS.md:32: "Sciences' hour runs 170 words past it").
+- S-14's salt-shock weakness (:420) lacks 02's "every population stood above the predicted need", which the front now carries, so the item says less than its front.
+- Minor and older: the regime clause's "exact" names none of S-12's premises, the same as in 08 and 02.
+
+**What "What follows" asked that the change does not do.**
+- The ecology hour is neither restated nor cut. The excess is recorded in READING-BUDGETS instead, as alignment's is.
+- The front copies 08's new cell only up to "beyond the model conjectured". The rest is shortened into the tests cell and loses the qualifiers listed under 2.
+- The other five items are done, and so is recording the front's excess in READING-BUDGETS.
+
+#### How each was taken, after T1S
+
+Each finding was checked against its source before it was taken or left.
+
+1. **T1's Standing cell** (1). Holds.
+2. **"The only tests with more than one drawer"** (2, substantive). True: the check found the wording false, and 08 and 02 now say "whose design has more than one drawer". Taken, in their words.
+3. **"One scope prediction"** (2, substantive). True: coming after "more than one drawer", it reads as a pass on the joint draw. Taken: the cell gives the simulated yeast and the commons apart, in 08's words, with "the scope prediction, with one harvester, held".
+4. **The one real-data pass** (2, substantive). True. Taken on the front in 08's words: "who had seen their fates separate post hoc" and "on yeast values not read before no frozen test of the need or its fates has passed". S-14's standing now quotes the home's sentence, "On yeast values not read before, no frozen test of the need or of the fates it separates has passed".
+5. **The minor qualifiers** (2). True. Each taken in 08's words: "regimes of one yeast experiment", "the dilution the only draw", "on the first reading" and "so that what T1 forbids was not reached".
+6. **S-03** (3). Holds.
+7. **S-14's "its passes"** (4, minor). True. Taken: the bullet gives the two harvesters first and then "Its other passes", in 02's order.
+8. **How this dossier was made** (5). True: the sentence said nothing of what came of the findings, and its link had no target until this section. Taken: it now says that the reader then checked the fixes, that its findings were taken and which ones, and that one on the home's wording went to its owner.
+9. **The hour sentence** (6). True. Taken: the sentence gives ecology's path its time, the measured range rounded out to five minutes, as READING-BUDGETS' stated times are. HP had brought that path within the hour by cutting what it said twice. TS2's words are standings and failures, which amendment 1 keeps, so the time is stated and nothing is cut.
+10. **S-14's salt shock** (6). True. Taken: the bullet quotes 02's sentence from "on the first reading".
+11. **"Exact" without S-12's premises** (6, minor and older). True of the front, 08 and 02 alike. Not taken here: the front copies the home, so it went to the home's owner ([left to others](#left-to-others)).
+12. **What T1S's list asked** (the last part). The tests cell now carries the rest of 08's cell, as in 2 to 5, and the hour's time is stated, as in 9.
+
+### The re-check after T1S
+
+The same reader, under the same rules, then read the fixes on the uncommitted tree: the tests cell against 08 and 02, the hour sentence and READING-BUDGETS' changed sentences against the measure, S-14's three changed lines and the how-made sentence. Its report stands below verbatim. Its line numbers and figures are those of the tree it read, before its own notes were taken.
+
+I re-checked TS2's fixes, read-only, as narrowly as the fixes go. Nothing is broken, every quote is exact, and all the figures check out. Three minor notes, each worth a decision:
+
+**(a) Tests cell (SCIENCES.md:18): holds.** A word-by-word comparison with 08:568's Standing, from "of the three settings passed", finds only two changes:
+- 08's ", and on the first reading after a salt shock" becomes "; failed in four, among them a salt shock, after which, on the first reading,".
+- The cell ends with "; no field test of a need measured in advance", which is in 08's Evidence cell.
+
+So the cell says no more than 08 and 02:278, and nothing of 08's Standing is lost. "Failed in four" is right: 08's Evidence and 02's *Evidence* both list four failed settings (MQ1's floor, MQ2's salt shock, MQ3's fish stocks, MQ6 past the fold).
+- Minor, and older than TS2: the cell names only the salt shock among the four. With "no field test of a need measured in advance" at its end, a reader isn't told that a field test, MQ3 on fish stocks under held catches, ran and failed. T1S's record flagged the same gap in OPENING.
+
+**(b) Hour sentence (:28) and READING-BUDGETS: true.**
+- The path measures 48.6 to 63.2 minutes, which rounds out to "45 to 65 minutes". "These ten minutes" is the section's name, though the section itself measures 10.5 to 13.7; "with this front" would be plainer.
+- In READING-BUDGETS:
+  - The front's 1,371 words (10.5 to 13.7, 271 over) are right.
+  - The hour's 6,319 words (48.6 to 63.2), "319 words past it", are right. The 319 equals the front's +192 plus S-14's +127, which is exactly what the sentence names as the cause.
+  - The wholes line's "143 to 186" and the stated "140 to 190" are right.
+  - The Chinese cover's 1,592 characters are 1,594 less the two characters dropped from the times.
+- Minor: the stated-times sentence says the change came "once T1's standing joined the front and S-14". I recounted the changed lines by `measure.py`'s rules. T1's standing plus the hour sentence take the slowest reading from 181.9 to about 185.0, and :694's own 79 new words take it to 185.8. So the named cause is most of it, and the old range would sit right at its edge without :694. Adding "and this record of it" would be exact.
+
+**(c) S-14's two bullets (:407, :420): exact, and nothing overstated.**
+- A4 now comes first, then "Its other passes bearing on T1 (A2 …; A3 …)", in 02's order.
+- The A4 quote matches 02:278 word for word and keeps "as follows in the deterministic limit once their draws add" and "which could have failed".
+- The salt-shock quote, "on the first reading, every population stood above the predicted need, … and each error was a death above the need", is exact and follows the refutation clause.
+
+**The new quote at :404: exact and fairly placed.** It matches 02:278 up to the colon. The list after the colon (floor twice, the fold, the salt shock) is in S-14's own bullets. Placed before the tests' summary, "In the laboratory, it predicts thresholds, and the level is the state.", it qualifies that claim before the reader meets it.
+
+**(d) How-made sentence (:694): true, and in the past tense.** "Checked them against the home and chapter 8's row, and then the fixes" holds once this read is done. "Taken, among them qualifiers … and the time of ecology's path" holds. "One on the home's own wording" is my point about S-12's premises. Two conditions:
+- "went to its owner" must be true by landing, and #after-t1s must name the same recipient. At TS the dossier said "owner" while its record said "coordinator".
+- If the three minor notes here are left rather than taken, "taken" should say so.
+
+**(e) Anything broken: nothing.** TS2 changes only lines 18, 28, 112, 404, 407, 420 and 694; the T2 and T6 rows are untouched. The front's "140 to 190" matches both covers ("reading 140 to 190 minutes", "读约一百四十到一百九十分钟"). The other fields' hour paths stay well within an hour: mind, the largest, was 4,202 words at HP, about 4,470 now.
+
+The only git commands I ran were `git diff`, `git show` and `git status`. Word counts are by `wc` and a shell copy of `measure.py`'s rules on the changed lines; I ran neither `measure.py` nor `ts2_times.py`.
+
+#### How each was taken, in the re-check
+
+1. **The tests cell** (a). Holds. The minor note is true: of the four failures the cell named only the salt shock, and with "no field test of a need measured in advance" at its end a reader is not told that a field test ran and failed. Taken: "failed in four, among them fish stocks under held catches and a salt shock", in 08's words for that setting.
+2. **The hour sentence and READING-BUDGETS** (b). Holds. Taken: "with this section" in place of "with these ten minutes", since the section measures past ten. READING-BUDGETS' stated-times sentence now says the readings changed "once T1's standing joined the front, S-14 and the dossier's account of how it was made", which counts that sentence's words too.
+3. **S-14's three lines** (c). Hold.
+4. **How this dossier was made** (d). Holds, and both conditions are met. The finding on "exact" went to T1's home's owner before landing, as this record says ([left to others](#left-to-others)), and the re-check's three notes were taken, so "taken" stands.
+5. **Anything broken** (e). Nothing.
+
+The figures were rerun after these fixes.
