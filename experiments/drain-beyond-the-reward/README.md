@@ -19,6 +19,7 @@ LA4 tests the clause on systems trained by gradient:
 | [learners.py](learners.py), [evaluate.py](evaluate.py) | The three families, the value network, Adam and each arm's update in numpy; the measures, exact or sampled |
 | [checks.py](checks.py), [calibrate.py](calibrate.py) | The code's checks (gradients, exact values, the expected update, the control, the mirror test) and the calibration on a season with no bay; outputs in `results/` |
 | [run.py](run.py), [verdicts.py](verdicts.py), [analyze.py](analyze.py), [power.py](power.py) | The run (resumable, refusing to start off the frozen commit), the verdict rules, the reading, and the power check with scripted learners and the separable baseline on seeds 1000 to 1019 (`results/power-runs/`) |
+| [PRIOR-WORK-2026-11-03.md](PRIOR-WORK-2026-11-03.md) | A search for work already testing what LA4 tests, made while Stage A ran: none found tests the split on one condition; the law for optima is known, and the locus is contested by work on language models |
 | [REVIEW-FREEZE.md](REVIEW-FREEZE.md) | The independent read of Stage A's freeze, three rounds, and how each finding was taken |
 | [REVIEW-DESIGN-ASTRA.md](REVIEW-DESIGN-ASTRA.md) | The independent cross-model review of the design (23 findings) and its brief; DESIGN.md §11 says how each was taken |
 
