@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-03T21:37:57+00:00",
+  "reviewed_at_utc": "2026-11-03T21:40:30+00:00",
   "statement": {
     "en": "From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, the two get the same acts if alike in couplings before k; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.",
     "zh": "自第 k 员起，每员于首世界所予之行列对二世界之耦合予同一行，则此二世界于第 k 员前诸耦合无别时，诸行皆同；每员于每一世界所至之历皆不论其耦合而同行时，诸行所载不逾第 k 员前之所耦合入。此前提弱于 Cascade 之前提。"
@@ -196,7 +196,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "1da34373c3615c3a274c01854f24c2726295508903a944f9d8162905be583ee1"
+      "sha256": "ffa98628cfa659cdc767a5bb9587703b08512390a585dcfa984f4a0f2086fcc2"
     }
   ],
   "proof_bindings": [

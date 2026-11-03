@@ -5,7 +5,7 @@
 
 `a-cascade-at-the-histories-reached` · **recorded-checked** · theorem · F04 · [record](a-cascade-at-the-histories-reached.json) · [register](../../../../RESULTS.md)
 
-> From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, worlds alike in the couplings before k get the same acts; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.
+> From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, the two get the same acts if alike in couplings before k; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Where every member from k on acts alike whatever its coupling at the histories every world reaches, every selection reading the list of the first N acts, for any N, selects alike any two worlds alike through the couplings of the members before k. (`Becoming.Turns.cascade_through_along`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-4. Member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it, every later member acting alike: from member 0 the members act alike whatever their couplings at the histories every world reaches, and the premise on every list from member 0 fails (from member 1 it holds). (`Becoming.Turns.Unreached.law`, `Becoming.Turns.Unreached.turns`, `Becoming.Turns.Unreached.along`, `Becoming.Turns.Unreached.not_from`)
+4. Member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it, every later member acting alike: from member 0 the members act alike whatever their couplings at the histories every world reaches, and the premise on every list from member 0 fails (from member 1 it holds by the definition, not stated as a declaration). (`Becoming.Turns.Unreached.law`, `Becoming.Turns.Unreached.turns`, `Becoming.Turns.Unreached.along`, `Becoming.Turns.Unreached.not_from`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
@@ -33,7 +33,7 @@
 - A position that depends on the world (a stopping time, the first member that stops reading its coupling at the history the world gives it), with or without persistence after it.
 - A probabilistic or total-variation form, a member's dependence on its coupling weighted over the histories reached.
 - That a pool's later selection keeps a coupling one member's act carries.
-- **Counterexample:** The converse of readsOnlyActsAlong_of_from, at k = 0: member 0 reading its coupling only after a non-empty list of earlier acts meets the premise at every world's reached histories, and the premise on every list fails (Turns.Unreached.along, Turns.Unreached.not_from). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean)
+- **Counterexample:** Against the converse of readsOnlyActsAlong_of_from, at k = 0: member 0 reading its coupling only after a non-empty list of earlier acts meets the premise at every world's reached histories, and the premise on every list fails (Turns.Unreached.along, Turns.Unreached.not_from). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
 
@@ -85,4 +85,4 @@ Aliases: `a cascade at the histories reached`, `所至之历上之级联`, `casc
 
 </details>
 
-Documentary review UTC: `2026-11-03T21:26:50+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-03T21:40:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
