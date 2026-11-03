@@ -79,7 +79,8 @@ where the two kinds leave alike. With no premise beyond the hypotheses each stat
   what comes back alone covers; with the shapers together (groups uniform) it is `c < s + m q`
   (`grouped_uniform_iff`). In groups of any sizes the verdict goes through the covariance, member by
   member, of a member's group's shapers with its group's share of them (`grouped_rises_iff_sized`),
-  which with unequal sizes is not a function of the spread among groups. Witness
+  which with unequal sizes is not a function of the whole's spread and the size-weighted spread of
+  the group means (`Sized.either_verdict`). Witness
   (`Assorting.either_verdict`): a cost of two above one coming back,
   so that within every group the rule disfavours the shapers, and the whole selects for shaping with
   the shapers together and against it with them apart.
@@ -665,14 +666,15 @@ theorem grouped_rises_iff {gs : List (List α)} {w shapes : α → Nat} {a s q c
         s * concord (whole gs) shapes shapes + m * q * concordAmong gs shapes shapes :=
   rises_iff_kept gs w shapes equal (grouped_returns grouped)
 
-/-- **And in groups of any sizes.** With `n` a common multiple of the groups' sizes and each
+/-- **And in groups of any sizes.** With `n` a positive common multiple of the groups' sizes and each
 group's factor `n` over its size, the whole selects for shaping exactly where `c` times `n` times
 the spread of shaping, with `q` times the discordance, member by member, of each member's group
-total of shaping with its group's mean, falls short of `s` times `n` times the spread with `q`
+total of shaping with its group's share by its factor (`n` times the share), falls short of `s`
+times `n` times the spread with `q`
 times their concordance (`SelectionLevels.rises_iff_kept_sized`): read over the rationals, where
 `c` times the variance of shaping falls short of `s` times it with `q` times the covariance of a
 member's group's shapers with its group's share of them. With unequal sizes this is not a function
-of the spread among groups (`SelectionLevels.Sized.either_verdict`). -/
+of the whole's spread and the size-weighted spread of the group means (`Sized.either_verdict`). -/
 theorem grouped_rises_iff_sized {gs : List (List α)} {w shapes : α → Nat} {a s q c n : Nat}
     {pos : 0 < a} (f : List α → Nat) (common : ∀ g, g ∈ gs → g.length * f g = n) (whole_pos : 0 < n)
     (grouped : Grouped gs w shapes a s q c pos) :
@@ -867,6 +869,57 @@ theorem either_verdict :
     (grouped_rises_iff assorted_equal assorted_grouped).mpr (by decide), rfl, rfl, by decide, rfl⟩
 
 end Assorting
+
+namespace Sized
+
+open SelectionTerm SelectionLevels SelectionLevels.Member SelectionLevels.Founding
+
+theorem one_pos : 0 < 1 := Nat.zero_lt_one
+
+/-- With the shapers together in a pair and each other alone, a base of one, nothing coming back to a shaper alone, a
+cost of three and two to every member of its group for each shaper in it, each shaper leaves five
+and each other four: `SelectionLevels.Sized`'s first listing and offspring. -/
+theorem together_grouped :
+    Grouped SelectionLevels.Sized.together SelectionLevels.Sized.togetherOffspring keeps 1 0 2 3 one_pos
+  | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.head _) => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ (.head _)), _, .head _ => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ (.tail _ mem)), _, _ => nomatch mem
+
+/-- With each shaper alone beside the others' pair, the same rule gives each shaper three and each
+other four: the second listing and offspring. -/
+theorem apart_grouped :
+    Grouped SelectionLevels.Sized.apart SelectionLevels.Sized.apartOffspring keeps 1 0 2 3 one_pos
+  | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ mem => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ (.head _)), _, .head _ => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ (.head _) => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.tail _ (.tail _ mem)), _, _ => nomatch mem
+
+/-- **Shaping in groups of unequal size, either verdict.** Within every group the rule after
+shaping disfavours the shapers, the cost above nothing coming back alone; the two listings have
+the same spread of shaping over the whole and the same size-weighted spread of the group means
+(`SelectionLevels.Sized.either_verdict`); with the shapers together the whole selects for shaping,
+and with each alone against it. -/
+theorem either_verdict :
+    ¬ CarrierCounts.favours (shaped 1 0 0 3 one_pos) ∧
+      discord (whole SelectionLevels.Sized.together) SelectionLevels.Sized.togetherOffspring keeps <
+        concord (whole SelectionLevels.Sized.together) SelectionLevels.Sized.togetherOffspring keeps ∧
+      concord (whole SelectionLevels.Sized.apart) SelectionLevels.Sized.apartOffspring keeps <
+        discord (whole SelectionLevels.Sized.apart) SelectionLevels.Sized.apartOffspring keeps :=
+  ⟨fun fav => absurd (favours_iff.mp fav) (by decide),
+    (grouped_rises_iff_sized SelectionLevels.Sized.factor SelectionLevels.Sized.together_common
+      (by decide) together_grouped).mpr (by decide),
+    SelectionLevels.Sized.either_verdict.2.1⟩
+
+end Sized
 
 end RuleShaping
 

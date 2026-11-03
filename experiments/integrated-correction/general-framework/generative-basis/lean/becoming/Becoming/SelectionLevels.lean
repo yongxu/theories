@@ -114,7 +114,7 @@ of equal sizes.
   `K < s + m q ρ`. Returns to groupmates are its case with nothing kept (`s = 0`, `K = b + c`,
   `q = b`), and `within_returns`, `among_returns` and `rises_iff_returns` are derived from it. What
   comes back alone enters at every assortment; what is shared within the group only through it.
-* **Returns in groups of any sizes.** With `n` a common multiple of the groups' sizes, let what each
+* **Returns in groups of any sizes.** With `n` a positive common multiple of the groups' sizes, let what each
   unit kept shares reach every member of its group as `q` per unit of a reading `R` of the group.
   Within each group, by its factor, selection goes by `s` against `K` as before (`within_shared_by`);
   among the groups' means, read member by member, by `s` against `K` with `n q` times the reading's
@@ -124,12 +124,14 @@ of equal sizes.
   the concordance (`rises_iff_shared_sized`). Two readings are two modelling choices. Each member
   gaining `q` for every unit its group holds (the reading the group's total, as in the equal-size
   laws): the verdict goes through the covariance, member by member, of a member's group total with
-  its group's mean (`rises_iff_kept_sized`), which with equal sizes is the size times the spread
-  among groups and with unequal sizes is not a function of that spread. What each unit kept gives
-  its group divided among the members (the reading `n` times the group's mean): the verdict goes
+  its group's mean (`rises_iff_kept_sized`); with equal sizes this is the size times the spread
+  among groups, `rises_iff_kept`'s form (a reading, not stated as a theorem), and with unequal
+  sizes it is not a function of the whole's spread and the size-weighted spread of the means.
+  What each unit kept gives its group divided among the members (the reading `n` times the group's mean): the verdict goes
   through the size-weighted spread of the group means (`rises_iff_divided_sized`), over the
-  rationals `K < s + Q ρ` with `Q` what a unit gives its group and `ρ` the share of the variance
-  among the means: Hamilton's rule with what comes back alone added, for groups of any sizes.
+  rationals, where the amount varies, `K < s + Q ρ` with `Q = n q` what a unit gives its group and
+  `ρ` the share of the variance among the means, weighted by size: Hamilton's rule with what comes
+  back alone added, for groups of any sizes.
 * **Witnesses.** Two groups of two, the amount one at a member that holds back and none at the
   others. In both, the one holding back leaves fewer offspring than its groupmate, so selection
   within goes against holding back. Where the group without it leaves no offspring, selection
@@ -144,12 +146,13 @@ of equal sizes.
   with the same returns, against it (`Founding.either_verdict`). With six members in three pairs,
   two thirds of the spread among the pairs, returns of three and a take of two meet the rule at
   assortment one and yet the whole selects against keeping (`Partly.below_one`). With the same two
-  keepers and two others in groups of three and one, the keepers together or one in each group,
-  the whole's spread and the size-weighted spread of the group means are the same; with each
-  member gaining two for every unit its group keeps at a cost of one to the keeper, the whole
-  selects for keeping with the keepers together and against it with one in each, every member's
-  group total then the same (`Sized.either_verdict`); with what is shared divided, the two
-  listings give one verdict whatever the returns (`Sized.divided_one_verdict`).
+  keepers and two others, the keepers in a pair beside each other alone, or each keeper alone
+  beside the others' pair,
+  the whole's spread and the size-weighted spread of the group means are the same, all of it among
+  the means; with each unit kept giving two to every other member of its group and taking one from
+  the keeper, the whole selects for keeping with the keepers together and against it with each
+  alone (`Sized.either_verdict`); with what is shared divided among the members, the two listings
+  give one verdict for any returns the same in both (`Sized.divided_one_verdict`).
 
 The weights are any natural numbers; with offspring numbers they are the selection term proper
 of `Becoming.SelectionTerm` divided by level. Nothing is supposed about what the groups are or
@@ -1145,13 +1148,13 @@ theorem means_shared {gs : List (List α)} {w a : α → Nat} (c R : List α →
         Nat.left_distrib n B (q * R g), ← mul_assoc_nat n q] at e
       exact e.trans (Nat.add_right_comm _ _ _)
 
-/-- **Returns kept and shared within groups of any sizes.** Let `n` be a common multiple of the
-groups' sizes, each group's factor `n` over its size, and let what each unit a member keeps shares
+/-- **Returns kept and shared within groups of any sizes.** Let `n` be a positive common multiple
+of the groups' sizes, each group's factor `n` over its size, and let what each unit a member keeps shares
 reach every member of its group as `q` per unit of a reading `R` of the group. Where each unit a
 member keeps costs it `K` and brings `s` back to it alone, the whole selects for keeping exactly
 where `K` times `n` times the whole's spread, with `q` times the discordance, member by member, of
-the reading with the groups' means (by their factors), falls short of `s` times `n` times the
-spread with `q` times their concordance. Read over the rationals, exactly where `K` times the
+the reading with the groups' means by their factors (`n` times each mean), falls short of `s` times
+`n` times the spread with `q` times their concordance. Read over the rationals, exactly where `K` times the
 amount's variance falls short of `s` times it with `q` times the covariance, member by member, of
 the reading with the group means. -/
 theorem rises_iff_shared_sized (gs : List (List α)) (w a : α → Nat) (c R : List α → Nat)
@@ -1213,9 +1216,11 @@ theorem rises_iff_shared_sized (gs : List (List α)) (w a : α → Nat) (c R : L
 
 /-- **Each member gaining `q` for every unit its group holds**, groups of any sizes: the reading
 is the group's total, so the verdict goes through the covariance, member by member, of each
-member's group total with its group's mean. With equal sizes the total is the size times the
-mean and the verdict is `rises_iff_kept`'s, in the spread among groups; with unequal sizes it is
-not a function of that spread (`Sized.either_verdict`). -/
+member's group total with its group's mean (the second term by the group's factor, `n` times the
+mean). With equal sizes the total is the size times the mean and the verdict reads as
+`rises_iff_kept`'s, in the spread among groups (a reading, not stated as a theorem); with unequal
+sizes it is not a function of the whole's spread and the size-weighted spread of the group means
+(`Sized.either_verdict`). -/
 theorem rises_iff_kept_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
     {B s q K n : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n)
     (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * total g a) :
@@ -1229,8 +1234,8 @@ theorem rises_iff_kept_sized (gs : List (List α)) (w a : α → Nat) (c : List 
 /-- **What each unit kept gives its group divided among the members**, groups of any sizes: each
 member gaining `q` per unit of `n` times its group's mean (the group's total by its factor), the
 whole selects for keeping exactly where `K` times `n` times the whole's spread falls short of `s`
-times it with `q` times the spread of the groups' means, member by member. Read over the rationals,
-with the assortment `ρ` the share of the amount's variance lying among the group means, weighted
+times it with `q` times the spread of the groups' means by their factors (`n` times each mean),
+member by member. Read over the rationals where the amount varies, with the assortment `ρ` the share of the amount's variance lying among the group means, weighted
 by size, and `Q = n q` what each unit kept gives its group, exactly where `K < s + Q ρ`: Hamilton's
 rule with what comes back alone added, for groups of any sizes, where what is shared is divided. -/
 theorem rises_iff_divided_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
@@ -1491,99 +1496,109 @@ end Partly
 
 namespace Sized
 
-/-- The two keepers together with one other, beside the last member alone. -/
-def big : List (List Member) := [[held, mate, first], [second]]
+/-- The two keepers together, and each other alone. -/
+def together : List (List Member) := [[held, mate], [first], [second]]
 
-/-- Each keeper with one other of the shared part, the keeper alone beside the three:
-`ByMeans.unequal`. -/
-def small : List (List Member) := ByMeans.unequal
+/-- Each keeper alone, and the two others together: both listings have groups of unequal size. -/
+def apart : List (List Member) := [[held], [mate], [first, second]]
 
-theorem big_common : ∀ g, g ∈ big → g.length * ByMeans.factor g = 3
+/-- The factors: two over each group's size. -/
+def factor (g : List Member) : Nat := 2 / g.length
+
+theorem together_common : ∀ g, g ∈ together → g.length * factor g = 2
   | _, .head _ => rfl
   | _, .tail _ (.head _) => rfl
-  | _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.tail _ (.head _)) => rfl
+  | _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
 
-/-- Each unit kept costs its keeper one, brings nothing back to it alone and gives two to every
-member of its group: with the keepers together, each leaves three, their groupmate four, and the
-member alone none. -/
-def bigOffspring : Member → Nat
+theorem apart_common : ∀ g, g ∈ apart → g.length * factor g = 2
+  | _, .head _ => rfl
+  | _, .tail _ (.head _) => rfl
+  | _, .tail _ (.tail _ (.head _)) => rfl
+  | _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
+
+/-- Each unit kept gives two to every other member of its group and takes one from its keeper
+(`K = 3`, `q = 2`, nothing coming back to the keeper alone), the base four: with the keepers
+together, each leaves five and the others four. -/
+def togetherOffspring : Member → Nat
+  | held => 5
+  | mate => 5
+  | first => 4
+  | second => 4
+
+/-- With each keeper alone, each leaves three and the others four. -/
+def apartOffspring : Member → Nat
   | held => 3
   | mate => 3
   | first => 4
-  | second => 0
+  | second => 4
 
-/-- With the same returns and each group holding one keeper, the keepers leave one each and the
-others two. -/
-def smallOffspring : Member → Nat
-  | held => 1
-  | mate => 1
-  | first => 2
-  | second => 2
-
-theorem big_returns : ∀ g, g ∈ big → ∀ p, p ∈ g →
-    bigOffspring p + 1 * Founding.keeps p = 0 + 0 * Founding.keeps p + 2 * total g Founding.keeps
+theorem together_returns : ∀ g, g ∈ together → ∀ p, p ∈ g →
+    togetherOffspring p + 3 * Founding.keeps p =
+      4 + 0 * Founding.keeps p + 2 * total g Founding.keeps
   | _, .head _, _, .head _ => rfl
   | _, .head _, _, .tail _ (.head _) => rfl
-  | _, .head _, _, .tail _ (.tail _ (.head _)) => rfl
-  | _, .head _, _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
+  | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
   | _, .tail _ (.head _), _, .head _ => rfl
   | _, .tail _ (.head _), _, .tail _ mem => nomatch mem
-  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+  | _, .tail _ (.tail _ (.head _)), _, .head _ => rfl
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ (.tail _ mem)), _, _ => nomatch mem
 
-theorem small_returns : ∀ g, g ∈ small → ∀ p, p ∈ g →
-    smallOffspring p + 1 * Founding.keeps p = 0 + 0 * Founding.keeps p + 2 * total g Founding.keeps
+theorem apart_returns : ∀ g, g ∈ apart → ∀ p, p ∈ g →
+    apartOffspring p + 3 * Founding.keeps p = 4 + 0 * Founding.keeps p + 2 * total g Founding.keeps
   | _, .head _, _, .head _ => rfl
   | _, .head _, _, .tail _ mem => nomatch mem
   | _, .tail _ (.head _), _, .head _ => rfl
-  | _, .tail _ (.head _), _, .tail _ (.head _) => rfl
-  | _, .tail _ (.head _), _, .tail _ (.tail _ (.head _)) => rfl
-  | _, .tail _ (.head _), _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
-  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+  | _, .tail _ (.head _), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ (.head _)), _, .head _ => rfl
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ (.head _) => rfl
+  | _, .tail _ (.tail _ (.head _)), _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.tail _ (.tail _ mem)), _, _ => nomatch mem
 
-/-- The same members, the same returns, the same spread of the amount over the whole and the same
-size-weighted spread of the groups' means, and either verdict: with the keepers together the
-group totals go with the means and the whole selects for keeping; with one keeper in each group
-every member's group total is the same, nothing shared is a return to a keeper, and the whole
-selects against keeping. So for groups of unequal size the verdict is not a function of the
-spread over the whole and the spread among the groups' means. -/
+/-- The same members, the same returns, the same spread of keeping over the whole and the same
+size-weighted spread of the group means (all of the spread lying among the means in both), and
+either verdict: with the keepers together a member's group total goes with its group's mean twice
+as steeply as with each keeper alone, and the whole selects for keeping in the first listing and
+against it in the second. So with groups of unequal size the verdict is not a function of the
+whole's spread and the size-weighted spread of the group means. -/
 theorem either_verdict :
-    discord (whole big) bigOffspring Founding.keeps <
-        concord (whole big) bigOffspring Founding.keeps ∧
-      concord (whole small) smallOffspring Founding.keeps <
-        discord (whole small) smallOffspring Founding.keeps ∧
-      whole big = whole small ∧
-      concordMeans big ByMeans.factor Founding.keeps Founding.keeps = 12 ∧
-      concordMeans small ByMeans.factor Founding.keeps Founding.keeps = 12 ∧
-      concord (context big) (fun g => total g Founding.keeps)
-        (fun g => ByMeans.factor g * total g Founding.keeps) = 12 ∧
-      concord (context small) (fun g => total g Founding.keeps)
-        (fun g => ByMeans.factor g * total g Founding.keeps) = 0 ∧
-      discord (context big) (fun g => total g Founding.keeps)
-        (fun g => ByMeans.factor g * total g Founding.keeps) = 0 :=
-  ⟨(rises_iff_kept_sized big bigOffspring Founding.keeps ByMeans.factor big_common
-      (by decide) big_returns).mpr (by decide),
+    discord (whole together) togetherOffspring Founding.keeps <
+        concord (whole together) togetherOffspring Founding.keeps ∧
+      concord (whole apart) apartOffspring Founding.keeps <
+        discord (whole apart) apartOffspring Founding.keeps ∧
+      concord (whole together) Founding.keeps Founding.keeps = 4 ∧
+      concord (whole apart) Founding.keeps Founding.keeps = 4 ∧
+      concordMeans together factor Founding.keeps Founding.keeps = 16 ∧
+      concordMeans apart factor Founding.keeps Founding.keeps = 16 ∧
+      concord (context together) (fun g => total g Founding.keeps)
+        (fun g => factor g * total g Founding.keeps) = 16 ∧
+      concord (context apart) (fun g => total g Founding.keeps)
+        (fun g => factor g * total g Founding.keeps) = 8 :=
+  ⟨(rises_iff_kept_sized together togetherOffspring Founding.keeps factor together_common
+      (by decide) together_returns).mpr (by decide),
     by decide, rfl, rfl, rfl, rfl, rfl, rfl⟩
 
 /-- Where what each unit kept gives its group is divided among the members instead, the two
 listings give one verdict, whatever the offspring numbers meeting the same returns: the verdict
 goes through the spread of the groups' means, and that spread is the same. -/
 theorem divided_one_verdict {w w' : Member → Nat} {B s q K : Nat}
-    (on_big : ∀ g, g ∈ big → ∀ p, p ∈ g → w p + K * Founding.keeps p =
-      B + s * Founding.keeps p + q * (ByMeans.factor g * total g Founding.keeps))
-    (on_small : ∀ g, g ∈ small → ∀ p, p ∈ g → w' p + K * Founding.keeps p =
-      B + s * Founding.keeps p + q * (ByMeans.factor g * total g Founding.keeps)) :
-    discord (whole big) w Founding.keeps < concord (whole big) w Founding.keeps ↔
-      discord (whole small) w' Founding.keeps < concord (whole small) w' Founding.keeps := by
-  have one := rises_iff_divided_sized big w Founding.keeps ByMeans.factor big_common
-    (by decide) on_big
-  have two := rises_iff_divided_sized small w' Founding.keeps ByMeans.factor ByMeans.common
-    (by decide) on_small
-  have sb : concord (whole big) Founding.keeps Founding.keeps = 4 := rfl
-  have ss : concord (whole small) Founding.keeps Founding.keeps = 4 := rfl
-  have mb : concordMeans big ByMeans.factor Founding.keeps Founding.keeps = 12 := rfl
-  have ms : concordMeans small ByMeans.factor Founding.keeps Founding.keeps = 12 := rfl
-  rw [sb, mb] at one
-  rw [ss, ms] at two
+    (on_together : ∀ g, g ∈ together → ∀ p, p ∈ g → w p + K * Founding.keeps p =
+      B + s * Founding.keeps p + q * (factor g * total g Founding.keeps))
+    (on_apart : ∀ g, g ∈ apart → ∀ p, p ∈ g → w' p + K * Founding.keeps p =
+      B + s * Founding.keeps p + q * (factor g * total g Founding.keeps)) :
+    discord (whole together) w Founding.keeps < concord (whole together) w Founding.keeps ↔
+      discord (whole apart) w' Founding.keeps < concord (whole apart) w' Founding.keeps := by
+  have one := rises_iff_divided_sized together w Founding.keeps factor together_common
+    (by decide) on_together
+  have two := rises_iff_divided_sized apart w' Founding.keeps factor apart_common
+    (by decide) on_apart
+  have st : concord (whole together) Founding.keeps Founding.keeps = 4 := rfl
+  have sa : concord (whole apart) Founding.keeps Founding.keeps = 4 := rfl
+  have mt : concordMeans together factor Founding.keeps Founding.keeps = 16 := rfl
+  have ma : concordMeans apart factor Founding.keeps Founding.keeps = 16 := rfl
+  rw [st, mt] at one
+  rw [sa, ma] at two
   exact one.trans two.symm
 
 end Sized

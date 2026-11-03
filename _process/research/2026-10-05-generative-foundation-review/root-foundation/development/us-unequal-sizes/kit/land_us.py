@@ -9,8 +9,8 @@ lean = "experiments/integrated-correction/general-framework/generative-basis/lea
 d = json.loads((root / lean / f"becoming-checks/{rid}/verification.json").read_text(encoding="utf-8"))
 assert d["status"] == "passed", d["status"]
 mods = {v["module"]: v for v in d["modules"]}
-assert mods["Becoming.SelectionLevels"]["theorems"] == 94, mods["Becoming.SelectionLevels"]["theorems"]
-assert mods["Becoming.RuleShaping"]["theorems"] == 62, mods["Becoming.RuleShaping"]["theorems"]
+assert mods["Becoming.SelectionLevels"]["theorems"] == 95, mods["Becoming.SelectionLevels"]["theorems"]
+assert mods["Becoming.RuleShaping"]["theorems"] == 66, mods["Becoming.RuleShaping"]["theorems"]
 for m in ("Becoming.SelectionLevels", "Becoming.RuleShaping"):
     assert not any(x.get("axioms") for x in mods[m]["declarations"]), f"an axiom in {m}"
 
