@@ -216,3 +216,140 @@ The dossier was read as a whole against what had moved since `b7b36ab74` (27 Oct
   - misleading: the kind relay shown without "the kind chosen so that the passings across kinds begin", beside a law that a finite closed balanced world has none, which is by name; "which side" with one side given; evolutionary suicide's witness, whose mark is a label; Hamilton's rule and coupled groups under "any type"; "each" reaching over the free-energy principle's five; S-11 silent on generalizing learners; S-23 silent on the core against going alike;
   - terms and minor: *renewal one grain up*, continuation and passing of support unglossed; distinct offspring in S-08; *for beliefs in counts* in S-18; "the rule's print".
   - 08 §8's sentence on a finite, closed, balanced world omits "by name" too. That is left for the chapter's owner; the dossier now says the bar is by name.
+
+## The front toward its ten minutes, 4 November 2026
+
+*Board item SF, the coordinator's word, after TS4. AI-written; no person has reviewed it.*
+
+A front's stated reading time must be true, or its excess recorded where the release gate's [amendment 1](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gates-item-6-sized-for-a-person-31-october-2026) keeps what cannot be cut. With TS4 in, the [front](../../../../../../theories/becoming/review/SCIENCES.md#the-dossier-in-ten-minutes) ran to 1,383 words against its 1,100, each excess recorded as it came in [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md). SF cut its prose only where the front itself or the dossier's fuller part already says the same, and kept what amendment 1 never cuts and TS4's bound on the point's exactness. What went:
+- from the header, its readers' narrower specialties but thermodynamics, which the packet's cover lists in full;
+- from the verdict, its first statement of the third parts, that an AI audit found them in a few rows: the verdict now states them once, in 08's words as S-02 quotes them, with the AI label on the audit's finding that each statement so forbidden is known in a neighbouring field, and the caveat on what the literature verdicts rest on, in S-02's words, shortened, since S-02 is off ecology's hour, follows the verdict, as in S-02;
+- from what a law is, that thermodynamics' laws come in as premises of periphery theorems, which S-04 and "Reading the items" state, and a gloss of the root, which the one page, read first, and the labels in "Reading the items" give;
+- from what would refute what, that a refutation removes no theorem and a failure stays recorded beside its thesis, which S-03 quotes from 08, and that the statement check is one thing asked, which "What we ask" asks.
+
+What we ask now points to the response form, in the packet cover's words. The question, the verdict and its caveat, what would change the verdict, the theses table, T3's line, what is not claimed and the times of the hour and the whole stay. T2's row is left to T2S, which is to change T2's statement. The front now runs to 1,316 words, 10.1 to 13.2 minutes, from 1,383: 216 over its ten minutes, so the section now states ten to fourteen minutes. The theses table with T3's line takes 565 of its words and what is not claimed 96: standings, failures as they fell, post hoc labels, the two premises with their roles and what is not claimed, which amendment 1 never cuts, so the front keeps them and the excess is recorded. Ecology's path runs to 6,279 words, 48.3 to 62.8 minutes, from 6,331, and the whole stays at 18,641 words and 27 characters, 143.5 to 186.5 minutes, the sentence on SF in how the dossier was made adding what the front lost; the stated 45 to 65 and 140 to 190 minutes hold.
+
+### The read
+
+One independent AI reader, read-only and with no part in the writing, read the first cut against the dossier's fuller part: whether each cut is said there or still in the front, whether a standing, failure, qualifier, label or pointer was lost, whether the new text says anything false or misleading or says more or less than before, and whether the front still reads as one. Its report stands below verbatim. Its line numbers are those of the cut it read.
+
+**Verdict: safe to land after two small fixes, at lines 10 and 12.** The theses table, T3's line and T1's "exact up to a top the step keeps" (line 18) are untouched. Every other cut is either in the fuller part or still in the front.
+
+**Substantive (low; small fixes)**
+
+1. **Line 10, the AI-audit label is gone.** "An AI audit found third parts in a few rows" was the front's only statement that the verdict comes from an AI audit. That is half of S-02's standing: "Assessment: an AI audit (UE0) and an AI search in three rounds (UE6)" (line 87). The verdict now reads as plain fact, and "the AI's prior knowledge" in the next sentence has nothing to refer back to. The label on the AI search survives.
+   - Fix: "though an AI audit finds each statement so forbidden known in a neighbouring field" (+3 words).
+
+2. **Line 12, "can become" became "becomes".** This drops the "can" of 08 §10: "One with content can become a science's law for a domain only once…" (08-METHOD.md:634). "Becomes … only once" leans towards saying the correspondence is enough on its own.
+   - Fix: restore "can" (+1 word).
+
+**Minor**
+
+3. **Line 10, "and not yet farther than the sciences taken together".** After the semicolon, "with the rest" can be read as covering this clause too. That would suggest the theory does reach farther than the sciences together for the few frameworks; the "though" clause argues against that reading. S-02 quotes 08 with a full verb: "it does not yet reach farther" (line 85).
+   - Fix: restore those words.
+
+4. **Line 12, "the periphery's over Mathlib's reals with their axioms reported".** Without a verb, this reads as part of "Most laws … in whole numbers".
+   - Fix: "; the periphery's are over Mathlib's reals, their axioms reported" (+1 word).
+
+5. **Lines 3 and 12, thermodynamics is no longer named on the front.** Two cuts removed it: "working on thermodynamics and stochastic thermodynamics" and "Thermodynamics' laws come in as premises of periphery theorems". So "For physicists" now addresses all physicists, and the front no longer says the physics comes in as premises.
+   - Both points are in the fuller part (lines 123, 125, 129, 38). The packet cover (README.md:22) still narrows the audience. The free-energy principle and open-endedness survive at line 26.
+   - Fix: "For physicists working on thermodynamics," (+3 words).
+
+6. **Line 28, the merged question list.** It now attaches "credited … and put at its right strength" to "the containment" through an embedded phrase.
+   - Fix: use the cover's wording (README.md:22), +2 words.
+
+7. **Line 28, the `#response-form` link.** It works only through GitHub's automatic anchor for "## Response form" (line 655), as `#reading-the-items` already does. The other dossiers have an explicit anchor (ALIGNMENT.md:649, PHILOSOPHY.md:641, BUDDHIST-THOUGHT.md:531). `research.py links` does not check links within the same page.
+   - Optional fix: add `<a id="response-form"></a>` above line 655.
+
+**Sound**
+- **Line 10, the reordered verdict.** It still says each forbidden statement is known in a neighbouring field, now as a concession tied to the joins, as in 08's text quoted at line 85. The caveat is word for word as at HEAD and matches S-02's known weaknesses (lines 90–91). It now follows both verdicts.
+- **Line 12.** "Not yet any science's" carries 08:634's sense, with "yet" kept. The gloss on the root survives at line 44 and on ONE-PAGE:11, which the header asks readers to read first.
+- **Line 14.**
+  - "Which is one thing you are asked" is carried by line 28.
+  - "A refutation removes no theorem…" is at line 109 (S-03), which the front now points to.
+  - "The theses exclude observations" matches line 102. "No measurement refutes a theorem" still implies that only the theses exclude observations.
+- **Line 24, "What is not claimed".**
+  - "New mathematics" is on line 10, in 08:480's words.
+  - "A science's law" is on line 12, and "Review by any person" on line 3.
+  - The ethics is at line 46 ("asserts neither. No item here uses either"). With the front no longer summarizing the ethics, AGENTS.md's rule to name both premises doesn't apply. Only the link to PHILOSOPHY.md is lost.
+- **Line 28.** "Says it says" became "says", which matches the cover.
+- **Coherence.** It still reads coherently in ten minutes.
+
+**Already there before the cut:** "with the rest it is level or states less" sits uneasily with S-17's quote that the theory "reaches farther than the principle alone" (line 495). 08's verdict names the free-energy principle in neither group. That one is for 08's owner.
+
+**Still to do when landing:**
+- READING-BUDGETS.md:32 still says 1,383 words for the front and 6,331 for the hour.
+- The SF claim asks for the 144 words still over budget to be recorded with the reason.
+- "How this dossier was made" (line 694) records each earlier change but not this cut.
+
+**What I read and ran**
+- **Read:**
+  - The diff, by line and by word.
+  - HEAD's front, and the current lines 1–140, 486–500 and 639–696.
+  - 08-METHOD.md lines 480 and 634, ONE-PAGE line 11, README.md line 22, READING-BUDGETS line 32 and the board's SF row.
+  - The link checker in `research.py` and `reading_catalogue.py`.
+- **Ran:** `git status`, `diff`, `show`, `grep`, `sed`, and `measure_layers.py` on the worktree and on HEAD.
+  - The front went from 1,383 to 1,244 words (9.6–12.4 minutes), still 144 over the 1,100 budget.
+  - The sciences hour went from 6,331 to 6,210 words (47.8–62.1 minutes), so "45 to 65 minutes" still holds.
+- No tests or builds.
+
+### How each was taken
+
+Each finding was checked against its source.
+- 1, the audit's label: taken, as "though an AI audit found that each statement so forbidden is known in a neighbouring field", the past tense matching the search's and, after the re-read, the clause made lighter. The label sits on the audit's finding that each forbidden statement is known in a neighbouring field, and with the search the front again names both halves of S-02's standing. It does not sit on the conclusion: UE0 concluded that the theory reaches farther than each framework alone, which the twenty-first review corrected to the few ([UE6's verdict](../ue6-beyond-the-sciences/VERDICT.md)), so "the few" is 08's.
+- 2, "can become": taken, in 08 §10's words.
+- 3, "it does not yet reach farther": taken, in 08's words as S-02 quotes them.
+- 4, the periphery's verb: taken, as before the cut.
+- 5, thermodynamics: the address taken, "For physicists working on thermodynamics". The premise sentence stays cut: S-04 and "Reading the items" state it, and the front states no physics result whose hypothesis it would be.
+- 6, the ask: taken, in the cover's words.
+- 7, the anchor: taken. The response form has the explicit anchor the other dossiers' forms have.
+- Before the cut, 08's verdict names the free-energy principle in neither group, while S-17 quotes the theory reaching farther than the principle alone. These are 08's words, which the front restates; the finding went to the coordinator for 08's owner.
+- Still to do when landing, READING-BUDGETS, the excess and the dossier's record of the change: done in this landing.
+
+Beyond the read: what is not claimed stands whole again. The first cut had taken from it a science's law and review by any person, which the front says elsewhere, new mathematics, which the verdict says only of the central results, and the ethics sentence, which "Reading the items" carries. The reader found that sound, since the front no longer summarized the ethics. But the release gate's amendment 1 never cuts what is not claimed or the two premises with their roles, and the brief had not given the reader that rule; so the front keeps them and records the excess, 51 words.
+
+### The re-read
+
+The same reader then read the fixes, with amendment 1 now given it, and this record and the budget lines as they then stood. Its report stands below verbatim. Its line numbers are those of the fixes it read, and the placeholder it names is this section.
+
+The fixes match their sources. One thing blocks landing: the kit's "How each was taken" section is still a placeholder.
+
+**(a) Each fix against its source: sound, nothing false added.**
+- **Line 10:** AUDIT.md:44 and :339 give the knownness. VERDICT.md:7 and :19 show "the few" is the twenty-first review's correction, so the AI label belongs on the audit's finding, not on the conclusion. "It does not yet reach farther" is 08's wording (line 85), and "the AI's" now refers back to the audit.
+- **Line 12:** "can become" is 08:634. The periphery clause is HEAD's.
+- **Line 3** shortens the cover (README.md:22). **Line 28** takes the cover's clauses. The anchor at line 655 is in place.
+
+**(b) Amendment 1: substantive, and it corrects my first report.**
+- The ethics sentence is never-cut on two counts: it carries the premises with their roles, and it is a non-claim. Line 24 was the front's only place for either, so I was wrong to call its removal sound.
+- By its words ("the layer keeps it"), the amendment protects each non-claim within the layer, not each copy of it.
+- "Review by any person" (line 3) and "A science's law" (line 12) are said elsewhere in the front, so the rule would let them go.
+- "New mathematics" must stay: line 10 limits it to the central results, as 08:480 does, while line 24 disclaims it without that limit.
+- Keeping the paragraph whole costs 7 words and keeps the non-claims in one list. I would keep it whole, as a choice rather than because the rule requires it.
+
+**(c) The records**
+- **Substantive, kit README.md:298:** "How each was taken" is the placeholder `TAKEN_SF`. It should record the "found" wording and that line 24 was restored against my "sound".
+- **Minor, the kit's "What went", second bullet:** "says it once, as the AI audit's finding" contradicts the front, which labels the knownness, not the reach. Also, what went was the first statement, not the "second".
+  - Fix: "says it once, as 08's verdict, the AI label on the audit's finding that…".
+- **Minor, READING-BUDGETS:32:** "207 over after SF cut what … already says: S-02's caveat…" now reads as if SF cut the caveat, the standings and TS4's bound.
+  - Fix: move the SF clause after the list.
+- **Minor, SCIENCES.md:695:** add "and then the fixes; its findings were taken", as the earlier entries do.
+- **Figures: all confirmed by `measure_layers.py`.**
+  - Front: 1,307 words (10.1–13.1 minutes).
+  - Hour: 6,270 words (48.2–62.7 minutes).
+  - Whole: 18,618 words and 27 characters (143.3–186.3 minutes).
+  - The table with T3's line is 565 words; "What is not claimed" is 96.
+  - Line 35's "143 to 186" holds, as do the stated 45–65 and 140–190 minutes.
+
+**(d) Minor, line 10:** the sentence now runs about 60 words, and "found each statement so forbidden known" is heavy. A full stop before "with the rest" brings back HEAD's break at no cost in words.
+
+**What I read and ran**
+- **Read:** the three-file diff; SCIENCES.md lines 1–29, 655–656 and 695; the kit's new section; READING-BUDGETS lines 32 and 35; WHAT-REMAINS.md lines 381–392; VERDICT.md lines 7 and 19; AUDIT.md lines 44, 339 and 344–356.
+- **Ran:** `git status`, `git diff`, `git show`, `grep`, `sed`, `awk`, `wc`, `measure_layers.py`, and `cmp` against a copy of HEAD's line 24 in my scratchpad.
+- No tests or builds.
+
+Each point was taken:
+- (b): what is not claimed stays whole, as the reader would keep it, and on its argument: "New mathematics" there disclaims more than the verdict's "none of the central results", and one list keeps the non-claims together.
+- (c): this section records the "found" wording and what is not claimed restored against the first read's "sound"; the bullet on what went from the verdict names its first statement and puts the AI label on the audit's finding; READING-BUDGETS' sciences part puts SF's clause after what the front keeps; the how-made sentence says the fixes were read and taken.
+- (d): the verdict's break before "With the rest" is back, and the audit's finding reads "found that each statement so forbidden is known", two words more.
+
+After the re-read, at the coordinator's word, the front states its time as the measure gives it, as AT's alignment front does: "This section takes ten to fourteen minutes", the measured range rounded out to whole minutes. The figures script checks those words against the measure.

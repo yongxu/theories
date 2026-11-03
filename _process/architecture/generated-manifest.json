@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "3b975ea1d0bfc631249c6a442058890d8a3b09baec79af0d5f717370a40c601a",
+    "README.md": "680038708db982a70dd28db171c7f96c2c5659a1c7da076381eca9eb75af30b2",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "d70f01504b3eb375c5e084c695ab409ca7b9688eb333dc57f5852e330d73a91f",
     "GOALS.md": "c0dc5700895a908b95f24a6d434ef6104327282dbf0d5cb9cff1853be494020f",
@@ -252,9 +252,9 @@
     "theories/becoming/results/README.md": "aca37f134b6d479e2e107afacd26e60589f6bb8f169e572cef8b97712815ca40",
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
-    "theories/becoming/results/data/lean-index.json": "4d97c610c62c7fa42f379d77fb14378cb069e0f1cbb6878570447e8613c46bb6",
-    "theories/becoming/results/data/source-index.json": "44aceba1955bbe78c1cdf62fd2dbd2130e3c4f9bfc245c1672fd5201befde6cf",
-    "theories/becoming/results/LEAN-INDEX.md": "c41367af06697d0cbe98210b29541a53c0cd828aabde2af11ff6a56463d54380",
+    "theories/becoming/results/data/lean-index.json": "7252c28901a017fc5c8c3b4baf3e80856d2916d34df9d60add2fc0acc3acbe8e",
+    "theories/becoming/results/data/source-index.json": "ea622604f0366ea013656fe63401752a02c80fcc04b1167323c346b57b318fbd",
+    "theories/becoming/results/LEAN-INDEX.md": "3a6cc02eb06c3229f7671b0a9fe1a500336bfd04f1ebc0511523421f8cad2e5c",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "83a03213b8a3d6a1573a29a58d5db1354e9872a471d778a7314f6235f08ee3e6",
     "theories/becoming/results/lean-declarations/becoming-core.md": "01d95ce7528f2863b59b7a18d00ad9270e74176b93922ffcab75fc6a0c7e687a",
     "theories/becoming/results/lean-declarations/ethics.md": "45c856faa88d27ed0b8ae9118590f92d981b8a8fad9e4949ffb10b1b0485e7bf",

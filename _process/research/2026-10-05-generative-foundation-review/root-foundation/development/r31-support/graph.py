@@ -23,6 +23,13 @@ def core_list():
     return re.findall(r'"([^"]+)"', m.group(1))
 
 
+def checker_list(name):
+    """One of the checker's module lists (`FOUNDATION`, `INSTANCES`, `APPLICATIONS`)."""
+    src = (PKG / "check_becoming.py").read_text()
+    m = re.search(r"^" + name + r" = \[(.*?)\]\n", src, re.S | re.M)
+    return re.findall(r'"([^"]+)"', m.group(1))
+
+
 def strip_comments(src):
     src = re.sub(r"/-.*?-/", "", src, flags=re.S)
     return re.sub(r"--[^\n]*", "", src)
