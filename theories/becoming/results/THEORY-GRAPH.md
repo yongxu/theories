@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3203 nodes, 6175 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3206 nodes, 6183 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -15,7 +15,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Significance and alignment | 0 | 81 | 60 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
-| Not yet assigned | 0 | 2 | 1 | 0 |
+| Not yet assigned | 0 | 3 | 2 | 0 |
 
 ## The grammar's concepts
 
@@ -649,14 +649,15 @@ Results (7):
 
 ## Not yet assigned
 
-Results (2):
+Results (3):
 
+- [Coupled drawers keep a need only where the coupling reaches it](records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md) (recorded-checked)
 - [The capacity to shape the rule, selected among groups](records/shaping-selected-among-groups.md) (recorded-checked)
 - [The critical mass, drawn one member at a time](records/drawn-shaping-drawn-one-at-a-time.md) (recorded-checked)
 
-Modules (1, 1 stated on the grammar): `GrammarPath`
+Modules (2, 1 stated on the grammar): `CoupledDrawers`, `GrammarPath`
 
 
 ## Not yet on the root
 
-301 of 380 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+302 of 381 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

@@ -14,7 +14,7 @@
 
 **Start with** [the one page](theories/becoming/ONE-PAGE.md) (10–13 minutes), then [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (55–71 minutes). [The opening](#truth-exists) is a first-person conviction (21–27 minutes).
 
-**Recorded Lean receipts** credit 499 of [530 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. [One](theories/becoming/chapters/05-COLLECTIVES.md#t3) falls if, under its stated conditions, trained systems nearer a reward's optimum leave higher, on average, what lies beyond their couplings; one frozen test varied that nearness on small trained policies and found none of its forbidden cases. No human review yet.
+**Recorded Lean receipts** credit 500 of [531 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. [One](theories/becoming/chapters/05-COLLECTIVES.md#t3) falls if, under its stated conditions, trained systems nearer a reward's optimum leave higher, on average, what lies beyond their couplings; one frozen test varied that nearness on small trained policies and found none of its forbidden cases. No human review yet.
 
 ---
 
