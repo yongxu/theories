@@ -1,0 +1,68 @@
+# T1's standing beyond the model
+
+*AI-written, 3 November 2026 (board item T1S, the coordinator's word after [TS](THESES-STANDINGS.md#not-done-here)). No person has reviewed it. About 10 minutes to read; [the check's report](T1-STANDING-CHECK.txt), about an hour and a quarter more.*
+
+TS's reader found two gaps in T1 that no front could fix until the home did. T1's home, [02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#t1), had *In the model*, *Forbids*, *Refuted by* and *Evidence*, but no *Standing*, while T2, T3 and T6 each say how far they are established. And [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s row copied only the first in-the-model clause, so the joint draw, what the thesis is about, was missing from the table. 08 §9 defines standing as "how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)" and says the table copies it from the home. This item gave T1 its standing in the home and copied it to 08's row. Documents only: no Lean, no record and no core run.
+
+## What changed
+
+**02, T1's *In the model*.** The joint-excess clause said "joint excess over a gated renewal ends it whatever each drawer's own draw". The Lean is narrower: `Flow.joint_excess_ends` ends dependents after `n` consecutive steps of joint excess from a level below `n + m`, not after any excess. Labelled proved, the clause had to say what is proved, so it now takes 05's words with their premises ([05](../../../../../../theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)): "in a balanced flow where activity needs support and only active formations give, under the gate at need `m`, `n` consecutive steps of joint excess from a level below `n + m` end every formation depending on the condition at a need of at least `m`, whatever each drawer's own draw".
+
+**02, T1's new *Standing*.** In the model proved, on the regime and on the World model (*In the model*); beyond them conjectured, on the frozen tests. The thesis in the model is the contrapositive of `Flow.joint_excess_ends`, as [§284](../../BECOMING-RENEWAL-READING.md#284-theses-and-conjectures-the-theorys-strongest-claims-with-their-standing-th1) first stated it, so its content as a thesis lies in actual conditions meeting the premises. The standing then says what the frozen tests establish of that:
+- **The one real-data pass.** Of the three settings passed, one is real data: the need separated fates on regimes of one yeast experiment, whose only draw is the dilution (MQ2, §266). The regimes were held out from the fit but not from the analyst, who had read them in MQ1 and seen there, post hoc, a need separate their fates when read by the floor MQ2 then pre-registered (§253; MQ2's frozen predictions and the tests' README say so).
+- **Yeast data not read before.** On these, no frozen test of the need or of the fates it separates has passed: at the instrument's floor twice (MQ1's D2, MQ6's A1), next to the fold (MQ6's A2), and after the salt shock (MQ2's C1 and C2). The *Evidence* already listed each failure. The standing says what they show together.
+- **The salt shock.** On the first reading every population stood above the predicted need, so the need called fates as the null did (0.78). That meets the letter of T1's *Refuted by*, "fates across a predicted point separated no better than by a null". With none below the need, the test could not reach what T1 forbids, and each error was a death above the need. Needs placed post hoc by that experiment's own levels before the shock are right at DF 825 and wrong at 750, 0.81 in all. Four days after the shock is too short, the study says, to settle fates near the need.
+- **The simulations.** The other two passes are simulations, the only tests whose design has more than one drawer. In the simulated yeast, two harvesters each within the largest sustained draw and together beyond it collapsed the population, as follows in the deterministic limit once their draws add; what could have failed there is that their harms together exceeded the sum of their separate harms, in every cell. The other passes bearing on T1 hold by the mathematics in the deterministic limit (§253). In the commons, joint excess is an identity of its accounting, and the scope prediction, with one harvester, could have failed and held (§240).
+
+**08 §9, T1's row.** Its Standing cell copies the home's *In the model* in full, the joint-excess clause and its premises included, and then the standing beyond the model, shortened, keeping each qualifier: the analyst, the first reading, and what the simulations' passes test.
+
+## How it was read
+
+T1's five studies were read in full: §240 (CG1), §253 (MQ1), §266 (MQ2), §272 (MQ3) and §314 (MQ6). So was §284, where T1 was first given its standing, and so were the sciences dossier's S-14 and S-03. T2's, T3's and T6's standings were read for their form. The study's count, three settings passed and four failed, is the *Evidence*'s and stays.
+
+## The check
+
+An independent check read the first draft. It had three lenses (the evidence, the standing in 08 §9's sense, and consistency with everything that copies T1), and an adversarial verifier read each finding. All the agents were AI and read-only. The workflow ran 26 agents, one verifier per finding, more than the nine estimated. Their report, findings and verdicts, is [T1-STANDING-CHECK.txt](T1-STANDING-CHECK.txt). None of its 23 findings was refuted outright: three were confirmed and twenty partly, each verifier correcting the finder's fix.
+
+**Taken**, into the home first and then 08's row:
+1. "Held-out" without its qualifier read as unseen data. The regimes were held out from the fit, not from the analyst.
+2. The standing named one real-data failure, the salt shock. Every frozen test of the need or its fates on yeast data not read before failed, and the standing now says so.
+3. The salt-shock sentence left out which side failed, and it read a post hoc reading as a rescue. The deaths were above the need, the converse T1 does not claim. The post hoc reading places the needs by the separate experiment's own levels, not by a change the shock made, and does little better than the frozen rule.
+4. "The only tests with more than one drawer" was not exact. The fish stocks' catch is read as one draw. After the re-check: "the only tests whose design has more than one drawer".
+5. The simulated passes were counted without what their own records say they test. Each is now said.
+6. The joint-excess clause, now labelled proved, said more than the Lean. It now takes 05's words, in the home and in the row.
+7. In 08, "T1's *Refuted by*", as T2's row names its own, and "on frozen tests", as T2's row has.
+
+**The re-check.** A fresh reader, also AI and read-only, re-read the combined text against the same sources and the Lean. It confirmed that no frozen test of the need or its fates on yeast data not read before passed, listing each one. It also confirmed the first reading's 32 of 32 populations above the need, and the post hoc 8, 8, 3 and 7 correct at the four dilutions. It found eight more points, all taken:
+1. The joint-excess clause dropped 05's premises: balance, activity needing support and only active giving. The Lean has them too. They are now named.
+2. The analyst had seen more than the floor in MQ1: per-regime needs, and fates separated by them at five of six regimes (MQ2's frozen predictions say so).
+3. *Refuted by* names no side. The salt shock meets its letter. With every population above the need, the test could not reach what T1 forbids.
+4. 08 dropped "on the first reading". On the next day's reading the need did one population better than the null.
+5. "Read more than one drawer apart" is false for the commons, whose count pools every take. Now: "whose design has more than one drawer".
+6. The simulated yeast's collapse follows in the deterministic limit once the two harvesters' draws add. What could have failed was super-additive harm.
+7. 08 left out the home's qualifiers on the two simulations.
+8. "Proved on the regime and on the World model" could be read as T1 itself proved. Now: "in the model proved", as 08's row says.
+
+**Not taken.**
+- *Narrowing T1's* Refuted by *to the side the thesis claims.* Two readers noted that the thesis and *Forbids* are one-sided, while *Refuted by*'s second form, fates across a predicted point separated no better than by a null, is two-sided, so deaths above the need can meet it. The form stays. Narrowing a refutation clause just after a result met its words would choose the scope afterwards, which the home's *Evidence* rules out ("the need is measured apart from the fate it predicts, so the scope is not chosen afterwards"). The two-sided form also tests what *In the model* claims, that the point is exact. The standing now says on which side the one such result fell.
+- *Rewording the* Evidence *parenthesis on the salt shock* ("the converse, not claimed: a shock changes the regime and its need"). It says why the converse is not claimed, not what the post hoc analysis showed. The sciences dossier quotes it word for word (S-14), so it stays.
+
+## What follows, with their owners
+
+**The sciences dossier** (its owner, "Names and identity discussion"), now that the home has landed:
+- the front's T1 Standing cell (SCIENCES.md:18) copies 08's new cell;
+- the front's tests cell, "the simulated one", becomes the two simulations;
+- S-03's known weakness (:112), "T1's home gives its standing only in the model", is no longer true, and could read "Their standings say so.";
+- "How this dossier was made" (:694) says the same in the present tense;
+- S-14's "Standing and use" (:404) says "Thesis", and could say "Thesis, proved in the model and beyond it conjectured";
+- S-14's list of the simulation's passes (:407) names A2 and A3 only, and the home now names the two harvesters (A4).
+
+The ecology hour (the front with S-11 to S-16) is at its 6,000-word budget exactly, so whatever the front or S-14 gains needs the hour's stated time restated, or the same words cut there. The check's measure-based estimate is 48 words on the front. The front's ten-minute excess is recorded in READING-BUDGETS and grows with it.
+
+**The fronts** (their owner):
+- *The one page and the overview.* ONE-PAGE.md:17 and THE-THEORY-OF-BECOMING.md:49, with their Chinese editions, say "T1: three settings passed, four failed". That is true, but next to "Proved on models" it can read as the standing. It could read "T1, conjectured: three settings passed, four failed".
+- *The overview's T1 cell.* THE-THEORY-OF-BECOMING.md:166, and its Chinese edition, could open "in the model proved, the point exact; beyond the model conjectured".
+- *OPENING's note on conditions.* OPENING.md:65, rendered into README.md:85, says T1 is "supported on held-out regimes of real yeast, untested in the field". That is "supported" where the home now says "conjectured", it leaves out the four failed settings, and a frozen field test on fish stocks did run and failed. The home's exact claim is that no field test of a need measured in advance has run.
+- *The collective page.* COLLECTIVE-DIRECTION.md:85 cites T1 for a fish-stock result about the withheld-levels margin, which T1 excludes. T1's own timing result is the regime margin timing neither break in yeast driven past its fold. This predates T1S.
+
+The check gives an exact wording for each, with its sources, in [T1-STANDING-CHECK.txt](T1-STANDING-CHECK.txt).

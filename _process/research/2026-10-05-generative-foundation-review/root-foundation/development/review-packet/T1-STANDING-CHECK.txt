@@ -1,0 +1,470 @@
+AI-written. T1S's independent check, read-only, of the first draft of T1's standing (02 §5, 08 §9's row), 3 November 2026: three lenses (the evidence; the standing in 08 §9's sense; consistency with what copies T1), each finding verified by an adversarial reader. 26 agents. Line numbers are those of the draft it read. What was taken is in T1-STANDING.md.
+
+===== evidence
+FOLLOW_ON: If all the findings are taken, a combined 02 Standing that keeps the change's frame could read: "*Standing*: proved in the model (*In the model*); beyond it conjectured, on the frozen tests above. Of the three settings it passed, one is of real data, where the need separated fates on regimes of one yeast experiment held out from the fit but not from the analyst, who had read their fates in MQ1 and took the fate rule's floor from that reading; its only draw is the dilution (§266, §253). Every frozen fate or need verdict on yeast whose values had not been read failed: twice the fate rule counted noise at the instrument's floor as survival below the need (§253, §314; read by the floor, post hoc, the need separates fates in 5 of 6 regimes and 97–100%), next to the fold the need held out from the fit was 0.58 of the need read from fates (§314), and after the salt shock fates separated no better than by a null, the form *Refuted by* names (0.78, the null's 0.78; 0.81 a day later); read post hoc as the separate experiment's own regime, its levels 8–20% lower before the shock, the needs are right at DF 825 and wrong at 750, 0.81 in all, so that reading does not remove the failure (§266). The other two passes are simulations, the only tests that read more than one drawer apart: in the simulated yeast two harvesters each within the largest sustained draw ended it together, while its other passes bearing on T1 check the measured quantities, not the thesis (§253); in the commons joint excess held as an identity of its accounting, its scope as predicted (§240). The fish-stock test read several fleets' catch as one total and failed, most stocks outside the scope (§272)."
+
+08's cell would then be cut from this, and SCIENCES.md:18 re-copied from 08, so the front keeps its qualifier on the simulated passes.
+
+Pre-existing, outside the diff, and for the home's owner: T1's *Evidence* parenthesis "the converse, not claimed: a shock changes the regime and its need" does not match P3, which reads the separate experiment's pre-shock regime, not a change made by the shock. S-14 (SCIENCES.md:420) quotes that parenthesis and would need to follow any change to it.
+
+-- [0] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=confirmed
+ QUOTE: where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266)
+ PROBLEM: The one real-data pass is presented as a held-out test without the qualifier its sources attach to it. The regimes were held out from the fit, not from the analyst: their fates had already been read in MQ1, and the fate rule's floor (0.01) was chosen post hoc in MQ1 from that reading of the same data. A reader takes "held-out" as unseen data, which overstates how far the one real-data support establishes T1. 08's cell has the same omission: "(held-out yeast regimes, the dilution the only draw)".
+ FIX(finder): 02: "where the need separated fates on regimes of one yeast experiment held out from the fit but not from the analyst, who had read their fates in MQ1 and took the fate rule's floor from that reading; its only draw is the dilution (§266, §253)". 08: replace "(held-out yeast regimes, the dilution the only draw)" with "(yeast regimes held out from the fit, not from the analyst; the dilution the only draw)".
+ REASON:  0.01 floor was "pre-registered". README line 54 says MQ2 read fates by that floor.
+
+So before MQ2 was frozen, the analyst had seen the held-out regimes. He had also found post hoc, on those same data, the floor by which MQ2's A1 scored "the need separated fates". The new *Standing* exists to say how far T1 is established. It singles out this pass as T1's one real-data support and calls the regimes "held-out" with no qualifier. A scientist reads that as unseen data, which overstates the support.
+
+The omission is also uneven. S-14 lists two known weaknesses of this support. The new sentence takes up one of them, the salt shock and its post hoc reading, and leaves out this one. 08's new cell has the same gap: "(held-out yeast regimes, the dilution the only draw)".
+
+Every part of the finding holds; I found no part that overstates. One small difference: the finding says the floor was "chosen" and the README says "found". My fix copies the sources' own words: "held out from the fit, not from the analyst", "had been read in MQ1", "found post hoc". It also avoids the finding's ambiguous "one yeast experiment held out from the fit", which can be read as the whole experiment being held out.
+ FIX(verifier): 02-MAP.md line 278: replace "where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266); the other two are simulations" with "where the need separated fates on regimes of one yeast experiment whose only draw is the dilution, regimes held out from the fit, not from the analyst: they had been read in MQ1, and the floor by which fates were read was found there post hoc (§266, §253); the other two are simulations".
+
+08-METHOD.md line 568: in T1's Standing cell, replace "(held-out yeast regimes, the dilution the only draw)" with "(yeast regimes held out from the fit, not from the analyst, the floor its fates were read by found on them post hoc; the dilution the only draw)".
+
+-- [1] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: Of the three settings it passed, one is of real data
+ PROBLEM: The only real-data failure the Standing names is the salt shock. It leaves out that every frozen fate or need verdict on yeast data the analyst had not yet read failed. MQ1's D2 was frozen before any value was read. MQ6's A1 and A2 were held out from the analyst, a stricter hold-out than MQ2's: the odd-level fit landed before the even levels were read. Both fate rules printed below-need starters as surviving, which is the form *Forbids* names, and only a post hoc reading by the instrument's floor separates fates. MQ6's need next to the fold was 0.58 of the need read from fates. A reader of the Standing would believe that the need held up on real data, apart from one shock. The sources show that the one pass came on already-read data and that every unread test of the need failed under its frozen rule.
+ FIX(finder): Insert after the sentence ending "(§266, §253)": "Every frozen fate or need verdict on yeast whose values had not been read failed: twice the fate rule counted noise at the instrument's floor as survival below the need (§253, §314; read by the floor, post hoc, the need separates fates in 5 of 6 regimes and 97–100%), and next to the fold the need held out from the fit was 0.58 of the need read from fates (§314)." In 08, after "...the only tests reading more than one drawer apart" (see the drawer finding), add: "; every frozen fate or need verdict on yeast not read before failed, twice at the instrument's floor (by the floor, post hoc, the need separates fates) and once next to the fold".
+ REASON: ern, not the failures themselves.
+
+The proposed fix is not exact:
+- Its anchor "(§266, §253)" does not exist; the sentence ends "(§253, §240)".
+- Its parenthesis "the need separates fates in 5 of 6 regimes and 97–100%" fuses two post hoc results. MQ1's floor reading separates fates at 5 of 6 DFs and "fails next to the fold (DF 1600, 87.5%)" (§253:10848-10849); MQ6's gives 97-100% (§314:13988). The fusion drops MQ1's failure next to the fold, so it overstates the rescue.
+- Its 08 count, "twice at the instrument's floor ... and once next to the fold", leaves the salt shock out of "every".
+
+Read in full:
+- The diff.
+- 02-MAP.md 270-281; 05-COLLECTIVES.md 224-229; 03-KNOWING.md 482-495; 08-METHOD.md 560-568.
+- Study §253 (10809-10875), §266 (11323-11381), §284 (12358-12402) and §314 (13954-14025).
+- experiments/margin-measured/README.md 1-80 and 140-260.
+- SCIENCES.md 1-40, 99-119 and 395-426.
+- THESES-STANDINGS.md, first 80 lines.
+
+Searched only:
+- PREDICTIONS-2026-10-20-DATA.md, for how D2's need û was defined and how it was calibrated against a synthetic null.
+- The README, for the D2, C1 and C2 rows.
+
+Not read: §240, §272 and the commons README, which this finding does not turn on.
+ FIX(verifier): In 02-MAP.md:278, replace the two sentences after "beyond it conjectured, on the frozen tests above." with:
+
+"Of the three settings it passed, one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution, regimes held out from the fit, not from the analyst, since MQ1 had read them (§266); the other two are simulations, the only tests with more than one drawer (§253, §240). On yeast values not read before, no frozen test of the need or of the fates it separates passed. Twice the frozen fate rule counted noise at the instrument's floor as survival below the need, and only read by the floor afterwards does the need separate fates, in MQ1 except next to the fold (§253, §314); the need predicted by the fit on the odd sucrose levels was 0.58 of the need read from fates at 0.2%, the held-out level nearest the fold (§314); and after the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266)."
+
+In 08-METHOD.md:568, replace "of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer; after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc" with:
+
+"of the three settings passed, one of real data (yeast regimes held out from the fit, not from the analyst, the dilution the only draw) and two simulations, the only tests with more than one drawer; on yeast values not read before no frozen test of the need or its fates passed: twice the fate rule counted noise at the instrument's floor as survival below the need (read by the floor, post hoc, the need separates fates, in MQ1 except next to the fold), the held-out need next to the fold was 0.58 of the need read from fates (MQ6), and after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc"
+
+If the separate drawer finding changes the clause "the only tests with more than one drawer", keep that change and apply this one around it.
+
+-- [2] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266).
+ PROBLEM: The clause implies that a post hoc analysis accounts for the failure as a change of regime. In fact P3 does no better than the frozen C2. Locating each column by its own level is right at DF 825 (7 of 8) and wrong at DF 750 (3 of 8), 0.8125 in all, against the null's 0.78125. So no post hoc reading yet removes the failure; it only moves the error to the other dilution. P3 also rests on the experiment's pre-shock levels (8-20% below the fitted experiment's), so what it reads is the separate experiment's own regime, not a regime the shock changed. "No better than by a null" is exact for C1, where the need called all 32 populations survivors just as the null did. C2, the day-6 reading frozen because a day-5 optical density may count killed cells, reached 0.81. The README also says four days after the shock is too short to settle fates near the need. 08's "read as a change of regime only post hoc" has the same problem. The pre-existing Evidence parenthesis "a shock changes the regime and its need" is not what P3 shows either.
+ FIX(finder): 02: "After the salt shock fates separated no better than by a null, the form *Refuted by* names: the predicted need lay below every post-shock density and called all 32 populations survivors, as the null did, while 7 of 8 died at DF 825 (accuracy 0.78, the null's 0.78; 0.81 on the next day's reading). Read post hoc as the separate experiment's own regime, its levels 8–20% lower before the shock, the needs are right at DF 825 and wrong at 750, 0.81 in all, so that reading does not remove the failure; fates were read four days after the shock (§266)." 08: "after a salt shock fates separated no better than by a null (0.78, the null's 0.78; 0.81 a day later), the form *Refuted by* names, and a post hoc reading as the experiment's own regime does no better (0.81)".
+ REASON: f-regime explanation.
+   - It omits that the regime-located needs do no better.
+   - 08's "read as a change of regime only post hoc" is worse: it reads as though the account itself takes that reading. 02's Evidence says that reading is "not claimed".
+4. The four-day limit is cited correctly. README line 280 and §266 lines 11361-11362 say "Day 9 is four days after the shock, too short to settle fates near the need."
+
+What does not hold exactly:
+- The remark that the Evidence parenthesis "a shock changes the regime and its need" is "not what P3 shows either" is not a defect. That parenthesis labels the reading "the converse, not claimed", so it does not attribute it to P3. It also lies outside the change.
+- The C2 point is a gain in precision, not an error. C1 is the first frozen prediction, and the home calls it that.
+
+The proposed fix needs three repairs:
+- Its 02 text says "no better than by a null" and then gives 0.81, which is one population better than the null. The fix should name the first reading.
+- Its 08 text, "does no better (0.81)", can be read as no better than the null, which is false (0.8125 against 0.78125).
+- It gives the four days without the study's own qualifier.
+ FIX(verifier): 02-MAP.md line 278: replace "After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266)." with "After the salt shock, on its first reading, fates separated no better than by a null, the form *Refuted by* names: the predicted need lay below every post-shock density, so it called all 32 populations survivors, as the null did, and 7 of 8 died at DF 825 (accuracy 0.78, the null's 0.78; 0.81 on the day-6 reading). Located post hoc by the separate experiment's own levels before the shock, 8–20% below the fitted experiment's, the needs were right at DF 825 (7 of 8) and wrong at 750 (3 of 8), 0.81 in all, so that reading does not remove the failure; the fates were read four days after the shock, too short, the study says, to settle fates near the need (§266)."
+
+08-METHOD.md line 568, T1's Standing cell: replace "after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc" with "after a salt shock, on the first reading, fates separated no better than by a null (0.78, the null's 0.78; 0.81 a day later), the form *Refuted by* names; needs located post hoc by the experiment's own pre-shock levels reached the same 0.81, right at DF 825 and wrong at 750".
+
+-- [3] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: the other two are simulations, the only tests with more than one drawer (§253, §240)
+ PROBLEM: This is false as worded. The fish-stock tests' draw is the whole catch of several drawers (fleets, gears, commercial and recreational), read as one total. That joint draw is what T1 is about, and that test failed: under held catches, 63% of episodes below the regime's point fell, against the 80% required, with most stocks outside the scope. A reader is told that only simulations have had more than one drawer, which hides that the one field setting with several drawers failed. What the simulations alone do is read the drawers apart, which is what T1's own-versus-joint contrast needs. 08's "two simulations, the only tests with more than one drawer" has the same error.
+ FIX(finder): 02: "the other two are simulations, the only tests that read more than one drawer apart (§253, §240); the fish-stock test read the whole draw of several fleets as one total catch and failed, most stocks lying outside the scope (§272)". 08: "two simulations, the only tests reading more than one drawer apart (the fish-stock test read several fleets' catch as one total, and failed)".
+ REASON: 1) "Hides that the one field setting with several drawers failed." The fish failure is stated two sentences earlier in the same paragraph (Evidence: "fish stocks under held catches ... (§272)") and in 08's Evidence column ("in fish stocks under held catches (MQ3)"). By MQ3's frozen design, that test could not reach T1's own-versus-joint content. §284 (12388) also records that T1's scope "places most assessed fish stocks (rarely depensatory) outside the scope, and the entry says so rather than counting MQ3 F3 for or against it."
+(2) The evidence offered for "the whole catch of several drawers (fleets, gears, commercial and recreational)" comes from MQ7 (PREDICTIONS-MQ7:139, README:264, which sits under "MQ7."). MQ7 is T2's test (§316), not one of T1's. MQ3's rule is "total catch `TC-MT` ... else landings `TL-MT`" (PREDICTIONS-MQ3:45). Landings leave out discards, so MQ3 did not always read "the whole draw", and MQ3's sources never mention fleets.
+
+The proposed fix carries both errors ("read the whole draw of several fleets", plus a failure restated as Standing), so I would not take it as written. The plain rewording below is true against every source and claims no more than they do.
+ FIX(verifier): 02-MAP.md:278, replace "the other two are simulations, the only tests with more than one drawer (§253, §240)" with "the other two are simulations, the only tests that read more than one drawer apart (§253, §240)". 08-METHOD.md:568, replace "and two simulations, the only tests with more than one drawer" with "and two simulations, the only tests reading more than one drawer apart". Optional, in 02 only, if the reader should see why the fish test does not count: append "; the fish stocks' catch is read as one draw (§272)" inside that parenthesis, as "(§253, §240; the fish stocks' catch is read as one draw, §272)". Do not add "the whole draw of several fleets" or "and failed": the first is MQ7's rule, not MQ3's (MQ3 fell back to landings), and the second is already stated in Evidence.
+
+-- [4] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: the other two are simulations, the only tests with more than one drawer (§253, §240)
+ PROBLEM: The Standing counts the two simulated passes without saying what their own records say they test. MQ1's passes bearing on T1, the band (A2) and the point of no return (A3), hold by the mathematics in the deterministic limit and check the measured quantities under noise, not the thesis. CG1's joint-excess verdict is of the identity class, which by its README gives no empirical support beyond the identification. Only CG1's scope prediction and MQ1's two-harvester verdicts (A4) could have failed. SCIENCES.md:18 now states this on the front ("the simulated one testing the measured quantities and not the thesis"). Because the front copies 08's Standing, the new 08 cell would drop that qualifier from the front. As written, a reader counts three passes as three supports.
+ FIX(finder): 02 (composed with the drawer finding): "the other two are simulations, the only tests that read more than one drawer apart: in the simulated yeast two harvesters each within the largest sustained draw ended it together, their harms super-additive, while its other passes bearing on T1 check the measured quantities under noise, not the thesis (§253); in the commons joint excess held as an identity of its accounting, which gives no empirical support beyond the identification, and its scope as predicted (§240)." 08: "two simulations, the only tests reading more than one drawer apart, where beyond two harvesters ending the simulated yeast together the passes check measured quantities or identities of the commons' accounting".
+ REASON: w ended it together". The README (margin-measured/README.md:110) says "Where each harvester was within Ŷ and the two together beyond it, the result was collapse". Its A4c is the case of a joint draw within Ŷ. Without the condition, a reader takes any such pair to collapse the population.
+3. **The proposed 08 fix is false.** "beyond two harvesters ... the passes check measured quantities or identities of the commons' accounting" leaves out CG1's scope prediction. That prediction passed, could have failed, and is neither kind.
+
+The fix below keeps the change's "the only tests with more than one drawer" and composes with whatever the drawer finding settles. If this is taken, the front's tests cell (SCIENCES.md:18) should follow, since its "the simulated one" is singular. That cell is outside this change.
+
+**Read in full:** the diff; §240 (10280-10310) and §253 (10809-10876); commons-gated-renewal/README.md 1-70; margin-measured/README.md 90-160 (results §5 and the MQ1 ledger); SCIENCES.md 1-40 and 395-425 (S-14); THESES-STANDINGS.md.
+
+**Searched only:** PREDICTIONS-2026-10-20.md for A4 (read its lines 68-70 and 99).
+
+**Not read:** §266, §272, §284, §314, T3's and T6's homes, and S-03.
+ FIX(verifier): 02-MAP.md:278: replace "the other two are simulations, the only tests with more than one drawer (§253, §240)." with "the other two are simulations, the only tests with more than one drawer. In the simulated yeast two harvesters, each within the largest sustained draw and together beyond it, collapsed it, their harms super-additive, while its other passes bearing on T1 test the measured quantities under noise, not the thesis (§253); in the commons the passes bearing on T1 are identities of its accounting, which give no empirical support beyond the identification, save the scope prediction, which could have failed and did not (§240)."
+
+08-METHOD.md:568: replace "and two simulations, the only tests with more than one drawer;" with "and two simulations, the only tests with more than one drawer, where two harvesters each within the largest sustained draw and together beyond it collapsed the simulated yeast, their harms super-additive, and the commons' scope prediction held, the other passes bearing on T1 checking measured quantities under noise or identities of the commons' accounting;"
+
+-- [5] minor theories/becoming/chapters/08-METHOD.md:568 VERDICT=partly
+ QUOTE: and joint excess over a gated renewal ends it whatever each drawer's own draw
+ PROBLEM: In 08's cell the nearest antecedent of "it" is "the point of no return" (or "a need"), so the clause reads as joint excess ending the point. What `Flow.joint_excess_ends` proves is that n consecutive steps of joint excess from a level below n + m end every formation depending on the condition at a need of at least m. As written, any joint excess ends it. 08's own list of third parts, three lines earlier, already states the clause exactly.
+ FIX(finder): "and steps of joint excess over a gated renewal from below its reach end every dependent at that need, whatever each drawer's own draw".
+ REASON:  is false: one step of excess from a high level ends nothing. The overstatement matters more now that the cell labels this clause "proved".
+
+What does not hold:
+(a) The clause is not new wording. It copies, word for word, the *In the model* clause at 02:278, which the diff leaves untouched and which the new home *Standing* cites as "proved in the model (*In the model*)". So 08 agrees with its home and follows the rule to copy the home's words. The flaw comes from the home.
+(b) The cited 08:556 is twelve lines up, in the third-parts list before §9, not "three lines earlier".
+(c) 08:556 does not state the clause "exactly". "From below the renewal's reach" glosses "from a level below `n + m`", and "every dependent at that need" narrows "at a need of at least `m`".
+
+The reader's fix has problems of its own. "Its reach" is not defined anywhere. In 08's cell, "that need" would point back to the margin law's need, which belongs to a different theorem (RegimeMargin). "At that need" covers less than the theorem proves. And changing 08 alone would make the table differ from its home (08:564: "the table copies its standing"). The fix should go to both the home and the table, using 05's words.
+ FIX(verifier): Make the same change in the home and in the table.
+
+1. In theories/becoming/chapters/02-MAP.md:278 (T1's *In the model*), replace
+"and joint excess over a gated renewal ends it whatever each drawer's own draw ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess))"
+with
+"and, over a renewal gated at need `m`, `n` consecutive steps of joint excess from a level below `n + m` end every formation depending on the condition at a need of at least `m`, whatever each drawer's own draw ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess))".
+
+2. In theories/becoming/chapters/08-METHOD.md:568 (T1's Standing cell), replace
+"and joint excess over a gated renewal ends it whatever each drawer's own draw"
+with
+"and, over a renewal gated at need `m`, `n` consecutive steps of joint excess from a level below `n + m` end every formation depending on the condition at a need of at least `m`, whatever each drawer's own draw".
+
+===== standing
+FOLLOW_ON: Three things outside the two files, none for this landing:
+(1) Once this lands, SCIENCES.md:18 (T1's front Standing cell, the old copy of 08) and SCIENCES.md:112 (S-03's weakness "T1's home gives its standing only in the model") are stale. They need a re-sync by the dossier's owner. Today the front's "the simulated one testing the measured quantities and not the thesis" is stricter than the home's new standing; findings 1 and 4 close that gap.
+(2) The home has a tension the new standing exposes. The thesis and *Forbids* are one-sided (persistence implies within the margin; no return from below the need). But *Refuted by*'s second form, "fates across a predicted point separated no better than by a null", is two-sided. So deaths above the need, which the thesis "does not claim", can meet its refuter. Either narrow that form to the side the thesis forbids, or keep it and drop "the converse, not claimed" from *Evidence*. That is the home owner's decision, argued.
+(3) By its frozen print, MQ6 A1 (21-26% of low starters "survive") is also a case of the first refuting form. It is set aside by the floor reading under 08 §9's rule that such a verdict is not claimed. The standing singles out the salt shock instead, which is defensible because MQ2 had pre-registered the floor. Saying so in one clause would make the choice visible.
+
+-- [0] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: the other two are simulations, the only tests with more than one drawer (§253, §240).
+ PROBLEM: Counts the two simulations as passes of T1, and makes them its only multi-drawer support, without saying that their passes bearing on T1 hold by construction or by the model's mathematics. A scientist would weigh them as weak support for the joint draw. The sources say most of them give no support to the thesis beyond the identification and the measurements. The only exceptions that could have failed are CG1's scope prediction (A2) and MQ1's two-harvester harms (A4).
+ FIX(finder): the other two are simulations built to the model's premises, the only tests with more than one drawer (§253, §240), where the passes bearing on T1 test the measured quantities or the identification, not the thesis, except the commons' scope prediction and the two harvesters' super-additive harms.
+ REASON: g on T1, so the dossier itself leaves A4b out. The fix should name A4b only.
+2. The commons' scope prediction had a single drawer: commons PREDICTIONS-2026-10-20.md:46 reads "A scripted harvester clears patch 0". The finding's fix keeps "the only tests with more than one drawer" and lists the scope prediction as an exception, so a reader may take the informative commons pass as a test of the joint draw over many drawers. Of the multi-drawer passes that bear on T1, the commons' check of joint excess (A1, across its multi-learner runs) is an identity check that cannot fail there. A4b is the one that could have failed.
+3. The finding cites only 02. 08:568 carries the same phrase and needs the same fix.
+
+Read in full: the diff; SCIENCES.md 1-40 and S-14 (399-424); experiments/commons-gated-renewal/README.md; experiments/margin-measured/README.md; study sections §240 (10280-10318), §253 (10809-10875), §266 (11323-11381) and §284 (12358-12402).
+Searched only: the commons and MQ1 PREDICTIONS files (for A2's harvester and A4's laws); the first sentences of T3's and T6's standings; THESES-STANDINGS.md's "Not done here".
+Not read: §272, §314, S-03, and T2's, T3's and T6's paragraphs in full.
+ FIX(verifier): In theories/becoming/chapters/02-MAP.md:278, replace "the other two are simulations, the only tests with more than one drawer (§253, §240)." with:
+
+"the other two are simulations, the only tests with more than one drawer, built with the need (§253) or with whole-number balance and the gate (§240), so that most of their passes bearing on T1 test the measured quantities or the identification, not the thesis; those that could have failed are the commons' scope, with one harvester, and two harvesters' harms, super-additive where each drew within the largest sustained draw and both together beyond it (§253, A4b)."
+
+In theories/becoming/chapters/08-METHOD.md:568, replace "and two simulations, the only tests with more than one drawer;" with:
+
+"and two simulations, the only tests with more than one drawer, most of whose passes bearing on T1 test the measured quantities or the identification, not the thesis, those that could have failed being the commons' scope, with one harvester, and two harvesters' super-additive harms where each drew within the largest sustained draw and both together beyond it;"
+
+-- [1] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266);
+ PROBLEM: The standing now singles this out as T1's one pass against nature, and "held-out" will be read as blind. The sources disclose two qualifications. The regimes were held out from the fit, not from the analyst, who had read them in MQ1. And the floor that lets fates separate was found post hoc on the same experiment, after MQ1's frozen sharp need failed there at the instrument's floor. Without them a reader takes the one real-data pass as more independent than it is.
+ FIX(finder): one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266), held out from the fit, not from the analyst: they had been read in MQ1, where the frozen sharp need failed at the instrument's floor and the floor the pass uses was found post hoc (§253);
+ REASON: his floor on these data.
+
+Neither 02 nor 08 states either point anywhere. The new Standing makes this test T1's one pass on real data, and it is the place a reader looks for how far T1 is established. A reader would take "held-out" as unseen, which is more independence than the sources claim. T3's Standing carries the same kind of qualifier ("as policy gradient's update rule largely gives"), so adding one fits the form.
+
+The proposed fix has two problems:
+1. It says "the floor the pass uses was found post hoc" but drops the second half of README.md:278, "and pre-registered in MQ2". §266's own premises say the floor was "pre-registered" (BECOMING-RENEWAL-READING.md:11335-11336). Without that half, a reader would think MQ2's pass was scored by a post hoc rule, which is false. That overstates the weakness.
+2. It repeats "the frozen sharp need failed at the instrument's floor", which the Evidence clause on the same line already says ("Failed: the sharp need at the instrument's floor (§253)").
+
+It also leaves 08's T1 cell unqualified, though 08 §9 says the table copies each standing from its home. My fix below keeps both qualifications with their exact standing and carries them into 08.
+ FIX(verifier): In theories/becoming/chapters/02-MAP.md line 278, replace
+"one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266);"
+with
+"one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266), held out from the fit, not from the analyst: MQ1 had read them and found there, post hoc, the floor of 0.01 by which MQ2 reads fates, and MQ2 pre-registered it (§253);"
+
+In theories/becoming/chapters/08-METHOD.md line 568 (the T1 Standing cell), replace
+"one of real data (held-out yeast regimes, the dilution the only draw)"
+with
+"one of real data (yeast regimes held out from the fit, not from the analyst, who had read them in MQ1 and found there post hoc the floor MQ2 pre-registered; the dilution the only draw)"
+
+-- [2] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266).
+ PROBLEM: It misleads in two directions. First, it drops the home's own reading of the failure: what failed was survival above the predicted need (7 of 8 died from above it), the converse the thesis does not claim, and no case *Forbids* lists was seen. A reader of the standing alone would take it that a forbidden case occurred. Second, it presents the change-of-regime reading as resting on a post hoc analysis without saying that the analysis itself located the needs right at DF 825 and wrong at 750, and that fates were read only four days after the shock. That makes the rescue look better supported than it is. S-14, which the change answers, gives both.
+ FIX(finder): After the salt shock fates separated no better than by a null, the second form *Refuted by* names, though what failed is survival above the predicted need (7 of 8 died from above it at DF 825), which *Forbids* does not list; reading this as a change of regime rests on a post hoc analysis that locates the needs right at DF 825 (7 of 8) and wrong at 750 (3 of 8), with fates read only four days after the shock (§266).
+ REASON:  risk is real in 08:568, whose Evidence column gives only "after a salt shock (MQ2 C1)".
+(b) The four-day limit does not only weaken the rescue. It limits the test itself: at DF 750 the columns were still alive at day 9, at 0.02–0.16, near the relocated need, and could still have died. That would turn P3's misses there into hits. The four days are a true qualifier but cut both ways.
+(c) The fix's "wrong at 750 (3 of 8)" can be read as 3 wrong. In fact 3 of 8 were right.
+(d) P3 places each column by its pre-shock level, which §266 gives as "8-20% below the bifurcation experiment's". The study's analysis is about that separate experiment's regime, not about the shock changing the regime. The fix should say what the analysis did.
+
+What I read in full: the diff (02:278 and 08:568); §266 (BECOMING-RENEWAL-READING.md:11323-11381); SCIENCES.md S-14 (399-426); the C1 and C2 entries of VERDICTS-mq2.json; P3 in posthoc-mq2.json; line 1255 of history/THE-THEORY-OF-BECOMING.md, as an excerpt.
+What I only searched: margin-measured/README.md, for salt, C1 and four days; THESES-STANDINGS.md, for T1.
+What I did not read: §240, §253, §272, §284 and §314; T3's and T6's standings; the commons README.
+ FIX(verifier): 02-MAP.md:278: replace "After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266)." with "After the salt shock fates separated no better than by a null, the second form *Refuted by* names, though what failed was survival above the predicted need (7 of 8 died from above it at DF 825), not a case *Forbids* lists; reading this as a change of regime rests on a post hoc analysis that places each column by its own pre-shock level, 8–20% below the bifurcation experiment's, and gets the needs right in 7 of 8 at DF 825 and in 3 of 8 at 750, with fates read only four days after the shock (§266)."
+
+08-METHOD.md:568, to match: replace "after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc" with "after a salt shock fates separated no better than by a null, the form *Refuted by* names, though what failed was survival above the need, not a case it forbids; read as a change of regime only post hoc, with needs placed by each column's own level right in 7 of 8 at DF 825 and 3 of 8 at 750, fates read four days after the shock"
+
+-- [3] substantive theories/becoming/chapters/08-METHOD.md:568 VERDICT=partly
+ QUOTE: beyond the model conjectured: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer; after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc
+ PROBLEM: The cell carries findings 1-3 into the table. It also loses two things from the home it shortens. Cutting "one yeast experiment" to "held-out yeast regimes" hides that the real-data pass is a single experiment, the breadth S-03 asks the standing to show. Dropping "where the need separated fates" drops what passed. "The form *Refuted by* names" points to a clause 08's table has no column for. Read alone, as the sciences front reads it, the cell makes the real-data pass look broader and more independent and the simulations look like support for the thesis. It does not say which side of the predicted need the salt-shock deaths fell on.
+ FIX(finder): beyond the model conjectured: of the three settings passed, one of real data (held-out regimes of one yeast experiment, where the need separated fates, held out from the fit, not from the analyst; the dilution the only draw) and two simulations built to the model's premises, the only tests with more than one drawer, where the passes bearing on T1 mostly test the measured quantities or the identification, not the thesis; after a salt shock fates separated no better than by a null, the second form of T1's *Refuted by*, those that died standing above the predicted need, which T1 does not forbid; read as a change of regime only post hoc, right at one dilution and wrong at the other
+ REASON:  of its identification", apart from the scope prediction A2. MQ1's A4 (two harvesters, §253:10833) is a further non-identity pass, so the word "mostly" is needed. "Held out from the fit, not from the analyst" is true (README:244; §266:11359).
+
+These parts do not hold as the fix words them:
+- "right at one dilution and wrong at the other" is false. The salt shock had four columns (DF 250, 500, 750, 825). P3's relocated needs are right at 250, 500 and 825 (8, 8 and 7 of 8) and wrong at 750 (3 of 8). Overall that is 0.8125 against the null's 0.78125. S-14:420 and §266:11352-11353 give "right at DF 825 (7/8) and wrong at 750 (3/8)".
+- "built to the model's premises" goes beyond the source for MQ1. S-14:407 says "a model built with a need", and §253:10825 calls it Dai et al.'s two-phase class with parameters from the paper. "Built with a need" is true of both simulations.
+- The additions in (e), and "held out from the fit, not from the analyst", are not in the home's new Standing. 08:564 says the table copies its standing. Put into 08 alone, they would make the table say more than its home. They must land in 02's Standing first, and the cell then copies them. The fix below assumes that.
+ FIX(verifier): 08-METHOD.md line 568, T1's Standing cell, replace the whole cell with:
+"in the model proved: the point of no return is exact and, the draw positive, at least the draw above a need where giving stops below it, and joint excess over a gated renewal ends it whatever each drawer's own draw; beyond the model conjectured: of the three settings passed, one of real data, where the need separated fates on held-out regimes of one yeast experiment (held out from the fit, not from the analyst), the dilution the only draw, and two simulations built with a need, the only tests with more than one drawer, whose passes bearing on T1 mostly test the measured quantities or the identification, not the thesis; after a salt shock fates separated no better than by a null, the form T1's *Refuted by* names, 7 of 8 at DF 825 dying from above the predicted need, which T1 does not forbid; read as a change of regime only post hoc, the needs so located right at DF 825 and wrong at DF 750"
+
+So that the table copies its home (08:564), make the matching change in 02-MAP.md line 278, T1's *Standing*:
+"*Standing*: proved in the model (*In the model*); beyond it conjectured, on the frozen tests above. Of the three settings it passed, one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution, regimes held out from the fit, not from the analyst (§266); the other two are simulations built with a need, the only tests with more than one drawer, and their passes bearing on T1 mostly test the measured quantities or the identification, not the thesis (§253, §240). After the salt shock fates separated no better than by a null, the form *Refuted by* names: 7 of 8 at DF 825 died from above the predicted need, which T1 does not forbid. Reading this as a change of regime rests on a post hoc analysis, whose needs are right at DF 825 and wrong at DF 750 (§266)."
+
+If the home's simulation and held-out qualifiers are not adopted, drop the two parenthetical or relative clauses carrying them from both texts. Keep "of one yeast experiment", "where the need separated fates", "T1's", and the salt-shock direction, which already have their grounds in the home (02:278 Standing and Evidence) and in §266:11345-11346.
+
+-- [4] minor theories/becoming/chapters/08-METHOD.md:568 VERDICT=partly
+ QUOTE: and joint excess over a gated renewal ends it whatever each drawer's own draw
+ PROBLEM: The cell now labels this clause "proved", and 02's new standing labels the home's *In the model* clause proved too. As worded, the clause says more than the Lean. `Flow.joint_excess_ends` ends dependents only after a run of consecutive steps of joint excess starting from below the renewal's reach (n steps from a level below n + m), not after any joint excess. That margin is T1's whole content. In 08, "it" also has no clear antecedent (it can read as the point or the need).
+ FIX(finder): and steps of joint excess from below the renewal's reach end every dependent at that need, whatever each drawer's own draw (the same words to replace "and joint excess over a gated renewal ends it whatever each drawer's own draw" in 02's *In the model*, so the cell stays a copy of its home)
+ REASON: , and 02's new *Standing* labels it "proved in the model (*In the model*)". That conflicts with AGENTS.md ("says exactly what the Lean proves").
+
+What does not hold. (1) The point about the antecedent is weak. In "joint excess over a gated renewal ends it" the nearest noun is "a gated renewal", and the Lean does end the renewal ("nothing gives to the condition again", Continuation.lean:540). The wording is the same in 02 and 08, so 08 adds no new ambiguity. (2) The clause is not new text in 02: it has stood in *In the model* since RA (0d7a397a5). The change's fault is labelling it proved and copying it, not writing it. (3) The proposed fix is not exact either. "from below the renewal's reach" occurs nowhere but 08:556 and is defined nowhere, so a reader of 02 cannot recover "a level below `n + m`" from it. "every dependent at that need" also narrows the Lean's "at a need of at least `m`". The better fix copies the home's words (05:23), as AGENTS asks.
+
+Aside, outside this finding: 08 §9 defines standing as "proved under named premises", and 05:23 names World balance, activity needing support and only active giving. 02's new *Standing* names no premises and relies on the link to 05.
+ FIX(verifier): In 02-MAP.md:278 (*In the model*), replace "and joint excess over a gated renewal ends it whatever each drawer's own draw ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess))" with "and, renewal gated at a need `m`, `n` consecutive steps of joint excess from a level below `n + m` end every formation depending on the condition at a need of at least `m`, whatever each drawer's own draw ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess))". In 08-METHOD.md:568 (T1's Standing cell), replace "and joint excess over a gated renewal ends it whatever each drawer's own draw" with "and, renewal gated at a need `m`, `n` consecutive steps of joint excess from a level below `n + m` end every formation depending on the condition at a need of at least `m`, whatever each drawer's own draw", so the cell stays a copy of its home. Both follow 05-COLLECTIVES.md:23 and Continuation.lean:538-549. The Lean puts no hypothesis on any single drawer's take, only on the total given and taken, so "whatever each drawer's own draw" holds.
+
+===== consistency
+FOLLOW_ON: For the thesis's owner: T1's *Refuted by* second clause (\"fates across a predicted point separated no better than by a null\") is two-sided. The thesis and its *Forbids* are one-sided (below a need). The new Standing is what brings this out: the only refuter-form failure so far (MQ2 C1) lies wholly on the unclaimed side. Narrowing the clause, or saying in T1's paragraph that it also tests the model's two-sided exactness in actual systems, is the owner's decision. It would change what a reader takes as T1's refuter, so it needs its own argument and a before-copy, not a gloss. For the dossier's owner: every SCIENCES.md quote of 02 and 08 still matches the changed text. The quote at :420 of \"its first prediction: 7 of 8 died; the converse, not claimed: a shock changes the regime and its need\" breaks if the Evidence parenthesis is revised as proposed, so land both together. Proposed word deltas on the dossier (by whitespace count; re-measure with measure.py): front +37 (or +73 if it copies 08's new cell word for word); S-14 about +6 to +28; S-03 -11, outside the hour. The ecology hour (front plus S-11 to S-16) is at 6,000 exactly, so any of these needs line 28's \"With an hour\" and READING-BUDGETS' rows restated, or the same number of words cut in S-11 to S-16. The front's ten-minute excess (79 over) grows too and must be recorded. Commit these with their before-copies, and have someone other than this change's author re-read the fronts' restatements against the home.
+
+-- [0] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266).
+ PROBLEM: This sentence conflicts with the paragraph's own Evidence and leaves out which side failed. The Evidence calls the salt-shock failure "the converse, not claimed". The Standing calls it the form of T1's refuter. The two can't both hold as written. In C1 every population stood above the predicted need, and every error was a death above it. So nothing on the side T1 claims or *Forbids* (below a need) was tested. The result matches *Refuted by*'s second clause in wording only, because that clause is two-sided. As written, a reader concludes that T1 met its refuter and survives only by a post hoc reading. That contradicts the same paragraph's "the need is measured apart from the fate it predicts, so the scope is not chosen afterwards". The sentence also drops two qualifiers its source and its dossier restatement keep: the post hoc reading is right at one dilution and wrong at the other, and the fates were read four days after the shock. Minor point: "After the salt shock fates" reads at first as one noun phrase.
+ FIX(finder): Replace the sentence with: "After the salt shock, with every population above the predicted need, fates separated no better than by a null, in the words of *Refuted by*'s second clause; the errors were deaths above the need, the converse, which the thesis does not claim and *Forbids* does not list. That the shock changed the regime and its need is not claimed: it rests on a post hoc analysis, right at DF 825 (7 of 8) and wrong at DF 750 (3 of 8), with fates read four days after the shock (§266)." In the Evidence, replace "(§266, its first prediction: 7 of 8 died; the converse, not claimed: a shock changes the regime and its need)" with "(§266, its first prediction: 7 of 8 died from above it, the converse, not claimed; see *Standing*)". SCIENCES.md:420 quotes the old parenthesis verbatim, so its owner must change it in the same landing. Whether to narrow *Refuted by*'s second clause to the side T1 claims belongs to the thesis's owner (see follow_on).
+ REASON: ding, now and in the history text. So the result does match its words while it is still the converse of the claim. The defect is that the sentence leaves this out, not that it contradicts anything. (2) "Contradicts ... the scope is not chosen afterwards": the new sentence labels the rescue as post hoc, which agrees with that rule. The one that reads a regime chosen after the fact without a label is the *Evidence*'s "a shock changes the regime and its need". (3) The finding's fix says "That the shock changed the regime and its need is not claimed". P3 does not show that the shock changed anything. It places each column by its pre-shock level, "8-20% below the bifurcation experiment's" (§266:11351). §266:11372-11373 says "A separate experiment's regime differs (P3)". README:51 says "a separate experiment, whose levels sat 8–20% lower". Also, the *Evidence* does state that reading, so "is not claimed" is false of the text. (4) Changing the *Evidence* parenthesis is optional. SCIENCES.md:420 quotes it word for word, so if it changes, that quote must change in the same landing.
+
+Minor point that holds: "After the salt shock fates" reads at first as one noun phrase, and a comma fixes it.
+ FIX(verifier): In theories/becoming/chapters/02-MAP.md:278 (T1's *Standing*), replace "After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266)." with "After the salt shock, with every population above the predicted need, fates separated no better than by a null, in the words of *Refuted by*'s second clause; every error was a death above the need, the converse, which the thesis does not claim and *Forbids* does not list. Reading these deaths as a regime other than the one fitted, its need higher, rests on a post hoc analysis that places each column by its own pre-shock level, 8–20% below the fitted experiment's: right at DF 825 (7 of 8), wrong at DF 750 (3 of 8). The fates were read four days after the shock, too short to settle them near the need (§266)."
+
+In theories/becoming/chapters/08-METHOD.md:568 (T1's Standing cell), replace "after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc" with "after a salt shock, every population above the predicted need, fates separated no better than by a null, in *Refuted by*'s words, every error a death above the need, the converse, which the thesis does not claim; a regime other than the fitted one read only post hoc, right at one dilution and wrong at the other, the fates read four days after the shock".
+
+Optional: in 02's *Evidence*, replace "(§266, its first prediction: 7 of 8 died; the converse, not claimed: a shock changes the regime and its need)" with "(§266, its first prediction: 7 of 8 died from above it, the converse, not claimed; see *Standing*)". If you do, change the quote at theories/becoming/review/SCIENCES.md:420 in the same landing.
+
+Whether to narrow *Refuted by*'s second clause to the side T1 claims is the thesis owner's decision. A1's "93–100% each side" also counts the unclaimed side as support.
+
+-- [1] substantive theories/becoming/chapters/08-METHOD.md:568 VERDICT=partly
+ QUOTE: after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc
+ PROBLEM: This has the same contradiction as the home: the deaths were above the need, which is the converse that 02's Evidence says T1 does not claim. It adds a further overstatement. "read as a change of regime only post hoc" says the account does read it that way, while the home's Evidence says "not claimed". Also, *Refuted by* is not a column of 08's table. The T2 row in the same table names the home's clause as "T2's *Refuted by*".
+ FIX(finder): Replace with: "after a salt shock, every population above the predicted need, fates separated no better than by a null, in the words of T1's *Refuted by*, by deaths above the need, the converse it does not claim; a change of regime not claimed, read only post hoc"
+ REASON: grees with the home, the dossier and the study. The finding's fix, "a change of regime not claimed, read only post hoc", contradicts itself and is false against 02:278.
+
+HOLDS, part 3 (minor). 08's table has no *Refuted by* column. The T2 row (08:569) writes "T2's *Refuted by*", so T1's cell should say "T1's *Refuted by*".
+
+A further check on the finding's fix: "every population above the predicted need" is true of C1 (day 5). It is not true of C2 (day 6), where one DF 825 population, at 0.01506, was below the need, was predicted dead and died. Any fix should therefore say "the first reading", which is C1, the test 08's Evidence cell names.
+
+Read in full: the diff; 02-MAP.md 270-289; 08-METHOD.md 556-569; §266 (BECOMING-RENEWAL-READING.md 11323-11381); §284 (12358-12402); the C block of experiments/margin-measured/results/mq2/VERDICTS-mq2.json; PREDICTIONS-2026-10-20-MQ2.md 76-87; SCIENCES.md 1-40, 99-120 and 399-426. Searched only: experiments/margin-measured/README.md and the MQ2 freeze, for salt/C1/null; THESES-STANDINGS.md, for "Not done here" and T1. Not read, because they lie outside this finding's evidence: §240, §253, §272, §314, the T3 and T6 homes, and the commons README.
+ FIX(verifier): In theories/becoming/chapters/08-METHOD.md:568, replace "after a salt shock fates separated no better than by a null, the form *Refuted by* names, read as a change of regime only post hoc" with:
+"after a salt shock, every population above the predicted need on the first reading, fates separated no better than by a null, in the words of T1's *Refuted by*, each error a death above the need, the converse T1 does not claim; read as a change of regime only post hoc"
+
+Change the home first, since the table copies it. In theories/becoming/chapters/02-MAP.md:278, replace "After the salt shock fates separated no better than by a null, the form *Refuted by* names, and reading this as a change of regime rests on a post hoc analysis (§266)." with:
+"After the salt shock, on its first reading every population stood above the predicted need, so the need predicted what the null did and fates separated no better (accuracy 0.78, the null's 0.78), the form *Refuted by* names; each error was a death above the need, the converse T1 does not claim, and reading those deaths as a change of regime rests on a post hoc analysis (§266)."
+
+-- [2] substantive theories/becoming/chapters/02-MAP.md:278 VERDICT=partly
+ QUOTE: the other two are simulations, the only tests with more than one drawer (§253, §240).
+ PROBLEM: This understates how little the two simulated passes establish, and it leaves the home weaker than the texts that copy from it. The overview's and the dossier's T1 cells already say that the simulated passes test the measured quantities, not the thesis. A front states no standing its home does not, so either the home gains that qualifier or the fronts lose a true one. Adding "the only tests with more than one drawer" makes it worse. T1's distinctive claim is about every co-drawer, so a reader now infers that the joint clause passed two tests. In fact the commons' joint-excess pass is of the identity class, which cannot fail in that environment. The simulated yeast was built with a need, and its checks test the measured quantities under noise or the model's own law. Only the commons' scope prediction could have failed.
+ FIX(finder): Replace with: "the other two are simulations, the only tests with more than one drawer, built to meet the model's premises, so that their passes bearing on T1 test the measured quantities under noise or the identification, not the thesis, save the commons' scope prediction, which could have failed and held (§253, §240)." If the owner judges instead that MQ1's A4 (two harvesters each within the largest sustained draw and together beyond it, collapse, 4/4) does bear on the joint clause, say so here by name. Then SCIENCES.md:407 must add A4, and the fronts' qualifier must be narrowed to A2 and A3.
+ REASON: ty (PREDICTIONS-2026-10-20.md:68-70), not persistence.
+
+What does not hold exactly:
+- The fronts' qualifier covers the simulated yeast only ("the simulated one", "the simulated yeast's passes"). The commons' qualifier is S-14:412's and is on no front.
+- "Only the commons' scope prediction could have failed" is too broad. §253's self-review says A4 "could have been sub-additive, was not in any cell", and the ledger (README:139-141) classes A4 as "law" and "beyond the law", not deterministic limit. What A4 does not test is T1's joint clause beyond its construction.
+- The finding's fix has three problems:
+  - It leaves A4 unaddressed.
+  - It calls both simulations "built to meet the model's premises", which fits the commons' scope test poorly: that setting is one where the gate fails for a patch read alone.
+  - Its alternative, adding A4 to S-14:407 as bearing on the joint clause, would overstate. A4 passed on harm's super-additivity, under draws the simulation adds by construction.
+- A side point, outside this change: SCIENCES.md:18's "the simulated one" implies that one of the three settings is simulated. The home rightly says two are. The front should follow once the home is fixed.
+ FIX(verifier): In theories/becoming/chapters/02-MAP.md:278, replace "the other two are simulations, the only tests with more than one drawer (§253, §240)." with: "the other two are simulations, the only tests with more than one drawer. In the simulated yeast the passes bearing on T1 (A2, the break day within its band; A3, the point of no return) hold by the mathematics in the deterministic limit, so they test the measured quantities under noise, not the thesis, and its two harvesters take in turn from one culture, so their draws add (§253). In the commons joint excess ending renewal is of the identity class, which cannot fail where whole-number balance and the gate are kept; the one pass bearing on T1 that could have failed is the scope prediction (§240)."
+
+In theories/becoming/chapters/08-METHOD.md:568, the Standing cell, replace "and two simulations, the only tests with more than one drawer;" with: "and two simulations, the only tests with more than one drawer, the simulated yeast's passes testing the measured quantities under noise, not the thesis, its two harvesters' draws adding, and the commons' joint excess of the identity class, its scope prediction the one pass that could have failed;"
+
+Then let the fronts (SCIENCES.md:18, THE-THEORY-OF-BECOMING.md:166) follow the home. Their "the simulated one" should become the two simulations.
+
+-- [3] minor theories/becoming/chapters/08-METHOD.md:568 VERDICT=partly
+ QUOTE: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer
+ PROBLEM: This has the same missing qualifier as the home sentence (previous finding). The fronts copy this cell, so they would lose the qualifier they now carry. The cell also drops the home's "on the frozen tests". The T2 row keeps that wording: "conjectured, on three frozen fish-stock tests".
+ FIX(finder): Replace "beyond the model conjectured: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer" with "beyond the model conjectured, on frozen tests: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer, their passes bearing on T1 testing the measured quantities or the identification, not the thesis, save the commons' scope prediction"
+ REASON: t a defect of this change. The diff does not touch the fronts. In SCIENCES.md:18 the qualifier sits in the "Its frozen tests so far" column, not in the Standing column copied from 08.
+(b) The proposed fix overreaches. It attaches "their passes bearing on T1 testing the measured quantities or the identification, not the thesis" to "the only tests with more than one drawer". But the passes that make MQ1's simulation a test with more than one drawer are A4a-c, two harvesters, and no source calls them measured-quantity checks. The ledger (margin-measured/README.md:139-141) classes them "beyond the law", "law" and "beyond the law", passed 12/12, 4/4 and 8/8. README.md:110 says "Where each harvester was within Ŷ and the two together beyond it, the result was collapse", and §253:10875 says "The strongest results are A4 (beyond the frozen-rest law ...)". S-14 limits its qualifier to A2 and A3 and says nothing of A4. As written, the fix would say "not the thesis" of passes that no source describes that way. The fix below confines the qualifier to the passes S-14 names. The home sentence (02:278) should get the same wording first, since 08 §9 says the table copies its standing from the home.
+ FIX(verifier): In theories/becoming/chapters/08-METHOD.md:568, replace "beyond the model conjectured: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer" with "beyond the model conjectured, on frozen tests: of the three settings passed, one of real data (held-out yeast regimes, the dilution the only draw) and two simulations, the only tests with more than one drawer, where the simulated yeast's passes on the break day and the point of no return test the measured quantities under noise, not the thesis, and the commons' identity predictions only its identification, its scope prediction excepted". Make the parallel change in the home first, at 02-MAP.md:278. Replace "the other two are simulations, the only tests with more than one drawer (§253, §240)." with "the other two are simulations, the only tests with more than one drawer (§253, §240), where the simulated yeast's passes on the break day and the point of no return test the measured quantities under noise, not the thesis, and the commons' identity predictions only its identification, its scope prediction excepted."
+
+-- [4] minor theories/becoming/chapters/02-MAP.md:278 VERDICT=confirmed
+ QUOTE: one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266)
+ PROBLEM: The Standing now names this as T1's only real-data pass, but it leaves out the boundary its source gives. Those regimes were held out from the fit, not from the analyst. The dossier lists this as a known weakness of the same test, so the home now says less than its restatement does.
+ FIX(finder): Replace with: "one is of real data, where the need separated fates on held-out regimes of one yeast experiment, held out from the fit though not from the analyst, whose only draw is the dilution (§266)"
+ REASON: he source says he was not. That lowers the weight of the one real-data pass. The project's rule is to say exactly what was done, and a Standing exists to say how far a claim is established. So the omission is a minor understatement that changes belief.
+
+Two caveats, neither of which refutes the finding:
+- "The home now says less" is not new. The Evidence clause, "passed on held-out regimes of real yeast", already left out the boundary. The change foregrounds the omission rather than creating it.
+- The proposed fix inserts the qualifier before "whose only draw is the dilution". That relative clause then reads as attaching to "the analyst", so the word order needs to change.
+
+The 08 table copies each standing from its home, so its cell should carry the qualifier too. Otherwise the shortened copy is exactly where the qualifier drops.
+
+Read in full:
+- the diff, both changed lines
+- §266 (11323-11381)
+- §284 TH1's header and T1 bullet (12358-12400)
+- README 236-252
+- SCIENCES S-14 (399-425)
+- the T3 Standing (05:227) and the T6 Standing (03:492)
+
+Only searched: the phrase "from the analyst".
+
+Not read: §240, §253, §272, §314, SCIENCES 1-40 and S-03. They are not needed for this finding.
+ FIX(verifier): 1. In theories/becoming/chapters/02-MAP.md, line 278, replace "one is of real data, where the need separated fates on held-out regimes of one yeast experiment whose only draw is the dilution (§266)" with "one is of real data, where the need separated fates on regimes of one yeast experiment whose only draw is the dilution, held out from the fit though not from the analyst, who had read them in MQ1 (§266)".
+
+2. In theories/becoming/chapters/08-METHOD.md, line 568, T1's Standing cell, replace "one of real data (held-out yeast regimes, the dilution the only draw)" with "one of real data (yeast regimes held out from the fit, not from the analyst, the dilution the only draw)".
+
+-- [5] substantive theories/becoming/review/SCIENCES.md:112 VERDICT=partly
+ QUOTE: T2's and T6's standings say so; T1's home gives its standing only in the model.
+ PROBLEM: After the change this is false. T1's home now has a *Standing* that gives the thesis's standing beyond the model and says how narrow its tests are (one yeast experiment, two simulations).
+ FIX(finder): Replace the bullet with: "- [this dossier, AI] T1, T2 and T6 are stated for every renewable or drawn condition, and their frozen tests cover one to three systems each. Their standings say so; the theses are much wider than their evidence." This is 11 words fewer. S-03 is outside the ecology hour, so the change counts only against the whole dossier.
+ REASON:  them" (THESES-STANDINGS.md, Not done here).
+
+(2) The fix is incomplete.
+- SCIENCES.md:694 makes the same present-tense claim: "Two on T1, whose home gives its standing only in the model, went to the coordinator". It becomes false too.
+- The front's T1 Standing cell (SCIENCES.md:18) is still the old copy of 08 ("in the model the point of no return is exact and, the draw positive, at least the draw above a need where giving stops below it"). If line 112 said "Their standings say so" while that cell stood, the dossier's own front would contradict it. So 112 should change in the same commit as the front cell.
+- The ecology hour is at its budget exactly ("A word more on the front or in S-11 to S-16 takes it past", THESES-STANDINGS.md). Updating the front cell will cost words there, and that is the owner's decision.
+
+What I read in full: the diff; SCIENCES.md lines 1–40, S-03 (99–119), S-14 (399–425); THESES-STANDINGS.md. Extracts only: SCIENCES.md:694; the *Standing* sentences at 03:492 and 05:227; the board's T1S row. Searched only: READING-BUDGETS.md, for its rows 31, 32 and 35. I did not read the study sections or the experiments' READMEs, because this finding does not turn on them.
+ FIX(verifier): By the board's T1S row this is the sciences dossier owner's to make after T1's home lands, in one commit with the front's T1 cell (SCIENCES.md:18), which follows 08:568's new cell.
+
+At SCIENCES.md:112, replace the bullet with:
+"- [this dossier, AI] T1, T2 and T6 are stated for every renewable or drawn condition, and their frozen tests cover one to three systems each. Their standings say so; the theses are much wider than their evidence."
+
+At SCIENCES.md:694, replace "Two on T1, whose home gives its standing only in the model, went to the coordinator for that home and chapter 8's row." with "Two on T1, whose home then gave its standing only in the model, went to the coordinator for that home and chapter 8's row."
+
+-- [6] substantive theories/becoming/review/SCIENCES.md:18 VERDICT=partly
+ QUOTE: in the model the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it | ... | passed in three settings, the simulated one testing the measured quantities and not the thesis; failed in four; no field test of a need measured in advance
+ PROBLEM: The front's Standing cell is 08's old cell, and the front is meant to copy 08. It now lacks "proved", the joint-excess clause and "beyond the model conjectured", so it is weaker than T2's and T6's cells beside it. The tests cell's "the simulated one" says only one of the three passed settings was simulated, while the home now says two were. Copying 08's new cell word for word would grow the front by about 73 words (08's cell went from 26 to 99 words), with the front already 79 words over its ten minutes and the ecology hour at exactly 6,000.
+ FIX(finder): If 08's cell lands as the fixes above propose, set the Standing cell to: "in the model proved: the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it, and joint excess over a gated renewal ends it whatever each drawer's own draw; beyond the model conjectured". Set the tests cell to: "passed in three settings, one of real data, the two simulated testing the measured quantities or the identification and not the thesis; failed in four, one after a salt shock in the words of its refutation clause, on the side it does not claim ([S-14](#s-14)); no field test of a need measured in advance". That adds about 37 words by whitespace count, which the owner should re-measure with measure.py. If the change lands unaltered, drop "or the identification" and "on the side it does not claim". Either way, restate the hour's time in line 28 and READING-BUDGETS' rows, or cut the same number of words in S-11 to S-16, and record the front's excess.
+ REASON: ed testing the measured quantities and not the thesis". That misdescribes CG1. S-14 (SCIENCES.md:412) gives CG1's passes as "of the identity class" plus "the scope prediction A2". The commons README (:50) says "This is the identification, not the dynamics" and "The test adds that the identification is right in a standard commons." "the measured quantities" is S-14:407's phrase for MQ1's simulation only, so "or the identification" should stay in every variant.
+(6) Its fix drops the home's "the only tests with more than one drawer" (02:278; 08:568 "and two simulations, the only tests with more than one drawer"). That is the point that T1's joint draw, its own with every other drawer's, has been tested only in simulation. Dropping it understates.
+
+What I read in full: the diff; SCIENCES.md 1–45, 99–122 (S-03) and 306–427 (S-11 to S-14); THESES-STANDINGS.md; study §240, §253, §266 and §284; 08:562–564; READING-BUDGETS.md lines 31, 32 and 35; measure.py's visible and word rules; the board's T1S row. Searched only: experiments/commons-gated-renewal/README.md (lines 28, 33, 46, 50 and 60). Not read for this check: §272, §314, the margin-measured README, the T3 and T6 homes, S-15 and S-16.
+ FIX(verifier): These are for the sciences dossier's owner after 02 and 08 land, as the board's T1S row routes them; they are not changes to this diff. They assume the change lands unaltered.
+
+(a) SCIENCES.md:18, the Standing cell. Replace "in the model the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it" with "in the model proved: the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it, and joint excess over a gated renewal ends it whatever each drawer's own draw; beyond the model conjectured".
+
+(b) SCIENCES.md:18, the tests cell. Replace "passed in three settings, the simulated one testing the measured quantities and not the thesis; failed in four; no field test of a need measured in advance" with "passed in three settings, one of real data and two simulated, the only tests with more than one drawer, these testing the measured quantities or the identification and not the thesis; failed in four, one, after a salt shock, of the form its refutation clause names ([S-14](#s-14)); no field test of a need measured in advance".
+
+(c) SCIENCES.md:112. Replace "T2's and T6's standings say so; T1's home gives its standing only in the model." with "Their standings say so."
+
+(d) Budget. By measure.py's rule, (a) and (b) add 48 words (19 and 29). That takes the front to about 1,227 words, 127 over its ten minutes, and the ecology hour to about 6,048, past 60.0 minutes at the slower rate. (c) removes 11 words from the whole only; S-03 is in neither the front nor S-11 to S-16. Re-measure with measure.py. Then either record the front's and the hour's excess in READING-BUDGETS.md:32, as amendment 1 allows for standings, and stop line 28's "With an hour" from claiming the hour for ecology, or cut the same number of words in S-11 to S-16. The whole, at about 182 minutes, stays within the stated 135 to 185.
+
+-- [7] minor theories/becoming/review/SCIENCES.md:404 VERDICT=partly
+ QUOTE: **Standing and use.** Thesis, with Quote [theories/becoming/chapters/08-METHOD.md]: "no field test of a need measured in advance".
+ PROBLEM: S-14 still gives T1 no standing beyond "Thesis", though its home now does. S-14:407 lists only A2 and A3 as the simulation's passes bearing on T1, while the home now leans on the simulations as the only tests with more than one drawer. S-14:420 says "The chapter reads the result as" a change of regime. Under the new home, that reading is post hoc and not claimed, and the parenthesis S-14 quotes changes if the first finding is taken.
+ FIX(finder): At :404, set the opening to "**Standing and use.** Thesis, proved in the model and beyond it conjectured, with Quote [theories/becoming/chapters/08-METHOD.md]: \"no field test of a need measured in advance\"." (+6 words). At :407, if the owner keeps A4 as bearing on the joint clause, add after "A3, the point of no return": "; A4, two harvesters each within the largest sustained draw and together beyond it ending the population, a law check on the same model" (about +22 words). At :420, replace "The chapter reads the result as Quote [...]: \"its first prediction: 7 of 8 died; the converse, not claimed: a shock changes the regime and its need\". That change of regime rests on a post hoc analysis," with "Every population stood above the predicted need, so the errors were deaths above it, the converse the chapter does not claim; that the shock changed the regime rests on a post hoc analysis," which keeps the rest of the bullet. All of these count against the ecology hour.
+ REASON: . So "The chapter reads the result as" is still exact.
+- The finding's "not claimed" misreads the home. In that parenthesis, "not claimed" goes with "the converse". The new *Standing* nowhere calls the change-of-regime reading unclaimed.
+- The proposed replacement depends on an unseen first finding, and its first clause overstates. "Every population stood above the predicted need" holds for C1 (day 5): in experiments/margin-measured/results/mq2/VERDICTS-mq2.json, all 32 are predicted alive. It does not hold for C2 (day 6), where one population at DF 825 read 0.0151 against the need 0.0164 and was predicted dead. The bullet covers both C1 and C2. §266:11345-11346 states only DF 825: "7 of 8 died from post-shock densities 0.021-0.030, above u = 0.016".
+
+Read in full: the diff; SCIENCES.md 1-130 and 395-434; THESES-STANDINGS.md; §253 (10809-10876) and §266 (11323-11382) of BECOMING-RENEWAL-READING.md; experiments/margin-measured/README.md 1-200. Searched only: experiments/commons-gated-renewal/README.md (classes, A1, A2 and line 60), SCIENCES.md for its thesis standings and T1 mentions, and VERDICTS-mq2.json's C1 and C2 blocks. Not read: §240, §272, §284, §314, or T3's and T6's homes.
+ FIX(verifier): SCIENCES.md:404: replace "**Standing and use.** Thesis, with Quote" with "**Standing and use.** Thesis, proved in the model and beyond it conjectured, with Quote" (+6 words, from 02:278's "*Standing*: proved in the model (*In the model*); beyond it conjectured").
+
+SCIENCES.md:407: leave the existing sentence as it is, and append after "not the thesis.": " A4, its one test with two harvesters, passed beyond the law: their harms together exceeded the sum of their separate harms in all 12 cells, and where each was within the largest sustained draw and the two together beyond it, the population collapsed (A4b, the law's class, 4/4)." Sources are README:110 ("The harm two harvesters did together exceeded the sum of their separate harms in all 12 cells (A4a–c)"; "Where each harvester was within Ŷ and the two together beyond it, the result was collapse") and README:139-141 for the classes. This is about +45 words, so a shorter form may be needed for the ecology hour: " A4, with two harvesters, passed: harms super-additive in 12 of 12 cells, collapse where each was within the largest sustained draw and both together beyond it." (about +27 words).
+
+SCIENCES.md:420: no change. It already agrees with the new home. If 02's parenthesis is changed by another finding, re-quote it exactly, and do not write "Every population stood above the predicted need", which fails for C2.
+
+The same follow-up, missed by the finding: at SCIENCES.md:112, replace "T2's and T6's standings say so; T1's home gives its standing only in the model." with "Their standings say so." (true once 02:278 has "beyond it conjectured"). The front's T1 Standing cell at :18 should then follow 08:568's new cell. All the additions above count against the ecology hour, which THESES-STANDINGS.md records as at its budget.
+
+-- [8] minor theories/becoming/THE-THEORY-OF-BECOMING.md:166 VERDICT=partly
+ QUOTE: the point exact in the model; passed in three settings, the simulated yeast's passes testing the measured quantities and not the thesis ([S-14](review/SCIENCES.md#s-14)), and failed in four; no field test of a need measured in advance
+ PROBLEM: With the home now stating "proved in the model; beyond it conjectured", the overview's T1 cell says neither word. T2's cell beside it opens "conjectured;", so a reader cannot tell how T1 is held. The Chinese edition at THE-THEORY-OF-BECOMING.zh.md:166 has the same gap.
+ FIX(finder): EN: "proved in the model, the point exact and joint excess ending it; beyond it conjectured: passed in three settings, the simulations' passes testing the measured quantities or the identification and not the thesis ([S-14](review/SCIENCES.md#s-14)), and failed in four; no field test of a need measured in advance". ZH: "在模型中已证明：该点精确，联合超出终结它；模型之外是猜想：在三种情形中通过（模拟情形的通过检验的是所测之量或识别，而不是这一论题，[S-14](review/SCIENCES.md#s-14)），在四种中未通过；没有对事先测得之需要的实地检验". If the 02 simulations fix is not taken, keep "the simulated yeast's passes" / "模拟酵母的通过". Check the overview's stated reading times afterwards.
+ REASON: ier says at 694 that its front copies 08's words, and THESES-STANDINGS.md:37 says "Both belong in T1's home and 08's row first, and the front follows them".
+
+The proposed fix goes too far in two places:
+(1) "the simulations' passes testing the measured quantities or the identification and not the thesis" extends to CG1 what S-14 says only of MQ1's simulation. S-14 keeps CG1's scope prediction apart from its identity class (SCIENCES.md:412: "its passes bearing on T1 are of the identity class, ... and the scope prediction A2, which passed"). S-11 (SCIENCES.md:324) calls A2 "the one the account calls informative", and CG1's README:50 says "A2 is the informative one". No source says A2's pass does not test the thesis.
+(2) "the point exact and joint excess ending it" gives "it" no antecedent in the cell. The new 02 sentence also carries the 02 Standing's disputed "simulations ... the only tests with more than one drawer" claim, which the overview does not need.
+
+The fix below keeps the overview's existing, sourced phrase and adds only the two standing words, in the form of 08's new cell. It adds about six words to an overview marked "About an hour to read", so that line needs no change.
+ FIX(verifier): THE-THEORY-OF-BECOMING.md:166, Standing cell, replace "the point exact in the model; passed in three settings, the simulated yeast's passes testing the measured quantities and not the thesis ([S-14](review/SCIENCES.md#s-14)), and failed in four; no field test of a need measured in advance" with "in the model proved, the point exact; beyond the model conjectured: passed in three settings, the simulated yeast's passes testing the measured quantities and not the thesis ([S-14](review/SCIENCES.md#s-14)), and failed in four; no field test of a need measured in advance".
+
+THE-THEORY-OF-BECOMING.zh.md:166, replace "该点在模型中是精确的；在三种情形中通过（模拟酵母的通过检验的是所测之量，而不是这一论题，[S-14](review/SCIENCES.md#s-14)），在四种中未通过；没有对事先测得之需要的实地检验" with "在模型中已证明，该点是精确的；模型之外是猜想：在三种情形中通过（模拟酵母的通过检验的是所测之量，而不是这一论题，[S-14](review/SCIENCES.md#s-14)），在四种中未通过；没有对事先测得之需要的实地检验".
+
+Same follow-up at SCIENCES.md:18, the T1 Standing cell, which THESES-STANDINGS.md:37 says follows 08's row: replace "in the model the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it" with "in the model proved: the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it, and joint excess over a gated renewal ends it whatever each drawer's own draw; beyond the model conjectured".
+
+Do not take the finding's "the simulations' passes ... or the identification" wording: S-14 and CG1's README keep CG1's A2 scope pass apart from the identity class.
+
+-- [9] minor theories/becoming/ONE-PAGE.md:17 VERDICT=confirmed
+ QUOTE: Proved on models; restates the commons. T1: three settings passed, four failed
+ PROBLEM: The count is still true. But the home now gives T1 the standing "conjectured" beyond the model, and next to "Proved on models" the count can be read as T1's standing. The same cell appears at ONE-PAGE.zh.md:17, THE-THEORY-OF-BECOMING.md:49 and THE-THEORY-OF-BECOMING.zh.md:49.
+ FIX(finder): EN (ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:49): "Proved on models; restates the commons. T1, conjectured: three settings passed, four failed". ZH (ONE-PAGE.zh.md:17, THE-THEORY-OF-BECOMING.zh.md:49): "在模型上证明；重述公地问题。T1（猜想）：三种情形通过，四种未通过". That is one word or three characters more; record it against the fronts' ten-minute budgets.
+ REASON:  column. There T1 reads "the point exact in the model; passed in three settings, … and failed in four". It has no "conjectured", while the rows for T2 through T7 each state one.
+
+Budget: READING-BUDGETS.md:29 already puts the one page 281 words over. Amendment 1 keeps standings and records the excess. THESES-STANDINGS says the ecology hour is at budget exactly, so any word added to SCIENCES.md's front pushes that hour past its budget, and that must be recorded.
+
+The proposed fix is true: "T1, conjectured" follows "Proved on models", so the part proved in the model is kept. My zh version only matches the English punctuation.
+
+Read in full:
+- the diff;
+- 02-MAP.md:278–281 (T1 and T2);
+- SCIENCES.md 1–40, S-03 (99–119) and S-14 (399–420);
+- THESES-STANDINGS.md (whole);
+- THE-THEORY-OF-BECOMING.md 1–12, 40–52 and 160–175, and the zh files at :49–52 and :166.
+
+Only searched:
+- the fronts for "three settings passed" / "三种情形通过" and for "T1";
+- READING-BUDGETS.md for the one page's row;
+- §253 (MQ1) for "drawer/harvest". It has "two harvesters' harms super-additive", so "more than one drawer" holds for §253.
+
+Not read: 03 §10, 05 T3, §240, §266, §272, §284, §314 and the experiment READMEs.
+ FIX(verifier): The finding's sites:
+- ONE-PAGE.md:17 and THE-THEORY-OF-BECOMING.md:49: replace "T1: three settings passed, four failed" with "T1, conjectured: three settings passed, four failed".
+- ONE-PAGE.zh.md:17 and THE-THEORY-OF-BECOMING.zh.md:49: replace "T1：三种情形通过，四种未通过" with "T1，猜想：三种情形通过，四种未通过". This mirrors the English; the finding's "T1（猜想）：…" is also true.
+
+The same follow-through, missed by the finding:
+- SCIENCES.md:112: replace "T2's and T6's standings say so; T1's home gives its standing only in the model." with "Their standings say so." This is needed because after the change the old sentence is false.
+- SCIENCES.md:18, T1's Standing cell: replace it with "in the model proved: the [point of no return](#reading-the-items) is exact and, the draw positive, at least the draw above a need where giving stops below it, and joint excess over a gated renewal ends it whatever each drawer's own draw; beyond the model conjectured". This is 08:568's new cell, cut where the dossier's tests cell takes over.
+- THE-THEORY-OF-BECOMING.md:166: replace "the point exact in the model; passed in three settings," with "the point exact in the model; beyond it conjectured: passed in three settings,".
+- THE-THEORY-OF-BECOMING.zh.md:166: replace "该点在模型中是精确的；在三种情形中通过" with "该点在模型中是精确的；模型之外为猜想：在三种情形中通过".
+
+Record the added words in READING-BUDGETS.md's rows for the one page, the overview and the sciences front. The ecology hour is at budget exactly, so it goes over.
+
+-- [10] minor theories/becoming/OPENING.md:65 VERDICT=partly
+ QUOTE: As a claim about actual conditions it is thesis T1 ([theses](chapters/08-METHOD.md#theses)), supported on held-out regimes of real yeast, untested in the field;
+ PROBLEM: This note gives T1's standing as "supported", which 08 §9 lists as a different standing from "conjectured", the word the home now uses. It does not say that four settings failed. "untested in the field" also conflicts with the home, which records a frozen field test on fish stocks that failed. The home's exact claim is narrower: no field test of a need measured in advance. README.md:85 is rendered from this note. This predates the change, but the change now makes it inconsistent with the home.
+ FIX(finder): Replace with: "As a claim about actual conditions it is thesis T1 ([theses](chapters/08-METHOD.md#theses)), conjectured: it passed on held-out regimes of real yeast and in two simulations and failed in four settings, assessed fish stocks among them, and no field test of a need measured in advance has run;". Then add this passage to OPENING's revision header and re-render README.
+ REASON: iving law the same test showed wrong" (02:278). The fronts keep that qualifier when they name the fish stocks (THE-THEORY-OF-BECOMING.md:17). §284 also chose not to count MQ3 F3 for or against T1, since most assessed stocks lie outside its scope.
+- "add this passage to OPENING's revision header" goes against OPENING's own rule (OPENING.md:1). The line under the heading names the first-person passages revised since version 12, while "the notes are AI-written and follow the current account". A note is not listed there.
+
+Read in full:
+- the diff, including T1's and T2's whole paragraphs in 02
+- OPENING.md:1-5 (header comment and revision line) and the notes at :60-68
+- 08-METHOD.md:558-566
+- §284 (TH1)
+- the header blocks of §240, §253, §266, §272 and §314
+- SCIENCES.md S-14 (:400-425) and its lines 18 and 112
+
+Only searched:
+- copies of the passage (README.md:85, BECOMING-SIGNIFICANCE-REVIEW.md:642)
+- T1 restatements in ONE-PAGE.md and THE-THEORY-OF-BECOMING.md
+- git log -S for when the passage came in
+- the readme_opening setting
+- whether an OPENING.zh.md exists (it does not)
+
+Not read: T3's and T6's standings, and the two experiment READMEs, which I saw only through S-14's quotes.
+ FIX(verifier): In theories/becoming/OPENING.md:65, replace "As a claim about actual conditions it is thesis T1 ([theses](chapters/08-METHOD.md#theses)), supported on held-out regimes of real yeast, untested in the field;" with "As a claim about actual conditions it is thesis T1 ([theses](chapters/08-METHOD.md#theses)), conjectured: it passed in three settings, one of real data (held-out regimes of one yeast experiment) and two simulations, and failed in four, three in real yeast and one in fish stocks under held catches, with a giving law the same test showed wrong; no field test of a need measured in advance has run;". Then regenerate README.md:85 with make research-render, and do not hand-edit it. Do not add the note to OPENING's revision line, which names only revised first-person passages; the notes are AI-written and follow the current account (OPENING.md:1).
+
+-- [11] minor theories/becoming/COLLECTIVE-DIRECTION.md:85 VERDICT=partly
+ QUOTE: - **Whether margins time breaks** ([T1](chapters/02-MAP.md#t1)). In assessed fish stocks the margin ranks the risk of a break and does not time it.
+ PROBLEM: This is older than the change. It cites T1 for a result about the frozen-rest (withheld-levels) margin, which T1 explicitly excludes. It leaves out T1's own timing result: the regime's margin did not time the break in yeast driven past its fold. The new Standing makes T1's home the place readers check, and the home does not support this line as worded.
+ FIX(finder): Replace with: "- **Whether margins time breaks** ([T1](chapters/02-MAP.md#t1)). In yeast driven past its fold the regime's margin did not time the break; in assessed fish stocks the frozen-rest margin, which T1 excludes, ranks the risk of a break and does not time it."
+ REASON: n it links (#t1) does not state the fish-stock result; that result's home is 02 §5 (#margin, 02:242-246).
+
+What does not hold exactly: "The new Standing makes T1's home the place readers check". The #t1 link existed before the change, the diff touches neither this file nor this line, and the new Standing neither creates nor worsens the mismatch. It is a pre-existing inconsistency in a neighbouring front, not a defect of the change.
+
+The proposed fix is mostly true, with two problems:
+- It calls the excluded margin "frozen-rest", while T1's home names it only "the withheld-levels margin". A reader who follows the link would not see that they are the same margin.
+- It links only T1, though the fish-stock statement's home is 02 §5.
+Its "did not time the break" is a gloss of the home's "neither break was timed" (two runs).
+
+Read in full:
+- T1's and T2's paragraphs in 02 (278, 281)
+- 02 §5's opening (242-246)
+- SCIENCES.md S-14 (399-425)
+- margin-measured README lines 1-30, 78-100 and 205-230
+- COLLECTIVE-DIRECTION.md's header and lines 75-95
+
+Only searched (not read in full): "ranks the risk", "frozen-rest" and "withheld" across theories/ and experiments/, and the MQ4 predictions file.
+ FIX(verifier): In theories/becoming/COLLECTIVE-DIRECTION.md:85, as a consistency item beside this change rather than as part of it, replace the line with:
+"- **Whether margins time breaks** ([T1](chapters/02-MAP.md#t1), [02 §5](chapters/02-MAP.md#margin)). In yeast driven past its fold, the regime's margin, T1's, timed neither break. In assessed fish stocks the frozen-rest margin over the net draw ranks the risk of a break but does not time it; that is the withheld-levels margin, which T1 excludes."
