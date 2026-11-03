@@ -344,6 +344,18 @@
    "region": "map"
   },
   {
+   "id": "record:a-cascade-at-the-histories-reached",
+   "type": "result",
+   "record": "a-cascade-at-the-histories-reached",
+   "title": "A cascade at the histories reached",
+   "title_zh": "所至之历上之级联",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/a-cascade-at-the-histories-reached.md"
+  },
+  {
    "id": "record:a-code-formed-between-formations",
    "type": "result",
    "record": "a-code-formed-between-formations",
@@ -5840,6 +5852,18 @@
    "page": "theories/becoming/results/records/unceasing-generation-needs-renewal.md"
   },
   {
+   "id": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "type": "result",
+   "record": "unequal-groups-not-decided-by-the-spread-among-groups",
+   "title": "Groups of unequal size not decided by the spread among groups",
+   "title_zh": "不等大之群，不由群间离散决定",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md"
+  },
+  {
    "id": "record:unity-of-readings",
    "type": "result",
    "record": "unity-of-readings",
@@ -7479,7 +7503,7 @@
    "type": "module",
    "name": "Becoming.SelectionLevels",
    "level": "L1",
-   "theorems": 81,
+   "theorems": 95,
    "region": "life",
    "base": "general",
    "on_grammar": false,
@@ -7984,7 +8008,7 @@
    "id": "module:Becoming.ModelStatements",
    "type": "module",
    "name": "Becoming.ModelStatements",
-   "level": "L1",
+   "level": "L2",
    "theorems": 78,
    "region": "root",
    "base": "grammar",
@@ -8259,7 +8283,7 @@
    "id": "module:Becoming.SeedReach",
    "type": "module",
    "name": "Becoming.SeedReach",
-   "level": "L1",
+   "level": "",
    "theorems": 15,
    "region": "root",
    "base": "frame",
@@ -8270,7 +8294,7 @@
    "id": "module:Becoming.ScopedReach",
    "type": "module",
    "name": "Becoming.ScopedReach",
-   "level": "L1",
+   "level": "",
    "theorems": 15,
    "region": "root",
    "base": "frame",
@@ -8465,6 +8489,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ReachedCascade",
+   "type": "module",
+   "name": "Becoming.ReachedCascade",
+   "level": "L1",
+   "theorems": 8,
+   "region": "unassigned",
+   "base": "",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.RevisionRoutes",
    "type": "module",
    "name": "Becoming.RevisionRoutes",
@@ -8501,7 +8536,7 @@
    "id": "module:Becoming.Hexagrams",
    "type": "module",
    "name": "Becoming.Hexagrams",
-   "level": "L1",
+   "level": "",
    "theorems": 67,
    "region": "classical",
    "base": "frame",
@@ -8512,7 +8547,7 @@
    "id": "module:Becoming.HexagramPlaces",
    "type": "module",
    "name": "Becoming.HexagramPlaces",
-   "level": "L1",
+   "level": "",
    "theorems": 121,
    "region": "classical",
    "base": "frame",
@@ -8523,7 +8558,7 @@
    "id": "module:Becoming.HexagramLaws",
    "type": "module",
    "name": "Becoming.HexagramLaws",
-   "level": "L1",
+   "level": "",
    "theorems": 129,
    "region": "classical",
    "base": "general",
@@ -8534,7 +8569,7 @@
    "id": "module:Becoming.HexagramSites",
    "type": "module",
    "name": "Becoming.HexagramSites",
-   "level": "L1",
+   "level": "",
    "theorems": 98,
    "region": "classical",
    "base": "frame",
@@ -8545,7 +8580,7 @@
    "id": "module:Becoming.HexagramSequences",
    "type": "module",
    "name": "Becoming.HexagramSequences",
-   "level": "L1",
+   "level": "",
    "theorems": 96,
    "region": "classical",
    "base": "frame",
@@ -8612,7 +8647,7 @@
    "type": "module",
    "name": "Becoming.RuleShaping",
    "level": "L1",
-   "theorems": 61,
+   "theorems": 66,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8732,7 +8767,7 @@
    "id": "module:Becoming.HexagramCommuting",
    "type": "module",
    "name": "Becoming.HexagramCommuting",
-   "level": "L1",
+   "level": "",
    "theorems": 7,
    "region": "classical",
    "base": "frame",
@@ -9040,7 +9075,7 @@
    "id": "module:Becoming.Dispatch",
    "type": "module",
    "name": "Becoming.Dispatch",
-   "level": "L1",
+   "level": "",
    "theorems": 33,
    "region": "significance",
    "base": "frame",
@@ -9150,7 +9185,7 @@
    "id": "module:Becoming.GuardHorizon",
    "type": "module",
    "name": "Becoming.GuardHorizon",
-   "level": "L1",
+   "level": "",
    "theorems": 34,
    "region": "map",
    "base": "frame",
@@ -9161,7 +9196,7 @@
    "id": "module:Becoming.OpenedCorrection",
    "type": "module",
    "name": "Becoming.OpenedCorrection",
-   "level": "L1",
+   "level": "",
    "theorems": 12,
    "region": "knowing",
    "base": "frame",
@@ -9337,7 +9372,7 @@
    "id": "module:Becoming.Coverage",
    "type": "module",
    "name": "Becoming.Coverage",
-   "level": "L1",
+   "level": "",
    "theorems": 22,
    "region": "method",
    "base": "general",
@@ -9491,7 +9526,7 @@
    "id": "module:Becoming.PlaceTransitionNets",
    "type": "module",
    "name": "Becoming.PlaceTransitionNets",
-   "level": "L1",
+   "level": "",
    "theorems": 63,
    "region": "root",
    "base": "old-base",
@@ -9700,7 +9735,7 @@
    "id": "module:Becoming.RoomNet",
    "type": "module",
    "name": "Becoming.RoomNet",
-   "level": "L1",
+   "level": "",
    "theorems": 94,
    "region": "knowing",
    "base": "grammar",
@@ -9711,7 +9746,7 @@
    "id": "module:Becoming.RoomRuns",
    "type": "module",
    "name": "Becoming.RoomRuns",
-   "level": "L1",
+   "level": "",
    "theorems": 24,
    "region": "knowing",
    "base": "frame",
@@ -9722,7 +9757,7 @@
    "id": "module:Becoming.ReaderRebuilding",
    "type": "module",
    "name": "Becoming.ReaderRebuilding",
-   "level": "L1",
+   "level": "",
    "theorems": 32,
    "region": "life",
    "base": "grammar",
@@ -9733,7 +9768,7 @@
    "id": "module:Becoming.RuleRebuilding",
    "type": "module",
    "name": "Becoming.RuleRebuilding",
-   "level": "L1",
+   "level": "",
    "theorems": 147,
    "region": "collective",
    "base": "grammar",
@@ -9986,7 +10021,7 @@
    "id": "module:Becoming.ResponseLearning",
    "type": "module",
    "name": "Becoming.ResponseLearning",
-   "level": "L1",
+   "level": "",
    "theorems": 62,
    "region": "knowing",
    "base": "general",
@@ -30103,6 +30138,12 @@
    "anchor": "r-selection-with-returns-to-groupmates"
   },
   {
+   "id": "section:theories/becoming/chapters/04-LIFE.md#r-unequal-groups-not-decided-by-the-spread-among-groups",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/04-LIFE.md",
+   "anchor": "r-unequal-groups-not-decided-by-the-spread-among-groups"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -30467,6 +30508,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-readers-reading-readers"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-cascade-at-the-histories-reached"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
@@ -34218,6 +34265,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ReachedCascade",
+   "to": "module:Becoming.Cascade",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ReadInTime",
    "to": "module:Becoming.DrawnShaping",
    "type": "imports"
@@ -35496,6 +35548,26 @@
    "from": "module:Becoming.WorldRepresentation",
    "to": "module:Becoming.GrammarTransport",
    "type": "imports"
+  },
+  {
+   "from": "record:a-cascade-at-the-histories-reached",
+   "to": "module:Becoming.Cascade",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-cascade-at-the-histories-reached",
+   "to": "module:Becoming.ReachedCascade",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-cascade-at-the-histories-reached",
+   "to": "record:generalization-through-lumping",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-cascade-at-the-histories-reached",
+   "to": "record:readers-reading-readers",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-code-formed-between-formations",
@@ -49879,6 +49951,11 @@
   },
   {
    "from": "record:readers-reading-readers",
+   "to": "record:a-cascade-at-the-histories-reached",
+   "type": "related"
+  },
+  {
+   "from": "record:readers-reading-readers",
    "to": "record:generalization-through-lumping",
    "type": "formal-reuse"
   },
@@ -52465,6 +52542,11 @@
   {
    "from": "record:selection-with-returns-to-groupmates",
    "to": "record:shaping-selected-among-groups",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-with-returns-to-groupmates",
+   "to": "record:unequal-groups-not-decided-by-the-spread-among-groups",
    "type": "related"
   },
   {
@@ -55570,6 +55652,26 @@
   {
    "from": "record:unceasing-generation-needs-renewal",
    "to": "record:theory-of-becoming-foundation",
+   "type": "related"
+  },
+  {
+   "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "to": "module:Becoming.SelectionLevels",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "to": "record:selection-with-returns-to-groupmates",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "to": "record:selection-within-and-among-groups-of-any-sizes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "to": "record:shaping-selected-among-groups",
    "type": "related"
   },
   {
@@ -61183,8 +61285,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/04-LIFE.md#r-unequal-groups-not-decided-by-the-spread-among-groups",
+   "to": "record:unequal-groups-not-decided-by-the-spread-among-groups",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
    "to": "record:what-bounds-offspring-numbers",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached",
+   "to": "record:a-cascade-at-the-histories-reached",
    "type": "states"
   },
   {

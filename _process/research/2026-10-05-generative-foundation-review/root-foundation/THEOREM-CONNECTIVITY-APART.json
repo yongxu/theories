@@ -7601,6 +7601,51 @@
    "module": "Becoming.CoupledDrawers",
    "category": "model-witness",
    "reason": "two shores, each below the need and together reaching it, the level left as it is: drawing everything is perfect at every coupling and the need is met at no step, though leaving all they reach would meet it; a fact about one constructed pair of portions, not a law of the unfolding (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.SelectionLevels.Sized.apart_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "with each keeper alone and the others as a pair, the offspring meet the returns, each unit kept giving two to every other member of its group at a cost of one to its keeper; a fact about two constructed listings, not a law of the unfolding (Becoming.SelectionLevels, US)"
+  },
+  "Becoming.SelectionLevels.Sized.divided_one_verdict": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "where what a unit gives its group is divided among the members, the two listings give one verdict for any returns the same in both; a fact about two constructed listings, not a law of the unfolding (Becoming.SelectionLevels, US)"
+  },
+  "Becoming.RuleShaping.Sized.apart_grouped": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "with each shaper alone and the others as a pair, the rule after shaping meets the grouped premise in groups of unequal size; a fact about two constructed listings, not a law of the unfolding (Becoming.RuleShaping, US)"
+  },
+  "Becoming.RuleShaping.Sized.either_verdict": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "the same spreads in groups of unequal size, shaping selected with the shapers as a pair and against with each alone; a fact about two constructed listings, not a law of the unfolding (Becoming.RuleShaping, US)"
+  },
+  "Becoming.Turns.readsOnlyActsAlong_of_from": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.readsOnlyActsAlong_of_from: the premise on every list gives it at the histories every world reaches: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.act_alike_along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.act_alike_along: every member's act is alike across two worlds alike before k where the pair meets the premise along the run: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.cascade_through_along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.cascade_through_along: where the premise holds at the histories every world reaches, a selection through the acts is a selection through the first k couplings: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.Unreached.along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "model-witness",
+   "reason": "Turns.Unreached.along: a fact about one constructed model, a member 0 reading its coupling only on a list no run gives it (TRL)"
+  },
+  "Becoming.Turns.Unreached.not_from": {
+   "module": "Becoming.ReachedCascade",
+   "category": "model-witness",
+   "reason": "Turns.Unreached.not_from: a fact about one constructed model, where Cascade's premise from member 0 fails (TRL)"
   }
  },
  "instances": {

@@ -76,7 +76,7 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups on coupled conditions end together; here groups alike in mean are not selected among.
 - related, not a proved adapter: [groups-formed-by-descent](groups-formed-by-descent.md). Groups formed by descent from uniform groups, which keep the differences this record's witness saw used up.
 
-**Used by:** [groups-formed-by-descent](groups-formed-by-descent.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md)
+**Used by:** [groups-formed-by-descent](groups-formed-by-descent.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [unequal-groups-not-decided-by-the-spread-among-groups](unequal-groups-not-decided-by-the-spread-among-groups.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -93,6 +93,7 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json) | — |
 
 Aliases: `selection within and among groups of any sizes`, `大小任意之组的组内与组间选择`, `multilevel Price equation with unequal group sizes`, `contextual reading`, `Becoming.SelectionLevels.levels_sized`, `Becoming.SelectionLevels.rises_exact_iff_within_of_alike`, `Becoming.GroupEnding.Flow.rises_iff_inactive_sized`, `Becoming.GroupEnding.Exhausted.next_step`
 
