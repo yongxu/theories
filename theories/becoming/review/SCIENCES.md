@@ -211,7 +211,7 @@ File: `Becoming/Continuation.lean`.
 **Standing and use.** Theorems. Quote [theories/becoming/chapters/04-LIFE.md]: "The laws of §3–§6 restate known results" and Quote [theories/becoming/chapters/04-LIFE.md]: "It adds no new population-genetic prediction." The audit: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "counting forms of the classical results".
 
 **Known weaknesses.**
-- Quote [theories/becoming/chapters/04-LIFE.md]: "Fisher's identity itself, which needs the regression coefficient, a ratio, is not stated." Of breeding values: Quote [theories/becoming/chapters/04-LIFE.md]: "That the normal equations have such a solution is given, not shown".
+- Of breeding values: Quote [theories/becoming/chapters/04-LIFE.md]: "That the normal equations have such a solution is given, not shown", and Quote [theories/becoming/chapters/04-LIFE.md]: "inexact transmission of the breeding value is not stated".
 - The method chapter lists among prose that once said more than the theorems Quote [theories/becoming/chapters/08-METHOD.md]: "that the census is a law of how anything comes to be in every universe".
 - The limit is read from finite bounds, not proved: Quote [theories/becoming/results/records/fixation-by-drift.md]: "finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability." The chapter likewise: Quote [theories/becoming/chapters/04-LIFE.md]: "finite weighted bounds, whose reading is that the fixing share tends to".
 

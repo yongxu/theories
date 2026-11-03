@@ -146,8 +146,8 @@
       "kind": "scope"
     },
     {
-      "en": "That a method can be found for every union of closed readings, or that identification follows from deciding each of finitely many hypotheses in the limit.",
-      "zh": "对闭读法的每个并都能找到方法，或由在极限中判定有限多个假说中的每一个即得辨识。",
+      "en": "That a method can be found for every countable union of closed readings (the Σ⁰₂ readings, which formal learning theory verifies classically: Kelly 1996, after Putnam 1965 and Gold 1965), or that identification follows from deciding each of finitely many hypotheses in the limit.",
+      "zh": "对闭读法的每个可数并（Σ⁰₂ 读法，形式学习理论在经典上证实之：Kelly 1996，承 Putnam 1965 与 Gold 1965）都能找到方法，或由在极限中判定有限多个假说中的每一个即得辨识。",
       "kind": "scope"
     },
     {
@@ -502,6 +502,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement gives the direction the Lean proves (a reading verified in the limit is a union of closed readings, one refuted a meet of open ones; the converse is a scope item), names the told-apart configurations settling takes, and confines recurrence to Boolean moves; the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述给出 Lean 所证的方向（在极限中被证实的读法是闭读法之并，被否证者是开读法之交；其逆属范围项），写明止定所需的构型可区分，并把复现限于布尔动作；定律不变。"
+    },
+    {
+      "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show's union of closed readings made countable (classically, every reading of runs is a union of closed ones, recurrence among them) and the classical converse credited, as 03 now does; its laws and their statements are unchanged.",
+      "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”中闭读法之并改为可数并（经典上，运行的每个读法都是闭读法之并，复现在内），并记经典逆命题之出处，与 03 今同；定律及其陈述不变。"
     }
   ],
   "text_versions": [
