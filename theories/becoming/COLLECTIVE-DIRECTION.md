@@ -38,7 +38,7 @@ The three senses of "always" come apart:
 
 ## 2. Exits, each under stated conditions
 
-The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-capture-through-the-rule): a rule read from the share it selects locks; where nothing in the loop reads what lies beyond the share, the lock outlives any loss it does not read; the capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost, what is shared coming to every member alike, and in groups whose shapers give the group's shared part exactly where it covers it with that part weighted by assortment ([02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)); and, the rule's readers drawn from those it selects, control and lock are one loop on either side of a critical mass. The exits:
+The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-capture-through-the-rule): a rule read from the share it selects locks; where nothing in the loop reads what lies beyond the share, the lock outlives any loss it does not read; the capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost, what is shared coming to every member alike, and in groups of equal size whose shapers give the group's shared part exactly where it covers it with that part weighted by assortment ([02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)); and, the rule's readers drawn from those it selects, control and lock are one loop on either side of a critical mass. The exits:
 
 | Exit | Law, model and hypotheses | Its edge |
 |---|---|---|

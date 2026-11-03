@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "id": "unequal-groups-not-decided-by-the-spread-among-groups",
+  "title": {
+    "en": "Groups of unequal size not decided by the spread among groups",
+    "zh": "不等大之群，不由群间离散决定"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-03T20:38:38+00:00",
+  "statement": {
+    "en": "Where each member gains for every unit its group keeps, groups of unequal size with the same whole spread and size-weighted spread of their means can select for keeping or against it; where what is given is divided among the members, the witness's two listings give one verdict.",
+    "zh": "每成员为其组所留之每单位而得时，整体离散与按大小加权之组均值离散皆同之不等大之群，其选择可向保留，亦可逆之；所予者均分于成员时，见证之二种列法得同一判定。"
+  },
+  "laws": [
+    {
+      "en": "Two keepers and two others in groups of unequal size, the keepers as a pair and each of the others alone, or each keeper alone and the others as a pair: the same spread of keeping over the whole and the same spread of the group means, read by the means weighted by size, all of the spread lying among the means.",
+      "zh": "二保留者与二他者，分为不等大之组：保留者成对而二他者各自独处，或每保留者独处而二他者成对：整体之保留离散相同，组均值之离散（按大小加权读之）亦同，离散皆在均值之间。",
+      "declarations": [
+        "Becoming.SelectionLevels.Sized.together",
+        "Becoming.SelectionLevels.Sized.apart",
+        "Becoming.SelectionLevels.Sized.factor",
+        "Becoming.SelectionLevels.Sized.together_common",
+        "Becoming.SelectionLevels.Sized.apart_common"
+      ]
+    },
+    {
+      "en": "Each unit kept giving two to every other member of its group at a cost of one to its keeper (K = 3, q = 2, nothing coming back to the keeper alone): with the keepers together the whole selects for keeping, and with each keeper alone, where a member's group total goes with its group's mean half as steeply, it selects against keeping.",
+      "zh": "每留一单位，其组每一他成员得二，保留者净付一（K = 3，q = 2，无所独返于保留者）：保留者同组则整体选留，每保留者独处、成员之组总量随其组均值之斜率减半，则整体之选择逆于保留。",
+      "declarations": [
+        "Becoming.SelectionLevels.Sized.togetherOffspring",
+        "Becoming.SelectionLevels.Sized.apartOffspring",
+        "Becoming.SelectionLevels.Sized.together_returns",
+        "Becoming.SelectionLevels.Sized.apart_returns",
+        "Becoming.SelectionLevels.Sized.either_verdict"
+      ]
+    },
+    {
+      "en": "Where what each unit kept gives its group is divided among the members instead, these two listings give one verdict for any returns the same in both.",
+      "zh": "若一单位所予其组者均分于成员，则此二种列法于二者相同之任何回报皆得同一判定。",
+      "declarations": [
+        "Becoming.SelectionLevels.Sized.divided_one_verdict"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Offspring numbers additive in own and groupmates' amounts, each unit kept giving two to every other member of its group at a cost of one to its keeper (K = 3, q = 2 to every member, its keeper included, nothing coming back to the keeper alone, s = 0), or, for the divided case, any returns kept and shared, the same in both listings, with what a unit gives its group divided among the members; one step, the groups listed as given with their sizes fixed over it; the spread among groups read by the groups' means weighted by size, with a positive common multiple of the sizes.",
+      "zh": "不加公理。后代数可加地依赖自身与组员之量：每留一单位，其组每一他成员得二，保留者净付一（K = 3，组每成员连保留者得 q = 2，无所独返于保留者，s = 0）；或于均分之情形，二种列法相同之任何自留与共享之回报，一单位所予其组者均分于成员。一步之内，组如所列而给，其大小于此步不变；组间离散以按大小加权之组均值读之，取诸大小之一正公倍数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise.",
+      "zh": "实有之组如何共享：成员为其组所持之每单位而得，或所予者之均分，皆为前提。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the verdict at unequal sizes is beyond any law: it goes through the covariance of a member's group total with its group's mean (selection-with-returns-to-groupmates).",
+      "zh": "大小不等时之判定无律可循：其经由成员之组总量与其组均值之协方差（selection-with-returns-to-groupmates）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That any two listings with the same spreads give one verdict where what is given is divided: proved for the witness's two; for others it is a reading of rises_iff_divided_sized, with the same K, s and Q = n q.",
+      "zh": "离散皆同之任何二种列法于所予均分时皆得同一判定：仅于见证之二者证之；于他者乃 rises_iff_divided_sized 之一读，须 K、s 与 Q = n q 皆同。",
+      "kind": "scope"
+    },
+    {
+      "en": "That keeping is better where it is selected for: the counts are read, and ranking courses needs C.",
+      "zh": "被选处保留更好：所读者为计数，排序进程须 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "detail": {
+        "en": "The spread among groups as the lever at unequal sizes, for a member gaining for every unit its group holds: the same spreads, either verdict (Sized.either_verdict).",
+        "zh": "大小不等、成员为其组所持之每单位而得时，以组间离散为杠杆：离散皆同而判定两可（Sized.either_verdict）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T203838.375122Z): every declaration of Becoming.SelectionLevels with an empty axiom report. Built in one session, the restatements read against the Lean by one AI reader other than the author; not reviewed by a person.",
+    "zh": "由核心检查器以 Lean 4.29.1 实查（回执 20261103T203838.375122Z）：Becoming.SelectionLevels 每一声明之公理报告皆空。于一会话中构建，复述之文经作者以外之一 AI 读者对照 Lean 审读；未经人审。"
+  },
+  "next_delta": {
+    "en": "Readings of the group between the total and the mean; group sizes changing over generations; an independent review by a person.",
+    "zh": "介于总量与均值之间之组读数；组之大小随世代而变；人之独立审查。"
+  },
+  "correspondence": {
+    "en": "Price's partition weighted by group size (Price 1972) and the reading of group selection by group means in multilevel selection (Okasha 2006): at unequal sizes, of the two readings, a member's gain scaling with its group's total or with its mean, which one holds decides whether the spread among the means carries the verdict, the familiar distinction of total against per-capita benefit.",
+    "zh": "按组之大小加权之 Price 分解（Price 1972）与多层选择中以组均值读群选择（Okasha 2006）：大小不等时，于此二读数，成员所得随其组之总量抑或随其均值，何者成立决定组均值之离散是否承载判定，即总量之益与人均之益之常见区分。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+  "aliases": [
+    "Groups of unequal size not decided by the spread among groups",
+    "不等大之群，不由群间离散决定",
+    "Becoming.SelectionLevels.Sized.either_verdict"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-with-returns-to-groupmates",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "rises_iff_kept_sized for the verdict with the keepers together; rises_iff_divided_sized for the one verdict when divided.",
+        "zh": "保留者同组之判定用 rises_iff_kept_sized；均分时之同一判定用 rises_iff_divided_sized。"
+      },
+      "interface": {
+        "output": {
+          "en": "The whole's verdict in groups of any sizes through a reading of the group.",
+          "zh": "各组大小任意时经组之读数之整体判定。"
+        },
+        "input": {
+          "en": "Two listings of four members in groups of unequal size, with their returns.",
+          "zh": "四成员分不等大之组之二种列法及其回报。"
+        },
+        "conditions": {
+          "en": "A positive common multiple of the sizes; returns kept and shared, additive.",
+          "zh": "诸大小之一正公倍数；自留与共享之回报，可加。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+      }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "context and concordMeans: the size-weighted means' spread.",
+        "zh": "context 与 concordMeans：按大小加权之均值离散。"
+      },
+      "interface": {
+        "output": {
+          "en": "The split of the selection term for groups of any sizes.",
+          "zh": "各组大小任意之选择项之分解。"
+        },
+        "input": {
+          "en": "The witness's listings and their factors.",
+          "zh": "见证之列法及其因子。"
+        },
+        "conditions": {
+          "en": "A positive common multiple of the sizes.",
+          "zh": "诸大小之一正公倍数。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "shaping-selected-among-groups",
+      "detail": {
+        "en": "The same pair as a capacity to shape a rule, each member gaining two for each shaper in its group (RuleShaping.Sized.either_verdict).",
+        "zh": "同一对列法作为塑规之能，每成员为其群每一塑规者得二（RuleShaping.Sized.either_verdict）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "role": "proof",
+      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5",
+      "declarations": [
+        "Becoming.SelectionLevels.Sized.apart",
+        "Becoming.SelectionLevels.Sized.apartOffspring",
+        "Becoming.SelectionLevels.Sized.apart_common",
+        "Becoming.SelectionLevels.Sized.apart_returns",
+        "Becoming.SelectionLevels.Sized.divided_one_verdict",
+        "Becoming.SelectionLevels.Sized.either_verdict",
+        "Becoming.SelectionLevels.Sized.factor",
+        "Becoming.SelectionLevels.Sized.together",
+        "Becoming.SelectionLevels.Sized.togetherOffspring",
+        "Becoming.SelectionLevels.Sized.together_common",
+        "Becoming.SelectionLevels.Sized.together_returns",
+        "Becoming.SelectionLevels.rises_iff_divided_sized",
+        "Becoming.SelectionLevels.rises_iff_kept_sized"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "role": "receipt",
+      "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md",
+      "role": "integration",
+      "sha256": "c8f2fc6ed39edcf9759012205c72665f7dc5d623423d99911569483a65cbe6e9"
+    },
+    {
+      "path": "theories/becoming/chapters/04-LIFE.md",
+      "role": "statement",
+      "sha256": "1f6e81e2e6320fb8e0bce0e0c9684770ff85aba942c594b2623f01ef87a89d0c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "4 November 2026, board item US (study section 506): added: groups of unequal size with the same spreads and either verdict, where each member gains for every unit its group keeps, and one verdict where what is given is divided; 04 §7's open item closed both ways.",
+      "zh": "2026年11月4日，工作板条目 US（研究第 506 节）：新增：整体与组均值离散皆同之不等大之群，成员为其组所留之每单位而得时判定两可，所予均分时判定唯一；04 §7 之未决项两面皆结。"
+    }
+  ]
+}

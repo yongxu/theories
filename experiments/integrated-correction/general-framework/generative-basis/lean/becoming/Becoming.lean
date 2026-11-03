@@ -384,12 +384,12 @@ import Becoming.SignificanceStatements
 /-!
 # The Theory of Becoming: the formal core
 
-One relational unfolding, stated once, on one base: the run. The import tree starts at the
-foundation (`GenerativeCore`, `InquirySufficiency`, `RelationalRenewal`) and the frame
-(`Becoming.Frame`: processes and their runs); the unfolding's records, `Becoming.World`, stand
-on them, a world being a run by its type. The World family is the
-standing-and-exchange reading of a run, by definition; the labelled process and the frame are
-read from the world's side in `Becoming.Labelled`.
+One relational unfolding, stated once, on one base: the run, in L0, what the unfolding is at
+each step and how it goes on (`Run`, `Becoming.Frame`, on the foundation's `Generative.Process`;
+the foundation, `GenerativeCore`, `InquirySufficiency` and `RelationalRenewal`, is checked with the
+core and in no layer). The world family (`Becoming.World`: `World`, `Web`, `Flow`) is the
+standing-and-exchange reading of a run, by definition, a world being a run by its type; the
+labelled process and the frame are read from the world's side in `Becoming.Labelled`.
 
 Each note gives its module's layer, computed (`development/r31-support/layers.py` in the R31 kit):
 L0 is the base, `Becoming.World` with every module of the package it imports: `Becoming.Frame`,
@@ -1811,7 +1811,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   given the record (`FreeEnergyCounting.given_record_eq_iff_share`). Its real form, agreeing with it
   on the support, is the periphery's `FreeEnergyReals`.
   A leaf importing `Becoming.ConditionalWeights` (board item UE21).
-* `Becoming.ModelStatements` (L1): definitions and model laws stated at the grammar's models. Twenty
+* `Becoming.ModelStatements` (L2): definitions and model laws stated at the grammar's models. Twenty
   central declarations that rest on no shared law are each stated at a World's occurrence model, at a
   process's model of its moves' relations or on the row's own carrier. Every term of each statement is
   a relation or region of the model, a named comparison of its given amounts or a supplied parameter,
@@ -2033,12 +2033,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.EdgeClosure` (L1): the seed–edge closure, what the process whose steps are the
   edges reaches from a seed, and the core's closure under a relation as this closure from one
   seed, derived from reach being the closure of the steps; it imports only the frame.
-* `Becoming.SeedReach` (L1): reach from seeds is the least invariant, with no premise. A
+* `Becoming.SeedReach` (application): reach from seeds is the least invariant, with no premise. A
   configuration is separated from the seeds by an invariant property exactly where it is not
   reached; that every process reaches every configuration not so separated is double-negation
   elimination, so a reach claim from a failed separation needs a path, not only the refuted
   absence of one. Stated by F2 from the U2 join `SeedReachProcesses`.
-* `Becoming.ScopedReach` (L1): reach through scopes and within histories, with no premise. What
+* `Becoming.ScopedReach` (application): reach through scopes and within histories, with no premise. What
   one scope's steps reach the process reaches; grounds agreeing where domains meet, carried by
   each scope's steps, glue to an invariant; a family indexed by histories never leaves a history
   and reaches in each exactly what that history's process reaches. Alternating scopes reach beyond
@@ -2488,7 +2488,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   types. Transport along any equation of propositions with a constant motive keeps the value;
   that along `propext` it does not reduce is a kernel observation in the record. A leaf: it is
   about the proof language, not about a web.
-* `Becoming.Hexagrams` (L1): the configurations of the 周易 as a world of the spine, with no
+* `Becoming.Hexagrams` (instance): the configurations of the 周易 as a world of the spine, with no
   premise. Six lines, each unbroken or broken, give sixty-four configurations, told apart and
   listed with no axiom; the received order holds every one, and each of its pairs is turned over
   or, where turning over gives the same hexagram, changed in every line. The change of one line
@@ -2504,7 +2504,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Read as claims, a frame and a world, the lines arise and cease at arbitrarily late steps
   (`Frame.claims_recur_iff`); any sixty-five steps revisit, and the kept history is held by no
   list. What the passages of the text say beyond these laws is read in the chapter on the 易传.
-* `Becoming.HexagramPlaces` (L1): the relations of the places of a hexagram, read in context,
+* `Becoming.HexagramPlaces` (instance): the relations of the places of a hexagram, read in context,
   with no premise. A line is in phase where its value is its place's parity (正), the two lines
   at one height of the two trigrams are opposed where they differ (應), adjacent lines
   alternate, rise or fall across their seam (比, 承, 乘), and the middle height is lines 2 and 5
@@ -2522,7 +2522,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   their configurations; the chapter on the 易传 reads each passage.
   The 象 and 彖 sentences on middles, exhausted tops, rises, 中正 and places are counted against the places;
   bands and heights are two divisions.
-* `Becoming.HexagramLaws` (L1): four more laws on the sixty-four configurations and the census
+* `Becoming.HexagramLaws` (instance): four more laws on the sixty-four configurations and the census
   of the law of waxing and waning, with no premise, stated along the runs of the spine. The
   nuclear law (互) merges: what it makes of a hexagram is fixed by the four inner lines, and
   within two steps every run is in 乾, 坤 or the turns of 既濟 and 未濟, exactly the four that
@@ -2536,7 +2536,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   sixty-four, line k turning every 2 ^ (k - 1) steps. The law of waxing and waning keeps the
   changes of line once round (承 and 乘 with the ends), one, three or five, and has six orbits,
   five of twelve steps and one of four.
-* `Becoming.HexagramSites` (L1): two relations of the places read at other sites, after 王弼's
+* `Becoming.HexagramSites` (instance): two relations of the places read at other sites, after 王弼's
   《周易略例》, with no premise. In the second relation of phase the bottom and top places have no
   fixed place (初上无位): a line between them holds its place where it is in phase, and the ends
   say nothing. No parity of the top place makes 需's and 乾's top lines both out of phase, as the
@@ -2550,7 +2550,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   waning: at the top it passes out, and two steps on a sole line stands at the bottom. Censuses
   of the 彖, the 小象 and the line texts are checked on their configurations; every law is read
   along runs.
-* `Becoming.HexagramSequences` (L1): what of the arrangements of the 傳 is a law, with no
+* `Becoming.HexagramSequences` (instance): what of the arrangements of the 傳 is a law, with no
   premise. A law runs the received order (序卦) exactly where it agrees everywhere but at 未濟
   with the law taking each to the next; only the one closing 未濟 to 乾 merges nothing, with one
   orbit of sixty-four. Every such law reads every line for every line, so no three-cell rule on
@@ -2856,8 +2856,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   determined commuting law is a case. Reinforcing keeps equal expectations while runs drawing
   one value for any number of steps have positive weight; Pooling wears a start's preference
   away. A leaf (board item LA4).
-* `Becoming.HexagramCommuting` (L1): The Changes as an instance of a commuting law.
-* `Becoming.HexagramCommuting` (L1, instance ring): the Changes as an instance of a commuting law. Waxing
+* `Becoming.HexagramCommuting` (instance): The Changes as an instance of a commuting law.
+* `Becoming.HexagramCommuting` (instance): the Changes as an instance of a commuting law. Waxing
   and waning never merges a hexagram with its complement, its six steps to the complement are the
   pair halfway round a return of twelve, the waning into 坤 breaks the symmetry, and every course of
   changes has a complementary course.
@@ -3582,7 +3582,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (no premise): what is found is there (`discover_sound`), exhausted is absence within the
   frontier (`exhausted_dead`), enough fuel finds an inhabited tree (`inhabited_discovered`), and
   step `n` of every run reads as the scan with fuel `n` (`run_reads_scan`).
-* `Becoming.Dispatch` (L1): a found route re-read in the current installation before it is acted
+* `Becoming.Dispatch` (application): a found route re-read in the current installation before it is acted
   on (no premise): dispatch fails without the route or the epoch (`dispatch_absent`,
   `dispatch_revoked`), a search followed by its dispatch completes and draws both
   (`acquired_execution`, `discovery_then_dispatch`), and a capture accepted as the current epoch
@@ -3643,7 +3643,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the base optimum lacks; diverting the resource that keeps a requested change possible can be
   best (`accepting_optimum_can_destroy_access`), and a value computed without the restriction can
   prefer the wrong branch (`stale_value_shield_suboptimal`).
-* `Becoming.GuardHorizon` (L1): keeping a guard by a choice of moves, over a horizon, from
+* `Becoming.GuardHorizon` (application): keeping a guard by a choice of moves, over a horizon, from
   readings (choice over the readings named where used): the controlled reading of `Viability`
   (`viable_succ_iff`, `certificate_viable`, `kernel_viable`); Bellman values bound every course
   kept within the guard (`bellman_bounds_safe`); a choice uniform on readings exists exactly where
@@ -3653,7 +3653,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Becoming.CommonResponse`), a reading no configuration gives, with no move at all, can leave a
   common response with no choice from readings (`ungiven_reading_not_uniform`); endpoint access can hide a gap that an
   overlapping handoff closes (`endpoint_access_hides_gap`, `overlapping_handoff_keeps_access`).
-* `Becoming.OpenedCorrection` (L1): a revision of a reading that opens a correction, along one
+* `Becoming.OpenedCorrection` (application): a revision of a reading that opens a correction, along one
   process. Correctable at a configuration: a fitting uniform policy exists through the reading in
   force there, its acts acceptable and executable (`OpenedCorrection.Correctable`); a course of the
   process opens a correction where it leads from a configuration lacking one to one with it,
@@ -3841,7 +3841,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   finds against its hull; a refutable reading refuted by no stretch excludes nothing; a practice
   keeping verdicts within a favoured reading, never refuted by the record, exists exactly where
   that reading is dense.
-* `Becoming.Coverage` (L1): a placement course and the global cover it builds (no premise): a
+* `Becoming.Coverage` (application): a placement course and the global cover it builds (no premise): a
   course of placements covers a board exactly where its tiles and the rest make up the board up to
   order, with no event order; where allowed tiles join opposite colours the balance is kept, so
   the board with two opposite corners removed has no cover (`mutilated_no_cover`), and balance
@@ -3941,7 +3941,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   requirement that does not read the current level of what is required and under which activity
   needs support; a law with noise is a relation of exchange, so the forms hold path by path. A leaf:
   it instantiates, and nothing builds on the instances.
-* `Becoming.PlaceTransitionNets` (L1): place/transition nets (Petri nets; reaction networks with
+* `Becoming.PlaceTransitionNets` (instance): place/transition nets (Petri nets; reaction networks with
   whole-number counts), a formalism defined outside the theory by its own rules, read on the
   spine. The net is a law of exchange reading nothing, its course along a schedule is its flow,
   and along a firing sequence the levels the law generates are its markings. The flow balances
@@ -4174,7 +4174,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   a recent giving, each condition holding its level and what it gave last: under mutual support
   its thresholds fall as any level or recent giving rises; the plain web and the adjusted regime
   are its cases.
-* `Becoming.RoomNet` (L1): rooms tested by a window, the one-unfolding plan's model examples of 验.
+* `Becoming.RoomNet` (instance): rooms tested by a window, the one-unfolding plan's model examples of 验.
   One rule makes the nets of an unheated room and two thermostats, the window's opening in the net
   as an alternative and the rooms compared as rules side by side (`Rooms.joint`). While no window
   opens every room at its set level is one core class at the level (`Rooms.«不开窗则同核»`); with the
@@ -4188,7 +4188,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   gives (`Rooms.«温有常当且仅当有给»`) and, from a margin of two, no line of it from the set level ends
   exactly there (`Rooms.«温不穷当且仅当有给»`). The branches `«恒温与平衡»` stipulates are the rule's at a margin
   of one draw, and its verdict follows (`Rooms.toy_branches`, `Rooms.toy_verdict`).
-* `Becoming.RoomRuns` (L1): the rooms' window courses as runs. With the window open the rule is
+* `Becoming.RoomRuns` (instance): the rooms' window courses as runs. With the window open the rule is
   `RegimeMargin.step` with the heater's giving (`Rooms.next_open`, `Rooms.window_line`), so the
   unheated room is cold from its margin's step (`Rooms.Unheated.window_cold`), at a positive margin
   the matched thermostat holds its set level (`Rooms.Matched.window_held`), and at a margin of three
@@ -4197,7 +4197,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   course's moments are 全生成, and no moment of the unheated course, or of the matched one at a
   positive margin, is (`Rooms.Overshooting.generation_at_moments`); a coarse line is the possible
   with warmth held (`Rooms.line_iff_held`).
-* `Becoming.ReaderRebuilding` (L1): where a reader is rebuilt from, a family of nets from one rule
+* `Becoming.ReaderRebuilding` (instance): where a reader is rebuilt from, a family of nets from one rule
   (board item OG, plan §十三 item 9's organism). A level and a reader of units by age; each step a
   draw, a read in turn while supplied, ageing to a span and a rebuild from the rule's source. Kept
   while supplied where the rebuild draws on the level (`ReaderRebuilding.«供则读者不绝»`); under a
@@ -4206,7 +4206,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   ends at its span from every level; the end at an empty stock, closed under the net
   (`ReaderRebuilding.«取于储者绝而不复»`); the stock buys time exactly where the rebuild draws on
   the level (`ReaderRebuilding.«以储买时当且仅当取于储»`). A leaf.
-* `Becoming.RuleRebuilding` (L1): where a rule of entry is taught from, a family of nets from one rule
+* `Becoming.RuleRebuilding` (instance): where a rule of entry is taught from, a family of nets from one rule
   (board item OG2, plan §十三 item 9's institution, one kind). A quota, a level the members draw on,
   and holders and others by cohort; each step a draw, a new cohort past a door of a strength per
   teacher, ageing to a tenure and a revision. From the steady state the rule is held at every step
@@ -4472,7 +4472,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`course_stock`); old records can admit a wrong route that only a new record separates, and
   repair needs a fresh record and parts (`old_records_admit_duplicate`, `fresh_record_rebuilds`,
   `discrepancy_no_parts`); the moves form one process (`formationProcess`, `trace_iff`).
-* `Becoming.ResponseLearning` (L1): forming an operation from another formation's actual responses
+* `Becoming.ResponseLearning` (application): forming an operation from another formation's actual responses
   (supplied programs, lessons and stock): a lesson keeps the pair's stock plus drawn and the
   receiver sees only responses (`lesson_stock`, `learn_through_interface`); the program is
   reconstructed and kept in every generation (`reconstructs_program`, `every_cohort_holds`),

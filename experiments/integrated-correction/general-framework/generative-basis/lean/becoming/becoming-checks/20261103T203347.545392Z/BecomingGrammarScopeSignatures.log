@@ -1,0 +1,85 @@
+@Becoming.«相续则同族» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α}, Becoming.«相续» R E x y → Becoming.«同族» R E x y
+@Becoming.«所及则同族» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α}, Becoming.«所及» R E x y → Becoming.«同族» R E x y
+@Becoming.«续无外则族无外» : ∀ {Pos : Type} {α : Type u_1} {R E : Becoming.«际» α} {center : Pos → α},
+  Becoming.«续无外» R E center → Becoming.«族无外» R E center
+@Becoming.«同族之粗化» : ∀ {α : Type u_1} (R : Becoming.«际» α) {E E' : Becoming.«际» α},
+  Becoming.«则» E E' → ∀ {x y : α}, Becoming.«同族» R E x y → Becoming.«同族» R E' x y
+@Becoming.«续无外之粗化» : ∀ {Pos : Type} {α : Type u_1} {R E E' : Becoming.«际» α} {center : Pos → α},
+  Becoming.«则» E E' → Becoming.«续无外» R E center → Becoming.«续无外» R E' center
+@Becoming.«族无外之粗化» : ∀ {Pos : Type} {α : Type u_1} {R E E' : Becoming.«际» α} {center : Pos → α},
+  Becoming.«则» E E' → Becoming.«族无外» R E center → Becoming.«族无外» R E' center
+@Becoming.«缘在族中» : ∀ {α : Type u_1} (R : Becoming.«际» α) {x y : α}, R x y → Becoming.«同族» R Becoming.«一» x y
+@Becoming.«族之续即缘» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  Becoming.«谓» (Becoming.«续» R (Becoming.«同族» R Becoming.«一»)) R
+@Becoming.«族之所及即一之所及» : ∀ {α : Type u_1} (R : Becoming.«际» α) {x y : α},
+  Becoming.«所及» R (Becoming.«同族» R Becoming.«一») x y ↔ Becoming.«所及» R Becoming.«一» x y
+@Becoming.«续即缘当且仅当含族» : ∀ {α : Type u_1} (R : Becoming.«际» α) {E : Becoming.«际» α},
+  Becoming.«类» E → (Becoming.«谓» (Becoming.«续» R E) R ↔ Becoming.«则» (Becoming.«同族» R Becoming.«一») E)
+@Becoming.«遍有后则族有常» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (x : α), ∃ y, R x y) → Becoming.«有常» R (Becoming.«同族» R Becoming.«一»)
+@Becoming.«遍有后则缘在族核» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (x : α), ∃ y, R x y) → ∀ {x y : α}, R x y → Becoming.«续» R (Becoming.«核» R (Becoming.«同族» R Becoming.«一»)) x y
+@Becoming.«遍有后则核之所及即一之所及» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (x : α), ∃ y, R x y) →
+    ∀ {x y : α}, Becoming.«所及» R (Becoming.«核» R (Becoming.«同族» R Becoming.«一»)) x y ↔ Becoming.«所及» R Becoming.«一» x y
+@Becoming.«过亡而续» : ∀ {α : Type u_1} {R L O : Becoming.«际» α} {c m z : α},
+  Becoming.«所及» R L c m → Becoming.«亡» R O m → Becoming.«续» R L m z → Becoming.«所及» R L c z ∧ ¬Becoming.«相续» R O m z
+@Becoming.«核有续当且仅当有不穷» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  (∃ x y, Becoming.«续» R (Becoming.«核» R E) x y) ↔ ∃ y, Becoming.«不穷» R (Becoming.«核» R E) y
+@Becoming.«无不穷则核无续» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  (∀ (y : α), ¬Becoming.«不穷» R (Becoming.«核» R E) y) → ∀ {x y : α}, ¬Becoming.«续» R (Becoming.«核» R E) x y
+@Becoming.«续无外则同一中心» : ∀ {Pos : Type} {α : Type u_1} {R E : Becoming.«际» α} {center : Pos → α},
+  Becoming.«无环» R → Becoming.«续无外» R E center → ∀ (p q : Pos), center p = center q
+@Becoming.«续无外则中心无缘» : ∀ {Pos : Type} {α : Type u_1} {R E : Becoming.«际» α} {center : Pos → α},
+  Becoming.«无环» R → Becoming.«续无外» R E center → ∀ (p : Pos) (w : α), ¬R w (center p)
+@Becoming.withinClosure_of_line : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X},
+  Becoming.«相续» rel Becoming.«一» f g → Becoming.WithinClosure rel f g
+@Becoming.eq_or_reach_iff_reached : ∀ {X : Type u_1} {R : Becoming.«际» X} {x y : X},
+  x = y ∨ Becoming.«及» R x y ↔ Becoming.«所及» R Becoming.«一» x y
+@Becoming.withinClosure_iff_reached : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X},
+  Becoming.WithinClosure rel f g ↔ Becoming.«所及» rel Becoming.«一» f g
+@Becoming.ownClosure_unrestricted_iff_noOutside : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+    Becoming.«续无外» rel Becoming.«一» center
+@Becoming.premises_of_noOutside : ∀ {F Pos Q : Type} {V : Becoming.Valuation Pos Q} {rel : F → F → Prop}
+  {center : Pos → F},
+  Becoming.«续无外» rel Becoming.«一» center →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (p : Pos) (c : Q),
+          Becoming.selfAscribed (Becoming.ownClosure rel) center p (step c) (formation c) → V.sig p c) →
+        V.Significant ∧
+          (∀ (p : Pos), V.SelfSignificance p) ∧
+            Becoming.Neutral V.transmits ∧ Becoming.Neutral V.shares ∧ ∀ (c : Q), V.living c → ∀ (a : Pos), V.Seed
+Becoming.LineOfDescent.Endless.member_class : Becoming.«类» Becoming.LineOfDescent.Endless.member
+Becoming.LineOfDescent.Endless.total : ∀ (x : Becoming.LineOfDescent.Endless.Occ),
+  ∃ y, Becoming.LineOfDescent.Endless.step x y
+Becoming.LineOfDescent.Endless.member_ends : ∀ (n : Nat),
+  Becoming.«亡» Becoming.LineOfDescent.Endless.step Becoming.LineOfDescent.Endless.member (n, true)
+Becoming.LineOfDescent.Endless.descent_constant : Becoming.«有常» Becoming.LineOfDescent.Endless.step Becoming.«一»
+Becoming.LineOfDescent.Endless.core_through_birth : ∀ (n : Nat),
+  Becoming.«续» Becoming.LineOfDescent.Endless.step (Becoming.«核» Becoming.LineOfDescent.Endless.step Becoming.«一»)
+      (n, true) (n + 1, false) ∧
+    Becoming.«亡» Becoming.LineOfDescent.Endless.step Becoming.LineOfDescent.Endless.member (n, true)
+Becoming.LineOfDescent.Endless.descent_unending : ∀ (n : Nat),
+  Becoming.«不穷» Becoming.LineOfDescent.Endless.step (Becoming.«核» Becoming.LineOfDescent.Endless.step Becoming.«一»)
+    (n + 1, false)
+Becoming.LineOfDescent.Endless.descent_reaches_both : ∀ (n : Nat),
+  Becoming.«所及» Becoming.LineOfDescent.Endless.step Becoming.«一» (0, false) (n, false) ∧
+    Becoming.«所及» Becoming.LineOfDescent.Endless.step Becoming.«一» (0, false) (n, true)
+Becoming.LineOfDescent.Endless.descent_reaches : ∀ (n : Nat) (b : Bool),
+  Becoming.«所及» Becoming.LineOfDescent.Endless.step Becoming.«一» (0, false) (n, b)
+Becoming.LineOfDescent.Endless.descent_no_outside : Becoming.«续无外» Becoming.LineOfDescent.Endless.step Becoming.«一»
+  fun x => (0, false)
+@Becoming.LineOfDescent.Endless.member_line : ∀ {x y : Becoming.LineOfDescent.Endless.Occ},
+  Becoming.«相续» Becoming.LineOfDescent.Endless.step Becoming.LineOfDescent.Endless.member x y → y.fst = x.fst
+Becoming.LineOfDescent.Endless.member_outside : ¬Becoming.«续无外» Becoming.LineOfDescent.Endless.step
+    Becoming.LineOfDescent.Endless.member fun x => (0, false)
+@Becoming.LineOfDescent.Last.last_ends : ∀ {E : Becoming.«际» Becoming.LineOfDescent.Last.Occ},
+  Becoming.«亡» Becoming.LineOfDescent.Last.step E (true, true)
+Becoming.LineOfDescent.Last.never_unending : ∀ (E : Becoming.«际» Becoming.LineOfDescent.Last.Occ)
+  (y : Becoming.LineOfDescent.Last.Occ), ¬Becoming.«不穷» Becoming.LineOfDescent.Last.step E y
+Becoming.LineOfDescent.Last.core_no_continuation : ∀ (x y : Becoming.LineOfDescent.Last.Occ),
+  ¬Becoming.«续» Becoming.LineOfDescent.Last.step (Becoming.«核» Becoming.LineOfDescent.Last.step Becoming.«一») x y
+Becoming.LineOfDescent.Last.descent_past_end : Becoming.«所及» Becoming.LineOfDescent.Last.step Becoming.«一»
+    (false, false) (true, false) ∧
+  ¬Becoming.«相续» Becoming.LineOfDescent.Last.step (fun x y => x.fst = y.fst) (false, true) (true, false)

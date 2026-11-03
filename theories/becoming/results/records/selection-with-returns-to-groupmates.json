@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
+  "reviewed_at_utc": "2026-11-03T20:38:38+00:00",
   "statement": {
     "en": "Where each unit kept gives b to every other member of the keeper's group and takes c from the keeper, in groups of m members, the whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.",
     "zh": "每保留一单位给保留者之组每个其他成员 b、从保留者取走 c 时，在 m 个成员的等大之组中，整体恰在 b + c 乘整体离散小于 m b 乘组间离散时选择保留：即以该份额为同类聚合的 Hamilton 规则。"
@@ -77,18 +77,32 @@
         "Becoming.SelectionLevels.Partly.returns",
         "Becoming.SelectionLevels.Partly.below_one"
       ]
+    },
+    {
+      "en": "Returns in groups of any sizes: with n a positive common multiple of the sizes, each group's factor n over its size, and what each unit kept shares reaching every member as q per unit of a reading of its group, selection within goes by s against K, among the means by their factors (n times each mean) by s against K with n q times the reading's covariation with them, and the whole selects for keeping exactly where K times n times its spread, with q times the reading's discordance with the means by their factors, falls short of the same with s and the concordance. Each member gaining q for every unit its group holds, the verdict goes through the covariance of a member's group total with its group's mean, with unequal sizes not a function of the whole's spread and the size-weighted spread of the means; what a unit gives its group divided among the members, through the size-weighted spread of the means: over the rationals, where the amount varies, K < s + Q ρ, with Q = n q what a unit gives its group and ρ the share of the variance, weighted by size, lying among the means.",
+      "zh": "各组大小任意之所返：取各组大小之一正公倍数 n、每组之因子为 n 除以其大小，所留每单位所共享者按其组之一读数每单位 q 达于每成员时，组内之选择以 s 对 K，按因子之均值（n 乘各均值）之间以 s 对 K 加 n q 乘读数与之之协变，整体选留恰当 K 乘 n 乘其离散加 q 乘读数与按因子之均值之不一致，小于以 s 与一致所成之同式。每成员为其组所持之每单位得 q 时，判定经由成员之组总量与其组均值之协方差，大小不等时非整体离散与按大小加权之均值离散之函数；一单位予其组者均分于成员时，经由按大小加权之均值离散：于有理数上、量有变处，K < s + Q ρ，Q = n q 为一单位予其组者，ρ 为按大小加权之方差中位于均值之间之份额。",
+      "declarations": [
+        "Becoming.SelectionLevels.cancel_two",
+        "Becoming.SelectionLevels.combination_balance",
+        "Becoming.SelectionLevels.kept_balance",
+        "Becoming.SelectionLevels.within_shared_by",
+        "Becoming.SelectionLevels.means_shared",
+        "Becoming.SelectionLevels.rises_iff_shared_sized",
+        "Becoming.SelectionLevels.rises_iff_kept_sized",
+        "Becoming.SelectionLevels.rises_iff_divided_sized"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every other member of the keeper's group and taking c from the keeper; groups of equal size; for the step law, exact transmission.",
-      "zh": "不加公理。后代数可加地依赖自身与组员之量：每保留一单位给保留者之组每个其他成员 b、从保留者取走 c；各组大小相等；跨一步的定律需传递精确。"
+      "en": "No axiom. Offspring numbers depend on own and groupmates' amounts additively, each unit kept giving b to every other member of the keeper's group and taking c from the keeper; groups of equal size for the spread among groups, of any sizes, with a positive common multiple of the sizes, for a reading of the group; for the step law, exact transmission.",
+      "zh": "不加公理。后代数可加地依赖自身与组员之量：每保留一单位给保留者之组每个其他成员 b、从保留者取走 c；经组间离散者各组大小相等，经组之读数者各组大小任意，取诸大小之一正公倍数；跨一步的定律需传递精确。"
     }
   ],
   "does_not_show": [
     {
-      "en": "Returns with synergy (depending on the product of own and groupmates' amounts) are not stated; for groups of unequal size the returns' among-group part and the verdict through the spread among groups are not stated, while the whole's verdict through a reading's covariation (law 1) holds on any list, the split weighted by size is record selection-within-and-among-groups-of-any-sizes, and within groups the returns go as stated for any sizes.",
-      "zh": "有协同的回报（依赖自身与组员之量的乘积）未陈述；大小不等的组，回报的组间部分与经由组间离散的判定未陈述，而经由读数协变的整体判定（定律 1）对任何列表成立，按大小加权的分解见记录 selection-within-and-among-groups-of-any-sizes，组内的回报对任何大小如所陈述。",
+      "en": "Returns with synergy (depending on the product of own and groupmates' amounts) are not stated, nor which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise, and other readings of the group are stated only through the general law.",
+      "zh": "有协同的回报（依赖自身与组员之量的乘积）未陈述；实有之组如何共享亦未陈述：成员为其组所持之每单位而得，或所予者之均分，皆为前提，组之其他读数仅经一般之律陈述。",
       "kind": "scope"
     },
     {
@@ -109,6 +123,13 @@
         "en": "Returns that meet the rule at assortment one need not win: with two thirds of the spread among pairs, b = 3 and c = 2 the whole selects against keeping (Partly.below_one), and with the keepers apart the same returns that select for keeping with them together select against it (Founding.either_verdict).",
         "zh": "在聚合为一时满足规则的回报不必胜出：组间离散占三分之二、b = 3、c = 2 时整体淘汰保留（Partly.below_one）；保留者分开时，与聚在一起时选择保留的同一回报淘汰它（Founding.either_verdict）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "detail": {
+        "en": "With unequal sizes the whole's spread and the size-weighted spread of the means do not decide the verdict where each member gains for every unit its group holds: the same spreads, and either verdict (unequal-groups-not-decided-by-the-spread-among-groups).",
+        "zh": "大小不等而每成员为其组所持之每单位而得时，整体离散与按大小加权之均值离散不决定判定：离散皆同，而判定两可（unequal-groups-not-decided-by-the-spread-among-groups）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -120,12 +141,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipts 20261022T122330.896153Z and, for the kept form and the returns derived from it, 20261103T102739.294112Z): every declaration of Becoming.SelectionLevels has an empty axiom report; the checker verifies core purity. Built and reviewed in one session each, with no separate reviewer; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T122330.896153Z，及有所自留之形式与由之导出之所返，回执 20261103T102739.294112Z）：Becoming.SelectionLevels 每一声明之公理报告皆空；检查器核验核心之纯。各于一会话中构建与审读，无另一审者；未经人之独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipts 20261022T122330.896153Z; for the kept form and the returns derived from it, 20261103T102739.294112Z; for groups of any sizes, 20261103T203838.375122Z): every declaration of Becoming.SelectionLevels has an empty axiom report; the checker verifies core purity. Built and reviewed in one session each, the restatements of groups of any sizes read by one AI reader other than the author; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T122330.896153Z；有所自留之形式与由之导出之所返，回执 20261103T102739.294112Z；各组大小任意者，回执 20261103T203838.375122Z）：Becoming.SelectionLevels 每一声明之公理报告皆空；检查器核验核心之纯。各于一会话中构建与审读，各组大小任意之重述经作者以外之一 AI 读者审读；未经人之独立审查。"
   },
   "next_delta": {
-    "en": "Returns with synergy; the returns' among-group part for groups of unequal size; how assortment changes over generations; an independent review.",
-    "zh": "有协同的回报；大小不等之组中回报的组间部分；聚合在世代中如何变化；独立审查。"
+    "en": "Returns with synergy; how assortment changes over generations; an independent review.",
+    "zh": "有协同的回报；聚合在世代中如何变化；独立审查。"
   },
   "correspondence": {
     "en": "Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-group share through relatedness within groups; the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006). Here in counts, nothing subtracted and no regression coefficient formed. Readings (the AI's): the verdict turns on how the groups whose members give to each other are founded.",
@@ -241,6 +262,13 @@
         "en": "The capacity to shape a rule, a group's shared part what its shapers give, is a case of returns kept.",
         "zh": "塑规之能（群之同得为其塑规者所予）为有所自留之所返之一例。"
       }
+    },
+    {
+      "id": "unequal-groups-not-decided-by-the-spread-among-groups",
+      "detail": {
+        "en": "The form the verdict at unequal sizes does not go through, beside the form it goes through.",
+        "zh": "大小不等时判定所不经之形，与其所经之形并列。"
+      }
     }
   ],
   "references": [
@@ -284,6 +312,8 @@
         "Becoming.SelectionLevels.among_returns",
         "Becoming.SelectionLevels.balance_add",
         "Becoming.SelectionLevels.balance_mul",
+        "Becoming.SelectionLevels.cancel_two",
+        "Becoming.SelectionLevels.combination_balance",
         "Becoming.SelectionLevels.concordAmong",
         "Becoming.SelectionLevels.concordMeans",
         "Becoming.SelectionLevels.concordWithin",
@@ -299,6 +329,7 @@
         "Becoming.SelectionLevels.flatMap_flatMap",
         "Becoming.SelectionLevels.groups",
         "Becoming.SelectionLevels.holds",
+        "Becoming.SelectionLevels.kept_balance",
         "Becoming.SelectionLevels.levels",
         "Becoming.SelectionLevels.levels_of_alike",
         "Becoming.SelectionLevels.levels_of_uniform",
@@ -314,6 +345,7 @@
         "Becoming.SelectionLevels.lineages_whole",
         "Becoming.SelectionLevels.lineages_within_none",
         "Becoming.SelectionLevels.means_none_of_alike",
+        "Becoming.SelectionLevels.means_shared",
         "Becoming.SelectionLevels.meet",
         "Becoming.SelectionLevels.mem_of_mem_context",
         "Becoming.SelectionLevels.nil_of_length_zero",
@@ -329,12 +361,15 @@
         "Becoming.SelectionLevels.rises_exact_iff_sized",
         "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
         "Becoming.SelectionLevels.rises_iff",
+        "Becoming.SelectionLevels.rises_iff_divided_sized",
         "Becoming.SelectionLevels.rises_iff_kept",
+        "Becoming.SelectionLevels.rises_iff_kept_sized",
         "Becoming.SelectionLevels.rises_iff_lineages",
         "Becoming.SelectionLevels.rises_iff_means_of_uniform",
         "Becoming.SelectionLevels.rises_iff_reading",
         "Becoming.SelectionLevels.rises_iff_returns",
         "Becoming.SelectionLevels.rises_iff_returns_of_uniform",
+        "Becoming.SelectionLevels.rises_iff_shared_sized",
         "Becoming.SelectionLevels.rises_iff_sized",
         "Becoming.SelectionLevels.rises_iff_within_of_alike",
         "Becoming.SelectionLevels.shuffle_left",
@@ -357,9 +392,10 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_kept",
         "Becoming.SelectionLevels.within_none_of_uniform",
-        "Becoming.SelectionLevels.within_returns"
+        "Becoming.SelectionLevels.within_returns",
+        "Becoming.SelectionLevels.within_shared_by"
       ],
-      "sha256": "a4964297ea1b081fa3ee1885ea1fa3067cbb6af6f7aa864576804119aa5048d5"
+      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -428,14 +464,24 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "ae05228424e8c6ef53b9cc5686f5bb422fea35668443a84c7c5464a0f4084abd",
+      "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "role": "receipt",
+      "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md",
+      "role": "integration",
+      "sha256": "c8f2fc6ed39edcf9759012205c72665f7dc5d623423d99911569483a65cbe6e9"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -471,6 +517,10 @@
     {
       "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said groups of unequal size are not stated, though law 1 (rises_iff_reading) gives the whole's verdict through a reading's covariation on any list, and the split weighted by size is another record's law; narrowed to the returns' among-group part and the verdict through the spread among groups; its laws and their statements are unchanged.",
       "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”与“下一步”曾说大小不等的组未陈述，而定律 1（rises_iff_reading）对任何列表给出经由协变的整体判定，按大小加权的分解为另一记录之律；收窄为回报的组间部分与经由组间离散的判定；定律及其陈述不变。"
+    },
+    {
+      "en": "4 November 2026, board item US (study section 506): the returns stated in groups of any sizes through a reading of the group (rises_iff_shared_sized), with the kept and divided readings and a witness either way; the open item on the among-group part for unequal sizes answered.",
+      "zh": "2026年11月4日，工作板条目 US（研究第 506 节）：所返于各组大小任意时经组之读数陈述（rises_iff_shared_sized），附有所自留与均分二读数及两可之见证；大小不等时组间部分之未决项已答。"
     }
   ]
 }

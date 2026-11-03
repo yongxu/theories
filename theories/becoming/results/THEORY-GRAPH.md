@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3206 nodes, 6185 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3208 nodes, 6191 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -15,7 +15,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Significance and alignment | 0 | 81 | 60 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
-| Not yet assigned | 0 | 3 | 2 | 0 |
+| Not yet assigned | 0 | 4 | 2 | 0 |
 
 ## The grammar's concepts
 
@@ -649,9 +649,10 @@ Results (7):
 
 ## Not yet assigned
 
-Results (3):
+Results (4):
 
 - [Coupled drawers keep a need only where the coupling reaches it](records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md) (recorded-checked)
+- [Groups of unequal size not decided by the spread among groups](records/unequal-groups-not-decided-by-the-spread-among-groups.md) (recorded-checked)
 - [The capacity to shape the rule, selected among groups](records/shaping-selected-among-groups.md) (recorded-checked)
 - [The critical mass, drawn one member at a time](records/drawn-shaping-drawn-one-at-a-time.md) (recorded-checked)
 
