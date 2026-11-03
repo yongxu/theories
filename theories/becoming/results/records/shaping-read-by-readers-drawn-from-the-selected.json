@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T17:04:57+00:00",
+  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Where a rule's readers come from those it selects and its shapers read at least as much coming back to them as others do, the rule's lock and the capacity to shape it are one loop: above a critical mass set by who reads and the cost, the capacity rises, the rule locked for it; below, the reverse.",
     "zh": "规则之读者取自其所选者、且其中塑规者读返于塑规者者不少于其中他者时，塑规之能之被选与其所塑规则之锁定为一回路，两向皆然：在由谁读与成本所恰定之临界量之上，其能升而规则锁定于其利；其下，其能降而规则锁定于其不利。"
@@ -101,9 +101,9 @@
       "kind": "non-implication"
     },
     {
-      "en": "Courses with noise, or convergence to either boundary state: the laws give the direction at every step on each side of the critical mass and the lock. In such a coordination game, under rare mutation in a large finite population the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo, as in the witness; the critical mass bounds courses without noise only.",
-      "zh": "有噪声之进程，或收敛于任一边界状态：诸律予临界量两侧每步之方向与锁定。于此类协调博弈，大而有限之群体在稀少突变之下，长期状态为风险占优者（Kandori、Mailath、Rob 1993；Young 1993），此处 lo < c < hi 且 2c < hi + lo 时为塑规者之状态，如见证；临界量唯约束无噪声之进程。",
-      "kind": "scope"
+      "en": "That the lock holds under noise: drawn one member at a time either lock is left by drift, and the state a member arising fixes more often can part from risk dominance (drawn-shaping-drawn-one-at-a-time).",
+      "zh": "噪声下锁定仍守：逐一而抽时任一锁定为漂变所离，一新成员更常定于何态可与风险占优相离（drawn-shaping-drawn-one-at-a-time）。",
+      "kind": "non-implication"
     },
     {
       "en": "Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo.",
@@ -152,12 +152,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
   },
   "next_delta": {
-    "en": "Readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
+    "en": "Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
     "zh": "会学之读者；随份额而变之成本；噪声与长期状态；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；人之独立审查。"
   },
   "correspondence": {
-    "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; under noise the risk-dominant state is selected in the long run (Kandori, Mailath and Rob 1993; Young 1993). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
-    "zh": "lo < c < hi 时，此模型即猎鹿博弈，其第二策略之所得不依于对手：塑规者遇塑规者留 a + p + hi，塑规者遇他者留 a + p + lo，他者遇任何者留 a + p + c。临界量即其混合均衡，于塑规者份额 (c − lo)/(hi − lo)；风险占优比较 hi + lo 与 2c（Harsanyi、Selten 1988；Skyrms 2004）。二读皆予他者 a + c + p，故所读之规则至一公因子即二读之频率加权平均，每步皆读即离散时间之复制者选择，至一步之滞后（Hofbauer、Sigmund 1998）。门槛即带外部性之二元选择之临界量（Schelling 1973；Schelling 1978，第 3、7 章；Granovetter 1978，其门槛为分布者，此处唯一；Oliver、Marwell、Teixeira 1985，用此名）；锁定即递增回报之锁入（Arthur 1989），此处由起点而非随机到达所定；有噪声时，长期选风险占优之状态（Kandori、Mailath、Rob 1993；Young 1993）。偏向本类之读者，其生物学对照为绿胡须（Gardner、West 2010；唯核其书目）。读于元吸引子（theories/meta-attractor），此接其第二阶，即对选择之控制之选择，于其封闭回路。锁定之半近乎定义（RuleCapture 之 locked_stays 与 locked_not_below 于彼处所读之起点），drawn_reads_iff 为二步之合成（ClosedCapture.Drawn.pool_reads_iff，继以 shaped_le_iff）；主干上所新者为临界量之计算，属初等。"
+    "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; in the limit of rare mutation against a deterministic dynamic the risk-dominant state is selected (Kandori, Mailath and Rob 1993; Young 1993), and drawn one member at a time the Moran criterion parts from it under strong selection (drawn-shaping-drawn-one-at-a-time). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
+    "zh": "lo < c < hi 时，此模型即猎鹿博弈，其第二策略之所得不依于对手：塑规者遇塑规者留 a + p + hi，塑规者遇他者留 a + p + lo，他者遇任何者留 a + p + c。临界量即其混合均衡，于塑规者份额 (c − lo)/(hi − lo)；风险占优比较 hi + lo 与 2c（Harsanyi、Selten 1988；Skyrms 2004）。二读皆予他者 a + c + p，故所读之规则至一公因子即二读之频率加权平均，每步皆读即离散时间之复制者选择，至一步之滞后（Hofbauer、Sigmund 1998）。门槛即带外部性之二元选择之临界量（Schelling 1973；Schelling 1978，第 3、7 章；Granovetter 1978，其门槛为分布者，此处唯一；Oliver、Marwell、Teixeira 1985，用此名）；锁定即递增回报之锁入（Arthur 1989），此处由起点而非随机到达所定；于罕有突变对确定性动态之极限中选风险占优之态（Kandori、Mailath、Rob 1993；Young 1993），逐一而抽时 Moran 准则于强选择下与之相离（drawn-shaping-drawn-one-at-a-time）。偏向本类之读者，其生物学对照为绿胡须（Gardner、West 2010；唯核其书目）。读于元吸引子（theories/meta-attractor），此接其第二阶，即对选择之控制之选择，于其封闭回路。锁定之半近乎定义（RuleCapture 之 locked_stays 与 locked_not_below 于彼处所读之起点），drawn_reads_iff 为二步之合成（ClosedCapture.Drawn.pool_reads_iff，继以 shaped_le_iff）；主干上所新者为临界量之计算，属初等。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
   "aliases": [
@@ -221,6 +221,13 @@
         "en": "MA4b: the others among the readers read a loss once it reaches a bound; their reading leaves this module's lock only before their late reading would favour the shapers, for good while it still favours them a step on, with a lag of one step, at most one step between, and a deadline.",
         "zh": "MA4b：读者中之他者于损失及一界后读之；其读唯于其迟读偏向塑规者之前方离本模块之锁定，下一步之迟读仍偏向他者时则永离，滞后一步，其间至多一步，且有期限。"
       }
+    },
+    {
+      "id": "drawn-shaping-drawn-one-at-a-time",
+      "detail": {
+        "en": "This model drawn one member at a time: both locks left by drift, bounded across the distance from the critical mass.",
+        "zh": "此模型逐一而抽：二锁定皆为漂变所离，以距临界量之远为界。"
+      }
     }
   ],
   "references": [
@@ -267,12 +274,12 @@
         "Becoming.DrawnShaping.shaped_le_iff",
         "Becoming.DrawnShaping.upper_strictly"
       ],
-      "sha256": "d0a7a76938f92bb848fbc73d7ec940a79f97bfc1b3009ca7d6fd472904eda576"
+      "sha256": "f6264373f914de09e17599b58dd6d76065e184ebeed1d1c7b6f13166372f1e55"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72"
+      "sha256": "c6e709d6248a4eb9932f3bd4cbeaba8694edb0f52b448f89edb131140b4f9a56"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
@@ -312,7 +319,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "60c85e264f30258b2c2c9fa1e96f556dd3aed3e74adc461b34bf0bfa174fa5cd"
+      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
@@ -322,13 +329,29 @@
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "7fa4e88db90a4f6bf0ba3c9c9dd0bd73f144b8b7fb059ee5c21db23340515f02"
+      "sha256": "d84fa49e44af30de19417bb3ee80aeb552b6368fe1185fc91a33c01bd73054e6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md",
+      "role": "integration",
+      "sha256": "dc6db39b8122e866ebef953e1c599622f55034ec51881beb3caa047f069ad760"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T165537.368039Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "sha256_pointer": "/source_sha256/Becoming.DrawnShaping",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -342,6 +365,10 @@
     {
       "en": "26 October 2026 (MA4b, study section 420): the readers' timing joined to the critical mass in loss-read-in-time-by-the-others; the next step, the two scope items on the readers' timing, and a related record updated. The laws are unchanged.",
       "zh": "2026年10月26日（MA4b，研究第 420 节）：读者之时序接于临界量，见 loss-read-in-time-by-the-others；下一步、关于读者时序之二范围条目及相关记录随之更新。诸律不变。"
+    },
+    {
+      "en": "3 November 2026, board item AJ8 (study section 503): the noise boundary narrowed: drawn one member at a time either lock is left by drift (drawn-shaping-drawn-one-at-a-time), and the long-run state under noise is not the risk-dominant one in general; the laws are unchanged.",
+      "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：噪声之界收窄：逐一而抽时任一锁定为漂变所离（drawn-shaping-drawn-one-at-a-time），噪声下之长期之态一般非风险占优者；诸律不变。"
     }
   ]
 }

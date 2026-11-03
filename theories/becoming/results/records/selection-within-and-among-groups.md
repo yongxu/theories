@@ -88,6 +88,7 @@ The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
+| receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 
 Aliases: `selection within groups and among them`, `组内选择与组间选择`, `multilevel Price equation`, `multilevel selection`, `law of total covariance`, `Becoming.SelectionLevels.levels`, `Becoming.SelectionLevels.among_for_of_rises`, `Becoming.SelectionLevels.rises_exact_iff_levels`
 

@@ -24400,3 +24400,41 @@ Text: 03 §1 after the blindness law, 05 §7 (the law, a reading [AI reading, ZH
 Review: one independent AI reading of the note, the Lean and the revised text (REVIEW-1.md), nine findings, every one
        taken, the chief that the account's form of Theorem 2 is an analogue at optima, not their theorem.
 ```
+
+## 503. Selection read as one law: the AJ conditions as cases of 04's selection laws (AJ8)
+
+Board item AJ8, from the integration scan's gap map (items 2.1 and 2.2, [the gap map](development/ig-integration-gaps/GAP-MAP.md)). The two AJ conditions on capture, MA3 (what comes back to the shapers alone decides the direction) and MA4 (the critical mass locks every course), were proved on their own carriers beside 04's selection laws, Hamilton's rule and the Moran chain, and their texts said more than either proof: that a shared part never changes the direction, and that under noise the long-run state is the risk-dominant one. Both are now cases of 04's laws, with their scope ([study note](development/aj8-selection-one-law/NOTE.md)).
+
+```text
+Result(s): shaping-selected-among-groups (new, home 02 §9), drawn-shaping-drawn-one-at-a-time (new, home 02 §9),
+       selection-with-returns-to-groupmates (the kept form added, home 04 §5), fixation-with-selection (weights read
+       from the count, home 04 §6), shaping-the-rule-selected-by-what-comes-back and
+       shaping-read-by-readers-drawn-from-the-selected (narrowed); SelectionLevels, RuleShaping and Drift extended,
+       a new leaf DrawnReplacement (19 theorems), every axiom report empty (receipt 20261103T102739.294112Z).
+Delta:
+  - Hamilton's rule with something kept: where each unit kept costs its keeper K, brings s back to it alone and q to
+    every member of its group, the whole selects for keeping exactly where K times the spread falls short of s times
+    it with m q times the spread among groups. MA3's rule after shaping, listed in groups, is its case: shaping is
+    selected exactly where c < s with groups alike, c < s + m q with groups uniform, and always where c < s; read
+    over the rationals, c < s + m q rho. Witness (Assorting.either_verdict): a cost of two above one coming back,
+    selected with the shapers together and against with them apart. So "whatever p" holds where the shared part
+    reaches every member alike, and only there.
+  - The Moran chain with weights read from the count: the potential keeps its weighted value, the fixation bounds
+    hold, losing the first kind is never ruled out, and across a stretch favouring one kind the histories leaving it
+    are bounded above by the product of the weights across the stretch; the constant case derived from it.
+  - MA4's stag hunt read as 04's replacement chain with drift: either lock is left with positive weight, a bound on
+    that weight shrinks across the distance from the critical mass, and the risk-dominance comparison is the even
+    share's (2c < hi + lo). Witness: five members, the shapers risk dominant and the others fixing with more weight
+    (product 6,215,625 against 50^4 = 6,250,000), the base or the shared part reversing it.
+Not reached: the rare-mutation limit (Fudenberg and Imhof 2006), Kandori, Mailath and Rob's and Young's limits, the
+       weak-selection approach (Nowak and others 2004) and the pairing argument behind the weak witness are cited or
+       argued, not proved; weights depending on more than the count; mutation with drift; any ranking of capture
+       against open rule-making, which needs C.
+Text: 02 §9 (two new theorem paragraphs, MA3's and MA4's homes, T7 with its noise scope and a forbidden case, which
+       locks noise leaves [AI reading], D45, the Open item), 04 §5 and §6, 07 §6, ALIGNMENT items 4 and 5, A-10, A-10b,
+       Question 2 and A-14, COLLECTIVE-DIRECTION, 08's T7, Hamilton and Drift rows, the meta-attractor page, the goal
+       objective, AJ's plan and the failure-mode map.
+Review: one independent AI reading of the note, the Lean and the revised texts (NOTE §8), twelve findings, every one
+       taken, the chief that a bound on the weight of leaving a lock shrinks, not the weight, and that drift is proved
+       to leave only the critical mass's locks.
+```
