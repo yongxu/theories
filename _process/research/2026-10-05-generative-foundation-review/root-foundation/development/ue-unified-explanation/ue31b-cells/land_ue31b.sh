@@ -4,9 +4,10 @@
 #   head WORKTREE: in the landing worktree, detached at main, the head clause and one commit of the board; then the
 #     fast-forward of the shared checkout, only if main has not moved and no clause holds the head.
 #   land WORKTREE ASIDE: on that head claim, the branch merged without committing (its own paths only: the design's
-#     folder and this kit), the shared edits by script, the run's path checked on synthetic cultures (check_cells.py;
-#     the dry runs, 40 minutes of CPU, were reproduced byte for byte by the reader before the landing, DESIGN §12), the
-#     board's landed clause, render, strict check, links and tests on the exact tree, then the merge committed.
+#     folder and this kit), the shared edits by script, the run's path checked on synthetic cultures (check_cells.py,
+#     its output the committed one but for the cells' line; the dry runs, about 40 minutes of CPU, are not rerun here:
+#     their output is committed with the code that wrote it), the board's landed clause, render, strict check, links
+#     and tests on the exact tree, then the merge committed.
 #   ff COMMIT: the fast-forward, only if main is the commit's first parent and the head clause is this landing's.
 # usage: land_ue31b.sh head WORKTREE | land_ue31b.sh land WORKTREE ASIDE | land_ue31b.sh ff COMMIT
 set -u

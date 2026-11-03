@@ -1,3 +1,7 @@
 cells {'1-0.04': [4, [13]], '1-0.27': [4, [13]], '1-0.5': [4, [13]], '1-0.73': [4, [13]], '1-0.96': [4, [13]], '2-0.04': [4, [13]], '2-0.27': [4, [13]], '2-0.5': [4, [13]], '2-0.73': [4, [13]], '2-0.96': [4, [13]]}
-testable True cells read 10 reading separated on the next step: the rival's state; three numbers suffice on the course
+testable True cells read 10 protocol the recording agrees with the protocol [0, 360]
+reading separated on the next step: the rival's state; three numbers suffice on the course
+week 12 in order {'cultures': 40, 'with two entries': 40, 'at the largest losses': 24, 'same larvae and pupae in both': 0, 'later holds no more adults; fewer': [24, 24], 'earlier holds no more adults; fewer': [0, 0], 'read at t = 0': 'later'}
+week 12 the other way {'cultures': 40, 'with two entries': 40, 'at the largest losses': 24, 'same larvae and pupae in both': 0, 'later holds no more adults; fewer': [0, 0], 'earlier holds no more adults; fewer': [24, 24], 'read at t = 0': 'earlier'} the same verdicts
+week 12 mixed {'cultures': 40, 'with two entries': 40, 'at the largest losses': 24, 'same larvae and pupae in both': 0, 'later holds no more adults; fewer': [12, 12], 'earlier holds no more adults; fewer': [12, 12], 'read at t = 0': None} every verdict not read
 CELL CHECK PASSED

@@ -30,6 +30,9 @@ FIRST = 3            # the first row: E_{t-3}, the furthest lag read (H1), is th
 CELL_MIN_ROWS = 24   # rows a cell needs: twice the columns of the largest model (12)
 ORIGIN = 2           # the first forecast origin: E_{t-2} and E_{t-1} under the loss
 MIN_CELLS = R.MIN_CULTURES   # a verdict needs at least 6 cells (state_rules.combine reads its units as given)
+PROTOCOL_SHARE = 0.02 # the recording check: recruits above the pupae by more than half an animal in more than this share
+                      # of the rows means the reading and the protocol disagree, and no verdict is read (DESIGN.md §7)
+VERDICTS = ('W', 'V2', 'H1', 'V5', 'sign', 'V4', 'reading')
 
 
 def strain(c):
@@ -189,9 +192,20 @@ def analyse(cultures, models=R.MODELS):
 
 
 def group_verdicts(cultures):
-    """UE31's frozen verdicts (state_rules.combine), each cell a unit."""
+    """UE31's frozen verdicts (state_rules.combine), each cell a unit, read only where the recording agrees with the
+    protocol: recruits above the pupae by more than half an animal in at most PROTOCOL_SHARE of the rows."""
     per, short = analyse(cultures)
     res = R.combine(per, short)
     res['cells'] = res.pop('cultures')
     res['too_short_cells'] = res.pop('too_short')
+    rows = sum(p['in']['n'] for p in per)
+    above = sum(p['in'].get('recruits_above_pupae', 0) for p in per)
+    res['protocol_rows'] = [above, rows]
+    if rows and above > PROTOCOL_SHARE * rows:
+        res['protocol'] = 'the recording disagrees with the protocol'
+        for k in VERDICTS:
+            if k in res:
+                res[k] = 'not read: the recording disagrees with the protocol'
+    else:
+        res['protocol'] = 'the recording agrees with the protocol'
     return res, per
