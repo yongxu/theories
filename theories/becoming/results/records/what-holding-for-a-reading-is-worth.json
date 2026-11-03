@@ -346,8 +346,8 @@
     "zh": "纯核，公理报告皆空：引 ShownOrder，为 ChoiceOccasions.reach_within；引 ReadingLoop，为 Loop 与 Loop.rests_of_unrefuted，并经之引 Viability.ChoiceOver；诸总用 Flow、Population 与 Dissipation 之引理及前导之消去与减法引理，比较以 Nat.decLt 与 Nat.decLe 判之，不用 omega 与 simp；例之步以 rfl 算。"
   },
   "next_delta": {
-    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the threshold, a rule's shortfall plus the amount forgone against each excess (the plan's TR8); review by a person.",
-    "zh": "读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；有噪之读与连续之信于外围；持是否随其阈之冻结检验：规则之所缺加所舍之量对每一余（计划之 TR8）；人之审查。"
+    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a run of the test of whether holding follows the threshold, a rule's shortfall plus the amount forgone against each excess (TR8, frozen 4 November 2026 with TR-RR, experiments/formations-that-read/FREEZE-1.md; its run waits on Ren's yes); review by a person.",
+    "zh": "读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；有噪之读与连续之信于外围；持是否随其阈之检验之运行：规则之所缺加所舍之量对每一余（TR8，2026年11月4日与 TR-RR 同冻，experiments/formations-that-read/FREEZE-1.md；其运行待 Ren 之可）；人之审查。"
   },
   "correspondence": {
     "en": "In counts: the worth of a reading telling the candidate is the perfect-information case of Good's (1967) argument, his Lemma's dominating row its equality boundary; holding for it is the off-switch game's waiting with a rational human (Hadfield-Menell et al. 2017): its Theorem 1 for a belief of finite support; waiting's two differences T E[U⁺] and T E[(−U)⁺], T the total weight, are T times its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed; for a rule that is a function of the candidate, T times its Equation 1's terms are balances; a finer partition never raising the least shortfall is, for this decision, Blackwell's (1953) partition case. AI reading: openness less shortfall is the incentive the off-switch paper's Remark 1 places qualitatively, its Theorem 2, Δ = σ²E[π̇H] − |µ|Pr(C), the Gaussian form, decomposed otherwise; its game has no cost of waiting, what holding forgoes relaxing Good's proviso. SignLoop is nearest to Carey's (2018) conflating model, whose predictions look perfectly accurate on its encoded observations and which may ignore shutdown: related by a misspecified model never refuted, not formalizing the conflation. Readings, not containments.",
@@ -649,6 +649,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR8 in experiments/formations-that-read, which can refute at most the bridge that a system chooses as the counts rank, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR8，至多能驳系统依计之序而择之桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "4 November 2026, board item RFZ: the test TR8 frozen with TR-RR before any call to a model (experiments/formations-that-read/FREEZE-1.md), with a decline read as an answer and, under the off-switch framing, BASE0 and J0 carrying a verdict; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 RFZ：检验 TR8 于任一模型调用之前与 TR-RR 同冻（experiments/formations-that-read/FREEZE-1.md），拒答读为一答，于关机之框下 BASE0 与 J0 带判；未运行。律不变；next_delta 之冻结检验今为其运行，待 Ren 之可。"
     }
   ]
 }

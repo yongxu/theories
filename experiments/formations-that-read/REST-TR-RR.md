@@ -1,6 +1,6 @@
 # TR-RR: the full design
 
-*Board item TR-RR, 31 October 2026. AI-written (a Claude Code session, RR's owner), not yet reviewed by a person. These are designs: nothing is frozen, and nothing has run on a trained system, a model, data or people.* The test replaces the designs TR-RR1 and TR-RR2 in [RR's note §8](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md#8-tests-that-can-fail-designs-only-to-freeze-before-any-run), whose agentic form is kept below as a variant. The part to read first is [DESIGN.md's section on RR's test](DESIGN.md#rrs-test-in-the-same-harness). One independent read has been taken (section 13).
+*Board item TR-RR, 31 October 2026. AI-written (a Claude Code session, RR's owner), not yet reviewed by a person. This is the design. It is frozen with TR8 in [FREEZE-1](FREEZE-1.md) (4 November 2026), with the changes its section 11 lists; nothing has run on a trained system, a model, data or people.* The test replaces the designs TR-RR1 and TR-RR2 in [RR's note §8](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md#8-tests-that-can-fail-designs-only-to-freeze-before-any-run), whose agentic form is kept below as a variant. The part to read first is [DESIGN.md's section on RR's test](DESIGN.md#rrs-test-in-the-same-harness). One independent read has been taken (section 13).
 
 ## 1. Reproducing Stage 0
 

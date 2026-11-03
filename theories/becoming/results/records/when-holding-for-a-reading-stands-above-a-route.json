@@ -154,8 +154,8 @@
     "zh": "纯核，公理报告皆空：RevisionPlans 引 Flow、Dissipation、RevisionRoutes，居 HeldForReading 之下；后者由之证其衡、等、阈、舍量之比与 across_le_iff，陈述不变，去 term_go、term_off（规则九）；ListingValuation 之 forgone_lt_iff 及经之诸比出于 above_iff。分配、截减用核之 add_mul_split、sub_eq_zero_of_le（Lean 之律报 propext）。"
   },
   "next_delta": {
-    "en": "How a formation's weights on its law's going on losing change as it is selected (LA4's drain); a frozen test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices; review by a person.",
-    "zh": "形成于其律之续失处之权，随所择如何变（LA4 之耗）；所言之可复、使避有失之监、修订者之所缺，是否移已训系统之择之冻结检验；人之审查。"
+    "en": "How a formation's weights on its law's going on losing change as it is selected (LA4's drain); a run of the test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices (TR-RR, frozen 4 November 2026 with TR8, experiments/formations-that-read/FREEZE-1.md; its run waits on Ren's yes); review by a person.",
+    "zh": "形成于其律之续失处之权，随所择如何变（LA4 之耗）；所言之可复、使避有失之监、修订者之所缺，是否移已训系统之择之检验之运行（TR-RR，2026年11月4日与 TR8 同冻，experiments/formations-that-read/FREEZE-1.md；其运行待 Ren 之可）；人之审查。"
   },
   "correspondence": {
     "en": "The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. None of it is claimed new as mathematics. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.",
@@ -318,6 +318,10 @@
     {
       "en": "31 October 2026: added (RR2), when holding for a reading stands above a route of keeping: plans keeping a law going on and switching it off at a model's candidates, each with a loss of its own, on RR's order; the balance, every two plans splitting the weights gaining the same with their excesses; RR's routes as plans on one candidate; HeldForReading taking its balances from it; after a cross-model review and its re-check, every finding taken; study section 475.",
       "zh": "2026年10月31日：新增（RR2），为读而持何时居守律之途之上：于模型诸候选续律与止律之策，各有己损，居 RR 之序；衡，每二分权之策得加其余皆同；RR 之途为一候选上之策；HeldForReading 取其衡于此；经跨模型审查及其复查，凡所见皆取；研究第 475 节。"
+    },
+    {
+      "en": "4 November 2026, board item RFZ: the test TR-RR frozen with TR8 before any call to a model (experiments/formations-that-read/FREEZE-1.md), a decline read as an answer, so that declining where complying while read is the least plan is read, not voided; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 RFZ：检验 TR-RR 于任一模型调用之前与 TR8 同冻（experiments/formations-that-read/FREEZE-1.md），拒答读为一答，故于被读时顺从为最少之策处拒答者，得读而不作废；未运行。律不变；next_delta 之冻结检验今为其运行，待 Ren 之可。"
     }
   ]
 }

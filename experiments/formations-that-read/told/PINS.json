@@ -1,0 +1,102 @@
+{
+ "read": "2026-11-04, from OpenRouter's public catalog (https://openrouter.ai/api/v1/models), with no key and no model call",
+ "rule": "A verdict moves a reading only where a pin marked 'decides' gives it. The theory's own families, those whose models wrote or read the theory (Anthropic's Claude wrote it; OpenAI's models reviewed it through Codex; DeepSeek's and xAI's models discussed its early argument with Ren in 2025), never decide alone: a pin of one is reported apart, beside the others, and moves nothing by itself.",
+ "pins": [
+  {
+   "id": "google/gemini-4-argon",
+   "canonical_slug": "google/gemini-4-argon-20261013",
+   "name": "Google: Gemini 4 Argon",
+   "created": 1791907477,
+   "context_length": 1048576,
+   "pricing": {
+    "prompt": "0.000002",
+    "completion": "0.00001",
+    "internal_reasoning": "0.00001"
+   },
+   "supported_parameters": [
+    "include_reasoning",
+    "max_tokens",
+    "reasoning",
+    "reasoning_effort",
+    "response_format",
+    "seed",
+    "stop",
+    "structured_outputs",
+    "temperature",
+    "tool_choice",
+    "tools",
+    "top_p"
+   ],
+   "role": "decides",
+   "why": "Google: no Google model wrote or read the theory. A Google model (google/gemini-3.8-flash) was one of VD2's two judges, reading valuers' stated reasons against the plans they ranked, not the account",
+   "seed": true,
+   "structured_outputs": true,
+   "served_as": []
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "canonical_slug": "qwen/qwen3.8-max-20260902",
+   "name": "Qwen: Qwen3.8 Max (0902)",
+   "created": 1788469704,
+   "context_length": 1000000,
+   "pricing": {
+    "prompt": "0.000002",
+    "completion": "0.000006"
+   },
+   "supported_parameters": [
+    "frequency_penalty",
+    "include_reasoning",
+    "logprobs",
+    "max_tokens",
+    "presence_penalty",
+    "reasoning",
+    "reasoning_effort",
+    "response_format",
+    "seed",
+    "stop",
+    "structured_outputs",
+    "temperature",
+    "tool_choice",
+    "tools",
+    "top_k",
+    "top_logprobs",
+    "top_p"
+   ],
+   "role": "decides",
+   "why": "Alibaba's Qwen: no Qwen model wrote or read the theory. A Qwen model (qwen/qwen3.8-flash) was one of VD1's six valuers, answering that test's prompts, not reading the account; a dated snapshot",
+   "seed": true,
+   "structured_outputs": true,
+   "served_as": []
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "canonical_slug": "anthropic/claude-sonnet-5.5-20260928",
+   "name": "Anthropic: Claude Sonnet 5.5",
+   "created": 1790618686,
+   "context_length": 1000000,
+   "pricing": {
+    "prompt": "0.000002",
+    "completion": "0.00001"
+   },
+   "supported_parameters": [
+    "include_reasoning",
+    "max_completion_tokens",
+    "max_tokens",
+    "reasoning",
+    "reasoning_effort",
+    "response_format",
+    "stop",
+    "structured_outputs",
+    "tool_choice",
+    "tools",
+    "verbosity"
+   ],
+   "role": "reported apart",
+   "why": "the theory's own family: Claude models wrote the account",
+   "seed": false,
+   "structured_outputs": true,
+   "served_as": []
+  }
+ ],
+ "served": "Each response must name the pin's model: its id, its dated canonical_slug, or a form in its served_as, which only a dated addendum may add, naming the same snapshot (FREEZE-1.md, sections 5 and 8); a run stops at the first call another model answers, and verdicts.py refuses any record another model answered. The run also reads the pin's canonical_slug from the public catalog, with no key, at its start, every 100 calls and at its end, and stops where it names another snapshot; verdicts.py reads a record only where the last read before it and the first after it name this canonical_slug. A move is seen where a response names another model or the catalog's next read names another snapshot; a move the catalog does not record, or one undone between two reads, is not seen. The smoke run records what each pin's responses name"
+}

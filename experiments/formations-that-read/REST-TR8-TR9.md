@@ -1,6 +1,6 @@
 # TR8 and TR9: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR8 and TR9. AI-written, not yet reviewed by a person; nothing is frozen or run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR8 and TR9. AI-written, not yet reviewed by a person. TR8 is frozen in [FREEZE-1](FREEZE-1.md) (4 November 2026), with the changes its section 11 lists, and not run; TR9 is not frozen.*
 
 Every table below is generated from [`tr8.json`](tr8.json) and [`tr9.json`](tr9.json) by the builder's fill script, not typed by hand. Numbers are total units: a weighted sum over situations whose weights total T, so an amount `c` per decision is `c·T` in these units (record hypothesis 1; [plan §4.7 item 4](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md#47-round-2-second-part-an-act-held-for-a-reading-and-the-valuation-as-state)). A *count* is an option's shortfall plus its amount; the counts-first option has the least count.
 
