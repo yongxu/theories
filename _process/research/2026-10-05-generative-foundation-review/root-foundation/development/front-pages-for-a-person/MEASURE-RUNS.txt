@@ -73,3 +73,11 @@ Over budget: the one page by 298 budget-words (Chinese 176) and the overview by 
    217 words  12192 chars      6313 budget-words  48.6–63.1 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
 
 Over budget: the one page by 249 budget-words (Chinese 134) and the overview by 1062 (Chinese 313), for the reasons READING-BUDGETS gives (amendment 1).
+
+## The integration scan's front items (after the freeze: the one page's evidence paragraph and the overview's §8 on what contained frameworks forbid, item 1.6; LA4 Stage A's result having moved the overview's figures since the last run)
+  1378 words      6 chars      1381 budget-words  10.6–13.8 min  theories/becoming/ONE-PAGE.md
+    67 words   2396 chars      1265 budget-words  9.7–12.7 min  theories/becoming/ONE-PAGE.zh.md
+  7140 words     19 chars      7150 budget-words  55.0–71.5 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   217 words  12348 chars      6391 budget-words  49.2–63.9 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 281 budget-words (Chinese 165) and the overview by 1150 (Chinese 391), for the reasons READING-BUDGETS gives (amendment 1).
