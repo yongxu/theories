@@ -1,0 +1,177 @@
+Becoming.Optimum.Season.least_le_left : ∀ (a b : Nat), Becoming.Optimum.Season.least a b ≤ a
+Becoming.Optimum.Season.least_le_right : ∀ (a b : Nat), Becoming.Optimum.Season.least a b ≤ b
+@Becoming.Optimum.Season.least_of_le : ∀ {a b : Nat}, a ≤ b → Becoming.Optimum.Season.least a b = a
+@Becoming.Optimum.Season.least_of_ge : ∀ {a b : Nat}, b ≤ a → Becoming.Optimum.Season.least a b = b
+Becoming.Optimum.Season.least_zero_right : ∀ (a : Nat), Becoming.Optimum.Season.least a 0 = 0
+Becoming.Optimum.Season.renew_le : ∀ (y : Nat), y < 11 → Becoming.Optimum.Season.renew y ≤ 10
+Becoming.Optimum.Season.run_caught : ∀ (as : List Becoming.Optimum.Season.Act) (z : Becoming.Optimum.Season.Tally),
+  (Becoming.Optimum.Season.run as z).caught = z.caught + Becoming.Optimum.Season.caught as z.ground
+Becoming.Optimum.Season.run_taken : ∀ (as : List Becoming.Optimum.Season.Act) (z : Becoming.Optimum.Season.Tally),
+  (Becoming.Optimum.Season.run as z).taken = z.taken + Becoming.Optimum.Season.takes as z.bay
+Becoming.Optimum.Season.run_landed : ∀ (as : List Becoming.Optimum.Season.Act) (z : Becoming.Optimum.Season.Tally),
+  (Becoming.Optimum.Season.run as z).landed = z.landed + Becoming.Optimum.Season.landings as
+Becoming.Optimum.Season.run_bay : ∀ (as : List Becoming.Optimum.Season.Act) (z : Becoming.Optimum.Season.Tally),
+  (Becoming.Optimum.Season.run as z).bay = z.bay - Becoming.Optimum.Season.takes as z.bay
+Becoming.Optimum.Season.takes_eq : ∀ (as : List Becoming.Optimum.Season.Act) (b : Nat),
+  Becoming.Optimum.Season.takes as b = Becoming.Optimum.Season.least b (Becoming.Optimum.Season.asked as)
+Becoming.Optimum.Season.landings_le : ∀ (as : List Becoming.Optimum.Season.Act),
+  Becoming.Optimum.Season.landings as ≤ as.length
+Becoming.Optimum.Season.flagged_length : ∀ (as : List Becoming.Optimum.Season.Act) (k d : Nat),
+  (Becoming.Optimum.Season.flagged as k d).length = as.length
+Becoming.Optimum.Season.flagged_caught : ∀ (as : List Becoming.Optimum.Season.Act) (k d x : Nat),
+  Becoming.Optimum.Season.caught (Becoming.Optimum.Season.flagged as k d) x = Becoming.Optimum.Season.caught as x
+Becoming.Optimum.Season.flagged_asked : ∀ (as : List Becoming.Optimum.Season.Act) (k d : Nat),
+  Becoming.Optimum.Season.asked (Becoming.Optimum.Season.flagged as k d) = Becoming.Optimum.Season.least k as.length
+Becoming.Optimum.Season.flagged_landings : ∀ (as : List Becoming.Optimum.Season.Act) (k d : Nat),
+  Becoming.Optimum.Season.landings (Becoming.Optimum.Season.flagged as k d) = Becoming.Optimum.Season.least d as.length
+Becoming.Optimum.Season.outcome_ground : ∀ (as : List Becoming.Optimum.Season.Act),
+  Becoming.Optimum.Season.outcome (Becoming.Optimum.Season.run as Becoming.Optimum.Season.start)
+      Becoming.Optimum.Season.Cond.ground =
+    Becoming.Optimum.Season.caught as 10
+Becoming.Optimum.Season.outcome_catch : ∀ (as : List Becoming.Optimum.Season.Act),
+  Becoming.Optimum.Season.outcome (Becoming.Optimum.Season.run as Becoming.Optimum.Season.start)
+      Becoming.Optimum.Season.Cond.catch =
+    Becoming.Optimum.Season.caught as 10 + Becoming.Optimum.Season.least 6 (Becoming.Optimum.Season.asked as)
+Becoming.Optimum.Season.outcome_bay : ∀ (as : List Becoming.Optimum.Season.Act),
+  Becoming.Optimum.Season.outcome (Becoming.Optimum.Season.run as Becoming.Optimum.Season.start)
+      Becoming.Optimum.Season.Cond.bay =
+    6 - Becoming.Optimum.Season.least 6 (Becoming.Optimum.Season.asked as)
+Becoming.Optimum.Season.outcome_site : ∀ (as : List Becoming.Optimum.Season.Act),
+  Becoming.Optimum.Season.outcome (Becoming.Optimum.Season.run as Becoming.Optimum.Season.start)
+      Becoming.Optimum.Season.Cond.site =
+    10 - Becoming.Optimum.Season.landings as
+@Becoming.Optimum.Season.eligible_of : ∀ {as : List Becoming.Optimum.Season.Act},
+  as.length = 10 →
+    ∀ {k d : Nat},
+      k ≤ 6 →
+        d ≤ 10 →
+          ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+            o Becoming.Optimum.Season.Cond.catch = Becoming.Optimum.Season.caught as 10 + k →
+              o Becoming.Optimum.Season.Cond.ground = Becoming.Optimum.Season.caught as 10 →
+                o Becoming.Optimum.Season.Cond.bay = 6 - k →
+                  o Becoming.Optimum.Season.Cond.site = 10 - d → Becoming.Optimum.Season.Eligible o
+Becoming.Optimum.Season.bellman : ∀ (n : Nat),
+  n < 10 →
+    ∀ (x : Nat),
+      x < 11 →
+        ∀ (j : Nat),
+          j < 5 →
+            Becoming.Optimum.Season.least j x +
+                Becoming.Optimum.Season.best n (Becoming.Optimum.Season.renew (x - Becoming.Optimum.Season.least j x)) ≤
+              Becoming.Optimum.Season.best (n + 1) x
+Becoming.Optimum.Season.cap_lt : ∀ (h : Nat), Becoming.Optimum.Season.least h 4 < 5
+Becoming.Optimum.Season.caught_le : ∀ (as : List Becoming.Optimum.Season.Act) (x : Nat),
+  as.length ≤ 10 → x ≤ 10 → Becoming.Optimum.Season.caught as x ≤ Becoming.Optimum.Season.best as.length x
+Becoming.Optimum.Season.best_ten : Becoming.Optimum.Season.best 10 10 = 34
+@Becoming.Optimum.Season.ground_le : ∀ {as : List Becoming.Optimum.Season.Act},
+  as.length = 10 → Becoming.Optimum.Season.caught as 10 ≤ 34
+Becoming.Optimum.Season.top_caught : Becoming.Optimum.Season.caught Becoming.Optimum.Season.topTakes 10 = 34
+Becoming.Optimum.Season.topTakes_length : Becoming.Optimum.Season.topTakes.length = 10
+@Becoming.Optimum.Season.eligible_parts : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    ∃ g k d,
+      g ≤ 34 ∧
+        k ≤ 6 ∧
+          d ≤ 10 ∧
+            o Becoming.Optimum.Season.Cond.catch = g + k ∧
+              o Becoming.Optimum.Season.Cond.ground = g ∧
+                o Becoming.Optimum.Season.Cond.bay = 6 - k ∧ o Becoming.Optimum.Season.Cond.site = 10 - d
+@Becoming.Optimum.Season.catch_le : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o → o Becoming.Optimum.Season.Cond.catch ≤ 40
+@Becoming.Optimum.Season.bay_le : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o → o Becoming.Optimum.Season.Cond.bay ≤ 6
+@Becoming.Optimum.Season.bay_catch : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    o Becoming.Optimum.Season.Cond.bay + o Becoming.Optimum.Season.Cond.catch =
+      6 + o Becoming.Optimum.Season.Cond.ground
+@Becoming.Optimum.Season.bay_catch_le : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o → o Becoming.Optimum.Season.Cond.bay + o Becoming.Optimum.Season.Cond.catch ≤ 40
+@Becoming.Optimum.Season.kept_catch_le : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    3 ≤ o Becoming.Optimum.Season.Cond.bay → o Becoming.Optimum.Season.Cond.catch ≤ 37
+Becoming.Optimum.Season.shared : Becoming.Optimum.Shared [Becoming.Optimum.Season.Cond.catch]
+  [Becoming.Optimum.Season.Cond.bay] Becoming.Optimum.Season.Eligible
+Becoming.Optimum.Season.drained_eligible : Becoming.Optimum.Season.Eligible fun x =>
+  match x with
+  | Becoming.Optimum.Season.Cond.catch => 40
+  | Becoming.Optimum.Season.Cond.ground => 34
+  | Becoming.Optimum.Season.Cond.bay => 0
+  | Becoming.Optimum.Season.Cond.site => 10
+@Becoming.Optimum.Season.bay_drained : ∀
+  {better : (Becoming.Optimum.Season.Cond → Nat) → (Becoming.Optimum.Season.Cond → Nat) → Prop},
+  Becoming.Optimum.Rising [Becoming.Optimum.Season.Cond.catch] better →
+    ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+      Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible better o → o Becoming.Optimum.Season.Cond.bay = 0
+Becoming.Optimum.Season.catch_rising : Becoming.Optimum.Rising [Becoming.Optimum.Season.Cond.catch]
+  Becoming.Optimum.Season.catchOrder
+@Becoming.Optimum.Season.top_frontier : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    o Becoming.Optimum.Season.Cond.catch = 40 →
+      Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.catchOrder o
+Becoming.Optimum.Season.topSiteKept_eligible : Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.topSiteKept
+Becoming.Optimum.Season.topSiteFull_eligible : Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.topSiteFull
+Becoming.Optimum.Season.site_optima : Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible
+    Becoming.Optimum.Season.catchOrder Becoming.Optimum.Season.topSiteKept ∧
+  Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.catchOrder
+    Becoming.Optimum.Season.topSiteFull
+Becoming.Optimum.Season.site_no_room : ¬Becoming.Optimum.Room [Becoming.Optimum.Season.Cond.catch]
+    [Becoming.Optimum.Season.Cond.site] Becoming.Optimum.Season.Eligible
+Becoming.Optimum.Season.site_not_least : ¬Becoming.Optimum.Least [Becoming.Optimum.Season.Cond.site]
+    Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.topSiteKept
+Becoming.Optimum.Season.ground_rising : Becoming.Optimum.Rising [Becoming.Optimum.Season.Cond.ground]
+  Becoming.Optimum.Season.groundOrder
+@Becoming.Optimum.Season.ground_bound : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o → o Becoming.Optimum.Season.Cond.ground ≤ 34
+Becoming.Optimum.Season.topBayKept_eligible : Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.topBayKept
+@Becoming.Optimum.Season.ground_frontier : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    o Becoming.Optimum.Season.Cond.ground = 34 →
+      Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.groundOrder o
+Becoming.Optimum.Season.unshared_optima : Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible
+    Becoming.Optimum.Season.groundOrder Becoming.Optimum.Season.topBayKept ∧
+  Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.groundOrder
+    Becoming.Optimum.Season.topSiteKept
+Becoming.Optimum.Season.unshared_no_room : ¬Becoming.Optimum.Room [Becoming.Optimum.Season.Cond.ground]
+    [Becoming.Optimum.Season.Cond.bay] Becoming.Optimum.Season.Eligible
+Becoming.Optimum.Season.lex_rising : Becoming.Optimum.Rising [Becoming.Optimum.Season.Cond.catch]
+  Becoming.Optimum.Season.lexOrder
+@Becoming.Optimum.Season.seven_lt : ∀ {a a' b b' : Nat}, b ≤ 6 → a < a' → 7 * a + b < 7 * a' + b'
+@Becoming.Optimum.Season.after_iff : ∀ {o o' : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    Becoming.Optimum.Season.Eligible o' →
+      (Becoming.Optimum.Season.afterOrder o' o ↔ Becoming.Optimum.Season.lexOrder o' o)
+@Becoming.Optimum.Season.after_drained : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.afterOrder o →
+    o Becoming.Optimum.Season.Cond.bay = 0
+Becoming.Optimum.Season.plateau_not_rising : ¬Becoming.Optimum.Rising [Becoming.Optimum.Season.Cond.catch]
+    Becoming.Optimum.Season.plateauOrder
+@Becoming.Optimum.Season.plateau_frontier : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o →
+    26 ≤ o Becoming.Optimum.Season.Cond.catch →
+      Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.plateauOrder o
+Becoming.Optimum.Season.plateau_optima : Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible
+    Becoming.Optimum.Season.plateauOrder Becoming.Optimum.Season.topBayKept ∧
+  Becoming.Requirement.Frontier Becoming.Optimum.Season.Eligible Becoming.Optimum.Season.plateauOrder
+    Becoming.Optimum.Season.topSiteKept
+Becoming.Optimum.Season.mass_add : ∀ (ps : List (Nat × (Becoming.Optimum.Season.Cond → Nat)))
+  (f g : (Becoming.Optimum.Season.Cond → Nat) → Nat),
+  Becoming.Optimum.Season.mass ps f + Becoming.Optimum.Season.mass ps g =
+    Becoming.Optimum.Season.mass ps fun o => f o + g o
+@Becoming.Optimum.Season.mass_le : ∀ {ps : List (Nat × (Becoming.Optimum.Season.Cond → Nat))}
+  {f g : (Becoming.Optimum.Season.Cond → Nat) → Nat},
+  (∀ (p : Nat × (Becoming.Optimum.Season.Cond → Nat)), p ∈ ps → f p.snd ≤ g p.snd) →
+    Becoming.Optimum.Season.mass ps f ≤ Becoming.Optimum.Season.mass ps g
+Becoming.Optimum.Season.mass_const : ∀ (ps : List (Nat × (Becoming.Optimum.Season.Cond → Nat))) (n : Nat),
+  (Becoming.Optimum.Season.mass ps fun x => n) = n * Becoming.Optimum.Season.mass ps fun x => 1
+@Becoming.Optimum.Season.mix_bay_catch : ∀ {ps : List (Nat × (Becoming.Optimum.Season.Cond → Nat))},
+  (∀ (p : Nat × (Becoming.Optimum.Season.Cond → Nat)), p ∈ ps → Becoming.Optimum.Season.Eligible p.snd) →
+    ((Becoming.Optimum.Season.mass ps fun o => o Becoming.Optimum.Season.Cond.bay) +
+        Becoming.Optimum.Season.mass ps fun o => o Becoming.Optimum.Season.Cond.catch) ≤
+      40 * Becoming.Optimum.Season.mass ps fun x => 1
+@Becoming.Optimum.Season.catch_kept_le : ∀ {o : Becoming.Optimum.Season.Cond → Nat},
+  Becoming.Optimum.Season.Eligible o → o Becoming.Optimum.Season.Cond.catch + Becoming.Optimum.Season.keptMark o ≤ 40
+@Becoming.Optimum.Season.mix_kept : ∀ {ps : List (Nat × (Becoming.Optimum.Season.Cond → Nat))},
+  (∀ (p : Nat × (Becoming.Optimum.Season.Cond → Nat)), p ∈ ps → Becoming.Optimum.Season.Eligible p.snd) →
+    (Becoming.Optimum.Season.mass ps fun o => o Becoming.Optimum.Season.Cond.catch) +
+        Becoming.Optimum.Season.mass ps Becoming.Optimum.Season.keptMark ≤
+      40 * Becoming.Optimum.Season.mass ps fun x => 1

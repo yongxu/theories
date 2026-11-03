@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-03T04:29:29+00:00",
   "statement": {
     "en": "Over a course in which a part re-optimizes at every step, a dependence on a condition beyond, renewed by r at its need and at most r below, is lost exactly where the draw exceeds r, for good; the renewal below the need decides only the drawers' take; several optimizers jointly above r lose it.",
     "zh": "部分每步重新优化的过程中，对之外条件的依存（在其需要处每步更新 r、其下至多 r）恰在那里的汲取超出 r 时永久丧失；需要之下的更新只决定汲取者所取；合计超出 r 的多个优化者使其丧失。"
@@ -33,6 +33,15 @@
       "declarations": [
         "Becoming.Optimum.kept_at_need",
         "Becoming.Optimum.kept_iff_within"
+      ]
+    },
+    {
+      "en": "A re-reading in time. With at most r given and more than r drawn at every step before T, and every step from T keeping the need where met, the need is met at every step exactly where it is met at T; given exactly r at or above a positive need, at most r everywhere, and k > r drawn before T, exactly where the level starts at least T (k − r) above the need. Gated, a level below the need stays below whatever is drawn.",
+      "zh": "及时重读：T 之前每步所给至多 r、所取多于 r，自 T 起每步在所需被满足处保持之，则恰在 T 处满足所需时每步皆满足；需要处或其上恰给 r、处处至多给 r、T 前取 k > r 时，恰在起始水平至少高出所需 T (k − r) 时如此。有闸门时，低于所需的水平无论取多少都留在其下。",
+      "declarations": [
+        "Becoming.Optimum.gated_stays_below",
+        "Becoming.Optimum.reread_kept_iff",
+        "Becoming.Optimum.reread_deadline_iff"
       ]
     },
     {
@@ -443,6 +452,7 @@
         "Becoming.Optimum.ended_drawn_le",
         "Becoming.Optimum.ends_within",
         "Becoming.Optimum.falls_over",
+        "Becoming.Optimum.gated_stays_below",
         "Becoming.Optimum.given_le_drawn",
         "Becoming.Optimum.keeping_draws_more",
         "Becoming.Optimum.kept_at_need",
@@ -458,6 +468,8 @@
         "Becoming.Optimum.never_rises",
         "Becoming.Optimum.optimum_beyond",
         "Becoming.Optimum.renews_of",
+        "Becoming.Optimum.reread_deadline_iff",
+        "Becoming.Optimum.reread_kept_iff",
         "Becoming.Optimum.sub_le_sub_left_of_le",
         "Becoming.Optimum.sub_le_sub_right_of_le",
         "Becoming.Optimum.sub_sub_of_le",
@@ -472,7 +484,7 @@
         "Becoming.Web.lost_over",
         "Becoming.Web.mutual_course_lost"
       ],
-      "sha256": "4ce0de1103a56b5a416ed68949b22f2c000b1cda46518b6dfd21261c1c24c67d"
+      "sha256": "d46f2f9d46af492872aef8473e931ca5b3cff967f561ffaca641045490ddc6e5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -745,12 +757,23 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md",
+      "role": "integration",
+      "sha256": "599c1d1d7c07959160fc976c17d590e14085c8ed2a59c2b3c6d1512443f915a4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json",
+      "role": "receipt",
+      "sha256": "755d13b0acad5bce07b47560c4f923619aa0ed862e52ddd979d29d679c757c7b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -835,6 +858,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): a boundary names the source of the term 'sole owner' (Scott, in the fisheries literature) instead of using it as the theory's own word for an optimizer ranking courses. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条界限写明“唯一所有者”一词的来源（渔业文献中的 Scott），不再把它当作本理论对按过程排序之优化者的用词。规律未变。"
+    },
+    {
+      "en": "3 November 2026, board item ZH (study note zh-proxy-problem): a law added, a re-reading in time on the level law, an analogue of the timing of Zhuang and Hadfield-Menell's interactive remedy, its deadline exact, and, gated, no later re-reading restoring a need already lost (three declarations in Becoming.Optimum). Every earlier law unchanged.",
+      "zh": "2026年11月3日，工作板条目 ZH（研究笔记 zh-proxy-problem）：增一律，水平之律上的及时重读，为 Zhuang 与 Hadfield-Menell 交互补救之时机的类比，其期限确切；有闸门时，此后任何重读都不能复原已失之所需（Becoming.Optimum 中三项声明）。此前各律不变。"
     }
   ]
 }

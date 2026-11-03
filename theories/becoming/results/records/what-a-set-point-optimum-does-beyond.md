@@ -138,6 +138,7 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 | review | [REVIEW-UE1b.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1b-set-points/REVIEW-UE1b.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
 
 Aliases: `What a set-point optimum does beyond what couples in`, `设定点最优对耦合入者之外做什么`, `orders nearing a set point`, `set-point orders`, `Becoming.Optimum.Nearing.not_rising`, `Becoming.Optimum.optima_iff`, `Becoming.Optimum.counted_after_most`, `Becoming.Flow.Balances.atSetPoint_draws`, `Becoming.Flow.held_excess_ends`
 

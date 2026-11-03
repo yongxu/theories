@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-11-03-sciences-joins",
+  "date": "2026-11-03T08:38:02+00:00",
+  "base_commit": "7c3c93c7574bbd9005cb9d99a3c3f478398e1d29",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md",
+      "new_path": "theories/becoming/review/SCIENCES.md",
+      "sha256": "3fec14bc3aa75081f87b240f32b1f2d1362d7bf7509091f3c0c2b61850bec588",
+      "blob": "b5416032efa9cf944dbe93f3dd9b7eec6548938e",
+      "reason": "The sciences dossier joins the first reader edition (decided 3 November 2026), so it moves into the review folder beside the other dossiers",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "MAP.md",
+      "old_sha256": "cf718d899110b34e9fc051d6190601e6a7bfaadab1c1f6b110a9abce2ff6c0e7",
+      "new_sha256": "4cc437eedaaac2982687d3d0998214527d7e877039e7097e3d3b41be9af39269",
+      "references": 1
+    },
+    {
+      "path": "_process/BECOMING-WORKBOARD.md",
+      "old_sha256": "2dd0f9599d3c66ba05940bfe26ff018f1a13b29df9ca112ac34f778ba0844c8f",
+      "new_sha256": "58e306593798c7353948e68ab489786c6fe33b6a1144fbf8963e93ca8bdf8860",
+      "references": 2
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md",
+      "old_sha256": "2ba2c1e6ea4fef4d970db19fc66afc1e6199fe7109d489aa485738bf41fd6aef",
+      "new_sha256": "92ddc3f97df2e22f8bdc6253c013e9744216ca1be9f0def81f5c93e8b35db09b",
+      "references": 2
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/ue30-hang-off/NOTE.md",
+      "old_sha256": "3d6a446fd549d808e8e837ce3c66b7a08c54a068a33da583ba1d61c07e3471cf",
+      "new_sha256": "f8ccd23ed87b13769ba10830f8c57e5cedcab79aab871d0bd836ed64cf1c59a9",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/README.md",
+      "old_sha256": "021776b9f979531bd180ccdefc1e45509a41db54df6fc0b7d096e445935a71bc",
+      "new_sha256": "440ad6079b390980e64a585b3321ca0e98c7c1c7ca66138051c56e632951d42c",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/REVIEW-UE8.md",
+      "old_sha256": "0d8a04efec0090b4a6b9d40c452f0a183f49f8280f019eaa88ce47c280559b3c",
+      "new_sha256": "f9d91e9503ce9c0dff386cb332d8f84eb5e70a7c6f5d81c747e294c97908f552",
+      "references": 2
+    },
+    {
+      "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+      "old_sha256": "8bd07249aa0e8be783af873ea0fe95dc547ee2401960470b21e3f3edc152f121",
+      "new_sha256": "b2205bfe90ec300f10b630b32d0a49e26eb2bb93f26201ccdaf8291fdb7e6c67",
+      "references": 1
+    },
+    {
+      "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "old_sha256": "e6272aaf45df90a1b4f2f8edad38b52d5405f0191473df1452af4ebcd139ac4f",
+      "new_sha256": "c9491b3f49edaacaf08fe9f70d144506fb425a10f52d7864569d8219227c6fec",
+      "references": 2
+    },
+    {
+      "path": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "old_sha256": "52104ab7cb3df78db72f2812397e8a163ee223f71f598d6f90efa172282cff4e",
+      "new_sha256": "85604f8f464b9ac910884ecf531a35311248d31c2a3835d7e6af506fe5c2a63c",
+      "references": 2
+    }
+  ],
+  "history_roots": [],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

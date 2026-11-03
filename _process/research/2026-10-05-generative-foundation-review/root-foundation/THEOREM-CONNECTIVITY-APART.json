@@ -7356,6 +7356,36 @@
    "module": "Becoming.RuleRebuilding",
    "category": "model-witness",
    "reason": "Where a keeper turns away at most itself, every quota of at least one below one in the band is in the band: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.Optimum.rising_optimum_iff": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every order rising with a family over any outcomes: the optima of all such orders together are the outcomes unexceeded on the family; the base states no such order, so nothing on it uses this law (Becoming.Optimum, ZH)"
+  },
+  "Becoming.Optimum.optima_lack_iff": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every order rising with a family and any property of outcomes: every optimum lacks it exactly where every unexceeded outcome does; stated for any outcomes, used by nothing on the base (Becoming.Optimum, ZH, Zhuang and Hadfield-Menell's u-costliness)"
+  },
+  "Becoming.Optimum.optima_lack_iff_bounded": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every order rising with a family over any eligible sets with room: no optimum has a property exactly where it bounds a condition beyond below; Zhuang and Hadfield-Menell's Theorem 2 on natural-number amounts; on a web its first direction is the shape of Web.optimum_broken_iff, which is proved directly (Becoming.Optimum, ZH)"
+  },
+  "Becoming.Optimum.gated_stays_below": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every level course x (t + 1) = x t + g t - d t on natural numbers: with nothing given below a need, a level below it stays below; the course laws on the web (Web.course_lost_iff) do not use it (Becoming.Optimum, ZH)"
+  },
+  "Becoming.Optimum.reread_kept_iff": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every level course on natural numbers: drawn above the renewal before T and keeping the need where met from T, the need is met throughout exactly where met at T; the timing of a re-reading, used by nothing on the base (Becoming.Optimum, ZH)"
+  },
+  "Becoming.Optimum.reread_deadline_iff": {
+   "module": "Becoming.Optimum",
+   "category": "general-structure",
+   "reason": "a law of every level course on natural numbers: with the renewal exactly r at a positive need and k > r drawn before T, the need is met at T exactly where m + T (k - r) is at most the start; used by nothing on the base (Becoming.Optimum, ZH)"
   }
  },
  "instances": {

@@ -125,6 +125,7 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
 
 Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling added for each step a dependence is kept`, `the rate a step coupling needs`, `the end of the horizon breaks at the last step`, `每步的耦合在每个视野都保持依存`, `Becoming.Optimum.frontier_keeps_stepwise`, `Becoming.Optimum.frontier_met_before_end`, `Becoming.Web.frontier_breaks_last`
 

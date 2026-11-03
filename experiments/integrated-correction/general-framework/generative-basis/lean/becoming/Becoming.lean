@@ -2158,6 +2158,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and with the dependence as it was the formation ends, unseen by every member coupled only into
   the family. In balanced steps raising the family is lowering the beyond with the loss, unit for
   unit; restricted to outcomes keeping each dependence, the optimum takes exactly the slack.
+  The optima of all rising orders, together, are the outcomes unexceeded on what couples in, so
+  every proxy's optimum lacks a property exactly where all of these do; with room, a property
+  bounding a condition beyond below by `B`, an eligible outcome below it, no optimum has it
+  (`optima_lack_of_bound`, `optima_lack_iff_bounded`: a discrete analogue, at optima, of the form
+  of Zhuang and Hadfield-Menell's Theorem 2, its converse near-definitional and not theirs).
   Read off one step of exchange, where a part's members take at most their capacity, give only
   to the family and gain nothing on it, the rest exchanging as it does, there is room above any
   floors, and every optimum stands at each condition beyond at what the rest leaves less the
@@ -2181,7 +2186,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   once the steps exceed its starting excess, and for good; where the renewal stops below the
   need what the course draws is then bounded, and where something is given at every step it
   has no bound; several optimizers each within the renewal lose it where their joint capacity
-  exceeds it. Witnesses: a taker re-optimizing its store against a renewing dweller, and two takers
+  exceeds it. A re-reading from a step `T` that keeps the need where met keeps it at every step
+  exactly where it is met at `T`, by the deadline `m + T * (k - r) ≤ x 0`, and where nothing is
+  given below the need no later re-reading restores it. Witnesses: a taker re-optimizing its store against a renewing dweller, and two takers
   of capacity one at mutual best responses losing a source renewed by one that either alone
   keeps, holding less than the course in which one restrains.
   Ranked as whole courses over a horizon, what a course draws, leaves and forgoes adds to the

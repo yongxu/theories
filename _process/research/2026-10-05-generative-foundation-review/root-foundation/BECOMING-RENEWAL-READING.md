@@ -24372,3 +24372,31 @@ Not modelled: why a teacher turns anyone away, conduct other than entry, sanctio
        tenures, schism, records, purposes, capture.
 Checked: the Lean step and the simulation agree on 699,840 cases (sim/diff).
 ```
+
+## 502. The proxy problem contained: Zhuang and Hadfield-Menell's theorems on the spine (ZH)
+
+Board item ZH. The repository cited Zhuang and Hadfield-Menell, "Consequences of Misaligned AI" (NeurIPS 2020, arXiv 2102.03896), in four places as a known result it restated more weakly, so that their Theorem 2 and their remedy of an updated proxy stood outside the account while its own analogues were never joined to them. The paper was read in full and each result stated exactly, with a mapping onto the account's laws, exact, by analogy or with none ([study note](development/zh-proxy-problem/NOTE.md)).
+
+```text
+Result(s): what-an-optimum-does-beyond-what-couples-in (a law added, home 05 §7), re-optimizing-above-a-renewal-ends-it
+       (a law added, home 05 §7's table), seven theorems in Becoming.Optimum, every axiom report empty
+       (receipt 20261103T044249.876816Z).
+Delta:
+  - The optima of all orders rising with a family, together, are the eligible outcomes unexceeded on it, so every
+    optimum of every such order lacks a property exactly where all of these do; with room, a property bounding a
+    condition beyond below by B and an eligible outcome below B, no optimum has it, and exactly so over every
+    eligible set with room: a discrete analogue, at optima, of the form of their Theorem 2, the converse
+    near-definitional and not theirs.
+  - A re-reading in time on the level law: from T on, keeping the need where met keeps it at every step exactly
+    where it is met at T, by the deadline m + T (k - r) <= x 0; gated, a level below the need stays below
+    whatever is drawn (the gate a premise): an analogue of their Proposition 4's timing, and a point of no return
+    their reversible attributes lack.
+Not reached: their continuous setting, Theorem 2's non-convergent case and its converse, Proposition 1's
+       sensitivities, the gain in a principal's utility of their Theorem 3 and Proposition 5, which needs a
+       utility over every attribute; in the account, a ranking of courses, so C or a premise in its place.
+Text: 03 §1 after the blindness law, 05 §7 (the law, a reading [AI reading, ZH], the course row), 08 §8 (the
+       known-results row, the interpretation bullet, the unifications row), ONE-ARGUMENT's sentence on
+       Theorems 1 and 2.
+Review: one independent AI reading of the note, the Lean and the revised text (REVIEW-1.md), nine findings, every one
+       taken, the chief that the account's form of Theorem 2 is an analogue at optima, not their theorem.
+```

@@ -1,0 +1,9 @@
+primary cultures 40 rows a culture [8]
+  census                      {'cultures': 0, 'too_short': 40, 'testable': False}
+  coarse                      {'cultures': 0, 'too_short': 40, 'testable': False}
+  coarse, dry runs threshold  {'cultures': 0, 'too_short': 40, 'testable': False}
+control cultures 25 rows a culture [14, 15, 31, 34, 36, 66]
+  census                      {'cultures': 13, 'too_short': 12, 'testable': True, 'W': 'the wording fails', 'H1': 'T2 holds', 'V2': 'the rival holds', 'sign': "not separated on the sign: the rival's turning point does not split the cultures", 'V4': 'not decided', 'reading': "separated on the next step: the rival's state; three numbers suffice on the course"}
+  coarse                      {'cultures': 2, 'too_short': 23, 'testable': False}
+  coarse, dry runs threshold  {'cultures': 9, 'too_short': 16, 'testable': True, 'W': 'the wording fails', 'H1': 'T2 holds', 'V2': 'the rival holds', 'sign': "not separated on the sign: the rival's turning point does not split the cultures", 'V4': 'not testable', 'reading': "separated on the next step: the rival's state; three numbers suffice on the course"}
+reader {'DS10 constant cultures equal to DS7': {'1-13': True, '1-18': True, '1-20': True, '1-23': True}, 'cultures': {'primary': 40, 'control': 25}}

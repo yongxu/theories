@@ -93,6 +93,7 @@ The turnpike: a finite-horizon optimum stays on the path of greatest yield and d
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
 
 Aliases: `valuing what is left at any worth`, `a terminal value above the worth of the draw`, `以任一价值对所留计值`, `Becoming.Optimum.frontier_holds_valued`, `Becoming.Web.frontier_rebuilt_valued`
 

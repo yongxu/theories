@@ -43,6 +43,7 @@ PARTS = {
     "LOGIC.md": ("en", "Review dossier · Logic"),
     "PHILOSOPHY.md": ("en", "Review dossier · Philosophy"),
     "ALIGNMENT.md": ("en", "Review dossier · Alignment"),
+    "SCIENCES.md": ("en", "Review dossier · Sciences"),
     "../ONE-PAGE.md": ("en", "The Theory of Becoming in one page"),
     "../ONE-PAGE.zh.md": ("zh", "生成变化之论：一页"),
     "../THE-THEORY-OF-BECOMING.md": ("en", "The Theory of Becoming"),
@@ -107,6 +108,8 @@ def label(path: str, lang: str) -> str:
             return "该实验之说明" if lang == "zh" else "the experiment's README"
         if name.startswith("PREDICTIONS"):
             return "该实验预先冻结之预测" if lang == "zh" else "the experiment's frozen predictions"
+        if name.startswith("DESIGN"):
+            return "该实验之设计" if lang == "zh" else "the experiment's design"
         return "该实验之代码" if lang == "zh" else "the experiment's code"
     if name == "README.md":
         folder = p.rsplit("/", 2)[-2]
