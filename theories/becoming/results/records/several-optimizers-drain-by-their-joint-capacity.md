@@ -53,7 +53,7 @@ Conditions within some optimizer's family, where each bears a share; existence o
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use.
+The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -70,6 +70,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Mutual best responses at every step of a course against a renewal.
 - related, not a proved adapter: [drawers-in-turn](drawers-in-turn.md). Drawers in turn on one law of best response: where two drawers have no floor, every perfect profile is the floor profile and every sequence of revisions reaches it, which with no floor anywhere draws everything.
+- related, not a proved adapter: [coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it](coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md). Over a horizon, with a coupling for each step a need is met, drawers in turn keep it only where the coupling reaches the need, and drawing at once with no pivotal drawer the drain is perfect at every coupling.
 
 **Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md)
 
@@ -130,6 +131,7 @@ Aliases: `several optimizers drain by their joint capacity`, `a mutual best resp
 - 21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 - 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
 - 25 October 2026, board item DF (study section 418): 'registers' replaced by 'couples into' in the boundary and the correspondence (the glossary's word); the superseded record drawers-in-turn-draw-everything replaced by drawers-in-turn among the related results.
+- 3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it; the reading's clause on what keeps a commons qualified by it (over a horizon a coupling for each step met keeps the need, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling); no law, hypothesis or declaration changed.
 
 </details>
 
