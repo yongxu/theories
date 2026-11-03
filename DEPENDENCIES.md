@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-531 registered results: 500 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1256 curated edges join 457 results to the results they draw on.
+532 registered results: 501 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1258 curated edges join 458 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -406,6 +406,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [typicality-by-counting][] ← <a id="typicality-by-counting--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="typicality-by-counting--identification-where-bounded"></a>[identification-where-bounded][] · <a id="typicality-by-counting--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [unanchored-incidence-collapse][] ← <a id="unanchored-incidence-collapse--joining-open-map-factor"></a>[joining-open-map-factor][]
 - [unceasing-generation-needs-renewal][] ← <a id="unceasing-generation-needs-renewal--becoming-renewal-reading"></a>[becoming-renewal-reading][] · <a id="unceasing-generation-needs-renewal--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="unceasing-generation-needs-renewal--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="unceasing-generation-needs-renewal--becoming-return-grades"></a>[becoming-return-grades][]
+- [unequal-groups-not-decided-by-the-spread-among-groups][] ← <a id="unequal-groups-not-decided-by-the-spread-among-groups--selection-with-returns-to-groupmates"></a>[selection-with-returns-to-groupmates][] · <a id="unequal-groups-not-decided-by-the-spread-among-groups--selection-within-and-among-groups-of-any-sizes"></a>[selection-within-and-among-groups-of-any-sizes][]
 - [unity-of-readings][] ← <a id="unity-of-readings--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="unity-of-readings--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="unity-of-readings--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="unity-of-readings--continuation-condition-decomposition"></a>[continuation-condition-decomposition][]
 - [valuing-what-is-left-at-any-worth][] ← <a id="valuing-what-is-left-at-any-worth--valuing-what-is-left-at-the-horizon"></a>[valuing-what-is-left-at-the-horizon][] · <a id="valuing-what-is-left-at-any-worth--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][]
 - [valuing-what-is-left-at-the-horizon][] ← <a id="valuing-what-is-left-at-the-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="valuing-what-is-left-at-the-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][]
@@ -900,6 +901,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [typicality-by-counting]: theories/becoming/results/records/typicality-by-counting.md
 [unanchored-incidence-collapse]: theories/becoming/results/records/unanchored-incidence-collapse.md
 [unceasing-generation-needs-renewal]: theories/becoming/results/records/unceasing-generation-needs-renewal.md
+[unequal-groups-not-decided-by-the-spread-among-groups]: theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md
 [unity-of-readings]: theories/becoming/results/records/unity-of-readings.md
 [valuing-what-is-left-at-any-worth]: theories/becoming/results/records/valuing-what-is-left-at-any-worth.md
 [valuing-what-is-left-at-the-horizon]: theories/becoming/results/records/valuing-what-is-left-at-the-horizon.md

@@ -7601,6 +7601,26 @@
    "module": "Becoming.CoupledDrawers",
    "category": "model-witness",
    "reason": "two shores, each below the need and together reaching it, the level left as it is: drawing everything is perfect at every coupling and the need is met at no step, though leaving all they reach would meet it; a fact about one constructed pair of portions, not a law of the unfolding (Becoming.CoupledDrawers, CDR)"
+  },
+  "Becoming.SelectionLevels.Sized.apart_returns": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "with each keeper alone and the others as a pair, the offspring meet the returns, each unit kept giving two to every other member of its group at a cost of one to its keeper; a fact about two constructed listings, not a law of the unfolding (Becoming.SelectionLevels, US)"
+  },
+  "Becoming.SelectionLevels.Sized.divided_one_verdict": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "where what a unit gives its group is divided among the members, the two listings give one verdict for any returns the same in both; a fact about two constructed listings, not a law of the unfolding (Becoming.SelectionLevels, US)"
+  },
+  "Becoming.RuleShaping.Sized.apart_grouped": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "with each shaper alone and the others as a pair, the rule after shaping meets the grouped premise in groups of unequal size; a fact about two constructed listings, not a law of the unfolding (Becoming.RuleShaping, US)"
+  },
+  "Becoming.RuleShaping.Sized.either_verdict": {
+   "module": "Becoming.RuleShaping",
+   "category": "model-witness",
+   "reason": "the same spreads in groups of unequal size, shaping selected with the shapers as a pair and against with each alone; a fact about two constructed listings, not a law of the unfolding (Becoming.RuleShaping, US)"
   }
  },
  "instances": {
