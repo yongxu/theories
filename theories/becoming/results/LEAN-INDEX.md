@@ -57,7 +57,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 
 ## Becoming pure core
 
-The pure core's modules and the three foundation modules it imports (checked with the spine, not counted in it), as the core receipt lists them in its core and foundation layers: they import only the foundation and one another, the root `Becoming` also importing the instance and application ring; every source declaration has an empty axiom report; and, with the foundation's `import Std` removed, they compile from Lean's prelude.
+The pure core's modules and the three foundation modules it imports (checked with the spine, not counted in it), as the core receipt lists them in its core and foundation layers: apart from `GenerativeCore`'s `import Std`, they import only the foundation and one another, the root `Becoming` also importing the instance and application ring; every source declaration has an empty axiom report; and, with that `import Std` removed, they compile from Lean's prelude.
 
 Conceptual entry: [08-METHOD §pure](../chapters/08-METHOD.md#pure-core-and-periphery).
 
