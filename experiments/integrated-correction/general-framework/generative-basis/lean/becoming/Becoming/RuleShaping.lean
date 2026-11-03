@@ -876,7 +876,7 @@ open SelectionTerm SelectionLevels SelectionLevels.Member SelectionLevels.Foundi
 
 theorem one_pos : 0 < 1 := Nat.zero_lt_one
 
-/-- With the shapers together in a pair and each other alone, a base of one, nothing coming back to a shaper alone, a
+/-- With the shapers as a pair and each of the others alone, a base of one, nothing coming back to a shaper alone, a
 cost of three and two to every member of its group for each shaper in it, each shaper leaves five
 and each other four: `SelectionLevels.Sized`'s first listing and offspring. -/
 theorem together_grouped :

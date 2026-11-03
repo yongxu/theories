@@ -108,7 +108,7 @@ out["selection-with-returns-to-groupmates"] = d
 UID = "unequal-groups-not-decided-by-the-spread-among-groups"
 LIFE = "theories/becoming/chapters/04-LIFE.md"
 witness_laws = [
-    {**lt("Two keepers and two others in groups of unequal size, the keepers in a pair beside each other alone, or each keeper alone beside the others' pair: the same spread of keeping over the whole and the same spread of the group means, read by the means weighted by size, all of the spread lying among the means.",
+    {**lt("Two keepers and two others in groups of unequal size, the keepers as a pair and each of the others alone, or each keeper alone and the others as a pair: the same spread of keeping over the whole and the same spread of the group means, read by the means weighted by size, all of the spread lying among the means.",
           "二保留者与二他者，分为不等大之组：保留者成对而二他者各自独处，或每保留者独处而二他者成对：整体之保留离散相同，组均值之离散（按大小加权读之）亦同，离散皆在均值之间。"),
      "declarations": [SL + "Sized." + x for x in ["together", "apart", "factor", "together_common", "apart_common"]]},
     {**lt("Each unit kept giving two to every other member of its group at a cost of one to its keeper (K = 3, q = 2, nothing coming back to the keeper alone): with the keepers together the whole selects for keeping, and with each keeper alone, where a member's group total goes with its group's mean half as steeply, it selects against keeping.",
@@ -123,8 +123,8 @@ uneq = {
     "schema_version": 2, "id": UID,
     "title": lt("Groups of unequal size not decided by the spread among groups", "不等大之群，不由群间离散决定"),
     "kind": "theorem", "status": "recorded-checked", "family": "F01", "reviewed_at_utc": when,
-    "statement": lt("Where each member gains for every unit its group keeps, groups of unequal size with the same spread over the whole and the same size-weighted spread of their means can select for keeping or against it, so no form in those two spreads gives the verdict. Where what is given is divided among the members, these two listings give one verdict, as the law through the means' spread reads for any listings with the same spreads and the same K, s and Q.",
-                    "每成员为其组所留之每单位而得时，整体离散与按大小加权之组均值离散皆同之不等大之群，其选择可向保留，亦可逆之，故无经此二离散之形可给判定。所予者均分于成员时，此二种列法得同一判定，经均值离散之律于离散皆同且 K、s、Q 皆同之任何列法亦如此读之。"),
+    "statement": lt("Where each member gains for every unit its group keeps, groups of unequal size with the same spread over the whole and the same size-weighted spread of their means can select for keeping or against it, so no form in those two spreads gives the verdict. Where what is given is divided among the members, the witness's two listings give one verdict, as the law through the means' spread reads for any listings with the same spreads and the same K, s and Q.",
+                    "每成员为其组所留之每单位而得时，整体离散与按大小加权之组均值离散皆同之不等大之群，其选择可向保留，亦可逆之，故无经此二离散之形可给判定。所予者均分于成员时，见证之二种列法得同一判定，经均值离散之律于离散皆同且 K、s、Q 皆同之任何列法亦如此读之。"),
     "laws": witness_laws,
     "hypotheses": [lt("No axiom. Offspring numbers additive in own and groupmates' amounts, each unit kept giving two to every other member of its group at a cost of one to its keeper (K = 3, q = 2 to every member, its keeper included, nothing coming back to the keeper alone, s = 0), or, for the divided case, any returns kept and shared, the same in both listings, with what a unit gives its group divided among the members; one step, the groups listed as given with their sizes fixed over it; the spread among groups read by the groups' means weighted by size, with a positive common multiple of the sizes.",
                       "不加公理。后代数可加地依赖自身与组员之量：每留一单位，其组每一他成员得二，保留者净付一（K = 3，组每成员连保留者得 q = 2，无所独返于保留者，s = 0）；或于均分之情形，二种列法相同之任何自留与共享之回报，一单位所予其组者均分于成员。一步之内，组如所列而给，其大小于此步不变；组间离散以按大小加权之组均值读之，取诸大小之一正公倍数。")],
@@ -181,7 +181,7 @@ out[UID] = uneq
 
 # ---------------------------------------------------------------- shaping-selected-among-groups
 d = load("shaping-selected-among-groups")
-law = {**lt("In groups of any sizes, with n a positive common multiple of the sizes and each member gaining q for each shaper in its group, the whole selects for shaping exactly where c times n times the spread of shaping, with q times the discordance, member by member, of a member's group's shapers with n times its group's share of them, falls short of s times n times the spread with q times their concordance; with unequal sizes not a function of the whole's spread and the size-weighted spread of the group means: the shapers in a pair beside each other alone, or each alone beside the others' pair, give the same spreads and either verdict.",
+law = {**lt("In groups of any sizes, with n a positive common multiple of the sizes and each member gaining q for each shaper in its group, the whole selects for shaping exactly where c times n times the spread of shaping, with q times the discordance, member by member, of a member's group's shapers with n times its group's share of them, falls short of s times n times the spread with q times their concordance; with unequal sizes not a function of the whole's spread and the size-weighted spread of the group means: the shapers as a pair and each of the others alone, or each shaper alone and the others as a pair, give the same spreads and either verdict.",
             "群之大小任意，取诸大小之一正公倍数 n，每成员为其群每一塑规者得 q 时，整体选塑规恰当 c 乘 n 乘塑之离散加 q 乘成员之群塑规者数与 n 乘其群塑规份额逐成员之不一致，小于 s 乘 n 乘离散加 q 乘其一致；大小不等时非整体离散与按大小加权之群均值离散之函数：塑规者成对而他者各自独处，或塑规者各自独处而他者成对，离散皆同而判定两可。"),
        "declarations": [RS + "grouped_rises_iff_sized"] + [RS + "Sized." + x for x in ["together_grouped", "apart_grouped", "either_verdict"]]}
 if not any(RS + "grouped_rises_iff_sized" in x["declarations"] for x in d["laws"]):

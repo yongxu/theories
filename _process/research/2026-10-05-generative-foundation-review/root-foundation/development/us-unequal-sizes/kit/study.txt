@@ -28,5 +28,5 @@ Not reached: which sharing actual groups have (a premise); other readings of the
        law; synergy, mixing beyond the listing, assortment over generations.
 Text: 04 §5 and §7, 02 §9, ALIGNMENT A-10, the two records, the package README's two rows, the modules'
        docstrings, 08's receipt sentence.
-Review: one AI reader other than the author, two rounds, eighteen findings, all taken (NOTE §7).
+Review: one AI reader other than the author, three rounds, twenty-seven findings, all taken (NOTE §7).
 ```

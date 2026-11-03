@@ -146,8 +146,8 @@ of equal sizes.
   with the same returns, against it (`Founding.either_verdict`). With six members in three pairs,
   two thirds of the spread among the pairs, returns of three and a take of two meet the rule at
   assortment one and yet the whole selects against keeping (`Partly.below_one`). With the same two
-  keepers and two others, the keepers in a pair beside each other alone, or each keeper alone
-  beside the others' pair,
+  keepers and two others, the keepers as a pair and each of the others alone, or each keeper
+  alone and the others as a pair,
   the whole's spread and the size-weighted spread of the group means are the same, all of it among
   the means; with each unit kept giving two to every other member of its group and taking one from
   the keeper, the whole selects for keeping with the keepers together and against it with each

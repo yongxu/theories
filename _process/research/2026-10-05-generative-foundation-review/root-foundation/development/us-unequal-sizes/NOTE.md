@@ -19,7 +19,7 @@ All in the pure core (`Init` only), every axiom report empty (scratch builds of 
 - Two readings, two modelling choices:
   - **Each member gaining `q` for every unit its group holds** (the reading the group's total; the equal-size laws' model): the verdict goes through the covariance, member by member, of a member's group total with its group's mean (`rises_iff_kept_sized`). With equal sizes `m` the total is `m` times the mean and this reads as `m q` times the spread among groups, the form `rises_iff_kept` states (a reading, not stated as a theorem from the sized law). With unequal sizes it is not a function of the whole's spread and the size-weighted spread of the means.
   - **What each unit kept gives its group divided among the members** (the reading `n` times the group's mean): the verdict goes through the size-weighted spread of the group means (`rises_iff_divided_sized`): over the rationals, where the amount varies, `K < s + Q ρ`, `Q = n q` what a unit gives its group, `ρ` the share of the variance, weighted by size, among the means; two listings give the same verdict through it only with the same `K`, `s` and `Q`.
-- The witness (`Sized`): two keepers and two others, in groups of unequal size in both listings: the keepers in a pair beside each other alone (`together`, `[[held, mate], [first], [second]]`), or each keeper alone beside the others' pair (`apart`, `[[held], [mate], [first, second]]`). With the factors two over the size, the whole's spread of keeping (4) and the size-weighted spread of the group means (16) are the same, all of the spread lying among the means. Each unit kept gives two to every other member of its group at a cost of one to its keeper (`b = 2`, `c = 1`, so returns to groupmates in Hamilton's form; with something kept, `K = 3`, `q = 2`, nothing coming back to the keeper alone, base four): together, each keeper leaves five and each other four, and the whole selects for keeping; apart, each keeper leaves three and each other four, and the whole selects against it (`either_verdict`). The covariance of a member's group total with its group's mean by its factor is 16 together and 8 apart. With what is shared divided, the two listings give one verdict for any returns the same in both (`divided_one_verdict`). The reader's enumeration found this pair; an earlier witness in groups of three and one had `q` above `K`, so `c = −1`, and was not a case of returns to groupmates (§7, finding 12).
+- The witness (`Sized`): two keepers and two others, in groups of unequal size in both listings: the keepers as a pair and each of the others alone (`together`, `[[held, mate], [first], [second]]`), or each keeper alone and the others as a pair (`apart`, `[[held], [mate], [first, second]]`). With the factors two over the size, the whole's spread of keeping (4) and the size-weighted spread of the group means (16) are the same, all of the spread lying among the means. Each unit kept gives two to every other member of its group at a cost of one to its keeper (`b = 2`, `c = 1`, so returns to groupmates in Hamilton's form; with something kept, `K = 3`, `q = 2`, nothing coming back to the keeper alone, base four): together, each keeper leaves five and each other four, and the whole selects for keeping; apart, each keeper leaves three and each other four, and the whole selects against it (`either_verdict`). The covariance of a member's group total with its group's mean by its factor is 16 together and 8 apart. With what is shared divided, the two listings give one verdict for any returns the same in both (`divided_one_verdict`). The reader's enumeration found this pair; an earlier witness in groups of three and one had `q` above `K`, so `c = −1`, and was not a case of returns to groupmates (§7, finding 12).
 - Shaping (02 §9): `RuleShaping.grouped_returns` holds for groups of any sizes, so `RuleShaping.grouped_rises_iff_sized` is the kept case for shaping. The same pair is a `Grouped` instance, a base of one, nothing coming back to a shaper alone, a cost of three and two to every member of its group for each shaper in it (`RuleShaping.Sized.together_grouped`, `apart_grouped`): within every group the rule after shaping disfavours the shapers, and the whole selects for shaping together and against it apart (`RuleShaping.Sized.either_verdict`).
 
 ## 4. Modelling choice
@@ -36,14 +36,14 @@ One AI reader other than the author checks the restatements in 04, 02, A-10 and 
 
 ## 7. The reader's findings
 
-One AI reader other than the author read the restatements in 04, 02, A-10, the package README, the records kit and the modules' docstrings against the Lean, in two rounds, and ran small enumerations of its own; it edited and built nothing. Eighteen findings; all were taken, as follows.
+One AI reader other than the author read the restatements in 04, 02, A-10, the package README, the records kit and the modules' docstrings against the Lean, in three rounds, and ran small enumerations of its own; it edited and built nothing. Twenty-seven findings; all were taken, as follows.
 
-1. "Not a function of the spread among groups" was false as written: read by totals (`concordAmong`), the old witness's spreads differed. Now "not a function of the whole's spread and the size-weighted spread of the means" everywhere (04, 02, A-10, records, docstrings, README rows).
+1. "Not a function of the spread among groups" was not shown by the witness: read by totals (`concordAmong`), the old witness's spreads differed (4 against 0). Now "not a function of the whole's spread and the size-weighted spread of the means" everywhere (04, 02, A-10, records, docstrings, README rows).
 2. and 12. The first witness had `q = 2` above `K = 1` (`c = −1`), so it was returns kept, not returns to groupmates, and said nothing about Hamilton's rule. Replaced by the reader's pair, `b = 2`, `c = 1`, with both listings of unequal size (§3); the statement's `b` became `q` where it means the general form.
 3. "Means" in the sized laws are means by their factors: "`n` times each mean" added.
 4. "A common multiple" became "a positive common multiple" (`0 < n` is a hypothesis).
 5. and 14. The divided reading's `K < s + Q ρ` holds over the rationals where the amount varies, with `Q = n q` and `ρ` weighted by size; one verdict for two listings needs the same `K`, `s` and `Q`, and `divided_one_verdict` is proved for this pair only. Qualifiers added; the record's statement now says "these two listings", and the law reads for others.
-6. The equal-size reduction of the sized law is a reading, not a theorem: marked so here and in 04 ("as the law above states").
+6. The equal-size reduction of the sized law is a reading, not a theorem: marked so here and, after the third round, in 04 ("a reading; no theorem derives one from the other").
 7. 02's sentence mixed counts and rationals: rewritten in one register.
 8. The shaping witness was "the same arithmetic", not a `Grouped` instance: `RuleShaping.Sized` added.
 9. and 15. The Chinese said "does not select" where the English and the Lean say "selects against": now 「整体之选择逆于保留」 and 「其选择可向保留，亦可逆之」.
@@ -52,6 +52,17 @@ One AI reader other than the author read the restatements in 04, 02, A-10, the p
 16. 02's reading of the lever: at any sizes it is `s` with `q` times the covariance over the variance of shaping, against `c`; at equal sizes that is `m q ρ`.
 17. An unused dictionary in the records kit removed.
 18. The correspondence now says "of the two readings, which one holds", and names the total against per-capita benefit distinction as familiar, not news.
+
+The third round read the new witness by hand (every number above checks) and found nine more, all taken:
+
+19. 04 said the equal-size covariance is the spread form "as the law above states": `rises_iff_kept` states the spread form, not the identity; now marked a reading (item 6).
+20. 04 had "each shaper's group gaining two", the divided reading; now each member gaining two for each shaper in its group, at a cost of three.
+21. "The keepers in a pair beside each other alone" read as "beside each other": now "the keepers as a pair and each of the others alone, or each keeper alone and the others as a pair", and so for shapers, in 04, 02, the records, this note and the docstrings.
+22. and 23. This section misreported items 1 and 6; corrected.
+24. 02 and A-10 cited only `RuleShaping.Sized.either_verdict` for the same spreads, which `SelectionLevels.Sized.either_verdict` proves; both cited.
+25. A-10's sentence lacked a verb; given one.
+26. The record's statement named "these two listings" before any; now "the witness's two listings".
+27. Outside the item: the package README's row for returns to groupmates said each unit kept gives `b` to every member and takes `c` from the keeper; with `K = b + c` it is every *other* member. Corrected in both languages.
 
 ## 8. Restatements read
 
