@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-03T21:26:50+00:00",
+  "reviewed_at_utc": "2026-11-03T21:37:57+00:00",
   "statement": {
-    "en": "From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, worlds alike in the couplings before k get the same acts; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.",
-    "zh": "自第 k 员起，每员于首世界所予之行列对二世界之耦合予同一行，则于第 k 员前诸耦合无别之二世界，诸行皆同；每员于每一世界所至之历皆不论其耦合而同行时，诸行所载不逾第 k 员前之所耦合入。此前提弱于 Cascade 之前提。"
+    "en": "From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, the two get the same acts if alike in couplings before k; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.",
+    "zh": "自第 k 员起，每员于首世界所予之行列对二世界之耦合予同一行，则此二世界于第 k 员前诸耦合无别时，诸行皆同；每员于每一世界所至之历皆不论其耦合而同行时，诸行所载不逾第 k 员前之所耦合入。此前提弱于 Cascade 之前提。"
   },
   "laws": [
     {
@@ -41,8 +41,8 @@
       ]
     },
     {
-      "en": "Member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it, every later member acting alike: from member 0 the members act alike whatever their couplings at the histories every world reaches, and the premise on every list from member 0 fails (from member 1 it holds).",
-      "zh": "第 0 员唯于非空之前行列后读其耦合，而无一世界予之以此列，后诸员皆同行：自第 0 员起诸员于每一世界所至之历皆不论其耦合而同行，而自第 0 员起于每一列之前提不成立（自第 1 员起成立）。",
+      "en": "Member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it, every later member acting alike: from member 0 the members act alike whatever their couplings at the histories every world reaches, and the premise on every list from member 0 fails (from member 1 it holds by the definition, not stated as a declaration).",
+      "zh": "第 0 员唯于非空之前行列后读其耦合，而无一世界予之以此列，后诸员皆同行：自第 0 员起诸员于每一世界所至之历皆不论其耦合而同行，而自第 0 员起于每一列之前提不成立（自第 1 员起依定义成立，未述为声明）。",
       "declarations": [
         "Becoming.Turns.Unreached.law",
         "Becoming.Turns.Unreached.turns",
@@ -92,8 +92,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
       "detail": {
-        "en": "The converse of readsOnlyActsAlong_of_from, at k = 0: member 0 reading its coupling only after a non-empty list of earlier acts meets the premise at every world's reached histories, and the premise on every list fails (Turns.Unreached.along, Turns.Unreached.not_from).",
-        "zh": "readsOnlyActsAlong_of_from 之逆，于 k = 0：第 0 员唯于非空之前行列后读其耦合，于每一世界所至之历合前提，而于每一列之前提不成立（Turns.Unreached.along、Turns.Unreached.not_from）。"
+        "en": "Against the converse of readsOnlyActsAlong_of_from, at k = 0: member 0 reading its coupling only after a non-empty list of earlier acts meets the premise at every world's reached histories, and the premise on every list fails (Turns.Unreached.along, Turns.Unreached.not_from).",
+        "zh": "驳 readsOnlyActsAlong_of_from 之逆，于 k = 0：第 0 员唯于非空之前行列后读其耦合，于每一世界所至之历合前提，而于每一列之前提不成立（Turns.Unreached.along、Turns.Unreached.not_from）。"
       }
     }
   ],
@@ -196,7 +196,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "62684edaf681125c69cc0107400ec6268e30b8c0f2333cce1e74577c3cc1f0bc"
+      "sha256": "1da34373c3615c3a274c01854f24c2726295508903a944f9d8162905be583ee1"
     }
   ],
   "proof_bindings": [

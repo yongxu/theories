@@ -24602,7 +24602,7 @@ Delta:
     readsOnlyActsAlong_of_from; the composition is not stated as a declaration.
   - A weaker premise, by a witness (Turns.Unreached): member 0 reads its coupling only after a non-empty list
     of acts, which no run gives it; ReadsOnlyActsAlong 0 holds at every world, Cascade's premise from member 0
-    fails, and from member 1 it holds.
+    fails, and from member 1 it holds by the definition (not stated as a declaration).
 Not reached: when an actual member stops reading its coupling (a premise); a position k that depends on the
        world; the premise at every world for a natural chooser with no fixed prefix (a chooser who stops once the
        public acts outweigh its signal meets it at every world only where the acts before k are fixed, as by a
@@ -24613,6 +24613,9 @@ Text: 05 §8's paragraph, the record readers-reading-readers' related entry and 
        explained after the layer sentence.
 Review: two AI readers other than the author, of the Lean against the record and every text; every finding taken,
        the chief that the step needs the premise only for the two couplings compared (LawAlikeAlong, not
-       ReadsOnlyActsAlong), that the witness's k is 0 with Cascade's premise holding from member 1, that a natural
-       chooser meets the every-world form only with a fixed prefix, and that Cascade's note keeps its board item RF.
+       ReadsOnlyActsAlong), that the witness's k is 0 with Cascade's premise holding from member 1 by the
+       definition, that a natural chooser meets the every-world form only with a fixed prefix, and that
+       Cascade's note keeps its board item RF. A third reader, of the record, this section and 08's counts,
+       found three, all taken: "from member 1" had no declaration, the statement's two worlds are the
+       pair compared, and the counterexample is against the converse.
 ```
