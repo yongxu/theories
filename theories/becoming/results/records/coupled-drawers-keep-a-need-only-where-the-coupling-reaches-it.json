@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+  "title": {
+    "en": "Coupled drawers keep a need only where the coupling reaches it",
+    "zh": "耦合的抽取者只在耦合不低于需要时留住它"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-03T11:16:46+00:00",
+  "statement": {
+    "en": "Drawers in turn counting a coupling for each step a need is met drain it where the coupling is below the need, whatever the renewal, and keep it under a gate where it is above; drawing at once with no pivotal drawer, no portion returning more than one for one, the drain is perfect at any coupling.",
+    "zh": "数个轮流的抽取者各自对需要每被满足一步计入一份耦合：耦合低于需要则在视野之前每步耗尽，不论更新；在门之下，高于需要则留住需要。同时抽取而无一抽取者能独自满足需要、且无一份回报多于一对一时，抽尽在每个耦合下都完美。"
+  },
+  "laws": [
+    {
+      "en": "Each drawer's worth over the steps that remain is what it draws there with c for each step at which what all the drawers leave meets the need m; with c = 0, in turn, a profile is perfect in this sense exactly where it is perfect for drawers in turn.",
+      "zh": "每个抽取者在其余各步上的值，是它在那里所抽取者，加上所有抽取者所留满足需要 m 的每一步的 c；c = 0 时，在轮流抽取中，一个组合在此意义上完美，恰当它对轮流的抽取者完美。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.stepCoupling",
+        "Becoming.Optimum.Coupled.drawn",
+        "Becoming.Optimum.Coupled.later",
+        "Becoming.Optimum.Coupled.Revises",
+        "Becoming.Optimum.Coupled.Perfect",
+        "Becoming.Optimum.Coupled.perfect_uncoupled"
+      ]
+    },
+    {
+      "en": "With two drawers or more in turn, no floor and a positive need m, where c < m every perfect profile has every drawer leave nothing at every step before the horizon, from every amount, whatever the law of what stands next; where c ≤ m drawing everything is perfect.",
+      "zh": "二个以上轮流的抽取者、无下限、需要 m 为正时，c < m 则每个完美组合使每个抽取者在视野之前每步、自每个量都一无所留，不论其后所立之律；c ≤ m 时抽尽是完美的。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.drains_below",
+        "Becoming.Optimum.Coupled.drain_perfect"
+      ]
+    },
+    {
+      "en": "With two drawers or more in turn and no floor, under the gate (below the need what stands next is below it, at or above it what stands next meets it, and what stands next from nothing, with the need, is at most what stands next from the need), where m < c every perfect profile has each drawer leave exactly the need of an amount meeting it and nothing of a smaller one; where m ≤ c that profile is perfect.",
+      "zh": "二个以上轮流的抽取者、无下限时，在门之下（低于需要时其后所立低于它，不低于时其后所立满足它，自零其后所立加需要至多是自需要其后所立），m < c 则每个完美组合使每个抽取者对满足需要之量恰留需要、对更小之量一无所留；m ≤ c 时该组合完美。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.keep",
+        "Becoming.Optimum.Coupled.kept_above",
+        "Becoming.Optimum.Coupled.keeping_perfect"
+      ]
+    },
+    {
+      "en": "Where there is at least one drawer, every drawer keeps the need at every step before the horizon and at or above the need what stands next meets it, from a start meeting the need the level meets it at every step to the horizon, and what is left at each step before it is exactly the need.",
+      "zh": "至少有一个抽取者、每个抽取者在视野之前每步都留住需要、且不低于需要时其后所立满足它时，自满足需要的起点，水平直至视野每步都满足它，视野之前每步所留恰为需要。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.kept_levels"
+      ]
+    },
+    {
+      "en": "On the gated renewal, which leaves a level below the need as it is and renews one at or above it by q, the drain and keeping laws above hold together for every q, both profiles perfect at c = m: the threshold is the need, not the renewal forgone a step, there nothing, nor the joint capacity, there unbounded.",
+      "zh": "在门控更新上（低于需要的水平保持原样、不低于者更新 q），对每个 q 上述耗尽与留住之律同时成立，c = m 时两个组合皆完美：阈值是需要本身，不是每步放弃的更新（那里为零），也不是联合容量（那里无界）。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.gatedRenewal",
+        "Becoming.Optimum.Coupled.gated_threshold"
+      ]
+    },
+    {
+      "en": "On the gated renewal, where c < m and 0 < c + q, over two steps every perfect profile of one drawer leaves at least the need of an amount meeting it at the first step, and such a profile exists, while every perfect profile of two drawers or more in turn leaves nothing at either step; with c = 0 and 0 < q, with no coupling at all.",
+      "zh": "在门控更新上，c < m 且 0 < c + q 时，两步之内一个抽取者的每个完美组合在第一步对满足需要之量至少留需要，且这样的组合存在；二个以上轮流的抽取者的每个完美组合两步都一无所留；c = 0 且 0 < q 时，全无耦合亦然。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.one_keeps_first",
+        "Becoming.Optimum.Coupled.one_perfect",
+        "Becoming.Optimum.Coupled.one_keeps_several_drain"
+      ]
+    },
+    {
+      "en": "Drawing at once from portions, with a positive need, drawing everything is perfect exactly where no drawer, the others drawing everything, gains by leaving b of its portion more than b: at the last step the coupling b brings, before it that coupling with its portion of what stands next from b over its portion from nothing; where what is left returns nothing, exactly where c ≤ m wherever a portion reaches the need.",
+      "zh": "自各份同时抽取、需要为正时，抽尽是完美的，恰当其他抽取者皆抽尽时，无一抽取者留其份中 b 所得多于 b：最后一步是 b 带来的耦合，此前是该耦合加自 b 其后所立中它的份、多于自零之份者；所留无所回时，恰当凡某份达到需要处 c ≤ m。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.AtOnce.leftWith",
+        "Becoming.Optimum.Coupled.AtOnce.drawn",
+        "Becoming.Optimum.Coupled.AtOnce.later",
+        "Becoming.Optimum.Coupled.AtOnce.Revises",
+        "Becoming.Optimum.Coupled.AtOnce.Perfect",
+        "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff",
+        "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach"
+      ]
+    },
+    {
+      "en": "Drawing at once, where every portion lies below the need and none returns more than one for one on what its drawer alone leaves, drawing everything is perfect at every c over every horizon; two shores each reaching p < m, together reaching p + p, with the level left as it is, are such a case, the need met at no step, though both leaving all they reach of p + p leave p + p.",
+      "zh": "同时抽取时，每份皆低于需要、且无一份对其抽取者独自所留回报多于一对一，则抽尽在每个 c、每个视野都完美；水平保持原样时，两岸各及 p < m、合及 p + p 即是这样的情形，需要在任何一步都未被满足，虽然两者都留下所及者时留下 p + p。",
+      "declarations": [
+        "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.upTo",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.shore",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Natural amounts, discrete steps, a horizon of N steps with nothing valued after it and no discounting; k drawers in turn, drawer 0 first at every step, or drawing at once from portions; rules reading the step and what a drawer is given (at once, its portion); no floors; a positive need read on what is left; any law G of what stands next.",
+      "zh": "不加公理。自然数量、离散步、N 步的视野，视野之后无值、不折现；k 个轮流的抽取者，每步抽取者 0 在先，或自各份同时抽取；规则读取步与抽取者所得（同时抽取时为其份）；无下限；读于所留的正的需要；任一其后所立之律 G。"
+    },
+    {
+      "en": "Perfect: at every step and from every amount, each drawer's rule is a best response among leaving anything up to all it is given, over the steps that remain, the others and its own later rules following the profile. The gate is supplied for the keeping laws; which formations draw, by which rules, and the coupling are supplied, and no course of an actual group is asserted.",
+      "zh": "完美：每步、自每个量，每个抽取者的规则在留下自零至所得全部之间是最优回应，其余各步上其他抽取者与它自己后来的规则皆按组合。留住之律的门是给定的；哪些构成抽取、按何规则、耦合为何都是给定的，不对任何实际群体的过程作断言。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The keeping side without the gate, where a level below the need can regrow past it, one meeting it can fall below it, or what stands next from nothing with the need exceeds what stands next from the need.",
+      "zh": "无门时的留住一侧（低于需要的水平可再生越过它、满足需要者可落到其下，或自零其后所立加需要多于自需要其后所立）。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which profiles are perfect drawing at once where the drain is not, where several drawers can each meet the need, where free riding may admit many; nor that the drain is the only perfect profile of the two shores.",
+      "zh": "同时抽取而抽尽不完美时何种组合完美（数个抽取者各能满足需要时，搭便车可能容许多个）；也不表明抽尽是两岸唯一的完美组合。",
+      "kind": "scope"
+    },
+    {
+      "en": "That one drawer in turn corresponds to one optimizer ranking whole courses: the comparison with that law crosses two models, and only the two-step contrast is inside one.",
+      "zh": "一个轮流的抽取者对应于对整个过程排序的一个优化者：与该律的比较跨两个模型，只有两步的对照在一个模型之内。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the need ought to be kept or a coupling set: no evaluation enters; the laws say which profiles a coupling leaves perfect.",
+      "zh": "需要应当被留住或应设耦合：没有评价进入；这些律只说一个耦合使哪些组合完美。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean",
+      "detail": {
+        "en": "The candidate that every perfect profile keeps the dependence exactly where the couplings cover the renewal forgone at the joint capacity: on the gated renewal the renewal forgone a step is nothing, and with two drawers or more in turn and no floor every coupling below the need leaves every perfect profile draining at every step; drawing at once, with the level left as it is, for two shores together reaching the need drawing everything is perfect at every coupling and the need is met at no step.",
+        "zh": "候选命题“恰当耦合覆盖联合容量下所放弃的更新时，每个完美组合都留住依存”：在门控更新上每步放弃的更新为零，而二个以上轮流、无下限的抽取者在每个低于需要的耦合下，每个完美组合都每步耗尽；同时抽取时，水平保持原样，对合起来达到需要的两岸，抽尽在每个耦合下都完美，需要在任何一步都未被满足。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261103T111154.021802Z): the 72 declarations of Becoming.CoupledDrawers, 57 of them theorems, have empty axiom reports; the checker verifies core purity. Proved in UE6's third round as a scratch module, then landed; author review in study section 504; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261103T111154.021802Z）：Becoming.CoupledDrawers 的 72 项声明（57 项定理）公理报告为空；检查器并核对核心纯净。于 UE6 第三轮作为草稿模块证明，其后落地；作者审查见研究第 504 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "The keeping side without the gate; perfect profiles drawing at once where several drawers can each meet the need; a correspondence between one drawer in turn and one optimizer ranking courses; an independent review.",
+    "zh": "无门时的留住一侧；数个抽取者各能满足需要时同时抽取的完美组合；一个轮流的抽取者与对过程排序的一个优化者之间的对应；独立审查。"
+  },
+  "correspondence": {
+    "en": "A specialization of pivotal provision of a discrete public good (Palfrey and Rosenthal 1984, from prior knowledge, not re-read): with no drawer able to meet the need alone, drawing everything is perfect at every coupling, step by step over a horizon. A specialization in kind of sequential step-level provision with a pivotal later mover (Erev and Rapoport 1990, its abstract; Admati and Perry 1991, from prior knowledge): where every later step drains or keeps the need, the last drawer of a step decides whether it is met and draws nothing later, so its keeping weighs c against the m it leaves. Known thresholds in a dynamic commons are a different model with the same mechanism (Barrett 2013; Diekert 2017, abstracts); unravelling from the horizon (Selten 1978, prior knowledge). The account's: the drain in turn for every renewal law where c < m and keeping under the gate where m < c, with witnesses on both sides, the iff drawing at once, and the contrast inside drawers in turn between one drawer and several; a specialist would foresee the result (UE6's verdict).",
+    "zh": "离散公共品关键性提供的特化（Palfrey 与 Rosenthal 1984，出自先前所知，未重读）：无一抽取者能独自满足需要时，抽尽在每个耦合下都完美，在视野上逐步如此。后行者关键的序贯阶梯式提供在种类上的特化（Erev 与 Rapoport 1990，其摘要；Admati 与 Perry 1991，出自先前所知）：凡后来各步皆耗尽或留住需要时，一步的最后抽取者决定需要是否被满足，且其后不再抽取，故其留住以 c 对其所留之 m。动态公地中的已知阈值是另一模型、同一机制（Barrett 2013；Diekert 2017，摘要）；自视野回溯的瓦解（Selten 1978，先前所知）。属本理论者：轮流时 c < m 对每个更新之律的耗尽与 m < c 在门之下的留住，两侧皆有见证，同时抽取时的充要条件，以及轮流抽取之内一个与数个抽取者的对照；专家会预见此结果（UE6 的判定）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean",
+  "aliases": [
+    "drawers coupled for each step",
+    "coupled drawers",
+    "耦合的抽取者",
+    "Becoming.Optimum.Coupled.gated_threshold",
+    "Becoming.Optimum.Coupled.drains_below",
+    "Becoming.Optimum.Coupled.kept_above",
+    "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect"
+  ],
+  "dependencies": [
+    {
+      "id": "drawers-in-turn",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The coupled profiles are drawers in turn and at once with c added for each step met; with c = 0 the coupled notion in turn is the existing one (perfect_uncoupled), at once defined alike with no equivalence stated, and the module reuses InTurn's passing, levels and draws and AtOnce's sums and pool.",
+        "zh": "耦合的组合是每满足一步加 c 的轮流与同时抽取者；c = 0 时轮流的耦合概念即原有概念（perfect_uncoupled），同时抽取者定义相同而未述等价，本模块复用 InTurn 的传递、水平与抽取，以及 AtOnce 的和与池。"
+      },
+      "interface": {
+        "output": {
+          "en": "Drawers in turn and at once, perfect profiles, what each draws over the steps that remain.",
+          "zh": "轮流与同时的抽取者、完美组合、各自在其余各步所抽取者。"
+        },
+        "input": {
+          "en": "The same with a coupling for each step a need is met.",
+          "zh": "同一者，加上需要每被满足一步的耦合。"
+        },
+        "conditions": {
+          "en": "No floors; a positive need.",
+          "zh": "无下限；需要为正。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "detail": {
+        "en": "One optimizer ranking whole courses keeps the need where the coupling covers the renewal forgone a step and exceeds the end; for every perfect profile to keep it, several drawers in turn need, under the gate, a coupling above the need itself, and below it they drain whatever the renewal, in a different model.",
+        "zh": "一个对整个过程排序的优化者，在耦合覆盖每步放弃的更新且超过终点时留住需要；要每个完美组合都留住它，数个轮流的抽取者在门之下需要高于需要本身的耦合，低于需要则不论更新都耗尽，在另一模型中。"
+      }
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "Several optimizers drain one step as one would with their joint capacity. Among drawers in turn on a gated renewal, two or more drain where one drawer keeps, even with no coupling where 0 < q; that contrast is inside drawers in turn, not inside the model of mutual best responses.",
+        "zh": "数个优化者一步之内如具其联合容量的一者般耗尽。在门控更新上轮流抽取时，一个抽取者留住之处二个以上耗尽，0 < q 时全无耦合亦然；此对照在轮流抽取之内，不在相互最优回应的模型之内。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Coupled.AtOnce.Perfect",
+        "Becoming.Optimum.Coupled.AtOnce.Revises",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.shore",
+        "Becoming.Optimum.Coupled.AtOnce.Shores.upTo",
+        "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff",
+        "Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff_reach",
+        "Becoming.Optimum.Coupled.AtOnce.drawn",
+        "Becoming.Optimum.Coupled.AtOnce.later",
+        "Becoming.Optimum.Coupled.AtOnce.leftWith",
+        "Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect",
+        "Becoming.Optimum.Coupled.Perfect",
+        "Becoming.Optimum.Coupled.Revises",
+        "Becoming.Optimum.Coupled.drain_perfect",
+        "Becoming.Optimum.Coupled.drains_below",
+        "Becoming.Optimum.Coupled.drawn",
+        "Becoming.Optimum.Coupled.gatedRenewal",
+        "Becoming.Optimum.Coupled.gated_threshold",
+        "Becoming.Optimum.Coupled.keep",
+        "Becoming.Optimum.Coupled.keeping_perfect",
+        "Becoming.Optimum.Coupled.kept_above",
+        "Becoming.Optimum.Coupled.kept_levels",
+        "Becoming.Optimum.Coupled.later",
+        "Becoming.Optimum.Coupled.one_keeps_first",
+        "Becoming.Optimum.Coupled.one_keeps_several_drain",
+        "Becoming.Optimum.Coupled.one_perfect",
+        "Becoming.Optimum.Coupled.perfect_uncoupled",
+        "Becoming.Optimum.Coupled.stepCoupling"
+      ],
+      "sha256": "945f458f685e4bdd02b3fe99ae19af5eae40f55f28514229c43f41fc8167be1e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T111154.021802Z/verification.json",
+      "role": "receipt",
+      "sha256": "ae05228424e8c6ef53b9cc5686f5bb422fea35668443a84c7c5464a0f4084abd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md",
+      "role": "integration",
+      "sha256": "2cdc36e17e34a03da305cb20b400902775cc09aa7be127fa4ef985f8046cf80f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "298e8937971851786cfca58d1383064fea0f382387525b19c5fe7748f18610e4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cdr-coupled-drawers/REVIEW-1.md",
+      "role": "review",
+      "sha256": "76c95699d6364e1c03db2a44082334de4166bc8f480d8c6f62d78573792fef5a"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T111154.021802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.CoupledDrawers",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "3 November 2026, board item CDR (the coordinator's after-freeze item 3; the gap map's item 5.1, its Lean half): added. UE6's third round (26 October 2026) proved the module as scratch on candidate 4 of UE0's audit, whose literal statement it refutes; landed on the core with `paid` renamed `stepCoupling`, the hypothesis `pays` renamed `keepingGains` and a local `cost` renamed `metWithin`, its docstrings narrowed to the hypotheses after two independent AI readers, no statement changed; study section 504.",
+      "zh": "2026年11月3日，工作板条目 CDR（协调者冻结后第 3 项；缺口图第 5.1 项的 Lean 部分）：新增。UE6 第三轮（2026年10月26日）就 UE0 审计的第 4 候选以草稿证明本模块，并驳倒其字面陈述；落地于核心时 `paid` 改名为 `stepCoupling`、假设 `pays` 改名为 `keepingGains`、局部 `cost` 改名为 `metWithin`，经两位独立 AI 读者后其文档注释收窄至假设，无一陈述改变；研究第 504 节。"
+    }
+  ]
+}
