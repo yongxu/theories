@@ -1,6 +1,6 @@
 # The sciences front's theses given their standings
 
-*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.3 to 9.5 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.0 to 29.9 more.*
+*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.3 to 9.5 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.1 to 30.0 more.*
 
 The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)). After T1S gave T1 its standing in its home, TS2 brought the front's T1 row, S-03 and S-14 to it ([after T1S](#after-t1s)).
 
@@ -163,7 +163,7 @@ The front grew from 1,179 words to 1,376, 10.6 to 13.8 minutes, 276 over its ten
 ### Left to others
 
 - **"Exact" and its premises.** "The point of no return is exact" names none of S-12's premises, in 02 and 08 as on the front, which copies them. The reader found it, minor and older than TS2. It belongs in the home first, so it went to T1's home's owner.
-- **Alignment's hour sentence.** The alignment front says "With an hour, read" of a path READING-BUDGETS records as past the hour at the slower rate, the gap the reader found on this front. That dossier is not TS2's, so it went to the coordinator.
+- **Alignment's hour sentence.** The alignment front says "With an hour, read" of a path READING-BUDGETS records as past the hour at the slower rate, the gap the reader found on this front. That dossier is not TS2's, so it went to the coordinator. The coordinator gave it back, to be taken the same way, and AH did ([HP's record](HOUR-PATHS.md#the-times-stated)).
 
 ### The read after T1S
 
