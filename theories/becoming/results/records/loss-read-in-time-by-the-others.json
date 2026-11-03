@@ -416,12 +416,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "8baaa7ea6f95182b774f435bcd8d1352d53571dbfd397ddb3cfcb811df5a8904"
+      "sha256": "efe23892d3204e6ff53adaebe67806c4e256c3235cbaf89033cac376d59870e3"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c51ec0318915924c08da573c2b5ac50e10b664006d75582cd9710c67e9bdfda0"
+      "sha256": "990d9d003ca865fd04d18c94c4da3c89728c1a7873eca4e429409a93150e6785"
     },
     {
       "path": "theories/meta-attractor/README.md",

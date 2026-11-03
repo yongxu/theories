@@ -10,7 +10,7 @@ Every statement carries its standing: a **theorem**, with where it is proved (fo
 
 The footnotes of the README's opening say, sentence by sentence, which kind each claim is. Original words are kept verbatim with their source in [`sources/`](sources/README.md) and quoted as provenance, not as the warrant for a claim.
 
-The work is not licensed: [knowledge is a common good](COMMONS.md).
+The work belongs to the commons and has no licence, by choice: [knowledge is a common good](COMMONS.md).
 
 ## Where to start
 
