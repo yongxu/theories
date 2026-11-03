@@ -150,10 +150,10 @@ SENTENCE = {
     "zh": ("各层由计算给出",
            "各层由计算给出（R31 工具包中的 `development/r31-support/layers.py`，它检查每行的标签，也可写出本表）：L0 是基底，即 "
            "`Becoming.World` 及其导入的本包每个模块（`Becoming.Frame`、`Becoming.Prelude`，以及框架所依的文法模块 "
-           "`Becoming.Grammar`、`Becoming.GrammarMap` 与 `Becoming.GrammarLaws`），在基础之上，基础的三个模块不属任何"
-           "一层，列于表首；L2 是源码陈述延续条件或赋值"
+           "`Becoming.Grammar`、`Becoming.GrammarMap` 与 `Becoming.GrammarLaws`），立于基础之上（基础的三个模块不属任何"
+           "一层，列于表首）；L2 是源码陈述延续条件或赋值"
            "（`Unrestricted`、`Valuation`）的模块，以及导入其中任一者的模块；其余为 L1。没有模块导入更高层的模块，"
-           "脚本检查这一点。实例与应用环按方向在核心之外，不属任何一层，其行标为实例或应用。层内各行按导入顺序排列。"),
+           "脚本检查这一点。实例与应用环按方向在核心之外，不属任何一层，其行标为实例或应用。层内各行按一种导入顺序排列。"),
 }
 
 

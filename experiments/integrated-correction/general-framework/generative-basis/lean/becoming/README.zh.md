@@ -10,19 +10,19 @@
 
 | 环 | 内容 | 约束 |
 |---|---|---|
-| 核心 | 包内三层 L0 至 L2，立于三个基础模块 `GenerativeCore`、`InquirySufficiency`、`RelationalRenewal` 之上；基础与核心一同检查，不计入核心（[08 §3](../../../../../../theories/becoming/chapters/08-METHOD.md#rings)） | 只导入基础与自身（根模块 `Becoming` 除外，它也导入实例与应用环）；每条源声明（基础的也在内）公理报告为空（Lean 为带字段的构造子生成的单射引理 `injEq` 依赖 `propext`，没有源声明使用它们，检查器逐一列出）；去掉基础的 `import Std` 后，只用 Lean 内置前导即可编译 |
-| 实例与应用 | 实例在一个具名载体上读核心的一般规律：《周易》（`Becoming.Hexagrams`、`HexagramPlaces`、`HexagramCommuting`、`HexagramLaws`、`HexagramSites`、`HexagramSequences`）、`Becoming.PlaceTransitionNets` 、以窗所验之室（`Becoming.RoomNet`、`RoomRuns`）、读者由何重建（`Becoming.ReaderRebuilding`）与进入之规由何传授（`Becoming.RuleRebuilding`）。应用是核心无一导入的叶子：`Becoming.Dispatch`、`GuardHorizon`、`ResponseLearning`、`Coverage`、`SeedReach`、`ScopedReach`、`OpenedCorrection`（检查器的 `INSTANCES`、`APPLICATIONS`，R35b） | 与核心同样的条件（只导入核心与本环，公理报告为空，只用前导即可编译）；按方向在核心之外：除根 `Becoming` 外没有核心模块导入本环的模块，没有实例导入应用，检查器断言之 |
+| 核心 | 根模块 `Becoming` 与包内三层 L0 至 L2，立于三个基础模块 `GenerativeCore`、`InquirySufficiency`、`RelationalRenewal` 之上；基础与核心一同检查，不计入核心（[08 §3](../../../../../../theories/becoming/chapters/08-METHOD.md#rings)） | 只导入基础与自身（根模块 `Becoming` 除外，它也导入实例与应用环）；每条源声明（基础的也在内）公理报告为空（Lean 为带字段的构造子生成的单射引理 `injEq` 依赖 `propext`，没有源声明使用它们，检查器逐一列出）；去掉基础的 `import Std` 后，只用 Lean 内置前导即可编译 |
+| 实例与应用 | 实例在一个具名载体上读核心的一般规律：《周易》（`Becoming.Hexagrams`、`HexagramPlaces`、`HexagramCommuting`、`HexagramLaws`、`HexagramSites`、`HexagramSequences`）、`Becoming.PlaceTransitionNets` 、以窗所验之室（`Becoming.RoomNet`、`RoomRuns`）、读者由何重建（`Becoming.ReaderRebuilding`）与进入之规由何传授（`Becoming.RuleRebuilding`）。应用是无实例导入、除根 `Becoming` 外亦无核心模块导入的模块：`Becoming.Dispatch`、`GuardHorizon`、`ResponseLearning`、`Coverage`、`SeedReach`、`ScopedReach`、`OpenedCorrection`（检查器的 `INSTANCES`、`APPLICATIONS`，R35b） | 与核心同样的条件（只导入核心与本环，公理报告为空，只用前导即可编译）；按方向在核心之外：除根 `Becoming` 外没有核心模块导入本环的模块，没有实例导入应用，检查器断言之 |
 | （桥接） | 自 F3 清扫（2026-10-19）起没有桥接：桥接与接合模块连同字节移入 [`../history/becoming/`](../history/becoming/) | 核心陈述它们所读外围模块的内容；这些模块被取代（检查器的 `SUPERSEDED`），不在运行中 |
 | 外围 | 既有伦理与动力学模块、Mathlib 叶子及其桥接 [`CorrectionInquiry`](../universal-ethics/generative-capacity/CorrectionInquiry.lean)、[`LearningCorrespondence`](../universal-ethics/evolution-connectionism/LearningCorrespondence.lean)、Python 实验 | 可用任何合适的工具；依存方向指向核心 |
 
 <a id="四层--four-layers"></a>
 ## 三层
 
-`import Becoming` 导入全部三层。核心只有一个基底：运行（每一步展开是什么、如何走向下一步；`Generative.Process`、`Run`、`Becoming.Frame`）。世界一族（`World`、`Web`、`Flow`）按定义就是运行的立与交换之读：一个 `World` 是一种关系项及其历史，即容许每一步的过程（`everyStep`）的一次运行，其构形是各步的依存网（`WebAt`），其移动是关系项之间的交换；`Web F C` 就是 `Dependence Nat F C`。所以 `Becoming.World` 导入框架，导入树从基础与 `Becoming.Frame` 开始。
+`import Becoming` 导入全部三层。核心只有一个基底，即 L0 中的运行（每一步展开是什么、如何走向下一步；`Run`、`Becoming.Frame`，立于基础的 `Generative.Process` 之上）。世界一族（`World`、`Web`、`Flow`）按定义就是运行的立与交换之读：一个 `World` 是一种关系项及其历史，即容许每一步的过程（`everyStep`）的一次运行，其构形是各步的依存网（`WebAt`），其移动是关系项之间的交换；`Web F C` 就是 `Dependence Nat F C`。所以 `Becoming.World` 导入框架，框架立于文法（`Becoming.Grammar`、`Becoming.GrammarMap`、`Becoming.GrammarLaws`）、`Becoming.Prelude` 与基础的 `GenerativeCore` 之上。
 
-| 层 | 模块 | 讲什么 |
+| 层或环 | 模块 | 讲什么 |
 |---|---|---|
-| 基础 | [`GenerativeCore`](../GenerativeCore.lean)、[`InquirySufficiency`](../inquiry-root/sufficiency/InquirySufficiency.lean)、[`RelationalRenewal`](../deeper/RelationalRenewal.lean) | 不属任何一层：与核心一同检查，不计入核心；过程、轨迹及其组合与传递，导入树由此开始（`GenerativeCore`）；经实际变化之构形的有界充分探究（`InquirySufficiency`）；更新与消耗作为对所参与条件的关系（`RelationalRenewal`） |
+| 基础 | [`GenerativeCore`](../GenerativeCore.lean)、[`InquirySufficiency`](../inquiry-root/sufficiency/InquirySufficiency.lean)、[`RelationalRenewal`](../deeper/RelationalRenewal.lean) | 不属任何一层：与核心一同检查，不计入核心；过程、轨迹及其组合与传递，`Becoming.Frame` 与 `InquirySufficiency` 立于其上（`GenerativeCore`）；经实际变化之构形的有界充分探究（`InquirySufficiency`）；以与所参与之条件的关系读更新与消耗（`RelationalRenewal`） |
 | L0 | [`Becoming.Grammar`](Becoming/Grammar.lean) | 文法：对每个载体与关系成立的关系演算，名用中文并附绑定表；续（`«续»`）是缘与类之合，诸位由之读出，无一自立（`«四相无自立»`）；对缘有常之类，其续永不终了（`«有常则续不尽»`），故一条续自身之规律是其类之核，即类中最大的对称而有常之关系（`«根»`）；对一个类，有常恰是粗网之闭合（`«闭合当且仅当有常»`）；“每一事或生或有前，对一切模型”恰是排中律（`«四相之定当且仅当排中»`） |
 | L0 | [`Becoming.GrammarMap`](Becoming/GrammarMap.lean) | 两种粒度、按分支之地图：传即异（`«传则异»`）；某支之延与诸支之尽互斥（`«延尽不并»`）；按分支读生成、守、退化，相杂之域有实例（`Map.«生守相杂»`），单行之网中互斥（`«单行则生守不并»`）；复生不定其域；在每一点分辨延与尽恰是排中律（`«延尽之定当且仅当排中»`）；诸支皆尽者在双重否定下有终（`«尽则非无终»`），延续可判定时有终（`«尽而续可定则有终»`），不判定时恰在排中之下有终（`«尽则有终当且仅当排中»`，以 `Map.StepWhere` 为见证，即以一命题为门的短命之线）；沿后继之线所及恰为其后之数（`Map.step_reached_le`、`Map.step_reaches_of_le`） |
 | L0 | [`Becoming.Prelude`](Becoming/Prelude.lean) | 各层所用的关于数、真值、列表与选项的引理，每条只陈述一次（不加前提；只导入 Init）：自然数的消去、减法与乘积（`add_right_cancel`、`Naturals.sub_sub`、`mul_assoc_nat`），`all`、`any`、`contains`、`filter`、`find?`、`bind` 与 `map` 检验什么（`ListTests.all_true_iff`、`ListTests.find_none_iff`），连接与映射之列表的成员（`mem_append_cases`、`preimage_of_mem_map`），在 Lean 自带版本用 `propext` 之处以递归证明；唯一的跨段平衡（`balance_over_stretch_on`），流、量、过程与普查的跨段平衡皆为其情形 |
@@ -236,7 +236,7 @@
 | 实例 | [`Becoming.RuleRebuilding`](Becoming/RuleRebuilding.lean) | 进入之规由何传授，一条规则所成之网族（OG2，一种制度）：自稳态起规则每步皆得持，恰当传授合于一任、额至少为一、取合于所生（`RuleRebuilding.«稳者恒持当且仅当在带»`）；域于其内之修订下闭（`RuleRebuilding.«域闭»`）；无持者不复有持者（`RuleRebuilding.«无持者不复»`）；稳态与开放进入是各自独立之二试（`RuleRebuilding.«稳开二试»`）；有空队列时，持规之队列数在二取之间加权（`RuleRebuilding.«隙之律»`） |
 | 应用 | [`Becoming.OpenedCorrection`](Becoming/OpenedCorrection.lean) | 沿一过程开一更正之读之修订（一应用；每项公理报告皆空；各结果以各定理所列条件为前提）：经所行之读有合之一致策略处可更正（`OpenedCorrection.Correctable`），一历程于可受者守定时开之（`OpenedCorrection.OpensAlong`），于 Revising 之过程，初始联断时重建其联而后尚余一储处（`OpenedCorrection.Linked.opens`） |
 
-各层由计算给出（R31 工具包中的 `development/r31-support/layers.py`，它检查每行的标签，也可写出本表）：L0 是基底，即 `Becoming.World` 及其导入的本包每个模块（`Becoming.Frame`、`Becoming.Prelude`，以及框架所依的文法模块 `Becoming.Grammar`、`Becoming.GrammarMap` 与 `Becoming.GrammarLaws`），在基础之上，基础的三个模块不属任何一层，列于表首；L2 是源码陈述延续条件或赋值（`Unrestricted`、`Valuation`）的模块，以及导入其中任一者的模块；其余为 L1。没有模块导入更高层的模块，脚本检查这一点。实例与应用环按方向在核心之外，不属任何一层，其行标为实例或应用。层内各行按导入顺序排列。
+各层由计算给出（R31 工具包中的 `development/r31-support/layers.py`，它检查每行的标签，也可写出本表）：L0 是基底，即 `Becoming.World` 及其导入的本包每个模块（`Becoming.Frame`、`Becoming.Prelude`，以及框架所依的文法模块 `Becoming.Grammar`、`Becoming.GrammarMap` 与 `Becoming.GrammarLaws`），立于基础之上（基础的三个模块不属任何一层，列于表首）；L2 是源码陈述延续条件或赋值（`Unrestricted`、`Valuation`）的模块，以及导入其中任一者的模块；其余为 L1。没有模块导入更高层的模块，脚本检查这一点。实例与应用环按方向在核心之外，不属任何一层，其行标为实例或应用。层内各行按一种导入顺序排列。
 
 <a id="检查--verification"></a>
 ## 检查
@@ -262,7 +262,7 @@ BECOMING_FRESH=1 BECOMING_OUT=/tmp/becoming-run \
   python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py
 ```
 
-3. 最后一行 JSON 的 `"status": "passed"` 表示以下各项都已在本机检查：**核心纯净**：核心的导入闭包恰为基础模块与核心模块，都是本仓库的文件（不含 Mathlib 或 `Lean` 元编程）；**公理报告为空**：基础与核心的每条源声明 `#print axioms` 都报告不依赖任何公理；**只用序言编译**：去掉 `import Std` 后，核心闭包仅凭 Lean 的序言编译通过，警告即失败；**环境审计**：核心闭包与桥模块中 Lean 的每个常量（含生成的常量、私有声明与无名实例）都不依赖公理，唯一例外是构造子的单射引理 `injEq` 依赖 `propext`，且它们都不是源声明。此外：Lean 版本须为 4.29.1，二进制的 sha256 写入回执；对照例子编译通过。
+3. 最后一行 JSON 的 `"status": "passed"` 表示以下各项都已在本机检查：**核心纯净**：核心的导入闭包恰为基础模块、核心模块与实例和应用环（除根 `Becoming` 外没有核心模块导入此环），都是本仓库的文件（不含 Mathlib 或 `Lean` 元编程）；**公理报告为空**：基础与核心的每条源声明 `#print axioms` 都报告不依赖任何公理；**只用序言编译**：去掉 `import Std` 后，核心闭包仅凭 Lean 的序言编译通过，警告即失败；**环境审计**：核心闭包与桥模块中 Lean 的每个常量（含生成的常量、私有声明与无名实例）都不依赖公理，唯一例外是构造子的单射引理 `injEq` 依赖 `propext`，且它们都不是源声明。此外：Lean 版本须为 4.29.1，二进制的 sha256 写入回执；对照例子编译通过。
 4. 环境变量：`BECOMING_FRESH=1` 重跑全部步骤，不用缓存（缓存在仓库之外且无认证，所以对外声称结果时要用它）；`BECOMING_OUT=<dir>` 把运行目录与回执写到该目录，仓库不变；`BECOMING_JOBS` 同时运行的 Lean 步骤数（默认核数的一半，1 为逐个运行）；`LEAN_TIMEOUT` 每次 Lean 运行的秒数（默认 600，机器繁忙时调大）；`BECOMING_LEAN_CACHE` 缓存目录（默认 `~/.cache/becoming-lean`）；`LEAN` 指定 Lean 二进制，否则用本目录下 `elan which lean` 的结果，再否则用 elan 的默认路径。
 
 外围中用 Mathlib 的检查器（如 `check_correction_inquiry.py`）依赖仓库之外的 Mathlib 项目：`SYSTEMS_MATHLIB_PROJECT`，默认 `~/repos/生生不息`，工具链 v4.30.0-rc2，与核心的 v4.29.1 不同。其 `lakefile.lean` 与 `lake-manifest.json` 原样保存在 [`../periphery-mathlib-pin/`](../periphery-mathlib-pin/README.md)，固定 Mathlib 修订；上面的核心检查不需要它。
@@ -284,7 +284,7 @@ BECOMING_FRESH=1 BECOMING_OUT=/tmp/becoming-run \
 | `BecomingFrame` | `Becoming.Frame` | 包结构 |
 | `BecomingModal` | `Becoming.Inquiry` | 它讲探究的所见范围，不是模态逻辑 |
 | `BecomingRenewal` | `Becoming.Renewal` | 包结构 |
-| `MetaethicalCore` | `Becoming.Metaethics` | 核心是整个包，不只是这一层 |
+| `MetaethicalCore` | `Becoming.Metaethics` | 核心是根模块与全部三层，不只是这一层 |
 | `BecomingInstances` | `Becoming.Bridge` | 它是核心与外围之间的桥 |
 
 基础模块保留历史命名空间 `Generative`。它的过程是任何生成／变化，包括维持与退化，不只是生成性的变化。
