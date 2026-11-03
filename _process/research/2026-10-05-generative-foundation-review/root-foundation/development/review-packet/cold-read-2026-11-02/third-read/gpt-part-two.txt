@@ -1,0 +1,163 @@
+**R1. Changed answers to Q1–Q6**
+
+**Q1 — Sure: unchanged.**
+
+**Q2 — Sure about the stated standings.** My previous list remains, with these refinements and one addition:
+
+- **The relational ontology claims more than a common vocabulary.** It identifies what things are with their relations. It remains an argued philosophical thesis, without an observational refuter. The passage that sharpened this was:  
+  > “A philosophical thesis stands beside them, argued: there is one unfolding, and whatever is, is how it relates within it.”
+
+- **T7’s contrary evidence is now more intelligible.** The overview distinguishes a forbidden event at one reading from the frozen verdict measured at the end:  
+  > “one note of the loss among nine readers turned the judge, a case it forbids at that reading, though the frozen rule for it, which reads the end, did not support it”  
+  I now understand how a test could pass while containing evidence against the wording of the thesis. Whether that warrants retaining T7 unchanged, the text does not say.
+
+- **The proposed alignment direction has more explicit dependencies.** It requires practical commitments and a correspondence to actual systems, alongside the two ethical premises:  
+  > “A direction follows only conditionally: under the condition for scope, C for order, J1–J4 and a correspondence, align AI formation, learning, action and revision with actual living and further generation within the whole.”
+
+- **An eighth claim: pooling selectors expands visibility but does not eliminate its limit.** This is proved on the World model under stated conditions:  
+  > “Proved on the World model, with the members listed and their couplings decided: a pool separates two histories exactly when some member does.”
+
+**Q3 — Sure.** The two foundations and their roles are unchanged. Three details change my understanding:
+
+1. **Significance itself is not positive valuation.**  
+   > “A significance says, for a standpoint, a step and a formation, whether from that standpoint the formation's continuation then has significance: a proposition with no number or valence.”  
+   This makes the separation from ordering sharper than I previously understood.
+
+2. **The additional practical premises are now named.**  
+   > “Choices take more: a reading of "living", a lifting from outcomes to responses, and the practical commitments J1–J4 (complete comparison with retained losses, priority of basic conditions, bounded responsibility, legitimate feasible choice), each named where used ([practical judgment](chapters/07-SIGNIFICANCE.md#practical-judgment)).”  
+   These supply commitments needed for decisions beyond widening. Their detailed content—the text does not say.
+
+3. **There are two treatments of significance, not one continuous derivation.** The second interprets significance as belonging to a center’s relational closure:  
+   > “This changes the interpretation and derives nothing from the first treatment.”  
+   It offers a possible relational expression of scope; it does not establish the ethical premise.
+
+**Q4 — Sure.** One important addition: it does **not** claim that its formal separation of dynamics and significance establishes their separation in reality.
+
+> “This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined ([what the dynamics leave open](chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)).”
+
+The exclusions I previously listed are unchanged.
+
+**Q5 — Sure about the stated criteria; unsure about applying the philosophical ones.** Three changes:
+
+1. **A checked theorem may still fail to support its prose interpretation.** The overview adds a failure mode I omitted:  
+   > “A failed check, or a statement that does not say what the prose says.”
+
+2. **Arguments for the ethical premises can fail.** My previous answer left this too unspecified:  
+   > “Nothing in the dynamics: neither is asserted, and what can fail is an argument for it”  
+   The discussion now identifies possible objections to the invariance argument: facts might privilege a boundary, and the presupposition might concern continuation under one’s own description. Neither possibility is ruled out.
+
+3. **T8 has an additional stated refuter:**  
+   > “a pure closing argued good for life”  
+   I understand the intended challenge, but the text does not say how such an argument would be adjudicated.
+
+The earlier empirical refuters are unchanged.
+
+**Q6 — Unsure.** I now see a more specific proposed contribution: bringing conservation, limited observation and comparisons of possibilities into one vocabulary, with their assumptions exposed.
+
+> “What survives is the premise ledger, with witnesses both ways; the ethics with scope and order apart; and one vocabulary for conservation, selection limited by observation and the comparison of opportunity sets ([known results](chapters/08-METHOD.md#known-results)).”
+
+The overview also identifies predecessors more precisely: the optimization result is attributed to Zhuang and Hadfield-Menell, and the widening comparison to Sen’s intersection approach and Pareto unanimity. This makes the contribution look more clearly like integration and clarification. Whether that integration produces something existing fields lack remains unestablished here.
+
+**R2. The structure, again**
+
+I now see three connected projects, with tests and interpretations attached:
+
+```text
+Relational grammar
+  → continuation relative to a chosen sameness
+  → distinctions between persistence, renewal and ending
+  → proposed interpretation: everything belongs to one relational unfolding
+
+Additional modelling assumptions
+  → flows, resources, requirements and renewal
+  → observation, generalization and selection
+  → evolution constrained by support
+  → collective depletion, optimization and self-maintaining rules
+
+These results + correspondences to actual systems
+  → empirical theses and tests
+  [The correspondences remain incompletely established.]
+
+A separate evaluative construction
+  → significance supplied, or interpreted through relational closure
+  + continuation condition: universal scope
+  + C: preference for widening
+  + practical commitments: choices beyond widening
+  + correspondence to actual life and AI
+  → conditional ethical and alignment direction
+```
+
+The self-concern and invariance arguments attempt to warrant part of the ethical construction. They are not another proved connection from the dynamics. Classical texts supply terminology and interpretive comparisons, rather than operations or independent confirmation. The premise ledger and proof records document the dependencies across these projects.
+
+**Partly.** I now understand more of the connective tissue: resource dependence limits persistence; coupling limits selection; neither limit determines whose losses matter. That is a coherent organizing problem. But the ontology, most model results and the ethics still do not depend on one another strongly enough for me to hold them as one explanatory theory. The overview makes that separation more explicit, particularly when it says significance’s central laws are not derived from the root.
+
+**R3. Where I stopped or reread**
+
+1. > “Every class has a core (核): the greatest sameness inside it that the relation itself carries and never tells apart, which always exists and is a class.”
+
+   I cannot reconstruct “the relation itself carries and never tells apart” precisely enough to understand the result.
+
+2. > “With natural-number weights, read as probabilities, complying when read and acting by its own law when not is uniquely best, by its prospects, of a formation's four plans over two stages exactly where the weight complying adds to being kept, times the value, exceeds the loss of complying.”
+
+   I had to translate this mentally into a payoff table; the four plans and quantities are not laid out.
+
+3. > “Proved for every type: along any relation, the condition is exactly that presupposition holding at some admissible region of the self and at every one, at every standpoint; this locates the contested step, invariance across drawings, and derives nothing more.”
+
+   The nesting of “some,” “every,” regions and standpoints defeats my ability to track the equivalence.
+
+4. > “Positions form within the one unfolding, and nothing outside it owns value.”
+
+   This sounds settled at the opening of the ethics section, although the ontology that licenses it is still an argued thesis.
+
+5. > “This is Sen's intersection approach and Pareto unanimity; calling widening better is C, whose premise is so relocated to monotonicity at each standpoint, weaker and still a premise ([C](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks)).”
+
+   I understand the unanimity comparison, but not precisely what is weaker than what, or how numerical weightings map to standpoints.
+
+**R4. New terms I could not adequately understand**
+
+- **Core / constant class:** the informal definition does not let me identify one.
+- **Admissible region of the self:** what makes a region admissible?
+- **Net weightings:** used in T5 without enough explanation to distinguish them from the positive weightings discussed earlier.
+- **Lifting from outcomes to responses:** I understand that an extra step is needed, but not what this step does.
+- **“A regularity its own kind fixes”:** I cannot tell what would establish such a regularity or its boundary.
+
+I would have followed the links on constancy and the core, the decomposition of the continuation condition, and practical judgment at these points.
+
+**R5. Agreement with the shorter texts**
+
+I found no direct contradiction. I did find consequential qualifications:
+
+- The one-page text says:  
+  > “No law evaluates: none says a loss is a harm or restraint better.”  
+  The overview specifies the limit of the formal argument:  
+  > “This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined”  
+  The second prevents a broader philosophical inference that the first might invite.
+
+- The one-page text says the continuation condition “counts losses that return to no one.” The overview defines significance as “a proposition with no number or valence.” These can agree, but “counts” initially sounded more positively evaluative to me than the formal definition warrants.
+
+- The one-page account of T7 says a note “turned one trained judge at one reading, which it forbids.” The overview adds that “every frozen verdict passed” and explains that the relevant frozen rule “reads the end.” This clarifies the apparent conflict between the reported verdict and the reported forbidden event.
+
+The longer text generally adds restrictions and separates levels of claim rather than strengthening the shorter account’s promises.
+
+**R6. What I would change to reveal the whole sooner**
+
+1. **Put the paragraph beginning “Its centre [AI reading]” immediately after the opening description.** It tells me what problem organizes the work before I encounter its machinery.
+
+2. **Shorten “One case, start to finish” to three moves:** collective depletion, invisible mussel loss, conditional evaluation. Move the early-warning statistics and test histories beside T6 and T4. They interrupt the initial line of thought.
+
+3. **Show the principal dependencies before the standings tables.** Use the two “Join” passages to distinguish grammar, additional models, actual-system correspondences and ethical premises. That is the structure I most need to retain.
+
+4. **Give one worked example beside “Every class has a core.”** The fire example helps with classes and grains; the core, lumping and reading-loop results need similarly concrete assistance before more terminology accumulates.
+
+5. **Begin §7 with the two premises and practical commitments, then present the proposed warrants.** “The contested step” and “The crux” become easier to assess once I know exactly what they are trying to justify.
+
+**R7. Would I read on?**
+
+**Yes, selectively.** I would follow **“one argument, end to end,” especially its mixed case**, and then the **practical judgment** link defining J1–J4. I want to see what this framework makes clearer in a decision where some possibilities are gained and others lost. I would also follow T7’s record to understand how the forbidden intermediate event affects the thesis.
+
+The answer remains yes, but my priority has changed from Q10. The overview has explained more of the technical result’s ancestry and conditions; my next question is whether assembling these results with this ethics yields useful judgment that the components alone do not.
+
+**R8. Two sentences**
+
+This might matter as a disciplined way to expose what a successful selector cannot register and which additional commitments are needed to count and respond to those losses. It might add little if the common vocabulary never yields better explanations or decisions than its existing components, especially while the connections to actual systems and the ethical warrants remain open.
+
