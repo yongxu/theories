@@ -105,6 +105,15 @@ of equal sizes.
   totals (assortment none) never select for it (`not_rises_of_alike`); between, the verdict
   turns on how much of the spread lies among groups. Over listed generations with exact
   transmission the mean rises across a step exactly so (`rises_exact_iff_returns`).
+* **Returns kept and shared within the group.** Where each unit a member keeps costs it `K`, brings
+  `s` back to it alone and gives `q` to every member of its group, its own included, selection within
+  the groups goes by `s` against `K` alone, what is shared coming to the members of a group alike
+  (`within_kept`); among them, read by their totals, by `s + m q` against `K` (`among_kept`); and the
+  whole selects for keeping exactly where `K` times the whole's spread falls short of `s` times it
+  with `m q` times the spread among groups (`rises_iff_kept`): read over the rationals, exactly where
+  `K < s + m q ρ`. Returns to groupmates are its case with nothing kept (`s = 0`, `K = b + c`,
+  `q = b`), and `within_returns`, `among_returns` and `rises_iff_returns` are derived from it. What
+  comes back alone enters at every assortment; what is shared within the group only through it.
 * **Witnesses.** Two groups of two, the amount one at a member that holds back and none at the
   others. In both, the one holding back leaves fewer offspring than its groupmate, so selection
   within goes against holding back. Where the group without it leaves no offspring, selection
@@ -851,22 +860,54 @@ theorem spread_levels (gs : List (List α)) (a : α → Nat) {m : Nat}
     Nat.zero_add] at h
   exact h
 
+/-- **Returns kept and shared within the group, within each group.** Where each unit a member
+keeps costs it `K`, brings `s` back to it alone and gives `q` to every member of its group, its own
+included, summed over the groups: the groups' own concordance with `K` times their own spreads is
+their discordance with `s` times those spreads. What is shared within a group comes to its members
+alike and selects nothing within it. -/
+theorem within_kept {gs : List (List α)} {w a : α → Nat} {B s q K : Nat}
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * total g a) :
+    concordWithin gs w a + K * concordWithin gs a a =
+      discordWithin gs w a + s * concordWithin gs a a :=
+  (Naturals.add_congr rfl (total_mul K (fun g => concord g a a) gs).symm).trans
+    ((total_add (fun g => concord g w a) (fun g => K * concord g a a) gs).symm.trans
+      ((total_eq_of_mem fun g mg =>
+          have h := returns_balance g w a a (B := B + q * total g a) (b := s) (k := K)
+            fun p mp => (returns g mg p mp).trans (Nat.add_right_comm _ _ _)
+          by rw [Reproduction.discord_self, Nat.mul_zero, Nat.add_zero] at h; exact h).trans
+        ((total_add (fun g => discord g w a) (fun g => s * concord g a a) gs).trans
+          (Naturals.add_congr rfl (total_mul s (fun g => concord g a a) gs)))))
+
+/-- **And among the groups.** Among groups of `m` members each, read by their totals, a group's
+offspring with `K` per unit it holds is `m` times the base with `s + m q` per unit, so the groups'
+concordance with `K` times the spread among them is their discordance with `s + m q` times it. -/
+theorem among_kept {gs : List (List α)} {w a : α → Nat} {B s q K m : Nat}
+    (equal : ∀ g, g ∈ gs → g.length = m)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * total g a) :
+    concordAmong gs w a + K * concordAmong gs a a =
+      discordAmong gs w a + (s + m * q) * concordAmong gs a a := by
+  have grouped : ∀ g, g ∈ gs →
+      total g w + K * total g a = m * B + (s + m * q) * total g a := fun g mg =>
+    (returns_total (o := a) (B := B + q * total g a) (b := s)
+        fun p mp => (returns g mg p mp).trans (Nat.add_right_comm _ _ _)).trans (by
+      rw [equal g mg, Nat.left_distrib, add_mul_split, mul_assoc_nat m q, Nat.add_assoc,
+        Nat.add_comm (m * (q * total g a))])
+  have h := returns_balance gs (fun g => total g w) (fun g => total g a) (fun g => total g a)
+    grouped
+  rw [Reproduction.discord_self, Nat.mul_zero, Nat.add_zero] at h
+  exact h
+
 /-- Within a group where each unit a member keeps gives `b` to every other member and costs the
 keeper `c` (equivalently, gives `b` to every member, own included, and takes `b + c` from the
 keeper): selection within goes against the amount by
 `b + c` times the group's spread. Summed over the groups: the groups' own discordance is their
-concordance with `b + c` times their own spreads. -/
+concordance with `b + c` times their own spreads. The case of `within_kept` with nothing kept. -/
 theorem within_returns {gs : List (List α)} {w a : α → Nat} {B b c : Nat}
     (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + (b + c) * a p = B + b * total g a) :
     discordWithin gs w a = concordWithin gs w a + (b + c) * concordWithin gs a a :=
-  (total_eq_of_mem fun g mg =>
-      have h := returns_balance g w a (fun _ => total g a) (returns g mg)
-      have c0 : concord g (fun _ => total g a) a = 0 := concord_uniform (fun _ _ => rfl) a
-      have d0 : discord g (fun _ => total g a) a = 0 := discord_uniform (fun _ _ => rfl) a
-      by
-        rw [c0, d0, Nat.mul_zero, Nat.add_zero, Nat.add_zero] at h
-        exact h.symm).trans
-    ((total_add _ _ gs).trans (Naturals.add_congr rfl (total_mul (b + c) _ gs)))
+  have h := within_kept (B := B) (s := 0) (q := b) (K := b + c)
+    fun g mg p mp => (returns g mg p mp).trans (by rw [Nat.zero_mul, Nat.add_zero])
+  by rw [Nat.zero_mul, Nat.add_zero] at h; exact h.symm
 
 /-- So selection within goes against the amount wherever a group varies in it and `b + c` is
 not none. -/
@@ -879,20 +920,16 @@ theorem within_against {gs : List (List α)} {w a : α → Nat} {B b c : Nat}
 
 /-- Among groups of `m` members each: a group's offspring with `b + c` per unit of its total is
 `m` times the base with `m` times `b` per unit, so the groups' concordance, with `b + c` times the
-spread among them, is their discordance with `m` times `b` times that spread. -/
+spread among them, is their discordance with `m` times `b` times that spread. The case of
+`among_kept` with nothing kept. -/
 theorem among_returns {gs : List (List α)} {w a : α → Nat} {B b c m : Nat}
     (equal : ∀ g, g ∈ gs → g.length = m)
     (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + (b + c) * a p = B + b * total g a) :
     concordAmong gs w a + (b + c) * concordAmong gs a a =
-      discordAmong gs w a + m * b * concordAmong gs a a := by
-  have grouped : ∀ g, g ∈ gs →
-      total g w + (b + c) * total g a = m * B + m * b * total g a := fun g mg =>
-    (returns_total (returns g mg)).trans (by
-      rw [total_const, equal g mg, mul_turn b m, mul_assoc_nat m b])
-  have h := returns_balance gs (fun g => total g w) (fun g => total g a) (fun g => total g a)
-    grouped
-  rw [Reproduction.discord_self, Nat.mul_zero, Nat.add_zero] at h
-  exact h
+      discordAmong gs w a + m * b * concordAmong gs a a :=
+  have h := among_kept equal (B := B) (s := 0) (q := b) (K := b + c)
+    fun g mg p mp => (returns g mg p mp).trans (by rw [Nat.zero_mul, Nat.add_zero])
+  by rw [Nat.zero_add] at h; exact h
 
 /-- So selection among the groups goes for the amount exactly where `b + c` times the spread among
 them falls short of `m` times `b` times it: where the groups differ, exactly where `b` times
@@ -904,32 +941,45 @@ theorem among_for_iff {gs : List (List α)} {w a : α → Nat} {B b c m : Nat}
       (b + c) * concordAmong gs a a < m * b * concordAmong gs a a :=
   lt_iff_of_balance (among_returns equal returns)
 
+/-- **The rule of returns kept and shared within the group**, for groups of equal size `m`: where
+each unit a member keeps costs it `K`, brings `s` back to it alone and gives `q` to every member of
+its group, its own included, the whole selects for keeping exactly where `K` times the whole's
+spread falls short of `s` times it with `m` times `q` times the spread among groups. Read over the
+rationals, with the assortment `ρ` the share of the spread among groups, exactly where `K` falls
+short of `s + m q ρ`: what comes back to the keeper alone enters at every assortment, what is
+shared within the group only through the assortment. -/
+theorem rises_iff_kept (gs : List (List α)) (w a : α → Nat) {B s q K m : Nat}
+    (equal : ∀ g, g ∈ gs → g.length = m)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * total g a) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      K * concord (whole gs) a a < s * concord (whole gs) a a + m * q * concordAmong gs a a := by
+  have h := balance_add (balance_mul gs.length (within_kept returns)) (among_kept equal returns)
+  have balance : gs.length * concordWithin gs w a + concordAmong gs w a +
+      K * concord (whole gs) a a =
+        gs.length * discordWithin gs w a + discordAmong gs w a +
+          (s * concord (whole gs) a a + m * q * concordAmong gs a a) := by
+    rw [spread_levels gs a equal, Nat.left_distrib K, Nat.left_distrib s,
+      mul_turn K gs.length, mul_turn s gs.length, Nat.add_assoc (gs.length * (s * _))]
+    rw [add_mul_split s (m * q)] at h
+    exact h
+  exact (rises_iff gs w a equal).trans (lt_iff_of_balance balance)
+
 /-- The rule of returns to groupmates, for groups of equal size: where each member's offspring
 number with `b + c` per unit of its own amount is a base with `b` per unit its group holds, the
 whole selects for the amount exactly where `b + c` times the whole's spread falls short of `m`
 times `b` times the spread among groups. Read over the rationals, with
 the share of the spread among groups `ρ` (the assortment), exactly where `m b ρ` exceeds `b + c`:
 with the relatedness `r = (m ρ - 1) / (m - 1)` of a member to its groupmates, where `r` times `b`
-times `m - 1` exceeds `c`, Hamilton's rule for returns to groupmates. -/
+times `m - 1` exceeds `c`, Hamilton's rule for returns to groupmates. The case of
+`rises_iff_kept` with nothing kept. -/
 theorem rises_iff_returns (gs : List (List α)) (w a : α → Nat) {B b c m : Nat}
     (equal : ∀ g, g ∈ gs → g.length = m)
     (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + (b + c) * a p = B + b * total g a) :
     discord (whole gs) w a < concord (whole gs) w a ↔
-      (b + c) * concord (whole gs) a a < m * b * concordAmong gs a a := by
-  have within := within_returns returns
-  have among := among_returns equal returns
-  have balance : gs.length * concordWithin gs w a + concordAmong gs w a +
-      (b + c) * concord (whole gs) a a =
-        gs.length * discordWithin gs w a + discordAmong gs w a +
-          m * b * concordAmong gs a a :=
-    (congrArg (gs.length * concordWithin gs w a + concordAmong gs w a + ·)
-        ((congrArg ((b + c) * ·) (spread_levels gs a equal)).trans ((Nat.left_distrib _ _ _).trans
-          (congrArg (· + (b + c) * concordAmong gs a a)
-            (mul_turn (b + c) gs.length (concordWithin gs a a)))))).trans
-      ((Nat.add_add_add_comm _ _ _ _).trans
-        ((Naturals.add_congr ((Nat.left_distrib _ _ _).symm.trans
-          (congrArg (gs.length * ·) within.symm)) among).trans (Nat.add_assoc _ _ _).symm))
-  exact (rises_iff gs w a equal).trans (lt_iff_of_balance balance)
+      (b + c) * concord (whole gs) a a < m * b * concordAmong gs a a :=
+  (rises_iff_kept gs w a (B := B) (s := 0) (q := b) (K := b + c) equal
+    fun g mg p mp => (returns g mg p mp).trans (by rw [Nat.zero_mul, Nat.add_zero])).trans
+    (by rw [Nat.zero_mul, Nat.zero_add])
 
 /-- Groups uniform in the amount (assortment one, as groups formed by descent from uniform
 founders are): where the groups differ, the whole selects for the amount exactly where `b + c`

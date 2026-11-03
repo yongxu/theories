@@ -173,6 +173,7 @@ import Becoming.ClosedCapture
 import Becoming.RuleShaping
 import Becoming.ChoiceCountCapture
 import Becoming.DrawnShaping
+import Becoming.DrawnReplacement
 import Becoming.ReadInTime
 import Becoming.PatternPassing
 import Becoming.JointKeeping
@@ -2645,6 +2646,22 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   mass and falling strictly below it, the shapers present (`drawn_rises`, `drawn_falls`). A leaf: the
   join of `RuleShaping`'s shaping with `ClosedCapture`'s readers, which nothing below needs (board
   item MA4).
+* `Becoming.DrawnReplacement` (L1): the stag hunt of drawn shaping, drawn one member at a time. The
+  rule read at `i` shapers among `M + 1` gives the weights of `Drift.Replacement`'s chain with weights
+  read from the count: up the shapers' count of the rule read (`up`), down the others' (`down`), and
+  a step leaving the count weighed so every step weighs alike (`steps`). Favouring at a count is
+  `down ≤ up` there (`favours_iff`), and with `lo ≤ hi` the shapers' weight does not fall with their
+  count (`up_mono`). Drift's fixation bounds hold (`fixation`); losing every shaper weighs at least
+  `down ^ i` times every later history, above the critical mass too (`lost_ge`), and fixing them at
+  least `a ^ k` (`fixed_ge`); above a count favouring the shapers, the histories losing them from
+  `s + n` weigh, times the shapers' weights across the stretch, at most `t · down ^ n` times the whole
+  (`lost_above`), and below one favouring the others likewise for fixing them (`fixed_below`). The
+  potential's first step is the shapers' weights at the mixed counts multiplied and its last
+  `down ^ M` (`one_each`); at an even population the rule read favours the shapers strictly exactly
+  where `2 · c < hi + lo` (`risk_dominant_iff`). Witnesses: five members, the shapers risk dominant
+  and one other fixing first (`Strong.other_first`), reversed by the base or by the part shared alike
+  (`Weak.shapers_first`, `Weak.shared_decides`). A leaf: the join of `DrawnShaping`'s critical mass
+  with 04 §6's replacement chain, which nothing below needs (board item AJ8).
 * `Becoming.ReadInTime` (L1): the loss read in time by the others, joined to the critical mass. The
   rule read is `ClosedCapture.Thinned.lossPool` over three of `RuleShaping`'s rules after shaping:
   the shapers among the readers read `hi` coming back to the shapers, whatever the loss, and the

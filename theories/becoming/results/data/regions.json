@@ -3048,6 +3048,11 @@
    "base": "old-base",
    "note": "RB1 whose dependence a rise breaks"
   },
+  "Becoming.DrawnReplacement": {
+   "region": "map",
+   "base": "general",
+   "note": "AJ8 the stag hunt of drawn shaping as Drift's replacement chain with weights read from the count"
+  },
   "Becoming.DrawnShaping": {
    "region": "map",
    "base": "general",
