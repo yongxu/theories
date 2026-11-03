@@ -52,7 +52,7 @@ Canonical source: [RevisionPlans.lean](../../../../experiments/integrated-correc
 <a id="next--下一步"></a>
 ## Next
 
-How a formation's weights on its law's going on losing change as it is selected (LA4's drain); a frozen test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices; review by a person.
+How a formation's weights on its law's going on losing change as it is selected (LA4's drain); a run of the test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices (TR-RR, frozen 4 November 2026 with TR8, experiments/formations-that-read/FREEZE-1.md; its run waits on Ren's yes); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -90,6 +90,7 @@ Aliases: `when holding for a reading stands above a route of keeping`, `为读�
 ### History
 
 - 31 October 2026: added (RR2), when holding for a reading stands above a route of keeping: plans keeping a law going on and switching it off at a model's candidates, each with a loss of its own, on RR's order; the balance, every two plans splitting the weights gaining the same with their excesses; RR's routes as plans on one candidate; HeldForReading taking its balances from it; after a cross-model review and its re-check, every finding taken; study section 475.
+- 4 November 2026, board item RFZ: the test TR-RR frozen with TR8 before any call to a model (experiments/formations-that-read/FREEZE-1.md), a decline read as an answer, so that declining where complying while read is the least plan is read, not voided; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.
 
 </details>
 
