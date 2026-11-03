@@ -98,7 +98,7 @@ The test is AGENTS.md's: rename only a name that states a wrong meaning. The mea
 **The next edition**, each with its carrier:
 - C's statement in pairwise form, *of two courses, one that widens the other is better than it*. It goes through the generativity chain's maintenance record and the fronts' owner. "Widening what can form is better" is accurate, but read alone it sounds like more is better, on a scale with a best. It does not land before the freeze: it changes no claim, and a front's change of C's wording is a decision for the edition.
 - The Lean rename and the twelve docstrings (§3), with a claim row of their own and a core run.
-- ONE-ARGUMENT:90's "fishes best where it has been" needs its basis, the catch it is rewarded by. That goes to its owner, the coordinator.
+- ONE-ARGUMENT:90's "fishes best where it has been" needs its basis, the catch it is rewarded by. The coordinator passed it to its owner.
 - Low weight, for the glossary's owner:
   - "two orders" (GLOSSARY:32) uses *order* for a level, not a ranking;
   - "in general alone" may be read as "alone in general" rather than "in general, and alone";
