@@ -1,0 +1,554 @@
+{
+ "drafts": [
+  {
+   "rows": [
+    {
+     "row": "Rest needs a least loss (02-MAP.md#r-least-loss-rest) | ranking functions (Floyd 1967); Lyapunov; LaSalle; chip-firing | restated",
+     "debts": [
+      {
+       "framework_states": "Floyd's ranking-function method is complete: every terminating transition relation has a ranking function into a well-founded order (ordinals). By the converse Lyapunov theorems (Massera 1949; Kurzweil 1956), every asymptotically stable equilibrium has a Lyapunov function.",
+       "account_status": "Only the direction from potential to rest is proved: Amounts.rests (02-MAP.md:194), World.InAmounts.change_stops_iff (02-MAP.md:217). The nearest converse is over amounts, not over a given resting world: Amounts.worldsRest_of_noEndlessFall and Amounts.not_endlessFall_of_worldsRest (InAmounts.lean:1261, :1270). The record says the equivalence is 'constructively not shown' and needs dependent choice classically (rest-exactly-where-falls-stop.md:34, Next :52). No theorem says a world or process that comes to rest has a census total falling at each change. GAP-MAP.md:241 (4.7) notes the classical form is uncited.",
+       "source_depth": "Prior knowledge of Floyd/Turing completeness and of Massera/Kurzweil. The repository names the debt in GAP-MAP 4.7, which I read, but cites neither converse theorem (searching 'Massera', 'Kurzweil' and 'converse Lyapunov' found only GAP-MAP)."
+      },
+      {
+       "framework_states": "Lyapunov's direct method and LaSalle's invariance principle work in continuous state and time, with V̇ ≤ 0 along an ODE on R^n. They give Lyapunov stability (starts nearby stay nearby), asymptotic and exponential stability with rates, and convergence of bounded trajectories to the largest invariant set within {V̇ = 0}.",
+       "account_status": "Discrete steps only, and the reals are not constructed (least-loss-rest.md:47). What the account has is eventual rest, or approach to rest in Archimedean amounts (Amounts.approaches_rest, Amounts.lean:381). change_stops_iff is a discrete invariance principle (AUDIT.md §2.4). 02 has absorbing regions and basins (02-MAP.md:65, :70) but no neighbourhood, stability, omega-limit set or rate (searched 02 for perturb/neighbourhood/stability; no Lyapunov, LaSalle or stability names in the Lean). The one stochastic form is EntropyProduction.taking_not_recurring_ae (02-MAP.md:223), the whole-unit case of ranking supermartingales. Doob's and Foster's forms are marked 'not built' (BECOMING-SIGNIFICANCE-REVIEW.md:396).",
+       "source_depth": "Prior knowledge of Lyapunov and LaSalle. The rest-theorem-in-any-amounts.md:57 correspondence, which I read, cites the discrete LaSalle (LaSalle 1976; Mei and Bullo 2017). I read the review's supermartingale row."
+      },
+      {
+       "framework_states": "Björner, Lovász and Shor (1991): on a finite graph, whether chip-firing terminates, the terminal configuration and each vertex's firing count do not depend on the firing order. With N chips, E edges and n vertices, N > 2E − n never terminates, N < E always does, and terminating games end within a polynomial number of moves.",
+       "account_status": "Reorders.laws and Reorders.totals (Reordering.lean:882, :895) keep the laws and totals under commuting independent exchanges, which is Mazurkiewicz trace equivalence. No theorem says that termination or the final state is the same over every order (strong convergence), and there is no termination threshold in the stock against the structure. The account bounds how often the total falls by the list's length, 'not when' (rest-theorem-in-any-amounts.md:35). Searching chapters and Lean for confluence, sandpile and chip found nothing beyond the 08 citation.",
+       "source_depth": "Prior knowledge. The repository cites Björner–Lovász–Shor only as the potential argument for termination (rest-theorem-in-any-amounts.md:57)."
+      }
+     ],
+     "cell": "Completeness of ranking functions and converse Lyapunov (Massera, Kurzweil), constructively open; continuous-time stability, rates and LaSalle's largest invariant set (account: discrete rest only); chip-firing order-independence and chip-count termination thresholds (Björner–Lovász–Shor)."
+    },
+    {
+     "row": "How two courses differ in what can form (07-SIGNIFICANCE.md#r-four-cases-of-a-part) | opportunity sets (Pattanaik and Xu 1990) | near-definitional",
+     "debts": [
+      {
+       "framework_states": "Pattanaik and Xu (1990) show that three axioms on rankings of finite opportunity sets (indifference between no-choice situations, strict monotonicity, independence) are satisfied by exactly one ranking, the complete ranking by number of options.",
+       "account_status": "Counting appears only as one positive weighting (Weighting.neutral_ranks_by_number, Weightings.lean:1194). The shared order is the intersection over positive weightings or increasing orders (Weighting.widens_iff_every_of_class; record widening-as-what-every-positive-weighting-ranks), and it leaves mixed pairs undecided (Weighting.mixed_either_way). No axioms on a comparison force a unique complete ranking. Four-cases-of-a-part.md Next asks for 'the premises a measure for mixed parts would need', and the Does not show says a mixed part needs a measure.",
+       "source_depth": "Prior knowledge. REVIEW-UE9.md:222 records the same theorem from the abstract only; I read that line."
+      },
+      {
+       "framework_states": "Later opportunity-set rankings measure diversity, so adding a near-duplicate option counts for less than adding a distinct one. Examples: Weitzman 1992; Pattanaik and Xu 2000, 'On diversity and freedom of choice'; Nehring and Puppe 2002.",
+       "account_status": "None found. The account's weightings are additive per item, and the one non-additive witness (Interacting.not_net, Weightings.lean header) models interaction, not similarity. The four-cases record says the comparison 'looks only at which formations are admitted… not… richness of relations', and its Next keeps 'richness of relations' open. Searching chapters and the root-foundation research for Weitzman, Nehring and Puppe found no diversity citation.",
+       "source_depth": "Prior knowledge only. No source for these works is in the repository."
+      }
+     ],
+     "cell": "Pattanaik–Xu's axioms force a unique complete ranking by number; the account has counting only as one positive weighting and leaves mixed pairs open. Diversity-sensitive set rankings (Weitzman; Pattanaik–Xu 2000; Nehring–Puppe) are absent."
+    },
+    {
+     "row": "Closures (01-ROOT.md#r-levels-of-closure) and selection (03-KNOWING.md#r-selection-through-couplings) | Blackwell (1953); Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020) | restated",
+     "debts": [
+      {
+       "framework_states": "Blackwell (1953): for experiments as stochastic kernels, one is worth at least as much as another in every decision problem under every prior exactly when the other is a garbling of it, which is also equivalent to sufficiency.",
+       "account_status": "Only the deterministic-refinement, fixed-decision direction is proved: ListingValuation.informed_answer_le (ListingValuation.lean:782, docstring :60), HeldForReading.finer_least_le (HeldForReading.lean:1058) and Learning.Training.keeps_through_iff (Revision.lean:41). There is no garbling by noisy kernels, and the converse from every decision to refinement is neither stated nor noted as open. GAP-MAP.md:188 (3.7) records this. Searching the Lean for 'garbl' found nothing.",
+       "source_depth": "Prior knowledge. The account's own docstrings name the direction it has; I read them."
+      },
+      {
+       "framework_states": "Pearl (2000): structural causal models over graphs with d-separation, the do-calculus, and the back-door and front-door criteria, which identify interventional distributions from observational ones.",
+       "account_status": "Only non-ancestor invariance is restated: blindness beyond the coupling closure, Flow.unselected_beyond_coupling (03-KNOWING.md:25; AUDIT.md §2.6). Causal models are a single process x′=F(x,u,ε), with interventions as moves not taken. A run's record does not fix an intervention (inputs_intervention_unfixed). The record's Does not show excludes several-variable structural equations, the do-calculus, identification and probabilities (causal-models-as-processes.md:39). Searching chapters and Lean for back-door, do-calculus and d-separation found none. GAP-MAP.md:165 (3.4) notes that the 08 credit is unqualified.",
+       "source_depth": "Prior knowledge, checked against the repository's AUDIT.md §2.6, which I read."
+      },
+      {
+       "framework_states": "Zhuang and Hadfield-Menell (2020) work in a continuous setting. Their Theorem 2 characterizes by compactness when every proxy optimization ends below a utility, including the limits of non-convergent optimization. They also show that a principal who sees the whole state and re-reads the proxy at intervals (or an impact-minimizing agent) can raise the principal's utility.",
+       "account_status": "The account has Theorem 1 on natural-number amounts at optima (05's optimum law) and a discrete analogue of Theorem 2 at optima, with a converse that is not theirs (03-KNOWING.md:29). Its record lists as not reached: 'continuous setting and compactness characterization, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain an updated proxy brings to a principal's utility' (what-an-optimum-does-beyond-what-couples-in.md:45). The remedy is related only by analogy, as widening what couples in (03-KNOWING.md:29). GAP-MAP.md:14 says another session owns this case.",
+       "source_depth": "The repository's review checked the paper by web search, arXiv page and poster (BECOMING-SIGNIFICANCE-REVIEW.md:158). Beyond that, prior knowledge. I did not read the paper's full text, and the description of the interactive remedy is from memory."
+      }
+     ],
+     "cell": "Blackwell's every-decision equivalence with garbling (account: deterministic refinement, one decision). Pearl's do-calculus and back-door identification (account: non-ancestor invariance only). Zhuang–Hadfield-Menell's continuous compactness theorem, non-convergent limits, and utility gain from proxy re-reading."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "1. Coming and ceasing keep pace (01-ROOT.md#r-coming-and-ceasing-keep-pace) | demographic balancing equation; trace theory (Mazurkiewicz 1977) | near-definitional",
+     "debts": [
+      {
+       "framework_states": "Formal demography uses the balancing equation together with rates per person-time. Through Lotka's renewal equation and the strong ergodic theorem (Lotka 1939; Lopez 1961), it derives a population's long-run intrinsic growth rate and its convergence to a stable age structure. Little's law (Little 1961), the queueing form of the same balance, states that the mean number present equals the arrival rate times the mean residence time.",
+       "account_status": "Counts only. The account has no rates, frequencies, ages or residence times. Record coming-and-ceasing-keep-pace.md:45 says recurring 'gives no frequency', and the record's Next (:64) lists 'versions with frequencies or proportions; readings not across discrete steps' as open. A finite Little's law is only proposed, at u1-balance-under-units/DESIGN.md:107, and u4-one-root-to-its-edge/DESIGN.md:51 says its condition is not met. Searching chapters and records for 'stable population', 'renewal equation', 'intrinsic rate' and 'person-years' found nothing.",
+       "source_depth": "Prior knowledge for Lotka, Lopez and Little. The account side comes from reading the record and both DESIGN files."
+      },
+      {
+       "framework_states": "Trace theory (Cartier and Foata 1969; Mazurkiewicz 1977) gives every trace a canonical Foata normal form, a sequence of layers of mutually independent letters. It also extends traces to infinite (real) traces.",
+       "account_status": "Not built. order-of-exchanges-is-the-invariant.md:38 says 'No Foata normal form ... is built', and its Next is at :54. normal-forms-need-decided-apartness.md:57 says it gives neither the Foata form nor a normal form over an unbounded run. exchanges-commute-unless-joined.md:65 lists 'Unbounded reorderings' as open. What the account does have: a normal form relative to given natural-number names on a finite stretch (Becoming.normalForm), and reachability by commuting unjoined neighbours.",
+       "source_depth": "Prior knowledge for the framework. The account side comes from reading the three records."
+      },
+      {
+       "framework_states": "Zielonka's theorem (1987): every regular trace-closed language is accepted by a finite asynchronous automaton, so a global finite-state specification can always be realized by local components that each read only their own letters.",
+       "account_status": "Only the local-to-global direction is present. The step index is read off the relata's own courses (Interleavings.LocalLaw.run_of_courses; the-step-index-from-own-courses.md). The global-to-local direction is open: the-step-index-from-own-courses.md:28 lists 'that every becoming has a local law of exchange' under Does not show. Zielonka and asynchronous automata appear nowhere in the repository.",
+       "source_depth": "Prior knowledge for the theorem. The account side comes from reading the record plus a repository-wide grep with no hits."
+      }
+     ],
+     "cell": "Rates: demography's vital rates, Lotka's renewal equation and stable-population convergence; Little's law (finite form only proposed). Trace theory: the Foata normal form and infinite traces (both absent), and Zielonka's theorem realizing a global law by local components, open in the account."
+    },
+    {
+     "row": "2. Recurrence (01-ROOT.md#r-recurrence-without-premise) and attraction (02-MAP.md#r-attraction-is-not-returning) | finite Poincaré recurrence; Landauer (1961); Bennett (1973) | restated, without decidable equality",
+     "debts": [
+      {
+       "framework_states": "Poincaré recurrence in its measure form holds for any measure-preserving map on a space of finite measure, including uncountable and continuous ones: almost every point of a set of positive measure returns to it infinitely often. Kac's lemma adds that, for an ergodic map, the mean return time to a set A is 1/μ(A).",
+       "account_status": "Only the case where a list holds every configuration. Law.lossless_iff_returns and Law.returns_iff_keeps are stated under that hypothesis, and Law.succ_open shows the law fails without it. The account has step bounds (revisits_within, Law.enters_returning_within) but no measure, no invariant measure, no 'almost every' and no mean return time. recurrence-without-premise.md:50 says finitely many 'means that a list holds them, not a cardinality'. attraction-is-not-returning.md:55 says it is not a classical attractor 'with a topology or measure', and :58 says basin size lies outside the theorems. Kac appears in no chapter or record. The Zermelo–Poincaré link is a reading only (entropy-history-and-record.md:97).",
+       "source_depth": "Prior knowledge for Poincaré and Kac. The account side comes from reading the records and grepping chapters and records."
+      },
+      {
+       "framework_states": "Landauer (1961) bounds the heat that erasing one bit exports to a bath at temperature T by at least kT ln 2. In its general form the bound is kT times the drop in the Shannon entropy of the bit's distribution, and quasi-static erasure attains it.",
+       "account_status": "The account has only the counting half. Landauer's phase-space count is a pure-core law: Law.Lossless.narrowing_spreads and Law.Lossless.reset_unlisted (merge-of-a-part-kept-by-the-rest.md:17). The same record says at :30 that 'kT ln 2 is not derived' because no energy, temperature, probability or bath is read, and its Next (:46) asks for a reading of count as energy. 08-METHOD.md:727 lists a least loss in energy from the core as open. 02-MAP.md:223 says Landauer's bound alone is no floor of destroyed exergy. The count is over equally weighted configurations, so the account has no form of the bound for a non-uniform distribution.",
+       "source_depth": "Prior knowledge for the bound. I read the repository's own paraphrase at merge-of-a-part-kept-by-the-rest.md:53 and the account side in that record, 08 and 02."
+      },
+      {
+       "framework_states": "Bennett (1973) shows that any computation can be run logically reversibly by keeping a history and then, after copying the output, uncomputing that history. The machine ends holding only its input and output, at a constant-factor cost in time, so the history's growth is transient.",
+       "account_status": "Only the history-keeping half. Law.withHistory_lossless, Law.withHistory_never_returns and Law.withHistory_unlisted say a kept history merges nothing, never returns and is held by no list. World.forgets and Law.Lossless.reset_unlisted say a part reset at every step needs a whole that no list holds. The compute-copy-uncompute construction, under which a lossless law returns its record to blank while keeping a result, is absent: no 'uncomput', 'garbage' or 'pebbl' in theories/becoming or the Becoming Lean. The Bennett link is a reading (entropy-history-and-record.md:97).",
+       "source_depth": "Prior knowledge for Bennett's construction. The account side comes from reading the records and a grep."
+      }
+     ],
+     "cell": "Measure and time: Poincaré recurrence on finite-measure, uncountable spaces and Kac's mean return time; Landauer's kT ln 2 and its distributional form (the core has the count only); Bennett's uncomputation, which returns the history to blank, where the account keeps only the history half."
+    },
+    {
+     "row": "3. Premises carve parts (01-ROOT.md#r-map-of-premises) | independence by countermodels; constructive reverse mathematics | new as an artefact",
+     "debts": [
+      {
+       "framework_states": "Constructive reverse mathematics proves strict separations between omniscience principles using realizability, Kripke and topological models. Examples: WLPO does not imply LPO (Akama, Berardi, Hayashi and Kohlenbach 2004); LLPO does not imply WLPO; Markov's principle is independent of LLPO. These place a calibrated statement exactly within a hierarchy.",
+       "account_status": "Implications and equivalences are proved; separations are not. WLPO.of_lpo and LLPO.of_lpo prove that LPO implies each. 08-METHOD.md:333 says 'That WLPO does not give LPO is known ... but not checked here.' The calibrations (World.lpo_of_finite_ends, World.law_iff_em, Onward.runs_iff_dependentChoice, and the table at 08-METHOD.md:318-331) show that a law needs its principle or is equivalent to it. No model in the repository shows a law failing under a weaker principle. Core purity reports which axioms are not used, which is not a proof that a principle is not derivable. The account also has open strength questions of its own: 03-KNOWING.md:117 says the LLPO converse is checked only in an unreceipted script, and :209 and :573 leave open whether the diagonal laws need Markov's principle.",
+       "source_depth": "Prior knowledge for the separations and the models behind them. The account side comes from reading 08 §5 and 03."
+      },
+      {
+       "framework_states": "Countermodel methods also give complete independence (E. H. Moore 1910): each of the 2^n combinations of the premises holding or failing is realized by some model, or else the exact implications among conjunctions of premises are classified.",
+       "account_status": "Only one-out independence, plus a few implications. World.independent gives, for each premise, one world that fails it and meets the other seven. The 'What follows from which' table (01-ROOT.md:241-249) lists five implications, with no claim that the list is complete. map-of-premises.md:60 says the independence 'does not exclude new implications once further premises are added'. :59 and the Next at :78 say premises relative to a continuation, renewal, decaying reserve or family of conditions are not mapped. The 256 selections in World.counting_under and World.counting_binds_iff (01 §9.5) classify the counting laws under each choice of premises; they do not say which combinations of holding and failing are realizable. No 'complete independence' appears in the repository.",
+       "source_depth": "Prior knowledge for Moore's notion. The account side comes from reading the record, 01 §8.2 and §9.5, and grepping Premises.lean and Counting.lean."
+      }
+     ],
+     "cell": "Separations: constructive reverse mathematics shows by realizability or Kripke models that principles differ in strength (WLPO does not give LPO: cited at 08:333, not checked); the account proves only implications and equivalences. Complete independence: which premise combinations are realizable, beyond one-out independence and five listed implications."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "Loops (02-MAP.md#r-how-loops-form) | nilpotent adjacency; Perron–Frobenius; Maruyama (1963) | restated over whole amounts",
+     "debts": [
+      {
+       "framework_states": "Perron–Frobenius: for nonnegative irreducible (strongly connected) strengths the spectral radius is a simple positive eigenvalue with a strictly positive eigenvector, strictly increasing in each strength and lying between the least and greatest row sums; with aperiodicity every condition's carried amount grows as ρ^t in the fixed proportions of that eigenvector.",
+       "account_status": "Core has only the two-sided envelope: at most D·(1+M)^a, attained by a self-loop (Becoming.carried_le_count, carried_le_geomBound; 02-MAP.md:342-343), at least doubling per return (carried_doubles_around, Loops.lean:40-43), polynomial exactly where no loop is upstream (polynomial_iff_no_loop). The periphery's Representation.rate (Gelfand's least norm of a power to its inverse power) vanishes below one and runs away above (Representation.vanishes_iff, unbounded_of_one_lt; record what-discrete-steps-and-whole-amounts-represent.md:21). But 'that the rate is the spectral radius (Gelfand's formula, cited)' is listed under does-not-show (:36), and at rate one boundedness is left undecided (the shear, law 6). No eigenvector, no stable proportions, no monotonicity in strengths. 'The spectral radius of given strengths' is still open in how-often-couplings-act.md:48,65 and how-a-carried-difference-grows.md:54.",
+       "source_depth": "Prior knowledge of the theorem. The repo's prior-art review states the cycle and spectral-radius claim (BECOMING-SIGNIFICANCE-REVIEW.md:49). No primary source read."
+      },
+      {
+       "framework_states": "Maruyama (1963): mutual-causal loops are deviation-amplifying or deviation-counteracting according to the sign of the loop, the product of its links' signs (an even number of negative links amplifies), and real systems mix both kinds; Thomas's circuit rules (proved by Gouzé 1998 and Soulé 2003) are the theorem form: a positive circuit is needed for multistationarity and a negative one for sustained oscillation.",
+       "account_status": "Core strengths are natural numbers ('Strengths are natural numbers, so a positive strength is at least one', Loops.lean:41-43), so every core loop amplifies. Counteraction is stated only apart from loop structure: as two-sided regulation (Flow.withinGap_iff_between, 02-MAP.md §8) and as a return map giving back less, which closes a difference (LoopReturn.nothing_between, 02-MAP.md:339). The periphery's normed-ring rate allows signed real strengths but has no sign rule. Grep of chapters and records for 'loop sign', 'negative feedback', 'Thomas' and 'multistationar' found no loop-sign theorem.",
+       "source_depth": "Prior knowledge of Maruyama 1963 and of the Thomas–Soulé results. The repo names Maruyama only as a citation (08-METHOD.md:493; THE-THEORY-OF-BECOMING.md:1237)."
+      }
+     ],
+     "cell": "Perron–Frobenius's exact rate and shape: a strongly connected web grows as its Perron root, in a positive eigenvector's proportions (the core has only (1+M)^a above and doubling below; the periphery's rate is not proved the spectral radius); Maruyama's loop sign."
+    },
+    {
+     "row": "Fed from beyond (02-MAP.md#r-continuing-self-fed-from-beyond), entropy (02-MAP.md#r-least-loss-from-entropy-production), nets (01-ROOT.md#r-place-transition-nets-on-the-spine) | Schrödinger (1944); Prigogine (1977); ranking functions; P-invariants of Petri nets (Lautenbach 1975) | restated",
+     "debts": [
+      {
+       "framework_states": "Schrödinger and Prigogine: an open system's entropy change splits as dS = d_eS + d_iS with d_iS ≥ 0, so a system held in a steady state must export entropy (take in free energy) at exactly the rate it produces it, which is a quantitative amount of feeding per unit time.",
+       "account_status": "Flow.fed_from_beyond is qualitative and constructive: such a family 'cannot from any step on be fed from nothing beyond it', and 'no step of feeding is named' (02-MAP.md:159; record continuing-self-fed-from-beyond, Conditions: it 'exhibits no step at which it is fed'). There are partial amounts: Flow.conveyed_loses (N conveying steps lower the stock by at least N, 02-MAP.md:162), Flow.uptake_bound (02-MAP.md, rest at every resolution), and the periphery's EntropyProduction.ExergyBalance.destroyed_eq_residue. A grep of chapters 01, 02, 05 and 07 found no theorem bounding what must come from beyond over a stretch by what is dissipated in it.",
+       "source_depth": "Prior knowledge (Schrödinger, What Is Life? ch. 6; Prigogine's entropy balance). The repo cites both only as names (what-keeping-widening-needs.md:100)."
+      },
+      {
+       "framework_states": "Prigogine: in the linear regime near equilibrium, with Onsager reciprocity, the nonequilibrium steady state minimizes entropy production and is stable (minimum entropy production theorem); beyond a critical distance from equilibrium the thermodynamic branch can lose stability, and ordered dissipative structures appear by bifurcation (Glansdorff and Prigogine 1971; Nicolis and Prigogine 1977).",
+       "account_status": "None found. A grep for 'Onsager', 'minimum entropy production', 'dissipative structure' and 'negentropy' over the chapters, records, fronts and SCIENCES has no hit. Entropy in the account is a counted record of exchanges (Flow.dissipatesOn_iff_conserved, 02-MAP.md:226), with no fluxes, forces or rate. The periphery takes the integral fluctuation theorem as a hypothesis and derives only E[S] ≥ 0 and a tail bound (EntropyProduction.expected_production_nonneg, gain_probability_le). Its record lists 'the integral fluctuation theorem itself, or local detailed balance' under does-not-show (least-loss-from-entropy-production.md:48). The regime and threshold laws (02 §5) locate ends, not the onset of new order.",
+       "source_depth": "Prior knowledge; no source read in the repo."
+      },
+      {
+       "framework_states": "Net theory beyond P-invariants: a free-choice net is live exactly where every siphon contains a trap marked at the start (Commoner 1972; Hack 1972); a net is structurally bounded exactly where a strictly positive y has yᵀC ≤ 0 (Memmi and Roucairol 1980); coverability is decidable by the Karp–Miller tree (1969) and reachability is decidable (Mayr 1981; Kosaraju 1982).",
+       "account_status": "The account has the one-way part: a strict P-subinvariant gives dissipation and rest (Net.StrictSubinvariant.dissipative, Net.rests_unrefuted), plus a one-place siphon law (Net.siphon_empty). Its record lists 'siphons of more than one place; nets with infinitely many places; deciding reachability' and inhibitor, timed, stochastic and continuous nets under does-not-show (place-transition-nets-on-the-spine.md:39). No liveness theorem was found.",
+       "source_depth": "Prior knowledge. The repo names Lautenbach 1975, Memmi–Roucairol 1980 and Murata 1989 as agreeing (BECOMING-SIGNIFICANCE-REVIEW.md:641); none was read."
+      }
+     ],
+     "cell": "An amount: the entropy balance (Schrödinger; Prigogine) makes a steady open system export what it produces, while fed-from-beyond names no step or amount; Prigogine's minimum entropy production and dissipative structures (none found); net liveness by siphons and traps; decidable reachability."
+    },
+    {
+     "row": "Evolution on descent, offspring bounds, Hamilton's rule, groups on coupled conditions (04-LIFE.md) | Price; Fisher; Hamilton; multilevel selection; Malthus | restated in counts; joined to the flow",
+     "debts": [
+      {
+       "framework_states": "Fisher's fundamental theorem, in Price's (1972) reading: the partial change in mean fitness due to natural selection equals the additive genetic variance in fitness (over mean fitness for discrete generations), summed over many loci, with the remainder counted as deterioration of the environment.",
+       "account_status": "Only the exact-transmission case: mean offspring number rises exactly where offspring numbers vary (Reproduction.Generations.ByNumber.rises_exact_iff, 04-LIFE.md:150). The additive part through one carried amount is at most the whole variance (record additive-part-of-offspring-variance). 'Several amounts at once and the rational reading (variance over mean) are not stated' (what-bounds-offspring-numbers.md:45). The rational Price form is 'arithmetic on the identities and not stated' (selection-term-over-generations.md:43).",
+       "source_depth": "Prior knowledge (Fisher 1930; Price 1972) and the records' own descriptions; primary sources not read."
+      },
+      {
+       "framework_states": "Hamilton's rule holds in general form: a trait spreads where rb > c, with r a regression relatedness, under any population structure for additive returns (Hamilton 1964, 1970; Queller 1992), with an added synergy term where returns are not additive (Queller 1985), and the assortment that sets r changes over generations under the population's own dynamics.",
+       "account_status": "The account proves Hamilton's rule only for groups of equal size m, additive returns and exact transmission, with assortment given at the step (SelectionLevels.rises_iff_returns, among_for_iff; 04-LIFE.md:206-207). It lists as open 'Mixing beyond the next listing, assortment changing over cohorts, synergy, unequal sizes with returns' (04-LIFE.md:320; selection-with-returns-to-groupmates.md:32,49). The multilevel Price split for groups of any size exists (record selection-within-and-among-groups-of-any-sizes).",
+       "source_depth": "Prior knowledge. The record cites Hamilton 1964/1975, Queller 1992 and Okasha 2006 (selection-with-returns-to-groupmates.md:56); none was read."
+      },
+      {
+       "framework_states": "Multilevel selection with group reproduction (MLS2) gives quantitative conditions under migration and group fission, for example cooperation favoured where b/c > 1 + n/m for groups of size n among m groups (Traulsen and Nowak 2006).",
+       "account_status": "Groups here are selected only by ending, or by given founding and descent: groups on one coupled family 'end together, nothing selected among them' (GroupEnding.Flow.coupled_end_together, 04-LIFE.md:199); see also selection-among-groups-by-ending and groups-formed-by-descent. 'Mixing between groups and how groups and their couplings form are not stated' (groups-whose-conditions-are-coupled.md:37). Malthus's bound is present, not a debt: Flow.born_within_stock, SelectionPace.born_within_inflow, and LineageRegimes.multiplying_takers_need (doubling takers last at most log₂(level+1) cohorts).",
+       "source_depth": "Prior knowledge (Traulsen and Nowak, PNAS 2006); not in the repo."
+      }
+     ],
+     "cell": "Fisher's theorem beyond exact transmission and one amount (additive variance over several amounts, over the mean); Hamilton's rule with synergy, unequal sizes and changing assortment; multilevel selection with migration and group reproduction, where groups here only end."
+    },
+    {
+     "row": "Drift, fixation, mutation (04-LIFE.md) | Wright–Fisher; Moran; Kimura; Haldane; Eigen | restated as finite weighted bounds",
+     "debts": [
+      {
+       "framework_states": "Kimura: in the diffusion approximation an allele with selective advantage s fixes with probability (1 − e^{−4N_e s p})/(1 − e^{−4N_e s}) under sampled (Wright–Fisher) generations, and neutral alleles substitute at a rate equal to the mutation rate, independent of population size.",
+       "account_status": "The account has the neutral fixation share h/N as finite weighted bounds (Drift.fixation, 04-LIFE.md:227) and, with selection, only the Moran jump chain's ratio (Drift.Replacement.fixation, :228). 'Wright–Fisher with selection; mutation both ways and with drift' are open (04-LIFE.md:319). 'Mutation with drift (the balance of mutation and drift)' is under does-not-show (mutation-and-the-balance-it-sets.md:32), so no substitution rate is stated.",
+       "source_depth": "Prior knowledge (Kimura 1962, 1968). The record cites Kimura 1962 for the neutral case (fixation-by-drift.md:58)."
+      },
+      {
+       "framework_states": "Drift's time scales: variation (heterozygosity) is lost by a factor (1 − 1/N) per generation among N haploid draws (Wright 1931), and a neutral allele fixes or is lost in order N generations (Kimura and Ohta 1969).",
+       "account_status": "The account bounds the mixed histories after k cohorts by r^k of (N^N)^k with r = N^N − 2. The record calls this rate 'crude', and 'the time is bounded, not stated' (fixation-by-drift.md:35). Falling back has Chebyshev's 1/n bound, with 'its [exponential] form for falling back... not stated' (drift-offspring-sampled.md:35), although Typicality.concentrated gives the exponential bound for the deviation.",
+       "source_depth": "Prior knowledge. The record cites Wright 1931's geometric decay (fixation-by-drift.md:58)."
+      },
+      {
+       "framework_states": "Haldane and Eigen: mutation–selection balance sets a mutant share near μ/s with a mutation load equal to μ whatever s (Haldane 1937), and Eigen's error threshold Qσ > 1 with Q = q^L bounds the length a master sequence can keep by about ln σ/(1 − q), the surviving population being the quasispecies, the leading eigenvector of the mutation–selection matrix.",
+       "account_status": "The account has the counts form of Qσ > 1: as carriers vanish their share rises exactly where k > w (Mutation.rises_iff, never_rises, falls_of_outrun), and it has the balance share s/(s+m) (Mutation.kept_share), both with loss in one direction and constant offspring numbers (04-LIFE.md:229). Its record puts back mutation, convergence to the balance and mutation with drift under does-not-show (mutation-and-the-balance-it-sets.md:32-33). No sequence length, no many-class quasispecies and no load were found (grep for 'mutation load', 'genetic load', 'quasispecies': none).",
+       "source_depth": "Prior knowledge (Haldane 1937; Eigen 1971); primary sources not read."
+      }
+     ],
+     "cell": "Kimura's fixation probability with selection in sampled generations and the neutral substitution rate (mutation with drift unstated); drift's time scales, variation lost by (1 − 1/N) a generation and fixation in order N generations (here crude, unstated); Eigen's length-dependent threshold."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "Joint excess (05-COLLECTIVES.md#r-own-count-misses-joint-excess), position (05-COLLECTIVES.md#r-relative-position-is-zero-sum) | tragedy of the commons; positional goods (Hirsch 1976) | near-definitional",
+     "debts": [
+      {
+       "framework_states": "In the common-pool game with concave returns, where each user bears a share of the stock's decline (Gordon 1954; Dasgupta and Heal 1979; Ostrom, Gardner and Walker 1994), the Nash aggregate appropriation lies strictly between the joint optimum and open access, and it approaches full rent dissipation as the number of users grows.",
+       "account_status": "Only the corner case is stated. Under rising orders with room, each optimizer takes its whole capacity and the condition is drained as by one optimizer of their joint capacity (`Optimum.MutualBest.full`, `Optimum.mutual_as_one`, 05-COLLECTIVES.md:204). The record names the classical case as not shown: several-optimizers-drain-by-their-joint-capacity.json does_not_show 'A condition within some optimizer's family, where ... the classical commons with a share borne lies', and its next_delta lists conditions within some family where each bears a share, and the existence of a mutual best response. A discrete form of rent dissipation appears in one witness only, with the others' rule supplied (05-COLLECTIVES.md:186, `Optimum.Next.frontier_ends_drawn_first`). The dependence of overuse on n, and the gap from the joint optimum, are not stated. The account has no joint utility, by method.",
+       "source_depth": "Prior knowledge of the CPR-game results. The repository's citations of Gordon 1954 and Ostrom, Gardner and Walker 1994 were read in the record correspondences (several-optimizers-drain-by-their-joint-capacity.md:56, others-drawing-first-end-the-base.md:57). The sources themselves were not read."
+      },
+      {
+       "framework_states": "In the infinitely repeated or dynamic commons, restraint by all can be sustained as a subgame-perfect equilibrium by strategies that punish overdraw, for players patient enough (folk theorem: Fudenberg and Maskin 1986; for stochastic games, Dutta 1995).",
+       "account_status": "No infinite-horizon equilibrium is found. Perfect profiles are defined over a finite horizon N ('over the steps that remain', `Optimum.InTurn.Perfect`, Optimum.lean:8224-8225), so backward induction gives the drain (`Optimum.InTurn.perfect_at_floors`, 05-COLLECTIVES.md:188-190). Courses suppose nothing after the horizon (`Optimum.continued`, Optimum.lean:205). Conditional strategies are present only as dynamics with no payoffs: in 05 §5 `waitsAll` is read as grim trigger and `answers` as tit-for-tat (05-COLLECTIVES.md:133, WindowedWaiting.lean:184). That section says 'It does not show how waiting forms, or that cooperation is good' (05:116), and no equilibrium is stated. Sanctions are not modelled in the institution model (05-COLLECTIVES.md:405). The folk theorem is only named, in the-rest-outruns-the-renewal.md:52. A grep of Becoming/ for trigger, punish, discount and infinite horizon found only the readings and discounting docstrings.",
+       "source_depth": "Prior knowledge (Fudenberg and Maskin 1986). Dutta 1995 is named in the-rest-outruns-the-renewal.md:52, which was read; the paper was not."
+      },
+      {
+       "framework_states": "Where agents value consumption relative to others', the Nash equilibrium over-allocates spending to positional goods relative to non-positional ones (leisure, safety, saving), a positional arms race that a tax on positional consumption corrects (Frank 1985). Hirsch (1976) adds congestion and the social scarcity of rank-limited goods.",
+       "account_status": "Partial. Position is counted as own amount times n against the total, and its zero sum is proved (`RelativePosition.change_balances`, `rise_needs_fall`, 05-COLLECTIVES.md:65). That positions bound the total only from below is shown by `RelativePosition.keeps_iff_common` and `keeps_exceeds` (05:72). A race is derived only for drawers in turn who rank by position alone, with no floor (`Optimum.InTurn.position_perfect_ends`, 05:196). relative-position-is-zero-sum.json next_delta lists 'Positions read as ranks or shares; a race dynamic in which parts behind raise their take, and whether it produces joint excess'. a-race-for-position-draws-everything.json next_delta lists 'drawers mixing a race for position with their own draw'. The account has no second, non-positional good, no allocation distortion, no corrective rate and no congestion. Frank 1985 is cited only in the superseded history/THE-THEORY-OF-BECOMING.zh.md:938.",
+       "source_depth": "Prior knowledge (Hirsch 1976; Frank 1985). Not read in the repository."
+      }
+     ],
+     "cell": "Interior CPR Nash between the joint optimum and open access, with share borne and n-dependence (the account has the corner drain only); restraint as an infinite-horizon equilibrium (folk theorem; the account's perfect profiles are finite-horizon); positional arms race over two goods, with ranks (Frank 1985)."
+    },
+    {
+     "row": "Learning and identification (03-KNOWING.md#r-identification-where-bounded) | Hume; Fine and Wilf (1965); Moore (1956); Gold (1967) | restated constructively",
+     "debts": [
+      {
+       "framework_states": "Gold (1967) proves that no class containing every finite language and at least one infinite language (a superfinite class) is identifiable in the limit from text (positive presentations only), while from informant every enumerable class of decidable languages is identifiable. Angluin (1980) characterizes identifiability from text by finite tell-tale sets.",
+       "account_status": "None found. The account learns courses (value sequences) from their prefixes, an ordered presentation of the whole function. Its negative results are the diagonal (`Learning.diagonal_misses`, `no_prefix_fixes_next`, 03-KNOWING.md:219) and the need for a bound (`Identification.leastBound_exact`, 03:234). Its positive result is Gold's enumeration over a list (`Learning.held_byElimination_bounded`). Nothing learns a set from an enumeration of its members. A grep of the chapters and Becoming/ for superfinite, tell-tale, telltale, Angluin, 'positive data' and 'from text' found no learning-theory hits. GAP-MAP 3.8 records the same absence.",
+       "source_depth": "Prior knowledge (Gold 1967; Angluin 1980), confirmed as absent by GAP-MAP.md:192, which was read."
+      },
+      {
+       "framework_states": "In the limiting framework (Putnam 1965; Gold 1965/1967; Kelly 1996), classically, a hypothesis is verifiable in the limit by some method exactly when it is Σ⁰₂ in the topology of runs, refutable in the limit exactly when Π⁰₂, and decidable in the limit exactly when Δ⁰₂. The sufficiency direction is shown by dovetailing.",
+       "account_status": "One direction only. A reading verified in the limit is a union of closed readings (`Limit.still_verifies`, 03-KNOWING.md:207). what-a-method-comes-to-say-in-the-limit.json does_not_show 'That a method can be found for every union of closed readings', and also the joins ('the classical dovetail is not stated'). Whether the diagonal laws need Markov's principle is open (03:209, 03:573). The chapter does not say that the missing converse is Kelly's theorem, or what blocks it constructively (GAP-MAP 3.8).",
+       "source_depth": "Prior knowledge of the classical characterization. The record's own correspondence, which names Σ⁰₂/Π⁰₂ with Putnam, Gold and Kelly, was read."
+      },
+      {
+       "framework_states": "Moore (1956, Theorem 1) exhibits a machine whose initial state no simple experiment on a single copy can determine, though a multiple experiment on several copies can, because an experiment that separates some pairs of states destroys what would separate others. He also bounds the experiments that separate the states of n-state machines with inputs.",
+       "account_status": "The bound is had and the single-copy result is not. Moore's distinguishing bound is stated, exact, for frames with moves: likeness to depth N + N′ − 1 across two frames and N − 1 within one (`alike_iff_alikeTo_across`, `alike_iff_alikeTo_classes`, `EndOfPath.classes_exact`, 03-KNOWING.md:161), and for autonomous laws (`Law.sameFuture_iff_within`, Identification.lean:81-111). These tests are passed by a configuration, each run from it afresh, which is the multiple-experiment regime. Learning along one run reads an autonomous history with no chosen inputs. A grep of 03 and the Experiment, Distinguishing and Observation modules for simple/multiple experiment, single copy and homing found nothing. Not shown: that one copy, tested by acting on it, can be unable to learn its own initial configuration.",
+       "source_depth": "Prior knowledge of Moore's Gedanken-experiments (Theorem 1 and its 'uncertainty' reading). The repository's own Moore bound was read in 03 and Identification.lean."
+      }
+     ],
+     "cell": "Gold's negative theorem from text, with Angluin's tell-tale characterization (absent); the Σ⁰₂ converse, that a method exists for every union of closed readings (not shown); Moore's single-copy limit, where experimenting on one copy loses what another experiment would separate (absent; the account's tests are multiple-copy)."
+    },
+    {
+     "row": "Significance not in the dynamics (07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open) | is–ought; Gewirth (1978); Parfit (1984); Sen (1977) | near-definitional; scope apart from order a clarification",
+     "debts": [
+      {
+       "framework_states": "Schurz (1997) proves Hume's law for relevant consequence in alethic-deontic logics. It covers mixed premise sets and bridge principles such as ought-implies-can, under which descriptive premises do yield some evaluative conclusions, and it disarms Prior's (1960) disjunction counterexamples. Barrier theorems generalize it to other barriers (Restall and Russell 2010).",
+       "account_status": "Narrower. `ReadsOnlyDynamics.admits_rival` and `ReadsOnlyDynamics.not_entails` (07-SIGNIFICANCE.md:21) concern premises invariant under every change of the free `sig` and conclusions that exclude a rival or entail the condition. The calibration covers premises about significance (`excludes_rivals_iff`, `not_rival_unrestricted_iff_stable`, 07:24). No law covers mixed premises, bridge principles from what can form to what has significance, or weaker evaluative conclusions. The dossier records this as uncredited and open: PHILOSOPHY.md:89 says 'That form is Schurz's (1997) ... Chapter 7 credits neither'; questions are at PHILOSOPHY.md:92 and LOGIC.md:695.",
+       "source_depth": "Prior knowledge of Schurz 1997 and Prior 1960. The dossier entries in theories/becoming/review/PHILOSOPHY.md and LOGIC.md were read; the sources were not."
+      },
+      {
+       "framework_states": "Parfit (1984, Part Four) states the non-identity problem and the Mere Addition Paradox: Mere Addition being not worse, non-anti-egalitarianism and transitivity together lead to the Repugnant Conclusion. These are constraints any order over populations of different sizes must meet or answer.",
+       "account_status": "Open and unanswered. C ranks adding any formation that takes nothing from others as better, which is stronger than Parfit's first step and runs against the procreation asymmetry. Because C ranks no mixed comparison, it neither yields nor blocks the later steps (PHILOSOPHY.md:197, question at :201). 07 states that it does not show 'The value of bringing new lives into existence, well-being beyond admitted continuation' (07-SIGNIFICANCE.md:777). Parfit is used only for R and reductionism in the step and the crux (07:287, :495, :500, :517).",
+       "source_depth": "Prior knowledge of Reasons and Persons, Part Four. The repository's dossier reading of it (PHILOSOPHY.md:197-201) was read."
+      },
+      {
+       "framework_states": "Sen (1977, 'On Weights and Measures') states social-welfare orderings under explicit informational assumptions, treating measurability and interpersonal comparability as invariance classes. Partial comparability, a restricted set of admissible weights, gives quasi-orderings graded between Pareto dominance and a complete order, and they grow finer as the set narrows.",
+       "account_status": "The two ends are had and the graded band is not. Widening is exactly what every positive weighting shares, and the same holds for any class from the positive weightings up to every order ranking each widening higher (`Weighting.widens_iff_every_positive`, `Weighting.widens_iff_every_of_class`, 07-SIGNIFICANCE.md:336-345, credited there as Sen's intersection approach). Every mixed comparison is decided both ways (`Weighting.mixed_either_way`). The account has no law for a restricted set of weightings, or for which mixed comparisons a stated comparability fixes. Significance is a proposition with no amount or valence (07:16). Mixed comparisons are ranked only under the named premises of priority and transfer (07:774).",
+       "source_depth": "Prior knowledge of Sen 1977. Its citation in BECOMING-SIGNIFICANCE-REVIEW.md:431 was read; the paper was not."
+      }
+     ],
+     "cell": "Schurz's formal Hume's law with mixed premises and bridge principles (the account's invariance form covers pure-dynamics premises only, uncredited); Parfit's mere addition and Repugnant Conclusion (open, C ranks addition better); Sen's graded partial comparability (the account has only the dominance end)."
+    }
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "rows": [
+    {
+     "row": "1. Coming and ceasing keep pace (01-ROOT.md#r-coming-and-ceasing-keep-pace) | demographic balancing equation; trace theory (Mazurkiewicz 1977) | near-definitional",
+     "checks": [
+      {
+       "debt": "Rates: vital rates per person-time, Lotka's renewal equation and the strong ergodic theorem (stable age structure, intrinsic growth rate), and Little's law",
+       "verdict": "stands",
+       "evidence": "Absence confirmed. coming-and-ceasing-keep-pace.md 'Does not show' says recurring 'gives no frequency', and its Next asks for 'versions with frequencies or proportions; readings not across discrete steps'. U1 DESIGN §3.7 (:107) lists 'the finite Little's law, with residence on a half-open interval' as proposed and outside the interface. U4 DESIGN :51 says U1's condition for a line law (unique origin, Little's law) 'is not met'. 01-ROOT.md:387 and :406 put residence outside the root. Grepping chapters, records and the Lean for lotka, renewal equation, stable population, intrinsic rate, person-year, ergodic theorem and Little's law found nothing in theories/becoming. One correction to the draft's account side: 'the account has no rates, frequencies, ages' is too broad. Becoming.Frequency counts how often couplings act (how-often-couplings-act.md), Typicality reads frequencies at a horizon, and 04-LIFE.md:254 has a reader holding 'a list of units by age'. None of these is a rate of coming or ceasing, so the debt stands. The framework side (Lotka 1939; Lopez 1961; Little 1961) is prior knowledge, not checked against sources."
+      },
+      {
+       "debt": "Trace theory: the Foata normal form (Cartier and Foata 1969) and infinite (real) traces",
+       "verdict": "stands",
+       "evidence": "Confirmed. order-of-exchanges-is-the-invariant.md says 'No Foata normal form, of layers of exchanges taken together, is built', and its Next asks to build it along with 'normal forms for stretches without names or without bound'. normal-forms-need-decided-apartness.md says 'The Foata normal form ... and a normal form over an unbounded run are not given', and its normal form is canonical only relative to given natural-number names on a finite stretch (Becoming.normalForm). exchanges-commute-unless-joined.md Next: 'Unbounded reorderings ... remain open'. the-step-index-from-own-courses.md:30 excludes 'Courses without end'. OrderNormal.lean:94 says the same in Lean. The framework side is prior knowledge."
+      },
+      {
+       "debt": "Zielonka's theorem (1987): a regular trace-closed language is accepted by a finite (deterministic) asynchronous automaton",
+       "verdict": "stands",
+       "evidence": "The absence is confirmed: grepping theories, _process and experiments for 'zielonka' and 'asynchronous automat' finds nothing. Two corrections to the draft. (a) the-step-index-from-own-courses.md:28 is a warrant question, 'whether a becoming can be so represented ... stays open', and not a construction of local components from a global finite-state specification. So Zielonka's result is absent, not an open item the account names. (b) The draft's gloss 'components that each read only their own letters' is loose. In an asynchronous automaton, each letter reads and updates only the local states of the components in its domain. That is the shape of the account's LocalLaw ('changes a relatum it touches as the states of the relata it touches determine'), and LocalLaw.run_of_courses and schedule_iff (Interleavings.lean:394, :929) do exist. The theorem is prior knowledge."
+      }
+     ],
+     "revised_cell": "Rates [prior knowledge]: vital rates, Lotka's renewal equation and stable-population convergence (Lopez 1961), all absent; Little's law, finite form only proposed (U1 §3.7). Traces [prior knowledge]: Foata normal form and infinite traces, not built; Zielonka's realization by asynchronous automata, absent."
+    },
+    {
+     "row": "2. Recurrence (01-ROOT.md#r-recurrence-without-premise) and attraction (02-MAP.md#r-attraction-is-not-returning) | finite Poincaré recurrence; Landauer (1961); Bennett (1973) | restated, without decidable equality",
+     "checks": [
+      {
+       "debt": "Poincaré recurrence in measure form (finite-measure, measure-preserving maps, uncountable spaces) and Kac's mean return time 1/μ(A)",
+       "verdict": "stands",
+       "evidence": "Absent as recurrence. Law.lossless_iff_returns and Law.returns_iff_keeps need a list of configurations, and recurrence-without-premise.md says finitely many 'means that a list holds them'. Law.succ_open shows the condition is needed. attraction-is-not-returning.md excludes an attractor 'with a topology or measure' and leaves basin size outside the theorems. No Lean file outside becoming-checks uses Mathlib's Conservative or Poincaré recurrence, and no chapter or record mentions Kac or a mean return time. One correction: the draft's 'no measure, no almost every' is wrong for the account as a whole. The physics periphery (EntropyProduction, 02-MAP.md:223; least-loss-from-entropy-production.md law 8) has a finite measure and an almost-sure law, taking_not_recurring_ae, so only recurrence on a measure space is missing. On Kac: the statement needs a probability-normalized μ. Both results are prior knowledge."
+      },
+      {
+       "debt": "Landauer's bound in energy (heat at least kT ln 2 per bit; kT times the drop in Shannon entropy in general, attained quasi-statically)",
+       "verdict": "stands",
+       "evidence": "Confirmed. merge-of-a-part-kept-by-the-rest.md 'Does not show': 'no energy, temperature, probability or bath is read, so kT ln 2 is not derived', and its Next asks for 'a reading of count as energy'. 08-METHOD.md:727 lists 'a least loss in energy from the pure core' as open. 02-MAP.md:200 says 'kT ln 2 is not derived', and :223 says Landauer's bound 'is no such floor by itself'. The count laws (Law.distinct_within, narrowing_spreads, reset_unlisted) bound numbers of configurations, not a distribution's entropy. The framework side is prior knowledge."
+      },
+      {
+       "debt": "Bennett's compute-copy-uncompute construction, which returns the history to blank while keeping the output",
+       "verdict": "stands",
+       "evidence": "Confirmed. Only the history-keeping half is present: Law.withHistory_lossless, withHistory_never_returns and withHistory_unlisted exist, and the Reset witness is described as 'Bennett's history (1973)' (merge record; 02-MAP.md:200). Grepping theories/becoming and the Becoming Lean for uncomput, garbage, pebbl and compute-copy finds nothing relevant; the only hits are lineage prose. entropy-history-and-record.md:97 calls the Bennett link a reading. The construction does not conflict with reset_unlisted, which concerns a part reset at every step, so this is a missing result, not a counterexample. Prior knowledge."
+      }
+     ],
+     "revised_cell": "Measure [prior knowledge]: Poincaré recurrence on finite-measure spaces and Kac's mean return time, absent (laws need listed configurations; the periphery's measure gives no recurrence). Landauer's kT ln 2 and entropy form, not derived (count only). Bennett's uncomputation, absent: only the history half."
+    },
+    {
+     "row": "3. Premises carve parts (01-ROOT.md#r-map-of-premises) | independence by countermodels; constructive reverse mathematics | new as an artefact",
+     "checks": [
+      {
+       "debt": "Strict separations of omniscience principles by realizability, Kripke or topological models (WLPO does not give LPO; LLPO does not give WLPO; Markov independent of LLPO)",
+       "verdict": "stands",
+       "evidence": "Confirmed. 08-METHOD.md:333 says 'That WLPO does not give LPO is known (Akama, Berardi, Hayashi and Kohlenbach 2004) but not checked here'. The core has only the implications (WLPO.of_lpo, LLPO.of_lpo) and the calibrations in the 08 §5 table (lpo_of_finite_ends, runs_iff_dependentChoice, law_iff_em and others), each showing that a law gives a principle or is equivalent to it. Grepping the Becoming Lean for kripke, realizability, topological model and not_lpo finds nothing. 02's 'deciding 生成 gives only WLPO' (Map.«生成之定则WLPO») states an implication, not a separation. 03-KNOWING.md:117 confirms the LLPO converse sits in an unreceipted script (one-unfolding-root/review-checks/HM.lean), and :209 and :573 leave Markov's role open. The specific separations and their models are prior knowledge."
+      },
+      {
+       "debt": "Complete independence (E. H. Moore 1910): every pattern of the premises holding or failing realized by a model",
+       "verdict": "stands",
+       "evidence": "Confirmed absent. World.independent gives one-out independence only, and nothing in the repository mentions complete independence. Some two-out patterns are realized in Counting.lean: drivenQueue fails only active relata giving and taking, and openQueue fails only active relata giving and dissipation. But World.counting_under and counting_binds_iff classify the counting laws under each of the 256 selections, not which hold-and-fail patterns are realizable. Correction to the draft's account side: the 01-ROOT.md:241-249 table lists consequences of premises, not implications among the eight. Given one-out independence, no premise follows from the others, so Moore's realizability question is what remains. map-of-premises.md also says independence 'does not exclude new implications once further premises are added' and that premises relative to a continuation, renewal, decaying reserve or family of conditions are not mapped. Moore's notion is prior knowledge."
+      }
+     ],
+     "revised_cell": "Separations [prior knowledge]: realizability and Kripke models show WLPO does not give LPO (cited 08 §5, unchecked), LLPO does not give WLPO, and Markov is independent of LLPO; the core proves only implications and equivalences. Complete independence (Moore 1910) of the eight: one-out only, a few two-out witnesses."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "Rest needs a least loss (02-MAP.md#r-least-loss-rest) | ranking functions (Floyd 1967); Lyapunov; LaSalle; chip-firing | restated",
+     "checks": [
+      {
+       "debt": "Completeness of ranking functions (every terminating relation has a ranking into a well-founded order) and converse Lyapunov theorems (Massera 1949; Kurzweil 1956)",
+       "verdict": "stands",
+       "evidence": "Not proved in the account. The Lean has only the forward direction: Amounts.rests and World.InAmounts.change_stops_iff, and also RenewalBound.lean (no_renewal_free_tail, renewal_arbitrarily_late), which goes from a WellFounded certificate to renewal. Its header says 'its realization is not proved here'. Amounts.worldsRest_of_noEndlessFall and not_endlessFall_of_worldsRest (InAmounts.lean:1261, :1270) are about amounts, not about a given resting world. One correction to the draft's source note: the repository does cite the Floyd completeness. rest-exactly-where-falls-stop.md:59 says 'Termination by a potential in a well-founded set is Floyd's (1967) method, after Turing (1949), and its completeness is the classical form of the converse here', and :34 and Next :52 keep that converse open (constructively not shown; it needs dependent choice). Only Massera, Kurzweil and 'converse Lyapunov' are uncited outside GAP-MAP 4.7 (:241). The framework claims are correct as stated (prior knowledge)."
+      },
+      {
+       "debt": "Continuous-state, continuous-time Lyapunov and LaSalle: Lyapunov stability, asymptotic and exponential stability with rates, convergence to the largest invariant set in {V̇ = 0}",
+       "verdict": "stands",
+       "evidence": "The framework statement is correct (prior knowledge). The draft's account status needs one correction. The Lean does contain 'perturbation' names: AttractionRuns.captured_state_drawn and captured_rule_drawn ('a perturbed state is drawn in and never returns'), Law.perturbation_reabsorbed (Capture.lean, SeekingRuns) and Mechanism's Law.reabsorbed. Together with 02 §2's absorbing regions and basins (Law.drawn_iff_not_returns, Law.basin_one_cycle), these are a discrete attractivity under perturbation. Step-count bounds also exist: renewal_within_rank_bound, and rests_of_finite_reading bounds the falls by the list's length. Still absent: any neighbourhood or metric, so no Lyapunov stability (nearby stays nearby); no exponential or asymptotic rates; no omega-limit set or largest invariant set; no continuous time (least-loss-rest.md:47: 'the reals are not constructed'). The discrete invariance principle is change_stops_iff, as UE0 AUDIT.md §2.4 confirms. The stochastic forms (Doob, Foster) are marked 'not built' (BECOMING-SIGNIFICANCE-REVIEW.md:396). Continuous time is already an FEP debt, so this one is its stability-theoretic part."
+      },
+      {
+       "debt": "Björner–Lovász–Shor (1991): on a finite graph, termination, the final configuration and each vertex's firing count are independent of the firing order; N > 2E − n never terminates, N < E always does; terminating games end within polynomially many moves",
+       "verdict": "stands",
+       "evidence": "Reordering.lean (header; Reorders.laws :882, Reorders.totals :895) keeps the laws, the totals and the steps at which a total falls under commutations of exchanges not joined. Its own header calls this 'the equivalence of Mazurkiewicz traces'. No theorem says that every maximal legal order reaches the same rest or the same counts (strong convergence or confluence), and there is no termination threshold in the stock against the structure. Lean searches for Newman, diamond, Church–Rosser, sandpile and chip found nothing; Confluence in Identity.lean is an unrelated witness of two lines merging. rest-theorem-in-any-amounts.md:35 bounds how often the total falls, 'not when', and :57 cites BLS only for the potential argument. The thresholds and order-independence match BLS (prior knowledge). The exact form of the polynomial move bound is from memory."
+      }
+     ],
+     "revised_cell": "Debts: ranking-function completeness (classical, needs choice; named in the rest-exactly-where-falls-stop record, unproved), converse Lyapunov (Massera, Kurzweil); continuous-time stability, rates and LaSalle's largest invariant set (account: discrete rest, attraction, reabsorption); chip-firing's order-independence and chip-count thresholds (Björner–Lovász–Shor). Prior knowledge."
+    },
+    {
+     "row": "How two courses differ in what can form (07-SIGNIFICANCE.md#r-four-cases-of-a-part) | opportunity sets (Pattanaik and Xu 1990) | near-definitional",
+     "checks": [
+      {
+       "debt": "Pattanaik and Xu (1990): indifference between no-choice situations, strict monotonicity and independence are satisfied by exactly one ranking of finite opportunity sets, the ranking by number",
+       "verdict": "stands",
+       "evidence": "No axiomatic uniqueness theorem exists. The draft understates what the account has on counting. Besides Weighting.neutral_ranks_by_number (Weightings.lean:1194), there are ratio-bounded weightings (Weighting.ranks_past_ratio, every_within_iff), and UE9's Sides.scale_counts and Sides.ScaleAtLeast join counting scale to widening (ue9-comparing-courses/NOTE.md:49). Net weightings have increments of one sign in every context (ranksNet_increment_alike, an independence-like property), and Interacting.not_net exhibits an order that breaks it. But the shared order is the intersection over a class (widens_iff_every_of_class) and leaves mixed pairs undecided (mixed_either_way). No set of axioms is shown to force one complete ranking. four-cases-of-a-part.md:40 and Next :61 leave a measure for mixed parts open. The repository read Pattanaik–Xu from the abstract only (REVIEW-UE9.md:222; NOTE.md:106 calls it 'the neighbour for counting scale'). The framework claim is correct (prior knowledge)."
+      },
+      {
+       "debt": "Diversity-sensitive rankings of sets, in which a near-duplicate option adds less than a distinct one (Weitzman 1992; Pattanaik and Xu 2000; Nehring and Puppe 2002)",
+       "verdict": "stands",
+       "evidence": "The account contains no similarity- or diversity-weighted comparison. The Lean says so in two docstrings: Flow.lean:87 ('Diversity and complexity are not stated here') and Arising.lean:77. four-cases-of-a-part.md:39 excludes 'richness of relations', and Next :61 keeps it open. The weightings are additive per item. The non-additive Interacting witness models interaction, not similarity. One small correction: Weitzman (1992) defines a diversity function on sets (of species) from distances, which later work took into freedom-of-choice rankings. It is not itself an opportunity-set ranking. Pattanaik–Xu (2000), via similarity classes, and Nehring–Puppe (2002) are correct as described (prior knowledge; no source is in the repository)."
+      }
+     ],
+     "revised_cell": "Debts: Pattanaik–Xu's axiomatic uniqueness of ranking by number (account: counting only as equal weights or a scale order, mixed pairs left open; abstract-level in the repository); diversity-sensitive set rankings, where a near-duplicate adds less (Pattanaik–Xu 2000; Nehring–Puppe 2002; after Weitzman 1992). Prior knowledge."
+    },
+    {
+     "row": "Closures (01-ROOT.md#r-levels-of-closure) and selection (03-KNOWING.md#r-selection-through-couplings) | Blackwell (1953); Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020) | restated",
+     "checks": [
+      {
+       "debt": "Blackwell (1953): for stochastic experiments, worth at least as much in every decision problem under every prior exactly when the other is a garbling of it, which is also equivalent to sufficiency",
+       "verdict": "stands",
+       "evidence": "The framework claim is correct (prior knowledge). The draft's account status is partly wrong. Learning.Training.keeps_through_iff (Revision.lean:41; 03-KNOWING.md:359) is an iff: every selection through the old lumping stays expressible through the new one exactly where new indistinguishability implies old. That is a deterministic converse in expressibility form, so 'the converse from every decision to refinement is neither stated' does not hold in that form. What is missing: noisy kernels and garbling (no 'garbl' in the Lean), priors, sufficiency, and the worth-form converse. informed_answer_le (ListingValuation.lean:782, docstring :60) and finer_least_le (HeldForReading.lean:1058, :152) give only the finer-is-worth-at-least direction for one decision, and refining_never_lowers_iff is a criterion under refinement, not Blackwell's converse. GAP-MAP 3.7 (:188) records the two forms as unlinked."
+      },
+      {
+       "debt": "Pearl (2000): structural causal models over graphs, d-separation, the do-calculus, and the back-door and front-door criteria identifying interventional distributions from observational ones",
+       "verdict": "stands",
+       "evidence": "causal-models-as-processes.md:39 excludes 'structural equations among several variables (graphs), the do-calculus, identification of causes from observational data, probabilities'. What is restated is non-ancestor invariance (Flow.unselected_beyond_coupling; UE0 AUDIT.md §2.6). The nearest the account comes to adjustment is Experiment.lean's Confound witness (Confound.misattributes, Confound.varied_refutes; 03:137, :140), a deterministic wrong projection that varying the move refutes. It does no identification, and nobody relates it to adjustment (GAP-MAP 3.4, :165). Searches for back-door, backdoor, do-calculus and d-separation found nothing in the chapters or the Lean. The framework claim is correct (prior knowledge)."
+      },
+      {
+       "debt": "Zhuang and Hadfield-Menell (2020): continuous setting, Theorem 2's compactness characterization including non-convergent optimization, and the utility gain from a principal re-reading the proxy (or impact minimization)",
+       "verdict": "stands",
+       "evidence": "The record names this debt itself. what-an-optimum-does-beyond-what-couples-in.md:45 lists as 'not reached' the continuous setting and compactness characterization, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain an updated proxy brings to a principal's utility. The account does have a timing analogue of the remedy, a re-reading's deadline (05-COLLECTIVES.md:174, :205, r-re-optimizing-above-a-renewal-ends-it). So the debt is the utility gain, not re-reading as such. 03-KNOWING.md:29 relates the remedy only by analogy. The repository's knowledge of the paper is at web, arXiv-page and poster depth (BECOMING-SIGNIFICANCE-REVIEW.md:158). The impact-minimization detail is from memory. GAP-MAP.md:14 assigns this case to another session, so its wording should be coordinated."
+      }
+     ],
+     "revised_cell": "Debts: Blackwell's equivalence over noisy kernels and priors: worth in every decision iff garbling iff sufficiency (account: deterministic, an expressibility converse, one decision's worth); Pearl's do-calculus and back-door and front-door identification; Zhuang–Hadfield-Menell's continuous, non-convergent Theorem 2 and re-reading's utility gain (record-listed). Prior knowledge."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "Joint excess (05-COLLECTIVES.md#r-own-count-misses-joint-excess), position (05-COLLECTIVES.md#r-relative-position-is-zero-sum) | tragedy of the commons; positional goods (Hirsch 1976) | near-definitional",
+     "checks": [
+      {
+       "debt": "Interior common-pool Nash, with each bearing a share, lying between the joint optimum and open access and approaching full dissipation as n grows (Gordon 1954; Dasgupta and Heal 1979; Ostrom, Gardner and Walker 1994)",
+       "verdict": "stands",
+       "evidence": "Stands in narrowed form. The framework statement matches the standard result (prior knowledge). The draft's account_status is partly wrong. The account does have a commons with a share borne, though only at its corner: drawing at once from portions, 'drawing everything is perfect exactly where no drawer's portion of what stands next returns more than one for one on what it alone leaves' (`Optimum.AtOnce.drain_perfect_iff`, 05-COLLECTIVES.md drawers-in-turn paragraph, Optimum.lean:362-375, 9050). It also has a witness of the gap from restraint, which the draft says is not stated: in `Optimum.halves_race` (Optimum.lean:9540-9558), holding the source draws each drawer more than the perfect drain does over a long horizon. So the several-optimizers record's does_not_show is not the latest word. What does stand is recorded as open: drawers-in-turn.json does_not_show 'Drawing at once, which profiles are perfect where some portion returns more than one for one', which is the interior equilibrium. The n-dependence is implicit at best: smaller portions make the iff's premise easier to meet, but no law states overuse as a function of n."
+      },
+      {
+       "debt": "Restraint sustained as a subgame-perfect equilibrium of the infinitely repeated or dynamic commons by punishing strategies, for patient players (Fudenberg and Maskin 1986; Dutta 1995)",
+       "verdict": "stands",
+       "evidence": "Confirmed. `Optimum.InTurn.Perfect` is 'Perfect over a horizon' with finite N (Optimum.lean:8223-8225). Grim trigger and tit-for-tat appear only as readings of payoff-free giving laws (05-COLLECTIVES.md:133), and 05:117 says 'It does not show how waiting forms'. Sanctions are 'Not modelled' (05:405). A grep of Becoming/ and the chapters for folk theorem, grim, trigger, subgame, repeated game and discount found no equilibrium law. The outrun record names Dutta 1995 only in its correspondence. After AF1, its Next lists 'whether a profile with restraint is an equilibrium in the locked settings' as open (the-rest-outruns-the-renewal.md:45). Fudenberg and Maskin is prior knowledge."
+      },
+      {
+       "debt": "Positional arms race over two goods: equilibrium over-allocates to positional consumption relative to non-positional goods, corrected by a tax (Frank 1985); Hirsch's social scarcity",
+       "verdict": "stands",
+       "evidence": "Stands, with one citation in the draft's account_status misstated. Frank 1985 is cited in the live prior-art review, BECOMING-SIGNIFICANCE-REVIEW.md:53 (row 10), not only in the superseded history. The rest is confirmed. 05 §3 has one amount per part (`RelativePosition.change_balances`, `keeps_iff_common`). The race is one good drawn in turn (`Optimum.InTurn.position_perfect_ends`). relative-position-is-zero-sum.json does_not_show says 'That a race for relative position produces joint excess' is a premise, and its next_delta lists ranks or shares. a-race-for-position-draws-everything.json next_delta lists 'drawers mixing a race for position with their own draw', the nearest the account comes to a second good. 'Over-allocation' is the field's Pareto frame and should be labelled as such. Prior knowledge only."
+      }
+     ],
+     "revised_cell": "Interior CPR Nash with shares borne, and dissipation growing with n (prior knowledge; the account has only the corner, `AtOnce.drain_perfect_iff`, and a gap witness); restraint as an infinite-horizon equilibrium (folk theorem, prior knowledge); Frank's two-good positional race (prior knowledge)."
+    },
+    {
+     "row": "Learning and identification (03-KNOWING.md#r-identification-where-bounded) | Hume; Fine and Wilf (1965); Moore (1956); Gold (1967) | restated constructively",
+     "checks": [
+      {
+       "debt": "Gold's theorem that no superfinite class is identifiable in the limit from text, against identification from informant; Angluin's (1980) tell-tale characterization",
+       "verdict": "stands",
+       "evidence": "Confirmed absent. Gold appears only as identification in the limit and as the diagonal (Learning.lean:113-117, Parting.lean:70, LimitVerification.lean:19). Angluin 1980 is cited only for symmetric choice in anonymous networks (05:310, FreeEnergyGuarantees.lean:123), a different result. A grep of theories/becoming and Becoming/ for superfinite, tell-tale, telltale, positive data, from text and informant found hits only in GAP-MAP.md:192 and findings.json:383. One small fix to the framework statement: Gold's informant result covers uniformly decidable (indexed) classes, so 'every enumerable class of decidable languages' should be tightened. GAP-MAP and findings name 'identification where runs part' (03:246) as the nearest analogue of tell-tales. Prior knowledge."
+      },
+      {
+       "debt": "Kelly's classical converse: verifiable in the limit exactly when Σ⁰₂ (refutable Π⁰₂, decidable Δ⁰₂); a method exists for every such union",
+       "verdict": "stands",
+       "evidence": "Confirmed. 03:207 says 'a method for every such union is not shown'. The record states the classical fact in its correspondence: 'Readings verified in the limit are the Σ⁰₂ classes ... (Putnam 1965, Gold 1967, Kelly 1996)' (what-a-method-comes-to-say-in-the-limit.md:65). It lists the converse and the joins under does-not-show (:40, :42). LimitVerification.lean proves only `verifies_iff_union`, `refutes_iff_meet` and the witnesses. So the debt is to the chapter, which neither credits Kelly nor says what blocks the converse constructively (GAP-MAP 3.8). For precision, the converse is for countable unions of closed readings (boldface Σ⁰₂ for ideal methods). Prior knowledge plus the record."
+      },
+      {
+       "debt": "Moore's (1956) Theorem 1: a machine whose states are pairwise distinguishable, yet no simple (single-copy, adaptive) experiment determines its initial state, while a multiple experiment can",
+       "verdict": "stands",
+       "evidence": "Stands in narrowed form. The draft's account_status is misstated. It says 'Learning along one run reads an autonomous history with no chosen inputs' and found nothing on single copies. But 03:140 (Experiment.lean, record experiment-needs-return) states a single-run limit for runs with moves: 'the record fixes a move's outcome ... only there. So what one's own act would have done otherwise is fixed only where the configuration returns' (`Run.not_fixes_of_untaken`, `Run.fixes_on_return`, `keepHistory_fixes_nothing_else`). That is the one-copy limit on learning what untaken acts do. What remains absent is Moore's own statement about the initial state: pairwise separability by some experiment, with no single adaptive experiment on one copy identifying the start. The account's tests (`alike_iff_sameTests`, 03:159-161) are each run afresh from the configuration, which is the multiple-experiment regime. Prior knowledge of Moore 1956."
+      }
+     ],
+     "revised_cell": "Gold's theorem that no superfinite class is identifiable from text, and Angluin's tell-tales (prior knowledge; absent); Kelly's converse for countable unions of closed readings (credited in the record, not the chapter); Moore's single-copy limit on initial states (prior knowledge; 03 has it for untaken acts only)."
+    },
+    {
+     "row": "Significance not in the dynamics (07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open) | is–ought; Gewirth (1978); Parfit (1984); Sen (1977) | near-definitional; scope apart from order a clarification",
+     "checks": [
+      {
+       "debt": "Schurz's (1997) Hume's law for relevant consequence in alethic-deontic logic, covering mixed premises and bridge principles such as ought-implies-can and answering Prior's (1960) counterexamples; barrier theorems (Restall and Russell 2010)",
+       "verdict": "stands",
+       "evidence": "Confirmed. `ReadsOnlyDynamics.admits_rival` and `not_entails` are about premises whose truth does not change with sig (07:21). The calibration is about premises about significance (07:24). A grep of the chapters, fronts and records for Schurz, Restall and 'Prior (1960' found none. The gap is recorded only in the dossiers (PHILOSOPHY.md:89 'Chapter 7 credits neither', questions at :92; LOGIC.md:690-695, question 60). One qualifier: the account does have one tie of sig to the dynamics, the de se own-closure reading (07:18, `ownClosure_unrestricted_iff`), under which the condition reads only a relation and the centers. That is a single bridge, not a law for mixed premises in general. Prior knowledge of Schurz, Prior, and Restall and Russell."
+      },
+      {
+       "debt": "Parfit's (1984, Part Four) Mere Addition Paradox to the Repugnant Conclusion, and the non-identity problem, as constraints an order over populations must meet or answer",
+       "verdict": "stands",
+       "evidence": "Confirmed. The framework statement is standard (prior knowledge). The account has no answer in the chapters. PHILOSOPHY.md:197 says C ranks a costless addition better, which is stronger than Mere Addition and runs against the procreation asymmetry, and that 'C leaves mixed comparisons unranked, so it neither yields nor blocks the paradox's later steps'. The questions are at :201-202. 07:777 lists 'The value of bringing new lives into existence' as not shown. A grep for Repugnant, mere addition and non-identity in the chapters, fronts and records found nothing. The debt is to the chapter. It is open in the dossier only."
+      },
+      {
+       "debt": "Sen's (1977) graded partial comparability: a restricted set of admissible weights gives quasi-orderings between dominance and a complete order, finer as the set narrows",
+       "verdict": "already-in-account",
+       "evidence": "Refuted. The graded band is a landed result: 07:357 (anchor r-weights-within-a-ratio-agree-past-it, record weights-within-a-ratio-agree-past-it). The chapter states: 'every positive weighting with weights within n/d of each other ranks the first higher exactly where n q < d p (`Weighting.every_within_iff`), and two such weightings rank the pair opposite ways exactly where ...' (`Weighting.opposite_within_iff`). Weightings.lean:74-85 adds `ranks_past_ratio`, `some_within_reverses_iff` and `tilted_ties`. ONE-ARGUMENT.md:104 restates it. Narrowing the ratio decides more mixed pairs, which is the graded band. The draft cited only 07:336-345, saw only the dominance end, and missed 07:357. The record widening-as-what-every-positive-weighting-ranks.md:69 credits Sen 1977. Representation-independence of the shared order is also stated (Weightings.lean:33). No residual debt worth a cell entry was found."
+      }
+     ],
+     "revised_cell": "Schurz's relevant-consequence Hume's law, with mixed premises, bridge principles and Prior's counterexamples (prior knowledge; the invariance form is uncredited in 07); Parfit's mere addition, Repugnant Conclusion and non-identity (prior knowledge; C ranks costless addition better, open in the dossier only)."
+    }
+   ]
+  },
+  {
+   "rows": [
+    {
+     "row": "Loops (02-MAP.md#r-how-loops-form) | nilpotent adjacency; Perron–Frobenius; Maruyama (1963) | restated over whole amounts",
+     "checks": [
+      {
+       "debt": "Perron–Frobenius: exact rate (Perron root), positive eigenvector and stable proportions, strict monotonicity in strengths, row-sum bounds",
+       "verdict": "stands",
+       "evidence": "A grep of the chapters, the records and the core and periphery Lean for perron, frobenius, eigenvector, spectral radius and gelfand finds only open items: how-often-couplings-act.md:48,65, how-a-carried-difference-grows.md:54, what-a-cut-loses.md:63 and Frequency.lean:113 ('the spectral radius of given strengths'). In what-discrete-steps-and-whole-amounts-represent.md, law 5 glosses the rate as 'the spectral radius by Gelfand's formula', but Does-not-show (:36) lists 'that the rate is the spectral radius (Gelfand's formula, cited)', and law 6 (the shear) leaves boundedness undecided at rate one. The Lean names are verified: carried_le_count (Frequency.lean:309), carried_le_geomBound (Loops.lean:1000), carried_doubles_around (Loops.lean:1259), polynomial_iff_no_loop (Loops.lean:1474). One partial overlap the draft does not name: the bound D(1+M)^a, with M the cap on each condition's in-strengths, is the greatest-row-sum half of the row-sum bound in counts. The least-row-sum half, the eigenvector, the proportions and the monotonicity are absent. The theorem is stated correctly, from prior knowledge only."
+      },
+      {
+       "debt": "Maruyama's loop sign (amplifying or counteracting by the product of the link signs) and Thomas's circuit rules",
+       "verdict": "stands",
+       "evidence": "A grep for maruyama, deviation-amplif/counter, negative/positive feedback, loop sign, multistation, Thomas, Soulé, balancing loop and reinforcing loop across the chapters, the records, the fronts and the Lean finds only citations (08:493; the review :49), Euler–Maruyama, and 'negative feedback' as a reading in a-reading-against-the-share-does-not-ratchet.md:45 and rooms-tested-by-a-window.md:73. The account status leaves out some counteraction the account does have: LoopReturn.nothing_between (LoopReturn.lean:537), where a loop closes a difference only through a link giving back less, and 02-MAP.md:367, where beyond the no-overshoot bound 'an opposing exchange crosses and can oscillate for ever', together with Regulation.relay_threshold for late reading (02:369). Neither ties the behaviour to a sign product around a loop, and neither states the multistationarity or oscillation circuit conditions, so the debt stands. Source depth: the attribution of the proof of Thomas's rules to Gouzé 1998 and Soulé 2003 is prior knowledge only (Snoussi 1998 also figures), and the negative-circuit condition is usually stated for stable periodic orbits."
+      }
+     ],
+     "revised_cell": "Perron–Frobenius (prior knowledge): an irreducible web grows as its Perron root, in a positive eigenvector's proportions, strictly monotone in each strength. Here there is only (1+M)^a above and doubling below, and the periphery's rate is not proved to be the spectral radius. Maruyama's loop-sign rule and Thomas's circuit rules are absent (prior knowledge)."
+    },
+    {
+     "row": "Fed from beyond (02-MAP.md#r-continuing-self-fed-from-beyond), entropy (02-MAP.md#r-least-loss-from-entropy-production), nets (01-ROOT.md#r-place-transition-nets-on-the-spine) | Schrödinger (1944); Prigogine (1977); ranking functions; P-invariants of Petri nets (Lautenbach 1975) | restated",
+     "checks": [
+      {
+       "debt": "Entropy balance dS = d_eS + d_iS: a steady open system must take in from beyond what it dissipates (an amount)",
+       "verdict": "already-in-account",
+       "evidence": "The counts form is in the core and has a home section: 05-COLLECTIVES.md:149 (r-a-rise-past-the-inflow-is-drawn-from-beyond) and record a-rise-past-the-inflow-is-drawn-from-beyond.md, law 1: 'the stock after a step with what the family loses is the stock before with what it gains, which is at most the inflow' (Flow.Balances.stock_gained, Flow.Balances.stock_inflow, Entropy.lean:640-662). At a kept stock, therefore, lost = gained ≤ inflow. Under dissipation lost ≥ takers (Flow.DissipatesOn.takers_le_lost, Entropy.lean:679), so a steady family takes in from beyond at least one unit for each taker at every step. The periphery's ExergyBalance (given + destroyed = taken) is the physical reading. The draft's grep missed 05 and Entropy.lean. What remains is small: the stretch form with the loss kept (stock_over_inflow drops it) is a one-line sum, not stated; and physical units and continuous time are the generic FEP-style debt, not specific to this row."
+      },
+      {
+       "debt": "Prigogine: minimum entropy production in the linear (Onsager) regime; loss of stability of the thermodynamic branch and dissipative structures by bifurcation",
+       "verdict": "stands",
+       "evidence": "A grep for onsager, minimum/least entropy production, dissipative structure, glansdorff, nicolis, prigogine, bifurcat and negentropy over the chapters, the records, the fronts, GLOSSARY and the Lean finds only 08:494 (the citation), what-keeping-widening-needs.md:100 (the names), and bifurcation mentioned under does-not-show in market records and slowing-down-before-an-own-end.md:35,57 (critical slowing down before an end, not the onset of order). least-loss-from-entropy-production.md lists the fluctuation theorem and local detailed balance as hypotheses. It has no fluxes, forces or rates. The framework is stated correctly, from prior knowledge. Minimum entropy production holds only near equilibrium with constant boundary conditions, and the draft states that restriction."
+      },
+      {
+       "debt": "Net theory beyond P-invariants: siphon–trap liveness for free-choice nets (Commoner; Hack), structural boundedness (Memmi–Roucairol), decidable coverability (Karp–Miller) and reachability (Mayr; Kosaraju)",
+       "verdict": "stands",
+       "evidence": "place-transition-nets-on-the-spine.md has laws 5–8: strict P-subinvariant gives dissipation, rests_unrefuted, and the one-place siphon law (Net.siphon_empty). Its Does-not-show lists 'siphons of more than one place; nets with infinitely many places; deciding reachability'. A grep of PlaceTransitionNets.lean, the record and 01-ROOT for trap, live, liveness and deadlock finds nothing. Commoner, Karp, Mayr and Kosaraju appear nowhere as results. The theorems are stated correctly, from prior knowledge."
+      }
+     ],
+     "revised_cell": "Prigogine's minimum entropy production near equilibrium, and dissipative structures by bifurcation (prior knowledge; none found). Net theory (prior knowledge): Commoner's siphon–trap liveness for free-choice nets, structural boundedness, and decidable coverability and reachability. The entropy balance itself is here in counts (Flow.Balances.stock_gained)."
+    },
+    {
+     "row": "Evolution on descent, offspring bounds, Hamilton's rule, groups on coupled conditions (04-LIFE.md) | Price; Fisher; Hamilton; multilevel selection; Malthus | restated in counts; joined to the flow",
+     "checks": [
+      {
+       "debt": "Fisher's theorem: additive variance over several amounts, over the mean, beyond exact transmission",
+       "verdict": "misstated",
+       "evidence": "Two of the three parts are in the account. 04-LIFE.md:180 and record the-breeding-value.md define a breeding value as a two-sided combination of several carried amounts that meets the normal equations (a multiple regression). Breeding.response (Reproduction.lean:1154-1161) states: 'the mean breeding value rises across the step by the additive variance over the mean offspring number', cross-multiplied, so the several-amounts and over-the-mean readings are stated. 04:3 and 04:238 claim Fisher 'with given breeding values'. The draft relied on what-bounds-offspring-numbers.md:45 and additive-part-of-offspring-variance.md:32, whose Does-not-show lines are now stale against the-breeding-value record: an internal inconsistency worth fixing. What stands is from the-breeding-value.md's Does-not-show: 'Inexact transmission of the breeding value, where Fisher's environment term enters', and 'That the normal equations have such a solution: solving them is given' (also 04-LIFE.md:320)."
+      },
+      {
+       "debt": "Hamilton's rule in general form (regression relatedness, any structure, additive), with synergy, and with assortment changing under the population's dynamics",
+       "verdict": "misstated",
+       "evidence": "The general additive form is in the record: selection-with-returns-to-groupmates.md, law 1 (Becoming.SelectionLevels.rises_iff_reading, SelectionLevels.lean:840-847). For any reading o with w + k·a = B + b·o on any list, the whole selects for a exactly where 'b times the regression of the reading on the amount exceeds k': Queller's 1992 form under any structure, unequal groups included for the whole's verdict. The home section 04-LIFE.md:207 states only the equal-size group case and does not cite rises_iff_reading, so the draft missed it. What stands: 'Returns with synergy' (record Does-not-show; Next), and 'how the share of the spread among them changes over generations' (record; 04-LIFE.md:320, 'assortment changing over cohorts'). Unequal sizes stay open only for the within/among split with returns. Source depth: Queller 1985 for synergy is prior knowledge."
+      },
+      {
+       "debt": "Multilevel selection with group reproduction and migration (MLS2), e.g. b/c > 1 + n/m (Traulsen and Nowak 2006)",
+       "verdict": "stands",
+       "evidence": "groups-formed-by-descent.md lists 'Migration between lineages and inexact transmission are not stated, nor how assortment changes over generations'. groups-whose-conditions-are-coupled.md:37 has 'Mixing between groups and how groups and their couplings form are not stated'. selection-among-groups-by-ending.md has 'mixing between groups is not stated'. A grep for traulsen, fission, migrat, group reproduction and MLS2 in 04, 05 and the records finds no result. The draft's account status ('Groups here are selected only by ending, or by given founding and descent') and its cell phrase 'where groups here only end' are wrong. Among-group selection by returns at a step exists (SelectionLevels.among_for_iff, 04-LIFE.md:207), and so does the multilevel split for any sizes (selection-within-and-among-groups-of-any-sizes). Groups do not only end. What is missing is group fission and migration over generations. Source depth: Traulsen–Nowak's condition (weak selection, rare splitting; n the maximum group size, m the number of groups) is prior knowledge."
+      }
+     ],
+     "revised_cell": "Missing here: Fisher's theorem under inexact transmission, with the environment term (Price 1972), and a solution of the normal equations (here given); Hamilton's rule with synergy (Queller 1985) and with assortment changing over generations; group reproduction with migration (Traulsen and Nowak 2006). All prior knowledge."
+    },
+    {
+     "row": "Drift, fixation, mutation (04-LIFE.md) | Wright–Fisher; Moran; Kimura; Haldane; Eigen | restated as finite weighted bounds",
+     "checks": [
+      {
+       "debt": "Kimura: fixation probability with selection under sampled generations (diffusion), and the neutral substitution rate equal to the mutation rate",
+       "verdict": "stands",
+       "evidence": "fixation-with-selection.md, Does-not-show: 'Selection in sampled generations (Wright-Fisher with selection), where the fixation share has no closed count'. 04-LIFE.md:319 lists 'Wright–Fisher with selection; mutation both ways and with drift'. mutation-and-the-balance-it-sets.md has 'mutation with drift (the balance of mutation and drift)' under Does-not-show. A grep for substitution rate, Kimura and coalescen finds only the correspondence citation (fixation-by-drift.md:58). The formula given is Kimura's diploid form (4N_e s; 2N_e s for haploids). The draft does not say so, so note it."
+      },
+      {
+       "debt": "Drift's time scales: variation lost by (1 − 1/N) per generation; fixation or loss in order N generations",
+       "verdict": "stands",
+       "evidence": "fixation-by-drift.md:35: 'The time to fixation: the rate r/N^N is crude ... so the time is bounded, not stated'. Geometric decay of heterozygosity appears only as a cited correspondence ('heterozygosity decays geometrically (Wright 1931)', :58). Drift.lean's theorems (varied_step, varied_vanishes, fixation, ...) give the crude ((N^N−2)/N^N)^k bound, not the (1 − 1/N) law. drift-offspring-sampled.md does not state the exponential form for falling back. The rates are correct for N haploid copies, from prior knowledge."
+      },
+      {
+       "debt": "Haldane mutant share μ/s and load μ; Eigen's length-dependent threshold and many-class quasispecies",
+       "verdict": "stands",
+       "evidence": "The debt stands only as narrowed. The share is in the account in counts: Mutation.kept_share (Reproduction.lean:773) gives the carrier share s/(s+m), so the mutant share is m/(s+m) ≈ μ/s. Qσ > 1 is Mutation.rises_iff, never_rises and falls_of_outrun (Reproduction.lean:740-766; record law 2, 'the error threshold'). The load is not stated: a grep for mutation load, genetic load and quasispecies finds none. It is one line of arithmetic on kept_share, though: at balance the mean offspring number is k against the carriers' k+m, a load of m/(k+m) whatever s, so it is a minor debt. Sequence length (Q = q^L), the bound L ≈ ln σ/(1 − q) and the many-class quasispecies (a leading eigenvector, tied to the Perron–Frobenius debt) are absent. The record has two classes, loss in one direction, and no convergence (Does-not-show). All of this is prior knowledge."
+      }
+     ],
+     "revised_cell": "Kimura (prior knowledge): fixation with selection in sampled generations, and the neutral substitution rate (mutation with drift is unstated here). Drift's time scales: variation lost by (1 − 1/N) a generation, fixation in order N (here crude). Eigen's length-bounded threshold and the many-class quasispecies. Haldane's load is unstated but follows from kept_share."
+    }
+   ]
+  }
+ ]
+}

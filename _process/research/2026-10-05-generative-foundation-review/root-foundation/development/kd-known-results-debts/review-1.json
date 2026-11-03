@@ -1,0 +1,132 @@
+[
+ {
+  "rows_read": [
+   "10 Loops",
+   "11 Fed from beyond, entropy, nets",
+   "12 Evolution on descent and the rest",
+   "13 Drift, fixation, mutation"
+  ],
+  "findings": [
+   {
+    "row": "10 Loops",
+    "claim": "Perron–Frobenius: an irreducible web grows at its Perron root, in a positive eigenvector's proportions",
+    "problem": "misstated-framework",
+    "evidence": "Standard Perron–Frobenius (prior knowledge): an irreducible nonnegative matrix has a positive eigenvector at its Perron root and ||A^n||^(1/n) tends to that root. A^n/ρ^n converging to the eigenvector's proportions needs primitivity (irreducible and aperiodic). For an irreducible periodic web, for example a loop of two conditions, the proportions keep cycling and only Cesàro averages converge. DEBTS.md:121 also says 'stable proportions' without the condition.",
+    "fix": "Write: 'an irreducible web has a positive eigenvector at its Perron root and grows at that rate; a primitive one (irreducible and aperiodic) settles into that eigenvector's proportions'."
+   },
+   {
+    "row": "10 Loops",
+    "claim": "(here bounds, `(1 + M) ^ a` above and doubling below)",
+    "problem": "misstated-account",
+    "evidence": "This understates what the account has. (a) The periphery has a growth rate for a web of several conditions: what-discrete-steps-and-whole-amounts-represent.md law 5 (Becoming.Representation.rate, vanishes_iff, unbounded_of_one_lt, every_vanishes_iff) defines it as the least norm of a power to the inverse of the power. What the web carries vanishes exactly where that rate is below one, and it runs away where the rate is above one. What is missing is that the rate equals the spectral radius or Perron root ('Gelfand's formula, cited', Does not show), plus the eigenvector and the proportions. The DEBTS checked cell (DEBTS.md:125) kept 'the periphery's rate is not proved to be the spectral radius', but 08 dropped it. (b) In the core, the lower bound per turn is one plus the product of the loop's strengths (carried_around, carried_runaway, Loops.lean:35-39). Doubling (carried_doubles_around) is only the stationary case read at strength one.",
+    "fix": "Write: 'here, in the core, `(1 + M) ^ a` above and, around a loop, one plus the product of its strengths per turn below (doubling at unit strengths); the periphery's rate decides vanishing and runaway ([record](../results/records/what-discrete-steps-and-whole-amounts-represent.md)) but is not shown to be the Perron root, and no eigenvector or proportions are given'."
+   },
+   {
+    "row": "11 Fed from beyond, entropy, nets",
+    "claim": "the entropy balance itself is stated in counts (`Flow.Balances.stock_gained`)",
+    "problem": "already-in-account",
+    "evidence": "The column is headed 'What it states that the account does not yet'. The paragraph above the table (08-METHOD.md:480) says this item was 'found already stated ... and dropped', and DEBTS.md:15 and :128 classify it as already-in-account. The other dropped item, Sen's graded comparisons, does not appear in row 9's cell. Here a statement of what the account has sits in the debts column, so a reader scanning the column reads it as a debt, or sees the paragraph and the table disagree. Flow.Balances.stock_gained exists (Entropy.lean:639), and its home is 05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond.",
+    "fix": "Delete the clause from the fourth column. If it should stay visible, move it to the Verdict column with a link to 05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond."
+   },
+   {
+    "row": "11 Fed from beyond, entropy, nets",
+    "claim": "decided coverability and reachability (Karp and Miller 1969; Mayr 1981; here siphons of one place, [the record](../results/records/place-transition-nets-on-the-spine.md))",
+    "problem": "unclear",
+    "evidence": "'here siphons of one place' is what the account has against Commoner's siphon–trap liveness: record law 8, Net.Gated, Net.siphon_empty (PlaceTransitionNets.lean:541), and the record's Does not show lists 'siphons of more than one place'. Placed inside the reachability parenthesis, it reads as the account's counterpart to coverability and reachability. For those the record states nothing; it lists 'deciding reachability' as not shown.",
+    "fix": "Move it: 'liveness of free-choice nets by siphons and traps (Commoner; Hack 1972; here siphons of one place, [the record](...)), structural boundedness, and decided coverability and reachability (Karp and Miller 1969; Mayr 1981)'."
+   },
+   {
+    "row": "12 Evolution on descent and the rest",
+    "claim": "Hamilton's rule with synergy (Queller 1985) and with assortment changing over generations, its general additive form being stated",
+    "problem": "link-or-name-wrong",
+    "evidence": "The general additive form exists only in the record: selection-with-returns-to-groupmates.md law 1, Becoming.SelectionLevels.rises_iff_reading (SelectionLevels.lean:844), which holds on any list. The row's link [Hamilton's rule](04-LIFE.md#r-selection-with-returns-to-groupmates) goes to a home section that states only groups of equal size m, never cites rises_iff_reading, and ends with 'Synergy and unequal sizes are not stated' (04-LIFE.md:206). A grep finds rises_iff_reading in no chapter. A reader who follows the row's link finds the opposite of the claim. DEBTS.md:19 records the home gap.",
+    "fix": "Name the source in the cell: 'its general additive form being stated (`SelectionLevels.rises_iff_reading`, [record](../results/records/selection-with-returns-to-groupmates.md) law 1)'. Separately, the owner of 04's home section should add that law and narrow 'unequal sizes are not stated' to the within/among split."
+   },
+   {
+    "row": "13 Drift, fixation, mutation",
+    "claim": "Kimura's fixation with selection in sampled generations, and the neutral rate of substitution (mutation with drift is not stated here); drift's time scales, variation lost by `1 − 1/N` a generation and fixation in a time of order `N` (here a crude bound); Eigen's threshold by sequence length and the quasispecies of many classes",
+    "problem": "misstated-account",
+    "evidence": "This under-claims what the account lacks. The row's own closest prior results include the Moran process of a game (Nowak and others 2004) and stochastic stability (Kandori, Mailath and Rob 1993; Young 1993), but the cell lists nothing from them. A record names that gap: drawn-shaping-drawn-one-at-a-time.md, Does not show, has 'The long-run state under rare mutation, the one with the larger fixation weight (Fudenberg and Imhof 2006), which is cited; mutation and a time to leave a lock beyond the geometric bound are not stated'. Its Correspondence says KMR and Young select the risk-dominant state in their limit, which 'the Moran criterion approaches under weak selection', and none of this is proved. A grep of chapters and records for stochastic stability, invariant/stationary distribution and the one-third rule finds no stated result; risk_dominant_iff is a criterion at one count, not a long-run selection. DEBTS.md:148-157 has no item for these frameworks, so the four drafters missed them.",
+    "fix": "Add: 'the long-run state under rare mutation (Fudenberg and Imhof 2006) and the risk-dominant state's selection as noise vanishes (Kandori, Mailath and Rob 1993; Young 1993; [not stated](../results/records/drawn-shaping-drawn-one-at-a-time.md)), and the one-third rule under weak selection (Nowak and others 2004)'. Add a matching item to DEBTS.md's row."
+   }
+  ]
+ },
+ {
+  "rows_read": [
+   "5. How two courses differ in what can form",
+   "6. Closures and selection",
+   "7. Joint excess, position",
+   "8. Learning and identification",
+   "9. Significance not in the dynamics"
+  ],
+  "findings": [
+   {
+    "row": "5. How two courses differ in what can form",
+    "claim": "(here counting is one weighting of a class, and mixed pairs are left open)",
+    "problem": "misstated-account",
+    "evidence": "07-SIGNIFICANCE.md:357 (r-weights-within-a-ratio-agree-past-it): every positive weighting with weights within n/d ranks a mixed pair exactly where n q < d p (`Weighting.every_within_iff`, `Weighting.opposite_within_iff`). Weightings.lean:1190-1194 docstring of `Weighting.neutral_ranks_by_number` calls counting 'the case 1 / 1 of weights within a ratio', and counting ranks every pair, mixed ones included, by number, which is Pattanaik and Xu's verdict on every pair. 08's own paragraph above the table says these graded comparisons are already stated. Only the shared order of the whole class leaves mixed pairs undecided (`Weighting.mixed_either_way`, `mixed_either_way_of_class`). So the account already has the cardinality ranking and its verdicts on mixed pairs. What it lacks is the axioms that force that ranking. 'mixed pairs are left open' understates what the account has.",
+    "fix": "Write '(here counting is the 1/1 case of weights within a ratio and ranks mixed pairs by number, but no axioms are shown to force it; only the shared order of the class leaves mixed pairs open)'."
+   },
+   {
+    "row": "7. Joint excess, position",
+    "claim": "restraint kept by an equilibrium of the game repeated without end (the folk theorem; here every horizon is finite)",
+    "problem": "misstated-framework",
+    "evidence": "The account's commons is a stock game. What stands next depends on what is left (05-COLLECTIVES.md:188-192; Optimum.lean:495-503 calls it 'the dynamic commons, Levhari and Mirman 1980'), so it is not a repeated game with a fixed stage game. The result that fits it is the folk theorem for dynamic or stochastic games (Dutta 1995), which is what the outrun record cites (the-rest-outruns-the-renewal.md:52). The checked evidence in DEBTS.md also says 'infinitely repeated or dynamic commons (Fudenberg and Maskin 1986; Dutta 1995)'. Dutta's theorem needs conditions that an absorbing end of the base can break. The cell's 'game repeated without end' drops that distinction and attributes no one.",
+    "fix": "Write 'restraint kept by an equilibrium of the commons played without end, by punishing strategies (folk theorems: Fudenberg and Maskin 1986 for repeated games, Dutta 1995 for dynamic ones; here every horizon is finite)'."
+   }
+  ]
+ },
+ {
+  "rows_read": [
+   "1. Coming and ceasing keep pace",
+   "2. Recurrence and attraction",
+   "3. Premises carve parts",
+   "4. Rest needs a least loss",
+   "Paragraph sentence beginning \"The last column lists\""
+  ],
+  "findings": [
+   {
+    "row": "3. Premises carve parts",
+    "claim": "complete independence of the premises (Moore 1910): here each left out alone, and a few pairs",
+    "problem": "unsupported",
+    "evidence": "No Lean theorem or text states that any pair of the eight premises fails together. The witnesses DEBTS.md cites prove only that six premises hold: Counting.lean:510 `World.openQueue_holds` and :657 `World.drivenQueue_holds`, with the `_meets` forms at :777 and :792. No theorem says the other two fail. The only statement of that is the drivenQueue docstring at :654-656. `World.openQueue_premised` (Counting.lean:531) shows the open queue meets all eight premises whenever something arises only across a step at which something is active, so it is not a two-out witness in general. Two-out patterns can be derived for counts that break that condition, from `counting_under_sound` together with `openQueue_holds` and `openQueue_counts`, but the account does not state them. map-of-premises.md and 01 §r-map-of-premises claim one-out independence only (`World.independent`; `World.draining` again fails only balance).",
+    "fix": "Write \"here each left out alone (`World.independent`); the queues of Counting meet six of the eight, but no pair is shown to fail together\", or prove the two-out failures and cite them."
+   },
+   {
+    "row": "1. Coming and ceasing keep pace",
+    "claim": "Zielonka's realization of a global law by local automata (1987)",
+    "problem": "misstated-framework",
+    "evidence": "Zielonka's theorem (1987, RAIRO ITA 21) says that every recognizable (regular, finite-state) trace-closed language is accepted by a finite asynchronous automaton. Its hypothesis is regularity of a trace language, not just any \"global law\". In this account \"law\" means a World's law of change (for example `LocalLaw` in Interleavings.lean). A reader could take the cell to say that every global law can be split into local automata, which is false without the finite-state, trace-closed hypothesis. Searching the chapters, records and Lean for \"zielonka\" and \"asynchronous automat\" finds nothing, so the item is absent as the cell says.",
+    "fix": "Write \"Zielonka's theorem (1987): every regular trace-closed language is accepted by a finite asynchronous automaton, a global finite-state specification realized by local components\"."
+   },
+   {
+    "row": "2. Recurrence and attraction",
+    "claim": "recurrence of almost every point on a space of finite measure, and Kac's mean return time",
+    "problem": "misstated-framework",
+    "evidence": "Poincaré recurrence requires a measure-preserving map: for such a map on a finite measure space, almost every point of a set of positive measure returns to that set. As written, the cell attributes recurrence to any map on a finite measure space, which is false. Kac's lemma (1947) also needs a measure-preserving map, normalized and ergodic for the 1/μ(A) form. Measure-preserving is exactly the analogue of the account's own hypothesis, a law that merges nothing (`Law.lossless_iff_returns`, 01 §r-recurrence-without-premise). The absence itself is confirmed: no `Conservative` or Poincaré result appears in the Becoming Lean outside becoming-checks.",
+    "fix": "Write \"recurrence, under a measure-preserving map of a finite measure space, of almost every point of a set of positive measure, and Kac's mean return time (1947)\"."
+   },
+   {
+    "row": "4. Rest needs a least loss",
+    "claim": "stability in continuous time, rates of convergence and LaSalle's largest invariant set",
+    "problem": "misstated-account",
+    "evidence": "Read on its own, \"rates of convergence\" says the account has no quantitative bound on coming to rest. It has bounds on the number of falls. `Amounts.rests` (02 §r-least-loss-rest) allows at most m falls of ε. `Amounts.rests_of_finite_reading` allows no more falls than the list is long. `Amounts.falls_by_stretch` (02 §r-rest-by-balance) and `renewal_within_rank_bound` (cited in DEBTS.md row 4) give further bounds. What is absent is when rest comes: rest-exactly-where-falls-stop.md under Does not show has \"How soon the world rests, or naming the step\" (`World.lpo_of_finite_ends`), and there are no exponential or asymptotic rates. The account also restates the discrete LaSalle principle (rest-theorem-in-any-amounts.md:57; `World.InAmounts.change_stops_iff`). DEBTS.md's checked cell kept \"(account: discrete rest, attraction, reabsorption)\", and the 08 cell dropped it.",
+    "fix": "Write \"stability in continuous time, exponential or asymptotic rates and LaSalle's largest invariant set (here discrete rest with bounds on the number of falls, not on when rest comes, and the discrete invariance principle)\"."
+   },
+   {
+    "row": "Paragraph sentence beginning \"The last column lists\"",
+    "claim": "two items were found already stated, Sen's graded comparisons (07) and the entropy balance in counts, and dropped, and Fisher's theorem and Hamilton's rule were narrowed to what their general forms here leave out",
+    "problem": "misstated-account",
+    "evidence": "DEBTS.md \"How it was made\" records two more changes made after the checks. Haldane's load was dropped \"because it is one line of arithmetic on `Mutation.kept_share`\", which in effect means it is already in the account. The ranking-function converse was reworded as the record's open item. The sentence lists what was removed as though the list were complete, so it hides one item dropped for being stated.",
+    "fix": "Add \"and Haldane's load, one line of arithmetic on `Mutation.kept_share`\" to the items dropped, or write \"three items were dropped, two found already stated by the refuters and Haldane's load ...\"."
+   },
+   {
+    "row": "1. Coming and ceasing keep pace",
+    "claim": "Lotka's renewal equation and convergence to a stable age structure (Lopez 1961)",
+    "problem": "link-or-name-wrong",
+    "evidence": "This is prior knowledge, not checked against sources. Convergence to a stable age structure under fixed rates (the strong ergodic theorem) is usually credited to Sharpe and Lotka (1911) and Lotka (1939), with a rigorous continuous proof by Feller (1941). Lopez (1961) is cited mainly for weak ergodicity, which proved Coale's conjecture, and for the discrete-time proofs. DEBTS.md itself gives \"(Lotka 1939; Lopez 1961)\". Crediting Lopez alone points a reader to the wrong first source.",
+    "fix": "Write \"convergence to a stable age structure (Sharpe and Lotka 1911; Lotka 1939; Lopez 1961)\"."
+   }
+  ]
+ }
+]
