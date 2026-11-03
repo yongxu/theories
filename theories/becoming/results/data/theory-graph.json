@@ -1964,6 +1964,18 @@
    "page": "theories/becoming/results/records/drawers-in-turn-within-capacities.md"
   },
   {
+   "id": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "result",
+   "record": "drawn-shaping-drawn-one-at-a-time",
+   "title": "The critical mass, drawn one member at a time",
+   "title_zh": "临界量，逐一而抽",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md"
+  },
+  {
    "id": "record:draws-on-a-shared-stock",
    "type": "result",
    "record": "draws-on-a-shared-stock",
@@ -5036,6 +5048,18 @@
    "page": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md"
   },
   {
+   "id": "record:shaping-selected-among-groups",
+   "type": "result",
+   "record": "shaping-selected-among-groups",
+   "title": "The capacity to shape the rule, selected among groups",
+   "title_zh": "塑规之能，于群间被选",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/shaping-selected-among-groups.md"
+  },
+  {
    "id": "record:shaping-the-rule-selected-by-what-comes-back",
    "type": "result",
    "record": "shaping-the-rule-selected-by-what-comes-back",
@@ -7443,7 +7467,7 @@
    "type": "module",
    "name": "Becoming.SelectionLevels",
    "level": "L1",
-   "theorems": 78,
+   "theorems": 81,
    "region": "life",
    "base": "general",
    "on_grammar": false,
@@ -7487,7 +7511,7 @@
    "type": "module",
    "name": "Becoming.Drift",
    "level": "L1",
-   "theorems": 82,
+   "theorems": 129,
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
@@ -8576,7 +8600,7 @@
    "type": "module",
    "name": "Becoming.RuleShaping",
    "level": "L1",
-   "theorems": 52,
+   "theorems": 61,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8599,6 +8623,17 @@
    "name": "Becoming.DrawnShaping",
    "level": "L1",
    "theorems": 31,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.DrawnReplacement",
+   "type": "module",
+   "name": "Becoming.DrawnReplacement",
+   "level": "L1",
+   "theorems": 19,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -29139,10 +29174,22 @@
    "anchor": "r-shaping-the-rule-selected-by-what-comes-back"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-shaping-selected-among-groups"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
    "anchor": "r-shaping-read-by-readers-drawn-from-the-selected"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-drawn-shaping-drawn-one-at-a-time"
   },
   {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
@@ -32152,6 +32199,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.DrawnReplacement",
+   "to": "module:Becoming.DrawnShaping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawnReplacement",
+   "to": "module:Becoming.Drift",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.DrawnShaping",
    "to": "module:Becoming.ChoiceCountCapture",
    "type": "imports"
@@ -34669,6 +34726,11 @@
   {
    "from": "module:Becoming.RuleShaping",
    "to": "module:Becoming.RuleCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RuleShaping",
+   "to": "module:Becoming.SelectionLevels",
    "type": "imports"
   },
   {
@@ -41457,6 +41519,41 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "module:Becoming.DrawnReplacement",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "module:Becoming.DrawnShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "module:Becoming.Drift",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "record:fixation-with-selection",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:drawn-shaping-drawn-one-at-a-time",
+   "to": "record:shaping-selected-among-groups",
+   "type": "related"
+  },
+  {
    "from": "record:draws-on-a-shared-stock",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -42610,6 +42707,11 @@
    "from": "record:fixation-with-selection",
    "to": "module:Becoming.Drift",
    "type": "proved-in"
+  },
+  {
+   "from": "record:fixation-with-selection",
+   "to": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "related"
   },
   {
    "from": "record:fixation-with-selection",
@@ -52297,6 +52399,11 @@
    "type": "related"
   },
   {
+   "from": "record:selection-with-returns-to-groupmates",
+   "to": "record:shaping-selected-among-groups",
+   "type": "related"
+  },
+  {
    "from": "record:selection-within-and-among-groups",
    "to": "module:Becoming.SelectionLevels",
    "type": "proved-in"
@@ -52678,6 +52785,11 @@
   },
   {
    "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-read-by-readers-drawn-from-the-selected",
    "to": "record:loss-read-in-time-by-the-others",
    "type": "related"
   },
@@ -52688,6 +52800,31 @@
   },
   {
    "from": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shaping-selected-among-groups",
+   "to": "module:Becoming.RuleShaping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-selected-among-groups",
+   "to": "module:Becoming.SelectionLevels",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shaping-selected-among-groups",
+   "to": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-selected-among-groups",
+   "to": "record:selection-with-returns-to-groupmates",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:shaping-selected-among-groups",
    "to": "record:shaping-the-rule-selected-by-what-comes-back",
    "type": "formal-reuse"
   },
@@ -52713,6 +52850,11 @@
   },
   {
    "from": "record:shaping-the-rule-selected-by-what-comes-back",
+   "to": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-the-rule-selected-by-what-comes-back",
    "to": "record:readers-drawn-from-the-selected",
    "type": "related"
   },
@@ -52724,6 +52866,11 @@
   {
    "from": "record:shaping-the-rule-selected-by-what-comes-back",
    "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
+   "from": "record:shaping-the-rule-selected-by-what-comes-back",
+   "to": "record:shaping-selected-among-groups",
    "type": "related"
   },
   {
@@ -59852,6 +59999,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+   "to": "record:drawn-shaping-drawn-one-at-a-time",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-effective-capacity-and-eventual-reachability",
    "to": "record:effective-capacity-and-eventual-reachability",
    "type": "states"
@@ -60079,6 +60231,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
    "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
+   "to": "record:shaping-selected-among-groups",
    "type": "states"
   },
   {

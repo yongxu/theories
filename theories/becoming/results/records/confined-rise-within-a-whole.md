@@ -96,6 +96,7 @@ Buss 1987 and Michod 1999 (with Michod and Roze 2001) read the transitions in in
 | statement | [OPENING.md](../../OPENING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
+| receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 
 Aliases: `confined rise`, `rise within a whole`, `cancer`, `germ line`, `sequestration`, `single-cell bottleneck`, `transmissible cancer`, `turning back`, `局限的上升`, `癌`, `生殖系`, `隔离`, `单细胞瓶颈`, `Becoming.Founding.Flow.confined_ends`, `Becoming.Founding.Nested.raises_iff_among`, `Becoming.Founding.varied_before`
 

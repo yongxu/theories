@@ -38,7 +38,7 @@ The three senses of "always" come apart:
 
 ## 2. Exits, each under stated conditions
 
-The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-capture-through-the-rule): a rule read from the share it selects locks; where nothing in the loop reads what lies beyond the share, the lock outlives any loss it does not read; the capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost; and, the rule's readers drawn from those it selects, control and lock are one loop on either side of a critical mass. The exits:
+The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-capture-through-the-rule): a rule read from the share it selects locks; where nothing in the loop reads what lies beyond the share, the lock outlives any loss it does not read; the capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost, what is shared coming to every member alike, and in groups whose shapers give the group's shared part exactly where it covers it with that part weighted by assortment ([02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)); and, the rule's readers drawn from those it selects, control and lock are one loop on either side of a critical mass. The exits:
 
 | Exit | Law, model and hypotheses | Its edge |
 |---|---|---|
@@ -52,7 +52,7 @@ The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-cap
 | Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |
 | Count reviewers by independent causes | Readiness is exactly a nonempty separated envelope of causes (`Reconfiguration.ready_iff_nonempty_separated`; pure core). [Home](chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes) | two reviewers moved under one cause make readiness fail while every name is kept |
 
-Every capture law here is a two-kind count model without noise. Under rare mutation the long-run state is the risk-dominant one, the shapers' capture where `lo < c < hi` and `2c < hi + lo` (Kandori, Mailath and Rob 1993; Young 1993): cited, not proved ([07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)). Over long horizons the window may then be transient, and an exit would need a change of `hi`, `lo` or `c`, not timing alone.
+Every capture law here is a two-kind count model, its locks stated without noise. Drawn one member at a time, the critical mass's locks are left by drift, at a weight whose bound shrinks across the distance from the critical mass, and which state one member arising fixes more often depends on the base and the part shared by all as well as on `hi`, `lo` and `c` ([02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)). So over long horizons the window is not the only exit, and the long-run state, under rare mutation the one with the larger fixation weight (cited, not proved), is not the risk-dominant one in general: risk dominance is what Kandori, Mailath and Rob (1993) and Young (1993) select in their limit, and the Moran criterion approaches it under weak selection (Nowak and others 2004); in a small population under strong selection the two can part ([07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)).
 
 ## 3. What the theory's own laws rule out
 

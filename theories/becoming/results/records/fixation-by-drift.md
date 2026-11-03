@@ -87,6 +87,7 @@ The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json) | — |
+| receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 
 Aliases: `fixation by drift`, `neutral fixation probability`, `漂变导致的固定`, `genetic drift over generations`, `Becoming.Drift.fixation`, `Becoming.Drift.sampled_count`, `Becoming.Drift.varied_vanishes`
 

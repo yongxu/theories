@@ -31,7 +31,7 @@
 
 - That actual rules are read by readers drawn from those they select, each kind counted as the population counts it, or that the shapers among the readers read at least as much coming back to the shapers as the others do: within the model the loop's premise is equivalent to that comparison (drawn_reads_iff), so the premise is moved to who reads, not removed, and its calibration to the present world is not established.
 - That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b).
-- Courses with noise, or convergence to either boundary state: the laws give the direction at every step on each side of the critical mass and the lock. In such a coordination game, under rare mutation in a large finite population the long-run state is the risk-dominant one (Kandori, Mailath and Rob 1993; Young 1993), here the shapers' where lo < c < hi and 2c < hi + lo, as in the witness; the critical mass bounds courses without noise only.
+- That the lock holds under noise: drawn one member at a time either lock is left by drift, and the state a member arising fixes more often can part from risk dominance (drawn-shaping-drawn-one-at-a-time).
 - Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo.
 - That capture damages or supports 生生, or that a course below the critical mass is better than one above it: no evaluation enters, and ranking courses needs C.
 - **Counterexample:** The same reading of what comes back does not decide: in every start of the witness the shapers among the readers read three times the cost as coming back, yet from one to three the capacity falls at every step (CriticalMass.few_disfavours, CriticalMass.few_falls) while from one to one it rises (CriticalMass.even_favours, CriticalMass.even_rises). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean)
@@ -50,14 +50,14 @@ Canonical source: [DrawnShaping.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Readers who learn; a cost changing with the share; noise and the long-run state; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.
+Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; under noise the risk-dominant state is selected in the long run (Kandori, Mailath and Rob 1993; Young 1993). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.
+Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; in the limit of rare mutation against a deterministic dynamic the risk-dominant state is selected (Kandori, Mailath and Rob 1993; Young 1993), and drawn one member at a time the Moran criterion parts from it under strong selection (drawn-shaping-drawn-one-at-a-time). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -69,8 +69,9 @@ Where lo < c < hi the model is the stag hunt in which the second strategy's payo
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop whose every level reads only the share; here every course read from the share alone is locked one way or the other, and leaving needs a reading beyond it.
 - related, not a proved adapter: [a-reading-against-the-share-does-not-ratchet](a-reading-against-the-share-does-not-ratchet.md). Where hi ≤ lo the rule read reads against the share (drawn_against).
 - related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). MA4b: the others among the readers read a loss once it reaches a bound; their reading leaves this module's lock only before their late reading would favour the shapers, for good while it still favours them a step on, with a lag of one step, at most one step between, and a deadline.
+- related, not a proved adapter: [drawn-shaping-drawn-one-at-a-time](drawn-shaping-drawn-one-at-a-time.md). This model drawn one member at a time: both locks left by drift, bounded across the distance from the critical mass.
 
-**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md)
+**Used by:** [drawn-shaping-drawn-one-at-a-time](drawn-shaping-drawn-one-at-a-time.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -89,6 +90,9 @@ Where lo < c < hi the model is the stag hunt in which the second strategy's payo
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../THE-THEORY-OF-BECOMING.md) | — |
 | statement | [README.md](../../../meta-attractor/README.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json) | — |
+| integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md) | — |
+| receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 
 Aliases: `What comes back to the shapers, read by readers drawn from the selected`, `返于塑规者者，由取自被选者之读者读之`, `the critical mass of shapers among the readers`, `Becoming.DrawnShaping.critical_iff`
 
@@ -97,7 +101,8 @@ Aliases: `What comes back to the shapers, read by readers drawn from the selecte
 
 - 26 October 2026: added (MA4), the join of the capacity to shape the rule with the readers drawn from the selected, after one independent review; study section 414.
 - 26 October 2026 (MA4b, study section 420): the readers' timing joined to the critical mass in loss-read-in-time-by-the-others; the next step, the two scope items on the readers' timing, and a related record updated. The laws are unchanged.
+- 3 November 2026, board item AJ8 (study section 503): the noise boundary narrowed: drawn one member at a time either lock is left by drift (drawn-shaping-drawn-one-at-a-time), and the long-run state under noise is not the risk-dominant one in general; the laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-25T17:04:57+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-03T10:27:39+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

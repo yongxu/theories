@@ -1,11 +1,11 @@
 {
- "commit": "d3657d0536a452454381063685a308cf913c4612",
+ "commit": "9b2f5892766d641c3350f75cd19876fdb2fe7130",
  "sources_match_commit": true,
  "core_receipt_at_commit": "20261103T044249.876816Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 383,
- "constants": 55941,
- "spine_theorems": 19112,
+ "tracked_modules": 384,
+ "constants": 56057,
+ "spine_theorems": 19190,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,14 +33,14 @@
   "proof through a base family": 221,
   "used by a theorem on the base": 6127,
   "instance on the base recorded": 161,
-  "apart: own vocabulary": 2764,
-  "apart: prelude-only statement": 218
+  "apart: own vocabulary": 2834,
+  "apart: prelude-only statement": 226
  },
- "apart": 2982,
- "apart_general_structure_by_design": 1098,
- "apart_otherwise": 1884,
+ "apart": 3060,
+ "apart_general_structure_by_design": 1162,
+ "apart_otherwise": 1898,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 129,
+  "spine theorems that are pure forwarders": 136,
   "of them on the base": 81,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 18,
@@ -77,12 +77,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1474,
- "apart_roots": 1474,
+ "apart_used_by_nothing": 1511,
+ "apart_roots": 1511,
  "apart_roots_by_category": {
-  "model-witness": 713,
+  "model-witness": 718,
   "support": 153,
-  "general-structure": 557,
+  "general-structure": 589,
   "calibration": 25,
   "restates": 14,
   "logical-strength": 12
@@ -180,6 +180,10 @@
    138,
    138
   ],
+  "Becoming.Drift": [
+   117,
+   129
+  ],
   "Becoming.GrammarPath": [
    102,
    102
@@ -203,10 +207,6 @@
   "Becoming.SelectionShift": [
    80,
    83
-  ],
-  "Becoming.Drift": [
-   70,
-   82
   ],
   "Becoming.Presence": [
    70,
@@ -241,12 +241,16 @@
    72
   ],
   "Becoming.SelectionLevels": [
-   47,
-   78
+   50,
+   81
   ],
   "Becoming.BlanketWeights": [
    46,
    46
+  ],
+  "Becoming.RuleShaping": [
+   41,
+   61
   ],
   "Becoming.GrammarConditionals": [
    40,
@@ -275,10 +279,6 @@
   "Becoming.RevisionPlans": [
    33,
    33
-  ],
-  "Becoming.RuleShaping": [
-   32,
-   52
   ],
   "Becoming.HexagramPlaces": [
    32,
@@ -339,6 +339,10 @@
   "Becoming.Founding": [
    21,
    42
+  ],
+  "Becoming.DrawnReplacement": [
+   19,
+   19
   ],
   "Becoming.SetPointOptimum": [
    19,
@@ -919,9 +923,9 @@
  },
  "rings": {
   "core": {
-   "modules": 362,
-   "theorems": 18041,
-   "apart": 2617,
+   "modules": 363,
+   "theorems": 18119,
+   "apart": 2695,
    "classes": {
     "statement on both families": 1111,
     "statement on Process/Frame/Run/Trace": 3427,
@@ -930,8 +934,8 @@
     "proof through a base family": 210,
     "used by a theorem on the base": 5757,
     "instance on the base recorded": 161,
-    "apart: own vocabulary": 2429,
-    "apart: prelude-only statement": 188
+    "apart: own vocabulary": 2499,
+    "apart: prelude-only statement": 196
    }
   },
   "instances": {
@@ -1059,7 +1063,7 @@
   "proof through a base family": 5,
   "used by a theorem on the base": 14,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 49
+  "apart: own vocabulary": 51
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1132,6 +1136,12 @@
    "id": "constancy-read-at-a-members-class",
    "modules": [
     "Becoming.GrammarPath"
+   ]
+  },
+  {
+   "id": "drawn-shaping-drawn-one-at-a-time",
+   "modules": [
+    "Becoming.DrawnReplacement"
    ]
   },
   {
@@ -1222,6 +1232,12 @@
    "id": "selection-with-returns-to-groupmates",
    "modules": [
     "Becoming.SelectionLevels"
+   ]
+  },
+  {
+   "id": "shaping-selected-among-groups",
+   "modules": [
+    "Becoming.RuleShaping"
    ]
   },
   {
@@ -6334,10 +6350,13 @@
   "Becoming.SelectionLevels.returns_balance": "apart: own vocabulary",
   "Becoming.SelectionLevels.rises_iff_reading": "apart: own vocabulary",
   "Becoming.SelectionLevels.spread_levels": "apart: own vocabulary",
+  "Becoming.SelectionLevels.within_kept": "apart: own vocabulary",
+  "Becoming.SelectionLevels.among_kept": "apart: own vocabulary",
   "Becoming.SelectionLevels.within_returns": "apart: own vocabulary",
   "Becoming.SelectionLevels.within_against": "apart: own vocabulary",
   "Becoming.SelectionLevels.among_returns": "apart: own vocabulary",
   "Becoming.SelectionLevels.among_for_iff": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_kept": "apart: own vocabulary",
   "Becoming.SelectionLevels.rises_iff_returns": "apart: own vocabulary",
   "Becoming.SelectionLevels.rises_iff_returns_of_uniform": "apart: own vocabulary",
   "Becoming.SelectionLevels.not_rises_of_alike": "apart: own vocabulary",
@@ -6509,6 +6528,25 @@
   "Becoming.Drift.count_le": "apart: own vocabulary",
   "Becoming.Drift.fixed_le": "apart: own vocabulary",
   "Becoming.Drift.fixation": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_mixed": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_one_kind": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_stays": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.add_three_pairs": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.valueBy_add": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_mul": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_le": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_congr": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_const": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_comp": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.riseBy_step": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.harmonic_step": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.potentialBy_harmonic": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_potential": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_le_succ": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_mono": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_beyond": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_le_top": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.steps_const": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_mixed": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_one_kind": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_stays": "apart: own vocabulary",
@@ -6517,6 +6555,9 @@
   "Becoming.Drift.Replacement.value_le": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_const": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_comp": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.downs_const": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.ups_const": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.rise_closed": "apart: own vocabulary",
   "Becoming.Drift.Replacement.rise_step": "apart: own vocabulary",
   "Becoming.Drift.Replacement.potential_harmonic": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_potential": "apart: own vocabulary",
@@ -6525,6 +6566,31 @@
   "Becoming.Drift.Replacement.potential_beyond": "apart: own vocabulary",
   "Becoming.Drift.Replacement.potential_le_top": "apart: own vocabulary",
   "Becoming.Drift.Replacement.partition": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.valueBy_partition": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.fixedBy_below": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_within": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.fixationBy_bounds": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.climbsBy": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.varied_stepBy": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.varied_vanishesBy": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.fixationBy": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.lost_geBy": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.le_of_le_eq": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.le_of_eq_le": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.turn_out": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.add_one_add": "apart: prelude-only statement",
+  "Becoming.Drift.Replacement.ups_le": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.ups_pos": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.riseBy_shift": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.riseBy_le_of_favoured": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.riseBy_le_of_disfavoured": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_tail": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_head": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.potentialBy_top_pos": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.lostBy_bounds": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.lostBy_favoured": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.fixedBy_disfavoured": "apart: own vocabulary",
+  "Becoming.Drift.Replacement.riseBy_ends": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_congr": "apart: own vocabulary",
   "Becoming.Drift.Replacement.value_partition": "apart: own vocabulary",
   "Becoming.Drift.Replacement.fixed_below": "apart: own vocabulary",
@@ -12020,6 +12086,11 @@
   "Becoming.RuleShaping.threshold_rises": "statement on Process/Frame/Run/Trace",
   "Becoming.RuleShaping.threshold_present_below": "statement on Process/Frame/Run/Trace",
   "Becoming.RuleShaping.threshold_falls": "statement on Process/Frame/Run/Trace",
+  "Becoming.RuleShaping.grouped_returns": "apart: own vocabulary",
+  "Becoming.RuleShaping.grouped_rises_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.grouped_alike_iff": "apart: own vocabulary",
+  "Becoming.RuleShaping.grouped_kept_rises": "apart: own vocabulary",
+  "Becoming.RuleShaping.grouped_uniform_iff": "apart: own vocabulary",
   "Becoming.RuleShaping.Split.one_pos": "apart: prelude-only statement",
   "Becoming.RuleShaping.Split.favours": "apart: own vocabulary",
   "Becoming.RuleShaping.Split.shared_disfavours": "apart: own vocabulary",
@@ -12034,6 +12105,10 @@
   "Becoming.RuleShaping.Timing.shorter_falls": "apart: own vocabulary",
   "Becoming.RuleShaping.Timing.seven_falls": "apart: own vocabulary",
   "Becoming.RuleShaping.Timing.eight_rises": "apart: own vocabulary",
+  "Becoming.RuleShaping.Assorting.one_pos": "apart: prelude-only statement",
+  "Becoming.RuleShaping.Assorting.assorted_grouped": "apart: own vocabulary",
+  "Becoming.RuleShaping.Assorting.mixed_grouped": "apart: own vocabulary",
+  "Becoming.RuleShaping.Assorting.either_verdict": "apart: own vocabulary",
   "Becoming.ChoiceCountCapture.selectsThrough": "statement on World/Flow/Web",
   "Becoming.ChoiceCountCapture.chosen_alike": "statement on World/Flow/Web",
   "Becoming.ChoiceCountCapture.unchosen_beyond_coupling": "statement on World/Flow/Web",
@@ -12100,6 +12175,25 @@
   "Becoming.DrawnShaping.CriticalMass.few_falls": "statement on Process/Frame/Run/Trace",
   "Becoming.DrawnShaping.CriticalMass.at_mass_stays": "statement on Process/Frame/Run/Trace",
   "Becoming.DrawnShaping.Against.not_locked": "statement on Process/Frame/Run/Trace",
+  "Becoming.DrawnReplacement.sub_split": "apart: prelude-only statement",
+  "Becoming.DrawnReplacement.drawn_carrier": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.drawn_other": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.favours_iff": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.up_mono": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.steps": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.up_ge": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.up_pos": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.a_le_whole": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.fixation": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.lost_ge": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.fixed_ge": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.lost_above": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.fixed_below": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.one_each": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.risk_dominant_iff": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.Strong.other_first": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.Weak.shapers_first": "apart: own vocabulary",
+  "Becoming.DrawnReplacement.Weak.shared_decides": "apart: own vocabulary",
   "Becoming.ReadInTime.kept_iff": "statement on Process/Frame/Run/Trace",
   "Becoming.ReadInTime.loss_next": "statement on Process/Frame/Run/Trace",
   "Becoming.ReadInTime.turned_iff": "statement on Process/Frame/Run/Trace",
