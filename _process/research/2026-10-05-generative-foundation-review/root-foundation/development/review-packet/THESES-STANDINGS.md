@@ -1,6 +1,6 @@
 # The sciences front's theses given their standings
 
-*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.3 to 9.5 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.1 to 30.0 more.*
+*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.4 to 9.6 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.1 to 30.0 more; [the point's top](#the-points-top), 3.4 to 4.5 more.*
 
 The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)). After T1S gave T1 its standing in its home, TS2 brought the front's T1 row, S-03 and S-14 to it ([after T1S](#after-t1s)).
 
@@ -278,3 +278,13 @@ The only git commands I ran were `git diff`, `git show` and `git status`. Word c
 5. **Anything broken** (e). Nothing.
 
 The figures were rerun after these fixes.
+
+## The point's top
+
+*Board item TS4, 4 November 2026, landed on its own. AI-written; no person has reviewed it.*
+
+The coordinator's rule for T1 after T1FP2: a finding that would make a reader believe something false about T1 lands now, and one that only makes a correct statement more exact waits for one batched pass in the next edition. TS3, this dossier's T1 cell and S-12 after T1P, is of the second kind and waits on branch `t1-premises-follow`, listed in the board's batched section. One finding of the first kind was left on the front.
+
+The front's T1 row said "the point of no return is exact", with no bound on the levels. The front defines the point as the least level from which the condition does not end ([reading the items](../../../../../../theories/becoming/review/SCIENCES.md#reading-the-items)), so a bare "exact" tells a reader that from the point up every level persists. T1's home's owner found that false, in an example this dossier's owner then ran step by step: a draw of 5, `y` of 5, a top of 12, and giving of 5 where the draw leaves 5, 6 or 7 and nothing elsewhere. Every premise of the regime's theorem holds, giving meets the draw at `y`, and up to the top a level ends exactly where it starts below 10. Yet 13 and 14 end, and so do 18 and 19, 23 and 24, and so on: from 14 what is left is 9, which gives nothing. High levels that crash are what giving that overcompensates produces, so the belief would matter to a scientist. `RegimeMargin.ends_iff_below` proves exactness only for levels up to a top the step keeps, and [02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#t1) and 08's row bound it there: "a level up to `hi` ending exactly where it starts below `H + y`".
+
+TS4 bounds the row in that owner's words: "the [point of no return](../../../../../../theories/becoming/review/SCIENCES.md#reading-the-items) is exact up to a top the step keeps". This dossier's owner checked them against 02 §5, 08's row and the Lean. T1's home's owner then read the change, read-only, and found the words as meant and true under the front's definition of the point, and this section and the dossier's sentence true to what was found and done. Its one point, that the example's giving is read off what the draw leaves and not off the level, was taken. The front grew from 1,376 words to 1,383, 10.6 to 13.8 minutes, and ecology's path from 6,324 words to 6,331, 48.7 to 63.3 minutes; the stated times hold, 45 to 65 minutes for the path, on the front, and 140 to 190 for the whole, on the front and both covers.
