@@ -56938,6 +56938,11 @@
    "type": "related"
   },
   {
+   "from": "record:what-bounds-offspring-numbers",
+   "to": "record:the-breeding-value",
+   "type": "related"
+  },
+  {
    "from": "record:what-can-be-born-next",
    "to": "module:Becoming.CausalGrowth",
    "type": "proved-in"

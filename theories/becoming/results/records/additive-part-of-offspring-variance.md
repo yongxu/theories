@@ -29,7 +29,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Several carried amounts at once (the breeding value, a multiple regression) and Fisher's identity itself (the predicted mean rising by the additive variance over the mean offspring number), which needs the regression coefficient, a ratio, are not stated.
+- Several carried amounts at once (the breeding value, a multiple regression) and Fisher's identity itself (the predicted mean rising by the additive variance over the mean offspring number) are not stated here: record the-breeding-value states both, cross-multiplied, with a breeding value meeting the normal equations given and, for the mean's rise, exact transmission; one carried amount is the case of a single pair.
 - The equality case beyond the top: that the bound is attained exactly where offspring number is affine in the amount pair by pair (Lagrange's identity) is not stated.
 - Offspring number is a weight and a reading, not a measure of worth: that an amount is carried with more offspring says nothing about what ought to be.
 - **Counterexample:** Variation in offspring number need not be carried by a varying amount: in Unrelated both vary while the covariance is nothing (Unrelated.unrelated), so the additive part through that amount is nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean)
@@ -46,7 +46,7 @@ Canonical source: [Reproduction.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Several carried amounts at once (the breeding value); the equality case; Fisher's identity with rational amounts; an independent review.
+The equality case; Fisher's identity with rational amounts; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -94,6 +94,7 @@ Aliases: `additive part of Fisher's theorem`, `additive genetic variance`, `Cauc
 - 20 October 2026: added (EV10), the additive part of Fisher's theorem through one carried amount: counted Cauchy-Schwarz, the additive variance at most the whole, the response over generations bounded; study section 279.
 - 22 October 2026, EV13-EV16: related record mutation-and-the-balance-it-sets added (study section 368); its laws and their statements are unchanged.
 - 22 October 2026, EV13-EV16: related record the-breeding-value added (study section 368); its laws and their statements are unchanged.
+- 3 November 2026, board item KS (found by KD's readers): the does-not-show said Fisher's identity needs a ratio and is not stated, and the next delta asked for several carried amounts; record the-breeding-value (EV15) states both, cross-multiplied, and is now named in both places; its laws and their statements are unchanged.
 
 </details>
 
