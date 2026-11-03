@@ -5460,6 +5460,7 @@
         "experiments/commons-llm-feedback-unaided/README.md",
         "experiments/commons-llm-feedback/README.md",
         "experiments/commons-llm-feedback/agent.py",
+        "experiments/commons-outrun-generalizing/README.md",
         "experiments/direction-installation/README.md",
         "experiments/drain-beyond-the-reward/DESIGN.md",
         "experiments/drain-beyond-the-reward/PRIOR-WORK-2026-11-03.md",
