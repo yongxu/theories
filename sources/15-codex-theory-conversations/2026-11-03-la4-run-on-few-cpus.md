@@ -30,7 +30,7 @@ Stage A of LA4 ([the design](../../experiments/drain-beyond-the-reward/DESIGN.md
 
 ## What was done (AI-authored)
 
-- **The run.** `nice -n 10 python3 -B run.py --jobs 2` with Python 3.13.3 and numpy 2.4.2, from the frozen commit: two jobs at low priority, not ten, so that other sessions kept the machine. 480 runs in about nine hours, then the frozen `analyze.py`. Nothing was downloaded.
+- **The run.** `nice -n 10 python3 -B run.py --jobs 2` with Python 3.13.3 and numpy 2.4.2, from the frozen commit: two jobs at low priority, not ten, so that other sessions kept the machine. 480 runs in about two hours, then the frozen `analyze.py`. Nothing was downloaded.
 - **The prior-work note** ([PRIOR-WORK-2026-11-03.md](../../experiments/drain-beyond-the-reward/PRIOR-WORK-2026-11-03.md)), written while the run went. It records a search, not a reading in full: the law for optima is known (Zhuang and Hadfield-Menell 2020), and the locus is contested by work on language models (emergent misalignment from reward hacking); no study found tests the split on one condition as LA4 does. 05 §7 names those rivals beside its outside evidence.
 - **The results** ([LA4's README](../../experiments/drain-beyond-the-reward/README.md#the-result)) are stated in T3's home (05 §7), 08's thesis table, the overview, README's first screen, the collective page, the one argument, the alignment dossier and the development pages that said Stage A had not run.
 
@@ -38,4 +38,4 @@ Stage A of LA4 ([the design](../../experiments/drain-beyond-the-reward/DESIGN.md
 
 "Don't use all the cpus" set the run's parallelism, not its design: the frozen rules do not depend on how many jobs run at once, and each run's seed fixes its numbers.
 
-Ren's intuition, that this is what machine learning would lead one to expect, is the design's own caution (§1): for policy gradient the pattern largely follows from the update rule, so a pass shows that shared representations did not break it, not a law. The search found that the expectation is common and that the split on one condition, with and without shared units, had not been tested so. What the run adds that the intuition did not settle is where it did not resolve: the site that nothing rewards moved in both neural families, the control's most, and the locus is unresolved.
+Ren's intuition, that this is what machine learning would lead one to expect, is the design's own caution (§1): for policy gradient the pattern largely follows from the update rule, so a pass shows that shared representations did not break it, not a law. The search found that the expectation is common and that the split on one condition, with and without shared units, had not been tested so. What the run adds that the intuition did not settle is where it did not resolve: the site that nothing rewards rose in both neural families, the control's too, and the locus is unresolved.
