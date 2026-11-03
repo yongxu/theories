@@ -1,11 +1,11 @@
 {
- "commit": "21ae13fb1442bcdcccd603a8802c5e1df2530c64",
+ "commit": "e0f3fa2c3f4473419b398768858c7946fd8029b1",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261103T203838.375122Z",
+ "core_receipt_at_commit": "20261103T211917.845905Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 385,
- "constants": 56219,
- "spine_theorems": 19266,
+ "tracked_modules": 386,
+ "constants": 56235,
+ "spine_theorems": 19274,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 221,
   "used by a theorem on the base": 6127,
   "instance on the base recorded": 161,
-  "apart: own vocabulary": 2902,
+  "apart: own vocabulary": 2910,
   "apart: prelude-only statement": 234
  },
- "apart": 3136,
- "apart_general_structure_by_design": 1200,
- "apart_otherwise": 1936,
+ "apart": 3144,
+ "apart_general_structure_by_design": 1206,
+ "apart_otherwise": 1938,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 137,
   "of them on the base": 81,
@@ -77,12 +77,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1521,
- "apart_roots": 1521,
+ "apart_used_by_nothing": 1526,
+ "apart_roots": 1526,
  "apart_roots_by_category": {
-  "model-witness": 724,
+  "model-witness": 726,
   "support": 153,
-  "general-structure": 593,
+  "general-structure": 596,
   "calibration": 25,
   "restates": 14,
   "logical-strength": 12
@@ -508,6 +508,10 @@
    8,
    8
   ],
+  "Becoming.ReachedCascade": [
+   8,
+   8
+  ],
   "Becoming.BalanceRegions": [
    8,
    43
@@ -927,9 +931,9 @@
  },
  "rings": {
   "core": {
-   "modules": 364,
-   "theorems": 18195,
-   "apart": 2771,
+   "modules": 365,
+   "theorems": 18203,
+   "apart": 2779,
    "classes": {
     "statement on both families": 1111,
     "statement on Process/Frame/Run/Trace": 3427,
@@ -938,7 +942,7 @@
     "proof through a base family": 210,
     "used by a theorem on the base": 5757,
     "instance on the base recorded": 161,
-    "apart: own vocabulary": 2567,
+    "apart: own vocabulary": 2575,
     "apart: prelude-only statement": 204
    }
   },
@@ -11768,6 +11772,14 @@
   "Becoming.Turns.separates_at": "apart: own vocabulary",
   "Becoming.Turns.Copying.readsOnlyActs": "apart: own vocabulary",
   "Becoming.Turns.Copying.reaches_first_only": "apart: own vocabulary",
+  "Becoming.Turns.readsOnlyActsAlong_of_from": "apart: own vocabulary",
+  "Becoming.Turns.lawAlikeAlong_of_along": "apart: own vocabulary",
+  "Becoming.Turns.law_alike_along": "apart: own vocabulary",
+  "Becoming.Turns.acts_alike_along": "apart: own vocabulary",
+  "Becoming.Turns.act_alike_along": "apart: own vocabulary",
+  "Becoming.Turns.cascade_through_along": "apart: own vocabulary",
+  "Becoming.Turns.Unreached.along": "apart: own vocabulary",
+  "Becoming.Turns.Unreached.not_from": "apart: own vocabulary",
   "Becoming.RevisionRoutes.GainLoss.above_irrefl": "apart: own vocabulary",
   "Becoming.RevisionRoutes.GainLoss.above_asymm": "apart: own vocabulary",
   "Becoming.RevisionRoutes.GainLoss.maximal_iff": "apart: own vocabulary",

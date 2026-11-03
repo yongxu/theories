@@ -1,0 +1,217 @@
+{
+  "schema_version": 2,
+  "id": "a-cascade-at-the-histories-reached",
+  "title": {
+    "en": "A cascade at the histories reached",
+    "zh": "所至之历上之级联"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-03T21:26:50+00:00",
+  "statement": {
+    "en": "From member k on, where each gives one act for two worlds' couplings at the acts the first gives it, worlds alike in the couplings before k get the same acts; where each acts alike whatever its coupling at every world's history, the acts carry only what couples in before k. Weaker than Cascade's.",
+    "zh": "自第 k 员起，每员于首世界所予之行列对二世界之耦合予同一行，则于第 k 员前诸耦合无别之二世界，诸行皆同；每员于每一世界所至之历皆不论其耦合而同行时，诸行所载不逾第 k 员前之所耦合入。此前提弱于 Cascade 之前提。"
+  },
+  "laws": [
+    {
+      "en": "From member k on, k included, every member giving one act for the couplings of worlds w and w' at the list of acts w gives it is named, and so is every member acting alike whatever its own coupling there; the second gives the first for every w', and the premise on every list of earlier acts gives the second at every world.",
+      "zh": "自第 k 员起（含第 k 员），每员于世界 w 所予之行列对 w 与 w' 之耦合予同一行，有名；每员于彼处不论其耦合而同行，亦有名；后者予前者于每一 w'，于每一前行之列之前提予后者于每一世界。",
+      "declarations": [
+        "Becoming.Turns.LawAlikeAlong",
+        "Becoming.Turns.ReadsOnlyActsAlong",
+        "Becoming.Turns.lawAlikeAlong_of_along",
+        "Becoming.Turns.readsOnlyActsAlong_of_from"
+      ]
+    },
+    {
+      "en": "Where the pair w, w' meets the first, and the two are alike through the couplings of the members before k, they give the same list of acts at every length and every member the same act: the premise is asked at w's histories and at the two couplings compared alone.",
+      "zh": "w 与 w' 二世界合前者，且于第 k 员前诸员之耦合无别时，每一长之行列皆同，每员之行皆同：前提唯问于 w 之历与所比之二耦合。",
+      "declarations": [
+        "Becoming.Turns.law_alike_along",
+        "Becoming.Turns.acts_alike_along",
+        "Becoming.Turns.act_alike_along"
+      ]
+    },
+    {
+      "en": "Where every member from k on acts alike whatever its coupling at the histories every world reaches, every selection reading the list of the first N acts, for any N, selects alike any two worlds alike through the couplings of the members before k.",
+      "zh": "自第 k 员起每员于每一世界所至之历皆不论其耦合而同行时，凡读首 N 行之列之选，不论 N，于第 k 员前诸员之耦合无别之二世界皆同选。",
+      "declarations": [
+        "Becoming.Turns.cascade_through_along"
+      ]
+    },
+    {
+      "en": "Member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it, every later member acting alike: from member 0 the members act alike whatever their couplings at the histories every world reaches, and the premise on every list from member 0 fails (from member 1 it holds).",
+      "zh": "第 0 员唯于非空之前行列后读其耦合，而无一世界予之以此列，后诸员皆同行：自第 0 员起诸员于每一世界所至之历皆不论其耦合而同行，而自第 0 员起于每一列之前提不成立（自第 1 员起成立）。",
+      "declarations": [
+        "Becoming.Turns.Unreached.law",
+        "Becoming.Turns.Unreached.turns",
+        "Becoming.Turns.Unreached.along",
+        "Becoming.Turns.Unreached.not_from"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any types of worlds, couplings and acts; members indexed by the natural numbers, each reading the whole list of acts before it, as in readers reading readers.",
+      "zh": "世界、耦合与行之任一型；成员以自然数为序，各读其前之全部行列，如读者读读者。"
+    },
+    {
+      "en": "From member k on, k included, every member gives one act for the two couplings compared at the list of acts one of the two worlds gives it, not at the other's (for the selection, every member acts alike whatever its coupling at the histories every world reaches); k is fixed, the same for every world.",
+      "zh": "自第 k 员起（含第 k 员），每员于所比二世界之一所予之行列，对所比之二耦合予同一行，非于另一者之行列（于选，则每员于每一世界所至之历皆不论其耦合而同行）；k 固定，于每一世界皆同。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a natural chooser with no fixed prefix meets the premise at every world: one who stops reading a private signal once the public acts outweigh it meets it at a world whose acts before k already do, and at every world for no fixed k.",
+      "zh": "无定前缀之自然择者于每一世界合此前提：公行重于私讯时方不复读私讯者，合之于第 k 员前之行已然之世界，于每一世界则无一定之 k。",
+      "kind": "scope"
+    },
+    {
+      "en": "When an actual member stops reading its coupling at the histories it is shown: a premise here.",
+      "zh": "实际之员于其所见之历何时不复读其耦合：此处为前提。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A position that depends on the world (a stopping time, the first member that stops reading its coupling at the history the world gives it), with or without persistence after it.",
+      "zh": "随世界而变之位（停时，即于世界所予之历首个不复读其耦合之员），其后持续与否。",
+      "kind": "scope"
+    },
+    {
+      "en": "A probabilistic or total-variation form, a member's dependence on its coupling weighted over the histories reached.",
+      "zh": "概率或全变差之形，一员对其耦合之依赖于所至之历上加权。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a pool's later selection keeps a coupling one member's act carries.",
+      "zh": "池之后选存一员之行所载之耦合。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+      "detail": {
+        "en": "The converse of readsOnlyActsAlong_of_from, at k = 0: member 0 reading its coupling only after a non-empty list of earlier acts meets the premise at every world's reached histories, and the premise on every list fails (Turns.Unreached.along, Turns.Unreached.not_from).",
+        "zh": "readsOnlyActsAlong_of_from 之逆，于 k = 0：第 0 员唯于非空之前行列后读其耦合，于每一世界所至之历合前提，而于每一列之前提不成立（Turns.Unreached.along、Turns.Unreached.not_from）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty (receipt 20261103T211917.845905Z): ReachedCascade imports Cascade only, whose bytes are unchanged; the acts are Cascade's, built by recursion on the number of members, and the induction follows Cascade's, restated with the premise asked at the world's acts for the two couplings compared.",
+    "zh": "纯核，公理报告皆空（回执 20261103T211917.845905Z）：ReachedCascade 唯引 Cascade，其字节未变；诸行即 Cascade 之行，以成员之数递归而建，归纳循 Cascade 之归纳而重述，前提唯问于此世界之行与所比之二耦合。"
+  },
+  "next_delta": {
+    "en": "A position that depends on the world, with persistence; the total-variation form, in the periphery; TR3, which rests on this premise and fixes k by a scripted prefix; review by a person.",
+    "zh": "随世界而变之位，附持续；全变差之形，于外围；TR3，依此前提，以所定之前缀固定 k；人之审查。"
+  },
+  "correspondence": {
+    "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992) as a chooser meets it: one who stops reading a private signal only once the public acts it is shown outweigh it need not ignore that signal on lists of acts it is never shown. Such a chooser meets the premise at a world whose acts before k already outweigh the signal, so the laws for two worlds apply there; at every world, as the selection law needs, it meets it for no fixed k unless the acts before k are fixed (TR3's scripted prefix). AI reading, not a containment.",
+    "zh": "信息级联之定形（Bikhchandani、Hirshleifer 与 Welch 1992；Banerjee 1992），如择者所合者：唯于所见之公行重于私讯时方不复读私讯者，于其从未见之行列未必不读。此择者合前提于第 k 员前之行已重于私讯之世界，故二世界之律于彼处适用；于每一世界，如选之律所须，则无一定之 k 合之，除非第 k 员前之行已定（TR3 所定之前缀）。AI 之读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+  "aliases": [
+    "a cascade at the histories reached",
+    "所至之历上之级联",
+    "cascade along the run",
+    "Becoming.Turns.acts_alike_along",
+    "Becoming.Turns.LawAlikeAlong",
+    "Becoming.Turns.ReadsOnlyActsAlong"
+  ],
+  "dependencies": [
+    {
+      "id": "readers-reading-readers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Turns, its acts, ReadsOnlyActsFrom and AlikeBefore; the premise on every list gives this one at every world (readsOnlyActsAlong_of_from), so readers reading readers' three cascade laws follow from this record's by that step, a composition not stated as a declaration; separates_at and copying are not restated here.",
+        "zh": "Turns、其行、ReadsOnlyActsFrom 与 AlikeBefore；于每一列之前提予此前提于每一世界（readsOnlyActsAlong_of_from），故读者读读者之三级联律以此一步由本记录之律得出，此组合未述为声明；separates_at 与相仿未在此重述。"
+      },
+      "interface": {
+        "output": {
+          "en": "Members in turn, their acts, worlds alike before k.",
+          "zh": "依次之员、其行、第 k 员前无别之世界。"
+        },
+        "input": {
+          "en": "The same, with the premise asked at the acts one world gives.",
+          "zh": "同一者，前提唯问于一世界所予之行。"
+        },
+        "conditions": {
+          "en": "None beyond the premise.",
+          "zh": "前提之外无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean"
+      }
+    },
+    {
+      "id": "generalization-through-lumping",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Training.Through, the selection through a relation of being alike.",
+        "zh": "Training.Through：经无别之关系之选。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Turns.LawAlikeAlong",
+        "Becoming.Turns.ReadsOnlyActsAlong",
+        "Becoming.Turns.Unreached.along",
+        "Becoming.Turns.Unreached.law",
+        "Becoming.Turns.Unreached.not_from",
+        "Becoming.Turns.Unreached.turns",
+        "Becoming.Turns.act_alike_along",
+        "Becoming.Turns.acts_alike_along",
+        "Becoming.Turns.cascade_through_along",
+        "Becoming.Turns.lawAlikeAlong_of_along",
+        "Becoming.Turns.law_alike_along",
+        "Becoming.Turns.readsOnlyActsAlong_of_from"
+      ],
+      "sha256": "357bb521a879ee175a6927cb3fcfd60099b11fcf1194ec23c9b3e09d89390307"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean",
+      "role": "proof",
+      "sha256": "e6add4291cb2af7cefb3882ed48619aeaa6a473446fd5ff5b2505c49fe5df538"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T211917.845905Z/verification.json",
+      "role": "receipt",
+      "sha256": "158b1951131f9bc2bf402ddb9747f8cdeb417e89a7fd8e6cf26918ddedb7890d"
+    },
+    {
+      "path": "experiments/formations-that-read/REST-TR3-TR6.md",
+      "role": "integration",
+      "sha256": "fd07d5ed990ba73c7b8a3f18cf466b80c4483d7b3fb220aaaaab39448777ad59"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "62684edaf681125c69cc0107400ec6268e30b8c0f2333cce1e74577c3cc1f0bc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T211917.845905Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReachedCascade",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "4 November 2026, board item TRL (RFZ's split: TR3's lemma 1 in REST-TR3-TR6, handed to this item; TR3's freeze stays with RFZ): added. The premise of readers reading readers asked only at the histories a world reaches, a weaker premise by a witness, Cascade's bytes unchanged; study section 507.",
+      "zh": "2026年11月4日，工作板条目 TRL（RFZ 之分：REST-TR3-TR6 之引理一，交本条目；TR3 之冻结仍属 RFZ）：新增。读者读读者之前提唯问于一世界所至之历，以一见证为较弱之前提，Cascade 之字节未变；研究第 507 节。"
+    }
+  ]
+}

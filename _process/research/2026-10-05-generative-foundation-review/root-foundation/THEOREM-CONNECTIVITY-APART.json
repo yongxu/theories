@@ -7621,6 +7621,31 @@
    "module": "Becoming.RuleShaping",
    "category": "model-witness",
    "reason": "the same spreads in groups of unequal size, shaping selected with the shapers as a pair and against with each alone; a fact about two constructed listings, not a law of the unfolding (Becoming.RuleShaping, US)"
+  },
+  "Becoming.Turns.readsOnlyActsAlong_of_from": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.readsOnlyActsAlong_of_from: the premise on every list gives it at the histories every world reaches: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.act_alike_along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.act_alike_along: every member's act is alike across two worlds alike before k where the pair meets the premise along the run: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.cascade_through_along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "general-structure",
+   "reason": "Turns.cascade_through_along: where the premise holds at the histories every world reaches, a selection through the acts is a selection through the first k couplings: a law of members in turn on any types (readers reading readers), the cascade's premise asked at the histories a run reaches; it waits for a pool of members in turn on the base (TRL)"
+  },
+  "Becoming.Turns.Unreached.along": {
+   "module": "Becoming.ReachedCascade",
+   "category": "model-witness",
+   "reason": "Turns.Unreached.along: a fact about one constructed model, a member 0 reading its coupling only on a list no run gives it (TRL)"
+  },
+  "Becoming.Turns.Unreached.not_from": {
+   "module": "Becoming.ReachedCascade",
+   "category": "model-witness",
+   "reason": "Turns.Unreached.not_from: a fact about one constructed model, where Cascade's premise from member 0 fails (TRL)"
   }
  },
  "instances": {

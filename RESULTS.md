@@ -5,13 +5,14 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. 532 registered results: 501 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Unmigrated results retain their existing sources; files, checks and repeated acceptances are not independent results. Hash drift requires reading the changed source before updating its record.
+The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. 533 registered results: 502 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Unmigrated results retain their existing sources; files, checks and repeated acceptances are not independent results. Hash drift requires reading the changed source before updating its record.
 
 <a id="已登记成果--registered-results"></a>
 ## Registered results
 
 | ID | Result | Kind | Status | Source |
 |---|---|---|---|---|
+| `a-cascade-at-the-histories-reached` | [A cascade at the histories reached](theories/becoming/results/records/a-cascade-at-the-histories-reached.md) | theorem | recorded-checked | [ReachedCascade.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean) |
 | `a-code-formed-between-formations` | [A code formed between formations](theories/becoming/results/records/a-code-formed-between-formations.md) | theorem | recorded-checked | [SharedCodes.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean) |
 | `a-code-held-as-counts` | [A code held as counts, learned from what is heard](theories/becoming/results/records/a-code-held-as-counts.md) | theorem | recorded-checked | [CountedCodes.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean) |
 | `a-commuting-learner-drives-no-unread-choice` | [A commuting learner drives no choice whose values nothing it reads tells apart](theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md) | theorem | recorded-checked | [WeightedCommuting.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean) |

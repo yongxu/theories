@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261103T203838.375122Z",
- "core_sources_sha256": "7ea07e7ac37a4049269cbc12b1a9f29f0d2f329a4832cddb8f7e1609677923a9",
+ "core_receipt": "20261103T211917.845905Z",
+ "core_sources_sha256": "6a0bc81fc7de3a55243d26c447552933db0db43fe529a63c6e9e25654132fdc3",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4139,
+  "laws": 4143,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 896,
   "balance, represented": 628,
   "anchor, not reached": 131,
-  "no shared law": 2084,
+  "no shared law": 2088,
   "vocabulary_only": 79,
   "closure": 528,
   "balance": 836,
@@ -415,6 +415,52 @@
   }
  },
  "records": {
+  "a-cascade-at-the-histories-reached": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Turns.LawAlikeAlong",
+     "Becoming.Turns.ReadsOnlyActsAlong",
+     "Becoming.Turns.lawAlikeAlong_of_along",
+     "Becoming.Turns.readsOnlyActsAlong_of_from"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Turns.law_alike_along",
+     "Becoming.Turns.acts_alike_along",
+     "Becoming.Turns.act_alike_along"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Turns.cascade_through_along"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Turns.Unreached.law",
+     "Becoming.Turns.Unreached.turns",
+     "Becoming.Turns.Unreached.along",
+     "Becoming.Turns.Unreached.not_from"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "a-code-formed-between-formations": [
    {
     "law": 1,
@@ -63825,7 +63871,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "74a15ae7c5ace9354c42bb5f7a82c46f0c9ad39eb17bbf2596b6ea0a7d08449d",
+   "modules_sha256": "572023fbfce79e3c35eb548bae3a590ea2d0c58a79a12466f509d32042bd422f",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
