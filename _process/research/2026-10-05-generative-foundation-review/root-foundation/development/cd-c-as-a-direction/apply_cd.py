@@ -75,7 +75,7 @@ TEXT = {
          'precedence pair, on what continues the chain widens every course from the empty set lacking one of its pairs, '
          'and no strict order contains both widenings'),
         # C's own sentence in §5: C ranks only where one course widens the other
-        ('C ranks courses; choices take more,', 'C ranks a course only above a course it widens; choices take more,'),
+        ('C ranks courses; choices take more,', 'C ranks a course above each course it widens and decides no other pair; choices take more,'),
     ],
     C8: [
         ('| `Comparison` | the only premise that ranks courses; warrant open |',

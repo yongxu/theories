@@ -78,7 +78,7 @@ The test is AGENTS.md's: rename only a name that states a wrong meaning. The mea
   - the thesis line says what the laws give with no premise;
   - §1's first sentence names the thesis it stands on, one relational unfolding, argued and not proved (08);
   - §2's heading and its premise-free verbs;
-  - §5's "C ranks a course only above a course it widens";
+  - §5's "C ranks a course above each course it widens and decides no other pair";
   - the open items list;
   - the renamed records' anchors, beside the old ones.
 - 08: the C row's standing ("gives order, in general alone … warrant open"), the shared law's label and "1 of 8 on widening".
