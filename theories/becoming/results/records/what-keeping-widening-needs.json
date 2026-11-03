@@ -482,8 +482,8 @@
       "kind": "scope"
     },
     {
-      "en": "That renewal gives widening: on the kind relay 全生成 at two orders and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing.",
-      "zh": "更新给出扩大：于种类接力上，二阶之全生成与 «生生» 成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
+      "en": "That renewal gives widening: on the kind relay 全生成 at two grains and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing.",
+      "zh": "更新给出扩大：于种类接力上，两种粒度之全生成与 «生生» 成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
       "kind": "non-implication",
       "witness": "Becoming.KindRelay.Runs.beginnings_without_opening"
     },
@@ -1191,6 +1191,10 @@
     {
       "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 15 and of the second item it does not show, as the English and KindRelay.renews_without_end state; nothing the record states changed.",
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 15 与所不表明之第二项之中文中文法之 «生生» 加标，如英文与 KindRelay.renews_without_end 所述；记录所述无改变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): in what the record does not show, \"全生成 at two orders\" reads \"at two grains\", the word of the record generation-and-degeneration-at-two-grains, of 02 and of the glossary; under the glossary's one sense, order says which course is better. The claim is unchanged.",
+      "zh": "3 November 2026, CD (board item CD)：在本记录未表明者中，“二阶之全生成”改为“两种粒度之全生成”，即记录 generation-and-degeneration-at-two-grains、02 与词汇表之词；按词汇表的单一词义，次序说哪个进程更好。主张不变。"
     }
   ]
 }
