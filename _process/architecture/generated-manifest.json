@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "e47e168091fd84e7b7c69ba73704dbfc72de906548d0ce1fafce63c739020e3d",
+    "README.md": "f80495f61f0c0aac7bd3fcea89dc6b7aad6580b1c29e29202e6475ba8ef8337d",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "ba956ff9178fc550939dd34fd274f9a7ff3049a435e48fd6349e4832be4b8228",
-    "GOALS.md": "b06f3adabb187cc08577e309cadf944fd90a898d37dfab89c1d0e4afe496224b",
+    "GOALS.md": "7b38cdb5dc82ed43f981dc5232b444c3117316272fbccfa85f1fac3a822ba5dd",
     "DEPENDENCIES.md": "1f72c6f80235f54fb15210f5334b5c04984b1f7d933a239f4f22311cc9d3a25e",
     "_process/BRIEF.md": "386505a702fc12b2a938eaee1a39c11392629efe9204d845b50b114e6fbc7efa",
     "theories/becoming/README.md": "e996dd3d2edff265cb294f173690f66c90dd2ab08aef02da0f5dc1e4ee8302e2",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "2990ff22e01aac6c7e959677a38bb834c5501502fa3897d889d078bda2161af2",
     "theories/becoming/results/records/worlds-are-runs.md": "bd3764698851c0eb76b515e8f7db81b4a67a5a131280bfc883a94773525a032f",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "d0289236e3a8bb7794ea1a7e14e2fd78340d0209534bd581f65728546353aa55",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "4097d610de07d30ea45e790e218a0e81a7179c79b509ad8ddd25f47eb0b2939f",
+    "_process/research/README.md": "4cf0cbdc9fcb1387600d8095a09b6bfd222bca93100cb2b52a799c3f0e7ac2f7",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "7402da36f8aebc306b5038a566182628a98e77052f3debd7bac5fc48f299fb54",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "01fdc05df689ad7732db2dd8e2b14d76affb949ee889d2192c33a28bc7f167c7",
     "_process/DIRECTIVE-INDEX.md": "b001fb9464da3a9697dd25ddd791bafb9e2a5e0b10a47c9e3722d3ab9933e6de",
