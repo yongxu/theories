@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-03T15:58:27+00:00",
+  "reviewed_at_utc": "2026-11-03T17:56:13+00:00",
   "statement": {
-    "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
-    "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
+    "en": "Under a standing draw and each law's premises, the point of no return, the draw above the least level whose giving meets it, is exact up to a top the step keeps, more than the draw above the need where giving there falls short, and rises with the draw, superadditively for joint draws, up to one.",
+    "zh": "在常设汲取下且各律前提成立时，不可回返点即所给满足汲取的最低水平加上汲取，在步所保持之上限内确切；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高，联合汲取下其升高在一单位之内超可加。"
   },
   "laws": [
     {
@@ -454,6 +454,10 @@
     {
       "en": "3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, \"After TS2's reader\"): law 2's premise says exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the top, where it had read as every level from y up to the top, more than the Lean asks; and its exactness now names its other premises: giving short of the draw below y and nothing from nothing, which it had left to law 1, and 0 < H + y, which no law named and without which it fails where the draw and y are both zero. The law now states what the Lean proves; the Lean is unchanged.",
       "zh": "2026年11月3日，T1P（TS2 读者所见之更正，记于审阅包 T1-STANDING.md 之“After TS2's reader”）：第二律的前提确切说出 Meets 所要求者，即所给在每个不小于 y 且 z + H 不超过上限的 z 处满足汲取；原文读作从 y 到上限的每个水平，多于 Lean 所要求；其确切性今说出其余前提：所给在 y 之下不及汲取与无中不生有，原留于第一律；以及 0 < H + y，原无一律说出，无此则汲取与 y 皆为零时不成立。今律所言即 Lean 所证；Lean 不变。"
+    },
+    {
+      "en": "4 November 2026, RGP (a correction from TS3's reader, recorded in the review packet's T1-STANDING.md, \"The regime's home\"): the statement said the condition holds exactly from a least level up, with no top, though law 2's exactness reaches only the levels up to a top the step keeps, and above the top a level can end (giving 5 at 5, 6 and 7 and nothing elsewhere, a draw of 5, y = 5, a top of 12: 14 ends and 10 holds). It now names the point of no return, the draw above the least level meeting it, as exact up to a top the step keeps, and reads each clause under its law's premises. It also said harms of joint draws are super-additive, the evaluative word law 5 dropped on 1 November; it now says the point rises. The laws are unchanged.",
+      "zh": "2026年11月4日，RGP（TS3 读者所见之更正，记于审阅包 T1-STANDING.md 之“The regime's home”）：陈述原说条件恰从一个最低水平起成立，未言上限；而第二律的确切性只及步所保持之上限内的水平，上限之上的水平可以终结（所给在 5、6、7 处为 5、他处为无，汲取 5，y = 5，上限 12：14 终结而 10 成立）。今说不可回返点即满足汲取的最低水平加上汲取，在步所保持之上限内确切，各句在其律之前提下读。原文又说联合汲取的损害超可加，此评价之词第五律已于11月1日去掉；今说此点的升高。诸律不变。"
     }
   ]
 }

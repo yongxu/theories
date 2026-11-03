@@ -1,6 +1,6 @@
 # T1's standing beyond the model
 
-*AI-written, 3 November 2026 (board item T1S, the coordinator's word after [TS](THESES-STANDINGS.md#not-done-here)). No person has reviewed it. About 12 minutes to read, the last section's 3 included; [the check's report](T1-STANDING-CHECK.txt), about an hour and a quarter more.*
+*AI-written, 3 November 2026 (board item T1S, the coordinator's word after [TS](THESES-STANDINGS.md#not-done-here)). No person has reviewed it. About 16 minutes to read, the last two sections' 7 included; [the check's report](T1-STANDING-CHECK.txt), about an hour and a quarter more.*
 
 TS's reader found two gaps in T1 that no front could fix until the home did. T1's home, [02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#t1), had *In the model*, *Forbids*, *Refuted by* and *Evidence*, but no *Standing*, while T2, T3 and T6 each say how far they are established. And [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s row copied only the first in-the-model clause, so the joint draw, what the thesis is about, was missing from the table. 08 §9 defines standing as "how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)" and says the table copies it from the home. This item gave T1 its standing in the home and copied it to 08's row. Documents only: no Lean, no record and no core run.
 
@@ -84,3 +84,21 @@ Not done here:
 - The module docstring of `RegimeMargin` and the docstring of `threshold_regime` use the same loose gloss of `Meets`. A docstring changes Lean bytes, so they go with the next edition's docstring pass and its core run.
 - The sciences dossier's S-12 and its front cell copy the old words; they go to their owner.
 - The fronts' short forms ("the point exact", COLLECTIVE-DIRECTION's "the point of no return is exact" with its home linked) go to theirs.
+
+## The regime's home
+
+*Added 4 November 2026 (RGP, a correction with no board row). About 4 minutes to read.*
+
+TS3's reader, the Names session following T1P into the sciences dossier, and the fork found three more places where the regime's home and its record say more than the Lean. Each came with a counterexample, and I computed each. Under the coordinator's rule after T1FP2, a finding lands now only where it would make a reader believe something false. One that only makes a correct statement more exact goes to the board's batched pass for the next edition.
+
+**Landed now.**
+1. **The record's statement** said the condition holds exactly from a least level up, with no top. That is false: law 2's exactness reaches only the levels up to a top the step keeps, and above the top a level can end. Take giving 5 at 5, 6 and 7 and nothing elsewhere, a draw of 5, `y = 5` and a top of 12. Every premise of law 2 holds and giving meets the draw at `y`. Within the top, levels end exactly below 10, yet 13, 14, 18 and 19 end. From 14, the draw leaves 9, which gives nothing, and 9 lies below the point. The statement now names the point of no return, the draw above the least level whose giving meets it, as exact up to a top the step keeps, under each law's premises. It also drops "harms", the evaluative word law 5 dropped on 1 November (ND). The record has a history note, and its laws are unchanged.
+2. **02 §5's "giving lowered by the regime raises it further"** claimed a strict rise. The Lean gives one only where the lowered giving falls short of the draw at the old least level (`RegimeMargin.lowered_raises_strictly`); otherwise the least level is no lower (`RegimeMargin.lowered_raises`). Example: giving 0 below 10 and 5 from 10, lowered to 3 above 10, a draw of 3. The least level is 10 under both laws. The sentence now says both, under the same draw.
+
+3. **02 §5's theorem on the rises** gave the rises no base and named only the giving's premises. `RegimeMargin.rises_superadditive` measures each rise from the need. Read from no draw, the sentence fails on gated giving (the fork's example): giving 0 below 10 and 100 from 10, draws of 1 and 1, the points 11, 11 and 12, and 12 is not at least 21; from the need, 2 is at least 1 + 1 − 1. Its least levels were also missing: read after the theorem before it, where the point is `H + y` under that theorem's premises, it fails too. Take giving 0 below 10 and `z − 9` from 10, need 10, two draws of 3. Each draw's point is 15, so the sentence promises the joint draw's point at least 9 above the need. But `y = 10` with `hi = 5` meets every premise of the exactness theorem for the joint draw 6, and that point, 16, lies only 6 above the need; the joint draw's least meeting level gives 21. And "no greater than under either draw" is a comparison at each amount left (`Lowered`), not at each level before the draw. The sentence now names the least levels, compares giving at each amount left, and measures each rise above the need. A reader checked the least levels' wording against the Lean, and I added the base and the comparison from the Lean's statement.
+
+**For the batched pass** (each true where "the point" has its sense, the draw above the least level meeting it, and no reader led into a false belief by it):
+- The same paragraph's "The time to break lies in a band" names no premise and cites no declaration (`RegimeMargin.not_before`, `RegimeMargin.falls_within`, the latter with giving at most `Y` and `Y ≤ H ≤ b`).
+- The record's law 3 leaves "the point of no return" undefined. Its hypotheses field omits FromNothing, Root, Lowered and the positivity premises, and its correspondence still says "joint harm".
+
+The examples meet the hypotheses COLLECTIVE-DIRECTION's regime row stated before T1FP2. The rises examples fail its rises clause; the other fails only a reading of its exactness as holding from a least level up. That row's owner has them.
