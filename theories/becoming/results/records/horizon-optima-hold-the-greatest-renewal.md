@@ -5,7 +5,7 @@
 
 `horizon-optima-hold-the-greatest-renewal` · **recorded-checked** · theorem · F04 · [record](horizon-optima-hold-the-greatest-renewal.json) · [register](../../../../RESULTS.md)
 
-> Ranked over a horizon, what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; so every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at once a dependence needing more.
+> Over a horizon, what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; so every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at once a dependence needing more.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -136,6 +136,7 @@ Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a hori
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 25 October 2026, board item DF (study section 418): 'registers' in the counterexample and the correspondence replaced by 'takes in' (zh 耦合入), the glossary's word for what reaches through couplings. No law changed.
+- 3 November 2026, CD (board item CD): "ranked" dropped from the statement's first clause, an identity of amounts with no order in it; the orders enter in the next clause, which names them. The claim is unchanged.
 
 </details>
 

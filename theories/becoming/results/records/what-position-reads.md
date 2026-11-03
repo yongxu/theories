@@ -60,7 +60,7 @@ Competition read as position, the opening's "winning": a standing read against t
 
 - **formal-reuse**: [relative-position-is-zero-sum](relative-position-is-zero-sum.md). Its rise and fall counts, least and greatest parts, and the Race witness; the delta is what positions read of the amounts, exactly, and a witness with the race's positions that lasts.
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Its joint-excess law reads the total drawn against what is given; this record shows positions read that total only from below.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Both are cited by the opening's note on what the laws contain.
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Both are cited by the opening's note on what the laws contain.
 
 <a id="sources--来源"></a>
 ### Sources

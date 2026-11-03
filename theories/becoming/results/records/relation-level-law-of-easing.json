@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T16:22:12+00:00",
   "statement": {
-    "en": "Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part ranks above overdraw for any number of drawers under the relation-level reading too.",
-    "zh": "逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制，在关系层读法下也对任意多个汲取者排在过度汲取之上。"
+    "en": "Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers exactly where it includes a relation overdraw withholds, and C ranks it above.",
+    "zh": "逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
   },
   "laws": [
     {
@@ -65,8 +65,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Restraint by abstaining: a course that stops drawing on and depending on a condition loses its relations to it, so this law does not rank it.",
-      "zh": "以弃绝为节制：停止汲取且停止依赖某条件的进程失去对它的关系，故本律不对它排序。",
+      "en": "Restraint by abstaining: a course that stops drawing on and depending on a condition loses its relations to it, so this law does not show that it extends overdraw.",
+      "zh": "以弃绝为节制：停止汲取且停止依赖某条件的进程失去对它的关系，故本律不表明它扩展过度汲取。",
       "kind": "scope"
     },
     {
@@ -265,6 +265,10 @@
     {
       "en": "21 October 2026, J1S: whether J1 yields \"better without malignant growth\" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.",
       "zh": "2026年10月21日，J1S：J1 能否逐步给出“没有恶性增殖更好”已回答（记录 basic-priority-step-by-step，研究第 320 节）；下一步如此说明。其规律不变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the statement says that restraint extends overdraw exactly where it includes a relation overdraw withholds, law 5's condition, which needs no premise, and that C ranks it above, as its home row in 07 §5 says; what it does not show says likewise. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：陈述改说节制扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处（律 5 之条件，不需前提），且 C 把它排在其上，与 07 §5 的本节一行相同；一条未表明者亦然。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ]
 }

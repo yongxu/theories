@@ -70,7 +70,7 @@ Route (b) is the AI's wording, which Ren quoted: “No axiom. The theory only de
   - Output: Under the continuation condition retaining is inclusion.
   - Input: The verdict bounded by a region is inclusion too, under covering.
   - Preserved conditions: The continuation condition. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the continuation condition's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given.
+- **formal-reuse**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Reuses Web.retains_bounded_iff and Clearing.clearer_loses_dweller; there the continuation condition's verdict always decides the verdict within every region (Web.Retains.within), here where the converse holds is given.
   - Output: Retaining bounded by regions; under the continuation condition the free rider's part loses the dweller.
   - Input: Where the verdict within the closure agrees with the continuation condition's or parts from it.
   - Preserved conditions: The continuation condition; the withheld levels. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)

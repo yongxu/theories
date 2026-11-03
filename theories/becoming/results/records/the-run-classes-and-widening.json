@@ -49,8 +49,8 @@
       ]
     },
     {
-      "en": "Arising is where a part's place in the order begins. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active.",
-      "zh": "生起是一个部分在次序中位置的开始。在平衡的流中，只有活动的形成取（且只从其所汲取者取）、只有活动的形成给时，成员在起点不活动、任何一步都不生起的部分不取不给，有它与无它的水平接纳相同；起点不活动且从不生起的形成从不活动。",
+      "en": "Arising is where a part not active at the start can begin to change what can form. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active.",
+      "zh": "生起是起点不活动的部分得以开始改变能形成者之处。在平衡的流中，只有活动的形成取（且只从其所汲取者取）、只有活动的形成给时，成员在起点不活动、任何一步都不生起的部分不取不给，有它与无它的水平接纳相同；起点不活动且从不生起的形成从不活动。",
       "declarations": [
         "Becoming.Web.inactive_of_not_arising",
         "Becoming.Flow.Balances.keeps_of_inactive",
@@ -58,8 +58,8 @@
       ]
     },
     {
-      "en": "The arising class does not decide the order: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver).",
-      "zh": "生起之类不定次序：在同样的前提下（平衡、只有活动的形成从其所汲取者取、只有活动的形成给），起点不活动、在第一步生起的成员，可以在依存形成之前取走条件的一个单位而缩小能形成者（ArisingDrawer），也可以给条件以后来依存所需的单位而扩大它（ArisingGiver）。",
+      "en": "The arising class does not decide how a part changes what can form: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver).",
+      "zh": "生起之类不定部分如何改变能形成者：在同样的前提下（平衡、只有活动的形成从其所汲取者取、只有活动的形成给），起点不活动、在第一步生起的成员，可以在依存形成之前取走条件的一个单位而缩小能形成者（ArisingDrawer），也可以给条件以后来依存所需的单位而扩大它（ArisingGiver）。",
       "declarations": [
         "Becoming.ArisingDrawer.flow",
         "Becoming.ArisingDrawer.web",
@@ -136,8 +136,8 @@
     "zh": "由延续而非命名的同一（整段上的类依赖它）；独立审查。"
   },
   "correspondence": {
-    "en": "The twentieth review's D2 and F13 asked how a part's class over a run relates to its widening, under named premises with Preemption as the boundary. The answer is one direction each: renewal over the run closes nothing where only active formations take, and a consumed dependence narrows where the levels without the part meet it; the stepwise class and the consuming class alone each have a witness against them. Reading (the AI's, D2 revised): renewing and consuming are classes of a formation over a run, related to the order by these laws, not the formation-level meaning of generative and degenerative.",
-    "zh": "第二十次审查的 D2 与 F13 问：在写明的前提下、以 Preemption 为界，部分在整段上的类与它的扩大怎样相关。答案是各一个方向：只有活跃的形成取用时，整段上的更新不关闭什么；无此部分的水平满足被消耗的依存时，它缩小；逐步的类与单是消耗的类各有反例。读法（AI 的，D2 修订）：更新与消耗是形成在整段上的类，经这些规律与次序相关，不是生成的与退化的在形成层次上的含义。"
+    "en": "The twentieth review's D2 and F13 asked how a part's class over a run relates to its widening, under named premises with Preemption as the boundary. The answer is one direction each: renewal over the run closes nothing where only active formations take, and a consumed dependence narrows where the levels without the part meet it; the stepwise class and the consuming class alone each have a witness against them. Reading (the AI's, D2 revised): renewing and consuming are classes of a formation over a run, related to how a part changes what can form by these laws, not the formation-level meaning of generative and degenerative.",
+    "zh": "第二十次审查的 D2 与 F13 问：在写明的前提下、以 Preemption 为界，部分在整段上的类与它的扩大怎样相关。答案是各一个方向：只有活跃的形成取用时，整段上的更新不关闭什么；无此部分的水平满足被消耗的依存时，它缩小；逐步的类与单是消耗的类各有反例。读法（AI 的，D2 修订）：更新与消耗是形成在整段上的类，经这些规律与部分如何改变能形成者相关，不是生成的与退化的在形成层次上的含义。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
   "aliases": [
@@ -157,8 +157,8 @@
       },
       "interface": {
         "output": {
-          "en": "The order on what can form and when a part opens nothing.",
-          "zh": "能形成者上的次序，及部分何时不打开什么。"
+          "en": "How a part changes what can form, and when it opens nothing.",
+          "zh": "部分如何改变能形成者，及部分何时不打开什么。"
         },
         "input": {
           "en": "What the run classes are related to.",
@@ -222,8 +222,8 @@
     {
       "id": "comparison-by-widening",
       "detail": {
-        "en": "On level paths the condition, significance and C read one object, admission; the run classes are related to that order here.",
-        "zh": "在水平路径上，条件、意义与 C 读同一个对象，即接纳；这里整段的类与这一次序相关。"
+        "en": "On level paths the condition, significance and C read one object, admission; the run classes are related to it here.",
+        "zh": "在水平路径上，条件、意义与 C 读同一个对象，即接纳；这里整段的类与之相关。"
       }
     }
   ],
@@ -328,6 +328,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement said a part that never arises changes nothing; the Lean also takes that only active formations give and that the part is inactive at the start, as the law states, and the statement now says so.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述原说从不生起的部分什么也不改变；Lean 还取只有活跃的形成给予、该部分起点不活跃，如律所述，陈述今亦如此说。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): laws 5 and 6, the dependency's output, a related line and the correspondence speak of how a part changes what can form, not of its place in an order, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：律 5 与 6、依赖之输出、一条相关说明与对应改说部分如何改变能形成者，而非其在次序中之位置，与 07 §2 的本节现今所说相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ],
   "text_versions": [
