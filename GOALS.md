@@ -101,7 +101,7 @@ Investigate how shared activity identifies and addresses problems while revising
 
 **State:** `unmarked` · **Scope:** A current primary direction for relevant research; other independent authorizations remain valid.
 
-Align the joint selection, in which humans, institutions and trained systems select together, so that it falls into neither instrumental convergence nor a meta-attractor. It is aligned where three conditions hold: control of the selection's rule is not captured, that is, where shaping the rule is selected by what comes back to the shapers alone, the rule it shapes still reads what lies beyond their share, so that a loss there can turn it; a lock that forms is left in time, by a reading of what lies beyond the share before the loss passes its point of no return; and courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted. Within this, connect normative grounds across intelligence, evaluation of ends, and the formation of concern and wisdom.
+Align the joint selection, in which humans, institutions and trained systems select together, so that it falls into neither instrumental convergence nor a meta-attractor. It is aligned where three conditions hold: control of the selection's rule is not captured, that is, where shaping the rule is selected by what comes back to the shapers, alone or through the groups they are in, the rule it shapes still reads what lies beyond their share, so that a loss there can turn it; a lock that forms is left in time, by a reading of what lies beyond the share before the loss passes its point of no return; and courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted. Within this, connect normative grounds across intelligence, evaluation of ends, and the formation of concern and wisdom.
 
 **Premises:** Follow the conditional alignment route; disclose additional comparison commitments, actual correspondence and inferences separately.
 
@@ -119,6 +119,8 @@ The goal is an alignment of the joint selection, humans, institutions and traine
 
 [closed-capture](theories/becoming/results/records/closed-capture.md): `recorded-checked`
 
+[drawn-shaping-drawn-one-at-a-time](theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md): `recorded-checked`
+
 [loss-read-in-time-by-the-others](theories/becoming/results/records/loss-read-in-time-by-the-others.md): `recorded-checked`
 
 [open-form-realization-under-revision](theories/becoming/results/records/open-form-realization-under-revision.md): `recorded-checked`
@@ -128,6 +130,8 @@ The goal is an alignment of the joint selection, humans, institutions and traine
 [readers-drawn-from-the-selected](theories/becoming/results/records/readers-drawn-from-the-selected.md): `recorded-checked`
 
 [shaping-read-by-readers-drawn-from-the-selected](theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md): `recorded-checked`
+
+[shaping-selected-among-groups](theories/becoming/results/records/shaping-selected-among-groups.md): `recorded-checked`
 
 [shaping-the-rule-selected-by-what-comes-back](theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md): `recorded-checked`
 

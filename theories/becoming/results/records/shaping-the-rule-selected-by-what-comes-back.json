@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T07:15:09+00:00",
+  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Where the carriers of a selection shape its rule, at a step the rule favours them exactly where what comes back to them alone covers its cost, whatever all receive; across a stretch the counts of steps before and with it decide; monotone in their share and covering the cost, the loop locks.",
     "zh": "选择之携带者塑其规则时，一步之内规则偏向之恰当独返于塑规者之所得覆盖其成本，与众人同得者无关；跨一段，有所返之前与之同时之步数定之；所返随份额单调且覆盖成本，则回路锁定。"
   },
   "laws": [
     {
-      "en": "Shapers leave a + s + p offspring and others a + c + p, with s what comes back to the shapers alone, p what comes to every member alike, c the cost and a positive: at a step the rule favours the shapers (weakly) exactly where c ≤ s and disfavours them (weakly) exactly where s ≤ c, whatever p.",
-      "zh": "塑规者各留 a + s + p 后代、他者各留 a + c + p（s 为独返于塑规者者，p 为众人同得者，c 为成本，a 为正）：一步之内，规则（弱）偏向塑规者恰当 c ≤ s，（弱）偏向他者恰当 s ≤ c，与 p 无关。",
+      "en": "Shapers leave a + s + p offspring and others a + c + p, with s what comes back to the shapers alone, p what comes to every member alike, c the cost and a positive: at a step the rule favours the shapers (weakly) exactly where c ≤ s and disfavours them (weakly) exactly where s ≤ c, whatever p comes to every member alike.",
+      "zh": "塑规者各留 a + s + p 后代、他者各留 a + c + p（s 为独返于塑规者者，p 为众人同得者，c 为成本，a 为正）：一步之内，规则（弱）偏向塑规者恰当 c ≤ s，（弱）偏向他者恰当 s ≤ c，与众人同得之 p 无关。",
       "declarations": [
         "Becoming.RuleShaping.shaped",
         "Becoming.RuleShaping.eq_of_counts",
@@ -139,8 +139,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Graded capacities, a return growing with the number of domains captured, returns passing between domains, real-valued shares and noise; what comes back read through a pool of readers drawn from the selected is stated in shaping-read-by-readers-drawn-from-the-selected (board item MA4).",
-      "zh": "分级之能、随所捕获之领域数而增之所返、领域间相传之所返、实数份额与噪声；经由取自被选者之读者池而读之所返，见 shaping-read-by-readers-drawn-from-the-selected（看板项 MA4）。",
+      "en": "Graded capacities, returns growing with the domains captured or passing between them, real-valued shares; readers drawn from the selected are in shaping-read-by-readers-drawn-from-the-selected, drawing in drawn-shaping-drawn-one-at-a-time.",
+      "zh": "分级之能、随所捕获之领域而增或于领域间相传之所返、实数份额；取自被选者之读者见 shaping-read-by-readers-drawn-from-the-selected，逐一而抽见 drawn-shaping-drawn-one-at-a-time。",
       "kind": "scope"
     },
     {
@@ -149,9 +149,9 @@
       "kind": "non-implication"
     },
     {
-      "en": "A gain made by the shapers and divided among all: s and p are constants of the rule, so the shared part reaches every member even with no shapers present and does not grow with their number; the cost is borne at every step, with what comes back or not.",
-      "zh": "塑规者所得而由众人分享之益：s 与 p 为规则之常数，故同得部分即无塑规者亦及每人，且不随其数而增；成本每步皆担，有所返与否皆然。",
-      "kind": "scope"
+      "en": "That the direction holds where the shared part goes to those near the shapers: listed in groups it is a return to them through assortment, and the whole selects for shaping exactly where c < s + m q ρ (shaping-selected-among-groups).",
+      "zh": "同得部分归于塑规者近旁者时方向仍如此：分群而列，经同类聚集其为返于彼等者，整体选塑规恰当 c < s + m q ρ（shaping-selected-among-groups）。",
+      "kind": "non-implication"
     },
     {
       "en": "That the timing law's verdict is fixed by c, s, m and n alone: it depends on the base a, and so on whether the cost is read as what the others leave more or what the shapers leave less (with 3 left before shaping, c = 1, s = 2, three steps before and four with what comes back fall, the case a = 2 here).",
@@ -195,8 +195,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T071027.387418Z）：Becoming.RuleShaping，58 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，见研究第 403 节；未经人审。"
   },
   "next_delta": {
-    "en": "Graded capacities; a gain made by the shapers and divided among all; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.",
-    "zh": "分级之能；塑规者所得而由众人分享之益；随所捕获之领域数而增之所得（棘轮）；领域间相传之所得；所返是否定向之冻结检验；人之独立审查。"
+    "en": "Graded capacities; a gain growing with the number of domains captured (the ratchet); gains passing between domains; a frozen test of whether what comes back decides the direction; an independent review by a person.",
+    "zh": "分级之能；随所捕获之领域数而增之所得（棘轮）；领域间相传之所得；所返是否定向之冻结检验；人之独立审查。"
   },
   "correspondence": {
     "en": "The meta-attractor's second order (theories/meta-attractor, 'Selection for control over selection', 2 October 2026): recursive selection favours greater control over future selection where the capacity varies and is retained, has real influence, and returns to the practice soon enough to outweigh its cost; its continuous gradient Γ_T − C′(q) is zero where nothing comes back (χ = 0) or the feedback stage is one step, and its levers act on how much of what rule-making gives comes back to the rule-makers (χ) and on how fast the support shaping builds decays (δ). Here in counts at a step: s for what comes back, p for what every member receives; across a stretch, m and n steps before and with what comes back. Price (1970) keeps the accounts of such selection; Olson (1965) on why a benefit shared by all selects nothing in those who bear its cost; niche construction (Odling-Smee, Laland and Feldman 2003) on organisms changing the selection they face; rent-seeking (Tullock 1967; Krueger 1974) and regulatory capture (Stigler 1971) on spending to shape rules; the persistence of elites (Acemoglu and Robinson 2008); power-seeking of optimal policies (Turner and others 2021); natural selection among AI agents (Hendrycks 2023); influence-seeking patterns (Christiano 2019); robust agent-agnostic processes (Critch 2021); gradual disempowerment (Kulveit and others 2025). The offspring comparison is elementary; what this adds is the conditions, joined to RuleCapture's lock, each bounded by a witness. Positioning list taken from board item AJ's plan.",
@@ -260,6 +260,20 @@
       "detail": {
         "en": "Complying when read so that the law is kept, which RF's plan first read as this shaping by analogy: there a strict comparison of expected values in two stages.",
         "zh": "读时从以使其律被守，RF 之计划初以类比读为此塑；彼处为两阶段中期望值之严格比较。"
+      }
+    },
+    {
+      "id": "shaping-selected-among-groups",
+      "detail": {
+        "en": "This rule in groups whose shapers give the group's shared part: the direction at a step is its case without assortment.",
+        "zh": "此规则于群中，群之同得为其塑规者所予：一步之方向为其无同类聚集之情形。"
+      }
+    },
+    {
+      "id": "drawn-shaping-drawn-one-at-a-time",
+      "detail": {
+        "en": "With hi = lo = s, this rule drawn one member at a time: its lock is left by drift, the others' weight positive.",
+        "zh": "hi = lo = s 时此规则逐一而抽：其锁定为漂变所离。"
       }
     }
   ],
@@ -327,7 +341,7 @@
         "Becoming.RuleShaping.threshold_rule_below",
         "Becoming.RuleShaping.wait_not_more"
       ],
-      "sha256": "69f20e4418df5ff93d6bbe463856c431fe520c0dc52ee2f6a710ede009a2ce72"
+      "sha256": "c6e709d6248a4eb9932f3bd4cbeaba8694edb0f52b448f89edb131140b4f9a56"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -347,19 +361,35 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "60c85e264f30258b2c2c9fa1e96f556dd3aed3e74adc461b34bf0bfa174fa5cd"
+      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
       "role": "receipt",
       "sha256": "517ad03190000ee26579b8f5970d8b8a1c2b482bf428359d72e78e8fa732797f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md",
+      "role": "integration",
+      "sha256": "dc6db39b8122e866ebef953e1c599622f55034ec51881beb3caa047f069ad760"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "role": "receipt",
+      "sha256": "ae05228424e8c6ef53b9cc5686f5bb422fea35668443a84c7c5464a0f4084abd",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -381,6 +411,10 @@
     {
       "en": "30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; no statement, next step or declaration changed.",
       "zh": "2026年10月30日，工作板条目 RF，RF7（研究第 463 节）：与 when-complying-when-read-is-best 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "3 November 2026, board item AJ8 (study section 503): the step's direction scoped to a shared part coming to every member alike, the gain divided among the shapers' groups now stated in shaping-selected-among-groups, and noise in drawn-shaping-drawn-one-at-a-time; the laws are otherwise unchanged.",
+      "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：一步之方向限于众人同得之同得部分；塑规者所得而分于其群者今述于 shaping-selected-among-groups，噪声述于 drawn-shaping-drawn-one-at-a-time；诸律余皆不变。"
     }
   ]
 }

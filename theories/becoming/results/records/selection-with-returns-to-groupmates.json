@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Where each unit kept gives b to every other member of the keeper's group and takes c from the keeper, in groups of m members, the whole selects for keeping exactly where b + c times the whole's spread falls short of m b times the spread among groups: Hamilton's rule, with the assortment that share.",
     "zh": "每保留一单位给保留者之组每个其他成员 b、从保留者取走 c 时，在 m 个成员的等大之组中，整体恰在 b + c 乘整体离散小于 m b 乘组间离散时选择保留：即以该份额为同类聚合的 Hamilton 规则。"
@@ -51,6 +51,15 @@
         "Becoming.SelectionLevels.rises_iff_returns_of_uniform",
         "Becoming.SelectionLevels.not_rises_of_alike",
         "Becoming.SelectionLevels.rises_exact_iff_returns"
+      ]
+    },
+    {
+      "en": "Returns kept: where each unit a member keeps costs it K, brings s back to it alone and gives q to every member of its group, its own included, selection within goes by s against K, among groups by s + m q, and the whole selects for keeping exactly where K times its spread falls short of s times it with m q times the spread among groups.",
+      "zh": "有所自留之所返：成员所留之每单位使其付 K、独返其 s、予其群每人（己亦在内）q 时，群内之选择以 s 对 K，群间以 s + m q，整体选留恰当 K 乘其离散小于 s 乘之加 m q 乘群间离散。",
+      "declarations": [
+        "Becoming.SelectionLevels.within_kept",
+        "Becoming.SelectionLevels.among_kept",
+        "Becoming.SelectionLevels.rises_iff_kept"
       ]
     },
     {
@@ -111,8 +120,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T122330.896153Z): every declaration of Becoming.SelectionLevels has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 353; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T122330.896153Z）：Becoming.SelectionLevels 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 353 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipts 20261022T122330.896153Z and, for the kept form and the returns derived from it, 20261103T102739.294112Z): every declaration of Becoming.SelectionLevels has an empty axiom report; the checker verifies core purity. Built and reviewed in one session each, with no separate reviewer; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T122330.896153Z，及有所自留之形式与由之导出之所返，回执 20261103T102739.294112Z）：Becoming.SelectionLevels 每一声明之公理报告皆空；检查器核验核心之纯。各于一会话中构建与审读，无另一审者；未经人之独立审查。"
   },
   "next_delta": {
     "en": "Returns with synergy; groups of unequal size; how assortment changes over generations; an independent review.",
@@ -225,6 +234,13 @@
         "en": "The step law read through raises_exact_iff.",
         "zh": "经 raises_exact_iff 读出的跨步定律。"
       }
+    },
+    {
+      "id": "shaping-selected-among-groups",
+      "detail": {
+        "en": "The capacity to shape a rule, a group's shared part what its shapers give, is a case of returns kept.",
+        "zh": "塑规之能（群之同得为其塑规者所予）为有所自留之所返之一例。"
+      }
     }
   ],
   "references": [
@@ -263,6 +279,7 @@
         "Becoming.SelectionLevels.among_for_iff",
         "Becoming.SelectionLevels.among_for_of_raises",
         "Becoming.SelectionLevels.among_for_of_rises",
+        "Becoming.SelectionLevels.among_kept",
         "Becoming.SelectionLevels.among_none_of_alike",
         "Becoming.SelectionLevels.among_returns",
         "Becoming.SelectionLevels.balance_add",
@@ -312,6 +329,7 @@
         "Becoming.SelectionLevels.rises_exact_iff_sized",
         "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
         "Becoming.SelectionLevels.rises_iff",
+        "Becoming.SelectionLevels.rises_iff_kept",
         "Becoming.SelectionLevels.rises_iff_lineages",
         "Becoming.SelectionLevels.rises_iff_means_of_uniform",
         "Becoming.SelectionLevels.rises_iff_reading",
@@ -337,10 +355,11 @@
         "Becoming.SelectionLevels.within_by_none_of_uniform",
         "Becoming.SelectionLevels.within_by_one",
         "Becoming.SelectionLevels.within_for_of_rises",
+        "Becoming.SelectionLevels.within_kept",
         "Becoming.SelectionLevels.within_none_of_uniform",
         "Becoming.SelectionLevels.within_returns"
       ],
-      "sha256": "0ecc85e079993dbe5dd62c459262a0e9ddea52cff1467e3191cf152f80a93687"
+      "sha256": "a4964297ea1b081fa3ee1885ea1fa3067cbb6af6f7aa864576804119aa5048d5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -395,12 +414,28 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
+      "role": "receipt",
+      "sha256": "09a3e76d658fda7ce8860ffebf35489634c0f539ac5736b3d39ec680bc507950"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md",
+      "role": "integration",
+      "sha256": "dc6db39b8122e866ebef953e1c599622f55034ec51881beb3caa047f069ad760"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "role": "receipt",
+      "sha256": "ae05228424e8c6ef53b9cc5686f5bb422fea35668443a84c7c5464a0f4084abd",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -428,6 +463,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the returns stated as the Lean states them, each unit kept giving b to every other member of the group and taking c from the keeper, in the statement, the second law and the hypothesis, where they had read b to every member, own included, with c from the keeper; the third law keeps the spread on its left side; the uniform case needs the groups to differ; within-group selection needs b + c positive; the number of groups named for k. No law changed in its declarations.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：回报按 Lean 的陈述改写：每保留一单位给组内每个其他成员 b、从保留者取走 c，陈述、第二条规律与假设同改，原文误作给每个成员含自身 b、从保留者取走 c；第三条规律左边保留离散；均匀情形需各组彼此不同；组内选择需 b + c 为正；k 写明为组数。规律的声明未变。"
+    },
+    {
+      "en": "3 November 2026, board item AJ8 (study section 503): the returns stated as the case s = 0 of returns kept, within_returns, among_returns and rises_iff_returns derived from rises_iff_kept and its parts; the law with something kept added.",
+      "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：所返陈述为有所自留之所返于 s = 0 之情形，within_returns、among_returns、rises_iff_returns 由 rises_iff_kept 及其部导出；增有所自留之律。"
     }
   ]
 }

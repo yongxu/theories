@@ -1,6 +1,7 @@
 import Becoming.RuleCapture
 import Becoming.Recurrence
 import Becoming.SelectionTerm
+import Becoming.SelectionLevels
 
 /-!
 # Rule shaping: the capacity to shape the rule, selected by what comes back to it
@@ -64,6 +65,21 @@ where the two kinds leave alike. With no premise beyond the hypotheses each stat
   (`threshold_from_below`, `threshold_rule_below`), under every schedule of reading. With
   `lo < c < hi` it is a tipping point: from above the share rises strictly at every step, and from
   below it falls strictly at every step, the shapers present (`threshold_rises`, `threshold_falls`).
+* **Among groups: the shared part weighted by assortment.** Listed as groups of `m`, let a group's
+  shared part be what its shapers give, `q` to every member for each shaper in it, each shaper
+  leaving the shapers' count of the rule after shaping with that shared part and each other the
+  others' (`Grouped`). That is a case of returns kept and shared within the group
+  (`grouped_returns`, `SelectionLevels.rises_iff_kept`), so the whole selects for shaping exactly
+  where `c` times the spread of shaping falls short of `s` times it with `m q` times the spread among
+  groups (`grouped_rises_iff`): read over the rationals, where `c < s + m q ρ` with `ρ` the
+  assortment, Hamilton's rule with what comes back alone added. With groups alike in how many shape
+  (assortment none, the shared part coming to every member alike) it is `c < s` where shaping varies,
+  this step's verdict whatever is shared (`grouped_alike_iff`); where `c < s` the whole selects for
+  shaping however the groups are formed (`grouped_kept_rises`), so lower assortment cannot unselect
+  what comes back alone covers; with the shapers together (groups uniform) it is `c < s + m q`
+  (`grouped_uniform_iff`). Witness (`Assorting.either_verdict`): a cost of two above one coming back,
+  so that within every group the rule disfavours the shapers, and the whole selects for shaping with
+  the shapers together and against it with them apart.
 
 So at a step the capacity to shape the rule is selected by the part of what it gives that comes back
 to it alone, net of its cost: the part every member receives does not decide the direction, though it
@@ -96,10 +112,12 @@ back. Where what comes back is monotone in the shapers' share and covers the cos
 What is not derived: that offspring carry their parent's capacity (transmission, a premise as in
 `Becoming.Capture`); that what comes back is read monotonically from the share (on `byBack`, the
 premise equivalent to `ReadsShare`); which actual rules can be shaped, at what cost, or how much of
-what shaping gives comes back. `s` and `p` are constants of the rule: the shared part reaches every
-member even with no shapers present and does not grow with their number, so a gain made by the
-shapers and divided among all is not stated; the cost is borne at every step, with what comes back
-or not. The timing law's inequality depends on `a`, and with it on whether the cost is read as what
+what shaping gives comes back, or how assorted shapers are. `s` and `p` are constants of the rule at
+a step: the shared part reaches every member even with no shapers present and does not grow with
+their number. A gain made by the shapers and divided among the members of their group is stated
+among groups of equal size (`grouped_rises_iff`), at a step and with no transmission across steps;
+divided among all, it is the case of groups alike. The cost is borne at every step, with what comes
+back or not. The timing law's inequality depends on `a`, and with it on whether the cost is read as what
 the others leave more or what the shapers leave less: read the second way, the same `c`, `s` and
 steps can give the other verdict (with what each leaves before shaping `3`, `c = 1`, `s = 2`, three
 steps before and four with what comes back fall, the case of `a = 2` here). The capacity has two
@@ -596,6 +614,89 @@ theorem threshold_falls {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) (st
         (threshold_rule_below step (Nat.le_of_lt strict) below t).symm
         (Nat.add_lt_add_right (Nat.add_lt_add_left strict a) p)))
 
+/-! ## Shaping among groups: the shared part weighted by assortment -/
+
+section Groups
+
+variable {α : Type}
+
+open SelectionTerm SelectionLevels
+
+/-- **The rule after shaping, in groups.** Listed as groups, each member shaping or not (`shapes`,
+one or none): the shared part of a group is what its shapers give, `q` to every member of the group
+for each shaper in it. In each group each shaper leaves the shapers' count of the rule after
+shaping with that shared part, and each other the others' count. -/
+def Grouped (gs : List (List α)) (w shapes : α → Nat) (a s q c : Nat) (pos : 0 < a) : Prop :=
+  ∀ g, g ∈ gs → ∀ x, x ∈ g →
+    (shapes x = 1 ∧ w x = (shaped a s (q * total g shapes) c pos).carrier) ∨
+      (shapes x = 0 ∧ w x = (shaped a s (q * total g shapes) c pos).other)
+
+/-- In groups the rule after shaping is a case of returns kept and shared within the group: each
+member's offspring with `c` per unit of its shaping is `a + c` with `s` per unit of its own shaping
+and `q` per unit its group holds. -/
+theorem grouped_returns {gs : List (List α)} {w shapes : α → Nat} {a s q c : Nat} {pos : 0 < a}
+    (grouped : Grouped gs w shapes a s q c pos) :
+    ∀ g, g ∈ gs → ∀ x, x ∈ g →
+      w x + c * shapes x = (a + c) + s * shapes x + q * total g shapes := fun g mg x mx =>
+  match grouped g mg x mx with
+  | .inl ⟨one, kept⟩ => by
+    rw [one, kept, Nat.mul_one, Nat.mul_one]
+    exact (Nat.add_right_comm (a + s) _ c).trans
+      (congrArg (· + q * total g shapes) (Nat.add_right_comm a s c))
+  | .inr ⟨zero, kept⟩ => by
+    rw [zero, kept, Nat.mul_zero, Nat.mul_zero, Nat.add_zero, Nat.add_zero]
+    rfl
+
+/-- **The capacity to shape the rule, selected among groups.** Listed as groups of `m` members
+each, the rule after shaping in each group with the group's shapers giving its shared part, the
+whole selects for shaping exactly where `c` times the spread of shaping falls short of `s` times
+it with `m` times `q` times the spread among groups (`SelectionLevels.rises_iff_kept`). Read over
+the rationals, with the assortment `ρ` the share of the spread among groups, exactly where
+`c < s + m q ρ`: Hamilton's rule with what comes back to the shapers alone added. -/
+theorem grouped_rises_iff {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat} {pos : 0 < a}
+    (equal : ∀ g, g ∈ gs → g.length = m) (grouped : Grouped gs w shapes a s q c pos) :
+    discord (whole gs) w shapes < concord (whole gs) w shapes ↔
+      c * concord (whole gs) shapes shapes <
+        s * concord (whole gs) shapes shapes + m * q * concordAmong gs shapes shapes :=
+  rises_iff_kept gs w shapes equal (grouped_returns grouped)
+
+/-- **With the shared part alike across groups** (groups alike in how many shape: assortment none,
+the shared part coming to every member alike), where shaping varies, the whole selects for it
+exactly where `c < s`: the direction of `favours_iff`, whatever is shared. -/
+theorem grouped_alike_iff {gs : List (List α)} {w shapes : α → Nat} {a s q c m d : Nat}
+    {pos : 0 < a} (equal : ∀ g, g ∈ gs → g.length = m) (grouped : Grouped gs w shapes a s q c pos)
+    (alike : ∀ g, g ∈ gs → total g shapes = d) (varies : 0 < concord (whole gs) shapes shapes) :
+    discord (whole gs) w shapes < concord (whole gs) w shapes ↔ c < s :=
+  (grouped_rises_iff equal grouped).trans (by
+    rw [(among_none_of_alike (w := shapes) alike).1, Nat.mul_zero, Nat.add_zero, Nat.mul_comm c,
+      Nat.mul_comm s]
+    exact ⟨SelectionTerm.lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt varies⟩)
+
+/-- **What comes back alone is not undone by assortment.** Where it exceeds the cost (`c < s`) and
+shaping varies, the whole selects for shaping however the groups are formed and whatever is
+shared. -/
+theorem grouped_kept_rises {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat}
+    {pos : 0 < a} (equal : ∀ g, g ∈ gs → g.length = m) (grouped : Grouped gs w shapes a s q c pos)
+    (covers : c < s) (varies : 0 < concord (whole gs) shapes shapes) :
+    discord (whole gs) w shapes < concord (whole gs) w shapes :=
+  (grouped_rises_iff equal grouped).mpr
+    (Nat.lt_of_lt_of_le (Nat.mul_lt_mul_of_pos_right covers varies) (Nat.le_add_right _ _))
+
+/-- **With the shapers together** (groups uniform in shaping, assortment one), where the groups
+differ, the whole selects for shaping exactly where `c < s + m q`: a shared part of the group
+selects shaping where the cost exceeds what comes back alone. -/
+theorem grouped_uniform_iff {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat}
+    {pos : 0 < a} (equal : ∀ g, g ∈ gs → g.length = m) (grouped : Grouped gs w shapes a s q c pos)
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ x, x ∈ g → shapes x = v)
+    (differ : 0 < concordAmong gs shapes shapes) :
+    discord (whole gs) w shapes < concord (whole gs) w shapes ↔ c < s + m * q :=
+  (grouped_rises_iff equal grouped).trans (by
+    rw [spread_levels gs shapes equal, (within_none_of_uniform (w := shapes) uniform).1,
+      Nat.mul_zero, Nat.zero_add, ← add_mul_split, Nat.mul_comm c, Nat.mul_comm (s + m * q)]
+    exact ⟨SelectionTerm.lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt differ⟩)
+
+end Groups
+
 /-! ## Witnesses -/
 
 namespace Split
@@ -685,6 +786,64 @@ theorem eight_rises {x : CarrierCounts} (some : 0 < x.carrier) :
   (stretch_lt_iff some 5 8).mpr (by decide)
 
 end Timing
+
+namespace Assorting
+
+open SelectionTerm SelectionLevels SelectionLevels.Member SelectionLevels.Founding
+
+theorem one_pos : 0 < 1 := Nat.zero_lt_one
+
+/-- Two shapers and two others, one coming back to each shaper alone, two the cost, one to every
+member of its group for each shaper in it. With the shapers together each leaves four and each
+other three. -/
+def assortedOffspring : SelectionLevels.Member → Nat
+  | .held => 4
+  | .mate => 4
+  | .first => 3
+  | .second => 3
+
+/-- With the shapers apart each leaves three and each other four. -/
+def mixedOffspring : SelectionLevels.Member → Nat
+  | .held => 3
+  | .mate => 3
+  | .first => 4
+  | .second => 4
+
+theorem assorted_grouped : Grouped assorted assortedOffspring keeps 1 1 1 2 one_pos
+  | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.head _) => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ (.head _) => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+
+theorem mixed_grouped : Grouped mixed mixedOffspring keeps 1 1 1 2 one_pos
+  | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.head _) => .inr ⟨rfl, rfl⟩
+  | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => .inl ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ (.head _) => .inr ⟨rfl, rfl⟩
+  | _, .tail _ (.head _), _, .tail _ (.tail _ mem) => nomatch mem
+  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+
+/-- **The cost above what comes back alone, and shaping selected among groups.** With a cost of
+two and one coming back to each shaper alone, so that within every group the rule after shaping
+disfavours the shapers (`favours_iff` fails), the whole selects for shaping where the shapers are
+grouped together, eight falling short of four with eight, and against it where they are apart,
+nothing then lying among the groups. -/
+theorem either_verdict :
+    ¬ CarrierCounts.favours (shaped 1 1 2 2 one_pos) ∧
+      discord (whole assorted) assortedOffspring keeps <
+        concord (whole assorted) assortedOffspring keeps ∧
+      2 * concord (whole assorted) keeps keeps = 8 ∧
+      1 * concord (whole assorted) keeps keeps + 2 * 1 * concordAmong assorted keeps keeps = 12 ∧
+      concord (whole mixed) mixedOffspring keeps < discord (whole mixed) mixedOffspring keeps ∧
+      concordAmong mixed keeps keeps = 0 :=
+  ⟨fun fav => absurd (favours_iff.mp fav) (by decide),
+    (grouped_rises_iff assorted_equal assorted_grouped).mpr (by decide), rfl, rfl, by decide, rfl⟩
+
+end Assorting
 
 end RuleShaping
 
