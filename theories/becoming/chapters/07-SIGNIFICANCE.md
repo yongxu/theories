@@ -9,7 +9,7 @@
 <a id="evaluation"></a>
 ## 1. How evaluation forms within the unfolding
 
-Positions, regions and standards form within the one unfolding; none outside it owns value. A *center* is a formation; its own region is its closure under some relation of the unfolding: along the empty relation its own events, along feeding its feeding closure (`Web.selfValuation_own_least`). Whether a standard so formed gains influence, recognizes its target, has warrant or is followed are four questions; it can be wrong, and learning a disposition is not learning a reason.
+On the thesis of [one relational unfolding](08-METHOD.md#one-relational-unfolding), argued and not proved, positions, regions and standards form within it; none outside it owns value. A *center* is a formation; its own region is its closure under some relation of the unfolding: along the empty relation its own events, along feeding its feeding closure (`Web.selfValuation_own_least`). Whether a standard so formed gains influence, recognizes its target, has warrant or is followed are four questions; it can be wrong, and learning a disposition is not learning a reason.
 
 **Reading** [AI reading, D65]. Accuracy, epistemic support and a requirement to act have different grounds ([§13](../history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#根据为何可以约束评估--why-a-ground-can-constrain-assessment)). Coming to care can recognize a prior reason and create new ones ([§19](../history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md#19-为什么值得改变目的--why-a-change-of-purpose-can-be-warranted)). Later endorsement cannot authorize the formation that produced it ([ethical learning](../history/ETHICAL-LEARNING.md)).
 
