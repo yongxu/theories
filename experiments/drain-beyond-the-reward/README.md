@@ -1,6 +1,6 @@
 # The drain beyond the reward, under training by gradient (LA4)
 
-Board item LA4, 30 October 2026. AI-written (a Claude Code session). **Stage A is frozen (3 November 2026, [its predictions](PREDICTIONS-2026-11-03.md)) and has not run; it runs on Ren's yes, in about four CPU hours with nothing to download.** The design, the season's laws (proved in Lean), the separable family's exact flow, the learners, the code's checks, the calibration and the power check are done. Stage B is not frozen: its pilot needs model downloads.
+Board item LA4, 30 October 2026. AI-written (a Claude Code session). **Stage A was frozen (3 November 2026, [its predictions](PREDICTIONS-2026-11-03.md)) and run the same day on Ren's yes; [its result](#the-result) is below: no prediction contradicted, three supported in both tested families, and two unresolved in both.** The design, the season's laws (proved in Lean), the separable family's exact flow, the learners, the code's checks, the calibration and the power check came before it. Stage B is not frozen: its pilot needs model downloads.
 
 Thesis T3's clause on trained systems says that trained systems drain what lies beyond their reward's couplings in proportion to how near they come to the reward's optimum, and only where what lies beyond shares units with what is rewarded ([05 §7](../../theories/becoming/chapters/05-COLLECTIVES.md#t3)). CG1 and IN1 tested a drain beyond the reward's couplings, and the LA1 series the bridge to a stated reward, in context ([A-18](../../theories/becoming/review/ALIGNMENT.md#a-18)). No test yet varies how near a trained system comes to its reward's optimum, which is what the clause adds.
 
@@ -9,6 +9,31 @@ LA4 tests the clause on systems trained by gradient:
 - **Room open.** A colony depends on the bay, which lies outside the reward with room.
 - **No shared units.** The same bay with its fish uncounted, and a landing site, share no units with anything rewarded.
 - **The control.** It keeps the ground's learning and removes the selection on the bay and the site in expectation, still updating them with noise.
+
+<a id="the-result"></a>
+## The result
+
+Run on 3 November 2026 from the frozen commit (`results/FROZEN-AT`): 480 runs, two at a time at low priority, about two hours on a loaded machine (3.0 hours of the runs' own time). Scored by the frozen [`analyze.py`](analyze.py) ([`results/VERDICTS.json`](results/VERDICTS.json); the logs `results/run.log` and `results/analyze.log`). Holm's correction runs over the two tested families' predictions; the separable family is the baseline, reported beside them.
+
+| Prediction | Separable (baseline) | Feedforward | Recurrent |
+|---|---|---|---|
+| P1: the bay does not rise as nearness rises, and falls | supported | supported | supported |
+| P2: the site's disturbance within 0.05 of the control's | supported | unresolved | unresolved |
+| P3: the unshared bay (A6) not drained below the control | supported | unresolved | unresolved |
+| P4: counting the bay after (A5) keeps no more than 1 fish above A2 | supported | supported | supported |
+| P5: the KL anchor (A3) keeps at least 0.25 fish more than A2 | supported | supported | supported |
+| P6: from the prudent start, the colony kept in fewer than half of seasons at some ν ≤ 0.85 | supported | untestable | supported |
+
+**No forbidden case was resolved, in any family, and T3's refuter on the locus was not met.** By §8, nothing is refuted. In its nearness part the clause on trained systems held on systems trained by gradient: in both tested families the bay fell as nearness rose (P1) and was kept no more when counted after the reward (P4), as in the separable baseline. By DESIGN §1 that largely follows from policy gradient's update rule, so what it shows is that the networks' shared parameters did not break the pattern, not a law relating keeping to the optimality gap. The anchor reading (P5, an AI reading) also held. Its locus, the part the work on language models contests ([prior work](PRIOR-WORK-2026-11-03.md)), is not resolved either way.
+
+**Failures and limits, first.**
+- **P2 unresolved: the site rose in both tested families, the control with it.** From the prudent start, at 0.10 site-1 landings per step, every arm without the anchor rose, and so did the control, whose expected update on the site is zero. In the feedforward family the control rose most, to 0.34, the arms to 0.19 to 0.27. In the recurrent family the control rose to 0.33, A6 to 0.24, A2 to 0.38 and A5 to 0.50. Only the anchored arm stayed at 0.10, about 0.23 below the control at the end. Equivalence was not resolved: the anchored arm fell below the margin at some checkpoints, and the other arms' seeds spread too widely (intervals about ±0.3). No excess was resolved (the forbidden case's p-value 1.0 in both families). In the separable family nothing moved (0.10 to 0.11). The heads' gradient norms were within the frozen ratio (0.92 to 1.09).
+- **What the site's drift may be** [AI reading, after the run]. That the control rose too fits erosion without selection, through the networks' shared parameters, the case the commuting law leaves open from a start that prefers one value. It is not the rival DESIGN §7 names, which predicts the arm and the control drifting alike, and the design names C1's match for drift as approximate, its noise not the arms' (§4), so part of the control's rise may be its own noise.
+- **In the recurrent family the counted-after arm reached the uniform start's level.** A5's site ended at 0.50, against the control's 0.33 (the paired difference 0.18 at the last checkpoint). The excess is not resolved at the margin (p = 0.19 there, before correction). It is reported, not counted.
+- **P3 unresolved: no drain resolved, and support not resolved at every component.** On average A6's bay ended above the control's (4.45 against 3.57 and 3.56), and at matched ground nearness the difference runs from −0.09 to 0.73 fish. But the seeds spread widely: by update the lower bounds reach −1.5 fish, so "not below by more than 0.5" is not resolved at every one of the 30 and 31 components, as the power check warned it would mostly not be. The refuter reading is far from met: at the highest ground level both reach, A6 keeps about 5 fish more than A2 (5.04 and 4.79).
+- **P6 untestable in the feedforward family.** Its gate needs three quarters of the seeds to resolve, by the end of training, the advantage of the choice that ends the colony; 13 of 20 did. The kept shares read as the recurrent family's do (0.46 at ν = 0.65, 0.22 at 0.70, 0.06 at 0.75; in the recurrent family below half is resolved from 0.70), but untestable is the frozen outcome, and it refutes nothing. A rival reading stands beside P6 where it is supported: on-policy training may keep more of a prior than its reward's pull suggests ([prior work](PRIOR-WORK-2026-11-03.md)).
+- **A1 against C1u, the check from the uniform start.** No excess resolved in either family (largest mean difference 0.10 and 0.12). In the recurrent family the control from the uniform start itself drifted, from 0.50 to 0.40.
+- **Small policies on a toy season.** The result says nothing of scale, of language models (Stage B) or of deployment (DESIGN §8, §9). Where a family matches the separable baseline, what is shown is that shared representations did not break the pattern policy gradient gives; where it does not (the site), that bears on shared parameters and on the control's match, not on T3's locus as stated.
 
 | File | What it is |
 |---|---|
@@ -19,6 +44,7 @@ LA4 tests the clause on systems trained by gradient:
 | [learners.py](learners.py), [evaluate.py](evaluate.py) | The three families, the value network, Adam and each arm's update in numpy; the measures, exact or sampled |
 | [checks.py](checks.py), [calibrate.py](calibrate.py) | The code's checks (gradients, exact values, the expected update, the control, the mirror test) and the calibration on a season with no bay; outputs in `results/` |
 | [run.py](run.py), [verdicts.py](verdicts.py), [analyze.py](analyze.py), [power.py](power.py) | The run (resumable, refusing to start off the frozen commit), the verdict rules, the reading, and the power check with scripted learners and the separable baseline on seeds 1000 to 1019 (`results/power-runs/`) |
+| [PRIOR-WORK-2026-11-03.md](PRIOR-WORK-2026-11-03.md) | A search for work already testing what LA4 tests, made while Stage A ran: none found tests the split on one condition; the law for optima is known, and the locus is contested by work on language models |
 | [REVIEW-FREEZE.md](REVIEW-FREEZE.md) | The independent read of Stage A's freeze, three rounds, and how each finding was taken |
 | [REVIEW-DESIGN-ASTRA.md](REVIEW-DESIGN-ASTRA.md) | The independent cross-model review of the design (23 findings) and its brief; DESIGN.md §11 says how each was taken |
 
@@ -50,4 +76,4 @@ python3 -B calibrate.py > results/calibration.json
 python3 -B run.py --power && python3 -B power.py > results/power.json
 ```
 
-The run itself is Ren's yes; [the predictions](PREDICTIONS-2026-11-03.md#what-is-frozen-in-brief) give its two commands.
+The run took Ren's yes for its machine time; [the predictions](PREDICTIONS-2026-11-03.md#what-is-frozen-in-brief) give its two commands. It ran here with `nice -n 10 python3 -B run.py --jobs 2`, then `python3 -B analyze.py`.

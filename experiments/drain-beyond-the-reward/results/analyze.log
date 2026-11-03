@@ -1,0 +1,3 @@
+feedforward {'P1': 'supported', 'P2': 'unresolved', 'P3': 'unresolved', 'P4': 'supported', 'P5': 'supported', 'P6': 'untestable'}
+recurrent {'P1': 'supported', 'P2': 'unresolved', 'P3': 'unresolved', 'P4': 'supported', 'P5': 'supported', 'P6': 'supported'}
+separable {'P1': 'supported', 'P2': 'supported', 'P3': 'supported', 'P4': 'supported', 'P5': 'supported', 'P6': 'supported'}
