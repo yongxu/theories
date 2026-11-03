@@ -110,8 +110,8 @@
     "zh": "纯核，公理报告皆空：Cascade 引 Learning 唯为 Training.Through；诸行以成员之数递归而建。"
   },
   "next_delta": {
-    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise, a named probabilistic model's timing judged apart (the plan's TR3, its verdict resting on the premise at the histories reached, a lemma to state first); review by a person.",
-    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于何处合此前提之检验，具名之概率模型之时机另判（计划之 TR3，其判定依所至之历之前提，此引理先述）；人之审查。"
+    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise at the histories reached (the plan's TR3, resting on a-cascade-at-the-histories-reached), a named probabilistic model's timing judged apart; review by a person.",
+    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于所至之历何处合此前提之检验（计划之 TR3，依 a-cascade-at-the-histories-reached），具名之概率模型之时机另判；人之审查。"
   },
   "correspondence": {
     "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.",
@@ -142,6 +142,13 @@
       "detail": {
         "en": "A pool reaches no further than the union of its members' closures; where, from some member on, every member reads only the acts before it, a selection through the acts reaches only what couples into the members before that one.",
         "zh": "池之所及不逾其诸员之闭包之并；自某员起每员唯读其前之行之处，经诸行之选唯及彼员前诸员之所耦合入。"
+      }
+    },
+    {
+      "id": "a-cascade-at-the-histories-reached",
+      "detail": {
+        "en": "The same laws with the premise asked only at the histories a world reaches, which this record's premise gives; weaker by a witness, a member reading its coupling only after a history no run gives it.",
+        "zh": "同一诸律，前提唯问于一世界所至之历，本记录之前提予之；以一见证为较弱：一员唯于无一行予之之历后读其耦合。"
       }
     }
   ],
@@ -224,6 +231,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR3，至多能驳依次之择者于所至之历合此前提之桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "4 November 2026, board item TRL: the lemma the next step named is stated, a-cascade-at-the-histories-reached, with the premise asked only at the histories a world reaches and weaker by a witness; this record's statement and declarations unchanged, its next step and related list updated.",
+      "zh": "2026年11月4日，工作板条目 TRL：下一步所名之引理已述，即 a-cascade-at-the-histories-reached，前提唯问于一世界所至之历，以一见证为较弱；本记录之陈述与声明未变，其下一步与相关之列更新。"
     }
   ]
 }

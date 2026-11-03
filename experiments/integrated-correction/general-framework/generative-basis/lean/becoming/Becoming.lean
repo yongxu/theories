@@ -157,6 +157,7 @@ import Becoming.Selection
 import Becoming.Learning
 import Becoming.Unread
 import Becoming.Cascade
+import Becoming.ReachedCascade
 import Becoming.RevisionRoutes
 import Becoming.ReadStages
 import Becoming.PropositionIdentity
@@ -2432,7 +2433,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   through the couplings of the members before `k` (`Turns.acts_alike_of_cascade`), so every
   selection through the acts is one through those couplings (`Turns.cascade_through`), an upper
   bound on what the acts carry; copying carries only the first member's coupling
-  (`Turns.Copying.reaches_first_only`). A leaf (board item RF).
+  (`Turns.Copying.reaches_first_only`). Imported by `Becoming.ReachedCascade` (board item TRL).
+* `Becoming.ReachedCascade` (L1): a cascade at the histories reached. The cascade's premise asked
+  only at the list of acts a world gives each member (`Turns.ReadsOnlyActsAlong`), which the
+  premise on every list gives (`Turns.readsOnlyActsAlong_of_from`): where it holds at one world,
+  every world alike with it before `k` gives the same acts and the same act to every member
+  (`Turns.acts_alike_along`, `Turns.act_alike_along`), and where it holds at every world every
+  selection through the acts is one through those couplings (`Turns.cascade_through_along`); a
+  member reading its coupling only after a history no run gives it meets the premise at every
+  world's reached histories and not on every list (`Turns.Unreached.along`,
+  `Turns.Unreached.not_from`). A leaf (board item TRL).
 * `Becoming.RevisionRoutes` (L1): a revision of a formation's law, and the routes of keeping it.
   The order of a gain and a loss at each plan (`RevisionRoutes.GainLoss`), its maximal plans
   exactly characterized (`RevisionRoutes.GainLoss.maximal_iff`). At a revision, in natural numbers,
