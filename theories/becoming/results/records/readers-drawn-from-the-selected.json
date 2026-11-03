@@ -324,7 +324,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "05c58f680427286aa6c527e2698600ded6a89f5ff9dcdb6e2c9ac803a3b9564b"
+      "sha256": "42b217f10b1e4fc937aab285fc83bb49027ebcb5aa89bee5fccce3dd9a750fee"
     },
     {
       "path": "theories/becoming/OPENING.md",
@@ -334,7 +334,7 @@
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "d84fa49e44af30de19417bb3ee80aeb552b6368fe1185fc91a33c01bd73054e6"
+      "sha256": "cd64296038fb55b06c2cea215494bec4bdf09a41d1ea8945018ba87b337acdd0"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md",
