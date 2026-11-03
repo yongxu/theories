@@ -15,7 +15,7 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-04-integrated-evolution/` | — | 2 | — | 0 |
 | `2026-10-05-causal-foundations/` | — | 1 | `outputs/ (1)` | 0 |
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
-| `2026-10-05-generative-foundation-review/` | — | 6711 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6606)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4402 |
+| `2026-10-05-generative-foundation-review/` | — | 6725 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6620)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4404 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
 | `2026-10-05-repository-reconciliation/` | — | 335 | `architecture/ (317)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
@@ -75,6 +75,7 @@ Retired study material, bytes unchanged. Each history folder has a `MANIFEST.jso
 |---|---:|---|
 | `2026-10-05-generative-foundation-review/history/` | 4365 | [MANIFEST.json](2026-10-05-generative-foundation-review/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history/` | 3 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history/MANIFEST.json) |
+| `2026-10-05-generative-foundation-review/root-foundation/development/cd-c-as-a-direction/history/` | 2 | — |
 | `2026-10-05-generative-foundation-review/root-foundation/development/lw-the-way-for-life/history/` | 2 | — |
 | `2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/history/MANIFEST.json) |
 | `2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/` | 4 | [MANIFEST.json](2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/history/MANIFEST.json) |
