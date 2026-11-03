@@ -5,7 +5,7 @@
 
 `margin-of-a-regime` · **recorded-checked** · theorem · F01 · [record](margin-of-a-regime.json) · [register](../../../../RESULTS.md)
 
-> With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.
+> Under a standing draw and each law's premises, the point of no return, the draw above the least level whose giving meets it, is exact up to a top the step keeps, more than the draw above the need where giving there falls short, and rises with the draw, superadditively for joint draws, up to one.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -123,7 +123,8 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 1 November 2026, board item ND: law 5's lead sentence reworded as its home section 02 §5 now reads, "harms" being an evaluative word no law of the map uses; what the law states is unchanged, and its declaration RegimeMargin.harms_superadditive is renamed rises_superadditive at part 2.
 - 1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: harms_superadditive → rises_superadditive. The statements are kept but for the names; the claim is unchanged.
 - 3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, "After TS2's reader"): law 2's premise says exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the top, where it had read as every level from y up to the top, more than the Lean asks; and its exactness now names its other premises: giving short of the draw below y and nothing from nothing, which it had left to law 1, and 0 < H + y, which no law named and without which it fails where the draw and y are both zero. The law now states what the Lean proves; the Lean is unchanged.
+- 4 November 2026, RGP (a correction from TS3's reader, recorded in the review packet's T1-STANDING.md, "The regime's home"): the statement said the condition holds exactly from a least level up, with no top, though law 2's exactness reaches only the levels up to a top the step keeps, and above the top a level can end (giving 5 at 5, 6 and 7 and nothing elsewhere, a draw of 5, y = 5, a top of 12: 14 ends and 10 holds). It now names the point of no return, the draw above the least level meeting it, as exact up to a top the step keeps, and reads each clause under its law's premises. It also said harms of joint draws are super-additive, the evaluative word law 5 dropped on 1 November; it now says the point rises. The laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-11-03T15:58:27+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-03T17:56:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
