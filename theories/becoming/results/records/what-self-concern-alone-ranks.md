@@ -11,13 +11,13 @@
 ## Laws
 
 1. An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern's monotonicity is C's premise. (`Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.increasingInOwn_iff_increasing`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 2. What every such order shares is exactly the widenings that add to its own continuation. Where one course adds to it, every such order ranks it above the other exactly where the other keeps nothing beyond it; where the other keeps an item beyond, some positive weighting, such an order, ranks the other higher. (`Becoming.Weighting.widensOwn_iff_every_increasingInOwn`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.some_increasingInOwn_reverses`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 3. A course that admits nothing from an ending on, and agrees with another before it, keeps nothing beyond it; so from every standpoint whose own continuation the other adds to, every order increasing in its own continuation ranks the ending below. (`Becoming.Weighting.includes_of_ended`, `Becoming.Weighting.ended_below`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 4. Joined with coupled ending in one theorem: where a family of conditions with gated renewal is drawn beyond it over a stretch and every member of every later generation depends on the family, no later generation has a member, and the generations' course is ranked below, by every order increasing in a standpoint's own continuation, every course agreeing with it up to the ending and adding to that continuation. (`Becoming.Flow.coupled_ending_ranked_below`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -58,7 +58,7 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Reuses widening on listed items and orders increasing in admission (WidensOn, Increasing, increasing_ranks) and the positive weighting that ranks a course admitting more higher (outweighs).
+- **formal-reuse**: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Reuses widening on listed items and orders increasing in admission (WidensOn, Increasing, increasing_ranks) and the positive weighting that ranks a course admitting more higher (outweighs).
   - Output: Widening, orders increasing in admission, and a positive weighting deciding a mixed pair.
   - Input: Orders increasing in their own continuation, a weaker class.
   - Preserved conditions: Finite listing, two-valued admission. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)

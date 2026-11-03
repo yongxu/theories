@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
-    "en": "Of two courses of causal-set growth from the empty set, one includes the other's stems, what can be born next, exactly where its precedence is included in the other's, so widening adds no continuation. Read on what continues the order reverses; no strict order holds both.",
-    "zh": "于因果集之生长上，次可生者反转先后之包含：自空集起之二历程，一者含另一者之茎，恰当其先后含于另一者之先后；故扩大不增相续。读于相续则序反转，无一严格之序兼含二者。"
+    "en": "Of two courses of causal-set growth from the empty set, one includes the other's stems, what can be born next, exactly where its precedence is included in the other's, so widening adds no continuation. Read on what continues the inclusion reverses; no strict order holds both.",
+    "zh": "于因果集之生长上，次可生者反转先后之包含：自空集起之二历程，一者含另一者之茎，恰当其先后含于另一者之先后；故扩大不增相续。读于相续则包含反转，无一严格之序兼含二者。"
   },
   "laws": [
     {
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "en": "No strict order contains both widenings: one ranks the antichain above the chain, the other the chain above the antichain (no_order_contains_both). An order never reversing widening what can be born next ranks no course from the empty set with a pair above the antichain (not_above_antichain), and the chain above no such course lacking one of its pairs (chain_not_above).",
+      "en": "No strict order contains both widenings: one puts the antichain above the chain, the other the chain above the antichain (no_order_contains_both). An order never reversing widening what can be born next ranks no course from the empty set with a pair above the antichain (not_above_antichain), and the chain above no such course lacking one of its pairs (chain_not_above).",
       "zh": "无一严格之序兼含二种扩大：一者以反链高于链，另一者以链高于反链（no_order_contains_both）。不反转次可生者之扩大之序，不以自空集起而有一对之历程高于反链（not_above_antichain），亦不以链高于缺其一对之如是历程（chain_not_above）。",
       "declarations": [
         "Becoming.CausalGrowth.no_order_contains_both",
@@ -385,8 +385,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses; ordering them needs a measure, beyond C and the condition. AI readings.",
-      "zh": "何历程更好：计每一相续之所失，则兼读二者，C 于此不排任何二历程；排之需度量，在 C 与条件之外。皆 AI 之读。",
+      "en": "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; ordering them needs a measure, beyond C and the condition. AI readings.",
+      "zh": "何历程更好：计每一相续之所失，则兼读二者，C 于此不排任何二自空集起之历程；排之需度量，在 C 与条件之外。皆 AI 之读。",
       "kind": "non-implication"
     },
     {
@@ -406,8 +406,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
       "detail": {
-        "en": "The antichain and the chain rank each other on the two readings, so no strict order contains both (no_order_contains_both).",
-        "zh": "反链与链于二读上互为高下，故无一严格之序兼含二者（no_order_contains_both）。"
+        "en": "The antichain and the chain each widen the other on one of the two readings, so no strict order contains both (no_order_contains_both).",
+        "zh": "反链与链各于二读之一上扩大对方，故无一严格之序兼含二者（no_order_contains_both）。"
       }
     },
     {
@@ -765,7 +765,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "87ed67abeca8b83446b82a6941dfb2cd042c5ae36022e9c7522e403ee1c0be60"
+      "sha256": "19829e18c51d8e53c87dc3eeb0ef5cec0311df7d1d6a42f3165c81504a5c7500"
     }
   ],
   "proof_bindings": [
@@ -789,6 +789,10 @@
     {
       "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the Chinese of laws 22 and 23 and of the dependency detail listing the grammar's names writes «生生» (renewal without end), as the English and the theorems state, where it wrote 生生不息; nothing the record states changed.",
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 22、23 与列出文法诸名之依赖说明之中文写作 «生生»（无尽之复生），如英文与定理所述，原作生生不息；记录所述无改变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the statement says that read on what continues the inclusion reverses, not the order; law 16 and a counterexample say that the two widenings put the antichain and the chain above each other, not that they rank them; what the record does not show names the start C's verdict on both readings together needs, from the empty set (Starts.not_rangeWidens_formsOrContinues_needs_starts). Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：陈述改说读于相续则包含反转，而非序反转；律 16 与一个反例改说二种扩大把反链与链互置于对方之上，而非对之排序；本记录未表明者写明 C 于兼读二者时之判定所需之起点，即自空集起（Starts.not_rangeWidens_formsOrContinues_needs_starts）。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ]
 }

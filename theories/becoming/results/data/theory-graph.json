@@ -6572,6 +6572,18 @@
    "page": "theories/becoming/results/records/which-links-a-closure-needs.md"
   },
   {
+   "id": "record:whole-and-regions-and-bounded-centers",
+   "type": "result",
+   "record": "whole-and-regions-and-bounded-centers",
+   "title": "The whole and its regions, and centers bounded by dependence",
+   "title_zh": "整体与其区域，与以依存为界的中心",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/whole-and-regions-and-bounded-centers.md"
+  },
+  {
    "id": "record:whole-drawing-beyond-renewal-ends",
    "type": "result",
    "record": "whole-drawing-beyond-renewal-ends",
@@ -6582,18 +6594,6 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/whole-drawing-beyond-renewal-ends.md"
-  },
-  {
-   "id": "record:whole-first-and-bounded-centers",
-   "type": "result",
-   "record": "whole-first-and-bounded-centers",
-   "title": "The whole first, and centers bounded by dependence",
-   "title_zh": "整体优先，与以依存为界的中心",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/whole-first-and-bounded-centers.md"
   },
   {
    "id": "record:whole-law-of-counting",
@@ -6632,16 +6632,16 @@
    "page": "theories/becoming/results/records/widening-along-a-reading.md"
   },
   {
-   "id": "record:widening-as-what-every-weighting-ranks",
+   "id": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "result",
-   "record": "widening-as-what-every-weighting-ranks",
-   "title": "Widening as what every weighting ranks",
-   "title_zh": "扩大即每个加权所排者",
+   "record": "widening-as-what-every-positive-weighting-ranks",
+   "title": "Widening as what every positive weighting ranks",
+   "title_zh": "扩大即每个正的加权所排者",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
    "base": "general",
-   "page": "theories/becoming/results/records/widening-as-what-every-weighting-ranks.md"
+   "page": "theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.md"
   },
   {
    "id": "record:wisdom-root",
@@ -30819,6 +30819,12 @@
    "anchor": "r-feeding-from-a-step"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-and-regions-and-bounded-centers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-whole-and-regions-and-bounded-centers"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-first-and-bounded-centers",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -30859,6 +30865,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-need-and-feeding-read-with-time"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-widening-as-what-every-positive-weighting-ranks"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks",
@@ -35956,7 +35968,7 @@
   },
   {
    "from": "record:a-narrowing-above-its-widening",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -36816,7 +36828,7 @@
   },
   {
    "from": "record:alignment-approaches-under-the-selection-laws",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
   },
   {
@@ -38896,7 +38908,7 @@
   },
   {
    "from": "record:closure-verdict-meets-continuation-condition",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "formal-reuse"
   },
   {
@@ -39106,7 +39118,7 @@
   },
   {
    "from": "record:comparing-two-courses-on-what-they-admit",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
   },
   {
@@ -39386,7 +39398,7 @@
   },
   {
    "from": "record:comparison-within-reach",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -40111,7 +40123,7 @@
   },
   {
    "from": "record:continuation-condition-yields-living-significance",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -41836,7 +41848,7 @@
   },
   {
    "from": "record:eventual-widening",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -42366,7 +42378,7 @@
   },
   {
    "from": "record:feeding-closure",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "formal-reuse"
   },
   {
@@ -43246,7 +43258,7 @@
   },
   {
    "from": "record:graded-significance-and-priority",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -45881,7 +45893,7 @@
   },
   {
    "from": "record:levels-of-closure",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -48871,12 +48883,12 @@
   },
   {
    "from": "record:presupposition-scopes",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "formal-reuse"
   },
   {
    "from": "record:presupposition-scopes",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -50341,7 +50353,7 @@
   },
   {
    "from": "record:relative-position-is-zero-sum",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "formal-reuse"
   },
   {
@@ -51556,7 +51568,7 @@
   },
   {
    "from": "record:rivals-bounded-in-time",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "formal-reuse"
   },
   {
@@ -52391,7 +52403,7 @@
   },
   {
    "from": "record:self-concern-and-c-under-the-condition",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
   },
   {
@@ -52956,7 +52968,7 @@
   },
   {
    "from": "record:shared-laws-on-the-grammar",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -55431,7 +55443,7 @@
   },
   {
    "from": "record:unity-of-readings",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -55661,7 +55673,7 @@
   },
   {
    "from": "record:weights-within-a-ratio-agree-past-it",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -55761,7 +55773,7 @@
   },
   {
    "from": "record:what-a-center-can-know-by-a-step",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "interpretive"
   },
   {
@@ -56041,7 +56053,7 @@
   },
   {
    "from": "record:what-a-course-keeps-reachable",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
   },
   {
@@ -57241,7 +57253,7 @@
   },
   {
    "from": "record:what-position-reads",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -57316,7 +57328,7 @@
   },
   {
    "from": "record:what-self-concern-alone-ranks",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse"
   },
   {
@@ -57441,7 +57453,7 @@
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
   },
   {
@@ -57666,7 +57678,7 @@
   },
   {
    "from": "record:where-a-formations-acts-return",
-   "to": "record:whole-first-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
   {
@@ -58420,6 +58432,76 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "module:Becoming.Clearing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "module:Becoming.Continuation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "module:Becoming.Regions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "module:Becoming.Retaining",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "module:Becoming.Significance",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:closure-verdict-meets-continuation-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:continuation-condition-yields-living-significance",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:derived-extent-limits",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:feeding-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:levels-of-closure",
+   "type": "related"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:loss-beyond-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:presupposition-scopes",
+   "type": "related"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:represented-boundary-against-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:whole-and-regions-and-bounded-centers",
+   "to": "record:significance-retained-within-margin",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:whole-drawing-beyond-renewal-ends",
    "to": "module:Becoming.Continuation",
    "type": "proved-in"
@@ -58448,76 +58530,6 @@
    "from": "record:whole-drawing-beyond-renewal-ends",
    "to": "record:whole-persists-through-generation",
    "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "module:Becoming.Clearing",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "module:Becoming.Continuation",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "module:Becoming.Regions",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "module:Becoming.Retaining",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "module:Becoming.Significance",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:closure-verdict-meets-continuation-condition",
-   "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:continuation-condition-yields-living-significance",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:derived-extent-limits",
-   "type": "interpretive"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:feeding-closure",
-   "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:levels-of-closure",
-   "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:loss-beyond-a-region",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:presupposition-scopes",
-   "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:represented-boundary-against-dependence",
-   "type": "related"
-  },
-  {
-   "from": "record:whole-first-and-bounded-centers",
-   "to": "record:significance-retained-within-margin",
-   "type": "formal-reuse"
   },
   {
    "from": "record:whole-law-of-counting",
@@ -58730,37 +58742,37 @@
    "type": "related"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "module:Becoming.Regions",
    "type": "proved-in"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "record:a-narrowing-above-its-widening",
    "type": "related"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "record:comparison-by-widening",
    "type": "formal-reuse"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "record:protection-priority-excludes-uniform-aggregation",
    "type": "related"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "record:weights-within-a-ratio-agree-past-it",
    "type": "related"
   },
   {
-   "from": "record:widening-as-what-every-weighting-ranks",
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
    "to": "record:what-the-step-across-standpoints-reaches",
    "type": "related"
   },
@@ -61765,8 +61777,8 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-first-and-bounded-centers",
-   "to": "record:whole-first-and-bounded-centers",
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-and-regions-and-bounded-centers",
+   "to": "record:whole-and-regions-and-bounded-centers",
    "type": "states"
   },
   {
@@ -61775,8 +61787,8 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks",
-   "to": "record:widening-as-what-every-weighting-ranks",
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "states"
   },
   {

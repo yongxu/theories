@@ -100,7 +100,7 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
   - Input: Clearing.system_counts_dweller and reach_counts_dweller.
   - Preserved conditions: None. [Regions.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean)
 - related, not a proved adapter: [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md). Advances it: there the comparison bounded by a region needs every formation the other path admits to lie in the region or be admitted by the first (Web.retains_bounded_iff_includes); here that condition follows from the dynamics wherever significance covers what the part has reached before each step.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's weaker version reads: significance covering what a center reaches gives the continuation condition's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (an AI reading).
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Ren's weaker version reads: significance covering what a center reaches gives the continuation condition's comparison on every part within that reach whose levels without it exist, with the rest of the exchange fixed (an AI reading).
 
 **Used by:** [comparison-where-the-rest-responds](comparison-where-the-rest-responds.md) · [presupposition-scopes](presupposition-scopes.md)
 

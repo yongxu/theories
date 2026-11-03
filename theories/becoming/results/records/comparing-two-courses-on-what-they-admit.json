@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T21:32:44+00:00",
   "statement": {
-    "en": "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag decides UE4's lag, as does a tail order; it and eventual widening rank a pair oppositely.",
-    "zh": "在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 的滞后，尾序亦然；带滞后的扩大与最终扩大对一对进程排序相反。"
+    "en": "On a two-sided web, ranking every course keeping widening by name above every course admitting alike, wider at first and mixed with it, closes a cycle, only with unlisted static courses. Widening with a lag decides UE4's lag, as does a tail order; it and eventual widening relate one pair oppositely.",
+    "zh": "在两侧之网上，把每个按名持续扩大的进程排在每个所纳相同、起初更宽且与之混杂者之上便闭成一环，仅在静态所纳无列表时。带滞后的扩大判定 UE4 的滞后，尾序亦然；带滞后的扩大与最终扩大于一对进程方向相反。"
   },
   "laws": [
     {
@@ -342,15 +342,15 @@
       ]
     },
     {
-      "en": "Why the choice matters: the tail order ranks the course ahead above the early one, which admitted formation 0 at step 0, a formation the course ahead never admits; widening or widening with a lag never ranks a course above one that admitted what it never admits.",
-      "zh": "此选择何以要紧：尾序把领先之进程排在早先之进程之上，而后者于第 0 步纳了领先者从不纳的构成 0；扩大或带滞后的扩大从不把一进程排在纳过其从不纳者之进程之上。",
+      "en": "Why the choice matters: the tail order puts the course ahead above the early one, which admitted formation 0 at step 0, a formation the course ahead never admits; widening or widening with a lag never puts a course above one that admitted what it never admits.",
+      "zh": "此选择何以要紧：尾序把领先之进程置于早先之进程之上，而后者于第 0 步纳了领先者从不纳的构成 0；扩大或带滞后的扩大从不把一进程置于纳过其从不纳者之进程之上。",
       "declarations": [
         "Becoming.TailAndLag.tailOrder_loses"
       ]
     },
     {
-      "en": "Law 4. A course keeps what another keeps when every formation the other admits at every step from some step on, it admits at every step from some step on. Widening or widening with a lag, and the tail order, rank a course above another only where it keeps what the other keeps; under it the two-sided pair is unranked both ways and the listed ranking above the first formations is excluded. A condition, not an order.",
-      "zh": "律四。若另一进程自某步起每步皆纳之构成，此进程亦自某步起每步皆纳，则此进程保有另一进程所保有者。扩大或带滞后的扩大，以及尾序，只在此条件下把一进程排在另一进程之上；在此条件下两侧之对两向皆不排序，排在首构成之上的列表排序被排除。这是条件，不是序。",
+      "en": "Law 4. A course keeps what another keeps when every formation the other admits at every step from some step on, it admits at every step from some step on. Widening or widening with a lag, and the tail order, put a course above another only where it keeps what the other keeps; under it the two-sided pair is unranked both ways and the listed ranking above the first formations is excluded. A condition, not an order.",
+      "zh": "律四。若另一进程自某步起每步皆纳之构成，此进程亦自某步起每步皆纳，则此进程保有另一进程所保有者。扩大或带滞后的扩大，以及尾序，只在此条件下把一进程置于另一进程之上；在此条件下两侧之对两向皆不排序，排在首构成之上的列表排序被排除。这是条件，不是序。",
       "declarations": [
         "Becoming.Web.KeepsWhatKept",
         "Becoming.Web.KeepsWhatKept.of_includesFrom",
@@ -364,8 +364,8 @@
       ]
     },
     {
-      "en": "Law 4 tells the lag's forms apart. A lag varying with the formation keeps what the other keeps, on every web. A lag for each admission need not: on the own-condition web its order ranks the course admitting formation 0 at even steps only, and formation 1 at step 0, above the course admitting formation 0 at every step, which keeps what the first drops; the other orders do not rank them so.",
-      "zh": "律四区分滞后之诸形式。随构成而变的滞后保有对方所保有者，于每一网皆然。每次所纳各自的滞后则未必：于自身条件之网上，其序把只于偶数步纳构成 0、并于第 0 步纳构成 1 的进程，排在每步皆纳构成 0 的进程之上，而后者保有前者所舍者；其余诸序不如此排。",
+      "en": "Law 4 tells the lag's forms apart. A lag varying with the formation keeps what the other keeps, on every web. A lag for each admission need not: on the own-condition web its order puts the course admitting formation 0 at even steps only, and formation 1 at step 0, above the course admitting formation 0 at every step, which keeps what the first drops; the other orders do not put them so.",
+      "zh": "律四区分滞后之诸形式。随构成而变的滞后保有对方所保有者，于每一网皆然。每次所纳各自的滞后则未必：于自身条件之网上，其序把只于偶数步纳构成 0、并于第 0 步纳构成 1 的进程，置于每步皆纳构成 0 的进程之上，而后者保有前者所舍者；其余诸序不如此置。",
       "declarations": [
         "Becoming.Web.IncludesWithFormationLag.keepsWhatKept",
         "Becoming.Web.WidensOrWithFormationLag.keepsWhatKept",
@@ -397,8 +397,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag ranks by what each keeps of the other's admissions over time.",
-      "zh": "带滞后的扩大或尾序即生生的二阶方向：带滞后的扩大按各自随时间保有对方所纳者而排序。",
+      "en": "That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag compares by what each keeps of the other's admissions over time.",
+      "zh": "带滞后的扩大或尾序即生生的二阶方向：带滞后的扩大按各自随时间保有对方所纳者而比较。",
       "kind": "non-implication"
     },
     {
@@ -412,8 +412,8 @@
       "kind": "scope"
     },
     {
-      "en": "That every form of the lag meets law 4: the order of a lag for each admission can rank a course above one keeping a formation it drops.",
-      "zh": "滞后之每一形式皆满足律四：每次所纳各自之滞后的序可把一进程排在保有其所舍构成者之上。",
+      "en": "That every form of the lag meets law 4: the order of a lag for each admission can put a course above one keeping a formation it drops.",
+      "zh": "滞后之每一形式皆满足律四：每次所纳各自之滞后的序可把一进程置于保有其所舍构成者之上。",
       "kind": "non-implication"
     },
     {
@@ -473,8 +473,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean",
       "detail": {
-        "en": "The order of a lag for each admission ranks a course above one that keeps a formation it drops (EachLagDrops.eachLag_not_keeping).",
-        "zh": "每次所纳各自之滞后的序把一进程排在保有其所舍构成者之上（EachLagDrops.eachLag_not_keeping）。"
+        "en": "The order of a lag for each admission puts a course above one that keeps a formation it drops (EachLagDrops.eachLag_not_keeping).",
+        "zh": "每次所纳各自之滞后的序把一进程置于保有其所舍构成者之上（EachLagDrops.eachLag_not_keeping）。"
       }
     }
   ],
@@ -562,8 +562,8 @@
     {
       "id": "eventual-widening",
       "detail": {
-        "en": "Its lag is decided here, by widening with a lag and by the tail order, which contains eventual widening; the two rank a pair oppositely.",
-        "zh": "其滞后在此得判，由带滞后的扩大与包含最终扩大的尾序；二者对一对进程排序相反。"
+        "en": "Its lag is decided here, by widening with a lag and by the tail order, which contains eventual widening; the two hold of a pair in opposite directions.",
+        "zh": "其滞后在此得判，由带滞后的扩大与包含最终扩大的尾序；二者于一对进程方向相反。"
       }
     },
     {
@@ -574,7 +574,7 @@
       }
     },
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
         "en": "C read as widening; no order here is adopted by C, and choosing one is a further premise.",
         "zh": "读作扩大的 C；此处无一序为 C 所采，选取其一是又一前提。"
@@ -915,7 +915,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "87ed67abeca8b83446b82a6941dfb2cd042c5ae36022e9c7522e403ee1c0be60"
+      "sha256": "62bf70f99fb073db1f8a64563641fa745f1b9da850a7a19e58ce808eb1746635"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
@@ -993,6 +993,10 @@
     {
       "en": "28 October 2026 (OU3c, study section 433): strictJoin_trans and strictJoin_irrefl moved into Becoming.GrammarLaws, beside widening's laws, by the decision of this record's owner; names and statements kept, but generalised to any universe; their proof reference and binding moved with them.",
       "zh": "2026年10月28日（OU3c，研究第 433 节）：经本记录之主决定，strictJoin_trans 与 strictJoin_irrefl 移入 Becoming.GrammarLaws，置于扩大之律旁；名与陈述不变，唯推广至任一宇宙；其证明之引用与绑定随之移动。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the last clause of the statement says that widening with a lag and eventual widening relate one pair oppositely, not that they rank it; laws 19 to 21, two items it does not show, a counterexample and a related line say what widening with a lag, the tail order and the order of a lag for each admission put above, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：陈述末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序；律 19 至 21、两条未表明者、一个反例与一条相关说明改说带滞后的扩大、尾序与每次所纳各自之滞后的序把何者置于何者之上，与 07 §2 的本节现今所说相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提；无前提而定义之序（滞后之序、尾序或字典序等）把一进程置于另一进程之上，唯作为排序读时（于 C 之位或作为前提）才排序。主张不变。"
     }
   ]
 }

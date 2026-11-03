@@ -11,17 +11,17 @@
 ## Laws
 
 1. In a balanced flow where only active formations take, and only from what they draw on, let every condition a member of a part draws on at some step be renewed over the run (every dependence on it kept at every step). Then the levels with the part include those without it, so the part does not narrow; a part of formations renewing over the run is a case. (`Becoming.Flow.Balances.includes_of_renewed`, `Becoming.Flow.Balances.not_narrows_of_renewed`, `Becoming.Flow.Balances.includes_of_renewingIn`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations reach the grammar.
 2. Let a dependence held at T be met at no step after it, let the part give each condition at every step no more than it takes, and let the levels without the part admit at a later step the formation whose dependence it was, held there at no smaller need. Then the levels without the part widen those with it. (`Becoming.Flow.Balances.narrows_of_consumed`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. The stepwise class does not decide: in Preemption the drawer's event at the first step is within renewal, the drawer is consuming over the run and does not renew over it, and the levels without its part widen those with it. (`Becoming.Preemption.renewingAt_consuming_narrows`, `Becoming.Preemption.within_renewal_yet_loses`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. The consuming class alone does not narrow: in Untaken a formation draws on a condition that stays at zero below its need, so it is consuming over the run, yet nothing is taken or given, the flow balances, and the levels with and without its part keep what can form the same. (`Becoming.Untaken.flow`, `Becoming.Untaken.web`, `Becoming.Untaken.part`, `Becoming.Untaken.consuming_keeps`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
-5. Arising is where a part's place in the order begins. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active. (`Becoming.Web.inactive_of_not_arising`, `Becoming.Flow.Balances.keeps_of_inactive`, `Becoming.Flow.Balances.keeps_of_not_arising`)
+5. Arising is where a part not active at the start can begin to change what can form. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active. (`Becoming.Web.inactive_of_not_arising`, `Becoming.Flow.Balances.keeps_of_inactive`, `Becoming.Flow.Balances.keeps_of_not_arising`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
-6. The arising class does not decide the order: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver). (`Becoming.ArisingDrawer.flow`, `Becoming.ArisingDrawer.web`, `Becoming.ArisingDrawer.arises_narrows`, `Becoming.ArisingGiver.flow`, `Becoming.ArisingGiver.web`, `Becoming.ArisingGiver.arises_widens`)
-   - *Shared laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+6. The arising class does not decide how a part changes what can form: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver). (`Becoming.ArisingDrawer.flow`, `Becoming.ArisingDrawer.web`, `Becoming.ArisingDrawer.arises_narrows`, `Becoming.ArisingGiver.flow`, `Becoming.ArisingGiver.web`, `Becoming.ArisingGiver.arises_widens`)
+   - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -58,13 +58,13 @@ Identity from continuity rather than naming, on which a class over a run depends
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The twentieth review's D2 and F13 asked how a part's class over a run relates to its widening, under named premises with Preemption as the boundary. The answer is one direction each: renewal over the run closes nothing where only active formations take, and a consumed dependence narrows where the levels without the part meet it; the stepwise class and the consuming class alone each have a witness against them. Reading (the AI's, D2 revised): renewing and consuming are classes of a formation over a run, related to the order by these laws, not the formation-level meaning of generative and degenerative.
+The twentieth review's D2 and F13 asked how a part's class over a run relates to its widening, under named premises with Preemption as the boundary. The answer is one direction each: renewal over the run closes nothing where only active formations take, and a consumed dependence narrows where the levels without the part meet it; the stepwise class and the consuming class alone each have a witness against them. Reading (the AI's, D2 revised): renewing and consuming are classes of a formation over a run, related to how a part changes what can form by these laws, not the formation-level meaning of generative and degenerative.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
 - **formal-reuse**: [four-cases-of-a-part](four-cases-of-a-part.md). Reuses the four cases (Web.Widens, Web.Includes) and Flow.Balances.opens_nothing, the withheld levels and their balance.
-  - Output: The order on what can form and when a part opens nothing.
+  - Output: How a part changes what can form, and when it opens nothing.
   - Input: What the run classes are related to.
   - Preserved conditions: Balance; the levels without the part. [Retaining.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean)
 - **formal-reuse**: [significance-retained-within-margin](significance-retained-within-margin.md). Reuses Preemption and within_renewal_yet_loses, the witness that renewal at a step is no sign of keeping.
@@ -75,7 +75,7 @@ The twentieth review's D2 and F13 asked how a part's class over a run relates to
   - Output: A formation's class over a run.
   - Input: What a part whose members renew or whose dependence is consumed does to what can form.
   - Preserved conditions: Identity fixed by naming. [Retaining.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean)
-- related, not a proved adapter: [comparison-by-widening](comparison-by-widening.md). On level paths the condition, significance and C read one object, admission; the run classes are related to that order here.
+- related, not a proved adapter: [comparison-by-widening](comparison-by-widening.md). On level paths the condition, significance and C read one object, admission; the run classes are related to it here.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -100,6 +100,7 @@ Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow
 - 20 October 2026: added (R34, D2 and F13 of the twentieth review): the run classes related to widening under named premises, with Preemption and Untaken as boundaries; study section 225.
 - 20 October 2026, R45 (study section 246): two laws added, the class of arising over a run (no member active at the start and none arising: nothing that can form changes; Flow.Balances.keeps_of_not_arising) and its boundary (ArisingDrawer, ArisingGiver: arising decides nothing); the does_not_show item on arising replaced and next updated. Receipt 20261020T093308.742793Z.
 - 25 October 2026, board item DF (study section 418): the statement said a part that never arises changes nothing; the Lean also takes that only active formations give and that the part is inactive at the start, as the law states, and the statement now says so.
+- 3 November 2026, CD (board item CD): laws 5 and 6, the dependency's output, a related line and the correspondence speak of how a part changes what can form, not of its place in an order, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-run-classes-and-widening.json).
 
 <a id="earlier-text--早期文本"></a>

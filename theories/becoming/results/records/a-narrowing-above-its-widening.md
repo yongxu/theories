@@ -11,11 +11,11 @@
 ## Laws
 
 1. Under any weights two courses compare as what each admits beyond the other. A net weighting counts each listed item for a course that admits it and against it; it ranks a widening higher where every added item weighs above zero, a positive weighting being its case with nothing against. (`Becoming.Weighting.beyond`, `Becoming.Weighting.size`, `Becoming.Weighting.term_split`, `Becoming.Weighting.and_swap`, `Becoming.Weighting.weighed_split`, `Becoming.Weighting.weighed_shared`, `Becoming.Weighting.weighed_split_right`, `Becoming.Weighting.add_lt_add_iff`, `Becoming.Weighting.add_le_add_iff`, `Becoming.Weighting.weighed_lt_iff_beyond`, `Becoming.Weighting.weighed_le_iff_beyond`, `Becoming.Weighting.beyond_term_zero`, `Becoming.Weighting.weighed_beyond_of_includes`, `Becoming.Weighting.ranksNet`, `Becoming.Weighting.ranksNet_iff_beyond`, `Becoming.Weighting.not_of_neg`, `Becoming.Weighting.beyond_lt`, `Becoming.Weighting.ranksNet_lt_of_widens`, `Becoming.Weighting.cond_zero`, `Becoming.Weighting.weighed_zero`, `Becoming.Weighting.weighed_lt_of_widens`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 2. A net weighting ranks a widening by one item alone as that item weighs, whatever else either course keeps: above where it weighs above zero, below where below zero, neither where at zero; so its increment at an item has the same sign in every context. (`Becoming.Weighting.WidensBy`, `Becoming.Weighting.widensOn_of_widensBy`, `Becoming.Weighting.weighed_widensBy`, `Becoming.Weighting.size_widensBy_pos`, `Becoming.Weighting.mul_lt_mul_iff`, `Becoming.Weighting.ranksNet_widensBy`, `Becoming.Weighting.ranksNet_ties`, `Becoming.Weighting.IncreasingAt`, `Becoming.Weighting.ranksNet_increasingAt`, `Becoming.Weighting.IncrementIs`, `Becoming.Weighting.increment_transfer`, `Becoming.Weighting.ranksNet_increment_alike`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 3. A ranking of presentations, plans with their wording and order, reads the sets on a pair where it ranks the two as an order on courses ranks what they keep. Read right, an order increasing at the added item never ranks the narrowing above; under a net weighting a narrowing above its widening by one item is a pair not read right or an item at zero or below, and read right it is an item below zero. (`Becoming.Weighting.ReadsSetsOn`, `Becoming.Weighting.ReadsSets`, `Becoming.Weighting.reads_increasingAt`, `Becoming.Weighting.narrower_above_net`, `Becoming.Weighting.reads_ranksNet`, `Becoming.Weighting.reads_ranksNet_widens`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 4. Read right, the sign of the order's increment from the narrower course to the wider fixes the verdict: a sign measured apart predicts the ranking exactly where it is that increment's sign in the pair's context. (`Becoming.Weighting.reads_increment_of`, `Becoming.Weighting.reads_increment`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
@@ -59,7 +59,7 @@ Invariance of description and dominance (Tversky and Kahneman 1986): dominance i
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.
+- **formal-reuse**: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.
   - Output: A course and its weighted count over a finite listing.
   - Input: Courses compared by what each admits beyond the other.
   - Preserved conditions: Finite listing, two-valued admission. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)

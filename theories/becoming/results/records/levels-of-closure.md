@@ -90,7 +90,7 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
   - Output: The seed–edge closure, reachability along edges.
   - Input: WithinClosure is the seed–edge closure from one seed.
   - Preserved conditions: None. [EdgeClosure.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean)
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Ren's levels “the whole … the system that one is in … the self”: the system does not read the intermediate level, and the reach closure is offered for it (an AI reading).
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Ren's levels “the whole … the system that one is in … the self”: the system does not read the intermediate level, and the reach closure is offered for it (an AI reading).
 - related, not a proved adapter: [feedback-and-reach](feedback-and-reach.md). The influence closure bounds what a formation's own feedback can carry; a part's exchange reaches within the reach closure and the system.
 - related, not a proved adapter: [how-much-difference-arrives](how-much-difference-arrives.md). Answers the measure in its next step: the common condition does not measure the strength of coupling, and the coupling strengths do; the carried amount gives a difference's routes in time (carried_pos_iff).
 

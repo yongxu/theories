@@ -188,7 +188,7 @@
       }
     },
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用 Web.retains_bounded_iff 与 Clearing.clearer_loses_dweller；那里延续条件的判断总决定每个区域内的判断（Web.Retains.within），这里给出反过来也成立之处。",

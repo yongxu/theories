@@ -80,7 +80,7 @@
   ],
   "dependencies": [
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
         "en": "Its bounded_rival is the case of a region of standpoints and formations.",

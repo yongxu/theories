@@ -113,8 +113,8 @@
       "en": "closes_nothing, opens_nothing and changes_nothing compare the part's taking and giving at every step and on every condition."
     },
     {
-      "zh": "包含比较每步被接纳的形成；分为四种情形是对两个包含的经典逻辑，不是 Lean 定理。",
-      "en": "Inclusion compares the formations admitted at each step; the split into four cases is classical logic over the two inclusions, not a Lean theorem."
+      "zh": "包含比较每步被接纳的形成；包含或超出两向皆已判定之处，四种情形必居其一，是根律（`«四比之周»`）；对每一对皆作此判定恰是排中律（`«则逾之定当且仅当排中»`）。",
+      "en": "Inclusion compares the formations admitted at each step; wherever inclusion or exceeding is decided both ways one of the four cases holds, a root law (`«四比之周»`), and deciding it for every pair is exactly excluded middle (`«则逾之定当且仅当排中»`)."
     },
     {
       "zh": "离散的步（从第零步计）；自然数的水平、所需与数量。",
@@ -676,6 +676,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'the author's reading' in the correspondence reads 'a reading (the AI's argument)', the reading keeping its AI label, and the label no longer says 'adopted on Ren's delegation'. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法”改为“读法（AI 的论证）”，读法保留其 AI 标签，标签不再写“依 Ren 的交托采用”。规律未变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): a hypothesis said that the split into four cases is classical logic, not a Lean theorem. Wherever inclusion or exceeding is decided both ways one of the cases holds by a root law for every relation (`«四比之周»`), and only deciding it for every pair is excluded middle; the hypothesis and its home section in 07 §2 now say so. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：一条假设原说分为四种情形是经典逻辑，不是 Lean 定理。包含或超出两向皆已判定之处，由对每个关系皆成立的根律（`«四比之周»`），四种情形必居其一，唯对每一对皆作此判定方为排中律；该假设与 07 §2 的本节今如此说。主张不变。"
     }
   ],
   "text_versions": [
