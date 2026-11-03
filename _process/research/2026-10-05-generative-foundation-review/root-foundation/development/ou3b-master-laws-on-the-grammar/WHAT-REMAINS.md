@@ -210,7 +210,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 - the theorems that read no field, which enter the root only where a central declaration uses them (§十三 item 13, and item 4 of "After OU3f" above);
 - a derivation of balance, whose failure U1's verdict wrote down, which meets that part;
-- models of an organism and an institution (plan §八 step 9), which is modelling work beyond the unification and is named as open on the one page;
+- further models of plan §八 step 9's test systems, which is modelling work beyond the unification;
 - real amounts, continuous time, quantum dynamics and consciousness;
 - the warrant of the two premises, which the account names and does not assert.
 
@@ -456,7 +456,7 @@ OU7 landed (study §492, core receipt `20261101T094230.205342Z`, every core and 
 
 - **The release gate's item 4 is met.** Items 1 to 6 are now met. Item 7, the freeze and the sending decisions, comes last and is not this note's.
 - **What item 4 leaves.** The models' conditional laws are each stated with their hypotheses at their homes; they are not yet each given a net where the condition fails. That does not hold a release. It is the kind of work plan §十三 items 6, 8, 9 and 11 still ask for, after the gate.
-- **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model, the institution named on the one page as having none (9); and the three minimalities' report, with MDL and Pareto not yet done (11). OG landed (study §497): a reader rebuilt from the level it reads, its stock buying time under a cut exactly where the rebuild draws on the level; the institution is next.
+- **After the gate.** The frontier is plan §十三's items still open: the map on each model class (6); pairing, power and the fragments of mutual translation (8); the test systems of plan §六, each with its model (9); and the three minimalities' report, with MDL and Pareto not yet done (11). OG landed (study §497): a reader rebuilt from the level it reads, its stock buying time under a cut exactly where the rebuild draws on the level. OG2 landed (study §501): one kind of institution, a rule of entry rebuilt from the members it limits; other kinds and purposes stay open, and part 2 is the two families on the World's flows.
 
 ## BD3 and BD4 landed: lever 1 (a), balance on closures (1 November 2026)
 

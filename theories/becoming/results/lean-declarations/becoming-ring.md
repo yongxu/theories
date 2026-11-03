@@ -1586,6 +1586,232 @@ Definitions and types:
 
 </details>
 
+<a id="module-0375a4d4a6cc"></a>
+
+<details>
+<summary>RuleRebuilding.lean — 207 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/og2/DESIGN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: instance layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean`
+
+Imports: `Becoming.GrammarLaws`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.RuleRebuilding.add_sub_cancel'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L264) | 264 |
+| [Becoming.RuleRebuilding.exists_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L272) | 272 |
+| [Becoming.RuleRebuilding.le_add_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L279) | 279 |
+| [Becoming.RuleRebuilding.le_of_add_le_add_right'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L284) | 284 |
+| [Becoming.RuleRebuilding.mul_assoc'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L289) | 289 |
+| [Becoming.RuleRebuilding.right_distrib'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L296) | 296 |
+| [Becoming.RuleRebuilding.sub_le_sub_left'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L299) | 299 |
+| [Becoming.RuleRebuilding.sub_eq_zero_of_le'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L304) | 304 |
+| [Becoming.RuleRebuilding.le_add_sub_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L317) | 317 |
+| [Becoming.RuleRebuilding.succ_ne_zero'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L327) | 327 |
+| [Becoming.RuleRebuilding.sub_pos'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L329) | 329 |
+| [Becoming.RuleRebuilding.exists_div](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L339) | 339 |
+| [Becoming.RuleRebuilding.sumL_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L356) | 356 |
+| [Becoming.RuleRebuilding.length_replicate'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L363) | 363 |
+| [Becoming.RuleRebuilding.keep_cons_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L368) | 368 |
+| [Becoming.RuleRebuilding.after_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L376) | 376 |
+| [Becoming.RuleRebuilding.after_le_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L389) | 389 |
+| [Becoming.RuleRebuilding.after_zero_of_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L395) | 395 |
+| [Becoming.RuleRebuilding.after_short](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L398) | 398 |
+| [Becoming.RuleRebuilding.sum_keep_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L404) | 404 |
+| [Becoming.RuleRebuilding.length_keep_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L409) | 409 |
+| [Becoming.RuleRebuilding.length_keep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L414) | 414 |
+| [Becoming.RuleRebuilding.keep_of_length_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L419) | 419 |
+| [Becoming.RuleRebuilding.keep_keep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L427) | 427 |
+| [Becoming.RuleRebuilding.keep_cons_keep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L435) | 435 |
+| [Becoming.RuleRebuilding.keep_append_length](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L442) | 442 |
+| [Becoming.RuleRebuilding.each_keep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L453) | 453 |
+| [Becoming.RuleRebuilding.sum_le_of_each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L458) | 458 |
+| [Becoming.RuleRebuilding.sum_ge_of_each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L467) | 467 |
+| [Becoming.RuleRebuilding.after_ge_of_each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L477) | 477 |
+| [Becoming.RuleRebuilding.step_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L491) | 491 |
+| [Becoming.RuleRebuilding.step_onward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L494) | 494 |
+| [Becoming.RuleRebuilding.not_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L497) | 497 |
+| [Becoming.RuleRebuilding.gone_ended](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L504) | 504 |
+| [Becoming.RuleRebuilding.step_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L506) | 506 |
+| [Becoming.RuleRebuilding.level_onward_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L510) | 510 |
+| [Becoming.RuleRebuilding.«尽而不复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L515) | 515 |
+| [Becoming.RuleRebuilding.run_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L520) | 520 |
+| [Becoming.RuleRebuilding.not_held_of_gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L526) | 526 |
+| [Becoming.RuleRebuilding.run_add](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L534) | 534 |
+| [Becoming.RuleRebuilding.«恒取不逾生则存»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L551) | 551 |
+| [Becoming.RuleRebuilding.«恒取逾生则减»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L567) | 567 |
+| [Becoming.RuleRebuilding.«恒取逾生则尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L597) | 597 |
+| [Becoming.RuleRebuilding.zeroUpTo_nil](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L621) | 621 |
+| [Becoming.RuleRebuilding.zeroUpTo_keep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L625) | 625 |
+| [Becoming.RuleRebuilding.zeroUpTo_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L631) | 631 |
+| [Becoming.RuleRebuilding.sum_zero_of_zeroUpTo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L637) | 637 |
+| [Becoming.RuleRebuilding.entrant_of_teachers_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L645) | 645 |
+| [Becoming.RuleRebuilding.entrant_of_quota_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L654) | 654 |
+| [Becoming.RuleRebuilding.entrant_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L663) | 663 |
+| [Becoming.RuleRebuilding.length_holders_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L675) | 675 |
+| [Becoming.RuleRebuilding.length_others_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L683) | 683 |
+| [Becoming.RuleRebuilding.drain_of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L692) | 692 |
+| [Becoming.RuleRebuilding.«不及任则持尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L716) | 716 |
+| [Becoming.RuleRebuilding.reviseHeld_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L723) | 723 |
+| [Becoming.RuleRebuilding.«额零则持尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L735) | 735 |
+| [Becoming.RuleRebuilding.«无持者不复»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L756) | 756 |
+| [Becoming.RuleRebuilding.run_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L773) | 773 |
+| [Becoming.RuleRebuilding.revised_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L778) | 778 |
+| [Becoming.RuleRebuilding.«无持者改不行»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L795) | 795 |
+| [Becoming.RuleRebuilding.step_same_fields](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L803) | 803 |
+| [Becoming.RuleRebuilding.«无持者额不与»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L831) | 831 |
+| [Becoming.RuleRebuilding.taught_members_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L842) | 842 |
+| [Becoming.RuleRebuilding.revised_none](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L847) | 847 |
+| [Becoming.RuleRebuilding.take_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L858) | 858 |
+| [Becoming.RuleRebuilding.teachers_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L864) | 864 |
+| [Becoming.RuleRebuilding.onward_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L867) | 867 |
+| [Becoming.RuleRebuilding.steady_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L899) | 899 |
+| [Becoming.RuleRebuilding.steady_take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L905) | 905 |
+| [Becoming.RuleRebuilding.held_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L911) | 911 |
+| [Becoming.RuleRebuilding.excess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L917) | 917 |
+| [Becoming.RuleRebuilding.steady_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L924) | 924 |
+| [Becoming.RuleRebuilding.steady_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L930) | 930 |
+| [Becoming.RuleRebuilding.one_le_of_held_steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L943) | 943 |
+| [Becoming.RuleRebuilding.«稳者恒持当且仅当在带»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L955) | 955 |
+| [Becoming.RuleRebuilding.«外授之稳同带»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L980) | 980 |
+| [Becoming.RuleRebuilding.band_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L998) | 998 |
+| [Becoming.RuleRebuilding.leak_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1033) | 1033 |
+| [Becoming.RuleRebuilding.«带之二式»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1042) | 1042 |
+| [Becoming.RuleRebuilding.add_sub_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1050) | 1050 |
+| [Becoming.RuleRebuilding.«额小而不足者门必过一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1080) | 1080 |
+| [Becoming.RuleRebuilding.band_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1106) | 1106 |
+| [Becoming.RuleRebuilding.«带唯二»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1111) | 1111 |
+| [Becoming.RuleRebuilding.«带一至五»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1127) | 1127 |
+| [Becoming.RuleRebuilding.«带无»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1141) | 1141 |
+| [Becoming.RuleRebuilding.each_weaken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1172) | 1172 |
+| [Becoming.RuleRebuilding.each_replicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1177) | 1177 |
+| [Becoming.RuleRebuilding.within_take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1181) | 1181 |
+| [Becoming.RuleRebuilding.within_teachers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1189) | 1189 |
+| [Becoming.RuleRebuilding.within_not_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1196) | 1196 |
+| [Becoming.RuleRebuilding.within_entrant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1201) | 1201 |
+| [Becoming.RuleRebuilding.within_door](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1208) | 1208 |
+| [Becoming.RuleRebuilding.reviseHeld_in](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1215) | 1215 |
+| [Becoming.RuleRebuilding.within_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1223) | 1223 |
+| [Becoming.RuleRebuilding.«域闭»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1255) | 1255 |
+| [Becoming.RuleRebuilding.«域中储不减»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1261) | 1261 |
+| [Becoming.RuleRebuilding.within_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1266) | 1266 |
+| [Becoming.RuleRebuilding.«稳为域之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1274) | 1274 |
+| [Becoming.RuleRebuilding.«域可得»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1283) | 1283 |
+| [Becoming.RuleRebuilding.door_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1287) | 1287 |
+| [Becoming.RuleRebuilding.sum_keep_cons_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1291) | 1291 |
+| [Becoming.RuleRebuilding.open_not_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1299) | 1299 |
+| [Becoming.RuleRebuilding.«无持而门开不逾生则存»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1313) | 1313 |
+| [Becoming.RuleRebuilding.«无持而门开众在»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1334) | 1334 |
+| [Becoming.RuleRebuilding.«无持而门开逾生则尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1350) | 1350 |
+| [Becoming.RuleRebuilding.«存尽相斥»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1409) | 1409 |
+| [Becoming.RuleRebuilding.nobody_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1416) | 1416 |
+| [Becoming.RuleRebuilding.«稳开二试»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1426) | 1426 |
+| [Becoming.RuleRebuilding.«稳存而开不存则门过一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1448) | 1448 |
+| [Becoming.RuleRebuilding.«入过来者之式»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1463) | 1463 |
+| [Becoming.RuleRebuilding.«开存而稳不存之式»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1498) | 1498 |
+| [Becoming.RuleRebuilding.reviseHeld_some](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1506) | 1506 |
+| [Becoming.RuleRebuilding.«改额为零则持尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1515) | 1515 |
+| [Becoming.RuleRebuilding.«带不定改后»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1540) | 1540 |
+| [Becoming.RuleRebuilding.not_held_of_no_holder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1551) | 1551 |
+| [Becoming.RuleRebuilding.«外授者即入»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1560) | 1560 |
+| [Becoming.RuleRebuilding.«三源之表»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1577) | 1577 |
+| [Becoming.RuleRebuilding.length_entered](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1598) | 1598 |
+| [Becoming.RuleRebuilding.«任满皆新»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1604) | 1604 |
+| [Becoming.RuleRebuilding.within_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1631) | 1631 |
+| [Becoming.RuleRebuilding.«域中任满皆新»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1640) | 1640 |
+| [Becoming.RuleRebuilding.keep_map](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1701) | 1701 |
+| [Becoming.RuleRebuilding.after_map_last](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1709) | 1709 |
+| [Becoming.RuleRebuilding.countW_rot](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1717) | 1717 |
+| [Becoming.RuleRebuilding.add_four](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1729) | 1729 |
+| [Becoming.RuleRebuilding.take_strands](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1732) | 1732 |
+| [Becoming.RuleRebuilding.sum_strandH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1754) | 1754 |
+| [Becoming.RuleRebuilding.onward_strands](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1763) | 1763 |
+| [Becoming.RuleRebuilding.strands_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1801) | 1801 |
+| [Becoming.RuleRebuilding.strands_take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1812) | 1812 |
+| [Becoming.RuleRebuilding.strands_held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1818) | 1818 |
+| [Becoming.RuleRebuilding.«隙之律»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1833) | 1833 |
+| [Becoming.RuleRebuilding.«隙过生持至尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1853) | 1853 |
+| [Becoming.RuleRebuilding.count_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1867) | 1867 |
+| [Becoming.RuleRebuilding.mul_lt_of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1876) | 1876 |
+| [Becoming.RuleRebuilding.split_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1879) | 1879 |
+| [Becoming.RuleRebuilding.lt_of_add_lt_add_left'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1881) | 1881 |
+| [Becoming.RuleRebuilding.mul_lt_mul_of_pos'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1884) | 1884 |
+| [Becoming.RuleRebuilding.«隙存而稳不存之式»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1896) | 1896 |
+| [Becoming.RuleRebuilding.«稳存而隙不存之式»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1910) | 1910 |
+| [Becoming.RuleRebuilding.«隙存而稳不存»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1933) | 1933 |
+| [Becoming.RuleRebuilding.«稳存而隙不存»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1939) | 1939 |
+| [Becoming.RuleRebuilding.«改而成隙则尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1954) | 1954 |
+| [Becoming.RuleRebuilding.«同规随类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1965) | 1965 |
+| [Becoming.RuleRebuilding.«弃而储增»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1990) | 1990 |
+| [Becoming.RuleRebuilding.«四境皆有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L2011) | 2011 |
+| [Becoming.RuleRebuilding.«及任之前持尽之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L2024) | 2024 |
+
+Definitions and types:
+
+- `inductive` [Becoming.RuleRebuilding.Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L129) (L129)
+- `structure` [Becoming.RuleRebuilding.Rule](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L136) (L136)
+- `structure` [Becoming.RuleRebuilding.St](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L145) (L145)
+- `structure` [Becoming.RuleRebuilding.Move](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L152) (L152)
+- `def` [Becoming.RuleRebuilding.sumL](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L157) (L157)
+- `def` [Becoming.RuleRebuilding.keep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L162) (L162)
+- `def` [Becoming.RuleRebuilding.after](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L168) (L168)
+- `def` [Becoming.RuleRebuilding.take](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L174) (L174)
+- `def` [Becoming.RuleRebuilding.teachers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L177) (L177)
+- `def` [Becoming.RuleRebuilding.taught](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L180) (L180)
+- `def` [Becoming.RuleRebuilding.entrant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L187) (L187)
+- `def` [Becoming.RuleRebuilding.door](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L194) (L194)
+- `def` [Becoming.RuleRebuilding.reviseHeld](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L200) (L200)
+- `def` [Becoming.RuleRebuilding.revised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L206) (L206)
+- `abbrev` [Becoming.RuleRebuilding.Ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L214) (L214)
+- `def` [Becoming.RuleRebuilding.onward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L217) (L217)
+- `def` [Becoming.RuleRebuilding.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L222) (L222)
+- `def` [Becoming.RuleRebuilding.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L226) (L226)
+- `def` [Becoming.RuleRebuilding.run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L229) (L229)
+- `def` [Becoming.RuleRebuilding.always](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L234) (L234)
+- `def` [Becoming.RuleRebuilding.Held](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L237) (L237)
+- `def` [Becoming.RuleRebuilding.NoHolder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L240) (L240)
+- `def` [Becoming.RuleRebuilding.Gone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L243) (L243)
+- `def` [Becoming.RuleRebuilding.leak](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L246) (L246)
+- `def` [Becoming.RuleRebuilding.steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L251) (L251)
+- `def` [Becoming.RuleRebuilding.nobody](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L255) (L255)
+- `abbrev` [Becoming.RuleRebuilding.Band](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L259) (L259)
+- `def` [Becoming.RuleRebuilding.Each](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L449) (L449)
+- `def` [Becoming.RuleRebuilding.Closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L545) (L545)
+- `def` [Becoming.RuleRebuilding.ZeroUpTo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L616) (L616)
+- `def` [Becoming.RuleRebuilding.Steady](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L897) (L897)
+- `def` [Becoming.RuleRebuilding.rA](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1095) (L1095)
+- `def` [Becoming.RuleRebuilding.rB](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1098) (L1098)
+- `def` [Becoming.RuleRebuilding.rC](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1101) (L1101)
+- `def` [Becoming.RuleRebuilding.rF](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1104) (L1104)
+- `def` [Becoming.RuleRebuilding.Within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1155) (L1155)
+- `def` [Becoming.RuleRebuilding.RevIn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1161) (L1161)
+- `abbrev` [Becoming.RuleRebuilding.Fits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1164) (L1164)
+- `def` [Becoming.RuleRebuilding.onIn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1169) (L1169)
+- `def` [Becoming.RuleRebuilding.Goes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1403) (L1403)
+- `def` [Becoming.RuleRebuilding.EndsUp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1406) (L1406)
+- `def` [Becoming.RuleRebuilding.onceAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1531) (L1531)
+- `def` [Becoming.RuleRebuilding.entered](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1594) (L1594)
+- `def` [Becoming.RuleRebuilding.quotas](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1627) (L1627)
+- `def` [Becoming.RuleRebuilding.strandH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1660) (L1660)
+- `def` [Becoming.RuleRebuilding.strandO](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1666) (L1666)
+- `def` [Becoming.RuleRebuilding.strands](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1671) (L1671)
+- `def` [Becoming.RuleRebuilding.countW](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1675) (L1675)
+- `def` [Becoming.RuleRebuilding.isHeld](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1680) (L1680)
+- `def` [Becoming.RuleRebuilding.isEmpty](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1685) (L1685)
+- `def` [Becoming.RuleRebuilding.heldCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1690) (L1690)
+- `def` [Becoming.RuleRebuilding.emptyCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1693) (L1693)
+- `def` [Becoming.RuleRebuilding.lastOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1696) (L1696)
+- `def` [Becoming.RuleRebuilding.Strands](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1797) (L1797)
+- `def` [Becoming.RuleRebuilding.rD](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1927) (L1927)
+- `def` [Becoming.RuleRebuilding.rE](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1930) (L1930)
+- `def` [Becoming.RuleRebuilding.outAndBack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L1945) (L1945)
+- `def` [Becoming.RuleRebuilding.rG](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L2000) (L2000)
+- `def` [Becoming.RuleRebuilding.rH](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L2003) (L2003)
+- `def` [Becoming.RuleRebuilding.rI](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean#L2006) (L2006)
+
+</details>
+
 <a id="module-9d70361ccdb8"></a>
 
 <details>

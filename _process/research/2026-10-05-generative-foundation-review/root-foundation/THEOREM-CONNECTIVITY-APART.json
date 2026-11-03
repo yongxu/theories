@@ -7211,6 +7211,151 @@
    "module": "Becoming.GuardHorizon",
    "category": "general-structure",
    "reason": "a law of every reading of any type of configurations: given choice over the readings and every reading given, a choice from readings exists exactly where a response common over the reading's sameness does, through the core's «自反传递则共应当且仅当承遍» (SJ, GuardHorizon's bridge to the leaf); nothing on the base uses it"
+  },
+  "Becoming.RuleRebuilding.count_total": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "support",
+   "reason": "a count on lists of booleans, held plus empty is the length, a statement using only the prelude (OG2)"
+  },
+  "Becoming.RuleRebuilding.run_gone": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "A state with no level, holder or other stays so along every course: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«三源之表»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "After an empty membership, at a level of at least one, with entrants on offer: taught from outside the rule has holders after one step, taught by members or not at all it has none: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«及任之前持尽之例»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Held at the start and no holder after a tenure, the premise of the law of draining met: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«同规随类»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "One step with a revision inside the region continues under the class \"held or not\" and not under the class \"the same quota\", the grammar's continuation («续») relative to a class at these occurrences: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«四境皆有»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Each of the four cases of the steady state and open entry taking within the renewal occurs: witnesses at four rules of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«域中任满皆新»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "In the region, with entrants on offer at every step, after a tenure the holders are exactly the cohorts entered in it: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«域中储不减»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "The level does not fall on a step within the region: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«外授之稳同带»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Taught from outside, where a teacher's age falls within the tenure, the steady state stays held exactly on the same band: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«带一至五»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "The band of quotas is one to five: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«带不定改后»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Five computed cases: two quotas in the band do not bound what a revision between them does: witnesses at three rules of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«带唯二»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "The band of quotas is exactly two: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«带无»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "The band of quotas is empty though a teacher's age falls within the tenure: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«开存而稳不存之式»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Where open entry takes within the renewal and the steady state does not, the quota exceeds those who would come untaught, or the door turns no one away: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«弃而储增»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "With no one coming untaught, a quota of nothing and a renewal, after a tenure there is no member and the level has risen: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«改而成隙则尽»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "A revision out of the band and back leaves gaps in the membership, and the level then ends along the same rule: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«改额为零则持尽»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Taught by members, a revision to nothing with no later revision to a nonzero quota leaves no holder a tenure after it: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«无持者改不行»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "A revision without a holder leaves the quota as it was: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«无持者额不与»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Two states with no holder differing only in quota have the same later levels and members along every course: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«无持而门开众在»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "With no holder, others are present after every step of open entry that takes within the renewal: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳为域之例»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "The steady state is a case of the region: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳存而开不存则门过一»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Where the steady state takes within the renewal and open entry does not, a keeper turns away more than itself: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳存而隙不存»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Gaps can end the level, the rule held to the last state, where the steady state goes on: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳存而隙不存之式»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "support",
+   "reason": "an arithmetic form on the natural numbers behind the witness that gaps can end what the steady state keeps, a statement using only the prelude (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳开二试»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Taught by members, the steady state goes on exactly where its take fits the renewal, and open entry exactly where its own does, and otherwise each ends: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Taught by members, the steady state stays held exactly on the band: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«隙存而稳不存»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Gaps can hold a quota that the steady state cannot: a witness at one rule of the family of rules kept by tenure and by who teaches entrants (OG2)"
+  },
+  "Becoming.RuleRebuilding.«隙存而稳不存之式»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "support",
+   "reason": "an arithmetic form on the natural numbers behind the witness that gaps can hold what the steady state cannot, a statement using only the prelude (OG2)"
+  },
+  "Becoming.RuleRebuilding.«额小而不足者门必过一»": {
+   "module": "Becoming.RuleRebuilding",
+   "category": "model-witness",
+   "reason": "Where a keeper turns away at most itself, every quota of at least one below one in the band is in the band: a fact about one constructed family of models, the rules kept by tenure and by who teaches entrants (OG2)"
   }
  },
  "instances": {

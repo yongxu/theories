@@ -1,0 +1,302 @@
+{
+  "schema_version": 2,
+  "id": "a-rule-rebuilt-from-the-members-it-limits",
+  "title": {
+    "en": "A rule rebuilt from the members it limits",
+    "zh": "规取于其所限之众"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-03T02:37:14+00:00",
+  "statement": {
+    "en": "In one rule's family of nets, a rule of entry on a shared level, held by members who draw on it and whose count turns others away, stays held from its steady state exactly where teaching fits a tenure, the quota is at least one and the steady state's take fits the renewal.",
+    "zh": "在一条规则所成之网族中，一条关于进入共享之位的规则，其持者亦取于此位，其数拒他者于外：自稳态起，此规则每步皆得持，恰当传授合于一任、额至少为一、稳态之取合于所生。"
+  },
+  "laws": [
+    {
+      "en": "A family with a constant take of A, closed under the steps that do not end: where A is at most the renewal the family is kept and the level does not fall from a level of at least one; where A is the renewal plus d, the level falls by d a step and the family ends in level zero with no member.",
+      "zh": "取恒为 A、于不终之步下闭之族：A 不逾所生时，自至少为一之位，族得保而位不降；A 为所生加 d 时，位每步降 d，族终于位零且无成员。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«恒取不逾生则存»",
+        "Becoming.RuleRebuilding.«恒取逾生则减»",
+        "Becoming.RuleRebuilding.«恒取逾生则尽»"
+      ]
+    },
+    {
+      "en": "Taught by members, entrants on offer at every step, no revision, a level of at least one: from the steady state at quota q the rule is held at every step exactly where l < s, 1 ≤ q and (q + e q) · s ≤ g, with e q := f − c · q · (s − l). Taught from outside, the same wherever l < s. The third conjunct is the end's clause at this take.",
+      "zh": "由成员传授，每步皆有欲入者，无修订，位至少为一：自额 q 之稳态起，规则每步皆得持，恰当 l < s、1 ≤ q 且 (q + e q) · s ≤ g，其中 e q := f − c · q · (s − l)。由外传授者，凡 l < s 皆同。第三个合取是终止条款在此取上的形式。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+        "Becoming.RuleRebuilding.«外授之稳同带»"
+      ]
+    },
+    {
+      "en": "With C := c · (s − l), the steady take fits exactly where q · s ≤ g and (f + q) · s ≤ g + C · q · s. A quota can be too small only at C ≥ 2, where a keeper turns away more than itself. The band is one quota, a range or empty at three witnesses.",
+      "zh": "记 C := c · (s − l)，稳态之取相合，恰当 q · s ≤ g 且 (f + q) · s ≤ g + C · q · s。额之过小只可能在 C ≥ 2，此时一守者所拒多于其自身。于三个例证，带为一额、一段或空。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«带之二式»",
+        "Becoming.RuleRebuilding.«额小而不足者门必过一»",
+        "Becoming.RuleRebuilding.«带唯二»",
+        "Becoming.RuleRebuilding.«带一至五»",
+        "Becoming.RuleRebuilding.«带无»"
+      ]
+    },
+    {
+      "en": "A region of holder cohorts and quotas in [P, Q], with others at most the leak at P, where (Q + the leak at P) · s ≤ g, is closed under every step with entrants on offer and a revision in [P, Q], and the level does not fall; the steady state is a case, and such a region exists with room for revision.",
+      "zh": "持者队列与额皆在 [P, Q]、他者不逾 P 之漏、且 (Q + P 之漏) · s ≤ g 之域，于每一有欲入者且修订在 [P, Q] 之步下闭，位不降；稳态为其一例，且此种有修订余地之域存在。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«域闭»",
+        "Becoming.RuleRebuilding.«域中储不减»",
+        "Becoming.RuleRebuilding.«稳为域之例»",
+        "Becoming.RuleRebuilding.«域可得»"
+      ]
+    },
+    {
+      "en": "Taught by members, holders of at most s cohorts: at s ≤ l, or at a quota of 0 with no revision to a nonzero one, no holder is left after s steps, entrants on offer or not, from every level; a revision to 0 where a holder stands empties the holders likewise.",
+      "zh": "由成员传授，持者至多 s 队：s ≤ l 时，或额为 0 且无修订至非零时，经 s 步无持者，有无欲入者皆然，自任一位皆然；有持者时修订为 0，持者亦如此而尽。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«不及任则持尽»",
+        "Becoming.RuleRebuilding.«额零则持尽»",
+        "Becoming.RuleRebuilding.«改额为零则持尽»"
+      ]
+    },
+    {
+      "en": "Taught by members or not at all, no holder stays no holder under the whole net, a revision does not take, and two such states differing only in quota have the same later levels and members. At every source the end, level zero with no member, is closed under the net.",
+      "zh": "由成员传授或不传授者，无持者于全网下仍无持者，修订不行，仅额相异之二此种状态其后之位与成员皆同。于任一源，终态（位零而无成员）于网下闭。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«无持者不复»",
+        "Becoming.RuleRebuilding.«无持者改不行»",
+        "Becoming.RuleRebuilding.«无持者额不与»",
+        "Becoming.RuleRebuilding.«尽而不复»"
+      ]
+    },
+    {
+      "en": "With no holder and entrants on offer: where f · s ≤ g, from a level of at least one with the others fitting, the level does not fall, and others are present after every step at 1 ≤ s, 1 ≤ f; where 1 ≤ s and g < f · s, it ends at some step from every level and any others.",
+      "zh": "无持者而有欲入者：f · s ≤ g 时，自至少为一之位且他者相合，位不降，1 ≤ s、1 ≤ f 时每步之后皆有他者；1 ≤ s 且 g < f · s 时，自任一位与任何他者，终于某步。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«无持而门开不逾生则存»",
+        "Becoming.RuleRebuilding.«无持而门开众在»",
+        "Becoming.RuleRebuilding.«无持而门开逾生则尽»"
+      ]
+    },
+    {
+      "en": "Two separately started states compared, the steady state and no holder with f others in each cohort at the same level: the first's level goes on exactly where (q + e q) · s ≤ g, the second's exactly where f · s ≤ g, and otherwise each ends at some step. All four combinations of the arithmetic occur. Where only the steady state's test holds, C ≥ 2; where only open entry's holds, f < q or the door turns no one away.",
+      "zh": "比较分别起始之二态，稳态与无持者而每队有 f 他者（同位）：前者之位存续恰当 (q + e q) · s ≤ g，后者恰当 f · s ≤ g，否则各终于某步。算术之四种组合皆有。唯稳态之试成立时 C ≥ 2；唯开放进入之试成立时 f < q 或门不拒任何人。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«稳开二试»",
+        "Becoming.RuleRebuilding.«存尽相斥»",
+        "Becoming.RuleRebuilding.«四境皆有»",
+        "Becoming.RuleRebuilding.«稳存而开不存则门过一»",
+        "Becoming.RuleRebuilding.«入过来者之式»",
+        "Becoming.RuleRebuilding.«开存而稳不存之式»"
+      ]
+    },
+    {
+      "en": "Taught from outside, the new cohort of holders is the quota at every step that does not end, also at s ≤ l, and after an empty membership the rule has holders after one step, where taught by members or not at all it has none.",
+      "zh": "由外传授者，每一不终之步新队持者为额，s ≤ l 亦然；成员空后经一步即有持者，由成员传授或不传授者则无。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«外授者即入»",
+        "Becoming.RuleRebuilding.«三源之表»"
+      ]
+    },
+    {
+      "en": "After s steps with no end every holder cohort is one entered in those steps; in the region the rule is held, at the quotas then standing, with nothing of the start among the holders. A step with a revision inside the region continues under the class of being held and not under the class of the same quota, at one rule.",
+      "zh": "无终之 s 步后，每一持者队列皆此数步中所入；于域中规则得持，额为当时之额，持者中无起始之物。于一规则，域内修订之一步，在“持与否”之类下相续，在“同额”之类下不相续。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«任满皆新»",
+        "Becoming.RuleRebuilding.«域中任满皆新»",
+        "Becoming.RuleRebuilding.«同规随类»"
+      ]
+    },
+    {
+      "en": "At l = s − 1, k ≥ 1 held cohorts and z empty ones only rotate: the rule is held at every step exactly where k · (q + e) + z · f ≤ g, with e := f − c · q, and over that bound it is held to the last state before the end. Passing needs only k ≥ 1; k sets on how many of the s steps the door is kept and the rule passed. Gaps hold where the steady state does not only where f < q + e and f · s < g; the steady state goes on where gaps do not only where q + e < f, g < f · s and a keeper turns away more than itself.",
+      "zh": "l = s − 1 时，k ≥ 1 持队与 z 空队只轮转：规则每步皆得持，恰当 k · (q + e) + z · f ≤ g，其中 e := f − c · q；逾此界则持至终前最后一态。传授只需 k ≥ 1；k 定 s 步之中门守且规传者几步。有隙者存而稳态不存，唯当 f < q + e 且 f · s < g；稳态存而有隙者不存，唯当 q + e < f、g < f · s 且一守者所拒多于其自身。",
+      "declarations": [
+        "Becoming.RuleRebuilding.«隙之律»",
+        "Becoming.RuleRebuilding.«隙过生持至尽»",
+        "Becoming.RuleRebuilding.«隙存而稳不存之式»",
+        "Becoming.RuleRebuilding.«稳存而隙不存之式»",
+        "Becoming.RuleRebuilding.«隙存而稳不存»",
+        "Becoming.RuleRebuilding.«稳存而隙不存»",
+        "Becoming.RuleRebuilding.«改而成隙则尽»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The rule as stated: whole units, discrete steps, one unit a member a step, one quota in common, one tenure, one age from which a holder both teaches and keeps the door, a constant renewal while anything is left, the order of the step, an entrant holding what it is taught at once.",
+      "zh": "所述之规则：整数单元，离散之步，每成员每步一单元，共一额，共一任，持者自同一年龄起既传且守门，有余即恒生，步之次序，入者即持所授。"
+    },
+    {
+      "en": "Where the take exceeds what the level and the renewal can give, all members leave and the level goes to zero, and nothing renews from empty. Every take condition here turns on this clause; let only the excess leave, and they fail.",
+      "zh": "取逾位与所生所能给时，成员尽去而位归零，空则不复生。此处一切取之条件皆系于此条款；若只去其逾者，则皆不成立。"
+    },
+    {
+      "en": "Whether entrants are on offer and any revision are chosen at each step, so every sequence of them is a course of the net.",
+      "zh": "每步择有无欲入者及任何修订，故其任一序列皆为网之一途。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual institution meets these hypotheses, or that this is what an institution is: it is one minimal model of one kind, a rule of entry.",
+      "zh": "任何实际制度满足这些假设，或制度即此：这只是一种（进入之规）的一个最小模型。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Why a teacher turns anyone away, or whether it would. Holder merges recognition, compliance and implementation into one count, so nothing here is about compliance and nothing is normative.",
+      "zh": "传者为何拒人，或其是否会拒。持者把认可、遵从与实施并为一数，故此处无关遵从，亦无规范之意。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the rule saves or ends a level as a cause: the two states compared are started separately, and open entry is not reached from the steady state by this course.",
+      "zh": "规则作为原因救或毁一位：所比二态分别起始，开放进入并非此途由稳态所达。",
+      "kind": "non-implication",
+      "witness": "Becoming.RuleRebuilding.«稳开二试»"
+    },
+    {
+      "en": "That the band settles what follows a revision: at the witnesses, revisions below it, above it and inside it reach level zero, and one below it does not by step 20. The law of a revision is the region.",
+      "zh": "带定修订之后：于诸例证，带下、带上、带内之修订皆至位零，而带下之一至第 20 步尚未。修订之律是域。",
+      "kind": "non-implication",
+      "witness": "Becoming.RuleRebuilding.«带不定改后»"
+    },
+    {
+      "en": "A classification of the ends; laws for states with gaps at l < s − 1; the interval of quotas the band solves to; a bridge to the joint excess of Flow, whose form step 1 has and which no law here uses.",
+      "zh": "诸终之分类；l < s − 1 时有隙状态之律；带所解得之额区间；至 Flow 之共过的桥（第一步有其形，而此处无律用之）。",
+      "kind": "scope"
+    },
+    {
+      "en": "An institution's purposes, rules of another form, conduct other than entry, sanctions, who decides a revision, mixed tenures, schism and records; capture, since the revision is a free branch and not chosen by those it favours.",
+      "zh": "制度之目的、他种形式之规则、进入以外之行为、制裁、谁决定修订、混合任期、分裂与记录；俘获亦不在此，因修订是自由之枝，非其所利者所择。",
+      "kind": "scope"
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "decidability",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.RuleRebuilding, an instance of the ring, at receipt 20261103T023714.027477Z, 207 declarations (147 theorems), each axiom report empty. The Lean step agreed with the simulation on 699,840 cases. Its design had two independent AI readings and a re-check with runs of the rule; its Lean one independent AI reading, every finding taken.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.RuleRebuilding，环之实例，回执 20261103T023714.027477Z，207 个声明（147 条定理），公理报告均为空。Lean 之步与模拟于 699,840 例相合。其设计经两次独立 AI 审读与一次以规则运行复核，其 Lean 经一次独立 AI 审读，所见皆采纳。"
+  },
+  "next_delta": {
+    "en": "States with gaps at l < s − 1; the family on the World's flows, with a bridge to joint excess; a rule on how much a member draws; purposes.",
+    "zh": "l < s − 1 时之有隙状态；此族于世界之流上，及至共过之桥；关于成员取多少之规则；目的。"
+  },
+  "correspondence": {
+    "en": "Unproved neighbours, each as far as read: the overdraw threshold is the open-access stock's (Gordon 1954; Hardin 1968); Ostrom 1990 treats boundary rules on common pools as held by those they govern, and this reads the entry rule only; the teaching window has the form of a Leslie-model replacement threshold; Mankat 2024 and Kandori 1992 on norms and their passing in a stock or a community. Limited searches found no door whose strength is the keepers' own count, which is an absence in those searches and no claim of priority.",
+    "zh": "未证之邻近者，各以所读为限：过取之阈同开放存量（Gordon 1954；Hardin 1968）；Ostrom 1990 视公共池之边界规则由其所治者所持，此处只读进入规则；传授之窗有 Leslie 模型替代阈之形；Mankat 2024 与 Kandori 1992 论规范及其于存量或共同体中之传递。有限检索未见以守者自身之数为门之强度者，这只是检索之缺，不主张优先。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+  "history": [
+    {
+      "en": "2 November 2026, board item OG2 (one kind of institution on the root, plan §十三 item 9): added, study §501. A family of nets by where a rule of entry is taught from; the steady state's band, a region under revision, passing, two tests, gaps.",
+      "zh": "2026年11月2日，工作板条目 OG2（根上之一种制度，计划 §十三 第 9 项）：新增，研究 §501。按进入之规由何传授分网族；稳态之带、修订下之域、传授、二试、有隙状态。"
+    }
+  ],
+  "aliases": [
+    "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+    "an entry rule on a shared stock, passed through members who also keep it",
+    "规取于其所限之众"
+  ],
+  "dependencies": [
+    {
+      "id": "own-count-misses-joint-excess",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Joint excess on a gated renewal is the form of this model's end, taken here as its own clause; no law of it is used.",
+        "zh": "门控更新上的共过是此模型之终的形式，此处作为其自身之条款；未用其律。"
+      }
+    },
+    {
+      "id": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+      "relation": "interpretive",
+      "detail": {
+        "en": "The organism's model of the same plan item: there a stock buys a reader time; here a level is spent by those who keep it.",
+        "zh": "同一计划条目之生物体模型：彼处储为读者买时；此处位由守之者所耗。"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+      "detail": {
+        "en": "Where a hypothesis fails: at s ≤ l holders drain however large the quota («不及任则持尽»); from no holder the rule does not return («无持者不复»); outside the steady state's test the level ends with the rule held to the last state, and states with gaps can end where the steady state goes on («稳存而隙不存»); revisions outside a region can end the level, inside the band too («带不定改后»).",
+        "zh": "假设不成立处：s ≤ l 时无论额多大持者皆尽（«不及任则持尽»）；自无持者规则不复（«无持者不复»）；稳态之试不成立时位终而规持至最后一态，有隙状态可终于稳态存续之处（«稳存而隙不存»）；域外之修订可终其位，带内亦然（«带不定改后»）。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+      "role": "proof",
+      "sha256": "10c77b181034e344d1b3cfd1aa2f343335a3b1ca4713df5d17b37838d0449108",
+      "declarations": [
+        "Becoming.RuleRebuilding.«三源之表»",
+        "Becoming.RuleRebuilding.«不及任则持尽»",
+        "Becoming.RuleRebuilding.«任满皆新»",
+        "Becoming.RuleRebuilding.«入过来者之式»",
+        "Becoming.RuleRebuilding.«及任之前持尽之例»",
+        "Becoming.RuleRebuilding.«同规随类»",
+        "Becoming.RuleRebuilding.«四境皆有»",
+        "Becoming.RuleRebuilding.«域中任满皆新»",
+        "Becoming.RuleRebuilding.«域中储不减»",
+        "Becoming.RuleRebuilding.«域可得»",
+        "Becoming.RuleRebuilding.«域闭»",
+        "Becoming.RuleRebuilding.«外授之稳同带»",
+        "Becoming.RuleRebuilding.«外授者即入»",
+        "Becoming.RuleRebuilding.«存尽相斥»",
+        "Becoming.RuleRebuilding.«尽而不复»",
+        "Becoming.RuleRebuilding.«带一至五»",
+        "Becoming.RuleRebuilding.«带不定改后»",
+        "Becoming.RuleRebuilding.«带之二式»",
+        "Becoming.RuleRebuilding.«带唯二»",
+        "Becoming.RuleRebuilding.«带无»",
+        "Becoming.RuleRebuilding.«开存而稳不存之式»",
+        "Becoming.RuleRebuilding.«弃而储增»",
+        "Becoming.RuleRebuilding.«恒取不逾生则存»",
+        "Becoming.RuleRebuilding.«恒取逾生则减»",
+        "Becoming.RuleRebuilding.«恒取逾生则尽»",
+        "Becoming.RuleRebuilding.«改而成隙则尽»",
+        "Becoming.RuleRebuilding.«改额为零则持尽»",
+        "Becoming.RuleRebuilding.«无持者不复»",
+        "Becoming.RuleRebuilding.«无持者改不行»",
+        "Becoming.RuleRebuilding.«无持者额不与»",
+        "Becoming.RuleRebuilding.«无持而门开不逾生则存»",
+        "Becoming.RuleRebuilding.«无持而门开众在»",
+        "Becoming.RuleRebuilding.«无持而门开逾生则尽»",
+        "Becoming.RuleRebuilding.«稳为域之例»",
+        "Becoming.RuleRebuilding.«稳存而开不存则门过一»",
+        "Becoming.RuleRebuilding.«稳存而隙不存»",
+        "Becoming.RuleRebuilding.«稳存而隙不存之式»",
+        "Becoming.RuleRebuilding.«稳开二试»",
+        "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+        "Becoming.RuleRebuilding.«隙之律»",
+        "Becoming.RuleRebuilding.«隙存而稳不存»",
+        "Becoming.RuleRebuilding.«隙存而稳不存之式»",
+        "Becoming.RuleRebuilding.«隙过生持至尽»",
+        "Becoming.RuleRebuilding.«额小而不足者门必过一»",
+        "Becoming.RuleRebuilding.«额零则持尽»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T023714.027477Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd3ca5c2ad08049c04994e8fa082d24ae264b815bb7aa291d101309fe1ee77fe"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T023714.027477Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RuleRebuilding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ]
+}

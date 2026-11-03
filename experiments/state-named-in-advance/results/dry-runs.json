@@ -1,0 +1,2444 @@
+{
+ "censuses": 40,
+ "lpa_parameters": {
+  "b": 10.45,
+  "c_ea": 0.0131,
+  "c_el": 0.01731,
+  "c_pa": 0.004619,
+  "mu_a": 0.007629,
+  "mu_l": 0.2
+ },
+ "per_set_loss": 30,
+ "rates": {
+  "b": [
+   0.9,
+   0.3
+  ],
+  "c": [
+   0.5,
+   0.4
+  ],
+  "mq5": [
+   0.96,
+   0.55
+  ]
+ },
+ "recalled_parameters": {
+  "b": 11.68,
+  "c_ea": 0.011,
+  "c_el": 0.0093,
+  "c_pa": 0.0178,
+  "mu_a": 0.1108,
+  "mu_l": 0.5129
+ },
+ "reconstruction_checked": 5,
+ "results": {
+  "lpa": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 fails": 0.001,
+     "H1: T2 holds": 0.999,
+     "V2: the rival holds": 1.0,
+     "V4: T2 holds": 0.045,
+     "V4: not decided": 0.955,
+     "V5: T2 fails": 0.015,
+     "V5: not testable": 0.985,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.001,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.999,
+     "sign: not read: the course needs more than three numbers": 0.001,
+     "sign: not separated on the sign": 0.63,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.369
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.002,
+     "H1: T2 holds": 0.998,
+     "V2: the rival fails": 0.004,
+     "V2: the rival holds": 0.996,
+     "V4: T2 holds": 0.111,
+     "V4: not decided": 0.889,
+     "V5: T2 fails": 0.02,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.979,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.004,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.994,
+     "sign: not read: the course needs more than three numbers": 0.002,
+     "sign: not separated on the sign": 0.258,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.74
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 holds": 0.152,
+     "V4: not decided": 0.848,
+     "V5: T2 fails": 0.098,
+     "V5: T2 holds": 0.012,
+     "V5: not testable": 0.89,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not separated on the sign": 0.792,
+     "sign: separated on the sign: the rival's": 0.208
+    },
+    "two replicates a loss": {
+     "H1: T2 fails": 0.003,
+     "H1: T2 holds": 0.997,
+     "V2: the rival fails": 0.007,
+     "V2: the rival holds": 0.993,
+     "V4: T2 holds": 0.066,
+     "V4: not decided": 0.934,
+     "V5: T2 fails": 0.004,
+     "V5: not testable": 0.996,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.007,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.003,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.99,
+     "sign: not read: the course needs more than three numbers": 0.003,
+     "sign: not separated on the sign": 0.768,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.229
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.034,
+      30
+     ],
+     "0.27": [
+      -0.0354,
+      30
+     ],
+     "0.5": [
+      -0.0337,
+      30
+     ],
+     "0.73": [
+      -0.0248,
+      30
+     ],
+     "0.96": [
+      0.019,
+      30
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.9995,
+    "H1_excess": -0.0337,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0364,
+      30
+     ],
+     "0.27": [
+      -0.0363,
+      30
+     ],
+     "0.5": [
+      -0.022,
+      30
+     ],
+     "0.73": [
+      -0.0091,
+      30
+     ],
+     "0.96": [
+      -0.0275,
+      30
+     ]
+    },
+    "V2_detected": 5,
+    "V2_excess": -0.0275,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.058,
+     "T2_better": 97,
+     "T2_worse": 53,
+     "level_alone": 0.077,
+     "p": 0.0004
+    },
+    "V5": "T2 fails",
+    "V5_detected": 44,
+    "V5_signs": [
+     32,
+     12
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.3124,
+      30
+     ],
+     "0.27": [
+      0.5837,
+      30
+     ],
+     "0.5": [
+      0.6197,
+      30
+     ],
+     "0.73": [
+      0.7747,
+      30
+     ],
+     "0.96": [
+      0.8731,
+      30
+     ]
+    },
+    "W_detected": 139,
+    "W_excess": 0.6197,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.2903,
+    "reported_ONEW": 0.7131,
+    "reported_TL": 0.0045,
+    "reported_TX": 0.647,
+    "reported_V3": {
+     "median_ratio": 0.2042,
+     "p": 0.0,
+     "rival_better": 145,
+     "rival_worse": 5
+    },
+    "reported_lag": 0.169,
+    "reported_resid_over_floor": {
+     "RB": 0.8591,
+     "T2": 2.1788
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: the rival's",
+    "sign_counts": {
+     "T2_right": 23,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 80,
+     "rival_predicts_negative": 90,
+     "rival_right": 67,
+     "rules_differ": 90,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "lpa-4wk": {
+   "small_groups": {},
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.07840000000000003": [
+      -0.0586,
+      30
+     ],
+     "0.46710000000000007": [
+      -0.0483,
+      30
+     ],
+     "0.75": [
+      -0.08,
+      30
+     ],
+     "0.9271": [
+      -0.0514,
+      30
+     ],
+     "0.9984": [
+      -0.0529,
+      30
+     ]
+    },
+    "H1_detected": 2,
+    "H1_detected_tail": 0.9959,
+    "H1_excess": -0.0529,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.07840000000000003": [
+      -0.0366,
+      30
+     ],
+     "0.46710000000000007": [
+      -0.0125,
+      30
+     ],
+     "0.75": [
+      0.0009,
+      30
+     ],
+     "0.9271": [
+      -0.0425,
+      30
+     ],
+     "0.9984": [
+      0.0021,
+      30
+     ]
+    },
+    "V2_detected": 4,
+    "V2_excess": -0.0125,
+    "V4": "not testable",
+    "V5": "not testable",
+    "V5_detected": 0,
+    "V5_signs": [
+     0,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.07840000000000003": [
+      0.1895,
+      30
+     ],
+     "0.46710000000000007": [
+      0.3453,
+      30
+     ],
+     "0.75": [
+      0.3511,
+      30
+     ],
+     "0.9271": [
+      0.3789,
+      30
+     ],
+     "0.9984": [
+      0.5709,
+      30
+     ]
+    },
+    "W_detected": 52,
+    "W_excess": 0.3511,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": null,
+    "reported_ONEW": null,
+    "reported_TL": null,
+    "reported_TX": null,
+    "reported_lag": 0.0206,
+    "sign": "not separated on the sign: the rival's turning point does not split the cultures",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 0,
+     "p": null,
+     "positive": 0,
+     "rival_predicts_negative": 0,
+     "rival_right": 0,
+     "rules_differ": 0,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "lpa-control": {
+   "small_groups": {},
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "None": [
+      -0.0163,
+      30
+     ]
+    },
+    "H1_detected": 0,
+    "H1_detected_tail": 1.0,
+    "H1_excess": -0.0163,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "None": [
+      -0.0135,
+      30
+     ]
+    },
+    "V2_detected": 2,
+    "V2_excess": -0.0135,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0263,
+     "T2_better": 15,
+     "T2_worse": 15,
+     "level_alone": 0.026,
+     "p": 1.0
+    },
+    "V5": "not testable",
+    "V5_detected": 0,
+    "V5_signs": [
+     0,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "None": [
+      0.1119,
+      30
+     ]
+    },
+    "W_detected": 9,
+    "W_excess": 0.1119,
+    "cultures": 30,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 1,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1217,
+    "reported_ONEW": 0.2501,
+    "reported_TL": 0.0023,
+    "reported_TX": 0.1151,
+    "reported_V3": {
+     "median_ratio": 0.5162,
+     "p": 0.0014,
+     "rival_better": 24,
+     "rival_worse": 6
+    },
+    "reported_lag": 0.0238,
+    "sign": "not separated on the sign",
+    "sign_counts": {
+     "T2_right": 19,
+     "cultures": 30,
+     "p": 0.2005,
+     "positive": 19,
+     "rival_predicts_negative": 30,
+     "rival_right": 11,
+     "rules_differ": 30,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "lpa-env": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 holds": 0.157,
+     "V4: not decided": 0.843,
+     "V5: T2 fails": 0.059,
+     "V5: T2 holds": 0.007,
+     "V5: not testable": 0.934,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not separated on the sign": 0.223,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.777
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.005,
+     "H1: T2 holds": 0.995,
+     "V2: the rival fails": 0.008,
+     "V2: the rival holds": 0.992,
+     "V4: T2 holds": 0.241,
+     "V4: not decided": 0.759,
+     "V5: T2 fails": 0.028,
+     "V5: T2 holds": 0.008,
+     "V5: not testable": 0.964,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.008,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.005,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.987,
+     "sign: not read: the course needs more than three numbers": 0.005,
+     "sign: not separated on the sign": 0.164,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.831
+    },
+    "three replicates a loss": {
+     "H1: T2 fails": 0.001,
+     "H1: T2 holds": 0.999,
+     "V2: the rival fails": 0.001,
+     "V2: the rival holds": 0.999,
+     "V4: T2 holds": 0.36,
+     "V4: not decided": 0.64,
+     "V5: T2 fails": 0.272,
+     "V5: T2 holds": 0.038,
+     "V5: not testable": 0.69,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.001,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not read: the course needs more than three numbers": 0.001,
+     "sign: not separated on the sign": 0.955,
+     "sign: separated on the sign: T2's": 0.001,
+     "sign: separated on the sign: the rival's": 0.043
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 holds": 0.182,
+     "V4: not decided": 0.818,
+     "V5: T2 fails": 0.01,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.989,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not separated on the sign": 0.207,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.793
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0301,
+      30
+     ],
+     "0.27": [
+      -0.042,
+      30
+     ],
+     "0.5": [
+      -0.0235,
+      30
+     ],
+     "0.73": [
+      0.0451,
+      30
+     ],
+     "0.96": [
+      -0.0366,
+      30
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.9995,
+    "H1_excess": -0.0301,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.0253,
+      30
+     ],
+     "0.27": [
+      -0.0216,
+      30
+     ],
+     "0.5": [
+      -0.0305,
+      30
+     ],
+     "0.73": [
+      -0.0045,
+      30
+     ],
+     "0.96": [
+      -0.0408,
+      30
+     ]
+    },
+    "V2_detected": 3,
+    "V2_excess": -0.0216,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1755,
+     "T2_better": 109,
+     "T2_worse": 41,
+     "level_alone": 0.2107,
+     "p": 0.0
+    },
+    "V5": "T2 fails",
+    "V5_detected": 48,
+    "V5_signs": [
+     32,
+     16
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.6379,
+      30
+     ],
+     "0.27": [
+      0.8737,
+      30
+     ],
+     "0.5": [
+      0.9028,
+      30
+     ],
+     "0.73": [
+      0.9132,
+      30
+     ],
+     "0.96": [
+      0.916,
+      30
+     ]
+    },
+    "W_detected": 150,
+    "W_excess": 0.9028,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1993,
+    "reported_ONEW": 0.9192,
+    "reported_TL": 0.1128,
+    "reported_TX": 0.9399,
+    "reported_V3": {
+     "median_ratio": 0.0173,
+     "p": 0.0,
+     "rival_better": 148,
+     "rival_worse": 2
+    },
+    "reported_lag": 0.1504,
+    "reported_resid_over_floor": {
+     "RB": 0.8171,
+     "T2": 25.3344
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: the rival's",
+    "sign_counts": {
+     "T2_right": 13,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 69,
+     "rival_predicts_negative": 79,
+     "rival_right": 47,
+     "rules_differ": 60,
+     "unpredicted": 11
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "lpa-long": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 fails": 0.971,
+     "H1: T2 holds": 0.029,
+     "V2: the rival holds": 1.0,
+     "V4: T2 holds": 0.13,
+     "V4: not decided": 0.87,
+     "V5: T2 fails": 0.018,
+     "V5: T2 holds": 0.286,
+     "V5: not testable": 0.696,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.971,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.029,
+     "sign: not read: the course needs more than three numbers": 0.971,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.027,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.002
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.732,
+     "H1: T2 holds": 0.268,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 holds": 0.191,
+     "V4: not decided": 0.809,
+     "V5: T2 fails": 0.005,
+     "V5: T2 holds": 0.311,
+     "V5: not testable": 0.684,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; the course needs more than three numbers": 0.002,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.73,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.268,
+     "sign: not read: the course needs more than three numbers": 0.732,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.092,
+     "sign: not separated on the sign": 0.078,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.093,
+     "sign: separated on the sign: T2's": 0.005
+    },
+    "three replicates a loss": {
+     "H1: T2 fails": 0.965,
+     "H1: T2 holds": 0.035,
+     "V2: the rival holds": 1.0,
+     "V4: T2 holds": 0.211,
+     "V4: not decided": 0.789,
+     "V5: T2 fails": 0.028,
+     "V5: T2 holds": 0.972,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.965,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.035,
+     "sign: not read: the course needs more than three numbers": 0.965,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.035
+    },
+    "two replicates a loss": {
+     "H1: T2 fails": 0.98,
+     "H1: T2 holds": 0.02,
+     "V2: the rival holds": 1.0,
+     "V4: T2 holds": 0.04,
+     "V4: not decided": 0.96,
+     "V5: T2 fails": 0.01,
+     "V5: T2 holds": 0.112,
+     "V5: not testable": 0.878,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.98,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.02,
+     "sign: not read: the course needs more than three numbers": 0.98,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.013,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.007
+    }
+   },
+   "verdicts": {
+    "H1": "T2 fails",
+    "H1_by_loss": {
+     "0.04": [
+      0.5551,
+      30
+     ],
+     "0.27": [
+      0.0196,
+      30
+     ],
+     "0.5": [
+      -0.018,
+      30
+     ],
+     "0.73": [
+      0.2965,
+      30
+     ],
+     "0.96": [
+      0.9013,
+      30
+     ]
+    },
+    "H1_detected": 55,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.2965,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0792,
+      30
+     ],
+     "0.27": [
+      -0.0892,
+      30
+     ],
+     "0.5": [
+      -0.0363,
+      30
+     ],
+     "0.73": [
+      -0.0546,
+      30
+     ],
+     "0.96": [
+      0.0134,
+      30
+     ]
+    },
+    "V2_detected": 33,
+    "V2_excess": -0.0546,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1006,
+     "T2_better": 87,
+     "T2_worse": 35,
+     "level_alone": 0.1577,
+     "p": 0.0
+    },
+    "V5": "T2 holds",
+    "V5_detected": 70,
+    "V5_signs": [
+     67,
+     3
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.7343,
+      30
+     ],
+     "0.27": [
+      0.5911,
+      30
+     ],
+     "0.5": [
+      0.7503,
+      30
+     ],
+     "0.73": [
+      0.8432,
+      30
+     ],
+     "0.96": [
+      0.9231,
+      30
+     ]
+    },
+    "W_detected": 141,
+    "W_excess": 0.7503,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; the course needs more than three numbers",
+    "reported_ONEH": 0.5485,
+    "reported_ONEW": 0.8911,
+    "reported_TL": 0.4398,
+    "reported_TX": 0.7853,
+    "reported_V3": {
+     "median_ratio": 0.0704,
+     "p": 0.0,
+     "rival_better": 150,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.6504,
+    "reported_resid_over_floor": {
+     "RB": 0.8037,
+     "T2": 5.239
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the course needs more than three numbers",
+    "sign_counts": {
+     "T2_right": 43,
+     "cultures": 150,
+     "p": 0.0011,
+     "positive": 87,
+     "rival_predicts_negative": 60,
+     "rival_right": 17,
+     "rules_differ": 60,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 10
+   }
+  },
+  "lpa-recalled": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 fails": 0.012,
+     "H1: T2 holds": 0.988,
+     "V2: the rival fails": 0.022,
+     "V2: the rival holds": 0.978,
+     "V4: T2 holds": 0.143,
+     "V4: not decided": 0.857,
+     "V5: T2 fails": 0.12,
+     "V5: T2 holds": 0.044,
+     "V5: not testable": 0.836,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.022,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.012,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.966,
+     "sign: not read: the course needs more than three numbers": 0.012,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.027,
+     "sign: not separated on the sign": 0.114,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.847
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.016,
+     "H1: T2 holds": 0.984,
+     "V2: the rival fails": 0.045,
+     "V2: the rival holds": 0.955,
+     "V4: T2 holds": 0.248,
+     "V4: not decided": 0.752,
+     "V5: T2 fails": 0.046,
+     "V5: T2 holds": 0.07,
+     "V5: not testable": 0.884,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; the course needs more than three numbers": 0.003,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.042,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.013,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.942,
+     "sign: not read: the course needs more than three numbers": 0.016,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.01,
+     "sign: not separated on the sign": 0.309,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.665
+    },
+    "three replicates a loss": {
+     "H1: T2 fails": 0.004,
+     "H1: T2 holds": 0.996,
+     "V2: the rival fails": 0.011,
+     "V2: the rival holds": 0.989,
+     "V4: T2 holds": 0.357,
+     "V4: not decided": 0.643,
+     "V5: T2 fails": 0.321,
+     "V5: T2 holds": 0.316,
+     "V5: not testable": 0.363,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.011,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.004,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.985,
+     "sign: not read: the course needs more than three numbers": 0.004,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.059,
+     "sign: not separated on the sign": 0.075,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.862
+    },
+    "two replicates a loss": {
+     "H1: T2 fails": 0.012,
+     "H1: T2 holds": 0.988,
+     "V2: the rival fails": 0.027,
+     "V2: the rival holds": 0.973,
+     "V4: T2 holds": 0.206,
+     "V4: not decided": 0.794,
+     "V5: T2 fails": 0.046,
+     "V5: not testable": 0.954,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; the course needs more than three numbers": 0.002,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.025,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.01,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.963,
+     "sign: not read: the course needs more than three numbers": 0.012,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.011,
+     "sign: not separated on the sign": 0.037,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.94
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0175,
+      30
+     ],
+     "0.27": [
+      -0.022,
+      30
+     ],
+     "0.5": [
+      -0.013,
+      30
+     ],
+     "0.73": [
+      0.0824,
+      30
+     ],
+     "0.96": [
+      0.0075,
+      30
+     ]
+    },
+    "H1_detected": 10,
+    "H1_detected_tail": 0.2191,
+    "H1_excess": -0.013,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0186,
+      30
+     ],
+     "0.27": [
+      -0.0393,
+      30
+     ],
+     "0.5": [
+      -0.0245,
+      30
+     ],
+     "0.73": [
+      0.002,
+      30
+     ],
+     "0.96": [
+      0.1212,
+      30
+     ]
+    },
+    "V2_detected": 11,
+    "V2_excess": -0.0186,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1082,
+     "T2_better": 111,
+     "T2_worse": 39,
+     "level_alone": 0.1286,
+     "p": 0.0
+    },
+    "V5": "T2 fails",
+    "V5_detected": 59,
+    "V5_signs": [
+     47,
+     12
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.2507,
+      30
+     ],
+     "0.27": [
+      0.3531,
+      30
+     ],
+     "0.5": [
+      0.5913,
+      30
+     ],
+     "0.73": [
+      0.653,
+      30
+     ],
+     "0.96": [
+      0.8446,
+      30
+     ]
+    },
+    "W_detected": 122,
+    "W_excess": 0.5913,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.2457,
+    "reported_ONEW": 0.6423,
+    "reported_TL": 0.0727,
+    "reported_TX": 0.6104,
+    "reported_V3": {
+     "median_ratio": 0.33,
+     "p": 0.0,
+     "rival_better": 143,
+     "rival_worse": 7
+    },
+    "reported_lag": 0.0655,
+    "reported_resid_over_floor": {
+     "RB": 0.9796,
+     "T2": 1.9201
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: the rival's",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 90,
+     "rival_predicts_negative": 30,
+     "rival_right": 30,
+     "rules_differ": 30,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "lpaa": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.005,
+     "V2: the rival holds": 0.995,
+     "V4: T2 holds": 0.015,
+     "V4: not decided": 0.985,
+     "V5: T2 fails": 0.021,
+     "V5: not testable": 0.979,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.005,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.995,
+     "sign: not separated on the sign": 0.511,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.489
+    },
+    "three losses, three replicates": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.004,
+     "V2: the rival holds": 0.996,
+     "V4: T2 fails": 0.004,
+     "V4: T2 holds": 0.071,
+     "V4: not decided": 0.925,
+     "V5: T2 fails": 0.018,
+     "V5: not testable": 0.982,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.004,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.996,
+     "sign: not separated on the sign": 0.23,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.77
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.001,
+     "V4: T2 holds": 0.056,
+     "V4: not decided": 0.943,
+     "V5: T2 fails": 0.128,
+     "V5: T2 holds": 0.005,
+     "V5: not testable": 0.867,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not separated on the sign": 0.783,
+     "sign: separated on the sign: the rival's": 0.217
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.005,
+     "V2: the rival holds": 0.995,
+     "V4: T2 holds": 0.032,
+     "V4: not decided": 0.968,
+     "V5: T2 fails": 0.013,
+     "V5: not testable": 0.987,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.005,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.995,
+     "sign: not separated on the sign": 0.672,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.328
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0037,
+      30
+     ],
+     "0.27": [
+      -0.0502,
+      30
+     ],
+     "0.5": [
+      -0.0455,
+      30
+     ],
+     "0.73": [
+      -0.0256,
+      30
+     ],
+     "0.96": [
+      -0.0287,
+      30
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.9995,
+    "H1_excess": -0.0287,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0313,
+      30
+     ],
+     "0.27": [
+      -0.0569,
+      30
+     ],
+     "0.5": [
+      -0.0316,
+      30
+     ],
+     "0.73": [
+      -0.0113,
+      30
+     ],
+     "0.96": [
+      -0.0217,
+      30
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": -0.0313,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.0559,
+     "T2_better": 90,
+     "T2_worse": 60,
+     "level_alone": 0.0694,
+     "p": 0.0176
+    },
+    "V5": "T2 fails",
+    "V5_detected": 40,
+    "V5_signs": [
+     23,
+     17
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.3811,
+      30
+     ],
+     "0.27": [
+      0.5686,
+      30
+     ],
+     "0.5": [
+      0.6098,
+      30
+     ],
+     "0.73": [
+      0.7457,
+      30
+     ],
+     "0.96": [
+      0.8455,
+      30
+     ]
+    },
+    "W_detected": 135,
+    "W_excess": 0.6098,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.3143,
+    "reported_ONEW": 0.6864,
+    "reported_TL": 0.0065,
+    "reported_TX": 0.6327,
+    "reported_V3": {
+     "median_ratio": 0.2851,
+     "p": 0.0,
+     "rival_better": 148,
+     "rival_worse": 2
+    },
+    "reported_lag": 0.1799,
+    "reported_resid_over_floor": {
+     "RB": 0.83,
+     "T2": 2.0532
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: the rival's",
+    "sign_counts": {
+     "T2_right": 20,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 76,
+     "rival_predicts_negative": 90,
+     "rival_right": 70,
+     "rules_differ": 90,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-copy-b": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 fails": 0.005,
+     "H1: T2 holds": 0.995,
+     "V2: the rival fails": 0.335,
+     "V2: the rival holds": 0.665,
+     "V4: T2 fails": 0.001,
+     "V4: T2 holds": 0.021,
+     "V4: not decided": 0.978,
+     "V5: not testable": 1.0,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; the course needs more than three numbers": 0.002,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.333,
+     "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.003,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.662,
+     "sign: not read: the course needs more than three numbers": 0.005,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+     "sign: not separated on the sign": 0.517,
+     "sign: separated on the sign: T2's": 0.477
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.005,
+     "H1: T2 holds": 0.995,
+     "V2: the rival fails": 0.391,
+     "V2: the rival holds": 0.609,
+     "V4: T2 fails": 0.005,
+     "V4: T2 holds": 0.056,
+     "V4: not decided": 0.939,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 0.002,
+     "W: the wording holds": 0.998,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: T2's state; the course needs more than three numbers": 0.003,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.387,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.001,
+     "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.002,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.606,
+     "sign: not read: the course needs more than three numbers": 0.005,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+     "sign: not separated on the sign": 0.48,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.008,
+     "sign: separated on the sign: T2's": 0.506
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.336,
+     "V2: the rival holds": 0.664,
+     "V4: T2 fails": 0.001,
+     "V4: T2 holds": 0.051,
+     "V4: not decided": 0.948,
+     "V5: T2 holds": 0.005,
+     "V5: not testable": 0.995,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.336,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.664,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.004,
+     "sign: not separated on the sign": 0.212,
+     "sign: separated on the sign: T2's": 0.784
+    },
+    "two replicates a loss": {
+     "H1: T2 fails": 0.004,
+     "H1: T2 holds": 0.996,
+     "V2: the rival fails": 0.343,
+     "V2: the rival holds": 0.657,
+     "V4: T2 fails": 0.001,
+     "V4: T2 holds": 0.025,
+     "V4: not decided": 0.974,
+     "V5: not testable": 1.0,
+     "W: the wording fails": 0.002,
+     "W: the wording holds": 0.998,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: T2's state; the course needs more than three numbers": 0.003,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.339,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.001,
+     "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.001,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.655,
+     "sign: not read: the course needs more than three numbers": 0.004,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.003,
+     "sign: not separated on the sign": 0.435,
+     "sign: separated on the sign: T2's": 0.558
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0288,
+      30
+     ],
+     "0.27": [
+      -0.0065,
+      30
+     ],
+     "0.5": [
+      -0.0127,
+      30
+     ],
+     "0.73": [
+      -0.0236,
+      30
+     ],
+     "0.96": [
+      -0.0102,
+      30
+     ]
+    },
+    "H1_detected": 5,
+    "H1_detected_tail": 0.8744,
+    "H1_excess": -0.0127,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.2281,
+      30
+     ],
+     "0.27": [
+      0.1219,
+      30
+     ],
+     "0.5": [
+      0.0897,
+      30
+     ],
+     "0.73": [
+      0.0518,
+      30
+     ],
+     "0.96": [
+      -0.0487,
+      30
+     ]
+    },
+    "V2_detected": 34,
+    "V2_excess": 0.0897,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.072,
+     "T2_better": 87,
+     "T2_worse": 63,
+     "level_alone": 0.0918,
+     "p": 0.06
+    },
+    "V5": "T2 holds",
+    "V5_detected": 21,
+    "V5_signs": [
+     20,
+     1
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      -0.0194,
+      30
+     ],
+     "0.27": [
+      -0.0293,
+      30
+     ],
+     "0.5": [
+      -0.0258,
+      30
+     ],
+     "0.73": [
+      -0.0069,
+      30
+     ],
+     "0.96": [
+      -0.0224,
+      30
+     ]
+    },
+    "W_detected": 5,
+    "W_excess": -0.0224,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "tie on the next step: both states suffice; three numbers suffice on the course",
+    "reported_ONEH": 0.0352,
+    "reported_ONEW": -0.0088,
+    "reported_TL": -0.022,
+    "reported_TX": -0.0202,
+    "reported_V3": {
+     "median_ratio": 0.8767,
+     "p": 0.0004,
+     "rival_better": 97,
+     "rival_worse": 53
+    },
+    "reported_lag": 0.0375,
+    "reported_resid_over_floor": {
+     "RB": 2.8196,
+     "T2": 1.9414
+    },
+    "reported_rows_recruits_above_pupae": 17,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 122,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 128,
+     "rival_predicts_negative": 143,
+     "rival_right": 21,
+     "rules_differ": 143,
+     "unpredicted": 7
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-copy-c": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.631,
+     "V2: the rival holds": 0.369,
+     "V4: T2 fails": 0.001,
+     "V4: T2 holds": 0.018,
+     "V4: not decided": 0.981,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 0.001,
+     "W: the wording holds": 0.999,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.63,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.369,
+     "sign: not separated on the sign": 0.708,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.002,
+     "sign: separated on the sign: T2's": 0.29
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.002,
+     "H1: T2 holds": 0.998,
+     "V2: the rival fails": 0.585,
+     "V2: the rival holds": 0.415,
+     "V4: T2 fails": 0.006,
+     "V4: T2 holds": 0.032,
+     "V4: not decided": 0.962,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 0.001,
+     "W: the wording holds": 0.999,
+     "reading: separated on the next step: T2's state; the course needs more than three numbers": 0.002,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.583,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.001,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.414,
+     "sign: not read: the course needs more than three numbers": 0.002,
+     "sign: not separated on the sign": 0.542,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.017,
+     "sign: separated on the sign: T2's": 0.439
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.65,
+     "V2: the rival holds": 0.35,
+     "V4: T2 fails": 0.003,
+     "V4: T2 holds": 0.035,
+     "V4: not decided": 0.962,
+     "V5: T2 holds": 0.023,
+     "V5: not testable": 0.977,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.65,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.35,
+     "sign: not separated on the sign": 0.323,
+     "sign: separated on the sign: T2's": 0.677
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.606,
+     "V2: the rival holds": 0.394,
+     "V4: T2 fails": 0.004,
+     "V4: T2 holds": 0.019,
+     "V4: not decided": 0.977,
+     "V5: not testable": 1.0,
+     "W: the wording fails": 0.005,
+     "W: the wording holds": 0.995,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.003,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.603,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.002,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.392,
+     "sign: not separated on the sign": 0.658,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.003,
+     "sign: separated on the sign: T2's": 0.339
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0275,
+      30
+     ],
+     "0.27": [
+      -0.0291,
+      30
+     ],
+     "0.5": [
+      -0.009,
+      30
+     ],
+     "0.73": [
+      -0.0169,
+      30
+     ],
+     "0.96": [
+      -0.035,
+      30
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.9995,
+    "H1_excess": -0.0275,
+    "V2": "the rival fails",
+    "V2_by_loss": {
+     "0.04": [
+      0.1371,
+      30
+     ],
+     "0.27": [
+      0.2246,
+      30
+     ],
+     "0.5": [
+      0.1685,
+      30
+     ],
+     "0.73": [
+      0.0566,
+      30
+     ],
+     "0.96": [
+      0.004,
+      30
+     ]
+    },
+    "V2_detected": 36,
+    "V2_excess": 0.1371,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0349,
+     "T2_better": 82,
+     "T2_worse": 68,
+     "level_alone": 0.0341,
+     "p": 0.2885
+    },
+    "V5": "T2 holds",
+    "V5_detected": 26,
+    "V5_signs": [
+     25,
+     1
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      -0.019,
+      30
+     ],
+     "0.27": [
+      -0.0239,
+      30
+     ],
+     "0.5": [
+      -0.0123,
+      30
+     ],
+     "0.73": [
+      -0.0431,
+      30
+     ],
+     "0.96": [
+      -0.0208,
+      30
+     ]
+    },
+    "W_detected": 6,
+    "W_excess": -0.0208,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: T2's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0613,
+    "reported_ONEW": -0.0073,
+    "reported_TL": -0.022,
+    "reported_TX": -0.0243,
+    "reported_V3": {
+     "median_ratio": 0.994,
+     "p": 0.8066,
+     "rival_better": 77,
+     "rival_worse": 73
+    },
+    "reported_lag": 0.0384,
+    "reported_resid_over_floor": {
+     "RB": 3.0294,
+     "T2": 2.0722
+    },
+    "reported_rows_recruits_above_pupae": 33,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 120,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 120,
+     "rival_predicts_negative": 150,
+     "rival_right": 30,
+     "rules_differ": 150,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-copy-mq5": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.441,
+     "V2: the rival holds": 0.559,
+     "V4: T2 holds": 0.016,
+     "V4: not decided": 0.984,
+     "V5: T2 holds": 0.03,
+     "V5: not testable": 0.97,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.441,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.559,
+     "sign: not separated on the sign": 0.566,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.001,
+     "sign: separated on the sign: T2's": 0.433
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.001,
+     "H1: T2 holds": 0.999,
+     "V2: the rival fails": 0.451,
+     "V2: the rival holds": 0.549,
+     "V4: T2 fails": 0.005,
+     "V4: T2 holds": 0.077,
+     "V4: not decided": 0.918,
+     "V5: T2 holds": 0.015,
+     "V5: not testable": 0.985,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.451,
+     "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.001,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.548,
+     "sign: not read: the course needs more than three numbers": 0.001,
+     "sign: not separated on the sign": 0.546,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.015,
+     "sign: separated on the sign: T2's": 0.438
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.401,
+     "V2: the rival holds": 0.599,
+     "V4: T2 holds": 0.046,
+     "V4: not decided": 0.954,
+     "V5: T2 holds": 0.157,
+     "V5: not testable": 0.843,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.401,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.599,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.006,
+     "sign: not separated on the sign": 0.334,
+     "sign: separated on the sign: T2's": 0.66
+    },
+    "two replicates a loss": {
+     "H1: T2 fails": 0.001,
+     "H1: T2 holds": 0.999,
+     "V2: the rival fails": 0.457,
+     "V2: the rival holds": 0.543,
+     "V4: T2 fails": 0.002,
+     "V4: T2 holds": 0.021,
+     "V4: not decided": 0.977,
+     "V5: T2 holds": 0.008,
+     "V5: not testable": 0.992,
+     "W: the wording holds": 1.0,
+     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.457,
+     "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.001,
+     "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.542,
+     "sign: not read: the course needs more than three numbers": 0.001,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.003,
+     "sign: not separated on the sign": 0.528,
+     "sign: separated on the sign: T2's": 0.468
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.021,
+      30
+     ],
+     "0.27": [
+      -0.0232,
+      30
+     ],
+     "0.5": [
+      -0.028,
+      30
+     ],
+     "0.73": [
+      -0.0335,
+      30
+     ],
+     "0.96": [
+      -0.0183,
+      30
+     ]
+    },
+    "H1_detected": 5,
+    "H1_detected_tail": 0.8744,
+    "H1_excess": -0.0232,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.2427,
+      30
+     ],
+     "0.27": [
+      0.2646,
+      30
+     ],
+     "0.5": [
+      0.0883,
+      30
+     ],
+     "0.73": [
+      -0.0126,
+      30
+     ],
+     "0.96": [
+      -0.0339,
+      30
+     ]
+    },
+    "V2_detected": 45,
+    "V2_excess": 0.0883,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.0665,
+     "T2_better": 89,
+     "T2_worse": 61,
+     "level_alone": 0.0762,
+     "p": 0.0272
+    },
+    "V5": "T2 holds",
+    "V5_detected": 41,
+    "V5_signs": [
+     40,
+     1
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      -0.0272,
+      30
+     ],
+     "0.27": [
+      -0.0221,
+      30
+     ],
+     "0.5": [
+      -0.0346,
+      30
+     ],
+     "0.73": [
+      -0.0428,
+      30
+     ],
+     "0.96": [
+      -0.0072,
+      30
+     ]
+    },
+    "W_detected": 1,
+    "W_excess": -0.0272,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "tie on the next step: both states suffice; three numbers suffice on the course",
+    "reported_ONEH": 0.1359,
+    "reported_ONEW": 0.064,
+    "reported_TL": -0.0134,
+    "reported_TX": -0.0198,
+    "reported_V3": {
+     "median_ratio": 0.8947,
+     "p": 0.06,
+     "rival_better": 87,
+     "rival_worse": 63
+    },
+    "reported_lag": 0.1025,
+    "reported_resid_over_floor": {
+     "RB": 2.8621,
+     "T2": 1.9048
+    },
+    "reported_rows_recruits_above_pupae": 12,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 119,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 123,
+     "rival_predicts_negative": 143,
+     "rival_right": 24,
+     "rules_differ": 143,
+     "unpredicted": 5
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-stage-b": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.002,
+     "V4: T2 holds": 0.004,
+     "V4: not decided": 0.994,
+     "V5: not testable": 1.0,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.004,
+     "sign: not separated on the sign": 0.596,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.002,
+     "sign: separated on the sign: T2's": 0.398
+    },
+    "three losses, three replicates": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.001,
+     "V2: the rival holds": 0.999,
+     "V4: T2 fails": 0.005,
+     "V4: T2 holds": 0.034,
+     "V4: not decided": 0.961,
+     "V5: not testable": 1.0,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.999,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+     "sign: not separated on the sign": 0.476,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.01,
+     "sign: separated on the sign: T2's": 0.513
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.007,
+     "V4: T2 holds": 0.022,
+     "V4: not decided": 0.971,
+     "V5: T2 holds": 0.002,
+     "V5: not testable": 0.998,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.004,
+     "sign: not separated on the sign": 0.264,
+     "sign: separated on the sign: T2's": 0.732
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.001,
+     "V2: the rival holds": 0.999,
+     "V4: T2 fails": 0.007,
+     "V4: T2 holds": 0.014,
+     "V4: not decided": 0.979,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.999,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+     "sign: not separated on the sign": 0.536,
+     "sign: separated on the sign: T2's": 0.463
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0229,
+      30
+     ],
+     "0.27": [
+      -0.0316,
+      30
+     ],
+     "0.5": [
+      -0.0052,
+      30
+     ],
+     "0.73": [
+      -0.0252,
+      30
+     ],
+     "0.96": [
+      -0.0214,
+      30
+     ]
+    },
+    "H1_detected": 5,
+    "H1_detected_tail": 0.8744,
+    "H1_excess": -0.0229,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0307,
+      30
+     ],
+     "0.27": [
+      0.0161,
+      30
+     ],
+     "0.5": [
+      0.0105,
+      30
+     ],
+     "0.73": [
+      -0.0137,
+      30
+     ],
+     "0.96": [
+      -0.0209,
+      30
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": -0.0137,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.078,
+     "T2_better": 80,
+     "T2_worse": 70,
+     "level_alone": 0.0882,
+     "p": 0.4625
+    },
+    "V5": "T2 holds",
+    "V5_detected": 17,
+    "V5_signs": [
+     17,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.734,
+      30
+     ],
+     "0.27": [
+      0.74,
+      30
+     ],
+     "0.5": [
+      0.7262,
+      30
+     ],
+     "0.73": [
+      0.7261,
+      30
+     ],
+     "0.96": [
+      0.7483,
+      30
+     ]
+    },
+    "W_detected": 150,
+    "W_excess": 0.734,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0232,
+    "reported_ONEW": 0.7575,
+    "reported_TL": -0.0325,
+    "reported_TX": 0.7331,
+    "reported_V3": {
+     "median_ratio": 0.1613,
+     "p": 0.0,
+     "rival_better": 149,
+     "rival_worse": 1
+    },
+    "reported_lag": 0.0663,
+    "reported_resid_over_floor": {
+     "RB": 0.9352,
+     "T2": 3.5232
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 123,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 123,
+     "rival_predicts_negative": 148,
+     "rival_right": 25,
+     "rules_differ": 148,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-stage-c": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.005,
+     "V4: T2 holds": 0.002,
+     "V4: not decided": 0.993,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not separated on the sign": 0.641,
+     "sign: separated on the sign: T2's": 0.359
+    },
+    "three losses, three replicates": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 fails": 0.024,
+     "V4: T2 holds": 0.01,
+     "V4: not decided": 0.966,
+     "V5: T2 holds": 0.001,
+     "V5: not testable": 0.999,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not separated on the sign": 0.476,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.016,
+     "sign: separated on the sign: T2's": 0.508
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.019,
+     "V4: T2 holds": 0.006,
+     "V4: not decided": 0.975,
+     "V5: T2 holds": 0.003,
+     "V5: not testable": 0.997,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not separated on the sign": 0.249,
+     "sign: separated on the sign: T2's": 0.751
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival holds": 1.0,
+     "V4: T2 fails": 0.013,
+     "V4: T2 holds": 0.004,
+     "V4: not decided": 0.983,
+     "V5: not testable": 1.0,
+     "W: the wording fails": 1.0,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 1.0,
+     "sign: not separated on the sign": 0.588,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.002,
+     "sign: separated on the sign: T2's": 0.41
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0301,
+      30
+     ],
+     "0.27": [
+      -0.0203,
+      30
+     ],
+     "0.5": [
+      -0.0364,
+      30
+     ],
+     "0.73": [
+      -0.0127,
+      30
+     ],
+     "0.96": [
+      -0.0255,
+      30
+     ]
+    },
+    "H1_detected": 0,
+    "H1_detected_tail": 1.0,
+    "H1_excess": -0.0255,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0373,
+      30
+     ],
+     "0.27": [
+      -0.0234,
+      30
+     ],
+     "0.5": [
+      -0.0171,
+      30
+     ],
+     "0.73": [
+      -0.0186,
+      30
+     ],
+     "0.96": [
+      -0.0425,
+      30
+     ]
+    },
+    "V2_detected": 3,
+    "V2_excess": -0.0234,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0322,
+     "T2_better": 72,
+     "T2_worse": 78,
+     "level_alone": 0.0321,
+     "p": 0.6832
+    },
+    "V5": "T2 holds",
+    "V5_detected": 21,
+    "V5_signs": [
+     20,
+     1
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.7238,
+      30
+     ],
+     "0.27": [
+      0.7366,
+      30
+     ],
+     "0.5": [
+      0.7323,
+      30
+     ],
+     "0.73": [
+      0.7383,
+      30
+     ],
+     "0.96": [
+      0.7209,
+      30
+     ]
+    },
+    "W_detected": 150,
+    "W_excess": 0.7323,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0579,
+    "reported_ONEW": 0.7721,
+    "reported_TL": -0.0088,
+    "reported_TX": 0.7602,
+    "reported_V3": {
+     "median_ratio": 0.1735,
+     "p": 0.0,
+     "rival_better": 150,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0398,
+    "reported_resid_over_floor": {
+     "RB": 0.9191,
+     "T2": 3.6082
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 123,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 123,
+     "rival_predicts_negative": 150,
+     "rival_right": 27,
+     "rules_differ": 150,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  },
+  "t2-stage-mq5": {
+   "small_groups": {
+    "three at one loss, two at the rest": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.004,
+     "V2: the rival holds": 0.996,
+     "V4: T2 holds": 0.004,
+     "V4: not decided": 0.996,
+     "V5: T2 holds": 0.008,
+     "V5: not testable": 0.992,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.004,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.996,
+     "sign: not separated on the sign": 0.38,
+     "sign: separated on the sign: T2's": 0.62
+    },
+    "three losses, three replicates": {
+     "H1: T2 fails": 0.002,
+     "H1: T2 holds": 0.998,
+     "V2: the rival fails": 0.013,
+     "V2: the rival holds": 0.987,
+     "V4: T2 fails": 0.009,
+     "V4: T2 holds": 0.022,
+     "V4: not decided": 0.969,
+     "V5: T2 holds": 0.007,
+     "V5: not testable": 0.993,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.013,
+     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.985,
+     "sign: not read: the course needs more than three numbers": 0.002,
+     "sign: not separated on the sign": 0.448,
+     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.006,
+     "sign: separated on the sign: T2's": 0.544
+    },
+    "three replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 fails": 0.003,
+     "V4: T2 holds": 0.017,
+     "V4: not decided": 0.98,
+     "V5: T2 holds": 0.075,
+     "V5: not testable": 0.925,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not separated on the sign": 0.147,
+     "sign: separated on the sign: T2's": 0.853
+    },
+    "two replicates a loss": {
+     "H1: T2 holds": 1.0,
+     "V2: the rival fails": 0.002,
+     "V2: the rival holds": 0.998,
+     "V4: T2 fails": 0.002,
+     "V4: T2 holds": 0.009,
+     "V4: not decided": 0.989,
+     "V5: T2 holds": 0.004,
+     "V5: not testable": 0.996,
+     "W: the wording fails": 1.0,
+     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+     "sign: not separated on the sign": 0.371,
+     "sign: separated on the sign: T2's": 0.628
+    }
+   },
+   "verdicts": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0267,
+      30
+     ],
+     "0.27": [
+      0.0011,
+      30
+     ],
+     "0.5": [
+      -0.0365,
+      30
+     ],
+     "0.73": [
+      -0.0379,
+      30
+     ],
+     "0.96": [
+      -0.0274,
+      30
+     ]
+    },
+    "H1_detected": 3,
+    "H1_detected_tail": 0.9818,
+    "H1_excess": -0.0274,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0129,
+      30
+     ],
+     "0.27": [
+      -0.0268,
+      30
+     ],
+     "0.5": [
+      -0.0055,
+      30
+     ],
+     "0.73": [
+      0.0043,
+      30
+     ],
+     "0.96": [
+      -0.0112,
+      30
+     ]
+    },
+    "V2_detected": 11,
+    "V2_excess": -0.0112,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0641,
+     "T2_better": 79,
+     "T2_worse": 71,
+     "level_alone": 0.0732,
+     "p": 0.5678
+    },
+    "V5": "T2 holds",
+    "V5_detected": 35,
+    "V5_signs": [
+     35,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.73,
+      30
+     ],
+     "0.27": [
+      0.7201,
+      30
+     ],
+     "0.5": [
+      0.7356,
+      30
+     ],
+     "0.73": [
+      0.7462,
+      30
+     ],
+     "0.96": [
+      0.7297,
+      30
+     ]
+    },
+    "W_detected": 150,
+    "W_excess": 0.73,
+    "cultures": 150,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1288,
+    "reported_ONEW": 0.7781,
+    "reported_TL": -0.0063,
+    "reported_TX": 0.7344,
+    "reported_V3": {
+     "median_ratio": 0.1337,
+     "p": 0.0,
+     "rival_better": 150,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.12,
+    "reported_resid_over_floor": {
+     "RB": 0.8933,
+     "T2": 3.3611
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 125,
+     "cultures": 150,
+     "p": 0.0,
+     "positive": 130,
+     "rival_predicts_negative": 143,
+     "rival_right": 18,
+     "rules_differ": 143,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short": 0,
+    "zero_columns_dropped": 0
+   }
+  }
+ },
+ "seed": 20261103,
+ "set_losses": [
+  0.04,
+  0.27,
+  0.5,
+  0.73,
+  0.96
+ ]
+}

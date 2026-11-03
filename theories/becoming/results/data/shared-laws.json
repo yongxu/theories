@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261102T185431.953044Z",
- "core_sources_sha256": "2c94c73f17073b5f18e360c969dc8ec92c72e29acf4a3973e68a460e672713c6",
+ "core_receipt": "20261103T023714.027477Z",
+ "core_sources_sha256": "dcef95855575283d42cc2ee72c41626cd9ad28e596d7963282d9152f66c70423",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,10 +58,10 @@
   ]
  },
  "counts": {
-  "laws": 4100,
+  "laws": 4111,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 885,
+  "grammar": 896,
   "balance, represented": 628,
   "anchor, not reached": 131,
   "no shared law": 2056,
@@ -3555,6 +3555,138 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   }
+  ],
+  "a-rule-rebuilt-from-the-members-it-limits": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.RuleRebuilding.«恒取不逾生则存»",
+     "Becoming.RuleRebuilding.«恒取逾生则减»",
+     "Becoming.RuleRebuilding.«恒取逾生则尽»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+     "Becoming.RuleRebuilding.«外授之稳同带»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.RuleRebuilding.«带之二式»",
+     "Becoming.RuleRebuilding.«额小而不足者门必过一»",
+     "Becoming.RuleRebuilding.«带唯二»",
+     "Becoming.RuleRebuilding.«带一至五»",
+     "Becoming.RuleRebuilding.«带无»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.RuleRebuilding.«域闭»",
+     "Becoming.RuleRebuilding.«域中储不减»",
+     "Becoming.RuleRebuilding.«稳为域之例»",
+     "Becoming.RuleRebuilding.«域可得»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.RuleRebuilding.«不及任则持尽»",
+     "Becoming.RuleRebuilding.«额零则持尽»",
+     "Becoming.RuleRebuilding.«改额为零则持尽»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.RuleRebuilding.«无持者不复»",
+     "Becoming.RuleRebuilding.«无持者改不行»",
+     "Becoming.RuleRebuilding.«无持者额不与»",
+     "Becoming.RuleRebuilding.«尽而不复»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.RuleRebuilding.«无持而门开不逾生则存»",
+     "Becoming.RuleRebuilding.«无持而门开众在»",
+     "Becoming.RuleRebuilding.«无持而门开逾生则尽»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.RuleRebuilding.«稳开二试»",
+     "Becoming.RuleRebuilding.«存尽相斥»",
+     "Becoming.RuleRebuilding.«四境皆有»",
+     "Becoming.RuleRebuilding.«稳存而开不存则门过一»",
+     "Becoming.RuleRebuilding.«入过来者之式»",
+     "Becoming.RuleRebuilding.«开存而稳不存之式»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.RuleRebuilding.«外授者即入»",
+     "Becoming.RuleRebuilding.«三源之表»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.RuleRebuilding.«任满皆新»",
+     "Becoming.RuleRebuilding.«域中任满皆新»",
+     "Becoming.RuleRebuilding.«同规随类»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.RuleRebuilding.«隙之律»",
+     "Becoming.RuleRebuilding.«隙过生持至尽»",
+     "Becoming.RuleRebuilding.«隙存而稳不存之式»",
+     "Becoming.RuleRebuilding.«稳存而隙不存之式»",
+     "Becoming.RuleRebuilding.«隙存而稳不存»",
+     "Becoming.RuleRebuilding.«稳存而隙不存»",
+     "Becoming.RuleRebuilding.«改而成隙则尽»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-selected-template-need-not-raise-structure": [
@@ -63328,7 +63460,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "4e068346d2541d9057e9b9ced3107468113c1e80d763fbdd2d1674d0ff71f9aa",
+   "modules_sha256": "57171acd30da9ce2dc7fdf60a85fe20ce359c5abfa0f5f93e278f5eb99371077",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
