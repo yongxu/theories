@@ -187,12 +187,12 @@ File: `Becoming/Continuation.lean`.
 **Standing and use.** Theorems. Closest prior results for the last: Quote [theories/becoming/chapters/08-METHOD.md]: "Schrödinger (1944); Prigogine (1977); ranking functions; P-invariants of Petri nets (Lautenbach 1975)". Quote [theories/becoming/chapters/02-MAP.md]: "The theorem says rest cannot be refuted, not when it comes". Of feeding: Quote [theories/becoming/chapters/02-MAP.md]: "no step of feeding is named".
 
 **Known weaknesses.**
-- Quote [theories/becoming/chapters/02-MAP.md]: "It needs natural-number amounts: with real amounts losses can shrink geometrically, and it fails".
+- Quote [theories/becoming/chapters/02-MAP.md]: "It needs balance at a fixed unit of natural-number amounts, each taking step losing at least one whole unit of it". Quote [theories/becoming/chapters/02-MAP.md]: "at a unit that splits at arbitrarily late steps the conclusion can fail".
 - Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The exclusion, that an enclosed family taken from without end cannot go unfed from beyond, is the sources' own. The theory forbids no more and needs more to forbid it."
 - [this dossier, AI] The law gives no amount, rate or time of feeding, which an entropy-production balance would give.
 
 **Questions.**
-1. Is a least loss of one whole unit per taking step a fair idealization of dissipation, given that the law fails with real amounts?
+1. Is a least loss of one whole unit per taking step, at a fixed unit, a fair idealization of dissipation, given that the conclusion can fail at a unit that splits without end?
 2. Do the closest prior results quoted above already forbid what this law forbids?
 3. Is a law that says only that rest cannot be refuted, not when it comes, of use in your field?
 
