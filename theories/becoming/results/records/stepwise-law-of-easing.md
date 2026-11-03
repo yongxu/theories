@@ -5,7 +5,7 @@
 
 `stepwise-law-of-easing` · **recorded-checked** · theorem · F01 · [record](stepwise-law-of-easing.json) · [register](../../../../RESULTS.md)
 
-> Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers where it includes an event overdraw withholds, and C ranks it above.
+> Read stepwise, easing withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and C ranks it above.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -62,7 +62,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
   - Output: stepwise, Eases, ActiveWhereSupported, wholeRun_extends_iff_of_eases, ThirdParty, restraint_extends_iff, Flow.Balances.eases_of_restrained.
   - Input: The exact stepwise law of easing and restraint over any number of drawers under it.
   - Preserved conditions: Easing; the gating of activity; for restraint, balanced flows taking within what they give. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
-- related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too where it includes a relation overdraw withholds, and C ranks it above.
+- related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and C ranks it above.
 - related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [relation-level-law-of-easing](relation-level-law-of-easing.md)

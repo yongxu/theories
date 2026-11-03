@@ -30,7 +30,7 @@
 
 - The flow with the part balances; the levels without the part balance the withheld flow from the same start (in each witness they exist and are unique).
 - closes_nothing, opens_nothing and changes_nothing compare the part's taking and giving at every step and on every condition.
-- Inclusion compares the formations admitted at each step; the split into four cases is classical logic over the two inclusions, not a Lean theorem.
+- Inclusion compares the formations admitted at each step; wherever inclusion or exceeding is decided both ways one of the four cases holds, a root law (`«四比之周»`), and deciding it for every pair is exactly excluded middle (`«则逾之定当且仅当排中»`).
 - Discrete steps, counted from step zero; natural-number levels, needs and amounts.
 
 <a id="does-not-show--未表明"></a>
@@ -143,6 +143,7 @@ Aliases: `Becoming.Web.Includes`, `Becoming.Web.Exceeds`, `Becoming.Web.Includes
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Continuation.lean, Significance.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Significance.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): 'the author's reading' in the correspondence reads 'a reading (the AI's argument)', the reading keeping its AI label, and the label no longer says 'adopted on Ren's delegation'. No law changed.
+- 3 November 2026, CD (board item CD): a hypothesis said that the split into four cases is classical logic, not a Lean theorem. Wherever inclusion or exceeding is decided both ways one of the cases holds by a root law for every relation (`«四比之周»`), and only deciding it for every pair is excluded middle; the hypothesis and its home section in 07 §2 now say so. The claim is unchanged.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](four-cases-of-a-part.json).
 
 <a id="earlier-text--早期文本"></a>
