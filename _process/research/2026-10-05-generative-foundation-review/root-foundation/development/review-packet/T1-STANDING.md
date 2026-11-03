@@ -1,6 +1,6 @@
 # T1's standing beyond the model
 
-*AI-written, 3 November 2026 (board item T1S, the coordinator's word after [TS](THESES-STANDINGS.md#not-done-here)). No person has reviewed it. About 10 minutes to read; [the check's report](T1-STANDING-CHECK.txt), about an hour and a quarter more.*
+*AI-written, 3 November 2026 (board item T1S, the coordinator's word after [TS](THESES-STANDINGS.md#not-done-here)). No person has reviewed it. About 12 minutes to read, the last section's 3 included; [the check's report](T1-STANDING-CHECK.txt), about an hour and a quarter more.*
 
 TS's reader found two gaps in T1 that no front could fix until the home did. T1's home, [02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#t1), had *In the model*, *Forbids*, *Refuted by* and *Evidence*, but no *Standing*, while T2, T3 and T6 each say how far they are established. And [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s row copied only the first in-the-model clause, so the joint draw, what the thesis is about, was missing from the table. 08 §9 defines standing as "how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)" and says the table copies it from the home. This item gave T1 its standing in the home and copied it to 08's row. Documents only: no Lean, no record and no core run.
 
@@ -66,3 +66,21 @@ The ecology hour (the front with S-11 to S-16) is at its 6,000-word budget exact
 - *The collective page.* COLLECTIVE-DIRECTION.md:85 cites T1 for a fish-stock result about the withheld-levels margin, which T1 excludes. T1's own timing result is the regime margin timing neither break in yeast driven past its fold. This predates T1S.
 
 The check gives an exact wording for each, with its sources, in [T1-STANDING-CHECK.txt](T1-STANDING-CHECK.txt).
+
+## After TS2's reader
+
+*Added 3 November 2026 (T1P, a correction with no board row). About 3 minutes to read.*
+
+The sciences dossier's reader for TS2 found that T1's exactness clause, "that point is exact" in the home and "the point of no return is exact" in 08's row, named none of the premises it is proved under, as the joint-excess clause had named none before T1S. `RegimeMargin.ends_iff_below` takes `0 < H + y`, `Short g H y`, `FromNothing g`, `Meets g H y hi`, `Keeps g H hi` and a level up to `hi`. Labelled proved, the clause had to say them, so the home's *In the model* and 08's row now copy the home theorem's words ([02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime)).
+
+A reader other than the author, one AI agent, read-only, checked the draft against the Lean, and a second, also one, re-checked the revision. It confirmed the joint-excess clause and every premise but `Meets`, and found five points, all taken:
+1. Read under the new premises, "the point" is `H + y`, and the clause that it lies at least the draw above the need needs giving to meet the draw at `y` (`RegimeMargin.root_above_need` takes `H ≤ g y`). The exactness premises give that only where `y + H ≤ hi`. A counterexample meets every stated premise and fails the clause: `g` zero below 10 and 5 from 10, `H = 1`, `y = 3`, `hi = 2`, the need 10. The clause now says "the draw positive and met at `y`", and the home theorem says the same.
+2. "Meets it from `y` up to a top `hi`" asked more than `Meets`, which needs the draw met only at each `z` from `y` with `z + H` at most `hi`. The home theorem, T1 and 08's row now say "meets it at every `z` from `y` with `z + H` at most a top `hi` the step keeps", and the laws of two records say the same of the top (margin-of-a-regime's law 2; threshold-in-the-state-plane's law 5 and its hypotheses, of the band's top), each with a history note. The re-check found that law 2 had also never named `0 < H + y`, without which it fails where the draw and `y` are both zero; it now names it, with the premises it had left to law 1.
+3. 08's row had lost the clause's verb; it has "lies" again.
+4. Exactness is proved in whole numbers, and the any-amounts row shows runs over the reals need not rest. Both now say "in whole numbers".
+5. "That point" stood about forty words from what it names, and the leading "where" seemed to cover the World clause. The home now reads "on the regime, …, the point of no return is exact, …; on the World, …", and 08's row, whose semicolon separates the two standings, "on the regime, …, and on the World, …". After the re-check, "the point lies" replaces an "it" that could be read as the level.
+
+Not done here:
+- The module docstring of `RegimeMargin` and the docstring of `threshold_regime` use the same loose gloss of `Meets`. A docstring changes Lean bytes, so they go with the next edition's docstring pass and its core run.
+- The sciences dossier's S-12 and its front cell copy the old words; they go to their owner.
+- The fronts' short forms ("the point exact", COLLECTIVE-DIRECTION's "the point of no return is exact" with its home linked) go to theirs.

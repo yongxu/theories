@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
+  "reviewed_at_utc": "2026-11-03T15:58:27+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -28,8 +28,8 @@
       ]
     },
     {
-      "en": "Where giving meets the draw from y up to a top the step keeps, a level from H + y up to the top never falls below its start; so the point of no return is exact: from a level up to the top, the condition ends exactly where it starts below H + y. A draw beyond all giving ends the condition from every level.",
-      "zh": "所给从 y 起直到步所保持的上限都满足汲取时，从 H + y 到上限的水平永不低于其起点；故不可回返点是确切的：从上限之内的水平，条件恰在起点低于 H + y 时终结。超出一切所给的汲取从每个水平终结条件。",
+      "en": "Where giving meets the draw at every z from y with z + H at most a top the step keeps, a level from H + y up to the top never falls below its start; so, where also giving falls short of the draw below y, nothing gives from nothing and 0 < H + y, the point of no return is exact: from a level up to the top, the condition ends exactly where it starts below H + y. A draw beyond all giving ends the condition from every level.",
+      "zh": "所给在每个不小于 y 且加上汲取不超过步所保持之上限的 z 处都满足汲取时，从 H + y 到上限的水平永不低于其起点；故在所给亦于 y 之下不及汲取、无中不生有且 0 < H + y 时，不可回返点是确切的：从上限之内的水平，条件恰在起点低于 H + y 时终结。超出一切所给的汲取从每个水平终结条件。",
       "declarations": [
         "Becoming.RegimeMargin.Meets",
         "Becoming.RegimeMargin.Keeps",
@@ -450,6 +450,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: harms_superadditive → rises_superadditive. The statements are kept but for the names; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：harms_superadditive → rises_superadditive。陈述除名外不变；论断不变。"
+    },
+    {
+      "en": "3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, \"After TS2's reader\"): law 2's premise says exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the top, where it had read as every level from y up to the top, more than the Lean asks; and its exactness now names its other premises: giving short of the draw below y and nothing from nothing, which it had left to law 1, and 0 < H + y, which no law named and without which it fails where the draw and y are both zero. The law now states what the Lean proves; the Lean is unchanged.",
+      "zh": "2026年11月3日，T1P（TS2 读者所见之更正，记于审阅包 T1-STANDING.md 之“After TS2's reader”）：第二律的前提确切说出 Meets 所要求者，即所给在每个不小于 y 且 z + H 不超过上限的 z 处满足汲取；原文读作从 y 到上限的每个水平，多于 Lean 所要求；其确切性今说出其余前提：所给在 y 之下不及汲取与无中不生有，原留于第一律；以及 0 < H + y，原无一律说出，无此则汲取与 y 皆为零时不成立。今律所言即 Lean 所证；Lean 不变。"
     }
   ]
 }

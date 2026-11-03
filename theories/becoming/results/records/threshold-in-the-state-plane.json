@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T16:22:45+00:00",
+  "reviewed_at_utc": "2026-11-03T15:58:27+00:00",
   "statement": {
     "en": "Under an adjustment rising with what is left and with the recent giving, within a band, the runs that rest below the draw are exactly those from levels below a least level for each recent giving, decided; that level does not rise as the recent giving rises.",
     "zh": "调整随所剩与近来所给而升时，在带内，静于汲取之下的运行恰是自低于每个近来所给之最小水平出发者，可判定；该水平不随近来所给上升而升。"
@@ -53,8 +53,8 @@
       ]
     },
     {
-      "en": "Where giving rises with what is left, falls short of the draw below y, meets it from y up to the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi.",
-      "zh": "所给随所剩而升、在 y 之下不及汲取、自 y 至带顶满足汲取、自无给无，且步保持至 hi 并达到此点的带时，在至 hi 的每个近来所给，阈值皆为不归点 H + y。",
+      "en": "Where giving rises with what is left, falls short of the draw below y, meets it at every z from y with z + H at most the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi.",
+      "zh": "所给随所剩而升、在 y 之下不及汲取、在每个不小于 y 且加上汲取不超过带顶的 z 处满足汲取、自无给无，且步保持至 hi 并达到此点的带时，在至 hi 的每个近来所给，阈值皆为不归点 H + y。",
       "declarations": [
         "Becoming.RegimeMargin.threshold_regime"
       ]
@@ -84,8 +84,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; each law's own premises as hypotheses: the adjustment rising with what is left and with the recent giving, a band the step keeps, and for the regime's case giving short of the draw below y, meeting it from y, nothing from nothing, and the band reaching the point.",
-      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；状态是水平与一个近来所给；各律自身的前提为假设：调整随所剩与近来所给而升，步所保持的带，以及体制情形中所给在 y 之下不及汲取、自 y 满足汲取、自无给无、带达到此点。"
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; each law's own premises as hypotheses: the adjustment rising with what is left and with the recent giving, a band the step keeps, and for the regime's case giving short of the draw below y, meeting it at every z from y with z + H at most the band's top, nothing from nothing, and the band reaching the point.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；状态是水平与一个近来所给；各律自身的前提为假设：调整随所剩与近来所给而升，步所保持的带，以及体制情形中所给在 y 之下不及汲取、在每个不小于 y 且加上汲取不超过带顶的 z 处满足汲取、自无给无、带达到此点。"
     }
   ],
   "does_not_show": [
@@ -508,6 +508,10 @@
     {
       "en": "22 October 2026, UM: one law of exact thresholds added, from which this record's exactness and falling are now derived; Adjusted.threshold_le removed, no law reading it (study section 335).",
       "zh": "2026年10月22日，UM：新增一条精确阈值之律，本记录的精确与下降今由它导出；Adjusted.threshold_le 被移除，无律读取它（研究第 335 节）。"
+    },
+    {
+      "en": "3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, \"After TS2's reader\"): law 5's premise, and the hypotheses with it, say exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the band's top, where it had read as every level from y up to the top, more than the Lean asks; the law now states what the Lean proves, under the weaker premise, and the Lean is unchanged.",
+      "zh": "2026年11月3日，T1P（TS2 读者所见之更正，记于审阅包 T1-STANDING.md 之“After TS2's reader”）：第五律的前提及随之的假设确切说出 Meets 所要求者，即所给在每个不小于 y 且 z + H 不超过带顶的 z 处满足汲取；原文读作从 y 到带顶的每个水平，多于 Lean 所要求；今律所言即 Lean 所证，前提较弱，Lean 不变。"
     }
   ]
 }
