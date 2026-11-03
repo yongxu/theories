@@ -1,0 +1,21 @@
+probe_design.py form ; code sha-256 {"dry_runs_embed.py": "f37bf84cc67d0294f70005c0c3a6f94144584031b169f485178e6eee86cd44a7", "embed_rules.py": "bf5c7e7bd7eaab99f08cd229e595d981228e8602351096ce76c66a8d74d245c7", "mq5.py": "faeaf404ef67f19149ac0c690d270c85a44a4e0ac0af8da755d50721e21b72cf", "probe_design.py": "c766952c1cf5ddaff42f96c5bcf3fd2d2da524010d730cb9d27264188fe6dd6c", "run_embed.py": "9aac287f5b0c1d63b9ccecdfe8993113d42aeb761fda336e3171d02bb78212d6"}
+N in the balance's other form: ln(MSE of (E_t, H_t, g_{t-1}) / MSE of (E_t, E_{t-1}, g_{t-1})), held out
+t2 132 stocks; both linear (theta 0) in 53, where the forms agree to 0.0008 ; where either bends (79): median -0.016, the draw form better in 48, worse in 31 (|ratio| < 1e-6 a tie), quartiles ['-0.09', '-0.02', '0.11']
+age 132 stocks; both linear (theta 0) in 29, where the forms agree to 0.0001 ; where either bends (103): median -0.019, the draw form better in 55, worse in 48 (|ratio| < 1e-6 a tie), quartiles ['-0.23', '-0.02', '0.19']
+mq4 132 stocks; both linear (theta 0) in 54, where the forms agree to 0.0002 ; where either bends (78): median -0.037, the draw form better in 46, worse in 32 (|ratio| < 1e-6 a tie), quartiles ['-0.20', '-0.04', '0.09']
+probe_design.py test 12 ; code sha-256 {"dry_runs_embed.py": "f37bf84cc67d0294f70005c0c3a6f94144584031b169f485178e6eee86cd44a7", "embed_rules.py": "bf5c7e7bd7eaab99f08cd229e595d981228e8602351096ce76c66a8d74d245c7", "mq5.py": "faeaf404ef67f19149ac0c690d270c85a44a4e0ac0af8da755d50721e21b72cf", "probe_design.py": "c766952c1cf5ddaff42f96c5bcf3fd2d2da524010d730cb9d27264188fe6dd6c", "run_embed.py": "9aac287f5b0c1d63b9ccecdfe8993113d42aeb761fda336e3171d02bb78212d6"}
+archives 12 ; counts are (T2 fails, not separated, T2 better)
+age {'sign test': [4, 8, 0], 'signed-rank test': [5, 7, 0], 'margin alone': [10, 2, 0]} median r -0.330
+age-early {'sign test': [7, 5, 0], 'signed-rank test': [7, 5, 0], 'margin alone': [11, 1, 0]} median r -0.357
+two-lags {'sign test': [5, 7, 0], 'signed-rank test': [5, 7, 0], 'margin alone': [8, 4, 0]} median r -0.191
+t2 {'sign test': [0, 11, 1], 'signed-rank test': [0, 10, 2], 'margin alone': [0, 10, 2]} median r 0.066
+t2-noisy {'sign test': [0, 8, 4], 'signed-rank test': [0, 7, 5], 'margin alone': [0, 7, 5]} median r 0.090
+mq4 {'sign test': [0, 12, 0], 'signed-rank test': [0, 12, 0], 'margin alone': [0, 12, 0]} median r 0.001
+probe_design.py s3 10 mixed t2 age ; code sha-256 {"dry_runs_embed.py": "f37bf84cc67d0294f70005c0c3a6f94144584031b169f485178e6eee86cd44a7", "embed_rules.py": "bf5c7e7bd7eaab99f08cd229e595d981228e8602351096ce76c66a8d74d245c7", "mq5.py": "faeaf404ef67f19149ac0c690d270c85a44a4e0ac0af8da755d50721e21b72cf", "probe_design.py": "c766952c1cf5ddaff42f96c5bcf3fd2d2da524010d730cb9d27264188fe6dd6c", "run_embed.py": "9aac287f5b0c1d63b9ccecdfe8993113d42aeb761fda336e3171d02bb78212d6"}
+archives 10 ; per archive: (stocks, median r) at or above MQ5's bound, then below it
+mixed ['(22, -0.622) (44, 0.083)', '(28, -0.257) (38, 0.053)', '(39, -0.040) (27, 0.081)', '(33, 0.137) (33, 0.002)', '(30, -0.588) (36, 0.116)', '(31, -0.123) (35, 0.085)', '(24, -0.270) (42, 0.124)', '(33, -0.169) (33, 0.045)', '(32, -0.181) (34, 0.120)', '(33, -0.068) (33, 0.013)']
+mixed median over archives: at or above -0.175, below 0.082; the stocks above have the lower median r in 9 of 10
+t2 ['(7, -0.255) (59, 0.026)', '(10, -0.146) (56, 0.145)', '(11, 0.004) (55, 0.177)', '(14, -0.076) (52, 0.151)', '(9, 0.971) (57, 0.019)', '(14, 0.215) (52, 0.121)', '(11, -0.032) (55, 0.118)', '(12, 0.012) (54, 0.035)', '(6, -0.022) (59, 0.056)', '(14, -0.221) (52, 0.055)']
+t2 median over archives: at or above -0.027, below 0.087; the stocks above have the lower median r in 8 of 10
+age ['(65, -0.496) (1, -0.397)', '(66, -0.314) (0, 0.000)', '(62, -0.172) (4, 0.550)', '(65, 0.078) (1, 1.168)', '(64, -0.297) (2, 1.881)', '(62, -0.498) (4, 0.249)', '(66, -0.202) (0, 0.000)', '(64, -0.466) (2, 0.390)', '(64, 0.024) (2, -0.005)', '(66, -0.528) (0, 0.000)']
+age median over archives: at or above -0.297, below 0.390; the stocks above have the lower median r in 6 of 7
