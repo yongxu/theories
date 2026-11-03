@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3195 nodes, 6148 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3196 nodes, 6153 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 92 | 75 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
 | Life and evolution | 0 | 45 | 22 | 0 |
-| Collectives and selection | 0 | 69 | 23 | 0 |
+| Collectives and selection | 0 | 70 | 24 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 81 | 60 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
@@ -416,7 +416,7 @@ Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundari
 
 ## Collectives and selection
 
-Results (69):
+Results (70):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A code held as counts, learned from what is heard](records/a-code-held-as-counts.md) (recorded-checked)
@@ -427,6 +427,7 @@ Results (69):
 - [A pool that recruits through itself](records/a-pool-that-recruits-through-itself.md) (recorded-checked)
 - [A race for position draws everything](records/a-race-for-position-draws-everything.md) (recorded-checked)
 - [A rise past the inflow is drawn from beyond](records/a-rise-past-the-inflow-is-drawn-from-beyond.md) (recorded-checked)
+- [A rule rebuilt from the members it limits](records/a-rule-rebuilt-from-the-members-it-limits.md) (recorded-checked)
 - [A swap-symmetric assignment singles out no role](records/a-swap-symmetric-assignment-singles-out-none.md) (recorded-checked)
 - [A weighting falling faster than renewal ends the base](records/a-weighting-faster-than-renewal-ends-the-base.md) (recorded-checked)
 - [A whole that draws its parts' arising beyond its renewal ends](records/whole-drawing-beyond-renewal-ends.md) (recorded-checked)
@@ -488,7 +489,7 @@ Results (69):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (23, 2 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
+Modules (24, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
 
 
 ## The classical texts
@@ -578,7 +579,7 @@ Results (81):
 - [The run classes and widening](records/the-run-classes-and-widening.md) (recorded-checked)
 - [The stepwise law of easing, and restraint over any number of drawers under the stepwise reading](records/stepwise-law-of-easing.md) (recorded-checked)
 - [The stepwise reading](records/becoming-stepwise-reading.md) (recorded-checked)
-- [The whole and its regions, and centers bounded by dependence](records/whole-and-regions-and-bounded-centers.md) (recorded-checked)
+- [The whole first, and centers bounded by dependence](records/whole-first-and-bounded-centers.md) (recorded-checked)
 - [Two scopes of the self's presupposition](records/presupposition-scopes.md) (recorded-checked)
 - [Weights within a ratio agree past it](records/weights-within-a-ratio-agree-past-it.md) (recorded-checked)
 - [What a course keeps reachable](records/what-a-course-keeps-reachable.md) (recorded-checked)
@@ -598,7 +599,7 @@ Results (81):
 - [Where the verdict within the closure meets the continuation condition](records/closure-verdict-meets-continuation-condition.md) (recorded-checked)
 - [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (open)
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
-- [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked)
+- [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
 Modules (60, 10 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
@@ -653,4 +654,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-300 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+300 of 379 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

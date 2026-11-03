@@ -271,6 +271,7 @@ import Becoming.RegimeMargin
 import Becoming.RoomNet
 import Becoming.RoomRuns
 import Becoming.ReaderRebuilding
+import Becoming.RuleRebuilding
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -4152,6 +4153,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   ends at its span from every level; the end at an empty stock, closed under the net
   (`ReaderRebuilding.«取于储者绝而不复»`); the stock buys time exactly where the rebuild draws on
   the level (`ReaderRebuilding.«以储买时当且仅当取于储»`). A leaf.
+* `Becoming.RuleRebuilding` (L1): where a rule of entry is taught from, a family of nets from one rule
+  (board item OG2, plan §十三 item 9's institution, one kind). A quota, a level the members draw on,
+  and holders and others by cohort; each step a draw, a new cohort past a door of a strength per
+  teacher, ageing to a tenure and a revision. From the steady state the rule is held at every step
+  exactly where teaching fits a tenure, the quota is at least one and the take fits the renewal
+  (`RuleRebuilding.«稳者恒持当且仅当在带»`); a region is closed under revision inside it
+  (`RuleRebuilding.«域闭»`); no holder comes from no holder (`RuleRebuilding.«无持者不复»`); the
+  steady state and open entry are two tests, each its own (`RuleRebuilding.«稳开二试»`); with empty
+  cohorts the count of held ones weighs one take against the other (`RuleRebuilding.«隙之律»`). A leaf.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

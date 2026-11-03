@@ -2635,6 +2635,11 @@
    "region": "life",
    "base": "grammar",
    "note": "ReaderRebuilding OG: a reader rebuilt from the level it reads, the test system of an organism"
+  },
+  "a-rule-rebuilt-from-the-members-it-limits": {
+   "region": "collective",
+   "base": "grammar",
+   "note": "RuleRebuilding OG2: a rule of entry rebuilt from the members it limits, the test system of one kind of institution"
   }
  },
  "modules": {
@@ -4527,6 +4532,11 @@
    "region": "life",
    "base": "grammar",
    "note": "OG: where a reader is rebuilt from; the stock buys time under a cut exactly where the rebuild draws on the level; an organism's minimal model"
+  },
+  "Becoming.RuleRebuilding": {
+   "region": "collective",
+   "base": "grammar",
+   "note": "OG2: where a rule of entry is taught from; one kind of institution's minimal model"
   }
  }
 }

@@ -35,4 +35,4 @@ In the case, the condition counts the bed's death, which returns to no fisher. I
 
 - Significance stays a free parameter, which no satisfiable statement reading only the represented dynamics fixes, or is read along a relation no law here picks ([07](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)).
 - For a warrant, among others: the open question above, the correspondence it rests on ([07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)), the step of invariance, and a reason for C.
-- An institution has no model yet, an organism one minimal model [AI reading] ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)), and several theses' tests are still to run.
+- An organism and one kind of institution each have one minimal model [AI reading] ([04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it), [05 §12](chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)), and several theses' tests are still to run.

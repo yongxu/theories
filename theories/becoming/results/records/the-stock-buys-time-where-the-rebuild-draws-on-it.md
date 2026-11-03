@@ -60,6 +60,8 @@ The member rebuilt from the level is a minimal case of self-maintenance (one con
 
 - **interpretive**: [rooms-tested-by-a-window](rooms-tested-by-a-window.md). The rooms tell regulation from equilibrium with a given heater; this family asks where a reader is rebuilt from.
 
+**Used by:** [a-rule-rebuilt-from-the-members-it-limits](a-rule-rebuilt-from-the-members-it-limits.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

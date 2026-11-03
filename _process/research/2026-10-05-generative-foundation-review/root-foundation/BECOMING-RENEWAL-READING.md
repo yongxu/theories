@@ -24345,3 +24345,30 @@ Output → input: 01 §9.5's census row; the connectivity register (the root for
 1. The covering laws of Identity now each read one root law at the formations' occurrences: the not-refuted form «所覆后亡屡则生未否», the not-stopping form «有覆而亡屡则生不止», the converse «有界覆而生屡则亡不止» and the exact forms. The register holds no covering law of the root as an apart root any more.
 2. A law that takes a decision its proof does not use states less than it proves; each of the five now takes only what it uses, and the count of unused binders is read by Lean, not by eye.
 3. The decisions that stay are used: the recurrence laws need the continuation decided in their own direction (U4d's reduction to weak excluded middle), and the balance needs all three to count. That the continuation's decision is the least one is not claimed.
+
+## 501. A rule rebuilt from the members it limits: one kind of institution's minimal model (OG2)
+
+Board item OG2, plan §十三 item 9: each test system of plan §六 with its model. OG gave the organism one, and the fronts still said an institution had none. This item asks what must hold for a rule to outlive everyone who first held it, what the rule does so that it is an institution and not any tradition, and how it ends ([study](development/og-organism/og2/): DESIGN.md, REVIEW-1.md to REVIEW-4.md, sim/).
+
+```text
+Result(s): a-rule-rebuilt-from-the-members-it-limits (new, home 05 §12), Becoming.RuleRebuilding, an instance
+       of the ring, 207 declarations (147 theorems), every axiom report empty (receipt 20261103T023714.027477Z).
+Delta:
+  - One rule makes a family of nets by where a rule of entry is taught from: members, outside, nowhere. Others
+    enter past a door of a strength per teacher; holder and other differ only in whether a cohort entered
+    holding the rule; each member draws one unit, and an overdraw ends everything.
+  - From the steady state the rule is held at every step exactly where teaching fits a tenure, the quota is at
+    least one and the take fits the renewal. A region is closed under a revision inside it. No holder comes
+    from no holder. The steady state and open entry are two tests, each its own, and all four combinations
+    occur. At l = s − 1 held and empty cohorts rotate, and the rule is held exactly where their joint take fits.
+Design history: five drafts. The first was a tradition with a one-bit quota (REVIEW-1). The second's limit was a
+       switch (REVIEW-2 proposed the door). The third claimed passing and limiting joined at the steady state,
+       and its re-check refuted it (REVIEW-3). The fourth claimed the count of held cohorts sets how many pass;
+       the Lean's independent reading refuted that, and a name that stated a false law, and asked for L9 as two
+       tests in place of four conjuncts (REVIEW-4). Every finding taken.
+Depends on: the clause that all members leave at an overdraw. Every take condition exists because of it; let only
+       the excess leave and they fail. It has the form of Flow's gated ending and uses no law of it.
+Not modelled: why a teacher turns anyone away, conduct other than entry, sanctions, who decides a revision, mixed
+       tenures, schism, records, purposes, capture.
+Checked: the Lean step and the simulation agree on 699,840 cases (sim/diff).
+```

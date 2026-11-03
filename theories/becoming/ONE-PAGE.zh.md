@@ -35,4 +35,4 @@
 
 - 意义仍是一个自由参数，任何只读取所表示的动力学、且可满足的陈述都不能确定它；或者沿一个这里没有律选定的关系读出（[07](chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)）。
 - 为一个根据，其中有：上面那个未决的问题，它所依的对应（[07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)），不变之步，以及 C 的理由。
-- 一个制度尚无模型，一个有机体有一个最小模型［AI 读法］（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)），若干论题的检验还待进行。
+- 一个有机体与一种制度各有一个最小模型［AI 读法］（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)、[05 §12](chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)），若干论题的检验还待进行。

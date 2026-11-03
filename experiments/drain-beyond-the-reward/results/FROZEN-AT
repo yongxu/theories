@@ -1,0 +1,2 @@
+3dc87cf8833bb2820aca123678d3d0a1dbcc2984
+The commit LA4 Stage A was frozen in, 3 November 2026, before any run of the families tested on the test season. run.py checks every frozen file against it before the first update, and analyze.py before the reading.

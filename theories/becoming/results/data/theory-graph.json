@@ -656,6 +656,18 @@
    "page": "theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md"
   },
   {
+   "id": "record:a-rule-rebuilt-from-the-members-it-limits",
+   "type": "result",
+   "record": "a-rule-rebuilt-from-the-members-it-limits",
+   "title": "A rule rebuilt from the members it limits",
+   "title_zh": "规取于其所限之众",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md"
+  },
+  {
    "id": "record:a-selected-template-need-not-raise-structure",
    "type": "result",
    "record": "a-selected-template-need-not-raise-structure",
@@ -9666,6 +9678,17 @@
    "level": "L1",
    "theorems": 32,
    "region": "life",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RuleRebuilding",
+   "type": "module",
+   "name": "Becoming.RuleRebuilding",
+   "level": "L1",
+   "theorems": 147,
+   "region": "collective",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -30496,6 +30519,12 @@
    "anchor": "r-organizational-formation-from-generative-comparison"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-rule-rebuilt-from-the-members-it-limits"
+  },
+  {
    "id": "section:theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
    "type": "section",
    "chapter": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
@@ -34628,6 +34657,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.RuleRebuilding",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.RuleShaping",
    "to": "module:Becoming.Recurrence",
    "type": "imports"
@@ -36321,6 +36355,21 @@
    "from": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
    "to": "record:what-a-rise-draws-from-beyond",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-rule-rebuilt-from-the-members-it-limits",
+   "to": "module:Becoming.RuleRebuilding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-rule-rebuilt-from-the-members-it-limits",
+   "to": "record:own-count-misses-joint-excess",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-rule-rebuilt-from-the-members-it-limits",
+   "to": "record:the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "type": "interpretive"
   },
   {
    "from": "record:a-selected-template-need-not-raise-structure",
@@ -60945,6 +60994,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond",
    "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+   "to": "record:a-rule-rebuilt-from-the-members-it-limits",
    "type": "states"
   },
   {

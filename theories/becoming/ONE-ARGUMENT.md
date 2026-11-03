@@ -10,7 +10,7 @@
 | [2](#2-the-theorem-and-exactly-what-the-lean-proves) | With room, every optimum drains what its order does not read | proved in Lean; known in another form |
 | [3](#3-the-claim-that-can-fail-t3) | Trained systems do this as they near their reward's optimum (T3) | conjectured; says what it forbids |
 | [4](#4-the-frozen-tests-what-failed-and-what-that-moved) | Frozen tests of parts near that claim | fell both ways; none varies nearness |
-| [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | designed; nothing frozen; not run |
+| [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | designed; Stage A frozen; not run |
 | [6](#6-one-mixed-case) | Whether one course is better than another | two premises, neither asserted; neither ranks a mixed case; the direction takes more |
 
 **The case**, for illustration. A fished stock, with seabirds that depend on it at a need and give the boats nothing. A boat's reward reads its catch and not the seabirds. No fishery was measured; the case proves nothing.
@@ -78,7 +78,7 @@ All are small, 5 to 20 seeds or seasons per condition on toy commons; none train
 
 ## 5. The test that would vary nearness: LA4
 
-**No prediction is frozen and no learner has run** ([design](../../experiments/drain-beyond-the-reward/DESIGN.md)). The runs wait for a suitable machine. LA4 would add:
+**Stage A's predictions are frozen and no learner has run** ([design](../../experiments/drain-beyond-the-reward/DESIGN.md), [predictions](../../experiments/drain-beyond-the-reward/PREDICTIONS-2026-11-03.md)). Its run waits on a yes for its machine time, about four CPU hours; Stage B is not frozen. LA4 would add:
 
 - **Nearness measured.** `ν`, expected catch over the optimum's 40, on systems trained by gradient (three families of small policies, then two of open-weight language models), in [a season where step 2's hypotheses are checked](chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws), standing for no actual fishery: a renewing ground; a bay of six that does not renew, with a colony read as the bay left at three or more; two landing sites, one beside a nesting site. Below `ν` = 0.85 arithmetic forces no withdrawal from the bay (`Optimum.Season.mix_bay_catch`).
 - **One condition, with and without room.** With the bay's fish counted in the catch, every optimum of every order rising with it empties the bay (`Optimum.Season.bay_drained`); uncounted, the optima include keeping and emptying it (`Optimum.Season.unshared_optima`). The nesting site gives no room (`Optimum.Season.site_no_room`). A control removes the selection on both in expectation.
@@ -87,7 +87,7 @@ All are small, 5 to 20 seeds or seasons per condition on toy commons; none train
 
 What is computed already is not a test: with the bay's fish counted, from a start leaving the bay alone, the simplest family's exact expected update keeps the colony in fewer than half of seasons from about `ν` = 0.68 (interpolated), where nothing forces a drain. That is the update rule's own pattern, so a learner matching it shows only local compatibility with the clause. LA4 would not test several optimizers, what a network represents, natural rewards or any ethical premise.
 
-**What has moved the forbidden list.** At `0d7a397a5`, no reason given, "trained further" became "nearer its reward's optimum", "or a training" left F4, the locus lost "and not where it shares none", and what refutes T3 was rewritten, "an agent keeping an unobserved dependent above chance" giving way to the cases the list names. On 26 October the set-point law added F3's scope (`6857d53c3`). The one case revised since came from this computing, not a frozen test. F2 read "a systematic drive on a condition sharing no units with anything rewarded". With the bay's fish uncounted, the same family's exact expected update keeps 5.9 in the bay, the control 5.0, since the policy reads the bay's level and fishes best where it has been. So F2 now reads as in step 3, and T3 forbids less.
+**What has moved the forbidden list.** At `0d7a397a5`, no reason given, "trained further" became "nearer its reward's optimum", "or a training" left F4, the locus lost "and not where it shares none", and what refutes T3 was rewritten, "an agent keeping an unobserved dependent above chance" giving way to the cases the list names. On 26 October the set-point law added F3's scope (`6857d53c3`). The one case revised since came from this computing, not a frozen test. F2 read "a systematic drive on a condition sharing no units with anything rewarded". With the bay's fish uncounted, the same family's exact expected update keeps 5.9 in the bay, the control 5.0, since the policy reads the bay's level and catches most, by its reward, where it has been. So F2 now reads as in step 3, and T3 forbids less.
 
 ## 6. One mixed case
 
