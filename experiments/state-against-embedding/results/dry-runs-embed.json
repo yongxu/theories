@@ -1,0 +1,783 @@
+{
+ "archives": 200,
+ "code_sha256": {
+  "dry_runs_embed.py": "f37bf84cc67d0294f70005c0c3a6f94144584031b169f485178e6eee86cd44a7",
+  "embed_rules.py": "bf5c7e7bd7eaab99f08cd229e595d981228e8602351096ce76c66a8d74d245c7",
+  "mq5.py": "faeaf404ef67f19149ac0c690d270c85a44a4e0ac0af8da755d50721e21b72cf"
+ },
+ "lengths": [
+  26,
+  26,
+  27,
+  28,
+  28,
+  28,
+  29,
+  30,
+  30,
+  31,
+  32,
+  34,
+  34,
+  34,
+  34,
+  35,
+  35,
+  36,
+  37,
+  37,
+  37,
+  37,
+  37,
+  37,
+  38,
+  39,
+  39,
+  39,
+  39,
+  40,
+  40,
+  40,
+  41,
+  41,
+  41,
+  42,
+  42,
+  44,
+  44,
+  44,
+  45,
+  47,
+  47,
+  48,
+  48,
+  49,
+  49,
+  49,
+  50,
+  50,
+  50,
+  51,
+  51,
+  51,
+  51,
+  57,
+  59,
+  60,
+  62,
+  67,
+  69,
+  71,
+  72,
+  74,
+  76,
+  79,
+  110,
+  114,
+  115
+ ],
+ "results": {
+  "age": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 fails on the field's criterion": 0.555,
+    "not separated on the field's criterion": 0.445
+   },
+   "cpu_seconds": 1519.8,
+   "dims_chosen": {
+    "1": 1120,
+    "2": 4264,
+    "3": 2360,
+    "4": 5445
+   },
+   "draw_form_shares": {
+    "T2 fails on the field's criterion": 0.42,
+    "not separated on the field's criterion": 0.58
+   },
+   "median_r_by_d": {
+    "1": -0.02003227457115178,
+    "2": -0.2868670374902633,
+    "3": -0.39754651366770194,
+    "4": -0.3566574551982059
+   },
+   "medians": {
+    "F_skill_vs_persistence": -0.906687568320063,
+    "F_worse_than_persistence": 0.7121212121212122,
+    "L_over_N": 0.8976256041572511,
+    "N_form_draw_share": 0.3484848484848485,
+    "N_skill_vs_mean": 0.5132654947756724,
+    "N_skill_vs_persistence": -1.4883555962523503,
+    "N_worse_than_persistence": 0.8636363636363636,
+    "U_over_N": -0.7422760246229292,
+    "chosen_median_r": -0.3342476438018299,
+    "draw_median_r": -0.2877221127412473,
+    "f_better": 41.0,
+    "median_r": -0.31382945994979783,
+    "median_r_d_at_least_2": -0.3542008013149464,
+    "n_better": 25.0,
+    "simplex_median_r": -0.2563847772502714,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.6890784279170328,
+    0.11992921794396327
+   ],
+   "readings": {
+    "not separated on the field's criterion": 0.51,
+    "the longer history carries more (T2's first forbidden item, out of sample)": 0.49
+   },
+   "share_margin_met": {
+    "better side": 0.005,
+    "fails side": 0.925
+   },
+   "shares": {
+    "T2 fails on the field's criterion": 0.49,
+    "not separated on the field's criterion": 0.51
+   },
+   "simplex_dims_chosen": {
+    "1": 4520,
+    "2": 4632,
+    "3": 2291,
+    "4": 1746
+   },
+   "simplex_shares": {
+    "T2 fails on the field's criterion": 0.6,
+    "not separated on the field's criterion": 0.4
+   }
+  },
+  "age-early": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 fails on the field's criterion": 0.525,
+    "not separated on the field's criterion": 0.475
+   },
+   "cpu_seconds": 1511.7,
+   "dims_chosen": {
+    "1": 1554,
+    "2": 4606,
+    "3": 2423,
+    "4": 4609
+   },
+   "draw_form_shares": {
+    "T2 fails on the field's criterion": 0.375,
+    "not separated on the field's criterion": 0.625
+   },
+   "median_r_by_d": {
+    "1": -0.0819774824370509,
+    "2": -0.3130795924126332,
+    "3": -0.3706525875828222,
+    "4": -0.3566431795606833
+   },
+   "medians": {
+    "F_skill_vs_persistence": -1.2018032997015684,
+    "F_worse_than_persistence": 0.7424242424242424,
+    "L_over_N": 1.076696488829393,
+    "N_form_draw_share": 0.36363636363636365,
+    "N_skill_vs_mean": 0.6660288905438998,
+    "N_skill_vs_persistence": -1.8603111187334551,
+    "N_worse_than_persistence": 0.8939393939393939,
+    "U_over_N": -0.6203128170138812,
+    "chosen_median_r": -0.30196436683631556,
+    "draw_median_r": -0.2602637564261537,
+    "f_better": 41.0,
+    "median_r": -0.2746879973297006,
+    "median_r_d_at_least_2": -0.3377886935103652,
+    "n_better": 25.0,
+    "simplex_median_r": -0.23347755628866357,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.6402323080195585,
+    0.10693421026354577
+   ],
+   "readings": {
+    "not separated on the field's criterion": 0.525,
+    "the longer history carries more (T2's first forbidden item, out of sample)": 0.475
+   },
+   "share_margin_met": {
+    "better side": 0.005,
+    "fails side": 0.93
+   },
+   "shares": {
+    "T2 fails on the field's criterion": 0.475,
+    "not separated on the field's criterion": 0.525
+   },
+   "simplex_dims_chosen": {
+    "1": 5548,
+    "2": 4298,
+    "3": 1853,
+    "4": 1493
+   },
+   "simplex_shares": {
+    "T2 fails on the field's criterion": 0.485,
+    "not separated on the field's criterion": 0.515
+   }
+  },
+  "age-late": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 fails on the field's criterion": 0.745,
+    "not separated on the field's criterion": 0.255
+   },
+   "cpu_seconds": 1520.1,
+   "dims_chosen": {
+    "1": 1715,
+    "2": 4580,
+    "3": 2134,
+    "4": 4759
+   },
+   "draw_form_shares": {
+    "T2 fails on the field's criterion": 0.65,
+    "not separated on the field's criterion": 0.35
+   },
+   "median_r_by_d": {
+    "1": -0.10312383711204182,
+    "2": -0.4526940966605911,
+    "3": -0.32291712983298804,
+    "4": -0.3816104535421724
+   },
+   "medians": {
+    "F_skill_vs_persistence": -0.5840181789130001,
+    "F_worse_than_persistence": 0.6515151515151515,
+    "L_over_N": 0.5865789341436627,
+    "N_form_draw_share": 0.36363636363636365,
+    "N_skill_vs_mean": 0.32956584886121687,
+    "N_skill_vs_persistence": -1.1683414833979169,
+    "N_worse_than_persistence": 0.8181818181818182,
+    "U_over_N": -0.8172497473386534,
+    "chosen_median_r": -0.36640368656856187,
+    "draw_median_r": -0.3072672566283999,
+    "f_better": 44.0,
+    "median_r": -0.3455737069229224,
+    "median_r_d_at_least_2": -0.39845219166652823,
+    "n_better": 22.0,
+    "simplex_median_r": -0.3340210424536074,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.7149608350003629,
+    -0.060981273554006704
+   ],
+   "readings": {
+    "not separated on the field's criterion": 0.22,
+    "the longer history carries more (T2's first forbidden item, out of sample)": 0.78
+   },
+   "share_margin_met": {
+    "better side": 0.0,
+    "fails side": 0.97
+   },
+   "shares": {
+    "T2 fails on the field's criterion": 0.78,
+    "not separated on the field's criterion": 0.22
+   },
+   "simplex_dims_chosen": {
+    "1": 4697,
+    "2": 4606,
+    "3": 2394,
+    "4": 1491
+   },
+   "simplex_shares": {
+    "T2 fails on the field's criterion": 0.85,
+    "not separated on the field's criterion": 0.15
+   }
+  },
+  "drifting": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.095,
+    "not separated on the field's criterion": 0.905
+   },
+   "cpu_seconds": 806.3,
+   "dims_chosen": {
+    "1": 5527,
+    "2": 4172,
+    "3": 1182,
+    "4": 996
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.17,
+    "not separated on the field's criterion": 0.83
+   },
+   "median_r_by_d": {
+    "1": -0.03342313866599499,
+    "2": 0.07330057118852347,
+    "3": 0.47030583450146424,
+    "4": 1.0702003606196349
+   },
+   "medians": {
+    "F_skill_vs_persistence": -1.1271076214529219,
+    "F_worse_than_persistence": 0.8290473407364114,
+    "L_over_N": 1.1238034028949218,
+    "N_form_draw_share": 0.288135593220339,
+    "N_skill_vs_mean": 0.6311107619206495,
+    "N_skill_vs_persistence": -0.8974411047285222,
+    "N_worse_than_persistence": 0.7894736842105263,
+    "U_over_N": -0.0520666139154401,
+    "chosen_median_r": 0.04027442600062718,
+    "draw_median_r": 0.06526321993805104,
+    "f_better": 25.0,
+    "median_r": 0.05192070111471568,
+    "median_r_d_at_least_2": 0.19736701783272292,
+    "n_better": 34.0,
+    "simplex_median_r": 0.16555484074800142,
+    "testable": 59.0
+   },
+   "range_median_r": [
+    -0.08901796766831079,
+    0.3522209976240419
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.12,
+    "not separated on the field's criterion": 0.88
+   },
+   "share_margin_met": {
+    "better side": 0.205,
+    "fails side": 0.0
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.12,
+    "not separated on the field's criterion": 0.88
+   },
+   "simplex_dims_chosen": {
+    "1": 3227,
+    "2": 3195,
+    "3": 2481,
+    "4": 2974
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.575,
+    "not separated on the field's criterion": 0.425
+   }
+  },
+  "level": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.235,
+    "not separated on the field's criterion": 0.765
+   },
+   "cpu_seconds": 781.3,
+   "dims_chosen": {
+    "1": 4716,
+    "2": 5232,
+    "3": 970,
+    "4": 765
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.155,
+    "not separated on the field's criterion": 0.845
+   },
+   "median_r_by_d": {
+    "1": -0.026915716184483594,
+    "2": 0.08912938653412787,
+    "3": 0.5195757879621646,
+    "4": 0.9936321616402546
+   },
+   "medians": {
+    "F_skill_vs_persistence": 0.07044816811020599,
+    "F_worse_than_persistence": 0.46609195402298853,
+    "L_over_N": 0.055108790267912273,
+    "N_form_draw_share": 0.25806451612903225,
+    "N_skill_vs_mean": 0.39541801326427145,
+    "N_skill_vs_persistence": 0.1900103551719624,
+    "N_worse_than_persistence": 0.4249791608780217,
+    "U_over_N": 0.15084521456566108,
+    "chosen_median_r": 0.07644172708660571,
+    "draw_median_r": 0.06066856906716992,
+    "f_better": 23.0,
+    "median_r": 0.07563014400796794,
+    "median_r_d_at_least_2": 0.17046818430404573,
+    "n_better": 36.0,
+    "simplex_median_r": 0.2342217355931448,
+    "testable": 59.0
+   },
+   "range_median_r": [
+    -0.0437101412815171,
+    0.2692067715139912
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.245,
+    "not separated on the field's criterion": 0.755
+   },
+   "share_margin_met": {
+    "better side": 0.315,
+    "fails side": 0.0
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.245,
+    "not separated on the field's criterion": 0.755
+   },
+   "simplex_dims_chosen": {
+    "1": 4081,
+    "2": 2627,
+    "3": 2155,
+    "4": 2820
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.805,
+    "not separated on the field's criterion": 0.195
+   }
+  },
+  "mixed": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.04,
+    "not separated on the field's criterion": 0.96
+   },
+   "cpu_seconds": 1505.9,
+   "dims_chosen": {
+    "1": 3122,
+    "2": 5848,
+    "3": 1593,
+    "4": 2623
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.05,
+    "not separated on the field's criterion": 0.95
+   },
+   "median_r_by_d": {
+    "1": 0.020702815389946005,
+    "2": 0.026791738600752183,
+    "3": 0.16424273453275778,
+    "4": 0.009106639230107346
+   },
+   "medians": {
+    "F_skill_vs_persistence": -0.3750972991995196,
+    "F_worse_than_persistence": 0.6212121212121212,
+    "L_over_N": 0.9328678712100151,
+    "N_form_draw_share": 0.2727272727272727,
+    "N_skill_vs_mean": 0.6083802200039905,
+    "N_skill_vs_persistence": -0.39993487520611337,
+    "N_worse_than_persistence": 0.6212121212121212,
+    "U_over_N": -0.3081105431587402,
+    "chosen_median_r": 0.022961142115163924,
+    "draw_median_r": 0.03657609170429939,
+    "f_better": 31.0,
+    "median_r": 0.027981124450187425,
+    "median_r_d_at_least_2": 0.03333081574487351,
+    "n_better": 35.0,
+    "simplex_median_r": 0.13016430342084562,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.20238865469515166,
+    0.3141941051097954
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.06,
+    "not separated on the field's criterion": 0.94
+   },
+   "share_margin_met": {
+    "better side": 0.14,
+    "fails side": 0.005
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.06,
+    "not separated on the field's criterion": 0.94
+   },
+   "simplex_dims_chosen": {
+    "1": 3913,
+    "2": 3681,
+    "3": 2637,
+    "4": 2955
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.285,
+    "not separated on the field's criterion": 0.715
+   }
+  },
+  "mq4": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.03,
+    "not separated on the field's criterion": 0.97
+   },
+   "cpu_seconds": 1502.9,
+   "dims_chosen": {
+    "1": 6236,
+    "2": 4588,
+    "3": 1271,
+    "4": 1102
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.06,
+    "not separated on the field's criterion": 0.94
+   },
+   "median_r_by_d": {
+    "1": -0.06723751361656696,
+    "2": 0.05218133685603299,
+    "3": 0.37656483359748905,
+    "4": 0.7904268949120081
+   },
+   "medians": {
+    "F_skill_vs_persistence": -1.359641033583346,
+    "F_worse_than_persistence": 0.803030303030303,
+    "L_over_N": 1.4736100921370392,
+    "N_form_draw_share": 0.2803030303030303,
+    "N_skill_vs_mean": 0.7837616311750389,
+    "N_skill_vs_persistence": -1.2102456664640542,
+    "N_worse_than_persistence": 0.7878787878787878,
+    "U_over_N": -0.07205822642161472,
+    "chosen_median_r": 0.010609364554421618,
+    "draw_median_r": 0.03194896987538877,
+    "f_better": 31.0,
+    "median_r": 0.015037742157564416,
+    "median_r_d_at_least_2": 0.13329150629466502,
+    "n_better": 35.0,
+    "simplex_median_r": 0.05779638020815181,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.14311161661708163,
+    0.44171824477238336
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.035,
+    "not separated on the field's criterion": 0.96,
+    "the longer history carries more (T2's first forbidden item, out of sample)": 0.005
+   },
+   "share_margin_met": {
+    "better side": 0.06,
+    "fails side": 0.015
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.035,
+    "T2 fails on the field's criterion": 0.005,
+    "not separated on the field's criterion": 0.96
+   },
+   "simplex_dims_chosen": {
+    "1": 3975,
+    "2": 3761,
+    "3": 2637,
+    "4": 2824
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.085,
+    "T2 fails on the field's criterion": 0.005,
+    "not separated on the field's criterion": 0.91
+   }
+  },
+  "t2": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.285,
+    "not separated on the field's criterion": 0.715
+   },
+   "cpu_seconds": 1501.8,
+   "dims_chosen": {
+    "1": 4111,
+    "2": 6692,
+    "3": 1256,
+    "4": 1132
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.37,
+    "not separated on the field's criterion": 0.63
+   },
+   "median_r_by_d": {
+    "1": 0.03221048669387312,
+    "2": 0.04728847122531532,
+    "3": 0.4504812619563896,
+    "4": 0.7467546794986502
+   },
+   "medians": {
+    "F_skill_vs_persistence": -0.22350491088792984,
+    "F_worse_than_persistence": 0.5606060606060606,
+    "L_over_N": 0.98278337396448,
+    "N_form_draw_share": 0.24242424242424243,
+    "N_skill_vs_mean": 0.7029405104773713,
+    "N_skill_vs_persistence": -0.00505005187109997,
+    "N_worse_than_persistence": 0.5,
+    "U_over_N": -0.13987401332704225,
+    "chosen_median_r": 0.08085128969947067,
+    "draw_median_r": 0.10104914847374333,
+    "f_better": 25.0,
+    "median_r": 0.08900916371063884,
+    "median_r_d_at_least_2": 0.1073140357413434,
+    "n_better": 41.0,
+    "simplex_median_r": 0.2650371380962128,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.03082052979674394,
+    0.29690595124577757
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.33,
+    "not separated on the field's criterion": 0.67
+   },
+   "share_margin_met": {
+    "better side": 0.41,
+    "fails side": 0.0
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.33,
+    "not separated on the field's criterion": 0.67
+   },
+   "simplex_dims_chosen": {
+    "1": 3698,
+    "2": 3294,
+    "3": 2623,
+    "4": 3576
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.915,
+    "not separated on the field's criterion": 0.085
+   }
+  },
+  "t2-noisy": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 better than the field's fitted embedding": 0.19,
+    "not separated on the field's criterion": 0.81
+   },
+   "cpu_seconds": 1508.4,
+   "dims_chosen": {
+    "1": 5795,
+    "2": 5047,
+    "3": 1334,
+    "4": 1009
+   },
+   "draw_form_shares": {
+    "T2 better than the field's fitted embedding": 0.29,
+    "not separated on the field's criterion": 0.71
+   },
+   "median_r_by_d": {
+    "1": 0.0027555197252398765,
+    "2": 0.055169347104575966,
+    "3": 0.41697242633927994,
+    "4": 0.6066887516789397
+   },
+   "medians": {
+    "F_skill_vs_persistence": 0.2024526094242631,
+    "F_worse_than_persistence": 0.4393939393939394,
+    "L_over_N": 0.14982736407082956,
+    "N_form_draw_share": 0.22727272727272727,
+    "N_skill_vs_mean": 0.11781151137335652,
+    "N_skill_vs_persistence": 0.2935353641031959,
+    "N_worse_than_persistence": 0.3787878787878788,
+    "U_over_N": -0.10323290285470496,
+    "chosen_median_r": 0.06910839013676706,
+    "draw_median_r": 0.07490263173135167,
+    "f_better": 26.0,
+    "median_r": 0.07205470917331912,
+    "median_r_d_at_least_2": 0.13848212030003984,
+    "n_better": 40.0,
+    "simplex_median_r": 0.16718300879147424,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.0240814196385265,
+    0.24117403217992212
+   ],
+   "readings": {
+    "T2 better than the field's fitted embedding": 0.22,
+    "not separated on the field's criterion": 0.78
+   },
+   "share_margin_met": {
+    "better side": 0.29,
+    "fails side": 0.0
+   },
+   "shares": {
+    "T2 better than the field's fitted embedding": 0.22,
+    "not separated on the field's criterion": 0.78
+   },
+   "simplex_dims_chosen": {
+    "1": 3451,
+    "2": 2924,
+    "3": 2677,
+    "4": 4133
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.675,
+    "not separated on the field's criterion": 0.325
+   }
+  },
+  "two-lags": {
+   "archives": 200,
+   "chosen_form_shares": {
+    "T2 fails on the field's criterion": 0.485,
+    "not separated on the field's criterion": 0.515
+   },
+   "cpu_seconds": 1498.4,
+   "dims_chosen": {
+    "1": 2496,
+    "2": 5515,
+    "3": 2097,
+    "4": 3062
+   },
+   "draw_form_shares": {
+    "T2 fails on the field's criterion": 0.425,
+    "not separated on the field's criterion": 0.575
+   },
+   "median_r_by_d": {
+    "1": 0.002465453205813462,
+    "2": -0.24181139009227198,
+    "3": -0.2935275099883249,
+    "4": -0.20829865553804547
+   },
+   "medians": {
+    "F_skill_vs_persistence": 0.14212344927138393,
+    "F_worse_than_persistence": 0.45454545454545453,
+    "L_over_N": 0.8454433767128954,
+    "N_form_draw_share": 0.22727272727272727,
+    "N_skill_vs_mean": 0.7193073533926606,
+    "N_skill_vs_persistence": -0.015530307937545895,
+    "N_worse_than_persistence": 0.5,
+    "U_over_N": -0.61850122694097,
+    "chosen_median_r": -0.18312469217030458,
+    "draw_median_r": -0.16137684078119743,
+    "f_better": 41.0,
+    "median_r": -0.17419027196846454,
+    "median_r_d_at_least_2": -0.25292775125802164,
+    "n_better": 25.0,
+    "simplex_median_r": -0.00814810708774756,
+    "testable": 66.0
+   },
+   "range_median_r": [
+    -0.40734500425362363,
+    0.08293337176377188
+   ],
+   "readings": {
+    "not separated on the field's criterion": 0.555,
+    "the longer history carries more (T2's first forbidden item, out of sample)": 0.445
+   },
+   "share_margin_met": {
+    "better side": 0.0,
+    "fails side": 0.765
+   },
+   "shares": {
+    "T2 fails on the field's criterion": 0.445,
+    "not separated on the field's criterion": 0.555
+   },
+   "simplex_dims_chosen": {
+    "1": 4325,
+    "2": 4421,
+    "3": 2212,
+    "4": 2212
+   },
+   "simplex_shares": {
+    "T2 better than the field's fitted embedding": 0.03,
+    "T2 fails on the field's criterion": 0.015,
+    "not separated on the field's criterion": 0.955
+   }
+  }
+ },
+ "rules": {
+  "ALPHA": 0.05,
+  "D_MAX": 4,
+  "MARGIN": -0.10536051565782628,
+  "MIN_STOCKS": 10,
+  "MIN_TEST": 8,
+  "MIN_TRAIN": 12,
+  "THETAS": [
+   0.0,
+   0.5,
+   1.0,
+   2.0,
+   4.0,
+   8.0
+  ]
+ },
+ "seed": 2026110304,
+ "stocks_per_archive": 69
+}
