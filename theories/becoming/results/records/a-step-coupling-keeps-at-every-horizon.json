@@ -261,6 +261,13 @@
         "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.",
         "zh": "按每个被满足的步计数（不论位置）时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛。"
       }
+    },
+    {
+      "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+      "detail": {
+        "en": "Several drawers in turn, each with a coupling for each step met, drain the need where the coupling is below it, whatever the renewal, and under the gate keep it where it is above: the rate is the need itself, in another model.",
+        "zh": "数个轮流的抽取者各有每满足一步的耦合，耦合低于需要则不论更新皆耗尽，在门之下高于需要则留住：其率为需要本身，在另一模型中。"
+      }
     }
   ],
   "references": [
@@ -639,6 +646,10 @@
     {
       "en": "22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.",
       "zh": "2026年10月22日，SG13：跌落后再被满足的步已回答（记录 steps-met-again-after-a-fall，研究第 323 节）；其开放项如此说明。其规律不变。"
+    },
+    {
+      "en": "3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it, the case of several drawers in turn and at once this record's does-not-show leaves out; no law, hypothesis or declaration changed.",
+      "zh": "2026年11月3日，工作板条目 CDR：与 coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it 相关联，即本记录“不表明”所留下的数个轮流与同时抽取者的情形；无一律、假设或声明改变。"
     }
   ]
 }
