@@ -1,0 +1,2341 @@
+{
+ "draws": 1000,
+ "large_replicates": 30,
+ "lpa_parameters": {
+  "b": 10.45,
+  "c_ea": 0.0131,
+  "c_el": 0.01731,
+  "c_pa": 0.004619,
+  "mu_a": 0.007629,
+  "mu_l": 0.2
+ },
+ "rates": {
+  "b": [
+   0.9,
+   0.3
+  ],
+  "c": [
+   0.5,
+   0.4
+  ],
+  "mq5": [
+   0.96,
+   0.55
+  ]
+ },
+ "recalled_parameters": {
+  "b": 11.68,
+  "c_ea": 0.011,
+  "c_el": 0.0093,
+  "c_pa": 0.0178,
+  "mu_a": 0.1108,
+  "mu_l": 0.5129
+ },
+ "results": {
+  "lpa": {
+   "cpu_seconds": 133.4,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0041,
+      2
+     ],
+     "0.27": [
+      0.0203,
+      2
+     ],
+     "0.5": [
+      0.0476,
+      2
+     ],
+     "0.73": [
+      0.0116,
+      2
+     ],
+     "0.96": [
+      0.1395,
+      2
+     ]
+    },
+    "H1_detected": 5,
+    "H1_detected_tail": 0.0001,
+    "H1_excess": 0.0203,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.0081,
+      2
+     ],
+     "0.27": [
+      -0.0016,
+      2
+     ],
+     "0.5": [
+      -0.0086,
+      2
+     ],
+     "0.73": [
+      0.0147,
+      2
+     ],
+     "0.96": [
+      -0.0022,
+      2
+     ]
+    },
+    "V2_detected": 0,
+    "V2_excess": -0.0016,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1358,
+     "T2_better": 10,
+     "T2_worse": 0,
+     "level_alone": 0.185,
+     "p": 0.002
+    },
+    "V5": "T2 fails",
+    "V5_detected": 10,
+    "V5_signs": [
+     5,
+     5
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.3705,
+      2
+     ],
+     "0.27": [
+      0.7096,
+      2
+     ],
+     "0.5": [
+      0.7687,
+      2
+     ],
+     "0.73": [
+      0.8769,
+      2
+     ],
+     "0.96": [
+      0.9724,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.7687,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1294,
+    "reported_ONEW": 0.901,
+    "reported_TL": 0.1846,
+    "reported_TX": 0.773,
+    "reported_V3": {
+     "median_ratio": 0.1123,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0751,
+    "reported_resid_over_floor": {
+     "RB": 1.0175,
+     "T2": 4.6623
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 10,
+     "p": 0.125,
+     "positive": 5,
+     "rival_predicts_negative": 4,
+     "rival_right": 4,
+     "rules_differ": 4,
+     "unpredicted": 1
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 1.0,
+    "H1_excess": 0.0249,
+    "V2_detected": 0.0,
+    "V2_excess": -0.0096,
+    "V3_median_ratio": 0.083,
+    "V4_T2": 0.1357,
+    "V4_T2_better": 8.0,
+    "V4_T2_worse": 2.0,
+    "V4_level_alone": 0.2045,
+    "V5_detected": 4.0,
+    "W_detected": 9.0,
+    "W_excess": 0.7443,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.8992,
+    "resid_over_floor_T2": 3.7966,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 1.0,
+    "sign_positive": 6.0,
+    "sign_rival_predicts_negative": 4.0,
+    "sign_rival_right": 3.0,
+    "sign_rules_differ": 4.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.038,
+    "H1: T2 holds": 0.962,
+    "V2: the rival fails": 0.004,
+    "V2: the rival holds": 0.996,
+    "V4: T2 holds": 0.425,
+    "V4: not decided": 0.575,
+    "V5: T2 fails": 0.083,
+    "V5: T2 holds": 0.006,
+    "V5: not testable": 0.911,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.004,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.038,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.958,
+    "sign: not read: the course needs more than three numbers": 0.038,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.029,
+    "sign: not separated on the sign": 0.027,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.906
+   }
+  },
+  "lpa-env": {
+   "cpu_seconds": 135.5,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0002,
+      2
+     ],
+     "0.27": [
+      -0.0047,
+      2
+     ],
+     "0.5": [
+      0.0229,
+      2
+     ],
+     "0.73": [
+      0.0174,
+      2
+     ],
+     "0.96": [
+      0.0278,
+      2
+     ]
+    },
+    "H1_detected": 3,
+    "H1_detected_tail": 0.0115,
+    "H1_excess": 0.0174,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0022,
+      2
+     ],
+     "0.27": [
+      0.0193,
+      2
+     ],
+     "0.5": [
+      -0.0117,
+      2
+     ],
+     "0.73": [
+      0.0098,
+      2
+     ],
+     "0.96": [
+      0.0017,
+      2
+     ]
+    },
+    "V2_detected": 1,
+    "V2_excess": 0.0017,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.2133,
+     "T2_better": 9,
+     "T2_worse": 1,
+     "level_alone": 0.269,
+     "p": 0.0215
+    },
+    "V5": "T2 fails",
+    "V5_detected": 9,
+    "V5_signs": [
+     6,
+     3
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.6754,
+      2
+     ],
+     "0.27": [
+      0.9403,
+      2
+     ],
+     "0.5": [
+      0.9621,
+      2
+     ],
+     "0.73": [
+      0.9766,
+      2
+     ],
+     "0.96": [
+      0.9876,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.9621,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1464,
+    "reported_ONEW": 0.9696,
+    "reported_TL": 0.1912,
+    "reported_TX": 0.9662,
+    "reported_V3": {
+     "median_ratio": 0.0161,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0483,
+    "reported_resid_over_floor": {
+     "RB": 0.9387,
+     "T2": 33.356
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 10,
+     "p": 0.125,
+     "positive": 6,
+     "rival_predicts_negative": 4,
+     "rival_right": 4,
+     "rules_differ": 4,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0129,
+    "V2_detected": 0.0,
+    "V2_excess": -0.0085,
+    "V3_median_ratio": 0.0143,
+    "V4_T2": 0.2348,
+    "V4_T2_better": 7.0,
+    "V4_T2_worse": 3.0,
+    "V4_level_alone": 0.2602,
+    "V5_detected": 3.0,
+    "W_detected": 10.0,
+    "W_excess": 0.8977,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.8499,
+    "resid_over_floor_T2": 24.8935,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 1.0,
+    "sign_positive": 6.0,
+    "sign_rival_predicts_negative": 4.0,
+    "sign_rival_right": 3.0,
+    "sign_rules_differ": 4.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.001,
+    "H1: T2 holds": 0.999,
+    "V2: the rival fails": 0.005,
+    "V2: the rival holds": 0.995,
+    "V4: T2 holds": 0.068,
+    "V4: not decided": 0.932,
+    "V5: T2 fails": 0.008,
+    "V5: not testable": 0.992,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.005,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.001,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.994,
+    "sign: not read: the course needs more than three numbers": 0.001,
+    "sign: not separated on the sign": 0.009,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.99
+   }
+  },
+  "lpa-long": {
+   "cpu_seconds": 136.5,
+   "large": {
+    "H1": "T2 fails",
+    "H1_by_loss": {
+     "0.04": [
+      0.1453,
+      2
+     ],
+     "0.27": [
+      0.323,
+      2
+     ],
+     "0.5": [
+      0.0126,
+      2
+     ],
+     "0.73": [
+      0.3885,
+      2
+     ],
+     "0.96": [
+      0.7539,
+      2
+     ]
+    },
+    "H1_detected": 9,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.323,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0024,
+      2
+     ],
+     "0.27": [
+      -0.0077,
+      2
+     ],
+     "0.5": [
+      0.0024,
+      2
+     ],
+     "0.73": [
+      -0.0058,
+      2
+     ],
+     "0.96": [
+      -0.0067,
+      2
+     ]
+    },
+    "V2_detected": 2,
+    "V2_excess": -0.0058,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1295,
+     "T2_better": 10,
+     "T2_worse": 0,
+     "level_alone": 0.1956,
+     "p": 0.002
+    },
+    "V5": "T2 fails",
+    "V5_detected": 10,
+    "V5_signs": [
+     6,
+     4
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.4525,
+      2
+     ],
+     "0.27": [
+      0.8442,
+      2
+     ],
+     "0.5": [
+      0.8014,
+      2
+     ],
+     "0.73": [
+      0.9394,
+      2
+     ],
+     "0.96": [
+      0.9913,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.8442,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; the course needs more than three numbers",
+    "reported_ONEH": 0.3161,
+    "reported_ONEW": 0.9574,
+    "reported_TL": 0.4119,
+    "reported_TX": 0.8473,
+    "reported_V3": {
+     "median_ratio": 0.058,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.5257,
+    "reported_resid_over_floor": {
+     "RB": 1.0644,
+     "T2": 7.4168
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the course needs more than three numbers",
+    "sign_counts": {
+     "T2_right": 4,
+     "cultures": 10,
+     "p": 0.125,
+     "positive": 6,
+     "rival_predicts_negative": 4,
+     "rival_right": 0,
+     "rules_differ": 4,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 4.0,
+    "H1_excess": 0.2265,
+    "V2_detected": 1.0,
+    "V2_excess": -0.046,
+    "V3_median_ratio": 0.0492,
+    "V4_T2": 0.1576,
+    "V4_T2_better": 7.0,
+    "V4_T2_worse": 3.0,
+    "V4_level_alone": 0.2165,
+    "V5_detected": 8.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7923,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.8822,
+    "resid_over_floor_T2": 5.7487,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 4.0,
+    "sign_positive": 7.0,
+    "sign_rival_predicts_negative": 4.0,
+    "sign_rival_right": 0.0,
+    "sign_rules_differ": 4.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.936,
+    "H1: T2 holds": 0.064,
+    "V2: the rival holds": 1.0,
+    "V4: T2 holds": 0.076,
+    "V4: not decided": 0.924,
+    "V5: T2 fails": 0.482,
+    "V5: T2 holds": 0.468,
+    "V5: not testable": 0.05,
+    "W: the wording fails": 1.0,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.936,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.064,
+    "sign: not read: the course needs more than three numbers": 0.936,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.042,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.022
+   }
+  },
+  "lpa-recalled": {
+   "cpu_seconds": 136.8,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.021,
+      2
+     ],
+     "0.27": [
+      0.0198,
+      2
+     ],
+     "0.5": [
+      0.0352,
+      2
+     ],
+     "0.73": [
+      0.056,
+      2
+     ],
+     "0.96": [
+      0.0338,
+      2
+     ]
+    },
+    "H1_detected": 8,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.0338,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.0041,
+      2
+     ],
+     "0.27": [
+      -0.0124,
+      2
+     ],
+     "0.5": [
+      0.004,
+      2
+     ],
+     "0.73": [
+      0.0003,
+      2
+     ],
+     "0.96": [
+      0.0865,
+      2
+     ]
+    },
+    "V2_detected": 2,
+    "V2_excess": 0.004,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.0994,
+     "T2_better": 10,
+     "T2_worse": 0,
+     "level_alone": 0.1289,
+     "p": 0.002
+    },
+    "V5": "T2 fails",
+    "V5_detected": 9,
+    "V5_signs": [
+     6,
+     3
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.2704,
+      2
+     ],
+     "0.27": [
+      0.3456,
+      2
+     ],
+     "0.5": [
+      0.5838,
+      2
+     ],
+     "0.73": [
+      0.6725,
+      2
+     ],
+     "0.96": [
+      0.9046,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.5838,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.2347,
+    "reported_ONEW": 0.6663,
+    "reported_TL": 0.1616,
+    "reported_TX": 0.5719,
+    "reported_V3": {
+     "median_ratio": 0.3294,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.1206,
+    "reported_resid_over_floor": {
+     "RB": 1.061,
+     "T2": 2.7407
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 10,
+     "p": 0.5,
+     "positive": 6,
+     "rival_predicts_negative": 2,
+     "rival_right": 2,
+     "rules_differ": 2,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": 0.0059,
+    "V2_detected": 1.0,
+    "V2_excess": -0.001,
+    "V3_median_ratio": 0.2886,
+    "V4_T2": 0.1141,
+    "V4_T2_better": 8.0,
+    "V4_T2_worse": 2.0,
+    "V4_level_alone": 0.1335,
+    "V5_detected": 3.0,
+    "W_detected": 8.0,
+    "W_excess": 0.549,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9673,
+    "resid_over_floor_T2": 1.8648,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 0.0,
+    "sign_positive": 6.0,
+    "sign_rival_predicts_negative": 2.0,
+    "sign_rival_right": 2.0,
+    "sign_rules_differ": 2.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.009,
+    "H1: T2 holds": 0.991,
+    "V2: the rival fails": 0.008,
+    "V2: the rival holds": 0.992,
+    "V4: T2 holds": 0.418,
+    "V4: not decided": 0.582,
+    "V5: T2 fails": 0.023,
+    "V5: T2 holds": 0.012,
+    "V5: not testable": 0.965,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.008,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.009,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.983,
+    "sign: not read: the course needs more than three numbers": 0.009,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.01,
+    "sign: not separated on the sign": 0.013,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.968
+   }
+  },
+  "lpa-two": {
+   "cpu_seconds": 136.9,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0196,
+      2
+     ],
+     "0.27": [
+      -0.0026,
+      2
+     ],
+     "0.5": [
+      0.0429,
+      2
+     ],
+     "0.73": [
+      0.0474,
+      2
+     ],
+     "0.96": [
+      0.0914,
+      2
+     ]
+    },
+    "H1_detected": 7,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.0429,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.001,
+      2
+     ],
+     "0.27": [
+      0.0019,
+      2
+     ],
+     "0.5": [
+      -0.005,
+      2
+     ],
+     "0.73": [
+      -0.0005,
+      2
+     ],
+     "0.96": [
+      0.092,
+      2
+     ]
+    },
+    "V2_detected": 1,
+    "V2_excess": 0.001,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1082,
+     "T2_better": 10,
+     "T2_worse": 0,
+     "level_alone": 0.1507,
+     "p": 0.002
+    },
+    "V5": "T2 fails",
+    "V5_detected": 10,
+    "V5_signs": [
+     6,
+     4
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.293,
+      2
+     ],
+     "0.27": [
+      0.4874,
+      2
+     ],
+     "0.5": [
+      0.7197,
+      2
+     ],
+     "0.73": [
+      0.7668,
+      2
+     ],
+     "0.96": [
+      0.9485,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.7197,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1906,
+    "reported_ONEW": 0.8077,
+    "reported_TL": 0.1449,
+    "reported_TX": 0.72,
+    "reported_V3": {
+     "median_ratio": 0.2088,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.225,
+    "reported_resid_over_floor": {
+     "RB": 0.9554,
+     "T2": 2.9966
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 0,
+     "cultures": 10,
+     "p": 0.25,
+     "positive": 6,
+     "rival_predicts_negative": 3,
+     "rival_right": 3,
+     "rules_differ": 3,
+     "unpredicted": 1
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 1.0,
+    "H1_excess": 0.0192,
+    "V2_detected": 1.0,
+    "V2_excess": -0.0031,
+    "V3_median_ratio": 0.1795,
+    "V4_T2": 0.1247,
+    "V4_T2_better": 8.0,
+    "V4_T2_worse": 2.0,
+    "V4_level_alone": 0.169,
+    "V5_detected": 4.0,
+    "W_detected": 9.0,
+    "W_excess": 0.6476,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.93,
+    "resid_over_floor_T2": 2.5678,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 0.0,
+    "sign_positive": 6.0,
+    "sign_rival_predicts_negative": 3.0,
+    "sign_rival_right": 3.0,
+    "sign_rules_differ": 3.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.032,
+    "H1: T2 holds": 0.968,
+    "V2: the rival fails": 0.007,
+    "V2: the rival holds": 0.993,
+    "V4: T2 holds": 0.41,
+    "V4: not decided": 0.59,
+    "V5: T2 fails": 0.025,
+    "V5: T2 holds": 0.009,
+    "V5: not testable": 0.966,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; the course needs more than three numbers": 0.001,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.006,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.031,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.962,
+    "sign: not read: the course needs more than three numbers": 0.032,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.021,
+    "sign: not separated on the sign": 0.04,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.907
+   }
+  },
+  "lpaa": {
+   "cpu_seconds": 135.3,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0204,
+      2
+     ],
+     "0.27": [
+      0.0145,
+      2
+     ],
+     "0.5": [
+      0.2774,
+      2
+     ],
+     "0.73": [
+      0.2286,
+      2
+     ],
+     "0.96": [
+      0.0367,
+      2
+     ]
+    },
+    "H1_detected": 7,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.0367,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.009,
+      2
+     ],
+     "0.27": [
+      0.0278,
+      2
+     ],
+     "0.5": [
+      0.0986,
+      2
+     ],
+     "0.73": [
+      0.0283,
+      2
+     ],
+     "0.96": [
+      -0.0069,
+      2
+     ]
+    },
+    "V2_detected": 5,
+    "V2_excess": 0.0278,
+    "V4": "T2 holds",
+    "V4_errors": {
+     "T2": 0.1159,
+     "T2_better": 9,
+     "T2_worse": 1,
+     "level_alone": 0.1755,
+     "p": 0.0215
+    },
+    "V5": "T2 fails",
+    "V5_detected": 9,
+    "V5_signs": [
+     3,
+     6
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.3673,
+      2
+     ],
+     "0.27": [
+      0.6983,
+      2
+     ],
+     "0.5": [
+      0.8558,
+      2
+     ],
+     "0.73": [
+      0.9067,
+      2
+     ],
+     "0.96": [
+      0.9386,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.8558,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.1116,
+    "reported_ONEW": 0.9042,
+    "reported_TL": 0.2575,
+    "reported_TX": 0.8577,
+    "reported_V3": {
+     "median_ratio": 0.101,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0521,
+    "reported_resid_over_floor": {
+     "RB": 1.0726,
+     "T2": 8.3107
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 2,
+     "cultures": 10,
+     "p": 0.6875,
+     "positive": 4,
+     "rival_predicts_negative": 4,
+     "rival_right": 4,
+     "rules_differ": 6,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 2.0,
+    "H1_excess": 0.0501,
+    "V2_detected": 1.0,
+    "V2_excess": 0.0198,
+    "V3_median_ratio": 0.0826,
+    "V4_T2": 0.1204,
+    "V4_T2_better": 7.0,
+    "V4_T2_worse": 3.0,
+    "V4_level_alone": 0.1837,
+    "V5_detected": 4.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7994,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9443,
+    "resid_over_floor_T2": 5.2983,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 2.0,
+    "sign_positive": 4.0,
+    "sign_rival_predicts_negative": 4.0,
+    "sign_rival_right": 3.0,
+    "sign_rules_differ": 5.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.17,
+    "H1: T2 holds": 0.83,
+    "V2: the rival fails": 0.035,
+    "V2: the rival holds": 0.965,
+    "V4: T2 holds": 0.145,
+    "V4: not decided": 0.855,
+    "V5: T2 fails": 0.047,
+    "V5: not testable": 0.953,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; the course needs more than three numbers": 0.01,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.025,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.16,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.805,
+    "sign: not read: the course needs more than three numbers": 0.17,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.251,
+    "sign: not separated on the sign": 0.132,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.447
+   }
+  },
+  "t2-copy-b": {
+   "cpu_seconds": 132.2,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0029,
+      2
+     ],
+     "0.27": [
+      0.0058,
+      2
+     ],
+     "0.5": [
+      -0.0011,
+      2
+     ],
+     "0.73": [
+      -0.0001,
+      2
+     ],
+     "0.96": [
+      0.0007,
+      2
+     ]
+    },
+    "H1_detected": 0,
+    "H1_detected_tail": 1.0,
+    "H1_excess": -0.0001,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.2186,
+      2
+     ],
+     "0.27": [
+      0.1386,
+      2
+     ],
+     "0.5": [
+      0.0501,
+      2
+     ],
+     "0.73": [
+      0.0174,
+      2
+     ],
+     "0.96": [
+      0.0164,
+      2
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": 0.0501,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0427,
+     "T2_better": 3,
+     "T2_worse": 7,
+     "level_alone": 0.0425,
+     "p": 0.3438
+    },
+    "V5": "not testable",
+    "V5_detected": 5,
+    "V5_signs": [
+     5,
+     0
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      -0.0053,
+      2
+     ],
+     "0.27": [
+      -0.0013,
+      2
+     ],
+     "0.5": [
+      0.0092,
+      2
+     ],
+     "0.73": [
+      -0.002,
+      2
+     ],
+     "0.96": [
+      0.0173,
+      2
+     ]
+    },
+    "W_detected": 2,
+    "W_excess": -0.0013,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "tie on the next step: both states suffice; three numbers suffice on the course",
+    "reported_ONEH": 0.0183,
+    "reported_ONEW": 0.0106,
+    "reported_TL": -0.0035,
+    "reported_TX": -0.0025,
+    "reported_V3": {
+     "median_ratio": 1.0571,
+     "p": 0.0215,
+     "rival_better": 1,
+     "rival_worse": 9
+    },
+    "reported_lag": 0.0183,
+    "reported_resid_over_floor": {
+     "RB": 3.0787,
+     "T2": 2.7612
+    },
+    "reported_rows_recruits_above_pupae": 7,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 9,
+     "cultures": 10,
+     "p": 0.0039,
+     "positive": 10,
+     "rival_predicts_negative": 9,
+     "rival_right": 0,
+     "rules_differ": 9,
+     "unpredicted": 1
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0116,
+    "V2_detected": 2.0,
+    "V2_excess": 0.0544,
+    "V3_median_ratio": 0.8979,
+    "V4_T2": 0.0562,
+    "V4_T2_better": 4.0,
+    "V4_T2_worse": 6.0,
+    "V4_level_alone": 0.055,
+    "V5_detected": 1.0,
+    "W_detected": 0.0,
+    "W_excess": -0.0081,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 2.8012,
+    "resid_over_floor_T2": 2.0178,
+    "rows_recruits_above_pupae": 1.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 8.0,
+    "sign_rival_predicts_negative": 10.0,
+    "sign_rival_right": 2.0,
+    "sign_rules_differ": 10.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.001,
+    "H1: T2 holds": 0.999,
+    "V2: the rival fails": 0.154,
+    "V2: the rival holds": 0.846,
+    "V4: T2 fails": 0.023,
+    "V4: T2 holds": 0.001,
+    "V4: not decided": 0.976,
+    "V5: not testable": 1.0,
+    "W: the wording holds": 1.0,
+    "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.154,
+    "reading: tie on the next step: both states suffice; the course needs more than three numbers": 0.001,
+    "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.845,
+    "sign: not read: the course needs more than three numbers": 0.001,
+    "sign: not separated on the sign": 0.555,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.001,
+    "sign: separated on the sign: T2's": 0.443
+   }
+  },
+  "t2-copy-c": {
+   "cpu_seconds": 131.5,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0041,
+      2
+     ],
+     "0.27": [
+      -0.0027,
+      2
+     ],
+     "0.5": [
+      0.0095,
+      2
+     ],
+     "0.73": [
+      0.0091,
+      2
+     ],
+     "0.96": [
+      -0.0056,
+      2
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.4013,
+    "H1_excess": -0.0027,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.1632,
+      2
+     ],
+     "0.27": [
+      0.0871,
+      2
+     ],
+     "0.5": [
+      0.1061,
+      2
+     ],
+     "0.73": [
+      0.0287,
+      2
+     ],
+     "0.96": [
+      0.0202,
+      2
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": 0.0871,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0249,
+     "T2_better": 7,
+     "T2_worse": 3,
+     "level_alone": 0.0247,
+     "p": 0.3438
+    },
+    "V5": "T2 holds",
+    "V5_detected": 9,
+    "V5_signs": [
+     8,
+     1
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      -0.0051,
+      2
+     ],
+     "0.27": [
+      0.0088,
+      2
+     ],
+     "0.5": [
+      -0.0027,
+      2
+     ],
+     "0.73": [
+      0.0008,
+      2
+     ],
+     "0.96": [
+      -0.0006,
+      2
+     ]
+    },
+    "W_detected": 1,
+    "W_excess": -0.0006,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "tie on the next step: both states suffice; three numbers suffice on the course",
+    "reported_ONEH": 0.0523,
+    "reported_ONEW": 0.0049,
+    "reported_TL": 0.0014,
+    "reported_TX": -0.0001,
+    "reported_V3": {
+     "median_ratio": 1.064,
+     "p": 0.002,
+     "rival_better": 0,
+     "rival_worse": 10
+    },
+    "reported_lag": 0.0539,
+    "reported_resid_over_floor": {
+     "RB": 2.9909,
+     "T2": 2.6943
+    },
+    "reported_rows_recruits_above_pupae": 16,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 9,
+     "cultures": 10,
+     "p": 0.0215,
+     "positive": 9,
+     "rival_predicts_negative": 10,
+     "rival_right": 1,
+     "rules_differ": 10,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0121,
+    "V2_detected": 2.0,
+    "V2_excess": 0.0514,
+    "V3_median_ratio": 0.9444,
+    "V4_T2": 0.0277,
+    "V4_T2_better": 4.0,
+    "V4_T2_worse": 6.0,
+    "V4_level_alone": 0.0278,
+    "V5_detected": 1.0,
+    "W_detected": 0.0,
+    "W_excess": -0.0097,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 2.7599,
+    "resid_over_floor_T2": 2.0295,
+    "rows_recruits_above_pupae": 2.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 8.0,
+    "sign_rival_predicts_negative": 10.0,
+    "sign_rival_right": 2.0,
+    "sign_rules_differ": 10.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 holds": 1.0,
+    "V2: the rival fails": 0.119,
+    "V2: the rival holds": 0.881,
+    "V4: T2 fails": 0.012,
+    "V4: T2 holds": 0.001,
+    "V4: not decided": 0.987,
+    "V5: not testable": 1.0,
+    "W: the wording holds": 1.0,
+    "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.119,
+    "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.881,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+    "sign: not separated on the sign": 0.639,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.003,
+    "sign: separated on the sign: T2's": 0.357
+   }
+  },
+  "t2-copy-mq5": {
+   "cpu_seconds": 132.7,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0026,
+      2
+     ],
+     "0.27": [
+      -0.0018,
+      2
+     ],
+     "0.5": [
+      -0.006,
+      2
+     ],
+     "0.73": [
+      0.0106,
+      2
+     ],
+     "0.96": [
+      -0.006,
+      2
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.4013,
+    "H1_excess": -0.0026,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.2397,
+      2
+     ],
+     "0.27": [
+      0.1605,
+      2
+     ],
+     "0.5": [
+      0.0953,
+      2
+     ],
+     "0.73": [
+      0.0568,
+      2
+     ],
+     "0.96": [
+      -0.0015,
+      2
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": 0.0953,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0377,
+     "T2_better": 4,
+     "T2_worse": 6,
+     "level_alone": 0.0387,
+     "p": 0.7539
+    },
+    "V5": "T2 holds",
+    "V5_detected": 8,
+    "V5_signs": [
+     8,
+     0
+    ],
+    "W": "the wording holds",
+    "W_by_loss": {
+     "0.04": [
+      0.0003,
+      2
+     ],
+     "0.27": [
+      -0.0007,
+      2
+     ],
+     "0.5": [
+      0.0004,
+      2
+     ],
+     "0.73": [
+      0.0013,
+      2
+     ],
+     "0.96": [
+      -0.0025,
+      2
+     ]
+    },
+    "W_detected": 0,
+    "W_excess": 0.0003,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "tie on the next step: both states suffice; three numbers suffice on the course",
+    "reported_ONEH": 0.0863,
+    "reported_ONEW": 0.0171,
+    "reported_TL": -0.0033,
+    "reported_TX": -0.0015,
+    "reported_V3": {
+     "median_ratio": 1.0967,
+     "p": 0.1094,
+     "rival_better": 2,
+     "rival_worse": 8
+    },
+    "reported_lag": 0.1014,
+    "reported_resid_over_floor": {
+     "RB": 3.2138,
+     "T2": 2.7148
+    },
+    "reported_rows_recruits_above_pupae": 7,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 10,
+     "cultures": 10,
+     "p": 0.002,
+     "positive": 10,
+     "rival_predicts_negative": 10,
+     "rival_right": 0,
+     "rules_differ": 10,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0148,
+    "V2_detected": 3.0,
+    "V2_excess": 0.067,
+    "V3_median_ratio": 0.8727,
+    "V4_T2": 0.0563,
+    "V4_T2_better": 5.0,
+    "V4_T2_worse": 5.0,
+    "V4_level_alone": 0.0566,
+    "V5_detected": 3.0,
+    "W_detected": 0.0,
+    "W_excess": -0.0093,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 2.8945,
+    "resid_over_floor_T2": 2.0431,
+    "rows_recruits_above_pupae": 1.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 9.0,
+    "sign_rival_predicts_negative": 9.0,
+    "sign_rival_right": 1.0,
+    "sign_rules_differ": 9.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 holds": 1.0,
+    "V2: the rival fails": 0.241,
+    "V2: the rival holds": 0.759,
+    "V4: T2 fails": 0.009,
+    "V4: T2 holds": 0.004,
+    "V4: not decided": 0.987,
+    "V5: T2 holds": 0.012,
+    "V5: not testable": 0.988,
+    "W: the wording fails": 0.001,
+    "W: the wording holds": 0.999,
+    "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.241,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.001,
+    "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.758,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
+    "sign: not separated on the sign": 0.281,
+    "sign: separated on the sign: T2's": 0.718
+   }
+  },
+  "t2-field-mq5": {
+   "cpu_seconds": 134.3,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0015,
+      2
+     ],
+     "0.27": [
+      -0.0011,
+      2
+     ],
+     "0.5": [
+      0.0129,
+      2
+     ],
+     "0.73": [
+      0.0005,
+      2
+     ],
+     "0.96": [
+      -0.0036,
+      2
+     ]
+    },
+    "H1_detected": 0,
+    "H1_detected_tail": 1.0,
+    "H1_excess": 0.0005,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.006,
+      2
+     ],
+     "0.27": [
+      0.002,
+      2
+     ],
+     "0.5": [
+      0.0082,
+      2
+     ],
+     "0.73": [
+      -0.0073,
+      2
+     ],
+     "0.96": [
+      0.0026,
+      2
+     ]
+    },
+    "V2_detected": 0,
+    "V2_excess": 0.0026,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0733,
+     "T2_better": 7,
+     "T2_worse": 3,
+     "level_alone": 0.0755,
+     "p": 0.3438
+    },
+    "V5": "T2 holds",
+    "V5_detected": 8,
+    "V5_signs": [
+     8,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.811,
+      2
+     ],
+     "0.27": [
+      0.7861,
+      2
+     ],
+     "0.5": [
+      0.7916,
+      2
+     ],
+     "0.73": [
+      0.795,
+      2
+     ],
+     "0.96": [
+      0.798,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.795,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0869,
+    "reported_ONEW": 0.8055,
+    "reported_TL": 0.0002,
+    "reported_TX": 0.7877,
+    "reported_V3": {
+     "median_ratio": 0.1888,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0937,
+    "reported_resid_over_floor": {
+     "RB": 1.0021,
+     "T2": 4.9683
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not separated on the sign: the rival's turning point does not split the cultures",
+    "sign_counts": {
+     "T2_right": 4,
+     "cultures": 10,
+     "p": 0.125,
+     "positive": 10,
+     "rival_predicts_negative": 4,
+     "rival_right": 0,
+     "rules_differ": 4,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0149,
+    "V2_detected": 0.0,
+    "V2_excess": -0.008,
+    "V3_median_ratio": 0.1476,
+    "V4_T2": 0.1015,
+    "V4_T2_better": 5.0,
+    "V4_T2_worse": 5.0,
+    "V4_level_alone": 0.1011,
+    "V5_detected": 2.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7311,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9149,
+    "resid_over_floor_T2": 3.6083,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 5.0,
+    "sign_positive": 9.0,
+    "sign_rival_predicts_negative": 5.0,
+    "sign_rival_right": 0.0,
+    "sign_rules_differ": 5.0,
+    "sign_unpredicted": 2.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 holds": 1.0,
+    "V2: the rival fails": 0.002,
+    "V2: the rival holds": 0.998,
+    "V4: T2 fails": 0.014,
+    "V4: T2 holds": 0.006,
+    "V4: not decided": 0.98,
+    "V5: T2 holds": 0.005,
+    "V5: not testable": 0.995,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.002,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.002,
+    "sign: not separated on the sign": 0.077,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.708,
+    "sign: separated on the sign: T2's": 0.213
+   }
+  },
+  "t2-stage-b": {
+   "cpu_seconds": 134.4,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0025,
+      2
+     ],
+     "0.27": [
+      -0.0027,
+      2
+     ],
+     "0.5": [
+      -0.0038,
+      2
+     ],
+     "0.73": [
+      -0.0047,
+      2
+     ],
+     "0.96": [
+      -0.0016,
+      2
+     ]
+    },
+    "H1_detected": 0,
+    "H1_detected_tail": 1.0,
+    "H1_excess": -0.0027,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0098,
+      2
+     ],
+     "0.27": [
+      0.0011,
+      2
+     ],
+     "0.5": [
+      -0.0118,
+      2
+     ],
+     "0.73": [
+      -0.0063,
+      2
+     ],
+     "0.96": [
+      0.0053,
+      2
+     ]
+    },
+    "V2_detected": 1,
+    "V2_excess": -0.0063,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0403,
+     "T2_better": 6,
+     "T2_worse": 4,
+     "level_alone": 0.0415,
+     "p": 0.7539
+    },
+    "V5": "not testable",
+    "V5_detected": 5,
+    "V5_signs": [
+     5,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.7853,
+      2
+     ],
+     "0.27": [
+      0.7902,
+      2
+     ],
+     "0.5": [
+      0.7948,
+      2
+     ],
+     "0.73": [
+      0.7994,
+      2
+     ],
+     "0.96": [
+      0.7822,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.7902,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0255,
+    "reported_ONEW": 0.7994,
+    "reported_TL": -0.0001,
+    "reported_TX": 0.767,
+    "reported_V3": {
+     "median_ratio": 0.1933,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0223,
+    "reported_resid_over_floor": {
+     "RB": 0.9929,
+     "T2": 4.6274
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 9,
+     "cultures": 10,
+     "p": 0.0215,
+     "positive": 9,
+     "rival_predicts_negative": 10,
+     "rival_right": 1,
+     "rules_differ": 10,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0136,
+    "V2_detected": 0.0,
+    "V2_excess": -0.006,
+    "V3_median_ratio": 0.157,
+    "V4_T2": 0.0562,
+    "V4_T2_better": 4.0,
+    "V4_T2_worse": 6.0,
+    "V4_level_alone": 0.0553,
+    "V5_detected": 1.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7343,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9108,
+    "resid_over_floor_T2": 3.5669,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 8.0,
+    "sign_rival_predicts_negative": 10.0,
+    "sign_rival_right": 2.0,
+    "sign_rules_differ": 10.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 holds": 1.0,
+    "V2: the rival fails": 0.003,
+    "V2: the rival holds": 0.997,
+    "V4: T2 fails": 0.028,
+    "V4: T2 holds": 0.002,
+    "V4: not decided": 0.97,
+    "V5: T2 holds": 0.001,
+    "V5: not testable": 0.999,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.003,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.997,
+    "sign: not separated on the sign": 0.573,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.002,
+    "sign: separated on the sign: T2's": 0.425
+   }
+  },
+  "t2-stage-c": {
+   "cpu_seconds": 133.5,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0046,
+      2
+     ],
+     "0.27": [
+      0.0071,
+      2
+     ],
+     "0.5": [
+      -0.0007,
+      2
+     ],
+     "0.73": [
+      0.0079,
+      2
+     ],
+     "0.96": [
+      0.0051,
+      2
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.4013,
+    "H1_excess": 0.0051,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0022,
+      2
+     ],
+     "0.27": [
+      0.0083,
+      2
+     ],
+     "0.5": [
+      -0.0089,
+      2
+     ],
+     "0.73": [
+      0.01,
+      2
+     ],
+     "0.96": [
+      -0.0075,
+      2
+     ]
+    },
+    "V2_detected": 2,
+    "V2_excess": -0.0022,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0242,
+     "T2_better": 6,
+     "T2_worse": 4,
+     "level_alone": 0.0245,
+     "p": 0.7539
+    },
+    "V5": "not testable",
+    "V5_detected": 5,
+    "V5_signs": [
+     5,
+     0
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.7891,
+      2
+     ],
+     "0.27": [
+      0.7838,
+      2
+     ],
+     "0.5": [
+      0.7946,
+      2
+     ],
+     "0.73": [
+      0.7873,
+      2
+     ],
+     "0.96": [
+      0.7647,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.7873,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0249,
+    "reported_ONEW": 0.8003,
+    "reported_TL": -0.0033,
+    "reported_TX": 0.7869,
+    "reported_V3": {
+     "median_ratio": 0.2061,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0214,
+    "reported_resid_over_floor": {
+     "RB": 1.0573,
+     "T2": 4.8121
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not separated on the sign",
+    "sign_counts": {
+     "T2_right": 8,
+     "cultures": 10,
+     "p": 0.1094,
+     "positive": 8,
+     "rival_predicts_negative": 10,
+     "rival_right": 2,
+     "rules_differ": 10,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0122,
+    "V2_detected": 0.0,
+    "V2_excess": -0.008,
+    "V3_median_ratio": 0.175,
+    "V4_T2": 0.0276,
+    "V4_T2_better": 4.0,
+    "V4_T2_worse": 6.0,
+    "V4_level_alone": 0.0276,
+    "V5_detected": 1.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7326,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9228,
+    "resid_over_floor_T2": 3.6385,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 8.0,
+    "sign_rival_predicts_negative": 10.0,
+    "sign_rival_right": 2.0,
+    "sign_rules_differ": 10.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.001,
+    "H1: T2 holds": 0.999,
+    "V2: the rival fails": 0.001,
+    "V2: the rival holds": 0.999,
+    "V4: T2 fails": 0.02,
+    "V4: T2 holds": 0.004,
+    "V4: not decided": 0.976,
+    "V5: not testable": 1.0,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.001,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.998,
+    "sign: not read: the course needs more than three numbers": 0.001,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.002,
+    "sign: not separated on the sign": 0.655,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.001,
+    "sign: separated on the sign: T2's": 0.341
+   }
+  },
+  "t2-stage-mq5": {
+   "cpu_seconds": 140.5,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      0.0126,
+      2
+     ],
+     "0.27": [
+      -0.0011,
+      2
+     ],
+     "0.5": [
+      -0.0043,
+      2
+     ],
+     "0.73": [
+      -0.0012,
+      2
+     ],
+     "0.96": [
+      0.0125,
+      2
+     ]
+    },
+    "H1_detected": 1,
+    "H1_detected_tail": 0.4013,
+    "H1_excess": -0.0011,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      -0.0079,
+      2
+     ],
+     "0.27": [
+      0.0091,
+      2
+     ],
+     "0.5": [
+      -0.0022,
+      2
+     ],
+     "0.73": [
+      0.002,
+      2
+     ],
+     "0.96": [
+      -0.0105,
+      2
+     ]
+    },
+    "V2_detected": 1,
+    "V2_excess": -0.0022,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0399,
+     "T2_better": 8,
+     "T2_worse": 2,
+     "level_alone": 0.0411,
+     "p": 0.1094
+    },
+    "V5": "T2 holds",
+    "V5_detected": 8,
+    "V5_signs": [
+     7,
+     1
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.7651,
+      2
+     ],
+     "0.27": [
+      0.7836,
+      2
+     ],
+     "0.5": [
+      0.7725,
+      2
+     ],
+     "0.73": [
+      0.7732,
+      2
+     ],
+     "0.96": [
+      0.7862,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.7732,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.0686,
+    "reported_ONEW": 0.7924,
+    "reported_TL": -0.0044,
+    "reported_TX": 0.7562,
+    "reported_V3": {
+     "median_ratio": 0.2175,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0795,
+    "reported_resid_over_floor": {
+     "RB": 1.0381,
+     "T2": 4.6041
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "separated on the sign: T2's",
+    "sign_counts": {
+     "T2_right": 9,
+     "cultures": 10,
+     "p": 0.0215,
+     "positive": 9,
+     "rival_predicts_negative": 10,
+     "rival_right": 1,
+     "rules_differ": 10,
+     "unpredicted": 0
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 0.0,
+    "H1_excess": -0.0149,
+    "V2_detected": 0.0,
+    "V2_excess": -0.0111,
+    "V3_median_ratio": 0.1478,
+    "V4_T2": 0.0563,
+    "V4_T2_better": 5.0,
+    "V4_T2_worse": 5.0,
+    "V4_level_alone": 0.0565,
+    "V5_detected": 3.0,
+    "W_detected": 10.0,
+    "W_excess": 0.7331,
+    "left_out": 0.0,
+    "resid_over_floor_RB": 0.9049,
+    "resid_over_floor_T2": 3.5804,
+    "rows_recruits_above_pupae": 0.0,
+    "sign_T2_right": 8.0,
+    "sign_positive": 9.0,
+    "sign_rival_predicts_negative": 9.0,
+    "sign_rival_right": 1.0,
+    "sign_rules_differ": 9.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 holds": 1.0,
+    "V2: the rival fails": 0.001,
+    "V2: the rival holds": 0.999,
+    "V4: T2 fails": 0.012,
+    "V4: T2 holds": 0.008,
+    "V4: not decided": 0.98,
+    "V5: T2 holds": 0.01,
+    "V5: not testable": 0.99,
+    "W: the wording fails": 1.0,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.999,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.002,
+    "sign: not separated on the sign": 0.278,
+    "sign: separated on the sign: T2's": 0.72
+   }
+  }
+ },
+ "seed": 2026110302,
+ "shape": {
+  "censuses_before": 6,
+  "censuses_under_the_loss": 13,
+  "replicates": 4,
+  "set_losses": [
+   0.04,
+   0.27,
+   0.5,
+   0.73,
+   0.96
+  ],
+  "strains": 2
+ },
+ "t2_field_constants": {
+  "0.04": 40.325,
+  "0.27": 22.937,
+  "0.5": 14.432,
+  "0.73": 8.824,
+  "0.96": 10.467
+ }
+}

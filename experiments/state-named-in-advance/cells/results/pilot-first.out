@@ -1,0 +1,40 @@
+first 3 lpa           W fails 1.00 | V2 holds 1.00 | H1 holds 0.97, median 0.022, by loss {'0.04': -0.003, '0.27': -0.011, '0.5': -0.007, '0.73': 0.051, '0.96': 0.112}
+   sign {'not read: the course needs more than three numbers': 0.03, 'not read: the further lag is detected in more cultures than chance gives': 0.02, 'not separated on the sign': 0.03, "not separated on the sign: the rival's turning point does not split the cultures": 0.92}
+   V4 {'T2 holds': 0.43, 'not decided': 0.57}
+   V5 {'T2 fails': 0.03, 'T2 holds': 0.02, 'not testable': 0.95}
+first 3 lpa-two       W fails 1.00 | V2 holds 1.00 | H1 holds 0.98, median 0.019, by loss {'0.04': 0.001, '0.27': -0.027, '0.5': 0.011, '0.73': 0.051, '0.96': 0.063}
+   sign {'not read: the course needs more than three numbers': 0.02, 'not separated on the sign': 0.02, "not separated on the sign: the rival's turning point does not split the cultures": 0.97}
+   V4 {'T2 holds': 0.28, 'not decided': 0.72}
+   V5 {'T2 fails': 0.03, 'T2 holds': 0.03, 'not testable': 0.93}
+first 3 lpa-long      W fails 1.00 | V2 holds 1.00 | H1 holds 0.08, median 0.233, by loss {'0.04': 0.106, '0.27': 0.241, '0.5': -0.012, '0.73': 0.343, '0.96': 0.739}
+   sign {'not read: the course needs more than three numbers': 0.92, 'not read: the further lag is detected in more cultures than chance gives': 0.07, "not separated on the sign: the rival's turning point does not split the cultures": 0.02}
+   V4 {'T2 holds': 0.08, 'not decided': 0.92}
+   V5 {'T2 fails': 0.63, 'T2 holds': 0.35, 'not testable': 0.02}
+first 3 t2-stage-mq5  W fails 1.00 | V2 holds 1.00 | H1 holds 1.00, median -0.012, by loss {'0.04': -0.02, '0.27': 0.008, '0.5': -0.011, '0.73': -0.001, '0.96': -0.005}
+   sign {'not separated on the sign': 0.15, "separated on the sign: T2's": 0.85}
+   V4 {'not decided': 1.0}
+   V5 {'T2 holds': 0.02, 'not testable': 0.98}
+first 3 t2-copy-mq5   W fails 0.00 | V2 holds 0.75 | H1 holds 1.00, median -0.015, by loss {'0.04': -0.018, '0.27': -0.004, '0.5': -0.021, '0.73': -0.006, '0.96': -0.008}
+   sign {'not separated on the sign': 0.28, "separated on the sign: T2's": 0.72}
+   V4 {'T2 fails': 0.02, 'not decided': 0.98}
+   V5 {'T2 holds': 0.05, 'not testable': 0.95}
+first 4 lpa           W fails 1.00 | V2 holds 1.00 | H1 holds 0.98, median 0.020, by loss {'0.04': -0.006, '0.27': -0.014, '0.5': 0.03, '0.73': 0.057, '0.96': 0.045}
+   sign {'not read: the course needs more than three numbers': 0.02, 'not separated on the sign': 0.07, "not separated on the sign: the rival's turning point does not split the cultures": 0.92}
+   V4 {'T2 holds': 0.2, 'not decided': 0.8}
+   V5 {'not testable': 1.0}
+first 4 lpa-two       W fails 1.00 | V2 holds 1.00 | H1 holds 0.92, median 0.003, by loss {'0.04': -0.012, '0.27': -0.02, '0.5': 0.005, '0.73': 0.063, '0.96': 0.055}
+   sign {'not read: the course needs more than three numbers': 0.08, 'not read: the further lag is detected in more cultures than chance gives': 0.02, 'not separated on the sign': 0.02, "not separated on the sign: the rival's turning point does not split the cultures": 0.88}
+   V4 {'T2 holds': 0.12, 'not decided': 0.88}
+   V5 {'not testable': 1.0}
+first 4 lpa-long      W fails 1.00 | V2 holds 1.00 | H1 holds 0.10, median 0.215, by loss {'0.04': 0.105, '0.27': 0.204, '0.5': -0.031, '0.73': 0.435, '0.96': 0.77}
+   sign {'not read: the course needs more than three numbers': 0.9, 'not read: the further lag is detected in more cultures than chance gives': 0.08, "not separated on the sign: the rival's turning point does not split the cultures": 0.02}
+   V4 {'not decided': 1.0}
+   V5 {'T2 fails': 0.53, 'T2 holds': 0.38, 'not testable': 0.08}
+first 4 t2-stage-mq5  W fails 1.00 | V2 holds 1.00 | H1 holds 1.00, median -0.015, by loss {'0.04': -0.016, '0.27': -0.001, '0.5': -0.016, '0.73': -0.009, '0.96': -0.003}
+   sign {'not separated on the sign': 0.18, "separated on the sign: T2's": 0.82}
+   V4 {'not decided': 1.0}
+   V5 {'not testable': 1.0}
+first 4 t2-copy-mq5   W fails 0.00 | V2 holds 0.77 | H1 holds 0.98, median -0.016, by loss {'0.04': -0.016, '0.27': -0.01, '0.5': -0.018, '0.73': -0.016, '0.96': -0.02}
+   sign {'not read: the course needs more than three numbers': 0.02, 'not separated on the sign': 0.28, "separated on the sign: T2's": 0.7}
+   V4 {'T2 fails': 0.05, 'T2 holds': 0.02, 'not decided': 0.93}
+   V5 {'T2 holds': 0.03, 'not testable': 0.97}
