@@ -397,6 +397,8 @@ L0 is the base, `Becoming.World` with every module of the package it imports: `B
 which the frame rests; L2 holds the modules
 whose source states the continuation condition or a valuation (`Unrestricted`, `Valuation`) and
 every module importing one of them; L1 holds the rest. No module imports one of a higher layer.
+The instance and application ring is outside the core by direction and in no layer; its notes are
+tagged instance or application.
 
 * `Becoming.World` (L0): the records of the unfolding, with no premise among them. A
   dependence (levels, activity, what each formation requires, needs and draws at a
@@ -2856,7 +2858,6 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   determined commuting law is a case. Reinforcing keeps equal expectations while runs drawing
   one value for any number of steps have positive weight; Pooling wears a start's preference
   away. A leaf (board item LA4).
-* `Becoming.HexagramCommuting` (instance): The Changes as an instance of a commuting law.
 * `Becoming.HexagramCommuting` (instance): the Changes as an instance of a commuting law. Waxing
   and waning never merges a hexagram with its complement, its six steps to the complement are the
   pair halfway round a return of twelve, the waning into 坤 breaks the symmetry, and every course of
