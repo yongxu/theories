@@ -89,3 +89,11 @@ Over budget: the one page by 281 budget-words (Chinese 165) and the overview by 
    217 words  12360 chars      6397 budget-words  49.2–64.0 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
 
 Over budget: the one page by 281 budget-words (Chinese 165) and the overview by 1160 (Chinese 397), for the reasons READING-BUDGETS gives (amendment 1).
+
+## T1F: T1's standing on the fronts (after T1S: the one page and the overview, both editions, give T1 as conjectured beyond the model, its passes two simulations and yeast regimes held out from the fit but not from the analyst; the overview's §9 says what the two simulations' passes test)
+  1391 words      6 chars      1394 budget-words  10.7–13.9 min  theories/becoming/ONE-PAGE.md
+    67 words   2425 chars      1280 budget-words  9.8–12.8 min  theories/becoming/ONE-PAGE.zh.md
+  7219 words     19 chars      7228 budget-words  55.6–72.3 min  theories/becoming/THE-THEORY-OF-BECOMING.md
+   216 words  12499 chars      6466 budget-words  49.7–64.7 min  theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+Over budget: the one page by 294 budget-words (Chinese 180) and the overview by 1228 (Chinese 466), for the reasons READING-BUDGETS gives (amendment 1).
