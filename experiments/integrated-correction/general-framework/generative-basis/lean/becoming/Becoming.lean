@@ -2845,7 +2845,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one value for any number of steps have positive weight; Pooling wears a start's preference
   away. A leaf (board item LA4).
 * `Becoming.HexagramCommuting` (instance): The Changes as an instance of a commuting law.
-* `Becoming.HexagramCommuting` (L1, instance ring): the Changes as an instance of a commuting law. Waxing
+* `Becoming.HexagramCommuting` (instance): the Changes as an instance of a commuting law. Waxing
   and waning never merges a hexagram with its complement, its six steps to the complement are the
   pair halfway round a return of twelve, the waning into 坤 breaks the symmetry, and every course of
   changes has a complementary course.
