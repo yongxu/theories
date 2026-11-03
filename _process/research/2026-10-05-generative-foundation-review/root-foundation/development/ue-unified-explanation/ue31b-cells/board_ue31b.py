@@ -28,9 +28,12 @@ EDITS = {
          f"([DESIGN](../{DESIGN})): the answer expected stated before the run (its §1), two independent readers' "
          "findings taken (its §12); the run waits on Ren's yes | `experiments/state-named-in-advance/cells/`"),
         ("Neither is frozen or run. LA1b, LA1c, LA2 and LA3 have all run",
-         "Neither is frozen or run. UE31b's run is frozen ([design](../" + DESIGN + ")): the cell rules on the 40 "
-         "adult-loss cultures of the workbook UE31 downloaded on his yes, a few seconds of CPU and nothing downloaded; "
-         "the answer expected is in the design. LA1b, LA1c, LA2 and LA3 have all run"),
+         "Neither is frozen or run. UE31b's run is frozen ([design](../" + DESIGN + ")); his yes would release one run "
+         "of its script in the design's order (its §9): the archive's 40 adult-loss cultures (Data Set 2) read as ten "
+         "cells of four replicates, from the workbook UE31 downloaded on his yes of 3 November and kept outside the "
+         "repository, its sha-256 checked before anything is read; a few seconds of CPU; nothing downloaded; the "
+         "output kept whatever it is, the answer expected stated in the design's §1. LA1b, LA1c, LA2 and LA3 have all "
+         "run"),
     ],
     INDEX: [
         ("which shows the rules run on the archive, not how cultures under a loss would read) |",
