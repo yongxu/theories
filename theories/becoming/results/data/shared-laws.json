@@ -6,12 +6,12 @@
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "30fe7a6062a293bffc261a5ccae3dfbd5517131f4fc3fbd1fd995f608918502c",
+  "theories/becoming/results/completion/COVERAGE.json": "7374867682589a4c810cbeae887a3e9d4b8f318fb18a1ad1ceb96e826de9447f",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "de649388b5b550b6cf49f5f284ea288ba5c1a7c821ad44359ae51acaa7298ac9",
   "tools/research/boundary_check.lean": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
-  "tools/research/shared_laws.py": "b52d51893bd8effb64253971a96803587d3d34bcad516f5ca3051b1013d6debb"
+  "tools/research/shared_laws.py": "ececf1de83c43e52d0e4119afc3a2b9d6dd11a37dd4b19b0f85e1520ed5c1e6a"
  },
  "names": {
   "closure": "closure",

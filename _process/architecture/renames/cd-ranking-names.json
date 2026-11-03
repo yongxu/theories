@@ -205,5 +205,6 @@
    "sha256_after": "0c69b3ec33c1f3349afee931bde111a81f4ae6730782da009c5b40f7d9917e4a"
   }
  ],
- "scope": "Record ids renamed with former_ids kept; live references rewritten; history, evidence and sources keep the old ids, and records/OLD.md is a generated redirect page."
+ "scope": "Record ids renamed with former_ids kept; live references rewritten; history, evidence and sources keep the old ids, and records/OLD.md is a generated redirect page.",
+ "note": "The six study notes' link rewrites (BECOMING-RENEWAL-READING.md and its .zh.md, DELEGATED-CHOICES.md and its .zh.md, aj-joint-selection/PLAN.md, ue4-second-order/LANDING.md) were reverted in 05c2bd0c4 so that their cited sections stay as reviewed; the redirect pages and the registry's location of a record by its former id resolve them. For those six, sha256_after is not the landed state."
 }

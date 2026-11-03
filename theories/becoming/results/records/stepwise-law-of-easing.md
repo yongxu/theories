@@ -5,7 +5,7 @@
 
 `stepwise-law-of-easing` · **recorded-checked** · theorem · F01 · [record](stepwise-law-of-easing.json) · [register](../../../../RESULTS.md)
 
-> Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading too, and C ranks it above.
+> Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers where it includes an event overdraw withholds, and C ranks it above.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -31,7 +31,7 @@
 
 - That taking within what is given is needed: it is sufficient; the exact condition is that the restrained course undermine no event the other includes.
 - The form of L under the condition.
-- Which reading of living to use, or any duty to restrain: the laws rank courses under each reading.
+- Which reading of living to use, or any duty to restrain: the laws give which course extends which under each reading, and C ranks only those pairs.
 - **Counterexample:** Ranking.ThirdParty.undermines_included: a restrained course that eases the other yet undermines an event the other includes is not ranked above it under the stepwise reading. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -62,7 +62,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
   - Output: stepwise, Eases, ActiveWhereSupported, wholeRun_extends_iff_of_eases, ThirdParty, restraint_extends_iff, Flow.Balances.eases_of_restrained.
   - Input: The exact stepwise law of easing and restraint over any number of drawers under it.
   - Preserved conditions: Easing; the gating of activity; for restraint, balanced flows taking within what they give. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
-- related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.
+- related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too where it includes a relation overdraw withholds, and C ranks it above.
 - related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [relation-level-law-of-easing](relation-level-law-of-easing.md)
@@ -90,7 +90,7 @@ Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `
 - 21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.
 - 21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 318); what this record does not show and its next step say so. Its laws are unchanged.
 - 21 October 2026, J1S: whether J1 yields "better without malignant growth" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.
-- 3 November 2026, CD (board item CD): the statement says that restraint extends overdraw, which needs no premise, and that C ranks it above, as its home row in 07 §5 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
+- 3 November 2026, CD (board item CD): the statement says that restraint extends overdraw exactly where it includes an event overdraw withholds, law 4's condition, which needs no premise, and that C ranks it above, as its home row in 07 §5 says; what it does not show and a related line say likewise. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
 
 </details>
 

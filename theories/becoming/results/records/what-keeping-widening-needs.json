@@ -482,8 +482,8 @@
       "kind": "scope"
     },
     {
-      "en": "That renewal gives widening: on the kind relay 全生成 at two grains and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing.",
-      "zh": "更新给出扩大：于种类接力上，两种粒度之全生成与 «生生» 成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
+      "en": "That renewal gives widening: on the kind relay 全生成 at two orders of grain and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing.",
+      "zh": "更新给出扩大：于种类接力上，粒度两阶之全生成与 «生生» 成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
       "kind": "non-implication",
       "witness": "Becoming.KindRelay.Runs.beginnings_without_opening"
     },
@@ -682,8 +682,8 @@
     {
       "id": "what-a-course-keeps-reachable",
       "detail": {
-        "en": "What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.",
-        "zh": "进程保持可达者：覆盖蕴含当下之包含，故仅带滞后时把持续扩大之范围排在起进程且当下更宽者之上，且非每一此种对。"
+        "en": "What a course keeps reachable: covering implies inclusion now, so it puts a range that keeps widening above one wider now that starts a course only read with a lag, and not every such pair.",
+        "zh": "进程保持可达者：覆盖蕴含当下之包含，故仅带滞后读时把持续扩大之范围置于起进程且当下更宽者之上，且非每一此种对。"
       }
     }
   ],
@@ -1085,7 +1085,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "c0f3b3b201ff44c70ac7d6b66bc473b000844a14af3268d1b9473b39eb076171"
+      "sha256": "24cda874bb753229b419f514414578edefe0139d7971137f63f54e4c1b5dcdaa"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
@@ -1193,8 +1193,8 @@
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 15 与所不表明之第二项之中文中文法之 «生生» 加标，如英文与 KindRelay.renews_without_end 所述；记录所述无改变。"
     },
     {
-      "en": "3 November 2026, CD (board item CD): in what the record does not show, \"全生成 at two orders\" reads \"at two grains\", the word of the record generation-and-degeneration-at-two-grains, of 02 and of the glossary; under the glossary's one sense, order says which course is better. The claim is unchanged.",
-      "zh": "3 November 2026, CD (board item CD)：在本记录未表明者中，“二阶之全生成”改为“两种粒度之全生成”，即记录 generation-and-degeneration-at-two-grains、02 与词汇表之词；按词汇表的单一词义，次序说哪个进程更好。主张不变。"
+      "en": "3 November 2026, CD (board item CD): in what the record does not show, \"全生成 at two orders\" reads \"at two orders of grain\", the phrase of 02 §1's law of orders: one 全生成 already reads two grains, and the relay's law gives it at orders 0 and 1 over three; under the glossary's one sense, order alone says which course is better. A related line says what the lagged order on what a course keeps reachable puts above. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：在本记录未表明者中，“二阶之全生成”改为“粒度两阶之全生成”，即 02 §1 阶之律之语：一个全生成已读两种粒度，接力之律在三种粒度上给出第 0 阶与第 1 阶；按词汇表的单一词义，单说次序即说哪个进程更好。一条相关说明改说进程保持可达者之滞后之序把何者置于何者之上。主张不变。"
     }
   ]
 }

@@ -30,8 +30,8 @@
       ]
     },
     {
-      "en": "Its order laws are widening's on tails: irreflexive, transitive and one-way. It never reverses widening or keeping the same, inclusion composes with it on either side, and widening or eventual widening is irreflexive and transitive. Widening whose exceeding recurs at arbitrarily late steps is eventual widening; where widening orders a pair, eventual widening agrees there and, classically, is silent otherwise. Wider up to a step is the comparison over a first stretch.",
-      "zh": "其序律即尾段上扩大的序律：非自反、可传递、单向。它从不逆转扩大或保持相同，包含在两侧与之复合，扩大或最终扩大非自反且可传递。超出在任意晚的步上复现的扩大即最终扩大；扩大排序一对之处，最终扩大在彼处一致，经典地在其余处不置可否。截至某步更宽，是对首段的比较。",
+      "en": "Its order laws are widening's on tails: irreflexive, transitive and one-way. It never reverses widening or keeping the same, inclusion composes with it on either side, and widening or eventual widening is irreflexive and transitive. Widening whose exceeding recurs at arbitrarily late steps is eventual widening; where one course of a pair widens the other, eventual widening agrees there and, classically, is silent otherwise. Wider up to a step is the comparison over a first stretch.",
+      "zh": "其序律即尾段上扩大的序律：非自反、可传递、单向。它从不逆转扩大或保持相同，包含在两侧与之复合，扩大或最终扩大非自反且可传递。超出在任意晚的步上复现的扩大即最终扩大；一对进程中一者扩大另一者之处，最终扩大在彼处一致，经典地在其余处不置可否。截至某步更宽，是对首段的比较。",
       "declarations": [
         "Becoming.Web.EventuallyWidens.irrefl",
         "Becoming.Web.EventuallyWidens.trans",
@@ -304,8 +304,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T152131.281884Z）：Becoming.EventualWidening 与 Becoming.EventualWideningInstances，142 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 410 节；未经人审。"
   },
   "next_delta": {
-    "en": "The lag is decided by widening with a lag and by a tail order containing eventual widening, which rank a pair oppositely, so choosing is a premise (comparing-two-courses-on-what-they-admit); what a course keeps reachable is read: a lag decides one witness's pair (what-a-course-keeps-reachable); the gain bridge and the givers law are restatements (what-keeping-widening-needs); review by a person.",
-    "zh": "滞后由带滞后的扩大与包含最终扩大的尾序判定，二者对一对排序相反，故作选择是前提（comparing-two-courses-on-what-they-admit）；进程保持可达者已读：滞后定一见证之对（what-a-course-keeps-reachable）；增益之桥与给予者之律为重述（what-keeping-widening-needs）；人之审查。"
+    "en": "The lag is decided by widening with a lag and by a tail order containing eventual widening, which relate a pair oppositely, so choosing is a premise (comparing-two-courses-on-what-they-admit); what a course keeps reachable is read: a lag decides one witness's pair (what-a-course-keeps-reachable); the gain bridge and the givers law are restatements (what-keeping-widening-needs); review by a person.",
+    "zh": "滞后由带滞后的扩大与包含最终扩大的尾序判定，二者于一对方向相反，故作选择是前提（comparing-two-courses-on-what-they-admit）；进程保持可达者已读：滞后定一见证之对（what-a-course-keeps-reachable）；增益之桥与给予者之律为重述（what-keeping-widening-needs）；人之审查。"
   },
   "correspondence": {
     "en": "A tail criterion in inclusion form: a criterion reading only tails is a dictatorship of the future (Chichilnisky 1996, 'An axiomatic approach to sustainable development', Social Choice and Welfare 13); on counts, with finitely many admissions at each step, eventual widening entails the overtaking criterion (von Weizsäcker 1965; Gale 1967), an argument not proved in Lean. The density of its verdicts is liveness in the sense of Alpern and Schneider (1985, 'Defining liveness', Information Processing Letters 21). The question it answers in part is THE-CORE's: a range whose widening keeps widening against one merely wider now, whose nearest neighbour is Kauffman's adjacent possible (Investigations, 2000). The readings are the AI's, stated in development/ue4-second-order/DESIGN.md with the review in REVIEW-UE4.md.",
@@ -413,15 +413,15 @@
     {
       "id": "comparing-two-courses-on-what-they-admit",
       "detail": {
-        "en": "Comparing two courses on what they admit: widening with a lag decides the lag, as does a tail order, and widening with a lag and eventual widening rank a pair oppositely.",
-        "zh": "就所纳比较两个进程：带滞后的扩大判定滞后，尾序亦然，而带滞后的扩大与最终扩大对一对进程排序相反。"
+        "en": "Comparing two courses on what they admit: widening with a lag decides the lag, as does a tail order, and widening with a lag and eventual widening hold of a pair in opposite directions.",
+        "zh": "就所纳比较两个进程：带滞后的扩大判定滞后，尾序亦然，而带滞后的扩大与最终扩大于一对进程方向相反。"
       }
     },
     {
       "id": "what-a-course-keeps-reachable",
       "detail": {
-        "en": "What a course keeps reachable: covering implies inclusion now, so it ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.",
-        "zh": "进程保持可达者：覆盖蕴含当下之包含，故仅带滞后时把持续扩大之范围排在起进程且当下更宽者之上，且非每一此种对。"
+        "en": "What a course keeps reachable: covering implies inclusion now, so it puts a range that keeps widening above one wider now that starts a course only read with a lag, and not every such pair.",
+        "zh": "进程保持可达者：覆盖蕴含当下之包含，故仅带滞后读时把持续扩大之范围置于起进程且当下更宽者之上，且非每一此种对。"
       }
     }
   ],
@@ -669,6 +669,10 @@
     {
       "en": "27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.",
       "zh": "2026年10月27日，工作板条目 UE10（研究第 424 节）：下一步随之更新：进程保持可达者于 what-a-course-keeps-reachable 中得读；无一声明改变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): law 2 says where one course of a pair widens the other, not where widening orders it, as the home section in 07 §2 says; the next step and two related lines say that widening with a lag and eventual widening relate a pair oppositely, not that they rank it, and what the lagged order on what a course keeps reachable puts above. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：律 2 改说一对进程中一者扩大另一者之处，而非扩大排序一对之处，与 07 §2 的本节相同；下一步与两条相关说明改说带滞后的扩大与最终扩大于一对进程方向相反，及进程保持可达者之滞后之序把何者置于何者之上。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
     }
   ]
 }

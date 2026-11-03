@@ -114,7 +114,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
 
-Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
+Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every positive weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
 
 <a id="history--沿革"></a>
 ### History
@@ -126,7 +126,7 @@ Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排�
 - 22 October 2026, VT1: the widening law, outweighs and neutral_ranks_by_number keep their statements and are derived from the net weightings and the weights within a ratio (records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it); the witness outweighing gave way to the tilted weighting, and the second law and the counterexample name it; study section 367.
 - 25 October 2026, board item DF (study section 418): the next step says thresholds are read as denying scope, a reading, as the chapter states; the Lean has no significance there. No law changed.
 - 30 October 2026 (U3, study section 465): a law on the root added, stating `Becoming.Weighting.widens_iff_every_positive` in the grammar's terms on its own carrier, through the row (F5's statements_at_model, model own); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.
-- 3 November 2026, CD (board item CD): retitled "Widening as what every positive weighting ranks", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so "every weighting" stated a universal the record refutes; positivity is where C's premise is relocated. The claim is unchanged.
+- 3 November 2026, CD (board item CD): retitled "Widening as what every positive weighting ranks", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so "every weighting" stated a universal the record refutes; positivity is where C's premise is relocated. Its alias "C as the order every weighting shares" says "every positive weighting"; the former title stays an alias for search. The claim is unchanged.
 
 </details>
 

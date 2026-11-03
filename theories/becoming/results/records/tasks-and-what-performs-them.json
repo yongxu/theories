@@ -350,8 +350,8 @@
       ]
     },
     {
-      "en": "Reach and lagged covering. A configuration covers, with a lag the trace's length, every configuration a trace from it reaches: what a course from the end admits, the course from the start with the trace prefixed admits that many steps later. So widening with a lag never ranks what a configuration reaches above it, and UE10's lagged order ranks it above exactly where same-offset widening does.",
-      "zh": "可达与滞后覆盖。一构型以迹之长为滞后，覆盖自其出发之迹所达之每一构型：自终点出发之进程所纳者，冠以该迹之自起点出发之进程迟若干步亦纳之。故带滞后之扩大从不将一构型所达者排于其上，UE10 之滞后之序排之于上恰当同偏移之扩大如此。",
+      "en": "Reach and lagged covering. A configuration covers, with a lag the trace's length, every configuration a trace from it reaches: what a course from the end admits, the course from the start with the trace prefixed admits that many steps later. So widening with a lag never puts what a configuration reaches above it, and UE10's lagged order puts it above exactly where same-offset widening does.",
+      "zh": "可达与滞后覆盖。一构型以迹之长为滞后，覆盖自其出发之迹所达之每一构型：自终点出发之进程所纳者，冠以该迹之自起点出发之进程迟若干步亦纳之。故带滞后之扩大从不将一构型所达者置于其上，UE10 之滞后之序置之于上恰当同偏移之扩大如此。",
       "declarations": [
         "Becoming.Reaching.coversLater_of_trace",
         "Becoming.Reaching.not_widensWithLag_of_reach",
@@ -373,8 +373,8 @@
       ]
     },
     {
-      "en": "Covering is silent where no course starts. Every move of the catalytic cycle ends bound with the substrate or free with the product, and nothing moves from the latter, so no configuration starts a course: every configuration covers every other with every lag, and UE10's lagged order ranks nothing there, while the whole possible narrows strictly.",
-      "zh": "无进程起始处覆盖无言。催化循环之每步皆终于与底物结合或游离而有产物，后者处无步，故无构型起始一进程：每一构型以每一滞后覆盖其他每一构型，UE10 之滞后之序于彼无所排，而全部可能严格收窄。",
+      "en": "Covering is silent where no course starts. Every move of the catalytic cycle ends bound with the substrate or free with the product, and nothing moves from the latter, so no configuration starts a course: every configuration covers every other with every lag, and UE10's lagged order holds of no pair there, while the whole possible narrows strictly.",
+      "zh": "无进程起始处覆盖无言。催化循环之每步皆终于与底物结合或游离而有产物，后者处无步，故无构型起始一进程：每一构型以每一滞后覆盖其他每一构型，UE10 之滞后之序于彼于任何一对皆不成立，而全部可能严格收窄。",
       "declarations": [
         "Becoming.Tasks.Catalysis.into",
         "Becoming.Tasks.Catalysis.stuck",
@@ -384,16 +384,16 @@
       ]
     },
     {
-      "en": "Widening can rank the output above the input. On UE10's rising process, every step leading to true, the task false to true is performed with a trivial part, its output widens its input at the same offsets, and its input covers it with a lag, so UE10's lagged order ranks the output above.",
-      "zh": "扩大可排输出于输入之上。于 UE10 之上升过程（每步皆至 true），false 至 true 之任务以平凡部分执行，其输出于同偏移处扩大其输入，其输入以滞后覆盖之，故 UE10 之滞后之序排输出于上。",
+      "en": "Widening can put the output above the input. On UE10's rising process, every step leading to true, the task false to true is performed with a trivial part, its output widens its input at the same offsets, and its input covers it with a lag, so UE10's lagged order puts the output above.",
+      "zh": "扩大可置输出于输入之上。于 UE10 之上升过程（每步皆至 true），false 至 true 之任务以平凡部分执行，其输出于同偏移处扩大其输入，其输入以滞后覆盖之，故 UE10 之滞后之序置输出于上。",
       "declarations": [
         "Becoming.Tasks.RiseTask.task",
         "Becoming.Tasks.RiseTask.widens"
       ]
     },
     {
-      "en": "Or the input above the output. On the process where every step leads to false, read with UE10's rising admission, the task true to false is performed with a trivial part, and its input widens its output at the same offsets, so UE10's lagged order ranks the input above: widening follows deliveries in neither direction.",
-      "zh": "或排输入于输出之上。于每步皆至 false 之过程上，以 UE10 上升之所纳读之，true 至 false 之任务以平凡部分执行，其输入于同偏移处扩大其输出，故 UE10 之滞后之序排输入于上：扩大于两向皆不随交付。",
+      "en": "Or the input above the output. On the process where every step leads to false, read with UE10's rising admission, the task true to false is performed with a trivial part, and its input widens its output at the same offsets, so UE10's lagged order puts the input above: widening follows deliveries in neither direction.",
+      "zh": "或置输入于输出之上。于每步皆至 false 之过程上，以 UE10 上升之所纳读之，true 至 false 之任务以平凡部分执行，其输入于同偏移处扩大其输出，故 UE10 之滞后之序置输入于上：扩大于两向皆不随交付。",
       "declarations": [
         "Becoming.Tasks.FallTask.process",
         "Becoming.Tasks.FallTask.task",
@@ -523,15 +523,15 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean",
       "detail": {
-        "en": "A delivered input ranked above its output by same-offset widening, and so by UE10's lagged order (FallTask.widens_back).",
-        "zh": "所交付之输入为同偏移之扩大、从而为 UE10 之滞后之序排于其输出之上（FallTask.widens_back）。"
+        "en": "A delivered input put above its output by same-offset widening, and so by UE10's lagged order (FallTask.widens_back).",
+        "zh": "所交付之输入为同偏移之扩大、从而为 UE10 之滞后之序置于其输出之上（FallTask.widens_back）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean",
       "detail": {
-        "en": "On the catalytic cycle the whole possible narrows strictly while UE10's lagged order ranks nothing (Catalysis.narrows, Catalysis.not_widensOrLater).",
-        "zh": "于催化循环上，全部可能严格收窄，而 UE10 之滞后之序无所排（Catalysis.narrows、Catalysis.not_widensOrLater）。"
+        "en": "On the catalytic cycle the whole possible narrows strictly while UE10's lagged order holds of no pair (Catalysis.narrows, Catalysis.not_widensOrLater).",
+        "zh": "于催化循环上，全部可能严格收窄，而 UE10 之滞后之序于任何一对皆不成立（Catalysis.narrows、Catalysis.not_widensOrLater）。"
       }
     }
   ],
@@ -603,8 +603,8 @@
     {
       "id": "what-a-course-keeps-reachable",
       "detail": {
-        "en": "Its lagged covering extended from a step to reach, so a delivery's output is never ranked above its input by widening with a lag, and its lagged order there is same-offset widening, which ranks a delivered output above its input on one witness and below on another.",
-        "zh": "其滞后覆盖自一步推至可达，故带滞后之扩大从不将交付之输出排于其输入之上；其滞后之序于彼即同偏移之扩大，于一见证上排交付之输出于其输入之上，于另一见证上排于其下。"
+        "en": "Its lagged covering extended from a step to reach, so a delivery's output is never put above its input by widening with a lag, and its lagged order there is same-offset widening, which puts a delivered output above its input on one witness and below on another.",
+        "zh": "其滞后覆盖自一步推至可达，故带滞后之扩大从不将交付之输出置于其输入之上；其滞后之序于彼即同偏移之扩大，于一见证上置交付之输出于其输入之上，于另一见证上置于其下。"
       }
     },
     {
@@ -859,6 +859,10 @@
     {
       "en": "28 October 2026: added (UE12), tasks and what performs them: constructor theory read on processes; what performs a task is a region restored at the end of each delivery, holding throughout sufficient and not needed; composition by one region, by two under holding, and on interleavings, failing within one interleaving and where a delivery changes what its task does not list; a whole of impossible parts, the additive pattern and the division; the regress within a delivery and in making the performer; deliveries carry inclusion of the whole possible, and widening follows them in neither direction; near-definitional; after a review and a re-check; study section 430.",
       "zh": "2026年10月28日：新增（UE12），任务与执行之者：构造子理论读于过程之上；执行一任务者为于每次交付之末复得之区域，全程持守充分而非必要；一区域之合成、持守下二区域之合成、交错上之合成，于一交错之内及交付改变其任务所未列者时失败；不可能之部分之可能整体、可加之模式与划分；一次交付之内及造就执行者时之回归；交付所带者为全部可能之包含，扩大于两向皆不随交付；近乎定义；经审查与复查；研究第 430 节。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): laws 32 and 35 to 37, two counterexamples and a related line say that widening and UE10's lagged order put a delivered output above its input, or its input above it, or hold of no pair, not that they rank them, as the home section in 07 §2 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：律 32 与 35 至 37、两个反例与一条相关说明改说扩大与 UE10 之滞后之序把交付之输出置于其输入之上、或把输入置于其上、或于任何一对皆不成立，而非对之排序，与 07 §2 的本节相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提；无前提而定义之序（滞后之序、尾序或字典序等）把一进程置于另一进程之上，唯作为排序读时（于 C 之位或作为前提）才排序。主张不变。"
     }
   ]
 }

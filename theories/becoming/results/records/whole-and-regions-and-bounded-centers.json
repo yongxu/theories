@@ -197,8 +197,8 @@
           "en": "Retaining is a preorder, and what retains is not added to."
         },
         "input": {
-          "zh": "整体优先与搭便车者的失去。",
-          "en": "The whole first and the free rider's loss."
+          "zh": "整体与各区域中的保留，与搭便车者的失去。",
+          "en": "Retaining in the whole and in every region, and the free rider's loss."
         },
         "conditions": {
           "zh": "无。",
@@ -615,8 +615,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人的话或交托为其地位；对应保留 Ren 的原话，删去“Ren 当时称之为公理”，读法标为 AI 的读法（D16、D43），不再写“依 Ren 的交托采用”；相关说明同此；一条界限的链接由旧 id closure-verdict-meets-axiom 改为 closure-verdict-meets-continuation-condition。规律未变。"
     },
     {
-      "en": "3 November 2026, CD (board item CD): retitled \"The whole and its regions, and centers bounded by dependence\", and the id renamed to whole-and-regions-and-bounded-centers, the old id kept. \"The whole first\" (优先) stated a priority; the record shows that under the continuation condition what retains in the whole retains in every region, not conversely, and no priority. The claim is unchanged.",
-      "zh": "3 November 2026, CD (board item CD)：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，旧标识保留。“整体优先”说的是一种优先；本记录所示是：延续条件之下在整体中保留的在每个区域内保留，反过来不成立，而非优先。主张不变。"
+      "en": "3 November 2026, CD (board item CD): retitled \"The whole and its regions, and centers bounded by dependence\", and the id renamed to whole-and-regions-and-bounded-centers, the old id kept. \"The whole first\" (优先) stated a priority; the record shows that under the continuation condition what retains in the whole retains in every region, not conversely, and no priority. The input of its dependency on significance-retained-within-margin, which still said \"the whole first\", follows the title. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，旧标识保留。“整体优先”说的是一种优先；本记录所示是：延续条件之下在整体中保留的在每个区域内保留，反过来不成立，而非优先。其对 significance-retained-within-margin 之依赖的输入原仍作“整体优先”，今随标题。主张不变。"
     }
   ],
   "text_versions": [

@@ -8,7 +8,7 @@ Columns: file, line, word, class, context. Classes:
   amount   an amount with its basis (a level above a need, a weight above zero)
   named    an order a theorem or the sentence names (a weighting's order, a valuer's ranking, a lexical order)
   field    a field's own frame (a reward's optimum, a best response, Pareto, POWER)
-  read     none of the rules is sure: read in the sentence; the decision is in DESIGN.md §6
+  read     none of the rules is sure: read in the sentence; DESIGN.md §6 gives the counts and the two that needed action, names-test.json the judged names
 """
 import re
 import sys

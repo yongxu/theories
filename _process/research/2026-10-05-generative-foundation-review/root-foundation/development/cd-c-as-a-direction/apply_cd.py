@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """CD's text changes: names that state a wrong meaning under the glossary's one sense of ranking and order, from the
-names test (names-test/), applied exactly. Each old text must occur once, or its replacement must already stand.
+names test (names-test.json), applied exactly. Each old text must occur once, or its replacement must already stand.
 
 usage: python3 -B apply_cd.py ROOT
-Documents, record texts and one tool's display name only: no Lean, no record's claim changed. Run before the record
-renames (renames.tsv, research.py rename-id), then render.
+Documents, record texts and one tool's display name only: no Lean, no record's claim changed. Run on 049e14ca1 before the record
+renames (renames.tsv, research.py rename-id); apply_check.py then takes the independent check's findings.
 """
 import json
 import sys
@@ -15,6 +15,7 @@ C1 = 'theories/becoming/chapters/01-ROOT.md'
 CD = 'theories/becoming/COLLECTIVE-DIRECTION.md'
 REC = 'theories/becoming/results/records/'
 DATE = '3 November 2026, CD (board item CD)'
+DATE_ZH = '2026年11月3日，工作板条目 CD'
 
 TEXT = {
     C7: [
@@ -113,7 +114,7 @@ RECORDS = {
         'note': {'en': f'{DATE}: the shared law labelled "order" is labelled "widening" in the statement and in laws 17, 18 '
                        f'and 20, with 01 §7, 08 §7 and the view\'s display name. {ONE_SENSE}; this law is widening and its '
                        'laws as a strict partial order. Its content, laws, anchors and key are unchanged.',
-                 'zh': f'{DATE}：标为“序”的共律，于陈述及律 17、18、20 中改标为“扩大”，与 01 §7、08 §7 及视图的显示名一致。'
+                 'zh': f'{DATE_ZH}：标为“序”的共律，于陈述及律 17、18、20 中改标为“扩大”，与 01 §7、08 §7 及视图的显示名一致。'
                        f'{ONE_SENSE_ZH}；此律即扩大及其作为严格偏序之律。内容、诸律、锚点与键不变。'},
     },
     'stepwise-law-of-easing': {
@@ -125,7 +126,7 @@ RECORDS = {
                      '所以所取不超过所给的节制在逐步读法下也对任意多个汲取者扩展过度汲取，C 把它排在其上。')],
         'note': {'en': f'{DATE}: the statement says that restraint extends overdraw, which needs no premise, and that C '
                        f'ranks it above, as its home row in 07 §5 says. {ONE_SENSE}. The claim is unchanged.',
-                 'zh': f'{DATE}：陈述改说节制扩展过度汲取（不需前提），且 C 把它排在其上，与 07 §5 的本节一行相同。'
+                 'zh': f'{DATE_ZH}：陈述改说节制扩展过度汲取（不需前提），且 C 把它排在其上，与 07 §5 的本节一行相同。'
                        f'{ONE_SENSE_ZH}。主张不变。'},
     },
     'comparing-two-courses-on-what-they-admit': {
@@ -134,7 +135,7 @@ RECORDS = {
                     ('带滞后的扩大与最终扩大对一对进程排序相反。', '带滞后的扩大与最终扩大于一对进程方向相反。')],
         'note': {'en': f'{DATE}: the last clause says that widening with a lag and eventual widening relate one pair '
                        f'oppositely, not that they rank it. {ONE_SENSE}. The claim is unchanged.',
-                 'zh': f'{DATE}：末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序。{ONE_SENSE_ZH}。主张不变。'},
+                 'zh': f'{DATE_ZH}：末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序。{ONE_SENSE_ZH}。主张不变。'},
     },
     'what-a-course-keeps-reachable': {
         'replace': [('only with a lag does it rank a range', 'only with a lag does it put a range'),
@@ -145,7 +146,7 @@ RECORDS = {
         'note': {'en': f'{DATE}: the statement says that covering with a lag puts a range above another, and that realized '
                        f'and reachable widening relate a pair oppositely, not that they rank it, as its home section in 07 '
                        f'§2 says. {ONE_SENSE}. The claim is unchanged.',
-                 'zh': f'{DATE}：陈述改说带滞后的覆盖把一个范围置于另一个之上，且实现之扩大与可达之扩大于一对进程方向相反，'
+                 'zh': f'{DATE_ZH}：陈述改说带滞后的覆盖把一个范围置于另一个之上，且实现之扩大与可达之扩大于一对进程方向相反，'
                        f'而非对之排序，与 07 §2 的本节相同。{ONE_SENSE_ZH}。主张不变。'},
     },
     'horizon-optima-hold-the-greatest-renewal': {
@@ -153,7 +154,7 @@ RECORDS = {
                     ('"zh": "在视野上排序时，过程所汲取', '"zh": "在视野上，过程所汲取')],
         'note': {'en': f'{DATE}: "ranked" dropped from the statement\'s first clause, an identity of amounts with no order '
                        'in it; the orders enter in the next clause, which names them. The claim is unchanged.',
-                 'zh': f'{DATE}：陈述首句删去“排序时”：该句是量的恒等式，其中无序；诸序在下一句进入并有其名。主张不变。'},
+                 'zh': f'{DATE_ZH}：陈述首句删去“排序时”：该句是量的恒等式，其中无序；诸序在下一句进入并有其名。主张不变。'},
     },
     'widening-as-what-every-weighting-ranks': {
         'replace': [('"en": "Widening as what every weighting ranks"', '"en": "Widening as what every positive weighting ranks"'),
@@ -162,7 +163,7 @@ RECORDS = {
                        'widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight '
                        'on the listed items and a zero weight ties, as the statement says, so "every weighting" stated a '
                        'universal the record refutes; positivity is where C\'s premise is relocated. The claim is unchanged.',
-                 'zh': f'{DATE}：标题改为“扩大即每个正的加权所排者”，标识改为 widening-as-what-every-positive-weighting-ranks，'
+                 'zh': f'{DATE_ZH}：标题改为“扩大即每个正的加权所排者”，标识改为 widening-as-what-every-positive-weighting-ranks，'
                        '旧标识保留。加权是所列诸项上的任意自然数权重，零权持平，如陈述所言，故“每个加权”所说的全称为本记录所否；'
                        '正性正是 C 之前提的移置之处。主张不变。'},
     },
@@ -174,7 +175,7 @@ RECORDS = {
                        'to whole-and-regions-and-bounded-centers, the old id kept. "The whole first" (优先) stated a '
                        'priority; the record shows that under the continuation condition what retains in the whole '
                        'retains in every region, not conversely, and no priority. The claim is unchanged.',
-                 'zh': f'{DATE}：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，'
+                 'zh': f'{DATE_ZH}：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，'
                        '旧标识保留。“整体优先”说的是一种优先；本记录所示是：延续条件之下在整体中保留的在每个区域内保留，'
                        '反过来不成立，而非优先。主张不变。'},
     },

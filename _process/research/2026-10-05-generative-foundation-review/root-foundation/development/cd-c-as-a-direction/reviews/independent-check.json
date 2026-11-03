@@ -1,0 +1,673 @@
+{
+ "about": "AI-written. CD's independent check, 3 November 2026: three lenses (the Lean, a reader, the mechanics), each with its findings verified by an adversarial reader, then a completeness critic; seven AI agents, read-only, reading branch c-direction against 049e14ca1 up to 0dd7a9324. What was taken is in DESIGN.md §7.",
+ "summary": "Independent check of board item CD (C as a direction; ranking one sense) on branch c-direction: three lenses, each verified adversarially, then a completeness critic",
+ "result": {
+  "reviewed": [
+   {
+    "lens": "lean",
+    "review": {
+     "read": "I read the diff 049e14ca1..c-direction for 07-SIGNIFICANCE.md (every hunk: lines 3, 12, 45, 69, 92, 104, 107, 109, 122, 124, 129, 153, 208-210, 331, 345, 528, 751, 789), 08-METHOD.md (C row 234, Widening row 435, line 437), 01-ROOT.md §7 (158-170), GLOSSARY.md (rows 62, 80), COLLECTIVE-DIRECTION.md (lines 1-36), COVERAGE.json, shared_laws.py, registry.py and its test, RESULT-WORKFLOW.md, SCIENCES.md and the overview/OPENING link edits. I read DESIGN.md in full. Records: I read the full statement, laws, hypotheses and history of shared-laws-on-the-grammar, stepwise-law-of-easing, comparing-two-courses-on-what-they-admit, horizon-optima-hold-the-greatest-renewal, what-a-course-keeps-reachable and the two renamed records (widening-as-what-every-positive-weighting-ranks, whole-and-regions-and-bounded-centers). I checked each against its home (07 §2 lines 101-109, 07 §4.4 lines 327-345, 07 §3.3 line 210, 07 §5 lines 528-552, 05 line 204, 01 §7). I also checked the remaining JSON diffs, which only re-point ids, and confirmed that the generated record pages and the redirect pages carry the new text. I read these Lean declarations' statements, not their docstrings: Extension.lean in full (Extension, Comparison, irrefl/trans, Web.paths_extension_iff_widens, Web.paths_comparison_widens); Regions.lean (Web.Widens/Keeps/Mixed and their exclusion laws); GrammarLaws «广»/«齐»/«杂», «四比之周»; Significance.lean (retains_iff_includes, adds_iff_exceeds, widens_iff_retains_adds, Retains.within); Clearing.centers_disagree; ReachableRanges (Covers, Widens, Covers.now, not_widens_of_wider_now, not_above_wider_now, Lexical, WidensWithLag, WidensOrLater with its irrefl/trans/not_covered, Run.widensOrLater_next_iff, WiderNow.comparison_undecided); Tasks (Catalysis.not_widensOrLater, FallTask.widens_back); CausalGrowth (antichain_rangeWidens, chain_rangeWidens_continuing, no_order_contains_both, not_above_antichain and its _needs_start, not_rangeWidens_formsOrContinues and its _needs_starts, mixed_of_pair); ComparingCourses' header (TailAndLag.disagree); JointDraw (restraint_extends_iff_stepwise, restraint_ranks_stepwise); Ranking (frame, ExtendsUnder, ComparisonUnder, stepwise_unranked, basic_first_ranks); Relevance (possible, possible_ranks, possible_tie, readings_rank_presence, sharing_presence); Weightings (Flow.coupled_ending_ranked_below). Most rewritten §2 lines are faithful: 92 (WidensWithoutEnd.eventually), 104 and 789's lag clause (TailAndLag.disagree), 107 (not_widens_of_wider_now, not_above_wider_now, WidensOrLater.not_covered, widensOrLater_next_iff), 109 (KeptAlternative), 122 (RiseTask/FallTask, Catalysis.not_widensOrLater), 124 and 129's two CausalGrowth widenings. So are the restated statements of comparing-two-courses, horizon-optima and shared-laws-on-the-grammar, both renamed titles, and 01 §7. Each restated record statement agrees with its home section, except as noted below for stepwise-law-of-easing, where both overstate the Lean.",
+     "findings": [
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "528",
+       "quote": "C ranks a course above each course it widens and decides no other pair; choices take more, following from neither the condition nor C: a reading of `living` (which events a course includes), the lifting L and the commitments J1–J4.",
+       "problem": "With 'widens' in the glossary's one sense (admitting every formation the other admits, and one more), both halves of the sentence are false for C as §5 reads it. In §5, C is `ComparisonUnder reading Better`, which is `Comparison (frame reading) ...`. It puts a course above exactly the courses it extends on the events the reading includes, not the courses it widens in admission. §5's own table, five lines below, gives counterexamples to both halves. The sentence also presents the reading of `living` as something beyond C, when what C ranks depends on it.",
+       "evidence": "`Ranking.possible_tie` proves that a course with a formation drawing within renewal and the course without it admit every formation at every step: neither widens the other. Yet `Ranking.readings_rank_presence` gives `ExtendsUnder (wholeRun ..) .absent .occurs` and the same for `stepwise`. So every comparison satisfying C, read whole-run or stepwise, puts presence above absence. C therefore decides a pair in which neither course widens the other (table row 'presence higher | presence higher | tie'). Conversely, `Ranking.possible_ranks` and `possible_extends` show that absence of the overdrawer extends its occurrence under the possibility reading. That reading is admission at each course's levels (`Relevance.possible`), so absence widens occurrence. Yet `Ranking.stepwise_unranked` proves that under the stepwise reading neither extends the other, so C read stepwise does not put a course above one it widens. Only on level paths with every claim living does extension equal widening (`Web.paths_extension_iff_widens`). The design note's own §1 says C's least relation is `Extension` 'on that frame and reading'. The §4 table at line 229 ('ranks a course above every course it widens | rank mixed comparisons') predates the change and has the same defect.",
+       "fix": "Replace with: \"Read on a reading of `living`, C ranks a course above each course it extends there (keeps every event the other includes and includes one more) and decides no other pair; on level paths with every claim living the courses it extends are those it widens (`Web.paths_extension_iff_widens`). Choices take more, following from neither the condition nor C: which reading of `living` (which events a course includes), the lifting L and the commitments J1–J4.\" In the §4 table, line 229, change 'ranks a course above every course it widens' to 'ranks a course above every course it extends on the reading it is read on'.",
+       "severity": "blocker"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "789",
+       "quote": "and no strict order contains both widenings, and with every continuation's losses counted the reading is on both together, where C ranks no two courses.",
+       "problem": "The rewritten sentence adds 'from the empty set' to its first two clauses but leaves this clause general. The Lean proves that no course widens another on the joint reading only for courses from the empty set, and refutes the general form. A course from one element widens the antichain on both together, so C read there ranks it above the antichain. Line 129, which predates the change but sits in a rewritten paragraph, has the same omission: 'there no course widens another'.",
+       "evidence": "`CausalGrowth.not_rangeWidens_formsOrContinues (start : r.state 0 = empty) (start' : r'.state 0 = empty) : ¬ r.RangeWidens formsOrContinues r'` takes both starts as hypotheses. `CausalGrowth.Starts.not_rangeWidens_formsOrContinues_needs_starts : ¬ ∀ r r', ¬ r.RangeWidens formsOrContinues r'` is witnessed by `fromOne_widens_formsOrContinues`. The module header says 'Read on both together, of two courses from the empty set neither widens the other'.",
+       "fix": "Line 789: '..., and with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set'. Line 129: 'there no course from the empty set widens another, two such courses differing by a pair are mixed'.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/results/records/stepwise-law-of-easing.json",
+       "line": "13",
+       "quote": "so restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading too, and C ranks it above.",
+       "problem": "The restated statement asserts outright that restraint extends overdraw, and that C ranks it above. The Lean proves an iff: the restrained course extends the other exactly when it includes an event the other withholds, and C's ranking takes that event as a hypothesis. Without it the two courses can include the same events, and then neither extends the other. The record's own law 4 states the condition, but the statement drops it. The home table header at 07:547 ('restraint over any number of drawers extends overdraw, and C ranks it higher, where it also …') omits it too. The record and its home therefore agree with each other, and both overstate the Lean.",
+       "evidence": "`Ranking.restraint_extends_iff_stepwise … : ExtendsUnder (stepwise U) w w' ↔ ∃ e, stepwise U w' e ∧ ¬ stepwise U w e`. `Ranking.restraint_ranks_stepwise` takes `(included : stepwise U w' e) (withheld : ¬ stepwise U w e)` before concluding `Better w w'`. The whole-run row at 07:540 states the condition: 'extends the other exactly when it includes an event the other withholds'.",
+       "fix": "Statement: '… so restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading too, exactly when it includes an event the other withholds, and C then ranks it above.' Make the same change to the zh text, and in 07:547's header add 'extends overdraw where it includes an event overdraw withholds'.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/08-METHOD.md",
+       "line": "435",
+       "quote": "| Widening | widening is retaining and adding; the ethics adds the condition for scope and C for order | `Web.Widens` |",
+       "problem": "After the relabel, the row reads as if it defined widening as retaining and adding. That equivalence holds only with significance brought in and under the continuation condition. It is not what the row's anchor and grammar laws state: those are widening's laws as a strict partial order, which is the content DESIGN §3 gives this law. The phrase 'the ethics adds the condition' also places the condition after an equivalence that already needs it. COVERAGE.json:1074 carries the same statement, and the generated shared-laws data inherits it.",
+       "evidence": "`Web.widens_iff_retains_adds (unrestricted : Unrestricted sig) (p : Pos) : W.Widens l l' ↔ W.Retains sig p l l' ∧ W.Adds sig p l l'`, and likewise `retains_iff_includes` and `adds_iff_exceeds`, all take `Unrestricted sig`. 07 §2 labels this row '**Conditional** (the continuation condition). Retaining is then inclusion and adding exceeding'. The row's grammar column cites `«广不可逆»`, `«广之传递»`, and 01 §7 *Widening.* states irreflexive, one-way and transitive.",
+       "fix": "Statement: 'widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding (`Web.widens_iff_retains_adds`); the ethics adds the condition for scope and C for order'. Make the same change to the `statement` of id `order` in COVERAGE.json, then re-render.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "94",
+       "quote": "What a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair",
+       "problem": "This is a premise-free comparison said to 'rank', the class of sentence the change restates. The sweep missed it. The record it mirrors, what-a-course-keeps-reachable, now says 'put … above' for the same claim, and so do 07:107 and 07:109. Under the glossary's one sense, 'ranks' says that covering decides which course is better.",
+       "evidence": "`Reaching.not_widens_of_wider_now` and `WiderNow.decided` are premise-free. `WiderNow.comparison_undecided` shows that C does not decide the pair. The restated record reads 'only with a lag does it put a range that keeps widening above one wider now'.",
+       "fix": "'What a course keeps reachable puts a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair'.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "3",
+       "quote": "With no premise, the laws give how two courses differ in what they admit (one widens the other, they admit the same, or they are mixed)",
+       "problem": "Read as level paths, the cases are exact, with 'one widens the other' covering both directions, and they exclude one another constructively. That one of them always holds is classical, not given by the laws. The pure core proves the four-way split only where inclusion or exceeding is decided both ways, and deciding it for every pair is exactly excluded middle. 07 §2 says this ('that every comparison falls under one is classical'), but the thesis line leaves it out.",
+       "evidence": "`«四比之周»` takes `(one : «则» R S ∨ «逾» R S) (other : «则» S R ∨ «逾» S R)`. 01 §7 cites `«则逾之定当且仅当排中»`. `Web.Widens.not_keeps`, `Web.Widens.not_mixed` and `Web.Keeps.not_mixed` give only exclusion.",
+       "fix": "'… the laws give how two courses differ in what they admit (one widens the other, they admit the same, or they are mixed, which exclude one another; that one holds is classical) …'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "102",
+       "quote": "the tail order ranks a course above one that admitted a formation it never admits (`TailAndLag.tailOrder_loses`), and widening or widening with a lag never ranks so (`Web.WidensOrWithLag.includesEachLater`). … Widening or widening with a lag, the order of a lag varying with the formation and the tail order rank only so",
+       "problem": "The change applies DESIGN §3 inconsistently. 07:107 and 07:122 replace 'ranks' with 'puts' for UE10's lagged order (`Reaching.WidensOrLater`). Here the same kind of premise-free lagged order (`Web.WidensOrWithLag`, which contains plain widening) is still said to rank. §3 keeps 'the lagged order' among the candidate orders that rank, so either both sites rank or both put.",
+       "evidence": "`Reaching.WidensOrLater` is defined to follow `Web.WidensOrWithLag`, by its own docstring and its definition as `Widens ∨ WidensWithLag`. Both are proved strict partial orders by `strictJoin_trans`. Neither takes `Better` or `Comparison`.",
+       "fix": "Pick one convention for the lagged orders and apply it at 102, 107 and 122. For example, at 102: 'and widening or widening with a lag never puts a course above one so', and '… and the tail order put a course above another only so'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "69",
+       "quote": "Run classes, read over a whole run ([02](02-MAP.md)), do not alone decide whether a part narrows, keeps or widens what can form:",
+       "problem": "The list leaves out the fourth case. A part's levels can be mixed with those without it, which the thesis line's split and 07 §2's four cases include. So the sentence suggests three exhaustive cases.",
+       "evidence": "`Transfer.mixed` (07 §2, 'a conveyor is mixed'), `Web.Mixed`, `«四比之周»`.",
+       "fix": "'… do not alone decide whether a part narrows, keeps or widens what can form, or is mixed:'",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/chapters/08-METHOD.md",
+       "line": "234",
+       "quote": "gives order, in general alone (self-concern ranks one case with no C); warrant open",
+       "problem": "The parenthetical names one case ranked with no C. The J1–J4 row two lines below also ranks a pair with no C hypothesis: absence above malignant growth, where C alone leaves the two unranked. Naming only self-concern suggests it is the only exception.",
+       "evidence": "`Ranking.basic_first_ranks` takes `Lexical.BasicPriority … better` and concludes `better .absent .occurs`, with no `ComparisonUnder`. 07:557 says 'where C alone leaves them unranked'.",
+       "fix": "'gives order, in general alone (self-concern ranks one case with no C; J1–J4, weights or a grade decide pairs C leaves unranked, as further premises); warrant open'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+       "line": "13",
+       "quote": "Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only with a lag does it put a range that keeps widening above one wider now that starts a course",
+       "problem": "The sentence makes covering (with a lag) the subject that puts one range above another. Covering with a lag is a preorder and covers itself, so it puts nothing above anything. What does is the lagged strict order: widening what can be reached, or covering with some lag and not covered back with none. The new history note repeats this ('covering with a lag puts a range above another').",
+       "evidence": "`Reaching.CoversLater` (with `CoversLater.zero` as covering) against `Reaching.WidensWithLag := (∃ d, CoversLater d s s') ∧ ¬ ∃ d, CoversLater d s' s` and `Reaching.WidensOrLater`. `WiderNow.decided` is stated of `WidensOrLater`.",
+       "fix": "'… implies inclusion now, so only the lagged order puts a range that keeps widening above one wider now that starts a course …'. In the history note: 'the lagged order puts a range above another'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+       "line": "17",
+       "quote": "it is the title's generative direction only under the two premises (§1);",
+       "problem": "The title asks about widening ('Can a collective's course always widen what can form?'). 'Generative direction' is the quoted question's phrase, and line 30 reads it as 'the question's generative direction'. The section this bullet points to also still calls widening 'the direction' with no qualifier: the heading at line 32 is 'A direction, as a criterion', and line 34 says 'So the direction is a criterion on which every such weighting agrees'. That contradicts the qualification the bullet adds.",
+       "evidence": "Line 30: 'So this page reads the question's generative direction as widening, under the two premises.' The title is at line 1.",
+       "fix": "'it is the question's generative direction only under the two premises (§1)'. At line 34: 'So widening is a criterion on which every such weighting agrees …', and give the heading at line 32 the same qualification, e.g. 'Widening, a criterion; a direction under the two premises'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "129",
+       "quote": "a direction never reversing widening, read on stems, ranks nothing above the antichain (`CausalGrowth.not_above_antichain`)",
+       "problem": "This predates the change but sits in a paragraph the change rewrote. The cited theorem concludes only for courses from the empty set with a precedence pair, and the account proves that this restriction is needed.",
+       "evidence": "`CausalGrowth.not_above_antichain … (start : r.state 0 = empty) … (pair : (r.state t).prec i j) : ¬ above r antichain`. `not_above_antichain_needs_start` constructs such an order ranking `fromTwo` above the antichain.",
+       "fix": "'… ranks no course from the empty set with a precedence pair above the antichain (`CausalGrowth.not_above_antichain`)'.",
+       "severity": "minor"
+      }
+     ]
+    },
+    "verdicts": {
+     "results": [
+      {
+       "index": 0,
+       "verdict": "partly",
+       "reason": "The defect at 07:528 is real, and this change introduced it: the base text read only \"C ranks courses;\". In §5, C is `ComparisonUnder reading Better` := `Comparison (frame reading) (fun _ => True) Better` (Ranking.lean:111-116), so it forces Better exactly on `ExtendsUnder`, extension in the events the reading includes. That is widening only on level paths with every claim living (`Web.paths_extension_iff_widens`), which is what the possibility reading gives (`Ranking.possible_course_iff`). The table five lines below contradicts both halves under the glossary's one sense of widening (GLOSSARY:61, admission). (1) `Ranking.possible_tie`: neither course widens the other in admission, yet `Ranking.readings_rank_presence` gives `ExtendsUnder (wholeRun ..) .absent .occurs` and the same for stepwise. So C read whole-run or stepwise decides that pair, which is row 'presence higher | presence higher | tie'. (2) `Ranking.possible_extends`: absence widens occurrence in admission, yet `Ranking.stepwise_unranked` shows that C read stepwise does not rank it. A reader told that C 'decides no other pair' then meets C deciding one. Severity: blocker by the task's definition, at least major. The second part of the fix is wrong. The §4 role-table row at 07:231 (not 229) states C read on what can form, and it matches the overview at THE-THEORY-OF-BECOMING.md:138 ('ranks a course above every course it widens and decides no mixed comparison') and the glossary's C row. Changing only the row would break that agreement. The row is exact as C's general statement and should stay. No test pins the §5 sentence, but DESIGN.md:81 quotes it, and apply_cd.py:78 holds it as a replacement string.",
+       "fix": "07:528, replace the first clause up to the colon with: \"C ranks a course above each course it extends on the frame it is read on, keeping every claim the other realizes and realizing one more, and decides no other pair. Read on what can form, as the possibility reading is, those are the courses it widens (`Web.paths_extension_iff_widens`). Read on the events a reading of `living` includes, they are the courses that keep every event the other includes and include one more, so the readings decide different pairs (table below). Choices take more, following from neither the condition nor C: which reading of `living` C is read on (which events a course includes), the lifting L and the commitments J1–J4.\" Leave the rest of the paragraph as it is. Make DESIGN.md:81 quote the new sentence, and update the replacement string in apply_cd.py:78 to match. Leave 07:231 (the §4 role-table row) unchanged."
+      },
+      {
+       "index": 1,
+       "verdict": "confirmed",
+       "reason": "`CausalGrowth.not_rangeWidens_formsOrContinues` takes `(start : r.state 0 = empty) (start' : r'.state 0 = empty)`. `Starts.not_rangeWidens_formsOrContinues_needs_starts : ¬ ∀ r r', ¬ r.RangeWidens formsOrContinues r'` is witnessed by `fromOne_widens_formsOrContinues`, so C read on both together ranks fromOne above the antichain. The record states the law exactly (what-can-be-born-next law 17: 'of two courses from the empty set neither widens the other'), and so do the 07:127 theorem text ('neither of two such courses') and the module header. The unqualified 'where C ranks no two courses' (07:789, a clause this change left as it was while qualifying the two clauses before it) and 'there no course widens another' (07:129) say more. The same unqualified clause is in the record's does_not_show item 4 (what-can-be-born-next.json:388, en and zh). Changing only the home would leave the record saying more than its home. No dossier quotation (SCIENCES.md:594 quotes other clauses) and no test pins these clauses. Severity: major.",
+       "fix": "07:789: \"…and with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set.\" 07:129: \"…so with the scope it fixes the reading is on both together: there of two courses from the empty set neither widens the other, two such courses differing by a pair are mixed, and ordering them needs a measure…\" Record what-can-be-born-next.json does_not_show[4]: en \"…the reading is on both together, where C ranks no two courses from the empty set; …\", zh \"…则兼读二者，C 于此不排任何二自空集起之历程；…\". Add a history note to the record saying the clause now names the start it needs (`Starts.not_rangeWidens_formsOrContinues_needs_starts`), with the claim unchanged."
+      },
+      {
+       "index": 2,
+       "verdict": "partly",
+       "reason": "The finding is right. `Ranking.restraint_extends_iff_stepwise` (JointDraw.lean:233) is an iff whose right side is `∃ e, stepwise U w' e ∧ ¬ stepwise U w e`. `restraint_ranks_stepwise` takes `included`/`withheld` as hypotheses. Nothing in the hypotheses makes the less restrained course withhold an event, so 'extends overdraw' stated outright overstates the Lean. Law 4 of the same record states the condition, and the CD history note calls the extension 'premise-free' with 'the claim unchanged'. The 07:547 header predates the change and has the same omission; 07:541 states the condition for the whole-run case. Severity: major. The fix is incomplete in two ways. First, the 07:547 header covers the relation-level row too, so a header fix leaves the sibling record relation-level-law-of-easing.json:13 ('restraint … ranks above overdraw for any number of drawers under the relation-level reading too') unconditioned. That record also still uses 'ranks' for the premise-free extension, the class this change restated in its sibling. Second, ranking-under-readings.json's related details for `stepwise-law-of-easing` (line ~561) and `relation-level-law-of-easing` (line ~568) still carry the old 'ranks above overdraw' summaries. The first already disagrees with the record it summarizes, since CD restated that record.",
+       "fix": "stepwise-law-of-easing.json statement: en \"…so restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading too, exactly when it includes an event the other withholds, and C then ranks it above.\", zh \"…所以所取不超过所给的节制在逐步读法下也对任意多个汲取者扩展过度汲取，恰当它记入对方扣下的某个事件，C 则把它排在其上。\" Amend its CD history note to say the statement now carries law 4's condition. 07:547 header: \"With the restraint hypotheses above, restraint over any number of drawers extends overdraw exactly when it includes an event overdraw withholds, and C then ranks it higher, where it also\". relation-level-law-of-easing.json statement: en \"…restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers under the relation-level reading too, exactly when it includes a relation the other withholds, and C then ranks it above.\" (zh to match), with a history note. ranking-under-readings.json related details: for stepwise-law-of-easing, \"…restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading where it includes an event the other withholds, and C ranks it above\"; for relation-level-law-of-easing, the same form. Re-render the records."
+      },
+      {
+       "index": 3,
+       "verdict": "confirmed",
+       "reason": "`Web.widens_iff_retains_adds`, `retains_iff_includes` and `adds_iff_exceeds` (Significance.lean:308-328) all take `(unrestricted : Unrestricted sig)`, and 07 §2 labels the equivalence '**Conditional** (the continuation condition)'. The statement 'widening is retaining and adding' predates the change, but the relabel makes it read as the definition of the law named 'Widening'. It also does not state what the row's grammar column cites (`«广不可逆»`, `«广之传递»`), what 01 §7 *Widening.* states (irreflexive, one-way, transitive), or what DESIGN §3 and the shared-laws record's new history note give as this law's content ('widening and its laws as a strict partial order'). Several of the law's 8 rows (for example comparing-two-courses) involve no significance at all. No test pins the statement. COMPLETION.md:112 and the shared-laws data are generated from COVERAGE.json. Severity: major.",
+       "fix": "08:435 Statement: \"widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding (`Web.widens_iff_retains_adds`); the ethics adds two premises, the condition for scope and C for order\". Give the `statement` of id `order` in COVERAGE.json the same text, then re-render COMPLETION.md and the shared-laws data."
+      },
+      {
+       "index": 4,
+       "verdict": "confirmed",
+       "reason": "07:94 (a Reading, D45) still says 'What a course keeps reachable ranks a range that keeps widening above one wider now … only read with a lag'. That is the premise-free lagged order `Reaching.WidensOrLater`, whose verdict there `WiderNow.comparison_undecided` shows C does not give. This change restated the same claim at 07:109 ('is never put above', 'it decides some such pairs'), at 07:107 and 07:122 ('puts'), and in the record what-a-course-keeps-reachable ('only with a lag does it put … above'). The names-test refuter (names-test.json:2162) asked for the lagged order's 'ranks' to be restated, but the sweep filed 07:94's 'ranks' as `read` and missed it. As the text stands, the Reading's sentence and its home theorem and record disagree in verb for one relation. No dossier quotes 07:94. Severity: minor to major (an inconsistency of the change's own convention, not a false claim).",
+       "fix": "07:94: \"What a course keeps reachable puts a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair ([below](#r-what-a-course-keeps-reachable))\"."
+      },
+      {
+       "index": 5,
+       "verdict": "refuted",
+       "reason": "The thesis line names the cases the laws define and separate ('one widens the other, they admit the same, or they are mixed'). It does not claim that the laws prove every pair falls under one. 'With no premise' in this chapter means no normative premise, and §2, where the cases are defined, states the calibration ('that every comparison falls under one is classical'). The glossary's ranking row, landed by the fronts' owner, uses the same wording ('the laws give how courses differ in what they admit, one widening another, the two keeping the same or mixed, with no premise'). Changing only 07:3 would make the two differ, and it would load a thesis line with a calibration already stated at the definition. No reader is led to a false belief: classically the split is exhaustive, and the line asserts no constructive exhaustion.",
+       "fix": ""
+      },
+      {
+       "index": 6,
+       "verdict": "confirmed",
+       "reason": "`Reaching.WidensOrLater` is defined to follow `Web.WidensOrWithLag` (its docstring, ReachableRanges.lean:772-779), and both are premise-free strict partial orders via `strictJoin_trans`. This change rewrote UE10's lagged order to 'puts' at 07:107 and 07:122, and the names-test refuter required it. At 07:102 it left 'the tail order ranks a course above one …', 'widening or widening with a lag never ranks so' and '… and the tail order rank only so', although `Web.WidensOrWithLag` contains plain widening and the tail order is equally premise-free. DESIGN §3's 'candidate orders that rank' does not separate the two lagged orders, so the convention is applied inconsistently. The fix must also reach the record, or home and record will disagree: comparing-two-courses-on-what-they-admit law 19 ('the tail order ranks …; widening or widening with a lag never ranks a course above one …') and law 20 ('… and the tail order, rank a course above another only where …') carry the same verbs. No dossier quotes these clauses. Severity: minor.",
+       "fix": "07:102: \"…: the tail order puts a course above one that admitted a formation it never admits (`TailAndLag.tailOrder_loses`), and widening or widening with a lag never does so (`Web.WidensOrWithLag.includesEachLater`).\" and \"Widening or widening with a lag, the order of a lag varying with the formation and the tail order put a course above another only so (…)\". Make the same change in comparing-two-courses-on-what-they-admit.json laws 19 and 20 (en and zh): 'puts the course ahead above the early one …; widening or widening with a lag never puts a course above one that admitted what it never admits', and '… and the tail order, put a course above another only where it keeps what the other keeps'. Add a history note and re-render."
+      },
+      {
+       "index": 7,
+       "verdict": "confirmed",
+       "reason": "The change replaced 'do not alone decide the order:' with 'whether a part narrows, keeps or widens what can form:'. That leaves out the fourth case of 07 §2 ('a conveyor is mixed', `Transfer.mixed`; `Web.Mixed`), so three exhaustive cases are suggested. Adding it creates no new inconsistency. One related point the fix does not touch: the record the-run-classes-and-widening still says 'a part's place in the order begins' and 'does not decide the order' in laws 5 and 6, the premise-free 'order' the home sentence no longer uses. Severity: minor.",
+       "fix": "07:69: \"…do not alone decide whether a part narrows, keeps or widens what can form, or is mixed with it:\""
+      },
+      {
+       "index": 8,
+       "verdict": "refuted",
+       "reason": "The parenthetical marks the exception to 'C gives order, in general alone': a premise in C's place that gives part of C's own order with no C. Self-concern does exactly that. Its ranked case is a widening that adds to its continuation (`Weighting.widensOwn_iff_every_increasingInOwn`, `Flow.coupled_ending_ranked_below`). J1/J2 (`Ranking.basic_first_ranks`) decides a pair C leaves unranked. That goes beyond C's order and is no exception to C alone giving it in general. 07 §5 puts J1–J4 among what 'choices take more, following from neither the condition nor C', and the very next row of the 08 table lists J1–J4 as premises. The 08 standing copies the glossary's C row and 07:233, which DESIGN §1 keeps as exact. The proposed fix would make 08 disagree with both.",
+       "fix": ""
+      },
+      {
+       "index": 9,
+       "verdict": "confirmed",
+       "reason": "`Reaching.CoversLater` is a preorder (`CoversLater.zero` is covering). What puts one configuration above another is the strict lagged order `Reaching.WidensOrLater` (widening what can be reached, or `WidensWithLag` := covering with some lag and covered back with none), and `WiderNow.decided` is stated of it. The restated statement makes covering the subject that 'puts … above', and the CD history note says 'covering with a lag puts a range above another'. That is loose wording, not a false claim: the home Reading (07:109) speaks of the lagged order. Severity: minor.",
+       "fix": "what-a-course-keeps-reachable.json statement: en \"Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only the lagged order puts a range that keeps widening above one wider now that starts a course, a verdict C leaves open. On a branching witness realized and reachable widening relate a pair oppositely.\", zh \"…故仅带滞后之序才把持续扩大的范围置于起进程且当下更宽者之上，此判定 C 不定。…\". In its CD history note: \"the statement says that the lagged order puts a range above another …\"."
+      },
+      {
+       "index": 10,
+       "verdict": "partly",
+       "reason": "The wording point holds: the title ('Can a collective's course always widen what can form?') has no 'generative direction', and line 30 reads 'the question's generative direction'. Line 9 does tie the title to that phrase, so this is wording only. The second half is refuted. Line 30 establishes, before §1, that 'this page reads the question's generative direction as widening, under the two premises'. So 'the direction' in §1's heading and at line 34 is that reading, and it agrees with the bullet's qualification; nothing contradicts it. Requalifying the heading and line 34 is unnecessary, and the heading's anchor and links stay as they are. Severity: minor.",
+       "fix": "COLLECTIVE-DIRECTION.md:17 only: \"…and which is silent where a comparison is mixed; it is the question's generative direction only under the two premises (§1);\". Leave the §1 heading and line 34 as they are. Optionally make DESIGN.md:87's description follow ('the question's')."
+      },
+      {
+       "index": 11,
+       "verdict": "confirmed",
+       "reason": "`CausalGrowth.not_above_antichain` takes `(start : r.state 0 = empty)` and `(pair : (r.state t).prec i j)`. `Starts.not_above_antichain_needs_start` constructs an order never reversing widening what can be born next that ranks `fromTwo` above the antichain. Without `pair`, an order not assumed irreflexive may also rank the antichain above itself. The record states it exactly (law 16: 'ranks no course from the empty set with a pair above the antichain'), and so does the module header. The 07:129 Reading's 'ranks nothing above the antichain' predates the change but sits in the paragraph it rewrote. No dossier quotes it. Severity: minor.",
+       "fix": "07:129: \"…and a direction never reversing widening, read on stems, ranks no course from the empty set with a precedence pair above the antichain (`CausalGrowth.not_above_antichain`).\""
+      }
+     ]
+    }
+   },
+   {
+    "lens": "reader",
+    "review": {
+     "read": "Reviewed the diff 049e14ca1..c-direction. The branch moved while I worked (68147d81d, then 6d4648c76, then b62fe64c4), so the final reading is at b62fe64c4, where b62fe64c4 changed only 07:12 and PHILOSOPHY.md P-02. I did not edit anything.\n\nHand-written text, read in full context:\n- 07-SIGNIFICANCE.md: the thesis line; §1 lines 10-42; §2 whole (lines 44-132), checked word by word against the merge base; the §4 intro and role table (224-254); §4.4 (327-363); §5 lines 526-556; §7 (685-715); T5, T8, objections, does-not-show and the Open list (738-790).\n- 08-METHOD.md: the premise card (224-236), §7's shared-law table (425-440), the known-results rows and third parts (480-557), the open items, and the anchor `one-relational-unfolding` at 587. The anchor exists and is the right one.\n- 01-ROOT.md §7's Widening bullet (168).\n- GLOSSARY.md rows widening, ranking, C and shared law.\n- COLLECTIVE-DIRECTION.md lines 1-40 and its order/rank uses.\n- The fronts: ONE-PAGE.md (lines 19-30), THE-THEORY-OF-BECOMING.md (every rank/order line, and §7 at 127-148) and _process/navigation/README-FIRST-SCREEN.md. Also ONE-ARGUMENT.md's rank/order lines.\n- DESIGN.md whole, and reviews/cold-reader.md.\n- The record JSONs: the five restated statements with their history notes, both renamed records with their redirect page, and every record title and statement containing rank or order (script scan).\n- COVERAGE.json, shared_laws.py, registry.py with its test, RESULT-WORKFLOW, and SCIENCES.md's two quotations.\n- Lean checked: CausalGrowth.antichain_rangeWidens, chain_rangeWidens_continuing, not_above_antichain, not_above_antichain_needs_start, not_rangeWidens_formsOrContinues and its _needs_starts; Reaching.not_widens_of_wider_now, not_above_wider_now, widensOrLater_iff_of_reach; Catalysis.not_widensOrLater; Web.retains_iff_includes, adds_iff_exceeds.\n\nGenerated pages were checked only for reach. The five new statements and the shared-law label are on the rendered pages, and the redirect pages exist.",
+     "findings": [
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "528",
+       "quote": "C ranks a course above each course it widens and decides no other pair; choices take more, following from neither the condition nor C: a reading of `living`",
+       "problem": "The new sentence presents C's verdicts as fixed by widening alone. The table four lines below, headed \"What every comparison satisfying C ranks\", contradicts both halves. In row 539, a formation drawing within renewal against its absence, C ranks presence higher under the whole-run and stepwise readings, yet the possibility reading (admission, which is widening) gives \"tie: it adds no possibility\". So C decides a pair in which neither course widens the other. In row 535, C does not rank absence of the overdrawer under the stepwise reading, although under admission it widens. C's verdicts are relative to a frame and a reading of `living`, and only on level paths with every claim counted are they exactly widening.",
+       "evidence": "`Comparison F living Better := ∀ s t, Extension F living s t → Better s t` takes a frame and a reading. `Web.paths_comparison_widens` gives \"exactly widening\" only on level paths with every claim counted. The glossary's ranking row says \"C's reads only whether one course keeps all the other's claims and adds a living one\". DESIGN.md §1 says \"No one frame … The whole-run and stepwise readings order some pairs differently (07 §5)\", and ONE-ARGUMENT.md:110 says restraint \"is ranked only under a reading of which events a course includes\".",
+       "fix": "\"Read as widening, every claim counted (`Web.paths_comparison_widens`), C ranks a course above each course it widens and decides no other pair; under another reading of `living` it ranks what extends under that reading, and readings decide some pairs differently (below). Choices take more, following from neither the condition nor C: a reading of `living` …\". The §4 role table's C row (07:231) and the overview's line 138 can take the same \"read as widening\".",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/08-METHOD.md",
+       "line": "435",
+       "quote": "| Widening | widening is retaining and adding; the ethics adds the condition for scope and C for order |",
+       "problem": "The row was relabelled \"Widening\", but its statement still defines widening as retaining and adding. Retaining and adding are relative to a significance and a standpoint. They coincide with including and exceeding only under the continuation condition, so the row puts the condition inside the premise-free law and then says the ethics adds it. The record's own law 17 and 01 §7 state the law as including and exceeding. COVERAGE.json carries the same statement.",
+       "evidence": "`Web.retains_iff_includes` and `Web.adds_iff_exceeds` both take `(unrestricted : Unrestricted sig)`. 07:61-62 defines retaining \"from `p` … what has significance\" and gives the equality only as a Conditional. 01-ROOT.md:168 says \"Widening of relations, including and exceeding (`«广»`), is irreflexive, one-way and transitive\". COVERAGE.json:1074 reads \"widening is retaining and adding; the ethics adds two premises …\".",
+       "fix": "08:435: \"| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds the condition for scope and C for order |\". Make the same change in COVERAGE.json:1074, then re-render.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/results/records/relation-level-law-of-easing.json",
+       "line": "13",
+       "quote": "restraint that lets no level fall and keeps taking part ranks above overdraw for any number of drawers under the relation-level reading too.",
+       "problem": "This is the twin of the stepwise statement the change restated. It is a theorem with \"No axiom\" and no C among its hypotheses, yet it says restraint ranks above overdraw. Every law in the record says \"extends\". The stepwise record was corrected for exactly this wording, and this one was missed. The stepwise record's does_not_show line 75 also keeps \"the laws rank courses under each reading\", which is premise-free unless C is named.",
+       "evidence": "stepwise-law-of-easing.json's history note: \"the statement says that restraint extends overdraw, which needs no premise, and that C ranks it above\". This record's last law (`Ranking.restraint_extends_iff_relational`) says \"it extends the other exactly when …\". 07:551 (§5 table, relation-level row) says restraint \"extends overdraw, and C ranks it higher\". The glossary says no law gives a ranking.",
+       "fix": "en: \"… restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers under the relation-level reading too, and C ranks it above.\" zh: \"…在关系层读法下也对任意多个汲取者扩展过度汲取，C 把它排在其上。\" Add a CD history note as on the stepwise record. In stepwise-law-of-easing.json:75, write \"under C the laws rank courses under each reading\".",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "94",
+       "quote": "What a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair",
+       "problem": "This is the reading line of §2's eventual-widening section. It was left with a premise-free \"ranks\" for widening what can be reached with a lag. 07:109 states the same thing and was restated, \"it [-ranks-]{+decides+} some such pairs\", and §2 (107) now says the lagged order \"puts\" one configuration above another. So one statement appears in two forms within §2, and this form is the one the change's own rule removes.",
+       "evidence": "DESIGN.md §3: \"Where premise-free widening was said to rank, the sentence now says what it does: it widens, puts above, holds of a pair in opposite directions, or decides a pair. This covers 07's thesis line, §2 …\". what-a-course-keeps-reachable.json:13 now reads \"only with a lag does it put a range that keeps widening above one wider now\".",
+       "fix": "\"What a course keeps reachable puts a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair ([below](#r-what-a-course-keeps-reachable))\".",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/08-METHOD.md",
+       "line": "518, 520",
+       "quote": "widening follows deliveries in neither direction, ranking a delivered output above its input on one witness and below it on another … What is new is reading these against the theory's direction: what widening is read on decides what it ranks.",
+       "problem": "These are two premise-free \"rank\"s for widening in 08's known-results paragraphs. Their homes in 07 §2 were both restated: 07:122 \"which [-ranks-]{+puts+} a delivered output above its input\", and 07:129 \"widening loses [-precedence and ranks highest-]{+precedence:+} … widens every course from the empty set\". 08 now says what 07 no longer says.",
+       "evidence": "07:122 now reads \"UE10's lagged order is same-offset widening (`Reaching.widensOrLater_iff_of_reach`), which puts a delivered output above its input\". 07:129 now reads \"the course in which nothing conditions anything … widens every course from the empty set with a precedence pair (`CausalGrowth.antichain_rangeWidens`)\". The glossary: widening \"says which admits more, not which is better\".",
+       "fix": "08:518: \"… widening follows deliveries in neither direction, putting a delivered output above its input on one witness and below it on another: …\". 08:520: \"… what widening is read on decides which course widens which.\"",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/08-METHOD.md",
+       "line": "488, 555",
+       "quote": "| [The order of what can form](07-SIGNIFICANCE.md#r-four-cases-of-a-part) | opportunity sets (Pattanaik and Xu 1990) | near-definitional | … - the order of what can form, weakly: under balance with requirements as thresholds, a part narrows what another can form only by a net draw",
+       "problem": "08 still names the premise-free four cases of a part \"the order of what can form\". The change renamed 07 §2's heading \"The order with no premise\" for exactly this reason. These two rows of 08 (known results and third parts) keep the old name for the same result.",
+       "evidence": "DESIGN.md §3: \"07 §2's heading 'The order with no premise' is now 'How two courses differ, with no premise' … the old heading claimed what the glossary row says no law gives.\" The linked record's title is \"Four cases of a part\".",
+       "fix": "08:488: \"| [How two courses differ in what can form](07-SIGNIFICANCE.md#r-four-cases-of-a-part) | …\". 08:555: \"- how a part changes what can form, weakly: under balance …\". Keep or point the AUDIT links as they are.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "129, 789",
+       "quote": "a direction never reversing widening, read on stems, ranks nothing above the antichain (`CausalGrowth.not_above_antichain`) … [789] on what can be born next the course in which nothing continues widens every course from the empty set with a precedence pair, … and with every continuation's losses counted the reading is on both together, where C ranks no two courses.",
+       "problem": "The Lean proves both claims only for courses from the empty set, and it proves that the start is needed. Line 789 now scopes its two widening clauses \"from the empty set\" while the last clause of the same sentence, \"C ranks no two courses\", stays unscoped. Line 129 says \"ranks nothing above the antichain\" and, a sentence earlier, \"there no course widens another\". Both are false without the start. The text predates the change, but it sits in sentences the change rewrote.",
+       "evidence": "`CausalGrowth.not_above_antichain` takes `(start : r.state 0 = empty)` and a precedence pair. `not_above_antichain_needs_start` gives an order never reversing widening on stems that ranks `fromTwo` above the antichain. `not_rangeWidens_formsOrContinues` takes both courses from the empty set, and `not_rangeWidens_formsOrContinues_needs_starts` refutes the unscoped form.",
+       "fix": "07:129: \"there no course from the empty set widens another …\" and \"… ranks no course from the empty set with a precedence pair above the antichain (`CausalGrowth.not_above_antichain`)\". 07:789: \"… the reading is on both together, where C ranks no two courses from the empty set.\"",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "12",
+       "quote": "On the thesis of one relational unfolding, argued and not proved ([08](08-METHOD.md#one-relational-unfolding)), positions, regions and standards form within it; none outside it owns value.",
+       "problem": "\"It\" now has two candidate antecedents. The head of the preceding noun phrase is \"the thesis\", so \"form within it\" first reads as \"within the thesis\", and the same goes for \"none outside it\". The intended referent, the unfolding, is reached only by sense. \"Argued and not proved\" sits next to \"unfolding\", so it also reads as describing the unfolding. The old sentence said \"within the one unfolding\" and had neither problem. The 08 anchor is correct: `one-relational-unfolding` at 08:587, \"Thesis (philosophical, argued; not one of T1–T8). One relational unfolding\".",
+       "evidence": "Old 07:12: \"Positions, regions and standards form within the one unfolding; none outside it owns value.\" PHILOSOPHY.md P-02 now quotes the new sentence, so the dossier carries the ambiguity too.",
+       "fix": "\"On the thesis of one relational unfolding, argued and not proved ([08](08-METHOD.md#one-relational-unfolding)), positions, regions and standards form within the unfolding; none outside it owns value.\" Re-quote P-02 to match.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+       "line": "17",
+       "quote": "- **a criterion**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed; it is the title's generative direction only under the two premises (§1);",
+       "problem": "Since its 1 November retitling, the title (\"Can a collective's course always widen what can form?\") names no generative direction. The phrase is in the quoted question. The reading this clause points to is in the paragraph \"'A generative direction', read here\" (line 30), not in §1. §1 states no premise, and its line 34 still says \"So the direction is a criterion\".",
+       "evidence": "Line 5: \"retitled 1 November 2026 from its first paraphrase of the question\". Line 9: \"The title asks it in the account's terms … so it asks of widening what can form\". Line 30: \"So this page reads the question's generative direction as widening, under the two premises.\"",
+       "fix": "\"… it is the question's generative direction only under the two premises (\\\"A generative direction\\\", read here, below);\"",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/records/what-can-be-born-next.json",
+       "line": "13",
+       "quote": "Read on what continues the order reverses; no strict order holds both.",
+       "problem": "The record's statement calls premise-free inclusion of stems \"the order\". Its home now says \"the inclusion is reversed\". The second clause, \"no strict order\", names candidate orders and is fine.",
+       "evidence": "07:127: \"Read on what continues within the one class the inclusion is reversed (`CausalGrowth.rangeIncludes_continuing_iff`)\". The glossary: ranking and order say which course is better, and widening says which admits more.",
+       "fix": "en: \"Read on what continues the inclusion reverses; no strict order holds both.\" zh: \"读于相续则包含反转，无一严格之序兼含二者。\" Add a CD history note.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+       "line": "13, 985",
+       "quote": "On a branching witness realized and reachable widening relate a pair oppositely. … [history] … not that they rank it, as its home section in 07 §2 says.",
+       "problem": "The restatement of one fact takes three forms. 07:104, 07:109 and 07:789 say \"hold of a pair in opposite directions\". This record and comparing-two-courses-on-what-they-admit.json:13 say \"relate (one/a) pair oppositely\", yet the history note claims to follow the home's wording. Meanwhile 07:102 keeps \"widening or widening with a lag never ranks so\" and \"rank only so\" for the very lagged order whose pair 07:789 restated.",
+       "evidence": "DESIGN.md §3 keeps \"rank\" for candidate orders (the lagged order, the tail order). Under that rule 07:102 is fine, and the restated phrases are a choice of wording, which should be made once.",
+       "fix": "Use one phrase in both records and in 07, e.g. \"hold of a pair in opposite directions\" in each record statement (zh \"于一对进程方向相反\" already matches). Or leave them, and drop \"as its home section in 07 §2 says\" from the history note.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "789",
+       "quote": "on what can be born next the course in which nothing continues widens every course from the empty set with a precedence pair, on what continues the chain widens every course from the empty set lacking one of its pairs, and no strict order contains both widenings, and with every continuation's losses counted the reading is on both together, where C ranks no two courses.",
+       "problem": "The rewritten clause is harder to read than the one it replaced. \"In which nothing continues widens\" is a garden path, because line 129's comma before \"widens\" was dropped. Two clauses are joined by a comma and then two by \"and … and\", in a sentence already about 100 words long.",
+       "evidence": "07:129 has the same content punctuated: \"the course in which nothing conditions anything, where nothing continues, widens every course from the empty set …; read on what continues, the chain widens …\".",
+       "fix": "\"… on what can be born next the course in which nothing continues, the antichain, widens every course from the empty set with a precedence pair; on what continues the chain widens every course from the empty set lacking one of its pairs; no strict order contains both widenings; and with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set.\"",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+       "line": "127",
+       "quote": "Positions form within the one unfolding, and nothing outside it owns value.",
+       "problem": "This is the overview's form of the statement 07 §1 now hedges as standing on an argued thesis. The change was made at an overview cold reader's request (commit 828a6d639), but the overview still states it flat. PHILOSOPHY.md:98 (\"Meaning.\") is also flat, and its rewrite is deferred to the freeze by b62fe64c4.",
+       "evidence": "07:12 now opens \"On the thesis of one relational unfolding, argued and not proved\". The overview's own line 175 gives that thesis as \"A philosophical thesis … argued\".",
+       "fix": "For the fronts' owner: \"On the argued thesis of one relational unfolding (§10), positions form within the unfolding, and nothing outside it owns value.\"",
+       "severity": "minor"
+      }
+     ]
+    },
+    "verdicts": {
+     "results": [
+      {
+       "index": 0,
+       "verdict": "partly",
+       "reason": "What I read: the branch text of 07 (§1, §2, §4, §5, §9 and the open items), 08's C row, §7 table and §8 lines, 01 §7, the glossary, the collective page, the overview, PHILOSOPHY P-02, SCIENCES.md, DESIGN.md, the restated and unrestated record JSONs, style.py, registry.py, shared_laws.py, and the Lean declarations Extension, Comparison, Ranking.frame/ExtendsUnder/ComparisonUnder/wholeRun/stepwise, readings_rank_presence, Web.paths_extension_iff_widens, Web.paths_comparison_widens, retains_iff_includes, adds_iff_exceeds and the CausalGrowth theorems.\n\nThe finding holds. Ranking.frame takes as its claims the events a reading includes, and wholeRun is 'active and not consuming over the run', not admission. Relevance.lean:478 `readings_rank_presence` proves that occurrence extends absence under the whole-run and stepwise readings, while the §5 table's possibility column gives 'tie: it adds no possibility'. So, with 'widens' in the glossary's sense (admission), C decides a pair neither course widens. Row 535 refutes the other half: absence widens under admission, yet C leaves it unranked under the stepwise reading. The rest of §5 says 'extends' throughout, and 08's C row says 'read as widening, exactly widening'.\n\nThe proposed fix has three problems. (1) It cites only `Web.paths_comparison_widens`. That theorem shows widening meets C, which gives 'decides no other pair'. The exactness also needs `Web.paths_extension_iff_widens`. (2) It extends the change to 07 §4's role table and the overview's line 138. There C is stated as 'widening what can form is better', so 'every course it widens' follows from the statement as given. The overview is also the fronts' owner's text. (3) It misses DESIGN.md:81 and apply_cd.py:78, which quote the sentence and which commit 68147d81d keeps in step with it.",
+       "fix": "07:528: \"C ranks a course above each course it extends under the reading of `living` it is read on, and decides no other pair; read on what is admitted, every claim counted, that is each course it widens (`Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`), and the readings below decide some pairs differently. Choices take more, following from neither the condition nor C: a reading of `living` (which events a course includes), the lifting L and the commitments J1–J4.\" Bring the quotation in DESIGN.md:81 (§4) and the replacement string in apply_cd.py:78 to the new sentence. Leave 07 §4's role table and the overview's line 138 as they are."
+      },
+      {
+       "index": 1,
+       "verdict": "confirmed",
+       "reason": "08:435, under the new label 'Widening', reads 'widening is retaining and adding; the ethics adds the condition for scope and C for order'. Retaining and adding are defined relative to a significance and a standpoint (07:61). They equal including and exceeding only under the condition: `retains_iff_includes` and `adds_iff_exceeds` (Significance.lean:308, 313) both take `(unrestricted : Unrestricted sig)`, and 07:62 states the equality as a Conditional. So the premise-free shared law is stated through the condition, and the row then says the ethics adds that condition. The same row's own record (shared-laws-on-the-grammar, law 17) and 01:168 state the law as including and exceeding. COVERAGE.json:1074 has the same statement, and it renders to COMPLETION.md:112. The text predates CD, but CD relabelled this exact row to say what the law is. Severity: major.",
+       "fix": "08:435: \"| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds the condition for scope and C for order | …\". Make the same change in COVERAGE.json:1074 (\"…; the ethics adds two premises, the continuation condition for scope and C for order\"). Re-render COMPLETION.md with the tool, not by hand, and re-point any record whose source hash covers 08 after reading it."
+      },
+      {
+       "index": 2,
+       "verdict": "partly",
+       "reason": "Confirmed on the main point. relation-level-law-of-easing.json is untouched by the diff. Its statement says restraint 'ranks above overdraw … under the relation-level reading too', while its hypotheses say 'No axiom' and name no C, and its last law (`Ranking.restraint_extends_iff_relational`) says 'extends'. Its home row, 07:546-551, says 'extends overdraw, and C ranks it higher', and the stepwise twin was restated to that form. The proposed en statement is 281 characters, under style.py's hard cap of 300, and the zh is 80, under 150.\n\nThe fix for stepwise-law-of-easing.json:75 is wrong as worded. 'under C the laws rank courses' still has the laws ranking. Under C, C ranks and the laws give extension. The same record's does_not_show 2 ('so this law does not rank it') has the same problem and was also missed.",
+       "fix": "relation-level-law-of-easing.json statement, en: \"Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers under the relation-level reading too, and C ranks it above.\" zh: \"逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制，在关系层读法下也对任意多个汲取者扩展过度汲取，C 把它排在其上。\" Its does_not_show 2: \"… loses its relations to it, so this law does not show that it extends overdraw.\" / \"…故本律不表明它扩展过度汲取。\" Add a CD history note like the stepwise record's. stepwise-law-of-easing.json:75, en: \"Which reading of living to use, or any duty to restrain: the laws give which course extends which under each reading, and C ranks only those pairs.\" zh: \"应采用哪种生命读法，或任何节制的义务：这些规律只在各读法下给出何者扩展何者，C 只对这些排序。\" Re-render the record pages."
+      },
+      {
+       "index": 3,
+       "verdict": "confirmed",
+       "reason": "07:94 still reads 'What a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only read with a lag'. This change restated the same claim in its home, 07:109 ('it decides some such pairs'), in the theorem at 07:107 ('puts the climb above the other'), and in its record ('only with a lag does it put a range that keeps widening above one wider now'). Its history note claims to follow the home. So §2 now states one claim in two forms. Severity: minor rather than major. DESIGN §3 lets candidate orders, the lagged order among them, keep 'rank', so the sentence is not false. It is only out of step with the home and record this change restated. The proposed fix is exact.",
+       "fix": "07:94: \"What a course keeps reachable puts a range that keeps widening above one wider now that starts a course only read with a lag, and then not every such pair ([below](#r-what-a-course-keeps-reachable)), …\""
+      },
+      {
+       "index": 4,
+       "verdict": "confirmed",
+       "reason": "08:518 reads 'widening follows deliveries in neither direction, ranking a delivered output above its input on one witness and below it on another'. 08:520 reads 'what widening is read on decides what it ranks'. Both say that premise-free widening ranks. Their homes were restated: 07:122 now says the lagged order 'puts a delivered output above its input' and 'holds of no pair', and 07:129 says the antichain 'widens every course from the empty set with a precedence pair'. The glossary says widening 'says which admits more, not which is better'. No dossier quotes either 08 line; only the UE12/UE13/UE14 kits hold old copies. Editing 08 requires re-pointing any record whose source hash covers 08.",
+       "fix": "08:518: \"… and widening follows deliveries in neither direction, putting a delivered output above its input on one witness and below it on another: …\". 08:520: \"… What is new is reading these against the theory's direction: what widening is read on decides which course widens which.\""
+      },
+      {
+       "index": 5,
+       "verdict": "confirmed",
+       "reason": "08:488 names the row linking r-four-cases-of-a-part 'The order of what can form'. 08:555 opens its third-part item, which links r-closing-needs-net-draw, a neighbouring result, with 'the order of what can form, weakly'. Both results are premise-free: inclusion, exceeding, widening, keeping, mixing, and closing only by net draw. This change renamed 07 §2's heading 'The order with no premise' for exactly this reason (DESIGN §3), and the glossary says no law gives an order. The fix holds. SCIENCES.md:85 paraphrases the 555 item outside its quotation ('the order of what can form, weakly (07; not treated here)'). It is not a quote, so no check breaks, but it should follow. The AUDIT and review files are study history and can stay.",
+       "fix": "08:488: \"| [How two courses differ in what can form](07-SIGNIFICANCE.md#r-four-cases-of-a-part) | opportunity sets (Pattanaik and Xu 1990) | near-definitional |\". 08:555: \"- how a part changes what can form, weakly: under balance with requirements as thresholds, a part narrows what another can form only by a net draw beyond that formation's margin (…)\". For the sciences dossier's owner, SCIENCES.md:85: \"how a part changes what can form, weakly (07; not treated here)\". Re-point records whose hash covers 08."
+      },
+      {
+       "index": 6,
+       "verdict": "partly",
+       "reason": "Confirmed. `not_above_antichain` (CausalGrowth.lean:1068) takes `(start : r.state 0 = empty)` and a pair, and `not_above_antichain_needs_start` gives an order never reversing widening that puts fromTwo above the antichain. `not_rangeWidens_formsOrContinues` takes both starts, and `not_rangeWidens_formsOrContinues_needs_starts` refutes the unscoped form with fromOne widening the antichain. So 07:129's 'there no course widens another' and 'ranks nothing above the antichain' are false unscoped. At 789 the change scoped two clauses of one sentence and left 'C ranks no two courses' bare.\n\nThe fix is incomplete. 07:129's next clause, 'two courses differing by a pair are mixed', also needs its starts (`mixed_of_pair` takes start and start'; `mixed_of_pair_needs_starts` refutes it unscoped). And 'no course from the empty set widens another' is still loose, because the Lean needs both courses from the empty set.",
+       "fix": "07:129: \"… so with the scope it fixes the reading is on both together: there of two courses from the empty set neither widens the other, two such courses differing by a pair are mixed, and ordering them needs a measure …\" and \"… a direction never reversing widening, read on stems, ranks no course from the empty set with a precedence pair above the antichain (`CausalGrowth.not_above_antichain`).\" 07:789: \"… the reading is on both together, where C ranks no two courses from the empty set.\" Optionally do the same in what-can-be-born-next.json does_not_show (line 388), though its statement already sets the scope. The SCIENCES.md quotation of 789 ('every course keeps widening what can be born next, so the second order is not told apart there') is unaffected."
+      },
+      {
+       "index": 7,
+       "verdict": "confirmed",
+       "reason": "07:12, 'On the thesis of one relational unfolding, argued and not proved (08), positions, regions and standards form within it; none outside it owns value', gives 'it' the head noun 'thesis' as nearest antecedent. The reader reaches 'the unfolding' only by sense. The old sentence said 'within the one unfolding'. The 08 anchor is right. PHILOSOPHY P-02 quotes 'positions, regions and standards form within it; none outside it owns value.' verbatim, so the fix must re-quote it or the dossier's quotation check fails. Severity: minor.",
+       "fix": "07:12: \"On the thesis of one relational unfolding, argued and not proved ([08](08-METHOD.md#one-relational-unfolding)), positions, regions and standards form within the unfolding; none outside it owns value.\" PHILOSOPHY.md:98, P-02's second quotation: \"positions, regions and standards form within the unfolding; none outside it owns value.\" Re-point records whose hash covers 07 after reading."
+      },
+      {
+       "index": 8,
+       "verdict": "partly",
+       "reason": "Confirmed. Since its 1 November retitling the title is 'Can a collective's course always widen what can form?'. 'A generative direction' appears only in the quoted question, and line 9 says so. The two premises are given in the paragraph '\"A generative direction\", read here' (line 30), not in §1. The fix, though, drops '(§1)', the pointer to where the criterion's law is stated, and each bullet in the list ends with such a pointer. DESIGN.md:87 repeats 'the title's generative direction'.",
+       "fix": "COLLECTIVE-DIRECTION.md:17: \"- **a criterion**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed (§1); it is the question's generative direction only under the two premises (\\\"A generative direction\\\", read here, below);\". DESIGN.md:87: \"… and it is the question's generative direction only under the two premises.\""
+      },
+      {
+       "index": 9,
+       "verdict": "confirmed",
+       "reason": "what-can-be-born-next.json:13 says 'Read on what continues the order reverses', and its home, 07:127, says 'the inclusion is reversed (`CausalGrowth.rangeIncludes_continuing_iff`)'. The statement's first sentence is about inclusion of stems. Under the glossary's one sense, 'the order' reads as which course is better. The second clause, 'no strict order holds both', names candidate orders and is fine. The new en statement is about 276 characters, under the cap of 300. Severity: minor.",
+       "fix": "en: \"… Read on what continues the inclusion reverses; no strict order holds both.\" zh: \"… 读于相续则包含反转，无一严格之序兼含二者。\" Add a CD history note, and re-render the record page."
+      },
+      {
+       "index": 10,
+       "verdict": "partly",
+       "reason": "The wording does vary. 07:104, 109 and 789 say 'hold of a pair in opposite directions', while the two records say 'relate a/one pair oppositely'. But the first fix option breaks style.py's hard cap of 300 characters on statements. what-a-course-keeps-reachable would become 308 characters and comparing-two-courses 313, and the latter is already at 300 (commit 4a6fd746b, 'shortened to the limit'). Changing 07 instead would break SCIENCES.md's quotation of 789. The history note's 'as its home section in 07 §2 says' concerns what is claimed, which matches, so it is not false.\n\nA real inconsistency sits nearby. 07:107 changed 'ranks' to 'puts' for the lagged order on reachable ranges (`Reaching.WidensOrLater`). Meanwhile 07:102 keeps 'ranks' for the lagged order on admitted ranges (`Web.WidensOrWithLag`), as DESIGN §3's kept list allows.",
+       "fix": "Leave both record statements as they are, since the cap forbids the longer phrase. Optionally, the history note in what-a-course-keeps-reachable.json:985: \"… relate a pair oppositely, not that they rank it, the claim of its home section in 07 §2 in shorter words.\" To settle the lagged orders: either add to DESIGN §3 that where a sentence states what a lagged order holds with no premise it 'puts above', and bring 07:102's 'never ranks so' and 'rank only so' to 'never puts a course so' and 'put one only so', or say in DESIGN §3 that 07:107 departs from the kept list and why."
+      },
+      {
+       "index": 11,
+       "verdict": "confirmed",
+       "reason": "In 07:789's rewritten clause, 'the course in which nothing continues widens every course…' is a garden path: line 129's comma before 'widens' was dropped. The clause also runs four parts joined by a comma and then 'and … and' inside an already long item. The proposed punctuation fixes it and folds in finding 6's scope. Nested semicolons after the item's existing '; the growth bears on what widening is read on:' are tolerable. The SCIENCES.md quotation of this item ends before the clause, so it is unaffected. Severity: minor.",
+       "fix": "07:789: \"… the growth bears on what widening is read on: on what can be born next the course in which nothing continues, the antichain, widens every course from the empty set with a precedence pair; on what continues the chain widens every course from the empty set lacking one of its pairs; no strict order contains both widenings; and with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set. The candidate left is what carries a course's openings.\""
+      },
+      {
+       "index": 12,
+       "verdict": "partly",
+       "reason": "Confirmed. The overview's line 127 states flat 'Positions form within the one unfolding, and nothing outside it owns value.' 07 §1 now hedges this sentence on the argued thesis, at an overview cold reader's request (828a6d639). The zh edition's line 127 is just as flat. But the fix's '(§10)' is wrong. The overview states the thesis at line 175, in '## 9. The theses'; §10 is 'What is not shown, and what is open'. The zh edition needs the same change, and the fix is for the fronts' owner.",
+       "fix": "For the fronts' owner, THE-THEORY-OF-BECOMING.md:127: \"On the argued thesis of one relational unfolding (§9), positions form within the unfolding, and nothing outside it owns value.\" THE-THEORY-OF-BECOMING.zh.md:127: \"依一个关系展开之论题（有论证，见 §9），位置在这一展开之中形成，展开之外没有任何东西拥有价值。\" PHILOSOPHY.md:98's flat 'Meaning.' sentence stays with its owner at the freeze, as b62fe64c4 says."
+      }
+     ]
+    }
+   },
+   {
+    "lens": "mechanics",
+    "review": {
+     "read": "The branch kept moving while I reviewed: 68147d81d, then b62fe64c4, 654bfedd9 (main merged in, which moves the merge base to 90ed70b88), d1a3951c1 and 0dd7a9324. I checked every finding again at 0dd7a9324, and file:line refers to that commit. I judged ownership against `git diff 90ed70b88 c-direction`; the original base 049e14ca1 would now also show main's cold-read and T7 commits. All work was read-only: I ran no render and wrote no tracked file.\n\nHand-written hunks I read:\n- 07 (every changed line: 3, 12, 45, 69, 92, 97, 104, 107, 109, 122, 124, 129, 153, 208–210, 331–332, 345, 528, 751, 789)\n- 08, 01, GLOSSARY, COLLECTIVE-DIRECTION\n- the overview in both languages, and OPENING\n- RESULT-WORKFLOW, COVERAGE.json, shared_laws.py\n- registry.py with test_scoped_drift.py; I also read rename_ids.py\n- SCIENCES.md and PHILOSOPHY.md\n- every changed record .json, including both renamed records and all CD history notes in English and Chinese\n- the five CD lines of rebinds.jsonl (392–396) and the receipt cd-ranking-names.json\n- the kit: DESIGN.md, apply_cd.py, renames.tsv, sweep.py, hits.tsv (class counts), names-test.json (counts and verdicts), reviews/* (skimmed) and history/*\n- the Lean behind the questioned names: Weightings.lean:1313, KeepingWidening.lean:757–762 and 2256–2263, GrammarMap.lean:193–197\n\nWhat I checked:\n- `research.py links`: 0 broken.\n- `research.py check`: no errors and no source drift. shared_laws reports current: false.\n- check_dossiers.py on the packet and on SCIENCES.md: 0 problems at the current tip.\n- test_review_packet, test_scoped_drift and test_shared_laws: all pass.\n- The receipt's sha256_after values against the tree.\n- The merge kept every line of main's rebinds.jsonl.\n- For each rebind line, I diffed the records' previous reviewed version against the new one with registry.reviewed_version.\n- Reading-catalogue drift: none is new from CD.\n\nFixed during the review, so not reported below:\n- At 68147d81d, PHILOSOPHY.md:98 quoted the old 07 §1 sentence. check_dossiers gave 1 problem, so test_review_packet would have failed. b62fe64c4 fixed it.\n- The stale research indexes were fixed by 0dd7a9324.\n\nRegistry change (question 4): correct, and nothing to report.\n- A former id equal to a live id is refused by validate (registry.py:1053–1058) and by rename_ids (rename_ids.py:101).\n- A non-list former_ids is ignored in links_record and flagged by validate (1050–1051). Ignoring it is the safe direction: the record stays unlocated and drifts on any rewrite.\n- A history copy that links records/OLD.md locates the record exactly as a link to the live id would.\n- The only caller is validate (registry.py:993).\n- The new test covers being located by a former id and the drift a relink causes.\n\nRemaining old-id names, all acceptable:\n- 07's two old anchors.\n- The study notes, left linking the former id on purpose (they resolve).\n- Older receipts, moves and compactions, and the generated manifest.\n- The renamed records' former_ids, migration links and history.\n\nExceptions: the two review dossiers (finding 5), and the aliases and dependency interface (findings 2 and 3).",
+     "findings": [
+      {
+       "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+       "line": "97 (also GLOSSARY.md:32, 01-ROOT.md:151, 08-METHOD.md:112, COLLECTIVE-DIRECTION.md:30, what-keeping-widening-needs.json:485-486 and its note at 1196-1197, rebinds.jsonl:396)",
+       "quote": "every supported occurrence is 全生成 at two grains along passing",
+       "problem": "Commit ff7b52571 replaced 'at two orders' with 'at two grains'. That does not state what the cited theorem proves, yet the history note and rebind line 396 say the claim is unchanged. Elsewhere 'at two grains' means one order of generation, a fine class and a coarse one. The theorem gives generation at two orders across three grains. So the prose now says what any single 全生成 already is and drops the second order. It also cites `generation_two_orders` beside the words 'two grains'. Finally, DESIGN.md:102-103 says this item was left for the glossary's owner, yet CD changed it in six places.",
+       "evidence": "In GrammarMap.lean:196, `«阶全生成» R Es k x := «全生成» R (Es (k + 1)) (Es k) x`: one order already reads two grains. `KindRelay.Runs.generation_two_orders` (KeepingWidening.lean:2256-2263) proves «阶全生成» at orders 0 and 1 over `kindGrains` (KeepingWidening.lean:757-762: 0 formation, 1 kind, 2 and above activity), which is three grains. Other uses of 'at two grains' are one order. Record generation-and-degeneration-at-two-grains says 'At a fine and a coarse class'. 01-ROOT.md:418 says 'A line of descent generates at two grains'. The new history note (what-keeping-widening-needs.json:1196) says 'The claim is unchanged'.",
+       "fix": "Revert ff7b52571, or say it exactly in all six places. For 07:97: 'every supported occurrence is 全生成 at two orders of grain along passing (formation within kind, kind within activity)'. GLOSSARY:32 and 01:151: 'generation can go on at two successive orders of grain'. Then 08:112 and COLLECTIVE:30 to match. The record's does_not_show to 'at two orders of grain' / '两阶（粒度之阶）之全生成'. Correct the history note, add a rebinds line saying what changed, and update DESIGN.md:103.",
+       "severity": "major"
+      },
+      {
+       "file": "theories/becoming/results/records/whole-and-regions-and-bounded-centers.json",
+       "line": "200-201 (rendered at whole-and-regions-and-bounded-centers.md:75)",
+       "quote": "The whole first and the free rider's loss.",
+       "problem": "The record was renamed because 'the whole first' (整体优先) states a priority the record does not prove. Its own dependency interface (dependencies[1].interface.input) still says 'The whole first' in both languages, and the rendered page shows 'Input: The whole first and the free rider's loss.' The names test did not catch this field.",
+       "evidence": "The receipt reason and DESIGN.md:64 say '\"The whole first\" (整体优先) states a priority ... The record proves no priority'. The record's history note (json:618) repeats it. Meanwhile json:200 has \"zh\": \"整体优先与搭便车者的失去。\" and json:201 the English.",
+       "fix": "Set the input to en 'Retaining in the whole and in every region, and the free rider's loss.' and zh '整体与各区域中的保留，与搭便车者的失去。' Add a dated history note in both languages (an interface wording change, claim unchanged), then render.",
+       "severity": "major"
+      },
+      {
+       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+       "line": "1313-1317 (also widening-as-what-every-positive-weighting-ranks.json:170,172; rendered page :117; DESIGN.md:63, 70-72; names-test.json:290)",
+       "quote": "theorem widens_iff_every_weighting {admitted : (Nat → C → Nat) → Nat × F → Bool}",
+       "problem": "DESIGN renames the record because 'every weighting' states a universal the record refutes. The Lean name `Web.widens_iff_every_weighting` has the same defect: its statement quantifies only over positive weightings. The names test kept it for another reason (each ranking is a premise) and never weighed the universal. DESIGN §3 neither renames it nor lists it for the next edition. The renamed record's aliases also keep the refuted wording, and the page shows them: 'widening as what every weighting ranks', '扩大即每个加权所排者' and 'C as the order every weighting shares'.",
+       "evidence": "Weightings.lean:1316: `W.Widens l l' ↔ ∀ w, Weighting.Positive items w → ...`. DESIGN.md:63: 'So \"every weighting\" stated a universal the record refutes.' names-test.json:290 gives verdict 'keep' for 'Web.widens_iff_every_weighting'.",
+       "fix": "Add `Web.widens_iff_every_weighting` to DESIGN §3's 'Left for the next edition' list, with the record's reason, under a name such as `Web.widens_iff_every_positive_weighting`. Otherwise say in §3 why the Lean name may keep a universal the record id may not. Change the alias 'C as the order every weighting shares' to 'C as what every positive weighting shares'. Either drop the two old-title aliases, which former_ids and the redirect page already cover, or keep them and say they are former titles.",
+       "severity": "major"
+      },
+      {
+       "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cd-c-as-a-direction/DESIGN.md",
+       "line": "94, 103 (and §4 at 76-95)",
+       "quote": "24 records re-pointed after reading, in three lines of the rebinds log. Nothing they say changed.",
+       "problem": "The design note no longer says what landed. The rebinds log now holds five CD lines (392-396), the two added in d1a3951c1 among them. Line 103 still leaves \"two orders\" (GLOSSARY:32) to the glossary's owner, but ff7b52571 changed it in the glossary, 01, 07, 08, the collective page and a record. §4 'Lands now' omits b62fe64c4's change to the philosophy dossier's P-02 quotation. It also omits that dossier's unqualified paraphrase at PHILOSOPHY.md:98 ('Positions, regions and standards form within the one unfolding.'), which the commit message leaves to its owner at the freeze.",
+       "evidence": "rebinds.jsonl:395-396 are dated 2026-11-03T02:11, with base 654bfedd9. ff7b52571 touches GLOSSARY.md:32. b62fe64c4 touches theories/becoming/review/PHILOSOPHY.md. DESIGN.md:92 names only the sciences dossier.",
+       "fix": "Line 94 should read: 'Twenty-four records re-pointed after reading, three of them twice and one again, in five lines of the rebinds log (392-396). Nothing they say changed.' Correct line 103 to match what is decided on 'two orders' (finding 1). Under 'Lands now', add the philosophy dossier's P-02 quotation and 07 §2's grain wording. Under what waits, add PHILOSOPHY.md:98's paraphrase for its owner, RP2.",
+       "severity": "major"
+      },
+      {
+       "file": "_process/architecture/renames/cd-ranking-names.json",
+       "line": "23-52, 208",
+       "quote": "Record ids renamed with former_ids kept; live references rewritten",
+       "problem": "The receipt records six study-note rewrites that commit 05c2bd0c4 reverted: BECOMING-RENEWAL-READING.md and .zh.md, DELEGATED-CHOICES.md and .zh.md, aj-joint-selection/PLAN.md, and ue4-second-order/LANDING.md. Their sha256_after values no longer hold, and nothing in the receipt says so. The tool's convention is also left contradicted: rename_ids.py:10-12 and 33-35 say study logs keep the old id but 'their links are rewritten'. The cause is the registry fix, which deliberately keeps a pure relink as drift (the second assertion of test_renamed_record_is_located_by_its_former_id).",
+       "evidence": "For all six paths, the current sha256 differs from sha256_after, while the version at 603ce1722 matches it. 05c2bd0c4: 'the study notes' record links left as they were'. R35-E4-renames.json has a 'note' field for exactly this kind of after-the-fact change.",
+       "fix": "Add a 'note' field, as R35-E4-renames.json has. It should say that the six study-note link rewrites were reverted in 05c2bd0c4 so that their cited sections stay as reviewed, that the redirect pages resolve them, and that sha256_after for those six is not the landed state. A better alternative: have scoped_drift treat a changed line whose only difference is records/<former>.md to records/<id>.md as unchanged, then keep the tool's rewrites, so that receipt and convention both hold.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/review/PHILOSOPHY.md",
+       "line": "193 (also theories/becoming/review/LOGIC.md:712)",
+       "quote": "([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks))",
+       "problem": "Two live review dossiers still link 07's old anchor. CD moved the other live links to the new anchor: GLOSSARY:62, COLLECTIVE:30 and 34, both overview editions, and 07 itself, in commit 4a6fd746b ('live links to them'). These links still resolve because 07:332 keeps the old anchor, but they would break if the old anchor were ever dropped, and the change is inconsistent across live documents.",
+       "evidence": "`grep -n 'r-widening-as-what-every-weighting-ranks'` lists PHILOSOPHY.md:193 and LOGIC.md:712. The new anchor is at 07-SIGNIFICANCE.md:331.",
+       "fix": "Point both links at `#r-widening-as-what-every-positive-weighting-ranks`. Then run check_dossiers, or tell their owners on the board: RP for LOGIC.md and RP2 for PHILOSOPHY.md.",
+       "severity": "minor"
+      },
+      {
+       "file": "_process/architecture/rebinds.jsonl",
+       "line": "392",
+       "quote": "each record bound there read against the changed lines: claims, premises and scope unchanged",
+       "problem": "The reason names only CD's changes to 07. All 19 records had last been reviewed against 07 as of b6da4b670, though, so the re-point also absorbed three 07 §1 paragraphs rewritten by another session in 2f539c959 (the evaluation note's block). The reason does not name them. None of the 19 records cites §1 or is linked there, so no claim rests on those lines, but the log is inexact about what was read.",
+       "evidence": "registry.reviewed_version of the reviewed sha 87ed67abeca8 gives 07 at b6da4b670. Diffed against 07 at 049e14ca1, it shows three blocks at old lines 33, 37 and 42: 'What forms, what is read, what is supplied' became 'What is shown, read and supplied.'; 'none reads significance' became 'none mentions significance'; and 'No law joins the first row to the second' became 'No law says that a standard which formed is a significance.' All three come from 2f539c959.",
+       "fix": "Append a rebinds line, or record in DESIGN §4, that the re-point of these 19 records also covered 07 §1's three paragraphs from 2f539c959 (old lines 33, 37, 42), and that they were read and lie outside every one of the 19 records' cited parts.",
+       "severity": "minor"
+      },
+      {
+       "file": "_process/architecture/rebinds.jsonl",
+       "line": "393, 395",
+       "quote": "which rewrote the record links in the overview's section 7 and the opening's Truth exists",
+       "problem": "Rebind lines 393 and 395 credit the overview's change to research.py rename-id; 395 says 'the record link in section 7 that research.py rename-id moved to the anchor'. The tool changed only OPENING. In the overview, the only change is the link to 07's §4.4 anchor, and it was edited by hand. That link is also an anchor link, not a record link.",
+       "evidence": "The receipt's 38 files do not include THE-THEORY-OF-BECOMING.md. At 049e14ca1 the overview's only match for an old id is line 148, '#r-widening-as-what-every-weighting-ranks'. The overview's change came in 4a6fd746b.",
+       "fix": "Append a correcting line, or note in DESIGN §4: 'the overview's link to 07 §4.4 was moved to the new anchor by hand (4a6fd746b); rename-id rewrote only OPENING's record link'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/data/shared-laws.json",
+       "line": "9",
+       "quote": "\"theories/becoming/results/completion/COVERAGE.json\": \"30fe7a6062a293bffc261a5ccae3dfbd5517131f4fc3fbd1fd995f608918502c\",",
+       "problem": "The computed shared-law view was regenerated in 4a6fd746b. Commit 62ff6fcb8 then changed COVERAGE.json, and the generator was not run again. `research.py check` therefore reports shared_laws current: false, with inputs_changed [COVERAGE.json]. At the merge base it was current. RESULT-WORKFLOW says to run the generator and then render after a change to COVERAGE.json.",
+       "evidence": "COVERAGE.json now hashes to fa3fa927cb2e...; shared-laws.json records 30fe7a6062a2.... At 049e14ca1 both were 97e5fe8fe3f6....",
+       "fix": "Run `python3 -B tools/research/shared_laws.py`, then `make research-render`, and commit the regenerated file and pages before landing.",
+       "severity": "minor"
+      },
+      {
+       "file": "tools/research/shared_laws.py",
+       "line": "12 (also theories/becoming/results/data/regions.json:3239)",
+       "quote": "From the measure it takes the anchors of the five shared laws (closure, balance, finite runs, lumping, order),",
+       "problem": "CD relabelled the shared law 'Order' as 'Widening' in 08, 01, the glossary, COVERAGE, RESULT-WORKFLOW and the NAMES map of this same file. Two labels were missed: this docstring, and the RA-curated region note that feeds the theory graph, 'closure, balance represented, finite runs and rest, lumping, order; below the frame'.",
+       "evidence": "shared_laws.py:86 has 'order': 'widening'; the docstring at line 12 still lists 'order'. regions.json:3239.",
+       "fix": "Change both to '..., lumping, widening'. The regions.json note is RA's, so tell its owner if it is not edited here.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+       "line": "13, 985 (also comparing-two-courses-on-what-they-admit.json:13)",
+       "quote": "realized and reachable widening relate a pair oppositely",
+       "problem": "The history note says the statement now reads 'as its home section in 07 §2 says'. 07 says something different: 'hold of a pair in opposite directions' (07:104, 109 and 789; the sciences dossier quotes it). The two records also differ from each other, 'relate a pair' against 'relate one pair'. A result is stated in its record and its home section in one wording.",
+       "evidence": "At 07:109: 'realized widening and widening what can be reached hold of a pair in opposite directions'. what-a-course-keeps-reachable.json:985: '... relate a pair oppositely, not that they rank it, as its home section in 07 §2 says'.",
+       "fix": "Use 07's wording in both statements ('hold of a pair in opposite directions', 'hold of one pair in opposite directions') if the length limit allows. If it does not, change the history notes to say the statement 'follows 07 §2's sense'.",
+       "severity": "minor"
+      },
+      {
+       "file": "theories/becoming/results/records/shared-laws-on-the-grammar.json",
+       "line": "1933 (and the zh of every CD note: comparing-two-courses-on-what-they-admit.json:999, horizon-optima-hold-the-greatest-renewal.json:656, stepwise-law-of-easing.json:265, what-a-course-keeps-reachable.json:986, what-keeping-widening-needs.json:1197, whole-and-regions-and-bounded-centers.json:619, widening-as-what-every-positive-weighting-ranks.json:534)",
+       "quote": "3 November 2026, CD (board item CD)：",
+       "problem": "Each Chinese history note opens with the English date and 'board item'. These records' other Chinese notes use Chinese, for example '2026年11月1日，U4d（研究第 498 节）：'. The notes are dated, say what changed and say the claim is unchanged; only the language of the opening is mixed. apply_cd.py:18 is the source, since it builds both languages from one English DATE.",
+       "evidence": "shared-laws-on-the-grammar.json:1929 reads '2026年11月1日，U4d（研究第 498 节）：'; line 1933 reads '3 November 2026, CD (board item CD)：'.",
+       "fix": "Open each Chinese note with '2026年11月3日，工作板条目 CD：', and give apply_cd.py a DATE_ZH.",
+       "severity": "minor"
+      },
+      {
+       "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cd-c-as-a-direction/apply_cd.py",
+       "line": "3 (also sweep.py:11)",
+       "quote": "names test (names-test/), applied exactly.",
+       "problem": "Two small errors in the kit. The names test is the file names-test.json, not a folder names-test/. sweep.py's docstring says the decision on each 'read' hit 'is in DESIGN.md §6', but §6 gives only counts (373 read in their sentence) and the two items the critic flagged. No per-hit decision for the 373 is recorded there.",
+       "evidence": "The kit's directory holds names-test.json and no names-test/. In DESIGN.md:119-134, §6 has counts and two items.",
+       "fix": "In apply_cd.py write 'names test (names-test.json)'. In sweep.py write 'read in the sentence; the counts and the two actions are in DESIGN.md §6, the judged names in names-test.json', or record the 373 decisions in a column of hits.tsv.",
+       "severity": "minor"
+      }
+     ]
+    },
+    "verdicts": {
+     "results": [
+      {
+       "index": 0,
+       "verdict": "confirmed",
+       "reason": "Major; it holds on my own reading. GrammarMap.lean:196 defines «阶全生成» R Es k x := «全生成» R (Es (k+1)) (Es k) x, so one order already reads two grains. KindRelay.Runs.generation_two_orders (KeepingWidening.lean:2256-2263) proves «阶全生成» at orders 0 and 1 over Web.kindGrains (757-762: carrierClass, kindClass, then activityClass), which is three grains and two orders. Elsewhere in the live text 'at two grains' means a single generation: 02-MAP.md:57 'The map's 生成 is continuation at two grains', 01-ROOT.md:418 'A line of descent generates at two grains', ONE-PAGE.md:15, the overview at :46 and :75, and the zh '以两种粒度'. So '全生成 at two grains along passing' (07:97, beside the citation of `generation_two_orders`), the glossary at :32, 01:151, 08:112 and COLLECTIVE:30 now say no more than that generation holds, and the second order drops out. The history note's 'The claim is unchanged' (what-keeping-widening-needs.json:1196) is therefore inexact, and so is its 'the word ... of 02'. 02-MAP.md:34, the home of the law of orders, says 'no order of grain assumed, generation at order `k`', and 'higher orders' (01:149) and 'second-order direction' (07:94, 789; the record's zh at :481 '二阶方向') still stand, so the commit's 'order has one sense' is not achieved either. DESIGN.md:103 still leaves 'two orders' to the glossary's owner.",
+       "fix": "Do not revert to bare 'two orders'. Use 02 §1's own phrase 'order of grain' in all six places. 07:97: 'every supported occurrence is 全生成 at two orders of grain along passing (formation within kind, kind within activity)'. GLOSSARY:32: 'generation can go on at two successive orders of grain while what can form only returns'. 01:151: 'generation at two orders of grain and renewal without end can hold...'. 08:112: 'which generation at two orders of grain does not give'. COLLECTIVE:30: 'is generation at two orders of grain along passing'. Record what-keeping-widening-needs, does_not_show: en '全生成 at two orders of grain' (201 characters, under the 240 limit), zh '两阶（粒度之阶）之全生成'. Since the branch is unlanded, rewrite its CD history note in place to say 'at two orders' now reads 'at two orders of grain', following 02 §1's law of orders (one 全生成 already reads two grains, and the relay's law gives two orders), and that the claim is unchanged. Then append a rebinds line for what-keeping-widening-needs against the new 07:97, and change DESIGN.md:103 to say this item was done here and how."
+      },
+      {
+       "index": 1,
+       "verdict": "confirmed",
+       "reason": "Major; confirmed. whole-and-regions-and-bounded-centers.json:200-201, dependencies[significance-retained-within-margin].interface.input, still reads zh '整体优先与搭便车者的失去。' and en 'The whole first and the free rider's loss.' The rendered page shows it at whole-and-regions-and-bounded-centers.md:75 as 'Input: The whole first and the free rider's loss.' This is exactly the phrase whose priority reading DESIGN.md:64 and the record's own CD history note (json:618-619) give as the reason for the rename. The only other matches in live records are dated history notes (loss-beyond-a-region.json:448-449, and this record's own 574-575), which correctly keep the wording of their time.",
+       "fix": "Set interface.input to en 'Retaining in the whole and in every region, and the free rider's loss.' and zh '整体与各区域中的保留，与搭便车者的失去。' Extend the record's CD history note, or add one beside it, to say the dependency interface's wording followed the title and the claim is unchanged. Then render. No source binding changes."
+      },
+      {
+       "index": 2,
+       "verdict": "partly",
+       "reason": "The Lean part holds. Weightings.lean:1313-1317 `Web.widens_iff_every_weighting` concludes `W.Widens l l' ↔ ∀ w, Weighting.Positive items w → ...`, so positivity sits inside the conclusion and is not a hypothesis that Lean naming convention could leave out. Its sibling is already named `Weighting.widens_iff_every_positive`. DESIGN.md:63 renames the record because 'every weighting' states a universal the record refutes. names-test.json:290 keeps the Lean name for another reason (each ranking is a premise), and DESIGN §3's next-edition list (70-72) omits it. So §3 is inconsistent with its own test. The alias part is weaker. The aliases at json:170-176 pre-exist (they are unchanged from 049e14ca1), they serve research-find, and there is precedent: GC2's renamed record selection-when-the-lumping-changes keeps 'registration revision' as an alias. So keeping the former title as a search alias is not a defect. 'C as the order every weighting shares' is not a former title, though, and it does state the refuted universal. Severity: major for the design note's gap, minor for the alias.",
+       "fix": "In DESIGN §3 'Left for the next edition', add `Web.widens_iff_every_weighting` → `Web.widens_iff_every_positive` (matching `Weighting.widens_iff_every_positive`), with the record's reason: positivity is in its conclusion, and a zero weight ties. Note that the record's alias and 07:342's citation follow it in that edition. Change the alias 'C as the order every weighting shares' to 'C as the order every positive weighting shares'. Keep the two former-title aliases as search terms, following GC2's precedent, or drop them. Either way, no new inconsistency arises, because former_ids and the redirect page cover the old id."
+      },
+      {
+       "index": 3,
+       "verdict": "partly",
+       "reason": "Confirmed that §4 is stale. DESIGN.md was last edited in 6d4648c76, before ff7b52571 and d1a3951c1. The rebinds log holds five CD lines (392-396). Lines 392-394 cover 24 distinct records (19, 4 and 1), and lines 395 and 396 re-point four of those again: the three overview records from 393, and what-keeping-widening-needs from 392. So the finding's 'three of them twice and one again' miscounts: four records were re-pointed twice. Line 103 is overtaken by ff7b52571. §4 names only the sciences dossier (92), while b62fe64c4 changed the philosophy dossier's P-02 quotation. That commit's message itself leaves the dossier's fuller rewrite, including PHILOSOPHY.md:98's unqualified 'Positions, regions and standards form within the one unfolding.', to its owner at the freeze, and DESIGN does not record it. I could not confirm from the board that the owner is 'RP2'.",
+       "fix": "DESIGN.md:94: '24 records re-pointed after reading, four of them twice, in five lines of the rebinds log (392 to 396). Nothing they say changed.' Line 103: replace it with what is decided under finding 0 (for example: 'two orders' now reads 'two orders of grain' in the glossary, 01, 07 §2, 08, the collective page and the record). Under 'Lands now', add: 'the philosophy dossier's P-02 quotation of 07 §1's first sentence, which now matches it' and '07 §2's grain wording (finding 0)'. Under the next edition, add: 'PHILOSOPHY.md:98, P-02's paraphrase \"Positions, regions and standards form within the one unfolding.\", to be qualified by the thesis as 07 §1 now is, with the dossier's owner at the freeze'."
+      },
+      {
+       "index": 4,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. For the six study notes (BECOMING-RENEWAL-READING.md and .zh.md, DELEGATED-CHOICES.md and .zh.md, aj-joint-selection/PLAN.md, ue4-second-order/LANDING.md), the current sha256 differs from the receipt's sha256_after, and 05c2bd0c4 reverted exactly those files. The other mismatches the receipt shows (07, the records, shared-laws.json) are later edits and expected. rename_ids.py:33-35 says the study logs' 'links are rewritten'. The receipt has no 'note', while R35-E4-renames.json has one for a change made after the fact. No checker reads rename receipts (only rename_ids.py writes sha256_after), so nothing fails. The record is simply inexact. DESIGN.md:93 does state the choice, but the receipt does not.",
+       "fix": "Add to cd-ranking-names.json a 'note' field like R35-E4-renames.json's: 'The six study notes' link rewrites (BECOMING-RENEWAL-READING.md and .zh.md, DELEGATED-CHOICES.md and .zh.md, aj-joint-selection/PLAN.md, ue4-second-order/LANDING.md) were reverted in 05c2bd0c4 so that their cited sections stay as reviewed; the redirect pages and the registry's former-id location resolve them; for those six, sha256_after is not the landed state.' Prefer this over changing scoped_drift, which would undo the second assertion of test_renamed_record_is_located_by_its_former_id that was added on purpose."
+      },
+      {
+       "index": 5,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. PHILOSOPHY.md:193 '([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks))' and LOGIC.md:712 '([07 §4.4](../chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-weighting-ranks))' still link the old anchor. CD moved the other live links (the glossary, the collective page, both overviews). They resolve, because 07:332 keeps the old anchor. No record binds to either dossier, so changing a link causes no drift. The link sits outside any quotation, so the dossier check is unaffected.",
+       "fix": "Point both links at `#r-widening-as-what-every-positive-weighting-ranks`. If the dossiers' owners are to edit them instead, record the two links in DESIGN §4's next-edition list with those owners."
+      },
+      {
+       "index": 6,
+       "verdict": "partly",
+       "reason": "The fact holds. At 049e14ca1 the 19 records bind 07 at sha 87ed67abeca8, which is 07 at b6da4b670. Between that and the merge base, 2f539c959 rewrote 07 §1's block, for example 'What forms, what is read, what is supplied, what is out of reach.' → 'What is shown, read and supplied.', 'none reads significance' → 'none mentions significance', and 'No law joins the first row to the second' → 'No law says that a standard which formed is a significance.' The 392 re-point to 777f75ba0's 07 absorbed those lines, while its reason describes only CD's changes. None of the 19 records cites any 07 anchor (each is located only by 07 linking its page), and scoped drift had already treated those lines as outside them, so no claim rests on them. The proposed fix is wrong, however. The rebinds log records re-pointings, and an appended line that re-points nothing would misuse it.",
+       "fix": "Record it in DESIGN §4, not in a new rebinds line: 'The re-point of the 19 records bound to 07 (rebinds 392) also moved them past 07 §1's block as rewritten in 2f539c959 (the evaluation note's correction), which lies outside every part of 07 that these records cite or are linked from, and was read.' If a later re-point of these records happens before landing, its reason can say the same."
+      },
+      {
+       "index": 7,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. The receipt's 38 files include OPENING.md and not THE-THEORY-OF-BECOMING.md, and 603ce1722 touches only OPENING among the fronts. At 049e14ca1 the overview's only match for an old id is line 148 (section 7), which is an anchor link '#r-widening-as-what-every-weighting-ranks', moved by hand in 4a6fd746b. Rebind 393 credits rename-id with rewriting 'the record links in the overview's section 7', then also lists the overview's anchor move, so it counts one change twice and gives the wrong agent. Rebind 395 calls it 'the record link in section 7 that research.py rename-id moved to the anchor', which is wrong in both respects.",
+       "fix": "Add to DESIGN §4, beside the corrected rebinds count (finding 3): 'In the overview, only the link to 07 §4.4 changed, moved to the new anchor by hand (4a6fd746b); rename-id rewrote only OPENING's record link (Truth exists). Rebinds 393 and 395 say otherwise.' A new rebinds line is the wrong place, since it would re-point nothing."
+      },
+      {
+       "index": 8,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. shared-laws.json:9 records COVERAGE.json as 30fe7a6062a2… (regenerated in 4a6fd746b), while COVERAGE.json now hashes to fa3fa927cb2e…, after 62ff6fcb8. At 049e14ca1 both were 97e5fe8fe3f6…. registry.shared_laws_status (registry.py:861-886) will list COVERAGE.json in inputs_changed and report current false. Its docstring says this is 'reported by the check, never an error', so nothing fails, but the file's own 'about' asks for a rerun after a change to COVERAGE.json.",
+       "fix": "Run `python3 -B tools/research/shared_laws.py` (it needs the checker's cache, per shared_laws_status), then `make research-render`, and commit the regenerated shared-laws.json and pages before landing. Do this after any further COVERAGE.json edit."
+      },
+      {
+       "index": 9,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. shared_laws.py:12 lists the laws by their display names ('finite runs' is the display name of id 'return' in NAMES at :86), so 'order' there is a missed label. The NAMES map now has 'order': 'widening'. regions.json:3239's note for Becoming.GrammarLaws, 'closure, balance represented, finite runs and rest, lumping, order; below the frame', is also stale. One detail is inexact: regions.json feeds theory_graph.py's regions and bases, but this note's text is not emitted (theory-graph.json has no 'below the frame'), so no reader sees it. That lowers the stakes, though the fix stays the same.",
+       "fix": "shared_laws.py:12: '(closure, balance, finite runs, lumping, widening)'. Changing it changes the generator's hash, an input of shared-laws.json, so rerun the generator after it (finding 8). regions.json:3239: '…, lumping, widening; below the frame', or pass it to RA, its curator, if it is not edited here."
+      },
+      {
+       "index": 10,
+       "verdict": "refuted",
+       "reason": "07's wording does not fit the record limit. RESULT-WORKFLOW.md:94 sets statement at 300 characters, enforced as an error. what-a-course-keeps-reachable's statement is 295 characters and would be 308 with 'hold of a pair in opposite directions', and comparing-two-courses-on-what-they-admit's is 300 and would be 313. AGENTS.md requires a result to be stated in both places, with a change going to both, not in one wording. The history note's 'as its home section in 07 §2 says' attaches to the content ('relate a pair oppositely, not that they rank it'), and 07:104, 109 and 789 say exactly that in longer words. 'A pair' and 'one pair' are in two different records about two different pairs (reachable against realized widening; lag against eventual widening), so the two records are not inconsistent with each other. The zh of both records already says '于一对进程方向相反', which matches 07.",
+       "fix": ""
+      },
+      {
+       "index": 11,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. The zh history notes open '3 November 2026, CD (board item CD)：', for example shared-laws-on-the-grammar.json:1933, while the same records' other zh notes are in Chinese ('2026年11月1日，U4d（研究第 498 节）：' at :1929; '2026年10月29日，工作板条目 GW（研究第 448 节）：' at what-keeping-widening-needs.json:1185). apply_cd.py:18 builds both languages from one English DATE. There is precedent for the defect: R35 E8's tool-written notes ('20 October 2026, R35 (twentieth review, E8)：') do the same in about 20 records. CD should not repeat it.",
+       "fix": "Open each CD zh history note with '2026年11月3日，工作板条目 CD：' (eight notes, the record names as listed), give apply_cd.py a DATE_ZH = '2026年11月3日，工作板条目 CD' for the zh side, then render."
+      },
+      {
+       "index": 12,
+       "verdict": "confirmed",
+       "reason": "Minor; confirmed. The kit directory holds names-test.json and no names-test/ folder, yet apply_cd.py:3 says 'names test (names-test/)'. sweep.py:11 says that for class 'read' 'the decision is in DESIGN.md §6', but §6 (DESIGN.md:117-134) gives only the counts (373 read) and the critic's two actionable items. No per-hit decision is recorded there or in hits.tsv, whose column holds the class and not a decision.",
+       "fix": "apply_cd.py:3: 'names test (names-test.json)'. sweep.py:11: 'read: none of the rules is sure; read in the sentence. DESIGN.md §6 gives the counts and the two that needed action, and names-test.json the judged names.'"
+      }
+     ]
+    }
+   }
+  ],
+  "critic": {
+   "read": "Worked read-only at c-direction = 0dd7a9324. I judged ownership against `git diff 90ed70b88 c-direction`, since the merge base is now 90ed70b88. I edited nothing and the tree is clean.\n\nRead:\n- The diff stat in full, including files no lens named: _process/goals/generative-alignment.json, the Lean README (both editions), results/data/arguments-a-l.json and arguments-m-z.json, regions.json, COMPLETION.md and the generated indexes.\n- A word-level diff (my own script) of every hand-written hunk in 07, 08, 01, GLOSSARY, COLLECTIVE-DIRECTION, OPENING, the overview in both languages, PHILOSOPHY P-02, RESULT-WORKFLOW, shared_laws.py, COVERAGE.json, SCIENCES.md and the six changed record JSONs.\n- DESIGN.md in full, and rebinds.jsonl lines 392–396.\n- 07 lines 1–135, 205–256, 325–365 and 524–560.\n- 08 §7 (425–440) and the known-results rows (505–525).\n- 01 §7 (158–170).\n- The glossary rows widening, ranking, C and shared law, and COLLECTIVE-DIRECTION lines 1–40.\n- The renamed records whole and in both languages, plus the full laws, does_not_show and correspondence of what-a-course-keeps-reachable, comparing-two-courses-on-what-they-admit, eventual-widening, tasks-and-what-performs-them, what-can-be-born-next, the-run-classes-and-widening, four-cases-of-a-part, stepwise-law-of-easing, relation-level-law-of-easing, ranking-under-readings and basic-priority-step-by-step.\n\nScripted scans (sentence by sentence, for widening or covering said to rank or order with no C or premise):\n- every record's laws and does_not_show;\n- every record's related and dependency text that points at a restated record;\n- chapters 01–06 and 08;\n- the fronts and both Chinese fronts;\n- all six review dossiers (ALIGNMENT, BUDDHIST-THOUGHT, CLASSICAL-TEXTS, LOGIC, PHILOSOPHY, README), with quoted spans stripped;\n- the review packet's key and letters;\n- results/data/*.json.\nI also grepped for the old 07 §2 heading, 'order of what can form', 'whole first' and 'every weighting'.\n\nLean read in source: Extension.lean in full (`Comparison.climbs`, `outgrows` and `separates`, which no lens checked); Ranking.lean (`ExtendsUnder`, `ComparisonUnder`, `whole_run_ranks`, `stepwise_unranked`, `relational_unranked`, `readings_rank_differently`, `ThirdParty.restraint_unranked_stepwise`); Weightings `widens_iff_every_positive` and `Web.widens_iff_every_weighting`; `CausalGrowth.no_order_contains_both`; `KindRelay.Runs.generation_two_orders`.\n\nChecks run, none of them run by the lenses:\n- `research.py check --strict-fresh`: 0 errors, no stale index, no source drift. reading_drift is 99, which predates CD. shared_laws is current: false, as mechanics found.\n- `reading_catalogue.py --check`.\n- The full research-test suite: `make research-test` ran 308 tests, OK, 1 skipped. Mechanics had run only three test files.\n\nI do not repeat the three lenses' findings.",
+   "findings": [
+    {
+     "file": "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+     "line": "258 (law 18; zh 259); also laws 3 (:53), 6 (:88), 7 (:103), 8 (:113), 9 (:126)",
+     "quote": "Realized and reachable widening rank a pair oppositely, on this witness:",
+     "problem": "The record restated its statement but not its laws, so it now gives one result two ways. Statement (:13): 'realized and reachable widening relate a pair oppositely'. Its history note (:985) adds 'not that they rank it'. Law 18 still says 'rank a pair oppositely', and its zh keeps '对一对排序相反' while the statement's zh now reads '于一对进程方向相反'. The home line 07:107 was restated clause by clause, but the same clauses in the laws were not:\n- law 3: 'widening what can be reached does not rank s above s'' (home: 'the other does not widen what can be reached over it');\n- law 6: 'a strict partial order ranking no configuration above one covering it' (home: 'never puts');\n- law 7: 'widening with a lag never ranks a configuration above its predecessor, so the lagged order ranks a successor above it' (home: 'puts');\n- law 8: 'the lagged order ranks the climb above none';\n- law 9: 'it ranks none above the climb'.",
+     "evidence": "`KeptAlternative.disagree`, `Reaching.not_widens_of_wider_now` and `Reaching.WidensOrLater.not_covered` are premise-free; no `Better` occurs. 07:107 and 07:109 now say 'does not widen … over it', 'puts' and 'hold of a pair in opposite directions'. AGENTS.md: 'A result is stated in its record and its home section …, and a change goes to both.' Rebind line 392 says this record was 'read against the changed lines'. The rendered page shows both forms: what-a-course-keeps-reachable.md:8 (statement) and :47 (law 18).",
+     "fix": "Restate the laws as the home now reads, with one history note:\n- law 18: 'Realized and reachable widening hold of a pair in opposite directions, on this witness:', zh '于此见证上，实现之扩大与可达之扩大于一对进程方向相反：';\n- law 3: '… so where s' starts a course and admits now what s does not, s does not widen what can be reached over s', nor … is s above s' in the lexical order';\n- law 6: '… a strict partial order putting no configuration above one covering it …';\n- law 7: '… widening with a lag never puts a configuration above its predecessor, so the lagged order puts a successor above it exactly where same-offset widening does';\n- law 8: '… the lagged order puts the climb above none …';\n- law 9: '… it puts none above the climb, as it must'.\nAlternatively, if DESIGN §3's 'the lagged order ranks' is kept (lean lens finding 6), revert 07:107 so that home and record agree either way.",
+     "severity": "major"
+    },
+    {
+     "file": "theories/becoming/results/records/tasks-and-what-performs-them.json",
+     "line": "387 (law 36), 395 (law 37), 353 (law 32), 376 (law 35); also eventual-widening.json:33 (law 2), the-run-classes-and-widening.json:52, :61 (laws 5, 6) and :139 (correspondence), what-can-be-born-next.json:187 (law 16)",
+     "quote": "Widening can rank the output above the input. … so UE10's lagged order ranks the output above.",
+     "problem": "CD restated the home lines of four more records but not those records' laws, which keep the premise-free verbs their homes dropped:\n- tasks-and-what-performs-them: 07:122 now says the lagged order 'puts a delivered output above its input' and 'holds of no pair'. Laws 32, 35, 36 and 37 still say it 'ranks' (law 35: 'UE10's lagged order ranks nothing there'), and law 36 is headed 'Widening can rank the output above the input'.\n- eventual-widening: 07:92 changed 'Where widening orders a pair' to 'Where one course of a pair widens the other'. Law 2 still says 'where widening orders a pair, eventual widening agrees there'.\n- the-run-classes-and-widening: 07:69 changed 'do not alone decide the order' to 'whether a part narrows, keeps or widens what can form'. Law 5 still says 'Arising is where a part's place in the order begins', law 6 'The arising class does not decide the order', and the correspondence 'related to the order by these laws'.\n- what-can-be-born-next: 07:129 and 07:789 replaced 'ranks highest' with 'widens every course …'. Law 16 still says the two widenings 'one ranks the antichain above the chain, the other the chain above the antichain'.\nDESIGN §4 lands only five record statements, and §3 defers only Lean docstrings (`CausalGrowth.no_order_contains_both`'s among them). These record texts are neither landed nor listed for the next edition.",
+     "evidence": "These are all premise-free declarations with no `Better` slot: `RiseTask.widens`, `FallTask.widens_back`, `Catalysis.not_widensOrLater`, `Web.WidensWithoutEnd.eventually`, `ArisingDrawer.arises_narrows`, `ArisingGiver.arises_widens` and `CausalGrowth.no_order_contains_both`, whose statement is about any irreflexive transitive `above` containing both widenings. The glossary's row 62 says no law of the dynamics gives an order. Rebind line 392 lists eventual-widening, tasks-and-what-performs-them and what-can-be-born-next as read against the changed lines.",
+     "fix": "Restate each as its home reads, with a history note in each record:\n- law 36: 'Widening can put the output above the input. … so UE10's lagged order puts the output above.'\n- law 37: '… puts the input above …'\n- law 32: '… widening with a lag never puts what a configuration reaches above it, and UE10's lagged order puts it above exactly where same-offset widening does.'\n- law 35: '… and UE10's lagged order holds of no pair there …'\n- eventual-widening law 2: 'where one course of a pair widens the other, eventual widening agrees there …'\n- the-run-classes-and-widening law 5: 'Arising is where it begins whether a part narrows, keeps or widens what can form.' Law 6: 'The arising class does not decide whether a part narrows, keeps or widens what can form: …'. Correspondence: '… related to narrowing, keeping and widening by these laws …'.\n- what-can-be-born-next law 16: 'one puts the antichain above the chain, the other the chain above the antichain'.\nOr list these laws in DESIGN §4's next edition, with the reason.",
+     "severity": "major"
+    },
+    {
+     "file": "theories/becoming/results/records/ranking-under-readings.json",
+     "line": "561 (rendered ranking-under-readings.md:130); also eventual-widening.json:416, :423, comparing-two-courses-on-what-they-admit.json:565, what-a-course-keeps-reachable.json:607, what-keeping-widening-needs.json:685, tasks-and-what-performs-them.json:606",
+     "quote": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading.",
+     "problem": "The 'related' lines that summarize the restated records still carry those records' old statements, and they render on record pages. ranking-under-readings' summary of stepwise-law-of-easing is that record's pre-CD statement word for word: a premise-free 'ranks above'. CD replaced it at stepwise-law-of-easing.json:13 with 'extends overdraw …, and C ranks it above'. Other related summaries still say:\n- 'the two rank a pair oppositely' (comparing-two-courses:565);\n- 'widening with a lag and eventual widening rank a pair oppositely' (eventual-widening:416);\n- 'so it ranks a range that keeps widening above one wider now' (eventual-widening:423, what-keeping-widening-needs:685);\n- 'what a course keeps reachable ranks a range …' (what-a-course-keeps-reachable:607);\n- 'which ranks a delivered output above its input' (tasks-and-what-performs-them:606).\nThe homes (07:104, 109, 122, 789) and the restated statements say 'hold of a pair in opposite directions', 'relate … oppositely' and 'puts'.",
+     "evidence": "`Ranking.restraint_extends_iff_stepwise` is premise-free and concludes extension. Only `Ranking.restraint_ranks_stepwise` concludes `Better`, under `ComparisonUnder … Better`. stepwise-law-of-easing's history note says the statement now says restraint 'extends overdraw, which needs no premise, and that C ranks it above'. A reader on ranking-under-readings.md:130 sees the premise-free form, then the C form one click on.",
+     "fix": "Bring each summary to the restated statement:\n- ranking-under-readings:561: '… restraint that takes within what it gives extends overdraw for any number of drawers under the stepwise reading where it includes an event the other withholds, and C ranks it above.'\n- comparing-two-courses:565 and eventual-widening:416: '… hold of a pair in opposite directions.'\n- eventual-widening:423, what-a-course-keeps-reachable:607 and what-keeping-widening-needs:685: '… so it puts a range that keeps widening above one wider now that starts a course only with a lag …'.\n- tasks-and-what-performs-them:606: '… is never put above its input by widening with a lag … which puts a delivered output above its input on one witness and below on another.'",
+     "severity": "major"
+    },
+    {
+     "file": "theories/becoming/review/PHILOSOPHY.md",
+     "line": "193",
+     "quote": "C says that widening what can form is better. With no premise, widening is an order.",
+     "problem": "The philosophy dossier's P-07 ('C: widening is better') puts to reviewers the very sentence CD removed from 07's thesis line ('With no premise, widening what can form is an order'). It follows that sentence directly with C's 'better'. Under the glossary's one sense, order is 'which course is better', so a philosopher reading this is told that a premise-free ranking exists. That is what CD says no law gives. check_dossiers does not catch it because it is the dossier's own prose, not a quotation. Mechanics reported only that this line links 07's old anchor. DESIGN §4 does not list it, and b62fe64c4 leaves the dossier's fuller rewrite to its owner at the freeze without naming P-07.",
+     "evidence": "07:3 now reads 'With no premise, the laws give how two courses differ in what they admit (one widens the other, they admit the same, or they are mixed)'. GLOSSARY:62 reads 'No law of the dynamics gives one … widening … says which admits more, not which is better'. `Comparison` (Extension.lean:57) has `Better` as a free slot, and `Web.paths_comparison_widens` only reads 'better' as widening.",
+     "fix": "Replace the sentence with: 'With no premise, widening says which of two courses admits more: it is one-way and transitive, a strict partial order in the mathematical sense, and not a ranking; that the wider is better is C.' Move the §4.4 link to `#r-widening-as-what-every-positive-weighting-ranks`. Hand P-07 to the dossier's owner with P-02 for the freeze, and add the item to DESIGN §4.",
+     "severity": "major"
+    },
+    {
+     "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/COLD-READ-KEY.md",
+     "line": "37",
+     "quote": "| 2.11 Widening as an order of courses: proved, needing no premise; calling it better is C | ★ | [07 §2](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#order) |",
+     "problem": "The cold read's key is 'written from the account (the chapters)'. Its starred item 2.11 now states what its home no longer says. 07 §2's heading is 'How two courses differ, with no premise', and the thesis line drops 'is an order'. A reader's 300-word note saying 'widening is an order with no premise' would be marked R (stated right) by this key, so the reader measure would score as right the wording CD treats as wrong under the glossary's one sense. The key is frozen per run ('a correction after that is made in the run's marks, with its reason, and never here for that run'), so nothing in CD or DESIGN §4 tells the key's owner.",
+     "evidence": "07:3 and 07:45 as changed by CD. GLOSSARY:62. DESIGN §3: '07 §2's heading … claimed what the glossary row says no law gives.'",
+     "fix": "Tell the key's owner, the reader-measure fork. For the next round, item 2.11 should read: 'How two courses differ in what they admit (one widens the other, the same, or mixed): proved, needing no premise; calling the wider better is C'. For a run already fixed, record in its marks, with the reason, that 'an order of courses' is marked against 07 at 0dd7a9324. Add the item to DESIGN §4.",
+     "severity": "minor"
+    },
+    {
+     "file": "theories/becoming/results/data/arguments-a-l.json",
+     "line": "462-463",
+     "quote": "\"argument_en\": \"Dynamics do not entail significance; with no premise widening is an order; the ethics rests on two premises …\"",
+     "problem": "The reading register's entry for 07 (chapter-07-significance), in both languages ('不加前提，扩大即一种次序'), paraphrases the thesis sentence CD rewrote. CD's sweep covered 07, the fronts, the glossary, ONE-ARGUMENT and the collective page, not the results/data registers. The entry's source_sha256 (26ca99ca…) already drifted before CD (07 is now c0f3b3b2…), so the catalogue check flags it for reread. But it is one of the 99 drifted entries, and nothing points the reread at this sentence.",
+     "evidence": "07:3. reading_catalogue.py's maintenance text: 'a changed source requires a targeted reread before its hash is refreshed'. tools/research/session_map.py:100 reads this register.",
+     "fix": "Reread 07 and restate the entry: argument_en 'Dynamics do not entail significance; with no premise the laws give how two courses differ in what they admit; the ethics rests on two premises …'; argument_zh '…；不加前提，诸律给出两个进程在所纳上如何不同；…'. Then refresh source_sha256.",
+     "severity": "minor"
+    }
+   ]
+  }
+ }
+}

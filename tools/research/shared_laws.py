@@ -9,7 +9,7 @@ not pass or did not check the current sources; with --dump it reads a saved dump
 check never reads such a file as current.
 
 It reads the measure, unchanged: measure_grammar.py in OU3b's study folder, and the EC measure.py it loads.
-From the measure it takes the anchors of the five shared laws (closure, balance, finite runs, lumping, order),
+From the measure it takes the anchors of the five shared laws (closure, balance, finite runs, lumping, widening),
 the grammar test, and the rows for the central declarations of COVERAGE.json, with their dependence, category
 and reason. For each law of each record, it follows the constants the law's declarations' types and values use
 (proofs, and the bodies of definitions), as the measure does. It writes theories/becoming/results/data/

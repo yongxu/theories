@@ -109,7 +109,7 @@ Board item EC aims at an elegant completion: few laws, each stated once at the l
 | Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `Flow.BalancesBetween`, `balance_over_stretch_on`, `«守数当且仅当可对»`, `«程守数当且仅当可对»` | 54 |
 | Finite runs | within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop`, `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»` | 14 |
 | Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder`, `«像定后当且仅当同行»`, `«同行»` | 2 |
-| Widening | widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
+| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
 
 Resting on no shared law (39), by row:
 

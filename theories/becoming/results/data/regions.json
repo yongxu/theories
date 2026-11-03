@@ -3236,7 +3236,7 @@
   "Becoming.GrammarLaws": {
    "region": "root",
    "base": "grammar",
-   "note": "the shared laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, order; below the frame"
+   "note": "the shared laws on the grammar (OU3b): closure, balance represented, finite runs and rest, lumping, widening; below the frame"
   },
   "Becoming.GrammarMap": {
    "region": "map",
