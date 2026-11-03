@@ -124,7 +124,7 @@ The disagreements are kept: the Cheng weishi lun grounds continuation in a store
 
 ## 7. Significance, ethics and alignment
 
-On the argued thesis of one unfolding (§9), positions form within it; nothing outside it owns value. A *center* is a formation taken as a standpoint. A *significance* says, for a standpoint, a step and a formation, whether from that standpoint the formation's continuation then has significance: a proposition with no number or valence. It is supplied, the one free predicate in significance's statement ([evaluation](chapters/07-SIGNIFICANCE.md#evaluation)).
+On the philosophical thesis of one unfolding, argued (§9), positions form within the unfolding; nothing outside it owns value. A *center* is a formation taken as a standpoint. A *significance* says, for a standpoint, a step and a formation, whether from that standpoint the formation's continuation then has significance: a proposition with no number or valence. It is supplied, the one free predicate in significance's statement ([evaluation](chapters/07-SIGNIFICANCE.md#evaluation)).
 
 **What the dynamics leave open.** Proved for every type: with significance a free parameter that nothing else reads, a statement that reads only the dynamics and holds with some significance also holds with a rival that leaves some formation out, so where there is a standpoint and a formation, no such statement entails the continuation condition. This shows non-entailment by the represented dynamics, by construction, not that becoming leaves significance undetermined ([what the dynamics leave open](chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)).
 
