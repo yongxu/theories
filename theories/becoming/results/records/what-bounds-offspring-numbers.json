@@ -128,8 +128,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top); several amounts at once and the rational reading (variance over mean) are not stated; the statement here is the case of exact transmission.",
-      "zh": "一般的 Fisher 定理：经由一个所载之量的加性部分陈述于记录 additive-part-of-offspring-variance（至多为全部方差，本记录的情形是其顶端）；同时经由多个量与有理数读法（方差除以均值）未陈述；此处陈述的是传递精确的情形。",
+      "en": "Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top), and several amounts at once with the reading over the mean (the additive variance over the mean offspring number) in record the-breeding-value, cross-multiplied, a breeding value meeting the normal equations given; inexact transmission, where Fisher's environment term enters, is not stated; the statement here is the case of exact transmission.",
+      "zh": "一般的 Fisher 定理：经由一个所载之量的加性部分陈述于记录 additive-part-of-offspring-variance（至多为全部方差，本记录的情形是其顶端），同时经由多个量并按均值读（加性方差除以平均后代数）陈述于记录 the-breeding-value，以交叉相乘表示，满足正规方程的育种值为给定；传递不精确、Fisher 的环境项进入之处未陈述；此处陈述的是传递精确的情形。",
       "kind": "scope"
     },
     {
@@ -170,8 +170,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T091125.435056Z）：Becoming.Reproduction 的 72 项声明（50 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 244 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.",
-    "zh": "同时经由多个所载之量的加性部分；以亲代从其所依存条件所取之量、连同支持来约束后代数；独立审查。"
+    "en": "Offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.",
+    "zh": "以亲代从其所依存条件所取之量、连同支持来约束后代数；独立审查。"
   },
   "correspondence": {
     "en": "Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: the change of mean fitness is the variance of fitness over its mean. With n_t the size of generation t, number_variation and ByNumber.step say n_t n_(t+2) - n_(t+1)^2 = concordance + n_t(raised - lowered), the concordance over ordered pairs being n_t^2 times the variance of offspring number; Price (1972) reads the general theorem as the partial change, the rest left to the environment. That a finite closed resource ends reproduction is the Malthusian bound. Readings (the AI's): selection on offspring number never lowers its mean; where nothing flows in, transmission must.",
@@ -257,6 +257,13 @@
       "detail": {
         "en": "The additive part through any carried amount, of which this record's exact case is the top.",
         "zh": "经由任一所载之量的加性部分，本记录的精确情形是其顶端。"
+      }
+    },
+    {
+      "id": "the-breeding-value",
+      "detail": {
+        "en": "Fisher's theorem through several carried amounts, with the reading over the mean, of which this record's exact case is the top.",
+        "zh": "经由多个所载之量、按均值读的 Fisher 定理，本记录的精确情形是其顶端。"
       }
     }
   ],
@@ -408,6 +415,10 @@
     {
       "en": "25 October 2026, UE5: a lineage open to inflow, bounded by what flows in, is answered by record pace-of-selection-within-what-flows-in (study section 416), which joins Becoming.Reproduction to Becoming.Entropy; this record's next delta updated; its laws and their statements are unchanged.",
       "zh": "2026年10月25日，UE5：向流入开放的世系受流入之量约束，由记录 pace-of-selection-within-what-flows-in 回答（研究第 416 节），其接 Becoming.Reproduction 于 Becoming.Entropy；本记录的下一步已更新；定律及其陈述不变。"
+    },
+    {
+      "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said several carried amounts at once and the reading over the mean are not stated; record the-breeding-value (EV15, 22 October 2026) states them, now cross-referenced and related; its laws and their statements are unchanged.",
+      "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”与“下一步”曾说同时经由多个所载之量以及按均值读未陈述；记录 the-breeding-value（EV15，2026年10月22日）陈述了它们，今交叉引用并列为相关；定律及其陈述不变。"
     }
   ]
 }

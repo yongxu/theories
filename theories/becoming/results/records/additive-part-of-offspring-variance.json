@@ -72,8 +72,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Several carried amounts at once (the breeding value, a multiple regression) and Fisher's identity itself (the predicted mean rising by the additive variance over the mean offspring number), which needs the regression coefficient, a ratio, are not stated.",
-      "zh": "同时经由多个所载之量（育种值，多元回归），以及需要回归系数（一个比值）的 Fisher 恒等式本身（预测均值按加性方差除以平均后代数上升），未陈述。",
+      "en": "Several carried amounts at once (the breeding value, a multiple regression) and Fisher's identity itself (the predicted mean rising by the additive variance over the mean offspring number) are not stated here: record the-breeding-value states both, cross-multiplied, with a breeding value meeting the normal equations given and, for the mean's rise, exact transmission; one carried amount is the case of a single pair.",
+      "zh": "同时经由多个所载之量（育种值，多元回归），以及 Fisher 恒等式本身（预测均值按加性方差除以平均后代数上升），此处未陈述：记录 the-breeding-value 陈述二者，以交叉相乘表示，满足正规方程的育种值为给定，均值的上升另需传递精确；一个所载之量是单一对的情形。",
       "kind": "scope"
     },
     {
@@ -109,8 +109,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T170500.588275Z）：Becoming.Reproduction 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 279 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Several carried amounts at once (the breeding value); the equality case; Fisher's identity with rational amounts; an independent review.",
-    "zh": "同时经由多个所载之量（育种值）；取等情形；以有理数的量陈述的 Fisher 恒等式；独立审查。"
+    "en": "The equality case; Fisher's identity with rational amounts; an independent review.",
+    "zh": "取等情形；以有理数的量陈述的 Fisher 恒等式；独立审查。"
   },
   "correspondence": {
     "en": "Fisher 1930's fundamental theorem in its general form, read by Price 1972: the change in mean fitness by selection is the additive genetic variance in fitness over mean fitness, the additive variance being the variance of the regression of fitness on what is carried. Through one carried amount the additive variance is Cov(w, a)^2 / Var(a), at most Var(w) by Cauchy-Schwarz, equal where fitness is affine in the amount. Readings (the AI's): how fast selection moves what is carried is bounded by how much offspring numbers and the amount vary.",
@@ -375,6 +375,10 @@
     {
       "en": "22 October 2026, EV13-EV16: related record the-breeding-value added (study section 368); its laws and their statements are unchanged.",
       "zh": "2026年10月22日，EV13-EV16：加入相关记录 the-breeding-value（研究第 368 节）；定律及其陈述不变。"
+    },
+    {
+      "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show said Fisher's identity needs a ratio and is not stated, and the next delta asked for several carried amounts; record the-breeding-value (EV15) states both, cross-multiplied, and is now named in both places; its laws and their statements are unchanged.",
+      "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”曾说 Fisher 恒等式需要比值而未陈述，“下一步”曾求同时经由多个所载之量；记录 the-breeding-value（EV15）以交叉相乘陈述二者，今两处均指名；定律及其陈述不变。"
     }
   ]
 }

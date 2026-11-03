@@ -87,8 +87,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Returns with synergy (depending on the product of own and groupmates' amounts) and groups of unequal size are not stated.",
-      "zh": "有协同的回报（依赖自身与组员之量的乘积）与大小不等的组未陈述。",
+      "en": "Returns with synergy (depending on the product of own and groupmates' amounts) are not stated; for groups of unequal size the returns' among-group part and the verdict through the spread among groups are not stated, while the whole's verdict through a reading's covariation (law 1) holds on any list, the split weighted by size is record selection-within-and-among-groups-of-any-sizes, and within groups the returns go as stated for any sizes.",
+      "zh": "有协同的回报（依赖自身与组员之量的乘积）未陈述；大小不等的组，回报的组间部分与经由组间离散的判定未陈述，而经由读数协变的整体判定（定律 1）对任何列表成立，按大小加权的分解见记录 selection-within-and-among-groups-of-any-sizes，组内的回报对任何大小如所陈述。",
       "kind": "scope"
     },
     {
@@ -124,8 +124,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T122330.896153Z，及有所自留之形式与由之导出之所返，回执 20261103T102739.294112Z）：Becoming.SelectionLevels 每一声明之公理报告皆空；检查器核验核心之纯。各于一会话中构建与审读，无另一审者；未经人之独立审查。"
   },
   "next_delta": {
-    "en": "Returns with synergy; groups of unequal size; how assortment changes over generations; an independent review.",
-    "zh": "有协同的回报；大小不等的组；聚合在世代中如何变化；独立审查。"
+    "en": "Returns with synergy; the returns' among-group part for groups of unequal size; how assortment changes over generations; an independent review.",
+    "zh": "有协同的回报；大小不等之组中回报的组间部分；聚合在世代中如何变化；独立审查。"
   },
   "correspondence": {
     "en": "Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-group share through relatedness within groups; the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006). Here in counts, nothing subtracted and no regression coefficient formed. Readings (the AI's): the verdict turns on how the groups whose members give to each other are founded.",
@@ -467,6 +467,10 @@
     {
       "en": "3 November 2026, board item AJ8 (study section 503): the returns stated as the case s = 0 of returns kept, within_returns, among_returns and rises_iff_returns derived from rises_iff_kept and its parts; the law with something kept added.",
       "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：所返陈述为有所自留之所返于 s = 0 之情形，within_returns、among_returns、rises_iff_returns 由 rises_iff_kept 及其部导出；增有所自留之律。"
+    },
+    {
+      "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said groups of unequal size are not stated, though law 1 (rises_iff_reading) gives the whole's verdict through a reading's covariation on any list, and the split weighted by size is another record's law; narrowed to the returns' among-group part and the verdict through the spread among groups; its laws and their statements are unchanged.",
+      "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”与“下一步”曾说大小不等的组未陈述，而定律 1（rises_iff_reading）对任何列表给出经由协变的整体判定，按大小加权的分解为另一记录之律；收窄为回报的组间部分与经由组间离散的判定；定律及其陈述不变。"
     }
   ]
 }

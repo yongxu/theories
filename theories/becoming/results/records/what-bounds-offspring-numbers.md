@@ -42,7 +42,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top); several amounts at once and the rational reading (variance over mean) are not stated; the statement here is the case of exact transmission.
+- Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top), and several amounts at once with the reading over the mean (the additive variance over the mean offspring number) in record the-breeding-value, cross-multiplied, a breeding value meeting the normal equations given; inexact transmission, where Fisher's environment term enters, is not stated; the statement here is the case of exact transmission.
 - Where something flows into the family from outside, the bounds read only its stock and what flows in: without dissipation a lossless relay keeps a lineage going within a family of stock one (Relay). Whether actual lineages lie within such families is an application question.
 - How much each offspring is given beyond one unit, and a law of forming that is necessary as well as sufficient, are not stated; dependences newly formed by descent stay open.
 - Offspring number is a weight and a reading, not a measure of worth: no amount is said to be better, and that transmission lowers offspring number says nothing about what ought to be.
@@ -60,7 +60,7 @@ Canonical source: [Reproduction.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.
+Offspring numbers bounded by what a parent takes from the conditions it depends on, with support; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -83,6 +83,7 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The variance form and the bound on offspring numbers that selection-term-over-generations left open.
 - related, not a proved adapter: [evolution-on-descent](evolution-on-descent.md). Descent read with what it gives: offspring numbers bounded by giving and taking, and a lineage that ends within a closed family.
 - related, not a proved adapter: [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md). The additive part through any carried amount, of which this record's exact case is the top.
+- related, not a proved adapter: [the-breeding-value](the-breeding-value.md). Fisher's theorem through several carried amounts, with the reading over the mean, of which this record's exact case is the top.
 
 **Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md) · [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md)
 
@@ -110,6 +111,7 @@ Aliases: `what bounds offspring numbers`, `什么约束后代数`, `selection on
 - 20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
 - 20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record additive-part-of-offspring-variance, study section 279); this record's first open item is answered there for one amount, its does-not-show item and next delta updated; its laws and their statements are unchanged.
 - 25 October 2026, UE5: a lineage open to inflow, bounded by what flows in, is answered by record pace-of-selection-within-what-flows-in (study section 416), which joins Becoming.Reproduction to Becoming.Entropy; this record's next delta updated; its laws and their statements are unchanged.
+- 3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said several carried amounts at once and the reading over the mean are not stated; record the-breeding-value (EV15, 22 October 2026) states them, now cross-referenced and related; its laws and their statements are unchanged.
 
 </details>
 

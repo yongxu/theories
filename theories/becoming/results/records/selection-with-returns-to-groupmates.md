@@ -31,7 +31,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Returns with synergy (depending on the product of own and groupmates' amounts) and groups of unequal size are not stated.
+- Returns with synergy (depending on the product of own and groupmates' amounts) are not stated; for groups of unequal size the returns' among-group part and the verdict through the spread among groups are not stated, while the whole's verdict through a reading's covariation (law 1) holds on any list, the split weighted by size is record selection-within-and-among-groups-of-any-sizes, and within groups the returns go as stated for any sizes.
 - How the groups are founded, and how the share of the spread among them changes over generations, enter as given: the rule reads them at the step.
 - That keeping is better where it is selected for: the rule reads the counts; ranking goes through the comparison C.
 - **Counterexample:** Returns that meet the rule at assortment one need not win: with two thirds of the spread among pairs, b = 3 and c = 2 the whole selects against keeping (Partly.below_one), and with the keepers apart the same returns that select for keeping with them together select against it (Founding.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
@@ -48,7 +48,7 @@ Canonical source: [SelectionLevels.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-Returns with synergy; groups of unequal size; how assortment changes over generations; an independent review.
+Returns with synergy; the returns' among-group part for groups of unequal size; how assortment changes over generations; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -105,6 +105,7 @@ Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `gr
 - 22 October 2026: added (EV12), selection with returns to groupmates: within against keeping, among for it exactly where b + c falls short of m b, the whole by Hamilton's rule with the assortment the share of the spread among groups; study section 353.
 - 25 October 2026, board item DF (study section 418): the returns stated as the Lean states them, each unit kept giving b to every other member of the group and taking c from the keeper, in the statement, the second law and the hypothesis, where they had read b to every member, own included, with c from the keeper; the third law keeps the spread on its left side; the uniform case needs the groups to differ; within-group selection needs b + c positive; the number of groups named for k. No law changed in its declarations.
 - 3 November 2026, board item AJ8 (study section 503): the returns stated as the case s = 0 of returns kept, within_returns, among_returns and rises_iff_returns derived from rises_iff_kept and its parts; the law with something kept added.
+- 3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said groups of unequal size are not stated, though law 1 (rises_iff_reading) gives the whole's verdict through a reading's covariation on any list, and the split weighted by size is another record's law; narrowed to the returns' among-group part and the verdict through the spread among groups; its laws and their statements are unchanged.
 
 </details>
 
