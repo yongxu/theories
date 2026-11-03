@@ -1,8 +1,8 @@
-# The alignment and sciences hours within an hour
+# The alignment and sciences hour paths
 
-*AI-written, 3 November 2026 (board item HP, after the freeze, for the next edition). No person has reviewed it. 9.5 to 12.3 minutes to read; [the read](#the-read), 39.6 to 51.4 more.*
+*AI-written, 3 November 2026 (board item HP, after the freeze, for the next edition). No person has reviewed it. 13.5 to 17.6 minutes to read; [the read](#the-read), 48.5 to 63.1 more.*
 
-The alignment and sciences dossiers each name what to read "With an hour". After the freeze both paths ran past [the hour's budget](../aj4-alignment-readers/READING-BUDGETS.md), 6,000 words, an hour at 100 words a minute by [the kit's measure](../aj4-alignment-readers/kit/measure_layers.py): on main at `f7ad1042d`, alignment's path 6,337 words and sciences' path for ecology, its longest field, 6,483. HP brought each within the hour, cutting only where the dossier's own fuller part already says what was cut, and kept READING-BUDGETS current. An independent AI reader then read the change, and later the fixes; its findings were checked against the sources and taken ([the read](#the-read)). Every figure here is the measure's. No result, chapter, record or Lean changed.
+The alignment and sciences dossiers each name what to read "With an hour". After the freeze both paths ran past [the hour's budget](../aj4-alignment-readers/READING-BUDGETS.md), 6,000 words, an hour at 100 words a minute by [the kit's measure](../aj4-alignment-readers/kit/measure_layers.py): on main at `f7ad1042d`, alignment's path 6,337 words and sciences' path for ecology, its longest field, 6,483. HP brought each within the hour, cutting only where the dossier's own fuller part already says what was cut, and kept READING-BUDGETS current. That evening AJ8's results, with AF1's, took alignment's hour 69 words past it again, which the coordinator chose to keep and record ([after AJ8](#after-aj8)). An independent AI reader then read the change, and later the fixes; its findings were checked against the sources and taken ([the read](#the-read)). Every figure here is the measure's. No result, chapter, record or Lean changed.
 
 ## Alignment
 
@@ -14,7 +14,7 @@ The path read the ten minutes, then [the tests, as they fell](../../../../../../
 
 The read also found that row's "the arms' landings" rising false of the anchored arm (LA4's result: "Only the anchored arm stayed at 0.10"). A-18 and the summary had said it before HP; both now say "the unanchored arms' landings".
 
-The section stays in the dossier, linked from the front's "What is not claimed". The measure's alignment hour now ends its front at that section's heading. The path: 5,861 words, 45.1 to 58.6 minutes.
+The section stays in the dossier, linked from the front's "What is not claimed". The measure's alignment hour now ends its front at that section's heading. Before AJ8 the path ran to 5,861 words, 45.1 to 58.6 minutes ([after AJ8](#after-aj8)).
 
 ## Sciences
 
@@ -27,17 +27,30 @@ The section stays in the dossier, linked from the front's "What is not claimed".
 - S-16's bullet on T6's first wording quoted the audit's row, "its first wording was refuted", after the bullet's lead and chapter 3 had said it.
 - The front's T2 row dropped what the test expects of the lag's sign, which S-15 gives in chapter 2's words with its condition. Its reason for deciding nothing now reads "its adult-loss cultures too short for its rules", chapter 8's "the adult-loss experiment's cultures" shortened; S-15 gives it in full.
 
-**S-02 left to the other fields.** With those cuts, ecology's path with S-02 would run to 6,422 words, still past. The front gives S-02's verdict, S-11 and S-13 mark their third parts and credit the neighbouring fields (depensation, bioeconomics, Gordon, Clark), and S-13 quotes what the audit counts as the theory's own. What only S-02 said there, how much the verdicts against the literature stand on, the front's verdict now says in S-02's words, shortened: "The literature verdicts come from the AI's prior knowledge and earlier prior-art checks, and an AI literature search in three rounds found no result that no neighbouring field states: a bounded search, neither established novelty nor established absence." These are S-02's two weaknesses, from the audit and from UE6's verdict, and its standing's search, with the finding as chapter 8 words it; the coordinator agreed to leaving S-02 off ecology's path on that condition, the verdict taking S-02's words first and shortening them after. Two phrases are shortened: S-02's "They also draw on the repository's own prior-art checks of 20–23 October", which goes on to quote the audit on what those checks searched and that it made no new web search, to "and earlier prior-art checks"; and UE6's "not established novelty and not established absence: three rounds, each by a different reader, each with a literature search" to "neither established novelty nor established absence", the literature search in three rounds named before it, without "each by a different reader". The front runs to 1,105 words, 5 over its 1,100, and READING-BUDGETS records the excess, as amendment 1 asks where a front keeps a standing. An ecology reader no longer meets S-02's count, that S-11 and S-13 are two of the three distinct third parts among the 21 rows the audit read (the front says "a few rows"), or its first two questions, which S-11's second and S-12's and S-13's first ask of each item in its field's terms: whether it adds anything there. The front's hour now reads "With an hour, read your field's items, and S-02 unless they are S-11 to S-16." The other fields keep S-02: physics 3,223 words, evolution 3,542, mind and inference 4,246, order and open-endedness 3,532. The mind path counts its items, not [the free-energy page](../../../../../../theories/becoming/FREE-ENERGY-PRINCIPLE.md) named beside them, which states its own time, about 50 minutes, in brief about eight.
+**S-02 left to the other fields.** With those cuts, ecology's path with S-02 would run to 6,424 words, still past. The front gives S-02's verdict, S-11 and S-13 mark their third parts and credit the neighbouring fields (depensation, bioeconomics, Gordon, Clark), and S-13 quotes what the audit counts as the theory's own. What only S-02 said there, how much the verdicts against the literature stand on, the front's verdict now says in S-02's words, shortened: "The literature verdicts come from the AI's prior knowledge and earlier prior-art checks, and an AI literature search in three rounds found no result that no neighbouring field states: a bounded search, neither established novelty nor established absence." These are S-02's two weaknesses, from the audit and from UE6's verdict, and its standing's search, with the finding as chapter 8 words it; the coordinator agreed to leaving S-02 off ecology's path on that condition, the verdict taking S-02's words first and shortening them after. Two phrases are shortened: S-02's "They also draw on the repository's own prior-art checks of 20–23 October", which goes on to quote the audit on what those checks searched and that it made no new web search, to "and earlier prior-art checks"; and UE6's "not established novelty and not established absence: three rounds, each by a different reader, each with a literature search" to "neither established novelty nor established absence", the literature search in three rounds named before it, without "each by a different reader". The front runs to 1,105 words, 5 over its 1,100, and READING-BUDGETS records the excess, as amendment 1 asks where a front keeps a standing. An ecology reader no longer meets S-02's count, that S-11 and S-13 are two of the three distinct third parts among the 21 rows the audit read (the front says "a few rows"), or its first two questions, which S-11's second and S-12's and S-13's first ask of each item in its field's terms: whether it adds anything there. The front's hour now reads "With an hour, read your field's items, and S-02 unless they are S-11 to S-16." The other fields keep S-02: physics 3,223 words, evolution 3,542, mind and inference 4,246, order and open-endedness 3,532. The mind path counts its items, not [the free-energy page](../../../../../../theories/becoming/FREE-ENERGY-PRINCIPLE.md) named beside them, which states its own time, about 50 minutes, in brief about eight.
 
-Ecology's path: 5,924 words, 45.6 to 59.2 minutes.
+Ecology's path: 5,926 words, 45.6 to 59.3 minutes.
+
+## After AJ8
+
+AJ8's results landed on main that evening (`375ff6b90`), after HP was claimed and before it landed, with AF1's just before them. They added to alignment's path:
+- on the front, in item 4, "a p reaching every member alike" and a sentence on groups, which HP shortened, and in item 5, "Without noise only: drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance from the critical mass";
+- in A-10, the groups' condition in full, its bullet "In groups";
+- in A-18's row for CG2, AF1's "except where the level after every step was weighted above the exact threshold".
+
+On main at `375ff6b90` the front ran to 1,193 words, the hour's old path to 6,559 and the whole to 133.1 to 173.0 minutes, while the front and both covers stated 125 to 170 and READING-BUDGETS gave the front 1,098 words. With HP's change merged, the path ran to 6,083 words.
+
+The front's sentence on groups wrote the condition as a formula in m and q, which the front never defines. A-10, on the path, states it in full, as [its home](../../../../../../theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups) does. HP shortened the sentence to words: "Listed in groups whose shapers give the group's shared part, the whole selects for shaping exactly where c times the spread of shaping falls short of s times it with m q times the spread among groups, read over the rationals c < s + m q ρ (ρ the assortment): Hamilton's rule with s added, so a part shared near the shapers can select control where c > s" now reads "Listed in groups whose shapers give the group's shared part, shaping varying, the whole selects for shaping exactly where Hamilton's rule holds with s added, assortment as relatedness, so a part shared near the shapers can select control where c > s". "Shaping varying" is the home's condition for its form in ρ, and "Hamilton's rule holds with s added" its "Hamilton's rule with what comes back alone added", "assortment as relatedness" naming the term in relatedness's place, which the front no longer writes as ρ. The front's "(ρ the assortment)" was the dossier's only definition of ρ, which A-10 and the bullet on the shared part still use, so A-10 now gives it in the home's words, "with the assortment ρ the share of the spread among groups"; AJ8's owner found it.
+
+The rest stays. The coordinator chose to keep the half minute over the hour, and the front's excess, rather than cut what holds results and a test at their right strength; READING-BUDGETS records both with their reason. The path now: 6,069 words, 46.7 to 60.7 minutes, 69 over. The front: 1,170 words, 9.0 to 11.7 minutes, 70 over. The whole, 134.4 to 174.8 minutes, is stated as 130 to 175 on its front and both covers, in place of 125 to 170.
 
 ## What else moved
 
-[READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md)' fronts row gives both hours and what they ran to before; its wholes line gives both wholes, alignment's now 131 to 170 minutes and sciences' 138 to 180, rounded to the nearest minute as that line rounds. The stated times are the measured ranges rounded out to five minutes: sciences' 135 to 180 still holds, and alignment's is now 130 to 170 on its front and both covers, its fastest reading past 130 minutes. [The alignment kit](../aj4-alignment-readers/README.md) records the times and, in its provenance list, the change. Each dossier's "How this dossier was made" records it in a sentence.
+[READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md)' fronts row gives both fronts and both hours, alignment's with their excesses since AJ8, and what the hours ran to before; its wholes line gives both wholes, alignment's now 134 to 175 minutes and sciences' 138 to 180, rounded to the nearest minute as that line rounds. The stated times are the measured ranges rounded out to five minutes: sciences' 135 to 180 still holds, and alignment's is now 130 to 175 on its front and both covers, its readings 134 to 175 minutes since AJ8's results joined it. [The alignment kit](../aj4-alignment-readers/README.md) records the times and, in its provenance list, the change. Each dossier's "How this dossier was made" records it in a sentence.
 
 ## The read
 
-An independent AI reader, read-only and with no part in the writing, read the uncommitted change on 3 November 2026 against the chapters, the experiments and the records; its only runs were the measure and the dossier check. Its report stands below verbatim, apart from its paths, which here start at the repository root, and its headings, one level down. Its line numbers are those of the change it read. Then how each finding was taken, each checked against its source first. The same reader later read the fixes ([the re-check](#the-re-check)) and what changed after it ([the last check](#the-last-check)).
+An independent AI reader, read-only and with no part in the writing, read the uncommitted change on 3 November 2026 against the chapters, the experiments and the records; its only runs were the measure and the dossier check. Its report stands below verbatim, apart from its paths, which here start at the repository root, and its headings, one level down. Its line numbers are those of the change it read. Then how each finding was taken, each checked against its source first. The same reader later read the fixes ([the re-check](#the-re-check)) and what changed after it ([the last check](#the-last-check)), and the change after AJ8 ([the read after AJ8](#the-read-after-aj8)).
 
 **Review of HP: the alignment and sciences hours within an hour**
 
@@ -308,7 +321,7 @@ Paths:
 7. Taken: "LA4's README, on its control", since the sentence quoted is the README's account of the control, before its result.
 8. Taken in [taken 8](#how-each-finding-was-taken).
 
-Of the notes: the summary's opening now says "the tests". Alignment's whole is 16,992 words and 11 characters, 169.97 minutes at the slower rate: three words more would make its stated range 130 to 175. The sciences dossier kit's line on a whole stated as 125 to 170 belongs to its record of the re-sync of 3 November 2026 and gives that text's measure, so it is left alone.
+Of the notes: the summary's opening now says "the tests". Alignment's whole was then 16,992 words and 11 characters, 169.97 minutes at the slower rate: three words more would have made its stated range 130 to 175, as AJ8's results then did ([after AJ8](#after-aj8)). The sciences dossier kit's line on a whole stated as 125 to 170 belongs to its record of the re-sync of 3 November 2026 and gives that text's measure, so it is left alone.
 
 ### The last check
 
@@ -386,3 +399,83 @@ Paths:
 3. Taken: "in S-02's words, shortened".
 4. Taken: "three words more".
 5. Taken in [the re-check's](#the-re-check) item 2.
+
+### The read after AJ8
+
+The same reader then read the change after AJ8: the shortened sentence against A-10, its home and its record, the texts restated after AJ8, and their figures by the measure. Its report stands below verbatim, apart from its paths, which here start at the repository root, its legend's worktree prefix dropped, and its title, in bold. Its line numbers are those of the tree it read. Then how each finding was taken, each checked against its source first; these fixes were not read again.
+
+**HP after AJ8: narrow read**
+
+I found five minor findings. Nothing on the front is false.
+
+Paths:
+- ALIGNMENT: `theories/becoming/review/ALIGNMENT.md`
+- HOME: `theories/becoming/chapters/02-MAP.md`
+- RECORD: `theories/becoming/results/records/shaping-selected-among-groups.md`
+- READING-BUDGETS: `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md`
+- KIT: `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md`
+- HOUR-PATHS: `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/HOUR-PATHS.md`
+
+1. **ALIGNMENT:13, the shortened sentence. Is the condition carried exactly? Its form and hypothesis are; its terms are not.**
+   - **What's wrong:**
+     - "Hamilton's rule holds with s added" and "shaping varying" give the condition's strict form, c &lt; s + r·b, and the hypothesis its ratio form needs.
+     - But that form holds only with r read as the assortment ρ and b as the group's part m q, and the front no longer names either. The word "assortment" now appears nowhere on the front (lines 1–26).
+     - A reader who takes Hamilton's r as kinship would misjudge which groupings select control.
+   - **Evidence:**
+     - HOME:414: "with the assortment ρ the share of the spread among groups, exactly where c &lt; s + m q ρ, Hamilton's rule with what comes back alone added".
+     - RECORD's claim: "the cost falls short of what comes back to the shapers alone with the group's part weighted by assortment".
+   - **Severity:** minor. The rest of item 4, and item 5, match A-10, A-10b and HOME.
+   - **Fix:** "…exactly where Hamilton's rule holds with s added, assortment as relatedness, so…" (+3 words).
+
+2. **ALIGNMENT:294, with HOUR-PATHS:5 ("cutting only where the dossier's own fuller part already says what was cut") and HOUR-PATHS:43 ("A-10 … states it in full, as its home does").**
+   - **What's wrong:** the cut "(ρ the assortment)" was the dossier's only gloss of ρ. A-10:294 and ALIGNMENT:456 now use ρ without defining it; A-10 only implies it, through "Without assortment that is c &lt; s". So "only" and "as its home does" now overstate.
+   - **Evidence:** HOME:414 defines ρ, as quoted above.
+   - **Severity:** minor.
+   - **Fix:** A-10:294, "…as c &lt; s + m q ρ, ρ the assortment." (+3 words).
+   - **Cost of fixes 1 and 2 together:**
+     - the front becomes 1,170 words, 9.0 to 11.7, 70 over;
+     - the hour becomes 6,062 words, 46.6 to 60.6, 62 over;
+     - the whole becomes 17,458 words, still 134.3 to 174.6, so 130 to 175 holds;
+     - the counts to update are in READING-BUDGETS:32, KIT:137, HOUR-PATHS:5 and HOUR-PATHS:45.
+
+3. **READING-BUDGETS:32: "Past it, with the excess recorded: alignment (…) and sciences (…)".**
+   - **What's wrong:** this reads as the complete list, but philosophy's front is also past its budget with the excess recorded (1,180 words, 81 over), in the next sentence.
+   - **Severity:** minor.
+   - **Fix:** "…alignment (…), sciences (…) and philosophy (below)."
+
+4. **ALIGNMENT:697 and KIT:213: "took the hour and the front past their budgets again".**
+   - **What's wrong:** the front had never been past its budget before AJ8.
+   - **Evidence:** KIT:137's own history gives 1,100 words at the fourth pass, 1,098 at the re-sync and 1,099 at HP. The measure gives 1,098 at `f7ad1042d` and 1,099 at `5207ac698`.
+   - **Severity:** minor.
+   - **Fix:** drop "again" (−1 word). The same bullet already says the hour ran past before HP.
+
+5. **KIT:137 ("After A-18 took LA4's results, HP and AJ8") and HOUR-PATHS:5 ("AJ8's results took alignment's hour 56 words past it").**
+   - **What's wrong:** 13 of the 56 words are AF1's, in A-18's CG2 row. AJ8's own additions, net of HP's cut, make 43.
+   - **Evidence:** the hour grew by 195 words from `5207ac698`: the front +68, A-10 +114 (its "In groups" bullet is 113 of them), A-18 +13. READING-BUDGETS:32 and HOUR-PATHS's "After AJ8" both name AF1.
+   - **Severity:** minor.
+   - **Fix:** in KIT:137, "HP, AF1 and AJ8"; in HOUR-PATHS:5, "AJ8's results, with AF1's, took…".
+
+**Note, outside HP:** A-10's "In groups" bullet is AJ8's text. It carries neither HOME:414's limits ("Groups are of equal size and listed as given; how they form, and assortment changing over generations or with the share, are not stated") nor RECORD's "Does not show". Since the front now sends readers to A-10 for the condition, this is one for AJ8's owner.
+
+**What I checked:**
+- **Checks run:** `check_dossiers.py` reports 0 problems. I ran the measure on the tree, at `375ff6b90`, and on `5207ac698` and `2b328eb64` through `git show`.
+- **Alignment figures:**
+  - front 1,167 words, 9.0 to 11.7, 67 over;
+  - hour 6,056 words, 46.6 to 60.6, 56 over; 5,861 before AJ8 and 6,083 at the merge;
+  - whole 17,452 words and 11 characters, 134.3 to 174.6. That gives 134 to 175 to the nearest minute and 130 to 175 rounded out to five. The front, both covers, READING-BUDGETS:35 and KIT:137 all state it.
+- **Sciences figures:** front 1,105 words, 8.5 to 11.1, 5 over; hour 5,926 words, 45.6 to 59.3; whole 138.3 to 179.8, giving 138 to 180 and the stated 135 to 180.
+- **Chinese cover:** 1,594 characters, 6.3 to 8.2.
+- **Main at `375ff6b90`:** front 1,193 words, old path 6,559, whole 133.1 to 173.0. The front and both covers stated 125 to 170, and READING-BUDGETS gave the front 1,098.
+- **HOUR-PATHS figures:** line 3 (1,691 words, 13.0 to 16.9; the read 5,149 words and 9 characters, 39.6 to 51.5) and the S-02 paragraph (6,424; 3,223; 3,542; 4,246; 3,532) are right.
+- **Quotations and order:** the old and new sentences, item 5's quote and AF1's quote all match the text. The order HOUR-PATHS gives matches git: HP claimed at 17:32, AF1 landed at 17:55, AJ8 at 18:01.
+- **Notes:** the re-check's note (HOUR-PATHS:324) is right.
+
+#### How each was taken
+
+1. Taken: "assortment as relatedness".
+2. Taken in the home's words, as AJ8's owner had proposed for the same gap: "with the assortment ρ the share of the spread among groups", 10 words where the read's "ρ the assortment" took 3. The record's account of the sentence now says where ρ is defined.
+3. Taken: "…, sciences (…) and philosophy (below)".
+4. Taken: "again" is gone from both sentences, which now name AF1's results with AJ8's.
+5. Taken: "HP, AF1 and AJ8" in the kit's reading times, and "AJ8's results, with AF1's" here.
+
+Of the note: A-10's bullet on groups is AJ8's text, and its limits are not HP's change; it goes to the coordinator for AJ8's owner and the dossier's. Its figures with these fixes are in READING-BUDGETS and [after AJ8](#after-aj8).
