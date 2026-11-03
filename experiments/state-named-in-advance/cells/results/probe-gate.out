@@ -1,0 +1,4 @@
+as designed                H1 detected in [4, 6, 7, 8, 7, 6, 8, 7, 6] of 10 cells (median 7); the gate fires in 9 of 9; H1 at 0.96: 0.12 to 0.20
+no onset                   H1 detected in [4, 4, 5, 4, 3, 2, 2, 3, 3] of 10 cells (median 3); the gate fires in 7 of 9; H1 at 0.96: 0.05 to 0.10
+onset, the chain fixed     H1 detected in [5, 4, 6, 5, 6, 5, 6, 7, 4] of 10 cells (median 5); the gate fires in 9 of 9; H1 at 0.96: 0.15 to 0.21
+no onset, the chain fixed  H1 detected in [3, 2, 2, 3, 4, 2, 4, 1, 0] of 10 cells (median 2); the gate fires in 4 of 9; H1 at 0.96: 0.01 to 0.10
