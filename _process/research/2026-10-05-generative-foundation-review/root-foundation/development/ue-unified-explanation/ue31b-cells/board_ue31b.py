@@ -25,7 +25,7 @@ EDITS = {
          f"by cell, frozen before any of their values is read ([design](../{DESIGN})), its run Ren's;"),
         ("| claimed 2026-11-03 on `d0b1c6f51` | `experiments/state-named-in-advance/cells/`",
          "| claimed 2026-11-03 on `d0b1c6f51`; design landed and frozen, no value of these cultures read "
-         f"([DESIGN](../{DESIGN})): the answer expected stated before the run (its §1), one independent reader's "
+         f"([DESIGN](../{DESIGN})): the answer expected stated before the run (its §1), two independent readers' "
          "findings taken (its §12); the run waits on Ren's yes | `experiments/state-named-in-advance/cells/`"),
         ("Neither is frozen or run. LA1b, LA1c, LA2 and LA3 have all run",
          "Neither is frozen or run. UE31b's run is frozen ([design](../" + DESIGN + ")): the cell rules on the 40 "
@@ -56,7 +56,20 @@ HEAD_TEXT = ("landing now, by readiness: documents and dry runs only, no data re
              "Ren's; the board, the experiments index and UE31's README; render, strict check, links and tests, then "
              "the fast-forward")
 HEAD = re.compile(re.escape(NAME) + r' at the head of the queue \([^()]*\); ')
-LANDED = "LANDED_TEXT "
+LANDED = ("UE31b's design landed (documents and dry runs only: no value of these cultures read, no Lean, no record and "
+          "no core run): the archive's 40 adult-loss cultures read by cell, the four replicates of one strain at one set "
+          "loss under one law, ten cells of 36 rows, with UE31's rules imported unchanged at that unit and the forecasts "
+          "out of sample by leaving one culture out; the adults' recorded form checked with a frozen consequence, no "
+          "verdict and no cell's numbers where the recruits exceed the pupae in more than 12.5% of rows, and week 12's "
+          "entry after the treatment read by a frozen rule, culture by culture. The answer expected is stated before the run, from 1,000 "
+          "synthetic archives for each of 18 generators: the next step goes to the field's state and three numbers "
+          "suffice on the course, which at this shape rests on H1 and on V5 not failing; the sign cannot go to the "
+          "field's model at ten cells, by counting; in the field's worlds it went to T2 only where the turning point lies "
+          "outside the constants' band, falsely, in 2 of 1,000 archives, and under T2's law as near the field's "
+          "densities as that law comes it went to T2 in 22%, all of them where the rival predicts the negative sign in "
+          "six cells or more, which in every field world but the one whose turning point lies outside the band it "
+          "never does. Two independent readers' findings taken "
+          f"([design §12](../{DESIGN}#12-review)); the run waits on Ren's yes; ")
 
 
 def edit():

@@ -33,7 +33,7 @@
  },
  "results": {
   "lpa": {
-   "cpu_seconds": 132.1,
+   "cpu_seconds": 135.7,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -132,7 +132,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -191,6 +191,12 @@
     "resid_over_floor_T2": 3.7966,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 1.0,
+    "sign_by_rival_negative": {
+     "4": [
+      933,
+      0
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 4.0,
     "sign_rival_right": 3.0,
@@ -220,98 +226,98 @@
    }
   },
   "lpa-counted": {
-   "cpu_seconds": 140.9,
+   "cpu_seconds": 140.6,
    "large": {
-    "H1": "not read: the recording disagrees with the protocol",
+    "H1": "not read: the reading's form or the stage counts disagree with the protocol",
     "H1_by_loss": {
      "0.04": [
-      0.0023,
+      0.0159,
       2
      ],
      "0.27": [
-      -0.005,
+      0.0097,
       2
      ],
      "0.5": [
-      0.0489,
+      0.0354,
       2
      ],
      "0.73": [
-      0.0357,
+      0.0623,
       2
      ],
      "0.96": [
-      0.2226,
+      0.2239,
       2
      ]
     },
-    "H1_detected": 6,
+    "H1_detected": 8,
     "H1_detected_tail": 0.0,
-    "H1_excess": 0.0357,
-    "V2": "not read: the recording disagrees with the protocol",
+    "H1_excess": 0.0354,
+    "V2": "not read: the reading's form or the stage counts disagree with the protocol",
     "V2_by_loss": {
      "0.04": [
-      0.005,
+      0.0135,
       2
      ],
      "0.27": [
-      0.2663,
+      0.2759,
       2
      ],
      "0.5": [
-      0.4887,
+      0.5122,
       2
      ],
      "0.73": [
-      0.3341,
+      0.4331,
       2
      ],
      "0.96": [
-      0.1159,
+      0.1005,
       2
      ]
     },
-    "V2_detected": 8,
-    "V2_excess": 0.2663,
-    "V4": "not read: the recording disagrees with the protocol",
+    "V2_detected": 9,
+    "V2_excess": 0.2759,
+    "V4": "not read: the reading's form or the stage counts disagree with the protocol",
     "V4_errors": {
-     "T2": 0.094,
-     "T2_better": 4,
-     "T2_worse": 6,
-     "level_alone": 0.1208,
-     "p": 0.7539
+     "T2": 0.1017,
+     "T2_better": 5,
+     "T2_worse": 5,
+     "level_alone": 0.1319,
+     "p": 1.0
     },
-    "V5": "not read: the recording disagrees with the protocol",
-    "V5_detected": 10,
+    "V5": "not read: the reading's form or the stage counts disagree with the protocol",
+    "V5_detected": 7,
     "V5_signs": [
-     1,
-     9
+     0,
+     7
     ],
-    "W": "not read: the recording disagrees with the protocol",
+    "W": "not read: the reading's form or the stage counts disagree with the protocol",
     "W_by_loss": {
      "0.04": [
-      0.2431,
+      0.2513,
       2
      ],
      "0.27": [
-      0.7119,
+      0.6877,
       2
      ],
      "0.5": [
-      0.8255,
+      0.8283,
       2
      ],
      "0.73": [
-      0.7336,
+      0.7533,
       2
      ],
      "0.96": [
-      0.4367,
+      0.3697,
       2
      ]
     },
     "W_detected": 10,
-    "W_excess": 0.7119,
+    "W_excess": 0.6877,
     "cells": 10,
     "left_out": {
      "H1": 0,
@@ -319,29 +325,29 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording disagrees with the protocol",
+    "protocol": "the reading's form or the stage counts disagree with the protocol",
     "protocol_rows": [
-     1205,
+     1228,
      2700
     ],
-    "reading": "not read: the recording disagrees with the protocol",
-    "reported_ONEH": 0.0711,
-    "reported_ONEW": 0.8351,
-    "reported_TL": 0.2545,
-    "reported_TX": 0.7136,
+    "reading": "not read: the reading's form or the stage counts disagree with the protocol",
+    "reported_ONEH": 0.0423,
+    "reported_ONEW": 0.8469,
+    "reported_TL": 0.2977,
+    "reported_TX": 0.6922,
     "reported_V3": {
-     "median_ratio": 0.2596,
+     "median_ratio": 0.2719,
      "p": 0.002,
      "rival_better": 10,
      "rival_worse": 0
     },
-    "reported_lag": 0.2058,
+    "reported_lag": 0.2223,
     "reported_resid_over_floor": {
-     "RB": 3.5822,
-     "T2": 9.9205
+     "RB": 3.6788,
+     "T2": 10.3728
     },
-    "reported_rows_recruits_above_pupae": 1205,
-    "sign": "not read: the recording disagrees with the protocol",
+    "reported_rows_recruits_above_pupae": 1228,
+    "sign": "not read: the reading's form or the stage counts disagree with the protocol",
     "sign_counts": {
      "T2_right": 2,
      "cultures": 10,
@@ -358,16 +364,165 @@
    },
    "medians": {
     "most_left_out": 0,
-    "most_protocol_rows_above": 176,
+    "most_protocol_rows_above": 178,
     "most_too_short_cells": 0,
-    "most_zero_columns_dropped": 0
+    "most_zero_columns_dropped": 0,
+    "sign_by_rival_negative": {}
    },
    "shares": {
-    "protocol: the recording disagrees with the protocol": 1.0
+    "protocol: the reading's form or the stage counts disagree with the protocol": 1.0
+   }
+  },
+  "lpa-counted-recalled": {
+   "cpu_seconds": 137.3,
+   "large": {
+    "H1": "not read: the reading's form or the stage counts disagree with the protocol",
+    "H1_by_loss": {
+     "0.04": [
+      0.0704,
+      2
+     ],
+     "0.27": [
+      0.0393,
+      2
+     ],
+     "0.5": [
+      0.0489,
+      2
+     ],
+     "0.73": [
+      0.0016,
+      2
+     ],
+     "0.96": [
+      0.009,
+      2
+     ]
+    },
+    "H1_detected": 7,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.0393,
+    "V2": "not read: the reading's form or the stage counts disagree with the protocol",
+    "V2_by_loss": {
+     "0.04": [
+      0.1103,
+      2
+     ],
+     "0.27": [
+      -0.0026,
+      2
+     ],
+     "0.5": [
+      0.0861,
+      2
+     ],
+     "0.73": [
+      0.1102,
+      2
+     ],
+     "0.96": [
+      0.8344,
+      2
+     ]
+    },
+    "V2_detected": 8,
+    "V2_excess": 0.1102,
+    "V4": "not read: the reading's form or the stage counts disagree with the protocol",
+    "V4_errors": {
+     "T2": 0.0748,
+     "T2_better": 8,
+     "T2_worse": 2,
+     "level_alone": 0.0955,
+     "p": 0.1094
+    },
+    "V5": "not read: the reading's form or the stage counts disagree with the protocol",
+    "V5_detected": 8,
+    "V5_signs": [
+     1,
+     7
+    ],
+    "W": "not read: the reading's form or the stage counts disagree with the protocol",
+    "W_by_loss": {
+     "0.04": [
+      0.2367,
+      2
+     ],
+     "0.27": [
+      0.3759,
+      2
+     ],
+     "0.5": [
+      0.5566,
+      2
+     ],
+     "0.73": [
+      0.6253,
+      2
+     ],
+     "0.96": [
+      0.9033,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.5566,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "protocol": "the reading's form or the stage counts disagree with the protocol",
+    "protocol_rows": [
+     540,
+     2700
+    ],
+    "reading": "not read: the reading's form or the stage counts disagree with the protocol",
+    "reported_ONEH": 0.1367,
+    "reported_ONEW": 0.5912,
+    "reported_TL": 0.3354,
+    "reported_TX": 0.5384,
+    "reported_V3": {
+     "median_ratio": 0.4628,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.0608,
+    "reported_resid_over_floor": {
+     "RB": 3.4311,
+     "T2": 4.451
+    },
+    "reported_rows_recruits_above_pupae": 540,
+    "sign": "not read: the reading's form or the stage counts disagree with the protocol",
+    "sign_counts": {
+     "T2_right": 5,
+     "cultures": 10,
+     "p": 0.2188,
+     "positive": 1,
+     "rival_predicts_negative": 2,
+     "rival_right": 1,
+     "rules_differ": 6,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "most_left_out": 0,
+    "most_protocol_rows_above": 88,
+    "most_too_short_cells": 0,
+    "most_zero_columns_dropped": 0,
+    "sign_by_rival_negative": {}
+   },
+   "shares": {
+    "protocol: the reading's form or the stage counts disagree with the protocol": 1.0
    }
   },
   "lpa-env": {
-   "cpu_seconds": 131.1,
+   "cpu_seconds": 133.6,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -466,7 +621,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -525,6 +680,12 @@
     "resid_over_floor_T2": 24.8935,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 1.0,
+    "sign_by_rival_negative": {
+     "4": [
+      999,
+      0
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 4.0,
     "sign_rival_right": 3.0,
@@ -552,98 +713,98 @@
    }
   },
   "lpa-jars": {
-   "cpu_seconds": 141.4,
+   "cpu_seconds": 146.6,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
      "0.04": [
-      -0.0017,
+      -0.0039,
       2
      ],
      "0.27": [
-      -0.001,
+      0.0017,
       2
      ],
      "0.5": [
-      0.0734,
+      0.0696,
       2
      ],
      "0.73": [
-      0.0139,
+      0.0102,
       2
      ],
      "0.96": [
-      0.0204,
+      0.0189,
       2
      ]
     },
     "H1_detected": 4,
     "H1_detected_tail": 0.001,
-    "H1_excess": 0.0139,
+    "H1_excess": 0.0102,
     "V2": "the rival holds",
     "V2_by_loss": {
      "0.04": [
-      0.0544,
+      0.065,
       2
      ],
      "0.27": [
-      0.0717,
+      0.0709,
       2
      ],
      "0.5": [
-      0.0892,
+      0.0087,
       2
      ],
      "0.73": [
-      0.0092,
+      0.0063,
       2
      ],
      "0.96": [
-      -0.0006,
+      0.005,
       2
      ]
     },
-    "V2_detected": 6,
-    "V2_excess": 0.0544,
+    "V2_detected": 5,
+    "V2_excess": 0.0087,
     "V4": "T2 holds",
     "V4_errors": {
-     "T2": 0.1778,
+     "T2": 0.1752,
      "T2_better": 10,
      "T2_worse": 0,
-     "level_alone": 0.3123,
+     "level_alone": 0.3019,
      "p": 0.002
     },
     "V5": "T2 fails",
-    "V5_detected": 8,
+    "V5_detected": 9,
     "V5_signs": [
-     4,
+     5,
      4
     ],
     "W": "the wording fails",
     "W_by_loss": {
      "0.04": [
-      0.3638,
+      0.3484,
       2
      ],
      "0.27": [
-      0.5931,
+      0.6813,
       2
      ],
      "0.5": [
-      0.7075,
+      0.8084,
       2
      ],
      "0.73": [
-      0.8343,
+      0.9088,
       2
      ],
      "0.96": [
-      0.9826,
+      0.9817,
       2
      ]
     },
     "W_detected": 10,
-    "W_excess": 0.7075,
+    "W_excess": 0.8084,
     "cells": 10,
     "left_out": {
      "H1": 0,
@@ -651,26 +812,26 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
     ],
     "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
-    "reported_ONEH": 0.1803,
-    "reported_ONEW": 0.7898,
-    "reported_TL": 0.0762,
-    "reported_TX": 0.7013,
+    "reported_ONEH": 0.2283,
+    "reported_ONEW": 0.8564,
+    "reported_TL": 0.0805,
+    "reported_TX": 0.813,
     "reported_V3": {
-     "median_ratio": 0.2188,
+     "median_ratio": 0.1534,
      "p": 0.002,
      "rival_better": 10,
      "rival_worse": 0
     },
-    "reported_lag": 0.208,
+    "reported_lag": 0.2258,
     "reported_resid_over_floor": {
-     "RB": 2.3247,
-     "T2": 9.6294
+     "RB": 1.4902,
+     "T2": 11.8598
     },
     "reported_rows_recruits_above_pupae": 0,
     "sign": "not read: the further lag is detected in more cultures than chance gives",
@@ -690,26 +851,36 @@
    },
    "medians": {
     "H1_detected": 0.0,
-    "H1_excess": 0.0059,
+    "H1_excess": 0.0055,
     "V2_detected": 1.0,
-    "V2_excess": 0.0328,
-    "V3_median_ratio": 0.0867,
-    "V4_T2": 0.2198,
+    "V2_excess": 0.0332,
+    "V3_median_ratio": 0.0863,
+    "V4_T2": 0.2193,
     "V4_T2_better": 7.0,
     "V4_T2_worse": 3.0,
-    "V4_level_alone": 0.3156,
+    "V4_level_alone": 0.3177,
     "V5_detected": 4.0,
     "W_detected": 9.0,
-    "W_excess": 0.7694,
+    "W_excess": 0.7728,
     "left_out": 0.0,
     "most_left_out": 0,
     "most_protocol_rows_above": 0,
     "most_too_short_cells": 0,
     "most_zero_columns_dropped": 0,
-    "resid_over_floor_RB": 1.2679,
-    "resid_over_floor_T2": 7.0114,
+    "resid_over_floor_RB": 1.2785,
+    "resid_over_floor_T2": 6.9359,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 0.0,
+    "sign_by_rival_negative": {
+     "4": [
+      962,
+      0
+     ],
+     "5": [
+      26,
+      0
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 4.0,
     "sign_rival_right": 4.0,
@@ -718,25 +889,25 @@
     "zero_columns_dropped": 0.0
    },
    "shares": {
-    "H1: T2 fails": 0.013,
-    "H1: T2 holds": 0.987,
+    "H1: T2 fails": 0.007,
+    "H1: T2 holds": 0.993,
     "V2: the rival fails": 0.098,
     "V2: the rival holds": 0.902,
-    "V4: T2 holds": 0.196,
-    "V4: not decided": 0.804,
-    "V5: T2 fails": 0.115,
-    "V5: T2 holds": 0.022,
-    "V5: not testable": 0.863,
+    "V4: T2 holds": 0.195,
+    "V4: not decided": 0.805,
+    "V5: T2 fails": 0.127,
+    "V5: T2 holds": 0.029,
+    "V5: not testable": 0.844,
     "W: the wording fails": 1.0,
     "reading: both states incomplete on the next step; the course needs more than three numbers": 0.001,
     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.097,
-    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.012,
-    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.89,
-    "sign read with at least six cells differing: not separated on the sign": 0.004,
-    "sign: not read: the course needs more than three numbers": 0.013,
-    "sign: not read: the further lag is detected in more cultures than chance gives": 0.004,
-    "sign: not separated on the sign": 0.004,
-    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.979
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.006,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.896,
+    "sign read with at least six cells differing: not separated on the sign": 0.011,
+    "sign: not read: the course needs more than three numbers": 0.007,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.005,
+    "sign: not separated on the sign": 0.011,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.977
    }
   },
   "lpa-long": {
@@ -839,7 +1010,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -898,6 +1069,12 @@
     "resid_over_floor_T2": 5.7487,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 4.0,
+    "sign_by_rival_negative": {
+     "4": [
+      22,
+      0
+     ]
+    },
     "sign_positive": 7.0,
     "sign_rival_predicts_negative": 4.0,
     "sign_rival_right": 0.0,
@@ -922,99 +1099,99 @@
     "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.022
    }
   },
-  "lpa-offband": {
-   "cpu_seconds": 146.8,
+  "lpa-miscount": {
+   "cpu_seconds": 136.6,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
      "0.04": [
-      -0.0029,
+      0.015,
       2
      ],
      "0.27": [
-      -0.0,
+      0.0207,
       2
      ],
      "0.5": [
-      0.0664,
+      0.0508,
       2
      ],
      "0.73": [
-      0.0263,
+      0.0567,
       2
      ],
      "0.96": [
-      0.0494,
+      0.1451,
       2
      ]
     },
-    "H1_detected": 7,
+    "H1_detected": 9,
     "H1_detected_tail": 0.0,
-    "H1_excess": 0.0263,
+    "H1_excess": 0.0508,
     "V2": "the rival holds",
     "V2_by_loss": {
      "0.04": [
-      -0.0037,
+      0.0085,
       2
      ],
      "0.27": [
-      0.0034,
+      -0.0101,
       2
      ],
      "0.5": [
-      0.0196,
+      0.0023,
       2
      ],
      "0.73": [
-      -0.0048,
+      -0.0022,
       2
      ],
      "0.96": [
-      0.0002,
+      0.0043,
       2
      ]
     },
     "V2_detected": 1,
-    "V2_excess": 0.0002,
-    "V4": "not decided",
+    "V2_excess": 0.0023,
+    "V4": "T2 holds",
     "V4_errors": {
-     "T2": 0.0505,
-     "T2_better": 6,
-     "T2_worse": 4,
-     "level_alone": 0.075,
-     "p": 0.7539
+     "T2": 0.1234,
+     "T2_better": 9,
+     "T2_worse": 1,
+     "level_alone": 0.1766,
+     "p": 0.0215
     },
     "V5": "T2 fails",
-    "V5_detected": 10,
+    "V5_detected": 9,
     "V5_signs": [
-     4,
-     6
+     5,
+     4
     ],
     "W": "the wording fails",
     "W_by_loss": {
      "0.04": [
-      0.2234,
+      0.3173,
       2
      ],
      "0.27": [
-      0.3294,
+      0.6818,
       2
      ],
      "0.5": [
-      0.5794,
+      0.7251,
       2
      ],
      "0.73": [
-      0.7432,
+      0.8232,
       2
      ],
      "0.96": [
-      0.9665,
+      0.9578,
       2
      ]
     },
     "W_detected": 10,
-    "W_excess": 0.5794,
+    "W_excess": 0.7251,
     "cells": 10,
     "left_out": {
      "H1": 0,
@@ -1022,37 +1199,228 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
-     0,
+     158,
      2700
     ],
     "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
-    "reported_ONEH": 0.378,
-    "reported_ONEW": 0.6316,
-    "reported_TL": 0.037,
-    "reported_TX": 0.5807,
+    "reported_ONEH": 0.1167,
+    "reported_ONEW": 0.8858,
+    "reported_TL": 0.2254,
+    "reported_TX": 0.7284,
     "reported_V3": {
-     "median_ratio": 0.3623,
+     "median_ratio": 0.1339,
      "p": 0.002,
      "rival_better": 10,
      "rival_worse": 0
     },
-    "reported_lag": 0.1602,
+    "reported_lag": 0.1536,
     "reported_resid_over_floor": {
-     "RB": 0.7439,
-     "T2": 1.3259
+     "RB": 1.3661,
+     "T2": 4.9369
     },
-    "reported_rows_recruits_above_pupae": 0,
+    "reported_rows_recruits_above_pupae": 158,
     "sign": "not read: the further lag is detected in more cultures than chance gives",
     "sign_counts": {
      "T2_right": 0,
      "cultures": 10,
      "p": 0.125,
-     "positive": 4,
-     "rival_predicts_negative": 6,
+     "positive": 5,
+     "rival_predicts_negative": 4,
      "rival_right": 4,
      "rules_differ": 4,
+     "unpredicted": 2
+    },
+    "testable": true,
+    "too_short_cells": 0,
+    "zero_columns_dropped": 0
+   },
+   "medians": {
+    "H1_detected": 1.0,
+    "H1_excess": 0.0259,
+    "V2_detected": 0.0,
+    "V2_excess": -0.0088,
+    "V3_median_ratio": 0.0993,
+    "V4_T2": 0.1333,
+    "V4_T2_better": 8.0,
+    "V4_T2_worse": 2.0,
+    "V4_level_alone": 0.1997,
+    "V5_detected": 4.0,
+    "W_detected": 9.0,
+    "W_excess": 0.7218,
+    "left_out": 0.0,
+    "most_left_out": 0,
+    "most_protocol_rows_above": 33,
+    "most_too_short_cells": 0,
+    "most_zero_columns_dropped": 0,
+    "resid_over_floor_RB": 1.2268,
+    "resid_over_floor_T2": 4.4369,
+    "rows_recruits_above_pupae": 20.0,
+    "sign_T2_right": 1.0,
+    "sign_by_rival_negative": {
+     "4": [
+      910,
+      0
+     ]
+    },
+    "sign_positive": 6.0,
+    "sign_rival_predicts_negative": 4.0,
+    "sign_rival_right": 3.0,
+    "sign_rules_differ": 4.0,
+    "sign_unpredicted": 1.0,
+    "zero_columns_dropped": 0.0
+   },
+   "shares": {
+    "H1: T2 fails": 0.061,
+    "H1: T2 holds": 0.939,
+    "V2: the rival holds": 1.0,
+    "V4: T2 holds": 0.418,
+    "V4: not decided": 0.582,
+    "V5: T2 fails": 0.062,
+    "V5: T2 holds": 0.004,
+    "V5: not testable": 0.934,
+    "W: the wording fails": 1.0,
+    "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.061,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.939,
+    "sign read with at least six cells differing: not separated on the sign": 0.012,
+    "sign: not read: the course needs more than three numbers": 0.061,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.029,
+    "sign: not separated on the sign": 0.012,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.898
+   }
+  },
+  "lpa-offband": {
+   "cpu_seconds": 134.1,
+   "large": {
+    "H1": "T2 holds",
+    "H1_by_loss": {
+     "0.04": [
+      -0.0064,
+      2
+     ],
+     "0.27": [
+      0.0027,
+      2
+     ],
+     "0.5": [
+      0.0785,
+      2
+     ],
+     "0.73": [
+      0.0228,
+      2
+     ],
+     "0.96": [
+      0.0338,
+      2
+     ]
+    },
+    "H1_detected": 6,
+    "H1_detected_tail": 0.0,
+    "H1_excess": 0.0228,
+    "V2": "the rival holds",
+    "V2_by_loss": {
+     "0.04": [
+      0.0266,
+      2
+     ],
+     "0.27": [
+      -0.0128,
+      2
+     ],
+     "0.5": [
+      0.0042,
+      2
+     ],
+     "0.73": [
+      -0.0052,
+      2
+     ],
+     "0.96": [
+      0.0134,
+      2
+     ]
+    },
+    "V2_detected": 3,
+    "V2_excess": 0.0042,
+    "V4": "not decided",
+    "V4_errors": {
+     "T2": 0.0539,
+     "T2_better": 6,
+     "T2_worse": 4,
+     "level_alone": 0.0775,
+     "p": 0.7539
+    },
+    "V5": "T2 fails",
+    "V5_detected": 9,
+    "V5_signs": [
+     5,
+     4
+    ],
+    "W": "the wording fails",
+    "W_by_loss": {
+     "0.04": [
+      0.2202,
+      2
+     ],
+     "0.27": [
+      0.3909,
+      2
+     ],
+     "0.5": [
+      0.5965,
+      2
+     ],
+     "0.73": [
+      0.6751,
+      2
+     ],
+     "0.96": [
+      0.974,
+      2
+     ]
+    },
+    "W_detected": 10,
+    "W_excess": 0.5965,
+    "cells": 10,
+    "left_out": {
+     "H1": 0,
+     "V2": 0,
+     "W": 0
+    },
+    "losses": 5,
+    "protocol": "the reading's form and the stage counts agree with the protocol",
+    "protocol_rows": [
+     0,
+     2700
+    ],
+    "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
+    "reported_ONEH": 0.3591,
+    "reported_ONEW": 0.6669,
+    "reported_TL": 0.0292,
+    "reported_TX": 0.5983,
+    "reported_V3": {
+     "median_ratio": 0.3168,
+     "p": 0.002,
+     "rival_better": 10,
+     "rival_worse": 0
+    },
+    "reported_lag": 0.183,
+    "reported_resid_over_floor": {
+     "RB": 0.7531,
+     "T2": 1.3275
+    },
+    "reported_rows_recruits_above_pupae": 0,
+    "sign": "not read: the further lag is detected in more cultures than chance gives",
+    "sign_counts": {
+     "T2_right": 1,
+     "cultures": 10,
+     "p": 0.2188,
+     "positive": 5,
+     "rival_predicts_negative": 6,
+     "rival_right": 5,
+     "rules_differ": 6,
      "unpredicted": 0
     },
     "testable": true,
@@ -1061,26 +1429,36 @@
    },
    "medians": {
     "H1_detected": 0.0,
-    "H1_excess": -0.0096,
+    "H1_excess": -0.0098,
     "V2_detected": 0.0,
-    "V2_excess": -0.0137,
-    "V3_median_ratio": 0.2908,
-    "V4_T2": 0.0546,
+    "V2_excess": -0.0124,
+    "V3_median_ratio": 0.2888,
+    "V4_T2": 0.0543,
     "V4_T2_better": 7.0,
     "V4_T2_worse": 3.0,
-    "V4_level_alone": 0.0784,
+    "V4_level_alone": 0.0783,
     "V5_detected": 5.0,
     "W_detected": 7.0,
-    "W_excess": 0.549,
+    "W_excess": 0.5423,
     "left_out": 0.0,
-    "most_left_out": 0,
+    "most_left_out": 2,
     "most_protocol_rows_above": 0,
     "most_too_short_cells": 0,
     "most_zero_columns_dropped": 0,
-    "resid_over_floor_RB": 0.6225,
-    "resid_over_floor_T2": 1.1865,
+    "resid_over_floor_RB": 0.6204,
+    "resid_over_floor_T2": 1.1872,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 2.0,
+    "sign_by_rival_negative": {
+     "5": [
+      1,
+      0
+     ],
+     "6": [
+      993,
+      2
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 6.0,
     "sign_rival_right": 4.0,
@@ -1091,28 +1469,28 @@
    "shares": {
     "H1: T2 fails": 0.004,
     "H1: T2 holds": 0.996,
-    "V2: the rival fails": 0.009,
-    "V2: the rival holds": 0.991,
-    "V4: T2 holds": 0.062,
-    "V4: not decided": 0.938,
-    "V5: T2 fails": 0.135,
-    "V5: T2 holds": 0.144,
-    "V5: not testable": 0.721,
+    "V2: the rival fails": 0.013,
+    "V2: the rival holds": 0.987,
+    "V4: T2 holds": 0.071,
+    "V4: not decided": 0.929,
+    "V5: T2 fails": 0.162,
+    "V5: T2 holds": 0.119,
+    "V5: not testable": 0.719,
     "W: the wording fails": 1.0,
-    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.009,
+    "reading: both states incomplete on the next step; three numbers suffice on the course": 0.013,
     "reading: separated on the next step: the rival's state; the course needs more than three numbers": 0.004,
-    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.987,
-    "sign read with at least six cells differing: not separated on the sign": 0.914,
+    "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.983,
+    "sign read with at least six cells differing: not separated on the sign": 0.922,
     "sign read with at least six cells differing: separated on the sign: T2's": 0.002,
     "sign: not read: the course needs more than three numbers": 0.004,
-    "sign: not read: the further lag is detected in more cultures than chance gives": 0.003,
-    "sign: not separated on the sign": 0.914,
-    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.077,
+    "sign: not read: the further lag is detected in more cultures than chance gives": 0.002,
+    "sign: not separated on the sign": 0.922,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.07,
     "sign: separated on the sign: T2's": 0.002
    }
   },
   "lpa-recalled": {
-   "cpu_seconds": 130.0,
+   "cpu_seconds": 131.7,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -1211,7 +1589,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -1270,6 +1648,12 @@
     "resid_over_floor_T2": 1.8648,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 0.0,
+    "sign_by_rival_negative": {
+     "2": [
+      981,
+      0
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 2.0,
     "sign_rival_right": 2.0,
@@ -1299,7 +1683,7 @@
    }
   },
   "lpa-two": {
-   "cpu_seconds": 131.6,
+   "cpu_seconds": 133.5,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -1398,7 +1782,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -1457,6 +1841,12 @@
     "resid_over_floor_T2": 2.5678,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 0.0,
+    "sign_by_rival_negative": {
+     "3": [
+      947,
+      0
+     ]
+    },
     "sign_positive": 6.0,
     "sign_rival_predicts_negative": 3.0,
     "sign_rival_right": 3.0,
@@ -1487,7 +1877,7 @@
    }
   },
   "lpaa": {
-   "cpu_seconds": 133.6,
+   "cpu_seconds": 147.0,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -1586,7 +1976,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -1645,6 +2035,12 @@
     "resid_over_floor_T2": 5.2983,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 2.0,
+    "sign_by_rival_negative": {
+     "4": [
+      579,
+      0
+     ]
+    },
     "sign_positive": 4.0,
     "sign_rival_predicts_negative": 4.0,
     "sign_rival_right": 3.0,
@@ -1674,7 +2070,7 @@
    }
   },
   "t2-copy-b": {
-   "cpu_seconds": 133.5,
+   "cpu_seconds": 148.0,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -1773,7 +2169,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      9,
      2700
@@ -1832,6 +2228,20 @@
     "resid_over_floor_T2": 2.0649,
     "rows_recruits_above_pupae": 1.0,
     "sign_T2_right": 8.0,
+    "sign_by_rival_negative": {
+     "10": [
+      889,
+      388
+     ],
+     "8": [
+      5,
+      0
+     ],
+     "9": [
+      101,
+      53
+     ]
+    },
     "sign_positive": 8.0,
     "sign_rival_predicts_negative": 10.0,
     "sign_rival_right": 2.0,
@@ -1860,7 +2270,7 @@
    }
   },
   "t2-copy-c": {
-   "cpu_seconds": 139.5,
+   "cpu_seconds": 146.3,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -1959,7 +2369,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      18,
      2700
@@ -1997,55 +2407,64 @@
     "zero_columns_dropped": 0
    },
    "medians": {
-    "H1_detected": 0,
+    "H1_detected": 0.0,
     "H1_excess": -0.013,
-    "V2_detected": 3,
-    "V2_excess": 0.0759,
-    "V3_median_ratio": 0.9761,
+    "V2_detected": 3.0,
+    "V2_excess": 0.0758,
+    "V3_median_ratio": 0.9758,
     "V4_T2": 0.0269,
-    "V4_T2_better": 5,
-    "V4_T2_worse": 5,
+    "V4_T2_better": 5.0,
+    "V4_T2_worse": 5.0,
     "V4_level_alone": 0.027,
-    "V5_detected": 2,
-    "W_detected": 0,
+    "V5_detected": 2.0,
+    "W_detected": 0.0,
     "W_excess": -0.0119,
-    "left_out": 0,
+    "left_out": 0.0,
     "most_left_out": 2,
     "most_protocol_rows_above": 9,
     "most_too_short_cells": 0,
     "most_zero_columns_dropped": 0,
-    "resid_over_floor_RB": 2.8646,
+    "resid_over_floor_RB": 2.8655,
     "resid_over_floor_T2": 2.0177,
-    "rows_recruits_above_pupae": 2,
-    "sign_T2_right": 9,
-    "sign_positive": 9,
-    "sign_rival_predicts_negative": 10,
-    "sign_rival_right": 1,
-    "sign_rules_differ": 10,
-    "sign_unpredicted": 0,
-    "zero_columns_dropped": 0
+    "rows_recruits_above_pupae": 2.0,
+    "sign_T2_right": 9.0,
+    "sign_by_rival_negative": {
+     "10": [
+      993,
+      660
+     ],
+     "9": [
+      7,
+      6
+     ]
+    },
+    "sign_positive": 9.0,
+    "sign_rival_predicts_negative": 10.0,
+    "sign_rival_right": 1.0,
+    "sign_rules_differ": 10.0,
+    "sign_unpredicted": 0.0,
+    "zero_columns_dropped": 0.0
    },
    "shares": {
-    "H1: T2 holds": 0.999,
+    "H1: T2 holds": 1.0,
     "V2: the rival fails": 0.291,
-    "V2: the rival holds": 0.708,
+    "V2: the rival holds": 0.709,
     "V4: T2 fails": 0.007,
     "V4: T2 holds": 0.004,
-    "V4: not decided": 0.988,
+    "V4: not decided": 0.989,
     "V5: T2 holds": 0.012,
-    "V5: not testable": 0.987,
-    "W: the wording holds": 0.999,
-    "protocol: the recording disagrees with the protocol": 0.001,
+    "V5: not testable": 0.988,
+    "W: the wording holds": 1.0,
     "reading: separated on the next step: T2's state; three numbers suffice on the course": 0.291,
-    "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.708,
-    "sign read with at least six cells differing: not separated on the sign": 0.333,
+    "reading: tie on the next step: both states suffice; three numbers suffice on the course": 0.709,
+    "sign read with at least six cells differing: not separated on the sign": 0.334,
     "sign read with at least six cells differing: separated on the sign: T2's": 0.666,
-    "sign: not separated on the sign": 0.333,
+    "sign: not separated on the sign": 0.334,
     "sign: separated on the sign: T2's": 0.666
    }
   },
   "t2-copy-mq5": {
-   "cpu_seconds": 130.9,
+   "cpu_seconds": 131.5,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -2144,7 +2563,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      3,
      2700
@@ -2203,6 +2622,16 @@
     "resid_over_floor_T2": 2.0722,
     "rows_recruits_above_pupae": 1.0,
     "sign_T2_right": 9.0,
+    "sign_by_rival_negative": {
+     "10": [
+      995,
+      729
+     ],
+     "9": [
+      2,
+      2
+     ]
+    },
     "sign_positive": 9.0,
     "sign_rival_predicts_negative": 10.0,
     "sign_rival_right": 1.0,
@@ -2233,98 +2662,98 @@
    }
   },
   "t2-field-mq5": {
-   "cpu_seconds": 143.2,
+   "cpu_seconds": 135.6,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
      "0.04": [
-      0.0025,
+      0.0084,
       2
      ],
      "0.27": [
-      -0.001,
+      -0.0023,
       2
      ],
      "0.5": [
-      0.0073,
+      0.0004,
       2
      ],
      "0.73": [
-      -0.0053,
+      -0.0001,
       2
      ],
      "0.96": [
-      0.0002,
+      0.0023,
       2
      ]
     },
     "H1_detected": 0,
     "H1_detected_tail": 1.0,
-    "H1_excess": 0.0002,
+    "H1_excess": 0.0004,
     "V2": "the rival holds",
     "V2_by_loss": {
      "0.04": [
-      -0.0096,
+      0.0104,
       2
      ],
      "0.27": [
-      0.0053,
+      0.0021,
       2
      ],
      "0.5": [
-      0.0025,
+      -0.0114,
       2
      ],
      "0.73": [
-      0.0114,
+      0.0038,
       2
      ],
      "0.96": [
-      0.0089,
+      -0.0066,
       2
      ]
     },
     "V2_detected": 1,
-    "V2_excess": 0.0053,
+    "V2_excess": 0.0021,
     "V4": "not decided",
     "V4_errors": {
-     "T2": 0.0722,
-     "T2_better": 8,
-     "T2_worse": 2,
-     "level_alone": 0.0757,
-     "p": 0.1094
+     "T2": 0.0791,
+     "T2_better": 4,
+     "T2_worse": 6,
+     "level_alone": 0.0812,
+     "p": 0.7539
     },
     "V5": "T2 holds",
-    "V5_detected": 9,
+    "V5_detected": 6,
     "V5_signs": [
-     9,
+     6,
      0
     ],
     "W": "the wording fails",
     "W_by_loss": {
      "0.04": [
-      0.7724,
+      0.7806,
       2
      ],
      "0.27": [
-      0.776,
+      0.7871,
       2
      ],
      "0.5": [
-      0.782,
+      0.7979,
       2
      ],
      "0.73": [
-      0.7825,
+      0.7927,
       2
      ],
      "0.96": [
-      0.7681,
+      0.778,
       2
      ]
     },
     "W_detected": 10,
-    "W_excess": 0.776,
+    "W_excess": 0.7871,
     "cells": 10,
     "left_out": {
      "H1": 0,
@@ -2332,38 +2761,38 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
     ],
     "reading": "separated on the next step: the rival's state; three numbers suffice on the course",
-    "reported_ONEH": 0.0577,
-    "reported_ONEW": 0.7922,
-    "reported_TL": -0.002,
-    "reported_TX": 0.7748,
+    "reported_ONEH": 0.0546,
+    "reported_ONEW": 0.8104,
+    "reported_TL": -0.0025,
+    "reported_TX": 0.7834,
     "reported_V3": {
-     "median_ratio": 0.211,
+     "median_ratio": 0.2031,
      "p": 0.002,
      "rival_better": 10,
      "rival_worse": 0
     },
-    "reported_lag": 0.0509,
+    "reported_lag": 0.0529,
     "reported_resid_over_floor": {
-     "RB": 1.01,
-     "T2": 4.514
+     "RB": 1.0274,
+     "T2": 4.8657
     },
     "reported_rows_recruits_above_pupae": 0,
-    "sign": "separated on the sign: T2's",
+    "sign": "not separated on the sign: the rival's turning point does not split the cultures",
     "sign_counts": {
-     "T2_right": 6,
+     "T2_right": 4,
      "cultures": 10,
-     "p": 0.0312,
+     "p": 0.125,
      "positive": 10,
-     "rival_predicts_negative": 6,
+     "rival_predicts_negative": 4,
      "rival_right": 0,
-     "rules_differ": 6,
-     "unpredicted": 3
+     "rules_differ": 4,
+     "unpredicted": 6
     },
     "testable": true,
     "too_short_cells": 0,
@@ -2371,55 +2800,85 @@
    },
    "medians": {
     "H1_detected": 0.0,
-    "H1_excess": -0.0123,
+    "H1_excess": -0.0107,
     "V2_detected": 0.0,
-    "V2_excess": -0.0106,
-    "V3_median_ratio": 0.1571,
-    "V4_T2": 0.0997,
+    "V2_excess": -0.0087,
+    "V3_median_ratio": 0.1563,
+    "V4_T2": 0.1061,
     "V4_T2_better": 4.0,
     "V4_T2_worse": 6.0,
-    "V4_level_alone": 0.0993,
+    "V4_level_alone": 0.1054,
     "V5_detected": 2.0,
     "W_detected": 10.0,
-    "W_excess": 0.7319,
+    "W_excess": 0.7339,
     "left_out": 0.0,
     "most_left_out": 0,
     "most_protocol_rows_above": 0,
     "most_too_short_cells": 0,
     "most_zero_columns_dropped": 0,
-    "resid_over_floor_RB": 0.9312,
-    "resid_over_floor_T2": 3.6493,
+    "resid_over_floor_RB": 0.9278,
+    "resid_over_floor_T2": 3.6543,
     "rows_recruits_above_pupae": 0.0,
-    "sign_T2_right": 6.0,
+    "sign_T2_right": 5.0,
+    "sign_by_rival_negative": {
+     "10": [
+      1,
+      0
+     ],
+     "4": [
+      240,
+      0
+     ],
+     "5": [
+      377,
+      0
+     ],
+     "6": [
+      273,
+      173
+     ],
+     "7": [
+      89,
+      42
+     ],
+     "8": [
+      16,
+      5
+     ],
+     "9": [
+      3,
+      2
+     ]
+    },
     "sign_positive": 9.0,
-    "sign_rival_predicts_negative": 6.0,
+    "sign_rival_predicts_negative": 5.0,
     "sign_rival_right": 0.0,
-    "sign_rules_differ": 6.0,
-    "sign_unpredicted": 3.0,
+    "sign_rules_differ": 5.0,
+    "sign_unpredicted": 4.0,
     "zero_columns_dropped": 0.0
    },
    "shares": {
     "H1: T2 holds": 1.0,
     "V2: the rival fails": 0.001,
     "V2: the rival holds": 0.999,
-    "V4: T2 fails": 0.011,
-    "V4: T2 holds": 0.004,
-    "V4: not decided": 0.985,
-    "V5: T2 holds": 0.007,
-    "V5: not testable": 0.993,
+    "V4: T2 fails": 0.018,
+    "V4: T2 holds": 0.001,
+    "V4: not decided": 0.981,
+    "V5: T2 holds": 0.014,
+    "V5: not testable": 0.986,
     "W: the wording fails": 1.0,
     "reading: both states incomplete on the next step; three numbers suffice on the course": 0.001,
     "reading: separated on the next step: the rival's state; three numbers suffice on the course": 0.999,
-    "sign read with at least six cells differing: not separated on the sign": 0.281,
-    "sign read with at least six cells differing: separated on the sign: T2's": 0.613,
+    "sign read with at least six cells differing: not separated on the sign": 0.16,
+    "sign read with at least six cells differing: separated on the sign: T2's": 0.222,
     "sign: not read: the further lag is detected in more cultures than chance gives": 0.001,
-    "sign: not separated on the sign": 0.281,
-    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.105,
-    "sign: separated on the sign: T2's": 0.613
+    "sign: not separated on the sign": 0.16,
+    "sign: not separated on the sign: the rival's turning point does not split the cultures": 0.617,
+    "sign: separated on the sign: T2's": 0.222
    }
   },
   "t2-stage-b": {
-   "cpu_seconds": 131.0,
+   "cpu_seconds": 131.2,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -2518,7 +2977,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -2577,6 +3036,20 @@
     "resid_over_floor_T2": 3.5873,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 8.0,
+    "sign_by_rival_negative": {
+     "10": [
+      907,
+      377
+     ],
+     "8": [
+      1,
+      0
+     ],
+     "9": [
+      91,
+      38
+     ]
+    },
     "sign_positive": 8.0,
     "sign_rival_predicts_negative": 10.0,
     "sign_rival_right": 2.0,
@@ -2605,7 +3078,7 @@
    }
   },
   "t2-stage-c": {
-   "cpu_seconds": 130.5,
+   "cpu_seconds": 143.0,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -2704,7 +3177,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -2763,6 +3236,16 @@
     "resid_over_floor_T2": 3.6039,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 9.0,
+    "sign_by_rival_negative": {
+     "10": [
+      992,
+      627
+     ],
+     "9": [
+      7,
+      3
+     ]
+    },
     "sign_positive": 9.0,
     "sign_rival_predicts_negative": 10.0,
     "sign_rival_right": 1.0,
@@ -2789,7 +3272,7 @@
    }
   },
   "t2-stage-mq5": {
-   "cpu_seconds": 146.7,
+   "cpu_seconds": 131.5,
    "large": {
     "H1": "T2 holds",
     "H1_by_loss": {
@@ -2888,7 +3371,7 @@
      "W": 0
     },
     "losses": 5,
-    "protocol": "the recording agrees with the protocol",
+    "protocol": "the reading's form and the stage counts agree with the protocol",
     "protocol_rows": [
      0,
      2700
@@ -2947,6 +3430,16 @@
     "resid_over_floor_T2": 3.5793,
     "rows_recruits_above_pupae": 0.0,
     "sign_T2_right": 9.0,
+    "sign_by_rival_negative": {
+     "10": [
+      997,
+      756
+     ],
+     "9": [
+      2,
+      1
+     ]
+    },
     "sign_positive": 9.0,
     "sign_rival_predicts_negative": 10.0,
     "sign_rival_right": 1.0,
@@ -2990,31 +3483,31 @@
  },
  "t2_field_constants": {
   "0.04": 32.087,
-  "0.27": 22.627,
-  "0.5": 13.411,
+  "0.27": 20.848,
+  "0.5": 1.0,
   "0.73": 1.0,
   "0.96": 1.0
  },
  "t2_field_mean_adults": {
   "0.04": {
-   "lpa": 282.0,
-   "t2": 281.7
+   "lpa": 283.7,
+   "t2": 284.7
   },
   "0.27": {
-   "lpa": 149.8,
-   "t2": 149.9
+   "lpa": 137.0,
+   "t2": 136.3
   },
   "0.5": {
-   "lpa": 101.4,
-   "t2": 101.2
+   "lpa": 87.9,
+   "t2": 95.6
   },
   "0.73": {
-   "lpa": 74.6,
-   "t2": 87.4
+   "lpa": 70.8,
+   "t2": 92.7
   },
   "0.96": {
-   "lpa": 51.5,
-   "t2": 85.0
+   "lpa": 45.8,
+   "t2": 92.3
   }
  }
 }

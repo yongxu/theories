@@ -5,8 +5,8 @@ is read.
 
 Each draw is one synthetic archive shaped as Data Set 2's adult-loss cultures (../LAYOUT.md): 2 strains x 5 set losses
 (0.04, 0.27, 0.50, 0.73, 0.96) x 4 replicates, 40 cultures. Each culture starts at 250 larvae, 5 pupae and 100 adults
-(Dennis et al. 2001's start; Data Set 2's own is not read), runs six census steps with the adults' natural loss (weeks
-0 to 12), and has the loss set from the census at week 12 on, the adults returned there being the recruits since week
+(Dennis et al. 2001's start; Data Set 2's own is not read), runs five census steps with the adults' natural loss (weeks
+0 to 10), and has the loss set from the census at week 12 on, the adults returned there being the recruits since week
 10 plus the set share of the adults returned at week 10; the rules read the 13 censuses from week 12 to week 36
 (t = 0 to 12). Under T2's own law the escapement is the adults' natural share, 1 - 0.007629 a step (Dennis et al.
 2001's estimate), until week 10's adults, and the set share from them on, so that week 12's adults are the first
@@ -25,14 +25,18 @@ Generators (cells/DESIGN.md §6), each strain at the parameters named:
                 (* the rates (phi, lambda): mq5 = 0.96 and 0.55, b = 0.9 and 0.3, c = 0.5 and 0.4)
   t2-field-mq5  T2's law at MQ5's rates, the pupae the recruits to be, at the field's densities: at each loss the
                 level law's carrying constant is set so that T2's cultures hold on average the mean adults of lpa's
-                cultures at that loss over the 13 censuses read (from calibration batches), so that dense and sparse
-                cells fall where the field's model puts them. In the other T2 worlds every cell is dense.
+                cultures at that loss over the censuses the rival's sign reads, t = 1 to 9 (from calibration batches),
+                so that the rival predicts where it does under lpa. In the other T2 worlds every cell is dense.
   lpa-jars      lpa with each culture's b, c_el, c_ea and c_pa varying lognormally, sd 0.2, around the 2001 estimates:
                 replicates that differ in what neither state reads (the reader's finding 1)
   lpa-offband   lpa with c_ea halved, so the turning point (about 153 adults) lies outside the rival's band of 76 to 91
                 (the reader's finding 2)
   lpa-counted   lpa with the adults recorded as counted before the manipulation from week 14 on, not as returned: the
                 recording the frozen protocol check must catch
+  lpa-counted-recalled  the same at the recalled set, where the counted form puts the fewest rows above the pupae
+  lpa-miscount  lpa recorded as the protocol says but with count errors: the survivors' set share rounded up, 5% of
+                the pupae missed at each census, and 0.2% of the larvae maturing within a step without being counted
+                as pupae (the second reader's probe): the recording the check must let through
 Beside the draws, one archive per generator with 30 replicates a cell shows where each rule goes when power is ample.
 """
 from __future__ import annotations
@@ -60,24 +64,28 @@ LARGE_REPS = 30
 DRAWS = 1000
 GENS = (['lpa', 'lpa-two', 'lpa-recalled', 'lpa-env', 'lpaa', 'lpa-long']
         + ['t2-%s-%s' % (k, r) for k in ('stage', 'copy') for r in D.RATES] + ['t2-field-mq5', 'lpa-jars', 'lpa-offband',
-                                                                             'lpa-counted'])
+                                                                             'lpa-counted', 'lpa-counted-recalled',
+                                                                             'lpa-miscount'])
+MISCOUNT = {'up': True, 'missed': 0.05, 'larvae': 0.002}   # lpa-miscount's count errors
 JAR_SD = 0.2               # lpa-jars: each culture's parameters, lognormal about the 2001 estimates
 OFFBAND = 0.5              # lpa-offband: c_ea times this
 CALIBRATION = 200          # cultures a loss, for t2-field's densities
 BISECTIONS = 40            # steps of t2-field's bisection
+READ = slice(1, 10)        # the adults the rival's sign reads, A_{t-2} for t = 3 to 11
 KEYS = ('W', 'H1', 'V2', 'V5', 'V4', 'sign', 'reading')
 
 
 def params(gen, strain):
-    if gen == 'lpa-recalled' or (gen == 'lpa-two' and strain == 2):
+    if gen in ('lpa-recalled', 'lpa-counted-recalled') or (gen == 'lpa-two' and strain == 2):
         return D.RECALLED
     return D.LPA
 
 
-def lpa_course(rng, mu, q, env=0.0, newly=False, long=False, counted=False):
+def lpa_course(rng, mu, q, env=0.0, newly=False, long=False, counted=False, miscount=None):
     """One culture: natural adult loss before the onset, the loss set from the census at week 12 on; returns the 13
     censuses from week 12, the adults as returned after each census (or, counted, as counted before the manipulation
-    from week 14 on)."""
+    from week 14 on). miscount: the survivors' set share rounded up ('up'), a share of the pupae missed at each count
+    ('missed'), and a share of the larvae maturing within a step uncounted as pupae ('larvae')."""
     l1, l2, p, a = D.START[0], 0, D.START[1], D.START[2]
     L, P, A = [l1 + l2], [p], [a]
     r_prev = 0
@@ -90,11 +98,16 @@ def lpa_course(rng, mu, q, env=0.0, newly=False, long=False, counted=False):
         else:
             nl1, nl2, np_ = eggs, 0, D.binomial(rng, l1, 1 - q['mu_l'])
         rec = D.binomial(rng, p, math.exp(-q['c_pa'] * mature))
-        old = round((1 - mu) * a) if k + 1 >= BEFORE else D.binomial(rng, a, 1 - q['mu_a'])
+        if miscount and miscount['larvae']:
+            rec += D.binomial(rng, l1, miscount['larvae'])
+        if k + 1 >= BEFORE:
+            old = a - math.floor(mu * a) if miscount and miscount['up'] else round((1 - mu) * a)
+        else:
+            old = D.binomial(rng, a, 1 - q['mu_a'])
         shown = rec + D.binomial(rng, a, 1 - q['mu_a']) if counted and k + 1 > BEFORE else rec + old
         l1, l2, p, a = nl1, nl2, np_, rec + old
         L.append(l1 + l2)
-        P.append(p)
+        P.append(p - D.binomial(rng, p, miscount['missed']) if miscount and miscount['missed'] else p)
         A.append(shown)
         r_prev = rec
     return {'L': L[BEFORE:], 'P': P[BEFORE:], 'A': A[BEFORE:]}
@@ -102,24 +115,26 @@ def lpa_course(rng, mu, q, env=0.0, newly=False, long=False, counted=False):
 
 def field_constants(rng):
     """t2-field's carrying constant at each loss: the K at which T2's cultures at MQ5's rates (t2_course, the same K
-    before the onset and after it) hold on average the mean adults of lpa's cultures at that loss over the 13 censuses
-    read, t = 0 to 12. lpa's mean is from CALIBRATION cultures drawn with rng; T2's, for each K tried, from CALIBRATION
-    cultures drawn at the seed SEED + 1; K is found by bisection on its logarithm, between 1 and 5000. Where even the
-    least K leaves T2's cultures denser, K stays at 1; the means aimed at and reached are returned beside K."""
+    before the onset and after it) hold on average the mean adults of lpa's cultures at that loss over the censuses the
+    rival's sign reads, A_{t-2} for t = 3 to 11 (t = 1 to 9). lpa's mean is from CALIBRATION cultures drawn with rng;
+    T2's, for each K tried, from CALIBRATION cultures drawn at the seed SEED + 1; K is found by bisection on its
+    logarithm, between 1 and 5000. Where even the least K leaves T2's cultures denser, K stays at 1; the means aimed at
+    and reached are returned beside K."""
     out, fit = {}, {}
     for mu in D.MUS:
-        target = statistics.fmean(x for _ in range(CALIBRATION) for x in lpa_course(rng, mu, D.LPA)['A'])
+        target = statistics.fmean(x for _ in range(CALIBRATION) for x in lpa_course(rng, mu, D.LPA)['A'][READ])
         lo, hi = 1.0, 5000.0
         for _ in range(BISECTIONS):
             k = math.sqrt(lo * hi)
             draw = random.Random(SEED + 1)
             got = statistics.fmean(x for _ in range(CALIBRATION)
-                                   for x in t2_course(draw, mu, *D.RATES['mq5'], copy=False, K=k)['A'])
+                                   for x in t2_course(draw, mu, *D.RATES['mq5'], copy=False, K=k)['A'][READ])
             lo, hi = (k, hi) if got < target else (lo, k)
         out[mu] = math.sqrt(lo * hi)
         draw = random.Random(SEED + 1)
         fit[str(mu)] = {'lpa': round(target, 1), 't2': round(statistics.fmean(
-            x for _ in range(CALIBRATION) for x in t2_course(draw, mu, *D.RATES['mq5'], copy=False, K=out[mu])['A']), 1)}
+            x for _ in range(CALIBRATION) for x in t2_course(draw, mu, *D.RATES['mq5'], copy=False, K=out[mu])['A'][READ]),
+            1)}
     return out, fit
 
 
@@ -160,7 +175,8 @@ def culture(rng, gen, strain, mu, field=None):
     elif gen == 'lpa-offband':
         q = dict(q, c_ea=q['c_ea'] * OFFBAND)
     return lpa_course(rng, mu, q, env=0.3 if gen == 'lpa-env' else 0.0, newly=(gen == 'lpaa'),
-                      long=(gen == 'lpa-long'), counted=(gen == 'lpa-counted'))
+                      long=(gen == 'lpa-long'), counted=gen.startswith('lpa-counted'),
+                      miscount=MISCOUNT if gen == 'lpa-miscount' else None)
 
 
 def archive(rng, gen, reps=REPS, field=None):
@@ -177,13 +193,13 @@ def archive(rng, gen, reps=REPS, field=None):
 
 def summary(results):
     """The verdicts' shares over the draws, and the medians of the statistics."""
-    tally, stats, most = {}, {}, {}
+    tally, stats, most, byneg = {}, {}, {}, {}
     for res in results:
         for k, v in (('too_short_cells', res['too_short_cells']), ('protocol_rows_above', res['protocol_rows'][0]),
                      ('left_out', sum(res.get('left_out', {}).values())),
                      ('zero_columns_dropped', res.get('zero_columns_dropped', 0))):
             most[k] = max(most.get(k, 0), v)
-        if res['protocol'] != 'the recording agrees with the protocol':
+        if res['protocol'] != C.PROTOCOL_AGREES:
             tally['protocol: ' + res['protocol']] = tally.get('protocol: ' + res['protocol'], 0) + 1
             continue
         if not res['testable']:
@@ -196,6 +212,10 @@ def summary(results):
             if res.get(k) is not None:
                 stats.setdefault(k, []).append(res[k])
         s = res['sign_counts']
+        if not res['sign'].startswith('not read'):
+            k = byneg.setdefault(str(s['rival_predicts_negative']), [0, 0])
+            k[0] += 1
+            k[1] += res['sign'] == "separated on the sign: T2's"
         if s['rules_differ'] >= 6 and not res['sign'].startswith('not read'):
             name = 'sign read with at least six cells differing: ' + res['sign']
             tally[name] = tally.get(name, 0) + 1
@@ -215,7 +235,8 @@ def summary(results):
     n = len(results)
     return ({k: round(v / n, 4) for k, v in sorted(tally.items())},
             dict({k: round(statistics.median(v), 4) for k, v in sorted(stats.items())},
-                 **{'most_' + k: v for k, v in sorted(most.items())}))
+                 **{'most_' + k: v for k, v in sorted(most.items())},
+                 sign_by_rival_negative={k: byneg[k] for k in sorted(byneg, key=int)}))
 
 
 def rounded(v):

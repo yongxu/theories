@@ -1,0 +1,6 @@
+protocol, rounded up, 2% of pupae missed, larvae 0.002 min   4  median  10.0  99th percentile  17  max  19  stopped (46 or more)   0.0%
+protocol, as lpa-miscount (5% missed)                min  10  median  19.0  99th percentile  28  max  32  stopped (46 or more)   0.0%
+protocol, rounded up, 5% missed, larvae 0.005        min  14  median  26.0  99th percentile  38  max  40  stopped (46 or more)   0.0%
+protocol, 10% of pupae missed                        min  20  median  29.0  99th percentile  37  max  40  stopped (46 or more)   0.0%
+counted, at the 2001 estimates                       min 144  median 160.0  99th percentile 175  max 178  stopped (46 or more) 100.0%
+counted, at the recalled set                         min  57  median  71.0  99th percentile  82  max  88  stopped (46 or more) 100.0%
