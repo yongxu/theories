@@ -96,7 +96,7 @@
   ],
   "dependencies": [
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "interpretive",
       "detail": {
         "en": "Answers part of its Next ('a model of how a center forms and represents its boundary'): the region represented is drawn along coupling links.",

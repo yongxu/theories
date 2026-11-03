@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-10-21T04:36:42+00:00",
   "statement": {
-    "en": "Ranked over a horizon, what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; so every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at once a dependence needing more.",
-    "zh": "在视野上排序时，过程所汲取、所留与所放弃之和是起始加每步最大更新；故随汲取升高之序的每个最优都保持在最大更新的水平并终了不留，立即打破需要更多的依存。"
+    "en": "Over a horizon, what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; so every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at once a dependence needing more.",
+    "zh": "在视野上，过程所汲取、所留与所放弃之和是起始加每步最大更新；故随汲取升高之序的每个最优都保持在最大更新的水平并终了不留，立即打破需要更多的依存。"
   },
   "laws": [
     {
@@ -656,6 +656,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'registers' in the counterexample and the correspondence replaced by 'takes in' (zh 耦合入), the glossary's word for what reaches through couplings. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：反例与对应中“记录”（registers）改为“耦合入”（takes in），即术语表中经耦合而及者之词。规律未变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): \"ranked\" dropped from the statement's first clause, an identity of amounts with no order in it; the orders enter in the next clause, which names them. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：陈述首句删去“排序时”：该句是量的恒等式，其中无序；诸序在下一句进入并有其名。主张不变。"
     }
   ]
 }

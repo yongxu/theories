@@ -10,7 +10,7 @@ Every statement carries its standing: a **theorem**, with where it is proved (fo
 
 The footnotes of the README's opening say, sentence by sentence, which kind each claim is. Original words are kept verbatim with their source in [`sources/`](sources/README.md) and quoted as provenance, not as the warrant for a claim.
 
-The work is not licensed: [knowledge is a common good](COMMONS.md).
+The work belongs to the commons and has no licence, by choice: [knowledge is a common good](COMMONS.md).
 
 ## Where to start
 
@@ -21,9 +21,9 @@ The theory is written in four layers, each of which can be read through on its o
 3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
 4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (every concept, result, Lean module and text, with how they connect), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
 
-Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-five to thirty minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md).
+Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-five to thirty minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](theories/becoming/review/SCIENCES.md).
 
-Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, and a blind re-coding of a sample of the corpus classification.
+Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, one for researchers in AI alignment, one for scientists, and a blind re-coding of a sample of the corpus classification.
 
 The [README](README.md) opens with a statement of the whole in the first person. [Goals](GOALS.md) and the [directive register](_process/RESEARCH-DIRECTIVES.md) give scope and the directions behind it; the [glossary](GLOSSARY.md) gives each word its one sense.
 

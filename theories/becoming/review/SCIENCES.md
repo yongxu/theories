@@ -1,0 +1,696 @@
+# Review dossier S: the sciences
+
+*For scientists: physicists working on thermodynamics and stochastic thermodynamics; evolutionary biologists and population geneticists; ecologists and resource economists; computational neuroscientists working on active inference and the free-energy principle; control theorists and researchers of complex systems and open-ended evolution. No person has reviewed this work. It was written with AI, the Lean proofs included. The proofs and quotations are checked by machine, everything else only by further AI readers ([how this dossier was made](#how-this-dossier-was-made)). It assumes the theory: for what the theory is as a whole, read [the one page](../ONE-PAGE.md) first.*
+
+<a id="the-dossier-in-ten-minutes"></a>
+## The dossier in ten minutes
+
+**The question.** The theory starts from relations and the amounts exchanged along them, and asks how patterns form, last, change and end. It claims to *contain* frameworks of the sciences. A containment has three parts: the framework's premises, set out on the theory's premise card; a theorem in Lean stating the framework's law as an instance; and something the theory forbids that the framework leaves open. Without the third part a containment is a restatement. Does a containment here state your framework correctly, and does what it forbids go beyond what your field already forbids?
+
+**The theory's own verdict** ([S-01](#s-01), [S-02](#s-02)). None of the central results is new mathematics: each is near-definitional or a known result restated. An AI audit found third parts in a few rows, and each forbidden statement is known in a neighbouring field. So the theory reaches farther than the few contained frameworks that lack conservation, renewal over time or a threshold, by joining them to its own premises and laws. With the rest it is level or states less, and it does not yet reach farther than the sciences taken together. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker would change these verdicts.
+
+**What a law here is** ([08 §10](../chapters/08-METHOD.md#law)). Most laws are theorems about models in whole numbers and discrete steps, each under hypotheses its item names; the periphery's are over Mathlib's reals, their axioms reported. They are laws of the theory, and the account states no science's law of its own yet. One with content can become a science's law for a domain only once the domain is shown to meet its hypotheses, through a stated correspondence that reads the model's terms in measured quantities and says what its modelling choices leave out. Thermodynamics' laws come in as premises of periphery theorems ([S-04](#s-04)). The laws of the theory's root, its general calculus of any relation read as condition and any sameness, hold of every relation, so they forbid no relation; a law with content forbids through its hypotheses.
+
+**What would refute what.** No measurement refutes a theorem. It falls by a failed Lean check, or by a statement that does not say what its item says, which is one thing you are asked. A law's conclusion failing in a domain shows that the domain does not meet its hypotheses or that the correspondence misreads them, not that the theorem is false [AI reading]. What excludes observations are the theses. A refutation removes no theorem, and a failure stays recorded beside the thesis. A frozen test is scored by a rule fixed before the data.
+
+| Thesis | Forbids (its item has the rest) | Its frozen tests so far |
+|---|---|---|
+| [T1](#s-14): persistence certifies the joint draw | a condition below a need measured in advance returning with nothing given from beyond; a dependent active while its condition stood below its need | passed in three settings, the simulated one testing the measured quantities and not the thesis; failed in four; no field test of a need measured in advance |
+| [T2](#s-15): the state of a renewable condition under a draw is its level, its recent giving and one lag | a fourth variable removing a tenth of the residual variance in the median series; the level alone forecasting as well at five years; the lag's coefficients changing sign between series | of three on fish stocks, one passed its state verdict; untested outside fisheries; a frozen test (UE31) expects, in the flour beetle, where a stage before recruitment is counted, its wording "as far as anything measured does" to fail to the pupae and the adults, a class of fewer variables (08 §9's defeater, in that domain only), leaving "as far as the level's own history does", with the lag two censuses back, where the life cycle puts it; it expects the lag's sign mostly undecided at the archive's size if the field's model holds; run on 3 November 2026, it decided nothing, the archive's cultures under a set loss being too short for its rules ([S-15](#s-15)) |
+| [T6](#s-16): a break is seen coming only through what couples into what breaks | given the stock's own course, its early-warning statistics separating runs in which a dependent's need is crossed from runs in which it is not, the dependent taking no measurable share | three on seabirds did not reject it at their thresholds, one at low power with estimates in the refuting direction; none establishes conditional independence |
+
+T3's law for optima is proved ([S-13](#s-13)); its clause on trained systems is the alignment dossier's.
+
+**What is not claimed.** New mathematics. A science's law. That actual systems meet the models' premises, which is not shown. That the root's calculus explains how things go on, which is argued, not proved, and on a first count a rival with no word for continuation ties it ([08 §9](../chapters/08-METHOD.md#what-would-defeat-the-reading)). The account's ethics, which rests on two premises it does not assert, the continuation condition (for anything, its continuation has significance) for scope and C (widening what can form is better) for order, is not treated here but in [the philosophy dossier](PHILOSOPHY.md). Review by any person.
+
+**Where to read, by field.** Physics, [S-04](#s-04) to [S-06](#s-06). Evolution, [S-07](#s-07) to [S-10](#s-10). Ecology and renewable resources, [S-11](#s-11) to [S-16](#s-16). Mind and inference, [S-17](#s-17) to [S-20](#s-20), with [the free-energy principle in the theory](../FREE-ENERGY-PRINCIPLE.md). Order and open-endedness, [S-21](#s-21) to [S-23](#s-23).
+
+**What we ask, and how long.** Of each item: whether the containment is correctly stated, its premises set out and the Lean saying what the item says it says; whether it is credited where it restates known work; whether it is put at its right strength; whether its frozen tests discriminate; what is missing. Any item can be answered alone. With an hour, read [S-02](#s-02) and your field's items above. The whole takes 135 to 180 minutes; a reply on every item, a day or more.
+
+## Reading the items
+
+**Conventions.** Lean paths are relative to `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/` for the pure core, and periphery files to `experiments/integrated-correction/general-framework/generative-basis/lean/`. Lean blocks give statements exactly, proofs cut at `:=`, definitions whole. They are given for the central items only; the rest are named. No Lean is needed to review: each item's **Meaning** says in words what is stated. The pure core imports only Lean's prelude, and every declaration in it has an empty axiom report: Quote [theories/becoming/chapters/08-METHOD.md]: "An empty report shows that no logical axiom is used. It says nothing about whether the modelling fits an actual unfolding". The modelling choices are listed as commitments of the representation ([08 §4](../chapters/08-METHOD.md#modelling-commitments)), ten in all, among them discrete steps on one shared index, natural-number amounts (a positive amount is at least one unit), activity as a proposition, requirements as thresholds, the naming of relata, and identity by naming (which formation continues which is named), on which S-21 and S-22 turn, their main laws being read by name. Many laws below depend on natural-number amounts and say so.
+
+The terms:
+- **Formation, condition, need, depends.** A *formation* is a pattern that goes on: an organism, a lineage, a population, a fishery, a firm. A *condition* is an amount it draws on, such as a stock, a nutrient or available work. A formation *depends* on a condition at a *need* when it is active only while the condition stands at or above that need. The dependence is *broken* when the condition falls below the need.
+- **Level, draw, giving, renewal.** A condition's *level* is how much of it stands at a step, a whole number. A *draw* is what is taken from it across a step, *giving* what is given to it, and *renewal* giving read as a law of the level.
+- **The World and its premises.** The *World* is the model of relata exchanging amounts across discrete steps. Its premises are properties a world may have or lack, among them *balance* (every change of a level is what is taken from it and given to it), *dissipation* (on every family without repetition closed across a step, a formation that takes gives back at least one unit less), *activity needing support*, *only active relata give*, *embodiment* and a *census* of the active relata (the rest theorem also needs a census of what stands, S-06). A family is *closed* across a step when no formation taking part exchanges with a condition outside it; a step is *enclosed around* a family when some finite family without repetition containing it is closed.
+- **The theory's first law.** Across every step no formation gives a closed family without repetition more than it takes from it (`Flow.Gainless`). Under the exergy balance, thermodynamics' second law read in available work gives it (`EntropyProduction.gainless_of_secondLaw`; no converse is proved); it is not thermodynamics' first law, which S-04's balance theorem reads.
+- **The gate, joint excess.** A renewal is *gated* at `m` when every formation giving to the condition depends on it at a need of at least `m`, so the renewal depends on what it renews and nothing renews the condition below `m`. A step of *joint excess* is one at which all takers together take more than the step gives.
+- **Regime, point of no return.** A *regime* is one condition under a standing draw `H`, its next level `(x − H) + g(x − H)`: the draw taken first, as much as there is, then giving by a law `g` of what is left. Its *point of no return* is the least level from which it does not end. A *margin* is how far a level lies above a need.
+- **Couples into, room, rising, optimum.** A quantity *couples into* a selector when the selector's signal depends on it; what does not couple in lies *beyond*. An order on outcomes is *rising* when it ranks above every outcome exceeding another on what couples in, whatever either leaves beyond. An *optimum* is an eligible outcome no eligible outcome ranks above. *Room* holds when every eligible outcome leaving more beyond is beaten, on what couples in, by an eligible outcome.
+- **Widening.** One course *widens* another when at every step it admits every formation the other admits, and at some step one more.
+- **Restated, near-definitional.** A result is *restated* when it is a known result in the theory's terms, *near-definitional* when it follows almost at once from its definitions.
+- **Labels.** *(root)*: proved on the theory's grammar, for every carrier, relation and class. *(any type)*, *(any process)*: proved for every type or step relation. *(World)*: proved on the World model, with its premises and local hypotheses named. *(the regime)*, *(any `R`)*: proved for one condition under any giving law, or for any renewal law `R`, in whole numbers. *(periphery)*: proved with Mathlib, whose axioms are reported.
+- **Standings.** *Theorem*: proved in Lean as stated. *Witness*: one constructed model, showing that something can happen, not that it does. *Reading* [AI reading, Dn]: an interpretation registered with its argument in the decision register; it changes no theorem. *Assessment*: a scoped evaluation with evidence and no Lean. *Thesis Tn*: an empirical claim, with its standing, what it forbids and the evidence so far.
+- **Premises of the ethics.** The theory names two premises for its ethics, the continuation condition (whose losses count) and C (that widening is better), and asserts neither. No item here uses either ([the philosophy dossier, P-04](PHILOSOPHY.md#p-04)).
+
+---
+
+## Part 1. What the theory claims of the sciences
+
+<a id="s-01"></a>
+### S-01 The verdict: restated or near-definitional
+
+**Meaning.** An AI review placed each central result against its closest prior result. The rows bearing on the sciences, with their verdicts:
+
+| Result | Closest prior result | Verdict | Item |
+|---|---|---|---|
+| Coming and ceasing keep pace | Quote [theories/becoming/chapters/08-METHOD.md]: "demographic balancing equation; trace theory (Mazurkiewicz 1977)" | Quote [theories/becoming/chapters/08-METHOD.md]: "near-definitional" | [S-07](#s-07) |
+| Recurrence and attraction | Quote [theories/becoming/chapters/08-METHOD.md]: "finite Poincaré recurrence; Landauer (1961); Bennett (1973)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated, without decidable equality" | [S-05](#s-05) |
+| Rest needs a least loss | Quote [theories/becoming/chapters/08-METHOD.md]: "ranking functions (Floyd 1967); Lyapunov; LaSalle; chip-firing" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated" | [S-06](#s-06) |
+| Fed from beyond, entropy, nets | Quote [theories/becoming/chapters/08-METHOD.md]: "Schrödinger (1944); Prigogine (1977); ranking functions; P-invariants of Petri nets (Lautenbach 1975)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated; the nets agree with net theory and are not independent evidence" | [S-04](#s-04), [S-06](#s-06) |
+| Loops | Quote [theories/becoming/chapters/08-METHOD.md]: "nilpotent adjacency; Perron–Frobenius; Maruyama (1963)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated over whole amounts" | [S-10](#s-10) |
+| Joint excess | Quote [theories/becoming/chapters/08-METHOD.md]: "tragedy of the commons; positional goods (Hirsch 1976)" | Quote [theories/becoming/chapters/08-METHOD.md]: "near-definitional" | [S-11](#s-11) |
+| Closures and selection | Quote [theories/becoming/chapters/08-METHOD.md]: "Blackwell (1953); Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated: their Theorem 1 on natural-number amounts, a discrete analogue of their Theorem 2 at optima, with the responsive closure, pools and a re-reading's deadline" | [S-20](#s-20) |
+| Evolution on descent, what bounds offspring numbers, Hamilton's rule, groups on coupled conditions | Quote [theories/becoming/chapters/08-METHOD.md]: "Price (1970, 1972); Fisher (1930); Hamilton (1964, 1975); multilevel selection; Malthus (1798)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated in counts; joined to the flow, a third part known as the Malthusian bound" | [S-07](#s-07), [S-08](#s-08) |
+| Drift, fixation, mutation | Quote [theories/becoming/chapters/08-METHOD.md]: "Wright–Fisher; Moran (1958); Kimura; mutation–selection balance (Haldane); the error threshold (Eigen 1971)" | Quote [theories/becoming/chapters/08-METHOD.md]: "restated as finite weighted bounds" | [S-07](#s-07) |
+
+Beyond the table the review places regulation, the margin of a regime, the least loss from physics, the counted lock, conditioning, the exit from a margin, eventual widening, orders with a set point, the pace of selection and what keeping widening needs; each item below quotes its verdict. What survives: Quote [theories/becoming/chapters/08-METHOD.md]: "Three things survive, none of them a discovery"; one is Quote [theories/becoming/chapters/08-METHOD.md]: "one vocabulary for conservation, selection limited by observation, and comparison of opportunity sets." The other two, the premise ledger and the ethics with scope and order apart, are not this dossier's. The table's last two rows are not the review's: they Quote [theories/becoming/chapters/08-METHOD.md]: "carry the verdicts of the audit of the third parts".
+
+**Standing and use.** Assessment. Quote [theories/becoming/chapters/08-METHOD.md]: "The verdicts come from an AI review that read each Lean statement against the literature it knew". Every item below starts from its row.
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/08-METHOD.md]: "the search was not exhaustive".
+- The audit found: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The evolution line (Price, Fisher, Hamilton, drift, fixation, mutation) has no row in 08 §8's table, though 04 §7 points there for its verdicts." The table has had the two rows since 27 October 2026; the line was never ranked by the review the other rows come from.
+
+**Questions.**
+1. For the rows of your field, is the verdict right? Is anything called restated in fact different from the known result, or anything called near-definitional in fact substantive?
+2. Is any known result restated without credit?
+3. Is one vocabulary for conservation, selection limited by observation and comparison of opportunity sets of use in your field, or a translation only?
+
+<a id="s-02"></a>
+### S-02 Third parts: farther than a few frameworks, not than the sciences together
+
+**Meaning.** Quote [theories/becoming/chapters/08-METHOD.md]: "A containment of a framework has a third part where the theory forbids something the framework leaves open. Of the 21 rows the audit read, four have one, three of them distinct:" how a part changes what can form, weakly (07; not treated here); joint excess under the gate ([S-11](#s-11)); and the optimum laws ([S-13](#s-13)). Quote [theories/becoming/chapters/08-METHOD.md]: "Price's equation and Fisher's theorem joined to the flow have one as well" ([S-08](#s-08)), and the pace of selection a weak one ([S-09](#s-09)); Quote [theories/becoming/chapters/08-METHOD.md]: "drift, fixation and mutation have none." The shape: Quote [theories/becoming/chapters/08-METHOD.md]: "Each joins a framework that lacks conservation, renewal over time or a threshold to a premise or law of the theory, and forbids what the conjunction forbids. ... Each forbidden statement is known in a neighbouring field (critical depensation, the Malthusian bound, bioeconomics, scheduling), and none is one a specialist there would not foresee." The free-energy principle's containment Quote [theories/becoming/chapters/08-METHOD.md]: "has five, two of them weak" ([S-17](#s-17)), joining claims of its literature, read as guarantees or unqualified, to other laws. The verdict: Quote [theories/becoming/chapters/08-METHOD.md]: "So the theory reaches farther than the few contained frameworks that lack conservation, renewal over time or a threshold, by joining them to its own premises and laws; with the rest (thermodynamics, recurrence, control, constructor theory, causal sets among them) it is level or states less, and it does not yet reach farther than the sciences taken together"
+
+**Standing and use.** Assessment: an AI audit ([UE0](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md)) and an AI search in three rounds ([UE6](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md)). Of the search: Quote [theories/becoming/chapters/08-METHOD.md]: "found no result that no neighbouring field states". What the audit counts as the theory's own: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "Within the third parts, the generality is the theory's: every order rising with what couples in, every relation, every renewal law bounded by `r`. So are the exactness (necessary and sufficient, with witnesses on both sides) and room derived from one step of exchange. These make the joins stringent in the plan's sense of patterns that constrain what may be filled in. They do not make the forbidden statements new."
+
+**Known weaknesses.**
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The literature verdicts come from the AI's prior knowledge."
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "A bounded search, not established novelty and not established absence".
+- [this dossier, AI] Price's equation and Fisher's theorem in its exact case are identities, which forbid nothing. A third part found by joining them to conservation is the conservation premise's, so the bar it clears is low.
+
+**Questions.**
+1. Is each forbidden statement known in your field, as the audit says, and where is it stated?
+2. Are the joins to conservation, renewal or a threshold already made in your field's own models, so that the theory's form adds nothing?
+3. Is a third part, so graded, the right test of whether a containment reaches farther?
+
+<a id="s-03"></a>
+### S-03 Strength as content: the theses and the unifications
+
+**Meaning.** Quote [theories/becoming/chapters/08-METHOD.md]: "Strength is the observations a claim excludes; standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued); the two are kept apart." Each thesis states what it forbids and its evidence. Where each is treated:
+- T1 (persistence certifies the joint draw): [S-14](#s-14). T2 (the state of a renewable condition): [S-15](#s-15). T6 (a break is seen coming only through what couples into what breaks): [S-16](#s-16).
+- T3 (optimization drains what lies beyond its couplings, where that gives room): its law for optima, [S-13](#s-13) and [S-20](#s-20); its clause on trained systems, the alignment dossier ([A-18](ALIGNMENT.md#a-18)).
+- T7 (a measure read from what it selects outlives its refutation): the alignment dossier ([A-08](ALIGNMENT.md#a-08), [A-19](ALIGNMENT.md#a-19)). T4, T5 and T8, the ethics' theses: the philosophy dossier ([P-26](PHILOSOPHY.md#p-26)); T4's test IN1 is in [A-18](ALIGNMENT.md#a-18).
+
+Four unifications: Quote [theories/becoming/chapters/08-METHOD.md]: "Four results known in substance are each claimed as one law across fields that state them apart." Supervisory control as one selection ([S-20](#s-20)); Landauer's and Bennett's irreversibility as one merge ([S-05](#s-05)); Zhuang and Hadfield-Menell's Theorem 1 as one optimum law ([S-13](#s-13)); and opportunity sets as the order C, the philosophy dossier's ([P-07](PHILOSOPHY.md#p-07)). Of their standing: Quote [theories/becoming/chapters/08-METHOD.md]: "The literature here is from the AI's knowledge unless a linked check read it." Quote [theories/becoming/chapters/08-METHOD.md]: "Read as a correspondence, a unification adds no theorem and changes no verdict of" §8's table. Quote [theories/becoming/chapters/08-METHOD.md]: "Read as a thesis, it forbids what the source fields leave open."
+
+**Standing and use.** A method. Quote [theories/becoming/chapters/08-METHOD.md]: "A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis." And of the frozen tests: Quote [theories/becoming/chapters/08-METHOD.md]: "A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names". Quote [theories/becoming/chapters/08-METHOD.md]: "So a verdict is read against every measure of its construct the run produced, and where they disagree with the rule's print, the disagreement is reported and the verdict not claimed." (The rule's print is the verdict the frozen rule outputs.)
+
+**Known weaknesses.**
+- [this dossier, AI] T1, T2 and T6 are stated for every renewable or drawn condition, and their frozen tests cover one to three systems each. Their standings say so, but the theses are much wider than their evidence.
+
+**Questions.**
+1. Are the forbidden lists of T1, T2 and T6 specific enough for data in your field to refute them?
+2. Is keeping standing apart from strength useful to you as a reader of the theses?
+
+---
+
+## Part 2. Physics
+
+<a id="s-04"></a>
+### S-04 Balance and the least loss, read from thermodynamics
+
+**Meaning.** Periphery theorems (in `physics/EntropyProduction.lean`) read World premises from thermodynamics. A level is read as whole units of available work (exergy) against one reference environment.
+- *Balance from thermodynamics' first law.* A quantity carried only by the exchanges taking part balances the levels exactly where no condition produces it (`balances_iff_unproduced`), so a locally conserved quantity such as energy balances (`balances_of_conserved`); Quote [theories/becoming/chapters/01-ROOT.md]: "conservation of the total alone does not, as a unit moving between two conditions with no exchange shows". With thermodynamics' first law and the entropy balance at each store and exchange, and levels read as available work, one reading gives balance exactly where no store generates entropy, no gain where no exchange generates negative entropy, and dissipation where, besides, every exchange taking from a closed family generates some (`balance_and_least_loss`).
+- *Least loss from entropy production.* Quote [theories/becoming/chapters/02-MAP.md]: "Under the exergy balance and the second law nothing comes from nothing at the unit: the second law in available work gives the spine's first law, and destroyed exergy is its record." (`EntropyProduction.gainless_of_secondLaw`.) Quote [theories/becoming/chapters/02-MAP.md]: "The second law alone gives no dissipation" (`EntropyProduction.secondLaw_not_dissipative`). Irreversibility of every taking with whole units gives it at that unit, though not at every finer one (Known weaknesses), and so does Quote [theories/becoming/chapters/02-MAP.md]: "a floor of destroyed exergy at least the unit, at every finer unit" (`EntropyProduction.dissipative_of_floor`). Quote [theories/becoming/chapters/02-MAP.md]: "Landauer's bound is no such floor by itself: it bounds the heat an erasure exports, heat exported is not exergy destroyed, and a logically irreversible step can be carried out thermodynamically reversibly (Bennett 2003; Sagawa 2014)." For one family, balanced on each run, with a finite measure and the family's stock, uptake, replenishment and takers integrable at each step: if from some step on the family's expected replenishment and expected takers together are at most its expected uptake (dissipation in expectation), then almost surely nothing takes from the family from some step on (`EntropyProduction.taking_not_recurring_ae`). The integral fluctuation theorem, taken as a hypothesis, bounds the probability of a gain (`EntropyProduction.gain_probability_le`).
+
+**Standing and use.** Theorems (periphery, with the axioms of Mathlib's reals). Quote [theories/becoming/chapters/01-ROOT.md]: "Energies and entropies are reals, levels whole units of available work, and the step from physics is a stated correspondence". Quote [theories/becoming/chapters/08-METHOD.md]: "Every least loss that physics supplies is a theorem of stochastic thermodynamics, with premises of its own." The audit's verdict: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "a premise located, not a result". The physics the record reads: Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "Gouy–Stodola: exergy destroyed is T0 times the entropy generated, never negative"; Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "Kelvin–Planck says no exchange draws that record back." Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "Landauer (confirmed by Bérut et al. 2012 and Jun, Gavrilov and Bechhoefer 2014; its general derivation disputed by Norton)". Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "Fluctuation theorems (Jarzynski, Crooks, Seifert; observed by Wang et al. 2002 and Collin et al. 2005): single small runs gain, so the premise there is dissipation in expectation." Two of the theorems are known results: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The probability bound on a gain is the integral fluctuation theorem's Markov bound." The almost-sure law is a Borel–Cantelli argument, and its proof uses Mathlib's Borel–Cantelli lemma.
+
+**Known weaknesses.**
+- Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "That strict irreversibility gives a least loss at a refining unit: a strict loss without a floor can fall below every unit; only a floor in energy or a proportion survives refinement."
+- Quote [theories/becoming/results/records/least-loss-from-entropy-production.md]: "The integral fluctuation theorem itself, or local detailed balance, from which stochastic thermodynamics derives it; both are hypotheses here."
+- Quote [theories/becoming/results/records/balance-from-the-first-law.md]: "That balance is a theorem of the dynamics: it is relocated to thermodynamics' first law with locality, which stays a premise about what is represented." And Quote [theories/becoming/results/records/balance-from-the-first-law.md]: "the pressure and chemical terms of available work are not represented."
+- Of the chapter's example, a later AI search found Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "Landauer's bound alone does not supply the World's least loss" because Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "heat exported is not exergy destroyed (Sagawa 2014)"; the chapter now says so (Meaning), and a floor at every finer unit stays a premise physics does not supply by that bound.
+- [this dossier, AI] The theory's *first law* (`Flow.Gainless`: across every step, no formation gives a closed family without repetition more than it takes from it) is given by the second law read in available work, while 01's balance theorem reads thermodynamics' first law. The account names the two apart, the spine's first law and thermodynamics' first law in full, but a physicist may still find the name misleading.
+
+**Questions.**
+1. Is reading a level as whole units of exergy against one reference environment a fair correspondence, and what does it lose?
+2. Is it right that every physical floor on dissipation (a logical merge, finite time, a finite bath) is a theorem of stochastic thermodynamics with premises of its own, and could the World's least loss be derived from a weaker one?
+
+<a id="s-05"></a>
+### S-05 Recurrence, merges and Landauer's count
+
+```lean
+theorem Lossless.reset_unlisted {next : S → S} (lossless : Lossless next) {part : S → P} {p : P}
+    (reset : ∀ x, part (next x) = p) {y : S} (other : part y ≠ p) :
+    ¬ ∃ all : List S, ∀ s, s ∈ all
+```
+
+File: `Becoming/LeastLoss.lean`.
+
+**Meaning.** (any type)
+- *Recurrence.* Quote [theories/becoming/chapters/01-ROOT.md]: "Within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns, exactly where it keeps every possibility" (`Law.lossless_iff_returns`, `Law.returns_iff_keeps`). Within them, a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing (`Law.rise_not_lossless`).
+- *A part kept by the rest* (the block). `Lossless next` says the law `next` takes no two configurations to one. If such a law sets a part to one value `p` at every step, and some configuration's part is not `p`, then no list holds every configuration: resetting a part without merging needs unbounded room in the rest. In the witness `Reset`, a one-bit part is set to false at every step and the rest keeps the history of what it held (`Reset.kept_by_rest`). Narrowing the part spreads the rest (`Law.Lossless.narrowing_spreads`), and a kept history never returns (`Law.withHistory_never_returns`).
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/02-MAP.md]: "This is Landauer's (1961) count with Bennett's (1973) history; no energy, temperature or probability is read, so kT ln 2 is not derived". The third unification reads one merge across computation, heat, extinction and forgetting, with the standing Quote [theories/becoming/chapters/08-METHOD.md]: "the law proved for determined maps on finitely many listed configurations; its reading across computation, heat, extinction and forgetting a correspondence; kept as a law, since as a thesis it forbids little".
+
+**Known weaknesses.**
+- Quote [theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.md]: "Any new mathematics: this is Landauer's (1961) phase-space count, with Bennett's history (1973) as the witness." And Quote [theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.md]: "the step from a count to heat (S = k ln W, heat at least T times the entropy a bath at temperature T receives) stays a physical premise."
+- The record credits later work as well, from Bennett's notes of 2003 (SHPMP 34), of which it quotes Quote [theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.md]: "in a sense ... a restatement of the Second Law", to Quote [theories/becoming/results/records/merge-of-a-part-kept-by-the-rest.md]: "Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017)." UE6's first round adds Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "Reeb and Wolf 2014 with Sagawa 2014 (Landauer's bound, and why logical irreversibility is not exergy destruction)".
+- Quote [theories/becoming/chapters/01-ROOT.md]: "The list is the hypothesis each law writes in; no unfolding is assumed to have one, and no decidability is used".
+- [this dossier, AI] Landauer's argument concerns phase-space volume under Hamiltonian dynamics; the law counts configurations of a finite deterministic map, so the correspondence carries the physics only through the count-to-heat premise.
+
+**Questions.**
+1. Is a deterministic map on finitely many listed configurations an adequate model of a logically irreversible step?
+2. Does reading extinction and forgetting as merges add anything beyond analogy?
+3. Beyond Landauer (1961), Bennett (1973) and the later work the record and the search name (Known weaknesses), is anything in the thermodynamics of computation missing from the credit?
+
+<a id="s-06"></a>
+### S-06 Rest needs a least loss; continuing change is fed from beyond
+
+```lean
+theorem fed_from_beyond [DecidableEq C] (balances : L.Balances W) (dissipative : L.Dissipative)
+    {ds : List C} (distinct : Distinct ds) {T₀ : Nat} (around : ∀ t, T₀ ≤ t → L.Around ds t)
+    (recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers ds t) (N : Nat) :
+    ¬ ∀ t, N ≤ t → ¬ L.FedFromBeyond ds t
+```
+
+File: `Becoming/Continuation.lean`.
+
+**Meaning.**
+- *Rest* (any type; World for the instance). Quote [theories/becoming/chapters/02-MAP.md]: "A closed amount that keeps losing need not stop: a stock halving at every step never rests. Rest needs a least loss at each change, or the amount read off finitely many configurations." (`Amounts.rests`; `Amounts.rests_of_finite_reading`, with no least loss; `Halving.stock_unlisted`.)
+- *The rest theorem* (World). With censuses of what is active and of what stands, arising embodied, balance, dissipation, and every step from some step on enclosed around what stands, rest from some step on cannot be refuted (`World.comes_to_rest_unrefuted`). Read the other way, with a census of what is active, every relatum embodied, balance and dissipation, arising without end leaves no step from which every step is enclosed (`World.arising_opens`). Each census and full embodiment are needed: Quote [theories/becoming/chapters/02-MAP.md]: "with only arising embodied, a world can be enclosed at every step and arise without end" (`World.rest_needs_standing`: its first world has a census of what is active and none of what stands, its second every relatum embodied and no census of what is active; for the rest theorem's census of what is active, `World.rest_needs_census`). Openness does not give arising without end (`World.holding_world`).
+- *Fed from beyond* (World; the block). Under balance and dissipation, with equality of conditions decided, take a finite family without repetition, enclosed around from step `T₀` on and taken from at arbitrarily late steps. It cannot be that from some step `N` on no formation takes from outside the family and gives to a member.
+
+**Standing and use.** Theorems. Closest prior results for the last: Quote [theories/becoming/chapters/08-METHOD.md]: "Schrödinger (1944); Prigogine (1977); ranking functions; P-invariants of Petri nets (Lautenbach 1975)". Quote [theories/becoming/chapters/02-MAP.md]: "The theorem says rest cannot be refuted, not when it comes". Of feeding: Quote [theories/becoming/chapters/02-MAP.md]: "no step of feeding is named".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/02-MAP.md]: "It needs natural-number amounts: with real amounts losses can shrink geometrically, and it fails".
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The exclusion, that an enclosed family taken from without end cannot go unfed from beyond, is the sources' own. The theory forbids no more and needs more to forbid it."
+- [this dossier, AI] The law gives no amount, rate or time of feeding, which an entropy-production balance would give.
+
+**Questions.**
+1. Is a least loss of one whole unit per taking step a fair idealization of dissipation, given that the law fails with real amounts?
+2. Do the closest prior results quoted above already forbid what this law forbids?
+3. Is a law that says only that rest cannot be refuted, not when it comes, of use in your field?
+
+---
+
+## Part 3. Evolution
+
+<a id="s-07"></a>
+### S-07 The census and the classical laws in counts
+
+**Meaning.**
+- *Coming and ceasing keep pace* (World). Quote [theories/becoming/chapters/01-ROOT.md]: "Over any stretch an amount at the end with all it fell is the amount at the start with all it rose". For a decided determination over a finite family, coming to be recurs exactly when ceasing does (`coming_recurs_iff`).
+- *The classical laws in counts* (any type). Price's equation in counting form, with no premise (`Becoming.price`). Fisher's theorem in its exact case: with exact transmission the mean offspring number rises exactly where offspring numbers vary (`Becoming.Reproduction.Generations.ByNumber.rises_exact_iff`); with breeding values that meet the normal equations, transmitted exactly, the mean breeding value rises by the additive variance over the mean offspring number (`Becoming.Reproduction.Breeding.response`). Drift has no direction, and the histories fixing a kind are bounded on both sides, in finite weights, by its starting share (`Becoming.Drift.fixation`); with selection in the draw, by the ratio that is the Moran probability in counts, in the same finite form (`Becoming.Drift.Replacement.fixation`); mutation–selection balance and Eigen's (1971) error threshold (`Becoming.Reproduction.Mutation.kept_share`, `Mutation.falls_of_outrun`). Hamilton's rule is stated for groups of equal size with additive returns ([04](../chapters/04-LIFE.md#r-selection-with-returns-to-groupmates)), and, on the World with balance on the family and the coupled gate, groups on coupled conditions ([04](../chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled)).
+- *The selection term and a lineage's fate* (any type; World for lineages). Quote [theories/becoming/chapters/04-LIFE.md]: "The selection term proper reads how offspring numbers differ, not how many there are". So within any horizon a course nonempty at it has its cohorts and terms through it shared by a course nonempty at every cohort and by one empty from two steps after it on (`Horizon.two_fates_of_nonempty`), and from a nonempty first cohort, terms zero from some step on are shared by a course that goes on and one that ends (`Horizon.eventually_zero_two_fates`). Terms positive at unboundedly many steps keep every cohort nonempty (`Generations.never_empties_of_unbounded`). Quote [theories/becoming/chapters/04-LIFE.md]: "Which side a course is on is not decided." The witness of evolutionary suicide's pattern, reproduction simply stopped and the mark a label rather than a draw, has a term positive at every nonempty cohort but the last, where it is zero, while every member degenerates, everything continuing it ending (`Courses.positive_but_last`).
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/04-LIFE.md]: "The laws of §3–§6 restate known results" and Quote [theories/becoming/chapters/04-LIFE.md]: "It adds no new population-genetic prediction." The audit: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "counting forms of the classical results".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/04-LIFE.md]: "Fisher's identity itself, which needs the regression coefficient, a ratio, is not stated." Of breeding values: Quote [theories/becoming/chapters/04-LIFE.md]: "That the normal equations have such a solution is given, not shown".
+- The method chapter lists among prose that once said more than the theorems Quote [theories/becoming/chapters/08-METHOD.md]: "that the census is a law of how anything comes to be in every universe".
+- The limit is read from finite bounds, not proved: Quote [theories/becoming/results/records/fixation-by-drift.md]: "finite bounds, whose reading is that the fixing share tends to h/N, the neutral fixation probability." The chapter likewise: Quote [theories/becoming/chapters/04-LIFE.md]: "finite weighted bounds, whose reading is that the fixing share tends to".
+
+**Questions.**
+1. What, if anything, do these laws add to the classical results they restate in counts?
+2. Does stating these laws in whole numbers, with offspring lists supplied and fitness not defined, lose anything that matters?
+3. The table gives the evolution line the audit's closest prior results and verdict, which the review behind its other rows did not rank (S-01). Would you give the same?
+
+<a id="s-08"></a>
+### S-08 What bounds offspring numbers: Price and Fisher joined to the flow
+
+```lean
+theorem closed_lineage_lowered {ds : List X} (descended : SelectionTerm.Flow.Descended L W G)
+    (within : ∀ t p k, p ∈ G.family t → k ∈ G.kids t p → k ∈ ds)
+    (balances : ∀ t, t < W.stock ds 0 + 1 → L.BalancesOn W ds t)
+    (dissipates : ∀ t, t < W.stock ds 0 + 1 → L.DissipatesOn ds t)
+    (number : Generations.ByNumber G) (reproducing : 0 < G.size 1) :
+    ∃ t, t < W.stock ds 0 ∧ G.concordAt t + G.size t * G.raisedAt t < G.size t * G.loweredAt t
+```
+
+File: `Becoming/Reproduction.lean`.
+
+**Meaning.** (any type; World for the bounds) Each offspring is given at least one unit. So a parent's offspring number is at most what it gives them (`Becoming.Reproduction.Flow.born_le_given`), with its distinct offspring standing within a family dissipated on, and one more where there is any, at most what it takes from the family (`Flow.number_within_take`), and across a step at which a family is balanced and dissipated on, distinct offspring standing within it number at most its stock (`Flow.born_within_stock`). Over cohorts of descent within a family balanced and dissipated on at each step, a lineage reproduces at most the starting stock many steps (`Flow.reproducing_within`) and then ends (`Becoming.Reproduction.Flow.lineage_ends`). The block reads this by offspring number. A lineage that reproduced at its first step within such a family has a step, before the stock is spent, at which transmission lowered offspring number by more than selection and what transmission raised: in the block, `G.concordAt t` is selection on offspring number (zero exactly where offspring numbers are uniform), and `G.raisedAt t` and `G.loweredAt t` are what transmission raised and lowered. Witness: without dissipation a lossless relay keeps a lineage going within a family of stock one (`Becoming.Reproduction.Relay.relay`).
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/04-LIFE.md]: "offspring numbers are bounded by what the flow gives and takes, under the stated descent and resource hypotheses, though the offspring lists themselves stay supplied". A third part, in the audit's words: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "in a family closed to inflow and dissipated on, a lineage reproduces for at most as many steps as the family's stock holds units, and Price's transmission term must at some step lower offspring number by more than selection raises it".
+
+**Known weaknesses.**
+- Quote [theories/becoming/results/records/what-bounds-offspring-numbers.md]: "Whether actual lineages lie within such families is an application question."
+- Quote [theories/becoming/results/records/what-bounds-offspring-numbers.md]: "That a finite closed resource ends reproduction is the Malthusian bound."
+- [this dossier, AI] The bound rests on each offspring being given at least one whole unit. With real amounts and no floor on what an offspring is given, offspring number is not bounded by the stock.
+
+**Questions.**
+1. Do resource-explicit models of reproduction, such as consumer–resource or chemostat models, already state this law?
+2. Is an offspring given at least one unit of a conserved amount a fair model of the cost of reproduction?
+3. Does joining Price's equation to a conserved flow give population genetics anything it lacks?
+
+<a id="s-09"></a>
+### S-09 The pace of selection within what flows in
+
+```lean
+theorem whole_within_power {G : Generations X} {m k T : Nat} (positive : 0 < m)
+    (balanced : ∀ t, t < T → L.BalancesOn W (lineage (G.family t) (G.kids t)) t)
+    (arise : ∀ t p c, t < T → p ∈ G.family t → c ∈ G.kids t p → W.ComesToStand t c)
+    (stands : ∀ t p c, t < T → p ∈ G.family t → c ∈ G.kids t p → m ≤ W.level (t + 1) c)
+    (exact : ∀ t, t < T → Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (capped : ∀ t p, t < T → p ∈ G.family t → W.level t p ≤ m)
+    (fed : ∀ t p, t < T → p ∈ G.family t → L.inflow (lineage [p] (G.kids t)) t + m ≤ k * m)
+    (sustained : G.size 0 ≤ G.size T) (whole : G.size T ≤ G.sum T) :
+    G.size 0 ≤ k ^ T * G.sum 0
+```
+
+File: `Becoming/SelectionPace.lean`.
+
+**Meaning.** (World) Across a step at which the flow balances on the family a lineage occupies, each offspring coming to stand at `m` or more, `m` times a parent's offspring number is at most what the parent stood at and what flows into its lineage (`SelectionPace.parent_within_inflow`). With exact transmission of the amount carried (each offspring carrying its parent's amount) and parents standing at no more than `m`, in a population not shrinking `m` times the selection term is at most the size times the inflow into the carrying lineages (`SelectionPace.selection_within_carried`); with nothing flowing into them, a rise of the mean shrinks the population (`SelectionPace.unfed_rise_shrinks`). The block is the per-parent form. Where what flows into each parent's lineage, with `m`, is at most `k · m`, then in a population not shrinking (`sustained`), reaching the whole (`whole`, the final total at least the final size: for a 0/1 amount, every member carrying it at `T`) from `c` carriers among `N` needs `N ≤ k ^ T · c`, so one substitution takes at least `log_k (N / c)` steps. With offspring number itself inherited, the squared response of any amount is bounded by the next step's inflow and the amount's spread (`SelectionPace.response_sq_within_inflow`), and not with the same step's inflow (`SelectionPace.Inherited.same_step_fails`).
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/08-METHOD.md]: "so the third part against Price and Fisher is yes and weak, carried by its premises." Its neighbours: Quote [theories/becoming/chapters/08-METHOD.md]: "the form behind the reproductive-excess limit of Nei (1971) and Felsenstein (1971), and not the spacing of successive substitutions that limit states. It is not Haldane's cost (1957), which counts selective deaths the model does not have." The squared response is Quote [theories/becoming/chapters/08-METHOD.md]: "the bound of the selection differential by the opportunity for selection (Crow 1958; Arnold and Wade 1984), with the opportunity bounded by the inflow".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/08-METHOD.md]: "The natural statement, a pace bounded by what flows into the whole, is false: a part of a closed whole rises by drawing on the rest." (`SelectionPace.Displacement.natural_fails`.)
+- Quote [theories/becoming/results/records/pace-of-selection-within-what-flows-in.md]: "That actual populations meet exact transmission of offspring number or the per-member bounds; soft selection is a reading of Displacement, not a theorem." And Quote [theories/becoming/results/records/pace-of-selection-within-what-flows-in.md]: "A least standing from the dynamics: m is a supplied level, tied to the web's need only through stands_of_need."
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/REVIEW-UE5.md]: "The third-part verdict, yes and weak, stands. Malthus is the main neighbour".
+
+**Questions.**
+1. Does the per-parent bound capture the reproductive-excess limit, and is it told apart from Haldane's cost correctly?
+2. Is the squared-response law a correct reading of the opportunity for selection?
+3. Do any natural populations meet exact transmission of the amount carried and parents standing at no more than `m`, or, for the squared-response law, exact transmission of offspring number, even approximately?
+
+<a id="s-10"></a>
+### S-10 Loops and regulation
+
+**Meaning.** (World) A loop that forms at a step passes through a coupling acting at that step (`Closing.forms_by_closing`); before a loop forms, the amounts need not show whether one will: in a witness, a loop forming at a step and one forming later carry the same amounts up to the first (`Closing.Onset.unforeseen`). Quote [theories/becoming/chapters/02-MAP.md]: "With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually" (`LoopReturn.nothing_between`). Under the standard bounds the difference carried to a step is at most the starting gap times `(1 + M)` to the power of the number of earlier steps at which anything couples, `M` bounding the strengths into each condition, and a self-loop attains it (`carried_le_count`). A law reading a stock only below a threshold couples it with strength zero above it, so the distance to the break is carried nowhere (`break_carried_nowhere`).
+
+*Regulation* (any type; World). Quote [theories/becoming/chapters/02-MAP.md]: "A rule reading `ℓ` steps late keeps no band `[a, b]` with `0 < a` narrower than `2(ℓ + 1)d` against rests moving the level by at most `d` a step, attained by the late return (`Regulation.no_narrower_band`)." With balance, where the joint exchange gives no more than it takes below `m`, a level below `m` never returns to it, gated renewal being the case (`Flow.never_returns_below`); where at each condition of a family the joint exchange stays within the gap to that condition's own level and opposes departure from it from some step on, the family's stock settles at the total of those levels, nothing reading the total (`Flow.stock_settles`).
+
+**Standing and use.** Theorems. Closest prior results for the loops: Quote [theories/becoming/chapters/08-METHOD.md]: "nilpotent adjacency; Perron–Frobenius; Maruyama (1963)"; verdict, Quote [theories/becoming/chapters/08-METHOD.md]: "restated over whole amounts". A calibration: Quote [theories/becoming/chapters/02-MAP.md]: "That every schedule settles, each coupling recurring or stopping, is exactly the dichotomy `RecursOrStops`, which gives LPO (`settled_iff_recursOrStops`): settling is deciding whether a coupling acts again." For regulation: Quote [theories/becoming/chapters/08-METHOD.md]: "Regulation restates deadbeat control and requisite variety (Dahleh and Pearson 1987; Ashby 1956)." The late reading's band was tested with learners in the gated commons (CG1): its predictions E1 and E2 are of the identity class, and E3, a learned adversary breaking a band one narrower against the late return and a learned overseer, passed in 80 of 80 seed-cells: Quote [experiments/commons-gated-renewal/README.md]: "The late reading's bound is realised by learners."
+
+**Known weaknesses.**
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "excludes gradual closing only because factors are whole numbers. Real factors close gradually; this is an artefact of the commitment, not an exclusion of a real course."
+- The method chapter lists among prose that said more than the theorems Quote [theories/becoming/chapters/08-METHOD.md]: "that nothing a part senses shows how near a break is. The theorem assumes the stock is not sensed, and the early-warning literature (Scheffer and others 2009) shows the general claim false"; `break_carried_nowhere` invites the same reading (S-16).
+- Of regulation, what the record does not show: Quote [theories/becoming/results/records/two-sided-regulation-and-late-reading.md]: "That a given system regulates a level, which level, how late it reads, or the size of its step." Nor Quote [theories/becoming/results/records/two-sided-regulation-and-late-reading.md]: "One policy keeping a band from every start in it under late reading; several regulated levels lumped into one; regulation of several conditions at once."
+- Of CG1's E rows: Quote [experiments/commons-gated-renewal/README.md]: "E is the law's own one-condition setting, not the commons' dynamics."
+
+**Questions.**
+1. What, if anything, do these laws add to the combinatorics of walks on a weighted graph over whole amounts?
+2. Is the law that a stock read only below a threshold carries the distance to its break nowhere known for piecewise-smooth or hybrid systems?
+3. For control theory, does the late reading's band add anything to deadbeat control and requisite variety?
+
+---
+
+## Part 4. Ecology and renewable resources
+
+<a id="s-11"></a>
+### S-11 Joint excess under a gated renewal
+
+```lean
+theorem joint_excess_ends (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    {T n : Nat} (excess : ∀ k, k < n → L.given (T + k) c < L.taken (T + k) c)
+    (start : W.level T c < n + m) :
+    ∀ k g, W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c →
+      ¬ W.active (T + n + k) g
+```
+
+File: `Becoming/Continuation.lean`.
+
+**Meaning.** (World: balance, only active giving, activity needing support; the gate local) Formations can each take within what a step gives while together they take more (`Pair.own_not_joint`). Each step of joint excess lowers a balanced level by at least one. The block: where every formation giving to condition `c` depends on it at a need of at least `m` (`gated`), `n` consecutive steps of joint excess from a level below `n + m` leave inactive, at every later step, every formation that then requires `c` at a need of at least `m`. Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "In a minimal witness two takers end themselves and their renewer, one taker does not." *The rest outruns the renewal*: where the others alone, listed without repetition, take more than a step gives at each of `n` steps from below `n + m`, every formation depending at that need ends whatever one member takes (`Flow.outrun_ends`), and, at a need of one, every score reading the condition only from the rest's end on scores the member's acts alike (`Flow.outrun_reading_alike`): Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "no weight on such a reading selects the member's restraint".
+
+**Standing and use.** Theorems; a third part (S-02). Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "It restates the tragedy of the commons and overshoot (Lloyd 1833; Hardin 1968; Meadows and others 1972) in near-definitional arithmetic, not who ought to take less". Tested with learners in a gated commons (CG1) and with the rest's draw varied (CG2), whose learner results the alignment dossier gives ([A-18](ALIGNMENT.md#a-18)); learners that generalize across states, run on CG2's conditions, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "kept the stock in three of the six locked settings (`k3s1_lam32`, `k3s8`, `k3s1_share`)" ([experiment](../../../experiments/commons-outrun-generalizing/README.md)). Of the identity predictions, Quote [experiments/commons-gated-renewal/README.md]: "The identity class gives no empirical support to the theory beyond the correctness of its identification." Its scope prediction passed, the one the account calls informative: Quote [experiments/commons-gated-renewal/README.md]: "Where two patches lie within the regrowth radius, joint excess on one patch read alone does not end its renewal (all 679 windows violated, 100 of 100 runs regrow after reaching 0). Read as one condition, the two patches meet the law." Of the outrun law with learners, Quote [experiments/commons-outrun/README.md]: "Count: of eleven conditions, nine passed and two failed; of five contrasts, three passed and two failed."
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "The gated conclusions hold only for renewal depending on what it renews, not renewal from outside, such as a sun; a taker not so depending can continue"
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The forbidden statements are new to the row's sources and not to population ecology or threshold games".
+- Quote [theories/becoming/results/records/own-count-misses-joint-excess.md]: "Stated for natural-number amounts; excess compares totals at each step and treats neither reserves nor delayed renewal."
+- Quote [theories/becoming/results/records/the-rest-outruns-the-renewal.md]: "That depletion is the only equilibrium: where the rest outruns, restraint by all may also be one; which is reached is a claim about learning, tested in CG2, not a theorem."
+- [this dossier, AI] The gate puts the threshold into the premise, and it is stronger than depensation as fisheries measure it. Under the gate nothing renews the condition below `m`: with nothing drawn a gated level below `m` stays where it is, and with a standing draw it falls as under critical depensation (growth below zero beneath a threshold). Depensation in Myers et al.'s sense is per-capita recruitment falling at low abundance while recruitment stays positive. So the gate is the limiting form of critical depensation in which renewal below the need is zero, and how often depensation occurs bounds from above how often the law applies; at the levels studied it has rarely been detected: significant depensation was found in 3 of 128 fish stocks (Myers et al. 1995), and a meta-analysis of 207 stocks of 104 species found strong compensation in many species, much weaker compensation than expected in others, and evidence of depensation in some, such as Atlantic cod and Alaskan walleye pollock (Keith and Hutchings 2012).
+
+**Questions.**
+1. In which systems is renewal gated, zero below a need, and can `m` be measured in advance there?
+2. Does the outrun law add anything to the theory of threshold public goods and dynamic commons games?
+3. What are the clearest field cases of a renewal that depends on what it renews?
+
+<a id="s-12"></a>
+### S-12 The margin of a regime
+
+```lean
+theorem ends_iff_below {g : Nat → Nat} {H y hi x : Nat} (pos : 0 < H + y) (short : Short g H y)
+    (nothing : FromNothing g) (meets : Meets g H y hi) (keeps : Keeps g H hi) (high : x ≤ hi) :
+    (∃ n, (Law.run (step g H) x).state n = 0) ↔ x < H + y
+```
+
+File: `Becoming/RegimeMargin.lean`.
+
+**Meaning.** (the regime; any giving law, whole numbers) One condition under a standing draw `H` steps from `x` to `(x − H) + g(x − H)` (`RegimeMargin.step`). In the block, `Short g H y` says giving falls short of the draw below `y`; `FromNothing g` that nothing gives nothing; `Meets g H y hi` that giving meets the draw from `y` up to a top `hi`; and `Keeps g H hi` that the step keeps levels up to `hi` within it. Then a level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact (`RegimeMargin.ends_iff_below`). Where giving stops below a need and the draw is positive, the point lies at least the draw above the need (`RegimeMargin.root_above_need`), and more than that exactly where giving at the need falls short of the draw (`RegimeMargin.beyond_draw_iff`). Quote [theories/becoming/chapters/02-MAP.md]: "Draws add, and their rises at the point are superadditive up to one": where giving under a joint draw is subadditive above the need and no greater than under either draw alone, the point of no return under the joint draw lies above the need by at least the sum of the two rises, less one unit (`RegimeMargin.rises_superadditive`).
+
+**Standing and use.** Theorems; T1's law in the model ([S-14](#s-14)). Quote [theories/becoming/chapters/08-METHOD.md]: "The margin of a regime is harvesting under depensation and the fold (Clark 1976; May 1977), in whole numbers." On data: Quote [theories/becoming/chapters/02-MAP.md]: "In assessed fish stocks the frozen-rest margin over the net draw ranks the risk of a break but does not time it".
+
+**Known weaknesses.**
+- Quote [theories/becoming/results/records/margin-of-a-regime.md]: "How giving depends on the draw, or that giving is read off the level within a regime: both are premises, measured in yeast, not theorems."
+- Quote [theories/becoming/results/records/margin-of-a-regime.md]: "The fold over the reals, or the other order of a step (giving before the draw): neither is stated."
+- Of the margin read with the rest's exchanges held: Quote [experiments/margin-measured/README.md]: "An identity can only be checked as accounting, not tested."
+- Of the harms: Quote [theories/becoming/results/records/margin-of-a-regime.md]: "Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal." It held in the simulated Allee yeast (MQ1's A4a–A4c passed, 12 of 12, 4 of 4 and 8 of 8), and the theory's tests have not measured it in a real system.
+
+**Questions.**
+1. Does exactness in whole numbers, for any giving law, add anything to the continuous analysis of harvesting under depensation?
+2. Is the draw taken before giving the right order of a step for the systems you know, and would the other order move the point of no return?
+3. Has the super-additivity of harms under added draws, which the record reads as the convexity of the inverse of a concave renewal, been measured in a real system?
+
+<a id="s-13"></a>
+### S-13 The optimum laws for a renewable resource
+
+```lean
+theorem frontier_holds {better : (Nat → Nat) → (Nat → Nat) → Prop}
+    (renews : ∀ z, R z ≤ r)
+    (rising : ∀ a b, drawnOver R a (n + 1) < drawnOver R b (n + 1) → better b a)
+    (greatest : R y = r) (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k)
+    (holds : y + r ≤ k) (long : 0 < n) {x : Nat → Nat}
+    (front : Frontier (OpenCourse R k s) better x) :
+    x (n + 1) = 0 ∧ ∀ t, t < n → R (x (t + 1)) = r
+```
+
+File: `Becoming/Optimum.lean`.
+
+**Meaning.** (any `R`; the breaks on the World) Renewal is a law `R` of the level, at most `r` a step; `y` is a level of greatest renewal; `s` is the start, `k` the capacity, `n + 1` the steps of the horizon; `x t` is the level a course leaves at step `t`.
+- *Over a horizon* (the block, `Optimum.frontier_holds`). Every optimum of every order rising with the total drawn holds a level of greatest renewal at every step before the last and leaves nothing at the end, given reach and `y + r ≤ k`. A need above every such level breaks at the first step (`Web.frontier_broken`).
+- *Weighting later draws less* (`Optimum.frontier_exhausts`). With a capacity covering `s + R s` and `R 0`, where the weight `w` of a later step's draw falls, at every step, faster than any positive level can renew (`w (t + 1) · (z + R z) < w t · z`), every optimum of every order rising with the weighted total leaves nothing at every step from the first to the `n`-th. Conversely, where `R 0 = 0` and some level `y` within reach, with `y + R y ≤ k`, renews faster than the weighting falls (`w t · y < w (t + 1) · (y + R y)` at every step), every optimum leaves something at the first step (`Optimum.frontier_leaves`): Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "the discrete form of a discount rate above the greatest rate of renewal making extinction optimal".
+- *One step* (any set of outcomes). Every optimum of every order rising with a family stands at the least eligible level beyond, condition by condition, exactly where room holds (`Optimum.least_iff`): room is necessary as well as sufficient. Over one step where a part's members take at most their capacity and give no more than they take, the rest exchanging as it does, room holds, with equality of conditions decided and the family set apart from what lies beyond (`Optimum.Above.room`). The alignment dossier treats this law ([A-02](ALIGNMENT.md#a-02)).
+- *Several optimizers.* At a mutual best response a condition beyond them all stands as under one optimizer of their joint capacity (`Optimum.mutual_as_one`). Where others first draw from what an optimizer leaves, by a rule supplied, what they leave with its renewal being at most the level and a capacity covering what stands at the start and at nothing, every optimum of every order whose weighting falls at every step ends the stock at once, over a horizon of at least two steps (`Optimum.Next.frontier_ends_drawn_first`); in a witness Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter: the discrete form of open access dissipating what a sole owner would keep (Gordon 1954)". Drawers in turn with no floor derive the case in which the others leave nothing: they draw everything at every perfect profile (`Optimum.InTurn.perfect_at_floors`).
+
+**Standing and use.** Theorems; a third part (S-02). Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "over a horizon, far-sight keeps only the base at its greatest renewal; a coupling fixed in total is outweighed by a long enough horizon (known in bioeconomics)". For one step: Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "The first is the drive above, at optima rather than limits of paths, with shared units for room." (the first being Zhuang and Hadfield-Menell's (2020) Theorem 1). Where each part is known, in the audit's list: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The maximum sustainable yield (Schaefer 1954); the sole owner (Scott 1955); open access (Gordon 1954); extinction under fast discounting (Clark 1973); the most rapid approach path (Spence and Starrett 1975); the dynamic commons (Levhari and Mirman 1980)". What it counts as the theory's own: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "every order rising with what couples in, not one objective; room necessary as well as sufficient on any set of outcomes; room derived from one step of exchange; and the break read as a law of the dependence web."
+
+**Known weaknesses.**
+- Quote [theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md]: "with a discount the optimum may hold below the levels of greatest renewal."
+- Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "a mutual best response (its existence is not shown in general)".
+- The audit's one unlocated candidate, a coupling for each step a dependence is met, given to several optimizers: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "False as UE0 states it." What survives is Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "a specialization of threshold provision with a pivotal contributor".
+- [this dossier, AI] The horizon law assumes a capacity of at least `y + r` and an undiscounted total, and so gives the policy of greatest sustained yield with the stock drawn out at the horizon. Below that capacity it is not stated.
+- [this dossier, AI] No cost of drawing is represented: the orders rank by the (weighted) total drawn. In bioeconomics the cost decides both results quoted. Clark's extinction under fast discounting needs, besides a discount rate above the greatest rate of renewal, a price above the cost of harvesting at low stock; Gordon's open access dissipates the rent, and with a positive cost it settles at a positive stock, the bionomic equilibrium, not at nothing. The two quoted readings are their limits at zero cost.
+
+**Questions.**
+1. Do these laws add anything to bioeconomics (Clark 1973; Clark 1976) beyond exactness for every renewal law and every order rising with the draw?
+2. Is the condition of the weighted law the right discrete form of a discount rate above the greatest rate of renewal?
+3. Which of them would a resource economist expect to fail for an actual fishery, and would a cost of drawing change them?
+
+<a id="s-14"></a>
+### S-14 T1 and its tests
+
+**Meaning.** Thesis T1, persistence certifies the joint draw: Quote [theories/becoming/chapters/02-MAP.md]: "Whatever persists through many renewal cycles of a condition it depends on, renewal stopping below a need, has had the joint draw on it, its own with every other drawer's, kept within the regime's margin (its point of no return, not the withheld-levels margin)". In the model this is [S-12](#s-12) with [S-11](#s-11). It forbids Quote [theories/becoming/chapters/08-METHOD.md]: "a condition below a need measured in advance returning with nothing given from beyond; a dependent active while its condition stood below its need".
+
+**Standing and use.** Thesis. Quote [theories/becoming/chapters/08-METHOD.md]: "passed on held-out yeast regimes (MQ2), a simulated Allee yeast (MQ1), a gated commons (CG1); failed at the instrument's floor (MQ1), after a salt shock (MQ2 C1), in fish stocks under held catches (MQ3), in yeast at constant regimes and past the fold (MQ6: 3 of 10 frozen verdicts passed; the fate reading at the instrument's floor, the predicted need near the fold, the timing of both breaks and three of four level forecasts failed); no field test of a need measured in advance". The yeast data are those of Dai et al. (2012) and Dai, Korolev and Gore (2015); the fish stocks are from the RAM Legacy database ([tests](../../../experiments/margin-measured/README.md)). The tests' summary for the laboratory: Quote [experiments/margin-measured/README.md]: "In the laboratory, it predicts thresholds, and the level is the state." Past the fold, Quote [experiments/margin-measured/README.md]: "the populations broke three and at least six days before the renewal curve measured in constant regimes said." The audit: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "The strongest empirical contact runs through T1." Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "It has held-out passes on yeast and failures on fish."
+
+The frozen tests as they fell ([ledger](../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)):
+- MQ1, simulation: its passes bearing on T1 (A2, the break day within its band; A3, the point of no return) are deterministic-limit checks on a model built with a need, testing the measured quantities under noise, not the thesis.
+- MQ1, real yeast: 1 of 2 passed. D2, the sharp need (above 1.5û alive, below û/1.5 extinct), failed: 19–46% of low starters read above zero, at the instrument's floor.
+- MQ2, real yeast against held-out regimes: 4 of 8 passed, the need and its rise with the draw (M, A1, A2, B2). The levels failed (S and S2, 1.52 and 1.55 times off at DF 1600), and so did the fates after a salt shock (C1 and C2, accuracy 0.78 and 0.81, the null's 0.78). Its self-review: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md]: "What passed is the need. The level failed".
+- MQ3, the regime's step in 113 assessed fish stocks: 0 of 4 passed. F0 failed (last year's escapement added 0.22, against a bound of 0.10), and so did F1 and F2 (the one-year and five-year forecasts, each beaten by the frozen rest). F3 predicted that under a held catch at least 80% of episodes below the regime's point fall and at least 90% above it hold; of 754 episodes below it, 63% fell (99.5% of those above held).
+- MQ6, yeast at constant regimes and past the fold: 3 of 10 passed. A1 (fates) and A2 (the held-out need) failed: the frozen fate reading Quote [experiments/margin-measured/README.md]: "counted noise at the instrument's floor as survival, and A1 failed on it", and the held-out need came out Quote [experiments/margin-measured/README.md]: "1.7 times too low at 0.2%, next to the fold (A2 failed)". Five of its six forecast and timing predictions failed (test labels): T1a-DF, T1b-DF and T1b-SUC, the regime margin's forecasts of the level away from and near the break against the frozen rest, persistence and trend, and both timings of the break, T2-DF and T2-SUC. T1a-SUC (the forecast away from the break under falling sucrose), C1 (the regime's level carrying across experiments within 15%; 8%) and L (the level as the state at a constant dilution) passed.
+- CG1, the gated commons: its passes bearing on T1 are of the identity class, which Quote [experiments/commons-gated-renewal/README.md]: "gives no empirical support to the theory beyond the correctness of its identification", and the scope prediction A2, which passed ([S-11](#s-11)).
+- The fish-stock result the tests' summary gives, Quote [experiments/margin-measured/README.md]: "In managed fish stocks, it ranks the risk of a break but does not time it.", is the frozen-rest margin's (MQ4's prediction labelled T1, a test label), and that margin is the withheld-levels margin T1 excludes; a break there is falling below half the level within ten years ([S-12](#s-12)).
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/02-MAP.md]: "Depensation is rarely detected in assessed fish stocks (Myers et al. 1995), so most lie outside the scope rather than against it; the need is measured apart from the fate it predicts, so the scope is not chosen afterwards."
+- Quote [experiments/margin-measured/README.md]: "The held-out dilution factors had been read in MQ1, so they were held out from the fit, not from the analyst."
+- Quote [experiments/margin-measured/README.md]: "The paper was read before the freeze, its figures and tipping days included, so the timing verdicts were partly anticipated, and the freeze says so."
+- Both fate failures at the instrument's floor (MQ1's D2 and MQ6's A1) failed under their frozen rules, and the account keeps them as failures. Read by the floor afterwards, A1 separates 97–100%, a post hoc reading; of every post hoc analysis, Quote [experiments/margin-measured/README.md]: "None of them changes a verdict." The account's lesson from the second: Quote [experiments/margin-measured/README.md]: "The lesson is MQ1's again: read the instrument's floor before freezing a fate rule."
+- The salt-shock test (MQ2's C1 and C2): fates after the shock were predicted with accuracy 0.78 and 0.81, the null's 0.78, and T1's refutation clause names Quote [theories/becoming/chapters/02-MAP.md]: "fates across a predicted point separated no better than by a null". The chapter reads the result as Quote [theories/becoming/chapters/02-MAP.md]: "its first prediction: 7 of 8 died; the converse, not claimed: a shock changes the regime and its need". That change of regime rests on a post hoc analysis, Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md]: "the salt-shock experiment's pre-shock levels are 8-20% below the bifurcation experiment's", with needs located for each column by its own level right at DF 825 (7 of 8) and wrong at 750 (3 of 8). And Quote [experiments/margin-measured/README.md]: "Four days after the shock is too short to settle fates near the need."
+
+**Questions.**
+1. What field test of a need measured in advance would be feasible, and in which system?
+2. Does T1 forbid anything an Allee-effect model of the same system does not?
+3. Was the salt-shock test (Known weaknesses) a fair test of T1, and how should its result count?
+
+<a id="s-15"></a>
+### S-15 T2 and its tests
+
+**Meaning.** Quote [theories/becoming/chapters/08-METHOD.md]: "T2. The state of a renewable condition under a draw is its level, its recent giving and one lag". It forbids Quote [theories/becoming/chapters/08-METHOD.md]: "a fourth variable removing a tenth of the residual variance in the median series; the level alone forecasting as well at five years; the lag's coefficients changing sign between series". Quote [theories/becoming/chapters/02-MAP.md]: "Beyond delay-difference models (Deriso 1980; Schnute 1985) and partial adjustment, it claims these three numbers for every renewable condition under a draw; silent on coupling, which adds a partner's level."
+
+**Standing and use.** Thesis, conjectured. Quote [theories/becoming/chapters/08-METHOD.md]: "MQ4 failed its whole-state verdict; MQ5 passed; MQ7 missed its frozen bound (0.39, lower bound 0.00)". The frozen counts ([ledger](../../../experiments/margin-measured/README.md#ledger-every-frozen-verdict)): MQ4 passed 7 of 12, failing G3 (nothing needed beyond the level and the recent giving), F5a and F10a (the five- and ten-year directions), F10b (the ten-year error) and T2 (a test label: the frozen-rest time to break, half of the origins put within five years breaking within ten; 0.32); MQ5 passed 6 of 8, failing D1 and D2 (the draw's response); MQ7 passed 0 of 1: C1 failed (0.39, lower bound 0.00, on 62 episodes from 5 stocks), and C2 was not testable. In yeast both chapters place MQ6's constant dilution outside the settings T2's *Refuted by* names: Quote [theories/becoming/chapters/08-METHOD.md]: "in MQ6's yeast, residuals at one constant dilution, never past the fold, carry nothing day to day, outside the settings T2's *Refuted by* names, and the runs past the fold measured none of its forbidden items"; the home chapter gives the measure, Quote [theories/becoming/chapters/02-MAP.md]: "residuals at one constant dilution, never past the fold, carry nothing day to day (lag-1 −0.14, passed)". Of MQ5's pass: Quote [theories/becoming/chapters/02-MAP.md]: "the lag may be the assessment's own, the gain damping". Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "no Lean statement excludes what T2 forbids, so it is a conjecture, not a third part".
+
+**Known weaknesses.**
+- UE31, a frozen test, expects T2's claim that the three numbers, with the draw, Quote [theories/becoming/chapters/02-MAP.md]: "fix the next giving as far as anything measured does" to fail in one domain, the flour beetle's laboratory cultures, where a stage before recruitment is counted, since, Quote [theories/becoming/chapters/02-MAP.md]: "the pupae counted now are the next recruits and carry the chance events between egg and pupa, which no history of the adults can hold". Quote [theories/becoming/chapters/02-MAP.md]: "The beetle is not on the *Refuted by* list, but a culture under a set loss is a renewable condition under a draw, so such a failure would count against the claim for every one; it would defeat T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries, where MQ5 passed." That reading is Quote [theories/becoming/chapters/08-METHOD.md]: "reading a subject as continuation relative to a class explains how it goes on". What would remain is the claim as far as the level's own history does. [UE31's design](../../../experiments/state-named-in-advance/DESIGN.md) says what the field's state is there, Quote [experiments/state-named-in-advance/DESIGN.md]: "The field's state there is the beetle's life stages (the LPA model, §3)", and 02 what the test expects of it, Quote [theories/becoming/chapters/02-MAP.md]: "on the adults' own course, with the lag two censuses back, where the life cycle puts it, the test expects the three numbers to tie the field's state by construction." Quote [theories/becoming/chapters/02-MAP.md]: "Their one contrary prediction is the lag's sign: if the field's model holds, the test expects it mostly undecided at the archive's size, and any decision there to go to the field; if T2's law held and the cultures were dense, it would often go to T2." The design gives the numbers: Quote [experiments/state-named-in-advance/DESIGN.md]: "It would decide for T2 in 29% to 85% of groups if T2's law held and the cultures were dense (§8)." There §8 is the design's, a group is one of its dry runs' simulated archives of the size the design took as likely, 10 to 15 cultures, and a culture is dense where its adults two censuses back were mostly above the turning point, about 76 to 91 adults. It ran on the Beetle Team archive on 3 November 2026 ([result](../../../experiments/state-named-in-advance/README.md#the-result)), and Quote [theories/becoming/chapters/02-MAP.md]: "the test decided nothing: the 40 cultures of the archive's adult-loss experiment, with the loss set and recruitment left to them, hold 13 censuses each under the loss, too few for its frozen rules, so each of these expectations stands untested."
+- The evidence is fisheries alone. The standing, the same in both chapters apart from the beetle's case: Quote [theories/becoming/chapters/08-METHOD.md]: "conjectured, on three frozen fish-stock tests; untested outside fisheries". The tests' account: Quote [experiments/margin-measured/README.md]: "MQ6 measured yeast under a changing dilution, but not T2's three forbidden items."
+- [this dossier, AI] At constant dilution the level alone was the whole state: the regime's-step end of T2's law, at which recent giving and the lag carry nothing. The result is consistent with T2's law, and what it measured, the residuals' carry from day to day, is none of the three items T2 forbids as worded. T2's refutation clause names yeast only in deteriorating environments, Quote [theories/becoming/chapters/02-MAP.md]: "any of these on survey series of fish stocks, grazed grassland, harvested forests, or yeast in deteriorating environments", but Quote [theories/becoming/chapters/02-MAP.md]: "it claims these three numbers for every renewable condition under a draw", and a culture at a constant dilution is one, so a forbidden item measured there would count against it, as T2's sentence on the flour beetle reasons of a culture under a set loss. Since the level alone was the state there, the second forbidden item, the level alone forecasting as well at five years (read at the culture's own grain), could be met in such a culture; neither chapter says whether that item stands at the law's regime's-step end (question 4).
+- Quote [experiments/margin-measured/README.md]: "The series are assessment outputs, not measurements; age-structured assessments carry a recruitment lag of their own."
+- Of MQ7: Quote [experiments/margin-measured/README.md]: "So the field frequency of fates on either side of the curve is still not measured."
+
+**Questions.**
+1. Is the one-lag state a property of the stocks, or of the age-structured assessments that produced the series?
+2. Which fourth variable would you expect to remove a tenth of the residual variance first?
+3. Which survey, grassland or forest series would test T2 fairly?
+4. T2's law has two ends, Quote [theories/becoming/chapters/02-MAP.md]: "the regime's step and the frozen rest its two ends", and this dossier reads MQ6's constant dilution as the first, where the level alone is the state. Should the second forbidden item, the level alone forecasting as well at five years, exclude the regime's-step end, and what would mark a series as near it?
+
+<a id="s-16"></a>
+### S-16 T6: a break seen coming
+
+```lean
+theorem break_not_bounded [DecidableEq C] {c : C} (unobserved : ¬ obs g c) (u : Nat)
+    (others : ∀ s, s ≤ u → ∀ e, e ≠ c → W.requires s g e → W.need s g e ≤ W.level s e) :
+    ∃ d, (∀ s, s ≤ u → (W.raise c d).Supported s g) ∧
+      ∀ t, W.Supported t g → W.AlikeThrough obs g W.level (W.raise c d).level t
+```
+
+File: `Becoming/Runaway.lean`.
+
+**Meaning.** Quote [theories/becoming/chapters/08-METHOD.md]: "T6. A break is seen coming only through what couples into what breaks". Quote [theories/becoming/chapters/03-KNOWING.md]: "A statistical early warning reads the observed condition's own rate of return, which falls near a bifurcation of its own renewal; a dependent's need is no such point, and before a dependent's break the stock's statistics rise as before the same drawdown with no break."
+- *The invisible half* (World; the block). For a condition `c` the formation `g` does not observe, its other requirements met up to step `u`, some raise `d` of `c` keeps `g` supported to `u`, while the raised and unraised histories stay alike through `g`'s couplings at every step at which `g` is supported (`Web.break_not_bounded`).
+- *The seen half* (periphery, `warning/SlowingDown.lean`). A linearized deviation stepping by a multiplier `a` plus noise, deviation and noise independent with finite second moments, has, where its variance is the same across the step and `a² < 1`, stationary variance `Var E/(1 − a²)`, and lag-1 autocorrelation `a` where that variance is positive (the measure finite); at a fold, or at a transcritical end under a proportional draw, `a` rises to one as the margin to the condition's own end shrinks. Quote [theories/becoming/chapters/03-KNOWING.md]: "A dependent's need enters neither statistic, by construction: no one function of the multiplier returns the margin to a need for every need." With the model known the multiplier does give it: in the logistic drawn model with h, r and K nonzero, a measured need's margin is read off the multiplier (`SlowingDown.need_margin_read`).
+
+It forbids Quote [theories/becoming/chapters/03-KNOWING.md]: "Given the stock's own course, its early-warning statistics separating runs in which a dependent's need is crossed from runs in which it is not, the dependent taking no measurable share."
+
+**Standing and use.** Thesis; the invisible half proved on the World, the seen half in the periphery, in the linearized and logistic models only; that the split is one law across domains, and that a break is seen coming only so outside these models, are conjectured (08 §9, 03). Quote [theories/becoming/chapters/08-METHOD.md]: "EW1, the literature, consistent; three frozen seabird tests did not reject it at their thresholds: EW2 at low power, estimates in the refuting direction; EW3 near zero, not independent of EW2 (it reuses part of its rows); EW4 at moderate power; none establishes conditional independence". The frozen counts ([account](../../../experiments/break-warnings/README.md)): EW2, EW3 and EW4 each passed both of their verdicts, V1 (the lag-1 autocorrelation of the prey's window) and V2 (its variance). The dependent's need: Quote [experiments/break-warnings/README.md]: "Cury et al. (2011) measured such a need: seabird breeding success falls below about a third of the largest forage-fish biomass." The chapter's credit: Quote [theories/becoming/chapters/03-KNOWING.md]: "Critical slowing down (Wissel 1984; Scheffer and others 2009); nonlinear runs, finite windows and several variables are not treated." The closest prior work, in the early-warning check: of Dekker, von der Heydt and Dijkstra (2018), in whose one-way coupled bistable systems the leading system's indicators did not differ whether or not the follower tipped, Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md]: "The closest prior form of the uncoupled side, with a matched comparison." Of Boerlijst, Oudman and de Roos (2013), Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md]: "The break is seen only in what carries the critical mode, not in what breaks: T6's coupled side in eigenvector form". Of the first wording, Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md]: "its first wording fails against unmatched controls wherever the stock's rate of return falls as it is drawn down (Kefi et al. 2013; Drake and Griffen 2010; Clements et al. 2017)".
+
+**Known weaknesses.**
+- The literature refuted T6's first wording: Quote [theories/becoming/chapters/03-KNOWING.md]: "The literature (Dai and others 2012, 2015; Boerlijst and others 2013; Dekker and others 2018) is consistent and refuted the first wording." The audit's row ends Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "its first wording was refuted". The method chapter lists among prose that said more than the theorems Quote [theories/becoming/chapters/08-METHOD.md]: "that nothing a part senses shows how near a break is. The theorem assumes the stock is not sensed, and the early-warning literature (Scheffer and others 2009) shows the general claim false".
+- Quote [experiments/break-warnings/README.md]: "The pass is weak. Every estimate lies in the direction the refutation clause names." EW2's frozen p was 0.048 against a familywise 0.025: Quote [experiments/break-warnings/README.md]: "AR1's one-sided p would have been below 0.05 as a single test; the frozen familywise rule set 0.025 for each of two." Reported only: Quote [experiments/break-warnings/README.md]: "The combined partial correlation is 0.30 for autocorrelation (95% interval −0.06 to 0.59) and 0.26 for variance (−0.10 to 0.57), computed after the run from the frozen statistic". Of EW3: Quote [experiments/break-warnings/README.md]: "EW2's positive estimate did not hold up at about twice the power; by the frozen reading rule the variance resolves it toward T6 and the autocorrelation leaves it open." Also reported only, and for one stock in the refuting direction: Quote [experiments/break-warnings/README.md]: "On the rows EW2 did not test (R5), Benguela's estimates are 0.64 and 0.61 on 15 rows with six covariates, Røst's −0.15 and −0.30."
+- Of EW4: Quote [experiments/break-warnings/README.md]: "The scope premise is argued by mechanism, not measured."
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "no: the uncoupled side holds by construction in matched form and is the eigenvector literature's".
+- [this dossier, AI] Given the stock's course and no feedback from the dependent, the forbidden separation is excluded by construction. The empirical content lies in the premise of negligible feedback, which no test has measured.
+
+**Questions.**
+1. What does T6 claim beyond the case without feedback, and could data show it?
+2. Are the three seabird tests fair, given their power and the reuse of rows?
+3. Which system with a measured, negligible feedback from the dependent would test T6 well?
+
+---
+
+## Part 5. Mind and inference
+
+<a id="s-17"></a>
+### S-17 The free-energy principle as a case
+
+**Meaning.** [The free-energy principle in the theory](../FREE-ENERGY-PRINCIPLE.md) places each of the principle's quantities and claims with its hypotheses and home section; its brief takes about eight minutes. In sum:
+- *Stated.* Belief as conditioning; variational free energy, which Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "bounds the record's surprisal, with equality exactly at the posterior", in the periphery over the reals and, for beliefs in counts, in the pure core; expected free energy and its terms; the blanket as a coupling structure on a determined law, and its statistical form under sufficient conditions.
+- *Forbidden.* Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "Five statements of the principle's literature, read as guarantees or unqualified, fail on models in the principle's own terms, each by a law the principle does not state": on identical cells, on one generative model with alike preferences, on risk minimization keeping a need, on seeking information correcting itself, and on agents coming to share a code.
+- *Forbidding nothing.* Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "The existence claim forbids nothing alone, as its proponents concede". The theory's own root laws Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "hold of every carrier, relation and class, so they forbid no relation".
+- *Not stated.* Densities, continuous time, Langevin flows, generalized coordinates, precision, hierarchical and deep temporal models and structure learning, among others: Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "none is stated in the theory."
+- *What excludes a measurement.* Thesis T6 ([S-16](#s-16)); the page's §6 says how a measurement reaches each kind of claim.
+
+The rest of this item takes one law of the page, the first study's, as the case with its Lean: the habit. (World for the selection laws, counts for the count laws; in `Becoming/ChoiceCountCapture.lean`) A study ([UE1](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md)) read the free-energy principle against the selection laws, on a simplified chooser (two policies, choice at the argmax, counts of the executed policy as its prior), with no probability; Known weaknesses give how active inference's own scheme differs. A choice made from any fold of what has coupled into a formation is a selection through its couplings (`ChoiceCountCapture.selectsThrough`); choosers sharing their folds select through their pooled couplings (`ChoiceCountCapture.pooled_selectsThrough`). On counts: a chooser over two policies takes the first where its rule weighs it at least as much as the second, the rule read from the counts of past choices weighted by a standing score, `κc` for the first policy and `κo` for the second. Under a standing score, with the rule in force read from the counts at the start, from counts at or above the threshold `κo · other ≤ κc · carrier`, along every schedule of reading, the course is locked at every step and neither the share nor the rule falls, even where the score favours the second policy (`ChoiceCountCapture.counted_locks`); below it the second policy is taken at every step (`ChoiceCountCapture.counted_locks_down`). Counted instead from the posterior at the time of choosing, a contrast case, a score favouring the second policy lowers the first policy's share strictly at each step at which it has carriers (`ChoiceCountCapture.posterior_count_falls`), and at every step of a course at a positive fixed scale (`ChoiceCountCapture.posterior_course_falls`). Joined to a coordinate that the loop does not read and that rises by at least one at every step, the course stays locked while the coordinate passes every bound (`ChoiceCountCapture.counted_outlives_loss`).
+
+**Standing and use.** Of the page's laws: Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "Every law named is near-definitional, a known result stated in the principle's terms, a corollary, or a witness." And Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "Here the theory reaches farther than the principle alone, and not yet farther than the sciences taken together". Of the habit, of the selection laws: Quote [theories/becoming/chapters/02-MAP.md]: "This part is near-definitional." The lock Quote [theories/becoming/chapters/08-METHOD.md]: "is the lock-in of increasing returns (Arthur 1989) and, counting the action taken, the value-free habit (Miller, Shenhav and Ludvig 2019); active inference's own simulation of devaluation shows the persistence (Friston and others 2016, §5.2)". The verdict: Quote [theories/becoming/chapters/08-METHOD.md]: "What the law adds is exactness for a simplified model and its edges, so as a containment of the free-energy principle it is a restatement"; the containment's third parts lie in 05 §9, 05 §1 and 03 §6. 
+
+The first study's search, before the page. A search of 16 claims in 15 papers found that Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md]: "UE1's own laws forbid nothing found." Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE-CORRECTIONS.md]: "Every collective claim found stays within the union of the members' couplings." Its strongest candidate is the claim of Friston, Levin, Sengupta and Pezzulo (2015) that identical cells are guaranteed to reach unique places: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md]: "The commuting law forbids the guarantee for the paper's deterministic descent from an exchange-fixed start: the cells never part." But Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md]: "The paper's own simulation broke the symmetry with small random initial expectations." Under noise of one law at every cell the law gives way to an exchangeable law, which decides nothing of which cell takes which place and forbids nothing of the paper, whose scheme has that form ([record](../results/records/identical-cells-under-noise.md)). The lock's use for alignment is in [A-07](ALIGNMENT.md#a-07) and [A-08](ALIGNMENT.md#a-08).
+
+**Known weaknesses.**
+- Of the five forbidden statements: Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "Each restates a known result of a neighbouring field in the principle's terms." And Quote [theories/becoming/FREE-ENERGY-PRINCIPLE.md]: "Each excludes a guarantee or an unqualified statement on a model, not yet a measurement of an actual system"
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "That the principle's partition is a coupling structure of the World model is a reading. No representation theorem joins a Langevin system with a blanket to a web." And Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "Its proponents present the principle as a method of description rather than a claim that could be refuted, and its process theories as the part that makes predictions."
+- Quote [theories/becoming/results/records/capture-by-counted-choices.md]: "That actual agents, brains or trained systems count their choices so or choose at the argmax; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018)."
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "The in-sync start is a hypothesis: counts above the threshold under a rule left from an older score lock the other way (`Witness.Stale.above_but_stale_locks_down`)": three choices to one, above the threshold of the score one to two, under a rule an older score left in force, lock the other way from step 5.
+- The chooser is not active inference's: Quote [theories/becoming/results/records/capture-by-counted-choices.md]: "Active inference's own scheme: it counts the end-of-trial posterior over policies, close to the executed policy where outcomes reveal it and split among policies that explain the trial equally; its prior is the counts' expected log, not the counts; it has a free-energy term, sampling and inferred precision. The threshold is the model's, not SPM's." Nor does it read Quote [theories/becoming/results/records/capture-by-counted-choices.md]: "Any probability, surprisal, free energy or expected free energy". The study adds Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "Policies that explain the trial equally share it, which the kit does not model; the paper places the habit's advantage exactly there." Of the simulation the verdict cites: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "the simulation shows persistence over the trials it runs, which is consistent with a lock and with slow decay alike."
+- The first study's grading, before the page: seven of the claims are forbidden under a natural reading by other laws of the theory (symmetry, joint excess, lumping). [this dossier, AI] These are the page's five: of the three statements on a shared language two make its fifth entry, and the third, the duet, is not counted. Of these, Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE-CORRECTIONS.md]: "Each forbids a verbal generalization, not a paper's simulation". And Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE-CORRECTIONS.md]: "Each forbidding law is a known result, symmetry breaking (Curie, Turing, Angluin) or the commons (Lloyd, Hardin)." The page also credits pivotality, identification and conventions symmetry does not select.
+- The study reports the principle's critics (Biehl, Pollock and Kanai 2021; Aguilera, Millidge, Tschantz and Buckley 2022; Bruineberg, Dołęga, Dewhurst and Baltieri 2022), among them Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md]: "Sparse coupling does not in general give the blanket condition." The record: Quote [theories/becoming/results/records/capture-by-counted-choices.md]: "the selection laws read its sparse coupling, not its blanket condition". [this dossier, AI] So the selection laws read the principle's partition only as sparse coupling. The statistical form is stated apart, under sufficient conditions in counts and in the linear case. The step the critics dispute from a blanket to beliefs is not part of the containment.
+
+**Questions.**
+1. Is reading the principle's partition into thing and world as a coupling structure fair, given that the selection laws read sparse coupling and the statistical form is stated only under sufficient conditions?
+2. Active inference counts the end-of-trial posterior over policies and reads its prior as the counts' expected log (Known weaknesses). Does its habit learning lock as a rule read monotonically from the counts of its choices does, or does the split among policies that explain a trial equally change that?
+3. Is there a claim in the principle's literature that a proponent would accept as refutable, so that a third part bears on what proponents claim and not on a reading?
+4. The page reads five statements as guarantees or unqualified. Would their authors accept any of these readings as what they claim? Where they would not, does anything stay forbidden?
+
+<a id="s-18"></a>
+### S-18 Conditioning by restriction and the exit from a margin
+
+```lean
+theorem fallsWithin_share (p q m n : Nat) :
+    (share (Typicality.courses n) (weight p q) (fallsWithin p q m)).le ⟨n * (p * q), m * m⟩
+```
+
+File: `Becoming/ConditionalWeights.lean`.
+
+**Meaning.** (any type; natural weightings of listed courses)
+- *Conditioning by restriction.* The weighting restricted to a record keeps each course agreeing with it and gives every other nothing. Bayes's rule holds as a ratio identity (`ConditionalWeights.restrict_two_ways`); in a generative model a hypothesis's share given the record is its prior weight times its likelihood weight over their sum (`ConditionalWeights.posterior_single`); a prior weight is the prior share only where every hypothesis's likelihood weights have one total (`ConditionalWeights.prior_share`, `ConditionalWeights.Witness.prior_not_share`).
+- *The exit from a margin* (the block). A level stands `m` above a need on courses of `n` independent steps, raised `q` by each one and lowered `p` by each zero, so that rises and falls balance under the weights `p` and `q`. The courses on which it reaches the need take at most `n·p·q/m²` of the weight (a share is compared with a pair by cross-multiplication): Quote [theories/becoming/chapters/02-MAP.md]: "Kolmogorov's maximal inequality restated in counting form". Given a record of the earliest steps that leaves the level `m′` above the need without having reached it, the share of the courses reaching the need within the `n` steps left is the share from `m′` (`ConditionalWeights.record_share`).
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/03-KNOWING.md]: "These are identities of counting". Quote [theories/becoming/chapters/08-METHOD.md]: "Bayes's theorem in counting form (Bayes 1763; Laplace 1774) holds as a ratio identity, near-definitional". Quote [theories/becoming/chapters/08-METHOD.md]: "The exit bound is the unregulated case, not the free-energy principle's quantity, and gives that principle's containment no third part." For T6 ([S-16](#s-16)), Quote [theories/becoming/chapters/03-KNOWING.md]: "the weighting is the independently warranted model T6 allows".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/03-KNOWING.md]: "Averages of logarithms, entropy and free energy among them, are not the logarithm of one reciprocal share"; for beliefs in counts the free-energy bound has a counting form, with its equality, in the pure core, since 30 October 2026.
+- Quote [theories/becoming/results/records/conditioning-by-restriction.md]: "That these identities are substantive results of a containment of the free-energy principle: they are identities of counting, near-definitional."
+- [this dossier, AI] Natural-number weights confine the laws to rational probabilities over finitely many listed courses.
+- [this dossier, AI] Kolmogorov's inequality is the weakest of the standard maximal bounds: for steps bounded as here, exponential martingale bounds (the Azuma–Hoeffding inequality) are much tighter in the tail. For one of the audit's candidates, survival under expected joint excess, UE6's first round found a sharper statement known: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "Bertsimas and Popescu 2005 (sharp one-sided moment bounds, stronger than the Chebyshev form)".
+
+**Questions.**
+1. Does a counting form of Bayes's rule and of the maximal inequality give inference anything beyond a constructive proof?
+2. Averages of logarithms are not the logarithm of one reciprocal share, while for beliefs in counts the free-energy bound has a counting form. Is the first decisive for containing the free-energy principle?
+
+<a id="s-19"></a>
+### S-19 Orders with a set point
+
+**Meaning.** (any set of outcomes; the draw on the World; in `Becoming/SetPointOptimum.lean`) An order is *nearing* a set point `s` of a family `ds` where it ranks above every nearer outcome, condition by condition (`Optimum.Nearing`). Below the set point a nearing order drains as a rising order does: among outcomes up to the set point its optima stand at the least level beyond exactly where room holds there (`Optimum.least_below_iff`). Where some eligible outcome reaches the set point, an outcome is an optimum of some nearing order exactly where it is eligible and at the set point (`Optimum.optima_iff`). In a balanced step in which the whole gains nothing, what lies beyond then falls by the family's shortfall from its set point with what the step loses (`Flow.Balances.atSetPoint_draws`). Formations holding a level drain a gated commons wherever their losses together exceed its renewal (`Flow.held_excess_ends`).
+
+**Standing and use.** Theorems. The chapter marks `Optimum.optima_iff` near-definitional: Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "the class asks nothing of what lies beyond". Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "What protects what lies beyond at the set point is the choice among equal optima, which no law here models." Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "the plateau decides, not the set point." Neighbours: such orders Quote [theories/becoming/chapters/08-METHOD.md]: "have a plateau where the set point is reached, as an aspiration level has (satisficing; Simon 1955)"; Quote [theories/becoming/chapters/08-METHOD.md]: "that what protects at the set point is the choice among equal optima is mild optimization's point (quantilizers; Taylor 2016), its bound a reading not proved here"; Quote [theories/becoming/chapters/08-METHOD.md]: "The drive of homeostatic reinforcement learning, a norm of the deviations from set points (Keramati and Gutkin 2014), is a nearing order." Quote [theories/becoming/chapters/08-METHOD.md]: "Neighbours, not containments: the laws restate them for one step, exactly, with the drain below the set point and the draw at it." UE6's first round found the joint-excess side stated qualitatively within active inference: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "Albarracin and others 2024 (component resilience depleting a collective's resources under active inference)". A reading for active inference [AI reading, D45]: Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "Such a chooser escapes the optimizer's drive at its set point, not the drain below it, nor joint excess."
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/05-COLLECTIVES.md]: "It does not show which optimum is taken, that any agent's preferences form a nearing order, or anything over a horizon or under noise".
+- Quote [theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md]: "That a set point protects what lies beyond: where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima."
+- [this dossier, AI] Active inference ranks policies by expected free energy, which adds an epistemic term to the term of prior preferences; the reading takes the preferences alone.
+
+**Questions.**
+1. Are active inference's prior preferences over outcomes, and the drive of homeostatic reinforcement learning, nearing orders in this sense?
+2. Is a law of one step of use for agents acting over a horizon under noise?
+
+<a id="s-20"></a>
+### S-20 Selection through couplings across fields
+
+**Meaning.** (World) With no premise, Quote [theories/becoming/chapters/03-KNOWING.md]: "Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them" (`Web.selects_alike_iff`). With a part withheld and the rest of the exchange fixed, balance at each step on the conditions coupled into members of a formation's coupling closure, and every member of the part beyond that closure, every selection through the couplings of a formation within the closure treats the levels with and without the part alike (`Flow.unselected_beyond_coupling`); where the rest responds instead, the same holds under further hypotheses (`Flow.unselected_beyond_coupling_responsive`). Over cohorts of descent, Quote [theories/becoming/chapters/04-LIFE.md]: "Counts of offspring see only what the selection couples into", and where the whole gains nothing across the step and more offspring go only to formations raising a family, the share reaching beyond it is never selected against (`Flow.share_not_against`). The first unification: Quote [theories/becoming/chapters/08-METHOD.md]: "reward, training, natural selection, prices and votes as one selection through couplings; the drain lies wherever room lies (the commons in evolutionary biology, Rankin, Bargum and Kokko 2007)".
+
+**Standing and use.** Theorems; across domains, Quote [theories/becoming/chapters/08-METHOD.md]: "the laws proved; one law across domains conjectured (T3)". Quote [theories/becoming/chapters/03-KNOWING.md]: "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in." Credited to Quote [theories/becoming/chapters/08-METHOD.md]: "supervisory control (Ramadge and Wonham 1987), under partial observation (Lin and Wonham 1988; Cieslak, Desclaux, Fawaz and Varaiya 1988)". Its use for alignment: [A-01](ALIGNMENT.md#a-01), [A-02](ALIGNMENT.md#a-02).
+
+**Known weaknesses.**
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md]: "the selection half is observability restated; the drain is row 20's third part".
+- Quote [theories/becoming/chapters/03-KNOWING.md]: "A particular selection may ignore what its couplings carry."
+- [this dossier, AI] For natural selection what couples in is whatever affects reproduction, so the law says that selection does not act on what does not affect reproduction.
+
+**Questions.**
+1. Does the law say more about natural selection than Price's covariance already says?
+2. For control theory, is it observability under partial observation with nothing added?
+3. Is one selection across reward, training, natural selection, prices and votes a useful unification, or does it erase what tells them apart?
+
+---
+
+## Part 6. Order and open-endedness
+
+<a id="s-21"></a>
+### S-21 Eventual widening
+
+```lean
+def EventuallyWidens (l l' : Nat → C → Nat) : Prop :=
+  ∃ T, ∀ S, T ≤ S → (W.after S).Widens (tailFrom S l) (tailFrom S l')
+
+theorem eventually_neither (widens : W.EventuallyWidens m l') :
+    ¬ Verifiable (fun r : Run (Sequences.process (C → Nat)) => W.EventuallyWidens r.act l') ∧
+    ¬ Refutable (fun r : Run (Sequences.process (C → Nat)) => W.EventuallyWidens r.act l')
+```
+
+Files: `Becoming/EventualWidening.lean`, `Becoming/EventualWideningInstances.lean`.
+
+**Meaning.** (World; witnesses) One level path eventually widens another where, from some step on, it widens it on every tail (the definition): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "first-order widening read on late tails, not a comparison of growth". The theorem: where some course eventually widens a second, eventually widening it is neither verifiable nor refutable from finite records of a course. A course whose admissions a list holds eventually widens nothing (`Web.not_eventually_of_listed`). A course keeps widening where nothing admitted is lost and something keeps being opened (`Web.KeepsWidening`); over a listed type of formations, no course read by name does (`Web.KeepsWidening.not_listed`). Of the lag, the theorem: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "a course keeping every formation of another from one step later is mixed with it in every tail (`LagWitness.lag`)", so eventual widening is silent on it. That eventual widening needs no growth, a steady course eventually widening one that collapses, follows from the definition and is not a Lean statement; 07 gives it in a reading [AI reading, D45].
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Every law here is near-definitional, and calling eventual widening better is a premise beyond C, not asserted". The method chapter: Quote [theories/becoming/chapters/08-METHOD.md]: "is the inclusion form of a tail criterion, and a criterion reading only tails is a dictatorship of the future (Chichilnisky 1996)". Quote [theories/becoming/chapters/08-METHOD.md]: "That its verdicts are dense both ways is liveness in Alpern and Schneider's sense (1985)." Quote [theories/becoming/chapters/08-METHOD.md]: "That, with finitely many admissions at each step, it entails overtaking (von Weizsäcker 1965; Gale 1967) and not conversely is an argument, not proved in Lean." And Quote [theories/becoming/chapters/08-METHOD.md]: "Every law of the record is near-definitional; what it adds is its coherence with widening and its witnesses, the lag among them." Of what open-endedness research calls innovation ([07 §2](../chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows)): Quote [theories/becoming/chapters/08-METHOD.md]: "That the possible with what is held grows only across a change of what is held is open-ended novelty's innovation, novelty that changes the model and with it the possibilities of variation (Banzhaf and others 2016), which holds there by definition".
+
+**Known weaknesses.**
+- Of the second-order direction the theory seeks, a range whose widening keeps widening: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Eventual widening, first-order widening read on late tails, does not give it." On the ranges courses admit ([record](../results/records/comparing-two-courses-on-what-they-admit.md)), Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "ranking every course that keeps widening by name above every course that admits alike, was wider at first and is mixed with it is not a strict partial order containing widening on every web: on a web of formations on two sides, whose static course admits infinitely many formations, it closes a cycle, and where the static course's admissions are listed it is one on every web." Of the lag: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Eventual widening's lag is decided by widening with a lag and by a tail order containing eventual widening; on the own-condition web widening with a lag and eventual widening hold of a pair in opposite directions, so the lag does not choose between counting early steps and reading only tails." Of ranges compared by what a course keeps reachable ([07 §2](../chapters/07-SIGNIFICANCE.md#r-what-a-course-keeps-reachable)): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "covering, the comparison of what courses keep reachable at the same offsets, implies inclusion of what each configuration admits now, so widening what can be reached never puts a configuration above one that starts a course and admits now what it does not", and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "read with a lag it decides one witness's pair, though not every such pair, and C leaves that pair unranked, so the lag's verdict is a premise beyond C". On causal-set growth Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "every course keeps widening what can be born next, so the second order is not told apart there". Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The candidate left is what carries a course's openings." What one course keeping widening needs is S-22.
+- Quote [theories/becoming/results/records/eventual-widening.md]: "That eventual widening is better: calling it better is a premise beyond C (C∞ in the study), named and not asserted."
+- [this dossier, AI] A course admits a formation where its levels meet every requirement the formation has (`Web.Admits`), so the laws concern which formations a course's levels could support, not which arise; measures of open-endedness in artificial life usually count what arises and persists.
+
+**Questions.**
+1. Is admitting more formations at arbitrarily late steps a useful notion of open-endedness, compared with the measures used in artificial life?
+2. Verdicts neither verifiable nor refutable from a finite record make eventual widening a liveness property. Do the definitions of open-endedness used in artificial life share this, and is it discussed there?
+3. What measurable criterion would capture a range whose widening keeps widening?
+
+<a id="s-22"></a>
+### S-22 What keeping widening needs
+
+```lean
+theorem KeepsWidening.passes_every_bound {T : Nat} (keeps : W.KeepsWidening itself W.level T)
+    (req : ∀ t f, T ≤ t → W.Supported t f → W.RequiresWithin cs f) (K M : Nat) :
+    ∃ t, M ≤ t ∧ K < W.stock cs t
+
+theorem not_keepsWidening_along_passings (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (contains : ∀ t g f, Web.passingContinuation (L.PassesSupport W) t g f → R t g f) (T : Nat) :
+    ¬ W.KeepsWidening R W.level T
+```
+
+Files: `Becoming/KeepingWidening.lean`.
+
+**Meaning.** (World; witnesses) A course keeps widening where nothing admitted is lost and something keeps being opened (S-21). Take a course keeping widening by name on the actual levels, with what every formation supported from some step on requires held within a finite family of conditions `cs`. The first theorem: the family's stock passes every bound `K` at some step after any `M`. Under the theory's first law, the family without repetition, at arbitrarily late steps the rest of the world gives the family net or the family is not closed (`Web.KeepsWidening.from_rest_or_open`), and a finite balanced world under the theory's first law has no such course (`Flow.whole_not_keepsWidening`). Under upkeep, each supported formation taking at least a unit a step, the course has ever more takers (`Web.KeepsWidening.more`); with the family balanced on from a step, its replenishment, and with bounded giving per entry its renewers, are bounded from no step on, entries counted with repetition (`Web.KeepsWidening.renewers_unbounded`). What carries the openings is fixed by a uniform law of support passing on: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "every gain from step `K` on given, up to double negation, by a supported formation that gained support within the `K` steps before". The second theorem: under balance, only active formations giving and activity needing support, with requirements never loosening (a local hypothesis, not one of the World's premises), nothing keeps widening along any continuation (a relation saying which formation continues which across a step) containing passing of support (a supported formation giving to a condition another requires, the condition rising and the other gaining support across the step), which also excludes keeping widening alongside the generation of the supported pattern on both readings used, by name and by passing of support; where a list holding every condition any formation requires is dissipated on from a step, nothing keeps widening along any continuation containing carrying on of the supported (each supported formation continuing itself), by name and within kinds included (`Flow.not_keepsWidening_of_dissipated_requirements`). Witnesses show the premises holding together and each needed.
+
+What keeping opening needs instead (the second theorem's premises). Along any continuation containing carrying on of the supported, what is supported descends, up to double negation, from what was supported at every earlier step or from a *beginning* between, a passing of support into a formation nothing supported continues into along it (`Flow.descends_or_begun`). So keeping opening needs a beginning after every step, and by name a passing of support after every step (`Flow.begins_late_of_keepsOpening`, `Flow.passes_late_of_keepsOpening_byName`); not conversely (`KindRelay.Runs.beginnings_without_opening`). Within a kind, a beginning is a passing that begins a line of that kind while the whole lineage goes on (`Flow.BeginsAlong.carries_kind_iff`). On a witness of six formations of two kinds, closed and conserving (`KindRelay.conserving`), the kind chosen so that the passings across kinds begin, the levels keep widening within kinds while what they can form by name only returns (`KindRelay.keeps_widening`, `KindRelay.not_keepsWidening_byName`, `KindRelay.returns`); a fed form is dissipative, its loss paid by fuel no formation requires (`KindRelay.Fed.dissipative`, `KindRelay.Fed.requirements_not_dissipated`). The first theorem's bar on a finite, closed, balanced world is a law by name.
+
+**Standing and use.** Theorems. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The first two laws restate open-systems thermodynamics and maintenance scaling, the others are near-definitional, and none compares two courses". The method chapter: Quote [theories/becoming/chapters/08-METHOD.md]: "a finite family whose kept widening goes on is fed from beyond, and a finite, closed, balanced world has none, as open-ended evolution measures unbounded evolution against an isolated system's recurrence (Bedau and others 2000; Adams and others 2017)." And Quote [theories/becoming/chapters/08-METHOD.md]: "Renewers multiplying under upkeep is maintenance scaling, as in break-even investment (Solow 1956) and the maintenance coefficient (Pirt 1965), which semi-endogenous growth (Jones 1995) leaves out as stated". Of fed from beyond at the origin of life: Quote [theories/becoming/chapters/08-METHOD.md]: "autocatalytic sets are food-generated (Steel 2000; Hordijk and Steel 2004)".
+
+**Known weaknesses.**
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Passing every bound uses natural-number amounts, a finite family having finitely many configurations within a bound; in a dense order needs approaching a limit could support ever more formations at a bounded stock (argued, not proved in Lean)."
+- Quote [theories/becoming/chapters/08-METHOD.md]: "The TAP equation and assembly theory leave conservation out as stated, and their own variants and remarks supply it (Cortês and others; Sharma and others 2023), so the law is no third part against them."
+- Quote [theories/becoming/chapters/08-METHOD.md]: "None of the laws compares two courses, and none is a result no neighbouring field states."
+- [this dossier, AI] The first theorem reads keeping widening by name: a course keeps opening where, after every step, it admits a formation under a name not admitted at that step. Under the second theorem's premises nothing keeps opening along passing of support (`Flow.not_keepsOpening_along_passings`), so what the first theorem counts as new is new by name, not by descent. Measures of open-endedness count new kinds or lineages. The laws state a beginning, and a witness within kinds given in advance; no law here counts new kinds.
+
+**Questions.**
+1. Is a finite family's kept widening by name being fed from beyond the open-systems condition that open-ended evolution research already states, or does the count of configurations add anything?
+2. Is the multiplication of renewers under upkeep a known form of maintenance scaling in growth theory or microbial physiology?
+3. Under the second theorem's premises nothing keeps widening along passing of support, and keeping opening needs a beginning after every step. Is that a fair formal reading of "every cell from a cell", and what notion of novelty along descent would a comparison of two courses need?
+
+<a id="s-23"></a>
+### S-23 The root's laws as the mathematics of simulation and lumping
+
+**Meaning.** (root) For a relation `R` and a class `E`, *constancy* says that whatever one member becomes, a member alike to it becomes something alike; the *core* is the greatest symmetric relation inside `E` constant under `R` (`«根»`). Quote [theories/becoming/chapters/01-ROOT.md]: "So the core is the greatest matching relation within the class, and it always exists." Quote [theories/becoming/chapters/01-ROOT.md]: "For a class this is bisimulation equivalence, with the lumpability of Markov chains and computational closure as analogues not proved here." The record's credit: Quote [theories/becoming/results/records/continuation-relative-to-a-class.md]: "the closure law is the relational analogue of lumpability (Kemeny and Snell 1960) and of computational closure (Rosas et al. 2024), a correspondence not proved here." Beginning, abiding and ending are read off the two-way core (`«位根»`). Since 31 October 2026 the core is also set against going alike, the relational form of a lumping: where the step's successor is fixed, the core of a class is a class inside it that the step goes alike across, and with every occurrence having a successor it is the coarsest such class (`«定后遍后则核为其内最粗同行之类»`); off a fixed successor it need not go alike (`«后不定则核可不同行»`).
+
+**Standing and use.** Theorems (root). A search's second round: Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md]: "Every root law holds in every model, so it forbids no observation." Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-2-ROOT.md]: "So the core's laws are bisimulation and partition refinement". The logic dossier treats the core and closure ([L-06](LOGIC.md#l-06), [L-07](LOGIC.md#l-07)), crediting Park (1981), Milner (1989) and Paige and Tarjan (1987).
+
+**Known weaknesses.**
+- Quote [_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-2-ROOT.md]: "A concurrency theorist given the identification above would foresee each one."
+- [this dossier, AI] The laws are relational. Lumpability of Markov chains (Kemeny and Snell 1960) needs a probabilistic notion, which the chapter calls an analogue, not proved; its exact counterpart is probabilistic bisimulation, as the logic dossier says: Quote [theories/becoming/review/LOGIC.md]: "Lumpability (Kemeny and Snell 1960; as probabilistic bisimulation, Larsen and Skou 1991) asks equal transition-probability totals from a block's members into each block, which nothing here expresses".
+
+**Questions.**
+1. Is the core a useful notion of the level at which a pattern lasts, compared with lumpability or the causal states of computational mechanics (Crutchfield and Young 1989)?
+2. Would a probabilistic version be needed before the root says anything about stochastic systems?
+
+---
+
+## Response form
+
+For each item give one verdict: **accept** (the item is correctly described, credited and argued at its strength), **accept with changes** (say which), **reject** (say why), or **cannot judge**. Comments may answer the numbered questions by number.
+
+| Item | Verdict | Comment |
+|---|---|---|
+| [S-01](#s-01) The verdict: restated or near-definitional | | |
+| [S-02](#s-02) Third parts: farther than a few frameworks, not than the sciences together | | |
+| [S-03](#s-03) Strength as content: the theses and the unifications | | |
+| [S-04](#s-04) Balance and the least loss, read from thermodynamics | | |
+| [S-05](#s-05) Recurrence, merges and Landauer's count | | |
+| [S-06](#s-06) Rest needs a least loss; continuing change is fed from beyond | | |
+| [S-07](#s-07) The census and the classical laws in counts | | |
+| [S-08](#s-08) What bounds offspring numbers: Price and Fisher joined to the flow | | |
+| [S-09](#s-09) The pace of selection within what flows in | | |
+| [S-10](#s-10) Loops and regulation | | |
+| [S-11](#s-11) Joint excess under a gated renewal | | |
+| [S-12](#s-12) The margin of a regime | | |
+| [S-13](#s-13) The optimum laws for a renewable resource | | |
+| [S-14](#s-14) T1 and its tests | | |
+| [S-15](#s-15) T2 and its tests | | |
+| [S-16](#s-16) T6: a break seen coming | | |
+| [S-17](#s-17) The free-energy principle as a case | | |
+| [S-18](#s-18) Conditioning by restriction and the exit from a margin | | |
+| [S-19](#s-19) Orders with a set point | | |
+| [S-20](#s-20) Selection through couplings across fields | | |
+| [S-21](#s-21) Eventual widening | | |
+| [S-22](#s-22) What keeping widening needs | | |
+| [S-23](#s-23) The root's laws as the mathematics of simulation and lumping | | |
+
+**General.** What would a scientist in your field add or object to, beyond the items? Is any known result restated without credit? Which framework of your field would a containment have to forbid something of before you counted it as reaching farther?
+
+**Returning the form.** Fill in the table (a copy of this file, a printout or a list by item number all serve), add any longer comments, and return it to whoever sent you the packet. Say whether your comments may be quoted, and under what description of your field.
+
+<a id="how-this-dossier-was-made"></a>
+## How this dossier was made
+
+Everything in the theory was made with AI: the Lean proofs, the chapters, the readings, the tests and this dossier. No human has reviewed any of it.
+- A script copied the Lean statements from the pure core ([`lean_statements.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/lean_statements.py)), and a second compared every block with its source, whitespace ignored ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/README.md#lean)); the periphery's laws (S-04, S-16, S-17) are named, not copied. The packet's script checks every quotation against the file it names and every backticked Lean name against the core and the periphery's `lean/physics` and `lean/warning` ([`check_dossiers.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py)).
+- The prose is AI-written and may be wrong. An independent AI reader reviewed it in two passes, every finding taken, and read its revision of 2 November 2026 ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/README.md#review)). On 3 November 2026 the whole was read against what had changed since 27 October, and another independent AI reader checked the change and the other flagged items against the chapters and the Lean; its fourteen findings were checked against the sources and taken ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/README.md#the-re-sync-of-3-november-2026)). At the freeze the same day it joined the first edition: it moved into the review folder, its links re-pointed, and its hour, whose seven items ran past an hour at 100 words a minute, became [S-02](#s-02) and the reader's field's items, a path that for ecology, the longest field, runs to 65 minutes at that rate, past the hour by the lines on T2 that follow; S-15 and the front's T2 row took T2's sentence on the life cycle, landed before the freeze, on what UE31's frozen test expects in the flour beetle, and the test's run, landed just before the freeze, which decided nothing: S-15's bullet on the beetle now ends with the result in 02's words, in place of the bullet that landing added. An independent AI reader then read the whole freeze, this joining included; its findings on the joining were checked against the sources and taken: the cover's row and the covering letter now ask what this dossier asks, the letter's table names this response form, the repository's map and chapter 8 now list this dossier, and the kit no longer says it is not offered. Another AI reader, read-only, checked S-15's and the front's new lines on T2 against 02, 08 and UE31's design; its findings were checked against them and taken: the clause expected to fail is named, not hidden by an omission, what would remain and why a culture off the *Refuted by* list counts are quoted, and 08 §9's reading is given; its two findings on the homes went to T2's owner, who took both before landing: the sign's condition, and MQ6's constant dilution outside the settings T2's *Refuted by* names rather than outside those that could refute it. S-15 follows both, and its own reading of that run now rests on what the run measured. A second AI reader, read-only, read the lines again after T2's owner revised the homes, and then the fixes; its findings were checked against the homes and taken: the beetle bullet gives the design's sentence on the field's state before 02's, so that 02's "Their" follows the three numbers, and quotes the design's numbers and condition on the sign, its terms glossed; the front's row follows 08's, with the lag where the life cycle puts it; and the dossier's reading of MQ6 names the tension it found between T2's second forbidden item and the law's regime's-step end, asked as question 4. Its two points on the homes, that tension and the sign's dropped condition, went to T2's owner; the condition is in 02 since UE31's run landed. The verdicts against prior work quoted here come from AI reviews against the literature an AI knew; they are what a reader is asked to check.
+- Under **Known weaknesses**, a bullet quoting a chapter, a record, a study or a test's account reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reader to confirm or reject.
+- Works cited outside quotations were checked against a publication record ([the kit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/README.md#references)). Works named inside a quotation are the quoted text's citations.

@@ -59,7 +59,7 @@ Equal weights and improper linear models (Einhorn and Hogarth 1975; Dawes 1979; 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.
+- **formal-reuse**: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.
   - Output: A course and its weighted count over a finite listing.
   - Input: Courses compared by what each admits beyond the other.
   - Preserved conditions: Finite listing, two-valued admission. [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)

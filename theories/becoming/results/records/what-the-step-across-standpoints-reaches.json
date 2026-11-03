@@ -250,7 +250,7 @@
       }
     },
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
         "en": "The same section's order: once scope is fixed, C is what every positive weighting ranks higher.",
         "zh": "同一节中的序：范围一旦确定，C 即每个正的加权都排得更高者。"

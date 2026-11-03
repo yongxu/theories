@@ -51,7 +51,7 @@ Discounting and time-bounded horizons in welfare evaluation.
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Its bounded_rival is the case of a region of standpoints and formations.
+- **formal-reuse**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Its bounded_rival is the case of a region of standpoints and formations.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries daqu-ai-shang-shi-hou-shi).
 
 **Used by:** [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md)

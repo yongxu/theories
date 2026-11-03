@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-27T05:09:26+00:00",
   "statement": {
-    "en": "Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only with a lag does it rank a range that keeps widening above one wider now that starts a course, a verdict C leaves open. On a branching witness realized and reachable widening rank a pair oppositely.",
-    "zh": "覆盖即逐偏移比较进程保持可达者，它蕴含当下之包含，故仅带滞后时才把持续扩大的范围排在起进程且当下更宽者之上，此判定 C 不定。在一分支见证上，实现之扩大与可达之扩大对一对排序相反。"
+    "en": "Covering, comparing what courses keep reachable offset by offset, implies inclusion now, so only the lagged order puts a range that keeps widening above one wider now that starts a course, a verdict C leaves open. On a branching witness realized and reachable widening relate a pair oppositely.",
+    "zh": "覆盖即逐偏移比较进程保持可达者，它蕴含当下之包含，故仅带滞后之序才把持续扩大的范围置于起进程且当下更宽者之上，此判定 C 不定。在一分支见证上，实现之扩大与可达之扩大于一对进程方向相反。"
   },
   "laws": [
     {
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "en": "Covering implies inclusion now: a configuration covering one that starts a course admits now all it admits now; the converse fails (WiderNow), and one starting no course is covered by every configuration. So where s' starts a course and admits now what s does not, widening what can be reached does not rank s above s', nor, the realized courses starting at their configurations, does the lexical order.",
-      "zh": "覆盖蕴含当下之包含：覆盖一起进程之构型者，当下纳后者当下所纳之一切；当下之包含不给出覆盖（WiderNow 上），不起进程之构型为每一构型所覆盖。故 s' 起进程且当下纳 s 所不纳时，可达之扩大不把 s 排在 s' 之上；实现之进程起于其构型时，字典序亦然。",
+      "en": "Covering implies inclusion now: a configuration covering one that starts a course admits now all it admits now; the converse fails (WiderNow), and one starting no course is covered by every configuration. So where s' starts a course and admits now what s does not, s does not widen what can be reached over s', nor, the realized courses starting at their configurations, is s above s' in the lexical order.",
+      "zh": "覆盖蕴含当下之包含：覆盖一起进程之构型者，当下纳后者当下所纳之一切；当下之包含不给出覆盖（WiderNow 上），不起进程之构型为每一构型所覆盖。故 s' 起进程且当下纳 s 所不纳时，s 不扩大可达者于 s' 之上；实现之进程起于其构型时，于字典序中 s 亦不在 s' 之上。",
       "declarations": [
         "Becoming.Reaching.Covers.now",
         "Becoming.Reaching.not_widens_of_wider_now",
@@ -85,8 +85,8 @@
       ]
     },
     {
-      "en": "Covering with a lag: every course from the other is included d offsets later by a course from it, UE9's inclusion with a lag read on courses; lag 0 is covering and lags add. Widening with a lag is covering with some lag and covered back with none; joined to widening what can be reached as UE9 joins its orders, it is a strict partial order ranking no configuration above one covering it, so never reversing widening.",
-      "zh": "带滞后之覆盖：后者出发之每一进程皆于 d 个偏移之后为前者出发之某进程所包含，即 UE9 之带滞后包含读于进程；滞后 0 即覆盖，滞后相加。带滞后之扩大即以某滞后覆盖而不被反向覆盖；如 UE9 合其序那样并入可达之扩大，得一严格偏序，从不把构型排在覆盖它者之上，故从不逆转扩大。",
+      "en": "Covering with a lag: every course from the other is included d offsets later by a course from it, UE9's inclusion with a lag read on courses; lag 0 is covering and lags add. Widening with a lag is covering with some lag and covered back with none; joined to widening what can be reached as UE9 joins its orders, it is a strict partial order putting no configuration above one covering it, so never reversing widening.",
+      "zh": "带滞后之覆盖：后者出发之每一进程皆于 d 个偏移之后为前者出发之某进程所包含，即 UE9 之带滞后包含读于进程；滞后 0 即覆盖，滞后相加。带滞后之扩大即以某滞后覆盖而不被反向覆盖；如 UE9 合其序那样并入可达之扩大，得一严格偏序，从不把构型置于覆盖它者之上，故从不逆转扩大。",
       "declarations": [
         "Becoming.Reaching.CoversLater",
         "Becoming.Reaching.CoversLater.zero",
@@ -100,8 +100,8 @@
       ]
     },
     {
-      "en": "On a determined process covering with lag d is inclusion with lag d of the two courses, and the lagged order is the strict part of their range inclusion joined to the strict part of their inclusion with some lag. Along a course widening with a lag never ranks a configuration above its predecessor, so the lagged order ranks a successor above it exactly where same-offset widening does.",
-      "zh": "决定性过程上，滞后 d 之覆盖即两进程滞后 d 之包含，滞后之序即其范围包含之严格部分并入其某滞后包含之严格部分。沿一进程，带滞后之扩大从不把构型排在其前驱之上，故滞后之序把后继排在前驱之上，恰在同偏移之扩大如此之处。",
+      "en": "On a determined process covering with lag d is inclusion with lag d of the two courses, and the lagged order is the strict part of their range inclusion joined to the strict part of their inclusion with some lag. Along a course widening with a lag never puts a configuration above its predecessor, so the lagged order puts a successor above it exactly where same-offset widening does.",
+      "zh": "决定性过程上，滞后 d 之覆盖即两进程滞后 d 之包含，滞后之序即其范围包含之严格部分并入其某滞后包含之严格部分。沿一进程，带滞后之扩大从不把构型置于其前驱之上，故滞后之序把后继置于前驱之上，恰在同偏移之扩大如此之处。",
       "declarations": [
         "Becoming.Reaching.coversLater_iff_of_unique",
         "Becoming.Reaching.widensOrLater_iff_of_unique",
@@ -110,8 +110,8 @@
       ]
     },
     {
-      "en": "Witness WiderNow, a determined law: none stays, admitting formations 0 and 1; some n climbs, admitting those up to n. What the climb from some 0 admits keeps widening, none admits now what it does not, and each course exceeds the other; same-offset widening and the lexical order are silent both ways, and the lagged order ranks the climb above none and not conversely.",
-      "zh": "见证 WiderNow，决定性律：none 停留，纳构成 0 与 1；some n 攀升，纳至 n 者。自 some 0 之攀升所纳持续扩大，none 当下纳其所不纳，二进程互相超出；同偏移之扩大与字典序两向皆默，滞后之序把攀升排在 none 之上而非反之。",
+      "en": "Witness WiderNow, a determined law: none stays, admitting formations 0 and 1; some n climbs, admitting those up to n. What the climb from some 0 admits keeps widening, none admits now what it does not, and each course exceeds the other; same-offset widening and the lexical order are silent both ways, and the lagged order puts the climb above none and not conversely.",
+      "zh": "见证 WiderNow，决定性律：none 停留，纳构成 0 与 1；some n 攀升，纳至 n 者。自 some 0 之攀升所纳持续扩大，none 当下纳其所不纳，二进程互相超出；同偏移之扩大与字典序两向皆默，滞后之序把攀升置于 none 之上而非反之。",
       "declarations": [
         "Becoming.WiderNow.next",
         "Becoming.WiderNow.process",
@@ -123,8 +123,8 @@
       ]
     },
     {
-      "en": "On WiderNow's process, with none admitting one side's first formation and every formation of the other, each course exceeds the other and the lagged order is silent both ways; with none admitting every formation, it ranks none above the climb, as it must. Widening what can be reached and the lagged order satisfy C on the frame of reachable ranges and differ on WiderNow: the lag's verdict is a premise beyond C.",
-      "zh": "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，二进程互相超出而滞后之序两向皆默；none 纳每一构成时，它把 none 排在攀升之上，理当如此。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之前提。",
+      "en": "On WiderNow's process, with none admitting one side's first formation and every formation of the other, each course exceeds the other and the lagged order is silent both ways; with none admitting every formation, it puts none above the climb, as it must. Widening what can be reached and the lagged order satisfy C on the frame of reachable ranges and differ on WiderNow: the lag's verdict is a premise beyond C.",
+      "zh": "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，二进程互相超出而滞后之序两向皆默；none 纳每一构成时，它把 none 置于攀升之上，理当如此。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之前提。",
       "declarations": [
         "Becoming.WiderNow.TwoSided.adm",
         "Becoming.WiderNow.TwoSided.silent",
@@ -255,8 +255,8 @@
       ]
     },
     {
-      "en": "Realized and reachable widening rank a pair oppositely, on this witness: E's realized course widens k's, while k widens what can be reached over E through its course not realized; so no strict partial order contains both, nor satisfies C on both the realized courses and the reachable ranges. On a determined process, with realized courses starting at their configurations, realized widening gives reachable widening.",
-      "zh": "于此见证上，实现之扩大与可达之扩大对一对排序相反：E 之实现进程扩大 k 者，而 k 经未实现之进程扩大可达者于 E 之上；故无严格偏序兼含二者，亦无一既于实现进程上又于可达范围上满足 C。决定性过程上，实现之进程起于其构型时，实现之扩大给出可达之扩大。",
+      "en": "Realized and reachable widening hold of a pair in opposite directions, on this witness: E's realized course widens k's, while k widens what can be reached over E through its course not realized; so no strict partial order contains both, nor satisfies C on both the realized courses and the reachable ranges. On a determined process, with realized courses starting at their configurations, realized widening gives reachable widening.",
+      "zh": "于此见证上，实现之扩大与可达之扩大于一对进程方向相反：E 之实现进程扩大 k 者，而 k 经未实现之进程扩大可达者于 E 之上；故无严格偏序兼含二者，亦无一既于实现进程上又于可达范围上满足 C。决定性过程上，实现之进程起于其构型时，实现之扩大给出可达之扩大。",
       "declarations": [
         "Becoming.KeptAlternative.disagree",
         "Becoming.KeptAlternative.no_order_contains_both",
@@ -264,8 +264,8 @@
       ]
     },
     {
-      "en": "The lexical order, realized widening or the same realized range and widening what can be reached, is a strict partial order containing realized widening and never reversing it. It lies inside the two-tier lexical order read on realized claims, then reachable ranges, which gives it back where inclusions are decided. It ranks k above single, with the same realized ranges, which realized widening leaves unranked.",
-      "zh": "字典序：实现之扩大，或实现范围相同而扩大可达者，为包含实现之扩大且从不逆转之的严格偏序。它位于本包之二层字典序之内（先读实现之断言，再读可达范围）；包含可判定时二层之序给回它。它把 k 排在 single 之上，二者实现范围相同，实现之扩大不排之。",
+      "en": "The lexical order, realized widening or the same realized range and widening what can be reached, is a strict partial order containing realized widening and never reversing it. It lies inside the two-tier lexical order read on realized claims, then reachable ranges, which gives it back where inclusions are decided. It puts k above single, with the same realized ranges, a pair realized widening leaves undecided.",
+      "zh": "字典序：实现之扩大，或实现范围相同而扩大可达者，为包含实现之扩大且从不逆转之的严格偏序。它位于本包之二层字典序之内（先读实现之断言，再读可达范围）；包含可判定时二层之序给回它。它把 k 置于 single 之上，二者实现范围相同，实现之扩大于此不定。",
       "declarations": [
         "Becoming.Reaching.Lexical",
         "Becoming.Reaching.Lexical.irrefl",
@@ -412,15 +412,15 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
       "detail": {
-        "en": "With other admissions on the same process, each course exceeding the other, the lagged order is silent both ways (WiderNow.TwoSided.silent); where the configuration wider now also widens what can be reached over the climb, it ranks that configuration above (WiderNow.Full.not_silent).",
-        "zh": "同一过程上换一种所纳，二进程互相超出，滞后之序两向皆默（WiderNow.TwoSided.silent）；当下更宽之构型亦扩大可达者于攀升之上时，它把该构型排在上（WiderNow.Full.not_silent）。"
+        "en": "With other admissions on the same process, each course exceeding the other, the lagged order is silent both ways (WiderNow.TwoSided.silent); where the configuration wider now also widens what can be reached over the climb, it puts that configuration above (WiderNow.Full.not_silent).",
+        "zh": "同一过程上换一种所纳，二进程互相超出，滞后之序两向皆默（WiderNow.TwoSided.silent）；当下更宽之构型亦扩大可达者于攀升之上时，它把该构型置于其上（WiderNow.Full.not_silent）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
       "detail": {
-        "en": "Where the configuration wider now starts no course, widening what can be reached ranks a climb that keeps widening above it (EndsNow.keeps_widening_above_wider_now).",
-        "zh": "当下更宽之构型不起进程时，可达之扩大把持续扩大之攀升排在其上（EndsNow.keeps_widening_above_wider_now）。"
+        "en": "Where the configuration wider now starts no course, a climb that keeps widening widens what can be reached over it (EndsNow.keeps_widening_above_wider_now).",
+        "zh": "当下更宽之构型不起进程时，持续扩大之攀升扩大可达者于其上（EndsNow.keeps_widening_above_wider_now）。"
       }
     },
     {
@@ -604,8 +604,8 @@
     {
       "id": "eventual-widening",
       "detail": {
-        "en": "Eventual widening's second order: covering implies inclusion now, so what a course keeps reachable ranks a range that keeps widening above one wider now that starts a course only with a lag, and not every such pair.",
-        "zh": "最终扩大之二阶：覆盖蕴含当下之包含，故进程保持可达者仅带滞后时把持续扩大之范围排在起进程且当下更宽者之上，且非每一此种对。"
+        "en": "Eventual widening's second order: covering implies inclusion now, so what a course keeps reachable puts a range that keeps widening above one wider now that starts a course only read with a lag, and not every such pair.",
+        "zh": "最终扩大之二阶：覆盖蕴含当下之包含，故进程保持可达者仅带滞后读时把持续扩大之范围置于起进程且当下更宽者之上，且非每一此种对。"
       }
     },
     {
@@ -616,7 +616,7 @@
       }
     },
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
         "en": "C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.",
         "zh": "读作扩大的 C；可达之扩大即 C 于可达范围之框上之延展，此处无一序为 C 所采。"
@@ -946,7 +946,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "87ed67abeca8b83446b82a6941dfb2cd042c5ae36022e9c7522e403ee1c0be60"
+      "sha256": "885bf0202402ef3f56c21a317e444bd5e7535d669226607768c789ebc4e3c0c6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
@@ -980,6 +980,10 @@
     {
       "en": "28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE13（研究第 431 节）：与 what-can-be-born-next 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): the statement says that only the lagged order puts a range that keeps widening above one wider now that starts a course, and that realized and reachable widening relate a pair oppositely, not that they rank it; laws 3, 6 to 9, 18 and 19, two counterexamples and a related line say likewise what widening what can be reached, widening with a lag, the lagged order and the lexical order do with a pair, as its home section in 07 §2 does. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：陈述改说仅带滞后之序才把持续扩大之范围置于起进程且当下更宽者之上，且实现之扩大与可达之扩大于一对进程方向相反，而非对之排序；律 3、6 至 9、18 与 19，两个反例与一条相关说明亦改说可达之扩大、带滞后之扩大、滞后之序与字典序于一对进程何为，与 07 §2 的本节相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提；无前提而定义之序（滞后之序、尾序或字典序等）把一进程置于另一进程之上，唯作为排序读时（于 C 之位或作为前提）才排序。主张不变。"
     }
   ]
 }

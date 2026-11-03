@@ -70,7 +70,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
   - Output: A balanced web in which the clearer draws down the dweller's habitat and continues.
   - Input: The counterexample read by what each part has drawn from the habitat.
   - Preserved conditions: None beyond the witness. [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean)
-- **formal-reuse**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Reuses Clearing.clearer_loses_dweller.
+- **formal-reuse**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Reuses Clearing.clearer_loses_dweller.
   - Output: Under the continuation condition the clearer's part loses the dweller from every standpoint.
   - Input: The loss of the greatest part that does not depend on what it draws down.
   - Preserved conditions: The continuation condition, as a hypothesis. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)

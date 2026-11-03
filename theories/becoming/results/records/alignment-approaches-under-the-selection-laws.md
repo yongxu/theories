@@ -19,7 +19,7 @@
 3. With only the clearer a standpoint its part retains what has significance at the centers, while under the continuation condition it loses the dweller, and a selection reading the clearer's couplings leaves the two worlds alike: the incompleteness is exactly the scope's. (`Becoming.Clearing.centers_retain_yet_loses`, `Becoming.Clearing.reading_clearer_unselected`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 4. For any class of orders from the positive weightings up to every order increasing in admission, one course widens another exactly when every order of the class ranks it higher. (`Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.increasing_prior`)
-   - *Shared laws, by Lean dependency:* order; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -95,7 +95,7 @@ Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitut
 - related, not a proved adapter: [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md). A true risk bound permits an actual failure.
 - related, not a proved adapter: [own-widening-within-the-margin](own-widening-within-the-margin.md). Where impact measures' boundary lies: others' margins.
 - related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). The conditional direction, on the continuation condition and C; this assessment uses the condition for scope and the order law for what C asks, not the direction.
-- related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). What C asks: the order every order increasing in admission shares.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). What C asks: the order every order increasing in admission shares.
 - related, not a proved adapter: [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md). The narrower scope against the condition, where the incompleteness of preference-coupled approaches lies.
 
 **Used by:** [coupling-closures-of-training-pipelines](coupling-closures-of-training-pipelines.md) (application)

@@ -1,6 +1,6 @@
 # UE8 review, first pass: the sciences dossier
 
-AI-authored, 26 October 2026. This is the first of two review passes, made by an independent AI reader who had no part in writing the dossier. It reviews [SCIENCES.md](SCIENCES.md) as it stood at 04:06 on 26 October (634 lines, untracked), with the kit's [README.md](README.md) and [PLAN.md](PLAN.md). This file is the only one created; nothing else was changed, staged or committed.
+AI-authored, 26 October 2026. This is the first of two review passes, made by an independent AI reader who had no part in writing the dossier. It reviews [SCIENCES.md](../../../../../../theories/becoming/review/SCIENCES.md) as it stood at 04:06 on 26 October (634 lines, untracked), with the kit's [README.md](README.md) and [PLAN.md](PLAN.md). This file is the only one created; nothing else was changed, staged or committed.
 
 ## How I checked
 
@@ -523,7 +523,7 @@ The second pass should read in full:
 
 ## Second pass
 
-AI-authored, 26 October 2026, by the same independent reader. It rechecks [SCIENCES.md](SCIENCES.md) as revised against the first pass (05:03, 659 lines) and the kit's [README.md](README.md) as revised (05:05, 189 lines), comparing both with the reviewed versions kept outside the repository. Line numbers below are of the revised files. Nothing but this section was written; nothing was staged or committed.
+AI-authored, 26 October 2026, by the same independent reader. It rechecks [SCIENCES.md](../../../../../../theories/becoming/review/SCIENCES.md) as revised against the first pass (05:03, 659 lines) and the kit's [README.md](README.md) as revised (05:05, 189 lines), comparing both with the reviewed versions kept outside the repository. Line numbers below are of the revised files. Nothing but this section was written; nothing was staged or committed.
 
 ### How I checked
 

@@ -142,7 +142,7 @@
   ],
   "dependencies": [
     {
-      "id": "widening-as-what-every-weighting-ranks",
+      "id": "widening-as-what-every-positive-weighting-ranks",
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses the weighted count and the comparisons on listed items (Weighting.weighed, IncludesOn, ExceedsOn, WidensOn, total_lt); the widening law there is now this record's case.",

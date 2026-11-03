@@ -52,4 +52,6 @@ As the other dossiers are:
 
 It is drafted here, as `SCIENCES.md`, not in the packet. A sixth dossier changes the scope of the packet Ren chose, as the fifth did ([AJ4's record](../../../../../../sources/15-codex-theory-conversations/2026-10-25-alignment-dossier.md)), so whether it joins the packet is his choice. It is listed under Decisions pending Ren once it has passed review, and is not asked of him between items. If it joins, it moves to `theories/becoming/review/SCIENCES.md`, its links are rewritten for that place, and a row is added to the packet's cover (EN, ZH), which RP's owner holds. Sending the packet stays Ren's step.
 
+*3 November 2026.* Ren decided the licence and left the packet's other decisions to the work, which took the board's recommendation: the dossier joined the first edition at the freeze, moved to `theories/becoming/review/SCIENCES.md` by `research.py move`, its links re-pointed and the cover's rows added ([how the dossier was made](../../../../../../theories/becoming/review/SCIENCES.md#how-this-dossier-was-made)).
+
 No Lean, no new result.

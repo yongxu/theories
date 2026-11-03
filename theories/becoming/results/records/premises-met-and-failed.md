@@ -17,7 +17,7 @@
 3. On LiftModel's frame, from configuration 0, the move reaching 3 is lifted above the move reaching 1 by the larger configuration, and the move reaching 1 is not lifted above it. (`Becoming.LiftModel.met_and_failed`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. With equality of items decided, one course widens another on a listing exactly when a chain of widenings, each by one listed item alone, leads from the second up to the first. So an order transitive on courses is increasing in admission exactly when it ranks every widening by one item above what it widens. (`Becoming.Weighting.WidensByOne`, `Becoming.Weighting.reach_of_beyond`, `Becoming.Weighting.widensOn_iff_reach`, `Becoming.Weighting.increasing_iff_by_one`)
-   - *Shared laws, by Lean dependency:* order; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* widening; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

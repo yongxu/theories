@@ -81,7 +81,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
   - Input: What a standpoint's own presupposition forces, and the union over a family of relations.
   - Preserved conditions: None. [Boundaries.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean)
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). Clearing's clearer loses the dweller beyond its dependence; the narrower scope, with the clearer the only center, reads that loss as nothing, and the condition reads it.
-- related, not a proved adapter: [widening-as-what-every-weighting-ranks](widening-as-what-every-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The de se own-closure condition read on the root: the root's condition at the one of the relation (GS2).
 
 **Used by:** [self-concern-through-dependence](self-concern-through-dependence.md) · [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md)

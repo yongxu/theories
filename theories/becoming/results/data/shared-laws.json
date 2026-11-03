@@ -6,19 +6,19 @@
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "97e5fe8fe3f693e49fa734dee9a5322db5b3c673685520af4a79847054efbb44",
+  "theories/becoming/results/completion/COVERAGE.json": "7374867682589a4c810cbeae887a3e9d4b8f318fb18a1ad1ceb96e826de9447f",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "de649388b5b550b6cf49f5f284ea288ba5c1a7c821ad44359ae51acaa7298ac9",
   "tools/research/boundary_check.lean": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
-  "tools/research/shared_laws.py": "9fb0ea74d5f7cf982800c540a80ccc2ece55aaacba38d10b1c99a03153fee0b3"
+  "tools/research/shared_laws.py": "ececf1de83c43e52d0e4119afc3a2b9d6dd11a37dd4b19b0f85e1520ed5c1e6a"
  },
  "names": {
   "closure": "closure",
   "balance": "balance",
   "return": "finite runs",
   "lumping": "lumping",
-  "order": "order"
+  "order": "widening"
  },
  "anchors": {
   "closure": [
@@ -403,7 +403,7 @@
    "Becoming.Weighting.widens_iff_every_positive": [
     {
      "of": "Becoming.Weighting.widens_iff_every_positive",
-     "record": "widening-as-what-every-weighting-ranks",
+     "record": "widening-as-what-every-positive-weighting-ranks",
      "law": 10,
      "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
      "models": [
@@ -61543,6 +61543,77 @@
     "dependence": "grammar"
    }
   ],
+  "whole-and-regions-and-bounded-centers": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Web.Retains",
+     "Becoming.Web.Retains.of_fewer"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.bounded",
+     "Becoming.Web.AdmitsWithin",
+     "Becoming.Web.retains_bounded_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.Retains.within",
+     "Becoming.Web.AdmitsWithin.narrow"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Clearing.Formation",
+     "Becoming.Clearing.Place",
+     "Becoming.Clearing.flow",
+     "Becoming.Clearing.web",
+     "Becoming.Clearing.dependent",
+     "Becoming.Clearing.clearerPart",
+     "Becoming.Clearing.withheld",
+     "Becoming.Clearing.unsupported_with",
+     "Becoming.Clearing.admitted_all_without"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Clearing.alongDependence",
+     "Becoming.Clearing.dependenceRegion",
+     "Becoming.Web.Adds",
+     "Becoming.Clearing.centers_disagree"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Clearing.clearer_loses_dweller"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "whole-drawing-beyond-renewal-ends": [
    {
     "law": 1,
@@ -61632,77 +61703,6 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
-   }
-  ],
-  "whole-first-and-bounded-centers": [
-   {
-    "law": 1,
-    "declarations": [
-     "Becoming.Web.Retains",
-     "Becoming.Web.Retains.of_fewer"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 2,
-    "declarations": [
-     "Becoming.bounded",
-     "Becoming.Web.AdmitsWithin",
-     "Becoming.Web.retains_bounded_iff"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 3,
-    "declarations": [
-     "Becoming.Web.Retains.within",
-     "Becoming.Web.AdmitsWithin.narrow"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 4,
-    "declarations": [
-     "Becoming.Clearing.Formation",
-     "Becoming.Clearing.Place",
-     "Becoming.Clearing.flow",
-     "Becoming.Clearing.web",
-     "Becoming.Clearing.dependent",
-     "Becoming.Clearing.clearerPart",
-     "Becoming.Clearing.withheld",
-     "Becoming.Clearing.unsupported_with",
-     "Becoming.Clearing.admitted_all_without"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 5,
-    "declarations": [
-     "Becoming.Clearing.alongDependence",
-     "Becoming.Clearing.dependenceRegion",
-     "Becoming.Web.Adds",
-     "Becoming.Clearing.centers_disagree"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
-   },
-   {
-    "law": 6,
-    "declarations": [
-     "Becoming.Clearing.clearer_loses_dweller"
-    ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
    }
   ],
   "whole-law-of-counting": [
@@ -62277,7 +62277,7 @@
     "dependence": "no shared law"
    }
   ],
-  "widening-as-what-every-weighting-ranks": [
+  "widening-as-what-every-positive-weighting-ranks": [
    {
     "law": 1,
     "declarations": [
@@ -62327,7 +62327,7 @@
     "stated_at_model": [
      {
       "of": "Becoming.Weighting.widens_iff_every_positive",
-      "record": "widening-as-what-every-weighting-ranks",
+      "record": "widening-as-what-every-positive-weighting-ranks",
       "law": 10,
       "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
       "models": [
@@ -65849,7 +65849,7 @@
     "f5": "stated on its own carrier only",
     "at_model": [
      {
-      "record": "widening-as-what-every-weighting-ranks",
+      "record": "widening-as-what-every-positive-weighting-ranks",
       "law": 10,
       "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
       "models": [

@@ -76,7 +76,7 @@ Ren, 14 October 2026: “why do we need "World"? wasn't this about the whole and
   - Preserved conditions: The whole admissible. [Boundaries.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean)
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Advances its next step: whatever reads an unfolding is a reading in context, the readings are always one world, and World is the case where they glue; it does not show that every becoming is an unfolding in discrete steps.
 - related, not a proved adapter: [imbalance-as-relatum](imbalance-as-relatum.md). The rest's exchange is the difference between the standing's and the exchange's readings of change.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). A significance bounded by the self meets the same standard of invariance exactly where the region is everything.
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). A significance bounded by the self meets the same standard of invariance exactly where the region is everything.
 - related, not a proved adapter: [gluing-under-parity](gluing-under-parity.md). When readings glue into one, for parity constraints: exactly where no selection of contexts contradicts.
 
 <a id="sources--来源"></a>
