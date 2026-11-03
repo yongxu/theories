@@ -75,10 +75,7 @@ if not any(SL + "rises_iff_shared_sized" in law["declarations"] for law in d["la
 put_ref_decls(d, "SelectionLevels", sized["declarations"])
 rebind(d, "SelectionLevels")
 add_plain(d, receipt, "receipt"); add_plain(d, NOTE, "integration")
-st = d["statement"]
-if "groups of any sizes" not in st["en"]:
-    st["en"] += " In groups of any sizes the verdict goes through a reading of the group: its total, each member gaining q for every unit its group holds, so that with unequal sizes the whole's spread and the size-weighted spread of the means do not decide it; or its mean, what a unit gives divided among the members, so that they do."
-    st["zh"] += "各组大小任意时，判定经由组之一读数：其总量，每成员为其组所持之每单位得 q，则大小不等时整体离散与按大小加权之均值离散不决定之；或其均值，一单位所予均分于成员，则决定之。"
+# The statement (299 of 300 characters) keeps groups of m members; groups of any sizes are in the law and hypotheses.
 h = d["hypotheses"][0]
 assert "; groups of equal size;" in h["en"] and "；各组大小相等；" in h["zh"]
 h["en"] = h["en"].replace("; groups of equal size;", "; groups of equal size for the spread among groups, of any sizes, with a positive common multiple of the sizes, for a reading of the group;")
@@ -123,8 +120,8 @@ uneq = {
     "schema_version": 2, "id": UID,
     "title": lt("Groups of unequal size not decided by the spread among groups", "不等大之群，不由群间离散决定"),
     "kind": "theorem", "status": "recorded-checked", "family": "F01", "reviewed_at_utc": when,
-    "statement": lt("Where each member gains for every unit its group keeps, groups of unequal size with the same spread over the whole and the same size-weighted spread of their means can select for keeping or against it, so no form in those two spreads gives the verdict. Where what is given is divided among the members, the witness's two listings give one verdict, as the law through the means' spread reads for any listings with the same spreads and the same K, s and Q.",
-                    "每成员为其组所留之每单位而得时，整体离散与按大小加权之组均值离散皆同之不等大之群，其选择可向保留，亦可逆之，故无经此二离散之形可给判定。所予者均分于成员时，见证之二种列法得同一判定，经均值离散之律于离散皆同且 K、s、Q 皆同之任何列法亦如此读之。"),
+    "statement": lt("Where each member gains for every unit its group keeps, groups of unequal size with the same whole spread and size-weighted spread of their means can select for keeping or against it; where what is given is divided among the members, the witness's two listings give one verdict.",
+                    "每成员为其组所留之每单位而得时，整体离散与按大小加权之组均值离散皆同之不等大之群，其选择可向保留，亦可逆之；所予者均分于成员时，见证之二种列法得同一判定。"),
     "laws": witness_laws,
     "hypotheses": [lt("No axiom. Offspring numbers additive in own and groupmates' amounts, each unit kept giving two to every other member of its group at a cost of one to its keeper (K = 3, q = 2 to every member, its keeper included, nothing coming back to the keeper alone, s = 0), or, for the divided case, any returns kept and shared, the same in both listings, with what a unit gives its group divided among the members; one step, the groups listed as given with their sizes fixed over it; the spread among groups read by the groups' means weighted by size, with a positive common multiple of the sizes.",
                       "不加公理。后代数可加地依赖自身与组员之量：每留一单位，其组每一他成员得二，保留者净付一（K = 3，组每成员连保留者得 q = 2，无所独返于保留者，s = 0）；或于均分之情形，二种列法相同之任何自留与共享之回报，一单位所予其组者均分于成员。一步之内，组如所列而给，其大小于此步不变；组间离散以按大小加权之组均值读之，取诸大小之一正公倍数。")],
@@ -133,6 +130,8 @@ uneq = {
               "实有之组如何共享：成员为其组所持之每单位而得，或所予者之均分，皆为前提。"), "kind": "correspondence"},
         {**lt("That the verdict at unequal sizes is beyond any law: it goes through the covariance of a member's group total with its group's mean (selection-with-returns-to-groupmates).",
               "大小不等时之判定无律可循：其经由成员之组总量与其组均值之协方差（selection-with-returns-to-groupmates）。"), "kind": "non-implication"},
+        {**lt("That any two listings with the same spreads give one verdict where what is given is divided: proved for the witness's two; for others it is a reading of rises_iff_divided_sized, with the same K, s and Q = n q.",
+              "离散皆同之任何二种列法于所予均分时皆得同一判定：仅于见证之二者证之；于他者乃 rises_iff_divided_sized 之一读，须 K、s 与 Q = n q 皆同。"), "kind": "scope"},
         {**lt("That keeping is better where it is selected for: the counts are read, and ranking courses needs C.",
               "被选处保留更好：所读者为计数，排序进程须 C。"), "kind": "non-implication"},
     ],
