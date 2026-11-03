@@ -52,3 +52,11 @@ One AI reader other than the author read the restatements in 04, 02, A-10, the p
 16. 02's reading of the lever: at any sizes it is `s` with `q` times the covariance over the variance of shaping, against `c`; at equal sizes that is `m q ρ`.
 17. An unused dictionary in the records kit removed.
 18. The correspondence now says "of the two readings, which one holds", and names the total against per-capita benefit distinction as familiar, not news.
+
+## 8. Restatements read
+
+Changed, as now shown false where read without a size: three restatements gave the group law with no size, and the witness has groups of unequal size with the same spreads and either verdict. Each now says "of equal size", the hypothesis of the law it states: [COLLECTIVE-DIRECTION](../../../../../../theories/becoming/COLLECTIVE-DIRECTION.md)'s loops paragraph, [the meta-attractor README](../../../../../../theories/meta-attractor/README.md)'s second-order note (both languages), and [02 §9](../../../../../../theories/becoming/chapters/02-MAP.md)'s summary of the second order. 02's other mentions name the law with its equal size or point to it.
+
+Only less exact, for the board's batched section:
+
+- The alignment dossier's ten-minute front, item 4: "Listed in groups of equal size whose shapers give the group's shared part … Hamilton's rule holds with s added, assortment as relatedness" stays true of the equal-size law it states. It does not say that at unequal sizes the verdict goes through the covariance of a member's group's shapers with its group's share of them, not the assortment ([02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups)). Proposed for the next edition, if the front's budget allows: "; at unequal sizes through a covariance, not the assortment ([A-10](#a-10))".
