@@ -1,6 +1,6 @@
 # The covering letter: a draft
 
-*An AI draft, 2 November 2026, for Ren's decision. Nothing has been sent, and no sentence here is his. About twenty minutes to read; the letter to a reader alone, five to six. An independent AI reader read it and its findings were taken after checking; no person has reviewed it. [Square brackets] are his to fill or change, and [the board's Decisions](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren) gives a recommendation for each choice. The [Chinese edition](COVERING-LETTER-DRAFT.zh.md) holds the same text.*
+*An AI draft, 2 November 2026, brought on 3 November to the terms decided that day: Ren decided that the work has no licence, by choice, as [COMMONS.md](../../../../../../COMMONS.md) now says, and left the packet's other decisions to the work, which took [the board's recommendations](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren). Nothing has been sent, and no sentence here is his. About twenty minutes to read; the letter to a reader alone, five to six. An independent AI reader read it and its findings were taken after checking; no person has reviewed it. [Square brackets] are his to fill: his name and an address he reads, the date, his own sentences, and anything on payment, which stays his. The [Chinese edition](COVERING-LETTER-DRAFT.zh.md) holds the same text.*
 
 The packet tells its readers that a covering letter says who sends it, why, by when a reply would help, on what terms a reply is kept, and how to reach the repository. There was no such letter. [What each promise asks](#what-the-letter-has-to-carry) is listed at the end.
 
@@ -21,9 +21,9 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 >
 > Attached, as PDFs of a fixed version of the work ([D], [its date]): the dossier for your field, the packet's cover, the theory on one page, and the overview. The dossier is what you are asked to answer. It opens by naming what to read if you have one hour, the items only a reader of your field can judge. Reading all of it takes [the cover's time], and a reply on every item [the cover's time]. Any one item can be answered alone, so a partial reply is a real help, and a plain no is fine. [Whether the time is paid; if it is not, say so.]
 >
-> To reply, answer this email. The dossier ends with a form, and a numbered list is enough. A reply by [date] would help; later is still welcome. I will write to you afterwards with what changed because of it.
+> To reply, answer this email. The dossier ends with a form, and a numbered list is enough. A reply by [the date eight weeks after sending] would help; later is still welcome. I will write to you afterwards with what changed because of it.
 >
-> **What happens to your reply.** The work is kept in a public repository. AI systems, run as commercial services, revise it and read every reply, kept or not. If you would rather yours were not read that way, tell me first: I will read it myself, and only my own note of its findings will reach them. Every finding is answered in the place it concerns, so what you find may go into a text anyone may copy and build on; your own words stay yours to share as you choose. No reply is reported as endorsing the work. Whether you are named or quoted is your choice. Please say which you prefer:
+> **What happens to your reply.** The work is kept in a public repository. AI systems, run as commercial services, revise it and read every reply, kept or not. If you would rather yours were not read that way, tell me first: I will read it myself, and only my own note of its findings will reach them. Every finding is answered in the place it concerns, so what you find may go into the work. The work belongs to the commons and has no licence, by choice: what its writers wrote needs no one's permission, for any purpose, since they reserve no right; others' material in it keeps its own terms, and your own words stay yours to share as you choose. No reply is reported as endorsing the work. Whether you are named or quoted is your choice. Please say which you prefer:
 >
 > - your whole reply is kept in the repository under your name, and may be quoted;
 > - the same, under a description of your field that you choose, without your name;
@@ -40,14 +40,14 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 > [name]
 > [an address you read, and any second way to reach you]
 
-**The paragraph for each reader.** Each asks what [the cover's table](../../../../../../theories/becoming/review/README.md#what-is-asked) asks; the sciences' asks what that dossier's opening asks.
+**The paragraph for each reader.** Each asks what [the cover's table](../../../../../../theories/becoming/review/README.md#what-is-asked) asks.
 
 - **Classical texts.** The readings of the 墨经, 荀子·正名, 系辞, the 老子 with 王弼's commentary, 庄子 and the Changes, and of passages in nine groups, were made by AI, and no scholar has looked at them. I would like to know whether they are defensible, and whether the classes and correspondences fit. There is also a re-coding of sampled sentences, done blind, before reading anything else attached. If you would like to do it, as well or instead, tell me first and I will send it on its own.
 - **Buddhist thought.** The readings of the 中论, 成唯识论, 大乘起信论, 金师子章, 华严五教章, the 阿含 and the 坛经, and of 无明 and the four marks, were made by AI, and no scholar has looked at them. I would like to know whether they respect the texts' own arguments. No one specialist covers all of these, so please answer only what is yours. There is also a re-coding of sampled sentences, done blind, before reading anything else attached. If you would like to do it, as well or instead, tell me first and I will send it on its own.
 - **Logic.** I would like to know whether the grammar's theorems, the calibrations and the claims about representation are stated at their exact strength, and what is restated without credit.
 - **Philosophy.** I would like to know whether the ethics' premises are located and stated at their strength, with whose losses count kept apart from which outcome is better, and whether known work is credited. There is also an open question: when you act for your own future, is the self whose going-on you take to matter your organism, which ends at death, or a larger pattern your actions keep going?
 - **Alignment.** I would like to know whether the laws of what a selection, such as a training run, reaches, of capture and of selection for control over the selection itself are stated at their exact strength and credited; whether the readings for alignment follow from them; and whether the tests on trained systems discriminate.
-- **The sciences, if that dossier joins.** The theory claims to contain frameworks of your field as cases. By its own verdict every central result is restated or near-definitional, and the few things it forbids beyond a framework are each known in a neighbouring field. I would like to know whether each containment is correctly stated, whether it is credited where it restates known work and put at its right strength, whether its frozen tests discriminate, and what is missing.
+- **The sciences.** The theory claims to contain frameworks of your field as cases. By its own verdict every central result is restated or near-definitional, and the few things it forbids beyond a framework are each known in a neighbouring field. I would like to know whether each containment is correctly stated, its premises set out and the Lean saying what the item says, whether it is credited where it restates known work and put at its right strength, whether its frozen tests discriminate, and what is missing.
 
 <a id="to-a-coder"></a>
 ## To a coder
@@ -64,9 +64,9 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 >
 > The theory's texts and the AI's classes are in a public repository. So I will send no link until your sheet is back, and I ask you not to look for it until then. The codebook lists what to leave unread, and asks you not to use AI tools for the classification and not to talk with other coders before all the sheets are back. Once your sheet is back I will send the link, and you can read everything.
 >
-> To return it, answer this email with the filled sheet, the one line on your background that the codebook asks for, and roughly how long it took. By [date] would help.
+> To return it, answer this email with the filled sheet, the one line on your background that the codebook asks for, and roughly how long it took. By [the date eight weeks after sending] would help; later is still welcome.
 >
-> **What happens to your sheet.** The repository is public, and AI systems, run as commercial services, read what it holds when they revise the work. Your classes and the figures computed from them go into it, so that anyone can recompute the agreement; your notes and your line on your background go in too, unless you say not. Whether you are named is your choice: the code you give your file, as the codebook says, a description you choose, or your name. If you say nothing it will be the code. What goes in stays in the repository's history, so choose when you return the sheet. I will write to you afterwards with the figures and with what changed because of them.
+> **What happens to your sheet.** The repository is public, and AI systems, run as commercial services, read what it holds when they revise the work. Your classes and the figures computed from them go into it under the code you give your file, as the codebook says, and not under your name, so that anyone can recompute the agreement; your notes and your line on your background go in under the same code, unless you say not. What goes in stays in the repository's history. I will write to you afterwards with the figures and with what changed because of them.
 >
 > [If the letter goes largely as drafted: This letter too was drafted with AI.]
 >
@@ -84,7 +84,7 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 | Who sends it, how to reach the sender, when to return it | [the classical dossier](../../../../../../theories/becoming/review/CLASSICAL-TEXTS.md), its opening | the signature; the reply paragraph |
 | Where to return it, by when, how a reply is kept, whether it is signed | the classical dossier, its response form | the reply paragraph; what happens to your reply |
 | The terms for being named or quoted | the cover, *How to respond*; [the logic dossier](../../../../../../theories/becoming/review/LOGIC.md), its response form | what happens to your reply |
-| Whether comments may be quoted, and under what description of the reader's field | [the philosophy](../../../../../../theories/becoming/review/PHILOSOPHY.md) and [alignment](../../../../../../theories/becoming/review/ALIGNMENT.md) response forms | the three choices |
+| Whether comments may be quoted, and under what description of the reader's field | [the philosophy](../../../../../../theories/becoming/review/PHILOSOPHY.md), [alignment](../../../../../../theories/becoming/review/ALIGNMENT.md) and [sciences](../../../../../../theories/becoming/review/SCIENCES.md) response forms | the three choices |
 | How to reach the repository | the edition's stamp, on every part but the codebook | the paragraph on links |
 | A named sender, the purpose, why this recipient, a plain statement that replies are public and read by AI, a report back on what changed | [the cold read's F1](COLD-READ-2026-10-25.md) | the whole letter |
 | Honest times | the cold read's F2 | the attachments paragraph, from the cover's table |
@@ -94,5 +94,6 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 
 - Every bracket is filled, the notes on this page are gone, and the letter says nothing he would not say. It makes promises in his name: to report back; to read a reply himself if asked, and pass on only his own note of it; not to report a reply as endorsing the work; to keep a reply out of the repository unless told otherwise; and any payment. Each stays only if he means it.
 - Its description of the theory is read again against the frozen edition's one page and cover, since the fronts may still change before the freeze.
-- The remote has the commit and the tag the letter offers. The push is his.
+- **Recipients**, as the board recommended: first one reader for each dossier, people who will say plainly what is wrong, and two coders who work apart and read Buddhist texts as well; more are sent only once the first replies are back. Who they are is his, since they are people he can ask and the letter goes from his address. Any payment to coders, and its amount, is his.
+- The remote has the commit and the tag the letter offers. The push follows [the board's line on it](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren).
 - A reply to be kept goes into `sources/` verbatim, in its own language, with its source. A reply to stay out is kept in a path [`.gitignore`](../../../../../../.gitignore) lists, as private conversations are, and AI sessions read it there unless the reader asked otherwise.

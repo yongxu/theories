@@ -43,6 +43,7 @@ PARTS = {
     "LOGIC.md": ("en", "Review dossier · Logic"),
     "PHILOSOPHY.md": ("en", "Review dossier · Philosophy"),
     "ALIGNMENT.md": ("en", "Review dossier · Alignment"),
+    "SCIENCES.md": ("en", "Review dossier · Sciences"),
     "../ONE-PAGE.md": ("en", "The Theory of Becoming in one page"),
     "../ONE-PAGE.zh.md": ("zh", "生成变化之论：一页"),
     "../THE-THEORY-OF-BECOMING.md": ("en", "The Theory of Becoming"),

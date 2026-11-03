@@ -1,6 +1,6 @@
 # The free-energy principle in the theory
 
-[The one page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The chapters](chapters/README.md) · [The dossier for scientists](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue8-sciences-dossier/SCIENCES.md#s-17)
+[The one page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The chapters](chapters/README.md) · [The dossier for scientists](review/SCIENCES.md#s-17)
 
 *About 50 minutes to read; in brief, about eight.*
 

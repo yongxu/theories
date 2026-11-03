@@ -46,14 +46,17 @@ LAYERS = [
     ('front: logic', REVIEW + 'LOGIC.md', None, front('L-01'), TEN),
     ('front: philosophy', REVIEW + 'PHILOSOPHY.md', None, front('P-01'), TEN),
     ('front: alignment', REVIEW + 'ALIGNMENT.md', None, front('A-01'), TEN),
+    ('front: sciences', REVIEW + 'SCIENCES.md', None, front('S-01'), TEN),
     # To the end of its ten-minute section, or else to the end of its table.
     ('failure-mode map, its first part', MAP, None,
      [(r'^## The map in ten minutes$', r'^## '), (r'^## \d+\. The map$', r'^## ')], TEN),
 ]
-WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md']
+WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md', 'SCIENCES.md']
 # A dossier's hour, as its "How long" paragraph names it: its ten minutes and these items.
 HOUR_PATHS = {'ALIGNMENT.md': ['a-02', 'a-07', 'a-10', 'a-12', 'a-18', 'a-19'],
-              'PHILOSOPHY.md': ['p-04', 'p-05', 'p-07', 'p-10', 'p-11', 'p-20']}
+              'PHILOSOPHY.md': ['p-04', 'p-05', 'p-07', 'p-10', 'p-11', 'p-20'],
+              # S-02 and the reader's field's items; the longest field, ecology and renewable resources, is measured.
+              'SCIENCES.md': ['s-02', 's-11', 's-12', 's-13', 's-14', 's-15', 's-16']}
 
 
 def visible(s):
@@ -124,7 +127,7 @@ def main(ref=None):
         text = read(ref, REVIEW + name)
         if not (text and '## The dossier in ten minutes' in text):
             continue
-        en, zh = count(part(text, r'^## The dossier in ten minutes', r'^## The items'))
+        en, zh = count(part(text, r'^## The dossier in ten minutes', r'^## (The items|Reading the items)$'))
         for item in items:
             body = count(part(text, f'<a id="{item}"></a>', rf'^(<a id="{item[0]}-|---$|## )'))
             en, zh = en + body[0], zh + body[1]
