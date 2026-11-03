@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3193 nodes, 6148 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3196 nodes, 6153 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 92 | 75 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
 | Life and evolution | 0 | 45 | 22 | 0 |
-| Collectives and selection | 0 | 69 | 23 | 0 |
+| Collectives and selection | 0 | 70 | 24 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 81 | 60 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
@@ -416,7 +416,7 @@ Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundari
 
 ## Collectives and selection
 
-Results (69):
+Results (70):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A code held as counts, learned from what is heard](records/a-code-held-as-counts.md) (recorded-checked)
@@ -427,6 +427,7 @@ Results (69):
 - [A pool that recruits through itself](records/a-pool-that-recruits-through-itself.md) (recorded-checked)
 - [A race for position draws everything](records/a-race-for-position-draws-everything.md) (recorded-checked)
 - [A rise past the inflow is drawn from beyond](records/a-rise-past-the-inflow-is-drawn-from-beyond.md) (recorded-checked)
+- [A rule rebuilt from the members it limits](records/a-rule-rebuilt-from-the-members-it-limits.md) (recorded-checked)
 - [A swap-symmetric assignment singles out no role](records/a-swap-symmetric-assignment-singles-out-none.md) (recorded-checked)
 - [A weighting falling faster than renewal ends the base](records/a-weighting-faster-than-renewal-ends-the-base.md) (recorded-checked)
 - [A whole that draws its parts' arising beyond its renewal ends](records/whole-drawing-beyond-renewal-ends.md) (recorded-checked)
@@ -488,7 +489,7 @@ Results (69):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (23, 2 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
+Modules (24, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
 
 
 ## The classical texts
@@ -653,4 +654,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-300 of 378 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+300 of 379 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
