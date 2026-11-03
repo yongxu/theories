@@ -1,0 +1,33 @@
+<!-- AI-written report, lean-check, an independent reader of board item CD, 3 November 2026; kept as returned. -->
+
+**Verdict: fails as "Yes, exactly."** The comparison sentence stands. The direction sentence, "nothing is lost" and "derived" do not.
+
+1. **fine.** Points 1 to 3 check out. `Extension`, `Comparison`, `.irrefl`, `.trans`, `Web.paths_extension_iff_widens` and `Web.paths_comparison_widens` are at Extension.lean:43, 57, 72, 77, 142 and 151. `Reaching.widens_iff_extension`, `.comparison_widens` and `.comparison_widensOrLater` are at ReachableRanges.lean:913, 925 and 931. Point 2's "least relation" is true by definition, but only for a given frame and reading of `living`, and 07:39 says both are supplied. Proposed: "Given a frame and a reading of `living`, the least relation meeting C is `Extension F living`. It is widening only with every claim counted as living."
+
+2. **wrong.** §2 says the direction "relates two options in one way". That only holds on one frame. `KeptAlternative.no_comparison_both` (ReachableRanges.lean:1334) shows that no strict partial order meets C on both realized courses and reachable ranges. 07 §5's table also ranks pairs differently under the whole-run and stepwise readings. Proposed: "On one frame and one reading of `living`, the direction relates two options in one way. Different frames can point opposite ways, and choosing the frame is a reading, not C."
+
+3. **overstated (scope).** Point 4 (`Weighting.widens_iff_every_of_class`, Weightings.lean:1221) is proved on a finite listing with two-valued admission. Its class is assumed increasing in admission, which 07:343 calls "C's premise relocated". On a web it needs both paths' admissions listed, which covers only courses whose admissions end (07:92; PremiseWitnesses.lean:434). Proposed for §2: "On a finite listing, with every item counted, the orders that count everything agree on exactly widening and split on every mixed pair. Their monotonicity is C's premise relocated, so this decomposes C and does not derive it."
+
+4. **wrong.** The note says the comparison is "derived", that this "is what the Lean does", and that "'Better' then names nothing beyond the side of a difference the direction is on". The Lean defines `Extension` and `Comparison`; it has no direction. The header the note cites (Extension.lean:26) puts C's normative content "in calling widening better". The proposal moves that content into "to take". "To take" has no place in `Comparison`, where `Better` is the free slot. It matches `LiftBetter` (L, Extension.lean:105) and the `Direction` namespace (J1/J2) instead. That hides an obligation in a definition, which AGENTS forbids, and it cuts the match between the statement and the Lean. Proposed: "The comparison restates the direction. The normative content stays where the Lean puts it, in calling the widening side better."
+
+5. **wrong.** "Direction" already has four senses in the repository:
+   - the conditional direction of 07 §7 (the continuation condition, C, J1–J4 and E) and the Lean `Direction.*` declarations;
+   - T8's 生生 as the direction, which is *compared by* widening (07:749);
+   - the open "second-order direction of 生生", which 07 says widening does not give (07:94, 787);
+   - the stronger direction hypothesis that 08 dropped (08:779).
+
+   07:86 also says 生生 "can exceed what widening counts". So "C's statement would now say the same" as T8 is false: T8's direction is 生生, and widening is how it is compared. Naming first-order widening "the direction" also blurs direction and per-step growth, which AGENTS keeps apart. "To take" crosses from order into choice, against 07:526 ("C ranks courses; choices take more"). Proposed C: "Of two courses, one that widens what the other lets form is the better: the first-order order by which 生生 is compared." That is alternative (B) with a role clause.
+
+6. **overstated (question 4).** §2 says "scope and order meet… self-concern's order is C's". `increasingInOwn_iff_increasing_iff_unrestricted` (PremiseWitnesses.lean:395) holds on listings and is near-definitional (07:242). It reaches `Comparison` one way only, between listed level paths (PremiseWitnesses.lean:488), and 07:248 says "It does not derive C." "Widens whose continuation" is also wrong: the condition makes each standpoint's marking total, so it is *what*, not *whose*, and "widens" borrows C's word for scope. Proposed: "Where the continuation condition holds de se, each standpoint's own continuation marks every item. On every listing the self-concerned orders are then exactly the orders increasing in admission, C's premise there, 'placed more narrowly, not warranted' (07:358). The join is near-definitional, reaches C on level paths one way and only between paths whose admissions end, and derives neither premise."
+
+7. **wrong (internal).** §2 says no order "is in the dynamics (point 5)", but point 7 says "The World model ranks one case". `ReadsNoOrder.not_entails` (PremiseWitnesses.lean:161) is immediate and shows only that a frame fixes no order (08 §7). "None is in the dynamics" puts orders outside the unfolding, against 07 §1 ("standards form within the one unfolding"). Proposed: "No frame fixes an order. An order enters as a reading or a premise, and where one forms, it forms within the unfolding as some position's." For point 7: "On the World, every self-concerned order ranks one case this way, with no C."
+
+8. **unclear (wording).**
+   - Point 5 leaves out `Comparison.separates`'s premise that the comparison is irreflexive (Extension.lean:65).
+   - Point 6's heading is general, but the theorem covers natural-number scores only. Proposed: "No natural-number score meeting C has a top along an endless chain of extensions." With that, §2's "(points 4 and 6)" holds for scores only.
+   - Point 7: Weightings.lean:6109 is about what all such orders share. Proposed: "All orders of this kind agree in ranking one course above another exactly where…"
+   - Point 4: "split on the rest" should read "split on every mixed pair", since pairs that keep the same tie.
+
+9. **fine.** These exist and match: `Weighting.mixed_either_way` (1158), `Weighting.IncreasingInOwn` (6087), `increasingInOwn_iff_increasing` (6100), `widensOwn_iff_every_increasingInOwn` (6109) and `Flow.coupled_ending_ranked_below` (6168). Under the comparison sentence, "in general alone", the self-concern exception, L, J1–J4 and the lagged and eventual orders (premises beyond C) all survive.
+
+The note is at /Users/ren/theories/.claude/worktrees/reader-measure/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cd-c-as-a-direction/DESIGN.md. Nothing was edited.

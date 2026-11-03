@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "id": "whole-first-and-bounded-centers",
+  "id": "whole-and-regions-and-bounded-centers",
   "title": {
-    "zh": "整体优先，与以依存为界的中心",
-    "en": "The whole first, and centers bounded by dependence"
+    "zh": "整体与其区域，与以依存为界的中心",
+    "en": "The whole and its regions, and centers bounded by dependence"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -32,8 +32,8 @@
       ]
     },
     {
-      "zh": "延续条件之下，从 p 保留者，对每个区域族都从 p 保留：整体的判断决定每个较窄的判断，无论区域是系统的还是自身的；区域之内成立的在其内每个区域都成立。",
-      "en": "Under the continuation condition, what retains from p retains from p for every family of regions: the whole's judgment decides every narrower one, whether the region is a system's or a self's; and what holds within a region holds within every region inside it.",
+      "zh": "延续条件之下，从 p 保留者，对每个区域族都从 p 保留，无论区域是系统的还是自身的；区域之内成立的在其内每个区域都成立。",
+      "en": "Under the continuation condition, what retains from p retains from p for every family of regions, whether the region is a system's or a self's; and what holds within a region holds within every region inside it.",
       "declarations": [
         "Becoming.Web.Retains.within",
         "Becoming.Web.AdmitsWithin.narrow"
@@ -197,8 +197,8 @@
           "en": "Retaining is a preorder, and what retains is not added to."
         },
         "input": {
-          "zh": "整体优先与搭便车者的失去。",
-          "en": "The whole first and the free rider's loss."
+          "zh": "整体与各区域中的保留，与搭便车者的失去。",
+          "en": "Retaining in the whole and in every region, and the free rider's loss."
         },
         "conditions": {
           "zh": "无。",
@@ -220,8 +220,8 @@
           "en": "The continuation condition and its rival."
         },
         "input": {
-          "zh": "整体的判断决定每个较窄的判断。",
-          "en": "The whole's judgment decides every narrower one."
+          "zh": "在整体中保留的在每个区域内保留。",
+          "en": "What retains in the whole retains in every region."
         },
         "conditions": {
           "zh": "无。",
@@ -613,6 +613,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the first hypothesis names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person's words or delegation as its standing; the correspondence keeps Ren's quoted words, drops 'which Ren then called an axiom', and labels its readings as AI readings (D16, D43) instead of 'adopted on Ren's delegation'; the related details likewise; a boundary's link updated from the former id closure-verdict-meets-axiom to closure-verdict-meets-continuation-condition. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人的话或交托为其地位；对应保留 Ren 的原话，删去“Ren 当时称之为公理”，读法标为 AI 的读法（D16、D43），不再写“依 Ren 的交托采用”；相关说明同此；一条界限的链接由旧 id closure-verdict-meets-axiom 改为 closure-verdict-meets-continuation-condition。规律未变。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): retitled \"The whole and its regions, and centers bounded by dependence\", and the id renamed to whole-and-regions-and-bounded-centers, the old id kept. \"The whole first\" (优先) stated a priority; the record shows that under the continuation condition what retains in the whole retains in every region, not conversely, and no priority. The input of its dependency on significance-retained-within-margin, which still said \"the whole first\", follows the title. Law 3 and the input of its dependency on continuation-condition-yields-living-significance said that the whole's judgment decides every narrower one, which holds of retaining only (a losing verdict of the whole decides nothing narrower, laws 4 to 6); they now say that what retains in the whole retains in every region. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：标题改为“整体与其区域，与以依存为界的中心”，标识改为 whole-and-regions-and-bounded-centers，旧标识保留。“整体优先”说的是一种优先；本记录所示是：延续条件之下在整体中保留的在每个区域内保留，反过来不成立，而非优先。其对 significance-retained-within-margin 之依赖的输入原仍作“整体优先”，今随标题。律 3 与其对 continuation-condition-yields-living-significance 之依赖的输入原说整体的判断决定每个较窄的判断，此仅于保留成立（整体判为失者不决定任何较窄者，律 4 至 6）；今改说在整体中保留的在每个区域内保留。主张不变。"
     }
   ],
   "text_versions": [
@@ -632,5 +636,8 @@
         "zh": "历史说明压缩前的记录原始字节（R35，E3）；每条被合并的说明都保存在这里。"
       }
     }
+  ],
+  "former_ids": [
+    "whole-first-and-bounded-centers"
   ]
 }

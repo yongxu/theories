@@ -95,7 +95,7 @@ Ren's proposal says “all above does not require any axiom” and that the cont
 - related, not a proved adapter: [what-taking-all-excludes](what-taking-all-excludes.md). Here a clearer meeting every requirement derived from its want still ends a dweller, the ending stipulated; there ending another serves taking all that is given, not continuing as such, and the ending of a formation living by taking alongside a full taker is derived.
 - related, not a proved adapter: [where-a-rising-take-ends](where-a-rising-take-ends.md). There the clearer's ending of the dweller is stipulated; here a seeker's ending is derived from balance and a bound on what is given.
 
-**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) (interpretive) · [feeding-closure](feeding-closure.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [loss-beyond-a-region](loss-beyond-a-region.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [represented-boundary-against-dependence](represented-boundary-against-dependence.md) · [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md) (interpretive)
+**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) (interpretive) · [feeding-closure](feeding-closure.md) · [four-cases-of-a-part](four-cases-of-a-part.md) · [loss-beyond-a-region](loss-beyond-a-region.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [represented-boundary-against-dependence](represented-boundary-against-dependence.md) · [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

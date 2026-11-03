@@ -58,7 +58,7 @@ The strongly connected components of a directed graph and the sink components of
 ### Dependencies
 
 - **formal-reuse**: [what-a-center-can-know-by-a-step](what-a-center-can-know-by-a-step.md). The region a center can represent is its coupling closure (CK1); this record says when the region it acts on lies within it.
-- related, not a proved adapter: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Answers its Next, a model of how a center forms and represents its boundary, for the region acted on and the region represented.
+- related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Answers its Next, a model of how a center forms and represents its boundary, for the region acted on and the region represented.
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). Where acts do not return, some formation acted on can never affect the actor: that gap, at that formation.
 
 <a id="sources--来源"></a>

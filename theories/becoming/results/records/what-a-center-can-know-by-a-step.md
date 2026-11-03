@@ -52,7 +52,7 @@ A light cone counted in coupling links: information propagates at most one link 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **interpretive**: [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md). Answers part of its Next ('a model of how a center forms and represents its boundary'): the region represented is drawn along coupling links.
+- **interpretive**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Answers part of its Next ('a model of how a center forms and represents its boundary'): the region represented is drawn along coupling links.
 
 **Used by:** [where-a-formations-acts-return](where-a-formations-acts-return.md)
 

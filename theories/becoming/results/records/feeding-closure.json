@@ -348,7 +348,7 @@
       }
     },
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用 Clearing.dependenceRegion；那里以它为意义的边界是一个选择，这里表明这个区域恰是各形成的供给闭包。",

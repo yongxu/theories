@@ -234,7 +234,7 @@
       }
     },
     {
-      "id": "whole-first-and-bounded-centers",
+      "id": "whole-and-regions-and-bounded-centers",
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses Clearing.clearer_loses_dweller.",

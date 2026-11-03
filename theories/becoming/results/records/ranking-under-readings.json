@@ -558,15 +558,15 @@
     {
       "id": "stepwise-law-of-easing",
       "detail": {
-        "en": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading.",
-        "zh": "确切的逐步缓和之律：缓和所撤回的恰是缓和之进程所侵蚀的事件；所取不超过所给的节制在逐步读法下对任意多个汲取者排在过度汲取之上。"
+        "en": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and C ranks it above.",
+        "zh": "确切的逐步缓和之律：缓和所撤回的恰是缓和之进程所侵蚀的事件；所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，C 把它排在其上。"
       }
     },
     {
       "id": "relation-level-law-of-easing",
       "detail": {
-        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.",
-        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也排在过度汲取之上。"
+        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and C ranks it above.",
+        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
       }
     },
     {
@@ -1139,6 +1139,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The counterexample is read as the witness it is: in Immediate the stepwise reading ranks the absence higher, which does not show that what it gives up concerns only formations with an included event.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：反例按其为见证读出：在 Immediate 中逐步读法把不在场排得更高，这并不表明它所放弃者只涉及有被记入事件的形成。"
+    },
+    {
+      "en": "3 November 2026, CD (board item CD): two related lines follow the restated statements of the stepwise and relation-level laws of easing: restraint extends overdraw exactly where it includes an event, or a relation, overdraw withholds, and C ranks it above. The claim is unchanged.",
+      "zh": "2026年11月3日，工作板条目 CD：两条相关说明随逐步与关系层缓和之律重述后的陈述：节制扩展过度汲取，恰在它记入过度汲取扣下的某个事件或关系之处，C 把它排在其上。主张不变。"
     }
   ],
   "text_versions": [
