@@ -52,11 +52,14 @@ LAYERS = [
      [(r'^## The map in ten minutes$', r'^## '), (r'^## \d+\. The map$', r'^## ')], TEN),
 ]
 WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md', 'SCIENCES.md']
-# A dossier's hour, as its "How long" paragraph names it: its ten minutes and these items.
+# A dossier's hour, as its "How long" paragraph names it: its ten minutes and these items. Alignment's hour skips
+# the tests' summary after its ten minutes, since A-18 and A-19 give the tests in full.
+HOUR_FRONT_END = {'ALIGNMENT.md': r'^## The tests, as they fell$'}
 HOUR_PATHS = {'ALIGNMENT.md': ['a-02', 'a-07', 'a-10', 'a-12', 'a-18', 'a-19'],
               'PHILOSOPHY.md': ['p-04', 'p-05', 'p-07', 'p-10', 'p-11', 'p-20'],
-              # S-02 and the reader's field's items; the longest field, ecology and renewable resources, is measured.
-              'SCIENCES.md': ['s-02', 's-11', 's-12', 's-13', 's-14', 's-15', 's-16']}
+              # The reader's field's items, with S-02 but for ecology and renewable resources, the longest field,
+              # which is measured: its six fill the hour alone.
+              'SCIENCES.md': ['s-11', 's-12', 's-13', 's-14', 's-15', 's-16']}
 
 
 def visible(s):
@@ -127,7 +130,8 @@ def main(ref=None):
         text = read(ref, REVIEW + name)
         if not (text and '## The dossier in ten minutes' in text):
             continue
-        en, zh = count(part(text, r'^## The dossier in ten minutes', r'^## (The items|Reading the items)$'))
+        en, zh = count(part(text, r'^## The dossier in ten minutes',
+                            HOUR_FRONT_END.get(name, r'^## (The items|Reading the items)$')))
         for item in items:
             body = count(part(text, f'<a id="{item}"></a>', rf'^(<a id="{item[0]}-|---$|## )'))
             en, zh = en + body[0], zh + body[1]
