@@ -108,6 +108,8 @@ def label(path: str, lang: str) -> str:
             return "该实验之说明" if lang == "zh" else "the experiment's README"
         if name.startswith("PREDICTIONS"):
             return "该实验预先冻结之预测" if lang == "zh" else "the experiment's frozen predictions"
+        if name.startswith("DESIGN"):
+            return "该实验之设计" if lang == "zh" else "the experiment's design"
         return "该实验之代码" if lang == "zh" else "the experiment's code"
     if name == "README.md":
         folder = p.rsplit("/", 2)[-2]
