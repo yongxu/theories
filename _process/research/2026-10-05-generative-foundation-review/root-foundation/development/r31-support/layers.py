@@ -22,9 +22,11 @@ lists:
   row keeps the description it had, and the modules R31 added take theirs from NOTES below (the
   Chinese table keeps the modules it had and adds R31's);
 * the sentence after each table that says how the layers import one another.
-`--notes` also retags the module notes in `Becoming.lean`, with a note for each module R31 added
-(after the note of the module named by `after`) and none for a module that is gone; it changes the
-root's bytes, so it waits for a change that renews the core's receipt.
+`--notes` also retags the module notes in `Becoming.lean` (a tag's reason, as in `(L2, through …)`,
+kept where the label stays), with a note for each module R31 added (after the note of the module
+named by `after`) and none for a module that is gone; it changes the root's bytes, so it waits for a
+change that renews the core's receipt. The plain run reports the root's notes whose label is not the
+computed one and the modules noted more than once, without changing its exit status.
 """
 import json
 import re
@@ -189,7 +191,29 @@ def labels(path, core, layer, rim, lang):
     return len(rows), wrong, [m for m in core + list(rim) if m not in have]
 
 
-NOTE = re.compile(r"^\* `(Becoming\.[\w]+)` \((base|L\d|instance|application)\):")
+# A note's tag is its label, with a reason after a comma where one is given (`(L2, through …)`,
+# `(L1, instance ring)`): group 2 is the label, group 3 the reason.
+NOTE = re.compile(r"^\* `(Becoming\.[\w]+)` \((base|L\d|instance|application)(, [^)]*)?\):")
+
+
+def retag(line, m, label):
+    """The note's first line with its label computed: the reason kept where the label stays, dropped
+    where it changes (the reason was given for the old label)."""
+    reason = (m.group(3) or "") if m.group(2) == label else ""
+    return line.replace(f"({m.group(2)}{m.group(3) or ''}):", f"({label}{reason}):", 1)
+
+
+def note_report(text, layer, rim):
+    """The root's notes whose label is not the computed one, and the modules noted more than once."""
+    found = [m for m in map(NOTE.match, text.split("\n")) if m]
+    wrong = [(m.group(1), m.group(2)) for m in found
+             if (m.group(1) in layer or m.group(1) in rim) and m.group(2) != note_label(m.group(1), layer, rim)]
+    seen, twice = set(), []
+    for m in found:
+        if m.group(1) in seen and m.group(1) not in twice:
+            twice.append(m.group(1))
+        seen.add(m.group(1))
+    return len(found), wrong, twice
 
 
 def notes(text, core, layer, rim, mods, order_en):
@@ -230,7 +254,7 @@ def notes(text, core, layer, rim, mods, order_en):
             block = lines[k:j]
             if not (name in GONE and name not in layer):
                 assert name in layer or name in rim, name
-                block[0] = l.replace(f"({m.group(2)}):", f"({note_label(name, layer, rim)}):", 1)
+                block[0] = retag(l, m, note_label(name, layer, rim))
                 out += block
                 seen.add(name)
             emit(name, out, seen)
@@ -266,6 +290,11 @@ def main():
         for w in wrong:
             print("  ", *w)
         bad = bad or bool(wrong) or (lang == "en" and bool(missing))
+    n, wrong, twice = note_report((PKG / "Becoming.lean").read_text(), layer, rim)
+    print(f"Becoming.lean: {n} notes, {len(wrong)} labels other than computed, "
+          f"{len(twice)} modules noted more than once (reported, not changed: the root's bytes wait for a core run)")
+    for w in wrong:
+        print("  ", *w)
     if "--write" not in sys.argv and "--notes" not in sys.argv:
         sys.exit(1 if bad else 0)
     order_en, out = None, {}
