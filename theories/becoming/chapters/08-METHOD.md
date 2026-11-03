@@ -151,10 +151,10 @@ Within Lean's proof-irrelevant `Prop`, the identification loses no distinction b
 **Why losing the course matters.** The pure core's runs, censuses and witnesses are checked by computation (`rfl` and `decide` on them), and a value transported along `propext` defeats that. So the pure core states `↔` wherever a result about propositions would need `=`. The periphery's results concern outcomes, so the periphery may use `propext` as the exact lumping it is. Read again at its renewed receipts, no periphery use of `propext` computes a value through an identification of propositions. That every reading of a proposition is relational is `propext` itself, so the pure core holds it as a hypothesis (`Extensional`), never as a conclusion of the relational start.
 
 <a id="rings"></a>
-**Rings and receipts.** The pure core's modules, built on the three foundation modules, fall into the package's layers:
+**Rings and receipts.** The pure core's modules other than its root `Becoming`, built on the three foundation modules, fall into the package's layers:
 
 - L0, the base layer: `Becoming.World` with every module of the package it imports, that is `Becoming.Frame`, `Becoming.Prelude` and the grammar's `Becoming.Grammar`, `Becoming.GrammarMap` and `Becoming.GrammarLaws`, on which the frame rests;
-- L2: the modules naming the condition or a valuation;
+- L2: the modules naming the condition or a valuation, and every module importing one of them;
 - L1: the rest.
 
 No module imports a higher layer. The instance and application ring (the Changes, place/transition nets, rooms tested by a window, readers by where they are rebuilt from and rules of entry by where they are taught from; seven applications) meets the pure core's requirements and lies outside it by direction. The periphery (Mathlib leaves, older modules, Python experiments) may use any tool, with dependence running toward the pure core. There has been no bridge since 19 October 2026: modules of the checked closure, most of them the pure core's, state the content of the superseded periphery modules, whose bytes are kept, and the bridge files are in `lean/history/becoming/`.
