@@ -68,7 +68,7 @@
 ## Does not show
 
 - A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided.
-- That renewal gives widening: on the kind relay 全生成 at two orders and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing. Witness: `Becoming.KindRelay.Runs.beginnings_without_opening`.
+- That renewal gives widening: on the kind relay 全生成 at two grains and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing. Witness: `Becoming.KindRelay.Runs.beginnings_without_opening`.
 - That a part under dissipation is sustained by supply from beyond: the fed relay's required conditions conserve, its loss paid by fuel no formation requires. Witness: `Becoming.KindRelay.Fed.conserving_on_part`.
 - A third part against the TAP equation, assembly theory or Jones 1995: each leaves conservation or upkeep out as stated, and its own variants or neighbours supply it.
 - That the first carrier form was merely too strict: at a single origin the two forms are independent.
@@ -164,6 +164,7 @@ Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要
 - 29 October 2026, board item GW (study section 448): the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.
 - 30 October 2026 (HE, study section 455): total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and name unchanged; its reference, binding and the validation scope follow; reviewed in REVIEW-HE.
 - 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 15 and of the second item it does not show, as the English and KindRelay.renews_without_end state; nothing the record states changed.
+- 3 November 2026, CD (board item CD): in what the record does not show, "全生成 at two orders" reads "at two grains", the word of the record generation-and-degeneration-at-two-grains, of 02 and of the glossary; under the glossary's one sense, order says which course is better. The claim is unchanged.
 
 </details>
 
